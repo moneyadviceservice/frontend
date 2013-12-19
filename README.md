@@ -24,6 +24,14 @@ Make sure all dependencies are available to the application:
 $ bundle install
 ```
 
+## Usage
+
+To start the application:
+
+```sh
+$ foreman s
+```
+
 ## Contributing
 
 1. Fork it

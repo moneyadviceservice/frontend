@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'foreman'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'

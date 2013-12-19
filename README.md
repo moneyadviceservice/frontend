@@ -10,6 +10,20 @@ The Money Advice Service's responsive website.
 * [Bundler]
 
 
+## Installation
+
+Clone the repository:
+
+```sh
+$ git clone --recursive https://github.com/moneyadviceservice/frontend.git
+```
+
+Make sure all dependencies are available to the application:
+
+```sh
+$ bundle install
+```
+
 ## Contributing
 
 1. Fork it

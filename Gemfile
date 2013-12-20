@@ -1,8 +1,11 @@
+source 'http://gems.test.mas'
 source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails', '4.0.2'
+gem 'rails', '~>4.1.0.beta1'
+
+gem 'mas-development_dependencies'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foreman'

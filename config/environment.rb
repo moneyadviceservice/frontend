@@ -1,3 +1,3 @@
 require_relative 'application'
 
-Frontend::Application.initialize!
+Rails.application.initialize!

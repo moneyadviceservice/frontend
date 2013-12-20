@@ -101,6 +101,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     kgio (2.8.1)
+    kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
     mail (2.5.4)
@@ -225,6 +226,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   foreman
   jquery-rails
+  kss
   mas-development_dependencies!
   rails (= 4.1.0.beta1)
   sass-rails (~> 4.0.0.rc1)

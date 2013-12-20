@@ -7,6 +7,7 @@ The Money Advice Service's responsive website.
 
 * [Git]
 * [Ruby 2.0.0][Ruby]
+* [Rubygems 2.1.0][Rubygems]
 * [Bundler]
 
 
@@ -44,3 +45,4 @@ $ foreman s
 [bundler]: http://bundler.io
 [git]: http://git-scm.com
 [ruby]: http://www.ruby-lang.org/en
+[rubygems]: http://rubygems.org

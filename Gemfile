@@ -5,6 +5,7 @@ ruby File.read('.ruby-version').strip
 gem 'rails', '4.1.0.beta1'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'draper', '~> 1.3.0'
 gem 'foreman'
 gem 'jquery-rails'
 gem 'kss'

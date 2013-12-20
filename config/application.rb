@@ -4,7 +4,7 @@ require 'action_controller/railtie'
 require 'action_view/railtie'
 require 'sprockets/railtie'
 
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module Frontend
   class Application < Rails::Application

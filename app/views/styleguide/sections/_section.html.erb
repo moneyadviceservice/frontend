@@ -1,5 +1,27 @@
-<h2><%= section.name %> <em><%= section.filename %></em></h2>
-<p><%= section.description %></p>
+<div class="styleguide-example">
+  <h3><%= section.name %> <em><%= section.filename %></em></h3>
 
-<%= yield %>
-<%= html { yield } %>
+  <div class="styleguide-description">
+    <p><%= section.description %></p>
+
+    <% unless section.modifiers.empty? %>
+      <ul class="styleguide-modifiers">
+        <%= render partial: 'modifier', collection: section.modifiers %>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="styleguide-element">
+    <%= yield %>
+  </div>
+
+  <% unless section.modifiers.empty? %>
+    <%= render partial:    'element',
+               collection: section.modifiers,
+               locals:     { source: yield } %>
+  <% end %>
+
+  <div class="styleguide-html">
+    <%= html { yield } %>
+  </div>
+</div>

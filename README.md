@@ -36,10 +36,10 @@ $ foreman s
 ## Contributing
 
 The application depends on [mas-development_dependencies], a dependency layer
-common to all applications and engines developed by the Money Advice Service.
-This Gem unifies development and test dependencies and provides opinionated
-default configuration. When introducing a dependency, first consider whether it
-should be promoted to this common layer.
+common to all applications and engines developed by the
+[Money Advice Service team]. This Gem unifies development and test dependencies
+and provides opinionated default configuration. When introducing a dependency,
+first consider whether it should be promoted to this common layer.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -51,5 +51,6 @@ should be promoted to this common layer.
 [bundler]: http://bundler.io
 [git]: http://git-scm.com
 [mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
+[money advice service team]: https://github.com/moneyadviceservice
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org

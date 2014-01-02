@@ -1,25 +1,189 @@
-// A button
+// Use the standard, but classy, .button for form actions and primary page
+// actions. These are used extensively around the site.
 //
-// .primary          - Dims the button to indicate it cannot be used.
-// .primary:hover          - Dims the button to indicate it cannot be used.
-// .secondary          - Dims the button to indicate it cannot be used.
+// :hover - Buttons love hover states.
+// :active - Buttons love active states.
+// :disabled - For when you shouldn't be able to click on it.
+// .disabled - Same as the disabled pseudo-class.
+// .primary - For the main form action, use whenever creating something.
+// .primary:hover - Hover state fo primary buttons.
+// .primary:active - A brief moment of polish when the button is pressed.
+// .primary:disabled - Even primary buttons have a down state.
+// .primary.disabled - Same as the disabled pseudo-class.
+// .danger - For potentially bad or destructive actions.
+// .danger:hover - Hover state for danger buttons.
+// .danger:active - Depressed danger button.
+// .danger:disabled - Disabled danger button.
+// .danger.disabled - Same as the disabled pseudo-class.
+// .blue - Actions related to merges.
+// .blue:hover - Hover state for merge buttons.
+// .blue:active - Depressed blue button.
+// .blue:disabled - Disabled blue button.
+// .blue.disabled - Same as the disabled pseudo-class.
+// .dark-grey - Alternate button.
+// .dark-grey:hover - Hover state for alternate buttons.
+// .dark-grey:active - Depressed alternate button.
+// .dark-grey:disabled - Disabled alternate button.
+// .dark-grey.disabled - Same as the disabled pseudo-class.
 //
 // Styleguide buttons
 
 .button {
-  border: none;
-  background: #ddd;
-  padding: 4px 10px;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  background-repeat: repeat-x;
+  border-radius: 3px;
+  border: 1px solid #d5d5d5;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 7px 12px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus {
+    border-color: #51a7e8;
+    box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    background-color: #ddd;
+    background-image: -moz-linear-gradient(#eee, #ddd);
+    background-image: -webkit-linear-gradient(#eee, #ddd);
+    background-image: linear-gradient(#eee, #ddd);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    text-decoration: none;
+  }
+
+  &:active, &.selected, &.selected:hover {
+    background-color: #dcdcdc;
+    background-image: none;
+    border-color: #b5b5b5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:disabled, &:disabled:hover, &.disabled, &.disabled:hover {
+    background-color: #e5e5e5;
+    background-image: none;
+    border-color: #c5c5c5;
+    box-shadow: none;
+    color: #666;
+    cursor: default;
+    opacity: .5;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
 
   &.primary {
-    background: #ff0;
+    background-color: #60b044;
+    background-image: linear-gradient(#8add6d, #60b044);
+    background-repeat: repeat-x;
+    border-color: #5ca941;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
 
-    &:hover {
-      background: #00f;
-    }
+  &.primary:hover {
+    background-color: #569e3d;
+    background-image: linear-gradient(#79d858, #569e3d);
+    background-repeat: repeat-x;
+    border-color: #4a993e;
+    color: #fff;
+  }
 
-    &:active {
-      background: #f00;
-    }
+  &.primary:active, &.primary.selected {
+    background-color: #569e3d;
+    background-image: none;
+    border-color: #418737;
+  }
+
+  &.primary:disabled, &.primary:disabled:hover, &.primary.disabled, &.primary.disabled:hover {
+    background-color: #60b044;
+    background-image: linear-gradient(#8add6d, #60b044);
+    background-repeat: repeat-x;
+    border-color: #74bb5a #74bb5a #509338;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &.danger {
+    color: #900;
+  }
+
+  &.danger:hover {
+    background-color: #b33630;
+    background-image: linear-gradient(#dc5f59, #b33630);
+    background-repeat: repeat-x;
+    border-color: #cd504a;
+    color: #fff;
+    text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &.danger:active, &.danger.selected {
+    background-color: #b33630;
+    background-image: none;
+    border-color: #9f312c;
+    color: #fff;
+  }
+
+  &.danger:disabled, &.danger:disabled:hover, &.danger.disabled, &.danger.disabled:hover {
+    background-color: #e1e1e1;
+    background-image: linear-gradient(#fff, #e1e1e1);
+    background-repeat: repeat-x;
+    border-color: #c5c5c5;
+    color: #900;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  &.blue, &.blue:hover {
+    background-color: #3072b3;
+    background-image: linear-gradient(#599bcd, #3072b3);
+    background-repeat: repeat-x;
+    border-color: #2a65a0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &.blue:hover, &.blue:active {
+    border-color: #2a65a0;
+  }
+
+  &.blue:active, &.blue.selected {
+    background-color: #3072b3;
+    background-image: none;
+    border-color: #25588c;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  &.blue:disabled, &.blue.disabled {
+    background-position: 0 0;
+  }
+
+  &.dark-grey, &.dark-grey:hover {
+    background-color: #6d6d6d;
+    background-image: linear-gradient(#8c8c8c, #6d6d6d);
+    background-repeat: repeat-x;
+    border-bottom-color: #595959;
+    border: 1px solid #707070;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &.dark-grey:hover, &.dark-grey:active, &.dark-grey.selected {
+    border-color: #585858;
+  }
+
+  &.dark-grey:active, &.dark-grey.selected {
+    background-color: #545454;
+    background-image: none;
+    border-color: #474747;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
   }
 }

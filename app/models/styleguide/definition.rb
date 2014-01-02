@@ -1,10 +1,8 @@
 require 'forwardable'
 require 'kss/parser'
-require 'singleton'
 
 class Styleguide::Definition
   extend Forwardable
-  include Singleton
 
   def_delegator :@parser, :sections
 

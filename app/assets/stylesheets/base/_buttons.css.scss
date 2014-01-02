@@ -1,0 +1,25 @@
+// A button
+//
+// .primary          - Dims the button to indicate it cannot be used.
+// .primary:hover          - Dims the button to indicate it cannot be used.
+// .secondary          - Dims the button to indicate it cannot be used.
+//
+// Styleguide buttons
+
+.button {
+  border: none;
+  background: #ddd;
+  padding: 4px 10px;
+
+  &.primary {
+    background: #ff0;
+
+    &:hover {
+      background: #00f;
+    }
+
+    &:active {
+      background: #f00;
+    }
+  }
+}

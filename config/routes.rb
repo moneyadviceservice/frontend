@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  namespace :styleguide do
-    resources :sections
+  resource :styleguide, controller: 'styleguide', only: 'show' do
+    member do
+      get 'components'
+      get 'css'
+      get 'javascript'
+      get 'ruby'
+    end
   end
 end

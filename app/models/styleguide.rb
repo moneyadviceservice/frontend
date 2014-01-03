@@ -1,7 +1,7 @@
 require 'forwardable'
 require 'kss/parser'
 
-class Styleguide::Definition
+class Styleguide
   extend Forwardable
 
   def_delegator :@parser, :sections

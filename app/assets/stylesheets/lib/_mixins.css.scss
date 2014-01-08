@@ -1,0 +1,20 @@
+
+$media-queries: true !default;
+$media-query-free-breakpoint: 960px;
+
+@mixin respond-to($min-width, $max-width: false) {
+  @if $media-queries {
+    @media screen and (min-width: $min-width) {
+      @if $max-width {
+        @media (max-width: $max-width) {
+          @content
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+  @else if $min-width <= $media-query-free-breakpoint and (not $max-width or $max-width and $max-width >= $media-query-free-breakpoint) {
+    @content;
+  }
+}

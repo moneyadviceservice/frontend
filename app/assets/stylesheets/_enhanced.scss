@@ -8,15 +8,16 @@
 @import 'base/_fonts';
 @import 'base/_forms';
 @import 'base/_tables';
-@import 'base/_icons';
-@import 'base/_buttons';
 
 @import 'utilities/_all';
 
 @import 'layout/_header';
 
 @import 'components/_breadcrumbs';
+@import 'components/_icons';
+@import 'components/_buttons';
 
-h1 {
-  color: red;
-}
+//h1 {
+//  background-color: red;
+//  border-radius: 10px;
+//}

@@ -1,5 +1,7 @@
 # Frontend
 
+[![Code Climate](https://codeclimate.com/github/moneyadviceservice/frontend.png)](https://codeclimate.com/github/moneyadviceservice/frontend)
+
 The Money Advice Service's responsive website.
 
 

@@ -1,6 +1,5 @@
-<h2>CSS</h2>
+<h1>CSS Styleguide</h1>
 
-<%= styleguide_section @sections['buttons'] do %>
-  <button class="button $modifier_class">Button (button.button)</button>
-  <%= link_to 'Button (a.button)', '#', class: 'button $modifier_class' %>
+<%= styleguide_section sections['u-visuallyhidden'] do %>
+  <span class="u-visuallyhidden">Text to visually hide</span> Text to display
 <% end %>

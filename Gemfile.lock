@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
-  revision: 958aafa4ff535168ac004020fd03930283aca8df
+  revision: 8cf2b2599af69e5ffd55de20534050707eb6b959
   specs:
-    mas-development_dependencies (0.1.0)
+    mas-development_dependencies (0.2.1)
       capybara (~> 2.1)
       capybara-screenshot (~> 0.3.13)
       cucumber-rails
@@ -11,6 +11,7 @@ GIT
       poltergeist (~> 1.3)
       pry-rails
       pry-rescue
+      rails (>= 3.2)
       rspec-rails (~> 2.0)
       shoulda-matchers
       site_prism
@@ -49,13 +50,13 @@ GEM
     arel (5.0.0)
     atomic (1.1.14)
     builder (3.2.2)
-    capybara (2.2.0)
+    capybara (2.2.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-screenshot (0.3.14)
+    capybara-screenshot (0.3.16)
       capybara (>= 1.0, < 3)
       launchy
     cliver (0.3.2)

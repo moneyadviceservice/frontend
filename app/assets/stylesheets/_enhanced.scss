@@ -3,10 +3,16 @@
 @import 'lib/_mixins';
 @import 'lib/_placeholders';
 
+<<<<<<< HEAD
+=======
+@import 'base/_typography';
+@import 'base/_links';
+>>>>>>> Add helper_method to styleguide controller.
 @import 'base/_fonts';
 @import 'base/_typography';
 @import 'base/_forms';
 @import 'base/_tables';
+<<<<<<< HEAD
 @import 'base/_utilities';
 
 @import 'layout/_header';
@@ -14,3 +20,12 @@
 @import 'components/_breadcrumb';
 @import 'components/_icon';
 @import 'components/_button';
+=======
+@import 'base/utilities';
+
+@import 'layout/_header';
+
+@import 'components/breadcrumb';
+@import 'components/icon';
+@import 'components/button';
+>>>>>>> Add helper_method to styleguide controller.

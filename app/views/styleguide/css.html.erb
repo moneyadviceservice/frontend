@@ -13,23 +13,3 @@
       <li>Article demo</li>
     </ul>
 <% end %>
-
-<h2>Typography</h2>
-
-<h1>Primary 1</h1>
-<p>The primary header above is an <code>h1</code> element, which is used for the title of the page. Only one may be used per page. </p>
-
-<h2>Utilities</h2>
-<%= styleguide_section @sections['u-visuallyhidden'] do %>
-    <span class="u-visuallyhidden">Text to visually hide</span> Text to display
-<% end %>
-
-<%= styleguide_section @sections['buttons'] do %>
-    <button class="button $modifier_class">Button (button.button)</button>
-    <%= link_to 'Button (a.button)', '#', class: 'button $modifier_class' %>
-<% end %>
-
-<h2 id="breadcrumb">Breadcrumb</h2>
-<%= styleguide_section @sections['Breadcrumb'] do %>
-    <%= render 'shared/breadcrumb', current_page: 'My Page' %>
-<% end -%>

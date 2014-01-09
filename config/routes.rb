@@ -3,9 +3,9 @@ Rails.application.routes.draw do
     member do
       get 'css'
       get 'html'
+      get 'sass'
       get 'javascript'
       get 'ruby'
-      get 'sass'
     end
   end
 end

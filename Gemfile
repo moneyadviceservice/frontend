@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
+gem 'autoprefixer-rails'
 
 group :development do
   gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'

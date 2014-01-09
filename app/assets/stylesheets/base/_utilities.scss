@@ -1,10 +1,14 @@
-// Use the standard, but classy, .button for form actions and primary page
-// actions. These are used extensively around the site.
+// Use .u-visuallyhidden to hide content from all but screen-reader users
 //
-// :hover - Buttons love hover states.
-//
-// Styleguide utilities
+// Styleguide u-visuallyhidden
 
-.visuallyHidden {
-  display:none;
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height:  1px;
+  width:   1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
 }

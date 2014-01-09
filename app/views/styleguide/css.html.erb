@@ -1,15 +1,5 @@
-<% content_for :heading do %>
-    <h1>CSS Styleguide</h1>
-<% end %>
+<h1>CSS Styleguide</h1>
 
-<% content_for :sidebar do %>
-    <ul>
-      <li>CSS Coding Standards</li>
-      <li>Style Guide</li>
-      <li>Utilities</li>
-      <li>Components</li>
-      <li>Layouts</li>
-      <li>Form demo</li>
-      <li>Article demo</li>
-    </ul>
+<%= styleguide_section sections['utilities'] do %>
+  <span class="u-visuallyhidden">Text to visually hide</span> Text to display
 <% end %>

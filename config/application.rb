@@ -16,5 +16,8 @@ module Frontend
     # Configure cookie session store.
     config.session_store :cookie_store, key: '_mas_session'
 
+    # Configure additional assets to precompile
+    config.assets.precompile += %w(styleguide.css basic.css enhanced_fixed.css enhanced_responsive.css)
+
   end
 end

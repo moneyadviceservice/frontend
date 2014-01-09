@@ -1,10 +1,8 @@
 GIT
   remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
-  revision: 1ca1bc39f02001e4dfdc7e1f0298ce53a61eddca
-  branch: add_css_auto_prefixer
+  revision: 8cf2b2599af69e5ffd55de20534050707eb6b959
   specs:
-    mas-development_dependencies (0.1.0)
-      autoprefixer-rails
+    mas-development_dependencies (0.2.1)
       capybara (~> 2.1)
       capybara-screenshot (~> 0.3.13)
       cucumber-rails
@@ -51,8 +49,6 @@ GEM
     addressable (2.3.5)
     arel (5.0.0)
     atomic (1.1.14)
-    autoprefixer-rails (1.0.20140103)
-      execjs
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)

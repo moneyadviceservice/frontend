@@ -1,23 +1,16 @@
-
 @import 'lib/_variables';
+@import 'lib/_functions';
 @import 'lib/_mixins';
 @import 'lib/_placeholders';
-@import 'lib/_functions';
 
-@import 'base/_typography';
 @import 'base/_fonts';
+@import 'base/_typography';
 @import 'base/_forms';
 @import 'base/_tables';
-
-@import 'utilities/_all';
+@import 'base/_utilities';
 
 @import 'layout/_header';
 
-@import 'components/_breadcrumbs';
-@import 'components/_icons';
-@import 'components/_buttons';
-
-//h1 {
-//  background-color: red;
-//  border-radius: 10px;
-//}
+@import 'components/_breadcrumb';
+@import 'components/_icon';
+@import 'components/_button';

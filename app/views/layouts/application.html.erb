@@ -53,5 +53,14 @@
 </head>
 <body>
 	<%= content_for?(:content) ? yield(:content) : yield %>
+
+    <% if Rails.env != "live" %>
+    <!--[if gt IE 9]><!-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.7.0/html-inspector.js"></script>
+    <script>
+        HTMLInspector.inspect()
+    </script>
+    <!--<![endif]-->
+    <% end %>
 </body>
 </html>

@@ -15,9 +15,14 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 
-group :development do
-  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
+group :test do
   gem 'spring'
+end
+
+group :test, :development do
+  gem 'mas-development_dependencies',
+      github:  'moneyadviceservice/mas-development_dependencies',
+      require: 'mas/development_dependencies/konacha'
 end
 
 group :doc do

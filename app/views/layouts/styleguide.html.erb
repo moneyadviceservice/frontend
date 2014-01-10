@@ -3,26 +3,25 @@
 <% end %>
 
 <% content_for :content do %>
-  <nav class="styleguide">
-    <ul class="styleguidePrimaryNav">
+  <nav class="styleguidePrimaryNav">
+    <ul>
       <li><%= link_to 'Overview', styleguide_path %></li>
 
       <li><%= link_to 'HTML', html_styleguide_path %></li>
 
       <li><%= link_to 'CSS', css_styleguide_path %>
-        <ul>
+        <ul class="styleguidePrimaryNav-subMenu">
           <li><%= link_to 'Overview', overview_styleguide_path %></li>
           <li><%= link_to 'Base styles', base_styleguide_path %></li>
           <li><%= link_to 'Components', components_styleguide_path %></li>
           <li><%= link_to 'Form demo', form_demo_styleguide_path %></li>
           <li><%= link_to 'Components', article_demo_styleguide_path %></li>
-
         </ul>
       </li>
 
       <li><%= link_to 'Sass', sass_styleguide_path %>
-        <ul>
-          <li><%= link_to 'Sass', sass_styleguide_path %></li>
+        <ul class="styleguidePrimaryNav-subMenu">
+          <li><%= link_to 'Overview', sass_styleguide_path %></li>
           <li><%= link_to 'Lib', lib_styleguide_path %></li>
         </ul>
       </li>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
-<!--[if IE 7 ]> <html lang="en-GB" class="ie ie7 no-js"> <![endif]-->
-<!--[if IE 8 ]> <html lang="en-GB" class="ie ie8 no-js"> <![endif]-->
-<!--[if IE 9 ]> <html lang="en-GB" class="ie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
+<!--[if IE 7 ]> <html lang="<%= I18n.locale %>" class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]> <html lang="<%= I18n.locale %>" class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]> <html lang="<%= I18n.locale %>" class="ie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<%= I18n.locale %>" class="no-js"> <!--<![endif]-->
 
 <head>
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-  <title>[page] - [section] - Money Advice Service</title>
+  <title>[page] - [section] - <%= t('.title') %></title>
 
   <%= csrf_meta_tags %>
 

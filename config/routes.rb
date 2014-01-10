@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "home#index"
+
   resource :styleguide, controller: 'styleguide', only: 'show' do
     member do
       get 'css'

@@ -7,17 +7,19 @@
 .styleguidePrimaryNav {
   font-size: 14px;
   height: 45px;
-  border-bottom: 1px solid $colorNavBorder;
+  border-bottom: 4px solid $colorNavBorder;
   background-color: $colorNavBackground;
   margin: 0 -10px;
 
   > ul {
     @extend %styleguideNav;
-    padding: 10px;
+    padding: 0 10px;
 
     > li {
-      width: 80px;
-      padding: 5px 0;
+      width: 100px;
+//      text-align: center;
+      padding: 15px 0 15px 0;
+//      border-right: 1px solid $colorNavBorder;
       display: inline-block;
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
@@ -26,16 +28,13 @@
       }
     }
   }
-
-  a,
-  a:visited {
-
-  }
 }
 
 .styleguidePrimaryNav-subMenu {
   @extend %styleguideNav;
   position: relative;
+  margin-left: -10px;
+  margin-top: 10px;
   z-index: 1;
   float: left;
   opacity: 0;

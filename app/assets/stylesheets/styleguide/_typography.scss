@@ -17,6 +17,25 @@ a:focus{
   border-bottom:1px dotted;
 }
 
+nav a,
+nav a:visited {
+  color: $colorNavText;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: $colorLinkHover;
+  border-bottom: none;
+}
+
+
+nav a:focus{
+  color: $colorLinkHover;
+  outline: 1px solid;
+  background-color: $colorAccessibleFocus;
+  border-bottom: none;
+}
+
 p {
   @extend %bodyText;
 }

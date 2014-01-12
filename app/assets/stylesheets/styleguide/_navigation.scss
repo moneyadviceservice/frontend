@@ -6,7 +6,7 @@
 
 .styleguidePrimaryNav {
   font-size: 14px;
-  height: 45px;
+//  height: 45px;
   border-bottom: 4px solid $colorNavBorder;
   background-color: $colorNavBackground;
   margin: 0 -10px;
@@ -16,11 +16,12 @@
     padding: 0 10px;
 
     > li {
-      width: 100px;
+      width: 100%;
+      border-bottom: 1px solid $colorNavBorder;
 //      text-align: center;
-      padding: 15px 0 15px 0;
+      padding: 10px 0;
 //      border-right: 1px solid $colorNavBorder;
-      display: inline-block;
+//      display: inline-block;
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
         background-color: $colorSubMenuBackground;
@@ -36,8 +37,8 @@
   margin-left: -10px;
   margin-top: 10px;
   z-index: 1;
-  float: left;
-  opacity: 0;
+//  float: left;
+//  opacity: 0;
   > li {
     padding: 5px 10px;
   }

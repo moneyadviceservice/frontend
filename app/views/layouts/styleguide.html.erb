@@ -3,36 +3,7 @@
 <% end %>
 
 <% content_for :content do %>
-  <nav class="styleguidePrimaryNav">
-    <ul>
-      <li><%= link_to 'Overview', styleguide_path %></li>
-
-      <li><%= link_to 'HTML', html_styleguide_path %></li>
-
-      <li><%= link_to 'CSS', css_styleguide_path %>
-        <ul class="styleguidePrimaryNav-subMenu">
-          <li><%= link_to 'Overview', overview_styleguide_path %></li>
-          <li><%= link_to 'Base styles', base_styleguide_path %></li>
-          <li><%= link_to 'Components', components_styleguide_path %></li>
-          <li><%= link_to 'Form demo', form_demo_styleguide_path %></li>
-          <li><%= link_to 'Article demo', article_demo_styleguide_path %></li>
-          <li><%= link_to 'Components', article_demo_styleguide_path %></li>
-        </ul>
-      </li>
-
-      <li><%= link_to 'Sass', sass_styleguide_path %>
-        <ul class="styleguidePrimaryNav-subMenu">
-          <li><%= link_to 'Overview', sass_styleguide_path %></li>
-          <li><%= link_to 'Lib', lib_styleguide_path %></li>
-        </ul>
-      </li>
-
-      <li><%= link_to 'JavaScript', javascript_styleguide_path %></li>
-
-      <li><%= link_to 'Ruby', ruby_styleguide_path %></li>
-    </ul>
-  </nav>
-
+  <%=	render partial: 'navigation.html.erb' %>
   <%= yield %>
 <% end %>
 

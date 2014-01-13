@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Money Advice Service</title>
-  <%= stylesheet_link_tag 'enhanced_responsive', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= yield :head %>
-</head>
-<body>
+<% alternative_locales.each do |locale| %>
+  <%= link_to t("locales.#{locale}"), locale: locale %>
+<% end %>
 
-<%= content_for?(:content) ? yield(:content) : yield %>
-
-</body>
-</html>
+<%= render template: 'layouts/base' %>

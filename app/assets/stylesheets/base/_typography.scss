@@ -10,18 +10,17 @@ h1 {
 // Font loading test
 h1 {
   font-family:arial;
-  .wf-museoslab300-n4-active & {
-    font-family:'MuseoSlab300', arial;
+  font-weight:normal;
+  .wf-museoslab-n4-active & {
+    font-family:'MuseoSlab', arial;
   }
 
 }
 p {
   font-family:arial;
   font-weight:bold;
-
-  .wf-museoslab700-n4-active & {
-    font-family:'MuseoSlab700', arial;
-    font-weight:normal;
+  .wf-museoslab-n4-active & {
+    font-family:'MuseoSlab', arial;
   }
 }
 .icon {

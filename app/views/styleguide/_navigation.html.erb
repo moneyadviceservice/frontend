@@ -1,24 +1,29 @@
-<nav class="styleguidePrimaryNav">
-  <ul>
+<nav class="primaryNav">
+  <ul class="primaryNav-list">
     <li><%= link_to 'Overview', styleguide_path %></li>
 
     <li><%= link_to 'HTML', html_styleguide_path %></li>
 
-    <li><%= link_to 'CSS', css_styleguide_path %>
-      <ul class="styleguidePrimaryNav-subMenu">
-        <li><%= link_to 'Overview', overview_styleguide_path %></li>
-        <li><%= link_to 'Base styles', base_styleguide_path %></li>
-        <li><%= link_to 'Components', components_styleguide_path %></li>
-        <li><%= link_to 'Form demo', form_demo_styleguide_path %></li>
-        <li><%= link_to 'Article demo', article_demo_styleguide_path %></li>
-        <li><%= link_to 'Components', article_demo_styleguide_path %></li>
+    <li class="has-subMenu">
+      <%= link_to 'CSS', css_overview_styleguide_path %>
+      <!--<span class="navIcon">&#9660;</span>-->
+      <ul class="primaryNav-subMenu">
+        <li><%= link_to 'Overview', css_overview_styleguide_path %></li>
+        <li><%= link_to 'Base styles', css_base_styleguide_path %></li>
+        <li><%= link_to 'Article demo', css_article_demo_styleguide_path %></li>
       </ul>
     </li>
 
-    <li><%= link_to 'Sass', sass_styleguide_path %>
-      <ul class="styleguidePrimaryNav-subMenu">
-        <li><%= link_to 'Overview', sass_styleguide_path %></li>
-        <li><%= link_to 'Lib', lib_styleguide_path %></li>
+    <li><%= link_to 'Forms', forms_styleguide_path %></li>
+
+    <li><%= link_to 'Components', components_styleguide_path %></li>
+
+    <li class="has-subMenu">
+      <%= link_to 'Sass', sass_styleguide_path %>
+      <!--<span class="navIcon">&#9660;</span>-->
+      <ul class="primaryNav-subMenu">
+        <li><%= link_to 'Overview', sass_overview_styleguide_path %></li>
+        <li><%= link_to 'Variables', sass_variables_styleguide_path %></li>
       </ul>
     </li>
 
@@ -26,4 +31,6 @@
 
     <li><%= link_to 'Ruby', ruby_styleguide_path %></li>
   </ul>
+
+  <button class="navToggle">Menu</button>
 </nav>

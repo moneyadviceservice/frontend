@@ -17,15 +17,23 @@ a:focus{
   border-bottom:1px dotted;
 }
 
+
+
 nav a,
 nav a:visited {
+  display: inline-block;
   color: $colorNavText;
   text-decoration: none;
+  padding: 15px;
+  width: 100%;
+//  border-bottom: 1px solid #e6e6e6;
 }
 
 nav a:hover {
   color: $colorLinkHover;
-  border-bottom: none;
+  background-color: $colorAccessibleFocus;
+//  border-bottom: 1px solid #e6e6e6;
+  border: none;
 }
 
 

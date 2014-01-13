@@ -4,46 +4,78 @@
   padding: 0;
 }
 
-.styleguidePrimaryNav {
-  font-size: 14px;
-//  height: 45px;
+.primaryNav {
+  margin: 0 -10px;
+  font-size: 16px;
   border-bottom: 4px solid $colorNavBorder;
   background-color: $colorNavBackground;
-  margin: 0 -10px;
 
   > ul {
     @extend %styleguideNav;
-    padding: 0 10px;
 
     > li {
       width: 100%;
-      border-bottom: 1px solid $colorNavBorder;
-//      text-align: center;
-      padding: 10px 0;
-//      border-right: 1px solid $colorNavBorder;
-//      display: inline-block;
+      border-top: 1px solid $colorNavBorder;
+
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
         background-color: $colorSubMenuBackground;
         opacity: 1;
       }
+
+      @include respond-to($widthSmall) {
+        display: inline-block;
+        width: auto;
+        border-bottom: none;
+      }
     }
   }
 }
 
-.styleguidePrimaryNav-subMenu {
+.primaryNav-subMenu {
   @extend %styleguideNav;
   position: relative;
-  margin-left: -10px;
-  margin-top: 10px;
   z-index: 1;
-//  float: left;
-//  opacity: 0;
+
   > li {
-    padding: 5px 10px;
+    border-top: 1px solid $colorNavBorder;
+  }
+
+  @include respond-to($widthSmall) {
+    position: absolute;
+    opacity: 0;
   }
 }
 
-.styleguidePrimaryNav-item {
-  padding: 5px 10px;
+.navToggle {
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #FFF;
+  text-align: left;
+  border-top: 1px solid $colorNavBorder;
+  &:hover,
+  &:focus {
+    border-top: 1px solid $colorNavBorder;
+  }
+  @include respond-to($widthSmall) {
+    display: none;
+  }
+}
+
+.js .primaryNav-list,
+.js .primaryNav-subMenu {
+  display: none;
+  @include respond-to($widthSmall) {
+    display: block;
+  }
+}
+
+.navIcon {
+  display: inline-block;
+}
+
+.has-subMenu {
+  font-weight: bold;
 }

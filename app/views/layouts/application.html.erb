@@ -7,6 +7,7 @@
 
 <head>
 
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <title>[page] - [section] - Money Advice Service</title>
@@ -49,6 +50,17 @@
   
   <%= yield :head %>
 
+  <!--  TEST js detections + loading of js assets based on capability
+  <script>
+    if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+      // add js class
+      // set global VAR for support
+    } else if( (/MSIE (7|8)/).test(navigator.userAgent) ){
+      // IE 7/8
+    }
+    var mediaQuerySize = $('body').css('content') // 'xs / s / m / l'
+  </script>
+  -->
 
 </head>
 <body>

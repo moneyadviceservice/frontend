@@ -1,4 +1,11 @@
 
+@if $responsive = true {
+
+}
+@else $responsive = false {
+
+}
+
 @font-face {
   font-family: 'MuseoSlab300';
   src: url(font-path('museo_slab_300-webfont.eot'));
@@ -31,6 +38,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+// @font-face {
+//   font-family: 'icon2';
+//   src: asset-data-url('icomoon.woff') format('woff'),
+//        url(font-path('icomoon.ttf')) format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
 
 // Test to force flicker of unstyled content        
 @font-face {

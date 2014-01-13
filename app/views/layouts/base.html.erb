@@ -47,12 +47,24 @@
   <%= yield :head %>
 </head>
 <body>
-<%= content_for?(:content) ? yield(:content) : yield %>
+  <%= content_for?(:content) ? yield(:content) : yield %>
 
-<% if Rails.env.development? %>
-  <!--[if (gt IE 9)|!(IE)]><!-->
-  <%= javascript_include_tag 'html_inspector' %>
-  <!--<![endif]-->
-<% end %>
+  <%# Font loader - inline %>
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js' %>
+  <script>
+    WebFont.load({
+      custom: {
+        families: ['MuseoSlab300', 'MuseoSlab7004', 'icon'],
+        urls: ['/assets/fonts.css']
+      }
+    });
+  </script>
+
+
+  <% if Rails.env.development? %>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <%= javascript_include_tag 'html_inspector' %>
+    <!--<![endif]-->
+  <% end %>
 </body>
 </html>

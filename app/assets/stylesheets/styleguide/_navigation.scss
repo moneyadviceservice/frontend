@@ -20,7 +20,7 @@
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
         background-color: $colorSubMenuBackground;
-        opacity: 1;
+//        opacity: 1;
       }
 
       @include respond-to($widthSmall) {
@@ -43,7 +43,6 @@
 
   @include respond-to($widthSmall) {
     position: absolute;
-    opacity: 0;
   }
 }
 

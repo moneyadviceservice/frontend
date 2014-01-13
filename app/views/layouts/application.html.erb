@@ -65,5 +65,17 @@
 </head>
 <body>
 	<%= content_for?(:content) ? yield(:content) : yield %>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFontConfig = {
+      custom: {
+        families: ['MuseoSlab300', 'MuseoSlab7004', 'icon'],
+        urls: ['/fonts.css']
+      }
+    };
+  </script>
+
 </body>
 </html>

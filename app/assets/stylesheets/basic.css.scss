@@ -6,8 +6,15 @@
 @import 'lib/_mixins';
 @import 'lib/_placeholders';
 
-@import 'base/_fonts';
+// @import 'base/_fonts';
 @import 'base/_typography';
 @import 'base/_forms';
 @import 'base/_tables';
 @import 'base/_utilities';
+
+h1 {
+  font-family:'test'
+}
+p {
+  font-family:'MuseoSlab700'
+}

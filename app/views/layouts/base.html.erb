@@ -50,13 +50,9 @@
 <body>
 <%= content_for?(:content) ? yield(:content) : yield %>
 
-<%# TODO: Replace this with a feature toggle %>
 <% if Rails.env.development? %>
   <!--[if gt IE 9]><!-->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.7.0/html-inspector.js"></script>
-  <script>
-    HTMLInspector.inspect()
-  </script>
+  <%= javascript_include_tag 'html_inspector' %>
   <!--<![endif]-->
 <% end %>
 </body>

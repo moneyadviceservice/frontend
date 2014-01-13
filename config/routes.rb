@@ -3,15 +3,18 @@ Rails.application.routes.draw do
 
   scope '/:locale' do
     get '/', to: 'home#index'
-  end
 
-  resource :styleguide, controller: 'styleguide', only: 'show' do
-    member do
-      get 'css'
-      get 'html'
-      get 'sass'
-      get 'javascript'
-      get 'ruby'
+    resource :styleguide,
+             controller:  'styleguide',
+             only:        'show',
+             constraints: { locale: I18n.default_locale } do
+      member do
+        get 'css'
+        get 'html'
+        get 'sass'
+        get 'javascript'
+        get 'ruby'
+      end
     end
   end
 end

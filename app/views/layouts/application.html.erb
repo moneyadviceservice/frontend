@@ -1,2 +1,5 @@
+<% alternative_locales.each do |locale| %>
+  <%= link_to t("locales.#{locale}"), locale: locale %>
+<% end %>
 
 <%= render template: 'layouts/base' %>

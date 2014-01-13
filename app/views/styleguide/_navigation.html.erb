@@ -5,8 +5,10 @@
     <li><%= link_to 'HTML', html_styleguide_path %></li>
 
     <li class="has-subMenu">
-      <%= link_to 'CSS', css_overview_styleguide_path %>
-      <!--<span class="navIcon">&#9660;</span>-->
+      <%= link_to css_overview_styleguide_path do %>
+        CSS
+        <span class="navIcon">&#9660;</span>
+      <% end %>
       <ul class="primaryNav-subMenu">
         <li><%= link_to 'Overview', css_overview_styleguide_path %></li>
         <li><%= link_to 'Base styles', css_base_styleguide_path %></li>
@@ -19,8 +21,10 @@
     <li><%= link_to 'Components', components_styleguide_path %></li>
 
     <li class="has-subMenu">
-      <%= link_to 'Sass', sass_styleguide_path %>
-      <!--<span class="navIcon">&#9660;</span>-->
+      <%= link_to sass_styleguide_path do %>
+        Sass
+        <span class="navIcon">&#9660;</span>
+      <% end %>
       <ul class="primaryNav-subMenu">
         <li><%= link_to 'Overview', sass_overview_styleguide_path %></li>
         <li><%= link_to 'Variables', sass_variables_styleguide_path %></li>

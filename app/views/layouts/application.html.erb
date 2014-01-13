@@ -66,7 +66,6 @@
 <body>
 	<%= content_for?(:content) ? yield(:content) : yield %>
 
-
   <%# Font loader - inline %>
   <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
@@ -77,26 +76,6 @@
       }
     });
   </script>
-
-  <%# Font loader - async %>
-  <!--script>
-    WebFontConfig = {
-        custom: {
-          families: ['MuseoSlab300', 'MuseoSlab7004', 'icon'],
-          urls: ['/assets/fonts.css']
-        }
-    };
-
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-  </script-->
 
 </body>
 </html>

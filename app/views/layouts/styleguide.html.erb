@@ -7,4 +7,8 @@
   <%= yield %>
 <% end %>
 
+<% content_for :scripts do %>
+  <%= javascript_include_tag :styleguide %>
+<% end %>
+
 <%= render template: 'layouts/base' %>

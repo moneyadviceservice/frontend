@@ -1,4 +1,4 @@
-//= require normalize
+//= require normalize-css/normalize
 //= require_self
 
 @import 'lib/_variables';
@@ -11,10 +11,3 @@
 @import 'base/_forms';
 @import 'base/_tables';
 @import 'base/_utilities';
-
-h1 {
-  font-family:'test'
-}
-p {
-  font-family:'MuseoSlab700'
-}

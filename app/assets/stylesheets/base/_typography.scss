@@ -5,3 +5,22 @@
 h1 {
   color: $color-green-rich;
 }
+
+
+// Font loading test
+h1 {
+  font-family:arial;
+  .wf-museoslab300-n4-active & {
+    font-family:'MuseoSlab300', arial;
+  }
+
+}
+p {
+  font-family:arial;
+  font-weight:bold;
+
+  .wf-museoslab7004-n4-active & {
+    font-family:'MuseoSlab700', arial;
+    font-weight:normal;
+  }
+}

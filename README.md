@@ -59,7 +59,14 @@ common to all applications and engines developed by the
 and provides opinionated default configuration. When introducing a dependency,
 first consider whether it should be promoted to this common layer.
 
+### Front-end Package Management
 
+The application uses [Bower] to manage front-end packages. Dependencies should
+be defined in the `bower.json` configuration file. Once installed they will be
+automatically available to the asset pipeline.
+
+
+[bower]: http://bower.io
 [bundler]: http://bundler.io
 [git]: http://git-scm.com
 [kss]: https://github.com/kneath/kss

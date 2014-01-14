@@ -22,7 +22,7 @@ end
 
 group :test, :development do
   gem 'mas-development_dependencies',
-      github:  'moneyadviceservice/mas-development_dependencies',
+      git:     'git@github.com:moneyadviceservice/mas-development_dependencies.git',
       require: 'mas/development_dependencies/konacha'
 end
 

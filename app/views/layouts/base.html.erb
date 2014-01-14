@@ -54,15 +54,25 @@
   <%= yield :head %>
 </head>
 <body>
-<%= content_for?(:content) ? yield(:content) : yield %>
+  <%= content_for?(:content) ? yield(:content) : yield %>
 
-<% if Rails.env.development? %>
-  <!--[if (gt IE 9)|!(IE)]><!-->
-  <%= javascript_include_tag 'html_inspector' %>
+  <%# Font loader - inline, only for enhanced_responsive sites %>
+  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js' %>
+  <script>
+    WebFont.load({
+      custom: {
+        families: ['MuseoSlab', 'icomoon'],
+        urls: ['<%= stylesheet_path('fonts') %>']
+      }
+    });
+  </script>
   <!--<![endif]-->
-<% end %>
 
-<%= javascript_include_tag 'application' %>
-<%= yield :scripts %>
+  <% if Rails.env.development? %>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <%= javascript_include_tag 'html_inspector' %>
+    <!--<![endif]-->
+  <% end %>
 </body>
 </html>

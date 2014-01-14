@@ -11,18 +11,19 @@ h1 {
 h1 {
   font-family:arial;
   font-weight:normal;
-  .wf-museoslab-n4-active & {
+  //.wf-museoslab-n4-active & {
     font-family:'MuseoSlab', arial;
-  }
-
+  //}
 }
 p {
   font-family:arial;
   font-weight:bold;
-  .wf-museoslab-n4-active & {
+ // .wf-museoslab-n4-active & {
     font-family:'MuseoSlab', arial;
-  }
+ // }
 }
-.icon {
-  font-family:'icomoon';
+
+i, .icon {
+  font-family:'icomoon', georgia;
+  font-style: normal;
 }

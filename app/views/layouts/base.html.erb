@@ -47,10 +47,6 @@
   <%= yield :head %>
 </head>
 <body>
-  <% alternative_locales.each do |locale| %>
-    <%= link_to t("locales.#{locale}"), locale: locale %>
-  <% end %>
-
   <%= content_for?(:content) ? yield(:content) : yield %>
 
   <%# Font loader - inline, only for enhanced_responsive sites %>
@@ -62,16 +58,14 @@
         families: ['MuseoSlab', 'icomoon'],
         urls: ['<%= stylesheet_path('fonts') %>']
       }
-     });
+    });
   </script>
   <!--<![endif]-->
-
 
   <% if Rails.env.development? %>
     <!--[if (gt IE 9)|!(IE)]><!-->
     <%= javascript_include_tag 'html_inspector' %>
     <!--<![endif]-->
   <% end %>
-
 </body>
 </html>

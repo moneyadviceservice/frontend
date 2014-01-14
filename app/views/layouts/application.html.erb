@@ -1,1 +1,9 @@
+<% content_for :content do %>
+  <% alternative_locales.each do |locale| %>
+    <%= link_to t("locales.#{locale}"), locale: locale %>
+  <% end %>
+
+  <%= yield %>
+<% end %>
+
 <%= render template: 'layouts/base' %>

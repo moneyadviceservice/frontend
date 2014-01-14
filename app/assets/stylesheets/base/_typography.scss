@@ -5,3 +5,25 @@
 h1 {
   color: $color-green-rich;
 }
+
+// Font loading test
+h1 {
+  font-family: arial;
+  font-weight: normal;
+  //.wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+  //}
+}
+
+p {
+  font-family: arial;
+  font-weight: bold;
+  // .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+  // }
+}
+
+i, .icon {
+  font-family: 'icomoon', georgia;
+  font-style: normal;
+}

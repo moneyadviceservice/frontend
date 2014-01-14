@@ -1,4 +1,3 @@
-
 // @font-face {
 //   font-family: 'MuseoSlab300';
 //   src: url(font-path('museo_slab_300-webfont.eot'));
@@ -32,8 +31,6 @@
 //   font-style: normal;
 // }
 
-
-
 @if $responsive == true {
   @font-face {
     font-family: 'MuseoSlab';
@@ -54,7 +51,7 @@
     font-style: normal;
   }
 }
-// $responsive == false
+  // $responsive == false
 @else {
   @font-face {
     font-family: 'MuseoSlab300';
@@ -79,9 +76,7 @@
   }
 }
 
-
-
-// Test to force flicker of unstyled content        
+// Test to force flicker of unstyled content
 // @font-face {
 //   font-family: 'test';
 //   src: url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.eot');

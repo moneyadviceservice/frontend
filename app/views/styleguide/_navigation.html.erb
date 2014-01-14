@@ -1,0 +1,40 @@
+<nav class="primaryNav">
+  <ul class="primaryNav-list">
+    <li><%= link_to 'Overview', styleguide_path %></li>
+
+    <li><%= link_to 'HTML', html_styleguide_path %></li>
+
+    <li class="has-subMenu">
+      <%= link_to css_overview_styleguide_path do %>
+        CSS
+        <span class="navIcon">&#9660;</span>
+      <% end %>
+      <ul class="primaryNav-subMenu">
+        <li><%= link_to 'Overview', css_overview_styleguide_path %></li>
+        <li><%= link_to 'Base styles', css_base_styleguide_path %></li>
+        <li><%= link_to 'Article demo', css_article_demo_styleguide_path %></li>
+      </ul>
+    </li>
+
+    <li><%= link_to 'Forms', forms_styleguide_path %></li>
+
+    <li><%= link_to 'Components', components_styleguide_path %></li>
+
+    <li class="has-subMenu">
+      <%= link_to sass_overview_styleguide_path do %>
+        Sass
+        <span class="navIcon">&#9660;</span>
+      <% end %>
+      <ul class="primaryNav-subMenu">
+        <li><%= link_to 'Overview', sass_overview_styleguide_path %></li>
+        <li><%= link_to 'Variables', sass_variables_styleguide_path %></li>
+      </ul>
+    </li>
+
+    <li><%= link_to 'JavaScript', javascript_styleguide_path %></li>
+
+    <li><%= link_to 'Ruby', ruby_styleguide_path %></li>
+  </ul>
+
+
+</nav>

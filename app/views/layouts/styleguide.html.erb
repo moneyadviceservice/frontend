@@ -3,18 +3,12 @@
 <% end %>
 
 <% content_for :content do %>
-  <div class="styleguide">
-    <ul>
-      <li><%= link_to 'Overview', styleguide_path %></li>
-      <li><%= link_to 'HTML', html_styleguide_path %></li>
-      <li><%= link_to 'CSS', css_styleguide_path %></li>
-      <li><%= link_to 'Sass', sass_styleguide_path %></li>
-      <li><%= link_to 'JavaScript', javascript_styleguide_path %></li>
-      <li><%= link_to 'Ruby', ruby_styleguide_path %></li>
-    </ul>
+  <%=	render 'navigation' %>
+  <%= yield %>
+<% end %>
 
-    <%= yield %>
-  </div>
+<% content_for :scripts do %>
+  <%= javascript_include_tag :styleguide %>
 <% end %>
 
 <%= render template: 'layouts/base' %>

@@ -6,6 +6,13 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
 
 <head>
+  <script>
+    (function(){
+      var el = document.getElementsByTagName('html')[0];
+      el.className = el.className.replace('no-js','js');
+    })();
+  </script>
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <title>[page] - [section] - <%= t('.title') %></title>

@@ -1,4 +1,13 @@
+
+$responsive: true;
+
 @import 'styleguide/syntax';
+@import 'styleguide/variables';
+@import 'lib/mixins';
+@import 'styleguide/placeholders';
+@import 'styleguide/base';
+@import 'styleguide/navigation';
+@import 'styleguide/typography';
 
 .styleguide-example {
   margin: 15px auto;

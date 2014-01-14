@@ -1,11 +1,9 @@
-<% content_for :head do %>
-  <%= stylesheet_link_tag 'enhanced_responsive', media: 'all', 'data-turbolinks-track' => true %>
-<% end %>
-
 <% content_for :content do %>
   <% alternative_locales.each do |locale| %>
     <%= link_to t("locales.#{locale}"), locale: locale %>
   <% end %>
+
+  <%= yield %>
 <% end %>
 
 <%= render template: 'layouts/base' %>

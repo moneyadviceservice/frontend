@@ -1,5 +1,6 @@
 %bodyText {
-  @include font("Helvetica Neue", 400);
+  font-family: "Helvetica Neue";
+  font-weight: 400;
   @include font-size(16);
   line-height: 1.4;
 }

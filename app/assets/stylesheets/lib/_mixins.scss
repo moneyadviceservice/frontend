@@ -1,13 +1,13 @@
-@mixin font($font-family: "Helvetica Neue", $weight: normal) {
-  font-family: $font-family, "Helvetica Neue" Helvetica, Arial, sans-serif;
-  font-weight: $weight;
-}
-
+// input a font size in px and the mixin will output the font size in pixels and rem for browsers that support media queries (and rem)
 @mixin font-size($sizeValue: 1.6) {
   font-size: $sizeValue + px;
-  font-size: ($sizeValue / 16) + rem;
+
+  @if $responsive == true {
+    font-size: ($sizeValue / 16) + rem;
+  }
 }
 
+// description
 $media-queries: true !default;
 $media-query-free-breakpoint: 960px;
 

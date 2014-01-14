@@ -7,23 +7,23 @@
 .primaryNav {
   margin: 0 -10px;
   font-size: 16px;
-  border-bottom: 4px solid $colorNavBorder;
-  background-color: $colorNavBackground;
+  border-bottom: 4px solid $color-navBorder;
+  background-color: $color-navBackground;
 
   > ul {
     @extend %styleguideNav;
 
     > li {
       width: 100%;
-      border-top: 1px solid $colorNavBorder;
+      border-top: 1px solid $color-navBorder;
 
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
-        background-color: $colorSubMenuBackground;
+        background-color: $color-subMenuBackground;
 //        opacity: 1;
       }
 
-      @include respond-to($widthSmall) {
+      @include respond-to($mq-small) {
         display: inline-block;
         width: auto;
         border-bottom: none;
@@ -38,10 +38,10 @@
   z-index: 1;
 
   > li {
-    border-top: 1px solid $colorNavBorder;
+    border-top: 1px solid $color-navBorder;
   }
 
-  @include respond-to($widthSmall) {
+  @include respond-to($mq-small) {
     position: absolute;
   }
 }
@@ -53,12 +53,12 @@
   border: none;
   background-color: #FFF;
   text-align: left;
-  border-top: 1px solid $colorNavBorder;
+  border-top: 1px solid $color-navBorder;
   &:hover,
   &:focus {
-    border-top: 1px solid $colorNavBorder;
+    border-top: 1px solid $color-navBorder;
   }
-  @include respond-to($widthSmall) {
+  @include respond-to($mq-small) {
     display: none;
   }
 }
@@ -66,7 +66,7 @@
 .js .primaryNav-list,
 .js .primaryNav-subMenu {
   display: none;
-  @include respond-to($widthSmall) {
+  @include respond-to($mq-small) {
     display: block;
   }
 }

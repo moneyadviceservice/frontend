@@ -1,1 +1,52 @@
 <h1>Sass Styleguide</h1>
+
+<h2>Folder Structure</h2>
+
+<p>This is folder structure we use for organising our Sass files</p>
+
+<%= Terminal256 do %>
+├── base
+│   ├── _fonts.scss
+│   ├── _forms.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   └── _utilities.scss
+├── components
+│   ├── _breadcrumb.scss
+│   ├── _button.scss
+│   └── _icon.scss
+├── layout
+│   └── _header.scss
+├── lib
+│   ├── _functions.scss
+│   ├── _mixins.scss
+│   ├── _placeholders.scss
+│   └── _variables.scss
+<% end %>
+
+<p>These are used to output the following files:</p>
+
+<%= Terminal256 do %>
+  ├── basic.css.scss
+  ├── enhanced_fixed.css.scss
+  ├── enhanced_responsive.css.scss
+<% end %>
+<p><strong>basic.css.scss</strong> - This contains the basic styles present in the base folder and should work in all
+  browsers including legacy browsers</p>
+<p><strong>enhanced_responsive.css.scss</strong> - This contains the enhanced and responsive styles and will only be used by browsers
+that understand media queries.</p>
+<p><strong>enhanced_fixed.css.scss</strong> - This contains a fixed width version of the enhanced styles of the website
+  which is served to IE 7/8. It cIE 7/8 fixes are only included in this file.</p>
+
+<h2>Variable naming convention</h2>
+
+<p>To make variable names more understandable we use the convention <code>category-someName</code>.  This is also great
+  for RubyMine as it can then autosuggest available variables.</p>
+
+<p>Example:</p>
+
+<%= scss do %>
+  $color-greenPrimary
+  $color-greenHiglight
+
+<% end %>

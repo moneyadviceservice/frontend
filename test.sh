@@ -11,3 +11,4 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 bundle install --without=development
 
 rake spec
+rake cucumber

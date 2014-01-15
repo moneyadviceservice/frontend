@@ -1,69 +1,11 @@
 <h1>Components</h1>
 
-<h2>Icons</h2>
-
 <%= styleguide_section sections['icons'] do %>
   <span class="icon $modifier_class">
     <span class="u-visuallyHidden">hidden text</span>
   </span>
 <% end %>
 
-<header class="header l-container">
-    <%= image_tag('mas-logo.png' , :size => "240x40", :alt => "the Money Advice Service") %>
-</header>
-
-
-<div class="footerSiteLinks l-container">
-    <ul class="siteLinks unstyledList">
-        <li>
-            <a class="specialLink" href="">Cymraeg</a>
-        </li>
-    </ul>
-</div>
-
-<footer class="footerSocialLinks l-container">
-
-    <div class="l-splitStart">
-        <a href="#">
-      <span class="icon icon--masLogo">
-          <span class="u-visuallyHidden">Money Advice Service</span>
-      </span>
-        </a>
-    </div>
-
-    <div class="l-splitEnd">
-        <ul class="socialLinks">
-
-            <li>
-                <a href="">
-          <span class="icon icon--youtube">
-            <span class="u-visuallyHidden">YouTube</span>
-          </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="">
-          <span class="icon icon--facebook">
-            <span class="u-visuallyHidden">Facebook</span>
-          </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="">
-          <span class="icon icon--twitter">
-            <span class="u-visuallyHidden">Twitter</span>
-          </span>
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
-</footer>
-
-<h2>SocialLinks</h2>
 <%= styleguide_section sections['socialLinks'] do %>
   <ul class="socialLinks">
 
@@ -92,4 +34,64 @@
       </li>
 
   </ul>
+<% end %>
+
+<%= styleguide_section sections['Header'] do %>
+  <header class="header l-container">
+      <%= image_tag('mas-logo.png' , :size => "240x40", :alt => "the Money Advice Service") %>
+  </header>
+<% end %>
+
+<%= styleguide_section sections['Footer - Internal Site Links'] do %>
+  <div class="footerSiteLinks l-container">
+      <ul class="siteLinks unstyledList">
+          <li>
+              <a class="specialLink" href="">Cymraeg</a>
+          </li>
+      </ul>
+  </div>
+<% end %>
+
+<%= styleguide_section sections['Footer - Social Links'] do %>
+  <footer class="footerSocialLinks l-container">
+
+      <div class="l-splitStart">
+          <a href="#">
+        <span class="icon icon--masLogo">
+            <span class="u-visuallyHidden">Money Advice Service</span>
+        </span>
+          </a>
+      </div>
+
+      <div class="l-splitEnd">
+          <ul class="socialLinks">
+
+              <li>
+                  <a href="">
+            <span class="icon icon--youtube">
+              <span class="u-visuallyHidden">YouTube</span>
+            </span>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="">
+            <span class="icon icon--facebook">
+              <span class="u-visuallyHidden">Facebook</span>
+            </span>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="">
+            <span class="icon icon--twitter">
+              <span class="u-visuallyHidden">Twitter</span>
+            </span>
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+
+  </footer>
 <% end %>

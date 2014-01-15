@@ -1,0 +1,37 @@
+// Icons
+//
+// .icon--masLogo       - something
+// .icon--youtube       - something
+// .icon--facebook       - something
+// .icon--twitter       - something
+//
+// Styleguide icons
+
+//.icon {
+//  font-family: 'icomoon', georgia;
+//  font-style: normal;
+//}
+
+
+.icon {
+  width:100px;
+  height:100px;
+  display:block;
+  background:#ddd;
+}
+
+.icon--masLogo {
+  background:red;
+}
+
+.icon--youtube {
+  background:blue;
+}
+
+.icon--facebook {
+  background:orange;
+}
+.icon--twitter {
+  background:green;
+}
+

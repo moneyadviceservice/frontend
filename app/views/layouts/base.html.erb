@@ -69,6 +69,8 @@
   </script>
   <!--<![endif]-->
 
+  <%= yield :scripts %>
+
   <% if Rails.env.development? %>
     <!--[if (gt IE 9)|!(IE)]><!-->
     <%= javascript_include_tag 'html_inspector' %>

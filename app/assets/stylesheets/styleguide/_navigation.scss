@@ -36,6 +36,7 @@
   @extend %styleguideNav;
   position: relative;
   z-index: 1;
+  background-color: $color-subMenuBackground;
 
   > li {
     border-top: 1px solid $color-navBorder;
@@ -63,12 +64,15 @@
   }
 }
 
-.js .primaryNav-list,
-.js .primaryNav-subMenu {
+.js .primaryNav-list {
   display: none;
   @include respond-to($mq-small) {
     display: block;
   }
+}
+
+.js .primaryNav-subMenu {
+  display:none;
 }
 
 .navIcon {

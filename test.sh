@@ -8,7 +8,8 @@ export RAILS_ENV=test
 CI_PIPELINE_COUNTER=${GO_PIPELINE_COUNTER-0}
 CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
+gem uninstall -aIx spring
+
 bundle install --without=development
 
-rake spec
-rake cucumber
+rake specrake cucumber

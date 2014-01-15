@@ -17,6 +17,5 @@ Feature: Home page
     Then I should see an introduction in my language
 
   Scenario: User can navigate to Money Advice Service social media profiles
-    Given I am on the home page
-    When I navigate to a social media profile
-    Then I should be taken to that social media profile
+    When I visit the home page
+    Then I should be see links to MAS social media profiles

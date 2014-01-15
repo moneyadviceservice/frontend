@@ -1,6 +1,7 @@
 require_relative '../page'
-require_relative '../sections/header_section'
-require_relative '../sections/footer_section'
+require_relative '../sections/header'
+require_relative '../sections/footer_site_links'
+require_relative '../sections/footer_social_links'
 
 module UI::Pages
   class Home < UI::Page
@@ -9,9 +10,9 @@ module UI::Pages
     element :heading, 'h1'
     element :summary_list, 'ul.specialList'
     element :introduction_text, '#introductionText'
-    element :welsh_link, '#cyLink'
 
     section :header, UI::Sections::Header, '.header'
-    section :footer, UI::Sections::Footer, '.footerSocialLinks'
+    section :footer_site_links, UI::Sections::FooterSiteLinks, '.footerSiteLinks'
+    section :footer_social_links, UI::Sections::FooterSocialLinks, '.footerSocialLinks'
   end
 end

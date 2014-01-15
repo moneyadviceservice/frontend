@@ -9,6 +9,7 @@ module UI::Pages
     element :heading, 'h1'
     element :summary_list, 'ul.specialList'
     element :introduction_text, '#introductionText'
+    element :welsh_link, '#cyLink'
 
     section :header, UI::Sections::Header, '.header'
     section :footer, UI::Sections::Footer, '.footerSocialLinks'

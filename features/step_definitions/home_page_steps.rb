@@ -1,5 +1,13 @@
+Given(/^I am on the home page$/) do
+  home_page.load
+end
+
 When(/^I visit the home page$/) do
   home_page.load
+end
+
+When(/^I choose to view the Welsh version$/) do
+  home_page.welsh_link.click
 end
 
 Then(/^I should see the Money Advice Service brand identity$/) do
@@ -7,7 +15,7 @@ Then(/^I should see the Money Advice Service brand identity$/) do
   expect(home_page.footer.logo).to be_visible
 end
 
-Then(/^I should see an introduction$/) do
+Then(/^I should see an introduction(?: in my language)?$/) do
   expect(home_page.heading).
     to have_content(I18n.t('home.show.heading'))
 

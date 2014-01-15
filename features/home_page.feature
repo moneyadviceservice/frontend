@@ -14,7 +14,7 @@ Feature: Home page
   Scenario: Welsh user can translate the home page to Welsh
     Given I am on the home page
     When I choose to view the Welsh version
-    Then I should see the content in Welsh
+    Then I should see an introduction in my language
 
   Scenario: User can navigate to Money Advice Service social media profiles
     Given I am on the home page

@@ -5,3 +5,19 @@ cy:
   locales:
     cy: Cymraeg
     en: English
+  home:
+    show:
+      heading: "Welsh heading"
+      summary_list_html: |
+        <li>Welsh point one</li>
+        <li>Welsh point two</li>
+        <li>Welsh point three</li>
+      introduction_text_html: |
+        <p>
+          Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla
+          non metus auctor fringilla. Cras mattis consectetur purus sit amet
+          fermentum.
+        </p>
+        <p>
+          Vestibulum id ligula porta felis euismod semper.
+        </p>

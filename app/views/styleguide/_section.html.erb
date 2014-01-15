@@ -1,4 +1,4 @@
-<div class="styleguide-example">
+<div class="styleguide-example" id="section-<%= section.name %>">
   <h3><%= section.name %> <em><%= section.filename %></em></h3>
 
   <div class="styleguide-description">
@@ -16,9 +16,9 @@
   </div>
 
   <% unless section.modifiers.empty? %>
-    <%= render partial:    'element',
+    <%= render partial: 'element',
                collection: section.modifiers,
-               locals:     { source: yield } %>
+               locals: {source: yield} %>
   <% end %>
 
   <div class="styleguide-html">

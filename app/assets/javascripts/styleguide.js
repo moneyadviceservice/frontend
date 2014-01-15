@@ -1,3 +1,4 @@
+//= require jquery
 //= require 'styleguide/kss'
 
 $(document).ready(function() {

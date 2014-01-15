@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       member do
         get 'components'
         get 'forms'
+        get 'layouts'
         get 'html'
         get 'javascript'
         get 'ruby'

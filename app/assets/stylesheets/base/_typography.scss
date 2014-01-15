@@ -1,29 +1,77 @@
-// Use .u-visuallyhidden to hide content from all but screen-reader users
+// TODO added to prevent undefined variable error.
+$responsive: true;
+
+body {
+  font-family: "Helvetica Neue";
+  line-height: 1.4;
+}
+
+
+
+
+
+
+// This is the H1 heading
 //
-// Styleguide u-visuallyhidden
+// Styleguide Heading One (h1)
 
 h1 {
-  color: $color-green-rich;
-}
-
-// Font loading test
-h1 {
-  font-family: arial;
   font-weight: normal;
-  //.wf-museoslab-n4-active & {
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
     font-family: 'MuseoSlab', arial;
-  //}
+    font-weight: 700;
+  }
 }
+
+
+
+// The basic paragraph style
+//
+// Styleguide p
 
 p {
-  font-family: arial;
-  font-weight: bold;
-  // .wf-museoslab-n4-active & {
-    font-family: 'MuseoSlab', arial;
-  // }
+  @include font-size(16);
 }
 
-i, .icon {
-  font-family: 'icomoon', georgia;
-  font-style: normal;
+
+
+
+
+// The basic list style
+//
+// Styleguide List
+
+
+ul {
+
+}
+
+// This is the basic list without bullet points and with margins and padding removed.
+//
+// Styleguide Unstyled List
+
+.unstyledList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+
+// A list that has ticks for bullet points
+//
+// Styleguide specialList
+
+.specialList {
+  padding: 0 0 0 10px;
+  margin: 0;
+  list-style: none inside;
+
+  li:before {
+    font-family: 'icomoon';
+    content: '\e609';
+    position: absolute;
+    left: 0;
+    color: #bede1d;
+  }
 }

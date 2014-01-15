@@ -12,4 +12,5 @@ gem uninstall -aIx spring
 
 bundle install --without=development
 
-rake specrake cucumber
+rake spec
+rake cucumber

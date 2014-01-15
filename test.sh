@@ -10,6 +10,7 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 gem uninstall -aIx spring
 
+bundle update
 bundle install --without=development
 
 rake spec

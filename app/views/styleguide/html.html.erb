@@ -1,1 +1,95 @@
 <h1>HTML Styleguide</h1>
+<h2>General principles</h2>
+<p>All code in should look like a single person typed it, no matter how many people contributed.</p>
+
+<h2>Whitespace</h2>
+<p>Use 2 spaces for indentation. The content of any pair of tags - either HTML opening and closing tags or the start and end tags for an ERB block
+  - should be indented a level to indicate hierachy</p>
+
+<p>Example:</p>
+
+<%= erb do %>
+  <section>
+    <h2>Favourite Fruit</h2>
+    <ol>
+      <%% @fruits.each do |fruit|  %>
+        <li><%%= fruit.name %></li>
+      <%% end %>
+    </ol>
+  </section>
+<% end %>
+
+<h2>Format</h2>
+<ul>
+  <li>Always use lowercase tag and attribute names.</li>
+  <li>Write one discrete element per line.</li>
+  <li>Use one additional level of indentation for each nested element.</li>
+  <li>Use valueless boolean attributes (e.g. <code>checked</code> rather than
+    <code>checked="checked"</code>).</li>
+  <li>Always use double quotes to quote attribute values.</li>
+  <li>Omit the <code>type</code> attributes from <code>link</code> stylesheet, <code>style</code> and <code>script</code>
+    elements.</li>
+  <li>Always include closing tags.</li>
+  <li>Don't include a trailing slash in self-closing elements.</li>
+</ul>
+
+<p>Example:</p>
+
+<%= html do %>
+  <div class="tweet">
+    <a href="path/to/somewhere">
+      <img src="path/to/image.png" alt="">
+    </a>
+    <p>[tweet text]</p>
+    <button disabled>Reply</button>
+  </div>
+<% end %>
+
+<h3>Exceptions and slight deviations</h3>
+
+<p>Elements with multiple attributes can have attributes arranged across multiple lines in an effort to improve
+  readability and produce more useful diffs.</p>
+
+<p>Example:</p>
+
+<%= html do %>
+<a class="[value]"
+   data-action="[value]"
+   data-id="[value]"
+   href="[url]">
+  <span>[text]</span>
+</a>
+<% end %>
+
+
+<h2>Attribute order</h2>
+
+<ol>
+  <li><code>class</code></li>
+  <li><code>id</code></li>
+  <li><code>data-*</code></li>
+  <li>Everything else</li>
+</ol>
+
+<p>Example:</p>
+
+<%= html do %>
+  <a class="[value]" id="[value]" data-name="[value]" href="[url]">[text]</a>
+<% end %>
+
+<h2>Naming</h2>
+
+<p>Naming is hard, but very important. It's a crucial part of the process of
+  developing a maintainable code base, and ensuring that you have a relatively
+  scalable interface between your HTML and CSS/JS.</p>
+
+<ul>
+  <li>Use clear, thoughtful, and appropriate names for HTML classes. The names
+    should be informative both within HTML and CSS files.</li>
+  <li>Avoid <em>systematic</em> use of abbreviated class names. Don't make things
+    difficult to understand.</li>
+</ul>
+
+<p>Please see our
+  <%= link_to 'CSS naming conventions', css_overview_styleguide_path %>
+  for further details and examples.</p>

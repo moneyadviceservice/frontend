@@ -4,6 +4,7 @@ ruby File.read('.ruby-version').strip
 
 gem 'rails', '4.1.0.beta1'
 
+gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'draper', '~> 1.3.0'
 gem 'foreman'
@@ -14,16 +15,14 @@ gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
-gem 'autoprefixer-rails'
 
-group :test do
+group :development do
   gem 'spring'
 end
 
 group :test, :development do
   gem 'mas-development_dependencies',
-      github:  'moneyadviceservice/mas-development_dependencies',
-      require: 'mas/development_dependencies/konacha'
+      git: 'git@github.com:moneyadviceservice/mas-development_dependencies.git'
 end
 
 group :doc do

@@ -7,31 +7,41 @@
 //
 // Styleguide icons
 
-//.icon {
-//  font-family: 'icomoon', georgia;
-//  font-style: normal;
-//}
-
+#section-icons .styleguide-element {
+  background-color: darkgrey;
+}
 
 .icon {
-  width:100px;
-  height:100px;
   display:block;
-  background:#ddd;
+  color: $color-icon-font;
+  background-color: transparent;
+  line-height: 1;
+  font-family: 'icomoon';
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon--masLogo {
-  background:red;
+  width: 55px;
+  height: 25px;
+  background: $color-green-primary image_url('logo-mas-small.png') 0 0 no-repeat;
 }
 
 .icon--youtube {
-  background:blue;
+  &:before {
+    content: '\e605';
+  }
 }
 
 .icon--facebook {
-  background:orange;
+  &:before {
+    content: '\e608';
+  }
 }
 .icon--twitter {
-  background:green;
+  &:before {
+    content: '\e61c';
+  }
 }
 

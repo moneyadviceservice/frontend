@@ -1,28 +1,42 @@
-<h1>
-  Welcome to the Money Advice Service
-</h1>
+<%= styleguide_section sections['Heading One (h1)'] do %>
+  <h1>Welcome to the Money Advice Service</h1>
+<% end %>
 
-<ul>
+<%= styleguide_section sections['Basic Paragraph'] do %>
+  <p>This is a temporary landing page, set up as a first iteration for testing purposes. It is a fully responsive landing page with some basic functionality and styling.</p>
+<% end %>
+
+<%= styleguide_section sections['List'] do %>
+  <ul>
     <li>Free, unbiased, independent money advice</li>
     <li>Set up by government</li>
     <li>Help online, over the phone or in person</li>
-</ul>
+  </ul>
+<% end %>
 
+<%= styleguide_section sections['Unstyled List'] do %>
+  <ul class="unstyledList">
+      <li>Free, unbiased, independent money advice</li>
+      <li>Set up by government</li>
+      <li>Help online, over the phone or in person</li>
+  </ul>
+<% end %>
 
-<a href="/foo">This is a default link</a>
+<%= styleguide_section sections['Links'] do %>
+  <a href="/homepage.html">This is a default link</a>
+<% end %>
 
-<p>This is a temporary landing page, set up as a first iteration for testing purposes. It is a fully responsive landing page with some basic functionality and styling.</p>
-
-
-
+<%= styleguide_section sections['Links'] do %>
+  <a class="specialLink" href="/homepage.html">This is a link in our bold brand font</a>
+<% end %>
 
 <h2>Class and utilities</h2>
 
 <%= styleguide_section sections['specialList'] do %>
   <ul class="specialList">
-      <li>Free, unbiased, independent money advice</li>
-      <li>Set up by government</li>
-      <li>Help online, over the phone or in person</li>
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
   </ul>
 <% end %>
 

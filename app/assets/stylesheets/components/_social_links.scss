@@ -1,0 +1,28 @@
+// Social Links
+//
+// Styleguide socialLinks
+
+
+.socialLinks {
+  padding: 0;
+  margin: 0;
+
+  > li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 5px;
+    margin-right: -4px; // important to keep to prevent inline-block margins
+    background-color: $color-green-primary;
+    span:before {
+      color: $color-icon-font;
+    }
+    &:hover,
+    &:focus {
+      background-color: darken($color-green-primary, 10%);
+      border: none;
+    }
+  }
+}

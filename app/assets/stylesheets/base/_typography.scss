@@ -1,24 +1,77 @@
-h1 {
-  color: $color-green-primary;
+// TODO added to prevent undefined variable error.
+$responsive: true;
+
+body {
+  font-family: "Helvetica Neue";
+  line-height: 1.4;
 }
 
-// Font loading test
+
+
+
+
+
+// This is the H1 heading
+//
+// Styleguide Heading One (h1)
+
 h1 {
-  font-family: arial;
   font-weight: normal;
+  color: $color-green-primary;
   .wf-museoslab-n4-active & {
     font-family: 'MuseoSlab', arial;
+    font-weight: 700;
   }
 }
 
+
+
+// The basic paragraph style
+//
+// Styleguide p
+
 p {
-  font-family: arial;
+  @include font-size(16);
+}
+
+
+
+
+
+// The basic list style
+//
+// Styleguide List
+
+
+ul {
+
+}
+
+// This is the basic list without bullet points and with margins and padding removed.
+//
+// Styleguide Unstyled List
+
+.unstyledList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 
 // A list that has ticks for bullet points
 //
 // Styleguide specialList
+
 .specialList {
-  color:red;
+  padding: 0 0 0 10px;
+  margin: 0;
+  list-style: none inside;
+
+  li:before {
+    font-family: 'icomoon';
+    content: '\e609';
+    position: absolute;
+    left: 0;
+    color: #bede1d;
+  }
 }

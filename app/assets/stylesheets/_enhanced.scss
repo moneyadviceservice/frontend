@@ -1,10 +1,14 @@
-@import 'lib/_variables';
-@import 'lib/_functions';
-@import 'lib/_mixins';
-@import 'lib/_placeholders';
+@import 'lib/variables';
+@import 'lib/functions';
+@import 'lib/mixins';
+@import 'lib/placeholders';
 
-@import 'layout/_header';
+@import 'layout/two_column';
 
-@import 'components/_breadcrumb';
-@import 'components/_icon';
-@import 'components/_button';
+@import 'components/header';
+@import 'components/footer';
+
+@import 'components/breadcrumb';
+@import 'components/icon';
+@import 'components/button';
+@import 'components/social_links';

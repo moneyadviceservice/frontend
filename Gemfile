@@ -17,7 +17,7 @@ gem 'unicorn-rails'
 gem 'autoprefixer-rails'
 
 group :development do
-  gem 'spring'
+  gem 'spring', '>= 1.1.0.beta'
 end
 
 group :test, :development do

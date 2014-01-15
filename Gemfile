@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 gem 'autoprefixer-rails'
 
-group :test do
+group :development do
   gem 'spring'
 end
 

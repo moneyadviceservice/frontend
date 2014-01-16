@@ -8,7 +8,7 @@ The Money Advice Service's responsive website.
 ## Prerequisites
 
 * [Git]
-* [Ruby 2.1.0][Ruby]
+* [Ruby 2.0.0][Ruby]
 * [Rubygems 2.1.0][Rubygems]
 * [Bundler]
 

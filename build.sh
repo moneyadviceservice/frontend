@@ -1,5 +1,7 @@
 #!/bin/bash -l
 
+set -e
+
 unset RUBYOPT
 
 version_number=${GO_PIPELINE_COUNTER-0}
@@ -16,7 +18,7 @@ EOT
 
 # Clean temporary files
 rm -rf public/assets vendor/cache coverage log/* tmp/*
-BUNDLE_WITHOUT=test:development bundle package --all
+BUNDLE_WITHOUT="test:development" bundle package --all
 RAILS_ENV=assets $precompile_path_option rake assets:precompile
 
 # build RPM

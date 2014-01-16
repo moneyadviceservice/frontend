@@ -23,30 +23,31 @@
 }
 
 .icon--masLogo {
-  width: 55px;
-  height: 25px;
-  margin: 10px 0;
-  background: $color-green-primary image_url('logo-mas-small.png') 0 0 no-repeat;
+  width: 80px;
+  height: 35px;
+  margin: 6px 0;
+  background: transparent image_url('mas-logo-small.svg') 0 0 no-repeat;
+  background-size: contain;
 }
 
 .icon--youtube {
-  font-size: 26px;
-  margin-right: -3px;
+  font-size: 24px;
+//  margin-right: -3px;
   &:before {
     content: '\e605';
   }
 }
 
 .icon--facebook {
-  font-size: 25px;
-  margin-right: -5px;
+  font-size: 24px;
+//  margin-right: -5px;
   &:before {
     content: '\e61c';
   }
 }
 .icon--twitter {
-  font-size: 28px;
-  margin-right: -4px;
+  font-size: 24px;
+//  margin-right: -4px;
   &:before {
     content: '\e608';
   }

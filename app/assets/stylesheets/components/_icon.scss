@@ -8,7 +8,7 @@
 // Styleguide icons
 
 #section-icons .styleguide-element {
-  background-color: darkgrey;
+  background-color: $color-green-primary;
 }
 
 .icon {
@@ -32,7 +32,6 @@
 
 .icon--youtube {
   font-size: 24px;
-//  margin-right: -3px;
   &:before {
     content: '\e605';
   }
@@ -40,14 +39,12 @@
 
 .icon--facebook {
   font-size: 24px;
-//  margin-right: -5px;
   &:before {
     content: '\e61c';
   }
 }
 .icon--twitter {
   font-size: 24px;
-//  margin-right: -4px;
   &:before {
     content: '\e608';
   }

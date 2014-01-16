@@ -16,12 +16,20 @@ cat > public/version <<EOT
 }
 EOT
 
-# Clean temporary files
+echo "Cleaning temporary files"
+echo "----"
 rm -rf public/assets vendor/cache coverage log/* tmp/*
+
+echo "Running Bundle package"
+echo "----"
 BUNDLE_WITHOUT="test:development" bundle package --all
+
+echo "Precompiling assets"
+echo "----"
 RAILS_ENV=assets $precompile_path_option rake assets:precompile
 
-# build RPM
+echo "Creating RPM"
+echo "----"
 cd ..
 /usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version
 

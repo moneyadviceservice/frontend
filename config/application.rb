@@ -25,5 +25,8 @@ module Frontend
     # Configure the asset pipeline to include Bower components.
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
 
+    # Configure Google Tag Manager ID
+    config.google_tag_manager_id = 'GTM-WVFLH9'
+
   end
 end

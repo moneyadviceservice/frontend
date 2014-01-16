@@ -16,6 +16,21 @@ body {
 // Styleguide Heading One (h1)
 
 h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0.3em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0.3em 0;
   font-weight: normal;
   color: $color-green-primary;
   .wf-museoslab-n4-active & {
@@ -64,14 +79,13 @@ ul {
 
 .specialList {
   padding: 0 0 0 10px;
-  margin: 0;
+  margin: 2em 0;
   list-style: none inside;
 
   li:before {
     font-family: 'icomoon';
     content: '\e609';
-    position: absolute;
-    left: 0;
+    padding-right: 10px;
     color: #bede1d;
   }
 }

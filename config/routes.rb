@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'home#show'
 
   scope '/:locale' do
-    get '/', to: 'home#index'
-
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',

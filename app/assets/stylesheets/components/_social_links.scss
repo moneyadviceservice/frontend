@@ -12,8 +12,12 @@
   }
 
   a {
+//    width: 56px;
+//    height: 56px;
     display: block;
-    padding: 5px 4px 5px 6px;
+    padding: 14px;
+    margin-right: -4px;
+    margin-top: -2px;
     margin-right: -4px; // important to keep to prevent inline-block margins
     background-color: $color-green-primary;
     border-right: 1px solid $color-white-translucent;

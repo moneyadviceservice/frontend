@@ -1,6 +1,10 @@
 <%= render 'shared/header' %>
-<h1><%= t('.heading') %></h1>
-<ul class="specialList"><%= t('.summary_list_html') %></ul>
-<div id="introductionText"><%= t('.introduction_text_html') %></div>
-<%= render 'shared/footer_site_links' %>
+
+<main class="l-container">
+  <h1><%= t('.heading_html') %></h1>
+  <ul class="specialList"><%= t('.summary_list_html') %></ul>
+  <div id="introductionText"><%= t('.introduction_text_html') %></div>
+</main>
+
+<%= render 'shared/footer_site_links', locals: alternative_locales %>
 <%= render 'shared/footer_social_links' %>

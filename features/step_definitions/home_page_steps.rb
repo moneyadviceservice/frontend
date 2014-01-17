@@ -17,7 +17,7 @@ end
 
 Then(/^I should see an introduction(?: in my language)?$/) do
   expect(home_page.heading).
-    to have_content(I18n.t('home.show.heading'))
+    to have_content(strip_tags(I18n.t('home.show.heading_html')))
 
   expect(home_page.summary_list).
     to have_content(strip_tags(I18n.t('home.show.summary_list_html')))

@@ -2,10 +2,9 @@
 $responsive: true;
 
 body {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   line-height: 1.4;
 }
-
 
 
 // Currently we only support H1 - H3
@@ -34,7 +33,6 @@ h3 {
 p {
   @extend %text-basicParagraph;
 }
-
 
 
 // Larger text size for the article introductory paragraph.

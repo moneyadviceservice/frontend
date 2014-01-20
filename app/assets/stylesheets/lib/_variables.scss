@@ -37,7 +37,11 @@ $color-yellow-light: #ebd520;
 $color-yellow-dark: #ddae1f;
 
 $color-focus-highlight: #FFFFCC;
+
+// TODO ask Matt about the following colors
+
 $color-white-translucent: rgba(255, 255, 255, 0.2);
+$temp-color-grey: #ecf0ef;
 
 // TODO refactor into camelcase
 
@@ -50,3 +54,11 @@ $color-text-default: $color-black-primary;
 $color-icon-font: $color-white-primary;
 
 $color-accessible-focus: $color-focus-highlight;
+
+/* Grid Variables */
+
+// gutter width
+$gw: 20px;
+
+// line height variable
+$lh: 22px;

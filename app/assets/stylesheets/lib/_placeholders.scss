@@ -1,0 +1,50 @@
+%text-basicParagraph {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  @include font-size(16);
+}
+
+%text-introParagraph {
+  font-family: 'MuseoSlab';
+  font-weight: 700;
+  @include font-size(22);
+  color: $color-grey-primary;
+}
+
+// Headings
+
+%heading-alpha {
+  font-size: 36px;
+  line-height: 1.4;
+  margin: 0.3em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+    font-weight: 700;
+  }
+}
+
+%heading-beta {
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0 0 0.3em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+    font-weight: 700;
+  }
+}
+
+%heading-gamma {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 0.3em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+    font-weight: 700;
+  }
+}

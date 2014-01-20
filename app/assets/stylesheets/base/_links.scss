@@ -1,6 +1,6 @@
 // Links and their accompanying hover and focus states
 //
-// Styleguide Links
+// Styleguide a
 
 a,
 a:visited {
@@ -21,10 +21,43 @@ a:focus{
   border-bottom:1px dotted;
 }
 
-.specialLink {
+// Links and their accompanying hover and focus states
+//
+// Styleguide brandFontLink
+
+.brandFontLink {
   font-family: MuseoSlab;
   font-weight: 700;
 }
+
+// Links and their accompanying hover and focus states
+//
+// Styleguide articleLink
+
+.articleLink,
+.articleLink:visited {
+  color: $color-blue-light;
+  text-decoration: none;
+}
+
+.articleLink:hover {
+  color: $color-blue-light;
+  border-bottom:1px solid;
+}
+
+
+.articleLink:focus{
+  color: $color-blue-light;
+  outline: 1px solid;
+  background-color: $color-focus-highlight;
+  border-bottom:1px dotted;
+}
+
+
+
+
+
+
 
 nav a,
 nav a:visited {

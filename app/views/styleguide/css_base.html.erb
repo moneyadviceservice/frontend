@@ -1,13 +1,29 @@
-<%= styleguide_section sections['Heading One (h1)'] do %>
+<%= styleguide_section sections['h1'] do %>
   <h1>Welcome to the Money Advice Service</h1>
 <% end %>
 
-<%= styleguide_section sections['Basic Paragraph'] do %>
+<%= styleguide_section sections['h2'] do %>
+  <h2>Make sure you can afford your monthly repayments before borrowing</h2>
+<% end %>
+
+<%= styleguide_section sections['h3'] do %>
+  <h3>Budget for the other costs of buying a home (h3)</h3>
+<% end %>
+
+<%= styleguide_section sections['p'] do %>
   <p>This is a temporary landing page, set up as a first iteration for testing purposes. It is a fully responsive
     landing page with some basic functionality and styling.</p>
 <% end %>
 
-<%= styleguide_section sections['List'] do %>
+<%= styleguide_section sections['ol'] do %>
+  <ol>
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ol>
+<% end %>
+
+<%= styleguide_section sections['ul'] do %>
   <ul>
     <li>Free, unbiased, independent money advice</li>
     <li>Set up by government</li>
@@ -15,26 +31,30 @@
   </ul>
 <% end %>
 
-<%= styleguide_section sections['Unstyled List'] do %>
-  <ul class="unstyledList">
+<%= styleguide_section sections['list--unstyled'] do %>
+  <ul class="list--unstyled">
     <li>Free, unbiased, independent money advice</li>
     <li>Set up by government</li>
     <li>Help online, over the phone or in person</li>
   </ul>
 <% end %>
 
-<%= styleguide_section sections['Links'] do %>
+<%= styleguide_section sections['a'] do %>
   <a href="/homepage.html">This is a default link</a>
 <% end %>
 
 <h2>Class and utilities</h2>
 
-<%= styleguide_section sections['Links'] do %>
-  <a class="specialLink" href="/homepage.html">This is a link in our bold brand font</a>
+<%= styleguide_section sections['articleLink'] do %>
+  <a class="articleLink" href="/homepage.html">This is a link in our bold brand font</a>
 <% end %>
 
-<%= styleguide_section sections['specialList'] do %>
-  <ul class="specialList">
+<%= styleguide_section sections['brandFontLink'] do %>
+  <a class="brandFontLink" href="/homepage.html">This is a link in our bold brand font</a>
+<% end %>
+
+<%= styleguide_section sections['list--iconBullets'] do %>
+  <ul class="list--iconBullets">
     <li>Free, unbiased, independent money advice</li>
     <li>Set up by government</li>
     <li>Help online, over the phone or in person</li>
@@ -42,6 +62,12 @@
 <% end %>
 
 
-<%= styleguide_section sections['u-visuallyhidden'] do %>
-  <span class="u-visuallyhidden">Text to visually hide</span> Text to display
+<%= styleguide_section sections['u-visuallyHidden'] do %>
+  <span class="u-visuallyHidden">Text to visually hide</span> Text to display
+<% end %>
+
+<%= styleguide_section sections['clearfix'] do %>
+  <div class="clearfix">
+    How to show this visually?
+  </div>
 <% end %>

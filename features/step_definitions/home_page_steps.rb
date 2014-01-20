@@ -7,6 +7,9 @@ When(/^I visit the home page$/) do
 end
 
 When(/^I choose to view the Welsh version$/) do
+  expect(home_page.footer_site_links.welsh_link[:lang]).
+    to eq('cy')
+
   home_page.footer_site_links.welsh_link.click
 end
 

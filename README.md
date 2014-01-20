@@ -62,9 +62,11 @@ first consider whether it should be promoted to this common layer.
 ### Front-end Package Management
 
 The application uses [Bower] to manage front-end packages. Dependencies should
-be defined in the `bower.json` configuration file. Once installed they will be
+be defined in the [bower.json] configuration file. Once installed they will be
 automatically available to the asset pipeline.
 
+
+[bower.json]: ./bower.json
 
 [bower]: http://bower.io
 [bundler]: http://bundler.io

@@ -43,6 +43,23 @@ $ foreman s
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+### Feature Development
+
+We like to develop features from the outside in. We write our user stories in a
+[declarative style][features/home_page.feature]. When contributing a feature:
+
+1. Create a new feature file in [features].
+2. Write scenarios to exercise the scope of the feature in it's entirety.
+3. Create [page objects][site prism] in [features/support/ui] and expose them
+   to the world in [features/support/world/pages.rb].
+4. Start with a failing scenario then make it pass.
+5. Write unit tests for the objects you identify for your feature.
+6. Start with a failing unit test then make it pass.
+7. Keep your unit tests isolated.
+8. Test the [Routing][routing specs], [Models][model specs],
+   [Controllers][controller specs], [Helpers][helper specs] and
+   [JavaScript][konacha] of your feature.
+
 ### Styleguide
 
 The application includes an internal styleguide for contributors. It contains a
@@ -67,12 +84,23 @@ automatically available to the asset pipeline.
 
 
 [bower.json]: ./bower.json
+[features]: ./features
+[features/home_page.feature]: ./features/home_page.feature
+[features/support/ui]: ./features/support/ui
+[features/support/world/pages.rb]: ./features/support/world/pages.rb
+
+[controller specs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
+[helper specs]: https://www.relishapp.com/rspec/rspec-rails/docs/helper-specs
+[model specs]: https://www.relishapp.com/rspec/rspec-rails/docs/model-specs
+[routing specs]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs
 
 [bower]: http://bower.io
 [bundler]: http://bundler.io
 [git]: http://git-scm.com
+[konacha]: https://github.com/jfirebaugh/konacha
 [kss]: https://github.com/kneath/kss
 [mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
 [money advice service team]: https://github.com/moneyadviceservice
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org
+[site prism]: https://github.com/natritmeyer/site_prism

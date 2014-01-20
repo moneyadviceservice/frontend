@@ -35,12 +35,20 @@ end
 
 
 Then(/^I should be see links to MAS social media profiles$/) do
-  expect(home_page.footer_social_links.youtube_link[:href]).
-    to eq('https://www.youtube.com/user/MoneyAdviceService')
+  facebook_link = home_page.footer_social_links.facebook_link
+  twitter_link  = home_page.footer_social_links.twitter_link
+  youtube_link  = home_page.footer_social_links.youtube_link
 
-  expect(home_page.footer_social_links.facebook_link[:href]).
+  expect(facebook_link[:lang]).to eq('en')
+  expect(twitter_link[:lang]).to eq('en')
+  expect(youtube_link[:lang]).to eq('en')
+
+  expect(facebook_link[:href]).
     to eq('https://www.facebook.com/MoneyAdviceService?ref=mas')
 
-  expect(home_page.footer_social_links.twitter_link[:href]).
+  expect(twitter_link[:href]).
     to eq('http://twitter.com/YourMoneyAdvice')
+
+  expect(youtube_link[:href]).
+    to eq('https://www.youtube.com/user/MoneyAdviceService')
 end

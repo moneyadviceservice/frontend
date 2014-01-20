@@ -1,0 +1,13 @@
+.callout {
+  padding: $gw;
+  margin: $gw;
+  max-width: 40%;
+  float: right;
+  border-radius: 10px;
+  color: $color-green-primary;
+  background-color: $color-green-light;
+
+  > p {
+    margin-top: 0;
+  }
+}

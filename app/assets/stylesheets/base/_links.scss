@@ -10,15 +10,14 @@ a:visited {
 
 a:hover {
   color: $color-green-primary;
-  border-bottom:1px solid;
+  border-bottom: 1px solid;
 }
 
-
-a:focus{
+a:focus {
   color: $color-green-primary;
   outline: 1px solid;
   background-color: $color-focus-highlight;
-  border-bottom:1px dotted;
+  border-bottom: 1px dotted;
 }
 
 .specialLink {
@@ -41,8 +40,7 @@ nav a:hover {
   border: none;
 }
 
-
-nav a:focus{
+nav a:focus {
   color: $color-green-primary;
   outline: 1px solid;
   background-color: $color-focus-highlight;

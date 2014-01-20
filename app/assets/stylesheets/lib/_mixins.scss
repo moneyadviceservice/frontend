@@ -1,4 +1,5 @@
-// input a font size in px and the mixin will output the font size in pixels and rem for browsers that support media queries (and rem)
+// input a font size in px and the mixin will output the font size in pixels
+// and rem for browsers that support media queries (and rem)
 @mixin font-size($sizeValue: 1.6) {
   font-size: $sizeValue + px;
 
@@ -22,8 +23,7 @@ $media-query-free-breakpoint: 960px;
         @content;
       }
     }
-  }
-  @else if $min-width <= $media-query-free-breakpoint and (not $max-width or $max-width and $max-width >= $media-query-free-breakpoint) {
+  } @else if $min-width <= $media-query-free-breakpoint and (not $max-width or $max-width and $max-width >= $media-query-free-breakpoint) {
     @content;
   }
 }

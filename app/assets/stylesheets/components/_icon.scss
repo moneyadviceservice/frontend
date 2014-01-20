@@ -12,7 +12,7 @@
 }
 
 .icon {
-  display:block;
+  display: block;
   color: $color-icon-font;
   background-color: transparent;
   line-height: 1;
@@ -43,6 +43,7 @@
     content: '\e61c';
   }
 }
+
 .icon--twitter {
   font-size: 24px;
   &:before {

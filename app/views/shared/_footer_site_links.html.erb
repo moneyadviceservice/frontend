@@ -4,7 +4,8 @@
       <% locals.each do |locale| %>
         <li>
           <%= link_to t("locales.#{locale}"), { locale: locale },
-                      { id: "#{locale}Link" } %>
+                      id:    "#{locale}Link",
+                      lang:  locale %>
         </li>
       <% end %>
     </ul>

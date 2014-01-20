@@ -1,14 +1,14 @@
 // Icons
 //
-// .icon--masLogo       - something
-// .icon--youtube       - something
-// .icon--facebook       - something
-// .icon--twitter       - something
+// .icon--masLogo       - money advice service logo
+// .icon--youtube       - \e605
+// .icon--facebook       - \e61c
+// .icon--twitter       - \e608
 //
 // Styleguide icons
 
 #section-icons .styleguide-element {
-  background-color: darkgrey;
+  background-color: $color-green-primary;
 }
 
 .icon {
@@ -24,24 +24,29 @@
 
 .icon--masLogo {
   width: 55px;
-  height: 25px;
-  background: $color-green-primary image_url('logo-mas-small.png') 0 0 no-repeat;
+  height: 30px;
+  margin: 10px 0;
+  background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
+  background-size: contain;
 }
 
 .icon--youtube {
+  font-size: 24px;
   &:before {
     content: '\e605';
   }
 }
 
 .icon--facebook {
+  font-size: 24px;
   &:before {
-    content: '\e608';
+    content: '\e61c';
   }
 }
 .icon--twitter {
+  font-size: 24px;
   &:before {
-    content: '\e61c';
+    content: '\e608';
   }
 }
 

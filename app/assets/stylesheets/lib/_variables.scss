@@ -1,23 +1,52 @@
 /* Standard palette, colours */
-$color-green-primary: #3e8406;
-$color-green-highlight: #bcdd15;
+
+$color-black-primary: #333333;
 $color-white-primary: #FFF;
+$color-grey-primary: #6d6d6d;
 
-$color-green-hover: #46892e;
+$color-green-primary: #3e8406;
+$color-green-secondary: #61a612;
+$color-green-tertiary: #115329;
+
+$color-green-light: #b9dd48;
+$color-green-medium: #81c724;
+
+$color-teal-light: #109e89;
+$color-teal-dark: #0e7f6c;
+
+$color-blue-light: #1f6faa;
+$color-blue-dark: #1f6faa;
+
+$color-grey-medium: #526675;
+$color-grey-dark: #526675;
+
+$color-bluegrey-dark: #96b4c0;
+$color-bluegrey-medium: #cbdae0;
+$color-bluegrey-light: #dae1df;
+
+$color-pink-medium: #e43c8a;
+$color-pink-dark: #bf2682;
+
+$color-red-medium: #d52b30;
+$color-red-dark: #af2745;
+
+$color-orange-medium: #f06431;
+$color-orange-dark: #c95d2d;
+
+$color-yellow-light: #ebd520;
+$color-yellow-dark: #ddae1f;
+
 $color-focus-highlight: #FFFFCC;
+$color-white-translucent: rgba(255, 255, 255, 0.2);
 
+// TODO refactor into camelcase
 
 /* Standard palette, greys */
-  // add these when we know more about them!
-
+// add these when we know more about them!
 
 /* Semantic colour names */
-$color-grey-background: #e3e8e7;
 
-$color-text-default: #333333;
-
+$color-text-default: $color-black-primary;
 $color-icon-font: $color-white-primary;
-
-$color-icon-hover: $color-green-hover;
 
 $color-accessible-focus: $color-focus-highlight;

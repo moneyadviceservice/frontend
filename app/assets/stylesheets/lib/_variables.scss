@@ -1,24 +1,28 @@
-/* Standard palette, colours */
+// TODO refactor into camelcase
+
+// Color palette
 
 $color-black-primary: #333333;
-$color-white-primary: #FFF;
 $color-grey-primary: #6d6d6d;
+$color-white-primary: #FFF;
 
-$color-green-primary: #3e8406;
+$color-green-primary: #388426;
 $color-green-secondary: #61a612;
 $color-green-tertiary: #115329;
 
+$color-green-pale: #dceea3;  // not in the standard palette
 $color-green-light: #b9dd48;
 $color-green-medium: #81c724;
 
 $color-teal-light: #109e89;
 $color-teal-dark: #0e7f6c;
 
-$color-blue-light: #1f6faa;
-$color-blue-dark: #1f6faa;
+$color-blue-light: #e6f2f7; // not in the standard palette
+$color-blue-medium: #1f6faa;
+$color-blue-dark: #18507a;
 
 $color-grey-medium: #526675;
-$color-grey-dark: #526675;
+$color-grey-dark: #394752;
 
 $color-bluegrey-dark: #96b4c0;
 $color-bluegrey-medium: #cbdae0;
@@ -36,26 +40,22 @@ $color-orange-dark: #c95d2d;
 $color-yellow-light: #ebd520;
 $color-yellow-dark: #ddae1f;
 
-$color-focus-highlight: #FFFFCC;
+$color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 
-// TODO ask Matt about the following colors
+//$temp-color-grey: #ecf0ef; // used for key lines, could be redundant
 
-$color-white-translucent: rgba(255, 255, 255, 0.2);
-$temp-color-grey: #ecf0ef;
 
-// TODO refactor into camelcase
+// Semantic colour names
 
-/* Standard palette, greys */
-// add these when we know more about them!
+$color-text--default: $color-black-primary;
+$color-text--icon: $color-white-primary;
 
-/* Semantic colour names */
+$color-accessible-focus: $color-blue-light;
 
-$color-text-default: $color-black-primary;
-$color-icon-font: $color-white-primary;
+$color-callout-background: $color-green-pale;
 
-$color-accessible-focus: $color-focus-highlight;
 
-/* Grid Variables */
+// Grid Variables
 
 // gutter width
 $gw: 20px;

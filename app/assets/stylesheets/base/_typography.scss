@@ -1,12 +1,20 @@
 // TODO added to prevent undefined variable error.
 $responsive: true;
 
+
+
 body {
   font-family: "Helvetica Neue";
   line-height: 1.4;
 }
 
+
+
+
 // This is the H1 heading
+//
+//
+//
 //
 // Styleguide h1
 
@@ -16,12 +24,17 @@ h1 {
   line-height: 1.2;
 }
 
-.tempArticleContainer h1 {
+.l-editorial-container h1 {
   @extend %heading-alpha;
 }
 
 
+
+
 // This is the H2 heading
+//
+//
+//
 //
 // Styleguide h2
 
@@ -29,7 +42,15 @@ h2 {
   @extend %heading-beta;
 }
 
+
+
+
+
+
 // This is the H3 heading
+//
+//
+//
 //
 // Styleguide h3
 
@@ -37,7 +58,16 @@ h3 {
   @extend %heading-gamma;
 }
 
+
+
+
+
+
+
 // The basic paragraph style
+//
+//
+//
 //
 // Styleguide p
 
@@ -47,132 +77,22 @@ p {
 
 
 
-// The basic ordered list style
-//
-// Styleguide ol
-
-ol {
-  padding: 0 0 0 25px;
-
-}
-
-
-// The basic unordered list style
-//
-// Styleguide ul
-
-ul {
-
-}
-
-// The basic list style with green colored bullet points.
-//
-// Styleguide list--coloredBullets
-
-.list--coloredBullets {
-  list-style-type: none;
-
-  > li:before {
-    content:'\2022';
-    display: block;
-    position: relative;
-    width: 0px;
-    height: 0px;
-    left: -20px;
-    top: -5px;
-    color: $color-green-secondary;
-    font-size: 24px;
-  }
-
-}
-
-// This is the basic list without bullet points and with margins and padding removed.
-//
-// Styleguide list--unstyled
-
-.list--unstyled {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-
-// A list that has ticks for bullet points
-//
-// Styleguide list--iconBullets
-
-.list--iconBullets {
-  padding: 0 0 0 10px;
-  margin: 2em 0;
-  list-style: none inside;
-
-  li:before {
-    font-family: 'icomoon';
-    content: '\e609';
-    padding-right: 10px;
-    color: $color-green-secondary;
-  }
-}
-
-// A list style that has ticks and crosses for bullet points
-//
-// Styleguide .yes-no
-
-.yes-no {
-  @extend .list--unstyled;
-}
-
-// A list that has ticks for bullet points
-//
-// Styleguide .yes
-
-.yes:before {
-  font-family: 'icomoon';
-  @include font-size(20);
-  content: '\e609';
-  padding-right: 10px;
-  color: $color-green-secondary;
-}
-
-// A list that has crosses for bullet points
-//
-// Styleguide .no
-
-.no:before {
-  font-family: 'icomoon';
-  @include font-size(20);
-  content: '\e61e';
-  padding-right: 10px;
-  position: relative;
-  top: 3px;
-  color: $color-red-dark;
-}
-
-
-
-
 
 
 // Style for the article introductory paragraph.
+//
+//
+//
 //
 // Styleguide intro
 
 .intro {
   @extend %text-introParagraph;
   @extend .clearfix;
-  padding: $gw 0;
-//  border-top: 1px solid $temp-color-grey;
-  border-bottom: 1px solid $temp-color-grey;
-}
 
-// Style for the article introductory paragraph with an inline image.
-//
-// Styleguide introParagraph-image
-
-.introParagraph-image {
-  float: right;
-  width: 270px;
-  height: 200px;
-  margin: 0 0 0 $gw;
-  background-color: grey;
+  > img {
+    float: right;
+    margin: 0 0 $gw $gw;
+    background-color: grey;
+  }
 }

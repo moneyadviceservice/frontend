@@ -1,0 +1,153 @@
+// The basic ordered list style
+//
+// Styleguide ol
+
+ol {
+  padding: 0 0 0 25px;
+  li {
+    font-weight: bold;
+
+    &:first-line {
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+
+// The basic unordered list style
+//
+// Styleguide ul
+
+ul {
+
+}
+
+.l-editorial-container {
+  ul {
+    @extend .list--coloredBullets;
+  }
+}
+
+
+
+
+// This is the basic unstyled list without bullet points and with margins and padding removed.
+// ...it can also be used as a helper class to remove formatting from a list element.
+//
+//
+//
+// Styleguide list--unstyled
+
+.list--unstyled {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+
+
+
+
+
+// The basic list style with brand green colored bullet points.
+//
+//
+//
+//
+// Styleguide list--coloredBullets
+
+.list--coloredBullets {
+  list-style-type: none;
+  padding: 0 20px;
+
+  > li:before {
+    content:'\2022';
+    display: block;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    left: -20px;
+    top: -5px;
+    color: $color-green-secondary;
+    font-size: 24px;
+  }
+
+}
+
+
+
+
+
+// A list that has ticks and crosses for bullet points
+//
+//
+//
+//
+//
+// Styleguide list--iconBullets
+
+.list--iconBullets {
+  padding: 0 0 0 10px;
+  margin: 2em 0;
+  list-style: none inside;
+
+  li:before {
+    font-family: 'icomoon';
+    content: '\e609';
+    padding-right: 10px;
+    color: $color-green-secondary;
+  }
+}
+
+.list-iconBullets--tick:before {
+  font-family: 'icomoon';
+  @include font-size(20);
+  content: '\e609';
+  padding-right: 10px;
+  color: $color-green-secondary;
+}
+
+.list-iconBullets--cross:before {
+  font-family: 'icomoon';
+  @include font-size(20);
+  content: '\e61e';
+  padding-right: 10px;
+  position: relative;
+  top: 3px;
+  color: $color-red-dark;
+}
+
+
+
+
+
+
+// Lists for Articles and Editorial Content
+// ...should be extending the default styles above:-
+//
+//
+//
+//
+// Styleguide .yes-no
+
+.yes-no {
+  @extend .list--unstyled;
+}
+
+// A list that has ticks for bullet points
+//
+// Styleguide .yes
+
+.yes:before {
+  @extend .list-iconBullets--tick;
+}
+
+// A list that has crosses for bullet points
+//
+// Styleguide .no
+
+.no:before {
+  @extend .list-iconBullets--cross;
+}

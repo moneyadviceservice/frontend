@@ -5,9 +5,10 @@
   float: right;
   border-radius: 10px;
   color: $color-green-primary;
-  background-color: $color-green-light;
+  background-color: $color-callout-background;
 
   > p {
+    @extend %text-callout;
     margin-top: 0;
   }
 }

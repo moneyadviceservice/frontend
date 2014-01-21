@@ -11,6 +11,12 @@
   color: $color-grey-primary;
 }
 
+%text-callout {
+  font-family: 'MuseoSlab';
+  font-weight: 700;
+  @include font-size(16);
+}
+
 // Headings
 
 %heading-alpha {

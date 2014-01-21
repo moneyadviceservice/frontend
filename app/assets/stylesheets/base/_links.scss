@@ -1,68 +1,82 @@
-// Links and their accompanying hover and focus states
+// Basic primary links and their accompanying hover and focus states
+//
+//
+//
 //
 // Styleguide a
 
 a,
 a:visited {
-  color: $color-green-primary;
+  color: $color-blue-medium;
   text-decoration: none;
 }
 
 a:hover {
-  color: $color-green-primary;
+  color: $color-blue-medium;
   border-bottom:1px solid;
 }
 
 
 a:focus{
-  color: $color-green-primary;
+  color: $color-blue-medium;
   outline: 1px solid;
-  background-color: $color-focus-highlight;
+  background-color: $color-accessible-focus;
   border-bottom:1px dotted;
 }
 
-// Links and their accompanying hover and focus states
-//
-// Styleguide brandFontLink
 
-.brandFontLink {
+
+
+
+
+
+// Menu links and styled using the brand font
+//
+//
+//
+//
+// Styleguide link--brandFont
+
+.link--brandFont {
   font-family: MuseoSlab;
   font-weight: 700;
 }
 
-// Links and their accompanying hover and focus states
+// Secondary links used for internal navigation and menus
 //
-// Styleguide articleLink
+//
+//
+//
+// Styleguide link--navigation
 
-.articleLink,
-.articleLink:visited {
-  color: $color-blue-light;
-  text-decoration: none;
+.link--navigation,
+.link--navigation:visited {
+  color: $color-green-primary;
 }
 
-.articleLink:hover {
-  color: $color-blue-light;
-  border-bottom:1px solid;
+.link--navigation:hover {
+  color: $color-green-primary;
 }
 
-
-.articleLink:focus{
-  color: $color-blue-light;
-  outline: 1px solid;
-  background-color: $color-focus-highlight;
-  border-bottom:1px dotted;
+.link--navigation:focus {
+  color: $color-green-primary;
+  background-color: $color-accessible-focus;
 }
 
 
 
 
-
-
+// Navigation links
+//
+//
+//
+//
+// Styleguide nav a
 
 nav a,
 nav a:visited {
   display: inline-block;
-  color: $color-text-default;
+  color: $color-text--default;
   text-decoration: none;
   padding: 15px;
   width: 100%;
@@ -70,7 +84,7 @@ nav a:visited {
 
 nav a:hover {
   color: $color-green-primary;
-  background-color: $color-focus-highlight;
+  background-color: $color-accessible-focus;
   border: none;
 }
 
@@ -78,6 +92,6 @@ nav a:hover {
 nav a:focus{
   color: $color-green-primary;
   outline: 1px solid;
-  background-color: $color-focus-highlight;
+  background-color: $color-accessible-focus;
   border-bottom: none;
 }

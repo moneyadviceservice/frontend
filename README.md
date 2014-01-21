@@ -60,6 +60,7 @@ We like to develop features from the outside in. We write our user stories in a
 8. Test the [Routing][routing specs], [Models][model specs],
    [Controllers][controller specs], [Helpers][helper specs] and
    [JavaScript][konacha] of your feature.
+9. Test your features against the [mock API] and record interactions with [VCR].
 
 ### API
 
@@ -118,3 +119,4 @@ automatically available to the asset pipeline.
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org
 [site prism]: https://github.com/natritmeyer/site_prism
+[vcr]: https://github.com/vcr/vcr

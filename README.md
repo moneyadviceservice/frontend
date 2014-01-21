@@ -64,9 +64,10 @@ We like to develop features from the outside in. We write our user stories in a
 ### API
 
 The application is backed by a RESTful JSON API. This is described for humans
-as a [blueprint file][apiary.apib] using the [API Blueprint] format. Changes you
-make to the [blueprint file][apiary.apib] will be automatically reflected in the
-online [api documentation] and [mock api].
+as a [blueprint file][apiary.apib] using the
+[API Blueprint Language Specification]. Changes you make to the
+[blueprint file][apiary.apib] will be automatically reflected in the online
+[api documentation] and [mock api].
 
 ### Styleguide
 
@@ -104,7 +105,7 @@ automatically available to the asset pipeline.
 [routing specs]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs
 
 [api blueprint]: https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md
-[api documentation]: http://docs.moneyadviceservice.apiary.io/
+[api blueprint language specification]: http://docs.moneyadviceservice.apiary.io/
 [bower]: http://bower.io
 [bundler]: http://bundler.io
 [git]: http://git-scm.com

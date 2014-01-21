@@ -7,11 +7,12 @@ API for the Money Advice Service.
 # Articles
 Article related resources of the **Money Advice Service**.
 
-## Article [/articles/{id}]
+## Article [/{locale}/articles/{id}]
 A single Article object with all its details
 
 + Parameters
-    + id (required, string, `foo-bar`) ... String `id` of the Article to perform action with. Has example value.
+    + locale = `en` (optional, string, `cy`) ... Locale of the Article.
+    + id (required, string, `foo-bar`) ... ID of the Article.
 
 ### Retrieve a Article [GET]
 + Response 200 (application/json)

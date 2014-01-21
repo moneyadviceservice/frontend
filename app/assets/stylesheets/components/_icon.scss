@@ -12,8 +12,6 @@
 }
 
 .icon {
-  display:block;
-  color: $color-text--icon;
   background-color: transparent;
   line-height: 1;
   font-family: 'icomoon';
@@ -25,6 +23,7 @@
 .icon--masLogo {
   width: 55px;
   height: 30px;
+  display:block; // temporary style until masLogo is added to the icomoon font
   margin: 10px 0;
   background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
   background-size: contain;
@@ -43,6 +42,7 @@
     content: '\e61c';
   }
 }
+
 .icon--twitter {
   font-size: 24px;
   &:before {
@@ -50,3 +50,14 @@
   }
 }
 
+.icon--externalLink {
+  &:after {
+    content: '\e619';
+  }
+}
+
+.icon--documentLink {
+  &:before {
+    content: '\e611';
+  }
+}

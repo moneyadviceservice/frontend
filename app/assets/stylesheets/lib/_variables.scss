@@ -21,8 +21,10 @@ $color-blue-light: #e6f2f7; // not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
 
+$color-grey-light: #a8b2ba; // not in the standard palette
 $color-grey-medium: #526675;
 $color-grey-dark: #394752;
+
 
 $color-bluegrey-dark: #96b4c0;
 $color-bluegrey-medium: #cbdae0;
@@ -49,6 +51,8 @@ $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palet
 
 $color-text--default: $color-black-primary;
 $color-text--icon: $color-white-primary;
+
+$color-link--external: $color-grey-light;
 
 $color-accessible-focus: $color-blue-light;
 

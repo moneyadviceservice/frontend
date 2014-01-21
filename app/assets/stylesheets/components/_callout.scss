@@ -1,11 +1,16 @@
 .callout {
   padding: $gw;
   margin: $gw;
-  max-width: 40%;
+  max-width: 38%;
   float: right;
   border-radius: 10px;
-  color: $color-green-primary;
+  color: $color-green-tertiary;
   background-color: $color-callout-background;
+  line-height: 1.5;
+
+  > h3 {
+    margin-bottom: 1.2em;
+  }
 
   > p {
     @extend %text-callout;

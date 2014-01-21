@@ -104,8 +104,9 @@ automatically available to the asset pipeline.
 [model specs]: https://www.relishapp.com/rspec/rspec-rails/docs/model-specs
 [routing specs]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs
 
-[api blueprint]: https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md
 [api blueprint language specification]: http://docs.moneyadviceservice.apiary.io/
+[api blueprint]: https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md
+[api documentation]: http://docs.moneyadviceservice.apiary.io/
 [bower]: http://bower.io
 [bundler]: http://bundler.io
 [git]: http://git-scm.com

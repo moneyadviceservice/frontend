@@ -67,7 +67,7 @@ The application is backed by a RESTful JSON API. This is described for humans
 as a [blueprint file][apiary.apib] using the
 [API Blueprint Language Specification]. Changes you make to the
 [blueprint file][apiary.apib] will be automatically reflected in the online
-[api documentation] and [mock api].
+[API documentation] and [mock API].
 
 ### Styleguide
 

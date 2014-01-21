@@ -2,26 +2,16 @@ FORMAT: 1A
 HOST: https://api.moneyadviceservice.org.uk
 
 # Money Advice Service
-API for the Money Advice Service's API.
+API for the Money Advice Service.
 
-# Group Articles
-Article related resources of the **Money Advice Service**
-
-## Articles Collection [/articles]
-### List all Articles [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "content": "Jogging in park"
-        }, {
-          "id": 2, "content": "Pick-up posters from post-office"
-        }]
+# Articles
+Article related resources of the **Money Advice Service**.
 
 ## Article [/articles/{id}]
 A single Article object with all its details
 
 + Parameters
-    + slug (required, string, `the-article`) ... String `id` of the Article to perform action with. Has example value.
+    + id (required, string, `foo-bar`) ... String `id` of the Article to perform action with. Has example value.
 
 ### Retrieve a Article [GET]
 + Response 200 (application/json)
@@ -32,4 +22,4 @@ A single Article object with all its details
 
     + Body
 
-            { "slug": "the-article", "title": "Pick-up posters from post-office", content: "<p>La de da</p>" }
+            { "id": "where-to-go-to-get-free-debt-advice", "title": "Where to go to get free debt advice" }

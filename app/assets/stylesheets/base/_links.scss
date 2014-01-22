@@ -1,8 +1,5 @@
 // Basic primary links and their accompanying hover and focus states
 //
-//
-//
-//
 // Styleguide a
 
 a {
@@ -29,12 +26,7 @@ a:focus{
 
 
 
-
-
 // Menu links and styled using the brand font
-//
-//
-//
 //
 // Styleguide link--brandFont
 
@@ -43,10 +35,9 @@ a:focus{
   font-weight: 700;
 }
 
+
+
 // Secondary links used for internal navigation and menus
-//
-//
-//
 //
 // Styleguide link--navigation
 
@@ -63,6 +54,3 @@ a:focus{
   color: $color-green-primary;
   background-color: $color-accessible-focus;
 }
-
-
-

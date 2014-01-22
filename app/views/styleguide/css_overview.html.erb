@@ -1,31 +1,45 @@
 <h1>CSS Styleguide</h1>
 
 <h2>CSS Naming Convention</h2>
-As a team we have decided on the following naming convention
+<p>As a team we have decided on the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM naming convention</a></p>
 
+<p>We use:<br />
+a dash (<code>-</code>) to join words<br />
+a double underscore  (<code>__</code>) to indicate a child element in a component<br />
+a double dash (<code>--</code>) to indicate a modified version of a component<br />
+<code>l-</code> to indentify a layout class<br />
+<code>js-</code> to identity a class that is being used to bind javascript behaviour to</p>
 <%= css do %>
+
   /* Component */
-  .componentName {}
+  .component-name {}
 
   /* Component modifier */
-  .componentName--modifierName {}
+  .component-name--modifierName {}
 
   /* Component descendant */
-  .componentName-descendant {}
+  .component-name__descendant {}
 
   /* Component descendant modifier */
-  .componentName-descendant--modifierName {}
+  .component-name__descendant--modifierName {}
 
-  /* Component state (scoped to component) */
-  .componentName.is-stateOfComponent {}
+  /* Layout */
+  .l-layout-name {}
 
-  /* Utility */
-  .u-utilityName {}
+  /* Component state */
+  .is-state-type {}
 
   /* Non-styled JavaScript hooks */
-  .js-someName {}
+  .js-action-name {}
 <% end %>
 
+<p>
+  <small>The reason to use such a naming convention is explained clearly in
+    <a href="http://philipwalton.com/articles/css-architecture/">Philip Walton's
+      CSS Architecture
+    </a>
+  </small>
+</p>
 
 <p><strong>CSS must not use <code>id</code> or <code>js-*</code> classes in selectors.</strong></p>
 

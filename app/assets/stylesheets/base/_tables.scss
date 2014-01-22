@@ -1,7 +1,7 @@
 table {
- @extend %text--table;
-  text-align: left;
-}
+   @extend %text--table;
+   text-align: left;
+ }
 
 thead {
   color: $color-table--heading;

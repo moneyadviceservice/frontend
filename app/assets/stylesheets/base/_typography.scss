@@ -49,7 +49,7 @@ p {
 
 .intro {
   @extend %text-introParagraph;
-  @extend .clearfix;
+  @extend .u-clearfix;
 
   > img {
     float: right;

@@ -1,19 +1,24 @@
 .editorial {
+
   a[href^="http"],
-  a[href^="www"]{
-    @extend .icon;
-    @extend .icon--externalLink;
+  a[href^="www"] {
     &:after {
+      @extend .icon;
+      @extend .icon--externalLink;
       color: $color-link--external;
       padding-left: 10px;
     }
   }
 
   a[href*="moneyadviceservice.org.uk"] {
-    content: none;
+    &:after {
+      content: none;
+    }
   }
 
   a[title*="transcript"] {
+    margin-top: $gw;
+    display: inline-block;
     @extend .icon;
     @extend .icon--documentLink;
     &:before {

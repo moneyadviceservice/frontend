@@ -17,6 +17,10 @@
   @include font-size(16);
 }
 
+%text--table {
+  @include font-size(14);
+}
+
 // Headings
 
 %heading-alpha {

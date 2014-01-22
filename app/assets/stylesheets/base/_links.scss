@@ -1,5 +1,13 @@
 // Basic primary links and their accompanying hover and focus states
 //
+// :visited - Foo
+// :hover - Foo
+// :focus - Foo
+// .link--brandFont      - Foo
+// .link--navigation:visited - Foo
+// .link--navigation:hover - Foo
+// .link--navigation:focus - Foo
+//
 // Styleguide a
 
 a {
@@ -9,13 +17,13 @@ a {
 
 a:visited {
   color: $color-blue-dark;
+  color: red;
 }
 
 a:hover {
   color: $color-blue-medium;
   border-bottom:1px solid;
 }
-
 
 a:focus{
   color: $color-blue-medium;
@@ -25,22 +33,14 @@ a:focus{
 }
 
 
-
 // Menu links and styled using the brand font
-//
-// Styleguide link--brandFont
-
 .link--brandFont {
   font-family: MuseoSlab;
   font-weight: 700;
 }
 
 
-
 // Secondary links used for internal navigation and menus
-//
-// Styleguide link--navigation
-
 .link--navigation,
 .link--navigation:visited {
   color: $color-green-primary;

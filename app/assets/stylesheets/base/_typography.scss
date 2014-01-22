@@ -1,73 +1,41 @@
 // TODO added to prevent undefined variable error.
 $responsive: true;
 
-
-
 body {
   font-family: "Helvetica Neue";
   line-height: 1.4;
 }
 
 
-
-
-// This is the H1 heading
+// Currently we only support H1 - H3
 //
-//
-//
-//
-// Styleguide h1
-
+// Styleguide headings
 h1 {
   @extend %heading-alpha;
-  font-size: 48px;
-  line-height: 1.2;
 }
-
-.l-editorial-container h1 {
-  @extend %heading-alpha;
-}
-
-
-
-
-// This is the H2 heading
-//
-//
-//
-//
-// Styleguide h2
-
 h2 {
   @extend %heading-beta;
 }
-
-
-
-
-
-
-// This is the H3 heading
-//
-//
-//
-//
-// Styleguide h3
-
 h3 {
   @extend %heading-gamma;
 }
 
+/*
+need to apply this to the heading on the homepage
+
+h1  {
+  @extend %heading-alpha;
+  font-size: 48px;
+  line-height: 1.2;
+}
+*/
 
 
 
 
 
 
-// The basic paragraph style
-//
-//
-//
+// Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
 
@@ -75,14 +43,7 @@ p {
   @extend %text-basicParagraph;
 }
 
-
-
-
-
-// Style for the article introductory paragraph.
-//
-//
-//
+// Larger text size for the article introductory paragraph.
 //
 // Styleguide intro
 

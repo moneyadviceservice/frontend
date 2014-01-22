@@ -92,6 +92,14 @@ The application uses [Bower] to manage front-end packages. Dependencies should
 be defined in the [bower.json] configuration file. Once installed they will be
 automatically available to the asset pipeline.
 
+### Patterns
+
+#### Decorators
+
+We use [Draper] for [decorators]. Decorators help us to keep logic out of our
+[views], avoid procedural [helpers] and ensure our [models] are free of any
+presentational concerns.
+
 
 [apiary.apib]: ./apiary.apib
 [bower.json]: ./bower.json
@@ -99,6 +107,11 @@ automatically available to the asset pipeline.
 [features/home_page.feature]: ./features/home_page.feature
 [features/support/ui]: ./features/support/ui
 [features/support/world/pages.rb]: ./features/support/world/pages.rb
+
+[decorators]: ./app/decorators
+[helpers]: ./app/helpers
+[models]: ./app/models
+[views]: ./app/views
 
 [controller specs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
 [helper specs]: https://www.relishapp.com/rspec/rspec-rails/docs/helper-specs
@@ -109,6 +122,7 @@ automatically available to the asset pipeline.
 [api documentation]: http://docs.moneyadviceservice.apiary.io/
 [bower]: http://bower.io
 [bundler]: http://bundler.io
+[draper]: https://github.com/drapergem/draper
 [git]: http://git-scm.com
 [konacha]: https://github.com/jfirebaugh/konacha
 [kss]: https://github.com/kneath/kss

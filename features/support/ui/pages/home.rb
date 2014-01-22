@@ -8,7 +8,7 @@ module UI::Pages
     set_url '/'
 
     element :heading, 'h1'
-    element :summary_list, 'ul.specialList'
+    element :summary_list, 'ul.list--iconBullets'
     element :introduction_text, '#introductionText'
 
     section :header, UI::Sections::Header, '.header'

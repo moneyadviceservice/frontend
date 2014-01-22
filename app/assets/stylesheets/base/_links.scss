@@ -5,10 +5,13 @@
 //
 // Styleguide a
 
-a,
-a:visited {
+a {
   color: $color-blue-medium;
   text-decoration: none;
+}
+
+a:visited {
+  color: $color-blue-dark;
 }
 
 a:hover {
@@ -63,33 +66,3 @@ a:focus{
 
 
 
-
-// Navigation links
-//
-//
-//
-//
-// Styleguide nav a
-
-nav a,
-nav a:visited {
-  display: inline-block;
-  color: $color-text--default;
-  text-decoration: none;
-  padding: 15px;
-  width: 100%;
-}
-
-nav a:hover {
-  color: $color-green-primary;
-  background-color: $color-accessible-focus;
-  border: none;
-}
-
-
-nav a:focus{
-  color: $color-green-primary;
-  outline: 1px solid;
-  background-color: $color-accessible-focus;
-  border-bottom: none;
-}

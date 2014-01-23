@@ -1,21 +1,42 @@
 <h1>Layouts</h1>
 
+
+<%= styleguide_section sections['layout-container'] do %>
+  <div class="l-container">
+      <h3>1 column, full width of container</h3>
+  </div>
+<% end %>
+
+
+<%= styleguide_section sections['layout-1col'] do %>
+  <div class="l-container">
+    <div class="l-1col">
+      <h3>1 column, full width of container</h3>
+    </div>
+  </div>
+<% end %>
+
+
 <%= styleguide_section sections['layout-2col'] do %>
-<div class="demo">
   <div class="l-container">
     <h2>2 columns small on left</h2>
     <div class="l-2col">
-      <div class="l-2col-side"></div>
-      <div class="l-2col-main"></div>
+      <div class="l-2col-side"><h3>SIDE</h3></div>
+      <div class="l-2col-main"><h3>MAIN</h3></div>
     </div>
 
     <h2>2 columns small on right</h2>
     <div class="l-2col">
-      <div class="l-2col-side"></div>
-      <div class="l-2col-main"></div>
+      <div class="l-2col-main"><h3>MAIN</h3></div>
+      <div class="l-2col-side"><h3>SIDE</h3></div>
+    </div>
+
+    <h2>2 columns even</h2>
+    <div class="l-2col">
+      <div class="l-2col-even"><h3>Half</h3></div>
+      <div class="l-2col-even"><h3>Half</h3></div>
     </div>
   </div>
-</div>
 <% end %>
 
 

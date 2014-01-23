@@ -45,6 +45,9 @@ $grids: add-grid($mq-xl-c at $mq-xl);
   content: 'mq-xl = ' $mq-xl;
 }
 
+// Mixin to make it simpler to add grids-span wrapped in breakpoint
+// example:
+// @include add-grid-span($mq-xs, 4, 1);
 @mixin add-grid-span($mq, $col, $pos:1) {
   @if $mq == 0 {
     @include grid-span($col, $pos);
@@ -55,54 +58,13 @@ $grids: add-grid($mq-xl-c at $mq-xl);
   }
 }
 
-// .col1 {
-//   background: red;
-//   @include add-grid-span($mq-xs,1, 1);
-//   @include add-grid-span($mq-s,1,1);
-//   @include add-grid-span($mq-m,1,1);
-//   @include add-grid-span($mq-l,1,1);
-//   @include add-grid-span($mq-xl,1,1);
-// }
-
-// .left {
-//   background: yellow;
-//   @include add-grid-span($mq-xs,1,1);
-//   @include add-grid-span($mq-s,1,1);
-//   @include add-grid-span($mq-m,2,1);
-//   @include add-grid-span($mq-l,2,1);
-//   @include add-grid-span($mq-xl,2,1);
-// }
-
-// .mid {
-//   background: yellow;
-//   @include add-grid-span($mq-xs,2,1);
-//   @include add-grid-span($mq-s,4,1);
-//   @include add-grid-span($mq-m,5,1);
-//   @include add-grid-span($mq-l,8,1);
-//   @include add-grid-span($mq-xl,8,1);
-// }
-
-// .right {
-//   // @include grid-span(1,3);
-//   background: yellow;    
-//   @include add-grid-span($mq-xs,1,1);
-//   @include add-grid-span($mq-s,1,1);
-//   @include add-grid-span($mq-m,2,1);
-//   @include add-grid-span($mq-l,2,1);
-//   @include add-grid-span($mq-xl,2,1);
-// }
-
-
-// .l-demoContainer {
-//   @include background-grid($color: blue);
-//   @include clearfix;
-//   max-width: $mq-xl;
-//   margin:0 auto;
-//   // background: red;
-// }
-
-// $basic: 543px;
-// $pair: 456px 794px;
-// @include breakpoint($basic) {
-//     content: 'Basic Media Query';
-// }
+// Mixin to make it simpler to add all grid spans as a fraction of total columns in one call
+// example:
+// @include add-all-grid-spans(1, 1, 1/3, 1/3, 1/3);
+@mixin add-all-grid-spans($xs, $s, $m, $l, $xl) {
+  @include add-grid-span($mq-xs, $mq-xs-c * $xs);
+  @include add-grid-span($mq-s, $mq-s-c * $s);
+  @include add-grid-span($mq-m, $mq-m-c * $m);
+  @include add-grid-span($mq-l, $mq-l-c * $l);
+  @include add-grid-span($mq-xl, $mq-xl-c * $xl);
+}

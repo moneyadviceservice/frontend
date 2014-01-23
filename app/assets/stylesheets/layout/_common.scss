@@ -1,0 +1,96 @@
+
+// Master container, controls max-width of content
+//
+// Styleguide layout-container
+.l-container {
+  @extend clearfix;
+  max-width: $mq-xl;
+  margin:0 auto;
+
+  .dev-grid & {
+    @include background-grid($color: blue);
+  }
+}
+
+// Layout 1 column full width
+//
+// Styleguide layout-1col
+.l-1col {
+  @include add-all-grid-spans(1, 1, 1, 1, 1);
+}
+
+
+// Layout 2 columns
+//
+// Styleguide layout-2col
+.l-2col {}
+
+.l-2col-side {
+  @include add-all-grid-spans(1, 1, 1/3, 1/3, 1/3);
+}
+
+.l-2col-main {
+  @include add-all-grid-spans(1, 1, 2/3, 2/3, 2/3);
+}
+
+.l-2col-even {
+  @include add-all-grid-spans(1, 1, 1/2, 1/2, 1/2);
+}
+
+// Layout split
+//
+// Styleguide layout-split
+.l-splitStart {
+  float: left;
+}
+
+.l-splitEnd {
+  float: right;
+}
+
+
+// These should be moved into styleguide code
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col {
+
+  .styleguide-example,
+  .styleguide-element {
+    padding:20px 0;
+  }
+
+  .l-container {
+    padding:10px 0;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=); 
+    overflow: hidden;
+  }
+
+
+  .l-1col,
+  .l-2col-side,
+  .l-2col-main,
+  .l-2col-even {
+    background: red;
+    text-align: center;
+  }
+}
+
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col {
+  h2 {
+    @extend .l-1col;
+    background: none;
+    padding-top: 20px;
+  }
+}
+
+
+// Old shit, is this needed
+// .mainPageContent {
+//   background-color: $color-white-primary;
+//   margin: 0 auto;
+//   padding: 80px 0;
+// }
+
+

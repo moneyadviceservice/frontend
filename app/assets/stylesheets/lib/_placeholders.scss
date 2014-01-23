@@ -23,6 +23,18 @@
 
 // Headings
 
+%heading-homepage {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab', arial;
+    font-weight: 700;
+  }
+}
+
 %heading-alpha {
   font-size: 36px;
   line-height: 1.4;

@@ -1,4 +1,4 @@
-// The basic ordered list style
+// The default style for numbered lists. The padding offsets the bullets by 25px;
 //
 // Styleguide ol
 
@@ -7,40 +7,23 @@ ol {
 }
 
 
-// The basic unordered list style
+
+// The default style for unordered lists. The padding offsets the bullets by 20px.
 //
 // Styleguide ul
 
 ul {
-
-}
-
-.l-editorial-container {
-  ul {
-    @extend .list--coloredBullets;
-  }
+  padding: 0 0 0 20px;
 }
 
 
-// This is the basic unstyled list without bullet points and with margins and padding removed.
-// ...it can also be used as a helper class to remove formatting from a list element.
+
+// The basic unordered list style
 //
-// Styleguide list--unstyled
+// Styleguide list
 
-.list--unstyled {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-
-// The basic list style with brand green colored bullet points.
-//
-// Styleguide list--coloredBullets
-
-.list-coloredBullets {
-  list-style-type: none;
-  padding: 0 20px;
+.list {
+  list-style: none;
 
   > li:before {
     content:'\2022';
@@ -50,70 +33,53 @@ ul {
     height: 0px;
     left: -20px;
     top: -5px;
-    color: $color-green-secondary;
+    color: $color-list;
     font-size: 24px;
   }
-
 }
+
 
 
 // A list that has ticks and crosses for bullet points
 //
-// Styleguide list--iconBullets
+// Styleguide list-benefits
 
-.list--iconBullets {
-  padding: 0 0 0 10px;
-  margin: 2em 0;
-  list-style: none inside;
+.list-benefits {
+  padding: 0;
+  list-style: none;
 
   li:before {
+    position: relative;
     font-family: 'icomoon';
+    @include font-size(18);
     content: '\e609';
+    color: $color-list__yes;
     padding-right: 10px;
-    color: $color-green-secondary;
+  }
+
+  .no:before {
+    top: 3px;
+    content: '\e61e';
+    color: $color-list__no;
   }
 }
 
-.list-iconBullets--tick:before {
-  font-family: 'icomoon';
-  @include font-size(20);
-  content: '\e609';
-  padding-right: 10px;
-  color: $color-green-secondary;
-}
 
-.list-iconBullets--cross:before {
-  font-family: 'icomoon';
-  @include font-size(20);
-  content: '\e61e';
-  padding-right: 10px;
-  position: relative;
-  top: 3px;
-  color: $color-red-dark;
-}
 
 
 // Lists for Articles and Editorial Content
-// ...should be extending the default styles above:-
-//
-// Styleguide .yes-no
-
 .yes-no {
-  @extend .list--unstyled;
+  @extend .list-benefits;
 }
 
-// A list that has ticks for bullet points
+
+// This is the basic unstyled list without bullet points and with margins and padding removed.
+// ...it can also be used as a helper class to remove formatting from a list element.
 //
-// Styleguide .yes
+// Styleguide list-unstyled
 
-.yes:before {
-  @extend .list-iconBullets--tick;
-}
-
-// A list that has crosses for bullet points
-//
-// Styleguide .no
-
-.no:before {
-  @extend .list-iconBullets--cross;
+.list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }

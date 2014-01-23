@@ -7,30 +7,22 @@ body {
 }
 
 
+
 // Currently we only support H1 - H3
 //
 // Styleguide headings
+
 h1 {
   @extend %heading-alpha;
 }
+
 h2 {
   @extend %heading-beta;
 }
+
 h3 {
   @extend %heading-gamma;
 }
-
-/*
-need to apply this to the heading on the homepage
-
-h1  {
-  @extend %heading-alpha;
-  font-size: 48px;
-  line-height: 1.2;
-}
-*/
-
-
 
 
 
@@ -42,6 +34,8 @@ h1  {
 p {
   @extend %text-basicParagraph;
 }
+
+
 
 // Larger text size for the article introductory paragraph.
 //

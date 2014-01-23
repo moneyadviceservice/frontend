@@ -44,29 +44,49 @@ $color-yellow-dark: #ddae1f;
 
 $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 
-//$temp-color-grey: #ecf0ef; // used for key lines, could be redundant
 
-
-// Semantic colour names
+// Typography Colours
 
 $color-text--default: $color-black-primary;
 $color-text--icon: $color-white-primary;
 
-$color-link--external: $color-grey-light;
 
+
+// Link Colours
+
+$color-link--external: $color-grey-light;
 $color-accessible-focus: $color-blue-light;
 
-$color-callout-background: $color-green-pale;
+
+
+// Tables Colours
 
 $color-table--heading:$color-white-primary ;
 $color-table--background: $color-green-primary;
 $color-table--border: $color-grey-light;
 
 
-// Grid Variables
 
-// gutter width
+// List Colours
+
+$color-list: $color-green-secondary;
+$color-list__yes: $color-green-secondary;
+$color-list__no: $color-red-dark;
+
+
+
+// Callout Colours
+
+$color-callout-background: $color-green-pale;
+
+
+
+// Gutter Variables
+
 $gw: 20px;
 
-// line height variable
+
+
+// Vertical Rhythm
+
 $lh: 22px;

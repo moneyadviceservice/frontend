@@ -9,9 +9,9 @@
 
 // Text
 %text-basicParagraph {
+  @include font-size(16);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  @include font-size(16);
 }
 
 %text-introParagraph {

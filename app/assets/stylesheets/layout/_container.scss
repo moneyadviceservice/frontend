@@ -1,7 +1,15 @@
+
 .l-container {
-  margin: 0 auto;
-  max-width: 630px;
+  .dev-grid & {
+    @include background-grid($color: blue);
+  }
+
+  @extend clearfix;
+  max-width: $mq-xl;
+  margin:0 auto;
 }
+
+
 
 .mainPageContent {
   background-color: $color-white-primary;

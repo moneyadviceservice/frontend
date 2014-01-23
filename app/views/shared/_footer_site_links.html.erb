@@ -1,11 +1,10 @@
-<div class="footerSiteLinks">
+<div class="footer-site-links">
   <div class="l-container">
-    <ul class="siteLinks unstyledList">
+    <ul class="list-unstyled">
       <% locals.each do |locale| %>
         <li>
           <%= link_to t("locales.#{locale}"), { locale: locale },
                       id:    "#{locale}Link",
-                      class: 'specialLink',
                       lang:  locale %>
         </li>
       <% end %>

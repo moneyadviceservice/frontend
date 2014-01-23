@@ -1,6 +1,8 @@
 //= require normalize-css/normalize
 //= require_self
 
+$responsive: false;
+
 @import 'lib/variables';
 @import 'lib/functions';
 @import 'lib/mixins';
@@ -8,7 +10,7 @@
 
 @import 'base/default';
 @import 'base/typography';
+@import 'base/lists';
 @import 'base/links';
 @import 'base/forms';
-@import 'base/tables';
 @import 'base/utilities';

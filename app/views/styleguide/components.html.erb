@@ -2,10 +2,10 @@
 
 <%= styleguide_section sections['icons'] do %>
   <span class="icon $modifier_class" aria-hidden="true"></span>
-  <span class="u-visuallyHidden">hidden text</span>
+  <span class="visually-hidden">hidden text</span>
 <% end %>
 
-<%= styleguide_section sections['socialLinks'] do %>
+<%= styleguide_section sections['Social Links'] do %>
   <%= render 'shared/social_links' %>
 <% end %>
 
@@ -13,10 +13,10 @@
   <%= render 'shared/header' %>
 <% end %>
 
-<%= styleguide_section sections['footerSiteLinks'] do %>
+<%= styleguide_section sections['Footer Site Links'] do %>
   <%= render 'shared/footer_site_links', locals: %w(en) %>
 <% end %>
 
-<%= styleguide_section sections['footerSocialLinks'] do %>
+<%= styleguide_section sections['Footer Social Links'] do %>
   <%= render 'shared/footer_social_links' %>
 <% end %>

@@ -1,0 +1,64 @@
+// This component is purely used for scoping HTML we do not have control over which is output by the CMS.
+
+.editorial {
+
+  a[href^="http://"]:not([href*="moneyadviceservice"]):after,
+  a[href^="www"]:not([href*="moneyadviceservice"]):after {
+    @extend .icon;
+    @extend .icon--externalLink;
+    color: $color-link-external;
+    padding-left: 5px;
+  }
+
+  a[href$=".doc"] {
+    margin-top: $gw;
+    display: inline-block;
+
+    &:before {
+      @extend .icon;
+      @extend .icon--doc;
+      padding-right: 5px;
+    }
+  }
+
+  table {
+    @extend %text--table;
+    text-align: left;
+  }
+
+  thead {
+    color: $color-table-heading;
+    background-color: $color-table-background;
+  }
+
+  th {
+    padding: $gw $gw/2;
+    border: 1px solid $color-table-border;
+  }
+
+  td {
+    padding: $gw $gw/2;
+    border: 1px solid $color-table-border;
+  }
+
+  .callout {
+    padding: $gw;
+    margin: $gw;
+    max-width: 38%;
+    float: right;
+    border-radius: 10px;
+    color: $color-green-tertiary;
+    background-color: $color-callout-background;
+    line-height: 1.5;
+
+    > h3 {
+      margin-bottom: 1.2em;
+    }
+
+    > p {
+      @extend %text-callout;
+      margin-top: 0;
+    }
+  }
+
+} //  end

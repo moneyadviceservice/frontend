@@ -1,8 +1,8 @@
-// Use .u-visuallyhidden to hide content from all but screen-reader users
+// Use .visually-hidden to hide content from all but screen-reader users
 //
-// Styleguide u-visuallyhidden
+// Styleguide visually-hidden
 
-.u-visuallyHidden {
+.visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -11,4 +11,21 @@
   padding: 0;
   overflow: hidden;
   position: absolute;
+}
+
+// Use .clearfix to prevent a container element from collapsing when an internal element is floated.
+//
+// Styleguide clearfix
+
+.clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
 }

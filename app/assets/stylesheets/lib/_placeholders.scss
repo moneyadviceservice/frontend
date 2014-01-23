@@ -1,0 +1,87 @@
+%font-museo700 {
+  font-family:arial;
+  font-weight:700;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab';
+  }
+}
+
+
+// Text
+%text-basicParagraph {
+  @include font-size(16);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+%text-introParagraph {
+  @extend %font-museo700;
+  @include font-size(22);
+  color: $color-grey-primary;
+}
+
+%text-callout {
+  @include font-size(16);
+  font-family: 'MuseoSlab';
+  font-weight: 700;
+}
+
+%text--table {
+  @include font-size(14);
+}
+
+
+// Links
+%link-nav {
+  color: $color-link-nav;
+
+  &:visited {
+    color: $color-link-nav-visited;
+  }
+
+  &:hover {
+    color: $color-link-nav;
+  }
+
+  &:focus {
+    color: $color-link-nav;
+  }
+}
+
+
+// Headings
+%heading-homepage {
+  @extend %font-museo700;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+}
+
+%heading-alpha {
+  @extend %font-museo700;
+  font-size: 36px;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+}
+
+%heading-beta {
+  @extend %font-museo700;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+}
+
+%heading-gamma {
+  @extend %font-museo700;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-weight: normal;
+  color: $color-green-primary;
+}

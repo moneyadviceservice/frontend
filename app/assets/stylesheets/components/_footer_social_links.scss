@@ -1,10 +1,11 @@
 // Social Links in the footer with the mas homepage link
 //
-// Styleguide footerSocialLinks
+// Styleguide Footer Social Links
 
-.footerSocialLinks {
+.footer-social-links {
   padding: 0 10px;
   overflow: hidden;
+  color: $color-text--icon;
   background-color: $color-green-primary;
   border-bottom: 1px solid $color-white-translucent;
 }

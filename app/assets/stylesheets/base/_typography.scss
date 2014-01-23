@@ -6,73 +6,44 @@ body {
   line-height: 1.4;
 }
 
-// This is the H1 heading
+
+// Currently we only support H1 - H3
 //
-// Styleguide Heading One (h1)
+// Styleguide headings
 
 h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin: 0.3em 0;
-  font-weight: normal;
-  color: $color-green-primary;
-  .wf-museoslab-n4-active & {
-    font-family: 'MuseoSlab', arial;
-    font-weight: 700;
-  }
+  @extend %heading-alpha;
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 1.2;
-  margin: 0.3em 0;
-  font-weight: normal;
-  color: $color-green-primary;
-  .wf-museoslab-n4-active & {
-    font-family: 'MuseoSlab', arial;
-    font-weight: 700;
-  }
+  @extend %heading-beta;
 }
 
-// The basic paragraph style
+h3 {
+  @extend %heading-gamma;
+}
+
+
+// Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
 
 p {
-  @include font-size(16);
+  @extend %text-basicParagraph;
 }
 
-// The basic list style
+
+// Larger text size for the article introductory paragraph.
 //
-// Styleguide List
+// Styleguide intro
 
-ul {
+.intro {
+  @extend %text-introParagraph;
+  @extend .clearfix;
 
-}
-
-// This is the basic list without bullet points and with margins and padding removed.
-//
-// Styleguide Unstyled List
-
-.unstyledList {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-// A list that has ticks for bullet points
-//
-// Styleguide specialList
-
-.specialList {
-  padding: 0 0 0 10px;
-  margin: 2em 0;
-  list-style: none inside;
-
-  li:before {
-    font-family: 'icomoon';
-    content: '\e609';
-    padding-right: 10px;
-    color: #bede1d;
+  > img {
+    float: right;
+    margin: 0 0 $gw $gw;
+    background-color: grey;
   }
 }

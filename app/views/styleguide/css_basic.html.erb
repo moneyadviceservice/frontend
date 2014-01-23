@@ -1,0 +1,69 @@
+<h1>Basic markup and typographic styles</h1>
+
+<h2>Headings</h2>
+<%= styleguide_section sections['headings'] do %>
+  <h1>Welcome to the Money Advice Service</h1>
+  <h2>Make sure you can afford your monthly repayments before borrowing</h2>
+  <h3>Budget for the other costs of buying a home (h3)</h3>
+<% end %>
+
+
+<h2>Body copy</h2>
+<%= styleguide_section sections['p'] do %>
+  <p>This is a temporary landing page, set up as a first iteration for testing purposes. It is a fully responsive
+    landing page with some basic functionality and styling.</p>
+<% end %>
+
+
+<h2>Links</h2>
+<%= styleguide_section sections['a'] do %>
+  <a class="$modifier_class" href="/homepage.html">This is a default link</a>
+<% end %>
+
+
+<h2>Lists</h2>
+<%= styleguide_section sections['ol'] do %>
+  <ol>
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ol>
+<% end %>
+
+<%= styleguide_section sections['ul'] do %>
+  <ul>
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ul>
+<% end %>
+
+<%= styleguide_section sections['list'] do %>
+  <ul class="list">
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ul>
+<% end %>
+
+<%= styleguide_section sections['list-benefits'] do %>
+  <ul class="list-benefits">
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ul>
+<% end %>
+
+<%= styleguide_section sections['list-unstyled'] do %>
+  <ul class="list-unstyled">
+    <li>Free, unbiased, independent money advice</li>
+    <li>Set up by government</li>
+    <li>Help online, over the phone or in person</li>
+  </ul>
+<% end %>
+
+
+<h2>Utilities</h2>
+<%= styleguide_section sections['visually-hidden'] do %>
+  <span class="visually-hidden">Text to visually hide</span> Text to display
+<% end %>

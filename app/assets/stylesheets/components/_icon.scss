@@ -1,19 +1,18 @@
 // Icons
 //
-// .icon--masLogo       - money advice service logo
+// .icon--masLogo       - .png
 // .icon--youtube       - \e605
-// .icon--facebook       - \e61c
+// .icon--facebook      - \e61c
 // .icon--twitter       - \e608
+// .icon--menu          - \e600
+// .icon--search        - \e604
+// .icon--tick          - \e609
+// .icon--externalLink  - \e619
+// .icon--doc           - \e611
 //
 // Styleguide icons
 
-#section-icons .styleguide-element {
-  background-color: $color-green-primary;
-}
-
 .icon {
-  display: block;
-  color: $color-icon-font;
   background-color: transparent;
   line-height: 1;
   font-family: 'icomoon';
@@ -25,6 +24,7 @@
 .icon--masLogo {
   width: 55px;
   height: 30px;
+  display:block; // temporary style until masLogo is added to the icomoon font
   margin: 10px 0;
   background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
   background-size: contain;
@@ -51,3 +51,32 @@
   }
 }
 
+.icon--externalLink {
+  &:after {
+    content: '\e619';
+  }
+}
+
+.icon--menu {
+  &:before {
+    content: '\e600';
+  }
+}
+
+.icon--search {
+  &:before {
+    content: '\e604';
+  }
+}
+
+.icon--tick {
+  &:before {
+    content: '\e609';
+  }
+}
+
+.icon--doc {
+  &:before {
+    content: '\e611';
+  }
+}

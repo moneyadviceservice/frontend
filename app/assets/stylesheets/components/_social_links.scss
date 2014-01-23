@@ -1,8 +1,8 @@
 // Social links component
 //
-// Styleguide socialLinks
+// Styleguide Social Links
 
-.socialLinks {
+.social-links {
   padding: 0;
   margin: 0;
   border-left: 1px solid $color-white-translucent;
@@ -19,7 +19,7 @@
     border-right: 1px solid $color-white-translucent;
 
     span:before {
-      color: $color-icon-font;
+      color: $color-text--icon;
     }
     &:hover,
     &:focus {

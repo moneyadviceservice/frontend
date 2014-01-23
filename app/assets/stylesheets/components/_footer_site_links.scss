@@ -1,8 +1,17 @@
 // Internal links section of the site-wide footer.
 //
-// Styleguide footerSiteLinks
+// Styleguide Footer Site Links
 
-.footerSiteLinks {
+.footer-site-links {
   padding: 20px 10px;
-  background-color: lighten($color-bluegrey-light, 10%);
+  background-color: $color-footer-bg;
+
+  li {
+    font-family: MuseoSlab;
+    font-weight: 700;
+  }
+
+  a {
+    @extend %link-nav;
+  }
 }

@@ -1,10 +1,9 @@
-// TODO refactor into camelcase
-
 // Color palette
+$color-white: #FFF; // not in the standard palette
+$color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 
-$color-black-primary: #333333;
+$color-black: #333333;
 $color-grey-primary: #6d6d6d;
-$color-white-primary: #FFF;
 
 $color-green-primary: #388426;
 $color-green-secondary: #61a612;
@@ -21,10 +20,10 @@ $color-blue-light: #e6f2f7; // not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
 
+$color-grey-pale: #F6F8F7; // not in the standard palette
 $color-grey-light: #a8b2ba; // not in the standard palette
 $color-grey-medium: #526675;
 $color-grey-dark: #394752;
-
 
 $color-bluegrey-dark: #96b4c0;
 $color-bluegrey-medium: #cbdae0;
@@ -42,51 +41,55 @@ $color-orange-dark: #c95d2d;
 $color-yellow-light: #ebd520;
 $color-yellow-dark: #ddae1f;
 
-$color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
+
+
+// Page Wide Colours
+$color-site-bg: $color-green-primary;
 
 
 // Typography Colours
-
-$color-text--default: $color-black-primary;
-$color-text--icon: $color-white-primary;
-
+$color-text--default: $color-black;
+$color-text--icon: $color-white;
 
 
-// Link Colours
+// Default Link Colours
+$color-link-default: $color-blue-medium;
+$color-link-visited: $color-blue-dark ;
+$color-link-focus: $color-blue-light;
 
-$color-link--external: $color-grey-light;
-$color-accessible-focus: $color-blue-light;
 
+// Navigation Links
+$color-link-nav: $color-green-primary;
+$color-link-nav-visited: $color-green-secondary;
+
+
+// Article Links
+$color-link-external: $color-grey-light;
 
 
 // Tables Colours
-
-$color-table--heading:$color-white-primary ;
+$color-table--heading: $color-white;
 $color-table--background: $color-green-primary;
 $color-table--border: $color-grey-light;
 
 
-
 // List Colours
+$color-list-bullet: $color-green-secondary;
+$color-list-yes: $color-green-secondary;
+$color-list-no: $color-red-dark;
 
-$color-list: $color-green-secondary;
-$color-list__yes: $color-green-secondary;
-$color-list__no: $color-red-dark;
 
+// Footer Colours
+$color-footer-bg: $color-grey-pale;
 
 
 // Callout Colours
-
 $color-callout-background: $color-green-pale;
 
 
-
 // Gutter Variables
-
 $gw: 20px;
 
 
-
 // Vertical Rhythm
-
 $lh: 22px;

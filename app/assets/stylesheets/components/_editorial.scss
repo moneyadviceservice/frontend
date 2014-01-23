@@ -4,7 +4,7 @@
   a[href^="www"]:not([href*="moneyadviceservice"]):after{
     @extend .icon;
     @extend .icon--externalLink;
-    color: $color-link--external;
+    color: $color-link-external;
     padding-left: 5px;
   }
 

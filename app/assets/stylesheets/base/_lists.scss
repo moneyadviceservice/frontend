@@ -33,7 +33,7 @@ ul {
     height: 0px;
     left: -20px;
     top: -5px;
-    color: $color-list;
+    color: $color-list-bullet;
     font-size: 24px;
   }
 }
@@ -53,14 +53,14 @@ ul {
     font-family: 'icomoon';
     @include font-size(18);
     content: '\e609';
-    color: $color-list__yes;
+    color: $color-list-yes;
     padding-right: 10px;
   }
 
   .no:before {
     top: 3px;
     content: '\e61e';
-    color: $color-list__no;
+    color: $color-list-no;
   }
 }
 

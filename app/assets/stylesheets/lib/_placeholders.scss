@@ -1,3 +1,4 @@
+// Text
 %text-basicParagraph {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -21,8 +22,27 @@
   @include font-size(14);
 }
 
-// Headings
 
+
+// Links
+%link-nav {
+  color: $color-link-nav;
+
+  &:visited {
+    color: $color-link-nav-visited;
+  }
+
+  &:hover {
+    color: $color-link-nav;
+  }
+
+  &:focus {
+    color: $color-link-nav;
+  }
+}
+
+
+// Headings
 %heading-homepage {
   font-size: 48px;
   line-height: 1.2;

@@ -60,6 +60,15 @@ We like to develop features from the outside in. We write our user stories in a
 8. Test the [Routing][routing specs], [Models][model specs],
    [Controllers][controller specs], [Helpers][helper specs] and
    [JavaScript][konacha] of your feature.
+9. Test your features against the [mock API] and record interactions with [VCR].
+
+### API
+
+The application is backed by a RESTful JSON API. This is described for humans
+as a [blueprint file][apiary.apib] using the
+[API Blueprint Language Specification]. Changes you make to the
+[blueprint file][apiary.apib] will be automatically reflected in the online
+[API documentation] and [mock API].
 
 ### Styleguide
 
@@ -83,25 +92,44 @@ The application uses [Bower] to manage front-end packages. Dependencies should
 be defined in the [bower.json] configuration file. Once installed they will be
 automatically available to the asset pipeline.
 
+### Patterns
 
+#### Decorators
+
+We use [Draper] for [decorators]. Decorators help us to keep logic out of our
+[views], avoid procedural [helpers] and ensure our [models] are free of any
+presentational concerns.
+
+
+[apiary.apib]: ./apiary.apib
 [bower.json]: ./bower.json
 [features]: ./features
 [features/home_page.feature]: ./features/home_page.feature
 [features/support/ui]: ./features/support/ui
 [features/support/world/pages.rb]: ./features/support/world/pages.rb
 
+[decorators]: ./app/decorators
+[helpers]: ./app/helpers
+[models]: ./app/models
+[views]: ./app/views
+
 [controller specs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
 [helper specs]: https://www.relishapp.com/rspec/rspec-rails/docs/helper-specs
 [model specs]: https://www.relishapp.com/rspec/rspec-rails/docs/model-specs
 [routing specs]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs
 
+[api blueprint language specification]: https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md
+[api documentation]: http://docs.moneyadviceservice.apiary.io/
 [bower]: http://bower.io
 [bundler]: http://bundler.io
+[draper]: https://github.com/drapergem/draper
 [git]: http://git-scm.com
 [konacha]: https://github.com/jfirebaugh/konacha
 [kss]: https://github.com/kneath/kss
 [mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
+[mock api]: https://moneyadviceservice.apiary.io
 [money advice service team]: https://github.com/moneyadviceservice
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org
 [site prism]: https://github.com/natritmeyer/site_prism
+[vcr]: https://github.com/vcr/vcr

@@ -1,0 +1,28 @@
+// body.dev exposes settings for grid so variable can be inspected
+.dev {}
+
+.dev-grid {
+  content: 'mq-xs = ' $mq-xs;
+  content: 'mq-s = ' $mq-s;
+  content: 'mq-m = ' $mq-m;
+  content: 'mq-l = ' $mq-l;
+  content: 'mq-xl = ' $mq-xl;
+
+  .l-container {
+    $color1: rgba(255,50,54,1);
+    $color2: rgba(255,50,54,0);
+    $color3: rgba(255,50,54,0);
+    $stop: 2%;
+
+    background: -moz-linear-gradient(top,  $color1 0%, $color2 $stop, $color3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop($stop,$color2), color-stop(100%,$color3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $color1 0%, $color2 $stop,$color3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $color1 0%, $color2 $stop,$color3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $color1 0%, $color2 $stop,$color3 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom,  $color1 0%, $color2 $stop,$color3 100%); /* W3C */
+
+    background-size: 100% $lh;
+    overflow:hidden;
+  }
+
+}

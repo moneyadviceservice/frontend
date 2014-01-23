@@ -10,7 +10,9 @@
 @import 'lib/grid';
 
 @import 'layout/common';
-@import 'layout/editorial_container';
+
+// This should not be used in prod
+@import 'components/dev';
 
 @import 'components/header';
 @import 'components/footer_site_links';

@@ -3,17 +3,17 @@
 // https://github.com/Team-Sass/Singularity
 /////////////////////////////////////
 
+// Custom function to calculate grid width based on number of columns * column width
+@function grid-width($n) {
+  @return $n * $column-default-width + ($n) * ($column-default-width * $gutters);
+}
+
 // Default settings
 $column-default-width: 40px;
 $gutters: 1/2;
 $gutter-styles: 'split';
 $breakpoint-to-ems: true;
 $output: 'float';
-
-// Custom function to calculate grid width based on number of columns * column width
-@function grid-width($n) {
-  @return $n * $column-default-width + ($n) * ($column-default-width * $gutters);
-}
 
 // Default Column counts for different widths
 $mq-xs-c:4;
@@ -36,14 +36,6 @@ $grids: add-grid($mq-s-c at $mq-s);
 $grids: add-grid($mq-m-c at $mq-m);
 $grids: add-grid($mq-l-c at $mq-l);
 $grids: add-grid($mq-xl-c at $mq-xl);
-
-.dev {
-  content: 'mq-xs = ' $mq-xs;
-  content: 'mq-s = ' $mq-s;
-  content: 'mq-m = ' $mq-m;
-  content: 'mq-l = ' $mq-l;
-  content: 'mq-xl = ' $mq-xl;
-}
 
 // Mixin to make it simpler to add grids-span wrapped in breakpoint
 // example:
@@ -68,3 +60,4 @@ $grids: add-grid($mq-xl-c at $mq-xl);
   @include add-grid-span($mq-l, $mq-l-c * $l);
   @include add-grid-span($mq-xl, $mq-xl-c * $xl);
 }
+

@@ -2,6 +2,11 @@
 
 .editorial {
 
+  img, 
+  iframe {
+    max-width:100%;
+  }
+
   a[href^="http://"]:not([href*="moneyadviceservice"]):after,
   a[href^="www"]:not([href*="moneyadviceservice"]):after {
     @extend .icon;

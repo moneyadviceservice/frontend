@@ -18,10 +18,10 @@ ul {
 
 
 
-// The basic unordered list style
+// The basic unordered list style - only provided to browser that support :before :
 //
 // Styleguide list
-
+.test-support:before,
 .list {
   list-style: none;
 
@@ -43,7 +43,7 @@ ul {
 // A list that has ticks and crosses for bullet points
 //
 // Styleguide list-benefits
-
+.test-support:before,
 .list-benefits {
   padding: 0;
   list-style: none;

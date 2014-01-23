@@ -17,4 +17,24 @@
       padding-right: 5px;
     }
   }
+
+  table {
+    @extend %text--table;
+    text-align: left;
+  }
+
+  thead {
+    color: $color-table--heading;
+    background-color: $color-table--background;
+  }
+
+  th {
+    padding: $gw $gw/2;
+    border: 1px solid $color-table--border;
+  }
+
+  td {
+    padding: $gw $gw/2;
+    border: 1px solid $color-table--border;
+  }
 }

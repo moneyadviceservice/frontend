@@ -1,7 +1,9 @@
+// This component is purely used for scoping HTML we do not have control over which is output by the CMS.
+
 .editorial {
 
   a[href^="http://"]:not([href*="moneyadviceservice"]):after,
-  a[href^="www"]:not([href*="moneyadviceservice"]):after{
+  a[href^="www"]:not([href*="moneyadviceservice"]):after {
     @extend .icon;
     @extend .icon--externalLink;
     color: $color-link-external;
@@ -11,6 +13,7 @@
   a[href$=".doc"] {
     margin-top: $gw;
     display: inline-block;
+
     &:before {
       @extend .icon;
       @extend .icon--doc;
@@ -37,4 +40,5 @@
     padding: $gw $gw/2;
     border: 1px solid $color-table--border;
   }
-}
+
+} //  end

@@ -17,7 +17,7 @@ module Frontend
     config.session_store :cookie_store, key: '_mas_session'
 
     # Configure additional assets to precompile.
-    config.assets.precompile += %w(styleguide.css basic.css
+    config.assets.precompile += %w(styleguide.css basic.css fonts.css
                                    enhanced_fixed.css enhanced_responsive.css
                                    styleguide.js html_inspector.js
                                    html5shiv/dist/html5shiv.js)

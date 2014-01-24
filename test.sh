@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-set -e -x
+set -e
 
 export PATH=./bin:$PATH
 export RAILS_ENV=test

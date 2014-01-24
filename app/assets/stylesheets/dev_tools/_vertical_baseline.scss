@@ -1,0 +1,8 @@
+.baseline {
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 95%, #f00 95%, #f00 100%);
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 95%, #f00 95%, #f00 100%);
+  background-image: linear-gradient(top, #fff 0, #fff 95%, #f00 95%, #f00 100%);
+  background-repeat: repeat-y;
+  background-size: 100% 24px;
+  //  Background size height equals rendered line height at the respective breakpoint
+}

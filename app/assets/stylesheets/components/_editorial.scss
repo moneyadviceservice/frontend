@@ -7,8 +7,7 @@
     max-width:100%;
   }
 
-  a[href^="http://"]:not([href*="moneyadviceservice"]):after,
-  a[href^="www"]:not([href*="moneyadviceservice"]):after {
+  a:not([href*="moneyadviceservice"]):after {
     @extend .icon;
     @extend .icon--externalLink;
     color: $color-link-external;

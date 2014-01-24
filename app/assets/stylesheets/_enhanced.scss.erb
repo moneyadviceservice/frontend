@@ -11,14 +11,17 @@
 
 @import 'layout/common';
 
-// This should not be used in prod
+<% if Rails.env.development? %>
 @import 'components/dev';
+<% end %>
 
 @import 'components/header';
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
 @import 'components/editorial';
-@import 'components/breadcrumb';
+@import 'components/homepage_intro';
 @import 'components/icon';
-@import 'components/button';
 @import 'components/social_links';
+
+@import 'components/breadcrumb';
+@import 'components/button';

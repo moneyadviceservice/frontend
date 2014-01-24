@@ -1,4 +1,10 @@
 class StyleguideController < ApplicationController
+  layout 'styleguide/documentation'
+
+  def components
+    render layout: 'styleguide/page'
+  end
+
   private
 
   def sections

@@ -25,5 +25,3 @@ guard :rspec do
   watch('config/routes.rb') { 'spec/routing' }
   watch('app/controllers/application_controller.rb') { 'spec/controllers' }
 end
-
-guard :sass, input: 'app/assets/stylesheets', output: 'tmp/assets/stylesheets'

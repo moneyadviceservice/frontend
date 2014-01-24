@@ -2,8 +2,12 @@
 
 .editorial {
 
-  a[href^="http://"]:not([href*="moneyadviceservice"]):after,
-  a[href^="www"]:not([href*="moneyadviceservice"]):after {
+  img, 
+  iframe {
+    max-width:100%;
+  }
+
+  a:not([href*="moneyadviceservice"]):after {
     @extend .icon;
     @extend .icon--externalLink;
     color: $color-link-external;

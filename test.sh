@@ -10,7 +10,7 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 gem uninstall -aIx spring
 
-bundle install --without=development
+BUNDLE_WITHOUT=development bundle install
 
 rake spec
 rake cucumber

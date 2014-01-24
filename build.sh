@@ -3,6 +3,8 @@
 set -e
 
 unset RUBYOPT
+export BUNDLE_WITHOUT="test:development"
+
 
 version_number=${GO_PIPELINE_COUNTER-0}
 revision=`git rev-parse HEAD`
@@ -22,7 +24,7 @@ rm -rf public/assets vendor/cache coverage log/* tmp/*
 
 echo "Running Bundle package"
 echo "----"
-BUNDLE_WITHOUT="test:development" bundle package --all
+bundle package --all
 
 echo "Precompiling assets"
 echo "----"

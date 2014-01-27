@@ -1,0 +1,15 @@
+.error-page {
+  text-align: center;
+  padding: $bl*26 0 ;
+  min-height: $bl*77;
+
+  > h1 {
+    color: $color-green-secondary;
+    margin-bottom: $bl;
+  }
+
+  > p {
+    @extend %heading-beta;
+    color: $color-grey-primary;
+  }
+}

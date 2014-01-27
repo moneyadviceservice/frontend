@@ -108,6 +108,8 @@ GEM
     database_cleaner (1.2.0)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     draper (1.3.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -312,6 +314,7 @@ DEPENDENCIES
   autoprefixer-rails
   coffee-rails (~> 4.0.0)
   compass-rails
+  dotenv-rails
   draper (~> 1.3.0)
   foreman
   jquery-rails

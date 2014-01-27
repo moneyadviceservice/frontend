@@ -1,16 +1,17 @@
 @import 'singularitygs';
 @import 'breakpoint';
-
 @import 'lib/variables';
 @import 'lib/functions';
 @import 'lib/mixins';
 @import 'lib/placeholders';
 @import 'lib/grid';
 
+@import 'utilities/utils';
+
 @import 'layout/common';
 
 <% if Rails.env.development? %>
-@import 'components/dev';
+  @import 'dev_tools/grid';
 <% end %>
 
 @import 'components/header';
@@ -20,6 +21,6 @@
 @import 'components/homepage_intro';
 @import 'components/icon';
 @import 'components/social_links';
-
 @import 'components/breadcrumb';
 @import 'components/button';
+ 

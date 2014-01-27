@@ -1,4 +1,10 @@
 module ApplicationHelper
+  def baseline_grid(height: 6)
+    return unless Rails.env.development? && params.key?(:baseline)
+
+    stylesheet_link_tag("http://basehold.it/#{height}")
+  end
+
   def css(line_numbers: false, &block)
     source = strip_leading_indentation_from_source(capture(&block))
     tokens = Rouge::Lexers::CSS.lex(source)

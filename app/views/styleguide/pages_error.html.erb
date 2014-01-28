@@ -1,7 +1,15 @@
 <%= render 'shared/header' %>
 
-<div class="l-container error-page">
-  <%= render 'styleguide/examples/error' %>
+<div class="l-container">
+
+  <div class="error-page-message l-error-page">
+    <h1>Sorry!</h1>
+
+    <p class="intro">The page you were looking for was not found</p>
+
+    <a href="/" class="button button--primary">Homepage</a>
+  </div>
+
 </div>
 
 <%= render 'shared/footer_site_links', locals: %w(en) %>

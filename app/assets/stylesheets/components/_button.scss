@@ -1,0 +1,12 @@
+.button {
+  display:inline-block;
+}
+
+.button--primary {
+  background: $color-green-primary;
+  color:$color-white;
+}
+
+.button--primary:visited {
+  color:$color-white;
+}

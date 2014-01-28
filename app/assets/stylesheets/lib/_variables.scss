@@ -92,4 +92,7 @@ $gw: 20px;
 $lh: 22px;
 
 // Vertical Baseline
-$bl: 0.375em; // 6px
+$bl: 6px;
+@if $responsive {
+  $bl: 0.375rem; // 6px
+}

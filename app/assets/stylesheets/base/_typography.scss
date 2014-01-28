@@ -3,7 +3,7 @@ $responsive: true;
 
 body {
   // TODO will the font stack live in the body document
-  font-family: 'Helvetica Neue';
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: $bl*4;
 
   // optimize the font for legibility (kerning of characters)

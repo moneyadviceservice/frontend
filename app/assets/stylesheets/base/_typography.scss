@@ -61,10 +61,11 @@ p {
 .intro {
   @extend %text-introParagraph;
   @extend .clearfix;
+  clear: both;
 
   > img {
     float: right;
-    margin: 0 0 $gw $gw;
+    margin: 0 0 $bl*3 $bl*3;
     background-color: grey;
   }
 }

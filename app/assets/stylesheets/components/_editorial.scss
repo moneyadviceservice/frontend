@@ -34,9 +34,14 @@
     text-align: left;
   }
 
+
   thead {
     color: $color-table-heading;
     background-color: $color-table-background;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-table-background-alt;
   }
 
   th {

@@ -4,7 +4,7 @@ $responsive: true;
 body {
   // TODO will the font stack live in the body document
   font-family: 'Helvetica Neue';
-  line-height: 1.4;
+  line-height: $bl*4;
 
   // optimize the font for legibility (kerning of characters)
   -webkit-font-kerning: normal;
@@ -62,6 +62,7 @@ p {
   @extend %text-introParagraph;
   @extend .clearfix;
   clear: both;
+  line-height: $bl*5;
 
   > img {
     float: right;

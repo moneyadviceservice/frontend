@@ -1,10 +1,14 @@
 // This component is purely used for scoping HTML we do not have control over which is output by the CMS.
 
 .l-container.editorial {
-  margin-top: $bl*7; //@todo: abstract this out when we have multiple page types
+  margin-top: $bl*7; // TODO: abstract this out when we have multiple page types
 }
 
 .editorial {
+
+  ul {
+    @extend %list;
+  }
 
   img, 
   iframe {
@@ -74,4 +78,4 @@
     }
   }
 
-} //  end
+}

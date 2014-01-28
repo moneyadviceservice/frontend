@@ -21,6 +21,7 @@ ul {
 // The basic unordered list style - only provided to browser that support :before :
 //
 // Styleguide list
+
 .test-support:before,
 .list {
   list-style: none;
@@ -43,10 +44,15 @@ ul {
 // A list that has ticks and crosses for bullet points
 //
 // Styleguide list-benefits
+
 .test-support:before,
 .list-benefits {
   padding: 0;
   list-style: none;
+
+  li {
+    margin-left: 28px;
+  }
 
   li:before {
     position: relative;
@@ -55,6 +61,7 @@ ul {
     content: '\e609';
     color: $color-list-yes;
     padding-right: 10px;
+    margin-left: -28px;
   }
 
   .no:before {

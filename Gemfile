@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-#ruby File.read('.ruby-version').strip
-
 gem 'rails', '4.1.0.beta1'
 
 gem 'activeresource', '~> 4.0.0'

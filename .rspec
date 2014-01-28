@@ -2,4 +2,6 @@
 --format doc
 --format html
 --out tmp/spec.html
+--format RspecJunitFormatter
+--out tmp/spec.xml
 --profile

@@ -23,6 +23,10 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec_junit_formatter'
+end
+
 group :test, :development do
   gem 'dotenv-rails'
   gem 'mas-development_dependencies',

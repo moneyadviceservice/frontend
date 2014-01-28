@@ -1,17 +1,15 @@
 require 'spec_helper'
 
 describe CaptureRequestIdMiddleware do
-  before { @current_request_id = Thread.current['request-id'] }
-  after { Thread.current['request-id'] = @current_request_id }
+  subject { described_class.new(double(call: nil)) }
 
-  it 'records the request id in the current thread context' do
+  describe '#call' do
+    let(:request_id) { double }
+    before { subject.call('action_dispatch.request_id' => nil) }
 
-    Thread.current['request-id'] = ''
-    captureRequest = CaptureRequestIdMiddleware.new(double(:call => ''))
-    env = {'action_dispatch.request_id' => 'auto-genereated-request-id'}
-    captureRequest.call(env)
-    expect(Thread.current['request-id']).to eq('auto-genereated-request-id')
-
+    it 'stores the request id in the current thread' do
+      expect { subject.call('action_dispatch.request_id' => request_id) }.
+        to change { Thread.current['request-id'] }.from(nil).to(request_id)
+    end
   end
-
 end

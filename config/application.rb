@@ -28,5 +28,8 @@ module Frontend
     # Configure Google Tag Manager ID
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
+     # Adds request id into request headers
+    config.middleware.use "CaptureRequestIdMiddleware"
+
   end
 end

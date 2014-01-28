@@ -13,7 +13,7 @@ ol {
 // Styleguide ul
 
 ul {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 25px;
 }
 
 
@@ -27,15 +27,15 @@ ul {
   list-style: none;
 
   > li:before {
+    @include font-size(24);
     content:'\2022';
+    color: $color-list-bullet;
     display: block;
     position: relative;
     width: 0px;
     height: 0px;
     left: -20px;
     top: -5px;
-    color: $color-list-bullet;
-    font-size: 24px;
   }
 }
 
@@ -47,35 +47,35 @@ ul {
 
 .test-support:before,
 .list-benefits {
-  padding: 0;
   list-style: none;
 
-  li {
-    margin-left: 28px;
-  }
-
   li:before {
-    position: relative;
-    font-family: 'icomoon';
     @include font-size(18);
-    content: '\e609';
     color: $color-list-yes;
-    padding-right: 10px;
-    margin-left: -28px;
+    content: '\e609';
+    display: block;
+    font-family: 'icomoon';
+    position: relative;
+    width: 0px;
+    height: 0px;
+    left: -25px;
+    top: -3px;
   }
 
   .no:before {
-    top: 3px;
     content: '\e61e';
     color: $color-list-no;
   }
 }
 
+// Default list style for editorial content
+.editorial ul {
+  @extend .list;
+}
 
 
-
-// Lists for Articles and Editorial Content
-.yes-no {
+// Yes/No list style for editorial content
+.editorial .yes-no {
   @extend .list-benefits;
 }
 

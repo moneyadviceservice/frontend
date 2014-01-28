@@ -80,21 +80,3 @@
   margin: 0 0 0.5em 0;
   color: $color-green-primary;
 }
-
-// Lists
-
-%list {
-  list-style: none;
-
-  > li:before {
-    content:'\2022';
-    display: block;
-    position: relative;
-    width: 0px;
-    height: 0px;
-    left: -20px;
-    top: -5px;
-    color: $color-list-bullet;
-    font-size: 24px;
-  }
-}

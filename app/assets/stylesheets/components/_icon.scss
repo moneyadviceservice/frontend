@@ -22,8 +22,8 @@
 }
 
 .icon--masLogo {
-  width: 55px;
-  height: 30px;
+  width: $bl*9;
+  height: $bl*5;
   display:block; // temporary style until masLogo is added to the icomoon font
   margin: 10px 0;
   background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;

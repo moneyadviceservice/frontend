@@ -5,16 +5,19 @@
 }
 
 .primaryNav {
-  font-size: 16px;
-  border-bottom: 4px solid $color-navBorder;
+//  position: fixed;
+  width: 100%;
+  font-size: 12px;
+//  border-bottom: 4px solid $color-navBorder;
   background-color: $color-navBackground;
+  background-color: #393939;
 
   > ul {
     @extend %styleguideNav;
 
     > li {
       width: 100%;
-      border-top: 1px solid $color-navBorder;
+//      border-top: 1px solid $color-navBorder;
 
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
@@ -35,9 +38,10 @@
   position: relative;
   z-index: 1;
   background-color: $color-subMenuBackground;
+  background-color: #393939;
 
   > li {
-    border-top: 1px solid $color-navBorder;
+//    border-top: 1px solid $color-navBorder;
   }
 
   @include respond-to($mq-small) {
@@ -74,7 +78,7 @@
 }
 
 .navIcon {
-  font-size: 10px;
+  font-size: 8px;
   display: inline-block;
 }
 
@@ -83,8 +87,9 @@ nav a,
 nav a:visited {
   display: inline-block;
   text-decoration: none;
-  padding: 15px;
+  padding: 12px;
   width: 100%;
+  color: white;
 }
 
 nav a:hover {

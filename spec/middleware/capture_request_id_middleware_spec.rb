@@ -4,7 +4,7 @@ describe CaptureRequestIdMiddleware do
   before { @current_request_id = Thread.current['request-id'] }
   after { Thread.current['request-id'] = @current_request_id }
 
-  it 'records the request id in the current thread context to be used while making other api calls' do
+  it 'records the request id in the current thread context' do
 
     Thread.current['request-id'] = ''
     captureRequest = CaptureRequestIdMiddleware.new(double(:call => ''))

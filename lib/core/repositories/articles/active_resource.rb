@@ -4,7 +4,7 @@ require 'forwardable'
 module Core
   module Repositories
     module Articles
-      class API
+      class ActiveResource
         extend Forwardable
 
         def initialize(url)
@@ -13,13 +13,13 @@ module Core
 
         def find(id)
           Model.find(id, params: { locale: I18n.locale }).value
-        rescue ActiveResource::ResourceNotFound
+        rescue ::ActiveResource::ResourceNotFound
           nil
         end
 
         private
 
-        Model = Class.new(ActiveResource::Base) do
+        Model = Class.new(::ActiveResource::Base) do
           def value
             self.attributes
           end

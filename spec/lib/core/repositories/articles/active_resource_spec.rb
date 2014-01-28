@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'core/repositories/articles/api'
+require 'core/repositories/articles/active_resource'
 
 module Core::Repositories::Articles
-  describe API do
+  describe ActiveResource do
     subject { described_class.new(url) }
 
     let(:url) { 'https://example.com/:locale/path/to/url' }
@@ -17,8 +17,8 @@ module Core::Repositories::Articles
       let(:params) { { locale: I18n.locale } }
 
       it 'delegates to the internal resource' do
-        expect(API::Model).to receive(:find).with(id, params: params) do
-          API::Model.new(id: id)
+        expect(ActiveResource::Model).to receive(:find).with(id, params: params) do
+          ActiveResource::Model.new(id: id)
         end
 
         subject.find(id)
@@ -26,8 +26,8 @@ module Core::Repositories::Articles
 
       context 'when the article exists' do
         it 'returns a hash of attributes' do
-          allow(API::Model).to receive(:find) do
-            API::Model.new(id: id)
+          allow(ActiveResource::Model).to receive(:find) do
+            ActiveResource::Model.new(id: id)
           end
 
           expect(subject.find(id)).to be_a(Hash)
@@ -36,10 +36,10 @@ module Core::Repositories::Articles
       end
 
       context 'when the article is non-existent' do
-        let(:error) { ActiveResource::ResourceNotFound.new(double) }
+        let(:error) { ::ActiveResource::ResourceNotFound.new(double) }
 
         it 'returns nil' do
-          expect(API::Model).to receive(:find).and_raise(error)
+          expect(ActiveResource::Model).to receive(:find).and_raise(error)
           expect(subject.find(id)).to be_nil
         end
       end
@@ -58,7 +58,7 @@ module Core::Repositories::Articles
         let(:url) { 'https://example.com/path/to/url' }
 
         it 'configures the internal resource' do
-          expect(API::Model).to receive(:site=).with(url).twice
+          expect(ActiveResource::Model).to receive(:site=).with(url).twice
 
           subject.url = url
         end

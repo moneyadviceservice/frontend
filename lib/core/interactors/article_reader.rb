@@ -12,8 +12,11 @@ module Core
     end
 
     def call(&block)
-      if data = RepositoryRegistry[:article].find(id)
-        Article.new(id, url: data[:url], title: data[:title], description: data[:description], body: data[:body])
+      data    = RepositoryRegistry[:article].find(id)
+      article = Article.new(id, data)
+
+      if article.valid?
+        article
       else
         block.call if block_given?
       end

@@ -3,6 +3,24 @@ require 'spec_helper'
 require 'core/entities/article'
 require 'core/interactors/article_reader'
 
+shared_examples_for 'optional failure block' do
+  context 'when a block is given' do
+    let(:probe) { lambda {} }
+
+    it 'calls the block' do
+      expect(probe).to receive(:call)
+
+      subject.call(&probe)
+    end
+  end
+
+  context 'when no block is given' do
+    it 'returns nil' do
+      expect(subject.call).to be_nil
+    end
+  end
+end
+
 module Core
   describe ArticleReader do
     subject { described_class.new(id) }
@@ -19,6 +37,13 @@ module Core
       context 'when the repository returns no data' do
         let(:data) { nil }
 
+        it_has_behavior 'optional failure block'
+      end
+
+      context 'when the repository returns some data' do
+        let(:url) { 'https://example.com/the-article' }
+        let(:title) { 'The Article' }
+        let(:data) { { url: url, title: title } }
 
         context 'when a block is given' do
           let(:probe) { lambda {} }
@@ -49,23 +74,37 @@ module Core
 
         it "maps the article's `id' to the repositories' `id' value" do
           expect(Article).
-            to receive(:new).with(id, kind_of(Hash))
+            to receive(:new).with(id, kind_of(Hash)).and_call_original
 
           subject.call
         end
 
         %W(url title description body).each do |attribute|
           it "maps the article's `#{attribute}' to the repositories' `#{attribute}' value" do
-            expect(Article).to receive(:new) do |_, attributes|
+            expect(Article).to(receive(:new)) { |_, attributes|
               expect(attributes[attribute.to_sym]).to eq(send(attribute))
-            end
+            }.and_call_original
 
             subject.call
           end
         end
 
-        it 'returns an article' do
-          expect(subject.call).to be_a(Article)
+        context 'when the Article entity is valid' do
+          before do
+            expect_any_instance_of(Article).to receive(:valid?) { true }
+          end
+
+          it 'returns an article' do
+            expect(subject.call).to be_a(Article)
+          end
+        end
+
+        context 'when the Article is invalid' do
+          before do
+            expect_any_instance_of(Article).to receive(:valid?) { false }
+          end
+
+          it_has_behavior 'optional failure block'
         end
       end
     end

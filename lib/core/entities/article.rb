@@ -8,12 +8,12 @@ module Core
 
     private :id=
 
-    def initialize(id, url: url, title: title, description: description, body: body)
-      self.id          = id
-      self.url         = url
-      self.title       = title
-      self.description = description
-      self.body        = body
+    def initialize(id, attributes = {})
+      self.id = id
+
+      attributes && attributes.each do |name, value|
+        send("#{name}=", value)
+      end
     end
   end
 end

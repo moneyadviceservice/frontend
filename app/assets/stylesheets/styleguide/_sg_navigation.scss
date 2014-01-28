@@ -4,20 +4,18 @@
   padding: 0;
 }
 
+
+
 .primaryNav {
-//  position: fixed;
   width: 100%;
   font-size: 12px;
-//  border-bottom: 4px solid $color-navBorder;
   background-color: $color-navBackground;
-  background-color: #393939;
 
   > ul {
     @extend %styleguideNav;
 
     > li {
       width: 100%;
-//      border-top: 1px solid $color-navBorder;
 
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
@@ -38,25 +36,22 @@
   position: relative;
   z-index: 1;
   background-color: $color-subMenuBackground;
-  background-color: #393939;
-
-  > li {
-//    border-top: 1px solid $color-navBorder;
-  }
 
   @include respond-to($mq-small) {
     position: absolute;
   }
 }
 
+
+
+// Menu toggle when in mobile view
 .navToggle {
   cursor: pointer;
   width: 100%;
   padding: 15px;
   border: none;
-  color: #FFF;
-  background-color: #FFF;
-  background-color: #393939;
+  color: $color-navText;
+  background-color: $color-navBackground;
   text-align: left;
   border-top: 1px solid $color-navBorder;
   &:hover,
@@ -83,6 +78,8 @@
   font-size: 8px;
   display: inline-block;
 }
+
+
 
 // Navigation links
 nav a,

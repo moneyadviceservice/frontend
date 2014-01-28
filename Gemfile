@@ -28,7 +28,7 @@ group :test, :development do
   gem 'mas-development_dependencies',
       git: 'git@github.com:moneyadviceservice/mas-development_dependencies.git'
 
-  gem 'fakeweb'
+  gem 'webmock'
 end
 
 group :doc do

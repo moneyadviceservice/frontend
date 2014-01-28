@@ -6,14 +6,8 @@ describe ActiveResource::Base do
   end
 
   before(:each) do
-    FakeWeb.register_uri(:get, 'http://example.com/dummies/id.json',
-                         status: 200, body: '{}')
-
+    stub_request(:get, "http://example.com/dummies/id.json").to_return( body: '{}')
     Thread.current['request-id'] = request_id
-  end
-
-  after(:each) do
-    FakeWeb.last_request = nil
   end
 
   describe '.find' do
@@ -23,7 +17,8 @@ describe ActiveResource::Base do
       let(:request_id) { nil }
 
       it "does not set a `X-Request-Id' header the request" do
-        expect(FakeWeb.last_request['X-Request-Id']).to be_nil
+        expect(a_request(:get, "http://example.com/dummies/id.json").
+          with(headers: { 'X-Request-Id' => request_id })).to_not have_been_made
       end
     end
 
@@ -31,7 +26,8 @@ describe ActiveResource::Base do
       let(:request_id) { 'abc123' }
 
       it "adds a `X-Request-Id' header to the request" do
-        expect(FakeWeb.last_request['X-Request-Id']).to eq(request_id)
+        expect(a_request(:get, "http://example.com/dummies/id.json").
+          with(headers: { 'X-Request-Id' => request_id })).to have_been_made
       end
     end
   end

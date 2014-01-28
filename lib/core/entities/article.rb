@@ -12,7 +12,7 @@ module Core
     def initialize(id, attributes = {})
       self.id = id
 
-      attributes && attributes.each do |name, value|
+      Array(attributes).each do |name, value|
         send("#{name}=", value)
       end
     end

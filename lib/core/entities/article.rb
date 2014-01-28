@@ -4,7 +4,7 @@ module Core
 
     attr_accessor :id, :url, :title, :description, :body
 
-    validates_presence_of :id, :url, :title, :body
+    validates_presence_of :id, :url, :title, :description, :body
 
     private :id=
 

@@ -1,4 +1,3 @@
-console.info('Application.js');
 
 // This can be wrapper so in prod it outputs to MAS.log rather than console
 if(MAS.env === 'development'){
@@ -56,7 +55,4 @@ require(['mas_analytics'], function(analytics) {
 //   // $.subscribe("/some/topic", handle);
 //   // $.publish("/some/topic", [ "a", "b", "c" ]);
 // });
-
-
-
 

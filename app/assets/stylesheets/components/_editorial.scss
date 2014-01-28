@@ -1,9 +1,17 @@
 // This component is purely used for scoping HTML we do not have control over which is output by the CMS.
 
+.l-container.editorial {
+  margin-top: $bl*7; //@todo: abstract this out when we have multiple page types
+}
+
 .editorial {
 
-  a[href^="http://"]:not([href*="moneyadviceservice"]):after,
-  a[href^="www"]:not([href*="moneyadviceservice"]):after {
+  img, 
+  iframe {
+    max-width:100%;
+  }
+
+  a:not([href*="moneyadviceservice"]):after {
     @extend .icon;
     @extend .icon--externalLink;
     color: $color-link-external;
@@ -26,9 +34,14 @@
     text-align: left;
   }
 
+
   thead {
     color: $color-table-heading;
     background-color: $color-table-background;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-table-background-alt;
   }
 
   th {

@@ -14,6 +14,11 @@ Rails.application.routes.draw do
         get 'javascript'
         get 'ruby'
 
+        scope 'pages' do
+          get 'pages', path: '/'
+          get 'pages_guide', path: '/guide'
+        end
+
         scope 'css' do
           get 'css_overview', path: '/'
           get 'css_basic', path: '/basic'

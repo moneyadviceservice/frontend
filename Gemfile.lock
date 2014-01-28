@@ -47,6 +47,10 @@ GEM
       activemodel (= 4.1.0.beta1)
       activesupport (= 4.1.0.beta1)
       arel (~> 5.0.0)
+    activeresource (4.0.0)
+      activemodel (~> 4.0)
+      activesupport (~> 4.0)
+      rails-observers (~> 0.1.1)
     activesupport (4.1.0.beta1)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
@@ -58,6 +62,9 @@ GEM
     atomic (1.1.14)
     autoprefixer-rails (1.0.20140109)
       execjs
+    breakpoint (2.0.7)
+      compass (>= 0.12.1)
+      sass (>= 3.2.0)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -70,6 +77,7 @@ GEM
       launchy
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chunky_png (1.2.9)
     cliver (0.3.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -80,6 +88,12 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     colorize (0.6.0)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.1.3)
+      compass (>= 0.12.2)
     cucumber (1.3.10)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.3)
@@ -94,6 +108,8 @@ GEM
     database_cleaner (1.2.0)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     draper (1.3.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -115,6 +131,7 @@ GEM
       dotenv (>= 0.7)
       thor (>= 0.13.6)
     formatador (0.2.4)
+    fssm (0.2.10)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     guard (2.2.5)
@@ -200,6 +217,8 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.0.beta1)
       sprockets-rails (~> 2.0.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
     railties (4.1.0.beta1)
       actionpack (= 4.1.0.beta1)
       activesupport (= 4.1.0.beta1)
@@ -230,6 +249,10 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    rspec_junit_formatter (0.1.6)
+      builder
+      rspec (~> 2.0)
+      rspec-core (!= 2.12.0)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -240,6 +263,10 @@ GEM
       rdoc (~> 3.10)
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
+    singularitygs (1.1.2)
+      breakpoint (>= 2.0.1)
+      compass (>= 0.12.2)
+      sass (>= 3.2.1)
     site_prism (2.5)
       addressable (~> 2.3.3)
       capybara (>= 2.1, < 3.0)
@@ -255,6 +282,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    syslog-logger (1.6.8)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -278,6 +306,8 @@ GEM
     unicorn-rails (1.1.0)
       rack
       unicorn
+    validate_url (0.2.0)
+      activemodel (>= 3.0.0)
     websocket-driver (0.3.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -286,8 +316,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeresource (~> 4.0.0)
   autoprefixer-rails
   coffee-rails (~> 4.0.0)
+  compass-rails
+  dotenv-rails
   draper (~> 1.3.0)
   foreman
   jquery-rails
@@ -295,9 +328,13 @@ DEPENDENCIES
   mas-development_dependencies!
   rails (= 4.1.0.beta1)
   rouge
+  rspec_junit_formatter
   sass-rails (~> 4.0.0.rc1)
   sdoc
+  singularitygs
   spring
+  syslog-logger
   turbolinks
   uglifier (>= 1.3.0)
   unicorn-rails
+  validate_url

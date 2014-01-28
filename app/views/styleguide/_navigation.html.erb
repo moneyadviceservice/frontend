@@ -24,6 +24,17 @@
     <li><%= link_to 'Components', components_styleguide_path %></li>
 
     <li class="has-subMenu">
+      <%= link_to pages_styleguide_path do %>
+        Pages
+        <span class="navIcon">&#9660;</span>
+      <% end %>
+
+      <ul class="primaryNav-subMenu">
+        <li><%= link_to 'Guide', pages_guide_styleguide_path %></li>
+      </ul>
+    </li>
+
+    <li class="has-subMenu">
       <%= link_to sass_overview_styleguide_path do %>
         Sass
         <span class="navIcon">&#9660;</span>

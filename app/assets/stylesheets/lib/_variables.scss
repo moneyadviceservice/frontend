@@ -9,6 +9,7 @@ $color-green-primary: #388426;
 $color-green-secondary: #61a612;
 $color-green-tertiary: #115329;
 
+$color-green-paler: #f5f7f8; // not in the standard palette
 $color-green-pale: #dceea3;  // not in the standard palette
 $color-green-light: #b9dd48;
 $color-green-medium: #81c724;
@@ -67,6 +68,7 @@ $color-link-external: $color-grey-light;
 // Tables Colours
 $color-table-heading: $color-white;
 $color-table-background: $color-green-primary;
+$color-table-background-alt: $color-green-paler;
 $color-table-border: $color-grey-light;
 
 
@@ -88,5 +90,8 @@ $color-callout-background: $color-green-pale;
 $gw: 20px;
 
 
-// Vertical Rhythm
+// Line Height
 $lh: 22px;
+
+// Vertical Baseline
+$bl: 0.375em; // 6px

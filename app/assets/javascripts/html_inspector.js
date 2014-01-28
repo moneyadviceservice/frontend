@@ -1,3 +1,5 @@
 //= require html-inspector/html-inspector
 
-HTMLInspector.inspect();
+HTMLInspector.inspect({
+  excludeRules: ["unused-classes", "script-placement"]
+})

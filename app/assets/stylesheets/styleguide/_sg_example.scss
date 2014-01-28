@@ -96,7 +96,50 @@
   }
 }
 
+
+.tempComponent {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=); 
+  min-height: 70px;
+}
+
 // high contrast background for icons
 #section-icons .styleguide-element {
   background-color: $color-green-primary;
 }
+
+// Layouts
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col {
+
+  .styleguide-example,
+  .styleguide-element {
+    padding:20px 0;
+  }
+
+  .l-container {
+    padding:10px 0;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=); 
+    overflow: hidden;
+  }
+
+
+  .l-1col,
+  .l-2col-side,
+  .l-2col-main,
+  .l-2col-even {
+    background: red;
+    text-align: center;
+  }
+}
+
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col {
+  h2 {
+    @extend .l-1col;
+    background: none;
+    padding-top: 20px;
+  }
+}
+

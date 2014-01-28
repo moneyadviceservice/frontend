@@ -2,10 +2,33 @@
 $responsive: true;
 
 body {
+  // TODO will the font stack live in the body document
   font-family: 'Helvetica Neue';
   line-height: 1.4;
-}
 
+  // optimize the font for legibility (kerning of characters)
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+
+  // allows access to kerning and ligatypes in fonts that support it.
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga", "kern";
+  font-feature-settings: "liga", "kern";
+
+  // doesn't work as well with italics as with regular text
+  -webkit-font-smoothing: antialiased;
+
+  // improves antialiasing in Chrome and Windows
+  text-shadow: 1px 1px transparent;
+
+  // prevent automatic text zooming when changing orientation or viewing mobile
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+}
 
 // Currently we only support H1 - H3
 //
@@ -23,7 +46,6 @@ h3 {
   @extend %heading-gamma;
 }
 
-
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
@@ -32,7 +54,6 @@ p {
   @extend %text-basicParagraph;
 }
 
-
 // Larger text size for the article introductory paragraph.
 //
 // Styleguide intro
@@ -40,10 +61,11 @@ p {
 .intro {
   @extend %text-introParagraph;
   @extend .clearfix;
+  clear: both;
 
   > img {
     float: right;
-    margin: 0 0 $gw $gw;
+    margin: 0 0 $bl*3 $bl*3;
     background-color: grey;
   }
 }

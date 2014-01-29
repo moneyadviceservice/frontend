@@ -10,6 +10,7 @@ gem 'draper', '~> 1.3.0'
 gem 'foreman'
 gem 'jquery-rails'
 gem 'kss'
+gem 'meta-tags', require: 'meta_tags'
 gem 'rouge'
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'turbolinks'
@@ -23,7 +24,10 @@ group :development do
 end
 
 group :test do
+  gem 'faker'
   gem 'rspec_junit_formatter'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :test, :development do

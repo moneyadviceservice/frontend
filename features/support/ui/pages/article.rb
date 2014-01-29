@@ -5,5 +5,6 @@ module UI::Pages
     set_url '{/locale}/articles{/id}'
 
     element :heading, 'h1'
+    element :content, '#article-content'
   end
 end

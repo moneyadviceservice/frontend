@@ -2,10 +2,9 @@ module Core
   class Article
     include ActiveModel::Validations
 
-    attr_accessor :id, :url, :title, :description, :body
+    attr_accessor :id, :title, :description, :body
 
-    validates_presence_of :id, :url, :title, :body
-    validates_url :url
+    validates_presence_of :id, :title, :body
 
     private :id=
 

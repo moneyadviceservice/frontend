@@ -9,6 +9,7 @@
 .primaryNav {
   width: 100%;
   font-size: 12px;
+  line-height: 12px;
   background-color: $color-navBackground;
 
   > ul {
@@ -88,11 +89,13 @@ nav a:visited {
   text-decoration: none;
   padding: 12px;
   width: 100%;
-  color: white;
+  color: #DADADA;
 }
 
 nav a:hover {
   border: none;
+  text-decoration: none;
+  color: #FFF;
 }
 
 

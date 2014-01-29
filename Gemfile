@@ -18,7 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 gem 'singularitygs'
 gem 'syslog-logger'
-gem 'validate_url'
 
 group :development do
   gem 'spring'

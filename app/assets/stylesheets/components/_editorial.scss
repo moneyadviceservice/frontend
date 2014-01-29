@@ -1,13 +1,13 @@
 // This component is purely used for scoping HTML we do not have control over which is output by the CMS.
 
 .l-container.editorial {
-  margin-top: $bl*7; //@todo: abstract this out when we have multiple page types
+  margin-top: $bl*7; // TODO: abstract this out when we have multiple page types
 }
 
 .editorial {
   background-color: $color-white;
 
-  img, 
+  img,
   iframe {
     max-width:100%;
   }
@@ -20,7 +20,7 @@
   }
 
   a[href$=".doc"] {
-    margin-top: $gw;
+    margin-top: $bl*3;
     display: inline-block;
 
     &:before {
@@ -46,27 +46,27 @@
   }
 
   th {
-    padding: $gw $gw/2;
+    padding: $bl*3 $bl*2;
     border: 1px solid $color-table-border;
   }
 
   td {
-    padding: $gw $gw/2;
+    padding: $bl*3 $bl*2;
     border: 1px solid $color-table-border;
   }
 
   .callout {
-    padding: $gw;
-    margin: $gw;
+    padding: $bl*3;
+    margin: $bl*3;
     max-width: 38%;
     float: right;
     border-radius: 10px;
     color: $color-green-tertiary;
     background-color: $color-callout-background;
-    line-height: 1.5;
+//    line-height: 1.5;
 
     > h3 {
-      margin-bottom: 1.2em;
+      margin-bottom: $bl*3;
     }
 
     > p {
@@ -74,5 +74,4 @@
       margin-top: 0;
     }
   }
-
-} //  end
+}

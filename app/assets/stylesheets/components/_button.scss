@@ -1,0 +1,75 @@
+// Buttons
+//
+// :hover      - green
+// :active     - green
+// :focus      - green
+// .is-disabled - green
+// .button--primary            - yellow
+// .button--primary:hover      - yellow
+// .button--primary:active     - yellow
+// .button--primary:focus      - yellow
+// .button--primary.is-disabled - yellow
+//
+// Styleguide buttons
+
+
+// Default Button
+.button {
+  @extend %text-button;
+  display: inline-block;
+  padding: 12px 22px;
+  margin-bottom: 0;
+  line-height: inherit;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: $border-radius-button;
+  border:none;
+  background: $color-button-default;
+  border-bottom: $border-width-button solid $color-button-default-border;
+  color:$color-black;
+  transition: background 0.2s ease;
+}
+.button:focus {
+  outline: thin dotted;
+  outline: 3px auto -webkit-focus-ring-color;
+  outline-offset: -1px;
+}
+.button:focus,
+.button:hover {
+  background: lighten($color-button-default, $lighten-button);
+  border-color: lighten($color-button-default-border, $lighten-button);;
+  text-decoration: none;
+}
+.button:active {
+  padding-top: $border-width-button;
+  border-bottom-color: $color-button-default;
+  border-top: $border-width-button solid $color-button-default-border;
+}
+.button:visited {
+  color:$color-black;
+}
+.button.is-disabled,
+.button[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  filter: alpha(opacity=6);
+  opacity: .6;
+}
+
+
+// Primary Button
+.button--primary {
+  background: $color-button-primary;
+  border-bottom-color: $color-button-primary-border;
+}
+.button--primary:focus,
+.button--primary:hover {
+  background: lighten($color-button-primary, $lighten-button);
+  border-color: lighten($color-button-primary-border, $lighten-button);
+}
+.button--primary:active {
+  border-bottom-color: $color-button-primary;
+  border-top-color: $color-button-primary-border;
+}

@@ -30,7 +30,6 @@ module Core
     it { should validate_presence_of(:id) }
     it { should validate_presence_of(:url) }
     it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:description) }
     it { should validate_presence_of(:body) }
 
     context 'with a valid URL' do

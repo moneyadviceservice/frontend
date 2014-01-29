@@ -5,6 +5,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_error
+    render layout: 'styleguide/page'
+  end
+
   private
 
   def sections

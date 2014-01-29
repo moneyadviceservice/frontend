@@ -3,9 +3,10 @@ require 'spec_helper'
 describe CaptureRequestIdMiddleware do
   subject { described_class.new(double(call: nil)) }
 
+  after(:all) { Thread.current['request-id'] = nil }
+
   describe '#call' do
     let(:request_id) { double }
-    before { subject.call('action_dispatch.request_id' => nil) }
 
     it 'stores the request id in the current thread' do
       expect { subject.call('action_dispatch.request_id' => request_id) }.

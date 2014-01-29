@@ -5,13 +5,15 @@
 }
 
 .editorial {
+  background-color: $color-white;
 
   img {
-    max-width:100%;
+    max-width: 100%;
   }
 
-  .video-wrapper { //http://alistapart.com/article/creating-intrinsic-ratios-for-video
-    clear:both;
+  .video-wrapper {
+    //http://alistapart.com/article/creating-intrinsic-ratios-for-video
+    clear: both;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     padding-top: 25px;
@@ -31,13 +33,13 @@
     @extend .icon--externalLink;
     color: $color-link-external;
     padding-left: 5px;
-    display:inline-block; // hide the underline when hovering over the link
+    display: inline-block; // hide the underline when hovering over the link
   }
 
   // override for links that do not contain moneyadviceservice but are not external links
   a[href^="/"]:after,
-  a[href^="#"]:after{
-    display:none;
+  a[href^="#"]:after {
+    display: none;
   }
 
   a[href$=".doc"] {
@@ -48,7 +50,7 @@
       @extend .icon;
       @extend .icon--doc;
       padding-right: 5px;
-      display:inline-block; // hide the underline when hovering over the link
+      display: inline-block; // hide the underline when hovering over the link
     }
   }
 
@@ -56,7 +58,6 @@
     @extend %text--table;
     text-align: left;
   }
-
 
   thead {
     color: $color-table-heading;
@@ -85,7 +86,6 @@
     border-radius: 10px;
     color: $color-green-tertiary;
     background-color: $color-callout-background;
-//    line-height: 1.5;
 
     > h3 {
       margin-bottom: $bl*3;
@@ -96,5 +96,4 @@
       margin-top: 0;
     }
   }
-
 }

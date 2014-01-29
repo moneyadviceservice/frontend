@@ -3,7 +3,7 @@
 // Styleguide header
 
 .header {
-  padding: 20px 10px;
+  padding: $bl*5 0 $bl*4 0;
   background: $color-green-primary;
-  border-bottom: 4px solid $color-green-light;
+  border-bottom: $bl/2 solid $color-green-light;
 }

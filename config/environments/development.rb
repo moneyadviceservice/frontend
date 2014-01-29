@@ -20,4 +20,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Store the request_id in the current thread
+  config.middleware.use CaptureRequestIdMiddleware
+
 end

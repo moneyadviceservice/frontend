@@ -76,4 +76,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  # Store the request_id in the current thread
+  config.middleware.use CaptureRequestIdMiddleware
+
 end

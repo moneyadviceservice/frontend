@@ -1,7 +1,7 @@
 require 'html_processor'
 
 class ArticleDecorator < Draper::Decorator
-  delegate :title, :description
+  delegate :id, :title, :description
 
   def content
     @content ||= processed_body.html_safe

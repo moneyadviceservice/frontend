@@ -1,4 +1,5 @@
-<% set_meta_tags(description: article.description) %>
+<% set_meta_tags(description: article.description,
+                 canonical:   article_url(article.id)) %>
 
 <div class="l-article editorial">
   <h1><%= title article.title %></h1>

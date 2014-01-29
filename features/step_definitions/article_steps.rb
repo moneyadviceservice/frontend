@@ -33,3 +33,8 @@ Then(/^I should see the article in (.*)$/) do |language|
   expect(article_page.content).to have_content(strip_tags(current_article.body))
 end
 
+Then(/^the article should have a canonical tag for that language version$/) do
+  expected_href = article_url(id: current_article.id, locale: current_locale)
+
+  expect { article_page.canonical_tag[:href] }.to become(expected_href)
+end

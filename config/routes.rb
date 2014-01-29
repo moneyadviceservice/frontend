@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'home#show'
 
   scope '/:locale' do
+    resources :articles, only: %W(show)
+
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',

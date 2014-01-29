@@ -1,5 +1,11 @@
 <h1>Components</h1>
 
+<%= styleguide_section sections['buttons'] do %>
+  <a href="#url" class="button $modifier_class">link</a>
+  <button class="button $modifier_class">button</button>
+  <input type="button" class="button $modifier_class" value="input"/>
+<% end %>
+
 <%= styleguide_section sections['icons'] do %>
   <span class="icon $modifier_class" aria-hidden="true"></span>
   <span class="visually-hidden">hidden text</span>

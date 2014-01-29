@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-#ruby File.read('.ruby-version').strip
-
 gem 'rails', '4.1.0.beta1'
 
+gem 'activeresource', '~> 4.0.0'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails'
@@ -18,12 +17,18 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 gem 'singularitygs'
 gem 'syslog-logger'
+gem 'validate_url'
 
 group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec_junit_formatter'
+end
+
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'mas-development_dependencies',
       git: 'git@github.com:moneyadviceservice/mas-development_dependencies.git'
 end

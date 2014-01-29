@@ -5,8 +5,9 @@
 }
 
 .editorial {
+  background-color: $color-white;
 
-  img, 
+  img,
   iframe {
     max-width:100%;
   }
@@ -73,5 +74,4 @@
       margin-top: 0;
     }
   }
-
 }

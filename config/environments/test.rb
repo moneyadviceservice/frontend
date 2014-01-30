@@ -28,7 +28,4 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # Store the request_id in the current thread
-  config.middleware.use CaptureRequestIdMiddleware
-
 end

@@ -62,7 +62,7 @@ p {
 
 .intro {
   @extend %text-introParagraph;
-  @extend .clearfix;
+  @extend %clearfix;
   clear: both;
   line-height: $bl*5;
 

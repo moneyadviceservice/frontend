@@ -11,8 +11,8 @@ EOHTML
   }
 
   let(:procesor)    { HtmlProcessor::NodeRemover.new(html) }
-  let(:xpath)       { '//strong[@class="super-strong"]' }
-  let(:other_xpath) { '//span[id="foo"]' }
+  let(:xpath)       { 'strong[@class="super-strong"]' }
+  let(:other_xpath) { 'span[id="foo"]' }
 
   it 'removes nodes from a html fragment' do
     processed_html = procesor.process(xpath)

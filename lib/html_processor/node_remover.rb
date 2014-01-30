@@ -3,7 +3,7 @@ module HtmlProcessor
 
     attr_reader :doc
     def initialize(html)
-      @doc = Nokogiri::HTML(html)
+      @doc =  Nokogiri::XML::DocumentFragment.parse(html)
     end
 
     def process(*xpaths)

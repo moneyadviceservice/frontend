@@ -80,12 +80,17 @@
 
   .callout {
     padding: $bl*3;
-    margin: $bl*3;
-    max-width: 38%;
+    margin: $bl*3 0;
+    width: 100%;
     float: right;
     border-radius: 10px;
     color: $color-green-tertiary;
     background-color: $color-callout-background;
+
+    @include respond-to(600px) {
+      margin: $bl*3;
+      max-width: 38%;
+    }
 
     > h3 {
       margin-bottom: $bl*3;

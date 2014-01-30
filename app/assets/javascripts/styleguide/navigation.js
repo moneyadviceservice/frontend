@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.primaryNav').prepend('<button class="navToggle">Menu <span class="navIcon">&#9660;</span></button>');
+  $('.primaryNav').prepend('<button class="navToggle">Menu</button>');
 
   $(".navToggle").on("click", function(e){
     $('.primaryNav-list').slideToggle();

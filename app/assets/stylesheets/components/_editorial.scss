@@ -6,9 +6,24 @@
 
 .editorial {
 
-  img, 
-  iframe {
+  img {
     max-width:100%;
+  }
+
+  .video-wrapper { //http://alistapart.com/article/creating-intrinsic-ratios-for-video
+    clear:both;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   a:not([href*="moneyadviceservice"]):after {
@@ -16,6 +31,13 @@
     @extend .icon--externalLink;
     color: $color-link-external;
     padding-left: 5px;
+    display:inline-block; // hide the underline when hovering over the link
+  }
+
+  // override for links that do not contain moneyadviceservice but are not external links
+  a[href^="/"]:after,
+  a[href^="#"]:after{
+    display:none;
   }
 
   a[href$=".doc"] {
@@ -26,6 +48,7 @@
       @extend .icon;
       @extend .icon--doc;
       padding-right: 5px;
+      display:inline-block; // hide the underline when hovering over the link
     }
   }
 

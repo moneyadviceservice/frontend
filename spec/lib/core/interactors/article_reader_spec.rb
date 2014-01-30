@@ -41,9 +41,8 @@ module Core
       end
 
       context 'when the repository returns some data' do
-        let(:url) { 'https://example.com/the-article' }
         let(:title) { 'The Article' }
-        let(:data) { { url: url, title: title } }
+        let(:data) { { title: title } }
 
         context 'when a block is given' do
           let(:probe) { lambda {} }
@@ -63,13 +62,12 @@ module Core
       end
 
       context 'when the repository returns data' do
-        let(:url) { 'https://example.com/the-article' }
         let(:title) { 'The Article' }
         let(:description) { 'The Article has a description' }
         let(:body) { '<h1>The Article</h1><p>Lorem ipsum dolor sit amet</p>' }
 
         let(:data) do
-          { url: url, title: title, description: description, body: body }
+          { title: title, description: description, body: body }
         end
 
         it "maps the article's `id' to the repositories' `id' value" do
@@ -79,7 +77,7 @@ module Core
           subject.call
         end
 
-        %W(url title description body).each do |attribute|
+        %W(title description body).each do |attribute|
           it "maps the article's `#{attribute}' to the repositories' `#{attribute}' value" do
             expect(Article).to(receive(:new)) { |_, attributes|
               expect(attributes[attribute.to_sym]).to eq(send(attribute))

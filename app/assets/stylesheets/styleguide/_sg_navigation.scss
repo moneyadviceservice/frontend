@@ -4,9 +4,11 @@
   padding: 0;
 }
 
+
+
 .primaryNav {
-  font-size: 16px;
-  border-bottom: 4px solid $color-navBorder;
+  width: 100%;
+  font-size: 12px;
   background-color: $color-navBackground;
 
   > ul {
@@ -14,7 +16,6 @@
 
     > li {
       width: 100%;
-      border-top: 1px solid $color-navBorder;
 
       &:hover .styleguidePrimaryNav-subMenu,
       &:focus .styleguidePrimaryNav-subMenu {
@@ -36,21 +37,21 @@
   z-index: 1;
   background-color: $color-subMenuBackground;
 
-  > li {
-    border-top: 1px solid $color-navBorder;
-  }
-
   @include respond-to($mq-small) {
     position: absolute;
   }
 }
 
+
+
+// Menu toggle when in mobile view
 .navToggle {
   cursor: pointer;
   width: 100%;
   padding: 15px;
   border: none;
-  background-color: #FFF;
+  color: $color-navText;
+  background-color: $color-navBackground;
   text-align: left;
   border-top: 1px solid $color-navBorder;
   &:hover,
@@ -74,17 +75,20 @@
 }
 
 .navIcon {
-  font-size: 10px;
+  font-size: 8px;
   display: inline-block;
 }
+
+
 
 // Navigation links
 nav a,
 nav a:visited {
   display: inline-block;
   text-decoration: none;
-  padding: 15px;
+  padding: 12px;
   width: 100%;
+  color: white;
 }
 
 nav a:hover {

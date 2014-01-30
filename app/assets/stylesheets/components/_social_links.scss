@@ -13,7 +13,7 @@
 
   a {
     display: block;
-    padding: 13px;
+    padding: $bl*2; // TODO needs to be refactored when the icons have been centred.
     margin-right: -4px; // important to keep to prevent inline-block margins
     background-color: $color-green-primary;
     border-right: 1px solid $color-white-translucent;
@@ -23,6 +23,7 @@
     }
     &:hover,
     &:focus {
+      text-decoration: none;
       background-color: darken($color-green-primary, 10%);
       border-bottom: none;
     }

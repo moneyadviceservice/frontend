@@ -1,5 +1,8 @@
 <% content_for :content do %>
+  <%= render 'shared/header' %>
   <%= yield %>
+  <%= render 'shared/footer_site_links', locals: alternative_locales %>
+  <%= render 'shared/footer_social_links' %>
 <% end %>
 
 <%= render template: 'layouts/base' %>

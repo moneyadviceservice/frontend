@@ -107,6 +107,11 @@
   background-color: $color-green-primary;
 }
 
+// add space between buttons so focus state is more visible
+#section-buttons .styleguide-element .button {
+  margin-right:20px;
+}
+
 // Layouts
 #section-layout-container,
 #section-layout-1col,

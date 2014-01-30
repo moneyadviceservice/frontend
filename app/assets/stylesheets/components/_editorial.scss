@@ -33,7 +33,6 @@
     @extend .icon--externalLink;
     color: $color-link-external;
     padding-left: 5px;
-    display: inline-block; // hide the underline when hovering over the link
   }
 
   // override for links that do not contain moneyadviceservice but are not external links
@@ -44,13 +43,11 @@
 
   a[href$=".doc"] {
     margin-top: $bl*3;
-    display: inline-block;
 
     &:before {
       @extend .icon;
       @extend .icon--doc;
       padding-right: 5px;
-      display: inline-block; // hide the underline when hovering over the link
     }
   }
 
@@ -94,7 +91,7 @@
 //      margin: $bl*3;
 //    }
 
-    @include respond-to(700px) {
+    @include respond-to($mq-l) {
       margin: $bl*3;
       max-width: 38%;
     }

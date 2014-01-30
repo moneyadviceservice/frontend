@@ -10,11 +10,9 @@ class ArticleDecorator < Draper::Decorator
   private
 
   def processed_body
-    @processed_body ||= html_processor.process(
-      HTMLProcessor::INTRO_IMG,
-      HTMLProcessor::ACTION_EMAIL,
-      HTMLProcessor::ACTION_FORM
-    )
+    @processed_body ||= html_processor.process(HTMLProcessor::INTRO_IMG,
+                                               HTMLProcessor::ACTION_EMAIL,
+                                               HTMLProcessor::ACTION_FORM)
   end
 
   def html_processor

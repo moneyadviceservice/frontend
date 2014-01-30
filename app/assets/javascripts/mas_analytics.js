@@ -51,7 +51,15 @@ define(['jquery', 'waypoints'],function ($) {
 
   // Tracks user scrolling down to different parts of page
   this.scrollTracking = function(opts){
-    if(!opts || !$(opts.el).length || !opts.triggerPoints) return MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+
+    function areOptionsValid(){
+       return (!opts || !$(opts.el).length || !opts.triggerPoints)
+    };
+
+    if( areOptionsValid() ){
+       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+       return false;
+    }
 
     var $el = $(opts.el),
       h = $el.outerHeight(),

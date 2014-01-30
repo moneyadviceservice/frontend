@@ -11,13 +11,13 @@ class ArticleDecorator < Draper::Decorator
 
   def processed_body
     @processed_body ||= html_processor.process(
-      HtmlProcessor::INTRO_IMG,
-      HtmlProcessor::ACTION_EMAIL,
-      HtmlProcessor::ACTION_FORM
+      HTMLProcessor::INTRO_IMG,
+      HTMLProcessor::ACTION_EMAIL,
+      HTMLProcessor::ACTION_FORM
     )
   end
 
   def html_processor
-    @processor ||= HtmlProcessor::NodeRemover.new(object.body)
+    @processor ||= HTMLProcessor::NodeRemover.new(object.body)
   end
 end

@@ -22,17 +22,17 @@ describe ArticleDecorator do
     describe 'sanitizes HTML' do
       context 'With content than needs sanitizing' do
         it 'strips images from intro paragraphs' do
-          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HtmlProcessor::INTRO_IMG)
+          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HTMLProcessor::INTRO_IMG)
           expect(filter_xml).to be_empty
         end
 
         it 'strips action email links' do
-          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HtmlProcessor::ACTION_EMAIL)
+          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HTMLProcessor::ACTION_EMAIL)
           expect(filter_xml).to be_empty
         end
 
         it 'strips action forms' do
-          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HtmlProcessor::ACTION_FORM)
+          filter_xml = Nokogiri::HTML(decorator.decorate(article).content).search(HTMLProcessor::ACTION_FORM)
           expect(filter_xml).to be_empty
         end
 

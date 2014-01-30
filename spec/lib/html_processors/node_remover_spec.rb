@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'html_processor'
 
-describe HtmlProcessor::NodeRemover do
+describe HTMLProcessor::NodeRemover do
   let(:html) {
     <<-EOHTML
 <p>
@@ -10,7 +10,7 @@ describe HtmlProcessor::NodeRemover do
 EOHTML
   }
 
-  let(:procesor)    { HtmlProcessor::NodeRemover.new(html) }
+  let(:procesor)    { HTMLProcessor::NodeRemover.new(html) }
   let(:xpath)       { 'strong[@class="super-strong"]' }
   let(:other_xpath) { 'span[id="foo"]' }
 

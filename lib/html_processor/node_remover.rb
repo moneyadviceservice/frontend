@@ -1,4 +1,4 @@
-module HtmlProcessor
+module HTMLProcessor
   class NodeRemover
 
     attr_reader :doc

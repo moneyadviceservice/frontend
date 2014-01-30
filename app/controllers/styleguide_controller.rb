@@ -1,11 +1,11 @@
 class StyleguideController < ApplicationController
   layout 'styleguide/documentation'
 
-  def pages_guide
+  def layouts
     render layout: 'styleguide/page'
   end
-
-  def layouts
+  
+  def pages_guide
     render layout: 'styleguide/page'
   end
 

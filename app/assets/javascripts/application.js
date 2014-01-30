@@ -14,6 +14,7 @@ if(MAS.env === 'development'){
 
 // Setup requireJS config
 requirejs.config({
+  baseUrl: '/assets',
   paths: {
     pubsub: 'jquery-tiny-pubsub/src/tiny-pubsub',
     waypoints: 'jquery-waypoints/waypoints',

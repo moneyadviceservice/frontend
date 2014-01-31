@@ -25,7 +25,6 @@ define(['jquery', 'waypoints'],function ($) {
   // Private func to handle scrollTracking events
   this._handleScroll = function(dir, val){
     MAS.log('mas_analytics._handleScroll - ', arguments);
-    console.log('t3 - ' + dir)
 
     // Only interested in down events
     if(dir === 'up') return false;
@@ -53,7 +52,7 @@ define(['jquery', 'waypoints'],function ($) {
   // Tracks user scrolling down to different parts of page
   this.scrollTracking = function(opts){
     function areOptionsValid(){
-       return (!opts || !$(opts.el).length || !opts.triggerPoints)
+       return (!opts || !$(opts.el).length || !opts.triggerPoints || !$.isArray(opts.triggerPoints))
     };
 
     if( areOptionsValid() ){
@@ -65,10 +64,7 @@ define(['jquery', 'waypoints'],function ($) {
       h = $el.outerHeight(),
       wh = $.waypoints('viewportHeight'); // normalises $(window).height()
 
-      console.log(opts)
-
     $.each(opts.triggerPoints,function(i,val){
-
       MAS.info('mas_analytics.scrollTracking (bind each) - ', val);
       var offsetVal = h*val - wh;
 
@@ -76,16 +72,11 @@ define(['jquery', 'waypoints'],function ($) {
         _this._handleScroll(dir,val);
       }, {offset: -offsetVal});
 
-      // $el.waypoint(
-      //   _this._handleScroll
-      // }, {offset: -offsetVal});
-
     })
   }
 
   return {
     triggerAnalytics: this.triggerAnalytics,
-    scrollTracking: this.scrollTracking,
-    _handleScroll: this._handleScroll
+    scrollTracking: this.scrollTracking
   }
 });

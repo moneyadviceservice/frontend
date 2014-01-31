@@ -1,15 +1,15 @@
 console.info('Application.js');
 
 // This can be wrapper so in prod it outputs to MAS.log rather than console
-if(MAS.env === 'development'){
-  MAS.log = console.log;
-  MAS.info = console.info;
-  MAS.warn = console.warn;
-}else{
+if(MAS.env !== 'development'){
   MAS.logged = [];
   MAS.log = function(name, options){ MAS.logged.push(name, options, 'log') };
   MAS.info = function(name, options){ MAS.logged.push(name, options, 'info') };
   MAS.warn = function(name, options){ MAS.logged.push(name, options, 'warn') };
+}else{
+  MAS.log = console.log;
+  MAS.info = console.info;
+  MAS.warn = console.warn;
 }
 
 

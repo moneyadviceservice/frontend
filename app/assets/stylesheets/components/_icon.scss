@@ -17,6 +17,7 @@
   line-height: 1;
   font-family: 'icomoon';
   font-weight: normal;
+  vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,8 +25,8 @@
 .icon--masLogo {
   width: $bl*9;
   height: $bl*5;
-  display:block; // temporary style until masLogo is added to the icomoon font
-  margin: 10px 0;
+  display:block;
+  margin: $bl*2 0 0 0;
   background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
   background-size: contain;
 }
@@ -53,6 +54,7 @@
 
 .icon--externalLink {
   &:after {
+
     content: '\e619';
   }
 }

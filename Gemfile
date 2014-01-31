@@ -28,6 +28,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'ejs'
   gem 'dotenv-rails'
   gem 'mas-development_dependencies',
       git: 'git@github.com:moneyadviceservice/mas-development_dependencies.git'

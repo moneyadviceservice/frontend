@@ -37,6 +37,7 @@ if(MAS.fontSupport){
 // Load analytics
 require(['mas_analytics'], function(analytics) {
 
+  MAS.analytics = analytics;
   // Initiate analytics & pass in config
   analytics.scrollTracking({
     el: '.editorial',

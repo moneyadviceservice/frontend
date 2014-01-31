@@ -27,7 +27,7 @@ define(['jquery', 'waypoints'],function ($) {
     MAS.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
-    if(dir === 'up') return;
+    if(dir === 'up') return false;
 
     // check if already triggered, ## might be a .once equivelant
     if(_this._calledAlready.indexOf('scrollTracking-'+val) !== -1) return;
@@ -49,6 +49,10 @@ define(['jquery', 'waypoints'],function ($) {
     });
   }
 
+  this._privateDullShit = function() {
+      console.log('got called')
+  }
+
   // Tracks user scrolling down to different parts of page
   this.scrollTracking = function(opts){
 
@@ -61,6 +65,8 @@ define(['jquery', 'waypoints'],function ($) {
        return false;
     }
 
+    this._privateDullShit();
+
     var $el = $(opts.el),
       h = $el.outerHeight(),
       wh = $.waypoints('viewportHeight'); // normalises $(window).height()
@@ -71,12 +77,17 @@ define(['jquery', 'waypoints'],function ($) {
       $el.waypoint(function(dir){
         _this._handleScroll(dir,val);
       }, {offset: -offsetVal});  
+
+      // $el.waypoint(
+      //   _this._handleScroll
+      // }, {offset: -offsetVal});  
+
     })
   }
 
   return {
     triggerAnalytics: this.triggerAnalytics,
-    scrollTracking: this.scrollTracking
+    scrollTracking: this.scrollTracking,
+    _handleScroll: this._handleScroll
   }
-
 });

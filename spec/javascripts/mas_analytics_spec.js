@@ -5,7 +5,6 @@ describe("mas_analytics#scrollTracking", function(){
 
   beforeEach(function(done){
     $('body').html(JST['templates/scrollTracking']());
-
     require(['mas_analytics'], function(ma) {
       mas_analytics = ma;
       done()
@@ -70,7 +69,6 @@ describe("mas_analytics#triggerAnalytics", function(){
 
   it("should log event when triggerAnalytics() is called", function(){
     var object = {'title':'test'};
-
     mas_analytics.triggerAnalytics(object);
     assert(spy.calledWith('mas_analytics.triggerAnalytics',object))
   })
@@ -78,7 +76,6 @@ describe("mas_analytics#triggerAnalytics", function(){
   it("should push object to the GTM datalayer when triggerAnalytics() is called", function(){
     var object = {'title':'test'};
     var initialLength = dataLayer.length;
-
     mas_analytics.triggerAnalytics(object);
     expect(initialLength + 1).to.equal( dataLayer.length );
   })

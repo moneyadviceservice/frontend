@@ -1,28 +1,7 @@
-// The default style for numbered lists. The padding offsets the bullets by 25px;
-//
-// Styleguide ol
-
-ol {
-  padding: 0 0 0 25px;
-}
-
-
-
-// The default style for unordered lists. The padding offsets the bullets by 20px.
-//
-// Styleguide ul
-
-ul {
-  padding: 0 0 0 25px;
-}
-
-
-
 // The basic unordered list style - only provided to browser that support :before :
 //
 // Styleguide list
 
-.test-support:before,
 .list {
   list-style: none;
 
@@ -43,10 +22,16 @@ ul {
 
 // A list that has ticks and crosses for bullet points
 //
-// Styleguide list-benefits
+// Styleguide list--benefits
 
-.test-support:before,
-.list-benefits {
+
+.list--benefits:before {
+  width:10px;
+  height:10px;
+  background:red;
+}
+
+.list--benefits {
   list-style: none;
 
   li:before {
@@ -76,17 +61,17 @@ ul {
 
 // Yes/No list style for editorial content
 .editorial .yes-no {
-  @extend .list-benefits;
+  @extend .list--benefits;
 }
 
 
 // This is the basic unstyled list without bullet points and with margins and padding removed.
 // ...it can also be used as a helper class to remove formatting from a list element.
 //
-// Styleguide list-unstyled
+// Styleguide list--unstyled
 
-.list-unstyled,
-.list-unstyled li {
+.list--unstyled,
+.list--unstyled li {
   padding: 0;
   margin: 0;
   list-style-type: none;

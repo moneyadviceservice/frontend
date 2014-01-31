@@ -18,8 +18,6 @@
   }
 }
 
-
-
 // A list that has ticks and crosses for bullet points
 //
 // Styleguide list--benefits
@@ -58,12 +56,10 @@
   @extend .list;
 }
 
-
 // Yes/No list style for editorial content
 .editorial .yes-no {
   @extend .list--benefits;
 }
-
 
 // This is the basic unstyled list without bullet points and with margins and padding removed.
 // ...it can also be used as a helper class to remove formatting from a list element.

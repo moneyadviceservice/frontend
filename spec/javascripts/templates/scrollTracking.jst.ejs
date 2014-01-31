@@ -5,14 +5,21 @@
       padding:0;
       height:3000px;
     }
-    .wp-container {
+    .c {
       position:absolute;
       top:0;
       height:3000px;
     }
   </style>
 
-  <div class="wp-container">
+  <!-- different containers for each test otherwise timing issues on running test in async -->
+  <div class="c wp-container1">
+    <h1>Test for scrollTracking</h1>
+  </div>
+  <div class="c wp-container2">
+    <h1>Test for scrollTracking</h1>
+  </div>
+  <div class="c wp-container3">
     <h1>Test for scrollTracking</h1>
   </div>
 </body>

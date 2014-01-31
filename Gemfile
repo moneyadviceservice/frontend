@@ -41,6 +41,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'ejs'
   gem 'dotenv-rails'
 end
 

@@ -41,11 +41,12 @@
   -->
   <%= javascript_include_tag 'in_head' %>
 
-  <% if Rails.env.development? %>
-    <script>MAS.env = 'development';</script>
-  <% else %>
+  <% if Rails.env.production? %>
     <script>MAS.env = 'production';</script>
+  <% else %>
+    <script>MAS.env = 'development';</script>
   <% end %>
+
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
     <script>
       MAS.fontSupport = 'true';
@@ -66,6 +67,7 @@
     <%= tag :iframe, { src:   "//www.googletagmanager.com/ns.html?id=#{Rails.application.config.google_tag_manager_id}", style: 'display:none;visibility:hidden', width: 0, height: 0 } %>
   </noscript>
   <script>
+
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});

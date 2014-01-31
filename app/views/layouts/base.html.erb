@@ -39,13 +39,13 @@
   <%= stylesheet_link_tag 'basic' %>
 
   <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
-  <!--[ if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+  <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
   <![endif]-->
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
-  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
+  <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
   <!--<![endif]-->
 
@@ -80,7 +80,7 @@
   <%= content_for?(:content) ? yield(:content) : yield %>
 
   <%# Font loader - inline, only for enhanced_responsive sites %>
-  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
+  <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
   <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js' %>
   <script>
     WebFont.load({
@@ -91,6 +91,7 @@
     });
   </script>
   <!--<![endif]-->
+
 
   <%= yield :scripts %>
 

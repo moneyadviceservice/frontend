@@ -1,0 +1,11 @@
+.error-page-message {
+  text-align: center;
+
+  > h1 {
+    margin-bottom: $bl*6;
+  }
+
+  > .button {
+    margin-top: $bl*8;
+  }
+}

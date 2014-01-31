@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'home#show'
 
   scope '/:locale' do
+    resources :articles, only: 'show'
+
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
         scope 'pages' do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
+          get 'pages_error', path: '/error'
         end
 
         scope 'css' do

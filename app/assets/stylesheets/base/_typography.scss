@@ -1,10 +1,6 @@
-// TODO added to prevent undefined variable error.
-$responsive: true;
-
 body {
-  // TODO will the font stack live in the body document
-  font-family: 'Helvetica Neue';
-  line-height: 1.4;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: $bl*4;
 
   // optimize the font for legibility (kerning of characters)
   -webkit-font-kerning: normal;
@@ -30,6 +26,8 @@ body {
 
 }
 
+
+
 // Currently we only support H1 - H3
 //
 // Styleguide headings
@@ -46,6 +44,8 @@ h3 {
   @extend %heading-gamma;
 }
 
+
+
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
@@ -54,14 +54,17 @@ p {
   @extend %text-basicParagraph;
 }
 
+
+
 // Larger text size for the article introductory paragraph.
 //
 // Styleguide intro
 
 .intro {
   @extend %text-introParagraph;
-  @extend .clearfix;
+  @extend %clearfix;
   clear: both;
+  line-height: $bl*5;
 
   > img {
     float: right;

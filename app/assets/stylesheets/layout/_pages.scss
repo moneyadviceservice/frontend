@@ -1,0 +1,7 @@
+.l-error-page {
+  margin: $bl*15 0 $bl*29 0;
+}
+
+.l-article {
+  @include add-all-grid-spans(1, 1, 1, 1, 2/3);
+}

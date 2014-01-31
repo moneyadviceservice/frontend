@@ -12,19 +12,19 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
-
 %text-introParagraph {
   @extend %font-museo700;
   @include font-size(22);
   color: $color-grey-primary;
 }
-
-%text-callout {
-  @include font-size(16);
-  font-family: 'MuseoSlab';
-  font-weight: 700;
+%text-button {
+  @extend %font-museo700;
+  @include font-size(18);
 }
-
+%text-callout {
+  @extend %font-museo700;
+  @include font-size(16);
+}
 %text--table {
   @include font-size(14);
 }
@@ -53,30 +53,47 @@
   @extend %font-museo700;
   font-size: 48px;
   line-height: 1.2;
-  margin: 0 0 0.5em 0;
-  color: $color-green-primary;
+  margin: 0 0 $bl*2 0;
+  color: $color-green-secondary;
 }
 
 %heading-alpha {
   @extend %font-museo700;
   font-size: 36px;
-  line-height: 1.4;
-  margin: 0 0 $bl*6 0;
-  color: $color-green-primary;
+  line-height: $bl*7;
+  margin: 0 0 $bl*2 0;
+  color: $color-green-secondary;
 }
 
 %heading-beta {
   @extend %font-museo700;
   font-size: 24px;
   line-height: 1.4;
-  margin: 0 0 0.5em 0;
-  color: $color-green-primary;
+  margin: 0 0 $bl*2 0;
+  color: $color-green-secondary;
 }
 
 %heading-gamma {
   @extend %font-museo700;
   font-size: 20px;
   line-height: 1.4;
-  margin: 0 0 0.5em 0;
-  color: $color-green-primary;
+  margin: 0 0 $bl*2 0;
+  color: $color-green-secondary;
+}
+
+// Use clearfix to prevent a container element from collapsing when an internal element is floated.
+//
+// Styleguide clearfix
+
+%clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
 }

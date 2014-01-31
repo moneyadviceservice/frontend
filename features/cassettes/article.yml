@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://moneyadviceservice.apiary.io/en/articles/<%= id %>.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Jan 2014 13:24:24 GMT
+      Link:
+      - <https://www.moneyadviceservice.org.uk/cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled>;
+        rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch
+        dyled"
+      X-Apiary-Ratelimit-Limit:
+      - '120'
+      X-Apiary-Ratelimit-Remaining:
+      - '119'
+      X-Apiary-Transaction-Id:
+      - 52e90108362ffd0200000967
+      Content-Length:
+      - '512'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "title": "<%= title %>",
+            "description": "<%= description %>",
+            "body": "<%= body %>"
+        }
+    http_version:
+  recorded_at: Wed, 29 Jan 2014 13:24:25 GMT
+recorded_with: VCR 2.8.0

@@ -8,6 +8,7 @@
 <head>
   <title>[page] - [section] - <%= t('.title') %></title>
 
+  <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -15,6 +16,7 @@
   <meta http-equiv="cleartype" content="on">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="HandheldFriendly" content="True">
+
   <meta name="description" content=":description" />
   <meta name="keywords" content=":keywords" />
 

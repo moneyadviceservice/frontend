@@ -1,0 +1,16 @@
+// Larger text size for the article introductory paragraph.
+//
+// Styleguide intro
+
+.intro {
+  @extend %text-introParagraph;
+  @extend %clearfix;
+  clear: both;
+  line-height: $bl*5;
+
+  > img {
+    float: right;
+    margin: 0 0 $bl*3 $bl*3;
+    background-color: grey;
+  }
+}

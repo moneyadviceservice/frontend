@@ -5,27 +5,41 @@
 .social-links {
   padding: 0;
   margin: 0;
+  overflow: hidden;
   border-left: 1px solid $color-white-translucent;
 
   > li {
-    display: inline-block;
+    display: inline;
+    float: left;
   }
 
   a {
     display: block;
-    padding: $bl*2; // TODO needs to be refactored when the icons have been centred.
-    margin-right: -4px; // important to keep to prevent inline-block margins
+    width: 48px;
+    height: 48px;
+    padding-left: 25%;
     background-color: $color-green-primary;
     border-right: 1px solid $color-white-translucent;
 
-    span:before {
-      color: $color-text--icon;
-    }
     &:hover,
     &:focus {
       text-decoration: none;
       background-color: darken($color-green-primary, 10%);
       border-bottom: none;
     }
+
+    span:before {
+      line-height: 2;
+      color: $color-text--icon;
+    }
   }
+
+  .icon--facebook {
+    margin-left: 5px;
+  }
+
+  .icon--youtube {
+    margin-left: 1px;
+  }
+
 }

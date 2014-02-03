@@ -20,6 +20,7 @@ Rails.application.routes.draw do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
           get 'pages_error', path: '/error'
+          get 'pages_homepage', path: '/homepage'
         end
 
         scope 'css' do

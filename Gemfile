@@ -21,11 +21,19 @@ gem 'singularitygs'
 gem 'syslog-logger'
 
 group :development do
+  gem 'guard-cucumber'
+  gem 'guard-livereload'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'guard-sass'
   gem 'spring'
 end
 
 group :test do
   gem 'faker'
+  gem 'mas-development_dependencies',
+      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
+
   gem 'rspec_junit_formatter'
   gem 'vcr'
   gem 'webmock'
@@ -34,8 +42,6 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
-  gem 'mas-development_dependencies',
-      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
 end
 
 group :doc do

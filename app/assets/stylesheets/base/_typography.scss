@@ -26,8 +26,6 @@ body {
 
 }
 
-
-
 // Currently we only support H1 - H3
 //
 // Styleguide headings
@@ -44,8 +42,6 @@ h3 {
   @extend %heading-gamma;
 }
 
-
-
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
@@ -54,21 +50,18 @@ p {
   @extend %text-basicParagraph;
 }
 
-
-
-// Larger text size for the article introductory paragraph.
+// The default style for numbered lists. The padding offsets the bullets by 25px;
 //
-// Styleguide intro
+// Styleguide ol
 
-.intro {
-  @extend %text-introParagraph;
-  @extend %clearfix;
-  clear: both;
-  line-height: $bl*5;
+ol {
+  padding: 0 0 0 25px;
+}
 
-  > img {
-    float: right;
-    margin: 0 0 $bl*3 $bl*3;
-    background-color: grey;
-  }
+// The default style for unordered lists. The padding offsets the bullets by 20px.
+//
+// Styleguide ul
+
+ul {
+  padding: 0 0 0 25px;
 }

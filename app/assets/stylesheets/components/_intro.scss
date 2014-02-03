@@ -7,10 +7,4 @@
   @extend %clearfix;
   clear: both;
   line-height: $bl*5;
-
-  > img {
-    float: right;
-    margin: 0 0 $bl*3 $bl*3;
-    background-color: grey;
-  }
 }

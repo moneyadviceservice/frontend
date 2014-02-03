@@ -1,6 +1,6 @@
 require 'current_request_id'
 
-class CaptureRequestIdMiddleware
+class CaptureRequestId
   def initialize(app)
     @app = app
   end

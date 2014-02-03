@@ -1,15 +1,5 @@
-<%= render 'shared/header' %>
-
-<div class="l-container editorial">
-  <div class="l-2col-side tempComponent">
-    <h2>Table of Contents</h2>
-    insert_dynamic_links_to_h2s
-  </div>
-  <div class="l-article">
+<div class="l-article editorial">
+  <main>
     <%= render 'styleguide/shared/guide' %>
-  </div>
+  </main>
 </div>
-
-
-<%= render 'shared/footer_site_links', locals: %w(en) %>
-<%= render 'shared/footer_social_links' %>

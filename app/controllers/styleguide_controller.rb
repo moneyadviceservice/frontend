@@ -4,7 +4,11 @@ class StyleguideController < ApplicationController
   def layouts
     render layout: 'styleguide/page'
   end
-  
+
+  def pages_homepage
+    render layout: 'styleguide/page'
+  end
+
   def pages_guide
     render layout: 'styleguide/page'
   end

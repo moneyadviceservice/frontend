@@ -1,6 +1,8 @@
 <% content_for :content do %>
   <%= render 'shared/header' %>
-  <%= yield %>
+    <div class="l-container l-container--body">
+      <%= yield %>
+    </div>
   <%= render 'shared/footer_site_links', locals: alternative_locales %>
   <%= render 'shared/footer_social_links' %>
 <% end %>

@@ -1,9 +1,5 @@
 // This component is purely used for scoping HTML we do not have control over which is output by the CMS.
 
-.l-container.editorial {
-  margin-top: $bl*7; // TODO: abstract this out when we have multiple page types
-}
-
 .editorial {
   background-color: $color-white;
 

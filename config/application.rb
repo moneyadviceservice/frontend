@@ -28,7 +28,7 @@ module Frontend
     # Configure Google Tag Manager ID
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
-    # Store the request_id in the current thread
+    # Use Rack middleware to capture X-Request-ID header
     config.middleware.use 'CaptureRequestId'
 
   end

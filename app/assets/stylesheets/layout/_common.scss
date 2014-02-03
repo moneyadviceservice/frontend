@@ -3,7 +3,7 @@
 //
 // Styleguide layout-container
 .l-container {
-  @extend .clearfix;
+  @extend %clearfix;
   max-width: $mq-xl;
   margin:0 auto;
 }

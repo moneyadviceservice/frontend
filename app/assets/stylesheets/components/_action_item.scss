@@ -1,0 +1,24 @@
+.action-item {
+  h3 {
+    color: $color-action-item-heading;
+    background-color: $color-action-item-heading-bg;
+    padding: $bl;
+
+    &:before {
+      float: left;
+      content: "\E603";
+      font-family: "icomoon";
+      @include font-size(24);
+      line-height: 1;
+      padding: 0 $bl;
+    }
+  }
+}
+
+.how {
+
+}
+
+.why {
+
+}

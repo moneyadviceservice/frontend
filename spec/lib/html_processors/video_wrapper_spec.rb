@@ -13,10 +13,12 @@ describe HTMLProcessor::VideoWrapper do
   }
 
   let(:processor) { HTMLProcessor::VideoWrapper.new(html) }
+  let(:xpath) do
+    '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
+  end
 
   it 'wraps the given xpaths' do
     processed_html = processor.process(HTMLProcessor::VIDEO_IFRAME)
-    expect(Nokogiri::HTML(processed_html).
-      xpath('//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]').size).to eq(1)
+    expect(Nokogiri::HTML(processed_html).xpath(xpath).size).to eq(1)
   end
 end

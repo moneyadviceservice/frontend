@@ -17,9 +17,9 @@ describe ArticleDecorator do
   describe '#content' do
     describe 'sanitizes HTML' do
       context 'with content than needs sanitizing' do
-          let(:api_article) do
-            MultiJson.load(File.read('spec/fixtures/pawnbrokers-how-they-work.json'))
-          end
+        let(:api_article) do
+          MultiJson.load(File.read('spec/fixtures/pawnbrokers-how-they-work.json'))
+        end
 
         let(:html) { Nokogiri::HTML(decorator.decorate(article).content) }
 
@@ -37,14 +37,17 @@ describe ArticleDecorator do
       end
 
       context 'with a video embeded in an iframe' do
+        let(:xpath) do
+          '//div[@class="video-wrapper"]/p/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
+        end
+
         let(:api_article) do
           MultiJson.load(File.read('spec/fixtures/responsive-video.json'))
         end
         let(:html) { Nokogiri::HTML(decorator.decorate(article).content) }
 
         it 'wraps the content in a div[@class="video-wrapper"]' do
-          expect(html.search('//div[@class="video-wrapper"]/p/iframe[starts-with(@src, "https://www.youtube.com/embed")]')).
-            not_to be_empty
+          expect(html.search(xpath)).not_to be_empty
         end
       end
     end

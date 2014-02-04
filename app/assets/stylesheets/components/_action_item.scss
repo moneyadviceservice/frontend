@@ -1,24 +1,67 @@
+%triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: $color-action-item-heading-bg transparent transparent transparent;
+}
+
 .action-item {
+  overflow: hidden;
+  margin-bottom: $bl*5;
+  border-left: 1px solid $color-action-item-border;
+  border-right: 1px solid $color-action-item-border;
+  border-bottom: 2px solid $color-action-item-border;
+
+
+
   h3 {
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
     padding: $bl;
+    position:relative;
 
     &:before {
-      float: left;
-      content: "\E603";
-      font-family: "icomoon";
-      @include font-size(24);
-      line-height: 1;
-      padding: 0 $bl;
+      content: '';
+      @extend %triangle;
+      position:absolute;
+      top:40px;
+      left:0;
     }
+
+    span {
+      font-size: 30px;
+      margin-top: -6px;
+      display: inline-block;
+      color: $color-icon-open;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li:before {
+      content: none;
+    }
+  }
+
+}
+
+%action-item__section {
+  @include respond-to(700px) {
+    padding: $bl*3;
+    width: 50%;
   }
 }
 
 .how {
-
+  @extend %action-item__section;
+  float: right;
 }
 
 .why {
-
+  @extend %action-item__section;
+  float: left;
 }
+

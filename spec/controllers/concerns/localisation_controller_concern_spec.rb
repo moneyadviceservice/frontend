@@ -1,13 +1,15 @@
 require_relative '../../spec_helper'
 
 describe Localisation do
+  let(:status) { :ok }
+
   controller do
     include Localisation
 
     public :alternative_locales
 
     def index
-      head :ok
+      head status
     end
   end
 
@@ -31,6 +33,18 @@ describe Localisation do
         expect(I18n).to receive(:locale=).with('cy')
 
         get :index, locale: 'cy'
+      end
+    end
+
+    context 'when locale is specified in an  error request' do
+      let(:status) { :not_found }
+
+      before { request.env['REQUEST_PATH'] = '/cy/error' }
+
+      it 'sets the locale to the specified' do
+        expect(I18n).to receive(:locale=).with('cy')
+
+        get :index
       end
     end
   end

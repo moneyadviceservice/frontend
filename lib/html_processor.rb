@@ -1,6 +1,5 @@
 require 'html_processor/node_remover'
-require 'html_processor/node_wrapper'
-require 'html_processor/video_wrapper_node_finder'
+require 'html_processor/video_wrapper'
 
 module HTMLProcessor
 

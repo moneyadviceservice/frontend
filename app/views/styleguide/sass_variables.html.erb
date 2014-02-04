@@ -1,1 +1,188 @@
-<h1>Sass Variables, Mixins, Placeholders and Functions</h1>
+<h1>Sass Variables</h1>
+
+<h2>Colours</h2>
+<ul class="swatches list--unstyled">
+  <li class="color-white"><code>$color-white</code></li>
+  <li class="color-black"><code>$color-black</code></li>
+  <li class="color-grey-primary"><code>$color-grey-primary</code></li>
+  <li class="color-green-primary"><code>$color-green-primary</code></li>
+  <li class="color-green-secondary"><code>$color-green-secondary</code></li>
+  <li class="color-green-tertiary"><code>$color-green-tertiary</code></li>
+  <li class="color-green-paler"><code>$color-green-paler</code></li>
+  <li class="color-green-pale"><code>$color-green-pale</code></li>
+  <li class="color-green-light"><code>$color-green-light</code></li>
+  <li class="color-green-medium"><code>$color-green-medium</code></li>
+  <li class="color-teal-light"><code>$color-teal-light</code></li>
+  <li class="color-teal-dark"><code>$color-teal-dark</code></li>
+  <li class="color-blue-light"><code>$color-blue-light</code></li>
+  <li class="color-blue-medium"><code>$color-blue-medium</code></li>
+  <li class="color-blue-dark"><code>$color-blue-dark</code></li>
+  <li class="color-grey-pale"><code>$color-grey-pale</code></li>
+  <li class="color-grey-light"><code>$color-grey-light</code></li>
+  <li class="color-grey-medium"><code>$color-grey-medium</code></li>
+  <li class="color-grey-dark"><code>$color-grey-dark</code></li>
+  <li class="color-bluegrey-dark"><code>$color-bluegrey-dark</code></li>
+  <li class="color-bluegrey-medium"><code>$color-bluegrey-medium</code></li>
+  <li class="color-bluegrey-light"><code>$color-bluegrey-light</code></li>
+  <li class="color-pink-medium"><code>$color-pink-medium</code></li>
+  <li class="color-pink-dark"><code>$color-pink-dark</code></li>
+  <li class="color-red-medium"><code>$color-red-medium</code></li>
+  <li class="color-red-dark"><code>$color-red-dark</code></li>
+  <li class="color-orange-medium"><code>$color-orange-medium</code></li>
+  <li class="color-orange-dark"><code>$color-orange-dark</code></li>
+  <li class="color-yellow-light"><code>$color-yellow-light</code></li>
+  <li class="color-yellow-dark"><code>$color-yellow-dark</code></li>
+</ul>
+
+<h2>Colour Usage</h2>
+<dl class="swatches">
+  <dt>
+    <code>$color-site-bg</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-text-default</code>
+  </dt>
+  <dd class="color-black">
+    <code>$color-black</code>
+  </dd>
+
+  <dt>
+    <code>$color-text-icon</code>
+  </dt>
+  <dd class="color-white">
+    <code>$color-white</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-nav</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-nav-visited</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-external</code>
+  </dt>
+  <dd class="color-grey-light">
+    <code>$color-grey-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-heading</code>
+  </dt>
+  <dd class="$color-white">
+    <code>$color-white</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-background</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-background-alt</code>
+  </dt>
+  <dd class="color-green-paler">
+    <code>color-green-paler</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-border</code>
+  </dt>
+  <dd class="color-grey-light">
+    <code>$color-grey-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-bullet</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-yes</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-no</code>
+  </dt>
+  <dd class="color-red-dark">
+    <code>$color-red-dark</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default</code>
+  </dt>
+  <dd class="color-green-light">
+    <code>$color-green-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default-border</code>
+  </dt>
+  <dd class="color-green-medium">
+    <code>$color-green-medium</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default-text</code>
+  </dt>
+  <dd class="color-black">
+    <code>$color-black</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-primary</code>
+  </dt>
+  <dd class="color-yellow-light">
+    <code>$color-yellow-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-primary-border</code>
+  </dt>
+  <dd class="color-yellow-dark">
+    <code>$color-yellow-dark</code>
+  </dd>
+
+  <dt>
+    <code>$color-footer-bg</code>
+  </dt>
+  <dd class="color-grey-pale">
+    <code>$color-grey-pale</code>
+  </dd>
+
+  <dt>
+    <code>$color-callout-background</code>
+  </dt>
+  <dd class="color-green-pale">
+    <code>$color-green-pale</code>
+  </dd>
+
+  <!--
+  <dt>
+    <code>variable</code>
+  </dt>
+  <dd class="color">
+    <code>color</code>
+  </dd>
+  -->
+
+</dl>

@@ -13,3 +13,116 @@ code {
 .l-styleguide {
   margin-top: 24px;
 }
+
+.swatches {
+  > li,
+  > dd {
+    padding:6px;
+    margin-bottom:6px;
+    width:300px;
+    border-radius: 3px;
+    border:1px solid #000000;
+  }
+  > dt {
+    padding:6px;
+    width:300px;
+    float:left;
+  }
+  > dd {
+    float:left;
+  }
+  code {
+    color:#000;
+  }
+}
+
+.color-white {
+  background: $color-white;
+}
+.color-black {
+  background: $color-black;
+}
+.color-grey-primary {
+  background: $color-grey-primary;
+}
+.color-green-primary {
+  background: $color-green-primary;
+}
+.color-green-secondary {
+  background: $color-green-secondary;
+}
+.color-green-tertiary {
+  background: $color-green-tertiary;
+}
+.color-green-pale {
+  background: $color-green-pale;
+}
+.color-green-paler {
+  background: $color-green-paler;
+}
+.color-green-light {
+  background: $color-green-light;
+}
+.color-green-medium {
+  background: $color-green-medium;
+}
+.color-teal-light {
+  background: $color-teal-light;
+}
+.color-teal-dark {
+  background: $color-teal-dark;
+}
+.color-blue-light {
+  background: $color-blue-light;
+}
+.color-blue-medium {
+  background: $color-blue-medium;
+}
+.color-blue-dark {
+  background: $color-blue-dark;
+}
+.color-grey-pale {
+  background: $color-grey-pale;
+}
+.color-grey-light {
+  background: $color-grey-light;
+}
+.color-grey-medium {
+  background: $color-grey-medium;
+}
+.color-grey-dark {
+  background: $color-grey-dark;
+}
+.color-bluegrey-dark {
+  background: $color-bluegrey-dark;
+}
+.color-bluegrey-medium {
+  background: $color-bluegrey-medium;
+}
+.color-bluegrey-light {
+  background: $color-bluegrey-light;
+}
+.color-pink-medium {
+  background: $color-pink-medium;
+}
+.color-pink-dark {
+  background: $color-pink-dark;
+}
+.color-red-medium {
+  background: $color-red-medium;
+}
+.color-red-dark {
+  background: $color-red-dark;
+}
+.color-orange-medium {
+  background: $color-orange-medium;
+}
+.color-orange-dark {
+  background: $color-orange-dark;
+}
+.color-yellow-light {
+  background: $color-yellow-light;
+}
+.color-yellow-dark {
+  background: $color-yellow-dark;
+}

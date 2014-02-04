@@ -30,7 +30,8 @@ requirejs.config({
 // If fonts supported, load them! Config + fontSupport set in base.html head
 if(MAS.fontSupport){
   require(['webfonts'], function(){
-    WebFont.load(MAS.fontConfig);    
+    WebFont.load(MAS.fontConfig); 
+    if(MAS.supports.localstorage) localStorage.setItem('MAS.fontsCached', 'true');
   })
 }
 

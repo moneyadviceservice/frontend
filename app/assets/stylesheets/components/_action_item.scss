@@ -1,0 +1,61 @@
+.action-item {
+  overflow: hidden;
+  margin-bottom: $bl*5;
+  border-left: 1px solid $color-action-item-border;
+  border-right: 1px solid $color-action-item-border;
+  border-bottom: 2px solid $color-action-item-border;
+
+  h3 {
+    color: $color-action-item-heading;
+    background-color: $color-action-item-heading-bg;
+    padding: $bl*2;
+    position:relative;
+
+    &:before {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 10px 10px 0 0;
+      border-color: $color-action-item-heading-bg transparent transparent transparent;
+      position:absolute;
+      bottom: -10px;
+      left:0;
+    }
+
+    span {
+      font-size: 30px;
+      margin-top: -6px;
+      display: inline-block;
+      color: $color-icon-open;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      @extend .list--unstyled-icon;
+      margin: 0 0 $bl 0;
+    }
+  }
+}
+
+%action-item__section {
+  padding: $bl*2;
+  @include respond-to(700px) {
+    width: 50%;
+  }
+}
+
+.how {
+  @extend %action-item__section;
+  float: right;
+}
+
+.why {
+  @extend %action-item__section;
+  float: left;
+}
+

@@ -7,4 +7,12 @@
   @extend %clearfix;
   clear: both;
   line-height: $bl*5;
+
+  > img {
+    @include respond-to(700px) {
+      float:left;
+      margin-right: $bl*3;
+    }
+  }
 }
+

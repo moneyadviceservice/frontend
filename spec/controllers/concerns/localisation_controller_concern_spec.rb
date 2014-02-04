@@ -14,9 +14,7 @@ describe Localisation do
   describe 'setting locale' do
     context 'when the locale is unknown' do
       it 'returns a not found status' do
-        get :index, locale: 'unknown'
-
-        expect(response).to be_not_found
+        expect { get :index, locale: 'unknown' }.to raise_error(ActionController::RoutingError)
       end
     end
 

@@ -23,7 +23,7 @@ define(['jquery', 'waypoints'],function ($) {
   };
   
   // Private func to handle scrollTracking events
-  this._handleScroll = function(dir, val){
+  this._handleScroll = function(dir, val, contentRatio){
     MAS.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
@@ -40,12 +40,18 @@ define(['jquery', 'waypoints'],function ($) {
 
     // push to datalayer OR MAS abstracted datalayer
     _this.triggerAnalytics({
-      name:'test analytics call',
-      type: 'scrollTracking',
-      val: val,
-      eventdelay: eventdelay,
-      loadDelay: loadDelay,
-      combinedDelay: eventdelay - loadDelay
+      // GA event data
+      'gaEventCat': 'Scroll Tracking',
+      'gaEventAct': val,
+      'gaEventLab': combinedDelay + '',
+      'gaEventVal': combinedDelay,
+      'gaEventNonint': true,
+      'event': 'gaEvent',
+      // Custom additional data
+      'eventdelay': eventdelay,
+      'loadDelay': loadDelay,
+      'combinedDelay': eventdelay - loadDelay,
+      'contentRatio': contentRatio
     });
   }
 
@@ -64,12 +70,16 @@ define(['jquery', 'waypoints'],function ($) {
       h = $el.outerHeight(),
       wh = $.waypoints('viewportHeight'); // normalises $(window).height()
 
+    // get scroll content ratio = length of content / length of viewport
+    var contentRatio = $el.outerHeight() / wh;
+
+    // Bind event for each trigger point
     $.each(opts.triggerPoints,function(i,val){
       MAS.info('mas_analytics.scrollTracking (bind each) - ', val);
       var offsetVal = h*val - wh;
 
       $el.waypoint(function(dir){
-        _this._handleScroll(dir,val);
+        _this._handleScroll(dir,val,contentRatio);
       }, {offset: -offsetVal});  
 
     })

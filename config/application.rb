@@ -19,8 +19,7 @@ module Frontend
     # Configure additional assets to precompile.
     config.assets.precompile += %w(styleguide.css basic.css fonts.css
                                    enhanced_fixed.css enhanced_responsive.css
-                                   styleguide.js html_inspector.js
-                                   html5shiv/dist/html5shiv.js)
+                                   styleguide.js html_inspector.js html5shiv/dist/html5shiv.js mas_analytics.js)
 
     # Configure the asset pipeline to include Bower components.
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')

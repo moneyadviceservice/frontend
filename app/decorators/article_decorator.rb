@@ -10,12 +10,27 @@ class ArticleDecorator < Draper::Decorator
   private
 
   def processed_body
-    @processed_body ||= html_processor.process(HTMLProcessor::INTRO_IMG,
-                                               HTMLProcessor::ACTION_EMAIL,
-                                               HTMLProcessor::ACTION_FORM)
+    @process_body ||= begin
+      temp_body = nil
+      html_processors.each do |processor, xpaths|
+        temp_body = processor.new(temp_body || object.body).process(*xpaths)
+      end
+      temp_body
+    end
   end
 
-  def html_processor
-    @processor ||= HTMLProcessor::NodeRemover.new(object.body)
+  def html_processors
+    {
+      HTMLProcessor::NodeRemover => [
+        HTMLProcessor::INTRO_IMG,
+        HTMLProcessor::ACTION_EMAIL,
+        HTMLProcessor::ACTION_FORM
+      ],
+      HTMLProcessor::VideoWrapper => [
+        HTMLProcessor::VIDEO_IFRAME
+      ]
+    }
   end
+
+
 end

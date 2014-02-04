@@ -31,7 +31,6 @@
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
   <!--<![endif]-->
 
-  <%= yield :js_bootstrap %>
   <%= yield :head %>
 
   <script>
@@ -61,7 +60,7 @@
     MAS.timestamp = new Date().getTime();
 
     // Required for webfont loader to work
-    MAS.fontSupport = false;
+    MAS.supports.fonts = false;
     MAS.fontConfig = {
       custom: {
         families: ['MuseoSlab', 'icomoon'],
@@ -72,11 +71,12 @@
     // When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
     if(MAS.supports.localstorage) MAS.fontsCached = localStorage.getItem('MAS.fontsCached');
   </script>
+  <%= yield :js_bootstrap %>
 
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
     <script>
       // Limits loading to only supported browsers
-      MAS.fontSupport = true;
+      MAS.supports.fonts = true;
     </script>
   <!--<![endif]-->
 

@@ -12,8 +12,8 @@
     color: $color-list-bullet;
     display: inline-block;
     position: relative;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     left: -20px;
     top: 0;
   }
@@ -34,10 +34,10 @@
     display: block;
     font-family: 'icomoon';
     position: relative;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     left: -25px;
-    top: -3px;
+    top: 0;
   }
 
   .no:before {
@@ -66,4 +66,8 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.list--unstyled-icon:before {
+  content: none;
 }

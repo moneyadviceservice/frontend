@@ -1,4 +1,4 @@
-%triangle {
+%action-item-triangle {
   width: 0px;
   height: 0px;
   border-style: solid;
@@ -13,19 +13,17 @@
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
 
-
-
   h3 {
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
-    padding: $bl;
+    padding: $bl*2;
     position:relative;
 
     &:before {
       content: '';
-      @extend %triangle;
+      @extend %action-item-triangle;
       position:absolute;
-      top:40px;
+      top: 52px;
       left:0;
     }
 
@@ -41,16 +39,16 @@
     padding: 0;
     margin: 0;
 
-    li:before {
-      content: none;
+    li {
+      @extend .list--unstyled-icon;
+      margin: 0 0 $bl 0;
     }
   }
-
 }
 
 %action-item__section {
+  padding: $bl*2;
   @include respond-to(700px) {
-    padding: $bl*3;
     width: 50%;
   }
 }

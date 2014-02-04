@@ -11,7 +11,7 @@
   > img {
     @include respond-to(700px) {
       float:left;
-      margin-right: $bl*3;
+      margin: 0 $bl*3 $bl*3 0;
     }
   }
 }

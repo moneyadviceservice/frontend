@@ -42,6 +42,10 @@ h3 {
   @extend %heading-gamma;
 }
 
+h4 {
+  @extend %heading-delta;
+}
+
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
@@ -64,4 +68,8 @@ ol {
 
 ul {
   padding: 0 0 0 25px;
+}
+
+li {
+  margin-bottom: $bl;
 }

@@ -11,6 +11,7 @@
   @include font-size(16);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  margin: 0 0 $bl*2 0;
 }
 %text-introParagraph {
   @extend %font-museo700;
@@ -79,6 +80,12 @@
   line-height: 1.4;
   margin: 0 0 $bl*2 0;
   color: $color-green-secondary;
+}
+
+%heading-delta {
+  @extend %font-museo700;
+  line-height: 1.4;
+  margin: 0 0 $bl 0;
 }
 
 // Use clearfix to prevent a container element from collapsing when an internal element is floated.

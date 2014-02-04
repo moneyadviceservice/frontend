@@ -1,3 +1,0 @@
-class ExceptionsController < ApplicationController
-
-end

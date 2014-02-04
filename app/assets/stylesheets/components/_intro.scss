@@ -3,7 +3,7 @@
 // Styleguide intro
 
 .intro {
-  @extend %text-introParagraph;
+  @extend %text-intro-paragraph;
   @extend %clearfix;
   clear: both;
   line-height: $bl*5;

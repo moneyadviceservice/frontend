@@ -31,19 +31,19 @@ body {
 // Styleguide headings
 
 h1 {
-  @extend %heading-alpha;
+  @extend %heading-one;
 }
 
 h2 {
-  @extend %heading-beta;
+  @extend %heading-two;
 }
 
 h3 {
-  @extend %heading-gamma;
+  @extend %heading-three;
 }
 
 h4 {
-  @extend %heading-delta;
+  @extend %heading-four;
 }
 
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
@@ -51,7 +51,7 @@ h4 {
 // Styleguide p
 
 p {
-  @extend %text-basicParagraph;
+  @extend %text-basic-paragraph;
 }
 
 // The default style for numbered lists. The padding offsets the bullets by 25px;

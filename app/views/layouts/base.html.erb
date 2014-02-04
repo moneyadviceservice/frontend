@@ -34,28 +34,49 @@
   <%= yield :js_bootstrap %>
   <%= yield :head %>
 
-  <!--
-    javascript that has to run immediately
-    - js-off > js-enabled
-    - google analytics
-  -->
-  <%= javascript_include_tag 'in_head' %>
+  <script>
+    // Any JS that is required before DOM is created should be in this block
+    // includes feature detection, analytics setup, json bootstrap
+    var MAS = window.MAS || {};
 
-  <% if Rails.env.production? %>
-    <script>MAS.env = 'production';</script>
-  <% else %>
-    <script>MAS.env = 'development';</script>
-  <% end %>
+    MAS.supports = {};
+
+    (function(d, w){
+      // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
+      MAS.supports.js = ('querySelector' in d && 'localStorage' in w  && 'addEventListener' in w)? 'advanced' : 'basic';
+
+      // Update className
+      var el = d.getElementsByTagName('html')[0];
+      el.className = el.className.replace('no-js','js js-'+ MAS.supports.js);
+    })(document, window);
+
+    MAS.supports.localstorage = (function supports_html5_storage() {try {return 'localStorage' in window && window['localStorage'] !== null;} catch (e) {return false;}})();
+
+    MAS.env = '<%= Rails.env %>';
+
+    // For GoogleTagManager
+    MAS.datalayer = dataLayer = [];
+
+    // For MAS custom analytics to work out duration user has been on page when they interact
+    MAS.timestamp = new Date().getTime();
+
+    // Required for webfont loader to work
+    MAS.fontSupport = false;
+    MAS.fontConfig = {
+      custom: {
+        families: ['MuseoSlab', 'icomoon'],
+        urls: ['<%= stylesheet_path('fonts') %>']
+     }
+    };
+
+    // When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
+    if(MAS.supports.localstorage) MAS.fontsCached = localStorage.getItem('MAS.fontsCached');
+  </script>
 
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
     <script>
-      MAS.fontSupport = 'true';
-      MAS.fontConfig = {
-        custom: {
-          families: ['MuseoSlab', 'icomoon'],
-          urls: ['<%= stylesheet_path('fonts') %>']
-       }
-      };
+      // Limits loading to only supported browsers
+      MAS.fontSupport = true;
     </script>
   <!--<![endif]-->
 
@@ -64,10 +85,10 @@
 
   <%# Google Tag Manager %>
   <noscript>
-    <%= tag :iframe, { src:   "//www.googletagmanager.com/ns.html?id=#{Rails.application.config.google_tag_manager_id}", style: 'display:none;visibility:hidden', width: 0, height: 0 } %>
+    <%= tag :iframe, { src:   "//www.googletagmanager.com/ns.html?id=#{Rails.application.config.google_tag_manager_id}",
+                       style: 'display:none;visibility:hidden', width: 0, height: 0 } %>
   </noscript>
   <script>
-
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
@@ -87,7 +108,7 @@
     <!--<![endif]-->
   <% end %>
 
-  <script src="<%= javascript_path('requirejs/require') %>" data-main="<%= javascript_path('application') %>"></script>
+  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
   <%= yield :scripts %>
 
 </body>

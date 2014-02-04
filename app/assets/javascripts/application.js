@@ -32,6 +32,7 @@ requirejs.config({
 if(MAS.fontSupport){
   require(['webfonts'], function(){
     WebFont.load(MAS.fontConfig);
+    if(MAS.supports.localstorage) localStorage.setItem('MAS.fontsCached', 'true');
   })
 }
 

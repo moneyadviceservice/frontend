@@ -1,7 +1,7 @@
 module HTMLProcessor
   class VideoWrapper
 
-    attr_reader :doc, :wrapper
+    attr_reader :doc
 
     def initialize(html)
       @doc = Nokogiri::HTML(html)

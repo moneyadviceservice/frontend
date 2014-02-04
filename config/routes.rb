@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'home#show'
-  get '/:status', to: 'exceptions#show', constraints: {status: /\d{3}/}
+  get '/:status', to: 'errors#show', constraints: {status: /\d{3}/}
 
   scope '/:locale' do
     resources :articles, only: 'show'

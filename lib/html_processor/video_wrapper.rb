@@ -9,13 +9,13 @@ module HTMLProcessor
 
     def process(*xpaths)
       doc.xpath(*xpaths).each do |node|
-        if node.parent.name == 'p'
-          node.parent.replace(HTMLProcessor::VIDEO_TAG_WRAPPER).first << node.parent
-        else
-          node.replace(HTMLProcessor::VIDEO_TAG_WRAPPER).first << node
-        end
+        node.parent.name == 'p' ? swap_node(node.parent) : swap_node(node)
       end
       doc.to_s
+    end
+
+    def swap_node(node)
+      node.replace(HTMLProcessor::VIDEO_TAG_WRAPPER).first << node
     end
   end
 end

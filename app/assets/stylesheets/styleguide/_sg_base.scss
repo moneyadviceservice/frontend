@@ -15,14 +15,30 @@ code {
 }
 
 .swatches {
-  > li {
-    padding:8px;
-    margin-bottom:8px;
+  > li,
+  > dd {
+    padding:6px;
+    margin-bottom:6px;
     width:300px;
     border-radius: 3px;
+    border:1px solid #000000;
+  }
+  > dt {
+    padding:6px;
+    width:300px;
+    float:left;
+  }
+  > dd {
+    float:left;
+  }
+  code {
+    color:#000;
   }
 }
 
+.color-white {
+  background: $color-white;
+}
 .color-black {
   background: $color-black;
 }
@@ -37,6 +53,9 @@ code {
 }
 .color-green-tertiary {
   background: $color-green-tertiary;
+}
+.color-green-pale {
+  background: $color-green-pale;
 }
 .color-green-paler {
   background: $color-green-paler;

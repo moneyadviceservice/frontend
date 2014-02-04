@@ -1,0 +1,3 @@
+class ExceptionsController < ApplicationController
+
+end

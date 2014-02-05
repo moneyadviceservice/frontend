@@ -3,7 +3,7 @@
 // Styleguide list
 
 .list,
-.exclude-old-browsers:first-of-type {
+.exclude-old-browsers:not('.foo') {
   list-style: none;
 
   > li:before {
@@ -24,8 +24,9 @@
 // Styleguide list--benefits
 
 .list--benefits,
-.exclude-old-browsers:first-of-type {
+.exclude-old-browsers:not('.foo') {
   list-style: none;
+
 
   li:before {
     @include font-size(18);

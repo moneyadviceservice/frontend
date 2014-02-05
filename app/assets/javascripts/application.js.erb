@@ -1,24 +1,14 @@
 
-// This can be wrapper so in prod it outputs to MAS.log rather than console
-if(MAS.env !== 'development'){
-  MAS.logged = [];
-  MAS.log = function(name, options){ MAS.logged.push(name, options, 'log') };
-  MAS.info = function(name, options){ MAS.logged.push(name, options, 'info') };
-  MAS.warn = function(name, options){ MAS.logged.push(name, options, 'warn') };
-}else{
-  MAS.log = console.log;
-  MAS.info = console.info;
-  MAS.warn = console.warn;
-}
-
-
 // Setup requireJS config
 requirejs.config({
   baseUrl: '/assets',
   paths: {
-    mas_analytics: '<%= asset_path("mas_analytics") %>'
-    pubsub: 'jquery-tiny-pubsub/src/tiny-pubsub',
-    waypoints: 'jquery-waypoints/waypoints',
+    analytics: "<%= javascript_path('mas_analytics').sub('.js', '') %>",
+    pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub').sub('.js', '') %>",
+    waypoints: "<%= javascript_path('jquery-waypoints/waypoints').sub('.js', '') %>",
+    // analytics: MAS.paths.mas_analytics,
+    // pubsub: MAS.paths.pubsub,
+    // waypoints: MAS.paths.waypoints,
     webfonts: '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
   },
   shim: {
@@ -36,7 +26,7 @@ if(MAS.supports.fonts){
 }
 
 // Load analytics
-require(['mas_analytics'], function(analytics) {
+require(['analytics'], function(analytics) {
   MAS.analytics = analytics;
   // Initiate analytics & pass in config
   analytics.scrollTracking({

@@ -29,9 +29,7 @@ module Frontend
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
     # Store the request_id in the current thread
-    config.middleware.use "CaptureRequestIdMiddleware"
+    config.middleware.use 'CaptureRequestIdMiddleware'
 
-    # Redirects exceptions to routes
-    config.exceptions_app = self.routes
   end
 end

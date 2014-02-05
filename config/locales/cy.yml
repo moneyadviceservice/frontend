@@ -1,10 +1,45 @@
 cy:
+
   layouts:
     base:
       title: Gwasanaeth Cynghori Ariannol
+    error:
+      home: Cartref
+
   locales:
     cy: Cymraeg
     en: English
+
+  errors:
+    show:
+      bad_request:
+        heading: Mae'n ddrwg gennym!
+        intro: Cais drwg
+      forbidden:
+        heading: Mae'n ddrwg gennym!
+        intro: Forbidden
+      internal_server_error:
+        heading: Mae'n ddrwg gennym!
+        intro: Gwall gweinydd mewnol
+      method_not_allowed:
+        heading: Mae'n ddrwg gennym!
+        intro: Dull Heb ganiateir
+      not_acceptable:
+        heading: Mae'n ddrwg gennym!
+        intro: Ddim Derbyniol
+      not_found:
+        heading: Mae'n ddrwg gennym!
+        intro: Nid oedd y dudalen yr ydych yn chwilio amdano Daethpwyd o hyd
+      not_implemented:
+        heading: Mae'n ddrwg gennym!
+        intro: Heb ei weithredu
+      unauthorized:
+        heading: Mae'n ddrwg gennym!
+        intro: heb awdurdod
+      unprocessable_entity:
+        heading: Mae'n ddrwg gennym!
+        intro: Unprocessable Endid
+
   home:
     show:
       heading_html: |
@@ -18,8 +53,3 @@ cy:
         <p>
           This page is yet to be translated.
         </p>
-  errors:
-    show:
-      heading: Sorry!
-      intro: The page you were looking for was not found
-      home_button: Homepage

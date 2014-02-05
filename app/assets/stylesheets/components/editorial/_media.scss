@@ -2,6 +2,10 @@ img {
   max-width: 100%;
 }
 
+p img {
+  float:right;
+}
+
 .video-wrapper {
   //http://alistapart.com/article/creating-intrinsic-ratios-for-video
   clear: both;

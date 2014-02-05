@@ -36,7 +36,8 @@ define(['jquery', 'waypoints'],function ($) {
     _this._calledAlready.push('scrollTracking-'+val);
 
     // get offset time from pageload - can we get from google?
-    var eventdelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
+    var eventdelay = ((new Date().getTime()) -  MAS.timestamp)/1000,
+      combinedDelay = eventdelay - loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer
     _this.triggerAnalytics({
@@ -50,7 +51,7 @@ define(['jquery', 'waypoints'],function ($) {
       // Custom additional data
       'eventdelay': eventdelay,
       'loadDelay': loadDelay,
-      'combinedDelay': eventdelay - loadDelay,
+      'combinedDelay': combinedDelay,
       'contentRatio': contentRatio
     });
   }

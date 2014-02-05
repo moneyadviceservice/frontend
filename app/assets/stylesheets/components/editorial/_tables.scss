@@ -1,0 +1,24 @@
+
+table {
+  @extend %text--table;
+  text-align: left;
+}
+
+thead {
+  color: $color-table-heading;
+  background-color: $color-table-background;
+}
+
+tr:nth-child(even) {
+  background-color: $color-table-background-alt;
+}
+
+th {
+  padding: $bl*3 $bl*2;
+  border: 1px solid $color-table-border;
+}
+
+td {
+  padding: $bl*3 $bl*2;
+  border: 1px solid $color-table-border;
+}

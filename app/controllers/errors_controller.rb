@@ -1,6 +1,7 @@
 class ErrorsController < ApplicationController
+  include Gaffe::Errors
 
   def show
-    render  action: params[:status]
+    render :show, status: @status_code
   end
 end

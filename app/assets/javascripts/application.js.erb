@@ -1,22 +1,6 @@
-<% def requirejs_path(asset) ; javascript_path(asset).sub(/.js\z/, ''); end %>
-
 console.info('Application.js');
 
-// Setup requireJS config
-requirejs.config({
-  baseUrl: '/assets',
-  paths: {
-    analytics: "<%= requirejs_path('mas_analytics') %>",
-    jquery: "<%= requirejs_path('jquery/jquery') %>",
-    pubsub: "<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>",
-    waypoints: "<%= requirejs_path('jquery-waypoints/waypoints') %>",
-    webfonts: '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
-  },
-  shim: {
-    'pubsub': ['jquery'],
-    'waypoints': ['jquery']
-  }
-});
+//= require require_config
 
 // If fonts supported, load them! Config + fontSupport set in base.html head
 if(MAS.supports.fonts){

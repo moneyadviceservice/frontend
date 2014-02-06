@@ -1,0 +1,16 @@
+<% content_for :content do %>
+  <%= render 'shared/header' %>
+  <div class="l-container l-container--body">
+    <div class="l-error-page">
+      <main>
+        <div class="error-page-message ">
+          <%= yield %>
+          <%= link_to t('.home'), root_path, class: 'button button--primary' %>
+        </div>
+      </main>
+    </div>
+  </div>
+  <%= render 'shared/footer_social_links' %>
+<% end %>
+
+<%= render template: 'layouts/base' %>

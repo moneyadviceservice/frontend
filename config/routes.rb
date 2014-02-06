@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   scope '/:locale' do
     resources :articles, only: 'show'
+    resources :action_plans, only: 'show'
 
     resource :styleguide,
              controller:  'styleguide',

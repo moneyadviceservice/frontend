@@ -4,7 +4,7 @@ describe("mas_analytics#scrollTracking", function(){
   var mas_analytics;
 
   beforeEach(function(done){
-    $('body').html(JST['templates/scrollTracking']());    
+    $('body').html(JST['templates/scrollTracking']());
     require(['analytics'], function(ma) {
       mas_analytics = ma;
       done()

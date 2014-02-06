@@ -20,8 +20,9 @@ define(['jquery', 'waypoints'],function ($) {
   this.triggerAnalytics = function(data){
     MAS.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
+    // dataLayer.push(data);
   };
-  
+
   // Private func to handle scrollTracking events
   this._handleScroll = function(dir, val, contentRatio){
     MAS.log('mas_analytics._handleScroll - ', arguments);
@@ -63,8 +64,9 @@ define(['jquery', 'waypoints'],function ($) {
     };
 
     if( areOptionsValid() ){
-       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
-       return false;
+      MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+      // console.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+      return false;
     }
 
     var $el = $(opts.el),
@@ -75,10 +77,10 @@ define(['jquery', 'waypoints'],function ($) {
     var contentRatio = $el.outerHeight() / wh;
 
     // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
-    _this.triggerAnalytics({
-     'contentRatio': contentRatio,
-     'event': 'ratioCalculated'
-    });
+    // _this.triggerAnalytics({
+    //  'contentRatio': contentRatio,
+    //  'event': 'ratioCalculated'
+    // });
 
     // Bind event for each trigger point
     $.each(opts.triggerPoints,function(i,val){

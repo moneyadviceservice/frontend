@@ -27,7 +27,7 @@ MAS.config.fonts = {
 
   // Update className
   var el = d.getElementsByTagName('html')[0];
-  el.className = el.className.replace('no-js','js js-'+ MAS.supports.js);
+  el.className = el.className.replace('no-js','js js-'+ M.supports.js);
 
   // Wrap logging so it can be pushed to log in prod, and used safely on old browsers
   var opts = ['log','info','warn'],
@@ -35,7 +35,7 @@ MAS.config.fonts = {
 
   while(l--){
     var type = l;
-    (!w.console || MAS.env === 'production')
+    (!w.console || M.env === 'production')
       ? M[opts[l]] = function(name, options){ M.logged.push([name, options, type]) }
       : M[opts[l]] = console[opts[l]];     
   }

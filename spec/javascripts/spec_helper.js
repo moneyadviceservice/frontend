@@ -3,6 +3,6 @@
 //= require in_head
 //= require requirejs/require
 //= require jquery
-//= require application
+//= require require_config
 
 var expect = chai.expect;

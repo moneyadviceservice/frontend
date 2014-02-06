@@ -22,7 +22,7 @@ module Frontend
     # Configure additional assets to precompile.
     config.assets.precompile += %w(styleguide.css basic.css fonts.css
                                    enhanced_fixed.css enhanced_responsive.css
-                                   styleguide.js html_inspector.js html5shiv/dist/html5shiv.js
+                                   styleguide.js html_inspector.js html5shiv/dist/html5shiv.js in_head.js
                                    mas_analytics.js jquery-waypoints/waypoints.js jquery-tiny-pubsub/src/tiny-pubsub.js)
 
     # Configure Google Tag Manager ID

@@ -32,7 +32,10 @@
   <!--<![endif]-->
 
   <%= yield :head %>
-  <%= javascript_include_tag 'in_head' %>
+  
+  <script type="text/javascript">
+    <%= raw Rails.application.assets['in_head.js'].to_s %>
+  </script>
 
   <%= yield :js_bootstrap %>
 

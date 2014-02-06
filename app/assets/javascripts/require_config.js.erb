@@ -1,3 +1,5 @@
+<% def requirejs_path(asset) ; javascript_path(asset).sub(/.js\z/, ''); end %>
+
 // RequireJS config
 requirejs.config({
   baseUrl: '/assets',

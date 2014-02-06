@@ -4,9 +4,9 @@ console.info('Application.js');
 requirejs.config({
   baseUrl: '/assets',
   paths: {
-    analytics: "<%= javascript_path('mas_analytics', extname: false) %>",
-    pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub', extname: false) %>",
-    waypoints: "<%= javascript_path('jquery-waypoints/waypoints', , extname: false) %>",
+    analytics: "<%= javascript_path('mas_analytics').sub('.js','') %>",
+    pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub').sub('.js','') %>",
+    waypoints: "<%= javascript_path('jquery-waypoints/waypoints').sub('.js','') %>",
     webfonts: '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
   },
   shim: {

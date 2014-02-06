@@ -40,6 +40,7 @@
 
     MAS.supports = {};
     MAS.config = {};
+    MAS.localCache = {};
 
     (function(d, w){
       // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
@@ -68,8 +69,9 @@
         l = opts.length;
 
       while(l--){
+        var type = l;
         (!window.console || MAS.env !== 'development')
-          ? MAS[opts[l]] = function(name, options){ MAS.logged.push(name, options, opts[l]) }
+          ? MAS[opts[l]] = function(name, options){ MAS.logged.push([name, options, type]) }
           : MAS[opts[l]] = console[opts[l]];
       }
     })();
@@ -85,8 +87,8 @@
 
     // When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
     if(MAS.supports.localstorage) MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
-
   </script>
+
   <%= yield :js_bootstrap %>
 
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->

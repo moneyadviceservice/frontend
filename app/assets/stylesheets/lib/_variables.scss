@@ -1,7 +1,6 @@
 // Gutter Variables
 $gw: 20px;
 
-
 // Line Height
 $lh: 22px;
 
@@ -66,8 +65,8 @@ $color-yellow-dark: #ddae1f;
 $color-site-bg: $color-green-primary;
 
 // Typography Colours
-$color-text--default: $color-black;
-$color-text--icon: $color-white;
+$color-text-default: $color-black;
+$color-text-icon: $color-white;
 
 // Default Link Colours
 $color-link-default: $color-blue-medium;
@@ -99,10 +98,15 @@ $color-button-default-text: $color-black;
 
 $color-button-primary: $color-yellow-light;
 $color-button-primary-border: $color-yellow-dark;
-$color-button-primary-text: $color-black;
 
 // Footer Colours
 $color-footer-bg: $color-grey-pale;
 
 // Callout Colours
 $color-callout-background: $color-green-pale;
+
+// Action Plans
+$color-action-item-heading: $color-white;
+$color-action-item-heading-bg: $color-grey-medium;
+$color-action-item-border: $color-bluegrey-light;
+$color-icon-open: $color-yellow-light;

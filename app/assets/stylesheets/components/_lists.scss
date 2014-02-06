@@ -1,9 +1,8 @@
-// The basic unordered list style - only provided to browser that support :before :
+// The basic unordered list style with coloured bullet points
 //
 // Styleguide list
 
-.list,
-.exclude-old-browsers:first-of-type {
+.list {
   list-style: none;
 
   > li:before {
@@ -12,8 +11,8 @@
     color: $color-list-bullet;
     display: inline-block;
     position: relative;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     left: -20px;
     top: 0;
   }
@@ -23,9 +22,9 @@
 //
 // Styleguide list--benefits
 
-.list--benefits,
-.exclude-old-browsers:first-of-type {
+.list--benefits {
   list-style: none;
+
 
   li:before {
     @include font-size(18);
@@ -34,10 +33,10 @@
     display: block;
     font-family: 'icomoon';
     position: relative;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     left: -25px;
-    top: -3px;
+    top: 0;
   }
 
   .no:before {
@@ -56,7 +55,7 @@
   @extend .list--benefits;
 }
 
-// This is the basic unstyled list without bullet points and with margins and padding removed.
+// Basic unstyled list without bullet points and with margins and padding removed.
 // ...it can also be used as a helper class to remove formatting from a list element.
 //
 // Styleguide list--unstyled
@@ -66,4 +65,8 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.list--unstyled-icon:before {
+  content: none;
 }

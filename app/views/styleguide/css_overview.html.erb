@@ -49,7 +49,7 @@ a double dash (<code>--</code>) to indicate a modified version of a component<br
   any specific UI component.</p>
 
 <%= html do %>
-  <a class="js-showProfile" data-username="necolas" href="{url}">...</a>
+  <a class="js-show-profile" data-username="necolas" href="{url}">...</a>
 <% end %>
 
 <p>The HTML element has a <code>.no-js</code> class which is replaced with <code>.js</code> for browsers that js enabled
@@ -59,12 +59,12 @@ a double dash (<code>--</code>) to indicate a modified version of a component<br
 
 <%= css do %>
   /* style non-javascript version of componenet */
-  .no-js .componentName {
+  .no-js .component-name {
 
   }
 
   /* style javascript version of componenet */
-  .js .componentName {
+  .js .component-name {
 
   }
 <% end %>

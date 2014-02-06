@@ -1,0 +1,22 @@
+a:not([href*="moneyadviceservice"]):after {
+  @extend .icon;
+  @extend .icon--externalLink;
+  color: $color-link-external;
+  padding-left: 5px;
+}
+
+// override for links that do not contain moneyadviceservice but are not external links
+a[href^="/"]:after,
+a[href^="#"]:after {
+  display: none;
+}
+
+a[href$=".doc"] {
+  margin-top: $bl*3;
+
+  &:before {
+    @extend .icon;
+    @extend .icon--doc;
+    padding-right: 5px;
+  }
+}

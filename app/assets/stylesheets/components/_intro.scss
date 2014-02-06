@@ -3,14 +3,16 @@
 // Styleguide intro
 
 .intro {
-  @extend %text-introParagraph;
+  @extend %text-intro-paragraph;
   @extend %clearfix;
   clear: both;
   line-height: $bl*5;
 
   > img {
-    float: right;
-    margin: 0 0 $bl*3 $bl*3;
-    background-color: grey;
+    @include respond-to(700px) {
+      float:left;
+      margin: 0 $bl*3 $bl*3 0;
+    }
   }
 }
+

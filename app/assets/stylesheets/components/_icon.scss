@@ -9,6 +9,8 @@
 // .icon--tick          - \e609
 // .icon--externalLink  - \e619
 // .icon--doc           - \e611
+// .icon--open           - \e603
+// .icon--closed           - \e603
 //
 // Styleguide icons
 
@@ -79,5 +81,17 @@
 .icon--doc {
   &:before {
     content: '\e611';
+  }
+}
+
+.icon--open {
+  &:before {
+    content: "\E603";
+  }
+}
+
+.icon--closed {
+  &:before {
+    content: '';
   }
 }

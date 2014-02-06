@@ -3,12 +3,9 @@
 requirejs.config({
   baseUrl: '/assets',
   paths: {
-    analytics: "<%= javascript_path('mas_analytics').sub('.js', '') %>",
-    pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub').sub('.js', '') %>",
-    waypoints: "<%= javascript_path('jquery-waypoints/waypoints').sub('.js', '') %>",
-    // analytics: MAS.paths.mas_analytics,
-    // pubsub: MAS.paths.pubsub,
-    // waypoints: MAS.paths.waypoints,
+    analytics: "<%= javascript_path('mas_analytics', extname: false) %>",
+    pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub', extname: false) %>",
+    waypoints: "<%= javascript_path('jquery-waypoints/waypoints', , extname: false) %>",
     webfonts: '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
   },
   shim: {
@@ -20,8 +17,8 @@ requirejs.config({
 // If fonts supported, load them! Config + fontSupport set in base.html head
 if(MAS.supports.fonts){
   require(['webfonts'], function(){
-    WebFont.load(MAS.fontConfig); 
-    if(MAS.supports.localstorage) localStorage.setItem('MAS.fontsCached', 'true');
+    WebFont.load(MAS.config.fonts); 
+    if(MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
   })
 }
 

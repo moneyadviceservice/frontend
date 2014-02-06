@@ -39,6 +39,7 @@
     var MAS = window.MAS || {};
 
     MAS.supports = {};
+    MAS.config = {};
 
     (function(d, w){
       // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
@@ -75,7 +76,7 @@
 
     // Required for webfont loader to work
     MAS.supports.fonts = false;
-    MAS.fontConfig = {
+    MAS.config.fonts = {
       custom: {
         families: ['MuseoSlab', 'icomoon'],
         urls: ['<%= stylesheet_path('fonts') %>']
@@ -83,14 +84,7 @@
     };
 
     // When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
-    if(MAS.supports.localstorage) MAS.fontsCached = localStorage.getItem('MAS.fontsCached');
-
-    // Paths need to be added to config/application.rb for production use
-    MAS.paths = {
-      mas_analytics : "<%= javascript_path('mas_analytics').sub('.js', '') %>",
-      pubsub: "<%= javascript_path('jquery-tiny-pubsub/src/tiny-pubsub').sub('.js', '') %>",
-      waypoints: "<%= javascript_path('jquery-waypoints/waypoints').sub('.js', '') %>"
-    }
+    if(MAS.supports.localstorage) MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
 
   </script>
   <%= yield :js_bootstrap %>

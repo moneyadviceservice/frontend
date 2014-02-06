@@ -20,7 +20,6 @@ define(['jquery', 'waypoints'],function ($) {
   this.triggerAnalytics = function(data){
     MAS.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
-    // dataLayer.push(data);
   };
 
   // Private func to handle scrollTracking events

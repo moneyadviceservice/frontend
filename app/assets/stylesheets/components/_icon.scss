@@ -84,14 +84,16 @@
   }
 }
 
+// TODO replace these with ICONS asap
+
 .icon--open {
   &:before {
-    content: "\E603";
+    content: "open";
   }
 }
 
 .icon--closed {
   &:before {
-    content: '';
+    content: 'close';
   }
 }

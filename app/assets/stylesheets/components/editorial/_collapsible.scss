@@ -1,0 +1,37 @@
+.collapse {
+  @include font-size(10);
+}
+
+.collapsible {
+  color: $color-action-item-heading;
+  background-color: $color-action-item-heading-bg;
+  padding: $bl*2;
+  position:relative;
+
+  &:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: $color-action-item-heading-bg transparent transparent transparent;
+    position:absolute;
+    bottom: -10px;
+    left:0;
+  }
+
+  span {
+    font-size: 30px;
+    margin-top: -6px;
+    display: inline-block;
+    color: $color-icon-open;
+  }
+}
+
+.open {
+
+}
+
+.collapsible-section {
+
+}

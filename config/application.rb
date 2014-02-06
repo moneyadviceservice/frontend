@@ -23,7 +23,7 @@ module Frontend
     config.assets.precompile += %w(basic.css enhanced_fixed.css enhanced_responsive.css fonts.css styleguide.css)
 
     # Configure additional application JS assets to precompile.
-    config.assets.precompile += %w(html_inspector.js mas_analytics.js styleguide.js)
+    config.assets.precompile += %w(html_inspector.js in_head.js mas_analytics.js styleguide.js)
 
     # Configure additional vendor JS assets to precompile.
     config.assets.precompile += %w(html5shiv/dist/html5shiv.js

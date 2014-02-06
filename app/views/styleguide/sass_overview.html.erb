@@ -2,35 +2,69 @@
 
 <h2>Folder Structure</h2>
 
-<p>This is folder structure we use for organising our Sass files</p>
+<p>This is the folder structure we use for organising our Sass files</p>
 
 <%= Terminal256 do %>
 ├── base
-│   ├── _fonts.scss
-│   ├── _forms.scss
-│   ├── _tables.scss
-│   ├── _typography.scss
-│   └── _utilities.scss
 ├── components
-│   ├── _breadcrumb.scss
-│   ├── _button.scss
-│   └── _icon.scss
 ├── layout
-│   └── _header.scss
 ├── lib
-│   ├── _functions.scss
-│   ├── _mixins.scss
-│   ├── _placeholders.scss
-│   └── _variables.scss
+└── utilities
 <% end %>
 
-<p>These are used to output the following files:</p>
+<p>And a selection of the files found inside these: </p>
+<%= Terminal256 do %>
+  ├── base
+  │   ├── _default.scss
+  │   ├── _fonts.scss
+  │   ├── _forms.scss
+  │   ├── _links.scss
+  │   ├── _media.scss
+  │   └── _typography.scss
+  ├── components
+  │   ├── _button.scss
+  │   ├── _header.scss
+  │   ├── _icon.scss
+  │   ├── _lists.scss
+  ├── layout
+  │   ├── _common.scss
+  │   └── _pages.scss
+  ├── lib
+  │   ├── _functions.scss
+  │   ├── _grid.scss
+  │   ├── _mixins.scss
+  │   ├── _placeholders.scss
+  │   └── _variables.scss
+  └── utilities
+      └── _utils.scss
+<% end %>
+
+<p><strong>base</strong> - base rules are the defaults. They are almost
+  exclusively single element selectors but it could include attribute selectors,
+  pseudo-class selectors, child selectors or sibling selectors. Essentially, a
+  base style says that wherever this element is on the page, it should look like this.</p>
+
+<p><strong>components</strong> - components are the blocks that make up your page.
+  The modular parts of our design. They should be built in such a way that they can
+  be dropped into any page or layout. Components should define how they look, but not
+  their layout or position</p>
+
+<p><strong>layout</strong> - layouts hold one or more components together and
+  are responsible for positioning components.</p>
+
+<p><strong>lib</strong> -  library of variables, functions, mixing and placeholders.
+  They output no css until used.</p>
+
+<p><strong>utilities</strong> - utilities are reusable helper classes</p>
+
+<h2>Output Files</h2>
 
 <%= Terminal256 do %>
   ├── basic.css.scss
   ├── enhanced_fixed.css.scss
   ├── enhanced_responsive.css.scss
 <% end %>
+
 <p><strong>basic.css.scss</strong> - This contains the basic styles present in the base folder and should work in all
   browsers including legacy browsers</p>
 <p><strong>enhanced_responsive.css.scss</strong> - This contains the enhanced and responsive styles and will only be used by browsers

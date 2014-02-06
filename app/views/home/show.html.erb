@@ -1,7 +1,4 @@
-<main class="homepage-intro">
-  <div class="l-container">
-    <h1><%= t('.heading_html') %></h1>
-    <ul class="list--benefits"><%= t('.summary_list_html') %></ul>
-    <div id="introduction-text"><%= t('.introduction_text_html') %></div>
-  </div>
-</main>
+<%= render 'shared/homepage_intro',
+           heading: t('.heading_html'),
+           summary: t('.summary_list_html'),
+           introduction: t('.introduction_text_html')  %>

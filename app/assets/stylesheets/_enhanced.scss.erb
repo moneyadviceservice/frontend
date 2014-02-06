@@ -16,15 +16,28 @@
   @import 'dev_tools/grid';
 <% end %>
 
+//atoms
 @import 'components/intro';
 @import 'components/lists';
-@import 'components/header';
+@import 'components/icon';
+@import 'components/button';
+
+//molecules
+@import 'components/social_links';
+
+//organisms
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
-@import 'components/editorial';
+@import 'components/header';
+
+//standalone content
 @import 'components/error_page_message';
 @import 'components/homepage_intro';
-@import 'components/icon';
-@import 'components/social_links';
-@import 'components/breadcrumb';
-@import 'components/button';
+
+.editorial {
+  @import 'components/editorial/action_item';
+  @import 'components/editorial/callout';
+  @import 'components/editorial/links';
+  @import 'components/editorial/media';
+  @import 'components/editorial/tables';
+}

@@ -2,8 +2,7 @@
 //
 // Styleguide list
 
-.list,
-.exclude-old-browsers:not('.foo') {
+.list {
   list-style: none;
 
   > li:before {
@@ -23,8 +22,7 @@
 //
 // Styleguide list--benefits
 
-.list--benefits,
-.exclude-old-browsers:not('.foo') {
+.list--benefits {
   list-style: none;
 
 

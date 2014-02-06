@@ -1,7 +1,30 @@
+.table-wrapper {
+  width: 100%;
+  margin-bottom: $bl*3;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper > .table > thead > tr > th,
+.table-wrapper > .table > tbody > tr > th,
+.table-wrapper > .table > tfoot > tr > th,
+.table-wrapper > .table > thead > tr > td,
+.table-wrapper > .table > tbody > tr > td,
+.table-wrapper > .table > tfoot > tr > td {
+  white-space: nowrap;
+}
 
 table {
   @extend %text--table;
   text-align: left;
+
+  p {
+    @extend %text--table;
+    // NOTE that this is here to override sloppy formatting in the tables where p tags force a large font size.
+  }
+
 }
 
 thead {
@@ -14,11 +37,16 @@ tr:nth-child(even) {
 }
 
 th {
-  padding: $bl*3 $bl*2;
+  padding: $bl*2;
   border: 1px solid $color-table-border;
+
+  > p {
+    font-weight: bold;
+    // NOTE that this is here to override sloppy formatting in the tables where p tags is not bolded.
+  }
 }
 
 td {
-  padding: $bl*3 $bl*2;
+  padding: $bl*2;
   border: 1px solid $color-table-border;
 }

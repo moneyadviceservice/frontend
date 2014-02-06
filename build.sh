@@ -28,7 +28,7 @@ bundle package --all
 
 echo "Precompiling assets"
 echo "----"
-RAILS_ENV=assets $precompile_path_option rake assets:precompile
+RAILS_ENV=production $precompile_path_option rake assets:precompile
 
 echo "Creating RPM"
 echo "----"

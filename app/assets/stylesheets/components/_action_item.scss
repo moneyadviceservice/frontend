@@ -5,7 +5,7 @@
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
 
-  h3 {
+  h2 {
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
     padding: $bl*2;
@@ -29,6 +29,10 @@
       display: inline-block;
       color: $color-icon-open;
     }
+  }
+
+  h3 {
+    @extend %heading-four;
   }
 
   ul {

@@ -43,6 +43,7 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
+  gem 'konacha'
 end
 
 group :doc do

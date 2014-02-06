@@ -74,6 +74,12 @@ define(['jquery', 'waypoints'],function ($) {
     // get scroll content ratio = length of content / length of viewport
     var contentRatio = $el.outerHeight() / wh;
 
+    // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
+    _this.triggerAnalytics({
+     'contentRatio': contentRatio,
+     'event': 'ratioCalculated'
+    });
+
     // Bind event for each trigger point
     $.each(opts.triggerPoints,function(i,val){
       MAS.info('mas_analytics.scrollTracking (bind each) - ', val);

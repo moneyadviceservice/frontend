@@ -19,11 +19,18 @@ module Frontend
     # Configure the asset pipeline to include Bower components.
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
 
-    # Configure additional assets to precompile.
-    config.assets.precompile += %w(styleguide.css basic.css fonts.css
-                                   enhanced_fixed.css enhanced_responsive.css
-                                   styleguide.js html_inspector.js html5shiv/dist/html5shiv.js in_head.js
-                                   mas_analytics.js jquery-waypoints/waypoints.js jquery-tiny-pubsub/src/tiny-pubsub.js)
+    # Configure additional application CSS assets to precompile.
+    config.assets.precompile += %w(basic.css enhanced_fixed.css enhanced_responsive.css fonts.css styleguide.css)
+
+    # Configure additional application JS assets to precompile.
+    config.assets.precompile += %w(html_inspector.js in_head.js mas_analytics.js styleguide.js)
+
+    # Configure additional vendor JS assets to precompile.
+    config.assets.precompile += %w(html5shiv/dist/html5shiv.js
+                                   jquery/jquery.js
+                                   jquery-waypoints/waypoints.js
+                                   jquery-tiny-pubsub/src/tiny-pubsub.js
+                                   requirejs/require.js)
 
     # Configure Google Tag Manager ID
     config.google_tag_manager_id = 'GTM-WVFLH9'

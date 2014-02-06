@@ -12,6 +12,7 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 gem uninstall -aIx spring
 
 bundle install
+bower install
 
 rake spec
 rake cucumber

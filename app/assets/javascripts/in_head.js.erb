@@ -34,7 +34,7 @@ MAS.logged = [];
 
   while(l--){
     var type = l;
-    (!window.console || MAS.env !== 'development')
+    (!window.console || MAS.env === 'production')
       ? MAS[opts[l]] = function(name, options){ MAS.logged.push([name, options, type]) }
       : MAS[opts[l]] = console[opts[l]];
   }

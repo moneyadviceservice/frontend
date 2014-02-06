@@ -5,7 +5,7 @@ describe("mas_analytics#scrollTracking", function(){
 
   beforeEach(function(done){
     $('body').html(JST['templates/scrollTracking']());
-    require(['mas_analytics'], function(ma) {
+    require(['analytics'], function(ma) {
       mas_analytics = ma;
       done()
     }, done);
@@ -28,12 +28,14 @@ describe("mas_analytics#scrollTracking", function(){
   })
 
   it("should ONLY push object to GTM datalayer the first time it scrolls past a triggerPoint, not on UP, or second down", function(done){
-    var object = {el:'.wp-container2', triggerPoints:[0.5]};
-    var l = dataLayer.length;
-    var delay = 50;
+    var object = {el:'.wp-container2', triggerPoints:[0.5]},
+      delay = 50;
 
     // Bind events
     mas_analytics.scrollTracking(object);
+
+    // cache dataLayer length - must be after event binding, as some events fire in creation
+    var l = dataLayer.length;
 
     // Beautiful code for forcing it to scroll down>up>down !
     $(window).scrollTop(3000);
@@ -61,7 +63,7 @@ describe("mas_analytics#triggerAnalytics", function(){
 
   beforeEach(function(done){
     spy = sinon.spy(MAS, 'log');
-    require(['mas_analytics'], function(ma) {
+    require(['analytics'], function(ma) {
       mas_analytics = ma;
       done()
     }, done);
@@ -85,6 +87,5 @@ describe("mas_analytics#triggerAnalytics", function(){
   })
 
 })
-
 
 

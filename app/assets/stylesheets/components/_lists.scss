@@ -2,8 +2,7 @@
 //
 // Styleguide list
 
-.list,
-.exclude-old-browsers:first-of-type {
+.list {
   list-style: none;
 
   > li:before {
@@ -23,9 +22,9 @@
 //
 // Styleguide list--benefits
 
-.list--benefits,
-.exclude-old-browsers:first-of-type {
+.list--benefits {
   list-style: none;
+
 
   li:before {
     @include font-size(18);

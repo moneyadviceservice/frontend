@@ -1,7 +1,13 @@
 $responsive: true;
 
+@import 'breakpoint';
+
+@import 'lib/grid'; //# must be before variables
 @import 'lib/variables';
+@import 'lib/functions';
 @import 'lib/mixins';
+@import 'lib/placeholders';
+
 
 @import 'styleguide/sg_syntax';
 @import 'styleguide/sg_variables';

@@ -1,10 +1,45 @@
 en:
+
   layouts:
     base:
       title: Money Advice Service
+    error:
+      home: Home
+
   locales:
     cy: Cymraeg
     en: English
+
+  errors:
+    show:
+      bad_request:
+        heading: Sorry!
+        intro: Bad Request
+      forbidden:
+        heading: Sorry!
+        intro: Forbidden
+      internal_server_error:
+        heading: Sorry!
+        intro: Internal server error
+      method_not_allowed:
+        heading: Sorry!
+        intro: Method Not Allowed
+      not_acceptable:
+        heading: Sorry!
+        intro: Not Acceptable
+      not_found:
+        heading: Sorry!
+        intro: The page you were looking for was not found
+      not_implemented:
+        heading: Sorry!
+        intro: Not Implemented
+      unauthorized:
+        heading: Sorry!
+        intro: Unauthorised
+      unprocessable_entity:
+        heading: Sorry!
+        intro: Unprocessable Entity
+
   home:
     show:
       heading_html: |

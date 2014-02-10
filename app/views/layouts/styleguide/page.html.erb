@@ -3,6 +3,7 @@
   <div class="l-container l-container--body">
     <%= yield %>
   </div>
+  <%= render "shared/breadcrumbs" %>
   <%= render 'shared/footer_site_links', locals: %w(en) %>
   <%= render 'shared/footer_social_links' %>
 <% end %>

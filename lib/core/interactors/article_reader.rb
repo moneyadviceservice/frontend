@@ -1,25 +1,19 @@
 require 'core/entities/article'
-require 'repository_registry'
+require 'core/interactors/reader'
 
 module Core
   class ArticleReader
-    attr_accessor :id
-
-    private :id=
 
     def initialize(id)
-      self.id = id
+      @reader = Reader.new(Article, id)
     end
 
     def call(&block)
-      data    = RepositoryRegistry[:article].find(id)
-      article = Article.new(id, data)
-
-      if article.valid?
-        article
-      else
-        block.call if block_given?
-      end
+      reader.call(&block)
     end
+
+    private
+
+    attr_reader :reader
   end
 end

@@ -7,8 +7,10 @@ $(document).ready(function () {
 
   collapsibleButton.append('<span class="icon icon--open"></span><span class="visually-hidden">Hide this section</span>');
 
-  $('.editorial').on('click', collapsibleButton, function () {
-    collapsibleButton.find('.icon').toggleClass('icon--open icon--closed');
+  collapsibleButton.on('click', function(event) {
+    $(this).find('.icon').toggleClass('icon--open icon--closed');
     collapsibleSection.slideToggle(1000);
+    event.stopPropagation();
+
   });
 });

@@ -43,11 +43,18 @@
 
   <%= yield :js_bootstrap %>
 
+  <%# after first load cookie gets set, then we can load JS In head so fonts render faster on concsecutive loads %>
+  <% if cookies['MAS.localCache.fonts'] %>
+    <%= stylesheet_link_tag 'fonts', media: 'all' %>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>WebFont.load(MAS.config.fonts);</script>
+  <% end %>
+
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
-    <script>
-      // Limits loading to only supported browsers
-      MAS.supports.fonts = true;
-    </script>
+  <script>
+    // Limits loading to only supported browsers
+    MAS.supports.fonts = true;
+  </script>
   <!--<![endif]-->
 
 </head>

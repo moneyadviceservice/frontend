@@ -21,7 +21,13 @@ MAS.config.fonts = {
   }
 };
 
-(function(d, w, M){
+// Support check for html5 local storage API
+MAS.supports.localstorage = (function supports_html5_storage() {try {return 'localStorage' in window && window['localStorage'] !== null;} catch (e) {return false;}})();
+
+// When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
+MAS.localCache.fonts = (MAS.supports.localstorage && localStorage.getItem('MAS.localCache.fonts') === 'true');
+
+(function(d, w, M, s){
   // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
   M.supports.js = ('querySelector' in d && 'localStorage' in w  && 'addEventListener' in w)? 'advanced' : 'basic';
 
@@ -39,10 +45,17 @@ MAS.config.fonts = {
       ? M[opts[l]] = function(name, options){ M.logged.push([name, options, type]) }
       : M[opts[l]] = console[opts[l]];     
   }
-})(document, window, MAS);
 
-// Support check for html5 local storage API
-MAS.supports.localstorage = (function supports_html5_storage() {try {return 'localStorage' in window && window['localStorage'] !== null;} catch (e) {return false;}})();
+  // If localCache.fonts = true, then load the fonts upfronts, as they have been loaded before so should be cached in memory
+  if(MAS.localCache.fonts){
+    // Option 1 - inject wefont.js then listen for a callback/loaded before firing webfont.load
+    // Option 2 - when caching, cache fontdace dataURI to localstorage, and load this
+    // Option 3 - css + fonts should be cached, so could we just manually load/append css which will apply fonts - need to look at how we use fontJS classes  
+    // Option 4 - dont use local storage, use cookie, the RUBY check for cookie & load script block
+  }
 
-// When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
-if(MAS.supports.localstorage) MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
+})(document, window, MAS, 'script');
+
+
+
+

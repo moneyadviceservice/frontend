@@ -1,16 +1,32 @@
 $(document).ready(function () {
 
-  var collapsibleSection = $('.collapsible-section'),
-      collapsibleButton = $('.collapsible');
+  var showFirst = true,
+      activeClass = 'js-active',
+      sections = [],
+      headingIcon = '<span class="icon icon--open"></span><span class="visually-hidden">Hide this section</span>';
 
-  collapsibleSection.hide();
+  function toggleSection(e, options){
+    var data = e.data;    
+    data.trigger.toggleClass(activeClass);
+    data.target.toggleClass(activeClass);
+  }
 
-  collapsibleButton.append('<span class="icon icon--open"></span><span class="visually-hidden">Hide this section</span>');
+  $('.collapsible').each(function(i,el){
+    var $el = $(el);
 
-  collapsibleButton.on('click', function(event) {
-    $(this).find('.icon').toggleClass('icon--open icon--closed');
-    collapsibleSection.slideToggle(1000);
-    event.stopPropagation();
+    sections[i] = {
+      index: i,
+      trigger: $el,
+      target: $el.next('.collapsible-section')
+    }
 
-  });
+    var buttonTitle = sections[i].trigger.text();
+    sections[i].trigger.html('<button class="noStyle">' + buttonTitle + '</button>' + headingIcon);
+    sections[i].trigger.on('click', sections[i], toggleSection);
+
+    if(showFirst && i >= 1){
+      sections[i].trigger.trigger('click');
+    }
+  })
+
 });

@@ -5,10 +5,18 @@
 .footer-site-links {
   padding: $bl*5 0 $bl*6 0;
   background-color: $color-footer-bg;
+  
+  ul {
+    width: 500px;
+  }
 
   li {
-    font-family: MuseoSlab;
-    font-weight: 700;
+    @extend %font-museo700;
+    width: 240px;
+
+    @include respond-to(600px) {
+      display: inline-block;
+    }
   }
 
   a {

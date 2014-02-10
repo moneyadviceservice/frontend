@@ -1,6 +1,27 @@
 <div class="footer-site-links">
   <div class="l-container">
     <ul class="list--unstyled">
+
+      <li>
+        <a href="#">Log in</a>
+      </li>
+
+      <li>
+        <a href="#">Accessibility</a>
+      </li>
+
+      <li>
+        <a href="#">Partners</a>
+      </li>
+
+      <li>
+        <a href="#">About us</a>
+      </li>
+
+      <li>
+        <a href="#">Contact</a>
+      </li>
+
       <% locals.each do |locale| %>
         <li>
           <%= link_to t("locales.#{locale}"), { locale: locale },

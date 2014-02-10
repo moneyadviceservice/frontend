@@ -1,17 +1,8 @@
 <div class="footer-site-links">
   <div class="l-container">
     <ul class="list--unstyled">
-
       <li>
         <a href="#">Log in</a>
-      </li>
-
-      <li>
-        <a href="#">Accessibility</a>
-      </li>
-
-      <li>
-        <a href="#">Partners</a>
       </li>
 
       <li>
@@ -19,7 +10,15 @@
       </li>
 
       <li>
+        <a href="#">Accessibility</a>
+      </li>
+
+      <li>
         <a href="#">Contact</a>
+      </li>
+
+      <li>
+        <a href="#">Partners</a>
       </li>
 
       <% locals.each do |locale| %>
@@ -30,5 +29,8 @@
         </li>
       <% end %>
     </ul>
+
+    <%= render 'shared/newsletter' %>
+
   </div>
 </div>

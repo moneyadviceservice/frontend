@@ -43,7 +43,7 @@
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
   padding: $bl*2;
-  margin-top: -$bl*3;
+  margin: -$bl*3 0 $bl*3 0;
 }
 
 .collapsible-section.js-active {

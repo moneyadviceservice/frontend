@@ -6,24 +6,6 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
 
 <head>
-  <script>
-
-    (function(d, w){
-      // Money Advice global namespace
-      var MAS = w.MAS || {};
-
-      // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
-      MAS.jsSupport = ('querySelector' in d && 'localStorage' in w  && 'addEventListener' in w)? 'advanced' : 'basic';
-
-      // Update className
-      var el = d.getElementsByTagName('html')[0];
-      el.className = el.className.replace('no-js','js js-'+ MAS.jsSupport);
-    })(document, window);
-
-    // For GoogleTagManager
-    dataLayer = [];
-  </script>
-
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>
 
@@ -49,14 +31,25 @@
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
   <!--<![endif]-->
 
-  <!--
-    javascript that has to run immediately
-    - js-off > js-enabled
-    - google analytics
-    <%# = javascript_include_tag 'application' %>
-  -->
-
   <%= yield :head %>
+
+  <script type="text/javascript">
+    <% if Rails.env.development? %>
+      <%= raw Rails.application.assets['in_head.js'].to_s %>
+    <% else %>
+      <%= raw Uglifier.new(:copyright => false).compile Rails.application.assets['in_head.js'].to_s %>
+    <% end %>
+  </script>
+
+  <%= yield :js_bootstrap %>
+
+  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
+    <script>
+      // Limits loading to only supported browsers
+      MAS.supports.fonts = true;
+    </script>
+  <!--<![endif]-->
+
 </head>
 <body>
 
@@ -79,27 +72,14 @@
 
   <%= content_for?(:content) ? yield(:content) : yield %>
 
-  <%# Font loader - inline, only for enhanced_responsive sites %>
-  <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
-  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js' %>
-  <script>
-    WebFont.load({
-      custom: {
-        families: ['MuseoSlab', 'icomoon'],
-        urls: ['<%= stylesheet_path('fonts') %>']
-      }
-    });
-  </script>
-  <!--<![endif]-->
-
-
-  <%= yield :scripts %>
-
   <% if Rails.env.development? %>
     <!--[if (gt IE 9)|!(IE)]><!-->
     <%= javascript_include_tag 'html_inspector' %>
     <!--<![endif]-->
   <% end %>
+
+  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
+  <%= yield :scripts %>
 
 </body>
 </html>

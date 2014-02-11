@@ -26,6 +26,10 @@ echo "Running Bundle package"
 echo "----"
 bundle package --all
 
+echo "Running Bower install"
+echo "----"
+bower install
+
 echo "Precompiling assets"
 echo "----"
 RAILS_ENV=production $precompile_path_option rake assets:precompile

@@ -1,4 +1,6 @@
+require 'core/entities/article'
+
 module Core
-  class ActionPlan
+  class ActionPlan < Core::Article
   end
 end

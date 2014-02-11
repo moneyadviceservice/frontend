@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative 'shared_examples/optional_failure_block_spec'
+require_relative 'shared_examples/optional_failure_block'
 
 require 'core/entities/article'
 require 'core/interactors/article_reader'

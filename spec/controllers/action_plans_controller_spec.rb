@@ -10,7 +10,7 @@ describe ActionPlansController do
 
   describe 'GET show' do
     it 'is successful' do
-      get :show, locale: I18n.locale, id: 'foo'
+      get :show, locale: I18n.locale, id: action_plan.id
 
       expect(response).to be_ok
     end

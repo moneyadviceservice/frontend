@@ -17,7 +17,6 @@ describe HTMLProcessor::NodeReplacer do
   it 'replaces an html by another' do
     processed_html = processor.process(xpath, new_tag)
 
-    expect(Nokogiri::HTML(processed_html).xpath('//h2').size).
-      to eq(1)
+    expect(Nokogiri::HTML(processed_html).xpath('//h2')).to have(1).item
   end
 end

@@ -1,19 +1,15 @@
-console.info('Application.js');
-
 //= require require_config
 
-// If fonts supported, load them! Config + fontSupport set in base.html head
-if(MAS.supports.fonts){
-  require(['webfonts'], function(){
+if (MAS.supports.fonts) {
+  require(['webfonts'], function () {
     WebFont.load(MAS.config.fonts);
-    if(MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
+    if (MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
   })
 }
 
-// Load analytics
-require(['analytics'], function(analytics) {
+require(['analytics'], function (analytics) {
   MAS.analytics = analytics;
-  // Initiate analytics & pass in config
+
   analytics.scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]

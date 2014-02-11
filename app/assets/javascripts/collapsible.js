@@ -8,7 +8,7 @@ $(document).ready(function () {
       headingIcon = '<span class="icon icon--open"></span><span class="visually-hidden">Hide this section</span>';
 
   function toggleSection(e, options){
-    var data = e.data;    
+    var data = e.data;
     data.trigger.toggleClass(activeClass);
     data.target.toggleClass(activeClass);
   }
@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
 
     var buttonTitle = sections[i].trigger.text();
-    sections[i].trigger.html('<button class="noStyle">' + buttonTitle + '</button>' + headingIcon);
+    sections[i].trigger.html('<button class="button--unstyled">' + buttonTitle + '</button>' + headingIcon);
     sections[i].trigger.on('click', sections[i], toggleSection);
 
     if(showFirst && i >= 1){

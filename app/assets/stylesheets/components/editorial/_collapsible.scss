@@ -3,10 +3,14 @@
 }
 
 .collapsible {
-  color: $color-action-item-heading;
+  position: relative;
   background-color: $color-action-item-heading-bg;
   padding: $bl*2;
-  position:relative;
+  margin: 0 0 $bl*4 0;
+
+  button {
+    color: $color-action-item-heading;
+  }
 
   &:before {
     content: '';
@@ -28,13 +32,13 @@
   }
 }
 
-.open {
-
-}
-
 .collapsible-section {
   border-left: 1px solid $color-action-item-border;
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
   padding: $bl*2;
+}
+
+.collapsible-section.js-active {
+  display: none;
 }

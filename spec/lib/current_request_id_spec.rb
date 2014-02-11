@@ -3,13 +3,14 @@ require 'current_request_id'
 
 describe CurrentRequestId do
   let(:request_id_key) { 'request-id' }
-  let(:request_id) { "123" }
+  let(:request_id) { '123' }
 
   after { Thread.current[request_id_key] = nil }
 
   describe '.set' do
+    before { CurrentRequestId.set(request_id) }
+
     it "stores a value in Thread.current['request_id']" do
-      CurrentRequestId.set(request_id)
       expect(Thread.current[request_id_key]).to be(request_id)
     end
   end

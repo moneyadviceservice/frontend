@@ -32,7 +32,7 @@
   <!--<![endif]-->
 
   <%= yield :head %>
-  
+
   <script type="text/javascript">
     <% if Rails.env.development? %>
       <%= raw Rails.application.assets['in_head.js'].to_s %>
@@ -84,6 +84,9 @@
     <%= javascript_include_tag 'html_inspector' %>
     <!--<![endif]-->
   <% end %>
+  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
+  <%= yield :scripts %>
+
   <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
   <%= yield :scripts %>
 

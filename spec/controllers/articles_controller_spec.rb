@@ -27,5 +27,13 @@ describe ArticlesController do
 
       expect(assigns(:article)).to eq(article)
     end
+
+    context 'when an article does not exist' do
+      it 'raises an ActionController RoutingError' do
+        allow_any_instance_of(Core::ArticleReader).to receive(:call).and_yield
+
+        expect{ get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+      end
+    end
   end
 end

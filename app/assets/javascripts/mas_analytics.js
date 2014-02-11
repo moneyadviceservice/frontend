@@ -1,15 +1,26 @@
 /*
+<<<<<<< HEAD
  
 MAS_analytics.js
 - this should contain all analytic methods required throught the site
 - current idea is to require this, then call .triggerAnalytics, 
+=======
+
+MAS_analytics.js
+- this should contain all analytic methods required throught the site
+- current idea is to require this, then call .triggerAnalytics,
+>>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
 - an alternative would be to use pubsub, but this is better for fire & forget
 
 */
 
 
 define(['jquery', 'waypoints'],function ($) {
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
   var _this = this,
     loadDelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
 
@@ -32,7 +43,11 @@ define(['jquery', 'waypoints'],function ($) {
     // check if already triggered, ## might be a .once equivelant
     if(_this._calledAlready.indexOf('scrollTracking-'+val) !== -1) return;
 
+<<<<<<< HEAD
     // Unbind to prevent future events - as all events are 
+=======
+    // Unbind to prevent future events - as all events are
+>>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
     _this._calledAlready.push('scrollTracking-'+val);
 
     // get offset time from pageload - can we get from google?

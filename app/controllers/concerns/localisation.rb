@@ -13,7 +13,7 @@ module Localisation
   private
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.locale = params[:locale] || request_locale || I18n.default_locale
   end
 
   def alternative_locales
@@ -24,7 +24,8 @@ module Localisation
     { locale: I18n.locale }
   end
 
-  def not_found
-    head :not_found
+  def request_locale
+    request_locales = request.env['REQUEST_PATH'].to_s.match(I18n.available_locales.join('|'))
+    request_locales[0] if request_locales
   end
 end

@@ -7,7 +7,8 @@ if(MAS.supports.fonts && !MAS.localCache.fonts){
   require(['webfonts'], function(){
     WebFont.load(MAS.config.fonts);
     if(MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
-    document.cookie = 'MAS.localCache.fonts=true; expires=Fri, 3 Aug 2031 20:47:11 UTC; path=/'})
+    document.cookie = 'MAS.localCache.fonts=true; expires=Fri, 3 Aug 2031 20:47:11 UTC; path=/'
+  })
 }
 
 // Load analytics

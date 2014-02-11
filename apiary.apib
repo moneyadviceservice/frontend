@@ -4,7 +4,7 @@ HOST: https://www.moneyadviceservice.org.uk
 # Money Advice Service
 API for the Money Advice Service, to be consumed by the responsive frontend.
 
-# Articles
+# Group Articles
 Article related resources of the **Money Advice Service**.
 
 ## Article [/{locale}/articles/{id}]
@@ -30,4 +30,31 @@ A single Article object with all its details
                 "title": "Where to go to get free debt advice",
                 "description": "Find out where you can get free, confidential help if you are struggling with debt",
                 "body": "<h2>Watch out for companies that aren't charities</h2><p>Look out for companies with misleading names that sound like debt charities but are actually commercial businesses.</p><p>Never ever pay for services from this type of company.</p>"
+            }
+            
+# Group Action Plans
+Action Plan related resources of the **Money Advice Service**.
+
+## Action Plan [/{locale}/action_plans/{id}]
+A single Action Plan object with all its details
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Action Plan.
+        + Values
+            + `en`
+            + `cy`
+
+### Retrieve an Action Plan [GET]
++ Response 200 (application/json)
+
+    + Header
+            
+            Link: <https://www.moneyadviceservice.org.uk/cy/action_plans/paratowch-am-y-gost-o-gael-babi>; rel="alternate"; hreflang="cy"; title="Cynllun gweithredu - Paratowch am y gost o gael babi - Gwasanaeth Cynghori Ariannol"
+    
+    + Body
+
+            {
+                "title": "Prepare for the cost of having a baby"
+                "description": "A handy action plan which can help with planning of the costs involved in having a new baby"
+                "body": "<h4>Why?</h4><p>Knowing how much everything costs will help you prepare for your new arrival and avoid any unexpected expenses.</p>"
             }

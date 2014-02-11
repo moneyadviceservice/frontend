@@ -1,3 +1,6 @@
+require 'core/entities/action_plan'
+require 'repository_registry'
+
 module Core
   class ActionPlanReader
     attr_accessor :id

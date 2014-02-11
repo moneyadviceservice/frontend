@@ -7,25 +7,25 @@ module Core
       extend Forwardable
 
       def initialize(url, type)
-        self.url = url
-        self.type = type
+        self.model = Class.new(::ActiveResource::Base)
+        self.url   = url
+        self.type  = type
       end
 
       def find(id)
-        Model.find(id, params: { locale: I18n.locale }).attributes
+        model.find(id, params: { locale: I18n.locale }).attributes
       rescue ::ActiveResource::ResourceNotFound
         nil
       end
 
       private
 
-      Model              = Class.new(::ActiveResource::Base)
-      Model.element_name = @type
+      attr_accessor :model
 
-      def_delegator Model, :site, :url
-      def_delegator Model, :site=, :url=
-      def_delegator Model, :element_name, :type
-      def_delegator Model, :element_name=, :type=
+      def_delegator :model, :site, :url
+      def_delegator :model, :site=, :url=
+      def_delegator :model, :element_name, :type
+      def_delegator :model, :element_name=, :type=
     end
   end
 end

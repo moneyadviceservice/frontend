@@ -5,7 +5,7 @@ $(document).ready(function () {
   var showFirst = true,
       activeClass = 'js-active',
       sections = [],
-      headingIcon = '<span class="icon icon--open"></span><span class="visually-hidden">Hide this section</span>';
+      headingIcon = '<span class="icon icon--toggle"></span><span class="visually-hidden">Hide this section</span>';
 
   function toggleSection(e, options){
     var data = e.data;
@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
 
     var buttonTitle = sections[i].trigger.text();
-    sections[i].trigger.html('<button class="button--unstyled">' + buttonTitle + '</button>' + headingIcon);
+    sections[i].trigger.html('<button class="button--unstyled">' + headingIcon + buttonTitle  + '</button>');
     sections[i].trigger.on('click', sections[i], toggleSection);
 
     if(showFirst && i >= 1){

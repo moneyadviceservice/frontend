@@ -51,10 +51,6 @@
   background-color: $color-navBackground;
   text-align: left;
   line-height: 2;
-  &:hover,
-  &:focus {
-    border-top: 1px solid $color-navBorder;
-  }
   @include respond-to($mq-small) {
     display: none;
   }

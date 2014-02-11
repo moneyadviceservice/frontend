@@ -29,9 +29,9 @@
   li:before {
     @include font-size(18);
     color: $color-list-yes;
-    content: '\e609';
+    content: '\e01E';
     display: block;
-    font-family: 'icomoon';
+    font-family: 'icon-font';
     position: relative;
     width: 0;
     height: 0;
@@ -40,7 +40,7 @@
   }
 
   .no:before {
-    content: '\e61e';
+    content: '\e01D';
     color: $color-list-no;
   }
 }

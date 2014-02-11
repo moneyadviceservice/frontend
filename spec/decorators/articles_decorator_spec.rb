@@ -50,6 +50,21 @@ describe ArticleDecorator do
           expect(html.search(xpath)).not_to be_empty
         end
       end
+
+      context 'with a table' do
+        let(:xpath) do
+          '//div[@class="table-wrapper"]/table[@class="datatable-default"]'
+        end
+
+        let(:api_article) do
+          MultiJson.load(File.read('spec/fixtures/responsive-table.json'))
+        end
+        let(:html) { Nokogiri::HTML(decorator.decorate(article).content) }
+
+        it 'wraps the content in a div[@class="table-wrapper"]' do
+          expect(html.search(xpath)).not_to be_empty
+        end
+      end
     end
   end
 end

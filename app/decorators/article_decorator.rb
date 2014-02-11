@@ -25,7 +25,9 @@ class ArticleDecorator < Draper::Decorator
                                       HTMLProcessor::ACTION_EMAIL,
                                       HTMLProcessor::ACTION_FORM],
 
-      HTMLProcessor::VideoWrapper => [HTMLProcessor::VIDEO_IFRAME]
+      HTMLProcessor::VideoWrapper => [HTMLProcessor::VIDEO_IFRAME],
+
+      HTMLProcessor::TableWrapper => [HTMLProcessor::DATATABLE_DEFAULT]
     }
   end
 end

@@ -9,11 +9,12 @@
 }
 
 // description
-$media-queries: true !default;
+//$media-queries: true !default;
 $media-query-free-breakpoint: 960px;
 
 @mixin respond-to($min-width, $max-width: false) {
-  @if $media-queries {
+//  @if $media-queries {
+  @if $responsive {
     @media screen and (min-width: $min-width) {
       @if $max-width {
         @media (max-width: $max-width) {

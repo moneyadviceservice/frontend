@@ -1,5 +1,7 @@
-require 'core/repositories/articles/active_resource'
+require 'core/repositories/active_resource'
 require 'repository_registry'
 
 RepositoryRegistry[:article] =
-  Core::Repositories::Articles::ActiveResource.new(ENV['MAS_API_URL'])
+  Core::Repositories::ActiveResource.new(ENV['MAS_API_URL'], 'article')
+RepositoryRegistry[:action_plan] =
+  Core::Repositories::ActiveResource.new(ENV['MAS_API_URL'], 'action_plan')

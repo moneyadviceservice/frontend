@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'core/repositories/articles/active_resource'
+require 'core/repositories/active_resource'
 
-module Core::Repositories::Articles
+module Core::Repositories
   describe ActiveResource do
-    subject { described_class.new(url) }
+    subject { described_class.new(url, 'model_name') }
 
     let(:url) { 'https://example.com/:locale/path/to/url' }
 

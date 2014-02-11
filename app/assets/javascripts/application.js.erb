@@ -1,5 +1,7 @@
 //= require require_config
 
+"use strict";
+
 // If fonts supported, load them! Config + fontSupport set in base.html head
 if(MAS.supports.fonts && !MAS.localCache.fonts){
   require(['webfonts'], function(){
@@ -17,16 +19,3 @@ require(['analytics'], function(analytics) {
     triggerPoints: [0.25, 0.5, 0.75, 1]
   });
 });
-
-// require(['jquery', 'pubsub', 'waypoints'], function($, pubsub, waypoints) {
-//   console.log( $.subscribe )
-//   console.log( $.waypoints )
-
-//   // function handle(e, a, b, c) {
-//   //   // `e` is the event object, you probably don't care about it.
-//   //   console.info(a + b + c);
-//   // };
-//   // $.subscribe("/some/topic", handle);
-//   // $.publish("/some/topic", [ "a", "b", "c" ]);
-// });
-

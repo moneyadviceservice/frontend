@@ -1,7 +1,12 @@
 %font-museo700 {
   font-family: Arial;
   font-weight: 700;
-  .wf-museoslab-n4-active & {
+  @if $responsive == true {
+    .wf-museoslab-n4-active & {
+      font-family: 'MuseoSlab';
+    }    
+  }
+  @else {
     font-family: 'MuseoSlab';
   }
 }

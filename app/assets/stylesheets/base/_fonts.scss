@@ -20,18 +20,23 @@
 }
   // $responsive == false
 @else {
+  // @font-face {
+  //     font-family: 'MuseoSlab';
+  //     src: url('museo_slab_300-webfont.eot');
+  // }
+  
   @font-face {
-    font-family: 'MuseoSlab300';
+    font-family: 'MuseoSlab';
     src: url(font-path('museo_slab_300-webfont.eot'));
     src: url(font-path('museo_slab_300-webfont.eot') + '?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'MuseoSlab700';
+    font-family: 'MuseoSlab';
     src: url(font-path('museo_slab_700-webfont.eot'));
     src: url(font-path('museo_slab_700-webfont.eot') + '?#iefix' ) format('embedded-opentype');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
   }
   @font-face {

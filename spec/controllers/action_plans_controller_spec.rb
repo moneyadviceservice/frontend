@@ -21,7 +21,7 @@ describe ActionPlansController do
       get :show, locale: I18n.locale, id: action_plan.id
     end
 
-    it 'it assigns @action_plan to the result of action_plan reader' do
+    it 'assigns @action_plan to the result of action_plan reader' do
       get :show, locale: I18n.locale, id: action_plan.id
 
       expect(assigns(:action_plan)).to eq(action_plan)

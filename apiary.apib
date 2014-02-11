@@ -4,6 +4,48 @@ HOST: https://www.moneyadviceservice.org.uk
 # Money Advice Service
 API for the Money Advice Service, to be consumed by the responsive frontend.
 
+# Group Categories
+
+## Category [/{locale}/category/{id}]
+A single category with its children
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Article.
+        + Values
+            + `en`
+            + `cy`
+    + id (required, string, `mortgages-and-buying-property`) ... ID of the Category.
+
+### Retrieve a Category [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Link: <https://www.moneyadviceservice.org.uk/cy/categories/mortgages-and-buying-property>; rel="alternate"; hreflang="cy"; title="Morgeisi a phrynu eiddo"
+
+    + Body
+
+            {
+                "title": "Life events",
+                "description": "When big things happen - having a baby, losing your job, getting divorced or retiring\n - it helps to be in control of your money\n",
+                "id":"life-events",
+                "content":[{
+                    "url":"/categories/setting-up-home",
+                    "type":"category",
+                    "title":"Setting up home",
+                    "id":"setting-up-home",
+                    "description":"Deciding whether to rent or buy, working out what you can afford and managing\n money when sharing with others\n"
+                },
+                {
+                    "url":"/content/guides/how-much-rent-can-you-afford",
+                    "type":"guide",
+                    "title":"How much rent can you afford?",
+                    "id":"how-much-rent-can-you-afford",
+                    "description":"When working out what rent you can afford, remember to factor in upfront costs and your ongoing bills once you’ve moved in"
+                }]
+            }
+
+
 # Group Articles
 Article related resources of the **Money Advice Service**.
 

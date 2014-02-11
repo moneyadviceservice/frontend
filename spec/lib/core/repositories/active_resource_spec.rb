@@ -3,7 +3,7 @@ require 'core/repositories/active_resource'
 
 module Core::Repositories
   describe ActiveResource do
-    subject { described_class.new(url, 'model_name') }
+    subject { described_class.new(url, 'type') }
 
     let(:url) { 'https://example.com/:locale/path/to/url' }
 

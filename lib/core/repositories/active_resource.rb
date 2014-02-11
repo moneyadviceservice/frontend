@@ -6,9 +6,9 @@ module Core
     class ActiveResource
       extend Forwardable
 
-      def initialize(url, model_name)
+      def initialize(url, type)
         self.url = url
-        @model_name = model_name
+        self.type = type
       end
 
       def find(id)
@@ -20,10 +20,12 @@ module Core
       private
 
       Model              = Class.new(::ActiveResource::Base)
-      Model.element_name = @model_name
+      Model.element_name = @type
 
       def_delegator Model, :site, :url
       def_delegator Model, :site=, :url=
+      def_delegator Model, :element_name, :type
+      def_delegator Model, :element_name=, :type=
     end
   end
 end

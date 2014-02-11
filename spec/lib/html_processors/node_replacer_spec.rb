@@ -10,13 +10,13 @@ describe HTMLProcessor::NodeReplacer do
     EOHTML
   }
 
-  let(:processor) { HTMLProcessor::NodeReplacer.new(html) }
-  let(:xpath)     { '//h3' }
-  let(:new_tag)   { 'h2' }
+  let(:processor) { described_class.new(html) }
 
-  it 'replaces an html by another' do
-    processed_html = processor.process(xpath, new_tag)
+  describe '.process' do
+    subject(:processed_html) { processor.process('//h3', 'h2') }
 
-    expect(Nokogiri::HTML(processed_html).xpath('//h2')).to have(1).item
+    it 'replaces the target XPath with the new tag' do
+      expect(Nokogiri::HTML(processed_html).xpath('//h2')).to have(1).item
+    end
   end
 end

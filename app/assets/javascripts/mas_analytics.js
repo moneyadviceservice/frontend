@@ -1,61 +1,45 @@
 /*
-<<<<<<< HEAD
- 
 MAS_analytics.js
 - this should contain all analytic methods required throught the site
 - current idea is to require this, then call .triggerAnalytics, 
-=======
-
-MAS_analytics.js
-- this should contain all analytic methods required throught the site
-- current idea is to require this, then call .triggerAnalytics,
->>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
 - an alternative would be to use pubsub, but this is better for fire & forget
-
 */
 
+define('analytics', ['jquery', 'waypoints'],function ($) {
 
-define(['jquery', 'waypoints'],function ($) {
-<<<<<<< HEAD
-  
-=======
+  "use strict";
 
->>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
-  var _this = this,
-    loadDelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
+  var analytics = function(){
+    // Used for measuring delays between load and interaction
+    this.loadDelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
+    // Cache analytics calls so we can prevent duplicate
+    this._calledAlready = [];
+  }
 
-  // Cache analytics calls so we can prevent duplicate
-  this._calledAlready = [];
-
-  // General call to trigger GA analytics
-  this.triggerAnalytics = function(data){
+  analytics.prototype.triggerAnalytics = function(data){
     MAS.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
   };
 
   // Private func to handle scrollTracking events
-  this._handleScroll = function(dir, val, contentRatio){
+  analytics.prototype._handleScroll = function(dir, val, contentRatio){
     MAS.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
     if(dir === 'up') return false;
 
     // check if already triggered, ## might be a .once equivelant
-    if(_this._calledAlready.indexOf('scrollTracking-'+val) !== -1) return;
+    if(this._calledAlready.indexOf('scrollTracking-'+val) !== -1) return;
 
-<<<<<<< HEAD
     // Unbind to prevent future events - as all events are 
-=======
-    // Unbind to prevent future events - as all events are
->>>>>>> f9c37d8a7448314f68cda1051abd6eebe42109fb
-    _this._calledAlready.push('scrollTracking-'+val);
+    this._calledAlready.push('scrollTracking-'+val);
 
     // get offset time from pageload - can we get from google?
     var eventdelay = ((new Date().getTime()) -  MAS.timestamp)/1000,
-      combinedDelay = eventdelay - loadDelay;
+      combinedDelay = eventdelay - this.loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer
-    _this.triggerAnalytics({
+    this.triggerAnalytics({
       // GA event data
       'gaEventCat': 'Scroll Tracking',
       'gaEventAct': val,
@@ -65,21 +49,24 @@ define(['jquery', 'waypoints'],function ($) {
       'event': 'gaEvent',
       // Custom additional data
       'eventdelay': eventdelay,
-      'loadDelay': loadDelay,
+      'loadDelay': this.loadDelay,
       'combinedDelay': combinedDelay,
       'contentRatio': contentRatio
     });
   }
 
   // Tracks user scrolling down to different parts of page
-  this.scrollTracking = function(opts){
+  analytics.prototype.scrollTracking = function(opts){
+    
+    var _this = this;
+
     function areOptionsValid(){
        return (!opts || !$(opts.el).length || !opts.triggerPoints || !$.isArray(opts.triggerPoints))
     };
 
     if( areOptionsValid() ){
       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
-      // console.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+      console.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;
     }
 
@@ -91,10 +78,10 @@ define(['jquery', 'waypoints'],function ($) {
     var contentRatio = $el.outerHeight() / wh;
 
     // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
-    // _this.triggerAnalytics({
-    //  'contentRatio': contentRatio,
-    //  'event': 'ratioCalculated'
-    // });
+    _this.triggerAnalytics({
+     'contentRatio': contentRatio,
+     'event': 'ratioCalculated'
+    });
 
     // Bind event for each trigger point
     $.each(opts.triggerPoints,function(i,val){
@@ -107,9 +94,5 @@ define(['jquery', 'waypoints'],function ($) {
 
     })
   }
-
-  return {
-    triggerAnalytics: this.triggerAnalytics,
-    scrollTracking: this.scrollTracking
-  }
+  return analytics;
 });

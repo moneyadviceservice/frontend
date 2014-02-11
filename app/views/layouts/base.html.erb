@@ -84,8 +84,6 @@
     <%= javascript_include_tag 'html_inspector' %>
     <!--<![endif]-->
   <% end %>
-  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
-  <%= yield :scripts %>
 
   <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
   <%= yield :scripts %>

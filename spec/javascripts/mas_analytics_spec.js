@@ -6,7 +6,7 @@ describe("mas_analytics#scrollTracking", function(){
   beforeEach(function(done){
     $('body').html(JST['templates/scrollTracking']());
     require(['analytics'], function(ma) {
-      mas_analytics = ma;
+      mas_analytics = new ma();
       done()
     }, done);
   })
@@ -67,7 +67,7 @@ describe("mas_analytics#triggerAnalytics", function(){
   beforeEach(function(done){
     spy = sinon.spy(MAS, 'log');
     require(['analytics'], function(ma) {
-      mas_analytics = ma;
+      mas_analytics = new ma();
       done()
     }, done);
   })

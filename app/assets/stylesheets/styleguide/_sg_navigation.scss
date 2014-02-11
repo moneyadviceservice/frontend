@@ -8,7 +8,7 @@
   width: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  line-height: 1;
+  line-height: 2;
   background-color: $color-navBackground;
 
   > ul {
@@ -50,10 +50,7 @@
   color: $color-navText;
   background-color: $color-navBackground;
   text-align: left;
-  &:hover,
-  &:focus {
-    border-top: 1px solid $color-navBorder;
-  }
+  line-height: 2;
   @include respond-to($mq-small) {
     display: none;
   }

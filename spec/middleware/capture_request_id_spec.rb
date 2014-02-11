@@ -1,8 +1,11 @@
 require 'spec_helper'
 require 'current_request_id'
 
-describe CaptureRequestIdMiddleware do
-  subject(:capture_request_middleware) { described_class.new(double(call: nil)) }
+describe CaptureRequestId do
+  subject(:capture_request_middleware) do
+    described_class.new(double(call: nil))
+  end
+
   let(:request_id_key) { 'request_id' }
 
   after(:all) { CurrentRequestId.clear! }

@@ -1,0 +1,48 @@
+// Any JS that is required before DOM is created should be in this block
+// includes feature detection, analytics setup, json bootstrap
+var MAS = window.MAS || {};
+
+MAS.supports = {};
+MAS.config = {};
+MAS.localCache = {};
+MAS.env = '<%= Rails.env %>';
+// For GoogleTagManager
+MAS.datalayer = dataLayer = [];
+// For MAS custom analytics to work out duration user has been on page when they interact
+MAS.timestamp = new Date().getTime();
+// Use MAS.log/info/warn over console
+MAS.logged = [];
+// Required for webfont loader to work
+MAS.supports.fonts = false;
+MAS.config.fonts = {
+  custom: {
+    families: ['MuseoSlab', 'icomoon'],
+    urls: ['<%= stylesheet_path('fonts') %>']
+  }
+};
+
+(function(d, w, M){
+  // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
+  M.supports.js = ('querySelector' in d && 'localStorage' in w  && 'addEventListener' in w)? 'advanced' : 'basic';
+
+  // Update className
+  var el = d.getElementsByTagName('html')[0];
+  el.className = el.className.replace('no-js','js js-'+ M.supports.js);
+
+  // Wrap logging so it can be pushed to log in prod, and used safely on old browsers
+  var opts = ['log','info','warn'],
+    l = opts.length;
+
+  while(l--){
+    var type = l;
+    (!w.console || M.env === 'production')
+      ? M[opts[l]] = function(name, options){ M.logged.push([name, options, type]) }
+      : M[opts[l]] = console[opts[l]];
+  }
+})(document, window, MAS);
+
+// Support check for html5 local storage API
+MAS.supports.localstorage = (function supports_html5_storage() {try {return 'localStorage' in window && window['localStorage'] !== null;} catch (e) {return false;}})();
+
+// When fonts load we store a string in localstorage, this can then be used to help us load them quicker a second time
+if(MAS.supports.localstorage) MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');

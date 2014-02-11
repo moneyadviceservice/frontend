@@ -1,0 +1,33 @@
+console.info('Application.js');
+
+//= require require_config
+
+// If fonts supported, load them! Config + fontSupport set in base.html head
+if(MAS.supports.fonts){
+  require(['webfonts'], function(){
+    WebFont.load(MAS.config.fonts);
+    if(MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
+  })
+}
+
+// Load analytics
+require(['analytics'], function(analytics) {
+  MAS.analytics = analytics;
+  // Initiate analytics & pass in config
+  analytics.scrollTracking({
+    el: '.editorial',
+    triggerPoints: [0.25, 0.5, 0.75, 1]
+  });
+});
+
+// require(['jquery', 'pubsub', 'waypoints'], function($, pubsub, waypoints) {
+//   console.log( $.subscribe )
+//   console.log( $.waypoints )
+
+//   // function handle(e, a, b, c) {
+//   //   // `e` is the event object, you probably don't care about it.
+//   //   console.info(a + b + c);
+//   // };
+//   // $.subscribe("/some/topic", handle);
+//   // $.publish("/some/topic", [ "a", "b", "c" ]);
+// });

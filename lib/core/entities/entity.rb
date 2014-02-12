@@ -3,10 +3,9 @@ module Core
     include ActiveModel::Validations
 
     attr_accessor :id
+    private :id=
 
     validates_presence_of :id
-
-    private :id=
 
     def initialize(id, attributes = {})
       self.id = id

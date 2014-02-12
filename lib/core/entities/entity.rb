@@ -2,9 +2,9 @@ module Core
   class Entity
     include ActiveModel::Validations
 
-    attr_accessor :id, :title, :description, :body
+    attr_accessor :id
 
-    validates_presence_of :id, :title, :body
+    validates_presence_of :id
 
     private :id=
 

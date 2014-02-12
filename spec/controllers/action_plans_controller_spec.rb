@@ -15,13 +15,13 @@ describe ActionPlansController do
       expect(response).to be_ok
     end
 
-    it 'instantiates an action plan reader' do
+    it 'instantiates an ActionPlanReader' do
       expect(Core::ActionPlanReader).to receive(:new).with(action_plan.id) { action_plan_reader }
 
       get :show, locale: I18n.locale, id: action_plan.id
     end
 
-    it 'assigns @action_plan to the result of action_plan reader' do
+    it 'assigns @action_plan to the result of ActionPlanReader' do
       get :show, locale: I18n.locale, id: action_plan.id
 
       expect(assigns(:action_plan)).to eq(action_plan)

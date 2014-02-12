@@ -1,19 +1,19 @@
 require 'spec_helper'
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/article'
-require 'core/interactors/article_reader'
+require 'core/entities/action_plan'
+require 'core/interactors/action_plan_reader'
 
 module Core
-  describe ArticleReader do
+  describe ActionPlanReader do
     subject { described_class.new(id) }
 
-    let(:id) { 'the-article' }
+    let(:id) { 'the-action-plan' }
 
     describe '.call' do
       before do
-        allow(RepositoryRegistry).to receive(:[]).with(:article) do
-          double(find: data)
+        allow(RepositoryRegistry).to receive(:[]).with(:action_plan) do
+            double(find: data)
         end
       end
 
@@ -24,7 +24,7 @@ module Core
       end
 
       context 'when the repository returns some data' do
-        let(:title) { 'The Article' }
+        let(:title) { 'The Action Plan' }
         let(:data) { { title: title } }
 
         context 'when a block is given' do
@@ -45,16 +45,16 @@ module Core
       end
 
       context 'when the repository returns data' do
-        let(:title) { 'The Article' }
-        let(:description) { 'The Article has a description' }
-        let(:body) { '<h1>The Article</h1><p>Lorem ipsum dolor sit amet</p>' }
+        let(:title) { 'The Action Plan' }
+        let(:description) { 'The Action Plan has a description' }
+        let(:body) { '<h1>The Action Plan</h1><p>Lorem ipsum dolor sit amet</p>' }
 
         let(:data) do
           { title: title, description: description, body: body }
         end
 
-        it "maps the article's `id' to the repositories' `id' value" do
-          expect(Article).
+        it "maps the action_plan's `id' to the repositories' `id' value" do
+          expect(ActionPlan).
             to receive(:new).with(id, kind_of(Hash)).and_call_original
 
           subject.call
@@ -62,7 +62,7 @@ module Core
 
         %W(title description body).each do |attribute|
           it "maps the article's `#{attribute}' to the repositories' `#{attribute}' value" do
-            expect(Article).to(receive(:new)) { |_, attributes|
+            expect(ActionPlan).to(receive(:new)) { |_, attributes|
               expect(attributes[attribute.to_sym]).to eq(send(attribute))
             }.and_call_original
 
@@ -70,24 +70,25 @@ module Core
           end
         end
 
-        context 'when the Article entity is valid' do
+        context 'when the Action Plan entity is valid' do
           before do
-            expect_any_instance_of(Article).to receive(:valid?) { true }
+            expect_any_instance_of(ActionPlan).to receive(:valid?) { true }
           end
 
-          it 'returns an article' do
-            expect(subject.call).to be_a(Article)
+          it 'returns an Action Plan' do
+            expect(subject.call).to be_a(ActionPlan)
           end
         end
 
-        context 'when the Article is invalid' do
+        context 'when the Action Plan is invalid' do
           before do
-            expect_any_instance_of(Article).to receive(:valid?) { false }
+            expect_any_instance_of(ActionPlan).to receive(:valid?) { false }
           end
 
           it_has_behavior 'optional failure block'
         end
       end
+
     end
   end
 end

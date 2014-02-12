@@ -1,11 +1,14 @@
 require 'spec_helper'
-require 'core/repositories/articles/active_resource'
+require 'core/repositories/active_resource'
+require 'active_resource'
 
-module Core::Repositories::Articles
+module Core::Repositories
   describe ActiveResource do
-    subject { described_class.new(url) }
+    subject { described_class.new(url, type) }
 
     let(:url) { 'https://example.com/:locale/path/to/url' }
+    let(:type) { 'type' }
+    let(:model) { double('site=' => url, 'element_name=' => type) }
 
     it { should respond_to :find }
 
@@ -15,10 +18,13 @@ module Core::Repositories::Articles
     describe '#find' do
       let(:id) { 'the-article' }
       let(:params) { { locale: I18n.locale } }
+      let!(:active_resource) { double(attributes: {id: id}) }
+
+      before { allow(Class).to receive(:new) { model } }
 
       it 'delegates to the internal resource' do
-        expect(ActiveResource::Model).to receive(:find).with(id, params: params) do
-          ActiveResource::Model.new(id: id)
+        expect(model).to receive(:find).with(id, params: params) do
+          active_resource
         end
 
         subject.find(id)
@@ -26,8 +32,8 @@ module Core::Repositories::Articles
 
       context 'when the article exists' do
         it 'returns a hash of attributes' do
-          allow(ActiveResource::Model).to receive(:find) do
-            ActiveResource::Model.new(id: id)
+          allow(model).to receive(:find) do
+            active_resource
           end
 
           expect(subject.find(id)).to be_a(Hash)
@@ -39,7 +45,7 @@ module Core::Repositories::Articles
         let(:error) { ::ActiveResource::ResourceNotFound.new(double) }
 
         it 'returns nil' do
-          expect(ActiveResource::Model).to receive(:find).and_raise(error)
+          expect(model).to receive(:find).and_raise(error)
           expect(subject.find(id)).to be_nil
         end
       end
@@ -56,9 +62,10 @@ module Core::Repositories::Articles
 
       context 'with a valid URL' do
         let(:url) { 'https://example.com/path/to/url' }
+        before { allow(Class).to receive(:new) { model } }
 
         it 'configures the internal resource' do
-          expect(ActiveResource::Model).to receive(:site=).with(url).twice
+          expect(model).to receive(:site=).with(url).twice
 
           subject.url = url
         end

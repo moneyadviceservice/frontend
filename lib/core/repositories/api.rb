@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday/request/request_id'
 require 'forwardable'
 
 module Core
@@ -11,8 +12,9 @@ module Core
       def initialize(url, type)
         self.type       = type
         self.connection = Faraday.new(url: url) do |faraday|
-
           faraday.request :json
+          faraday.request :request_id
+
           faraday.response :raise_error
           faraday.response :json
 

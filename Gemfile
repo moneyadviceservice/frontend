@@ -22,6 +22,7 @@ gem 'singularitygs'
 gem 'syslog-logger'
 
 group :development do
+  gem 'guard-bundler'
   gem 'guard-cucumber'
   gem 'guard-livereload'
   gem 'guard-rails'

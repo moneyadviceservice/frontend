@@ -183,6 +183,7 @@ GEM
     kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
+    link_header (0.0.8)
     listen (2.5.0)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -358,6 +359,7 @@ DEPENDENCIES
   guard-sass
   jquery-rails
   kss
+  link_header
   mas-development_dependencies!
   meta-tags
   nokogiri

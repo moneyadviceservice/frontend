@@ -18,6 +18,7 @@ module Core
         self.connection = Faraday.new(options) do |faraday|
           faraday.request :json
           faraday.request :request_id
+          faraday.request :retry
 
           faraday.response :raise_error
           faraday.response :json

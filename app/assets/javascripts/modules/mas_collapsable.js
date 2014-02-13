@@ -5,32 +5,27 @@ define(['jquery'], function ($) {
 
   var defaults = {
     showOnlyFirst: true,
-    toggleClass: '.collapsible',
-    targetClass: '.collapsible-section',
+    triggerEl: '.collapsible',
+    targetEl: '.collapsible-section',
     activeClass: 'js-active',
     headingIcon: '<span class="icon icon--toggle"></span><span class="visually-hidden">Show this section</span>'
   };
 
   var collapsible = function(opts){
-    MAS.info('collapsible');
-
-    var _this = this;
-
     this.o = $.extend(defaults, opts);
     this.sections = [];
 
-    collapsible.prototype.setupEach.call(this);
+    var triggers = $(this.o.triggerEl),
+        l = triggers.length;
 
-    var triggers = $(this.o.toggleClass),
-    l = triggers.length;
+    if(l === 0) MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
 
     while(l--){
-      collapsible.prototype.setupEach.call(this, l, triggers[l])
+      collapsible.prototype._setupEach.call(this, l, triggers[l])
     }
   }
 
-  collapsible.prototype.setupEach = function(i,el){
-
+  collapsible.prototype._setupEach = function(i,el){
     var $el = $(el);
 
     this.sections[i] = {
@@ -55,7 +50,6 @@ define(['jquery'], function ($) {
     if(this.o.showOnlyFirst && i >= 1){
       this.sections[i].trigger.trigger('click');
     }
-
   }
 
   collapsible.prototype.show = function(i){

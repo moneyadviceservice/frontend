@@ -6,4 +6,4 @@ module World
   end
 end
 
-World(World::Action_plans)
+World(World::ActionPlans)

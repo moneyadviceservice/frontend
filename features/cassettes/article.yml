@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://moneyadviceservice.apiary.io/en/articles/<%= id %>.json
+    uri: https://moneyadviceservice.apiary.io/<%= locale %>/articles/<%= id %>.json
     body:
       encoding: US-ASCII
       string: ''

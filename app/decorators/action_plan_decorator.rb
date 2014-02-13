@@ -27,7 +27,8 @@ class ActionPlanDecorator < Draper::Decorator
 
         HTMLProcessor::VideoWrapper => [HTMLProcessor::VIDEO_IFRAME],
 
-        HTMLProcessor::TableWrapper => [HTMLProcessor::DATATABLE_DEFAULT]
+        HTMLProcessor::TableWrapper => [HTMLProcessor::DATATABLE_DEFAULT],
+        HTMLProcessor::NodeReplacer => ['//h3', 'h2']
     }
   end
 end

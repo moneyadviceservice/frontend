@@ -1,0 +1,12 @@
+.editorial {
+
+  .callout {
+    float: right;
+
+    @include respond-to($mq-l) {
+      margin: 0 $bl*3 $bl*3 $bl*3;
+      max-width: 38%;
+    }
+  }
+
+}

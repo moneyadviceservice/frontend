@@ -10,7 +10,7 @@ describe("mas_collapsable", function () {
     require(['collapsable'], function (mod) {
       mas_collapsable = new mod();
       mas_collapsable_empty = new mod({triggerEl:'.doesntExist'});
-      done()
+      done();
     }, done);
   })
 

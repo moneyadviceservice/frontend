@@ -9,9 +9,13 @@ module Core
 
       RequestError = Module.new
 
-      def initialize(url, type)
+      def_delegator :connection, :options
+
+      def initialize(url, type, timeout: 5, open_timeout: 5)
+        options = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
+
         self.type       = type
-        self.connection = Faraday.new(url: url) do |faraday|
+        self.connection = Faraday.new(options) do |faraday|
           faraday.request :json
           faraday.request :request_id
 

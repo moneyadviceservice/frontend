@@ -1,10 +1,13 @@
 //= require spec_helper
 
 describe("mas_analytics#scrollTracking", function () {
-  var mas_analytics;
+  var mas_analytics, $body;
 
-  beforeEach(function (done) {
+
+
+  before(function (done) {
     $('body').html(JST['templates/scrollTracking']());
+    $body = $('body');
     require(['analytics'], function (ma) {
       mas_analytics = ma;
       done()

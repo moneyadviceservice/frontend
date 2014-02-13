@@ -57,7 +57,7 @@ define(['jquery'], function ($) {
     item.icon.text('Show this section');
     item.trigger.removeClass(this.o.activeClass);
     item.target.removeClass(this.o.activeClass);
-    item.target.removeAttr('aria-hidden');
+    item.target.attr('aria-hidden', 'false');
     item.hidden = false;
   }
   

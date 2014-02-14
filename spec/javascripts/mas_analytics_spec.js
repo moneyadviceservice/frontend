@@ -3,19 +3,13 @@
 describe("mas_analytics#scrollTracking", function () {
   var mas_analytics, $body;
 
-
-
   before(function (done) {
     $('body').html(JST['templates/scrollTracking']());
-<<<<<<< HEAD
+
     require(['analytics'], function(ma) {
       mas_analytics = new ma();
-=======
-    $body = $('body');
-    require(['analytics'], function (ma) {
-      mas_analytics = ma;
->>>>>>> e2cd7be9cb1fb71ded9305105af6fda6d1758499
-      done()
+      $body = $('body');
+      done();
     }, done);
   })
 
@@ -73,13 +67,8 @@ describe("mas_analytics#triggerAnalytics", function () {
 
   beforeEach(function (done) {
     spy = sinon.spy(MAS, 'log');
-<<<<<<< HEAD
     require(['analytics'], function(ma) {
       mas_analytics = new ma();
-=======
-    require(['analytics'], function (ma) {
-      mas_analytics = ma;
->>>>>>> e2cd7be9cb1fb71ded9305105af6fda6d1758499
       done()
     }, done);
   })

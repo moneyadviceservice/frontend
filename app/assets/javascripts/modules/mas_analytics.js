@@ -9,9 +9,6 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
 
   "use strict";
 
-  var _this = this,
-    loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000;
-
   var analytics = function(){
     // Used for measuring delays between load and interaction
     this.loadDelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
@@ -20,13 +17,13 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
   }
 
   // General call to trigger GA analytics
-  this.triggerAnalytics = function (data) {
+  analytics.prototype.triggerAnalytics = function (data) {
     MAS.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
   };
 
   // Private func to handle scrollTracking events
-  this._handleScroll = function (dir, val, contentRatio) {
+  analytics.prototype._handleScroll = function (dir, val, contentRatio) {
     MAS.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
@@ -60,7 +57,9 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
   }
 
   // Tracks user scrolling down to different parts of page
-  this.scrollTracking = function (opts) {
+  analytics.prototype.scrollTracking = function (opts) {
+   var _this = this;
+
     function areOptionsValid() {
       return (!opts || !$(opts.el).length || !opts.triggerPoints || !$.isArray(opts.triggerPoints))
     };

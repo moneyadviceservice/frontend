@@ -9,6 +9,9 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
 
   "use strict";
 
+  var _this = this,
+    loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000;
+
   var analytics = function(){
     // Used for measuring delays between load and interaction
     this.loadDelay = ((new Date().getTime()) -  MAS.timestamp)/1000;
@@ -16,17 +19,18 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
     this._calledAlready = [];
   }
 
-  analytics.prototype.triggerAnalytics = function(data){
+  // General call to trigger GA analytics
+  this.triggerAnalytics = function (data) {
     MAS.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
   };
 
   // Private func to handle scrollTracking events
-  analytics.prototype._handleScroll = function(dir, val, contentRatio){
+  this._handleScroll = function (dir, val, contentRatio) {
     MAS.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
-    if(dir === 'up') return false;
+    if (dir === 'up') return false;
 
     // check if already triggered, ## might be a .once equivelant
     if(this._calledAlready.indexOf('scrollTracking-'+val) !== -1) return;
@@ -36,7 +40,7 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
 
     // get offset time from pageload - can we get from google?
     var eventdelay = ((new Date().getTime()) -  MAS.timestamp)/1000,
-      combinedDelay = eventdelay - this.loadDelay;
+        combinedDelay = eventdelay - this.loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer
     this.triggerAnalytics({
@@ -56,15 +60,12 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
   }
 
   // Tracks user scrolling down to different parts of page
-  analytics.prototype.scrollTracking = function(opts){
-    
-    var _this = this;
-
-    function areOptionsValid(){
-       return (!opts || !$(opts.el).length || !opts.triggerPoints || !$.isArray(opts.triggerPoints))
+  this.scrollTracking = function (opts) {
+    function areOptionsValid() {
+      return (!opts || !$(opts.el).length || !opts.triggerPoints || !$.isArray(opts.triggerPoints))
     };
 
-    if( areOptionsValid() ){
+    if (areOptionsValid()) {
       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       console.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;
@@ -84,13 +85,13 @@ define('analytics', ['jquery', 'waypoints'],function ($) {
     });
 
     // Bind event for each trigger point
-    $.each(opts.triggerPoints,function(i,val){
+    $.each(opts.triggerPoints, function (i, val) {
       MAS.info('mas_analytics.scrollTracking (bind each) - ', val);
-      var offsetVal = h*val - wh;
+      var offsetVal = h * val - wh;
 
-      $el.waypoint(function(dir){
-        _this._handleScroll(dir,val,contentRatio);
-      }, {offset: -offsetVal});  
+      $el.waypoint(function (dir) {
+        _this._handleScroll(dir, val, contentRatio);
+      }, {offset: -offsetVal});
 
     })
   }

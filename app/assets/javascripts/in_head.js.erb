@@ -29,17 +29,17 @@ MAS.localCache.fonts = (MAS.supports.localstorage && localStorage.getItem('MAS.l
 
 (function(d, w, M, s){
   // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
-  M.supports.js = ('querySelector' in d && 'localStorage' in w  && 'addEventListener' in w)? 'advanced' : 'basic';
+  M.supports.js = ('querySelector' in d && 'localStorage' in w && 'addEventListener' in w) ? 'advanced' : 'basic';
 
   // Update className
   var el = d.getElementsByTagName('html')[0];
-  el.className = el.className.replace('no-js','js js-'+ M.supports.js);
+  el.className = el.className.replace('no-js', 'js js-' + M.supports.js);
 
   // Wrap logging so it can be pushed to log in prod, and used safely on old browsers
-  var opts = ['log','info','warn'],
+  var opts = ['log', 'info', 'warn'],
     l = opts.length;
 
-  while(l--){
+  while (l--) {
     var type = l;
     (!w.console || M.env === 'production')
       ? M[opts[l]] = function(name, options){ M.logged.push([name, options, type]) }
@@ -53,6 +53,27 @@ MAS.localCache.fonts = (MAS.supports.localstorage && localStorage.getItem('MAS.l
     // Option 3 - css + fonts should be cached, so could we just manually load/append css which will apply fonts - need to look at how we use fontJS classes  
     // Option 4 - dont use local storage, use cookie, the RUBY check for cookie & load script block
   }
-
 })(document, window, MAS, 'script');
+
+// When fonts load we store a string in localstorage, this can then be used to help us load
+// them quicker a second time
+if (MAS.supports.localstorage) {
+  MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
+}
+
+// Fix for iPhone viewport scale bug 
+// http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+// MAS = mobile boilerplate
+MAS.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');
+MAS.ua = navigator.userAgent;
+MAS.scaleFix = function () {
+  if (MAS.viewportmeta && /iPhone|iPad|iPod/.test(MAS.ua) && !/Opera Mini/.test(MAS.ua)) {
+    MAS.viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+    document.addEventListener("gesturestart", MAS.gestureStart, false);
+  }
+};
+MAS.gestureStart = function () {
+    MAS.viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+};
+
 

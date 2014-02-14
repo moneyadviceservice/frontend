@@ -1,0 +1,59 @@
+.collapsible {
+  position: relative;
+  background-color: $color-action-item-heading-bg;
+  padding: $bl;
+  margin: 0 0 $bl*3 0;
+  color: $color-action-item-heading;
+  cursor:pointer;
+
+  @extend %heading-three;
+
+  button {
+    color: $color-action-item-heading;
+    width: 100%;
+    text-align: left;
+  }
+
+  &:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: $color-action-item-heading-bg transparent transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+
+  span {
+    @include font-size(34);
+    margin-left: -6px;
+    margin-right: 6px;
+    margin-top: -6px;
+    height: 28px;
+    display: inline-block;
+    color: $color-icon-open;
+    vertical-align: bottom;
+  }
+}
+
+.collapsible-section {
+  border-left: 1px solid $color-action-item-border;
+  border-right: 1px solid $color-action-item-border;
+  border-bottom: 2px solid $color-action-item-border;
+  padding: $bl*2;
+  margin: -$bl*3 0 $bl*3 0;
+}
+
+.collapsible-section.js-active {
+  display: none;
+}
+
+.icon--toggle {
+  @extend .icon--closed;
+}
+
+.js-active .icon--toggle {
+  @extend .icon--open;
+}

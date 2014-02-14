@@ -1,3 +1,18 @@
 .add-action {
+  position: relative;
+  background-color: $color-article-cta;
+  padding: $bl $bl*2;
+  margin: $bl*4 0;
 
+  &:before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent $color-article-cta;
+  }
 }

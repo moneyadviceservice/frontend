@@ -13,12 +13,14 @@ if(MAS.supports.fonts && !MAS.localCache.fonts){
 
 // Load analytics
 require(['analytics'], function(analytics) {
-  
   var Analytics = new analytics();
-
   // Initiate analytics & pass in config
   Analytics.scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]
   });
+});
+
+require(['collapsable'], function (collapsable) {
+  var C = new collapsable();
 });

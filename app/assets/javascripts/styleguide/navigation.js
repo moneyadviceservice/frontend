@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  $('.styleguide-nav').prepend('<button class="styleguide-nav__toggle">Menu</button>');
+  $('.styleguide-nav-container').prepend('<button class="styleguide-nav__toggle">Menu</button>');
 
   $(".styleguide-nav__toggle").on("click", function(e){
-    $('.styleguide-nav__list').slideToggle();
+    $('.styleguide-nav').slideToggle();
   });
 
   $(".has-sub-menu").on("click", function(e){
-    $('.styleguide-nav__sub-menu', this).slideToggle();
+    $('.styleguide-nav__submenu', this).slideToggle();
     e.preventDefault();
   });
 

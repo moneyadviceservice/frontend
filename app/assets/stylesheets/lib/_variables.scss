@@ -116,7 +116,7 @@ $color-article-cta: $color-blue-light;
 // VARIABLES ONLY TO BE USED IN THE STYLEGUIDE
 
 // Colours
-$color-nav-text: $color-black;
+$color-nav-text: lighten(#333333, 20%);
 $color-nav-border: #E6E6E6;
 $color-nav-background: rgba(255, 255, 255, 0.9);
 $color-sub-menu-background: #393939;

@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
-  $('.primaryNav').prepend('<button class="navToggle">Menu</button>');
+  $('.styleguide-nav').prepend('<button class="styleguide-nav__toggle">Menu</button>');
 
-  $(".navToggle").on("click", function(e){
-    $('.primaryNav-list').slideToggle();
+  $(".styleguide-nav__toggle").on("click", function(e){
+    $('.styleguide-nav__list').slideToggle();
   });
 
-  $(".has-subMenu").on("click", function(e){
-    $('.primaryNav-subMenu', this).slideToggle();
+  $(".has-sub-menu").on("click", function(e){
+    $('.styleguide-nav__sub-menu', this).slideToggle();
     e.preventDefault();
   });
 
 
-  $(".has-subMenu li a").on("click", function(e){
+  $(".has-sub-menu li a").on("click", function(e){
     e.stopPropagation();
   });
 

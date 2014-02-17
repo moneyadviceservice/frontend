@@ -10,7 +10,9 @@ The Money Advice Service's responsive website.
 * [Git]
 * [Ruby 2.0.0][Ruby]
 * [Rubygems 2.1.0][Rubygems]
+* [Node.js][Node]
 * [Bundler]
+* [Bower]
 
 
 ## Installation
@@ -25,6 +27,7 @@ Make sure all dependencies are available to the application:
 
 ```sh
 $ bundle install
+$ bower install
 ```
 
 ## Usage
@@ -129,6 +132,7 @@ presentational concerns.
 [mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
 [mock api]: https://moneyadviceservice.apiary.io
 [money advice service team]: https://github.com/moneyadviceservice
+[node]: http://nodejs.org/
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org
 [site prism]: https://github.com/natritmeyer/site_prism

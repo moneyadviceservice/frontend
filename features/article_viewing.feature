@@ -3,6 +3,21 @@ Feature: Article Reading
   I want to view articles
   So that I can gain understanding about their subject matter
 
-  Scenario: Visitor views an article
-    When I view an article
-    Then the article should be displayed
+  Scenario Outline: View an article
+    When I view the article in <language>
+    Then I should see the article in <language>
+
+  Examples:
+    | language |
+    | English  |
+    | Welsh    |
+
+  Scenario Outline: Translate an article
+  Given I view the article in <original_language>
+  When I translate the article into <translated_language>
+  Then I should see the article in <translated_language>
+
+  Examples:
+    | original_language | translated_language |
+    | English           | Welsh               |
+    | Welsh             | English             |

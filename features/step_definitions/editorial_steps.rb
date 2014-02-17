@@ -1,21 +1,3 @@
-def language_to_locale(language)
-  { english: 'en', welsh: 'cy' }[language.downcase.to_sym]
-end
-
-def underscore(name)
-  name.tr(' ', '_')
-end
-
-def current_editorial(editorial_name)
-  underscore_editorial = underscore(editorial_name)
-  send("current_#{underscore_editorial}")
-end
-
-def editorial_page(editorial_name)
-  underscore_editorial = underscore(editorial_name)
-  send("#{underscore_editorial}_page")
-end
-
 When(/^I view the (action plan|article) in (.*)$/) do |editorial_name, language|
   current_id = current_editorial(editorial_name).id
   data = { id:          current_id,

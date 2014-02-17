@@ -82,3 +82,15 @@
     content: '\e607';
   }
 }
+
+.icon--close {
+  &:before {
+    content: '\e012';
+  }
+}
+
+.icon--desktop {
+  &:before {
+    content: '\e000';
+  }
+}

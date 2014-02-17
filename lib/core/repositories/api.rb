@@ -1,5 +1,4 @@
-require 'faraday'
-require 'faraday/request/request_id'
+require 'core/faraday_connection_factory'
 require 'forwardable'
 
 module Core
@@ -16,23 +15,9 @@ module Core
         end
       end
 
-      def_delegator :connection, :options
-
-      def initialize(url, type, timeout: 5, open_timeout: 5)
-        options = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
-
+      def initialize(url, type, options = {})
         self.type       = type
-        self.connection = Faraday.new(options) do |faraday|
-          faraday.request :json
-          faraday.request :request_id
-          faraday.request :retry
-
-          faraday.response :raise_error
-          faraday.response :json
-
-          faraday.use :instrumentation
-          faraday.adapter Faraday.default_adapter
-        end
+        self.connection = FaradayConnectionFactory.build(url)
       end
 
       def find(id)

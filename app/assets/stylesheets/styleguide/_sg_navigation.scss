@@ -1,16 +1,21 @@
+%unstyled-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .styleguide-nav-container {
   width: 100%;
   height: 49px;
 }
 
 .styleguide-nav {
-  margin: 0;
   position: fixed;
   z-index: 9;
   background-color: $color-nav-background;
   border-bottom: 1px solid $color-nav-border;
   width: 100%;
-  @extend .list--unstyled;
+  @extend %unstyled-nav;
 
   > li {
     width: 100%;
@@ -27,7 +32,7 @@
 }
 
 .styleguide-nav__submenu {
-  @extend .list--unstyled;
+  @extend %unstyled-nav;
   position: relative;
   z-index: 1;
   background-color: $color-nav-background;

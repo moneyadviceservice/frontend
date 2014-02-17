@@ -29,6 +29,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-sass'
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do

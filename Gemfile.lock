@@ -287,6 +287,8 @@ GEM
       capybara (>= 2.1, < 3.0)
     slop (3.4.7)
     spring (1.1.1)
+    spring-commands-rspec (1.0.1)
+      spring (>= 0.9.1)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -360,6 +362,7 @@ DEPENDENCIES
   sdoc
   singularitygs
   spring
+  spring-commands-rspec
   syslog-logger
   turbolinks
   uglifier (>= 1.3.0)

@@ -287,6 +287,8 @@ GEM
       capybara (>= 2.1, < 3.0)
     slop (3.4.7)
     spring (1.1.1)
+    spring-commands-cucumber (1.0.1)
+      spring (>= 0.9.1)
     spring-commands-rspec (1.0.1)
       spring (>= 0.9.1)
     sprockets (2.10.1)
@@ -362,7 +364,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0.rc1)
   sdoc
   singularitygs
-  spring
+  spring-commands-cucumber
   spring-commands-rspec
   syslog-logger
   turbolinks

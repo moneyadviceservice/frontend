@@ -29,7 +29,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-sass'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
-  gem 'spring'
+  gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
 end
 

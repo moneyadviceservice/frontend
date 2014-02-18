@@ -1,0 +1,22 @@
+//= require require_config
+
+if (MAS.supports.fonts) {
+  require(['webfonts'], function () {
+    WebFont.load(MAS.config.fonts);
+    if (MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
+  })
+}
+
+require(['analytics'], function (analytics) {
+  MAS.analytics = analytics;
+
+  analytics.scrollTracking({
+    el: '.editorial',
+    triggerPoints: [0.25, 0.5, 0.75, 1]
+  });
+});
+
+
+require(['collapsable'], function (collapsable) {
+  var C = new collapsable();
+});

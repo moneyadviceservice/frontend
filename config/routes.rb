@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#show'
 
   scope '/:locale' do
+    resources :action_plans, only: 'show'
     resources :articles, only: 'show'
 
     resource :styleguide,
@@ -38,4 +39,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  match '*path', via: %W(get post), to: -> env { [501, {}, []] }
 end

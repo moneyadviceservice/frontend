@@ -1,7 +1,7 @@
 .table-wrapper {
   width: 100%;
   margin-bottom: $bl*3;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
@@ -49,4 +49,5 @@ th {
 td {
   padding: $bl*2;
   border: 1px solid $color-table-border;
+  width:auto;
 }

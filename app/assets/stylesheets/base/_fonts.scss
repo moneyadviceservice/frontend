@@ -12,8 +12,8 @@
     font-style: normal;
   }
   @font-face {
-    font-family: 'icomoon';
-    src: asset-data-url('icomoon.woff') format('woff');
+    font-family: 'icon-font';
+    src: asset-data-url('icon-font.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -32,12 +32,11 @@
     src: url(font-path('museo_slab_700-webfont.eot'));
     src: url(font-path('museo_slab_700-webfont.eot') + '?#iefix' ) format('embedded-opentype');
     font-weight: normal;
-    font-style: normal;
   }
   @font-face {
-    font-family: 'icomoon';
-    src: url(font-path('icomoon.eot'));
-    src: url(font-path('icomoon.eot') + '?#iefix' ) format('embedded-opentype');
+    font-family: 'icon-font';
+    src: url(font-path('icon-font.eot'));
+    src: url(font-path('icon-font.eot') + '?#iefix' ) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }

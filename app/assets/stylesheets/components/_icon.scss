@@ -17,9 +17,8 @@
 .icon {
   background-color: transparent;
   line-height: 1;
-  font-family: 'icomoon';
+  font-family: 'icon-font';
   font-weight: normal;
-  vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,62 +35,52 @@
 .icon--youtube {
   font-size: 24px;
   &:before {
-    content: '\e605';
+    content: '\f167';
   }
 }
 
 .icon--facebook {
   font-size: 24px;
   &:before {
-    content: '\e61c';
+    content: '\f09A';
   }
 }
 
 .icon--twitter {
   font-size: 24px;
   &:before {
-    content: '\e608';
+    content: '\f099';
   }
 }
 
 .icon--externalLink {
   &:after {
-    content: '\e619';
-  }
-}
-
-.icon--menu {
-  &:before {
-    content: '\e600';
-  }
-}
-
-.icon--search {
-  &:before {
-    content: '\e604';
+    content: '\e608';
   }
 }
 
 .icon--tick {
   &:before {
-    content: '\e609';
+    content: '\e01E';
   }
 }
 
 .icon--doc {
   &:before {
-    content: '\e611';
+    content: '\e601';
   }
 }
 
+// TODO replace these with ICONS asap
+
 .icon--open {
   &:before {
-    content: "\E603";
+    content: "\e606";
   }
 }
 
 .icon--closed {
   &:before {
-    content: '';
+    content: '\e607';
   }
 }

@@ -11,7 +11,7 @@
   @include font-size(16);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  margin: 0 0 $bl*2 0;
+  margin: $bl*2 0;
 }
 
 %text-intro-paragraph {
@@ -72,6 +72,7 @@
   @include font-size(16);
   line-height: 1.4;
   margin: 0 0 $bl 0;
+  color: $color-text-default;
 }
 
 // Links

@@ -57,10 +57,6 @@ GEM
     atomic (1.1.14)
     autoprefixer-rails (1.0.20140213)
       execjs
-    breakpoint (2.4.1)
-      compass (~> 1.0.0.alpha.13)
-      sass (~> 3.3.0.rc.2)
-      sassy-maps (< 1.0.0)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -275,18 +271,11 @@ GEM
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sassy-maps (0.3.1)
-      compass (~> 1.0.0.alpha.13)
-      sass (~> 3.3.0.rc.2)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
-    singularitygs (1.2.0.rc.6)
-      breakpoint (~> 2.4)
-      compass (~> 1.0.0.alpha.13)
-      sass (~> 3.3.0.rc.2)
     site_prism (2.6)
       addressable (~> 2.3.3)
       capybara (>= 2.1, < 3.0)
@@ -365,9 +354,9 @@ DEPENDENCIES
   rb-fsevent
   rouge
   rspec_junit_formatter
+  sass (~> 3.3.0.rc.4)
   sass-rails (~> 4.0.0.rc1)
   sdoc
-  singularitygs (~> 1.2.0.rc)
   spring-commands-cucumber
   spring-commands-rspec
   syslog-logger

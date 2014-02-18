@@ -19,6 +19,10 @@
   <%= render 'shared/header' %>
 <% end %>
 
+<%= styleguide_section sections['Breadcrumbs'] do %>
+  <%= render 'shared/breadcrumbs', locals: %w(en) %>
+<% end %>
+
 <%= styleguide_section sections['Footer Site Links'] do %>
   <%= render 'shared/footer_site_links', locals: %w(en) %>
 <% end %>

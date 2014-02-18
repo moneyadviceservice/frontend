@@ -1,0 +1,17 @@
+// Breadcrumbs for the page footer.
+//
+// Styleguide Breadcrumbs
+
+.breadcrumbs {
+  width: 100%;
+  background-color: $color-footer-bg;
+
+  ul {
+    padding: $bl*3 0;
+    border-bottom: 1px solid $color-breadcrumbs-border;
+  }
+
+  a {
+    @extend %link-nav;
+  }
+}

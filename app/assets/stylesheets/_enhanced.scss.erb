@@ -1,11 +1,10 @@
-@import 'singularitygs';
-@import 'breakpoint';
+//= require semantic-grid/stylesheets/scss/grid
 
+@import 'lib/grid';
 @import 'lib/variables';
 @import 'lib/functions';
 @import 'lib/mixins';
 @import 'lib/placeholders';
-@import 'lib/grid';
 
 @import 'utilities/utils';
 
@@ -13,7 +12,7 @@
 @import 'layout/pages';
 
 <% if Rails.env.development? %>
-  @import 'dev_tools/grid';
+  @import 'dev_tools/debug';
 <% end %>
 
 //atoms
@@ -32,7 +31,6 @@
 
 //standalone content
 @import 'components/error_page_message';
-@import 'components/homepage_intro';
 
 .editorial {
   @import 'components/editorial/action_item';

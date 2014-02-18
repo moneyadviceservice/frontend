@@ -1,15 +1,21 @@
 // Master container, controls max-width of content
 //
+
 // Styleguide layout-container
 .l-container {
   @extend %clearfix;
   max-width: $mq-xl;
-  margin:0 auto;
+  margin: 0 auto;
 }
+
+.l-container--space {
+  @include columnPadding(12);
+}
+
 
 .l-container--body {
   margin-top: $bl*7;
-  background:$color-white;
+  background: $color-white;
 }
 
 // Layout 1 column full width
@@ -19,34 +25,40 @@
   @include column(12);
 }
 
-
 // Layout 2 columns
 //
 // Styleguide layout-2col
 .l-2col-side {
   @include column(12);
-  @include respond-to($mq-m) {@include column(4);}
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
 }
 
 .l-2col-main {
   @include column(12);
-  @include respond-to($mq-m) {@include column(8);}
+  @include respond-to($mq-m) {
+    @include column(8);
+  }
 }
 
 .l-2col-even {
   @include column(12);
-  @include respond-to($mq-m) {@include column(6);}
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
 }
 
 // Layout split
 //
 // Styleguide layout-split
 .l-split-start {
-  float: left;
+  @include column(6);
 }
 
 .l-split-end {
   float: right;
+//  @include column(6);
 }
 
 

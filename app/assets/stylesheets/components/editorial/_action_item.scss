@@ -1,4 +1,5 @@
 .action-item {
+  @include column(12);
   overflow: hidden;
   margin-bottom: $bl*5;
   border-left: 1px solid $color-action-item-border;
@@ -9,7 +10,7 @@
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
     padding: $bl*2;
-    position:relative;
+    position: relative;
 
     &:before {
       content: '';
@@ -18,9 +19,9 @@
       border-style: solid;
       border-width: 10px 10px 0 0;
       border-color: $color-action-item-heading-bg transparent transparent transparent;
-      position:absolute;
+      position: absolute;
       bottom: -10px;
-      left:0;
+      left: 0;
     }
 
     span {
@@ -47,19 +48,20 @@
 }
 
 %action-item__section {
-  padding: $bl*2;
-  @include respond-to(700px) {
-    width: 50%;
+  @include column(11);
+  @include push(0.5);
+  padding: $bl*2 0;
+
+  @include respond-to($mq-m) {
+    @include column(6);
   }
 }
 
 .how {
   @extend %action-item__section;
-  float: right;
 }
 
 .why {
   @extend %action-item__section;
-  float: left;
 }
 

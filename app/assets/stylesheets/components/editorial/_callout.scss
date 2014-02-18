@@ -1,15 +1,15 @@
 .callout {
+  display: block;
   padding: $bl*3;
   margin: $bl*3 0;
-  width: 100%;
-  float: right;
   border-radius: 10px;
   color: $color-green-tertiary;
   background-color: $color-callout-background;
 
   @include respond-to($mq-l) {
-    margin: 0 $bl*3 $bl*3 $bl*3;
-    max-width: 38%;
+    @include column(4,8);
+    float: right;
+    margin-bottom: $bl*3;
   }
 
   > h3 {

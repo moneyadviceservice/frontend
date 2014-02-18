@@ -1,5 +1,11 @@
 .l-homepage {
-  margin: $bl*14 0 $bl*15 0;
+  @include column(12);
+  padding: $bl*14 0 $bl*15;
+
+  @include respond-to($mq-m) {
+    @include column(8);
+    @include push(2);
+  }
 }
 
 .l-error-page {
@@ -8,7 +14,7 @@
 
 .l-article {
   @include column(12);
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include column(8);
   }
 }

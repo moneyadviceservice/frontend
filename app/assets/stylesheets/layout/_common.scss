@@ -1,16 +1,3 @@
-// Master container, controls max-width of content
-//
-
-body {
-  content:'xs - ' + $mq-xs;
-  @include respond-to($mq-s) {content:'s - ' + $mq-s;}
-  @include respond-to($mq-m) {content:'m - ' + $mq-m;}
-  @include respond-to($mq-l) {content:'l - ' + $mq-l;}
-  @include respond-to($mq-xl) { content:'xl - ' + $mq-xl;}
-}
-
-
-
 // Styleguide layout-container
 .l-container {
   @extend %clearfix;

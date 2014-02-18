@@ -96,9 +96,8 @@
   }
 }
 
-
 .tempComponent {
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=); 
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=);
   min-height: 70px;
 }
 
@@ -109,7 +108,7 @@
 
 // add space between buttons so focus state is more visible
 #section-buttons .styleguide-element .button {
-  margin-right:20px;
+  margin-right: 20px;
 }
 
 // Layouts
@@ -120,15 +119,14 @@
 
   .styleguide-example,
   .styleguide-element {
-    padding:20px 0;
+    padding: 20px 0;
   }
 
   .l-container {
-    padding:10px 0;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=); 
+    padding: 10px 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=);
     overflow: hidden;
   }
-
 
   .l-1col,
   .l-2col-side,
@@ -137,14 +135,13 @@
     background: #ccc;
   }
 
-
   p {
-    color:#000;
+    color: #000;
   }
 
   blockquote {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     background: yellow;
   }
 }
@@ -165,7 +162,7 @@
 #section-layout-nested {
   .l-2col-main {
     ul {
-      padding:0
+      padding: 0
     }
     li {
       display: block;
@@ -173,12 +170,29 @@
       margin-bottom: 10px;
       background: yellow;
     }
-    blockquote {}
+    blockquote {
+    }
 
-    @include breakpoint($mq-m) {
-      ul {@include row(8);}
-      li {@include column(2,8); margin-bottom: 10px;}
-      blockquote {@include column(4,8); float:right;}
+    @include respond-to($mq-s) {
+      blockquote {
+        @include column(10,12);
+        float: right;
+      }
+    }
+
+    @include respond-to($mq-m) {
+      ul {
+        @include row(8);
+      }
+      li {
+        @include column(2, 8);
+        margin-bottom: 10px;
+      }
+
+      blockquote {
+        @include column(4,8);
+        float: right;
+      }
     }
 
   }

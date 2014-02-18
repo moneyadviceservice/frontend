@@ -25,17 +25,17 @@
 // Styleguide layout-2col
 .l-2col-side {
   @include column(12);
-  @include breakpoint($mq-m) {@include column(4);}
+  @include respond-to($mq-m) {@include column(4);}
 }
 
 .l-2col-main {
   @include column(12);
-  @include breakpoint($mq-m) {@include column(8);}
+  @include respond-to($mq-m) {@include column(8);}
 }
 
 .l-2col-even {
   @include column(12);
-  @include breakpoint($mq-m) {@include column(6);}
+  @include respond-to($mq-m) {@include column(6);}
 }
 
 // Layout split

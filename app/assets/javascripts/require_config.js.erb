@@ -2,7 +2,7 @@
 
 // RequireJS config
 requirejs.config({
-  baseUrl: '/assets',
+  baseUrl: '<%= Rails.application.config.assets.prefix %>',
   paths: {
     analytics: "<%= requirejs_path('modules/mas_analytics') %>",
     collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",

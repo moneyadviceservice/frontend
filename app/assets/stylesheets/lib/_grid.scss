@@ -78,12 +78,3 @@ $total-width: 100%;
   padding: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
 
-
-
-body {
-  content:'xs - ' + $mq-xs;
-  content:'s - ' + $mq-s;
-  content:'m - ' + $mq-m;
-  content:'l - ' + $mq-l;
-  content:'xl - ' + $mq-xl;
-}

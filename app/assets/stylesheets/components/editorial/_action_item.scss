@@ -48,8 +48,7 @@
 }
 
 %action-item__section {
-  @include column(11);
-  @include push(0.5);
+  @include column(12);
   padding: $bl*2 0;
 
   @include respond-to($mq-m) {

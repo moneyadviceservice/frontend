@@ -1,5 +1,39 @@
+<!--
+
+Notes
+=========
+
+When JS is turned off the navigation should be present as an expanded list of links.
+
+When CSS is turned off the navigation should be presented as a set of nested unordered links under section headings, styled only in basic HTML.
+
+Aria landmark role of "navigation" needs to be added to both the nav elements.
+
+There should be a "Skip main navigation" link which is the first thing you tab to on a page.
+
+Section
+----
+The navigation section should have a hidden h2 of "main navigation" (webaim.org).
+
+Icons
+----
+Icons that require text should be read out by including a span containing the description that is set to visually-hidden.
+Icons that are non-description (such as arrows) should be hidden and not read out.
+
+
+Search
+----
+Aria landmark role of "search" should be added to the form controlling the search functionality.
+Placeholder should be HTML5.
+The search form should be either visible or visually-hidden and connected to the input box with for/name.
+
+-->
+
 <header id="headerSite">
   <nav id="navSite">
+
+    <!-- add aria role="navigation" to the nav element of the header-->
+
     <div class="brand">
       <a href="/">
         <img src="/svg/rainbow2.svg" alter=""/>
@@ -8,15 +42,24 @@
     </div>
 
     <div id="navSite-mini">
+
+      <!-- Mobile Nav Toggle menu -->
+
       <a class="mini-nav do-toggle" data-toggle-group="navSite-mini" href="#navSite-topics" data-toggle-text="<i></i>">
         <i><em>Menu</em></i>
       </a>
+
+      <!-- Mobile Nav Toggle menu -->
+
       <a class="mini-search do-toggle" data-toggle-anim="false" data-toggle-group="navSite-mini" href="#navSite-search" title="search" data-toggle-text="<i></i>">
         <i><span>Search </span> </i>
       </a>
     </div>
 
     <form action="/search" method="get" id="navSite-search">
+
+      <!--add role="search" to the form element-->
+
       <label class="accessibleHide">Search for something exciting</label>
       <input class="typeahead" name="query" type="text" placeholder="Ask MA.."/>
       <button class="" type="submit">Search</search>
@@ -28,11 +71,15 @@
   <div class="wrap">
 
     <ul id="navSite-topics">
+      <!-- Home icon, plus all other icons need to be accessible to screen readers with visibility hidden text -->
+
       <li class="home">
         <a href="/"><span class="icon-home"></span><!--img src="/img/icon-home.png" alt="Home" class="svg" /--></a>
       </li>
 
       <li>
+        <!--list elements for drop down menus need to be headings so they are read out by assistive technology -->
+
         <a class="do-toggle" href="/categories/life-events" data-toggle-group="navSite">Life events<i></i></a>
 
         <ul class="is-toggleTarget">

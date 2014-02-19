@@ -6,7 +6,7 @@
 @import 'lib/mixins';
 @import 'lib/placeholders';
 
-@import 'utilities/utils';
+@import 'utilities/visually_hidden';
 
 @import 'layout/common';
 @import 'layout/pages';
@@ -35,9 +35,10 @@
 .editorial {
   @import 'components/editorial/action_item';
   @import 'components/editorial/collapsible';
-  @import 'components/editorial/callout';
   @import 'components/editorial/links';
   @import 'components/editorial/media';
-  @import 'components/editorial/tables';
   @import 'components/editorial/add-action';
 }
+
+@import 'components/editorial/tables';
+@import 'components/editorial/callout';

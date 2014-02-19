@@ -1,3 +1,7 @@
+// Call out containing a pull quotation or an emphasised fact from the many body of the content. Can also contain a link to an external source. Can contain a heading, but this is optional.
+//
+// Styleguide Call out
+
 .callout {
   display: block;
   padding: $bl*3;
@@ -6,12 +10,6 @@
   color: $color-green-tertiary;
   background-color: $color-callout-background;
 
-  @include respond-to($mq-l) {
-    @include column(4,8);
-    float: right;
-    margin-bottom: $bl*3;
-  }
-
   > h3 {
     margin-bottom: $bl*3;
   }
@@ -19,5 +17,13 @@
   > p {
     @extend %text-callout;
     margin-top: 0;
+  }
+
+  .editorial & {
+    @include respond-to($mq-l) {
+      @include column(4, 8);
+      float: right;
+      margin-bottom: $bl*3;
+    }
   }
 }

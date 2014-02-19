@@ -11,7 +11,6 @@
 $media-query-free-breakpoint: 960px;
 
 @mixin respond-to($min-width, $max-width: false) {
-//  @if $media-queries {
   @if $responsive {
     @media screen and (min-width: $min-width) {
       @if $max-width {

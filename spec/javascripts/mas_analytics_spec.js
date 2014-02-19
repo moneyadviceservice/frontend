@@ -1,4 +1,5 @@
 //= require spec_helper
+//= require templates/scrollTracking
 
 describe("mas_analytics#scrollTracking", function () {
   var mas_analytics, $body;

@@ -1,4 +1,5 @@
 //= require spec_helper
+//= require templates/collapsable
 
 describe("mas_collapsable", function () {
   var mas_collapsable, mas_collapsable_empty, $body;

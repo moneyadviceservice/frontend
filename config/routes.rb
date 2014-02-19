@@ -9,6 +9,7 @@ end
 
 Rails.application.routes.draw do
   root 'home#show'
+  get '/opt_out', to: 'responsive#opt_out', as: 'opt_out'
 
   scope '/:locale' do
     resources :action_plans, only: 'show'

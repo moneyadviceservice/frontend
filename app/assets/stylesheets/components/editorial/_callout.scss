@@ -1,4 +1,4 @@
-// Call out containing a pull quotation or an empasised fact from the many body of the content. Can also contain a link to an external source.
+// Call out containing a pull quotation or an emphasised fact from the many body of the content. Can also contain a link to an external source. Can contain a heading, but this is optional.
 //
 // Styleguide Call out
 
@@ -18,7 +18,7 @@
     margin-top: 0;
   }
 
-  .l-article & {
+  .editorial & {
     float: right;
     @include respond-to($mq-l) {
       margin: 0 $bl*3 $bl*3 $bl*3;

@@ -1,7 +1,8 @@
 require_relative '../spec_helper'
 
 describe 'Request blacklisted resource' do
-  ValidArticles::BLACKLIST.each do |article|
+  %W(about-our-debt-work am-ein-gwaith-dyled
+     debt-publications cyhoeddiadau-ar-ddyledion).each do |article|
     context "request article #{article}" do
       it 'returns a 501 response' do
         get("/en/articles/#{article}")

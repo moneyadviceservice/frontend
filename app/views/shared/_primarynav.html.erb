@@ -1,90 +1,18 @@
-<!--
+<header role="banner">
+  <a href="#main">Skip to main content</a>
+  <a href="/">the Money Advice Service</a>
 
-Notes
-=========
+  <nav role="navigation" aria-labelledby="nav-label">
+    <h2 class="visually-hidden"><span id="nav-label">Main</span> navigation</h2>
 
-When JS is turned off the navigation should be present as an expanded list of links.
+    <!-- inject button for menu with js -->
+    <!-- inject button for search with js -->
 
-When CSS is turned off the navigation should be presented as a set of nested unordered links under section headings, styled only in basic HTML.
-
-Aria landmark role of "navigation" needs to be added to both the nav elements.
-
-Aria landmark role of "banner" needs to be added to the header  .
-
-There should be an invisible (recommended) "Skip main navigation" link which is the first thing you tab to on a page.
-
-Section
-----
-The navigation section should have a hidden h2 of "main navigation" (webaim.org).
-
-Icons
-----
-Icons that require text should be read out by including a span containing the description that is set to visually-hidden.
-Icons that are non-description (such as arrows) should be hidden and not read out.
-
-
-Search
-----
-Aria landmark role of "search" should be added to the form controlling the search functionality.
-Placeholder should be HTML5.
-The search form should be either visible or visually-hidden and connected to the input box with for/name.
-
--->
-
-<header id="headerSite">
-  <nav id="navSite">
-
-    <!-- add aria role="navigation" to the nav element of the header-->
-
-    <div class="brand">
-      <a href="/">
-        <img src="/svg/rainbow2.svg" alter=""/>
-        <img src="/svg/text2.svg" alt="the money advice service"/>
-      </a>
-    </div>
-
-    <div id="navSite-mini">
-
-      <!-- Mobile Nav Toggle menu -->
-
-      <a class="mini-nav do-toggle" data-toggle-group="navSite-mini" href="#navSite-topics" data-toggle-text="<i></i>">
-        <i><em>Menu</em></i>
-      </a>
-
-      <!-- Mobile Nav Toggle menu -->
-
-      <a class="mini-search do-toggle" data-toggle-anim="false" data-toggle-group="navSite-mini" href="#navSite-search" title="search" data-toggle-text="<i></i>">
-        <i><span>Search </span> </i>
-      </a>
-    </div>
-
-    <form action="/search" method="get" id="navSite-search">
-
-      <!--add role="search" to the form element-->
-
-      <label class="accessibleHide">Search for something exciting</label>
-      <input class="typeahead" name="query" type="text" placeholder="Ask MA.."/>
-      <button class="" type="submit">Search</search>
-    </form>
-  </nav>
-</header>
-
-<div class="outer outerNav">
-  <div class="wrap">
-
-    <ul id="navSite-topics">
-      <!-- Home icon, plus all other icons need to be accessible to screen readers with visibility hidden text -->
-
-      <li class="home">
-        <a href="/"><span class="icon-home"></span><!--img src="/img/icon-home.png" alt="Home" class="svg" /--></a>
-      </li>
-
+    <ul>
       <li>
-        <!--list elements for drop down menus need to be headings so they are read out by assistive technology -->
+        <a href="/categories/life-events">Life events</a>
 
-        <a class="do-toggle" href="/categories/life-events" data-toggle-group="navSite">Life events<i></i></a>
-
-        <ul class="is-toggleTarget">
+        <ul> <!-- hide lists with display:none in .js context -->
           <li><a href="/categories/young-people-and-money">Leaving school or college</a></li>
           <li><a href="/categories/setting-up-home">Setting up home</a></li>
           <li><a href="/categories/having-a-baby">Having a baby</a></li>
@@ -98,10 +26,9 @@ The search form should be either visible or visually-hidden and connected to the
       </li>
 
       <li>
-        <a class="do-toggle" href="/categories/managing-your-money" data-toggle-group="navSite">Managing your
-          money<i></i></a>
+        <a href="/categories/managing-your-money">Managing your money</a>
 
-        <ul class="is-toggleTarget">
+        <ul>
           <li><a href="/categories/managing-your-money-better">Managing your money better</a></li>
           <li><a href="/categories/how-to-review-or-reduce-borrowing">How to review or reduce borrowing</a></li>
           <li><a href="/categories/money-saving-tips">Money saving tips</a></li>
@@ -118,9 +45,9 @@ The search form should be either visible or visually-hidden and connected to the
       </li>
 
       <li>
-        <a class="do-toggle" href="/categories/money-topics" data-toggle-group="navSite">Money topics<i></i></a>
+        <a href="/categories/money-topics">Money topics</a>
 
-        <ul class="is-toggleTarget">
+        <ul>
           <li><a href="/categories/saving-and-investing">Saving and investing</a></li>
           <li><a href="/categories/borrowing-money">Borrowing money</a></li>
           <li><a href="/categories/managing-debt">Debt management</a></li>
@@ -131,10 +58,9 @@ The search form should be either visible or visually-hidden and connected to the
       </li>
 
       <li>
-        <a class="do-toggle" href="/categories/tools--resources" data-toggle-group="navSite">Tools &amp;
-          resources<i></i></a>
+        <a href="/categories/tools--resources">Tools &amp; resources</a>
 
-        <ul class="is-toggleTarget">
+        <ul>
           <li><a href="/categories/budget-planner">Budget planner</a></li>
           <li><a href="/categories/health-check">Money Health Check</a></li>
           <li><a href="/categories/action-plans">Action plans</a></li>
@@ -152,7 +78,13 @@ The search form should be either visible or visually-hidden and connected to the
       <li>
         <a href="/news">News &amp; features</a>
       </li>
-
     </ul>
-  </div>
-</div>
+
+
+    <form action="/search" method="get" role="search">
+      <label class="visually-hidden">Search the Money Advice Service</label>
+      <input type="text" placeholder="Search"/>
+      <button type="submit">Search</button>
+    </form>
+  </nav>
+</header>

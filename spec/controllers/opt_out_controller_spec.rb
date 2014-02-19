@@ -1,21 +1,21 @@
 require 'spec_helper'
 
-describe ResponsiveController do
+describe OptOutController do
   let(:previous_page) { 'where_i_came_from' }
   before { request.env['HTTP_REFERER'] = previous_page }
 
-  describe 'GET opt_out' do
+  describe 'POST create' do
 
     it 'redirects back to the referring page' do
-      get :opt_out
+      post :create
 
       expect(response).to redirect_to previous_page
     end
 
-    it 'sets the opt-out cookie' do
+    it 'create the opt-out cookie' do
       expect(cookies.permanent.signed).to receive(:[]=).with(:roptout, 0)
 
-      get :opt_out
+      post :create
     end
   end
 end

@@ -1,5 +1,5 @@
-class ResponsiveController < ApplicationController
-  def opt_out
+class OptOutController < ApplicationController
+  def create
     cookies.permanent.signed[:roptout] = 0
     redirect_to(:back)
   end

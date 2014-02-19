@@ -1,6 +1,6 @@
 class OptOutController < ApplicationController
   def create
-    cookies.permanent.signed[:roptin] = 0
+    cookies.permanent[:roptin] = 0
     redirect_to(:back)
   end
 end

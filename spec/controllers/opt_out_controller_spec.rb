@@ -13,7 +13,7 @@ describe OptOutController do
     end
 
     it 'set the opt-int cookie to 0' do
-      expect(cookies.permanent.signed).to receive(:[]=).with(:roptin, 0)
+      expect(cookies.permanent).to receive(:[]=).with(:roptin, 0)
 
       post :create
     end

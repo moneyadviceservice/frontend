@@ -14,12 +14,12 @@ gem 'kss'
 gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
+gem 'sass', '~> 3.3.0.rc.4'
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'syslog-logger'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
-gem "sass", "~> 3.3.0.rc.4"
 
 group :development do
   gem 'guard-bundler'

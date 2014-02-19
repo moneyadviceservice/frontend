@@ -53,3 +53,20 @@ MAS.supports.localstorage = (function supports_html5_storage() {
 if (MAS.supports.localstorage) {
   MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
 }
+
+// Fix for iPhone viewport scale bug 
+// http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+// MAS = mobile boilerplate
+MAS.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');
+MAS.ua = navigator.userAgent;
+MAS.scaleFix = function () {
+  if (MAS.viewportmeta && /iPhone|iPad|iPod/.test(MAS.ua) && !/Opera Mini/.test(MAS.ua)) {
+    MAS.viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+    document.addEventListener("gesturestart", MAS.gestureStart, false);
+  }
+};
+MAS.gestureStart = function () {
+    MAS.viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+};
+
+

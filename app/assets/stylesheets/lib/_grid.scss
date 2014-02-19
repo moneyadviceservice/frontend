@@ -1,63 +1,80 @@
-/////////////////////////////////////
-// Grid - currently using singularity
-// https://github.com/Team-Sass/Singularity
-/////////////////////////////////////
+/////////////////
+// Semantic.gs // for SCSS: http://sass-lang.com/
+/////////////////
 
 // Custom function to calculate grid width based on number of columns * column width
 @function grid-width($n) {
-  @return $n * $column-default-width + ($n) * ($column-default-width * $gutters);
+  @return $n * ($column-width + $gutter-width);
 }
 
-// Default settings
-$column-default-width: 40px;
-$gutters: 1/2;
-$gutter-styles: 'split';
-$breakpoint-to-ems: true;
-$output: 'float';
 
-// Default Column counts for different widths
-$mq-xs-c:4;
-$mq-s-c:6;
-$mq-m-c:9;
-$mq-l-c:12;
-$mq-xl-c:18;
+// Defaults which you can freely override
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// $min-width: 999999;
+// $correction: 0.5 / $min-width * 100;
 
 // Define min-width based on cols * colWidth
 $mq-xs:0;
-$mq-s:grid-width($mq-s-c);
-$mq-m:grid-width($mq-m-c);
-$mq-l:grid-width($mq-l-c);
-$mq-xl:grid-width($mq-xl-c);
+$mq-s:grid-width(6);
+$mq-m:grid-width(9);
+$mq-l:grid-width(12);
+$mq-xl:grid-width(18);
 
-// Singularity - Define responsive grid columns at different widths
-// add-grid(columns at width)
-$grids: $mq-xs-c;
-$grids: add-grid($mq-s-c at $mq-s);
-$grids: add-grid($mq-m-c at $mq-m);
-$grids: add-grid($mq-l-c at $mq-l);
-$grids: add-grid($mq-xl-c at $mq-xl);
+// Utility function — you should never need to modify this
+@function gridsystem-width($columns:$columns) {
+  @return ($column-width * $columns) + ($gutter-width * $columns);
+}
 
-// Mixin to make it simpler to add grids-span wrapped in breakpoint
-// example:
-// @include add-grid-span($mq-xs, 4, 1);
-@mixin add-grid-span($mq, $col, $pos:1) {
-  @if $mq == 0 {
-    @include grid-span($col, $pos);
-  } @else {
-    @include breakpoint($mq) {
-      @include grid-span($col, $pos);
-    }  
+// Set $total-width to 100% for a fluid layout
+$total-width: 100%;
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  *zoom:1;
+
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
   }
 }
 
-// Mixin to make it simpler to add all grid spans as a fraction of total columns in one call
-// example:
-// @include add-all-grid-spans(1, 1, 1/3, 1/3, 1/3);
-@mixin add-all-grid-spans($xs, $s, $m, $l, $xl) {
-  @include add-grid-span($mq-xs, $mq-xs-c * $xs);
-  @include add-grid-span($mq-s, $mq-s-c * $s);
-  @include add-grid-span($mq-m, $mq-m-c * $m);
-  @include add-grid-span($mq-l, $mq-l-c * $l);
-  @include add-grid-span($mq-xl, $mq-xl-c * $xl);
+
+//////////
+// GRID //
+//////////
+@mixin row($columns:$columns) {
+  display: block;
+  width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
+  margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
+  // *width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns))-$correction;
+  // *margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
+  @include clearfix();
+}
+@mixin column($x,$columns:$columns) {
+  display: inline;
+  float: left;
+  width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
+  margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+  // *width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
+  // *margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
+}
+@mixin push($offset:1) {
+  margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+@mixin pull($offset:1) {
+  margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+
+@mixin columnPadding($x,$columns:$columns) {
+  display: block;
+  padding: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
 

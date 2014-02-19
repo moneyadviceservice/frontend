@@ -22,7 +22,7 @@
         background-color: $color-subMenuBackground;
       }
 
-      @include respond-to($mq-small) {
+      @include respond-to($mq-s) {
         display: inline-block;
         width: auto;
         border-bottom: none;
@@ -37,7 +37,7 @@
   z-index: 1;
   background-color: $color-subMenuBackground;
 
-  @include respond-to($mq-small) {
+  @include respond-to($mq-s) {
     position: absolute;
   }
 }
@@ -51,14 +51,14 @@
   background-color: $color-navBackground;
   text-align: left;
   line-height: 2;
-  @include respond-to($mq-small) {
+  @include respond-to($mq-s) {
     display: none;
   }
 }
 
 .js .primaryNav-list {
   display: none;
-  @include respond-to($mq-small) {
+  @include respond-to($mq-s) {
     display: block;
   }
 }

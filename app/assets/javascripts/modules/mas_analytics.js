@@ -76,10 +76,10 @@ define(['jquery', 'waypoints'], function ($) {
     var contentRatio = $el.outerHeight() / wh;
 
     // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
-    // _this.triggerAnalytics({
-    //  'contentRatio': contentRatio,
-    //  'event': 'ratioCalculated'
-    // });
+    _this.triggerAnalytics({
+     'contentRatio': contentRatio,
+     'event': 'ratioCalculated'
+    });
 
     // Bind event for each trigger point
     $.each(opts.triggerPoints, function (i, val) {

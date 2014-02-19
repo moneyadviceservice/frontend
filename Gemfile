@@ -15,19 +15,21 @@ gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
 gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'syslog-logger'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
-gem 'singularitygs'
-gem 'syslog-logger'
 
 group :development do
+  gem 'guard-bundler'
   gem 'guard-cucumber'
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sass'
-  gem 'spring'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'spring-commands-cucumber'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
@@ -40,9 +42,7 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
-
-  gem 'mas-development_dependencies',
-      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
+  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
 end
 
 group :doc do

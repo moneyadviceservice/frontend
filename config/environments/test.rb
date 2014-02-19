@@ -29,3 +29,5 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
 end
+
+WebMock.disable_net_connect!(allow_localhost: true)

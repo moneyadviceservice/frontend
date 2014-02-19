@@ -12,8 +12,8 @@ describe OptOutController do
       expect(response).to redirect_to previous_page
     end
 
-    it 'create the opt-out cookie' do
-      expect(cookies.permanent.signed).to receive(:[]=).with(:roptout, 0)
+    it 'set the opt-int cookie to 0' do
+      expect(cookies.permanent.signed).to receive(:[]=).with(:roptin, 0)
 
       post :create
     end

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.0.beta1'
+gem 'rails', '4.1.0.rc1'
 
 gem 'activeresource', '~> 4.0.0'
 gem 'autoprefixer-rails'
@@ -14,7 +14,7 @@ gem 'kss'
 gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0'
 gem 'syslog-logger'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
@@ -35,6 +35,7 @@ end
 group :test do
   gem 'faker'
   gem 'rspec_junit_formatter'
+  gem 'thin'
   gem 'vcr'
   gem 'webmock'
 end

@@ -23,7 +23,7 @@ class ActionPlanDecorator < Draper::Decorator
     [
       [HTMLProcessor::NodeRemover, HTMLProcessor::INTRO_IMG],
       [HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]//h4', 'h3']],
-      [HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]/h3', 'h2']]
+      [HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]/h3', 'h2']],
     ]
   end
 end

@@ -21,15 +21,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon--masLogo {
-  width: $bl*9;
-  height: $bl*5;
-  display:block;
-  margin: $bl*2 0 0 0;
-  background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
-  background-size: contain;
-}
-
 .icon--youtube {
   font-size: 24px;
   &:before {

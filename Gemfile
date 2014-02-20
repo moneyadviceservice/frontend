@@ -35,6 +35,7 @@ end
 group :test do
   gem 'faker'
   gem 'rspec_junit_formatter'
+  gem 'thin'
   gem 'vcr'
   gem 'webmock'
 end

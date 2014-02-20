@@ -1,0 +1,21 @@
+.mas-logo {
+  height: 36px;
+  width: 216px;
+  background: transparent image_url('mas-logo.png') 0 0 no-repeat;
+
+  .svg & {
+    background: transparent image_url('mas-logo.svg') 0 0 no-repeat;
+  }
+}
+
+.mas-logo-small {
+  width: 54px;
+  height: 30px;
+  display: block;
+  margin: $bl*2 0 0 0;
+  background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
+
+  .svg & {
+    background: transparent image_url('mas-logo-small.svg') 0 0 no-repeat;
+  }
+}

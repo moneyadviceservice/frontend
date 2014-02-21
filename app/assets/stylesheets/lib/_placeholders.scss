@@ -56,8 +56,10 @@
 
 %heading-nav-one {
   @extend %font-museo700;
-  @include font-size(16);
-//  line-height: 1.3;
+  @include font-size(14);
+  @include respond-to($mq-m){
+    @include font-size(16);
+  }
 }
 
 %heading-nav-two {

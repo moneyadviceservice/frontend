@@ -19,6 +19,7 @@
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
 }
 
 .icon--youtube {
@@ -71,5 +72,11 @@
 .icon--closed {
   &:before {
     content: '\e607';
+  }
+}
+
+.icon--search {
+  &:before {
+    content: '\e00E';
   }
 }

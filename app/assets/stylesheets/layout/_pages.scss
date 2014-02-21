@@ -6,7 +6,6 @@
     @include column(8);
     @include push(2);
   }
-
 }
 
 .l-error-page {
@@ -18,4 +17,18 @@
   @include respond-to($mq-m) {
     @include column(8);
   }
+}
+
+.l-primary-nav {
+  margin: $bl*4 auto 0 auto;
+  @extend %clearfix;
+  @include respond-to($mq-l) {
+    margin: -$bl*5 auto $bl*4 auto;
+  }
+}
+
+.l-search-box {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
 }

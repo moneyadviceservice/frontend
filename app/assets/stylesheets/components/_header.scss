@@ -4,6 +4,7 @@
 
 .header {
   padding: $baseline-unit*4 0 0 0;
-  background: $color-green-primary;
   border-bottom: $baseline-unit/2 solid $color-green-light;
+  background: $color-green-primary;
+  background: $color-green-primary image_url('stripes.svg') 90% -20px no-repeat;
 }

@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
+  remote: https://github.com/moneyadviceservice/mas-development_dependencies.git
   revision: 33286271c5f9fc0bc3e71724dc54ce50661abee1
   specs:
     mas-development_dependencies (2.1.0)
@@ -118,7 +118,7 @@ GEM
     execjs (2.0.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.4.0)
+    factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     faker (1.2.0)

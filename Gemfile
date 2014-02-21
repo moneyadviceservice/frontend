@@ -49,7 +49,8 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
-  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
+  gem 'mas-development_dependencies',
+      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
 end
 
 group :doc do

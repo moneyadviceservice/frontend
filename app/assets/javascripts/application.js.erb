@@ -19,7 +19,8 @@ require(['analytics'], function (analytics) {
   });
 });
 
-
-require(['collapsable'], function (collapsable) {
-  var C = new collapsable();
+require(['collapsable'], function (Collapsable) {
+  var articleCollapsables = new Collapsable({
+    showOnlyFirst:true
+  });
 });

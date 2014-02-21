@@ -2,9 +2,13 @@ require 'faraday'
 require 'faraday/request/request_id'
 
 module Core
-  class FaradayConnectionFactory
+  class Connection < SimpleDelegator
+  end
+
+  class ConnectionFactory
     def self.build(url, timeout: 5, open_timeout: 5)
-      Faraday.new(url: url, request: { timeout: timeout, open_timeout: open_timeout }) do |faraday|
+      options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
+      connection = Faraday.new(options) do |faraday|
         faraday.request :json
         faraday.request :request_id
         faraday.request :retry
@@ -15,6 +19,8 @@ module Core
         faraday.use :instrumentation
         faraday.adapter Faraday.default_adapter
       end
+
+      Connection.new(connection)
     end
   end
 end

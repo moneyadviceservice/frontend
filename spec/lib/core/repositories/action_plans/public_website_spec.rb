@@ -12,7 +12,7 @@ module Core::Repositories::ActionPlans
 
       before do
         allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
-          Core::FaradayConnectionFactory.build(url)
+          Core::ConnectionFactory.build(url)
         end
 
         stub_request(:get, "https://example.com/en/action_plans/#{id}.json").

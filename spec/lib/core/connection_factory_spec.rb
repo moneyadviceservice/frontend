@@ -1,13 +1,13 @@
 require 'spec_helper'
-require 'core/faraday_connection_factory'
+require 'core/connection_factory'
 
 module Core
-  describe FaradayConnectionFactory do
+  describe ConnectionFactory do
     describe '.build' do
       subject(:factory) { described_class.build('http://example.com') }
 
-      it "manufactures a `Faraday::Connection'" do
-        expect(factory).to be_a(Faraday::Connection)
+      it "manufactures a `Connection'" do
+        expect(factory).to be_a(Connection)
       end
 
       it 'has a default timeout of 5 seconds' do

@@ -10,7 +10,6 @@
   font-size: 12px;
   line-height: 2;
   background-color: $color-navBackground;
-
   > ul {
     @extend %styleguideNav;
 
@@ -29,6 +28,27 @@
       }
     }
   }
+  a,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    color: $color-navText;
+  }
+
+  a:hover {
+    border: none;
+    text-decoration: none;
+    color: #FFF;
+  }
+
+
+  a:focus{
+    outline: 1px solid;
+    border-bottom: none;
+  }
+
 }
 
 .primaryNav-subMenu {
@@ -70,25 +90,4 @@
 .navIcon {
   font-size: 8px;
   display: inline-block;
-}
-
-nav a,
-nav a:visited {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px;
-  width: 100%;
-  color: $color-navText;
-}
-
-nav a:hover {
-  border: none;
-  text-decoration: none;
-  color: #FFF;
-}
-
-
-nav a:focus{
-  outline: 1px solid;
-  border-bottom: none;
 }

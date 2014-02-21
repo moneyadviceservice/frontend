@@ -1,9 +1,20 @@
+class ValidArticle
+  BLACKLIST = %w(about-our-debt-work am-ein-gwaith-dyled
+                 debt-publications cyhoeddiadau-ar-ddyledion)
+
+  def matches?(request)
+    BLACKLIST.exclude?(request.parameters['id'])
+  end
+end
+
 Rails.application.routes.draw do
   root 'home#show'
 
   scope '/:locale' do
     resources :action_plans, only: 'show'
-    resources :articles, only: 'show'
+    resources :articles,
+              only:        'show',
+              constraints: ValidArticle.new
 
     resource :styleguide,
              controller:  'styleguide',
@@ -39,4 +50,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  match '*path', via: %W(get post), to: -> env { [501, {}, []] }
 end

@@ -27,7 +27,7 @@ module Frontend
 
     # Configure additional vendor JS assets to precompile.
     config.assets.precompile += %w(html5shiv/dist/html5shiv.js
-                                   jquery/jquery.js
+                                   jquery/dist/jquery.js
                                    jquery-waypoints/waypoints.js
                                    jquery-tiny-pubsub/src/tiny-pubsub.js
                                    requirejs/require.js)
@@ -40,3 +40,13 @@ module Frontend
 
   end
 end
+
+Capybara.server do |app, port|
+
+  if Konacha.mode == :runner
+    require 'rack/handler/thin'
+    Rack::Handler::Thin.run(app, Port: port)
+  else
+    Capybara.run_default_server(app, port)
+  end
+end if defined?(Capybara)

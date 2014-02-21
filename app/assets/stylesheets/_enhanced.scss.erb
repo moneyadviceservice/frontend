@@ -1,19 +1,16 @@
-@import 'singularitygs';
-@import 'breakpoint';
-
+@import 'lib/grid';
 @import 'lib/variables';
 @import 'lib/functions';
 @import 'lib/mixins';
 @import 'lib/placeholders';
-@import 'lib/grid';
 
-@import 'utilities/utils';
+@import 'utilities/visually_hidden';
 
 @import 'layout/common';
 @import 'layout/pages';
 
 <% if Rails.env.development? %>
-  @import 'dev_tools/grid';
+  @import 'dev_tools/debug';
 <% end %>
 
 //atoms
@@ -32,14 +29,14 @@
 
 //standalone content
 @import 'components/error_page_message';
-@import 'components/homepage_intro';
 
 .editorial {
   @import 'components/editorial/action_item';
   @import 'components/editorial/collapsible';
-  @import 'components/editorial/callout';
   @import 'components/editorial/links';
   @import 'components/editorial/media';
-  @import 'components/editorial/tables';
   @import 'components/editorial/add-action';
 }
+
+@import 'components/editorial/tables';
+@import 'components/editorial/callout';

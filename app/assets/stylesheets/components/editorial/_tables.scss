@@ -1,3 +1,7 @@
+// Tables wrapped in a .table-wrapper will scroll horizontally if the table is bigger than the space available for it.
+//
+// Styleguide Scrollable Table
+
 .table-wrapper {
   width: 100%;
   margin-bottom: $bl*3;
@@ -49,5 +53,5 @@ th {
 td {
   padding: $bl*2;
   border: 1px solid $color-table-border;
-  width:auto;
+  width: auto;
 }

@@ -1,54 +1,54 @@
-%styleguideNav {
+%unstyled-nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.primaryNav {
+.styleguide-nav-container {
   width: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 2;
-  background-color: $color-navBackground;
+  height: 49px;
+}
 
-  > ul {
-    @extend %styleguideNav;
+.styleguide-nav {
+  position: fixed;
+  z-index: 9;
+  background-color: $color-nav-background;
+  border-bottom: 1px solid $color-nav-border;
+  width: 100%;
+  @extend %unstyled-nav;
 
-    > li {
-      width: 100%;
-
-      &:hover .styleguidePrimaryNav-subMenu,
-      &:focus .styleguidePrimaryNav-subMenu {
-        background-color: $color-subMenuBackground;
-      }
-
-      @include respond-to($mq-s) {
-        display: inline-block;
-        width: auto;
-        border-bottom: none;
-      }
+  > li {
+    width: 100%;
+    @include respond-to($mq-s) {
+      display: inline-block;
+      width: auto;
+      border-bottom: none;
     }
   }
 }
 
-.primaryNav-subMenu {
-  @extend %styleguideNav;
+.has-sub-menu > a:first-child {
+  font-weight: 600;
+}
+
+.styleguide-nav__submenu {
+  @extend %unstyled-nav;
   position: relative;
   z-index: 1;
-  background-color: $color-subMenuBackground;
-
+  background-color: $color-nav-background;
   @include respond-to($mq-s) {
     position: absolute;
   }
 }
 
-.navToggle {
+.styleguide-nav__toggle {
   cursor: pointer;
   width: 100%;
   padding: 12px;
   border: none;
-  color: $color-navText;
-  background-color: $color-navBackground;
+  border-bottom: 1px solid $color-nav-border;
+  color: $color-nav-text;
+  background-color: $color-nav-background;
   text-align: left;
   line-height: 2;
   @include respond-to($mq-s) {
@@ -56,39 +56,37 @@
   }
 }
 
-.js .primaryNav-list {
+.js .styleguide-nav {
   display: none;
   @include respond-to($mq-s) {
     display: block;
   }
 }
 
-.js .primaryNav-subMenu {
-  display:none;
+.js .styleguide-nav__submenu {
+  display: none;
 }
 
-.navIcon {
-  font-size: 8px;
+nav a {
   display: inline-block;
-}
-
-nav a,
-nav a:visited {
-  display: inline-block;
+  width: 100%;
   text-decoration: none;
   padding: 12px;
-  width: 100%;
-  color: $color-navText;
+  font-size: 14px;
+  color: $color-nav-text;
+}
+
+nav a:visited {
+  color: $color-nav-text;;
 }
 
 nav a:hover {
-  border: none;
   text-decoration: none;
-  color: #FFF;
+  color: $color-green-primary;
+  transition: all 1s ease;
 }
 
-
-nav a:focus{
+nav a:focus {
   outline: 1px solid;
   border-bottom: none;
 }

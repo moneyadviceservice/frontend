@@ -46,10 +46,6 @@ $total-width: 100%;
   }
 }
 
-
-//////////
-// GRID //
-//////////
 @mixin row($columns:$columns) {
   display: block;
   width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));

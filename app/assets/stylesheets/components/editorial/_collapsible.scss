@@ -5,8 +5,8 @@
 .collapsible {
   position: relative;
   background-color: $color-action-item-heading-bg;
-  padding: $bl;
-  margin: 0 0 $bl*3 0;
+  padding: $baseline-unit;
+  margin: 0 0 $baseline-unit*3 0;
   color: $color-action-item-heading;
   cursor:pointer;
 
@@ -46,8 +46,8 @@
   border-left: 1px solid $color-action-item-border;
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
-  padding: $bl*2;
-  margin: -$bl*3 0 $bl*3 0;
+  padding: $baseline-unit*2;
+  margin: -$baseline-unit*3 0 $baseline-unit*3 0;
 }
 
 .collapsible-section.js-active {

@@ -1,4 +1,3 @@
-
 $color-white: #FFF; // not in the standard palette
 $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 
@@ -93,3 +92,12 @@ $color-action-item-heading-bg: $color-grey-medium;
 $color-action-item-border: $color-bluegrey-light;
 $color-icon-open: $color-yellow-light;
 $color-article-cta: $color-blue-light;
+
+
+// VARIABLES ONLY TO BE USED IN THE STYLEGUIDE
+
+// Colours
+$color-nav-text: lighten(#333333, 20%);
+$color-nav-border: #E6E6E6;
+$color-nav-background: rgba(255, 255, 255, 0.9);
+$color-sub-menu-background: #393939;

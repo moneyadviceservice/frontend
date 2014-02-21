@@ -25,7 +25,7 @@
       border-bottom: none;
     }
   }
-  
+
   a,
   a:visited {
     display: inline-block;
@@ -38,11 +38,10 @@
   a:hover {
     border: none;
     text-decoration: none;
-    color: #FFF;
+    color: $color-green-secondary;
   }
 
-
-  a:focus{
+  a:focus {
     outline: 1px solid;
     border-bottom: none;
   }

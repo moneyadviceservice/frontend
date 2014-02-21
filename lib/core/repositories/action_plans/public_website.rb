@@ -1,6 +1,6 @@
+require 'core/connection'
 require 'core/registries/connection'
 require 'core/repositories/repository'
-require 'faraday'
 
 module Core::Repositories
   module ActionPlans
@@ -13,9 +13,9 @@ module Core::Repositories
         response = connection.get('/%{locale}/action_plans/%{id}.json' %
                                     { locale: I18n.locale, id: id })
         response.body
-      rescue Faraday::Error::ResourceNotFound
+      rescue Core::Connection::ResourceNotFound
         nil
-      rescue Faraday::Error::ConnectionFailed, Faraday::Error::ClientError => e
+      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
         raise RequestError, 'Unable to fetch Action Plan JSON from Public Website'
       end
 

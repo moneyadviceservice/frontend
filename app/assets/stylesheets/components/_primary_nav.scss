@@ -2,19 +2,54 @@
 //
 // Styleguide Primary Navigation
 
-.nav--skip-to-content {
+.skip-to-content {
   display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
 }
 
-.nav--primary {
-
+.primary-nav {
+  @extend .list--unstyled;
+  z-index: 2;
 }
 
-.nav--primary__item {
+.primary-nav__item {
+  @extend %heading-nav-one;
+  padding: $bl*1.5 $bl;
+  border-top: 1px solid $color-white-translucent;
 
+  @include respond-to($mq-l) {
+    float: right;
+    display: inline-block;
+    margin: 0 $bl*2;
+    padding: 0;
+    width: 100px;
+    border: 0;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  &:first-child {
+    @include respond-to($mq-l) {
+      width: 85px;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-white-translucent;
+    @include respond-to($mq-l) {
+      border: 0;
+    }
+  }
+
+  > a {
+    color: $color-white;
+  }
 }
 
-.nav--primary__submenu {
+.primary-nav__submenu {
+  display: none;
 
   > li {
     // these have  different style to the primary list items.

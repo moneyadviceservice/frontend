@@ -12,7 +12,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(RepositoryRegistry).to receive(:[]).with(:article) do
+        allow(Registries::Repository).to receive(:[]).with(:article) do
           double(find: data)
         end
       end

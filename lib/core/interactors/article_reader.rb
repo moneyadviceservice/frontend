@@ -1,5 +1,5 @@
 require 'core/entities/article'
-require 'repository_registry'
+require 'core/registries/repository'
 
 module Core
   class ArticleReader
@@ -12,7 +12,7 @@ module Core
     end
 
     def call(&block)
-      data    = RepositoryRegistry[:article].find(id)
+      data    = Registries::Repository[:article].find(id)
       article = Article.new(id, data)
 
       if article.valid?

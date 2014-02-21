@@ -28,6 +28,7 @@
       }
     }
   }
+
   a,
   a:visited {
     display: inline-block;
@@ -40,7 +41,7 @@
   a:hover {
     border: none;
     text-decoration: none;
-    color: #FFF;
+    color: $color-green-secondary;
   }
 
   a:focus {

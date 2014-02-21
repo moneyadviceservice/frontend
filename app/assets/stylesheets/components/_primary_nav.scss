@@ -16,13 +16,13 @@
 
 .primary-nav__item {
   @extend %heading-nav-one;
-  padding: $bl*1.5 $bl;
+  padding: $baseline-unit*1.5 $baseline-unit;
   border-top: 1px solid $color-white-translucent;
 
   @include respond-to($mq-l) {
     float: right;
     display: inline-block;
-    margin: 0 $bl*2;
+    margin: 0 $baseline-unit*2;
     padding: 0;
     width: 100px;
     border: 0;

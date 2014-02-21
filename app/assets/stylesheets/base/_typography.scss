@@ -1,6 +1,6 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: $bl*4;
+  line-height: $baseline-unit*4;
 
   // optimize the font for legibility (kerning of characters)
   -webkit-font-kerning: normal;

@@ -9,10 +9,10 @@
 
   p {
     @extend %text-message-small;
-    margin: $bl 0;
+    margin: $baseline-unit 0;
     @include respond-to($mq-m) {
       @include column(8);
-      padding: $bl 0;
+      padding: $baseline-unit 0;
       text-align: left;
     }
   }
@@ -38,7 +38,7 @@
   color: $color-link-default;
   background: transparent;
   border: 0;
-  padding: $bl 0;
+  padding: $baseline-unit 0;
   border-top: 1px solid $color-grey-light;
   @include respond-to($mq-m) {
     border: 0;
@@ -47,7 +47,7 @@
   &:before {
     @extend .icon;
     display: inline-block;
-    padding-right: $bl;
+    padding-right: $baseline-unit;
   }
 
   &:hover {

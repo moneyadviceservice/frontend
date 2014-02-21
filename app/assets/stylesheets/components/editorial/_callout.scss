@@ -4,14 +4,14 @@
 
 .callout {
   display: block;
-  padding: $bl*3;
-  margin: $bl*3 0;
+  padding: $baseline-unit*3;
+  margin: $baseline-unit*3 0;
   border-radius: 10px;
   color: $color-green-tertiary;
   background-color: $color-callout-background;
 
   > h3 {
-    margin-bottom: $bl*3;
+    margin-bottom: $baseline-unit*3;
   }
 
   > p {
@@ -23,7 +23,7 @@
     @include respond-to($mq-l) {
       @include column(4, 8);
       float: right;
-      margin-bottom: $bl*3;
+      margin-bottom: $baseline-unit*3;
     }
   }
 }

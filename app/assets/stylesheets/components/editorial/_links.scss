@@ -12,7 +12,7 @@ a[href^="#"]:after {
 }
 
 a[href$=".doc"] {
-  margin-top: $bl*3;
+  margin-top: $baseline-unit*3;
 
   &:before {
     @extend .icon;

@@ -1,9 +1,12 @@
 $responsive: true;
 
-@import 'lib/grid'; //# must be before variables
-@import 'lib/variables';
+@import 'lib/grid';
+@import 'lib/variables/colours';
+@import 'lib/variables/grid';
+@import 'lib/variables/buttons';
 @import 'lib/functions';
-@import 'lib/mixins';
+@import 'lib/mixins/breakpoints';
+@import 'lib/mixins/type';
 @import 'lib/placeholders';
 
 

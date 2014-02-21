@@ -1,8 +1,8 @@
 .add-action {
   position: relative;
   background-color: $color-article-cta;
-  padding: $bl $bl*2;
-  margin: $bl*4 0;
+  padding: $baseline-unit $baseline-unit*2;
+  margin: $baseline-unit*4 0;
 
   &:before {
     position: absolute;

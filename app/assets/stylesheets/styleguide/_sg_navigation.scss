@@ -1,54 +1,73 @@
-%unstyled-nav {
+%styleguideNav {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.styleguide-nav-container {
+.primaryNav {
   width: 100%;
-  height: 49px;
-}
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 2;
+  background-color: $color-navBackground;
+  > ul {
+    @extend %styleguideNav;
 
-.styleguide-nav {
-  position: fixed;
-  z-index: 9;
-  background-color: $color-nav-background;
-  border-bottom: 1px solid $color-nav-border;
-  width: 100%;
-  @extend %unstyled-nav;
+    > li {
+      width: 100%;
 
-  > li {
-    width: 100%;
-    @include respond-to($mq-s) {
-      display: inline-block;
-      width: auto;
-      border-bottom: none;
+      &:hover .styleguidePrimaryNav-subMenu,
+      &:focus .styleguidePrimaryNav-subMenu {
+        background-color: $color-subMenuBackground;
+      }
+
+      @include respond-to($mq-s) {
+        display: inline-block;
+        width: auto;
+        border-bottom: none;
+      }
     }
   }
+  a,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    color: $color-navText;
+  }
+
+  a:hover {
+    border: none;
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  a:focus {
+    outline: 1px solid;
+    border-bottom: none;
+  }
+
 }
 
-.has-sub-menu > a:first-child {
-  font-weight: 600;
-}
-
-.styleguide-nav__submenu {
-  @extend %unstyled-nav;
+.primaryNav-subMenu {
+  @extend %styleguideNav;
   position: relative;
   z-index: 1;
-  background-color: $color-nav-background;
+  background-color: $color-subMenuBackground;
+
   @include respond-to($mq-s) {
     position: absolute;
   }
 }
 
-.styleguide-nav__toggle {
+.navToggle {
   cursor: pointer;
   width: 100%;
   padding: 12px;
   border: none;
-  border-bottom: 1px solid $color-nav-border;
-  color: $color-nav-text;
-  background-color: $color-nav-background;
+  color: $color-navText;
+  background-color: $color-navBackground;
   text-align: left;
   line-height: 2;
   @include respond-to($mq-s) {
@@ -56,37 +75,18 @@
   }
 }
 
-.js .styleguide-nav {
+.js .primaryNav-list {
   display: none;
   @include respond-to($mq-s) {
     display: block;
   }
 }
 
-.js .styleguide-nav__submenu {
+.js .primaryNav-subMenu {
   display: none;
 }
 
-nav a {
+.navIcon {
+  font-size: 8px;
   display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  padding: 12px;
-  font-size: 14px;
-  color: $color-nav-text;
-}
-
-nav a:visited {
-  color: $color-nav-text;;
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: $color-green-primary;
-  transition: all 1s ease;
-}
-
-nav a:focus {
-  outline: 1px solid;
-  border-bottom: none;
 }

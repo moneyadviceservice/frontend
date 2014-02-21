@@ -1,5 +1,5 @@
 require 'core/entities/action_plan'
-require 'repository_registry'
+require 'core/registries/repository'
 
 module Core
   class ActionPlanReader
@@ -11,7 +11,7 @@ module Core
     end
 
     def call(&block)
-      data        = RepositoryRegistry[:action_plan].find(id)
+      data        = Registries::Repository[:action_plan].find(id)
       action_plan = ActionPlan.new(id, data)
 
       if action_plan.valid?

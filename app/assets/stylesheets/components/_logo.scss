@@ -1,6 +1,7 @@
 .mas-logo {
   height: 36px;
   width: 216px;
+  margin-left: $bl;
   background: transparent image_url('mas-logo.png') 0 0 no-repeat;
 
   .svg & {

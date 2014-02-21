@@ -42,6 +42,8 @@ Rails.application.routes.draw do
           get 'css_basic', path: '/basic'
           get 'css_article_demo', path: '/article-demo'
           get 'css_default_styles', path: '/default-styles'
+          get 'css_header_non_js', path: '/header-non-js'
+          get 'css_header_js', path: '/header-js'
         end
 
         scope 'sass' do

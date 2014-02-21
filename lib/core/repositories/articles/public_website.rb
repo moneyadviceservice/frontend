@@ -1,11 +1,12 @@
-require 'core/faraday_connection_factory'
+require 'core/registries/connection'
 require 'core/repositories/repository'
+require 'faraday'
 
 module Core::Repositories
   module Articles
     class PublicWebsite < Core::Repository
-      def initialize(url)
-        self.connection = Core::FaradayConnectionFactory.build(url)
+      def initialize
+        self.connection = Core::Registries::Connection[:public_website]
       end
 
       def find(id)

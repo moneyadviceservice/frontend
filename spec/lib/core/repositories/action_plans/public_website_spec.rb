@@ -6,11 +6,15 @@ module Core::Repositories::ActionPlans
     let(:url) { 'https://example.com/path/to/url' }
 
     describe '#find' do
-      subject(:repository) { described_class.new(url) }
+      subject(:repository) { described_class.new }
 
       let(:id) { 'beginners-guide-to-managing-your-money' }
 
       before do
+        allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
+          Core::FaradayConnectionFactory.build(url)
+        end
+
         stub_request(:get, "https://example.com/en/action_plans/#{id}.json").
           to_return(status: status, body: body, headers: {})
       end

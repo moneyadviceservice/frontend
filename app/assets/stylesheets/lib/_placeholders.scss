@@ -34,6 +34,22 @@
   @include font-size(14);
 }
 
+%heading-nav-one {
+  @extend %font-museo700;
+  @include font-size(16);
+//  line-height: 1.3;
+}
+
+%heading-nav-two {
+  @extend %font-museo700;
+  @include font-size(14);
+}
+
+%text-search-box {
+  @extend %font-museo700;
+  @include font-size(16);
+}
+
 // Headings
 %heading-homepage {
   @extend %font-museo700;

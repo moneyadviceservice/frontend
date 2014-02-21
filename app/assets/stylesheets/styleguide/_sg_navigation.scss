@@ -19,7 +19,7 @@
 
   > li {
     width: 100%;
-    @include respond-to($mq-s) {
+    @include respond-to($mq-l) {
       display: inline-block;
       width: auto;
       border-bottom: none;

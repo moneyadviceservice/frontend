@@ -13,6 +13,14 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def css_header_non_js
+    render layout: 'styleguide/page'
+  end
+
+  def css_header_js
+    render layout: 'styleguide/page_no_header'
+  end
+
   def pages_action_plan
     render layout: 'styleguide/page'
   end

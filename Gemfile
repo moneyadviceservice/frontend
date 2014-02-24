@@ -2,15 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.0.rc1'
 
-gem 'activeresource', '~> 4.0.0'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails'
 gem 'draper', '~> 1.3.0'
+gem 'faraday_middleware'
 gem 'foreman'
 gem 'gaffe'
 gem 'jquery-rails'
 gem 'kss'
+gem 'link_header'
 gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
@@ -35,6 +36,7 @@ end
 group :test do
   gem 'faker'
   gem 'rspec_junit_formatter'
+  gem 'thin'
   gem 'vcr'
   gem 'webmock'
 end

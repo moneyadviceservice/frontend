@@ -40,6 +40,7 @@ $color-blue-pale: #ebf2f5;
 $color-blue-light: #e6f2f7; // not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
+$color-blue-extra-dark: #0a4358;
 
 $color-grey-pale: #F6F8F7; // not in the standard palette
 $color-grey-light: #a8b2ba; // not in the standard palette
@@ -127,3 +128,5 @@ $mq-navigation-break: 700px;
 
 // Opt-Out Bar background
 $color-opt-out-bar: $color-blue-pale;
+
+$color-feedback-background: $color-blue-extra-dark;

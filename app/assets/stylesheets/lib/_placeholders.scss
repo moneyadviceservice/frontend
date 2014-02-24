@@ -30,6 +30,11 @@
   @include font-size(16);
 }
 
+%text-feedback {
+  @extend %font-museo700;
+  @include font-size(14);
+}
+
 %text--table {
   @include font-size(14);
 }

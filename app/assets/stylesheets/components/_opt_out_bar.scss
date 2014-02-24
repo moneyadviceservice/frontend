@@ -3,19 +3,17 @@
 // Styleguide Opt out bar
 
 .opt-out-bar {
-  //  @include column(12);
   overflow: hidden;
   text-align: center;
   background-color: $color-opt-out-bar;
 
   p {
+    @extend %text-message-small;
     margin: $bl 0;
-    line-height: 1.5;
-    @include font-size(14);
     @include respond-to($mq-m) {
+      @include column(6);
       padding: $bl 0;
       text-align: left;
-      @include column(6);
     }
   }
 
@@ -25,29 +23,26 @@
       text-align: right;
     }
   }
-
 }
 
-.button--link {
-  @include font-size(14);
+.opt-out-bar__button {
+  @extend %text-message-small;
   @extend %link-nav;
   display: inline-block;
   background: transparent;
-  border: none;
+  border: 0;
   padding: $bl 0;
   border-top: 1px solid $color-grey-light;
-
   @include respond-to($mq-m) {
     border: 0;
   }
 
   &:before {
-    padding-right: $bl;
     @extend .icon;
+    padding-right: $bl;
   }
 
   &:hover {
     text-decoration: underline;
   }
 }
-

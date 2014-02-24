@@ -38,6 +38,11 @@
   @include font-size(16);
 }
 
+%text-message-small {
+  line-height: 1.5;
+  @include font-size(14);
+}
+
 %text-feedback {
   @extend %font-museo300;
   @include font-size(14);

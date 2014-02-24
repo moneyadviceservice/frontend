@@ -17,6 +17,11 @@ guard :livereload do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(erb|haml|js|css|scss|sass|coffee|eco|png|gif|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
 
+guard :rails, cmd: 'spring rails' do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
 guard :rspec, cmd: 'spring rspec', all_on_start: false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$}) { |m| "spec/lib/#{m[1]}_spec.rb" }

@@ -2,7 +2,32 @@
 //
 // Styleguide Website version toggle
 
-.message-bar {
+.opt-out-bar {
+  overflow: hidden;
+  padding: 0 $bl;
+  background-color: $color-opt-out-bar;
+  text-align: center;
+
+  p {
+    margin: $bl 0;
+    line-height: 1.5;
+    @include font-size(14);
+  }
+
+  .button--link {
+    color: $color-link-nav;
+    background: transparent;
+    border: none;
+    padding: 0;
+    @include font-size(14);
+  }
+
+  form {
+    width: 60%;
+    margin: 0 auto;
+    padding: $bl 0 0 0;
+    border-top: 1px solid $color-grey-light;
+  }
 
 }
 

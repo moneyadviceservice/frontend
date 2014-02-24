@@ -4,7 +4,7 @@
   padding: $bl*1.5 0 $bl 0;
 
   a {
-  color: $color-white;
+    color: $color-white;
   }
 
   p {
@@ -19,8 +19,14 @@
     float: left;
     display: inline-block;
     padding: 0 $bl*2 0 $bl;
-    @include respond-to($mq-s){
+    @include respond-to($mq-s) {
       @include font-size(24);
+    }
+  }
+
+  .line-break {
+    @include respond-to($mq-s) {
+      display: none;
     }
   }
 

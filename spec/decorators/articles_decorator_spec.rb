@@ -51,5 +51,13 @@ describe ArticleDecorator do
         expect(nodes).to_not be_empty
       end
     end
+
+    context 'when the object contains collapsible content' do
+      let(:fixture) { 'spec/fixtures/collapsibe.json' }
+
+      it 'strips collapse span' do
+        expect(html.search(HTMLProcessor::COLLAPSIBLE_SPAN)).to be_empty
+      end
+    end
   end
 end

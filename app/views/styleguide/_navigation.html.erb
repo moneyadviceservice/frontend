@@ -1,20 +1,12 @@
-<nav class="primaryNav">
-  <ul class="primaryNav-list">
+<nav class="styleguide-nav-container">
+  <ul class="styleguide-nav">
     <li><%= link_to 'Overview', styleguide_path %></li>
 
     <li><%= link_to 'HTML', html_styleguide_path %></li>
 
-    <li class="has-subMenu">
-      <%= link_to css_overview_styleguide_path do %>
-        CSS
-      <% end %>
-      <ul class="primaryNav-subMenu">
-        <li><%= link_to 'Overview', css_overview_styleguide_path %></li>
-        <li><%= link_to 'Basic styles', css_basic_styleguide_path %></li>
-        <li><%= link_to 'Article demo', css_article_demo_styleguide_path %></li>
-        <li><%= link_to 'Default demo', css_default_styles_styleguide_path %></li>
-      </ul>
-    </li>
+    <li><%= link_to 'CSS', css_overview_styleguide_path %></li>
+
+    <li><%= link_to 'Basic', css_basic_styleguide_path %></li>
 
     <!--<li><%= link_to 'Forms', forms_styleguide_path %></li>-->
 
@@ -22,12 +14,12 @@
 
     <li><%= link_to 'Components', components_styleguide_path %></li>
 
-    <li class="has-subMenu">
+    <li class="has-sub-menu">
       <%= link_to pages_styleguide_path do %>
         Pages
       <% end %>
 
-      <ul class="primaryNav-subMenu">
+      <ul class="styleguide-nav__submenu">
         <li><%= link_to 'Homepage', pages_homepage_styleguide_path %></li>
         <li><%= link_to 'Error Page', pages_error_styleguide_path %></li>
         <li><%= link_to 'Article / Guide', pages_guide_styleguide_path %></li>
@@ -35,11 +27,24 @@
       </ul>
     </li>
 
-    <li class="has-subMenu">
+    <li class="has-sub-menu">
+      <%= link_to pages_styleguide_path do %>
+        Demos
+      <% end %>
+
+      <ul class="styleguide-nav__submenu">
+        <li><%= link_to 'Article demo', css_article_demo_styleguide_path %></li>
+        <li><%= link_to 'Default styles demo', css_default_styles_styleguide_path %></li>
+        <li><%= link_to 'Header (non-JS)', css_header_non_js_styleguide_path %></li>
+        <li><%= link_to 'Header (JS)', css_header_js_styleguide_path %></li>
+      </ul>
+    </li>
+
+    <li class="has-sub-menu">
       <%= link_to sass_overview_styleguide_path do %>
         Sass
       <% end %>
-      <ul class="primaryNav-subMenu">
+      <ul class="styleguide-nav__submenu">
         <li><%= link_to 'Overview', sass_overview_styleguide_path %></li>
         <li><%= link_to 'Variables', sass_variables_styleguide_path %></li>
       </ul>

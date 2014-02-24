@@ -6,6 +6,6 @@
   @extend %text-intro-paragraph;
   @extend %clearfix;
   clear: both;
-  line-height: $bl*5;
+  line-height: $baseline-unit*5;
 }
 

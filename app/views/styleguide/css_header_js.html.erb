@@ -1,25 +1,17 @@
-<header role="banner">
-  <a href="#main">Skip to main content</a>
-  <a href="/">the Money Advice Service</a>
+<header class="header" role="banner">
+  <div class="l-container">
+    <a class="skip-to-content" href="#main">Skip to main content</a>
+    <div class="mas-logo">
+      <span class="visually-hidden">the Money Advice Service</span>
+    </div>
+  </div>
 
-  <nav role="navigation" aria-labelledby="nav-label">
-    <h2 class="visually-hidden"><span id="nav-label">Main</span> navigation</h2>
-
-    <!-- inject button for menu with js -->
-    <!--
-    <button>Menu</button>
-    -->
-
-    <!-- inject button for search with js -->
-    <!--
-    <button>Search</button>
-    -->
-
-    <ul>
-      <li>
+  <nav class="l-primary-nav l-container" role="navigation">
+    <ul class="primary-nav">
+      <li class="primary-nav__item">
         <a href="/categories/life-events">Life events</a>
 
-        <ul> <!-- hide lists with display:none in .js context -->
+        <ul class="primary-nav__submenu is-expanded" aria-hidden="false">
           <li><a href="/categories/young-people-and-money">Leaving school or college</a></li>
           <li><a href="/categories/setting-up-home">Setting up home</a></li>
           <li><a href="/categories/having-a-baby">Having a baby</a></li>
@@ -32,10 +24,10 @@
         </ul>
       </li>
 
-      <li>
-        <a href="/categories/managing-your-money">Managing your money</a>
+      <li class="primary-nav__item">
+        <a href="/categories/managing-your-money">Managing your&nbsp;money</a>
 
-        <ul>
+        <ul class="primary-nav__submenu" aria-hidden="true">
           <li><a href="/categories/managing-your-money-better">Managing your money better</a></li>
           <li><a href="/categories/how-to-review-or-reduce-borrowing">How to review or reduce borrowing</a></li>
           <li><a href="/categories/money-saving-tips">Money saving tips</a></li>
@@ -51,10 +43,10 @@
         </ul>
       </li>
 
-      <li>
+      <li class="primary-nav__item">
         <a href="/categories/money-topics">Money topics</a>
 
-        <ul>
+        <ul class="primary-nav__submenu" aria-hidden="true">
           <li><a href="/categories/saving-and-investing">Saving and investing</a></li>
           <li><a href="/categories/borrowing-money">Borrowing money</a></li>
           <li><a href="/categories/managing-debt">Debt management</a></li>
@@ -64,10 +56,10 @@
         </ul>
       </li>
 
-      <li>
+      <li class="primary-nav__item">
         <a href="/categories/tools--resources">Tools &amp; resources</a>
 
-        <ul>
+        <ul class="primary-nav__submenu" aria-hidden="true">
           <li><a href="/categories/budget-planner">Budget planner</a></li>
           <li><a href="/categories/health-check">Money Health Check</a></li>
           <li><a href="/categories/action-plans">Action plans</a></li>
@@ -82,16 +74,25 @@
         </ul>
       </li>
 
-      <li>
+      <li class="primary-nav__item">
         <a href="/news">News &amp; features</a>
       </li>
     </ul>
 
-
-    <form action="/search" method="get" role="search">
-      <label class="visually-hidden">Search the Money Advice Service</label>
-      <input type="text" placeholder="Search"/>
-      <button type="submit">Search</button>
-    </form>
   </nav>
+
+  <form class="search-box" action="/search" method="get" role="search">
+    <div class="l-search-box">
+      <label class="visually-hidden">Search the Money Advice Service</label>
+      <input class="search-box__input" type="text" placeholder="Search..."/>
+      <button class="search-box__submit icon icon--search" type="submit">
+        <span class="visually-hidden">Search</span>
+      </button>
+    </div>
+  </form>
+
+
 </header>
+
+
+<h1>js view of header</h1>

@@ -11,7 +11,7 @@
   @include font-size(16);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  margin: $bl*2 0;
+  margin: $baseline-unit*2 0;
 }
 
 %text-intro-paragraph {
@@ -34,20 +34,38 @@
   @include font-size(14);
 }
 
+%heading-nav-one {
+  @extend %font-museo700;
+  @include font-size(14);
+  @include respond-to($mq-m){
+    @include font-size(16);
+  }
+}
+
+%heading-nav-two {
+  @extend %font-museo700;
+  @include font-size(14);
+}
+
+%text-search-box {
+  @extend %font-museo700;
+  @include font-size(16);
+}
+
 // Headings
 %heading-homepage {
   @extend %font-museo700;
   @include font-size(48);
   line-height: 1.2;
-  margin: 0 0 $bl*2 0;
+  margin: 0 0 $baseline-unit*2 0;
   color: $color-green-secondary;
 }
 
 %heading-one {
   @extend %font-museo700;
   @include font-size(36);
-  line-height: $bl*7;
-  margin: 0 0 $bl*2 0;
+  line-height: $baseline-unit*7;
+  margin: 0 0 $baseline-unit*2 0;
   color: $color-green-secondary;
 }
 
@@ -55,7 +73,7 @@
   @extend %font-museo700;
   @include font-size(24);
   line-height: 1.4;
-  margin: 0 0 $bl*2 0;
+  margin: 0 0 $baseline-unit*2 0;
   color: $color-green-secondary;
 }
 
@@ -63,7 +81,7 @@
   @extend %font-museo700;
   @include font-size(20);
   line-height: 1.4;
-  margin: 0 0 $bl*2 0;
+  margin: 0 0 $baseline-unit*2 0;
   color: $color-green-secondary;
 }
 
@@ -71,7 +89,7 @@
   @extend %font-museo700;
   @include font-size(16);
   line-height: 1.4;
-  margin: 0 0 $bl 0;
+  margin: 0 0 $baseline-unit 0;
   color: $color-text-default;
 }
 

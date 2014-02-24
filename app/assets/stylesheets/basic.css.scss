@@ -3,9 +3,14 @@
 
 $responsive: false;
 
-@import 'lib/variables';
+@import 'lib/grid';
+
+@import 'lib/variables/grid';
+@import 'lib/variables/buttons';
+@import 'lib/variables/colours';
 @import 'lib/functions';
-@import 'lib/mixins';
+@import 'lib/mixins/type';
+@import 'lib/mixins/breakpoints';
 @import 'lib/placeholders';
 
 @import 'base/default';

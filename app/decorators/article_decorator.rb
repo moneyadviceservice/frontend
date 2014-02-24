@@ -23,7 +23,9 @@ class ArticleDecorator < Draper::Decorator
     {
       HTMLProcessor::NodeRemover  => [HTMLProcessor::INTRO_IMG,
                                       HTMLProcessor::ACTION_EMAIL,
-                                      HTMLProcessor::ACTION_FORM],
+                                      HTMLProcessor::ACTION_FORM,
+                                      HTMLProcessor::COLLAPSIBLE_SPAN
+      ],
 
       HTMLProcessor::VideoWrapper => [HTMLProcessor::VIDEO_IFRAME],
 

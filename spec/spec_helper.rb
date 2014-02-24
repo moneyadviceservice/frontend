@@ -1,5 +1,10 @@
 ENV['RAILS_ENV'] = 'test'
 
+begin
+  require 'pry'
+rescue LoadError
+end
+
 require_relative '../config/environment'
 require 'mas/development_dependencies/rspec/spec_helper'
 require 'webmock/rspec'

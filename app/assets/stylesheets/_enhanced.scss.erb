@@ -1,9 +1,12 @@
-
-
 @import 'lib/grid';
-@import 'lib/variables';
+
+@import 'lib/variables/grid';
+@import 'lib/variables/buttons';
+@import 'lib/variables/colours';
+
 @import 'lib/functions';
-@import 'lib/mixins';
+@import 'lib/mixins/type';
+@import 'lib/mixins/breakpoints';
 @import 'lib/placeholders';
 
 @import 'utilities/visually_hidden';
@@ -16,6 +19,7 @@
 <% end %>
 
 //atoms
+@import 'components/logo';
 @import 'components/intro';
 @import 'components/lists';
 @import 'components/icon';
@@ -28,6 +32,8 @@
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
 @import 'components/header';
+@import 'components/primary_nav';
+@import 'components/search_box';
 
 //standalone content
 @import 'components/error_page_message';

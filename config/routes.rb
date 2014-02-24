@@ -1,8 +1,6 @@
 class ValidArticle
-  BLACKLIST = ['about-our-debt-work',
-              'am-ein-gwaith-dyled',
-              'debt-publications',
-              'cyhoeddiadau-ar-ddyledion']
+  BLACKLIST = %w(about-our-debt-work am-ein-gwaith-dyled
+                 debt-publications cyhoeddiadau-ar-ddyledion)
 
   def matches?(request)
     BLACKLIST.exclude?(request.parameters['id'])
@@ -15,7 +13,7 @@ Rails.application.routes.draw do
   scope '/:locale' do
     resources :action_plans, only: 'show'
     resources :articles,
-              only: 'show',
+              only:        'show',
               constraints: ValidArticle.new
 
     resource :styleguide,
@@ -43,6 +41,8 @@ Rails.application.routes.draw do
           get 'css_basic', path: '/basic'
           get 'css_article_demo', path: '/article-demo'
           get 'css_default_styles', path: '/default-styles'
+          get 'css_header_non_js', path: '/header-non-js'
+          get 'css_header_js', path: '/header-js'
         end
 
         scope 'sass' do

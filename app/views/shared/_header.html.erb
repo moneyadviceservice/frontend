@@ -1,5 +1,15 @@
-<header class="header">
+<header class="header" role="banner">
   <div class="l-container">
-    <%= image_tag('mas-logo.png', size: "216x36", alt: "the Money Advice Service") %>
+    <a class="skip-to-content" href="#main">Skip to main content</a>
+    <div class="mas-logo">
+      <span class="visually-hidden">the Money Advice Service</span>
+    </div>
   </div>
+
+  <nav class="l-primary-nav l-container" role="navigation">
+    <%= render 'shared/primary_nav' %>
+  </nav>
+
+  <%= render 'shared/search_box' %>
+
 </header>

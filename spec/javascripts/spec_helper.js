@@ -1,4 +1,3 @@
-//= require_tree ./templates
 //= require sinonjs/sinon
 //= require jquery
 //= require chai-jquery

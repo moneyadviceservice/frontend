@@ -36,6 +36,7 @@ $color-green-medium: #81c724;
 $color-teal-light: #109e89;
 $color-teal-dark: #0e7f6c;
 
+$color-blue-pale: #ebf2f5;
 $color-blue-light: #e6f2f7; // not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
@@ -123,3 +124,6 @@ $color-sub-menu-background: #393939;
 
 // Media Queries
 $mq-navigation-break: 700px;
+
+// Opt-Out Bar background
+$color-opt-out-bar: $color-blue-pale;

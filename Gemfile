@@ -46,6 +46,7 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'mas-development_dependencies',
       git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
+  gem 'chai-jquery-rails'
 end
 
 group :doc do

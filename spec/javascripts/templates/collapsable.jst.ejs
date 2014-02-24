@@ -5,27 +5,63 @@
       min-height:20px;
       background:red;
     }
-    .js-active.collapsible-section {display:none;}
+    .is-on.collapsible-section {display:block;}
+    .is-off.collapsible-section {display:none;}
   </style>
 
-  <h2 id="toggleButton1" class="collapsible">Trigger 1</h2>
-  <div id="toggleTarget1" class="collapsible-section">
-    <p>Target content 1</p>
-  </div>
+  <section>
+    <h1>Basic Tests</h1>
+    <h2 id="toggleButton1" class="collapsible">Trigger 1</h2>
+    <div id="toggleTarget1" class="collapsible-section">
+      <p>Target content 1</p>
+    </div>
 
-  <h2 id="toggleButton2" class="collapsible js-active">Trigger 2</h2>
-  <div id="toggleTarget2" class="collapsible-section js-active">
-    <p>Target content 2</p>
-  </div>
+    <h2 id="toggleButton2" class="collapsible is-off">Trigger 2</h2>
+    <div id="toggleTarget2" class="collapsible-section is-off">
+      <p>Target content 2</p>
+    </div>
 
-  <h2 class="collapsible">Trigger 3</h2>
-  <div class="collapsible-section">
-    <p>Target content 3</p>
-  </div>
+    <h2 class="collapsible">Trigger 3</h2>
+    <div class="collapsible-section">
+      <p>Target content 3</p>
+    </div>
 
-  <h2 class="collapsible">Trigger 4</h2>
-  <div class="collapsible-section">
-    <p>Target content 4</p>
-  </div>
+    <h2 class="collapsible">Trigger 4</h2>
+    <div class="collapsible-section">
+      <p>Target content 4</p>
+    </div>
+  </section>
+
+  <section>
+    <h1>Options test</h1>
+    
+    <ul id="optionsTest">
+      <li>
+        <a href="#1">trigger</a>
+        <ul>
+          <li><a href="#11">link</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#2">trigger</a>
+        <ul>
+          <li><a href="#22">link</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#3">trigger</a>
+        <ul>
+          <li><a href="#33">link</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#4">trigger</a>
+        <ul>
+          <li><a href="#44">link</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
   
 </body>

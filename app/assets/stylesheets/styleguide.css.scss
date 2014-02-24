@@ -1,14 +1,6 @@
 $responsive: true;
 
-@import 'lib/grid';
-@import 'lib/variables/colours';
-@import 'lib/variables/grid';
-@import 'lib/variables/buttons';
-@import 'lib/functions';
-@import 'lib/mixins/breakpoints';
-@import 'lib/mixins/type';
-@import 'lib/placeholders';
-
+@import 'libs';
 
 @import 'styleguide/sg_syntax';
 @import 'styleguide/sg_base';

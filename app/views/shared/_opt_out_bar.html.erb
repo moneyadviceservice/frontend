@@ -1,8 +1,8 @@
-<div class="l-container message-bar">
-  <p>
-    <%= t('opt_out.message') %>
+<div class="opt-out-bar">
+  <div class="l-container">
+    <p><%= t('opt_out.message') %></p>
     <%= form_tag(opt_out_index_path) do %>
-      <%= button_tag(t('opt_out.button'))%>
+      <%= button_tag(t('opt_out.button'), class: 'button--link icon--desktop') %>
     <% end %>
-  </p>
+  </div>
 </div>

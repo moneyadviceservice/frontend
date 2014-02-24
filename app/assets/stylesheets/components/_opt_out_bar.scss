@@ -3,31 +3,44 @@
 // Styleguide Website version toggle
 
 .opt-out-bar {
+//  @include column(12);
   overflow: hidden;
-  padding: 0 $bl;
-  background-color: $color-opt-out-bar;
   text-align: center;
+  background-color: $color-opt-out-bar;
 
   p {
     margin: $bl 0;
     line-height: 1.5;
     @include font-size(14);
-  }
-
-  .button--link {
-    color: $color-link-nav;
-    background: transparent;
-    border: none;
-    padding: 0;
-    @include font-size(14);
-  }
-
-  form {
-    width: 60%;
-    margin: 0 auto;
-    padding: $bl 0 0 0;
-    border-top: 1px solid $color-grey-light;
+    @include respond-to($mq-m) {
+      padding: $bl 0;
+      text-align: left;
+      @include column(6);
+    }
   }
 
 }
+  .button--link {
+    @include font-size(14);
+    @extend %link-nav;
+    background: transparent;
+    border: none;
+    padding: $bl 0;
+    border-top: 1px solid $color-grey-light;
+
+    @include respond-to($mq-m) {
+      border: 0;
+      text-align: right;
+      @include column(6);
+    }
+
+    &:before {
+      padding-right: $bl;
+      @extend .icon;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 

@@ -1,19 +1,27 @@
 .feedback {
   overflow: hidden;
   background-color: $color-feedback-background;
+  padding: $bl*1.5 0 $bl 0;
+
+  a {
   color: $color-white;
-  padding: $bl*2 0;
+  }
 
   p {
     @extend %text-feedback;
     @include font-size(14);
+    line-height: 1.5;
     margin: 0;
   }
 
   .icon--speech {
-    @include font-size(50);
+    @include font-size(48);
     float: left;
-    padding: 0 $bl*2;
+    display: inline-block;
+    padding: 0 $bl*2 0 $bl;
+    @include respond-to($mq-s){
+      @include font-size(24);
+    }
   }
 
 }

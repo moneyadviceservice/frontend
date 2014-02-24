@@ -4,7 +4,12 @@
 
 .footer-site-links {
   background-color: $color-footer-bg;
-  padding: $bl*5 0 $bl*6 0;
+  padding: 0 0 $bl*6 0;
+
+  ul {
+    padding: $bl*4 0;
+    border-top: 1px solid darken($color-grey-pale, 10%);
+  }
 
   li {
     font-family: MuseoSlab;

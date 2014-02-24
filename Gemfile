@@ -28,6 +28,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sass'
+  gem 'guard-shell'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
 end

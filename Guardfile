@@ -34,3 +34,7 @@ guard :rspec, cmd: 'spring rspec', all_on_start: false do
   watch('config/routes.rb') { 'spec/routing' }
   watch('app/controllers/application_controller.rb') { 'spec/controllers' }
 end
+
+guard :shell do
+  watch('bower.json') { `bower install` }
+end

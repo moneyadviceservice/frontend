@@ -1,3 +1,7 @@
+// Feedback banner
+//
+// Styleguide Feedback
+
 .feedback {
   overflow: hidden;
   background-color: $color-feedback-background;
@@ -24,7 +28,7 @@
     }
   }
 
-  .line-break {
+  br {
     @include respond-to($mq-s) {
       display: none;
     }

@@ -39,8 +39,9 @@
 }
 
 %text-message-small {
-  line-height: 1.5;
   @include font-size(14);
+  line-height: 1.5;
+  font-weight: normal;
 }
 
 %text-feedback {

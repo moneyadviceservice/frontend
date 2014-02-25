@@ -1,8 +1,10 @@
 <% content_for :main do %>
+  <%= render 'shared/opt_out_bar' %>
   <%= render 'shared/header' %>
   <div class="l-container l-container--body">
     <%= yield %>
   </div>
+  <%= render 'shared/feedback' %>
   <%= render 'shared/footer_site_links', locals: %w(en) %>
   <%= render 'shared/footer_social_links' %>
 <% end %>

@@ -19,6 +19,7 @@
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
 }
 
 .icon--masLogo {
@@ -80,5 +81,23 @@
 .icon--closed {
   &:before {
     content: '\e607';
+  }
+}
+
+.icon--close {
+  &:before {
+    content: '\e012';
+  }
+}
+
+.icon--desktop {
+  &:before {
+    content: '\e603';
+  }
+}
+
+.icon--speech {
+  &:before {
+    content: '\e00F';
   }
 }

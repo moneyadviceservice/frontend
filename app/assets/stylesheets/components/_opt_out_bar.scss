@@ -11,7 +11,7 @@
     @extend %text-message-small;
     margin: $bl 0;
     @include respond-to($mq-m) {
-      @include column(6);
+      @include column(8);
       padding: $bl 0;
       text-align: left;
     }
@@ -19,7 +19,7 @@
 
   form {
     @include respond-to($mq-m) {
-      @include column(6);
+      @include column(4);
       text-align: right;
     }
   }

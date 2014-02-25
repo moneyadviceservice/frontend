@@ -10,6 +10,7 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
   paths:                     {
     analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
     collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
+    linkParent:  "<%= requirejs_path('modules/mas_linkParent') %>",
     jquery:      "<%= requirejs_path('jquery/dist/jquery') %>",
     pubsub:      "<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>",
     waypoints:   "<%= requirejs_path('jquery-waypoints/waypoints') %>",

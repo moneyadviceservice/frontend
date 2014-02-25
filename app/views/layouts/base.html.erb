@@ -34,11 +34,7 @@
   <%= yield :head %>
 
   <script type="text/javascript">
-    <% if Rails.env.development? %>
-      <%= raw Rails.application.assets['in_head.js'].to_s %>
-    <% else %>
-      <%= raw Uglifier.new(:copyright => false).compile Rails.application.assets['in_head.js'].to_s %>
-    <% end %>
+    <%= raw Rails.application.assets['in_head.js'].to_s %>
   </script>
 
   <%= yield :js_bootstrap %>

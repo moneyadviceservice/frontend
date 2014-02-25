@@ -41,6 +41,11 @@ group :test do
   gem 'webmock'
 end
 
+group :production do
+  gem 'syslog-logger'
+  gem 'unicorn-rails'
+end
+
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'

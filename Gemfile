@@ -11,7 +11,6 @@ gem 'link_header'
 gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
-gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :assets do
@@ -20,7 +19,6 @@ group :assets do
   gem 'compass-rails'
   gem 'jquery-rails'
   gem 'sass-rails', '~> 4.0.0'
-
 end
 
 group :development do

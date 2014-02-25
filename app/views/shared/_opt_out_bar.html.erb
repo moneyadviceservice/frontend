@@ -2,6 +2,7 @@
   <div class="l-container">
     <p><%= t('opt_out.message') %></p>
     <%= form_tag(opt_out_path) do %>
+      <%= hidden_field_tag(:redirection_page, request.original_url) %>
       <%= button_tag(t('opt_out.call_to_action'), class: 'opt-out-bar__button icon--desktop') %>
     <% end %>
   </div>

@@ -1,7 +1,7 @@
 // Styleguide layout-container
 .l-container {
   @extend %clearfix;
-  max-width: $mq-xl;
+  max-width: $mq-l;
   margin: 0 auto;
 }
 

@@ -9,7 +9,7 @@ end
 
 Rails.application.routes.draw do
   root 'home#show'
-  resources :opt_out, only: 'create'
+  post :opt_out, to: 'opt_out#create'
 
   scope '/:locale' do
     resources :action_plans, only: 'show'

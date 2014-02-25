@@ -9,7 +9,7 @@ describe OptOutController do
     it 'redirects back to the referring page' do
       post :create
 
-      expect(response).to redirect_to previous_page
+      expect(response).to redirect_to(previous_page)
     end
 
     it 'set the opt-int cookie to 0' do

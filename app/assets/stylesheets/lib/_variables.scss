@@ -17,7 +17,7 @@ $lighten-button: 10%;
 $padding-vertical-button: 12px;
 $padding-horizontal-button: 22px;
 
-// Color palette
+// Palette
 $color-white: #FFF; // not in the standard palette
 $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 
@@ -63,14 +63,14 @@ $color-orange-dark: #c95d2d;
 $color-yellow-light: #ebd520;
 $color-yellow-dark: #ddae1f;
 
-// Page Wide Colours
+// Global Colours
 $color-site-bg: $color-green-primary;
 
-// Typography Colours
+// Typography
 $color-text-default: $color-black;
 $color-text-icon: $color-white;
 
-// Default Link Colours
+// Default Links
 $color-link-default: $color-blue-medium;
 $color-link-visited: $color-blue-dark ;
 $color-link-focus: $color-blue-light;
@@ -82,18 +82,18 @@ $color-link-nav-visited: $color-green-secondary;
 // Article Links
 $color-link-external: $color-grey-light;
 
-// Tables Colours
+// Tables
 $color-table-heading: $color-white;
 $color-table-background: $color-green-primary;
 $color-table-background-alt: $color-green-paler;
 $color-table-border: $color-grey-light;
 
-// List Colours
+// Lists
 $color-list-bullet: $color-green-secondary;
 $color-list-yes: $color-green-secondary;
 $color-list-no: $color-red-dark;
 
-// Button Colours
+// Buttons
 $color-button-default: $color-green-light;
 $color-button-default-border: $color-green-medium;
 $color-button-default-text: $color-black;
@@ -101,8 +101,12 @@ $color-button-default-text: $color-black;
 $color-button-primary: $color-yellow-light;
 $color-button-primary-border: $color-yellow-dark;
 
-// Footer Colours
+// Footer
 $color-footer-bg: $color-grey-pale;
+
+// Message Bars
+$color-opt-out-background: $color-blue-pale;
+$color-feedback-background: $color-blue-extra-dark;
 
 // Callout Colours
 $color-callout-background: $color-green-pale;
@@ -125,8 +129,3 @@ $color-sub-menu-background: #393939;
 
 // Media Queries
 $mq-navigation-break: 700px;
-
-// Opt-Out Bar background
-$color-opt-out-bar: $color-blue-pale;
-
-$color-feedback-background: $color-blue-extra-dark;

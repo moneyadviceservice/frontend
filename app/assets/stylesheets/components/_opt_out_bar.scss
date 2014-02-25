@@ -28,6 +28,7 @@
 
 .opt-out-bar__button {
   @extend %text-message-small;
+  -webkit-font-smoothing: antialiased;
   color: $color-link-default;
   background: transparent;
   border: 0;

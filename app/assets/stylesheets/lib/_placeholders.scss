@@ -31,6 +31,7 @@
 %text-button {
   @extend %font-museo700;
   @include font-size(18);
+  -webkit-font-smoothing: antialiased;
 }
 
 %text-callout {

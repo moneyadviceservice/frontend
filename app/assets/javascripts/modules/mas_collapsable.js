@@ -82,8 +82,13 @@ define(['jquery'], function ($) {
       index: i,
       trigger: $el,
       target: this._findTarget($el),
-      hidden: $el.hasClass(this.o.inactiveClass)
+      hidden: !$el.hasClass(this.o.activeClass)
     }
+
+    console.log(i +' >> '+this.sections[i].hidden)
+
+    // Dont modify or bind events if no target element
+    if(!this.sections[i].target.length) return;
 
     // Set show / hide states based on options
     if(this.o.showOnlyFirst){
@@ -105,7 +110,8 @@ define(['jquery'], function ($) {
 
     // Bind events
     var _this = this;
-    this.sections[i].trigger.on('click', i, function(){
+    this.sections[i].trigger.on('click', i, function(e){
+      e.preventDefault();
       (_this.sections[i].hidden)? _this.show(i) : _this.hide(i);
     });
 
@@ -122,8 +128,11 @@ define(['jquery'], function ($) {
   }
 
   $.fn.swapClass = function(from,to){
+    console.log(this)
     var c = this[0].className;
-    if( c.indexOf(from) === -1 ){
+    if( c.indexOf(to) !== -1 ){
+      return;
+    }else if( c.indexOf(from) === -1 ){
       this[0].className = c + ' ' + to;
     }else{
       this[0].className = c.replace(from,to);

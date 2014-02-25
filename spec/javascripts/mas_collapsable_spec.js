@@ -186,9 +186,6 @@ describe("mas_collapsable#options", function () {
         closeOffFocus: true
       });
 
-      console.info('!!Collapsable options');
-      console.info(Collapsable);
-
       done();
     }, done);
 
@@ -214,7 +211,6 @@ describe("mas_collapsable#options", function () {
         }
       })
     })
-
   })
 
   describe("when the accordion options is enabled", function () {
@@ -224,7 +220,6 @@ describe("mas_collapsable#options", function () {
 
     it("closes any open target elements in the collection", function () {
       var S = Collapsable.sections;
-
       S[2].trigger.click();
 
       $.each(S, function (i, el) {
@@ -238,13 +233,25 @@ describe("mas_collapsable#options", function () {
   })
 
   describe("when the closeOffFocus option is enabled", function () {
-    xit("closes the open element when focus leaves it", function () {
+    it("closes the open element when focus leaves it", function () {
+      var S = Collapsable.sections;
+      S[0].trigger.click();
+
+      // Focus on last element in target one
+      S[0].target.last('a').focus();
+
+      // programatically tab through to next element
+      var e = jQuery.Event("keypress");
+      e.which = 0; // 0 = TAB
+      $('body').trigger(e);
+
+      // check if previous element is shut
+      expect(S[0].hidden).to.be.true;
     })
   })
 
-  describe("ways of targeting the trigger and target elements", function () {
-    xit("closes the open element when focus leaves it", function () {
-    })
-  })
+  // describe("ways of targeting the trigger and target elements", function(){
+  //   xit("closes the open element when focus leaves it", function(){})
+  // })
 
 })

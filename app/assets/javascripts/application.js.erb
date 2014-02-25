@@ -24,4 +24,14 @@ require(['collapsable'], function (Collapsable) {
     showOnlyFirst:true,
     showIcon:true
   });
+
+  var primaryNav = new Collapsable({
+    closeOffFocus:true,
+    accordion:true,
+    showIcon: false,
+    showOnlyFirst: false,
+    triggerEl: '.primary-nav > li > a',
+    targetEl: '.primary-nav__submenu'
+  });
+
 });

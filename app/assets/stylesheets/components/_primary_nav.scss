@@ -12,15 +12,18 @@
 .primary-nav {
   @extend .list--unstyled;
   z-index: 2;
+
   @include respond-to($mq-l) {
     float: right;
   }
 }
 
 .primary-nav__item {
+  @extend %collapsable-trigger;
   @extend %heading-nav-one;
   padding: $baseline-unit*1.5 $baseline-unit;
   border-top: 1px solid $color-white-translucent;
+  position:relative;
 
   @include respond-to($mq-l) {
     display: inline-block;
@@ -51,6 +54,7 @@
 }
 
 .primary-nav__submenu {
+  @extend %collapsable-target;
   @extend .list--unstyled;
   display: none;
   border-left: $baseline-unit solid $color-grey-light;
@@ -67,8 +71,11 @@
 
   }
 
-}
-
-.primary-nav__submenu.is-expanded {
-  display:block;
+  @include respond-to($mq-l) {
+    &.is-on {
+      position:absolute;
+      top:$line-height*3;
+      z-index:10;
+    }
+  }
 }

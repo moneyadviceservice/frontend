@@ -7,6 +7,41 @@ API for the Money Advice Service, to be consumed by the responsive frontend.
 # Group Categories
 Category related resources of the **Money Advice Service**.
 
+## Categories Collection [/{locale}/categories]
+A collection of categories including their subcategories
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Categories.
+        + Values
+            + `en`
+            + `cy`
+
+### Retrieve all Categories [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Link: <https://www.moneyadviceservice.org.uk/en/categories; rel="canonical", <https://www.moneyadviceservice.org.uk/cy/categories>; rel="alternate"; hreflang="cy"
+
+    + Body
+
+            [
+                {
+                    "id": "life-events",
+                    "title": "Life events",
+                    "description": "When big things happen - having a baby, losing your job, getting divorced or retiring\n - it helps to be in control of your money\n",
+                    "subCategories": [
+                        {
+                            "id": "setting-up-home",
+                            "title": "Setting up home",
+                            "description": "Deciding whether to rent or buy, working out what you can afford and managing\n money when sharing with others\n",
+                            "subCategories": [
+                            ]
+                        }
+                    ]
+                }
+            ]
+
 ## Category [/{locale}/categories/{id}]
 A single category object with all its details
 
@@ -15,14 +50,14 @@ A single category object with all its details
         + Values
             + `en`
             + `cy`
-    + id (required, string, `mortgages-and-buying-property`) ... ID of the Category.
+    + id (required, string, `life-events`) ... ID of the Category.
 
 ### Retrieve a Category [GET]
 + Response 200 (application/json)
 
     + Header
 
-            Link: <https://www.moneyadviceservice.org.uk/cy/categories/mortgages-and-buying-property>; rel="alternate"; hreflang="cy"; title="Morgeisi a phrynu eiddo"
+            Link: <https://www.moneyadviceservice.org.uk/en/categories/life-events>; rel="canonical"; title="Life events", <https://www.moneyadviceservice.org.uk/cy/categories/life-events>; rel="alternate"; hreflang="cy"; title="Digwyddiadau bywyd"
 
     + Body
 
@@ -30,7 +65,7 @@ A single category object with all its details
                 "title": "Life events",
                 "description": "When big things happen - having a baby, losing your job, getting divorced or retiring\n - it helps to be in control of your money\n",
                 "id":"life-events",
-                "content":[
+                "contents":[
                   {
                     "id":"setting-up-home",
                     "type":"category",
@@ -65,7 +100,7 @@ A single Article object with all its details
 
     + Header
 
-            Link: <https://www.moneyadviceservice.org.uk/cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled>; rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch dyled"
+            Link: <https://www.moneyadviceservice.org.uk/en/articles/where-to-go-to-get-free-debt-advice>; rel="canonical"; title="Where to go to get free debt advice", <https://www.moneyadviceservice.org.uk/cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled>; rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch dyled"
 
     + Body
 
@@ -92,7 +127,7 @@ A single Action Plan object with all its details
 
     + Header
 
-            Link: <https://www.moneyadviceservice.org.uk/cy/action_plans/paratowch-am-y-gost-o-gael-babi>; rel="alternate"; hreflang="cy"; title="Cynllun gweithredu - Paratowch am y gost o gael babi - Gwasanaeth Cynghori Ariannol"
+            Link: <https://www.moneyadviceservice.org.uk/en/action_plans/prepare-for-the-cost-of-having-a-baby>; rel="canonical"; title="Action plan – Prepare for the cost of having a baby", <https://www.moneyadviceservice.org.uk/cy/action_plans/paratowch-am-y-gost-o-gael-babi>; rel="alternate"; hreflang="cy"; title="Cynllun gweithredu - Paratowch am y gost o gael babi - Gwasanaeth Cynghori Ariannol"
 
     + Body
 

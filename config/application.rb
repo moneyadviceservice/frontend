@@ -5,7 +5,7 @@ require 'action_view/railtie'
 require 'active_model/railtie'
 require 'sprockets/railtie'
 
-Bundler.require(*Rails.groups)
+Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application

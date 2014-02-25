@@ -5,7 +5,6 @@ set -e
 unset RUBYOPT
 export BUNDLE_WITHOUT="test:development"
 
-
 version_number=${GO_PIPELINE_COUNTER-0}
 revision=`git rev-parse HEAD`
 build_date=`date +'%Y-%m-%d %H:%M %z'`
@@ -32,7 +31,7 @@ bower install
 
 echo "Precompiling assets"
 echo "----"
-RAILS_ENV=production $precompile_path_option rake assets:precompile
+RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile
 
 echo "Creating RPM"
 echo "----"

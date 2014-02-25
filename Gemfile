@@ -2,24 +2,24 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.0.rc1'
 
-gem 'autoprefixer-rails'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'foreman'
 gem 'gaffe'
-gem 'jquery-rails'
 gem 'kss'
 gem 'link_header'
 gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
-gem 'sass-rails', '~> 4.0.0'
-gem 'syslog-logger'
-gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
-gem 'unicorn-rails'
+
+group :assets do
+  gem 'autoprefixer-rails'
+  gem 'coffee-rails', '~> 4.0.0'
+  gem 'compass-rails'
+  gem 'jquery-rails'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+end
 
 group :development do
   gem 'guard-bundler'
@@ -28,7 +28,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sass'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'guard-shell'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
 end
@@ -39,6 +39,11 @@ group :test do
   gem 'thin'
   gem 'vcr'
   gem 'webmock'
+end
+
+group :production do
+  gem 'syslog-logger'
+  gem 'unicorn-rails'
 end
 
 group :test, :development do

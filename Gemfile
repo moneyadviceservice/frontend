@@ -16,10 +16,8 @@ gem 'meta-tags', require: 'meta_tags'
 gem 'nokogiri'
 gem 'rouge'
 gem 'sass-rails', '~> 4.0.0'
-gem 'syslog-logger'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'unicorn-rails'
 
 group :development do
   gem 'guard-bundler'

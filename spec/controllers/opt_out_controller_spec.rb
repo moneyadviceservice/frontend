@@ -9,6 +9,7 @@ describe OptOutController do
       post :create
 
       expect(response).to redirect_to(root_path(locale: :en))
+
     end
 
     it 'set the opt-int cookie to 0' do

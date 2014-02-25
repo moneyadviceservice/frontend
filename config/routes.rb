@@ -9,6 +9,7 @@ end
 
 Rails.application.routes.draw do
   root 'home#show'
+
   post :opt_out, to: 'opt_out#create'
 
   scope '/:locale' do

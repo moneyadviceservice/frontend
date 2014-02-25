@@ -6,12 +6,15 @@
   overflow: hidden;
   background-color: $color-feedback-background;
   padding: $bl*1.5 0 $bl 0;
+  color: $color-white;
 
   a {
     color: $color-white;
+    text-decoration: underline;
   }
 
   p {
+    cursor: pointer;
     @extend %text-feedback;
     @include font-size(14);
     line-height: 1.5;

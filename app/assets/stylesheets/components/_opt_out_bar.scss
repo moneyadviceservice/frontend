@@ -5,7 +5,7 @@
 .opt-out-bar {
   overflow: hidden;
   text-align: center;
-  background-color: $color-opt-out-bar;
+  background-color: $color-opt-out-background;
 
   p {
     @extend %text-message-small;

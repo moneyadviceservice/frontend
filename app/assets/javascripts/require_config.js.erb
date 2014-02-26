@@ -2,6 +2,7 @@
 //= depend_on_asset modules/mas_collapsable
 //= depend_on_asset jquery/dist/jquery
 //= depend_on_asset jquery-tiny-pubsub/src/tiny-pubsub
+//= depend_on_asset jquery-waypoints/waypoints
 
 <% def requirejs_path(asset) ; javascript_path(asset).sub(/.js\z/, ''); end %>
 
@@ -10,7 +11,6 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
   paths:                     {
     analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
     collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
-    linkParent:  "<%= requirejs_path('modules/mas_linkParent') %>",
     jquery:      "<%= requirejs_path('jquery/dist/jquery') %>",
     pubsub:      "<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>",
     waypoints:   "<%= requirejs_path('jquery-waypoints/waypoints') %>",

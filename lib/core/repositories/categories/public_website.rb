@@ -9,6 +9,14 @@ module Core::Repositories
         self.connection = Core::Registries::Connection[:public_website]
       end
 
+      def all
+        response = connection.get('/%{locale}/categories.json' %
+                                    { locale: I18n.locale })
+        response.body
+      rescue
+        raise RequestError, 'Unable to fetch Categories JSON from Public Website'
+      end
+
       def find(id)
         response = connection.get('/%{locale}/categories/%{id}.json' %
                                     { locale: I18n.locale, id: id })

@@ -27,9 +27,8 @@
 
   @include respond-to($mq-l) {
     display: inline-block;
-    margin: 0 $baseline-unit*2;
     padding: 0;
-    width: 100px;
+    width: 110px;
     border: 0;
     text-align: center;
     line-height: 1.3;
@@ -37,7 +36,7 @@
 
   &:first-child {
     @include respond-to($mq-l) {
-      width: 85px;
+      width: 95px;
     }
   }
 
@@ -49,6 +48,8 @@
   }
 
   > a {
+    display: inline-block;
+    padding: 0 $baseline-unit*2;
     color: $color-white;
   }
 }

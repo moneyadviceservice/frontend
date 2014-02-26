@@ -14,7 +14,7 @@ MAS.logged = []; // Use MAS.log/info/warn over console
 MAS.supports.fonts = false; // Required for webfont loader to work
 MAS.config.fonts = {
   custom: {
-    families: ['MuseoSlab', 'icomoon'],
+    families: ['MuseoSlab', 'icon-font'],
     urls: ['<%= stylesheet_path('fonts') %>']
   }
 };
@@ -56,7 +56,7 @@ if (MAS.supports.localstorage) {
   MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
 }
 
-// Fix for iPhone viewport scale bug 
+// Fix for iPhone viewport scale bug
 // http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
 // MAS = mobile boilerplate
 MAS.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');

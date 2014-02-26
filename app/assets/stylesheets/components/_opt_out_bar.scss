@@ -11,7 +11,7 @@
     @extend %text-message-small;
     margin: $bl 0;
     @include respond-to($mq-m) {
-      @include column(6);
+      @include column(8);
       padding: $bl 0;
       text-align: left;
     }
@@ -19,16 +19,23 @@
 
   form {
     @include respond-to($mq-m) {
-      @include column(6);
+      @include column(4);
       text-align: right;
     }
   }
+
+  br {
+    @include respond-to($mq-s) {
+      display: none;
+    }
+  }
+
 }
 
 .opt-out-bar__button {
   @extend %text-message-small;
-  @extend %link-nav;
-  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  color: $color-link-default;
   background: transparent;
   border: 0;
   padding: $bl 0;
@@ -39,6 +46,7 @@
 
   &:before {
     @extend .icon;
+    display: inline-block;
     padding-right: $bl;
   }
 

@@ -24,6 +24,12 @@
     }
   }
 
+  br {
+    @include respond-to($mq-s) {
+      display: none;
+    }
+  }
+
 }
 
 .opt-out-bar__button {

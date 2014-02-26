@@ -3,8 +3,11 @@
 if (MAS.supports.fonts) {
   require(['webfonts'], function () {
     WebFont.load(MAS.config.fonts);
-    if (MAS.supports.localstorage) localStorage.setItem('MAS.localCache.fonts', 'true');
-  })
+
+    if (MAS.supports.localstorage) {
+      localStorage.setItem('MAS.localCache.fonts', true);
+    }
+  });
 }
 
 require(['analytics'], function (analytics) {

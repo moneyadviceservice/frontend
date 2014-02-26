@@ -1,3 +1,10 @@
+//= depend_on_asset museo_slab_300-webfont.woff
+//= depend_on_asset museo_slab_700-webfont.woff
+//= depend_on_asset icon-font.woff
+//= depend_on_asset museo_slab_300-webfont.eot
+//= depend_on_asset museo_slab_700-webfont.eot
+//= depend_on_asset icon-font.eot
+
 @if $responsive == true {
   @font-face {
     font-family: 'MuseoSlab';

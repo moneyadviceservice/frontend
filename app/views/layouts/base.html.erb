@@ -44,7 +44,6 @@
     MAS.env = '<%= Rails.env %>';
     MAS.datalayer = dataLayer = []; // For GoogleTagManager
     MAS.timestamp = new Date().getTime(); // For MAS custom analytics to work out duration user has been on page when they interact
-    MAS.logged = []; // Use MAS.log/info/warn over console
     MAS.supports.fonts = false; // Required for webfont loader to work
     MAS.config.fonts = {
       custom: {
@@ -61,15 +60,6 @@
       var el = d.getElementsByTagName('html')[0];
       el.className = el.className.replace('no-js', 'js js-' + M.supports.js);
 
-      // Wrap logging so it can be pushed to log in prod, and used safely on old browsers
-      var opts = ['log', 'info', 'warn'], l = opts.length;
-
-      while (l--) {
-        var type = l;
-        (!w.console || M.env === 'production') ? M[opts[l]] = function (name, options) {
-          M.logged.push([name, options, type])
-        } : M[opts[l]] = console[opts[l]];
-      }
     })(document, window, MAS);
 
     // Support check for html5 local storage API

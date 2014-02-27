@@ -1,4 +1,4 @@
-define(['jquery'], function ($) {
+define(['log', 'jquery'], function (Global, $) {
   "use strict";
 
   var defaults = {
@@ -41,7 +41,7 @@ define(['jquery'], function ($) {
 
     var triggers = $(this.o.triggerEl), l = triggers.length, i = 0;
 
-    if (l === 0) return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+    if (l === 0) return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
 
     for (i; i < l; i++) {
       this._setupEach.call(this, i, triggers[i]);
@@ -138,8 +138,6 @@ define(['jquery'], function ($) {
   }
 
   Collapsible.prototype.show = function (i) {
-    console.log('show' + i)
-    console.log(this.o)
     var item = this.sections[i];
     if (this.o.showIcon) item.icon.text(this.o.textString.show_this_section);
     item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
@@ -152,7 +150,6 @@ define(['jquery'], function ($) {
   }
 
   Collapsible.prototype.hide = function (i) {
-    console.log('hide' + i)
     var item = this.sections[i];
     if (this.o.showIcon) item.icon.text(this.o.textString.hide_this_section);
     item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);

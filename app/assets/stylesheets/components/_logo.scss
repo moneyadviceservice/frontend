@@ -1,11 +1,16 @@
 .mas-logo {
   height: 36px;
-  width: 216px;
+  width: 170px;
   margin-left: $baseline-unit;
   background: transparent image_url('mas-logo.png') 0 0 no-repeat;
 
-  .svg & {
+  @include respond-to($mq-m) {
+    width: 216px;
+  }
+
+  @if $responsive == true {
     background: transparent image_url('mas-logo.svg') 0 0 no-repeat;
+    background-size: contain;
   }
 }
 
@@ -16,7 +21,8 @@
   margin: $baseline-unit*2 0 0 0;
   background: transparent image_url('mas-logo-small.png') 0 0 no-repeat;
 
-  .svg & {
+  @if $responsive == true {
     background: transparent image_url('mas-logo-small.svg') 0 0 no-repeat;
+    background-size: contain;
   }
 }

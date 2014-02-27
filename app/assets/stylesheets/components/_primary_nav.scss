@@ -7,6 +7,9 @@
   position: absolute;
   top: -60px;
   left: 0;
+  &:focus {
+    top: 0;
+  }
 }
 
 .primary-nav {
@@ -48,9 +51,11 @@
   }
 
   > a {
-    display: inline-block;
     padding: 0 $baseline-unit*2;
     color: $color-white;
+    @include respond-to($mq-l) {
+      display: inline-block;
+    }
   }
 }
 

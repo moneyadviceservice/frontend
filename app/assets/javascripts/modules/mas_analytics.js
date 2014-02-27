@@ -7,24 +7,23 @@
 
  */
 
-
-define(['jquery', 'waypoints'], function ($) {
+define(['log', 'jquery', 'waypoints'], function (Global, $) {
 
   var _this = this,
-    loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000;
+      loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000;
 
   // Cache analytics calls so we can prevent duplicate
   this._calledAlready = [];
 
   // General call to trigger GA analytics
   this.triggerAnalytics = function (data) {
-    MAS.log('mas_analytics.triggerAnalytics', data);
+    Global.log('mas_analytics.triggerAnalytics', data);
     MAS.datalayer.push(data);
   };
 
   // Private func to handle scrollTracking events
   this._handleScroll = function (dir, val, contentRatio) {
-    MAS.log('mas_analytics._handleScroll - ', arguments);
+    Global.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
     if (dir === 'up') return false;
@@ -63,7 +62,7 @@ define(['jquery', 'waypoints'], function ($) {
     };
 
     if (areOptionsValid()) {
-      MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+      Global.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       // console.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;
     }
@@ -83,7 +82,7 @@ define(['jquery', 'waypoints'], function ($) {
 
     // Bind event for each trigger point
     $.each(opts.triggerPoints, function (i, val) {
-      MAS.info('mas_analytics.scrollTracking (bind each) - ', val);
+      Global.info('mas_analytics.scrollTracking (bind each) - ', val);
       var offsetVal = h * val - wh;
 
       $el.waypoint(function (dir) {

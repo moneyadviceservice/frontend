@@ -7,7 +7,8 @@
 
 // RequireJS config
 requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
-  paths:                     {
+  paths: {
+    log:      "<%= requirejs_path('modules/mas_log') %>",
     analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
     collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
     jquery:      "<%= requirejs_path('jquery/dist/jquery') %>",
@@ -15,7 +16,7 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     waypoints:   "<%= requirejs_path('jquery-waypoints/waypoints') %>",
     webfonts:    '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
   },
-  shim:                      {
+  shim: {
     'pubsub':    ['jquery'],
     'waypoints': ['jquery']
   }

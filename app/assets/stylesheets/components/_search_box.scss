@@ -1,0 +1,32 @@
+// This search bar appears in the header of the page.
+//
+// Styleguide Search
+
+.search-box {
+  position: relative;
+  margin: 0 auto;
+  padding: $baseline-unit;
+  background-color: $color-green-quaternary;
+  width: 100%;
+}
+
+.search-box__input {
+  @extend %text-search-box;
+  width: 100%;
+  height: $baseline-unit*7;
+  padding-left: $baseline-unit*2;
+  border: 0;
+  @include respond-to($mq-l) {
+//    margin-top: $bl*4;
+  }
+}
+
+.search-box__submit {
+  @extend .button--unstyled;
+  position: absolute;
+  bottom: -1px;
+  right: 6px;
+  height: $baseline-unit*7;
+  font-size: 24px;
+  color: $color-green-secondary;
+}

@@ -3,10 +3,7 @@
 
 $responsive: false;
 
-@import 'lib/variables';
-@import 'lib/functions';
-@import 'lib/mixins';
-@import 'lib/placeholders';
+@import 'libs';
 
 @import 'base/default';
 @import 'base/typography';

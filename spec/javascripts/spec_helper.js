@@ -1,6 +1,7 @@
 //= require sinonjs/sinon
-//= require requirejs/require
 //= require jquery
+//= require chai-jquery
+//= require requirejs/require
 //= require require_config
 
 var expect = chai.expect;

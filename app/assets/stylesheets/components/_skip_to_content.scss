@@ -1,0 +1,13 @@
+// Link to allow a keyboard operator to skip the primary navigation and go directly to the main content
+//
+// Styleguide Skip to content
+
+.skip-to-content {
+  display: block;
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  &:focus {
+    top: 0;
+  }
+}

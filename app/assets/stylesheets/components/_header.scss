@@ -3,7 +3,15 @@
 // Styleguide header
 
 .header {
-  padding: $bl*5 0 $bl*4 0;
+  position: relative;
+  padding: $baseline-unit*4 0 0 0;
+  border-bottom: $baseline-unit/2 solid $color-green-light;
   background: $color-green-primary;
-  border-bottom: $bl/2 solid $color-green-light;
+
+  @if $responsive == true {
+    background-size: contain;
+    @include respond-to($mq-l) {
+      background: $color-green-primary image_url('stripes.svg') 90% 0 no-repeat;
+    }
+  }
 }

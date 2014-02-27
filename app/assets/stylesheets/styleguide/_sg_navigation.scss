@@ -19,12 +19,33 @@
 
   > li {
     width: 100%;
-    @include respond-to($mq-s) {
+    @include respond-to($mq-l) {
       display: inline-block;
       width: auto;
       border-bottom: none;
     }
   }
+
+  a,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    color: $color-nav-text;
+  }
+
+  a:hover {
+    border: none;
+    text-decoration: none;
+    color: $color-green-secondary;
+  }
+
+  a:focus {
+    outline: 1px solid;
+    border-bottom: none;
+  }
+
 }
 
 .has-sub-menu > a:first-child {
@@ -65,28 +86,4 @@
 
 .js .styleguide-nav__submenu {
   display: none;
-}
-
-nav a {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  padding: 12px;
-  font-size: 14px;
-  color: $color-nav-text;
-}
-
-nav a:visited {
-  color: $color-nav-text;;
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: $color-green-primary;
-  transition: all 1s ease;
-}
-
-nav a:focus {
-  outline: 1px solid;
-  border-bottom: none;
 }

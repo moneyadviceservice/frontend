@@ -19,7 +19,19 @@ require(['analytics'], function (analytics) {
   });
 });
 
+require(['collapsable'], function (Collapsable) {
+  var articleCollapsables = new Collapsable({
+    showOnlyFirst:true,
+    showIcon:true
+  });
 
-require(['collapsable'], function (collapsable) {
-  var C = new collapsable();
+//  var primaryNav = new Collapsable({
+//    closeOffFocus:true,
+//    accordion:true,
+//    showIcon: false,
+//    showOnlyFirst: true,
+//    triggerEl: '.primary-nav > li > a',
+//    targetEl: '.primary-nav__dropdown'
+//  });
+
 });

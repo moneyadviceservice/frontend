@@ -1,65 +1,253 @@
 //= require spec_helper
 //= require templates/collapsable
 
-describe("mas_collapsable", function () {
-  var mas_collapsable, mas_collapsable_empty, $body;
+describe("mas_collapsable basics", function () {
+
+  var ValidCollapsable, EmptyCollapsable, $body;
+
+  // beforeEach()
+  // afterEach()
 
   before(function (done) {
     $('body').html(JST['templates/collapsable']());
     $body = $('body');
 
     require(['collapsable'], function (mod) {
-      mas_collapsable = new mod();
-      mas_collapsable_empty = new mod({triggerEl:'.doesntExist'});
+      ValidCollapsable = new mod();
+      EmptyCollapsable = new mod({triggerEl: '.doesntExist'});
       done();
     }, done);
   })
 
-  it("should return false is no trigger elements in DOM", function () {
-    expect(mas_collapsable_empty.sections.length).to.be.equal(0);
-  })
+  describe("when initiated", function () {
+    it("return false if no trigger elements in DOM", function () {
+      expect(EmptyCollapsable.sections.length).to.be.equal(0);
+    })
 
-  it("should have method hide", function () {
-    expect(typeof mas_collapsable.hide).to.equal('function')
-  })
-
-  it("should have method show", function () {
-    expect(typeof mas_collapsable.show).to.equal('function')
-  })
-
-  it("should have options object that defines trigger element, target element, active class so these can be extended", function () {
-    expect(mas_collapsable.o).to.have.property('triggerEl');
-    expect(mas_collapsable.o).to.have.property('targetEl');
-    expect(mas_collapsable.o).to.have.property('activeClass');
-  })
-
-  it("should add activeClass to all sections except first if o.showOnlyFirst is true", function(){
-    var S = $body.find(mas_collapsable.o.triggerEl);
-    S.each(function(i,el){
-      if(i === 0){
-        expect($(el).hasClass(mas_collapsable.o.activeClass)).to.be.true;
-      }else{
-        expect($(el).hasClass(mas_collapsable.o.activeClass)).to.be.false;
-      }
+    it("contains a valid set of options", function () {
+      expect(ValidCollapsable.o).to.have.property('triggerEl');
+      expect(ValidCollapsable.o).to.have.property('targetEl');
+      expect(ValidCollapsable.o).to.have.property('activeClass');
+      expect(ValidCollapsable.o).to.have.property('closeOffFocus');
+      expect(ValidCollapsable.o).to.have.property('accordion');
     })
   })
 
-  it("should toggle the active class on both trigger and target element when the toggle element is clicked", function (done) {
-    var button = $body.find('#toggleButton1');
-    var target = $body.find('#toggleTarget1');
+  describe("onload", function () {
+    var buttonVisible, targetVisible, buttonHidden, targetHidden;
 
-    // Confirm initial state
-    expect(button.hasClass(mas_collapsable.o.activeClass)).to.be.false;
-    expect(target.hasClass(mas_collapsable.o.activeClass)).to.be.false;
+    before(function () {
+      buttonVisible = $body.find('#toggleButton1');
+      targetVisible = $body.find('#toggleTarget1');
+      buttonHidden = $body.find('#toggleButton2');
+      targetHidden = $body.find('#toggleTarget2');
+    })
 
-    // Force interaction
-    button.trigger('click');
+    it("adds aria-role=button to all toggle trigger elements", function () {
+      expect(buttonVisible.attr('aria-role')).to.equal('button');
+    })
 
-    // Test expected state
-    expect(button.hasClass(mas_collapsable.o.activeClass)).to.be.true;
-    expect(target.hasClass(mas_collapsable.o.activeClass)).to.be.true;
-    done();      
+    describe("target element is hidden", function () {
+      it("adds aria-hidden=true to target element", function () {
+        expect(targetHidden.attr('aria-hidden')).to.equal('true')
+      })
+      it("adds (inactive class) on both target and trigger elements", function () {
+        expect(buttonHidden.hasClass(ValidCollapsable.o.inactiveClass)).to.be.true;
+        expect(targetHidden.hasClass(ValidCollapsable.o.inactiveClass)).to.be.true;
+      })
+    })
 
+    describe("target element is visible", function () {
+      it("adds aria-hidden=false to target element", function () {
+        expect(targetVisible.attr('aria-hidden')).to.equal('false')
+      })
+      it("adds (active class) on both target and trigger elements", function () {
+        expect(buttonVisible.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
+        expect(targetVisible.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
+      })
+    })
+  })
+
+  describe("when trigger is activated on closed element", function () {
+    var button, target;
+
+    function setTargetToHidden(hidden) {
+      if (hidden && target.hasClass(ValidCollapsable.o.activeClass)) {
+        button.trigger('click')
+      } else if (!hidden && target.hasClass(ValidCollapsable.o.inactiveClass)) {
+        button.trigger('click')
+      }
+    }
+
+    before(function () {
+      button = $body.find('#toggleButton1');
+      target = $body.find('#toggleTarget1');
+    })
+
+    it("sets aria-hidden=false on target element", function () {
+      // Set initial state to hidden then trigger toggle
+      setTargetToHidden(true);
+      button.trigger('click');
+      expect(target.attr('aria-hidden')).to.equal('false');
+    })
+
+    it("adds (active class) on both target and trigger elements", function () {
+      // Set initial state to hidden then trigger toggle
+      setTargetToHidden(true);
+      button.trigger('click');
+      expect(button.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
+      expect(target.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
+    })
+
+    it("adds keyboard(space) support to trigger elements", function (done) {
+      setTargetToHidden(true);
+
+      // Trigger keypress on spacebar
+      var e = jQuery.Event("keypress");
+      e.which = 32;
+      e.charCode = 32;
+
+      button.trigger(e);
+      expect(target.hasClass(ValidCollapsable.o.inactiveClass)).to.be.false;
+      expect(target.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
+
+      done();
+    })
+
+    describe("when the accordion options is enabled", function () {
+      xit("closes any open target elements in the collection", function () {
+      })
+    })
+  })
+
+  describe("when trigger is activated on an open element", function () {
+    var button, target;
+
+    function setTargetToHidden(hidden) {
+      if (hidden && target.hasClass(ValidCollapsable.o.activeClass)) {
+        button.trigger('click')
+      } else if (!hidden && target.hasClass(ValidCollapsable.o.inactiveClass)) {
+        button.trigger('click')
+      }
+    }
+
+    before(function () {
+      button = $body.find('#toggleButton1');
+      target = $body.find('#toggleTarget1');
+    })
+
+    it("sets aria-hidden=true on target element", function () {
+      // Set initial state to hidden then trigger toggle
+      setTargetToHidden(false);
+      button.trigger('click');
+      expect(target.attr('aria-hidden')).to.equal('true');
+    })
+
+    it("adds (inactive class) on both target and trigger elements", function () {
+      // Set initial state to hidden then trigger toggle
+      setTargetToHidden(false);
+      button.trigger('click');
+      expect(button.hasClass(ValidCollapsable.o.inactiveClass)).to.be.true;
+      expect(target.hasClass(ValidCollapsable.o.inactiveClass)).to.be.true;
+    })
+
+    it("adds keyboard(space) support to trigger elements", function (done) {
+      setTargetToHidden(false);
+
+      // Trigger keypress on spacebar
+      var e = jQuery.Event("keypress");
+      e.which = 32;
+      e.charCode = 32;
+
+      button.trigger(e);
+      expect(target.hasClass(ValidCollapsable.o.activeClass)).to.be.false;
+      expect(target.hasClass(ValidCollapsable.o.inactiveClass)).to.be.true;
+
+      done();
+    })
+  })
+
+})
+
+describe("mas_collapsable#options", function () {
+  var Collapsable;
+  var $body;
+
+  before(function (done) {
+    $('body').html(JST['templates/collapsable']());
+    $body = $('body');
+
+    require(['collapsable'], function (mod) {
+      Collapsable = new mod({
+        triggerEl:     $('#optionsTest > li > a'),
+        targetEl:      'ul',
+        showOnlyFirst: true,
+        accordion:     true,
+        closeOffFocus: true
+      });
+
+      done();
+    }, done);
+
+  })
+
+  // after(function(){
+  //   Collapsable = false;
+  // })
+
+  describe("when the showOnlyFirst option is enabled", function () {
+    it("accordion activeClass should = true", function () {
+      expect(Collapsable.o.showOnlyFirst).to.be.true;
+    })
+
+    it("add activeClass to the first item and inactive class to all subsequent sections", function () {
+      expect(Collapsable.o.showOnlyFirst).to.be.true;
+      var S = Collapsable.sections;
+      $.each(S, function (i, el) {
+        if (i === 0) {
+          expect(S[i].hidden).to.be.false;
+        } else {
+          expect(S[i].hidden).to.be.true;
+        }
+      })
+    })
+  })
+
+  describe("when the accordion options is enabled", function () {
+    it("accordion option should = true", function () {
+      expect(Collapsable.o.accordion).to.be.true;
+    })
+
+    it("closes any open target elements in the collection", function () {
+      var S = Collapsable.sections;
+      S[2].trigger.click();
+
+      $.each(S, function (i, el) {
+        if (i === 2) {
+          expect(S[i].hidden).to.be.false;
+        } else {
+          expect(S[i].hidden).to.be.true;
+        }
+      })
+    })
+  })
+
+  // Have not found a way to successfully emulate user keyboard tabbing through content
+  describe("when the closeOffFocus option is enabled", function () {
+    xit("closes the open element when focus leaves it", function () {
+      var S = Collapsable.sections;
+      // Open list
+      S[0].trigger.click();
+
+      // Focus on last element in target one
+      S[0].target.find('a:last').focus();
+
+      // Focus on next element to trigger focusout
+      S[1].trigger.focus();
+
+      // check if previous element is shut
+      expect(S[0].hidden).to.be.true;
+    })
   })
 
 })

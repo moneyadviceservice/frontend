@@ -26,11 +26,11 @@ module Core
           'id' => 'life-events',
           'title' => 'Life events',
           'description' => 'When big things happen - having a baby, losing your job, getting divorced or retiring\n - it helps to be in control of your money\n',
-          'sub_categories' => [{
+          'subCategories' => [{
             'id' => 'setting-up-home',
             'title' => 'Setting up home',
             'description' => 'Deciding whether to rent or buy, working out what you can afford and managing\n money when sharing with others\n',
-            'sub_categories' => []
+            'subCategories' => []
           }]
         }]
       end

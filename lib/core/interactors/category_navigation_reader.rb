@@ -19,7 +19,8 @@ module Core
     def build_list(categories)
       categories.map do |category|
         attributes = category.dup.tap do |c|
-          c['sub_categories'] = build_list(c['sub_categories'])
+          c['sub_categories'] = build_list(c['subCategories'])
+          c.delete('subCategories')
         end
         CategoryNavigation.new(category['id'], attributes)
       end

@@ -41,7 +41,10 @@ define(['log', 'jquery'], function (Global, $) {
 
     var triggers = $(this.o.triggerEl), l = triggers.length, i = 0;
 
-    if (l === 0) return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+    if (l === 0) {
+      return false;
+      Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+    }
 
     for (i; i < l; i++) {
       this._setupEach.call(this, i, triggers[i]);

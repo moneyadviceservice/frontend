@@ -27,7 +27,7 @@ module Frontend
 
     # Configure additional vendor JS assets to precompile.
     config.assets.precompile += %w(html5shiv/dist/html5shiv.js
-                                   jquery/dist/jquery.js
+                                   jquery/jquery.js
                                    jquery-waypoints/waypoints.js
                                    jquery-tiny-pubsub/src/tiny-pubsub.js
                                    requirejs/require.js)

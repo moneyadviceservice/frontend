@@ -1,0 +1,45 @@
+%heading-extra-large {
+  @extend %font-museo700;
+  @include typography(heading, 36, 1.3);
+  color: $color-green-secondary;
+
+  @include respond-to($mq-m){
+    @include typography(heading, 42, 1);
+  }
+}
+
+%heading-large {
+  @extend %font-museo700;
+  @include typography(heading, 32, 1.3);
+  color: $color-green-secondary;
+
+  @include respond-to($mq-m) {
+    @include typography(heading, 36, 1.3);
+  }
+}
+
+%heading-medium {
+  @extend %font-museo700;
+  @include typography(heading, 24);
+  color: $color-green-secondary;
+
+  @include respond-to($mq-m) {
+    @include typography(heading, 24);
+  }
+}
+
+%heading-small {
+  @extend %font-museo700;
+  @include typography(heading, 20);
+  color: $color-green-secondary;
+
+  @include respond-to($mq-m) {
+    @include typography(heading, 20);
+  }
+}
+
+%heading-extra-small {
+  @extend %font-museo700;
+  @include typography(heading, 16);
+  color: $color-text-default;
+}

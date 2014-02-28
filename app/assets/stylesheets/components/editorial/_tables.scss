@@ -4,7 +4,6 @@
 
 .table-wrapper {
   width: 100%;
-  margin-bottom: $baseline-unit*3;
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -21,12 +20,13 @@
 }
 
 table {
-  @extend %text--table;
+  @extend %type-table;
   text-align: left;
+  margin: $baseline-unit*3 0;
 
   p {
-    @extend %text--table;
     // NOTE that this is here to override sloppy formatting in the tables where p tags force a large font size.
+    @extend %type-table;
   }
 
 }

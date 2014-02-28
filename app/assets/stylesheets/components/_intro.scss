@@ -3,9 +3,7 @@
 // Styleguide intro
 
 .intro {
-  @extend %text-intro-paragraph;
   @extend %clearfix;
+  @extend %paragraph-intro;
   clear: both;
-  line-height: $baseline-unit*5;
 }
-

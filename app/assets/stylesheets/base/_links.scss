@@ -3,6 +3,7 @@
 // :visited - Foo
 // :hover - Foo
 // :focus - Foo
+// .link-nav - Foo
 // .link-nav:visited - Foo
 // .link-nav:hover - Foo
 // .link-nav:focus - Foo
@@ -10,26 +11,11 @@
 // Styleguide a
 
 a {
-  color: $color-link-default;
-  text-decoration: none;
-
-  &:visited {
-    color: $color-link-visited;
-  }
-
-  &:hover {
-    color: $color-link-default;
-    text-decoration: underline;
-  }
-
-  &:focus{
-    color: $color-link-default;
-    outline: 1px solid;
-    background-color: $color-link-focus;
-    text-decoration-line: dotted;
-  }
+  @include links($color-link-default);
 }
 
+%link-nav,
 .link-nav {
-  @extend %link-nav;
+  @include links($color-link-nav, $color-link-nav-visited);
 }
+

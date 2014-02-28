@@ -83,7 +83,11 @@
 
 %type {
   @extend %font-Helvetica-Neue;
-  @include typography(body, 18);
+  @include typography(body, 16);
+  
+  @include respond-to($mq-m) {
+    @include typography(body, 18);
+  }
 }
 
 %type-small {

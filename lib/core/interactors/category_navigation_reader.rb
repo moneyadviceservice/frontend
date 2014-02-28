@@ -1,5 +1,6 @@
 require 'core/entities/category'
 require 'core/registries/repository'
+require 'core/entities/category_navigation'
 
 module Core
   class CategoryNavigationReader < Array

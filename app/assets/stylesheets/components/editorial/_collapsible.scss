@@ -4,12 +4,11 @@
 
 .collapsible {
   @extend %collapsable-trigger;
-  @extend %heading-three;
+  @extend %heading-small;
 
   position: relative;
   background-color: $color-action-item-heading-bg;
   padding: $baseline-unit;
-  margin: 0 0 $baseline-unit*3 0;
   color: $color-action-item-heading;
   cursor:pointer;
 
@@ -33,8 +32,7 @@
 
   span {
     @include font-size(34);
-    margin-left: -6px;
-    margin-right: 6px;
+    margin-right: $baseline-unit;
     margin-top: -6px;
     height: 28px;
     display: inline-block;

@@ -12,6 +12,6 @@
   }
 
   a {
-    @extend %link-nav;
+    @include links($color-link-nav, $color-link-nav-visited);
   }
 }

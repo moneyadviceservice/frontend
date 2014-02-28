@@ -1,11 +1,14 @@
 .l-homepage {
+  h1 {
+    @extend %heading-extra-large;
+  }
   @include column(12);
   padding: 0;
 
   @include respond-to($mq-m) {
     @include column(8);
     @include push(2);
-    padding: $baseline-unit*14 0 $baseline-unit*15;
+    padding: $baseline-unit*6 0 $baseline-unit*15;
   }
 }
 

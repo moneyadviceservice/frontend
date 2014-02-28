@@ -1,3 +1,35 @@
+@mixin typography($placement, $font-size: 16, $line-height: 1.5) {
+  font-size: $font-size + px;
+
+  @if $responsive == true {
+    font-size: ($font-size / 16) + rem;
+  }
+
+  line-height: $line-height;
+
+  @if $placement == heading {
+    // a small decrease in the letter spacing helps readability of headings
+    letter-spacing: -1px;
+    margin-top: ($font-size / $line-height) * 2.5 + px;
+    margin-bottom: ($font-size / $line-height) * 1 + px;
+
+    @if $responsive == true {
+      margin-top: (($font-size / $line-height) * 2.5) / 16 + rem;
+      margin-bottom: (($font-size / $line-height) * 1) / 16 + rem;
+    }
+  }
+
+  @if $placement == paragraph {
+    margin-top: ($font-size / $line-height) + px;
+    margin-bottom: ($font-size / $line-height) + px;
+
+    @if $responsive == true {
+      margin-top: ($font-size / $line-height) / 16 + rem;
+      margin-bottom: ($font-size / $line-height) / 16 + rem;
+    }
+  }
+}
+
 %font-museo700 {
   font-family: Arial;
   font-weight: 700;
@@ -14,122 +46,91 @@
   }
 }
 
-// Text
-%text-basic-paragraph {
-  @include font-size(16);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+%font-Helvetica-Neue {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  margin: $baseline-unit*2 0;
 }
 
-%text-intro-paragraph {
-  @extend %font-museo700;
-  @include font-size(22);
-  color: $color-grey-primary;
+%prevent-text-zooming {
+  // prevent automatic text zooming when changing orientation or viewing mobile
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-%text-button {
-  @extend %font-museo700;
-  @include font-size(18);
+%font-smoothing {
+  // doesn't work as well with italics as with regular text
   -webkit-font-smoothing: antialiased;
+
+  // improves antialiasing in Chrome and Windows
+  text-shadow: 1px 1px transparent;
 }
 
-%text-callout {
-  @extend %font-museo700;
-  @include font-size(16);
+@mixin font-features($liga, $kern) {
+  // allows access to kerning and ligatypes in fonts that support it.
+  -webkit-font-feature-settings: "$liga";
+  -moz-font-feature-settings: "$liga", "$kern";
+  font-feature-settings: "$liga", "$kern";
 }
 
-%text-message-small {
-  @include font-size(14);
-  line-height: 1.5;
-  font-weight: normal;
+@mixin legibility($kerning: normal) {
+  // optimize the font for legibility (kerning of characters)
+  -webkit-font-kerning: $kerning;
+  -moz-font-kerning: $kerning;
+  font-kerning: $kerning;
 }
 
-%text-feedback {
-  @extend %font-museo300;
-  @include font-size(14);
+%type {
+  @extend %font-Helvetica-Neue;
+  @include typography(body, 18);
 }
 
-%text--table {
-  @include font-size(14);
+%type-small {
+  @include typography(body, 14);
 }
 
-%heading-nav-one {
-  @extend %font-museo700;
-  @include font-size(14);
-  @include respond-to($mq-m){
-    @include font-size(16);
+%type-table {
+  @include typography(body, 14);
+
+  @include respond-to($mq-m) {
+    @include typography(body, 16);
   }
 }
 
-%heading-nav-two {
+%type-button {
   @extend %font-museo700;
-  @include font-size(14);
+  @extend %font-smoothing;
+  @include typography(body, 18);
 }
 
-%text-search-box {
+%type-navigation {
   @extend %font-museo700;
-  @include font-size(16);
-}
+  @include typography(body, 14);
 
-// Headings
-%heading-homepage {
-  @extend %font-museo700;
-  @include font-size(48);
-  line-height: 1.2;
-  margin: 0 0 $baseline-unit*2 0;
-  color: $color-green-secondary;
-}
-
-%heading-one {
-  @extend %font-museo700;
-  @include font-size(36);
-  line-height: $baseline-unit*7;
-  margin: 0 0 $baseline-unit*2 0;
-  color: $color-green-secondary;
-}
-
-%heading-two {
-  @extend %font-museo700;
-  @include font-size(24);
-  line-height: 1.4;
-  margin: 0 0 $baseline-unit*2 0;
-  color: $color-green-secondary;
-}
-
-%heading-three {
-  @extend %font-museo700;
-  @include font-size(20);
-  line-height: 1.4;
-  margin: 0 0 $baseline-unit*2 0;
-  color: $color-green-secondary;
-}
-
-%heading-four {
-  @extend %font-museo700;
-  @include font-size(16);
-  line-height: 1.4;
-  margin: 0 0 $baseline-unit 0;
-  color: $color-text-default;
-}
-
-// Links
-%link-nav {
-  color: $color-link-nav;
-
-  &:visited {
-    color: $color-link-nav-visited;
-  }
-
-  &:hover {
-    color: $color-link-nav;
-  }
-
-  &:focus {
-    color: $color-link-nav;
+  @include respond-to($mq-m) {
+    @include typography(body, 16);
   }
 }
 
-// Use clearfix to prevent a container element from collapsing when an internal element is floated.
-//
-// Styleguide clearfix
+%paragraph {
+  @include typography(paragraph, 16);
+
+  @include respond-to($mq-l) {
+    @include typography(paragraph, 18);
+  }
+}
+
+%paragraph-intro {
+  @extend %font-museo700;
+  @include typography(paragraph, 18, 1.5);
+  color: $color-grey-primary;
+
+  @include respond-to($mq-l) {
+    @include typography(paragraph, 22);
+  }
+}
+
+%paragraph-small {
+  @include typography(paragraph, 14);
+}

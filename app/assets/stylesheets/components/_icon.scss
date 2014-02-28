@@ -61,6 +61,12 @@
   }
 }
 
+.icon--pdf {
+  &:before {
+    content: 'e602';
+  }
+}
+
 // TODO replace these with ICONS asap
 
 .icon--open {

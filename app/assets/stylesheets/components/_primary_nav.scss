@@ -4,6 +4,7 @@
 
 .primary-nav {
   @extend .list--unstyled;
+  @extend %font-museo700;
   z-index: 2;
 
   @include respond-to($mq-l) {
@@ -13,7 +14,7 @@
 
 .primary-nav__item {
   @extend %collapsable-trigger;
-  @extend %heading-nav-one;
+  @extend %type-navigation;
   padding: $baseline-unit*1.5 $baseline-unit;
   border-top: 1px solid $color-white-translucent;
 
@@ -101,7 +102,7 @@
   }
 
   li {
-    @extend %heading-nav-two;
+    @extend %type-small;
     margin-right: $baseline-unit*2;
     border-top: 0;
     border-bottom: 1px solid $color-submenu-list-border;

@@ -17,9 +17,11 @@ $color-green-medium: #81c724;
 $color-teal-light: #109e89;
 $color-teal-dark: #0e7f6c;
 
-$color-blue-light: #e6f2f7;
+$color-blue-pale: #ebf2f5;
+$color-blue-light: #e6f2f7; // not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
+$color-blue-extra-dark: #0a4358;
 
 $color-grey-palest: #dce3e1;
 $color-grey-paler: #f2f4f5;
@@ -44,14 +46,14 @@ $color-orange-dark: #c95d2d;
 $color-yellow-light: #ebd520;
 $color-yellow-dark: #ddae1f;
 
-// Page Wide Colours
+// Global Colours
 $color-site-bg: $color-green-primary;
 
-// Typography Colours
+// Typography
 $color-text-default: $color-black;
 $color-text-icon: $color-white;
 
-// Default Link Colours
+// Default Links
 $color-link-default: $color-blue-medium;
 $color-link-visited: $color-blue-dark ;
 $color-link-focus: $color-blue-light;
@@ -63,18 +65,18 @@ $color-link-nav-visited: $color-green-secondary;
 // Article Links
 $color-link-external: $color-grey-light;
 
-// Tables Colours
+// Tables
 $color-table-heading: $color-white;
 $color-table-background: $color-green-primary;
 $color-table-background-alt: $color-green-paler;
 $color-table-border: $color-grey-light;
 
-// List Colours
+// Lists
 $color-list-bullet: $color-green-secondary;
 $color-list-yes: $color-green-secondary;
 $color-list-no: $color-red-dark;
 
-// Button Colours
+// Buttons
 $color-button-default: $color-green-light;
 $color-button-default-border: $color-green-medium;
 $color-button-default-text: $color-black;
@@ -82,8 +84,12 @@ $color-button-default-text: $color-black;
 $color-button-primary: $color-yellow-light;
 $color-button-primary-border: $color-yellow-dark;
 
-// Footer Colours
+// Footer
 $color-footer-bg: $color-grey-pale;
+
+// Message Bars
+$color-opt-out-background: $color-blue-pale;
+$color-feedback-background: $color-blue-extra-dark;
 
 // Callout Colours
 $color-callout-background: $color-green-pale;

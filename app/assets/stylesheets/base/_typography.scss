@@ -53,6 +53,10 @@ p {
   @extend %text-basic-paragraph;
 }
 
+b {
+  font-weight: 700;
+}
+
 // The default style for numbered lists. The padding offsets the bullets by 25px;
 //
 // Styleguide ol

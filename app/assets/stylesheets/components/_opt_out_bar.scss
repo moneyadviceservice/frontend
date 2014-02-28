@@ -1,0 +1,56 @@
+// Message to notify the user that they are on the mobile responsive site and a button to allow the user to "opt out" or switch between the mobile responsive site and the fixed desktop site.
+//
+// Styleguide Opt out bar
+
+.opt-out-bar {
+  overflow: hidden;
+  text-align: center;
+  background-color: $color-opt-out-background;
+
+  p {
+    @extend %text-message-small;
+    margin: $baseline-unit 0;
+    @include respond-to($mq-m) {
+      @include column(8);
+      padding: $baseline-unit 0;
+      text-align: left;
+    }
+  }
+
+  form {
+    @include respond-to($mq-m) {
+      @include column(4);
+      text-align: right;
+    }
+  }
+
+  br {
+    @include respond-to($mq-s) {
+      display: none;
+    }
+  }
+
+}
+
+.opt-out-bar__button {
+  @extend %text-message-small;
+  -webkit-font-smoothing: antialiased;
+  color: $color-link-default;
+  background: transparent;
+  border: 0;
+  padding: $baseline-unit 0;
+  border-top: 1px solid $color-grey-light;
+  @include respond-to($mq-m) {
+    border: 0;
+  }
+
+  &:before {
+    @extend .icon;
+    display: inline-block;
+    padding-right: $baseline-unit;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

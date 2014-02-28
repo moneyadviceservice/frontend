@@ -6,6 +6,14 @@
   }
 }
 
+%font-museo300 {
+  font-family: Arial;
+  font-weight: 300;
+  .wf-museoslab-n4-active & {
+    font-family: 'MuseoSlab';
+  }
+}
+
 // Text
 %text-basic-paragraph {
   @include font-size(16);
@@ -23,11 +31,23 @@
 %text-button {
   @extend %font-museo700;
   @include font-size(18);
+  -webkit-font-smoothing: antialiased;
 }
 
 %text-callout {
   @extend %font-museo700;
   @include font-size(16);
+}
+
+%text-message-small {
+  @include font-size(14);
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+%text-feedback {
+  @extend %font-museo300;
+  @include font-size(14);
 }
 
 %text--table {

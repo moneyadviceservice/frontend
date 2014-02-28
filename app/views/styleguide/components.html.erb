@@ -35,6 +35,10 @@
   <%= render 'styleguide/shared/table' %>
 <% end %>
 
+<%= styleguide_section sections['Opt out bar'] do %>
+  <%= render 'shared/opt_out_bar' %>
+<% end %>
+
 <%= styleguide_section sections['Search'] do %>
   <%= render 'shared/search_box' %>
 <% end %>
@@ -42,4 +46,3 @@
 <%= styleguide_section sections['Primary Navigation'] do %>
   <%= render 'shared/primary_nav' %>
 <% end %>
-

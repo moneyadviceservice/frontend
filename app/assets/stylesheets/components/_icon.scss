@@ -75,6 +75,24 @@
   }
 }
 
+.icon--close {
+  &:before {
+    content: '\e012';
+  }
+}
+
+.icon--desktop {
+  &:before {
+    content: '\e60A';
+  }
+}
+
+.icon--speech {
+  &:before {
+    content: '\e609';
+  }
+}
+
 .icon--search {
   &:before {
     content: '\e00E';

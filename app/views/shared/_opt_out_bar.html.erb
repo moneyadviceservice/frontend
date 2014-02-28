@@ -1,0 +1,11 @@
+<div class="opt-out-bar">
+  <div class="l-container">
+    <p><%= t('opt_out.message') %><br>
+      <a class="js-linkParent" href="mailto:&#110;&#101;&#119;&#115;&#105;&#116;&#101;&#102;&#101;&#101;&#100;&#098;&#097;&#099;&#107;&#064;&#109;&#111;&#110;&#101;&#121;&#097;&#100;&#118;&#105;&#099;&#101;&#115;&#101;&#114;&#118;&#105;&#099;&#101;&#046;&#111;&#114;&#103;&#046;&#117;&#107;"><%= t('opt_out.feedback') %></a>
+    </p>
+    <%= form_tag(opt_out_path) do %>
+      <%= hidden_field_tag(:redirection_page, request.original_url) %>
+      <%= button_tag(t('opt_out.button'), class: 'opt-out-bar__button icon--desktop') %>
+    <% end %>
+  </div>
+</div>

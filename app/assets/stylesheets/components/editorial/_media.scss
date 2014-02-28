@@ -1,6 +1,6 @@
 img {
   max-width: 100%;
-  margin-bottom: $baseline-unit*2;
+  margin-bottom: $baseline-unit*4;
 }
 
 .video-wrapper {
@@ -10,7 +10,7 @@ img {
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
-  margin-bottom: $baseline-unit*2;
+  margin-bottom: $baseline-unit*4;
 
   iframe {
     position: absolute;

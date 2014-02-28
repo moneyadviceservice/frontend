@@ -4,8 +4,6 @@
 describe("mas_analytics#scrollTracking", function () {
   var mas_analytics, $body;
 
-
-
   before(function (done) {
     $('body').html(JST['templates/scrollTracking']());
     $body = $('body');
@@ -68,17 +66,10 @@ describe("mas_analytics#triggerAnalytics", function () {
   var mas_analytics, spy;
 
   beforeEach(function (done) {
-    spy = sinon.spy(MAS, 'log');
     require(['analytics'], function (ma) {
       mas_analytics = ma;
       done()
     }, done);
-  })
-
-  it("should log event when triggerAnalytics() is called", function () {
-    var object = {'title': 'test'};
-    mas_analytics.triggerAnalytics(object);
-    assert(spy.calledWith('mas_analytics.triggerAnalytics', object))
   })
 
   it("should push object to the GTM datalayer when triggerAnalytics() is called", function () {
@@ -86,10 +77,6 @@ describe("mas_analytics#triggerAnalytics", function () {
     var initialLength = dataLayer.length;
     mas_analytics.triggerAnalytics(object);
     expect(initialLength + 1).to.equal(dataLayer.length);
-  })
-
-  afterEach(function () {
-    MAS.log.restore();
   })
 
 })

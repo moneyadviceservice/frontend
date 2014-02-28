@@ -12,11 +12,10 @@ define(['jquery'], function ($) {
 
   while (l--) {
     var type = l;
-    logs[opts[l]] = (window && window.console && MAS.env !== 'production') ? console[opts[l]].bind(console): logIt;
+    logs[opts[l]] = (window && window.console && MAS.env && MAS.env === 'development') ? console[opts[l]].bind(console): logIt;
   }
 
   if(window) window.logged = logged;
 
   return logs
-
 })

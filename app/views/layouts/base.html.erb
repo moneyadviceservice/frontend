@@ -34,18 +34,64 @@
   <%= yield :head %>
 
   <script type="text/javascript">
-    <% if Rails.env.development? %>
-      <%= raw Rails.application.assets['in_head.js'].to_s %>
-    <% else %>
-      <%= raw Uglifier.new(:copyright => false).compile Rails.application.assets['in_head.js'].to_s %>
-    <% end %>
-  </script>
+    // Required for Google Tag Manager
+    dataLayer = [];
 
-  <%= yield :js_bootstrap %>
+    // Any properties that require Ruby @ runtime
+    var MAS = window.MAS || {};
+    MAS.bootstrap = {
+      env: '<%= Rails.env %>',
+      timestamp: new Date().getTime(),
+      fontsUrl: '<%= stylesheet_path('fonts') %>',
+      I18n_locale: '<%= I18n.locale %>'
+    }
+    MAS.translations = {};
+
+    MAS.supports = (function(w,d){
+      var S = {};
+      function supportTest(prop, context){
+        try {
+          return prop in context && context[prop] !== null;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      S.fonts = false; // Required for webfont loader to work, default false, set true in view/base
+      S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
+      S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
+      S.localstorage = supportTest('localStorage', w);
+
+      return S
+    })(window, document);
+
+    (function(w,d){
+      // Update className
+      var el = d.getElementsByTagName('html')[0];
+      el.className = el.className.replace('no-js', 'js js-' + MAS.supports.js);
+
+      <%#
+      Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+      vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
+      %>
+      var vp, ua, gs, sf;
+      vp = d.querySelector && d.querySelector('meta[name="viewport"]');
+      ua = navigator.userAgent;
+      sf = function () {
+        if (vp && /iPhone|iPad|iPod/.test(ua) && !/Opera Mini/.test(ua)) {
+          vp.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          d.addEventListener("gesturestart", gs, false);
+        }
+      };
+      gs = function () {
+        vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+      };
+    })(window,document);
+  </script>
 
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
     <script>
-      // Limits loading to only supported browsers
+      // Limits loading to only supported browsers, ie7/8 loads fixed.css which has fonts inline as desktop browsers should have better bandwidth
       MAS.supports.fonts = true;
     </script>
   <!--<![endif]-->
@@ -56,7 +102,9 @@
   <%# Google Tag Manager %>
   <noscript>
     <%= tag :iframe, { src:   "//www.googletagmanager.com/ns.html?id=#{Rails.application.config.google_tag_manager_id}",
-                       style: 'display:none;visibility:hidden', width: 0, height: 0 } %>
+                       style: 'display:none;visibility:hidden', 
+                       width: 0, 
+                       height: 0 } %>
   </noscript>
   <script>
     (function (w, d, s, l, i) {

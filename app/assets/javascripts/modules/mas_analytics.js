@@ -9,7 +9,8 @@
 
 define(['log', 'jquery', 'waypoints'], function (Global, $) {
 
-  var _this = this,
+  var DL = window.dataLayer || [];
+      _this = this,
       loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000;
 
   // Cache analytics calls so we can prevent duplicate
@@ -18,7 +19,7 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
   // General call to trigger GA analytics
   this.triggerAnalytics = function (data) {
     Global.log('mas_analytics.triggerAnalytics', data);
-    MAS.datalayer.push(data);
+    DL.push(data);
   };
 
   // Private func to handle scrollTracking events

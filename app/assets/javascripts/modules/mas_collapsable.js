@@ -122,6 +122,8 @@ define(['log', 'jquery'], function (Global, $) {
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
+      Global.log(_this.sections[i].hidden);
+
       (_this.sections[i].hidden)? _this.show(i) : _this.hide(i);
     });
 
@@ -151,7 +153,7 @@ define(['log', 'jquery'], function (Global, $) {
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
 
-    if(this.o.accordion && this.selected !== false) this.hide(this.selected);
+    if (this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
     this.selected = i;
   }
   

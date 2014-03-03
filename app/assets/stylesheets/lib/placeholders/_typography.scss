@@ -1,8 +1,9 @@
 @mixin typography($placement, $font-size: 16, $line-height: 1.5) {
-  font-size: $font-size + px;
 
   @if $responsive == true {
     font-size: ($font-size / 16) + rem;
+  } @else {
+    font-size: $font-size + px;
   }
 
   line-height: $line-height;
@@ -10,27 +11,28 @@
   @if $placement == heading {
     // a small decrease in the letter spacing helps readability of headings
     letter-spacing: -1px;
-    margin-top: ($font-size / $line-height) * 2.5 + px;
-    margin-bottom: ($font-size / $line-height) * 1 + px;
 
     @if $responsive == true {
       margin-top: (($font-size / $line-height) * 2.5) / 16 + rem;
       margin-bottom: (($font-size / $line-height) * 1) / 16 + rem;
+    } @else {
+      margin-top: ($font-size / $line-height) * 2.5 + px;
+      margin-bottom: ($font-size / $line-height) * 1 + px;
     }
   }
 
   @if $placement == paragraph {
-    margin-top: ($font-size / $line-height) + px;
-    margin-bottom: ($font-size / $line-height) + px;
-
     @if $responsive == true {
       margin-top: ($font-size / $line-height) / 16 + rem;
       margin-bottom: ($font-size / $line-height) / 16 + rem;
+    } @else {
+      margin-top: ($font-size / $line-height) + px;
+      margin-bottom: ($font-size / $line-height) + px;
     }
   }
 }
 
-%font-museo700 {
+%font-heading-bold {
   font-family: Arial;
   font-weight: 700;
   .wf-museoslab-n4-active & {
@@ -38,7 +40,7 @@
   }
 }
 
-%font-museo300 {
+%font-heading-light {
   font-family: Arial;
   font-weight: 300;
   .wf-museoslab-n4-active & {
@@ -46,7 +48,7 @@
   }
 }
 
-%font-Helvetica-Neue {
+%font-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
@@ -82,9 +84,9 @@
 }
 
 %type {
-  @extend %font-Helvetica-Neue;
+  @extend %font-body;
   @include typography(body, 16);
-  
+
   @include respond-to($mq-m) {
     @include typography(body, 18);
   }
@@ -103,13 +105,13 @@
 }
 
 %type-button {
-  @extend %font-museo700;
+  @extend %font-heading-bold;
   @extend %font-smoothing;
   @include typography(body, 18);
 }
 
 %type-navigation {
-  @extend %font-museo700;
+  @extend %font-heading-bold;
   @include typography(body, 14);
 
   @include respond-to($mq-m) {
@@ -126,7 +128,7 @@
 }
 
 %paragraph-intro {
-  @extend %font-museo700;
+  @extend %font-heading-bold;
   @include typography(paragraph, 18, 1.5);
   color: $color-grey-primary;
 

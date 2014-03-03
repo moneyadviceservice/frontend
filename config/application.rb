@@ -20,13 +20,19 @@ module Frontend
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
 
     # Configure additional application CSS assets to precompile.
-    config.assets.precompile += %w(basic.css enhanced_fixed.css enhanced_responsive.css fonts.css styleguide.css)
+    config.assets.precompile += %w(basic.css
+                                  enhanced_fixed.css
+                                  enhanced_responsive.css
+                                  fonts.css
+                                  styleguide.css)
 
     # Configure additional application JS assets to precompile.
-    config.assets.precompile += %w(html_inspector.js
-                                  in_head.js
-                                  modules/mas_analytics.js
-                                  modules/mas_collapsable.js
+    config.assets.precompile += %w(html_inspector.js 
+                                  supports.js
+                                  translations/en.js
+                                  translations/cy.js
+                                  modules/mas_analytics.js 
+                                  modules/mas_collapsable.js 
                                   modules/mas_log.js
                                   styleguide.js)
 

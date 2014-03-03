@@ -36,68 +36,65 @@
   <%# Any JS that is required before DOM is created should be in this block
       includes feature detection, analytics setup, json bootstrap %>
   <script type="text/javascript">
+
+    // Required for Google Tag Manager
+    dataLayer = [];
+
+    // Any properties that require Ruby @ runtime
     var MAS = window.MAS || {};
-
-    MAS.supports = {};
-    MAS.config = {};
-    MAS.localCache = {};
-    MAS.env = '<%= Rails.env %>';
-    MAS.datalayer = dataLayer = []; // For GoogleTagManager
-    MAS.timestamp = new Date().getTime(); // For MAS custom analytics to work out duration user has been on page when they interact
-    MAS.supports.fonts = false; // Required for webfont loader to work
-    MAS.config.fonts = {
-      custom: {
-        families: ['MuseoSlab', 'icon-font'],
-        urls:     ['<%= stylesheet_path('fonts') %>']
-      }
-    };
-
-    (function (d, w, M) {
-      // JS is enabled, add class .js to html, also based on feature support add .js-advanced or .js-basic
-      M.supports.js = ('querySelector' in d && 'localStorage' in w && 'addEventListener' in w) ? 'advanced' : 'basic';
-
-      // Update className
-      var el = d.getElementsByTagName('html')[0];
-      el.className = el.className.replace('no-js', 'js js-' + M.supports.js);
-
-    })(document, window, MAS);
-
-    // Support check for html5 local storage API
-    MAS.supports.localstorage = (function supports_html5_storage() {
-      try {
-        return 'localStorage' in window && window['localStorage'] !== null;
-      } catch (e) {
-        return false;
-      }
-    })();
-
-    // When fonts load we store a string in localstorage, this can then be used to help us load
-    // them quicker a second time
-    if (MAS.supports.localstorage) {
-      MAS.localCache.fonts = localStorage.getItem('MAS.localCache.fonts');
+    MAS.bootstrap = {
+      env: '<%= Rails.env %>',
+      timestamp: new Date().getTime(),
+      fontsUrl: '<%= stylesheet_path('fonts') %>',
+      I18n_locale: '<%= I18n.locale %>'
     }
 
-    // Fix for iPhone viewport scale bug
-    // http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
-    // MAS = mobile boilerplate
-    MAS.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');
-    MAS.ua = navigator.userAgent;
-    MAS.scaleFix = function () {
-      if (MAS.viewportmeta && /iPhone|iPad|iPod/.test(MAS.ua) && !/Opera Mini/.test(MAS.ua)) {
-        MAS.viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-        document.addEventListener("gesturestart", MAS.gestureStart, false);
+    MAS.supports = (function(w,d){
+      var S = {};
+      function supportTest(prop, context){
+        try {
+          return prop in context && context[prop] !== null;
+        } catch (e) {
+          return false;
+        }
       }
-    };
-    MAS.gestureStart = function () {
-      MAS.viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-    };
-  </script>
 
-  <%= yield :js_bootstrap %>
+      S.fonts = false; // Required for webfont loader to work, default false, set true in view/base
+      S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
+      S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
+      S.localstorage = supportTest('localStorage', w);
+
+      return S
+    })(window, document);
+
+    (function(w,d){
+      // Update className
+      var el = d.getElementsByTagName('html')[0];
+      el.className = el.className.replace('no-js', 'js js-' + MAS.supports.js);
+
+      <%#
+      Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+      vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
+      %>
+      var vp, ua, gs, sf;
+      vp = d.querySelector && d.querySelector('meta[name="viewport"]');
+      ua = navigator.userAgent;
+      sf = function () {
+        if (vp && /iPhone|iPad|iPod/.test(ua) && !/Opera Mini/.test(ua)) {
+          vp.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          d.addEventListener("gesturestart", gs, false);
+        }
+      };
+      gs = function () {
+        vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+      };
+    })(window,document);
+
+  </script>
 
   <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
     <script>
-      // Limits loading to only supported browsers
+      // Limits loading to only supported browsers, ie7/8 loads fixed.css which has fonts inline as desktop browsers should have better bandwidth
       MAS.supports.fonts = true;
     </script>
   <!--<![endif]-->

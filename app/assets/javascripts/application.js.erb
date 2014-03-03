@@ -1,37 +1,41 @@
 //= require require_config
 
-if (MAS.supports.fonts) {
-  require(['webfonts'], function () {
-    WebFont.load(MAS.config.fonts);
+if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 
-    if (MAS.supports.localstorage) {
-      localStorage.setItem('MAS.localCache.fonts', true);
-    }
-  });
+  require(['webfonts'], function () {
+    var fontConfig = {
+      custom: {
+        families: ['MuseoSlab', 'icomoon'],
+        urls: [MAS.bootstrap.fontsUrl]
+      }
+    };
+    WebFont.load(fontConfig);
+  })
 }
 
 require(['analytics'], function (analytics) {
-  MAS.analytics = analytics;
-
   analytics.scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]
   });
 });
 
-require(['collapsable'], function (Collapsable) {
+require([MAS.bootstrap.I18n_locale, 'collapsable'], function (Text, Collapsable) {
   var articleCollapsables = new Collapsable({
     showOnlyFirst:true,
-    showIcon:true
+    showIcon:true,
+    textString: {
+      showThisSection: Text.show || 'Show this section',
+      hideThisSection: Text.hide || 'Hide this section'
+    }
   });
 
   var primaryNav = new Collapsable({
     closeOffFocus:true,
     accordion:true,
-    showIcon: false,
-    showOnlyFirst: false,
     triggerEl: '.primary-nav > li > a',
-    targetEl: '.primary-nav__dropdown'
+    targetEl: '.primary-nav__dropdown',
+    parentWrapper: '.primary-nav'
   });
 
 });

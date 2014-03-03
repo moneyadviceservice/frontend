@@ -1,79 +1,26 @@
-<ul class="primary-nav" id="primaryNav">
-  <li class="primary-nav__item">
-    <a href="/categories/life-events">Life events</a>
+<% if category_navigation.present? %>
+  <ul class="primary-nav">
 
-    <div class="l-primary-nav-dropdown primary-nav__dropdown">
-      <ul class="menu"> <!-- hide lists with display:none in .js context -->
-        <li><a href="/categories/young-people-and-money">Leaving school or college</a></li>
-        <li><a href="/categories/setting-up-home">Setting up home</a></li>
-        <li><a href="/categories/having-a-baby">Having a baby</a></li>
-        <li><a href="/categories/losing-your-job">Losing your job</a></li>
-        <li><a href="/categories/becoming-ill-or-disabled">Becoming ill or disabled </a></li>
-        <li><a href="/categories/divorce-and-separation">Divorce and separation</a></li>
-        <li><a href="/categories/retirement">Retirement</a></li>
-        <li><a href="/categories/long-term-care">Long-term care</a></li>
-        <li><a href="/categories/when-someone-dies">When someone dies</a></li>
-      </ul>
-    </div>
-  </li>
+    <% category_navigation.each do |category| %>
+      <li class="primary-nav__item">
+        <% if category.id == 'news' %>
+          <a href="/<%= I18n.locale %>/news"><%= category.title %></a>
+        <% else %>
+          <a href="/<%= I18n.locale %>/categories/<%= category.id %>"><%= category.title %></a>
+        <% end %>
 
-  <li class="primary-nav__item">
-    <a href="/categories/managing-your-money">Managing your&nbsp;money</a>
+        <% if category.sub_categories.present? %>
+          <div class="l-primary-nav-dropdown primary-nav__dropdown">
+            <ul class="menu">
+              <% category.sub_categories.each do |sub_category| %>
+                <li><a href="/<%= I18n.locale %>/categories/<%= sub_category.id %>"><%= sub_category.title %></a></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-    <div class="l-primary-nav-dropdown primary-nav__dropdown">
-      <ul class="menu">
-        <li><a href="/categories/managing-your-money-better">Managing your money better</a></li>
-        <li><a href="/categories/how-to-review-or-reduce-borrowing">How to review or reduce borrowing</a></li>
-        <li><a href="/categories/money-saving-tips">Money saving tips</a></li>
-        <li><a href="/categories/universal-credit-and-other-benefits">Universal Credit and other benefits</a></li>
-        <li><a href="/categories/work-and-money">Work and money</a></li>
-        <li><a href="/categories/bank-accounts-and-credit-or-debit-cards">Bank accounts and credit or debit cards</a>
-        </li>
-        <li><a href="/categories/scams-and-identity-theft">Scams and identity theft</a></li>
-        <li><a href="/categories/money-complaints-and-compensation">Money complaints and compensation</a></li>
-        <li><a href="/categories/financial-help-and-advice">Financial help and advice</a></li>
-        <li><a href="/categories/help-someone-else-with-money">Help someone else with money</a></li>
-        <li><a href="/categories/wills-and-estate-planning">Wills and estate planning</a></li>
-      </ul>
-    </div>
-  </li>
+      </li>
+    <% end %>
 
-  <li class="primary-nav__item">
-    <a href="/categories/money-topics">Money topics</a>
-
-    <div class="l-primary-nav-dropdown primary-nav__dropdown">
-      <ul class="menu">
-        <li><a href="/categories/saving-and-investing">Saving and investing</a></li>
-        <li><a href="/categories/borrowing-money">Borrowing money</a></li>
-        <li><a href="/categories/managing-debt">Debt management</a></li>
-        <li><a href="/categories/homes-and-mortgages">Homes and mortgages</a></li>
-        <li><a href="/categories/insurance">Insurance</a></li>
-        <li><a href="/categories/pensions-and-retirement">Pensions and retirement</a></li>
-      </ul>
-    </div>
-  </li>
-
-  <li class="primary-nav__item">
-    <a href="/categories/tools--resources">Tools &amp; resources</a>
-
-    <div class="l-primary-nav-dropdown primary-nav__dropdown">
-      <ul class="menu">
-        <li><a href="/categories/budget-planner">Budget planner</a></li>
-        <li><a href="/categories/health-check">Money Health Check</a></li>
-        <li><a href="/categories/action-plans">Action plans</a></li>
-        <li><a href="/categories/calculators">Calculators</a></li>
-        <li><a href="/categories/comparison-tables">Comparison tables</a></li>
-        <li><a href="/categories/letter-templates">Letter templates</a></li>
-        <li><a href="/categories/order-forms">Order forms</a></li>
-        <li><a href="/categories/free-printed-guides">Free printed guides</a></li>
-        <li><a href="/categories/videos">Videos</a></li>
-        <li><a href="/categories/workplace-pension-advice-tool">Workplace pension advice tool</a></li>
-        <li><a href="/categories/interactive-timelines">Interactive timelines</a></li>
-      </ul>
-    </div>
-  </li>
-
-  <li class="primary-nav__item">
-    <a href="/news">News &amp; features</a>
-  </li>
-</ul>
+  </ul>
+<% end %>

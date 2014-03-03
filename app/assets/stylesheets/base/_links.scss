@@ -16,6 +16,6 @@ a {
 
 %link-nav,
 .link-nav {
-  @include links($color-link-nav, $color-link-nav-visited);
+  @include links($color-link-nav, $color-link-nav-visited, $color-transparent);
 }
 

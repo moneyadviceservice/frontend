@@ -4,7 +4,7 @@
 
 .primary-nav {
   @extend .list--unstyled;
-  @extend %font-museo700;
+  @extend %font-heading-bold;
   z-index: 2;
 }
 
@@ -28,6 +28,12 @@
     }
   }
 
+  &:nth-of-type(2) {
+    @include respond-to($mq-l) {
+      width: 120px;
+    }
+  }
+
   &:last-child {
     border-bottom: 1px solid $color-white-translucent;
     @include respond-to($mq-l) {
@@ -35,11 +41,11 @@
     }
   }
 
-  > a {
+  a {
+    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
     display: inline-block;
     width: 100%;
     padding: $baseline-unit*2;
-    color: $color-white;
     position: relative;
   }
 
@@ -75,16 +81,22 @@
     text-align: left;
     padding-left: $baseline-unit*2;
     @include respond-to($mq-l) {
+      padding-left: 0;
       width: 32%;
       float: left;
     }
   }
 }
 
-.js .primary-nav,
-.js .search-box {
-  display: none;
-  @include respond-to($mq-l) {
-    display: block;
+.js {
+  .primary-nav,
+  .search-box {
+    display: none;
+    @include respond-to($mq-l) {
+      display: block;
+    }
   }
 }
+
+
+

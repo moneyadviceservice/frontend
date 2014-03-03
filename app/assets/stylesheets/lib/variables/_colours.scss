@@ -1,5 +1,6 @@
 $color-white: #FFF; // not in the standard palette
 $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
+$color-transparent: transparent;
 
 $color-black: #333333;
 $color-grey-primary: #6d6d6d;
@@ -102,6 +103,11 @@ $color-icon-open: $color-yellow-light;
 $color-article-cta: $color-blue-light;
 
 // Navigation
+$color-primary-nav: $color-white;
+$color-primary-nav-visited: $color-white;
+$color-primary-nav-focus: $color-transparent;
+
+
 $color-submenu-background: $color-grey-paler;
 $color-submenu-border: $color-green-primary;
 $color-submenu-list-border: $color-grey-palest;

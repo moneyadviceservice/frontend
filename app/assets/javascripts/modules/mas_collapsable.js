@@ -1,6 +1,6 @@
 
 define(['log', 'jquery'], function (Global, $) {
-  "use strict";
+  'use strict';
 
   var defaults = {
     // Setup
@@ -20,8 +20,8 @@ define(['log', 'jquery'], function (Global, $) {
 
     // Localised text strings
     textString: {
-      show_this_section: 'Show this section',
-      hide_this_section: 'Hide this section'
+      showThisSection: 'Show this section',
+      hideThisSection: 'Hide this section'
     }
   };
 
@@ -34,10 +34,9 @@ define(['log', 'jquery'], function (Global, $) {
     }else{
       this[0].className = c.replace(from,to);
     }
-  }
+  };
 
   var Collapsible = function(opts){
-
     this.o = $.extend({}, defaults, opts);
     this.sections = [];
     this.selected = false;
@@ -47,7 +46,9 @@ define(['log', 'jquery'], function (Global, $) {
         l = triggers.length,
         i = 0;
 
-    if(l === 0) return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+    if(l === 0){
+      return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+    }
 
     for(i; i<l; i++){
       this._setupEach.call(this, i, triggers[i]);
@@ -61,20 +62,19 @@ define(['log', 'jquery'], function (Global, $) {
         return;
       }
 
-      this.$parent.on('focusout', function(e){
+      this.$parent.on('focusout', function(){
         setTimeout(function(){
           if( _this.$parent.find(document.activeElement).length === 0 ){
             _this.hide(_this.selected);
           }
-        },10)
-      })
+        },10);
+      });
     }
-  }
+  };
 
   Collapsible.prototype._modifyButtonHTML = function(i){
     var trigger = this.sections[i].trigger,
-        target =  this.sections[i].target,
-        icon = (this.o.showIcon)? trigger.prepend(this.o.headingIcon.replace('{{txt}}', this.o.textString.show_this_section)): '';
+        icon = (this.o.showIcon)? trigger.prepend(this.o.headingIcon.replace('{{txt}}', this.o.textString.showThisSection)): '';
 
     if(this.o.useButton){
       var buttonTitle = trigger.text();
@@ -101,7 +101,7 @@ define(['log', 'jquery'], function (Global, $) {
     if(this.o.showIcon){
       this.sections[i].icon = trigger.find('.visually-hidden');
     }
-  }
+  };
 
   Collapsible.prototype._setupEach = function(i,el){
     var $el = $(el);
@@ -112,7 +112,7 @@ define(['log', 'jquery'], function (Global, $) {
       trigger: $el,
       target: $el.next(this.o.targetEl),
       hidden: !$el.hasClass(this.o.activeClass)
-    }
+    };
 
     // Dont modify or bind events if no target element
     if(!this.sections[i].target.length) return;
@@ -133,12 +133,12 @@ define(['log', 'jquery'], function (Global, $) {
     this._modifyButtonHTML(i);
 
     // Set initial state
-    (this.sections[i].hidden) ? this.hide(i) : this.show(i);
+    this.toggle(!this.sections[i].hidden,i);
 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
-      (_this.sections[i].hidden)? _this.show(i) : _this.hide(i);
+      _this.toggle(_this.sections[i].hidden, i);
     });
 
     // Accessibility support for spacebar
@@ -146,42 +146,39 @@ define(['log', 'jquery'], function (Global, $) {
       if(e.which === 32) {
         _this.sections[i].trigger.trigger('click');
       }
-    })
+    });
+  };
 
-    // if(this.o.closeOffFocus){
-    //   if(!this.o.parentWrapper) {Global.warn('options.parentWrapper should be set for closeOffFocus to work properly')}
-
-    //   this.sections[i].target.on('focusout', function(e){
-    //     setTimeout(function(){
-    //       console.log('focusout => ' + document.activeElement)
-    //       if( _this.sections[i].target.find(document.activeElement).length === 0 ){
-    //         _this.hide(i);
-    //       }
-    //     },10)
-    //   })
-    // }
-  }
+  Collapsible.prototype.toggle = function(show,i){
+    if(show){
+      this.show(i);
+    }else{
+      this.hide(i);
+    }
+  };
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.show_this_section);
+    if(this.o.showIcon) item.icon.text(this.o.textString.showThisSection);
     item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
 
-    if (this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
+    if (this.o.accordion && (this.selected !== false && this.selected !== i)){
+      this.hide(this.selected);
+    }
     this.selected = i;
-  }
+  };
   
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.hide_this_section);
+    if(this.o.showIcon) item.icon.text(this.o.textString.hideThisSection);
     item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
-  }
+  };
 
   return Collapsible;
 });

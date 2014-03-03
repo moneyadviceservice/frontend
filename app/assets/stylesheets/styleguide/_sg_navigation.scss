@@ -20,7 +20,6 @@
     width: 100%;
     @include respond-to($mq-l) {
       @include inline-block;
-//      display: inline-block;
       width: auto;
       border-bottom: none;
     }
@@ -28,7 +27,7 @@
 
   a,
   a:visited {
-    display: inline-block;
+    @include inline-block;
     text-decoration: none;
     padding: 12px;
     width: 100%;

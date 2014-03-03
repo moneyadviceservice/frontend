@@ -46,7 +46,7 @@
 
   &:before {
     @extend .icon;
-    display: inline-block;
+    @include inline-block;
     padding-right: $baseline-unit;
   }
 

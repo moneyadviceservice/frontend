@@ -9,7 +9,7 @@
     @include font-size(24);
     content:'\2022';
     color: $color-list-bullet;
-    display: inline-block;
+    @include inline-block;
     position: relative;
     width: 0;
     height: 0;

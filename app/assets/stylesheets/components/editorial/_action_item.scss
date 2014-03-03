@@ -27,7 +27,7 @@
     span {
       font-size: 30px;
       margin-top: -6px;
-      display: inline-block;
+      @include inline-block;
       color: $color-icon-open;
     }
   }

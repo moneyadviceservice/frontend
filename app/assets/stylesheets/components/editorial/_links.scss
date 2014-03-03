@@ -20,3 +20,13 @@ a[href$=".doc"] {
     padding-right: 5px;
   }
 }
+
+a[href$=".pdf"] {
+  margin-top: $baseline-unit*3;
+
+  &:before {
+    @extend .icon;
+    @extend .icon--pdf;
+    padding-right: 5px;
+  }
+}

@@ -1,7 +1,6 @@
 .mas-logo {
   height: 36px;
   width: 170px;
-  margin-left: $baseline-unit;
   background: transparent image_url('mas-logo.png') 0 0 no-repeat;
 
   @include respond-to($mq-m) {

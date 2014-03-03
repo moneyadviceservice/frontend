@@ -1,11 +1,18 @@
 .l-homepage {
+  h1 {
+    @extend %heading-extra-large;
+  }
+
   @include column(12);
-  padding: $baseline-unit*14 0 $baseline-unit*15;
+
+  @include respond-to($mq-l) {
+    padding: $baseline-unit*14 0 $baseline-unit*15;
+  }
 
   @include respond-to($mq-m) {
     @include column(8);
     @include push(2);
-    padding: $baseline-unit*14 0 $baseline-unit*15;
+    padding: $baseline-unit*6 0 $baseline-unit*15;
   }
 }
 
@@ -18,18 +25,4 @@
   @include respond-to($mq-m) {
     @include column(8);
   }
-}
-
-.l-primary-nav {
-  margin: $baseline-unit*4 auto 0 auto;
-  @extend %clearfix;
-  @include respond-to($mq-l) {
-    margin: -$baseline-unit*5 auto $baseline-unit*4 auto;
-  }
-}
-
-.l-search-box {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
 }

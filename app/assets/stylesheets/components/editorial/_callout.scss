@@ -5,17 +5,17 @@
 .callout {
   display: block;
   padding: $baseline-unit*3;
-  margin: $baseline-unit*3 0;
+  margin: $baseline-unit*4 0;
   border-radius: 10px;
   color: $color-green-tertiary;
   background-color: $color-callout-background;
 
   > h3 {
-    margin-bottom: $baseline-unit*3;
+    margin: 0 0 $baseline-unit*3 0;
   }
 
   > p {
-    @extend %text-callout;
+    @extend %font-heading-bold;
     margin-top: 0;
   }
 
@@ -23,7 +23,7 @@
     @include respond-to($mq-l) {
       @include column(4, 8);
       float: right;
-      margin-bottom: $baseline-unit*3;
+      margin: 0 $baseline-unit*2 $baseline-unit $baseline-unit*2;
     }
   }
 }

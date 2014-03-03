@@ -1,28 +1,10 @@
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: $baseline-unit*4;
+  @extend %type;
+  @extend %font-smoothing;
+  @extend %prevent-text-zooming;
 
-  // optimize the font for legibility (kerning of characters)
-  -webkit-font-kerning: normal;
-  -moz-font-kerning: normal;
-  font-kerning: normal;
-
-  // allows access to kerning and ligatypes in fonts that support it.
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga", "kern";
-  font-feature-settings: "liga", "kern";
-
-  // doesn't work as well with italics as with regular text
-  -webkit-font-smoothing: antialiased;
-
-  // improves antialiasing in Chrome and Windows
-  text-shadow: 1px 1px transparent;
-
-  // prevent automatic text zooming when changing orientation or viewing mobile
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  @include legibility(normal);
+  @include font-features(liga, kern);
 }
 
 // Currently we only support H1 - H3
@@ -30,19 +12,19 @@ body {
 // Styleguide headings
 
 h1 {
-  @extend %heading-one;
+  @extend %heading-large;
 }
 
 h2 {
-  @extend %heading-two;
+  @extend %heading-medium;
 }
 
 h3 {
-  @extend %heading-three;
+  @extend %heading-small;
 }
 
 h4 {
-  @extend %heading-four;
+  @extend %heading-extra-small;
 }
 
 // Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
@@ -50,7 +32,7 @@ h4 {
 // Styleguide p
 
 p {
-  @extend %text-basic-paragraph;
+  @extend %paragraph;
 }
 
 b {
@@ -70,5 +52,6 @@ ol {
 // Styleguide ul
 
 ul {
+  margin: $baseline-unit*2 0 $baseline-unit*4 0;
   padding: 0 0 0 25px;
 }

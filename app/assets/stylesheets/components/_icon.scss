@@ -7,8 +7,13 @@
 // .icon--tick          - \e609
 // .icon--externalLink  - \e619
 // .icon--doc           - \e611
-// .icon--open           - \e603
-// .icon--closed           - \e603
+// .icon--pdf           - \e602
+// .icon--open          - \e603
+// .icon--closed        - \e0012
+// .icon--close         - \e60A
+// .icon--desktop       - \e603
+// .icon--speech        - \e609
+// .icon--search        - \e00E
 //
 // Styleguide icons
 
@@ -43,7 +48,7 @@
   }
 }
 
-.icon--externalLink {
+.icon--external-link {
   &:after {
     content: '\e608';
   }
@@ -61,7 +66,11 @@
   }
 }
 
-// TODO replace these with ICONS asap
+.icon--pdf {
+  &:before {
+    content: '\e602';
+  }
+}
 
 .icon--open {
   &:before {

@@ -4,19 +4,14 @@
 
 .primary-nav {
   @extend .list--unstyled;
+  @extend %font-heading-bold;
   z-index: 2;
-
-  @include respond-to($mq-l) {
-    float: right;
-  }
 }
 
 .primary-nav__item {
   @extend %collapsable-trigger;
-  @extend %heading-nav-one;
-  padding: $baseline-unit*1.5 $baseline-unit;
+  @extend %type-navigation;
   border-top: 1px solid $color-white-translucent;
-  //  position: relative;
 
   @include respond-to($mq-l) {
     display: inline-block;
@@ -33,6 +28,12 @@
     }
   }
 
+  &:nth-of-type(2) {
+    @include respond-to($mq-l) {
+      width: 122px;
+    }
+  }
+
   &:last-child {
     border-bottom: 1px solid $color-white-translucent;
     @include respond-to($mq-l) {
@@ -40,80 +41,62 @@
     }
   }
 
-  > a {
-    padding: 0 $baseline-unit*2;
-    color: $color-white;
-    @include respond-to($mq-l) {
-      display: inline-block;
-    }
+  a {
+    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
+    display: inline-block;
+    width: 100%;
+    padding: $baseline-unit*2;
+    position: relative;
   }
-  overflow: visible;
-}
 
-.l-primary-nav-dropdown {
-  @extend %collapsable-target;
-  @include respond-to($mq-l) {
-    &.is-on {
+  a.is-on:after {
+    @include respond-to($mq-m) {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent $color-submenu-background transparent;
       position: absolute;
-      top: $baseline-unit*16;
-      left: 0;
-      z-index: 10;
+      bottom: -8px;
+      left: 42%;
     }
   }
-
-  ul {
-    margin: 0 auto;
-    max-width: $mq-l;
-  }
-}
-
-.menu {
-  @extend .list--unstyled;
-  border-left: $baseline-unit solid $color-grey-light;
-  background-color: $color-white;
-  margin-left: -6px;
-  margin-right: -6px;
-
-  > li {
-    border-top: 1px solid $color-grey-light;
-    padding: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 $baseline-unit*2;
-    padding: $baseline-unit*2 $baseline-unit;
-    > a {
-      color: $color-green-secondary;
-    }
-  }
-
 }
 
 .primary-nav__dropdown {
-  padding: $baseline-unit*4;
   width: 100%;
   background-color: $color-submenu-background;
-  border-bottom: 3px solid $color-submenu-border;
+  @include respond-to($mq-l) {
+    border-bottom: 3px solid $color-submenu-border;
+    padding: $baseline-unit*4;
+
+  }
 
   li {
-    @extend %heading-nav-two;
+    @extend %type-small;
     margin-right: $baseline-unit*2;
     border-top: 0;
     border-bottom: 1px solid $color-submenu-list-border;
     text-align: left;
-    width: 32%;
-    float: left;
+    padding-left: $baseline-unit*2;
+    @include respond-to($mq-l) {
+      padding-left: 0;
+      width: 32%;
+      float: left;
+    }
   }
 }
 
-//
-//.menu {
-//  @extend .list--unstyled;
-//  border-stle: 1px solid;
-//  padding: 4px;
-//
-//  @include respond-to($mq-s) {
-//    border-color: margin background:colour
-//  }
-//
-//  @include respond-to($mq-l) {
-//    border-left:
+//.js {
+//  .primary-nav,
+//  .search-box {
+//    display: none;
+//    @include respond-to($mq-l) {
+//      display: block;
+//    }
 //  }
 //}
-//
+
+
+

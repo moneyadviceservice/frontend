@@ -1,4 +1,4 @@
-<header class="header" role="banner">
+<header class="l-header header" role="banner">
   <div class="l-container">
     <a class="skip-to-content" href="#main">Skip to main content</a>
     <div class="mas-logo">
@@ -6,10 +6,10 @@
     </div>
   </div>
 
-  <nav class="l-primary-nav l-container" role="navigation">
+  <nav class="l-container" role="navigation">
+    <%= render 'shared/mobile_nav' %>
     <%= render 'shared/primary_nav' %>
   </nav>
 
-  <!--<%= render 'shared/search_box' %>-->
-
+  <%= render 'shared/search_box' %>
 </header>

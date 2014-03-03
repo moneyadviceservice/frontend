@@ -17,7 +17,7 @@ describe("mas_collapsable basics", function () {
     $body = $('body');
 
     require(['collapsable'], function (mod) {
-      ValidCollapsable = new mod();
+      ValidCollapsable = new mod({showOnlyFirst:true});
       EmptyCollapsable = new mod({triggerEl:'.doesntExist'});
       done();
     }, done);
@@ -62,10 +62,12 @@ describe("mas_collapsable basics", function () {
     })
 
     describe("target element is visible", function () {
-      xit("adds aria-hidden=false to target element", function(){
+      it("adds aria-hidden=false to target element", function(){
+        console.log(buttonVisible)
+        console.log(targetVisible)
         expect(targetVisible.attr('aria-hidden')).to.equal('false')        
       })
-      xit("adds (active class) on both target and trigger elements", function(){
+      it("adds (active class) on both target and trigger elements", function(){
         expect(buttonVisible.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
         expect(targetVisible.hasClass(ValidCollapsable.o.activeClass)).to.be.true;
       })
@@ -119,7 +121,7 @@ describe("mas_collapsable basics", function () {
     })
 
     describe("when the accordion options is enabled", function(){
-      xit("closes any open target elements in the collection", function(){})
+      it("closes any open target elements in the collection", function(){})
     })
   })
 
@@ -186,7 +188,8 @@ describe("mas_collapsable#options", function(){
         targetEl: 'ul',
         showOnlyFirst: true,
         accordion: true,
-        closeOffFocus: true
+        closeOffFocus: true,
+        parentWrapper: $body.find('#optionsTest')
       });
 
       done();
@@ -237,19 +240,29 @@ describe("mas_collapsable#options", function(){
 
   // Have not found a way to successfully emulate user keyboard tabbing through content
   describe("when the closeOffFocus option is enabled", function(){
-    xit("closes the open element when focus leaves it", function(){
+    xit("closes the open element when focus leaves it", function(done){
       var S = Collapsable.sections;
       // Open list
       S[0].trigger.click();
+      expect(S[0].hidden).to.be.false;
+      console.dir(S[0])
 
       // Focus on last element in target one
-      S[0].target.find('a:last').focus();
+      // S[0].target.find('a:last').focus();
 
       // Focus on next element to trigger focusout
-      S[1].trigger.focus();
+      // S[1].trigger.focus();
+      $body.find('#forceFocus').click();
+
+      setTimeout(function(){
+        console.dir(S[0])
+        console.log(document.activeElement);
+        done();
+      },10)
+
 
       // check if previous element is shut
-      expect(S[0].hidden).to.be.true;
+      // expect(S[0].hidden).to.be.true;
     })
   })
 

@@ -9,6 +9,7 @@ define(['log', 'jquery'], function (Global, $) {
     activeClass: 'is-on',
     inactiveClass: 'is-off',
     closeOffFocus: false,
+    parentWrapper: false,
     accordion: false,
     showOnlyFirst: false,
 
@@ -36,11 +37,13 @@ define(['log', 'jquery'], function (Global, $) {
   }
 
   var Collapsible = function(opts){
+
     this.o = $.extend({}, defaults, opts);
     this.sections = [];
-    this.selected = false; 
+    this.selected = false;
 
-    var triggers = $(this.o.triggerEl),
+    var _this = this,
+        triggers = $(this.o.triggerEl),
         l = triggers.length,
         i = 0;
 
@@ -48,6 +51,23 @@ define(['log', 'jquery'], function (Global, $) {
 
     for(i; i<l; i++){
       this._setupEach.call(this, i, triggers[i]);
+    }
+
+    if(this.o.closeOffFocus){
+      this.$parent = $(this.o.parentWrapper);
+
+      if(!this.o.parentWrapper || !this.$parent.length) {
+        Global.warn('options.parentWrapper should be set & valid for closeOffFocus to work properly');
+        return;
+      }
+
+      this.$parent.on('focusout', function(e){
+        setTimeout(function(){
+          if( _this.$parent.find(document.activeElement).length === 0 ){
+            _this.hide(_this.selected);
+          }
+        },10)
+      })
     }
   }
 
@@ -77,10 +97,6 @@ define(['log', 'jquery'], function (Global, $) {
       trigger.attr('tabindex', '0');
       trigger.prepend(icon);
     }
-
-
-    // move modify code here for cleaner separation of accessibility stuff
-    // Wrap in button element to assist with accessibility
 
     if(this.o.showIcon){
       this.sections[i].icon = trigger.find('.visually-hidden');
@@ -122,8 +138,6 @@ define(['log', 'jquery'], function (Global, $) {
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
-      Global.log(_this.sections[i].hidden);
-
       (_this.sections[i].hidden)? _this.show(i) : _this.hide(i);
     });
 
@@ -134,15 +148,18 @@ define(['log', 'jquery'], function (Global, $) {
       }
     })
 
-    if(this.o.closeOffFocus){
-      this.sections[i].target.on('focusout', function(e){
-        setTimeout(function(){
-          if( _this.sections[i].target.find(document.activeElement).length === 0 ){
-            _this.hide(i);
-          }
-        },10)
-      })
-    }
+    // if(this.o.closeOffFocus){
+    //   if(!this.o.parentWrapper) {Global.warn('options.parentWrapper should be set for closeOffFocus to work properly')}
+
+    //   this.sections[i].target.on('focusout', function(e){
+    //     setTimeout(function(){
+    //       console.log('focusout => ' + document.activeElement)
+    //       if( _this.sections[i].target.find(document.activeElement).length === 0 ){
+    //         _this.hide(i);
+    //       }
+    //     },10)
+    //   })
+    // }
   }
 
   Collapsible.prototype.show = function(i){

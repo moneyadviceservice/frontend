@@ -2,9 +2,7 @@
 //= require requirejs/require
 //= require require_config
 //= require jquery
-
 var expect = chai.expect;
-var MAS = window.MAS || {};
 
 // Required for Google Tag Manager
 dataLayer = [];
@@ -15,7 +13,7 @@ MAS.bootstrap = {
   env: 'production',
   timestamp: new Date().getTime(),
   I18n_locale: 'en'
-}
+};
 
 MAS.supports = (function(w,d){
   var S = {};
@@ -32,5 +30,5 @@ MAS.supports = (function(w,d){
   S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
   S.localstorage = supportTest('localStorage', w);
 
-  return S
+  return S;
 })(window, document);

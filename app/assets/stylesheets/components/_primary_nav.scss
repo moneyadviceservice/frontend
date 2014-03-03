@@ -43,9 +43,22 @@
   > a {
     padding: 0 $baseline-unit*2;
     color: $color-white;
+    position: relative;
     @include respond-to($mq-l) {
       display: inline-block;
     }
+  }
+
+  a.is-on:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $color-submenu-background transparent;
+    position: absolute;
+    bottom: -26px;
+    left: 42%;
   }
 }
 
@@ -89,18 +102,6 @@
   width: 100%;
   background-color: $color-submenu-background;
   border-bottom: 3px solid $color-submenu-border;
-  &:before {
-    content: '';
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent $color-submenu-background transparent;
-    position: absolute;
-    top: -10px;
-    left: 47.75%;
-  }
-
   li {
     @extend %type-small;
     margin-right: $baseline-unit*2;

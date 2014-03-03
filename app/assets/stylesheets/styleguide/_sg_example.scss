@@ -2,19 +2,18 @@
   margin: 15px auto;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ddd;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
   &:first-child {
     margin-top: 0;
   }
 
   > h3 {
+    text-transform: capitalize;
     margin: -1px -1px 0;
     padding: 10px;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     background: #333;
-    border-top: 1px solid #000;
 
     > em, > em > a {
       float: right;
@@ -175,7 +174,7 @@
 
     @include respond-to($mq-s) {
       blockquote {
-        @include column(10,12);
+        @include column(10, 12);
         float: right;
       }
     }
@@ -190,7 +189,7 @@
       }
 
       blockquote {
-        @include column(4,8);
+        @include column(4, 8);
         float: right;
       }
     }

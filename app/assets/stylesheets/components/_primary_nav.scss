@@ -86,6 +86,10 @@
       float: left;
     }
   }
+
+  a {
+    @include links($color-link-nav, $color-link-nav-visited);
+  }
 }
 
 //.js {

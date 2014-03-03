@@ -1,5 +1,6 @@
 .mobile-nav {
   @extend .list--unstyled;
+  display: none;
 }
 
 .mobile-nav__item {

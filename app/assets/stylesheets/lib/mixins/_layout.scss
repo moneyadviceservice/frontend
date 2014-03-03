@@ -1,4 +1,4 @@
-@mixin inline-block() {
+@mixin inline-block {
   @if responsive == true {
     display: inline-block;
   } @else {

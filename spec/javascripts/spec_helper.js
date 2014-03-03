@@ -1,15 +1,36 @@
 //= require sinonjs/sinon
-//= require jquery
-//= require chai-jquery
 //= require requirejs/require
 //= require require_config
+//= require jquery
 
 var expect = chai.expect;
 var MAS = window.MAS || {};
 
-// There is a problem abstracting console.log to MAS.log - this prevents it from blocking the test
-// Might be that .log is not in the scope of window when run in CL
-var log = function (o) {
-  console.log(o)
-};
-MAS.log = MAS.info = MAS.warn = log;
+// Required for Google Tag Manager
+dataLayer = [];
+
+// Any properties that require Ruby @ runtime
+var MAS = window.MAS || {};
+MAS.bootstrap = {
+  env: 'production',
+  timestamp: new Date().getTime(),
+  I18n_locale: 'en'
+}
+
+MAS.supports = (function(w,d){
+  var S = {};
+  function supportTest(prop, context){
+    try {
+      return prop in context && context[prop] !== null;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  S.fonts = false; // Required for webfont loader to work, default false, set true in view/base
+  S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
+  S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
+  S.localstorage = supportTest('localStorage', w);
+
+  return S
+})(window, document);

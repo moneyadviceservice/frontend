@@ -7,6 +7,7 @@ describe 'primary navigation' do
   ] end
 
   before do
+    controller.extend(Localisation)
     render 'shared/primary_nav.html.erb', category_navigation: categories
   end
 

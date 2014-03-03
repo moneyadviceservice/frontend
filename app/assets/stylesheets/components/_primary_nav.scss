@@ -15,7 +15,7 @@
 .primary-nav__item {
   @extend %collapsable-trigger;
   @extend %type-navigation;
-  padding: $baseline-unit*1.5 $baseline-unit;
+  //  padding: $baseline-unit*1.5 0;
   border-top: 1px solid $color-white-translucent;
 
   @include respond-to($mq-l) {
@@ -41,7 +41,9 @@
   }
 
   > a {
-    padding: 0 $baseline-unit*2;
+    display: inline-block;
+    width: 100%;
+    padding: $baseline-unit*2;
     color: $color-white;
     position: relative;
     @include respond-to($mq-l) {
@@ -50,64 +52,43 @@
   }
 
   a.is-on:after {
-    content: '';
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent $color-submenu-background transparent;
-    position: absolute;
-    bottom: -26px;
-    left: 42%;
-  }
-}
-
-.menu {
-  @extend .list--unstyled;
-  border-left: $baseline-unit solid $color-grey-light;
-  background-color: $color-white;
-  margin-left: -6px;
-  margin-right: -6px;
-
-  > li {
-    border-top: 1px solid $color-grey-light;
-    padding: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 $baseline-unit*2;
-    padding: $baseline-unit*2 $baseline-unit;
-    > a {
-      color: $color-green-secondary;
+    @include respond-to($mq-m) {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent $color-submenu-background transparent;
+      position: absolute;
+      bottom: -2px;
+      left: 42%;
     }
   }
-
 }
 
 .primary-nav__dropdown {
-  padding: $baseline-unit*4;
   width: 100%;
   background-color: $color-submenu-background;
-  border-bottom: 3px solid $color-submenu-border;
+
+  @include respond-to($mq-l) {
+    border-bottom: 3px solid $color-submenu-border;
+    padding: $baseline-unit*4;
+
+  }
   li {
     @extend %type-small;
     margin-right: $baseline-unit*2;
     border-top: 0;
     border-bottom: 1px solid $color-submenu-list-border;
     text-align: left;
-    width: 32%;
-    float: left;
+    @include respond-to($mq-l) {
+      width: 32%;
+      float: left;
+    }
   }
-}
 
-//
-//.menu {
-//  @extend .list--unstyled;
-//  border-stle: 1px solid;
-//  padding: 4px;
-//
-//  @include respond-to($mq-s) {
-//    border-color: margin background:colour
-//  }
-//
-//  @include respond-to($mq-l) {
-//    border-left:
-//  }
-//}
-//
+  a {
+    padding-left: $baseline-unit*2;
+  }
+
+}

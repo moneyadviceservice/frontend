@@ -58,29 +58,6 @@
   }
 }
 
-.mobile-nav {
-  @extend .list--unstyled;
-}
-
-.mobile-nav__item {
-  @extend %type-navigation;
-  padding: $baseline-unit*1.5 $baseline-unit*2;
-  border-radius: $baseline-unit;
-  background-color: $color-green-tertiary;
-  &:last-child {
-    padding: 4px 9px;
-  }
-
-  a {
-    color: $color-white;
-    text-decoration: none;
-  }
-
-  .icon--search {
-    @include typography(body, 21);
-  }
-}
-
 .primary-nav__dropdown {
   width: 100%;
   background-color: $color-submenu-background;

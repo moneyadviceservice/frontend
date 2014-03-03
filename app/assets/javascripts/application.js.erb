@@ -1,17 +1,17 @@
 //= require require_config
 
-// if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
+if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 
-//   require(['webfonts'], function () {
-//     var fontConfig = {
-//       custom: {
-//         families: ['MuseoSlab', 'icomoon'],
-//         urls: [MAS.bootstrap.fontsUrl]
-//       }
-//     };
-//     WebFont.load(fontConfig);
-//   })
-// }
+  require(['webfonts'], function () {
+    var fontConfig = {
+      custom: {
+        families: ['MuseoSlab', 'icomoon'],
+        urls: [MAS.bootstrap.fontsUrl]
+      }
+    };
+    WebFont.load(fontConfig);
+  })
+}
 
 require(['analytics'], function (analytics) {
   analytics.scrollTracking({

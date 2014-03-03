@@ -62,23 +62,6 @@
   }
 }
 
-.l-primary-nav-dropdown {
-  @extend %collapsable-target;
-  @include respond-to($mq-l) {
-    &.is-on {
-      position: absolute;
-      top: $baseline-unit*16;
-      left: 0;
-      z-index: 10;
-    }
-  }
-
-  ul {
-    margin: 0 auto;
-    max-width: $mq-l;
-  }
-}
-
 .menu {
   @extend .list--unstyled;
   border-left: $baseline-unit solid $color-grey-light;

@@ -24,10 +24,27 @@
 }
 
 .l-primary-nav {
-  margin: $baseline-unit*4 auto 0 auto;
   @extend %clearfix;
+  margin: $baseline-unit*4 auto 0 auto;
   @include respond-to($mq-l) {
     margin: -$baseline-unit*5 auto $baseline-unit*4 auto;
+  }
+}
+
+.l-primary-nav-dropdown {
+  @extend %collapsable-target;
+  @include respond-to($mq-l) {
+    &.is-on {
+      position: absolute;
+      top: $baseline-unit*16;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  ul {
+    margin: 0 auto;
+    max-width: $mq-l;
   }
 }
 

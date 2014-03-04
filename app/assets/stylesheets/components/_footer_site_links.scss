@@ -4,12 +4,10 @@
 
 .footer-site-links {
   background-color: $color-footer-bg;
-  padding: $baseline-unit*4 0 $baseline-unit*5 0;
+  margin-top: $baseline-unit*2;
 
   li {
-    @extend %type-small;
-    font-family: MuseoSlab;
-    font-weight: 700;
+    @extend %type-footer-navigation;
     display: inline-block;
     width: 100%;
 
@@ -18,7 +16,7 @@
     }
 
     @include respond-to($mq-l) {
-      width: 25%;
+      width: 24%;
     }
 
     &:nth-of-type(3),
@@ -30,16 +28,24 @@
   a {
     display: block;
     padding: $baseline-unit/2 0;
-    @include links($color-link-nav, $color-link-nav-visited);
+    @include links($color-link-nav, $color-link-nav);
   }
 }
 
+.footer-site-links__internal-links {
+  padding: $baseline-unit*2 0;
+}
+
 .footer-site-links__language {
-  padding-top: $baseline-unit*2;
-  margin-top: $baseline-unit*2;
+  padding: $baseline-unit*2 0;
+//  margin-top: $baseline-unit*2;
   border-top: 1px solid darken($color-grey-pale, 10%);
 
-  a {
-    display: inline-block;
+  .icon--globe {
+    @include inline-block;
+    margin-top: -3px;
+//    margin-left: -23px;
+    padding-right: $baseline-unit/2;
+//    opacity: 0.6;
   }
 }

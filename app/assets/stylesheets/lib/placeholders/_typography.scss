@@ -35,22 +35,22 @@
 %font-heading-bold {
   font-family: Arial;
   font-weight: 700;
-  .wf-museoslab-n4-active & {
-    font-family: 'MuseoSlab';
+  .wf-museosans-n4-active & {
+    font-family: 'museo_sans';
   }
 }
 
 %font-heading-light {
   font-family: Arial;
   font-weight: 300;
-  .wf-museoslab-n4-active & {
-    font-family: 'MuseoSlab';
+  .wf-museosans-n4-active & {
+    font-family: 'museo_sans';
   }
 }
 
 %font-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: museo_sans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 
 %prevent-text-zooming {

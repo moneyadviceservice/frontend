@@ -1,4 +1,5 @@
 $color-white: #FFF; // not in the standard palette
+$color-off-white: #F5F7F7;
 $color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
 $color-transparent: transparent;
 
@@ -103,8 +104,8 @@ $color-icon-open: $color-yellow-light;
 $color-article-cta: $color-blue-light;
 
 // Navigation
-$color-primary-nav: $color-white;
-$color-primary-nav-visited: $color-white;
+$color-primary-nav: $color-off-white;
+$color-primary-nav-visited: $color-off-white;
 $color-primary-nav-focus: $color-transparent;
 
 

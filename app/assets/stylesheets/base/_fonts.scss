@@ -1,45 +1,50 @@
-//= depend_on_asset museo_slab_300-webfont.woff
-//= depend_on_asset museo_slab_700-webfont.woff
+//= depend_on_asset museosans_500-webfont.woff
+//= depend_on_asset museosans_700-webfont.woff
 //= depend_on_asset icon-font.woff
-//= depend_on_asset museo_slab_300-webfont.eot
-//= depend_on_asset museo_slab_700-webfont.eot
+//= depend_on_asset museosans_500-webfont.eot
+//= depend_on_asset museosans_700-webfont.eot
 //= depend_on_asset icon-font.eot
 
 @if $responsive == true {
+
   @font-face {
-    font-family: 'MuseoSlab';
-    src: asset-data-url('museo_slab_300-webfont.woff') format('woff');
+    font-family: 'museo_sans';
+    src: asset-data-url('museosans_300-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
+
   @font-face {
-    font-family: 'MuseoSlab';
-    src: asset-data-url('museo_slab_700-webfont.woff') format('woff');
+    font-family: 'museo_sans';
+    src: asset-data-url('museosans_700-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
   }
+
   @font-face {
     font-family: 'icon-font';
     src: asset-data-url('icon-font.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
-}
-  // $responsive == false
-@else {
+
+} @else {
+
   @font-face {
-    font-family: 'MuseoSlab300';
-    src: url(font-path('museo_slab_300-webfont.eot'));
-    src: url(font-path('museo_slab_300-webfont.eot') + '?#iefix') format('embedded-opentype');
+    font-family: 'museo_sans';
+    src: url(font-path('museosans_500-webfont.eot'));
+    src: url(font-path('museosans_500-webfont.eot') + '?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
+
   @font-face {
-    font-family: 'MuseoSlab700';
-    src: url(font-path('museo_slab_700-webfont.eot'));
-    src: url(font-path('museo_slab_700-webfont.eot') + '?#iefix' ) format('embedded-opentype');
+    font-family: 'museo_sans';
+    src: url(font-path('museosans_700-webfont.woff'));
+    src: url(font-path('museosans_700-webfont.woff') + '?#iefix' ) format('embedded-opentype');
     font-weight: normal;
   }
+
   @font-face {
     font-family: 'icon-font';
     src: url(font-path('icon-font.eot'));
@@ -48,15 +53,3 @@
     font-style: normal;
   }
 }
-
-// Test to force flicker of unstyled content
-// @font-face {
-//   font-family: 'test';
-//   src: url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.eot');
-//   src: url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.eot?#iefix' ) format('embedded-opentype'),
-//        url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.woff') format('woff'),
-//        url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.ttf') format('truetype'),
-//        url('http://www.moneyadviceservice.org.uk/assets/museo_slab_700-webfont.svg#MuseoSlab700') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }

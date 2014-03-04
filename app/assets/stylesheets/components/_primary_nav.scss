@@ -10,7 +10,6 @@
 
 .primary-nav__item {
   @extend %collapsable-trigger;
-  @extend %type-navigation;
   border-top: 1px solid $color-white-translucent;
 
   @include respond-to($mq-l) {
@@ -42,6 +41,7 @@
   }
 
   a {
+    @extend %type-navigation;
     @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
     @include inline-block;
     width: 100%;

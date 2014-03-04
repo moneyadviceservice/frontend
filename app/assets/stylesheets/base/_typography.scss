@@ -5,6 +5,7 @@ body {
 
   @include legibility(normal);
   @include font-features(liga, kern);
+  color: $color-text-default;
 }
 
 // Currently we only support H1 - H3

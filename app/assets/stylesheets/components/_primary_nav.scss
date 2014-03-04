@@ -4,7 +4,7 @@
 
 .primary-nav {
   @extend .list--unstyled;
-  @extend %font-heading-bold;
+  @extend %font-heading;
   z-index: 2;
 }
 

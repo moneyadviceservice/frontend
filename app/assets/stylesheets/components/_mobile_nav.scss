@@ -17,9 +17,12 @@
   border:1px solid #fff;
   color: $color-white;
   text-decoration: none;
+  font-weight: 500;
 
   .icon--search {
-    @include typography(body, 21);
+    @include typography(body, 24);
+    display: block;
+    height: $baseline-unit*6;
     line-height: $baseline-unit*6;
   }
 

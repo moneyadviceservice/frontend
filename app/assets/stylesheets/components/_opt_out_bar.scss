@@ -8,7 +8,7 @@
   background-color: $color-opt-out-background;
 
   p {
-    @extend %text-message-small;
+    @extend %paragraph-small;
     margin: $baseline-unit 0;
     @include respond-to($mq-m) {
       @include column(8);
@@ -33,8 +33,8 @@
 }
 
 .opt-out-bar__button {
-  @extend %text-message-small;
-  -webkit-font-smoothing: antialiased;
+  @extend %type-small;
+  @extend %font-smoothing;
   color: $color-link-default;
   background: transparent;
   border: 0;
@@ -46,7 +46,7 @@
 
   &:before {
     @extend .icon;
-    display: inline-block;
+    @include inline-block;
     padding-right: $baseline-unit;
   }
 

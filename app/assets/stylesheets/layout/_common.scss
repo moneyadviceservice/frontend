@@ -1,3 +1,8 @@
+.l-styleguide-container {
+  max-width: $mq-xl;
+  margin: 0 auto;
+}
+
 // Styleguide layout-container
 
 .l-container {
@@ -8,11 +13,6 @@
 
 .l-container--space {
   @include columnPadding(12);
-}
-
-.l-container--body {
-  margin-top: $baseline-unit*7;
-  background: $color-white;
 }
 
 // Layout 1 column full width

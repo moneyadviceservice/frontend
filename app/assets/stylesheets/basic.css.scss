@@ -1,9 +1,9 @@
 //= require normalize-css/normalize
 //= require_self
 
-$responsive: false;
+$responsive: true;
 
-@import 'libs';
+@import 'lib';
 
 @import 'base/default';
 @import 'base/typography';

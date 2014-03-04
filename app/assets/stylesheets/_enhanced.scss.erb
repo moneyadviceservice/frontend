@@ -1,9 +1,12 @@
-@import 'libs';
+@import 'lib';
 
+@import 'utilities/clearfix';
 @import 'utilities/visually_hidden';
+@import 'utilities/inline_block';
 
 @import 'layout/common';
 @import 'layout/pages';
+@import 'layout/header';
 
 <% if Rails.env.development? %>
   @import 'dev_tools/debug';
@@ -23,7 +26,9 @@
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
 @import 'components/header';
+@import 'components/menu';
 @import 'components/primary_nav';
+@import 'components/mobile_nav';
 @import 'components/search_box';
 @import 'components/skip_to_content';
 

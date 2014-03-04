@@ -7,7 +7,7 @@
   padding: $baseline-unit*4 0 $baseline-unit*5 0;
 
   li {
-    @extend %type-small;
+    @extend %type-navigation;
     font-family: MuseoSlab;
     font-weight: 700;
     display: inline-block;

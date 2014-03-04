@@ -178,3 +178,48 @@ A single Action Plan object with all its details
                 "description": "A handy action plan which can help with planning of the costs involved in having a new baby",
                 "body": "<h4>Why?</h4><p>Knowing how much everything costs will help you prepare for your new arrival and avoid any unexpected expenses.</p>"
             }
+
+#Group Search
+Search related resources of the **Money Advice Service**.
+
+## Search [/{locale}/search?query={query_chain}]
+A collection of search results
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Search.
+        + Values
+            + `en`
+            + `cy`
+    + query_chain (string, `health+check+house`) ... query of the search.
+
+### Retrieve search results [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Link: <https://www.moneyadviceservice.org.uk/en/search?query=budget+plan+house; rel="canonical", <https://www.moneyadviceservice.org.uk/cy/search>; rel="alternate"; hreflang="cy"
+
+    + Body
+
+            [
+                {
+                    "id": "manage-your-budget-after-redundancy",
+                    "title": "Manage your budget after redundancy",
+                    "resource: "action_plans"
+                },
+                {
+                    "id": "new-baby-why-budget",
+                    "title": "New baby – why budget?",
+                    "resource: "articles"
+                },
+                {
+                    "id": "funeral-plans",
+                    "title": "Funeral plans",
+                    "resource: "articles"
+                },
+                {
+                    "id": "how-to-make-your-money-go-further",
+                    "title": "How to make your money go further",
+                    "resource: "action_plans"
+                },
+            ]

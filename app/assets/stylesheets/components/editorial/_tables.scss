@@ -22,7 +22,7 @@
 table {
   @extend %type-table;
   text-align: left;
-  margin: $baseline-unit*3 0;
+  margin: $baseline-unit*4 0;
 
   p {
     // NOTE that this is here to override sloppy formatting in the tables where p tags force a large font size.

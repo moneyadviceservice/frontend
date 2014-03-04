@@ -11,6 +11,7 @@
 // Styleguide a
 
 a {
+  @extend %type-links;
   @include links($color-link-default);
 }
 

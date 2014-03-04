@@ -8,13 +8,17 @@
   background-color: $color-opt-out-background;
 
   p {
-    @extend %paragraph-small;
+    @extend %type-small;
     margin: $baseline-unit 0;
     @include respond-to($mq-m) {
       @include column(8);
       padding: $baseline-unit 0;
       text-align: left;
     }
+  }
+
+  a {
+    @extend %type-small;
   }
 
   form {
@@ -33,8 +37,8 @@
 }
 
 .opt-out-bar__button {
-  @extend %type-small;
   @extend %font-smoothing;
+  @extend %type-small;
   color: $color-link-default;
   background: transparent;
   border: 0;

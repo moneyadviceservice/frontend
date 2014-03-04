@@ -18,6 +18,9 @@
   }
 
   .icon--search {
-    @include typography(body, 21);
+    @include typography(body, 20);
+    @include respond-to($mq-m) {
+      @include typography(body, 22);
+    }
   }
 }

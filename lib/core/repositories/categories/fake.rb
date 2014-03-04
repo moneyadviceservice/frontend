@@ -6,7 +6,7 @@ module Core::Repositories
       end
 
       def find(id)
-        category = categories.find { |category| category['id'] == id }
+        category = find_category(categories, id)
         translate_keys(category) if category
       end
 
@@ -30,6 +30,15 @@ module Core::Repositories
           'title' => 'Category 2',
           'subCategories' => []
         }]
+      end
+
+      def find_category(all_categories, id)
+        all_categories.each do |category|
+          return category if category['id'] == id
+          subcategory = find_category(category['subCategories'], id)
+          return subcategory if subcategory
+        end
+        nil
       end
 
       # individual categories store child items under 'contents' rather than 'subCategories'

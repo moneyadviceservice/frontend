@@ -18,6 +18,15 @@ describe Core::Repositories::Categories::Fake do
 
       it { should be_a(Hash) }
       specify { expect(subject['id']).to eq(valid_id) }
+
+      it 'instantiates a valid Category' do
+        expect(Core::Category.new(subject['id'], subject)).to be_valid
+      end
+
+      it 'instantiates a valid Category from the subcategory' do
+        subcategory = subject['contents'].first
+        expect(Core::Category.new(subcategory['id'], subcategory)).to be_valid
+      end
     end
 
     context 'when the category is non-existent' do

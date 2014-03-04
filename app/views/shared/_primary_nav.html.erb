@@ -9,10 +9,10 @@
           <a href="/<%= I18n.locale %>/categories/<%= category.id %>"><%= category.title %></a>
         <% end %>
 
-        <% if category.sub_categories.present? %>
+        <% if category.contents.present? %>
           <div class="l-primary-nav-dropdown primary-nav__dropdown">
             <ul class="menu">
-              <% category.sub_categories.each do |sub_category| %>
+              <% category.contents.each do |sub_category| %>
                 <li><a href="/<%= I18n.locale %>/categories/<%= sub_category.id %>"><%= sub_category.title %></a></li>
               <% end %>
             </ul>

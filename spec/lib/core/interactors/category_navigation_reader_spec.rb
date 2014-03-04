@@ -1,7 +1,7 @@
 require 'spec_helper'
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/category_navigation'
+require 'core/entities/category'
 require 'core/interactors/category_navigation_reader'
 
 module Core
@@ -37,11 +37,11 @@ module Core
       let(:result) { subject.call }
 
       it 'contains categories' do
-        expect(result.first).to be_a(CategoryNavigation)
+        expect(result.first).to be_a(Category)
       end
 
       it 'contains subcategories' do
-        expect(result.first.sub_categories.first).to be_a(CategoryNavigation)
+        expect(result.first.contents.first).to be_a(Category)
       end
     end
   end

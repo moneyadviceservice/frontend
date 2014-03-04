@@ -1,8 +1,9 @@
 require 'spec_helper'
+require 'core/entities/category'
 
 describe 'primary navigation' do
   let(:categories) do [
-    double(id: id, title: '', description: '', sub_categories: [])
+    Core::Category.new(id, title: '', description: '', contents: [])
   ] end
 
   before do

@@ -1,6 +1,5 @@
 require 'core/entities/category'
 require 'core/registries/repository'
-require 'core/entities/category_navigation'
 
 module Core
   class CategoryNavigationReader < Array
@@ -20,10 +19,10 @@ module Core
     def build_list(categories)
       categories.map do |category|
         attributes = category.dup.tap do |c|
-          c['sub_categories'] = build_list(c['subCategories'])
+          c['contents'] = build_list(c['subCategories'])
           c.delete('subCategories')
         end
-        CategoryNavigation.new(category['id'], attributes)
+        Category.new(category['id'], attributes)
       end
     end
   end

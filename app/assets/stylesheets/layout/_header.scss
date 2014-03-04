@@ -1,11 +1,14 @@
 .l-header {
 
   .mas-logo {
-    margin: $baseline-unit*2 0 $baseline-unit $baseline-unit;
+    position: relative;
+    top: $baseline-unit*2;
+    padding-top: $baseline-unit*5;
+    margin: 0 0 $baseline-unit*4 $baseline-unit;
     @include respond-to($mq-l) {
       float: left;
       position: absolute;
-      top: $baseline-unit*2;
+      top: $baseline-unit*4;
     }
   }
 

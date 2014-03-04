@@ -12,7 +12,7 @@
 }
 
 .search-box__input {
-  @extend %font-heading-bold;
+  @extend %font-heading;
   width: 100%;
   height: $baseline-unit*7;
   padding-left: $baseline-unit*2;

@@ -16,8 +16,8 @@
   a {
     display: block;
     width: 48px;
-    height: 48px;
-    padding-left: 25%;
+    height: 44px;
+    padding-left: 27%;
     background-color: $color-green-primary;
     border-right: 1px solid $color-white-translucent;
 
@@ -35,11 +35,17 @@
   }
 
   .icon--facebook {
+    font-size: 22px;
     margin-left: 5px;
   }
 
   .icon--youtube {
+    font-size: 22px;
     margin-left: 1px;
+  }
+
+  .icon--twitter {
+    font-size: 22px;
   }
 
 }

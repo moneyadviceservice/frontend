@@ -15,7 +15,8 @@
   }
 
   > p {
-    @extend %font-heading-bold;
+    @extend %font-heading;
+    @extend %type-links;
     margin-top: 0;
   }
 

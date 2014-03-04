@@ -17,7 +17,7 @@
 // Default Button
 .button {
   @extend %type-button;
-  display: inline-block;
+  @include inline-block;
   padding: $padding-vertical-button $padding-horizontal-button;
   margin-bottom: 0;
   line-height: inherit;

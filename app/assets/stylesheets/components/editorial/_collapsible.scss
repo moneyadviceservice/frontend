@@ -31,11 +31,11 @@
   }
 
   span {
-    @include font-size(34);
+    @include typography(body, 34);
     margin-right: $baseline-unit;
     margin-top: -6px;
     height: 28px;
-    display: inline-block;
+    @include inline-block;
     color: $color-icon-open;
     vertical-align: middle;
   }

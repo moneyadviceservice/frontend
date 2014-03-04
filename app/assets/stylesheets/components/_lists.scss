@@ -6,10 +6,10 @@
   list-style: none;
 
   > li:before {
-    @include font-size(24);
+    @include typography(body, 24);
     content:'\2022';
     color: $color-list-bullet;
-    display: inline-block;
+    @include inline-block;
     position: relative;
     width: 0;
     height: 0;
@@ -27,7 +27,7 @@
 
 
   li:before {
-    @include font-size(18);
+    @include typography(body, 18);
     color: $color-list-yes;
     content: '\e01E';
     display: block;

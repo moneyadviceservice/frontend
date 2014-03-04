@@ -45,8 +45,13 @@
         <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
       </li>
 
+    </ul>
+  </div>
+  <div class="l-container l-container--space">
+    <ul class="footer-site-links__language list--unstyled">
       <% locals.each do |locale| %>
         <li>
+          <span class="icon icon--globe"></span>
           <%= link_to t("locales.#{locale}"), {locale: locale},
                       id: "#{locale}Link",
                       lang: locale %>

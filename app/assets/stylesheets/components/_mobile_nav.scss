@@ -1,19 +1,29 @@
 .mobile-nav {
   @extend .list--unstyled;
-  display: none;
+  li {
+    float:left;
+  }
 }
 
 .mobile-nav__item {
-  @extend %type-navigation;
-  padding: $baseline-unit*1.5 $baseline-unit*2;
+  @include links($color-white, $color-white, $color-green-tertiary);
+  // @extend %type-navigation;
+  // padding: $baseline-unit $baseline-unit*2;
+  // background-color: $color-green-tertiary;
+  height: $baseline-unit*6;
+  line-height: $baseline-unit*6;
+  padding:0 $baseline-unit*2;
   border-radius: $baseline-unit;
-  background-color: $color-green-tertiary;
-  &:last-child {
-    padding: 4px 9px;
+  border:1px solid #fff;
+  color: $color-white;
+  text-decoration: none;
+
+  .icon--search {
+    @include typography(body, 21);
+    line-height: $baseline-unit*6;
   }
 
-  a {
-    color: $color-white;
+  &:hover {
     text-decoration: none;
   }
 

@@ -6,6 +6,7 @@ define(['log', 'jquery'], function (Global, $) {
     // Setup
     triggerEl: '.collapsible',
     targetEl: '.collapsible-section',
+    targetType: 'class', // class / href / data-attr
     activeClass: 'is-on',
     inactiveClass: 'is-off',
     closeOffFocus: false,
@@ -103,6 +104,19 @@ define(['log', 'jquery'], function (Global, $) {
     }
   };
 
+  Collapsible.prototype.getTarget = function($el){
+    switch(this.o.targetType){
+    case 'class':
+      return $el.next(this.o.targetEl);
+    case 'href':
+      var href = $el.attr('href'),
+        $t = $(href);
+      return ($t.length)? $t : false;
+    default:
+      return false;
+    }
+  };
+
   Collapsible.prototype._setupEach = function(i,el){
     var $el = $(el);
     var _this = this;
@@ -110,10 +124,9 @@ define(['log', 'jquery'], function (Global, $) {
     this.sections[i] = {
       index: i,
       trigger: $el,
-      target: $el.next(this.o.targetEl),
+      target: this.getTarget($el),
       hidden: !$el.hasClass(this.o.activeClass)
     };
-
     // Dont modify or bind events if no target element
     if(!this.sections[i].target.length) return;
 
@@ -144,6 +157,7 @@ define(['log', 'jquery'], function (Global, $) {
     // Accessibility support for spacebar
     this.sections[i].trigger.on('keypress', function(e){
       if(e.which === 32) {
+        e.preventDefault();
         _this.sections[i].trigger.trigger('click');
       }
     });

@@ -1,6 +1,6 @@
 <div class="footer-site-links">
   <div class="l-container l-container--space">
-    <ul class="list--unstyled">
+    <ul class="footer-site-links__internal-links list--unstyled">
       <li>
         <a href="<%= t('footer.about_us_link') %>"><%= t('footer.about_us') %></a>
       </li>
@@ -51,10 +51,10 @@
     <ul class="footer-site-links__language list--unstyled">
       <% locals.each do |locale| %>
         <li>
-          <span class="icon icon--globe"></span>
-          <%= link_to t("locales.#{locale}"), {locale: locale},
-                      id: "#{locale}Link",
-                      lang: locale %>
+          <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
+            <span class="icon icon--globe"></span>
+            <%= t("locales.#{locale}") %>
+          <% end %>
         </li>
       <% end %>
     </ul>

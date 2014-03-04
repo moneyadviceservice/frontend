@@ -119,7 +119,7 @@
 }
 
 %type-navigation {
-  @extend %font-heading-bold;
+  @extend %font-heading-medium;
   @include typography(body, 14);
 
   @include respond-to($mq-m) {

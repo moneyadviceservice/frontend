@@ -5,16 +5,20 @@
 .list {
   list-style: none;
 
+  > li {
+    margin-bottom: $baseline-unit*2;
+  }
+
   > li:before {
     @include typography(body, 24);
     content:'\2022';
     color: $color-list-bullet;
-    @include inline-block;
+    display: block;
     position: relative;
     width: 0;
     height: 0;
     left: -20px;
-    top: 0;
+    top: -4px;
   }
 }
 

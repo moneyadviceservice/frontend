@@ -18,6 +18,7 @@ guard :livereload do
 end
 
 guard :rails, cmd: 'spring rails' do
+  watch('.env')
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end

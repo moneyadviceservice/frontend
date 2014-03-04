@@ -8,7 +8,7 @@
     @include respond-to($mq-l) {
       float: left;
       position: absolute;
-      top: $baseline-unit*2;
+      top: $baseline-unit*4;
     }
   }
 

@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/content-service/search.json?limit=25&locale=en&query=cats
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 9cab4ce7-86c0-442e-8385-ecefc041c05e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Date:
+      - Thu, 06 Mar 2014 17:24:52 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '20'
+    body:
+      encoding: UTF-8
+      string: '{"searchResults":[]}'
+    http_version:
+  recorded_at: Thu, 06 Mar 2014 17:24:52 GMT
+recorded_with: VCR 2.8.0

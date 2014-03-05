@@ -29,5 +29,18 @@ require([MAS.bootstrap.I18n_locale, 'collapsable'], function (Text, Collapsable)
       hideThisSection: Text.hide || 'Hide this section'
     }
   });
-
+  var primaryNav = new Collapsable({
+    closeOffFocus:true,
+    accordion:true,
+    triggerEl: '#primary-nav > li > a',
+    targetEl: '.primary-nav__dropdown',
+    parentWrapper: '#primary-nav'
+  });
+  var mobileNav = new Collapsable({
+    closeOffFocus:true,
+    accordion:true,
+    triggerEl: '.mobile-nav a',
+    targetType: 'href',
+    parentWrapper: '#primary-nav'
+  });
 });

@@ -13,8 +13,7 @@
   }
 
   a {
-    color: $color-white;
-    text-decoration: none;
+    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
   }
 
   .icon--search {

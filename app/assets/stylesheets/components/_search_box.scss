@@ -3,11 +3,10 @@
 // Styleguide Search
 
 .search-box {
-  display: none;
   position: relative;
   margin: 0 auto;
   padding: $baseline-unit;
-  background-color: $color-green-quaternary;
+  background-color: $color-search-background;
   width: 100%;
 }
 
@@ -17,8 +16,6 @@
   height: $baseline-unit*7;
   padding-left: $baseline-unit*2;
   border: 0;
-  @include respond-to($mq-l) {
-  }
 }
 
 .search-box__submit {
@@ -28,5 +25,5 @@
   right: 6px;
   height: $baseline-unit*7;
   font-size: 24px;
-  color: $color-green-secondary;
+  color: $color-search-text;
 }

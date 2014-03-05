@@ -41,7 +41,7 @@
 
   a {
     @extend %type-navigation;
-    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
+    @include links($color-primary-nav, $color-primary-nav-visited);
     @include inline-block;
     width: 100%;
     padding: $baseline-unit*2;

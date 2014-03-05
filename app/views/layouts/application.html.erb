@@ -2,11 +2,10 @@
   <a class="skip-to-content" href="#main">Skip to main content</a>
   <%= render 'shared/opt_out_bar' %>
   <%= render 'shared/header' %>
-    <div class="l-container">
-      <%= yield %>
-    </div>
-  <%= render 'shared/footer_site_links', locals: alternative_locales %>
-  <%= render 'shared/footer_social_links' %>
+  <div class="l-container">
+    <%= yield %>
+  </div>
+  <%= render 'shared/footer' %>
 <% end %>
 
 <%= render template: 'layouts/base' %>

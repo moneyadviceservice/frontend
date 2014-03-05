@@ -178,3 +178,52 @@ A single Action Plan object with all its details
                 "description": "A handy action plan which can help with planning of the costs involved in having a new baby",
                 "body": "<h4>Why?</h4><p>Knowing how much everything costs will help you prepare for your new arrival and avoid any unexpected expenses.</p>"
             }
+
+#Group Search
+Search related resources of the **Money Advice Service**.
+
+## Search [/{locale}/search?query={query_chain}]
+A collection of search results
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Search.
+        + Values
+            + `en`
+            + `cy`
+    + query_chain (string, `health+check+house`) ... query of the search.
+
+### Retrieve search results [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Link: <https://www.moneyadviceservice.org.uk/en/search?query=budget+plan+house; rel="canonical", <https://www.moneyadviceservice.org.uk/cy/search>; rel="alternate"; hreflang="cy"
+
+    + Body
+
+            [
+                {
+                    "id": "manage-your-budget-after-redundancy",
+                    "type": "action_plan",
+                    "title": "Manage your budget after redundancy",
+                    "description":"Use this step-by-step action plan to help you keep the household budget on track after redundancy."
+                },
+                {
+                    "id": "new-baby-why-budget",
+                    "type": "article",
+                    "title": "New baby – why budget?",
+                    "description":"If you find yourself saying that more and more, especially if there’s a new baby on the scene, it’s probably time to draw up a household budget and start planning your spending."
+                },
+                {
+                    "id": "funeral-plans",
+                    "title": "Funeral plans",
+                    "type": "article",
+                    "description":"A funeral plan is a way of paying for a future funeral today. Here are some things to bear in mind if you're thinking of taking one out."
+                },
+                {
+                    "id": "how-to-make-your-money-go-further",
+                    "type": "action_plan",
+                    "title": "How to make your money go further",
+                    "description":"Follow this action plan to help you save money around the home and when you’re out and about, making your hard-earned cash go that bit further."
+                },
+            ]

@@ -1,9 +1,9 @@
 <div id="content">
   <section>
-    <h1><%= @category.title %></h1>
-    <p id="description"><%= @category.description %></p>
+    <h1><%= category.title %></h1>
+    <p id="description"><%= category.description %></p>
 
-    <% @category.contents.each do |subcategory| %>
+    <% category.contents.each do |subcategory| %>
       <article>
         <h2><%= link_to subcategory.title, category_path(subcategory.id) %></h2>
 

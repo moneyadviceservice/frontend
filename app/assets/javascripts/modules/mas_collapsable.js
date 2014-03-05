@@ -25,15 +25,8 @@ define(['log', 'jquery'], function (Global, $) {
     }
   };
 
-  $.fn.swapClass = function(from,to){
-    var c = this[0].className;
-    if( c.indexOf(to) !== -1 ){
-      return;
-    }else if( c.indexOf(from) === -1 ){
-      this[0].className = c + ' ' + to;
-    }else{
-      this[0].className = c.replace(from,to);
-    }
+  $.fn.swapClass = function(from, to){
+    this.removeClass(from).addClass(to);
   };
 
   var Collapsible = function(opts){

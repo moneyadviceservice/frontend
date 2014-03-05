@@ -10,7 +10,7 @@
         <% end %>
 
         <% if category.contents.present? %>
-          <div class="l-primary-nav-dropdown primary-nav__dropdown">
+          <div class="primary-nav__dropdown l-primary-nav-dropdown">
             <ul class="menu">
               <% category.contents.each do |sub_category| %>
                 <li><a href="/<%= I18n.locale %>/categories/<%= sub_category.id %>"><%= sub_category.title %></a></li>

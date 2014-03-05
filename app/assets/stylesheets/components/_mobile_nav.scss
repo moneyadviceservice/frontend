@@ -12,10 +12,8 @@
     padding: 4px 9px;
   }
 
-  a,
-  a:visited {
-    color: $color-white;
-    text-decoration: none;
+  a {
+    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
   }
 
   .icon--search {

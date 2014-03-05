@@ -1,4 +1,3 @@
-@vcr
 Feature: View an article
   As a visitor to the website
   I want to view articles

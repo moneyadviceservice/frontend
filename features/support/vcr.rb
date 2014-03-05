@@ -13,7 +13,3 @@ VCR.configure do |c|
   c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }
   c.filter_sensitive_data('<GOOGLE_API_CX_CY>') { ENV['GOOGLE_API_CX_CY'] }
 end
-
-VCR.cucumber_tags do |t|
-  t.tag '@vcr', use_scenario_name: true
-end

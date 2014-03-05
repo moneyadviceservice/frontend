@@ -36,6 +36,7 @@ Rails.application.routes.draw do
           get 'pages_error', path: '/error'
           get 'pages_action_plan', path: '/action-plan'
           get 'pages_homepage', path: '/homepage'
+          get 'pages_search_results', path: '/search_results'
         end
 
         scope 'css' do

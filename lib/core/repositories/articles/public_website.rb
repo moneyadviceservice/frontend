@@ -12,7 +12,18 @@ module Core::Repositories
       def find(id)
         response = connection.get('/%{locale}/articles/%{id}.json' %
                                     { locale: I18n.locale, id: id })
-        response.body
+
+        attributes = response.body
+        links      = response.headers['link'].try(:links)
+
+        links.each do |link|
+          next unless link['rel'] == 'alternate'
+
+          attributes['alternate'] = { url: link.href, title: link['title'] }
+        end if links
+
+        attributes
+
       rescue Core::Connection::ResourceNotFound
         nil
       rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError

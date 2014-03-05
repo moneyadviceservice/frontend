@@ -68,7 +68,7 @@ define(['log', 'jquery'], function (Global, $) {
           if( _this.$parent.find(document.activeElement).length === 0 ){
             _this.hide(_this.selected);
           }
-        },10);
+        },300);
       });
     }
   };

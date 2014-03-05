@@ -13,7 +13,7 @@
   }
 
   a {
-    @include links($color-primary-nav, $color-primary-nav-visited, $color-primary-nav-focus);
+    @include links($color-primary-nav, $color-primary-nav-visited);
   }
 
   .icon--search {

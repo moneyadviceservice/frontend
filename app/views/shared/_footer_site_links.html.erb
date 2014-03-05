@@ -1,4 +1,4 @@
-<div class="footer-site-links">
+<nav class="footer-site-links" role="navigation" aria-label="footer">
   <div class="l-container l-container--space">
     <ul class="footer-site-links__internal-links list--unstyled">
       <li>
@@ -32,8 +32,7 @@
         <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
       </li>
     </ul>
-  </div>
-  <div class="l-container l-container--space">
+    
     <ul class="footer-site-links__language list--unstyled">
       <% locals.each do |locale| %>
         <li>
@@ -45,4 +44,4 @@
       <% end %>
     </ul>
   </div>
-</div>
+</nav>

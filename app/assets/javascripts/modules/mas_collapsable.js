@@ -184,7 +184,7 @@ define(['log', 'jquery'], function (Global, $) {
     }
     this.selected = i;
   };
-  
+
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
     if(this.o.showIcon) item.icon.text(this.o.textString.hideThisSection);

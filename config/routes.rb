@@ -38,6 +38,7 @@ Rails.application.routes.draw do
           get 'pages_action_plan', path: '/action-plan'
           get 'pages_homepage', path: '/homepage'
           get 'pages_search_results', path: '/search_results'
+          get 'pages_top_level_category_page', path: '/top_level_category_page'
         end
 
         scope 'css' do

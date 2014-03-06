@@ -1,0 +1,12 @@
+.search-results {
+  @extend .list--unstyled;
+}
+
+.search-results__item {
+  h2 {
+    @extend %heading-medium;
+  }
+  a {
+//    @extend %heading-medium;
+  }
+}

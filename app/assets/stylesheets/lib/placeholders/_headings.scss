@@ -4,7 +4,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m){
-    @include typography(heading, 42, 1);
+    @include typography(heading, 40, 1.2);
   }
 }
 
@@ -14,7 +14,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include typography(heading, 40, 1.2);
+    @include typography(heading, 38, 1.2);
   }
 }
 
@@ -24,7 +24,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include typography(heading, 32);
+    @include typography(heading, 30);
   }
 }
 

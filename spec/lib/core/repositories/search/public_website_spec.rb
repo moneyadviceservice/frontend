@@ -20,7 +20,7 @@ describe Core::Repositories::Search::PublicWebsite do
     end
 
     context 'when the request is successful' do
-      let(:body) { File.read('spec/fixtures/search-results.json') }
+      let(:body) { File.read('spec/fixtures/search-results/public-website.json') }
       let(:status) { 200 }
 
       it { should be_a(Array) }

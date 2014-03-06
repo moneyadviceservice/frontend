@@ -19,6 +19,13 @@
     }
   }
 
+  h2 {
+    @extend %heading-link;
+    a {
+      color: $color-heading;
+    }
+  }
+
   ul {
     @extend .list--unstyled;
     li {

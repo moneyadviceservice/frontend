@@ -32,7 +32,15 @@
   }
 }
 
-%font-heading {
+%font-heading-heavy {
+  font-family: Arial;
+  font-weight: 700;
+  .wf-museosans-n4-active & {
+    font-family: 'museo_sans';
+  }
+}
+
+%font-heading-medium {
   font-family: Arial;
   font-weight: 500;
   .wf-museosans-n4-active & {
@@ -83,7 +91,7 @@
   @include typography(body, 16);
 
   @include respond-to($mq-m) {
-    @include typography(body, 18);
+    @include typography(body, 19);
   }
 }
 
@@ -100,13 +108,22 @@
 }
 
 %type-button {
-  @extend %font-heading;
+  @extend %font-heading-medium;
   @extend %font-smoothing;
   @include typography(body, 18);
 }
 
+%type-primary-navigation {
+  @extend %font-heading-heavy;
+  @include typography(body, 14, 1.3);
+
+  @include respond-to($mq-m) {
+    @include typography(body, 16, 1.3);
+  }
+}
+
 %type-navigation {
-  @extend %font-heading;
+  @extend %font-heading-medium;
   @include typography(body, 14, 1.3);
 
   @include respond-to($mq-m) {
@@ -125,17 +142,17 @@
   @include typography(paragraph, 16);
 
   @include respond-to($mq-l) {
-    @include typography(paragraph, 18);
+    @include typography(paragraph, 19);
   }
 }
 
 %paragraph-intro {
-  @extend %font-heading;
+  @extend %font-heading-medium;
   @include typography(paragraph, 18, 1.5);
   color: $color-grey-primary;
 
   @include respond-to($mq-l) {
-    @include typography(paragraph, 22, 1.3);
+    @include typography(paragraph, 22, 1.5);
   }
 }
 

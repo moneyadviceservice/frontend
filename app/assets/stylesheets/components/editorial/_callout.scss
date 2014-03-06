@@ -12,10 +12,11 @@
 
   > h3 {
     margin: 0 0 $baseline-unit*3 0;
+    @extend %heading-extra-small;
   }
 
   > p {
-    @extend %font-heading;
+    @extend %font-heading-medium;
     @extend %type-links;
     margin-top: 0;
   }

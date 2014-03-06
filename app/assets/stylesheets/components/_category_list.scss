@@ -1,13 +1,29 @@
 .category-list {
-  @include column(4);
+  @include column(12);
   padding: 0 $baseline-unit*4 0 0;
-  margin: 0;
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    &:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+    &:nth-of-type(2n+1) {
+      clear: none;
+    }
+    &:nth-of-type(3n+1) {
+      clear: both;
+    }
+  }
 
   ul {
     @extend .list--unstyled;
+    li {
+      margin-bottom: $baseline-unit;
+    }
   }
 
-  li {
-    margin-bottom: $baseline-unit;
-  }
 }

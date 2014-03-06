@@ -3,7 +3,10 @@
 }
 
 .search-results__item {
-  a {
+  h2 {
     @extend %heading-medium;
+  }
+  a {
+//    @extend %heading-medium;
   }
 }

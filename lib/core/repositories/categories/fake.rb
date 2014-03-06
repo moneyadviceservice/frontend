@@ -1,17 +1,21 @@
 module Core::Repositories
   module Categories
     class Fake
+      def initialize(*categories)
+        @categories = (categories.present?) ? categories : default_categories
+      end
+
       def all
-        categories
+        @categories
       end
 
       def find(id)
-        find_category(categories, id)
+        find_category(@categories, id)
       end
 
       private
 
-      def categories
+      def default_categories
         [{
           'id' => 'category-1',
           'type' => 'category',
@@ -35,8 +39,8 @@ module Core::Repositories
         }]
       end
 
-      def find_category(all_categories, id)
-        all_categories.each do |category|
+      def find_category(categories, id)
+        categories.each do |category|
           return category if category['id'] == id
           subcategory = find_category(category['contents'], id)
           return subcategory if subcategory

@@ -1,0 +1,13 @@
+.category-list {
+  @include column(4);
+  padding: 0 $baseline-unit*4 0 0;
+  margin: 0;
+
+  ul {
+    @extend .list--unstyled;
+  }
+
+  li {
+    margin-bottom: $baseline-unit;
+  }
+}

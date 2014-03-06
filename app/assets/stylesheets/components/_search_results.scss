@@ -1,0 +1,9 @@
+.search-results {
+  @extend .list--unstyled;
+}
+
+.search-results__item {
+  a {
+    @extend %heading-medium;
+  }
+}

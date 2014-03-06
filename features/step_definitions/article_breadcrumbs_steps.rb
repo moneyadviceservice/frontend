@@ -4,7 +4,6 @@ end
 
 Given(/^I read an article belonging to multiple categories$/) do
   locale = 'en'
-  populate_category_repository_with(*multiple_categories_containing_an_article(locale))
   article_page.load(locale: locale, id: article_id_for_locale(locale))
 end
 

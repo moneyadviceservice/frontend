@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 70968f0e-baf1-4579-ac51-1ba7395dca6e
+      - b6e8d2df-45b9-4ad6-a51f-36650953e351
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 29 May 2014 08:25:20 GMT
+      - Tue, 03 Jun 2014 18:48:57 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,16 +43,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - ca7f1ba5185fc07f4538c010888fd658
+      - 8e3e96d60a2571319789a80f77781155
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 29-May-2015 08:25:20 GMT; secure
-      - _session_id=ca7f1ba5185fc07f4538c010888fd658; path=/; secure; HttpOnly
-      - _web_tracking=d8b7649e622ccc97f5c6bdf447dba41a; path=/; expires=Fri, 29-May-2015
-        08:25:20 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:57 GMT; secure
+      - _session_id=8e3e96d60a2571319789a80f77781155; path=/; secure; HttpOnly
+      - _web_tracking=b75e4b4e083c12ff3b1b7308992fa742; path=/; expires=Wed, 03-Jun-2015
+        18:48:57 GMT; secure
       X-Request-Id:
-      - 70968f0e-baf1-4579-ac51-1ba7395dca6e
+      - b6e8d2df-45b9-4ad6-a51f-36650953e351
       X-Runtime:
-      - '0.049287'
+      - '0.103857'
       X-Rack-Cache:
       - miss
       P3p:
@@ -120,7 +120,7 @@ http_interactions:
         method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"6LmwWnQToam7wiAERWjQGl0QyIjPNUEUzc0V+ZIigqI=\" /></div></form> </div></p><p><div
+        value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
         much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
@@ -130,7 +130,7 @@ http_interactions:
         method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"6LmwWnQToam7wiAERWjQGl0QyIjPNUEUzc0V+ZIigqI=\" /></div></form> </div></p><p><div
+        value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
         set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
@@ -139,7 +139,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
         method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"6LmwWnQToam7wiAERWjQGl0QyIjPNUEUzc0V+ZIigqI=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\"
         /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
         or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
         trying to buy your first home or are a key worker there are several schemes
@@ -149,5 +149,5 @@ http_interactions:
         out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
         housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version:
-  recorded_at: Thu, 29 May 2014 08:25:20 GMT
+  recorded_at: Tue, 03 Jun 2014 18:48:57 GMT
 recorded_with: VCR 2.9.0

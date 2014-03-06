@@ -1,4 +1,4 @@
-@mixin typography($placement, $font-size: 16, $line-height: 1.5) {
+@mixin typography($placement, $font-size: 16, $line-height: 1.4) {
 
   @if $responsive == true {
     font-size: ($font-size / 16) + rem;
@@ -9,7 +9,6 @@
   line-height: $line-height;
 
   @if $placement == heading {
-    // a small decrease in the letter spacing helps readability of headings
     letter-spacing: -1px;
 
     @if $responsive == true {
@@ -115,19 +114,19 @@
 
 %type-primary-navigation {
   @extend %font-heading-heavy;
-  @include typography(body, 14, 1.3);
+  @include typography(body, 14);
 
   @include respond-to($mq-m) {
-    @include typography(body, 16, 1.3);
+    @include typography(body, 16);
   }
 }
 
 %type-navigation {
   @extend %font-heading-medium;
-  @include typography(body, 14, 1.3);
+  @include typography(body, 14);
 
   @include respond-to($mq-m) {
-    @include typography(body, 16, 1.3);
+    @include typography(body, 16);
   }
 }
 
@@ -148,11 +147,11 @@
 
 %paragraph-intro {
   @extend %font-heading-medium;
-  @include typography(paragraph, 18, 1.5);
+  @include typography(paragraph, 18);
   color: $color-grey-primary;
 
   @include respond-to($mq-l) {
-    @include typography(paragraph, 22, 1.5);
+    @include typography(paragraph, 22);
   }
 }
 

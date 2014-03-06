@@ -49,6 +49,9 @@ module Frontend
     # Use Rack middleware to capture X-Request-ID header
     config.middleware.use 'CaptureRequestId'
 
+    # Use Rack middleware to respond to requests probing for a implemented route
+    config.middleware.use 'RouteProbe'
+
   end
 end
 

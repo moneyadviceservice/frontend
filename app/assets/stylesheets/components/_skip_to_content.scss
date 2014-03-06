@@ -3,12 +3,16 @@
 // Styleguide Skip to content
 
 .skip-to-content {
+  @extend %type-small;
   display: block;
   padding: $baseline-unit;
   position: absolute;
   top: -1000px;
   left: 0;
+  background-color: $color-skip-to-content;
+  z-index: 12;
   &:focus {
-    top: 0;
+    top: 20px;
+    left: 20px;
   }
 }

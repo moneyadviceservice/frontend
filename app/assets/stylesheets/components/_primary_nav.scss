@@ -4,7 +4,6 @@
 
 .primary-nav {
   @extend .list--unstyled;
-  @extend %font-heading;
   z-index: 2;
 }
 
@@ -40,7 +39,7 @@
   }
 
   a {
-    @extend %type-navigation;
+    @extend %type-primary-navigation;
     @include links($color-primary-nav, $color-primary-nav-visited);
     @include inline-block;
     width: 100%;
@@ -87,6 +86,7 @@
   }
 
   a {
+    @extend %type-navigation;
     @include links($color-link-nav, $color-link-nav-visited);
   }
 }

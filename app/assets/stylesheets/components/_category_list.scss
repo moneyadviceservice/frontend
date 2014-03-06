@@ -29,7 +29,7 @@
   ul {
     @extend .list--unstyled;
     li {
-      margin-bottom: $baseline-unit;
+      margin-bottom: $baseline-unit*2.5;
     }
   }
 

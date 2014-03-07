@@ -11,7 +11,6 @@
   }
 
   h2 {
-    @extend %heading-link;
     a {
       color: $color-heading;
     }
@@ -27,11 +26,11 @@
 }
 
 // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
-.nth-of-type-3,
-.nth-of-type-5,
-.nth-of-type-7,
-.nth-of-type-9,
-.nth-of-type-11 {
+.category-3,
+.category-5,
+.category-7,
+.category-9,
+.category-11 {
   @include respond-to($mq-m) {
     clear: both;
   }
@@ -40,9 +39,9 @@
   }
 }
 
-.nth-of-type-4,
-.nth-of-type-7,
-.nth-of-type-10 {
+.category-4,
+.category-7,
+.category-10 {
   @include respond-to($mq-l) {
     clear: both;
   }

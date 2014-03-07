@@ -53,4 +53,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  match '*path', via: %W(get post), to: -> env { [501, {}, []] }
 end

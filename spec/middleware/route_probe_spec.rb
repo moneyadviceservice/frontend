@@ -11,29 +11,11 @@ describe RouteProbe do
   end
 
   context "with no `X-Route-Probe' header" do
-    context 'when the route exists' do
-      before do
-        expect(Rails.application.routes).to receive(:recognize_path) { double }
+    it 'calls the app' do
+      get '/'
 
-        get '/'
-      end
-
-      it 'calls the app' do
-        expect(last_response).to be_ok
-        expect(last_response.body).to eq('Hello World')
-      end
-    end
-
-    context 'when the route does not exists' do
-      before do
-        expect(Rails.application.routes).to receive(:recognize_path).and_raise(error)
-
-        get '/'
-      end
-
-      it 'returns 501 NOT IMPLEMENTED' do
-        expect(last_response.status).to eq(501)
-      end
+      expect(last_response).to be_ok
+      expect(last_response.body).to eq('Hello World')
     end
   end
 
@@ -60,8 +42,9 @@ describe RouteProbe do
         get '/'
       end
 
-      it 'returns 501 NOT IMPLEMENTED' do
-        expect(last_response.status).to eq(501)
+      it 'calls the app' do
+        expect(last_response).to be_ok
+        expect(last_response.body).to eq('Hello World')
       end
     end
   end

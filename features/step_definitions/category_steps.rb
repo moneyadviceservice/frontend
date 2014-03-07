@@ -1,4 +1,5 @@
 When(/^I view a category page$/) do
+  populate_category_repository_with(current_category)
   category_page.load(locale: :en, id: current_category['id'])
 end
 

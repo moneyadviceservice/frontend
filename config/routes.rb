@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :articles,
               only:        'show',
               constraints: ValidArticle.new
+    resources :categories, only: 'show'
 
     resource :styleguide,
              controller:  'styleguide',

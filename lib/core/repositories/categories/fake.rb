@@ -30,6 +30,11 @@ module Core::Repositories
               'title' => 'Subcategory 2',
               'contents' => []
             }]
+          },{
+            'id' => 'subcategory-2',
+            'type' => 'category',
+            'title' => 'Subcategory 2',
+            'contents' => []
           }]
         },{
           'id' => 'category-2',

@@ -2,23 +2,24 @@ require 'spec_helper'
 require 'core/repositories/categories/fake'
 
 describe Core::Repositories::Categories::Fake do
-  let(:valid_id) { 'category-1' }
-  let(:valid_subcategory_id) { 'subcategory-1' }
+  let(:subcategory) { build :category_hash }
+  let(:category) { build :category_hash, contents: [subcategory] }
   let(:invalid_id) { 'fake' }
+  let(:repository) { described_class.new(category) }
 
   describe '#all' do
-    subject { described_class.new.all }
+    subject { repository.all }
 
     it { should be_a(Array) }
-    specify { expect(subject.first['id']).to eq(valid_id) }
+    specify { expect(subject.first['id']).to eq(category['id']) }
   end
 
   describe '#find' do
     context 'when the category exists' do
-      subject { described_class.new.find(valid_id) }
+      subject { repository.find(category['id']) }
 
       it { should be_a(Hash) }
-      specify { expect(subject['id']).to eq(valid_id) }
+      specify { expect(subject['id']).to eq(category['id']) }
 
       it 'instantiates a valid Category' do
         expect(Core::Category.new(subject['id'], subject)).to be_valid
@@ -30,10 +31,10 @@ describe Core::Repositories::Categories::Fake do
       end
 
       context 'when retrieving a subcategory' do
-        subject { described_class.new.find(valid_subcategory_id) }
+        subject { repository.find(subcategory['id']) }
 
         it { should be_a(Hash) }
-        specify { expect(subject['id']).to eq(valid_subcategory_id) }
+        specify { expect(subject['id']).to eq(subcategory['id']) }
       end
     end
 

@@ -3,8 +3,8 @@
     <% if params[:query].present? %>
       <h1><%= t('.title') %> "<%= params[:query] %>"</h1>
 
-      <% if @search_results.present? %>
-        <% @search_results.each do |result| %>
+      <% if search_results.present? %>
+        <% search_results.each do |result| %>
           <article class="search-results__item">
             <h2><%= result.title %></h2>
             <p><%= result.description %></p>

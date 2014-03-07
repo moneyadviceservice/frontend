@@ -28,19 +28,22 @@
 
 // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
 .nth-of-type-3,
-.nth-of-type-5 {
+.nth-of-type-5,
+.nth-of-type-7,
+.nth-of-type-9,
+.nth-of-type-11 {
   @include respond-to($mq-m) {
     clear: both;
   }
   @include respond-to($mq-l) {
     clear: none;
-
   }
 }
 
-.nth-of-type-4 {
+.nth-of-type-4,
+.nth-of-type-7,
+.nth-of-type-10 {
   @include respond-to($mq-l) {
     clear: both;
-
   }
 }

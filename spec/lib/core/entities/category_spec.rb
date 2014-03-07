@@ -9,6 +9,9 @@ module Core
                          description: double,
                          contents:    double } }
 
+    it { should respond_to :type }
+    it { should respond_to :type= }
+
     it { should respond_to :title }
     it { should respond_to :title= }
 

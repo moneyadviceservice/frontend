@@ -19,8 +19,7 @@ module Core
     def build_list(categories)
       categories.map do |category|
         attributes = category.dup.tap do |c|
-          c['contents'] = build_list(c['subCategories'])
-          c.delete('subCategories')
+          c['contents'] = build_list(c['contents'])
         end
         Category.new(category['id'], attributes)
       end

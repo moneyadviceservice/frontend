@@ -4,19 +4,10 @@
 
   @include respond-to($mq-m) {
     @include column(6);
-    &:nth-of-type(2n+1) {
-      clear: both;
-    }
   }
 
   @include respond-to($mq-l) {
     @include column(4);
-    &:nth-of-type(2n+1) {
-      clear: none;
-    }
-    &:nth-of-type(3n+1) {
-      clear: both;
-    }
   }
 
   h2 {
@@ -33,4 +24,23 @@
     }
   }
 
+}
+
+// cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
+.nth-of-type-3,
+.nth-of-type-5 {
+  @include respond-to($mq-m) {
+    clear: both;
+  }
+  @include respond-to($mq-l) {
+    clear: none;
+
+  }
+}
+
+.nth-of-type-4 {
+  @include respond-to($mq-l) {
+    clear: both;
+
+  }
 }

@@ -6,8 +6,10 @@
   background-color: $color-footer-bg;
 
   li {
+    @extend .list--unstyled;
     display: inline-block;
     width: 100%;
+
     @include respond-to($mq-m) {
       width: 49%;
     }

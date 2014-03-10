@@ -1,6 +1,7 @@
 <div class="opt-out-bar">
   <div class="l-container">
-    <p><%= t('opt_out_bar.message') %><br>
+    <p>
+      <%= t('opt_out_bar.message') %>
       <a class="js-linkParent" href="<%= raw t('opt_out_bar.email_contents') %>"><%= t('opt_out_bar.feedback') %></a>
     </p>
     <%= form_tag(opt_out_path) do %>

@@ -6,6 +6,7 @@
   margin-right: -6px;
 
   > li {
+    @extend .list--unstyled;
     border-top: 1px solid $color-grey-light;
     > a {
       padding: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 0;

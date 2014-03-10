@@ -58,7 +58,7 @@ define(['log', 'jquery'], function (Global, $) {
 
       this.$parent.on('focusout', function(){
         setTimeout(function(){
-          if( _this.$parent.find(document.activeElement).length === 0 ){
+          if( _this.$parent.find(document.activeElement).length === 0 && _this.selected){
             _this.hide(_this.selected);
           }
         },300);

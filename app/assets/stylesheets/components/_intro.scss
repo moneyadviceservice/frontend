@@ -7,3 +7,7 @@
   @extend %paragraph-intro;
   clear: both;
 }
+
+.intro--constrained {
+  max-width: 700px;
+}

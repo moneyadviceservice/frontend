@@ -1,5 +1,5 @@
-When(/^I view a category page$/) do
-  populate_category_repository_with(current_category)
+When(/^I view a category containing 2 levels of subcategories$/) do
+  populate_category_repository_with(category_with_2_levels_of_subcategory)
   category_page.load(locale: :en, id: current_category['id'])
 end
 

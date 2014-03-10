@@ -5,8 +5,15 @@ module World
       Core::Registries::Repository[:category] = repository
     end
 
+    def category_with_2_levels_of_subcategory
+      @current_category = build(:category_hash, contents:[
+        build(:category_hash, contents: build_list(:category_hash, 2)),
+        build(:category_hash, contents: build_list(:category_hash, 2))
+      ])
+    end
+
     def current_category
-      @current_category ||= build(:category_hash, contents: build_list(:category_hash, 2))
+      @current_category
     end
   end
 end

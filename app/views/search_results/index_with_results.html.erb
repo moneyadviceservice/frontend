@@ -1,0 +1,12 @@
+<div class="l-search-results">
+  <main>
+    <h1><%= t('.title') %> "<%= params[:query] %>"</h1>
+
+    <% search_results.each do |result| %>
+      <article class="search-results__item">
+        <h2><%= result.title %></h2>
+        <p><%= result.description %></p>
+      </article>
+    <% end %>
+  </main>
+</div>

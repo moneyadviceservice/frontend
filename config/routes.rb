@@ -18,6 +18,7 @@ Rails.application.routes.draw do
               only:        'show',
               constraints: ValidArticle.new
     resources :categories, only: 'show'
+    resources :search_results, only: 'index', path: 'search'
 
     resource :styleguide,
              controller:  'styleguide',

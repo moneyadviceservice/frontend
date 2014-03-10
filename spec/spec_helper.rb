@@ -10,6 +10,8 @@ require 'mas/development_dependencies/rspec/spec_helper'
 require 'webmock/rspec'
 require 'factory_girl'
 
+Draper::ViewContext.test_strategy :fast
+
 FactoryGirl.definition_file_paths << File.join(File.dirname(__FILE__), '..', 'features', 'factories')
 FactoryGirl.find_definitions
 

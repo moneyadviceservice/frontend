@@ -22,8 +22,10 @@
 
 .l-article {
   @include column(12);
+  margin-top: $baseline-unit*10;
   @include respond-to($mq-m) {
     @include column(8);
+    margin-top: $baseline-unit*10;
   }
 }
 

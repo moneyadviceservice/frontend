@@ -18,3 +18,36 @@ a {
 .link-nav {
   @include links($color-link-nav, $color-link-nav-visited);
 }
+
+a:not([href*="moneyadviceservice"]):after {
+  @extend .icon;
+  @extend .icon--external-link;
+  color: $color-link-external;
+  padding-left: 5px;
+}
+
+// override for links that do not contain moneyadviceservice but are not external links
+a[href^="/"]:after,
+a[href^="#"]:after {
+  display: none;
+}
+
+a[href$=".doc"] {
+  margin-top: $baseline-unit*3;
+
+  &:before {
+    @extend .icon;
+    @extend .icon--doc;
+    padding-right: 5px;
+  }
+}
+
+a[href$=".pdf"] {
+  margin-top: $baseline-unit*3;
+
+  &:before {
+    @extend .icon;
+    @extend .icon--pdf;
+    padding-right: 5px;
+  }
+}

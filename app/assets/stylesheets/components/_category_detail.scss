@@ -1,0 +1,9 @@
+.category-detail__heading {
+  a {
+    color: $color-heading;
+  }
+}
+
+.category-detail__list {
+  @extend .list--unstyled;
+}

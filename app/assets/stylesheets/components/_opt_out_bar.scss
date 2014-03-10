@@ -26,12 +26,12 @@
 }
 
 .opt-out-bar__button {
-  @extend %font-smoothing;
   @extend %type-small;
-  color: $color-link-default;
-  background: transparent;
-  border: 0;
+  @extend %font-smoothing;
   padding: $baseline-unit*2 0;
+  color: $color-link-default;
+  border: 0;
+  background: transparent;
   border-top: 1px solid $color-grey-light;
 
   @include respond-to($mq-m) {
@@ -44,7 +44,9 @@
     padding-right: $baseline-unit;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     text-decoration: underline;
   }
 }

@@ -142,26 +142,21 @@
 
 %type {
   @extend %font-body;
-//  @include typography(body, 16, 24);
   @include body(16, 24);
 
   @include respond-to($mq-m) {
-//    @include typography(body, 18, 24);
     @include body(18, 24);
   }
 }
 
 %type-small {
-//  @include typography(body, 14, 18);
   @include body(14, 18);
 }
 
 %type-table {
-//  @include typography(body, 14, 18);
   @include body(14, 18);
 
   @include respond-to($mq-m) {
-//    @include typography(body, 16, 24);
     @include body(16, 24);
   }
 }
@@ -169,55 +164,41 @@
 %type-button {
   @extend %font-heading-medium;
   @extend %font-smoothing;
-//  @include typography(body, 18, 24);
   @include body(18, 24);
 }
 
 %type-primary-navigation {
   @extend %font-heading-heavy;
-//  @include typography(body, 14, 18);
   @include body(14, 18);
 
   @include respond-to($mq-m) {
-//    @include typography(body, 16, 24);
     @include body(16, 24);
   }
 }
 
 %type-navigation {
   @extend %font-heading-medium;
-//  @include typography(body, 14, 18);
   @include body(14, 18);
-
-  @include respond-to($mq-m) {
-//    @include typography(body, 16, 24);
-    @include body(16, 24);
-  }
 }
 
 %paragraph {
-//  @include typography(paragraph, 16, 24);
   @include paragraph(16, 24);
 
   @include respond-to($mq-l) {
-//    @include typography(paragraph, 19, 24);
     @include paragraph(18, 24);
   }
 }
 
 %paragraph-intro {
   @extend %font-heading-medium;
-//  @include typography(paragraph, 18, 24);
   @include paragraph(18, 24);
   color: $color-grey-primary;
 
   @include respond-to($mq-l) {
-//    @include typography(paragraph, 22, 30);
     @include paragraph(22, 30);
   }
 }
 
 %paragraph-small {
-//  @include typography(paragraph, 14, 18);
   @include paragraph(14, 18);
 }

@@ -8,5 +8,13 @@ FactoryGirl.define do
     contents []
 
     initialize_with { new(id) }
+
+    factory :category_hash, class: Hash do
+      type 'category'
+
+      initialize_with do
+        Hash[attributes.map { |key, value| [key.to_s, value] }]
+      end
+    end
   end
 end

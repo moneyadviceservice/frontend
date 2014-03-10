@@ -5,12 +5,12 @@
 
     <% category.contents.each do |subcategory| %>
       <article>
-        <h2><%= link_to subcategory.title, category_path(subcategory.id) %></h2>
+        <h2><%= link_to subcategory.title, subcategory.path %></h2>
 
         <% if subcategory.contents.present? %>
           <ul>
           <% subcategory.contents.each do |subsubcategory| %>
-            <li><%= link_to subsubcategory.title, category_path(subsubcategory.id) %></li>
+            <li><%= link_to subsubcategory.title, subsubcategory.path %></li>
           <% end%>
           </ul>
         <% end %>

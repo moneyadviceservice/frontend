@@ -1,24 +1,20 @@
 <% set_meta_tags(description: category.description) %>
 
-<div id="content">
-  <section>
-    <h1><%= title category.title %></h1>
-    <p id="description"><%= category.description %></p>
+<h1><%= title category.title %></h1>
+<p class="intro"><%= category.description %></p>
 
-    <% category.contents.each do |subcategory| %>
-      <article>
-        <h2><%= link_to subcategory.title, subcategory.path %></h2>
+<div class="l-category-grid">
+  <% category.contents.each_with_index do |subcategory, i| %>
+    <section class="category-detail category-detail--<%= i+1 %>">
+      <h2 class="category-detail__heading"><%= link_to subcategory.title, subcategory.path %></h2>
 
-        <% if subcategory.contents.present? %>
-          <ul>
+      <% if subcategory.contents.present? %>
+        <ol class="category-detail__list">
           <% subcategory.contents.each do |subsubcategory| %>
             <li><%= link_to subsubcategory.title, subsubcategory.path %></li>
-          <% end%>
-          </ul>
-        <% end %>
-
-      </article>
-    <% end %>
-
-  </section>
+          <% end %>
+        </ol>
+      <% end %>
+    </section>
+  <% end %>
 </div>

@@ -11,4 +11,9 @@
 
 .category-detail__list {
   @extend .list--unstyled;
+
+  .icon {
+    margin-left: -32px;
+    margin-right: 12px;
+  }
 }

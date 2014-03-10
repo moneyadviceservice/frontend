@@ -10,7 +10,7 @@
 }
 
 .styleguide-nav {
-  @include typography(body, 14);
+  @include typography(body, 14, 18);
   z-index: 9;
   background-color: $color-nav-background;
   border-bottom: 1px solid $color-nav-border;

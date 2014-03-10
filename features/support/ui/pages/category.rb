@@ -5,7 +5,6 @@ module UI::Pages
   class Category < UI::Page
     set_url '{/locale}/categories{/id}'
 
-    element :heading, 'h1'
     element :description, '.intro'
 
     sections :sub_categories, UI::Sections::SubCategory, 'article'

@@ -7,9 +7,9 @@ Then(/^I should see no search results$/) do
 end
 
 Then(/^I should prompted to try another search term$/) do
-  search_results_page.has_content? I18n.t('search_results.index.no_results.title')
+  search_results_page.has_content? I18n.t('search_results.index_no_results.body')
 end
 
 Then(/^I should prompted to try again with a search term$/) do
-  search_results_page.has_content? I18n.t('search_results.index.no_query.title')
+  search_results_page.has_content? I18n.t('search_results.index.body')
 end

@@ -93,10 +93,12 @@ cy:
 
   search_results:
     index:
+      title: Rhowch term chwilio.
+      body: Ni allwn berfformio chwiliad heb un.
+
+    index_no_results:
       title: Canlyniadau ar gyfer
-      no_results:
-        title: Nid yw eich term chwilio yn dychwelyd unrhyw ganlyniadau.
-        body: Os gwelwch yn dda roi cynnig ar rywbeth arall.
-      no_query:
-        title: Rhowch term chwilio.
-        body: Ni allwn edrych am bethau heb un.
+      body: Nid yw eich term chwilio yn dychwelyd unrhyw ganlyniadau. Os gwelwch yn dda roi cynnig ar rywbeth arall.
+
+    index_with_results:
+      title: Canlyniadau ar gyfer

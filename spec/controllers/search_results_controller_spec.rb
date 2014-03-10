@@ -31,10 +31,24 @@ describe SearchResultsController do
         expect(assigns(:search_results)).to eq(search_results)
       end
 
-      it 'is successful' do
-        get :index, locale: I18n.locale, query: query
+      context 'that returns results' do
+        before { allow(search_results).to receive(:present?).and_return(true) }
 
-        expect(response).to be_ok
+        it 'renders the right template' do
+          get :index, locale: I18n.locale, query: query
+
+          expect(response).to render_template 'search_results/index_with_results'
+        end
+      end
+
+      context 'that returns no results' do
+        before { allow(search_results).to receive(:present?).and_return(false) }
+
+        it 'renders the right template' do
+          get :index, locale: I18n.locale, query: query
+
+          expect(response).to render_template 'search_results/index_no_results'
+        end
       end
     end
 
@@ -45,10 +59,10 @@ describe SearchResultsController do
         get :index, locale: I18n.locale
       end
 
-      it 'is successful' do
+      it 'renders the default template' do
         get :index, locale: I18n.locale
 
-        expect(response).to be_ok
+        expect(response).to render_template :index
       end
     end
   end

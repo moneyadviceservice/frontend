@@ -12,7 +12,7 @@ module Core::Repositories
       end
 
       def perform(query)
-        response = connection.get('/content-service/search.json', query: query, locale: I18n.locale, limit: LIMIT)
+        response = connection.get('search.json', query: query, locale: I18n.locale, limit: LIMIT)
         response.body['searchResults'].map do |result_data|
           {
             :id => result_data['id'],

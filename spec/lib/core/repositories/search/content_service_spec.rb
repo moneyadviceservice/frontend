@@ -17,7 +17,7 @@ describe Core::Repositories::Search::ContentService do
     subject { described_class.new.perform(query) }
 
     before do
-      stub_request(:get, "https://example.com/content-service/search.json?limit=#{limit}&locale=#{locale}&query=#{query}").
+      stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}").
         to_return(status: status, body: body, headers: {})
     end
 

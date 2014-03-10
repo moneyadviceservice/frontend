@@ -3,25 +3,23 @@ When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   data   = { id:          current_article.id,
              title:       current_article.title,
              description: current_article.description,
-             body:        current_article.body,
-             locale:      locale }
+             body:        current_article.body }
 
-  VCR.use_cassette('article', erb: data) do
+  VCR.use_cassette("article_#{locale}", erb: data) do
     article_page.load(locale: locale, id: current_article.id)
   end
 end
 
 When(/^I translate the article into (.*)$/) do |language|
+  locale = language_to_locale(language)
   data = { id:          current_article.id,
            title:       current_article.title,
            description: current_article.description,
-           body:        current_article.body,
-           locale:      language_to_locale(language) }
+           body:        current_article.body }
 
-  expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).
-    to eq(language_to_locale(language))
+  expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]). to eq(locale)
 
-  VCR.use_cassette('article', erb: data) do
+  VCR.use_cassette("article_#{locale}", erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click
   end
 end
@@ -40,8 +38,7 @@ Then(/^the article should have a canonical tag for that language version$/) do
 end
 
 Then(/^the article should have an alternate tag for the (.*) version$/) do |language|
-  locale        = language_to_locale(language)
-  expected_href = article_url(id: current_article.id, locale: current_locale)
+  expected_href = article_url(id: current_article.id, locale: language_to_locale(language))
 
   expect { article_page.alternate_tag[:href] }.to become(expected_href)
 end

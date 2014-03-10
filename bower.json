@@ -1,9 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "ignore": [
-    "!app/assets/**/*"
-  ],
+  "ignore": ["**/*", "./!(app/assets/**/*)"],
   "dependencies": {
     "html-inspector": "0.7.0",
     "sinonjs": "1.7.3",

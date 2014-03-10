@@ -87,11 +87,14 @@ module Core
         it_has_behavior 'optional failure block'
       end
 
-      context 'when the returned category contains sub-categories' do
-        let(:data) { build :category_hash, contents: build_list(:category_hash, 1) }
+      context 'when the returned category contains sub-categories, action plans and articles' do
+        let(:contents) { %w{article_hash action_plan_hash category_hash}.map(&method(:build)) }
+        let(:data) { build :category_hash, contents: contents }
         let(:category) { subject.call }
 
-        specify { expect(category.contents.first).to be_a(Category) }
+        [Article, ActionPlan, Category].each_with_index do |klass, i|
+          specify { expect(category.contents[i]).to be_a(klass) }
+        end
       end
 
       context 'when the returned category has no contents' do

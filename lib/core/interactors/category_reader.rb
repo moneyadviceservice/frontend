@@ -28,9 +28,11 @@ module Core
 
       contents.map do |item|
         attributes = item.dup.tap do |i|
-          i['contents'] = build_contents(i['contents'])
+          i['contents'] = build_contents(i['contents']) if i.member? 'contents'
         end
-        Category.new(item['id'], attributes)
+        item_type = attributes.delete('type') || 'category'
+        klass = Core.const_get(item_type.classify)
+        klass.new(item['id'], attributes)
       end
     end
   end

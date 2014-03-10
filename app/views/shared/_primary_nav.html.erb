@@ -6,14 +6,14 @@
         <% if category.id == 'news' %>
           <a href="/<%= I18n.locale %>/news"><%= category.title %></a>
         <% else %>
-          <a href="/<%= I18n.locale %>/categories/<%= category.id %>"><%= category.title %></a>
+          <%= link_to category.title, category_path(category.id) %>
         <% end %>
 
         <% if category.contents.present? %>
           <div class="primary-nav__dropdown l-primary-nav-dropdown">
             <ul class="menu">
               <% category.contents.each do |sub_category| %>
-                <li><a href="/<%= I18n.locale %>/categories/<%= sub_category.id %>"><%= sub_category.title %></a></li>
+                <li><%= link_to sub_category.title, category_path(sub_category.id) %></li>
               <% end %>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-When(/^I view the action plan in (.*)$/) do |language|
+When(/^I view (?:an|the) action plan in (.*)$/) do |language|
   locale = language_to_locale(language)
   data   = { id:          current_action_plan.id,
              title:       current_action_plan.title,
@@ -31,4 +31,10 @@ Then(/^I should see the action plan in (.*)$/) do |language|
   expect(action_plan_page.description[:content]).to eq(current_action_plan.description)
   expect(action_plan_page.heading).to have_content(current_action_plan.title)
   expect(action_plan_page.content).to have_content(strip_tags(current_action_plan.body))
+end
+
+Then(/^the action plan should have a canonical tag for that language version$/) do
+  expected_href = action_plan_url(id: current_action_plan.id, locale: current_locale)
+
+  expect { action_plan_page.canonical_tag[:href] }.to become(expected_href)
 end

@@ -1,4 +1,5 @@
-<% set_meta_tags(description: action_plan.description) %>
+<% set_meta_tags(description: action_plan.description,
+                 canonical:   action_plan_url(action_plan.id)) %>
 
 <div class="l-article editorial">
   <h1><%= title action_plan.title %></h1>

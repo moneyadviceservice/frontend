@@ -6,7 +6,7 @@ describe Localisation do
   controller do
     include Localisation
 
-    public :alternative_locales
+    public :alternate_locales
 
     def index
       head status
@@ -54,7 +54,7 @@ describe Localisation do
       allow(I18n).to receive(:locale).and_return(:en)
       allow(I18n).to receive(:available_locales).and_return(%I(en cy))
 
-      expect(controller.alternative_locales).to eql(%I(cy))
+      expect(controller.alternate_locales).to eql(%I(cy))
     end
   end
 end

@@ -2,6 +2,12 @@ Given(/^I am on the home page$/) do
   home_page.load
 end
 
+Given(/^I view the home page in (.*)$/) do |language|
+  locale = language_to_locale(language)
+
+  home_page.load(locale: locale)
+end
+
 When(/^I visit the home page$/) do
   home_page.load
 end
@@ -55,6 +61,12 @@ end
 
 Then(/^I should see the search box$/) do
   home_page.should have_search_box
+end
+
+Then(/^the home page should have a canonical tag for that language version$/) do
+  expected_href = root_url(locale: current_locale)
+
+  expect { home_page.canonical_tag[:href] }.to become(expected_href)
 end
 
 When(/^I search for something relevant$/) do

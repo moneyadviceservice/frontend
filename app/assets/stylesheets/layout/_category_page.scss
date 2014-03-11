@@ -31,12 +31,28 @@
 
     @include respond-to($mq-l) {
       @include column(4);
-
-      // remove left margin due to semantic grid behaviour
-      margin-left: 0;
     }
   }
 }
+
+
+
+.l-grid-max-3 {
+
+  .l-cell {
+    padding: 0 $baseline-unit*4 $baseline-unit*3 0;
+
+    @include respond-to($mq-m) {
+      @include column(6);
+      border: 0;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+}
+
 
 // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
 .category-detail--3,

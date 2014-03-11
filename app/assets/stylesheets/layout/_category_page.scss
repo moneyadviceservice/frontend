@@ -1,3 +1,24 @@
+.l-category-filter {
+  @include respond-to($mq-l) {
+    @include column(4);
+    margin-right: $baseline-unit;
+  }
+}
+
+.l-category-detail {
+  @include column(12);
+  float: right;
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    float: right;
+  }
+
+  .category-detail__list {
+    padding-left: $baseline-unit*6;
+  }
+}
+
 .l-category-grid {
 
   .category-detail {

@@ -1,24 +1,3 @@
-.l-category-filter {
-  @include respond-to($mq-l) {
-    @include column(4);
-    margin-right: $baseline-unit;
-  }
-}
-
-.l-category-detail {
-  @include column(12);
-  float: right;
-
-  @include respond-to($mq-l) {
-    @include column(8);
-    float: right;
-  }
-
-  .category-detail__list {
-    padding-left: $baseline-unit*6;
-  }
-}
-
 .l-category-grid {
 
   .category-detail {
@@ -31,12 +10,28 @@
 
     @include respond-to($mq-l) {
       @include column(4);
-
-      // remove left margin due to semantic grid behaviour
-      margin-left: 0;
     }
   }
 }
+
+
+
+.l-grid-max-3 {
+
+  .l-cell {
+    padding: 0 $baseline-unit*4 $baseline-unit*3 0;
+
+    @include respond-to($mq-m) {
+      @include column(6);
+      border: 0;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+}
+
 
 // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
 .category-detail--3,

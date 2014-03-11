@@ -18,7 +18,7 @@ describe SearchResultDecorator do
     let(:locale) { 'en' }
     before { allow(I18n).to receive(:locale) { locale } }
 
-    %w{article guide news}.each do |type|
+    %w{article guide}.each do |type|
       context "and it is of type '#{type}'" do
         before { allow(search_result).to receive(:type) { type } }
 
@@ -53,6 +53,14 @@ describe SearchResultDecorator do
 
         it 'returns the expected path' do
           expect(subject.path).to eq "/#{locale}/campaigns/#{search_result.id}"
+        end
+      end
+
+      context "'news'" do
+        before { allow(search_result).to receive(:type) { 'news' } }
+
+        it 'returns the expected path' do
+          expect(subject.path).to eq "/#{locale}/news/#{search_result.id}"
         end
       end
 

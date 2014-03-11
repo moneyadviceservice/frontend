@@ -3,13 +3,13 @@ class SearchResultDecorator < Draper::Decorator
 
   def path
     case object.type
-    when 'article', 'guide', 'news'
+    when 'article', 'guide'
       h.article_path(object.id, locale: I18n.locale)
     when 'action-plan'
       h.action_plan_path(object.id, locale: I18n.locale)
     when 'category'
       h.category_path(object.id, locale: I18n.locale)
-    when 'campaign', 'tool', 'video'
+    when 'campaign', 'news', 'tool', 'video'
       "/#{I18n.locale}/#{object.type.pluralize}/#{object.id}"
     end
   end

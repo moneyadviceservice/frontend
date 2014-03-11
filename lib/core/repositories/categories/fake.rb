@@ -25,9 +25,9 @@ module Core::Repositories
             'title' => 'Subcategory 1',
             'type' => 'category',
             'contents' => [{
-              'id' => 'subcategory-2',
+              'id' => 'subsubcategory-1',
               'type' => 'category',
-              'title' => 'Subcategory 2',
+              'title' => 'Subsubcategory 1',
               'contents' => []
             }]
           },{

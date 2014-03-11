@@ -40,6 +40,7 @@ Rails.application.routes.draw do
           get 'pages_homepage', path: '/homepage'
           get 'pages_search_results', path: '/search_results'
           get 'pages_top_level_category_page', path: '/top_level_category_page'
+          get 'pages_category_page_level_two', path: '/second_level_category_page'
         end
 
         scope 'css' do

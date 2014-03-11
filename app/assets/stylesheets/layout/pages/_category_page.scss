@@ -1,0 +1,15 @@
+.l-category-grid {
+
+  .category-detail {
+    padding: 0 $baseline-unit*4 $baseline-unit*3 0;
+
+    @include respond-to($mq-m) {
+      @include column(6);
+      border: 0;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+}

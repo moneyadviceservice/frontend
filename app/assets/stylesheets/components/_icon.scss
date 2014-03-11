@@ -116,3 +116,17 @@
     content: '\e60c';
   }
 }
+
+
+.icon--tool {
+  &:before {
+    content: '\e602';
+  }
+}
+
+.icon--video {
+  &:before {
+    content: '\e601';
+  }
+}
+

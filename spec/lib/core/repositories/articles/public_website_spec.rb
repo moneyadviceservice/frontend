@@ -9,6 +9,7 @@ module Core::Repositories::Articles
       subject(:repository) { described_class.new }
 
       let(:id) { 'beginners-guide-to-managing-your-money' }
+      let(:headers) { {} }
 
       before do
         allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
@@ -16,7 +17,7 @@ module Core::Repositories::Articles
         end
 
         stub_request(:get, "https://example.com/en/articles/#{id}.json").
-          to_return(status: status, body: body, headers: {})
+          to_return(status: status, body: body, headers: headers)
       end
 
       context 'when the type exists' do
@@ -26,6 +27,16 @@ module Core::Repositories::Articles
         it 'returns a hash of attributes' do
           expect(repository.find(id)).to be_a(Hash)
           expect(repository.find(id)['id']).to eq(id)
+        end
+
+        context 'and an alternate link header is returned' do
+          let(:headers) do
+            { 'Link' => '<https://example.com/path/to/alternate>; rel="alternate"; hreflang="cy"; title="alternate"' }
+          end
+
+          it 'returns a nested hash of attributes' do
+            expect(repository.find(id)['alternate']).to be_a(Hash)
+          end
         end
       end
 

@@ -2,11 +2,13 @@
   <main>
     <h1><%= t('.title') %> "<%= params[:query] %>"</h1>
 
-    <% search_results.each do |result| %>
-      <article class="search-results__item">
-        <h2><%= result.title %></h2>
-        <p><%= result.description %></p>
-      </article>
-    <% end %>
+    <ol class="search-results">
+      <% search_results.each do |result| %>
+        <li class="search-results__item">
+          <h2><%= link_to result.title, result.path %></h2>
+          <p><%= result.description %></p>
+        </li>
+      <% end %>
+    </ol>
   </main>
 </div>

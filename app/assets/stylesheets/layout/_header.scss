@@ -3,8 +3,8 @@
   .mas-logo {
     position: relative;
     top: $baseline-unit*2;
-    padding-top: $baseline-unit*5;
-    margin: 0 0 $baseline-unit*4 $baseline-unit;
+    padding: $baseline-unit*5 0;
+    margin: 0 0 0 $baseline-unit;
     @include respond-to($mq-l) {
       float: left;
       position: absolute;
@@ -15,6 +15,7 @@
   .mobile-nav {
     display: none;
   }
+
   .mobile-nav__item {
     margin: $baseline-unit*1.5 $baseline-unit*1.5 0 0;
     float: left;

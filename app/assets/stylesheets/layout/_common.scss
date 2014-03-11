@@ -1,12 +1,12 @@
 // Styleguide layout-container
 
-.l-container {
+.l-constrained {
   @extend %clearfix;
   max-width: $mq-l;
   margin: 0 auto;
 }
 
-.l-container--space {
+.l-padded-container {
   @include columnPadding(12);
 }
 

@@ -1,5 +1,9 @@
 .category-filter {
+  display: none;
   @extend .list--unstyled;
+  @include respond-to($mq-l) {
+    display: block;
+  }
   margin-top: $baseline-unit*8;
 }
 

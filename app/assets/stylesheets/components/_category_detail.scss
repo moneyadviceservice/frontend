@@ -3,6 +3,31 @@
   border-bottom: 1px solid $color-category-border;
 }
 
+// cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
+.category-detail--3,
+.category-detail--5,
+.category-detail--7,
+.category-detail--9,
+.category-detail--11 {
+
+  @include respond-to($mq-m) {
+    clear: both;
+  }
+
+  @include respond-to($mq-l) {
+    clear: none;
+  }
+}
+
+.category-detail--4,
+.category-detail--7,
+.category-detail--10 {
+
+  @include respond-to($mq-l) {
+    clear: both;
+  }
+}
+
 .category-detail__heading {
   a {
     color: $color-heading;
@@ -21,3 +46,5 @@
 .category-detail__list--icons {
   padding-left: $baseline-unit*6;
 }
+
+

@@ -6,7 +6,7 @@ module Core::Repositories
       end
 
       def all
-        @categories
+        @filtered_categories ||= remove_non_categories(@categories)
       end
 
       def find(id)
@@ -47,10 +47,18 @@ module Core::Repositories
       def find_category(categories, id)
         categories.each do |category|
           return category if category['id'] == id
-          subcategory = find_category(category['contents'], id)
+          subcategory = find_category(category.fetch('contents', []), id)
           return subcategory if subcategory
         end
         nil
+      end
+
+      def remove_non_categories(items)
+        items.select { |c| c.member? 'contents' }.map do |category|
+          category.dup.tap do |c|
+            c['contents'] = remove_non_categories(c['contents'])
+          end
+        end
       end
     end
   end

@@ -1,3 +1,8 @@
+.category-detail {
+  padding-bottom: $baseline-unit*3;
+  border-bottom: 1px solid $color-category-border;
+}
+
 .category-detail__heading {
   a {
     color: $color-heading;
@@ -6,4 +11,13 @@
 
 .category-detail__list {
   @extend .list--unstyled;
+
+  .icon {
+    margin-left: -32px;
+    margin-right: 12px;
+  }
+}
+
+.category-detail__list--icons {
+  padding-left: $baseline-unit*6;
 }

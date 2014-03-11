@@ -34,7 +34,7 @@ module Core::Repositories::Articles
             { 'Link' => '<https://example.com/path/to/alternate>; rel="alternate"; hreflang="cy"; title="alternate"' }
           end
 
-          specify 'returns a nested hash of attributes' do
+          it 'returns a nested hash of attributes' do
             expect(repository.find(id)['alternate']).to be_a(Hash)
           end
         end

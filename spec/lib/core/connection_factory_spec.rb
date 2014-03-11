@@ -38,6 +38,10 @@ module Core
         expect(factory.builder.handlers).to include(Faraday::Response::RaiseError)
       end
 
+      it 'defaults to parsing link headers' do
+        expect(factory.builder.handlers).to include(Faraday::Response::LinkHeader)
+      end
+
       it 'includes instrumentation' do
         expect(factory.builder.handlers).to include(FaradayMiddleware::Instrumentation)
       end

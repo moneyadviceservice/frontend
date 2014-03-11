@@ -2,17 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://moneyadviceservice.apiary.io/<%= locale %>/articles/<%= id %>.json
+    uri: https://moneyadviceservice.apiary.io/cy/articles/<%= id %>.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept:
-      - application/json
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 0446ed6b-d57f-4b44-86fb-698c5608af35
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
+      Accept:
+      - '*/*'
   response:
     status:
       code: 200
@@ -21,19 +23,19 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 29 Jan 2014 13:24:24 GMT
+      - Mon, 10 Mar 2014 14:05:09 GMT
       Link:
-      - <https://www.moneyadviceservice.org.uk/cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled>;
-        rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch
+      - <http://www.example.com/en/articles/<%= id %>>;
+        rel="alternate"; hreflang="en"; title="Example title"
         dyled"
       X-Apiary-Ratelimit-Limit:
       - '120'
       X-Apiary-Ratelimit-Remaining:
-      - '119'
+      - '118'
       X-Apiary-Transaction-Id:
-      - 52e90108362ffd0200000967
+      - 531dc6951730ce02000186cf
       Content-Length:
-      - '512'
+      - '412'
       Connection:
       - keep-alive
     body:
@@ -45,5 +47,5 @@ http_interactions:
             "body": "<%= body %>"
         }
     http_version:
-  recorded_at: Wed, 29 Jan 2014 13:24:25 GMT
+  recorded_at: Mon, 10 Mar 2014 14:05:09 GMT
 recorded_with: VCR 2.8.0

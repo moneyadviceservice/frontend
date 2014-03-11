@@ -11,3 +11,12 @@ Feature: Action Plan SEO
     | locale  |
     | English |
     | Welsh   |
+
+   Scenario Outline: Action Plan include an alternate tag
+    Given I view an action plan in <action_plan_locale>
+    Then the action plan should have an alternate tag for the <alternate_locale> version
+
+  Examples:
+    | action_plan_locale | alternate_locale |
+    | English            | Welsh            |
+    | Welsh              | English          |

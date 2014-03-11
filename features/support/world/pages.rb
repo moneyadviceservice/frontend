@@ -5,6 +5,15 @@ module World
         "UI::Pages::#{page.camelize}".constantize.new
       end
     end
+
+    def language_to_locale(language)
+      { english: 'en', welsh: 'cy' }[language.downcase.to_sym]
+    end
+
+    def underscore(name)
+      name.tr(' ', '_')
+    end
+
   end
 end
 

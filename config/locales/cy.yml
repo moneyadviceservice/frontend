@@ -86,5 +86,19 @@ cy:
     our_debt_work: Ein Gwaith Dyled
     our_debt_work_link: /cy/categories/our-debt-work
 
-  search_results_page:
-    title: Results for
+  search_box:
+    label: Chwilio Gwasanaeth Cynghori Ariannol
+    placeholder: Chwilio...
+    button_text: Chwilio
+
+  search_results:
+    index:
+      title: Rhowch term chwilio.
+      body: Ni allwn berfformio chwiliad heb un.
+
+    index_no_results:
+      title: Canlyniadau ar gyfer
+      body: Nid yw eich term chwilio yn dychwelyd unrhyw ganlyniadau. Os gwelwch yn dda roi cynnig ar rywbeth arall.
+
+    index_with_results:
+      title: Canlyniadau ar gyfer

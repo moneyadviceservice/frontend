@@ -86,5 +86,19 @@ en:
     our_debt_work: Our debt work
     our_debt_work_link: /en/categories/our-debt-work
 
-  search_results_page:
-    title: Results for
+  search_box:
+    label: Search the Money Advice Service
+    placeholder: Search...
+    button_text: Search
+
+  search_results:
+    index:
+      title: Please provide a search term.
+      body: We can't perform a search without one.
+
+    index_no_results:
+      title: Results for
+      body: Your search term didn't return any results. Please try something else.
+
+    index_with_results:
+      title: Results for

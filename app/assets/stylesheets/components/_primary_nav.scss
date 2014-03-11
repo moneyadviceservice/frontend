@@ -8,6 +8,7 @@
 }
 
 .primary-nav__item {
+  @extend .list--unstyled;
   @extend %collapsable-trigger;
   border-top: 1px solid $color-white-translucent;
 

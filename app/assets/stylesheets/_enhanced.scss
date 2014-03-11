@@ -5,9 +5,13 @@
 @import 'utilities/inline_block';
 
 @import 'layout/common';
-@import 'layout/pages';
 @import 'layout/header';
-@import 'layout/category_page';
+@import 'layout/footer';
+@import 'layout/pages/article_page';
+@import 'layout/pages/error_page';
+@import 'layout/pages/homepage';
+@import 'layout/pages/category_page';
+@import 'layout/pages/search_results_page';
 
 //atoms
 @import 'components/logo';
@@ -41,6 +45,7 @@
   @import 'components/editorial/collapsible';
   @import 'components/editorial/media';
   @import 'components/editorial/add-action';
+  @import 'components/editorial/editorial_links';
 }
 
 @import 'components/editorial/tables';

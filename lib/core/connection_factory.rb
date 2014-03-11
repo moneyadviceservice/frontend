@@ -1,6 +1,7 @@
 require 'core/connection'
 require 'faraday'
 require 'faraday/request/request_id'
+require 'faraday/response/link_header'
 
 module Core
   class ConnectionFactory
@@ -13,6 +14,7 @@ module Core
 
         faraday.response :raise_error
         faraday.response :json
+        faraday.response :link_header
 
         faraday.use :instrumentation
         faraday.adapter Faraday.default_adapter

@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://moneyadviceservice.apiary.io/en/articles/<%= id %>.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 716c03fb-5ae8-4603-bde1-73dedc2293af
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Mar 2014 14:05:08 GMT
+      Link:
+      - <http://www.example.com/cy/articles/<%= id %>>;
+        rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch
+        dyled"
+      X-Apiary-Ratelimit-Limit:
+      - '120'
+      X-Apiary-Ratelimit-Remaining:
+      - '119'
+      X-Apiary-Transaction-Id:
+      - 531dc6941730ce02000186c6
+      Content-Length:
+      - '412'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "title": "<%= title %>",
+            "description": "<%= description %>",
+            "body": "<%= body %>"
+        }
+    http_version:
+  recorded_at: Mon, 10 Mar 2014 14:05:08 GMT
+recorded_with: VCR 2.8.0

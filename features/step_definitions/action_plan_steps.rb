@@ -1,16 +1,13 @@
-def language_to_locale(language)
-  { english: 'en', welsh: 'cy' }[language.downcase.to_sym]
-end
-
 When(/^I view the action plan in (.*)$/) do |language|
-  data = { id:          current_action_plan.id,
-           title:       current_action_plan.title,
-           description: current_action_plan.description,
-           body:        current_action_plan.body,
-           locale:      language_to_locale(language) }
+  locale = language_to_locale(language)
+  data   = { id:          current_action_plan.id,
+             title:       current_action_plan.title,
+             description: current_action_plan.description,
+             body:        current_action_plan.body,
+             locale:      locale }
 
-  VCR.use_cassette("action_plan", erb: data) do
-    action_plan_page.load(locale: language_to_locale(language), id: current_action_plan.id)
+  VCR.use_cassette('action_plan', erb: data) do
+    action_plan_page.load(locale: locale, id: current_action_plan.id)
   end
 end
 
@@ -24,7 +21,7 @@ When(/^I translate the action plan into (.*)$/) do |language|
   expect(action_plan_page.footer_site_links.send("#{language.downcase}_link")[:lang]).
     to eq(language_to_locale(language))
 
-  VCR.use_cassette("action_plan", erb: data) do
+  VCR.use_cassette('action_plan', erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click
   end
 end

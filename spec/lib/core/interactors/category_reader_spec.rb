@@ -97,6 +97,14 @@ module Core
         end
       end
 
+      context 'when the returned category contains an unsupported entity' do
+        let(:unsupported) { { 'type' => 'unsupported', 'title' => 'Unsupported Content' } }
+        let(:data) { build :category_hash, contents: [unsupported] }
+        let(:category) { subject.call }
+
+        specify { expect(category.contents).to be_empty }
+      end
+
       context 'when the returned category has no contents' do
         let(:category) { subject.call }
         let(:data) do

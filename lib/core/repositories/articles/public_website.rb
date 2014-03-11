@@ -14,13 +14,13 @@ module Core::Repositories
                                     { locale: I18n.locale, id: id })
 
         attributes = response.body
-        links      = response.headers['link'].try(:links)
+        links      = response.headers['link'].try(:links) || []
 
         links.each do |link|
           next unless link['rel'] == 'alternate'
 
           attributes['alternate'] = { url: link.href, title: link['title'] }
-        end if links
+        end
 
         attributes
 

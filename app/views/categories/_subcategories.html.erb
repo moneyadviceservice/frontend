@@ -1,0 +1,15 @@
+<div class="l-category-grid">
+  <% subcategories.each_with_index do |subcategory, i| %>
+    <section class="category-detail category-detail--<%= i+1 %>">
+      <h2 class="category-detail__heading"><%= link_to subcategory.title, subcategory.path %></h2>
+
+      <% if subcategory.contents.present? %>
+        <ol class="category-detail__list">
+          <% subcategory.contents.each do |subsubcategory| %>
+            <li><%= link_to subsubcategory.title, subsubcategory.path %></li>
+          <% end %>
+        </ol>
+      <% end %>
+    </section>
+  <% end %>
+</div>

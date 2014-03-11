@@ -8,3 +8,8 @@ Feature: Categories
     Then I should see the category name and description
     And I should see the child categories in order
     And their child categories in order
+
+  Scenario: User views a sub-category
+    When I view a category containing only content
+    Then I should see the category name and description
+    And I should see the content items

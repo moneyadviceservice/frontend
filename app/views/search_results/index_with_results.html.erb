@@ -2,11 +2,12 @@
   <main>
     <h1><%= t('.title') %> "<%= params[:query] %>"</h1>
 
+    <ol class="search-results">
     <% search_results.each do |result| %>
-      <article class="search-results__item">
+      <li class="search-results__item">
         <h2><%= result.title %></h2>
         <p><%= result.description %></p>
-      </article>
+      </li>
     <% end %>
   </main>
 </div>

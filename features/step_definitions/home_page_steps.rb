@@ -19,6 +19,26 @@ When(/^I choose to view the Welsh version$/) do
   home_page.footer_site_links.welsh_link.click
 end
 
+When(/^I search for something relevant$/) do
+  home_page.search_box.input.set 'health'
+  VCR.use_cassette("search_relevant") do
+    home_page.search_box.submit.click
+  end
+end
+
+When(/^I search for something irrelevant$/) do
+  home_page.search_box.input.set 'cats'
+
+  VCR.use_cassette("search_irrelevant") do
+    home_page.search_box.submit.click
+  end
+end
+
+When(/^I submit a search with no query$/) do
+  home_page.search_box.input.set ''
+  home_page.search_box.submit.click
+end
+
 Then(/^I should see the Money Advice Service brand identity$/) do
   expect(home_page.header.logo).to be_visible
   expect(home_page.footer_social_links.logo).to be_visible
@@ -69,22 +89,4 @@ Then(/^the home page should have a canonical tag for that language version$/) do
   expect { home_page.canonical_tag[:href] }.to become(expected_href)
 end
 
-When(/^I search for something relevant$/) do
-  home_page.search_box.input.set 'health'
-  VCR.use_cassette("search_relevant") do
-    home_page.search_box.submit.click
-  end
-end
 
-When(/^I search for something irrelevant$/) do
-  home_page.search_box.input.set 'cats'
-
-  VCR.use_cassette("search_irrelevant") do
-    home_page.search_box.submit.click
-  end
-end
-
-When(/^I submit a search with no query$/) do
-  home_page.search_box.input.set ''
-  home_page.search_box.submit.click
-end

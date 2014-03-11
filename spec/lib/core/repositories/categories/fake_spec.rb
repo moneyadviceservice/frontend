@@ -39,7 +39,7 @@ describe Core::Repositories::Categories::Fake do
     end
 
     context 'when the category is non-existent' do
-      subject { described_class.new.find(invalid_id) }
+      subject { repository.find(invalid_id) }
 
       it { should be_nil }
     end

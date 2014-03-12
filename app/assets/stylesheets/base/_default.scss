@@ -3,6 +3,7 @@
 }
 
 // prevent skip to main content link destination element displaying a focus outline
-#main {
+// using attribute selector so csslint doesn't throw error
+div[id="main"] {
   outline: 0;
 }

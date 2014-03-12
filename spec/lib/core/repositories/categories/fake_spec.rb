@@ -2,7 +2,8 @@ require 'spec_helper'
 require 'core/repositories/categories/fake'
 
 describe Core::Repositories::Categories::Fake do
-  let(:subcategory) { build :category_hash }
+  let(:article) { build :article_hash }
+  let(:subcategory) { build :category_hash, contents: [article] }
   let(:category) { build :category_hash, contents: [subcategory] }
   let(:invalid_id) { 'fake' }
   let(:repository) { described_class.new(category) }
@@ -12,6 +13,10 @@ describe Core::Repositories::Categories::Fake do
 
     it { should be_a(Array) }
     specify { expect(subject.first['id']).to eq(category['id']) }
+
+    it 'filters out non-categories' do
+      expect(subject.first['contents'].first['contents']).to be_empty
+    end
   end
 
   describe '#find' do
@@ -39,7 +44,7 @@ describe Core::Repositories::Categories::Fake do
     end
 
     context 'when the category is non-existent' do
-      subject { described_class.new.find(invalid_id) }
+      subject { repository.find(invalid_id) }
 
       it { should be_nil }
     end

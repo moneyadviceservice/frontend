@@ -3,18 +3,8 @@
 <h1><%= title category.title %></h1>
 <p class="intro"><%= category.description %></p>
 
-<div class="l-category-grid">
-  <% category.contents.each_with_index do |subcategory, i| %>
-    <section class="category-detail category-detail--<%= i+1 %>">
-      <h2 class="category-detail__heading"><%= link_to subcategory.title, subcategory.path %></h2>
-
-      <% if subcategory.contents.present? %>
-        <ol class="category-detail__list">
-          <% subcategory.contents.each do |subsubcategory| %>
-            <li><%= link_to subsubcategory.title, subsubcategory.path %></li>
-          <% end %>
-        </ol>
-      <% end %>
-    </section>
-  <% end %>
-</div>
+<% if category.subcategory? %>
+  <%= render partial: 'content_items', locals: { items: category.contents } %>
+<% else %>
+  <%= render partial: 'subcategories', locals: { subcategories: category.contents } %>
+<% end %>

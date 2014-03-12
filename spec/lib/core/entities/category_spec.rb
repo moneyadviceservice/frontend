@@ -22,5 +22,13 @@ module Core
     it { should respond_to :contents= }
 
     it { should validate_presence_of(:title) }
+
+    describe '#subcategory?' do
+      let(:top_level_category) { build :category, contents: [subcategory] }
+      let(:subcategory) { build :category, contents: build_list(:article, 1)  }
+
+      specify { expect(top_level_category).to_not be_subcategory }
+      specify { expect(subcategory).to be_subcategory }
+    end
   end
 end

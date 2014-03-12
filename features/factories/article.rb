@@ -8,5 +8,13 @@ FactoryGirl.define do
     body { '<p>' + Faker::Lorem.paragraphs.join('</p><p> ') + '</p>' }
 
     initialize_with { new(id) }
+
+    factory :article_hash, class: Hash do
+      type 'article'
+
+      initialize_with do
+        Hash[attributes.map { |key, value| [key.to_s, value] }]
+      end
+    end
   end
 end

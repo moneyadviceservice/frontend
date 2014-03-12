@@ -7,6 +7,8 @@ module UI::Pages
 
     element :description, '.intro'
 
-    sections :sub_categories, UI::Sections::SubCategory, 'article'
+    sections :sub_categories, UI::Sections::SubCategory, 'section'
+
+    elements  :content_items, 'ol.contents li a'
   end
 end

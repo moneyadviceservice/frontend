@@ -1,4 +1,4 @@
-Feature: Read an action plan
+Feature: View an action plan
   As a visitor to the website
   I want to view an action plan
   So I can understand the subject matter
@@ -18,6 +18,6 @@ Feature: Read an action plan
     Then I should see the action plan in <translated_language>
 
   Examples:
-  | original_language | translated_language |
-  | English           | Welsh               |
-  | Welsh             | English             |
+    | original_language | translated_language |
+    | English           | Welsh               |
+    | Welsh             | English             |

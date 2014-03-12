@@ -1,5 +1,5 @@
 <% set_meta_tags(description: article.description,
-                 canonical:   article_url(article.id),
+                 canonical:   article.canonical_url,
                  alternate:   { article.alternate.hreflang => article.alternate.url }) %>
 
 <div class="l-article editorial">

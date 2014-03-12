@@ -2,17 +2,35 @@ require 'spec_helper'
 require 'core/entities/article'
 
 describe ArticleDecorator do
+  include Draper::ViewHelpers
+
   subject(:decorator) { described_class.decorate(article) }
 
-  let(:article) do
-    double(Core::Article,
-           id:          'bob',
-           title:       'uncle-bob-is-richer-than-you',
-           description: 'uncle is rich',
-           body:        MultiJson.load(File.read(fixture))['body'])
+  let(:article) { double(Core::Article, id: 'bob') }
+
+  it { should respond_to(:alternate) }
+  it { should respond_to(:canonical_url) }
+  it { should respond_to(:content) }
+  it { should respond_to(:description) }
+  it { should respond_to(:title) }
+
+  describe '#canonical_url' do
+    before { helpers.stub(article_url: '/articles/bob') }
+
+    it 'returns the path to the article' do
+      expect(subject.canonical_url).to eq('/articles/bob')
+    end
   end
 
   describe '#content' do
+    let(:article) do
+      double(Core::Article,
+             id:          'bob',
+             title:       'uncle-bob-is-richer-than-you',
+             description: 'uncle is rich',
+             body:        MultiJson.load(File.read(fixture))['body'])
+    end
+
     let(:html) { Nokogiri::HTML(decorator.content) }
 
     context 'when the object body needs processing' do

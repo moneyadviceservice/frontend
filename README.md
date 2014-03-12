@@ -61,8 +61,8 @@ We like to develop features from the outside in. We write our user stories in a
 6. Start with a failing unit test then make it pass.
 7. Keep your unit tests isolated.
 8. Test the [Routing][routing specs], [Models][model specs],
-   [Controllers][controller specs], [Helpers][helper specs] and
-   [JavaScript][konacha] of your feature.
+   [Controllers][controller specs], [Decorators][decorator specs],
+   [Helpers][helper specs] and [JavaScript][konacha] of your feature.
 9. Test your features against the [mock API] and record interactions with [VCR].
 
 ### API
@@ -117,6 +117,7 @@ presentational concerns.
 [views]: ./app/views
 
 [controller specs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
+[decorator specs]: https://github.com/drapergem/draper#testing
 [helper specs]: https://www.relishapp.com/rspec/rspec-rails/docs/helper-specs
 [model specs]: https://www.relishapp.com/rspec/rspec-rails/docs/model-specs
 [routing specs]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs

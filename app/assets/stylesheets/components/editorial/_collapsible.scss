@@ -5,42 +5,34 @@
 .collapsible {
   @extend %collapsable-trigger;
   @extend %heading-small;
-
+  margin-bottom: $baseline-unit*4;
+  padding: $baseline-unit $baseline-unit*2;
   position: relative;
-  background-color: $color-action-item-heading-bg;
-  padding: $baseline-unit;
   color: $color-action-item-heading;
+  background-color: $color-action-item-heading-bg;
   cursor:pointer;
 
   button {
+    outline: none;
     color: $color-action-item-heading;
     width: 100%;
     text-align: left;
   }
 
-  &:before {
-    content: '';
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 10px 10px 0 0;
-    border-color: $color-action-item-heading-bg transparent transparent transparent;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-  }
-
   span {
-    @include typography(body, 34);
-    margin-right: $baseline-unit;
-    margin-top: -6px;
-    height: 28px;
+    @include body(34, 34);
     @include inline-block;
-    color: $color-icon-open;
-    vertical-align: middle;
     position: absolute;
     right:	0;
     top: 4px;
+    height: 28px;
+    color: $color-icon-open;
+    margin-right: $baseline-unit;
+    vertical-align: middle;
+  }
+
+  &.is-on {
+    margin-bottom: 0;
   }
 }
 
@@ -50,6 +42,6 @@
   border-left: 1px solid $color-action-item-border;
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
-  padding: $baseline-unit*2;
-  margin: -$baseline-unit*3 0 $baseline-unit*3 0;
+  padding: $baseline-unit*4 $baseline-unit*2 0 $baseline-unit*2;
+  margin: $baseline-unit/3 0 $baseline-unit*6 0;
 }

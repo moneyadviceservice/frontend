@@ -1,33 +1,59 @@
-@mixin typography($placement, $font-size: 16, $line-height: 1.4) {
+@mixin body($font-size, $line-height) {
+  @if $responsive == true {
+    font-size: ($font-size / 16) + rem;
+    line-height: ($line-height / 16) + rem;
+  } @else {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+  }
+}
+
+@mixin paragraph($font-size, $line-height) {
+  @if $responsive == true {
+    font-size: ($font-size / 16) + rem;
+    line-height: ($line-height / 16) + rem;
+    margin-top: 0;
+    margin-bottom: ($font-size - 6) / 16 + rem;
+  } @else {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+    margin-top: 0;
+    margin-bottom: ($font-size - 6) + px;
+  }
+}
+
+@mixin heading($font-size, $line-height) {
+  letter-spacing: -1px;
 
   @if $responsive == true {
     font-size: ($font-size / 16) + rem;
+    line-height: ($line-height / 16) + rem;
+    margin-top: ($font-size) / 16 + rem;
+    margin-bottom: ($font-size / 4) / 16 + rem;
+
+    @include respond-to($mq-l){
+      margin-top: ($font-size*1.5) / 16 + rem;
+      margin-bottom: ($font-size / 4) / 16 + rem;
+    }
+
   } @else {
     font-size: $font-size + px;
-  }
+    line-height: $line-height + px;
+    margin-top: ($font-size*1.5) + px;
+    margin-bottom: ($font-size / 4) + px;
 
-  line-height: $line-height;
-
-  @if $placement == heading {
-    letter-spacing: -1px;
-
-    @if $responsive == true {
-      margin-top: (($font-size / $line-height) * 2.5) / 16 + rem;
-      margin-bottom: (($font-size / $line-height) * 1) / 16 + rem;
-    } @else {
-      margin-top: ($font-size / $line-height) * 2.5 + px;
-      margin-bottom: ($font-size / $line-height) * 1 + px;
+    @include respond-to($mq-l){
+      margin-top: ($font-size*1.5) + px;
+      margin-bottom: ($font-size / 4) + px;
     }
   }
+}
 
-  @if $placement == paragraph {
-    @if $responsive == true {
-      margin-top: ($font-size / $line-height) / 16 + rem;
-      margin-bottom: ($font-size / $line-height) / 16 + rem;
-    } @else {
-      margin-top: ($font-size / $line-height) + px;
-      margin-bottom: ($font-size / $line-height) + px;
-    }
+%font-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  .wf-museosans-n4-active & {
+    font-family: 'museo_sans';
   }
 }
 
@@ -47,13 +73,53 @@
   }
 }
 
-%font-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  .wf-museosans-n4-active & {
-    font-family: 'museo_sans';
+
+
+
+
+
+
+
+
+
+@mixin typography($placement, $font-size, $line-height) {
+
+  $vertical-rhythm: 12;
+
+  @if $responsive == true {
+    font-size: ($font-size / 16) + rem;
+    line-height: ($line-height / 16) + rem;
+  } @else {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+  }
+
+  @if $placement == heading {
+    letter-spacing: -1px;
+
+    @if $responsive == true {
+      margin-top: 0;
+      margin-bottom: (($font-size + $vertical-rhythm) / 2) / 16 + rem;
+    } @else {
+      margin-top: 0;
+      margin-bottom: (($font-size + $vertical-rhythm) / 2) + px;
+    }
+  }
+
+  @if $placement == paragraph {
+
+    @if $responsive == true {
+      margin-top: 0;
+      margin-bottom: ($font-size) / 16 + rem;
+    } @else {
+      margin-top: 0;
+      margin-bottom: ($font-size) + px;
+    }
   }
 }
+
+
+
 
 %prevent-text-zooming {
   // prevent automatic text zooming when changing orientation or viewing mobile
@@ -87,74 +153,63 @@
 
 %type {
   @extend %font-body;
-  @include typography(body, 16);
+  @include body(16, 22);
 
   @include respond-to($mq-m) {
-    @include typography(body, 19);
+    @include body(18, 24);
   }
 }
 
 %type-small {
-  @include typography(body, 14);
+  @include body(14, 18);
 }
 
 %type-table {
-  @include typography(body, 14);
+  @include body(14, 18);
 
   @include respond-to($mq-m) {
-    @include typography(body, 16);
+    @include body(16, 24);
   }
 }
 
 %type-button {
   @extend %font-heading-medium;
   @extend %font-smoothing;
-  @include typography(body, 18);
+  @include body(18, 24);
 }
 
 %type-primary-navigation {
   @extend %font-heading-heavy;
-  @include typography(body, 14);
+  @include body(14, 18);
 
   @include respond-to($mq-m) {
-    @include typography(body, 16);
+    @include body(16, 22);
   }
 }
 
 %type-navigation {
   @extend %font-heading-medium;
-  @include typography(body, 14);
-
-  @include respond-to($mq-m) {
-    @include typography(body, 16);
-  }
-}
-
-%type-links {
-  @include typography(body, 14);
-  @include respond-to($mq-m) {
-    @include typography(body, 16);
-  }
+  @include body(14, 18);
 }
 
 %paragraph {
-  @include typography(paragraph, 16);
+  @include paragraph(16, 22);
 
   @include respond-to($mq-l) {
-    @include typography(paragraph, 19);
+    @include paragraph(18, 24);
   }
 }
 
 %paragraph-intro {
   @extend %font-heading-medium;
-  @include typography(paragraph, 18);
+  @include paragraph(18, 24);
   color: $color-grey-primary;
 
   @include respond-to($mq-l) {
-    @include typography(paragraph, 22);
+    @include paragraph(22, 30);
   }
 }
 
 %paragraph-small {
-  @include typography(paragraph, 14);
+  @include paragraph(14, 18);
 }

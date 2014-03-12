@@ -13,15 +13,13 @@
 .search-box__input {
   @extend %font-heading-medium;
   width: 100%;
-  height: $baseline-unit*8;
-  padding-left: $baseline-unit*3;
-  //  transition: padding 1s ease;
+  height: $baseline-unit*7;
+  padding-left: $baseline-unit*2;
   border: 0;
   background-color: $color-off-white;
 
   &:focus {
     outline: 0;
-    border: 4px solid $color-green-secondary;
   }
 
   &::-webkit-input-placeholder {
@@ -34,8 +32,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   font-size: 24px;
   color: $color-search-text;
 

@@ -57,8 +57,9 @@
       border-width: 0 10px 10px 10px;
       border-color: transparent transparent $color-submenu-background transparent;
       position: absolute;
-      bottom: -8px;
-      left: 42%;
+      bottom: -4px;
+      left: 50%;
+      margin-left: -10px;
     }
   }
 }
@@ -66,10 +67,9 @@
 .primary-nav__dropdown {
   width: 100%;
   background-color: $color-submenu-background;
-  @include respond-to($mq-l) {
-    border-bottom: 3px solid $color-submenu-border;
-    padding: $baseline-unit*4;
 
+  @include respond-to($mq-l) {
+    padding: $baseline-unit*4;
   }
 
   li {
@@ -80,9 +80,8 @@
     text-align: left;
     padding-left: $baseline-unit*2;
     @include respond-to($mq-l) {
+      @include column(4);
       padding-left: 0;
-      width: 32%;
-      float: left;
     }
   }
 

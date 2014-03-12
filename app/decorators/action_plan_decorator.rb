@@ -3,6 +3,10 @@ require 'html_processor'
 class ActionPlanDecorator < Draper::Decorator
   delegate :id, :title, :description, :alternate
 
+  def canonical_url
+    h.action_plan_url(object.id)
+  end
+
   def content
     @content ||= processed_body.html_safe
   end

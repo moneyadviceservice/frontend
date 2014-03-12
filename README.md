@@ -161,6 +161,25 @@ automatically available to the asset pipeline.
 
 ### Patterns
 
+#### Clean Architecture
+
+We have adopted [Uncle Bob's][uncle bob] idea of [Clean Architecture]. By isolating business logic
+from application logic through a core library we have attempted to provide a solution that has
+clean, decoupled code, that is easy to maintain and extend.
+
+##### Entities
+
+##### Interactors
+
+- High-level coordinators called by controllers
+- Return entities or callbacks
+
+(Also known as services or use cases).
+
+##### Registries
+
+##### Repositories
+
 #### Decorators
 
 We use [Draper] for [decorators]. Decorators help us to keep logic out of our
@@ -176,8 +195,12 @@ presentational concerns.
 [features/support/world/pages.rb]: ./features/support/world/pages.rb
 
 [decorators]: ./app/decorators
+[entities]: ./lib/core/entities
 [helpers]: ./app/helpers
+[interactors]: ./lib/core/interactors
 [models]: ./app/models
+[registries]: ./lib/core/registries
+[repositories]: ./lib/core/repositories
 [views]: ./app/views
 
 [controller specs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
@@ -190,6 +213,7 @@ presentational concerns.
 [api documentation]: http://docs.moneyadviceservice.apiary.io/
 [bower]: http://bower.io
 [bundler]: http://bundler.io
+[clean architecture]: http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html
 [draper]: https://github.com/drapergem/draper
 [feature branches]: http://martinfowler.com/bliki/FeatureBranch.html
 [feature toggles]: http://martinfowler.com/bliki/FeatureToggle.html
@@ -202,6 +226,7 @@ presentational concerns.
 [ruby]: http://www.ruby-lang.org/en
 [rubygems]: http://rubygems.org
 [site prism]: https://github.com/natritmeyer/site_prism
+[uncle bob]: https://twitter.com/unclebobmartin
 [vcr]: https://github.com/vcr/vcr
 
 ## Running Karma javascript tests

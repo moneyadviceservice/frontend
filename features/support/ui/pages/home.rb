@@ -4,7 +4,7 @@ require_relative '../sections/footer_social_links'
 
 module UI::Pages
   class Home < UI::Page
-    set_url '/'
+    set_url '/{locale}'
 
     element :summary_list, 'ul.list--benefits'
     element :introduction_text, '#introduction-text'

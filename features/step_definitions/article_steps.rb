@@ -17,7 +17,7 @@ When(/^I translate the article into (.*)$/) do |language|
            description: current_article.description,
            body:        current_article.body }
 
-  expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]). to eq(locale)
+  expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
 
   VCR.use_cassette("article_#{locale}", erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click

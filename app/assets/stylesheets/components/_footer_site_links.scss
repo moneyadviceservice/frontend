@@ -4,21 +4,27 @@
 
 .footer-site-links {
   background-color: $color-footer-bg;
+  ul {
+    @extend %clearfix;
+  }
 
   li {
     @extend .list--unstyled;
-    display: inline-block;
-    width: 100%;
 
+    @include respond-to($mq-xs) {
+      @include column(12);
+    }
+    @include respond-to($mq-s) {
+      @include column(6);
+    }
     @include respond-to($mq-m) {
-      width: 49%;
+      @include column(4);
     }
     @include respond-to($mq-l) {
-      width: 24%;
+      @include column(3);
     }
-    &:nth-of-type(3),
-    &:nth-of-type(6) {
-      float: none;
+    @include respond-to($mq-xl) {
+      @include column(2);
     }
   }
 
@@ -35,6 +41,7 @@
 }
 
 .footer-site-links__language {
+  @include column(12);
   padding: $baseline-unit*2 0;
   border-top: 1px solid darken($color-grey-pale, 10%);
 
@@ -42,5 +49,9 @@
     @include inline-block;
     margin-top: -3px;
     padding-right: $baseline-unit/2;
+  }
+
+  li {
+    margin-left: 0;
   }
 }

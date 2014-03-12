@@ -1,5 +1,6 @@
-<%= render 'shared/homepage_intro',
-           heading: t('.heading_html'),
-           summary: t('.summary_list_html'),
-           introduction: t('.introduction_text_html')  %>
+<% set_meta_tags(canonical: root_url, alternate: alternate_home_map) %>
 
+<%= render 'shared/homepage_intro',
+           heading:      t('.heading_html'),
+           summary:      t('.summary_list_html'),
+           introduction: t('.introduction_text_html') %>

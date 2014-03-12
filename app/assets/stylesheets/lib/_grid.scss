@@ -2,27 +2,31 @@
 // Semantic.gs // for SCSS: http://sass-lang.com/
 /////////////////
 
-// Custom function to calculate grid width based on number of columns * column width
-@function grid-width($n) {
-  @return $n * ($column-width + $gutter-width);
-}
-
 
 // Defaults which you can freely override
 $column-width: 60px;
-$gutter-width: 20px;
+$gutter-width: 40px;
 $columns: 12;
 
 // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 // $min-width: 999999;
 // $correction: 0.5 / $min-width * 100;
 
-// Define min-width based on cols * colWidth
+@function px-to-em($px:0) {
+  @if $responsive {
+    @return ($px / 16) * 1rem;
+  }
+  @else {
+    @return $px * 1px;
+  }
+}
+
 $mq-xs:0;
-$mq-s:grid-width(6);
-$mq-m:grid-width(9);
-$mq-l:grid-width(12);
-$mq-xl:grid-width(18);
+$mq-s:px-to-em(480);
+$mq-m:px-to-em(720);
+$mq-l:px-to-em(960);
+$mq-xl:px-to-em(1200);
+
 
 // Utility function — you should never need to modify this
 @function gridsystem-width($columns:$columns) {
@@ -73,4 +77,3 @@ $total-width: 100%;
   display: block;
   padding: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
-

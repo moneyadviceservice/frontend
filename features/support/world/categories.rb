@@ -5,16 +5,20 @@ module World
       Core::Registries::Repository[:category] = repository
     end
 
-    def category_with_2_levels_of_subcategory
-      @category_with_2_levels_of_subcategory ||= build(:category_hash, contents: [
-        build(:category_hash, contents: build_list(:category_hash, 2)),
-        build(:category_hash, contents: build_list(:category_hash, 2))
-      ])
+    def category_containing_no_child_categories
+      @category_containing_no_child_categories ||= build(:category_hash, :content_items)
     end
 
-    def category_containing_only_content
-      @category_containing_only_content ||= build(:category_hash, contents: [
-        build(:article_hash), build(:action_plan_hash)])
+    def category_containing_child_categories
+      @category_containing_child_categories ||= build(:category_hash, contents:
+        build_list(:category_hash, 2, :content_items))
+    end
+
+    def category_containing_child_and_grandchild_categories
+      @category_containing_child_and_grandchild_categories ||= build(:category_hash, contents: [
+        build(:category_hash, contents: build_list(:category_hash, 2, :content_items)),
+        build(:category_hash, contents: build_list(:category_hash, 2, :content_items)),
+      ])
     end
 
     def browse_to_category(category)

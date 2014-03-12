@@ -1,6 +1,6 @@
 class CategoryDecorator < Draper::Decorator
   delegate :title, :description
-  delegate :subcategory?
+  delegate :grandparent?, :parent?, :child?
 
   def contents
     self.class.decorate_collection(object.contents || [])

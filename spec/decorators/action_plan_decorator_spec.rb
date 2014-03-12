@@ -5,14 +5,22 @@ describe ActionPlanDecorator do
   subject(:decorator) { described_class.decorate(action_plan) }
 
   let(:action_plan) do
-    double(Core::ActionPlan,
-           id:          'bob',
-           title:       'uncle-bob-is-richer-than-you',
-           description: 'uncle is rich',
-           body:        MultiJson.load(File.read(fixture))['body'])
+    double(Core::ActionPlan)
   end
 
+  it { should respond_to(:content) }
+  it { should respond_to(:description) }
+  it { should respond_to(:title) }
+
   describe '#content' do
+    let(:action_plan) do
+      double(Core::ActionPlan,
+             id:          'bob',
+             title:       'uncle-bob-is-richer-than-you',
+             description: 'uncle is rich',
+             body:        MultiJson.load(File.read(fixture))['body'])
+    end
+
     let(:html) { Nokogiri::HTML(decorator.content) }
 
     context 'when the object body needs processing' do

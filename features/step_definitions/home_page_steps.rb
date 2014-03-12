@@ -97,3 +97,18 @@ Then(/^the home page should have an alternate tag for the (.*) version$/) do |la
   expect { home_page.alternate_tag[:hreflang] }.to become(locale)
 end
 
+When(/^I navigate from the home page to the partners page$/) do
+  home_page.footer_site_links.partners_link.click
+end
+
+Then(/^the home page contains the cookie message$/) do
+  expect(home_page).to have_cookie_message
+end
+
+When(/^the home page does not contain the cookie message$/) do
+  expect(home_page).to have_no_cookie_message
+end
+
+Then(/^the home page contains an option to close the cookie message$/) do
+  pending # express the regexp above with the code you wish you had
+end

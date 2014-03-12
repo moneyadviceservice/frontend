@@ -3,28 +3,39 @@ require 'core/repositories/search/content_service'
 
 describe Core::Repositories::Search::ContentService do
   let(:url) { 'https://example.com/path/to/url' }
-  let(:locale) { 'en' }
+  let(:locale) { :en }
   let(:limit) { 25 }
   let(:query) { 'mortgages' }
+  let(:event_name) { 'request.content-service.search' }
 
   before do
-    allow(Core::Registries::Connection).to receive(:[]).with(:content_service) do
-      Core::ConnectionFactory.build(url)
-    end
+    connection = Core::ConnectionFactory.build(url)
+    connection.builder.delete(FaradayMiddleware::Instrumentation)
+
+    allow(Core::Registries::Connection).to receive(:[]).with(:content_service) { connection }
   end
 
   describe '#perform' do
     subject { described_class.new.perform(query) }
+
+    let(:body) { File.read('spec/fixtures/search-results/content-service.json') }
+    let(:status) { 200 }
 
     before do
       stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}").
         to_return(status: status, body: body, headers: {})
     end
 
-    context 'when the request is successful' do
-      let(:body) { File.read('spec/fixtures/search-results/content-service.json') }
-      let(:status) { 200 }
+    it 'records an event with Rails instrumentation' do
+      expect(ActiveSupport::Notifications).
+        to receive(:instrument).
+             with(event_name, query: query, locale: locale, limit: limit).
+             and_call_original
 
+      subject
+    end
+
+    context 'when the request is successful' do
       it { should be_a(Array) }
 
       context 'it reformats the response and' do

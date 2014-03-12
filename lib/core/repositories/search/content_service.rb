@@ -5,20 +5,25 @@ require 'core/repositories/repository'
 module Core::Repositories
   module Search
     class ContentService < Core::Repository
-      LIMIT = 25
+      LIMIT      = 25
+      EVENT_NAME = 'request.content-service.search'
 
       def initialize
         self.connection = Core::Registries::Connection[:content_service]
       end
 
       def perform(query)
-        response = connection.get('search.json', query: query, locale: I18n.locale, limit: LIMIT)
+        options  = { query: query, locale: I18n.locale, limit: LIMIT }
+        response = ActiveSupport::Notifications.instrument(EVENT_NAME, options) do
+          connection.get('search.json', options)
+        end
+
         response.body['searchResults'].map do |result_data|
           {
-            :id => result_data['id'],
-            :title => result_data['preview']['title'],
+            :id          => result_data['id'],
+            :title       => result_data['preview']['title'],
             :description => result_data['preview']['preview'],
-            :type => result_data['type']
+            :type        => result_data['type']
           }
         end
       rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError

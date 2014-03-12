@@ -6,7 +6,7 @@
 
 .styleguide-nav-container {
   width: 100%;
-  height: 51px;
+  height: 44px;
 }
 
 .styleguide-nav {
@@ -19,6 +19,7 @@
 
   > li {
     width: 100%;
+    margin-bottom: 0;
     @include respond-to($mq-l) {
       @include inline-block;
       width: auto;

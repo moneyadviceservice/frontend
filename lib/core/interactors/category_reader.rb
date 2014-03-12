@@ -30,12 +30,24 @@ module Core
         attributes = item.dup.tap do |i|
           i['contents'] = build_contents(i['contents']) if i.member? 'contents'
         end
-        klass_name = (attributes.delete('type') || 'category').classify
-        next unless Core.const_defined? klass_name
-        Core.const_get(klass_name).new(item['id'], attributes)
+        klass = klass_for(attributes.delete('type'))
+        klass.new(item['id'], attributes) if klass
       end
 
       instantiated_contents.compact
+    end
+
+    def klass_for(type)
+      klass_name = case type
+        when 'guide'
+          'Article'
+        when nil
+          'Category'
+        else
+          type.classify
+      end
+
+      Core.const_get(klass_name) if Core.const_defined? klass_name
     end
   end
 end

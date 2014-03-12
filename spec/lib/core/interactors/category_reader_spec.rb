@@ -1,7 +1,6 @@
 require 'spec_helper'
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/category'
 require 'core/interactors/category_reader'
 
 module Core
@@ -102,7 +101,7 @@ module Core
         let(:data) { build :category_hash, contents: [unsupported] }
         let(:category) { subject.call }
 
-        specify { expect(category.contents).to be_empty }
+        specify { expect(category.contents.first).to be_a(Other) }
       end
 
       context 'when the returned category has no contents' do

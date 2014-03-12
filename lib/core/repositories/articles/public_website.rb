@@ -19,7 +19,7 @@ module Core::Repositories
         links.each do |link|
           next unless link['rel'] == 'alternate'
 
-          attributes['alternate'] = { url: link.href, title: link['title'] }
+          attributes['alternate'] = { url: link.href, title: link['title'], hreflang: link['hreflang'] }
         end
 
         attributes

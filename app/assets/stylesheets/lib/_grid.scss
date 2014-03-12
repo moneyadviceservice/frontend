@@ -4,9 +4,9 @@
 
 
 // Defaults which you can freely override
-$column-width: 60px;
-$gutter-width: 40px;
-$columns: 12;
+$column-width: 60px !default;
+$gutter-width: 40px !default;
+$columns: 12 !default;
 
 // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 // $min-width: 999999;
@@ -21,11 +21,11 @@ $columns: 12;
   }
 }
 
-$mq-xs:0;
-$mq-s:px-to-em(480);
-$mq-m:px-to-em(720);
-$mq-l:px-to-em(960);
-$mq-xl:px-to-em(1200);
+$mq-xs:0 !default;
+$mq-s:px-to-em(480) !default;
+$mq-m:px-to-em(720) !default;
+$mq-l:px-to-em(960) !default;
+$mq-xl:px-to-em(1200) !default;
 
 
 // Utility function — you should never need to modify this
@@ -34,7 +34,7 @@ $mq-xl:px-to-em(1200);
 }
 
 // Set $total-width to 100% for a fluid layout
-$total-width: 100%;
+$total-width: 100% !default;
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {

@@ -4,21 +4,27 @@
 
 .footer-site-links {
   background-color: $color-footer-bg;
+  ul {
+    @extend %clearfix;
+  }
 
   li {
     @extend .list--unstyled;
-    display: inline-block;
-    width: 100%;
 
+    @include respond-to($mq-xs) {
+      @include column(6);
+    }
+    @include respond-to($mq-s) {
+      @include column(6);
+    }
     @include respond-to($mq-m) {
-      width: 49%;
+      @include column(4);
     }
     @include respond-to($mq-l) {
-      width: 24%;
+      @include column(3);
     }
-    &:nth-of-type(3),
-    &:nth-of-type(6) {
-      float: none;
+    @include respond-to($mq-xl) {
+      @include column(2);
     }
   }
 

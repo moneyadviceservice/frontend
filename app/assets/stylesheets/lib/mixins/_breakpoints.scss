@@ -1,5 +1,3 @@
-$media-query-free-breakpoint: 960px;
-
 @mixin respond-to($min-width, $max-width: false) {
   @if $responsive {
     @media screen and (min-width: $min-width) {
@@ -11,7 +9,8 @@ $media-query-free-breakpoint: 960px;
         @content;
       }
     }
-  } @else if $min-width <= $media-query-free-breakpoint and (not $max-width or $max-width and $max-width >= $media-query-free-breakpoint) {
+  }
+  @else if $min-width <= $mq-l and (not $max-width or $max-width and $max-width >= $mq-l) {
     @content;
   }
 }

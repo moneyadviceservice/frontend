@@ -2,12 +2,8 @@
 
 .l-constrained {
   @extend %clearfix;
-  max-width: $mq-l;
+  max-width: $mq-xl;
   margin: 0 auto;
-}
-
-.l-padded-container {
-  @include columnPadding(12);
 }
 
 // Layout 1 column full width
@@ -54,5 +50,3 @@
 .l-split-end {
   float: right;
 }
-
-

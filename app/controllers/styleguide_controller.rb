@@ -13,15 +13,15 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_top_level_category_page
+  def pages_parent_category_page
     render layout: 'styleguide/page'
   end
 
-  def pages_category_page_level_two
+  def pages_grandchild_category_page
     render layout: 'styleguide/page'
   end
 
-  def pages_category_page_level_three
+  def pages_child_category_page
     render layout: 'styleguide/page'
   end
 

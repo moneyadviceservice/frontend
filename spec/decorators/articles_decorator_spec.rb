@@ -8,11 +8,26 @@ describe ArticleDecorator do
 
   let(:article) { double(Core::Article, id: 'bob') }
 
-  it { should respond_to(:alternate) }
+  it { should respond_to(:alternate_options) }
   it { should respond_to(:canonical_url) }
   it { should respond_to(:content) }
   it { should respond_to(:description) }
   it { should respond_to(:title) }
+
+  describe '#alternate_options' do
+    let(:locale) { double }
+    let(:url) { double }
+
+    before do
+      allow(article).to receive(:alternate) do
+        double(hreflang: locale, url: url)
+      end
+    end
+
+    it 'returns a hash of locale => url pairs' do
+      expect(subject.alternate_options).to include(locale => url)
+    end
+  end
 
   describe '#canonical_url' do
     before { helpers.stub(article_url: '/articles/bob') }

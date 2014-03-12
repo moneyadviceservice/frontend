@@ -1,7 +1,11 @@
 require 'html_processor'
 
 class ArticleDecorator < Draper::Decorator
-  delegate :title, :description, :alternate
+  delegate :title, :description
+
+  def alternate_options
+    { object.alternate.hreflang => object.alternate.url }
+  end
 
   def canonical_url
     h.article_url(object.id)

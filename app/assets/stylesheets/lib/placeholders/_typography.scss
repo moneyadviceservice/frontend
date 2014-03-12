@@ -66,11 +66,10 @@
 // Typesetting Options
 
 %prevent-text-zooming {
-  // prevent automatic text zooming when changing orientation or viewing mobile
+  // non-standard property to prevent automatic text zooming when changing orientation or viewing mobile
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 %font-smoothing {

@@ -9,7 +9,7 @@
 }
 
 %heading-large {
-  @include heading(32, 42);
+  @include heading(30, 36);
   @extend %font-heading-heavy;
   color: $color-green-secondary;
 

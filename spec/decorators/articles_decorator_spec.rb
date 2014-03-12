@@ -15,17 +15,24 @@ describe ArticleDecorator do
   it { should respond_to(:title) }
 
   describe '#alternate_options' do
-    let(:locale) { double }
-    let(:url) { double }
+    before { allow(article).to receive(:alternate) { alternate } }
 
-    before do
-      allow(article).to receive(:alternate) do
-        double(hreflang: locale, url: url)
+    context 'when there is no alternate' do
+      let(:alternate) { nil }
+
+      it 'returns nil' do
+        expect(subject.alternate_options).to be_nil
       end
     end
 
-    it 'returns a hash of locale => url pairs' do
-      expect(subject.alternate_options).to include(locale => url)
+    context 'when there is an alternate' do
+      let(:alternate) { double(hreflang: locale, url: url) }
+      let(:locale) { double }
+      let(:url) { double }
+
+      it 'returns a hash of locale => url pairs' do
+        expect(subject.alternate_options).to include(locale => url)
+      end
     end
   end
 

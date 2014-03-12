@@ -6,14 +6,35 @@ describe ActionPlanDecorator do
 
   subject(:decorator) { described_class.decorate(action_plan) }
 
-  let(:action_plan) do
-    double(Core::ActionPlan, id: 'bob')
-  end
+  let(:action_plan) { double(Core::ActionPlan, id: 'bob') }
 
+  it { should respond_to(:alternate_options) }
   it { should respond_to(:canonical_url) }
   it { should respond_to(:content) }
   it { should respond_to(:description) }
   it { should respond_to(:title) }
+
+  describe '#alternate_options' do
+    before { allow(action_plan).to receive(:alternate) { alternate } }
+
+    context 'when there is no alternate' do
+      let(:alternate) { nil }
+
+      it 'returns nil' do
+        expect(decorator.alternate_options).to be_nil
+      end
+    end
+
+    context 'when there is an alternate' do
+      let(:alternate) { double(hreflang: locale, url: url) }
+      let(:locale) { double }
+      let(:url) { double }
+
+      it 'returns a hash of locale => url pairs' do
+        expect(decorator.alternate_options).to include(locale => url)
+      end
+    end
+  end
 
   describe '#canonical_url' do
     before { helpers.stub(action_plan_url: '/action_plans/bob') }

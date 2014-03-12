@@ -1,6 +1,6 @@
 <% set_meta_tags(description: action_plan.description,
                  canonical:   action_plan.canonical_url,
-                 alternate:   { action_plan.alternate.hreflang => action_plan.alternate.url }) %>
+                 alternate:   action_plan.alternate_options) %>
 
 <div class="l-article editorial">
   <h1><%= title action_plan.title %></h1>

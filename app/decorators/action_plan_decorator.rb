@@ -1,7 +1,13 @@
 require 'html_processor'
 
 class ActionPlanDecorator < Draper::Decorator
-  delegate :id, :title, :description, :alternate
+  delegate :id, :title, :description
+
+  def alternate_options
+    return unless object.alternate.present?
+
+    { object.alternate.hreflang => object.alternate.url }
+  end
 
   def canonical_url
     h.action_plan_url(object.id)

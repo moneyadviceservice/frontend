@@ -23,7 +23,7 @@
     }
   }
 
-} else {
+} @else {
   // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
   .category-detail--3,
   .category-detail--5,
@@ -58,6 +58,14 @@
 
 .category-detail__list {
   @extend .list--unstyled;
+  margin-top: $baseline-unit*3;
+
+  li {
+    margin-bottom: $baseline-unit*3;
+    @include respond-to($mq-m) {
+      margin-bottom: $baseline-unit*2;
+    }
+  }
 
   .icon {
     margin-left: -32px;

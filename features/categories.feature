@@ -1,15 +1,21 @@
 Feature: Categories
-  As a MAS customer
-  I want to be able to easily view the contents of categories
-  So that I can browse and read content relevant to me
+  As a visitor to the website
+  I want to view categories and their contents
+  So that I can find information
 
-  Scenario: User views a top-level category
-    When I view a category containing 2 levels of subcategories
+  Scenario: View a category containing no child categories
+    When I view a category containing no child categories
     Then I should see the category name and description
-    And I should see the child categories in order
-    And their child categories in order
+    And I should see the category content items
 
-  Scenario: User views a sub-category
-    When I view a category containing only content
+  Scenario: View a category containing child categories
+    When I view a category containing child categories
     Then I should see the category name and description
-    And I should see the content items
+    And I should see the child categories
+    And I should see the child category content items
+
+  Scenario: View a category containing child and grandchild categories
+    When I view a category containing child and grandchild categories
+    Then I should see the category name and description
+    And I should see the child categories
+    And I should see the grandchild categories

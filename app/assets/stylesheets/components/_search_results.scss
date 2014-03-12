@@ -3,10 +3,8 @@
 }
 
 .search-results__item {
+//  margin-top: $baseline-unit*4;
   h2 {
-    @extend %heading-medium;
-  }
-  a {
-//    @extend %heading-medium;
+    @extend %heading-small;
   }
 }

@@ -4,6 +4,6 @@ module UI::Sections
   class SubCategory < UI::Section
     element :title, 'h2'
 
-    elements :subcategories, 'ul li a'
+    elements :subcategories, 'ol li a'
   end
 end

@@ -26,12 +26,16 @@ module Core
     def build_contents(contents)
       return [] unless contents.present?
 
-      contents.map do |item|
+      instantiated_contents = contents.map do |item|
         attributes = item.dup.tap do |i|
-          i['contents'] = build_contents(i['contents'])
+          i['contents'] = build_contents(i['contents']) if i.member? 'contents'
         end
-        Category.new(item['id'], attributes)
+        klass_name = (attributes.delete('type') || 'category').classify
+        next unless Core.const_defined? klass_name
+        Core.const_get(klass_name).new(item['id'], attributes)
       end
+
+      instantiated_contents.compact
     end
   end
 end

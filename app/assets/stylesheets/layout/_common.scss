@@ -4,6 +4,11 @@
   @extend %clearfix;
   max-width: $mq-xl;
   margin: 0 auto;
+  padding: 0 2%;
+
+  @include respond-to($mq-l) {
+    padding: 0;
+  }
 }
 
 // Layout 1 column full width

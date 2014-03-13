@@ -5,7 +5,7 @@
     <% if child_category.contents.present? %>
       <ol class="category-detail__list">
         <% child_category.contents.each do |content_item| %>
-          <li><%= link_to content_item.title, '#' %></li>
+          <li><%= link_to content_item.title, content_item.path %></li>
         <% end %>
       </ol>
     <% end %>

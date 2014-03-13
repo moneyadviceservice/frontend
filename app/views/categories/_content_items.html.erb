@@ -1,5 +1,5 @@
 <ol class="contents">
   <% items.each do |item| %>
-    <li><a href="#"><%= item.title %></a></li>
+    <li><%= link_to item.title, item.path %></li>
   <% end %>
 </ol>

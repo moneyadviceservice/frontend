@@ -4,11 +4,3 @@
            heading:      t('.heading_html'),
            summary:      t('.summary_list_html'),
            introduction: t('.introduction_text_html') %>
-<% content_for(:alternate_links) do %>
-  <%  alternate_home_map.each do |locale, url| %>
-    <%= link_to(url, id: "#{locale}Link", lang: locale) do %>
-      <span class="icon icon--globe"></span>
-      <%= t("locales.#{locale}") %>
-    <% end %>
-  <% end %>
-<% end %>

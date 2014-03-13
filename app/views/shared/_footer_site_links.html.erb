@@ -34,8 +34,8 @@
     </ul>
 
     <ul class="footer-site-links__language list--unstyled">
-    <% if content_for?(:alternate_links) %>
-      <%= yield(:alternate_links) %>
+    <% if content_for?(:alternate_link) %>
+      <%= yield(:alternate_link) %>
     <% else %>
       <% locals.each do |locale| %>
         <li>

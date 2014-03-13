@@ -39,23 +39,48 @@ describe Core::Repositories::Search::ContentService do
       it { should be_a(Array) }
 
       context 'it reformats the response and' do
-        let(:source_data) { JSON.parse(body) }
-        let(:first_element) { source_data['searchResults'].first }
+        let(:source_body) { JSON.parse(body) }
 
-        it 'maps the id correctly' do
-          subject.first[:id].should eql first_element['id']
+        context 'for content types of results' do
+          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'action-plan' } }
+          let(:reformatted_data) { subject.detect { |result| result[:type] == 'action-plan' } }
+
+          it 'maps the id correctly' do
+            reformatted_data[:id].should eql source_data['id']
+          end
+
+          it 'maps the title correctly' do
+            reformatted_data[:title].should eql source_data['preview']['title']
+          end
+
+          it 'maps the description correctly' do
+            reformatted_data[:description].should eql source_data['preview']['preview']
+          end
+
+          it 'maps the type correctly' do
+            reformatted_data[:type].should eql source_data['type']
+          end
         end
 
-        it 'maps the title correctly' do
-          subject.first[:title].should eql first_element['preview']['title']
-        end
+        context 'for category results' do
+          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'category' } }
+          let(:reformatted_data) { subject.detect { |result| result[:type] == 'category' } }
 
-        it 'maps the description correctly' do
-          subject.first[:description].should eql first_element['preview']['preview']
-        end
+          it 'maps the id correctly' do
+            reformatted_data[:id].should eql source_data['id']
+          end
 
-        it 'maps the type correctly' do
-          subject.first[:type].should eql first_element['type']
+          it 'maps the title correctly' do
+            reformatted_data[:title].should eql source_data['preview']['title']
+          end
+
+          it 'maps the description correctly' do
+            reformatted_data[:description].should eql source_data['preview']['description']
+          end
+
+          it 'maps the type correctly' do
+            reformatted_data[:type].should eql source_data['type']
+          end
         end
       end
     end

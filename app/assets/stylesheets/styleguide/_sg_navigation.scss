@@ -66,13 +66,14 @@
 .styleguide-nav__toggle {
   cursor: pointer;
   width: 100%;
-  padding: 12px;
+  padding: 6px;
   border: none;
   border-bottom: 1px solid $color-nav-border;
   color: $color-nav-text;
   background-color: $color-nav-background;
   text-align: left;
   line-height: 2;
+
   @include respond-to($mq-s) {
     display: none;
   }

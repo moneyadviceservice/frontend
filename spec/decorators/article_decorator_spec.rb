@@ -20,8 +20,9 @@ describe ArticleDecorator do
     context 'when there is no alternate' do
       let(:alternate) { nil }
 
-      it 'returns nil' do
-        expect(subject.alternate_options).to be_nil
+      it 'returns an empty hash' do
+        expect(decorator.alternate_options).to be_a(Hash)
+        expect(subject.alternate_options).to be_empty
       end
     end
 

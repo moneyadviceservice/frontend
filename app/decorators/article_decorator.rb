@@ -4,7 +4,7 @@ class ArticleDecorator < Draper::Decorator
   delegate :title, :description
 
   def alternate_options
-    return unless object.alternate.present?
+    return {} unless object.alternate.present?
 
     { object.alternate.hreflang => object.alternate.url }
   end

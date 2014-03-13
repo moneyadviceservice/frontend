@@ -4,7 +4,10 @@
   @extend %clearfix;
   max-width: $mq-xl;
   margin: 0 auto;
-  padding: 0 2%;
+}
+
+.l-padded {
+  padding: 0 $baseline-unit;
 
   @include respond-to($mq-l) {
     padding: 0;

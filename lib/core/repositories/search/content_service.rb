@@ -22,7 +22,7 @@ module Core::Repositories
           {
             :id          => result_data['id'],
             :title       => result_data['preview']['title'],
-            :description => result_data['preview']['preview'],
+            :description => result_data['preview']['preview'] || result_data['preview']['description'],
             :type        => result_data['type']
           }
         end

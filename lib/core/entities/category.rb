@@ -11,11 +11,11 @@ module Core
     end
 
     def parent?
-       !child? and contents.all? { |c| c.child? }
+      contents.any? { |c| c.try(:child?) }
     end
 
     def grandparent?
-      !child? and !parent? and contents.all? { |c| c.parent? }
+      contents.any? { |c| c.try(:parent?) }
     end
   end
 end

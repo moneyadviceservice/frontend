@@ -27,7 +27,7 @@ module Core
       let(:category_with_nil_contents) { build :category, contents: nil }
       let(:child_category) { build :category, contents: [build(:article), build(:action_plan)] }
       let(:parent_category) { build :category, contents: [child_category] }
-      let(:grandparent_category) { build :category, contents: [parent_category] }
+      let(:grandparent_category) { build :category, contents: [parent_category, child_category] }
 
       specify { expect(category_with_nil_contents).to be_child }
 
@@ -41,7 +41,7 @@ module Core
 
       specify { expect(grandparent_category).to be_grandparent }
       specify { expect(grandparent_category).to_not be_child }
-      specify { expect(grandparent_category).to_not be_parent }
+      specify { expect(grandparent_category).to be_parent }
     end
   end
 end

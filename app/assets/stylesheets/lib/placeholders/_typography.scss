@@ -82,9 +82,9 @@
 
 @mixin font-features($liga, $kern) {
   // allows access to kerning and ligatypes in fonts that support it.
-  -webkit-font-feature-settings: $liga;
-  -moz-font-feature-settings: $liga, $kern;
-  font-feature-settings: $liga, $kern;
+  -webkit-font-feature-settings: "#{$liga}";
+  -moz-font-feature-settings: "#{$liga}", "#{$kern}";
+  font-feature-settings: "#{$liga}", "#{$kern}";
 }
 
 @mixin legibility($kerning: normal) {

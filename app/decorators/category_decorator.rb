@@ -3,7 +3,7 @@ class CategoryDecorator < Draper::Decorator
   delegate :grandparent?, :parent?, :child?
 
   def contents
-    self.class.decorate_collection(object.contents || [])
+    CategoryContentDecorator.decorate_collection(object.contents || [])
   end
 
   def path

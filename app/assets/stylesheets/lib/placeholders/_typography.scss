@@ -127,7 +127,7 @@
   @extend %font-body;
   @include body(16, 22);
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     @include body(18, 24);
   }
 }

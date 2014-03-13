@@ -25,7 +25,7 @@
     @include respond-to($mq-l) {
       @include column(4, 8);
       float: right;
-      margin: 0 $baseline-unit*2 $baseline-unit $baseline-unit*2;
+      margin: 0 $baseline-unit*2 $baseline-unit*2 $baseline-unit*2;
     }
   }
 }

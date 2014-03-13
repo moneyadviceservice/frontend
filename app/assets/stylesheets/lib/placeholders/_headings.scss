@@ -1,46 +1,46 @@
 %heading-extra-large {
+  @include heading(36, 42);
   @extend %font-heading-heavy;
-  @include typography(heading, 36);
   color: $color-green-secondary;
 
   @include respond-to($mq-m){
-    @include typography(heading, 40);
+    @include heading(40, 48);
   }
 }
 
 %heading-large {
+  @include heading(30, 36);
   @extend %font-heading-heavy;
-  @include typography(heading, 32);
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include typography(heading, 38);
+    @include heading(38, 48);
   }
 }
 
 %heading-medium {
+  @include heading(24, 30);
   @extend %font-heading-medium;
-  @include typography(heading, 24);
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include typography(heading, 30);
+    @include heading(30, 36);
   }
 }
 
 %heading-small {
   @extend %font-heading-medium;
-  @include typography(heading, 20);
+  @include heading(20, 24);
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include typography(heading, 22);
+    @include heading(22, 30);
   }
 }
 
 %heading-extra-small {
   @extend %font-heading-heavy;
-  @include typography(heading, 16);
+  @include heading(16, 24);
   color: $color-text-default;
-  color: $color-green-secondary;
+//  color: $color-green-secondary;
 }

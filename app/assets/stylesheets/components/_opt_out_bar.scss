@@ -9,16 +9,13 @@
 
   p {
     @extend %type-small;
-    margin: $baseline-unit 0;
+      margin: $baseline-unit*2 0;
     @include respond-to($mq-m) {
       @include column(8);
-      padding: $baseline-unit 0;
+      margin-top: $baseline-unit*2;
+      margin-bottom: $baseline-unit*2;
       text-align: left;
     }
-  }
-
-  a {
-    @extend %type-small;
   }
 
   form {
@@ -27,23 +24,17 @@
       text-align: right;
     }
   }
-
-  br {
-    @include respond-to($mq-s) {
-      display: none;
-    }
-  }
-
 }
 
 .opt-out-bar__button {
-  @extend %font-smoothing;
   @extend %type-small;
+  @extend %font-smoothing;
+  padding: $baseline-unit*2 0;
   color: $color-link-default;
-  background: transparent;
   border: 0;
-  padding: $baseline-unit 0;
+  background: transparent;
   border-top: 1px solid $color-grey-light;
+
   @include respond-to($mq-m) {
     border: 0;
   }
@@ -54,7 +45,9 @@
     padding-right: $baseline-unit;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     text-decoration: underline;
   }
 }

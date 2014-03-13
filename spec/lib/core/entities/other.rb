@@ -11,5 +11,8 @@ module Core
 
     it { should respond_to :title }
     it { should respond_to :title= }
+
+    it { should respond_to :description }
+    it { should respond_to :description= }
   end
 end

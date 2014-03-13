@@ -1,7 +1,7 @@
 // Body Typography
 //
-// Mixin targets basic typography. It takes two required options, font-size and line-height and outputs the result in
-// pixels and rem depending on whether the responsive flag is set.
+// Mixin to adjust the font size and line height only. Typically used for one off elements that do not require any top
+// or bottom margins.
 
 @mixin body($font-size, $line-height) {
   @if $responsive == true {
@@ -15,8 +15,8 @@
 
 // Paragraph Typography
 //
-// Mixin targets takes two required options, font-size and line-height and outputs the result in pixels and rem
-// depending on whether the responsive flag is set. It also calculates an acceptable top and bottom margin.
+// Mixin to style paragraph typography. Adjusts the font size and line height but also adjusts the
+// top and bottom margins to help space the paragraphs out appropriately.
 
 @mixin paragraph($font-size, $line-height) {
   @if $responsive == true {
@@ -34,8 +34,7 @@
 
 // Heading Typography
 //
-// Mixin targets takes two required options,font-size and line-height and outputs the result in pixels and rem
-// depending on whether the responsive flag is set. it condenses the letter-spacing to make the headings more readable. It also calculates an acceptable top and bottom margin.
+// Mixin to set the spacing between paragraphs and headings and improve the flow of the document.
 
 @mixin heading($font-size, $line-height) {
   letter-spacing: -1px;

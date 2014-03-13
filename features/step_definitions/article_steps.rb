@@ -42,5 +42,5 @@ Then(/^the article should have an alternate tag for the (.*) version$/) do |lang
   expected_href = article_url(id: current_article.id, locale: locale)
 
   expect { article_page.alternate_tag[:href] }.to become(expected_href)
-  expect { action_plan_page.alternate_tag[:hreflang]}.to become(locale)
+  expect { article_page.alternate_tag[:hreflang]}.to become(locale)
 end

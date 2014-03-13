@@ -34,6 +34,9 @@
     </ul>
 
     <ul class="footer-site-links__language list--unstyled">
+    <% if content_for?(:alternate_link) %>
+      <%= yield(:alternate_link) %>
+    <% else %>
       <% locals.each do |locale| %>
         <li>
           <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
@@ -42,6 +45,7 @@
           <% end %>
         </li>
       <% end %>
+    <% end %>
     </ul>
   </div>
 </nav>

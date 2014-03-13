@@ -19,7 +19,7 @@
     text-align: left;
   }
 
-  span {
+  .icon--toggle {
     @include body(34, 34);
     @include inline-block;
     position: absolute;

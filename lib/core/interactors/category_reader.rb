@@ -30,12 +30,11 @@ module Core
       return [] unless contents.present?
 
       contents.map do |item|
-        attributes = item.dup
-        klass = klass_for(attributes.delete('type'))
+        klass = klass_for(item['type'])
         if klass == Category
           CategoryReader.new(item['id']).call
         else
-          klass.new(item['id'], attributes)
+          klass.new(item['id'], item)
         end
       end
     end

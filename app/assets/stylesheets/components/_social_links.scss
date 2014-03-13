@@ -20,6 +20,7 @@
     height: 44px;
     padding-left: 27%;
     background-color: $color-green-primary;
+    border-right: 1px solid $color-white-translucent-fallback;
     border-right: 1px solid $color-white-translucent;
 
     &:hover,

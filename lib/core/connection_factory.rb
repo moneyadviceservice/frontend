@@ -1,5 +1,6 @@
 require 'core/connection'
 require 'faraday'
+require 'faraday/request/host_header'
 require 'faraday/request/request_id'
 require 'faraday/response/link_header'
 
@@ -11,6 +12,7 @@ module Core
         faraday.request :json
         faraday.request :request_id
         faraday.request :retry
+        faraday.request :host_header
 
         faraday.response :raise_error
         faraday.response :json

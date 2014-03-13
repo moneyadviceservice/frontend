@@ -2,6 +2,7 @@ require 'spec_helper'
 require_relative 'shared_examples/optional_failure_block'
 
 require 'core/interactors/category_reader'
+require 'core/repositories/categories/fake'
 
 module Core
   describe CategoryReader, '#call' do
@@ -88,8 +89,13 @@ module Core
 
       context 'when the returned category contains sub-categories, action plans and articles' do
         let(:contents) { %w{article_hash action_plan_hash category_hash}.map(&method(:build)) }
-        let(:data) { build :category_hash, contents: contents }
+        let(:repo_category) { build :category_hash, id: id, contents: contents }
+        let(:repository) { Repositories::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }
+
+        before do
+          allow(Registries::Repository).to receive(:[]).with(:category).and_return(repository)
+        end
 
         [Article, ActionPlan, Category].each_with_index do |klass, i|
           specify { expect(category.contents[i]).to be_a(klass) }

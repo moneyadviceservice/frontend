@@ -12,6 +12,9 @@ module Core
         alternate:   { title: double, url: double, hreflang: double } }
     end
 
+    it { should respond_to :type }
+    it { should respond_to :type= }
+
     it { should respond_to :title }
     it { should respond_to :title= }
 

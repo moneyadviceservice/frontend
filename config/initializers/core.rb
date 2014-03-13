@@ -12,8 +12,11 @@ require 'faraday/request/x_forwarded_proto'
 content_service_connection = Core::ConnectionFactory.build(ENV['MAS_CONTENT_SERVICE_URL'])
 public_website_connection  = Core::ConnectionFactory.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
 
-public_website_connection.request :host_header
-public_website_connection.request :x_forwarded_proto
+public_website_connection.builder.insert_after(Faraday::Request::RequestId,
+                                               Faraday::Request::HostHeader)
+
+public_website_connection.builder.insert_after(Faraday::Request::RequestId,
+                                               Faraday::Request::XForwardedProto)
 
 Core::Registries::Connection[:content_service] = content_service_connection
 Core::Registries::Connection[:public_website]  = public_website_connection

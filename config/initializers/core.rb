@@ -6,11 +6,17 @@ require 'core/repositories/articles/public_website'
 require 'core/repositories/categories/public_website'
 require 'core/repositories/search/content_service'
 
-Core::Registries::Connection[:public_website] =
-  Core::ConnectionFactory.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
+require 'faraday/request/host_header'
+require 'faraday/request/x_forwarded_proto'
 
-Core::Registries::Connection[:content_service] =
-  Core::ConnectionFactory.build(ENV['MAS_CONTENT_SERVICE_URL'])
+content_service_connection = Core::ConnectionFactory.build(ENV['MAS_CONTENT_SERVICE_URL'])
+public_website_connection  = Core::ConnectionFactory.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
+
+public_website_connection.request :host_header
+public_website_connection.request :x_forwarded_proto
+
+Core::Registries::Connection[:content_service] = content_service_connection
+Core::Registries::Connection[:public_website]  = public_website_connection
 
 Core::Registries::Repository[:action_plan] =
   Core::Repositories::ActionPlans::PublicWebsite.new

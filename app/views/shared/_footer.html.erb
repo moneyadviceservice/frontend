@@ -1,4 +1,7 @@
 <footer class="l-footer">
+  <% if !cookies_accepted? %>
+    <%= render 'shared/cookie_message' %>
+  <% end %>
   <%= render 'shared/footer_site_links', locals: alternate_locales %>
   <%= render 'shared/footer_social_links' %>
 </footer>

@@ -13,4 +13,9 @@ class ApplicationController < ActionController::Base
     @category_navigation ||= Core::CategoryNavigationReader.new.call
   end
   helper_method :category_navigation
+
+  def cookies_accepted?
+    cookies['_cookie_notice'] == 'y'
+  end
+  helper_method :cookies_accepted?
 end

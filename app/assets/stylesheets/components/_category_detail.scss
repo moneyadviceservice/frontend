@@ -59,7 +59,6 @@
 .category-detail__list {
   @extend .list--unstyled;
   margin-top: $baseline-unit*3;
-  padding-left: $baseline-unit*6;
 
   li {
     margin-bottom: $baseline-unit*3;
@@ -74,4 +73,7 @@
   }
 }
 
+.category-detail__list__item {
+  padding-left: $baseline-unit*6;
+}
 

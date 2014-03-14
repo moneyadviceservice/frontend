@@ -10,7 +10,7 @@ FactoryGirl.define do
     initialize_with { new(id) }
 
     factory :article_hash, class: Hash do
-      type 'article'
+      type 'guide'
 
       initialize_with do
         Hash[attributes.map { |key, value| [key.to_s, value] }]

@@ -1,5 +1,8 @@
-require 'core/entities/category'
 require 'core/registries/repository'
+
+Dir[File.join(File.dirname(__FILE__), '..', 'entities', '*')].each do |entity|
+  require entity
+end
 
 module Core
   class CategoryReader
@@ -26,16 +29,31 @@ module Core
     def build_contents(contents)
       return [] unless contents.present?
 
-      instantiated_contents = contents.map do |item|
-        attributes = item.dup.tap do |i|
-          i['contents'] = build_contents(i['contents']) if i.member? 'contents'
+      contents.map do |item|
+        klass = klass_for(item['type'])
+        if klass == Category
+          CategoryReader.new(item['id']).call
+        else
+          klass.new(item['id'], item)
         end
-        klass_name = (attributes.delete('type') || 'category').classify
-        next unless Core.const_defined? klass_name
-        Core.const_get(klass_name).new(item['id'], attributes)
+      end
+    end
+
+    def klass_for(type)
+      klass_name = case type
+        when 'guide'
+          'Article'
+        when nil
+          'Category'
+        else
+          type.classify
       end
 
-      instantiated_contents.compact
+      if Core.const_defined? klass_name
+        Core.const_get(klass_name)
+      else
+        Other
+      end
     end
   end
 end

@@ -3,8 +3,4 @@
 <h1><%= title category.title %></h1>
 <p class="intro"><%= category.description %></p>
 
-<% if category.subcategory? %>
-  <%= render partial: 'content_items', locals: { items: category.contents } %>
-<% else %>
-  <%= render partial: 'subcategories', locals: { subcategories: category.contents } %>
-<% end %>
+<%= category.render_contents %>

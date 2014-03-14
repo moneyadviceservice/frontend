@@ -24,7 +24,7 @@ When(/^I translate the article into (.*)$/) do |language|
   end
 end
 
-Then(/^I should see the article in (.*)$/) do |language|
+Then(/^I should see the article in (?:.*)$/) do
   expect(article_page.title).to eq("#{current_article.title} - #{I18n.t('layouts.base.title')}")
   expect(article_page.description[:content]).to include(current_article.description)
   expect(article_page.heading).to have_content(current_article.title)

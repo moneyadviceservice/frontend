@@ -1,13 +1,15 @@
-<% contents.each_with_index do |child_category, i| %>
-  <section class="category-detail category-detail--<%= i+1 %>">
-    <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
+<div class="l-1col">
+  <% contents.each_with_index do |child_category, i| %>
+    <section class="category-detail category-detail--<%= i+1 %>">
+      <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
 
-    <% if child_category.contents.present? %>
-      <ol class="category-detail__list">
-        <% child_category.contents.each do |content_item| %>
-          <li><%= link_to content_item.title, content_item.path %></li>
-        <% end %>
-      </ol>
-    <% end %>
-  </section>
-<% end %>
+      <% if child_category.contents.present? %>
+        <ol class="category-detail__list">
+          <% child_category.contents.each do |content_item| %>
+            <li><%= link_to content_item.title, content_item.path %></li>
+          <% end %>
+        </ol>
+      <% end %>
+    </section>
+  <% end %>
+</div>

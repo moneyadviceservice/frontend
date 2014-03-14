@@ -36,7 +36,8 @@ p {
   @extend %paragraph;
 }
 
-b {
+b,
+strong {
   font-weight: 500;
 }
 

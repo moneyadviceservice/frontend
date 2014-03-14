@@ -62,6 +62,7 @@
 
   li {
     margin-bottom: $baseline-unit*3;
+    padding-left: $baseline-unit*6;
     @include respond-to($mq-m) {
       margin-bottom: $baseline-unit*2;
     }

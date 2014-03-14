@@ -3,10 +3,12 @@
     <section class="category-detail category-detail--<%= i+1 %>">
       <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
 
+      <p><%= child_category.description %></p>
+
       <% if child_category.contents.present? %>
         <ol class="category-detail__list">
           <% child_category.contents.each do |content_item| %>
-            <li><%= link_to content_item.title, content_item.path %></li>
+            <li><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
           <% end %>
         </ol>
       <% end %>

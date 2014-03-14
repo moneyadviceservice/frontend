@@ -6,7 +6,7 @@
   @extend %collapsable-trigger;
   @extend %heading-small;
   margin-bottom: $baseline-unit*4;
-  padding: $baseline-unit $baseline-unit*2;
+  padding: $baseline-unit  $baseline-unit*7 $baseline-unit $baseline-unit*2;
   position: relative;
   color: $color-action-item-heading;
   background-color: $color-action-item-heading-bg;
@@ -38,7 +38,6 @@
 
 .collapsible-section {
   @extend %collapsable-target;
-
   border-left: 1px solid $color-action-item-border;
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;

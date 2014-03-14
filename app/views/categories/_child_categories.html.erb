@@ -1,4 +1,4 @@
-<% child_categories.each_with_index do |child_category, i| %>
+<% contents.each_with_index do |child_category, i| %>
   <section class="category-detail category-detail--<%= i+1 %>">
     <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
 

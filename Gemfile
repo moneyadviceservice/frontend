@@ -60,6 +60,7 @@ group :test, :development do
   gem 'mas-development_dependencies',
       git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
   gem 'chai-jquery-rails'
+  gem 'byebug'
 end
 
 group :doc do

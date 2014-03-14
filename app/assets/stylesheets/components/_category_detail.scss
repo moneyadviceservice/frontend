@@ -59,10 +59,10 @@
 .category-detail__list {
   @extend .list--unstyled;
   margin-top: $baseline-unit*3;
+  padding-left: $baseline-unit*6;
 
   li {
     margin-bottom: $baseline-unit*3;
-//    padding-left: $baseline-unit*6;
     @include respond-to($mq-m) {
       margin-bottom: $baseline-unit*2;
     }
@@ -72,10 +72,6 @@
     margin-left: -32px;
     margin-right: 12px;
   }
-}
-
-.category-detail__list--icons {
-  padding-left: $baseline-unit*6;
 }
 
 

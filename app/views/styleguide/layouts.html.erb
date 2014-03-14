@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <h2>Mimic Article Pull out
+    <h2>Mimic Article Pull out</h2>
       <div class="l-2col">
         <div class="l-2col-side"><h3>SIDE</h3></div>
         <div class="l-2col-main">
@@ -84,4 +84,11 @@
         </div>
       </div>
   </div>
+<% end %>
+
+<%= styleguide_section sections['Fixed Footer Panel'] do %>
+  <div id="js-panel-footer" class="panel-footer">So the panel doesn't obscure other styleguide elements by default, click this button to activate the default fixed style:
+    <button onclick="document.getElementById('js-panel-footer').className += ' l-footer-fixed'">Add fixed style</button>
+  </div>
+
 <% end %>

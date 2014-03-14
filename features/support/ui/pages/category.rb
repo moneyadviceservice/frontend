@@ -1,5 +1,5 @@
 require_relative '../page'
-require_relative '../sections/sub_category'
+require_relative '../sections/child_category'
 
 module UI::Pages
   class Category < UI::Page
@@ -7,8 +7,8 @@ module UI::Pages
 
     element :description, '.intro'
 
-    sections :sub_categories, UI::Sections::SubCategory, 'section'
-
-    elements  :content_items, 'ol.contents li a'
+    # can have one of the following two
+    sections :child_categories, UI::Sections::ChildCategory, '.category-detail'
+    elements  :items, 'ol li a'
   end
 end

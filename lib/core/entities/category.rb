@@ -6,8 +6,16 @@ module Core
 
     validates_presence_of :title
 
-    def subcategory?
-      contents.any? { |c| c.class != Category }
+    def child?
+      !contents.present? or contents.any? { |c| c.class != Category }
+    end
+
+    def parent?
+      contents.any? { |c| c.try(:child?) }
+    end
+
+    def grandparent?
+      contents.any? { |c| c.try(:parent?) }
     end
   end
 end

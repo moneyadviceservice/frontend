@@ -4,7 +4,7 @@ module Core
   class Article < Entity
     Alternate = Struct.new(:title, :url, :hreflang)
 
-    attr_accessor :title, :description, :body
+    attr_accessor :type, :title, :description, :body
     attr_reader :alternate
 
     validates_presence_of :title, :body

@@ -12,6 +12,10 @@ FactoryGirl.define do
     factory :category_hash, class: Hash do
       type 'category'
 
+      trait :content_items do
+        contents { %w{article_hash action_plan_hash}.map(&method(:build)) }
+      end
+
       initialize_with do
         Hash[attributes.map { |key, value| [key.to_s, value] }]
       end

@@ -17,6 +17,8 @@ describe CategoryContentDecorator do
   it { should respond_to(:path) }
   it { should respond_to(:title) }
   it { should respond_to(:contents) }
+  it { should respond_to(:description) }
+  it { should respond_to(:type) }
 
   describe '#path' do
     context 'with a Category' do

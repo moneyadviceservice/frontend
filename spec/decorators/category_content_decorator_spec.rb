@@ -14,6 +14,7 @@ describe CategoryContentDecorator do
 
   subject(:decorator) { described_class.decorate(item) }
 
+  it { should respond_to(:id) }
   it { should respond_to(:path) }
   it { should respond_to(:title) }
   it { should respond_to(:contents) }

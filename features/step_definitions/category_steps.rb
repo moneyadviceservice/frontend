@@ -76,3 +76,9 @@ Then(/^I should see the grandchild categories$/) do
     end
   end
 end
+
+Then(/^the category should have a canonical tag for that language version$/) do
+  expected_href = category_url(id: current_category['id'], locale: current_locale)
+
+  expect { category_page.canonical_tag[:href] }.to become(expected_href)
+end

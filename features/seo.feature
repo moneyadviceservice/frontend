@@ -56,3 +56,13 @@ Feature: Search Engine Optimisation
     | article_locale | alternate_locale |
     | English        | Welsh            |
     | Welsh          | English          |
+
+  Scenario Outline: Categories pages include a canonical tag
+  Given I view a category containing no child categories in <locale>
+  Then the category should have a canonical tag for that language version
+
+  Examples:
+    | locale  |
+    | English |
+    | Welsh   |
+

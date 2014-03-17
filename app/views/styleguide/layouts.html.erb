@@ -87,8 +87,10 @@
 <% end %>
 
 <%= styleguide_section sections['Fixed Footer Panel'] do %>
+  <div class="l-footer-fixed-container">
   <div id="js-panel-footer" class="panel-footer">So the panel doesn't obscure other styleguide elements by default, click this button to activate the default fixed style:
     <button onclick="document.getElementById('js-panel-footer').className += ' l-footer-fixed'">Add fixed style</button>
+  </div>
   </div>
 
 <% end %>

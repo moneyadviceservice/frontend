@@ -17,3 +17,7 @@ end
 When(/^I click on the "(.*?)" link in the footer$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
+
+Then(/^I see the cookie message$/) do
+  pending
+end

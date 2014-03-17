@@ -21,8 +21,8 @@ module World
       ])
     end
 
-    def browse_to_category(category)
-      category_page.load(locale: :en, id: category['id'])
+    def browse_to_category(category, locale)
+      category_page.load(locale: locale, id: category['id'])
       @current_category = category
     end
 

@@ -13,6 +13,12 @@ class CategoryDecorator < Draper::Decorator
     h.category_url(object.id)
   end
 
+  def alternate_options
+    h.alternate_locales.each_with_object({}) do |locale, map|
+      map[locale] = h.category_url(locale: locale)
+    end
+  end
+
   def render_contents
     partial = if object.grandparent?
       'parent_categories'

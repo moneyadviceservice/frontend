@@ -82,3 +82,11 @@ Then(/^the category should have a canonical tag for that language version$/) do
 
   expect { category_page.canonical_tag[:href] }.to become(expected_href)
 end
+
+Then(/^the category should have an alternate tag for the (.*) version$/) do |language|
+  locale        = language_to_locale(language)
+  expected_href = category_url(id: current_category['id'], locale: locale)
+
+  expect { category_page.alternate_tag[:href] }.to become(expected_href)
+  expect { category_page.alternate_tag[:hreflang] }.to become(locale)
+end

@@ -7,28 +7,28 @@ pre {
 }
 
 code {
-  color:$color-red-dark;
+  color: $color-red-dark;
 }
 
 .swatches {
   > li,
   > dd {
-    padding:6px;
-    margin-bottom:6px;
-    width:300px;
+    padding: 6px;
+    margin-bottom: 6px;
+    width: 300px;
     border-radius: 3px;
-    border:1px solid #000000;
+    border: 1px solid #000;
   }
   > dt {
-    padding:6px;
-    width:300px;
-    float:left;
+    padding: 6px;
+    width: 300px;
+    float: left;
   }
   > dd {
-    float:left;
+    float: left;
   }
   code {
-    color:#000;
+    color: #000;
   }
 }
 

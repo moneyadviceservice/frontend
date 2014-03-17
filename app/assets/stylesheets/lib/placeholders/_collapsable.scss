@@ -7,8 +7,10 @@
   .icon--toggle {
     @extend .icon--closed;
   }
-  .js & {}
-  &.is-on {}
+  .js & {
+  }
+  &.is-on {
+  }
   &.is-off {
     .icon--toggle {
       @extend .icon--open;

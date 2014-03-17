@@ -57,7 +57,7 @@ Rails.application.configure do
   config.logger = ActiveSupport::TaggedLogging.new(Logger::Syslog.new("frontend", Syslog::LOG_LOCAL6).tap {|log| log.level = Logger::INFO})
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :memory_store, { expires_in: 1.day }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"

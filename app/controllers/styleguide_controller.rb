@@ -6,7 +6,7 @@ class StyleguideController < ApplicationController
   end
 
   def pages_homepage
-    render layout: 'styleguide/page'
+    render layout: 'styleguide/page_unconstrained'
   end
 
   def pages_search_results

@@ -3,6 +3,7 @@
 // Styleguide Footer Site Links
 
 .footer-site-links {
+  position: relative;
   background-color: $color-footer-bg;
   ul {
     @extend %clearfix;
@@ -22,9 +23,6 @@
     }
     @include respond-to($mq-l) {
       @include column(3);
-    }
-    @include respond-to($mq-xl) {
-      @include column(2);
     }
   }
 
@@ -53,5 +51,21 @@
 
   li {
     margin-left: 0;
+  }
+}
+
+.footer-site-links__cookie-message {
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 9px 12px 9px;
+    border-color: transparent transparent $color-cookie-message-background transparent;
+    position: absolute;
+    bottom: -$baseline-unit*2;
+    left: $baseline-unit*5.5;
   }
 }

@@ -1,5 +1,5 @@
 <nav class="footer-site-links" role="navigation" aria-label="footer">
-  <div class="l-constrained">
+  <div class="l-constrained l-padded">
     <ul class="footer-site-links__internal-links list--unstyled">
       <li>
         <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
@@ -31,24 +31,32 @@
       <li>
         <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
       </li>
-      <li>
+      <li class="footer-site-links__cookie-message">
         <a href="<%= t('footer.cookie_message_link') %>"><%= t('footer.cookie_message') %></a>
       </li>
     </ul>
+  </div>
 
+  <div class="cookie-message l-constrained l-padded">
+    <p class="cookie-message__content"><%= t('footer.cookie_message_content_html') %></p>
+    <button class="cookie-message__close-button button--unstyled">
+      <span class="visually-hidden">Close</span><span class="icon icon--close"</span></button>
+  </div>
+
+  <div class="l-constrained l-padded">
     <ul class="footer-site-links__language list--unstyled">
-    <% if content_for?(:alternate_link) %>
-      <%= yield(:alternate_link) %>
-    <% else %>
-      <% locals.each do |locale| %>
-        <li>
-          <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
-            <span class="icon icon--globe"></span>
-            <%= t("locales.#{locale}") %>
-          <% end %>
-        </li>
+      <% if content_for?(:alternate_link) %>
+        <%= yield(:alternate_link) %>
+      <% else %>
+        <% locals.each do |locale| %>
+          <li>
+            <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
+              <span class="icon icon--globe"></span>
+              <%= t("locales.#{locale}") %>
+            <% end %>
+          </li>
+        <% end %>
       <% end %>
-    <% end %>
     </ul>
   </div>
 </nav>

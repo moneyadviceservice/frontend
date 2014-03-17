@@ -52,17 +52,27 @@ cy:
 
   home:
     show:
-      heading_html: |
-        Croeso i'r <br />
-        Gwasanaeth Cynghori Ariannol
-      summary_list_html: |
-        <li>Cymryd arian diduedd ac annibynnol, rhad ac am ddim cynghori</li>
-        <li>Mynediad uniongyrchol at ein prif offer a chanllawiau</li>
-        <li>Gwybodaeth am y newyddion diweddaraf a allai effeithio arnoch chi</li>
-      introduction_text_html: |
-        <p>
-          This page is yet to be translated.
-        </p>
+      introduction:
+        heading_html: |
+          Croeso i'r <br />
+          Gwasanaeth Cynghori Ariannol
+        summary_list_html: |
+          <li>Cymryd arian diduedd ac annibynnol, rhad ac am ddim cynghori</li>
+          <li>Mynediad uniongyrchol at ein prif offer a chanllawiau</li>
+          <li>Gwybodaeth am y newyddion diweddaraf a allai effeithio arnoch chi</li>
+        details_html: |
+          <p>
+            This page is yet to be translated.
+          </p>
+      contact:
+        title: Methu â darganfod beth ydych ei angen?
+        introduction_html: |
+          <p>Mae ein staff hyfforddedig wrth law i helpu</p>
+        details_html: |
+          <a class="home-contact__number" href="tel:+443005005555">0300 500 5555</a>
+          <h3>Opening hours</h3>
+          <p>Dydd Llun – Dydd Gwener: <strong>8yb-8yp</strong><br>Dydd Sadwrn <strong>9yb-1yp</strong></p>
+          <p><a href="/cy/static/cysylltu-a-ni">Cael gwybod am gostau galwadau</a></p>
 
   opt_out_bar:
     message: Fersiwn gynnar o’n gwefan newydd yw hwn.

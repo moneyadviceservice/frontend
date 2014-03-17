@@ -1,0 +1,13 @@
+<div class="l-homepage">
+  <main>
+    <%= render 'shared/home_introduction',
+               heading: t('home.show.introduction.heading_html'),
+               summary: t('home.show.introduction.summary_list_html'),
+               details: t('home.show.introduction.details_html') %>
+  </main>
+</div>
+
+<%= render 'shared/home_contact',
+           title:        t('home.show.contact.title'),
+           introduction: t('home.show.contact.introduction_html'),
+           details:      t('home.show.contact.details_html') %>

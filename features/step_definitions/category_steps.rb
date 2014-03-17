@@ -90,3 +90,13 @@ Then(/^the category should have an alternate tag for the (.*) version$/) do |lan
   expect { category_page.alternate_tag[:href] }.to become(expected_href)
   expect { category_page.alternate_tag[:hreflang] }.to become(locale)
 end
+
+Then(/^I should see a filterable list of contents$/) do
+  items = ['All'] + current_category['contents'].map { |c| c['title'] }
+
+  expect(category_page.filterable_items.count).to eq(items.count)
+
+  category_page.filterable_items.each do |item|
+    expect(items).to include(item.text)
+  end
+end

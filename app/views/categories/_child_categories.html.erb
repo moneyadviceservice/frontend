@@ -1,17 +1,28 @@
-<div class="l-1col">
-  <% contents.each_with_index do |child_category, i| %>
-    <section class="category-detail category-detail--<%= i+1 %>">
-      <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
-
-      <p><%= child_category.description %></p>
-
-      <% if child_category.contents.present? %>
-        <ol class="category-detail__list">
-          <% child_category.contents.each do |content_item| %>
-            <li class="category-detail__list__item"><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
-          <% end %>
-        </ol>
+<div class="l-2col">
+  <div class="l-2col-side">
+    <ul class="category-filter">
+        <li class="category-filter__list-item is-selected"><%= link_to 'All', category.path %></li>
+      <% contents.each do |child_category|  %>
+        <li class="category-filter__list-item"><%= link_to child_category.title, child_category.path %></li>
       <% end %>
-    </section>
-  <% end %>
+    </ul>
+  </div>
+
+  <div class="l-2col-main">
+    <% contents.each_with_index do |child_category, i| %>
+      <section class="category-detail category-detail--<%= i+1 %>">
+        <h2 class="category-detail__heading"><%= link_to child_category.title, child_category.path %></h2>
+
+        <p><%= child_category.description %></p>
+
+        <% if child_category.contents.present? %>
+          <ol class="category-detail__list">
+            <% child_category.contents.each do |content_item| %>
+              <li class="category-detail__list__item"><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
+            <% end %>
+          </ol>
+        <% end %>
+      </section>
+    <% end %>
+  </div>
 </div>

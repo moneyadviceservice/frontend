@@ -7,6 +7,8 @@ module UI::Pages
 
     element :description, '.intro'
 
+    elements :filterable_items, '.category-filter li a'
+
     # can have one of the following two
     sections :child_categories, UI::Sections::ChildCategory, '.category-detail'
     elements  :items, 'ol li a'

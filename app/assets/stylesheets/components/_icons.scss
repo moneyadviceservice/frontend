@@ -126,6 +126,13 @@
 
 .icon--video {
   &:before {
+    content: '\e609';
+  }
+}
+
+
+.icon--guide {
+  &:before {
     content: '\e601';
   }
 }

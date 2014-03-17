@@ -1,7 +1,7 @@
 <div class="l-1col">
   <ol class="category-detail__list contents">
     <% contents.each do |item| %>
-      <li><%= link_to item.title, item.path %></li>
+      <li class="category-detail__list__item"><span class="icon icon--<%= item.type %>"></span><span class="visually-hidden"><%= item.type %></span><%= link_to item.title, item.path %></li>
     <% end %>
   </ol>
 </div>

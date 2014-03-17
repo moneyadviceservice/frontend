@@ -1,16 +1,31 @@
 When(/^I view a category containing no child categories$/) do
+  step 'I view a category containing no child categories in English'
+end
+
+When(/^I view a category containing no child categories in (.*)$/) do |language|
+  locale = language_to_locale(language)
   populate_category_repository_with(category_containing_no_child_categories)
-  browse_to_category(category_containing_no_child_categories)
+  browse_to_category(category_containing_no_child_categories, locale)
 end
 
 When(/^I view a category containing child categories$/) do
+  step 'I view a category containing child categories in English'
+end
+
+When(/^I view a category containing child categories in (.*)$/) do |language|
+  locale = language_to_locale(language)
   populate_category_repository_with(category_containing_child_categories)
-  browse_to_category(category_containing_child_categories)
+  browse_to_category(category_containing_child_categories, locale)
 end
 
 When(/^I view a category containing child and grandchild categories$/) do
+  step 'I view a category containing child and grandchild categories in English'
+end
+
+When(/^I view a category containing child and grandchild categories in (.*)$/) do |language|
+  locale = language_to_locale(language)
   populate_category_repository_with(category_containing_child_and_grandchild_categories)
-  browse_to_category(category_containing_child_and_grandchild_categories)
+  browse_to_category(category_containing_child_and_grandchild_categories, locale)
 end
 
 Then(/^I should see the category name and description$/) do
@@ -60,4 +75,18 @@ Then(/^I should see the grandchild categories$/) do
       expect(grandchild_categories).to include(item.text)
     end
   end
+end
+
+Then(/^the category should have a canonical tag for that language version$/) do
+  expected_href = category_url(id: current_category['id'], locale: current_locale)
+
+  expect { category_page.canonical_tag[:href] }.to become(expected_href)
+end
+
+Then(/^the category should have an alternate tag for the (.*) version$/) do |language|
+  locale        = language_to_locale(language)
+  expected_href = category_url(id: current_category['id'], locale: locale)
+
+  expect { category_page.alternate_tag[:href] }.to become(expected_href)
+  expect { category_page.alternate_tag[:hreflang] }.to become(locale)
 end

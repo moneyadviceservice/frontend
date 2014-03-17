@@ -19,8 +19,5 @@
 
   .icon--search {
     @include body(20, 18);
-//    @include respond-to($mq-m) {
-//      @include body(22, 22);
-//    }
   }
 }

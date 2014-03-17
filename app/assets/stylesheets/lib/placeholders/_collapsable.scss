@@ -1,6 +1,5 @@
 // This works in conjunction with js/modules/mas_collapsable.js
 
-
 %collapsable-trigger {
   // Prevent accidental text selection
   user-select: none;
@@ -26,5 +25,5 @@
   }
   &.is-off {
     display: none;
-  }  
+  }
 }

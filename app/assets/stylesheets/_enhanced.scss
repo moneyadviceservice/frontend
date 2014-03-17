@@ -1,9 +1,7 @@
 @import 'lib';
-
 @import 'utilities/clearfix';
 @import 'utilities/visually_hidden';
 @import 'utilities/inline_block';
-
 @import 'layout/common';
 @import 'layout/header';
 @import 'layout/footer';
@@ -12,17 +10,14 @@
 @import 'layout/pages/homepage';
 @import 'layout/pages/category_page';
 @import 'layout/pages/search_results_page';
-
 //atoms
 @import 'components/logo';
 @import 'components/intro';
 @import 'components/lists';
 @import 'components/icons';
 @import 'components/button';
-
 //molecules
 @import 'components/social_links';
-
 //organisms
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
@@ -35,7 +30,6 @@
 @import 'components/skip_to_content';
 @import 'components/category_detail';
 @import 'components/category_filter';
-
 //standalone content
 @import 'components/error_page_message';
 @import 'components/opt_out_bar';

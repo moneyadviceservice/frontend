@@ -10,7 +10,7 @@
   position: relative;
   color: $color-action-item-heading;
   background-color: $color-action-item-heading-bg;
-  cursor:pointer;
+  cursor: pointer;
 
   button {
     outline: none;
@@ -23,7 +23,7 @@
     @include body(34, 34);
     @include inline-block;
     position: absolute;
-    right:	0;
+    right: 0;
     top: 4px;
     height: 28px;
     color: $color-icon-open;

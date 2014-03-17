@@ -9,8 +9,7 @@
         @content;
       }
     }
-  }
-  @else if $min-width <= $mq-l and (not $max-width or $max-width and $max-width >= $mq-l) {
+  } @else if $min-width <= $mq-l and (not $max-width or $max-width and $max-width >= $mq-l) {
     @content;
   }
 }

@@ -9,7 +9,7 @@
 
   p {
     @extend %type-small;
-      margin: $baseline-unit*2 0;
+    margin: $baseline-unit*2 0;
     @include respond-to($mq-m) {
       @include column(8);
       margin-top: $baseline-unit*2;

@@ -3,7 +3,7 @@
   @extend %font-heading-heavy;
   color: $color-green-secondary;
 
-  @include respond-to($mq-m){
+  @include respond-to($mq-m) {
     @include heading(40, 48);
   }
 }

@@ -2,7 +2,7 @@ module Core
   class RepositoryCache
     attr_accessor :repository, :cache
 
-    def initialize(repository, cache)
+    def initialize(repository, cache=Rails.cache)
       @repository, @cache = repository, cache
     end
 

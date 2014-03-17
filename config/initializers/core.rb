@@ -1,6 +1,7 @@
 require 'core/connection_factory'
 require 'core/registries/connection'
 require 'core/registries/repository'
+require 'core/repositories/repository_cache'
 require 'core/repositories/action_plans/public_website'
 require 'core/repositories/articles/public_website'
 require 'core/repositories/categories/public_website'
@@ -27,8 +28,8 @@ Core::Registries::Repository[:action_plan] =
 Core::Registries::Repository[:article] =
   Core::Repositories::Articles::PublicWebsite.new
 
-Core::Registries::Repository[:category] =
-  Core::Repositories::Categories::PublicWebsite.new
+Core::Registries::Repository[:category] = Core::RepositoryCache.new(
+  Core::Repositories::Categories::PublicWebsite.new)
 
 Core::Registries::Repository[:search] =
   Core::Repositories::Search::ContentService.new

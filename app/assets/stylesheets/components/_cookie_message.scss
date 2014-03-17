@@ -1,0 +1,30 @@
+.cookie-message {
+  @extend %clearfix;
+  position: relative;
+  background-color: $color-cookie-message-background;
+}
+
+.cookie-message__content {
+  @include column(12);
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
+  padding-right: $baseline-unit*4;
+  @extend %type-small;
+
+  a {
+    display: inline;
+  }
+}
+
+.cookie-message__close-button {
+  padding: $baseline-unit;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:focus {
+    outline: 0;
+    color: $color-cookie-message-close-button;
+    background-color: $color-cookie-message-button-background;
+  }
+}

@@ -48,6 +48,9 @@ module Frontend
     # Configure Google Tag Manager ID
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
+    # Configure Crazy Egg script URL
+    config.crazy_egg_url = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
+
     # Use Rack middleware to capture X-Request-ID header
     config.middleware.use 'CaptureRequestId'
 

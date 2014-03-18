@@ -1,0 +1,50 @@
+.home-contact {
+  display: block;
+  clear: both;
+  padding: $baseline-unit * 4 0;
+  border-top: 1px solid $color-grey-palest;
+  border-bottom: 1px solid $color-grey-palest;
+}
+
+.home-contact__header,
+.home-contact__details {
+  @include column(12);
+}
+
+.home-contact__header {
+  h2 {
+    margin:0 0 $baseline-unit*3;
+  }
+  p {
+    @extend %font-body;
+    @include body(24, 30);
+    color: $color-home-copy;
+    margin-bottom: $baseline-unit*4
+  }
+
+  @include respond-to($mq-l) {
+    @include column(8);
+  }
+}
+
+.home-contact__details {
+  h3 {
+    @include body(18, 24);
+    margin:0 0 $baseline-unit*2;
+  }
+  p {
+    @include paragraph(14, 18);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.home-contact__number {
+  @extend %font-heading-heavy;
+  @include body(32, 36);
+  display: block;
+  color:$color-home-number;
+  margin:0 0 $baseline-unit*4;
+}

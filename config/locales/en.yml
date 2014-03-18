@@ -52,17 +52,27 @@ en:
 
   home:
     show:
-      heading_html: |
-        Welcome to<br />
-        the Money Advice Service
-      summary_list_html: |
-        <li>Free, unbiased, independant money advice</li>
-        <li>Set up by government</li>
-        <li>Help online, over the phone or in person</li>
-      introduction_text_html: |
-        <p>
-          This is a temporary landing page. set up as a first iteration for testing purposes. It is a fully responsive landing page with some basic functionality and styling.
-        </p>
+      introduction:
+        heading_html: |
+          Welcome to<br />
+          the Money Advice Service
+        summary_list_html: |
+          <li>Free, unbiased, independant money advice</li>
+          <li>Set up by government</li>
+          <li>Help online, over the phone or in person</li>
+        details_html: |
+          <p>
+            This is a temporary landing page. set up as a first iteration for testing purposes. It is a fully responsive landing page with some basic functionality and styling.
+          </p>
+      contact:
+        title: Can’t find what you need?
+        introduction_html: |
+          <p>Our trained staff are on hand to help</p>
+        details_html: |
+          <a class="home-contact__number" href="tel:+443005005000">0300 500 5000</a>
+          <h3>Opening hours</h3>
+          <p>Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am-1pm</strong></p>
+          <p><a href="/en/static/contact-us">Find out about call charges</a></p>
 
   opt_out_bar:
     message: This is an early version of our improved new website.

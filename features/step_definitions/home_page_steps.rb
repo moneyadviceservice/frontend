@@ -46,19 +46,28 @@ end
 
 Then(/^I should see an introduction(?: in my language)?$/) do
   expect(home_page.heading).
-    to have_content(strip_tags(I18n.t('home.show.heading_html')))
+    to have_content(strip_tags(I18n.t('home.show.introduction.heading_html')))
 
   expect(home_page.summary_list).
-    to have_content(strip_tags(I18n.t('home.show.summary_list_html')))
+    to have_content(strip_tags(I18n.t('home.show.introduction.summary_list_html')))
 
   expect(home_page.introduction_text).
-    to have_content(strip_tags(I18n.t('home.show.introduction_text_html')))
+    to have_content(strip_tags(I18n.t('home.show.introduction.details_html')))
+end
+
+Then(/^I should see information about contacting the Money Advice Service call centre$/) do
+  expect(home_page.contact_heading).to have_content(I18n.t('home.show.contact.title'))
+
+  expect(home_page.contact_introduction).
+    to have_content(strip_tags(I18n.t('home.show.contact.introduction_html')))
+
+  expect(home_page.contact_details).
+    to have_content(strip_tags(I18n.t('home.show.contact.details_html')))
 end
 
 Then(/^I should be taken to that social media profile$/) do
   expect(current_url).to eql('https://www.youtube.com/user/MoneyAdviceService')
 end
-
 
 Then(/^I should be see links to MAS social media profiles$/) do
   facebook_link = home_page.footer_social_links.facebook_link
@@ -90,7 +99,7 @@ Then(/^the home page should have a canonical tag for that language version$/) do
 end
 
 Then(/^the home page should have an alternate tag for the (.*) version$/) do |language|
-  locale = language_to_locale(language)
+  locale        = language_to_locale(language)
   expected_href = root_url(locale: locale)
 
   expect { home_page.alternate_tag[:href] }.to become(expected_href)

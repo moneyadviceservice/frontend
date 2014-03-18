@@ -16,6 +16,10 @@ Feature: Home page
     When I choose to view the Welsh version
     Then I should see an introduction in my language
 
+  Scenario: User shown information about contacting the call centre
+    When I visit the home page
+    Then I should see information about contacting the Money Advice Service call centre
+
   Scenario: User can navigate to Money Advice Service social media profiles
     When I visit the home page
     Then I should be see links to MAS social media profiles

@@ -1,16 +1,20 @@
 .action-item {
   overflow: hidden;
-//  margin-bottom: $baseline-unit*6;
-//  border-left: 1px solid $color-action-item-border;
-//  border-right: 1px solid $color-action-item-border;
-//  border-bottom: 2px solid $color-action-item-border;
+
+  .collapsable {
+    @extend %clearfix;
+    margin-top: -5px;
+    border-left: 1px solid $color-action-item-border;
+    border-right: 1px solid $color-action-item-border;
+    border-bottom: 1px solid $color-action-item-border;
+  }
 
   h2 {
     @extend %heading-small;
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
     padding: $baseline-unit $baseline-unit*2;
-    margin: $baseline-unit*8 0 $baseline-unit 0;
+    margin: $baseline-unit*8 0 0 0;
     position: relative;
 
     &:before {

@@ -52,18 +52,33 @@ en:
 
   home:
     show:
-      introduction:
-        heading_html: |
-          Welcome to<br />
-          the Money Advice Service
-        summary_list_html: |
-          <li>Free, unbiased, independant money advice</li>
-          <li>Set up by government</li>
-          <li>Help online, over the phone or in person</li>
-        details_html: |
-          <p>
-            This is a temporary landing page. set up as a first iteration for testing purposes. It is a fully responsive landing page with some basic functionality and styling.
-          </p>
+      feature:
+        strapline: Free, impartial & set up by government
+        list_html: |
+          <li>
+            <a href="/en/articles/how-to-prioritise-your-debts">Take control of your debt</a>
+            <p>Work out which debts to focus on first and where to get free debt advice</p>
+          </li>
+          <li>
+            <a href="/paydayloans">Payday loan alternatives</a>
+            <p>Help with finding better and cheaper ways to borrow money</p>
+          </li>
+          <li>
+            <a href="/en/categories/protecting-your-family-or-dependants">Protecting your family</a>
+            <p>Includes life insurance, critical illness cover and income protection</p>
+          </li>
+          <li>
+            <a href="/en/categories/mortgages-and-buying-property">Mortgages and buying a home</a>
+            <p>Home buying costs and mortgage types explained</p>
+          </li>
+          <li>
+            <a href="/en/categories/budgeting-and-taking-control">Plan where your money goes</a>
+            <p>Managing the money you have coming in and going out</p>
+          </li>
+          <li>
+            <a href="/en/categories/low-income-survival-tips">Budgeting on low income</a>
+            <p>Tips and tools to make your money go further</p>
+          </li>
       contact:
         title: Can’t find what you need?
         introduction_html: |

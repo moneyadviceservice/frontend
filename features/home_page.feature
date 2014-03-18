@@ -7,14 +7,13 @@ Feature: Home page
     When I visit the home page
     Then I should see the Money Advice Service brand identity
 
-  Scenario: User is introduced to the Money Advice Service
+  Scenario: User shown a message to gain trust
     When I visit the home page
-    Then I should see an introduction
+    Then I should see a message to gain my trust
 
-  Scenario: Welsh user can translate the home page to Welsh
-    Given I am on the home page
-    When I choose to view the Welsh version
-    Then I should see an introduction in my language
+  Scenario: User show featured topics
+    When I visit the home page
+    Then I should see featured topics
 
   Scenario: User shown information about contacting the call centre
     When I visit the home page
@@ -23,3 +22,8 @@ Feature: Home page
   Scenario: User can navigate to Money Advice Service social media profiles
     When I visit the home page
     Then I should be see links to MAS social media profiles
+
+  Scenario: Welsh user can translate the home page to Welsh
+    Given I am on the home page
+    When I choose to view the Welsh version
+    Then I should see a message in my language to gain my trust

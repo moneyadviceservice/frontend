@@ -1,0 +1,93 @@
+.home-feature {
+  position: relative;
+  background: #edf0f0;
+}
+
+.home-feature__header {
+  @include column(12);
+
+  h1 {
+    color: #2e3030;
+    margin-top: $baseline-unit*2;
+  }
+
+  img {
+    display: block;
+  }
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+  @include respond-to($mq-m) {
+    @include column(4);
+
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+  }
+}
+
+.home-feature__list {
+  @extend %clearfix;
+  clear: both;
+  background: #fff;
+  margin: 0;
+  padding-top: $baseline-unit*3;
+
+  li {
+    @include column(12);
+  }
+
+  a {
+    @extend %font-heading-heavy;
+    @include body(18, 24);
+    display: block;
+    margin: 0 0 $baseline-unit*2;
+  }
+
+  p {
+    display: none;
+    color: #6d6d6d;
+  }
+
+  @include respond-to($mq-s) {
+    @include column(6);
+    clear: none;
+    background: transparent;
+  }
+
+  @include respond-to($mq-m) {
+    @include column(8);
+
+    a {
+      @include body(24, 30);
+    }
+
+    p {
+      display: block;
+      height: $baseline-unit*16;
+    }
+
+    li {
+      @include column(4, 8);
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(9);
+
+    li {
+      @include column(3, 9);
+    }
+  }
+}

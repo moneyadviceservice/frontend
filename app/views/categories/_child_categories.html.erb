@@ -19,7 +19,9 @@
           <ol class="category-detail__list">
             <% child_category.contents.each do |content_item| %>
               <li class="category-detail__list-item">
-                <span class="icon icon--<%= content_item.type.gsub(/_/, '-') %>"></span><span class="visually-hidden"><%= content_item.type.gsub(/_/, ' ') %></span><%= link_to content_item.title, content_item.path %>
+                <span class="icon <%= content_item.icon_class %>"></span>
+                <span class="visually-hidden"><%= content_item.label %></span>
+                <%= link_to content_item.title, content_item.path %>
               </li>
             <% end %>
           </ol>

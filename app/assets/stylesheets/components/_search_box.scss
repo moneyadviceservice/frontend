@@ -5,7 +5,7 @@
 .search-box {
   position: relative;
   margin: 0 auto;
-  padding: $baseline-unit 0;
+  padding: $baseline-unit;
   background-color: $color-search-background;
   width: 100%;
 }
@@ -31,8 +31,8 @@
   @extend .button--unstyled;
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 42px;
+  right: -10px;
+  width: 62px;
   height: 42px;
   font-size: 24px;
   color: $color-search-text;

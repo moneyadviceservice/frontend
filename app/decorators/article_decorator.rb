@@ -1,16 +1,12 @@
 require 'html_processor'
 
-class ArticleDecorator < Draper::Decorator
+class ArticleDecorator < EntityDecorator
   delegate :title, :description
 
   def alternate_options
     return {} unless object.alternate.present?
 
     { object.alternate.hreflang => object.alternate.url }
-  end
-
-  def canonical_url
-    h.article_url(object.id)
   end
 
   def content

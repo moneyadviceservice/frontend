@@ -38,12 +38,4 @@ describe CategoryDecorator do
       expect(subject.path).to eq('/categories/test')
     end
   end
-
-  describe '#canonical_url' do
-    before { helpers.stub(category_url: '/categories/bob') }
-
-    it 'returns the path to the category' do
-      expect(subject.canonical_url).to eq('/categories/bob')
-    end
-  end
 end

@@ -7,6 +7,10 @@
   </main>
 </div>
 
+<%= render 'shared/homepage_feature',
+           strapline: t('home.show.feature.strapline_html'),
+           list:      t('home.show.feature.list_html') %>
+
 <%= render 'shared/home_contact',
            title:        t('home.show.contact.title'),
            introduction: t('home.show.contact.introduction_html'),

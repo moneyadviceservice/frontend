@@ -18,7 +18,7 @@
         <% if child_category.contents.present? %>
           <ol class="category-detail__list">
             <% child_category.contents.each do |content_item| %>
-              <li class="category-detail__list__item"><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
+              <li class="category-detail__list-item"><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
             <% end %>
           </ol>
         <% end %>

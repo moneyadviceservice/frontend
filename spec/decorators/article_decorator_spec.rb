@@ -37,14 +37,6 @@ describe ArticleDecorator do
     end
   end
 
-  describe '#canonical_url' do
-    before { helpers.stub(article_url: '/articles/bob') }
-
-    it 'returns the path to the article' do
-      expect(subject.canonical_url).to eq('/articles/bob')
-    end
-  end
-
   describe '#content' do
     let(:article) do
       double(Core::Article,

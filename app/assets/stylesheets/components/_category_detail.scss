@@ -43,7 +43,6 @@
   .category-detail--4,
   .category-detail--7,
   .category-detail--10 {
-
     @include respond-to($mq-l) {
       clear: both;
     }
@@ -53,6 +52,13 @@
 .category-detail__heading {
   a {
     color: $color-heading;
+    pointer-events: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 

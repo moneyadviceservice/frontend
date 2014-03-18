@@ -80,6 +80,11 @@
   position: relative;
   max-width: 600px;
   margin: 0 auto;
+  @include respond-to ($mq-l) {
+    @include column(6);
+    @include push(3);
+    @extend %clearfix;
+  }
 }
 
 

@@ -1,8 +1,8 @@
 <div class="l-2col">
   <div class="l-2col-side">
     <ul class="category-filter">
-        <li class="category-filter__list-item is-selected"><%= link_to 'All', "##{contents.first.id}" %></li>
-      <% contents.each do |child_category|  %>
+      <li class="category-filter__list-item is-selected"><%= link_to 'All', "##{contents.first.id}" %></li>
+      <% contents.each do |child_category| %>
         <li class="category-filter__list-item"><%= link_to child_category.title, "##{child_category.id}" %></li>
       <% end %>
     </ul>
@@ -18,7 +18,9 @@
         <% if child_category.contents.present? %>
           <ol class="category-detail__list">
             <% child_category.contents.each do |content_item| %>
-              <li class="category-detail__list-item"><span class="icon icon--<%= content_item.type %>"></span><span class="visually-hidden"><%= content_item.type %></span><%= link_to content_item.title, content_item.path %></li>
+              <li class="category-detail__list-item">
+                <span class="icon icon--<%= content_item.type.gsub(/_/, '-') %>"></span><span class="visually-hidden"><%= content_item.type.gsub(/_/, ' ') %></span><%= link_to content_item.title, content_item.path %>
+              </li>
             <% end %>
           </ol>
         <% end %>

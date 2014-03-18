@@ -2,8 +2,8 @@
   <ol class="category-detail__list contents">
     <% contents.each do |item| %>
       <li class="category-detail__list-item">
-        <span class="icon icon--<%= item.type %>"></span>
-        <span class="visually-hidden"><%= item.type %></span>
+        <span class="icon icon--<%= item.type.gsub(/_/, '-') %>"></span>
+        <span class="visually-hidden"><%= item.type.gsub(/_/, ' ') %></span>
         <%= link_to item.title, item.path %>
       </li>
     <% end %>

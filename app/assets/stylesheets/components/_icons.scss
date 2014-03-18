@@ -135,8 +135,7 @@
   }
 }
 
-// action plan has to be joined with an underscore as it is output like that
-.icon--action_plan {
+.icon--action-plan {
   &:before {
     content: '\e006';
   }

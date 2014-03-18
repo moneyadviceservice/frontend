@@ -30,7 +30,6 @@ Rails.application.routes.draw do
         get 'layouts'
         get 'html'
         get 'javascript'
-        get 'ruby'
 
         scope 'pages' do
           get 'pages', path: '/'
@@ -51,10 +50,6 @@ Rails.application.routes.draw do
           get 'css_default_styles', path: '/default-styles'
         end
 
-        scope 'sass' do
-          get 'sass_overview', path: '/'
-          get 'sass_variables', path: '/variables'
-        end
       end
     end
   end

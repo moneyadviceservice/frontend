@@ -1,11 +1,6 @@
-<div class="l-homepage">
-  <main>
-    <%= render 'shared/home_introduction',
-               heading: t('home.show.introduction.heading_html'),
-               summary: t('home.show.introduction.summary_list_html'),
-               details: t('home.show.introduction.details_html') %>
-  </main>
-</div>
+<%= render 'shared/homepage_feature',
+           strapline: t('home.show.feature.strapline_html'),
+           list:      t('home.show.feature.list_html') %>
 
 <%= render 'shared/home_contact',
            title:        t('home.show.contact.title'),

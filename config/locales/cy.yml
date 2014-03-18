@@ -4,6 +4,8 @@ cy:
     hide: Cuddio
     show: Dangos
 
+  telephone_number: 0300 500 5555
+
   layouts:
     base:
       title: Gwasanaeth Cynghori Ariannol
@@ -65,15 +67,13 @@ cy:
         </p>
 
     contact:
-      cant-find: Can’t find what you need?
-      trained-staff: Our trained staff are on hand to help
-      number: 0300 500 5555
+      title: Can’t find what you need?
+      intro: Our trained staff are on hand to help
       opening-hours: Oriau agor
-      mon-fri_html: |
-        Dydd Llun – Dydd Gwener: <strong>8yb-8yp</strong>
-      sat_html: |
-        Dydd Sadwrn <strong>9yb-1yp</strong>
-      find-out: Find out about call charges
+      dates_html: |
+        Dydd Llun – Dydd Gwener: <strong>8yb-8yp</strong><br>Dydd Sadwrn <strong>9yb-1yp</strong>
+      more_copy: Find out about call charges
+      more_href: /cy/static/cysylltu-a-ni
 
   opt_out_bar:
     message: Fersiwn gynnar o’n gwefan newydd yw hwn.

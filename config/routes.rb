@@ -54,5 +54,5 @@ Rails.application.routes.draw do
     end
   end
 
-  match '*path', via: %W(get post), to: -> env { [501, {}, []] }
+  match '*path', via: :all, to: -> env { [501, {}, []] }
 end

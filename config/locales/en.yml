@@ -124,17 +124,19 @@ en:
 
   search_box:
     label: Search the Money Advice Service
-    placeholder: Search...
+    placeholder: Search…
     button_text: Search
 
   search_results:
     index:
-      title: Please provide a search term.
-      body: We can't perform a search without one.
+      document_title: Search
+      page_title: Search the Money Advice Service
 
     index_no_results:
-      title: Search results for “%{query}”
-      body: Your search term didn't return any results. Please try something else.
+      document_title: "%{query} - Search"
+      page_title: Search results for “%{query}”
+      body: No results were found. Please try a different search.
 
     index_with_results:
-      title: Search results for “%{query}”
+      document_title: "%{query} - Search"
+      page_title: Search results for “%{query}”

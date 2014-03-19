@@ -21,5 +21,4 @@ Feature: Searching
   Scenario: A relevant message is displayed if a search is performed with no keywords
     Given I am on the home page
     When I submit a search with no query
-    Then I should see no search results
-    And I should prompted to try again with a search term
+    Then I should see the search page

@@ -1,7 +1,8 @@
 <% set_meta_tags(robots: 'noindex') %>
+
 <div class="l-search-results">
   <main>
-    <h1><%= t('.title') %> "<%= params[:query] %>"</h1>
+    <h1><%= t('.title', query: params[:query]) %></h1>
 
     <ol class="search-results">
       <%= render search_results %>

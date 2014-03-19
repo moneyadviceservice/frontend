@@ -8,7 +8,7 @@ body {
   color: $color-text-default;
 }
 
-// Currently we only support H1 - H3
+// Currently we only have styles for H1 - H4
 //
 // Styleguide headings
 
@@ -28,7 +28,7 @@ h4 {
   @extend %heading-extra-small;
 }
 
-// Our default font-size is 16px, with a line-height of 1.4(?). This is applied to the <body> and all paragraphs.
+// Our default font-size is 18px at desktop but is smaller on smaller screens. Line-height is proportional to font-size. This is applied to the <body> and all paragraphs.
 //
 // Styleguide p
 

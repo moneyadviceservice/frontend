@@ -20,7 +20,7 @@
   > li {
     width: 100%;
     margin-bottom: 0;
-    @include respond-to($mq-l) {
+    @include respond-to($mq-s) {
       @include inline-block;
       width: auto;
       border-bottom: none;
@@ -31,7 +31,7 @@
   a:visited {
     @include inline-block;
     text-decoration: none;
-    padding: 12px;
+    padding: 10px;
     width: 100%;
     color: $color-nav-text;
   }
@@ -58,7 +58,7 @@
   position: relative;
   z-index: 1;
   background-color: $color-nav-background;
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     position: absolute;
   }
 }
@@ -74,14 +74,14 @@
   text-align: left;
   line-height: 2;
 
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     display: none;
   }
 }
 
 .js .styleguide-nav {
   display: none;
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     display: block;
   }
 }

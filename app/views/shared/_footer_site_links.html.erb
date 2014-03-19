@@ -37,11 +37,13 @@
     </ul>
   </div>
 
-  <div class="cookie-message l-constrained l-padded">
-    <p class="cookie-message__content"><%= t('footer.cookie_message_content_html') %></p>
-    <button class="cookie-message__close-button button--unstyled">
-      <span class="visually-hidden">Close</span><span class="icon icon--close"></span></button>
-  </div>
+  <% if !cookies_accepted? %>
+    <div class="cookie-message l-constrained l-padded">
+      <p class="cookie-message__content"><%= t('footer.cookie_message_content_html') %></p>
+      <button class="cookie-message__close-button button--unstyled">
+        <span class="visually-hidden">Close</span><span class="icon icon--close"></span></button>
+    </div>
+  <% end %>
 
   <div class="l-constrained l-padded">
     <ul class="footer-site-links__language list--unstyled">

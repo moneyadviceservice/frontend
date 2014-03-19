@@ -27,4 +27,9 @@ test:
 #   sqlite3://myuser:mypass@localhost/full/path/to/somedatabase
 #
 production:
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  reconnect: true
   url: <%= ENV["MAS_PUBLIC_WEBSITE_DATABASE_URL"] %>

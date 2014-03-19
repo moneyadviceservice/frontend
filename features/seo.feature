@@ -21,6 +21,15 @@ Feature: Search Engine Optimisation
     | English        | Welsh            |
     | Welsh          | English          |
 
+  Scenario Outline: Home page include a description tag
+    Given I view the home page in <locale>
+    Then the home page should have a description tag for that language version
+
+  Examples:
+    | locale  |
+    | English |
+    | Welsh   |
+
   Scenario Outline: Action Plan pages include a canonical tag
     Given I view an action plan in <locale>
     Then the action plan should have a canonical tag for that language version

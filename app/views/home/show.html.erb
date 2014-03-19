@@ -1,4 +1,6 @@
-<% set_meta_tags(canonical: root_url, alternate: alternate_home_map) %>
+<% set_meta_tags(canonical: root_url,
+                 alternate: alternate_home_map,
+                 description: t('.description')) %>
 
 <%= render 'shared/homepage_feature',
            strapline: t('.feature.strapline'),

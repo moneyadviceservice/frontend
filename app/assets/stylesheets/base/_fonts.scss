@@ -1,31 +1,31 @@
-//= depend_on_asset MuseoSans_300-webfont.woff
-//= depend_on_asset MuseoSans_500-webfont.woff
-//= depend_on_asset MuseoSans_700-webfont.woff
+//= depend_on_asset MuseoSans_300.woff
+//= depend_on_asset MuseoSans_500.woff
+//= depend_on_asset MuseoSans_700.woff
 //= depend_on_asset icon-font.woff
-//= depend_on_asset MuseoSans_300-webfont.eot
-//= depend_on_asset MuseoSans_500-webfont.eot
-//= depend_on_asset MuseoSans_700-webfont.eot
+//= depend_on_asset MuseoSans_300.eot
+//= depend_on_asset MuseoSans_500.eot
+//= depend_on_asset MuseoSans_700.eot
 //= depend_on_asset icon-font.eot
 
 @if $responsive == true {
 
   @font-face {
     font-family: 'museo_sans';
-    src: asset-data-url('MuseoSans_300-webfont.woff') format('woff');
+    src: asset-data-url('MuseoSans_300.woff') format('woff');
     font-weight: 300;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'museo_sans';
-    src: asset-data-url('MuseoSans_500-webfont.woff') format('woff');
+    src: asset-data-url('MuseoSans_500.woff') format('woff');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'museo_sans';
-    src: asset-data-url('MuseoSans_700-webfont.woff') format('woff');
+    src: asset-data-url('MuseoSans_700.woff') format('woff');
     font-weight: 700;
     font-style: normal;
   }
@@ -41,24 +41,24 @@
 
   @font-face {
     font-family: 'museo_sans';
-    src: url(font-path('MuseoSans_300-webfont.eot'));
-    src: url(font-path('MuseoSans_300-webfont.eot') + '?#iefix') format('embedded-opentype');
+    src: url(font-path('MuseoSans_300.eot'));
+    src: url(font-path('MuseoSans_300.eot') + '?#iefix') format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'museo_sans';
-    src: url(font-path('MuseoSans_500-webfont.eot'));
-    src: url(font-path('MuseoSans_500-webfont.eot') + '?#iefix') format('embedded-opentype');
+    src: url(font-path('MuseoSans_500.eot'));
+    src: url(font-path('MuseoSans_500.eot') + '?#iefix') format('embedded-opentype');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'museo_sans';
-    src: url(font-path('MuseoSans_700-webfont.woff'));
-    src: url(font-path('MuseoSans_700-webfont.woff') + '?#iefix' ) format('embedded-opentype');
+    src: url(font-path('MuseoSans_700.woff'));
+    src: url(font-path('MuseoSans_700.woff') + '?#iefix' ) format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
   }

@@ -3,7 +3,7 @@
 }
 
 .home-feature__content {
-  overflow: hidden;
+  @extend %clearfix;
   padding: $baseline-unit*5 0 0 0;
   background: transparent image_url('home-illustration.jpg') 0 100px no-repeat;
 
@@ -40,11 +40,11 @@
   @extend %clearfix;
   @extend .list--unstyled;
   clear: both;
-  background: #fff;
-  padding: $baseline-unit 0;
-  margin-bottom: $baseline-unit;
   float: left;
   width: 100%;
+  padding: $baseline-unit 0;
+  margin-bottom: $baseline-unit;
+  background-color: $home-feature-list-bg;
 
   li {
     padding: $baseline-unit;
@@ -66,7 +66,7 @@
     clear: none;
     background: transparent;
     padding: $baseline-unit*5 0;
-    border-top: 2px solid #dce3e1;
+    border-top: 2px solid $home-feature-list-border;
 
     li {
       @include column(6);
@@ -82,7 +82,7 @@
     float: none;
     margin: 0;
     padding: 0;
-    border-top:0 ;
+    border-top: 0;
 
     li {
       @include column(3);

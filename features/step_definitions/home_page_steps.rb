@@ -92,3 +92,7 @@ end
 Then(/^the home page contains an option to close the cookie message$/) do
   pending # express the regexp above with the code you wish you had
 end
+
+Then(/^the home page should have a description tag for that language version$/) do
+  expect { home_page.description[:content] }.to become(I18n.t('home.show.description'))
+end

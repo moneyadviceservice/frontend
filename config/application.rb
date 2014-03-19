@@ -1,6 +1,10 @@
 require_relative 'boot'
 
-require 'rails/all'
+require 'action_controller/railtie'
+require 'action_view/railtie'
+require 'active_model/railtie'
+require 'active_record/railtie'
+require 'sprockets/railtie'
 
 Bundler.require(*Rails.groups(assets: %w(development test)))
 

@@ -1,5 +1,5 @@
 Feature: Category page filter
-  As a user
+  As a user visiting the website
   I want to be able to refine the content displayed
   so I can find relevant content more easily
 

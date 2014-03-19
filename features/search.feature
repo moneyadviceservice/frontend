@@ -1,5 +1,5 @@
 Feature: Searching
-  As a user
+  As a user visiting the website
   I want to search by keyword
   So that I can find the content I am looking for
 

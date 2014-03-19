@@ -6,6 +6,7 @@ module UI::Pages
   class SearchResults < UI::Page
     set_url '{/locale}/search'
 
+    element  :robots_tag, :xpath, "//meta[@name='robots']", visible: false
     elements :results, '.search-results__item'
   end
 end

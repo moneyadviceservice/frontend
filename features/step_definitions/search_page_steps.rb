@@ -38,3 +38,7 @@ end
 Then(/^I should prompted to try again with a search term$/) do
   search_results_page.has_content? I18n.t('search_results.index.body')
 end
+
+Then(/^the search results page should have a robots tag with value noindex$/) do
+  expect { search_results_page.robots_tag[:content] }.to become('noindex')
+end

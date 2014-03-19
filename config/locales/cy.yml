@@ -124,17 +124,19 @@ cy:
 
   search_box:
     label: Chwilio Gwasanaeth Cynghori Ariannol
-    placeholder: Chwilio...
+    placeholder: Chwilio…
     button_text: Chwilio
 
   search_results:
     index:
-      title: Rhowch term chwilio.
-      body: Ni allwn berfformio chwiliad heb un.
+      document_title: Chwilio
+      page_title: Chwilio Gwasanaeth Cynghori Ariannol
 
     index_no_results:
-      title: Canlyniadau chwilio am “%{query}”
-      body: Nid yw eich term chwilio yn dychwelyd unrhyw ganlyniadau. Os gwelwch yn dda roi cynnig ar rywbeth arall.
+      document_title: "%{query} - Chwilio"
+      page_title: Canlyniadau chwilio am “%{query}”
+      body: Does dim canlyniadau. Os gwelwch yn dda rhowch gynnig ar chwiliad gwahanol.
 
     index_with_results:
-      title: Canlyniadau chwilio am “%{query}”
+      document_title: "%{query} - Chwilio"
+      page_title: Canlyniadau chwilio am “%{query}”

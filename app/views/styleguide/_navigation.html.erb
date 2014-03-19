@@ -6,30 +6,11 @@
 
     <li><%= link_to 'CSS', css_overview_styleguide_path %></li>
 
-    <li><%= link_to 'Basic', css_basic_styleguide_path %></li>
-
-    <!--<li><%= link_to 'Forms', forms_styleguide_path %></li>-->
-
-    <li><%= link_to 'Layouts', layouts_styleguide_path %></li>
+    <li><%= link_to 'Typography', css_basic_styleguide_path %></li>
 
     <li><%= link_to 'Components', components_styleguide_path %></li>
 
-    <li class="has-sub-menu">
-      <%= link_to pages_styleguide_path do %>
-        Pages
-      <% end %>
-
-      <ul class="styleguide-nav__submenu">
-        <li><%= link_to 'Home Page', pages_home_styleguide_path %></li>
-        <li><%= link_to 'Error Page', pages_error_styleguide_path %></li>
-        <li><%= link_to 'Article / Guide', pages_guide_styleguide_path %></li>
-        <li><%= link_to 'Action Plan', pages_action_plan_styleguide_path %></li>
-        <li><%= link_to 'Search Results', pages_search_results_styleguide_path %></li>
-        <li><%= link_to 'Parent Category Page', pages_parent_category_page_styleguide_path %></li>
-        <li><%= link_to 'Child Category Page', pages_child_category_page_styleguide_path %></li>
-        <li><%= link_to 'Grandchild Category Page', pages_grandchild_category_page_styleguide_path %></li>
-      </ul>
-    </li>
+    <li><%= link_to 'Layouts', layouts_styleguide_path %></li>
 
     <li class="has-sub-menu">
       <%= link_to pages_styleguide_path do %>
@@ -37,8 +18,25 @@
       <% end %>
 
       <ul class="styleguide-nav__submenu">
-        <li><%= link_to 'Article demo', css_article_demo_styleguide_path %></li>
-        <li><%= link_to 'Default styles demo', css_default_styles_styleguide_path %></li>
+        <li><%= link_to 'Base Styles', css_default_styles_styleguide_path %></li>
+        <li><%= link_to 'CMS Content', css_article_demo_styleguide_path %></li>
+      </ul>
+    </li>
+
+    <li class="has-sub-menu">
+      <%= link_to pages_styleguide_path do %>
+        Page Templates
+      <% end %>
+
+      <ul class="styleguide-nav__submenu">
+        <li><%= link_to 'Homepage', pages_home_styleguide_path %></li>
+        <li><%= link_to 'Article / Guide', pages_guide_styleguide_path %></li>
+        <li><%= link_to 'Action Plan', pages_action_plan_styleguide_path %></li>
+        <li><%= link_to 'Search Results', pages_search_results_styleguide_path %></li>
+        <li><%= link_to 'Parent Category Page', pages_parent_category_page_styleguide_path %></li>
+        <li><%= link_to 'Child Category Page', pages_child_category_page_styleguide_path %></li>
+        <li><%= link_to 'Grandchild Category Page', pages_grandchild_category_page_styleguide_path %></li>
+        <li><%= link_to 'Error Page', pages_error_styleguide_path %></li>
       </ul>
     </li>
 

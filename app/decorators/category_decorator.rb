@@ -1,5 +1,5 @@
 class CategoryDecorator < Draper::Decorator
-  delegate :title, :description, :canonical_url
+  delegate :title, :description
 
   def contents
     CategoryContentDecorator.decorate_collection(object.contents || [])

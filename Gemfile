@@ -50,6 +50,7 @@ group :test do
 end
 
 group :production do
+  gem 'activerecord-session_store'
   gem 'mysql2'
   gem 'syslog-logger'
   gem 'unicorn-rails'

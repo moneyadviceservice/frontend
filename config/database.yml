@@ -27,4 +27,4 @@ test:
 #   sqlite3://myuser:mypass@localhost/full/path/to/somedatabase
 #
 production:
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["MAS_PUBLIC_WEBSITE_DATABASE_URL"] %>

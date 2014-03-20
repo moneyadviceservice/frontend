@@ -8,7 +8,7 @@
   </div>
 
   <div class="l-2col-main">
-    <a id="top" />
+    <a id="top"/>
 
     <% contents.each_with_index do |child_category, i| %>
       <section class="category-detail category-detail--<%= i+1 %>">
@@ -28,7 +28,7 @@
           </ol>
         <% end %>
 
-        <a class="link-to-top" href="#top">Go to top <span class="visually-hidden">of the page</span></a>
+        <a class="link-to-top" href="#top"><%= t('category_page.go_to_top_html') %></a>
       </section>
     <% end %>
   </div>

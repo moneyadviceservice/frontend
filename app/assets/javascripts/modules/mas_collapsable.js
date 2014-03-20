@@ -157,7 +157,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
 
     // Accessibility support for spacebar
     this.sections[i].trigger.on('keypress', function(e){
-      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' && !_this.o.this.o.useButton) {
+      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' && !_this.o.useButton) {
         e.preventDefault();
         _this.sections[i].trigger.trigger('click');
       }

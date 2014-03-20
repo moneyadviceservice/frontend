@@ -182,18 +182,13 @@
   }
 }
 
-%type-homepage-links {
-  @extend %font-body;
+%type-homepage-headings {
+  @extend %font-heading-medium;
   @include body(18, 24);
 
   @include respond-to($mq-m) {
     @include body(24, 30);
   }
-}
-
-%type-promoted-content {
-  @extend %font-body;
-  @include body(30, 36);
 }
 
 %paragraph {

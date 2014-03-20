@@ -1,5 +1,5 @@
 .category-detail {
-  padding-bottom: $baseline-unit*3;
+//  padding-bottom: $baseline-unit*3;
   border-bottom: 1px solid $color-category-border;
 }
 
@@ -83,3 +83,9 @@
   padding-left: $baseline-unit*6;
 }
 
+.link-to-top {
+  @extend %type-small;
+  display: block;
+  text-align: right;
+  margin-top: $baseline-unit*4;
+}

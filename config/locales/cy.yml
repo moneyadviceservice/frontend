@@ -111,12 +111,13 @@ cy:
     site_map_link: /cy/static/canolfan-gyfryngau
     our_debt_work: Ein Gwaith Dyled
     our_debt_work_link: /cy/categories/our-debt-work
+    cookie_guide: Canllaw i gwcis
+    cookie_guide_link: /cy/static/cookie_notice_cy
     cookie_message:
-      link:
-        text: Canllaw i gwcis
-        url: /cy/static/cookie_notice_cy
       body_html: |
-        Rydym yn defnyddio cwcis i sicrhau eich bod yn derbyn y gwasanaeth gorau posibl o'n gwefan. Trwy glicio ar unrhyw ddolen ar y dudalen hon rydych yn <a href="https://www.moneyadviceservice.org.uk/cy/static/cookie_notice_cy">cytuno i'w defnydd</a>. Fodd bynnag, os hoffech wneud, gallwch ddefnyddio ein canllaw i gwcis i'w hanalluogi ar unrhyw adeg.
+        Rydym yn defnyddio cwcis i sicrhau eich bod yn derbyn y gwasanaeth gorau posibl o'n gwefan.
+        Trwy glicio ar unrhyw ddolen ar y dudalen hon rydych yn <a href="%{url}">cytuno i'w defnydd</a>.
+        Fodd bynnag, os hoffech wneud, gallwch ddefnyddio ein canllaw i gwcis i'w hanalluogi ar unrhyw adeg.
       close_button: Gau
 
   search_box:

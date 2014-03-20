@@ -32,7 +32,7 @@
         <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
       </li>
       <li class="footer-site-links__cookie-message">
-        <a href="<%= t('footer.cookie_message.link.url') %>"><%= t('footer.cookie_message.link.text') %></a>
+        <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
       </li>
     </ul>
   </div>
@@ -40,7 +40,7 @@
   <% if cookies_not_accepted? %>
     <div class="cookie-message l-constrained l-padded">
       <%= form_tag cookie_notice_acceptance_path do %>
-        <p class="cookie-message__content"><%= t('footer.cookie_message.body_html') %></p>
+        <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
         <button class="cookie-message__close-button button--unstyled">
           <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
         </button>

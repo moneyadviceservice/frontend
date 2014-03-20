@@ -111,12 +111,13 @@ en:
     site_map_link: /en/sitemap
     our_debt_work: Our debt work
     our_debt_work_link: /en/categories/our-debt-work
+    cookie_guide: Cookie guide
+    cookie_guide_link: /en/static/cookie_notice_en
     cookie_message:
-      link:
-        text: Cookie guide
-        url: /en/static/cookie_notice_en
       body_html: |
-        We use cookies to ensure that you get the best possible experience. By continuing to use our website you are agreeing to their use. <a href="https://www.moneyadviceservice.org.uk/en/static/cookie_notice_en">Find out more about cookies</a>
+        We use cookies to ensure that you get the best possible experience.
+        By continuing to use our website you are agreeing to their use.
+        <a href="%{url}">Find out more about cookies</a>
       close_button: Close
 
   search_box:

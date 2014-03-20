@@ -62,6 +62,10 @@
   }
 }
 
+.category-detail__content {
+  @extend %collapsable-target;
+}
+
 .category-detail__list {
   @extend .list--unstyled;
   margin-top: $baseline-unit*3;

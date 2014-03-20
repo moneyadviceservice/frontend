@@ -3,6 +3,7 @@
 //= depend_on_asset modules/mas_analytics
 //= depend_on_asset modules/mas_collapsable
 //= depend_on_asset modules/mas_log
+//= depend_on_asset modules/mas_category_filter
 //= depend_on_asset jquery/dist/jquery
 //= depend_on_asset jquery-tiny-pubsub/src/tiny-pubsub
 //= depend_on_asset jquery-waypoints/waypoints
@@ -25,7 +26,8 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     // Internal modules
     log:         "<%= requirejs_path('modules/mas_log') %>",
     analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
-    collapsable: "<%= requirejs_path('modules/mas_collapsable') %>"
+    collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
+    category_filter: "<%= requirejs_path('modules/mas_category_filter') %>"
   },
   shim: {
     'pubsub':    ['jquery'],

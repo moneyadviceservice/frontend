@@ -13,7 +13,7 @@ define(['collapsable'], function(Collapsable) {
     $.each($filters, function(i) {
       var $item = $($filters[i]);
 
-      if(i == 0) {
+      if(i === 0) {
         $item.on('click', function() {
           _this.showAll();
           _this.setSelected(i);

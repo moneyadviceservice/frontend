@@ -17,8 +17,7 @@
   }
 
   p {
-    @extend %font-body;
-    @include body(24, 30);
+    @extend %type-homepage;
     color: $color-home-copy;
     margin-bottom: $baseline-unit*4
   }

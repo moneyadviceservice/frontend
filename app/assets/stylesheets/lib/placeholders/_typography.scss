@@ -164,6 +164,11 @@
   @include body(14, 18);
 }
 
+%type-homepage {
+  @extend %font-body;
+  @include body(24, 30);
+}
+
 %paragraph {
   @include paragraph(16, 22);
 

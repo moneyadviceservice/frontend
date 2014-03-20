@@ -3,6 +3,7 @@
   background-color: $color-article-cta;
   padding: $baseline-unit $baseline-unit*2;
   margin: 0 0 $baseline-unit*8 0;
+  display: inline;
 
   &:before {
     position: absolute;

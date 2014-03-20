@@ -17,6 +17,11 @@
     color: $color-action-item-heading;
     width: 100%;
     text-align: left;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .icon--toggle {

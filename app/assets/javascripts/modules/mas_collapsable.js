@@ -1,5 +1,5 @@
 
-define(['log', 'jquery'], function (Global, $) {
+define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) {
   'use strict';
 
   var defaults = {
@@ -15,14 +15,16 @@ define(['log', 'jquery'], function (Global, $) {
     showOnlyFirst: false,
 
     // Display options
+    showText: true,
     showIcon: false,
-    headingIcon: '<span class="icon icon--toggle"></span><span class="visually-hidden">{{txt}}</span>',
+    headingIcon: '<span class="icon icon--toggle"></span>',
+    headingText: '<span class="visually-hidden">{{txt}}</span>',
     useButton: false,
 
     // Localised text strings
     textString: {
-      showThisSection: 'Show this section',
-      hideThisSection: 'Hide this section'
+      showThisSection: Text.show || 'Show',
+      hideThisSection: Text.hide || 'Hide'
     }
   };
 
@@ -68,14 +70,15 @@ define(['log', 'jquery'], function (Global, $) {
 
   Collapsible.prototype._modifyButtonHTML = function(i){
     var trigger = this.sections[i].trigger,
-        icon = (this.o.showIcon)? trigger.prepend(this.o.headingIcon.replace('{{txt}}', this.o.textString.showThisSection)): '';
+        txt = (this.o.showText)? this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection) : '',
+        icon = (this.o.showIcon)? this.o.headingIcon : '';
 
     if(this.o.useButton){
       var buttonTitle = trigger.text();
 
       if(trigger[0].nodeName === 'A'){
         // Anchor => replace elemnt
-        var newEl = $('<a class-"' + trigger[0].className + '" id="' + trigger[0] + '">' + icon + buttonTitle + '</a>');
+        var newEl = $('<a class-"' + trigger[0].className + '" id="' + trigger[0] + '">' + icon + txt + buttonTitle + '</a>');
         // add new
         trigger.after(newEl);
         // remove old
@@ -83,18 +86,18 @@ define(['log', 'jquery'], function (Global, $) {
         trigger = newEl;
       }else{
         // Anything else => insert button inside
-        trigger.html('<button class="button--unstyled">' + icon + buttonTitle  + '</button>');
+        trigger.html('<button class="button--unstyled">' + icon + txt + buttonTitle  + '</button>');
       }
     }else{
       // Use aria-role
       trigger.attr('aria-role','button');
       trigger.attr('tabindex', '0');
       trigger.prepend(icon);
+      trigger.prepend(txt);
     }
 
-    if(this.o.showIcon){
-      this.sections[i].icon = trigger.find('.visually-hidden');
-    }
+    if(this.o.showIcon) this.sections[i].icon = trigger.find('.icon');
+    if(this.o.showText) this.sections[i].txt = trigger.find('.visually-hidden');
   };
 
   Collapsible.prototype.getTarget = function($el){
@@ -154,7 +157,7 @@ define(['log', 'jquery'], function (Global, $) {
 
     // Accessibility support for spacebar
     this.sections[i].trigger.on('keypress', function(e){
-      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON') {
+      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' && !_this.o.this.o.useButton) {
         e.preventDefault();
         _this.sections[i].trigger.trigger('click');
       }
@@ -171,7 +174,7 @@ define(['log', 'jquery'], function (Global, $) {
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.hideThisSection);
+    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
     item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
@@ -185,7 +188,7 @@ define(['log', 'jquery'], function (Global, $) {
 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.showThisSection);
+    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
     item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');

@@ -110,15 +110,20 @@ define(['log', 'jquery'], function (Global, $) {
     }
   };
 
+  Collapsible.prototype._testHidden = function(target){
+    return !(target.hasClass(this.o.activeClass) || target.is(':visible'));
+  };
+
   Collapsible.prototype._setupEach = function(i,el){
-    var $el = $(el);
-    var _this = this;
+    var $el = $(el),
+      _this = this,
+      _target = this.getTarget($el);
 
     this.sections[i] = {
       index: i,
       trigger: $el,
-      target: this.getTarget($el),
-      hidden: !$el.hasClass(this.o.activeClass)
+      target: _target,
+      hidden: this._testHidden(_target)
     };
     // Dont modify or bind events if no target element
     if(!this.sections[i].target.length) return;

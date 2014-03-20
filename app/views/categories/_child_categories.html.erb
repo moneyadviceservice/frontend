@@ -1,7 +1,6 @@
 <div class="l-2col">
   <div class="l-2col-side">
     <ul class="category-filter">
-      <li class="category-filter__list-item is-selected"><%= link_to 'All', "##{contents.first.id}" %></li>
       <% contents.each do |child_category| %>
         <li class="category-filter__list-item"><%= link_to child_category.title, "##{child_category.id}" %></li>
       <% end %>
@@ -9,6 +8,8 @@
   </div>
 
   <div class="l-2col-main">
+    <a id="top"/>
+
     <% contents.each_with_index do |child_category, i| %>
       <section class="category-detail category-detail--<%= i+1 %>">
         <h2 class="category-detail__heading" id="<%= child_category.id %>"><%= link_to child_category.title, child_category.path %></h2>
@@ -26,6 +27,8 @@
             <% end %>
           </ol>
         <% end %>
+
+        <a class="link-to-top" href="#top"><%= t('categories.show.go_to_top_html') %></a>
       </section>
     <% end %>
   </div>

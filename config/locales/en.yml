@@ -82,13 +82,16 @@ en:
           <h3>Opening hours</h3>
           <p>Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am-1pm</strong></p>
           <p><a href="/en/static/contact-us">Find out about call charges</a></p>
-      promoted_items:
-        promoted_item_one: Do you know your credit score? Find out why it matters.
-        link_one: /en/articles/how-to-improve-your-credit-rating
-        promoted_item_two: Make sure you’ve calculated the true cost of affording your home.
-        link_two: /en/articles/estimate-your-overall-buying-and-moving-costs
-        promoted_item_three: Be prepared for unexpected costs by saving £3 a day
-        link_three: /en/action_plans/build-an-emergency-savings-fund
+      promoted:
+        - url: /en/articles/how-to-improve-your-credit-rating
+          text: Do you know your credit score? Find out why it matters.
+          image: home-promoted-1.jpg
+        - url: /en/articles/estimate-your-overall-buying-and-moving-costs
+          text: Make sure you’ve calculated the true cost of affording your home.
+          image: home-promoted-2.jpg
+        - url: /en/action_plans/build-an-emergency-savings-fund
+          text: Be prepared for unexpected costs by saving £3 a day.
+          image: home-promoted-3.jpg
       description: |
         The Money Advice Service helps you manage your money better. Use our Health Check tool,
         calculators and comparison tables to make the most of your finances.

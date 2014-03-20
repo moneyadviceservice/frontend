@@ -7,9 +7,6 @@
 .home-promoted__item {
   @include column(12);
 
-  &:first-child {
-    @include push(3);
-  }
 
   a {
     @extend %type-promoted-content;
@@ -28,5 +25,9 @@
 
   @include respond-to($mq-l) {
     @include column(3);
+
+    &:first-child {
+      @include push(3);
+    }
   }
 }

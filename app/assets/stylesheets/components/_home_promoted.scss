@@ -1,7 +1,7 @@
-
 .home-promoted {
   @include column(12);
   @extend .list--unstyled;
+  margin-bottom: $baseline-unit*4;
 
   @include respond-to($mq-l) {
     @include push(3);
@@ -12,6 +12,7 @@
   @include column(12);
 
   a {
+    @extend %type-promoted-content;
     display: block;
   }
 

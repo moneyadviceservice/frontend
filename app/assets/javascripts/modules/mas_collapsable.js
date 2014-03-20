@@ -166,7 +166,7 @@ define(['log', 'jquery'], function (Global, $) {
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.showThisSection);
+    if(this.o.showIcon) item.icon.text(this.o.textString.hideThisSection);
     item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.swapClass(this.o.inactiveClass, this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
@@ -180,7 +180,7 @@ define(['log', 'jquery'], function (Global, $) {
 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    if(this.o.showIcon) item.icon.text(this.o.textString.hideThisSection);
+    if(this.o.showIcon) item.icon.text(this.o.textString.showThisSection);
     item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.swapClass(this.o.activeClass, this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');

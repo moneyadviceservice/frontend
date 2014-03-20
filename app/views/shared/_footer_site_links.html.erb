@@ -31,7 +31,7 @@
       <li>
         <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
       </li>
-      <li class="footer-site-links__cookie-message">
+      <li class="footer-site-links__cookie-message <%= 'is-on' if cookies_not_accepted? %>">
         <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
       </li>
     </ul>

@@ -2,6 +2,7 @@
   position: relative;
   background-color: $color-article-cta;
   padding: $baseline-unit $baseline-unit*2;
+  display: inline;
   margin: $baseline-unit*5 0;
 
   &:before {

@@ -13,11 +13,12 @@
 
 .home-contact__header {
   h2 {
+    @extend %type-contact-heading;
     margin: 0 0 $baseline-unit*3;
   }
 
   p {
-    @extend %type-homepage;
+    @extend %type-homepage-links;
     color: $color-home-copy;
     margin-bottom: $baseline-unit*4
   }

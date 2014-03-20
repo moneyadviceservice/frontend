@@ -1,93 +1,93 @@
 .home-feature {
-  position: relative;
-  background: #edf0f0;
+  background-color: $home-page-feature;
 }
 
-.home-feature__header {
-  @include column(12);
+.home-feature__content {
+  @extend %clearfix;
+  padding: $baseline-unit*5 0 0 0;
+  background: transparent image_url('home-illustration.jpg') 0 100px no-repeat;
 
-  h1 {
-    color: #2e3030;
-    margin-top: $baseline-unit*2;
-  }
-
-  img {
-    display: block;
-  }
-
-  @include respond-to($mq-s) {
-    @include column(6);
-  }
   @include respond-to($mq-m) {
-    @include column(4);
+    background-position: 0 0;
+  }
 
-    h1 {
-      position: relative;
-      z-index: 1;
-    }
+  @include respond-to($mq-l) {
+    background-position: 0 100%;
+  }
+}
 
-    img {
-      position: absolute;
-      bottom: 0;
-    }
+.home-feature__heading {
+  padding: 0 $baseline-unit;
+  color: $color-text-default;
+  margin: 0;
+  height: 265px;
+
+  @include respond-to($mq-m) {
+    @include column(7);
+    @include push(5);
+    margin-top: $baseline-unit*5;
+    margin-bottom: $baseline-unit*8.5;
+    height: auto;
   }
 
   @include respond-to($mq-l) {
     @include column(3);
+    height: 243px;
   }
 }
 
 .home-feature__list {
   @extend %clearfix;
+  @extend .list--unstyled;
   clear: both;
-  background: #fff;
-  margin: 0;
-  padding-top: $baseline-unit*3;
+  float: left;
+  width: 100%;
+  padding: $baseline-unit 0;
+  margin-bottom: $baseline-unit;
+  background-color: $home-feature-list-bg;
 
   li {
-    @include column(12);
+    padding: $baseline-unit;
+    margin: 0;
   }
 
   a {
-    @extend %font-heading-heavy;
-    @include body(18, 24);
+    @extend %type-homepage-links;
+    @extend %font-heading-medium;
     display: block;
-    margin: 0 0 $baseline-unit*2;
+    padding: 0 0 $baseline-unit 0;
   }
 
   p {
     display: none;
-    color: #6d6d6d;
-  }
-
-  @include respond-to($mq-s) {
-    @include column(6);
-    clear: none;
-    background: transparent;
   }
 
   @include respond-to($mq-m) {
-    @include column(8);
+    clear: none;
+    background: transparent;
+    padding: $baseline-unit*5 0;
+    border-top: 2px solid $home-feature-list-border;
 
-    a {
-      @include body(24, 30);
+    li {
+      @include column(6);
+      min-height: 105px;
     }
 
     p {
       display: block;
-      height: $baseline-unit*16;
-    }
-
-    li {
-      @include column(4, 8);
     }
   }
 
   @include respond-to($mq-l) {
-    @include column(9);
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
 
     li {
-      @include column(3, 9);
+      @include column(3);
+      min-height: 186px;
+      margin-bottom: 0;
     }
   }
 }

@@ -182,6 +182,11 @@
   }
 }
 
+%type-promoted-content {
+  @extend %font-body;
+  @include body(30, 36);
+}
+
 %paragraph {
   @include paragraph(16, 22);
 

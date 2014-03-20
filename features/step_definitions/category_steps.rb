@@ -92,7 +92,7 @@ Then(/^the category should have an alternate tag for the (.*) version$/) do |lan
 end
 
 Then(/^I should see a filterable list of contents$/) do
-  items = ['All'] + current_category['contents'].map { |c| c['title'] }
+  items = current_category['contents'].map { |c| c['title'] }
 
   expect(category_page.filterable_items.count).to eq(items.count)
 

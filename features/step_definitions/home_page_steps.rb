@@ -1,4 +1,4 @@
-Given(/^I am on the home page$/) do
+Given(/^I (?:am on|visit) the home page$/) do
   home_page.load
 end
 
@@ -8,10 +8,6 @@ Given(/^I view the home page in (.*)$/) do |language|
   home_page.load(locale: locale)
 end
 
-When(/^I visit the home page$/) do
-  home_page.load
-end
-
 When(/^I choose to view the Welsh version$/) do
   expect(home_page.footer_site_links.welsh_link[:lang]).
     to eq('cy')
@@ -19,40 +15,19 @@ When(/^I choose to view the Welsh version$/) do
   home_page.footer_site_links.welsh_link.click
 end
 
-When(/^I search for something relevant$/) do
-  home_page.search_box.input.set 'health'
-  VCR.use_cassette("search_relevant") do
-    home_page.search_box.submit.click
-  end
-end
-
-When(/^I search for something irrelevant$/) do
-  home_page.search_box.input.set 'cats'
-
-  VCR.use_cassette("search_irrelevant") do
-    home_page.search_box.submit.click
-  end
-end
-
-When(/^I submit a search with no query$/) do
-  home_page.search_box.input.set ''
-  home_page.search_box.submit.click
-end
-
 Then(/^I should see the Money Advice Service brand identity$/) do
   expect(home_page.header.logo).to be_visible
   expect(home_page.footer_social_links.logo).to be_visible
 end
 
-Then(/^I should see an introduction(?: in my language)?$/) do
-  expect(home_page.heading).
-    to have_content(strip_tags(I18n.t('home.show.introduction.heading_html')))
+Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
+  expect(home_page.strapline).
+    to have_content(I18n.t('home.show.feature.strapline'))
+end
 
-  expect(home_page.summary_list).
-    to have_content(strip_tags(I18n.t('home.show.introduction.summary_list_html')))
-
-  expect(home_page.introduction_text).
-    to have_content(strip_tags(I18n.t('home.show.introduction.details_html')))
+Then(/^I should see featured topics$/) do
+  expect(home_page.feature_list).
+    to have_content(strip_tags(I18n.t('home.show.feature.list_html')))
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
@@ -88,10 +63,6 @@ Then(/^I should be see links to MAS social media profiles$/) do
     to eq('https://www.youtube.com/user/MoneyAdviceService')
 end
 
-Then(/^I should see the search box$/) do
-  home_page.should have_search_box
-end
-
 Then(/^the home page should have a canonical tag for that language version$/) do
   expected_href = root_url(locale: current_locale)
 
@@ -106,18 +77,6 @@ Then(/^the home page should have an alternate tag for the (.*) version$/) do |la
   expect { home_page.alternate_tag[:hreflang] }.to become(locale)
 end
 
-When(/^I navigate from the home page to the partners page$/) do
-  home_page.footer_site_links.partners_link.click
-end
-
-Then(/^the home page contains the cookie message$/) do
-  expect(home_page).to have_cookie_message
-end
-
-When(/^the home page does not contain the cookie message$/) do
-  expect(home_page).to have_no_cookie_message
-end
-
-Then(/^the home page contains an option to close the cookie message$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^the home page should have a description tag for that language version$/) do
+  expect { home_page.description[:content] }.to become(I18n.t('home.show.description'))
 end

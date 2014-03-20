@@ -8,7 +8,6 @@
 @import 'layout/pages/article_page';
 @import 'layout/pages/action_plan';
 @import 'layout/pages/error_page';
-@import 'layout/pages/homepage';
 @import 'layout/pages/category_page';
 @import 'layout/pages/search_results_page';
 //atoms
@@ -22,6 +21,7 @@
 //organisms
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
+@import 'components/cookie_message';
 @import 'components/header';
 @import 'components/menu';
 @import 'components/primary_nav';
@@ -32,6 +32,7 @@
 @import 'components/category_detail';
 @import 'components/category_filter';
 @import 'components/home_contact';
+@import 'components/home_feature';
 //standalone content
 @import 'components/error_page_message';
 @import 'components/opt_out_bar';

@@ -16,10 +16,19 @@ describe CategoryContentDecorator do
 
   it { should respond_to(:id) }
   it { should respond_to(:path) }
+  it { should respond_to(:label) }
   it { should respond_to(:title) }
   it { should respond_to(:contents) }
   it { should respond_to(:description) }
-  it { should respond_to(:type) }
+  it { should respond_to(:icon_class) }
+
+  describe "#label" do
+    let(:item) { double(type: "foo_bar-baz") }
+
+    it "returns a capitalised representation of the object type with a ` - ' suffix" do
+      expect(subject.label).to eq('Foo Bar Baz - ')
+    end
+  end
 
   describe '#path' do
     context 'with a Category' do
@@ -58,6 +67,14 @@ describe CategoryContentDecorator do
           expect(subject.path).to eq "/#{locale}/#{type.pluralize}/#{item.id}"
         end
       end
+    end
+  end
+
+  describe '#icon_class' do
+    let(:item) { double(type: "foo_bar-baz") }
+
+    it "returns a dasherised representation of the object type prefixed with `icon--'" do
+      expect(subject.icon_class).to eq('icon--foo-bar-baz')
     end
   end
 end

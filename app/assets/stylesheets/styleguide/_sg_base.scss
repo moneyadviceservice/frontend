@@ -21,14 +21,17 @@ code {
   }
   > dt {
     padding: 6px;
-    width: 300px;
+    width: 320px;
     float: left;
   }
   > dd {
     float: left;
+    width: 280px;
+    margin-left:20px;
   }
   code {
     color: #000;
+    font-size:80%;
   }
 }
 

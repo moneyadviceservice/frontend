@@ -120,3 +120,302 @@ a double dash (<code>--</code>) to indicate a modified version of a component<br
 
 <p>For information about each rule check the <a href="https://github.com/stubbornella/csslint/wiki/Rules">documentation</a></p>
 
+<h2>Folder Structure</h2>
+
+<p>This is the folder structure we use for organising our Sass files</p>
+
+<%= Terminal256 do %>
+  ├── base
+  ├── components
+  ├── layout
+  ├── lib
+  └── utilities
+<% end %>
+
+<p>And a selection of the files found inside these: </p>
+<%= Terminal256 do %>
+  ├── base
+  │   ├── _default.scss
+  │   ├── _fonts.scss
+  │   ├── _forms.scss
+  │   ├── _links.scss
+  │   ├── _media.scss
+  │   └── _typography.scss
+  ├── components
+  │   ├── _button.scss
+  │   ├── _header.scss
+  │   ├── _icon.scss
+  │   ├── _lists.scss
+  ├── layout
+  │   ├── _common.scss
+  │   └── _pages.scss
+  ├── lib
+  │   ├── _functions.scss
+  │   ├── _grid.scss
+  │   ├── _mixins.scss
+  │   ├── _placeholders.scss
+  │   └── _variables.scss
+  └── utilities
+  └── _utils.scss
+<% end %>
+
+<p><strong>base</strong> - base rules are the defaults. They are almost
+  exclusively single element selectors but it could include attribute selectors,
+  pseudo-class selectors, child selectors or sibling selectors. Essentially, a
+  base style says that wherever this element is on the page, it should look like this.</p>
+
+<p><strong>components</strong> - components are the blocks that make up your page.
+  The modular parts of our design. They should be built in such a way that they can
+  be dropped into any page or layout. Components should define how they look, but not
+  their layout or position</p>
+
+<p><strong>layout</strong> - layouts hold one or more components together and
+  are responsible for positioning components.</p>
+
+<p><strong>lib</strong> -  library of variables, functions, mixing and placeholders.
+  They output no css until used.</p>
+
+<p><strong>utilities</strong> - utilities are reusable helper classes</p>
+
+<h2>Output Files</h2>
+
+<%= Terminal256 do %>
+  ├── basic.css.scss
+  ├── enhanced_fixed.css.scss
+  ├── enhanced_responsive.css.scss
+<% end %>
+
+<p><strong>basic.css.scss</strong> - This contains the basic styles present in the base folder and should work in all
+  browsers including legacy browsers</p>
+<p><strong>enhanced_responsive.css.scss</strong> - This contains the enhanced and responsive styles and will only be used by browsers
+  that understand media queries.</p>
+<p><strong>enhanced_fixed.css.scss</strong> - This contains a fixed width version of the enhanced styles of the website
+  which is served to IE 7/8. It cIE 7/8 fixes are only included in this file.</p>
+
+<h2>Variable naming convention</h2>
+
+<p>To make variable names more understandable we use the convention <code>category-some-name</code>.  This is also great
+  for RubyMine as it can then auto-suggest available variables.</p>
+
+<p>Example:</p>
+
+<%= scss do %>
+  $color-green-primary
+  $color-green-higlight
+<% end %>
+
+<h2>Colours</h2>
+<ul class="swatches list--unstyled">
+  <li class="color-white"><code>$color-white</code></li>
+  <li class="color-black"><code>$color-black</code></li>
+  <li class="color-grey-primary"><code>$color-grey-primary</code></li>
+  <li class="color-green-primary"><code>$color-green-primary</code></li>
+  <li class="color-green-secondary"><code>$color-green-secondary</code></li>
+  <li class="color-green-tertiary"><code>$color-green-tertiary</code></li>
+  <li class="color-green-paler"><code>$color-green-paler</code></li>
+  <li class="color-green-pale"><code>$color-green-pale</code></li>
+  <li class="color-green-light"><code>$color-green-light</code></li>
+  <li class="color-green-medium"><code>$color-green-medium</code></li>
+  <li class="color-teal-light"><code>$color-teal-light</code></li>
+  <li class="color-teal-dark"><code>$color-teal-dark</code></li>
+  <li class="color-blue-light"><code>$color-blue-light</code></li>
+  <li class="color-blue-medium"><code>$color-blue-medium</code></li>
+  <li class="color-blue-dark"><code>$color-blue-dark</code></li>
+  <li class="color-grey-pale"><code>$color-grey-pale</code></li>
+  <li class="color-grey-light"><code>$color-grey-light</code></li>
+  <li class="color-grey-medium"><code>$color-grey-medium</code></li>
+  <li class="color-grey-dark"><code>$color-grey-dark</code></li>
+  <li class="color-bluegrey-dark"><code>$color-bluegrey-dark</code></li>
+  <li class="color-bluegrey-medium"><code>$color-bluegrey-medium</code></li>
+  <li class="color-bluegrey-light"><code>$color-bluegrey-light</code></li>
+  <li class="color-pink-medium"><code>$color-pink-medium</code></li>
+  <li class="color-pink-dark"><code>$color-pink-dark</code></li>
+  <li class="color-red-medium"><code>$color-red-medium</code></li>
+  <li class="color-red-dark"><code>$color-red-dark</code></li>
+  <li class="color-orange-medium"><code>$color-orange-medium</code></li>
+  <li class="color-orange-dark"><code>$color-orange-dark</code></li>
+  <li class="color-yellow-light"><code>$color-yellow-light</code></li>
+  <li class="color-yellow-dark"><code>$color-yellow-dark</code></li>
+</ul>
+
+<h2>Colour Usage</h2>
+<dl class="swatches">
+  <dt>
+    <code>$color-site-bg</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-text-default</code>
+  </dt>
+  <dd class="color-black">
+    <code>$color-black</code>
+  </dd>
+
+  <dt>
+    <code>$color-text-icon</code>
+  </dt>
+  <dd class="color-white">
+    <code>$color-white</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-nav</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-nav-visited</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-link-external</code>
+  </dt>
+  <dd class="color-grey-light">
+    <code>$color-grey-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-heading</code>
+  </dt>
+  <dd class="$color-white">
+    <code>$color-white</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-background</code>
+  </dt>
+  <dd class="color-green-primary">
+    <code>$color-green-primary</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-background-alt</code>
+  </dt>
+  <dd class="color-green-paler">
+    <code>color-green-paler</code>
+  </dd>
+
+  <dt>
+    <code>$color-table-border</code>
+  </dt>
+  <dd class="color-grey-light">
+    <code>$color-grey-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-bullet</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-yes</code>
+  </dt>
+  <dd class="color-green-secondary">
+    <code>$color-green-secondary</code>
+  </dd>
+
+  <dt>
+    <code>$color-list-no</code>
+  </dt>
+  <dd class="color-red-dark">
+    <code>$color-red-dark</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default</code>
+  </dt>
+  <dd class="color-green-light">
+    <code>$color-green-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default-border</code>
+  </dt>
+  <dd class="color-green-medium">
+    <code>$color-green-medium</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-default-text</code>
+  </dt>
+  <dd class="color-black">
+    <code>$color-black</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-primary</code>
+  </dt>
+  <dd class="color-yellow-light">
+    <code>$color-yellow-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-button-primary-border</code>
+  </dt>
+  <dd class="color-yellow-dark">
+    <code>$color-yellow-dark</code>
+  </dd>
+
+  <dt>
+    <code>$color-footer-bg</code>
+  </dt>
+  <dd class="color-grey-pale">
+    <code>$color-grey-pale</code>
+  </dd>
+
+  <dt>
+    <code>$color-callout-background</code>
+  </dt>
+  <dd class="color-green-pale">
+    <code>$color-green-pale</code>
+  </dd>
+
+  <dt>
+    <code>$color-action-item-heading</code>
+  </dt>
+  <dd class="color-white">
+    <code>$color-white</code>
+  </dd>
+
+  <dt>
+    <code>$color-action-item-heading-bg</code>
+  </dt>
+  <dd class="color-grey-medium">
+    <code>$color-grey-medium</code>
+  </dd>
+
+  <dt>
+    <code>$color-action-item-border</code>
+  </dt>
+  <dd class="color-bluegrey-light">
+    <code>$color-bluegrey-light</code>
+  </dd>
+
+  <dt>
+    <code>$color-icon-open</code>
+  </dt>
+  <dd class="color-yellow-light">
+    <code>$color-yellow-light</code>
+  </dd>
+
+  <!--
+  <dt>
+    <code>variable</code>
+  </dt>
+  <dd class="color">
+    <code>color</code>
+  </dd>
+  -->
+
+</dl>
+

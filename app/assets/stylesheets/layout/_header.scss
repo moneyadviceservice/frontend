@@ -78,8 +78,12 @@
 
 .l-search-box {
   position: relative;
-  max-width: 600px;
   margin: 0 auto;
+  @include respond-to ($mq-l) {
+    @extend %clearfix;
+    @include column(6);
+    @include push(3);
+  }
 }
 
 

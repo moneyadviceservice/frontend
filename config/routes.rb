@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
 
+    resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',
@@ -30,7 +31,6 @@ Rails.application.routes.draw do
         get 'layouts'
         get 'html'
         get 'javascript'
-        get 'ruby'
 
         scope 'pages' do
           get 'pages', path: '/'
@@ -51,13 +51,9 @@ Rails.application.routes.draw do
           get 'css_default_styles', path: '/default-styles'
         end
 
-        scope 'sass' do
-          get 'sass_overview', path: '/'
-          get 'sass_variables', path: '/variables'
-        end
       end
     end
   end
 
-  match '*path', via: %W(get post), to: -> env { [501, {}, []] }
+  match '*path', via: :all, to: -> env { [501, {}, []] }
 end

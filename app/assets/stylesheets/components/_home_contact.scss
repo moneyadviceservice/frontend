@@ -17,14 +17,14 @@
   }
 
   p {
-    @extend %font-body;
-    @include body(24, 30);
+    @extend %type-homepage;
     color: $color-home-copy;
     margin-bottom: $baseline-unit*4
   }
 
   @include respond-to($mq-l) {
-    @include column(8);
+    @include column(6);
+    @include push(3);
   }
 }
 
@@ -39,13 +39,13 @@
   }
 
   @include respond-to($mq-l) {
-    @include column(4);
+    @include column(3);
   }
 }
 
 .home-contact__number {
   @extend %font-heading-heavy;
-  @include body(32, 36);
+  @include body(30, 36);
   display: block;
   color: $color-home-number;
   margin: 0 0 $baseline-unit*4;

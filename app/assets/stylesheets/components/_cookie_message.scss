@@ -1,0 +1,29 @@
+.cookie-message {
+  @extend %clearfix;
+  position: relative;
+  background-color: $color-cookie-message-background;
+  margin-bottom: $baseline-unit*2;
+}
+
+.cookie-message__content {
+  @include column(12);
+  @extend %type-small;
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
+  padding-right: $baseline-unit*4;
+
+  a {
+    display: block;
+    @include links($color-link-default, $color-link-default);
+    @include respond-to($mq-l) {
+      display: inline;
+    }
+  }
+}
+
+.cookie-message__close-button {
+  padding: 3px $baseline-unit $baseline-unit $baseline-unit;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -1,15 +1,61 @@
+When(/^I search for something relevant$/) do
+  home_page.search_box.input.set 'health'
+
+  VCR.use_cassette("search_relevant") do
+    home_page.search_box.submit.click
+  end
+end
+
+When(/^I search for something irrelevant$/) do
+  home_page.search_box.input.set 'cats'
+
+  VCR.use_cassette("search_irrelevant") do
+    home_page.search_box.submit.click
+  end
+end
+
+When(/^I submit a search with no query$/) do
+  home_page.search_box.input.set ''
+  home_page.search_box.submit.click
+end
+
+Then(/^I should see the search box$/) do
+  expect(home_page).to have_search_box
+end
+
+Then(/^I should see the search page$/) do
+  expected_heading = ""
+  expected_title   = '%s - %s' % [I18n.t('search_results.index.document_title'),
+                                  I18n.t('layouts.base.title')]
+
+  expect(search_results_page.title).to eq(expected_title)
+  expect(search_results_page.heading).to have_content(expected_heading)
+end
+
 Then(/^I should see search results$/) do
-  search_results_page.has_results?
+  expected_heading = I18n.t('search_results.index_with_results.page_title', query: 'health')
+  expected_title   = '%s - %s' % [I18n.t('search_results.index_with_results.document_title', query: 'health'),
+                                  I18n.t('layouts.base.title')]
+
+  expect(search_results_page.title).to eq(expected_title)
+  expect(search_results_page.heading).to have_content(expected_heading)
+  expect(search_results_page).to have_results
 end
 
 Then(/^I should see no search results$/) do
-  search_results_page.has_no_results?
+  expected_heading = I18n.t('search_results.index_no_results.page_title', query: 'cats')
+  expected_title   = '%s - %s' % [I18n.t('search_results.index_no_results.document_title', query: 'cats'),
+                                  I18n.t('layouts.base.title')]
+
+  expect(search_results_page.title).to eq(expected_title)
+  expect(search_results_page.heading).to have_content(expected_heading)
+  expect(search_results_page).to have_no_results
 end
 
 Then(/^I should prompted to try another search term$/) do
-  search_results_page.has_content? I18n.t('search_results.index_no_results.body')
+  expect(search_results_page).to have_content(I18n.t('search_results.index_no_results.body'))
 end
 
-Then(/^I should prompted to try again with a search term$/) do
-  search_results_page.has_content? I18n.t('search_results.index.body')
+Then(/^the search results page should have a robots tag with value noindex$/) do
+  expect { search_results_page.robots_tag[:content] }.to become('noindex')
 end

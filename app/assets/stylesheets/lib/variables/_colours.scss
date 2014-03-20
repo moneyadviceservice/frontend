@@ -1,8 +1,6 @@
 $color-white: #fff;
-// not in the standard palette
 $color-off-white: #f5f7f7;
 $color-white-translucent: rgba(255, 255, 255, 0.2);
-// not in the standard palette
 $color-white-translucent-fallback: rgb(255, 255, 255);
 $color-transparent: transparent;
 
@@ -15,7 +13,7 @@ $color-green-tertiary: #115329;
 $color-green-quaternary: rgba(51, 105, 19, 0.7);
 
 $color-green-paler: #f5f7f8;
-$color-green-pale: #dceea3;
+$color-green-pale: #F7FBEC;
 $color-green-light: #b9dd48;
 $color-green-medium: #81c724;
 $color-green-bright: #adcf3f;
@@ -25,7 +23,6 @@ $color-teal-dark: #0e7f6c;
 
 $color-blue-pale: #ebf2f5;
 $color-blue-light: #e6f2f7;
-// not in the standard palette
 $color-blue-medium: #1f6faa;
 $color-blue-dark: #18507a;
 $color-blue-extra-dark: #0a4358;
@@ -33,7 +30,7 @@ $color-blue-extra-dark: #0a4358;
 $color-grey-palest: #dce3e1;
 
 $color-grey-paler: #f2f4f5;
-$color-grey-pale: #f6f8f7;
+$color-grey-pale: #edf0f0;
 
 $color-grey-paleo: #ecf0ef;
 $color-grey-light: #a8b2ba;
@@ -71,8 +68,8 @@ $color-link-visited: $color-blue-dark;
 $color-link-focus: $color-blue-light;
 
 // Navigation Links
-$color-link-nav: $color-green-primary;
-$color-link-nav-visited: $color-green-secondary;
+$color-link-nav: $color-green-tertiary;
+$color-link-nav-visited: $color-green-tertiary;
 
 // Article Links
 $color-link-external: $color-grey-light;
@@ -95,6 +92,9 @@ $color-button-default-text: $color-black;
 
 $color-button-primary: $color-yellow-light;
 $color-button-primary-border: $color-yellow-dark;
+
+// Homepage
+$home-page-feature: $color-grey-pale;
 
 // Footer
 $color-footer-bg: $color-grey-pale;
@@ -133,10 +133,16 @@ $color-category-border: $color-grey-paleo;
 $color-filter-border: $color-white;
 $color-filter-background: $color-grey-paler;
 
-
 // Homepage
 $color-home-copy: $color-green-secondary;
 $color-home-number: $color-grey-dark;
+$home-feature-list-bg: $color-white;
+$home-feature-list-border: $color-grey-palest;
+
+// Cookie Message
+$color-cookie-message-background: $color-white;
+$color-cookie-message-close-button: $color-white;
+$color-cookie-message-button-background: $color-green-secondary;
 
 // VARIABLES ONLY TO BE USED IN THE STYLEGUIDE
 

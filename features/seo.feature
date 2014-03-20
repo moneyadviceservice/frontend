@@ -21,6 +21,15 @@ Feature: Search Engine Optimisation
     | English        | Welsh            |
     | Welsh          | English          |
 
+  Scenario Outline: Home page include a description tag
+    Given I view the home page in <locale>
+    Then the home page should have a description tag for that language version
+
+  Examples:
+    | locale  |
+    | English |
+    | Welsh   |
+
   Scenario Outline: Action Plan pages include a canonical tag
     Given I view an action plan in <locale>
     Then the action plan should have a canonical tag for that language version
@@ -74,3 +83,19 @@ Feature: Search Engine Optimisation
     | category_locale | alternate_locale |
     | English         | Welsh            |
     | Welsh           | English          |
+
+  Scenario: Empty query search results page include a robots tag
+    Given I am on the home page
+    When I submit a search with no query
+    Then the search results page should have a robots tag with value noindex
+
+  Scenario: No results search page include a robots tag
+    Given I am on the home page
+    When I search for something irrelevant
+    Then the search results page should have a robots tag with value noindex
+
+  Scenario: Results search page include a robots tag
+    Given I am on the home page
+    When I search for something relevant
+    Then the search results page should have a robots tag with value noindex
+

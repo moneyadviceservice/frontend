@@ -1,0 +1,93 @@
+.home-feature {
+  background-color: $home-page-feature;
+}
+
+.home-feature__content {
+  @extend %clearfix;
+  padding: $baseline-unit*5 0 0 0;
+  background: transparent image_url('home-illustration.jpg') 0 100px no-repeat;
+
+  @include respond-to($mq-m) {
+    background-position: 0 0;
+  }
+
+  @include respond-to($mq-l) {
+    background-position: 0 100%;
+  }
+}
+
+.home-feature__heading {
+  padding: 0 $baseline-unit;
+  color: $color-text-default;
+  margin: 0;
+  height: 265px;
+
+  @include respond-to($mq-m) {
+    @include column(7);
+    @include push(5);
+    margin-top: $baseline-unit*5;
+    margin-bottom: $baseline-unit*8.5;
+    height: auto;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+    height: 243px;
+  }
+}
+
+.home-feature__list {
+  @extend %clearfix;
+  @extend .list--unstyled;
+  clear: both;
+  float: left;
+  width: 100%;
+  padding: $baseline-unit 0;
+  margin-bottom: $baseline-unit;
+  background-color: $home-feature-list-bg;
+
+  li {
+    padding: $baseline-unit;
+    margin: 0;
+  }
+
+  a {
+    @extend %type-homepage-links;
+    @extend %font-heading-medium;
+    display: block;
+    padding: 0 0 $baseline-unit 0;
+  }
+
+  p {
+    display: none;
+  }
+
+  @include respond-to($mq-m) {
+    clear: none;
+    background: transparent;
+    padding: $baseline-unit*5 0;
+    border-top: 2px solid $home-feature-list-border;
+
+    li {
+      @include column(6);
+      min-height: 105px;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+
+    li {
+      @include column(3);
+      min-height: 186px;
+      margin-bottom: 0;
+    }
+  }
+}

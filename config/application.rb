@@ -3,6 +3,7 @@ require_relative 'boot'
 require 'action_controller/railtie'
 require 'action_view/railtie'
 require 'active_model/railtie'
+require 'active_record/railtie'
 require 'sprockets/railtie'
 
 Bundler.require(*Rails.groups(assets: %w(development test)))
@@ -27,12 +28,12 @@ module Frontend
                                   styleguide.css)
 
     # Configure additional application JS assets to precompile.
-    config.assets.precompile += %w(html_inspector.js 
+    config.assets.precompile += %w(html_inspector.js
                                   supports.js
                                   translations/en.js
                                   translations/cy.js
-                                  modules/mas_analytics.js 
-                                  modules/mas_collapsable.js 
+                                  modules/mas_analytics.js
+                                  modules/mas_collapsable.js
                                   modules/mas_log.js
                                   styleguide.js)
 

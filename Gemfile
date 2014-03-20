@@ -50,6 +50,8 @@ group :test do
 end
 
 group :production do
+  gem 'activerecord-session_store'
+  gem 'mysql2'
   gem 'syslog-logger'
   gem 'unicorn-rails'
 end
@@ -61,6 +63,7 @@ group :test, :development do
       git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
   gem 'chai-jquery-rails'
   gem 'byebug'
+  gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end
 
 group :doc do

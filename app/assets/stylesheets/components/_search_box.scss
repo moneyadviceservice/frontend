@@ -3,6 +3,7 @@
 // Styleguide Search
 
 .search-box {
+  @extend %clearfix;
   position: relative;
   margin: 0 auto;
   padding: $baseline-unit 0;

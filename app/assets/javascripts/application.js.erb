@@ -1,7 +1,5 @@
 //= require require_config
 
-require(['ujs']);
-
 if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 
   require(['webfonts'], function () {
@@ -41,5 +39,12 @@ require(['collapsable'], function (Collapsable) {
     showOnlyFirst:true,
     showIcon: true,
     useButton: true
+  });
+});
+
+require(['ujs', 'jquery'], function(){
+  $('.cookie-message form').bind('ajax:success', function(data, status, xhr) {
+    $('.cookie-message').hide();
+    $('.footer-site-links__cookie-message').removeClass('is-on');
   });
 });

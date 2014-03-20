@@ -43,22 +43,22 @@
     font-size: ($font-size / 16) + rem;
     line-height: ($line-height / 16) + rem;
     margin-top: ($font-size) / 16 + rem;
-    margin-bottom: ($font-size / 4) / 16 + rem;
+    margin-bottom: ($font-size / 2) / 16 + rem;
 
     @include respond-to($mq-l) {
       margin-top: ($font-size*1.5) / 16 + rem;
-      margin-bottom: ($font-size / 4) / 16 + rem;
+      margin-bottom: ($font-size / 2) / 16 + rem;
     }
 
   } @else {
     font-size: $font-size + px;
     line-height: $line-height + px;
     margin-top: ($font-size*1.5) + px;
-    margin-bottom: ($font-size / 4) + px;
+    margin-bottom: ($font-size / 2) + px;
 
     @include respond-to($mq-l) {
       margin-top: ($font-size*1.5) + px;
-      margin-bottom: ($font-size / 4) + px;
+      margin-bottom: ($font-size / 2) + px;
     }
   }
 }
@@ -140,7 +140,16 @@
   @include body(14, 18);
 
   @include respond-to($mq-m) {
-    @include body(16, 24);
+    @include body(16, 22);
+  }
+}
+
+%type-callout {
+  @include body(14, 18);
+  @extend %font-heading-medium;
+
+  @include respond-to($mq-m) {
+    @include body(16, 22);
   }
 }
 

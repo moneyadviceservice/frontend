@@ -12,6 +12,11 @@
 }
 
 .home-contact__header {
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+
   h2 {
     @extend %type-contact-heading;
     margin: 0 0 $baseline-unit*3;
@@ -30,6 +35,11 @@
 }
 
 .home-contact__details {
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+
   h3 {
     @include body(18, 24);
     margin: 0 0 $baseline-unit*2;

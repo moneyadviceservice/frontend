@@ -31,6 +31,7 @@
   }
 
   @include respond-to($mq-l) {
+    padding: 0;
     @include column(3);
     height: 243px;
   }
@@ -52,7 +53,7 @@
   }
 
   a {
-    @extend %type-homepage-links;
+    @extend %type-homepage-headings;
     @extend %font-heading-medium;
     display: block;
     padding: 0 0 $baseline-unit 0;

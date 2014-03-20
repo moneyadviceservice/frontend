@@ -173,13 +173,27 @@
   @include body(14, 18);
 }
 
+%type-contact-heading {
+  @extend %font-heading-heavy;
+  @include body(24, 30);
+
+  @include respond-to($mq-m) {
+    @include body(30, 36);
+  }
+}
+
 %type-homepage-links {
-  @extend %font-heading-medium;
+  @extend %font-body;
   @include body(18, 24);
 
   @include respond-to($mq-m) {
     @include body(24, 30);
   }
+}
+
+%type-promoted-content {
+  @extend %font-body;
+  @include body(30, 36);
 }
 
 %paragraph {

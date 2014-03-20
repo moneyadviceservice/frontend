@@ -9,12 +9,6 @@ en:
       title: Money Advice Service
     error:
       home: Home
-    cookie_message: |
-      <p>
-        We use cookies to ensure that you get the best possible service from our website.
-        By clicking any link on this page you are agreeing to their use.
-        However, if you would like to, you can use our <a href="">cookie guide</a> to disable them at any time.
-      </p>
 
   locales:
     cy: Cymraeg
@@ -117,10 +111,14 @@ en:
     site_map_link: /en/sitemap
     our_debt_work: Our debt work
     our_debt_work_link: /en/categories/our-debt-work
-    cookie_message: Cookie guide
-    cookie_message_link: /en/static/cookie_notice_en
-    cookie_message_content_html: |
-      We use cookies to ensure that you get the best possible experience. By continuing to use our website you are agreeing to their use. <a href="https://www.moneyadviceservice.org.uk/en/static/cookie_notice_en">Find out more about cookies</a>
+    cookie_guide: Cookie guide
+    cookie_guide_link: /en/static/cookie_notice_en
+    cookie_message:
+      body_html: |
+        We use cookies to ensure that you get the best possible experience.
+        By continuing to use our website you are agreeing to their use.
+        <a href="%{url}">Find out more about cookies</a>
+      close_button: Close
 
   search_box:
     label: Search the Money Advice Service

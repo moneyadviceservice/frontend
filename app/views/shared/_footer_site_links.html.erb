@@ -31,17 +31,22 @@
       <li>
         <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
       </li>
-      <li class="footer-site-links__cookie-message">
-        <a href="<%= t('footer.cookie_message_link') %>"><%= t('footer.cookie_message') %></a>
+      <li class="footer-site-links__cookie-message <%= 'is-on' if cookies_not_accepted? %>">
+        <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
       </li>
     </ul>
   </div>
 
-  <div class="cookie-message l-constrained l-padded">
-    <p class="cookie-message__content"><%= t('footer.cookie_message_content_html') %></p>
-    <button class="cookie-message__close-button button--unstyled">
-      <span class="visually-hidden">Close</span><span class="icon icon--close"></span></button>
-  </div>
+  <% if cookies_not_accepted? %>
+    <div class="cookie-message l-constrained l-padded">
+      <%= form_tag cookie_notice_acceptance_path do %>
+        <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
+        <button class="cookie-message__close-button button--unstyled">
+          <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
+        </button>
+      <% end %>
+    </div>
+  <% end %>
 
   <div class="l-constrained l-padded">
     <ul class="footer-site-links__language list--unstyled">

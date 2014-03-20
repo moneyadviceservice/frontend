@@ -1,5 +1,9 @@
 module World
   module Pages
+    def current_page
+      UI::Page.new
+    end
+
     %w(article home action_plan category partners search_results).each do |page|
       define_method("#{page}_page") do
         "UI::Pages::#{page.camelize}".constantize.new

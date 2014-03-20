@@ -58,7 +58,7 @@
 .footer-site-links__cookie-message {
   position: relative;
 
-  &:after {
+  &.is-on:after {
     content: '';
     width: 0px;
     height: 0px;

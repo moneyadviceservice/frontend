@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
 
+    resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',

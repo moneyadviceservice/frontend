@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 
   include Localisation
 
+  COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
+  COOKIE_MESSAGE_COOKIE_VALUE = 'y'
+
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
@@ -14,8 +17,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :category_navigation
 
-  def cookies_accepted?
-    cookies['_cookie_notice'] == 'y'
+  def cookies_not_accepted?
+    cookies.permanent[COOKIE_MESSAGE_COOKIE_NAME] != COOKIE_MESSAGE_COOKIE_VALUE
   end
-  helper_method :cookies_accepted?
+  helper_method :cookies_not_accepted?
 end

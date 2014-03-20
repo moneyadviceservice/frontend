@@ -6,7 +6,7 @@
   @extend %clearfix;
   position: relative;
   margin: 0 auto;
-  padding: $baseline-unit;
+  padding: $baseline-unit 0;
   background-color: $color-search-background;
   width: 100%;
 }
@@ -32,8 +32,8 @@
   @extend .button--unstyled;
   position: absolute;
   bottom: 0;
-  right: -10px;
-  width: 62px;
+  right: 0;
+  width: 42px;
   height: 42px;
   font-size: 24px;
   color: $color-search-text;

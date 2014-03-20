@@ -9,12 +9,6 @@ en:
       title: Money Advice Service
     error:
       home: Home
-    cookie_message: |
-      <p>
-        We use cookies to ensure that you get the best possible service from our website.
-        By clicking any link on this page you are agreeing to their use.
-        However, if you would like to, you can use our <a href="">cookie guide</a> to disable them at any time.
-      </p>
 
   locales:
     cy: Cymraeg
@@ -88,13 +82,26 @@ en:
           <h3>Opening hours</h3>
           <p>Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am-1pm</strong></p>
           <p><a href="/en/static/contact-us">Find out about call charges</a></p>
-      description: The Money Advice Service helps you manage your money better. Use our Health Check tool, calculators and comparison tables to make the most of your finances
+      description: |
+        The Money Advice Service helps you manage your money better. Use our Health Check tool,
+        calculators and comparison tables to make the most of your finances.
 
   opt_out_bar:
     message: This is an early version of our improved website.
     feedback: We would love your feedback.
     button: View this on our existing site
-    email_contents: mailto:tools.help%40moneyadviceservice.org.uk?subject=My feedback on your early version of your site&body=Thanks%20for%20taking%20the%20time%20to%20feedback%20on%20the%20early%20version%20of%20our%20new%20site.%20We%20appreciate%20it.%0A%0APlease%20tell%20us%20how%20the%20new%20site%20performed%20for%20you%20with%20any%20suggestions%20on%20how%20we%20can%20make%20it%20better.%0A%0AWhat%20was%20good%3F%0A%0AWhat%20wasn't%20so%20good%3F%0A%0AWhat%20device%20are%20you%20on%3F%0A%0A***************%0AIf%20you%20would%20like%20Money%20Advice%20please%20call%20our%20Money%20Advice%20Line%20on%200300%20500%205000%20(English)%20or%200300%20500%205555%20(Welsh)%0ATypetalk%3A%2018001%200300%20500%205000%0AFrom%20overseas%3A%20%2B44%201443%20827658%20%0AMonday%20to%20Friday%3A%208am%E2%80%938pm%20%0ASaturday%3A%209am%E2%80%931pm%20%0ASunday%20and%20Bank%20Holidays%3A%20closed
+    email_contents: |
+      mailto:tools.help%40moneyadviceservice.org.uk?subject=My feedback on your early version of
+      your site&body=Thanks%20for%20taking%20the%20time%20to%20feedback%20on%20the%20early
+      %20version%20of%20our%20new%20site.%20We%20appreciate%20it.%0A%0APlease%20tell%20us
+      %20how%20the%20new%20site%20performed%20for%20you%20with%20any%20suggestions%20on%20how
+      %20we%20can%20make%20it%20better.%0A%0AWhat%20was%20good%3F%0A%0AWhat%20wasn't%20so
+      %20good%3F%0A%0AWhat%20device%20are%20you%20on%3F%0A%0A***************%0AIf%20you
+      %20would%20like%20Money%20Advice%20please%20call%20our%20Money%20Advice%20Line
+      %20on%200300%20500%205000%20(English)%20or%200300%20500%205555
+      %20(Welsh)%0ATypetalk%3A%2018001%200300%20500%205000%0AFrom%20overseas%3A%20%2B44
+      %201443%20827658%20%0AMonday%20to%20Friday%3A%208am%E2%80%938pm%20%0ASaturday%3A
+      %209am%E2%80%931pm%20%0ASunday%20and%20Bank%20Holidays%3A%20closed
 
   footer:
     accessibility: Accessibility
@@ -117,10 +124,14 @@ en:
     site_map_link: /en/sitemap
     our_debt_work: Our debt work
     our_debt_work_link: /en/categories/our-debt-work
-    cookie_message: Cookie guide
-    cookie_message_link: /en/static/cookie_notice_en
-    cookie_message_content_html: |
-      We use cookies to ensure that you get the best possible experience. By continuing to use our website you are agreeing to their use. <a href="https://www.moneyadviceservice.org.uk/en/static/cookie_notice_en">Find out more about cookies</a>
+    cookie_guide: Cookie guide
+    cookie_guide_link: /en/static/cookie_notice_en
+    cookie_message:
+      body_html: |
+        We use cookies to ensure that you get the best possible experience.
+        By continuing to use our website you are agreeing to their use.
+        <a href="%{url}">Find out more about cookies.</a>
+      close_button: Close
 
   search_box:
     label: Search the Money Advice Service

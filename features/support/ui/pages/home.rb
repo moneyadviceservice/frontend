@@ -4,7 +4,7 @@ module UI::Pages
   class Home < UI::Page
     set_url '/{locale}'
 
-    element :strapline, '.home-feature__header h1'
+    element :strapline, '.home-feature__content h1'
     element :feature_list, '.home-feature__list'
 
     element :contact_heading, '.home-contact__header h2'

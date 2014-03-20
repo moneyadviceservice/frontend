@@ -1,10 +1,11 @@
+// currently only used for the basic homepage heading
 %heading-extra-large {
-  @include heading(36, 42);
+  @include heading(30, 36);
   @extend %font-heading-heavy;
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(40, 48);
+    @include heading(40, 42);
   }
 }
 
@@ -14,7 +15,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(38, 48);
+    @include heading(36, 42);
   }
 }
 
@@ -24,7 +25,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(30, 36);
+    @include heading(24, 30);
   }
 }
 
@@ -34,7 +35,7 @@
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(22, 30);
+    @include heading(18, 24);
   }
 }
 

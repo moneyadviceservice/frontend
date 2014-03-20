@@ -13,7 +13,7 @@ $color-green-tertiary: #115329;
 $color-green-quaternary: rgba(51, 105, 19, 0.7);
 
 $color-green-paler: #f5f7f8;
-$color-green-pale: #dceea3;
+$color-green-pale: #F7FBEC;
 $color-green-light: #b9dd48;
 $color-green-medium: #81c724;
 $color-green-bright: #adcf3f;
@@ -93,6 +93,9 @@ $color-button-default-text: $color-black;
 $color-button-primary: $color-yellow-light;
 $color-button-primary-border: $color-yellow-dark;
 
+// Homepage
+$home-page-feature: $color-grey-pale;
+
 // Footer
 $color-footer-bg: $color-grey-pale;
 
@@ -111,8 +114,8 @@ $color-icon-open: $color-yellow-light;
 $color-article-cta: $color-blue-light;
 
 // Navigation
-$color-primary-nav: $color-off-white;
-$color-primary-nav-visited: $color-off-white;
+$color-primary-nav: $color-white;
+$color-primary-nav-visited: $color-white;
 $color-primary-nav-focus: $color-transparent;
 
 $color-submenu-background: $color-grey-paler;
@@ -133,6 +136,8 @@ $color-filter-background: $color-grey-paler;
 // Homepage
 $color-home-copy: $color-green-secondary;
 $color-home-number: $color-grey-dark;
+$home-feature-list-bg: $color-white;
+$home-feature-list-border: $color-grey-palest;
 
 // Cookie Message
 $color-cookie-message-background: $color-white;

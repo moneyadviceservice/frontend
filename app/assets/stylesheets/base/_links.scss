@@ -11,8 +11,40 @@
 // Styleguide a
 
 a {
-  @include links($color-link-default);
+  color: $color-link-default;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-link-default;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-link-default;
+    text-decoration: underline;
+  }
 }
+
+.editorial a {
+  color: $color-link-default;
+  text-decoration: none;
+  border-bottom:1px solid lighten($color-link-default,50%);
+
+  &:visited {
+    color: $color-link-default;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-link-default;
+    text-decoration: none;
+    border-bottom:1px solid lighten($color-link-default,30%);
+  }
+}
+
+
 
 %link-nav,
 .link-nav {

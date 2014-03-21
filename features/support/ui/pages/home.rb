@@ -6,6 +6,7 @@ module UI::Pages
 
     element :strapline, '.home-feature__content h1'
     element :feature_list, '.home-feature__list'
+    elements :promoted_items, '.home-promoted__item'
 
     element :contact_heading, '.home-contact__header h2'
     element :contact_introduction, '.home-contact__introduction'

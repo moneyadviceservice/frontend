@@ -1,6 +1,13 @@
 <% set_meta_tags(title:  t('.document_title', query: params[:query]),
                  robots: 'noindex') %>
 
+<script>
+  dataLayer.push({
+    'Search Page': 'No results',
+    'event': 'No search results'
+  });
+</script>
+
 <div class="l-search-results">
   <main>
     <h1><%= t('.page_title', query: params[:query]) %></h1>

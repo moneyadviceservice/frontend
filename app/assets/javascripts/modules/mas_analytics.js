@@ -10,9 +10,9 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
 
   'use strict';
 
-  var MAS = window.MAS,
+  var onloadTimestamp = window.MAS.bootstrap.timestamp,
       DL = window.dataLayer || [],
-      loadDelay = ((new Date().getTime()) - MAS.timestamp) / 1000,
+      loadDelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
       analytics = {},
       _calledAlready = [],
       _handleScroll;
@@ -31,7 +31,7 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
     _calledAlready.push('scrollTracking-' + val);
 
     // get offset time from pageload - can we get from google?
-    var eventdelay = ((new Date().getTime()) - MAS.timestamp) / 1000,
+    var eventdelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
       combinedDelay = eventdelay - loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer

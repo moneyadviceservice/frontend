@@ -34,7 +34,7 @@ Then(/^I should see promoted content$/) do
   expected_text = I18n.t('home.show.promoted').map { |item| item['text'] }
   actual_text   = home_page.promoted_items.map { |item| item.text }
 
-  expect(actual_text).to eq(actual_text)
+  expect(actual_text).to eq(expected_text)
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do

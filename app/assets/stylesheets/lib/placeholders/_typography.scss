@@ -173,7 +173,16 @@
   @include body(14, 18);
 }
 
-%type-homepage-links {
+%type-contact-heading {
+  @extend %font-heading-heavy;
+  @include body(24, 30);
+
+  @include respond-to($mq-m) {
+    @include body(30, 36);
+  }
+}
+
+%type-homepage-headings {
   @extend %font-heading-medium;
   @include body(18, 24);
 

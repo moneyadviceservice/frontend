@@ -4,7 +4,7 @@
     position: relative;
     top: $baseline-unit*2;
     padding: $baseline-unit*5 0;
-    margin: 0 0 0 $baseline-unit*2;
+    margin: 0 0 0 1.6667%;
     @include respond-to($mq-l) {
       float: left;
       position: absolute;
@@ -79,8 +79,8 @@
 .l-search-box {
   position: relative;
   margin: 0 auto;
-  @include respond-to ($mq-l) {
-    @extend %clearfix;
+  @extend %clearfix;
+  @include respond-to($mq-l) {
     @include column(6);
     @include push(3);
   }

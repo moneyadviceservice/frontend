@@ -30,6 +30,13 @@ Then(/^I should see featured topics$/) do
     to have_content(strip_tags(I18n.t('home.show.feature.list_html')))
 end
 
+Then(/^I should see promoted content$/) do
+  expected_text = I18n.t('home.show.promoted').map { |item| item['text'] }
+  actual_text   = home_page.promoted_items.map { |item| item.text }
+
+  expect(actual_text).to eq(actual_text)
+end
+
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
   expect(home_page.contact_heading).to have_content(I18n.t('home.show.contact.title'))
 

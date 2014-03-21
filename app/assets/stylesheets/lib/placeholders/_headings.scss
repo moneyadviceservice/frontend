@@ -30,7 +30,7 @@
 }
 
 %heading-small {
-  @extend %font-heading-medium;
+  @extend %font-heading-heavy;
   @include heading(20, 24);
   color: $color-green-secondary;
 

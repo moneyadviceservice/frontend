@@ -12,12 +12,17 @@
 }
 
 .home-contact__header {
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+
   h2 {
-    margin: 0 0 $baseline-unit*3;
+    @extend %type-homepage-headings;
+    margin: 0 0 $baseline-unit*3.5;
   }
 
   p {
-    @extend %type-homepage;
     color: $color-home-copy;
     margin-bottom: $baseline-unit*4
   }
@@ -29,7 +34,14 @@
 }
 
 .home-contact__details {
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+
   h3 {
+    @extend %font-body;
+    letter-spacing: 0;
     @include body(18, 24);
     margin: 0 0 $baseline-unit*2;
   }
@@ -44,9 +56,13 @@
 }
 
 .home-contact__number {
-  @extend %font-heading-heavy;
-  @include body(30, 36);
+  @extend %heading-large;
   display: block;
   color: $color-home-number;
-  margin: 0 0 $baseline-unit*4;
+  margin: 0 0 $baseline-unit*2;
+
+  @include respond-to($mq-l) {
+    pointer-events: none;
+    cursor: default;
+  }
 }

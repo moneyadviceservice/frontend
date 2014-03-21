@@ -1,17 +1,10 @@
 .mas-logo {
-  height: 36px;
-  width: 170px;
+  width: 180px;
 
   @include respond-to($mq-m) {
-    width: 216px;
+    width: 244px;
   }
 
-  @if $responsive == true {
-    background: transparent image_url('mas-logo.svg') 0 0 no-repeat;
-    background-size: contain;
-  } @else {
-    background: transparent image_url('mas-logo.png') 0 0 no-repeat;
-  }
 }
 
 .mas-logo-small {

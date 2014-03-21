@@ -74,14 +74,15 @@
 
   li {
     @extend %type-small;
-    margin-right: $baseline-unit*2;
     border-top: 0;
     border-bottom: 1px solid $color-submenu-list-border;
     text-align: left;
     padding-left: $baseline-unit*2;
     @include respond-to($mq-l) {
       @include column(4);
+      margin-right: $baseline-unit*2;
       padding-left: 0;
+      border: 0;
     }
   }
 

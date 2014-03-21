@@ -5,7 +5,7 @@
 
 .mobile-nav__item {
   @extend %type-navigation;
-  border-radius: $baseline-unit;
+  border-radius: $baseline-unit/2;
   background-color: $color-green-tertiary;
 
   a {

@@ -85,5 +85,5 @@ Then(/^the home page should have an alternate tag for the (.*) version$/) do |la
 end
 
 Then(/^the home page should have a description tag for that language version$/) do
-  expect { home_page.description[:content] }.to become(I18n.t('home.show.description').gsub(/\n/, " "))
+  expect { home_page.description[:content] }.to become(I18n.t('home.show.description').strip)
 end

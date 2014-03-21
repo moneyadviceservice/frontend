@@ -21,6 +21,7 @@ Feature: Cookie Disclosure Statemement
     When I close the cookie message
     Then I should not see the cookie message
 
+  @with_and_without_javascript
   Scenario: Acknowledging the cookie message and then navigating to another page
     Given I have not previously acknowleged the cookie message
     And I visit the site and acknowledge the cookie message

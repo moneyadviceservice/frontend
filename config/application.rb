@@ -42,6 +42,7 @@ module Frontend
                                    jquery/dist/jquery.js
                                    jquery-waypoints/waypoints.js
                                    jquery-tiny-pubsub/src/tiny-pubsub.js
+                                   jquery-ujs/src/rails.js
                                    requirejs/require.js)
 
     # Configure Google Tag Manager ID

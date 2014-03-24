@@ -10,37 +10,37 @@
 }
 
 %heading-large {
-  @include heading(30, 36);
+  @include heading(32, 36);
   @extend %font-heading-heavy;
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(36, 42);
+    @include heading(40, 48);
   }
 }
 
 %heading-medium {
   @include heading(24, 30);
-  @extend %font-heading-medium;
-  color: $color-green-secondary;
+  @extend %font-heading-heavy;
+  color: $color-green-dark;
 
   @include respond-to($mq-m) {
-    @include heading(24, 30);
+    @include heading(28, 36);
   }
 }
 
 %heading-small {
   @extend %font-heading-heavy;
-  @include heading(20, 24);
+  @include heading(20, 30);
   color: $color-green-secondary;
 
   @include respond-to($mq-m) {
-    @include heading(18, 24);
+    @include heading(20, 30);
   }
 }
 
 %heading-extra-small {
   @extend %font-heading-heavy;
   @include heading(16, 24);
-  color: $color-green-secondary;
+  color: $color-text-default;
 }

@@ -160,16 +160,16 @@
 }
 
 %type-primary-navigation {
-  @extend %font-heading-heavy;
+  @extend %font-heading-medium;
   @include body(14, 18);
 
   @include respond-to($mq-m) {
-    @include body(16, 22);
+    @include body(18, 22);
   }
 
   .theme-cy & {
     @include respond-to($mq-m) {
-      @include body(14, 18);
+      @include body(16, 18);
     }
   }
 }
@@ -186,10 +186,17 @@
   @include respond-to($mq-m) {
     @include body(30, 36);
   }
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      @include body(24, 30);
+    }
+  }
 }
 
 %type-homepage-headings {
   @extend %font-heading-medium;
+  letter-spacing: -1px;
   @include body(18, 24);
 
   @include respond-to($mq-m) {

@@ -1,3 +1,26 @@
+// apply a different style for links that appear only inside a paragraph
+p > a {
+  color: $color-link-default;
+  text-decoration: none;
+  border-bottom: 1px solid lighten($color-link-default, 50%);
+
+  &:visited {
+    color: $color-link-default;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-link-default;
+    text-decoration: none;
+    border-bottom: 1px solid lighten($color-link-default, 30%);
+  }
+}
+
+.video-wrapper + a {
+  display: block;
+}
+
 a:not([href*="moneyadviceservice"]):after {
   @extend .icon;
   @extend .icon--external-link;

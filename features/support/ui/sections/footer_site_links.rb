@@ -6,5 +6,6 @@ module UI::Sections
     element :cookie_guide_link, '.footer-site-links__cookie-message a'
     element :welsh_link, '#cyLink'
     element :english_link, '#enLink'
+    element :opt_out_button, '.footer-site-links__opt_out'
   end
 end

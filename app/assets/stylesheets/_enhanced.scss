@@ -1,8 +1,6 @@
-@import 'lib/lib';
-
-@import 'utilities/clearfix';
-@import 'utilities/visually_hidden';
-@import 'utilities/inline_block';
+@import 'lib/all';
+@import 'utilities/all';
+@import 'sub_components/all';
 
 @import 'layout/common';
 @import 'layout/header';
@@ -13,18 +11,9 @@
 @import 'layout/pages/category_page';
 @import 'layout/pages/search_results_page';
 
-//atoms
-@import 'components/links';
 @import 'components/mas_logo';
 @import 'components/intro';
-@import 'components/lists';
-@import 'components/icons';
-@import 'components/button';
-
-//molecules
 @import 'components/social_links';
-
-//organisms
 @import 'components/footer_site_links';
 @import 'components/footer_social_links';
 @import 'components/cookie_message';
@@ -40,10 +29,9 @@
 @import 'components/home_contact';
 @import 'components/home_feature';
 @import 'components/home_promoted';
-
-//standalone content
 @import 'components/error_page_message';
 @import 'components/opt_out_bar';
+@import 'components/callout';
 
 .editorial {
   @import 'components/editorial/action_item';
@@ -53,5 +41,4 @@
   @import 'components/editorial/editorial_links';
 }
 
-@import 'components/editorial/tables';
-@import 'components/editorial/callout';
+

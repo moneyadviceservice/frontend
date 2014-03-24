@@ -1,142 +1,200 @@
 // Icons
 //
-// .icon--masLogo       - .png
+// .icon--logo       - .png
 // .icon--youtube       - \e605
 // .icon--facebook      - \e61c
 // .icon--twitter       - \e608
+// .icon--telephone     - telephone
 // .icon--tick          - \e609
-// .icon--externalLink  - \e619
+// .icon--cross          - \e609
+// .icon--external-link  - \e619
+// .icon--link  - \e619
+// .icon--info  - \e619
 // .icon--doc           - \e611
 // .icon--pdf           - \e602
+// .icon--video           - \e602
+// .icon--tool           - \e602
 // .icon--open          - \e603
 // .icon--closed        - \e0012
 // .icon--close         - \e60A
 // .icon--desktop       - \e603
 // .icon--speech        - \e609
 // .icon--search        - \e00E
+// .icon--up-arrow        - \e00E
+// .icon--back-arrow        - \e00E
 //
 // Styleguide icons
 
 .icon {
-  background-color: transparent;
-  line-height: 1;
-  font-family: 'icon-font';
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle;
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  display: block;
 }
 
 .icon--youtube {
-  &:before {
-    content: '\f167';
-  }
+  background-position: -4px -70px;
+  width: 26px;
+  height: 30px;
 }
 
 .icon--facebook {
-  &:before {
-    content: '\f09A';
-  }
+  background-position: -36px -70px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon--twitter {
-  &:before {
-    content: '\f099';
-  }
+  background-position: -69px -70px;
+  width: 26px;
+  height: 25px;
+}
+
+.icon--telephone {
+  background-position: -104px -70px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon--up-arrow {
+  background-position: -308px -173px;
+  width: 8px;
+  height: 12px;
+}
+
+.icon--back-arrow {
+  background-position: -170px -71px;
+  width: 21px;
+  height: 21px;
 }
 
 .icon--external-link {
-  &:after {
-    content: '\e608';
-  }
+  background-position: -8px -170px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon--link {
+  background-position: -240px -172px;
+  width: 15px;
+  height: 15px;
+}
+
+.icon--share {
+  background-position: -40px -172px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon--print {
+  background-position: -73px -170px;
+  width: 17px;
+  height: 16px;
 }
 
 .icon--tick {
-  &:before {
-    content: '\e01E';
-  }
+  background-position: -39px -268px;
+  width: 21px;
+  height: 16px;
+}
+
+.icon--cross {
+  background-position: -207px -270px;
+  width: 14px;
+  height: 15px;
 }
 
 .icon--doc {
-  &:before {
-    content: '\e601';
-  }
+  background-position: -108px -171px;
+  width: 14px;
+  height: 16px;
 }
 
 .icon--pdf {
-  &:before {
-    content: '\e602';
-  }
+  background-position: -142px -171px;
+  width: 14px;
+  height: 16px;
 }
 
 .icon--open {
-  &:before {
-    content: "\e606";
-  }
+  background-position: -142px -171px;
+  width: 14px;
+  height: 16px;
 }
 
 .icon--closed {
-  &:before {
-    content: '\e607';
-  }
+  background-position: -205px -75px;
+  width: 18px;
+  height: 12px;
 }
 
 .icon--close {
-  &:before {
-    content: '\e01D';
-  }
+  background-position: -140px -268px;
+  width: 16px;
+  height: 16px;
 }
 
 .icon--desktop {
-  &:before {
-    content: '\e60A';
-  }
+  background-position: -371px -174px;
+  width: 16px;
+  height: 13px;
 }
 
 .icon--speech {
-  &:before {
-    content: '\e609';
-  }
+  background-position: -138px -74px;
+  width: 19px;
+  height: 16px;
 }
 
 .icon--search {
-  &:before {
-    content: '\e00E';
-  }
+  background-position: -138px -74px;
+  width: 19px;
+  height: 16px;
 }
 
-.icon--menu {
-  &:before {
-    content: '\e00A';
-  }
+.icon--search.is-focused {
+  background-position: -172px -268px;
+  width: 17px;
+  height: 17px;
 }
 
 .icon--globe {
-  &:before {
-    content: '\e60c';
-  }
+  background-position: -107px -269px;
+  width: 16px;
+  height: 16px;
 }
 
 .icon--tool {
-  &:before {
-    content: '\e602';
-  }
+  background-position: -206px -171px;
+  width: 15px;
+  height: 15px;
 }
 
 .icon--video {
-  &:before {
-    content: '\e609';
-  }
+  background-position: -176px -172px;
+  width: 11px;
+  height: 12px;
 }
 
 .icon--guide {
-  &:before {
-    content: '\e601';
-  }
+  // the guide "icon" empty placeholder to keep category list properly styled
+  width: 30px;
+  height: 30px;
+}
+
+.icon--info {
+  background-position: -78px -264px;
+  width: 8px;
+  height: 22px;
 }
 
 .icon--action-plan {
-  &:before {
-    content: '\e006';
-  }
+  background-position: -273px -172px;
+  width: 15px;
+  height: 15px;
+}
+
+.icon--logo {
+  background-position: -233px -267px;
+  width: 54px;
+  height: 19px;
 }

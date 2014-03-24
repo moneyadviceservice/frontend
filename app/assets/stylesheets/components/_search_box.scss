@@ -26,6 +26,7 @@
   &::-webkit-input-placeholder {
     color: $color-search-text;
   }
+
 }
 
 .search-box__submit {
@@ -33,14 +34,24 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 42px;
-  height: 42px;
+  width: $baseline-unit*7;
+  height: $baseline-unit*7;
   font-size: 24px;
   color: $color-search-text;
+
+  .icon--search {
+    position: absolute;
+    top: $baseline-unit*2;
+    left: $baseline-unit*2;
+  }
 
   &:focus {
     outline: 0;
     background-color: $color-green-secondary;
     color: $color-white;
+
+    .icon--search {
+      @extend .icon--search-white;
+    }
   }
 }

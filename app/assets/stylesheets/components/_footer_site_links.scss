@@ -43,15 +43,21 @@
   border-top: 1px solid darken($color-grey-pale, 10%);
 
   .icon--globe {
-    @include inline-block;
-    margin-top: -3px;
-    padding-right: $baseline-unit/2;
+    position: relative;
+    top: 5px;
+    float: left;
+    padding-right: $baseline-unit;
+//    @include inline-block;
   }
 
   li {
     padding: $baseline-unit 0;
     margin-bottom: $baseline-unit;
     margin-left: 0;
+  }
+
+  a {
+    padding-left: $baseline-unit;
   }
 }
 

@@ -18,6 +18,13 @@
     }
   }
 
+  .icon--desktop {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -3px;
+  }
+
   form {
     @include respond-to($mq-m) {
       @include column(4);

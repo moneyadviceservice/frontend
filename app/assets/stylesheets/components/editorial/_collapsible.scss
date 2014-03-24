@@ -25,15 +25,9 @@
   }
 
   .icon--toggle {
-    @include body(34, 34);
-    @include inline-block;
     position: absolute;
-    right: 0;
-    top: 4px;
-    height: 28px;
-    color: $color-icon-open;
-    margin-right: $baseline-unit;
-    vertical-align: middle;
+    top: $baseline-unit*2;
+    right: $baseline-unit*2;
   }
 
   &.is-on {

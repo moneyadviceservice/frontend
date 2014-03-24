@@ -18,7 +18,7 @@
     display: block;
     width: 48px;
     height: 44px;
-    padding-left: 27%;
+    padding: 10px;
     background-color: $color-green-primary;
     border-right: 1px solid $color-white-translucent-fallback;
     border-right: 1px solid $color-white-translucent;
@@ -34,20 +34,6 @@
       line-height: 2;
       color: $color-text-icon;
     }
-  }
-
-  .icon--facebook {
-    font-size: 22px;
-    margin-left: 5px;
-  }
-
-  .icon--youtube {
-    font-size: 22px;
-    margin-left: 1px;
-  }
-
-  .icon--twitter {
-    font-size: 22px;
   }
 
 }

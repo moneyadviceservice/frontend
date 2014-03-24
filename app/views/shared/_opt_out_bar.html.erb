@@ -6,7 +6,10 @@
     </p>
     <%= form_tag(opt_out_path) do %>
       <%= hidden_field_tag(:redirection_page, request.original_url) %>
-      <%= button_tag(t('opt_out_bar.button'), class: 'opt-out-bar__button icon--desktop') %>
+      <%= button_tag(class: 'opt-out-bar__button') do %>
+        <span class="icon icon--desktop"></span>
+        <%= t('opt_out_bar.button') %>
+      <% end %>
     <% end %>
   </div>
 </div>

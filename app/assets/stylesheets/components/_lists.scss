@@ -25,20 +25,19 @@
   list-style: none;
 
   li:before {
+    @extend .icon;
+    @extend .icon--tick;
+    content: '';
     color: $color-list-yes;
-    content: '\e01E';
-    display: block;
-    font-family: 'icon-font';
     position: relative;
-    width: 0;
-    height: 0;
-    left: -25px;
+    left: 0;
     top: 0;
+    margin-right: 6px ;
   }
 
   .no:before {
-    content: '\e01D';
-    color: $color-list-no;
+    @extend .icon;
+    @extend .icon--cross;
   }
 }
 
@@ -49,6 +48,7 @@
 
 // Yes/No list style for editorial content
 .editorial .yes-no {
+  padding-left: 0;
   @extend .list--benefits;
 }
 
@@ -61,7 +61,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  
+
   > li:before{
     content: none;
   }

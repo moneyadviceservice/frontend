@@ -1,142 +1,215 @@
 // Icons
 //
-// .icon--masLogo       - .png
-// .icon--youtube       - \e605
-// .icon--facebook      - \e61c
-// .icon--twitter       - \e608
-// .icon--tick          - \e609
-// .icon--externalLink  - \e619
-// .icon--doc           - \e611
-// .icon--pdf           - \e602
-// .icon--open          - \e603
-// .icon--closed        - \e0012
-// .icon--close         - \e60A
-// .icon--desktop       - \e603
-// .icon--speech        - \e609
-// .icon--search        - \e00E
+// .icon--logo - mas logo (small)
+// .icon--youtube - youtube logo
+// .icon--facebook - facebook icon
+// .icon--twitter - twitter icon
+// .icon--globe - globe icon to symbolise language change
+// .icon--up-arrow - up arrow icon
+// .icon--desktop - desktop computer icon
+// .icon--external-link - icon for an external link
+// .icon--tick - tick icon
+// .icon--cross - cross icon
+// .icon--doc - WORD document icon
+// .icon--pdf - PDF document icon
+// .icon--down-chevron - down chevron icon
+// .icon--up-chevron - up chevron icon
+// .icon--close - close icon
+// .icon--search - green search icon
+// .icon--search-white - white search icon
 //
 // Styleguide icons
 
 .icon {
-  background-color: transparent;
-  line-height: 1;
-  font-family: 'icon-font';
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle;
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon--logo {
+  background-position: -233px -255px;
+  width: 56px;
+  height: 38px;
 }
 
 .icon--youtube {
-  &:before {
-    content: '\f167';
-  }
+  background-position: -4px -70px;
+  width: 30px;
+  height: 30px;
 }
 
 .icon--facebook {
-  &:before {
-    content: '\f09A';
-  }
+  background-position: -36px -70px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon--twitter {
-  &:before {
-    content: '\f099';
-  }
-}
-
-.icon--external-link {
-  &:after {
-    content: '\e608';
-  }
-}
-
-.icon--tick {
-  &:before {
-    content: '\e01E';
-  }
-}
-
-.icon--doc {
-  &:before {
-    content: '\e601';
-  }
-}
-
-.icon--pdf {
-  &:before {
-    content: '\e602';
-  }
-}
-
-.icon--open {
-  &:before {
-    content: "\e606";
-  }
-}
-
-.icon--closed {
-  &:before {
-    content: '\e607';
-  }
-}
-
-.icon--close {
-  &:before {
-    content: '\e01D';
-  }
-}
-
-.icon--desktop {
-  &:before {
-    content: '\e60A';
-  }
-}
-
-.icon--speech {
-  &:before {
-    content: '\e609';
-  }
-}
-
-.icon--search {
-  &:before {
-    content: '\e00E';
-  }
-}
-
-.icon--menu {
-  &:before {
-    content: '\e00A';
-  }
+  background-position: -69px -70px;
+  width: 26px;
+  height: 25px;
 }
 
 .icon--globe {
-  &:before {
-    content: '\e60c';
-  }
+  background-position: -107px -269px;
+  width: 20px;
+  height: 20px;
 }
 
-.icon--tool {
-  &:before {
-    content: '\e602';
-  }
+.icon--up-arrow {
+  background-position: -308px -173px;
+  width: 8px;
+  height: 12px;
 }
 
-.icon--video {
-  &:before {
-    content: '\e609';
-  }
+.icon--desktop {
+  background-position: -371px -174px;
+  width: 16px;
+  height: 13px;
 }
 
-.icon--guide {
-  &:before {
-    content: '\e601';
-  }
+.icon--external-link {
+  background-position: -8px -170px;
+  width: 18px;
+  height: 18px;
 }
 
-.icon--action-plan {
-  &:before {
-    content: '\e006';
+// LIST ICONS
+.icon--tick {
+  background-position: -39px -268px;
+  width: 21px;
+  height: 16px;
+}
+
+.icon--cross {
+  background-position: -207px -270px;
+  width: 21px;
+  height: 16px;
+}
+
+// DOCUMENT ICONS
+.icon--doc {
+  background-position: -108px -171px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon--pdf {
+  background-position: -142px -171px;
+  width: 18px;
+  height: 18px;
+}
+
+// CHEVRON ICONS
+.icon--down-chevron {
+  background-position: -238px -76px;
+  width: 18px;
+  height: 12px;
+}
+
+.icon--up-chevron {
+  background-position: -205px -75px;
+  width: 18px;
+  height: 16px;
+}
+
+.icon--close {
+  background-position: -140px -268px;
+  width: 20px;
+  height: 20px;
+}
+
+// SEARCH ICONS
+.icon--search {
+  background-position: -172px -268px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon--search-white {
+  background-position: -271px -73px;
+  width: 20px;
+  height: 20px;
+}
+
+
+// -----------------------------------------------------
+//  HIGH DEFINITION ICONS
+// -----------------------------------------------------
+@include device-pixel-ratio() {
+  .icon {
+    background-size: 339px;
+  }
+
+  .icon--logo {
+    background-position: -149px -115px;
+  }
+
+  .icon--youtube {
+    background-position: -4px -4px;
+  }
+
+  .icon--facebook {
+    background-position: -36px -4px;
+  }
+
+  .icon--twitter {
+    background-position: -70px -3px;
+  }
+
+  .icon--globe {
+    background-position: -106px -105px;
+  }
+
+  .icon--up-arrow {
+    background-position: -169px -82px;
+  }
+
+  .icon--desktop {
+    background-position: -199px -82px;
+  }
+
+  .icon--external-link {
+    background-position: -8px -53px;
+  }
+
+  // LIST ICONS
+  .icon--tick {
+    background-position: -40px -105px;
+  }
+
+  .icon--cross {
+    background-position: -205px -105px;
+  }
+
+  // DOCUMENT ICONS
+  .icon--doc {
+    background-position: -107px -55px;
+  }
+
+  .icon--pdf {
+    background-position: -140px -55px;
+  }
+
+  // CHEVRON ICONS
+  .icon--down-chevron {
+    background-position:-238px -10px;
+  }
+
+  .icon--up-chevron {
+    background-position: -205px -10px;
+  }
+
+  .icon--close {
+    background-position: -137px -102px;
+  }
+
+  // SEARCH ICONS
+  .icon--search {
+    background-position: -172px -104px;
+  }
+
+  .icon--search-white {
+    background-position: -272px -8px;
   }
 }

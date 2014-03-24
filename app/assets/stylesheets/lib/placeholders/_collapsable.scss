@@ -1,24 +1,29 @@
 // This works in conjunction with js/modules/mas_collapsable.js
 
 %collapsable-trigger {
+
   // Prevent accidental text selection
   user-select: none;
 
   .icon--toggle {
-    @extend .icon--closed;
+    @extend .icon--down-arrow;
   }
+
   .js & {
   }
+
   &.is-on {
   }
+
   &.is-off {
     .icon--toggle {
-      @extend .icon--open;
+      @extend .icon--up-arrow;
     }
   }
 }
 
 %collapsable-target {
+
   .js & {
     display: none;
   }

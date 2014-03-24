@@ -3,11 +3,11 @@
 
 $responsive: true;
 
-@import 'lib/lib';
+@import 'lib/all';
 
 @import 'base/default';
 @import 'base/typography';
 @import 'base/links';
 @import 'base/forms';
 @import 'base/media';
-@import 'components/icons';
+@import 'sub_components/icon';

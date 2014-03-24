@@ -7,13 +7,11 @@
   padding: $baseline-unit*3;
   margin: $baseline-unit*4 0;
   border-radius: 5px;
-//  color: $color-green-tertiary;
   background-color: $color-callout-background;
 
   > h3 {
     @extend %heading-extra-small;
     margin: 0 0 $baseline-unit 0;
-//    color: $color-green-tertiary;
     text-transform: capitalize;
   }
 

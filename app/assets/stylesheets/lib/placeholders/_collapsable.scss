@@ -6,7 +6,7 @@
   user-select: none;
 
   .icon--toggle {
-    @extend .icon--down-arrow;
+    @extend .icon--down-chevron;
   }
 
   .js & {
@@ -17,7 +17,7 @@
 
   &.is-off {
     .icon--toggle {
-      @extend .icon--up-arrow;
+      @extend .icon--up-chevron;
     }
   }
 }

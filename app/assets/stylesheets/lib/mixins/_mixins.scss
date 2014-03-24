@@ -3,3 +3,9 @@
   -moz-box-sizing: $box-model; // Firefox <= 19
   box-sizing: $box-model;
 }
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); // filter for IE8
+}

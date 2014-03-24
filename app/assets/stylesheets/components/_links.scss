@@ -1,4 +1,20 @@
-%link-nav {
+%link-nav-primary {
+  color: $color-primary-nav;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-primary-nav-visited;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-primary-nav;
+    text-decoration: underline;
+  }
+}
+
+%link-nav-secondary {
   color: $color-link-nav;
   text-decoration: none;
 
@@ -13,6 +29,7 @@
     text-decoration: underline;
   }
 }
+
 
 // apply a different style for links that appear only inside a paragraph in editorial content
 .editorial p > a {

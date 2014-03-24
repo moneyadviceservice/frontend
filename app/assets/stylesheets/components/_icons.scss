@@ -1,22 +1,22 @@
 // Icons
 //
-// .icon--logo
-// .icon--youtube
-// .icon--facebook
-// .icon--twitter
-// .icon--globe
-// .icon--up-arrow
-// .icon--desktop
-// .icon--external-link
-// .icon--tick
-// .icon--cross
-// .icon--doc
-// .icon--pdf
-// .icon--down-chevron
-// .icon--up-chevron
-// .icon--close
-// .icon--search
-// .icon--search-white
+// .icon--logo - mas logo (small)
+// .icon--youtube - youtube logo
+// .icon--facebook - facebook icon
+// .icon--twitter - twitter icon
+// .icon--globe - globe icon to symbolise language change
+// .icon--up-arrow - up arrow icon
+// .icon--desktop - desktop computer icon
+// .icon--external-link - icon for an external link
+// .icon--tick - tick icon
+// .icon--cross - cross icon
+// .icon--doc - document icon
+// .icon--pdf - PDF file icon
+// .icon--down-chevron - down chevron icon
+// .icon--up-chevron - up chevron icon
+// .icon--close - close icon
+// .icon--search - green search icon
+// .icon--search-white - white search icon
 //
 // Styleguide icons
 
@@ -127,7 +127,7 @@
 
 .icon--doc {
   background-position: -108px -171px;
-  width: 14px;
+  width: 18px;
   height: 18px;
   @include device-pixel-ratio() {
     background-position: -107px -55px;
@@ -136,7 +136,7 @@
 
 .icon--pdf {
   background-position: -142px -171px;
-  width: 14px;
+  width: 18px;
   height: 18px;
   @include device-pixel-ratio() {
     background-position: -140px -55px;

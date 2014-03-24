@@ -25,19 +25,19 @@
   list-style: none;
 
   li:before {
+    @extend .icon;
+    @extend .icon--tick;
+    content: '';
     color: $color-list-yes;
-    display: block;
-    background-position: -613px -19px;
-    width: 25px;
-    height: 27px;
     position: relative;
-    left: -25px;
+    left: 0;
     top: 0;
+    margin-right: 6px ;
   }
 
   .no:before {
-    content: '\e01D';
-    color: $color-list-no;
+    @extend .icon;
+    @extend .icon--cross;
   }
 }
 
@@ -48,6 +48,7 @@
 
 // Yes/No list style for editorial content
 .editorial .yes-no {
+  padding-left: 0;
   @extend .list--benefits;
 }
 

@@ -15,10 +15,8 @@ describe ArticleDecorator do
   it { should respond_to(:title) }
 
   describe '#alternate_options' do
-    before { allow(article).to receive(:alternate) { alternate } }
-
-    context 'when there is no alternate' do
-      let(:alternate) { nil }
+    context 'when there are no alternates' do
+      before { allow(article).to receive(:alternates) { [] } }
 
       it 'returns an empty hash' do
         expect(decorator.alternate_options).to be_a(Hash)
@@ -26,7 +24,9 @@ describe ArticleDecorator do
       end
     end
 
-    context 'when there is an alternate' do
+    context 'when there are alternates' do
+      before { allow(article).to receive(:alternates) { [alternate] } }
+
       let(:alternate) { double(hreflang: locale, url: url) }
       let(:locale) { double }
       let(:url) { double }

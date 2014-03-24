@@ -9,7 +9,7 @@ module Core
       { title:       double,
         description: double,
         body:        double,
-        alternate:   { title: double, url: double, hreflang: double } }
+        alternates:   [{ title: double, url: double, hreflang: double }] }
     end
 
     it { should respond_to :type }
@@ -24,32 +24,36 @@ module Core
     it { should respond_to :body }
     it { should respond_to :body= }
 
-    it { should respond_to :alternate }
-    it { should respond_to :alternate= }
+    it { should respond_to :alternates }
+    it { should respond_to :alternates= }
 
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:body) }
 
-    its(:alternate) { should be_a(Article::Alternate) }
+    describe '#alternates' do
+      it 'returns an array of alternates' do
+        expect(subject.alternates.first).to be_an_instance_of(Core::Article::Alternate)
+      end
+    end
 
-    describe '#alternate=' do
-        let(:alternate_title) { 'title' }
-        let(:url) { 'www.example.com' }
-        let(:hreflang) { 'cy' }
+    describe '#alternates=' do
+      let(:alternate_title) { 'title' }
+      let(:url) { 'www.example.com' }
+      let(:hreflang) { 'cy' }
 
-        before { subject.alternate=({ title: alternate_title, url: url, hreflang: hreflang }) }
+      before { subject.alternates=([{ title: alternate_title, url: url, hreflang: hreflang }]) }
 
-        it 'assigns alternate title' do
-          expect(subject.alternate.title).to eq(alternate_title)
-        end
+      it 'assigns alternate title' do
+        expect(subject.alternates.first.title).to eq(alternate_title)
+      end
 
-        it 'assigns alternate url' do
-          expect(subject.alternate.url).to eq(url)
-        end
+      it 'assigns alternate url' do
+        expect(subject.alternates.first.url).to eq(url)
+      end
 
-        it 'assigns alternate hreflang' do
-            expect(subject.alternate.hreflang).to eq(hreflang)
-        end
+      it 'assigns alternate hreflang' do
+        expect(subject.alternates.first.hreflang).to eq(hreflang)
+      end
     end
   end
 end

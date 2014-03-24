@@ -16,10 +16,11 @@ module Core::Repositories
         attributes = response.body
         links      = response.headers['link'].try(:links) || []
 
+        attributes['alternates'] = []
         links.each do |link|
           next unless link['rel'] == 'alternate'
 
-          attributes['alternate'] = { url: link.href, title: link['title'], hreflang: link['hreflang'] }
+          attributes['alternates'] << { url: link.href, title: link['title'], hreflang: link['hreflang'] }
         end
 
         attributes

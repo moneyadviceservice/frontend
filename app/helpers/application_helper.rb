@@ -47,6 +47,10 @@ module ApplicationHelper
     format_tokens_as_html(tokens, line_numbers)
   end
 
+  def locale_class
+    "theme-#{I18n.locale}" unless I18n.locale == :en
+  end
+
   private
 
   def strip_leading_indentation_from_source(source)

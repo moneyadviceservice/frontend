@@ -1,7 +1,9 @@
 @import 'lib/lib';
+
 @import 'utilities/clearfix';
 @import 'utilities/visually_hidden';
 @import 'utilities/inline_block';
+
 @import 'layout/common';
 @import 'layout/header';
 @import 'layout/footer';
@@ -12,6 +14,7 @@
 @import 'layout/pages/search_results_page';
 
 //atoms
+@import 'components/links';
 @import 'components/mas_logo';
 @import 'components/intro';
 @import 'components/lists';

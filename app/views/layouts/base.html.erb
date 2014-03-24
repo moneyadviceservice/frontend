@@ -54,7 +54,7 @@
 
     MAS.supports = (function(w,d){
       var S = {};
-      
+
       function supportTest(prop, context){
         try {
           return prop in context && context[prop] !== null;
@@ -122,6 +122,8 @@
           f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
   </script>
+
+  <a  id="top"></a>
 
   <%= content_for?(:content) ? yield(:content) : yield %>
 

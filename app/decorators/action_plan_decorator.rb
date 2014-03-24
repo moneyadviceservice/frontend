@@ -4,9 +4,9 @@ class ActionPlanDecorator < Draper::Decorator
   delegate :id, :title, :description
 
   def alternate_options
-    return {} unless object.alternate.present?
-
-    { object.alternate.hreflang => object.alternate.url }
+    object.alternates.each_with_object({}) do |alternate, hash|
+      hash[alternate.hreflang] = alternate.url
+    end
   end
 
   def canonical_url

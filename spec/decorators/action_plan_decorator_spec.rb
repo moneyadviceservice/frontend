@@ -15,24 +15,24 @@ describe ActionPlanDecorator do
   it { should respond_to(:title) }
 
   describe '#alternate_options' do
-    before { allow(action_plan).to receive(:alternate) { alternate } }
-
-    context 'when there is no alternate' do
-      let(:alternate) { nil }
+    context 'when there are no alternates' do
+      before { allow(action_plan).to receive(:alternates) { [] } }
 
       it 'returns an empty hash' do
         expect(decorator.alternate_options).to be_a(Hash)
-        expect(decorator.alternate_options).to be_empty
+        expect(subject.alternate_options).to be_empty
       end
     end
 
-    context 'when there is an alternate' do
+    context 'when there are alternates' do
+      before { allow(action_plan).to receive(:alternates) { [alternate] } }
+
       let(:alternate) { double(hreflang: locale, url: url) }
       let(:locale) { double }
       let(:url) { double }
 
       it 'returns a hash of locale => url pairs' do
-        expect(decorator.alternate_options).to include(locale => url)
+        expect(subject.alternate_options).to include(locale => url)
       end
     end
   end

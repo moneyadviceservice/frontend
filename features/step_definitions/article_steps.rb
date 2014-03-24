@@ -1,31 +1,22 @@
 When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   locale = language_to_locale(language)
-  data   = { id:          current_article.id,
-             title:       current_article.title,
-             description: current_article.description,
-             body:        current_article.body }
 
-  VCR.use_cassette("article_#{locale}", erb: data) do
-    article_page.load(locale: locale, id: current_article.id)
-  end
+  article_page.load(locale: locale, id: current_article_in(locale).id)
 end
 
 When(/^I translate the article into (.*)$/) do |language|
   locale = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
-  data = { id:          current_article.id,
-           title:       current_article.title,
-           description: current_article.description,
-           body:        current_article.body }
+
   expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
   expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
 
-  VCR.use_cassette("article_#{locale}", erb: data) do
-    home_page.footer_site_links.send("#{language.downcase}_link").click
-  end
+  home_page.footer_site_links.send("#{language.downcase}_link").click
 end
 
-Then(/^I should see the article in (?:.*)$/) do
+Then(/^I should see the article in (.*)$/) do |language|
+  current_article = current_article_in(language_to_locale(language))
+
   expect(article_page.title).to eq("#{current_article.title} - #{I18n.t('layouts.base.title')}")
   expect(article_page.description[:content]).to include(current_article.description)
   expect(article_page.heading).to have_content(current_article.title)
@@ -33,7 +24,7 @@ Then(/^I should see the article in (?:.*)$/) do
 end
 
 Then(/^the article should have a canonical tag for that language version$/) do
-  expected_href = article_url(id: current_article.id, locale: current_locale)
+  expected_href = article_url(id: current_article_in(current_locale).id, locale: current_locale)
 
   expect { article_page.canonical_tag[:href] }.to become(expected_href)
 end

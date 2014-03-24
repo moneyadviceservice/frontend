@@ -1,109 +1,109 @@
 cy:
 
   js:
-    hide: Cuddio
-    show: Dangos
+    hide: cuddio
+    show: dangos
 
   layouts:
     base:
-      title: Gwasanaeth Cynghori Ariannol
+      title: Y Gwasanaeth Cynghori Ariannol
     error:
-      home: Cartref
+      home: Hafan
 
   locales:
     cy: Cymraeg
-    en: English
+    en: Saesneg
 
   errors:
     show:
       bad_request:
         heading: Mae'n ddrwg gennym!
-        intro: Cais drwg
+        intro: Cais Drwg
       forbidden:
         heading: Mae'n ddrwg gennym!
-        intro: Forbidden
+        intro: Gwaharddedig
       internal_server_error:
         heading: Mae'n ddrwg gennym!
         intro: Gwall gweinydd mewnol
       method_not_allowed:
         heading: Mae'n ddrwg gennym!
-        intro: Dull Heb ganiateir
+        intro: Ni Chaniateir y Dull
       not_acceptable:
         heading: Mae'n ddrwg gennym!
-        intro: Ddim Derbyniol
+        intro: Annerbyniol
       not_found:
         heading: Mae'n ddrwg gennym!
-        intro: Nid oedd y dudalen yr ydych yn chwilio amdano Daethpwyd o hyd
+        intro: Ni chanfuwyd y dudalen yr oeddech yn chwilio amdani
       not_implemented:
         heading: Mae'n ddrwg gennym!
-        intro: Heb ei weithredu
+        intro: Heb ei Weithredu
       unauthorized:
         heading: Mae'n ddrwg gennym!
-        intro: heb awdurdod
+        intro: Anawdurdodedig
       unprocessable_entity:
         heading: Mae'n ddrwg gennym!
-        intro: Unprocessable Endid
+        intro: Endid na ellir ei brosesu
 
   home:
     show:
       description: >
         Mae'r Gwasanaeth Cynghori Ariannol yn eich helpu i reoli eich arian yn well. Defnyddiwch
-        ein Gwiriad iechyd, cyfrifianellau a thablau cymharu i wneud y gorau o'ch arian.
+        ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
       feature:
-        strapline: Rhad ac am ddim, diduedd a sefydlwyd gan y llywodraeth
+        strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
         list_html: |
           <li>
-            <a href="/cy/articles/sut-i-flaenoriaethuch-dyledion">Cymerwch reolaeth eich dyled</a>
-            <p>Magna Egestas Fusce Venenatis Tortor</p>
+            <a href="/cy/articles/sut-i-flaenoriaethuch-dyledion">Rheolwch eich dyledion</a>
+            <p>Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled</p>
           </li>
           <li>
-            <a href="/cy/articles/benthyciadau-diwrnod-cyflog">Benthyciadau diwrnod cyflog</a>
-            <p>Ridiculus Aenean Risus Bibendum Ullamcorper</p>
+            <a href="/cy/articles/benthyciadau-diwrnod-cyflog">Dewisiadau amgen yn hytrach na benthyciad diwrnod cyflog</a>
+            <p>Cymorth wrth ganfod ffyrdd gwell a rhatach o fenthyca arian</p>
           </li>
           <li>
-            <a href="/cy/categories/protecting-your-family-or-dependants">Diogelu eich teulu</a>
-            <p>Pharetra Tortor Condimentum Ipsum Bibendum</p>
+            <a href="/cy/categories/protecting-your-family-or-dependants">Gwarchod eich teulu</a>
+            <p>Yn cynnwys yswiriant bywyd, diogelwch salwch critigol a diogelwch incwm</p>
           </li>
           <li>
             <a href="/cy/categories/mortgages-and-buying-property">Morgeisi a phrynu cartref</a>
-            <p>Dapibus Nibh Nullam Lorem Tellus</p>
+            <p>Costau prynu cartref a mathau o forgeisi wedi eu hegluro</p>
           </li>
           <li>
-            <a href="/cy/categories/budgeting-and-taking-control">Cynlluniwch ble mae eich arian yn mynd</a>
-            <p>Vehicula Pharetra Inceptos Purus Parturient</p>
+            <a href="/cy/categories/budgeting-and-taking-control">Cynlluniwch i ble aiff eich arian</a>
+            <p>Rheoli'ch incwm a'ch gwariant</p>
           </li>
           <li>
             <a href="/cy/categories/low-income-survival-tips">Cyllidebu ar incwm isel</a>
-            <p>Elit Amet Fermentum Purus Nibh</p>
+            <p>Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach</p>
           </li>
       contact:
-        title: Methu â darganfod beth ydych ei angen?
+        title: Methu canfod beth sydd ei angen arnoch chi?
         introduction_html: |
           <p>Mae ein staff hyfforddedig wrth law i helpu</p>
         details_html: |
-          <a class="home-contact__number" href="tel:+443005005555">0300 500 5555</a>
-          <h3>oriau agor</h3>
-          <p>Dydd Llun – Dydd Gwener: <strong>8yb-8yp</strong><br>Dydd Sadwrn <strong>9yb-1yp</strong></p>
-          <p><a href="/cy/static/cysylltu-a-ni">Cael gwybod am gostau galwadau</a></p>
+          <a class="home-contact__number" href="tel:+443005005000">0300 500 5000</a>
+          <h3>Oriau agor</h3>
+          <p>Dydd Llun–Dydd Gwener: <strong>8am–8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong></p>
+          <p><a href="/en/static/contact-us">Dysgwch am gostau galwadau</a></p>
       promoted:
         - url: /cy/articles/sut-mae-gwella-eich-statws-credyd
-          text: Sut mae gwella eich statws credyd.
+          text: A wyddoch beth yw eich sgôr credyd? Dysgwch pam ei fod yn bwysig.
           image: home-promoted-1.jpg
         - url: /cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol
-          text: Amcangyfrifwch eich costau prynu a symud cyffredinol.
+          text: Gwnewch yn siŵr eich bod wedi cyfrifo gwir gost fforddio eich cartref.
           image: home-promoted-2.jpg
         - url: /cy/action_plans/adeiladu-cronfa-cynilion-argyfwng
-          text: Cynllun gweithredu - Adeiladu cronfa cynilion argyfwng.
+          text: Byddwch yn barod ar gyfer costau annisgwyl drwy gynilo £3 y diwrnod.
           image: home-promoted-3.jpg
 
   categories:
     show:
-      go_to_top_html: Ewch i ben
+      go_to_top_html: Ewch i'r brig
 
   opt_out_bar:
-    message: Fersiwn gynnar o’n gwefan newydd yw hwn.
+    message: Mae hon yn fersiwn gynnar o'n gwefan well.
     feedback: Byddem yn falch iawn i gael eich adborth.
-    button: Edrych ar hyn ar y safle presennol
+    button: Edrychwch ar hyn ar ein safle presennol
     email_contents: |
       mailto:tools.help%40moneyadviceservice.org.uk?subject=Fy%20adborth%20ar%20fersiwn%20cynnar
       %20eich%20gwefan&amp;body=Diolch%20am%20gymryd%20yr%20amser%20i%20roi%20adborth%20ar%20fersiwn
@@ -120,9 +120,9 @@ cy:
   footer:
     accessibility: Hygyrchedd
     accessibility_link: /cy/static/hygyrchedd
-    privacy_statement: Polisi preifatrwydd
+    privacy_statement: Datganiad Preifatrwydd
     privacy_statement_link: /cy/static/polisipreifatrwydd
-    terms_and_conditions: Telerau ac amodau
+    terms_and_conditions: Amodau a Thelerau
     terms_and_conditions_link: /cy/static/telerau-ac-amodau
     jobs: Swyddi
     jobs_link: /cy/static/swyddi
@@ -130,38 +130,38 @@ cy:
     about_us_link: /cy/static/amdanom-ni
     contact_us: Cysylltu â ni
     contact_us_link: /cy/static/cysylltu-a-ni
-    media_centre: Canolfan gyfryngau
+    media_centre: Canolfan y cyfryngau
     media_centre_link: /cy/static/canolfan-gyfryngau
     partners: Partneriaid
     partners_link: /cy/categories/Partners
     site_map: Map safle
     site_map_link: /cy/static/canolfan-gyfryngau
-    our_debt_work: Ein Gwaith Dyled
+    our_debt_work: Ein gwaith dyledion
     our_debt_work_link: /cy/categories/our-debt-work
-    cookie_guide: Canllaw i gwcis
+    cookie_guide: Canllaw cwcis
     cookie_guide_link: /cy/static/cookie_notice_cy
     cookie_message:
       body_html: |
-        Rydym yn defnyddio cwcis i sicrhau eich bod yn derbyn y gwasanaeth gorau posibl o'n gwefan.
-        Trwy glicio ar unrhyw ddolen ar y dudalen hon rydych yn <a href="%{url}">cytuno i'w defnydd</a>.
-        Fodd bynnag, os hoffech wneud, gallwch ddefnyddio ein canllaw i gwcis i'w hanalluogi ar unrhyw adeg.
-      close_button: Gau
+        Rydym yn defnyddio cwcis i sicrhau eich bod yn cael y profiad gorau posibl.
+        Drwy barhau i ddefnyddio ein gwefan rydych yn cytuno â'r defnydd a wneir ohoni.
+        <a href="%{url}">Canfyddwch fwy am cwcis.</a>
+      close_button: Cau
 
   search_box:
-    label: Chwilio Gwasanaeth Cynghori Ariannol
-    placeholder: Chwilio…
+    label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol
+    placeholder: Chwilio...
     button_text: Chwilio
 
   search_results:
     index:
       document_title: Chwilio
-      page_title: Chwilio Gwasanaeth Cynghori Ariannol
+      page_title: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol
 
     index_no_results:
       document_title: "%{query} - Chwilio"
-      page_title: Canlyniadau chwilio am “%{query}”
-      body: Does dim canlyniadau. Os gwelwch yn dda rhowch gynnig ar chwiliad gwahanol.
+      page_title: Canlyniadau chwilio ar gyfer "%{query}"
+      body: Ni chanfuwyd unrhyw ganlyniadau. Chwiliwch am rywbeth gwahanol.
 
     index_with_results:
       document_title: "%{query} - Chwilio"
-      page_title: Canlyniadau chwilio am “%{query}”
+      page_title: Canlyniadau chwilio am "%{query}"

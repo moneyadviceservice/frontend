@@ -94,7 +94,6 @@
   font-kerning: $kerning;
 }
 
-// Default font stack placeholder
 %font-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -103,19 +102,17 @@
   }
 }
 
-// Bold weight headings for the brand font
-%font-heading-heavy {
+%font-heading-medium {
   font-family: Arial;
-  font-weight: 700;
+  font-weight: 500;
   .wf-museosans-n4-active & {
     font-family: 'museo_sans';
   }
 }
 
-// Medium weight headings for the brand font
-%font-heading-medium {
+%font-heading-heavy {
   font-family: Arial;
-  font-weight: 500;
+  font-weight: 700;
   .wf-museosans-n4-active & {
     font-family: 'museo_sans';
   }

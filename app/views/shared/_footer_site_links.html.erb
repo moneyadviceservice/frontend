@@ -50,18 +50,18 @@
 
   <div class="l-constrained l-padded">
     <ul class="footer-site-links__language list--unstyled">
-      <% if content_for?(:alternate_link) %>
-        <%= yield(:alternate_link) %>
-      <% else %>
-        <% locals.each do |locale| %>
-          <li>
+      <li>
+        <% if content_for?(:alternate_link) %>
+          <%= yield(:alternate_link) %>
+        <% else %>
+          <% locals.each do |locale| %>
             <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
               <span class="icon icon--globe"></span>
               <%= t("locales.#{locale}") %>
             <% end %>
-          </li>
+          <% end %>
         <% end %>
-      <% end %>
+      </li>
     </ul>
   </div>
 </nav>

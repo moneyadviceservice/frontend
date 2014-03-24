@@ -28,7 +28,7 @@
 .icon {
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;
-  display: block;
+  display: inline-block;
 }
 
 .icon--youtube {
@@ -99,8 +99,8 @@
 
 .icon--cross {
   background-position: -207px -270px;
-  width: 14px;
-  height: 15px;
+  width: 21px;
+  height: 16px;
 }
 
 .icon--doc {
@@ -115,17 +115,27 @@
   height: 16px;
 }
 
-.icon--open {
-  background-position: -142px -171px;
-  width: 14px;
-  height: 16px;
-}
 
-.icon--closed {
-  background-position: -205px -75px;
+
+.icon--down-arrow {
+  background-position:-238px -76px;
   width: 18px;
   height: 12px;
 }
+
+.icon--up-arrow {
+  background-position: -205px -75px;
+  width: 18px;
+  height: 16px;
+}
+
+
+
+
+
+
+
+
 
 .icon--close {
   background-position: -140px -268px;
@@ -145,17 +155,18 @@
   height: 16px;
 }
 
+.icon--search {
+  background-position: -172px -268px;
+  width: 17px;
+  height: 17px;
+}
+
 .icon--search-white   {
   background-position: -271px -73px;
   width: 17px;
   height: 17px;
 }
 
-.icon--search {
-  background-position: -172px -268px;
-  width: 17px;
-  height: 17px;
-}
 
 .icon--globe {
   background-position: -107px -269px;

@@ -10,8 +10,8 @@
 // .icon--external-link - icon for an external link
 // .icon--tick - tick icon
 // .icon--cross - cross icon
-// .icon--doc - document icon
-// .icon--pdf - PDF file icon
+// .icon--doc - WORD document icon
+// .icon--pdf - PDF document icon
 // .icon--down-chevron - down chevron icon
 // .icon--up-chevron - up chevron icon
 // .icon--close - close icon
@@ -24,171 +24,192 @@
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;
   display: inline-block;
-  @include device-pixel-ratio() {
-    background-size: 339px;
-  }
 }
 
 .icon--logo {
   background-position: -233px -255px;
   width: 56px;
   height: 38px;
-  @include device-pixel-ratio() {
-    background-position: -149px -115px;
-  }
 }
 
 .icon--youtube {
   background-position: -4px -70px;
   width: 30px;
   height: 30px;
-  @include device-pixel-ratio() {
-    background-position: -4px -4px;
-  }
 }
 
 .icon--facebook {
   background-position: -36px -70px;
   width: 24px;
   height: 24px;
-  @include device-pixel-ratio() {
-    background-position: -36px -4px;
-  }
 }
 
 .icon--twitter {
   background-position: -69px -70px;
   width: 26px;
   height: 25px;
-  @include device-pixel-ratio() {
-    background-position: -70px -3px;
-  }
 }
 
 .icon--globe {
   background-position: -107px -269px;
   width: 20px;
   height: 20px;
-  @include device-pixel-ratio() {
-    background-position: -106px -105px;
-  }
 }
 
 .icon--up-arrow {
   background-position: -308px -173px;
   width: 8px;
   height: 12px;
-  @include device-pixel-ratio() {
-    background-position: -169px -82px;
-  }
 }
 
 .icon--desktop {
   background-position: -371px -174px;
   width: 16px;
   height: 13px;
-  @include device-pixel-ratio() {
-    background-position: -199px -82px;
-  }
 }
 
 .icon--external-link {
   background-position: -8px -170px;
   width: 18px;
   height: 18px;
-  @include device-pixel-ratio() {
-    background-position: -8px -53px;
-  }
 }
 
-
 // LIST ICONS
-
 .icon--tick {
   background-position: -39px -268px;
   width: 21px;
   height: 16px;
-  @include device-pixel-ratio() {
-    background-position: -40px -105px;
-  }
 }
 
 .icon--cross {
   background-position: -207px -270px;
   width: 21px;
   height: 16px;
-  @include device-pixel-ratio() {
-    background-position: -205px -105px;
-  }
 }
 
-
 // DOCUMENT ICONS
-
 .icon--doc {
   background-position: -108px -171px;
   width: 18px;
   height: 18px;
-  @include device-pixel-ratio() {
-    background-position: -107px -55px;
-  }
 }
 
 .icon--pdf {
   background-position: -142px -171px;
   width: 18px;
   height: 18px;
-  @include device-pixel-ratio() {
-    background-position: -140px -55px;
-  }
 }
 
-
 // CHEVRON ICONS
-
 .icon--down-chevron {
   background-position: -238px -76px;
   width: 18px;
   height: 12px;
-  @include device-pixel-ratio() {
-    background-position:-238px -10px;
-  }
 }
 
 .icon--up-chevron {
   background-position: -205px -75px;
   width: 18px;
   height: 16px;
-  @include device-pixel-ratio() {
-    background-position: -205px -10px;
-  }
 }
 
 .icon--close {
   background-position: -140px -268px;
   width: 20px;
   height: 20px;
-  @include device-pixel-ratio() {
-    background-position: -137px -102px;
-  }
 }
 
 // SEARCH ICONS
-
 .icon--search {
   background-position: -172px -268px;
   width: 20px;
   height: 20px;
-  @include device-pixel-ratio() {
-    background-position: -172px -104px;
-  }
 }
 
 .icon--search-white {
   background-position: -271px -73px;
   width: 20px;
   height: 20px;
-  @include device-pixel-ratio() {
+}
+
+
+// -----------------------------------------------------
+//  HIGH DEFINITION ICONS
+// -----------------------------------------------------
+@include device-pixel-ratio() {
+  .icon {
+    background-size: 339px;
+  }
+
+  .icon--logo {
+    background-position: -149px -115px;
+  }
+
+  .icon--youtube {
+    background-position: -4px -4px;
+  }
+
+  .icon--facebook {
+    background-position: -36px -4px;
+  }
+
+  .icon--twitter {
+    background-position: -70px -3px;
+  }
+
+  .icon--globe {
+    background-position: -106px -105px;
+  }
+
+  .icon--up-arrow {
+    background-position: -169px -82px;
+  }
+
+  .icon--desktop {
+    background-position: -199px -82px;
+  }
+
+  .icon--external-link {
+    background-position: -8px -53px;
+  }
+
+  // LIST ICONS
+  .icon--tick {
+    background-position: -40px -105px;
+  }
+
+  .icon--cross {
+    background-position: -205px -105px;
+  }
+
+  // DOCUMENT ICONS
+  .icon--doc {
+    background-position: -107px -55px;
+  }
+
+  .icon--pdf {
+    background-position: -140px -55px;
+  }
+
+  // CHEVRON ICONS
+  .icon--down-chevron {
+    background-position:-238px -10px;
+  }
+
+  .icon--up-chevron {
+    background-position: -205px -10px;
+  }
+
+  .icon--close {
+    background-position: -137px -102px;
+  }
+
+  // SEARCH ICONS
+  .icon--search {
+    background-position: -172px -104px;
+  }
+
+  .icon--search-white {
     background-position: -272px -8px;
   }
 }

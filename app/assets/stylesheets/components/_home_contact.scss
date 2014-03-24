@@ -18,16 +18,22 @@
   }
 
   h2 {
-    @extend %type-homepage-headings;
-    margin: 0 0 $baseline-unit*3.5;
+    @extend %type-contact-heading;
+    margin: 0;
   }
 
   p {
-    color: $color-home-copy;
     margin-bottom: $baseline-unit*4
   }
 
+  @include respond-to($mq-m) {
+    h2 {
+      margin: $baseline-unit*8 0 0 0;
+    }
+  }
+
   @include respond-to($mq-l) {
+
     @include column(6);
     @include push(3);
   }
@@ -56,7 +62,7 @@
 }
 
 .home-contact__number {
-  @extend %heading-large;
+  @extend %heading-medium;
   display: block;
   color: $color-home-number;
   margin: 0 0 $baseline-unit*2;

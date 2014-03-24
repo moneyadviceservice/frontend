@@ -1,11 +1,26 @@
 // currently only used for the basic homepage heading
 %heading-extra-large {
-  @include heading(30, 36);
+  @include heading(32, 36);
   @extend %font-heading-heavy;
-  color: $color-green-secondary;
 
   @include respond-to($mq-m) {
     @include heading(40, 42);
+  }
+}
+
+%heading-display {
+  @include body(32, 36);
+  @extend %font-heading-heavy;
+
+  @include respond-to($mq-m) {
+    @include body(40, 42);
+  }
+
+  .theme-cy & {
+    @include body(26, 36);
+    @include respond-to($mq-m) {
+      @include body(32, 36);
+    }
   }
 }
 

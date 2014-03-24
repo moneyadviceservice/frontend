@@ -4,7 +4,7 @@
 
 .home-feature__content {
   @extend %clearfix;
-  padding: $baseline-unit*5 0 0 0;
+  padding: $baseline-unit*8 0 $baseline-unit*4 0;
   background: transparent image_url('home-illustration.jpg') 0 100px no-repeat;
 
   @include respond-to($mq-m) {
@@ -17,8 +17,9 @@
 }
 
 .home-feature__heading {
-  padding: 0 $baseline-unit;
+  @extend %heading-display;
   color: $color-text-default;
+  padding: 0 $baseline-unit;
   margin: 0;
   height: 265px;
 
@@ -54,7 +55,7 @@
 
   a {
     @extend %type-homepage-headings;
-    @extend %font-heading-medium;
+//    @extend %font-heading-medium;
     display: block;
     padding: 0 0 $baseline-unit 0;
   }
@@ -88,7 +89,7 @@
     li {
       @include column(3);
       padding: 0;
-      min-height: 186px;
+      min-height: 150px;
       margin-bottom: 0;
     }
   }

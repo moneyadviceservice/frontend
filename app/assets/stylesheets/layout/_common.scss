@@ -56,5 +56,6 @@
 }
 
 .l-split-end {
+  @include column(6);
   float: right;
 }

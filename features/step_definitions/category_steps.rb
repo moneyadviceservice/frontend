@@ -83,12 +83,16 @@ Then(/^the category should have a canonical tag for that language version$/) do
   expect { category_page.canonical_tag[:href] }.to become(expected_href)
 end
 
-Then(/^the category should have an alternate tag for the (.*) version$/) do |language|
-  locale        = language_to_locale(language)
-  expected_href = category_url(id: current_category['id'], locale: locale)
+Then(/^the category page should have alternate tags for the supported locales$/) do
+  available_locales = I18n.available_locales
+  expected_hrefs = []
+  available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'],locale: locale) }
 
-  expect { category_page.alternate_tag[:href] }.to become(expected_href)
-  expect { category_page.alternate_tag[:hreflang] }.to become(locale)
+  expect(category_page.alternate_tags.size).to eq(available_locales.size)
+  category_page.alternate_tags.each do |alternate_tag|
+    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hrefs).to include(alternate_tag[:href])
+  end
 end
 
 Then(/^I should see a filterable list of contents$/) do

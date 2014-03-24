@@ -77,12 +77,12 @@ Feature: Search Engine Optimisation
 
   Scenario Outline: Category pages include an alternate tag
     Given I view a category containing no child categories in <category_locale>
-    Then the category should have an alternate tag for the <alternate_locale> version
+    Then the category page should have alternate tags for the supported locales
 
   Examples:
-    | category_locale | alternate_locale |
-    | English         | Welsh            |
-    | Welsh           | English          |
+    | category_locale |
+    | English         |
+    | Welsh           |
 
   Scenario: Empty query search results page include a robots tag
     Given I am on the home page

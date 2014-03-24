@@ -22,7 +22,7 @@ describe CategoryDecorator do
     let(:url) { double }
 
     before do
-      helpers.stub(alternate_locales: [locale])
+      I18n.stub(available_locales: [locale])
       helpers.stub(category_url: url)
     end
 

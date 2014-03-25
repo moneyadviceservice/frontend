@@ -10,7 +10,7 @@ class ActionPlanDecorator < Draper::Decorator
   end
 
   def footer_alternate_options
-    alternate_options.except(I18n.locale.to_s)
+    Hash[alternate_options.map { |key, value| [key.scan(/\w+/).first, value] }].except(I18n.locale.to_s)
   end
 
   def canonical_url

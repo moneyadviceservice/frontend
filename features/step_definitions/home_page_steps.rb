@@ -77,12 +77,12 @@ Then(/^the home page should have a canonical tag for that language version$/) do
 end
 
 Then(/^the home page should have alternate tags for the supported locales$/) do
-  available_locales = I18n.available_locales
+  expected_hreflangs = ["en-GB", "cy-GB"]
   expected_hrefs = []
-  available_locales.each { |locale| expected_hrefs << root_url(locale: locale) }
+  I18n.available_locales.each { |locale| expected_hrefs << root_url(locale: locale) }
 
   home_page.alternate_tags.each do |alternate_tag|
-    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end

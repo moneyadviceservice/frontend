@@ -27,7 +27,7 @@ describe CategoryDecorator do
     end
 
     it 'returns a hash of locale => url pairs' do
-      expect(subject.alternate_options).to include(locale => url)
+      expect(subject.alternate_options).to include("#{locale}-GB" => url)
     end
   end
 

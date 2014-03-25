@@ -15,6 +15,7 @@ Feature: Cookie Disclosure Statemement
     When I visit another page
     Then I should see the cookie message
 
+  @with_and_without_javascript
   Scenario: Acknowledging the cookie message
     Given I have not previously acknowleged the cookie message
     And I visit the site and see the cookie message

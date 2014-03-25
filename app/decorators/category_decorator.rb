@@ -15,7 +15,7 @@ class CategoryDecorator < Draper::Decorator
 
   def alternate_options
     I18n.available_locales.each_with_object({}) do |locale, map|
-      map[locale] = h.category_url(locale: locale)
+      map["#{locale}-GB"] = h.category_url(locale: locale)
     end
   end
 

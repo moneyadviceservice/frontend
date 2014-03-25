@@ -39,13 +39,13 @@ Then(/^the action plan should have a canonical tag for that language version$/) 
 end
 
 Then(/^the action plan page should have alternate tags for the supported locales$/) do
-  available_locales = I18n.available_locales
+  expected_hreflangs = ["en-GB", "cy-GB"]
   expected_hrefs = []
-  available_locales.each { |locale| expected_hrefs << action_plan_url(id: current_action_plan.id, locale: locale) }
+  I18n.available_locales.each { |locale| expected_hrefs << action_plan_url(id: current_action_plan.id, locale: locale) }
 
-  expect(action_plan_page.alternate_tags.size).to eq(available_locales.size)
+  expect(action_plan_page.alternate_tags.size).to eq(expected_hreflangs.size)
   action_plan_page.alternate_tags.each do |alternate_tag|
-    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end

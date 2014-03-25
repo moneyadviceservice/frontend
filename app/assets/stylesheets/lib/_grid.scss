@@ -13,7 +13,7 @@ $columns: 12 !default;
 
 @function px-to-em($px: 0) {
   @if $responsive {
-    @return ($px / 16) * 1rem;
+    @return ($px / 16) * 1em;
   } @else {
     @return $px * 1px;
   }

@@ -1,3 +1,4 @@
+@vcr
 Feature: View an action plan
   As a visitor to the website
   I want to view an action plan

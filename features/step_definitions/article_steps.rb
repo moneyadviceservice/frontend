@@ -32,7 +32,7 @@ end
 Then(/^the article page should have alternate tags for the supported locales$/) do
   expected_hreflangs = ["en-GB", "cy-GB"]
   expected_hrefs = []
-  I18n.available_locales.each { |locale| expected_hrefs << article_url(id: current_article.id, locale: locale) }
+  I18n.available_locales.each { |locale| expected_hrefs << article_url(id: current_article_in(current_locale).id, locale: locale) }
 
   expect(article_page.alternate_tags.size).to eq(expected_hreflangs.size)
   article_page.alternate_tags.each do |alternate_tag|

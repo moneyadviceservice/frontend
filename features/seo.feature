@@ -12,14 +12,14 @@ Feature: Search Engine Optimisation
     | English |
     | Welsh   |
 
-  Scenario Outline: Home page include an alternate tag
+  Scenario Outline: Home page include an alternate tags for all supported languages
     Given I view the home page in <article_locale>
-    Then the home page should have an alternate tag for the <alternate_locale> version
+    Then the home page should have alternate tags for the supported locales
 
   Examples:
-    | article_locale | alternate_locale |
-    | English        | Welsh            |
-    | Welsh          | English          |
+    | article_locale |
+    | English        |
+    | Welsh          |
 
   Scenario Outline: Home page include a description tag
     Given I view the home page in <locale>
@@ -39,14 +39,14 @@ Feature: Search Engine Optimisation
     | English |
     | Welsh   |
 
-  Scenario Outline: Action Plan pages include an alternate tag
+  Scenario Outline: Action Plan pages include an alternate tags for supported languages
     Given I view an action plan in <action_plan_locale>
-    Then the action plan should have an alternate tag for the <alternate_locale> version
+    Then the action plan page should have alternate tags for the supported locales
 
   Examples:
-    | action_plan_locale | alternate_locale |
-    | English            | Welsh            |
-    | Welsh              | English          |
+    | action_plan_locale |
+    | English            |
+    | Welsh              |
 
   Scenario Outline: Article pages include a canonical tag
     Given I view an article in <locale>
@@ -59,12 +59,12 @@ Feature: Search Engine Optimisation
 
   Scenario Outline: Article pages include an alternate tag
     Given I view an article in <article_locale>
-    Then the article should have an alternate tag for the <alternate_locale> version
+    Then the article page should have alternate tags for the supported locales
 
   Examples:
-    | article_locale | alternate_locale |
-    | English        | Welsh            |
-    | Welsh          | English          |
+    | article_locale |
+    | English        |
+    | Welsh          |
 
   Scenario Outline: Category pages include a canonical tag
   Given I view a category containing no child categories in <locale>
@@ -77,12 +77,12 @@ Feature: Search Engine Optimisation
 
   Scenario Outline: Category pages include an alternate tag
     Given I view a category containing no child categories in <category_locale>
-    Then the category should have an alternate tag for the <alternate_locale> version
+    Then the category page should have alternate tags for the supported locales
 
   Examples:
-    | category_locale | alternate_locale |
-    | English         | Welsh            |
-    | Welsh           | English          |
+    | category_locale |
+    | English         |
+    | Welsh           |
 
   Scenario: Empty query search results page include a robots tag
     Given I am on the home page

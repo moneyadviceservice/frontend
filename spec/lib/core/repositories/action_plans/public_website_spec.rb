@@ -30,12 +30,17 @@ module Core::Repositories::ActionPlans
         end
 
         context 'and an alternate link header is returned' do
-          let(:headers) do
-            { 'Link' => '<https://example.com/path/to/alternate>; rel="alternate"; hreflang="cy"; title="alternate"' }
+          let(:alternate_links) do
+            [
+              '<https://example.com/cy/path/to/cy/alternate>; rel="alternate"; hreflang="cy"; title="alternate"',
+              '<https://example.com/path/to/en/alternate>; rel="alternate"; hreflang="en"; title="alternate"'
+            ]
           end
+          let(:headers) { { 'Link' => alternate_links } }
 
-          it 'returns a nested hash of attributes' do
-            expect(repository.find(id)['alternate']).to be_a(Hash)
+          it 'returns an array of attributes' do
+            expect(repository.find(id)['alternates']).to be_a(Array)
+            expect(repository.find(id)['alternates'].size).to eq(alternate_links.size)
           end
         end
       end

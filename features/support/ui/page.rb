@@ -9,7 +9,7 @@ module UI
   class Page < SitePrism::Page
     element :heading, 'h1'
 
-    element :alternate_tag, :xpath, "//link[@rel='alternate']", visible: false
+    elements :alternate_tags, :xpath, "//link[@rel='alternate']", visible: false
     element :canonical_tag, :xpath, "//link[@rel='canonical']", visible: false
     element :description, :xpath, "//meta[@name='description']", visible: false
 

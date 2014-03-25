@@ -4,9 +4,13 @@ class ArticleDecorator < Draper::Decorator
   delegate :title, :description
 
   def alternate_options
-    return {} unless object.alternate.present?
+    object.alternates.each_with_object({}) do |alternate, hash|
+      hash[alternate.hreflang] = alternate.url
+    end
+  end
 
-    { object.alternate.hreflang => object.alternate.url }
+  def footer_alternate_options
+    alternate_options.except(I18n.locale.to_s)
   end
 
   def canonical_url

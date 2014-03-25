@@ -26,9 +26,9 @@ http_interactions:
       - Tue, 11 Mar 2014 11:26:49 GMT
       Link:
       - <http://www.example.com/cy/action_plans/<%= id %>>;
-        rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch
+        rel="alternate"; hreflang="cy-GB"; title="Ble i gael cyngor am ddim ynghylch
         dyled", <http://www.example.com/en/action_plans/<%= id %>>;
-        rel="alternate"; hreflang="en"; title="Title"
+        rel="alternate"; hreflang="en-GB"; title="Title"
       X-Apiary-Ratelimit-Limit:
       - '120'
       X-Apiary-Ratelimit-Remaining:

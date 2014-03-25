@@ -17,7 +17,6 @@ When(/^I translate the article into (.*)$/) do |language|
            title:       current_article.title,
            description: current_article.description,
            body:        current_article.body }
-
   expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
   expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
 
@@ -40,13 +39,13 @@ Then(/^the article should have a canonical tag for that language version$/) do
 end
 
 Then(/^the article page should have alternate tags for the supported locales$/) do
-  available_locales = I18n.available_locales
+  expected_hreflangs = ["en-GB", "cy-GB"]
   expected_hrefs = []
-  available_locales.each { |locale| expected_hrefs << article_url(id: current_article.id, locale: locale) }
+  I18n.available_locales.each { |locale| expected_hrefs << article_url(id: current_article.id, locale: locale) }
 
-  expect(article_page.alternate_tags.size).to eq(available_locales.size)
+  expect(article_page.alternate_tags.size).to eq(expected_hreflangs.size)
   article_page.alternate_tags.each do |alternate_tag|
-    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end

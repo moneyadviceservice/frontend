@@ -1,15 +1,17 @@
 <div class="opt-out-bar">
   <div class="l-constrained">
     <p>
-      <%= t('opt_out_bar.message') %>
-      <a class="js-linkParent" href="<%= raw t('opt_out_bar.email_contents').gsub(/\n/, '') %>"><%= t('opt_out_bar.feedback') %></a>
+      <%= t('opt_out.message') %>
+      <a class="js-linkParent" href="<%= raw t('feedback.email_contents').gsub(/\n/, '') %>"><%= t('feedback.title') %>.</a>
     </p>
+
     <%= form_tag(opt_out_path) do %>
       <%= hidden_field_tag(:redirection_page, request.original_url) %>
       <%= button_tag(class: 'opt-out-bar__button') do %>
         <span class="icon icon--desktop"></span>
-        <%= t('opt_out_bar.button') %>
+        <%= t('opt_out.title') %>
       <% end %>
     <% end %>
+
   </div>
 </div>

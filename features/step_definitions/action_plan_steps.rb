@@ -11,12 +11,14 @@ end
 
 When(/^I translate the action plan into (.*)$/) do |language|
   locale = language_to_locale(language)
+  current_language = locale_to_language(I18n.locale)
   data = { id:          current_action_plan.id,
            title:       current_action_plan.title,
            description: current_action_plan.description,
            body:        current_action_plan.body }
 
   expect(action_plan_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
 
   VCR.use_cassette("action_plan_#{locale}", erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click

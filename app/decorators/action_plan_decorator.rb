@@ -9,6 +9,10 @@ class ActionPlanDecorator < Draper::Decorator
     end
   end
 
+  def footer_alternate_options
+    alternate_options.except(I18n.locale.to_s)
+  end
+
   def canonical_url
     h.action_plan_url(object.id)
   end

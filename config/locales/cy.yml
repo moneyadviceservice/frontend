@@ -94,9 +94,11 @@ cy:
       go_to_top_html: Ewch i'r brig
 
   opt_out_bar:
+    title: Edrychwch ar hyn ar ein safle presennol
     message: Mae hon yn fersiwn gynnar o'n gwefan well.
-    feedback: Byddem yn falch iawn i gael eich adborth.
-    button: Edrychwch ar hyn ar ein safle presennol
+
+  feedback:
+    title: Byddem yn falch iawn i gael eich adborth
     email_contents: |
       mailto:tools.help%40moneyadviceservice.org.uk?subject=Fy%20adborth%20ar%20fersiwn
       %20cynnar%20eich%20gwefan&body=Diolch%20am%20gymryd%20yr%20amser%20i%20roi%20adborth

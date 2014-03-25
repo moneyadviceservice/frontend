@@ -84,13 +84,13 @@ Then(/^the category should have a canonical tag for that language version$/) do
 end
 
 Then(/^the category page should have alternate tags for the supported locales$/) do
-  available_locales = I18n.available_locales
+  expected_hreflangs = ["en-GB", "cy-GB"]
   expected_hrefs = []
-  available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'],locale: locale) }
+  I18n.available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'],locale: locale) }
 
-  expect(category_page.alternate_tags.size).to eq(available_locales.size)
+  expect(category_page.alternate_tags.size).to eq(expected_hreflangs.size)
   category_page.alternate_tags.each do |alternate_tag|
-    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end

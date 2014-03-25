@@ -9,7 +9,7 @@
   background-color: $color-green-tertiary;
 
   a {
-    @extend %link-nav-primary;
+    @include links($color-primary-nav, $color-primary-nav-visited);
     display: block;
     padding: $baseline-unit*1.5 $baseline-unit*2;
     &:hover {
@@ -17,11 +17,7 @@
     }
   }
 
-  .icon--search-white {
-    position: relative;
-    top: 9px;
-    left: 10px;
-    width: 36px;
-    height: 36px;
+  .icon--search {
+    @include body(20, 18);
   }
 }

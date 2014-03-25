@@ -7,7 +7,6 @@
 .home-promoted__item {
   @include column(12);
 
-
   a {
     @extend %type-homepage-headings;
     display: block;

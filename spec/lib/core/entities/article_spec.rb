@@ -9,7 +9,8 @@ module Core
       { title:       double,
         description: double,
         body:        double,
-        alternates:   [{ title: double, url: double, hreflang: double }] }
+        alternates:  [{ title: double, url: double, hreflang: double }]
+      }
     end
 
     it { should respond_to :type }

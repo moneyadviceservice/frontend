@@ -16,33 +16,26 @@ en:
 
   errors:
     show:
+      heading: Sorry!
       bad_request:
-        heading: Sorry!
-        intro: Bad Request
+        title: Bad Request
       forbidden:
-        heading: Sorry!
-        intro: Forbidden
+        title: Forbidden
       internal_server_error:
-        heading: Sorry!
-        intro: Internal server error
+        title: Internal server error
       method_not_allowed:
-        heading: Sorry!
-        intro: Method Not Allowed
+        title: Method Not Allowed
       not_acceptable:
-        heading: Sorry!
-        intro: Not Acceptable
+        title: Not Acceptable
       not_found:
-        heading: Sorry!
+        title: Not Found
         intro: The page you were looking for was not found
       not_implemented:
-        heading: Sorry!
-        intro: Not Implemented
+        title: Not Implemented
       unauthorized:
-        heading: Sorry!
-        intro: Unauthorised
+        title: Unauthorised
       unprocessable_entity:
-        heading: Sorry!
-        intro: Unprocessable Entity
+        title: Unprocessable Entity
 
   home:
     show:

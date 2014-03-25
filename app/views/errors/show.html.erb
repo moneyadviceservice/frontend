@@ -1,2 +1,8 @@
-<%= content_tag :h1, t(".#{@rescue_response}.heading") %>
-<%= content_tag :p, t(".#{@rescue_response}.intro"), class: 'intro' %>
+<% set_meta_tags(title: t(".#{@rescue_response}.title")) %>
+
+<h1>
+  <%= t(".#{@rescue_response}.heading", default: t('.heading')) %>
+</h1>
+<p class="intro">
+  <%= t(".#{@rescue_response}.intro", default: t(".#{@rescue_response}.title")) %>
+</p>

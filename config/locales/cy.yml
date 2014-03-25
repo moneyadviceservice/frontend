@@ -16,33 +16,26 @@ cy:
 
   errors:
     show:
+      heading: Mae'n ddrwg gennym!
       bad_request:
-        heading: Mae'n ddrwg gennym!
-        intro: Cais Drwg
+        title: Cais Drwg
       forbidden:
-        heading: Mae'n ddrwg gennym!
-        intro: Gwaharddedig
+        title: Gwaharddedig
       internal_server_error:
-        heading: Mae'n ddrwg gennym!
-        intro: Gwall gweinydd mewnol
+        title: Gwall gweinydd mewnol
       method_not_allowed:
-        heading: Mae'n ddrwg gennym!
-        intro: Ni Chaniateir y Dull
+        title: Ni Chaniateir y Dull
       not_acceptable:
-        heading: Mae'n ddrwg gennym!
-        intro: Annerbyniol
+        title: Annerbyniol
       not_found:
-        heading: Mae'n ddrwg gennym!
+        title: Heb ei ddarganfod
         intro: Ni chanfuwyd y dudalen yr oeddech yn chwilio amdani
       not_implemented:
-        heading: Mae'n ddrwg gennym!
-        intro: Heb ei Weithredu
+        title: Heb ei Weithredu
       unauthorized:
-        heading: Mae'n ddrwg gennym!
-        intro: Anawdurdodedig
+        title: Anawdurdodedig
       unprocessable_entity:
-        heading: Mae'n ddrwg gennym!
-        intro: Endid na ellir ei brosesu
+        title: Endid na ellir ei brosesu
 
   home:
     show:

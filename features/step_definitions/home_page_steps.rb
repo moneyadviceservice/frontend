@@ -76,12 +76,15 @@ Then(/^the home page should have a canonical tag for that language version$/) do
   expect { home_page.canonical_tag[:href] }.to become(expected_href)
 end
 
-Then(/^the home page should have an alternate tag for the (.*) version$/) do |language|
-  locale        = language_to_locale(language)
-  expected_href = root_url(locale: locale)
+Then(/^the home page should have alternate tags for the supported locales$/) do
+  available_locales = I18n.available_locales
+  expected_hrefs = []
+  available_locales.each { |locale| expected_hrefs << root_url(locale: locale) }
 
-  expect { home_page.alternate_tag[:href] }.to become(expected_href)
-  expect { home_page.alternate_tag[:hreflang] }.to become(locale)
+  home_page.alternate_tags.each do |alternate_tag|
+    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hrefs).to include(alternate_tag[:href])
+  end
 end
 
 Then(/^the home page should have a description tag for that language version$/) do

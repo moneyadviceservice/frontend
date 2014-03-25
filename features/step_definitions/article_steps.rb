@@ -12,12 +12,14 @@ end
 
 When(/^I translate the article into (.*)$/) do |language|
   locale = language_to_locale(language)
+  current_language = locale_to_language(I18n.locale)
   data = { id:          current_article.id,
            title:       current_article.title,
            description: current_article.description,
            body:        current_article.body }
 
   expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
 
   VCR.use_cassette("article_#{locale}", erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click
@@ -37,10 +39,14 @@ Then(/^the article should have a canonical tag for that language version$/) do
   expect { article_page.canonical_tag[:href] }.to become(expected_href)
 end
 
-Then(/^the article should have an alternate tag for the (.*) version$/) do |language|
-  locale = language_to_locale(language)
-  expected_href = article_url(id: current_article.id, locale: locale)
+Then(/^the article page should have alternate tags for the supported locales$/) do
+  available_locales = I18n.available_locales
+  expected_hrefs = []
+  available_locales.each { |locale| expected_hrefs << article_url(id: current_article.id, locale: locale) }
 
-  expect { article_page.alternate_tag[:href] }.to become(expected_href)
-  expect { article_page.alternate_tag[:hreflang]}.to become(locale)
+  expect(article_page.alternate_tags.size).to eq(available_locales.size)
+  article_page.alternate_tags.each do |alternate_tag|
+    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hrefs).to include(alternate_tag[:href])
+  end
 end

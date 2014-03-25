@@ -11,12 +11,14 @@ end
 
 When(/^I translate the action plan into (.*)$/) do |language|
   locale = language_to_locale(language)
+  current_language = locale_to_language(I18n.locale)
   data = { id:          current_action_plan.id,
            title:       current_action_plan.title,
            description: current_action_plan.description,
            body:        current_action_plan.body }
 
   expect(action_plan_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
 
   VCR.use_cassette("action_plan_#{locale}", erb: data) do
     home_page.footer_site_links.send("#{language.downcase}_link").click
@@ -36,10 +38,14 @@ Then(/^the action plan should have a canonical tag for that language version$/) 
   expect { action_plan_page.canonical_tag[:href] }.to become(expected_href)
 end
 
-Then(/^the action plan should have an alternate tag for the (.*) version$/) do |language|
-  locale = language_to_locale(language)
-  expected_href = action_plan_url(id: current_action_plan.id, locale: locale)
+Then(/^the action plan page should have alternate tags for the supported locales$/) do
+  available_locales = I18n.available_locales
+  expected_hrefs = []
+  available_locales.each { |locale| expected_hrefs << action_plan_url(id: current_action_plan.id, locale: locale) }
 
-  expect { action_plan_page.alternate_tag[:href] }.to become(expected_href)
-  expect { action_plan_page.alternate_tag[:hreflang]}.to become(locale)
+  expect(action_plan_page.alternate_tags.size).to eq(available_locales.size)
+  action_plan_page.alternate_tags.each do |alternate_tag|
+    expect(available_locales).to include(alternate_tag[:hreflang].to_sym)
+    expect(expected_hrefs).to include(alternate_tag[:href])
+  end
 end

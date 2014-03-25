@@ -27,6 +27,8 @@ http_interactions:
       Link:
       - <http://www.example.com/cy/articles/<%= id %>>;
         rel="alternate"; hreflang="cy"; title="Ble i gael cyngor am ddim ynghylch
+        dyled", <http://www.example.com/en/articles/<%= id %>>;
+        rel="alternate"; hreflang="en"; title="Example title"
         dyled"
       X-Apiary-Ratelimit-Limit:
       - '120'

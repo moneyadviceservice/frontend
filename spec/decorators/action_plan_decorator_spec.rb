@@ -15,10 +15,8 @@ describe ActionPlanDecorator do
   it { should respond_to(:title) }
 
   describe '#alternate_options' do
-    before { allow(action_plan).to receive(:alternate) { alternate } }
-
-    context 'when there is no alternate' do
-      let(:alternate) { nil }
+    context 'when there are no alternates' do
+      before { allow(action_plan).to receive(:alternates) { [] } }
 
       it 'returns an empty hash' do
         expect(decorator.alternate_options).to be_a(Hash)
@@ -26,7 +24,9 @@ describe ActionPlanDecorator do
       end
     end
 
-    context 'when there is an alternate' do
+    context 'when there are alternates' do
+      before { allow(action_plan).to receive(:alternates) { [alternate] } }
+
       let(:alternate) { double(hreflang: locale, url: url) }
       let(:locale) { double }
       let(:url) { double }
@@ -41,7 +41,7 @@ describe ActionPlanDecorator do
     before { helpers.stub(action_plan_url: '/action_plans/bob') }
 
     it 'returns the path to the action plan' do
-      expect(subject.canonical_url).to eq('/action_plans/bob')
+      expect(decorator.canonical_url).to eq('/action_plans/bob')
     end
   end
 

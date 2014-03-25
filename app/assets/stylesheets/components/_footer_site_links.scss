@@ -39,6 +39,11 @@
 .footer-site-links__language {
   border-top: 1px solid darken($color-grey-pale, 5%);
 
+  .icon--desktop,
+  .icon--globe {
+    width: 20px!important;
+  }
+
   .icon--globe {
     position: relative;
     top: 7px;
@@ -47,6 +52,7 @@
   .icon--desktop {
     position: relative;
     top: 2px;
+    left: 2px;
   }
 
   li {

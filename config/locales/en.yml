@@ -93,10 +93,12 @@ en:
     show:
       go_to_top_html: Back to top
 
-  opt_out_bar:
+  opt_out:
+    title: View this on our existing site
     message: This is an early version of our improved website.
-    feedback: We would love your feedback.
-    button: View this on our existing site
+
+  feedback:
+    title: We would love your feedback
     email_contents: |
       mailto:tools.help%40moneyadviceservice.org.uk?subject=My%20feedback%20on%20your%20early%20version%20of
       %20your%20site&amp;body=Thanks%20for%20taking%20the%20time%20to%20feedback%20on%20the%20early
@@ -139,8 +141,6 @@ en:
         By continuing to use our website you are agreeing to their use.
         <a href="%{url}">Find out more about cookies.</a>
       close_button: Close
-    feedback: We'd love your feedback
-    opt_out: View on our existing site
 
   search_box:
     label: Search the Money Advice Service

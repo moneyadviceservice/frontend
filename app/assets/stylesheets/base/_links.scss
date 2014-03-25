@@ -25,30 +25,3 @@ a {
     text-decoration: underline;
   }
 }
-
-// apply a different style for links that appear only inside a paragraph in editorial content
-.editorial p > a {
-  color: $color-link-default;
-  text-decoration: none;
-  border-bottom:1px solid lighten($color-link-default,50%);
-
-  &:visited {
-    color: $color-link-default;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    color: $color-link-default;
-    text-decoration: none;
-    border-bottom:1px solid lighten($color-link-default,30%);
-  }
-}
-  .video-wrapper + a {
-    display: block;
-  }
-
-%link-nav,
-.link-nav {
-  @include links($color-link-nav, $color-link-nav-visited);
-}

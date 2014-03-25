@@ -30,18 +30,29 @@
 
   a {
     @extend %type-small;
-    @include links($color-link-nav, $color-link-nav);
     padding: $baseline-unit 0;
   }
 }
 
 .footer-site-links__internal-links {
   padding: $baseline-unit*2 0;
+
+  a {
+    @extend %link-nav-secondary;
+  }
+
 }
 
 .footer-site-links__language {
   @include column(12);
   border-top: 1px solid darken($color-grey-pale, 10%);
+
+  .icon--globe {
+    position: relative;
+    top: 5px;
+    float: left;
+    padding-right: $baseline-unit;
+  }
 
   li {
     padding: $baseline-unit*2 0;
@@ -49,10 +60,9 @@
     margin-left: 0;
   }
 
-  .icon--globe {
-    position: relative;
-    top: 6px;
-    padding-right: $baseline-unit;
+  a {
+    @extend %link-nav-secondary;
+    padding-left: $baseline-unit;
   }
 }
 

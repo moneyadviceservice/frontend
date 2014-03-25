@@ -1,5 +1,7 @@
-* {
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
 }
 
 // prevent skip to main content link destination element displaying a focus outline

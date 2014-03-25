@@ -20,7 +20,7 @@ describe ActionPlanDecorator do
 
       it 'returns an empty hash' do
         expect(decorator.alternate_options).to be_a(Hash)
-        expect(subject.alternate_options).to be_empty
+        expect(decorator.alternate_options).to be_empty
       end
     end
 
@@ -32,7 +32,7 @@ describe ActionPlanDecorator do
       let(:url) { double }
 
       it 'returns a hash of locale => url pairs' do
-        expect(subject.alternate_options).to include(locale => url)
+        expect(decorator.alternate_options).to include(locale => url)
       end
     end
   end
@@ -41,7 +41,7 @@ describe ActionPlanDecorator do
     before { helpers.stub(action_plan_url: '/action_plans/bob') }
 
     it 'returns the path to the action plan' do
-      expect(subject.canonical_url).to eq('/action_plans/bob')
+      expect(decorator.canonical_url).to eq('/action_plans/bob')
     end
   end
 

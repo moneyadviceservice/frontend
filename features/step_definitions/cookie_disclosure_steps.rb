@@ -48,7 +48,6 @@ end
 
 When(/^I close the cookie message$/) do
   current_page.footer_cookie_message.close_button.click
-  sleep(5) if Capybara.current_driver == :poltergeist
 end
 
 When(/^I click on the "Cookie Policy" link in the footer$/) do

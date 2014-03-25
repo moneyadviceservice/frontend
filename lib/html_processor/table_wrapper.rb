@@ -1,15 +1,8 @@
 module HTMLProcessor
-  class TableWrapper
-    attr_accessor :doc
-    private :doc=
-
-    def initialize(html)
-      self.doc = Nokogiri::HTML(html)
-    end
-
+  class TableWrapper < Base
     def process(*xpaths)
       doc.xpath(*xpaths).each { |node| swap_node(node) }
-      doc.to_s
+      super
     end
 
     def swap_node(node)

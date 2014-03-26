@@ -25,13 +25,14 @@
   }
 
   a {
-    @extend %type-medium;
+    @extend %type-footer;
     @include links($color-link-nav, $color-link-nav);
     padding: $baseline-unit 0;
   }
 
   button {
-    @extend %type-medium;
+    @extend %type-footer;
+    text-align: left;
   }
 }
 

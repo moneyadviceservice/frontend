@@ -68,10 +68,22 @@
   height: 13px;
 }
 
+.icon--desktop-green {
+  background-position: -437px -174px;
+  width: 16px;
+  height: 13px;
+}
+
 .icon--external-link {
   background-position: -8px -170px;
   width: 18px;
   height: 18px;
+}
+
+.icon--speech-green {
+  background-position: -402px -75px;
+  width: 20px;
+  height: 16px;
 }
 
 // LIST ICONS
@@ -132,7 +144,6 @@
   height: 20px;
 }
 
-
 // -----------------------------------------------------
 //  HIGH DEFINITION ICONS
 // -----------------------------------------------------
@@ -169,8 +180,16 @@
     background-position: -199px -82px;
   }
 
+  .icon--desktop-green {
+    background-position: -231px -84px;
+  }
+
   .icon--external-link {
     background-position: -8px -53px;
+  }
+
+  .icon--speech-green {
+    background-position:  -304px -57px;
   }
 
   // LIST ICONS
@@ -193,7 +212,7 @@
 
   // CHEVRON ICONS
   .icon--down-chevron {
-    background-position:-238px -10px;
+    background-position: -238px -10px;
   }
 
   .icon--up-chevron {

@@ -9,7 +9,7 @@ end
 
 Rails.application.routes.draw do
   root 'home#show'
-  post :opt_out, to: 'opt_out#create'
+  resource :beta_opt_out, only: [:create, :destroy], path: 'opt-out'
 
   scope '/:locale', locale: /en|cy/ do
     get '/' => 'home#show'

@@ -8,6 +8,9 @@ class ApplicationController < ActionController::Base
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
+  DISMISS_BETA_OPT_OUT_COOKIE_NAME  = 'dismiss_opt_out'
+  DISMISS_BETA_OPT_OUT_COOKIE_VALUE = 'y'
+
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
@@ -21,4 +24,9 @@ class ApplicationController < ActionController::Base
     cookies.permanent[COOKIE_MESSAGE_COOKIE_NAME] != COOKIE_MESSAGE_COOKIE_VALUE
   end
   helper_method :cookies_not_accepted?
+
+  def dismissed_beta_opt_out?
+    cookies.permanent[DISMISS_BETA_OPT_OUT_COOKIE_NAME] == DISMISS_BETA_OPT_OUT_COOKIE_VALUE
+  end
+  helper_method :dismissed_beta_opt_out?
 end

@@ -1,5 +1,10 @@
 <h1>Components</h1>
 
+<%= styleguide_section sections['icons'] do %>
+  <span class="icon $modifier_class"></span>
+  <span class="visually-hidden">hidden text</span>
+<% end %>
+
 <%= styleguide_section sections['buttons'] do %>
   <a href="#url" class="button $modifier_class">link</a>
   <button class="button $modifier_class">button</button>
@@ -15,27 +20,6 @@
     <span class="button--compact__text">Next</span>
     <span class="icon icon--right-chevron"></span>
   </button>
-<% end %>
-
-<%= styleguide_section sections['icons'] do %>
-  <span class="icon $modifier_class" aria-hidden="true"></span>
-  <span class="visually-hidden">hidden text</span>
-<% end %>
-
-<%= styleguide_section sections['Social Links'] do %>
-  <%= render 'shared/social_links' %>
-<% end %>
-
-<%= styleguide_section sections['header'] do %>
-  <%= render 'shared/header' %>
-<% end %>
-
-<%= styleguide_section sections['Footer Site Links'] do %>
-  <%= render 'shared/footer_site_links', locals: %w(en) %>
-<% end %>
-
-<%= styleguide_section sections['Footer Social Links'] do %>
-  <%= render 'shared/footer_social_links' %>
 <% end %>
 
 <%= styleguide_section sections['Call out'] do %>
@@ -54,11 +38,28 @@
   <%= render 'shared/opt_out_bar' %>
 <% end %>
 
-<%= styleguide_section sections['Search'] do %>
-  <%= render 'shared/search_box' %>
-<% end %>
-
 <%= styleguide_section sections['Primary Navigation'] do %>
   <%= render 'shared/primary_nav' %>
 <% end %>
 
+<%= styleguide_section sections['Search'] do %>
+  <%= render 'shared/search_box' %>
+<% end %>
+
+<%= styleguide_section sections['header'] do %>
+  <%= render 'shared/header' %>
+<% end %>
+
+<%= styleguide_section sections['Footer Site Links'] do %>
+  <%= render 'shared/footer_site_links', locals: %w(en) %>
+<% end %>
+
+<%= styleguide_section sections['Social Links'] do %>
+  <%= render 'shared/social_links' %>
+<% end %>
+
+<%= styleguide_section sections['Footer Social Links'] do %>
+  <div class="l-footer">
+  <%= render 'shared/footer_social_links' %>
+  </div>
+<% end %>

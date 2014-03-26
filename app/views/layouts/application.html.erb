@@ -1,10 +1,10 @@
 <% content_for :content do %>
   <a class="skip-to-content" href="#main">Skip to main content</a>
-  <%= render 'shared/opt_out_bar' %>
+  <%= render 'shared/opt_out_bar' unless dismissed_beta_opt_out? %>
   <%= render 'shared/header' %>
-  <div class="l-constrained l-padded" id="main" tabindex="-1">
-    <%= yield %>
-  </div>
+
+  <%= content_for?(:main) ? yield(:main) : yield %>
+
   <%= render 'shared/footer' %>
 <% end %>
 

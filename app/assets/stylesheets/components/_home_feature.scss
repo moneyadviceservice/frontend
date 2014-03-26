@@ -4,8 +4,8 @@
 
 .home-feature__content {
   @extend %clearfix;
-  padding: $baseline-unit*8 0 0 0;
-  background: transparent image_url('home-illustration.jpg') 0 100px no-repeat;
+  padding: $baseline-unit*6 0 0 0;
+  background: transparent image_url('home-illustration.jpg') 0 118px no-repeat;
 
   @include respond-to($mq-m) {
     background-position: 0 0;
@@ -13,7 +13,7 @@
 
   @include respond-to($mq-l) {
     background-position: 0 100%;
-    padding-bottom: $baseline-unit*4;
+    padding: $baseline-unit*8 0 $baseline-unit*4 0;
   }
 }
 

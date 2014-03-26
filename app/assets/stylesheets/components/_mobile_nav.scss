@@ -16,12 +16,18 @@
       text-decoration: none;
     }
   }
+}
+
+.mobile-nav__item--search {
+  a {
+    padding-right:6px;
+    padding-bottom:2.6px;
+  }
 
   .icon--search-white {
-    position: relative;
-    top: 9px;
-    left: 10px;
-    width: 36px;
-    height: 36px;
+    position:relative;
+    left:-1px;
+    top:1px;
   }
+
 }

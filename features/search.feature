@@ -1,3 +1,4 @@
+@vcr
 Feature: Searching
   As a user visiting the website
   I want to search by keyword

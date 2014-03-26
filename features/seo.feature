@@ -1,3 +1,4 @@
+@vcr
 Feature: Search Engine Optimisation
   As a marketeer
   I want our content to include clear meta data

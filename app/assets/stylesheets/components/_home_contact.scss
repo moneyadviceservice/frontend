@@ -50,7 +50,7 @@
   }
 
   p {
-    @extend %type-medium;
+    @extend %type-footer;
   }
 
   @include respond-to($mq-l) {

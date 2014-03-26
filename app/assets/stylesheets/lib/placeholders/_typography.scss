@@ -129,14 +129,17 @@
   }
 }
 
-%type-medium {
-  @include body(16, 24);
-}
-
 %type-small {
   @include body(14, 18);
 }
 
+%type-footer {
+  @include body(14, 18);
+
+  @include respond-to($mq-xl) {
+    @include body(16, 24);
+  }
+}
 
 %type-table {
   @include body(14, 18);

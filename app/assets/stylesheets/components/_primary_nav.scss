@@ -42,6 +42,7 @@
     border-bottom: 1px solid $color-white-translucent;
     @include respond-to($mq-l) {
       border: 0;
+      width: 115px;
     }
   }
 

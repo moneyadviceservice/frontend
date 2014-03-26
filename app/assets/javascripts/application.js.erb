@@ -48,3 +48,9 @@ require(['ujs', 'jquery'], function(){
     $('.footer-site-links__cookie-message').removeClass('is-on');
   });
 });
+
+require(['ujs', 'jquery'], function(){
+  $('.opt-out__close').bind('ajax:success', function(data, status, xhr) {
+    $('.opt-out').addClass('is-hidden');
+  });
+});

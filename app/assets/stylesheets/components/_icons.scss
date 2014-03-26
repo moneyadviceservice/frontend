@@ -15,6 +15,8 @@
 // .icon--pdf - PDF document icon
 // .icon--down-chevron - down chevron icon
 // .icon--up-chevron - up chevron icon
+// .icon--left-chevron - left chevron icon
+// .icon--right-chevron - right chevron icon
 // .icon--close - close icon
 // .icon--search - green search icon
 // .icon--search-white - white search icon
@@ -126,6 +128,18 @@
   height: 16px;
 }
 
+.icon--left-chevron {
+  background-position: -339px -72px;
+  width: 12px;
+  height: 19px;
+}
+
+.icon--right-chevron {
+  background-position: -374px -72px;
+  width: 12px;
+  height: 19px;
+}
+
 .icon--close {
   background-position: -140px -268px;
   width: 20px;
@@ -222,12 +236,13 @@
   }
 
   .icon--left-chevron {
-    background-position: -238px -107px;
+    background-position: -482px -213px;
   }
 
   .icon--right-chevron {
-    background-position: -255px -107px; 
+    background-position: -519px -213px;
   }
+
   .icon--close {
     background-position: -137px -102px;
   }

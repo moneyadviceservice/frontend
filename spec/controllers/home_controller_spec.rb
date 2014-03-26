@@ -10,7 +10,6 @@ describe HomeController do
   end
 
   describe 'home redirection' do
-
     before do
       request.env['REQUEST_URI'] = params
       get :show
@@ -18,13 +17,15 @@ describe HomeController do
 
     context 'when locale param is set to en' do
       let(:params) { '/?locale=en' }
+
       it 'sets the locale to the specified' do
         expect(response).to redirect_to('/')
       end
     end
 
-    context 'when locale param is set to en' do
+    context 'when locale param is set to cy' do
       let(:params) { '/?locale=cy' }
+
       it 'sets the locale to the specified' do
         expect(response).to redirect_to('/cy')
       end

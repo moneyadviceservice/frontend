@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/content-service/search.json?limit=25&locale=en&query=health
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 16e3994f-082c-4066-a81e-eb57d267d3ea
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Date:
+      - Wed, 26 Mar 2014 10:55:50 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1405'
+    body:
+      encoding: UTF-8
+      string: '{"searchResults":[{"url":"/content/tools/health-check","preview":{"title":"Health
+        check","preview":"Health check"},"exactMatch":false,"id":"health-check","type":"tool"},{"url":"/categories/poor-health---managing-money","preview":{"title":"Poor
+        health - managing money","description":"Budgeting and managing money when
+        in poor health and planning ahead for when you cant do it on your own t do
+        it on your own "},"exactMatch":false,"id":"poor-health---managing-money","type":"category"},{"url":"/categories/managing-money-in-ill-health","preview":{"title":"Managing
+        money in ill health","description":"Make it easier to manage your money, checking
+        and claiming your entitlements and getting help from others "},"exactMatch":false,"id":"managing-money-in-ill-health","type":"category"},{"url":"/categories/review-the-health-your-pension-savings","preview":{"title":"Review
+        the health your pension savings","description":"Use our step-by-step guidance
+        to set your retirement income goal and check your progress towards it "},"exactMatch":false,"id":"review-the-health-your-pension-savings","type":"category"},{"url":"/categories/how-to-reduce-or-avoid-debt","preview":{"title":"How
+        to reduce or avoid debt","description":"Take our quick and easy debt health
+        check, know how to prioritise your debts and avoid hidden borrowing costs
+        "},"exactMatch":false,"id":"how-to-reduce-or-avoid-debt","type":"category"}]}'
+    http_version:
+  recorded_at: Wed, 26 Mar 2014 10:55:50 GMT
+recorded_with: VCR 2.8.0

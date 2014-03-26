@@ -129,9 +129,14 @@
   }
 }
 
+%type-medium {
+  @include body(16, 24);
+}
+
 %type-small {
   @include body(14, 18);
 }
+
 
 %type-table {
   @include body(14, 18);

@@ -10,15 +10,11 @@ class CategoryContentDecorator < Draper::Decorator
   end
 
   def path
-    case object.class.to_s
-      when 'Core::Article'
-        h.article_path(object.id, locale: I18n.locale)
-      when 'Core::ActionPlan'
-        h.action_plan_path(object.id, locale: I18n.locale)
-      when 'Core::Category'
-        h.category_path(object.id, locale: I18n.locale)
-      when 'Core::Other'
-        "/#{I18n.locale}/#{object.type.pluralize}/#{object.id}"
+    case object
+    when Core::Article, Core::Category
+      h.send("#{object.class.to_s.demodulize.underscore}_path", object.id, locale: I18n.locale)
+    when Core::Other
+      "/#{I18n.locale}/#{object.type.pluralize}/#{object.id}"
     end
   end
 

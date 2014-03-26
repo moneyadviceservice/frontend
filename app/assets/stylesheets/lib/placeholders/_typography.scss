@@ -129,9 +129,14 @@
   }
 }
 
+%type-medium {
+  @include body(16, 24);
+}
+
 %type-small {
   @include body(14, 18);
 }
+
 
 %type-table {
   @include body(14, 18);
@@ -189,6 +194,12 @@
       @include body(24, 30);
     }
   }
+}
+
+%type-home-number {
+  @extend %font-heading-heavy;
+  @include body(36, 36);
+  letter-spacing: -2px;
 }
 
 %type-homepage-headings {

@@ -29,7 +29,7 @@
   }
 
   a {
-    @extend %type-small;
+    @extend %type-medium;
     @include links($color-link-nav, $color-link-nav);
     padding: $baseline-unit 0;
   }

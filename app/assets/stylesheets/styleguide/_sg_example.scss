@@ -29,6 +29,10 @@
     background: #f1f1f1;
     border-bottom: 1px solid #ddd;
 
+    > p {
+      margin-top:1em;
+    }
+
     p:last-child {
       margin-bottom: 0
     }

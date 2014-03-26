@@ -1,16 +1,17 @@
 .category-filter {
-  display: none;
   @extend .list--unstyled;
+  display: none;
+  margin-top: $baseline-unit*6;
+
   @include respond-to($mq-l) {
     display: block;
   }
-  margin-top: $baseline-unit*6;
 }
 
 .category-filter__list-item {
+  @extend %type-medium;
   background-color: $color-filter-background;
   margin-bottom: 0;
-  @extend %type-navigation;
 
   a {
     padding: $baseline-unit*2;

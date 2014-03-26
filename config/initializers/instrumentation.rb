@@ -12,3 +12,5 @@ ActiveSupport::Notifications.subscribe('request.content-service.search') do |_, 
   statsd.increment("search.content_service.#{options[:locale]}")
   statsd.timing("search.content_service.#{options[:locale]}", (ends - starts))
 end
+
+Nunes.subscribe(statsd)

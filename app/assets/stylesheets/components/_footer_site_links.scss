@@ -37,22 +37,23 @@
 }
 
 .footer-site-links__language {
+  @extend %clearfix;
   border-top: 1px solid darken($color-grey-pale, 5%);
+  margin-bottom: $baseline-unit;
 
-  .icon--desktop,
+  .icon--desktop-green,
   .icon--globe {
-    width: 20px!important;
+    width: 20px;
   }
 
   .icon--globe {
     position: relative;
-    top: 5px;
+    top: 7px;
   }
 
-  .icon--desktop {
+  .icon--desktop-green {
     position: relative;
     top: 2px;
-    left: 2px;
   }
 
   li {
@@ -75,11 +76,6 @@
     }
   }
 
-  .icon--globe {
-    position: relative;
-    top: 6px;
-    padding-right: $baseline-unit;
-  }
 }
 
 .footer-site-links__cookie-message {
@@ -100,7 +96,7 @@
 
 .footer-site-links__opt_out {
   @extend %type-small;
-  @extend %link-nav-secondary;
+  @include links($color-link-nav, $color-link-nav);
   padding: 0;
   border: 0;
   background: transparent;

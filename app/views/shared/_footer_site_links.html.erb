@@ -34,6 +34,9 @@
       <li class="footer-site-links__cookie-message <%= 'is-on' if cookies_not_accepted? %>">
         <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
       </li>
+      <li>
+        <a href="<%= raw t('feedback.email_contents').gsub(/\n/, '') %>"><%= t('feedback.title') %></a>
+      </li>
     </ul>
   </div>
 
@@ -59,6 +62,16 @@
               <span class="icon icon--globe"></span>
               <%= t("locales.#{locale}") %>
             <% end %>
+          <% end %>
+        <% end %>
+      </li>
+
+      <li>
+        <%= form_tag(opt_out_path) do %>
+          <%= hidden_field_tag(:redirection_page, request.original_url) %>
+          <%= button_tag(class: 'footer-site-links__opt_out') do %>
+            <span class="icon icon--desktop-green"></span>
+            <%= t('opt_out.title') %>
           <% end %>
         <% end %>
       </li>

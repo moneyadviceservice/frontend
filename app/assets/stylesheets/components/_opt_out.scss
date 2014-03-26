@@ -70,5 +70,10 @@
 .opt-out__button--close {
   @extend .opt-out__button;
   padding: $baseline-unit*1.5;
+
+  .icon--close {
+    position: relative;
+    top: 3px;
+  }
 }
 

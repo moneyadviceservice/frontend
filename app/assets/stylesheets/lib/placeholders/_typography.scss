@@ -196,6 +196,12 @@
   }
 }
 
+%type-home-number {
+  @extend %font-heading-heavy;
+  @include body(36, 36);
+  letter-spacing: -2px;
+}
+
 %type-homepage-headings {
   @extend %font-heading-medium;
   letter-spacing: -1px;

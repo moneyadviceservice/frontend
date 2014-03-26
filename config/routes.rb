@@ -10,6 +10,7 @@ end
 Rails.application.routes.draw do
   root 'home#show'
   post :opt_out, to: 'opt_out#create'
+  get '/en', to: redirect('/')
 
   scope '/:locale', locale: /en|cy/ do
     get '/' => 'home#show'

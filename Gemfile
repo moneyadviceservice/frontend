@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.1.0.rc1'
+gem 'rails', '4.1.0.rc2'
 
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'

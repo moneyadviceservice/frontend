@@ -46,7 +46,7 @@ Rails.application.routes.draw do
 
         scope 'css' do
           get 'css_overview', path: '/'
-          get 'css_basic', path: '/basic'
+          get 'css_basic', path: '/typography'
           get 'css_article_demo', path: '/article-demo'
           get 'css_default_styles', path: '/default-styles'
         end

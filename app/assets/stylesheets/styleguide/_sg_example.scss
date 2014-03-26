@@ -29,6 +29,10 @@
     background: #f1f1f1;
     border-bottom: 1px solid #ddd;
 
+    > p {
+      margin-top:1em;
+    }
+
     p:last-child {
       margin-bottom: 0
     }
@@ -63,6 +67,7 @@
       background: #f9f9f9;
       border: 1px solid #eee;
       border-top: none;
+      white-space: nowrap;
     }
   }
 
@@ -108,6 +113,10 @@
 // add space between buttons so focus state is more visible
 #section-buttons .styleguide-element .button {
   margin-right: 20px;
+}
+
+#section-primary-navigation .styleguide-element {
+  background-color: darken(#F9F9F9, 20%);
 }
 
 // Layouts

@@ -9,7 +9,7 @@ module UI::Pages
     elements :promoted_items, '.home-promoted__item'
 
     element :contact_heading, '.home-contact__header h2'
-    element :contact_introduction, '.home-contact__introduction'
+    element :contact_introduction, '.home-contact__header p'
     element :contact_details, '.home-contact__details'
   end
 end

@@ -6,6 +6,17 @@
   <input type="button" class="button $modifier_class" value="input"/>
 <% end %>
 
+<%= styleguide_section sections['Direction buttons'] do %>
+  <button class="button button--compact">
+    <span class="icon icon--left-chevron"></span>
+    <span class="button--compact__text">Previous</span>
+  </button>
+  <button class="button button--compact">
+    <span class="button--compact__text">Next</span>
+    <span class="icon icon--right-chevron"></span>
+  </button>
+<% end %>
+
 <%= styleguide_section sections['icons'] do %>
   <span class="icon $modifier_class" aria-hidden="true"></span>
   <span class="visually-hidden">hidden text</span>

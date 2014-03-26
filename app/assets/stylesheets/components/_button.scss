@@ -81,6 +81,31 @@
   border-top-color: $color-button-primary-border;
 }
 
+// Direction buttons
+//
+// Styleguide Direction buttons
+
+.button--compact {
+  padding: $padding-button-small-square;
+  height: auto;
+  width: auto;
+  > .icon {
+    vertical-align: middle;
+  }
+  > .button--compact__text {
+    @extend %type-small;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+  @include respond-to(0, $mq-m) {
+    > .button--compact__text {
+      display: none;
+    }
+    height: 40px;
+    width: 40px;
+  }
+}
+
 // Class to remove default styling from a button for use as a trigger for collapsible sections - Unstyled Button
 .button--unstyled {
   background: transparent;

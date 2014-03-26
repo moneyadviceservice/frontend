@@ -39,21 +39,32 @@
 .footer-site-links__language {
   @extend %clearfix;
   border-top: 1px solid darken($color-grey-pale, 5%);
-  margin-bottom: $baseline-unit;
+  margin-bottom: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    margin: 0;
+  }
 
   .icon--desktop-green,
+  .icon--speech-green,
   .icon--globe {
     width: 20px;
   }
 
   .icon--globe {
     position: relative;
-    top: 7px;
+    top: 3px;
+    height: 16px;
   }
 
   .icon--desktop-green {
     position: relative;
     top: 2px;
+  }
+
+  .icon--speech-green {
+    position: relative;
+    top: 3px;
   }
 
   li {

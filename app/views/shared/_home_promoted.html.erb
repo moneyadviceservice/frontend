@@ -4,7 +4,7 @@
       <li class="home-promoted__item">
         <%= link_to item['url'] do %>
           <%= image_tag(item['image'], alt: '') %>
-          <%= item['text'] %>
+          <p><%= item['text'] %></p>
         <% end %>
       </li>
     <% end %>

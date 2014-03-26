@@ -1,17 +1,11 @@
 When(/^I search for something relevant$/) do
   home_page.search_box.input.set 'health'
-
-  VCR.use_cassette("search_relevant") do
-    home_page.search_box.submit.click
-  end
+  home_page.search_box.submit.click
 end
 
 When(/^I search for something irrelevant$/) do
   home_page.search_box.input.set 'cats'
-
-  VCR.use_cassette("search_irrelevant") do
-    home_page.search_box.submit.click
-  end
+  home_page.search_box.submit.click
 end
 
 When(/^I submit a search with no query$/) do

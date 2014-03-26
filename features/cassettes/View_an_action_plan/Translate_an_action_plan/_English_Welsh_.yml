@@ -1,0 +1,197 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/boost-your-pension-near-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 653f2eea-2c8d-4634-964b-2bd1f01ba047
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 25 Mar 2014 16:24:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYWN0
+        aW9uX3BsYW5zL3Job2ktaHdiLWljaC1wZW5zaXduLXluLWFnb3MtYXQtZWlj
+        aC15bWRkZW9saWFkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeSI7
+        IHRpdGxlPSJDeW5sbHVuIGd3ZWl0aHJlZHUgLSBSaG9pIGh3YiBp4oCZY2gg
+        cGVuc2l3biB5biBhZ29zIGF0IGVpY2ggeW1kZGVvbGlhZCI=
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 86f4105f3646133a9da90f5de4975e0e
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 25-Mar-2015 16:24:22 GMT; secure
+      - _session_id=86f4105f3646133a9da90f5de4975e0e; path=/; secure; HttpOnly
+      - _web_tracking=a8190f78f4849d69af91536ab67f2736; path=/; expires=Wed, 25-Mar-2015
+        16:24:22 GMT; secure
+      X-Request-Id:
+      - 653f2eea-2c8d-4634-964b-2bd1f01ba047
+      X-Runtime:
+      - '0.058944'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"id":"boost-your-pension-near-retirement","title":"Action plan - Boost
+        your pension near retirement","description":"Practical advice on how to boost
+        your pension plan including deferring retirement and paying more into your
+        pension scheme.","body":"<p class=\"intro\"><img alt=\"Action plan - Boost
+        your pension near retirement\" src=\"/images/new_action_plan_icon.jpg\"/>The
+        closer you get to retirement, the less room for manoeuvre you have in terms
+        of filling any gap in your pension savings. But there may still be steps you
+        can take to help generate the kind of income you hope to retire on. </p><div
+        class=\"action-item\"><h3>1 - Pay more into your pension scheme </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Tax relief can add
+        a significant boost to any extra contributions you make to your pension before
+        retirement. This is particularly true if you pay higher-rate Income Tax. </p></div><div
+        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/ways-to-boost-your-pension-in-the-run-up-to-retirement\">
+        Read our article Ways to boost your pension in the run-up to retirement</a></li></ul><p>Contact
+        your pension scheme provider to ask about boosting your contributions. </p><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/tax-relief-on-pension-contributions\">Note
+        that there''s an annual limit to the contributions that will qualify for tax
+        relief </a></li></ul></div></div></div><div class=\"action-item\"><h3>2 -
+        Defer retirement </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>Deferring your pension means you have more time to contribute to it,
+        it stays invested for longer and you won''t need it to cover as many years
+        of retirement. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/decide-when-to-take-your-pension\">Follow
+        our Action plan - Deciding when to take your pension</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>3 - Boost your State Pension entitlement </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Your State Pension
+        depends on how many years of National Insurance contributions you''ve built
+        up. But you can make extra contributions to fill in any ''missing'' years.
+        </p></div><div class=\"how\"><h4>How? </h4><ul><li><a target=\"_blank\" data-link-type=\"external\"
+        href=\"https://www.gov.uk/voluntary-national-insurance-contributions\">Read
+        how to make voluntary contributions on the gov.uk website </a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>4 - Shop around for an annuity </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Why? </h4><p>Don''t accept whatever annuity your existing
+        provider offers in return for your pension pot before you''ve shopped around.
+        It can add 20% or more to your retirement income. </p></div><div class=\"how\"><h4>How?
+        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/shop-around-for-an-annuity\">
+        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>"}'
+    http_version:
+  recorded_at: Tue, 25 Mar 2014 16:24:22 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/action_plans/rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 7d956ae8-713e-43e8-96e9-190a3eaca9c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 25 Mar 2014 16:24:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/action_plans/boost-your-pension-near-retirement>
+        rel="alternate"; hreflang="en"; title="Action plan - Boost your pension near
+        retirement"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 03646cb2983c28488a2c94f295a5218f
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 25-Mar-2015 16:24:23 GMT; secure
+      - _session_id=03646cb2983c28488a2c94f295a5218f; path=/; secure; HttpOnly
+      - _web_tracking=08f14d35bb85dc72c817605bac6546b1; path=/; expires=Wed, 25-Mar-2015
+        16:24:23 GMT; secure
+      X-Request-Id:
+      - 7d956ae8-713e-43e8-96e9-190a3eaca9c3
+      X-Runtime:
+      - '0.062700'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"id":"rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad","title":"Cynllun
+        gweithredu - Rhoi hwb i\u2019ch pensiwn yn agos at eich ymddeoliad","description":"Cyngor
+        ymarferol ar sut i gynyddu eich cynllun pensiwn gan gynnwys gohirio eich ymddeoliad
+        a thalu rhagor i\u2019ch cynllun pensiwn.","body":"<p class=\"intro\"><img
+        alt=\"Cynllun gweithredu - Sut i agor cyfrif banc\" src=\"/images/new_action_plan_icon.jpg\"/>Agosaf
+        yn y byd ydych chi at ymddeol, lleiaf yn y byd o gyfle sydd gennych o ran
+        llenwi unrhyw fwlch yn eich cynilion pensiwn. Ond efallai bod rhai camau y
+        gallwch eu cymryd i helpu creu\u2019r math o incwm yr ydych yn gobeithio ymddeol
+        arno. </p><div class=\"action-item\"><h3>1 Talu mwy i\u2019ch cronfa bensiwn
+        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Pam? </h4><p>Gall gostyngiad
+        yn y dreth ychwanegu llawer at unrhyw gyfraniadau ychwanegol y byddwch yn
+        eu gwneud cyn ymddeol. Mae hyn yn arbennig o wir os ydych yn talu Treth Incwm
+        cyfradd uwch. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/articles/ffyrdd-o-gynyddu-eich-pensiwn-wrth-ich-ymddeoliad-agosau\">Darllenwch
+        ein herthygl Ffyrdd o roi hwb i\u2019ch pensiwn cyn i chi ymddeol</a></li></ul><p>Cysylltwch
+        \u00e2 darparwr eich cynllun pensiwn i holi am gynyddu eich cyfraniadau </p><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/gostyngiad-treth-ar-gyfraniadau-pensiwn\">Sylwer
+        bod cyfyngiad blynyddol ar y cyfraniadau a fydd yn gymwys am ryddhad treth</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>2 Gohirio eich ymddeoliad </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Pam? </h4><p>Mae gohirio eich pensiwn yn golygu bod gennych
+        ragor o amser i gyfrannu ato, mae\u2019n parhau fel buddsoddiad yn hwy ac
+        ni fydd raid i chi ddarparu ar gyfer cymaint o flynyddoedd o ymddeoliad. </p></div><div
+        class=\"how\"><h4>Sut? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/penderfynwch-ar-bryd-i-gymryd-eich-pensiwn\">Dilynwch
+        ein Cynllun gweithredu - Penderfynu pryd i gymryd eich pensiwn</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>3 Cynyddu eich hawl i Bensiwn y Wladwriaeth </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Pam? </h4><p>Mae eich Pensiwn
+        y Wladwriaeth yn dibynnu ar faint o flynyddoedd o gyfraniadau Yswiriant Cenedlaethol
+        yr ydych wedi eu casglu. Ond gallwch wneud cyfraniadau ychwanegol i lenwi
+        unrhyw flynyddoedd \u2018coll\u2019. </p></div><div class=\"how\"><h4>Sut?
+        </h4><ul><li><a target=\"_blank\" data-link-type=\"external\" href=\"https://www.gov.uk/voluntary-national-insurance-contributions\">Darllenwch
+        sut i wneud cyfraniadau gwirfoddol ar y wefan gov.uk</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>4 Chwilio am y blwydd-dal gorau </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Pam? </h4><p>Peidiwch \u00e2 derbyn pa bynnag flwydd-dal
+        y mae eich darparwr presennol yn ei gynnig ar gyfer eich pot pensiwn heb i
+        chi chwilio am y fargen orau yn gyntaf. Gall ychwanegu 20 y cant neu fwy at
+        eich incwm ymddeol. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/chwilio-am-flwydd-dal\">
+        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>"}'
+    http_version:
+  recorded_at: Tue, 25 Mar 2014 16:24:23 GMT
+recorded_with: VCR 2.8.0

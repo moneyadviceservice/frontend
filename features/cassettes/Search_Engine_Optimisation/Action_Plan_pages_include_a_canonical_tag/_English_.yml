@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/boost-your-pension-near-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 2b25af80-9a58-441f-ac70-2533b9029a98
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 26 Mar 2014 10:55:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
+        aW9uX3BsYW5zL2Jvb3N0LXlvdXItcGVuc2lvbi1uZWFyLXJldGlyZW1lbnQ+
+        IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9IkFj
+        dGlvbiBwbGFuIC0gQm9vc3QgeW91ciBwZW5zaW9uIG5lYXIgcmV0aXJlbWVu
+        dCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2N5
+        L2FjdGlvbl9wbGFucy9yaG9pLWh3Yi1pY2gtcGVuc2l3bi15bi1hZ29zLWF0
+        LWVpY2gteW1kZGVvbGlhZD4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0i
+        Y3ktR0IiOyB0aXRsZT0iQ3lubGx1biBnd2VpdGhyZWR1IC0gUmhvaSBod2Ig
+        aeKAmWNoIHBlbnNpd24geW4gYWdvcyBhdCBlaWNoIHltZGRlb2xpYWQi
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - a4032073375ae0a68e00b299c6b1148d
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 26-Mar-2015 10:55:37 GMT; secure
+      - _session_id=a4032073375ae0a68e00b299c6b1148d; path=/; secure; HttpOnly
+      - _web_tracking=ade07d1555349669c55ae57ea23e338f; path=/; expires=Thu, 26-Mar-2015
+        10:55:37 GMT; secure
+      X-Request-Id:
+      - 2b25af80-9a58-441f-ac70-2533b9029a98
+      X-Runtime:
+      - '0.062518'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"id":"boost-your-pension-near-retirement","title":"Action plan - Boost
+        your pension near retirement","description":"Practical advice on how to boost
+        your pension plan including deferring retirement and paying more into your
+        pension scheme.","body":"<p class=\"intro\"><img alt=\"Action plan - Boost
+        your pension near retirement\" src=\"/images/new_action_plan_icon.jpg\"/>The
+        closer you get to retirement, the less room for manoeuvre you have in terms
+        of filling any gap in your pension savings. But there may still be steps you
+        can take to help generate the kind of income you hope to retire on. </p><div
+        class=\"action-item\"><h3>1 - Pay more into your pension scheme </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Tax relief can add
+        a significant boost to any extra contributions you make to your pension before
+        retirement. This is particularly true if you pay higher-rate Income Tax. </p></div><div
+        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/ways-to-boost-your-pension-in-the-run-up-to-retirement\">
+        Read our article Ways to boost your pension in the run-up to retirement</a></li></ul><p>Contact
+        your pension scheme provider to ask about boosting your contributions. </p><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/tax-relief-on-pension-contributions\">Note
+        that there''s an annual limit to the contributions that will qualify for tax
+        relief </a></li></ul></div></div></div><div class=\"action-item\"><h3>2 -
+        Defer retirement </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>Deferring your pension means you have more time to contribute to it,
+        it stays invested for longer and you won''t need it to cover as many years
+        of retirement. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/decide-when-to-take-your-pension\">Follow
+        our Action plan - Deciding when to take your pension</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>3 - Boost your State Pension entitlement </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Your State Pension
+        depends on how many years of National Insurance contributions you''ve built
+        up. But you can make extra contributions to fill in any ''missing'' years.
+        </p></div><div class=\"how\"><h4>How? </h4><ul><li><a target=\"_blank\" data-link-type=\"external\"
+        href=\"https://www.gov.uk/voluntary-national-insurance-contributions\">Read
+        how to make voluntary contributions on the gov.uk website </a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>4 - Shop around for an annuity </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Why? </h4><p>Don''t accept whatever annuity your existing
+        provider offers in return for your pension pot before you''ve shopped around.
+        It can add 20% or more to your retirement income. </p></div><div class=\"how\"><h4>How?
+        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/shop-around-for-an-annuity\">
+        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>"}'
+    http_version:
+  recorded_at: Wed, 26 Mar 2014 10:55:38 GMT
+recorded_with: VCR 2.8.0

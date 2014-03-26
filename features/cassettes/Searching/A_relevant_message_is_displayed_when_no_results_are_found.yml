@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8080/content-service/search.json?limit=25&locale=en&query=health
+    uri: http://localhost:8080/content-service/search.json?limit=25&locale=en&query=cats
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 112935ee-f958-489d-a3bf-0b94191ddb61
+      - 607c051f-76fe-4627-8b4d-980676eca729
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,15 +23,14 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Date:
-      - Thu, 06 Mar 2014 17:24:52 GMT
+      - Tue, 25 Mar 2014 17:16:30 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '170'
+      - '20'
     body:
       encoding: UTF-8
-      string: '{"searchResults":[{"url":"/content/tools/health-check","preview":{"title":"Health
-        check","preview":"Health check"},"exactMatch":false,"id":"health-check","type":"tool"}]}'
+      string: '{"searchResults":[]}'
     http_version:
-  recorded_at: Thu, 06 Mar 2014 17:24:52 GMT
+  recorded_at: Tue, 25 Mar 2014 17:16:31 GMT
 recorded_with: VCR 2.8.0

@@ -30,7 +30,7 @@ a {
 .editorial p > a {
   color: $color-link-default;
   text-decoration: none;
-  border-bottom:1px solid lighten($color-link-default,50%);
+  border-bottom: 1px solid lighten($color-link-default, 50%);
 
   &:visited {
     color: $color-link-default;
@@ -41,12 +41,13 @@ a {
     outline: none;
     color: $color-link-default;
     text-decoration: none;
-    border-bottom:1px solid lighten($color-link-default,30%);
+    border-bottom: 1px solid lighten($color-link-default, 30%);
   }
 }
-  .video-wrapper + a {
-    display: block;
-  }
+
+.video-wrapper + a {
+  display: block;
+}
 
 %link-nav,
 .link-nav {

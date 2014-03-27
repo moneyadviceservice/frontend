@@ -22,11 +22,11 @@ public_website_connection.builder.insert_after(Faraday::Request::RequestId,
 Core::Registries::Connection[:content_service] = content_service_connection
 Core::Registries::Connection[:public_website]  = public_website_connection
 
-Core::Registries::Repository[:action_plan] = Core::RepositoryCache.new(
-  Core::Repositories::ActionPlans::PublicWebsite.new)
+Core::Registries::Repository[:action_plan] =
+  Core::Repositories::ActionPlans::PublicWebsite.new
 
-Core::Registries::Repository[:article] = Core::RepositoryCache.new(
-  Core::Repositories::Articles::PublicWebsite.new)
+Core::Registries::Repository[:article] =
+  Core::Repositories::Articles::PublicWebsite.new
 
 Core::Registries::Repository[:category] = Core::RepositoryCache.new(
   Core::Repositories::Categories::PublicWebsite.new)

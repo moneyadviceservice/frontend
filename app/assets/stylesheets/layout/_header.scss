@@ -1,56 +1,45 @@
 .l-header {
-
-  .mas-logo {
-    padding: $baseline-unit*2 0;
-    margin: 0 0 0 $baseline-unit*2;
-    @include respond-to($mq-l) {
-      margin: 0 0 0 1.6667%;
-      position: absolute;
-      top: 24px;
-      padding: 0;
-    }
-  }
-
   .mobile-nav {
     display: none;
   }
 
-  .mobile-nav__item {
-    margin: $baseline-unit*2 $baseline-unit*1.5 0 0;
-    float: left;
+  .mas-logo {
+    @include respond-to($mq-m) {
+      float: left;
+      margin-top: $baseline-unit*2;
+    }
   }
 
   .primary-nav {
-    @include respond-to($mq-l) {
+    @include respond-to($mq-m) {
       margin: $baseline-unit*2 0;
       float: right;
     }
   }
+}
 
-  .js & {
-    .mobile-nav {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      @include respond-to($mq-l) {
-        display: none;
-      }
-    }
+.js .mobile-nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-    .primary-nav,
-    .search-box {
-      display: none;
-      &.is-on {
-        display: block;
-      }
-      @include respond-to($mq-l) {
-        display: block;
-      }
-    }
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
 
+.js .primary-nav,
+.js .search-box {
+  display: none;
+
+  &.is-on {
+    display: block;
   }
 
+  @include respond-to($mq-m) {
+    display: block;
+  }
 }
 
 // 1. Hide by default as don't want non-js users to see all sub-category links as page will be unusable.
@@ -76,10 +65,11 @@
 }
 
 .l-search-box {
+  @extend %clearfix;
   position: relative;
   margin: 0 auto;
-  @extend %clearfix;
-  @include respond-to($mq-l) {
+
+  @include respond-to($mq-m) {
     @include column(6);
     @include push(3);
   }

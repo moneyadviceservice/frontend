@@ -61,7 +61,6 @@
 .footer-site-links__language {
   @extend %clearfix;
   border-top: 1px solid darken($color-grey-pale, 5%);
-  margin-bottom: $baseline-unit*2;
 
   @include respond-to($mq-m) {
     margin: 0;

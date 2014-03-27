@@ -169,6 +169,10 @@
   @include body(14, 18);
 
   @include respond-to($mq-m) {
+    @include body(16, 22);
+  }
+
+  @include respond-to($mq-l) {
     @include body(18, 22);
   }
 
@@ -201,8 +205,20 @@
 
 %type-home-number {
   @extend %font-heading-heavy;
-  @include body(36, 36);
+  @include body(30, 36);
   letter-spacing: -2px;
+
+  @include respond-to($mq-m) {
+    @include body(36, 36);
+  }
+
+  @include respond-to($mq-l) {
+    @include body(32, 36);
+  }
+
+  @include respond-to($mq-xl) {
+    @include body(36, 36);
+  }
 }
 
 %type-homepage-headings {

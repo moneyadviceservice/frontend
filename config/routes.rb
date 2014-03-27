@@ -8,7 +8,7 @@ class ValidArticle
 end
 
 Rails.application.routes.draw do
-  get '/' => 'home#show'
+  get '/' => redirect("/en")
   resource :beta_opt_out, only: [:create, :destroy], path: 'opt-out'
 
   scope '/:locale', locale: /en|cy/ do

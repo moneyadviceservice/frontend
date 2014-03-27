@@ -1,0 +1,9 @@
+@function u($multiplier) {
+  $baseline-number: 6;
+
+  @if $responsive == true {
+    @return 16 / ($multiplier * $baseline-number) + rem
+  }
+
+  @return $multiplier * $baseline-number + px
+}

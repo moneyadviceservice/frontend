@@ -69,12 +69,20 @@
   background-position: -371px -174px;
   width: 16px;
   height: 13px;
+
+  // temp style to adjust icon to sit with text
+  position: relative;
+  top: 2px;
 }
 
 .icon--desktop-green {
   background-position: -437px -174px;
   width: 16px;
   height: 13px;
+
+  // temp style to adjust icon to sit with text
+  position: relative;
+  top: 2px;
 }
 
 .icon--external-link {
@@ -142,8 +150,8 @@
 
 .icon--close {
   background-position: -140px -268px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 // SEARCH ICONS
@@ -205,7 +213,7 @@
   }
 
   .icon--speech-green {
-    background-position:  -304px -57px;
+    background-position: -304px -57px;
   }
 
   // LIST ICONS
@@ -244,7 +252,7 @@
   }
 
   .icon--close {
-    background-position: -137px -102px;
+    background-position: -139px -105px;
   }
 
   // SEARCH ICONS

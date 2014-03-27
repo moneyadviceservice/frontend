@@ -1,8 +1,13 @@
+// function based on the vertical rhythm, used to calculate all proportions without visual clutter
+
+//
+// e.g. padding: u(1) u(2) u(3) u(1);
+
 @function u($multiplier) {
   $baseline-number: 6;
 
   @if $responsive == true {
-    @return 16 / ($multiplier * $baseline-number) + rem
+    @return ($multiplier * $baseline-number) / 16 + rem
   }
 
   @return $multiplier * $baseline-number + px

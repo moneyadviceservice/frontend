@@ -17,6 +17,7 @@ gem 'kss'
 gem 'link_header'
 gem 'meta-tags', require: 'meta_tags', github: 'moneyadviceservice/meta-tags', branch: 'alternate-url'
 gem 'nokogiri'
+gem 'nunes'
 gem 'rouge'
 gem 'statsd-ruby'
 

@@ -49,13 +49,17 @@
   @extend %collapsable-target;
   display: none; // 1
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     &.is-on {
       position: absolute;
       top: $baseline-unit*14;
       left: 0;
       z-index: 10;
     }
+  }
+
+  .theme-cy & {
+    top: 76px;
   }
 
   ul {

@@ -40,7 +40,6 @@
 
     &:nth-of-type(2) {
       width: 8.125em;
-//      width: 155px;
     }
 
     &:nth-of-type(3) {
@@ -48,15 +47,27 @@
     }
   }
 
-//  .theme-cy & {
-//    @include respond-to($mq-l) {
-//      width: 115px;
-//
-//      a {
-//        padding: $baseline-unit*2;
-//      }
-//    }
-//  }
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      width: 6em;
+
+      &:nth-of-type(2) {
+        width: 6em;
+      }
+
+      &:nth-of-type(4) {
+        width: 6em;
+      }
+
+      &:nth-of-type(3) {
+        width: 5em;
+      }
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .primary-nav__link {
@@ -69,7 +80,7 @@
 
   // triangle to indicate which menu item is open
   &.is-on:after {
-    @include respond-to($mq-l) {
+    @include respond-to($mq-m) {
       content: '';
       width: 0px;
       height: 0px;
@@ -83,13 +94,17 @@
     }
   }
 
+  .theme-cy & {
+    padding: $baseline-unit*2 0;
+  }
+
 }
 
 .primary-nav__dropdown {
   width: 100%;
   background-color: $color-submenu-background;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     padding: $baseline-unit*4;
   }
 
@@ -100,11 +115,15 @@
     text-align: left;
     padding-left: $baseline-unit*2;
 
-    @include respond-to($mq-l) {
-      @include column(4);
-      margin-right: $baseline-unit*2;
+    @include respond-to($mq-m) {
+      @include column(6);
+      padding-right: $baseline-unit*2;
       padding-left: 0;
       border: 0;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
     }
   }
 

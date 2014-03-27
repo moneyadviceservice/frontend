@@ -1,18 +1,12 @@
-// currently only used for the basic homepage heading
-%heading-extra-large {
-  @include heading(32, 36);
-  @extend %font-heading-heavy;
-
-  @include respond-to($mq-m) {
-    @include heading(40, 42);
-  }
-}
-
 %heading-display {
   @include body(32, 36);
   @extend %font-heading-heavy;
 
   @include respond-to($mq-m) {
+    @include body(32, 36);
+  }
+
+  @include respond-to($mq-xl) {
     @include body(40, 42);
   }
 
@@ -21,6 +15,15 @@
     @include respond-to($mq-m) {
       @include body(32, 36);
     }
+  }
+}
+
+%heading-extra-large {
+  @include heading(32, 36);
+  @extend %font-heading-heavy;
+
+  @include respond-to($mq-m) {
+    @include heading(40, 42);
   }
 }
 

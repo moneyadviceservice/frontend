@@ -26,7 +26,7 @@
 
   a {
     @extend %type-footer;
-    @include links($color-link-nav, $color-link-nav);
+    @extend %link-nav-secondary;
     padding: $baseline-unit 0;
   }
 
@@ -114,7 +114,7 @@
 
 .footer-site-links__opt_out {
   @extend %type-small;
-  @include links($color-link-nav, $color-link-nav);
+  @extend %link-nav-secondary;
   padding: 0;
   margin: 0;
   border: 0;

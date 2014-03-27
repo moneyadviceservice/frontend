@@ -177,6 +177,8 @@
   }
 
   .theme-cy & {
+    @include body(14, 18);
+
     @include respond-to($mq-m) {
       @include body(16, 18);
     }

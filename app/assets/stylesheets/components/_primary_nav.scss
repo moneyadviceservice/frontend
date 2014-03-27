@@ -62,10 +62,10 @@
       &:nth-of-type(3) {
         width: 5em;
       }
+    }
 
-      a {
-        font-size: 14px;
-      }
+    @include respond-to($mq-l) {
+      width: 8em;
     }
   }
 }

@@ -42,6 +42,7 @@ group :development do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter', require: false
   gem 'faker'
   gem 'rspec_junit_formatter'
   gem 'thin'
@@ -64,7 +65,6 @@ group :test, :development do
   gem 'chai-jquery-rails'
   gem 'byebug'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
-  gem "codeclimate-test-reporter", require: false
 end
 
 group :doc do

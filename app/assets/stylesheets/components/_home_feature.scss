@@ -5,7 +5,7 @@
 .home-feature__content {
   @extend %clearfix;
   padding: $baseline-unit*6 0 0 0;
-  background: transparent image_url('homeimage.png') 10px 125px no-repeat;
+  background: transparent image_url('home.png') 10px 125px no-repeat;
 
   @include respond-to($mq-m) {
     background-position: 15px 26px;

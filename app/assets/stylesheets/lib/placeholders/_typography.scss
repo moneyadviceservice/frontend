@@ -80,15 +80,15 @@
   text-shadow: 1px 1px transparent;
 }
 
+// only works with OpenType Fonts
 @mixin font-features($liga, $kern) {
-  // allows access to kerning and ligatypes in fonts that support it.
   -webkit-font-feature-settings: "#{$liga}";
   -moz-font-feature-settings: "#{$liga}", "#{$kern}";
   font-feature-settings: "#{$liga}", "#{$kern}";
 }
 
+// only works with OpenType Fonts
 @mixin legibility($kerning: normal) {
-  // optimize the font for legibility (kerning of characters)
   -webkit-font-kerning: $kerning;
   -moz-font-kerning: $kerning;
   font-kerning: $kerning;

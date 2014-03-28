@@ -1,4 +1,4 @@
-require "codeclimate-test-reporter"
+require 'codeclimate-test-reporter'
 CodeClimate::TestReporter.start
 
 ENV['RAILS_ENV'] = 'test'
@@ -22,3 +22,5 @@ RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
   c.alias_it_should_behave_like_to :it_has_behavior, 'exhibits behaviour of an'
 end
+
+WebMock.disable_net_connect!(allow: 'codeclimate.com')

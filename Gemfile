@@ -43,6 +43,7 @@ group :development do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter', require: false
   gem 'faker'
   gem 'rspec_junit_formatter'
   gem 'thin'

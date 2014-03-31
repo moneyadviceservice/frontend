@@ -1,4 +1,4 @@
-<header class="l-header header" role="banner">
+<header class="l-header" role="banner">
   <div class="l-constrained">
     <%= link_to root_path do %>
       <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
@@ -11,6 +11,8 @@
   </div>
 
   <% unless defined? @dont_show_search_box %>
-    <%= render 'shared/search_box' %>
+    <div class="l-header__search" id="search-bar">
+      <%= render 'shared/search_box' %>
+    </div>
   <% end %>
 </header>

@@ -19,32 +19,31 @@
       float: right;
     }
   }
-}
 
-.js .mobile-nav {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+  .js & .mobile-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-  @include respond-to($mq-m) {
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
+
+  .js & .primary-nav,
+  .js & .l-header__search {
     display: none;
+
+    &.is-on {
+      display: block;
+    }
+
+    @include respond-to($mq-m) {
+      display: block;
+    }
   }
 }
-
-.js .primary-nav,
-.js .l-header__search {
-  display: none;
-
-  &.is-on {
-    display: block;
-  }
-
-  @include respond-to($mq-m) {
-    display: block;
-  }
-}
-
 
 .l-header__search {
   @extend %clearfix;
@@ -62,7 +61,6 @@
     }
   }
 }
-
 
 // 1. Hide by default as don't want non-js users to see all sub-category links as page will be unusable.
 //    They are able to get to sublinks on page refresh

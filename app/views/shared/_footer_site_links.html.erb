@@ -64,7 +64,7 @@
       </li>
       <li>
         <%= form_tag(beta_opt_out_path) do %>
-          <%= hidden_field_tag(:redirection_page, request.original_url) %>
+          <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
           <%= button_tag(class: 'footer-site-links__opt_out') do %>
             <span class="icon icon--desktop-green"></span>
             <%= t('opt_out.title') %>

@@ -53,10 +53,10 @@
 
 .l-split-start {
   @include column(6);
+  float: left;
 }
 
 .l-split-end {
   @include column(6);
-  position: relative;
-  float: right;
+  float: left;
 }

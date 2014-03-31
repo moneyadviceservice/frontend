@@ -17,6 +17,7 @@
 
   @include respond-to($mq-m) {
     float: left;
+    min-width: 310px;
   }
 }
 

@@ -13,6 +13,11 @@ require 'mas/development_dependencies/rspec/spec_helper'
 require 'webmock/rspec'
 require 'factory_girl'
 require 'html_validation'
+require 'core/repositories/categories/fake'
+
+Core::Registries::Repository[:category] = Core::Repositories::Categories::Fake.new
+
+I18n.available_locales = [:en, :cy]
 
 Draper::ViewContext.test_strategy :fast
 

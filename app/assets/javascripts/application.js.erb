@@ -50,7 +50,7 @@ require(['ujs', 'jquery'], function(){
 });
 
 require(['ujs', 'jquery'], function(){
-  $('.opt-out__close').bind('ajax:success', function(data, status, xhr) {
+  $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
     $('.opt-out').addClass('is-hidden');
   });
 });

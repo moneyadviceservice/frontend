@@ -11,7 +11,7 @@
         <% end %>
       <% end %>
 
-      <%= form_tag(beta_opt_out_path, remote: true, authenticity_token: true, method: :delete) do %>
+      <%= form_tag(beta_opt_out_path, remote: true, authenticity_token: true, method: :delete, class: 'js-close-opt-out') do %>
         <button class="opt-out__close">
           <span class="visually-hidden"><%= t('opt_out.dismiss') %></span>
           <span class="icon icon--close"></span>

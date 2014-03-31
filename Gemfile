@@ -49,6 +49,7 @@ group :test do
   gem 'thin'
   gem 'vcr'
   gem 'webmock'
+  gem 'html_validation' # requires https://github.com/safarijv/tidy-html5
 end
 
 group :production do

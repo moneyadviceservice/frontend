@@ -3,12 +3,12 @@
     <%= link_to root_path do %>
       <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
     <% end %>
-  </div>
 
-  <nav class="l-constrained" role="navigation" aria-label="primary">
-    <%= render 'shared/mobile_nav' %>
-    <%= render 'shared/primary_nav' %>
-  </nav>
+    <nav role="navigation" aria-label="primary">
+      <%= render 'shared/mobile_nav' %>
+      <%= render 'shared/primary_nav' %>
+    </nav>
+  </div>
 
   <%= render 'shared/search_box' %>
 </header>

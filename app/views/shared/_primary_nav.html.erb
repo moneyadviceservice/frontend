@@ -4,9 +4,9 @@
     <% category_navigation.each do |category| %>
       <li class="primary-nav__item">
         <% if category.id == 'news' %>
-          <a href="/<%= I18n.locale %>/news"><%= category.title %></a>
+          <a class="primary-nav__link" href="/<%= I18n.locale %>/news"><%= category.title %></a>
         <% else %>
-          <%= link_to category.title, category_path(category.id) %>
+          <%= link_to category.title, category_path(category.id), class: 'primary-nav__link' %>
         <% end %>
 
         <% if category.contents.present? %>

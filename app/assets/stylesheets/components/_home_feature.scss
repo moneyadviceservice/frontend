@@ -8,7 +8,7 @@
   background: transparent image_url('pig_and_friends.png') 10px 125px no-repeat;
 
   @include respond-to($mq-m) {
-    background-position: 15px 26px;
+    background-position: 15px 15px;
   }
 
   @include respond-to($mq-l) {
@@ -18,15 +18,14 @@
 }
 
 .home-feature__heading {
+  @include column(12);
   @extend %heading-display;
   color: $color-text-default;
-  padding: 0 $baseline-unit;
-  margin: 0;
   height: 265px;
 
   @include respond-to($mq-m) {
-    @include column(7);
-    @include push(5);
+    @include column(6);
+    @include push(6);
     margin-top: $baseline-unit*5;
     margin-bottom: $baseline-unit*8.5;
     height: auto;
@@ -53,6 +52,10 @@
     border-top: 1px solid lighten($home-feature-list-border, 5%);
     &:first-child {
       border: none;
+    }
+
+    @include respond-to($mq-m) {
+      padding: 0;
     }
   }
 
@@ -92,7 +95,7 @@
     li {
       @include column(3);
       padding: 0;
-      min-height: 150px;
+      min-height: 10rem;
       margin-bottom: 0;
     }
   }

@@ -80,15 +80,15 @@
   text-shadow: 1px 1px transparent;
 }
 
+// only works with OpenType Fonts
 @mixin font-features($liga, $kern) {
-  // allows access to kerning and ligatypes in fonts that support it.
   -webkit-font-feature-settings: "#{$liga}";
   -moz-font-feature-settings: "#{$liga}", "#{$kern}";
   font-feature-settings: "#{$liga}", "#{$kern}";
 }
 
+// only works with OpenType Fonts
 @mixin legibility($kerning: normal) {
-  // optimize the font for legibility (kerning of characters)
   -webkit-font-kerning: $kerning;
   -moz-font-kerning: $kerning;
   font-kerning: $kerning;
@@ -169,10 +169,16 @@
   @include body(14, 18);
 
   @include respond-to($mq-m) {
+    @include body(16, 22);
+  }
+
+  @include respond-to($mq-l) {
     @include body(18, 22);
   }
 
   .theme-cy & {
+    @include body(14, 18);
+
     @include respond-to($mq-m) {
       @include body(16, 18);
     }
@@ -201,8 +207,20 @@
 
 %type-home-number {
   @extend %font-heading-heavy;
-  @include body(36, 36);
+  @include body(30, 36);
   letter-spacing: -2px;
+
+  @include respond-to($mq-m) {
+    @include body(36, 36);
+  }
+
+  @include respond-to($mq-l) {
+    @include body(32, 36);
+  }
+
+  @include respond-to($mq-xl) {
+    @include body(36, 36);
+  }
 }
 
 %type-homepage-headings {

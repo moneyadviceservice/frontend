@@ -6,4 +6,5 @@
   overflow: hidden;
   color: $color-text-icon;
   background-color: $color-green-primary;
+  position: relative; // fix white space issue in Safari
 }

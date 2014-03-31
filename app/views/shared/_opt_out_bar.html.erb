@@ -5,14 +5,14 @@
 
       <%= form_tag(beta_opt_out_path) do %>
         <%= hidden_field_tag(:redirection_page, request.original_url) %>
-        <%= button_tag(class: 'opt-out__button') do %>
+        <%= button_tag(class: 'opt-out__control') do %>
           <span class="icon icon--desktop"></span>
           <%= t('opt_out.title') %>
         <% end %>
       <% end %>
 
-      <%= form_tag(beta_opt_out_path, remote: true, authenticity_token: true, method: :delete, class: 'opt-out__close') do %>
-        <button class="opt-out__close__button">
+      <%= form_tag(beta_opt_out_path, remote: true, authenticity_token: true, method: :delete) do %>
+        <button class="opt-out__close">
           <span class="visually-hidden"><%= t('opt_out.dismiss') %></span>
           <span class="icon icon--close"></span>
         </button>

@@ -10,5 +10,7 @@
     </nav>
   </div>
 
-  <%= render 'shared/search_box' %>
+  <% unless defined? @dont_show_search_box %>
+    <%= render 'shared/search_box' %>
+  <% end %>
 </header>

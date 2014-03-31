@@ -200,6 +200,8 @@ GEM
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jshint_ruby (0.1)
+      execjs
     json (1.8.1)
     kgio (2.9.2)
     konacha (3.1.0)
@@ -394,6 +396,7 @@ DEPENDENCIES
   guard-shell
   html_validation
   jquery-rails
+  jshint_ruby
   kss
   link_header
   mas-development_dependencies!

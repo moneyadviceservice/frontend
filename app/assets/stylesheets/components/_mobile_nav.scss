@@ -5,29 +5,18 @@
 
 .mobile-nav__item {
   @extend %type-navigation;
+  float: left;
+  margin: $baseline-unit*2 $baseline-unit*1.5 0 0;
   border-radius: $baseline-unit/2;
   background-color: $color-green-tertiary;
-
-  a {
-    @include links($color-primary-nav, $color-primary-nav-visited);
-    display: block;
-    padding: $baseline-unit*1.5 $baseline-unit*2;
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
-.mobile-nav__item--search {
-  a {
-    padding-right:6px;
-    padding-bottom:2.6px;
-  }
+.mobile-nav__link {
+  @extend %link-nav-primary;
+  padding: $baseline-unit*1.5;
+  display: block;
+}
 
-  .icon--search-white {
-    position:relative;
-    left:-1px;
-    top:1px;
-  }
-
+.mobile-nav__link--search {
+  padding: 9px 7px 5px 11px;
 }

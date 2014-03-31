@@ -1,6 +1,7 @@
 module AdvicePlans
-  class StartTaskCommand
-    def method_missing(*args)
+  def self.const_missing(name)
+    Class.new do
+      def method_missing(*args); end
     end
   end
 end

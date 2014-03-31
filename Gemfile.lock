@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/moneyadviceservice/csslint_ruby.git
+  revision: a1f16b308b2d417033f7e135cd3735c5a5c96472
+  specs:
+    csslint_ruby (0.0.1)
+      execjs
+
+GIT
   remote: git://github.com/moneyadviceservice/meta-tags.git
   revision: 93558e60c65ea3a1542d5a7523fda729db3344bc
   branch: alternate-url
@@ -380,6 +387,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   compass-rails
+  csslint_ruby!
   dotenv-rails
   draper (~> 1.3.0)
   ejs

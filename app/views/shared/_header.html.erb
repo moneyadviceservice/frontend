@@ -10,7 +10,7 @@
     </nav>
   </div>
 
-  <% unless defined? @dont_show_search_box %>
+  <% if display_search_box_in_header? %>
     <div class="l-header__search" id="search-bar">
       <%= render 'shared/search_box' %>
     </div>

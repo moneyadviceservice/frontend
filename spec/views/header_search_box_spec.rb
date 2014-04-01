@@ -4,23 +4,27 @@ describe 'shared/_header' do
   before do
     controller.extend(Localisation)
     allow(template).to receive(:category_navigation)
+
+    allow(view).to receive(:display_search_box_in_header?) { display }
   end
 
-  context 'when the dont_show_search_box flag is set' do
-    before do
-      assign(:dont_show_search_box, true)
-    end
+  context 'when the search box should be displayed in the header' do
+    let(:display) { true }
 
-    it 'does not show the search box' do
+    it 'is displayed' do
       render
-      expect(rendered).to_not include 'search-box'
+
+      expect(rendered).to include('search-box')
     end
   end
 
-  context 'when the dont_show_search_box flag is not set' do
-    it 'shows the search box' do
+  context 'when the search box should NOT be displayed in the header' do
+    let(:display) { false }
+
+    it 'is NOT displayed' do
       render
-      expect(rendered).to include 'search-box'
+
+      expect(rendered).to_not include('search-box')
     end
   end
 end

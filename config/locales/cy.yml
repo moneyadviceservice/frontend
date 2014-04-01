@@ -46,12 +46,12 @@ cy:
         strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
         list_html: |
           <li>
-            <a href="/cy/articles/sut-i-flaenoriaethuch-dyledion">Rheolwch eich dyledion</a>
-            <p>Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled</p>
+            <a href="/cy/articles/benthyciadau-diwrnod-cyflog">Cyngor ar fenthyciadau diwrnod cyflog</a>
+            <p>Cymorth wrth ganfod ffyrdd gwell a rhatach o fenthyca arian</p>
           </li>
           <li>
-            <a href="/cy/articles/benthyciadau-diwrnod-cyflog">Dewisiadau amgen yn hytrach na benthyciad diwrnod cyflog</a>
-            <p>Cymorth wrth ganfod ffyrdd gwell a rhatach o fenthyca arian</p>
+            <a href="/cy/categories/low-income-survival-tips">Cyllidebu ar incwm isel</a>
+            <p>Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach</p>
           </li>
           <li>
             <a href="/cy/categories/protecting-your-family-or-dependants">Gwarchod eich teulu</a>
@@ -66,8 +66,8 @@ cy:
             <p>Rheoli'ch incwm a'ch gwariant</p>
           </li>
           <li>
-            <a href="/cy/categories/low-income-survival-tips">Cyllidebu ar incwm isel</a>
-            <p>Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach</p>
+            <a href="/cy/articles/sut-i-flaenoriaethuch-dyledion">Rheolwch eich dyledion</a>
+            <p>Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled</p>
           </li>
       contact:
         title: Methu canfod beth sydd ei angen arnoch chi?
@@ -79,15 +79,15 @@ cy:
           <p>Dydd Llun-Dydd Gwener: <strong>8am-8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong></p>
           <p><a href="/en/static/contact-us">Dysgwch am gostau galwadau</a></p>
       promoted:
+        - url: /cy/benthyciadau-diwrnod-cyflog
+          text: Benthyciadau diwrnod cyflog – peidiwch â chael eich temtio gan arian parod cyflym
+          image: home-promoted-pdl.jpg
         - url: /cy/articles/sut-mae-gwella-eich-statws-credyd
           text: A wyddoch beth yw eich sgôr credyd? Dysgwch pam ei fod yn bwysig.
           image: home-promoted-1.jpg
         - url: /cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol
           text: Gwnewch yn siŵr eich bod wedi cyfrifo gwir gost fforddio eich cartref.
           image: home-promoted-2.jpg
-        - url: /cy/action_plans/adeiladu-cronfa-cynilion-argyfwng
-          text: Byddwch yn barod ar gyfer costau annisgwyl drwy gynilo £3 y diwrnod.
-          image: home-promoted-3.jpg
 
   categories:
     show:

@@ -1,7 +1,7 @@
 module AdvicePlans
+  StartTaskCommand = Struct.new(:current_owner, :plan_slug, :task_id, :options)
+
   def self.const_missing(name)
-    Class.new do
-      def method_missing(*args); end
-    end
+    const_set(name, Class.new)
   end
 end

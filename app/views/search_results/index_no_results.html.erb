@@ -8,10 +8,12 @@
   });
 </script>
 
-<div class="l-search-results">
-  <main>
+<main>
+  <div class="l-1col">
     <h1><%= t('.page_title', query: params[:query]) %></h1>
-
+  </div>
+  <div class="l-search-results">
+    <%= render 'shared/search_box' %>
     <p><%= t('.body') %></p>
-  </main>
-</div>
+  </div>
+</main>

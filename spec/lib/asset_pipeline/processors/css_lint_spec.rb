@@ -23,8 +23,8 @@ module AssetPipeline
           end
         end
 
-        context 'when css is invalid' do
-          let(:css) { "body { background: red " }
+        context 'when css lint report errors' do
+          let(:css) { "p { color: red !important; }" }
           let(:formatted_errors) { double }
 
           before do
@@ -33,7 +33,15 @@ module AssetPipeline
 
           it 'modifies the context and raises and exception' do
             expect(context).to receive(:__LINE__=).with(formatted_errors)
-            expect { subject.evaluate(context, locals) }.to raise_exception
+            expect { subject.evaluate(context, locals) }.to raise_error
+          end
+        end
+
+        context 'when css lint report warnings' do
+          let(:css) { "p[name^='child'] {color:blue;}" }
+
+          it 'returns the css without modifications' do
+            expect(subject.evaluate(context, locals)).to eq(css)
           end
         end
       end

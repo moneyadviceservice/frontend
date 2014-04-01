@@ -1,14 +1,18 @@
 module AssetPipeline
   module Processors
     class CssLint < Sprockets::Processor
+      class CssLintError < StandardError; end
+
       def evaluate(context, locals)
-       lint_results = CsslintRuby.run(data, options)
-       if lint_results.errors.present?
-         context.__LINE__ = format_errors(lint_results)
-         raise "Lint errors"
-       else
-         data
-       end
+        lint_results = CsslintRuby.run(data, options)
+
+        if lint_results.errors.present?
+          error = format_errors(lint_results)
+          context.__LINE__ = error
+          raise CssLintError.new(error)
+        else
+          data
+        end
       end
 
       private
@@ -18,7 +22,7 @@ module AssetPipeline
       end
 
       def options
-        YAML.load(File.open(
+        @options ||= YAML.load(File.open(
           File.join(Rails.root, 'lib', 'asset_pipeline', 'processors', 'config', 'css_lint_options.yml'))
         )
       end

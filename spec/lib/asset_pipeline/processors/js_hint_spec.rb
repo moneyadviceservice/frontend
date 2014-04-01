@@ -16,7 +16,7 @@ module AssetPipeline
         end
 
         context 'when javascript is valid' do
-          let(:javascript) { "var foo = 'bar';" }
+          let(:javascript) { "var foo = 'bar';\nprint(foo);" }
 
           it 'returns the javascript without modifications' do
             expect(subject.evaluate(context, locals)).to eq(javascript)
@@ -24,7 +24,7 @@ module AssetPipeline
         end
 
         context 'when javascript is invalid' do
-          let(:javascript) { "foo;" }
+          let(:javascript) { "var foo = 'bar';" }
           let(:formatted_errors) { double }
 
           before do

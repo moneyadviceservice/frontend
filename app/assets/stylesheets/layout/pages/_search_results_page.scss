@@ -8,4 +8,8 @@
   @include respond-to($mq-l) {
     @include column(7);
   }
+
+  .search-box__input {
+    border: 1px solid $color-search-border;
+  }
 }

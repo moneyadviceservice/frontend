@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'shared/_header' do
   before do
     controller.extend(Localisation)
-    allow(template).to receive(:category_navigation)
 
+    allow(view).to receive(:category_navigation)
     allow(view).to receive(:display_search_box_in_header?) { display }
   end
 

@@ -2,11 +2,12 @@
   <li class="mobile-nav__item">
     <a class="mobile-nav__link" href="#primary-nav">Menu</a>
   </li>
-
-  <li class="mobile-nav__item">
-    <a class="mobile-nav__link mobile-nav__link--search" href="#search-bar">
-      <span class="icon icon--search-white"></span>
-      <span class="visually-hidden">Search</span>
-    </a>
-  </li>
+  <% unless defined? @dont_show_search_box %>
+    <li class="mobile-nav__item">
+      <a class="mobile-nav__link mobile-nav__link--search" href="#search-bar">
+        <span class="icon icon--search-white"></span>
+        <span class="visually-hidden">Search</span>
+      </a>
+    </li>
+  <% end %>
 </ul>

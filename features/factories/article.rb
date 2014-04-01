@@ -6,6 +6,7 @@ FactoryGirl.define do
     title { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph(1) }
     body { '<p>' + Faker::Lorem.paragraphs.join('</p><p> ') + '</p>' }
+    alternates []
 
     initialize_with { new(id) }
 

@@ -30,4 +30,10 @@ class ApplicationController < ActionController::Base
     cookies.permanent[DISMISS_BETA_OPT_OUT_COOKIE_NAME] == DISMISS_BETA_OPT_OUT_COOKIE_VALUE
   end
   helper_method :dismissed_beta_opt_out?
+
+  def display_search_box_in_header?
+    true
+  end
+
+  helper_method :display_search_box_in_header?
 end

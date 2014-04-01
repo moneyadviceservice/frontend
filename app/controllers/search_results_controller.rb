@@ -6,11 +6,18 @@ class SearchResultsController < ApplicationController
   def index
     if params[:query].present?
       @search_results = Core::Searcher.new(params[:query]).call
+
       if @search_results.present?
         render 'search_results/index_with_results'
       else
         render 'search_results/index_no_results'
       end
     end
+  end
+
+  private
+
+  def display_search_box_in_header?
+    false
   end
 end

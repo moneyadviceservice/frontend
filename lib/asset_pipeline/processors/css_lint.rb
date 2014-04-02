@@ -22,9 +22,11 @@ module AssetPipeline
       end
 
       def options
-        @options ||= YAML.load(File.open(
-          File.join(Rails.root, 'lib', 'asset_pipeline', 'processors', 'config', 'css_lint_options.yml'))
-        )
+        @options ||= JSON.parse(IO.read(options_path))
+      end
+
+      def options_path
+        File.join(Rails.root, '.csslint')
       end
     end
   end

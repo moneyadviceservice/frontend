@@ -5,6 +5,7 @@ module AssetPipeline
   module Processors
     describe JsHint do
       describe '#evaluate' do
+        let(:jshint_options) { { unused: true } }
         let(:context) { double }
         let(:locals) { double }
 
@@ -13,6 +14,7 @@ module AssetPipeline
         before do
           allow_any_instance_of(described_class).to receive(:initialize)
           allow(subject).to receive(:data).and_return(javascript)
+          allow(subject).to receive(:options).and_return(jshint_options)
         end
 
         context 'when javascript is valid' do

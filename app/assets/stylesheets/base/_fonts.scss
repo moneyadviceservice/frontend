@@ -1,11 +1,9 @@
 //= depend_on_asset MuseoSans_300.woff
 //= depend_on_asset MuseoSans_500.woff
 //= depend_on_asset MuseoSans_700.woff
-//= depend_on_asset icon-font.woff
 //= depend_on_asset MuseoSans_300.eot
 //= depend_on_asset MuseoSans_500.eot
 //= depend_on_asset MuseoSans_700.eot
-//= depend_on_asset icon-font.eot
 
 @if $responsive == true {
 
@@ -27,13 +25,6 @@
     font-family: 'museo_sans';
     src: asset-data-url('MuseoSans_700.woff') format('woff');
     font-weight: 700;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'icon-font';
-    src: asset-data-url('icon-font.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
   }
 
@@ -60,14 +51,6 @@
     src: url(font-path('MuseoSans_700.woff'));
     src: url(font-path('MuseoSans_700.woff') + '?#iefix' ) format('embedded-opentype');
     font-weight: 700;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'icon-font';
-    src: url(font-path('icon-font.eot'));
-    src: url(font-path('icon-font.eot') + '?#iefix' ) format('embedded-opentype');
-    font-weight: normal;
     font-style: normal;
   }
 }

@@ -25,12 +25,13 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     textString: {
       showThisSection: Text.show || 'Show',
       hideThisSection: Text.hide || 'Hide'
-    }
+    },
+
+    // Callbacks
+    onSelect: false,
+    onFocusout: false
   };
 
-  $.fn.swapClass = function(from, to){
-    this.removeClass(from).addClass(to);
-  };
 
   var Collapsible = function(opts){
     this.o = $.extend({}, defaults, opts);
@@ -61,11 +62,18 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
       this.$parent.on('focusout', function(){
         setTimeout(function(){
           if( _this.$parent.find(document.activeElement).length === 0 && _this.selected !== false){
+            // Callback
+            if(typeof _this.o.onFocusout === 'function') _this.o.onFocusout(_this);
+            // Action
             _this.hide(_this.selected);
           }
         },300);
       });
     }
+  };
+
+  Collapsible.prototype._swapClass = function(el, from, to){
+    el.removeClass(from).addClass(to);
   };
 
   Collapsible.prototype._modifyButtonHTML = function(i){
@@ -154,6 +162,8 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
+      // Check for callbacks
+      if(typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
       _this.toggle(_this.sections[i].hidden, i);
     });
 
@@ -177,8 +187,8 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
-    item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
-    item.target.swapClass(this.o.inactiveClass, this.o.activeClass);
+    this._swapClass(item.trigger, this.o.inactiveClass, this.o.activeClass);
+    this._swapClass(item.target, this.o.inactiveClass, this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
 
@@ -191,8 +201,8 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
     if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
-    item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);
-    item.target.swapClass(this.o.activeClass, this.o.inactiveClass);
+    this._swapClass(item.trigger, this.o.activeClass, this.o.inactiveClass);
+    this._swapClass(item.target, this.o.activeClass, this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
   };

@@ -1,13 +1,10 @@
-// This search bar appears in the header of the page.
+// Search box that appears in header and in search results page
 //
 // Styleguide Search
 
 .search-box {
-  @extend %clearfix;
   position: relative;
   margin: 0 auto;
-  padding: $baseline-unit;
-  background-color: $color-search-background;
   width: 100%;
 }
 

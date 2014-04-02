@@ -129,6 +129,7 @@ $color-submenu-list-border: $color-grey-palest !default;
 $color-skip-to-content: $color-grey-pale !default;
 
 // Search
+$color-search-border: $color-grey-light !default;
 $color-search-background: $color-green-quaternary !default;
 $color-search-text: $color-green-quaternary !default;
 
@@ -149,8 +150,6 @@ $color-cookie-message-close-button: $color-white !default;
 $color-cookie-message-button-background: $color-green-secondary !default;
 
 // VARIABLES ONLY TO BE USED IN THE STYLEGUIDE
-
-// Colours
 $color-nav-text: lighten(#333, 20%) !default;
 $color-nav-border: #e6e6e6 !default;
 $color-nav-background: rgba(255, 255, 255, 1) !default;

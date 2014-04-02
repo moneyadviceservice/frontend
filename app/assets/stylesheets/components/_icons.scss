@@ -23,6 +23,14 @@
 //
 // Styleguide icons
 
+
+// icon class must be duplicated to prevent error where IE8 cannot extend into a li:before or a:after
+%icon {
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
 .icon {
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;

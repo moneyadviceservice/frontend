@@ -32,6 +32,28 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     onFocusout: false
   };
 
+  var _swapClass = function(el, from, to){
+    el.removeClass(from).addClass(to);
+  };
+
+  var _testHidden = function(target, opts){
+    if( target.hasClass(opts.inactiveClass) ) return true;
+    if( target.hasClass(opts.activeClass) ) return false;
+    return ( target.is(':hidden') );
+  };
+
+  var _getTarget = function($el, opts){
+    switch(opts.targetType){
+    case 'class':
+      return $el.next(opts.targetEl);
+    case 'href':
+      var href = $el.attr('href'),
+        $t = $(href);
+      return ($t.length)? $t : false;
+    default:
+      return false;
+    }
+  };
 
   var Collapsible = function(opts){
     this.o = $.extend({}, defaults, opts);
@@ -72,10 +94,6 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     }
   };
 
-  Collapsible.prototype._swapClass = function(el, from, to){
-    el.removeClass(from).addClass(to);
-  };
-
   Collapsible.prototype._modifyButtonHTML = function(i){
     var trigger = this.sections[i].trigger,
         txt = (this.o.showText)? this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection) : '',
@@ -108,36 +126,18 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     if(this.o.showText) this.sections[i].txt = trigger.find('.visually-hidden');
   };
 
-  Collapsible.prototype.getTarget = function($el){
-    switch(this.o.targetType){
-    case 'class':
-      return $el.next(this.o.targetEl);
-    case 'href':
-      var href = $el.attr('href'),
-        $t = $(href);
-      return ($t.length)? $t : false;
-    default:
-      return false;
-    }
-  };
-
-  Collapsible.prototype._testHidden = function(target){
-    if( target.hasClass(this.o.inactiveClass) ) return true;
-    if( target.hasClass(this.o.activeClass) ) return false;
-    return ( target.is(':hidden') );
-  };
-
   Collapsible.prototype._setupEach = function(i,el){
     var $el = $(el),
       _this = this,
-      _target = this.getTarget($el);
+      _target = _getTarget($el, _this.o);
 
     this.sections[i] = {
       index: i,
       trigger: $el,
       target: _target,
-      hidden: this._testHidden(_target)
+      hidden: _testHidden(_target, _this.o)
     };
+
     // Dont modify or bind events if no target element
     if(!this.sections[i].target.length) return;
 
@@ -174,37 +174,35 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
         _this.sections[i].trigger.trigger('click');
       }
     });
+    return this;
   };
 
   Collapsible.prototype.toggle = function(show,i){
-    if(show){
-      this.show(i);
-    }else{
-      this.hide(i);
-    }
+    var method = (show)? 'show' : 'hide';
+    this[method](i);
+    return this;
   };
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
-    this._swapClass(item.trigger, this.o.inactiveClass, this.o.activeClass);
-    this._swapClass(item.target, this.o.inactiveClass, this.o.activeClass);
+    _swapClass(item.trigger, this.o.inactiveClass, this.o.activeClass);
+    _swapClass(item.target, this.o.inactiveClass, this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
-
-    if (this.o.accordion && (this.selected !== false && this.selected !== i)){
-      this.hide(this.selected);
-    }
+    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
+    if(this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
     this.selected = i;
+    return this;
   };
 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
-    this._swapClass(item.trigger, this.o.activeClass, this.o.inactiveClass);
-    this._swapClass(item.target, this.o.activeClass, this.o.inactiveClass);
+    _swapClass(item.trigger, this.o.activeClass, this.o.inactiveClass);
+    _swapClass(item.target, this.o.activeClass, this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
+    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
+    return this;
   };
 
   return Collapsible;

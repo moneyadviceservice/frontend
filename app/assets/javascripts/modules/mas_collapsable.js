@@ -114,7 +114,9 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
   };
 
   Collapsible.prototype._testHidden = function(target){
-    return !(target.hasClass(this.o.activeClass) || target.is(':visible'));
+    if( target.hasClass(this.o.inactiveClass) ) return true;
+    if( target.hasClass(this.o.activeClass) ) return false;
+    return ( target.is(':hidden') );
   };
 
   Collapsible.prototype._setupEach = function(i,el){

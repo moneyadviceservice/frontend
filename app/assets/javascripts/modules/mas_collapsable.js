@@ -32,10 +32,6 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     onFocusout: false
   };
 
-  var _swapClass = function(el, from, to){
-    el.removeClass(from).addClass(to);
-  };
-
   var _testHidden = function(target, opts){
     if( target.hasClass(opts.inactiveClass) ) return true;
     if( target.hasClass(opts.activeClass) ) return false;
@@ -157,14 +153,14 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     this._modifyButtonHTML(i);
 
     // Set initial state
-    this.toggle(!this.sections[i].hidden,i);
+    this.setVisibility(!this.sections[i].hidden,i);
 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
       // Check for callbacks
       if(typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
-      _this.toggle(_this.sections[i].hidden, i);
+      _this.setVisibility(_this.sections[i].hidden, i);
     });
 
     // Accessibility support for spacebar
@@ -177,7 +173,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     return this;
   };
 
-  Collapsible.prototype.toggle = function(show,i){
+  Collapsible.prototype.setVisibility = function(show,i){
     var method = (show)? 'show' : 'hide';
     this[method](i);
     return this;
@@ -185,8 +181,8 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    _swapClass(item.trigger, this.o.inactiveClass, this.o.activeClass);
-    _swapClass(item.target, this.o.inactiveClass, this.o.activeClass);
+    item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+    item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
@@ -197,8 +193,8 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    _swapClass(item.trigger, this.o.activeClass, this.o.inactiveClass);
-    _swapClass(item.target, this.o.activeClass, this.o.inactiveClass);
+    item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+    item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
     if(this.o.showText) item.txt.text(this.o.textString.showThisSection);

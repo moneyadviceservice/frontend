@@ -4,7 +4,7 @@ module AssetPipeline
       class CssLintError < StandardError; end
 
       def evaluate(context, locals)
-        lint_results = CsslintRuby.run(data, options)
+        lint_results = CsslintRuby.run(data, settings)
 
         if lint_results.errors.present?
           error = format_errors(lint_results)
@@ -21,11 +21,11 @@ module AssetPipeline
         lint_results.errors.first[:message]
       end
 
-      def options
-        @options ||= JSON.parse(IO.read(options_path))
+      def settings
+        @settings ||= JSON.parse(IO.read(settings_path))
       end
 
-      def options_path
+      def settings_path
         File.join(Rails.root, '.csslint')
       end
     end

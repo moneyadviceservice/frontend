@@ -1,6 +1,7 @@
 .l-header {
   position: relative;
   background: $color-green-primary;
+  min-height: $baseline-unit*10;
 
   .mobile-nav {
     display: none;

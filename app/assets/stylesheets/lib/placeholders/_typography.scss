@@ -225,11 +225,12 @@
 
 %type-homepage-headings {
   @extend %font-heading-medium;
+  @include body(18, 24);
   letter-spacing: -1px;
-  @include paragraph(18, 24);
 
   @include respond-to($mq-m) {
-    @include paragraph(24, 30);
+    @include body(24, 30);
+    margin-bottom: $baseline-unit*2;
   }
 
   .theme-cy & {

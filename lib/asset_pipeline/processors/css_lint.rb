@@ -18,7 +18,7 @@ module AssetPipeline
       private
 
       def format_errors(lint_results)
-        lint_results.errors.first[:message]
+        lint_results.errors.first['message']
       end
 
       def settings

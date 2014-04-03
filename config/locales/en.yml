@@ -42,33 +42,27 @@ en:
       description: >
         The Money Advice Service helps you manage your money better. Use our Health Check tool,
         calculators and comparison tables to make the most of your finances.
-      feature:
-        strapline: Free, impartial & set up by government
-        list_html: |
-          <li>
-            <a href="/en/payday-loans">Payday loans advice</a>
-            <p>Help with finding better and cheaper ways to borrow money</p>
-          </li>
-          <li>
-            <a href="/en/categories/low-income-survival-tips">Budgeting on low income</a>
-            <p>Tips and tools to make your money go further</p>
-          </li>
-          <li>
-            <a href="/en/categories/protecting-your-family-or-dependants">Protecting your family</a>
-            <p>Includes life insurance, critical illness cover and income protection</p>
-          </li>
-          <li>
-            <a href="/en/categories/mortgages-and-buying-property">Mortgages and buying a home</a>
-            <p>Home buying costs and mortgage types explained</p>
-          </li>
-          <li>
-            <a href="/en/categories/budgeting-and-taking-control">Plan where your money goes</a>
-            <p>Managing the money you have coming in and going out</p>
-          </li>
-          <li>
-            <a href="/en/articles/how-to-prioritise-your-debts">Take control of your debt</a>
-            <p>Work out which debts to focus on first and where to get free debt advice</p>
-          </li>
+      strapline: Free, impartial & set up by government
+      featured:
+        - url: /en/payday-loans
+          title: Payday loans advice
+          description: Help with finding better and cheaper ways to borrow money
+        - url: /en/categories/low-income-survival-tips
+          title: Budgeting on low income
+          description: Tips and tools to make your money go further
+        - url: /en/categories/protecting-your-family-or-dependants
+          title: Protecting your family
+          description: Includes life insurance, critical illness cover and income protection
+        - url: /en/categories/mortgages-and-buying-property
+          title: Mortgages and buying a home
+          description: Home buying costs and mortgage types explained
+        - url: /en/categories/budgeting-and-taking-control
+          title: Plan where your money goes
+          description: Managing the money you have coming in and going out
+        - url: /en/articles/where-to-go-to-get-free-debt-advice
+          title: Get free debt advice
+          description: Work out which debts to focus on first and where to get free debt advice
+
       contact:
         title: Can’t find what you need?
         introduction_html: |

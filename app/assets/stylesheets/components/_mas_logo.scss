@@ -1,5 +1,5 @@
 .mas-logo {
-  padding: $baseline-unit*2;
+  padding: $baseline-unit*2 0 $baseline-unit*2 $baseline-unit*2;
   width: 180px;
 
   @include respond-to($mq-m) {

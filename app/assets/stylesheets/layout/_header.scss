@@ -1,6 +1,7 @@
 .l-header {
   position: relative;
   background: $color-green-primary;
+  min-height: $baseline-unit*10;
 
   .mobile-nav {
     display: none;
@@ -53,7 +54,7 @@
   .search-box {
     @extend %clearfix;
     position: relative;
-    margin: 0 auto;
+    @include column(12);
 
     @include respond-to($mq-m) {
       @include column(6);

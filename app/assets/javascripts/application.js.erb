@@ -15,20 +15,22 @@ if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
   });
 }
 
-require(['analytics'], function (analytics) {
+require(['common'], function (MAS) {
   'use strict';
 
-  analytics.scrollTracking({
+  MAS.analytics.scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]
   });
 });
+
 
 require(['collapsable'], function (Collapsable) {
   'use strict';
 
   // Primary Nav
   new Collapsable({
+    name: 'primaryNav',
     closeOffFocus:true,
     accordion:true,
     triggerEl: '#primary-nav > li > a',
@@ -38,6 +40,7 @@ require(['collapsable'], function (Collapsable) {
 
   // Mobile Nav
   new Collapsable({
+    name: 'mobileNav',
     accordion:true,
     triggerEl: '.mobile-nav a',
     targetType: 'href',
@@ -46,25 +49,28 @@ require(['collapsable'], function (Collapsable) {
 
   // Article Collapsables
   new Collapsable({
+    name: 'articleCollapsables',
     showOnlyFirst:true,
     showIcon: true,
     useButton: true
   });
+
+  MAS.subscribe('collapsable:articleCollapsables', function(event,o){
+    console.info(o);
+  });
+
 });
 
-require(['ujs', 'jquery'], function(){
+require(['jquery', 'ujs'], function($){
   'use strict';
 
   $('.js-cookie-message').bind('ajax:success', function() {
     $('.cookie-message').hide();
     $('.footer-site-links__cookie-message').removeClass('is-on');
   });
-});
-
-require(['ujs', 'jquery'], function(){
-  'use strict';
 
   $('.js-close-opt-out').bind('ajax:success', function() {
     $('.opt-out').addClass('is-hidden');
   });
 });
+

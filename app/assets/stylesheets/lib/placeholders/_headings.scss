@@ -7,7 +7,7 @@
   }
 
   @include respond-to($mq-xl) {
-    @include body(40, 42);
+    @include body(42, 42);
   }
 
   .theme-cy & {

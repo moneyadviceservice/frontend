@@ -4,17 +4,15 @@
 
 define(
   ['jquery', 'pubsub', 'log', 'analytics', window.MAS.bootstrap.I18n_locale],
-  function ($, log, analytics, text) {
+  function ($, pubsub, log, analytics, text) {
 
     'use strict';
 
-    var common = {};
-
-    common.log = log;
-    common.analytics = analytics;
+    var common = window.MAS || {};
     common.text = text;
-
+    common.analytics = analytics;
+    $.extend(common, pubsub);
+    $.extend(common, log);
     return common;
-
   }
 );

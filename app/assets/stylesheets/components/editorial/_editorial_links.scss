@@ -1,5 +1,5 @@
 a:not([href*="moneyadviceservice"]):after {
-  @extend %icon;
+  @extend %icon; // has to be a placeholder so IE8 shows other icons based on .icon - IE8 does not support :not CSS3 selector
   @extend .icon--external-link;
   content: '';
   margin-left: 6px;
@@ -17,7 +17,7 @@ a[href$=".doc"] {
 
   &:before {
     content: '';
-    @extend %icon;
+    @extend .icon;
     @extend .icon--doc;
     padding-right: 5px;
   }
@@ -28,7 +28,7 @@ a[href$=".pdf"] {
 
   &:before {
     content: '';
-    @extend %icon;
+    @extend .icon;
     @extend .icon--pdf;
     padding-right: 5px;
   }

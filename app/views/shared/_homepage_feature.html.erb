@@ -4,7 +4,12 @@
       <h1 class="home-feature__strapline"><%= strapline %></h1>
 
       <ul class="home-feature__list">
-        <%= list %>
+        <% items.each do |items| %>
+          <li class="home-feature__list-item">
+            <a class="home-feature__heading" href="<%= items['url'] %>"><%= items['title'] %></a>
+            <p><%= items['description'] %></p>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

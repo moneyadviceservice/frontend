@@ -42,33 +42,27 @@ cy:
       description: >
         Mae'r Gwasanaeth Cynghori Ariannol yn eich helpu i reoli eich arian yn well. Defnyddiwch
         ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
-      feature:
-        strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
-        list_html: |
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/benthyciadau-diwrnod-cyflog">Cyngor ar fenthyciadau diwrnod cyflog</a>
-            <p>Cymorth wrth ganfod ffyrdd gwell a rhatach o fenthyca arian</p>
-          </li>
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/categories/low-income-survival-tips">Cyllidebu ar incwm isel</a>
-            <p>Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach</p>
-          </li>
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/categories/protecting-your-family-or-dependants">Gwarchod eich teulu</a>
-            <p>Yn cynnwys yswiriant bywyd, diogelwch salwch critigol a diogelwch incwm</p>
-          </li>
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/categories/mortgages-and-buying-property">Morgeisi a phrynu cartref</a>
-            <p>Costau prynu cartref a mathau o forgeisi wedi eu hegluro</p>
-          </li>
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/categories/budgeting-and-taking-control">Cynlluniwch i ble aiff eich arian</a>
-            <p>Rheoli'ch incwm a'ch gwariant</p>
-          </li>
-          <li class="home-feature__list-item">
-            <a class="home-feature__heading" href="/cy/articles/sut-i-flaenoriaethuch-dyledion">Rheolwch eich dyledion</a>
-            <p>Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled</p>
-          </li>
+      strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
+      featured:
+        - url: /cy/benthyciadau-diwrnod-cyflog
+          title: Cyngor ar fenthyciadau diwrnod cyflog
+          description: Cymorth wrth ganfod ffyrdd gwell a rhatach o fenthyca arian
+        - url: /cy/categories/low-income-survival-tips
+          title: Cyllidebu ar incwm isel
+          description: Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach
+        - url: /cy/categories/protecting-your-family-or-dependants
+          title: Gwarchod eich teulu
+          description: Yn cynnwys yswiriant bywyd, diogelwch salwch critigol a diogelwch incwm
+        - url: /cy/categories/mortgages-and-buying-property
+          title: Morgeisi a phrynu cartref
+          description: Costau prynu cartref a mathau o forgeisi wedi eu hegluro
+        - url: /cy/categories/budgeting-and-taking-control
+          title: Cynlluniwch i ble aiff eich arian
+          description: Rheoli'ch incwm a'ch gwariant
+        - url: /cy/articles/sut-i-flaenoriaethuch-dyledion
+          title: Rheolwch eich dyledion
+          description: Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled
+
       contact:
         title: Methu canfod beth sydd ei angen arnoch chi?
         introduction_html: |

@@ -22,12 +22,11 @@ end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
   expect(home_page.strapline).
-    to have_content(I18n.t('home.show.feature.strapline'))
+    to have_content(I18n.t('home.show.strapline'))
 end
 
 Then(/^I should see featured topics$/) do
-  expect(home_page.feature_list).
-    to have_content(strip_tags(I18n.t('home.show.feature.list_html')))
+  expect(home_page).to have_feature_list_items
 end
 
 Then(/^I should see promoted content$/) do

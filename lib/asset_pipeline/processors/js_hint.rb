@@ -3,14 +3,13 @@ module AssetPipeline
     class JsHint < Sprockets::Processor
       class ErrorsFound < StandardError; end
 
-      def evaluate(context, locals)
-        lint_results = JshintRuby.run(data, options)
+      REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js\z/
 
-        if lint_results.errors.present?
-          raise ErrorsFound
-        else
-          data
+      def evaluate(context, locals)
+        if context.pathname.to_s =~ REGEX
+          raise ErrorsFound if JshintRuby.run(data, options).errors.present?
         end
+        data
       end
 
       private

@@ -25,7 +25,7 @@
   list-style: none;
 
   li:before {
-    @extend .icon;
+    @extend %icon;
     @extend .icon--tick;
     content: '';
     color: $color-list-yes;
@@ -36,7 +36,7 @@
   }
 
   .no:before {
-    @extend .icon;
+    @extend %icon;
     @extend .icon--cross;
   }
 }

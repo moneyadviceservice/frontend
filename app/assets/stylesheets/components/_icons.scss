@@ -23,10 +23,17 @@
 //
 // Styleguide icons
 
+%icon {
+  // prevent IE8 from breaking when extending .icon into a :before it doesn't understand
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  @include inline-block;
+}
+
 .icon {
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;
-  display: inline-block;
+  @include inline-block;
 }
 
 .icon--logo {

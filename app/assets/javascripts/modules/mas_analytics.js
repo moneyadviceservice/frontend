@@ -6,7 +6,7 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['log', 'jquery', 'waypoints'], function (Global, $) {
+define(['jquery','log', 'waypoints'], function ($, log, WP) {
 
   'use strict';
 
@@ -19,7 +19,7 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
 
   // Private func to handle scrollTracking events
   _handleScroll = function (dir, val, contentRatio) {
-    Global.log('mas_analytics._handleScroll - ', arguments);
+    log.log('mas_analytics._handleScroll - ', arguments);
 
     // Only interested in down events
     if (dir === 'up') return false;
@@ -53,7 +53,7 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
 
   // General call to trigger GA analytics
   analytics.trigger = function (data) {
-    Global.log('mas_analytics.triggerAnalytics', data);
+    log.log('mas_analytics.triggerAnalytics', data);
     DL.push(data);
   };
 
@@ -65,7 +65,7 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
     }
 
     if (areOptionsValid()) {
-      Global.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
+      log.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;
     }
 
@@ -89,6 +89,8 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
       }, {offset: -offsetVal});
     });
   };
+
+
 
   return analytics;
 });

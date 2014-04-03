@@ -1,13 +1,17 @@
 //= depend_on_asset translations/en
 //= depend_on_asset translations/cy
-//= depend_on_asset modules/mas_analytics
-//= depend_on_asset modules/mas_collapsable
-//= depend_on_asset modules/mas_log
-//= depend_on_asset modules/mas_common
+
 //= depend_on_asset jquery/dist/jquery
 //= depend_on_asset jquery-tiny-pubsub/src/tiny-pubsub
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
+
+//= depend_on_asset modules/mas_pubsub
+//= depend_on_asset modules/mas_log
+//= depend_on_asset modules/mas_analytics
+//= depend_on_asset modules/mas_collapsable
+
+//= depend_on_asset modules/mas_common
 
 <% def requirejs_path(asset) ; javascript_path(asset).sub(/.js\z/, ''); end %>
 
@@ -19,16 +23,19 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     cy:         '<%= requirejs_path('translations/cy') %>',
 
     // External dependancies
-    jquery:      '<%= requirejs_path('jquery/dist/jquery') %>',
-    pubsub:      '<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>',
-    waypoints:   '<%= requirejs_path('jquery-waypoints/waypoints') %>',
-    ujs:         '<%= requirejs_path('jquery-ujs/src/rails') %>',
-    webfonts:    '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont',
+    jquery:      "<%= requirejs_path('jquery/dist/jquery') %>",
+    waypoints:   "<%= requirejs_path('jquery-waypoints/waypoints') %>",
+    ujs:         "<%= requirejs_path('jquery-ujs/src/rails') %>",
+    webfonts:    "//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont",
 
     // Internal modules
-    log:         '<%= requirejs_path('modules/mas_log') %>',
-    analytics:   '<%= requirejs_path('modules/mas_analytics') %>',
-    collapsable: '<%= requirejs_path('modules/mas_collapsable') %>'
+    pubsub:      "<%= requirejs_path('modules/mas_pubsub') %>",
+    log:         "<%= requirejs_path('modules/mas_log') %>",
+    analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
+    collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
+
+    // Common module to load shared dependancies
+    common:      "<%= requirejs_path('modules/mas_common') %>"
   },
   shim: {
     'pubsub':    ['jquery'],

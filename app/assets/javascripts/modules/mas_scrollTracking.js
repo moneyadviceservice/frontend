@@ -6,7 +6,7 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['common', 'waypoints'], function (MAS) {
+define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
   'use strict';
 
@@ -54,6 +54,7 @@ define(['common', 'waypoints'], function (MAS) {
 
   // Tracks user scrolling down to different parts of page
   function scrollTracking(opts) {
+
     if (_areOptionsValid(opts)) {
       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;

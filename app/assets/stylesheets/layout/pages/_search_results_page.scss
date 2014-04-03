@@ -9,6 +9,10 @@
     @include column(7);
   }
 
+  .search-box {
+    margin-bottom: $baseline-unit*2;
+  }
+
   .search-box__input {
     border: 1px solid $color-search-border;
   }

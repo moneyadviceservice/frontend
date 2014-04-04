@@ -188,8 +188,21 @@ define(['common'], function (MAS) {
     return this;
   };
 
-  Collapsible.prototype.show = function(i){
-    MAS.publish('collapsable:'+this.o.name, {i:i, action: 'show'});
+  function publishEvent(userInitiated, data){
+    if(userInitiated){
+      data.module = 'collapsable';
+      MAS.publish('collapsable', data);
+      MAS.publish('analytics:trigger', data);
+    }
+  }
+
+  Collapsible.prototype.show = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'show'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
@@ -197,14 +210,19 @@ define(['common'], function (MAS) {
     item.hidden = false;
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
     if(this.o.accordion && (this.selected !== false && this.selected !== i)) {
-      this.hide(this.selected);
+      this.hide(this.selected, false);
     }
     this.selected = i;
     return this;
   };
 
-  Collapsible.prototype.hide = function(i){
-    MAS.publish('collapsable:'+this.o.name, {i:i, action: 'hide'});
+  Collapsible.prototype.hide = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'hide'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);

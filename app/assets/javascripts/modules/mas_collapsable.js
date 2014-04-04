@@ -90,7 +90,7 @@ define(['jquery','common'], function ($, MAS) {
         // Callback
         if(typeof this.o.onFocusout === 'function') this.o.onFocusout(this);
         // Action
-        this.hide(this.selected);
+        this.hide(this.selected, false);
       }
     },this),300);
   };

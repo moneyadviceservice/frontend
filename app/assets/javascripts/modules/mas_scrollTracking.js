@@ -6,7 +6,11 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
+<<<<<<< HEAD:app/assets/javascripts/modules/mas_scrollTracking.js
 define(['jquery', 'common', 'waypoints'], function ($, MAS) {
+=======
+define(['common', 'waypoints'], function (MAS) {
+>>>>>>> Refactor analytics:app/assets/javascripts/modules/mas_scrollTracking.js
 
   'use strict';
 
@@ -54,7 +58,10 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
   // Tracks user scrolling down to different parts of page
   function scrollTracking(opts) {
+<<<<<<< HEAD:app/assets/javascripts/modules/mas_scrollTracking.js
 
+=======
+>>>>>>> Refactor analytics:app/assets/javascripts/modules/mas_scrollTracking.js
     if (_areOptionsValid(opts)) {
       MAS.warn('mas_analytics.scrollTracking - missing element or triggerPoints', opts);
       return false;
@@ -65,8 +72,12 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
       wh = $.waypoints('viewportHeight'), // normalises $(window).height()
       contentRatio = h / wh;
 
+<<<<<<< HEAD:app/assets/javascripts/modules/mas_scrollTracking.js
     // send ratioCalculated event - used by analytics events 
     // to determine page size and meaninfulness of scroll event
+=======
+    // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
+>>>>>>> Refactor analytics:app/assets/javascripts/modules/mas_scrollTracking.js
     MAS.publish('analytics:trigger', {
       'contentRatio': contentRatio,
       'event': 'ratioCalculated'

@@ -7,6 +7,12 @@ GIT
       actionpack
 
 GIT
+  remote: git://github.com/stevenwilkin/tidy-html5-gem.git
+  revision: 78a00bcb6106dce5df0d4afd701a2ec0abda2179
+  specs:
+    tidy-html5 (0.1.0)
+
+GIT
   remote: https://github.com/moneyadviceservice/mas-development_dependencies.git
   revision: 33286271c5f9fc0bc3e71724dc54ce50661abee1
   specs:
@@ -406,6 +412,7 @@ DEPENDENCIES
   statsd-ruby
   syslog-logger
   thin
+  tidy-html5!
   uglifier (>= 1.3.0)
   unicorn-rails
   vcr

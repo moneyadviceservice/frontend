@@ -8,10 +8,9 @@ module AssetPipeline
         let(:context) { double }
         let(:locals) { double }
 
-        subject { described_class.new }
+        subject { described_class.new('foo.erb') {} }
 
         before do
-          allow_any_instance_of(described_class).to receive(:initialize)
           allow(subject).to receive(:data).and_return(css)
         end
 

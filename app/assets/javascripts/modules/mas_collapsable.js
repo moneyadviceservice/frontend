@@ -35,7 +35,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
   var _testHidden = function(target, opts){
     if( target.hasClass(opts.inactiveClass) ) return true;
     if( target.hasClass(opts.activeClass) ) return false;
-    return ( target.is(':hidden') );
+    return target.is(':hidden');
   };
 
   var _getTarget = function($el, opts){
@@ -50,6 +50,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
       return false;
     }
   };
+
 
   var Collapsible = function(opts){
     this.o = $.extend({}, defaults, opts);
@@ -77,17 +78,19 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
         return;
       }
 
-      this.$parent.on('focusout', function(){
-        setTimeout(function(){
-          if( _this.$parent.find(document.activeElement).length === 0 && _this.selected !== false){
-            // Callback
-            if(typeof _this.o.onFocusout === 'function') _this.o.onFocusout(_this);
-            // Action
-            _this.hide(_this.selected);
-          }
-        },300);
-      });
+      this.$parent.on('focusout', $.proxy(_this.delayDomCheck, _this));
     }
+  };
+
+  Collapsible.prototype.delayDomCheck = function(){
+    setTimeout( $.proxy(function(){
+      if( this.$parent.find(document.activeElement).length === 0 && this.selected !== false){
+        // Callback
+        if(typeof this.o.onFocusout === 'function') this.o.onFocusout(this);
+        // Action
+        this.hide(this.selected);
+      }
+    },this),300);
   };
 
   Collapsible.prototype._modifyButtonHTML = function(i){

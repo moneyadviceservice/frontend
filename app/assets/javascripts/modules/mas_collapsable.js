@@ -78,11 +78,11 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
         return;
       }
 
-      this.$parent.on('focusout', $.proxy(_this.delayDomCheck, _this));
+      this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
     }
   };
 
-  Collapsible.prototype.delayDomCheck = function(){
+  Collapsible.prototype._delayDomCheck = function(){
     setTimeout( $.proxy(function(){
       if( this.$parent.find(document.activeElement).length === 0 && this.selected !== false){
         // Callback
@@ -147,6 +147,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
 
     if(this.o.accordion){
       if(this.selected === false && !this.sections[i].hidden){
+        // Do nothing
       }else{
         this.sections[i].hidden = true;
       }

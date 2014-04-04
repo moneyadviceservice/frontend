@@ -13,8 +13,8 @@ if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 }
 
 
-require(['common'], function (MAS) {
-  MAS.analytics.scrollTracking({
+require(['scrollTracking'], function (scrollTracking) {
+  scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]
   });

@@ -161,14 +161,22 @@ define(['jquery','common'], function ($, MAS) {
     this._modifyButtonHTML(i);
 
     // Set initial state
+<<<<<<< HEAD
     this.setVisibility(!this.sections[i].hidden,i);
+=======
+    this.toggle(!this.sections[i].hidden,i, false);
+>>>>>>> refactor analytics
 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
+<<<<<<< HEAD
       // Check for callbacks
       if(typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
       _this.setVisibility(_this.sections[i].hidden, i);
+=======
+      _this.toggle(_this.sections[i].hidden, i, true);
+>>>>>>> refactor analytics
     });
 
     // Accessibility support for spacebar
@@ -182,27 +190,61 @@ define(['jquery','common'], function ($, MAS) {
     return this;
   };
 
+<<<<<<< HEAD
   Collapsible.prototype.setVisibility = function(show,i){
     var method = (show)? 'show' : 'hide';
     this[method](i);
     return this;
+=======
+  Collapsible.prototype.toggle = function(show,i, userInitiated){
+    if(show){
+      this.show(i, userInitiated);
+    }else{
+      this.hide(i, userInitiated);
+    }
+>>>>>>> refactor analytics
   };
 
-  Collapsible.prototype.show = function(i){
-    MAS.publish('collapsable:'+this.o.name, {i:i, action: 'show'});
+  function publishEvent(userInitiated, data){
+    if(userInitiated){
+      data.module = 'collapsable';
+      MAS.publish('collapsable', data);
+      MAS.publish('analytics:trigger', data);
+    }
+  }
+
+  Collapsible.prototype.show = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'show'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
+<<<<<<< HEAD
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
     if(this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
+=======
+
+    if (this.o.accordion && (this.selected !== false && this.selected !== i)){
+      this.hide(this.selected, false);
+    }
+>>>>>>> refactor analytics
     this.selected = i;
     return this;
   };
 
-  Collapsible.prototype.hide = function(i){
-    MAS.publish('collapsable:'+this.o.name, {i:i, action: 'hide'});
+  Collapsible.prototype.hide = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'hide'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);

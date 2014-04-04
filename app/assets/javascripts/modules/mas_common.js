@@ -1,7 +1,7 @@
 
 // MAS.bootstrap.I18n_locale == en || cy == file path in require config
 define(
-  ['jquery', 'pubsub', 'log', window.MAS.bootstrap.I18n_locale],
+  ['jquery', 'pubsub', 'log', window.MAS.bootstrap.I18nLocale],
   function ($, pubsub, log, text) {
 
     'use strict';

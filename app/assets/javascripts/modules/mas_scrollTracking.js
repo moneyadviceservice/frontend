@@ -64,7 +64,8 @@ define(['common', 'waypoints'], function (MAS) {
       wh = $.waypoints('viewportHeight'), // normalises $(window).height()
       contentRatio = h / wh;
 
-    // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
+    // send ratioCalculated event - used by analytics events 
+    // to determine page size and meaninfulness of scroll event
     MAS.publish('analytics:trigger', {
       'contentRatio': contentRatio,
       'event': 'ratioCalculated'

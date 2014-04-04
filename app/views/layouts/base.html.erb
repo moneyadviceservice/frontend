@@ -138,7 +138,12 @@
 
   <% if Rails.env.development? %>
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <%= javascript_include_tag 'html_inspector' %>
+    <%= javascript_include_tag 'html-inspector/html-inspector' %>
+    <script>
+      HTMLInspector.inspect({
+        excludeRules: ["unused-classes", "script-placement"]
+      })
+    </script>
     <!--<![endif]-->
   <% end %>
 

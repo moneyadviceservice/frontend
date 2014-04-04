@@ -8,7 +8,7 @@
 
 //= depend_on_asset modules/mas_pubsub
 //= depend_on_asset modules/mas_log
-//= depend_on_asset modules/mas_analytics
+//= depend_on_asset modules/mas_scrollTracking
 //= depend_on_asset modules/mas_collapsable
 
 //= depend_on_asset modules/mas_common
@@ -31,7 +31,7 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     // Internal modules
     pubsub:      "<%= requirejs_path('modules/mas_pubsub') %>",
     log:         "<%= requirejs_path('modules/mas_log') %>",
-    analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
+    scrollTracking:   "<%= requirejs_path('modules/mas_scrollTracking') %>",
     collapsable: "<%= requirejs_path('modules/mas_collapsable') %>",
 
     // Common module to load shared dependancies

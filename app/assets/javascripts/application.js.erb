@@ -42,14 +42,14 @@ require(['collapsable'], function (Collapsable) {
   });
 });
 
-require(['ujs', 'jquery'], function(){
+require(['ujs', 'jquery'], function($){
   $('.js-cookie-message').bind('ajax:success', function(data, status, xhr) {
     $('.cookie-message').hide();
     $('.footer-site-links__cookie-message').removeClass('is-on');
   });
 });
 
-require(['ujs', 'jquery'], function(){
+require(['ujs', 'jquery'], function($){
   $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
     $('.opt-out').addClass('is-hidden');
   });

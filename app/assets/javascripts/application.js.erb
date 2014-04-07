@@ -14,51 +14,58 @@ if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 }
 
 
-require(['scrollTracking'], function (scrollTracking) {
-  scrollTracking({
-    el: '.editorial',
-    triggerPoints: [0.25, 0.5, 0.75, 1]
-  });
-});
+require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollTracking, Collapsable) {
 
+  $(document).ready(function(){
+    // Analytics scroll tracking on editorial pages
+    scrollTracking({
+      el: '.editorial',
+      triggerPoints: [0.25, 0.5, 0.75, 1]
+    });
 
-require(['collapsable'], function (Collapsable) {
-  var primaryNav = new Collapsable({
-    name: 'primaryNav',
-    closeOffFocus:true,
-    accordion:true,
-    triggerEl: '#primary-nav > li > a',
-    targetEl: '.primary-nav__dropdown',
-    parentWrapper: '#primary-nav'
-  });
-  var mobileNav = new Collapsable({
-    name: 'mobileNav',
-    closeOffFocus:false,
-    accordion:true,
-    triggerEl: '.mobile-nav a',
-    targetType: 'href',
-    parentWrapper: '#primary-nav'
-  });
-  var articleCollapsables = new Collapsable({
-    name: 'articleCollapsables',
-    showOnlyFirst:true,
-    showIcon: true,
-    useButton: true
-  });
+    // Collapsable elements
+    var primaryNav = new Collapsable({
+      name: 'primaryNav',
+      closeOffFocus:true,
+      accordion:true,
+      triggerEl: '#primary-nav > li > a',
+      targetEl: '.primary-nav__dropdown',
+      parentWrapper: '#primary-nav'
+    });
 
-  MAS.subscribe('collapsable:articleCollapsables', function(event,o){
-    console.info(o);
-  });
+    // Only visible on small screens
+    var mobileNav = new Collapsable({
+      name: 'mobileNav',
+      closeOffFocus:false,
+      accordion:true,
+      triggerEl: '.mobile-nav a',
+      targetType: 'href',
+      parentWrapper: '#primary-nav'
+    });
 
-});
+    // Only used on article pages
+    var articleCollapsables = new Collapsable({
+      name: 'articleCollapsables',
+      showOnlyFirst:true,
+      showIcon: true,
+      useButton: true
+    });
 
-require(['jquery', 'ujs'], function($){
-  $('.js-cookie-message').bind('ajax:success', function(data, status, xhr) {
-    $('.cookie-message').hide();
-    $('.footer-site-links__cookie-message').removeClass('is-on');
-  });
+    // DEMO >> Subscribe to collapsable event
+    // MAS.subscribe('collapsable', function(event,o){
+    //   console.info(o);
+    // });
 
-  $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
-    $('.opt-out').addClass('is-hidden');
-  });
+    // Cookie message
+    $('.js-cookie-message').bind('ajax:success', function(data, status, xhr) {
+      $('.cookie-message').hide();
+      $('.footer-site-links__cookie-message').removeClass('is-on');
+    });
+
+    // Responsive Opt Out
+    $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
+      $('.opt-out').addClass('is-hidden');
+    });
+  })
+
 });

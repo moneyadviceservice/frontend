@@ -15,6 +15,7 @@
   a {
     @include links($color-link-default, $color-link-default);
     display: block;
+    @extend %type-small;
     @include respond-to($mq-l) {
       display: inline;
     }

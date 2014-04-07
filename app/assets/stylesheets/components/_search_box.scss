@@ -16,10 +16,6 @@
   border: 0;
   background-color: $color-off-white;
 
-  &:focus {
-    outline: 0;
-  }
-
   &::-webkit-input-placeholder {
     color: $color-search-text;
   }

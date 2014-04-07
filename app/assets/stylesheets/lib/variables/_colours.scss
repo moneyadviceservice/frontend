@@ -35,6 +35,7 @@ $color-grey-pale: #edf0f0 !default;
 
 $color-grey-paleo: #ecf0ef !default;
 $color-grey-light: #a8b2ba !default;
+$color-grey-medium-dark: #6a6d6d !default;
 
 $color-grey-medium: #526675 !default;
 $color-grey-dark: #394752 !default;
@@ -131,7 +132,7 @@ $color-skip-to-content: $color-grey-pale !default;
 // Search
 $color-search-border: $color-grey-light !default;
 $color-search-background: $color-green-quaternary !default;
-$color-search-text: $color-green-quaternary !default;
+$color-search-text: $color-grey-medium-dark !default;
 
 // Category Pages
 $color-category-border: $color-grey-paleo !default;

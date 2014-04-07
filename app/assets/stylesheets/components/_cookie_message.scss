@@ -6,15 +6,16 @@
 }
 
 .cookie-message__content {
-  @include column(12);
   @extend %type-small;
+  @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
   padding-right: $baseline-unit*4;
 
   a {
-    display: block;
     @include links($color-link-default, $color-link-default);
+    display: block;
+    @extend %type-small;
     @include respond-to($mq-l) {
       display: inline;
     }

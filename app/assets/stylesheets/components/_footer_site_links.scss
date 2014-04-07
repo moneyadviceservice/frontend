@@ -24,7 +24,7 @@
     }
   }
 
-  a {
+  li > a {
     @extend %type-footer;
     @extend %link-nav-secondary;
     padding: $baseline-unit 0;
@@ -42,7 +42,7 @@
 }
 
 
-.footer-site-links__cookie-message {
+.footer-site-links__cookie-link {
   position: relative;
 
   &.is-on:after {

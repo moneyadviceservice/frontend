@@ -32,7 +32,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
     onFocusout: false
   };
 
-  var _testHidden = function(target, opts){
+  var _isHidden = function(target, opts){
     if( target.hasClass(opts.inactiveClass) ) return true;
     if( target.hasClass(opts.activeClass) ) return false;
     return target.is(':hidden');
@@ -134,7 +134,7 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
       index: i,
       trigger: $el,
       target: _target,
-      hidden: _testHidden(_target, _this.o)
+      hidden: _isHidden(_target, _this.o)
     };
 
     // Dont modify or bind events if no target element
@@ -145,12 +145,9 @@ define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) 
       this.sections[i].hidden = (i === 0)? false : true;
     }
 
-    if(this.o.accordion){
-      if(this.selected === false && !this.sections[i].hidden){
-        // Do nothing
-      }else{
-        this.sections[i].hidden = true;
-      }
+    // For accordions, if there is a selected item, hide other items
+    if(this.o.accordion && this.selected !== false && this.sections[i].hidden){
+      this.sections[i].hidden = true;
     }
 
     // Update Button HTML to make accessible

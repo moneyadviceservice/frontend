@@ -49,6 +49,8 @@ group :test do
   gem 'thin'
   gem 'vcr'
   gem 'webmock'
+  gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
+  gem 'html_validation'
 end
 
 group :production do

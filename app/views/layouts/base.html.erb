@@ -98,7 +98,9 @@
         return S
       })();
 
-      //// Run scripts and modify DOM
+
+      //// Run modify DOM and load files
+
       // Load font from localStorage
       if(supports.localstorage && localStorage.getItem(fonts.cacheName) !== null){
         html.className = html.className += (' ' + fonts.loadClass);
@@ -108,6 +110,12 @@
 
       // JS support > Update className
       html.className = html.className.replace('no-js', 'js js-' + supports.js);     
+
+      // LOAD: Crazy Egg Heatmaps
+      setTimeout(function () {
+        var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
+        MAS.appendFile('script', src);
+      }, 1);
 
       // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
       // Copied from Mobile Boiler Plate
@@ -124,12 +132,6 @@
       gs = function () {
         vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
       };
- 
-      // LOAD: Crazy Egg Heatmaps
-      setTimeout(function () {
-        var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-        MAS.appendFile('script', src);
-      }, 1);
 
       // Return values to be assigned to MAS global namespace
       return {

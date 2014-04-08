@@ -20,6 +20,9 @@ gem 'nokogiri'
 gem 'nunes'
 gem 'rouge'
 gem 'statsd-ruby'
+#gem 'requirejs_optimizer',
+#  path: '/Users/andytennison/Sites/requirejs_optimizer/requirejs_optimizer'
+#  git: 'https://github.com/andrewtennison/requirejs_optimizer.git'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -1,5 +1,5 @@
 
-define(['common'], function (MAS) {
+define(['jquery', 'common'], function ($, MAS) {
 
   'use strict';
 

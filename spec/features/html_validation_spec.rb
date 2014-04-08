@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'core/interactors/article_reader'
+require 'core/interactors/searcher'
 
 describe 'html validation' do
   describe 'home page' do
@@ -61,6 +62,77 @@ describe 'html validation' do
       let(:locale) { 'cy' }
 
       specify { expect(page).to have_valid_html }
+    end
+  end
+
+  describe 'search results' do
+    let(:query) { 'what to do when someone dies' }
+    let(:content_item) { build :article }
+    let(:results) { [] }
+    let(:searcher) { -> { results } }
+
+    before do
+      allow(Core::Searcher).to receive(:new).with(query).and_return(searcher)
+    end
+
+    context 'in English' do
+      let(:locale) { 'en' }
+
+      context 'with no query' do
+        before do
+          visit search_results_path(locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
+
+      context 'with no results' do
+        before do
+          visit search_results_path(query: query, locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
+
+      context 'with results' do
+        let(:results) { [content_item] }
+
+        before do
+          visit search_results_path(query: query, locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
+    end
+
+    context 'in Welsh' do
+      let(:locale) { 'cy' }
+
+      context 'with no query' do
+        before do
+          visit search_results_path(locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
+
+      context 'with no results' do
+        before do
+          visit search_results_path(query: query, locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
+
+      context 'with results' do
+        let(:results) { [content_item] }
+
+        before do
+          visit search_results_path(query: query, locale: locale)
+        end
+
+        specify { expect(page).to have_valid_html }
+      end
     end
   end
 end

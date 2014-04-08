@@ -7,7 +7,7 @@ if(MAS.supports.fonts && MAS.fonts.url && !MAS.fonts.localstorage) {
       url: MAS.fonts.url,
       success: function(res){
         MAS.log('FONTS: ajax load success > stylesheet appended to page > load class added');
-        $('body').addClass(MAS.fonts.loadClass);
+        $('html').addClass(MAS.fonts.loadClass);
         $('head').append('<style>' + res + '</style>');
         if(MAS.supports.localstorage){
           MAS.log('FONTS: localstorage supported, fonts saved');

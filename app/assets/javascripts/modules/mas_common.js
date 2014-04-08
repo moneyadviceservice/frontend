@@ -6,21 +6,21 @@ define(
 
     'use strict';
 
-    var common = window.MAS || {},
+    var MAS = window.MAS || {},
         dataLayer = window.dataLayer || [];
 
     // Extend common object with globally required scripts
-    common.text = text;
-    $.extend(common, pubsub);
-    $.extend(common, log);
+    MAS.text = text;
+    $.extend(MAS, pubsub);
+    $.extend(MAS, log);
 
     // Fire analytics events
     // TO USE: MAS.publish('analytics:trigger', {object with props})
-    common.subscribe('analytics:trigger', function(e, data){
-      common.log('mas_analytics.triggerAnalytics', data);
+    MAS.subscribe('analytics:trigger', function(e, data){
+      MAS.log('mas_analytics.triggerAnalytics', data);
       dataLayer.push(data);
     });
 
-    return common;
+    return MAS;
   }
 );

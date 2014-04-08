@@ -4,7 +4,7 @@ module AssetPipeline
       class CssLintError < StandardError; end
 
       def evaluate(context, locals)
-        lint_results = CsslintRuby.run(data, settings)
+        lint_results = CsslintRuby.run(comment_ignore_code(data), settings)
 
         if lint_results.errors.present?
           error = format_errors(lint_results)
@@ -19,6 +19,11 @@ module AssetPipeline
 
       def format_errors(lint_results)
         lint_results.errors.first['message']
+      end
+
+      def comment_ignore_code(data)
+        commented_code = data.sub('IgnoreStart */', 'IgnoreStart')
+        commented_code.sub('/* @codingStandardsIgnoreEnd', '@codingStandardsIgnoreEnd')
       end
 
       def settings

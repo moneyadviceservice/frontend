@@ -25,7 +25,7 @@ group :assets do
   gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'jshint_ruby'
-  gem 'csslint_ruby', github: 'moneyadviceservice/csslint_ruby'
+  gem 'csslint_ruby', '~> 0.0.1'
   gem 'compass-rails'
   gem 'jquery-rails'
   gem 'sass-rails', '~> 4.0.0'

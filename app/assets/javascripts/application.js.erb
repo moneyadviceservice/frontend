@@ -1,7 +1,6 @@
 //= require require_config
 
 if(MAS.supports.fonts && MAS.fonts.url && !MAS.fonts.localstorage) {
-
   require(['common'], function (MAS) {
     MAS.log('FONTS: load via ajax');
     $.ajax({

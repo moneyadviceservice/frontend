@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 define(['jquery','common'], function ($, MAS) {
+=======
+define(['jquery', 'common'], function ($, MAS) {
+>>>>>>> fix missing require dependance
 
   'use strict';
 

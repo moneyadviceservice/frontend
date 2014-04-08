@@ -24,11 +24,13 @@
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
+    <script>var responsiveStyle = false;</script>
   <![endif]-->
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
   <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
+  <script>var responsiveStyle = true;</script>
   <!--<![endif]-->
 
   <%= yield :head %>
@@ -65,7 +67,7 @@
 
       bootstrap = {
         env: '<%= Rails.env %>',
-        timestamp: new Date().getTime(),
+        timestamp: new Date().getTime(), // needs to be run as soon to page load as possible
         I18nLocale: '<%= I18n.locale %>',
       }
 
@@ -73,7 +75,8 @@
         url: '<%= stylesheet_path('fonts') %>',
         cacheName: 'MAS.fonts',
         loadClass: 'wf-museosans-n4-active fontsLoaded',
-        localstorage: undefined
+        localstorage: undefined,
+        loadWithJS: responsiveStyle // for responsive load with JS, for fixed load inline in CSS
       }
  
       // Run support tests and cache values
@@ -88,7 +91,6 @@
           }
         }
 
-        S.fonts = false; // Required for webfont loader to work, default false, set true in view/base
         S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
         S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
         S.localstorage = supportTest('localStorage', w);
@@ -111,10 +113,10 @@
       // JS support > Update className
       html.className = html.className.replace('no-js', 'js js-' + supports.js);     
 
-      // LOAD: Crazy Egg Heatmaps
+      // LOAD: Crazy Egg Heatmaps 3rd Party code
       setTimeout(function () {
         var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-        MAS.appendFile('script', src);
+        appendFile('script', src);
       }, 1);
 
       // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
@@ -141,20 +143,10 @@
         appendFile: appendFile
       };
     })(window, document);
-
   </script>
 
-  <%# Limits loading to only supported browsers, ie7/8 loads fixed.css which has fonts inline as desktop browsers should have better bandwidth %>
-  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
-    <script>
-      MAS.supports.fonts = true;
-    </script>
-  <!--<![endif]-->
-  <%# END MAS setup JS %>
-
-
-
 </head>
+
 <body class="<%= locale_class %>">
 
   <%# START Google Analytics scripts %>

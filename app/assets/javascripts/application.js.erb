@@ -1,17 +1,23 @@
 //= require require_config
 
-if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
-  require(['webfonts'], function () {
-    var fontConfig = {
-      custom: {
-        families: ['museo_sans', 'icon-font'],
-        urls: [MAS.bootstrap.fontsUrl]
-      }
-    };
-    WebFont.load(fontConfig);
-  })
+if(MAS.supports.fonts && MAS.fonts.url && !MAS.fonts.localstorage) {
+  require(['common'], function (MAS) {
+    MAS.log('FONTS: load via ajax');
+    $.ajax({
+      url: MAS.fonts.url,
+      success: function(res){
+        MAS.log('FONTS: ajax load success > stylesheet appended to page > load class added');
+        $('body').addClass(MAS.fonts.loadClass);
+        $('head').append('<style>' + res + '</style>');
+        if(MAS.supports.localstorage){
+          MAS.log('FONTS: localstorage supported, fonts saved');
+          localStorage.setItem(MAS.fonts.cacheName, res);
+        }
+      },
+      dataType: 'text'
+    });    
+  });
 }
-
 
 require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollTracking, Collapsable) {
 

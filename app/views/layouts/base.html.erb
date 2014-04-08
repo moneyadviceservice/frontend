@@ -49,8 +49,14 @@
     MAS.bootstrap = {
       env: '<%= Rails.env %>',
       timestamp: new Date().getTime(),
-      fontsUrl: '<%= stylesheet_path('fonts') %>',
-      I18nLocale: '<%= I18n.locale %>'
+      I18nLocale: '<%= I18n.locale %>',
+    }
+
+    MAS.fonts = {
+      url: '<%= stylesheet_path('fonts') %>',
+      cacheName: 'MAS.fonts',
+      loadClass: 'wf-museosans-n4-active fontsLoaded',
+      localstorage: undefined
     }
 
     // All required feature support detection
@@ -70,19 +76,41 @@
       S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
       S.localstorage = supportTest('localStorage', w);
       S.svg = (function(){ return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect })();
+      S.test = supportTest;
 
       return S
     })(window, document);
+
+    (function (w, d) {
+
+      if(MAS.supports.localstorage && localStorage.getItem(MAS.fonts.cacheName) !== null){
+        var html = d.getElementsByTagName('html')[0];
+        html.className = html.className += (' ' + MAS.fonts.loadClass);
+        appendFile('style', false, localStorage.getItem(MAS.fonts.cacheName));
+        MAS.fonts.localstorage = true;
+      }
+
+      function appendFile(tag, src, content){
+        var f = d.getElementsByTagName('script')[0],
+            j = d.createElement(tag);
+        if(tag === 'script') j.async = true;
+        if(src) j.src = src;
+        if(content)  j.innerHTML = content;
+        f.parentNode.insertBefore(j, f);
+      }
+
+    })(window, document);
+
+
+
 
     (function(w,d){
       // Update className
       var el = d.getElementsByTagName('html')[0];
       el.className = el.className.replace('no-js', 'js js-' + MAS.supports.js);
 
-      <%#
-      Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
-      vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
-      %>
+      // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+      // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
       var vp, ua, gs, sf;
       vp = d.querySelector && d.querySelector('meta[name="viewport"]');
       ua = navigator.userAgent;

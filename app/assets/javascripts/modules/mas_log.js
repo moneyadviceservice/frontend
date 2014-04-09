@@ -14,7 +14,10 @@ define([], function () {
 
   while (l--) {
     var type = l;
-    logs[opts[l]] = (window && window.console && MAS.bootstrap.env && MAS.bootstrap.env === 'development') ? console[opts[l]].bind(console) : logIt;
+    logs[opts[l]] =
+      (window && window.console && MAS.bootstrap.env && MAS.bootstrap.env === 'development') ?
+        console[opts[l]].bind(console) :
+        logIt;
   }
 
   if(window) window.logged = logged;

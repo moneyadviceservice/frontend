@@ -14,20 +14,20 @@
 requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
   paths: {
     // Translation JSON files
-    en:         "<%= requirejs_path('translations/en') %>",
-    cy:         "<%= requirejs_path('translations/cy') %>",
+    en:         '<%= requirejs_path('translations/en') %>',
+    cy:         '<%= requirejs_path('translations/cy') %>',
 
     // External dependancies
-    jquery:      "<%= requirejs_path('jquery/dist/jquery') %>",
-    pubsub:      "<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>",
-    waypoints:   "<%= requirejs_path('jquery-waypoints/waypoints') %>",
-    ujs:         "<%= requirejs_path('jquery-ujs/src/rails') %>",
-    webfonts:    "//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont",
+    jquery:      '<%= requirejs_path('jquery/dist/jquery') %>',
+    pubsub:      '<%= requirejs_path('jquery-tiny-pubsub/src/tiny-pubsub') %>',
+    waypoints:   '<%= requirejs_path('jquery-waypoints/waypoints') %>',
+    ujs:         '<%= requirejs_path('jquery-ujs/src/rails') %>',
+    webfonts:    '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont',
 
     // Internal modules
-    log:         "<%= requirejs_path('modules/mas_log') %>",
-    analytics:   "<%= requirejs_path('modules/mas_analytics') %>",
-    collapsable: "<%= requirejs_path('modules/mas_collapsable') %>"
+    log:         '<%= requirejs_path('modules/mas_log') %>',
+    analytics:   '<%= requirejs_path('modules/mas_analytics') %>',
+    collapsable: '<%= requirejs_path('modules/mas_collapsable') %>'
   },
   shim: {
     'pubsub':    ['jquery'],

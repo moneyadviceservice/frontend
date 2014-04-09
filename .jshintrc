@@ -13,6 +13,8 @@
   // Define globals exposed by Node.js.
   "node": true,
 
+  "predef": ["MAS", "define", "requirejs", "CSSRule"],
+
   /*
    * ENFORCING OPTIONS
    * =================

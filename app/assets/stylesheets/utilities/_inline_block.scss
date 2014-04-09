@@ -1,8 +1,0 @@
-@mixin inline-block {
-  @if $responsive == true {
-    display: inline-block;
-  } @else {
-    float: left;
-    display: block;
-  }
-}

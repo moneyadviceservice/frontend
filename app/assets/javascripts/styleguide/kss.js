@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   var KssStateGenerator;
 
   KssStateGenerator = (function() {

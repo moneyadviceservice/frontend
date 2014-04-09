@@ -1,4 +1,4 @@
-body {
+body, .ns-engine {
   @extend %type;
   @extend %font-smoothing;
   @extend %prevent-text-zooming;

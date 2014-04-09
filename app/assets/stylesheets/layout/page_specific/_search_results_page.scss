@@ -1,0 +1,19 @@
+.l-search-results {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(9);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(7);
+  }
+
+  .search-box {
+    margin-bottom: $baseline-unit*2;
+  }
+
+  .search-box__input {
+    border: 1px solid $color-search-border;
+  }
+}

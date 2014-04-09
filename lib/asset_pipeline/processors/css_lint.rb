@@ -24,6 +24,11 @@ module AssetPipeline
       def comment_ignore_code(data)
         commented_code = data.sub('IgnoreStart */', 'IgnoreStart')
         commented_code.sub('/* @codingStandardsIgnoreEnd', '@codingStandardsIgnoreEnd')
+        remove_sass_comments(commented_code)
+      end
+
+      def remove_sass_comments(data)
+        data.each_line.reject {|line| line =~/line \d+/ }.join
       end
 
       def settings

@@ -45,7 +45,12 @@ module AssetPipeline
         end
 
         context 'when css contains ignore annotations' do
-          let(:css) { "/* @codingStandardsIgnoreStart */ p { color: red !important; } /* @codingStandardsIgnoreEnd */" }
+          let(:css) do
+            "/* @codingStandardsIgnoreStart */
+              /* line 123 sass comment */
+              p { color: red !important; }
+            /* @codingStandardsIgnoreEnd */"
+          end
 
           it 'returns the css without modifications' do
             expect(subject.evaluate(context, locals)).to eq(css)

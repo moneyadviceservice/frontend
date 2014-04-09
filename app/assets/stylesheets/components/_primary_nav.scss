@@ -10,9 +10,11 @@
 .primary-nav__item {
   @extend .list--unstyled;
   @extend %collapsable-trigger;
+  border-top: 1px solid $color-white-translucent-fallback;
   border-top: 1px solid $color-white-translucent;
 
   &:last-child {
+    border-bottom: 1px solid $color-white-translucent-fallback;
     border-bottom: 1px solid $color-white-translucent;
   }
 
@@ -82,8 +84,8 @@
   &.is-on:after {
     @include respond-to($mq-m) {
       content: '';
-      width: 0px;
-      height: 0px;
+      width: 0;
+      height: 0;
       border-style: solid;
       border-width: 0 10px 10px 10px;
       border-color: transparent transparent $color-submenu-background transparent;

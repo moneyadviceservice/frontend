@@ -1,5 +1,6 @@
 .styleguide-example {
   margin: 15px auto;
+  background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ddd;
 
@@ -105,6 +106,8 @@
   min-height: 70px;
 }
 
+/* @codingStandardsIgnoreStart */
+
 // high contrast background for icons
 #section-icons .styleguide-element {
   background-color: darken(#F9F9F9, 10%);
@@ -205,3 +208,4 @@
 
   }
 }
+/* @codingStandardsIgnoreEnd */

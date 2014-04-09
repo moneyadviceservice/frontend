@@ -29,6 +29,7 @@
   border-bottom: $border-width-button solid $color-button-default-border;
   color: $color-black;
   transition: background 0.2s ease;
+  filter: none; // Overrides MSDXImageTransform (IE8/9) gradient filter when engine is mounted in Public Website
 }
 
 .button:visited {

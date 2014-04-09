@@ -1,1 +1,7 @@
-define([],function(){return {"hide":"hide"}});
+define([], function() {
+  'use strict';
+
+  return {
+    'hide': 'hide'
+  };
+});

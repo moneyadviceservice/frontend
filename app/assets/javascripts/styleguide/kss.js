@@ -1,10 +1,16 @@
 (function() {
+  'use strict';
+
   var KssStateGenerator;
 
   KssStateGenerator = (function() {
 
+    function replaceRule(matched) {
+      return '.pseudo-class-' + matched.replace(':', '');
+    }
+
     function KssStateGenerator() {
-      var idx, idxs, pseudos, replaceRule, rule, stylesheet, _i, _len, _len2, _ref, _ref2;
+      var idx, idxs, pseudos, rule, stylesheet, _i, _len, _len2, _ref, _ref2;
       pseudos = /(\:hover|\:disabled|\:active|\:visited|\:focus)/g;
 
       _ref = document.styleSheets;
@@ -15,9 +21,6 @@
         for (idx = 0, _len2 = _ref2.length; idx < _len2; idx++) {
           rule = _ref2[idx];
           if ((rule.type === CSSRule.STYLE_RULE) && pseudos.test(rule.selectorText)) {
-            replaceRule = function(matched, stuff) {
-              return ".pseudo-class-" + matched.replace(':', '');
-            };
             this.insertRule(rule.cssText.replace(pseudos, replaceRule));
           }
         }
@@ -41,6 +44,6 @@
 
   })();
 
-  new KssStateGenerator;
+  new KssStateGenerator();
 
 }).call(this);

@@ -81,7 +81,10 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
 
       if(trigger[0].nodeName === 'A'){
         // Anchor => replace elemnt
-        var newEl = $('<a class-"' + trigger[0].className + '" id="' + trigger[0] + '">' + icon + txt + buttonTitle + '</a>');
+        var newEl = $('<a></a>')
+          .addClass(trigger[0].className)
+          .attr('id', trigger[0])
+          .text(icon + txt + buttonTitle);
         // add new
         trigger.after(newEl);
         // remove old

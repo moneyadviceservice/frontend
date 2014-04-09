@@ -12,7 +12,7 @@ var MAS = window.MAS || {};
 MAS.bootstrap = {
   env: 'production',
   timestamp: new Date().getTime(),
-  I18n_locale: 'en'
+  I18nLocale: 'en'
 };
 
 MAS.supports = (function(w,d){

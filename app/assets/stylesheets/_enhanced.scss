@@ -1,9 +1,7 @@
-@import 'lib/variables';
+@import 'frontend-assets/stylesheets/_all';
 
-//@import 'utilities/clearfix';
-//@import 'utilities/visually_hidden';
-//@import 'utilities/inline_block';
-@import 'layout/global/common';
+//@import 'lib/variables';
+
 @import 'layout/global/header';
 @import 'layout/global/footer';
 @import 'layout/page_specific/article_page';
@@ -15,11 +13,6 @@
 
 @import 'components/global/mas_logo';
 @import 'components/global/social_links';
-//@import '../../../../frontend-assets/stylesheets/components/common/intro';
-//@import '../../../../frontend-assets/stylesheets/components/common/lists';
-//@import '../../../../frontend-assets/stylesheets/components/common/icons';
-//@import '../../../../frontend-assets/stylesheets/components/common/button';
-//@import '../../../../frontend-assets/stylesheets/components/common/panels';
 @import 'components/global/footer_site_links';
 @import 'components/global/footer_social_links';
 @import 'components/global/cookie_message';
@@ -28,14 +21,12 @@
 @import 'components/global/mobile_nav';
 @import 'components/global/skip_to_content';
 @import 'components/global/opt_out';
-//@import '../../../../frontend-assets/stylesheets/components/common/search_box';
 @import 'components/page_specific/search_results';
 @import 'components/page_specific/category_detail';
 @import 'components/page_specific/category_filter';
 @import 'components/page_specific/home_contact';
 @import 'components/page_specific/home_feature';
 @import 'components/page_specific/home_promoted';
-//@import '../../../../frontend-assets/stylesheets/components/common/panel';
 @import 'components/page_specific/error_page_message';
 
 .editorial {
@@ -47,7 +38,4 @@
 }
 
 @import 'components/cms/tables';
-//@import '../../../../frontend-assets/stylesheets/components/common/callout';
-
-
 @import 'components/global/survey';

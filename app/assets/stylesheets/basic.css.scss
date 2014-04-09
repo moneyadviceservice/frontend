@@ -1,12 +1,7 @@
 //= require normalize-css/normalize
-//= require_self
 
 $responsive: true;
 
-@import 'lib/lib';
+@import 'frontend-assets/stylesheets/lib/_all';
+@import 'frontend-assets/stylesheets/base/_all';
 
-@import 'base/default';
-@import 'base/typography';
-@import 'base/links';
-@import 'base/forms';
-@import 'base/media';

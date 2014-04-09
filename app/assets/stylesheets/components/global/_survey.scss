@@ -1,0 +1,115 @@
+/*
+  Survey code is uploaded to http://dashboard.webengage.com > survey > on-site survey styling
+  Override of 3rd party CSS to improve styling of collapse / close buttons on survey
+*/
+
+/* @codingStandardsIgnoreStart */
+#webklipper-publisher-widget-container-survey-minimize-div,
+#webklipper-publisher-widget-container-survey-close-div {
+  background-color: #fff !important;
+  border-radius: 4px;
+}
+/* @codingStandardsIgnoreEnd */
+
+/*
+
+  This is here to keep a record and backup of styling and should not be included in our site CSS.
+
+  div.wrapper {
+    color: #fff;
+    background-color: #66a600;
+  }
+
+  div.container {
+    background-color: #478500;
+  }
+
+  select.select {
+    border: 1px solid #fff;
+  }
+
+  div.field label {
+    color: #eee;
+    text-shadow: 1px 1px #000;
+  }
+
+  span.vertical,
+  span.horizontal {
+    background-color: #326a07;
+  }
+
+  span.horizontal:hover,
+  span.vertical:hover {
+    background-color: #215514;
+  }
+
+  div.field span.horizontal:hover label,
+  div.field span.vertical:hover label {
+  }
+
+  table.matrix-question th,
+  table.matrix-question td {
+    text-shadow: 1px 1px #111;
+  }
+
+  table.matrix-question tr.odd {
+    background-color: #555;
+  }
+
+  table.matrix-question tr.even {
+    background-color: #444;
+  }
+
+  table.matrix-question tr.current {
+    background-color: #888;
+  }
+
+  textarea.textarea:hover,
+  textarea.textarea:focus {
+    background: #fff;
+    box-shadow: rgba(255, 255, 255, 1) 0 0 5px;
+    -moz-box-shadow: rgba(255, 255, 255, 1) 0 0 5px;
+    -webkit-box-shadow: rgba(255, 255, 255, 1) 0 0 5px;
+  }
+
+  button {
+    cursor: pointer;
+    background: #ebd520;
+    border: 4px solid #ddae1f;
+    border-width: 0 0 4px 0;
+    border-radius: 4px;
+    color: #333;
+    padding: 6px 12px;
+  }
+
+  button:hover {
+    background: #efde4f;
+    border-color: #e6bf49;
+  }
+
+  button:focus {
+    outline: thin dotted;
+    outline-offset: -1px;
+  }
+
+  button:active {
+    border-bottom-width: 0;
+    margin-top: 4px
+  }
+
+  button.submit-survey {
+  }
+
+  button.submit-survey:hover {
+  }
+
+  button.submit-survey:active {
+  }
+
+  div.powered-by a,
+  div.powered-by a:hover,
+  div.powered-by a:visited {
+    display: none;
+  }
+
+*/

@@ -1,0 +1,45 @@
+// Collapsible sections. The first section will automatically be set to open on load, with any further sections closed (collapsed).
+//
+// Styleguide Collapsible component
+
+.collapsible {
+  @extend %collapsable-trigger;
+  @extend %heading-small;
+  margin-bottom: $baseline-unit*4;
+  padding: $baseline-unit  $baseline-unit*7 $baseline-unit $baseline-unit*2;
+  position: relative;
+  color: $color-action-item-heading;
+  background-color: $color-action-item-heading-bg;
+  cursor: pointer;
+
+  button {
+    outline: none;
+    color: $color-action-item-heading;
+    width: 100%;
+    text-align: left;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .icon--toggle {
+    position: absolute;
+    top: $baseline-unit*2;
+    right: $baseline-unit*2;
+  }
+
+  &.is-on {
+    margin-bottom: 0;
+  }
+}
+
+.collapsible-section {
+  @extend %collapsable-target;
+  border-left: 1px solid $color-action-item-border;
+  border-right: 1px solid $color-action-item-border;
+  border-bottom: 2px solid $color-action-item-border;
+  padding: $baseline-unit*4 $baseline-unit*2 0 $baseline-unit*2;
+  margin: $baseline-unit/3 0 $baseline-unit*6 0;
+}

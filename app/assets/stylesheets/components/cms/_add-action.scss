@@ -1,0 +1,29 @@
+.add-action {
+  position: relative;
+  background-color: $color-article-cta;
+  padding: $baseline-unit $baseline-unit*2;
+  display: block;
+  margin: $baseline-unit*5 0;
+  clear: both;
+
+  &:before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent $color-article-cta;
+  }
+
+  a {
+    border-bottom: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

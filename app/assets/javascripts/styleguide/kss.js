@@ -43,6 +43,6 @@
 
   })();
 
-  new KssStateGenerator;
+  new KssStateGenerator();
 
 }).call(this);

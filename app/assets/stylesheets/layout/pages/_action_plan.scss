@@ -1,8 +1,0 @@
-.l-action-plan {
-  @include column(12);
-
-  @include respond-to($mq-l) {
-    @include column(8);
-    @include push(1);
-  }
-}

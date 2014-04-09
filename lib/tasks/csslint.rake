@@ -9,7 +9,7 @@ task :csslint => :environment do
   Rails.application.assets.each_file do |pathname|
     if pathname.basename.to_s =~ /\A_{0}[a-zA-Z0-9.]+.scss\z/
       css = Rails.application.assets[pathname]
-      results = CsslintRuby.run(css.to_s, lint_options)
+      results = CsslintRuby.run(comment_ignore_code(css.to_s), lint_options)
 
       puts pathname
 
@@ -26,4 +26,14 @@ task :csslint => :environment do
       end
     end
   end
+end
+
+def comment_ignore_code(data)
+  commented_code = data.sub('IgnoreStart */', 'IgnoreStart')
+  commented_code.sub('/* @codingStandardsIgnoreEnd', '@codingStandardsIgnoreEnd')
+  remove_sass_comments(commented_code)
+end
+
+def remove_sass_comments(data)
+  data.each_line.reject {|line| line =~/line \d+/ }.join
 end

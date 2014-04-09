@@ -1,5 +1,5 @@
 
-define([MAS.bootstrap.I18n_locale, 'log', 'jquery'], function (Text, Global, $) {
+define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
   'use strict';
 
   var defaults = {

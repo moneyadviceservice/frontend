@@ -82,16 +82,16 @@
 
 // only works with OpenType Fonts
 @mixin font-features($liga, $kern) {
-  -webkit-font-feature-settings: "#{$liga}";
-  -moz-font-feature-settings: "#{$liga}", "#{$kern}";
-  font-feature-settings: "#{$liga}", "#{$kern}";
+  // -webkit-font-feature-settings: "#{$liga}";
+  // -moz-font-feature-settings: "#{$liga}", "#{$kern}";
+  // font-feature-settings: "#{$liga}", "#{$kern}";
 }
 
 // only works with OpenType Fonts
 @mixin legibility($kerning: normal) {
-  -webkit-font-kerning: $kerning;
-  -moz-font-kerning: $kerning;
-  font-kerning: $kerning;
+  // -webkit-font-kerning: $kerning;
+  // -moz-font-kerning: $kerning;
+  // font-kerning: $kerning;
 }
 
 %font-body {

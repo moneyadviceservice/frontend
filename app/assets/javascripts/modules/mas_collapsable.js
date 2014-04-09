@@ -54,7 +54,8 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
       this.$parent = $(this.o.parentWrapper);
 
       if(!this.o.parentWrapper || !this.$parent.length) {
-        Global.warn('options.parentWrapper should be set & valid for closeOffFocus to work properly');
+        Global.warn(
+          'options.parentWrapper should be set & valid for closeOffFocus to work properly');
         return;
       }
 
@@ -70,7 +71,9 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
 
   Collapsible.prototype._modifyButtonHTML = function(i){
     var trigger = this.sections[i].trigger,
-        txt = (this.o.showText)? this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection) : '',
+        txt = (this.o.showText) ?
+          this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection) :
+          '',
         icon = (this.o.showIcon)? this.o.headingIcon : '';
 
     if(this.o.useButton){
@@ -159,7 +162,8 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
 
     // Accessibility support for spacebar
     this.sections[i].trigger.on('keypress', function(e){
-      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' && !_this.o.useButton) {
+      if(e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' &&
+          !_this.o.useButton) {
         e.preventDefault();
         _this.sections[i].trigger.trigger('click');
       }

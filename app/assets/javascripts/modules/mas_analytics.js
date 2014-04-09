@@ -74,7 +74,8 @@ define(['log', 'jquery', 'waypoints'], function (Global, $) {
       wh = $.waypoints('viewportHeight'), // normalises $(window).height()
       contentRatio = $el.outerHeight() / wh;
 
-    // send ratioCalculated event - used by analytics events to determine page size and meaninfulness of scroll event
+    // send ratioCalculated event
+    // used by analytics events to determine page size and meaninfulness of scroll event
     analytics.trigger({
       'contentRatio': contentRatio,
       'event': 'ratioCalculated'

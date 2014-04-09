@@ -5,7 +5,7 @@
 //= depend_on_asset MuseoSans_500.eot
 //= depend_on_asset MuseoSans_700.eot
 
-@if $responsive == true {
+@if $use-woff == true {
 
   @font-face {
     font-family: 'museo_sans';

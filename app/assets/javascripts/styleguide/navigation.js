@@ -5,7 +5,7 @@ require(['jquery'], function ($) {
 
     $('.styleguide-nav-container').prepend('<button class="styleguide-nav__toggle">Menu</button>');
 
-    $('.styleguide-nav__toggle').on('click', function(e){
+    $('.styleguide-nav__toggle').on('click', function(){
       $('.styleguide-nav').slideToggle();
     });
 

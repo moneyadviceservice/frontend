@@ -46,19 +46,19 @@ describe Core::Repositories::Search::ContentService do
           let(:reformatted_data) { subject.detect { |result| result[:type] == 'action-plan' } }
 
           it 'maps the id correctly' do
-            reformatted_data[:id].should eql source_data['id']
+            expect(reformatted_data[:id]).to eql source_data['id']
           end
 
           it 'maps the title correctly' do
-            reformatted_data[:title].should eql source_data['preview']['title']
+            expect(reformatted_data[:title]).to eql source_data['preview']['title']
           end
 
           it 'maps the description correctly' do
-            reformatted_data[:description].should eql source_data['preview']['preview']
+            expect(reformatted_data[:description]).to eql source_data['preview']['preview']
           end
 
           it 'maps the type correctly' do
-            reformatted_data[:type].should eql source_data['type']
+            expect(reformatted_data[:type]).to eql source_data['type']
           end
         end
 
@@ -67,19 +67,19 @@ describe Core::Repositories::Search::ContentService do
           let(:reformatted_data) { subject.detect { |result| result[:type] == 'category' } }
 
           it 'maps the id correctly' do
-            reformatted_data[:id].should eql source_data['id']
+            expect(reformatted_data[:id]).to eql source_data['id']
           end
 
           it 'maps the title correctly' do
-            reformatted_data[:title].should eql source_data['preview']['title']
+            expect(reformatted_data[:title]).to eql source_data['preview']['title']
           end
 
           it 'maps the description correctly' do
-            reformatted_data[:description].should eql source_data['preview']['description']
+            expect(reformatted_data[:description]).to eql source_data['preview']['description']
           end
 
           it 'maps the type correctly' do
-            reformatted_data[:type].should eql source_data['type']
+            expect(reformatted_data[:type]).to eql source_data['type']
           end
         end
       end

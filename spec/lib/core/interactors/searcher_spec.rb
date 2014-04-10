@@ -47,7 +47,7 @@ module Core
         let(:data) { [{ id: id, title: title, type: type }] }
 
         it 'skips the invalid record' do
-          subject.call.none? { |result| result.id == id }.should be_true
+          expect(subject.call.none? { |result| result.id == id }).to be_true
         end
 
         it 'should log the invalid record' do

@@ -157,7 +157,7 @@
 
   <%# START RequireJS load of application %>
   <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
-  <%= yield :scripts %>
+  <%= yield :javascripts %>
   <%# END RequireJS load of application %>
 
   <%# START WebEngage script for displaying user surveys %>

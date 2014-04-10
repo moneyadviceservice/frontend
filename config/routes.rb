@@ -20,6 +20,11 @@ Rails.application.routes.draw do
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
 
+    scope '/tools' do
+      mount MortgageCalculator::Engine => '/:tool_id',
+            constraints: { tool_id: %r{mortgage-calculator-new|cyfrifiannell-morgais-newydd} }
+    end
+
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,
              controller: 'styleguide',

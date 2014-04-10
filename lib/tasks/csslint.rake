@@ -7,7 +7,7 @@ task :csslint => :environment do
   lint_options = JSON.parse(File.read(csslint))
 
   Rails.application.assets.each_file do |pathname|
-    if pathname.basename.to_s =~ /\A_{0}[a-zA-Z0-9.]+.scss\z/
+    if pathname.basename.to_s =~ /\A[^_][a-zA-Z0-9_.]+.scss\z/
       css = Rails.application.assets[pathname]
       results = CsslintRuby.run(comment_ignore_code(css.to_s), lint_options)
 

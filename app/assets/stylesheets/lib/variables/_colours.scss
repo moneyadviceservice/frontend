@@ -6,6 +6,8 @@ $color-transparent: transparent !default;
 
 $color-black: #555 !default;
 $color-grey-primary: #6d6d6d !default;
+$color-grey-secondary: #d1d5d5 !default;
+$color-grey-tertiary: #929494 !default;
 
 $color-green-primary: #388426 !default;
 $color-green-secondary: #61a612 !default;
@@ -88,8 +90,8 @@ $color-list-yes: $color-green-secondary !default;
 $color-list-no: $color-red-dark !default;
 
 // Buttons
-$color-button-default: $color-green-light !default;
-$color-button-default-border: $color-green-medium !default;
+$color-button-default: $color-grey-secondary !default;
+$color-button-default-border: $color-grey-tertiary !default;
 $color-button-default-text: $color-black !default;
 
 $color-button-primary: $color-yellow-light !default;

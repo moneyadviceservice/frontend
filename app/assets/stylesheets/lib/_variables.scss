@@ -1,45 +1,6 @@
-
-// Global Colours
-$color-site-bg: $color-green-primary !default;
-$color-heading: $color-green-secondary !default;
-
-// Typography
-$color-text-default: $color-black !default;
-$color-text-icon: $color-white !default;
-
-// Default Links
-$color-link-default: $color-blue-medium !default;
-$color-link-visited: $color-blue-dark !default;
-$color-link-focus: $color-blue-light !default;
-
 // Navigation Links
 $color-link-nav: $color-green-tertiary !default;
 $color-link-nav-visited: $color-green-tertiary !default;
-
-// Article Links
-$color-link-external: $color-grey-light !default;
-
-// Tables
-$color-table-heading: $color-white !default;
-$color-table-background: $color-green-primary !default;
-$color-table-background-alt: $color-green-paler !default;
-$color-table-border: $color-grey-light !default;
-
-// Lists
-$color-list-bullet: $color-green-secondary !default;
-$color-list-yes: $color-green-secondary !default;
-$color-list-no: $color-red-dark !default;
-
-// Buttons
-$color-button-default: $color-green-light !default;
-$color-button-default-border: $color-green-medium !default;
-$color-button-default-text: $color-black !default;
-
-$color-button-primary: $color-yellow-light !default;
-$color-button-primary-border: $color-yellow-dark !default;
-
-// Homepage
-$home-page-feature: $color-grey-pale !default;
 
 // Footer
 $color-footer-bg: $color-grey-pale !default;
@@ -48,11 +9,6 @@ $color-footer-bg: $color-grey-pale !default;
 $color-opt-out-background: $color-blue-pale !default;
 $color-feedback-background: $color-blue-extra-dark !default;
 
-// Panels
-$color-panel-background: $color-grey-pale;
-
-// Callout Colours
-$color-callout-background: $color-green-pale !default;
 
 // Action Plans
 $color-action-item-heading: $color-white !default;
@@ -85,6 +41,7 @@ $color-filter-background: $color-grey-paler !default;
 // Homepage
 $color-home-copy: $color-green-secondary !default;
 $color-home-number: $color-grey-dark !default;
+$home-page-feature: $color-grey-pale !default;
 $home-feature-list-bg: $color-white !default;
 $home-feature-list-border: $color-grey-palest !default;
 

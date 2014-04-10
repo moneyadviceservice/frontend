@@ -17,7 +17,8 @@ module AssetPipeline
       private
 
       def format_errors(lint_results)
-        lint_results.errors.first['message']
+        error = lint_results.errors.first
+        "error: #{error['message']}\n For more info run: rake csslint"
       end
 
       def remove_ignored_code(data)

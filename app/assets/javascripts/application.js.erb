@@ -55,6 +55,7 @@ require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollT
       showIcon: true,
       useButton: true
     });
+
     // DEMO >> Subscribe to collapsable event
     // MAS.subscribe('collapsable', function(event,o){
     //   console.info(o);
@@ -65,11 +66,11 @@ require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollT
       $('.cookie-message').hide();
       $('.footer-site-links__cookie-message').removeClass('is-on');
     });
-
+    
     // Responsive Opt Out
     $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
       $('.opt-out').addClass('is-hidden');
-    });
+    });    
   })
 
 });

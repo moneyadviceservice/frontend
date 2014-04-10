@@ -20,9 +20,12 @@ task :jshint => :environment do
 
     puts pathname
 
-    errors = results.errors.compact.sort_by { |error| error['line'] }.sort_by { |error| error['character'] }
+    errors = results.errors.compact
+
     if errors.present?
-      errors.compact.each do |error|
+      errors.sort! { |a, b| [a['line'], a['character']] <=> [b['line'], b['character']] }
+
+      errors.each do |error|
         puts "- line: #{error['line']}, char: #{error['character']}: #{error['reason']}"
       end
     else

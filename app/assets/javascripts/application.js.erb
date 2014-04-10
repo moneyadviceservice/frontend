@@ -3,6 +3,8 @@
 if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
 
   require(['webfonts'], function () {
+    'use strict';
+
     var fontConfig = {
       custom: {
         families: ['museo_sans', 'icon-font'],
@@ -10,10 +12,12 @@ if(MAS.supports.fonts && MAS.bootstrap.fontsUrl) {
       }
     };
     WebFont.load(fontConfig);
-  })
+  });
 }
 
 require(['analytics'], function (analytics) {
+  'use strict';
+
   analytics.scrollTracking({
     el: '.editorial',
     triggerPoints: [0.25, 0.5, 0.75, 1]
@@ -21,20 +25,27 @@ require(['analytics'], function (analytics) {
 });
 
 require(['collapsable'], function (Collapsable) {
-  var primaryNav = new Collapsable({
+  'use strict';
+
+  // Primary Nav
+  new Collapsable({
     closeOffFocus:true,
     accordion:true,
     triggerEl: '#primary-nav > li > a',
     targetEl: '.primary-nav__dropdown',
     parentWrapper: '#primary-nav'
   });
-  var mobileNav = new Collapsable({
+
+  // Mobile Nav
+  new Collapsable({
     accordion:true,
     triggerEl: '.mobile-nav a',
     targetType: 'href',
     parentWrapper: '#primary-nav'
   });
-  var articleCollapsables = new Collapsable({
+
+  // Article Collapsables
+  new Collapsable({
     showOnlyFirst:true,
     showIcon: true,
     useButton: true
@@ -42,14 +53,18 @@ require(['collapsable'], function (Collapsable) {
 });
 
 require(['ujs', 'jquery'], function(){
-  $('.js-cookie-message').bind('ajax:success', function(data, status, xhr) {
+  'use strict';
+
+  $('.js-cookie-message').bind('ajax:success', function() {
     $('.cookie-message').hide();
     $('.footer-site-links__cookie-message').removeClass('is-on');
   });
 });
 
 require(['ujs', 'jquery'], function(){
-  $('.js-close-opt-out').bind('ajax:success', function(data, status, xhr) {
+  'use strict';
+
+  $('.js-close-opt-out').bind('ajax:success', function() {
     $('.opt-out').addClass('is-hidden');
   });
 });

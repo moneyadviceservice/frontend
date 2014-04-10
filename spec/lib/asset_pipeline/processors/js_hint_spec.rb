@@ -17,7 +17,7 @@ module AssetPipeline
 
         context 'when the file is inside the assets directory' do
           before do
-            allow(subject).to receive(:options).and_return(jshint_options)
+            allow(subject).to receive(:jshint_options).and_return(jshint_options)
           end
 
           let(:pathname) { double(to_s: File.join(Rails.root, 'app', 'assets', 'javascripts', 'foo.js')) }

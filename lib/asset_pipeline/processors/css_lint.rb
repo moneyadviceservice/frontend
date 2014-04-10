@@ -3,16 +3,19 @@ module AssetPipeline
     class CssLint < Sprockets::Processor
       class CssLintError < StandardError; end
 
-      def evaluate(context, locals)
-        lint_results = CsslintRuby.run(comment_ignore_code(data), settings)
+      REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.css\z/
 
-        if lint_results.errors.present?
-          error = format_errors(lint_results)
-          context.__LINE__ = error
-          raise CssLintError.new(error)
-        else
-          data
+      def evaluate(context, locals)
+        if context.pathname.to_s =~ REGEX
+          lint_results = CsslintRuby.run(comment_ignore_code(data), settings)
+
+          if lint_results.errors.present?
+            error = format_errors(lint_results)
+            context.__LINE__ = error
+            raise CssLintError.new(error)
+          end
         end
+        data
       end
 
       private

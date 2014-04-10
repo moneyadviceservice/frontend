@@ -7,6 +7,8 @@ module AssetPipeline
       describe '#evaluate' do
         let(:context) { double }
         let(:locals) { double }
+        let(:pathname) { double(to_s: File.join(Rails.root, 'app', 'assets', 'stylesheets', 'foo.css')) }
+        let(:context) { double(pathname: pathname) }
 
         subject { described_class.new('foo.erb') {} }
 
@@ -54,6 +56,20 @@ module AssetPipeline
 
           it 'returns the css without modifications' do
             expect(subject.evaluate(context, locals)).to eq(css)
+          end
+        end
+
+        context 'when the file is outside the assets directory' do
+          let(:pathname) { double(to_s: File.join(Rails.root, 'vendor', 'assets', 'stylesheets', 'foo.css')) }
+          let(:css) { "p { color: red !important; }"  }
+
+          it 'does not lint the file' do
+            expect(CsslintRuby).not_to receive(:run)
+            subject.evaluate(context, locals)
+          end
+
+          it 'returns the data' do
+            expect(subject.evaluate(context, locals)).to eql(css)
           end
         end
       end

@@ -1,4 +1,4 @@
-<form class="search-box" action="<%= search_results_path %>" method="get" role="search">
+<form class="search-box" action="<%= main_app.search_results_path %>" method="get" role="search">
   <div class="l-constrained">
     <label class="visually-hidden"><%= t('search_box.label') %></label>
     <input class="search-box__input" type="text" name="query" value="<%= params[:query] %>" placeholder="<%= t('search_box.placeholder') %>"/>

@@ -80,7 +80,7 @@ describe 'html validation' do
 
       context 'with no query' do
         before do
-          visit search_results_path(locale: locale)
+          visit main_app.search_results_path(locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -88,7 +88,7 @@ describe 'html validation' do
 
       context 'with no results' do
         before do
-          visit search_results_path(query: query, locale: locale)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -98,7 +98,7 @@ describe 'html validation' do
         let(:results) { [content_item] }
 
         before do
-          visit search_results_path(query: query, locale: locale)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -110,7 +110,7 @@ describe 'html validation' do
 
       context 'with no query' do
         before do
-          visit search_results_path(locale: locale)
+          visit main_app.search_results_path(locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -118,7 +118,7 @@ describe 'html validation' do
 
       context 'with no results' do
         before do
-          visit search_results_path(query: query, locale: locale)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -128,7 +128,7 @@ describe 'html validation' do
         let(:results) { [content_item] }
 
         before do
-          visit search_results_path(query: query, locale: locale)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }

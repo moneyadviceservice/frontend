@@ -2,40 +2,12 @@
 
 //@import 'lib/variables';
 
-@import 'layout/global/header';
-@import 'layout/global/footer';
-@import 'layout/page_specific/article_page';
-@import 'layout/page_specific/action_plan';
-@import 'layout/page_specific/error_page';
-@import 'layout/page_specific/category_page';
-@import 'layout/page_specific/search_results_page';
-@import 'layout/global/footer_fixed';
 
-@import 'components/global/mas_logo';
-@import 'components/global/social_links';
-@import 'components/global/footer_site_links';
-@import 'components/global/footer_social_links';
-@import 'components/global/cookie_message';
-@import 'components/global/menu';
-@import 'components/global/primary_nav';
-@import 'components/global/mobile_nav';
-@import 'components/global/skip_to_content';
-@import 'components/global/opt_out';
-@import 'components/page_specific/search_results';
-@import 'components/page_specific/category_detail';
-@import 'components/page_specific/category_filter';
-@import 'components/page_specific/home_contact';
-@import 'components/page_specific/home_feature';
-@import 'components/page_specific/home_promoted';
-@import 'components/page_specific/error_page_message';
+@import 'layout/common/_all';
+@import 'layout/page_specific/_all';
+@import 'components/common/_all';
+@import 'components/page_specific/_all';
 
 .editorial {
-  @import 'components/cms/action_item';
-  @import 'components/cms/collapsible';
-  @import 'components/cms/media';
-  @import 'components/cms/add-action';
-  @import 'components/cms/editorial_links';
+  @import 'components/cms/_all';
 }
-
-@import 'components/cms/tables';
-@import 'components/global/survey';

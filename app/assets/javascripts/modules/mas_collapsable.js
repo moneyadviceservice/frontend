@@ -194,7 +194,9 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
-    if(this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
+    if(this.o.accordion && (this.selected !== false && this.selected !== i)) {
+      this.hide(this.selected);
+    }
     this.selected = i;
     return this;
   };

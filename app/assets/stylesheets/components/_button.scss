@@ -44,6 +44,7 @@
 
 .button:focus,
 .button:hover {
+  color: $color-black;
   background: lighten($color-button-default, $lighten-button);
   border-color: lighten($color-button-default-border, $lighten-button);
   text-decoration: none;

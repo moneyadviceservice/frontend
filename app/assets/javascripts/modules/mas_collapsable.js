@@ -25,12 +25,32 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     textString: {
       showThisSection: Text.show || 'Show',
       hideThisSection: Text.hide || 'Hide'
+    },
+
+    // Callbacks
+    onSelect: false,
+    onFocusout: false
+  };
+
+  var _isHidden = function(target, opts){
+    if( target.hasClass(opts.inactiveClass) ) return true;
+    if( target.hasClass(opts.activeClass) ) return false;
+    return target.is(':hidden');
+  };
+
+  var _getTarget = function($el, opts){
+    switch(opts.targetType){
+    case 'class':
+      return $el.next(opts.targetEl);
+    case 'href':
+      var href = $el.attr('href'),
+        $t = $(href);
+      return ($t.length)? $t : false;
+    default:
+      return false;
     }
   };
 
-  $.fn.swapClass = function(from, to){
-    this.removeClass(from).addClass(to);
-  };
 
   var Collapsible = function(opts){
     this.o = $.extend({}, defaults, opts);
@@ -59,14 +79,19 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
         return;
       }
 
-      this.$parent.on('focusout', function(){
-        setTimeout(function(){
-          if( _this.$parent.find(document.activeElement).length === 0 && _this.selected !== false){
-            _this.hide(_this.selected);
-          }
-        },300);
-      });
+      this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
     }
+  };
+
+  Collapsible.prototype._delayDomCheck = function(){
+    setTimeout( $.proxy(function(){
+      if( this.$parent.find(document.activeElement).length === 0 && this.selected !== false){
+        // Callback
+        if(typeof this.o.onFocusout === 'function') this.o.onFocusout(this);
+        // Action
+        this.hide(this.selected);
+      }
+    },this),300);
   };
 
   Collapsible.prototype._modifyButtonHTML = function(i){
@@ -106,36 +131,18 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     if(this.o.showText) this.sections[i].txt = trigger.find('.visually-hidden');
   };
 
-  Collapsible.prototype.getTarget = function($el){
-    switch(this.o.targetType){
-    case 'class':
-      return $el.next(this.o.targetEl);
-    case 'href':
-      var href = $el.attr('href'),
-        $t = $(href);
-      return ($t.length)? $t : false;
-    default:
-      return false;
-    }
-  };
-
-  Collapsible.prototype._testHidden = function(target){
-    if( target.hasClass(this.o.inactiveClass) ) return true;
-    if( target.hasClass(this.o.activeClass) ) return false;
-    return ( target.is(':hidden') );
-  };
-
   Collapsible.prototype._setupEach = function(i,el){
     var $el = $(el),
       _this = this,
-      _target = this.getTarget($el);
+      _target = _getTarget($el, _this.o);
 
     this.sections[i] = {
       index: i,
       trigger: $el,
       target: _target,
-      hidden: this._testHidden(_target)
+      hidden: _isHidden(_target, _this.o)
     };
+
     // Dont modify or bind events if no target element
     if(!this.sections[i].target.length) return;
 
@@ -144,23 +151,23 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
       this.sections[i].hidden = (i === 0)? false : true;
     }
 
-    if(this.o.accordion){
-      if(this.selected === false && !this.sections[i].hidden){
-      }else{
-        this.sections[i].hidden = true;
-      }
+    // For accordions, if there is a selected item, hide other items
+    if(this.o.accordion && this.selected !== false && this.sections[i].hidden){
+      this.sections[i].hidden = true;
     }
 
     // Update Button HTML to make accessible
     this._modifyButtonHTML(i);
 
     // Set initial state
-    this.toggle(!this.sections[i].hidden,i);
+    this.setVisibility(!this.sections[i].hidden,i);
 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
-      _this.toggle(_this.sections[i].hidden, i);
+      // Check for callbacks
+      if(typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
+      _this.setVisibility(_this.sections[i].hidden, i);
     });
 
     // Accessibility support for spacebar
@@ -171,37 +178,35 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
         _this.sections[i].trigger.trigger('click');
       }
     });
+    return this;
   };
 
-  Collapsible.prototype.toggle = function(show,i){
-    if(show){
-      this.show(i);
-    }else{
-      this.hide(i);
-    }
+  Collapsible.prototype.setVisibility = function(show,i){
+    var method = (show)? 'show' : 'hide';
+    this[method](i);
+    return this;
   };
 
   Collapsible.prototype.show = function(i){
     var item = this.sections[i];
-    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
-    item.trigger.swapClass(this.o.inactiveClass, this.o.activeClass);
-    item.target.swapClass(this.o.inactiveClass, this.o.activeClass);
+    item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+    item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
-
-    if (this.o.accordion && (this.selected !== false && this.selected !== i)){
-      this.hide(this.selected);
-    }
+    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
+    if(this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
     this.selected = i;
+    return this;
   };
 
   Collapsible.prototype.hide = function(i){
     var item = this.sections[i];
-    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
-    item.trigger.swapClass(this.o.activeClass, this.o.inactiveClass);
-    item.target.swapClass(this.o.activeClass, this.o.inactiveClass);
+    item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+    item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
+    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
+    return this;
   };
 
   return Collapsible;

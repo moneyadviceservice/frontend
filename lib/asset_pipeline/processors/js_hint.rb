@@ -7,19 +7,16 @@ module AssetPipeline
 
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX
-          raise ErrorsFound if JshintRuby.run(data, options).errors.present?
+          raise ErrorsFound if JshintRuby.run(data, jshint_options).errors.present?
         end
         data
       end
 
       private
 
-      def options
-        @options ||= JSON.parse(File.read(jshintrc))
-      end
-
-      def jshintrc
-        @jshintrc ||= File.join(Rails.root, '.jshintrc')
+      def jshint_options
+        jshintrc = File.join(Rails.root, '.jshintrc')
+        JSON.parse(File.read(jshintrc))
       end
     end
   end

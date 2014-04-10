@@ -33,7 +33,6 @@ module AssetPipeline
           end
 
           it 'modifies the context and raises and exception' do
-            expect(context).to receive(:__LINE__=).with(formatted_errors)
             expect { subject.evaluate(context, locals) }.to raise_error(CssLint::CssLintError)
           end
         end
@@ -48,10 +47,12 @@ module AssetPipeline
 
         context 'when css contains ignore annotations' do
           let(:css) do
-            "/* @codingStandardsIgnoreStart */
-              /* line 123 sass comment */
-              p { color: red !important; }
-            /* @codingStandardsIgnoreEnd */"
+            "body {
+               /* @codingStandardsIgnoreStart */
+              display: unkown-property;
+              /* @codingStandardsIgnoreEnd */
+              color: red;
+            }"
           end
 
           it 'returns the css without modifications' do

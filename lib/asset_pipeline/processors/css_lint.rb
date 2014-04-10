@@ -4,16 +4,12 @@ module AssetPipeline
       class CssLintError < StandardError; end
 
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.css\z/
+      IGNORED_TAG = '@codingStandardsIgnore'
 
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX
-          lint_results = CsslintRuby.run(comment_ignore_code(data), settings)
-
-          if lint_results.errors.present?
-            error = format_errors(lint_results)
-            context.__LINE__ = error
-            raise CssLintError.new(error)
-          end
+          lint_results = CsslintRuby.run(remove_ignored_code(data), settings)
+          raise CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
         end
         data
       end
@@ -21,17 +17,12 @@ module AssetPipeline
       private
 
       def format_errors(lint_results)
-        lint_results.errors.first['message']
+        error = lint_results.errors.first
+        "error: #{error['message']}\n For more info run: rake csslint"
       end
 
-      def comment_ignore_code(data)
-        commented_code = data.sub('IgnoreStart */', 'IgnoreStart')
-        commented_code.sub('/* @codingStandardsIgnoreEnd', '@codingStandardsIgnoreEnd')
-        remove_sass_comments(commented_code)
-      end
-
-      def remove_sass_comments(data)
-        data.each_line.reject {|line| line =~/line \d+/ }.join
+      def remove_ignored_code(data)
+        data.gsub(/\/\* #{IGNORED_TAG}Start \*\/.+?\/\* #{IGNORED_TAG}End \*\//m, '')
       end
 
       def settings

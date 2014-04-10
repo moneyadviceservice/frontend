@@ -1,8 +1,11 @@
 
-define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
+define(['jquery', 'common'], function ($, MAS) {
+
   'use strict';
 
   var defaults = {
+    name: 'not set',
+
     // Setup
     triggerEl: '.collapsible',
     targetEl: '.collapsible-section',
@@ -23,8 +26,8 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
 
     // Localised text strings
     textString: {
-      showThisSection: Text.show || 'Show',
-      hideThisSection: Text.hide || 'Hide'
+      showThisSection: MAS.text.show || 'Show',
+      hideThisSection: MAS.text.hide || 'Hide'
     },
 
     // Callbacks
@@ -51,7 +54,6 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     }
   };
 
-
   var Collapsible = function(opts){
     this.o = $.extend({}, defaults, opts);
     this.sections = [];
@@ -63,7 +65,7 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
         i = 0;
 
     if(l === 0){
-      return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+      return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
     }
 
     for(i; i<l; i++){
@@ -74,8 +76,7 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
       this.$parent = $(this.o.parentWrapper);
 
       if(!this.o.parentWrapper || !this.$parent.length) {
-        Global.warn(
-          'options.parentWrapper should be set & valid for closeOffFocus to work properly');
+        MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work properly');
         return;
       }
 
@@ -89,7 +90,7 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
         // Callback
         if(typeof this.o.onFocusout === 'function') this.o.onFocusout(this);
         // Action
-        this.hide(this.selected);
+        this.hide(this.selected, false);
       }
     },this),300);
   };
@@ -160,14 +161,14 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     this._modifyButtonHTML(i);
 
     // Set initial state
-    this.setVisibility(!this.sections[i].hidden,i);
+    this.setVisibility(!this.sections[i].hidden,i, false);
 
     // Bind events
     this.sections[i].trigger.on('click', i, function(e){
       e.preventDefault();
       // Check for callbacks
       if(typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
-      _this.setVisibility(_this.sections[i].hidden, i);
+      _this.setVisibility(_this.sections[i].hidden, i, true);
     });
 
     // Accessibility support for spacebar
@@ -181,25 +182,46 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     return this;
   };
 
-  Collapsible.prototype.setVisibility = function(show,i){
+  Collapsible.prototype.setVisibility = function(show,i, userInitiated){
     var method = (show)? 'show' : 'hide';
-    this[method](i);
+    this[method](i,userInitiated);
     return this;
   };
 
-  Collapsible.prototype.show = function(i){
+  function publishEvent(userInitiated, data){
+    if(userInitiated){
+      data.module = 'collapsable';
+      MAS.publish('collapsable', data);
+      MAS.publish('analytics:trigger', data);
+    }
+  }
+
+  Collapsible.prototype.show = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'show'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
-    if(this.o.accordion && (this.selected !== false && this.selected !== i)) this.hide(this.selected);
+    if (this.o.accordion && (this.selected !== false && this.selected !== i)){
+      this.hide(this.selected, false);
+    }
     this.selected = i;
     return this;
   };
 
-  Collapsible.prototype.hide = function(i){
+  Collapsible.prototype.hide = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'hide'
+    });
     var item = this.sections[i];
     item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);

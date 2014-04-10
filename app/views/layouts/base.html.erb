@@ -24,11 +24,13 @@
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
+    <script>var responsiveStyle = false;</script>
   <![endif]-->
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
   <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
+  <script>var responsiveStyle = true;</script>
   <!--<![endif]-->
 
   <%= yield :head %>
@@ -44,45 +46,81 @@
       'event': 'Responsive page'
     }];
 
-    // Any properties that require Ruby @ runtime
-    var MAS = window.MAS || {};
-    MAS.bootstrap = {
-      env: '<%= Rails.env %>',
-      timestamp: new Date().getTime(),
-      fontsUrl: '<%= stylesheet_path('fonts') %>',
-      I18nLocale: '<%= I18n.locale %>'
-    }
+    window.MAS = (function(w,d){
 
-    // All required feature support detection
-    MAS.supports = (function(w,d){
-      var S = {};
+      var html, appendFile, bootstrap, fonts, supports;
 
-      function supportTest(prop, context){
-        try {
-          return prop in context && context[prop] !== null;
-        } catch (e) {
-          return false;
+      //// Set variables and default values
+      appendFile = function(tag, src, content){
+        var position = d.getElementsByTagName('script')[0],
+            file = d.createElement(tag);
+        if(tag === 'script'){
+          file.async = true;
+          file.type = "text/javascript";
         }
+        if(src) file.src = src;
+        if(content) file.innerHTML = content;
+        position.parentNode.insertBefore(file, position);
       }
 
-      S.fonts = false; // Required for webfont loader to work, default false, set true in view/base
-      S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
-      S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
-      S.localstorage = supportTest('localStorage', w);
-      S.svg = (function(){ return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect })();
+      html = d.getElementsByTagName('html')[0];
 
-      return S
-    })(window, document);
+      bootstrap = {
+        env: '<%= Rails.env %>',
+        timestamp: new Date().getTime(), // needs to be run as soon to page load as possible
+        I18nLocale: '<%= I18n.locale %>',
+      }
 
-    (function(w,d){
-      // Update className
-      var el = d.getElementsByTagName('html')[0];
-      el.className = el.className.replace('no-js', 'js js-' + MAS.supports.js);
+      fonts = {
+        url: '<%= stylesheet_path('fonts') %>',
+        cacheName: 'MAS.fonts',
+        loadClass: 'wf-museosans-n4-active fontsLoaded',
+        localstorage: undefined,
+        loadWithJS: responsiveStyle // for responsive load with JS, for fixed load inline in CSS
+      }
+ 
+      // Run support tests and cache values
+      supports = (function(){
+        var S = {};
 
-      <%#
-      Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
-      vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
-      %>
+        function supportTest(prop, context){
+          try {
+            return prop in context && context[prop] !== null;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
+        S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
+        S.localstorage = supportTest('localStorage', w);
+        S.svg = (function(){ return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect })();
+        S.test = supportTest;
+
+        return S
+      })();
+
+      //// Run modify DOM and load files
+
+      // Load font from localStorage
+      if(supports.localstorage && localStorage.getItem(fonts.cacheName) !== null){
+        html.className = html.className += (' ' + fonts.loadClass);
+        appendFile('style', false, localStorage.getItem(fonts.cacheName));
+        fonts.localstorage = true;
+      }
+
+      // JS support > Update className
+      html.className = html.className.replace('no-js', 'js js-' + supports.js);     
+
+      // LOAD: Crazy Egg Heatmaps 3rd Party code
+      setTimeout(function () {
+        var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
+        appendFile('script', src);
+      }, 1);
+
+      // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+      // Copied from Mobile Boiler Plate
+      // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
       var vp, ua, gs, sf;
       vp = d.querySelector && d.querySelector('meta[name="viewport"]');
       ua = navigator.userAgent;
@@ -95,30 +133,19 @@
       gs = function () {
         vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
       };
-    })(window,document);
 
-    // Crazy Egg Heatmaps
-    setTimeout(function () {
-      var a = document.createElement("script");
-      var b = document.getElementsByTagName("script")[0];
-      a.src = document.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-      a.async = true;
-      a.type = "text/javascript";
-      b.parentNode.insertBefore(a, b)
-    }, 1);
+      // Return values to be assigned to MAS global namespace
+      return {
+        bootstrap: bootstrap,
+        fonts: fonts,
+        supports: supports,
+        appendFile: appendFile
+      };
+    })(window, document);
   </script>
 
-  <%# Limits loading to only supported browsers, ie7/8 loads fixed.css which has fonts inline as desktop browsers should have better bandwidth %>
-  <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
-    <script>
-      MAS.supports.fonts = true;
-    </script>
-  <!--<![endif]-->
-  <%# END MAS setup JS %>
-
-
-
 </head>
+
 <body class="<%= locale_class %>">
 
   <%# START Google Analytics scripts %>
@@ -128,15 +155,15 @@
             title="Google Tag Manager"></iframe>
   </noscript>
   <script>
-    (function (w, d, s, l, i) {
+    // LOAD: Google tag manager
+    (function (w, d, l, i) {
       w[l] = w[l] || [];
       w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-      var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-          f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
+      var dl = l != 'dataLayer' ? '&l=' + l : '',
+          src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+
+      MAS.appendFile('script', src);
+    })(window, document, 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
   </script>
   <%# END Google Analytics scripts %>
 

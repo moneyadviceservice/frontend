@@ -48,10 +48,12 @@ module AssetPipeline
 
         context 'when css contains ignore annotations' do
           let(:css) do
-            "/* @codingStandardsIgnoreStart */
-              /* line 123 sass comment */
-              p { color: red !important; }
-            /* @codingStandardsIgnoreEnd */"
+            "body {
+               /* @codingStandardsIgnoreStart */
+              display: unkown-property;
+              /* @codingStandardsIgnoreEnd */
+              color: red;
+            }"
           end
 
           it 'returns the css without modifications' do

@@ -9,12 +9,7 @@ module AssetPipeline
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX
           lint_results = CsslintRuby.run(remove_ignored_code(data), settings)
-
-          if lint_results.errors.present?
-            error = format_errors(lint_results)
-            context.__LINE__ = error
-            raise CssLintError.new(error)
-          end
+          raise CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
         end
         data
       end

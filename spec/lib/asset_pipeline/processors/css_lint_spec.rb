@@ -33,7 +33,6 @@ module AssetPipeline
           end
 
           it 'modifies the context and raises and exception' do
-            expect(context).to receive(:__LINE__=).with(formatted_errors)
             expect { subject.evaluate(context, locals) }.to raise_error(CssLint::CssLintError)
           end
         end

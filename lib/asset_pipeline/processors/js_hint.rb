@@ -3,7 +3,7 @@ module AssetPipeline
     class JsHint < Sprockets::Processor
       class ErrorsFound < StandardError; end
 
-      REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js\z/
+      REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js(:?.erb)?\z/
 
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX

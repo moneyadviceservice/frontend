@@ -49,7 +49,7 @@ module AssetPipeline
           let(:javascript) { "var foo = 'bar';" }
 
           it 'does not lint the file' do
-            expect(JshintRuby).not_to receive(:evaluate)
+            expect(JshintRuby).not_to receive(:run)
             subject.evaluate(context, locals)
           end
 

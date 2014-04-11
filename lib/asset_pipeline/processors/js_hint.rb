@@ -1,13 +1,15 @@
+require_relative 'js_hint/errors_found'
+
 module AssetPipeline
   module Processors
     class JsHint < Sprockets::Processor
-      class ErrorsFound < StandardError; end
 
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js(:?.erb)?\z/
 
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX
-          raise ErrorsFound if JshintRuby.run(data, jshint_options).errors.present?
+          errors = JshintRuby.run(data, jshint_options).errors
+          raise ErrorsFound.new(errors) if errors.present?
         end
         data
       end

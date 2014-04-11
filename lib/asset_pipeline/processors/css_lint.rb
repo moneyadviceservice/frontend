@@ -8,7 +8,7 @@ module AssetPipeline
 
       def evaluate(context, locals)
         if context.pathname.to_s =~ REGEX
-          lint_results = CsslintRuby.run(remove_ignored_code(data), settings)
+          lint_results = CsslintRuby.run(data, settings)
           raise CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
         end
         data
@@ -19,10 +19,6 @@ module AssetPipeline
       def format_errors(lint_results)
         error = lint_results.errors.first
         "error: #{error['message']}\n For more info run: rake csslint"
-      end
-
-      def remove_ignored_code(data)
-        data.gsub(/\/\* #{IGNORED_TAG}Start \*\/.+?\/\* #{IGNORED_TAG}End \*\//m, '')
       end
 
       def settings

@@ -11,7 +11,7 @@
 //= depend_on_asset MuseoSans_500.svg
 //= depend_on_asset MuseoSans_700.svg
 
-@mixin fontface($name, $file, $weight) {
+@mixin bulletProofFontFace($name, $file, $weight) {
   @font-face {
     font-family: 'museo_sans';
     src: url(font-path($file + '.eot'));
@@ -24,7 +24,7 @@
   }
 }
 
-@mixin base64fontface($name, $file, $weight) {
+@mixin base64FontFace($name, $file, $weight) {
   @font-face {
     font-family: $name;
     src: asset-data-url($file + '.woff') format('woff');
@@ -34,11 +34,11 @@
 }
 
 @if $responsive == true {
-  @include base64fontface('museo_sans', 'MuseoSans_300', 300);
-  @include base64fontface('museo_sans', 'MuseoSans_500', 500);
-  @include base64fontface('museo_sans', 'MuseoSans_700', 700);
+  @include base64FontFace('museo_sans', 'MuseoSans_300', 300);
+  @include base64FontFace('museo_sans', 'MuseoSans_500', 500);
+  @include base64FontFace('museo_sans', 'MuseoSans_700', 700);
 } @else {
-  @include fontface('museo_sans', 'MuseoSans_300', 300);
-  @include fontface('museo_sans', 'MuseoSans_500', 500);
-  @include fontface('museo_sans', 'MuseoSans_700', 700);
+  @include bulletProofFontFace('museo_sans', 'MuseoSans_300', 300);
+  @include bulletProofFontFace('museo_sans', 'MuseoSans_500', 500);
+  @include bulletProofFontFace('museo_sans', 'MuseoSans_700', 700);
 }

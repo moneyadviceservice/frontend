@@ -1,7 +1,8 @@
 $responsive: true;
 
-@import 'frontend-assets/stylesheets/lib/all';
-@import 'utilities/inline_block';
+@import 'frontend-assets/stylesheets/lib';
+@import 'frontend-assets/stylesheets/common';
+@import 'frontend-assets/stylesheets/optional';
 
 @import 'styleguide/variables';
 @import 'styleguide/syntax';

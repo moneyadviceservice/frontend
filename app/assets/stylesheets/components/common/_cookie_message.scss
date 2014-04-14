@@ -13,7 +13,6 @@
   padding-right: $baseline-unit*4;
 
   a {
-    @include links($color-link-default, $color-link-default);
     display: block;
     @extend %type-small;
     @include respond-to($mq-l) {

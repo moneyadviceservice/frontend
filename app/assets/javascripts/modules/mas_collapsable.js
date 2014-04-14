@@ -118,7 +118,7 @@ define(['jquery', 'common'], function ($, MAS) {
         trigger = newEl;
       }else{
         // Anything else => insert button inside
-        trigger.html('<button class="button--unstyled">' + icon + txt + buttonTitle  + '</button>');
+        trigger.html('<button class="unstyled-button">' + icon + txt + buttonTitle  + '</button>');
       }
     }else{
       // Use aria-role

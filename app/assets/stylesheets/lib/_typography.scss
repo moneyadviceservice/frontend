@@ -1,0 +1,103 @@
+%heading-display {
+  @include body(32, 36);
+  @extend %font-heading-heavy;
+
+  @include respond-to($mq-m) {
+    @include body(32, 36);
+  }
+
+  @include respond-to($mq-xl) {
+    @include body(42, 42);
+  }
+
+  .theme-cy & {
+    @include body(26, 36);
+    @include respond-to($mq-m) {
+      @include body(32, 36);
+    }
+  }
+}
+
+%type-contact-heading {
+  @extend %font-heading-heavy;
+  @include body(24, 30);
+
+  @include respond-to($mq-m) {
+    @include body(30, 36);
+  }
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      @include body(24, 30);
+    }
+  }
+}
+
+%type-home-number {
+  @extend %font-heading-heavy;
+  @include body(30, 36);
+  letter-spacing: -2px;
+
+  @include respond-to($mq-m) {
+    @include body(36, 36);
+  }
+
+  @include respond-to($mq-l) {
+    @include body(32, 36);
+  }
+
+  @include respond-to($mq-xl) {
+    @include body(36, 36);
+  }
+}
+
+%type-homepage-headings {
+  @extend %font-heading-medium;
+  @include body(18, 24);
+  letter-spacing: -1px;
+
+  @include respond-to($mq-m) {
+    @include body(24, 30);
+    margin-bottom: $baseline-unit*2;
+  }
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      @include body(18, 24);
+    }
+  }
+}
+
+%type-footer {
+  @include body(14, 18);
+
+  @include respond-to($mq-xl) {
+    @include body(16, 24);
+  }
+}
+
+%type-primary-navigation {
+  @extend %font-heading-medium;
+  @include body(14, 18);
+
+  @include respond-to($mq-m) {
+    @include body(16, 22);
+  }
+
+  @include respond-to($mq-l) {
+    @include body(18, 22);
+  }
+
+  .theme-cy & {
+    @include body(14, 18);
+
+    @include respond-to($mq-m) {
+      @include body(16, 18);
+    }
+  }
+}
+
+%type-navigation {
+  @extend %font-heading-medium;
+  @include body(14, 18);
+}

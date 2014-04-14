@@ -46,7 +46,7 @@
     margin: 0;
 
     li {
-      @extend .list--unstyled-icon;
+      @extend .unstyled-list-icon;
       margin: 0 0 $baseline-unit 0;
     }
   }

@@ -45,7 +45,7 @@
 
 .home-feature__list {
   @extend %clearfix;
-  @extend .list--unstyled;
+  @extend .unstyled-list;
   clear: both;
   float: left;
   width: 100%;

@@ -1,5 +1,5 @@
 .home-promoted {
-  @extend .list--unstyled;
+  @extend .unstyled-list;
   @extend %clearfix;
 
   @include respond-to($mq-m) {

@@ -3,13 +3,13 @@
 // Styleguide Social Links
 
 .social-links {
-  @extend .list--unstyled;
+  @extend .unstyled-list;
   overflow: hidden;
   border-left: 1px solid $color-white-translucent-fallback;
   border-left: 1px solid $color-white-translucent;
 
   > li {
-    @extend .list--unstyled;
+    @extend .unstyled-list;
     display: inline;
     float: left;
   }

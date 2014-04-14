@@ -65,7 +65,7 @@
 }
 
 .category-detail__list {
-  @extend .list--unstyled;
+  @extend .unstyled-list;
   margin-top: $baseline-unit*3;
 
   li {

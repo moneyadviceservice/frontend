@@ -1,6 +1,6 @@
 <nav class="footer-site-links" role="navigation" aria-label="footer">
   <div class="l-constrained l-padded">
-    <ul class="footer-site-links__internal-links list--unstyled">
+    <ul class="footer-site-links__internal-links unstyled-list">
       <li>
         <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
       </li>
@@ -49,7 +49,7 @@
   <% end %>
 
   <div class="l-constrained l-padded">
-    <ul class="footer-site-links__language list--unstyled">
+    <ul class="footer-site-links__language unstyled-list">
       <li>
         <% if content_for?(:alternate_link) %>
           <%= yield(:alternate_link) %>

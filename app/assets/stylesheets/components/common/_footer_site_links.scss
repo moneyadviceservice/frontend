@@ -7,7 +7,7 @@
   background-color: $color-footer-bg;
 
   li {
-    @extend .list--unstyled;
+    @extend .unstyled-list;
     padding: $baseline-unit 0;
 
     @include respond-to($mq-xs) {

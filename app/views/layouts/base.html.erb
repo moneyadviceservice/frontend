@@ -28,7 +28,7 @@
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
   <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
-  <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
+  <%= stylesheet_link_tag 'enhanced_fixed', media: 'only all' %>
   <!--<![endif]-->
 
   <%= yield :head %>
@@ -119,7 +119,7 @@
 
 
 </head>
-<body class="<%= locale_class %>">
+<body class="<%= locale_class %> l-body">
 
   <%# START Google Analytics scripts %>
   <noscript>

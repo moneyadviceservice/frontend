@@ -2,6 +2,8 @@
 
 if(MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
   require(['common'], function (MAS) {
+    'use strict';
+
     MAS.log('FONTS: load via ajax');
     $.ajax({
       url: MAS.fonts.url,
@@ -15,11 +17,12 @@ if(MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
         }
       },
       dataType: 'text'
-    });    
+    });
   });
 }
 
-require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollTracking, Collapsable) {
+require(
+  ['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollTracking, Collapsable) {
   'use strict';
 
   $(document).ready(function(){
@@ -72,5 +75,5 @@ require(['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollT
     $('.js-close-opt-out').bind('ajax:success', function() {
       $('.opt-out').addClass('is-hidden');
     });
-  })
+  });
 });

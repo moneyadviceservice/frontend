@@ -1,5 +1,9 @@
 .action-item {
   overflow: hidden;
+  
+  &:last-child {
+    margin: 0 0 $baseline-unit*6 0;
+  }
 
   .collapsable {
     @extend %clearfix;
@@ -14,7 +18,7 @@
     color: $color-action-item-heading;
     background-color: $color-action-item-heading-bg;
     padding: $baseline-unit $baseline-unit*2;
-    margin: $baseline-unit*6 0 0 0;
+    margin-bottom: 0;
     position: relative;
 
     &:before {

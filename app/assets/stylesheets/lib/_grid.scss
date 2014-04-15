@@ -31,11 +31,7 @@ $mq-xl: px-to-em(1200) !default;
 }
 
 // Set $total-width to 100% for a fluid layout
-$total-width: $mq-l !default;
-
-@if $responsive == true {
-  $total-width: 100%;
-}
+$total-width: if($responsive, 100%, $mq-l !default);
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {

@@ -7,6 +7,7 @@ describe Core::Repositories::Search::Google  do
     let(:query) { 'tools' }
     let(:search_options) { "key=#{ENV['GOOGLE_API_KEY']}&cx=#{ENV['GOOGLE_API_CX']}&q=#{query}" }
     let(:status) { 200 }
+    let(:body) { { 'items' => ['title' => 'title'] } }
 
     subject { described_class.new.perform(query) }
 
@@ -25,50 +26,24 @@ describe Core::Repositories::Search::Google  do
     end
 
     context 'when the request is successful' do
-      let(:id) { 'action-plan-id' }
-      let(:type) { 'action_plan' }
-      let(:title) { 'The action plan' }
-      let(:description) { 'Action plan description' }
-      let(:link) { "https://www.moneyadviceservice.org.uk/en/#{type.pluralize}/#{id}" }
-      let(:reformatted_data) { subject.first }
-      let(:body) do
-          {
-            "items"=>[
-              {
-               "link"=>link,
-               "title"=>title,
-               "pagemap"=>{
-                  "metatags"=>[
-                     {
-                        "csrf-param"=>"authenticity_token",
-                        "og:description"=>description
-                     }
-                  ]
-                }
-              }
-            ]
-          }
-      end
+      let(:mapper) { double(map: ['item']) }
 
-      it { should be_a(Array) }
+      subject { described_class.new }
 
-      it 'maps the id correctly' do
-        expect(reformatted_data[:id]).to eq(id)
-      end
+      before { subject.mapper = mapper}
 
-      it 'maps the type correctly' do
-        expect(reformatted_data[:type]).to eq(type)
-      end
-
-      it 'maps the description correctly' do
-        expect(reformatted_data[:description]).to eq(description)
+      it 'returns a non empty array' do
+        expect(subject.perform(query)).to be_a(Array)
+        expect(subject.perform(query)).to_not be_empty
       end
 
       context 'when response has no items' do
         let(:body) { {"kind"=>"customsearch#search" } }
 
-        it { should be_a(Array) }
-        it { should be_empty}
+        it 'returns an emty array' do
+          expect(subject.perform(query)).to be_a(Array)
+          expect(subject.perform(query)).to be_empty
+        end
       end
     end
   end

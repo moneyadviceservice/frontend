@@ -16,6 +16,9 @@ module Core::Repositories
         options = { key: ENV['GOOGLE_API_KEY'], cx: ENV['GOOGLE_API_CX'], q: query }
         response = connection.get('customsearch/v1', options)
         map_response(response)
+
+      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+        raise RequestError, 'Unable to fetch Search Results from Google Custom Search'
       end
 
       private

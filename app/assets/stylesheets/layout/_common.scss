@@ -1,9 +1,19 @@
 // Styleguide layout-container
 
+@if $responsive == false {
+  .l-body {
+    min-width: $mq-l;
+  }
+}
+
 .l-constrained {
   @extend %clearfix;
-  max-width: $mq-xl;
   margin: 0 auto;
+  @if $responsive {
+    max-width: $mq-xl;
+  } @else {
+    width: $mq-l;
+  }
 }
 
 .l-padded {

@@ -56,6 +56,13 @@ describe Core::Repositories::Search::Google  do
       it 'maps the description correctly' do
         expect(reformatted_data[:description]).to eq(description)
       end
+
+      context 'when response has no items' do
+        let(:body) { {"kind"=>"customsearch#search" } }
+
+        it { should be_a(Array) }
+        it { should be_empty}
+      end
     end
   end
 end

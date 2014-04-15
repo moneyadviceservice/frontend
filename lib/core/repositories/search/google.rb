@@ -14,9 +14,17 @@ module Core::Repositories
 
       def perform(query)
         options = { key: ENV['GOOGLE_API_KEY'], cx: ENV['GOOGLE_API_CX'], q: query }
-
         response = connection.get('customsearch/v1', options)
-        response.body['items'].map do |result_data|
+        map_response(response)
+      end
+
+      private
+
+      attr_accessor :connection
+
+      def map_response(response)
+        items = response.body.fetch('items', [])
+        items.map do |result_data|
           {
             id:          result_data['link'].split('/').last,
             type:        result_data['link'].split('/')[SECOND_TO_LAST],
@@ -25,10 +33,6 @@ module Core::Repositories
           }
         end
       end
-
-      private
-
-      attr_accessor :connection
 
       def extract_description(metatags_array)
         description = ''

@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'core/repositories/search/google_item_mapper'
+require 'core/repositories/search/google_request_mapper'
 
-describe Core::Repositories::Search::GoogleItemMapper do
+describe Core::Repositories::Search::GoogleRequestMapper do
 
   describe '#map' do
     let(:id) { 'action-plan-id' }
@@ -23,19 +23,29 @@ describe Core::Repositories::Search::GoogleItemMapper do
         }
       }
     end
+    let(:response) { double(body: { 'items' => [item] })}
 
-    subject(:mapped_item) { described_class.new.map(item) }
+    subject(:mapped_response) { described_class.new.map(response) }
 
     it 'maps the id correctly' do
-        expect(mapped_item[:id]).to eq(id)
+        expect(mapped_response.first[:id]).to eq(id)
       end
 
     it 'maps the type correctly' do
-      expect(mapped_item[:type]).to eq(type)
+      expect(mapped_response.first[:type]).to eq(type)
     end
 
     it 'maps the description correctly' do
-      expect(mapped_item[:description]).to eq(description)
+      expect(mapped_response.first[:description]).to eq(description)
+    end
+
+    context 'when response has no items' do
+      let(:response) { double(body: { "kind"=>"customsearch#search" }) }
+
+      it 'returns an emty array' do
+        expect(mapped_response).to be_a(Array)
+        expect(mapped_response).to be_empty
+      end
     end
   end
 end

@@ -9,8 +9,6 @@ describe Core::Repositories::Search::Google  do
     let(:status) { 200 }
     let(:body) { { 'items' => ['title' => 'title'] } }
 
-    subject { described_class.new.perform(query) }
-
     before do
       connection = Core::ConnectionFactory.build(url)
       allow(Core::Registries::Connection).to receive(:[]).with(:google_api) { connection }
@@ -26,24 +24,14 @@ describe Core::Repositories::Search::Google  do
     end
 
     context 'when the request is successful' do
-      let(:mapper) { double(map: ['item']) }
+      let(:request_mapper) { double(map: ['item']) }
 
       subject { described_class.new }
 
-      before { subject.mapper = mapper}
+      before { subject.request_mapper = request_mapper}
 
-      it 'returns a non empty array' do
-        expect(subject.perform(query)).to be_a(Array)
-        expect(subject.perform(query)).to_not be_empty
-      end
-
-      context 'when response has no items' do
-        let(:body) { {"kind"=>"customsearch#search" } }
-
-        it 'returns an emty array' do
-          expect(subject.perform(query)).to be_a(Array)
-          expect(subject.perform(query)).to be_empty
-        end
+      it 'returns an array' do
+        expect(subject.perform(query)).to be_an(Array)
       end
     end
   end

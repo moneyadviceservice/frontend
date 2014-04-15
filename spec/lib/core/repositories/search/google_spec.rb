@@ -26,10 +26,10 @@ describe Core::Repositories::Search::Google  do
 
     context 'when the request is successful' do
       let(:id) { 'action-plan-id' }
-      let(:type) { 'action_plans' }
+      let(:type) { 'action_plan' }
       let(:title) { 'The action plan' }
       let(:description) { 'Action plan description' }
-      let(:link) { "https://www.moneyadviceservice.org.uk/en/#{type}/#{id}" }
+      let(:link) { "https://www.moneyadviceservice.org.uk/en/#{type.pluralize}/#{id}" }
       let(:reformatted_data) { subject.first }
       let(:body) do
           {

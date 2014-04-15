@@ -30,7 +30,7 @@ module Core::Repositories
         items.map do |result_data|
           {
             id:          result_data['link'].split('/').last,
-            type:        result_data['link'].split('/')[SECOND_TO_LAST],
+            type:        result_data['link'].split('/')[SECOND_TO_LAST].singularize,
             description: extract_description(result_data['pagemap']['metatags']),
             title:       result_data['title']
           }

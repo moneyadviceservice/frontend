@@ -161,7 +161,7 @@
 #section-layout-1col,
 #section-layout-2col {
   h2 {
-    @extend .l-1col;
+    @include column(12);
     background: none;
     padding-top: 20px;
   }

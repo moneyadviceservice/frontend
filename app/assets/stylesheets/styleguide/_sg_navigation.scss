@@ -24,7 +24,7 @@
   a:visited {
     @include inline-block;
     text-decoration: none;
-    padding: $baseline-unit*2;
+    padding: $baseline-unit*3 $baseline-unit*2;
     width: 100%;
     color: $color-nav-text;
   }

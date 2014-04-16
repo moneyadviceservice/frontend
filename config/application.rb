@@ -24,7 +24,8 @@ module Frontend
     config.assets.precompile += %w(basic.css
                                   enhanced_fixed.css
                                   enhanced_responsive.css
-                                  fonts.css
+                                  frontend-assets/stylesheets/font_files.css
+                                  frontend-assets/stylesheets/font_base64.css
                                   styleguide.css)
 
     # Configure additional application JS assets to precompile.

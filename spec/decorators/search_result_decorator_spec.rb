@@ -27,6 +27,15 @@ describe SearchResultDecorator do
           subject.path
         end
       end
+
+      context 'when search result contains link' do
+        let(:link) { 'link' }
+        before { allow(search_result).to receive(:link) { link } }
+
+        it 'retuns the link' do
+          expect(subject.path).to be(link)
+        end
+      end
     end
 
     context "and it is of type 'action-plan'" do

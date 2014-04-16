@@ -6,6 +6,8 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def path
+    return object.link if defined?(object.link)
+
     case object.type
       when 'article', 'guide'
         h.article_path(object.id, locale: I18n.locale)

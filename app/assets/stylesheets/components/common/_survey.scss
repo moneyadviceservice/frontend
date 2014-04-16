@@ -3,13 +3,13 @@
   Override of 3rd party CSS to improve styling of collapse / close buttons on survey
 */
 
-/* @codingStandardsIgnoreStart */
-div[id="webklipper-publisher-widget-container-survey-minimize-div"],
-div[id="webklipper-publisher-widget-container-survey-close-div"] {
-  background-color: #fff;
+/* @lintingIgnoreBegin */
+#webklipper-publisher-widget-container-survey-minimize-div,
+#webklipper-publisher-widget-container-survey-close-div {
+  background-color: #fff !important;
   border-radius: 4px;
 }
-/* @codingStandardsIgnoreEnd */
+/* @lintingIgnoreEnd */
 
 /*
 

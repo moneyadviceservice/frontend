@@ -10,7 +10,9 @@ module Core::Repositories
             id:          item['link'].split('/').last,
             type:        item['link'].split('/')[SECOND_TO_LAST].singularize,
             description: extract_description(item['pagemap']['metatags']),
-            title:       item['title']
+            title:       item['title'],
+            link:        item['link'],
+            snippet:     item['snippet']
           }
         end
       end

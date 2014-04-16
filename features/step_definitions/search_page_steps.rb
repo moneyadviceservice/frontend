@@ -4,7 +4,7 @@ When(/^I search for something relevant$/) do
 end
 
 When(/^I search for something irrelevant$/) do
-  home_page.search_box.input.set 'cats'
+  home_page.search_box.input.set 'tiger'
   home_page.search_box.submit.click
 end
 
@@ -37,8 +37,8 @@ Then(/^I should see search results$/) do
 end
 
 Then(/^I should see no search results$/) do
-  expected_heading = I18n.t('search_results.index_no_results.page_title', query: 'cats')
-  expected_title   = '%s - %s' % [I18n.t('search_results.index_no_results.document_title', query: 'cats'),
+  expected_heading = I18n.t('search_results.index_no_results.page_title', query: 'tiger')
+  expected_title   = '%s - %s' % [I18n.t('search_results.index_no_results.document_title', query: 'tiger'),
                                   I18n.t('layouts.base.title')]
 
   expect(search_results_page.title).to eq(expected_title)

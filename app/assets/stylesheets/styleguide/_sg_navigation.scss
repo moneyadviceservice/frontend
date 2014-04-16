@@ -1,9 +1,12 @@
+.styleguide-nav-container {
+  border-bottom: 1px solid $color-nav-border;
+}
+
 .styleguide-nav {
   @include body(14, 18);
   font-weight: 500;
   z-index: 9;
   background-color: $color-nav-background;
-  border-bottom: 1px solid $color-nav-border;
   width: 100%;
   list-style-type: none;
   margin: 0;
@@ -20,12 +23,19 @@
     border-bottom: none;
   }
 
-  a,
-  a:visited {
+  a {
     @include inline-block;
     text-decoration: none;
-    padding: $baseline-unit*3 $baseline-unit*2;
+    padding: $baseline-unit*3;
     width: 100%;
+    color: $color-nav-text;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  a:visited {
     color: $color-nav-text;
   }
 

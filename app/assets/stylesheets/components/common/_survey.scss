@@ -4,9 +4,9 @@
 */
 
 /* @codingStandardsIgnoreStart */
-#webklipper-publisher-widget-container-survey-minimize-div,
-#webklipper-publisher-widget-container-survey-close-div {
-  background-color: #fff !important;
+div[id="webklipper-publisher-widget-container-survey-minimize-div"],
+div[id="webklipper-publisher-widget-container-survey-close-div"] {
+  background-color: #fff;
   border-radius: 4px;
 }
 /* @codingStandardsIgnoreEnd */

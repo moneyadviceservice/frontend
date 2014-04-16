@@ -10,9 +10,11 @@
 .primary-nav__item {
   @extend .unstyled-list;
   @extend %collapsable-trigger;
+  border-top: 1px solid $color-white-translucent-fallback;
   border-top: 1px solid $color-white-translucent;
 
   &:last-child {
+    border-bottom: 1px solid $color-white-translucent-fallback;
     border-bottom: 1px solid $color-white-translucent;
   }
 

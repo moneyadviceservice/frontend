@@ -1,18 +1,18 @@
-<nav class="styleguide-nav-container">
+<nav>
   <ul class="styleguide-nav">
-    <li><%= link_to 'Overview', styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'Styleguide', styleguide_path %></li>
 
-    <li><%= link_to 'HTML', html_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'HTML', html_styleguide_path %></li>
 
-    <li><%= link_to 'CSS', css_overview_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'CSS', css_overview_styleguide_path %></li>
 
-    <li><%= link_to 'Typography', css_basic_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'Typography', css_basic_styleguide_path %></li>
 
-    <li><%= link_to 'Components', components_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'Components', components_styleguide_path %></li>
 
-    <li><%= link_to 'Layouts', layouts_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'Layouts', layouts_styleguide_path %></li>
 
-    <li class="has-sub-menu">
+    <li class="styleguide-nav__item has-sub-menu">
       <%= link_to pages_styleguide_path do %>
         Demos
       <% end %>
@@ -23,9 +23,9 @@
       </ul>
     </li>
 
-    <li class="has-sub-menu">
+    <li class="styleguide-nav__item has-sub-menu">
       <%= link_to pages_styleguide_path do %>
-        Page Templates
+        Templates
       <% end %>
 
       <ul class="styleguide-nav__submenu">
@@ -40,6 +40,6 @@
       </ul>
     </li>
 
-    <li><%= link_to 'JS', javascript_styleguide_path %></li>
+    <li class="styleguide-nav__item"><%= link_to 'JavaScript', javascript_styleguide_path %></li>
   </ul>
 </nav>

@@ -6,10 +6,11 @@ module Core::Repositories
       def map(response)
         items = response.body.fetch('items', [])
         items.map do |item|
+          link_tokens = item['link'].split('/')
           {
-            id:          item['link'].split('/').last,
-            type:        item['link'].split('/')[SECOND_TO_LAST].singularize,
-            description: extract_description(item['pagemap']['metatags']),
+            id:          link_tokens.last,
+            type:        link_tokens[SECOND_TO_LAST].singularize,
+            description: extract_description(item),
             title:       item['title'],
             link:        item['link'],
             snippet:     item['snippet']
@@ -19,8 +20,11 @@ module Core::Repositories
 
       private
 
-      def extract_description(metatags_array)
+      def extract_description(item)
+        return '' unless item.key?('pagemap')
+
         description = ''
+        metatags_array = item['pagemap']['metatags']
         metatags_array.each do |metatags|
           metatags.each { |key, value| return description = value if key == 'og:description' }
         end

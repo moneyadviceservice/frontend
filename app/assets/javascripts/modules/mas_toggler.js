@@ -1,6 +1,7 @@
-define([MASModule, 'jquery'], function (MASModule, $) {
+define(['MASModule', 'jquery'], function (MASModule, $) {
+  'use strict';
 
-  return (function Toggler() {
+  return (function() {
     /**
      * Set up a new toggler.
      *
@@ -62,7 +63,7 @@ define([MASModule, 'jquery'], function (MASModule, $) {
 
       // is there an override parameter?
       if (typeof forceTo !== 'undefined') {
-        func = forceTo == 'show' ? 'addClass' : 'removeClass';
+        func = forceTo === 'show' ? 'addClass' : 'removeClass';
       }
       else {
         func = this.isShown ? 'removeClass' : 'addClass';

@@ -49,7 +49,7 @@ describe Core::Repositories::Search::GoogleCustomSearchResponseMapper do
     end
 
     context "when item doens't have pagemap" do
-      let(:item) { { "link"=>link, "title"=>title }}
+      let(:item) { { "link"=>link, "title"=>title } }
 
       it 'maps the description to empty string' do
         expect(mapped_response.first[:description]).to be_empty

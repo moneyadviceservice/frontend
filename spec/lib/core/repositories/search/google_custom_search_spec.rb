@@ -2,6 +2,8 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search'
 
 describe Core::Repositories::Search::GoogleCustomSearch do
+  subject(:google_custom_search) { described_class.new(double, double) }
+
   let(:connection) { double }
 
   before do
@@ -9,7 +11,7 @@ describe Core::Repositories::Search::GoogleCustomSearch do
   end
 
   describe '#perform' do
-    subject { described_class.new.perform(double) }
+    subject { google_custom_search.perform(double) }
 
     context 'when there is an error' do
       before do

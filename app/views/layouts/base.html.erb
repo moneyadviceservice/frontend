@@ -40,7 +40,7 @@
       includes feature detection, analytics setup, json bootstrap %>
   <script type="text/javascript">
 
-    // Required for Google Tag Manager
+    <%# // Required for Google Tag Manager %>
     dataLayer = [{
       'Responsive page': 'Yes',
       'event': 'Responsive page'
@@ -50,7 +50,7 @@
 
       var html, appendFile, bootstrap, fonts, supports;
 
-      //// Set variables and default values
+      <%# // Set variables and default values %>
       appendFile = function(tag, src, content){
         var position = d.getElementsByTagName('script')[0],
             file = d.createElement(tag);
@@ -67,7 +67,7 @@
 
       bootstrap = {
         env: '<%= Rails.env %>',
-        timestamp: new Date().getTime(), // needs to be run as soon to page load as possible
+        timestamp: new Date().getTime(), <%# // needs to be run as soon to page load as possible %>
         I18nLocale: '<%= I18n.locale %>',
       }
 
@@ -76,10 +76,10 @@
         cacheName: 'MAS.fonts',
         loadClass: 'wf-museosans-n4-active fontsLoaded',
         localstorage: undefined,
-        loadWithJS: responsiveStyle // for responsive load with JS, for fixed load inline in CSS
+        loadWithJS: responsiveStyle <%# // for responsive load with JS, for fixed load inline in CSS %>
       }
  
-      // Run support tests and cache values
+      <%# // Run support tests and cache values %>
       supports = (function(){
         var S = {};
 
@@ -101,27 +101,29 @@
       })();
 
 
-      //// Run modify DOM and load files
+      <%# //// Run modify DOM and load files %>
 
-      // Load font from localStorage
+      <%# // Load font from localStorage %>
       if(supports.localstorage && localStorage.getItem(fonts.cacheName) !== null){
         html.className = html.className += (' ' + fonts.loadClass);
         appendFile('style', false, localStorage.getItem(fonts.cacheName));
         fonts.localstorage = true;
       }
 
-      // JS support > Update className
+      <%# // JS support > Update className %>
       html.className = html.className.replace('no-js', 'js js-' + supports.js);     
 
-      // LOAD: Crazy Egg Heatmaps 3rd Party code
+      <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
       setTimeout(function () {
         var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
         appendFile('script', src);
       }, 1);
 
+      <%#
       // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
       // Copied from Mobile Boiler Plate
       // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
+      %>
       var vp, ua, gs, sf;
       vp = d.querySelector && d.querySelector('meta[name="viewport"]');
       ua = navigator.userAgent;
@@ -135,7 +137,7 @@
         vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
       };
 
-      // Return values to be assigned to MAS global namespace
+      <%# // Return values to be assigned to MAS global namespace %>
       return {
         bootstrap: bootstrap,
         fonts: fonts,
@@ -157,7 +159,7 @@
             title="Google Tag Manager"></iframe>
   </noscript>
   <script>
-    // LOAD: Google tag manager
+    <%# // LOAD: Google tag manager %>
     (function (w, d, l, i) {
       w[l] = w[l] || [];
       w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});

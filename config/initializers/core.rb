@@ -32,4 +32,4 @@ Core::Registries::Repository[:category] = Core::RepositoryCache.new(
   Core::Repositories::Categories::PublicWebsite.new)
 
 Core::Registries::Repository[:search] =
-  Core::Repositories::Search::GoogleCustomSearch.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX'])
+  Core::Repositories::Search::GoogleCustomSearch.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])

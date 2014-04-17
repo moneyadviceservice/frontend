@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'core/repositories/search/google'
+require 'core/repositories/search/google_custom_search'
 
-describe Core::Repositories::Search::Google do
+describe Core::Repositories::Search::GoogleCustomSearch do
   let(:connection) { double }
 
   before do

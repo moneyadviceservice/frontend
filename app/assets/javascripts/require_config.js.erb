@@ -27,13 +27,16 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     ujs:         '<%= requirejs_path('jquery-ujs/src/rails') %>',
 
     // Internal modules
+    MASModule: '<%= requirejs_path('modules/mas_base') %>',
+    common:      '<%= requirejs_path('modules/mas_common') %>'
+
     pubsub:      '<%= requirejs_path('modules/mas_pubsub') %>',
-    log:         '<%= requirejs_path('modules/mas_log') %>',
     scrollTracking:   '<%= requirejs_path('modules/mas_scrollTracking') %>',
+    log:         '<%= requirejs_path('modules/mas_log') %>',
+    analytics:   '<%= requirejs_path('modules/mas_analytics') %>',
     collapsable: '<%= requirejs_path('modules/mas_collapsable') %>',
 
-    // Common module to load shared dependancies
-    common:      '<%= requirejs_path('modules/mas_common') %>'
+    Toggler: '<%= requirejs_path('modules/mas_toggler') %>'
   },
   shim: {
     'ujs':       ['jquery']

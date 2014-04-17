@@ -5,7 +5,7 @@ require 'core/repositories/repository_cache'
 require 'core/repositories/action_plans/public_website'
 require 'core/repositories/articles/public_website'
 require 'core/repositories/categories/public_website'
-require 'core/repositories/search/google'
+require 'core/repositories/search/google_custom_search'
 
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
@@ -32,4 +32,4 @@ Core::Registries::Repository[:category] = Core::RepositoryCache.new(
   Core::Repositories::Categories::PublicWebsite.new)
 
 Core::Registries::Repository[:search] =
-  Core::Repositories::Search::Google.new
+  Core::Repositories::Search::GoogleCustomSearch.new

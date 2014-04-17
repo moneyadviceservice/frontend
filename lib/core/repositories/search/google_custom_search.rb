@@ -5,7 +5,7 @@ require 'core/repositories/search/google_request_mapper'
 
 module Core::Repositories
   module Search
-    class Google < Core::Repository
+    class GoogleCustomSearch < Core::Repository
       attr_writer :request_mapper
 
       EVENT_NAME = 'request.google_api.search'

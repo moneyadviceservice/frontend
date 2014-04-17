@@ -8,15 +8,17 @@ module Core::Repositories
     class GoogleCustomSearch < Core::Repository
       EVENT_NAME = 'request.google_api.search'
 
-      def initialize
+      def initialize(key, cx)
         self.connection = Core::Registries::Connection[:google_api]
+        self.cx         = cx
+        self.key        = key
       end
 
       def perform(query)
-        mapper  = GoogleCustomSearchResponseMapper.new
-        options = { key: ENV['GOOGLE_API_KEY'], cx: ENV['GOOGLE_API_CX'], q: query }
+        mapper   = GoogleCustomSearchResponseMapper.new
+        response = connection.get('customsearch/v1', key: key, cx: cx, q: query)
 
-        mapper.map(connection.get('customsearch/v1', options))
+        mapper.map(response)
 
       rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
         raise RequestError, 'Unable to fetch Search Results from Google Custom Search'
@@ -24,7 +26,7 @@ module Core::Repositories
 
       private
 
-      attr_accessor :connection
+      attr_accessor :connection, :cx, :key
 
     end
   end

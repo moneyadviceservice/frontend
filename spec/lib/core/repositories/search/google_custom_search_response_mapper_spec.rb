@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'core/repositories/search/google_request_mapper'
+require 'core/repositories/search/google_custom_search_response_mapper'
 
-describe Core::Repositories::Search::GoogleRequestMapper do
+describe Core::Repositories::Search::GoogleCustomSearchResponseMapper do
 
   describe '#map' do
     let(:id) { 'action-plan-id' }

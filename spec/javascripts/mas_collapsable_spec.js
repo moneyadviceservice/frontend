@@ -11,9 +11,6 @@ describe('mas_collapsable basics', function () {
       emptycollapsable,
       $body;
 
-  // beforeEach()
-  // afterEach()
-
   before(function (done) {
     $('body').html(JST['templates/collapsable']());
     $body = $('body');

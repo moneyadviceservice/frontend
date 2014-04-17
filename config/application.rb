@@ -32,16 +32,17 @@ module Frontend
                                   supports.js
                                   translations/en.js
                                   translations/cy.js
-                                  modules/mas_analytics.js
                                   modules/mas_collapsable.js
+                                  modules/mas_common.js
                                   modules/mas_log.js
+                                  modules/mas_pubsub.js
+                                  modules/mas_scrollTracking.js
                                   styleguide.js)
 
     # Configure additional vendor JS assets to precompile.
     config.assets.precompile += %w(html5shiv/dist/html5shiv.js
                                    jquery/dist/jquery.js
                                    jquery-waypoints/waypoints.js
-                                   jquery-tiny-pubsub/src/tiny-pubsub.js
                                    jquery-ujs/src/rails.js
                                    requirejs/require.js)
 

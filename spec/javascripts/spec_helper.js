@@ -4,9 +4,6 @@
 //= require jquery
 var expect = chai.expect;
 
-// Required for Google Tag Manager
-dataLayer = [];
-
 // Any properties that require Ruby @ runtime
 var MAS = window.MAS || {};
 MAS.bootstrap = {

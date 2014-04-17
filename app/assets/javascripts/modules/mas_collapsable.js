@@ -1,8 +1,10 @@
 
-define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
+define(['jquery', 'common'], function ($, MAS) {
   'use strict';
 
   var defaults = {
+    name: 'not set',
+
     // Setup
     triggerEl: '.collapsible',
     targetEl: '.collapsible-section',
@@ -23,8 +25,8 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
 
     // Localised text strings
     textString: {
-      showThisSection: Text.show || 'Show',
-      hideThisSection: Text.hide || 'Hide'
+      showThisSection: MAS.text.show || 'Show',
+      hideThisSection: MAS.text.hide || 'Hide'
     },
 
     // Callbacks
@@ -63,7 +65,7 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
         i = 0;
 
     if(l === 0){
-      return Global.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+      return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
     }
 
     for(i; i<l; i++){
@@ -74,8 +76,7 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
       this.$parent = $(this.o.parentWrapper);
 
       if(!this.o.parentWrapper || !this.$parent.length) {
-        Global.warn(
-          'options.parentWrapper should be set & valid for closeOffFocus to work properly');
+        MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work properly');
         return;
       }
 
@@ -187,7 +188,21 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     return this;
   };
 
-  Collapsible.prototype.show = function(i){
+  function publishEvent(userInitiated, data){
+    if(userInitiated){
+      data.module = 'collapsable';
+      MAS.publish('collapsable', data);
+      MAS.publish('analytics:trigger', data);
+    }
+  }
+
+  Collapsible.prototype.show = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'show'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
@@ -195,13 +210,19 @@ define([MAS.bootstrap.I18nLocale, 'log', 'jquery'], function (Text, Global, $) {
     item.hidden = false;
     if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
     if(this.o.accordion && (this.selected !== false && this.selected !== i)) {
-      this.hide(this.selected);
+      this.hide(this.selected, false);
     }
     this.selected = i;
     return this;
   };
 
-  Collapsible.prototype.hide = function(i){
+  Collapsible.prototype.hide = function(i, userInitiated){
+    publishEvent(userInitiated, {
+      name: this.o.name,
+      index: i,
+      action: 'hide'
+    });
+
     var item = this.sections[i];
     item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);

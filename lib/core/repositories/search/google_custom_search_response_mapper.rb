@@ -1,6 +1,6 @@
 module Core::Repositories
   module Search
-    class GoogleRequestMapper
+    class GoogleCustomSearchResponseMapper
       SECOND_TO_LAST = -2
 
       def map(response)

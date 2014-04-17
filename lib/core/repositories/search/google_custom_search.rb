@@ -8,15 +8,16 @@ module Core::Repositories
     class GoogleCustomSearch < Core::Repository
       EVENT_NAME = 'request.google_api.search'
 
-      def initialize(key, cx)
+      def initialize(key, cx_en, cx_cy)
         self.connection = Core::Registries::Connection[:google_api]
-        self.cx         = cx
+        self.cx_en      = cx_en
+        self.cx_cy      = cx_cy
         self.key        = key
       end
 
       def perform(query)
         mapper   = GoogleCustomSearchResponseMapper.new
-        response = connection.get('customsearch/v1', key: key, cx: cx, q: query)
+        response = connection.get('customsearch/v1', key: key, cx: localized_cx, q: query)
 
         mapper.map(response)
 
@@ -26,7 +27,11 @@ module Core::Repositories
 
       private
 
-      attr_accessor :connection, :cx, :key
+      attr_accessor :connection, :cx_en, :cx_cy, :key
+
+      def localized_cx
+        send("cx_#{I18n.locale}")
+      end
 
     end
   end

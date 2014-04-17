@@ -2,7 +2,9 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search'
 
 describe Core::Repositories::Search::GoogleCustomSearch do
-  subject(:google_custom_search) { described_class.new(double, double) }
+  let(:cx_en) { double }
+  let(:cx_cy) { double }
+  subject(:google_custom_search) { described_class.new(double, cx_en, cx_cy) }
 
   let(:connection) { double }
 
@@ -11,7 +13,7 @@ describe Core::Repositories::Search::GoogleCustomSearch do
   end
 
   describe '#perform' do
-    subject { google_custom_search.perform(double) }
+    subject(:perform_custom_search) { google_custom_search.perform(double) }
 
     context 'when there is an error' do
       before do
@@ -19,7 +21,7 @@ describe Core::Repositories::Search::GoogleCustomSearch do
       end
 
       specify do
-        expect { subject }.to raise_error(described_class::RequestError)
+        expect { perform_custom_search }.to raise_error(described_class::RequestError)
       end
     end
 
@@ -29,7 +31,27 @@ describe Core::Repositories::Search::GoogleCustomSearch do
       end
 
       specify do
-        expect(subject).to be_an(Array)
+        expect(perform_custom_search).to be_an(Array)
+      end
+    end
+
+    context 'when locale is :en' do
+      before { I18n.locale = :en }
+
+      it 'sets the connection with the google :en engine' do
+        expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_en, q: anything }) { double(body: {}) }
+
+        perform_custom_search
+      end
+    end
+
+    context 'when locale is :cy' do
+      before { I18n.locale = :cy }
+
+      it 'sets the connection with the google :cy engine' do
+        expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_cy, q: anything }) { double(body: {}) }
+
+        perform_custom_search
       end
     end
   end

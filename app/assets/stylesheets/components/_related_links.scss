@@ -2,10 +2,8 @@
 //
 // Styleguide related link
 
-.related-links {
-  h2 {
-    @extend %heading-extra-small;
-  }
+.related-links__heading {
+  @extend %heading-extra-small;
 }
 
 .related-links__category-heading {

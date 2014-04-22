@@ -4,15 +4,9 @@
 // Styleguide related categories
 
 .related-categories {
-  border-top: 1px solid #edf0f0;
-  border-bottom: 1px solid #edf0f0;
 
-  h2 {
-    @extend %heading-extra-small;
-  }
-
-  @include respond-to($mq-m) {
-    border-bottom: none;
+  @include respond-to(0, $mq-m) {
+    border-bottom: 1px solid #edf0f0;
   }
 }
 

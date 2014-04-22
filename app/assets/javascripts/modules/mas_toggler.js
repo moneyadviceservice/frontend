@@ -14,7 +14,7 @@ define(['jquery', 'MASModule'], function ($, MASModule) {
      */
     function Toggler($el) {
       this.setElement($el);
-      this.attrs = ['toggler', 'toggler-once', 'toggler-unique'];
+      this.attrs = ['toggler'];
 
       this.init();
 
@@ -33,9 +33,6 @@ define(['jquery', 'MASModule'], function ($, MASModule) {
      */
     TogglerProto.init = function() {
       this.$target = $(this.attr('toggler'));
-      this.hideAfter = !!this.attr('toggler-once'); // hide trigger element once used
-      this.hideOthers = !!this.attr('toggler-unique'); // hide other elements
-
       this.isShown = !!this.$target.hasClass('show'); // is the target element visible already
 
       return this.setListeners(true);

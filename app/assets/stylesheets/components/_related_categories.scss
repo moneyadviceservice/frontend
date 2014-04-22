@@ -1,0 +1,12 @@
+// Content box that appears on article pages displaying what categories an
+// article belongs to
+//
+// Styleguide related categories
+
+.related-categories {
+  border-bottom: 1px solid #edf0f0;
+
+  @include respond-to($mq-m) {
+    border-bottom: none;
+  }
+}

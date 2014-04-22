@@ -3,13 +3,15 @@
 // Styleguide related link
 
 .related-links {
-
+  h2 {
+    @extend %heading-extra-small;
+  }
 }
 
 .related-links__category-heading {
-
+  background:#edf0f0;
 }
 
 .related-links__category-link {
-
+  color:#388426;
 }

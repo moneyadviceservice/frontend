@@ -1,4 +1,4 @@
-define(['MASModule', 'jquery'], function (MASModule, $) {
+define(['jquery', 'MASModule'], function ($, MASModule) {
   'use strict';
 
   return (function() {
@@ -13,7 +13,9 @@ define(['MASModule', 'jquery'], function (MASModule, $) {
      * @param {Object} $el
      */
     function Toggler($el) {
-      this.$el = $el;
+      this.setElement($el);
+      this.attrs = ['toggler', 'toggler-once', 'toggler-unique'];
+
       this.init();
 
       return this;
@@ -30,9 +32,9 @@ define(['MASModule', 'jquery'], function (MASModule, $) {
      * @return {[type]}
      */
     TogglerProto.init = function() {
-      this.$target = $(this.$el.attr('data-mas-toggler'));
-      this.hideAfter = !!this.$el.attr('data-mas-toggler-once'); // hide trigger element once used
-      this.hideOthers = !!this.$el.attr('data-mas-toggler-unique'); // hide other elements
+      this.$target = $(this.attr('toggler'));
+      this.hideAfter = !!this.attr('toggler-once'); // hide trigger element once used
+      this.hideOthers = !!this.attr('toggler-unique'); // hide other elements
 
       this.isShown = !!this.$target.hasClass('show'); // is the target element visible already
 

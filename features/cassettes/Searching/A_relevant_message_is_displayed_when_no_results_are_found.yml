@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_API_CX>&key=<GOOGLE_API_KEY>&q=tiger
+    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_API_CX_EN>&key=<GOOGLE_API_KEY>&q=tiger
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3399bd93-89e0-4761-bbbc-e8f610c0845a
+      - a403ddb5-a7f6-477b-bf27-1aef9a5fd7c9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Thu, 17 Apr 2014 08:32:52 GMT
+      - Tue, 22 Apr 2014 14:54:58 GMT
       Date:
-      - Thu, 17 Apr 2014 08:32:52 GMT
+      - Tue, 22 Apr 2014 14:54:58 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - '"FAOauGikIEhYlrm1J9_gm7nVkYQ/XImqonzofkNwT0qCo7HjFvK0w3g"'
+      - '"FAOauGikIEhYlrm1J9_gm7nVkYQ/x2es4nCzfeNTUPavlFuCNPzmP0Q"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -61,17 +61,17 @@ http_interactions:
             "inputEncoding": "utf8",
             "outputEncoding": "utf8",
             "safe": "off",
-            "cx": "<GOOGLE_API_CX>"
+            "cx": "<GOOGLE_API_CX_EN>"
            }
           ]
          },
          "searchInformation": {
-          "searchTime": 0.129354,
-          "formattedSearchTime": "0.13",
+          "searchTime": 0.460812,
+          "formattedSearchTime": "0.46",
           "totalResults": "0",
           "formattedTotalResults": "0"
          }
         }
     http_version:
-  recorded_at: Thu, 17 Apr 2014 08:32:54 GMT
+  recorded_at: Tue, 22 Apr 2014 14:54:57 GMT
 recorded_with: VCR 2.9.0

@@ -1,11 +1,72 @@
-.l-article {
-  @include column(12);
+@include respond-to(0, $mq-m) {
+  .l-article-intro,
+  .l-article hr,
+  .l-article .related-categories,
+  .l-article-main,
+  .l-article .related-links {
+    @include column(12);
+  }
+}
 
-  @include respond-to($mq-m) {
+@include respond-to($mq-m, $mq-l) {
+
+  .l-article-intro {
+    @include column(9);
+    @include push(3);
+  }
+
+  .l-article .related-categories {
+    @include column(3);
+  }
+
+  .l-article-main {
     @include column(9);
   }
 
-  @include respond-to($mq-l) {
+  .l-article hr {
+    @include column(12);
+  }
+
+  .l-article .related-links__heading {
+    @include column(3);
+  }
+
+  .l-article .related-links__category {
+    @include column(4);
+  }
+
+  .l-article .related-links__category:last-of-type {
+    @include column(5);
+  }
+}
+
+@include respond-to($mq-l) {
+
+  .l-article-intro {
     @include column(7);
+    @include push(2);
+    @include pull(3);
+  }
+
+  .hr--article-intro {
+    @include column(9);
+  }
+
+  .l-article .related-categories {
+    @include column(2);
+    clear:left;
+  }
+
+  .l-article-main {
+    @include column(7);
+  }
+
+  .hr--article-related-links {
+    display:none;
+  }
+
+  .l-article .related-links {
+    @include column(3);
+    margin-top:-4em;
   }
 }

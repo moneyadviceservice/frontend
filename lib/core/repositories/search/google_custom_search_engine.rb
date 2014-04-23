@@ -1,11 +1,11 @@
 require 'core/connection'
 require 'core/registries/connection'
 require 'core/repositories/repository'
-require 'core/repositories/search/google_custom_search_response_mapper'
+require 'core/repositories/search/google_custom_search_engine_response_mapper'
 
 module Core::Repositories
   module Search
-    class GoogleCustomSearch < Core::Repository
+    class GoogleCustomSearchEngine < Core::Repository
       EVENT_NAME = 'request.google_api.search'
 
       def initialize(key, cx_en, cx_cy)
@@ -16,7 +16,7 @@ module Core::Repositories
       end
 
       def perform(query)
-        mapper   = GoogleCustomSearchResponseMapper.new
+        mapper   = GoogleCustomSearchEngineResponseMapper.new
         response = connection.get('customsearch/v1', key: key, cx: localized_cx, q: query)
 
         mapper.map(response)

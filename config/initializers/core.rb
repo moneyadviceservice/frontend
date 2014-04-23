@@ -5,8 +5,8 @@ require 'core/repositories/repository_cache'
 require 'core/repositories/action_plans/public_website'
 require 'core/repositories/articles/public_website'
 require 'core/repositories/categories/public_website'
-require 'core/repositories/search/google_custom_search'
 require 'core/repositories/search/content_service'
+require 'core/repositories/search/google_custom_search_engine'
 
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
@@ -36,7 +36,7 @@ Core::Registries::Repository[:category] = Core::RepositoryCache.new(
 
 if Rails.env.production?
   Core::Registries::Repository[:search] =
-    Core::Repositories::Search::GoogleCustomSearch.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
+    Core::Repositories::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
 else
   Core::Registries::Repository[:search] =
     Core::Repositories::Search::ContentService.new

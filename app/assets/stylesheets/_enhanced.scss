@@ -8,11 +8,11 @@
 @import 'lib/links';
 @import 'lib/typography';
 
-@import 'layout/common/_all';
-@import 'layout/page_specific/_all';
-@import 'components/common/_all';
-@import 'components/page_specific/_all';
+@import 'layout/common/all';
+@import 'layout/page_specific/all';
+@import 'components/common/all';
+@import 'components/page_specific/all';
 
 .editorial {
-  @import 'components/cms/_all';
+  @import 'components/cms/all';
 }

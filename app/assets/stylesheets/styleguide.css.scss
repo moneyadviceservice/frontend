@@ -1,10 +1,12 @@
 $responsive: true;
 
-@import 'lib/lib';
-@import 'utilities/inline_block';
+@import 'frontend-assets/stylesheets/lib';
+@import 'frontend-assets/stylesheets/common';
+@import 'frontend-assets/stylesheets/optional';
 
-@import 'styleguide/sg_syntax';
-@import 'styleguide/sg_base';
-@import 'styleguide/sg_navigation';
-@import 'styleguide/sg_layout';
-@import 'styleguide/sg_example';
+@import 'styleguide/variables';
+@import 'styleguide/syntax';
+@import 'styleguide/base';
+@import 'styleguide/navigation';
+@import 'styleguide/layout';
+@import 'styleguide/example';

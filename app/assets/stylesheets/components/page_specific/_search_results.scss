@@ -1,0 +1,9 @@
+.search-results {
+  @extend .unstyled-list;
+}
+
+.search-results__item {
+  h2 {
+    @extend %heading-small;
+  }
+}

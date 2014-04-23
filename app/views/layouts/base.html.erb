@@ -3,16 +3,19 @@
 <!--[if IE 7 ]> <html lang="<%= I18n.locale %>" class="ie ie7 no-js"> <![endif]-->
 <!--[if IE 8 ]> <html lang="<%= I18n.locale %>" class="ie ie8 no-js"> <![endif]-->
 <!--[if IE 9 ]> <html lang="<%= I18n.locale %>" class="ie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
 
 <head>
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><![endif]-->
-  <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+  <!--[if IEMobile]>
+  <meta http-equiv="cleartype" content="on"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="HandheldFriendly" content="True">
 
   <%= baseline_grid %>
@@ -20,8 +23,8 @@
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
   <%= stylesheet_link_tag 'basic' %>
 
-  <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+  <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
     <script>var responsiveStyle = false;</script>
@@ -41,25 +44,27 @@
   <script type="text/javascript">
 
     <%# // Required for Google Tag Manager %>
-    dataLayer = [{
-      'Responsive page': 'Yes',
-      'event': 'Responsive page'
-    }];
+    dataLayer = [
+      {
+        'Responsive page': 'Yes',
+        'event': 'Responsive page'
+      }
+    ];
 
-    window.MAS = (function(w,d){
+    window.MAS = (function (w, d) {
 
       var html, appendFile, bootstrap, fonts, supports;
 
       <%# // Set variables and default values %>
-      appendFile = function(tag, src, content){
+      appendFile = function (tag, src, content) {
         var position = d.getElementsByTagName('script')[0],
             file = d.createElement(tag);
-        if(tag === 'script'){
+        if (tag === 'script') {
           file.async = true;
           file.type = "text/javascript";
         }
-        if(src) file.src = src;
-        if(content) file.innerHTML = content;
+        if (src) file.src = src;
+        if (content) file.innerHTML = content;
         position.parentNode.insertBefore(file, position);
       }
 
@@ -78,12 +83,12 @@
         localstorage: undefined,
         loadWithJS: responsiveStyle <%# // for responsive load with JS, for fixed load inline in CSS %>
       }
- 
+
       <%# // Run support tests and cache values %>
-      supports = (function(){
+      supports = (function () {
         var S = {};
 
-        function supportTest(prop, context){
+        function supportTest(prop, context) {
           try {
             return prop in context && context[prop] !== null;
           } catch (e) {
@@ -91,10 +96,12 @@
           }
         }
 
-        S.js = ( supportTest('querySelector',d) && supportTest('localStorage',w) && supportTest('addEventListener',w) ) ? 'advanced' : 'basic';
-        S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange',w) );
+        S.js = ( supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ) ? 'advanced' : 'basic';
+        S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w) );
         S.localstorage = supportTest('localStorage', w);
-        S.svg = (function(){ return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect })();
+        S.svg = (function () {
+          return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect
+        })();
         S.test = supportTest;
 
         return S
@@ -104,14 +111,14 @@
       <%# //// Run modify DOM and load files %>
 
       <%# // Load font from localStorage %>
-      if(supports.localstorage && localStorage.getItem(fonts.cacheName) !== null){
+      if (supports.localstorage && localStorage.getItem(fonts.cacheName) !== null) {
         html.className = html.className += (' ' + fonts.loadClass);
         appendFile('style', false, localStorage.getItem(fonts.cacheName));
         fonts.localstorage = true;
       }
 
       <%# // JS support > Update className %>
-      html.className = html.className.replace('no-js', 'js js-' + supports.js);     
+      html.className = html.className.replace('no-js', 'js js-' + supports.js);
 
       <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
       setTimeout(function () {
@@ -152,78 +159,78 @@
 </head>
 <body class="<%= locale_class %> l-body">
 
-  <%# START Google Analytics scripts %>
-  <noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
-            height="0" width="0" style="display:none;visibility:hidden"
-            title="Google Tag Manager"></iframe>
-  </noscript>
+<%# START Google Analytics scripts %>
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
+          height="0" width="0" style="display:none;visibility:hidden"
+          title="Google Tag Manager"></iframe>
+</noscript>
+<script>
+  <%# // LOAD: Google tag manager %>
+  (function (w, d, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var dl = l != 'dataLayer' ? '&l=' + l : '',
+        src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+
+    MAS.appendFile('script', src);
+  })(window, document, 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
+</script>
+<%# END Google Analytics scripts %>
+
+<a id="top"></a>
+
+<%= content_for?(:content) ? yield(:content) : yield %>
+
+<% if Rails.env.development? %>
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <%= javascript_include_tag 'html-inspector/html-inspector' %>
   <script>
-    <%# // LOAD: Google tag manager %>
-    (function (w, d, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-      var dl = l != 'dataLayer' ? '&l=' + l : '',
-          src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-
-      MAS.appendFile('script', src);
-    })(window, document, 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
+    HTMLInspector.inspect({
+      excludeRules: ["unused-classes", "script-placement"]
+    })
   </script>
-  <%# END Google Analytics scripts %>
+  <!--<![endif]-->
+<% end %>
 
-  <a  id="top"></a>
+<%# START RequireJS load of application %>
+<%= javascript_include_tag 'requirejs/require', data: {main: javascript_path('application')} %>
+<%= yield :javascripts %>
+<%# END RequireJS load of application %>
 
-  <%= content_for?(:content) ? yield(:content) : yield %>
+<%# START WebEngage script for displaying user surveys %>
+<script id="_webengage_script_tag" type="text/javascript">
+  var _weq = _weq || {};
+  _weq['webengage.licenseCode'] = '~1341065bd';
+  _weq['webengage.widgetVersion'] = "4.0";
+  _weq['webengage.enableCallbacks'] = true;
+  var plantSurveyBlockCookie = function (surveyEId) {
+    var webEngageSurveyBlockCookie = "_we_block_survey_cookie_" + surveyEId + "_";
+    var daysToBlock = 90;
+    webengage.util.setCookie(webEngageSurveyBlockCookie, "", daysToBlock, "", "", null, true);
+  };
+  _weq['webengage.survey.onSubmit'] = function (data) {
+    var surveyId = data['surveyId'];
+    if (surveyId == '~162hkob' || surveyId == '~5g1c7ln' || surveyId == '~162hkno')
+      plantSurveyBlockCookie();
+  }
+  _weq['webengage.onReady' ] = function () {
+    _weq['webengage.ruleData'] = {'visitorBucket': (function () {
+      var webengageCookie = webengage.util.getWebengageCookie();
+      var _hash = webengage.util.getHashCode(webengageCookie.luid);
+      return Math.abs(_hash % 100);
+    })()};
+  };
 
-  <% if Rails.env.development? %>
-    <!--[if (gt IE 9)|!(IE)]><!-->
-    <%= javascript_include_tag 'html-inspector/html-inspector' %>
-    <script>
-      HTMLInspector.inspect({
-        excludeRules: ["unused-classes", "script-placement"]
-      })
-    </script>
-    <!--<![endif]-->
-  <% end %>
-
-  <%# START RequireJS load of application %>
-  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
-  <%= yield :javascripts %>
-  <%# END RequireJS load of application %>
-
-  <%# START WebEngage script for displaying user surveys %>
-  <script id="_webengage_script_tag" type="text/javascript">
-    var _weq = _weq || {};
-    _weq['webengage.licenseCode'] = '~1341065bd';
-    _weq['webengage.widgetVersion'] = "4.0";
-    _weq['webengage.enableCallbacks'] = true;
-    var plantSurveyBlockCookie = function(surveyEId) {
-      var webEngageSurveyBlockCookie = "_we_block_survey_cookie_" + surveyEId + "_";
-      var daysToBlock = 90;
-      webengage.util.setCookie(webEngageSurveyBlockCookie, "", daysToBlock, "", "", null, true);
-    };
-    _weq['webengage.survey.onSubmit'] = function(data) {
-      var surveyId = data['surveyId'];
-      if (surveyId == '~162hkob' || surveyId == '~5g1c7ln' || surveyId == '~162hkno')
-        plantSurveyBlockCookie();
-    }
-    _weq['webengage.onReady' ] = function() {
-      _weq['webengage.ruleData'] = {'visitorBucket': (function() {
-        var webengageCookie = webengage.util.getWebengageCookie();
-        var _hash = webengage.util.getHashCode(webengageCookie.luid);
-        return Math.abs(_hash % 100);
-      })()};
-    };
-
-    (function(d) {
-      var _we = d.createElement('script');
-      _we.type = 'text/javascript';
-      _we.async = true;
-      _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
-      var _sNode = d.getElementById('_webengage_script_tag');
-      _sNode.parentNode.insertBefore(_we, _sNode);
-    })(document);
-  </script>
-  <%# END WebEngage script for displaying user surveys %>
+  (function (d) {
+    var _we = d.createElement('script');
+    _we.type = 'text/javascript';
+    _we.async = true;
+    _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
+    var _sNode = d.getElementById('_webengage_script_tag');
+    _sNode.parentNode.insertBefore(_we, _sNode);
+  })(document);
+</script>
+<%# END WebEngage script for displaying user surveys %>
 </body>
 </html>

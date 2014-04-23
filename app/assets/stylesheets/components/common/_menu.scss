@@ -1,0 +1,17 @@
+.menu {
+  @extend .unstyled-list;
+  border-left: $baseline-unit solid $color-grey-light;
+  background-color: $color-white;
+  margin-left: -6px;
+  margin-right: -6px;
+
+  > li {
+    @extend .unstyled-list;
+    border-top: 1px solid $color-grey-light;
+    > a {
+      padding: $baseline-unit*2 0;
+      display: block;
+      color: $color-green-secondary;
+    }
+  }
+}

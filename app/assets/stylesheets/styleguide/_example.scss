@@ -1,0 +1,211 @@
+.styleguide-example {
+  margin: 15px auto;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  > h3 {
+    text-transform: capitalize;
+    margin: -1px -1px 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    background: #333;
+
+    > em, > em > a {
+      float: right;
+      text-transform: none;
+      font-style: normal;
+      font-weight: normal;
+      color: #999;
+    }
+  }
+
+  .styleguide-description {
+    padding: 1px 10px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+
+    > p {
+      margin-top:1em;
+    }
+
+    p:last-child {
+      margin-bottom: 0
+    }
+  }
+
+  .styleguide-element {
+    position: relative;
+    padding: 20px;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+      margin: 0;
+      padding: 0;
+    }
+
+    + .styleguide-element {
+      margin-top: -5px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+
+    .styleguide-modifier-name {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 15px;
+      font-size: 11px;
+      color: #999;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-top: none;
+      white-space: nowrap;
+    }
+  }
+
+  .styleguide-html {
+    padding: 15px 15px;
+    background: #edf6f8;
+    border-top: 1px solid #dde7ea;
+    overflow: auto;
+
+    .highlight {
+      background: none
+    }
+  }
+
+  ul.styleguide-modifiers {
+    margin: 0 0 10px 10px;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin-left: 0;
+
+      strong {
+        font-family: 'Source Code Pro', courier, monospace;
+        font-size: 12px;
+        font-weight: normal;
+        color: #222
+      }
+    }
+  }
+}
+
+.tempComponent {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=);
+  min-height: 70px;
+}
+
+/* @lintingIgnoreBegin */
+
+// high contrast background for icons
+#section-icons .styleguide-element {
+  background-color: darken(#F9F9F9, 10%);
+}
+
+// add space between buttons so focus state is more visible
+#section-buttons .styleguide-element .button {
+  margin-right: 20px;
+}
+
+#section-primary-navigation .styleguide-element {
+  background-color: darken(#F9F9F9, 20%);
+}
+
+// Layouts
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col,
+#section-layout-nested {
+
+  .styleguide-example,
+  .styleguide-element {
+    padding: 20px 0;
+  }
+
+  .l-constrained {
+    padding: 10px 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFElEQVQYlWNgoArI//+fQgXDwQoARBoOj4JQtgIAAAAASUVORK5CYII=);
+    overflow: hidden;
+  }
+
+  .l-1col,
+  .l-2col-side,
+  .l-2col-main,
+  .l-2col-even {
+    background: #ccc;
+  }
+
+  p {
+    color: #000;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+    background: yellow;
+  }
+}
+
+#section-layout-container,
+#section-layout-1col,
+#section-layout-2col {
+  h2 {
+    @include column(12);
+    background: none;
+    padding-top: 20px;
+  }
+}
+
+// Layout Nested
+//
+// Styleguide layout-nested
+#section-layout-nested {
+  .l-2col-main {
+    ul {
+      padding: 0
+    }
+    li {
+      display: block;
+      min-height: 20px;
+      margin-bottom: 10px;
+      background: yellow;
+    }
+    blockquote {
+    }
+
+    @include respond-to($mq-s) {
+      blockquote {
+        @include column(10, 12);
+        float: right;
+      }
+    }
+
+    @include respond-to($mq-m) {
+      ul {
+        @include row(8);
+      }
+      li {
+        @include column(2, 8);
+        margin-bottom: 10px;
+      }
+
+      blockquote {
+        @include column(4, 8);
+        float: right;
+      }
+    }
+
+  }
+}
+/* @lintingIgnoreEnd */

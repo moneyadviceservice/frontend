@@ -1,7 +1,0 @@
-$gutter: 20px;
-$line-height: 22px;
-
-$baseline-unit: 6px;
-@if $responsive == true {
-  $baseline-unit: 0.375rem; // 6px
-}

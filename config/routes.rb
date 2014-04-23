@@ -15,18 +15,23 @@ Rails.application.routes.draw do
     root 'home#show'
     resources :action_plans, only: 'show'
     resources :articles,
-              only:        'show',
+              only: 'show',
               constraints: ValidArticle.new
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,
-             controller:  'styleguide',
-             only:        'show',
-             constraints: { locale: I18n.default_locale } do
+             controller: 'styleguide',
+             only: 'show',
+             constraints: {locale: I18n.default_locale} do
       member do
-        get 'components'
+
+        scope 'components' do
+          get 'components_common', path: '/common'
+          get 'components_website', path: '/website'
+        end
+
         get 'forms'
         get 'layouts'
         get 'html'

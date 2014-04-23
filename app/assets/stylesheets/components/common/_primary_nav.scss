@@ -1,0 +1,138 @@
+// The primary website page navigation.
+//
+// Styleguide Primary Navigation
+
+.primary-nav {
+  @extend .unstyled-list;
+  z-index: 2;
+}
+
+.primary-nav__item {
+  @extend .unstyled-list;
+  @extend %collapsable-trigger;
+  border-top: 1px solid $color-white-translucent-fallback;
+  border-top: 1px solid $color-white-translucent;
+
+  &:last-child {
+    border-bottom: 1px solid $color-white-translucent-fallback;
+    border-bottom: 1px solid $color-white-translucent;
+  }
+
+  @include respond-to($mq-m) {
+    text-align: center;
+    float: left;
+    border: 0;
+    width: 5.625rem;
+
+    &:nth-of-type(2) {
+      width: 7.1875em;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    width: 7.1875em;
+
+    &:first-child {
+      width: 5.9375em;
+    }
+
+    &:nth-of-type(2) {
+      width: 8.125em;
+    }
+
+    &:nth-of-type(3) {
+      width: 6.375em;
+    }
+  }
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      width: 6em;
+
+      &:nth-of-type(2) {
+        width: 6em;
+      }
+
+      &:nth-of-type(4) {
+        width: 6em;
+      }
+
+      &:nth-of-type(3) {
+        width: 5em;
+      }
+    }
+
+    @include respond-to($mq-l) {
+      width: 8em;
+    }
+  }
+}
+
+.primary-nav__link {
+  @extend %type-primary-navigation;
+  @extend %link-nav-primary;
+  @include inline-block;
+  width: 100%;
+  padding: $baseline-unit*2;
+  position: relative;
+
+  // triangle to indicate which menu item is open
+  &.is-on:after {
+    @include respond-to($mq-m) {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent $color-submenu-background transparent;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+
+  .theme-cy & {
+    padding: $baseline-unit*2 0;
+  }
+
+}
+
+.primary-nav__dropdown {
+  width: 100%;
+  background-color: $color-submenu-background;
+
+  @include respond-to($mq-m) {
+    padding: $baseline-unit*4;
+  }
+
+  li {
+    @extend %type-small;
+    border-top: 0;
+    border-bottom: 1px solid $color-submenu-list-border;
+    text-align: left;
+    padding-left: $baseline-unit*2;
+
+    @include respond-to($mq-m) {
+      @include column(6);
+      padding-right: $baseline-unit*2;
+      padding-left: 0;
+      border: 0;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+
+  a {
+    @extend %type-navigation;
+    @extend %link-nav-secondary;
+  }
+}
+
+

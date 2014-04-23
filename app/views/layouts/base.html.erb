@@ -160,24 +160,26 @@
 </head>
 <body class="<%= locale_class %> l-body">
 
-<%# START Google Analytics scripts %>
-<noscript>
-  <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
-          height="0" width="0" style="display:none;visibility:hidden"
-          title="Google Tag Manager"></iframe>
-</noscript>
-<script>
-  <%# // LOAD: Google tag manager %>
-  (function (w, d, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-    var dl = l != 'dataLayer' ? '&l=' + l : '',
-        src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+<% if Rails.env.production? %>
+  <%# START Google Analytics scripts %>
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
+            height="0" width="0" style="display:none;visibility:hidden"
+            title="Google Tag Manager"></iframe>
+  </noscript>
+  <script>
+    <%# // LOAD: Google tag manager %>
+    (function (w, d, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var dl = l != 'dataLayer' ? '&l=' + l : '',
+          src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
 
-    MAS.appendFile('script', src);
-  })(window, document, 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
-</script>
-<%# END Google Analytics scripts %>
+      MAS.appendFile('script', src);
+    })(window, document, 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
+  </script>
+  <%# END Google Analytics scripts %>
+<% end %>
 
 <a id="top"></a>
 
@@ -199,39 +201,41 @@
 <%= yield :javascripts %>
 <%# END RequireJS load of application %>
 
-<%# START WebEngage script for displaying user surveys %>
-<script id="_webengage_script_tag" type="text/javascript">
-  var _weq = _weq || {};
-  _weq['webengage.licenseCode'] = '~1341065bd';
-  _weq['webengage.widgetVersion'] = "4.0";
-  _weq['webengage.enableCallbacks'] = true;
-  var plantSurveyBlockCookie = function (surveyEId) {
-    var webEngageSurveyBlockCookie = "_we_block_survey_cookie_" + surveyEId + "_";
-    var daysToBlock = 90;
-    webengage.util.setCookie(webEngageSurveyBlockCookie, "", daysToBlock, "", "", null, true);
-  };
-  _weq['webengage.survey.onSubmit'] = function (data) {
-    var surveyId = data['surveyId'];
-    if (surveyId == '~162hkob' || surveyId == '~5g1c7ln' || surveyId == '~162hkno')
-      plantSurveyBlockCookie();
-  }
-  _weq['webengage.onReady' ] = function () {
-    _weq['webengage.ruleData'] = {'visitorBucket': (function () {
-      var webengageCookie = webengage.util.getWebengageCookie();
-      var _hash = webengage.util.getHashCode(webengageCookie.luid);
-      return Math.abs(_hash % 100);
-    })()};
-  };
+<% if Rails.env.production? %>
+  <%# START WebEngage script for displaying user surveys %>
+  <script id="_webengage_script_tag" type="text/javascript">
+    var _weq = _weq || {};
+    _weq['webengage.licenseCode'] = '~1341065bd';
+    _weq['webengage.widgetVersion'] = "4.0";
+    _weq['webengage.enableCallbacks'] = true;
+    var plantSurveyBlockCookie = function (surveyEId) {
+      var webEngageSurveyBlockCookie = "_we_block_survey_cookie_" + surveyEId + "_";
+      var daysToBlock = 90;
+      webengage.util.setCookie(webEngageSurveyBlockCookie, "", daysToBlock, "", "", null, true);
+    };
+    _weq['webengage.survey.onSubmit'] = function (data) {
+      var surveyId = data['surveyId'];
+      if (surveyId == '~162hkob' || surveyId == '~5g1c7ln' || surveyId == '~162hkno')
+        plantSurveyBlockCookie();
+    }
+    _weq['webengage.onReady' ] = function () {
+      _weq['webengage.ruleData'] = {'visitorBucket': (function () {
+        var webengageCookie = webengage.util.getWebengageCookie();
+        var _hash = webengage.util.getHashCode(webengageCookie.luid);
+        return Math.abs(_hash % 100);
+      })()};
+    };
 
-  (function (d) {
-    var _we = d.createElement('script');
-    _we.type = 'text/javascript';
-    _we.async = true;
-    _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
-    var _sNode = d.getElementById('_webengage_script_tag');
-    _sNode.parentNode.insertBefore(_we, _sNode);
-  })(document);
-</script>
-<%# END WebEngage script for displaying user surveys %>
+    (function (d) {
+      var _we = d.createElement('script');
+      _we.type = 'text/javascript';
+      _we.async = true;
+      _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
+      var _sNode = d.getElementById('_webengage_script_tag');
+      _sNode.parentNode.insertBefore(_we, _sNode);
+    })(document);
+  </script>
+  <%# END WebEngage script for displaying user surveys %>
+<% end %>
 </body>
 </html>

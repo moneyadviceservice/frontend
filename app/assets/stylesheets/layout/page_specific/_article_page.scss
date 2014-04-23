@@ -32,11 +32,8 @@
   }
 
   .l-article .related-links__category {
-    @include column(4);
-  }
-
-  .l-article .related-links__category:last-of-type {
-    @include column(5);
+    @include column(9);
+    float:right;
   }
 }
 

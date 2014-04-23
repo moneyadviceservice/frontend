@@ -11,7 +11,7 @@ module Core
       self.id = id
 
       Array(attributes).each do |name, value|
-        send("#{name}=", value)
+        send("#{name}=", value) if respond_to?("#{name}=")
       end
     end
   end

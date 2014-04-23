@@ -11,5 +11,13 @@ module Core
     it { should_not respond_to :id= }
 
     it { should validate_presence_of(:id) }
+
+    context 'when passed unexpected data' do
+      let(:attributes) { { :foo => :bar } }
+
+      it 'should not raise an exception' do
+        expect { subject }.not_to raise_exception
+      end
+    end
   end
 end

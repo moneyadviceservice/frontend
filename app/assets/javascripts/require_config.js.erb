@@ -37,8 +37,6 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     common:      '<%= requirejs_path('modules/mas_common') %>'
   },
   shim: {
-    'pubsub':    ['jquery'],
-    'waypoints': ['jquery'],
     'ujs':       ['jquery']
   }
 });

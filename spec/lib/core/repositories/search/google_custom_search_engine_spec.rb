@@ -1,10 +1,10 @@
 require 'spec_helper'
-require 'core/repositories/search/google_custom_search'
+require 'core/repositories/search/google_custom_search_engine'
 
-describe Core::Repositories::Search::GoogleCustomSearch do
+describe Core::Repositories::Search::GoogleCustomSearchEngine do
   let(:cx_en) { double }
   let(:cx_cy) { double }
-  subject(:google_custom_search) { described_class.new(double, cx_en, cx_cy) }
+  subject(:custom_search_engine) { described_class.new(double, cx_en, cx_cy) }
 
   let(:connection) { double }
 
@@ -13,7 +13,7 @@ describe Core::Repositories::Search::GoogleCustomSearch do
   end
 
   describe '#perform' do
-    subject(:perform_custom_search) { google_custom_search.perform(double) }
+    subject(:perform_search) { custom_search_engine.perform(double) }
 
     context 'when there is an error' do
       before do
@@ -21,7 +21,7 @@ describe Core::Repositories::Search::GoogleCustomSearch do
       end
 
       specify do
-        expect { perform_custom_search }.to raise_error(described_class::RequestError)
+        expect { perform_search }.to raise_error(described_class::RequestError)
       end
     end
 
@@ -31,27 +31,27 @@ describe Core::Repositories::Search::GoogleCustomSearch do
       end
 
       specify do
-        expect(perform_custom_search).to be_an(Array)
+        expect(perform_search).to be_an(Array)
       end
     end
 
     context 'when locale is :en' do
       before { I18n.locale = :en }
 
-      it 'sets the connection with the google :en engine' do
+      it 'sets the connection with the :en engine' do
         expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_en, q: anything }) { double(body: {}) }
 
-        perform_custom_search
+        perform_search
       end
     end
 
     context 'when locale is :cy' do
       before { I18n.locale = :cy }
 
-      it 'sets the connection with the google :cy engine' do
+      it 'sets the connection with the :cy engine' do
         expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_cy, q: anything }) { double(body: {}) }
 
-        perform_custom_search
+        perform_search
       end
     end
   end

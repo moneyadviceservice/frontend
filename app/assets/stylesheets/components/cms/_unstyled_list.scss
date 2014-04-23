@@ -1,0 +1,15 @@
+// Duplicate of unstyled-list helper to override styles applied to lists in .editorial
+
+.unstyled-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  > li:before{
+    content: none;
+  }
+}
+
+.unstyled-list-icon:before {
+  content: none;
+}

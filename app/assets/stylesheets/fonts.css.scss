@@ -1,1 +1,2 @@
-//= require frontend-assets/stylesheets/font_base64
+//= depend_on_asset translations/en
+@import 'frontend-assets/stylesheets/font_base64';

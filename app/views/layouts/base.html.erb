@@ -21,19 +21,20 @@
   <%= baseline_grid %>
 
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
-  <%= stylesheet_link_tag 'basic' %>
+  <%= stylesheet_link_tag 'frontend-assets/stylesheets/basic' %>
 
-  <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
   <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
+  <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
+    <%= stylesheet_link_tag 'frontend-assets/stylesheets/font_files' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
     <script>var responsiveStyle = false;</script>
   <![endif]-->
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
   <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
-  <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
-  <script>var responsiveStyle = true;</script>
+    <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
+   <script>var responsiveStyle = true;</script>
   <!--<![endif]-->
 
   <%= yield :head %>
@@ -77,7 +78,7 @@
       }
 
       fonts = {
-        url: '<%= stylesheet_path('fonts') %>',
+        url: '<%= stylesheet_path('frontend-assets/stylesheets/font_base64') %>',
         cacheName: 'MAS.fonts',
         loadClass: 'wf-museosans-n4-active fontsLoaded',
         localstorage: undefined,

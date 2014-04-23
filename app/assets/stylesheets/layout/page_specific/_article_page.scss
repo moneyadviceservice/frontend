@@ -27,6 +27,7 @@
     @include column(12);
   }
 
+
   .l-article .related-links__heading {
     @include column(3);
   }
@@ -43,6 +44,7 @@
     @include column(7);
     @include push(2);
     @include pull(3);
+    margin-bottom: $baseline-unit*6;
   }
 
   .l-hr-article-intro {
@@ -64,6 +66,6 @@
 
   .l-article .related-links {
     @include column(3);
-    margin-top: -4em;
+    margin-top: -64px;
   }
 }

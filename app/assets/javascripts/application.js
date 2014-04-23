@@ -22,7 +22,9 @@ if(MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
 }
 
 require(
-  ['jquery', 'scrollTracking', 'collapsable', 'ujs'], function ($, scrollTracking, Collapsable) {
+  ['jquery', 'scrollTracking', 'collapsable', 'mediaQueries', 'ujs'],
+  function ($, scrollTracking, Collapsable, mediaQueries) {
+  
   'use strict';
 
   $(document).ready(function(){
@@ -30,6 +32,11 @@ require(
     scrollTracking({
       el: '.editorial',
       triggerPoints: [0.25, 0.5, 0.75, 1]
+    });
+
+    MAS.warn(mediaQueries);
+    MAS.subscribe('mediaquery/resize', function(e, data){
+      MAS.log('mediaquery/resize', data);
     });
 
     // Primary Nav

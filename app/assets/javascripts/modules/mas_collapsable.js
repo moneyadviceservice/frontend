@@ -20,7 +20,7 @@ define(['jquery', 'common'], function ($, MAS) {
     showText: true,
     showIcon: false,
     headingIcon: '<span class="icon icon--toggle"></span>',
-    headingText: '<span class="visually-hidden">{{txt}}</span>',
+    headingText: '<span class="visually-hidden collapsable-hidden">{{txt}}</span>',
     useButton: false,
 
     // Localised text strings
@@ -129,7 +129,7 @@ define(['jquery', 'common'], function ($, MAS) {
     }
 
     if(this.o.showIcon) this.sections[i].icon = trigger.find('.icon');
-    if(this.o.showText) this.sections[i].txt = trigger.find('.visually-hidden');
+    if(this.o.showText) this.sections[i].txt = trigger.find('.collapsable-hidden');
   };
 
   Collapsible.prototype._setupEach = function(i,el){
@@ -208,7 +208,7 @@ define(['jquery', 'common'], function ($, MAS) {
     item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
     item.target.attr('aria-hidden', 'false');
     item.hidden = false;
-    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection);
+    if(this.o.showText) item.txt.text(this.o.textString.hideThisSection + ' ');
     if(this.o.accordion && (this.selected !== false && this.selected !== i)) {
       this.hide(this.selected, false);
     }
@@ -228,7 +228,7 @@ define(['jquery', 'common'], function ($, MAS) {
     item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
     item.target.attr('aria-hidden', 'true');
     item.hidden = true;
-    if(this.o.showText) item.txt.text(this.o.textString.showThisSection);
+    if(this.o.showText) item.txt.text(this.o.textString.showThisSection + ' ');
     return this;
   };
 

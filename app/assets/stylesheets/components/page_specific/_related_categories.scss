@@ -4,7 +4,6 @@
 // Styleguide related categories
 
 .related-categories {
-
   @include respond-to(0, $mq-m) {
     border-bottom: 1px solid #edf0f0;
   }
@@ -12,4 +11,8 @@
 
 .related-categories_heading {
   @extend %heading-extra-small;
+}
+
+.related-categories__link {
+  @extend %type-related-links;
 }

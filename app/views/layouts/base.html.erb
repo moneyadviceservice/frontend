@@ -121,11 +121,13 @@
       <%# // JS support > Update className %>
       html.className = html.className.replace('no-js', 'js js-' + supports.js);
 
-      <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
-      setTimeout(function () {
-        var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-        appendFile('script', src);
-      }, 1);
+      <% if Rails.env.production? %>
+        <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
+        setTimeout(function () {
+          var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
+          appendFile('script', src);
+        }, 1);
+      <% end %>
 
       <%#
       // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug

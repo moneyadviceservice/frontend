@@ -22,6 +22,7 @@
 }
 
 .cookie-message__close-button {
+  @extend .unstyled-button;
   padding: $baseline-unit*3 $baseline-unit*2 $baseline-unit*2 $baseline-unit*2;
   position: absolute;
   top: 0;

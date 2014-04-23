@@ -1,4 +1,10 @@
+.l-article {
+  overflow: hidden;
+  margin-bottom: $baseline-unit*4;
+}
+
 @include respond-to(0, $mq-m) {
+
   .l-article-intro,
   .l-article hr,
   .l-article .related-categories,
@@ -26,7 +32,6 @@
   .l-article hr {
     @include column(12);
   }
-
 
   .l-article .related-links__heading {
     @include column(3);

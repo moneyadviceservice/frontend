@@ -4,7 +4,7 @@ define(['jquery', 'common'], function ($, MAS) {
     'use strict';
 
     var current = false,
-        testElement = $('<div class="mediaquery-test" />');
+        testElement = $('<div class="js-mediaquery-test" />');
 
     $('body').append(testElement);
 

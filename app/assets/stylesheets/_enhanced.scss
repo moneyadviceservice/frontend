@@ -17,7 +17,8 @@
   @import 'components/cms/_all';
 }
 
-.mediaquery-test:after {
+.js-mediaquery-test:after {
+  display: none;
   @include respond-to($mq-xs) { content: 'mq-xs'; }
   @include respond-to($mq-s) { content: 'mq-s'; }
   @include respond-to($mq-m) { content: 'mq-m'; }

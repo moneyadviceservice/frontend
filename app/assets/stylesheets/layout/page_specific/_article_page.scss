@@ -33,7 +33,7 @@
 
   .l-article .related-links__category {
     @include column(9);
-    float:right;
+    float: right;
   }
 }
 
@@ -45,25 +45,25 @@
     @include pull(3);
   }
 
-  .hr--article-intro {
+  .l-hr-article-intro {
     @include column(9);
   }
 
   .l-article .related-categories {
     @include column(2);
-    clear:left;
+    clear: left;
   }
 
   .l-article-main {
     @include column(7);
   }
 
-  .hr--article-related-links {
-    display:none;
+  .l-hr-article-related-links {
+    display: none;
   }
 
   .l-article .related-links {
     @include column(3);
-    margin-top:-4em;
+    margin-top: -4em;
   }
 }

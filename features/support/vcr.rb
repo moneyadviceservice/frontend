@@ -9,6 +9,9 @@ VCR.configure do |c|
     # Phantomjs to load (http://localhost:<random port>/__identify__)
     req.uri =~ /\/__identify__$/
   end
+  c.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
+  c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }
+  c.filter_sensitive_data('<GOOGLE_API_CX_CY>') { ENV['GOOGLE_API_CX_CY'] }
 end
 
 VCR.cucumber_tags do |t|

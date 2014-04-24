@@ -4,6 +4,7 @@
 // Styleguide related categories
 
 .related-categories {
+  padding-bottom: $baseline-unit*2;
   @include respond-to(0, $mq-m) {
     border-bottom: 1px solid #edf0f0;
   }
@@ -11,8 +12,11 @@
 
 .related-categories_heading {
   @extend %heading-extra-small;
+  margin-top: $baseline-unit*2;
+  margin-bottom: 0;
 }
 
 .related-categories__link {
   @extend %type-related-links;
+  margin-bottom: 0;
 }

@@ -1,6 +1,12 @@
 <% content_for :head do %>
   <meta name="robots" content="noindex">
-  <%= stylesheet_link_tag 'styleguide', media: 'all' %>
+  <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+    <%= stylesheet_link_tag 'styleguide/styleguide_fixed', media: 'all' %>
+  <![endif]-->
+
+  <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+    <%= stylesheet_link_tag 'styleguide/styleguide_responsive', media: 'only all' %>
+  <!--<![endif]-->
 <% end %>
 
 <% content_for :content do %>

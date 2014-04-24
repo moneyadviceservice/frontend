@@ -81,7 +81,7 @@
 
   @include respond-to($mq-m) {
     @include column(6);
-    min-height: 110px;
+    min-height: 140px;
     border: none;
     padding: 0;
 

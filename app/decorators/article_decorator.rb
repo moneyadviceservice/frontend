@@ -21,6 +21,14 @@ class ArticleDecorator < Draper::Decorator
     @content ||= processed_body.html_safe
   end
 
+  def intro
+    @intro ||= HTMLProcessor::NodeContents.new(processed_body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
+  end
+
+  def content_without_intro
+    @content_without_intro ||= HTMLProcessor::NodeRemover.new(processed_body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
+  end
+
   private
 
   def processed_body

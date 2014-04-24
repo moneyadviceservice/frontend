@@ -227,4 +227,20 @@
 
 <hr class="l-hr-article-related-links"/>
 
-<%= render 'shared/related_links' %>
+<%= render 'shared/related_links',
+           categories: [OpenStruct.new(
+                          title:    'Home & mortgages', path: '#',
+                          contents: [OpenStruct.new(title: 'Interest-only mortgages', path: '#'),
+                                     OpenStruct.new(title: 'Buying property - what can you afford?', path: '#'),
+                                     OpenStruct.new(title: 'Understanding mortgages', path: '#'),
+                                     OpenStruct.new(title: 'Choosing the right mortgage', path: '#')]
+                        ),
+                        OpenStruct.new(
+                          title:    'Renting a property', path: '#',
+                          contents: [OpenStruct.new(title: 'How much rent can you afford?', path: '#'),
+                                     OpenStruct.new(title: 'Rent or buy?', path: '#'),
+                                     OpenStruct.new(title: 'Budgeting and sharing costs when renting', path: '#'),
+                                     OpenStruct.new(title: 'Your legal and financial responsibilities when renting', path: '#'),
+                                     OpenStruct.new(title: 'Rent arrears and problems paying your rent', path: '#'),
+                                     OpenStruct.new(title: 'Buy-to-let mortgages', path: '#')]
+                        )] %>

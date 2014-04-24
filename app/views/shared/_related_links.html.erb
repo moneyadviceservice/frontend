@@ -1,27 +1,18 @@
 <div class="related-links">
   <h2 class="related-links__heading">Related content</h2>
 
-  <div class="related-links__category">
-    <h3 class="related-links__category-heading">
-      <a href="#foo">Homes &amp; Mortgages</a>
-    </h3>
-    <ul class="unstyled-list">
-      <li class="related-links__category-link"><a href="#foo">Interest-only mortgages</a></li>
-      <li class="related-links__category-link"><a href="#foo">Buying property - what can you afford?</a></li>
-      <li class="related-links__category-link"><a href="#foo">Understanding mortgages</a></li>
-      <li class="related-links__category-link"><a href="#foo">Choosing the right mortgage</a></li>
-    </ul>
-  </div>
-
-  <div class="related-links__category">
-    <h3 class="related-links__category-heading">
-      <a href="#foo" >Renting a property</a>
-    </h3>
-    <ul class="unstyled-list">
-      <li class="related-links__category-link"><a href="#foo">Interest-only mortgages</a></li>
-      <li class="related-links__category-link"><a href="#foo">Buying property - what can you afford?</a></li>
-      <li class="related-links__category-link"><a href="#foo">Understanding mortgages</a></li>
-      <li class="related-links__category-link"><a href="#foo">Chooseing the right mortgage</a></li>
-    </ul>
-  </div>
+  <% categories.each do |category| %>
+    <div class="related-links__category">
+      <h3 class="related-links__category-heading">
+        <%= link_to category.title, category.path %>
+      </h3>
+      <ul class="unstyled-list">
+        <% category.contents.each do |article| %>
+          <li class="related-links__category-link">
+            <%= link_to article.title, article.path %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 </div>

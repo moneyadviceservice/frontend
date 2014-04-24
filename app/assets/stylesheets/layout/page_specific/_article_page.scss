@@ -3,6 +3,10 @@
   margin-bottom: $baseline-unit*4;
 }
 
+.l-article-intro {
+  padding-bottom: $baseline-unit*3;
+}
+
 @include respond-to(0, $mq-m) {
 
   .l-article-intro,
@@ -49,7 +53,6 @@
     @include column(7);
     @include push(2);
     @include pull(3);
-    margin-bottom: $baseline-unit*6;
   }
 
   .l-hr-article-intro {

@@ -13,10 +13,10 @@
 .related-categories_heading {
   @extend %heading-extra-small;
   margin-top: $baseline-unit*2;
-  margin-bottom: 0;
+  margin-bottom: $baseline-unit;
 }
 
 .related-categories__link {
   @extend %type-related-links;
-  margin-bottom: 0;
+  margin-bottom: $baseline-unit;
 }

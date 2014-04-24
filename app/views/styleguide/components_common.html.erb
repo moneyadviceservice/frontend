@@ -3,3 +3,38 @@
 <%= styleguide_section sections['Call out'] do %>
   <%= render 'shared/opt_out_bar' %>
 <% end %>
+
+
+<%= styleguide_section sections['icons'] do %>
+  <span class="icon $modifier_class"></span>
+  <span class="visually-hidden">hidden text</span>
+<% end %>
+
+<%= styleguide_section sections['buttons'] do %>
+  <a href="#url" class="button $modifier_class">link</a>
+  <button class="button $modifier_class">button</button>
+  <input type="button" class="button $modifier_class" value="input"/>
+<% end %>
+
+<%= styleguide_section sections['Direction buttons'] do %>
+  <button class="button button--compact">
+    <span class="icon icon--left-chevron"></span>
+    <span class="button--compact__text">Previous</span>
+  </button>
+  <button class="button button--compact">
+    <span class="button--compact__text">Next</span>
+    <span class="icon icon--right-chevron"></span>
+  </button>
+<% end %>
+
+<%= styleguide_section sections['Call out'] do %>
+  <%= render 'styleguide/shared/callout' %>
+<% end %>
+
+<%= styleguide_section sections['panel'] do %>
+  <%= render 'styleguide/shared/panel' %>
+<% end %>
+
+<%= styleguide_section sections['Scrollable Table'] do %>
+  <%= render 'styleguide/shared/table' %>
+<% end %>

@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/moneyadviceservice/mas-feedback.git
+  revision: c596024812e72c109b772278afe76a3d6979e4be
+  specs:
+    mas-feedback (1.0.1)
+      rails (>= 3.2.13)
+      sass-rails
+
+GIT
   remote: git://github.com/moneyadviceservice/meta-tags.git
   revision: 93558e60c65ea3a1542d5a7523fda729db3344bc
   branch: alternate-url
@@ -11,6 +19,18 @@ GIT
   revision: 745e8d55e93bb4f15d499aff518ba3a68f112920
   specs:
     tidy-html5 (0.1.0)
+
+GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator
+  revision: 76ea0fae5c63252358011e75389f0a8b1fe5207e
+  specs:
+    mortgage_calculator (0.0.1)
+      angularjs-rails (= 1.2.13)
+      jquery-rails
+      mas-feedback
+      modernizr-rails
+      rails (>= 3.2.13)
+      underscore-rails
 
 GIT
   remote: https://github.com/moneyadviceservice/mas-development_dependencies.git
@@ -67,6 +87,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    angularjs-rails (1.2.13)
     arel (5.0.0)
     autoprefixer-rails (1.1.20140410)
       execjs
@@ -229,6 +250,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (5.3.2)
+    modernizr-rails (2.7.1)
     multi_json (1.9.2)
     multi_test (0.1.1)
     multipart-post (1.2.0)
@@ -357,6 +379,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.6.0)
     unicorn (4.8.2)
       kgio (~> 2.6)
       rack
@@ -404,7 +427,9 @@ DEPENDENCIES
   kss
   link_header
   mas-development_dependencies!
+  mas-feedback!
   meta-tags!
+  mortgage_calculator!
   mysql2
   nokogiri
   nunes

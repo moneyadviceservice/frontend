@@ -16,6 +16,8 @@ gem 'gaffe'
 gem 'kss'
 gem 'link_header'
 gem 'meta-tags', require: 'meta_tags', github: 'moneyadviceservice/meta-tags', branch: 'alternate-url'
+gem 'mas-feedback', github: 'moneyadviceservice/mas-feedback'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator'
 gem 'nokogiri'
 gem 'nunes'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/

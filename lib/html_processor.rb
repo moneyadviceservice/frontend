@@ -1,4 +1,5 @@
 require 'html_processor/base'
+require 'html_processor/node_contents'
 require 'html_processor/node_remover'
 require 'html_processor/node_replacer'
 require 'html_processor/table_wrapper'

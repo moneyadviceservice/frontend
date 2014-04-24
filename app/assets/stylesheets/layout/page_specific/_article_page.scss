@@ -39,6 +39,7 @@
 
   .l-article .related-links__heading {
     @include column(3);
+    margin-top: $baseline-unit*2.666666667;
   }
 
   .l-article .related-links__category {

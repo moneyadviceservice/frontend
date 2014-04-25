@@ -10,11 +10,11 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - be884680-8960-4a0f-88c0-3167a2c72320
+      - 8b2c877f-7467-4689-aff7-0a4ad1882ae3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,13 +23,15 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 26 Mar 2014 10:55:38 GMT
+      - Fri, 25 Apr 2014 14:03:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Vary:
+      - Accept-Encoding
       Status:
       - 200 OK
       Link:
@@ -48,20 +50,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - ddb3617a65cc7b0ab1babf32b605142a
+      - ed0413f20fc6739453ce087061735d9e
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 26-Mar-2015 10:55:37 GMT; secure
-      - _session_id=ddb3617a65cc7b0ab1babf32b605142a; path=/; secure; HttpOnly
-      - _web_tracking=40277b5d6d42cd88a640050af0829e31; path=/; expires=Thu, 26-Mar-2015
-        10:55:37 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:12 GMT; secure
+      - _session_id=ed0413f20fc6739453ce087061735d9e; path=/; secure; HttpOnly
+      - _web_tracking=f5721d7d396988f3f09a3b7a22f73510; path=/; expires=Sat, 25-Apr-2015
+        14:03:12 GMT; secure
       X-Request-Id:
-      - be884680-8960-4a0f-88c0-3167a2c72320
+      - 8b2c877f-7467-4689-aff7-0a4ad1882ae3
       X-Runtime:
-      - '0.135244'
+      - '0.031131'
       X-Rack-Cache:
       - miss
       P3p:
       - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad","title":"Cynllun
@@ -100,7 +104,7 @@ http_interactions:
         chi chwilio am y fargen orau yn gyntaf. Gall ychwanegu 20 y cant neu fwy at
         eich incwm ymddeol. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a
         href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/chwilio-am-flwydd-dal\">
-        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>"}'
-    http_version:
-  recorded_at: Wed, 26 Mar 2014 10:55:39 GMT
-recorded_with: VCR 2.8.0
+        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>","categories":["retirement","action-plans-pensions"]}'
+    http_version: 
+  recorded_at: Fri, 25 Apr 2014 14:03:12 GMT
+recorded_with: VCR 2.9.0

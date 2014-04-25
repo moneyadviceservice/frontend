@@ -10,11 +10,11 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 2b25af80-9a58-441f-ac70-2533b9029a98
+      - 16d34cd7-9a4b-4faa-ac69-d33d7b749f3d
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,13 +23,15 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 26 Mar 2014 10:55:37 GMT
+      - Fri, 25 Apr 2014 14:03:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Vary:
+      - Accept-Encoding
       Status:
       - 200 OK
       Link:
@@ -48,20 +50,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - a4032073375ae0a68e00b299c6b1148d
+      - 5af5507dbf1e314a3f46dd1233564470
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 26-Mar-2015 10:55:37 GMT; secure
-      - _session_id=a4032073375ae0a68e00b299c6b1148d; path=/; secure; HttpOnly
-      - _web_tracking=ade07d1555349669c55ae57ea23e338f; path=/; expires=Thu, 26-Mar-2015
-        10:55:37 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:11 GMT; secure
+      - _session_id=5af5507dbf1e314a3f46dd1233564470; path=/; secure; HttpOnly
+      - _web_tracking=20f9b234ed3ec4ca34e281a09d25d78f; path=/; expires=Sat, 25-Apr-2015
+        14:03:11 GMT; secure
       X-Request-Id:
-      - 2b25af80-9a58-441f-ac70-2533b9029a98
+      - 16d34cd7-9a4b-4faa-ac69-d33d7b749f3d
       X-Runtime:
-      - '0.062518'
+      - '0.123210'
       X-Rack-Cache:
       - miss
       P3p:
       - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"boost-your-pension-near-retirement","title":"Action plan - Boost
@@ -99,7 +103,7 @@ http_interactions:
         provider offers in return for your pension pot before you''ve shopped around.
         It can add 20% or more to your retirement income. </p></div><div class=\"how\"><h4>How?
         </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/shop-around-for-an-annuity\">
-        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>"}'
-    http_version:
-  recorded_at: Wed, 26 Mar 2014 10:55:38 GMT
-recorded_with: VCR 2.8.0
+        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>","categories":["retirement","action-plans-pensions"]}'
+    http_version: 
+  recorded_at: Fri, 25 Apr 2014 14:03:12 GMT
+recorded_with: VCR 2.9.0

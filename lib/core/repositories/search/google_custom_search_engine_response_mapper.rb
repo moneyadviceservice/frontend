@@ -24,7 +24,7 @@ module Core::Repositories
         return '' unless item.key?('pagemap')
 
         description = ''
-        metatags_array = item['pagemap']['metatags']
+        metatags_array = Array(item['pagemap']['metatags'])
         metatags_array.each do |metatags|
           metatags.each { |key, value| return description = value if key == 'og:description' }
         end

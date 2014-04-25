@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/moneyadviceservice/meta-tags.git
-  revision: 93558e60c65ea3a1542d5a7523fda729db3344bc
-  branch: alternate-url
-  specs:
-    meta-tags (1.5.0)
-      actionpack
-
-GIT
   remote: git://github.com/moneyadviceservice/tidy-html5-gem.git
   revision: 745e8d55e93bb4f15d499aff518ba3a68f112920
   specs:
@@ -225,10 +217,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.3)
-    minitest (5.3.2)
+    minitest (5.3.3)
     multi_json (1.9.2)
     multi_test (0.1.1)
     multipart-post (1.2.0)
@@ -404,7 +398,7 @@ DEPENDENCIES
   kss
   link_header
   mas-development_dependencies!
-  meta-tags!
+  meta-tags
   mysql2
   nokogiri
   nunes

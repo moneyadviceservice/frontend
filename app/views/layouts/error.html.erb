@@ -1,5 +1,7 @@
 <% content_for :content do %>
+
   <%= render 'shared/header' %>
+
   <div class="l-constrained">
     <div class="l-error-page">
       <main>
@@ -10,7 +12,10 @@
       </main>
     </div>
   </div>
-  <%= render 'shared/footer_social_links' %>
+
+  <footer class="l-footer">
+    <%= render 'shared/footer_social_links' %>
+  </footer>
 <% end %>
 
 <%= render template: 'layouts/base' %>

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/why-it-pays-to-save-regularly.json
+    uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,11 +10,11 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - c98a10a0-ce82-43b1-b163-a760551992da
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,123 +23,315 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 26 Mar 2014 10:55:46 GMT
+      - Fri, 25 Apr 2014 14:03:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Vary:
+      - Accept-Encoding
       Status:
       - 200 OK
       Link:
-      - <https://www.moneyadviceservice.org.uk/en/articles/why-it-pays-to-save-regularly>
-        rel="alternate"; hreflang="en-GB"; title="Why it pays to save regularly",
-        <https://www.moneyadviceservice.org.uk/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd>
-        rel="alternate"; hreflang="cy-GB"; title="Pam bod cynilo'n rheolaidd yn talu
-        ffordd"
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvaGVscC10by1idXktc2NoZW1lLWV2ZXJ5dGhpbmcteW91LW5lZWQt
+        dG8ta25vdz4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iZW4tR0IiOyB0
+        aXRsZT0iSGVscCB0byBCdXkgU2NoZW1lIOKAkyBFdmVyeXRoaW5nIHlvdSBu
+        ZWVkIHRvIGtub3ciLCA8aHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNl
+        Lm9yZy51ay9jeS9hcnRpY2xlcy9jeW5sbHVuLWhlbHAtaS1icnludS1jYWVs
+        LWd3eWJvZC1wb3BldGgtc3lkZC1laS1hbmdlbi1hcm5vY2g+IHJlbD0iYWx0
+        ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW5pYXUg
+        Q3ltb3J0aCBpIEJyeW51IC0gY2FlbCBnd3lib2QgcG9wZXRoIHN5ZGQgZWkg
+        YW5nZW4gYXJub2NoIg==
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - dc6d12df0472652e5799957ccb4122ff
+      - e32d694da2f714364fee97fb08046efd
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 26-Mar-2015 10:55:46 GMT; secure
-      - _session_id=dc6d12df0472652e5799957ccb4122ff; path=/; secure; HttpOnly
-      - _web_tracking=662cf0b6e99fecdaa63760260804d23d; path=/; expires=Thu, 26-Mar-2015
-        10:55:46 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:14 GMT; secure
+      - _session_id=e32d694da2f714364fee97fb08046efd; path=/; secure; HttpOnly
+      - _web_tracking=800ac1e665f169c8e318d66bcff7a6c0; path=/; expires=Sat, 25-Apr-2015
+        14:03:14 GMT; secure
       X-Request-Id:
-      - c98a10a0-ce82-43b1-b163-a760551992da
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       X-Runtime:
-      - '0.329782'
+      - '0.344762'
       X-Rack-Cache:
       - miss
       P3p:
       - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"why-it-pays-to-save-regularly","title":"Why it pays to save
-        regularly","description":"A regular savings habit makes your savings grow
-        fast \u2013 getting started is quick and easy","body":"<img src=\"/images/why-it-pays-to-save-regularly.png\"/><p
-        class=\"intro\">If you save regularly, you\u2019ll quickly find that your
-        savings add up and keep growing. Get into the habit and watch your money turn
-        into more money. </p><h2>Make saving a habit </h2><div class=\"callout\"><p>Getting
-        into a regular savings habit is more important than how much you put away
-        \u2013 you will be surprised how quickly a few pounds each month builds up!
-        </p></div><p>The easiest way to get your savings working for you is to set
-        things up so that you automatically add a little bit each month to your savings.
-        That way you won\u2019t have to remember to make the payment and you won\u2019t
-        be tempted to skip a month. Before you know it, you\u2019ll have built up
-        a solid chunk of savings. </p><p>The quickest way to do this is to set up
-        a standing order (a regular payment) from a bank current account into your
-        chosen savings account. </p><p><div class=\"add-action\"><a href=\"/en/articles/direct-debits-and-standing-orders\">Find
-        out more about standing orders </a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
-        data-article-id=\"direct-debits-and-standing-orders\" data-article-type=\"guide\"
-        id=\"email_me_direct-debits-and-standing-orders\" tabindex=\"0\">Email this
-        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=direct-debits-and-standing-orders&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=direct-debits-and-standing-orders&amp;article_type=guide\"
-        method=\"post\" name=\"guide_direct-debits-and-standing-orders\"><div><input
+      string: '{"id":"help-to-buy-scheme-everything-you-need-to-know","title":"Help
+        to Buy Scheme \u2013 Everything you need to know","description":"The government''s
+        Help to Buy mortgage schemes for first-time buyers and current owners are
+        now underway - our guide reveals all","body":"<p class=\"intro\"><img alt=\"Help
+        to Buy schemes - couple with keys to house\" src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/>We
+        explain what you need to know about Help to Buy - the government''s schemes
+        aimed at first-time buyers with low deposits and current owners with limited
+        equity. Read on for more Help to Buy information. </p><h2>Help to Buy Scheme
+        - What is it? </h2><p>Help to Buy - the two main schemes: </p><ul><li><strong>Equity
+        loans</strong> - the government lends you up to a fifth of the value of a
+        new-build home in England. A similar equity loan scheme is available in Scotland,
+        for properties valued up to \u00a3400,000.</li><li><strong>Mortgage guarantees</strong>
+        - the government agrees to cover part of your mortgage if you only have a
+        small deposit, taking on the default risk should you fall behind with payments.
+        The property can be new-build or pre-owned and located in England, Northern
+        Ireland, Scotland and Wales.</li></ul><h2>Help to Buy - The background </h2><div
+        class=\"callout\"><h3>DID YOU KNOW? </h3><p>In 1985, average first-time buyers
+        needed a deposit of 5% to buy a home - in 2012, this had increased to 20%
+        <br/><strong>Source: HM Treasury </strong></p></div><p>Help to Buy is expected
+        to help make up for the lack of higher loan-to-value products available. </p><p>While
+        it\u2019s still occasionally possible for people with a deposit of only 5%
+        to get on the property ladder, the government felt there should be more competition
+        between mortgage lenders to provide greater choice to home buyers. </p><p>Savings
+        rates and wage increases are also well below the rate of inflation, making
+        it harder for buyers to save a deposit. </p><p>Another big reason for the
+        introduction of the scheme comes down to current rises in house prices. </p><p>Help
+        to Buy has so far been very successful, putting it on track to meet the government\u2019s
+        target of 74,000 homes by 2016. </p><p><div class=\"add-action\"><a href=\"/en/articles/help-to-buy-schemes-faqs\">Help
+        to Buy schemes - FAQs</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"help-to-buy-schemes-faqs\" data-article-type=\"guide\" id=\"email_me_help-to-buy-schemes-faqs\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\"
+        /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
+        loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
+        properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
+        5% deposit</td><td>Minimum 5% deposit</td></tr><tr><td>Government loan up
+        to 20%</td><td>Government guarantee to mortgage lender</td></tr><tr><td>Maximum
+        property value \u00a3600,000 (\u00a3400,000 in Scotland)</td><td>Maximum property
+        value \u00a3600,000</td></tr><tr><td>First-time buyers and home movers</td><td>First-time
+        buyers and home movers</td></tr><tr><td>Not for buy-to-let properties or second
+        homes</td><td>Not for buy-to-let properties or second homes</td></tr><tr><td>Need
+        to prove affordability to lender</td><td>Need to prove affordability to lender</td></tr><tr><td>Apply
+        through Help to Buy agent or house builder</td><td>Apply through mortgage
+        lender</td></tr><tr><td>Available in England (Scotland offers similar scheme)</td><td>Available
+        across UK</td></tr><tr><td>Government loan interest-free for 5 years</td><td/></tr></tbody></table><p>The
+        Help to Buy equity loan scheme started in April 2013 and will run until 2020.
+        The mortgage guarantee scheme launched in October 2013 is expected to run
+        for three years though it could be withdrawn earlier. </p><p><div class=\"add-action\"><span
+        class=\"action-text\"><a target=\"_blank\" href=\" http://www.helptobuy.org.uk/\">Find
+        out more on the Help to Buy website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1543\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1543\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1543\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
+        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
+        href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
+        out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1544\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1544\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1544\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
+        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form>
+        </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
+        you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
+        you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
+        to pass affordability checks with mortgage lenders. This varies by lender,
+        but usually involves them checking that you\u2019ll still be able to meet
+        payments should interest rates go up.</li><li>Borrowers will need to state
+        that they have no interest in any other property worldwide, or won\u2019t
+        have by the time they complete on a mortgage guarantee scheme mortgage product.</li><li>You
+        may be able to apply if you''ve had minor credit problems in the past, but
+        you\u2019ll still need to pass the mortgage lender\u2019s credit checks.</li><li>Borrowers
+        need to have at least a 5% deposit, and be able to cover costs, for example
+        Stamp Duty and any legal and valuation costs.</li><li>If you want to rent
+        out the property you\u2019re going to buy, the Help to Buy schemes are not
+        suitable for you.</li></ul><h2>Alternatives to Help to Buy </h2><p><div class=\"add-action\"><a
+        href=\"/en/articles/help-to-buy-homebuy-and-other-housing-schemes\">Looking
+        for alternatives? Read our guide HomeBuy and other housing schemes</a> <a
+        href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"help-to-buy-homebuy-and-other-housing-schemes\"
+        data-article-type=\"guide\" id=\"email_me_help-to-buy-homebuy-and-other-housing-schemes\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"BSJ3kXOP7I2PNhkpND5r0UmKpVKIz3J0bQJz6Ve4mhw=\" /></div></form> </div></p><h2>Do
-        it on pay day </h2><p>The best time to put a bit of money aside is just after
-        you\u2019ve been paid, so set up your standing order to go out on, or just
-        after pay day. </p><p>Or ask your workplace if they have a savings scheme
-        \u2013 and join it if they do. This makes saving even easier, because the
-        money comes straight out of your pay, just like your tax and National Insurance
-        contributions. </p><p><div class=\"add-action\"><a href=\"/en/articles/workplace-investment-schemes\">More
-        about Workplace saving and investment schemes </a> <a href=\"#\" class=\"action-email\"
-        data-action-id=\"\" data-article-id=\"workplace-investment-schemes\" data-article-type=\"guide\"
-        id=\"email_me_workplace-investment-schemes\" tabindex=\"0\">Email this <span
-        class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=workplace-investment-schemes&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=workplace-investment-schemes&amp;article_type=guide\"
-        method=\"post\" name=\"guide_workplace-investment-schemes\"><div><input class=\"action-submit\"
-        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"BSJ3kXOP7I2PNhkpND5r0UmKpVKIz3J0bQJz6Ve4mhw=\"
-        /></div></form> </div></p><h2>Earning interest on interest </h2><p>As your
-        savings build up, they\u2019ll grow faster\u2013 even if you\u2019re only
-        paying in the same regular amount. This is because each time the interest
-        earned on your money is paid into your account it starts earning interest
-        too. </p><p>This interest-on-interest is called compound interest, and over
-        the longer term it makes a big difference to how much your savings are worth.
-        </p><h2>How much can you afford to save? </h2><p>If you\u2019ve got money
-        left over at the end of each week or month then great - you\u2019ve already
-        got your starting point. You\u2019ll be able to save this amount \u2013 and
-        maybe even more. </p><p>But even if there\u2019s usually nothing left, it
-        doesn\u2019t mean you can\u2019t save \u2013 it\u2019s not easy to change
-        how much money you have coming in but most people <strong>can </strong>change
-        how much goes out. To get tips on how to cut back and <strong>unlock your
-        saving potential</strong> go to our section <a href=\"/en/categories/money-saving-tips\">Money
-        saving tips</a></p><p><div class=\"add-action\"><a href=\"/en/tools/cut-back-calculator\">Cut
-        back calculator</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
-        data-article-id=\"cut-back-calculator\" data-article-type=\"tool\" id=\"email_me_cut-back-calculator\"
+        value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+    http_version: 
+  recorded_at: Fri, 25 Apr 2014 14:03:15 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 Apr 2014 14:03:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvaGVscC10by1idXktc2NoZW1lLWV2ZXJ5dGhpbmcteW91LW5lZWQt
+        dG8ta25vdz4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iZW4tR0IiOyB0
+        aXRsZT0iSGVscCB0byBCdXkgU2NoZW1lIOKAkyBFdmVyeXRoaW5nIHlvdSBu
+        ZWVkIHRvIGtub3ciLCA8aHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNl
+        Lm9yZy51ay9jeS9hcnRpY2xlcy9jeW5sbHVuLWhlbHAtaS1icnludS1jYWVs
+        LWd3eWJvZC1wb3BldGgtc3lkZC1laS1hbmdlbi1hcm5vY2g+IHJlbD0iYWx0
+        ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW5pYXUg
+        Q3ltb3J0aCBpIEJyeW51IC0gY2FlbCBnd3lib2QgcG9wZXRoIHN5ZGQgZWkg
+        YW5nZW4gYXJub2NoIg==
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8fc82712d20fce5d57d87526a4285dff
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:15 GMT; secure
+      - _session_id=8fc82712d20fce5d57d87526a4285dff; path=/; secure; HttpOnly
+      - _web_tracking=0f07a38c38cf474f2c9b926408929ab3; path=/; expires=Sat, 25-Apr-2015
+        14:03:15 GMT; secure
+      X-Request-Id:
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
+      X-Runtime:
+      - '0.050998'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-to-buy-scheme-everything-you-need-to-know","title":"Help
+        to Buy Scheme \u2013 Everything you need to know","description":"The government''s
+        Help to Buy mortgage schemes for first-time buyers and current owners are
+        now underway - our guide reveals all","body":"<p class=\"intro\"><img alt=\"Help
+        to Buy schemes - couple with keys to house\" src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/>We
+        explain what you need to know about Help to Buy - the government''s schemes
+        aimed at first-time buyers with low deposits and current owners with limited
+        equity. Read on for more Help to Buy information. </p><h2>Help to Buy Scheme
+        - What is it? </h2><p>Help to Buy - the two main schemes: </p><ul><li><strong>Equity
+        loans</strong> - the government lends you up to a fifth of the value of a
+        new-build home in England. A similar equity loan scheme is available in Scotland,
+        for properties valued up to \u00a3400,000.</li><li><strong>Mortgage guarantees</strong>
+        - the government agrees to cover part of your mortgage if you only have a
+        small deposit, taking on the default risk should you fall behind with payments.
+        The property can be new-build or pre-owned and located in England, Northern
+        Ireland, Scotland and Wales.</li></ul><h2>Help to Buy - The background </h2><div
+        class=\"callout\"><h3>DID YOU KNOW? </h3><p>In 1985, average first-time buyers
+        needed a deposit of 5% to buy a home - in 2012, this had increased to 20%
+        <br/><strong>Source: HM Treasury </strong></p></div><p>Help to Buy is expected
+        to help make up for the lack of higher loan-to-value products available. </p><p>While
+        it\u2019s still occasionally possible for people with a deposit of only 5%
+        to get on the property ladder, the government felt there should be more competition
+        between mortgage lenders to provide greater choice to home buyers. </p><p>Savings
+        rates and wage increases are also well below the rate of inflation, making
+        it harder for buyers to save a deposit. </p><p>Another big reason for the
+        introduction of the scheme comes down to current rises in house prices. </p><p>Help
+        to Buy has so far been very successful, putting it on track to meet the government\u2019s
+        target of 74,000 homes by 2016. </p><p><div class=\"add-action\"><a href=\"/en/articles/help-to-buy-schemes-faqs\">Help
+        to Buy schemes - FAQs</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"help-to-buy-schemes-faqs\" data-article-type=\"guide\" id=\"email_me_help-to-buy-schemes-faqs\"
         tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
-        action=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
-        method=\"post\" name=\"tool_cut-back-calculator\"><div><input class=\"action-submit\"
+        action=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"BSJ3kXOP7I2PNhkpND5r0UmKpVKIz3J0bQJz6Ve4mhw=\"
-        /></div></form> </div></p><h2>What about regular investing? </h2><p>You can
-        make regular payments from as little as \u00a325 a month into investment products,
-        such as a Stocks and Shares ISA or Unit Trust Investment Funds. Investment
-        products are for the longer term and are really only suitable if you already
-        have enough cash savings to keep you going for 3-6 months if needs be. Investments
-        generally outperform cash savings over the longer term, but their value can
-        rise and fall, so you have to be prepared to take on some risk. </p><p><div
-        class=\"add-action\"><a href=\"/en/articles/should-i-save-or-invest\">Should
-        I save or invest?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
-        data-article-id=\"should-i-save-or-invest\" data-article-type=\"guide\" id=\"email_me_should-i-save-or-invest\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\"
+        /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
+        loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
+        properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
+        5% deposit</td><td>Minimum 5% deposit</td></tr><tr><td>Government loan up
+        to 20%</td><td>Government guarantee to mortgage lender</td></tr><tr><td>Maximum
+        property value \u00a3600,000 (\u00a3400,000 in Scotland)</td><td>Maximum property
+        value \u00a3600,000</td></tr><tr><td>First-time buyers and home movers</td><td>First-time
+        buyers and home movers</td></tr><tr><td>Not for buy-to-let properties or second
+        homes</td><td>Not for buy-to-let properties or second homes</td></tr><tr><td>Need
+        to prove affordability to lender</td><td>Need to prove affordability to lender</td></tr><tr><td>Apply
+        through Help to Buy agent or house builder</td><td>Apply through mortgage
+        lender</td></tr><tr><td>Available in England (Scotland offers similar scheme)</td><td>Available
+        across UK</td></tr><tr><td>Government loan interest-free for 5 years</td><td/></tr></tbody></table><p>The
+        Help to Buy equity loan scheme started in April 2013 and will run until 2020.
+        The mortgage guarantee scheme launched in October 2013 is expected to run
+        for three years though it could be withdrawn earlier. </p><p><div class=\"add-action\"><span
+        class=\"action-text\"><a target=\"_blank\" href=\" http://www.helptobuy.org.uk/\">Find
+        out more on the Help to Buy website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1543\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1543\"
         tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
-        action=\"/en/action_items/internal?article_id=should-i-save-or-invest&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=should-i-save-or-invest&amp;article_type=guide\"
-        method=\"post\" name=\"guide_should-i-save-or-invest\"><div><input class=\"action-submit\"
-        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"BSJ3kXOP7I2PNhkpND5r0UmKpVKIz3J0bQJz6Ve4mhw=\"
-        /></div></form> </div></p><h2>Next steps </h2><ul><li><a href=\"/en/articles/top-tips-for-choosing-savings-accounts\">Top
-        tips for choosing a savings account</a></li><li><a href=\"/en/articles/top-tips-for-choosing-investments\">Top
-        tips for choosing investments</a></li><li><a href=\"/en/categories/comparison-tables\">Choose
-        a savings or investment account</a></li></ul>"}'
-    http_version:
-  recorded_at: Wed, 26 Mar 2014 10:55:48 GMT
-recorded_with: VCR 2.8.0
+        action=\"/en/action_items/external?external_action_id=1543\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
+        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
+        href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
+        out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1544\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1544\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1544\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
+        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form>
+        </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
+        you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
+        you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
+        to pass affordability checks with mortgage lenders. This varies by lender,
+        but usually involves them checking that you\u2019ll still be able to meet
+        payments should interest rates go up.</li><li>Borrowers will need to state
+        that they have no interest in any other property worldwide, or won\u2019t
+        have by the time they complete on a mortgage guarantee scheme mortgage product.</li><li>You
+        may be able to apply if you''ve had minor credit problems in the past, but
+        you\u2019ll still need to pass the mortgage lender\u2019s credit checks.</li><li>Borrowers
+        need to have at least a 5% deposit, and be able to cover costs, for example
+        Stamp Duty and any legal and valuation costs.</li><li>If you want to rent
+        out the property you\u2019re going to buy, the Help to Buy schemes are not
+        suitable for you.</li></ul><h2>Alternatives to Help to Buy </h2><p><div class=\"add-action\"><a
+        href=\"/en/articles/help-to-buy-homebuy-and-other-housing-schemes\">Looking
+        for alternatives? Read our guide HomeBuy and other housing schemes</a> <a
+        href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"help-to-buy-homebuy-and-other-housing-schemes\"
+        data-article-type=\"guide\" id=\"email_me_help-to-buy-homebuy-and-other-housing-schemes\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+    http_version: 
+  recorded_at: Fri, 25 Apr 2014 14:03:16 GMT
+recorded_with: VCR 2.9.0

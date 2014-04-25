@@ -15,7 +15,7 @@ gem 'foreman'
 gem 'gaffe'
 gem 'kss'
 gem 'link_header'
-gem 'meta-tags', require: 'meta_tags', github: 'moneyadviceservice/meta-tags', branch: 'alternate-url'
+gem 'meta-tags'
 gem 'nokogiri'
 gem 'nunes'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/

@@ -1,5 +1,6 @@
 When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   locale = language_to_locale(language)
+  populate_category_repository_with(category_containing_articles(locale))
   article_page.load(locale: locale, id: article_id_for_locale(locale))
 end
 
@@ -20,9 +21,29 @@ Then(/^I should see the article in (.*)$/) do |language|
   expect(article_page.description[:content]).to include(current_article.description)
   expect(article_page.heading).to have_content(current_article.title)
 
-  # Use the first sentence in the body as the string to search for from the body
-  sample_of_body_text = strip_tags(Nokogiri::HTML(current_article.body).search('p').inner_html).split(/\./)[0]
-  expect(article_page.content).to have_content(strip_tags(sample_of_body_text))
+  # Use the first sentence in the body p.intro tag as the intro string to search for
+  sample_of_intro_text = strip_tags(Nokogiri::HTML(current_article.body).at('p.intro').inner_html).split(/\./)[0]
+  expect(article_page.intro).to have_content(strip_tags(sample_of_intro_text))
+
+  # Use the first sentence in the first p tag with no class in the body main content string to search for
+  sample_of_body_text = strip_tags(Nokogiri::HTML(current_article.body).at('p:not([class])').inner_html).split(/\./)[0]
+  expect(article_page.main_content).to have_content(strip_tags(sample_of_body_text))
+end
+
+Then(/^I should see the article categories in (.*)$/) do |language|
+  current_article = article_for_locale(language_to_locale(language))
+  current_article.categories.each do |cat|
+    expect(article_page.related_categories).to have_content(cat.title)
+  end
+end
+
+Then(/^I should see the related content in (.*)$/) do |language|
+  current_article = article_for_locale(language_to_locale(language))
+  current_article.categories.each do |cat|
+    cat.contents.each do |art|
+      expect(article_page.related_content).to have_content(art.title)
+    end
+  end
 end
 
 Then(/^the article should have a canonical tag for that language version$/) do

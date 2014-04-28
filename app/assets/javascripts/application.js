@@ -68,7 +68,7 @@ require(
     // Cookie message
     $('.js-cookie-message').bind('ajax:success', function() {
       $('.cookie-message').hide();
-      $('.footer-site-links__cookie-message').removeClass('is-on');
+      $('.footer-site-links__cookie-link').removeClass('is-on');
     });
 
     // Responsive Opt Out

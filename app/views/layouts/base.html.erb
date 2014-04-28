@@ -7,6 +7,10 @@
 <html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
 
 <head>
+  <% if Rails.env.production? %>
+    <script src="//cdn.optimizely.com/js/899750120.js"></script>
+  <% end %>
+
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>
 

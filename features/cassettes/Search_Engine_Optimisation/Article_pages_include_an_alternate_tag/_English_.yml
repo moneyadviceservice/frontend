@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - 5c1bb89c-bbd5-43e9-9b73-f3057a2fa44e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 14:03:20 GMT
+      - Mon, 28 Apr 2014 13:39:59 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -51,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 72fc92140603855b34b4d9661a61d6cc
+      - 4693838d25a19c0e17f5d225feac6407
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:20 GMT; secure
-      - _session_id=72fc92140603855b34b4d9661a61d6cc; path=/; secure; HttpOnly
-      - _web_tracking=64a633b183609a62c8df99030ccedc72; path=/; expires=Sat, 25-Apr-2015
-        14:03:20 GMT; secure
+      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:39:59 GMT; secure
+      - _session_id=4693838d25a19c0e17f5d225feac6407; path=/; secure; HttpOnly
+      - _web_tracking=78fae4204420a97a3900d5d8a5cb2bf2; path=/; expires=Tue, 28-Apr-2015
+        13:39:59 GMT; secure
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - 5c1bb89c-bbd5-43e9-9b73-f3057a2fa44e
       X-Runtime:
-      - '0.042790'
+      - '0.049182'
       X-Rack-Cache:
       - miss
       P3p:
@@ -104,7 +104,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"mWdZrZqc4NqbRE3Z5ZXq7iZ88AsplIm0uWntKA4K5q4=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Luw1gwhvVWDNEidVS21acqGeyC2SiRccF8zGiupZRjc=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -129,7 +129,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"mWdZrZqc4NqbRE3Z5ZXq7iZ88AsplIm0uWntKA4K5q4=\" /></div></form>
+        type=\"hidden\" value=\"Luw1gwhvVWDNEidVS21acqGeyC2SiRccF8zGiupZRjc=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -139,7 +139,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"mWdZrZqc4NqbRE3Z5ZXq7iZ88AsplIm0uWntKA4K5q4=\" /></div></form>
+        type=\"hidden\" value=\"Luw1gwhvVWDNEidVS21acqGeyC2SiRccF8zGiupZRjc=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -164,9 +164,128 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"mWdZrZqc4NqbRE3Z5ZXq7iZ88AsplIm0uWntKA4K5q4=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"Luw1gwhvVWDNEidVS21acqGeyC2SiRccF8zGiupZRjc=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 14:03:21 GMT
+  recorded_at: Mon, 28 Apr 2014 13:40:00 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-schemes-faqs.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 5c1bb89c-bbd5-43e9-9b73-f3057a2fa44e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 28 Apr 2014 13:40:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-schemes-faqs>
+        rel="alternate"; hreflang="en-GB"; title="Help to Buy schemes - FAQs", <https://www.moneyadviceservice.org.uk/cy/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin>
+        rel="alternate"; hreflang="cy-GB"; title="Cynlluniau Cymorth i Brynu - Cwestiynau
+        Cyffredin"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 63a8dce41ec920a0b2daf13ce340c002
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:40:00 GMT; secure
+      - _session_id=63a8dce41ec920a0b2daf13ce340c002; path=/; secure; HttpOnly
+      - _web_tracking=c4d2daab1eec068960a5457093570705; path=/; expires=Tue, 28-Apr-2015
+        13:40:00 GMT; secure
+      X-Request-Id:
+      - 5c1bb89c-bbd5-43e9-9b73-f3057a2fa44e
+      X-Runtime:
+      - '0.031229'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-to-buy-schemes-faqs","title":"Help to Buy schemes - FAQs","description":"Confused
+        about Help to Buy? Read our most frequently asked questions about the new
+        government schemes.","body":"<p class=\"intro\"><img alt=\"Help to Buy schemes
+        - bunch of keysand house keyring\" src=\"/images/help-to-buy-schemes---faqs.jpg\"/>Confused
+        about the government''s Help to Buy initiative and how it might affect you?
+        We answer some of the most frequently asked questions about the schemes. </p><h2>1.
+        Does Help to Buy make it easier for me to buy a property?\u00a0 </h2><p>Yes
+        - as long as you have at least a 5% deposit saved and can prove that you can
+        afford the mortgage payments. </p><p>You\u2019ll also need to meet the mortgage
+        provider\u2019s own lending conditions \u2013 these can vary between provider.
+        </p><h2>2. Does Help to Buy cover anywhere outside of England? </h2><p>The
+        Help to Buy equity loan scheme is only available in England. The Scottish
+        Parliament has recently announced a similar scheme with a property price cap
+        of \u00a3400,000. </p><p>The Help to Buy mortgage guarantee scheme is available
+        across the UK and includes Scotland, Wales and Northern Ireland. </p><h2>3.
+        Would I be better using the equity loan or mortgage guarantee? </h2><p>This
+        really depends on your needs.\u00a0 </p><p>The equity loan scheme can only
+        be used for new build flats and houses, while the mortgage guarantee scheme
+        can be used for both new build and pre-owned property. </p><p>Speak with a
+        mortgage adviser to help decide which scheme is most suited to you. </p><h2>4.
+        I need to sell my home to buy a bigger one - do I qualify? </h2><p>Yes - both
+        schemes are available to existing home owners as well as first-time buyers
+        as long as the property price is not more that \u00a3600,000 (\u00a3400,000
+        for the equity loan scheme in Scotland) </p><h2>5. Will I have difficulty
+        selling my home if it was bought through the mortgage guarantee scheme? </h2><p>No
+        - buying a home through the mortgage guarantee scheme won\u2019t have an impact
+        on its future saleability. </p><p>As there is no shared ownership, the resale
+        of the property will be the same as any other property with a standard mortgage.
+        </p><h2>6. Will I find it hard to get another mortgage when I move? </h2><p>If
+        you borrow up to 95% of a property\u2019s value and it later falls or doesn\u2019t
+        increase in value, you may find it difficult to move at a future time. </p><p>You
+        can only take out a repayment mortgage through the mortgage guarantee scheme,
+        so the amount you borrow gradually reduces over time. This means that by the
+        time you come to sell you should have some additional equity in the property,
+        even if house prices haven\u2019t gone up. </p><p>You can discuss this - and
+        also the possibility of making additional payments to reduce your mortgage
+        quicker - with your mortgage lender. </p><h2>7. Will my mortgage payments
+        go up after the guarantee scheme ends? </h2><p>No - the mortgage guarantee
+        scheme won\u2019t affect your future mortgage rates. </p><p>If you\u2019re
+        worried about mortgage payments going up, you can ask if the lender offers
+        fixed rates. </p><p>It\u2019s important you know when your mortgage rate is
+        due to go up - your mortgage lender or broker has the duty to let you know
+        this before you agree to go ahead. Always make sure to discuss your mortgage
+        rates with your lender. </p><h2>8. Would I be better off renting, or buying
+        through Help to Buy? </h2><p>This depends on your individual circumstances.
+        </p><p>The two Help to Buy schemes are designed to help people who have already
+        made the decision to buy and who have a deposit of at least 5%. </p><h2>9.
+        I need to move this year \u2013 is the guarantee scheme right for me? </h2><p>You
+        should let your mortgage lender or broker know of your need to move this year
+        as they would be well placed to let you know if this is possible or not. </p><h2>10.
+        Do I need to know which lenders are signed up to the mortgage guarantee scheme?
+        </h2><p>You can apply for the mortgage guarantee scheme through any participating
+        lender. </p><p>You can find more information on lenders taking part and eligibility
+        on the <a title=\"Help to Buy website\" target=\"_blank\" data-link-type=\"external\"
+        href=\"http://www.helptobuy.org.uk\">Help to Buy website</a>. </p>","categories":["affordable-housing-schemes"]}'
+    http_version: 
+  recorded_at: Mon, 28 Apr 2014 13:40:01 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -177,7 +296,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -190,7 +309,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 14:03:21 GMT
+      - Mon, 28 Apr 2014 13:40:00 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -218,16 +337,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 0de7374fe87a6cb618fefaa156a5d08c
+      - 1d9656dc5ba101407ee4cabe3a026ae9
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:21 GMT; secure
-      - _session_id=0de7374fe87a6cb618fefaa156a5d08c; path=/; secure; HttpOnly
-      - _web_tracking=a55564298a34e27bbd208aa8e88ce37e; path=/; expires=Sat, 25-Apr-2015
-        14:03:21 GMT; secure
+      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:40:00 GMT; secure
+      - _session_id=1d9656dc5ba101407ee4cabe3a026ae9; path=/; secure; HttpOnly
+      - _web_tracking=797ca73dcee8b2f6de16ffc83bae685a; path=/; expires=Tue, 28-Apr-2015
+        13:40:00 GMT; secure
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       X-Runtime:
-      - '0.051355'
+      - '0.046599'
       X-Rack-Cache:
       - miss
       P3p:
@@ -271,7 +390,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"+8DPkuR28X4wRozSHxXNiHjkCfNWC4rq2sA+2XDNs3Q=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"C0prot0XkDXQAuCMbXKrGSyFubTWTWuUvTrMmKRniGc=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -296,7 +415,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"+8DPkuR28X4wRozSHxXNiHjkCfNWC4rq2sA+2XDNs3Q=\" /></div></form>
+        type=\"hidden\" value=\"C0prot0XkDXQAuCMbXKrGSyFubTWTWuUvTrMmKRniGc=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -306,7 +425,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"+8DPkuR28X4wRozSHxXNiHjkCfNWC4rq2sA+2XDNs3Q=\" /></div></form>
+        type=\"hidden\" value=\"C0prot0XkDXQAuCMbXKrGSyFubTWTWuUvTrMmKRniGc=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -331,12 +450,12 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"+8DPkuR28X4wRozSHxXNiHjkCfNWC4rq2sA+2XDNs3Q=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"C0prot0XkDXQAuCMbXKrGSyFubTWTWuUvTrMmKRniGc=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 14:03:22 GMT
+  recorded_at: Mon, 28 Apr 2014 13:40:02 GMT
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
     body:
       encoding: US-ASCII
       string: ''
@@ -344,20 +463,20 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 14:03:21 GMT
+      - Mon, 28 Apr 2014 13:40:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -367,32 +486,143 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Status:
-      - 404 Not Found
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvaGVscC10by1idXktc2NoZW1lLWV2ZXJ5dGhpbmcteW91LW5lZWQt
+        dG8ta25vdz4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iZW4tR0IiOyB0
+        aXRsZT0iSGVscCB0byBCdXkgU2NoZW1lIOKAkyBFdmVyeXRoaW5nIHlvdSBu
+        ZWVkIHRvIGtub3ciLCA8aHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNl
+        Lm9yZy51ay9jeS9hcnRpY2xlcy9jeW5sbHVuLWhlbHAtaS1icnludS1jYWVs
+        LWd3eWJvZC1wb3BldGgtc3lkZC1laS1hbmdlbi1hcm5vY2g+IHJlbD0iYWx0
+        ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW5pYXUg
+        Q3ltb3J0aCBpIEJyeW51IC0gY2FlbCBnd3lib2QgcG9wZXRoIHN5ZGQgZWkg
+        YW5nZW4gYXJub2NoIg==
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 04000eb7af9280b3f5bd1604339aacfa
+      - f9cbcd34eb0b2781553b0d93f62d561c
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:21 GMT; secure
-      - _session_id=04000eb7af9280b3f5bd1604339aacfa; path=/; secure; HttpOnly
-      - _web_tracking=1b07eb88d07c09516f72a8e1ee6c06aa; path=/; expires=Sat, 25-Apr-2015
-        14:03:21 GMT; secure
+      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:40:02 GMT; secure
+      - _session_id=f9cbcd34eb0b2781553b0d93f62d561c; path=/; secure; HttpOnly
+      - _web_tracking=56a136539606637531744e38848663b1; path=/; expires=Tue, 28-Apr-2015
+        13:40:02 GMT; secure
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       X-Runtime:
-      - '0.019154'
+      - '0.049545'
       X-Rack-Cache:
       - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
-      string: " "
+      string: '{"id":"help-to-buy-scheme-everything-you-need-to-know","title":"Help
+        to Buy Scheme \u2013 Everything you need to know","description":"The government''s
+        Help to Buy mortgage schemes for first-time buyers and current owners are
+        now underway - our guide reveals all","body":"<p class=\"intro\"><img alt=\"Help
+        to Buy schemes - couple with keys to house\" src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/>We
+        explain what you need to know about Help to Buy - the government''s schemes
+        aimed at first-time buyers with low deposits and current owners with limited
+        equity. Read on for more Help to Buy information. </p><h2>Help to Buy Scheme
+        - What is it? </h2><p>Help to Buy - the two main schemes: </p><ul><li><strong>Equity
+        loans</strong> - the government lends you up to a fifth of the value of a
+        new-build home in England. A similar equity loan scheme is available in Scotland,
+        for properties valued up to \u00a3400,000.</li><li><strong>Mortgage guarantees</strong>
+        - the government agrees to cover part of your mortgage if you only have a
+        small deposit, taking on the default risk should you fall behind with payments.
+        The property can be new-build or pre-owned and located in England, Northern
+        Ireland, Scotland and Wales.</li></ul><h2>Help to Buy - The background </h2><div
+        class=\"callout\"><h3>DID YOU KNOW? </h3><p>In 1985, average first-time buyers
+        needed a deposit of 5% to buy a home - in 2012, this had increased to 20%
+        <br/><strong>Source: HM Treasury </strong></p></div><p>Help to Buy is expected
+        to help make up for the lack of higher loan-to-value products available. </p><p>While
+        it\u2019s still occasionally possible for people with a deposit of only 5%
+        to get on the property ladder, the government felt there should be more competition
+        between mortgage lenders to provide greater choice to home buyers. </p><p>Savings
+        rates and wage increases are also well below the rate of inflation, making
+        it harder for buyers to save a deposit. </p><p>Another big reason for the
+        introduction of the scheme comes down to current rises in house prices. </p><p>Help
+        to Buy has so far been very successful, putting it on track to meet the government\u2019s
+        target of 74,000 homes by 2016. </p><p><div class=\"add-action\"><a href=\"/en/articles/help-to-buy-schemes-faqs\">Help
+        to Buy schemes - FAQs</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"help-to-buy-schemes-faqs\" data-article-type=\"guide\" id=\"email_me_help-to-buy-schemes-faqs\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"JLa0huQNsi/HHeE/uai1JGbQX9kVdVL2efc+/fyXl0g=\"
+        /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
+        loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
+        properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
+        5% deposit</td><td>Minimum 5% deposit</td></tr><tr><td>Government loan up
+        to 20%</td><td>Government guarantee to mortgage lender</td></tr><tr><td>Maximum
+        property value \u00a3600,000 (\u00a3400,000 in Scotland)</td><td>Maximum property
+        value \u00a3600,000</td></tr><tr><td>First-time buyers and home movers</td><td>First-time
+        buyers and home movers</td></tr><tr><td>Not for buy-to-let properties or second
+        homes</td><td>Not for buy-to-let properties or second homes</td></tr><tr><td>Need
+        to prove affordability to lender</td><td>Need to prove affordability to lender</td></tr><tr><td>Apply
+        through Help to Buy agent or house builder</td><td>Apply through mortgage
+        lender</td></tr><tr><td>Available in England (Scotland offers similar scheme)</td><td>Available
+        across UK</td></tr><tr><td>Government loan interest-free for 5 years</td><td/></tr></tbody></table><p>The
+        Help to Buy equity loan scheme started in April 2013 and will run until 2020.
+        The mortgage guarantee scheme launched in October 2013 is expected to run
+        for three years though it could be withdrawn earlier. </p><p><div class=\"add-action\"><span
+        class=\"action-text\"><a target=\"_blank\" href=\" http://www.helptobuy.org.uk/\">Find
+        out more on the Help to Buy website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1543\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1543\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1543\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
+        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"JLa0huQNsi/HHeE/uai1JGbQX9kVdVL2efc+/fyXl0g=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
+        href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
+        out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1544\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1544\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1544\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
+        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"JLa0huQNsi/HHeE/uai1JGbQX9kVdVL2efc+/fyXl0g=\" /></div></form>
+        </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
+        you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
+        you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
+        to pass affordability checks with mortgage lenders. This varies by lender,
+        but usually involves them checking that you\u2019ll still be able to meet
+        payments should interest rates go up.</li><li>Borrowers will need to state
+        that they have no interest in any other property worldwide, or won\u2019t
+        have by the time they complete on a mortgage guarantee scheme mortgage product.</li><li>You
+        may be able to apply if you''ve had minor credit problems in the past, but
+        you\u2019ll still need to pass the mortgage lender\u2019s credit checks.</li><li>Borrowers
+        need to have at least a 5% deposit, and be able to cover costs, for example
+        Stamp Duty and any legal and valuation costs.</li><li>If you want to rent
+        out the property you\u2019re going to buy, the Help to Buy schemes are not
+        suitable for you.</li></ul><h2>Alternatives to Help to Buy </h2><p><div class=\"add-action\"><a
+        href=\"/en/articles/help-to-buy-homebuy-and-other-housing-schemes\">Looking
+        for alternatives? Read our guide HomeBuy and other housing schemes</a> <a
+        href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"help-to-buy-homebuy-and-other-housing-schemes\"
+        data-article-type=\"guide\" id=\"email_me_help-to-buy-homebuy-and-other-housing-schemes\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-homebuy-and-other-housing-schemes&amp;article_type=guide\"
+        method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"JLa0huQNsi/HHeE/uai1JGbQX9kVdVL2efc+/fyXl0g=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 14:03:22 GMT
+  recorded_at: Mon, 28 Apr 2014 13:40:03 GMT
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
     body:
       encoding: US-ASCII
       string: ''
@@ -400,20 +630,20 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 14:03:21 GMT
+      - Mon, 28 Apr 2014 13:40:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -423,83 +653,135 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Status:
-      - 404 Not Found
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
+        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
+        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
+        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
+        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
+        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
+        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
+        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
+        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
+        bmVlZCB0byBrbm93Ig==
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 9914d17d712a44c8058fc2e7155a1950
+      - 4b0e55c39765759b01015c08f905b2c1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:21 GMT; secure
-      - _session_id=9914d17d712a44c8058fc2e7155a1950; path=/; secure; HttpOnly
-      - _web_tracking=e27943c8a1bb40f6034f8c0e1f92394d; path=/; expires=Sat, 25-Apr-2015
-        14:03:21 GMT; secure
+      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:40:03 GMT; secure
+      - _session_id=4b0e55c39765759b01015c08f905b2c1; path=/; secure; HttpOnly
+      - _web_tracking=bd4d6cd9c814a6c4622fbc1a3a971c6a; path=/; expires=Tue, 28-Apr-2015
+        13:40:03 GMT; secure
       X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
+      - a2d155e4-2065-4cf6-91f7-b4c2fd59ea08
       X-Runtime:
-      - '0.017394'
+      - '0.052636'
       X-Rack-Cache:
       - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
-      string: " "
+      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
+        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
+        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
+        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
+        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
+        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
+        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
+        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
+        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
+        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
+        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
+        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
+        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
+        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
+        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
+        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
+        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
+        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
+        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
+        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
+        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
+        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
+        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
+        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
+        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
+        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
+        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
+        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
+        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
+        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
+        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
+        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
+        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
+        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
+        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
+        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
+        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
+        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
+        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
+        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
+        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
+        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
+        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
+        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
+        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
+        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
+        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
+        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
+        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
+        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
+        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
+        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
+        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"wsAsDpotgYK8qaPNAUOPnS/sNl5JT4NmxSdkdhylIxQ=\"
+        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
+        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
+        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
+        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
+        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
+        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"wsAsDpotgYK8qaPNAUOPnS/sNl5JT4NmxSdkdhylIxQ=\"
+        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
+        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
+        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
+        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
+        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
+        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
+        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
+        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
+        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
+        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
+        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
+        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
+        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
+        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
+        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
+        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
+        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
+        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
+        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
+        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
+        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"wsAsDpotgYK8qaPNAUOPnS/sNl5JT4NmxSdkdhylIxQ=\" /></div></form>
+        </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 14:03:22 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 14:03:22 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 86e0f177b8262a966b640846fc8b58cd
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:22 GMT; secure
-      - _session_id=86e0f177b8262a966b640846fc8b58cd; path=/; secure; HttpOnly
-      - _web_tracking=6c3312456b34a0d58a07f4666daca7ff; path=/; expires=Sat, 25-Apr-2015
-        14:03:22 GMT; secure
-      X-Request-Id:
-      - 594b38d7-5bff-4204-a5b8-8e336327491f
-      X-Runtime:
-      - '0.019304'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 14:03:23 GMT
+  recorded_at: Mon, 28 Apr 2014 13:40:03 GMT
 recorded_with: VCR 2.9.0

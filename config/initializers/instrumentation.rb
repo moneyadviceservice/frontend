@@ -9,8 +9,17 @@ end
 statsd = Statsd.new(ENV['STATSD_HOST'], ENV['STATSD_PORT']).tap { |client| client.namespace = 'frontend' }
 
 ActiveSupport::Notifications.subscribe('request.content-service.search') do |_, starts, ends, _, options|
-  statsd.increment("search.content_service.#{options[:locale]}")
-  statsd.timing("search.content_service.#{options[:locale]}", (ends - starts))
+  key = "search.content_service.#{options[:locale]}"
+
+  statsd.increment(key)
+  statsd.timing(key, (ends - starts))
+end
+
+ActiveSupport::Notifications.subscribe('request.google_api.search') do |_, starts, ends, _, options|
+  key = "search.google_api.#{options[:locale]}"
+
+  statsd.increment(key)
+  statsd.timing(key, (ends - starts))
 end
 
 Nunes.subscribe(statsd)

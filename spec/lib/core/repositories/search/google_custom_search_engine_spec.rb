@@ -13,7 +13,21 @@ describe Core::Repositories::Search::GoogleCustomSearchEngine do
   end
 
   describe '#perform' do
-    subject(:perform_search) { custom_search_engine.perform(double) }
+    let(:event_name) { 'request.google_api.search' }
+    let(:query) { double }
+
+    subject(:perform_search) { custom_search_engine.perform(query) }
+
+    it 'records an event with Rails instrumentation' do
+      allow(connection).to receive(:get) { double(body: {}) }
+
+      expect(ActiveSupport::Notifications).
+        to receive(:instrument).
+             with(event_name, hash_including(query: query, locale: I18n.locale)).
+             and_call_original
+
+      perform_search
+    end
 
     context 'when there is an error' do
       before do

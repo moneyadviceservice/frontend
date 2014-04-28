@@ -48,10 +48,9 @@ module Core
         let(:title) { 'The Article' }
         let(:description) { 'The Article has a description' }
         let(:body) { '<h1>The Article</h1><p>Lorem ipsum dolor sit amet</p>' }
-        let(:categories) { [] }
 
         let(:data) do
-          { title: title, description: description, body: body, categories: categories }
+          { title: title, description: description, body: body }
         end
 
         it "maps the article's `id' to the repositories' `id' value" do
@@ -87,30 +86,6 @@ module Core
           end
 
           it_has_behavior 'optional failure block'
-        end
-
-        context 'when there is a category' do
-          let(:category) { 'foo' }
-          let(:categories) { [category] }
-          let(:category_entity) { double }
-
-          before do
-            allow_any_instance_of(CategoryReader).to receive(:call) { category_entity }
-          end
-
-          it 'instantiates a category reader with the category' do
-            expect(CategoryReader).to receive(:new).with(category).and_call_original
-            subject.call
-          end
-
-          it 'calls the category reader' do
-            expect_any_instance_of(CategoryReader).to receive(:call)
-            subject.call
-          end
-
-          it 'returns the category reader results' do
-            expect(subject.call.categories).to eql [category_entity]
-          end
         end
       end
     end

@@ -2,342 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:17 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 97098246f840dc6c8f83c78de334e22e
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:17 GMT; secure
-      - _session_id=97098246f840dc6c8f83c78de334e22e; path=/; secure; HttpOnly
-      - _web_tracking=94b882c78c0909a820aa173baa60e44d; path=/; expires=Tue, 28-Apr-2015
-        08:13:17 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.022790'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:18 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:18 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - d115a9346e7e4003d513424cbd86f11e
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:18 GMT; secure
-      - _session_id=d115a9346e7e4003d513424cbd86f11e; path=/; secure; HttpOnly
-      - _web_tracking=e1630eff1dddca68a960bc528a763ae9; path=/; expires=Tue, 28-Apr-2015
-        08:13:18 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.026459'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:18 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:18 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 3f6a79a124ed37b29b7e263c2b8bfab1
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:18 GMT; secure
-      - _session_id=3f6a79a124ed37b29b7e263c2b8bfab1; path=/; secure; HttpOnly
-      - _web_tracking=f31f9256719f353f283886f7d89b418c; path=/; expires=Tue, 28-Apr-2015
-        08:13:18 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.024897'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:18 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:18 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 2cd06e2104f53b51e8530fca58c050d9
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:18 GMT; secure
-      - _session_id=2cd06e2104f53b51e8530fca58c050d9; path=/; secure; HttpOnly
-      - _web_tracking=c88790251571b39493ed69cb720c9ec3; path=/; expires=Tue, 28-Apr-2015
-        08:13:18 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.024411'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:19 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 00975b4d2f14f3a02035a746527fedb5
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:19 GMT; secure
-      - _session_id=00975b4d2f14f3a02035a746527fedb5; path=/; secure; HttpOnly
-      - _web_tracking=4e8af13e71a64e03e9ea5f1f00362166; path=/; expires=Tue, 28-Apr-2015
-        08:13:19 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.025598'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:19 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:19 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 073c111d610c19866f0e6cdaa0818730
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:19 GMT; secure
-      - _session_id=073c111d610c19866f0e6cdaa0818730; path=/; secure; HttpOnly
-      - _web_tracking=148171a3478c5bc1154e4477282b521a; path=/; expires=Tue, 28-Apr-2015
-        08:13:19 GMT; secure
-      X-Request-Id:
-      - e2c4fbfe-29c6-4e9a-8ec7-fbe0e12d045b
-      X-Runtime:
-      - '0.026197'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:19 GMT
-- request:
-    method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
     body:
       encoding: US-ASCII
@@ -346,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f0f0a4ad-cb61-4c1b-a36e-49c170a495ca
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -359,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:19 GMT
+      - Fri, 25 Apr 2014 14:03:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -387,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 3074d4d0c98e79a9e5932e793dd5518b
+      - e32d694da2f714364fee97fb08046efd
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:19 GMT; secure
-      - _session_id=3074d4d0c98e79a9e5932e793dd5518b; path=/; secure; HttpOnly
-      - _web_tracking=eb56bb886ef317c67b78b7fe29fbf59d; path=/; expires=Tue, 28-Apr-2015
-        08:13:19 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:14 GMT; secure
+      - _session_id=e32d694da2f714364fee97fb08046efd; path=/; secure; HttpOnly
+      - _web_tracking=800ac1e665f169c8e318d66bcff7a6c0; path=/; expires=Sat, 25-Apr-2015
+        14:03:14 GMT; secure
       X-Request-Id:
-      - f0f0a4ad-cb61-4c1b-a36e-49c170a495ca
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       X-Runtime:
-      - '0.068921'
+      - '0.344762'
       X-Rack-Cache:
       - miss
       P3p:
@@ -440,7 +104,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"L50o8Q6SSQZlale9qAezGA4AeyRU0EeeBr5vMqvFkyk=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -465,7 +129,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"L50o8Q6SSQZlale9qAezGA4AeyRU0EeeBr5vMqvFkyk=\" /></div></form>
+        type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -475,7 +139,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"L50o8Q6SSQZlale9qAezGA4AeyRU0EeeBr5vMqvFkyk=\" /></div></form>
+        type=\"hidden\" value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -500,9 +164,9 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"L50o8Q6SSQZlale9qAezGA4AeyRU0EeeBr5vMqvFkyk=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"VXFlcl589M4E9V8q5VxQb2nu37j2DIkd01SwwRvlJpY=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:20 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:15 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -513,7 +177,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f0f0a4ad-cb61-4c1b-a36e-49c170a495ca
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -526,7 +190,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:20 GMT
+      - Fri, 25 Apr 2014 14:03:15 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -554,16 +218,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 96e8a28b3df8424cbf3ee1768b986194
+      - 8fc82712d20fce5d57d87526a4285dff
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:20 GMT; secure
-      - _session_id=96e8a28b3df8424cbf3ee1768b986194; path=/; secure; HttpOnly
-      - _web_tracking=e0ef892e1008d0d7842d0bf60747b608; path=/; expires=Tue, 28-Apr-2015
-        08:13:20 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:15 GMT; secure
+      - _session_id=8fc82712d20fce5d57d87526a4285dff; path=/; secure; HttpOnly
+      - _web_tracking=0f07a38c38cf474f2c9b926408929ab3; path=/; expires=Sat, 25-Apr-2015
+        14:03:15 GMT; secure
       X-Request-Id:
-      - f0f0a4ad-cb61-4c1b-a36e-49c170a495ca
+      - c8fb3799-9b41-4a3c-aff1-1ddfbc457bb7
       X-Runtime:
-      - '0.069069'
+      - '0.050998'
       X-Rack-Cache:
       - miss
       P3p:
@@ -607,7 +271,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"9ZJ4o0vbnDBTQtWHZTtWiXRs4D7dd1ooa4zwhZeUsjA=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -632,7 +296,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"9ZJ4o0vbnDBTQtWHZTtWiXRs4D7dd1ooa4zwhZeUsjA=\" /></div></form>
+        type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -642,7 +306,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"9ZJ4o0vbnDBTQtWHZTtWiXRs4D7dd1ooa4zwhZeUsjA=\" /></div></form>
+        type=\"hidden\" value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -667,7 +331,7 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"9ZJ4o0vbnDBTQtWHZTtWiXRs4D7dd1ooa4zwhZeUsjA=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"e/gT6l1aqwEdpJNdyx0Nn+m6QL2RnEbswF0JJW9Ufpo=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:20 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:16 GMT
 recorded_with: VCR 2.9.0

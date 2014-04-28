@@ -2,342 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:37 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 92d35677c8371a829112c1fdee2c0ae6
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:37 GMT; secure
-      - _session_id=92d35677c8371a829112c1fdee2c0ae6; path=/; secure; HttpOnly
-      - _web_tracking=8a835623ec61314b887d49c9217f2ebf; path=/; expires=Sat, 25-Apr-2015
-        16:32:37 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.023713'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:39 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:37 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 4c7e780e7a8fd696db8e450b174c6fef
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:37 GMT; secure
-      - _session_id=4c7e780e7a8fd696db8e450b174c6fef; path=/; secure; HttpOnly
-      - _web_tracking=5bea0d26c331918d6577b542d669d3b8; path=/; expires=Sat, 25-Apr-2015
-        16:32:37 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.038382'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:39 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:38 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - f0f1dc4137077d4405c043cc82af2a47
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:38 GMT; secure
-      - _session_id=f0f1dc4137077d4405c043cc82af2a47; path=/; secure; HttpOnly
-      - _web_tracking=1cc84446fc9facc4019488cf463ee464; path=/; expires=Sat, 25-Apr-2015
-        16:32:38 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.024625'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:39 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:38 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 94a34bd5b17f479f5973ba30416f660b
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:38 GMT; secure
-      - _session_id=94a34bd5b17f479f5973ba30416f660b; path=/; secure; HttpOnly
-      - _web_tracking=08777a31c54fb064d14fcb3ee91fb502; path=/; expires=Sat, 25-Apr-2015
-        16:32:38 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.019636'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:40 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:38 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 53447b0f3f887424c204722c9f3ff07f
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:38 GMT; secure
-      - _session_id=53447b0f3f887424c204722c9f3ff07f; path=/; secure; HttpOnly
-      - _web_tracking=8d1ad61c11b10a77111bca7b16bf44cb; path=/; expires=Sat, 25-Apr-2015
-        16:32:38 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.025980'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:40 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-schemes-faqs.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:39 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - a3e0c7577fbc4d165a742ce58319e8ae
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:39 GMT; secure
-      - _session_id=a3e0c7577fbc4d165a742ce58319e8ae; path=/; secure; HttpOnly
-      - _web_tracking=c3f1cba237f6733509b96f4dba9ed1cf; path=/; expires=Sat, 25-Apr-2015
-        16:32:39 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.020509'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:40 GMT
-- request:
-    method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
     body:
       encoding: US-ASCII
@@ -346,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 27043558-3769-4fa6-84a2-0500bfd72141
+      - 5b822d82-d06c-4bcc-b2e8-8acffc66c016
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -359,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 16:32:39 GMT
+      - Fri, 25 Apr 2014 13:53:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -387,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 203dff460624378916f5d762be2c605a
+      - 3b03393b92bc5af15ce0ef890523a9e6
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:39 GMT; secure
-      - _session_id=203dff460624378916f5d762be2c605a; path=/; secure; HttpOnly
-      - _web_tracking=6c6caa2e5201b69bda685e2dde8981a8; path=/; expires=Sat, 25-Apr-2015
-        16:32:39 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 13:53:55 GMT; secure
+      - _session_id=3b03393b92bc5af15ce0ef890523a9e6; path=/; secure; HttpOnly
+      - _web_tracking=f683bec3ab8ac50256aef181aed33c2b; path=/; expires=Sat, 25-Apr-2015
+        13:53:55 GMT; secure
       X-Request-Id:
-      - 27043558-3769-4fa6-84a2-0500bfd72141
+      - 5b822d82-d06c-4bcc-b2e8-8acffc66c016
       X-Runtime:
-      - '0.050895'
+      - '0.045010'
       X-Rack-Cache:
       - miss
       P3p:
@@ -440,7 +104,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"I0eKn1JSrX3LNbLVMSMap2iQMObzJ/EImQLpL5iM8LM=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5WvtiGAf724eWU2LvGwoZHdIsNMVinMjHfinakARaNk=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -465,7 +129,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"I0eKn1JSrX3LNbLVMSMap2iQMObzJ/EImQLpL5iM8LM=\" /></div></form>
+        type=\"hidden\" value=\"5WvtiGAf724eWU2LvGwoZHdIsNMVinMjHfinakARaNk=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -475,7 +139,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"I0eKn1JSrX3LNbLVMSMap2iQMObzJ/EImQLpL5iM8LM=\" /></div></form>
+        type=\"hidden\" value=\"5WvtiGAf724eWU2LvGwoZHdIsNMVinMjHfinakARaNk=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -500,9 +164,9 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"I0eKn1JSrX3LNbLVMSMap2iQMObzJ/EImQLpL5iM8LM=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"5WvtiGAf724eWU2LvGwoZHdIsNMVinMjHfinakARaNk=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:41 GMT
+  recorded_at: Fri, 25 Apr 2014 13:53:56 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -513,7 +177,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 77f1b0aa-a7f1-4e56-a181-72472fa963a7
+      - 544246ca-1f00-4601-88f2-ff938f511014
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -526,7 +190,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 16:32:40 GMT
+      - Fri, 25 Apr 2014 13:53:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -554,16 +218,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 70e9084b48856b8ca4dd8eb97ad64a26
+      - 433d333ac2dfd5f6ce7f329670d8f4a1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:39 GMT; secure
-      - _session_id=70e9084b48856b8ca4dd8eb97ad64a26; path=/; secure; HttpOnly
-      - _web_tracking=16a96c6029dd759a99fc500843586141; path=/; expires=Sat, 25-Apr-2015
-        16:32:39 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 13:53:56 GMT; secure
+      - _session_id=433d333ac2dfd5f6ce7f329670d8f4a1; path=/; secure; HttpOnly
+      - _web_tracking=b824ee40592c6179e57d4b73deb20a4c; path=/; expires=Sat, 25-Apr-2015
+        13:53:56 GMT; secure
       X-Request-Id:
-      - 77f1b0aa-a7f1-4e56-a181-72472fa963a7
+      - 544246ca-1f00-4601-88f2-ff938f511014
       X-Runtime:
-      - '0.055561'
+      - '0.037474'
       X-Rack-Cache:
       - miss
       P3p:
@@ -627,7 +291,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"jrduLZ8kZXmNzKnsv6NIJ9HP+OYJIr2c9SUcxB8sSck=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"4f3krqNX/qDTymQBr5TZ2JG/ai4BwTVfsDvafLRCKR8=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -636,7 +300,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"jrduLZ8kZXmNzKnsv6NIJ9HP+OYJIr2c9SUcxB8sSck=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"4f3krqNX/qDTymQBr5TZ2JG/ai4BwTVfsDvafLRCKR8=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -663,10 +327,10 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"jrduLZ8kZXmNzKnsv6NIJ9HP+OYJIr2c9SUcxB8sSck=\" /></div></form>
+        type=\"hidden\" value=\"4f3krqNX/qDTymQBr5TZ2JG/ai4BwTVfsDvafLRCKR8=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:41 GMT
+  recorded_at: Fri, 25 Apr 2014 13:53:57 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -677,7 +341,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 77f1b0aa-a7f1-4e56-a181-72472fa963a7
+      - 544246ca-1f00-4601-88f2-ff938f511014
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -690,7 +354,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 16:32:40 GMT
+      - Fri, 25 Apr 2014 13:53:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -718,16 +382,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 10340cc8684a539a2bb6a6fbad639281
+      - ce8c224305543084d404753b07b6b436
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:40 GMT; secure
-      - _session_id=10340cc8684a539a2bb6a6fbad639281; path=/; secure; HttpOnly
-      - _web_tracking=0d4c643d1457e4f2f21f3c760f369b1a; path=/; expires=Sat, 25-Apr-2015
-        16:32:40 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 13:53:56 GMT; secure
+      - _session_id=ce8c224305543084d404753b07b6b436; path=/; secure; HttpOnly
+      - _web_tracking=3d290f06d9c7f99b3c0e5b9a2067b5b4; path=/; expires=Sat, 25-Apr-2015
+        13:53:56 GMT; secure
       X-Request-Id:
-      - 77f1b0aa-a7f1-4e56-a181-72472fa963a7
+      - 544246ca-1f00-4601-88f2-ff938f511014
       X-Runtime:
-      - '0.051871'
+      - '0.040230'
       X-Rack-Cache:
       - miss
       P3p:
@@ -791,7 +455,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"wB3KjYSYSBM5G3aE8QsWKPWq1riNuJOoCgTiiE/gwhM=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"b1OELqeQvlY+5oP/zwQBBYXFjWLSIMhxxC5RuAiC/mc=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -800,7 +464,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"wB3KjYSYSBM5G3aE8QsWKPWq1riNuJOoCgTiiE/gwhM=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"b1OELqeQvlY+5oP/zwQBBYXFjWLSIMhxxC5RuAiC/mc=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -827,8 +491,8 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"wB3KjYSYSBM5G3aE8QsWKPWq1riNuJOoCgTiiE/gwhM=\" /></div></form>
+        type=\"hidden\" value=\"b1OELqeQvlY+5oP/zwQBBYXFjWLSIMhxxC5RuAiC/mc=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:42 GMT
+  recorded_at: Fri, 25 Apr 2014 13:53:57 GMT
 recorded_with: VCR 2.9.0

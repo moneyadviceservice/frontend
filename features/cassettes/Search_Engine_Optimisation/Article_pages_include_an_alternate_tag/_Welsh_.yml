@@ -2,342 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:27 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 27f8081f2cd5599dce4504f896bd262c
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:27 GMT; secure
-      - _session_id=27f8081f2cd5599dce4504f896bd262c; path=/; secure; HttpOnly
-      - _web_tracking=31555cb627dfee30ef4c120cb3af8f52; path=/; expires=Tue, 28-Apr-2015
-        08:13:27 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.020905'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:27 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:27 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 578859e8aae947f2aa3d247f41805cc1
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:27 GMT; secure
-      - _session_id=578859e8aae947f2aa3d247f41805cc1; path=/; secure; HttpOnly
-      - _web_tracking=9df845c19ed0cebc526cdf09c5c76337; path=/; expires=Tue, 28-Apr-2015
-        08:13:27 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.020280'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:28 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:28 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - c5587b243307b45364a478bd7d545c3c
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:28 GMT; secure
-      - _session_id=c5587b243307b45364a478bd7d545c3c; path=/; secure; HttpOnly
-      - _web_tracking=cd10296b54ae346a4f2795e68c6039b6; path=/; expires=Tue, 28-Apr-2015
-        08:13:28 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.035503'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:28 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:28 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 9a4bbbf16fe040f2c043830a6d777d46
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:28 GMT; secure
-      - _session_id=9a4bbbf16fe040f2c043830a6d777d46; path=/; secure; HttpOnly
-      - _web_tracking=f292a25777b25538ef2692c6089a05a1; path=/; expires=Tue, 28-Apr-2015
-        08:13:28 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.025535'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:28 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:28 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 008e38ddef5fc81a8d59c54756250896
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:28 GMT; secure
-      - _session_id=008e38ddef5fc81a8d59c54756250896; path=/; secure; HttpOnly
-      - _web_tracking=dff63a704b5ff2b66d72d0b228aa533c; path=/; expires=Tue, 28-Apr-2015
-        08:13:28 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.023998'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:28 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 08:13:28 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - d87da25ae39efa2c7b9a70ea066e64b7
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:28 GMT; secure
-      - _session_id=d87da25ae39efa2c7b9a70ea066e64b7; path=/; secure; HttpOnly
-      - _web_tracking=616800762740a0f4dacb94ba71160863; path=/; expires=Tue, 28-Apr-2015
-        08:13:28 GMT; secure
-      X-Request-Id:
-      - ae391cea-f275-446b-a483-5d23a4a1334a
-      X-Runtime:
-      - '0.022766'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:29 GMT
-- request:
-    method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
     body:
       encoding: US-ASCII
@@ -346,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -359,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:29 GMT
+      - Fri, 25 Apr 2014 14:03:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -387,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 420ab769a5c25160c8c8136b32f4867e
+      - bc3a49c24ef509411f58db8545fcde91
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:29 GMT; secure
-      - _session_id=420ab769a5c25160c8c8136b32f4867e; path=/; secure; HttpOnly
-      - _web_tracking=ecd68e17f6d57075b423e736f3ce9d2c; path=/; expires=Tue, 28-Apr-2015
-        08:13:29 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:22 GMT; secure
+      - _session_id=bc3a49c24ef509411f58db8545fcde91; path=/; secure; HttpOnly
+      - _web_tracking=8dc7a6d85a5388c44239cdabbe0d1f97; path=/; expires=Sat, 25-Apr-2015
+        14:03:22 GMT; secure
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       X-Runtime:
-      - '0.314913'
+      - '0.040172'
       X-Rack-Cache:
       - miss
       P3p:
@@ -460,7 +124,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"CUQ3vaesaTPejdzHJVUkpilVDMHj1lQs1ja4pVhRAfg=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Yx8wfvT5bzYNMtb9Zg/nN4mZRt1vAF3A4LLUEDFbzP0=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -469,7 +133,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"CUQ3vaesaTPejdzHJVUkpilVDMHj1lQs1ja4pVhRAfg=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Yx8wfvT5bzYNMtb9Zg/nN4mZRt1vAF3A4LLUEDFbzP0=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -496,10 +160,10 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"CUQ3vaesaTPejdzHJVUkpilVDMHj1lQs1ja4pVhRAfg=\" /></div></form>
+        type=\"hidden\" value=\"Yx8wfvT5bzYNMtb9Zg/nN4mZRt1vAF3A4LLUEDFbzP0=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:29 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:23 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -510,7 +174,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -523,7 +187,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:29 GMT
+      - Fri, 25 Apr 2014 14:03:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -539,23 +203,23 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Session-Id:
-      - dbe8fff18c1e359f9761bc1941b813a0
+      - f3c511d110e017a971c7a5cc1a61ba88
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:29 GMT; secure
-      - _session_id=dbe8fff18c1e359f9761bc1941b813a0; path=/; secure; HttpOnly
-      - _web_tracking=636a156c824fff3303a05f72c30775d5; path=/; expires=Tue, 28-Apr-2015
-        08:13:29 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:23 GMT; secure
+      - _session_id=f3c511d110e017a971c7a5cc1a61ba88; path=/; secure; HttpOnly
+      - _web_tracking=440f9977003af749f13c31f77aa293ad; path=/; expires=Sat, 25-Apr-2015
+        14:03:23 GMT; secure
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       X-Runtime:
-      - '0.026514'
+      - '0.025601'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
       string: " "
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:30 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:23 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -566,7 +230,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -579,7 +243,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:30 GMT
+      - Fri, 25 Apr 2014 14:03:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -595,23 +259,23 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Session-Id:
-      - 366dc10203b56a54a54792281d9cd44d
+      - 2ae2bfa1660cd4d22fa9463603cf2cef
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:30 GMT; secure
-      - _session_id=366dc10203b56a54a54792281d9cd44d; path=/; secure; HttpOnly
-      - _web_tracking=29f1dcc1f871dcfe1bbc9a67c8a1de87; path=/; expires=Tue, 28-Apr-2015
-        08:13:30 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:23 GMT; secure
+      - _session_id=2ae2bfa1660cd4d22fa9463603cf2cef; path=/; secure; HttpOnly
+      - _web_tracking=5d6a0f990bce92c9220979a577700aa1; path=/; expires=Sat, 25-Apr-2015
+        14:03:23 GMT; secure
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       X-Runtime:
-      - '0.030364'
+      - '0.025727'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
       string: " "
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:30 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:24 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -622,7 +286,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -635,7 +299,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:30 GMT
+      - Fri, 25 Apr 2014 14:03:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -651,23 +315,23 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Session-Id:
-      - 73b84712ef44b0951ac824a513d64fb4
+      - 1feae467c0d735bee7efa48ac709a600
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:30 GMT; secure
-      - _session_id=73b84712ef44b0951ac824a513d64fb4; path=/; secure; HttpOnly
-      - _web_tracking=e92d9c8017a8cfc3a2ca958909024f24; path=/; expires=Tue, 28-Apr-2015
-        08:13:30 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:23 GMT; secure
+      - _session_id=1feae467c0d735bee7efa48ac709a600; path=/; secure; HttpOnly
+      - _web_tracking=c94ee0c1367e941d1126530a2141262e; path=/; expires=Sat, 25-Apr-2015
+        14:03:23 GMT; secure
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       X-Runtime:
-      - '0.019814'
+      - '0.022154'
       X-Rack-Cache:
       - miss
     body:
       encoding: UTF-8
       string: " "
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:30 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:24 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -678,7 +342,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -691,7 +355,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 08:13:30 GMT
+      - Fri, 25 Apr 2014 14:03:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -719,16 +383,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c016d2d14dd72ca63af3f887bed3def2
+      - 96b10582390fc79d50c2aa783383369b
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 08:13:30 GMT; secure
-      - _session_id=c016d2d14dd72ca63af3f887bed3def2; path=/; secure; HttpOnly
-      - _web_tracking=d6b011b6ce8a0655b5a9e720efd68716; path=/; expires=Tue, 28-Apr-2015
-        08:13:30 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 14:03:24 GMT; secure
+      - _session_id=96b10582390fc79d50c2aa783383369b; path=/; secure; HttpOnly
+      - _web_tracking=50734de3fc0105b6f733b3a722f75137; path=/; expires=Sat, 25-Apr-2015
+        14:03:24 GMT; secure
       X-Request-Id:
-      - 3bf9c3c0-317b-42be-8021-002fe0472a03
+      - dfedd0a9-e4eb-46ca-a598-70f4cd11e2b6
       X-Runtime:
-      - '0.050311'
+      - '0.039301'
       X-Rack-Cache:
       - miss
       P3p:
@@ -792,7 +456,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"43fI5682oWao0T6nztc6vlnHGoma0dx/aTFAhfHdimk=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"oO6+HHjmVHqht7Y6IBWRq+6Mjc+RTla4jWE5UW6AR24=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -801,7 +465,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"43fI5682oWao0T6nztc6vlnHGoma0dx/aTFAhfHdimk=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"oO6+HHjmVHqht7Y6IBWRq+6Mjc+RTla4jWE5UW6AR24=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -828,8 +492,8 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"43fI5682oWao0T6nztc6vlnHGoma0dx/aTFAhfHdimk=\" /></div></form>
+        type=\"hidden\" value=\"oO6+HHjmVHqht7Y6IBWRq+6Mjc+RTla4jWE5UW6AR24=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 08:13:32 GMT
+  recorded_at: Fri, 25 Apr 2014 14:03:25 GMT
 recorded_with: VCR 2.9.0

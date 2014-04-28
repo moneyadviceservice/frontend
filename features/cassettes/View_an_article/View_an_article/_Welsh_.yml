@@ -2,342 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:32 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - f72f0c4897df476fee9ca65e3ebba02a
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:32 GMT; secure
-      - _session_id=f72f0c4897df476fee9ca65e3ebba02a; path=/; secure; HttpOnly
-      - _web_tracking=492beef1a4edd8e977ebb8aa9898845a; path=/; expires=Sat, 25-Apr-2015
-        16:32:32 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.018592'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:33 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:32 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - ca7523cc02758e6ee9b5cc9a303acdc9
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:32 GMT; secure
-      - _session_id=ca7523cc02758e6ee9b5cc9a303acdc9; path=/; secure; HttpOnly
-      - _web_tracking=1e83f2b097e8dde26297cee53408dbe5; path=/; expires=Sat, 25-Apr-2015
-        16:32:32 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.020357'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:34 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:32 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - 4ff631ecd1e0cd6b81bc3454a74751b5
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:32 GMT; secure
-      - _session_id=4ff631ecd1e0cd6b81bc3454a74751b5; path=/; secure; HttpOnly
-      - _web_tracking=e2eb929d6ad532cd16df3e4b8eda3194; path=/; expires=Sat, 25-Apr-2015
-        16:32:32 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.021365'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:34 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:33 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - fe77abddc4cf52a05e28d9e011297290
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:33 GMT; secure
-      - _session_id=fe77abddc4cf52a05e28d9e011297290; path=/; secure; HttpOnly
-      - _web_tracking=4fe1d97351aa66d3c28dcbd011042800; path=/; expires=Sat, 25-Apr-2015
-        16:32:33 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.018479'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:34 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:33 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - f7594c0382294a47295c85d496652d38
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:33 GMT; secure
-      - _session_id=f7594c0382294a47295c85d496652d38; path=/; secure; HttpOnly
-      - _web_tracking=9ed98470835796e24c129d61dcce9afc; path=/; expires=Sat, 25-Apr-2015
-        16:32:33 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.025421'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:35 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:33 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 404 Not Found
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Session-Id:
-      - cf5353b92f68da8b104a359852d02eb9
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:33 GMT; secure
-      - _session_id=cf5353b92f68da8b104a359852d02eb9; path=/; secure; HttpOnly
-      - _web_tracking=876dd713c8d5fa5e323353679a828eb0; path=/; expires=Sat, 25-Apr-2015
-        16:32:33 GMT; secure
-      X-Request-Id:
-      - 2e05b365-1358-4583-8206-50ee78745329
-      X-Runtime:
-      - '0.018902'
-      X-Rack-Cache:
-      - miss
-    body:
-      encoding: UTF-8
-      string: " "
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:35 GMT
-- request:
-    method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
     body:
       encoding: US-ASCII
@@ -346,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
+      - 1058861d-0e55-49c5-b458-adcf4252bf54
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -359,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 16:32:34 GMT
+      - Fri, 25 Apr 2014 13:53:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -387,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - f6f2d3656ee0ae6e9f0d0140cf150387
+      - f46900eb5b79599d07e9777f7b39a6e6
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:34 GMT; secure
-      - _session_id=f6f2d3656ee0ae6e9f0d0140cf150387; path=/; secure; HttpOnly
-      - _web_tracking=5d87e3e60809c3756d26b98cab17ffb5; path=/; expires=Sat, 25-Apr-2015
-        16:32:34 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 13:53:54 GMT; secure
+      - _session_id=f46900eb5b79599d07e9777f7b39a6e6; path=/; secure; HttpOnly
+      - _web_tracking=86d0690ff783543db523eb25a9d31abf; path=/; expires=Sat, 25-Apr-2015
+        13:53:54 GMT; secure
       X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
+      - 1058861d-0e55-49c5-b458-adcf4252bf54
       X-Runtime:
-      - '0.065199'
+      - '0.039984'
       X-Rack-Cache:
       - miss
       P3p:
@@ -460,7 +124,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"25VTQV7Sxev9Y+VmAAJOdmy7i3OAvbmDSsq6et0wJMk=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Pvvy7xDlTpjK17vkKjTuvomK9Yu0MEeR2wJGHzZkaCY=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -469,7 +133,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"25VTQV7Sxev9Y+VmAAJOdmy7i3OAvbmDSsq6et0wJMk=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Pvvy7xDlTpjK17vkKjTuvomK9Yu0MEeR2wJGHzZkaCY=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -496,10 +160,10 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"25VTQV7Sxev9Y+VmAAJOdmy7i3OAvbmDSsq6et0wJMk=\" /></div></form>
+        type=\"hidden\" value=\"Pvvy7xDlTpjK17vkKjTuvomK9Yu0MEeR2wJGHzZkaCY=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:36 GMT
+  recorded_at: Fri, 25 Apr 2014 13:53:55 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -510,7 +174,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
+      - 1058861d-0e55-49c5-b458-adcf4252bf54
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -523,7 +187,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 25 Apr 2014 16:32:34 GMT
+      - Fri, 25 Apr 2014 13:53:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -551,16 +215,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c82c856b8b3c26c4bf8323e7b68fa40f
+      - 069c626c4dbceed27f14f241f128e0e0
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:34 GMT; secure
-      - _session_id=c82c856b8b3c26c4bf8323e7b68fa40f; path=/; secure; HttpOnly
-      - _web_tracking=a3b8642ee99c4baea2e5fbf98c660836; path=/; expires=Sat, 25-Apr-2015
-        16:32:34 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 13:53:55 GMT; secure
+      - _session_id=069c626c4dbceed27f14f241f128e0e0; path=/; secure; HttpOnly
+      - _web_tracking=851a2b490897d33779bb07fefd710c91; path=/; expires=Sat, 25-Apr-2015
+        13:53:55 GMT; secure
       X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
+      - 1058861d-0e55-49c5-b458-adcf4252bf54
       X-Runtime:
-      - '0.055123'
+      - '0.038823'
       X-Rack-Cache:
       - miss
       P3p:
@@ -624,7 +288,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"TPd0fNnlKl4EXsTFxaEfZA/ez/GGGfCd+kH2oCWUMIM=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5DMAAQmC5QAynbJ9ZZF1AvsmOZvJnKnVGWz20XyRXcQ=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -633,7 +297,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"TPd0fNnlKl4EXsTFxaEfZA/ez/GGGfCd+kH2oCWUMIM=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5DMAAQmC5QAynbJ9ZZF1AvsmOZvJnKnVGWz20XyRXcQ=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -660,336 +324,8 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"TPd0fNnlKl4EXsTFxaEfZA/ez/GGGfCd+kH2oCWUMIM=\" /></div></form>
+        type=\"hidden\" value=\"5DMAAQmC5QAynbJ9ZZF1AvsmOZvJnKnVGWz20XyRXcQ=\" /></div></form>
         </div></p>","categories":["affordable-housing-schemes"]}'
     http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:36 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:35 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 00fe3d2b4f8b8012216bfef9f20a1cdf
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:35 GMT; secure
-      - _session_id=00fe3d2b4f8b8012216bfef9f20a1cdf; path=/; secure; HttpOnly
-      - _web_tracking=077d9098a1fbcca80a1c106a75ff35c5; path=/; expires=Sat, 25-Apr-2015
-        16:32:35 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.042424'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"9MSNoZnKdXy5jFor2DFO33RMI4+XZR/IE1THiCO3ITM=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"9MSNoZnKdXy5jFor2DFO33RMI4+XZR/IE1THiCO3ITM=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
-        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
-        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"9MSNoZnKdXy5jFor2DFO33RMI4+XZR/IE1THiCO3ITM=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:37 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 25 Apr 2014 16:32:36 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 29dd7643babb509a649998976ab6aed5
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 25-Apr-2015 16:32:36 GMT; secure
-      - _session_id=29dd7643babb509a649998976ab6aed5; path=/; secure; HttpOnly
-      - _web_tracking=ac9a85513e288f52f740f5106a431ba0; path=/; expires=Sat, 25-Apr-2015
-        16:32:36 GMT; secure
-      X-Request-Id:
-      - 22f51ce2-bd18-447d-a65f-d6ef1c48d0c6
-      X-Runtime:
-      - '0.062797'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"qNlCVoqIhOo3dWOlIKyTuTMCxFlbFqW7TvmWy1fEA0s=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"qNlCVoqIhOo3dWOlIKyTuTMCxFlbFqW7TvmWy1fEA0s=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
-        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
-        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"qNlCVoqIhOo3dWOlIKyTuTMCxFlbFqW7TvmWy1fEA0s=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
-    http_version: 
-  recorded_at: Fri, 25 Apr 2014 16:32:38 GMT
+  recorded_at: Fri, 25 Apr 2014 13:53:55 GMT
 recorded_with: VCR 2.9.0

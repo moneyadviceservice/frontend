@@ -16,4 +16,8 @@
   .search-box__input {
     border: 1px solid $color-search-border;
   }
+
+  .pagination {
+    margin: $baseline-unit*8 0 $baseline-unit*6 0;
+  }
 }

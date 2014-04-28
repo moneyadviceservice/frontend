@@ -3,27 +3,12 @@
                  alternate:   article.alternate_options) %>
 
 <div class="l-article editorial">
-  <div class="l-article-intro">
-    <h1><%= title article.title %></h1>
+  <h1><%= title article.title %></h1>
 
-    <p class="intro">
-      <%= article.intro %>
-    </p>
+  <div id="article-content">
+    <%= article.content %>
   </div>
-
-  <hr class="l-hr-article-intro"/>
-
-  <%= render 'shared/related_categories', categories: related_categories %>
-
-  <div class="l-article-main">
-    <%= article.content_without_intro %>
-  </div>
-
-  <hr class="l-hr-article-related-links"/>
-
-  <%= render 'shared/related_links', categories: related_categories %>
 </div>
-
 <% content_for(:alternate_link) do %>
   <% article.footer_alternate_options.each do |locale, url| %>
     <%= link_to(url, id: "#{locale}Link", lang: locale) do %>

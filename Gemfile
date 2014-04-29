@@ -11,6 +11,7 @@ gem 'rails', '4.1.0'
 
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
+gem 'feature'
 gem 'foreman'
 gem 'gaffe'
 gem 'kss'

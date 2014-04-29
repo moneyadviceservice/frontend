@@ -150,6 +150,7 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
+    feature (1.0.0)
     ffi (1.9.3)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -383,6 +384,7 @@ DEPENDENCIES
   ejs
   faker
   faraday_middleware
+  feature
   foreman
   gaffe
   guard-bundler

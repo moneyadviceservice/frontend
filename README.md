@@ -47,6 +47,38 @@ $ foreman s
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
 
+### Feature Toggles
+
+We favor [Feature Toggles] over [Feature Branches]. To define features create a
+configuration file, *config/features.yml* with toggles for various features that
+are pending:
+
+```yml
+features:
+  an_active_feature: true
+  an_inactive_feature: false
+```
+
+At runtime you can use these toggles in order to decide whether or not to show a feature:
+
+```rb
+Feature.active(:an_active_feature) # => true/false
+
+Feature.deactive?(:an_active_feature) # => true/false
+
+Feature.with(:an_active_feature) do
+  # code
+end
+
+Feature.without(:an_active_feature) do
+  # code
+end
+```
+
+Our feature toggles are designed to be used to hide partly build features, often
+referred to as **release toggles**. A toggle and any conditional behaviour must
+be removed once a feature is complete.
+
 ### Feature Development
 
 We like to develop features from the outside in. We write our user stories in a
@@ -127,6 +159,8 @@ presentational concerns.
 [bower]: http://bower.io
 [bundler]: http://bundler.io
 [draper]: https://github.com/drapergem/draper
+[feature branches]: http://martinfowler.com/bliki/FeatureBranch.html
+[feature toggles]: http://martinfowler.com/bliki/FeatureToggle.html
 [git]: http://git-scm.com
 [konacha]: https://github.com/jfirebaugh/konacha
 [kss]: https://github.com/kneath/kss

@@ -1,12 +1,15 @@
 .l-article {
   @include column(12);
+  margin-bottom: $baseline-unit*4;
 
   @include respond-to($mq-m) {
     @include column(9);
+    margin-bottom: $baseline-unit*4;
   }
 
   @include respond-to($mq-l) {
     @include column(6);
+    margin-bottom: $baseline-unit*4;
   }
 }
 

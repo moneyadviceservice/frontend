@@ -6,7 +6,7 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['common', 'waypoints'], function (MAS) {
+define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
   'use strict';
 

@@ -59,29 +59,32 @@ define(['jquery', 'common'], function ($, MAS) {
     this.sections = [];
     this.selected = false;
 
-    var _this = this,
-        triggers = $(this.o.triggerEl),
-        l = triggers.length,
-        i = 0;
+    $('document').ready(function(){
+      var _this = this,
+          triggers = $(this.o.triggerEl),
+          l = triggers.length,
+          i = 0;
 
-    if(l === 0){
-      return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
-    }
-
-    for(i; i<l; i++){
-      this._setupEach.call(this, i, triggers[i]);
-    }
-
-    if(this.o.closeOffFocus){
-      this.$parent = $(this.o.parentWrapper);
-
-      if(!this.o.parentWrapper || !this.$parent.length) {
-        MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work properly');
-        return;
+      if(l === 0){
+        return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
       }
 
-      this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
-    }
+      for(i; i<l; i++){
+        this._setupEach.call(this, i, triggers[i]);
+      }
+
+      if(this.o.closeOffFocus){
+        this.$parent = $(this.o.parentWrapper);
+
+        if(!this.o.parentWrapper || !this.$parent.length) {
+          MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work');
+          return;
+        }
+
+        this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
+      }
+    });
+
   };
 
   Collapsible.prototype._delayDomCheck = function(){

@@ -24,43 +24,39 @@ if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
 require(['jquery', 'collapsable'], function ($, Collapsable) {
   'use strict';
 
-  $(document).ready(function () {
+  // Primary Nav
+  new Collapsable({
+    name: 'primaryNav',
+    closeOffFocus: true,
+    accordion: true,
+    triggerEl: '#primary-nav > li > a',
+    targetEl: '.primary-nav__dropdown',
+    parentWrapper: '#primary-nav'
+  });
 
-    // Primary Nav
-    new Collapsable({
-      name: 'primaryNav',
-      closeOffFocus: true,
-      accordion: true,
-      triggerEl: '#primary-nav > li > a',
-      targetEl: '.primary-nav__dropdown',
-      parentWrapper: '#primary-nav'
-    });
+  // Mobile Nav
+  new Collapsable({
+    name: 'mobileNav',
+    closeOffFocus: false,
+    accordion: true,
+    triggerEl: '.mobile-nav a',
+    targetType: 'href',
+    parentWrapper: '#primary-nav'
+  });
 
-    // Mobile Nav
-    new Collapsable({
-      name: 'mobileNav',
-      closeOffFocus: false,
-      accordion: true,
-      triggerEl: '.mobile-nav a',
-      targetType: 'href',
-      parentWrapper: '#primary-nav'
-    });
-
-    // Article Collapsables
-    new Collapsable({
-      name: 'articleCollapsables',
-      showOnlyFirst: true,
-      showIcon: true,
-      useButton: true
-    });
+  // Article Collapsables
+  new Collapsable({
+    name: 'articleCollapsables',
+    showOnlyFirst: true,
+    showIcon: true,
+    useButton: true
   });
 });
 
 require(['jquery', 'ujs'], function ($) {
   'use strict';
 
-  $(document).ready(function () {
-
+  $(document).ready(function(){
     // Cookie message
     $('.js-cookie-message').bind('ajax:success', function () {
       $('.cookie-message').hide();
@@ -76,12 +72,10 @@ require(['jquery', 'ujs'], function ($) {
 
 require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
   'use strict';
-
-  $(document).ready(function () {
-    // Analytics scroll tracking on editorial pages
-    scrollTracking({
-      el: '.editorial',
-      triggerPoints: [0.25, 0.5, 0.75, 1]
-    });
+  
+  // Analytics scroll tracking on editorial pages
+  scrollTracking({
+    el: '.editorial',
+    triggerPoints: [0.25, 0.5, 0.75, 1]
   });
 });

@@ -70,12 +70,14 @@ require(['jquery', 'ujs'], function ($) {
   });
 });
 
-require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
-  'use strict';
-  
-  // Analytics scroll tracking on editorial pages
-  scrollTracking({
-    el: '.editorial',
-    triggerPoints: [0.25, 0.5, 0.75, 1]
+if(window.enableScrollTracking){
+  require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
+    'use strict';
+    
+    // Analytics scroll tracking on editorial pages
+    scrollTracking({
+      el: '.editorial',
+      triggerPoints: [0.25, 0.5, 0.75, 1]
+    });
   });
-});
+}

@@ -13,7 +13,7 @@
 
   <hr class="l-hr-article-intro"/>
 
-  <%= render 'shared/related_categories', categories: related_categories %>
+  <%= render 'shared/related_categories', categories: article.parent_categories %>
 
   <div class="l-article-main">
     <%= article.content %>
@@ -21,7 +21,7 @@
 
   <hr class="l-hr-article-related-links"/>
 
-  <%= render 'shared/related_links', categories: related_categories %>
+  <%= render 'shared/related_links', categories: article.related_categories %>
 </div>
 
 <% content_for(:alternate_link) do %>

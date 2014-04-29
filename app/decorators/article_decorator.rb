@@ -25,6 +25,19 @@ class ArticleDecorator < Draper::Decorator
     @intro ||= HTMLProcessor::NodeContents.new(processed_body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
   end
 
+  def parent_categories
+    @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
+  end
+
+  def related_categories
+    @related_categories ||= object.categories.each_with_object([]) do |category, obj|
+      # Remove the article from the category's contents collection
+      category.contents.reject! { |a| a == object }
+      # Now only include the category if there are still contents
+      obj << CategoryDecorator.decorate(category) if category.contents.present?
+    end
+  end
+
   private
 
   def processed_body

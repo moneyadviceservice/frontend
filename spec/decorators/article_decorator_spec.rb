@@ -45,6 +45,24 @@ describe ArticleDecorator do
     end
   end
 
+  describe '#intro' do
+    let(:fixture) { 'spec/fixtures/pawnbrokers-how-they-work.json' }
+    let(:article) do
+      double(Core::Article,
+             id:          'bob',
+             title:       'uncle-bob-is-richer-than-you',
+             description: 'uncle is rich',
+             body:        MultiJson.load(File.read(fixture))['body'])
+    end
+
+    let(:processed_body) { Nokogiri::HTML(decorator.send(:processed_body)) }
+    let(:html) { decorator.intro }
+
+    it 'returns just the intro' do
+      expect(html).to eql processed_body.search(HTMLProcessor::INTRO_PARAGRAPH).inner_html
+    end
+  end
+
   describe '#content' do
     let(:article) do
       double(Core::Article,
@@ -69,6 +87,10 @@ describe ArticleDecorator do
 
       it 'strips action forms' do
         expect(html.search(HTMLProcessor::ACTION_FORM)).to be_empty
+      end
+
+      it 'strips out the intro' do
+        expect(html.search(HTMLProcessor::INTRO_PARAGRAPH)).to be_empty
       end
     end
 
@@ -98,6 +120,29 @@ describe ArticleDecorator do
 
       it 'strips collapse span' do
         expect(html.search(HTMLProcessor::COLLAPSIBLE_SPAN)).to be_empty
+      end
+    end
+  end
+
+  describe '#related_categories' do
+    let(:article) { Core::Article.new('article A', categories: [category]) }
+    let(:article_second_instance) { Core::Article.new('article A') }
+    let(:second_article) { Core::Article.new('Article B') }
+    let(:category) { Core::Category.new('test', contents: [article_second_instance, second_article]) }
+
+    it "removes the original article from it's categories' contents" do
+      expect(subject.related_categories.first.contents.map(&:object)).to_not include(article_second_instance)
+    end
+
+    it "retains the other article in it's categories' contents" do
+      expect(subject.related_categories.first.contents.map(&:object)).to include(second_article)
+    end
+
+    context 'if a category has no contents' do
+      let(:category) { Core::Category.new('test', contents: [article_second_instance]) }
+
+      it 'is excluded from the results' do
+        expect(subject.related_categories.map(&:object)).to_not include(category)
       end
     end
   end

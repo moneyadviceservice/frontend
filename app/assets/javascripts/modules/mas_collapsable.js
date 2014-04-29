@@ -20,7 +20,7 @@ define(['jquery', 'common'], function ($, MAS) {
     showText: true,
     showIcon: false,
     headingIcon: '<span class="icon icon--toggle"></span>',
-    headingText: '<span class="visually-hidden collapsable-hidden">{{txt}}</span>',
+    headingText: '<span class="visually-hidden js-collapsable-hidden">{{txt}}</span>',
     useButton: false,
 
     // Localised text strings
@@ -129,7 +129,7 @@ define(['jquery', 'common'], function ($, MAS) {
     }
 
     if(this.o.showIcon) this.sections[i].icon = trigger.find('.icon');
-    if(this.o.showText) this.sections[i].txt = trigger.find('.collapsable-hidden');
+    if(this.o.showText) this.sections[i].txt = trigger.find('.js-collapsable-hidden');
   };
 
   Collapsible.prototype._setupEach = function(i,el){

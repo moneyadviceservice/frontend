@@ -9,6 +9,7 @@
 //= depend_on_asset modules/mas_log
 //= depend_on_asset modules/mas_scrollTracking
 //= depend_on_asset modules/mas_collapsable
+//= depend_on_asset modules/mas_mediaQueries
 
 //= depend_on_asset modules/mas_common
 
@@ -31,6 +32,7 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     log:         '<%= requirejs_path('modules/mas_log') %>',
     scrollTracking:   '<%= requirejs_path('modules/mas_scrollTracking') %>',
     collapsable: '<%= requirejs_path('modules/mas_collapsable') %>',
+    mediaQueries:'<%= requirejs_path('modules/mas_mediaQueries') %>',
 
     // Common module to load shared dependancies
     common:      '<%= requirejs_path('modules/mas_common') %>'

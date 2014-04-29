@@ -38,6 +38,7 @@ module Frontend
                                   modules/mas_log.js
                                   modules/mas_pubsub.js
                                   modules/mas_scrollTracking.js
+                                  modules/mas_mediaQueries.js
                                   styleguide.js)
 
     # Configure additional vendor JS assets to precompile.

@@ -14,5 +14,10 @@ module Core
         send("#{name}=", value) if respond_to?("#{name}=")
       end
     end
+
+    def ==(other_entity)
+      self.class == other_entity.class && self.id == other_entity.id
+    end
+    alias_method :eql?, :==
   end
 end

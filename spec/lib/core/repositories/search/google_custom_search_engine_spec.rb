@@ -2,14 +2,19 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine'
 
 describe Core::Repositories::Search::GoogleCustomSearchEngine do
+  let(:key) { double }
   let(:cx_en) { double }
   let(:cx_cy) { double }
-  subject(:custom_search_engine) { described_class.new(double, cx_en, cx_cy) }
+  subject(:custom_search_engine) { described_class.new(key, cx_en, cx_cy) }
 
   let(:connection) { double }
+  let(:mapper) { double }
+  let(:mapped_response) { double }
 
   before do
     allow(Core::Registries::Connection).to receive(:[]).with(:google_api) { connection }
+    allow_any_instance_of(Core::Repositories::Search::GoogleCustomSearchEngineResponseMapper).
+      to receive(:mapped_response).and_return(mapped_response)
   end
 
   describe '#perform' do
@@ -34,7 +39,7 @@ describe Core::Repositories::Search::GoogleCustomSearchEngine do
         allow(connection).to receive(:get).and_raise(Core::Connection::ClientError)
       end
 
-      specify do
+      it 'raises a request error' do
         expect { perform_search }.to raise_error(described_class::RequestError)
       end
     end
@@ -44,8 +49,8 @@ describe Core::Repositories::Search::GoogleCustomSearchEngine do
         allow(connection).to receive(:get) { double(body: {}) }
       end
 
-      specify do
-        expect(perform_search).to be_an(Array)
+      it 'returns the mapped response' do
+        expect(perform_search).to eq mapped_response
       end
     end
 

@@ -16,12 +16,10 @@ module Core::Repositories
       end
 
       def perform(query)
-        mapper   = GoogleCustomSearchEngineResponseMapper.new
         response = ActiveSupport::Notifications.instrument(EVENT_NAME, query: query, locale: I18n.locale) do
           connection.get('customsearch/v1', key: key, cx: localized_cx, q: query)
         end
-
-        mapper.map(response)
+        GoogleCustomSearchEngineResponseMapper.new(response).mapped_response
 
       rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
         raise RequestError, 'Unable to fetch Search Results from Google Custom Search'

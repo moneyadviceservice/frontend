@@ -28,8 +28,8 @@ describe Core::Repositories::Search::GoogleCustomSearchEngineResponseMapper do
     subject(:mapped_response) { described_class.new.map(response) }
 
     it 'maps the id correctly' do
-        expect(mapped_response.first[:id]).to eq(id)
-      end
+      expect(mapped_response.first[:id]).to eq(id)
+    end
 
     it 'maps the type correctly' do
       expect(mapped_response.first[:type]).to eq(type)

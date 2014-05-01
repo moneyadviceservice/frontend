@@ -69,7 +69,8 @@ describe 'HTML validation' do
     let(:query) { 'what to do when someone dies' }
     let(:content_item) { build :article }
     let(:results) { [] }
-    let(:searcher) { -> { results } }
+    let(:result_collection) { double('search result collection', any?: false, items: results) }
+    let(:searcher) { -> { result_collection } }
 
     before do
       allow(Core::Searcher).to receive(:new).with(query).and_return(searcher)

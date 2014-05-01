@@ -20,8 +20,12 @@ module Core
         allow(Registries::Repository).to(receive(:[]).with(:search)) { double(perform: data) }
       end
 
-      it 'returns an array of search results' do
-        subject.call.each { |el| expect(el).to be_a(SearchResult) }
+      it 'returns a search result collection' do
+        expect(subject.call).to be_a(SearchResultCollection)
+      end
+
+      it 'returns a collection where #items is an array of search results' do
+        subject.call.items.each { |el| expect(el).to be_a(SearchResult) }
       end
 
       it "maps the array entries' `id' to the repositories' `id' value" do
@@ -45,7 +49,7 @@ module Core
         let(:data) { [{ id: id, title: title, type: type }] }
 
         it 'skips the invalid record' do
-          expect(subject.call.none? { |result| result.id == id }).to be_true
+          expect(subject.call.items.none? { |result| result.id == id }).to be_true
         end
 
         it 'should log the invalid record' do

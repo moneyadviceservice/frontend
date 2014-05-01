@@ -5,11 +5,13 @@ describe SearchResultsController do
   describe 'GET index' do
     let(:query) { 'query' }
     let(:search_results) { [double] }
+    let(:search_results_collection) { double(items: search_results) }
     let(:searcher) { double(Core::Searcher) }
 
     before do
       allow(Core::Searcher).to receive(:new) { searcher }
-      allow(searcher).to receive(:call) { search_results }
+      allow(searcher).to receive(:call) { search_results_collection }
+      allow(search_results_collection).to receive(:any?)
     end
 
     context 'with a search term' do
@@ -25,14 +27,14 @@ describe SearchResultsController do
         get :index, locale: I18n.locale, query: query
       end
 
-      it 'assigns the result of search reader to  @search_results' do
-        get :index, locale: I18n.locale, query: query
-
-        expect(assigns(:search_results)).to eq(search_results)
-      end
-
       context 'that returns results' do
-        before { allow(search_results).to receive(:present?).and_return(true) }
+        before { allow(search_results_collection).to receive(:any?).and_return(true) }
+
+        it "assigns the result of the search reader's items to @search_results" do
+          get :index, locale: I18n.locale, query: query
+
+          expect(assigns(:search_results)).to eq(search_results)
+        end
 
         it 'renders the right template' do
           get :index, locale: I18n.locale, query: query
@@ -42,7 +44,7 @@ describe SearchResultsController do
       end
 
       context 'that returns no results' do
-        before { allow(search_results).to receive(:present?).and_return(false) }
+        before { allow(search_results_collection).to receive(:any?).and_return(false) }
 
         it 'renders the right template' do
           get :index, locale: I18n.locale, query: query

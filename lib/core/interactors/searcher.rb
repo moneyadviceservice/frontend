@@ -1,3 +1,4 @@
+require 'core/entities/search_result_collection'
 require 'core/entities/search_result'
 require 'core/registries/repository'
 
@@ -12,12 +13,15 @@ module Core
     end
 
     def call
-      Registries::Repository[:search].perform(query).each_with_object([]) do |result_data, memo|
-        new_result = SearchResult.new(result_data.delete(:id), result_data)
-        if new_result.valid?
-          memo << new_result
-        else
-          Rails.logger.info("Invalid search result: #{new_result.inspect}")
+      data = Registries::Repository[:search].perform(query)
+      SearchResultCollection.new(query).tap do |results_collection|
+        data.each do |result_data|
+          new_result = SearchResult.new(result_data.delete(:id), result_data)
+          if new_result.valid?
+            results_collection.items << new_result
+          else
+            Rails.logger.info("Invalid search result: #{new_result.inspect}")
+          end
         end
       end
     end

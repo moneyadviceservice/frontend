@@ -5,9 +5,10 @@ class SearchResultsController < ApplicationController
 
   def index
     if params[:query].present?
-      @search_results = Core::Searcher.new(params[:query]).call
+      search_result_collection = Core::Searcher.new(params[:query]).call
 
-      if @search_results.present?
+      if search_result_collection.any?
+        @search_results = search_result_collection.items
         render 'search_results/index_with_results'
       else
         render 'search_results/index_no_results'

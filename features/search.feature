@@ -23,3 +23,18 @@ Feature: Searching
     Given I am on the home page
     When I submit a search with no query
     Then I should see the search page
+
+  Scenario: Browsing paginated results
+    When I am on the home page
+    And I search for a query that returns three pages of results
+    Then I should see what page of results I am on
+    And I should see the "Next" button
+    And I should not see the "Prev" button
+    When I go to the next page of results
+    Then I should see what page of results I am on
+    And I should see the "Next" button
+    And I should see the "Prev" button
+    When I go to the next page of results
+    Then I should see what page of results I am on
+    And I should not see the "Next" button
+    And I should see the "Prev" button

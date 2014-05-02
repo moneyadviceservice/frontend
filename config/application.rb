@@ -26,8 +26,8 @@ module Frontend
                                   frontend-assets/stylesheets/basic.css
                                   frontend-assets/stylesheets/font_files.css
                                   frontend-assets/stylesheets/font_base64.css
-                                  styleguide_fixed.css
-                                  styleguide_responsive.css)
+                                  styleguide/styleguide_fixed.css
+                                  styleguide/styleguide_responsive.css)
 
     # Configure additional application JS assets to precompile.
     config.assets.precompile += %w(html_inspector.js

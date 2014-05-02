@@ -9,7 +9,7 @@ describe HTMLProcessor::NodeContents do
   describe '.process' do
     subject(:processed_html) { processor.process('//p') }
 
-    it 'returns just the inner html' do
+    it 'returns just the inner HTML' do
       expect(processed_html).to eql(inner_html)
     end
   end

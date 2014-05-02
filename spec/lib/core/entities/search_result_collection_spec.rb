@@ -10,6 +10,15 @@ module Core
     it { should respond_to :items }
     it { should respond_to :items= }
 
+    it { should respond_to :total_results }
+    it { should respond_to :total_results= }
+
+    it { should respond_to :page }
+    it { should respond_to :page= }
+
+    it { should respond_to :per_page }
+    it { should respond_to :per_page= }
+
     describe '#items' do
       it 'is an empty array by default' do
         expect(subject.items).to be_kind_of(Array)

@@ -94,11 +94,20 @@ define(['jquery', 'common'], function ($, MAS) {
   };
 
   Collapsible.prototype._modifyButtonHTML = function (i) {
-    var trigger = this.sections[i].trigger,
-        txt = (this.o.showText) ?
-            this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection) :
-            '',
-        icon = (this.o.showIcon) ? this.o.headingIcon : '';
+    var icon, txt;
+    var trigger = this.sections[i].trigger;
+
+    if (this.o.showText) {
+      txt = this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection);
+    } else {
+      txt = '';
+    }
+
+    if (this.o.showIcon) {
+      icon = this.o.headingIcon;
+    } else {
+      icon = '';
+    }
 
     if (this.o.useButton) {
       var buttonTitle = trigger.text();
@@ -170,10 +179,14 @@ define(['jquery', 'common'], function ($, MAS) {
     });
 
     // Accessibility support for spacebar
-    this.sections[i].trigger.on('keypress', function (e) {
-      if (e.which === 32 && _this.sections[i].trigger[0].nodeName !== 'BUTTON' && !_this.o.useButton) {
-        e.preventDefault();
-        _this.sections[i].trigger.trigger('click');
+    this.sections[i].trigger.on('keypress', function(e) {
+      if (e.which === 32) {
+        if (_this.sections[i].trigger[0].nodeName !== 'BUTTON') {
+          if (!_this.o.useButton) {
+            e.preventDefault();
+            _this.sections[i].trigger.trigger('click');
+          }
+        }
       }
     });
     return this;

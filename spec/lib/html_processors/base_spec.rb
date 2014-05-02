@@ -1,10 +1,7 @@
 require 'html_processor/base'
 
 describe HTMLProcessor::Base, '#process' do
-  let(:html) { '<p>a paragraph</p>' }
-  let(:processor) { described_class.new(html) }
+  subject { described_class.new('<p>a paragraph</p>').process }
 
-  subject(:processed_html) { processor.process }
-
-  it { should eq(html) }
+  it { should eq('<p>a paragraph</p>') }
 end

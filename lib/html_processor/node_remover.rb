@@ -1,3 +1,5 @@
+require_dependency 'html_processor/base'
+
 module HTMLProcessor
   class NodeRemover < Base
     def process(*xpaths)

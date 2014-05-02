@@ -1,3 +1,5 @@
+require_dependency 'html_processor/base'
+
 module HTMLProcessor
   class TableWrapper < Base
     def process(*xpaths)

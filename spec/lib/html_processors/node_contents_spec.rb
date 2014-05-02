@@ -1,5 +1,4 @@
-require 'spec_helper'
-require 'html_processor'
+require 'html_processor/node_contents'
 
 describe HTMLProcessor::NodeContents do
   subject(:processor) { described_class.new(html) }

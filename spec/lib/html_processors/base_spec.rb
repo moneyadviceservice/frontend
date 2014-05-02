@@ -1,5 +1,4 @@
-require 'spec_helper'
-require 'html_processor'
+require 'html_processor/base'
 
 describe HTMLProcessor::Base, '#process' do
   let(:html) { '<p>a paragraph</p>' }

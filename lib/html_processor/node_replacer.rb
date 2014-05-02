@@ -1,3 +1,5 @@
+require_dependency 'html_processor/base'
+
 module HTMLProcessor
   class NodeReplacer < Base
     def process(xpath, new_tag)

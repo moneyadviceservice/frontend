@@ -1,5 +1,5 @@
-require 'spec_helper'
 require 'html_processor'
+require 'html_processor/video_wrapper'
 
 describe HTMLProcessor::VideoWrapper do
 

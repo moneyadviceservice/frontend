@@ -1,5 +1,4 @@
-require 'spec_helper'
-require 'html_processor'
+require 'html_processor/node_remover'
 
 describe HTMLProcessor::NodeRemover do
   let(:html) {

@@ -1,5 +1,4 @@
-require 'spec_helper'
-require 'html_processor'
+require 'html_processor/table_wrapper'
 
 describe HTMLProcessor::TableWrapper do
   shared_examples "a table wrapper" do

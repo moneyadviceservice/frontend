@@ -21,6 +21,18 @@ if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
   });
 }
 
+if(window.enableScrollTracking){
+  require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
+    'use strict';
+
+    // Analytics scroll tracking on editorial pages
+    scrollTracking({
+      el: '.editorial',
+      triggerPoints: [0.25, 0.5, 0.75, 1]
+    });
+  });
+}
+
 require(['jquery', 'collapsable'], function ($, Collapsable) {
   'use strict';
 
@@ -69,15 +81,3 @@ require(['jquery', 'ujs'], function ($) {
     });
   });
 });
-
-if(window.enableScrollTracking){
-  require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
-    'use strict';
-    
-    // Analytics scroll tracking on editorial pages
-    scrollTracking({
-      el: '.editorial',
-      triggerPoints: [0.25, 0.5, 0.75, 1]
-    });
-  });
-}

@@ -6,8 +6,9 @@ require 'core/interactors/searcher'
 module Core
   describe Searcher do
     let(:query) { 'search-term' }
+    let(:requested_page) { double }
 
-    subject { described_class.new(query) }
+    subject { described_class.new(query, requested_page) }
 
     describe '#call' do
       let(:id) { 'search-result' }
@@ -37,8 +38,16 @@ module Core
         }
       }
 
+      let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine, perform: data) }
       before do
-        allow(Registries::Repository).to(receive(:[]).with(:search)) { double(perform: data) }
+        allow(Registries::Repository).to receive(:[]).with(:search) do
+          repository
+        end
+      end
+
+      it 'calls the repository with the query and page' do
+        expect(repository).to receive(:perform).with(query, requested_page)
+        subject.call
       end
 
       it 'returns a search result collection' do

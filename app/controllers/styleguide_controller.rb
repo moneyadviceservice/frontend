@@ -5,6 +5,20 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/documentation_1col'
   end
 
+  def components_website
+    @categories = [
+      OpenStruct.new(title: 'Insurance', contents: [
+        OpenStruct.new(title: 'Choosing home insurance cover'),
+        OpenStruct.new(title: 'Do I need car insurance'),
+        OpenStruct.new(title: 'Making a claim')
+      ]),
+      OpenStruct.new(title: 'Debt', contents: [
+        OpenStruct.new(title: 'Avoiding the bailiff'),
+        OpenStruct.new(title: 'Does money grow on trees - we investigate')
+      ])
+    ]
+  end
+
   def pages_home
     render layout: 'styleguide/page_unconstrained'
   end

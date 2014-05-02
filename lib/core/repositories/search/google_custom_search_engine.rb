@@ -1,7 +1,7 @@
 require 'core/connection'
 require 'core/registries/connection'
 require 'core/repositories/repository'
-require 'core/repositories/search/google_custom_search_engine_response_mapper'
+require 'core/repositories/search/google_custom_search_engine/response_mapper'
 
 module Core::Repositories
   module Search
@@ -21,7 +21,7 @@ module Core::Repositories
           start_index = ((page * RESULTS_PER_PAGE) - (RESULTS_PER_PAGE - 1))
           connection.get('customsearch/v1', key: key, cx: localized_cx, q: query, start: start_index)
         end
-        GoogleCustomSearchEngineResponseMapper.new(response).mapped_response
+        ResponseMapper.new(response).mapped_response
 
       rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
         raise RequestError, 'Unable to fetch Search Results from Google Custom Search'

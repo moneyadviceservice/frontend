@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'core/repositories/search/google_custom_search_engine_response_mapper'
+require 'core/repositories/search/google_custom_search_engine/response_mapper'
 
-describe Core::Repositories::Search::GoogleCustomSearchEngineResponseMapper do
+describe Core::Repositories::Search::GoogleCustomSearchEngine::ResponseMapper do
 
-  describe '#map' do
+  describe '#mapped_response' do
     let(:total_results) { 30 }
     let(:count) { 10 }
     let(:start_index) { 1 }

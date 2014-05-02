@@ -13,7 +13,7 @@ describe Core::Repositories::Search::GoogleCustomSearchEngine do
 
   before do
     allow(Core::Registries::Connection).to receive(:[]).with(:google_api) { connection }
-    allow_any_instance_of(Core::Repositories::Search::GoogleCustomSearchEngineResponseMapper).
+    allow_any_instance_of(Core::Repositories::Search::GoogleCustomSearchEngine::ResponseMapper).
       to receive(:mapped_response).and_return(mapped_response)
   end
 

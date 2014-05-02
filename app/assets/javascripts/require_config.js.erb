@@ -5,12 +5,16 @@
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
 
-//= depend_on_asset modules/mas_pubsub
-//= depend_on_asset modules/mas_log
-//= depend_on_asset modules/mas_scrollTracking
-//= depend_on_asset modules/mas_collapsable
+//= depend_on_asset lib/MASModule
+//= depend_on_asset lib/MicroEvent
 
 //= depend_on_asset modules/mas_common
+
+//= depend_on_asset modules/mas_log
+//= depend_on_asset modules/mas_pubsub
+//= depend_on_asset modules/mas_scrollTracking
+//= depend_on_asset modules/mas_collapsable
+//= depend_on_asset modules/mas_toggler
 
 <% def requirejs_path(asset) ; javascript_path(asset).sub(/.js\z/, ''); end %>
 
@@ -27,12 +31,14 @@ requirejs.config({  baseUrl: '<%= Rails.application.config.assets.prefix %>',
     ujs:         '<%= requirejs_path('jquery-ujs/src/rails') %>',
 
     // Internal modules
-    MASModule: '<%= requirejs_path('modules/mas_base') %>',
-    common:      '<%= requirejs_path('modules/mas_common') %>'
+    MASModule: '<%= requirejs_path('lib/MASModule') %>',
+    MicroEvent: '<%= requirejs_path('lib/MicroEvent') %>',
+
+    common:      '<%= requirejs_path('modules/mas_common') %>',
+    log:      '<%= requirejs_path('modules/mas_log') %>',
 
     pubsub:      '<%= requirejs_path('modules/mas_pubsub') %>',
-    scrollTracking:   '<%= requirejs_path('modules/mas_scrollTracking') %>',
-    log:         '<%= requirejs_path('modules/mas_log') %>',
+    scrollTracking: '<%= requirejs_path('modules/mas_scrollTracking') %>',
     analytics:   '<%= requirejs_path('modules/mas_analytics') %>',
     collapsable: '<%= requirejs_path('modules/mas_collapsable') %>',
 

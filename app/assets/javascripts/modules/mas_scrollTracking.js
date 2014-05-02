@@ -6,7 +6,7 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['common', 'waypoints'], function (MAS) {
+define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
   'use strict';
 
@@ -59,24 +59,26 @@ define(['common', 'waypoints'], function (MAS) {
       return false;
     }
 
-    var $el = $(opts.el),
-      h = $el.outerHeight(),
-      wh = $.waypoints('viewportHeight'), // normalises $(window).height()
-      contentRatio = h / wh;
+    $('document').ready(function(){
+      var $el = $(opts.el),
+        h = $el.outerHeight(),
+        wh = $.waypoints('viewportHeight'), // normalises $(window).height()
+        contentRatio = h / wh;
 
-    // send ratioCalculated event
-    // used by analytics events to determine page size and meaninfulness of scroll event
-    MAS.publish('analytics:trigger', {
-      'contentRatio': contentRatio,
-      'event': 'ratioCalculated'
-    });
+      // send ratioCalculated event
+      // used by analytics events to determine page size and meaninfulness of scroll event
+      MAS.publish('analytics:trigger', {
+        'contentRatio': contentRatio,
+        'event': 'ratioCalculated'
+      });
 
-    // Bind event for each trigger point
-    $.each(opts.triggerPoints, function (i, val) {
-      var offsetVal = h * val - wh;
-      $el.waypoint(function (dir) {
-        _handleScroll(dir, val, contentRatio);
-      }, {offset: -offsetVal});
+      // Bind event for each trigger point
+      $.each(opts.triggerPoints, function (i, val) {
+        var offsetVal = h * val - wh;
+        $el.waypoint(function (dir) {
+          _handleScroll(dir, val, contentRatio);
+        }, {offset: -offsetVal});
+      });
     });
   }
 

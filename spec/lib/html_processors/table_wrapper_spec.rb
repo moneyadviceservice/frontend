@@ -1,22 +1,23 @@
+require 'html_processor'
 require 'html_processor/table_wrapper'
 
 describe HTMLProcessor::TableWrapper do
-  shared_examples "a table wrapper" do
-    let(:processor) { HTMLProcessor::TableWrapper.new(html) }
+  shared_examples 'a table wrapper' do
+    subject(:processor) { HTMLProcessor::TableWrapper.new(html) }
+    let(:html) { '<table><tr><td></td></tr></table>' }
+    let(:xpath) { '//div[@class="table-wrapper"]/table' }
 
-    let(:xpath) do
-      '//div[@class="table-wrapper"]/table'
-    end
+    describe '.process' do
+      subject(:processed_html) { processor.process(HTMLProcessor::DATATABLE_DEFAULT) }
 
-    it 'wraps the given xpaths' do
-      processed_html = processor.process(HTMLProcessor::DATATABLE_DEFAULT)
-
-      expect(Nokogiri::HTML(processed_html).xpath(xpath)).to have(1).item
+      it 'wraps the given xpaths' do
+        expect(Nokogiri::HTML(processed_html).xpath(xpath)).to have(1).item
+      end
     end
   end
 
   context 'when the table has a malformed class' do
-    it_behaves_like "a table wrapper" do
+    it_behaves_like 'a table wrapper' do
       let(:html) {
         <<-EOHTML
 <table class=" datatable-default"><tr><td>Item</td></tr></table>
@@ -26,7 +27,7 @@ describe HTMLProcessor::TableWrapper do
   end
 
   context 'when the table has a well formed class' do
-    it_behaves_like "a table wrapper" do
+    it_behaves_like 'a table wrapper' do
       let(:html) {
         <<-EOHTML
 <table class="datatable-default"><tr><td>Item</td></tr></table>
@@ -36,7 +37,7 @@ describe HTMLProcessor::TableWrapper do
   end
 
   context 'when the table has multiple classes' do
-    it_behaves_like "a table wrapper" do
+    it_behaves_like 'a table wrapper' do
       let(:html) {
         <<-EOHTML
 <table class="fancy datatable-default red-herring"><tr><td>Item</td></tr></table>

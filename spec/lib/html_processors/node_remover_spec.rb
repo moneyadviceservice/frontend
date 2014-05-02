@@ -1,6 +1,9 @@
 require 'html_processor/node_remover'
+require 'nokogiri'
 
 describe HTMLProcessor::NodeRemover do
+  subject(:processor) { described_class.new(html) }
+
   let(:html) {
     <<-EOHTML
 <p>
@@ -10,21 +13,23 @@ describe HTMLProcessor::NodeRemover do
     EOHTML
   }
 
-  let(:processor) { HTMLProcessor::NodeRemover.new(html) }
-  let(:xpath) { '//strong[@class="super-strong"]' }
-  let(:other_xpath) { '//span[id="foo"]' }
+  describe '.process' do
+    subject(:processed_html) { processor.process(*args) }
 
-  it 'removes nodes from a HTML fragment' do
-    processed_html = processor.process(xpath)
+    context 'with a single node to remove' do
+      let(:args) { ['//strong[@class="super-strong"]'] }
 
-    expect(Nokogiri::HTML(processed_html).xpath(xpath)).
-      to be_empty
-  end
+      it 'removes matching nodes from the HTML fragment' do
+        expect(Nokogiri::HTML(processed_html).xpath(*args)).to be_empty
+      end
+    end
 
-  it 'accepts multiple arguments' do
-    processed_html = processor.process(xpath, other_xpath)
+    context 'with multiple nodes to remove' do
+      let(:args) { ['//strong[@class="super-strong"]', '//span[id="foo"]'] }
 
-    expect(Nokogiri::HTML(processed_html).xpath(xpath, other_xpath)).
-      to be_empty
+      it 'removes matching nodes from the HTML fragment' do
+        expect(Nokogiri::HTML(processed_html).xpath(*args)).to be_empty
+      end
+    end
   end
 end

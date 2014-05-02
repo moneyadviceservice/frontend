@@ -2,6 +2,7 @@ require 'html_processor'
 require 'html_processor/video_wrapper'
 
 describe HTMLProcessor::VideoWrapper do
+  subject(:processor) { HTMLProcessor::VideoWrapper.new(html) }
 
   let(:html) {
     <<-EOHTML
@@ -12,13 +13,15 @@ describe HTMLProcessor::VideoWrapper do
     EOHTML
   }
 
-  let(:processor) { HTMLProcessor::VideoWrapper.new(html) }
-  let(:xpath) do
-    '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
-  end
+  describe '.process' do
+    subject(:processed_html) { processor.process(HTMLProcessor::VIDEO_IFRAME) }
 
-  it 'wraps the given xpaths' do
-    processed_html = processor.process(HTMLProcessor::VIDEO_IFRAME)
-    expect(Nokogiri::HTML(processed_html).xpath(xpath).size).to eq(1)
+    let(:xpath) do
+      '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
+    end
+
+    it 'wraps the given elements' do
+      expect(Nokogiri::HTML(processed_html).xpath(xpath).size).to eq(1)
+    end
   end
 end

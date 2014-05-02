@@ -1,6 +1,9 @@
+require 'nokogiri'
 require 'html_processor/node_replacer'
 
 describe HTMLProcessor::NodeReplacer do
+  subject(:processor) { described_class.new(html) }
+
   let(:html) {
     <<-EOHTML
 <div>
@@ -9,12 +12,10 @@ describe HTMLProcessor::NodeReplacer do
     EOHTML
   }
 
-  let(:processor) { described_class.new(html) }
-
   describe '.process' do
     subject(:processed_html) { processor.process('//h3', 'h2') }
 
-    it 'replaces the target XPath with the new tag' do
+    it 'replaces the target elements with the specified element' do
       expect(Nokogiri::HTML(processed_html).xpath('//h2')).to have(1).item
     end
   end

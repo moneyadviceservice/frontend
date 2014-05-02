@@ -7,6 +7,7 @@ module Core::Repositories
   module Search
     class GoogleCustomSearchEngine < Core::Repository
       EVENT_NAME = 'request.google_api.search'
+      RESULTS_PER_PAGE = 10
 
       def initialize(key, cx_en, cx_cy)
         self.connection = Core::Registries::Connection[:google_api]
@@ -15,9 +16,10 @@ module Core::Repositories
         self.key        = key
       end
 
-      def perform(query)
-        response = ActiveSupport::Notifications.instrument(EVENT_NAME, query: query, locale: I18n.locale) do
-          connection.get('customsearch/v1', key: key, cx: localized_cx, q: query)
+      def perform(query, page = 1)
+        response = ActiveSupport::Notifications.instrument(EVENT_NAME, query: query, locale: I18n.locale, page: page) do
+          start_index = ((page * RESULTS_PER_PAGE) - (RESULTS_PER_PAGE - 1))
+          connection.get('customsearch/v1', key: key, cx: localized_cx, q: query, start: start_index)
         end
         GoogleCustomSearchEngineResponseMapper.new(response).mapped_response
 

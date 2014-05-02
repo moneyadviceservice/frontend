@@ -55,20 +55,22 @@ describe Core::Repositories::Search::GoogleCustomSearchEngine do
     end
 
     context 'when locale is :en' do
+      let(:expected_params) { { key: anything, cx: cx_en, q: anything, start: anything } }
       before { I18n.locale = :en }
 
       it 'sets the connection with the :en engine' do
-        expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_en, q: anything }) { double(body: {}) }
+        expect(connection).to receive(:get).with(anything, expected_params) { double(body: {}) }
 
         perform_search
       end
     end
 
     context 'when locale is :cy' do
+      let(:expected_params) { { key: anything, cx: cx_cy, q: anything, start: anything } }
       before { I18n.locale = :cy }
 
       it 'sets the connection with the :cy engine' do
-        expect(connection).to receive(:get).with(anything, { key: anything, cx: cx_cy, q: anything }) { double(body: {}) }
+        expect(connection).to receive(:get).with(anything, expected_params) { double(body: {}) }
 
         perform_search
       end

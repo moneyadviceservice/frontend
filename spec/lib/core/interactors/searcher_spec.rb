@@ -9,12 +9,33 @@ module Core
 
     subject { described_class.new(query) }
 
-    describe '.call' do
+    describe '#call' do
       let(:id) { 'search-result' }
       let(:title) { 'Search Result' }
       let(:description) { 'Description' }
       let(:type) { 'seach-result-type' }
-      let(:data) { [{ id: id, title: title, description: description, type: type }] }
+
+      let(:item_data) do
+        {
+          id: id,
+          title: title,
+          description: description,
+          type: type
+        }
+      end
+
+      let(:total_results) { 100 }
+      let(:per_page) { 10 }
+      let(:page) { 1 }
+
+      let(:data) {
+        {
+          total_results: total_results,
+          page: page,
+          per_page: per_page,
+          items: [item_data]
+        }
+      }
 
       before do
         allow(Registries::Repository).to(receive(:[]).with(:search)) { double(perform: data) }
@@ -24,7 +45,20 @@ module Core
         expect(subject.call).to be_a(SearchResultCollection)
       end
 
-      it 'returns a collection where #items is an array of search results' do
+      it 'sets #total_results correctly' do
+        expect(subject.call.total_results).to eql total_results
+      end
+
+
+      it 'sets #page correctly' do
+        expect(subject.call.page).to eql page
+      end
+
+      it 'sets #per_page correctly' do
+        expect(subject.call.per_page).to eql per_page
+      end
+
+      it 'populates #items with instances of SearchResults' do
         subject.call.items.each { |el| expect(el).to be_a(SearchResult) }
       end
 
@@ -46,7 +80,7 @@ module Core
       end
 
       context 'with invalid data' do
-        let(:data) { [{ id: id, title: title, type: type }] }
+        let(:item_data) { [{ id: id, title: title, type: type }] }
 
         it 'skips the invalid record' do
           expect(subject.call.items.none? { |result| result.id == id }).to be_true

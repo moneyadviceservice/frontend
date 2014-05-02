@@ -14,8 +14,8 @@ module Core
 
     def call
       data = Registries::Repository[:search].perform(query)
-      SearchResultCollection.new(query).tap do |results_collection|
-        data.each do |result_data|
+      SearchResultCollection.new(query, data.slice(:total_results, :page, :per_page)).tap do |results_collection|
+        data[:items].each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
           if new_result.valid?
             results_collection.items << new_result

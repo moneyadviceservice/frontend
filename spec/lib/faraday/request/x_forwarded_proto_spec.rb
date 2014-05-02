@@ -1,5 +1,3 @@
-require 'spec_helper'
-require 'faraday'
 require 'faraday/request/x_forwarded_proto'
 
 describe Faraday::Request::XForwardedProto do

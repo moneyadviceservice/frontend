@@ -1,5 +1,3 @@
-require 'spec_helper'
-require 'faraday'
 require 'faraday/request/request_id'
 
 describe Faraday::Request::RequestId do

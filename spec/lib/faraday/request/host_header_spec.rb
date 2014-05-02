@@ -1,5 +1,3 @@
-require 'spec_helper'
-require 'faraday'
 require 'faraday/request/host_header'
 
 describe Faraday::Request::HostHeader do

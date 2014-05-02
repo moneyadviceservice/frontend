@@ -1,5 +1,3 @@
-require 'spec_helper'
-require 'faraday'
 require 'faraday/response/link_header'
 
 describe Faraday::Response::LinkHeader do

@@ -2,7 +2,7 @@ require 'html_processor'
 require 'html_processor/video_wrapper'
 
 describe HTMLProcessor::VideoWrapper do
-  subject(:processor) { HTMLProcessor::VideoWrapper.new(html) }
+  subject(:processor) { described_class.new(html) }
 
   let(:html) {
     <<-EOHTML

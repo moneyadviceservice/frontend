@@ -3,7 +3,7 @@ require 'html_processor/table_wrapper'
 
 describe HTMLProcessor::TableWrapper do
   shared_examples 'a table wrapper' do
-    subject(:processor) { HTMLProcessor::TableWrapper.new(html) }
+    subject(:processor) { described_class.new(html) }
     let(:html) { '<table><tr><td></td></tr></table>' }
     let(:xpath) { '//div[@class="table-wrapper"]/table' }
 

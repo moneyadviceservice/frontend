@@ -1,8 +1,8 @@
 define(
-  ['jquery', 'module'], function ($, module) {
+  ['module'], function (module) {
     'use strict';
 
-    var globals = $.extend({}, module.config());
+    var globals = module.config();
     return globals;
   }
 );

@@ -10,7 +10,7 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
   'use strict';
 
-  var onloadTimestamp = window.MAS.bootstrap.timestamp,
+  var onloadTimestamp = MAS.bootstrap.timestamp,
       loadDelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
       _calledAlready = [];
 

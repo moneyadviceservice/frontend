@@ -6,7 +6,7 @@ var expect = chai.expect;
 
 // Any properties that require Ruby @ runtime
 
-var require = {
+requirejs.config({
   config: {
     globals: (function() {
       var MAS = {};
@@ -36,6 +36,6 @@ var require = {
       })(window, document);
 
       return MAS;
-    }());
+    }())
   }
-}
+});

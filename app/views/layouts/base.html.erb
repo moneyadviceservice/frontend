@@ -56,109 +56,111 @@
       }
     ];
 
-    var MAS = (function (w, d) {
+    var require = {
+      config: {
+        globals: (function (w, d) {
+          var html, appendFile, bootstrap, fonts, supports;
 
-      var html, appendFile, bootstrap, fonts, supports;
-
-      <%# // Set variables and default values %>
-      appendFile = function (tag, src, content) {
-        var position = d.getElementsByTagName('script')[0],
-            file = d.createElement(tag);
-        if (tag === 'script') {
-          file.async = true;
-          file.type = "text/javascript";
-        }
-        if (src) file.src = src;
-        if (content) file.innerHTML = content;
-        position.parentNode.insertBefore(file, position);
-      }
-
-      html = d.getElementsByTagName('html')[0];
-
-      bootstrap = {
-        env: '<%= Rails.env %>',
-        timestamp: new Date().getTime(), <%# // needs to be run as soon to page load as possible %>
-        I18nLocale: '<%= I18n.locale %>',
-      }
-
-      fonts = {
-        url: '<%= stylesheet_path('frontend-assets/stylesheets/font_base64') %>',
-        cacheName: 'MAS.fonts',
-        loadClass: 'wf-museosans-n4-active fontsLoaded',
-        localstorage: undefined,
-        loadWithJS: responsiveStyle <%# // for responsive load with JS, for fixed load inline in CSS %>
-      }
-
-      <%# // Run support tests and cache values %>
-      supports = (function () {
-        var S = {};
-
-        function supportTest(prop, context) {
-          try {
-            return prop in context && context[prop] !== null;
-          } catch (e) {
-            return false;
+          <%# // Set variables and default values %>
+          appendFile = function (tag, src, content) {
+            var position = d.getElementsByTagName('script')[0],
+                file = d.createElement(tag);
+            if (tag === 'script') {
+              file.async = true;
+              file.type = "text/javascript";
+            }
+            if (src) file.src = src;
+            if (content) file.innerHTML = content;
+            position.parentNode.insertBefore(file, position);
           }
-        }
 
-        S.js = ( supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ) ? 'advanced' : 'basic';
-        S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w) );
-        S.localstorage = supportTest('localStorage', w);
-        S.svg = (function () {
-          return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect
-        })();
-        S.test = supportTest;
+          html = d.getElementsByTagName('html')[0];
 
-        return S
-      })();
+          bootstrap = {
+            env: '<%= Rails.env %>',
+            timestamp: new Date().getTime(), <%# // needs to be run as soon to page load as possible %>
+            i18nLocale: '<%= I18n.locale %>',
+          }
+
+          fonts = {
+            url: '<%= stylesheet_path('frontend-assets/stylesheets/font_base64') %>',
+            cacheName: 'MAS.fonts',
+            loadClass: 'wf-museosans-n4-active fontsLoaded',
+            localstorage: undefined,
+            loadWithJS: responsiveStyle <%# // for responsive load with JS, for fixed load inline in CSS %>
+          }
+
+          <%# // Run support tests and cache values %>
+          supports = (function () {
+            var S = {};
+
+            function supportTest(prop, context) {
+              try {
+                return prop in context && context[prop] !== null;
+              } catch (e) {
+                return false;
+              }
+            }
+
+            S.js = ( supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ) ? 'advanced' : 'basic';
+            S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w) );
+            S.localstorage = supportTest('localStorage', w);
+            S.svg = (function () {
+              return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect
+            })();
+            S.test = supportTest;
+
+            return S
+          })();
 
 
-      <%# //// Run modify DOM and load files %>
+          <%# //// Run modify DOM and load files %>
 
-      <%# // Load font from localStorage %>
-      if (supports.localstorage && localStorage.getItem(fonts.cacheName) !== null) {
-        html.className = html.className += (' ' + fonts.loadClass);
-        appendFile('style', false, localStorage.getItem(fonts.cacheName));
-        fonts.localstorage = true;
+          <%# // Load font from localStorage %>
+          if (supports.localstorage && localStorage.getItem(fonts.cacheName) !== null) {
+            html.className = html.className += (' ' + fonts.loadClass);
+            appendFile('style', false, localStorage.getItem(fonts.cacheName));
+            fonts.localstorage = true;
+          }
+
+          <%# // JS support > Update className %>
+          html.className = html.className.replace('no-js', 'js js-' + supports.js);
+
+          <% if Rails.env.production? %>
+            <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
+            setTimeout(function () {
+              var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
+              appendFile('script', src);
+            }, 1);
+          <% end %>
+
+          <%#
+          // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+          // Copied from Mobile Boiler Plate
+          // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
+          %>
+          var vp, ua, gs, sf;
+          vp = d.querySelector && d.querySelector('meta[name="viewport"]');
+          ua = navigator.userAgent;
+          sf = function () {
+            if (vp && /iPhone|iPad|iPod/.test(ua) && !/Opera Mini/.test(ua)) {
+              vp.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+              d.addEventListener("gesturestart", gs, false);
+            }
+          };
+          gs = function () {
+            vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          };
+
+          <%# // Return values to be assigned to MAS global namespace %>
+          return {
+            bootstrap: bootstrap,
+            fonts: fonts,
+            supports: supports
+          };
+        })(window, document)
       }
-
-      <%# // JS support > Update className %>
-      html.className = html.className.replace('no-js', 'js js-' + supports.js);
-
-      <% if Rails.env.production? %>
-        <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
-        setTimeout(function () {
-          var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-          appendFile('script', src);
-        }, 1);
-      <% end %>
-
-      <%#
-      // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
-      // Copied from Mobile Boiler Plate
-      // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
-      %>
-      var vp, ua, gs, sf;
-      vp = d.querySelector && d.querySelector('meta[name="viewport"]');
-      ua = navigator.userAgent;
-      sf = function () {
-        if (vp && /iPhone|iPad|iPod/.test(ua) && !/Opera Mini/.test(ua)) {
-          vp.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-          d.addEventListener("gesturestart", gs, false);
-        }
-      };
-      gs = function () {
-        vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-      };
-
-      <%# // Return values to be assigned to MAS global namespace %>
-      return {
-        bootstrap: bootstrap,
-        fonts: fonts,
-        supports: supports,
-        appendFile: appendFile
-      };
-    })(window, document);
+    };
 
   </script>
   <%# END MAS setup JS %>

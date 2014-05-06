@@ -1,18 +1,14 @@
 
 // MAS.bootstrap.I18n_locale == en || cy == file path in require config
 define(
-  ['jquery', 'pubsub', 'log', window.MAS.bootstrap.I18nLocale],
-  function ($, pubsub, log, text) {
-
+  ['jquery', 'globals', 'pubsub', 'log', 'i18n'],
+  function ($, globals, pubsub, log, i18n) {
     'use strict';
 
-    var MAS = window.MAS || {},
-        dataLayer = window.dataLayer || [];
+    var MAS = $.extend({}, globals, pubsub, log);
+    var dataLayer = dataLayer || [];
 
-    // Extend common object with globally required scripts
-    MAS.text = text;
-    $.extend(MAS, pubsub);
-    $.extend(MAS, log);
+    MAS.text = i18n;
 
     // Fire analytics events
     // TO USE: MAS.publish('analytics:trigger', {object with props})

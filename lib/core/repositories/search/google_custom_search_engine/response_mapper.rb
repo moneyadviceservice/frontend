@@ -1,9 +1,9 @@
+require 'core/repositories/search/google_custom_search_engine/response_item_mapper'
+
 module Core::Repositories
   module Search
     class GoogleCustomSearchEngine < Core::Repository
       class ResponseMapper
-        SECOND_TO_LAST = -2
-
         def initialize(response)
           @body = response.body
         end
@@ -22,17 +22,8 @@ module Core::Repositories
         attr_reader :body
 
         def items
-          raw_items = body.fetch('items', [])
-          raw_items.map do |item|
-            link_tokens = item['link'].split('/')
-            {
-              id:          link_tokens.last,
-              type:        link_tokens[SECOND_TO_LAST].singularize,
-              description: extract_description(item),
-              title:       item['title'],
-              link:        item['link'],
-              snippet:     item['snippet']
-            }
+          body.fetch('items', []).map do |item_hash|
+            ResponseItemMapper.new(item_hash).mapped_item_response
           end
         end
 
@@ -54,18 +45,6 @@ module Core::Repositories
 
         def page
           (offset / per_page) + 1
-        end
-
-        def extract_description(item)
-          return '' unless item.key?('pagemap')
-
-          description = ''
-          metatags_array = Array(item['pagemap']['metatags'])
-          metatags_array.each do |metatags|
-            metatags.each { |key, value| return description = value if key == 'og:description' }
-          end
-
-          description
         end
       end
     end

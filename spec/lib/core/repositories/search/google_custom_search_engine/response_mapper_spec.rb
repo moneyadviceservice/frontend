@@ -15,9 +15,7 @@ module Core::Repositories::Search
         {
           'queries' => {
             'request' => [
-              'totalResults' => total_results.to_s,
-              'count' => count.to_s,
-              'startIndex' => start_index.to_s
+              'totalResults' => total_results.to_s
             ]
           },
           'items' => [item_data]
@@ -34,10 +32,6 @@ module Core::Repositories::Search
 
       it 'maps the total results correctly' do
         expect(subject[:total_results]).to eq(total_results)
-      end
-
-      it 'maps the per page attribute correctly' do
-        expect(subject[:per_page]).to eq(count)
       end
 
       context 'for each item' do
@@ -58,20 +52,6 @@ module Core::Repositories::Search
         it 'returns an empty array' do
           expect(subject[:items]).to be_a(Array)
           expect(subject[:items]).to be_empty
-        end
-      end
-
-      context 'when on the first page' do
-        it 'calculates the page number correctly' do
-          expect(subject[:page]).to eq 1
-        end
-      end
-
-      context 'when on the second page' do
-        let(:start_index) { 11 }
-
-        it 'calculates the page number correctly' do
-          expect(subject[:page]).to eq 2
         end
       end
     end

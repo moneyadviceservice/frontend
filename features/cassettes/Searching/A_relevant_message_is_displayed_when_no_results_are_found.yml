@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_API_CX_EN>&key=<GOOGLE_API_KEY>&q=tiger
+    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_API_CX_EN>&key=<GOOGLE_API_KEY>&num=10&q=tiger&start=1
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - a403ddb5-a7f6-477b-bf27-1aef9a5fd7c9
+      - e92a7f55-530a-4a9a-a257-156eb8e3118d
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Tue, 22 Apr 2014 14:54:58 GMT
+      - Wed, 07 May 2014 08:40:01 GMT
       Date:
-      - Tue, 22 Apr 2014 14:54:58 GMT
+      - Wed, 07 May 2014 08:40:01 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - '"FAOauGikIEhYlrm1J9_gm7nVkYQ/x2es4nCzfeNTUPavlFuCNPzmP0Q"'
+      - '"30lbQtoM7CaGaaRZB78V8fZSbUI/eiO2bYa5jYYLPJohTiEP4XnG_Sg"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -37,7 +37,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '1219'
+      - '1240'
       Server:
       - GSE
       Alternate-Protocol:
@@ -58,6 +58,7 @@ http_interactions:
             "totalResults": "0",
             "searchTerms": "tiger",
             "count": 10,
+            "startIndex": 1,
             "inputEncoding": "utf8",
             "outputEncoding": "utf8",
             "safe": "off",
@@ -66,12 +67,12 @@ http_interactions:
           ]
          },
          "searchInformation": {
-          "searchTime": 0.460812,
-          "formattedSearchTime": "0.46",
+          "searchTime": 0.339443,
+          "formattedSearchTime": "0.34",
           "totalResults": "0",
           "formattedTotalResults": "0"
          }
         }
-    http_version:
-  recorded_at: Tue, 22 Apr 2014 14:54:57 GMT
+    http_version: 
+  recorded_at: Wed, 07 May 2014 08:40:02 GMT
 recorded_with: VCR 2.9.0

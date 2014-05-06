@@ -6,9 +6,10 @@ require 'core/interactors/searcher'
 module Core
   describe Searcher do
     let(:query) { 'search-term' }
-    let(:requested_page) { double }
+    let(:page) { double }
+    let(:per_page) { double }
 
-    subject { described_class.new(query, requested_page) }
+    subject { described_class.new(query, page, per_page) }
 
     describe '#call' do
       let(:id) { 'search-result' }
@@ -26,27 +27,38 @@ module Core
       end
 
       let(:total_results) { 100 }
-      let(:per_page) { 10 }
-      let(:page) { 1 }
 
-      let(:data) {
+      let(:data) do
         {
           total_results: total_results,
-          page: page,
-          per_page: per_page,
           items: [item_data]
         }
-      }
+      end
 
       let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine, perform: data) }
+
       before do
         allow(Registries::Repository).to receive(:[]).with(:search) do
           repository
         end
       end
 
-      it 'calls the repository with the query and page' do
-        expect(repository).to receive(:perform).with(query, requested_page)
+      context 'initialization' do
+        it 'assigns the passed in query to the interactor' do
+          expect(subject.query).to eql query
+        end
+
+        it 'assigns the passed in page value to the interactor' do
+          expect(subject.page).to eql page
+        end
+
+        it 'assigns the passed in per_page value to the interactor' do
+          expect(subject.per_page).to eql per_page
+        end
+      end
+
+      it 'calls the repository with the query, page and per_page' do
+        expect(repository).to receive(:perform).with(query, page, per_page)
         subject.call
       end
 
@@ -58,16 +70,7 @@ module Core
         expect(subject.call.total_results).to eql total_results
       end
 
-
-      it 'sets #page correctly' do
-        expect(subject.call.page).to eql page
-      end
-
-      it 'sets #per_page correctly' do
-        expect(subject.call.per_page).to eql per_page
-      end
-
-      it 'populates #items with instances of SearchResults' do
+      it 'populates #items with instances of SearchResult' do
         subject.call.items.each { |el| expect(el).to be_a(SearchResult) }
       end
 

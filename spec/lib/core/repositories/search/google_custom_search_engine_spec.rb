@@ -21,15 +21,17 @@ module Core::Repositories::Search
     describe '#perform' do
       let(:event_name) { 'request.google_api.search' }
       let(:query) { double }
+      let(:page) { 1 }
+      let(:per_page) { 10 }
 
-      subject(:perform_search) { custom_search_engine.perform(query) }
+      subject(:perform_search) { custom_search_engine.perform(query, page, per_page) }
 
       it 'records an event with Rails instrumentation' do
         allow(connection).to receive(:get) { double(body: {}) }
 
         expect(ActiveSupport::Notifications).
           to receive(:instrument).
-               with(event_name, hash_including(query: query, locale: I18n.locale)).
+               with(event_name, hash_including(query: query, locale: I18n.locale, page: page, per_page: per_page)).
                and_call_original
 
         perform_search
@@ -56,7 +58,7 @@ module Core::Repositories::Search
       end
 
       context 'when locale is :en' do
-        let(:expected_params) { { key: anything, cx: cx_en, q: anything, start: anything } }
+        let(:expected_params) { { key: anything, cx: cx_en, q: anything, num: anything, start: anything } }
         before { I18n.locale = :en }
 
         it 'sets the connection with the :en engine' do
@@ -67,7 +69,7 @@ module Core::Repositories::Search
       end
 
       context 'when locale is :cy' do
-        let(:expected_params) { { key: anything, cx: cx_cy, q: anything, start: anything } }
+        let(:expected_params) { { key: anything, cx: cx_cy, q: anything, num: anything, start: anything } }
         before { I18n.locale = :cy }
 
         it 'sets the connection with the :cy engine' do

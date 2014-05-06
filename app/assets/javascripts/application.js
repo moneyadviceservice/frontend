@@ -1,6 +1,6 @@
 //= require require_config
 
-require(['globals'], function(MAS) {
+require(['common'], function(MAS) {
   'use strict';
 
   if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {

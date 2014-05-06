@@ -8,7 +8,7 @@
 
 <head>
   <% if Rails.env.production? %>
-    <script src="//cdn.optimizely.com/js/899750120.js"></script>
+    <%= javascript_include_tag 'optimizely.js' %>
   <% end %>
 
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>

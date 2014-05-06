@@ -17,9 +17,7 @@ module Core
       let(:data) { [{ id: id, title: title, description: description, type: type }] }
 
       before do
-        allow(Registries::Repository).to receive(:[]).with(:search) do
-          double(Repositories::Search::PublicWebsite, perform: data)
-        end
+        allow(Registries::Repository).to(receive(:[]).with(:search)) { double(perform: data) }
       end
 
       it 'returns an array of search results' do

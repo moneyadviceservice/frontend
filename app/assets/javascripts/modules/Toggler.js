@@ -5,7 +5,8 @@ define(['jquery', 'MASModule'], function ($, MASModule) {
     /**
      * Set up a new toggler.
      *
-     * Requires an element to have a data-mas-toggler attribute. The application file will spawn an instance
+     * Requires an element to have a data-mas-toggler attribute. The application
+     * file will spawn an instance
      * of this class for each element it finds on the page.
      *
      * Events used: toggler:toggled(element, isShown) [Event for when the toggler is doing its work]
@@ -54,7 +55,8 @@ define(['jquery', 'MASModule'], function ($, MASModule) {
 
     /**
      * Toggle the element
-     * @param  {[type]} forceTo Supply 'show' or 'hide' to explicitly set, otherwise will automatically toggle
+     * @param  {[type]} forceTo Supply 'show' or 'hide' to
+     * explicitly set, otherwise will automatically toggle
      * @return {[type]}         [description]
      */
     TogglerProto.toggle = function(forceTo) {

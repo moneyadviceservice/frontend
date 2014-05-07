@@ -30,7 +30,7 @@ module Frontend
                                   styleguide/styleguide_responsive.css)
 
     # Include fonts when precompiling assets.
-    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+    config.assets.precompile << /\.(?:png|svg|eot|woff|ttf)$/
 
     # Configure additional application JS assets to precompile.
     config.assets.precompile += %w(html_inspector.js

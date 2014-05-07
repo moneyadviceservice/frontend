@@ -3,6 +3,11 @@ define(['jquery', 'MASModule'], function($, MASModule) {
 
   return (function() {
     /**
+     * Class variable definitions.
+     */
+    var TogglerProto;
+
+    /**
      * Set up a new toggler.
      *
      * Requires an element to have a data-mas-toggler attribute. The application
@@ -26,7 +31,7 @@ define(['jquery', 'MASModule'], function($, MASModule) {
      * Inherit from base module, for shared methods and interface
      * @type {[type]}
      */
-    var TogglerProto = Toggler.prototype = new MASModule();
+    TogglerProto = Toggler.prototype = new MASModule();
 
     /**
      * Init function
@@ -41,10 +46,10 @@ define(['jquery', 'MASModule'], function($, MASModule) {
 
     /**
      * Bind or unbind relevant DOM events
-     * @param {Boolean} to Set to 'true' to bind to events, 'false' to unbind.
+     * @param {Boolean} isActive Set to 'true' to bind to events, 'false' to unbind.
      */
-    TogglerProto.setListeners = function(to) {
-      this.$el[ to ? 'on' : ' off']('click', $.proxy(function(e) {
+    TogglerProto.setListeners = function(isActive) {
+      this.$el[isActive ? 'on' : ' off']('click', $.proxy(function(e) {
         this.toggle();
 
         e.preventDefault();

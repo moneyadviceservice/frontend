@@ -1,4 +1,4 @@
-define(['jquery', 'common'], function ($, MAS) {
+define(['jquery', 'common'], function($, MAS) {
   'use strict';
 
   var defaults = {
@@ -33,13 +33,13 @@ define(['jquery', 'common'], function ($, MAS) {
     onFocusout: false
   };
 
-  var _isHidden = function (target, opts) {
+  var _isHidden = function(target, opts) {
     if (target.hasClass(opts.inactiveClass)) return true;
     if (target.hasClass(opts.activeClass)) return false;
     return target.is(':hidden');
   };
 
-  var _getTarget = function ($el, opts) {
+  var _getTarget = function($el, opts) {
     switch (opts.targetType) {
       case 'class':
         return $el.next(opts.targetEl);
@@ -52,7 +52,7 @@ define(['jquery', 'common'], function ($, MAS) {
     }
   };
 
-  var Collapsible = function (opts) {
+  var Collapsible = function(opts) {
     this.o = $.extend({}, defaults, opts);
     this.sections = [];
     this.selected = false;
@@ -82,8 +82,8 @@ define(['jquery', 'common'], function ($, MAS) {
     }
   };
 
-  Collapsible.prototype._delayDomCheck = function () {
-    setTimeout($.proxy(function () {
+  Collapsible.prototype._delayDomCheck = function() {
+    setTimeout($.proxy(function() {
       if (this.$parent.find(document.activeElement).length === 0 && this.selected !== false) {
         // Callback
         if (typeof this.o.onFocusout === 'function') this.o.onFocusout(this);
@@ -93,7 +93,7 @@ define(['jquery', 'common'], function ($, MAS) {
     }, this), 300);
   };
 
-  Collapsible.prototype._modifyButtonHTML = function (i) {
+  Collapsible.prototype._modifyButtonHTML = function(i) {
     var icon, txt;
     var trigger = this.sections[i].trigger;
 
@@ -115,9 +115,9 @@ define(['jquery', 'common'], function ($, MAS) {
       if (trigger[0].nodeName === 'A') {
         // Anchor => replace elemnt
         var newEl = $('<a></a>')
-            .addClass(trigger[0].className)
-            .attr('id', trigger[0])
-            .text(icon + txt + buttonTitle);
+          .addClass(trigger[0].className)
+          .attr('id', trigger[0])
+          .text(icon + txt + buttonTitle);
         // add new
         trigger.after(newEl);
         // remove old
@@ -139,7 +139,7 @@ define(['jquery', 'common'], function ($, MAS) {
     if (this.o.showText) this.sections[i].txt = trigger.find('.js-collapsable-hidden');
   };
 
-  Collapsible.prototype._setupEach = function (i, el) {
+  Collapsible.prototype._setupEach = function(i, el) {
     var $el = $(el),
         _this = this,
         _target = _getTarget($el, _this.o);
@@ -171,7 +171,7 @@ define(['jquery', 'common'], function ($, MAS) {
     this.setVisibility(!this.sections[i].hidden, i);
 
     // Bind events
-    this.sections[i].trigger.on('click', i, function (e) {
+    this.sections[i].trigger.on('click', i, function(e) {
       e.preventDefault();
       // Check for callbacks
       if (typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
@@ -192,7 +192,7 @@ define(['jquery', 'common'], function ($, MAS) {
     return this;
   };
 
-  Collapsible.prototype.setVisibility = function (show, i) {
+  Collapsible.prototype.setVisibility = function(show, i) {
     var method = (show) ? 'show' : 'hide';
     this[method](i);
     return this;
@@ -206,7 +206,7 @@ define(['jquery', 'common'], function ($, MAS) {
     }
   }
 
-  Collapsible.prototype.show = function (i, userInitiated) {
+  Collapsible.prototype.show = function(i, userInitiated) {
     publishEvent(userInitiated, {
       name: this.o.name,
       index: i,
@@ -226,7 +226,7 @@ define(['jquery', 'common'], function ($, MAS) {
     return this;
   };
 
-  Collapsible.prototype.hide = function (i, userInitiated) {
+  Collapsible.prototype.hide = function(i, userInitiated) {
     publishEvent(userInitiated, {
       name: this.o.name,
       index: i,

@@ -1,4 +1,4 @@
-define(['jquery'], function ($) {
+define(['jquery'], function($) {
   'use strict';
 
   var pubsub = {},

@@ -6,11 +6,11 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['jquery', 'common', 'waypoints'], function ($, MAS) {
+define(['jquery', 'common', 'waypoints'], function($, MAS) {
 
   'use strict';
 
-  var onloadTimestamp = window.MAS.bootstrap.timestamp,
+  var onloadTimestamp = MAS.bootstrap.timestamp,
       loadDelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
       _calledAlready = [];
 
@@ -29,7 +29,7 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
 
     // get offset time from pageload - can we get from google?
     var eventdelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
-      combinedDelay = eventdelay - loadDelay;
+        combinedDelay = eventdelay - loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer
     MAS.publish('analytics:trigger', {
@@ -59,11 +59,11 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
       return false;
     }
 
-    $('document').ready(function(){
+    $('document').ready(function() {
       var $el = $(opts.el),
-        h = $el.outerHeight(),
-        wh = $.waypoints('viewportHeight'), // normalises $(window).height()
-        contentRatio = h / wh;
+          h = $el.outerHeight(),
+          wh = $.waypoints('viewportHeight'), // normalises $(window).height()
+          contentRatio = h / wh;
 
       // send ratioCalculated event
       // used by analytics events to determine page size and meaninfulness of scroll event
@@ -73,9 +73,9 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
       });
 
       // Bind event for each trigger point
-      $.each(opts.triggerPoints, function (i, val) {
+      $.each(opts.triggerPoints, function(i, val) {
         var offsetVal = h * val - wh;
-        $el.waypoint(function (dir) {
+        $el.waypoint(function(dir) {
           _handleScroll(dir, val, contentRatio);
         }, {offset: -offsetVal});
       });

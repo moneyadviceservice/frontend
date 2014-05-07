@@ -29,7 +29,7 @@ define([], function() {
 
     MicroEventProto.trigger = function(event /* , args... */) {
       var eventName,
-        args;
+          args;
 
       if (event instanceof $.Event) {
         eventName = event.type;

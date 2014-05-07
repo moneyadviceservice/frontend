@@ -29,7 +29,7 @@ define(['jquery', 'common', 'waypoints'], function($, MAS) {
 
     // get offset time from pageload - can we get from google?
     var eventdelay = ((new Date().getTime()) - onloadTimestamp) / 1000,
-      combinedDelay = eventdelay - loadDelay;
+        combinedDelay = eventdelay - loadDelay;
 
     // push to datalayer OR MAS abstracted datalayer
     MAS.publish('analytics:trigger', {
@@ -61,9 +61,9 @@ define(['jquery', 'common', 'waypoints'], function($, MAS) {
 
     $('document').ready(function() {
       var $el = $(opts.el),
-        h = $el.outerHeight(),
-        wh = $.waypoints('viewportHeight'), // normalises $(window).height()
-        contentRatio = h / wh;
+          h = $el.outerHeight(),
+          wh = $.waypoints('viewportHeight'), // normalises $(window).height()
+          contentRatio = h / wh;
 
       // send ratioCalculated event
       // used by analytics events to determine page size and meaninfulness of scroll event

@@ -1,4 +1,4 @@
-define(['globals'], function (globals) {
+define(['globals'], function(globals) {
   'use strict';
 
   // Wrap logging so it can be pushed to log in prod, and used safely on old browsers
@@ -7,7 +7,7 @@ define(['globals'], function (globals) {
       logs = {},
       logged = [];
 
-  function logIt (name, options) {
+  function logIt(name, options) {
     logged.push([name, options, type]);
   }
 

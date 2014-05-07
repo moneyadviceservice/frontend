@@ -6,7 +6,7 @@
  - we could extend this to use pubSub so remove the possible depandancy
  */
 
-define(['jquery', 'common', 'waypoints'], function ($, MAS) {
+define(['jquery', 'common', 'waypoints'], function($, MAS) {
 
   'use strict';
 
@@ -59,7 +59,7 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
       return false;
     }
 
-    $('document').ready(function(){
+    $('document').ready(function() {
       var $el = $(opts.el),
         h = $el.outerHeight(),
         wh = $.waypoints('viewportHeight'), // normalises $(window).height()
@@ -73,9 +73,9 @@ define(['jquery', 'common', 'waypoints'], function ($, MAS) {
       });
 
       // Bind event for each trigger point
-      $.each(opts.triggerPoints, function (i, val) {
+      $.each(opts.triggerPoints, function(i, val) {
         var offsetVal = h * val - wh;
-        $el.waypoint(function (dir) {
+        $el.waypoint(function(dir) {
           _handleScroll(dir, val, contentRatio);
         }, {offset: -offsetVal});
       });

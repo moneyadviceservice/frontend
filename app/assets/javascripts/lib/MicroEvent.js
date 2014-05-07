@@ -27,7 +27,7 @@ define([], function() {
       this._events[event].splice(this._events[event].indexOf(fct), 1);
     };
 
-    MicroEventProto.trigger = function(event /* , args... */ ) {
+    MicroEventProto.trigger = function(event /* , args... */) {
       var eventName,
         args;
 

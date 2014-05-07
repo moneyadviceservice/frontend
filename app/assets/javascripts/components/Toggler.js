@@ -1,4 +1,4 @@
-define(['jquery', 'MASModule'], function ($, MASModule) {
+define(['jquery', 'MASModule'], function($, MASModule) {
   'use strict';
 
   return (function() {

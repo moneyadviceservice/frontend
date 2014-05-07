@@ -1,5 +1,5 @@
 define(
-  ['module'], function (module) {
+  ['module'], function(module) {
     'use strict';
 
     var globals = module.config();

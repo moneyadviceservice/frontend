@@ -4,13 +4,12 @@ require(['common'], function(MAS) {
   'use strict';
 
   if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
-    require(['jquery', 'common'], function ($, MAS) {
-
+    require(['jquery', 'common'], function($, MAS) {
 
       MAS.log('FONTS: load via ajax');
       $.ajax({
         url: MAS.fonts.url,
-        success: function (res) {
+        success: function(res) {
           MAS.log('FONTS: ajax load success > stylesheet appended to page > load class added');
           $('html').addClass(MAS.fonts.loadClass);
           $('head').append('<style>' + res + '</style>');
@@ -25,7 +24,7 @@ require(['common'], function(MAS) {
   }
 
   if (window.enableScrollTracking) {
-    require(['jquery', 'scrollTracking'], function ($, scrollTracking) {
+    require(['jquery', 'scrollTracking'], function($, scrollTracking) {
 
 
       // Analytics scroll tracking on editorial pages
@@ -36,8 +35,8 @@ require(['common'], function(MAS) {
     });
   }
 
-  require(['jquery', 'collapsable'], function ($, Collapsable) {
-    $(document).ready(function () {
+  require(['jquery', 'collapsable'], function($, Collapsable) {
+    $(document).ready(function() {
       // Primary Nav
       new Collapsable({
         name: 'primaryNav',
@@ -68,17 +67,17 @@ require(['common'], function(MAS) {
     });
   });
 
-  require(['jquery', 'ujs'], function ($) {
+  require(['jquery', 'ujs'], function($) {
 
-    $(document).ready(function () {
+    $(document).ready(function() {
       // Cookie message
-      $('.js-cookie-message').bind('ajax:success', function () {
+      $('.js-cookie-message').bind('ajax:success', function() {
         $('.cookie-message').hide();
         $('.footer-site-links__cookie-link').removeClass('is-on');
       });
 
       // Responsive Opt Out
-      $('.js-close-opt-out').bind('ajax:success', function () {
+      $('.js-close-opt-out').bind('ajax:success', function() {
         $('.opt-out').addClass('is-hidden');
       });
     });

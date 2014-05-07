@@ -14,7 +14,6 @@ require(['jquery'], function($) {
       e.preventDefault();
     });
 
-
     $('.has-sub-menu li a').on('click', function(e) {
       e.stopPropagation();
     });

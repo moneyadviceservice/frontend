@@ -25,8 +25,6 @@ require(['common'], function(MAS) {
 
   if (window.enableScrollTracking) {
     require(['jquery', 'scrollTracking'], function($, scrollTracking) {
-
-
       // Analytics scroll tracking on editorial pages
       scrollTracking({
         el: '.editorial',

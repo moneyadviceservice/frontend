@@ -115,9 +115,9 @@ define(['jquery', 'common'], function($, MAS) {
       if (trigger[0].nodeName === 'A') {
         // Anchor => replace elemnt
         var newEl = $('<a></a>')
-            .addClass(trigger[0].className)
-            .attr('id', trigger[0])
-            .text(icon + txt + buttonTitle);
+          .addClass(trigger[0].className)
+          .attr('id', trigger[0])
+          .text(icon + txt + buttonTitle);
         // add new
         trigger.after(newEl);
         // remove old

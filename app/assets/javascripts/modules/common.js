@@ -1,4 +1,3 @@
-
 // MAS.bootstrap.I18n_locale == en || cy == file path in require config
 define(
   ['jquery', 'globals', 'pubsub', 'log', 'i18n'],

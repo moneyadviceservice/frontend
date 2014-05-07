@@ -13,7 +13,7 @@ CI_PIPELINE_COUNTER=${GO_PIPELINE_COUNTER-0}
 CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 bundle install --jobs $BUNDLE_JOBS
-bower install
+bower install --config.interactive=false
 
 rake spec
 rake cucumber

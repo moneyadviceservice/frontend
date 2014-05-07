@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/interactors/article_reader'
 require 'core/interactors/searcher'
 
-describe 'html validation' do
+describe 'HTML validation' do
   describe 'home page' do
     before do
       visit root_path(locale: locale)

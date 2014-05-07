@@ -15,10 +15,10 @@ define(['MicroEvent'], function(MicroEvent) {
     function MASModule() {
 
       /*
-      Populate this array with the data attributes this module will use.
-      Exclude 'data-mas-' prefix, as this is automatically added.
+       Populate this array with the data attributes this module will use.
+       Exclude 'data-mas-' prefix, as this is automatically added.
 
-      For example: ['collapsible', 'only-first']
+       For example: ['collapsible', 'only-first']
        */
       this.attrs = [];
 

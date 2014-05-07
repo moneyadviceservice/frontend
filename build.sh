@@ -25,6 +25,10 @@ echo "Running Bundle package"
 echo "----"
 bundle package --all
 
+echo "Running Bower cache clean"
+echo "----"
+bower cache clean
+
 echo "Running Bower install"
 echo "----"
 bower install --production --config.interactive=false

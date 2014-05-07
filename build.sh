@@ -27,7 +27,7 @@ bundle package --all
 
 echo "Running Bower install"
 echo "----"
-bower install --config.interactive=false
+bower install --production --config.interactive=false
 
 echo "Precompiling assets"
 echo "----"

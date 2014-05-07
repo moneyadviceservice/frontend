@@ -86,10 +86,6 @@ define(['jquery', 'MASModule'], function($, MASModule) {
         this.trigger('toggler:toggled', this);
       }
 
-      if (this.hideAfter) {
-        this.$el.hide();
-      }
-
       return this;
     };
 

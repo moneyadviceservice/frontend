@@ -5,105 +5,170 @@ require 'core/interactors/searcher'
 
 module Core
   describe Searcher do
-    let(:query) { 'search-term' }
+    let(:query) { double }
     let(:page) { double }
     let(:per_page) { double }
 
     subject { described_class.new(query, page, per_page) }
 
+    describe '#initialize' do
+
+      it 'assigns the passed in query to the interactor' do
+        expect(subject.send(:query)).to eql query
+      end
+
+      it 'assigns the passed in page value to the interactor' do
+        expect(subject.send(:page)).to eql page
+      end
+
+      it 'assigns the passed in per_page value to the interactor' do
+        expect(subject.send(:per_page)).to eql per_page
+      end
+    end
+
     describe '#call' do
-      let(:id) { 'search-result' }
-      let(:title) { 'Search Result' }
-      let(:description) { 'Description' }
-      let(:type) { 'seach-result-type' }
-
-      let(:item_data) do
-        {
-          id: id,
-          title: title,
-          description: description,
-          type: type
-        }
-      end
-
-      let(:total_results) { 100 }
-
-      let(:data) do
-        {
-          total_results: total_results,
-          items: [item_data]
-        }
-      end
-
-      let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine, perform: data) }
+      let(:total_results) { double }
+      let(:item_id) { double }
+      let(:item_data_without_id) { { foo: :bar } }
+      let(:item_data) { { id: item_id, foo: :bar } }
+      let(:items) { [item_data]}
 
       before do
-        allow(Registries::Repository).to receive(:[]).with(:search) do
-          repository
-        end
-      end
-
-      context 'initialization' do
-        it 'assigns the passed in query to the interactor' do
-          expect(subject.query).to eql query
-        end
-
-        it 'assigns the passed in page value to the interactor' do
-          expect(subject.page).to eql page
-        end
-
-        it 'assigns the passed in per_page value to the interactor' do
-          expect(subject.per_page).to eql per_page
-        end
+        allow(subject).to receive(:query) { query }
+        allow(subject).to receive(:page) { page }
+        allow(subject).to receive(:per_page) { per_page }
+        allow(subject).to receive(:total_results) { total_results }
+        allow(subject).to receive(:items) { items }
       end
 
       it 'calls the repository with the query, page and per_page' do
-        expect(repository).to receive(:perform).with(query, page, per_page)
+        expect(SearchResultCollection).to receive(:new).
+          with(query, total_results: total_results, page: page, per_page: per_page).
+          and_call_original
+
         subject.call
       end
 
-      it 'returns a search result collection' do
+      it 'instantiates a SearchResult with each element of #items' do
+        expect(SearchResult).to receive(:new).
+          with(item_id, item_data_without_id).
+          and_call_original
+
+        subject.call
+      end
+
+      it 'returns a SearchResultCollection' do
         expect(subject.call).to be_a(SearchResultCollection)
       end
 
-      it 'sets #total_results correctly' do
-        expect(subject.call.total_results).to eql total_results
-      end
+      context 'when the item data is valid' do
+        before do
+          allow_any_instance_of(SearchResult).to receive(:valid?) { true }
+        end
 
-      it 'populates #items with instances of SearchResult' do
-        subject.call.items.each { |el| expect(el).to be_a(SearchResult) }
-      end
+        context 'the returned SearchResultCollection#items' do
+          it 'contains a corresponding SearchResult' do
+            expect(subject.call.items.first).to be_a(SearchResult)
+          end
 
-      it "maps the array entries' `id' to the repositories' `id' value" do
-        expect(SearchResult).
-          to receive(:new).with(id, kind_of(Hash)).and_call_original
-
-        subject.call
-      end
-
-      %W(title description type).each do |attribute|
-        it "maps the array entries' `#{attribute}' to the repositories' `#{attribute}' value" do
-          expect(SearchResult).to(receive(:new)) { |_, attributes|
-            expect(attributes[attribute.to_sym]).to eq(send(attribute))
-          }.and_call_original
-
-          subject.call
+          it 'contains a corresponding SearchResult with matching ID' do
+            expect(subject.call.items.first.id).to eq item_id
+          end
         end
       end
 
-      context 'with invalid data' do
-        let(:item_data) { [{ id: id, title: title, type: type }] }
-
-        it 'skips the invalid record' do
-          expect(subject.call.items.none? { |result| result.id == id }).to be_true
+      context 'when the item data is valid' do
+        before do
+          allow_any_instance_of(SearchResult).to receive(:valid?) { false }
         end
 
-        it 'should log the invalid record' do
-          expect(Rails.logger).to receive :info
-
-          subject.call
+        context 'the returned SearchResultCollection#items' do
+          it 'is empty' do
+            expect(subject.call.items).to be_empty
+          end
         end
       end
+    end
+
+    context 'private methods' do
+      describe '#data' do
+        let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine) }
+        let(:data) { double }
+
+        before do
+          allow(subject).to receive(:query) { query }
+          allow(subject).to receive(:page) { page }
+          allow(subject).to receive(:per_page) { per_page }
+          allow(Registries::Repository).to receive(:[]).with(:search) { repository }
+          allow(repository).to receive(:perform) { data }
+        end
+
+        it 'calls #perform on the repository with the query, page and per_page' do
+          expect(repository).to receive(:perform).with(query, page, per_page)
+          subject.send(:data)
+        end
+
+        it 'returns the result of the call to #perform' do
+          expect(subject.send(:data)).to eq data
+        end
+      end
+
+      describe '#page' do
+        context 'if a value has been assigned' do
+          it 'returns the assigned value' do
+            expect(subject.send(:page)).to eq page
+          end
+        end
+
+        context 'if the a page has not been assigned' do
+          subject { described_class.new(query) }
+
+          it 'returns DEFAULT_PAGE' do
+            expect(subject.send(:page)).to eq Searcher::DEFAULT_PAGE
+          end
+        end
+      end
+
+      describe '#per_page' do
+        context 'if a value has been assigned' do
+          it 'returns the assigned value' do
+            expect(subject.send(:per_page)).to eq per_page
+          end
+        end
+
+        context 'if no value has been assigned' do
+          subject { described_class.new(query) }
+
+          it 'returns DEFAULT_PAGE' do
+            expect(subject.send(:per_page)).to eq Searcher::DEFAULT_PER_PAGE
+          end
+        end
+      end
+
+      describe '#total_results' do
+        let(:total_results) { double }
+
+        before do
+          allow(subject).to receive(:data) { { total_results: total_results } }
+        end
+
+        it 'returns the the value from the data hash' do
+          expect(subject.send(:total_results)).to eq total_results
+        end
+      end
+
+      describe '#items' do
+        let(:items) { double }
+
+        before do
+          allow(subject).to receive(:data) { { items: items } }
+        end
+
+        it 'returns the the value from the data hash' do
+          expect(subject.send(:items)).to eq items
+        end
+      end
+
     end
   end
 end

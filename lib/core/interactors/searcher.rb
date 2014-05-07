@@ -8,6 +8,9 @@ module Core
     DEFAULT_PAGE = 1
     DEFAULT_PER_PAGE = 10
 
+    PAGE_LIMIT = 5
+    PER_PAGE_LIMIT = 10
+
     attr_accessor :query
     attr_writer :page, :per_page
 
@@ -20,7 +23,7 @@ module Core
     end
 
     def call
-      options = { total_results: total_results, page: page, per_page: per_page }
+      options = { total_results: total_results, page: request_page, per_page: request_per_page }
       SearchResultCollection.new(query, options).tap do |results_collection|
         items.each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
@@ -36,7 +39,7 @@ module Core
     private
 
     def data
-      @data ||= Registries::Repository[:search].perform(query, page, per_page)
+      @data ||= Registries::Repository[:search].perform(query, request_page, request_per_page)
     end
 
     def page
@@ -45,6 +48,14 @@ module Core
 
     def per_page
       @per_page ||= DEFAULT_PER_PAGE
+    end
+
+    def request_page
+      [page, PAGE_LIMIT].sort.first
+    end
+
+    def request_per_page
+      [per_page, PER_PAGE_LIMIT].sort.first
     end
 
     def total_results

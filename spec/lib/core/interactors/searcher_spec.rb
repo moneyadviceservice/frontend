@@ -35,8 +35,8 @@ module Core
 
       before do
         allow(subject).to receive(:query) { query }
-        allow(subject).to receive(:page) { page }
-        allow(subject).to receive(:per_page) { per_page }
+        allow(subject).to receive(:request_page) { page }
+        allow(subject).to receive(:request_per_page) { per_page }
         allow(subject).to receive(:total_results) { total_results }
         allow(subject).to receive(:items) { items }
       end
@@ -97,8 +97,8 @@ module Core
 
         before do
           allow(subject).to receive(:query) { query }
-          allow(subject).to receive(:page) { page }
-          allow(subject).to receive(:per_page) { per_page }
+          allow(subject).to receive(:request_page) { page }
+          allow(subject).to receive(:request_per_page) { per_page }
           allow(Registries::Repository).to receive(:[]).with(:search) { repository }
           allow(repository).to receive(:perform) { data }
         end
@@ -141,6 +141,42 @@ module Core
 
           it 'returns DEFAULT_PAGE' do
             expect(subject.send(:per_page)).to eq Searcher::DEFAULT_PER_PAGE
+          end
+        end
+      end
+
+      describe '#request_page' do
+        context '#page is less than PAGE_LIMIT' do
+          let(:page) { 1 }
+
+          it 'returns #page' do
+            expect(subject.send(:request_page)).to eq page
+          end
+        end
+
+        context '#page is greater than PAGE_LIMIT' do
+          let(:page) { 100 }
+
+          it 'returns #page' do
+            expect(subject.send(:request_page)).to eq Searcher::PAGE_LIMIT
+          end
+        end
+      end
+
+      describe '#request_per_page' do
+        context '#per_page is less than PAGE_LIMIT' do
+          let(:per_page) { 1 }
+
+          it 'returns #per_page' do
+            expect(subject.send(:request_per_page)).to eq per_page
+          end
+        end
+
+        context '#per_page is greater than PAGE_LIMIT' do
+          let(:per_page) { 100 }
+
+          it 'returns #per_page' do
+            expect(subject.send(:request_per_page)).to eq Searcher::PER_PAGE_LIMIT
           end
         end
       end

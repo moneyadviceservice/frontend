@@ -33,16 +33,21 @@ module Frontend
     config.assets.precompile << /\.(?:png|svg|eot|woff|ttf)$/
 
     # Configure additional application JS assets to precompile.
-    config.assets.precompile += %w(html_inspector.js
-                                  supports.js
-                                  translations/en.js
-                                  translations/cy.js
-                                  modules/mas_collapsable.js
-                                  modules/mas_common.js
-                                  modules/mas_log.js
-                                  modules/mas_pubsub.js
-                                  modules/mas_scrollTracking.js
-                                  styleguide.js)
+    config.assets.precompile += %w(components/Toggler.js
+                                   html_inspector.js
+                                   lib/MASModule.js
+                                   lib/MicroEvent.js
+                                   modules/common.js
+                                   modules/globals.js
+                                   modules/i18n.js
+                                   modules/log.js
+                                   modules/mas_collapsable.js
+                                   modules/mas_pubsub.js
+                                   modules/mas_scrollTracking.js
+                                   styleguide.js
+                                   supports.js
+                                   translations/cy.js
+                                   translations/en.js)
 
     # Configure additional vendor JS assets to precompile.
     config.assets.precompile += %w(optimizely.js

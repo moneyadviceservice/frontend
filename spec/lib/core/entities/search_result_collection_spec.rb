@@ -26,6 +26,56 @@ module Core
       end
     end
 
+    describe '#page' do
+      let(:number_of_pages) { 10 }
+
+      before do
+        allow(subject).to receive(:number_of_pages) { number_of_pages }
+        subject.page = page
+      end
+
+      context 'when the requested page number is less than the total number of pages' do
+        let(:page) {  5 }
+
+        it 'returns the original requested page number' do
+          expect(subject.page).to eq page
+        end
+      end
+
+      context 'when the requested page number is more than the total number of pages' do
+        let(:page) {  15 }
+
+        it 'returns the total number of pages' do
+          expect(subject.page).to eq number_of_pages
+        end
+      end
+    end
+
+    describe '#total_results' do
+      let(:result_limit) { 50 }
+
+      before do
+        allow(subject).to receive(:result_limit) { result_limit }
+        subject.total_results = total_results
+      end
+
+      context 'when the total number of results is less than the result limit' do
+        let(:total_results) {  40 }
+
+        it 'returns the actual number of results' do
+          expect(subject.total_results).to eq total_results
+        end
+      end
+
+      context 'when the total number of results is more than the result limit' do
+        let(:total_results) {  100 }
+
+        it 'returns the result limit' do
+          expect(subject.total_results).to eq result_limit
+        end
+      end
+    end
+
     describe '#any?' do
       subject { result_collection.any? }
 

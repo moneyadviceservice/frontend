@@ -82,3 +82,11 @@ end
 When(/^I go to the next page of results$/) do
   search_results_page.pagination.next_button.click
 end
+
+When(/^I go to the fourth page of a query that returns three pages of results$/) do
+  visit(search_results_path(locale: I18n.locale, query: '"Deciding on the best type of credit for you"', page: 4))
+end
+
+Then(/^I should be on page (\d+) of (\d+) of the search results$/) do |page, number_of_pages|
+  expect(search_results_page.pagination).to have_content "Page #{page} of #{number_of_pages}"
+end

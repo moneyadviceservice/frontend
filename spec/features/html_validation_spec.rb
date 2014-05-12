@@ -82,7 +82,7 @@ describe 'HTML validation' do
     let(:searcher) { -> { result_collection } }
 
     before do
-      allow(Core::Searcher).to receive(:new).with(query, page_number).and_return(searcher)
+      allow(Core::Searcher).to receive(:new).with(query, page: nil).and_return(searcher)
     end
 
     context 'in English' do
@@ -90,7 +90,7 @@ describe 'HTML validation' do
 
       context 'with no query' do
         before do
-          visit main_app.search_results_path(locale: locale, page: page_number)
+          visit main_app.search_results_path(locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -98,7 +98,7 @@ describe 'HTML validation' do
 
       context 'with no results' do
         before do
-          visit main_app.search_results_path(query: query, locale: locale, page: page_number)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -109,7 +109,7 @@ describe 'HTML validation' do
         let(:results) { [content_item] }
 
         before do
-          visit main_app.search_results_path(query: query, locale: locale, page: page_number)
+          visit main_app.search_results_path(query: query, locale: locale)
         end
 
         specify { expect(page).to have_valid_html }

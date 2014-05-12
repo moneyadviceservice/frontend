@@ -6,10 +6,10 @@ require 'core/interactors/searcher'
 module Core
   describe Searcher do
     let(:query) { double }
-    let(:page) { double }
-    let(:per_page) { double }
+    let(:page) { '1' }
+    let(:per_page) { '10' }
 
-    subject { described_class.new(query, page, per_page) }
+    subject { described_class.new(query, page: page, per_page: per_page) }
 
     describe '#initialize' do
 
@@ -17,12 +17,12 @@ module Core
         expect(subject.send(:query)).to eql query
       end
 
-      it 'assigns the passed in page value to the interactor' do
-        expect(subject.send(:page)).to eql page
+      it 'assigns the passed in page value to the interactor coerced to an integer' do
+        expect(subject.send(:page)).to eql page.to_i
       end
 
-      it 'assigns the passed in per_page value to the interactor' do
-        expect(subject.send(:per_page)).to eql per_page
+      it 'assigns the passed in per_page value to the interactor coerced to an integer' do
+        expect(subject.send(:per_page)).to eql per_page.to_i
       end
     end
 
@@ -91,6 +91,9 @@ module Core
     end
 
     context 'private methods' do
+      let(:page) { 1 }
+      let(:per_page) { 10 }
+
       describe '#data' do
         let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine) }
         let(:data) { double }

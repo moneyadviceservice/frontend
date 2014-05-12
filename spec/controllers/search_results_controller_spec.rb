@@ -3,23 +3,33 @@ require 'core/interactors/searcher'
 
 describe SearchResultsController do
   describe 'GET index' do
-    let(:page) { double }
     let(:query) { 'query' }
     let(:search_results) { [double] }
     let(:search_results_collection) { double(items: search_results) }
     let(:searcher) { double(Core::Searcher) }
 
     before do
-      allow(controller).to receive(:page) { page }
       allow(Core::Searcher).to receive(:new) { searcher }
       allow(searcher).to receive(:call) { search_results_collection }
     end
 
     context 'with a search term' do
-      it 'instantiates an search reader' do
-        expect(Core::Searcher).to receive(:new).with(query, page)
+      context 'with no page param' do
+        it 'instantiates a search reader with a nil page option' do
+          expect(Core::Searcher).to receive(:new).with(query, page: nil)
 
-        get :index, locale: I18n.locale, query: query
+          get :index, locale: I18n.locale, query: query
+        end
+      end
+
+      context 'with a page param' do
+        let(:page) { '10' }
+
+        it 'instantiates a search reader with the param page option' do
+          expect(Core::Searcher).to receive(:new).with(query, page: page)
+
+          get :index, locale: I18n.locale, query: query, page: page
+        end
       end
 
       it 'calls the search reader' do
@@ -66,23 +76,6 @@ describe SearchResultsController do
         get :index, locale: I18n.locale
 
         expect(response).to render_template :index
-      end
-    end
-  end
-
-  describe '#page' do
-    context 'if the page param is set' do
-      let(:page_param) { '10' }
-      before { controller.params[:page] = page_param }
-
-      it 'returns its value as an integer' do
-        expect(controller.send(:page)).to eql page_param.to_i
-      end
-    end
-
-    context 'if the page param is not set' do
-      it 'returns the default value of 1' do
-        expect(controller.send(:page)).to eql 1
       end
     end
   end

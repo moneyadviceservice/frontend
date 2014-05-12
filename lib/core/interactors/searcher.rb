@@ -16,10 +16,10 @@ module Core
 
     private :query=, :page=, :per_page=
 
-    def initialize(query, page = nil, per_page = nil)
+    def initialize(query, options = {})
       self.query = query
-      self.page = page if page
-      self.per_page = per_page if per_page
+      self.page = options[:page].to_i if options[:page]
+      self.per_page = options[:per_page].to_i if options[:per_page]
     end
 
     def call

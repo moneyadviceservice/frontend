@@ -1,13 +1,13 @@
 require 'core/interactors/searcher'
 
 class SearchResultsController < ApplicationController
-  decorates_assigned :search_results, with: SearchResultDecorator
+  decorates_assigned :search_results, with: SearchResultCollectionDecorator
 
   def index
     if params[:query].present?
-      @search_results = Core::Searcher.new(params[:query]).call
+      @search_results = Core::Searcher.new(params[:query], page: params[:page]).call
 
-      if @search_results.present?
+      if @search_results.items.present?
         render 'search_results/index_with_results'
       else
         render 'search_results/index_no_results'

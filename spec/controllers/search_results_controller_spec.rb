@@ -5,18 +5,31 @@ describe SearchResultsController do
   describe 'GET index' do
     let(:query) { 'query' }
     let(:search_results) { [double] }
+    let(:search_results_collection) { double(items: search_results) }
     let(:searcher) { double(Core::Searcher) }
 
     before do
       allow(Core::Searcher).to receive(:new) { searcher }
-      allow(searcher).to receive(:call) { search_results }
+      allow(searcher).to receive(:call) { search_results_collection }
     end
 
     context 'with a search term' do
-      it 'instantiates an search reader' do
-        expect(Core::Searcher).to receive(:new).with(query)
+      context 'with no page param' do
+        it 'instantiates a search reader with a nil page option' do
+          expect(Core::Searcher).to receive(:new).with(query, page: nil)
 
-        get :index, locale: I18n.locale, query: query
+          get :index, locale: I18n.locale, query: query
+        end
+      end
+
+      context 'with a page param' do
+        let(:page) { '10' }
+
+        it 'instantiates a search reader with the param page option' do
+          expect(Core::Searcher).to receive(:new).with(query, page: page)
+
+          get :index, locale: I18n.locale, query: query, page: page
+        end
       end
 
       it 'calls the search reader' do
@@ -25,14 +38,14 @@ describe SearchResultsController do
         get :index, locale: I18n.locale, query: query
       end
 
-      it 'assigns the result of search reader to  @search_results' do
-        get :index, locale: I18n.locale, query: query
-
-        expect(assigns(:search_results)).to eq(search_results)
-      end
-
       context 'that returns results' do
-        before { allow(search_results).to receive(:present?).and_return(true) }
+        before { allow(search_results_collection).to receive(:any?).and_return(true) }
+
+        it 'assigns the result of the search reader to @search_results' do
+          get :index, locale: I18n.locale, query: query
+
+          expect(assigns(:search_results)).to eq(search_results_collection)
+        end
 
         it 'renders the right template' do
           get :index, locale: I18n.locale, query: query
@@ -42,7 +55,7 @@ describe SearchResultsController do
       end
 
       context 'that returns no results' do
-        before { allow(search_results).to receive(:present?).and_return(false) }
+        before { allow(search_results_collection).to receive(:items) { []} }
 
         it 'renders the right template' do
           get :index, locale: I18n.locale, query: query

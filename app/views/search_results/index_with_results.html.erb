@@ -8,7 +8,8 @@
   <div class="l-search-results">
     <%= render 'shared/search_box' %>
     <ol class="search-results">
-      <%= render search_results %>
+      <%= render partial: 'search_result', collection: search_results.items %>
     </ol>
+    <%= render 'pagination', search_results: search_results %>
   </div>
 </main>

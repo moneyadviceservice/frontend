@@ -68,9 +68,17 @@ describe 'HTML validation' do
   describe 'search results' do
     let(:query) { 'what to do when someone dies' }
     let(:page_number) { 1 }
+    let(:per_page) { 10 }
+    let(:total_results) { 0 }
     let(:content_item) { build :article }
     let(:results) { [] }
-    let(:result_collection) { double('search result collection', any?: false, items: results) }
+    let(:result_collection) do
+      double('search result collection',
+        page: page_number,
+        per_page: per_page,
+        total_results: total_results,
+        items: results)
+    end
     let(:searcher) { -> { result_collection } }
 
     before do
@@ -97,6 +105,7 @@ describe 'HTML validation' do
       end
 
       context 'with results' do
+        let(:total_results) { 1 }
         let(:results) { [content_item] }
 
         before do
@@ -127,6 +136,7 @@ describe 'HTML validation' do
       end
 
       context 'with results' do
+        let(:total_results) { 1 }
         let(:results) { [content_item] }
 
         before do

@@ -8,6 +8,11 @@ When(/^I search for something irrelevant$/) do
   home_page.search_box.submit.click
 end
 
+When(/^I search for a query that returns three pages of results$/) do
+  home_page.search_box.input.set '"Deciding on the best type of credit for you"'
+  home_page.search_box.submit.click
+end
+
 When(/^I submit a search with no query$/) do
   home_page.search_box.input.set ''
   home_page.search_box.submit.click
@@ -52,4 +57,36 @@ end
 
 Then(/^the search results page should have a robots tag with value noindex$/) do
   expect { search_results_page.robots_tag[:content] }.to become('noindex')
+end
+
+Then(/^I should see what page of results I am on$/) do
+  expect(search_results_page.pagination).to have_page_info
+end
+
+Then(/^I should see the "Next" button$/) do
+  expect(search_results_page.pagination).to have_next_button
+end
+
+Then(/^I should not see the "Next" button$/) do
+  expect(search_results_page.pagination).to_not have_next_button
+end
+
+Then(/^I should see the "Prev" button$/) do
+  expect(search_results_page.pagination).to have_previous_button
+end
+
+Then(/^I should not see the "Prev" button$/) do
+  expect(search_results_page.pagination).to_not have_previous_button
+end
+
+When(/^I go to the next page of results$/) do
+  search_results_page.pagination.next_button.click
+end
+
+When(/^I go to the fourth page of a query that returns three pages of results$/) do
+  visit(search_results_path(locale: I18n.locale, query: '"Deciding on the best type of credit for you"', page: 4))
+end
+
+Then(/^I should be on page (\d+) of (\d+) of the search results$/) do |page, number_of_pages|
+  expect(search_results_page.pagination).to have_content "Page #{page} of #{number_of_pages}"
 end

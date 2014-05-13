@@ -69,6 +69,9 @@ module Frontend
     # Use Rack middleware to respond to requests probing for a implemented route
     config.middleware.use 'RouteProbe'
 
+    # Convert HEAD requests to GET and return an empty body
+    config.middleware.use 'OverrideHead'
+
   end
 end
 

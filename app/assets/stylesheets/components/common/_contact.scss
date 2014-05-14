@@ -1,0 +1,101 @@
+// Contact component for the website
+//
+// Styleguide contact
+
+.contact {
+  margin-bottom: $baseline-unit;
+}
+
+.contact__container {
+  @extend %clearfix;
+  margin-bottom: $baseline-unit*3;
+
+  @include respond-to($mq-m) {
+    @include column(6);
+
+    &:first-child {
+      float: left;
+      width: 100%;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+
+    &:first-child {
+      @include column(4);
+    }
+  }
+}
+
+.contact__container--bubble {
+  position: relative;
+  background-color: $contact-bubble-background;
+  padding: $baseline-unit*3;
+  border-radius: 20px;
+  margin-left: 0;
+
+  @include respond-to($mq-m) {
+    margin-right: $baseline-unit*4;
+
+  }
+
+  &:before {
+    position: absolute;
+    bottom: -20px;
+    right: 40px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #61a612 transparent transparent transparent;
+  }
+}
+
+.contact__heading {
+  @include body(24, 30);
+  font-weight: 500;
+  margin-bottom: $baseline-unit;
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*3;
+    font-size: 30px;
+  }
+
+}
+
+.contact__heading--white {
+  margin-top: $baseline-unit*3;
+  @include body(24, 24);
+  color: white;
+}
+
+.contact__text {
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*3;
+  }
+}
+
+.contact__number {
+  @extend %type-home-number;
+  color: $telephone-number-hover;
+
+  &:hover {
+    text-decoration: none;
+    color: $telephone-number-hover;
+  }
+}
+
+.contact__opening-hours__heading {
+  font-weight: 500;
+  color: $colour-contact-heading;
+  margin-top: 0;
+}
+
+.contact__opening-hours__link {
+  @extend %type-footer;
+}

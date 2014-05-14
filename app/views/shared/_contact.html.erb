@@ -1,18 +1,21 @@
 <div class="contact">
   <div class="l-constrained">
-    <section class="contact__container">
+    <div class="contact__container">
       <h2 class="contact__heading"><%= t('home.show.contact.title') %></h2>
+
       <p class="contact__text"><%= t('home.show.contact.introduction') %></p>
-    </section>
+    </div>
 
-    <section class="contact__container contact__container--bubble">
-      <p class="contact__heading contact__heading--white">Ask ma&hellip;</p>
-      <p><a class="contact__number" href="tel:<%= t('home.show.contact.number') %>"><%= t('home.show.contact.number') %></a></p>
-    </section>
+    <div class="contact__container contact__container--bubble">
+      <p class="contact__heading contact__heading--white"><%= t('home.show.contact.call_us') %>&hellip;</p>
+      <a class="contact__number" href="tel:<%= t('home.show.contact.number') %>"><%= t('home.show.contact.number') %></a>
+    </div>
 
-    <div class="contact__opening-hours">
+    <div class="contact__container contact__opening-hours">
       <h3 class="contact__opening-hours__heading"><%= t('home.show.contact.opening_hours_heading') %></h3>
+
       <p><%= t('home.show.contact.opening_hours_html') %></p>
+
       <p class="contact__opening-hours__link"><%= t('home.show.contact.call_charges_html') %></p>
     </div>
   </div>

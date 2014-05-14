@@ -51,7 +51,11 @@ module Core
     end
 
     def request_page
-      [page, PAGE_LIMIT].sort.first
+      if page > 0
+        [page, PAGE_LIMIT].sort.first
+      else
+        1
+      end
     end
 
     def request_per_page

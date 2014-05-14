@@ -9,8 +9,8 @@ module UI::Pages
     element :feature_list_items, '.home-feature__list-item'
     elements :promoted_items, '.home-promoted__item'
 
-    element :contact_heading, '.home-contact__header h2'
-    element :contact_introduction, '.home-contact__header p'
-    element :contact_details, '.home-contact__details'
+    element :contact_heading, 'h2.contact__heading'
+    element :contact_introduction, '.contact__text'
+    element :contact_number, '.contact__number'
   end
 end

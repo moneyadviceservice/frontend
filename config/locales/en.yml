@@ -65,13 +65,14 @@ en:
 
       contact:
         title: Can’t find what you need?
-        introduction_html: |
-          <p>Our trained staff are on hand to help</p>
-        details_html: |
-          <a class="home-contact__number" href="tel:+443005005000">0300 500 5000</a>
-          <h3>Opening hours</h3>
-          <p>Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am–1pm</strong></p>
-          <p><a href="/en/static/contact-us">Find out about call charges</a></p>
+        introduction: Our trained staff are on hand to help you
+        number: 0300 500 5000
+        opening_hours_heading: Opening hours
+        opening_hours_html: |
+          Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am–1pm</strong>
+        call_charges_html: |
+          <a href="/en/static/contact-us">Find out about call charges</a>
+
       promoted:
         - url: /en/payday-loans
           text: Payday loans - don’t be tempted by fast cash.

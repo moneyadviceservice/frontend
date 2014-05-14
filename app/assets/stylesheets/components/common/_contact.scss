@@ -35,11 +35,6 @@
   border-radius: 20px;
   margin-left: 0;
 
-  @include respond-to($mq-m) {
-    margin-right: $baseline-unit*4;
-
-  }
-
   &:before {
     position: absolute;
     bottom: -20px;
@@ -51,6 +46,11 @@
     border-width: 20px 20px 0 0;
     border-color: #61a612 transparent transparent transparent;
   }
+
+  @include respond-to($mq-m) {
+    margin-right: $baseline-unit*4;
+
+  }
 }
 
 .contact__heading {
@@ -60,7 +60,6 @@
   margin-top: $baseline-unit*4;
 
   @include respond-to($mq-m) {
-    margin-top: $baseline-unit*3;
     font-size: 30px;
   }
 

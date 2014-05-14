@@ -5,6 +5,7 @@
 
   <%= content_for?(:main) ? yield(:main) : yield %>
 
+  <%= render 'shared/contact' %>
   <%= render 'shared/footer' %>
 <% end %>
 

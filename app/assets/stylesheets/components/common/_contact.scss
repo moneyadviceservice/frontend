@@ -31,9 +31,10 @@
 .contact__container--bubble {
   position: relative;
   background-color: $contact-bubble-background;
-  padding: $baseline-unit*3;
+  padding: $baseline-unit*4;
   border-radius: 20px;
   margin-left: 0;
+  max-width: 320px;
 
   &:before {
     position: absolute;
@@ -45,11 +46,6 @@
     border-style: solid;
     border-width: 20px 20px 0 0;
     border-color: #61a612 transparent transparent transparent;
-  }
-
-  @include respond-to($mq-m) {
-    margin-right: $baseline-unit*4;
-
   }
 }
 
@@ -66,7 +62,7 @@
 }
 
 .contact__heading--white {
-  margin-top: $baseline-unit*3;
+  margin-top: 0;
   @include body(24, 24);
   color: white;
 }

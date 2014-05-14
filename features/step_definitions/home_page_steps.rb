@@ -42,7 +42,7 @@ Then(/^I should see information about contacting the Money Advice Service call c
   expect(home_page.contact_introduction).
     to have_content(strip_tags(I18n.t('home.show.contact.introduction')))
 
-  expect(home_page.contact_details).
+  expect(home_page.contact_number).
     to have_content(strip_tags(I18n.t('home.show.contact.number')))
 end
 

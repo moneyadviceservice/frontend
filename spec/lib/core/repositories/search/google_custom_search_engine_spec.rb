@@ -58,7 +58,7 @@ module Core::Repositories::Search
       end
 
       context 'when locale is :en' do
-        let(:expected_params) { { key: anything, cx: cx_en, q: anything, num: anything, start: anything } }
+        let(:expected_params) { { key: anything, cx: cx_en, q: anything, num: anything, start: anything, filter: anything } }
         before { I18n.locale = :en }
 
         it 'sets the connection with the :en engine' do
@@ -69,7 +69,7 @@ module Core::Repositories::Search
       end
 
       context 'when locale is :cy' do
-        let(:expected_params) { { key: anything, cx: cx_cy, q: anything, num: anything, start: anything } }
+        let(:expected_params) { { key: anything, cx: cx_cy, q: anything, num: anything, start: anything, filter: anything } }
         before { I18n.locale = :cy }
 
         it 'sets the connection with the :cy engine' do

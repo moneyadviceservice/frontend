@@ -3,7 +3,9 @@
 // Styleguide contact
 
 .contact {
-  margin-bottom: $baseline-unit;
+  border-top: 1px solid $home-feature-list-border;
+  padding-top: $baseline-unit*7;
+  margin-bottom: $baseline-unit*6;
 }
 
 .contact__container {
@@ -34,7 +36,6 @@
   padding: $baseline-unit*4;
   border-radius: 20px;
   margin-left: 0;
-  max-width: 320px;
 
   &:before {
     position: absolute;
@@ -92,5 +93,9 @@
 }
 
 .contact__opening-hours__link {
+  @extend %type-footer;
+}
+
+.contact__opening-hours__text {
   @extend %type-footer;
 }

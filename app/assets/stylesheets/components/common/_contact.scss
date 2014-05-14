@@ -32,7 +32,7 @@
 
 .contact__container--bubble {
   position: relative;
-  background-color: $contact-bubble-background;
+  background-color: $color-contact-bubble-background;
   padding: $baseline-unit*4;
   border-radius: 20px;
   margin-left: 0;
@@ -78,11 +78,11 @@
 
 .contact__number {
   @extend %type-home-number;
-  color: $telephone-number-hover;
+  color: $color-telephone-number-hover;
 
   &:hover {
     text-decoration: none;
-    color: $telephone-number-hover;
+    color: $color-telephone-number-hover;
   }
 }
 

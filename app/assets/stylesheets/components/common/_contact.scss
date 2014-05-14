@@ -3,21 +3,19 @@
 // Styleguide contact
 
 .contact {
-  border-top: 1px solid $home-feature-list-border;
-  padding-top: $baseline-unit*7;
-  margin-bottom: $baseline-unit*6;
+  border-top: 3px solid $home-feature-list-border;
+  padding-top: $baseline-unit*6;
+  margin-bottom: $baseline-unit*8;
 }
 
 .contact__container {
   @extend %clearfix;
-  margin-bottom: $baseline-unit*3;
 
   @include respond-to($mq-m) {
     @include column(6);
 
     &:first-child {
-      float: left;
-      width: 100%;
+      @include column(12);
     }
   }
 
@@ -35,7 +33,9 @@
   background-color: $color-contact-bubble-background;
   padding: $baseline-unit*4;
   border-radius: 20px;
-  margin-left: 0;
+  margin-bottom: $baseline-unit*5;
+//  max-width: 320px;
+//  float: right;
 
   &:before {
     position: absolute;
@@ -52,32 +52,33 @@
 
 .contact__heading {
   @include body(24, 30);
-  font-weight: 500;
+  @extend %font-heading-medium;
+  margin-top: 0;
   margin-bottom: $baseline-unit;
-  margin-top: $baseline-unit*4;
 
   @include respond-to($mq-m) {
-    font-size: 30px;
+    margin-top: $baseline-unit*3;
+    @include body(30, 30);
   }
-
 }
 
-.contact__heading--white {
-  margin-top: 0;
+.contact__call-us {
   @include body(24, 24);
+  @extend %font-heading-medium;
+  margin-top: 0;
+  margin-bottom: $baseline-unit;
   color: white;
 }
 
 .contact__text {
-  margin-bottom: $baseline-unit;
-
-  @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*3;
-  }
+  margin-bottom: $baseline-unit*3;
 }
 
 .contact__number {
-  @extend %type-home-number;
+  @extend %font-heading-heavy;
+  @include body(30, 36);
+  letter-spacing: -1px;
+
   color: $color-telephone-number-hover;
 
   &:hover {
@@ -87,15 +88,12 @@
 }
 
 .contact__opening-hours__heading {
-  font-weight: 500;
+  @extend %font-heading-medium;
   color: $colour-contact-heading;
   margin-top: 0;
 }
 
-.contact__opening-hours__link {
-  @extend %type-footer;
-}
-
+.contact__opening-hours__link,
 .contact__opening-hours__text {
-  @extend %type-footer;
+  @include body(16, 24);
 }

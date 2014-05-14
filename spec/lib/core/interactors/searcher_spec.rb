@@ -152,7 +152,7 @@ module Core
         context '#page is below zero' do
           let(:page) { -1 }
 
-          it 'returns #page' do
+          it 'returns 1' do
             expect(subject.send(:request_page)).to eq 1
           end
         end
@@ -168,7 +168,7 @@ module Core
         context '#page is less than PAGE_LIMIT' do
           let(:page) { 1 }
 
-          it 'returns 1' do
+          it 'returns #page' do
             expect(subject.send(:request_page)).to eq page
           end
         end

@@ -26,13 +26,13 @@
 
   li > a {
     @extend %type-footer;
-    font-weight: 500;
+    font-weight: 300;
     padding: $baseline-unit 0;
   }
 
   button {
     @extend %type-footer;
-    font-weight: 500;
+    font-weight: 300;
     text-align: left;
   }
 }

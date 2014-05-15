@@ -52,14 +52,14 @@ module Core
 
     def request_page
       if page > 0
-        [page, PAGE_LIMIT].sort.first
+        [page, PAGE_LIMIT].min
       else
         1
       end
     end
 
     def request_per_page
-      [per_page, PER_PAGE_LIMIT].sort.first
+      [per_page, PER_PAGE_LIMIT].min
     end
 
     def total_results

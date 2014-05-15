@@ -1,0 +1,35 @@
+// Trust banner displayed on the home page
+//
+// Styleguide Trust banner
+
+.trust-banner {
+  @include column(12);
+  background: image_url('illustrated_people.jpg') 100% 100% no-repeat;
+  background-size: 100%;
+
+  @include respond-to($mq-s) {
+    background-size: auto;
+  }
+}
+
+.trust-banner__heading {
+  @include body(30, 36);
+  color: $trust-banner-heading;
+  margin: 0;
+
+  padding-top: $baseline-unit*5;
+  padding-bottom: $baseline-unit*27;
+
+  @include respond-to($mq-s) {
+    @include body(36, 40);
+    padding-bottom: $baseline-unit*6;
+    max-width: 61%;
+    background-color: $trust-banner-background;
+  }
+
+  @include respond-to($mq-m) {
+    @include body(48, 54);
+    padding-top: $baseline-unit*9;
+    padding-bottom: $baseline-unit*9;
+  }
+}

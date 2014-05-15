@@ -26,18 +26,19 @@ class SearchResultDecorator < Draper::Decorator
 
   private
 
-  def site_title_regex
-    Regexp.new(site_title_suffixes.join('$|'))
-  end
+  def make_optional(string)
+    head = string.first
+    tail = string[1..-1]
 
-  def site_title_suffixes
-    title  = h.t('layouts.base.title')
-    length = title.length
-
-    length.times.map do |i|
-      truncated = i < length -1
-      " - #{title[0..i]}" + (truncated ? ' ...' : '')
+    if tail
+      "(#{head}#{make_optional(tail)})?"
+    else
+      ''
     end
   end
 
+  def site_title_regex
+    title = h.t('layouts.base.title')
+    Regexp.new("( - #{make_optional(title)}( \.\.\.)?)?$")
+  end
 end

@@ -7,6 +7,7 @@ module Core::Repositories
   module Search
     class GoogleCustomSearchEngine < Core::Repository
       EVENT_NAME = 'request.google_api.search'
+      DUPLICATE_CONTENT_FILTER = 0
 
       attr_accessor :page, :per_page
 
@@ -20,7 +21,7 @@ module Core::Repositories
       def perform(query, page, per_page)
         response = ActiveSupport::Notifications.instrument(EVENT_NAME, query: query, locale: I18n.locale, page: page, per_page: per_page) do
           start_index = ((page * per_page) - (per_page - 1))
-          connection.get('customsearch/v1', key: key, cx: localized_cx, num: per_page, q: query, start: start_index)
+          connection.get('customsearch/v1', key: key, cx: localized_cx, num: per_page, q: query, start: start_index, filter: DUPLICATE_CONTENT_FILTER)
         end
         ResponseMapper.new(response).mapped_response
 

@@ -6,11 +6,15 @@ module Core
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title:       double,
+                         parent_id:   double,
                          description: double,
                          contents:    double } }
 
     it { should respond_to :type }
     it { should respond_to :type= }
+
+    it { should respond_to :parent_id }
+    it { should respond_to :parent_id= }
 
     it { should respond_to :title }
     it { should respond_to :title= }

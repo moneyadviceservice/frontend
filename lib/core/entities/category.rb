@@ -2,7 +2,7 @@ require 'core/entities/entity'
 
 module Core
   class Category < Entity
-    attr_accessor :type, :title, :description, :contents
+    attr_accessor :type, :parent_id, :title, :description, :contents
 
     validates_presence_of :title
 

@@ -22,14 +22,19 @@
 
   @include respond-to($mq-s) {
     @include body(36, 40);
-    padding-bottom: $baseline-unit*6;
+    padding-bottom: $baseline-unit*33;
+  }
+
+  @include respond-to(37.5em) {
+    @include body(42, 48);
+    padding-top: $baseline-unit*9;
+    padding-bottom: $baseline-unit*9;
+
     max-width: 61%;
     background-color: $trust-banner-background;
   }
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-m){
     @include body(48, 54);
-    padding-top: $baseline-unit*9;
-    padding-bottom: $baseline-unit*9;
   }
 }

@@ -2,7 +2,7 @@ require 'core/entities/category'
 require 'core/registries/repository'
 
 module Core
-  class CategoryNavigationReader < Array
+  class CategoryNavigationReader
     def call(&block)
       categories = Registries::Repository[:category].all
 
@@ -11,7 +11,7 @@ module Core
         return
       end
 
-      replace(build_list(categories))
+      build_list(categories)
     end
 
     private

@@ -59,7 +59,7 @@
   @include respond-to(48.75em) {
     @include body(36, 42);
     max-width: 520px;
-    padding-top: $baseline-unit*8;
+    padding-top: $baseline-unit*9;
     padding-bottom: $baseline-unit*9;
   }
 

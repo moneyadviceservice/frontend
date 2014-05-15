@@ -5,13 +5,13 @@
 .contact {
   border-top: 3px solid $home-feature-list-border;
   padding-top: $baseline-unit*6;
-  margin-bottom: $baseline-unit*8;
+  margin-bottom: $baseline-unit*4;
 }
 
 .contact__container {
   @extend %clearfix;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-s) {
     @include column(6);
 
     &:first-child {
@@ -34,8 +34,6 @@
   padding: $baseline-unit*4;
   border-radius: 20px;
   margin-bottom: $baseline-unit*5;
-//  max-width: 320px;
-//  float: right;
 
   &:before {
     position: absolute;
@@ -78,7 +76,6 @@
   @extend %font-heading-heavy;
   @include body(30, 36);
   letter-spacing: -1px;
-
   color: $color-telephone-number-hover;
 
   &:hover {

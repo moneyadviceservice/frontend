@@ -3,38 +3,68 @@
 // Styleguide Trust banner
 
 .trust-banner {
+  position: relative;
   @include column(12);
-  background: image_url('illustrated_people.jpg') 100% 100% no-repeat;
-  background-size: 100%;
+}
 
-  @include respond-to($mq-s) {
+.trust-banner__image {
+  height: 129px;
+  width: 100%;
+  overflow: hidden;
+  background: image_url('illustrated_people.jpg') 0 0 no-repeat;
+  background-size: contain;
+
+  @include respond-to(31.875em) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 176px;
+    width: 244px;
+    background-position: 100% 100%;
     background-size: auto;
+    margin-top: $baseline-unit*2;
   }
+
+  @include respond-to(61.1875em) {
+    width: 467px;
+  }
+
 }
 
 .trust-banner__heading {
   @include body(30, 36);
   color: $trust-banner-heading;
   margin: 0;
+  max-width: 479px;
+  padding-top: $baseline-unit*4;
 
-  padding-top: $baseline-unit*5;
-  padding-bottom: $baseline-unit*27;
-
-  @include respond-to($mq-s) {
-    @include body(36, 40);
-    padding-bottom: $baseline-unit*33;
+  @include respond-to(31.875em) {
+    @include body(30, 36);
+    padding-top: $baseline-unit*6;
+    padding-bottom: $baseline-unit*8;
+    max-width: 251px;
   }
 
-  @include respond-to(37.5em) {
-    @include body(42, 48);
-    padding-top: $baseline-unit*9;
+  @include respond-to(38.75em) {
+    @include body(32, 36);
+    max-width: 360px;
+  }
+
+  @include respond-to($mq-m) {
+    @include body(36, 42);
+    padding-bottom: $baseline-unit*7;
+    max-width: 455px;
+  }
+
+  @include respond-to(48.75em) {
+    @include body(36, 42);
+    max-width: 520px;
+    padding-top: $baseline-unit*8;
     padding-bottom: $baseline-unit*9;
-
-    max-width: 61%;
-    background-color: $trust-banner-background;
   }
 
-  @include respond-to($mq-m){
-    @include body(48, 54);
+  @include respond-to($mq-xl) {
+    @include body(44, 54);
+    max-width: 670px;
   }
 }

@@ -1,0 +1,13 @@
+<div class="directory-container">
+  <div class="l-constrained">
+    <ul class="directory">
+      <% items.each do |item| %>
+        <li class="directory__item">
+          <a class="directory__item__heading" href="<%= item['url'] %>"><%= item['title'] %></a>
+
+          <p><%= item['description'] %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -57,8 +57,8 @@
   letter-spacing: -1px;
 
   @include respond-to($mq-m) {
-    @include body(24, 30);
     margin-bottom: $baseline-unit*2;
+    @include body(24, 30);
   }
 
   .theme-cy & {

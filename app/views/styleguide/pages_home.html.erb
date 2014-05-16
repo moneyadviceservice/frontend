@@ -1,8 +1,6 @@
 <%= render 'shared/trust_banner' %>
 
-<%= render 'shared/homepage_feature',
-           strapline: t('home.show.strapline'),
-           items:     t('home.show.featured') %>
+<%= render 'shared/directory', items: t('home.show.featured') %>
 
 <%= render 'shared/home_promoted', items: t('home.show.promoted') %>
 

@@ -35,12 +35,17 @@
 <% end %>
 
 <%= styleguide_section sections['home_contact'] do %>
-    <%= render 'shared/home_contact' %>
+  <%= render 'shared/home_contact' %>
 <% end %>
 
 <%= styleguide_section sections['contact'] do %>
   <%= render 'shared/contact' %>
+<% end %>
 
 <%= styleguide_section sections['Trust banner'] do %>
-    <%= render 'shared/trust_banner' %>
+  <%= render 'shared/trust_banner' %>
+<% end %>
+
+<%= styleguide_section sections['Directory'] do %>
+  <%= render 'shared/directory', items: t('home.show.featured') %>
 <% end %>

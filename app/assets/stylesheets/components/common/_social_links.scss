@@ -5,8 +5,6 @@
 .social-links {
   @extend .unstyled-list;
   overflow: hidden;
-  border-left: 1px solid $color-white-translucent-fallback;
-  border-left: 1px solid $color-white-translucent;
 
   > li {
     @extend .unstyled-list;
@@ -20,13 +18,11 @@
     height: 44px;
     padding: 10px;
     background-color: $color-green-primary;
-    border-right: 1px solid $color-white-translucent-fallback;
-    border-right: 1px solid $color-white-translucent;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: darken($color-green-primary, 10%);
+      background-color: $color-green-secondary;
       border-bottom: none;
     }
 

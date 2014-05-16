@@ -1,5 +1,6 @@
 .l-trust-banner {
   @include column(12);
+}
 
 .l-directory__item {
   @include column(12);
@@ -12,5 +13,24 @@
   @include respond-to($mq-l) {
     @include column(4);
     margin-bottom: $baseline-unit*4;
+  }
+}
+
+.l-homepage-promo {
+  @include respond-to($mq-s) {
+    @include column(6);
+    margin-bottom: $baseline-unit*4;
+    margin-top: $baseline-unit*4;
+    min-height: 310px;
+  }
+
+  @include respond-to($mq-m) {
+    min-height: 397px;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+    margin-bottom: $baseline-unit*4;
+    margin-top: $baseline-unit*4;
   }
 }

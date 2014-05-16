@@ -75,5 +75,41 @@ module Core
         it { expect(subject).to_not be_one_parent }
       end
     end
+
+    describe '#parent_category_ids' do
+      let(:parent_category_1_id) { 'parent-category-1' }
+      let(:parent_category_2_id) { 'parent-category-2' }
+      let(:category_1) { double(parent_id: parent_category_1_id ) }
+      let(:category_2) { double(parent_id: parent_category_1_id ) }
+      let(:category_3) { double(parent_id: parent_category_2_id ) }
+      let(:categories) { [] }
+
+      before do
+        allow(subject).to receive(:categories) { categories }
+      end
+
+      context 'in 1 child category within 1 parent category' do
+        let(:categories) { [category_1] }
+
+        specify { expect(subject.parent_category_ids).to eq [parent_category_1_id] }
+      end
+
+      context 'in 2 child categories sharing 1 parent category' do
+        let(:categories) { [category_1, category_2] }
+
+        specify { expect(subject.parent_category_ids).to eq [parent_category_1_id] }
+      end
+
+      context 'in 2 child categories within 2 separate parent categories' do
+        let(:categories) { [category_1, category_3] }
+
+        specify { expect(subject.parent_category_ids.sort).to eq [parent_category_1_id, parent_category_2_id].sort }
+      end
+
+      context 'in a category without a parent category ' do
+        let(:categories) { [double(parent_id: '')] }
+        specify { expect(subject.parent_category_ids).to eq [] }
+      end
+    end
   end
 end

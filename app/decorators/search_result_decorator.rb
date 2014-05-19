@@ -6,7 +6,7 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def path
-    object.link
+    object.link if defined?(object.link)
   end
 
   def title

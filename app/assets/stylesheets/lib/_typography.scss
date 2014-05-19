@@ -86,9 +86,7 @@
 }
 
 %type-footer {
-  @include respond-to($mq-xl) {
-    @include body(16, 24);
-  }
+  @include body(16, 24);
 }
 
 %type-primary-navigation {

@@ -3,7 +3,7 @@
   <% categories.each do |category| %>
     <div class="related-links__category">
       <h3 class="related-links__heading">
-        <%= category.title %>
+        <%= t('related_links.title_prefix') %> <%= category.title %>
       </h3>
       <ul class="unstyled-list">
         <% category.contents.each do |article| %>
@@ -11,7 +11,11 @@
             <%= link_to article.title, article.path %>
           </li>
         <% end %>
-        <li class="related-links__category-link"><%= link_to 'View all...', category.path %></li>
+        <li class="related-links__category-link">
+          <%= link_to category.path do %>
+            <%= t('related_links.link') %>
+            <span class="visually-hidden"><%= t('related_links.hidden_link') %><%= category.title %></span>
+          <% end %></li>
       </ul>
     </div>
   <% end %>

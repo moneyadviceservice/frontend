@@ -2,13 +2,10 @@
                  alternate:   alternate_home_map,
                  description: t('.description').strip) %>
 
+<%= render 'shared/trust_banner' %>
+
 <%= render 'shared/homepage_feature',
            strapline: t('.strapline'),
            items:     t('.featured') %>
-
-<%= render 'shared/home_contact',
-           title:        t('.contact.title'),
-           introduction: t('.contact.introduction_html'),
-           details:      t('.contact.details_html') %>
 
 <%= render 'shared/home_promoted', items: t('.promoted') %>

@@ -40,10 +40,10 @@ Then(/^I should see information about contacting the Money Advice Service call c
   expect(home_page.contact_heading).to have_content(I18n.t('home.show.contact.title'))
 
   expect(home_page.contact_introduction).
-    to have_content(strip_tags(I18n.t('home.show.contact.introduction_html')))
+    to have_content(strip_tags(I18n.t('home.show.contact.introduction')))
 
-  expect(home_page.contact_details).
-    to have_content(strip_tags(I18n.t('home.show.contact.details_html')))
+  expect(home_page.contact_number).
+    to have_content(strip_tags(I18n.t('home.show.contact.number')))
 end
 
 Then(/^I should be taken to that social media profile$/) do

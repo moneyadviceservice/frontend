@@ -1,0 +1,36 @@
+// Contact component for the website
+//
+// Styleguide contact
+
+.contact {
+  border-top: 3px solid $home-feature-list-border;
+  padding-top: $baseline-unit*6;
+  margin-bottom: $baseline-unit*4;
+}
+
+
+.contact__strapline-heading {
+  @include body(24, 30);
+  @extend %font-heading-medium;
+  margin-top: 0;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*3;
+    @include body(30, 30);
+  }
+}
+
+.contact__strapline-text {
+  margin-bottom: $baseline-unit*3;
+}
+
+.contact__details-heading {
+  @extend %font-heading-medium;
+  color: $colour-contact-heading;
+  margin-top: 0;
+}
+
+.contact__details-text {
+  @include body(16, 24);
+}

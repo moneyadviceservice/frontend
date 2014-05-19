@@ -1,0 +1,65 @@
+// Trust banner displayed on the home page
+//
+// Styleguide Trust banner
+
+.trust-banner {
+  position: relative;
+}
+
+.trust-banner__image {
+  height: 129px;
+  width: 310px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: image_url('illustrated_people.jpg') 0 0 no-repeat;
+  background-size: contain;
+
+  @include respond-to(31.875em) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 176px;
+    width: 244px;
+    background-position: 100% 100%;
+    background-size: auto;
+    margin-top: $baseline-unit*2;
+  }
+
+  @include respond-to(61.1875em) {
+    width: 467px;
+  }
+}
+
+.trust-banner__heading {
+  @include body(30, 36);
+  color: $trust-banner-heading;
+  margin: 0;
+  max-width: 479px;
+  padding-top: $baseline-unit*4;
+
+  @include respond-to(31.875em) {
+    @include body(32, 36);
+    padding-top: $baseline-unit*6;
+    padding-bottom: $baseline-unit*9;
+    max-width: 251px;
+  }
+
+  @include respond-to(38.75em) {
+    @include body(36, 42);
+    padding-top: $baseline-unit*9;
+    max-width: 360px;
+  }
+
+  @include respond-to($mq-m) {
+    max-width: 455px;
+  }
+
+  @include respond-to(48.75em) {
+    max-width: 520px;
+  }
+
+  @include respond-to($mq-xl) {
+    @include body(44, 54);
+    max-width: 670px;
+  }
+}

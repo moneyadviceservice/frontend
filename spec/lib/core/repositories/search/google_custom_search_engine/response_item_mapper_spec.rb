@@ -41,10 +41,6 @@ module Core::Repositories::Search
         expect(subject[:description]).to eq(description)
       end
 
-      it 'maps the type correctly' do
-        expect(subject[:type]).to eq(type)
-      end
-
       it 'maps the link correctly' do
         expect(subject[:link]).to eq(link)
       end

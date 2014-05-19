@@ -50,79 +50,12 @@ describe SearchResultDecorator do
   end
 
   describe '#path' do
-    let(:locale) { 'en' }
-    before { allow(I18n).to receive(:locale) { locale } }
+    let(:link) { 'link' }
 
-    %w{article guide}.each do |type|
-      context "and it is of type '#{type}'" do
-        before { allow(search_result).to receive(:type) { type } }
+    before { allow(search_result).to receive(:link) { link } }
 
-        it 'calls the article path helper' do
-          expect(helpers).to receive(:article_path).with(search_result.id, locale: locale)
-          subject.path
-        end
-      end
-
-      context 'when search result contains link' do
-        let(:link) { 'link' }
-        before { allow(search_result).to receive(:link) { link } }
-
-        it 'retuns the link' do
-          expect(subject.path).to be(link)
-        end
-      end
-    end
-
-    context "and it is of type 'action-plan'" do
-      before { allow(search_result).to receive(:type) { 'action-plan' } }
-
-      it 'calls the action_plan path helper' do
-        expect(helpers).to receive(:action_plan_path).with(search_result.id, locale: locale)
-        subject.path
-      end
-    end
-
-    context "and it is of type 'category'" do
-      before { allow(search_result).to receive(:type) { 'category' } }
-
-      it 'calls the category path helper' do
-        expect(helpers).to receive(:category_path).with(search_result.id, locale: locale)
-        subject.path
-      end
-    end
-
-    context "and is of the not yet supported type" do
-      context "'campaign'" do
-        before { allow(search_result).to receive(:type) { 'campaign' } }
-
-        it 'returns the expected path' do
-          expect(subject.path).to eq "/#{locale}/campaigns/#{search_result.id}"
-        end
-      end
-
-      context "'news'" do
-        before { allow(search_result).to receive(:type) { 'news' } }
-
-        it 'returns the expected path' do
-          expect(subject.path).to eq "/#{locale}/news/#{search_result.id}"
-        end
-      end
-
-      context "'tool'" do
-        before { allow(search_result).to receive(:type) { 'tool' } }
-
-        it 'returns the expected path' do
-          expect(subject.path).to eq "/#{locale}/tools/#{search_result.id}"
-        end
-      end
-
-      context "'video'" do
-        before { allow(search_result).to receive(:type) { 'video' } }
-
-        it 'returns the expected path' do
-          expect(subject.path).to eq "/#{locale}/videos/#{search_result.id}"
-        end
-      end
+    it 'retuns the link' do
+      expect(subject.path).to be(link)
     end
   end
 end

@@ -23,10 +23,6 @@ module Core::Repositories
           metatags.map { |m| m['og:description'] }.compact.first || ''
         end
 
-        def type
-          link_tokens[SECOND_TO_LAST_INDEX].singularize
-        end
-
         def link
           data['link']
         end
@@ -38,7 +34,6 @@ module Core::Repositories
         def mapped_item_response
           {
             id:          id,
-            type:        type,
             description: description,
             title:       title,
             link:        link,

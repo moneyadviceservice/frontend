@@ -8,47 +8,8 @@
   margin-bottom: $baseline-unit*4;
 }
 
-.contact__container {
-  @extend %clearfix;
 
-  @include respond-to($mq-s) {
-    @include column(6);
-
-    &:first-child {
-      @include column(12);
-    }
-  }
-
-  @include respond-to($mq-l) {
-    @include column(4);
-
-    &:first-child {
-      @include column(4);
-    }
-  }
-}
-
-.contact__container--bubble {
-  position: relative;
-  background-color: $color-contact-bubble-background;
-  padding: $baseline-unit*4;
-  border-radius: 20px;
-  margin-bottom: $baseline-unit*5;
-
-  &:before {
-    position: absolute;
-    bottom: -20px;
-    right: 40px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 20px 0 0;
-    border-color: #61a612 transparent transparent transparent;
-  }
-}
-
-.contact__heading {
+.contact__strapline-heading {
   @include body(24, 30);
   @extend %font-heading-medium;
   margin-top: 0;
@@ -60,37 +21,16 @@
   }
 }
 
-.contact__call-us {
-  @include body(24, 24);
-  @extend %font-heading-medium;
-  margin-top: 0;
-  margin-bottom: $baseline-unit;
-  color: white;
-}
-
-.contact__text {
+.contact__strapline-text {
   margin-bottom: $baseline-unit*3;
 }
 
-.contact__number {
-  @extend %font-heading-heavy;
-  @include body(30, 36);
-  letter-spacing: -1px;
-  color: $color-telephone-number-hover;
-
-  &:hover {
-    text-decoration: none;
-    color: $color-telephone-number-hover;
-  }
-}
-
-.contact__opening-hours__heading {
+.contact__details-heading {
   @extend %font-heading-medium;
   color: $colour-contact-heading;
   margin-top: 0;
 }
 
-.contact__opening-hours__link,
-.contact__opening-hours__text {
+.contact__details-text {
   @include body(16, 24);
 }

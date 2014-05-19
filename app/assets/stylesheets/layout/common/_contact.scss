@@ -1,0 +1,20 @@
+.l-contact-cell {
+  @include column(12);
+  @extend %clearfix;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+
+    &:first-child {
+      @include column(12);
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+
+    &:first-child {
+      @include column(4);
+    }
+  }
+}

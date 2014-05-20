@@ -14,7 +14,7 @@ module World
       @article_in_single_category ||= begin
         article = build(:article_hash, categories: ['child-id'])
 
-        child_category = build(:category_hash, id: 'child-id',
+        child_category = build(:category_hash, id: 'child-id', title: 'child-id',
           parent_id: 'parent-id', contents: [article])
         other_child_category = build(:category_hash)
 
@@ -24,6 +24,24 @@ module World
         other_parent_category =  build(:category_hash)
 
         [article, [parent_category, other_parent_category]]
+      end
+    end
+
+    def article_in_two_categories
+      @article_in_two_categories ||= begin
+        article = build(:article_hash, categories: ['child-id-1', 'child-id-2'])
+
+        child_category_1 = build(:category_hash, id: 'child-id-1', title: 'child-id-1',
+          parent_id: 'parent-id', contents: [article])
+        child_category_2 = build(:category_hash, id: 'child-id-2', title: 'child-id-2',
+          parent_id: 'parent-id', contents: [article])
+
+        parent_category_1 = build(:category_hash, id: 'parent-id', contents: [
+          child_category_1, child_category_2
+        ])
+        parent_category_2 = build(:category_hash)
+
+        [article, [parent_category_1, parent_category_2]]
       end
     end
 

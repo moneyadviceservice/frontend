@@ -6,7 +6,7 @@ class StyleguideController < ApplicationController
   end
 
   def components_website
-    @categories = [
+    @nested_categories = [
       {
         title:    'Insurance',
         contents: [
@@ -23,6 +23,8 @@ class StyleguideController < ApplicationController
                   ]
       }
     ].map(&:to_ostruct)
+
+    @categories = [@nested_categories.first]
   end
 
   def pages_home

@@ -10,6 +10,23 @@ module World
       Core::Registries::Repository[:article] = repository
     end
 
+    def article_in_single_category
+      @article_in_single_category ||= begin
+        article = build(:article_hash, categories: ['child-id'])
+
+        child_category = build(:category_hash, id: 'child-id',
+          parent_id: 'parent-id', contents: [article])
+        other_child_category = build(:category_hash)
+
+        parent_category = build(:category_hash, id: 'parent-id', contents: [
+          child_category, other_child_category
+        ])
+        other_parent_category =  build(:category_hash)
+
+        [article, [parent_category, other_parent_category]]
+      end
+    end
+
     def browse_to_article(article)
       article_page.load(locale: :en, id: article['id'])
       @current_article = article

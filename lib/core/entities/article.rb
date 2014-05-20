@@ -20,7 +20,7 @@ module Core
     end
 
     def parent_category_ids
-      categories.map(&:parent_id).find_all(&:present?).uniq
+      categories.compact.map(&:parent_id).find_all(&:present?).uniq
     end
   end
 end

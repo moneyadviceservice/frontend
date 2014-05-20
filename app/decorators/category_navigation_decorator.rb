@@ -19,11 +19,11 @@ class CategoryNavigationDecorator < Draper::Decorator
     CategoryNavigationDecorator.decorate_collection(object.children)
   end
 
-  private
-
   def id
     category.id
   end
+
+  private
 
   def category
     object.content

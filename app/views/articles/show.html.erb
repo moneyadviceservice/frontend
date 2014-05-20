@@ -21,7 +21,11 @@
 </div>
 
 <div class="l-nav">
-  <%= render 'shared/nav', categories: category_navigation %>
+  <%=
+    render 'shared/nav',
+      categories: category_navigation,
+      active_categories: (article.parent_category_ids + article.categories.map(&:id))
+  %>
 </div>
 
 <% content_for(:alternate_link) do %>

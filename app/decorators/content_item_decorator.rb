@@ -1,7 +1,7 @@
 require 'html_processor'
 
 class ContentItemDecorator < Draper::Decorator
-  delegate :title, :description
+  delegate :title, :description, :parent_category_ids
 
   def alternate_options
     object.alternates.each_with_object({}) do |alternate, hash|
@@ -32,11 +32,11 @@ class ContentItemDecorator < Draper::Decorator
       end
   end
 
-  private
-
   def categories
     object.categories.compact
   end
+
+  private
 
   def limited_parent_categories_with_contents(limit = 6)
     # Need to assign the output of #contents_by_category to a var as we will

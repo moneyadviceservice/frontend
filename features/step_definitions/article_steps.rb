@@ -37,14 +37,15 @@ Then(/^I should see the article categories in (.*)$/) do |language|
   end
 end
 
-Then(/^I should not see the article title in the related content in (.*)$/) do |language|
+Then(/^I should see the related content in (.*)$/) do |language|
   article = article_for_locale(language_to_locale(language))
-  expect(article_page.related_content).to_not have_content(article.title)
-end
+  decorated_article = ArticleDecorator.decorate(article)
 
-Then(/^I should see the alternate article title in the related content in (.*)$/) do |language|
-  article = alternate_article_for_locale(language_to_locale(language))
-  expect(article_page.related_content).to have_content(article.title)
+  decorated_article.related_categories.each do |category|
+    category.contents.each do |item|
+      expect(article_page.related_content).to have_content(item.title)
+    end
+  end
 end
 
 Then(/^the article should have a canonical tag for that language version$/) do

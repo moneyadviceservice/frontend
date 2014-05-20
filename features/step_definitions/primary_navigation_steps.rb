@@ -2,6 +2,10 @@ Given 'I am on an article that lives in a single category' do
   browse_to_article article_with_single_parent
 end
 
+Given 'I am on an article that lives in 2 categories in the same parent' do
+  browse_to_article article_with_two_child_and_one_parent_category
+end
+
 Then 'I should see the primary navigation with the parent category expanded' do
   category_nav_categories = article_page.category_nav.categories.map { |c| c.title.text }
 
@@ -22,8 +26,13 @@ Then 'I should see the primary navigation with the parent category expanded' do
   expect(selected_categories.sort).to eq(parent_categories.sort)
 end
 
-And 'the relevant child category selected' do
-  selected_child_categories = article_page.category_nav.selected_categories.first.selected_categories
+And /the relevant child categor(y|ies) selected/ do |plural|
+  selected_child_categories = []
+  article_page.category_nav.selected_categories.each do |category|
+    category.selected_categories.each do |child_category|
+      selected_child_categories << child_category.text
+    end
+  end
 
   child_categories = current_article['categories'].map do |id|
     find_category(id)['title']

@@ -37,6 +37,10 @@ module World
       end
     end
 
+    def article_with_two_child_and_one_parent_category
+      fixture 'articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.yml'
+    end
+
     def orphan_article(locale = 'en')
       case locale.to_s
         when 'en', 'english', 'English'

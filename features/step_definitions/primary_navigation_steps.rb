@@ -6,7 +6,11 @@ Given 'I am on an article that lives in 2 categories in the same parent' do
   browse_to_article article_with_two_child_and_one_parent_category
 end
 
-Then 'I should see the primary navigation with the parent category expanded' do
+Given 'I am on an article that lives in 2 categories in different parents' do
+  browse_to_article article_with_multiple_parents
+end
+
+Then /^I should see the primary navigation with (the parent category|both parent categories) expanded$/ do |num_parent_categories|
   category_nav_categories = article_page.category_nav.categories.map { |c| c.title.text }
 
   expect(category_nav_categories.count).to eq(all_categories.count)

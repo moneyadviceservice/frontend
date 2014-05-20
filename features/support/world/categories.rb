@@ -17,6 +17,10 @@ module World
 
       category_page.load(locale: locale, id: category.id)
     end
+
+    def all_categories
+      Core::Registries::Repository[:category].all
+    end
   end
 end
 

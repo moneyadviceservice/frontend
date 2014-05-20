@@ -14,3 +14,8 @@ Feature: Primary Navigation
     Given I am on an article that lives in 2 categories in the same parent
     Then I should see the primary navigation with the parent category expanded
     And the relevant child categories selected
+
+  Scenario: Primary Navigation for an article in 2 categories in different parents
+    Given I am on an article that lives in 2 categories in different parents
+    Then I should see the primary navigation with both parent categories expanded
+    And the relevant child categories selected

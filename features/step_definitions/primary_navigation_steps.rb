@@ -1,22 +1,16 @@
 Given 'I am on an article that lives in a single category' do
-  article, categories = article_in_single_category
-
-  populate_article_repository_with article
-  populate_category_repository_with *categories
-
-  browse_to_article article
+  instantiate_and_browse_to article_in_single_category
 end
 
 Given 'I am on an article that lives in 2 categories in the same parent' do
-  article, categories = article_in_two_categories
-
-  populate_article_repository_with article
-  populate_category_repository_with *categories
-
-  browse_to_article article
+  instantiate_and_browse_to article_in_two_categories
 end
 
-Then 'I should see the primary navigation with the parent category expanded' do
+Given 'I am on an article that lives in 2 categories in different parents' do
+  instantiate_and_browse_to article_in_two_categories_in_different_parents
+end
+
+Then /^I should see the primary navigation with (the parent category|both parent categories) expanded$/ do |num_parent_categories|
   category_nav_categories = article_page.category_nav.categories.map { |c| c.title.text }
 
   expect(category_nav_categories.count).to eq(all_categories.count)
@@ -25,10 +19,17 @@ Then 'I should see the primary navigation with the parent category expanded' do
     expect(category_nav_categories).to include(category['title'])
   end
 
-  selected_categories = article_page.category_nav.selected_categories
+  parent_categories = if num_parent_categories =~ /both/
+    %w{parent-id-1 parent-id-2}
+  else
+    %w{parent-id-1}
+  end
 
-  expect(selected_categories.count).to eq(1)
-  expect(selected_categories.first.title.text).to eq(all_categories.first['title'])
+  selected_categories = article_page.category_nav.selected_categories.map do |category|
+    category.title.text
+  end
+
+  expect(selected_categories.sort).to eq(parent_categories)
 end
 
 And /the relevant child categor(y|ies) selected/ do |plural|

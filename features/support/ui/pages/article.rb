@@ -1,4 +1,5 @@
 require_relative '../page'
+require_relative '../sections/category_nav'
 
 module UI::Pages
   class Article < UI::Page
@@ -8,5 +9,7 @@ module UI::Pages
     element :related_categories, '.related-categories'
     element :related_content, '.related-links'
     element :breadcrumbs, '.l-context-bar'
+
+    section :category_nav, UI::Sections::CategoryNav, 'nav .link-list-primary'
   end
 end

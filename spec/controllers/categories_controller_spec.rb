@@ -3,8 +3,8 @@ require 'core/interactors/category_reader'
 
 RSpec.describe CategoriesController, :type => :controller do
   describe 'GET show' do
-    let(:category) { double(Core::Category, id: 'test') }
-    let(:category_reader) { double(Core::CategoryReader, call: category) }
+    let(:category) { instance_double(Core::Category, id: 'test') }
+    let(:category_reader) { instance_double(Core::CategoryReader, call: category) }
 
     it 'is successful' do
       allow(Core::CategoryReader).to receive(:new) { category_reader }

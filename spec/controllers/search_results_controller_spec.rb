@@ -6,7 +6,7 @@ RSpec.describe SearchResultsController, :type => :controller do
     let(:query) { 'query' }
     let(:search_results) { [double] }
     let(:search_results_collection) { double(items: search_results) }
-    let(:searcher) { double(Core::Searcher) }
+    let(:searcher) { instance_double(Core::Searcher) }
 
     before do
       allow(Core::Searcher).to receive(:new) { searcher }

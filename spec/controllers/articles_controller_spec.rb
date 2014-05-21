@@ -3,8 +3,8 @@ require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do
   describe 'GET show' do
-    let(:article) { double(Core::Article, id: 'test') }
-    let(:article_reader) { double(Core::ArticleReader, call: article) }
+    let(:article) { instance_double(Core::Article, id: 'test') }
+    let(:article_reader) { instance_double(Core::ArticleReader, call: article) }
 
     context 'when an article does exist' do
       before do

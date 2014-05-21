@@ -3,8 +3,8 @@ require 'core/interactors/action_plan_reader'
 require 'core/entities/action_plan'
 
 RSpec.describe ActionPlansController, :type => :controller do
-  let(:action_plan) { double(Core::ActionPlan, id: 'test') }
-  let(:action_plan_reader) { double(Core::ActionPlanReader, call: action_plan) }
+  let(:action_plan) { instance_double(Core::ActionPlan, id: 'test') }
+  let(:action_plan_reader) { instance_double(Core::ActionPlanReader, call: action_plan) }
 
   before { allow_any_instance_of(Core::ActionPlanReader).to receive(:call) { action_plan } }
 

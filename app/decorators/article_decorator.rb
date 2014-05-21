@@ -1,7 +1,7 @@
 require 'html_processor'
 
 class ArticleDecorator < Draper::Decorator
-  delegate :title, :description
+  delegate :title, :description, :categories, :parent_category_ids
 
   def alternate_options
     object.alternates.each_with_object({}) do |alternate, hash|

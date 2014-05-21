@@ -3,7 +3,7 @@ require 'asset_pipeline/processors/js_hint'
 
 module AssetPipeline
   module Processors
-    describe JsHint do
+    RSpec.describe JsHint do
       describe '#evaluate' do
         let(:jshint_options) { { unused: true } }
         let(:context) { double(pathname: pathname) }

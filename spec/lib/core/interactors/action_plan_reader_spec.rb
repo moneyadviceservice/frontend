@@ -5,7 +5,7 @@ require 'core/entities/action_plan'
 require 'core/interactors/action_plan_reader'
 
 module Core
-  describe ActionPlanReader do
+  RSpec.describe ActionPlanReader do
     subject { described_class.new(id) }
 
     let(:id) { 'the-action-plan' }

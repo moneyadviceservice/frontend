@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/repositories/categories/public_website'
 
-describe Core::Repositories::Categories::PublicWebsite do
+RSpec.describe Core::Repositories::Categories::PublicWebsite do
   let(:url) { 'https://example.com/path/to/url' }
   let(:id) { 'life-events' }
 
@@ -23,7 +23,7 @@ describe Core::Repositories::Categories::PublicWebsite do
       let(:body) { "[#{File.read('spec/fixtures/%s.json' % id)}]" }
       let(:status) { 200 }
 
-      it { should be_a(Array) }
+      it { is_expected.to be_a(Array) }
       specify { expect(subject.first['id']).to eq(id) }
     end
 
@@ -47,7 +47,7 @@ describe Core::Repositories::Categories::PublicWebsite do
       let(:body) { File.read('spec/fixtures/%s.json' % id) }
       let(:status) { 200 }
 
-      it { should be_a(Hash) }
+      it { is_expected.to be_a(Hash) }
       specify { expect(subject['id']).to eq(id) }
     end
 
@@ -55,7 +55,7 @@ describe Core::Repositories::Categories::PublicWebsite do
       let(:body) { nil }
       let(:status) { 404 }
 
-      it { should be_nil }
+      it { is_expected.to be_nil }
     end
 
     context 'when there is an error' do

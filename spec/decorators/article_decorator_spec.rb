@@ -1,18 +1,18 @@
 require 'spec_helper'
 require 'core/entities/article'
 
-describe ArticleDecorator do
+RSpec.describe ArticleDecorator do
   include Draper::ViewHelpers
 
   subject(:decorator) { described_class.decorate(article) }
 
   let(:article) { double(Core::Article, id: 'bob') }
 
-  it { should respond_to(:alternate_options) }
-  it { should respond_to(:canonical_url) }
-  it { should respond_to(:content) }
-  it { should respond_to(:description) }
-  it { should respond_to(:title) }
+  it { is_expected.to respond_to(:alternate_options) }
+  it { is_expected.to respond_to(:canonical_url) }
+  it { is_expected.to respond_to(:content) }
+  it { is_expected.to respond_to(:description) }
+  it { is_expected.to respond_to(:title) }
 
   describe '#alternate_options' do
     context 'when there are no alternates' do
@@ -38,7 +38,7 @@ describe ArticleDecorator do
   end
 
   describe '#canonical_url' do
-    before { helpers.stub(article_url: '/articles/bob') }
+    before { allow(helpers).to receive_messages(article_url: '/articles/bob') }
 
     it 'returns the path to the article' do
       expect(subject.canonical_url).to eq('/articles/bob')

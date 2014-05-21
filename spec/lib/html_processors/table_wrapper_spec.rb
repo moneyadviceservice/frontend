@@ -1,7 +1,7 @@
 require 'html_processor'
 require 'html_processor/table_wrapper'
 
-describe HTMLProcessor::TableWrapper do
+RSpec.describe HTMLProcessor::TableWrapper do
   shared_examples 'a table wrapper' do
     subject(:processor) { described_class.new(html) }
     let(:html) { '<table><tr><td></td></tr></table>' }
@@ -11,7 +11,7 @@ describe HTMLProcessor::TableWrapper do
       subject(:processed_html) { processor.process(HTMLProcessor::DATATABLE_DEFAULT) }
 
       it 'wraps the given xpaths' do
-        expect(Nokogiri::HTML(processed_html).xpath(xpath)).to have(1).item
+        expect(Nokogiri::HTML(processed_html).xpath(xpath).size).to eq(1)
       end
     end
   end

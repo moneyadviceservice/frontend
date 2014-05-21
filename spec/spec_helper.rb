@@ -28,6 +28,8 @@ RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
   c.include PageValidations
   c.alias_it_should_behave_like_to :it_has_behavior, 'exhibits behaviour of an'
+
+  c.expose_dsl_globally = false
 end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')

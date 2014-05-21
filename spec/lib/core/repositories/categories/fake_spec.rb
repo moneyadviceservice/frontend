@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/repositories/categories/fake'
 
-describe Core::Repositories::Categories::Fake do
+RSpec.describe Core::Repositories::Categories::Fake do
   let(:article) { build :article_hash }
   let(:subcategory) { build :category_hash, contents: [article] }
   let(:category) { build :category_hash, contents: [subcategory] }
@@ -11,7 +11,7 @@ describe Core::Repositories::Categories::Fake do
   describe '#all' do
     subject { repository.all }
 
-    it { should be_a(Array) }
+    it { is_expected.to be_a(Array) }
     specify { expect(subject.first['id']).to eq(category['id']) }
 
     it 'filters out non-categories' do
@@ -23,7 +23,7 @@ describe Core::Repositories::Categories::Fake do
     context 'when the category exists' do
       subject { repository.find(category['id']) }
 
-      it { should be_a(Hash) }
+      it { is_expected.to be_a(Hash) }
       specify { expect(subject['id']).to eq(category['id']) }
 
       it 'instantiates a valid Category' do
@@ -38,7 +38,7 @@ describe Core::Repositories::Categories::Fake do
       context 'when retrieving a subcategory' do
         subject { repository.find(subcategory['id']) }
 
-        it { should be_a(Hash) }
+        it { is_expected.to be_a(Hash) }
         specify { expect(subject['id']).to eq(subcategory['id']) }
       end
     end
@@ -46,7 +46,7 @@ describe Core::Repositories::Categories::Fake do
     context 'when the category is non-existent' do
       subject { repository.find(invalid_id) }
 
-      it { should be_nil }
+      it { is_expected.to be_nil }
     end
   end
 end

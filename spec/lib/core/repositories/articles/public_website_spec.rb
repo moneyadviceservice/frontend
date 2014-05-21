@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/repositories/articles/public_website'
 
 module Core::Repositories::Articles
-  describe PublicWebsite do
+  RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
 
     describe '#find' do

@@ -2,18 +2,18 @@ require 'spec_helper'
 require 'core/entities/search_result'
 
 module Core
-  describe SearchResult do
+  RSpec.describe SearchResult do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title: double, description: double } }
 
-    it { should respond_to :title }
-    it { should respond_to :title= }
+    it { is_expected.to respond_to :title }
+    it { is_expected.to respond_to :title= }
 
-    it { should respond_to :description }
-    it { should respond_to :description= }
+    it { is_expected.to respond_to :description }
+    it { is_expected.to respond_to :description= }
 
-    it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:description) }
   end
 end

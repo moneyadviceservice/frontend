@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/article'
 
 module Core
-  describe Article do
+  RSpec.describe Article do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) do
@@ -13,23 +13,23 @@ module Core
       }
     end
 
-    it { should respond_to :type }
-    it { should respond_to :type= }
+    it { is_expected.to respond_to :type }
+    it { is_expected.to respond_to :type= }
 
-    it { should respond_to :title }
-    it { should respond_to :title= }
+    it { is_expected.to respond_to :title }
+    it { is_expected.to respond_to :title= }
 
-    it { should respond_to :description }
-    it { should respond_to :description= }
+    it { is_expected.to respond_to :description }
+    it { is_expected.to respond_to :description= }
 
-    it { should respond_to :body }
-    it { should respond_to :body= }
+    it { is_expected.to respond_to :body }
+    it { is_expected.to respond_to :body= }
 
-    it { should respond_to :alternates }
-    it { should respond_to :alternates= }
+    it { is_expected.to respond_to :alternates }
+    it { is_expected.to respond_to :alternates= }
 
-    it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:body) }
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:body) }
 
     describe '#alternates' do
       it 'returns an array of alternates' do

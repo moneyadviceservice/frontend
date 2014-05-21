@@ -4,7 +4,7 @@ require 'core/entities/search_result'
 require 'core/interactors/searcher'
 
 module Core
-  describe Searcher do
+  RSpec.describe Searcher do
     let(:query) { double }
     let(:page) { '1' }
     let(:per_page) { '10' }

@@ -5,7 +5,7 @@ require 'core/interactors/category_reader'
 require 'core/repositories/categories/fake'
 
 module Core
-  describe CategoryReader, '#call' do
+  RSpec.describe CategoryReader, '#call' do
     subject { described_class.new(id) }
 
     let(:id) { 'the-category' }

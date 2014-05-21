@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/interactors/category_reader'
 
-describe CategoriesController do
+RSpec.describe CategoriesController, :type => :controller do
   describe 'GET show' do
     let(:category) { double(Core::Category, id: 'test') }
     let(:category_reader) { double(Core::CategoryReader, call: category) }

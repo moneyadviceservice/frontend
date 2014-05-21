@@ -3,7 +3,7 @@ require 'asset_pipeline/processors/css_lint'
 
 module AssetPipeline
   module Processors
-    describe CssLint do
+    RSpec.describe CssLint do
       describe '#evaluate' do
         let(:context) { double }
         let(:locals) { double }

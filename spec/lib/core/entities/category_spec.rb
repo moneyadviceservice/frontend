@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/category'
 
 module Core
-  describe Category do
+  RSpec.describe Category do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title:       double,
@@ -10,22 +10,22 @@ module Core
                          description: double,
                          contents:    double } }
 
-    it { should respond_to :type }
-    it { should respond_to :type= }
+    it { is_expected.to respond_to :type }
+    it { is_expected.to respond_to :type= }
 
-    it { should respond_to :parent_id }
-    it { should respond_to :parent_id= }
+    it { is_expected.to respond_to :parent_id }
+    it { is_expected.to respond_to :parent_id= }
 
-    it { should respond_to :title }
-    it { should respond_to :title= }
+    it { is_expected.to respond_to :title }
+    it { is_expected.to respond_to :title= }
 
-    it { should respond_to :description }
-    it { should respond_to :description= }
+    it { is_expected.to respond_to :description }
+    it { is_expected.to respond_to :description= }
 
-    it { should respond_to :contents }
-    it { should respond_to :contents= }
+    it { is_expected.to respond_to :contents }
+    it { is_expected.to respond_to :contents= }
 
-    it { should validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:title) }
 
     describe 'category hierarchy' do
       let(:category_with_nil_contents) { build :category, contents: nil }

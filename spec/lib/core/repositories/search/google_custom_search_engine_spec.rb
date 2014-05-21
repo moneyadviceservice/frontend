@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine'
 
 module Core::Repositories::Search
-  describe GoogleCustomSearchEngine do
+  RSpec.describe GoogleCustomSearchEngine do
     let(:key) { double }
     let(:cx_en) { double }
     let(:cx_cy) { double }

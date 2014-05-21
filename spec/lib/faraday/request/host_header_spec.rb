@@ -1,6 +1,6 @@
 require 'faraday/request/host_header'
 
-describe Faraday::Request::HostHeader do
+RSpec.describe Faraday::Request::HostHeader do
   subject(:request_headers) { connection.get('/').env[:request_headers] }
 
   let(:connection) do

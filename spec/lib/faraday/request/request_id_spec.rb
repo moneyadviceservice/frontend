@@ -1,6 +1,6 @@
 require 'faraday/request/request_id'
 
-describe Faraday::Request::RequestId do
+RSpec.describe Faraday::Request::RequestId do
   subject(:request_headers) { connection.get('/').env[:request_headers] }
 
   let(:connection) do

@@ -1,12 +1,16 @@
 GIT
-  remote: git://github.com/moneyadviceservice/tidy-html5-gem.git
-  revision: 745e8d55e93bb4f15d499aff518ba3a68f112920
+  remote: git://github.com/andreacfm/rspec_junit_formatter.git
+  revision: 64f7f045416d6037ef375a7f28f5cca54a4484dd
+  branch: master
   specs:
-    tidy-html5 (0.1.0)
+    rspec_junit_formatter (0.1.6)
+      builder
+      rspec (> 2.0.beta)
+      rspec-core (!= 2.12.0)
 
 GIT
-  remote: https://github.com/moneyadviceservice/mas-development_dependencies.git
-  revision: 02c7fa8952986e1337d6e257ce2442d980c3e9f4
+  remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
+  revision: 58d47bccbddf32bfcb25ce4e286661a08942d7da
   specs:
     mas-development_dependencies (2.1.0)
       capybara (~> 2.1)
@@ -14,16 +18,21 @@ GIT
       cucumber-rails
       database_cleaner
       factory_girl_rails (~> 4.0)
-      konacha (>= 3.0)
       poltergeist (~> 1.3)
       pry-rails
       pry-rescue
       rack-livereload
       rails (>= 3.2)
-      rspec-rails (~> 2.0)
+      rspec-rails (>= 2.0)
       shoulda-matchers
       site_prism
       timecop
+
+GIT
+  remote: git://github.com/moneyadviceservice/tidy-html5-gem.git
+  revision: 745e8d55e93bb4f15d499aff518ba3a68f112920
+  specs:
+    tidy-html5 (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -77,9 +86,6 @@ GEM
       launchy
     celluloid (0.15.2)
       timers (~> 1.1.0)
-    celluloid-io (0.15.0)
-      celluloid (>= 0.15.0)
-      nio4r (>= 0.5.0)
     chai-jquery-rails (1.2.1)
       railties (>= 3.1)
       sprockets
@@ -95,7 +101,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    colorize (0.7.2)
     columnize (0.3.6)
     compass (0.12.5)
       chunky_png (~> 1.2)
@@ -162,7 +167,7 @@ GEM
       rails (>= 3.2.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
-    guard (2.6.0)
+    guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
       lumberjack (~> 1.0)
@@ -180,9 +185,8 @@ GEM
       multi_json (~> 1.8)
     guard-rails (0.5.0)
       guard (>= 2.0.0)
-    guard-rspec (4.2.8)
-      guard (~> 2.1)
-      rspec (>= 2.14, < 4.0)
+    guard-rspec (1.2.1)
+      guard (>= 1.1)
     guard-sass (1.4.0)
       guard (>= 1.1.0)
       sass (>= 3.1)
@@ -200,19 +204,12 @@ GEM
       execjs
     json (1.8.1)
     kgio (2.9.2)
-    konacha (3.2.2)
-      actionpack (>= 3.1, < 5)
-      capybara
-      colorize
-      railties (>= 3.1, < 5)
-      sprockets
     kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
     link_header (0.0.8)
-    listen (2.7.1)
+    listen (2.7.5)
       celluloid (>= 0.15.2)
-      celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.5)
@@ -224,12 +221,11 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.3)
-    minitest (5.3.3)
+    minitest (5.3.4)
     multi_json (1.10.0)
     multi_test (0.1.1)
     multipart-post (1.2.0)
     mysql2 (0.3.15)
-    nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nunes (0.3.1)
@@ -245,8 +241,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
-    pry-rescue (1.4.0)
-      interception (>= 0.4)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
       pry
     psych (2.0.5)
     rack (1.5.2)
@@ -270,34 +266,34 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
-    rake (10.3.1)
+    rake (10.3.2)
     rb-fsevent (0.9.4)
-    rb-inotify (0.9.3)
+    rb-inotify (0.9.4)
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
     request_store (1.0.5)
     rouge (1.3.3)
-    rspec (2.14.1)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.8)
-    rspec-expectations (2.14.5)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.6)
-    rspec-rails (2.14.2)
+    rspec (3.0.0.rc1)
+      rspec-core (= 3.0.0.rc1)
+      rspec-expectations (= 3.0.0.rc1)
+      rspec-mocks (= 3.0.0.rc1)
+    rspec-core (3.0.0.rc1)
+      rspec-support (= 3.0.0.rc1)
+    rspec-expectations (3.0.0.rc1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.0.0.rc1)
+    rspec-mocks (3.0.0.rc1)
+      rspec-support (= 3.0.0.rc1)
+    rspec-rails (3.0.0.rc1)
       actionpack (>= 3.0)
-      activemodel (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
-    rspec_junit_formatter (0.1.6)
-      builder
-      rspec (~> 2.0)
-      rspec-core (!= 2.12.0)
+      rspec-core (= 3.0.0.rc1)
+      rspec-expectations (= 3.0.0.rc1)
+      rspec-mocks (= 3.0.0.rc1)
+      rspec-support (= 3.0.0.rc1)
+    rspec-support (3.0.0.rc1)
     safe_yaml (1.0.2)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -308,7 +304,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    shoulda-matchers (2.5.0)
+    shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     simplecov (0.8.2)
       docile (~> 1.1.0)
@@ -364,7 +360,7 @@ GEM
     webmock (1.17.4)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
-    websocket-driver (0.3.2)
+    websocket-driver (0.3.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -408,7 +404,8 @@ DEPENDENCIES
   psych (>= 2.0.5)
   rails (= 4.1.1)
   rouge
-  rspec_junit_formatter
+  rspec-rails (= 3.0.0.rc1)
+  rspec_junit_formatter!
   sass-rails (~> 4.0.0)
   sdoc
   spring-commands-cucumber

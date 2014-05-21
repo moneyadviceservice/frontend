@@ -49,7 +49,9 @@ end
 group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
-  gem 'rspec_junit_formatter'
+  gem 'rspec_junit_formatter',
+      github:'andreacfm/rspec_junit_formatter',
+      branch: 'master'
   gem 'thin'
   gem 'vcr'
   gem 'webmock'
@@ -68,9 +70,10 @@ group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
   gem 'mas-development_dependencies',
-      git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
+      github: 'moneyadviceservice/mas-development_dependencies'
   gem 'chai-jquery-rails'
   gem 'byebug'
+  gem 'rspec-rails', '3.0.0.rc1'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end
 

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'route_probe'
 
-describe RouteProbe do
+RSpec.describe RouteProbe do
   include Rack::Test::Methods
 
   let(:error) { ActionController::RoutingError.new(double) }

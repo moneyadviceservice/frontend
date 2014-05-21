@@ -1,6 +1,6 @@
 require 'core/connection_factory'
 
-describe Core::ConnectionFactory, '.build' do
+RSpec.describe Core::ConnectionFactory, '.build' do
   subject(:factory) { described_class.build('http://example.com') }
 
   it "manufactures a `Core::Connection'" do

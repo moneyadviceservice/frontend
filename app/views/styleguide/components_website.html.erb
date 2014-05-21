@@ -1,11 +1,11 @@
 <h1>Website-specific Components</h1>
 
-<%= styleguide_section sections['related link'] do %>
-  <%= render 'shared/related_links', categories: @category %>
-<% end %>
-
 <%= styleguide_section sections['related categories'] do %>
   <% render 'shared/related_categories', categories: @categories %>
+<% end %>
+
+<%= styleguide_section sections['related link'] do %>
+  <%= render 'shared/related_links', categories: @categories %>
 <% end %>
 
 <%= styleguide_section sections['Opt out bar'] do %>

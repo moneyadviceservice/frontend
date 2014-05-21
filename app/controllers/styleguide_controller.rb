@@ -17,14 +17,6 @@ class StyleguideController < ApplicationController
         OpenStruct.new(title: 'Does money grow on trees - we investigate')
       ])
     ]
-
-    @category = [
-      OpenStruct.new(title: 'Insurance', contents: [
-        OpenStruct.new(title: 'Choosing home insurance cover'),
-        OpenStruct.new(title: 'Do I need car insurance'),
-        OpenStruct.new(title: 'Making a claim')
-      ])
-    ]
   end
 
   def pages_home

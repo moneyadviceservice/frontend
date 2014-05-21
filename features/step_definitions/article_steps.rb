@@ -41,8 +41,9 @@ Then(/^I should see the related content in (.*)$/) do |language|
   article = article_for_locale(language_to_locale(language))
   decorated_article = ArticleDecorator.decorate(article)
 
-  decorated_article.related_categories.each do |category|
-    category.contents.each do |item|
+  decorated_article.related_categories.each do |category, contents|
+    expect(article_page.related_content).to have_content(category.title)
+    contents.each do |item|
       expect(article_page.related_content).to have_content(item.title)
     end
   end

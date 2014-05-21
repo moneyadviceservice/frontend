@@ -11,11 +11,11 @@
 <!-- Molecules -->
 
 <%= styleguide_section sections['related categories'] do %>
-  <% render 'shared/related_categories', categories: @nested_categories %>
+  <% render 'shared/related_categories', categories: @categories %>
 <% end %>
 
 <%= styleguide_section sections['related link'] do %>
-  <%= render 'shared/related_links', categories: @categories %>
+  <%= render 'shared/related_links', categories: @categories.first %>
 <% end %>
 
 <%= styleguide_section sections['Primary Navigation'] do %>

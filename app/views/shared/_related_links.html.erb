@@ -1,10 +1,10 @@
-<% categories.each do |category| %>
+<% categories.each do |category, contents| %>
 <div class="related-links">
   <h2 class="related-links__heading">
     <%= t('related_links.title_prefix') %> <%= category.title %>
   </h2>
   <ul class="unstyled-list">
-    <% category.contents.each do |article| %>
+    <% contents.each do |article| %>
       <li class="related-links__link">
         <%= link_to article.title, article.path %>
       </li>

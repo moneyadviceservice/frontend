@@ -5,10 +5,10 @@
 .directory {
   background-color: $home-page-feature;
   padding-top: $baseline-unit*4;
-  padding-bottom: $baseline-unit*4;
+  padding-bottom: $baseline-unit*1;
 
   @include respond-to($mq-m) {
-    padding-top: $baseline-unit*8;
+    padding-top: $baseline-unit*7;
   }
 }
 
@@ -27,4 +27,11 @@
       @include body(18, 24);
     }
   }
+}
+
+.directory__description {
+  @include respond-to($mq-xs, $mq-m) {
+    margin-bottom: $baseline-unit*3;
+  }
+
 }

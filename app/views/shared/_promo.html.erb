@@ -4,7 +4,7 @@
       <div class="promo l-homepage-promo">
         <h2 class="promo__heading">
           <%= link_to item['url'] do %>
-            <%= image_tag(item['image'], alt: '') %>
+            <%= image_tag("promos/#{item['image']}", alt: '') %>
             <%= item['text'] %>
           <% end %>
         </h2>

@@ -4,6 +4,8 @@
   <%= render 'styleguide/shared/link_list_primary' %>
 <% end %>
 
+<!-- Molecules -->
+
 <%= styleguide_section sections['related categories'] do %>
   <% render 'shared/related_categories', categories: @categories %>
 <% end %>
@@ -12,34 +14,18 @@
   <%= render 'shared/related_links', categories: @categories %>
 <% end %>
 
-<%= styleguide_section sections['Opt out bar'] do %>
-  <%= render 'shared/opt_out_bar' %>
-<% end %>
-
 <%= styleguide_section sections['Primary Navigation'] do %>
   <%= render 'shared/primary_nav' %>
-<% end %>
-
-<%= styleguide_section sections['Footer Site Links'] do %>
-  <%= render 'shared/footer_site_links', locals: %w(en) %>
 <% end %>
 
 <%= styleguide_section sections['Social Links'] do %>
   <%= render 'shared/social_links' %>
 <% end %>
 
-<%= styleguide_section sections['Footer Social Links'] do %>
-  <div class="l-footer">
-    <%= render 'shared/footer_social_links' %>
-  </div>
-<% end %>
+<!-- Organisms -->
 
-<%= styleguide_section sections['home_contact'] do %>
-  <%= render 'shared/home_contact' %>
-<% end %>
-
-<%= styleguide_section sections['contact'] do %>
-  <%= render 'shared/contact' %>
+<%= styleguide_section sections['Opt out bar'] do %>
+  <%= render 'shared/opt_out_bar' %>
 <% end %>
 
 <%= styleguide_section sections['Trust banner'] do %>
@@ -47,9 +33,24 @@
 <% end %>
 
 <%= styleguide_section sections['Directory'] do %>
-  <%= render 'shared/directory', items: t('home.show.featured') %>
+  <%= render 'shared/directory',
+             items: t('home.show.featured').map { |f| OpenStruct.new(f) } %>
 <% end %>
 
 <%= styleguide_section sections['Promo'] do %>
-  <%= render 'shared/promo', items: t('home.show.promoted') %>
+  <%= render 'shared/promos', items: t('home.show.promoted') %>
+<% end %>
+
+<%= styleguide_section sections['contact'] do %>
+  <%= render 'shared/contact' %>
+<% end %>
+
+<%= styleguide_section sections['Footer Site Links'] do %>
+  <%= render 'shared/footer_site_links', locals: %w(en) %>
+<% end %>
+
+<%= styleguide_section sections['Footer Social Links'] do %>
+  <div class="l-footer">
+    <%= render 'shared/footer_social_links' %>
+  </div>
 <% end %>

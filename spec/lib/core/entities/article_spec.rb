@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/article'
 
 module Core
-  describe Article do
+  RSpec.describe Article do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) do

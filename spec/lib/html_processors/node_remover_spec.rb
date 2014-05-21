@@ -1,7 +1,7 @@
 require 'html_processor/node_remover'
 require 'nokogiri'
 
-describe HTMLProcessor::NodeRemover do
+RSpec.describe HTMLProcessor::NodeRemover do
   subject(:processor) { described_class.new(html) }
 
   let(:html) {

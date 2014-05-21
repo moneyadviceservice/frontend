@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/category'
 
 module Core
-  describe Category do
+  RSpec.describe Category do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title:       double,

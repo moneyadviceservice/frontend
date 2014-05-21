@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/interactors/article_reader'
 
-describe ArticlesController, :type => :controller do
+RSpec.describe ArticlesController, :type => :controller do
   describe 'GET show' do
     let(:article) { double(Core::Article, id: 'test') }
     let(:article_reader) { double(Core::ArticleReader, call: article) }

@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'html_processor/node_replacer'
 
-describe HTMLProcessor::NodeReplacer do
+RSpec.describe HTMLProcessor::NodeReplacer do
   subject(:processor) { described_class.new(html) }
 
   let(:html) {

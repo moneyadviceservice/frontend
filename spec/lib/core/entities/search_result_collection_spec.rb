@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/search_result_collection'
 
 module Core
-  describe SearchResultCollection do
+  RSpec.describe SearchResultCollection do
     let(:items) { [] }
     let(:attributes) { { items: items } }
     subject(:result_collection) { described_class.new(double, attributes) }

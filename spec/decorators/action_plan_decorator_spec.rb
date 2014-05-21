@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/action_plan'
 
-describe ActionPlanDecorator do
+RSpec.describe ActionPlanDecorator do
   include Draper::ViewHelpers
 
   subject(:decorator) { described_class.decorate(action_plan) }
@@ -38,7 +38,7 @@ describe ActionPlanDecorator do
   end
 
   describe '#canonical_url' do
-    before { helpers.stub(action_plan_url: '/action_plans/bob') }
+    before { allow(helpers).to receive_messages(action_plan_url: '/action_plans/bob') }
 
     it 'returns the path to the action plan' do
       expect(decorator.canonical_url).to eq('/action_plans/bob')

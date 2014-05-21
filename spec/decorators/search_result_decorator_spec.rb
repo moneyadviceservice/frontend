@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/search_result'
 
-describe SearchResultDecorator do
+RSpec.describe SearchResultDecorator do
   include Draper::ViewHelpers
 
   subject(:decorator) { described_class.decorate(search_result) }

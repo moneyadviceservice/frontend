@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine/response_mapper'
 
 module Core::Repositories::Search
-  describe GoogleCustomSearchEngine::ResponseItemMapper do
+  RSpec.describe GoogleCustomSearchEngine::ResponseItemMapper do
 
     describe '#mapped_item_response' do
       let(:id) { 'action-plan-id' }

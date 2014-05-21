@@ -1,6 +1,6 @@
 require 'faraday/response/link_header'
 
-describe Faraday::Response::LinkHeader do
+RSpec.describe Faraday::Response::LinkHeader do
   subject(:headers) { connection.get('/').headers }
 
   let(:connection) do

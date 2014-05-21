@@ -1,4 +1,4 @@
-shared_examples_for 'optional failure block' do
+RSpec.shared_examples_for 'optional failure block' do
   context 'when a block is given' do
     let(:probe) { lambda {} }
 

@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/other'
 
 module Core
-  describe Other do
+  RSpec.describe Other do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) do

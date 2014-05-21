@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 require 'core/interactors/searcher'
 
-describe SearchResultsController, :type => :controller do
+RSpec.describe SearchResultsController, :type => :controller do
   describe 'GET index' do
     let(:query) { 'query' }
     let(:search_results) { [double] }

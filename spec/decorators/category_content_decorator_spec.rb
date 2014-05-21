@@ -4,7 +4,7 @@ Dir[File.join(File.dirname(__FILE__), '..', '..', 'lib', 'core', 'entities', '*'
   require entity
 end
 
-describe CategoryContentDecorator do
+RSpec.describe CategoryContentDecorator do
   include Draper::ViewHelpers
 
   let(:item) { Object.new }
@@ -63,7 +63,7 @@ describe CategoryContentDecorator do
 
       it 'returns the correct path' do
         ['campaign', 'news', 'tool', 'video'].each do |type|
-          item.stub(type: type)
+          allow(item).to receive_messages(type: type)
           expect(subject.path).to eq "/#{locale}/#{type.pluralize}/#{item.id}"
         end
       end

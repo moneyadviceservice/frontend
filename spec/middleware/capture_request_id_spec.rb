@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'current_request_id'
 
-describe CaptureRequestId do
+RSpec.describe CaptureRequestId do
   subject(:capture_request_middleware) do
     described_class.new(double(call: nil))
   end

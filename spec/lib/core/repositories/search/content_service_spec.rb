@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/repositories/search/content_service'
 
-describe Core::Repositories::Search::ContentService do
+RSpec.describe Core::Repositories::Search::ContentService do
   let(:url) { 'https://example.com/path/to/url' }
   let(:locale) { :en }
   let(:limit) { 25 }

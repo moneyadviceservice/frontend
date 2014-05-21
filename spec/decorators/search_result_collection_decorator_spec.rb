@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/search_result_collection'
 
-describe SearchResultCollectionDecorator do
+RSpec.describe SearchResultCollectionDecorator do
   include Draper::ViewHelpers
 
   let(:query) { double }

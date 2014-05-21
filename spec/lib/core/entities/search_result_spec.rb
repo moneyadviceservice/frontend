@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/search_result'
 
 module Core
-  describe SearchResult do
+  RSpec.describe SearchResult do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title: double, description: double } }

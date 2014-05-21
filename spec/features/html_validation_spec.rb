@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/interactors/article_reader'
 require 'core/interactors/searcher'
 
-describe 'HTML validation', :type => :feature do
+RSpec.describe 'HTML validation', :type => :feature do
   describe 'home page' do
     before do
       visit root_path(locale: locale)

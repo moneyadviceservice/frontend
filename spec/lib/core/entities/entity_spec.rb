@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/entities/entity'
 
 module Core
-  describe Entity do
+  RSpec.describe Entity do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { Hash.new }

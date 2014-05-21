@@ -5,7 +5,7 @@ require 'core/entities/article'
 require 'core/interactors/article_reader'
 
 module Core
-  describe ArticleReader do
+  RSpec.describe ArticleReader do
     subject { described_class.new(id) }
 
     let(:id) { 'the-article' }

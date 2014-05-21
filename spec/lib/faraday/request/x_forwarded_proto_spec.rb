@@ -1,6 +1,6 @@
 require 'faraday/request/x_forwarded_proto'
 
-describe Faraday::Request::XForwardedProto do
+RSpec.describe Faraday::Request::XForwardedProto do
   subject(:request_headers) { connection.get('/').env[:request_headers] }
 
   let(:connection) do

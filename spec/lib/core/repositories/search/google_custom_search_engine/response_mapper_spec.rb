@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine/response_mapper'
 
 module Core::Repositories::Search
-  describe GoogleCustomSearchEngine::ResponseMapper do
+  RSpec.describe GoogleCustomSearchEngine::ResponseMapper do
 
     describe '#mapped_response' do
       let(:total_results) { 30 }

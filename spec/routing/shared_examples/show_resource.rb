@@ -1,4 +1,4 @@
-shared_examples 'a resource for' do |resource_name|
+RSpec.shared_examples 'a resource for' do |resource_name|
   let(:id) { 'foo' }
 
   context "when the locale is `en'" do

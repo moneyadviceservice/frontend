@@ -5,7 +5,7 @@ require 'core/entities/category'
 require 'core/interactors/category_navigation_reader'
 
 module Core
-  describe CategoryNavigationReader, '#call' do
+  RSpec.describe CategoryNavigationReader, '#call' do
     subject { described_class.new }
 
     before do

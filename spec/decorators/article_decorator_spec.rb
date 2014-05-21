@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/article'
 
-describe ArticleDecorator do
+RSpec.describe ArticleDecorator do
   include Draper::ViewHelpers
 
   subject(:decorator) { described_class.decorate(article) }
@@ -38,7 +38,7 @@ describe ArticleDecorator do
   end
 
   describe '#canonical_url' do
-    before { helpers.stub(article_url: '/articles/bob') }
+    before { allow(helpers).to receive_messages(article_url: '/articles/bob') }
 
     it 'returns the path to the article' do
       expect(subject.canonical_url).to eq('/articles/bob')

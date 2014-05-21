@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/category'
 
-describe CategoryDecorator do
+RSpec.describe CategoryDecorator do
   include Draper::ViewHelpers
 
   subject(:decorator) { described_class.decorate(category) }
@@ -22,8 +22,8 @@ describe CategoryDecorator do
     let(:url) { double }
 
     before do
-      I18n.stub(available_locales: [locale])
-      helpers.stub(category_url: url)
+      allow(I18n).to receive_messages(available_locales: [locale])
+      allow(helpers).to receive_messages(category_url: url)
     end
 
     it 'returns a hash of locale => url pairs' do
@@ -32,7 +32,7 @@ describe CategoryDecorator do
   end
 
   describe '#path' do
-    before { helpers.stub(category_path: '/categories/test') }
+    before { allow(helpers).to receive_messages(category_path: '/categories/test') }
 
     it 'returns the path to the category' do
       expect(subject.path).to eq('/categories/test')
@@ -40,7 +40,7 @@ describe CategoryDecorator do
   end
 
   describe '#canonical_url' do
-    before { helpers.stub(category_url: '/categories/bob') }
+    before { allow(helpers).to receive_messages(category_url: '/categories/bob') }
 
     it 'returns the path to the category' do
       expect(subject.canonical_url).to eq('/categories/bob')

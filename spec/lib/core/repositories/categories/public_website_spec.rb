@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/repositories/categories/public_website'
 
-describe Core::Repositories::Categories::PublicWebsite do
+RSpec.describe Core::Repositories::Categories::PublicWebsite do
   let(:url) { 'https://example.com/path/to/url' }
   let(:id) { 'life-events' }
 

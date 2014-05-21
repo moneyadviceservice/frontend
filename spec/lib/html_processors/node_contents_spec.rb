@@ -1,6 +1,6 @@
 require 'html_processor/node_contents'
 
-describe HTMLProcessor::NodeContents do
+RSpec.describe HTMLProcessor::NodeContents do
   subject(:processor) { described_class.new(html) }
 
   let(:html) { "<p>#{inner_html}</p>" }

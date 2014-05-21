@@ -11,7 +11,7 @@ describe HTMLProcessor::TableWrapper do
       subject(:processed_html) { processor.process(HTMLProcessor::DATATABLE_DEFAULT) }
 
       it 'wraps the given xpaths' do
-        expect(Nokogiri::HTML(processed_html).xpath(xpath)).to have(1).item
+        expect(Nokogiri::HTML(processed_html).xpath(xpath).size).to eq(1)
       end
     end
   end

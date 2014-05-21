@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/interactors/action_plan_reader'
 require 'core/entities/action_plan'
 
-describe ActionPlansController do
+describe ActionPlansController, :type => :controller do
   let(:action_plan) { double(Core::ActionPlan, id: 'test') }
   let(:action_plan_reader) { double(Core::ActionPlanReader, call: action_plan) }
 

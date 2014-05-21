@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'core/entities/category'
 
-describe 'primary navigation' do
+describe 'primary navigation', :type => :view do
   let(:categories) do [
     Core::Category.new(id, title: '', description: '', contents: [])
   ] end

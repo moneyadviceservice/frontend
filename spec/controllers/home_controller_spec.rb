@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe HomeController do
+describe HomeController, :type => :controller do
   describe 'GET show' do
     specify do
       get :show, locale: :en

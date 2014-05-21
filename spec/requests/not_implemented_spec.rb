@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe 'Request we have no implementation for' do
+describe 'Request we have no implementation for', :type => :request do
   it 'returns a 501 response' do
     get('/unsupported')
 

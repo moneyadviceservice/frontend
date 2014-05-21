@@ -36,7 +36,7 @@ describe Core::Repositories::Search::ContentService do
     end
 
     context 'when the request is successful' do
-      it { should be_a(Array) }
+      it { is_expected.to be_a(Array) }
 
       context 'it reformats the response and' do
         let(:source_body) { JSON.parse(body) }

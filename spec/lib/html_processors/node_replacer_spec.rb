@@ -16,7 +16,7 @@ describe HTMLProcessor::NodeReplacer do
     subject(:processed_html) { processor.process('//h3', 'h2') }
 
     it 'replaces the target elements with the specified element' do
-      expect(Nokogiri::HTML(processed_html).xpath('//h2')).to have(1).item
+      expect(Nokogiri::HTML(processed_html).xpath('//h2').size).to eq(1)
     end
   end
 end

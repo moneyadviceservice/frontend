@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BetaOptOutsController do
+describe BetaOptOutsController, :type => :controller do
   let(:previous_page) { 'where_i_came_from' }
 
   describe 'POST create' do

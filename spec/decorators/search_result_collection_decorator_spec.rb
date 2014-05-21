@@ -77,17 +77,17 @@ describe SearchResultCollectionDecorator do
 
       context 'when the current page is 1' do
         before { result_collection.page = 1 }
-        it { should be_true }
+        it { is_expected.to be_truthy }
       end
 
       context 'when the current page is 3' do
         before { result_collection.page = 3 }
-        it { should be_false }
+        it { is_expected.to be_falsey }
       end
 
       context 'when the current page is 5' do
         before { result_collection.page = 5 }
-        it { should be_false }
+        it { is_expected.to be_falsey }
       end
     end
 
@@ -96,17 +96,17 @@ describe SearchResultCollectionDecorator do
 
       context 'when the current page is 1' do
         before { result_collection.page = 1 }
-        it { should be_false }
+        it { is_expected.to be_falsey }
       end
 
       context 'when the current page is 3' do
         before { result_collection.page = 3 }
-        it { should be_false }
+        it { is_expected.to be_falsey }
       end
 
       context 'when the current page is 5' do
         before { result_collection.page = 5 }
-        it { should be_true }
+        it { is_expected.to be_truthy }
       end
     end
 
@@ -115,17 +115,17 @@ describe SearchResultCollectionDecorator do
 
       context 'when the current page is 1' do
         before { result_collection.page = 1 }
-        it { should be_nil }
+        it { is_expected.to be_nil }
       end
 
       context 'when the current page is 3' do
         before { result_collection.page = 3 }
-        it { should eql 2 }
+        it { is_expected.to eql 2 }
       end
 
       context 'when the current page is 5' do
         before { result_collection.page = 5 }
-        it { should eql 4 }
+        it { is_expected.to eql 4 }
       end
     end
 
@@ -134,17 +134,17 @@ describe SearchResultCollectionDecorator do
 
       context 'when the current page is 1' do
         before { result_collection.page = 1 }
-        it { should eql 2 }
+        it { is_expected.to eql 2 }
       end
 
       context 'when the current page is 3' do
         before { result_collection.page = 3 }
-        it { should eql 4 }
+        it { is_expected.to eql 4 }
       end
 
       context 'when the current page is 5' do
         before { result_collection.page = 5 }
-        it { should be_nil }
+        it { is_expected.to be_nil }
       end
     end
   end
@@ -157,27 +157,27 @@ describe SearchResultCollectionDecorator do
 
       context 'and a total of 20 results' do
         before { result_collection.total_results = 20 }
-        it { should eql 2 }
+        it { is_expected.to eql 2 }
       end
 
       context 'and a total of 15 results' do
         before { result_collection.total_results = 15 }
-        it { should eql 2 }
+        it { is_expected.to eql 2 }
       end
 
       context 'and a total of 10 results' do
         before { result_collection.total_results = 10 }
-        it { should eql 1 }
+        it { is_expected.to eql 1 }
       end
 
       context 'and a total of 5 results' do
         before { result_collection.total_results = 5 }
-        it { should eql 1 }
+        it { is_expected.to eql 1 }
       end
 
       context 'and zero results' do
         before { result_collection.total_results = 0 }
-        it { should eql 1 }
+        it { is_expected.to eql 1 }
       end
     end
   end

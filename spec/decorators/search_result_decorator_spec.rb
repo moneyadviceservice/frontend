@@ -11,9 +11,9 @@ describe SearchResultDecorator do
     double(Core::SearchResult, id: 'item-id', title: title, description: double)
   end
 
-  it { should respond_to(:path) }
-  it { should respond_to(:title) }
-  it { should respond_to(:description) }
+  it { is_expected.to respond_to(:path) }
+  it { is_expected.to respond_to(:title) }
+  it { is_expected.to respond_to(:description) }
 
   describe '#title' do
     context 'when the site title is appended' do

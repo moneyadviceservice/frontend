@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe 'Request blacklisted resource' do
+describe 'Request blacklisted resource', :type => :request do
   %W(about-our-debt-work am-ein-gwaith-dyled
      debt-publications cyhoeddiadau-ar-ddyledion).each do |article|
     context "request article #{article}" do

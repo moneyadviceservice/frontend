@@ -9,13 +9,13 @@ module Core
       { title: double }
     end
 
-    it { should respond_to :type }
-    it { should respond_to :type= }
+    it { is_expected.to respond_to :type }
+    it { is_expected.to respond_to :type= }
 
-    it { should respond_to :title }
-    it { should respond_to :title= }
+    it { is_expected.to respond_to :title }
+    it { is_expected.to respond_to :title= }
 
-    it { should respond_to :description }
-    it { should respond_to :description= }
+    it { is_expected.to respond_to :description }
+    it { is_expected.to respond_to :description= }
   end
 end

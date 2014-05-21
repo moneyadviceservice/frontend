@@ -1,6 +1,6 @@
 require_relative '../../spec_helper'
 
-describe Localisation do
+describe Localisation, :type => :controller do
   let(:status) { :ok }
 
   controller do

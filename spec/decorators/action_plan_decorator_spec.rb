@@ -8,11 +8,11 @@ describe ActionPlanDecorator do
 
   let(:action_plan) { double(Core::ActionPlan, id: 'bob') }
 
-  it { should respond_to(:alternate_options) }
-  it { should respond_to(:canonical_url) }
-  it { should respond_to(:content) }
-  it { should respond_to(:description) }
-  it { should respond_to(:title) }
+  it { is_expected.to respond_to(:alternate_options) }
+  it { is_expected.to respond_to(:canonical_url) }
+  it { is_expected.to respond_to(:content) }
+  it { is_expected.to respond_to(:description) }
+  it { is_expected.to respond_to(:title) }
 
   describe '#alternate_options' do
     context 'when there are no alternates' do

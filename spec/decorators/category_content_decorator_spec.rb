@@ -14,13 +14,13 @@ describe CategoryContentDecorator do
 
   subject(:decorator) { described_class.decorate(item) }
 
-  it { should respond_to(:id) }
-  it { should respond_to(:path) }
-  it { should respond_to(:label) }
-  it { should respond_to(:title) }
-  it { should respond_to(:contents) }
-  it { should respond_to(:description) }
-  it { should respond_to(:icon_class) }
+  it { is_expected.to respond_to(:id) }
+  it { is_expected.to respond_to(:path) }
+  it { is_expected.to respond_to(:label) }
+  it { is_expected.to respond_to(:title) }
+  it { is_expected.to respond_to(:contents) }
+  it { is_expected.to respond_to(:description) }
+  it { is_expected.to respond_to(:icon_class) }
 
   describe "#label" do
     let(:item) { double(type: "foo_bar-baz") }

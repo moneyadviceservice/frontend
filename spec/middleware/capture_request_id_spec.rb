@@ -8,7 +8,7 @@ RSpec.describe CaptureRequestId do
 
   let(:request_id_key) { 'request_id' }
 
-  after(:all) { CurrentRequestId.clear! }
+  after(:context) { CurrentRequestId.clear! }
 
   describe '#call' do
     let(:request_id) { double }

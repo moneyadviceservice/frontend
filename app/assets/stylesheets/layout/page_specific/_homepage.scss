@@ -16,6 +16,18 @@
   }
 }
 
+.temp-dynamic-directory-container .l-directory__item {
+  @include respond-to($mq-m) {
+    min-height:156px;
+  }
+}
+
+.theme-cy .temp-dynamic-directory-container .l-directory__item {
+  @include respond-to($mq-m) {
+    min-height:144px;
+  }
+}
+
 .l-constrained.l-promos {
   margin-bottom: $baseline-unit*2;
 }

@@ -5,8 +5,10 @@
 <%= render 'shared/trust_banner' %>
 
 <% if Feature.active?(:dynamic_directory) %>
-  <%= render 'shared/directory',
-             items: directory_categories %>
+  <div class="temp-dynamic-directory-container">
+    <%= render 'shared/directory',
+               items: directory_categories %>
+  </div>
 <% else %>
   <%= render 'shared/directory',
              items: t('.featured').map { |f| OpenStruct.new(f) } %>

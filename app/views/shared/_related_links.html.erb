@@ -1,18 +1,18 @@
 <% categories.each do |category, contents| %>
-<div class="related-links">
-  <h2 class="related-links__heading">
-    <%= t('related_links.title_prefix') %> <%= category.title %>
-  </h2>
-  <ul class="unstyled-list">
-    <% contents.each do |article| %>
-      <li class="related-links__link">
-        <%= link_to article.title, article.path %>
-      </li>
+  <div class="related-links">
+    <h2 class="related-links__heading">
+      <%= t('related_links.title_prefix') %> <%= category.title %>
+    </h2>
+    <ul class="unstyled-list">
+      <% contents.each do |article| %>
+        <li class="related-links__link">
+          <%= link_to article.title, article.path %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to category.path, class: 'related-links__all'  do %>
+      <%= t('related_links.link') %>
+      <span class="visually-hidden"><%= t('related_links.hidden_link') %> <%= category.title %></span>
     <% end %>
-  </ul>
-  <%= link_to category.path, class: 'related-links__all'  do %>
-    <%= t('related_links.link') %>
-    <span class="visually-hidden"><%= t('related_links.hidden_link') %> <%= category.title %></span>
-  <% end %>
-</div>
+  </div>
 <% end %>

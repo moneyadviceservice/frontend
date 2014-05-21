@@ -40,5 +40,9 @@
     max-width: 100%;
     padding-top: $baseline-unit*11;
     padding-bottom: $baseline-unit*13;
+
+    .theme-cy & {
+      max-width: 75%;
+    }
   }
 }

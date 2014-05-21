@@ -20,14 +20,17 @@ module Core::Repositories
           'id' => 'category-1',
           'type' => 'category',
           'title' => 'Category 1',
+          'parent_id' => nil,
           'contents' => [{
             'id' => 'subcategory-1',
             'title' => 'Subcategory 1',
             'type' => 'category',
+            'parent_id' => 'category-1',
             'contents' => [{
               'id' => 'subsubcategory-1',
               'type' => 'category',
               'title' => 'Subsubcategory 1',
+              'parent_id' => 'subcategory-1',
               'contents' => []
             }]
           },{

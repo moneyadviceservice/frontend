@@ -4,7 +4,13 @@
 
 <%= render 'shared/trust_banner' %>
 
-<%= render 'shared/directory',
-           items: t('.featured') %>
+<% if Feature.active?(:dynamic_directory) %>
+  <%= render 'shared/directory',
+             items: directory_categories %>
+<% else %>
+  <%= render 'shared/directory',
+             items: t('.featured').map { |f| OpenStruct.new(f) } %>
+<% end %>
+
 
 <%= render 'shared/promos', items: t('.promoted') %>

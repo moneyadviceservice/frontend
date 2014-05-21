@@ -2,9 +2,9 @@
   <section class="l-constrained clearfix">
     <% items.each do |item| %>
       <div class="directory__item l-directory__item">
-        <h2 class="directory__title"><a href="<%= item['url'] %>"><%= item['title'] %></a></h2>
+        <h2 class="directory__title"><a href="<%= item.path %>"><%= item.title %></a></h2>
 
-        <p><%= item['description'] %></p>
+        <p><%= item.description %></p>
       </div>
     <% end %>
   </section>

@@ -29,35 +29,12 @@ class ArticleDecorator < Draper::Decorator
     @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
   end
 
-  def related_categories(qty = 8)
-    # First pull together a hash of categories and articles, in the process
-    # filtering out the current article's entry from the contents.
-    data = object.categories.each_with_object({}) do |cat, obj|
-      contents = cat.contents.reject { |a| a == object }
-      obj[cat] = contents if contents.present?
-    end
-
-    # Now gather another hash with categories as keys, but with
-    # qty articles taken as evenly as possible from each category.
-    entities = {}
-    loop_count = 0
-    push_count = 0
-
-    while push_count < qty && loop_count < qty do
-      data.each do |cat, contents|
-        if (next_item = contents.shift)
-          entities[cat] ||= []
-          entities[cat] << next_item
-          push_count += 1
-        end
-        break if push_count >= qty
-      end
-      loop_count += 1
-    end
-
-    # Finally, decorate the entities
-    entities.each_with_object({}) do |(cat, contents), object|
-      object[CategoryDecorator.decorate(cat)] = CategoryContentDecorator.decorate_collection(contents)
+  def related_categories
+    @related_categories ||= object.categories.each_with_object([]) do |category, obj|
+      # Remove the article from the category's contents collection
+      category.contents.reject! { |a| a == object }
+      # Now only include the category if there are still contents
+      obj << CategoryDecorator.decorate(category) if category.contents.present?
     end
   end
 

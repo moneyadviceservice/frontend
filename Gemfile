@@ -71,6 +71,7 @@ group :test, :development do
       git: 'https://github.com/moneyadviceservice/mas-development_dependencies.git'
   gem 'chai-jquery-rails'
   gem 'byebug'
+  gem 'rspec-rails', '2.99.0.rc1'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end
 

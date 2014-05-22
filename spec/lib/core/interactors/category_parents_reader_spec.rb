@@ -1,13 +1,13 @@
 require 'spec_helper'
-require 'core/interactors/category_parent_reader'
+require 'core/interactors/category_parents_reader'
 require 'core/interactors/category_reader'
 
 module Core
-  describe CategoryParentReader do
+  describe CategoryParentsReader do
     let(:id) { 'subsubcategory-1' }
     let(:category) { Category.new(id, parent_id: parent_id)}
 
-    subject { CategoryParentReader.new(category) }
+    subject { CategoryParentsReader.new(category) }
 
     describe '#call' do
       context 'when its a root category' do

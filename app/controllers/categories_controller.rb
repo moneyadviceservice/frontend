@@ -1,4 +1,5 @@
 require 'core/interactors/category_reader'
+require 'core/interactors/category_parents_reader'
 
 class CategoriesController < ApplicationController
   decorates_assigned :category, with: CategoryDecorator
@@ -9,6 +10,6 @@ class CategoriesController < ApplicationController
       not_found
     end
 
-    @breadcrumbs = Core::CategoryParentReader.new(@category).call
+    @breadcrumbs = Core::CategoryParentsReader.new(@category).call
   end
 end

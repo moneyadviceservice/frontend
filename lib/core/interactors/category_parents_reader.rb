@@ -1,5 +1,5 @@
 module Core
-  class CategoryParentReader
+  class CategoryParentsReader
 
     def initialize(category)
       self.parent_id = category.parent_id

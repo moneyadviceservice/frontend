@@ -1,4 +1,5 @@
 require 'core/interactors/article_reader'
+require 'core/interactors/category_parents_reader'
 
 class ArticlesController < ApplicationController
   before_action :initialize_breadcrumbs
@@ -18,7 +19,7 @@ class ArticlesController < ApplicationController
     return @breadcrumbs unless uniq_category?
 
     category = @article.categories.first
-    @breadcrumbs = Core::CategoryParentReader.new(category).call << category
+    @breadcrumbs = Core::CategoryParentsReader.new(category).call << category
   end
 
   def uniq_category?

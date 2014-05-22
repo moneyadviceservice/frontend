@@ -1,5 +1,3 @@
-require 'core/interactors/category_parent_reader'
-
 class CategoryDecorator < Draper::Decorator
   delegate :title, :description
 

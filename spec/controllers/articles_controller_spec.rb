@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 require 'spec_helper'
-require 'core/interactors/category_parent_reader'
->>>>>>> Add articles breadcrumbs
+require 'core/interactors/category_parents_reader'
 require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do
@@ -11,12 +8,12 @@ RSpec.describe ArticlesController, :type => :controller do
     let(:parents) { [] }
     let(:article) { double(Core::Article, id: 'test', categories: categories) }
     let(:article_reader) { double(Core::ArticleReader, call: article) }
-    let(:category_parent_reader) { double(Core::CategoryParentReader, call: parents) }
+    let(:category_parent_reader) { double(Core::CategoryParentsReader, call: parents) }
 
     context 'when an article does exist' do
       before do
         allow(Core::ArticleReader).to receive(:new) { article_reader }
-        allow(Core::CategoryParentReader).to receive(:new) { category_parent_reader }
+        allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
       end
 
       it 'is successful' do

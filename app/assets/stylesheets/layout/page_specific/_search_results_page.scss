@@ -1,4 +1,5 @@
 .l-search-results {
+  min-height: $baseline-unit*50;
   @include column(12);
 
   @include respond-to($mq-m) {

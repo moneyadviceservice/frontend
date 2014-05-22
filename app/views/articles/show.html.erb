@@ -2,6 +2,8 @@
                  canonical:   article.canonical_url,
                  alternate:   article.alternate_options) %>
 
+<%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+
 <div class="l-article editorial">
   <div class="l-article-intro">
     <h1><%= title article.title %></h1>

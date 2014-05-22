@@ -112,14 +112,6 @@
   }
 }
 
-%heading-related-links {
-  @include body(18, 24);
-}
-
-%type-related-links {
-  @include body(16, 24);
-}
-
 %type-navigation {
   @extend %font-heading-medium;
   @include body(14, 18);

@@ -151,13 +151,15 @@ cy:
         <a href="%{url}">Canfyddwch fwy am cwcis.</a>
       close_button: Cau
 
-  related_links:
-    title_prefix: Mwy yn %{category}
-    link: Gweld yr holl
-    hidden_link: erthyglau yn %{category}
+  articles:
+    show:
+      related_links:
+        title_prefix: Mwy yn %{category}
+        link: Gweld yr holl
+        hidden_link: erthyglau yn %{category}
 
-  related_categories:
-    title: Mae’r erthygl yn ymddangos yn
+      related_categories:
+        title: Mae’r erthygl yn ymddangos yn
 
   search_box:
     label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol

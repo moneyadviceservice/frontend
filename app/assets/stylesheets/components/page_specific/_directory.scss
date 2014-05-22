@@ -5,7 +5,7 @@
 .directory {
   background-color: $home-page-feature;
   padding-top: $baseline-unit*4;
-  padding-bottom: $baseline-unit*1;
+  padding-bottom: $baseline-unit*2;
 
   @include respond-to($mq-m) {
     padding-top: $baseline-unit*7;
@@ -16,6 +16,7 @@
   @extend %font-heading-medium;
   @include body(18, 24);
   margin-top: 0;
+  margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
@@ -31,7 +32,7 @@
 
 .directory__description {
   @include respond-to($mq-xs, $mq-m) {
-    margin-bottom: $baseline-unit*3;
+    margin-bottom: $baseline-unit*4;
   }
 
 }

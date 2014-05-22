@@ -33,10 +33,13 @@
 }
 
 .l-homepage-promo {
+  margin-top: $baseline-unit*4;
+  margin-bottom: $baseline-unit*6;
+
   @include respond-to($mq-s) {
     @include column(6);
     margin-top: $baseline-unit*4;
-    min-height: 325px;
+    min-height: 335px;
   }
 
   @include respond-to($mq-m) {

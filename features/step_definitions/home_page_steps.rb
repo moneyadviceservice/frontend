@@ -21,7 +21,7 @@ Then(/^I should see the Money Advice Service brand identity$/) do
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
-  expect(home_page.strapline).
+  expect(home_page.trust_banner.heading).
     to have_content(I18n.t('home.show.strapline'))
 end
 

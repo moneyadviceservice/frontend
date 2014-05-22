@@ -1,10 +1,12 @@
 require_relative '../page'
+require_relative '../sections/trust_banner'
 
 module UI::Pages
   class Home < UI::Page
     set_url '/{locale}'
 
-    element :strapline, '.home-feature__content h1'
+    section :trust_banner, UI::Sections::TrustBanner, '.trust-banner'
+
     element :feature_list, '.home-feature__list'
     elements :promoted_items, '.home-promoted__item'
     element :directory_items, '.directory'

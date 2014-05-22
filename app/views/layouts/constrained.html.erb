@@ -1,4 +1,13 @@
 <% content_for :main do %>
+
+  <% if content_for?(:breadcrumbs) %>
+    <div class="breadcrumbs">
+      <div class="l-constrained">
+        <%= yield :breadcrumbs %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="l-constrained l-padded" id="main" tabindex="-1">
     <%= yield %>
   </div>

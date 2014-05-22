@@ -1,4 +1,8 @@
-<a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
-<% breadcrumbs.each do |breadcrumb| %>
-  <a href="<%= breadcrumb.path %>"> > <%= breadcrumb.title %></a>
+<% content_for(:breadcrumbs) do %>
+  <a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
+
+  <% breadcrumbs.each do |breadcrumb| %>
+    <span class="breadcrumbs__divider">&#187;</span>
+    <a class="breadcrumbs__crumb" href="<%= breadcrumb.path %>"><%= breadcrumb.title %></a>
+  <% end %>
 <% end %>

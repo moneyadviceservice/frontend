@@ -37,6 +37,16 @@ cy:
       unprocessable_entity:
         title: Endid na ellir ei brosesu
 
+  contact:
+    heading: Methu canfod beth sydd ei angen arnoch chi?
+    introduction: Mae ein staff hyfforddedig wrth law i helpu
+    call_us: Cysylltu â ni
+    opening_hours_heading: Oriau agor
+    opening_hours_html: |
+      Dydd Llun-Dydd Gwener: <strong>8am-8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong>
+    call_charges_html: |
+      <a href="/en/static/contact-us">Dysgwch am gostau galwadau</a>
+
   home:
     show:
       description: >
@@ -63,16 +73,6 @@ cy:
         - path: /cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled
           title: Cael cyngor ar ddyled am ddim
           description: Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled
-
-      contact:
-        title: Methu canfod beth sydd ei angen arnoch chi?
-        introduction: Mae ein staff hyfforddedig wrth law i helpu
-        call_us: Cysylltu â ni
-        opening_hours_heading: Oriau agor
-        opening_hours_html: |
-          Dydd Llun-Dydd Gwener: <strong>8am-8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong>
-        call_charges_html: |
-          <a href="/en/static/contact-us">Dysgwch am gostau galwadau</a>
 
       promoted:
         - url: /cy/categories/tools--resources

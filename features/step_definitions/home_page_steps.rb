@@ -37,13 +37,13 @@ Then(/^I should see promoted content$/) do
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
-  expect(home_page.contact_heading).to have_content(I18n.t('home.show.contact.title'))
+  expect(home_page.contact_heading).to have_content(I18n.t('contact.heading'))
 
   expect(home_page.contact_introduction).
-    to have_content(strip_tags(I18n.t('home.show.contact.introduction')))
+    to have_content(strip_tags(I18n.t('contact.introduction')))
 
   expect(home_page.contact_number).
-    to have_content(strip_tags(I18n.t('home.show.contact.number')))
+    to have_content(strip_tags('0300 500 5000'))
 end
 
 Then(/^I should be taken to that social media profile$/) do

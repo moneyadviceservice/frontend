@@ -9,7 +9,7 @@
 }
 
 
-.contact__strapline-heading {
+.contact__heading {
   @include body(24, 30);
   @extend %font-heading-medium;
   margin-top: 0;
@@ -21,7 +21,7 @@
   }
 }
 
-.contact__strapline-text {
+.contact__introduction {
   margin-bottom: $baseline-unit*3;
 }
 

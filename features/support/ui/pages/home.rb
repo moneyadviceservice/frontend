@@ -9,8 +9,5 @@ module UI::Pages
     elements :promoted_items, '.home-promoted__item'
     element :directory_items, '.directory'
 
-    element :contact_heading, 'h2.contact__heading'
-    element :contact_introduction, '.contact__text'
-    element :contact_number, '.contact__number'
   end
 end

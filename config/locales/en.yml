@@ -37,51 +37,60 @@ en:
       unprocessable_entity:
         title: Unprocessable Entity
 
+  contact:
+    heading: Can’t find what you need?
+    introduction: Our trained staff are on hand to help you
+    call_us: Call us
+    opening_hours_heading: Opening hours
+    opening_hours_html: |
+      Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am–1pm</strong>
+    call_charges_html: |
+      <a href="/en/static/contact-us">Find out about call charges</a>
+
   home:
     show:
       description: >
         The Money Advice Service helps you manage your money better. Use our Health Check tool,
         calculators and comparison tables to make the most of your finances.
       strapline: Free, impartial & set up by government
+      heading: Free, impartial & set up by government
       featured:
-        - url: /en/categories/homes-and-mortgages
+        - path: /en/categories/homes-and-mortgages
           title: Mortgages and buying a home
           description: Home buying costs and mortgage types explained
-        - url: /en/categories/low-income-survival-tips
+        - path: /en/categories/low-income-survival-tips
           title: Budgeting on low income
           description: Tips and tools to make your money go further
-        - url: /en/articles/new-rules-about-pensions-from-27-march-2014
+        - path: /en/articles/new-rules-about-pensions-from-27-march-2014
           title: New rules about pensions from 27 March 2014
           description: What the changes to pension rules could mean for you
-        - url: /en/campaigns/borrowing-get-the-facts
+        - path: /en/campaigns/borrowing-get-the-facts
           title: Better borrowing
           description: Make sure you shop around and get all the facts before you borrow money
-        - url: /en/categories/budgeting-and-taking-control
+        - path: /en/categories/budgeting-and-taking-control
           title: Plan where your money goes
           description: Managing the money you have coming in and going out
-        - url: /en/articles/where-to-go-to-get-free-debt-advice
+        - path: /en/articles/where-to-go-to-get-free-debt-advice
           title: Get free debt advice
           description: Work out which debts to focus on first and where to get free debt advice
 
-      contact:
-        title: Can’t find what you need?
-        introduction_html: |
-          <p>Our trained staff are on hand to help</p>
-        details_html: |
-          <a class="home-contact__number" href="tel:+443005005000">0300 500 5000</a>
-          <h3>Opening hours</h3>
-          <p>Monday–Friday: <strong>8am–8pm</strong><br>Saturday: <strong>9am–1pm</strong></p>
-          <p><a href="/en/static/contact-us">Find out about call charges</a></p>
       promoted:
+        - url: /en/categories/tools--resources
+          text: Tools and calculators
+          image: tools-calculators.jpg
+          content: Try our useful calculators, tools and resources to help you manage your money.
+        - url: /en/campaigns/borrowing-get-the-facts
+          text: Borrowing – get the facts
+          image: borrowing.jpg
+          content: Make sure you shop around and get all the facts before you borrow money.
         - url: /en/payday-loans
           text: Payday loans - don’t be tempted by fast cash.
-          image: home-promoted-pdl.jpg
-        - url: /en/you-your-kids-and-money
-          text: You, your kids and money.
-          image: home-promoted-5.jpg
-        - url: /en/articles/estimate-your-overall-buying-and-moving-costs
-          text: Make sure you’ve calculated the true cost of affording your home.
-          image: home-promoted-2.jpg
+          image: payday-loans.jpg
+          content: Payday loans seem an easy solution when money’s short, but often lead to serious debt.
+        - url: /en/articles/where-to-go-to-get-free-debt-advice
+          text: Where to go to get free debt advice
+          image: free-debt-advice.jpg
+          content: Find out where you can get free, confidential debt advice if you’re struggling with debt.
 
   categories:
     show:

@@ -1,0 +1,54 @@
+.l-trust-banner {
+  @include column(12);
+}
+
+.l-directory__item {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    min-height:126px;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+    margin-bottom: $baseline-unit*4;
+  }
+}
+
+.temp-dynamic-directory-container .l-directory__item {
+  @include respond-to($mq-m) {
+    min-height:156px;
+  }
+}
+
+.theme-cy .temp-dynamic-directory-container .l-directory__item {
+  @include respond-to($mq-m) {
+    min-height:144px;
+  }
+}
+
+.l-constrained.l-promos {
+  margin-bottom: $baseline-unit*2;
+}
+
+.l-homepage-promo {
+  margin-top: $baseline-unit*4;
+  margin-bottom: $baseline-unit*6;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+    margin-top: $baseline-unit*4;
+    min-height: 335px;
+  }
+
+  @include respond-to($mq-m) {
+    min-height: 397px;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+    margin-bottom: $baseline-unit*4;
+    margin-top: $baseline-unit*4;
+  }
+}

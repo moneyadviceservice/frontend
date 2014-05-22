@@ -1,10 +1,18 @@
-<%= render 'shared/homepage_feature',
-           strapline: t('home.show.strapline'),
-           items:     t('home.show.featured') %>
+<%= render 'shared/trust_banner' %>
 
-<%= render 'shared/home_contact',
-           title:        t('home.show.contact.title'),
-           introduction: t('home.show.contact.introduction_html'),
-           details:      t('home.show.contact.details_html') %>
+<% if params.key?('welsh') %>
+  <div class="theme-cy">
+    <div class="temp-dynamic-directory-container">
+      <%= render 'shared/directory',
+                 items: @categories_for_directory_cy %>
+    </div>
+  </div>
+<% else %>
+  <div class="temp-dynamic-directory-container">
+    <%= render 'shared/directory',
+               items: @categories_for_directory_en %>
+  </div>
+<% end %>
+</div>
 
-<%= render 'shared/home_promoted', items: t('home.show.promoted') %>
+<%= render 'shared/promos', items: t('home.show.promoted') %>

@@ -1,0 +1,16 @@
+<div class="l-constrained l-promos">
+  <section class="clearfix l-padded">
+    <% items.each do |item| %>
+      <div class="promo l-homepage-promo">
+        <h2 class="promo__heading">
+          <%= link_to item['url'] do %>
+            <%= image_tag("promos/#{item['image']}", alt: '') %>
+            <%= item['text'] %>
+          <% end %>
+        </h2>
+
+        <p class="promo__content"><%= item['content'] %></p>
+      </div>
+    <% end %>
+  </section>
+</div>

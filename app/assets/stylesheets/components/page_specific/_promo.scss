@@ -1,0 +1,20 @@
+// Promo section of the home page
+//
+// Styleguide Promo
+
+.promo img {
+  width: 100%;
+  margin-bottom: $baseline-unit*2;
+}
+
+.promo__heading {
+  @extend %font-heading-medium;
+  @include body(24, 30);
+  margin-top: 0;
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      @include body(18, 24);
+    }
+  }
+}

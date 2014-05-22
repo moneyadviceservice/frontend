@@ -1,0 +1,20 @@
+// Site wide breadcrumbs
+//
+// Styleguide Breadcrumbs
+
+.breadcrumbs {
+  background-color: $breadcrumbs-background-color;
+  padding-top: $baseline-unit*3;
+  padding-bottom: $baseline-unit*3;
+}
+
+.breadcrumbs__crumb {
+
+}
+
+.breadcrumbs__divider {
+  @include body(24,24);
+  padding: 0 10px;
+  vertical-align: bottom;
+  color: $breadcrumbs-divider-color;
+}

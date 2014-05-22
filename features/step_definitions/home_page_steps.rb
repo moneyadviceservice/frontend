@@ -25,8 +25,8 @@ Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
     to have_content(I18n.t('home.show.strapline'))
 end
 
-Then(/^I should see featured topics$/) do
-  expect(home_page).to have_feature_list_items
+Then(/^I should see directory items$/) do
+  expect(home_page).to have_directory_items
 end
 
 Then(/^I should see promoted content$/) do

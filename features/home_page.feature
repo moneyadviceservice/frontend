@@ -13,7 +13,7 @@ Feature: Home page
 
   Scenario: User show featured topics
     When I visit the home page
-    Then I should see featured topics
+    Then I should see directory items
 
   Scenario: User shown information about contacting the call centre
     When I visit the home page

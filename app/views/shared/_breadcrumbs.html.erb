@@ -1,0 +1,4 @@
+<a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
+<% breadcrumbs.each do |breadcrumb| %>
+  <a href="<%= breadcrumb.path %>"> > <%= breadcrumb.title %></a>
+<% end %>

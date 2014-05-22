@@ -11,13 +11,13 @@
 
 .contact__heading {
   @include body(24, 30);
-  @extend %font-heading-medium;
+  @extend %font-heading-heavy;
   margin-top: 0;
   margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
     margin-top: $baseline-unit*3;
-    @include body(30, 30);
+    @include body(29, 30);
   }
 }
 

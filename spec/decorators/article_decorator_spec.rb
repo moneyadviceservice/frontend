@@ -6,7 +6,7 @@ RSpec.describe ArticleDecorator do
 
   subject(:decorator) { described_class.decorate(article) }
 
-  let(:article) { double(Core::Article, id: 'bob') }
+  let(:article) { instance_double(Core::Article, id: 'bob') }
 
   it { is_expected.to respond_to(:alternate_options) }
   it { is_expected.to respond_to(:canonical_url) }
@@ -48,11 +48,11 @@ RSpec.describe ArticleDecorator do
   describe '#intro' do
     let(:fixture) { 'spec/fixtures/pawnbrokers-how-they-work.json' }
     let(:article) do
-      double(Core::Article,
-             id:          'bob',
-             title:       'uncle-bob-is-richer-than-you',
-             description: 'uncle is rich',
-             body:        MultiJson.load(File.read(fixture))['body'])
+      instance_double(Core::Article,
+                      id:          'bob',
+                      title:       'uncle-bob-is-richer-than-you',
+                      description: 'uncle is rich',
+                      body:        MultiJson.load(File.read(fixture))['body'])
     end
 
     let(:processed_body) { Nokogiri::HTML(decorator.send(:processed_body)) }
@@ -65,11 +65,11 @@ RSpec.describe ArticleDecorator do
 
   describe '#content' do
     let(:article) do
-      double(Core::Article,
-             id:          'bob',
-             title:       'uncle-bob-is-richer-than-you',
-             description: 'uncle is rich',
-             body:        MultiJson.load(File.read(fixture))['body'])
+      instance_double(Core::Article,
+                      id:          'bob',
+                      title:       'uncle-bob-is-richer-than-you',
+                      description: 'uncle is rich',
+                      body:        MultiJson.load(File.read(fixture))['body'])
     end
 
     let(:html) { Nokogiri::HTML(decorator.content) }

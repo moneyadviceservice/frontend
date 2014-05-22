@@ -8,7 +8,7 @@ RSpec.describe SearchResultDecorator do
 
   let(:title) { double }
   let(:search_result) do
-    double(Core::SearchResult, id: 'item-id', title: title, description: double)
+    instance_double(Core::SearchResult, id: 'item-id', title: title, description: double)
   end
 
   it { is_expected.to respond_to(:path) }

@@ -7,7 +7,7 @@ RSpec.describe CategoryDecorator do
   subject(:decorator) { described_class.decorate(category) }
 
   let(:category) do
-    double(Core::Category, id: double, title: double, description: double)
+    instance_double(Core::Category, id: double, title: double, description: double)
   end
 
   it { is_expected.to respond_to(:path) }

@@ -1,9 +1,24 @@
 require 'core/entities/article'
 require 'core/interactors/article_reader'
 require 'core/registries/repository'
+require 'core/repositories/articles/fake'
 
 module World
   module Articles
+    def populate_article_repository_with(*articles)
+      repository = Core::Repositories::Articles::Fake.new(*articles)
+      Core::Registries::Repository[:article] = repository
+    end
+
+    def browse_to_article(article)
+      article_page.load(locale: :en, id: article['id'])
+      @current_article = article
+    end
+
+    def current_article
+      @current_article
+    end
+
     def article_id_for_locale(locale)
       case locale
       when 'en'

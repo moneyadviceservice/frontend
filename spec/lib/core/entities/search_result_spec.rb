@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/entities/search_result'
 
 module Core

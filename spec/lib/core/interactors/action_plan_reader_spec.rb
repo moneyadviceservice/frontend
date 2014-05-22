@@ -1,4 +1,3 @@
-require 'spec_helper'
 require_relative 'shared_examples/optional_failure_block'
 
 require 'core/entities/action_plan'

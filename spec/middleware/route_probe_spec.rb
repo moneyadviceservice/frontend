@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'route_probe'
 
 RSpec.describe RouteProbe do

@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'current_request_id'
 
 RSpec.describe CaptureRequestId do

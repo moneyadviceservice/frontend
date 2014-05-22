@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe BetaOptOutsController, :type => :controller do
   let(:previous_page) { 'where_i_came_from' }
 

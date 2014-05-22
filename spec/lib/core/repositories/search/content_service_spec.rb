@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/search/content_service'
 
 RSpec.describe Core::Repositories::Search::ContentService do

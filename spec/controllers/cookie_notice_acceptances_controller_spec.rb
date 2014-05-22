@@ -1,5 +1,3 @@
-require_relative '../spec_helper'
-
 RSpec.describe CookieNoticeAcceptancesController, :type => :controller do
   describe 'POST create' do
     let(:locale) { 'en' }

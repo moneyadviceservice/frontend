@@ -1,5 +1,6 @@
 --color
 --warnings
+--require spec_helper
 --format html
 --out tmp/spec.html
 --format RspecJunitFormatter

@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/categories/fake'
 
 RSpec.describe Core::Repositories::Categories::Fake do

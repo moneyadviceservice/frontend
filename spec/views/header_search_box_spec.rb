@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe 'shared/_header', :type => :view do
   before do
     controller.extend(Localisation)

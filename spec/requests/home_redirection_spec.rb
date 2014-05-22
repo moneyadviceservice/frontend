@@ -1,5 +1,3 @@
-require_relative '../spec_helper'
-
 RSpec.describe 'Home redirection', :type => :request do
   context "when '/' is requested" do
     before { get('/') }

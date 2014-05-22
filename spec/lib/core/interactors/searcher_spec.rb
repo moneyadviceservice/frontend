@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 require 'core/entities/search_result'
 require 'core/interactors/searcher'
 

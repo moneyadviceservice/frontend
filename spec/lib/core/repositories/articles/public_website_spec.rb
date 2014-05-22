@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/articles/public_website'
 
 module Core::Repositories::Articles

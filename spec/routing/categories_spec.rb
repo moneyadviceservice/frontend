@@ -1,4 +1,3 @@
-require 'spec_helper'
 require_relative './shared_examples/show_resource'
 
 RSpec.describe 'Category routing', :type => :routing do

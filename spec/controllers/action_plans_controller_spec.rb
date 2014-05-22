@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/interactors/action_plan_reader'
 require 'core/entities/action_plan'
 

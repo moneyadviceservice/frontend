@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/repository_cache'
 
 RSpec.describe Core::RepositoryCache do

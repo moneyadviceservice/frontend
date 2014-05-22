@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/action_plans/public_website'
 
 module Core::Repositories::ActionPlans

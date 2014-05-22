@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 Dir[File.join(File.dirname(__FILE__), '..', '..', 'lib', 'core', 'entities', '*')].each do |entity|
   require entity
 end

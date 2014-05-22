@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'asset_pipeline/processors/css_lint'
 
 module AssetPipeline

@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/entities/action_plan'
 
 RSpec.describe ActionPlanDecorator do

@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine'
 
 module Core::Repositories::Search

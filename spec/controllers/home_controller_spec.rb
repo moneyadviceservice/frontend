@@ -1,5 +1,3 @@
-require_relative '../spec_helper'
-
 RSpec.describe HomeController, :type => :controller do
   describe 'GET show' do
     specify do

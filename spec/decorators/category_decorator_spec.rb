@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/entities/category'
 
 RSpec.describe CategoryDecorator do

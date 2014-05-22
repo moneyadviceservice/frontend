@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/interactors/category_reader'
 
 RSpec.describe CategoriesController, :type => :controller do

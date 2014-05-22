@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/entities/article'
 
 RSpec.describe ArticleDecorator do

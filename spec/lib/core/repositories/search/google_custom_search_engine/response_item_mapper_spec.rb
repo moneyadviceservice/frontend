@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/search/google_custom_search_engine/response_mapper'
 
 module Core::Repositories::Search

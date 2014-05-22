@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/repositories/categories/public_website'
 
 RSpec.describe Core::Repositories::Categories::PublicWebsite do

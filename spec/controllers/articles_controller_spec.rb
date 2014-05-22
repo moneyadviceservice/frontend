@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do

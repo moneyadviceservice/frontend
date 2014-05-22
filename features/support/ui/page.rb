@@ -14,6 +14,9 @@ module UI
     element :canonical_tag, :xpath, "//link[@rel='canonical']", visible: false
     element :description, :xpath, "//meta[@name='description']", visible: false
 
+    element :contact_heading, '.contact__heading'
+    element :contact_introduction, '.contact__introduction'
+    element :contact_number, '.bubble__text'
     section :footer_cookie_message, UI::Sections::FooterCookieMessage, '.cookie-message'
     section :footer_site_links, UI::Sections::FooterSiteLinks, '.footer-site-links'
     section :footer_social_links, UI::Sections::FooterSocialLinks, '.footer-social-links'

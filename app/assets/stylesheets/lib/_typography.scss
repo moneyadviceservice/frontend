@@ -57,25 +57,8 @@
   letter-spacing: -1px;
 
   @include respond-to($mq-m) {
-    @include body(24, 30);
     margin-bottom: $baseline-unit*2;
-  }
-
-  .theme-cy & {
-    @include respond-to($mq-m) {
-      @include body(18, 24);
-    }
-  }
-}
-
-%type-homepage-headings {
-  @extend %font-heading-medium;
-  @include body(18, 24);
-  letter-spacing: -1px;
-
-  @include respond-to($mq-m) {
     @include body(24, 30);
-    margin-bottom: $baseline-unit*2;
   }
 
   .theme-cy & {
@@ -86,9 +69,7 @@
 }
 
 %type-footer {
-  @include respond-to($mq-xl) {
-    @include body(16, 24);
-  }
+  @include body(16, 24);
 }
 
 %type-primary-navigation {

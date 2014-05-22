@@ -1,0 +1,39 @@
+.bubble {
+  position: relative;
+  background-color: $color-contact-bubble-background;
+  padding: $baseline-unit*4;
+  border-radius: 20px;
+  margin-bottom: $baseline-unit*5;
+
+  &:before {
+    position: absolute;
+    bottom: -20px;
+    right: 40px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #61a612 transparent transparent transparent;
+  }
+}
+
+.bubble__heading {
+  @include body(24, 24);
+  @extend %font-heading-medium;
+  margin-top: 0;
+  margin-bottom: $baseline-unit;
+  color: white;
+}
+
+.bubble__text {
+  @extend %font-heading-heavy;
+  @include body(30, 36);
+  letter-spacing: -1px;
+  color: $color-telephone-number-hover;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-telephone-number-hover;
+  }
+}

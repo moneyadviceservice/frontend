@@ -1,14 +1,18 @@
-<% set_meta_tags(canonical:   root_url,
-                 alternate:   alternate_home_map,
+<% set_meta_tags(canonical: root_url,
+                 alternate: alternate_home_map,
                  description: t('.description').strip) %>
 
-<%= render 'shared/homepage_feature',
-           strapline: t('.strapline'),
-           items:     t('.featured') %>
+<%= render 'shared/trust_banner' %>
 
-<%= render 'shared/home_contact',
-           title:        t('.contact.title'),
-           introduction: t('.contact.introduction_html'),
-           details:      t('.contact.details_html') %>
+<% if Feature.active?(:dynamic_directory) %>
+  <div class="temp-dynamic-directory-container">
+    <%= render 'shared/directory',
+               items: directory_categories %>
+  </div>
+<% else %>
+  <%= render 'shared/directory',
+             items: t('.featured').map { |f| OpenStruct.new(f) } %>
+<% end %>
 
-<%= render 'shared/home_promoted', items: t('.promoted') %>
+
+<%= render 'shared/promos', items: t('.promoted') %>

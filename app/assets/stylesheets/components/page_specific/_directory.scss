@@ -1,0 +1,38 @@
+// Directory navigation component found on the homepage
+//
+// Styleguide Directory
+
+.directory {
+  background-color: $home-page-feature;
+  padding-top: $baseline-unit*4;
+  padding-bottom: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    padding-top: $baseline-unit*7;
+  }
+}
+
+.directory__title {
+  @extend %font-heading-medium;
+  @include body(18, 24);
+  margin-top: 0;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*2;
+    @include body(24, 30);
+  }
+
+  .theme-cy & {
+    @include respond-to($mq-m) {
+      @include body(18, 24);
+    }
+  }
+}
+
+.directory__description {
+  @include respond-to($mq-xs, $mq-m) {
+    margin-bottom: $baseline-unit*4;
+  }
+
+}

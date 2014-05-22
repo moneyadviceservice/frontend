@@ -37,51 +37,60 @@ cy:
       unprocessable_entity:
         title: Endid na ellir ei brosesu
 
+  contact:
+    heading: Methu canfod beth sydd ei angen arnoch chi?
+    introduction: Mae ein staff hyfforddedig wrth law i helpu
+    call_us: Cysylltu â ni
+    opening_hours_heading: Oriau agor
+    opening_hours_html: |
+      Dydd Llun-Dydd Gwener: <strong>8am-8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong>
+    call_charges_html: |
+      <a href="/en/static/contact-us">Dysgwch am gostau galwadau</a>
+
   home:
     show:
       description: >
         Mae'r Gwasanaeth Cynghori Ariannol yn eich helpu i reoli eich arian yn well. Defnyddiwch
         ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
       strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
+      heading: Am ddim a diduedd a sefydlwyd gan y llywodraeth
       featured:
-        - url: /cy/categories/homes-and-mortgages
+        - path: /cy/categories/homes-and-mortgages
           title: Morgeisi a phrynu cartref
           description: Costau prynu cartref a mathau o forgeisi wedi eu hegluro
-        - url: /cy/categories/low-income-survival-tips
+        - path: /cy/categories/low-income-survival-tips
           title: Cyllidebu ar incwm isel
           description: Awgrymiadau ac offer i wneud i'ch arian fynd ymhellach
-        - url: /cy/articles/rheolau-newydd-ynghylch-pensiynau-o-27-mawrth-2014-ymlaen
+        - path: /cy/articles/rheolau-newydd-ynghylch-pensiynau-o-27-mawrth-2014-ymlaen
           title: Rheolau newydd ynghylch pensiynau o 27 Mawrth 2014 ymlaen
           description: Yr hyn mae newidiadau I reolau pensiwn yn ei olygu I chi
-        - url: /cy/campaigns/borrowing-get-the-facts
+        - path: /cy/campaigns/borrowing-get-the-facts
           title: Benthyca gwell
           description: Gwnewch yn siŵr eich bod yn siopa o gwmpas a chael yr holl ffeithiau cyn ichi fenthyg arian
-        - url: /cy/categories/budgeting-and-taking-control
+        - path: /cy/categories/budgeting-and-taking-control
           title: Cynlluniwch i ble aiff eich arian
           description: Rheoli'ch incwm a'ch gwariant
-        - url: /cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled
+        - path: /cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled
           title: Cael cyngor ar ddyled am ddim
           description: Gwiriwch pa ddyledion y dylid canolbwyntio arnynt yn gyntaf a ble dylid cael cyngor am ddim ynghylch dyled
 
-      contact:
-        title: Methu canfod beth sydd ei angen arnoch chi?
-        introduction_html: |
-          <p>Mae ein staff hyfforddedig wrth law i helpu</p>
-        details_html: |
-          <a class="home-contact__number" href="tel:+443005005000">0300 500 5000</a>
-          <h3>Oriau agor</h3>
-          <p>Dydd Llun-Dydd Gwener: <strong>8am-8pm</strong><br />Dydd Sadwrn: <strong>9am-1pm</strong></p>
-          <p><a href="/en/static/contact-us">Dysgwch am gostau galwadau</a></p>
       promoted:
+        - url: /cy/categories/tools--resources
+          text: Offer a chyfrifianellau
+          image: tools-calculators.jpg
+          content: Rhowch gynnig ar ein cyfrifianellau, offer ac adnoddau i’ch helpu i reoli eich arian.
+        - url: /cy/campaigns/benthyca-a-ewch-ar-ol-y-ffeithiau
+          text: Benthyca – ewch ar ôl y ffeithiau
+          image: borrowing.jpg
+          content: Gwnewch yn siŵr eich bod yn siopa o gwmpas a chael yr holl ffeithiau cyn ichi fenthyg arian.
         - url: /cy/benthyciadau-diwrnod-cyflog
           text: Benthyciadau diwrnod cyflog – peidiwch â chael eich temtio gan arian parod cyflym
-          image: home-promoted-pdl.jpg
-        - url: /cy/chi-eich-plant-a-ch-arian
-          text: "Chi, eich plant a'ch arian."
-          image: home-promoted-5.jpg
-        - url: /cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol
-          text: Gwnewch yn siŵr eich bod wedi cyfrifo gwir gost fforddio eich cartref.
-          image: home-promoted-2.jpg
+          image: payday-loans.jpg
+          content: Mae benthyciadau diwrnod cyflog yn ymddangos fel ateb rhwydd pan fydd arian yn brin, ond yn aml maent yn arwain at ddyled ddifrifol. Defnyddiwch ein hofferyn ar-lein i ddod o hyd i ddewis arall sy’n rhatach, gyda llai o risg.
+        - url: /cy/articles/ble-i-gael-cyngor-am-ddim-ynghylch-dyled
+          text: Ble i gael cyngor am ddim ynghylch dyled
+          image: free-debt-advice.jpg
+          content: Cewch wybod ble i gael cymorth cyfrinachol am ddim os ydych yn cael trafferthion â dyled.
 
   categories:
     show:

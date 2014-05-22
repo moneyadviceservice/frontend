@@ -21,29 +21,29 @@ Then(/^I should see the Money Advice Service brand identity$/) do
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
-  expect(home_page.strapline).
+  expect(home_page.trust_banner.heading).
     to have_content(I18n.t('home.show.strapline'))
 end
 
-Then(/^I should see featured topics$/) do
-  expect(home_page).to have_feature_list_items
+Then(/^I should see directory items$/) do
+  expect(home_page).to have_directory_items
 end
 
 Then(/^I should see promoted content$/) do
   expected_text = I18n.t('home.show.promoted').map { |item| item['text'] }
-  actual_text   = home_page.promoted_items.map { |item| item.text }
+  actual_text   = home_page.promos.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
-  expect(home_page.contact_heading).to have_content(I18n.t('home.show.contact.title'))
+  expect(home_page.contact_heading).to have_content(I18n.t('contact.heading'))
 
   expect(home_page.contact_introduction).
-    to have_content(strip_tags(I18n.t('home.show.contact.introduction_html')))
+    to have_content(strip_tags(I18n.t('contact.introduction')))
 
-  expect(home_page.contact_details).
-    to have_content(strip_tags(I18n.t('home.show.contact.details_html')))
+  expect(home_page.contact_number).
+    to have_content(strip_tags('0300 500 5000'))
 end
 
 Then(/^I should be taken to that social media profile$/) do

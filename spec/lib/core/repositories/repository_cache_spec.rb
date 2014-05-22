@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'core/repositories/repository_cache'
 
 RSpec.describe Core::RepositoryCache do
-  let(:repository) { double('Core::Repositories::Test') }
+  let(:repository) { instance_double('Core::Repositories::Test') }
   let(:cache) { double }
   let(:contents) { 'the contents' }
   let(:locale) { :en }

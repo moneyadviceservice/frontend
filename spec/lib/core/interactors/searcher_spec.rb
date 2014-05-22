@@ -95,7 +95,7 @@ module Core
       let(:per_page) { 10 }
 
       describe '#data' do
-        let(:repository) { double(Repositories::Search::GoogleCustomSearchEngine) }
+        let(:repository) { instance_double(Repositories::Search::GoogleCustomSearchEngine) }
         let(:data) { double }
 
         before do

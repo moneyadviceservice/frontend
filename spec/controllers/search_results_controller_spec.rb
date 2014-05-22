@@ -54,7 +54,7 @@ RSpec.describe SearchResultsController, :type => :controller do
       end
 
       context 'that returns no results' do
-        before { allow(search_results_collection).to receive(:items) { []} }
+        before { allow(search_results_collection).to receive(:items) { [] } }
 
         it 'renders the right template' do
           get :index, locale: I18n.locale, query: query

@@ -24,7 +24,7 @@ RSpec.describe SearchResultCollectionDecorator do
     end
 
     context 'when the requested page number is less than the total number of pages' do
-      let(:page) {  5 }
+      let(:page) { 5 }
 
       it 'returns the original requested page number' do
         expect(subject.page).to eq page
@@ -32,7 +32,7 @@ RSpec.describe SearchResultCollectionDecorator do
     end
 
     context 'when the requested page number is more than the total number of pages' do
-      let(:page) {  15 }
+      let(:page) { 15 }
 
       it 'returns the total number of pages' do
         expect(subject.page).to eq number_of_pages
@@ -49,7 +49,7 @@ RSpec.describe SearchResultCollectionDecorator do
     end
 
     context 'when the total number of results is less than the result limit' do
-      let(:total_results) {  40 }
+      let(:total_results) { 40 }
 
       it 'returns the actual number of results' do
         expect(subject.total_results).to eq total_results
@@ -57,7 +57,7 @@ RSpec.describe SearchResultCollectionDecorator do
     end
 
     context 'when the total number of results is more than the result limit' do
-      let(:total_results) {  100 }
+      let(:total_results) { 100 }
 
       it 'returns the result limit' do
         expect(subject.total_results).to eq result_limit
@@ -67,7 +67,7 @@ RSpec.describe SearchResultCollectionDecorator do
 
   context 'with 5 pages of 10 results' do
     before do
-      result_collection.per_page = 10
+      result_collection.per_page      = 10
       result_collection.total_results = 50
     end
 

@@ -30,7 +30,7 @@ RSpec.describe ActionPlansController, :type => :controller do
       it 'raises an ActionController RoutingError' do
         allow_any_instance_of(Core::ActionPlanReader).to receive(:call).and_yield
 
-        expect{ get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+        expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end
     end
   end

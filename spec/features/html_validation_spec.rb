@@ -73,10 +73,10 @@ RSpec.describe 'HTML validation', :type => :feature do
     let(:results) { [] }
     let(:result_collection) do
       double('search result collection',
-        page: page_number,
-        per_page: per_page,
-        total_results: total_results,
-        items: results)
+             page:          page_number,
+             per_page:      per_page,
+             total_results: total_results,
+             items:         results)
     end
     let(:searcher) { -> { result_collection } }
 

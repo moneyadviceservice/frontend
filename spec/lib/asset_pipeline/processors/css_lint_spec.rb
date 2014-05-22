@@ -61,7 +61,7 @@ module AssetPipeline
 
         context 'when the file is outside the assets directory' do
           let(:pathname) { double(to_s: File.join(Rails.root, 'vendor', 'assets', 'stylesheets', 'foo.css')) }
-          let(:css) { "p { color: red !important; }"  }
+          let(:css) { "p { color: red !important; }" }
 
           it 'does not lint the file' do
             expect(CsslintRuby).not_to receive(:run)

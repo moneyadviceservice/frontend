@@ -29,7 +29,7 @@ module Core
       let(:item_id) { double }
       let(:item_data_without_id) { { foo: :bar } }
       let(:item_data) { { id: item_id, foo: :bar } }
-      let(:items) { [item_data]}
+      let(:items) { [item_data] }
 
       before do
         allow(subject).to receive(:query) { query }
@@ -41,16 +41,16 @@ module Core
 
       it 'calls the repository with the query, page and per_page' do
         expect(SearchResultCollection).to receive(:new).
-          with(query, total_results: total_results, page: page, per_page: per_page).
-          and_call_original
+                                            with(query, total_results: total_results, page: page, per_page: per_page).
+                                            and_call_original
 
         subject.call
       end
 
       it 'instantiates a SearchResult with each element of #items' do
         expect(SearchResult).to receive(:new).
-          with(item_id, item_data_without_id).
-          and_call_original
+                                  with(item_id, item_data_without_id).
+                                  and_call_original
 
         subject.call
       end

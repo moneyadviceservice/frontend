@@ -17,11 +17,11 @@ module Core::Repositories::Search
               'totalResults' => total_results.to_s
             ]
           },
-          'items' => [item_data]
+          'items'   => [item_data]
         }
       end
 
-      let(:response) { double(body: body)}
+      let(:response) { double(body: body) }
       subject { described_class.new(response).mapped_response }
 
       before do

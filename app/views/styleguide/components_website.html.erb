@@ -1,5 +1,9 @@
 <h1>Website-specific Components</h1>
 
+<%= styleguide_section sections['link-list-primary'] do %>
+  <%= render 'styleguide/shared/link_list_primary' %>
+<% end %>
+
 <%= styleguide_section sections['related categories'] do %>
   <% render 'shared/related_categories', categories: @categories %>
 <% end %>

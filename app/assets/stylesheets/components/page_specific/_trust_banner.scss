@@ -31,12 +31,7 @@
     max-width: 360px;
   }
 
-  @include respond-to($mq-m) {
-    max-width: 455px;
-  }
-
   @include respond-to($mq-l) {
-    @include body(40, 48);
     max-width: 100%;
     padding-top: $baseline-unit*11;
     padding-bottom: $baseline-unit*13;
@@ -44,5 +39,9 @@
     .theme-cy & {
       max-width: 75%;
     }
+  }
+
+  @include respond-to(65em) {
+    @include body(40, 48);
   }
 }

@@ -1,9 +1,9 @@
-<% content_for(:breadcrumb) do %>
-  <a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
+<% content_for(:context_bar) do %>
+  <a class="breadcrumb" href="<%= root_path %>"><%= t('layouts.base.home') %></a>
   <% categories.each do |category| %>
     <span class="breadcrumb__divider">&#187;</span>
       <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <%= link_to category.path, itemprop: "url" do %>
+        <%= link_to category.path, itemprop: "url", class: 'breadcrumb' do %>
           <span itemprop="title"><%= category.title %></span>
         <% end %>
       </span>

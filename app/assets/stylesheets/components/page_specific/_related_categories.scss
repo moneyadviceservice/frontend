@@ -3,23 +3,45 @@
 //
 // Styleguide related categories
 
+%related-links-type {
+  @include body(14, 24);
+  font-weight: 300;
+
+  @include respond-to($mq-m) {
+    @include body(16, 24);
+  }
+}
+
 .related-categories_heading {
-  @extend %paragraph;
-  @extend %font-body;
+  @extend %related-links-type;
+  margin: 0;
   color: $related-categories-heading;
-  display: inline;
+  display: block;
+
+  @include respond-to($mq-s) {
+    display: inline;
+  }
 }
 
 .related-categories__link {
-  @extend %paragraph;
-  padding: 0 6px;
+  @extend %related-links-type;
+  display: block;
+
+  @include respond-to($mq-m) {
+    display: inline;
+  }
 }
 
 .related-categories__divider {
-  @include body(18, 18);
+  @include body(16, 18);
   color: $breadcrumbs-divider-color;
+  display: none;
 
   &:last-child {
     display: none;
+  }
+
+  @include respond-to($mq-m) {
+    display: inline;
   }
 }

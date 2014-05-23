@@ -2,8 +2,12 @@
 //
 // Styleguide Breadcrumb
 
+.breadcrumb {
+  @extend %paragraph;
+}
+
 .breadcrumb__divider {
-  @include body(24,24);
+  @include body(30,24);
   padding: 0 10px;
   vertical-align: bottom;
   color: $breadcrumbs-divider-color;

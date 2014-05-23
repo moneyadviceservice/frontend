@@ -1,6 +1,6 @@
 <ul class="category-nav">
   <% category_navigation.each do |category| %>
-    <% if article.parent_category_ids.member? category.id %>
+    <% if active_categories.member? category.id %>
       <li class="category-nav__item category-nav__item--selected">
         <%= link_to category.title, main_app.category_path(category.id), class: 'category-nav__item-title' %>
         <ul>
@@ -8,7 +8,7 @@
             <li>
               <%=
                 link_to sub_category.title, main_app.category_path(sub_category.id),
-                  class: "category_nav__item-subcategory #{article.categories.member?(sub_category) ? 'category_nav__item-subcategory--selected' : ''}"
+                  class: "category_nav__item-subcategory #{active_categories.member?(sub_category.id) ? 'category_nav__item-subcategory--selected' : ''}"
               %>
             </li>
           <% end %>

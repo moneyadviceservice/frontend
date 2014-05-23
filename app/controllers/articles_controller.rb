@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
   decorates_assigned :article, with: ArticleDecorator
   decorates_assigned :category_hierarchy, with: CategoryDecorator
 
+  include Navigation
+
   def show
     @article = Core::ArticleReader.new(params[:id]).call do
       not_found
@@ -13,7 +15,15 @@ class ArticlesController < ApplicationController
 
     @category_hierarchy = build_category_hierarchy
 
-    render Feature.active?(:left_hand_nav) ? :show_v2 : :show
+    if Feature.active?(:left_hand_nav)
+      render :show_v2
+    else
+      (@article.categories.compact.map(&:id) + @article.parent_category_ids).each do |category|
+        active_category category
+      end
+
+      render :show
+    end
   end
 
   private

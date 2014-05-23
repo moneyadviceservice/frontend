@@ -3,12 +3,26 @@
 // Styleguide Breadcrumb
 
 .breadcrumb {
-  @extend %paragraph;
+  @include body(14, 18);
+  display: none;
+
+  &:last-child {
+    display: inline;
+  }
+
+  @include respond-to($mq-m) {
+    display: inline;
+  }
+
+  @include respond-to($mq-l) {
+    @include body(16, 24);
+  }
 }
 
 .breadcrumb__divider {
-  @include body(30,24);
-  padding: 0 10px;
-  vertical-align: bottom;
+  @include body(16, 16);
   color: $breadcrumbs-divider-color;
+  padding: 0 0 0 6px;
+  position: relative;
+  top: 1px;
 }

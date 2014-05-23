@@ -1,5 +1,10 @@
 .l-context-bar {
-  background-color: $breadcrumbs-background-color;
   padding-top: $baseline-unit*3;
   padding-bottom: $baseline-unit*3;
+  background-color: $breadcrumbs-background-color;
+
+  .breadcrumbs,
+  .related-categories {
+    @include column(12);
+  }
 }

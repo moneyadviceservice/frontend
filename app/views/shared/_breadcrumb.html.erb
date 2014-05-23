@@ -1,11 +1,9 @@
 <% content_for(:breadcrumb) do %>
-  <p class="breadcrumb">
-    <a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
-    <% categories.each do |category| %>
-      <span class="breadcrumb__divider">&#187;</span>
-      <a>
-        <%= link_to category.title, category.path %>
-      </a>
-    <% end %>
-  </p>
+  <a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
+  <% categories.each do |category| %>
+    <span class="breadcrumb__divider">&#187;</span>
+    <a>
+      <%= link_to category.title, category.path %>
+    </a>
+  <% end %>
 <% end %>

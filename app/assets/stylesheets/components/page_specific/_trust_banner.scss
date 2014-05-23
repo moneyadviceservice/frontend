@@ -18,6 +18,10 @@
   margin: 0;
   padding-top: $baseline-unit*4;
 
+  .theme-cy & {
+    @include body(23, 30);
+  }
+
   @include respond-to(31.875em) {
     @include body(32, 36);
     padding-top: $baseline-unit*6;

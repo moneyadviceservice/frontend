@@ -1,7 +1,5 @@
-<% content_for(:context_bar) do %>
-  <h2 class="related-categories_heading"><%= t('related_categories.title') %>:</h2>
-  <% categories.each do |category| %>
-    <%= link_to category.title, category.path, class: 'related-categories__link' %>
-    <span class="related-categories__divider">|</span>
-  <% end %>
+<h2 class="related-categories_heading"><%= t('related_categories.title') %>:</h2>
+<% categories.each do |category| %>
+  <%= link_to category.title, category.path, class: 'related-categories__link' %>
+  <span class="related-categories__divider">|</span>
 <% end %>

@@ -1,11 +1,13 @@
 <% set_meta_tags(description: article.description,
-                 canonical:   article.canonical_url,
-                 alternate:   article.alternate_options) %>
+                 canonical: article.canonical_url,
+                 alternate: article.alternate_options) %>
 
-<% if(article.uniq_parent?) %>
-  <%= render 'shared/breadcrumb', categories: category_hierarchy %>
-<% else %>
-  <%= render 'shared/related_categories', categories: article.parent_categories %>
+<% content_for(:context_bar) do %>
+  <% if (article.uniq_parent?) %>
+    <%= render 'shared/breadcrumb', categories: category_hierarchy %>
+  <% else %>
+    <%= render 'shared/related_categories', categories: article.parent_categories %>
+  <% end %>
 <% end %>
 
 <div class="l-article editorial">

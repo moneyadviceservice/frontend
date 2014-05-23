@@ -5,21 +5,21 @@ class ArticlesController < ApplicationController
   before_action :initialize_breadcrumbs
 
   decorates_assigned :article, with: ArticleDecorator
-  decorates_assigned :breadcrumbs, with: CategoryDecorator
+  decorates_assigned :category_hierarchy, with: CategoryDecorator
 
   def show
     @article = Core::ArticleReader.new(params[:id]).call do
       not_found
     end
 
-    build_breadcrumbs
+    build_category_hierarchy
   end
 
-  def build_breadcrumbs
-    return @breadcrumbs unless uniq_category?
+  def build_category_hierarchy
+    return @category_hierarchy unless uniq_category?
 
     category = @article.categories.first
-    @breadcrumbs = Core::CategoryParentsReader.new(category).call << category
+    @category_hierarchy = Core::CategoryParentsReader.new(category).call << category
   end
 
   def uniq_category?
@@ -27,6 +27,6 @@ class ArticlesController < ApplicationController
   end
 
   def initialize_breadcrumbs
-    @breadcrumbs = []
+    @category_hierarchy = []
   end
 end

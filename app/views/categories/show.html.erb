@@ -1,6 +1,6 @@
 <% set_meta_tags(canonical: category.canonical_url, alternate: category.alternate_options) %>
 
-<%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<%= render 'shared/breadcrumb', categories: category_hierarchy %>
 
 <div class="l-1col">
   <% set_meta_tags(description: category.description) %>

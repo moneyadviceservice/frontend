@@ -1,9 +1,9 @@
 <% content_for :main do %>
 
-  <% if content_for?(:breadcrumbs) %>
-    <div class="breadcrumbs">
+  <% if content_for?(:breadcrumb) %>
+    <div class="l-context-bar">
       <div class="l-constrained">
-        <%= yield :breadcrumbs %>
+        <%= yield :breadcrumb %>
       </div>
     </div>
   <% end %>

@@ -40,26 +40,26 @@ RSpec.describe ArticlesController, :type => :controller do
         let(:category) { double }
         let(:categories) { [category] }
 
-        it 'assigns parents to breadcrumbs' do
+        it 'assigns category hierarchy' do
           get :show, locale: I18n.locale, id: article.id
 
-          expect(assigns(:breadcrumbs)).to eq(parents)
+          expect(assigns(:category_hierarchy)).to eq(parents)
         end
 
-        specify "breadcrumbs contains article's category" do
+        specify "category hierarchy contains article's category" do
           get :show, locale: I18n.locale, id: article.id
 
-          expect(assigns(:breadcrumbs)).to include(category)
+          expect(assigns(:category_hierarchy)).to include(category)
         end
       end
 
       context 'when an article belongs to many categories' do
         let(:categories) { [double, double] }
 
-        it 'breadcrumbs is empty' do
+        it 'category hierarchy is empty' do
           get :show, locale: I18n.locale, id: article.id
 
-          expect(assigns(:breadcrumbs)).to eq([])
+          expect(assigns(:category_hierarchy)).to eq([])
         end
       end
     end

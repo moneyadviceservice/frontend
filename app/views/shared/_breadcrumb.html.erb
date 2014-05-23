@@ -2,8 +2,10 @@
   <a href="<%= root_path %>"><%= t('layouts.base.home') %></a>
   <% categories.each do |category| %>
     <span class="breadcrumb__divider">&#187;</span>
-    <a>
-      <%= link_to category.title, category.path %>
-    </a>
+      <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <%= link_to category.path, itemprop: "url" do %>
+          <span itemprop="title"><%= category.title %></span>
+        <% end %>
+      </span>
   <% end %>
 <% end %>

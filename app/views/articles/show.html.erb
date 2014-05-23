@@ -1,8 +1,11 @@
 <% set_meta_tags(description: article.description,
                  canonical:   article.canonical_url,
                  alternate:   article.alternate_options) %>
-
-<%= render 'shared/breadcrumb', categories: category_hierarchy %>
+<% if(article.uniq_parent?) %>
+  <%= render 'shared/breadcrumb', categories: category_hierarchy %>
+<% else %>
+  <%= render 'shared/related_categories', categories: article.parent_categories %>
+<% end %>
 
 <div class="l-article editorial">
   <div class="l-article-intro">
@@ -14,8 +17,6 @@
   </div>
 
   <hr class="l-hr-article-intro"/>
-
-  <%= render 'shared/related_categories', categories: article.parent_categories %>
 
   <div class="l-article-main">
     <%= article.content %>

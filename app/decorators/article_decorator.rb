@@ -36,6 +36,10 @@ class ArticleDecorator < Draper::Decorator
       end
   end
 
+  def uniq_parent?
+    parent_categories.size == 1
+  end
+
   private
 
   def limited_parent_categories_with_contents(limit = 6)

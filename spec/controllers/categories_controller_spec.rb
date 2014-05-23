@@ -39,13 +39,13 @@ RSpec.describe CategoriesController, :type => :controller do
       expect(assigns(:category)).to eq(category)
     end
 
-    it 'assigns @breadcrumbs to the result of category parent reader' do
+    it 'assigns @category_hierarchy to the result of category parent reader' do
       allow(Core::CategoryReader).to receive(:new) { category_reader }
       allow_any_instance_of(Core::CategoryParentsReader).to receive(:call) { [category] }
 
       get :show, locale: I18n.locale, id: category.id
 
-      expect(assigns(:breadcrumbs)).to eq([category])
+      expect(assigns(:category_hierarchy)).to eq([category])
     end
 
     context 'when a category does not exist' do

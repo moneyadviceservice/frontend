@@ -3,20 +3,6 @@
   margin-bottom: $baseline-unit*4;
 }
 
-@include respond-to(0, $mq-m) {
-
-  .l-article-intro,
-  .l-article .related-categories,
-  .l-article-main,
-  .l-article .related-links {
-    @include column(12);
-  }
-
-  .l-article .related-links {
-    margin-bottom: $baseline-unit*3;
-  }
-}
-
 @include respond-to($mq-m, $mq-l) {
 
   .l-article-intro,

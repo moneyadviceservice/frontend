@@ -30,7 +30,17 @@
     @include push(3);
   }
 
-  .l-hr-article-intro {
+  .l-article .related-categories {
+    @include column(3);
+  }
+
+  .l-article-main {
+    @include column(9);
+    @include push(3);
+  }
+
+  .l-hr-article-intro,
+  .l-hr-article-related-links {
     @include column(12);
   }
 
@@ -67,6 +77,7 @@
 
   .l-article-main {
     @include column(7);
+    @include push(2);
   }
 
   .l-article .related-links {

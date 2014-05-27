@@ -1,0 +1,35 @@
+// A styled list of nested links - used for the child categories
+//
+// Styleguide link-list-secondary
+
+.link-list-secondary {
+  @extend .unstyled-list;
+}
+
+.link-list-secondary__item {
+  @extend .unstyled-list;
+}
+
+.link-list-secondary__link {
+  @extend %link-nav-secondary;
+  padding: $baseline-unit*2 30px;
+  display: block;
+}
+
+// ----------- state --------------
+.link-list-secondary__item.is-selected {
+  position: relative;
+  background: $color-link-list-background;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 10px;
+    border-color: transparent transparent transparent $color-link-list-arrow;
+  }
+}

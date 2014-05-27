@@ -11,6 +11,6 @@ module UI::Pages
     element :related_content, '.related-links'
     element :breadcrumbs, '.l-context-bar'
 
-    section :category_nav, UI::Sections::CategoryNav, '.category-nav'
+    section :category_nav, UI::Sections::CategoryNav, '.l-category-nav'
   end
 end

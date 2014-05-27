@@ -1,23 +1,18 @@
-<ul class="category-nav">
-  <% category_navigation.each do |category| %>
-    <% if active_categories.member? category.id %>
-      <li class="category-nav__item category-nav__item--selected">
-        <%= link_to category.title, main_app.category_path(category.id), class: 'category-nav__item-title' %>
-        <ul>
-          <% category.contents.each do |sub_category| %>
-            <li>
-              <%=
-                link_to sub_category.title, main_app.category_path(sub_category.id),
-                  class: "category_nav__item-subcategory #{active_categories.member?(sub_category.id) ? 'category_nav__item-subcategory--selected' : ''}"
-              %>
-            </li>
-          <% end %>
-        </ul>
+<nav role="navigation" class="l-category-nav">
+  <ul class="link-list-primary">
+    <% category_navigation.each do |category| %>
+      <li class="link-list-primary__item <%= active_categories.member?(category.id) ? 'is-selected' : '' %>">
+        <%= link_to category.title, main_app.category_path(category.id), class: 'link-list-primary__link' %>
+        <% if active_categories.member? category.id %>
+          <ul class="link-list-secondary">
+            <% category.contents.each do |sub_category| %>
+              <li class="link-list-secondary__item <%= active_categories.member?(sub_category.id) ? 'is-selected' : '' %>">
+                <%= link_to sub_category.title, main_app.category_path(sub_category.id), class: 'link-list-secondary__link' %>
+              </li>
+            <% end %>
+          </ul>
+      <% end %>
       </li>
-    <% else %>
-      <li class="category-nav__item">
-        <%= link_to category.title, main_app.category_path(category.id), class: 'category-nav__item-title' %>
-      </li>
-    <% end %>
-  <% end  %>
-</ul>
+    <% end  %>
+  </ul>
+</nav>

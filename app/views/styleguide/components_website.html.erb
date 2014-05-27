@@ -11,11 +11,11 @@
 <!-- Molecules -->
 
 <%= styleguide_section sections['Breadcrumb'] do %>
-  <% render 'shared/breadcrumb', categories: @categories %>
+  <%= render 'shared/breadcrumb', categories: @categories %>
 <% end %>
 
 <%= styleguide_section sections['related categories'] do %>
-  <% render 'shared/related_categories', categories: @categories %>
+  <%= render 'shared/related_categories', categories: @categories %>
 <% end %>
 
 <%= styleguide_section sections['related link'] do %>

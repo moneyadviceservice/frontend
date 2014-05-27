@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 27 May 2014 15:28:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?", <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c3d8063ada6c7c9b167f532ba0ce3765
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:28:40 GMT; secure
+      - _session_id=c3d8063ada6c7c9b167f532ba0ce3765; path=/; secure; HttpOnly
+      - _web_tracking=e2b6cd6f1a6fe9b7cdb6b0217327a285; path=/; expires=Wed, 27-May-2015
+        15:28:40 GMT; secure
+      X-Request-Id:
+      - 76e59c4d1af1c5304770d6aa14662a29
+      X-Runtime:
+      - '0.054935'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"should-you-rent-or-buy","title":"Rent or buy?","description":"Can
+        you afford to buy a property and, even if you can, is it a good idea \u2013
+        or would you be better off renting instead?","body":"<html><body><p class=\"intro\"><img
+        src=\"/images/should-you-rent-or-buy.jpg\"/>Buying a property is probably
+        the biggest financial decision you\u2019ll ever have to make. How do you know
+        whether it\u2019s the right decision for you right now \u2013 or whether you\u2019d
+        be better off renting instead? </p><h2>Mortgage\u00a0or rent? </h2><p>Owning
+        your own home is a huge commitment, not just to the building you buy and the
+        area you choose to live in, but also to your life (and to another person if
+        you are buying with a loved one or friend). </p><h3>Benefits of owning your
+        home </h3><p>There are many benefits to home ownership. Here are just some
+        of them. </p><ul><li>Once you\u2019ve paid off your mortgage, your home will
+        be yours and it could be worth far more than you paid for it. </li></ul><ul><li>If
+        your home increases in value you can use that equity to help you afford a
+        bigger home or to fund a more comfortable retirement if you downsize. </li></ul><ul><li>When
+        you retire you won\u2019t necessarily have the income you need to keep on
+        paying rent \u2013 if you have paid your mortgage off you\u2019ll be living
+        there \u2018rent free\u2019. </li></ul><ul><li>You can spend money improving
+        your home and increasing its value, whereas you can\u2019t alter a rented
+        home without the landlord\u2019s permission. </li></ul><ul><li>Sometimes it
+        can be cheaper to buy than to rent.</li></ul><h3>Potential downsides of owning
+        </h3><ul><li>It\u2019s a big financial commitment \u2013 you need to be sure
+        you can afford what you\u2019re taking on. See the later section \u2018Can
+        you afford to buy?\u2019 </li></ul><ul><li>You also need to be sure you can
+        afford maintenance costs such as replacing a boiler if it packs up or fixing
+        a leaky roof. If you stretch yourself too much when you buy you may resent
+        not having money for meals out, holidays and entertainment. </li></ul><ul><li>You
+        have less flexibility than when renting. For example, if you want to move
+        for work or personal reasons selling up and moving on is far more expensive
+        if you own as you\u2019ll have all of the associated estate agency and legal
+        fees. Also bear in mind that it may not always be easy to sell your home \u2013
+        you\u2019ll be dependent on what\u2019s happening in the market. </li></ul><ul><li>If
+        you\u2019re living with someone else and split up, the process of sorting
+        out the property will be far more complicated and expensive.</li></ul><h2>Are
+        you better off buying or renting? </h2><p>You\u2019re not necessarily going
+        to be better off financially buying rather than renting your home. </p><p>If
+        the value of your property falls, you may find yourself unable to sell because
+        you owe more to your mortgage lender than your home is worth. </p><p>On the
+        other hand, if house prices rise, you could make a nice profit that could
+        help fund a move to a bigger home or give you a lump sum if you choose to
+        downsize later on in life. </p><h2>Can you afford to buy? </h2><p>The first
+        step towards buying a property is figuring out whether you can afford to do
+        so. There are many costs associated with buying your own home, beyond your
+        mortgage repayments, including: </p><ul><li>deposit </li></ul><ul><li>legal
+        costs such as solicitor\u2019s fees </li></ul><ul><li>survey cost </li></ul><ul><li>Stamp
+        Duty </li></ul><ul><li>removal costs, and </li></ul><ul><li>your monthly bills
+        \u2013 such as gas, electricity, home phone, etc.</li></ul><p>Use the links
+        below to get a better idea of you likely costs. </p><p>If buying isn\u2019t
+        an option for you right now, think about setting up a savings plan to achieve
+        your goal in the future. </p><p><div class=\"add-action\"><a href=\"/en/articles/estimate-your-overall-buying-and-moving-costs\">Estimate
+        your overall buying and moving costs</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"estimate-your-overall-buying-and-moving-costs\"
+        data-article-type=\"guide\" id=\"email_me_estimate-your-overall-buying-and-moving-costs\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=estimate-your-overall-buying-and-moving-costs&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=estimate-your-overall-buying-and-moving-costs&amp;article_type=guide\"
+        method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"YMk6fQ2atZyx1AHNO14YYiCpKieh6vzifSRlaFfR1u0=\" /></div></form> </div></p><p><div
+        class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
+        much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
+        id=\"email_me_how-much-can-you-afford-to-borrow\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=how-much-can-you-afford-to-borrow&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-much-can-you-afford-to-borrow&amp;article_type=guide\"
+        method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"YMk6fQ2atZyx1AHNO14YYiCpKieh6vzifSRlaFfR1u0=\" /></div></form> </div></p><p><div
+        class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
+        set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
+        method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"YMk6fQ2atZyx1AHNO14YYiCpKieh6vzifSRlaFfR1u0=\"
+        /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
+        or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
+        trying to buy your first home or are a key worker there are several schemes
+        available that allow you to part-rent/part-buy a home with a view to buying
+        it outright gradually over time. </p><p>There are also schemes that can help
+        you if you can only afford a small deposit. Follow the link below to find
+        out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
+        housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
+    http_version:
+  recorded_at: Tue, 27 May 2014 15:28:41 GMT
+recorded_with: VCR 2.9.0

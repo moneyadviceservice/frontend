@@ -5,7 +5,7 @@
 <% content_for(:context_bar) do %>
   <% if(category_hierarchy.present?) %>
     <%= render 'shared/breadcrumb', categories: category_hierarchy %>
-  <% else %>
+  <% elsif(article.parent_categories.present?) %>
     <%= render 'shared/related_categories', categories: article.parent_categories %>
   <% end %>
 <% end %>

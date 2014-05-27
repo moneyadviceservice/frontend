@@ -9,6 +9,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.8.9
+      X-Request-Id:
+      - 3f18dd10-77e5-4511-8952-cb29e285d406
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 27 May 2014 14:36:42 GMT
+      - Tue, 27 May 2014 15:52:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,16 +43,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - e799596a9b25fe7b499763b5f6136df5
+      - 5a3119ea0772b47c321eea3035bf40df
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 14:36:42 GMT; secure
-      - _session_id=e799596a9b25fe7b499763b5f6136df5; path=/; secure; HttpOnly
-      - _web_tracking=1e29c9ffbc9f22e0b343ae6805dc9cfb; path=/; expires=Wed, 27-May-2015
-        14:36:42 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:52:16 GMT; secure
+      - _session_id=5a3119ea0772b47c321eea3035bf40df; path=/; secure; HttpOnly
+      - _web_tracking=b2cbc6e69e6dc4826cbc667eaf055044; path=/; expires=Wed, 27-May-2015
+        15:52:16 GMT; secure
       X-Request-Id:
-      - df37e8b633c01c21f681ab1580fa958f
+      - 3f18dd10-77e5-4511-8952-cb29e285d406
       X-Runtime:
-      - '0.064020'
+      - '0.107423'
       X-Rack-Cache:
       - miss
       P3p:
@@ -118,7 +120,7 @@ http_interactions:
         method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"4it7BiwYzk7HPrWcLCXts9XYWS+qJzMifqJjILY9MbE=\" /></div></form> </div></p><p><div
+        value=\"RipHLisQ739kFo/c9qZqXjYXaeSiSsVlx0v52ndbamg=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
         much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
@@ -128,7 +130,7 @@ http_interactions:
         method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"4it7BiwYzk7HPrWcLCXts9XYWS+qJzMifqJjILY9MbE=\" /></div></form> </div></p><p><div
+        value=\"RipHLisQ739kFo/c9qZqXjYXaeSiSsVlx0v52ndbamg=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
         set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
@@ -137,7 +139,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
         method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"4it7BiwYzk7HPrWcLCXts9XYWS+qJzMifqJjILY9MbE=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"RipHLisQ739kFo/c9qZqXjYXaeSiSsVlx0v52ndbamg=\"
         /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
         or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
         trying to buy your first home or are a key worker there are several schemes
@@ -147,7 +149,7 @@ http_interactions:
         out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
         housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version:
-  recorded_at: Tue, 27 May 2014 14:36:42 GMT
+  recorded_at: Tue, 27 May 2014 15:52:16 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-schemes-faqs.json
@@ -157,6 +159,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.8.9
+      X-Request-Id:
+      - 3f18dd10-77e5-4511-8952-cb29e285d406
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -169,7 +173,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 27 May 2014 14:36:43 GMT
+      - Tue, 27 May 2014 15:52:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -190,16 +194,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 5a7d7eb05a32bfd7f337d221635ac5ae
+      - 1da851d238a0c852408766de0bc8d0cb
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 14:36:43 GMT; secure
-      - _session_id=5a7d7eb05a32bfd7f337d221635ac5ae; path=/; secure; HttpOnly
-      - _web_tracking=1e80b91717461c1b1fc8096435e4aa2b; path=/; expires=Wed, 27-May-2015
-        14:36:43 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:52:16 GMT; secure
+      - _session_id=1da851d238a0c852408766de0bc8d0cb; path=/; secure; HttpOnly
+      - _web_tracking=f64e22050f680b99482ded5ef0dbdf24; path=/; expires=Wed, 27-May-2015
+        15:52:16 GMT; secure
       X-Request-Id:
-      - ea1c8723ae5afe4c2995a3068aa2eab4
+      - 3f18dd10-77e5-4511-8952-cb29e285d406
       X-Runtime:
-      - '0.024914'
+      - '0.112200'
       X-Rack-Cache:
       - miss
       P3p:
@@ -264,7 +268,7 @@ http_interactions:
         on the <a title=\"Help to Buy website\" target=\"_blank\" data-link-type=\"external\"
         href=\"http://www.helptobuy.org.uk\">Help to Buy website</a>. </p>","categories":["buying-a-home"]}'
     http_version:
-  recorded_at: Tue, 27 May 2014 14:36:43 GMT
+  recorded_at: Tue, 27 May 2014 15:52:16 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy.json
@@ -275,7 +279,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - b6beb02e-750c-43f5-a5b8-50b2b483f8a0
+      - 95deadb0-d1d2-4101-8783-bda38fe88487
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -288,7 +292,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 27 May 2014 14:36:47 GMT
+      - Tue, 27 May 2014 15:52:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -308,16 +312,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 08f70838aa75b8fdd33bd1710c68b379
+      - c11d63367c7c241cd6cb5054028dea0d
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 14:36:47 GMT; secure
-      - _session_id=08f70838aa75b8fdd33bd1710c68b379; path=/; secure; HttpOnly
-      - _web_tracking=092f0873c1d6c78dff0aea8fece5ed2c; path=/; expires=Wed, 27-May-2015
-        14:36:47 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:52:17 GMT; secure
+      - _session_id=c11d63367c7c241cd6cb5054028dea0d; path=/; secure; HttpOnly
+      - _web_tracking=9e1fe174164b9449885cb8978ab09b67; path=/; expires=Wed, 27-May-2015
+        15:52:17 GMT; secure
       X-Request-Id:
-      - b6beb02e-750c-43f5-a5b8-50b2b483f8a0
+      - 95deadb0-d1d2-4101-8783-bda38fe88487
       X-Runtime:
-      - '0.050115'
+      - '0.049483'
       X-Rack-Cache:
       - miss
       P3p:
@@ -385,7 +389,7 @@ http_interactions:
         method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"Zw6mL1tiFwvCnDWX9fSTFB4NTMFEQGrNZ+WI1E1JDqk=\" /></div></form> </div></p><p><div
+        value=\"74QmNSi18pqBxo2Lil3aRxjksT3NZjBuoJ9fvpl5GY4=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
         much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
@@ -395,7 +399,7 @@ http_interactions:
         method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"Zw6mL1tiFwvCnDWX9fSTFB4NTMFEQGrNZ+WI1E1JDqk=\" /></div></form> </div></p><p><div
+        value=\"74QmNSi18pqBxo2Lil3aRxjksT3NZjBuoJ9fvpl5GY4=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
         set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
@@ -404,7 +408,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
         method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Zw6mL1tiFwvCnDWX9fSTFB4NTMFEQGrNZ+WI1E1JDqk=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"74QmNSi18pqBxo2Lil3aRxjksT3NZjBuoJ9fvpl5GY4=\"
         /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
         or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
         trying to buy your first home or are a key worker there are several schemes
@@ -414,7 +418,7 @@ http_interactions:
         out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
         housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version:
-  recorded_at: Tue, 27 May 2014 14:36:47 GMT
+  recorded_at: Tue, 27 May 2014 15:52:17 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy.json
@@ -425,7 +429,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - b6beb02e-750c-43f5-a5b8-50b2b483f8a0
+      - 95deadb0-d1d2-4101-8783-bda38fe88487
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -438,7 +442,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 27 May 2014 14:36:47 GMT
+      - Tue, 27 May 2014 15:52:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -458,16 +462,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - cbdce975c9424ba647df96f89aabdabd
+      - bb79bc643fa098d46427533b4a3f4591
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 14:36:47 GMT; secure
-      - _session_id=cbdce975c9424ba647df96f89aabdabd; path=/; secure; HttpOnly
-      - _web_tracking=b9ebbb02674b2fc285680268083dbe08; path=/; expires=Wed, 27-May-2015
-        14:36:47 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:52:17 GMT; secure
+      - _session_id=bb79bc643fa098d46427533b4a3f4591; path=/; secure; HttpOnly
+      - _web_tracking=46cdde4bb4c9637b2cd05782c0325652; path=/; expires=Wed, 27-May-2015
+        15:52:17 GMT; secure
       X-Request-Id:
-      - b6beb02e-750c-43f5-a5b8-50b2b483f8a0
+      - 95deadb0-d1d2-4101-8783-bda38fe88487
       X-Runtime:
-      - '0.053316'
+      - '0.053879'
       X-Rack-Cache:
       - miss
       P3p:
@@ -535,7 +539,7 @@ http_interactions:
         method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"5jjw/OSfp4XSiUJqOcpLHO1MHzgOr54xwjV7gXUkoHk=\" /></div></form> </div></p><p><div
+        value=\"dqiVutr4jXr8Ttpiw5Q33H4/brPCXIxVtg3WGb0VCNE=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
         much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
@@ -545,7 +549,7 @@ http_interactions:
         method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"5jjw/OSfp4XSiUJqOcpLHO1MHzgOr54xwjV7gXUkoHk=\" /></div></form> </div></p><p><div
+        value=\"dqiVutr4jXr8Ttpiw5Q33H4/brPCXIxVtg3WGb0VCNE=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
         set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
@@ -554,7 +558,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
         method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5jjw/OSfp4XSiUJqOcpLHO1MHzgOr54xwjV7gXUkoHk=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"dqiVutr4jXr8Ttpiw5Q33H4/brPCXIxVtg3WGb0VCNE=\"
         /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
         or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
         trying to buy your first home or are a key worker there are several schemes
@@ -564,5 +568,5 @@ http_interactions:
         out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
         housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version:
-  recorded_at: Tue, 27 May 2014 14:36:48 GMT
+  recorded_at: Tue, 27 May 2014 15:52:18 GMT
 recorded_with: VCR 2.9.0

@@ -8,6 +8,11 @@ Given(/^I am on an (.*) Article that lives in multiple Categories$/) do |languag
   article_page.load(locale: locale, id: article_id_for_locale(locale))
 end
 
+Given(/^I am on an Article that does not belong to any category$/) do
+  populate_article_repository_with(single_article)
+  article_page.load(locale: 'en', id: article_id_for_locale('en'))
+end
+
 Then(/^I should see the (.*) article's category hierarchy$/) do |language|
   locale = language_to_locale(language)
   current_article = article_for_locale(locale)
@@ -24,4 +29,8 @@ Then(/^I should see the realted categories in (.*)$/) do |language|
   end
 
   expect(article_page.breadcrumbs).to have_content(I18n.t('related_categories.title'))
+end
+
+Then(/^I should not see the breadcrumbs area$/) do
+  expect(article_page).to_not have_breadcrumbs
 end

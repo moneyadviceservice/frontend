@@ -47,6 +47,12 @@ module World
       retrieve_article_for_locale(id, locale)
     end
 
+    def single_article
+      article = article_for_locale('en')
+
+      build(:article_hash, id: article.id, title: article.title)
+    end
+
     def category_containing_articles(locale)
       article = article_for_locale(locale)
       alternate = alternate_article_for_locale(locale)

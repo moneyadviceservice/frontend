@@ -152,6 +152,18 @@ class StyleguideController < ApplicationController
   end
 
   def pages_guide
+    @categories = [
+        OpenStruct.new(title: 'Insurance', contents: [
+            OpenStruct.new(title: 'Choosing home insurance cover'),
+            OpenStruct.new(title: 'Do I need car insurance'),
+            OpenStruct.new(title: 'Making a claim')
+        ]),
+        OpenStruct.new(title: 'Debt', contents: [
+            OpenStruct.new(title: 'Avoiding the bailiff'),
+            OpenStruct.new(title: 'Does money grow on trees - we investigate')
+        ])
+    ]
+
     render layout: 'styleguide/page'
   end
 

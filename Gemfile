@@ -39,9 +39,10 @@ group :development do
   gem 'guard-cucumber'
   gem 'guard-livereload'
   gem 'guard-rails'
-  gem 'guard-rspec'
+  gem 'guard-rspec', require: false
   gem 'guard-sass'
   gem 'guard-shell'
+  gem 'listen', '~> 2.0'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
 end

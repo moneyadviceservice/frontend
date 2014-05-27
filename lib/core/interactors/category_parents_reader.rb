@@ -2,7 +2,7 @@ module Core
   class CategoryParentsReader
 
     def initialize(category)
-      self.parent_id = category.parent_id
+      self.parent_id = category && category.parent_id
     end
 
     def call

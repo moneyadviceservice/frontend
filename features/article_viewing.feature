@@ -7,8 +7,6 @@ Feature: View an article
   Scenario Outline: View an article
     When I view the article in <language>
     Then I should see the article in <language>
-    And I should see the article categories in <language>
-    And I should see the related content in <language>
 
   Examples:
     | language |

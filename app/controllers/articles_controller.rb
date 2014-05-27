@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
   end
 
   def uniq_category?
-    @article.categories.size == 1
+    @article.categories.compact.size == 1
   end
 
   def initialize_breadcrumbs

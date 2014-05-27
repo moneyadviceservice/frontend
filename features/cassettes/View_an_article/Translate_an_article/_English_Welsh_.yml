@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - 5d1ddc6a-1f5b-46a4-b2b5-74766cf1a055
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:46 GMT
+      - Tue, 27 May 2014 09:24:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -51,16 +51,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 81761b1111f03a3463431b3c0b3d20a4
+      - 7833d26c3982003d852f809d6794dab1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:46 GMT; secure
-      - _session_id=81761b1111f03a3463431b3c0b3d20a4; path=/; secure; HttpOnly
-      - _web_tracking=f0c1cdae98e4a94d509a9bb79f30fcae; path=/; expires=Tue, 28-Apr-2015
-        13:44:46 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 09:24:32 GMT; secure
+      - _session_id=7833d26c3982003d852f809d6794dab1; path=/; secure; HttpOnly
+      - _web_tracking=0802aedd9f859ea32a00c8dab0d7258e; path=/; expires=Wed, 27-May-2015
+        09:24:32 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - 5d1ddc6a-1f5b-46a4-b2b5-74766cf1a055
       X-Runtime:
-      - '0.050516'
+      - '0.185617'
       X-Rack-Cache:
       - miss
       P3p:
@@ -104,7 +104,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"Z5zgbUmYD2/Zo0/jCAtLn1WgH+K6m73Fu27QW69Q030=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"SyqPQ+2WqTFb6b8m5fblfR641rPVaAyzUe4UFW3FSpk=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -129,7 +129,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"Z5zgbUmYD2/Zo0/jCAtLn1WgH+K6m73Fu27QW69Q030=\" /></div></form>
+        type=\"hidden\" value=\"SyqPQ+2WqTFb6b8m5fblfR641rPVaAyzUe4UFW3FSpk=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -139,7 +139,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"Z5zgbUmYD2/Zo0/jCAtLn1WgH+K6m73Fu27QW69Q030=\" /></div></form>
+        type=\"hidden\" value=\"SyqPQ+2WqTFb6b8m5fblfR641rPVaAyzUe4UFW3FSpk=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -164,9 +164,9 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"Z5zgbUmYD2/Zo0/jCAtLn1WgH+K6m73Fu27QW69Q030=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"SyqPQ+2WqTFb6b8m5fblfR641rPVaAyzUe4UFW3FSpk=\" /></div></form> </div></p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:47 GMT
+  recorded_at: Tue, 27 May 2014 09:24:32 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-schemes-faqs.json
@@ -177,7 +177,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - 5d1ddc6a-1f5b-46a4-b2b5-74766cf1a055
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -190,7 +190,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:47 GMT
+      - Tue, 27 May 2014 09:24:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -211,16 +211,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - a10b6da70cae17947dadfd4fa2737dc4
+      - 54b0302f3cb8245ce66fa8cd63fd65fc
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:47 GMT; secure
-      - _session_id=a10b6da70cae17947dadfd4fa2737dc4; path=/; secure; HttpOnly
-      - _web_tracking=7f8b5fc76d8a66f2979201f1acd1e6f7; path=/; expires=Tue, 28-Apr-2015
-        13:44:47 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 09:24:32 GMT; secure
+      - _session_id=54b0302f3cb8245ce66fa8cd63fd65fc; path=/; secure; HttpOnly
+      - _web_tracking=882a8e161b591ea218e8999ec52f7707; path=/; expires=Wed, 27-May-2015
+        09:24:32 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - 5d1ddc6a-1f5b-46a4-b2b5-74766cf1a055
       X-Runtime:
-      - '0.031164'
+      - '0.026804'
       X-Rack-Cache:
       - miss
       P3p:
@@ -283,9 +283,9 @@ http_interactions:
         </h2><p>You can apply for the mortgage guarantee scheme through any participating
         lender. </p><p>You can find more information on lenders taking part and eligibility
         on the <a title=\"Help to Buy website\" target=\"_blank\" data-link-type=\"external\"
-        href=\"http://www.helptobuy.org.uk\">Help to Buy website</a>. </p>","categories":["affordable-housing-schemes"]}'
+        href=\"http://www.helptobuy.org.uk\">Help to Buy website</a>. </p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:48 GMT
+  recorded_at: Tue, 27 May 2014 09:24:33 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-scheme-everything-you-need-to-know.json
@@ -296,7 +296,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3f912851-4d8c-48fe-a8bf-c12f6ed8af37
+      - 17e30769-f219-47b4-a909-0d32818b187e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -309,7 +309,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:47 GMT
+      - Tue, 27 May 2014 09:24:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -337,16 +337,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 8d2fbfb6a4ad27fad5eb31ddfc2d3900
+      - b7753ad093d4eb401ab8885cad047f49
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:47 GMT; secure
-      - _session_id=8d2fbfb6a4ad27fad5eb31ddfc2d3900; path=/; secure; HttpOnly
-      - _web_tracking=783c15d9968616b1d83bfe0c0bd51f5e; path=/; expires=Tue, 28-Apr-2015
-        13:44:47 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 09:24:33 GMT; secure
+      - _session_id=b7753ad093d4eb401ab8885cad047f49; path=/; secure; HttpOnly
+      - _web_tracking=b9e5363b460c0800af0cd6a8e536f874; path=/; expires=Wed, 27-May-2015
+        09:24:33 GMT; secure
       X-Request-Id:
-      - 3f912851-4d8c-48fe-a8bf-c12f6ed8af37
+      - 17e30769-f219-47b4-a909-0d32818b187e
       X-Runtime:
-      - '0.051162'
+      - '0.044609'
       X-Rack-Cache:
       - miss
       P3p:
@@ -390,7 +390,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=help-to-buy-schemes-faqs&amp;article_type=guide\"
         method=\"post\" name=\"guide_help-to-buy-schemes-faqs\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"qFdoVlV6mE1ZVSrLUgMWnc3uH8T8Kq9pWDatP93+8iM=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"b7kyq1bMQJqgCpSipYda+QxqPL+TmVHpFKNXTjX8IMk=\"
         /></div></form> </div></p><h2>Help to Buy - key facts </h2><table class=\"datatable-default\"><thead><tr><th>Equity
         loans</th><th>Mortgage guarantees</th></tr></thead><tbody><tr><td>New-build
         properties</td><td>New-build and pre-owned properties</td></tr><tr><td>Minimum
@@ -415,7 +415,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"qFdoVlV6mE1ZVSrLUgMWnc3uH8T8Kq9pWDatP93+8iM=\" /></div></form>
+        type=\"hidden\" value=\"b7kyq1bMQJqgCpSipYda+QxqPL+TmVHpFKNXTjX8IMk=\" /></div></form>
         </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\"
         href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\">Find
         out more information on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\"
@@ -425,7 +425,7 @@ http_interactions:
         data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"qFdoVlV6mE1ZVSrLUgMWnc3uH8T8Kq9pWDatP93+8iM=\" /></div></form>
+        type=\"hidden\" value=\"b7kyq1bMQJqgCpSipYda+QxqPL+TmVHpFKNXTjX8IMk=\" /></div></form>
         </div></p><h2>Mortgage guarantee scheme - what you need to know </h2><p>If
         you\u2019re thinking of applying for the Help to Buy mortgage guarantee scheme,
         you\u2019ll need to consider the following: </p><ul><li>Borrowers will need
@@ -450,9 +450,9 @@ http_interactions:
         method=\"post\" name=\"guide_help-to-buy-homebuy-and-other-housing-schemes\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"qFdoVlV6mE1ZVSrLUgMWnc3uH8T8Kq9pWDatP93+8iM=\" /></div></form> </div></p>","categories":["affordable-housing-schemes"]}'
+        value=\"b7kyq1bMQJqgCpSipYda+QxqPL+TmVHpFKNXTjX8IMk=\" /></div></form> </div></p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:48 GMT
+  recorded_at: Tue, 27 May 2014 09:24:33 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -463,7 +463,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 89d1e821-8411-4982-8347-77377e730392
+      - 87c7c077-c9c6-435a-8c50-887959f164f6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -476,7 +476,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:48 GMT
+      - Tue, 27 May 2014 09:24:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -504,16 +504,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c8c501c3f2e77e1c169c845d4e2a56cb
+      - 3e99f449fac8ded4f3717221a9902deb
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:48 GMT; secure
-      - _session_id=c8c501c3f2e77e1c169c845d4e2a56cb; path=/; secure; HttpOnly
-      - _web_tracking=5a98e88b65a33fd1eed876c636bdc80e; path=/; expires=Tue, 28-Apr-2015
-        13:44:48 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 09:24:33 GMT; secure
+      - _session_id=3e99f449fac8ded4f3717221a9902deb; path=/; secure; HttpOnly
+      - _web_tracking=3c85a3b720fad7e4caf324acb3b0a255; path=/; expires=Wed, 27-May-2015
+        09:24:33 GMT; secure
       X-Request-Id:
-      - 89d1e821-8411-4982-8347-77377e730392
+      - 87c7c077-c9c6-435a-8c50-887959f164f6
       X-Runtime:
-      - '0.050256'
+      - '0.051861'
       X-Rack-Cache:
       - miss
       P3p:
@@ -577,7 +577,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"SJNWrvAKm0qdZoeHFLXlQ8wkh0DlI/u3dVM9x3encSc=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"sGO7y40lmfHdOT5lRhU9vr/0zwG1p45WEV3313ZVAIQ=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -586,7 +586,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"SJNWrvAKm0qdZoeHFLXlQ8wkh0DlI/u3dVM9x3encSc=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"sGO7y40lmfHdOT5lRhU9vr/0zwG1p45WEV3313ZVAIQ=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -613,10 +613,10 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"SJNWrvAKm0qdZoeHFLXlQ8wkh0DlI/u3dVM9x3encSc=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
+        type=\"hidden\" value=\"sGO7y40lmfHdOT5lRhU9vr/0zwG1p45WEV3313ZVAIQ=\" /></div></form>
+        </div></p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:50 GMT
+  recorded_at: Tue, 27 May 2014 09:24:34 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
@@ -627,7 +627,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 89d1e821-8411-4982-8347-77377e730392
+      - 87c7c077-c9c6-435a-8c50-887959f164f6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -640,7 +640,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:50 GMT
+      - Tue, 27 May 2014 09:24:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -668,16 +668,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c41c4f1540f1ccf357d14e3b1832c5f3
+      - a215d886fcdedde5bcbae20d67f7dc0a
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:50 GMT; secure
-      - _session_id=c41c4f1540f1ccf357d14e3b1832c5f3; path=/; secure; HttpOnly
-      - _web_tracking=93b39eccbbde55f057cb5a491a40e704; path=/; expires=Tue, 28-Apr-2015
-        13:44:50 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 09:24:34 GMT; secure
+      - _session_id=a215d886fcdedde5bcbae20d67f7dc0a; path=/; secure; HttpOnly
+      - _web_tracking=d7c9685586c092cecc87909fea56a8b8; path=/; expires=Wed, 27-May-2015
+        09:24:34 GMT; secure
       X-Request-Id:
-      - 89d1e821-8411-4982-8347-77377e730392
+      - 87c7c077-c9c6-435a-8c50-887959f164f6
       X-Runtime:
-      - '0.046962'
+      - '0.054876'
       X-Rack-Cache:
       - miss
       P3p:
@@ -741,7 +741,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
         method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"kp/v2ESM1QA5fxb+m1rMlIDVFLpn/AWssISn2lK6n9A=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"gPh3KqkoGDQfYsfFwPlgGQMVO22f2ANvP0FzH1HlmCg=\"
         /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
         target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
         <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
@@ -750,7 +750,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
         method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
         tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"kp/v2ESM1QA5fxb+m1rMlIDVFLpn/AWssISn2lK6n9A=\"
+        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"gPh3KqkoGDQfYsfFwPlgGQMVO22f2ANvP0FzH1HlmCg=\"
         /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
         </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
         i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
@@ -777,8 +777,8 @@ http_interactions:
         method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"kp/v2ESM1QA5fxb+m1rMlIDVFLpn/AWssISn2lK6n9A=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
+        type=\"hidden\" value=\"gPh3KqkoGDQfYsfFwPlgGQMVO22f2ANvP0FzH1HlmCg=\" /></div></form>
+        </div></p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:53 GMT
+  recorded_at: Tue, 27 May 2014 09:24:34 GMT
 recorded_with: VCR 2.9.0

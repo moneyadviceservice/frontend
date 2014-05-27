@@ -26,7 +26,7 @@ class ArticleDecorator < Draper::Decorator
   end
 
   def parent_categories
-    @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
+    @parent_categories ||= CategoryDecorator.decorate_collection(categories)
   end
 
   def related_categories(quantity = 6)

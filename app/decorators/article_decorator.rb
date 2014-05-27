@@ -29,39 +29,42 @@ class ArticleDecorator < Draper::Decorator
     @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
   end
 
-  def related_categories(qty = 8)
-    # First pull together a hash of categories and articles, in the process
-    # filtering out the current article's entry from the contents.
-    data = object.categories.each_with_object({}) do |cat, obj|
-      contents = cat.contents.reject { |a| a == object }
-      obj[cat] = contents if contents.present?
-    end
-
-    # Now gather another hash with categories as keys, but with
-    # qty articles taken as evenly as possible from each category.
-    entities = {}
-    loop_count = 0
-    push_count = 0
-
-    while push_count < qty && loop_count < qty do
-      data.each do |cat, contents|
-        if (next_item = contents.shift)
-          entities[cat] ||= []
-          entities[cat] << next_item
-          push_count += 1
-        end
-        break if push_count >= qty
+  def related_categories(quantity = 8)
+    limited_parent_categories_with_contents(quantity).
+      each_with_object({}) do |(category, contents), hash|
+        hash[CategoryDecorator.decorate(category)] = CategoryContentDecorator.decorate_collection(contents)
       end
-      loop_count += 1
-    end
-
-    # Finally, decorate the entities
-    entities.each_with_object({}) do |(cat, contents), object|
-      object[CategoryDecorator.decorate(cat)] = CategoryContentDecorator.decorate_collection(contents)
-    end
   end
 
   private
+
+  def limited_parent_categories_with_contents(limit = 8)
+    # Need to assign the output of #contents_by_category to a var as we will
+    # be shifting elements out of and modifyingit's values as we iterate.
+    contents_hash = parent_categories_with_contents
+
+    {}.tap do |limited_contents_hash|
+      catch :limit_reached do
+        until contents_hash.values.all?(&:empty?) do
+          contents_hash.each do |category, contents|
+            if (next_item = contents.shift)
+              limited_contents_hash[category] ||= []
+              limited_contents_hash[category] << next_item
+            end
+
+            throw :limit_reached if limited_contents_hash.values.flatten.count >= limit
+          end
+        end
+      end
+    end
+  end
+
+  def parent_categories_with_contents
+    object.categories.each_with_object({}) do |category, hash|
+      contents = category.contents.reject { |a| a == object }
+      hash[category] = contents if contents.present?
+    end
+  end
 
   def processed_body
     body = object.body

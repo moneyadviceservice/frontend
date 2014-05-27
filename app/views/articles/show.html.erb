@@ -3,7 +3,7 @@
                  alternate: article.alternate_options) %>
 
 <% content_for(:context_bar) do %>
-  <% if (article.uniq_parent?) %>
+  <% if (category_hierarchy.present?) %>
     <%= render 'shared/breadcrumb', categories: category_hierarchy %>
   <% else %>
     <%= render 'shared/related_categories', categories: article.parent_categories %>

@@ -1,6 +1,6 @@
 <% set_meta_tags(description: article.description,
-                 canonical: article.canonical_url,
-                 alternate: article.alternate_options) %>
+                 canonical:   article.canonical_url,
+                 alternate:   article.alternate_options) %>
 
 <% content_for(:context_bar) do %>
   <% if(category_hierarchy.present?) %>

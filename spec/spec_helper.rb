@@ -9,7 +9,6 @@ rescue LoadError
 end
 
 require_relative '../config/environment'
-require_relative 'custom_matchers'
 require 'mas/development_dependencies/rspec/spec_helper'
 require 'webmock/rspec'
 require 'factory_girl'

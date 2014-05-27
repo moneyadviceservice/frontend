@@ -3,7 +3,7 @@ require 'core/interactors/category_parents_reader'
 require 'core/interactors/category_reader'
 
 module Core
-  describe CategoryParentsReader do
+  RSpec.describe CategoryParentsReader do
     let(:id) { 'subsubcategory-1' }
     let(:category) { Category.new(id, parent_id: parent_id)}
 

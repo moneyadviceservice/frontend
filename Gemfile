@@ -50,14 +50,12 @@ end
 group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
-  gem 'rspec_junit_formatter',
-      github:'andreacfm/rspec_junit_formatter',
-      branch: 'master'
+  gem 'html_validation'
+  gem 'rspec_junit_formatter', github: 'andreacfm/rspec_junit_formatter', branch: 'master'
   gem 'thin'
+  gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
   gem 'vcr'
   gem 'webmock'
-  gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
-  gem 'html_validation'
 end
 
 group :production do
@@ -70,8 +68,7 @@ end
 group :test, :development do
   gem 'ejs'
   gem 'dotenv-rails'
-  gem 'mas-development_dependencies',
-      github: 'moneyadviceservice/mas-development_dependencies'
+  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'chai-jquery-rails'
   gem 'byebug'
   gem 'rspec-rails', '3.0.0.rc1'

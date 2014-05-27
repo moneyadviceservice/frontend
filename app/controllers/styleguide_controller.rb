@@ -10,19 +10,19 @@ class StyleguideController < ApplicationController
       {
         title: 'Insurance',
         contents: [
-          { title: 'Choosing home insurance cover' }.to_ostruct,
-          { title: 'Do I need car insurance' }.to_ostruct,
-          { title: 'Making a claim' }.to_ostruct
+          { title: 'Choosing home insurance cover' },
+          { title: 'Do I need car insurance' },
+          { title: 'Making a claim' }
         ]
-      }.to_ostruct,
+      },
       {
         title: 'Debt',
         contents: [
-          { title: 'Avoiding the bailiff' }.to_ostruct,
-          { title: 'Does money grow on trees - we investigate' }.to_ostruct
+          { title: 'Avoiding the bailiff' },
+          { title: 'Does money grow on trees - we investigate' }
         ]
-      }.to_ostruct
-    ]
+      }
+    ].map(&:to_ostruct)
   end
 
   def pages_home

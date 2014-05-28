@@ -6,7 +6,7 @@ RSpec.describe ArticlesController, :type => :controller do
   describe 'GET show' do
     let(:categories) { [] }
     let(:parents) { [] }
-    let(:article) { double(Core::Article, id: 'test', categories: categories) }
+    let(:article) { Core::Article.new('test', categories: categories ) }
     let(:article_reader) { double(Core::ArticleReader, call: article) }
     let(:category_parent_reader) { double(Core::CategoryParentsReader, call: parents) }
 
@@ -39,11 +39,12 @@ RSpec.describe ArticlesController, :type => :controller do
       context 'when an article belongs to one category' do
         let(:category) { double }
         let(:categories) { [category] }
+        let(:parents) { [double] }
 
         it 'assigns category hierarchy' do
           get :show, locale: I18n.locale, id: article.id
 
-          expect(assigns(:category_hierarchy)).to eq(parents)
+          expect(assigns(:category_hierarchy)).to eq(parents + [category])
         end
 
         specify "category hierarchy contains article's category" do

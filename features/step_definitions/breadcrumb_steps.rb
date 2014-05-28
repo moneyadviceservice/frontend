@@ -1,4 +1,4 @@
-Given(/^I am on an (.*) Article that live on a single Category$/) do |language|
+Given(/^I am on an (.*) Article that lives in a single Category$/) do |language|
   step "I view the article in #{language}"
 end
 
@@ -21,7 +21,7 @@ Then(/^I should see the (.*) article's category hierarchy$/) do |language|
   expect(article_page.breadcrumbs).to have_content(current_article.categories.first.title)
 end
 
-Then(/^I should see the realted categories in (.*)$/) do |language|
+Then(/^I should see the related categories in (.*)$/) do |language|
   locale = language_to_locale(language)
   current_article = article_for_locale(locale)
   current_article.categories.each do |category|

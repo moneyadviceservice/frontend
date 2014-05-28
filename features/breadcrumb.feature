@@ -5,7 +5,7 @@ Feature: Breadcrumbs
   And be able to quickly navigate to parents so that I can orientate myself
 
   Scenario Outline: Breadcrumb on an article page
-    Given I am on an <language> Article that live on a single Category
+    Given I am on an <language> Article that lives in a single Category
     Then I should see the <language> article's category hierarchy
 
     Examples:
@@ -15,7 +15,7 @@ Feature: Breadcrumbs
 
   Scenario Outline: Related categories breadcrumb on an article page
     Given I am on an <language> Article that lives in multiple Categories
-    Then I should see the realted categories in <language>
+    Then I should see the related categories in <language>
 
     Examples:
     | language |

@@ -22,7 +22,16 @@
 .breadcrumb__divider {
   @include body(16, 16);
   color: $breadcrumbs-divider-color;
-  padding: 0 0 0 6px;
   position: relative;
   top: 1px;
+
+  &:before {
+    padding: 0 6px 0 0;
+    content: '\3008';
+
+    @include respond-to($mq-m) {
+      padding: 0 0 0 6px;
+      content: '\3009';
+    }
+  }
 }

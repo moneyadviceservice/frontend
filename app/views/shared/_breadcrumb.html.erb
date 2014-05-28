@@ -2,7 +2,7 @@
   <a class="breadcrumb" href="<%= root_path %>"><%= t('layouts.base.home') %></a>
   <% categories.each do |category| %>
   <span class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <span class="breadcrumb__divider">&#12297;</span>
+    <span class="breadcrumb__divider"></span>
     <%= link_to category.path, itemprop: "url" do %>
       <span itemprop="title"><%= category.title %></span>
     <% end %>

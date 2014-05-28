@@ -4,14 +4,14 @@
 
 .breadcrumb {
   @include body(14, 18);
-  display: none;
+  @include visually-hidden;
 
   &:last-child {
-    display: inline;
+    position: relative;
   }
 
   @include respond-to($mq-m) {
-    display: inline;
+    position: relative;
   }
 
   @include respond-to($mq-l) {

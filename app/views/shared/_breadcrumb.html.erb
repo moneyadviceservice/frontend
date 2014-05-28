@@ -1,11 +1,11 @@
-<div class="breadcrumbs">
-  <a class="breadcrumb" href="<%= root_path %>"><%= t('layouts.base.home') %></a>
+<ul class="breadcrumbs unstyled-list">
+  <li class="breadcrumb"><a href="<%= root_path %>"><%= t('layouts.base.home') %></a></li>
   <% categories.each do |category| %>
-  <span class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <li class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
     <span class="breadcrumb__divider"></span>
     <%= link_to category.path, itemprop: "url" do %>
       <span itemprop="title"><%= category.title %></span>
     <% end %>
-  </span>
+  </li>
   <% end %>
-</div>
+</ul>

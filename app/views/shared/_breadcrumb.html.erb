@@ -1,5 +1,5 @@
 <ul class="breadcrumbs unstyled-list">
-  <li class="breadcrumb"><a href="<%= root_path %>"><%= t('layouts.base.home') %></a></li>
+  <li class="breadcrumb"><%= link_to(t('layouts.base.home'), root_path) %></li>
   <% categories.each do |category| %>
   <li class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
     <span class="breadcrumb__divider"></span>

@@ -35,13 +35,6 @@ module Core
           expect(subject.call[1].id).to eq(parent_id)
         end
       end
-
-      context 'when category is nil' do
-        let(:category) { nil }
-        it 'retuns an empty array' do
-          expect(subject.call).to eq([])
-        end
-      end
     end
   end
 end

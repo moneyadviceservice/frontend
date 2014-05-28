@@ -22,6 +22,7 @@ Feature: Breadcrumbs
     | English  |
     | Welsh    |
 
+  @fake-articles
   Scenario: Remove breadcrumb for articles without categories
     Given I am on an Article that does not belong to any category
     Then I should not see the breadcrumbs area

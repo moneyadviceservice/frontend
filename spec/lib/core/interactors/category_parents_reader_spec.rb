@@ -27,11 +27,11 @@ module Core
           allow(Registries::Repository).to receive(:[]).with(:category).and_return(repository)
         end
 
-        it 'return parent category on the second place' do
+        it 'returns grandparent category in first place' do
           expect(subject.call.first.id).to eq(grandpa_id)
         end
 
-        it 'retuns grandparent category on the first place' do
+        it 'retuns parent category in second place' do
           expect(subject.call[1].id).to eq(parent_id)
         end
       end

@@ -17,7 +17,7 @@ Then(/^I should see the (.*) article's category hierarchy$/) do |language|
   locale = language_to_locale(language)
   current_article = article_for_locale(locale)
 
-  expect(article_page.breadcrumbs).to have_content(I18n.t('layouts.base.home'))
+  expect(article_page.breadcrumbs).to have_content(I18n.t('layouts.home'))
   expect(article_page.breadcrumbs).to have_content(current_article.categories.first.title)
 end
 

@@ -1,6 +1,25 @@
 class ValidArticle
   BLACKLIST = %w(about-our-debt-work am-ein-gwaith-dyled
-                 debt-publications cyhoeddiadau-ar-ddyledion)
+                 debt-publications cyhoeddiadau-ar-ddyledion
+                 partners-overview-parhub
+                 partner-reg-parhub
+                 syndicating-tools-parhub
+                 video-syndication-parhub
+                 toolkits-parhub pecynnau-cymorth-cyngor-ariannol
+                 linking-parhub
+                 examples-parhub
+                 licence-agreement-parhub)
+
+  def matches?(request)
+    BLACKLIST.exclude?(request.parameters['id'])
+  end
+end
+
+class ValidCategory
+  BLACKLIST = %w(partners
+                 partners-uc-banks
+                 partners-uc-landlords
+                 resources-for-professionals-working-with-young-people-and-parents)
 
   def matches?(request)
     BLACKLIST.exclude?(request.parameters['id'])
@@ -17,7 +36,8 @@ Rails.application.routes.draw do
     resources :articles,
               only: 'show',
               constraints: ValidArticle.new
-    resources :categories, only: 'show'
+    resources :categories, only: 'show',
+              constraints: ValidCategory.new
     resources :search_results, only: 'index', path: 'search'
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'

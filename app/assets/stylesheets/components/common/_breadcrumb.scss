@@ -1,8 +1,8 @@
-// Site wide breadcrumb
+// Site wide breadcrumbs
 //
-// Styleguide Breadcrumb
+// Styleguide Breadcrumbs
 
-.breadcrumb {
+.breadcrumbs__item {
   @include body(14, 18);
   @include inline-block;
   @include visually-hidden;
@@ -27,7 +27,7 @@
   }
 }
 
-.breadcrumb__divider {
+.breadcrumbs__divider {
   @include body(16, 16);
   color: $breadcrumbs-divider-color;
   position: relative;

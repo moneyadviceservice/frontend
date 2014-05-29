@@ -3,9 +3,9 @@
                  alternate:   article.alternate_options) %>
 
 <% content_for(:context_bar) do %>
-  <% if category_hierarchy.present?  %>
-    <%= render 'shared/breadcrumb', categories: category_hierarchy %>
-  <% elsif article.parent_categories.present? %>
+  <% if(category_hierarchy.present?) %>
+    <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
+  <% elsif(article.parent_categories.present?) %>
     <%= render 'shared/related_categories', categories: article.parent_categories %>
   <% end %>
 <% end %>

@@ -1,0 +1,15 @@
+<nav class="breadcrumbs" role="navigation" aria-label="<%= t('breadcrumbs.aria_label') %>">
+  <ul class="unstyled-list">
+    <li class="breadcrumbs__item"><%= link_to(t('layouts.home'), root_path) %></li>
+
+    <% categories.each do |category| %>
+      <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span class="visually-hidden">&gt;</span>
+        <span class="breadcrumbs__divider" aria-hidden="true"></span>
+        <%= link_to category.path, itemprop: "url" do %>
+          <span itemprop="title"><%= category.title %></span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

@@ -173,6 +173,28 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_guide_v2
+    @categories = [
+        {
+            title:    'Insurance',
+            contents: [
+                { title: 'Choosing home insurance cover' },
+                { title: 'Do I need car insurance' },
+                { title: 'Making a claim' }
+            ]
+        },
+        {
+            title:    'Debt',
+            contents: [
+                { title: 'Avoiding the bailiff' },
+                { title: 'Does money grow on trees - we investigate' }
+            ]
+        }
+    ].map(&:to_ostruct)
+
+    render layout: 'styleguide/page'
+  end
+
   def pages_action_plan
     render layout: 'styleguide/page'
   end

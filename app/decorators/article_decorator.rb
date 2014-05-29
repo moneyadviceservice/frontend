@@ -26,7 +26,7 @@ class ArticleDecorator < Draper::Decorator
   end
 
   def parent_categories
-    @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
+    @parent_categories ||= CategoryDecorator.decorate_collection(categories)
   end
 
   def related_categories(quantity = 6)
@@ -37,6 +37,10 @@ class ArticleDecorator < Draper::Decorator
   end
 
   private
+
+  def categories
+    object.categories.compact
+  end
 
   def limited_parent_categories_with_contents(limit = 6)
     # Need to assign the output of #contents_by_category to a var as we will
@@ -60,7 +64,7 @@ class ArticleDecorator < Draper::Decorator
   end
 
   def parent_categories_with_contents
-    object.categories.each_with_object({}) do |category, hash|
+    categories.each_with_object({}) do |category, hash|
       contents = category.contents.reject { |a| a == object }
       hash[category] = contents if contents.present?
     end

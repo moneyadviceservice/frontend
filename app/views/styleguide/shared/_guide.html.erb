@@ -239,4 +239,4 @@
                                        { title: 'Buy-to-let mortgages', path: '#' }
                                      ]
                          }
-                       ].map(&:to_ostruct) %>
+                       ].map(&:to_ostruct).map { |c| [c, c.contents] } %>

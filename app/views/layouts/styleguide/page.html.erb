@@ -4,11 +4,11 @@
   <%= render 'shared/header' %>
 
   <% if content_for?(:context_bar) %>
-    <nav class="l-context-bar">
+    <div class="l-context-bar">
       <div class="l-constrained">
         <%= yield :context_bar %>
       </div>
-    </nav>
+    </div>
   <% end %>
 
   <div class="l-constrained l-padded">

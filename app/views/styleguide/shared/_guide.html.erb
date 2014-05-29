@@ -9,10 +9,9 @@
 
 <hr class="l-hr-article-intro"/>
 
-<%= render 'shared/related_categories', categories: [
-    { title: 'Home & mortgages', path: '#' },
-    { title: 'Renting & property', path: '#' }
-  ].map(&:to_ostruct) %>
+<%= render 'shared/related_categories',
+           categories: [{ title: 'Home & mortgages', path: '#' },
+                        { title: 'Renting & property', path: '#' }].map(&:to_ostruct) %>
 
 <div class="l-article-main">
   <h2>Everything you need to know</h2>
@@ -228,28 +227,28 @@
 
 <hr class="l-hr-article-related-links"/>
 
-<%= render 'shared/related_links', categories: [
-    {
-     title: 'Home & mortgages',
-     path: '#',
-     contents: [
-       { title: 'Interest-only mortgages', path: '#' },
-       { title: 'Buying property - what can you afford?', path: '#' },
-       { title: 'Understanding mortgages', path: '#' },
-       { title: 'Choosing the right mortgage', path: '#' }
-     ]
-    },
-    {
-     title: 'Renting a property',
-     path: '#',
-     contents: [
-       { title: 'How much rent can you afford?', path: '#' },
-       { title: 'Rent or buy?', path: '#' },
-       { title: 'Budgeting and sharing costs when renting', path: '#' },
-       { title: 'Your legal and financial responsibilities when renting', path: '#' },
-       { title: 'Rent arrears and problems paying your rent', path: '#' },
-       { title: 'Buy-to-let mortgages', path: '#' }
-     ]
-    }
-  ].map(&:to_ostruct)
-%>
+<%= render 'shared/related_links',
+           categories: [
+                         {
+                           title:    'Home & mortgages',
+                           path:     '#',
+                           contents: [
+                                       { title: 'Interest-only mortgages', path: '#' },
+                                       { title: 'Buying property - what can you afford?', path: '#' },
+                                       { title: 'Understanding mortgages', path: '#' },
+                                       { title: 'Choosing the right mortgage', path: '#' }
+                                     ]
+                         },
+                         {
+                           title:    'Renting a property',
+                           path:     '#',
+                           contents: [
+                                       { title: 'How much rent can you afford?', path: '#' },
+                                       { title: 'Rent or buy?', path: '#' },
+                                       { title: 'Budgeting and sharing costs when renting', path: '#' },
+                                       { title: 'Your legal and financial responsibilities when renting', path: '#' },
+                                       { title: 'Rent arrears and problems paying your rent', path: '#' },
+                                       { title: 'Buy-to-let mortgages', path: '#' }
+                                     ]
+                         }
+                       ].map(&:to_ostruct) %>

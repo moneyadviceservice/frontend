@@ -12,6 +12,8 @@ class ArticlesController < ApplicationController
     end
 
     @category_hierarchy = build_category_hierarchy
+
+    render Feature.active?(:left_hand_nav) ? :show_v2 : :show
   end
 
   private

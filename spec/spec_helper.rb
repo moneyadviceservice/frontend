@@ -34,5 +34,5 @@ end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
-PageValidations::HTMLValidation.ignored_attribute_errors = ['tabindex']
+PageValidations::HTMLValidation.ignored_attribute_errors = %w(tabindex itemscope itemtype itemprop)
 PageValidations::HTMLValidation.ignored_tag_errors       = ['main']

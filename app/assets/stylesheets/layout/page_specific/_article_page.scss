@@ -6,12 +6,12 @@
 @include respond-to($mq-m, $mq-l) {
 
   .l-article-intro,
-  .related-links {
+  .l-article .related-links {
     @include column(9);
     @include push(3);
   }
 
-  .related-categories {
+  .l-article .related-categories {
     @include column(3);
   }
 
@@ -26,7 +26,7 @@
     @include column(12);
   }
 
-  .related-categories {
+  .l-article .related-categories {
     @include column(3);
   }
 
@@ -47,7 +47,7 @@
     @include column(9);
   }
 
-  .related-categories {
+  .l-article .related-categories {
     @include column(2);
     clear: left;
   }
@@ -57,9 +57,8 @@
     @include push(2);
   }
 
-  .related-links {
+  .l-article .related-links {
     @include column(3);
     margin-bottom: $baseline-unit*3;
   }
 }
-

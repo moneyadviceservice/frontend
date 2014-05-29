@@ -7,8 +7,6 @@ Feature: View an article
   Scenario Outline: View an article
     When I view the article in <language>
     Then I should see the article in <language>
-    And I should not see the article title in the related content in <language>
-    And I should see the alternate article title in the related content in <language>
 
   Examples:
     | language |

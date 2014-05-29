@@ -18,6 +18,7 @@
   .l-article-main {
     @include column(9);
     @include push(3);
+    margin-bottom: $baseline-unit*2;
   }
 
   .l-hr-article-intro,
@@ -27,11 +28,6 @@
 
   .l-article .related-categories {
     @include column(3);
-  }
-
-  .l-article-main {
-    @include column(9);
-    margin-bottom: $baseline-unit*2;
   }
 
   .l-article .related-links {

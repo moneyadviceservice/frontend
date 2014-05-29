@@ -2,28 +2,26 @@
 //
 // Styleguide Breadcrumbs
 
+//.breadcrumbs {
+//
+//  ul {
+//    height: 24px;
+//  }
+//}
+
 .breadcrumbs__item {
   @include body(14, 18);
   @include inline-block;
-  @include visually-hidden;
   margin-bottom: 0;
-
-  &:last-child {
-    @include inline-block;
-    position: relative;
-    overflow: visible;
-    width: auto;
-  }
-
-  @include respond-to($mq-m) {
-    @include inline-block;
-    position: relative;
-    overflow: visible;
-    width: auto;
-  }
 
   @include respond-to($mq-l) {
     @include body(16, 24);
+  }
+}
+
+@include respond-to($mq-xs, $mq-m) {
+  .breadcrumbs__item:not(:last-child) {
+    @include visually-hidden;
   }
 }
 

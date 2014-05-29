@@ -29,7 +29,7 @@ class ArticleDecorator < Draper::Decorator
     @parent_categories ||= CategoryDecorator.decorate_collection(object.categories)
   end
 
-  def related_categories(quantity = 8)
+  def related_categories(quantity = 6)
     limited_parent_categories_with_contents(quantity).
       each_with_object({}) do |(category, contents), hash|
         hash[CategoryDecorator.decorate(category)] = CategoryContentDecorator.decorate_collection(contents)
@@ -38,7 +38,7 @@ class ArticleDecorator < Draper::Decorator
 
   private
 
-  def limited_parent_categories_with_contents(limit = 8)
+  def limited_parent_categories_with_contents(limit = 6)
     # Need to assign the output of #contents_by_category to a var as we will
     # be shifting elements out of and modifyingit's values as we iterate.
     contents_hash = parent_categories_with_contents

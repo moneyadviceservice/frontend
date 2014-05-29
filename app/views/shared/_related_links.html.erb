@@ -1,17 +1,20 @@
-<div class="related-links">
-  <h2 class="related-links__heading visually-hidden">Related content</h2>
-  <% categories.each do |category| %>
-    <div class="related-links__category">
-      <h3 class="related-links__category-heading">
-        <%= link_to category.title, category.path %>
-      </h3>
-      <ul class="unstyled-list">
-        <% category.contents.each do |article| %>
-          <li class="related-links__category-link">
-            <%= link_to article.title, article.path %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-</div>
+<% categories.each do |category, contents| %>
+  <div class="related-links">
+    <h2 class="related-links__heading">
+      <%= t('articles.show.related_links.title_prefix', category: category.title) %>
+    </h2>
+    <ul class="unstyled-list">
+      <% contents.each do |article| %>
+        <li class="related-links__link">
+          <%= link_to article.title, article.path %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to category.path, class: 'related-links__all'  do %>
+      <%= t('articles.show.related_links.link') %>
+      <span class="visually-hidden">
+        <%= t('articles.show.related_links.hidden_link', category: category.title) %>
+      </span>
+    <% end %>
+  </div>
+<% end %>

@@ -152,8 +152,15 @@ en:
         <a href="%{url}">Find out more about cookies.</a>
       close_button: Close
 
-  related_categories:
-    title: Article appears in
+  articles:
+    show:
+      related_links:
+        title_prefix: More in %{category}
+        link: View all ...
+        hidden_link: articles in %{category}
+
+      related_categories:
+        title: Article appears in
 
   search_box:
     label: Search the Money Advice Service

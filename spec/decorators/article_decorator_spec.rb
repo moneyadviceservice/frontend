@@ -123,26 +123,152 @@ RSpec.describe ArticleDecorator do
     end
   end
 
-  describe '#related_categories' do
-    let(:article) { Core::Article.new('article A', categories: [category]) }
-    let(:article_second_instance) { Core::Article.new('article A') }
-    let(:second_article) { Core::Article.new('Article B') }
-    let(:category) { Core::Category.new('test', contents: [article_second_instance, second_article]) }
+  describe '#parent_categories_with_contents' do
+    let(:category_another_article) { double }
+    let(:another_category_article) { double }
+    let(:category_contents) { [category_another_article, another_category_article] }
+    let(:category) { instance_double(Core::Category, contents: category_contents) }
+    let(:categories) { [category] }
+    let(:article) { instance_double(Core::Article, id: 'base article', categories: categories) }
 
-    it "removes the original article from it's categories' contents" do
-      expect(subject.related_categories.first.contents.map(&:object)).to_not include(article_second_instance)
+    subject { decorator.send(:parent_categories_with_contents) }
+
+    it 'returns a hash with the category in the keys' do
+      expect(subject.keys).to eq categories
     end
 
-    it "retains the other article in it's categories' contents" do
-      expect(subject.related_categories.first.contents.map(&:object)).to include(second_article)
+    it 'returns a hash with the contents in the values' do
+      expect(subject.values).to eq [category_contents]
+    end
+  end
+
+  describe '#limited_parent_categories_with_contents' do
+    before do
+      allow(decorator).to receive(:parent_categories_with_contents) { contents_hash }
     end
 
-    context 'if a category has no contents' do
-      let(:category) { Core::Category.new('test', contents: [article_second_instance]) }
+    let(:limit) { 4 }
+    subject { decorator.send(:limited_parent_categories_with_contents, limit) }
 
-      it 'is excluded from the results' do
-        expect(subject.related_categories.map(&:object)).to_not include(category)
+    context 'when we only have one category' do
+      let(:category) { double }
+      let(:category_items) { [double] }
+
+      # We dup this hash otherwise it will remain referenced and
+      # have it's contents removed within the method we're testing.
+      let(:contents_hash) { { category => category_items.dup } }
+
+      it 'returns a single item hash with the category as the key' do
+        expect(subject.keys.first).to eq category
+      end
+
+      context 'when we have fewer items than the limit' do
+        it 'returns a single item hash with all items in the value' do
+          expect(subject.values.first).to eq category_items
+        end
+      end
+
+      context 'when we have more items than the limit' do
+        let(:first_four_items) { [double, double, double, double] }
+        let(:superfluous_items) { [double] }
+        let(:category_items) { first_four_items + superfluous_items }
+
+        it 'returns a single item hash with the items in the value truncated by limit' do
+          expect(subject.values.first).to eq first_four_items
+        end
       end
     end
+
+    context 'when we have two categories' do
+      let(:first_category) { double }
+      let(:first_category_items) { [double] }
+
+      let(:second_category) { double }
+      let(:second_category_items) { [double] }
+
+      # Again, we dup the items hash otherwise it they remain referenced and
+      # have their's contents removed within the method we're testing.
+      let(:contents_hash) do
+        {
+          first_category => first_category_items.dup,
+          second_category => second_category_items.dup
+        }
+      end
+
+      it 'returns a hash with the categories as keys' do
+        expect(subject.keys).to eq [first_category, second_category]
+      end
+
+      context 'when we have more than enough items in both hashes' do
+        let(:first_category_first_two_items) { [double, double] }
+        let(:first_category_superfluous_items) { [double] }
+        let(:first_category_items) { first_category_first_two_items + first_category_superfluous_items }
+
+        let(:second_category_first_two_items) { [double, double] }
+        let(:second_category_superfluous_items) { [double] }
+        let(:second_category_items) { second_category_first_two_items + second_category_superfluous_items }
+
+        it "returns a hash with the first category's values truncated" do
+          expect(subject.values.first).to eq first_category_first_two_items
+        end
+
+        it "returns a hash with the second category's values truncated" do
+          expect(subject.values[1]).to eq second_category_first_two_items
+        end
+      end
+
+      context 'when the first category has too few items' do
+        let(:first_category_items) { [double] }
+
+        it "returns a hash with all the first category's values present" do
+          expect(subject.values.first).to eq first_category_items
+        end
+
+        context 'and the second category also has too few items' do
+          let(:second_category_items) { [double, double] }
+
+          it "returns a hash with all the second category's values present" do
+            expect(subject.values[1]).to eq second_category_items
+          end
+        end
+
+        context 'and the second category has more than enough items' do
+          let(:second_category_first_three_items) { [double, double, double] }
+          let(:second_category_superfluous_items) { [double] }
+          let(:second_category_items) { second_category_first_three_items + second_category_superfluous_items }
+
+          it "returns a hash with the second category's values truncated" do
+            expect(subject.values[1]).to eq second_category_first_three_items
+          end
+        end
+      end
+
+      context 'when the second category has too few items' do
+        let(:second_category_items) { [double] }
+
+        it "returns a hash with all the second category's values present" do
+          expect(subject.values[1]).to eq second_category_items
+        end
+
+        context 'and the first category also has too few items' do
+          let(:first_category_items) { [double, double] }
+
+          it "returns a hash with all the first category's values present" do
+            expect(subject.values.first).to eq first_category_items
+          end
+        end
+
+        context 'and the first category has more than enough items' do
+          let(:first_category_first_three_items) { [double, double, double] }
+          let(:first_category_superfluous_items) { [double] }
+          let(:first_category_items) { first_category_first_three_items + first_category_superfluous_items }
+
+          it "returns a hash with the first category's values truncated" do
+            expect(subject.values.first).to eq first_category_first_three_items
+          end
+        end
+      end
+    end
+
   end
 end

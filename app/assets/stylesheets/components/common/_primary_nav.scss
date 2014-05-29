@@ -24,9 +24,13 @@
     border: 0;
     width: 5.625rem;
 
-    &:nth-of-type(2) {
-      width: 7.1875em;
+    &:first-child {
+      width: 8.125em;
     }
+
+    &:nth-of-type(2) {
+      width: 5.9375em;
+  }
 
     &:last-child {
       border: 0;
@@ -37,11 +41,11 @@
     width: 7.1875em;
 
     &:first-child {
-      width: 5.9375em;
+      width: 8.125em;
     }
 
     &:nth-of-type(2) {
-      width: 8.125em;
+      width: 5.9375em;
     }
 
     &:nth-of-type(3) {

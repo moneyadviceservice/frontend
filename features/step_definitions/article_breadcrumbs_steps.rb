@@ -26,7 +26,7 @@ Then(/^I can see that it appears in those categories$/) do
     expect(article_page.breadcrumbs).to have_content(category.title)
   end
 
-  expect(article_page.breadcrumbs).to have_content(I18n.t('related_categories.title'))
+  expect(article_page.breadcrumbs).to have_content(I18n.t('articles.show.related_categories.title'))
 end
 
 Then(/^I should not see breadcrumbs$/) do

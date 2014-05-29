@@ -11,7 +11,7 @@
   </div>
 <% else %>
   <%= render 'shared/directory',
-             items: t('.featured').map { |f| OpenStruct.new(f) } %>
+             items: t('.featured').map(&:to_ostruct) %>
 <% end %>
 
 

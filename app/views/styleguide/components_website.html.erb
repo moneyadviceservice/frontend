@@ -38,7 +38,7 @@
 
 <%= styleguide_section sections['Directory'] do %>
   <%= render 'shared/directory',
-             items: t('home.show.featured').map { |f| OpenStruct.new(f) } %>
+             items: t('home.show.featured').map(&:to_ostruct) %>
 <% end %>
 
 <%= styleguide_section sections['Promo'] do %>

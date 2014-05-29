@@ -6,6 +6,8 @@ require 'active_model/railtie'
 require 'active_record/railtie'
 require 'sprockets/railtie'
 
+require_relative '../lib/core_ext'
+
 Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend

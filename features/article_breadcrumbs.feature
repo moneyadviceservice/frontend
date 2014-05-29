@@ -1,5 +1,5 @@
 @vcr
-Feature: Breadcrumbs
+Feature: Article breadcrumbs
   As a user reading an article
   I want to understand where the article belongs
   And be able to quickly navigate to parents so that I can orientate myself

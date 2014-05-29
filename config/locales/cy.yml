@@ -1,14 +1,16 @@
 cy:
 
+  breadcrumbs:
+   aria_label: briwsion bara
+
   js:
     hide: cuddio
     show: dangos
 
   layouts:
+    home: Hafan
     base:
       title: Y Gwasanaeth Cynghori Ariannol
-    error:
-      home: Hafan
 
   locales:
     cy: Cymraeg
@@ -159,7 +161,7 @@ cy:
         hidden_link: erthyglau yn %{category}
 
       related_categories:
-        title: Mae’r erthygl yn ymddangos yn
+      title: Mae'r erthygl hon yn ymddangos mewn
 
   search_box:
     label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol

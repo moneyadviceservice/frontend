@@ -15,5 +15,9 @@ module Core
         @alternates << Alternate.new(*alternate.values_at(:title, :url, :hreflang))
       end
     end
+
+    def one_parent?
+      categories.compact.one?
+    end
   end
 end

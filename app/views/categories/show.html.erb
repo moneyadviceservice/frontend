@@ -1,5 +1,9 @@
 <% set_meta_tags(canonical: category.canonical_url, alternate: category.alternate_options) %>
 
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
+<% end %>
+
 <div class="l-1col">
   <% set_meta_tags(description: category.description) %>
 

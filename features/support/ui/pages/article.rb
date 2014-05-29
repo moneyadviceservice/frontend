@@ -8,5 +8,6 @@ module UI::Pages
     element :main_content, '.l-article-main'
     element :related_categories, '.related-categories'
     element :related_content, '.related-links'
+    element :breadcrumbs, '.l-context-bar'
   end
 end

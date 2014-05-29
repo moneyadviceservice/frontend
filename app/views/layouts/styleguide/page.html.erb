@@ -2,6 +2,15 @@
   <a class="skip-to-content" href="#main">Skip to main content</a>
   <%= render 'shared/opt_out_bar' %>
   <%= render 'shared/header' %>
+
+  <% if content_for?(:context_bar) %>
+    <div class="l-context-bar">
+      <div class="l-constrained">
+        <%= yield :context_bar %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="l-constrained l-padded">
     <%= yield %>
   </div>

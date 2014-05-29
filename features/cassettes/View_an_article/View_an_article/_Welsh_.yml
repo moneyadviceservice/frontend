@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 78706e9b-37cc-46e6-8803-8b6aa0a5a7cc
+      - 7fe7fb4f-7d94-4981-b72d-b95da2ae404e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:37 GMT
+      - Tue, 27 May 2014 15:05:05 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,32 +35,25 @@ http_interactions:
       Status:
       - 200 OK
       Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
+      - <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?",
+        <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?"
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 6563b18c6dcbdcda4fcd7e1c46e8e885
+      - 86e870d53e75a99d027db9d198d901c1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:37 GMT; secure
-      - _session_id=6563b18c6dcbdcda4fcd7e1c46e8e885; path=/; secure; HttpOnly
-      - _web_tracking=2d639b3403831139617d1bb22bac7e13; path=/; expires=Tue, 28-Apr-2015
-        13:44:37 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:05 GMT; secure
+      - _session_id=86e870d53e75a99d027db9d198d901c1; path=/; secure; HttpOnly
+      - _web_tracking=d0c76124822afdc8705e333ea373976f; path=/; expires=Wed, 27-May-2015
+        15:05:05 GMT; secure
       X-Request-Id:
-      - 78706e9b-37cc-46e6-8803-8b6aa0a5a7cc
+      - 7fe7fb4f-7d94-4981-b72d-b95da2ae404e
       X-Runtime:
-      - '0.043652'
+      - '0.065989'
       X-Rack-Cache:
       - miss
       P3p:
@@ -69,101 +62,103 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"aZcHKnnP3Y4843uaYlv8owBzLA+bR+DlP5DW0vtTPys=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"aZcHKnnP3Y4843uaYlv8owBzLA+bR+DlP5DW0vtTPys=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+      string: '{"id":"a-ddylech-chi-rentu-neu-brynu","title":"A ddylech chi rentu
+        neu brynu?","description":"Fedrwch chi fforddio prynu eiddo a, hyd yn oed
+        os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n well i chi
+        rentu yn lle hynny?","body":"<html><body><p class=\"intro\"><img src=\"/images/should-you-rent-or-buy.jpg\"/>Mae\u2019n
+        debygol mai prynu eiddo yw\u2019r penderfyniad ariannol mwyaf y bydd rhaid
+        i chi fyth ei wneud. Sut gallwch chi wybod a ydych chi\u2019n gwneud y penderfyniad
+        iawn ar hyn o bryd \u2013 neu a fuasai hi\u2019n well i chi rentu yn lle hynny?
+        </p><h2>Pethau i\u2019w pwyso a\u2019u mesur os nad ydych chi\u2019n sicr
+        pa un ai prynu ynteu rentu </h2><p>Mae bod yn berchen ar eich t\u0177 eich
+        hun yn ymrwymiad mawr, nid dim ond i\u2019r adeilad rydych chi\u2019n ei brynu
+        ac i\u2019r ardal rydych chi\u2019n dewis byw ynddi, ond hefyd i\u2019ch bywyd
+        (a hefyd i berson arall os ydych chi\u2019n prynu gyda rhywun sy\u2019n annwyl
+        i chi neu ffrind). </p><h3>Y manteision o fod yn berchennog ar eich cartref
+        </h3><p>Mae llawer o fanteision i fod yn berchennog ar eich cartref. Dyma
+        rai ohonynt yn unig. </p><ul><li>Unwaith rydych chi wedi talu eich morgais,
+        chi biau eich cartref a gallai fod werth llawer mwy nag y gwnaethoch dalu
+        amdano. </li></ul><ul><li>Os yw gwerth eich cartref yn codi gallwch ddefnyddio\u2019r
+        ecwiti hwnnw i\u2019ch helpu i fforddio cartref mwy neu i ariannu ymddeoliad
+        mwy cyfforddus os ydych chi\u2019n prynu cartref llai. </li></ul><ul><li>Pan
+        fyddwch chi\u2019n ymddeol ni fydd yr incwm gennych o reidrwydd i ddal ati
+        i dalu rhent \u2013 os ydych wedi talu eich morgais fe fyddwch yn byw yn \u2018ddi-rent\u2019.
+        </li></ul><ul><li>Gallwch dalu arian ar wella eich cartref a chodi ei werth,
+        ond ni allwch newid cartref sy\u2019n cael ei rentu heb ganiat\u00e2d y landlord.
+        </li></ul><ul><li>Weithiau gall fod yn rhatach i brynu nag i rentu.</li></ul><h3>Anfanteision
+        posibl o fod yn berchennog </h3><ul><li>Mae\u2019n ymrwymiad ariannol mawr
+        \u2013 bydd arnoch angen bod yn sicr eich bod yn gallu fforddio\u2019r hyn
+        rydych chi\u2019n ymgymryd ag ef. Gweler yr adran ddiweddarach \u2018Allwch
+        chi fforddio prynu?\u2019 </li></ul><ul><li>Bydd arnoch angen bod yn sicr
+        hefyd y gallwch fforddio costau cynnal a chadw, fel newid boeler os bydd yn
+        torri neu drwsio to sy\u2019n gollwng. Os ydych chi\u2019n ymestyn eich hun
+        yn ormodol wrth brynu efallai y byddwch chi\u2019n teimlo\u2019n ddig am nad
+        oes gennych arian i fynd allan am bryd o fwyd, gwyliau ac adloniant. </li></ul><ul><li>Mae
+        gennych chi lai o hyblygrwydd na phan ydych chi\u2019n rhentu. Er enghraifft,
+        os ydych chi am symud oherwydd rhesymau gwaith neu resymau personol, mae gwerthu
+        a symud ymlaen yn llawer mwy costus os ydych chi\u2019n berchen ar eich t\u0177
+        gan y bydd gennych yr holl ff\u00efoedd sy\u2019n gysylltiedig \u00e2\u2019r
+        swyddfa gwerthu tai a\u2019r ff\u00efoedd cyfreithiol. Hefyd cofiwch nad yw
+        bob amser yn hawdd gwerthu eich cartref \u2013 fe fyddwch yn ddibynnol ar
+        yr hyn sy\u2019n digwydd yn y farchnad. </li></ul><ul><li>Os ydych chi\u2019n
+        byw gyda rhywun arall ac yn gwahanu, bydd y broses o roi trefn ar yr eiddo
+        yn llawer mwy cymhleth a chostus.</li></ul><h2>A ydych chi\u2019n well eich
+        byd yn prynu neu\u2019n rhentu? </h2><p>Dydych chi ddim o reidrwydd yn mynd
+        i fod yn well eich byd yn ariannol yn prynu nag yn rhentu eich cartref. </p><p>Os
+        yw gwerth eich eiddo yn gostwng, efallai na fyddwch yn medru gwerthu am fod
+        arnoch chi fwy o arian na gwerth eich cartref i\u2019ch benthyciwr morgais.
+        </p><p>Ar y llaw arall, os yw prisiau tai yn codi, fe allech wneud elw da
+        a allai eich helpu i symud i gartref mwy neu roi cyfandaliad i chi os ydych
+        yn dewis symud i le llai yn hwyrach yn eich bywyd.\u00a0 </p><h2>Allwch chi
+        fforddio prynu? </h2><p>Y cam cyntaf tuag at brynu eiddo yw darganfod a allwch
+        chi fforddio gwneud hynny. Mae llawer o gostau yn gysylltiedig \u00e2 phrynu
+        eich t\u0177 eich hun, y tu hwnt i\u2019ch ad-daliadau morgais, gan gynnwys:
+        </p><ul><li>blaendal </li></ul><ul><li>costau cyfreithiol fel ff\u00efoedd
+        y cyfreithiwr </li></ul><ul><li>cost gwneud arolwg </li></ul><ul><li>Treth
+        Stamp </li></ul><ul><li>costau ymfudo, a hefyd </li></ul><ul><li>eich biliau
+        misol \u2013 fel nwy, trydan, ff\u00f4n cartref, ac ati.</li></ul><p>Defnyddiwch
+        y dolenni isod i gael gwell syniad o\u2019ch costau tebygol. </p><p>Os nad
+        yw prynu yn ddewis i chi ar hyn o bryd, meddyliwch am gychwyn cynllun cynilo
+        i gyrraedd eich nod yn y dyfodol. </p><p><div class=\"add-action\"><a href=\"/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">Amcangyfrifwch
+        eich holl gostau prynu a symud</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" data-article-type=\"guide\"
+        id=\"email_me_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        method=\"post\" name=\"guide_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"aZcHKnnP3Y4843uaYlv8owBzLA+bR+DlP5DW0vtTPys=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
+        type=\"hidden\" value=\"6qfU2KA4lxEU4rWuPFCNGQvwnZfbZsujiRO4FWHCrkM=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca\">Faint
+        allwch chi fforddio ei fenthyg?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"faint-allwch-chi-fforddio-ei-fenthyca\" data-article-type=\"guide\"
+        id=\"email_me_faint-allwch-chi-fforddio-ei-fenthyca\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        method=\"post\" name=\"guide_faint-allwch-chi-fforddio-ei-fenthyca\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"6qfU2KA4lxEU4rWuPFCNGQvwnZfbZsujiRO4FWHCrkM=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/tools/sut-i-bennu-nod-cynilo\">Sut
+        mae gosod nod cynilo</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"sut-i-bennu-nod-cynilo\" data-article-type=\"tool\" id=\"email_me_sut-i-bennu-nod-cynilo\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        method=\"post\" name=\"tool_sut-i-bennu-nod-cynilo\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Ychwanegu
+        i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"6qfU2KA4lxEU4rWuPFCNGQvwnZfbZsujiRO4FWHCrkM=\" /></div></form>
+        </div></p><h2>Cymorth y llywodraeth os oes gennych flaendal bach neu os ydych
+        ar incwm isel </h2><p>Os ydych chi ar incwm isel, ac yn ceisio prynu eich
+        cartref cyntaf neu rydych chi\u2019n weithiwr allweddol, mae llawer o gynlluniau
+        ar gael sy\u2019n caniat\u00e1u i chi ran-rentu/rhan-brynu eich cartref er
+        mwyn ei brynu yn gyfan gwbl yn raddol dros amser. </p><p>Hefyd mae cynlluniau
+        a all eich helpu os gallwch fforddio blaendal bach yn unig. Dilynwch y ddolen
+        isod i ddysgu mwy. </p><ul><li><a href=\"/cy/categories/affordable-housing-schemes\">Cynlluniau
+        tai fforddiadwy</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:38 GMT
+  recorded_at: Tue, 27 May 2014 15:05:05 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
@@ -174,7 +169,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 78706e9b-37cc-46e6-8803-8b6aa0a5a7cc
+      - 7fe7fb4f-7d94-4981-b72d-b95da2ae404e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -187,7 +182,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:38 GMT
+      - Tue, 27 May 2014 15:05:05 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -208,16 +203,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - bf2f9a7b4b367ea27c06668bb3d8eb84
+      - ba21645fb68d05517a72a16060a6ba93
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:38 GMT; secure
-      - _session_id=bf2f9a7b4b367ea27c06668bb3d8eb84; path=/; secure; HttpOnly
-      - _web_tracking=2da41d21fac9498ffeebe7647e8234a1; path=/; expires=Tue, 28-Apr-2015
-        13:44:38 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:05 GMT; secure
+      - _session_id=ba21645fb68d05517a72a16060a6ba93; path=/; secure; HttpOnly
+      - _web_tracking=3de7641e75d97a4f7dc73c76df6b5aae; path=/; expires=Wed, 27-May-2015
+        15:05:05 GMT; secure
       X-Request-Id:
-      - 78706e9b-37cc-46e6-8803-8b6aa0a5a7cc
+      - 7fe7fb4f-7d94-4981-b72d-b95da2ae404e
       X-Runtime:
-      - '0.047036'
+      - '0.030710'
       X-Rack-Cache:
       - miss
       P3p:
@@ -287,12 +282,12 @@ http_interactions:
         </p><p>Gallwch gael rhagor o wybodaeth ar ddarparwyr morgeisi sy\u2019n cymryd
         rhan a chymhwysedd ar y <a title=\"Gwefan Cymorth i Brynu\" target=\"_blank\"
         data-link-type=\"external\" href=\"http://www.helptobuy.org.uk\">wefan Cymorth
-        i Brynu</a>. </p>","categories":["affordable-housing-schemes"]}'
+        i Brynu</a>. </p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:39 GMT
+  recorded_at: Tue, 27 May 2014 15:05:05 GMT
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu.json
     body:
       encoding: US-ASCII
       string: ''
@@ -300,7 +295,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -313,7 +308,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:38 GMT
+      - Tue, 27 May 2014 15:05:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -325,32 +320,25 @@ http_interactions:
       Status:
       - 200 OK
       Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
+      - <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?",
+        <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?"
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 5bf8d2535295a20096f8cac725f8214f
+      - ef648627c7917aa2c1c2053c88ae6729
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:38 GMT; secure
-      - _session_id=5bf8d2535295a20096f8cac725f8214f; path=/; secure; HttpOnly
-      - _web_tracking=410aa5789c9afe91e5f7a2146152d414; path=/; expires=Tue, 28-Apr-2015
-        13:44:38 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:06 GMT; secure
+      - _session_id=ef648627c7917aa2c1c2053c88ae6729; path=/; secure; HttpOnly
+      - _web_tracking=a427acf3963e3ac6175acba8510d5618; path=/; expires=Wed, 27-May-2015
+        15:05:06 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       X-Runtime:
-      - '0.038612'
+      - '0.045403'
       X-Rack-Cache:
       - miss
       P3p:
@@ -359,104 +347,106 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"F8UhIeYoeqa7QiPW37EgqVi1rvZVEU3rb5Hpgd6hb/4=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"F8UhIeYoeqa7QiPW37EgqVi1rvZVEU3rb5Hpgd6hb/4=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+      string: '{"id":"a-ddylech-chi-rentu-neu-brynu","title":"A ddylech chi rentu
+        neu brynu?","description":"Fedrwch chi fforddio prynu eiddo a, hyd yn oed
+        os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n well i chi
+        rentu yn lle hynny?","body":"<html><body><p class=\"intro\"><img src=\"/images/should-you-rent-or-buy.jpg\"/>Mae\u2019n
+        debygol mai prynu eiddo yw\u2019r penderfyniad ariannol mwyaf y bydd rhaid
+        i chi fyth ei wneud. Sut gallwch chi wybod a ydych chi\u2019n gwneud y penderfyniad
+        iawn ar hyn o bryd \u2013 neu a fuasai hi\u2019n well i chi rentu yn lle hynny?
+        </p><h2>Pethau i\u2019w pwyso a\u2019u mesur os nad ydych chi\u2019n sicr
+        pa un ai prynu ynteu rentu </h2><p>Mae bod yn berchen ar eich t\u0177 eich
+        hun yn ymrwymiad mawr, nid dim ond i\u2019r adeilad rydych chi\u2019n ei brynu
+        ac i\u2019r ardal rydych chi\u2019n dewis byw ynddi, ond hefyd i\u2019ch bywyd
+        (a hefyd i berson arall os ydych chi\u2019n prynu gyda rhywun sy\u2019n annwyl
+        i chi neu ffrind). </p><h3>Y manteision o fod yn berchennog ar eich cartref
+        </h3><p>Mae llawer o fanteision i fod yn berchennog ar eich cartref. Dyma
+        rai ohonynt yn unig. </p><ul><li>Unwaith rydych chi wedi talu eich morgais,
+        chi biau eich cartref a gallai fod werth llawer mwy nag y gwnaethoch dalu
+        amdano. </li></ul><ul><li>Os yw gwerth eich cartref yn codi gallwch ddefnyddio\u2019r
+        ecwiti hwnnw i\u2019ch helpu i fforddio cartref mwy neu i ariannu ymddeoliad
+        mwy cyfforddus os ydych chi\u2019n prynu cartref llai. </li></ul><ul><li>Pan
+        fyddwch chi\u2019n ymddeol ni fydd yr incwm gennych o reidrwydd i ddal ati
+        i dalu rhent \u2013 os ydych wedi talu eich morgais fe fyddwch yn byw yn \u2018ddi-rent\u2019.
+        </li></ul><ul><li>Gallwch dalu arian ar wella eich cartref a chodi ei werth,
+        ond ni allwch newid cartref sy\u2019n cael ei rentu heb ganiat\u00e2d y landlord.
+        </li></ul><ul><li>Weithiau gall fod yn rhatach i brynu nag i rentu.</li></ul><h3>Anfanteision
+        posibl o fod yn berchennog </h3><ul><li>Mae\u2019n ymrwymiad ariannol mawr
+        \u2013 bydd arnoch angen bod yn sicr eich bod yn gallu fforddio\u2019r hyn
+        rydych chi\u2019n ymgymryd ag ef. Gweler yr adran ddiweddarach \u2018Allwch
+        chi fforddio prynu?\u2019 </li></ul><ul><li>Bydd arnoch angen bod yn sicr
+        hefyd y gallwch fforddio costau cynnal a chadw, fel newid boeler os bydd yn
+        torri neu drwsio to sy\u2019n gollwng. Os ydych chi\u2019n ymestyn eich hun
+        yn ormodol wrth brynu efallai y byddwch chi\u2019n teimlo\u2019n ddig am nad
+        oes gennych arian i fynd allan am bryd o fwyd, gwyliau ac adloniant. </li></ul><ul><li>Mae
+        gennych chi lai o hyblygrwydd na phan ydych chi\u2019n rhentu. Er enghraifft,
+        os ydych chi am symud oherwydd rhesymau gwaith neu resymau personol, mae gwerthu
+        a symud ymlaen yn llawer mwy costus os ydych chi\u2019n berchen ar eich t\u0177
+        gan y bydd gennych yr holl ff\u00efoedd sy\u2019n gysylltiedig \u00e2\u2019r
+        swyddfa gwerthu tai a\u2019r ff\u00efoedd cyfreithiol. Hefyd cofiwch nad yw
+        bob amser yn hawdd gwerthu eich cartref \u2013 fe fyddwch yn ddibynnol ar
+        yr hyn sy\u2019n digwydd yn y farchnad. </li></ul><ul><li>Os ydych chi\u2019n
+        byw gyda rhywun arall ac yn gwahanu, bydd y broses o roi trefn ar yr eiddo
+        yn llawer mwy cymhleth a chostus.</li></ul><h2>A ydych chi\u2019n well eich
+        byd yn prynu neu\u2019n rhentu? </h2><p>Dydych chi ddim o reidrwydd yn mynd
+        i fod yn well eich byd yn ariannol yn prynu nag yn rhentu eich cartref. </p><p>Os
+        yw gwerth eich eiddo yn gostwng, efallai na fyddwch yn medru gwerthu am fod
+        arnoch chi fwy o arian na gwerth eich cartref i\u2019ch benthyciwr morgais.
+        </p><p>Ar y llaw arall, os yw prisiau tai yn codi, fe allech wneud elw da
+        a allai eich helpu i symud i gartref mwy neu roi cyfandaliad i chi os ydych
+        yn dewis symud i le llai yn hwyrach yn eich bywyd.\u00a0 </p><h2>Allwch chi
+        fforddio prynu? </h2><p>Y cam cyntaf tuag at brynu eiddo yw darganfod a allwch
+        chi fforddio gwneud hynny. Mae llawer o gostau yn gysylltiedig \u00e2 phrynu
+        eich t\u0177 eich hun, y tu hwnt i\u2019ch ad-daliadau morgais, gan gynnwys:
+        </p><ul><li>blaendal </li></ul><ul><li>costau cyfreithiol fel ff\u00efoedd
+        y cyfreithiwr </li></ul><ul><li>cost gwneud arolwg </li></ul><ul><li>Treth
+        Stamp </li></ul><ul><li>costau ymfudo, a hefyd </li></ul><ul><li>eich biliau
+        misol \u2013 fel nwy, trydan, ff\u00f4n cartref, ac ati.</li></ul><p>Defnyddiwch
+        y dolenni isod i gael gwell syniad o\u2019ch costau tebygol. </p><p>Os nad
+        yw prynu yn ddewis i chi ar hyn o bryd, meddyliwch am gychwyn cynllun cynilo
+        i gyrraedd eich nod yn y dyfodol. </p><p><div class=\"add-action\"><a href=\"/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">Amcangyfrifwch
+        eich holl gostau prynu a symud</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" data-article-type=\"guide\"
+        id=\"email_me_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        method=\"post\" name=\"guide_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"F8UhIeYoeqa7QiPW37EgqVi1rvZVEU3rb5Hpgd6hb/4=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
+        type=\"hidden\" value=\"n8zq4Vu3+andbZXlrr+i3ZSZRw/LytVZvYZJyQwBl1Y=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca\">Faint
+        allwch chi fforddio ei fenthyg?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"faint-allwch-chi-fforddio-ei-fenthyca\" data-article-type=\"guide\"
+        id=\"email_me_faint-allwch-chi-fforddio-ei-fenthyca\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        method=\"post\" name=\"guide_faint-allwch-chi-fforddio-ei-fenthyca\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"n8zq4Vu3+andbZXlrr+i3ZSZRw/LytVZvYZJyQwBl1Y=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/tools/sut-i-bennu-nod-cynilo\">Sut
+        mae gosod nod cynilo</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"sut-i-bennu-nod-cynilo\" data-article-type=\"tool\" id=\"email_me_sut-i-bennu-nod-cynilo\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        method=\"post\" name=\"tool_sut-i-bennu-nod-cynilo\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Ychwanegu
+        i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"n8zq4Vu3+andbZXlrr+i3ZSZRw/LytVZvYZJyQwBl1Y=\" /></div></form>
+        </div></p><h2>Cymorth y llywodraeth os oes gennych flaendal bach neu os ydych
+        ar incwm isel </h2><p>Os ydych chi ar incwm isel, ac yn ceisio prynu eich
+        cartref cyntaf neu rydych chi\u2019n weithiwr allweddol, mae llawer o gynlluniau
+        ar gael sy\u2019n caniat\u00e1u i chi ran-rentu/rhan-brynu eich cartref er
+        mwyn ei brynu yn gyfan gwbl yn raddol dros amser. </p><p>Hefyd mae cynlluniau
+        a all eich helpu os gallwch fforddio blaendal bach yn unig. Dilynwch y ddolen
+        isod i ddysgu mwy. </p><ul><li><a href=\"/cy/categories/affordable-housing-schemes\">Cynlluniau
+        tai fforddiadwy</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:39 GMT
+  recorded_at: Tue, 27 May 2014 15:05:06 GMT
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu.json
     body:
       encoding: US-ASCII
       string: ''
@@ -464,7 +454,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -477,7 +467,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:40 GMT
+      - Tue, 27 May 2014 15:05:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -489,32 +479,25 @@ http_interactions:
       Status:
       - 200 OK
       Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
+      - <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?",
+        <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?"
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c117f604bffa76ef14bbb07f951228b6
+      - 5ba227b8d70eccfb6b0e24a1415f0071
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:40 GMT; secure
-      - _session_id=c117f604bffa76ef14bbb07f951228b6; path=/; secure; HttpOnly
-      - _web_tracking=05965178f23b40d864b8296dce73babd; path=/; expires=Tue, 28-Apr-2015
-        13:44:40 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:06 GMT; secure
+      - _session_id=5ba227b8d70eccfb6b0e24a1415f0071; path=/; secure; HttpOnly
+      - _web_tracking=1ddafb5d446e9c828d6a3088ce64a08c; path=/; expires=Wed, 27-May-2015
+        15:05:06 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       X-Runtime:
-      - '0.040354'
+      - '0.060880'
       X-Rack-Cache:
       - miss
       P3p:
@@ -523,104 +506,106 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"2F1epWdbQwMR8dfSraHOrIqkLmiu01DudCLAxvUHtXI=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"2F1epWdbQwMR8dfSraHOrIqkLmiu01DudCLAxvUHtXI=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+      string: '{"id":"a-ddylech-chi-rentu-neu-brynu","title":"A ddylech chi rentu
+        neu brynu?","description":"Fedrwch chi fforddio prynu eiddo a, hyd yn oed
+        os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n well i chi
+        rentu yn lle hynny?","body":"<html><body><p class=\"intro\"><img src=\"/images/should-you-rent-or-buy.jpg\"/>Mae\u2019n
+        debygol mai prynu eiddo yw\u2019r penderfyniad ariannol mwyaf y bydd rhaid
+        i chi fyth ei wneud. Sut gallwch chi wybod a ydych chi\u2019n gwneud y penderfyniad
+        iawn ar hyn o bryd \u2013 neu a fuasai hi\u2019n well i chi rentu yn lle hynny?
+        </p><h2>Pethau i\u2019w pwyso a\u2019u mesur os nad ydych chi\u2019n sicr
+        pa un ai prynu ynteu rentu </h2><p>Mae bod yn berchen ar eich t\u0177 eich
+        hun yn ymrwymiad mawr, nid dim ond i\u2019r adeilad rydych chi\u2019n ei brynu
+        ac i\u2019r ardal rydych chi\u2019n dewis byw ynddi, ond hefyd i\u2019ch bywyd
+        (a hefyd i berson arall os ydych chi\u2019n prynu gyda rhywun sy\u2019n annwyl
+        i chi neu ffrind). </p><h3>Y manteision o fod yn berchennog ar eich cartref
+        </h3><p>Mae llawer o fanteision i fod yn berchennog ar eich cartref. Dyma
+        rai ohonynt yn unig. </p><ul><li>Unwaith rydych chi wedi talu eich morgais,
+        chi biau eich cartref a gallai fod werth llawer mwy nag y gwnaethoch dalu
+        amdano. </li></ul><ul><li>Os yw gwerth eich cartref yn codi gallwch ddefnyddio\u2019r
+        ecwiti hwnnw i\u2019ch helpu i fforddio cartref mwy neu i ariannu ymddeoliad
+        mwy cyfforddus os ydych chi\u2019n prynu cartref llai. </li></ul><ul><li>Pan
+        fyddwch chi\u2019n ymddeol ni fydd yr incwm gennych o reidrwydd i ddal ati
+        i dalu rhent \u2013 os ydych wedi talu eich morgais fe fyddwch yn byw yn \u2018ddi-rent\u2019.
+        </li></ul><ul><li>Gallwch dalu arian ar wella eich cartref a chodi ei werth,
+        ond ni allwch newid cartref sy\u2019n cael ei rentu heb ganiat\u00e2d y landlord.
+        </li></ul><ul><li>Weithiau gall fod yn rhatach i brynu nag i rentu.</li></ul><h3>Anfanteision
+        posibl o fod yn berchennog </h3><ul><li>Mae\u2019n ymrwymiad ariannol mawr
+        \u2013 bydd arnoch angen bod yn sicr eich bod yn gallu fforddio\u2019r hyn
+        rydych chi\u2019n ymgymryd ag ef. Gweler yr adran ddiweddarach \u2018Allwch
+        chi fforddio prynu?\u2019 </li></ul><ul><li>Bydd arnoch angen bod yn sicr
+        hefyd y gallwch fforddio costau cynnal a chadw, fel newid boeler os bydd yn
+        torri neu drwsio to sy\u2019n gollwng. Os ydych chi\u2019n ymestyn eich hun
+        yn ormodol wrth brynu efallai y byddwch chi\u2019n teimlo\u2019n ddig am nad
+        oes gennych arian i fynd allan am bryd o fwyd, gwyliau ac adloniant. </li></ul><ul><li>Mae
+        gennych chi lai o hyblygrwydd na phan ydych chi\u2019n rhentu. Er enghraifft,
+        os ydych chi am symud oherwydd rhesymau gwaith neu resymau personol, mae gwerthu
+        a symud ymlaen yn llawer mwy costus os ydych chi\u2019n berchen ar eich t\u0177
+        gan y bydd gennych yr holl ff\u00efoedd sy\u2019n gysylltiedig \u00e2\u2019r
+        swyddfa gwerthu tai a\u2019r ff\u00efoedd cyfreithiol. Hefyd cofiwch nad yw
+        bob amser yn hawdd gwerthu eich cartref \u2013 fe fyddwch yn ddibynnol ar
+        yr hyn sy\u2019n digwydd yn y farchnad. </li></ul><ul><li>Os ydych chi\u2019n
+        byw gyda rhywun arall ac yn gwahanu, bydd y broses o roi trefn ar yr eiddo
+        yn llawer mwy cymhleth a chostus.</li></ul><h2>A ydych chi\u2019n well eich
+        byd yn prynu neu\u2019n rhentu? </h2><p>Dydych chi ddim o reidrwydd yn mynd
+        i fod yn well eich byd yn ariannol yn prynu nag yn rhentu eich cartref. </p><p>Os
+        yw gwerth eich eiddo yn gostwng, efallai na fyddwch yn medru gwerthu am fod
+        arnoch chi fwy o arian na gwerth eich cartref i\u2019ch benthyciwr morgais.
+        </p><p>Ar y llaw arall, os yw prisiau tai yn codi, fe allech wneud elw da
+        a allai eich helpu i symud i gartref mwy neu roi cyfandaliad i chi os ydych
+        yn dewis symud i le llai yn hwyrach yn eich bywyd.\u00a0 </p><h2>Allwch chi
+        fforddio prynu? </h2><p>Y cam cyntaf tuag at brynu eiddo yw darganfod a allwch
+        chi fforddio gwneud hynny. Mae llawer o gostau yn gysylltiedig \u00e2 phrynu
+        eich t\u0177 eich hun, y tu hwnt i\u2019ch ad-daliadau morgais, gan gynnwys:
+        </p><ul><li>blaendal </li></ul><ul><li>costau cyfreithiol fel ff\u00efoedd
+        y cyfreithiwr </li></ul><ul><li>cost gwneud arolwg </li></ul><ul><li>Treth
+        Stamp </li></ul><ul><li>costau ymfudo, a hefyd </li></ul><ul><li>eich biliau
+        misol \u2013 fel nwy, trydan, ff\u00f4n cartref, ac ati.</li></ul><p>Defnyddiwch
+        y dolenni isod i gael gwell syniad o\u2019ch costau tebygol. </p><p>Os nad
+        yw prynu yn ddewis i chi ar hyn o bryd, meddyliwch am gychwyn cynllun cynilo
+        i gyrraedd eich nod yn y dyfodol. </p><p><div class=\"add-action\"><a href=\"/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">Amcangyfrifwch
+        eich holl gostau prynu a symud</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" data-article-type=\"guide\"
+        id=\"email_me_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        method=\"post\" name=\"guide_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"2F1epWdbQwMR8dfSraHOrIqkLmiu01DudCLAxvUHtXI=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:43 GMT
+        type=\"hidden\" value=\"OuxV0dULlAFikKsCApqGLgfSsliVfkHbJxvMiV/I/Ww=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca\">Faint
+        allwch chi fforddio ei fenthyg?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"faint-allwch-chi-fforddio-ei-fenthyca\" data-article-type=\"guide\"
+        id=\"email_me_faint-allwch-chi-fforddio-ei-fenthyca\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        method=\"post\" name=\"guide_faint-allwch-chi-fforddio-ei-fenthyca\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"OuxV0dULlAFikKsCApqGLgfSsliVfkHbJxvMiV/I/Ww=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/tools/sut-i-bennu-nod-cynilo\">Sut
+        mae gosod nod cynilo</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"sut-i-bennu-nod-cynilo\" data-article-type=\"tool\" id=\"email_me_sut-i-bennu-nod-cynilo\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        method=\"post\" name=\"tool_sut-i-bennu-nod-cynilo\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Ychwanegu
+        i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"OuxV0dULlAFikKsCApqGLgfSsliVfkHbJxvMiV/I/Ww=\" /></div></form>
+        </div></p><h2>Cymorth y llywodraeth os oes gennych flaendal bach neu os ydych
+        ar incwm isel </h2><p>Os ydych chi ar incwm isel, ac yn ceisio prynu eich
+        cartref cyntaf neu rydych chi\u2019n weithiwr allweddol, mae llawer o gynlluniau
+        ar gael sy\u2019n caniat\u00e1u i chi ran-rentu/rhan-brynu eich cartref er
+        mwyn ei brynu yn gyfan gwbl yn raddol dros amser. </p><p>Hefyd mae cynlluniau
+        a all eich helpu os gallwch fforddio blaendal bach yn unig. Dilynwch y ddolen
+        isod i ddysgu mwy. </p><ul><li><a href=\"/cy/categories/affordable-housing-schemes\">Cynlluniau
+        tai fforddiadwy</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
+    http_version:
+  recorded_at: Tue, 27 May 2014 15:05:06 GMT
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu.json
     body:
       encoding: US-ASCII
       string: ''
@@ -628,7 +613,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -641,7 +626,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:43 GMT
+      - Tue, 27 May 2014 15:05:07 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -653,32 +638,25 @@ http_interactions:
       Status:
       - 200 OK
       Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
+      - <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?",
+        <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?"
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - de5cbf560d3e39c1a5b9c329b4851a3c
+      - aedfc88c3411cf3245ee2dbe982336e2
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:43 GMT; secure
-      - _session_id=de5cbf560d3e39c1a5b9c329b4851a3c; path=/; secure; HttpOnly
-      - _web_tracking=1b890c01305ac7c873b91d0308fd6aae; path=/; expires=Tue, 28-Apr-2015
-        13:44:43 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:07 GMT; secure
+      - _session_id=aedfc88c3411cf3245ee2dbe982336e2; path=/; secure; HttpOnly
+      - _web_tracking=4ccc6acde32e17529877263dbe9dfda5; path=/; expires=Wed, 27-May-2015
+        15:05:07 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       X-Runtime:
-      - '0.050219'
+      - '0.061122'
       X-Rack-Cache:
       - miss
       P3p:
@@ -687,265 +665,103 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"pNG55JoubYPNNTerb4NM/0ZmG5AgUzGZigzr1BqKql8=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"pNG55JoubYPNNTerb4NM/0ZmG5AgUzGZigzr1BqKql8=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+      string: '{"id":"a-ddylech-chi-rentu-neu-brynu","title":"A ddylech chi rentu
+        neu brynu?","description":"Fedrwch chi fforddio prynu eiddo a, hyd yn oed
+        os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n well i chi
+        rentu yn lle hynny?","body":"<html><body><p class=\"intro\"><img src=\"/images/should-you-rent-or-buy.jpg\"/>Mae\u2019n
+        debygol mai prynu eiddo yw\u2019r penderfyniad ariannol mwyaf y bydd rhaid
+        i chi fyth ei wneud. Sut gallwch chi wybod a ydych chi\u2019n gwneud y penderfyniad
+        iawn ar hyn o bryd \u2013 neu a fuasai hi\u2019n well i chi rentu yn lle hynny?
+        </p><h2>Pethau i\u2019w pwyso a\u2019u mesur os nad ydych chi\u2019n sicr
+        pa un ai prynu ynteu rentu </h2><p>Mae bod yn berchen ar eich t\u0177 eich
+        hun yn ymrwymiad mawr, nid dim ond i\u2019r adeilad rydych chi\u2019n ei brynu
+        ac i\u2019r ardal rydych chi\u2019n dewis byw ynddi, ond hefyd i\u2019ch bywyd
+        (a hefyd i berson arall os ydych chi\u2019n prynu gyda rhywun sy\u2019n annwyl
+        i chi neu ffrind). </p><h3>Y manteision o fod yn berchennog ar eich cartref
+        </h3><p>Mae llawer o fanteision i fod yn berchennog ar eich cartref. Dyma
+        rai ohonynt yn unig. </p><ul><li>Unwaith rydych chi wedi talu eich morgais,
+        chi biau eich cartref a gallai fod werth llawer mwy nag y gwnaethoch dalu
+        amdano. </li></ul><ul><li>Os yw gwerth eich cartref yn codi gallwch ddefnyddio\u2019r
+        ecwiti hwnnw i\u2019ch helpu i fforddio cartref mwy neu i ariannu ymddeoliad
+        mwy cyfforddus os ydych chi\u2019n prynu cartref llai. </li></ul><ul><li>Pan
+        fyddwch chi\u2019n ymddeol ni fydd yr incwm gennych o reidrwydd i ddal ati
+        i dalu rhent \u2013 os ydych wedi talu eich morgais fe fyddwch yn byw yn \u2018ddi-rent\u2019.
+        </li></ul><ul><li>Gallwch dalu arian ar wella eich cartref a chodi ei werth,
+        ond ni allwch newid cartref sy\u2019n cael ei rentu heb ganiat\u00e2d y landlord.
+        </li></ul><ul><li>Weithiau gall fod yn rhatach i brynu nag i rentu.</li></ul><h3>Anfanteision
+        posibl o fod yn berchennog </h3><ul><li>Mae\u2019n ymrwymiad ariannol mawr
+        \u2013 bydd arnoch angen bod yn sicr eich bod yn gallu fforddio\u2019r hyn
+        rydych chi\u2019n ymgymryd ag ef. Gweler yr adran ddiweddarach \u2018Allwch
+        chi fforddio prynu?\u2019 </li></ul><ul><li>Bydd arnoch angen bod yn sicr
+        hefyd y gallwch fforddio costau cynnal a chadw, fel newid boeler os bydd yn
+        torri neu drwsio to sy\u2019n gollwng. Os ydych chi\u2019n ymestyn eich hun
+        yn ormodol wrth brynu efallai y byddwch chi\u2019n teimlo\u2019n ddig am nad
+        oes gennych arian i fynd allan am bryd o fwyd, gwyliau ac adloniant. </li></ul><ul><li>Mae
+        gennych chi lai o hyblygrwydd na phan ydych chi\u2019n rhentu. Er enghraifft,
+        os ydych chi am symud oherwydd rhesymau gwaith neu resymau personol, mae gwerthu
+        a symud ymlaen yn llawer mwy costus os ydych chi\u2019n berchen ar eich t\u0177
+        gan y bydd gennych yr holl ff\u00efoedd sy\u2019n gysylltiedig \u00e2\u2019r
+        swyddfa gwerthu tai a\u2019r ff\u00efoedd cyfreithiol. Hefyd cofiwch nad yw
+        bob amser yn hawdd gwerthu eich cartref \u2013 fe fyddwch yn ddibynnol ar
+        yr hyn sy\u2019n digwydd yn y farchnad. </li></ul><ul><li>Os ydych chi\u2019n
+        byw gyda rhywun arall ac yn gwahanu, bydd y broses o roi trefn ar yr eiddo
+        yn llawer mwy cymhleth a chostus.</li></ul><h2>A ydych chi\u2019n well eich
+        byd yn prynu neu\u2019n rhentu? </h2><p>Dydych chi ddim o reidrwydd yn mynd
+        i fod yn well eich byd yn ariannol yn prynu nag yn rhentu eich cartref. </p><p>Os
+        yw gwerth eich eiddo yn gostwng, efallai na fyddwch yn medru gwerthu am fod
+        arnoch chi fwy o arian na gwerth eich cartref i\u2019ch benthyciwr morgais.
+        </p><p>Ar y llaw arall, os yw prisiau tai yn codi, fe allech wneud elw da
+        a allai eich helpu i symud i gartref mwy neu roi cyfandaliad i chi os ydych
+        yn dewis symud i le llai yn hwyrach yn eich bywyd.\u00a0 </p><h2>Allwch chi
+        fforddio prynu? </h2><p>Y cam cyntaf tuag at brynu eiddo yw darganfod a allwch
+        chi fforddio gwneud hynny. Mae llawer o gostau yn gysylltiedig \u00e2 phrynu
+        eich t\u0177 eich hun, y tu hwnt i\u2019ch ad-daliadau morgais, gan gynnwys:
+        </p><ul><li>blaendal </li></ul><ul><li>costau cyfreithiol fel ff\u00efoedd
+        y cyfreithiwr </li></ul><ul><li>cost gwneud arolwg </li></ul><ul><li>Treth
+        Stamp </li></ul><ul><li>costau ymfudo, a hefyd </li></ul><ul><li>eich biliau
+        misol \u2013 fel nwy, trydan, ff\u00f4n cartref, ac ati.</li></ul><p>Defnyddiwch
+        y dolenni isod i gael gwell syniad o\u2019ch costau tebygol. </p><p>Os nad
+        yw prynu yn ddewis i chi ar hyn o bryd, meddyliwch am gychwyn cynllun cynilo
+        i gyrraedd eich nod yn y dyfodol. </p><p><div class=\"add-action\"><a href=\"/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">Amcangyfrifwch
+        eich holl gostau prynu a symud</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" data-article-type=\"guide\"
+        id=\"email_me_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        method=\"post\" name=\"guide_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"pNG55JoubYPNNTerb4NM/0ZmG5AgUzGZigzr1BqKql8=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:44 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 28 Apr 2014 13:44:45 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0
-        aWNsZXMvY3lubGx1bi1oZWxwLWktYnJ5bnUtY2FlbC1nd3lib2QtcG9wZXRo
-        LXN5ZGQtZWktYW5nZW4tYXJub2NoPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZs
-        YW5nPSJjeS1HQiI7IHRpdGxlPSJDeW5sbHVuaWF1IEN5bW9ydGggaSBCcnlu
-        dSAtIGNhZWwgZ3d5Ym9kIHBvcGV0aCBzeWRkIGVpIGFuZ2VuIGFybm9jaCIs
-        IDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2Fy
-        dGljbGVzL2hlbHAtdG8tYnV5LXNjaGVtZS1ldmVyeXRoaW5nLXlvdS1uZWVk
-        LXRvLWtub3c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsg
-        dGl0bGU9IkhlbHAgdG8gQnV5IFNjaGVtZSDigJMgRXZlcnl0aGluZyB5b3Ug
-        bmVlZCB0byBrbm93Ig==
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - f4326d2cddc6f995dad311dbdf2e30ef
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:45 GMT; secure
-      - _session_id=f4326d2cddc6f995dad311dbdf2e30ef; path=/; secure; HttpOnly
-      - _web_tracking=21423e4e53341f5d5fa088c6f9cc0b44; path=/; expires=Tue, 28-Apr-2015
-        13:44:45 GMT; secure
-      X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
-      X-Runtime:
-      - '0.053992'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","title":"Cynlluniau
-        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
-        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
-        - mae ein canllaw yn datgelu popeth.","body":"<p class=\"intro\"><img src=\"/images/help-to-buy-schemes---everything-you-need-to-know.jpg\"/></p><p
-        class=\"intro\">Rydym yn egluro\u2019r hyn sydd angen ichi\u2019i wybod am
-        Gymorth i Brynu - cynlluniau\u2019r llywodraeth a anelir at brynwyr tro cyntaf
-        \u00e2 blaendaliadau isel a pherchnogion cyfredol ag ecwiti cyfyngedig. Darllenwch
-        ymlaen am ragor o wybodaeth am Gymorth i brynu. </p><h2>Beth yw Cymorth i
-        Brynu? </h2><p>Cymorth i Brynu - y ddau brif gynllun: </p><ul><li><strong>Benthyciadau
-        ecwiti</strong>, lle bydd y llywodraeth yn rhoi benthyciad ichi o hyd at bumed
-        rhan o werth t\u0177 sydd newydd ei adeiladu yn Lloegr.</li><li><strong>Gwarantau
-        morgais</strong> - mae\u2019r llywodraeth yn cytuno i sicrhau rhan o\u2019ch
-        morgais os oes gennych flaendal bach yn unig, gan dderbyn y risg ddiffygdalu
-        os byddwch yn methu \u00e2 chadw i fyny \u00e2\u2019ch taliadau. Gall yr eiddo
-        fod newydd ei adeiladu neu fod yn ail-law ac wedi\u2019i leoli yng Nghymru,
-        yr Alban neu Loegr.</li></ul><h2>Y cefndir i Cymorth i Brynu </h2><div class=\"callout\"><h3>A
-        WYDDOCH CHI </h3><p>Yn 1985, roedd prynwyr tro cyntaf angen blaendal o 5%
-        i brynu cartref - yn 2012 roedd hyn wedi cynyddu i 20% (Ffynhonnell: Trysorlys
-        Ei Mawrhydi) </p></div><p>Disgwylir y bydd Cymorth i Brynu yn cynorthwyo wrth
-        wneud yn iawn am y prinder yn nifer y cynhyrchion benthyciad-i-werth uwch
-        sydd ar gael. </p><p>Er ei fod o hyd yn bosibl ar brydiau i bobl \u00e2 blaendal
-        o 5% yn unig gychwyn ar yr ysgol eiddo, roedd y llywodraeth yn teimlo y dylai
-        bod mwy o gystadleuaeth rhwng darparwyr morgeisi er mwyn rhoi mwy o ddewis
-        i brynwyr cartrefi. </p><p>Hefyd mae cyfraddau cynilo a chodiadau cyflog ymhell
-        islaw\u2019r gyfradd chwyddiant, yn ei wneud yn anos i brynwyr gynilo blaendal.
-        </p><p>Mae\u2019r codiadau cyfredol ym mhrisiau tai yn rhoi rheswm mawr arall
-        dros gyflwyno\u2019r cynllun.</p><p>Hyd yn hyn mae Cymorth i Brynu wedi bod
-        yn llwyddiannus iawn, gan ei roi ar y trywydd iawn i gwrdd \u00e2 tharged
-        y llywodraeth o 74,000 o gartrefi erbyn 2016. </p><p></p><h2>Rhestr wirio
-        Cymorth i Brynu </h2><table class=\"datatable-default\"><thead><tr><th>Benthyciadau
-        ecwiti</th><th>Gwarantau morgais</th></tr></thead><tbody><tr><td>Eiddo newydd
-        eu hadeiladu</td><td>Eiddo newydd eu hadeiladu ac ail-law</td></tr><tr><td>Isafswm
-        blaendal 5%</td><td>Isafswm blaendal 5%</td></tr><tr><td>Benthyciad y llywodraeth
-        hyd at 20%</td><td>Gwarant y llywodraeth i ddarparwr y morgais</td></tr><tr><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000 (\u00a3400,000 yn yr Alban)</td><td>Uchafswm
-        gwerth yr eiddo \u00a3600,000</td></tr><tr><td>Prynwyr tro cyntaf a symudwyr
-        cartref</td><td>Prynwyr tro cyntaf a symudwyr cartref</td></tr><tr><td>Dim
-        ar gyfer eiddo prynu-i-osod neu ail-gartrefi</td><td>Dim ar gyfer eiddo prynu-i-osod
-        neu ail-gartrefi</td></tr><tr><td>Angen profi fforddiadwyedd i\u2019r benthyciwr</td><td>Angen
-        profi fforddiadwyedd i\u2019r benthyciwr</td></tr><tr><td>Ymgeisio trwy asiant
-        Help i Brynu neu adeiladwr tai</td><td>Ymgeisio trwy ddarparwr morgais</td></tr><tr><td>Ar
-        gael yn Lloegr (mae\u2019r Alban yn cynnig cynllun tebyg)</td><td>Ar gael
-        ledled y Deyrnas Unedig</td></tr><tr><td>Benthyciad y llywodraeth, di-log
-        am 5 mlynedd</td><td/></tr></tbody></table><p>Dechreuodd y cynllun benthyciad
-        ecwiti Cymorth i Brynu yn Ebrill 2013 a bydd yn rhedeg tan 2020. Dechreuodd
-        y cynllun gwarantu morgais ym mis Hydref 2013 a disgwylir y bydd yn rhedeg
-        am dair blynedd er y gellid ei dynnu\u2019n \u00f4l yn gynharach. </p><p><div
-        class=\"add-action\"><span class=\"action-text\"><a target=\"_blank\" href=\"
-        http://www.helptobuy.org.uk/\">Dysgwch fwy ar wefan Help i Brynu</a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1543\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1543\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1543\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1543\"
-        method=\"post\" name=\"1543\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"1W0ytGDGzm3zF0joPdXBUVMmXWeFLgbSzxO59wBca5I=\"
-        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
-        target=\"_blank\" href=\"https://www.gov.uk/affordable-home-ownership-schemes/help-to-buy-mortgage-guarantees\"></a></span>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"1544\" data-article-id=\"\"
-        data-article-type=\"\" id=\"email_me_1544\" tabindex=\"0\">E-bostio hwn <span
-        class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/external?external_action_id=1544\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/external?external_action_id=1544\"
-        method=\"post\" name=\"1544\"><div><input class=\"action-submit\" data-action-event=\"add\"
-        tabindex=\"0\" type=\"submit\" value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w
-        cyflawni\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"1W0ytGDGzm3zF0joPdXBUVMmXWeFLgbSzxO59wBca5I=\"
-        /></div></form> </div></p><h2>Cynllun Gwarantu Morgais - ffeithiau allweddol
-        </h2><p>Os ydych yn ystyried gwneud cais am y cynllun gwarantu morgais Cymorth
-        i Brynu bydd angen ichi ystyried y dilynol: </p><ul><li>Bydd angen i fenthycwyr
-        basio gwiriadau fforddiadwyedd gyda darparwyr morgeisi, gan gynnwys \u2018prawf
-        pwysau\u2019 cyfradd llog.\u00a0Mae hyn yn amrywio yn \u00f4l darparwr y morgais,
-        ond fel arfer mae\u2019n golygu y bydd darparwr y morgais yn gwirio y byddwch
-        yn parhau i fedru gwneud y taliadau os bydd cyfraddau llog yn codi.</li><li>Bydd
-        angen i fenthycwyr ddatgan nad oes ganddynt ddiddordeb mewn unrhyw eiddo arall
-        ledled y byd, neu na fydd ganddynt erbyn iddynt gwblhau ar gynnyrch morgais
-        cynllun gwarantu morgais.</li><li>Mae meini prawf benthyca\u2019r llywodraeth
-        yn caniat\u00e1u am rai problemau credyd bach yn y gorffennol, ond bydd angen
-        ichi basio gwiriadau credyd darparwr y morgais o hyd.</li><li>Mae angen i
-        fenthycwyr gael ernes o 5% o leiaf, a\u2019r gallu i dalu am gostau gan gynnwys
-        e.e. Treth Stamp ac unrhyw gostau cyfreithiol a phrisio.</li><li>Os ydych
-        am osod yr eiddo rydych chi\u2019n mynd i\u2019w brynu, nid yw\u2019r cynlluniauCymorth
-        i Brynu\u2019n addas i chi.</li></ul><h2>Cymorth i Brynu - am wybod rhagor?
-        </h2><p><div class=\"add-action\"><a href=\"/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">Chwilio
-        am ddewisiadau eraill? Darllenwch ein canllaw HomeBuy, a chynlluniau tai eraill</a>
-        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        data-article-type=\"guide\" id=\"email_me_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"
-        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
-        action=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch&amp;article_type=guide\"
-        method=\"post\" name=\"guide_cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\"><div><input
+        type=\"hidden\" value=\"fRie+yHx9BUe/Ah2Vow869gH7YMpGdwUW597bzd8+Ec=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca\">Faint
+        allwch chi fforddio ei fenthyg?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"faint-allwch-chi-fforddio-ei-fenthyca\" data-article-type=\"guide\"
+        id=\"email_me_faint-allwch-chi-fforddio-ei-fenthyca\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        method=\"post\" name=\"guide_faint-allwch-chi-fforddio-ei-fenthyca\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
-        type=\"hidden\" value=\"1W0ytGDGzm3zF0joPdXBUVMmXWeFLgbSzxO59wBca5I=\" /></div></form>
-        </div></p>","categories":["affordable-housing-schemes"]}'
-    http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:46 GMT
+        type=\"hidden\" value=\"fRie+yHx9BUe/Ah2Vow869gH7YMpGdwUW597bzd8+Ec=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/tools/sut-i-bennu-nod-cynilo\">Sut
+        mae gosod nod cynilo</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"sut-i-bennu-nod-cynilo\" data-article-type=\"tool\" id=\"email_me_sut-i-bennu-nod-cynilo\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        method=\"post\" name=\"tool_sut-i-bennu-nod-cynilo\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Ychwanegu
+        i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"fRie+yHx9BUe/Ah2Vow869gH7YMpGdwUW597bzd8+Ec=\" /></div></form>
+        </div></p><h2>Cymorth y llywodraeth os oes gennych flaendal bach neu os ydych
+        ar incwm isel </h2><p>Os ydych chi ar incwm isel, ac yn ceisio prynu eich
+        cartref cyntaf neu rydych chi\u2019n weithiwr allweddol, mae llawer o gynlluniau
+        ar gael sy\u2019n caniat\u00e1u i chi ran-rentu/rhan-brynu eich cartref er
+        mwyn ei brynu yn gyfan gwbl yn raddol dros amser. </p><p>Hefyd mae cynlluniau
+        a all eich helpu os gallwch fforddio blaendal bach yn unig. Dilynwch y ddolen
+        isod i ddysgu mwy. </p><ul><li><a href=\"/cy/categories/affordable-housing-schemes\">Cynlluniau
+        tai fforddiadwy</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
+    http_version:
+  recorded_at: Tue, 27 May 2014 15:05:07 GMT
 - request:
     method: get
     uri: https://www.moneyadviceservice.org.uk/cy/articles/cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin.json
@@ -956,7 +772,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -969,7 +785,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Apr 2014 13:44:46 GMT
+      - Tue, 27 May 2014 15:05:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -990,16 +806,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 0304a60de0932c501bb698d1b16c3735
+      - f73557de65aaef4cdc314dc90649bae9
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Tue, 28-Apr-2015 13:44:46 GMT; secure
-      - _session_id=0304a60de0932c501bb698d1b16c3735; path=/; secure; HttpOnly
-      - _web_tracking=d6a5d01adb4d9c3aa51b11c6ba06b0b1; path=/; expires=Tue, 28-Apr-2015
-        13:44:46 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 27-May-2015 15:05:08 GMT; secure
+      - _session_id=f73557de65aaef4cdc314dc90649bae9; path=/; secure; HttpOnly
+      - _web_tracking=600d0bc205ff5e40e757d08dba65d44d; path=/; expires=Wed, 27-May-2015
+        15:05:08 GMT; secure
       X-Request-Id:
-      - 5c0eaa4d-3cb3-4540-af00-9c810bb11bc4
+      - e76fbb64-0cbb-4373-8254-2f28a0dc44e9
       X-Runtime:
-      - '0.032469'
+      - '0.056849'
       X-Rack-Cache:
       - miss
       P3p:
@@ -1069,7 +885,7 @@ http_interactions:
         </p><p>Gallwch gael rhagor o wybodaeth ar ddarparwyr morgeisi sy\u2019n cymryd
         rhan a chymhwysedd ar y <a title=\"Gwefan Cymorth i Brynu\" target=\"_blank\"
         data-link-type=\"external\" href=\"http://www.helptobuy.org.uk\">wefan Cymorth
-        i Brynu</a>. </p>","categories":["affordable-housing-schemes"]}'
+        i Brynu</a>. </p>","categories":["buying-a-home"]}'
     http_version: 
-  recorded_at: Mon, 28 Apr 2014 13:44:46 GMT
+  recorded_at: Tue, 27 May 2014 15:05:08 GMT
 recorded_with: VCR 2.9.0

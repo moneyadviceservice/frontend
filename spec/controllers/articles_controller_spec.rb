@@ -1,13 +1,19 @@
+require 'spec_helper'
+require 'core/interactors/category_parents_reader'
 require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do
   describe 'GET show' do
-    let(:article) { instance_double(Core::Article, id: 'test') }
-    let(:article_reader) { instance_double(Core::ArticleReader, call: article) }
+    let(:categories) { [] }
+    let(:parents) { [] }
+    let(:article) { Core::Article.new('test', categories: categories ) }
+    let(:article_reader) { double(Core::ArticleReader, call: article) }
+    let(:category_parent_reader) { double(Core::CategoryParentsReader, call: parents) }
 
     context 'when an article does exist' do
       before do
         allow(Core::ArticleReader).to receive(:new) { article_reader }
+        allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
       end
 
       it 'is successful' do
@@ -28,6 +34,34 @@ RSpec.describe ArticlesController, :type => :controller do
         get :show, locale: I18n.locale, id: article.id
 
         expect(assigns(:article)).to eq(article)
+      end
+
+      context 'when an article belongs to one category' do
+        let(:category) { double }
+        let(:categories) { [category] }
+        let(:parents) { [double] }
+
+        it 'assigns category hierarchy' do
+          get :show, locale: I18n.locale, id: article.id
+
+          expect(assigns(:category_hierarchy)).to eq(parents + [category])
+        end
+
+        specify "category hierarchy contains article's category" do
+          get :show, locale: I18n.locale, id: article.id
+
+          expect(assigns(:category_hierarchy)).to include(category)
+        end
+      end
+
+      context 'when an article belongs to many categories' do
+        let(:categories) { [double, double] }
+
+        it 'category hierarchy is empty' do
+          get :show, locale: I18n.locale, id: article.id
+
+          expect(assigns(:category_hierarchy)).to eq([])
+        end
       end
     end
 

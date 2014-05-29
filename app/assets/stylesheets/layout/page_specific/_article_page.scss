@@ -3,25 +3,6 @@
   margin-bottom: $baseline-unit*4;
 }
 
-.l-article-intro {
-  padding-bottom: $baseline-unit*3;
-}
-
-@include respond-to(0, $mq-m) {
-
-  .l-article-intro,
-  .l-article hr,
-  .l-article .related-categories,
-  .l-article-main,
-  .l-article .related-links {
-    @include column(12);
-  }
-
-  .l-article .related-links {
-    margin-bottom: $baseline-unit*3;
-  }
-}
-
 @include respond-to($mq-m, $mq-l) {
 
   .l-article-intro,
@@ -30,7 +11,17 @@
     @include push(3);
   }
 
-  .l-hr-article-intro {
+  .l-article .related-categories {
+    @include column(3);
+  }
+
+  .l-article-main {
+    @include column(9);
+    @include push(3);
+  }
+
+  .l-hr-article-intro,
+  .l-hr-article-related-links {
     @include column(12);
   }
 
@@ -67,6 +58,7 @@
 
   .l-article-main {
     @include column(7);
+    @include push(2);
   }
 
   .l-article .related-links {

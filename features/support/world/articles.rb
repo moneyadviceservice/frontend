@@ -22,9 +22,9 @@ module World
     def article_id_for_locale(locale)
       case locale
       when 'en'
-        'help-to-buy-scheme-everything-you-need-to-know'
+        'should-you-rent-or-buy'
       when 'cy'
-        'cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch'
+        'a-ddylech-chi-rentu-neu-brynu'
       end
     end
 
@@ -47,17 +47,46 @@ module World
       retrieve_article_for_locale(id, locale)
     end
 
+    def single_article
+      article = article_for_locale('en')
+
+      build(:article_hash, id: article.id, title: article.title)
+    end
+
     def category_containing_articles(locale)
       article = article_for_locale(locale)
       alternate = alternate_article_for_locale(locale)
 
       build(:category_hash,
-        id: 'affordable-housing-schemes',
+        id: 'buying-a-home',
         contents: [
           build(:article_hash, id: article.id, title: article.title),
           build(:article_hash, id: alternate.id, title: alternate.title),
         ]
       )
+    end
+
+    def multiple_categories_containing_an_article(locale)
+      article = article_for_locale(locale)
+      alternate = alternate_article_for_locale(locale)
+
+      [
+        build(:category_hash,
+          id: 'buying-a-home',
+          contents: [
+            build(:article_hash, id: article.id, title: article.title),
+            build(:article_hash, id: alternate.id, title: alternate.title),
+          ]
+        ),
+
+        build(:category_hash,
+          id: 'renting-and-letting',
+          contents: [
+            build(:article_hash, id: article.id, title: article.title),
+            build(:article_hash, id: alternate.id, title: alternate.title),
+          ]
+        )
+      ]
     end
 
     private

@@ -4,11 +4,13 @@ module Core
   RSpec.describe Article do
     subject { described_class.new(double, attributes) }
 
+    let(:categories) { [] }
     let(:attributes) do
       { title:       double,
         description: double,
         body:        double,
-        alternates:  [{ title: double, url: double, hreflang: double }]
+        alternates:  [{ title: double, url: double, hreflang: double }],
+        categories:  categories
       }
     end
 
@@ -53,6 +55,24 @@ module Core
 
       it 'assigns alternate hreflang' do
         expect(subject.alternates.first.hreflang).to eq(hreflang)
+      end
+    end
+
+    describe '#one_parent?' do
+      context 'when article has more than one category' do
+        let(:categories) { [double, double] }
+
+        it { should_not be_one_parent }
+      end
+
+      context 'when article has one category' do
+        let(:categories) { [double] }
+
+        it { should be_one_parent }
+      end
+
+      context 'when article has no categories' do
+        it { expect(subject).to_not be_one_parent }
       end
     end
   end

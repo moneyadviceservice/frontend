@@ -1,4 +1,13 @@
 <% content_for :main do %>
+
+  <% if content_for?(:context_bar) %>
+    <div class="l-context-bar">
+      <div class="l-constrained">
+        <%= yield :context_bar %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="l-constrained l-padded" id="main" tabindex="-1">
     <%= yield %>
   </div>

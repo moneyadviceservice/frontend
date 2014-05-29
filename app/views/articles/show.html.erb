@@ -2,6 +2,14 @@
                  canonical:   article.canonical_url,
                  alternate:   article.alternate_options) %>
 
+<% content_for(:context_bar) do %>
+  <% if(category_hierarchy.present?) %>
+    <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
+  <% elsif(article.parent_categories.present?) %>
+    <%= render 'shared/related_categories', categories: article.parent_categories %>
+  <% end %>
+<% end %>
+
 <div class="l-article editorial">
   <div class="l-article-intro">
     <h1><%= title article.title %></h1>
@@ -10,10 +18,6 @@
       <%= article.intro %>
     </p>
   </div>
-
-  <hr class="l-hr-article-intro"/>
-
-  <%= render 'shared/related_categories', categories: article.parent_categories %>
 
   <div class="l-article-main">
     <%= article.content %>

@@ -30,14 +30,7 @@ Then(/^I should see the article in (.*)$/) do |language|
   expect(article_page.main_content).to have_content(strip_tags(sample_of_body_text))
 end
 
-Then(/^I should see the article categories in (.*)$/) do |language|
-  current_article = article_for_locale(language_to_locale(language))
-  current_article.categories.each do |cat|
-    expect(article_page.related_categories).to have_content(cat.title)
-  end
-end
-
-Then(/^I should see the related content in (.*)$/) do |language|
+Then(/^I should not see the article title in the related content in (.*)$/) do |language|
   article = article_for_locale(language_to_locale(language))
   decorated_article = ArticleDecorator.decorate(article)
 

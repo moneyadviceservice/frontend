@@ -1,5 +1,8 @@
 <h1>Website-specific Components</h1>
 
+
+<!-- Molecules -->
+
 <%= styleguide_section sections['link-list-primary'] do %>
   <%= render 'styleguide/shared/link_list_primary' %>
 <% end %>
@@ -7,8 +10,6 @@
 <%= styleguide_section sections['link-list-secondary'] do %>
   <%= render 'styleguide/shared/link_list_secondary' %>
 <% end %>
-
-<!-- Molecules -->
 
 <%= styleguide_section sections['Breadcrumbs'] do %>
   <%= render 'shared/breadcrumbs', categories: @categories %>
@@ -47,6 +48,10 @@
 
 <%= styleguide_section sections['Promo'] do %>
   <%= render 'shared/promos', items: t('home.show.promoted') %>
+<% end %>
+
+<%= styleguide_section sections['Main navigation'] do %>
+  <%= render 'shared/nav' %>
 <% end %>
 
 <%= styleguide_section sections['contact'] do %>

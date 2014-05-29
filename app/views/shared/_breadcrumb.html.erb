@@ -1,11 +1,12 @@
 <ul class="breadcrumbs unstyled-list">
   <li class="breadcrumb"><%= link_to(t('layouts.home'), root_path) %></li>
   <% categories.each do |category| %>
-  <li class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <span class="breadcrumb__divider"></span>
-    <%= link_to category.path, itemprop: "url" do %>
-      <span itemprop="title"><%= category.title %></span>
-    <% end %>
-  </li>
+    <li class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <span class="visually-hidden">&gt;</span>
+      <span class="breadcrumb__divider" aria-hidden="true"></span>
+      <%= link_to category.path, itemprop: "url" do %>
+        <span itemprop="title"><%= category.title %></span>
+      <% end %>
+    </li>
   <% end %>
 </ul>

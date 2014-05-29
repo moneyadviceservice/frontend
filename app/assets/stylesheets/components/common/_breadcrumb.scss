@@ -25,18 +25,18 @@
   }
 }
 
-.breadcrumbs__divider {
-  @include body(32, 0.01);
+.breadcrumbs__divider:before {
+  @extend %font-body;
+  font-size: 32px;
+  line-height: 0;
   color: $breadcrumbs-divider-color;
   position: relative;
   top: 4px;
+  padding: 0 6px;
+  content: '\002039';
 
-  &:before {
-    padding: 0 6px;
-    content: '\002039';
-
-    @include respond-to($mq-m) {
-      content: '\00203A';
-    }
+  @include respond-to($mq-m) {
+    content: '\00203A';
   }
 }
+

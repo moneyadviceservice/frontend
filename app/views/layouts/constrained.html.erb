@@ -1,11 +1,11 @@
 <% content_for :main do %>
 
   <% if content_for?(:context_bar) %>
-    <nav class="l-context-bar" role="navigation" aria-label="breadcrumb">
+    <div class="l-context-bar">
       <div class="l-constrained">
         <%= yield :context_bar %>
       </div>
-    </nav>
+    </div>
   <% end %>
 
   <div class="l-constrained l-padded" id="main" tabindex="-1">

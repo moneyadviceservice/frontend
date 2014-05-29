@@ -1,0 +1,19 @@
+.l-main {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(7);
+    @include pull(2);
+    float: right;
+    margin-bottom: 42px;
+  }
+}
+
+.l-nav {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(3);
+    margin-top: 60px;
+  }
+}

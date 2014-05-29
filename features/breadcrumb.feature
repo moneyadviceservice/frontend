@@ -4,25 +4,15 @@ Feature: Breadcrumbs
   I want to understand where the article belongs
   And be able to quickly navigate to parents so that I can orientate myself
 
-  Scenario Outline: Breadcrumb on an article page
-    Given I am on an <language> Article that lives in a single Category
-    Then I should see the <language> article's category hierarchy
+  Scenario: Breadcrumb on an article page
+    When I read an article belonging to a single category
+    Then I can see breadcrumbs for that category and it's parent
 
-    Examples:
-    | language |
-    | English  |
-    | Welsh    |
-
-  Scenario Outline: Related categories breadcrumb on an article page
-    Given I am on an <language> Article that lives in multiple Categories
-    Then I should see the related categories in <language>
-
-    Examples:
-    | language |
-    | English  |
-    | Welsh    |
+  Scenario: Related categories breadcrumb on an article page
+    When I read an article belonging to multiple categories
+    Then I can see that it appears in those categories
 
   @fake-articles
-  Scenario: Remove breadcrumb for articles without categories
-    Given I am on an Article that does not belong to any category
-    Then I should not see the breadcrumbs area
+  Scenario: No breadcrumbs are shown for an article that has no parents
+    When I read an orphaned article
+    Then I should not see breadcrumbs

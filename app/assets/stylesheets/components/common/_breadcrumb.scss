@@ -26,18 +26,17 @@
 }
 
 .breadcrumbs__divider {
-  @include body(16, 16);
+  @include body(32, 0.01);
   color: $breadcrumbs-divider-color;
   position: relative;
-  top: 1px;
+  top: 4px;
 
   &:before {
-    padding: 0 6px 0 0;
-    content: '\3008';
+    padding: 0 6px;
+    content: '\002039';
 
     @include respond-to($mq-m) {
-      padding: 0 0 0 6px;
-      content: '\3009';
+      content: '\00203A';
     }
   }
 }

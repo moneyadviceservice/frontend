@@ -36,11 +36,11 @@ class ArticleDecorator < Draper::Decorator
       end
   end
 
-  private
-
   def categories
     object.categories.compact
   end
+
+  private
 
   def limited_parent_categories_with_contents(limit = 6)
     # Need to assign the output of #contents_by_category to a var as we will

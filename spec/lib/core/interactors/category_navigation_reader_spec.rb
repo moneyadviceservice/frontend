@@ -1,10 +1,10 @@
 require_relative 'shared_examples/optional_failure_block'
 
 require 'core/entities/category'
-require 'core/interactors/category_navigation_reader'
+require 'core/interactors/category_tree_reader'
 
 module Core
-  RSpec.describe CategoryNavigationReader, '#call' do
+  RSpec.describe CategoryTreeReader, '#call' do
     subject { described_class.new }
 
     before do

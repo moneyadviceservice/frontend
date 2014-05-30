@@ -1,4 +1,4 @@
-require 'core/interactors/category_navigation_reader'
+require 'core/interactors/category_tree_reader'
 
 class ApplicationController < ActionController::Base
   layout 'constrained'
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def category_navigation
-    @category_navigation ||= Core::CategoryNavigationReader.new.call
+    @category_navigation ||= Core::CategoryTreeReader.new.call
   end
   helper_method :category_navigation
 

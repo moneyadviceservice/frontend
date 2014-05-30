@@ -2,7 +2,7 @@ require 'core/entities/category'
 require 'core/registries/repository'
 
 module Core
-  class CategoryNavigationReader
+  class CategoryTreeReader
     def call(&block)
       if (categories = Registries::Repository[:category].all)
         build_list(categories)

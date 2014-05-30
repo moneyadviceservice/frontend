@@ -139,7 +139,23 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_search_results_v2
+    render layout: 'styleguide/page'
+  end
+
   def pages_parent_category_page
+    render layout: 'styleguide/page'
+  end
+
+  def pages_parent_category_page_v2
+    render layout: 'styleguide/page'
+  end
+
+  def pages_child_category_page
+    render layout: 'styleguide/page'
+  end
+
+  def pages_child_category_page_v2
     render layout: 'styleguide/page'
   end
 
@@ -147,7 +163,7 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_child_category_page
+  def pages_grandchild_category_page_v2
     render layout: 'styleguide/page'
   end
 
@@ -196,6 +212,10 @@ class StyleguideController < ApplicationController
   end
 
   def pages_action_plan
+    render layout: 'styleguide/page'
+  end
+
+  def pages_action_plan_v2
     render layout: 'styleguide/page'
   end
 

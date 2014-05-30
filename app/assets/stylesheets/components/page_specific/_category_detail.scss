@@ -52,7 +52,8 @@
 }
 
 .category-detail__heading {
-  a {
+  a,
+  a:visited{
     color: $color-heading-default;
     pointer-events: none;
     cursor: default;

@@ -1,0 +1,23 @@
+<% contents.each_with_index do |child_category, i| %>
+  <section class="category-detail category-detail--<%= i+1 %>">
+    <h2 class="category-detail__heading" id="<%= child_category.id %>"><%= link_to child_category.title, child_category.path %></h2>
+
+    <p><%= child_category.description %></p>
+
+    <% if child_category.contents.present? %>
+      <ol class="category-detail__list">
+        <% child_category.contents.each do |content_item| %>
+          <li class="category-detail__list-item">
+            <span class="visually-hidden"><%= content_item.label %></span>
+            <%= link_to content_item.title, content_item.path %>
+          </li>
+        <% end %>
+      </ol>
+    <% end %>
+
+    <a class="link-to-top" href="#top">
+      <span class="icon icon--up-arrow"></span>
+      <%= t('categories.show.go_to_top_html') %>
+    </a>
+  </section>
+<% end %>

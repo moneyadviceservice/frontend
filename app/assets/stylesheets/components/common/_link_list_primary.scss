@@ -7,6 +7,7 @@
 }
 
 .link-list-primary__item {
+  @include body(16, 24);
   @extend .unstyled-list;
   border-bottom: 1px solid $color-link-list-primary-border-color;
 }

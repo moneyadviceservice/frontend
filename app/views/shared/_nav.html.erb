@@ -1,57 +1,18 @@
 <nav class="nav" role="navigation" aria-label="main">
   <ul class="link-list-primary">
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Debt and borrrowing</a>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Saving and investing</a>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link link-list-primary__link--expanded is-selected">Budgeting and managing money</a>
-
-      <ul class="link-list-secondary">
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Help with insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link is-selected">Home insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Life and protection insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Car insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Travel insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Pet insurance</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Work, pensions and retirement</a>
-
-      <li class="link-list-primary__item">
-        <a href="#bar" class="link-list-primary__link link-list-primary__link--expanded is-selected">Budgeting and managing money</a>
-
-        <ul class="link-list-secondary">
-          <li class="link-list-secondary__item">
-            <a href="#bar" class="link-list-secondary__link">Foo</a>
-          </li>
-          <li class="link-list-secondary__item">
-            <a href="#bar" class="link-list-secondary__link is-selected">Bar</a>
-          </li>
-        </ul>
+    <% category_navigation.each do |category| %>
+      <li class="link-list-primary__item <%= active_categories.member?(category.id) ? 'is-selected' : '' %>">
+        <%= link_to category.title, main_app.category_path(category.id), class: 'link-list-primary__link' %>
+        <% if active_categories.member? category.id %>
+          <ul class="link-list-secondary">
+            <% category.contents.each do |sub_category| %>
+              <li class="link-list-secondary__item <%= active_categories.member?(sub_category.id) ? 'is-selected' : '' %>">
+                <%= link_to sub_category.title, main_app.category_path(sub_category.id), class: 'link-list-secondary__link' %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       </li>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Benefits</a>
-    </li>
+    <% end  %>
   </ul>
 </nav>

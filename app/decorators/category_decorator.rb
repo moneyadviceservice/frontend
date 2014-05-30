@@ -32,14 +32,14 @@ class CategoryDecorator < Draper::Decorator
                 if Feature.active?(:left_hand_nav)
                   'child_categories_v2'
                 else
-                  'child_categories_v2'
+                  'child_categories'
                 end
 
               elsif object.child?
                 if Feature.active?(:left_hand_nav)
                   'content_items_v2'
                 else
-                  'content_items_v2'
+                  'content_items'
                 end
               end
 

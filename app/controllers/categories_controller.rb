@@ -11,5 +11,7 @@ class CategoriesController < ApplicationController
     end
 
     @category_hierarchy = Core::CategoryParentsReader.new(@category).call
+
+    render Feature.active?(:left_hand_nav) ? :show_v2 : :show
   end
 end

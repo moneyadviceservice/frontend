@@ -4,10 +4,12 @@
       <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
     <% end %>
 
-    <nav role="navigation" aria-label="primary">
-      <%= render 'shared/mobile_nav' %>
-      <%= render 'shared/primary_nav' %>
-    </nav>
+    <% unless Feature.active?(:left_hand_nav) %>
+      <nav role="navigation" aria-label="primary">
+        <%= render 'shared/mobile_nav' %>
+        <%= render 'shared/primary_nav' %>
+      </nav>
+    <% end %>
   </div>
 
   <% if display_search_box_in_header? %>

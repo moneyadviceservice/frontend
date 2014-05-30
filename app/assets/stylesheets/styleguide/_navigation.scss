@@ -52,12 +52,18 @@
 }
 
 .styleguide-nav__submenu {
+  @include body(14, 18);
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: relative;
   z-index: 1;
   background-color: $color-nav-background;
+
+  a {
+    padding-top: $baseline-unit;
+    padding-bottom: $baseline-unit;
+  }
 
   @include respond-to($mq-m) {
     position: absolute;

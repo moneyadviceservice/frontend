@@ -1,0 +1,26 @@
+<% set_meta_tags(description: action_plan.description,
+                 canonical: action_plan.canonical_url,
+                 alternate: action_plan.alternate_options) %>
+
+<div class="l-main editorial">
+  <main role="main">
+    <h1><%= title action_plan.title %></h1>
+
+    <div id="action-plan-content">
+      <%= action_plan.content %>
+    </div>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav' %>
+</div>
+
+<% content_for(:alternate_link) do %>
+  <% action_plan.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, id: "#{locale}Link", lang: locale) do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

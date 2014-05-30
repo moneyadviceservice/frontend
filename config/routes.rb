@@ -70,7 +70,9 @@ Rails.application.routes.draw do
           get 'pages_parent_category_page', path: '/parent_category_page'
           get 'pages_parent_category_page_v2', path: '/parent_category_page_v2'
           get 'pages_child_category_page', path: '/child_category_page'
+          get 'pages_child_category_page_v2', path: '/child_category_page_v2'
           get 'pages_grandchild_category_page', path: '/grandchild_category_page'
+          get 'pages_grandchild_category_page_v2', path: '/grandchild_category_page_v2'
         end
 
         scope 'css' do

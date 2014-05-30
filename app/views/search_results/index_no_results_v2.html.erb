@@ -1,0 +1,22 @@
+<% set_meta_tags(title: t('search_results.index_no_results.document_title', query: params[:query]),
+                 robots: 'noindex') %>
+
+<script>
+  dataLayer.push({
+    'Search Page': 'No results',
+    'event': 'No search results'
+  });
+</script>
+
+<div class="l-main l-search-results-page">
+  <main role="main">
+    <h1><%= t('search_results.index_no_results.page_title', query: params[:query]) %></h1>
+
+    <%= render 'shared/search_box' %>
+    <p><%= t('search_results.index_no_results.body') %></p>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav' %>
+</div>

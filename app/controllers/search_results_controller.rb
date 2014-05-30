@@ -8,9 +8,17 @@ class SearchResultsController < ApplicationController
       @search_results = Core::Searcher.new(params[:query], page: params[:page]).call
 
       if @search_results.items.present?
-        render 'search_results/index_with_results'
+        if Feature.active?(:left_hand_nav)
+          render 'search_results/index_with_results_v2'
+        else
+          render 'search_results/index_with_results'
+        end
       else
-        render 'search_results/index_no_results'
+        if Feature.active?(:left_hand_nav)
+          render 'search_results/index_no_results_v2'
+        else
+          render 'search_results/index_no_results'
+        end
       end
     end
   end

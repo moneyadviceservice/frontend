@@ -147,6 +147,11 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_parent_category_page_v2
+    render layout: 'styleguide/page'
+  end
+
+
   def pages_grandchild_category_page
     render layout: 'styleguide/page'
   end

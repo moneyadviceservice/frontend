@@ -4,14 +4,11 @@ require 'core/registries/repository'
 module Core
   class CategoryNavigationReader
     def call(&block)
-      categories = Registries::Repository[:category].all
-
-      unless categories
+      if (categories = Registries::Repository[:category].all)
+        build_list(categories)
+      else
         block.call if block_given?
-        return
       end
-
-      build_list(categories)
     end
 
     private
@@ -21,6 +18,7 @@ module Core
         attributes = category.dup.tap do |c|
           c['contents'] = build_list(c['contents'])
         end
+
         Category.new(category['id'], attributes)
       end
     end

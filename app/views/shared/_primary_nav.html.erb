@@ -1,19 +1,15 @@
-<% if category_navigation.present? %>
+<% if categories.present? %>
   <ul class="primary-nav" id="primary-nav">
 
-    <% category_navigation.each do |category| %>
+    <% categories.each do |category| %>
       <li class="primary-nav__item">
-        <% if category.id == 'news' %>
-          <a class="primary-nav__link" href="/<%= I18n.locale %>/news"><%= category.title %></a>
-        <% else %>
-          <%= link_to category.title, main_app.category_path(category.id), class: 'primary-nav__link' %>
-        <% end %>
+        <%= link_to category.title, category.path, class: 'primary-nav__link' %>
 
         <% if category.contents.present? %>
           <div class="primary-nav__dropdown l-primary-nav-dropdown">
             <ul class="menu">
               <% category.contents.each do |sub_category| %>
-                <li><%= link_to sub_category.title, main_app.category_path(sub_category.id) %></li>
+                <li><%= link_to sub_category.title, sub_category.path %></li>
               <% end %>
             </ul>
           </div>
@@ -21,6 +17,5 @@
 
       </li>
     <% end %>
-
   </ul>
 <% end %>

@@ -5,7 +5,11 @@ module Core
   class CategoryTreeReader
     def call(&block)
       if (categories = Registries::Repository[:category].all)
-        build_list(categories)
+        Tree::TreeNode.new('home').tap do |root|
+          categories.each do |attributes|
+            build_tree(root, attributes)
+          end
+        end
       else
         block.call if block_given?
       end
@@ -13,14 +17,18 @@ module Core
 
     private
 
-    def build_list(categories)
-      categories.map do |category|
-        attributes = category.dup.tap do |c|
-          c['contents'] = build_list(c['contents'])
-        end
+    def build_tree(node, attributes)
+      id       = attributes.delete('id')
+      contents = attributes.delete('contents')
 
-        Category.new(category['id'], attributes)
+      category      = Category.new(id, attributes)
+      category_node = Tree::TreeNode.new(id, category)
+
+      contents.each do |content_attributes|
+        build_tree(category_node, content_attributes)
       end
+
+      node << category_node
     end
   end
 end

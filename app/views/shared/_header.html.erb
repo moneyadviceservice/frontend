@@ -7,7 +7,7 @@
       <% end %>
 
       <nav role="navigation" aria-label="primary">
-        <%= render 'shared/mobile_nav' %>
+        <%= render 'shared/mobile_nav', categories: category_tree %>
 
         <% if display_search_box_in_header? %>
           <%= render 'shared/search' %>
@@ -25,8 +25,8 @@
       <% end %>
 
       <nav role="navigation" aria-label="primary">
-        <%= render 'shared/mobile_nav' %>
-        <%= render 'shared/primary_nav' %>
+        <%= render 'shared/mobile_nav', categories: category_tree %>
+        <%= render 'shared/primary_nav', categories: category_tree %>
       </nav>
     </div>
 

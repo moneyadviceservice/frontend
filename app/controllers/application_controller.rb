@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   layout 'constrained'
   protect_from_forgery with: :exception
 
+  decorates_assigned :category_tree, with: CategoryNavigationDecorator
+
+  before_action :read_category_tree
+
   include Localisation
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
@@ -15,11 +19,6 @@ class ApplicationController < ActionController::Base
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
-
-  def category_navigation
-    @category_navigation ||= Core::CategoryTreeReader.new.call
-  end
-  helper_method :category_navigation
 
   def cookies_not_accepted?
     cookies.permanent[COOKIE_MESSAGE_COOKIE_NAME] != COOKIE_MESSAGE_COOKIE_VALUE
@@ -36,4 +35,10 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :display_search_box_in_header?
+
+  private
+
+  def read_category_tree
+    @category_tree ||= Core::CategoryTreeReader.new.call.children
+  end
 end

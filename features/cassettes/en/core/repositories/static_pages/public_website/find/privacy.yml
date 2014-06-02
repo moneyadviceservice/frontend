@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/static/privacy.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f1eb8214-7b09-4e96-8745-efc265a6aacc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 11:05:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/static/privacy> rel="alternate";
+        hreflang="en-GB"; title="Privacy policy", <https://www.moneyadviceservice.org.uk/cy/static/polisipreifatrwydd>
+        rel="alternate"; hreflang="cy-GB"; title="Polisi preifatrwydd"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 1295896a1bb13dca0b26e4542dcd8fa3
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 11:05:16 GMT; secure
+      - _session_id=1295896a1bb13dca0b26e4542dcd8fa3; path=/; secure; HttpOnly
+      - _web_tracking=2f7b3bd0375e12a624f1330411f90cb4; path=/; expires=Thu, 04-Jun-2015
+        11:05:16 GMT; secure
+      X-Request-Id:
+      - f1eb8214-7b09-4e96-8745-efc265a6aacc
+      X-Runtime:
+      - '0.091823'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"privacy","title":"Privacy policy","description":"Personal information
+        We regard the privacy of our users as very important and any personal information
+        which you provide to us will be dealt with in a ...","body":"<h2>Personal
+        information </h2><p>We regard the privacy of our users as very important and
+        any personal information which you provide to us will be dealt with in accordance
+        with our terms and conditions. This includes information you give us when
+        using our telephone the Money Advice Line, face-to-face appointment service
+        and this website including the \u2018web-chat\u2019 facility. </p><p>Any personal
+        information you provide to us will be treated in accordance with the Data
+        Protection Act 1998. We will not try to sell you anything and you will not
+        receive unsolicited telephone calls or mail from us or any third parties as
+        a result of personal data being provided to us. </p><h2>What personal information
+        do we collect? </h2><p>We may collect and use the following information: </p><ul><li>your
+        name and contact information (including e-mail address) and any other contact
+        details you provide to us when you submit a query via this website</li><li>information
+        you provide if you report a problem with this website</li><li>records of any
+        correspondence when you contact us, and</li><li>details of your visits to
+        the website including information about your online activity on the website,
+        such as the web pages you visit, the links you click, and the searches you
+        conduct on the website.</li></ul><h2>What will we do with your personal information?
+        </h2><p>We will use your personal information to reply to any correspondence
+        you have sent us, for quality, training and evaluation purposes, to help us
+        monitor and improve the Money Advice Service, or to provide services you have
+        requested (such as an order for printed publications, or a telephone or face-to-face
+        appointment). By using this website and submitting your information to us,
+        you agree to us using your personal information in accordance with these terms
+        and conditions. We will not use your personal information for any other purposes.
+        </p><p>We also use aggregated non-personal user data to analyse information
+        such as where in the country users come from, what type of questions they
+        are asking, and whether we were able to give them information or advice that
+        was useful. Sometimes we ask independent organisations to undertake this work
+        for us. We do not pass on any data from which your identity could be ascertained.
+        </p><p>At times, we also want to hear users\u2019 views on the Money Advice
+        Service and any improvements they might suggest and we commission independent
+        research agencies to ascertain user\u2019s reactions and opinions. If you
+        agree to be contacted to provide your opinions on your experience with the
+        Money Advice Service we will pass on your contact details to a research agency
+        who will get in touch with you to see if you would like to engage in further
+        research. Neither we nor our appointed agency will try to sell you anything.
+        </p><p>If we would like to use your personal information for any other purpose
+        than those stated above, we will contact you to ask for your consent before
+        doing so. </p><h3>Cookies </h3><p>Please refer to <a title=\"Cookie guide\"
+        data-type=\"link\" hreflang=\"en\" href=\"/en/static/cookie_notice_en\">Cookie
+        guide</a> for more information on the cookies that we use on this website.
+        </p><h2>Who will see your information? </h2><h3>If you talk to us face to
+        face, via web-chat on the phone </h3><p>All personal information that you
+        provide to us will be fully protected in accordance with the Data Protection
+        Act 1998 and will be held confidentially. The only people with access to it
+        will be those initially providing the advice and information to you and those
+        involved in providing, evaluating or managing the Money Advice Service. </p><h3>If
+        you use the Money Advice Service website </h3><p>If you requested printed
+        material (such as a Money Advice Service guide or the Parent\u2019s guide
+        to money), we may use third parties to fulfil such requests and will pass
+        your information to them for this purpose only. They will not pass your information
+        on to anyone else or use it for any other purpose. </p><p>We may pass on your
+        personal information if we are under a duty to disclose or share your personal
+        information in order to comply with any legal obligation or in order to enforce
+        or apply our website terms and conditions or for the purposes of the prevention
+        or detection of a crime. </p><h2>How do we protect your personal information?
+        </h2><p>We make every effort (through appropriate physical, organisational
+        and technological measures) to ensure that your personal information is held
+        securely and to safeguard against unauthorised access to your personal information.
+        Unfortunately, no data transmission over the Internet can be guaranteed to
+        be 100% secure. We strive to protect your personal information after we have
+        received it, however you acknowledge that the privacy of your communications
+        and personal information can never be completely guaranteed when it is being
+        transmitted. </p><h2>Amending or requesting a copy of your personal information
+        </h2><p>Please notify us by email to <a title=\"enquiries@moneyadviceservice.org.uk\"
+        target=\"_blank\" href=\"mailto:enquiries@moneyadviceservice.org.uk\">enquiries@moneyadviceservice.org.uk</a>
+        if you have provided us with personal information and you do not wish it to
+        be used as described below, you believe that the information we hold about
+        you is incorrect or if you wish to see which information we hold about you
+        as a result of your contact with us.\u00a0 </p>"}'
+    http_version:
+  recorded_at: Wed, 04 Jun 2014 11:05:17 GMT
+recorded_with: VCR 2.9.0

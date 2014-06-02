@@ -10,9 +10,8 @@ module Core
     validates_presence_of :title, :body
 
     def alternates=(alternates)
-      @alternates = []
-      alternates.each do |alternate|
-        @alternates << Alternate.new(*alternate.values_at(:title, :url, :hreflang))
+      @alternates = alternates.map do |alternate|
+        Alternate.new(*alternate.values_at(:title, :url, :hreflang))
       end
     end
 

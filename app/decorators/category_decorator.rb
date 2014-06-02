@@ -21,12 +21,27 @@ class CategoryDecorator < Draper::Decorator
 
   def render_contents
     partial = if object.grandparent?
-      'parent_categories'
-    elsif object.parent?
-      'child_categories'
-    elsif object.child?
-      'content_items'
-    end
+                if Feature.active?(:left_hand_nav)
+                  'parent_categories_v2'
+                else
+                  'parent_categories'
+                end
+
+              elsif object.parent?
+
+                if Feature.active?(:left_hand_nav)
+                  'child_categories_v2'
+                else
+                  'child_categories'
+                end
+
+              elsif object.child?
+                if Feature.active?(:left_hand_nav)
+                  'content_items_v2'
+                else
+                  'content_items'
+                end
+              end
 
     h.render partial, contents: contents
   end

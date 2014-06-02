@@ -29,6 +29,10 @@ module World
     def current_category
       @current_category
     end
+
+    def all_categories
+      Core::Registries::Repository[:category].all
+    end
   end
 end
 

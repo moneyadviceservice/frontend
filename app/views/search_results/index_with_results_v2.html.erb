@@ -1,0 +1,21 @@
+<% set_meta_tags(title: t('search_results.index_with_results.document_title', query: params[:query]),
+                 robots: 'noindex') %>
+
+<div class="l-main l-search-results-page">
+  <main role="main">
+
+    <h1><%= t('search_results.index_with_results.page_title', query: params[:query]) %></h1>
+
+    <%= render 'shared/search_box' %>
+
+    <ol class="search-results">
+      <%= render partial: 'search_result', collection: search_results.items %>
+    </ol>
+
+    <%= render 'pagination', search_results: search_results %>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav' %>
+</div>

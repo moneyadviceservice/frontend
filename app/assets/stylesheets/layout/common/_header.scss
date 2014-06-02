@@ -10,7 +10,7 @@
   .mas-logo {
     @include respond-to($mq-m) {
       float: left;
-      margin-top: $baseline-unit*2;
+      margin-top: $baseline-unit;
     }
   }
 
@@ -42,6 +42,14 @@
 
     @include respond-to($mq-m) {
       display: block;
+    }
+  }
+
+  .search {
+    @include respond-to($mq-m) {
+      @include column(4);
+      float: right;
+      margin: $baseline-unit*3 0;
     }
   }
 }

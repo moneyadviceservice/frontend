@@ -1,21 +1,17 @@
+require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/category_reader'
-require 'core/interactors/category_parents_reader'
 
 class CategoriesController < ApplicationController
   decorates_assigned :category, with: CategoryDecorator
-  decorates_assigned :category_hierarchy, with: CategoryDecorator
+  decorates_assigned :breadcrumbs, with: BreadcrumbDecorator
 
   def show
     @category = Core::CategoryReader.new(params[:id]).call do
       not_found
     end
 
-    @category_hierarchy = Feature.active?(:breadcrumbs) ? build_category_parents : []
-  end
-
-  private
-
-  def build_category_parents
-    Core::CategoryParentsReader.new(@category).call
+    @breadcrumbs = Core::BreadcrumbsReader.new(params[:id], category_tree).call do
+      Core::CategoryParentsReader.new(@category).call
+    end
   end
 end

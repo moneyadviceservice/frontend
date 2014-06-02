@@ -4,10 +4,6 @@ class ApplicationController < ActionController::Base
   layout 'constrained'
   protect_from_forgery with: :exception
 
-  decorates_assigned :category_tree, with: CategoryNavigationDecorator
-
-  before_action :read_category_tree
-
   include Localisation
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
@@ -23,11 +19,13 @@ class ApplicationController < ActionController::Base
   def cookies_not_accepted?
     cookies.permanent[COOKIE_MESSAGE_COOKIE_NAME] != COOKIE_MESSAGE_COOKIE_VALUE
   end
+
   helper_method :cookies_not_accepted?
 
   def dismissed_beta_opt_out?
     cookies.permanent[DISMISS_BETA_OPT_OUT_COOKIE_NAME] == DISMISS_BETA_OPT_OUT_COOKIE_VALUE
   end
+
   helper_method :dismissed_beta_opt_out?
 
   def display_search_box_in_header?
@@ -38,7 +36,14 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def read_category_tree
-    @category_tree ||= Core::CategoryTreeReader.new.call.children
+  def category_tree
+    @category_tree ||= Core::CategoryTreeReader.new.call
   end
+
+  def category_navigation
+    CategoryNavigationDecorator.decorate_collection(category_tree.children)
+  end
+
+  helper_method :category_navigation
+
 end

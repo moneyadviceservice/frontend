@@ -1,26 +1,19 @@
 module Core
   class BreadcrumbsReader
-    attr_accessor :id
-    private :id=
+    attr_accessor :category_id, :category_tree
+    private :category_id, :category_tree=
 
-    def initialize(id)
-      self.id = id
+    def initialize(category_id, category_tree)
+      self.category_id   = category_id
+      self.category_tree = category_tree
     end
 
     def call(&block)
-      if(tree = CategoryTreeReader.new.call)
-        target_node = find_node(tree)
-
-        target_node ? target_node.parentage.map(&:content) : []
+      if node = category_tree.find { |node| node.name == category_id }
+        node.parentage.reverse.collect(&:content)
       else
         block.call if block_given?
       end
-    end
-
-    private
-
-    def find_node(tree)
-      tree.select { |node| node.name == id}.first
     end
   end
 end

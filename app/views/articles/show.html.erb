@@ -1,13 +1,12 @@
 <% set_meta_tags(description: article.description,
                  canonical:   article.canonical_url,
                  alternate:   article.alternate_options) %>
-<% if Feature.active?(:breadcrumbs) %>
-  <% content_for(:context_bar) do %>
-    <% if(category_hierarchy.present?) %>
-      <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
-    <% elsif(article.parent_categories.present?) %>
-      <%= render 'shared/related_categories', categories: article.parent_categories %>
-    <% end %>
+
+<% content_for(:context_bar) do %>
+  <% if breadcrumb_trails.size == 1 %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumb_trails.first %>
+  <% else %>
+    <%= render 'shared/related_categories', categories: article.parent_categories %>
   <% end %>
 <% end %>
 

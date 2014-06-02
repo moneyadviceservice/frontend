@@ -2,116 +2,76 @@ require_relative 'shared_examples/optional_failure_block'
 require 'core/interactors/breadcrumbs_reader'
 
 RSpec.describe Core::BreadcrumbsReader do
-  subject(:breadcrumbs_reader) { described_class.new(id) }
+  subject(:breadcrumbs_reader) { described_class.new(id, category_tree) }
 
   let(:id) { 'the-one-we-want' }
+  let(:category_tree) { Tree::TreeNode.new(double) }
 
   it { is_expected.to respond_to :call }
 
   describe '.call' do
-    before do
-      allow(Core::CategoryTreeReader).to receive(:new) { double(call: tree) }
-    end
-
-    context 'when the repository returns no data' do
-      let(:tree) { nil }
-
-      it_has_behavior 'optional failure block'
-    end
+    subject(:breadcrumbs) { breadcrumbs_reader.call }
 
     context 'when the category is not found' do
-      let(:tree) { Tree::TreeNode.new('home') }
-
-      subject(:breadcrumbs) { breadcrumbs_reader.call }
-
-      it { is_expected.to eq([]) }
+      it_has_behavior 'optional failure block' do
+        subject { breadcrumbs_reader }
+      end
     end
 
     context 'when the category is found' do
-      subject(:breadcrumbs) { breadcrumbs_reader.call }
-
-      context 'at the first level of the three' do
-
-        let(:tree) do
-          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
-          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
-          root_node << Tree::TreeNode.new(id, Core::Category.new(id))
-
-          root_node
+      context 'within the first branches of the tree' do
+        let(:category_tree) do
+          Tree::TreeNode.new(double, 'root').tap do |tree|
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(id)
+            tree << Tree::TreeNode.new(double)
+          end
         end
 
-        it 'returns an array of categories' do
-          expect(breadcrumbs).to be_a(Array)
-          expect(breadcrumbs.first).to be_a(Core::Category)
-        end
-
-        it 'returns home' do
-          expect(breadcrumbs.first.id).to eq('home')
+        it 'returns the parent nodes' do
+          expect(breadcrumbs).to eq(%w(root))
         end
       end
 
-      context 'at a branch of the tree' do
-        let(:tree) do
-          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
-          root_node <<
-            Tree::TreeNode.new(double, Core::Category.new('the-parent')) <<
-              Tree::TreeNode.new(id, Core::Category.new(id))
-
-          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
-
-          root_node
-        end
-
-        it 'returns two categories' do
-          expect(breadcrumbs.size).to eq(2)
-        end
-
-        context 'the first breadcrumb' do
-          it 'is the parent category' do
-            expect(breadcrumbs.first.id).to eq('the-parent')
+      context 'within the second branches of the tree' do
+        let(:category_tree) do
+          Tree::TreeNode.new(double, 'root').tap do |tree|
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(double, 'branch').tap do |sub_tree|
+              sub_tree << Tree::TreeNode.new(double)
+              sub_tree << Tree::TreeNode.new(id)
+              sub_tree << Tree::TreeNode.new(double)
+            end
+            tree << Tree::TreeNode.new(double)
           end
         end
 
-        context 'the second breadcrumb' do
-          it 'is the home' do
-            expect(breadcrumbs.second.id).to eq('home')
-          end
+        it 'returns the parent nodes' do
+          expect(breadcrumbs).to eq(%w(root branch))
         end
       end
 
-      context 'at a twig of the tree' do
-        let(:tree) do
-          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
-          root_node <<
-            Tree::TreeNode.new(double, Core::Category.new('the-grandparent')) <<
-              Tree::TreeNode.new(double, Core::Category.new('the-parent')) <<
-                Tree::TreeNode.new(id, Core::Category.new(id))
-
-          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
-
-          root_node
-        end
-
-        it 'returns three breadcrumbs' do
-          expect(breadcrumbs.size).to eq(3)
-        end
-
-        context 'the first breadcrumb' do
-          it 'is the parent category' do
-            expect(breadcrumbs.first.id).to eq('the-parent')
+      context 'within the third branches of the tree' do
+        let(:category_tree) do
+          Tree::TreeNode.new(double, 'root').tap do |tree|
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(double)
+            tree << Tree::TreeNode.new(double, 'branch').tap do |sub_tree|
+              sub_tree << Tree::TreeNode.new(double)
+              sub_tree << Tree::TreeNode.new(double, 'twig').tap do |sub_sub_tree|
+                sub_sub_tree << Tree::TreeNode.new(double)
+                sub_sub_tree << Tree::TreeNode.new(id)
+                sub_sub_tree << Tree::TreeNode.new(double)
+              end
+            end
+            tree << Tree::TreeNode.new(double)
           end
         end
 
-        context 'the second breadcrumb' do
-          it 'is the grandparent category' do
-            expect(breadcrumbs.second.id).to eq('the-grandparent')
-          end
-        end
-
-        context 'the third breadcrumb' do
-          it 'is the home' do
-            expect(breadcrumbs.third.id).to eq('home')
-          end
+        it 'returns the parent nodes' do
+          expect(breadcrumbs).to eq(%w(root branch twig))
         end
       end
     end

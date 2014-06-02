@@ -1,0 +1,53 @@
+// Search component usually found in the global header
+//
+// Styleguide Search
+
+.search {
+  position: relative;
+
+  .search__input {
+    @extend %font-body;
+    height: $baseline-unit*7;
+    padding-left: $baseline-unit*2;
+    border: 0;
+    background-color: $color-off-white;
+
+    &::-webkit-input-placeholder {
+      color: $color-search-text;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.search__submit {
+  @extend .unstyled-button;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $baseline-unit*7;
+  height: $baseline-unit*7;
+  font-size: 24px;
+  color: $color-search-text;
+  background-color: $color-search-background;
+
+  &:focus {
+    outline: 0;
+    background-color: $color-green-secondary;
+    color: $color-white;
+  }
+
+  .icon--search {
+    position: absolute;
+    top: $baseline-unit*2;
+    left: $baseline-unit*2;
+
+    // changes the search icon to icon--search-white,cannot be extended or will not appear in the Styleguide.
+    background-position: -271px -73px;
+    @include device-pixel-ratio() {
+      background-position: -272px -8px;
+    }
+  }
+}

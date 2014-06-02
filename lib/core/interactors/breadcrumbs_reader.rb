@@ -8,35 +8,19 @@ module Core
     end
 
     def call(&block)
-      breadcrumbs = []
-      categories  = CategoryTreeReader.new.call
+      if(tree = CategoryTreeReader.new.call)
+        target_node = find_node(tree)
 
-      categories.each do |category|
-        find_category(category) do |match|
-          breadcrumbs << match
-        end
-      end
-
-      breadcrumbs.flatten!
-
-      if breadcrumbs.empty?
-        block.call if block_given?
+        target_node ? target_node.parentage.map(&:content) : []
       else
-        breadcrumbs
+        block.call if block_given?
       end
     end
 
-    def find_category(category)
-      if category.id == self.id
-        yield category
+    private
 
-      elsif category.contents
-        category.contents.each do |child|
-          find_category(child) do |match|
-            yield [category, match]
-          end
-        end
-      end
+    def find_node(tree)
+      tree.select { |node| node.name == id}.first
     end
   end
 end

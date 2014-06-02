@@ -13,128 +13,104 @@ RSpec.describe Core::BreadcrumbsReader do
       allow(Core::CategoryTreeReader).to receive(:new) { double(call: tree) }
     end
 
-    context 'when the category is not found' do
-      let(:tree) { 5.times.collect { Core::Category.new(double) } }
+    context 'when the repository returns no data' do
+      let(:tree) { nil }
 
       it_has_behavior 'optional failure block'
     end
 
+    context 'when the category is not found' do
+      let(:tree) { Tree::TreeNode.new('home') }
+
+      subject(:breadcrumbs) { breadcrumbs_reader.call }
+
+      it { is_expected.to eq([]) }
+    end
+
     context 'when the category is found' do
-      subject(:categories) { breadcrumbs_reader.call }
+      subject(:breadcrumbs) { breadcrumbs_reader.call }
 
-      context 'at the root of the tree' do
-        let(:tree) {
-          [
-            Core::Category.new(double),
-            Core::Category.new(id),
-            Core::Category.new(double),
-            Core::Category.new(double)
-          ]
-        }
+      context 'at the first level of the three' do
 
-        it 'returns an array of categories' do
-          expect(categories).to be_a(Array)
-          expect(categories.first).to be_a(Core::Category)
+        let(:tree) do
+          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
+          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
+          root_node << Tree::TreeNode.new(id, Core::Category.new(id))
+
+          root_node
         end
 
-        context 'the first category returned' do
-          subject(:category) { categories.first }
+        it 'returns an array of categories' do
+          expect(breadcrumbs).to be_a(Array)
+          expect(breadcrumbs.first).to be_a(Core::Category)
+        end
 
-          it 'is the target category' do
-            expect(category.id).to eq(id)
-          end
+        it 'returns home' do
+          expect(breadcrumbs.first.id).to eq('home')
         end
       end
 
       context 'at a branch of the tree' do
-        let(:tree) {
-          [
-            Core::Category.new(double, contents: 3.times.collect { Core::Category.new(double) }),
-            Core::Category.new('the-parent', contents: [Core::Category.new(double, parent_id: 'the-parent'), Core::Category.new(id, parent_id: 'the-parent')]),
-            Core::Category.new(double, contents: 3.times.collect { Core::Category.new(double) }),
-          ]
-        }
+        let(:tree) do
+          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
+          root_node <<
+            Tree::TreeNode.new(double, Core::Category.new('the-parent')) <<
+              Tree::TreeNode.new(id, Core::Category.new(id))
 
-        it 'returns an array of categories' do
-          expect(categories).to be_a(Array)
-          expect(categories.first).to be_a(Core::Category)
+          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
+
+          root_node
         end
 
-        it 'finds two categories' do
-          expect(categories.size).to eq(2)
+        it 'returns two categories' do
+          expect(breadcrumbs.size).to eq(2)
         end
 
-        context 'the first category returned' do
-          subject(:category) { categories.first }
-
-          it 'is the parent of the target category' do
-            expect(category.id).to eq('the-parent')
+        context 'the first breadcrumb' do
+          it 'is the parent category' do
+            expect(breadcrumbs.first.id).to eq('the-parent')
           end
         end
 
-        context 'the second category returned' do
-          subject(:category) { categories.second }
-
-          it 'is the target category' do
-            expect(category.id).to eq(id)
+        context 'the second breadcrumb' do
+          it 'is the home' do
+            expect(breadcrumbs.second.id).to eq('home')
           end
         end
       end
 
       context 'at a twig of the tree' do
         let(:tree) do
-          [
-            Core::Category.new(double,
-                               contents: 3.times.collect { Core::Category.new(double) }),
+          root_node = Tree::TreeNode.new('home', Core::Category.new('home'))
+          root_node <<
+            Tree::TreeNode.new(double, Core::Category.new('the-grandparent')) <<
+              Tree::TreeNode.new(double, Core::Category.new('the-parent')) <<
+                Tree::TreeNode.new(id, Core::Category.new(id))
 
-            Core::Category.new('the-parent',
-                               contents: [
-                                           Core::Category.new('the-child',
-                                                              parent_id: 'the-parent',
-                                                              contents:  3.times.collect {
-                                                                Core::Category.new(double, parent_id: 'the-child')
-                                                              }),
+          root_node << Tree::TreeNode.new(double, Core::Category.new(double))
 
-                                           Core::Category.new('the-second-child',
-                                                              parent_id: 'the-parent',
-                                                              contents:
-                                                                         [
-                                                                           Core::Category.new(double, parent_id: 'the-second-child'),
-                                                                           Core::Category.new(double, parent_id: 'the-second-child'),
-                                                                           Core::Category.new(id, parent_id: 'the-second-child')
-                                                                         ])
-                                         ]),
-
-            Core::Category.new(double,
-                               contents: 3.times.collect { Core::Category.new(double) }),
-          ]
+          root_node
         end
 
-        it 'finds three categories' do
-          expect(categories.size).to eq(3)
+        it 'returns three breadcrumbs' do
+          expect(breadcrumbs.size).to eq(3)
         end
 
-        context 'the first category returned' do
-          subject(:category) { categories.first }
-
-          it 'is the parent of the target category' do
-            expect(category.id).to eq('the-parent')
+        context 'the first breadcrumb' do
+          it 'is the parent category' do
+            expect(breadcrumbs.first.id).to eq('the-parent')
           end
         end
 
-        context 'the second category returned' do
-          subject(:category) { categories.second }
-
-          it 'is the parent of the target category' do
-            expect(category.id).to eq('the-second-child')
+        context 'the second breadcrumb' do
+          it 'is the grandparent category' do
+            expect(breadcrumbs.second.id).to eq('the-grandparent')
           end
         end
 
-        context 'the third category returned' do
-          subject(:category) { categories.third }
-
-          it 'is the target category' do
-            expect(category.id).to eq(id)
+        context 'the third breadcrumb' do
+          it 'is the home' do
+            expect(breadcrumbs.third.id).to eq('home')
           end
         end
       end

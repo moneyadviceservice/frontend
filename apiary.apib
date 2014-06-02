@@ -205,6 +205,33 @@ A single Action Plan object with all its details
                 "categories": ["budgeting-for-a-family","action-plans-having-a-baby"]
             }
 
+# Group Static Pages
+Static Page related resources of the **Money Advice Service**.
+
+## Static Page [/{locale}/static/{id}]
+A single Static Page object with all its details
+
++ Parameters
+    + locale = `en` (optional, string, `en`) ... Locale of the Static Page.
+        + Values
+            + `en`
+            + `cy`
+
+### Retrieve a Static Page [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Link: <https://www.moneyadviceservice.org.uk/en/static/privacy> rel="alternate"; hreflang="en-GB"; title="Privacy policy", <https://www.moneyadviceservice.org.uk/cy/static/preifatrwydd> rel="alternate"; hreflang="cy-GB"; title="Polisi preifatrwydd"
+
+    + Body
+
+            {
+                "title": "Privacy Policy",
+                "description": "This privacy policy applies to 'the Money Advice Service'. This includes our telephone Money Advice Line, face-to-face appointment service and the Mon ...",
+                "body": "<p>This privacy policy applies to 'the Money Advice Service'. This includes our telephone Money Advice Line, face-to-face appointment service and the Money Advice Service website including the web-chat facility.</p>"
+            }
+
 #Group Search
 Search related resources of the **Money Advice Service**.
 

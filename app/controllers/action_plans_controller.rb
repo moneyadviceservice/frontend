@@ -13,9 +13,9 @@ class ActionPlansController < ApplicationController
     if Feature.active?(:left_hand_nav)
       render :show_v2
     else
-      (@action_plan.categories.compact.map(&:id) + @action_plan.parent_category_ids).each do |category|
-        active_category category
-      end
+      # (@action_plan.categories.compact.map(&:id) + @action_plan.parent_category_ids).each do |category|
+      #   active_category category
+      # end
 
       render :show
     end

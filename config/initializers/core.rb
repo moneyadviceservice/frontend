@@ -6,6 +6,7 @@ require 'core/repositories/action_plans/public_website'
 require 'core/repositories/articles/public_website'
 require 'core/repositories/categories/public_website'
 require 'core/repositories/search/google_custom_search_engine'
+require 'core/repositories/static_pages/public_website'
 
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
@@ -33,3 +34,6 @@ Core::Registries::Repository[:category] = Core::Repositories::Cache.new(
 
 Core::Registries::Repository[:search] =
   Core::Repositories::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
+
+Core::Registries::Repository[:static_page] =
+  Core::Repositories::StaticPages::PublicWebsite.new

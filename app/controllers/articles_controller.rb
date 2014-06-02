@@ -16,11 +16,12 @@ class ArticlesController < ApplicationController
     @category_hierarchy = build_category_hierarchy
 
     if Feature.active?(:left_hand_nav)
-      render :show_v2
-    else
       (@article.categories.compact.map(&:id) + @article.parent_category_ids).each do |category|
         active_category category
       end
+
+      render :show_v2
+    else
 
       render :show
     end

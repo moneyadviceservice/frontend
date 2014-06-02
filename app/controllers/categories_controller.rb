@@ -17,9 +17,9 @@ class CategoriesController < ApplicationController
     if Feature.active?(:left_hand_nav)
       render :show_v2
     else
-      (@category.categories.compact.map(&:id) + @category.parent_category_ids).each do |category|
-        active_category category
-      end
+      # (@category.categories.compact.map(&:id) + @category.parent_category_ids).each do |category|
+      #   active_category @category
+      # end
 
       render :show
     end

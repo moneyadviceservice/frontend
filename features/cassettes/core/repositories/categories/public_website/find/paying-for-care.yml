@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/paying-for-care.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 7873df2ef17b5724d5757c7511a6e942
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:29 GMT; secure
+      - _session_id=7873df2ef17b5724d5757c7511a6e942; path=/; secure; HttpOnly
+      - _web_tracking=86a63f3f86dd9af59b6f68b75b35c95f; path=/; expires=Wed, 03-Jun-2015
+        18:49:29 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.018996'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"paying-for-care","title":"Paying for care","description":"Learn
+        about NHS and self-funding options, managing direct payments, and other ways
+        to pay for your care.","parent_id":"care-and-disability","contents":[{"id":"self-funding-your-long-term-care-your-options","type":"guide","title":"Self-funding
+        your long-term care \u2013 your options","description":"Need to pay for your
+        own long-term care or top up your government funding? Here are some of your
+        options"},{"id":"are-you-eligible-for-nhs-continuing-care-funding","type":"guide","title":"Are
+        you eligible for NHS Continuing Care funding?","description":"The cost of
+        your ongoing care could be met by NHS Continuing Care funding. Find out what
+        it covers and how you\u2019ll be assessed"},{"id":"benefits-you-can-claim-when-you-have-care-needs","type":"guide","title":"Benefits
+        you can claim when you have care needs","description":"Find out more about
+        the benefits you might be able to claim, including Attendance Allowance and
+        Disability Living Allowance"},{"id":"get-financial-advice-on-how-to-fund-your-long-term-care","type":"guide","title":"Get
+        financial advice on how to fund your long-term care","description":"Investing
+        in your long-term care is a big decision. Always get independent financial
+        advice before making up your mind"},{"id":"local-authority-funding-for-care-costs-do-you-qualify","type":"guide","title":"Local
+        authority funding for care costs \u2013 do you qualify?","description":"If
+        you have care needs your local authority might help with some or all of the
+        costs - do you qualify?"},{"id":"registered-nursing-care-contribution","type":"guide","title":"Registered
+        Nursing Care Contribution","description":"If you need nursing or medical care,
+        payments from the NHS can reduce how much you pay towards your care-home fees"},{"id":"means-tests-for-help-with-care-costs-how-they-work","type":"guide","title":"Means
+        tests for help with care costs \u2013 how they work","description":"Funding
+        for long-term care is means-tested. Find out how it works and if you qualify
+        for financial help"},{"id":"how-a-local-authority-care-needs-assessment-works","type":"guide","title":"How
+        a local authority care-needs assessment works","description":"Identifying
+        exactly what you need is the first step to getting an appropriate care package
+        from your local authority"},{"id":"direct-payments-explained","type":"guide","title":"Direct
+        payments explained","description":"If your local authority\u2019s given you
+        the option of receiving direct payments to pay for your own care, here\u2019s
+        what you need to know"},{"id":"managing-direct-payments-to-pay-for-the-care-you-need","type":"guide","title":"Managing
+        direct payments to pay for the care you need","description":"If you get direct
+        payments from your local authority, here''s what you need to know, such as
+        how to compare services and manage the money effectively"},{"id":"how-to-fund-your-long-term-care-a-beginners-guide","type":"guide","title":"How
+        to fund your long-term care \u2013 a beginner\u2019s guide","description":"Free
+        NHS Continuing Care, help from your local authority or pay for it yourself
+        \u2013 find out how to fund long-term care"},{"id":"claiming-on-insurance-to-help-cover-the-costs-of-care","type":"guide","title":"Claiming
+        on insurance to help cover the costs of care","description":"Check if an old
+        insurance policy \u2013 critical illness, income protection, over 50s plan
+        \u2013 could help pay for long-term care now"},{"id":"using-a-home-reversion-plan-to-pay-for-your-care","type":"guide","title":"Using
+        a home reversion plan to pay for your care","description":"Home reversion
+        plans are one way to fund long-term care, but always get independent financial
+        advice before signing up"},{"id":"make-your-money-easier-to-manage-by-yourself","type":"guide","title":"Make
+        your money easier to manage by yourself","description":"A few simple changes
+        can simplify your finances if a health condition or disability makes it difficult
+        for you to keep on top of things"},{"id":"using-investment-bonds-to-pay-for-your-long-term-care","type":"guide","title":"Using
+        investment bonds to pay for your long-term care","description":"Investing
+        in bonds may not be the best way to pay for your long-term care. Be sure to
+        get independent advice first"},{"id":"immediate-need-care-fee-payment-plans","type":"guide","title":"Immediate
+        need care fee payment plans","description":"Immediate need care fee payment
+        plans are designed to fund care if you need it now by providing guaranteed
+        monthly payments"},{"id":"using-a-lifetime-mortgage-to-pay-for-your-long-term-care","type":"guide","title":"Using
+        a lifetime mortgage to pay for your long-term care","description":"Lifetime
+        mortgages allow homeowners over 60 to release some of the equity in their
+        home to pay for care, without moving"},{"id":"using-an-equity-release-scheme-to-fund-your-care","type":"guide","title":"Using
+        an equity-release scheme to fund your care","description":"Equity-release
+        schemes are one way to fund long-term care, but always get independent financial
+        advice before signing up"},{"id":"paying-your-own-care-costs-but-the-moneys-run-out","type":"guide","title":"Paying
+        your own care costs but the money\u2019s run out?","description":"If you''ve
+        been paying for your own care and now need financial support, here are the
+        options available to you"},{"id":"downsizing-your-home-to-fund-your-long-term-care","type":"guide","title":"Downsizing
+        your home to fund your long-term care","description":"Moving to a smaller
+        home could free up money to pay for your care and make life easier for you
+        \u2013 here are the pros and cons"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:29 GMT
+recorded_with: VCR 2.9.0

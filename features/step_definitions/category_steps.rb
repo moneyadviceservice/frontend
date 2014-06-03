@@ -4,7 +4,6 @@ end
 
 When(/^I view a category containing no child categories in (.*)$/) do |language|
   locale = language_to_locale(language)
-  populate_category_repository_with(category_containing_no_child_categories)
   browse_to_category(category_containing_no_child_categories, locale)
 end
 
@@ -14,7 +13,6 @@ end
 
 When(/^I view a category containing child categories in (.*)$/) do |language|
   locale = language_to_locale(language)
-  populate_category_repository_with(category_containing_child_categories)
   browse_to_category(category_containing_child_categories, locale)
 end
 
@@ -24,39 +22,34 @@ end
 
 When(/^I view a category containing child and grandchild categories in (.*)$/) do |language|
   locale = language_to_locale(language)
-  populate_category_repository_with(category_containing_child_and_grandchild_categories)
   browse_to_category(category_containing_child_and_grandchild_categories, locale)
 end
 
 Then(/^I should see the category name and description$/) do
-  expect(category_page.heading).to have_content(current_category['title'])
-  expect(category_page.description).to have_content(current_category['description'])
+  expect(category_page.heading).to have_content(current_category.title)
+  expect(category_page.description).to have_content(current_category.description)
 end
 
 Then(/^I should see the category content items$/) do
-  items = current_category['contents'].map { |i| i['title'] }
+  category_titles = current_category.contents.collect(&:title)
 
-  expect(category_page.items.count).to eq(items.count)
+  expect(category_page.items.count).to eq(category_titles.count)
 
   category_page.items.each do |item|
-    expect(items).to include(item.text)
+    expect(category_titles).to include(item.text)
   end
 end
 
 Then(/^I should see the child category content items$/) do
-  current_category['contents'].each_with_index do |child_category, i|
-    content_items = child_category['contents'].map { |i| i['title'] }
+  category_page.child_categories.each do |category|
+    child = current_category.contents.find { |c| c.id == category.heading['id'] }
 
-    expect(category_page.child_categories[i].items.count).to eq(content_items.count)
-
-    category_page.child_categories[i].items.each do |item|
-      expect(content_items).to include(item.text)
-    end
+    expect(category.items.collect(&:text)).to eq(child.contents.collect(&:title))
   end
 end
 
 Then(/^I should see the child categories$/) do
-  child_categories = current_category['contents'].map { |c| c['title'] }
+  child_categories = current_category.contents.map(&:title)
 
   expect(category_page.child_categories.count).to eq(child_categories.count)
 
@@ -66,9 +59,8 @@ Then(/^I should see the child categories$/) do
 end
 
 Then(/^I should see the grandchild categories$/) do
-  current_category['contents'].each_with_index do |child_category, i|
-
-    grandchild_categories = child_category['contents'].map { |c| c['title'] }
+  current_category.contents.each_with_index do |child_category, i|
+    grandchild_categories = child_category.contents.map { |c| c.title }
     expect(category_page.child_categories[i].items.count).to eq(grandchild_categories.count)
 
     category_page.child_categories[i].items.each do |item|
@@ -85,8 +77,8 @@ end
 
 Then(/^the category page should have alternate tags for the supported locales$/) do
   expected_hreflangs = ["en-GB", "cy-GB"]
-  expected_hrefs = []
-  I18n.available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'],locale: locale) }
+  expected_hrefs     = []
+  I18n.available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'], locale: locale) }
 
   expect(category_page.alternate_tags.size).to eq(expected_hreflangs.size)
   category_page.alternate_tags.each do |alternate_tag|

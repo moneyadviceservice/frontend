@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/managing-your-finances-in-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 9cc1d24e735bf99dbff11819443cc101
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:21 GMT; secure
+      - _session_id=9cc1d24e735bf99dbff11819443cc101; path=/; secure; HttpOnly
+      - _web_tracking=ba11e3fb21641a5e3d0e8792e6bd55f8; path=/; expires=Wed, 03-Jun-2015
+        18:49:21 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.019117'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-your-finances-in-retirement","title":"Managing your
+        finances in retirement","description":"Retirement can bring significant changes
+        to your income and your outgoings and your entitlement to government benefits","parent_id":"pensions-and-retirement","contents":[{"id":"manage-your-money-in-retirement","type":"guide","title":"Manage
+        your money in retirement","description":"Retirement can bring significant
+        financial changes. Here\u2019s a range of tips and ideas to help you manage
+        the transition"},{"id":"preparing-for-illness-old-age-and-death","type":"guide","title":"Preparing
+        for illness, old age and death","description":"Considering how your money
+        will be managed if you become ill and when you die is an important part of
+        financial planning"},{"id":"funeral-plans","type":"guide","title":"Funeral
+        plans","description":"Funeral plans are one way to cover the cost of a funeral
+        - learn more about them and how they work before buying one"},{"id":"tax-and-benefits-when-youre-retired","type":"guide","title":"Tax
+        and benefits when you\u2019re retired","description":"A list of factors that
+        can affect your tax bill in retirement, and of payments such as State Pension
+        you may be entitled to"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:21 GMT
+recorded_with: VCR 2.9.0

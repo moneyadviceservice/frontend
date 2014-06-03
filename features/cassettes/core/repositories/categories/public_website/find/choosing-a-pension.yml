@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/choosing-a-pension.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 6563f57db05a309e368e52614862c264
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:22 GMT; secure
+      - _session_id=6563f57db05a309e368e52614862c264; path=/; secure; HttpOnly
+      - _web_tracking=c542e291b51c681763f40450100254f8; path=/; expires=Wed, 03-Jun-2015
+        18:49:22 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.017824'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"choosing-a-pension","title":"Choosing a pension","description":"Read
+        our top tips for choosing pensions and find out about buying a pension and
+        getting financial advice","parent_id":"pensions-and-retirement","contents":[{"id":"understanding-investment-fees","type":"guide","title":"Understanding
+        investment fees","description":"The different types of investment fees you
+        could be charged and the things you need to think about before paying them"},{"id":"when-and-where-to-get-pensions-help-and-advice","type":"guide","title":"When
+        and where to get pensions help and advice","description":"Pensions can be
+        daunting. But there are a number of places where you can get help and advice"},{"id":"do-you-need-a-financial-adviser","type":"guide","title":"Do
+        you need a financial adviser?","description":"Find out when you may need to
+        get financial advice and when going it alone may be okay"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:22 GMT
+recorded_with: VCR 2.9.0

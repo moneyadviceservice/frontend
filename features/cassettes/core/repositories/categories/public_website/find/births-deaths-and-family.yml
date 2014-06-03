@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/births-deaths-and-family.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 0b8c7b35220bcdffa9d123cd5913751b
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:25 GMT; secure
+      - _session_id=0b8c7b35220bcdffa9d123cd5913751b; path=/; secure; HttpOnly
+      - _web_tracking=c8b0b9c63010704948510ec8f9cddb0a; path=/; expires=Wed, 03-Jun-2015
+        18:49:25 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.043058'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"births-deaths-and-family","title":"Births, deaths and family","description":"Having
+        a baby, making a will, and dealing with divorce and separation.","parent_id":"money-topics","contents":[{"id":"having-a-baby","type":"category","title":"Having
+        a baby","description":"Help with managing your money before, during and after
+        the birth of your baby."},{"id":"maternity-and-paternity-rights","type":"category","title":"Maternity
+        and paternity rights","description":"Find out how to claim maternity pay and
+        leave from your employer and your rights when returning to work."},{"id":"making-a-will","type":"category","title":"Making
+        a will","description":"Learn how to make and change a will and find out about
+        the different options available."},{"id":"when-someone-dies","type":"category","title":"When
+        someone dies","description":"Learn how to deal with money after a death, from
+        paying for the funeral to looking after the paperwork and household bills."},{"id":"divorce-and-separation","type":"category","title":"Divorce
+        and separation","description":"Find out how to manage your money and divide
+        up what you own when going through divorce or separation."}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:25 GMT
+recorded_with: VCR 2.9.0

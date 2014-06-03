@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/pet-insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - d7e72e7c-f76c-4031-8028-2aa1cebc6ec3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 29b413ee54619c51b48e0ba7cfed6225
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:12 GMT; secure
+      - _session_id=29b413ee54619c51b48e0ba7cfed6225; path=/; secure; HttpOnly
+      - _web_tracking=85de099bf7e1b52ba78900a7772d5952; path=/; expires=Wed, 03-Jun-2015
+        18:49:12 GMT; secure
+      X-Request-Id:
+      - d7e72e7c-f76c-4031-8028-2aa1cebc6ec3
+      X-Runtime:
+      - '0.025265'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pet-insurance","title":"Pet insurance","description":"Help with
+        choosing the right pet insurance policy and cover.","parent_id":"insurance","contents":[{"id":"do-you-need-pet-insurance","type":"guide","title":"Pet
+        insurance - Do you need it?","description":"How to decide whether pet insurance
+        is right for you and your pet \u2013 and what to consider before you buy"},{"id":"choosing-the-right-pet-insurance-policy","type":"guide","title":"Pet
+        insurance \u2013 choose the right policy and cover","description":"Buying
+        pet insurance? Here\u2019s what you need to know to get the right policy first
+        time"},{"id":"pet-insurance","type":"video","title":"Pet insurance","description":""}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:12 GMT
+recorded_with: VCR 2.9.0

@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/transferring-between-pension-schemes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 50f8ebbe814f5aa979377498dec404d2
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:20 GMT; secure
+      - _session_id=50f8ebbe814f5aa979377498dec404d2; path=/; secure; HttpOnly
+      - _web_tracking=0bf2c9aaa5e0060d04e66fc803ba5151; path=/; expires=Wed, 03-Jun-2015
+        18:49:20 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.031431'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"transferring-between-pension-schemes","title":"Transferring
+        between pension schemes","description":"How to transfer pensions between providers,
+        for example if you want to merge different pension pots you''ve built up","parent_id":"pensions-and-retirement","contents":[{"id":"transferring-out-of-a-defined-benefit-pension-scheme","type":"guide","title":"Transferring
+        out of a defined benefit pension scheme","description":"If you''re thinking
+        about transferring out of a salary-related pension scheme get financial advice
+        first \u2013 transfers are often a bad move"},{"id":"transferring-defined-contribution-pensions","type":"guide","title":"Transferring
+        defined contribution pensions","description":"We set out seven key questions
+        you should ask yourself before transferring pension savings from one scheme
+        to another"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:20 GMT
+recorded_with: VCR 2.9.0

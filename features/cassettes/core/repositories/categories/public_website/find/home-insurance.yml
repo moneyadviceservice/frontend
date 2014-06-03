@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/home-insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - d7e72e7c-f76c-4031-8028-2aa1cebc6ec3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8f3070dd6fc9bdb30b3907b59167a733
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:11 GMT; secure
+      - _session_id=8f3070dd6fc9bdb30b3907b59167a733; path=/; secure; HttpOnly
+      - _web_tracking=6351d6fbeb11c9b3c5300b285268a0f8; path=/; expires=Wed, 03-Jun-2015
+        18:49:11 GMT; secure
+      X-Request-Id:
+      - d7e72e7c-f76c-4031-8028-2aa1cebc6ec3
+      X-Runtime:
+      - '0.026432'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"home-insurance","title":"Home insurance","description":"Find
+        out if you need buildings and contents insurance and get help with choosing
+        the right policy and cover.","parent_id":"insurance","contents":[{"id":"do-you-need-buildings-insurance","type":"guide","title":"Buildings
+        insurance - Do you need it?","description":"Buildings insurance could save
+        you a fortune if your home is damaged, and your mortgage lender will normally
+        insist on it"},{"id":"buildings-insurance-how-much-cover-do-you-need","type":"guide","title":"Buildings
+        insurance \u2013 how much cover do you need?","description":"Find the right
+        level of cover for your property and see how subsidence and unusual construction
+        might affect your insurance"},{"id":"buildings-insurance-what-does-a-good-policy-look-like","type":"guide","title":"Buildings
+        insurance \u2013 what does a good policy look like?","description":"Compare
+        your buildings policy with our list of \u2018must have\u2019 features"},{"id":"do-you-need-contents-insurance","type":"guide","title":"Do
+        you need contents insurance?","description":"How would you replace everything
+        in your house if it was destroyed or stolen? It\u2019s worth getting contents
+        insurance just in case"},{"id":"contents-insurance-get-the-right-policy-and-cover","type":"guide","title":"Contents
+        insurance \u2013 choose the right policy and cover","description":"Get both
+        the right amount and right type of contents insurance cover whether you\u2019re
+        renewing, switching or buying for the first time"},{"id":"contents-insurance-what-does-good-look-like","type":"guide","title":"Contents
+        insurance \u2013 what does a good policy look like?","description":"Check
+        your home contents policy against our list of \u2018must have\u2019 features
+        to make sure it\u2019s good enough"},{"id":"home-insurance-how-to-get-the-best-deal","type":"guide","title":"Home
+        insurance \u2013 how to get the best deal","description":"A great deal doesn\u2019t
+        just mean a great price \u2013 when you compare home insurance, always check
+        what you get for your money"},{"id":"flood-insurance-getting-the-right-cover","type":"guide","title":"Flood
+        insurance \u2013 getting the right cover","description":"What to do if you\u2019re
+        struggling to get flood insurance at a price you can afford"},{"id":"do-you-need-mobile-phone-insurance","type":"guide","title":"Do
+        you need mobile phone insurance?","description":"Can''t decide whether or
+        not to invest in mobile phone insurance? Here''s what you need to know"},{"id":"extended-warranties-are-they-worth-it","type":"guide","title":"Extended
+        warranties \u2013 are they worth it?","description":"Extended warranties for
+        electrical appliances often don''t provide value for money \u2013 and you
+        probably already have protection if you need it"},{"id":"buildings-insurance","type":"video","title":"Buildings
+        insurance","description":"This video will explain about buildings insurance"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:11 GMT
+recorded_with: VCR 2.9.0

@@ -11,6 +11,7 @@
     @include respond-to($mq-m) {
       float: left;
       margin-top: $baseline-unit;
+      margin-bottom: $baseline-unit;
     }
   }
 

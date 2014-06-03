@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
       not_found
     end
 
-    @category_hierarchy = build_category_hierarchy
+    @category_hierarchy = Feature.active?(:breadcrumbs) ? build_category_hierarchy : []
 
     render Feature.active?(:left_hand_nav) ? :show_v2 : :show
   end

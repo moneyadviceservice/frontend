@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/why-save-into-a-pension.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - e299b230-1a4f-495e-be43-098aac1b72c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:08:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/articles/why-save-into-a-pension>
+        rel="alternate"; hreflang="en-GB"; title="Why save into a pension?", <https://www.moneyadviceservice.org.uk/cy/articles/pam-cynilo-mewn-pensiwn>
+        rel="alternate"; hreflang="cy-GB"; title="Pam cynilo mewn pensiwn?"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - ae1ec9c946b00bca97d1d3fd08a105b1
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:08:10 GMT; secure
+      - _session_id=ae1ec9c946b00bca97d1d3fd08a105b1; path=/; secure; HttpOnly
+      - _web_tracking=2d7d35f444bfbcccff0e25efb5c1e1a6; path=/; expires=Thu, 04-Jun-2015
+        10:08:10 GMT; secure
+      X-Request-Id:
+      - e299b230-1a4f-495e-be43-098aac1b72c3
+      X-Runtime:
+      - '0.049779'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"why-save-into-a-pension","title":"Why save into a pension?","description":"Pensions
+        are an efficient way to save for retirement. Contributions are topped up by
+        the taxman and often by employers","body":"<p class=\"intro\"><img src=\"/images/why-save-into-a-pension.jpg\"/>Pensions
+        might seem complicated but the basic idea is a simple one. It\u2019s worth
+        understanding their benefits, because your State Pension \u2013 while providing
+        a foundation \u2013 may not be enough to live on. You need to save more.\u00a0
+        </p><h2>The importance of retirement savings </h2><div class=\"callout\"><h3>DID
+        YOU KNOW? </h3><p>The maximum basic State Pension is far below what most people
+        say they hope to retire on. </p></div><p>More than half of people in the UK
+        either aren\u2019t saving at all for their retirement or they aren\u2019t
+        saving nearly enough to give them the standard of living they hope for when
+        they retire. </p><p>If you fall into this category, you have three choices
+        really. You can adjust downwards your expectations of what you\u2019ll be
+        able to afford in retirement. Or you can start saving more. Or you can retire
+        later. </p><p>Don\u2019t rely on the State Pension to keep you going in retirement.
+        The maximum basic State Pension of \u00a3113.10 (tax year 2014-15) a week
+        is far below what most people say they hope to retire on. </p><h2>The advantages
+        of saving into a pension </h2><p>Once you\u2019ve made the decision to start
+        saving for retirement, you need to choose how to do so. Pensions have a number
+        of important advantages that will make your savings grow more rapidly than
+        might otherwise be the case. </p><p>A pension is basically a long-term savings
+        plan with tax relief - your regular contributions are invested so that they
+        grow throughout your career and then provide you with an income in retirement.
+        Generally you can access the money in your pension pot from the age of 55.
+        </p><h3>How tax relief tops up your pension pot </h3><p>Once your income is
+        over a certain level, the government takes tax from your earnings. You can
+        see this on your payslip. If you put money into a personal pension scheme,
+        it qualifies for tax relief. This means that as well as the money you\u2019re
+        putting in, some of your money that would have gone to the government as tax
+        now goes into your pension pot instead. The government will still put tax
+        relief into your pension pot, even if your income is too low to pay tax.\u00a0
+        </p><h3>Top-ups from employers </h3><p>The government has introduced a law
+        designed to help people save more for their retirement. It means that employers
+        must start to enrol their workers into a workplace pension scheme if they
+        are not already in one. It\u2019s called \u2018automatic enrolment\u2019 and
+        is gradually being made compulsory for all employers. \u00a0 </p><p>If your
+        work gives you access to a pension that your employer will pay into, then
+        unless you really can\u2019t afford to contribute or your priority is dealing
+        with unmanageable debt, staying out is like turning down the offer of a pay
+        rise. </p><p>Of course, if your employer will contribute to your pension regardless
+        of whether you pay into it, then you should join the scheme whatever your
+        financial circumstances. </p><ul><li><a title=\"Automatic enrolment\" href=\"/en/articles/automatic-enrolment-into-a-workplace-pension\">Find
+        out more in our guide Automatic enrolment - an introduction</a></li></ul><h3>A
+        tax-free lump sum when you retire </h3><p>When you retire, you can take up
+        to a quarter of your pension pot as a tax-free lump sum. The rest of your
+        savings must be used to provide an income, which is taxable. However, from
+        April 2015 you will be able to use your pension pot in any way you choose
+        from age 55. </p><ul><li><a title=\"New rules about pensions from 27 March
+        2014\" data-type=\"link\" hreflang=\"en\" href=\"/en/articles/new-rules-about-pensions-from-27-march-2014\">
+        Find out more about New rules about pensions from 27 March 2014</a></li></ul><h2>The
+        next step \u2013 see how much you need to save </h2><p>Follow the link below
+        to use our pensions ready-reckoner. This will estimate how much you\u2019ll
+        need to save each month to generate the kind of income you\u2019d like to
+        retire on. </p><p><div class=\"add-action\"><a href=\"/en/tools/estimate-what-you-need-to-save-for-retirement\">Estimate
+        what you need to save for retirement</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"estimate-what-you-need-to-save-for-retirement\"
+        data-article-type=\"tool\" id=\"email_me_estimate-what-you-need-to-save-for-retirement\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=estimate-what-you-need-to-save-for-retirement&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=estimate-what-you-need-to-save-for-retirement&amp;article_type=tool\"
+        method=\"post\" name=\"tool_estimate-what-you-need-to-save-for-retirement\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"CBX+nT0axHuSGB5NU5fR51nnNVD8C8AEBxZCe+k6v5o=\" /></div></form> </div></p>","categories":["saving-into-a-pension-for-the-first-time","pensions-in-the-workplace","planning-for-retirement-fl"]}'
+    http_version:
+  recorded_at: Wed, 04 Jun 2014 10:08:12 GMT
+recorded_with: VCR 2.9.0

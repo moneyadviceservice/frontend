@@ -1,11 +1,6 @@
-require 'core/interactors/article_reader'
-require 'core/interactors/searcher'
-
 RSpec.describe 'HTML validation', :type => :feature do
-  describe 'home page' do
-    before do
-      visit root_path(locale: locale)
-    end
+  describe 'home page', :vcr do
+    before { visit root_path(locale: locale) }
 
     context 'in English' do
       let(:locale) { 'en' }
@@ -20,14 +15,8 @@ RSpec.describe 'HTML validation', :type => :feature do
     end
   end
 
-  describe 'category pages' do
-    let(:category) { build :category_hash, :content_items }
-    let(:repository) { Core::Repositories::Categories::Fake.new(category) }
-
-    before do
-      Core::Registries::Repository[:category] = repository
-      visit category_path(category['id'], locale: locale)
-    end
+  describe 'category pages', :vcr do
+    before { visit category_path('saving-and-investing', locale: locale) }
 
     context 'in English' do
       let(:locale) { 'en' }
@@ -42,73 +31,36 @@ RSpec.describe 'HTML validation', :type => :feature do
     end
   end
 
-  describe 'article pages' do
-    let(:article) { build :article }
-    let(:reader) { -> { article } }
-
-    before do
-      allow(Core::ArticleReader).to receive(:new).with(article.id).and_return(reader)
-      visit article_path(article.id, locale: locale)
-    end
-
+  describe 'article pages', :vcr do
     context 'in English' do
-      let(:locale) { 'en' }
-
+      before { visit article_path('why-save-into-a-pension', locale: 'en') }
       specify { expect(page).to have_valid_html }
     end
 
     context 'in Welsh' do
-      let(:locale) { 'cy' }
-
+      before { visit article_path('pam-cynilo-mewn-pensiwn', locale: 'cy') }
       specify { expect(page).to have_valid_html }
     end
   end
 
-  describe 'search results' do
-    let(:query) { 'what to do when someone dies' }
-    let(:page_number) { 1 }
-    let(:per_page) { 10 }
-    let(:total_results) { 0 }
-    let(:content_item) { build :article }
-    let(:results) { [] }
-    let(:result_collection) do
-      double('search result collection',
-             page:          page_number,
-             per_page:      per_page,
-             total_results: total_results,
-             items:         results)
-    end
-    let(:searcher) { -> { result_collection } }
-
-    before do
-      allow(Core::Searcher).to receive(:new).with(query, page: nil).and_return(searcher)
-    end
-
+  describe 'search results', :vcr do
     context 'in English' do
       let(:locale) { 'en' }
 
       context 'with no query' do
-        before do
-          visit main_app.search_results_path(locale: locale)
-        end
-
+        before { visit search_results_path(locale: locale) }
         specify { expect(page).to have_valid_html }
       end
 
       context 'with no results' do
-        before do
-          visit main_app.search_results_path(query: query, locale: locale)
-        end
-
+        before { visit search_results_path(query: 'Foobar', locale: locale) }
         specify { expect(page).to have_valid_html }
       end
 
       context 'with results' do
-        let(:total_results) { 1 }
-        let(:results) { [content_item] }
-
         before do
-          visit main_app.search_results_path(query: query, locale: locale)
+          visit search_results_path(query:  'How to budget for a monthly benefit payment',
+                                    locale: locale)
         end
 
         specify { expect(page).to have_valid_html }
@@ -118,28 +70,20 @@ RSpec.describe 'HTML validation', :type => :feature do
     context 'in Welsh' do
       let(:locale) { 'cy' }
 
-      context 'with no query' do
-        before do
-          visit main_app.search_results_path(locale: locale)
-        end
-
+      context('with no query') do
+        before { visit search_results_path(locale: locale) }
         specify { expect(page).to have_valid_html }
       end
 
       context 'with no results' do
-        before do
-          visit main_app.search_results_path(query: query, locale: locale)
-        end
-
+        before { visit search_results_path(query: 'Foobar', locale: locale) }
         specify { expect(page).to have_valid_html }
       end
 
       context 'with results' do
-        let(:total_results) { 1 }
-        let(:results) { [content_item] }
-
         before do
-          visit main_app.search_results_path(query: query, locale: locale)
+          visit search_results_path(query:  'Sut i gyllidebu ar gyfer taliad budd-daliadau misol',
+                                    locale: locale)
         end
 
         specify { expect(page).to have_valid_html }

@@ -17,7 +17,6 @@
   .primary-nav {
     @include respond-to($mq-m) {
       margin: $baseline-unit*2 0;
-      float: right;
     }
   }
 
@@ -41,7 +40,7 @@
     }
 
     @include respond-to($mq-m) {
-      display: block;
+      display: none;
     }
   }
 

@@ -1,4 +1,4 @@
-@vcr
+@vcr @wip
 Feature: Viewing a static page
   As a visitor to the website
   I want to view static pages

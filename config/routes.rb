@@ -39,9 +39,12 @@ Rails.application.routes.draw do
     resources :categories, only: 'show',
               constraints: ValidCategory.new
     resources :search_results, only: 'index', path: 'search'
-    resources :static_pages,
-              path: 'static',
-              only: 'show'
+
+    if Feature.active?(:static_pages)
+      resources :static_pages,
+                path: 'static',
+                only: 'show'
+    end
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,

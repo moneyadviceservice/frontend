@@ -1,6 +1,6 @@
 require 'html_processor'
 
-class ArticleDecorator < Draper::Decorator
+class ContentItemDecorator < Draper::Decorator
   delegate :title, :description
 
   def alternate_options
@@ -14,7 +14,7 @@ class ArticleDecorator < Draper::Decorator
   end
 
   def canonical_url
-    h.article_url(object.id)
+    h.send("#{object.class.to_s.underscore.gsub('core/', '')}_url", object.id)
   end
 
   def content

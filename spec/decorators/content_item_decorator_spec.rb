@@ -1,11 +1,11 @@
 require 'core/entities/article'
 
-RSpec.describe ArticleDecorator do
+RSpec.describe ContentItemDecorator do
   include Draper::ViewHelpers
 
-  subject(:decorator) { described_class.decorate(article) }
+  subject(:decorator) { described_class.decorate(content_item) }
 
-  let(:article) { instance_double(Core::Article, id: 'bob') }
+  let(:content_item) { instance_double(Core::Article, id: 'bob') }
 
   it { is_expected.to respond_to(:alternate_options) }
   it { is_expected.to respond_to(:canonical_url) }
@@ -15,7 +15,7 @@ RSpec.describe ArticleDecorator do
 
   describe '#alternate_options' do
     context 'when there are no alternates' do
-      before { allow(article).to receive(:alternates) { [] } }
+      before { allow(content_item).to receive(:alternates) { [] } }
 
       it 'returns an empty hash' do
         expect(decorator.alternate_options).to be_a(Hash)
@@ -24,7 +24,7 @@ RSpec.describe ArticleDecorator do
     end
 
     context 'when there are alternates' do
-      before { allow(article).to receive(:alternates) { [alternate] } }
+      before { allow(content_item).to receive(:alternates) { [alternate] } }
 
       let(:alternate) { double(hreflang: locale, url: url) }
       let(:locale) { double }
@@ -37,16 +37,24 @@ RSpec.describe ArticleDecorator do
   end
 
   describe '#canonical_url' do
-    before { allow(helpers).to receive_messages(article_url: '/articles/bob') }
+    before do
+      allow(content_item.class).to receive_messages(to_s: 'core/content_item')
+      allow(helpers).to receive_messages(content_item_url: '/content_items/bob')
+    end
 
-    it 'returns the path to the article' do
-      expect(subject.canonical_url).to eq('/articles/bob')
+    it 'requests the path from the object with the name derived from the object class' do
+      expect(helpers).to receive(:content_item_url)
+      subject.canonical_url
+    end
+
+    it 'returns the path to the content_item' do
+      expect(subject.canonical_url).to eq('/content_items/bob')
     end
   end
 
   describe '#intro' do
     let(:fixture) { 'spec/fixtures/pawnbrokers-how-they-work.json' }
-    let(:article) do
+    let(:content_item) do
       instance_double(Core::Article,
                       id:          'bob',
                       title:       'uncle-bob-is-richer-than-you',
@@ -63,7 +71,7 @@ RSpec.describe ArticleDecorator do
   end
 
   describe '#content' do
-    let(:article) do
+    let(:content_item) do
       instance_double(Core::Article,
                       id:          'bob',
                       title:       'uncle-bob-is-richer-than-you',
@@ -124,12 +132,12 @@ RSpec.describe ArticleDecorator do
   end
 
   describe '#parent_categories_with_contents' do
-    let(:category_another_article) { double }
-    let(:another_category_article) { double }
-    let(:category_contents) { [category_another_article, another_category_article] }
+    let(:category_another_content_item) { double }
+    let(:another_category_content_item) { double }
+    let(:category_contents) { [category_another_content_item, another_category_content_item] }
     let(:category) { instance_double(Core::Category, contents: category_contents) }
     let(:categories) { [category] }
-    let(:article) { instance_double(Core::Article, id: 'base article', categories: categories) }
+    let(:content_item) { instance_double(Core::Article, id: 'base content_item', categories: categories) }
 
     subject { decorator.send(:parent_categories_with_contents) }
 

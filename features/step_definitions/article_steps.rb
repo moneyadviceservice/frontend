@@ -30,7 +30,7 @@ end
 
 Then(/^I should not see the article title in the related content in (.*)$/) do |language|
   article           = article_for_locale(language_to_locale(language))
-  decorated_article = ArticleDecorator.decorate(article)
+  decorated_article = ContentItemDecorator.decorate(article)
 
   decorated_article.related_categories.each do |category, contents|
     expect(article_page.related_content).to have_content(category.title)

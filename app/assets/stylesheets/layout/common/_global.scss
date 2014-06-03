@@ -16,10 +16,29 @@
 }
 
 .l-nav {
-  @include column(12);
+  float: left;
+  margin-top: 60px;
 
   @include respond-to($mq-m) {
     @include column(3);
     margin-top: 60px;
+  }
+
+  .link-list-primary__item {
+    @include column(12);
+
+    @include respond-to($mq-m) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .link-list-primary__item--back-to-top {
+    width: 100%;
+    margin-left: 0;
+
+    @include respond-to($mq-m) {
+      display: none;
+    }
   }
 }

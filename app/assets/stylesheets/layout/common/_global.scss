@@ -17,7 +17,7 @@
 
 .l-nav {
   float: left;
-  margin-top: 60px;
+  margin: 60px 0 42px 0;
 
   @include respond-to($mq-m) {
     @include column(3);

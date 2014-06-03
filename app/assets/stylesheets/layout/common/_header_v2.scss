@@ -14,13 +14,6 @@
     }
   }
 
-  .primary-nav {
-    @include respond-to($mq-m) {
-      margin: $baseline-unit*2 0;
-      float: right;
-    }
-  }
-
   .search {
     @include respond-to($mq-m) {
       @include column(4);
@@ -49,7 +42,7 @@
     }
 
     @include respond-to($mq-m) {
-      display: block;
+      display: none;
     }
   }
 

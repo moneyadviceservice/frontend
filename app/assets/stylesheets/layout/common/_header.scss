@@ -43,14 +43,6 @@
       display: none;
     }
   }
-
-  .search {
-    @include respond-to($mq-m) {
-      @include column(4);
-      float: right;
-      margin: $baseline-unit*3 0;
-    }
-  }
 }
 
 .l-header__search {

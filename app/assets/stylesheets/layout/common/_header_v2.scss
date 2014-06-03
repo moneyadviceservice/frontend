@@ -1,0 +1,83 @@
+.l-header {
+  position: relative;
+  background: $color-green-primary;
+  min-height: $baseline-unit*10;
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mas-logo {
+    @include respond-to($mq-m) {
+      float: left;
+      margin-top: $baseline-unit;
+    }
+  }
+
+  .primary-nav {
+    @include respond-to($mq-m) {
+      margin: $baseline-unit*2 0;
+      float: right;
+    }
+  }
+
+  .search {
+    @include respond-to($mq-m) {
+      @include column(4);
+      float: right;
+      margin: $baseline-unit*3 0;
+    }
+  }
+
+  .js & .mobile-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
+
+  .js & .primary-nav,
+  .js & .l-header__search {
+    display: none;
+
+    &.is-on {
+      display: block;
+    }
+
+    @include respond-to($mq-m) {
+      display: block;
+    }
+  }
+
+}
+
+// 1. Hide by default as don't want non-js users to see all sub-category links as page will be unusable.
+//    They are able to get to sublinks on page refresh
+
+.l-primary-nav-dropdown {
+  @extend %collapsable-target;
+  display: none; // 1
+
+  @include respond-to($mq-m) {
+    &.is-on {
+      position: absolute;
+      top: $baseline-unit*14;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  .theme-cy & {
+    top: 76px;
+  }
+
+  ul {
+    margin: 0 auto;
+    max-width: $mq-xl;
+  }
+}
+

@@ -17,6 +17,10 @@
   display: block;
 }
 
+.link-list-primary__item--back-to-top {
+  @extend %font-heading-heavy;
+  background-color: $color-link-list-background;
+}
 
 // ----------- state --------------
 .link-list-primary__link.is-selected {

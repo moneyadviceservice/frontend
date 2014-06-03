@@ -1,6 +1,6 @@
 .l-context-bar {
-  padding-top: $baseline-unit;
-  padding-bottom: $baseline-unit;
+  padding-top: $baseline-unit*2;
+  padding-bottom: $baseline-unit*2;
   background-color: $breadcrumbs-background-color;
 
   @include respond-to($mq-m) {

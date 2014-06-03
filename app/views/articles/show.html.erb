@@ -1,12 +1,13 @@
 <% set_meta_tags(description: article.description,
                  canonical:   article.canonical_url,
                  alternate:   article.alternate_options) %>
-
-<% content_for(:context_bar) do %>
-  <% if(category_hierarchy.present?) %>
-    <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
-  <% elsif(article.parent_categories.present?) %>
-    <%= render 'shared/related_categories', categories: article.parent_categories %>
+<% if Feature.active?(:breadcrumbs) %>
+  <% content_for(:context_bar) do %>
+    <% if(category_hierarchy.present?) %>
+      <%= render 'shared/breadcrumbs', categories: category_hierarchy %>
+    <% elsif(article.parent_categories.present?) %>
+      <%= render 'shared/related_categories', categories: article.parent_categories %>
+    <% end %>
   <% end %>
 <% end %>
 

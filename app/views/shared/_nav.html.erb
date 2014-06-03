@@ -1,5 +1,10 @@
 <nav class="nav" role="navigation" aria-label="main">
   <ul class="link-list-primary">
+
+    <li class="link-list-primary__item link-list-primary__item--back-to-top">
+      <a href="#top" class="link-list-primary__link">Back to top</a>
+    </li>
+
     <% category_navigation.each do |category| %>
       <li class="link-list-primary__item <%= active_categories.member?(category.id) ? 'is-selected' : '' %>">
         <%= link_to category.title, main_app.category_path(category.id), class: 'link-list-primary__link' %>

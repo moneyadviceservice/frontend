@@ -51,7 +51,7 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
   gem 'html_validation'
-  gem 'rspec_junit_formatter', github: 'andreacfm/rspec_junit_formatter', branch: 'master'
+  gem 'rspec_junit_formatter', github: 'deees/rspec_junit_formatter', branch: 'features/rspec3'
   gem 'thin'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
   gem 'vcr'
@@ -71,7 +71,7 @@ group :test, :development do
   gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'chai-jquery-rails'
   gem 'byebug'
-  gem 'rspec-rails', '3.0.0.rc1'
+  gem 'rspec-rails', '~> 3.0'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end
 

@@ -10,6 +10,12 @@ class CategoriesController < ApplicationController
       not_found
     end
 
-    @category_hierarchy = Core::CategoryParentsReader.new(@category).call
+    @category_hierarchy = Feature.active?(:breadcrumbs) ? build_category_parents : []
+  end
+
+  private
+
+  def build_category_parents
+    Core::CategoryParentsReader.new(@category).call
   end
 end

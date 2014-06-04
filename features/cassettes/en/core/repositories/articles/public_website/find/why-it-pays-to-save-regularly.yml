@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/why-it-pays-to-save-regularly.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - c44fc8b3-08ac-4d23-9b41-336773131fce
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:51:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/articles/why-it-pays-to-save-regularly>
+        rel="alternate"; hreflang="en-GB"; title="Why it pays to save regularly",
+        <https://www.moneyadviceservice.org.uk/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd>
+        rel="alternate"; hreflang="cy-GB"; title="Pam bod cynilo'n rheolaidd yn talu
+        ffordd"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - d5d409f591cb21fd9d3d32b94ef3b7ce
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:51:40 GMT; secure
+      - _session_id=d5d409f591cb21fd9d3d32b94ef3b7ce; path=/; secure; HttpOnly
+      - _web_tracking=a2e1474b16606e062b651b00f91033dc; path=/; expires=Thu, 04-Jun-2015
+        10:51:40 GMT; secure
+      X-Request-Id:
+      - c44fc8b3-08ac-4d23-9b41-336773131fce
+      X-Runtime:
+      - '0.285077'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"why-it-pays-to-save-regularly","title":"Why it pays to save
+        regularly","description":"A regular savings habit makes your savings grow
+        fast \u2013 getting started is quick and easy","body":"<p class=\"intro\">If
+        you save regularly, you\u2019ll quickly find that your savings add up and
+        keep growing. Get into the habit and watch your money turn into more money.
+        </p><h2>Make saving a habit </h2><iframe frameborder=\"0\" height=\"413\"
+        width=\"680\" src=\"https://www.youtube.com/embed/M3Oe4n9ZRj4\">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+        </iframe><div class=\"callout\"><p>Getting into a regular savings habit is
+        more important than how much you put away \u2013 you will be surprised how
+        quickly a few pounds each month builds up! </p></div><p>The easiest way to
+        get your savings working for you is to set things up so that you automatically
+        add a little bit each month to your savings. That way you won\u2019t have
+        to remember to make the payment and you won\u2019t be tempted to skip a month.
+        Before you know it, you\u2019ll have built up a solid chunk of savings for
+        example, one way of saving tax efficiently is through a Cash ISA. </p><p>One
+        of the quickest way to do this is to set up a standing order (a regular payment)
+        from a bank current account into your chosen savings account. </p><p><div
+        class=\"add-action\"><a href=\"/en/articles/direct-debits-and-standing-orders\">Find
+        out more about standing orders </a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"direct-debits-and-standing-orders\" data-article-type=\"guide\"
+        id=\"email_me_direct-debits-and-standing-orders\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=direct-debits-and-standing-orders&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=direct-debits-and-standing-orders&amp;article_type=guide\"
+        method=\"post\" name=\"guide_direct-debits-and-standing-orders\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\" /></div></form> </div></p><h2>Do
+        it on pay day </h2><p>The best time to put a bit of money aside is just after
+        you\u2019ve been paid, so set up your standing order to go out on, or just
+        after pay day. </p><p>Or ask your workplace if they have a savings scheme
+        \u2013 and think about joining it if they do. This makes saving even easier,
+        because the money comes straight out of your pay, just like your tax and National
+        Insurance contributions. </p><p><div class=\"add-action\"><a href=\"/en/articles/workplace-investment-schemes\">More
+        about Workplace saving and investment schemes </a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"workplace-investment-schemes\" data-article-type=\"guide\"
+        id=\"email_me_workplace-investment-schemes\" tabindex=\"0\">Email this <span
+        class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=workplace-investment-schemes&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=workplace-investment-schemes&amp;article_type=guide\"
+        method=\"post\" name=\"guide_workplace-investment-schemes\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        /></div></form> </div></p><h2>Earning interest on interest </h2><p>As your
+        savings build up, they\u2019ll grow faster\u2013 even if you\u2019re only
+        paying in the same regular amount. This is because each time the interest
+        earned on your money is paid into your account it starts earning interest
+        too. </p><p>This interest-on-interest is called compound interest, and over
+        the longer term it makes a big difference to how much your savings are worth.
+        </p><h2>How much can you afford to save? </h2><p>If you\u2019ve got money
+        left over at the end of each week or month then great - you\u2019ve already
+        got your starting point. You\u2019ll be able to save this amount \u2013 and
+        maybe even more. </p><p>But even if there\u2019s usually nothing left, it
+        doesn\u2019t mean you can\u2019t save \u2013 it\u2019s not easy to change
+        how much money you have coming in but most people <strong>can </strong>change
+        how much goes out. To get tips on how to cut back and <strong>unlock your
+        saving potential</strong> go to our section <a href=\"/en/categories/money-saving-tips\">Money
+        saving tips</a></p><p><div class=\"add-action\"><a href=\"/en/tools/cut-back-calculator\">Cut
+        back calculator</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"cut-back-calculator\" data-article-type=\"tool\" id=\"email_me_cut-back-calculator\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
+        method=\"post\" name=\"tool_cut-back-calculator\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        /></div></form> </div></p><h2>What about regular investing? </h2><p>The UK
+        government defines saving as putting money aside without risk, and usually
+        with the chance to earn interest. Investing involves committing money into
+        an investment vehicle in the hopes of making a financial gain. Investing is
+        different from saving because it involves a greater level of risk and there
+        is no guarantee that you will get your money back. </p><p>You can make regular
+        payments from as little as \u00a325 a month into investment products, such
+        as a Stocks and Shares ISA or Unit Trust Investment Funds. Investment products
+        are for the longer term and are really only suitable if you already have enough
+        cash savings to keep you going for 3-6 months if needs be. Investments generally
+        outperform cash savings over the longer term, but their value can rise and
+        fall, so you have to be prepared to take on some risk. They may be suitable
+        for people who don\u2019t require easy access to their money and are prepared
+        to take on some risk. </p><p><div class=\"add-action\"><a href=\"/en/articles/should-i-save-or-invest\">Should
+        I save or invest?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"should-i-save-or-invest\" data-article-type=\"guide\" id=\"email_me_should-i-save-or-invest\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=should-i-save-or-invest&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=should-i-save-or-invest&amp;article_type=guide\"
+        method=\"post\" name=\"guide_should-i-save-or-invest\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        /></div></form> </div></p><h2>Next steps </h2><ul><li><a href=\"/en/articles/top-tips-for-choosing-savings-accounts\">Top
+        tips for choosing a savings account</a></li><li><a href=\"/en/articles/top-tips-for-choosing-investments\">Top
+        tips for choosing investments</a></li><li><a href=\"/en/categories/comparison-tables\">Choose
+        a savings or investment account</a></li></ul>","categories":["how-to-save-money"]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:51:41 GMT
+recorded_with: VCR 2.9.0

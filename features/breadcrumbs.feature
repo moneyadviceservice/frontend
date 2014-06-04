@@ -5,7 +5,11 @@ Feature: Article breadcrumbs
 
   Scenario: Breadcrumb on an article page
     When I read an article belonging to a single category
-    Then I can see breadcrumbs for that category and it's parent
+    Then I can see breadcrumbs for that category and it's parents
+
+ Scenario: Breadcrumb on an category page
+    When I read a category
+    Then I can see breadcrumbs for it's parents
 
   Scenario: Related categories breadcrumb on an article page
     When I read an article belonging to multiple categories

@@ -2,7 +2,7 @@
   <%= t('articles.show.related_categories.title') %>:&nbsp;
   <% categories.each_with_index do |category, index| %>
     <%= link_to category.title, category.path, class: 'related-categories__link' %>
-    <% if index < categories.size %>
+    <% unless category == categories.last %>
       <span class="related-categories__divider">&nbsp;|&nbsp;</span>
     <% end %>
   <% end %>

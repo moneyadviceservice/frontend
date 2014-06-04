@@ -1,22 +1,16 @@
 class BreadcrumbDecorator < Draper::Decorator
-  def title
-    breadcrumb.title
-  end
+  delegate :path, :title
 
-  def path
-    breadcrumb.path
-  end
-
-  private
+  protected
 
   Breadcrumb = Struct.new(:path, :title)
 
-  def breadcrumb
-    case object
+  def object
+    case super
       when Core::Category
-        CategoryDecorator.decorate(object)
+        CategoryDecorator.decorate(super)
       when NilClass
-        Breadcrumb.new('/', 'Home')
+        Breadcrumb.new(h.root_path, h.t('layouts.home'))
     end
   end
 end

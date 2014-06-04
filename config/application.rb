@@ -52,8 +52,7 @@ module Frontend
                                    translations/en.js)
 
     # Configure additional vendor JS assets to precompile.
-    config.assets.precompile += %w(optimizely.js
-                                   html5shiv/dist/html5shiv.js
+    config.assets.precompile += %w(html5shiv/dist/html5shiv.js
                                    jquery/dist/jquery.js
                                    jquery-waypoints/waypoints.js
                                    jquery-ujs/src/rails.js

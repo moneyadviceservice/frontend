@@ -3,7 +3,7 @@
                  alternate:   article.alternate_options) %>
 
 <% content_for(:context_bar) do %>
-  <% if breadcrumb_trails.size == 1 %>
+  <% if breadcrumb_trails.one? %>
     <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumb_trails.first %>
   <% elsif article.parent_categories.present? %>
     <%= render 'shared/related_categories', categories: article.parent_categories %>

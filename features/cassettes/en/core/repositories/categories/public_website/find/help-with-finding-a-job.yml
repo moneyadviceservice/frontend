@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/help-with-finding-a-job.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - be0ca2b66aed0e6bf6aedbc3995d0922
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:28 GMT; secure
+      - _session_id=be0ca2b66aed0e6bf6aedbc3995d0922; path=/; secure; HttpOnly
+      - _web_tracking=4eaaf85409d54ced7c43465c6bd804a4; path=/; expires=Thu, 04-Jun-2015
+        10:49:28 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.020888'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-finding-a-job","title":"Help with finding a job","description":"CV
+        advice, job searching and interview tips; plus where to go if you''re thinking
+        of a career change or starting a business","parent_id":"losing-your-job","contents":[{"id":"help-and-advice-when-applying-for-a-job","type":"guide","title":"Help
+        and advice when applying for a job","description":"Get help and advice with
+        your CV, job search and interviews when looking for work"},{"id":"changing-your-career-following-redundancy","type":"guide","title":"Changing
+        your career following redundancy","description":"Facing redundancy and thinking
+        about a career change? There\u2019s plenty of financial support available
+        for retraining"},{"id":"thinking-of-starting-up-in-business","type":"guide","title":"Thinking
+        of starting up in business?","description":"Lost your job and thinking of
+        starting your own business or becoming self-employed? Find out more"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:28 GMT
+recorded_with: VCR 2.9.0

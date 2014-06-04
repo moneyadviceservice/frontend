@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/saving-into-a-pension-for-the-first-time.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - d49bed6dd852a04e9f7207b75fb9fe1f
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:14 GMT; secure
+      - _session_id=d49bed6dd852a04e9f7207b75fb9fe1f; path=/; secure; HttpOnly
+      - _web_tracking=4b84d04b0d2812f26376b58aef7d2a53; path=/; expires=Thu, 04-Jun-2015
+        10:49:14 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.024304'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"saving-into-a-pension-for-the-first-time","title":"Saving into
+        a pension for the first time","description":"All you need to get started,
+        including a ready reckoner that estimates how much you should be saving each
+        month","parent_id":"pensions-and-retirement","contents":[{"id":"why-save-into-a-pension","type":"guide","title":"Why
+        save into a pension?","description":"Pensions are an efficient way to save
+        for retirement. Contributions are topped up by the taxman and often by employers"},{"id":"your-first-pension-the-options","type":"guide","title":"Your
+        first pension \u2013 the options","description":"If you have access to a workplace
+        pension it\u2019s likely to be the best option, particularly if your employer
+        will contribute to it"},{"id":"worried-about-the-cost-of-starting-a-pension","type":"guide","title":"Worried
+        about the cost of starting a pension?","description":"Even if you\u2019ve
+        left it longer than you meant to, the sooner you start the less it costs to
+        save for your retirement"},{"id":"automatic-enrolment-into-a-workplace-pension","type":"guide","title":"Automatic
+        enrolment \u2013 an introduction","description":"Joining your workplace pension
+        scheme is a hassle-free way to start saving for later life"},{"id":"pension-investment-options-an-overview","type":"guide","title":"Pension
+        investment options \u2013 an overview","description":"It\u2019s important
+        to think about how your pension is being invested as well as how much you\u2019re
+        saving into it"},{"id":"estimate-what-you-need-to-save-for-retirement","type":"tool","title":"Estimate
+        what you need to save for retirement","description":"Use our pensions ready
+        reckoner to estimate how much you need to start saving each month to generate
+        your target retirement income"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:14 GMT
+recorded_with: VCR 2.9.0

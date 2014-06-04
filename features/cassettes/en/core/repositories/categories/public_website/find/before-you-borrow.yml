@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/before-you-borrow.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 6ce4d2d61d35c28a4292fd88b664c160
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:09 GMT; secure
+      - _session_id=6ce4d2d61d35c28a4292fd88b664c160; path=/; secure; HttpOnly
+      - _web_tracking=fffa809d06ffb0f3e5f7d8e3d19a77e3; path=/; expires=Thu, 04-Jun-2015
+        10:49:09 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.018281'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"before-you-borrow","title":"Before you borrow","description":"Find
+        out if you need to borrow money and whether you can afford it. Learn how to
+        work out the true cost of borrowing.","parent_id":"debt-and-borrowing","contents":[{"id":"do-you-need-to-borrow-money","type":"guide","title":"Do
+        you need to borrow money?","description":"Planning a big purchase or need
+        some extra cash? Borrowing might seem like the obvious solution but there
+        could be a better option"},{"id":"how-to-work-out-the-true-cost-of-borrowing","type":"guide","title":"How
+        to work out the true cost of borrowing","description":"When borrowing money,
+        don''t simply look for a loan with the lowest monthly repayment. Before you
+        sign on the dotted line, it''s essential that you know the total cost of repaying
+        the debt"},{"id":"debt-test","type":"tool","title":"Debt test","description":"Use
+        our debt test tool to find out more about your circumstances"},{"id":"payday-loans","type":"guide","title":"Payday
+        loans advice","description":"Payday loans seem an easy solution when money\u2019s
+        short, but often lead to serious debt. Use our online tool to find a cheaper,
+        less risky alternative."},{"id":"borrowing-and-credit-basics","type":"guide","title":"Borrowing
+        and credit basics","description":"From credit cards to loans, we look at the
+        range of borrowing products available to those aged 18 and over."},{"id":"compare-the-cost-of-borrowing-gbp1000","type":"guide","title":"Compare
+        the cost of borrowing \u00a31,000","description":"Better borrowing for \u00a31,000
+        across three common types of finance."},{"id":"avoid-high-fees-and-hidden-borrowing-costs","type":"guide","title":"Avoid
+        high fees and hidden borrowing costs","description":"Be savvy \u2013 watch
+        out for extra costs and find out your rights if you think you\u2019ve been
+        charged unfairly"},{"id":"compare-the-cost-of-borrowing-gbp5000","type":"guide","title":"Compare
+        the cost of borrowing \u00a35,000","description":"Better borrowing for \u00a35,000
+        across three common types of finance."},{"id":"loan-calculator","type":"tool","title":"Loan
+        calculator","description":"You can use this calculator to find out how much
+        your monthly loan repayments could be. This can help you work out how much
+        you can afford to borrow"},{"id":"should-you-borrow-from-family-or-friends","type":"guide","title":"Should
+        you borrow from family or friends?","description":"Are you hoping to borrow
+        money from your family or lend to a friend? What do you need to consider?"},{"id":"taking-out-a-joint-debt-or-loan-what-you-need-to-know","type":"guide","title":"Joint
+        loans and joint debt \u2013 what you need to know","description":"Entering
+        into a joint debt means you\u2019re each liable for the full amount, so weigh
+        up the risks before you go ahead"},{"id":"secured-and-unsecured-borrowing-explained","type":"guide","title":"Secured
+        and unsecured borrowing explained","description":"If you\u2019re a homeowner
+        and you want to borrow some money, a secured loan is one option, but there
+        are major risks involved"},{"id":"good-debt-versus-bad-debt","type":"guide","title":"Good
+        debt versus bad debt","description":"If you\u2019re thinking of borrowing
+        money, know how to avoid dangerous bad debts"},{"id":"working-out-a-repayment-plan-for-money-you-are-borrowing","type":"guide","title":"Working
+        out a repayment plan for your borrowing","description":"If you\u2019re borrowing
+        money, you need to work out what it could cost and you also need a clear repayment
+        plan"},{"id":"how-much-can-you-afford-to-borrow","type":"guide","title":"How
+        much can you afford to borrow for a mortgage?","description":"When you\u2019re
+        working out what size mortgage you can afford make sure you consider more
+        than just your monthly repayments"},{"id":"building-a-credit-history-as-a-young-consumer","type":"guide","title":"Building
+        a credit history as a young consumer","description":"Find out what information
+        banks and building societies consider when checking your financial history."}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:09 GMT
+recorded_with: VCR 2.9.0

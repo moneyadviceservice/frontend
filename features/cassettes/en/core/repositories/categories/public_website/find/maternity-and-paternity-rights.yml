@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/maternity-and-paternity-rights.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c095f1748ef36b17b4cf3999fcfc3f99
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:20 GMT; secure
+      - _session_id=c095f1748ef36b17b4cf3999fcfc3f99; path=/; secure; HttpOnly
+      - _web_tracking=20456746056e3305649cb29628265ff4; path=/; expires=Thu, 04-Jun-2015
+        10:49:20 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.020220'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"maternity-and-paternity-rights","title":"Maternity and paternity
+        rights","description":"Find out how to claim maternity pay and leave from
+        your employer and your rights when returning to work.","parent_id":"births-deaths-and-family","contents":[{"id":"paternity-leave-and-pay","type":"guide","title":"Paternity
+        leave and pay","description":"If you\u2019re a new dad, you should get some
+        pay from your employer while you\u2019re off work looking after your new baby"},{"id":"working-for-yourself-after-youve-had-a-baby","type":"guide","title":"Working
+        for yourself after you''ve had a baby","description":"Looking to fit work
+        around your baby? Going freelance or starting your own business could be the
+        answer"},{"id":"your-options-for-paternity-benefits","type":"action_plan","title":"Action
+        plan - Your options for paternity benefits","description":"Find out if you
+        qualify for statutory paternity leave and pay, plus how to claim"},{"id":"claim-maternity-allowance","type":"action_plan","title":"Action
+        plan - Claim Maternity Allowance","description":"Find out if you qualify for
+        Maternity Allowance and put in your claim"},{"id":"claim-maternity-grants-and-vouchers","type":"action_plan","title":"Action
+        plan - Claim maternity grants and vouchers","description":"Check if you are
+        eligible for a grant or vouchers to help you and your baby"},{"id":"claim-maternity-pay-and-leave","type":"action_plan","title":"Action
+        plan - Claim maternity pay and leave","description":"Find out how much maternity
+        pay and leave you\u2019re entitled to"},{"id":"know-your-rights-when-you-go-back-to-work-after-having-a-baby","type":"guide","title":"Your
+        rights when returning to work after maternity leave","description":"At the
+        end of your leave you have the right to return to the same job, request flexible
+        working and possibly take parental leave"},{"id":"help-from-your-employer-with-childcare-costs","type":"guide","title":"Help
+        from your employer with childcare costs","description":"If you\u2019re going
+        back to work after having a baby, find out if your employer can help with
+        the cost of childcare"},{"id":"understanding-your-childcare-options","type":"guide","title":"Understanding
+        childcare options","description":"Weigh up different childcare options to
+        suit your budget when returning to work."},{"id":"protecting-your-workplace-pension-after-having-a-baby","type":"guide","title":"Protecting
+        your workplace pension after having a baby","description":"While you\u2019re
+        on paid maternity leave, your employer should keep up your workplace contributions
+        for the full 39 weeks"},{"id":"maternity-allowance","type":"guide","title":"Maternity
+        Allowance","description":"You might be able to get Maternity Allowance if
+        you can\u2019t get Statutory Maternity Pay, perhaps because you\u2019re self-employed"},{"id":"maternity-pay-and-leave","type":"guide","title":"Maternity
+        pay and leave","description":"If you\u2019re working, you\u2019ll normally
+        be entitled to some pay from your employer while you''re off looking after
+        your new baby"},{"id":"adoption-pay-and-leave","type":"guide","title":"Statutory
+        Adoption Pay and Leave","description":"You''re entitled to pay from your employer
+        while you''re off looking after your newly adopted child"},{"id":"protecting-your-state-pension-when-you-have-a-baby","type":"guide","title":"Protecting
+        your State Pension when you have a baby","description":"While you\u2019re
+        off work looking after your children, your State Pension is protected \u2013
+        but only if you claim Child Benefit"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:20 GMT
+recorded_with: VCR 2.9.0

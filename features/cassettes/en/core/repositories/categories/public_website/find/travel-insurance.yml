@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/travel-insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - a43d1165-b350-4ae2-a04d-3cc464890dc2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 1413ea6262e545efd8fc5f70aeefe624
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:07 GMT; secure
+      - _session_id=1413ea6262e545efd8fc5f70aeefe624; path=/; secure; HttpOnly
+      - _web_tracking=3bf87f8132214b7386656a509524295b; path=/; expires=Thu, 04-Jun-2015
+        10:49:07 GMT; secure
+      X-Request-Id:
+      - a43d1165-b350-4ae2-a04d-3cc464890dc2
+      X-Runtime:
+      - '0.025583'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"travel-insurance","title":"Travel insurance","description":"Learn
+        how to choose the right level of cover, get the best deal, and how to make
+        a travel insurance claim.","parent_id":"insurance","contents":[{"id":"do-you-need-travel-insurance","type":"guide","title":"Do
+        you need travel insurance?","description":"If you are going abroad make sure
+        you have travel insurance to stop a medical emergency turning into a financial
+        disaster as well"},{"id":"travel-insurance-choosing-the-right-policy-and-cover","type":"guide","title":"Travel
+        insurance \u2013 choose the right policy and cover","description":"Buying
+        any old travel insurance policy might mean you''re not properly covered \u2013
+        make sure you don''t get caught out"},{"id":"a-good-travel-insurance-policy","type":"guide","title":"Travel
+        insurance \u2013 what does a good policy look like?","description":"Find out
+        what \u2018good\u2019 travel insurance policies cover, and what to look for
+        when choosing one that\u2019s right for you"},{"id":"travel-insurance-for-over-65s-and-medical-conditions","type":"guide","title":"Travel
+        insurance for over 65s and medical conditions","description":"If you''re over
+        65 or have a medical condition you are likely to need specialist travel insurance"},{"id":"how-to-get-the-best-deal-on-travel-insurance","type":"guide","title":"How
+        to get the best deal on travel insurance","description":"Tips on shopping
+        around to get the right travel insurance at the cheapest price"},{"id":"be-prepared-when-making-a-travel-insurance-claim","type":"guide","title":"Be
+        prepared when making a travel insurance claim","description":"Forewarned is
+        forearmed - make sure you have everything in order before you make a claim"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:07 GMT
+recorded_with: VCR 2.9.0

@@ -1,0 +1,140 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/help-with-mortgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 60224ff2968f21ba5b83486151bbcaa2
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:22 GMT; secure
+      - _session_id=60224ff2968f21ba5b83486151bbcaa2; path=/; secure; HttpOnly
+      - _web_tracking=029afae44d66d3935f5969eba5da1056; path=/; expires=Thu, 04-Jun-2015
+        10:49:22 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.020964'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-mortgages","title":"Help with mortgages","description":"Get
+        started with our beginner''s guide to mortgages, getting the right deal, and
+        tips if you''re struggling to pay.","parent_id":"homes-and-mortgages","contents":[{"id":"mortgages-a-beginners-guide","type":"guide","title":"Mortgages
+        \u2013 a beginner\u2019s guide","description":"Looking to buy your first home?  Get
+        to grips with how mortgages work and find links to further information"},{"id":"mortgage-calculator","type":"tool","title":"Mortgage
+        calculator","description":"Use this calculator to find out how much your monthly
+        mortgage payments could be. This can help you work out how much you can afford
+        to borrow"},{"id":"mortgages","type":"guide","title":"Compare mortgages","description":"Use
+        our comparison table on mortgages"},{"id":"choosing-a-mortgage-shop-around-or-get-advice","type":"guide","title":"Choosing
+        a mortgage \u2013 how to get the right deal","description":"Know what to look
+        for if selecting a mortgage yourself, and see the benefits of using a mortgage
+        adviser"},{"id":"why-it-pays-to-review-your-mortgage-regularly","type":"guide","title":"Why
+        it pays to review your mortgage regularly","description":"Make a habit of
+        reviewing your mortgage deal each year. You could save a fortune by switching
+        to a more competitive rate"},{"id":"government-help-if-you-cant-pay-your-mortgage","type":"guide","title":"Government
+        help if you can\u2019t pay your mortgage","description":"You may qualify for
+        help through government schemes such as Mortgage Rescue or Support for Mortgage
+        Interest"},{"id":"how-to-choose-the-right-mortgage","type":"action_plan","title":"Action
+        plan - How to choose the right mortgage","description":"Follow these steps
+        to ensure you choose the right mortgage for you"},{"id":"remortgaging-to-cut-costs","type":"guide","title":"Remortgaging","description":"See
+        if you can save money by switching lenders \u2013 but understand the pitfalls
+        of remortgaging to pay off debt"},{"id":"increasing-your-mortgage-getting-a-further-advance","type":"guide","title":"Increasing
+        your mortgage \u2013 Getting a further advance","description":"The pros and
+        cons of increasing your mortgage to fund major expenditure \u2013 when it
+        can make sense and when it\u2019s best avoided"},{"id":"should-you-pay-off-your-mortgage-early","type":"guide","title":"Should
+        you pay off your mortgage early?","description":"Pay off your mortgage early
+        or hold on to your savings? We weigh up the options to help you decide"},{"id":"mortgage-payment-holidays","type":"guide","title":"Mortgage
+        payment holidays","description":"How mortgage holidays work, the impact on
+        your overall cost of borrowing and the effect on your credit file"},{"id":"work-out-if-it-pays-to-remortgage","type":"action_plan","title":"Action
+        plan - Work out if it pays to remortgage","description":"All you need to consider
+        when thinking about switching mortgage lenders"},{"id":"ways-of-repaying-an-interest-only-mortgage","type":"guide","title":"Ways
+        of repaying an interest-only mortgage","description":"If you\u2019re thinking
+        about an interest-only mortgage, you will need to be able to show you have
+        a plan to pay it all back"},{"id":"next-steps-if-you-cant-get-a-mortgage","type":"action_plan","title":"Action
+        plan - Next steps if you can\u2019t get a mortgage","description":"Steps you
+        can take to help you get a mortgage"},{"id":"mortgage-arrears-if-you-have-problems-paying-your-mortgage","type":"guide","title":"Mortgage
+        arrears or problems paying your mortgage","description":"If you''re in arrears
+        with your mortgage you need to take action now. Follow these tips to get help
+        and cut costs"},{"id":"make-an-interest-only-repayment-scheme","type":"action_plan","title":"Action
+        plan - Plan your strategy to repay your interest-only mortgage","description":"Follow
+        these steps below to get your interest-only mortgage repayment plan on track"},{"id":"keyfacts-documents-explaining-your-mortgage","type":"guide","title":"Keyfacts
+        documents explaining your mortgage","description":"Keyfacts documents are
+        designed to help you compare mortgages easily and understand the type and
+        cost of advice you\u2019re getting"},{"id":"what-to-do-if-youve-been-threatened-with-repossession","type":"guide","title":"What
+        to do if you\u2019ve been threatened with repossession","description":"What
+        to do if you owe money to your mortgage lender and are facing repossession"},{"id":"financial-mis-selling-what-to-do-if-you-think-its-affected-you","type":"guide","title":"Financial
+        mis-selling \u2013 what to do if you''re affected","description":"Have you
+        been mis-sold a financial product, like insurance or an investment? You may
+        have a case to complain and get compensation"},{"id":"mis-sold-endowment-mortgages","type":"guide","title":"Mis-sold
+        endowment mortgages","description":"If you think you were mis-sold an endowment
+        mortgage act quickly \u2013 time limits and process for claiming compensation"},{"id":"your-mortgage-comparison-checklist","type":"guide","title":"Your
+        mortgage comparison checklist","description":"Use this mortgage comparison
+        checklist and you\u2019re more likely to get the best mortgage for you"},{"id":"should-you-overpay-your-mortgage","type":"video","title":"Should
+        you overpay your mortgage?","description":"If you have spare cash at the end
+        of the month, watch our video to find out if you could benefit from overpaying
+        your mortgage"},{"id":"tips-if-youre-struggling-to-get-a-mortgage","type":"guide","title":"How
+        to get a mortgage if you''re struggling","description":"If you\u2019re finding
+        it hard to get a mortgage, here are some tips to help you improve your chances"},{"id":"dealing-with-an-endowment-shortfall","type":"guide","title":"Dealing
+        with an endowment shortfall","description":"Don\u2019t ignore an endowment
+        mortgage shortfall \u2013 check out your options"},{"id":"work-out-what-mortgage-you-can-afford","type":"action_plan","title":"Action
+        plan - Work out what mortgage you can afford","description":"Work out how
+        much you can afford to borrow if you\u2019re buying a home or remortgaging"},{"id":"cut-back-calculator","type":"tool","title":"Cut-back
+        calculator","description":"Where does all your money go? The Cut-back calculator
+        can help you see where you can make savings on things you buy regularly"},{"id":"how-to-get-a-mortgage-if-you-have-a-small-deposit","type":"action_plan","title":"Action
+        plan - Get a mortgage if you have a low deposit","description":"If you\u2019re
+        struggling to raise a deposit, you have a number of options"},{"id":"mortgage-repayment-options","type":"guide","title":"Mortgage
+        repayments","description":"Repayment, interest only or combined? The different
+        mortgage repayment choices, how they work and what to watch out for"},{"id":"mortgage-interest-rate-options","type":"guide","title":"Mortgage
+        interest rates \u2013 The different types","description":"A quick overview
+        of the different types of mortgage interest rate including pros and cons"},{"id":"mortgage-related-fees-and-costs-at-a-glance","type":"guide","title":"Mortgage
+        related fees and costs at a glance","description":"When you take out a mortgage,
+        interest isn\u2019t your only mortgage cost. You also need to think about
+        fees, charges and more"},{"id":"mortgage-special-features","type":"guide","title":"Mortgage
+        special features","description":"Find out more about special features, such
+        as cashback, offsetting or overpayments"},{"id":"insurance-sold-with-mortgages-shop-around-first","type":"guide","title":"Insurance
+        sold with mortgages \u2013 shop around first","description":"Shop around if
+        you need insurance when taking out a mortgage \u2013 you could get a better
+        product at a cheaper price elsewhere"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:22 GMT
+recorded_with: VCR 2.9.0

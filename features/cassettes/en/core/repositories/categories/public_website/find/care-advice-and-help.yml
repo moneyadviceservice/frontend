@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/care-advice-and-help.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - e216fc38e4df374a3717136997dd6ce4
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:23 GMT; secure
+      - _session_id=e216fc38e4df374a3717136997dd6ce4; path=/; secure; HttpOnly
+      - _web_tracking=91a58e7f98bd9603a8b18172b48c4a90; path=/; expires=Thu, 04-Jun-2015
+        10:49:23 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.018996'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"care-advice-and-help","title":"Care advice and help","description":"Help
+        with choosing the right care services, setting up a power of attorney, and
+        dealing with problems.","parent_id":"care-and-disability","contents":[{"id":"long-term-care-services-at-a-glance","type":"guide","title":"Long-term-care
+        services at a glance","description":"There are different types of long-term
+        care products and services. Find out what\u2019s best for you or a loved one"},{"id":"planning-ahead-for-when-you-cant-manage-your-money","type":"guide","title":"Planning
+        ahead for when you can''t manage your money","description":"It\u2019s a good
+        idea to decide now who\u2019ll manage your money when you can\u2019t do it
+        any longer - find out how"},{"id":"care-services-to-help-you-stay-in-your-own-home","type":"guide","title":"Care
+        services to help you stay in your own home","description":"Find out what long-term-care
+        support is available to help you live independently in your own home"},{"id":"preparing-for-illness-old-age-and-death","type":"guide","title":"Preparing
+        for illness, old age and death","description":"Considering how your money
+        will be managed if you become ill and when you die is an important part of
+        financial planning"},{"id":"care-home-or-home-care","type":"guide","title":"Care
+        home or home care?","description":"How to decide between going into a care
+        home and arranging care services in your own home"},{"id":"choosing-the-right-care-home","type":"guide","title":"Choosing
+        the right care home","description":"Finding the right care home can be difficult.
+        Here\u2019s what to look for and how much it could cost"},{"id":"what-if-youre-unhappy-with-the-care-you-receive","type":"guide","title":"What
+        if you\u2019re unhappy with the care you receive","description":"Unhappy with
+        the care services you\u2019re getting at home or in a care home? Know your
+        rights and find out how to complain"},{"id":"how-to-challenge-your-local-authority-over-your-care","type":"guide","title":"How
+        to challenge your local authority over your care","description":"How to challenge
+        your local authority if you think your care assessment is wrong or you think
+        you\u2019re paying too much"},{"id":"solving-problems-when-family-members-are-helping-with-your-money","type":"guide","title":"Solving
+        problems if family members are helping you","description":"If you think family
+        members might be mismanaging your money, or someone else\u2019s, get advice
+        and put your mind at rest"},{"id":"using-a-personal-assistant-to-provide-your-care","type":"guide","title":"Employing
+        someone to help with your care","description":"Carers or personal assistants
+        can help you live independently in your own home. Here''s what you need to
+        know."},{"id":"when-does-someone-need-formal-help-with-managing-their-money","type":"guide","title":"When
+        someone needs formal help managing their money","description":"Find out whether
+        you should formally take over the finances of a friend or family member \u2013
+        and what your other options are"},{"id":"setting-up-a-power-of-attorney","type":"guide","title":"Setting
+        up a power of attorney","description":"How to prepare for the future \u2013
+        the costs, timescales and procedures for setting up a power of attorney"},{"id":"setting-up-a-trust","type":"guide","title":"Setting
+        up a trust","description":"How to set aside money for other people to manage
+        \u2013 and feel confident it will be used according to your wishes"},{"id":"being-a-trustee","type":"guide","title":"What
+        is a trustee?","description":"Could you help manage someone else\u2019s money?
+        Find out what being a trustee means, and how to tell if it\u2019s right for
+        you"},{"id":"resolving-problems-with-attorneys-and-trustees","type":"guide","title":"Resolving
+        problems with attorneys and trustees","description":"What to do when attorneys
+        or trustees aren\u2019t acting the way you think they should"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:23 GMT
+recorded_with: VCR 2.9.0

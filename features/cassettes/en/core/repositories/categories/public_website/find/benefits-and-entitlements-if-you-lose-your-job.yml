@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/benefits-and-entitlements-if-you-lose-your-job.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 927e8e632ffd21747b3fdf4a3b11bd5a
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:27 GMT; secure
+      - _session_id=927e8e632ffd21747b3fdf4a3b11bd5a; path=/; secure; HttpOnly
+      - _web_tracking=1077573d45c95e3036a96b3fec0cadd7; path=/; expires=Thu, 04-Jun-2015
+        10:49:27 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.016700'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"benefits-and-entitlements-if-you-lose-your-job","title":"Benefits
+        and entitlements if you lose your job","description":"Benefits and tax credits
+        you can claim after losing your job, can you claim a tax rebate and what happens
+        to your pension?","parent_id":"losing-your-job","contents":[{"id":"claiming-a-tax-rebate-after-losing-your-job","type":"guide","title":"Claiming
+        your tax rebate after losing your job","description":"When you might be due
+        a tax refund and how to claim it"},{"id":"benefits-and-tax-credits-when-youve-lost-your-job","type":"guide","title":"Benefits
+        and tax credits when you\u2019ve lost your job","description":"If you\u2019re
+        looking for work, you may be able to get Jobseeker\u2019s Allowance and other
+        benefits or grants. Find out how to claim"},{"id":"benefits-and-tax-credits-after-job-loss","type":"action_plan","title":"Action
+        plan - Benefits and tax credits after job loss","description":"Use this action
+        plan to find out what benefits and other entitlements are available following
+        redundancy"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:27 GMT
+recorded_with: VCR 2.9.0

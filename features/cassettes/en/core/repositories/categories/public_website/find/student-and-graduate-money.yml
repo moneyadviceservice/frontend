@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/student-and-graduate-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 59e0b9df4912fc12a90cd2c95e9321c6
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:11 GMT; secure
+      - _session_id=59e0b9df4912fc12a90cd2c95e9321c6; path=/; secure; HttpOnly
+      - _web_tracking=9d37496570b1010be5df8f827cc799f1; path=/; expires=Thu, 04-Jun-2015
+        10:49:11 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.023007'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"student-and-graduate-money","title":"Student and graduate money","description":"Help
+        with preparing your child for student life, including tips on budgeting at
+        college or university.","parent_id":"budgeting-and-managing-money","contents":[{"id":"preparing-your-son-or-daughter-for-student-life","type":"guide","title":"Preparing
+        your son or daughter for student life","description":"Read our handy tips
+        on budgeting and borrowing"},{"id":"managing-money","type":"video","title":"Managing
+        money","description":"What\u2019s the best way to keep on top of your money
+        and manage your finances?"},{"id":"financial-independence","type":"video","title":"Financial
+        independence","description":"When do you reach that point when you realise
+        you can\u2019t depend on your parents for money for ever?"},{"id":"money-highs-and-lows","type":"video","title":"Money
+        highs and lows","description":"Buying something new after saving for it can
+        feel great \u2013 but what can it feel like if you slip into debt?"},{"id":"money-emotions","type":"video","title":"Money
+        emotions","description":"We look at the pressures you might feel about spending
+        when trying to keep up with your mates."},{"id":"introducing-money","type":"video","title":"Introducing
+        money","description":"Ashley and Emma travel around the UK to get the conversation
+        about money started."},{"id":"building-a-credit-history-as-a-young-consumer","type":"guide","title":"Building
+        a credit history as a young consumer","description":"Find out what information
+        banks and building societies consider when checking your financial history."},{"id":"repaying-student-loans","type":"guide","title":"Student
+        loan repayment","description":"Just graduated? Now is the time to find out
+        everything you need to know about repaying your student loan"},{"id":"student-and-graduate-bank-accounts","type":"guide","title":"Student
+        and graduate bank accounts","description":"We explain the differences between
+        student and graduate bank accounts and give tips on how to avoid bank fraud."},{"id":"money-tips-for-graduates","type":"tool","title":"Money
+        tips for graduates","description":"Use our tool to get free, personalised
+        tips and start planning the next stage of your life."},{"id":"budgeting-for-college-or-university","type":"guide","title":"Budgeting
+        for college or university","description":"We look at some of the average costs
+        of going to university or college and show how you can begin to budget for
+        these."},{"id":"student-finance","type":"guide","title":"Student finance for
+        undergraduates","description":"From student loans to tuition fees, find out
+        if you can afford the costs of further education."},{"id":"money-advice","type":"video","title":"Money
+        advice","description":"Ashley and Emma explore how you can take the control
+        back over your money matters and where to get help and advice."}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:11 GMT
+recorded_with: VCR 2.9.0

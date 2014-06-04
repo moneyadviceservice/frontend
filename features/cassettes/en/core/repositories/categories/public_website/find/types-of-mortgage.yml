@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/types-of-mortgage.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:49:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 08a67cca73a5657706208ea8ff7dc4c7
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:49:22 GMT; secure
+      - _session_id=08a67cca73a5657706208ea8ff7dc4c7; path=/; secure; HttpOnly
+      - _web_tracking=d9c2948a16c123d7d85a6cee894037ed; path=/; expires=Thu, 04-Jun-2015
+        10:49:22 GMT; secure
+      X-Request-Id:
+      - f8debe2d-baed-457a-bd51-f609609d14c3
+      X-Runtime:
+      - '0.016226'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"types-of-mortgage","title":"Types of mortgage","description":"Learn
+        about different kinds of mortgages, from repayment and interest-only to shared
+        equity and buy-to-let.","parent_id":"homes-and-mortgages","contents":[{"id":"what-is-an-offset-mortgage","type":"video","title":"What
+        is an Offset Mortgage?","description":"Watch this video to find out what an
+        Offset Mortgage is and whether it might be right for you"},{"id":"review-an-interest-only-repayment-scheme","type":"action_plan","title":"Action
+        plan - Review an interest-only repayment scheme","description":"Guide to check
+        that your funds are on track to repay the loan in full when it becomes due"},{"id":"make-an-interest-only-repayment-scheme","type":"action_plan","title":"Action
+        plan - Plan your strategy to repay your interest-only mortgage","description":"Follow
+        these steps below to get your interest-only mortgage repayment plan on track"},{"id":"buy-to-let-mortgages","type":"guide","title":"Buy-to-let
+        mortgages","description":"How buy-to-let mortgages work, things to consider
+        before taking one out and where you can get one"},{"id":"buy-to-let-mortgage-guide","type":"video","title":"Buy-to-let
+        mortgage guide","description":"Considering a buy-to-let mortgage? Watch our
+        video to get you started"},{"id":"shared-equity-or-partnership-mortgages","type":"guide","title":"Shared
+        equity or partnership mortgages","description":"How shared equity or Partnership
+        Mortgages work, the pros and cons and who they are suitable for."},{"id":"second-charge-or-second-mortgages","type":"guide","title":"Second
+        charge or second mortgages","description":"Second charge mortgages are loans
+        secured on your home. They can be an alternative to remortgaging, but there
+        are risks"},{"id":"sharia-compliant-home-purchase-plans","type":"guide","title":"Sharia-law-compliant
+        home purchase plans","description":"Types of home buying plans that comply
+        with Sharia law and where to get them"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:49:22 GMT
+recorded_with: VCR 2.9.0

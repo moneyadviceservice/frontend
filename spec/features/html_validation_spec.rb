@@ -1,5 +1,5 @@
 RSpec.describe 'HTML validation', :type => :feature do
-  describe 'home page', :vcr do
+  describe 'home page' do
     before { visit root_path(locale: locale) }
 
     context 'in English' do
@@ -15,7 +15,7 @@ RSpec.describe 'HTML validation', :type => :feature do
     end
   end
 
-  describe 'category pages', :vcr do
+  describe 'category pages' do
     before { visit category_path('saving-and-investing', locale: locale) }
 
     context 'in English' do
@@ -31,7 +31,7 @@ RSpec.describe 'HTML validation', :type => :feature do
     end
   end
 
-  describe 'article pages', :vcr do
+  describe 'article pages' do
     context 'in English' do
       before { visit article_path('why-save-into-a-pension', locale: 'en') }
       specify { expect(page).to have_valid_html }
@@ -43,7 +43,7 @@ RSpec.describe 'HTML validation', :type => :feature do
     end
   end
 
-  describe 'search results', :vcr do
+  describe 'search results' do
     context 'in English' do
       let(:locale) { 'en' }
 

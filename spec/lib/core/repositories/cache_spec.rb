@@ -1,6 +1,6 @@
-require 'core/repositories/repository_cache'
+require 'core/repositories/cache'
 
-RSpec.describe Core::RepositoryCache do
+RSpec.describe Core::Repositories::Cache do
   let(:repository) { instance_double('Core::Repositories::Test') }
   let(:cache) { double }
   let(:contents) { 'the contents' }
@@ -14,7 +14,7 @@ RSpec.describe Core::RepositoryCache do
 
   describe '#all' do
     it 'uses the correct cache key' do
-      expect(cache).to receive(:fetch).with("#{locale}-#{repository.class}-all")
+      expect(cache).to receive(:fetch).with("r_spec/mocks/instance_verifying_double/all")
       subject.all
     end
 
@@ -56,7 +56,7 @@ RSpec.describe Core::RepositoryCache do
     let(:id) { 'the-id' }
 
     it 'uses the correct cache key' do
-      expect(cache).to receive(:fetch).with("#{locale}-#{repository.class}-find-#{id}")
+      expect(cache).to receive(:fetch).with("r_spec/mocks/instance_verifying_double/find/the-id")
       subject.find(id)
     end
 

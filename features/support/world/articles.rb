@@ -29,9 +29,9 @@ module World
     def article_with_multiple_parents(locale = 'en')
       case locale.to_s
         when 'en', 'english', 'English'
-          fixture ''
+          fixture 'articles/changes-to-child-benefit-from-2013.yml'
         when 'cy', 'welsh', 'Welsh'
-          fixture ''
+          fixture 'articles/newidiadau-i-fudd-dal-plant-o-2013-ymlaen.yml'
         else
           raise ArgumentError, "invalid article locale `#{locale}'"
       end
@@ -40,9 +40,9 @@ module World
     def orphan_article(locale = 'en')
       case locale.to_s
         when 'en', 'english', 'English'
-          fixture ''
+          fixture 'articles/if-your-baby-is-stillborn.yml'
         when 'cy', 'welsh', 'Welsh'
-          fixture ''
+          fixture 'articles/os-ywch-babi-yn-farw-anedig.yml'
         else
           raise ArgumentError, "invalid article locale `#{locale}'"
       end

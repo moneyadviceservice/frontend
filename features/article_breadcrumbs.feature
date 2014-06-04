@@ -1,4 +1,3 @@
-@wip
 Feature: Article breadcrumbs
   As a user reading an article
   I want to understand where the article belongs
@@ -12,7 +11,6 @@ Feature: Article breadcrumbs
     When I read an article belonging to multiple categories
     Then I can see that it appears in those categories
 
-  @fake-articles
   Scenario: No breadcrumbs are shown for an article that has no parents
     When I read an orphaned article
     Then I should not see breadcrumbs

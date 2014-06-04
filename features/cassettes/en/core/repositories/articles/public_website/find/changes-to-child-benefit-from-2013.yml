@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/changes-to-child-benefit-from-2013.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 7987badb-7341-4f4d-887a-4adcc11828c8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 10:52:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvY2hhbmdlcy10by1jaGlsZC1iZW5lZml0LWZyb20tMjAxMz4gcmVs
+        PSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iZW4tR0IiOyB0aXRsZT0iQ2hpbGQg
+        QmVuZWZpdCBmb3IgcGVvcGxlIGVhcm5pbmcgwqM1MCwwMDArIiwgPGh0dHBz
+        Oi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0aWNsZXMv
+        bmV3aWRpYWRhdS1pLWZ1ZGQtZGFsLXBsYW50LW8tMjAxMy15bWxhZW4+IHJl
+        bD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkJ1ZGQt
+        ZGFsIFBsYW50IGFyIGd5ZmVyIHBvYmwgc3knbiBlbm5pbGwgwqMgNTAsMDAw
+        ICsi
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 3621a26bb1370ee8048e945e586ab6e9
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:52:34 GMT; secure
+      - _session_id=3621a26bb1370ee8048e945e586ab6e9; path=/; secure; HttpOnly
+      - _web_tracking=d1ab7add45f33ffa8006c81e172c7f6f; path=/; expires=Thu, 04-Jun-2015
+        10:52:34 GMT; secure
+      X-Request-Id:
+      - 7987badb-7341-4f4d-887a-4adcc11828c8
+      X-Runtime:
+      - '0.129621'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"changes-to-child-benefit-from-2013","title":"Child Benefit for
+        people earning \u00a350,000+","description":"The rules for Child Benefit changed
+        in January 2013 - find out how the changes affect you and what your options
+        are","body":"<p class=\"intro\"><img alt=\"Changes to Child Benefit from 2013\"
+        src=\"/images/changes-to-child-benefit-from-2013.jpg\"/>If either you or your
+        partner has an income of more than \u00a350,000 a year then you have to pay
+        back some or all of your Child Benefit in the form of extra Income Tax. Read
+        on to find out more. </p><h2>You and your partner each earn less than \u00a350,000
+        per year </h2><p>If you and your partner each has an income of less than \u00a350,000
+        a year, you will receive the full amount of Child Benefit without having to
+        pay any of it back. </p><h2>Either you or your partner earns between \u00a350,000
+        and \u00a360,000 per year\u00a0 </h2><p>If either you or your partner has
+        an income of between \u00a350,000 and \u00a360,000 a year each, you have to
+        pay a proportion of your Child Benefit back in extra Income Tax. </p><h3>How
+        does this work? </h3><p>You still get paid the full amount of Child Benefit
+        each month (or each week if you''re paid weekly). However, whichever one of
+        you has the higher income has to pay more Income Tax to repay the proportion
+        of Child Benefit you''re no longer entitled to. </p><p>You need to fill in
+        a Self Assessment tax return so that HM Revenue &amp; Customs (HMRC) can calculate
+        the amount of extra Income Tax you have to pay. </p><h3>How much do you have
+        to pay back? </h3><p>Basically, you pay back 1% of your family''s Child Benefit
+        for every extra \u00a3100 of income over \u00a350,000. </p><p><strong>For
+        example </strong></p><p>Katya and Leroy have a baby. Katya is staying at home
+        to look after the baby. Leroy earns \u00a351,000 a year. Leroy has to pay
+        extra tax to repay some of their Child Benefit. His income is 10 x \u00a3100
+        over the limit, so the extra tax is 10% of their Child Benefit of \u00a320.30
+        per week. He pays extra tax of \u00a3105 a year. </p><div class=\"add-action\"><span
+        class=\"action-text\"><a target=\"_blank\" href=\"https://www.gov.uk/child-benefit-tax-calculator\">Get
+        an estimate of how much tax you\u2019d have to pay because of your Child Benefit
+        on the Gov.uk website</a></span> <a href=\"#\" class=\"action-email\" data-action-id=\"1481\"
+        data-article-id=\"\" data-article-type=\"\" id=\"email_me_1481\" tabindex=\"0\">Email
+        this <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/external?external_action_id=1481\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1481\"
+        method=\"post\" name=\"1481\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"wrHjoZVhAnMC11CimQTxeuMvIw4+Mqmx1WYzRKYMrwQ=\" /></div></form>
+        </div><h2>Either you or your partner earns more than \u00a360,000 per year\u00a0
+        </h2><p>If either you or your partner has an income of more than \u00a360,000
+        a year, you have to repay all of your Child Benefit as Income Tax. </p><h3>How
+        does this work?\u00a0 </h3><p>You still get paid the full amount of Child
+        Benefit each month (or each week if you''re paid weekly). However, whichever
+        one of you has the higher income has to pay back the full amount in the form
+        of Income Tax. </p><p>You need to fill in a Self Assessment tax return so
+        that HM Revenue &amp; Customs (HMRC) can calculate the extra Income Tax you
+        have to pay. </p><h2>What to do if you''re a new parent </h2><p>Make sure
+        you still put in your claim for Child Benefit - even if you''re earning over
+        \u00a350,000 and you''ve decided not to take the payments. This is really
+        important because if you don\u2019t, you will miss out on: </p><ul><li>National
+        Insurance credits that protect your entitlement to State Pension</li><li>other
+        benefits such as Guardian''s Allowance</li><li>your child being automatically
+        issued with a National Insurance number before their 16th birthday</li></ul><a
+        title=\"Claiming Child Benefit\" href=\"/en/articles/claiming-child-benefit\">See
+        our guide Claiming Child Benefit to find out more about how to claim</a><h2>If
+        you want your Child Benefit payments to stop </h2><p>You could choose not
+        to receive your Child Benefit payments any more. </p><ul class=\"yes-no\"><li
+        class=\"yes\">This avoids the hassle of paying additional tax.</li><li class=\"yes\">You
+        won''t have to complete a tax return.</li><li class=\"no\">If your income
+        is between \u00a350,000 and \u00a360,000, you''ll end up out of pocket since
+        you''ll be giving up the proportion of Child Benefit that you are still entitled
+        to.</li></ul><h3>How to stop your payments </h3><p>You should let HMRC know
+        you want to stop your payments. </p><ul><li><a title=\"HMRC website\" target=\"_blank\"
+        data-link-type=\"external\" href=\"http://www.hmrc.gov.uk/childbenefitcharge/stopchbpayments.htm\">Go
+        to the HMRC website and stop your Child Benefit payments</a></li></ul><h2>If
+        you want to carry on getting your Child Benefit </h2><p>You could choose to
+        keep your Child Benefit payments. </p><ul class=\"yes-no\"><li class=\"yes\">If
+        your income is between \u00a350,000 and \u00a360,000, you will still get however
+        much you''re entitled to.</li><li class=\"yes\">Even if you''re earning over
+        \u00a360,000, if you put your Child Benefit aside in a savings account you
+        can earn interest on the money before you have to pay your tax bill.</li><li
+        class=\"no\">You will need to pay the extra tax.</li><li class=\"no\">You''ll
+        have to complete a tax return.</li></ul><h3>Register for Self Assessment </h3><p>If
+        you decide to carry on getting your payments you need to register for Self
+        Assessment. </p><ul><li><a title=\"HMRC website\" target=\"_blank\" data-link-type=\"external\"
+        href=\"http://www.hmrc.gov.uk/sa/register.htm\">Find out more about registering
+        for Self Assessment on the HMRC website</a></li></ul><p>Ideally, you should
+        put your Child Benefit payments aside in a high interest savings account until
+        you know how much you need to pay back. </p><ul><li><a title=\"Comparison
+        tables\" href=\"/en/articles/saving\">Use our comparison tables to compare
+        savings rates</a></li></ul><p>If you found this page useful, <a href=\"https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions/new\">sign
+        up for our free newsletter</a> full of top money tips and advice. </p>","categories":["child-benefit","having-a-baby"]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:52:34 GMT
+recorded_with: VCR 2.9.0

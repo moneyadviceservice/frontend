@@ -1,26 +1,21 @@
 Given(/^I read an article belonging to a single category$/) do
-  step "I view the article in English"
+  browse_to_article article
 end
 
 Given(/^I read an article belonging to multiple categories$/) do
-  article_page.load(locale: 'en', id: 'changes-to-child-benefit-from-2013')
+  browse_to_article article_with_multiple_parents
 end
 
 Given(/^I read an orphaned article$/) do
-  article_page.load(locale: 'en', id: 'if-your-baby-is-stillborn')
+  browse_to_article orphan_article
 end
 
 Then(/^I can see breadcrumbs for that category and it's parent$/) do
-  expect(article_page.breadcrumbs).to have_content('Home > Money topics > Births, deaths and family')
+  expect(article_page.breadcrumbs).to have_content(current_article.context)
 end
 
 Then(/^I can see that it appears in those categories$/) do
-  current_article = article_for_locale('en')
-  current_article.categories.each do |category|
-    expect(article_page.breadcrumbs).to have_content(category.title)
-  end
-
-  expect(article_page.breadcrumbs).to have_content(I18n.t('articles.show.related_categories.title'))
+  expect(article_page.breadcrumbs).to have_content(current_article.context)
 end
 
 Then(/^I should not see breadcrumbs$/) do

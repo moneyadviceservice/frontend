@@ -23,3 +23,14 @@ Then(/^I should see the static page in (.*)$/) do |language|
   sample_of_body_text = strip_tags(Nokogiri::HTML(current_static_page.body).at('p').inner_html).split(/\./)[0]
   expect(static_page.content).to have_content(strip_tags(sample_of_body_text))
 end
+
+When(/^I view a static page with an intro$/) do
+  static_page.load(locale: 'en', id: 'about-us')
+end
+
+Then(/^I should see the static page's intro on the page$/) do
+  current_static_page = Core::StaticPageReader.new('about-us').call
+
+  sample_of_intro_text = strip_tags(Nokogiri::HTML(current_static_page.body).at('p.intro').inner_html)
+  expect(static_page.intro).to have_content(strip_tags(sample_of_intro_text))
+end

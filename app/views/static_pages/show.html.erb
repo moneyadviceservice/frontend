@@ -6,6 +6,12 @@
   <main role="main">
     <h1><%= title static_page.title %></h1>
 
+    <% if static_page.intro.present? %>
+      <p class="intro">
+        <%= static_page.intro %>
+      </p>
+    <% end %>
+
     <%= static_page.content %>
   </main>
 </div>

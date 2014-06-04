@@ -22,3 +22,7 @@ Feature: Viewing a static page
     | original_language | translated_language |
     | English           | Welsh               |
     | Welsh             | English             |
+
+  Scenario: View a static page with an intro
+    When I view a static page with an intro
+    Then I should see the static page's intro on the page

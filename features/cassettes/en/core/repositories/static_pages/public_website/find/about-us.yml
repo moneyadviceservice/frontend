@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/static/about-us.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 39c2ace8-acee-4ee7-9593-1864abd95405
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 14:28:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/static/about-us> rel="alternate";
+        hreflang="en-GB"; title="About us", <https://www.moneyadviceservice.org.uk/cy/static/amdanom-ni>
+        rel="alternate"; hreflang="cy-GB"; title="Amdanom ni"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 05adb489387668a3d234a8b9db8d59cf
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 14:28:52 GMT; secure
+      - _session_id=05adb489387668a3d234a8b9db8d59cf; path=/; secure; HttpOnly
+      - _web_tracking=5668b0930d57ff4cd758f411182efa14; path=/; expires=Thu, 04-Jun-2015
+        14:28:52 GMT; secure
+      X-Request-Id:
+      - 39c2ace8-acee-4ee7-9593-1864abd95405
+      X-Runtime:
+      - '0.349674'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"about-us","title":"About us","description":"The Money Advice
+        Service helps people manage their money. We do this directly through our own
+        free and impartial advice service. We also work in partn ...","body":"<p class=\"intro\">The
+        Money Advice Service helps people manage their money. We do this directly
+        through our own free and impartial advice service. We also work in partnership
+        with other organisations to help people make the most of their money. We are
+        an independent service, set up by government. </p><iframe frameborder=\"0\"
+        height=\"413\" width=\"680\" src=\"https://www.youtube.com/embed/oZ0_U108aZw\">&lt;span
+        id=\"XinhaEditingPostion\"&gt;&lt;/span&gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;span
+        id=\"XinhaEditingPostion\"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/span&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+        </iframe><h2>Money advice </h2><p>Our free and impartial money advice is available
+        <a title=\"website\" href=\"https://www.moneyadviceservice.org.uk/\">online</a>,
+        over the phone (Tel. 0300 500 5000) and by web-chat, in <a title=\"guides\"
+        href=\"https://www.moneyadviceservice.org.uk/en/categories/free-printed-guides\">printed
+        guides</a>, and <a title=\"face to face\" href=\"https://www.moneyadviceservice.org.uk/en/static/contact-us\">face
+        to face</a> through a UK-wide network of Money Advisers. Our <a title=\"Coping
+        with unexpected bills\" href=\"https://www.moneyadviceservice.org.uk/en/campaigns/coping-with-unexpected-bills\">Ask
+        Ma\u00a0campaign</a> is letting millions of people know about our new free
+        service. </p><p>We also work with other organisations to make our content
+        available for free where this is helpful to their customers, clients, members,
+        followers or employees. For more information, please contact partners@moneyadviceservice.org.uk
+        or visit <a title=\"partners\" href=\"https://www.moneyadviceservice.org.uk/en/static/partners\">Partners</a>.
+        </p><h2>Debt advice </h2><p>We work with partners to make debt advice easier
+        and quicker to access, and to improve standards and quality across the sector.
+        We are a major funder of free face-to-face debt advice across the UK. See
+        <a title=\"About our debt work\" href=\"https://www.moneyadviceservice.org.uk/en/articles/about-our-debt-work\">Debt
+        Advice</a> for more information. </p><h2>Financial capability </h2><p>We are
+        the UK statutory body for improving people\u2019s understanding and knowledge
+        of financial matters and their ability to manage their own financial affairs.
+        In this capacity we work with, support and provide expertise to other organisations
+        in the financial services industry, the third-sector, across government and
+        elsewhere. </p><p>Instilling good money management habits at an early age
+        is particularly important. Our work with young people is focussed on how best
+        to support parents of young children, and on meeting the needs of young adults
+        as they begin to make financial decisions for themselves. </p><p>We are currently
+        leading the development of a UK strategy for financial capability which will
+        inform and coordinate the activities of the many organisations who share an
+        interest in improving people\u2019s financial well-being. </p><p>For further
+        information, please contact external.affairs@moneyadviceservice.org.uk </p><p><strong>In
+        this section:</strong></p><p><a title=\"Background\" data-type=\"link\" hreflang=\"en\"
+        href=\"/en/static/background\">Background</a> l\u00a0<a title=\"Our board\"
+        data-type=\"link\" hreflang=\"en\" href=\"/en/static/our-board\">Our board</a>\u00a0l
+        <a data-type=\"link\" hreflang=\"en\" href=\"/en/static/debt-advice\">Debt
+        advice</a> l <a data-type=\"link\" hreflang=\"en\" href=\"/en/static/accountability-and-funding\">Oversight,
+        accountability and funding</a>\u00a0\u00a0 </p>"}'
+    http_version:
+  recorded_at: Wed, 04 Jun 2014 14:28:53 GMT
+recorded_with: VCR 2.9.0

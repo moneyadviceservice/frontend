@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/buying-a-home.json
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/buying-a-home.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - b6e8d2df-45b9-4ad6-a51f-36650953e351
+      - e3999e50-a590-4cd4-aeea-24fea454e8aa
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 03 Jun 2014 18:48:58 GMT
+      - Wed, 04 Jun 2014 10:29:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 5eac5221001c26f9544792bb180b1b26
+      - 7d42167fbb8141da99d41afd5fbc0f76
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:58 GMT; secure
-      - _session_id=5eac5221001c26f9544792bb180b1b26; path=/; secure; HttpOnly
-      - _web_tracking=02698bec41a689f769dd2ef8bee533ed; path=/; expires=Wed, 03-Jun-2015
-        18:48:58 GMT; secure
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:29:06 GMT; secure
+      - _session_id=7d42167fbb8141da99d41afd5fbc0f76; path=/; secure; HttpOnly
+      - _web_tracking=a10179ebc54972bb0bde1d9a35fbedfb; path=/; expires=Thu, 04-Jun-2015
+        10:29:06 GMT; secure
       X-Request-Id:
-      - b6e8d2df-45b9-4ad6-a51f-36650953e351
+      - e3999e50-a590-4cd4-aeea-24fea454e8aa
       X-Runtime:
-      - '0.019192'
+      - '0.375957'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,60 +57,63 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"buying-a-home","title":"Buying a home","description":"Work out
-        your overall buying and moving costs, first time buyer advice, and tips and
-        tools to help you work out what you can afford.","parent_id":"homes-and-mortgages","contents":[{"id":"estimate-your-overall-buying-and-moving-costs","type":"guide","title":"Estimate
-        your overall cost of buying a house and moving","description":"Use our checklist
-        of buying or moving costs to help you get a realistic picture of what it\u2019s
-        all going to cost you"},{"id":"how-much-can-you-afford-to-borrow","type":"guide","title":"How
-        much can you afford to borrow for a mortgage?","description":"When you\u2019re
-        working out what size mortgage you can afford make sure you consider more
-        than just your monthly repayments"},{"id":"money-timeline-when-buying-property-england-wales--n-ireland","type":"guide","title":"House
-        buying process - A money timeline","description":"See what you''ll need to
-        spend when buying in England, Wales or Northern Ireland"},{"id":"first-time-buyer-money-tips","type":"guide","title":"First-time
-        buyer advice","description":"From how to save for a deposit to how to find
-        the right deposit, we answer the biggest first-time buyer questions"},{"id":"help-to-buy-homebuy-and-other-housing-schemes","type":"guide","title":"Help
-        to Buy, HomeBuy and other housing schemes","description":"Shared ownership
-        and other government schemes that can help you get on the property ladder"},{"id":"should-you-rent-or-buy","type":"guide","title":"Rent
-        or buy?","description":"Can you afford to buy a property and, even if you
-        can, is it a good idea \u2013 or would you be better off renting instead?"},{"id":"decide-whether-to-rent-or-buy","type":"action_plan","title":"Action
-        plan - Decide whether to rent or buy","description":"Follow these steps to
-        help work out whether buying or renting is best for you"},{"id":"saving-for-a-deposit","type":"tool","title":"Saving
-        for a deposit","description":"Follow our steps to make saving for a deposit
-        more manageable."},{"id":"planning-for-the-cost-of-moving-day","type":"guide","title":"Planning
-        for the cost of moving day","description":"With so many things to arrange
-        it\u2019s easy to overlook the actual costs of making the move itself. Planning
-        ahead can help to reduce an already stressful day."},{"id":"leasehold-or-freehold-financial-implications","type":"guide","title":"Leasehold
-        or freehold \u2013 financial implications","description":"Whether you own
-        a property as a freeholder or leaseholder makes a big difference to your costs
-        and to selling your home on"},{"id":"help-to-buy-scheme-everything-you-need-to-know","type":"guide","title":"Help
-        to Buy Scheme \u2013 Everything you need to know","description":"The government''s
-        Help to Buy mortgage schemes for first-time buyers and current owners are
-        now underway - our guide reveals all"},{"id":"help-to-buy-schemes-faqs","type":"guide","title":"Help
-        to Buy schemes - FAQs","description":"Confused about Help to Buy? Read our
-        most frequently asked questions about the new government schemes."},{"id":"right-to-buy-right-to-acquire-in-england-wales-and-n-ireland","type":"guide","title":"Right
-        to Buy \u2013 England, Wales and Northern Ireland","description":"Right to
-        Buy and Right to Acquire \u2013 schemes that could help you own your current
-        council property or housing association home"},{"id":"right-to-buy-scotland","type":"guide","title":"Right
-        to Buy \u2013 Scotland","description":"A scheme that could help you own your
-        council home if you live in Scotland"},{"id":"everything-you-need-to-know-about-stamp-duty","type":"guide","title":"Everything
-        you need to know about Stamp Duty","description":"Information on the tax you
-        have to pay when buying a property."},{"id":"cost-timeline-for-buying-a-property-in-scotland","type":"guide","title":"Buying
-        property in Scotland - a money timeline","description":"Keep track of what
-        money you''ll need to spend at different stages when you''re buying a home
-        in Scotland"},{"id":"choosing-a-mortgage-shop-around-or-get-advice","type":"guide","title":"Choosing
-        a mortgage \u2013 how to get the right deal","description":"Know what to look
-        for if selecting a mortgage yourself, and see the benefits of using a mortgage
-        adviser"},{"id":"the-newbuy-scheme","type":"guide","title":"NewBuy Scheme
-        \u2013 deposit help when buying newbuild homes","description":"If you\u2019re
-        struggling to save a deposit for a mortgage, you may be able to get help from
-        a government scheme in England"},{"id":"quick-house-sales","type":"guide","title":"Quick
-        house sales","description":"If you need to sell your house in a hurry you
-        might be thinking of using a \u2018quick sale\u2019 company - read on to make
-        sure you know the risks"},{"id":"things-to-look-out-for-when-buying-property-overseas","type":"guide","title":"Things
-        to look out for when buying property overseas","description":"Buying property
-        abroad, especially new build homes, can come with a number of risks, so it
-        pays to be cautious"}]}'
-    http_version:
-  recorded_at: Tue, 03 Jun 2014 18:48:58 GMT
+      string: '{"id":"buying-a-home","title":"Prynu cartref","description":"Cyfrifwch
+        eich costau prynu a symud cyffredinol, cyngor i brynwyr tro cyntaf, ac awgrymiadau
+        ac offer i''ch helpu chi i gyfrifo beth allwch ei fforddio.","parent_id":"homes-and-mortgages","contents":[{"id":"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol","type":"guide","title":"Amcangyfrifwch
+        eich costau prynu a symud cyffredinol","description":"Defnyddiwch ein rhestr
+        wirio o gostau prynu neu symud i''ch helpu i gael darlun realistig o gyfanswm
+        y gost i chi"},{"id":"faint-allwch-chi-fforddio-ei-fenthyca","type":"guide","title":"Faint
+        allwch chi fforddio ei fenthyca?","description":"Pan fyddwch yn cyfrifo cyfanswm
+        y morgais y gallwch ei fforddio, sicrhewch eich bod yn ystyried mwy na''ch
+        ad-daliadau misol yn unig"},{"id":"llinell-amser-arian-wrth-brynu-cartref","type":"guide","title":"Llinell
+        amser arian wrth brynu cartref","description":"Gallwch weld beth fydd angen
+        i chi ei wario wrth brynu yng Nghymru, Lloegr neu Ogledd Iwerddon"},{"id":"awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf","type":"guide","title":"Awgrymiadau
+        ar arian i brynwyr tro cyntaf","description":"O sut mae cynilo ar gyfer blaendal
+        i sut mae dod o hyd i''r blaendal iawn, rydym yn ateb y cwestiynau mwyaf sy''n
+        wynebu prynwyr tro cyntaf"},{"id":"homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill","type":"guide","title":"Help
+        to Buy, HomeBuy a chynlluniau tai eraill","description":"Cydberchnogaeth a
+        chynlluniau eraill y llywodraeth a all eich helpu i brynu eich cartref cyntaf"},{"id":"a-ddylech-chi-rentu-neu-brynu","type":"guide","title":"A
+        ddylech chi rentu neu brynu?","description":"Fedrwch chi fforddio prynu eiddo
+        a, hyd yn oed os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n
+        well i chi rentu yn lle hynny?"},{"id":"penderfynwch-naill-ai-rhentu-neu-brynu","type":"action_plan","title":"Cynllun
+        gweithredu - Penderfynwch naill ai rhentu neu brynu","description":"Dilynwch
+        y camau hyn i helpu i benderfynu ai prynu neu rentu yw\u2019r gorau i chi"},{"id":"cynilo-ar-gyfer-blaendal","type":"tool","title":"Cynilo
+        ar gyfer blaendal","description":"Dilynwch ein camau i sicrhau bod cynilo
+        ar gyfer blaendal yn fwy rheoladwy."},{"id":"cynllunio-ar-gyfer-cost-diwrnod-symud","type":"guide","title":"Cynllunio
+        ar gyfer cost diwrnod symud","description":"A chynifer o bethau i\u2019w trefnu,
+        mae\u2019n hawdd anwybyddu gwir gostau\u2019r broses o symud. Drwy gynllunio
+        ymlaen llaw, gallwch leihau tipyn o\u2019r straen ar y dydd"},{"id":"prydles-neu-rydd-ddeiliadaeth-goblygiadau-ariannol","type":"guide","title":"Prydles
+        neu rydd-ddeiliadaeth \u2013 goblygiadau ariannol","description":"Bydd pa
+        un a ydych yn berchen eiddo fel rhydd-ddeiliad neu lesddeiliad yn gwneud gwahaniaeth
+        i\u2019ch costau a gwerthu eich cartref ar"},{"id":"cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch","type":"guide","title":"Cynlluniau
+        Cymorth i Brynu - cael gwybod popeth sydd ei angen arnoch","description":"Mae
+        cynlluniau morgais Cymorth i Brynu\u2019r llywodraeth wedi cychwyn erbyn hyn
+        - mae ein canllaw yn datgelu popeth."},{"id":"cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin","type":"guide","title":"Cynlluniau
+        Cymorth i Brynu - Cwestiynau Cyffredin","description":"Wedi\u2019ch drysu
+        gan Cymorth i Brynu? Darllenwch ein cwestiynau mwyaf cyffredin ynghylch cynlluniau
+        newydd y llywodraeth."},{"id":"hawl-i-brynu-cymru-lloegr-a-gogledd-iwerddon","type":"guide","title":"Hawl
+        i Brynu \u2013 Cymru, Lloegr a Gogledd Iwerddon","description":"Hawl i Brynu
+        a Hawl i Gaffael \u2013 cynlluniau a allai eich helpu i berchen ar eich eiddo
+        cyngor neu gartref cymdeithas tai presennol"},{"id":"hawl-i-brynu-yr-alban","type":"guide","title":"Hawl
+        i Brynu \u2013 yr Alban","description":"Cynllun a allai eich helpu i berchen
+        ar eich cartref cyngor os ydych yn byw yn yr Alban"},{"id":"popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp","type":"guide","title":"Popeth
+        sydd angen ichi ei wybod am y dreth stamp","description":"Gwybodaeth ar y
+        dreth mae\u2019n rhaid ichi\u2019i thalu wrth brynu eiddo"},{"id":"llinell-amser-arian-wrth-brynu-cartref-yr-alban","type":"guide","title":"Llinell
+        amser arian wrth brynu cartref \u2013 yr Alban","description":"Cadwch gofnod
+        o faint o arian y bydd angen i chi ei wario ar gamau gwahanol pan fyddwch
+        yn prynu cartref yn yr Alban"},{"id":"dewis-morgais-sut-mae-cael-y-cynnig-iawn","type":"guide","title":"Dewis
+        morgais \u2013 sut mae cael y cynnig iawn","description":"Yma cewch wybod
+        beth i chwilio amdano os ydych chi''n dewis morgais eich hun, a gweld beth
+        yw manteision defnyddio cynghorydd morgeisi"},{"id":"newbuy-cymorth-a-blaendal-wrth-brynu-cartrefi-sydd-newydd-eu-hadeiladu","type":"guide","title":"NewBuy
+        \u2013 cymorth \u00e2 blaendal wrth brynu cartrefi sydd newydd eu hadeiladu","description":"Os
+        ydych yn cael anhawster cynilo blaendal ar gyfer morgais, efallai y gallwch
+        gael help gan un o gynlluniau''r llywodraeth yn Lloegr"},{"id":"gwerthiannau-tai-cyflym","type":"guide","title":"Gwerthiannau
+        tai cyflym","description":"Os oes angen ichi werthu\u2019ch t\u0177 ar frys
+        efallai\u2019ch bod yn ystyried defnyddio cwmni \u2018gwerthu\u2019n gyflym\u2019
+        - darllenwch ymlaen i sicrhau eich bod yn deall y peryglon"},{"id":"pethau-i-gadw-llygad-amdanynt-wrth-brynu-eiddo-dramor","type":"guide","title":"Pethau
+        i gadw llygad amdanynt wrth brynu eiddo dramor","description":"Gall prynu
+        eiddo dramor, yn arbennig cartrefi newydd eu hadeiladu, ddod gyda nifer o
+        risgiau, felly mae\u2019n ddoeth i fod yn ofalus"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:29:06 GMT
 recorded_with: VCR 2.9.0

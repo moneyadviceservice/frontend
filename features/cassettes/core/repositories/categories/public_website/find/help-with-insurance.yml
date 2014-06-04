@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/help-with-insurance.json
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/help-with-insurance.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 88768b47-9886-49bb-96fa-761de634b11b
+      - 3d6df554-9b0c-47cf-8638-9d9bc781680c
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 03 Jun 2014 18:49:10 GMT
+      - Wed, 04 Jun 2014 10:29:25 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 25b1afed2b0eb8d66cf7e60d990558e7
+      - 86d0798bffffae82c6f319a3b7f5cfb5
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:10 GMT; secure
-      - _session_id=25b1afed2b0eb8d66cf7e60d990558e7; path=/; secure; HttpOnly
-      - _web_tracking=7ea7a8ec273f2eef49881d044271f991; path=/; expires=Wed, 03-Jun-2015
-        18:49:10 GMT; secure
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:29:25 GMT; secure
+      - _session_id=86d0798bffffae82c6f319a3b7f5cfb5; path=/; secure; HttpOnly
+      - _web_tracking=42ab12208b9292f7cee5ada0f980565d; path=/; expires=Thu, 04-Jun-2015
+        10:29:25 GMT; secure
       X-Request-Id:
-      - 88768b47-9886-49bb-96fa-761de634b11b
+      - 3d6df554-9b0c-47cf-8638-9d9bc781680c
       X-Runtime:
-      - '0.026783'
+      - '0.173012'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,36 +57,39 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"help-with-insurance","title":"Help with insurance","description":"Understand
-        what insurance is and how it works. Find out how to buy insurance and how
-        to go about making a claim.","parent_id":"insurance","contents":[{"id":"what-is-insurance","type":"guide","title":"What
-        is insurance?","description":"Not sure what insurance is or how it works?
-        Understand the basics so you can get the right protection for you and your
-        family"},{"id":"types-of-insurance","type":"guide","title":"Types of insurance","description":"Not
-        sure what insurance you need? This table summarises what each type covers,
-        who needs it and the pros and cons of each"},{"id":"things-to-watch-out-for-when-buying-insurance","type":"guide","title":"Things
-        to look out for when buying insurance","description":"Before you commit, run
-        through this checklist to make sure you know what you\u2019re buying"},{"id":"how-to-buy-insurance-using-comparison-sites","type":"guide","title":"How
-        to buy insurance using comparison sites","description":"Find out how price
-        comparison websites could save you money and learn how to use them to buy
-        the right cover"},{"id":"when-to-use-an-insurance-broker","type":"guide","title":"When
-        to use an insurance broker","description":"Insurance brokers can help you
-        find the right policy for whatever you want to insure and save you time if
-        you need to make a claim"},{"id":"making-an-insurance-claim","type":"guide","title":"Making
-        an insurance claim","description":"Do you need to claim on your insurance?
-        You\u2019re more likely to succeed if you follow this step-by-step process"},{"id":"what-to-do-if-your-insurance-claim-is-rejected","type":"guide","title":"What
-        to do if your insurance claim is rejected","description":"If you think that
-        your insurance claim was unfairly rejected, you should consider complaining
-        \u2013 find out more about how to do that"},{"id":"making-a-complaint-about-an-insurance-company","type":"guide","title":"How
-        to make an insurance complaint","description":"If you\u2019re not happy with
-        the way your insurance company has treated you, you have the right to complain
-        \u2013 find out how"},{"id":"how-to-complain-about-an-insurer","type":"action_plan","title":"Action
-        plan - How to complain about an insurer","description":"Steps to take if you\u2019re
-        not happy with the service offered by your insurance company, or the way they
-        have treated you."},{"id":"getting-insurance-if-you-have-a-criminal-conviction","type":"guide","title":"Getting
-        insurance if you have a criminal conviction","description":"Do you have a
-        criminal record \u2013 or maybe just a fine? Get tips for what to do and where
-        to go for insurance"}]}'
-    http_version:
-  recorded_at: Tue, 03 Jun 2014 18:49:10 GMT
+      string: '{"id":"help-with-insurance","title":"Cymorth gydag yswiriant","description":"Deall
+        beth yw yswiriant a sut mae''n gweithio. Dysgwch sut i brynu yswiriant a sut
+        mae mynd ati i wneud hawliad.","parent_id":"insurance","contents":[{"id":"beth-yw-yswiriant","type":"guide","title":"Beth
+        yw yswiriant?","description":"Ddim yn si\u0175r beth yw yswiriant neu sut
+        mae\u2019n gweithio? Deall y pethau sylfaenol fel y gallwch gael y diogelwch
+        cywir ar eich cyfer chi a\u2019ch teulu"},{"id":"mathau-o-yswiriant","type":"guide","title":"Mathau
+        o yswiriant","description":"Ddim yn si\u0175r pa yswiriant sydd ei angen arnoch
+        chi? Mae\u2019r tabl hwn yn crynhoi beth mae pob math yn yswirio, pwy sydd
+        ei angen a manteision ac anfanteision pob un."},{"id":"beth-i-fod-yn-wyliadwrus-ohono-wrth-brynu-yswiriant","type":"guide","title":"Beth
+        i fod yn wyliadwrus ohono wrth brynu yswiriant","description":"Cyn ymrwymo,
+        ewch drwy\u2019r rhestr wirio i sicrhau eich bod yn gwybod beth ydych ar fin
+        ei brynu"},{"id":"sut-i-brynu-yswiriant-gan-ddefnyddio-safleoedd-cymharu","type":"guide","title":"Sut
+        i brynu yswiriant gan ddefnyddio safleoedd cymharu","description":"Darganfyddwch
+        sut y gall gwefannau cymharu pris arbed arian i chi a dysgu sut i\u2019w defnyddio
+        i brynu\u2019r yswiriant cywir"},{"id":"pryd-i-ddefnyddio-brocer-yswiriant","type":"guide","title":"Pryd
+        i ddefnyddio brocer yswiriant","description":"Gall broceriaid yswiriant roi
+        cymorth i chi ddod o hyd i\u2019r polisi cywir ar gyfer unrhyw beth yr ydych
+        yn dymuno ei yswirio ac arbed amser i chi os oes angen i chi wneud hawliad"},{"id":"gwneud-hawliad-yswiriant","type":"guide","title":"Gwneud
+        hawliad yswiriant","description":"A oes arnoch angen hawlio ar eich yswiriant?
+        Byddwch yn fwy tebygol o lwyddo os byddwch yn dilyn y broses gam wrth gam
+        hon"},{"id":"beth-iw-wneud-os-gwrthodir-eich-hawliad-yswiriant","type":"guide","title":"Beth
+        i''w wneud os gwrthodir eich hawliad yswiriant","description":"Os byddwch
+        yn meddwl bod eich hawliad yswiriant wedi cael ei wrthod yn annheg, dylech
+        ystyried cwyno \u2013 dewch o hyd i ragor am sut i wneud hynny"},{"id":"gwneud-cwyn-am-gwmni-yswiriant","type":"guide","title":"Gwneud
+        cwyn am gwmni yswiriant","description":"Os nad ydych yn fodlon ar y ffordd
+        y mae eich cwmni yswiriant wedi eich trin, mae gennych hawl i gwyno \u2013
+        darganfyddwch sut i wneud hynny"},{"id":"sut-i-gwyno-am-yswiriwr","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i gwyno am yswiriwr","description":"Camau gweithredu os nad
+        ydych yn hapus \u00e2''r gwasanaeth a ddarparwyd gan eich cwmni yswiriant,
+        neu\u2019r modd y maent wedi\u2019ch trin"},{"id":"cael-yswiriant-os-oes-gennych-gollfarn","type":"guide","title":"Cael
+        yswiriant os oes gennych gollfarn","description":"Oes gennych chi gofnod troseddol
+        \u2013 neu hyd yn oed ddim ond dirwy efallai? Cymerwch gyngor yngl\u0177n
+        \u00e2 beth i\u2019w wneud a lle i fynd ar gyfer yswiriant"}]}'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:29:25 GMT
 recorded_with: VCR 2.9.0

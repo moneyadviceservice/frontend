@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - b6e8d2df-45b9-4ad6-a51f-36650953e351
+      - 900d7e9e-ea85-40d9-b810-6a38b343e9c7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 03 Jun 2014 18:48:57 GMT
+      - Wed, 04 Jun 2014 10:29:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,16 +43,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 8e3e96d60a2571319789a80f77781155
+      - d74d684151f0e734c1312973752f4c32
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:57 GMT; secure
-      - _session_id=8e3e96d60a2571319789a80f77781155; path=/; secure; HttpOnly
-      - _web_tracking=b75e4b4e083c12ff3b1b7308992fa742; path=/; expires=Wed, 03-Jun-2015
-        18:48:57 GMT; secure
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:29:02 GMT; secure
+      - _session_id=d74d684151f0e734c1312973752f4c32; path=/; secure; HttpOnly
+      - _web_tracking=b896d518b6cecd321c8658e07639e9db; path=/; expires=Thu, 04-Jun-2015
+        10:29:02 GMT; secure
       X-Request-Id:
-      - b6e8d2df-45b9-4ad6-a51f-36650953e351
+      - 900d7e9e-ea85-40d9-b810-6a38b343e9c7
       X-Runtime:
-      - '0.103857'
+      - '0.265592'
       X-Rack-Cache:
       - miss
       P3p:
@@ -120,7 +120,7 @@ http_interactions:
         method=\"post\" name=\"guide_estimate-your-overall-buying-and-moving-costs\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\" /></div></form> </div></p><p><div
+        value=\"gtJejNjQr82Z0uGSK7OEuB3N7aLEys98DahJ3Y5SZVE=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/articles/how-much-can-you-afford-to-borrow\">How
         much can you afford to borrow?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-much-can-you-afford-to-borrow\" data-article-type=\"guide\"
@@ -130,7 +130,7 @@ http_interactions:
         method=\"post\" name=\"guide_how-much-can-you-afford-to-borrow\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\" /></div></form> </div></p><p><div
+        value=\"gtJejNjQr82Z0uGSK7OEuB3N7aLEys98DahJ3Y5SZVE=\" /></div></form> </div></p><p><div
         class=\"add-action\"><a href=\"/en/tools/how-to-set-a-savings-goal\">How to
         set a savings goal</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
         data-article-id=\"how-to-set-a-savings-goal\" data-article-type=\"tool\" id=\"email_me_how-to-set-a-savings-goal\"
@@ -139,7 +139,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-set-a-savings-goal&amp;article_type=tool\"
         method=\"post\" name=\"tool_how-to-set-a-savings-goal\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8WG6XwHwBwubFU3qcZ/u4WL+xnXo9QDJTlkV+s/wszA=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"gtJejNjQr82Z0uGSK7OEuB3N7aLEys98DahJ3Y5SZVE=\"
         /></div></form> </div></p><h2>Government help\u00a0if you have a small deposit
         or you\u2019re on a low income </h2><p>If you\u2019re on a low income, are
         trying to buy your first home or are a key worker there are several schemes
@@ -148,6 +148,6 @@ http_interactions:
         you if you can only afford a small deposit. Follow the link below to find
         out more. </p><ul><li><a href=\"/en/categories/affordable-housing-schemes\">Affordable
         housing schemes</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
-    http_version:
-  recorded_at: Tue, 03 Jun 2014 18:48:57 GMT
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:29:03 GMT
 recorded_with: VCR 2.9.0

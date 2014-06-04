@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories.json
+    uri: https://www.moneyadviceservice.org.uk/cy/categories.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3f221556-6c3b-480d-ad70-6e415592934e
+      - 54791eec-8804-48b6-9ae0-f4bdc57dee78
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 03 Jun 2014 18:48:56 GMT
+      - Wed, 04 Jun 2014 10:29:01 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - f521fe03e074e5d55407837a47ab6f3c
+      - 340ab749961e4fed3a86d5158bcc2ac0
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:55 GMT; secure
-      - _session_id=f521fe03e074e5d55407837a47ab6f3c; path=/; secure; HttpOnly
-      - _web_tracking=5bf6efd87fef0d79bd790df5bb5d02f2; path=/; expires=Wed, 03-Jun-2015
-        18:48:55 GMT; secure
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:29:01 GMT; secure
+      - _session_id=340ab749961e4fed3a86d5158bcc2ac0; path=/; secure; HttpOnly
+      - _web_tracking=8ed700879659284f3eb2782a4f43805e; path=/; expires=Thu, 04-Jun-2015
+        10:29:01 GMT; secure
       X-Request-Id:
-      - 3f221556-6c3b-480d-ad70-6e415592934e
+      - 54791eec-8804-48b6-9ae0-f4bdc57dee78
       X-Runtime:
-      - '0.139863'
+      - '0.030570'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,241 +57,249 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '[{"id":"managing-your-money","type":"category","title":"Managing your
-        money","description":"Advice, tips and tools to help you get your finances
-        under control and make your money go further\r\n                        ","contents":[{"id":"young-people-and-money","type":"category","title":"Leaving
-        school or college","description":"Help and advice on staying on in education,
-        moving into work and paying your own way as a young adult","contents":[{"id":"moving-into-work","type":"category","title":"Moving
-        into work","description":"Learn about how you\u2019re paid and taxed at work,
-        plus we look at payslip basics","contents":[]},{"id":"independent-living","type":"category","title":"Independent
-        living","description":"Advice on the best ways to pay bills, the cost of running
-        a car and more","contents":[]}]},{"id":"travel-money-or-sending-money-overseas","type":"category","title":"Travel
-        money or sending money overseas","description":"Buying foreign currency, cheap
-        cards to use abroad and choosing the best way\r\n                                    to
-        send money overseas\r\n                                ","contents":[]},{"id":"work-and-money","type":"category","title":"Work
-        and money","description":"Pay, tax and benefits decisions you may have to
-        take at work or when you work for yourself","contents":[{"id":"pay-and-benefits","type":"category","title":"Pay
-        and benefits","description":"Checking your options for pay, tax and benefits
-        as an employee or agency worker","contents":[]},{"id":"pensions-in-the-workplace","type":"category","title":"Pensions
-        in the workplace","description":"Preparing for changes to workplace pensions
-        and understanding about tax relief on pension contributions","contents":[]},{"id":"working-for-yourself","type":"category","title":"Working
-        for yourself","description":"Checking your options for pay, tax, insurance
-        and pensions as a self-employed person","contents":[]}]},{"id":"money-complaints-and-compensation","type":"category","title":"Money
-        complaints and compensation","description":"Your rights and how to complain
-        - unfair treatment or mis-selling, financial\n                                compensation
-        if your bank or provider goes bust\n                            ","contents":[]},{"id":"financial-help-and-advice","type":"category","title":"Financial
-        help and advice","description":"Choosing and using a financial adviser and
-        where to get free financial advice\r\n                            ","contents":[]}]},{"id":"money-topics","type":"category","title":"Money
-        topics","description":"Saving and investing, borrowing and debt, homes and
-        mortgages, insurance, pensions and\r\n                            retirement\r\n                        ","contents":[{"id":"debt-and-borrowing","type":"category","title":"Debt
-        and borrowing","description":"Taking control of debt, getting free debt advice,
-        and how to borrow affordably.","contents":[{"id":"before-you-borrow","type":"category","title":"Before
-        you borrow","description":"Find out if you need to borrow money and whether
-        you can afford it. Learn how to work out the true cost of borrowing.","contents":[]},{"id":"taking-control-of-debt","type":"category","title":"Taking
-        control of debt","description":"Where to get free debt advice, how to speak
-        to the people you owe money to, and tips to help you pay back your debts in
-        the right order.","contents":[]},{"id":"mortgage-and-rent-problems","type":"category","title":"Mortgage
-        and rent problems","description":"Help if you''re struggling with your mortgage
-        or rent payments and information on government support if you can''t pay your
-        mortgage.","contents":[]},{"id":"help-with-loans","type":"category","title":"Help
-        with loans","description":"Learn about how personal loans work, better alternatives
-        to payday loans, and help when borrowing from a credit union.","contents":[]},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Credit
-        cards and credit ratings","description":"Find out how to manage a credit card,
-        how to check your credit report, and tips on how you can improve your credit
-        rating.","contents":[]}]},{"id":"budgeting-and-managing-money","type":"category","title":"Budgeting
-        and managing money","description":"Advice on running a bank account, planning
-        your finances, and cutting costs.","contents":[{"id":"running-a-bank-account","type":"category","title":"Running
-        a bank account","description":"Find out how to manage a bank account, from
-        paying money in to keeping track of interest and charges.","contents":[]},{"id":"managing-money","type":"category","title":"Managing
-        money","description":"See how you can make your money go further and use our
-        Budget planner to discover how much cash you have coming in and what you''re
-        spending it on.","contents":[]},{"id":"student-and-graduate-money","type":"category","title":"Student
-        and graduate money","description":"Help with preparing your child for student
-        life, including tips on budgeting at college or university.","contents":[]},{"id":"cutting-costs","type":"category","title":"Cutting
-        costs","description":"Help with trimming your energy, home phone and broadband
-        bills, and tips on getting holidays for less.","contents":[]}]},{"id":"saving-and-investing","type":"category","title":"Saving
-        and investing","description":"How to save money, types of savings account,
-        and getting started with investing.","contents":[{"id":"how-to-save-money","type":"category","title":"How
-        to save money","description":"Work out how much you can afford to save and
-        find out how to set and reach your savings goal.","contents":[]},{"id":"savings-types","type":"category","title":"Types
-        of savings","description":"Learn about savings accounts, cash ISAs, and how
-        to save for children.","contents":[]},{"id":"how-to-invest-money","type":"category","title":"How
-        to invest money","description":"Learn about investing basics, how to make
-        an investment plan, and understanding your attitude to risk.","contents":[]},{"id":"investment-types","type":"category","title":"Types
-        of investment","description":"Information about stocks and shares, investment
-        bonds, tracker funds, with-profits and endowment policies.","contents":[]}]},{"id":"pensions-and-retirement","type":"category","title":"Pensions
-        and retirement","description":"How and when to start saving for a pension,
-        getting the most from your pension\r\n                                fund
-        and managing your money in retirement\r\n                            ","contents":[{"id":"saving-into-a-pension-for-the-first-time","type":"category","title":"Saving
-        into a pension for the first time","description":"All you need to get started,
-        including a ready reckoner that estimates how\n                                    much
-        you should be saving each month\n                                ","contents":[]},{"id":"types-of-pension","type":"category","title":"Types
-        of pension","description":"State pension, workplace pensions and personal
-        pensions - an overview of\r\n                                        how each
-        works\r\n                                    ","contents":[]},{"id":"review-the-health-your-pension-savings","type":"category","title":"Review
-        the health of your pension savings","description":"Use our step-by-step guidance
-        to set your retirement income goal and check\n                                    your
-        progress towards it\n                                ","contents":[]},{"id":"pensions-and-tax","type":"category","title":"Pensions
-        and tax","description":"Tax relief on money you save into your pension, how
-        your pension income is\n                                        taxed and
-        the lifetime allowance\n                                    ","contents":[]},{"id":"approaching-retirement","type":"category","title":"Approaching
-        retirement","description":"As retirement nears there are big decisions to
-        make, such as what kind of\r\n                                    annuity
-        to shop around for - we explain it all\r\n                                ","contents":[]},{"id":"transferring-between-pension-schemes","type":"category","title":"Transferring
-        between pension schemes","description":"How to transfer pensions between providers,
-        for example if you want to\n                                        merge
-        different pension pots you''ve built up\n                                    ","contents":[]},{"id":"managing-your-finances-in-retirement","type":"category","title":"Managing
-        your finances in retirement","description":"Retirement can bring significant
-        changes to your income and your outgoings and\n                                    your
-        entitlement to government benefits\n                                ","contents":[]},{"id":"using-your-home-to-generate-retirement-income","type":"category","title":"Using
-        your home to generate retirement income","description":"Whether or not you
-        own your home you can use it to boost your income, for\n                                        example
-        through equity release or renting a room\n                                    ","contents":[]},{"id":"workplace-pensions-changes","type":"category","title":"Automatic
-        enrolment","description":"Gradually all employers will be required to save
-        into their workers'' pension\r\n                                    schemes\r\n                                ","contents":[]},{"id":"benefits-and-tax-in-retirement","type":"category","title":"Benefits
-        and tax in retirement","description":"Your State Pension entitlement, Pension
-        Credit if you''re on a low income,\n                                        tax
-        and age-related allowances in retirement\n                                    ","contents":[]},{"id":"choosing-a-pension","type":"category","title":"Choosing
-        a pension","description":"Read our top tips for choosing pensions and find
-        out about buying a pension\n                                    and getting
-        financial advice\n                                ","contents":[]},{"id":"events-that-may-affect-your-pension","type":"category","title":"Events
-        that may affect your pension","description":"Be aware of the possible effects
-        on your pension of events including\n                                        parenthood,
-        divorce, redundancy and retiring abroad\n                                    ","contents":[]},{"id":"taking-income-from-your-pension","type":"category","title":"Taking
-        income from your pension","description":"We walk you through all the options,
-        including cash lump sums and all the\r\n                                    different
-        types of annuity you can buy\r\n                                ","contents":[]},{"id":"getting-help-with-pensions","type":"category","title":"Getting
-        help with pensions","description":"Where to go for advice about pensions,
-        and what to do if you want to complain\n                                    about
-        a pension provider or adviser\n                                ","contents":[]}]},{"id":"benefits","type":"category","title":"Benefits","description":"Find
-        out what benefits you''re entitled to and learn about Universal Credit.","contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
-        with your benefits","description":"Help with getting the right entitlements,
-        where to get benefits support and advice and what to do if your payments are
-        cut.","contents":[]},{"id":"child-benefit","type":"category","title":"Child
-        Benefit","description":"Find out how Child Benefit works and how much you
-        might be entitled to claim.","contents":[]},{"id":"universal-credit","type":"category","title":"Universal
-        Credit","description":"Get ready for the new single monthly payment which
-        has started to replace six existing benefits.","contents":[]},{"id":"benefits-at-work","type":"category","title":"Benefits
-        at work","description":"Learn about employee benefits, salary sacrifice schemes
-        and benefits and tax credits you can claim after job loss.","contents":[]}]},{"id":"births-deaths-and-family","type":"category","title":"Births,
-        deaths and family","description":"Having a baby, making a will, and dealing
-        with divorce and separation.","contents":[{"id":"having-a-baby","type":"category","title":"Having
-        a baby","description":"Help with managing your money before, during and after
-        the birth of your baby.","contents":[]},{"id":"maternity-and-paternity-rights","type":"category","title":"Maternity
-        and paternity rights","description":"Find out how to claim maternity pay and
-        leave from your employer and your rights when returning to work.","contents":[]},{"id":"making-a-will","type":"category","title":"Making
-        a will","description":"Learn how to make and change a will and find out about
-        the different options available.","contents":[]},{"id":"when-someone-dies","type":"category","title":"When
-        someone dies","description":"Learn how to deal with money after a death, from
-        paying for the funeral to looking after the paperwork and household bills.","contents":[]},{"id":"divorce-and-separation","type":"category","title":"Divorce
-        and separation","description":"Find out how to manage your money and divide
-        up what you own when going through divorce or separation.","contents":[]}]},{"id":"insurance","type":"category","title":"Insurance","description":"Help
-        and advice on protecting your family and getting the right home and car insurance.","contents":[{"id":"help-with-insurance","type":"category","title":"Help
-        with insurance","description":"Understand what insurance is and how it works.
-        Find out how to buy insurance and how to go about making a claim.","contents":[]},{"id":"home-insurance","type":"category","title":"Home
-        insurance","description":"Find out if you need buildings and contents insurance
-        and get help with choosing the right policy and cover.","contents":[]},{"id":"life-and-protection-insurance","type":"category","title":"Life
-        and protection insurance","description":"Learn about the differences between
-        life, critical illness and income protection insurance.","contents":[]},{"id":"car-insurance","type":"category","title":"Car
-        insurance","description":"Choosing the right level of cover, getting the best
-        deal, and tips for young drivers.","contents":[]},{"id":"travel-insurance","type":"category","title":"Travel
-        insurance","description":"Learn how to choose the right level of cover, get
-        the best deal, and how to make a travel insurance claim.","contents":[]},{"id":"pet-insurance","type":"category","title":"Pet
-        insurance","description":"Help with choosing the right pet insurance policy
-        and cover.","contents":[]}]},{"id":"homes-and-mortgages","type":"category","title":"Homes
-        and mortgages","description":"Everything you need to know about buying a home
-        and choosing the right mortgage.","contents":[{"id":"buying-a-home","type":"category","title":"Buying
-        a home","description":"Work out your overall buying and moving costs, first
-        time buyer advice, and tips and tools to help you work out what you can afford.","contents":[]},{"id":"help-with-mortgages","type":"category","title":"Help
-        with mortgages","description":"Get started with our beginner''s guide to mortgages,
-        getting the right deal, and tips if you''re struggling to pay.","contents":[]},{"id":"types-of-mortgage","type":"category","title":"Types
-        of mortgage","description":"Learn about different kinds of mortgages, from
-        repayment and interest-only to shared equity and buy-to-let.","contents":[]},{"id":"renting-and-letting","type":"category","title":"Renting
-        and letting","description":"Advice to help you work out how much rent you
-        can afford, and how to budget and share costs when renting.","contents":[]}]},{"id":"care-and-disability","type":"category","title":"Care
-        and disability","description":"Choosing the right care services, support for
-        carers and paying for the cost of care.","contents":[{"id":"care-advice-and-help","type":"category","title":"Care
-        advice and help","description":"Help with choosing the right care services,
-        setting up a power of attorney, and dealing with problems.","contents":[]},{"id":"paying-for-care","type":"category","title":"Paying
-        for care","description":"Learn about NHS and self-funding options, managing
-        direct payments, and other ways to pay for your care.","contents":[]},{"id":"support-for-carers","type":"category","title":"Support
-        for carers","description":"Find out about support available to carers and
-        how to manage the money of someone you''re caring for.","contents":[]},{"id":"illness-and-disability","type":"category","title":"Illness
-        and disability","description":"Advice about Personal Independence Payment,
-        disability grants, aids and equipment.","contents":[]}]},{"id":"losing-your-job","type":"category","title":"Losing
-        your job","description":"How to get your money under control when faced with
-        redundancy or job loss\n                            ","contents":[{"id":"redundancy---be-prepared","type":"category","title":"Redundancy
-        - be prepared","description":"Managing money if your job is at risk, insuring
-        yourself against redundancy\r\n                                    and what
-        to do if you''re asked to work reduced hours\r\n                                ","contents":[]},{"id":"your-redundancy-rights","type":"category","title":"Your
-        redundancy rights","description":"Redundancy advice and your legal rights,
-        what process your employer must follow and how to tell if you''ve been a victim
-        of unfair dismissal\r\n                                ","contents":[]},{"id":"redundancy-payments","type":"category","title":"Redundancy
-        payments","description":"Are you entitled to redundancy pay, how much will
-        you get and will you have to\r\n                                    pay tax
-        on it?\r\n                                ","contents":[]},{"id":"benefits-and-entitlements-if-you-lose-your-job","type":"category","title":"Benefits
-        and entitlements if you lose your job","description":"Benefits and tax credits
-        you can claim after losing your job, can you claim a\r\n                                    tax
-        rebate and what happens to your pension?\r\n                                ","contents":[]},{"id":"budgeting-when-out-of-work","type":"category","title":"Budgeting
-        when out of work","description":"Use our out-of-work checklist to stay in
-        control of your finances, plus how to\r\n                                    make
-        the most of your redundancy pay\r\n                                ","contents":[]},{"id":"managing-debt-when-out-of-work","type":"category","title":"Managing
-        debt when out of work","description":"How to review and prioritise your debts,
-        how to start paying it off and where\n                                    to
-        get help if you''re struggling with debt\n                                ","contents":[]},{"id":"voluntary-redundancy-and-early-retirement","type":"category","title":"Voluntary
-        redundancy and early retirement","description":"Weigh up the pros and cons
-        of voluntary redundancy and early retirement and\n                                    consider
-        the impact on your finances\n                                ","contents":[]},{"id":"help-with-finding-a-job","type":"category","title":"Help
-        with finding a job","description":"CV advice, job searching and interview
-        tips; plus where to go if you''re\n                                    thinking
-        of a career change or starting a business\n                                ","contents":[]}]}]},{"id":"tools--resources","type":"category","title":"Tools
-        & resources","description":"Calculators, letter templates and free printed
-        guides \u2013 useful tools and resources to help you","contents":[{"id":"budget-planner","type":"category","title":"Budget
-        planner","description":"Use this planner to work out how much money you have
-        coming in and what you''re spending it on","contents":[]},{"id":"health-check","type":"category","title":"Money
-        Health Check","description":"Join over half a million people who have taken
-        our online Money Health Check and start to make the most of your money today","contents":[]},{"id":"action-plans","type":"category","title":"Action
-        plans","description":"Take control of your finances and get motivated to tackle
-        life''s money matters by following our action plans. ","contents":[{"id":"action-plans-homes-and-mortgages","type":"category","title":"Action
-        plans - Homes and mortgages","description":"Whether you''re looking to rent
-        or buy, get tips and advice on taking the right steps with our action plans.","contents":[]},{"id":"action-plans-insurance","type":"category","title":"Action
-        plans - Insurance","description":"Find out if you need insurance and solve
-        problems with existing policies using our step-by-step plans.","contents":[]},{"id":"action-plans-savings-and-investments","type":"category","title":"Action
-        plans - Savings and investments","description":"Take your first steps towards
-        saving and investing or make the most of existing savings with these simple
-        action plans.","contents":[]},{"id":"action-plans-pensions","type":"category","title":"Action
-        plans - Pensions","description":"Whether you''re being enrolled into a workplace
-        pension for the first time or working out your retirement income, find out
-        all the steps you need to take with our useful action plans.","contents":[]},{"id":"action-plans-losing-your-job","type":"category","title":"Action
-        plans - Losing your job","description":"Find out what to do to protect your
-        finances if you have lost your job, or if you think you might be made redundant.","contents":[]},{"id":"action-plans-having-a-baby","type":"category","title":"Action
-        plans - Having a baby","description":"Get help and advice with working out
-        the cost of having a baby and find out what you''re entitled to both before
-        and after the birth.","contents":[]},{"id":"action-plans-managing-your-money","type":"category","title":"Action
-        plans - Managing your money","description":"Take control of your finances
-        and follow simple steps towards managing your money with our action plans.","contents":[]},{"id":"action-plans-managing-on-a-low-income","type":"category","title":"Action
-        plans - Managing on a low income","description":"Take simple steps to make
-        ends meet when you''re on a tight budget and make your money go further with
-        these action plans.","contents":[]},{"id":"action-plans-managing-your-bank-account","type":"category","title":"Action
-        plans - Managing your bank account","description":"Check if your bank account
-        is right for you, find out more about Universal Credit and learn how to open
-        your first account with our action plans.","contents":[]}]},{"id":"calculators","type":"category","title":"Calculators","description":"Our
-        easy-to-use calculators can help you budget, save and cut back on costs","contents":[]},{"id":"comparison-tables","type":"category","title":"Comparison
-        tables","description":"Our comparison tables are completely unbiased - we
-        are set up by government and don\u2019t receive any incentive or commission
-        if you go on to choose a product","contents":[]},{"id":"letter-templates","type":"category","title":"Letter
-        templates","description":"Our easy-to-use letter templates are here to help
-        you if you need to set up, cancel or complain about something","contents":[]},{"id":"order-forms","type":"category","title":"Order
-        forms","description":"Use these forms to order our free printed guides, which
-        give you clear, unbiased information and advice in Plain English","contents":[]},{"id":"free-printed-guides","type":"category","title":"Free
-        printed guides","description":"Read our free printed guides, which give you
-        clear, unbiased information and advice in Plain English","contents":[]},{"id":"videos","type":"category","title":"Videos","description":"See
-        our videos, covering subjects such as insurance, retirement savings and inflation","contents":[]},{"id":"workplace-pension-advice-tool","type":"category","title":"Workplace
-        pension advice tool","description":"Workplace pensions are changing. Use our
-        tool to see if saving in a workplace pension is right for you","contents":[]},{"id":"interactive-timelines","type":"category","title":"Interactive
-        timelines","description":"Explore our money timelines so you know the actions
-        to take and things that could affect your income","contents":[]}]},{"id":"news","type":"category","title":"News
-        & features","description":"Read our topical news articles and features","contents":[]}]'
-    http_version:
-  recorded_at: Tue, 03 Jun 2014 18:48:56 GMT
+      string: '[{"id":"managing-your-money","type":"category","title":"Rheoli eich
+        arian","description":"Cyngor, awgrymiadau ac offer i''ch helpu chi i gael
+        trefn ar eich materion ariannol a gwneud i''ch arian fynd ymhellach.","contents":[{"id":"young-people-and-money","type":"category","title":"Gadael
+        yr ysgol neu goleg","description":"Dechrau swydd neu ddod yn fyfyriwr, bydd
+        angen i chi wneud penderfyniadau ariannol pwysig","contents":[{"id":"moving-into-work","type":"category","title":"Symud
+        i waith","description":"Dysgwch am sut fyddwch yn cael eich talu a\u2019ch
+        trethu yn y gwaith, a chymrwn olwg ar sylfaeni slipiau cyflog","contents":[]},{"id":"independent-living","type":"category","title":"Byw\u2019n
+        annibynnol ","description":"Cyngor ar y ffordd orau o dalu biliau, cost rhedeg
+        car a mwy","contents":[]}]},{"id":"travel-money-or-sending-money-overseas","type":"category","title":"Arian
+        teithio neu anfon arian dramor","description":"Prynu arian tramor, cardiau
+        rhad i''w defnyddio dramor a dewis y ffordd orau o anfon arian dramor","contents":[]},{"id":"work-and-money","type":"category","title":"Gwaith
+        ac arian","description":"Penderfyniadau t\u00e2l, treth a budd-daliadau y
+        bydd rhaid i chi eu gwneud yn y gwaith neu pan fyddwch yn gweithio drosoch
+        eich hunan ","contents":[{"id":"pay-and-benefits","type":"category","title":"T\u00e2l
+        a buddion","description":"Gwirio eich opsiynau ar gyfer t\u00e2l, treth a
+        budd-daliadau fel cyflogai neu weithiwr asiantaeth","contents":[]},{"id":"pensions-in-the-workplace","type":"category","title":"Pensiynau
+        yn y gweithle","description":"Paratoi ar gyfer newidiadau i bensiynau gweithle
+        a deall rhyddhad treth ar gyfraniadau pensiwn","contents":[]},{"id":"working-for-yourself","type":"category","title":"Gweithio
+        drosoch eich hunan","description":"Gwirio eich opsiynau ar gyfer t\u00e2l,
+        treth yswiriant a phensiynau fel unigolyn hunangyflogedig","contents":[]}]},{"id":"money-complaints-and-compensation","type":"category","title":"Cwynion
+        arian ac iawndal","description":"Eich hawliau a sut i gwyno - cael eich trin
+        yn annheg neu gamwerthu, iawndal ariannol os bydd eich banc neu ddarparwr
+        yn mynd i''r wal","contents":[]},{"id":"financial-help-and-advice","type":"category","title":"Cymorth
+        a chyngor ariannol","description":"Dewis a defnyddio cynghorydd ariannol a
+        ble i gael cyngor ariannol am ddim","contents":[]}]},{"id":"money-topics","type":"category","title":"Pynciau
+        ariannol","description":"Cynilo a buddsoddi, benthyca a dyledion, cartrefi
+        a morgeisi, yswiriant, pensiynau ac ymddeol","contents":[{"id":"debt-and-borrowing","type":"category","title":"Dyled
+        a benthyca","description":"Cymryd rheolaeth dros ddyled, cael cyngor am ddim
+        ar ddyledion, a sut i fenthyca''n fforddadwy.","contents":[{"id":"before-you-borrow","type":"category","title":"Cyn
+        i chi fenthyca arian","description":"Dysgwch a oes arnoch angen benthyca arian
+        ac a allwch ei fforddio. Dysgwch sut i gyfrifo gwir gost benthyca.","contents":[]},{"id":"taking-control-of-debt","type":"category","title":"Cymryd
+        rheolaeth ar ddyled","description":"Ble i fynd i gael cyngor rhad ac am ddim
+        ar ddyledion, sut i siarad \u00e2''r bobl y mae arnoch arian iddynt, ac awgrymiadau
+        i''ch helpu i ad-dalu''ch dyledion yn y drefn iawn.","contents":[]},{"id":"mortgage-and-rent-problems","type":"category","title":"Problemau
+        morgais a rhent","description":"Cymorth os ydych yn profi anawsterau gyda''ch
+        taliadau morgais neu rent a gwybodaeth ar gymorth gan y llywodraeth os na
+        allwch dalu''ch morgais.","contents":[]},{"id":"help-with-loans","type":"category","title":"Cymorth
+        gyda benthyciadau","description":"Dysgwch am sut mae benthyciadau personol
+        yn gweithio, dewisiadau eraill gwell na benthyciadau diwrnod cyflog, a chymorth
+        wrth fenthyca gan undeb credyd.","contents":[]},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Cardiau
+        credyd a statws credyd","description":"Dysgwch sut i reoli cerdyn credyd,
+        sut i wirio''ch adroddiad credyd, ac awgrymiadau ynghylch sut y gallwch wella''ch
+        statws credyd.","contents":[]}]},{"id":"budgeting-and-managing-money","type":"category","title":"Cyllidebu
+        a rheoli arian","description":"Cyngor ar redeg cyfrif banc, cynllunio''ch
+        arian, a thorri ar gostau.","contents":[{"id":"running-a-bank-account","type":"category","title":"Rhedeg
+        cyfrif banc","description":"Dysgwch sut i reoli cyfrif banc, o dalu arian
+        i mewn i gadw llygad ar log a ffioedd.","contents":[]},{"id":"managing-money","type":"category","title":"Rheoli
+        arian","description":"Gwiriwch sut y gallwch wneud i''ch arian fynd ymhellach
+        a defnyddiwch ein Cynllunyddcyllideb i weld faint o arian sydd gennych yn
+        dod i mewn ac ar beth yr ydych yn ei wario.","contents":[]},{"id":"student-and-graduate-money","type":"category","title":"Arian
+        myfyrwyr a graddedigion","description":"Cymorth gyda pharatoi eich plentyn
+        ar gyfer bywyd myfyrwyr, gan gynnwys awgrymiadau ar gyllidebu yn y coleg neu''r
+        brifysgol.","contents":[]},{"id":"cutting-costs","type":"category","title":"Torri
+        costau","description":"Cymorth gyda thorri''ch biliau ynni, ff\u00f4n cartref
+        a band eang, ac awgrymiadau ynghylch cael gwyliau am lai o arian.","contents":[]}]},{"id":"saving-and-investing","type":"category","title":"Cynilo
+        a buddsoddi","description":"Sut i gynilo arian, mathau o gyfrifon cynilo a
+        rhoi cychwyn arni gyda buddsoddi.","contents":[{"id":"how-to-save-money","type":"category","title":"Sut
+        i gynilo arian","description":"Cyfrifwch faint allwch fforddio ei gynilo a
+        dysgwch sut i sefydlu a chyrraedd eich nod cynilo.","contents":[]},{"id":"savings-types","type":"category","title":"Mathau
+        o gynilo","description":"Dysgwch am gyfrifon cynilo, ISAs arian parod a sut
+        i gynilo ar gyfer plant.","contents":[]},{"id":"how-to-invest-money","type":"category","title":"Sut
+        i fuddsoddi arian","description":"Dysgwch am hanfodion buddsoddi, sut i lunio
+        cynllun buddsoddi, a deall eich agwedd tuag at risg.","contents":[]},{"id":"investment-types","type":"category","title":"Mathau
+        o fuddsoddiad","description":"Gwybodaeth am stociau a chyfranddaliadau, bondiau
+        buddsoddi, cronfeydd tracio, polis\u00efau gydag-elw a gwaddol.","contents":[]}]},{"id":"pensions-and-retirement","type":"category","title":"Pensiynau
+        ac ymddeol","description":"Sut a phryd i ddechrau cynilo ar gyfer pensiwn,
+        cael y gorau o''ch cronfa bensiwn a rheoli''ch arian yn ystod eich ymddeoliad","contents":[{"id":"saving-into-a-pension-for-the-first-time","type":"category","title":"Cynilo
+        mewn pensiwn am y tro cyntaf","description":"Y cyfan fydd ei angen arnoch
+        i roi cychwyn arni, gan gynnwys cyfrifydd cyflym sy''n amcangyfrif faint y
+        dylech chi fod yn ei gynilo bob mis","contents":[]},{"id":"types-of-pension","type":"category","title":"Mathau
+        o bensiwn","description":"Pensiwn y wladwriaeth, pensiynau gweithle a phensiynau
+        personol - golwg gyffredinol ar sut mae pob un yn gweithio","contents":[]},{"id":"review-the-health-your-pension-savings","type":"category","title":"Adolygu
+        iechyd eich cynilion pensiwn","description":"Defnyddiwch ein canllaw cam-wrth-gam
+        i osod nod ar gyfer eich incwm ymddeol a gwirio''ch cynnydd tuag at y nod
+        hwnnw","contents":[]},{"id":"pensions-and-tax","type":"category","title":"Pensiynau
+        a threth","description":"Gostyngiadau treth ar yr arian y byddwch yn ei gynilo
+        yn eich pensiwn, sut mae''ch incwm pensiwn yn cael ei drethu a''r lwfans oes","contents":[]},{"id":"approaching-retirement","type":"category","title":"Nes\u00e1u
+        at ymddeol","description":"Wrth nes\u00e1u at oed ymddeol mae penderfyniadau
+        mawr i''w gwneud, megis pa fath o flwydd-dal i''w ystyried - rydym yn egluro''r
+        cyfan","contents":[]},{"id":"transferring-between-pension-schemes","type":"category","title":"Trosglwyddo
+        rhwng cynlluniau pensiwn","description":"Sut i drosglwyddo pensiynau rhwng
+        darparwyr, er enghraifft os ydych chi eisiau cyfuno potiau pensiwn gwahanol
+        rydych wedi''u cronni","contents":[]},{"id":"managing-your-finances-in-retirement","type":"category","title":"Rheoli''ch
+        arian ar \u00f4l ymddeol","description":"Gall newidiadau mawr ddigwydd i''ch
+        incwm wrth ichi ymddeol a hefyd i''ch alldaliadau a''ch hawl i fudd-daliadau''r
+        wladwriaeth","contents":[]},{"id":"using-your-home-to-generate-retirement-income","type":"category","title":"Defnyddio''ch
+        cartref i greu incwm ymddeol","description":"Pa un a ydych chi''n berchen
+        ar eich cartref neu beidio, cewch ei ddefnyddio i roi hwb i''ch incwm, er
+        enghraifft drwy ryddhau ecwiti neu rentu ystafell","contents":[]},{"id":"workplace-pensions-changes","type":"category","title":"Cofrestru
+        awtomatig","description":"Yn raddol, bydd yn rhaid i bob cyflogwr gynilo yng
+        nghynlluniau pensiwn eu gweithwyr","contents":[]},{"id":"benefits-and-tax-in-retirement","type":"category","title":"Budd-daliadau
+        a threth ar \u00f4l ymddeol","description":"Eich hawl i Bensiwn y Wladwriaeth,
+        Credyd Pensiwn os ydych chi ar incwm isel, treth a lwfansau sy''n gysylltiedig
+        ag oedran ar \u00f4l ymddeol","contents":[]},{"id":"choosing-a-pension","type":"category","title":"Dewis
+        pensiwn","description":"Darllenwch ein hawgrymiadau gorau ar gyfer dewis pensiynau
+        a chael gwybod am brynu pensiwn a chael cyngor ariannol","contents":[]},{"id":"events-that-may-affect-your-pension","type":"category","title":"Digwyddiadau
+        a allai effeithio ar eich pensiwn","description":"Byddwch yn ymwybodol o''r
+        effaith y gallai digwyddiadau eu cael ar eich pensiwn gan gynnwys dod yn rhiant,
+        ysgariad, colli''ch gwaith ac ymddeol dramor","contents":[]},{"id":"taking-income-from-your-pension","type":"category","title":"Cymryd
+        incwm allan o''ch pensiwn","description":"Rydym yn eich tywys drwy''r holl
+        opsiynau, gan gynnwys cyfandaliadau arian a''r holl wahanol fathau o flwydd-daliadau
+        y gallwch eu prynu","contents":[]},{"id":"getting-help-with-pensions","type":"category","title":"Cael
+        help gyda phensiynau","description":"Ble i fynd am gyngor ar bensiynau, a
+        beth i''w wneud os ydych chi eisiau cwyno am gynghorydd neu ddarparwr pensiwn","contents":[]}]},{"id":"benefits","type":"category","title":"Budd-daliadau","description":"Edrychwch
+        pa fudd-daliadau y mae gennych hawl iddynt a dysgu am Gredyd Cynhwysol.","contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
+        gyda\u2019ch budd-daliadau","description":"Help wrth gael yr hawliadau cywir,
+        ble i gael cymorth a chyngor ynghylch budd-daliadau a beth i''w wneud os torrir
+        eich taliadau.","contents":[]},{"id":"child-benefit","type":"category","title":"Budd-dal
+        Plant","description":"Dysgwch sut mae Budd-dal plant yn gweithio a faint y
+        gallech ei hawlio.","contents":[]},{"id":"universal-credit","type":"category","title":"Credyd
+        Cynhwysol","description":"Paratowch am y taliad misol sengl newydd sydd wedi
+        dechrau disodli chwe budd-daliad presennol.","contents":[]},{"id":"benefits-at-work","type":"category","title":"Budd-daliadau
+        yn y gwaith","description":"Dysgwch am fudd-daliadau cyflogeion, cynlluniau
+        aberthu cyflog a budd-daliadau a chredydau treth y gallwch eu hawlio ar \u00f4l
+        colli eich swydd.","contents":[]}]},{"id":"births-deaths-and-family","type":"category","title":"Genedigaethau,
+        marwolaethau a theulu","description":"Cael babi, gwneud ewyllys, ac ymdrin
+        ag ysgaru a gwahanu.","contents":[{"id":"having-a-baby","type":"category","title":"Cael
+        babi","description":"Cymorth gyda rheoli eich arian cyn, yn ystod ac ar \u00f4l
+        genedigaeth eich babi.","contents":[]},{"id":"maternity-and-paternity-rights","type":"category","title":"Hawliau
+        mamolaeth a thadolaeth","description":"Dysgwch sut i hawlio t\u00e2l ac absenoldeb
+        mamolaeth gan eich cyflogwr a''ch hawliau wrth ddychwelyd i''r gwaith.","contents":[]},{"id":"making-a-will","type":"category","title":"Gwneud
+        ewyllys","description":"Dysgwch sut i wneud a newid ewyllys a dysgu am y gwahanol
+        opsiynau sydd ar gael.","contents":[]},{"id":"when-someone-dies","type":"category","title":"Pan
+        fydd rhywun yn marw","description":"Dysgwch sut i ddelio ag arian ar \u00f4l
+        i rywun farw, o dalu am yr angladd i ofalu am y gwaith papur a biliau''r cartref.","contents":[]},{"id":"divorce-and-separation","type":"category","title":"Ysgaru
+        a gwahanu","description":"Dysgwch sut i reoli''ch arian a rhannu''r hyn rydych
+        yn berchen arno wrth fynd trwy ysgariad neu ymwahaniad.","contents":[]}]},{"id":"insurance","type":"category","title":"Yswiriant","description":"Cymorth
+        a chyngor ynghylch gwarchod eich teulu a chael yr yswiriant cartref a char
+        cywir.","contents":[{"id":"help-with-insurance","type":"category","title":"Cymorth
+        gydag yswiriant","description":"Deall beth yw yswiriant a sut mae''n gweithio.
+        Dysgwch sut i brynu yswiriant a sut mae mynd ati i wneud hawliad.","contents":[]},{"id":"home-insurance","type":"category","title":"Yswiriant
+        cartref","description":"Dysgwch a oes arnoch angen yswiriant adeiladau a chynnwys
+        a chael cymorth i ddewis y polisi a sicrwydd cywir.","contents":[]},{"id":"life-and-protection-insurance","type":"category","title":"Yswiriant
+        oes a diogelu","description":"Dysgwch am y gwahaniaethau rhwng yswiriant oes,
+        salwch critigol a diogelu incwm.","contents":[]},{"id":"car-insurance","type":"category","title":"Yswiriant
+        car","description":"Dewis y lefel warchodaeth gywir, cael y fargen orau, ac
+        awgrymiadau i yrwyr ifanc.","contents":[]},{"id":"travel-insurance","type":"category","title":"Yswiriant
+        teithio","description":"Dysgwch sut i ddewis y lefel gywir o sicrwydd, cael
+        y fargen orau, a sut i wneud hawliad ar yswiriant teithio.","contents":[]},{"id":"pet-insurance","type":"category","title":"Yswiriant
+        anifeiliaid anwes","description":"Cymorth wrth ddewis y polisi a''r yswiriant
+        cywir ar gyfer anifail anwes.","contents":[]}]},{"id":"homes-and-mortgages","type":"category","title":"Cartrefi
+        a morgeisi","description":"Popeth y mae angen i chi ei wybod am brynu cartref
+        a dewis y morgais cywir.","contents":[{"id":"buying-a-home","type":"category","title":"Prynu
+        cartref","description":"Cyfrifwch eich costau prynu a symud cyffredinol, cyngor
+        i brynwyr tro cyntaf, ac awgrymiadau ac offer i''ch helpu chi i gyfrifo beth
+        allwch ei fforddio.","contents":[]},{"id":"help-with-mortgages","type":"category","title":"Cymorth
+        gyda morgeisi","description":"Dechreuwch arno gyda''n canllaw dechreuwyr i
+        forgeisi, cael y fargen gywir, ac awgrymiadau os ydych yn profi anawsterau
+        wrth dalu.","contents":[]},{"id":"types-of-mortgage","type":"category","title":"Mathau
+        o forgeisi","description":"Dysgwch am wahanol fathau o forgeisi, o ad-daliad
+        a llog yn unig i ecwiti a rennir a phrynu-i-osod.","contents":[]},{"id":"renting-and-letting","type":"category","title":"Rhentu
+        a gosod","description":"Cyngor i''ch helpu i gyfrifo faint o rent y gallwch
+        chi fforddio, a sut i gyllidebu a rhannu costau wrth rentu.","contents":[]}]},{"id":"care-and-disability","type":"category","title":"Gofal
+        ac anabledd","description":"Dewis y gwasanaethau gofal cywir, cymorth i ofalwyr
+        a thalu am gost gofal.","contents":[{"id":"care-advice-and-help","type":"category","title":"Cyngor
+        a chymorth ynghylch gofal","description":"Cymorth gyda dewis y gwasanaethau
+        gofal cywir, sefydlu atwrneiaeth, ac ymdrin ag unrhyw broblemau.","contents":[]},{"id":"paying-for-care","type":"category","title":"Talu
+        am ofal","description":"Dysgwch am opsiynau GIG a hunan-ariannu, rheoli taliadau
+        uniongyrchol, a ffyrdd eraill i dalu am eich gofal.","contents":[]},{"id":"support-for-carers","type":"category","title":"Cymorth
+        i ofalwyr","description":"Dysgwch am gymorth sydd ar gael i ofalwyr a sut
+        i reoli arian rhywun yr ydych yn gofalu amdanynt.","contents":[]},{"id":"illness-and-disability","type":"category","title":"Pobl
+        anabl","description":"Cymorth ynghylch Taliad Annibyniaeth Bersonol, grantiau
+        anabledd, cymhorthion a chyfarpar.","contents":[]}]},{"id":"losing-your-job","type":"category","title":"Colli''ch
+        swydd","description":"Sut i gael trefn ar eich arian os ydych chi''n wynebu
+        colli''ch swydd neu os ydy''ch swydd yn cael ei dileu","contents":[{"id":"redundancy---be-prepared","type":"category","title":"Eich
+        swydd yn cael ei dileu - byddwch yn barod","description":"Cadw trefn ar eich
+        arian os ydy''ch swydd mewn perygl, yswirio''ch hun rhag y risg o golli''ch
+        swydd, a beth i''w wneud os gofynnir ichi weithio llai o oriau","contents":[]},{"id":"your-redundancy-rights","type":"category","title":"Eich
+        hawliau os caiff eich swydd ei dileu","description":"Cyngor wedi colli swydd
+        a\u2019ch hawliau cyfreithiol, pa brosesau sy\u2019n rhaid i\u2019ch cyflogwr
+        ddilyn a sut i ddweud os ydych wedi eich diswyddo\u2019n annheg","contents":[]},{"id":"redundancy-payments","type":"category","title":"Taliadau
+        dileu swydd","description":"Oes gennych chi hawl i d\u00e2l diswyddo, faint
+        gewch chi ac a fydd raid ichi dalu treth arno?","contents":[]},{"id":"benefits-and-entitlements-if-you-lose-your-job","type":"category","title":"Budd-daliadau
+        a hawliau os byddwch yn colli''ch swydd","description":"Budd-daliadau a chredydau
+        treth y gallwch eu hawlio ar \u00f4l colli''ch swydd, allwch chi hawlio gostyngiad
+        treth a beth sy''n digwydd i''ch pensiwn?","contents":[]},{"id":"budgeting-when-out-of-work","type":"category","title":"Cyllidebu
+        pan fyddwch yn ddi-waith","description":"Defnyddiwch ein rhestr wirio allan-o-waith
+        i gadw trefn ar eich sefyllfa ariannol, a hefyd sut i wneud y gorau o''ch
+        t\u00e2l diswyddo","contents":[]},{"id":"managing-debt-when-out-of-work","type":"category","title":"Rheoli
+        dyled pan fyddwch yn ddi-waith","description":"Sut i adolygu a blaenoriaethu''ch
+        dyledion, sut i ddechrau talu''ch dyledion yn \u00f4l a ble i gael cymorth
+        os ydych chi''n cael trafferth gyda dyledion","contents":[]},{"id":"voluntary-redundancy-and-early-retirement","type":"category","title":"Diswyddo
+        gwirfoddol ac ymddeol yn gynnar","description":"Ystyriwch beth yw manteision
+        ac anfanteision diswyddo gwirfoddol ac ymddeol yn gynnar ac ystyriwch yr effaith
+        ar eich sefyllfa ariannol","contents":[]},{"id":"help-with-finding-a-job","type":"category","title":"Help
+        i ddod o hyd i swydd","description":"Cyngor ar lunio CV, awgrymiadau ar sut
+        i chwilio am waith a chyfweliadau; a hefyd ble i fynd os ydych chi''n ystyried
+        newid gyrfa neu gychwyn busnes","contents":[]}]}]},{"id":"tools--resources","type":"category","title":"Offer
+        ac adnoddau","description":"Cyfrifianellau, templedi llythyrau a chanllawiau
+        am ddim \u2013 offer ac adnoddau defnyddiol i\u2019ch helpu","contents":[{"id":"budget-planner","type":"category","title":"Cynllunydd
+        cyllideb","description":"Defnyddiwch y cynllunydd cyllideb hwn i weld faint
+        o arian sydd gennych yn dod i mewn ac ar beth yr ydych yn ei wario","contents":[]},{"id":"health-check","type":"category","title":"Gwiriad
+        Iechyd Ariannol","description":"Ymunwch \u00e2\u2019r ychydig dros hanner
+        miliwn o bobl sydd wedi cymryd ein Gwiriad Iechyd Ariannol ar-lein a dechrau
+        gwneud y defnydd gorau o\u2019ch arian heddiw","contents":[]},{"id":"action-plans","type":"category","title":"Cynlluniau
+        gweithredu","description":"Rheolwch eich cyllid ac ysgogwch eich hunan i fynd
+        i''r afael '' materion ariannol bywyd trwy ddilyn ein cynlluniau gweithredu.","contents":[{"id":"action-plans-homes-and-mortgages","type":"category","title":"Cynlluniau
+        gweithredu - Cartrefi a morgeisi","description":"Os ydych am rentu neu brynu,
+        cewch awgrymiadau a chyngor ynghylch cymryd y camau cywir gyda''n cynlluniau
+        gweithredu.","contents":[]},{"id":"action-plans-insurance","type":"category","title":"Cynlluniau
+        gweithredu - Yswiriant","description":"Canfyddwch a oes angen yswiriant arnoch
+        a datrys problemau gyda pholis''au presennol trwy ddefnyddio ein cynlluniau
+        cam wrth gam.","contents":[]},{"id":"action-plans-savings-and-investments","type":"category","title":"Cynlluniau
+        gweithredu - Cynilion a buddsoddiadau","description":"Cymerwch eich camau
+        cyntaf tuag at gynilo a buddsoddi neu wneud y gorau o gynilion presennol gyda''r
+        cynlluniau gweithredu syml hyn.","contents":[]},{"id":"action-plans-pensions","type":"category","title":"Cynlluniau
+        gweithredu - Pensiynau","description":"Os ydych yn cael eich cofrestru i bensiwn
+        gweithle am y tro cyntaf neu''n cyfrifo''ch incwm ar gyfer ymddeoliad, canfyddwch
+        yr holl gamau y bydd angen ichi eu cymryd gyda''n cynlluniau gweithredu defnyddiol.","contents":[]},{"id":"action-plans-losing-your-job","type":"category","title":"Cynlluniau
+        gweithredu - Colli eich swydd","description":"Canfyddwch beth i''w wneud i
+        warchod eich arian os ydych wedi colli''ch swydd, neu os ydych yn meddwl y
+        cewch eich diswyddo.","contents":[]},{"id":"action-plans-having-a-baby","type":"category","title":"Cynlluniau
+        gweithredu - Cael babi","description":"Cewch help a chyngor i gyfrifo''r gost
+        o gael babi a chanfod i beth mae gennych hawl cyn ac ar ''l yr enedigaeth.","contents":[]},{"id":"action-plans-managing-your-money","type":"category","title":"Cynlluniau
+        gweithredu - Rheoli eich arian","description":"Rheolwch eich cyllid a dilyn
+        camau syml tuag at reoli''ch arian gyda''n cynlluniau gweithredu.","contents":[]},{"id":"action-plans-managing-on-a-low-income","type":"category","title":"Cynlluniau
+        gweithredu - Rheoli ar incwm isel","description":"Cymerwch gamau syml i gael
+        deupen llinyn ynghyd pan ydych ar gyllideb dyn a gwneud i''ch arian fynd ymhellach
+        gyda''r cynlluniau gweithredu hyn.","contents":[]},{"id":"action-plans-managing-your-bank-account","type":"category","title":"Cynlluniau
+        gweithredu - Rheoli eich cyfrif banc","description":"Gwiriwch a yw''ch cyfrif
+        banc yn gywir i chi, canfod rhagor am Gredyd Cyffredinol a dysgu sut i agor
+        eich cyfrif cyntaf gyda''n cynlluniau gweithredu.","contents":[]}]},{"id":"calculators","type":"category","title":"Cyfrifianellau","description":"Gall
+        ein cyfrifianellau hawdd eu defnyddio eich helpu i lunio cyllideb, arbed arian
+        a thorri eich costau","contents":[]},{"id":"comparison-tables","type":"category","title":"Tablau
+        cymharu","description":"Mae ein tablau cymharu yn gwbl ddiduedd \u2013 fe\u2019n
+        sefydlwyd gan y llywodraeth ac nid ydym yn derbyn unrhyw gymhelliant na chomisiwn
+        os ydych yn mynd ymlaen i ddewis cynnyrch","contents":[]},{"id":"letter-templates","type":"category","title":"Templedi
+        llythyrau","description":"Mae ein templedi llythyrau hawdd eu defnyddio yma
+        i\u2019ch helpu os bydd arnoch angen sefydlu, canslo neu gwyno am rywbeth","contents":[]},{"id":"order-forms","type":"category","title":"Ffurflenni
+        archebu","description":"Defnyddiwch y ffurflenni hyn i archebu ein canllawiau
+        printiedig am ddim, sy\u2019n rhoi gwybodaeth glir, ddiduedd a chyngor mewn
+        iaith glir","contents":[]},{"id":"free-printed-guides","type":"category","title":"Canllawiau
+        printiedig am ddim","description":"Darllenwch ein canllawiau printiedig am
+        ddim, sy\u2019n rhoi gwybodaeth glir, ddiduedd a chyngor mewn iaith glir","contents":[]},{"id":"videos","type":"category","title":"Fideos","description":"Edrychwch
+        ar ein fideos, yn trafod materion fel yswiriant, cynilo ar gyfer ymddeol a
+        chwyddiant","contents":[]},{"id":"workplace-pension-advice-tool","type":"category","title":"Offeryn
+        cynghori pensiwn gweithle","description":"Mae pensiynau gweithle yn newid.
+        Defnyddiwch ein hofferyn i wirio a yw cynilo mewn pensiwn gweithle\u2019n
+        gywir i chi","contents":[]},{"id":"interactive-timelines","type":"category","title":"Amserlenni
+        rhyngweithiol","description":"Ewch drwy ein llinellau amser arian i chi wybod
+        beth i\u2019w wneud a phethau a allai effeithio ar eich incwm","contents":[]}]},{"id":"news","type":"category","title":"Newyddion
+        ac erthyglau","description":"Darllenwch ein newyddion, erthyglau ac erthyglau
+        nodwedd ariannol amserol","contents":[]}]'
+    http_version: 
+  recorded_at: Wed, 04 Jun 2014 10:29:01 GMT
 recorded_with: VCR 2.9.0

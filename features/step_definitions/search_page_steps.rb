@@ -8,8 +8,8 @@ When(/^I search for something irrelevant$/) do
   home_page.search_box.submit.click
 end
 
-When(/^I search for a query that returns three pages of results$/) do
-  home_page.search_box.input.set '"Deciding on the best type of credit for you"'
+When(/^I search for a query that returns two pages of results$/) do
+  home_page.search_box.input.set '"When to use an insurance broker"'
   home_page.search_box.submit.click
 end
 
@@ -84,7 +84,7 @@ When(/^I go to the next page of results$/) do
 end
 
 When(/^I go to the fourth page of a query that returns three pages of results$/) do
-  visit(search_results_path(locale: I18n.locale, query: '"Deciding on the best type of credit for you"', page: 4))
+  visit(search_results_path(locale: I18n.locale, query: '"Health+insurance"', page: 4))
 end
 
 Then(/^I should be on page (\d+) of (\d+) of the search results$/) do |page, number_of_pages|

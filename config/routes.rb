@@ -26,6 +26,16 @@ class ValidCategory
   end
 end
 
+class ValidStaticPage
+  BLACKLIST = %w(accessibility hygyrchedd
+                 be-prepared-for-a-rainy-day
+                 were-here-to-help rydym-yma-i-helpu)
+
+  def matches?(request)
+    BLACKLIST.exclude?(request.parameters['id'])
+  end
+end
+
 Rails.application.routes.draw do
   get '/' => redirect("/en")
   resource :beta_opt_out, only: [:create, :destroy], path: 'opt-out'
@@ -43,7 +53,8 @@ Rails.application.routes.draw do
     if Feature.active?(:static_pages)
       resources :static_pages,
                 path: 'static',
-                only: 'show'
+                only: 'show',
+                constraints: ValidStaticPage.new
     end
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'

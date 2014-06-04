@@ -9,7 +9,7 @@ module Core::Repositories
                 __getobj__.class
               end
 
-      cassette_name = [klass.name.underscore, method_name, *args].join('/')
+      cassette_name = [I18n.locale, klass.name.underscore, method_name, *args].join('/')
 
       ::VCR.use_cassette(cassette_name) { super }
     end

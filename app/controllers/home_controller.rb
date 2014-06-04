@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def show
     if Feature.active?(:dynamic_directory)
-      @directory_categories = Core::CategoryNavigationReader.new.call
+      @directory_categories = Core::CategoryTreeReader.new.call
     end
   end
 end

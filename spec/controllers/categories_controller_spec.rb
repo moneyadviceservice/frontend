@@ -1,58 +1,54 @@
+require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/category_reader'
-require 'core/interactors/category_parents_reader'
+require 'core/interactors/category_tree_reader'
 
 RSpec.describe CategoriesController, :type => :controller do
+  before do
+    allow(Core::CategoryTreeReader).to receive(:new) do
+      instance_double(Core::CategoryTreeReader, call: double)
+    end
+  end
+
   describe 'GET show' do
-    let(:category) { double(Core::Category, id: 'test', parent_id: 'parent-id') }
-    let(:category_reader) { double(Core::CategoryReader, call: category) }
-    let(:category_parent_reader) { double(Core::CategoryParentsReader, call: category) }
+    let(:category) { instance_double(Core::Category, id: 'test') }
+    let(:breadcrumbs) { double }
 
-    it 'is successful' do
-      allow(Core::CategoryReader).to receive(:new) { category_reader }
-      allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
+    context 'when the category exists' do
+      before do
+        allow(Core::CategoryReader).to receive(:new) do
+          instance_double(Core::CategoryReader, call: category)
+        end
 
-      get :show, id: 'foo', locale: I18n.locale
+        allow(Core::BreadcrumbsReader).to receive(:new) do
+          instance_double(Core::BreadcrumbsReader, call: breadcrumbs)
+        end
+      end
 
-      expect(response).to be_ok
+      it 'is successful' do
+        get :show, id: category.id, locale: I18n.locale
+
+        expect(response).to be_ok
+      end
+
+      it 'assigns @category to the result of category reader' do
+        get :show, id: category.id, locale: I18n.locale
+
+        expect(assigns(:category)).to eq(category)
+      end
+
+      it 'assigns @breadcrumbs to the result of breadcrumb reader' do
+        get :show, id: category.id, locale: I18n.locale
+
+        expect(assigns(:breadcrumbs)).to eq(breadcrumbs)
+      end
     end
 
-    it 'instantiates a category reader' do
-      allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
-      expect(Core::CategoryReader).to receive(:new).with(category.id) { category_reader }
+    context 'when the category does not exists' do
+      before { allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield }
 
-      get :show, locale: I18n.locale, id: category.id
-    end
-
-    xit 'instantiates a parent reader' do
-      allow(Core::CategoryReader).to receive(:new) { category_reader }
-      expect(Core::CategoryParentsReader).to receive(:new).with(category) { category_parent_reader }
-
-      get :show, locale: I18n.locale, id: category.id
-    end
-
-    it 'assigns @category to the result of category reader' do
-      allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
-      allow_any_instance_of(Core::CategoryReader).to receive(:call) { category }
-
-      get :show, locale: I18n.locale, id: category.id
-
-      expect(assigns(:category)).to eq(category)
-    end
-
-    xit 'assigns @category_hierarchy to the result of category parent reader' do
-      allow(Core::CategoryReader).to receive(:new) { category_reader }
-      allow_any_instance_of(Core::CategoryParentsReader).to receive(:call) { [category] }
-
-      get :show, locale: I18n.locale, id: category.id
-
-      expect(assigns(:category_hierarchy)).to eq([category])
-    end
-
-    context 'when a category does not exist' do
       it 'raises an ActionController RoutingError' do
-        allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield
-
-        expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+        expect { get :show, id: category.id, locale: I18n.locale }.
+          to raise_error(ActionController::RoutingError)
       end
     end
   end

@@ -6,6 +6,8 @@ module World
       fixture 'categories/help-with-insurance.yml'
     end
 
+    alias_method :category, :category_containing_no_child_categories
+
     def category_containing_child_categories
       fixture 'categories/insurance.yml'
     end

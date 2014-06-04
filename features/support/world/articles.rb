@@ -5,90 +5,46 @@ require 'core/repositories/articles/fake'
 
 module World
   module Articles
+    attr_accessor :current_article
+
     def browse_to_article(article)
-      article_page.load(locale: :en, id: article['id'])
-      @current_article = article
+      self.current_article = article
+
+      article_page.load(locale: article.locale, id: article.id)
     end
 
-    def current_article
-      @current_article
-    end
-
-    def article_id_for_locale(locale)
-      case locale
-      when 'en'
-        'should-you-rent-or-buy'
-      when 'cy'
-        'a-ddylech-chi-rentu-neu-brynu'
+    def article_with_single_parent(locale = 'en')
+      case locale.to_s
+        when 'en', 'english', 'English'
+          fixture 'articles/why-it-pays-to-save-regularly.yml'
+        when 'cy', 'welsh', 'Welsh'
+          fixture 'articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd.yml'
+        else
+          raise ArgumentError, "invalid article locale `#{locale}'"
       end
     end
 
-    def alternate_article_id_for_locale(locale)
-      case locale
-      when 'en'
-        'help-to-buy-schemes-faqs'
-      when 'cy'
-        'cynlluniau-cymorth-i-brynu---cwestiynau-cyffredin'
+    alias_method :article, :article_with_single_parent
+
+    def article_with_multiple_parents(locale = 'en')
+      case locale.to_s
+        when 'en', 'english', 'English'
+          fixture 'articles/changes-to-child-benefit-from-2013.yml'
+        when 'cy', 'welsh', 'Welsh'
+          fixture 'articles/newidiadau-i-fudd-dal-plant-o-2013-ymlaen.yml'
+        else
+          raise ArgumentError, "invalid article locale `#{locale}'"
       end
     end
 
-    def article_for_locale(locale)
-      id = article_id_for_locale(locale)
-      retrieve_article_for_locale(id, locale)
-    end
-
-    def alternate_article_for_locale(locale)
-      id = alternate_article_id_for_locale(locale)
-      retrieve_article_for_locale(id, locale)
-    end
-
-    def single_article
-      article = article_for_locale('en')
-
-      build(:article_hash, id: article.id, title: article.title)
-    end
-
-    def category_containing_articles(locale)
-      article = article_for_locale(locale)
-      alternate = alternate_article_for_locale(locale)
-
-      build(:category_hash,
-        id: 'buying-a-home',
-        contents: [
-          build(:article_hash, id: article.id, title: article.title),
-          build(:article_hash, id: alternate.id, title: alternate.title),
-        ]
-      )
-    end
-
-    def multiple_categories_containing_an_article(locale)
-      article = article_for_locale(locale)
-      alternate = alternate_article_for_locale(locale)
-
-      [
-        build(:category_hash,
-          id: 'buying-a-home',
-          contents: [
-            build(:article_hash, id: article.id, title: article.title),
-            build(:article_hash, id: alternate.id, title: alternate.title),
-          ]
-        ),
-
-        build(:category_hash,
-          id: 'renting-and-letting',
-          contents: [
-            build(:article_hash, id: article.id, title: article.title),
-            build(:article_hash, id: alternate.id, title: alternate.title),
-          ]
-        )
-      ]
-    end
-
-    private
-
-    def retrieve_article_for_locale(id, locale)
-      I18n.with_locale(locale) do
-        Core::ArticleReader.new(id).call
+    def orphan_article(locale = 'en')
+      case locale.to_s
+        when 'en', 'english', 'English'
+          fixture 'articles/if-your-baby-is-stillborn.yml'
+        when 'cy', 'welsh', 'Welsh'
+          fixture 'articles/os-ywch-babi-yn-farw-anedig.yml'
+        else
+          raise ArgumentError, "invalid article locale `#{locale}'"
       end
     end
   end

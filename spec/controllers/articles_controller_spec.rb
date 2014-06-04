@@ -1,75 +1,94 @@
 require 'spec_helper'
-require 'core/interactors/category_parents_reader'
+require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do
+  before do
+    allow(Core::CategoryTreeReader).to receive(:new) do
+      instance_double(Core::CategoryTreeReader, call: category_tree)
+    end
+  end
+
+  let(:category_tree) { double }
+
   describe 'GET show' do
+    let(:article) { Core::Article.new('test', categories: categories) }
     let(:categories) { [] }
-    let(:parents) { [] }
-    let(:article) { Core::Article.new('test', categories: categories ) }
-    let(:article_reader) { double(Core::ArticleReader, call: article) }
-    let(:category_parent_reader) { double(Core::CategoryParentsReader, call: parents) }
+    let(:breadcrumbs) { [] }
 
     context 'when an article does exist' do
       before do
-        allow(Core::ArticleReader).to receive(:new) { article_reader }
-        allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
+        allow(Core::ArticleReader).to receive(:new) do
+          double(Core::ArticleReader, call: article)
+        end
+
+        allow_any_instance_of(Core::BreadcrumbsReader).to receive(:call) { breadcrumbs }
       end
 
       it 'is successful' do
-        get :show, id: 'foo', locale: I18n.locale
+        get :show, id: article.id, locale: I18n.locale
 
         expect(response).to be_ok
       end
 
-      it 'instantiates an article reader' do
-        expect(Core::ArticleReader).to receive(:new).with(article.id) { article_reader }
-
-        get :show, locale: I18n.locale, id: article.id
-      end
-
       it 'assigns the result of article reader to @article' do
-        allow_any_instance_of(Core::ArticleReader).to receive(:call) { article }
-
-        get :show, locale: I18n.locale, id: article.id
+        get :show, id: article.id, locale: I18n.locale
 
         expect(assigns(:article)).to eq(article)
       end
 
-      context 'when an article belongs to one category' do
-        let(:category) { double }
+      context 'when the article belongs to one category' do
+        let(:category) { Core::Category.new('a-category') }
         let(:categories) { [category] }
-        let(:parents) { [double] }
 
-        xit 'assigns category hierarchy' do
-          get :show, locale: I18n.locale, id: article.id
+        it 'reads the breadcrumbs for the category' do
+          expect(Core::BreadcrumbsReader).
+            to receive(:new).with(category.id, category_tree).and_call_original
 
-          expect(assigns(:category_hierarchy)).to eq(parents + [category])
+          get :show, id: article.id, locale: I18n.locale
         end
 
-        xspecify "category hierarchy contains article's category" do
-          get :show, locale: I18n.locale, id: article.id
+        it 'assigns the breadcrumbs to @breadcrumb_trails' do
+          get :show, id: article.id, locale: I18n.locale
 
-          expect(assigns(:category_hierarchy)).to include(category)
+          expect(assigns(:breadcrumb_trails)).to eq([breadcrumbs])
         end
       end
 
-      context 'when an article belongs to many categories' do
-        let(:categories) { [double, double] }
+      context 'when the article belongs to many categories' do
+        let(:first_category) { Core::Category.new('a-category') }
+        let(:second_category) { Core::Category.new('b-category') }
+        let(:categories) { [first_category, second_category] }
 
-        it 'category hierarchy is empty' do
-          get :show, locale: I18n.locale, id: article.id
+        it 'reads the breadcrumbs for both categories' do
+          expect(Core::BreadcrumbsReader).
+            to receive(:new).with(first_category.id, category_tree).and_call_original
+          expect(Core::BreadcrumbsReader).
+            to receive(:new).with(second_category.id, category_tree).and_call_original
 
-          expect(assigns(:category_hierarchy)).to eq([])
+          get :show, id: article.id, locale: I18n.locale
+        end
+
+        it 'assigns the breadcrumbs to @breadcrumb_trails' do
+          allow(Core::BreadcrumbsReader).
+            to receive(:new).with(first_category.id, anything) { double(call: %w(a b c)) }
+
+          allow(Core::BreadcrumbsReader).
+            to receive(:new).with(second_category.id, anything) { double(call: %w(x y z)) }
+
+          get :show, id: article.id, locale: I18n.locale
+
+          expect(assigns(:breadcrumb_trails)).to eq([%w(a b c), %w(x y z)])
         end
       end
     end
 
     context 'when an article does not exist' do
-      it 'raises an ActionController RoutingError' do
-        allow_any_instance_of(Core::ArticleReader).to receive(:call).and_yield
+      before { allow_any_instance_of(Core::ArticleReader).to receive(:call).and_yield }
 
-        expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+      it 'raises an ActionController RoutingError' do
+        expect { get :show, id: article.id, locale: I18n.locale }.
+          to raise_error(ActionController::RoutingError)
       end
     end
   end

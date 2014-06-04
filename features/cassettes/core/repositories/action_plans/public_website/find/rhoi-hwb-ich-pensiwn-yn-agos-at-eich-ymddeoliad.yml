@@ -10,11 +10,11 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 80e4a166-74e8-4162-86f4-b26b81257e16
+      - d0a0cd9f-20d2-4a51-a49c-c78151a9ce0a
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,38 +23,49 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 25 Mar 2014 16:19:11 GMT
+      - Tue, 03 Jun 2014 18:48:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Vary:
+      - Accept-Encoding
       Status:
       - 200 OK
       Link:
-      - <https://www.moneyadviceservice.org.uk/en/action_plans/boost-your-pension-near-retirement>
-        rel="alternate"; hreflang="en"; title="Action plan - Boost your pension near
-        retirement"
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYWN0
+        aW9uX3BsYW5zL3Job2ktaHdiLWljaC1wZW5zaXduLXluLWFnb3MtYXQtZWlj
+        aC15bWRkZW9saWFkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeS1H
+        QiI7IHRpdGxlPSJDeW5sbHVuIGd3ZWl0aHJlZHUgLSBSaG9pIGh3YiBp4oCZ
+        Y2ggcGVuc2l3biB5biBhZ29zIGF0IGVpY2ggeW1kZGVvbGlhZCIsIDxodHRw
+        czovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2FjdGlvbl9w
+        bGFucy9ib29zdC15b3VyLXBlbnNpb24tbmVhci1yZXRpcmVtZW50PiByZWw9
+        ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJlbi1HQiI7IHRpdGxlPSJBY3Rpb24g
+        cGxhbiAtIEJvb3N0IHlvdXIgcGVuc2lvbiBuZWFyIHJldGlyZW1lbnQi
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 3b8f4fcc07b47580a496fe2e18255742
+      - 11b52b30074ec736a62526c2c0880179
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 25-Mar-2015 16:19:11 GMT; secure
-      - _session_id=3b8f4fcc07b47580a496fe2e18255742; path=/; secure; HttpOnly
-      - _web_tracking=6b4da875ced1aa6b2a62ba3ed2e1a834; path=/; expires=Wed, 25-Mar-2015
-        16:19:11 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:56 GMT; secure
+      - _session_id=11b52b30074ec736a62526c2c0880179; path=/; secure; HttpOnly
+      - _web_tracking=72c1399fc7ad8ebd18ed0acab4c4bd8d; path=/; expires=Wed, 03-Jun-2015
+        18:48:56 GMT; secure
       X-Request-Id:
-      - 80e4a166-74e8-4162-86f4-b26b81257e16
+      - d0a0cd9f-20d2-4a51-a49c-c78151a9ce0a
       X-Runtime:
-      - '0.168025'
+      - '0.027549'
       X-Rack-Cache:
       - miss
       P3p:
       - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad","title":"Cynllun
@@ -93,7 +104,7 @@ http_interactions:
         chi chwilio am y fargen orau yn gyntaf. Gall ychwanegu 20 y cant neu fwy at
         eich incwm ymddeol. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a
         href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/chwilio-am-flwydd-dal\">
-        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>"}'
+        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>","categories":["action-plans-pensions"]}'
     http_version:
-  recorded_at: Tue, 25 Mar 2014 16:19:11 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Tue, 03 Jun 2014 18:48:56 GMT
+recorded_with: VCR 2.9.0

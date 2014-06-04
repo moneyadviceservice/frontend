@@ -10,11 +10,11 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - fb89d1f8-2925-4217-846f-5e85967cea9c
+      - 3f221556-6c3b-480d-ad70-6e415592934e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,41 +23,49 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 25 Mar 2014 16:19:07 GMT
+      - Tue, 03 Jun 2014 18:48:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Vary:
+      - Accept-Encoding
       Status:
       - 200 OK
       Link:
       - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYWN0
-        aW9uX3BsYW5zL3Job2ktaHdiLWljaC1wZW5zaXduLXluLWFnb3MtYXQtZWlj
-        aC15bWRkZW9saWFkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeSI7
-        IHRpdGxlPSJDeW5sbHVuIGd3ZWl0aHJlZHUgLSBSaG9pIGh3YiBp4oCZY2gg
-        cGVuc2l3biB5biBhZ29zIGF0IGVpY2ggeW1kZGVvbGlhZCI=
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
+        aW9uX3BsYW5zL2Jvb3N0LXlvdXItcGVuc2lvbi1uZWFyLXJldGlyZW1lbnQ+
+        IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9IkFj
+        dGlvbiBwbGFuIC0gQm9vc3QgeW91ciBwZW5zaW9uIG5lYXIgcmV0aXJlbWVu
+        dCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2N5
+        L2FjdGlvbl9wbGFucy9yaG9pLWh3Yi1pY2gtcGVuc2l3bi15bi1hZ29zLWF0
+        LWVpY2gteW1kZGVvbGlhZD4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0i
+        Y3ktR0IiOyB0aXRsZT0iQ3lubGx1biBnd2VpdGhyZWR1IC0gUmhvaSBod2Ig
+        aeKAmWNoIHBlbnNpd24geW4gYWdvcyBhdCBlaWNoIHltZGRlb2xpYWQi
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 39508c03653d4762551f80c31de171fb
+      - 6cb1bca6be746ea8705c0b7f986c8b03
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 25-Mar-2015 16:19:07 GMT; secure
-      - _session_id=39508c03653d4762551f80c31de171fb; path=/; secure; HttpOnly
-      - _web_tracking=19300c01e7c171b3e7b023d18fb35a16; path=/; expires=Wed, 25-Mar-2015
-        16:19:07 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:55 GMT; secure
+      - _session_id=6cb1bca6be746ea8705c0b7f986c8b03; path=/; secure; HttpOnly
+      - _web_tracking=2c9ae55a5b84cbd005fd35bfdb65aed3; path=/; expires=Wed, 03-Jun-2015
+        18:48:55 GMT; secure
       X-Request-Id:
-      - fb89d1f8-2925-4217-846f-5e85967cea9c
+      - 3f221556-6c3b-480d-ad70-6e415592934e
       X-Runtime:
-      - '0.058301'
+      - '0.125109'
       X-Rack-Cache:
       - miss
       P3p:
       - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"boost-your-pension-near-retirement","title":"Action plan - Boost
@@ -95,7 +103,7 @@ http_interactions:
         provider offers in return for your pension pot before you''ve shopped around.
         It can add 20% or more to your retirement income. </p></div><div class=\"how\"><h4>How?
         </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/action_plans/shop-around-for-an-annuity\">
-        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>"}'
+        Follow our Action plan - Shop around for an annuity</a></li></ul></div></div></div>","categories":["action-plans-pensions"]}'
     http_version:
-  recorded_at: Tue, 25 Mar 2014 16:19:07 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Tue, 03 Jun 2014 18:48:55 GMT
+recorded_with: VCR 2.9.0

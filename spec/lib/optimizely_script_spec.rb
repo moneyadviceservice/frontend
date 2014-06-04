@@ -1,8 +1,7 @@
 require 'spec_helper'
+require 'optimizely_script'
 
-require 'assets/optimizely_script'
-
-RSpec.describe Assets::OptimizelyScript do
+RSpec.describe OptimizelyScript do
   describe '#to_s' do
     let(:data) { { digest: digest } }
     let(:digest) { '3094089b66468a09b6479fa0' }

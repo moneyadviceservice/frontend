@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/benefits-at-work.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 6f5e38015af0de2c957e2b6d4be347e9
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:24 GMT; secure
+      - _session_id=6f5e38015af0de2c957e2b6d4be347e9; path=/; secure; HttpOnly
+      - _web_tracking=f2cb4a1653b3ecbe35554d139053783b; path=/; expires=Wed, 03-Jun-2015
+        18:49:24 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.025028'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"benefits-at-work","title":"Benefits at work","description":"Learn
+        about employee benefits, salary sacrifice schemes and benefits and tax credits
+        you can claim after job loss.","parent_id":"benefits","contents":[{"id":"benefits-and-tax-credits-after-job-loss","type":"action_plan","title":"Action
+        plan - Benefits and tax credits after job loss","description":"Use this action
+        plan to find out what benefits and other entitlements are available following
+        redundancy"},{"id":"benefits-and-tax-credits-when-youve-lost-your-job","type":"guide","title":"Benefits
+        and tax credits when you\u2019ve lost your job","description":"If you\u2019re
+        looking for work, you may be able to get Jobseeker\u2019s Allowance and other
+        benefits or grants. Find out how to claim"},{"id":"pay-and-benefits-for-temps-and-agency-workers","type":"guide","title":"Pay
+        and benefits for temps and agency workers","description":"Temping and agency
+        work can give you flexibility, but make sure you know your rights and pay
+        the right tax"},{"id":"working-tax-credit","type":"guide","title":"Working
+        Tax Credit","description":"Are you entitled to Working Tax Credit, how much
+        could you get and how do you claim?"},{"id":"cars-insurance-and-other-employee-benefits","type":"guide","title":"Cars,
+        insurance and other employee benefits","description":"A guide to the main
+        employee benefits you might be eligible for depending on who you work for
+        \u2013 including how they are taxed"},{"id":"salary-sacrifice-schemes","type":"guide","title":"Salary
+        sacrifice","description":"Salary sacrifice? It sounds bad, but it can actually
+        help you in the long run. Find out how you could benefit"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:24 GMT
+recorded_with: VCR 2.9.0

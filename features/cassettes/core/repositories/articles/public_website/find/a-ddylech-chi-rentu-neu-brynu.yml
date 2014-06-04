@@ -1,0 +1,162 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 361d5ea9-f067-49a2-b4d3-964c771598e3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:48:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-rentu-neu-brynu>
+        rel="alternate"; hreflang="cy-GB"; title="A ddylech chi rentu neu brynu?",
+        <https://www.moneyadviceservice.org.uk/en/articles/should-you-rent-or-buy>
+        rel="alternate"; hreflang="en-GB"; title="Rent or buy?"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 851a6f53ca2500351e7cfb49c81accd2
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:58 GMT; secure
+      - _session_id=851a6f53ca2500351e7cfb49c81accd2; path=/; secure; HttpOnly
+      - _web_tracking=303b0432c54b7f8046dad81a67324780; path=/; expires=Wed, 03-Jun-2015
+        18:48:58 GMT; secure
+      X-Request-Id:
+      - 361d5ea9-f067-49a2-b4d3-964c771598e3
+      X-Runtime:
+      - '0.052802'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"a-ddylech-chi-rentu-neu-brynu","title":"A ddylech chi rentu
+        neu brynu?","description":"Fedrwch chi fforddio prynu eiddo a, hyd yn oed
+        os gallwch, a yw\u2019n syniad da \u2013 neu a fuasai hi\u2019n well i chi
+        rentu yn lle hynny?","body":"<html><body><p class=\"intro\"><img src=\"/images/should-you-rent-or-buy.jpg\"/>Mae\u2019n
+        debygol mai prynu eiddo yw\u2019r penderfyniad ariannol mwyaf y bydd rhaid
+        i chi fyth ei wneud. Sut gallwch chi wybod a ydych chi\u2019n gwneud y penderfyniad
+        iawn ar hyn o bryd \u2013 neu a fuasai hi\u2019n well i chi rentu yn lle hynny?
+        </p><h2>Pethau i\u2019w pwyso a\u2019u mesur os nad ydych chi\u2019n sicr
+        pa un ai prynu ynteu rentu </h2><p>Mae bod yn berchen ar eich t\u0177 eich
+        hun yn ymrwymiad mawr, nid dim ond i\u2019r adeilad rydych chi\u2019n ei brynu
+        ac i\u2019r ardal rydych chi\u2019n dewis byw ynddi, ond hefyd i\u2019ch bywyd
+        (a hefyd i berson arall os ydych chi\u2019n prynu gyda rhywun sy\u2019n annwyl
+        i chi neu ffrind). </p><h3>Y manteision o fod yn berchennog ar eich cartref
+        </h3><p>Mae llawer o fanteision i fod yn berchennog ar eich cartref. Dyma
+        rai ohonynt yn unig. </p><ul><li>Unwaith rydych chi wedi talu eich morgais,
+        chi biau eich cartref a gallai fod werth llawer mwy nag y gwnaethoch dalu
+        amdano. </li></ul><ul><li>Os yw gwerth eich cartref yn codi gallwch ddefnyddio\u2019r
+        ecwiti hwnnw i\u2019ch helpu i fforddio cartref mwy neu i ariannu ymddeoliad
+        mwy cyfforddus os ydych chi\u2019n prynu cartref llai. </li></ul><ul><li>Pan
+        fyddwch chi\u2019n ymddeol ni fydd yr incwm gennych o reidrwydd i ddal ati
+        i dalu rhent \u2013 os ydych wedi talu eich morgais fe fyddwch yn byw yn \u2018ddi-rent\u2019.
+        </li></ul><ul><li>Gallwch dalu arian ar wella eich cartref a chodi ei werth,
+        ond ni allwch newid cartref sy\u2019n cael ei rentu heb ganiat\u00e2d y landlord.
+        </li></ul><ul><li>Weithiau gall fod yn rhatach i brynu nag i rentu.</li></ul><h3>Anfanteision
+        posibl o fod yn berchennog </h3><ul><li>Mae\u2019n ymrwymiad ariannol mawr
+        \u2013 bydd arnoch angen bod yn sicr eich bod yn gallu fforddio\u2019r hyn
+        rydych chi\u2019n ymgymryd ag ef. Gweler yr adran ddiweddarach \u2018Allwch
+        chi fforddio prynu?\u2019 </li></ul><ul><li>Bydd arnoch angen bod yn sicr
+        hefyd y gallwch fforddio costau cynnal a chadw, fel newid boeler os bydd yn
+        torri neu drwsio to sy\u2019n gollwng. Os ydych chi\u2019n ymestyn eich hun
+        yn ormodol wrth brynu efallai y byddwch chi\u2019n teimlo\u2019n ddig am nad
+        oes gennych arian i fynd allan am bryd o fwyd, gwyliau ac adloniant. </li></ul><ul><li>Mae
+        gennych chi lai o hyblygrwydd na phan ydych chi\u2019n rhentu. Er enghraifft,
+        os ydych chi am symud oherwydd rhesymau gwaith neu resymau personol, mae gwerthu
+        a symud ymlaen yn llawer mwy costus os ydych chi\u2019n berchen ar eich t\u0177
+        gan y bydd gennych yr holl ff\u00efoedd sy\u2019n gysylltiedig \u00e2\u2019r
+        swyddfa gwerthu tai a\u2019r ff\u00efoedd cyfreithiol. Hefyd cofiwch nad yw
+        bob amser yn hawdd gwerthu eich cartref \u2013 fe fyddwch yn ddibynnol ar
+        yr hyn sy\u2019n digwydd yn y farchnad. </li></ul><ul><li>Os ydych chi\u2019n
+        byw gyda rhywun arall ac yn gwahanu, bydd y broses o roi trefn ar yr eiddo
+        yn llawer mwy cymhleth a chostus.</li></ul><h2>A ydych chi\u2019n well eich
+        byd yn prynu neu\u2019n rhentu? </h2><p>Dydych chi ddim o reidrwydd yn mynd
+        i fod yn well eich byd yn ariannol yn prynu nag yn rhentu eich cartref. </p><p>Os
+        yw gwerth eich eiddo yn gostwng, efallai na fyddwch yn medru gwerthu am fod
+        arnoch chi fwy o arian na gwerth eich cartref i\u2019ch benthyciwr morgais.
+        </p><p>Ar y llaw arall, os yw prisiau tai yn codi, fe allech wneud elw da
+        a allai eich helpu i symud i gartref mwy neu roi cyfandaliad i chi os ydych
+        yn dewis symud i le llai yn hwyrach yn eich bywyd.\u00a0 </p><h2>Allwch chi
+        fforddio prynu? </h2><p>Y cam cyntaf tuag at brynu eiddo yw darganfod a allwch
+        chi fforddio gwneud hynny. Mae llawer o gostau yn gysylltiedig \u00e2 phrynu
+        eich t\u0177 eich hun, y tu hwnt i\u2019ch ad-daliadau morgais, gan gynnwys:
+        </p><ul><li>blaendal </li></ul><ul><li>costau cyfreithiol fel ff\u00efoedd
+        y cyfreithiwr </li></ul><ul><li>cost gwneud arolwg </li></ul><ul><li>Treth
+        Stamp </li></ul><ul><li>costau ymfudo, a hefyd </li></ul><ul><li>eich biliau
+        misol \u2013 fel nwy, trydan, ff\u00f4n cartref, ac ati.</li></ul><p>Defnyddiwch
+        y dolenni isod i gael gwell syniad o\u2019ch costau tebygol. </p><p>Os nad
+        yw prynu yn ddewis i chi ar hyn o bryd, meddyliwch am gychwyn cynllun cynilo
+        i gyrraedd eich nod yn y dyfodol. </p><p><div class=\"add-action\"><a href=\"/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">Amcangyfrifwch
+        eich holl gostau prynu a symud</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" data-article-type=\"guide\"
+        id=\"email_me_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol&amp;article_type=guide\"
+        method=\"post\" name=\"guide_amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"SjjMtML2EkE0/Z8FVGjEFP5NIiwGlZax5v1oku4DwN8=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca\">Faint
+        allwch chi fforddio ei fenthyg?</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"faint-allwch-chi-fforddio-ei-fenthyca\" data-article-type=\"guide\"
+        id=\"email_me_faint-allwch-chi-fforddio-ei-fenthyca\" tabindex=\"0\">E-bostio
+        hwn <span class=\"visuallyhidden\">dudalen</span></a><form action=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=faint-allwch-chi-fforddio-ei-fenthyca&amp;article_type=guide\"
+        method=\"post\" name=\"guide_faint-allwch-chi-fforddio-ei-fenthyca\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Ychwanegu i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"SjjMtML2EkE0/Z8FVGjEFP5NIiwGlZax5v1oku4DwN8=\" /></div></form>
+        </div></p><p><div class=\"add-action\"><a href=\"/cy/tools/sut-i-bennu-nod-cynilo\">Sut
+        mae gosod nod cynilo</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"sut-i-bennu-nod-cynilo\" data-article-type=\"tool\" id=\"email_me_sut-i-bennu-nod-cynilo\"
+        tabindex=\"0\">E-bostio hwn <span class=\"visuallyhidden\">dudalen</span></a><form
+        action=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/cy/action_items/internal?article_id=sut-i-bennu-nod-cynilo&amp;article_type=tool\"
+        method=\"post\" name=\"tool_sut-i-bennu-nod-cynilo\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Ychwanegu
+        i&#x27;m rhestr tasgau i&#x27;w cyflawni\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"SjjMtML2EkE0/Z8FVGjEFP5NIiwGlZax5v1oku4DwN8=\" /></div></form>
+        </div></p><h2>Cymorth y llywodraeth os oes gennych flaendal bach neu os ydych
+        ar incwm isel </h2><p>Os ydych chi ar incwm isel, ac yn ceisio prynu eich
+        cartref cyntaf neu rydych chi\u2019n weithiwr allweddol, mae llawer o gynlluniau
+        ar gael sy\u2019n caniat\u00e1u i chi ran-rentu/rhan-brynu eich cartref er
+        mwyn ei brynu yn gyfan gwbl yn raddol dros amser. </p><p>Hefyd mae cynlluniau
+        a all eich helpu os gallwch fforddio blaendal bach yn unig. Dilynwch y ddolen
+        isod i ddysgu mwy. </p><ul><li><a href=\"/cy/categories/affordable-housing-schemes\">Cynlluniau
+        tai fforddiadwy</a></li></ul>","categories":["buying-a-home","renting-and-letting"]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:48:59 GMT
+recorded_with: VCR 2.9.0

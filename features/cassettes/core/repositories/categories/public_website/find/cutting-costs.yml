@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/cutting-costs.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8ec3a74075ac086eb395c0ddfff8746d
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:15 GMT; secure
+      - _session_id=8ec3a74075ac086eb395c0ddfff8746d; path=/; secure; HttpOnly
+      - _web_tracking=688ec06bca5c67cc09c12d7700184a02; path=/; expires=Wed, 03-Jun-2015
+        18:49:15 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.405448'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"cutting-costs","title":"Cutting costs","description":"Help with
+        trimming your energy, home phone and broadband bills, and tips on getting
+        holidays for less.","parent_id":"budgeting-and-managing-money","contents":[{"id":"save-money-on-your-home-phone-and-broadband","type":"guide","title":"Save
+        money on your home phone and broadband","description":"Save money with good
+        deals and cost-cutting on your home phone and broadband. The savings can add
+        up to hundreds of pounds a year"},{"id":"whats-the-best-way-to-finance-buying-a-car","type":"guide","title":"What\u2019s
+        the best way to finance buying a car?","description":"What\u2019s the best
+        way to finance the buying of a car? Loan, hire purchase or something else
+        entirely?"},{"id":"running-a-car-as-a-young-driver","type":"guide","title":"Running
+        a car as a young driver","description":"Find out the key costs involved in
+        running a car and get tips on how to keep them down."},{"id":"saving-for-christmas","type":"tool","title":"Saving
+        for Christmas","description":"Saving for Christmas can be less painful than
+        you might think \u2013 follow these simple steps for a festive period without
+        the money worries."},{"id":"how-to-save-money-on-your-council-tax-bill","type":"guide","title":"How
+        to save money on your Council Tax bill","description":"Make sure you\u2019re
+        not paying more Council Tax than you have to."},{"id":"your-top-tips-for-buying-and-running-a-car","type":"video","title":"Your
+        top tips for buying and running a car","description":"Watch this video to
+        find out how people would buy and run a car."},{"id":"your-tips-for-paying-for-a-holiday","type":"video","title":"Your
+        tips for paying for a holiday","description":"Watch this video to find out
+        how people are planning to pay for their summer holiday."},{"id":"get-holidays-for-less","type":"guide","title":"Get
+        holidays for less","description":"Cut costs when booking your holiday \u2013
+        from flights and insurance to travel money, see how to compare, shop and save"},{"id":"how-to-pay-for-home-improvements","type":"action_plan","title":"Action
+        plan - How to pay for home improvements","description":"From using savings
+        instead of borrowing to getting the right type of credit - find out the best
+        way to plan and pay for home improvements."},{"id":"smarter-shopping---tips-and-tricks-to-save-money-when-shopping","type":"guide","title":"Smarter
+        shopping \u2013 tips and tricks to save money","description":"Save money by
+        shopping around, using vouchers, coupons and cashback to get the best deals"},{"id":"cut-your-fuel-bills-with-the-green-deal","type":"action_plan","title":"Action
+        plan - Cut your fuel bills with the Green Deal","description":"Follow this
+        action plan to find a manageable way of making your home more energy efficient"},{"id":"save-energy-save-money","type":"guide","title":"Save
+        energy, save money","description":"Be more energy efficient \u2013 cut your
+        power bills and find out about energy saving grants"},{"id":"save-money-on-your-gas-and-bills","type":"guide","title":"Save
+        money on your gas and electricity bills","description":"Cut your fuel bills
+        by switching suppliers, reducing your usage and claiming any entitlements
+        you\u2019re eligible for"},{"id":"save-money-on-your-mobile-phone","type":"guide","title":"Save
+        money on your mobile phone","description":"Cut the cost of your mobile phone
+        by getting the best deal for your usage \u2013 you could save hundreds of
+        pounds"},{"id":"cut-your-home-phone-and-broadband-costs","type":"action_plan","title":"Action
+        plan - Cut your home phone and broadband costs","description":"Shop around
+        and get the best deal on your landline and broadband"},{"id":"paying-for-and-protecting-your-phone","type":"guide","title":"Paying
+        for and protecting your phone","description":"Know exactly what phone tariff
+        you''re on and how much you pay? Find out where the hidden costs lie and whether
+        to buy mobile phone insurance."}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:16 GMT
+recorded_with: VCR 2.9.0

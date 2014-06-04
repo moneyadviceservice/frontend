@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/managing-debt-when-out-of-work.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b032e423c17308688fc3d0e0083be63f
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:32 GMT; secure
+      - _session_id=b032e423c17308688fc3d0e0083be63f; path=/; secure; HttpOnly
+      - _web_tracking=7348e07325d0d02eb14bb62e32ba80e8; path=/; expires=Wed, 03-Jun-2015
+        18:49:32 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.021523'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-debt-when-out-of-work","title":"Managing debt when
+        out of work","description":"How to review and prioritise your debts, how to
+        start paying it off and where to get help if you''re struggling with debt","parent_id":"losing-your-job","contents":[{"id":"what-to-do-about-debt-if-you-lose-your-job","type":"guide","title":"What
+        to do about debt if you lose your job","description":"Advice, tips and options
+        on keeping up repayments and managing debts if you\u2019ve lost your job"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:32 GMT
+recorded_with: VCR 2.9.0

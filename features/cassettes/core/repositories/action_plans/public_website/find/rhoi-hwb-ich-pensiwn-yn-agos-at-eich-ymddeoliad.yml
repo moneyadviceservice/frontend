@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/action_plans/rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - d0a0cd9f-20d2-4a51-a49c-c78151a9ce0a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:48:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYWN0
+        aW9uX3BsYW5zL3Job2ktaHdiLWljaC1wZW5zaXduLXluLWFnb3MtYXQtZWlj
+        aC15bWRkZW9saWFkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeS1H
+        QiI7IHRpdGxlPSJDeW5sbHVuIGd3ZWl0aHJlZHUgLSBSaG9pIGh3YiBp4oCZ
+        Y2ggcGVuc2l3biB5biBhZ29zIGF0IGVpY2ggeW1kZGVvbGlhZCIsIDxodHRw
+        czovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2FjdGlvbl9w
+        bGFucy9ib29zdC15b3VyLXBlbnNpb24tbmVhci1yZXRpcmVtZW50PiByZWw9
+        ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJlbi1HQiI7IHRpdGxlPSJBY3Rpb24g
+        cGxhbiAtIEJvb3N0IHlvdXIgcGVuc2lvbiBuZWFyIHJldGlyZW1lbnQi
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 11b52b30074ec736a62526c2c0880179
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:48:56 GMT; secure
+      - _session_id=11b52b30074ec736a62526c2c0880179; path=/; secure; HttpOnly
+      - _web_tracking=72c1399fc7ad8ebd18ed0acab4c4bd8d; path=/; expires=Wed, 03-Jun-2015
+        18:48:56 GMT; secure
+      X-Request-Id:
+      - d0a0cd9f-20d2-4a51-a49c-c78151a9ce0a
+      X-Runtime:
+      - '0.027549'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"rhoi-hwb-ich-pensiwn-yn-agos-at-eich-ymddeoliad","title":"Cynllun
+        gweithredu - Rhoi hwb i\u2019ch pensiwn yn agos at eich ymddeoliad","description":"Cyngor
+        ymarferol ar sut i gynyddu eich cynllun pensiwn gan gynnwys gohirio eich ymddeoliad
+        a thalu rhagor i\u2019ch cynllun pensiwn.","body":"<p class=\"intro\"><img
+        alt=\"Cynllun gweithredu - Sut i agor cyfrif banc\" src=\"/images/new_action_plan_icon.jpg\"/>Agosaf
+        yn y byd ydych chi at ymddeol, lleiaf yn y byd o gyfle sydd gennych o ran
+        llenwi unrhyw fwlch yn eich cynilion pensiwn. Ond efallai bod rhai camau y
+        gallwch eu cymryd i helpu creu\u2019r math o incwm yr ydych yn gobeithio ymddeol
+        arno. </p><div class=\"action-item\"><h3>1 Talu mwy i\u2019ch cronfa bensiwn
+        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Pam? </h4><p>Gall gostyngiad
+        yn y dreth ychwanegu llawer at unrhyw gyfraniadau ychwanegol y byddwch yn
+        eu gwneud cyn ymddeol. Mae hyn yn arbennig o wir os ydych yn talu Treth Incwm
+        cyfradd uwch. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/articles/ffyrdd-o-gynyddu-eich-pensiwn-wrth-ich-ymddeoliad-agosau\">Darllenwch
+        ein herthygl Ffyrdd o roi hwb i\u2019ch pensiwn cyn i chi ymddeol</a></li></ul><p>Cysylltwch
+        \u00e2 darparwr eich cynllun pensiwn i holi am gynyddu eich cyfraniadau </p><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/gostyngiad-treth-ar-gyfraniadau-pensiwn\">Sylwer
+        bod cyfyngiad blynyddol ar y cyfraniadau a fydd yn gymwys am ryddhad treth</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>2 Gohirio eich ymddeoliad </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Pam? </h4><p>Mae gohirio eich pensiwn yn golygu bod gennych
+        ragor o amser i gyfrannu ato, mae\u2019n parhau fel buddsoddiad yn hwy ac
+        ni fydd raid i chi ddarparu ar gyfer cymaint o flynyddoedd o ymddeoliad. </p></div><div
+        class=\"how\"><h4>Sut? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/penderfynwch-ar-bryd-i-gymryd-eich-pensiwn\">Dilynwch
+        ein Cynllun gweithredu - Penderfynu pryd i gymryd eich pensiwn</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>3 Cynyddu eich hawl i Bensiwn y Wladwriaeth </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Pam? </h4><p>Mae eich Pensiwn
+        y Wladwriaeth yn dibynnu ar faint o flynyddoedd o gyfraniadau Yswiriant Cenedlaethol
+        yr ydych wedi eu casglu. Ond gallwch wneud cyfraniadau ychwanegol i lenwi
+        unrhyw flynyddoedd \u2018coll\u2019. </p></div><div class=\"how\"><h4>Sut?
+        </h4><ul><li><a target=\"_blank\" data-link-type=\"external\" href=\"https://www.gov.uk/voluntary-national-insurance-contributions\">Darllenwch
+        sut i wneud cyfraniadau gwirfoddol ar y wefan gov.uk</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>4 Chwilio am y blwydd-dal gorau </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Pam? </h4><p>Peidiwch \u00e2 derbyn pa bynnag flwydd-dal
+        y mae eich darparwr presennol yn ei gynnig ar gyfer eich pot pensiwn heb i
+        chi chwilio am y fargen orau yn gyntaf. Gall ychwanegu 20 y cant neu fwy at
+        eich incwm ymddeol. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/chwilio-am-flwydd-dal\">
+        Dilynwch ein Cynllun Gweithredu - Chwilio am y blwydd-dal gorau</a></li></ul></div></div></div>","categories":["action-plans-pensions"]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:48:56 GMT
+recorded_with: VCR 2.9.0

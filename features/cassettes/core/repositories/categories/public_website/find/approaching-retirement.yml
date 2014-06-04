@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/approaching-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 9f659a3004dbcb745ef5261bcafa4fbf
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:20 GMT; secure
+      - _session_id=9f659a3004dbcb745ef5261bcafa4fbf; path=/; secure; HttpOnly
+      - _web_tracking=3b133130b9e5d9957a894cac728249b0; path=/; expires=Wed, 03-Jun-2015
+        18:49:20 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.020125'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"approaching-retirement","title":"Approaching retirement","description":"As
+        retirement nears there are big decisions to make, such as what kind of annuity
+        to shop around for - we explain it all","parent_id":"pensions-and-retirement","contents":[{"id":"new-rules-about-pensions-from-27-march-2014","type":"guide","title":"New
+        rules about pensions from 27 March 2014","description":"Read our advice on
+        the government\u2019s proposed pension changes from April 2015 and interim
+        relaxed rules for cash lump sums and income withdrawal."},{"id":"should-you-take-a-pension-tax-free-cash-lump-sum","type":"guide","title":"Should
+        you take a cash lump sum from your pension?","description":"Many people take
+        a cash lump sum from their pension, but you need to consider the impact on
+        your retirement income"},{"id":"how-to-shop-around-for-an-annuity","type":"guide","title":"How
+        to shop around for an annuity","description":"If you''re about to retire from
+        a defined contribution scheme, use the ''open market option'' to shop around
+        - here''s how"},{"id":"ways-to-boost-your-pension-in-the-run-up-to-retirement","type":"guide","title":"Ways
+        to boost your pension in the run-up to retirement","description":"Even if
+        you\u2019re only a few years from retiring, you may still be able to make
+        a significant difference to your retirement income"},{"id":"annuities-and-other-types-of-pension-income-your-options","type":"guide","title":"Annuities
+        and other types of pension income","description":"An overview of the features,
+        benefits and risks of different types of annuity and other categories of pension
+        income"},{"id":"checklist-things-to-do-as-retirement-approaches","type":"guide","title":"Checklist
+        \u2013 things to do as retirement approaches","description":"The key steps
+        in the months and years before retirement \u2013 from shopping for an annuity
+        to budgeting for retirement"},{"id":"decide-when-to-take-your-pension","type":"guide","title":"Decide
+        when to take your pension","description":"Deferring your pensions can boost
+        the income you get but with most workplace and personal schemes there are
+        risks to consider too"},{"id":"work-out-your-likely-pension-income","type":"guide","title":"Work
+        out your likely pension income","description":"If you\u2019re approaching
+        retirement, you need to get ready to make important decisions about turning
+        your pension savings into an income"}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:20 GMT
+recorded_with: VCR 2.9.0

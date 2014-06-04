@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/care-and-disability.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 03 Jun 2014 18:49:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8a4a56f69885702ebb2cb02bd6ee2569
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 03-Jun-2015 18:49:28 GMT; secure
+      - _session_id=8a4a56f69885702ebb2cb02bd6ee2569; path=/; secure; HttpOnly
+      - _web_tracking=f7a9ce81f7404ab55fff72a499e366ed; path=/; expires=Wed, 03-Jun-2015
+        18:49:28 GMT; secure
+      X-Request-Id:
+      - 3770f8e0-9cb6-4fe1-ba20-1c1f2a77956c
+      X-Runtime:
+      - '0.948765'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"care-and-disability","title":"Care and disability","description":"Choosing
+        the right care services, support for carers and paying for the cost of care.","parent_id":"money-topics","contents":[{"id":"care-advice-and-help","type":"category","title":"Care
+        advice and help","description":"Help with choosing the right care services,
+        setting up a power of attorney, and dealing with problems."},{"id":"paying-for-care","type":"category","title":"Paying
+        for care","description":"Learn about NHS and self-funding options, managing
+        direct payments, and other ways to pay for your care."},{"id":"support-for-carers","type":"category","title":"Support
+        for carers","description":"Find out about support available to carers and
+        how to manage the money of someone you''re caring for."},{"id":"illness-and-disability","type":"category","title":"Illness
+        and disability","description":"Advice about Personal Independence Payment,
+        disability grants, aids and equipment."}]}'
+    http_version:
+  recorded_at: Tue, 03 Jun 2014 18:49:29 GMT
+recorded_with: VCR 2.9.0

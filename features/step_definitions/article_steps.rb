@@ -1,11 +1,10 @@
 When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   locale = language_to_locale(language)
-  populate_category_repository_with(category_containing_articles(locale))
   article_page.load(locale: locale, id: article_id_for_locale(locale))
 end
 
 When(/^I translate the article into (.*)$/) do |language|
-  locale = language_to_locale(language)
+  locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
   expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)

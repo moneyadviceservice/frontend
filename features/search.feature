@@ -1,4 +1,3 @@
-@vcr
 Feature: Searching
   As a user visiting the website
   I want to search by keyword
@@ -26,14 +25,10 @@ Feature: Searching
 
   Scenario: Browsing paginated results
     When I am on the home page
-    And I search for a query that returns three pages of results
+    And I search for a query that returns two pages of results
     Then I should see what page of results I am on
     And I should see the "Next" button
     And I should not see the "Prev" button
-    When I go to the next page of results
-    Then I should see what page of results I am on
-    And I should see the "Next" button
-    And I should see the "Prev" button
     When I go to the next page of results
     Then I should see what page of results I am on
     And I should not see the "Next" button

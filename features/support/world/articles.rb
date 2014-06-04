@@ -5,11 +5,6 @@ require 'core/repositories/articles/fake'
 
 module World
   module Articles
-    def populate_article_repository_with(*articles)
-      repository = Core::Repositories::Articles::Fake.new(*articles)
-      Core::Registries::Repository[:article] = repository
-    end
-
     def browse_to_article(article)
       article_page.load(locale: :en, id: article['id'])
       @current_article = article

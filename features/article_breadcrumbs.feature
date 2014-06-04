@@ -1,5 +1,4 @@
 @wip
-@vcr
 Feature: Article breadcrumbs
   As a user reading an article
   I want to understand where the article belongs

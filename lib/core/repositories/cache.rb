@@ -8,7 +8,7 @@ module Core::Repositories
     end
 
     def method_missing(method_name, *args, &block)
-      cache_key = [__getobj__.class.name.underscore, method_name, *args].join('/')
+      cache_key = [I18n.locale, __getobj__.class.name.underscore, method_name, *args].join('/')
 
       cache.fetch(cache_key) { super }
     end

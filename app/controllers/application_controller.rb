@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   end
 
   def category_navigation
-    CategoryNavigationDecorator.decorate_collection(category_tree.children)
+    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree.children)
   end
 
   helper_method :category_navigation

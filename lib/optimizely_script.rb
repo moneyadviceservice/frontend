@@ -16,7 +16,7 @@ class OptimizelyScript
   end
 
   def config_path
-    File.join(Rails.root, 'public', path, 'version')
+    '/var/lib/optimizely_refresh/version'
   end
 
   def script_tag

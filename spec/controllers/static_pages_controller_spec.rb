@@ -5,13 +5,12 @@ RSpec.describe StaticPagesController, :type => :controller do
   describe 'GET show' do
     let(:categories) { [] }
     let(:parents) { [] }
-    let(:static_page) { Core::StaticPage.new('test', categories: categories ) }
+    let(:static_page) { Core::StaticPage.new('test', categories: categories) }
     let(:static_page_reader) { double(Core::StaticPageReader, call: static_page) }
 
     context 'when an static_page does exist' do
       before do
         allow(Core::StaticPageReader).to receive(:new) { static_page_reader }
-        allow(Core::CategoryParentsReader).to receive(:new) { category_parent_reader }
       end
 
       it 'is successful' do

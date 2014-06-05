@@ -78,7 +78,8 @@ RSpec.describe ArticlesController, :type => :controller do
 
           get :show, id: article.id, locale: I18n.locale
 
-          expect(assigns(:breadcrumb_trails)).to eq([%w(a b c), %w(x y z)])
+          expect(assigns(:breadcrumb_trails)).
+            to eq([%w(a b c) << first_category, %w(x y z) << second_category])
         end
       end
     end

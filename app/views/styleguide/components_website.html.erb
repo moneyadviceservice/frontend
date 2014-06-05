@@ -24,7 +24,7 @@
 <% end %>
 
 <%= styleguide_section sections['Primary Navigation'] do %>
-  <%= render 'shared/primary_nav' %>
+  <%= render 'shared/primary_nav', categories: @categories %>
 <% end %>
 
 <%= styleguide_section sections['Social Links'] do %>

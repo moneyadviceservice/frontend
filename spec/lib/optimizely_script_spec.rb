@@ -15,6 +15,15 @@ RSpec.describe OptimizelyScript do
       it { is_expected.to eq('') }
     end
 
+    context 'with broken version file' do
+      before do
+        expect(File).to receive(:exist?).and_return(true)
+        expect(File).to receive(:open).and_return(double(read: '{broken json}'))
+      end
+
+      it { is_expected.to eq(%{<script src="/a/optimizely/.js"></script>}) }
+    end
+
     context 'with version file' do
       before do
         expect(File).to receive(:exist?).and_return(true)

@@ -6,7 +6,9 @@ class OptimizelyScript
   private
 
   def config
-    @_config ||= JSON.parse(config_file.read)
+    JSON.parse(config_file.read)
+  rescue
+    {}
   end
 
   def config_file

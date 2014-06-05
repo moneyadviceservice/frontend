@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - c44fc8b3-08ac-4d23-9b41-336773131fce
+      - 8ab003a8-2614-47f7-9cc4-5d22ef3de249
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 04 Jun 2014 10:51:41 GMT
+      - Thu, 05 Jun 2014 10:31:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -45,16 +45,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - d5d409f591cb21fd9d3d32b94ef3b7ce
+      - ac9568fa120a669e19bd3b08d1114bb4
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 10:51:40 GMT; secure
-      - _session_id=d5d409f591cb21fd9d3d32b94ef3b7ce; path=/; secure; HttpOnly
-      - _web_tracking=a2e1474b16606e062b651b00f91033dc; path=/; expires=Thu, 04-Jun-2015
-        10:51:40 GMT; secure
+      - _cookie_notice=y; path=/; expires=Fri, 05-Jun-2015 10:31:48 GMT; secure
+      - _session_id=ac9568fa120a669e19bd3b08d1114bb4; path=/; secure; HttpOnly
+      - _web_tracking=15ac0657630e99a7be6f1e89a88c3b0a; path=/; expires=Fri, 05-Jun-2015
+        10:31:47 GMT; secure
       X-Request-Id:
-      - c44fc8b3-08ac-4d23-9b41-336773131fce
+      - 8ab003a8-2614-47f7-9cc4-5d22ef3de249
       X-Runtime:
-      - '0.285077'
+      - '0.203787'
       X-Rack-Cache:
       - miss
       P3p:
@@ -92,7 +92,7 @@ http_interactions:
         method=\"post\" name=\"guide_direct-debits-and-standing-orders\"><div><input
         class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
         value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
-        value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\" /></div></form> </div></p><h2>Do
+        value=\"xoYgpquJ+jxBPqRCfkQXtgsHwxtqDiWtm2Y3QHMFqtg=\" /></div></form> </div></p><h2>Do
         it on pay day </h2><p>The best time to put a bit of money aside is just after
         you\u2019ve been paid, so set up your standing order to go out on, or just
         after pay day. </p><p>Or ask your workplace if they have a savings scheme
@@ -106,7 +106,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=workplace-investment-schemes&amp;article_type=guide\"
         method=\"post\" name=\"guide_workplace-investment-schemes\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"xoYgpquJ+jxBPqRCfkQXtgsHwxtqDiWtm2Y3QHMFqtg=\"
         /></div></form> </div></p><h2>Earning interest on interest </h2><p>As your
         savings build up, they\u2019ll grow faster\u2013 even if you\u2019re only
         paying in the same regular amount. This is because each time the interest
@@ -129,7 +129,7 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
         method=\"post\" name=\"tool_cut-back-calculator\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"xoYgpquJ+jxBPqRCfkQXtgsHwxtqDiWtm2Y3QHMFqtg=\"
         /></div></form> </div></p><h2>What about regular investing? </h2><p>The UK
         government defines saving as putting money aside without risk, and usually
         with the chance to earn interest. Investing involves committing money into
@@ -151,11 +151,11 @@ http_interactions:
         class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=should-i-save-or-invest&amp;article_type=guide\"
         method=\"post\" name=\"guide_should-i-save-or-invest\"><div><input class=\"action-submit\"
         data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
-        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"8b7Wt/+EFiCn/4lwNssFZoETu1pg0J4f3NpMRnB+HBo=\"
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"xoYgpquJ+jxBPqRCfkQXtgsHwxtqDiWtm2Y3QHMFqtg=\"
         /></div></form> </div></p><h2>Next steps </h2><ul><li><a href=\"/en/articles/top-tips-for-choosing-savings-accounts\">Top
         tips for choosing a savings account</a></li><li><a href=\"/en/articles/top-tips-for-choosing-investments\">Top
         tips for choosing investments</a></li><li><a href=\"/en/categories/comparison-tables\">Choose
         a savings or investment account</a></li></ul>","categories":["how-to-save-money"]}'
     http_version: 
-  recorded_at: Wed, 04 Jun 2014 10:51:41 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Thu, 05 Jun 2014 10:31:48 GMT
+recorded_with: VCR 2.9.2

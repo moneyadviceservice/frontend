@@ -11,7 +11,7 @@ module Core::Repositories
 
       cassette_name = [I18n.locale, klass.name.underscore, method_name, *args].join('/')
 
-      ::VCR.use_cassette(cassette_name) { super }
+      Marshal.load(Marshal.dump(::VCR.use_cassette(cassette_name) { super }))
     end
   end
 end

@@ -10,20 +10,18 @@
   <% end %>
 <% end %>
 
-<div class="l-article editorial">
-  <div class="l-article-intro">
+<div class="l-main editorial">
+  <main role="main">
     <h1><%= title article.title %></h1>
 
-    <p class="intro">
-      <%= article.intro %>
-    </p>
-  </div>
-
-  <div class="l-article-main">
     <%= article.content %>
-  </div>
 
-  <%= render 'shared/related_links', categories: article.related_categories %>
+    <%= render 'shared/related_links', categories: article.related_categories %>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
 </div>
 
 <% content_for(:alternate_link) do %>

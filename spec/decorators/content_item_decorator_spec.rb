@@ -52,23 +52,7 @@ RSpec.describe ContentItemDecorator do
     end
   end
 
-  describe '#intro' do
-    let(:fixture) { 'spec/fixtures/pawnbrokers-how-they-work.json' }
-    let(:content_item) do
-      instance_double(Core::Article,
-                      id:          'bob',
-                      title:       'uncle-bob-is-richer-than-you',
-                      description: 'uncle is rich',
-                      body:        MultiJson.load(File.read(fixture))['body'])
-    end
 
-    let(:processed_body) { Nokogiri::HTML(decorator.send(:processed_body)) }
-    let(:html) { decorator.intro }
-
-    it 'returns just the intro' do
-      expect(html).to eql processed_body.search(HTMLProcessor::INTRO_PARAGRAPH).inner_html
-    end
-  end
 
   describe '#content' do
     let(:content_item) do
@@ -94,10 +78,6 @@ RSpec.describe ContentItemDecorator do
 
       it 'strips action forms' do
         expect(html.search(HTMLProcessor::ACTION_FORM)).to be_empty
-      end
-
-      it 'strips out the intro' do
-        expect(html.search(HTMLProcessor::INTRO_PARAGRAPH)).to be_empty
       end
     end
 

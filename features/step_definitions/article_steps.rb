@@ -15,17 +15,13 @@ end
 Then(/^I should see the article in (.*)$/) do |language|
   article = article(language)
 
-  intro_test           = Nokogiri::HTML(article.body).at('p.intro').inner_html
-  sample_of_intro_text = strip_tags(intro_test).split(/\./)[0]
-
-  body_text           = Nokogiri::HTML(article.body).at('p:not([class])').inner_html
+  body_text           = Nokogiri::HTML(article.body).inner_html
   sample_of_body_text = strip_tags(body_text).split(/\./)[0]
 
   expect(article_page.title).to eq("#{article.title} - #{I18n.t('layouts.base.title')}")
   expect(article_page.description[:content]).to include(article.description)
   expect(article_page.heading).to have_content(article.title)
-  expect(article_page.intro).to have_content(strip_tags(sample_of_intro_text))
-  expect(article_page.main_content).to have_content(strip_tags(sample_of_body_text))
+  expect(article_page.content).to have_content(strip_tags(sample_of_body_text))
 end
 
 Then(/^I should not see the article title in the related content in (.*)$/) do |language|

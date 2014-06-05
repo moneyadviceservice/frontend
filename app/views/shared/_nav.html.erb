@@ -1,57 +1,11 @@
-<nav class="nav" role="navigation" aria-label="main">
-  <ul class="link-list-primary">
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Debt and borrrowing</a>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link is-selected">Budgeting and managing money</a>
-
-      <ul class="link-list-secondary">
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Help with insurance</a>
+<% if categories.present? %>
+  <nav class="nav" role="navigation" aria-label="main">
+    <ul class="link-list-primary">
+      <% categories.each do |category| %>
+        <li class="link-list-primary__item">
+          <%= link_to category.title, category.path, class: 'link-list-primary__link' %>
         </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link is-selected">Home insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Life and protection insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Car insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Travel insurance</a>
-        </li>
-        <li class="link-list-secondary__item">
-          <a href="#bar" class="link-list-secondary__link">Pet insurance</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Saving and investing</a>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Work, pensions and retirement</a>
-
-      <li class="link-list-primary__item">
-        <a href="#bar" class="link-list-primary__link is-selected">Budgeting and managing money</a>
-
-        <ul class="link-list-secondary">
-          <li class="link-list-secondary__item">
-            <a href="#bar" class="link-list-secondary__link">Foo</a>
-          </li>
-          <li class="link-list-secondary__item">
-            <a href="#bar" class="link-list-secondary__link is-selected">Bar</a>
-          </li>
-        </ul>
-      </li>
-    </li>
-
-    <li class="link-list-primary__item">
-      <a href="#bar" class="link-list-primary__link">Benefits</a>
-    </li>
-  </ul>
-</nav>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>

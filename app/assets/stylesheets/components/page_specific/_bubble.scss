@@ -36,4 +36,8 @@
     text-decoration: none;
     color: $color-telephone-number-hover;
   }
+
+  &[href^=tel] {
+    color: $color-telephone-number-hover;
+  }
 }

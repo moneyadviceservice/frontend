@@ -1,28 +1,33 @@
-class ValidArticle
-  BLACKLIST = %w(about-our-debt-work am-ein-gwaith-dyled
-                 debt-publications cyhoeddiadau-ar-ddyledion
-                 partners-overview-parhub
-                 partner-reg-parhub
-                 syndicating-tools-parhub
-                 video-syndication-parhub
-                 toolkits-parhub pecynnau-cymorth-cyngor-ariannol
-                 linking-parhub
-                 examples-parhub
-                 licence-agreement-parhub)
+class ValidResource
 
-  def matches?(request)
-    BLACKLIST.exclude?(request.parameters['id'])
+  BLACKLIST = {
+    :article     => %w(about-our-debt-work am-ein-gwaith-dyled
+                       debt-publications cyhoeddiadau-ar-ddyledion
+                       partners-overview-parhub
+                       partner-reg-parhub
+                       syndicating-tools-parhub
+                       video-syndication-parhub
+                       toolkits-parhub pecynnau-cymorth-cyngor-ariannol
+                       linking-parhub
+                       examples-parhub
+                       licence-agreement-parhub),
+    :category    => %w(partners
+                       partners-uc-banks
+                       partners-uc-landlords
+                       resources-for-professionals-working-with-young-people-and-parents),
+    :static_page => %w(accessibility hygyrchedd
+                       be-prepared-for-a-rainy-day
+                       were-here-to-help rydym-yma-i-helpu)
+  }
+
+  attr_accessor :type
+
+  def initialize(type)
+    self.type = type
   end
-end
-
-class ValidCategory
-  BLACKLIST = %w(partners
-                 partners-uc-banks
-                 partners-uc-landlords
-                 resources-for-professionals-working-with-young-people-and-parents)
 
   def matches?(request)
-    BLACKLIST.exclude?(request.parameters['id'])
+    BLACKLIST[type].exclude?(request.parameters['id'])
   end
 end
 
@@ -35,10 +40,15 @@ Rails.application.routes.draw do
     resources :action_plans, only: 'show'
     resources :articles,
               only: 'show',
-              constraints: ValidArticle.new
+              constraints: ValidResource.new(:article)
     resources :categories, only: 'show',
-              constraints: ValidCategory.new
+              constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
+
+    resources :static_pages,
+              path:        'static',
+              only:        'show',
+              constraints: ValidResource.new(:static_page)
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
     resource :styleguide,

@@ -30,4 +30,16 @@ RSpec.describe 'Request blacklisted resource', :type => :request do
       end
     end
   end
+
+  %W(accessibility hygyrchedd
+                 be-prepared-for-a-rainy-day
+                 were-here-to-help rydym-yma-i-helpu).each do |static_page|
+    context "request static page #{static_page}" do
+      it 'returns a 501 response' do
+        get("/en/static/#{static_page}")
+
+        expect(response.status).to eq(501)
+      end
+    end
+  end
 end

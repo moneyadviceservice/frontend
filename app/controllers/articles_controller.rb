@@ -2,7 +2,7 @@ require 'core/interactors/article_reader'
 require 'core/interactors/breadcrumbs_reader'
 
 class ArticlesController < ApplicationController
-  decorates_assigned :article, with: ArticleDecorator
+  decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :breadcrumb_trails, with: BreadcrumbTrailsDecorator
 
   def show

@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/static/polisipreifatrwydd.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 592e57c6-6404-436f-96ef-512119d91bfe
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Jun 2014 11:05:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/cy/static/polisipreifatrwydd> rel="alternate";
+        hreflang="cy-GB"; title="Polisi preifatrwydd", <https://www.moneyadviceservice.org.uk/en/static/privacy>
+        rel="alternate"; hreflang="en-GB"; title="Privacy policy"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - ff21e72092799dbce92903e9bde5e080
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 11:05:17 GMT; secure
+      - _session_id=ff21e72092799dbce92903e9bde5e080; path=/; secure; HttpOnly
+      - _web_tracking=0e9fed5edc025c5b5f2ab12b3f6d0c9d; path=/; expires=Thu, 04-Jun-2015
+        11:05:17 GMT; secure
+      X-Request-Id:
+      - 592e57c6-6404-436f-96ef-512119d91bfe
+      X-Runtime:
+      - '0.028905'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"polisipreifatrwydd","title":"Polisi preifatrwydd","description":"Gwybodaeth
+        bersonol Rydym yn ystyried bod preifatrwydd ein defnyddwyr yn bwysig iawn
+        ac ymdrinir ag unrhyw wybodaeth bersonol rydych yn ei darparu inn ...","body":"<h2>Gwybodaeth
+        bersonol </h2><p>Rydym yn ystyried bod preifatrwydd ein defnyddwyr yn bwysig
+        iawn ac ymdrinir ag unrhyw wybodaeth bersonol rydych yn ei darparu inni yn
+        unol \u00e2\u2019n telerau ac amodau. Mae hyn yn cynnwys gwybodaeth a roddwch
+        inni wrth ddefnyddio ein Llinell Gynghori Ariannol, gwasanaeth apwyntiadau
+        wyneb yn wyneb a\u2019r wefan hon gan gynnwys y cyfleuster \u2018sgwrs ar
+        y we\u2019. </p><p>Bydd unrhyw wybodaeth y byddwch yn ei darparu inni yn cael
+        ei thrin yn unol \u00e2 Deddf Diogelu Data 1998. Ni fyddwn yn ceisio gwerthu
+        dim i chi ac ni fyddwch yn derbyn galwadau ff\u00f4n diwahoddiad na gohebiaeth
+        gennym ni nag unrhyw drydydd parti o ganlyniad i ddarparu data personol i
+        ni. </p><h2>Pa wybodaeth bersonol ydym yn ei chasglu? </h2><p>Gallwn gasglou
+        a defnyddio\u2019r wybodaeth ddilynol: </p><ul><li>eich enw a gwybodaeth gyswllt
+        (yn cynnwys cyfeiriad e-bost) ac unrhyw fanylion cyswllt eraill a ddarparwch
+        inni pan gyflwynwch ymholiad trwy\u2019r wefan hon</li><li>gwybodaeth a ddarparwch
+        os cofnodwch broblem gyda\u2019r wefan hon</li><li>cofnodion o unrhyw ohebiaeth
+        pan gysylltwch \u00e2 ni, a</li><li>manylion o\u2019ch ymweliadau \u00e2\u2019r
+        wefan gan gynnwys gwybodaeth am eich gweithgarwch ar-lein ar y wefan, fel
+        y tudalennau gwe yr ymwelwch \u00e2 nhw, y dolenni rydych yn clicio arnynt,
+        a\u2019r chwiliadau a wnewch ar y wefan.</li></ul><h2>Beth ydyn ni\u2019n
+        ei wneud gyda\u2019ch gwybodaeth bersonol? </h2><p>Byddwn yn defnyddio\u2019ch
+        gwybodaeth bersonol i ymateb i unrhyw ohebiaeth rydych wedi\u2019i hanfon
+        atom, at ddibenion safon, hyfforddi a gwerthuso, i\u2019n helpu i fonitro
+        a gwella\u2019r Gwasanaeth Cynghori Ariannol, neu i ddarparu gwasanaethau
+        yr ydych wedi gofyn amdanynt (fel archeb am gyhoeddiadau printiedig, neu apwyntiad
+        ar y ff\u00f4n neu wyneb yn wyneb). Trwy ddefnyddio\u2019r wefan hon a chyflwyno
+        eich gwybodaeth i ni, rydych yn cytuno i ni ddefnyddio eich gwybodaeth bersonol
+        yn unol \u00e2\u2019r telerau ac amodau hyn. Ni fyddwn yn defnyddio\u2019ch
+        gwybodaeth bersonol at unrhyw ddibenion eraill. </p><p>Fe fyddwn yn defnyddio
+        data amhersonol defnyddwyr hefyd i ddadansoddi gwybodaeth fel o ba ran o\u2019r
+        wlad y mae defnyddwyr yn dod, pa fath o gwestiynau y maent yn eu gofyn, ac
+        a wnaethom lwyddo i roi gwybodaeth neu gyngor defnyddiol iddynt. Ar brydiau
+        rydym yn gofyn i sefydliadau annibynnol ymgymryd \u00e2\u2019r gwaith hwn
+        drostom. Nid ydym yn trosglwyddo unrhyw ddata y gellid ei ddefnyddio i\u2019ch
+        adnabod. </p><p>Ar brydiau, rydym hefyd am glywed barn defnyddwyr am y Gwasanaeth
+        Cynghori Ariannol ac unrhyw welliannau y gallant eu hawgrymu ac rydym yn comisiynu
+        asiantaethau ymchwilio annibynnol i ganfod adweithiadau a barnau defnyddwyr.
+        Os cytunwch y gallwn gysylltu \u00e2 chi i dderbyn eich barn ar eich profiad
+        gyda\u2019r Gwasanaeth Cynghori Ariannol byddwn yn trosglwyddo\u2019ch manylion
+        cyswllt i asiantaeth ymchwilio a fydd yn cysylltu \u00e2 chi er mwyn gwirio
+        a hoffech gymryd rhan mewn ymchwil pellach. Ni fyddwn ni na\u2019r asiantaeth
+        a benodir gennym yn ceisio gwerthu dim i chi. </p><p>Os hoffem ddefnyddio
+        eich gwybodaeth bersonol ar gyfer unrhyw ddiben ar wah\u00e2n i\u2019r rhai
+        a nodir uchod, byddwn yn cysylltu \u00e2 chi i ofyn am eich caniat\u00e2d
+        cyn gwneud hynny. </p><h3>Cwcis </h3><p>Cyfeiriwch at <a title=\"Ganllaw cwcis\"
+        data-type=\"link\" hreflang=\"cy\" href=\"/cy/static/sut-yr-ydym-yn-defnyddio-cwcis\">Ganllaw
+        cwcis</a> am ragor o wybodaeth ar y cwcis rydym yn eu defnyddio ar y wefan
+        hon. </p><h2>Pwy fydd yn gweld eich gwybodaeth? </h2><h3>Os byddwch yn siarad
+        wyneb yn wyneb \u00e2 ni, trwy sgwrs ar y we neu ar y ff\u00f4n </h3><p>Bydd
+        yr holl wybodaeth bersonol a ddarparwch inni\u2019n cael ei diogelu yn unol
+        \u00e2 Deddf Diogelu Data 1998 a bydd yn cael ei chadw yn hollol gyfrinachol.
+        Yr unig bobl fydd \u00e2 mynediad ati fydd y rhai hynny sy\u2019n darparu\u2019r
+        cyngor a gwybodaeth ichi ar y cychwyn a\u2019r rhai hynny a fydd yn darparu,
+        gwerthuso neu reoli\u2019r Gwasanaeth Cynghori Ariannol. </p><h3>Os byddwch
+        yn defnyddio gwefan y Gwasanaeth Cynghori Ariannol </h3><p>Os gwnaethoch ofyn
+        i ni am ddeunydd wedi ei argraffu (fel canllaw\u2019r Gwasanaeth Cynghori
+        Ariannol neu\u2019r Canllaw Rhieni i arian), gallwn ddefnyddio trydydd part\u00efon
+        i gyflawni\u2019r fath ymholiadau a byddwn yn trosglwyddo\u2019ch gwybodaeth
+        iddynt ar gyfer y diben hwn yn unig. Ni fyddant yn trosglwyddo eich gwybodaeth
+        i unrhyw un arall nag yn ei defnyddio ar gyfer unrhyw ddiben arall. </p><p>Gallwn
+        drosglwyddo eich gwybodaeth bersonol os byddwn dan ddyletswydd i ddatgelu
+        neu rannu eich gwybodaeth bersonol er mwyn cydymffurfio ag unrhyw ymrwymiad
+        cyfreithiol neu er mwyn gorfodi neu weithredu amodau a thelerau ein gwefan
+        at ddibenion atal neu ddatgelu troseddau. </p><h2>Sut fyddwn ni\u2019n diogelu
+        eich gwybodaeth bersonol? </h2><p>Rydym yn gwneud pob ymdrech (trwy gamau
+        ffisegol, trefniadol a thechnolegol) i sicrhau bod eich gwybodaeth bersonol
+        yn cael ei chadw\u2019n ddiogel ac i ddiogelu rhag mynediad heb awdurdod at
+        eich gwybodaeth bersonol. Yn anffodus, ni ellir gwarantu bod unrhyw drosglwyddo
+        data dros y Rhyngrwyd yn 100% yn ddiogel. Rydym yn ymdrechu i ddiogelu eich
+        gwybodaeth bersonol ar \u00f4l ei derbyn, fodd bynnag rydych yn cydnabod na
+        all preifatrwydd eich gohebiaeth a\u2019ch gwybodaeth bersonol fyth gael ei
+        warantu\u2019n llwyr pan fyddant yn cael eu trosglwyddo. </p><h2>Newid neu
+        ofyn am gopi o\u2019ch gwybodaeth bersonol </h2><p>Hysbyswch ni trwy e-bost
+        at <a title=\"enquiries@moneyadviceservice.org.uk\" target=\"_blank\" href=\"mailto:enquiries@moneyadviceservice.org.uk\">enquiries@moneyadviceservice.org.uk</a>
+        os byddwch wedi rhoi gwybodaeth bersonol i ni ac nad ydych yn dymuno i\u2019r
+        wybodaeth gael ei defnyddio fel y disgrifir isod, neu eich bod yn credu bod
+        y wybodaeth sydd gennym amdanoch yn anghywir, neu os ydych am weld pa wybodaeth
+        sydd gennym amdanoch o ganlyniad i\u2019ch cyswllt \u00e2 ni. </p>"}'
+    http_version:
+  recorded_at: Wed, 04 Jun 2014 11:05:18 GMT
+recorded_with: VCR 2.9.0

@@ -1,0 +1,26 @@
+<% set_meta_tags(description: static_page.description,
+                 canonical:   static_page.canonical_url,
+                 alternate:   static_page.alternate_options) %>
+
+<div class="l-main">
+  <main role="main">
+    <h1><%= title static_page.title %></h1>
+
+    <% if static_page.intro.present? %>
+      <p class="intro">
+        <%= static_page.intro %>
+      </p>
+    <% end %>
+
+    <%= static_page.content %>
+  </main>
+</div>
+
+<% content_for(:alternate_link) do %>
+  <% static_page.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, id: "#{locale}Link", lang: locale) do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -52,7 +52,7 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
   gem 'html_validation'
-  gem 'rspec_junit_formatter', github: 'deees/rspec_junit_formatter', branch: 'features/rspec3'
+  gem 'rspec_junit_formatter'
   gem 'thin'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
   gem 'vcr'

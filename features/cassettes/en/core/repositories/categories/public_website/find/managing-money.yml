@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/managing-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 85d253ca51a0c8421884ae77ca5c7393
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:55 GMT; secure
+      - _session_id=85d253ca51a0c8421884ae77ca5c7393; path=/; secure; HttpOnly
+      - _web_tracking=d29c11960e9b699ffad5914c08dd580f; path=/; expires=Sat, 06-Jun-2015
+        07:57:55 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.025434'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-money","title":"Managing money","description":"See
+        how you can make your money go further and use our Budget planner to discover
+        how much cash you have coming in and what you''re spending it on.","parent_id":"budgeting-and-managing-money","contents":[{"id":"beginners-guide-to-managing-your-money","type":"guide","title":"Beginner\u2019s
+        guide to managing your money","description":"How to set up a budget, keep
+        on top of your debts and start to save regularly"},{"id":"how-to-make-your-money-last-all-week","type":"action_plan","title":"Action
+        plan - How to make your money last all week","description":"Stretch your money
+        that little bit further in three steps"},{"id":"living-on-a-low-income-tips","type":"guide","title":"Budgeting
+        tips when you\u2019re on a low income","description":"The key things to remember
+        if you\u2019re on a low income are: budget carefully, cut your costs and make
+        sure you claim all your benefits"},{"id":"budget-planner","type":"tool","title":"Budget
+        planner","description":"You can use this planner to work out how much money
+        you have coming in and what you''re spending it on"},{"id":"health-check","type":"tool","title":"Money
+        Health Check","description":"Use the Money Health Check to give you a picture
+        of your finances and an action plan"},{"id":"how-to-make-ends-meet-on-a-low-income","type":"action_plan","title":"Action
+        plan - How to make ends meet on a low income","description":"Stay in control
+        of your money when your income is low"},{"id":"how-to-make-your-money-go-further","type":"action_plan","title":"Action
+        plan - How to make your money go further","description":"Follow this action
+        plan to help you save money around the home and when you\u2019re out and about"},{"id":"how-to-manage-your-money-better","type":"action_plan","title":"Action
+        plan - How to manage your money better","description":"Draw up a budget to
+        make the most of your money and pay off debts"},{"id":"using-a-basic-bank-account-or-prepaid-card-to-avoid-debt","type":"guide","title":"How
+        to avoid debt using a bank account and a prepaid card","description":"Two
+        no-nonsense ways to stop yourself getting into debt in the future"},{"id":"the-best-ways-to-pay-bills","type":"guide","title":"The
+        best ways to pay bills","description":"What''s the best way to pay your household
+        bills when you first leave home? We run through the different payment methods
+        - from Direct Debit to meter."},{"id":"paying-your-own-way","type":"guide","title":"Paying
+        your own way","description":"How much does it cost to move out and live independently?
+        We look at the key costs of everyday living."},{"id":"should-we-manage-money-jointly-or-separately","type":"guide","title":"Should
+        you manage money jointly or separately?","description":"There are many ways
+        to manage your money together \u2013 see what you can do to make joint finances
+        work for you and your partner"},{"id":"how-to-survive-as-a-couple-if-one-of-you-spends-too-much","type":"guide","title":"How
+        to survive as a couple if one of you spends too much","description":"Do you
+        or your partner have a spending problem? Find out how to get the spending
+        under control and protect your family"},{"id":"talking-about-money-with-your-partner","type":"guide","title":"Talking
+        about money with your partner","description":"Don\u2019t let arguments about
+        money spoil the excitement of having a new baby in your lives. Read our top
+        tips on how to talk money"},{"id":"managing-money","type":"video","title":"Managing
+        money","description":"What\u2019s the best way to keep on top of your money
+        and manage your finances?"},{"id":"cut-back-calculator","type":"tool","title":"Cut-back
+        calculator","description":"Where does all your money go? The Cut-back calculator
+        can help you see where you can make savings on things you buy regularly"},{"id":"prepaid-cards-explained","type":"guide","title":"Prepaid
+        cards","description":"If you can\u2019t get a credit or debit card, prepaid
+        cards are a handy alternative \u2013 so how do they work?"},{"id":"money-stretcher","type":"tool","title":"Money
+        stretcher calculator","description":"Are you worried you''ll run out of money
+        before you next get paid?"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:55 GMT
+recorded_with: VCR 2.9.2

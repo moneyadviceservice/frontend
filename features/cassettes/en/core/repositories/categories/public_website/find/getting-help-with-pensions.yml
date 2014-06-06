@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/getting-help-with-pensions.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:58:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - cf32024a4f5d210663279bad10f820d7
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:02 GMT; secure
+      - _session_id=cf32024a4f5d210663279bad10f820d7; path=/; secure; HttpOnly
+      - _web_tracking=ffd78dc9daf1caad1550ee7a82836089; path=/; expires=Sat, 06-Jun-2015
+        07:58:02 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.025373'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"getting-help-with-pensions","title":"Getting help with pensions","description":"Where
+        to go for advice about pensions, and what to do if you want to complain about
+        a pension provider or adviser","parent_id":"pensions-and-retirement","contents":[{"id":"your-options-if-things-go-wrong-with-your-pension","type":"guide","title":"Your
+        options if things go wrong with your pension","description":"How to tackle
+        problems related to the State Pension, personal and workplace pensions, or
+        pensions-related financial advice"},{"id":"when-and-where-to-get-pensions-help-and-advice","type":"guide","title":"When
+        and where to get pensions help and advice","description":"Pensions can be
+        daunting. But there are a number of places where you can get help and advice"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:58:02 GMT
+recorded_with: VCR 2.9.2

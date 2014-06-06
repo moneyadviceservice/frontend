@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/help-with-your-benefits.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:58:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 2d80feec85c5923e7ee629640b525761
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:03 GMT; secure
+      - _session_id=2d80feec85c5923e7ee629640b525761; path=/; secure; HttpOnly
+      - _web_tracking=90dfd25b29c76b4ff9e2bd2d17278aba; path=/; expires=Sat, 06-Jun-2015
+        07:58:03 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.024033'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-your-benefits","title":"Help with your benefits","description":"Help
+        with getting the right entitlements, where to get benefits support and advice
+        and what to do if your payments are cut.","parent_id":"benefits","contents":[{"id":"make-sure-youre-getting-the-right-entitlements","type":"guide","title":"Make
+        sure you\u2019re getting the right entitlements","description":"Find out if
+        you''re missing out on any benefits, tax credits or grants that you may be
+        entitled to"},{"id":"benefit-changes-in-2013","type":"guide","title":"Benefit
+        changes","description":"Find out about changes to DLA, Council Tax Benefit
+        and other benefits, including the new benefit cap"},{"id":"universal-credit-timeline","type":"tool","title":"Benefit
+        changes from 2013 \u2013 interactive timeline","description":"Scroll through
+        our interactive timeline of key dates for Universal Credit and other benefit
+        changes plus links to further information"},{"id":"where-to-get-help-and-advice-about-benefits","type":"guide","title":"Where
+        to get help and advice about benefits","description":"Where to get help sorting
+        out what benefits you''re entitled to or advice if you have a problem"},{"id":"benefit-sanctions-and-what-to-do-about-them","type":"guide","title":"Benefit
+        sanctions and what to do about them","description":"If your benefits have
+        been stopped or cut as a result of a sanction here''s what you can do"},{"id":"what-to-do-if-your-benefits-are-cut","type":"guide","title":"What
+        to do if your benefits are cut","description":"If your benefits have been
+        cut and you have money worries, there are some practical things you can do
+        to get your finances back under control"},{"id":"support-while-waiting-for-benefit-payments","type":"guide","title":"Support
+        while waiting for benefit payments","description":"If you\u2019re waiting
+        for your first payment or your benefit is late and you have essential costs,
+        find out about short-term advances and other help which may be available"},{"id":"the-benefit-cap","type":"guide","title":"The
+        benefit cap","description":"If you\u2019re aged 16 to 64, there is a limit
+        on the total amount of benefit you can get."},{"id":"personal-independence-payment-an-introduction","type":"guide","title":"Personal
+        Independence Payment - an introduction","description":"Disability Living Allowance
+        (DLA) is being replaced by a new benefit called Personal Independence Payment
+        (PIP) between April 2013 and October 2017"},{"id":"find-out-what-benefits-you-qualify-for","type":"action_plan","title":"Action
+        plan - Find out what benefits you qualify for","description":"The benefits
+        system is complex and changes often. Find out what you\u2019re entitled to."},{"id":"cuts-to-housing-benefit-for-social-housing-tenants","type":"guide","title":"Cuts
+        to Housing Benefit for social housing tenants","description":"If you have
+        a spare bedroom and you rent from the council or a housing association you
+        may have your benefit cut - find out if you''re affected and what you can
+        do about it"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:58:03 GMT
+recorded_with: VCR 2.9.2

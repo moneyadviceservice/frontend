@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/how-to-invest-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c49a7e8d459cc934ec2b772703e48f29
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:50 GMT; secure
+      - _session_id=c49a7e8d459cc934ec2b772703e48f29; path=/; secure; HttpOnly
+      - _web_tracking=8dd796d95639e944342bfcc7387215b9; path=/; expires=Sat, 06-Jun-2015
+        07:59:50 GMT; secure
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      X-Runtime:
+      - '0.175924'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-invest-money","title":"Sut i fuddsoddi arian","description":"Dysgwch
+        am hanfodion buddsoddi, sut i lunio cynllun buddsoddi, a deall eich agwedd
+        tuag at risg.","parent_id":"saving-and-investing","contents":[{"id":"buddsoddi-canllaw-i-ddechreuwyr","type":"guide","title":"Buddsoddi
+        \u2013 canllaw i ddechreuwyr","description":"Gall defnyddio buddsoddiadau
+        wella eich elw \u2013 a lledaenu''r risg"},{"id":"asesu-perfformiad-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Asesu
+        perfformiad eich cynilion a''ch buddsoddiadau","description":"Sut i fesur
+        perfformiad eich cynilion a''ch buddsoddiadau i weld pa mor galed y maent
+        yn gweithio a phenderfynu p''un a ddylech wneud newidiadau"},{"id":"eglurhad-o-ddosbarthiadau-asedau","type":"guide","title":"Eglurhad
+        o ddosbarthiadau asedau","description":"Gallai\u2019r gymysgedd o ddosbarthiadau
+        asedau \u2013 megis arian parod, llog sefydlog a chyfranddaliadau gyfrif am
+        rhwng traean a thri chwarter o\u2019r amrywiaeth mewn elw rhwng gwahanol bortffolios
+        buddsoddi."},{"id":"cynilo-a-buddsoddi-moesegol","type":"guide","title":"Cynilo
+        a buddsoddi moesegol","description":"Os ydych am gefnogi arferion gweithio
+        teg a hoffech osgoi buddsoddi yn y ras arfau, tybaco a hapchwarae, gallai
+        cynilo a buddsoddi moesegol fod yn iawn i chi"},{"id":"gair-o-gyngor-ar-gyfer-dewis-buddsoddiadau","type":"guide","title":"Gair
+        o gyngor ar gyfer dewis buddsoddiadau","description":"Pethau allweddol i''w
+        gwneud wrth ddewis rhwng opsiynau buddsoddi posibl"},{"id":"buddsoddi-cyfandaliad","type":"guide","title":"Buddsoddi
+        cyfandaliad","description":"Ydych chi''n ystyried sut, pryd a ble i fuddsoddi
+        eich cyfandaliad? Mae''n haws dechrau arni os byddwch yn gwneud hynny gam
+        wrth gam"},{"id":"penderfynu-sut-i-fuddsoddi-cyfandaliad","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Penderfynu sut i fuddsoddi cyfandaliad","description":"Camau
+        syml i fuddsoddi mewn ffordd sy\u2019n cydweddu\u2019ch anghenion a nodau"},{"id":"a-oes-arnoch-angen-cynghorydd-ariannol","type":"guide","title":"A
+        oes arnoch angen cynghorydd ariannol?","description":"Dysgwch pryd fydd angen
+        i chi gael cyngor ariannol a phryd y gallai ei wneud eich hun fod yn iawn"},{"id":"polisa-au-gwaddol","type":"guide","title":"Polis\u00efau
+        gwaddol","description":"Cynilo ar gyfer nod hirdymor? Mae polis\u00efau gwaddol
+        yn rhoi pecyn i chi sy''n cynnwys aswiriant bywyd a rhai buddiannau treth
+        posibl"},{"id":"buddsoddi-mewn-eiddo","type":"guide","title":"Buddsoddi mewn
+        eiddo","description":"Dysgwch am y risgiau posibl sy''n gysylltiedig \u00e2
+        buddsoddi mewn eiddo ac am y ffyrdd gwahanol o fuddsoddi"},{"id":"beth-fydd-yn-digwydd-pan-fydd-eich-cronfa-gydag-elw-yn-cau","type":"guide","title":"Beth
+        fydd yn digwydd pan fydd eich cronfa gydag elw yn cau","description":"A yw
+        eich polisi gydag elw yn trosglwyddo i gwmni yswiriant newydd neu''n cau i
+        fuddsoddwyr newydd? Dyma''r wybodaeth sydd angen i chi ei gwybod"},{"id":"adolygwch-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Adolygwch
+        eich cynilion a''ch buddsoddiadau","description":"Gwnewch i''ch arian weithio''n
+        galetach \u2013 pryd, pam a sut i fwrw golwg dros eich cynilion a''ch buddsoddiadau"},{"id":"gwybodaeth-allweddol-a-chyfnodau-ailfeddwl","type":"guide","title":"Gwybodaeth
+        allweddol a chyfnodau ailfeddwl","description":"Mae penderfyniadau buddsoddi
+        da yn gofyn am wybodaeth ac amser \u2013 felly gofynnwch am y ffeithiau allweddol
+        a defnyddiwch eich cyfnod ailfeddwl"},{"id":"deall-ffioedd-buddsoddi","type":"guide","title":"Deall
+        ffioedd buddsoddi","description":"Y gwahanol fathau o ffioedd buddsoddi y
+        gellid eu codi arnoch a''r pethau sydd angen i chi eu hystyried cyn eu talu"},{"id":"dechrau-arni-gyda-buddsoddi","type":"action_plan","title":"Cynllun
+        gweithredu - Dechrau arni gyda buddsoddi","description":"Canfyddwch y lleoedd
+        mwyaf priodol i fuddsoddi\u2019ch arian"},{"id":"dysgu-mwy-am-fuddsoddi","type":"guide","title":"Dysgu
+        mwy am fuddsoddi","description":"Gall gwybod am y newyddion diweddaraf am
+        fuddsoddi ac arian eich helpu gyda phenderfyniadau buddsoddi, neu bydd, o
+        leiaf, yn cadw eich cynghorydd ariannol ar flaenau''i draed"},{"id":"cwblhewch-ymarfer-canfod-ffeithiau-ariannol","type":"guide","title":"Cwblhewch
+        ymarfer canfod ffeithiau ariannol","description":"Mae gwahanol fuddsoddiadau
+        yn addas ar gyfer nodau gwahanol mewn bywyd \u2013 felly beth yw''ch rhai
+        chi? Canfod eich nodau chi gyda holiadur canfod ffeithiau ariannol"},{"id":"pa-mor-barod-ydych-chi-i-fentro","type":"guide","title":"Pa
+        mor barod ydych chi i fentro?","description":"Gweithiwch allan faint o risg
+        ariannol rydych yn gyfforddus i''w chymryd \u2013 mae''n allweddol wrth gynllunio
+        a rheoli eich buddsoddiadau"},{"id":"llunio-cynllun-buddsoddi","type":"guide","title":"Llunio
+        cynllun buddsoddi","description":"Sut y gall cynllun buddsoddi yn seiliedig
+        ar eich amgylchiadau a''ch nodau dalu ar ei ganfed, beth i''w gynnwys a sut
+        i ddod o hyd i''r cynnyrch sydd eu hangen arnoch"},{"id":"cynllun-gweithredu-a-llunio-cynllun-buddsoddi","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Llunio cynllun buddsoddi","description":"Creu cynllun buddsoddi
+        a fydd yn caniat\u00e1u ichi gyflawni\u2019ch nodau"},{"id":"arallgyfeirio-y-ffordd-ddoeth-i-gynilo-a-buddsoddi","type":"guide","title":"Arallgyfeirio
+        \u2013 y ffordd ddoeth i gynilo a buddsoddi","description":"Os byddwch yn
+        buddsoddi mewn sawl gwahanol gynnyrch, gallwch leihau''r risg a gwella''r
+        tebygolrwydd y bydd eich buddsoddiad yn cynyddu yn unol \u00e2 chwyddiant"},{"id":"gochelwch-rhag-cynhyrchion-cynilo-a-buddsoddi-gwenwynig","type":"guide","title":"Gochelwch
+        rhag cynhyrchion cynilo a buddsoddi gwenwynig","description":"Peidiwch \u00e2
+        chael eich denu gan gynhyrchion ffug. Byddwch yn ofalus wrth fuddsoddi ac
+        osgowch gynhyrchion gwenwynig"},{"id":"beth-yw-cronfeydd-buddsoddi-cyfun","type":"guide","title":"Beth
+        yw cronfeydd buddsoddi cyfun?","description":"Chwilio am fuddsoddiad a all
+        fod yn haws a pheri llai o risg na chyfranddaliadau? Mae buddsoddiadau cyfun
+        yn lledaenu''r risgiau"},{"id":"sut-i-brynu-buddsoddiadau","type":"guide","title":"Sut
+        i brynu buddsoddiadau","description":"Byddwch yn wyliadwrus o dwyll a pheidiwch
+        \u00e2 chael eich perswadio i brynu cynhyrchion nad ydych yn eu deall neu
+        os nad yw\u2019r taliadau a\u2019r risgiau yn glir ichi"},{"id":"cynhyrchion-buddsoddi-risg-uchel","type":"guide","title":"Cynhyrchion
+        buddsoddi risg uchel","description":"Gall buddsoddiadau risg uchel gynnig
+        cyfle i ennill gwobrau mawr \u2013 ond os byddwch yn mynd amdani, mae angen
+        i chi wybod yn union beth sy''n eich wynebu"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:50 GMT
+recorded_with: VCR 2.9.2

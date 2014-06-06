@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/pensions-in-the-workplace.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 16c85f82-9efc-4bff-9a14-0d642b14fb53
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 65c74ccd015b3ffebc5ba3a2dc4197d4
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:40 GMT; secure
+      - _session_id=65c74ccd015b3ffebc5ba3a2dc4197d4; path=/; secure; HttpOnly
+      - _web_tracking=07584dd587d81cb49c6bc34cae3b5c2d; path=/; expires=Sat, 06-Jun-2015
+        07:59:40 GMT; secure
+      X-Request-Id:
+      - 16c85f82-9efc-4bff-9a14-0d642b14fb53
+      X-Runtime:
+      - '0.022216'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pensions-in-the-workplace","title":"Pensions in the workplace","description":"Preparing
+        for changes to workplace pensions and understanding about tax relief on pension
+        contributions","parent_id":"work-and-money","contents":[{"id":"tax-relief-on-pension-contributions","type":"guide","title":"Tax
+        relief on pension contributions","description":"You\u2019ll get tax relief
+        on any money you save into your pension, up to an annual limit of \u00a350,000
+        or your earnings for the year"},{"id":"automatic-enrolment-into-a-workplace-pension","type":"guide","title":"Automatic
+        enrolment \u2013 an introduction","description":"Joining your workplace pension
+        scheme is a hassle-free way to start saving for later life"},{"id":"why-save-into-a-pension","type":"guide","title":"Why
+        save into a pension?","description":"Pensions are an efficient way to save
+        for retirement. Contributions are topped up by the taxman and often by employers"},{"id":"pension-calculator","type":"tool","title":"Pension
+        calculator","description":"Use this calculator to help you work out how much
+        retirement income you might receive from saving in a personal, stakeholder
+        or group pension"},{"id":"workplace-pension-contribution-calculator","type":"tool","title":"Workplace
+        pension contribution calculator","description":"Use this calculator to work
+        out how much you and your employer will each put into your pension pot"},{"id":"workplace-pension-advice-tool","type":"tool","title":"Workplace
+        pension advice tool","description":"Quick questions to help you decide if
+        being in a workplace pension is right for you"},{"id":"workplace-pension-changes-the-basics","type":"video","title":"Workplace
+        pension changes - the basics","description":"This video explains how the automatic
+        enrolment process works and the importance of saving for retirement"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:40 GMT
+recorded_with: VCR 2.9.2

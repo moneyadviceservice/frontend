@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/how-to-save-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f3d2302f-211e-478c-8761-d4db761041ee
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - ad365d65f877032520c8a22a7643d5c2
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:37 GMT; secure
+      - _session_id=ad365d65f877032520c8a22a7643d5c2; path=/; secure; HttpOnly
+      - _web_tracking=004dc49ce87ab5e588a70256329779cf; path=/; expires=Sat, 06-Jun-2015
+        07:57:37 GMT; secure
+      X-Request-Id:
+      - f3d2302f-211e-478c-8761-d4db761041ee
+      X-Runtime:
+      - '0.018403'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-save-money","title":"How to save money","description":"Work
+        out how much you can afford to save and find out how to set and reach your
+        savings goal.","parent_id":"saving-and-investing","contents":[{"id":"how-to-set-a-savings-goal","type":"tool","title":"How
+        to set a savings goal","description":"Get into the habit of successful saving
+        - set a clear goal, plan how you\u2019ll get there, and watch your money grow"},{"id":"why-it-pays-to-save-regularly","type":"guide","title":"Why
+        it pays to save regularly","description":"A regular savings habit makes your
+        savings grow fast \u2013 getting started is quick and easy"},{"id":"build-an-emergency-savings-fund","type":"action_plan","title":"Action
+        plan - Build an emergency savings fund","description":"Be prepared for unexpected
+        expenses or changes of circumstance"},{"id":"budget-planner","type":"tool","title":"Budget
+        planner","description":"You can use this planner to work out how much money
+        you have coming in and what you''re spending it on"},{"id":"saving-for-a-holiday","type":"campaign","title":"Saving
+        for a holiday","description":"Get your saving started by taking these easy
+        steps."},{"id":"saving-for-a-car","type":"tool","title":"Saving for a car","description":"A
+        bigger deposit can cut the cost of your next car by hundreds of pounds."},{"id":"saving-for-a-deposit","type":"tool","title":"Saving
+        for a deposit","description":"Follow our steps to make saving for a deposit
+        more manageable."},{"id":"health-check","type":"tool","title":"Money Health
+        Check","description":"Use the Money Health Check to give you a picture of
+        your finances and an action plan"},{"id":"savings-calculator","type":"tool","title":"Savings
+        calculator","description":"You can use this calculator to find out how your
+        savings might grow in the future or to help you work out how you can meet
+        your savings goal"},{"id":"money-stretcher","type":"tool","title":"Money stretcher
+        calculator","description":"Are you worried you''ll run out of money before
+        you next get paid?"},{"id":"childrens-savings-options","type":"guide","title":"Saving
+        for children","description":"Teach your children about saving and help them
+        to get the best financial start in life with children''s savings plans"},{"id":"should-i-save-or-invest","type":"guide","title":"Should
+        I save or invest?","description":"Uncertain about where to put your money?
+        If you organise your finances well, saving and investing can go hand in hand"},{"id":"getting-into-the-savings-habit","type":"guide","title":"Getting
+        into the savings habit","description":"Making saving a priority - why it''s
+        a good idea to save regularly from a young age plus the saving options available
+        to you."},{"id":"how-to-choose-between-saving-and-borrowing","type":"guide","title":"How
+        to choose between saving and borrowing","description":"Should you borrow or
+        save? Here''s what you should consider when choosing which is best for you."},{"id":"get-the-most-out-of-your-cash-isa","type":"action_plan","title":"Action
+        plan - Get the most out of your Cash ISA","description":"Follow this action
+        plan to make the most of tax-free savings accounts"},{"id":"make-the-most-of-tax-free-cash-savings","type":"action_plan","title":"Action
+        plan - Make the most of tax-free cash saving","description":"Take these steps
+        to avoid or reduce tax on your savings"},{"id":"set-and-reach-your-savings-goal","type":"action_plan","title":"Action
+        plan - Set and reach your savings goal","description":"By putting a simple
+        savings plan in place you can make reaching your goal almost automatic - just
+        follow these steps"},{"id":"what-if-you-cant-afford-to-save","type":"guide","title":"What
+        if you can\u2019t afford to save?","description":"Use this guide to find out
+        how even saving small amounts can soon add up"},{"id":"emergency-savings-how-much-is-enough","type":"guide","title":"Emergency
+        savings \u2013 how much is enough?","description":"Could you cope with unexpected
+        major expense? Check how much money you need \u2013 and find a better home
+        for the rest"},{"id":"cut-your-car-and-train-costs","type":"guide","title":"Cut
+        down on car and travel costs","description":"Travel is often one of your biggest
+        expenses \u2013 so making savings here can be a really big help"},{"id":"should-i-save-or-pay-off-debt","type":"guide","title":"Should
+        you save, or pay off loans and cards?","description":"Decide whether to start
+        saving or repay money you owe, and make a plan to save regularly once you\u2019ve
+        cleared your debts"},{"id":"saving-to-boost-your-budget","type":"tool","title":"Saving
+        to boost your budget","description":"With household bills ever rising, managing
+        a tight budget can be tough. What throws us off course is the unexpected,
+        but saving can help"},{"id":"saving-for-a-wedding","type":"tool","title":"Saving
+        for a wedding","description":"Saving up for your wedding cuts the cost and
+        the stress."},{"id":"saving-for-christmas","type":"tool","title":"Saving for
+        Christmas","description":"Saving for Christmas can be less painful than you
+        might think \u2013 follow these simple steps for a festive period without
+        the money worries."},{"id":"action-plan-paying-for-your-summer-holiday","type":"action_plan","title":"Action
+        plan \u2013 Paying for your summer holiday","description":"Steps to take to
+        get great deals and make your money go further abroad."},{"id":"compound-interest","type":"video","title":"Compound
+        interest","description":""},{"id":"dont-keep-cash-under-the-mattress","type":"guide","title":"Don''t
+        keep cash under the mattress","description":"Got cash stashed at home? Keep
+        it safe and make it work for you by putting it into a savings account"},{"id":"inflation","type":"video","title":"Inflation","description":""}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:37 GMT
+recorded_with: VCR 2.9.2

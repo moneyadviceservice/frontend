@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/help-with-insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - ff54c72d-3f95-4b99-a96e-61c10f8f8b26
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 9205cfe728a8d3fcb8a569859f2c4af4
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:45 GMT; secure
+      - _session_id=9205cfe728a8d3fcb8a569859f2c4af4; path=/; secure; HttpOnly
+      - _web_tracking=c3759ecd553b0cb620f3ccf559fdf8e3; path=/; expires=Sat, 06-Jun-2015
+        07:57:45 GMT; secure
+      X-Request-Id:
+      - ff54c72d-3f95-4b99-a96e-61c10f8f8b26
+      X-Runtime:
+      - '0.026157'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-insurance","title":"Help with insurance","description":"Understand
+        what insurance is and how it works. Find out how to buy insurance and how
+        to go about making a claim.","parent_id":"insurance","contents":[{"id":"what-is-insurance","type":"guide","title":"What
+        is insurance?","description":"Not sure what insurance is or how it works?
+        Understand the basics so you can get the right protection for you and your
+        family"},{"id":"types-of-insurance","type":"guide","title":"Types of insurance","description":"Not
+        sure what insurance you need? This table summarises what each type covers,
+        who needs it and the pros and cons of each"},{"id":"things-to-watch-out-for-when-buying-insurance","type":"guide","title":"Things
+        to look out for when buying insurance","description":"Before you commit, run
+        through this checklist to make sure you know what you\u2019re buying"},{"id":"how-to-buy-insurance-using-comparison-sites","type":"guide","title":"How
+        to buy insurance using comparison sites","description":"Find out how price
+        comparison websites could save you money and learn how to use them to buy
+        the right cover"},{"id":"when-to-use-an-insurance-broker","type":"guide","title":"When
+        to use an insurance broker","description":"Insurance brokers can help you
+        find the right policy for whatever you want to insure and save you time if
+        you need to make a claim"},{"id":"making-an-insurance-claim","type":"guide","title":"Making
+        an insurance claim","description":"Do you need to claim on your insurance?
+        You\u2019re more likely to succeed if you follow this step-by-step process"},{"id":"what-to-do-if-your-insurance-claim-is-rejected","type":"guide","title":"What
+        to do if your insurance claim is rejected","description":"If you think that
+        your insurance claim was unfairly rejected, you should consider complaining
+        \u2013 find out more about how to do that"},{"id":"making-a-complaint-about-an-insurance-company","type":"guide","title":"How
+        to make an insurance complaint","description":"If you\u2019re not happy with
+        the way your insurance company has treated you, you have the right to complain
+        \u2013 find out how"},{"id":"how-to-complain-about-an-insurer","type":"action_plan","title":"Action
+        plan - How to complain about an insurer","description":"Steps to take if you\u2019re
+        not happy with the service offered by your insurance company, or the way they
+        have treated you."},{"id":"getting-insurance-if-you-have-a-criminal-conviction","type":"guide","title":"Getting
+        insurance if you have a criminal conviction","description":"Do you have a
+        criminal record \u2013 or maybe just a fine? Get tips for what to do and where
+        to go for insurance"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:45 GMT
+recorded_with: VCR 2.9.2

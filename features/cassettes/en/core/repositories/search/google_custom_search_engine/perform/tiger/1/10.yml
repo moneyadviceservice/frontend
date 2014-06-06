@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 29b6d72b-b996-4141-8bb1-b4a98d0d8166
+      - 2566fbcc-4831-4533-896c-89b0c533a787
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Thu, 05 Jun 2014 10:32:06 GMT
+      - Fri, 06 Jun 2014 07:58:19 GMT
       Date:
-      - Thu, 05 Jun 2014 10:32:06 GMT
+      - Fri, 06 Jun 2014 07:58:19 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - '"U4UPN13WzcHmeExsljFL4IUcsFk/C6qgX-9oNHcV7fRFXQDqRdWe0OI"'
+      - '"U4UPN13WzcHmeExsljFL4IUcsFk/Mq7VDeHof8Z6NBbTiqWJ1DOwgBs"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -67,12 +67,12 @@ http_interactions:
           ]
          },
          "searchInformation": {
-          "searchTime": 0.245696,
-          "formattedSearchTime": "0.25",
+          "searchTime": 0.225605,
+          "formattedSearchTime": "0.23",
           "totalResults": "0",
           "formattedTotalResults": "0"
          }
         }
     http_version: 
-  recorded_at: Thu, 05 Jun 2014 10:32:06 GMT
+  recorded_at: Fri, 06 Jun 2014 07:58:20 GMT
 recorded_with: VCR 2.9.2

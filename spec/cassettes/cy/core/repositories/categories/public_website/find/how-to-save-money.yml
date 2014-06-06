@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/how-to-save-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 7fbd4081e95c1f8f442204e490941cc8
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:48 GMT; secure
+      - _session_id=7fbd4081e95c1f8f442204e490941cc8; path=/; secure; HttpOnly
+      - _web_tracking=e31ea403dafb03a3cc734bfdc5aee7a6; path=/; expires=Sat, 06-Jun-2015
+        07:59:48 GMT; secure
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      X-Runtime:
+      - '0.028507'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-save-money","title":"Sut i gynilo arian","description":"Cyfrifwch
+        faint allwch fforddio ei gynilo a dysgwch sut i sefydlu a chyrraedd eich nod
+        cynilo.","parent_id":"saving-and-investing","contents":[{"id":"sut-i-bennu-nod-cynilo","type":"tool","title":"Sut
+        i bennu nod cynilo","description":"Ewch i''r arfer o gynilo''n llwyddiannus
+        \u2013 pennwch nod clir, cynlluniwch sut i gyrraedd y nod hwnnw a gwyliwch
+        eich arian yn tyfu"},{"id":"pam-bod-cynilon-rheolaidd-yn-talu-ffordd","type":"guide","title":"Pam
+        bod cynilo''n rheolaidd yn talu ffordd","description":"Mae mynd i''r arfer
+        o gynilo''n rheolaidd yn golygu y bydd eich cynilion yn tyfu''n gyflym \u2013
+        mae''n gyflym ac yn hawdd dechrau arni"},{"id":"adeiladu-cronfa-cynilion-argyfwng","type":"action_plan","title":"Cynllun
+        gweithredu - Adeiladu cronfa cynilion argyfwng","description":"Byddwch yn
+        barod am dreuliau neu newidiadau mewn amgylchiadau annisgwyl"},{"id":"cynllunydd-cyllideb","type":"tool","title":"Cynllunydd
+        cyllideb","description":"Gallwch ddefnyddio\u2019r cynllunydd hwn i weld faint
+        o arian sy\u2019n dod i mewn ac ar beth yr ydych yn ei wario"},{"id":"cynilo-ar-gyfer-gwyliau","type":"campaign","title":"Cynilo
+        ar gyfer gwyliau","description":"Rhowch gychwyn ar eich cynilo drwy gymryd
+        y camau rhwydd hyn."},{"id":"cynilo-ar-gyfer-car","type":"tool","title":"Cynilo
+        ar gyfer car","description":"Gall ernes fwy dorri cost eich car nesaf gan
+        gannoedd o bunnau."},{"id":"cynilo-ar-gyfer-blaendal","type":"tool","title":"Cynilo
+        ar gyfer blaendal","description":"Dilynwch ein camau i sicrhau bod cynilo
+        ar gyfer blaendal yn fwy rheoladwy."},{"id":"gwiriad-iechyd","type":"tool","title":"Gwiriad
+        Iechyd Ariannol","description":"Defnyddiwch y Gwiriad Iechyd Ariannol i roi
+        darlun ichi o\u2019ch sefyllfa ariannol a chynllun gweithredu"},{"id":"cyfrifiannell-cynilo","type":"tool","title":"Cyfrifiannell
+        cynilo","description":"Gallwch ddefnyddio\u2019r gyfrifiannell hon i weld
+        sut y gall eich cynilion dyfu yn y dyfodol neu i\u2019ch helpu i weld sut
+        y gallwch gyrraedd eich nod wrth gynilo"},{"id":"cyfrifiannell-estynnydd-arian","type":"tool","title":"Cyfrifiannell
+        estynnydd arian","description":"A ydych yn bryderus y byddwch yn rhedeg allan
+        o arian cyn i chi gael eich talu nesaf?"},{"id":"opsiynau-cynilo-i-blant","type":"guide","title":"Opsiynau
+        cynilo i blant","description":"Dysgwch eich plant am gynilo a''u helpu i gael
+        y cychwyn ariannol gorau mewn bywyd gyda chynlluniau cynilo i blant"},{"id":"a-ddylwn-gynilo-neu-fuddsoddi","type":"guide","title":"A
+        ddylwn gynilo neu fuddsoddi?","description":"Yn ansicr ynghylch ble i roi
+        eich arian? Os byddwch yn trefnu eich cyllid yn dda, gall cynilo a buddsoddi
+        fynd law yn llaw"},{"id":"mynd-iar-arfer-o-gynilo","type":"guide","title":"Mynd
+        i\u2019r arfer o gynilo","description":"Pam ei bod hi\u2019n syniad da i gynilo\u2019n
+        rheolaidd o oed ifanc, yn ogystal \u00e2\u2019r dewisiadau cynilo sydd ar
+        gael i chi"},{"id":"sut-i-ddewis-rhwng-cynilo-a-benthyca","type":"guide","title":"Sut
+        i ddewis rhwng cynilo a benthyca","description":"Beth ddylech chi ei ystyried
+        wrth ddewis beth sydd orau i chi."},{"id":"gwneud-y-gorau-och-isa","type":"action_plan","title":"Cynllun
+        gweithredu - Gwneud y gorau o''ch ISA","description":"Arian Parod Dilynwch
+        y cynllun gweithredu hwn i wneud y gorau o gyfrifon cynilo di-dreth"},{"id":"gwnewch-y-gorau-o-gynilo-arian-di-dreth","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Gwnewch y gorau o gynilo arian di-dreth","description":"Cymrwch
+        y camau hyn i osgoi neu leihau treth ar eich cynilion"},{"id":"gosodwch-a-chyrraedd-eich-nod-cynilo","type":"action_plan","title":"Cynllun
+        gweithredu - Gosodwch a chyrraedd eich nod cynilo","description":"Mae cael
+        nod cynilo clir wir yn ffocysu\u2019r meddwl. Mae\u2019n gwneud cynilo\u2019n
+        rhwyddach a chyflymach. A thrwy drefnu cynllun syml, gallwch sicrhau bod cyrraedd
+        eich nod yn awtomatig bron"},{"id":"beth-os-na-allwch-fforddio-cynilo","type":"guide","title":"Beth
+        os na allwch fforddio cynilo?","description":"Defnyddiwch y canllaw hwn i
+        ganfod sut y gall hyd yn oed cynilo symiau bychan gronni\u2019n gyflym."},{"id":"cynilion-ar-gyfer-argyfwng-faint-syn-ddigon","type":"guide","title":"Cynilion
+        ar gyfer argyfwng \u2013 faint sy''n ddigon?","description":"Allech chi ymdopi
+        \u00e2 chost fawr annisgwyl? Penderfynwch faint o arian sydd ei angen arnoch
+        \u2013 a dewch o hyd i gartref gwell i''r gweddill"},{"id":"cwtogwch-ar-gostau-car-a-theithio","type":"guide","title":"Cwtogwch
+        ar gostau car a theithio","description":"Mae teithio, yn fynych, yn un o\u2019ch
+        treuliau mwyaf \u2013 felly gall arbed arian yma fod yn help aruthrol"},{"id":"a-ddylech-chi-gynilo-neu-dalu-dyledion-benthyg-a-chardiau","type":"guide","title":"A
+        ddylech chi gynilo, neu dalu dyledion benthyg a chardiau?","description":"Penderfynwch
+        p\u2019un ai i ddechrau cynilo neu ad-dalu eich dyledion arian, a gwnewch
+        gynllun i gynilo\u2019n rheolaidd unwaith eich bod wedi clirio eich dyledion"},{"id":"cynilo-i-roi-hwb-ich-cyllideb","type":"tool","title":"Cynilo
+        i roi hwb i\u2019ch cyllideb","description":"Gyda biliau''r cartref yn codi
+        trwy\u2019r amser, gall rheoli cyllideb gyfyng fod yn anodd. Beth sy\u2019n
+        ein taflu oddi ar y trywydd iawn yw\u2019r annisgwyl, ond gall cynilo helpu"},{"id":"cynilo-ar-gyfer-priodas","type":"tool","title":"Cynilo
+        ar gyfer priodas","description":"Mae cynilo ar gyfer eich priodas yn torri\u2019r
+        gost a\u2019r pwysau."},{"id":"cynilo-ar-gyfer-y-nadolig","type":"tool","title":"Cynilo
+        ar gyfer y Nadolig","description":"Gall cynilo ar gyfer y Nadolig fod yn llai
+        poenus nag y dychmygwch \u2013 dilynwch y camau syml hyn i sicrhau g\u0175yl
+        y Nadolig heb boeni am yr arian."},{"id":"cynllun-gweithredu-alu-am-eich-gwyliau-haf","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Talu am eich gwyliau haf","description":"Camau i\u2019w
+        cymryd i gael bargeinion gwych ac ymestyn eich arian dramor"},{"id":"adlog","type":"video","title":"Adlog","description":""},{"id":"peidiwch-a-chadw-arian-parod-o-dan-y-fatras","type":"guide","title":"Peidiwch
+        \u00e2 chadw arian parod o dan y fatras","description":"A oes gennych swm
+        sylweddol o arian parod gartref? Beth am ei gadw''n ddiogel a gwneud iddo
+        weithio i chi drwy ei roi mewn cyfrif cynilo"},{"id":"chwyddiant","type":"video","title":"Chwyddiant","description":""}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:48 GMT
+recorded_with: VCR 2.9.2

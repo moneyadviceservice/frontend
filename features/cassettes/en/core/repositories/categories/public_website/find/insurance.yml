@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 04fba070-b0b4-4a42-8ff2-0c20e7ca15c6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c75cf53a5daed3333dddd0a8c31d7fcf
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:47 GMT; secure
+      - _session_id=c75cf53a5daed3333dddd0a8c31d7fcf; path=/; secure; HttpOnly
+      - _web_tracking=fbabe5022da5d55e402f6cff91dbac15; path=/; expires=Sat, 06-Jun-2015
+        07:57:47 GMT; secure
+      X-Request-Id:
+      - 04fba070-b0b4-4a42-8ff2-0c20e7ca15c6
+      X-Runtime:
+      - '0.184159'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"insurance","title":"Insurance","description":"Help and advice
+        on protecting your family and getting the right home and car insurance.","parent_id":"money-topics","contents":[{"id":"help-with-insurance","type":"category","title":"Help
+        with insurance","description":"Understand what insurance is and how it works.
+        Find out how to buy insurance and how to go about making a claim."},{"id":"home-insurance","type":"category","title":"Home
+        insurance","description":"Find out if you need buildings and contents insurance
+        and get help with choosing the right policy and cover."},{"id":"life-and-protection-insurance","type":"category","title":"Life
+        and protection insurance","description":"Learn about the differences between
+        life, critical illness and income protection insurance."},{"id":"car-insurance","type":"category","title":"Car
+        insurance","description":"Choosing the right level of cover, getting the best
+        deal, and tips for young drivers."},{"id":"travel-insurance","type":"category","title":"Travel
+        insurance","description":"Learn how to choose the right level of cover, get
+        the best deal, and how to make a travel insurance claim."},{"id":"pet-insurance","type":"category","title":"Pet
+        insurance","description":"Help with choosing the right pet insurance policy
+        and cover."}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:48 GMT
+recorded_with: VCR 2.9.2

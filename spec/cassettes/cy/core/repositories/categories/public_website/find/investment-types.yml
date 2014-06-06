@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/investment-types.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 1c6c027adceab193163c644ec95e7478
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:51 GMT; secure
+      - _session_id=1c6c027adceab193163c644ec95e7478; path=/; secure; HttpOnly
+      - _web_tracking=5bf658ce4950de8bc6ae1133e847732c; path=/; expires=Sat, 06-Jun-2015
+        07:59:51 GMT; secure
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      X-Runtime:
+      - '0.293348'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"investment-types","title":"Mathau o fuddsoddiad","description":"Gwybodaeth
+        am stociau a chyfranddaliadau, bondiau buddsoddi, cronfeydd tracio, polis\u00efau
+        gydag-elw a gwaddol.","parent_id":"saving-and-investing","contents":[{"id":"ymddiriedolaethau-uned-a-chwmniau-buddsoddi-penagored","type":"guide","title":"Ymddiriedolaethau
+        Uned a Chwmn\u00efau Buddsoddi Penagored","description":"Ffordd seml o ddechrau
+        buddsoddi heb wario llawer o arian ymlaen llaw"},{"id":"polisa-au-gwaddol","type":"guide","title":"Polis\u00efau
+        gwaddol","description":"Cynilo ar gyfer nod hirdymor? Mae polis\u00efau gwaddol
+        yn rhoi pecyn i chi sy''n cynnwys aswiriant bywyd a rhai buddiannau treth
+        posibl"},{"id":"bondiau-buddsoddi","type":"guide","title":"Bondiau buddsoddi","description":"Cyfandaliad
+        i''w fuddsoddi? Mae bondiau buddsoddi yn cynnwys aswiriant bywyd ac hefyd
+        yn cynnig buddiannau treth"},{"id":"dod-ach-polisi-gydag-elw-i-ben-yn-gynnar","type":"guide","title":"Dirwyn
+        eich polisi gwaddol neu oes cyfan gydag elw i ben yn gynnar","description":"Am
+        ddod \u00e2''ch polisi gydag elw i ben yn gynnar? Gwnewch yn si\u0175r eich
+        bod yn deall faint y gallai ei gostio"},{"id":"treth-a-chynhyrchion-yswiriant-bywyd-cymwys","type":"guide","title":"Treth
+        a chynhyrchion yswiriant bywyd cymwys","description":"O ran cynilion a buddsoddiadau
+        sy''n effeithlon o ran treth, mae yswiriant bywyd yn opsiwn i''w ystyried
+        \u2013 gall fod yn fwy hyblyg nag y byddech yn ei ddisgwyl"},{"id":"adneuon-a-chynhyrchion-buddsoddi-strwythuredig","type":"guide","title":"Adneuon
+        a chynhyrchion buddsoddi strwythuredig","description":"Gall cynhyrchion strwythuredig
+        fod yn gymhleth a pheri risg. Gallant ymddangos yn ddeniadol ond mae angen
+        i chi ddeall yr anfanteision posibl"},{"id":"buddsoddiadau-eiddo-prynu-i-osod","type":"guide","title":"Buddsoddiadau
+        eiddo prynu-i-osod","description":"Mae eiddo prynu-i-osod yn rhoi''r cyfle
+        i chi ennill elw o rent tra bod eich eiddo yn gweithredu fel buddsoddiad,
+        ond dylech sicrhau eich bod yn ymwybodol o''r risgiau posibl cyn i chi brynu"},{"id":"cyfrifon-isa-stociau-a-chyfranddaliadau","type":"guide","title":"Cyfrifon
+        ISA Stociau a Chyfranddaliadau","description":"Mae cyfrifon ISA Stociau a
+        Chyfranddaliadau yn gwarchod enillion cyfalaf ac incwm buddsoddi rhag treth"},{"id":"treth-a-buddsoddi-mewn-eiddo","type":"guide","title":"Treth
+        a buddsoddi mewn eiddo","description":"Yn ystyried buddsoddi mewn eiddo? Dewch
+        o hyd i wybodaeth am y materion treth a sut i dalu cyn lleied \u00e2 phosibl"},{"id":"buddsoddiadau-eiddo-anuniongyrchol","type":"guide","title":"Buddsoddiadau
+        eiddo anuniongyrchol","description":"Yn ddelfrydol ar gyfer buddsoddi mewn
+        eiddo heb yr helbul sy''n gysylltiedig \u00e2 phrynu t\u0177 neu fflat, ond
+        mae rhai opsiynau yn fwy diogel nag eraill"},{"id":"cronfeydd-rhagfantoli","type":"guide","title":"Cronfeydd
+        rhagfantoli","description":"Nod cronfeydd rhagfantoli a reolir yn weithredol
+        yw cynhyrchu elw ni waeth beth sy''n digwydd yn y farchnad stoc. Maent yn
+        buddsoddi mewn ystod eang iawn o bethau ac yn peri mwy o risg na chronfeydd
+        mwy traddodiadol"},{"id":"betio-lledaenu-a-chontractau-talur-gwahaniaeth","type":"guide","title":"Betio
+        lledaenu a chontractau talu''r gwahaniaeth","description":"Mae betio lledaenu
+        ariannol a chontractau talu''r gwahaniaeth (CFDs) yn ffyrdd risg uchel o gamblo
+        ar y farchnad stoc"},{"id":"ymddiriedolaethau-cyfalaf-menter","type":"guide","title":"Ymddiriedolaethau
+        Cyfalaf Menter","description":"Mae Ymddiriedolaethau Cyfalaf Menter yn caniat\u00e1u
+        i chi fuddsoddi''n anuniongyrchol mewn cwmn\u00efau llai o faint nad ydynt
+        wedi''u rhestru gan gynnig cyfle i chi ennill adenillion uchel a chael rhyddhad
+        treth ar yr un pryd"},{"id":"ymddiriedolaethau-buddsoddi","type":"guide","title":"Ymddiriedolaethau
+        buddsoddi","description":"Mae ymddiriedolaethau buddsoddi yn caniat\u00e1u
+        i chi brynu cyfranddaliadau mewn cwmni sydd yn ei dro yn prynu cyfranddaliadau
+        mewn amrywiaeth o gwmn\u00efau eraill"},{"id":"cipolwg-ar-fuddsoddiadau-poblogaidd","type":"guide","title":"Cipolwg
+        ar fuddsoddiadau poblogaidd","description":"Ystyried buddsoddi? Defnyddiwch
+        ein tabl i gael trosolwg cyflym o''r mathau mwyaf poblogaidd o fuddsoddiadau"},{"id":"buddsoddi-mewn-cyfranddaliadau","type":"guide","title":"Buddsoddi
+        mewn cyfranddaliadau","description":"Chwilio am fuddsoddiad? Os byddwch yn
+        dewis cyfranddaliadau, bydd angen i chi fod yn barod i wynebu rhywfaint o
+        risg a buddsoddi yn yr hirdymor"},{"id":"cynlluniau-buddsoddi-yn-y-gweithle","type":"guide","title":"Cynlluniau
+        buddsoddi yn y gweithle","description":"Mae cynlluniau cynilo yn y gweithle
+        yn gynlluniau hyblyg a threth effeithlon \u2013 ac yn wahanol i bensiynau,
+        gallwch ddefnyddio''r arian ymhell cyn i chi ymddeol"},{"id":"gwarannau-llog-sefydlog-rhoddion-a-bondiau-corfforaethol","type":"guide","title":"Gwarannau
+        llog sefydlog \u2013 rhoddion a bondiau corfforaethol","description":"Benthyciadau
+        i lywodraeth neu gwmn\u00efau yw gwarannau llog sefydlog \u2013 gallant gynnig
+        ffordd gymharol ddiogel o gael incwm rheolaidd, os c\u00e2nt eu cadw nes iddynt
+        aeddfedu"},{"id":"cyfalaf-cyfranddaliadau-lle-gallwch-godi-eich-arian","type":"guide","title":"Cyfalaf
+        cyfranddaliadau lle gallwch godi eich arian","description":"Mae prynu cyfranddaliadau
+        mewn cymdeithas ddiwydiannol a darbodus yn golygu eich bod yn aelod, ond ni
+        chaiff eich arian ei ddiogelu gan Gynllun Iawndal y Gwasanaethau Ariannol"},{"id":"cronfeydd-tracio-a-chronfeydd-cyfnewid-wediu-masnachu","type":"guide","title":"Cronfeydd
+        tracio a chronfeydd cyfnewid wedi''u masnachu","description":"Ffordd o ddilyn
+        perfformiad marchnad stoc benodol neu fath penodol o fuddsoddiad heb dalu
+        taliadau rheoli uchel"},{"id":"celf-gwin-da-ac-eitemau-casgladwy-eraill-fel-buddsoddiadau","type":"guide","title":"Celf,
+        gwin da ac eitemau casgladwy eraill fel buddsoddiadau","description":"Ffordd
+        ardderchog o arallgyfeirio neu fuddsoddiad costus, llawn risg? Dewch o hyd
+        i fanteision ac anfanteision buddsoddi eich arian mewn eitemau casgladwy"},{"id":"cronfeydd-gydag-elw","type":"guide","title":"Cronfeydd
+        gydag elw","description":"A oes angen buddsoddiad hirdymor arnoch a gaiff
+        ei reoli ar eich rhan ac sy''n cynnwys aswiriant bywyd? Gallai cronfa gydag
+        elw fod yn addas ar eich cyfer chi"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:51 GMT
+recorded_with: VCR 2.9.2

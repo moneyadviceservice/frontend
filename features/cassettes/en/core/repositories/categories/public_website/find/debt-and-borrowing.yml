@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/debt-and-borrowing.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b5d3a2ef319c92ed873c8376d1f02ac4
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:53 GMT; secure
+      - _session_id=b5d3a2ef319c92ed873c8376d1f02ac4; path=/; secure; HttpOnly
+      - _web_tracking=3bb0d9024edd6b54bde0fd5d8bc0a5d7; path=/; expires=Sat, 06-Jun-2015
+        07:57:53 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.067276'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"debt-and-borrowing","title":"Debt and borrowing","description":"Taking
+        control of debt, getting free debt advice, and how to borrow affordably.","parent_id":"money-topics","contents":[{"id":"before-you-borrow","type":"category","title":"Before
+        you borrow","description":"Find out if you need to borrow money and whether
+        you can afford it. Learn how to work out the true cost of borrowing."},{"id":"taking-control-of-debt","type":"category","title":"Taking
+        control of debt","description":"Where to get free debt advice, how to speak
+        to the people you owe money to, and tips to help you pay back your debts in
+        the right order."},{"id":"mortgage-and-rent-problems","type":"category","title":"Mortgage
+        and rent problems","description":"Help if you''re struggling with your mortgage
+        or rent payments and information on government support if you can''t pay your
+        mortgage."},{"id":"help-with-loans","type":"category","title":"Help with loans","description":"Learn
+        about how personal loans work, better alternatives to payday loans, and help
+        when borrowing from a credit union."},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Credit
+        cards and credit ratings","description":"Find out how to manage a credit card,
+        how to check your credit report, and tips on how you can improve your credit
+        rating."}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:53 GMT
+recorded_with: VCR 2.9.2

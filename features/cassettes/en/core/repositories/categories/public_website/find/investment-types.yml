@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/investment-types.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 4d8386b8692a390be173f9fbba96adfb
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:57 GMT; secure
+      - _session_id=4d8386b8692a390be173f9fbba96adfb; path=/; secure; HttpOnly
+      - _web_tracking=afad3dd634d8c7cddc24b5391d075be3; path=/; expires=Sat, 06-Jun-2015
+        07:57:57 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.030479'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"investment-types","title":"Types of investment","description":"Information
+        about stocks and shares, investment bonds, tracker funds, with-profits and
+        endowment policies.","parent_id":"saving-and-investing","contents":[{"id":"unit-trusts-and-open-ended-investment-companies-oeics","type":"guide","title":"Unit
+        Trusts and Open-Ended Investment Companies (OEICs)","description":"A simple
+        way to start investing without a big spend up front"},{"id":"endowment-policies","type":"guide","title":"Endowment
+        policies","description":"Saving for a long-term goal? Endowment policies give
+        you a package that includes life assurance and some potential tax benefits"},{"id":"investment-bonds","type":"guide","title":"Investment
+        bonds","description":"Got a lump sum to invest? Investment bonds come with
+        life assurance and also offer tax benefits"},{"id":"ending-your-with-profits-policy-early","type":"guide","title":"Ending
+        your endowment or whole of life with-profits policy early","description":"Want
+        to end your with-profits policy early? Make sure you understand how much it
+        might cost"},{"id":"tax-and-qualifying-life-insurance-products","type":"guide","title":"Tax
+        and qualifying life insurance products","description":"For tax-efficient savings
+        and investments, life insurance is an option to look into - it might be more
+        flexible than you think"},{"id":"structured-deposits-and-investment-products","type":"guide","title":"Structured
+        Products, Structured Deposits and Structured Investments","description":"Structured
+        products can be complex and risky. They can seem attractive but you need to
+        understand the potential downsides"},{"id":"buy-to-let-property-investments","type":"guide","title":"Buy-to-let
+        property investments","description":"A buy-to-let property gives you the chance
+        to earn profits from rent while your property acts as an investment, but you
+        should learn the potential risks before you buy"},{"id":"stocks-and-shares-isas","type":"guide","title":"Stocks
+        and shares ISAs","description":"Stock and shares ISAs shelter capital gains
+        and investment income from tax"},{"id":"tax-and-property-investment","type":"guide","title":"Tax
+        and property investment","description":"Thinking of investing in property?
+        Find out about the tax issues and how to minimise what you pay"},{"id":"indirect-property-investments","type":"guide","title":"Indirect
+        property investments","description":"Ideal for investing in property without
+        the hassle of buying a house or flat, but some options are safer than others"},{"id":"hedge-funds","type":"guide","title":"Hedge
+        funds","description":"Actively managed hedge funds aim to produce profits
+        whatever happens in the stock market. They invest in a very wide range of
+        things and are higher risk than more traditional funds"},{"id":"spread-betting-and-contracts-for-difference","type":"guide","title":"Spread
+        betting and contracts for difference (CFDs)","description":"Financial spread
+        betting and contracts for difference (CFDs) are high risk ways to gamble on
+        the stock market"},{"id":"venture-capital-trusts","type":"guide","title":"Venture
+        Capital Trusts","description":"Venture Capital Trusts allow you to invest
+        into smaller and unlisted companies indirectly while offering you the chance
+        to earn high returns and tax relief"},{"id":"investment-trusts","type":"guide","title":"Investment
+        trusts","description":"Investment trusts allow you to buy shares in a company
+        which in turn buys shares in a range of other companies"},{"id":"popular-investments-at-a-glance","type":"guide","title":"Popular
+        investments at a glance","description":"Thinking of investing? Use our at-a-glance
+        table for a quick overview of the most popular investment types"},{"id":"investing-in-shares","type":"guide","title":"Investing
+        in shares","description":"Looking for an investment? If you choose shares,
+        you need to be willing to put up with some risk and invest long term"},{"id":"workplace-investment-schemes","type":"guide","title":"Workplace
+        investment schemes","description":"Workplace savings schemes are flexible
+        and tax-efficient \u2013 and unlike pensions, you can use the money long before
+        you retire"},{"id":"fixed-interest-securities-gilts-and-corporate-bonds","type":"guide","title":"Fixed
+        interest securities \u2013 gilts and corporate bonds","description":"Fixed
+        interest securities are loans to government or to companies \u2013 they may
+        offer a relatively safe way to get a regular income, if held to maturity."},{"id":"withdrawable-share-capital","type":"guide","title":"Withdrawable
+        share capital","description":"Buying shares in an industrial and provident
+        society makes you a member, but your money isn\u2019t protected by the Financial
+        Services Compensation Scheme"},{"id":"tracker-funds-index-funds-exchange-traded-funds","type":"guide","title":"Tracker
+        funds and exchange traded funds","description":"A way to follow the performance
+        of a particular stock market or investment type without paying high management
+        charges"},{"id":"art-fine-wine-and-other-collectibles-as-investments","type":"guide","title":"Art,
+        fine wine and other collectibles as investments","description":"A great way
+        to diversify or a costly, risky investment? Find out the pros and cons of
+        putting your money in collectibles"},{"id":"with-profits-funds","type":"guide","title":"With-profits
+        funds","description":"Need a long-term investment that is managed for you
+        and has life assurance included? A with-profits fund could be what you\u2019re
+        looking for"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:58 GMT
+recorded_with: VCR 2.9.2

@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 39c2ace8-acee-4ee7-9593-1864abd95405
+      - 9a7dc6b2-20fb-4e42-a99c-d9998b6b9b3b
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 04 Jun 2014 14:28:52 GMT
+      - Fri, 06 Jun 2014 07:58:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,16 +43,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 05adb489387668a3d234a8b9db8d59cf
+      - 85e0953dc0cf7ab7202adfe4ab1470e1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 04-Jun-2015 14:28:52 GMT; secure
-      - _session_id=05adb489387668a3d234a8b9db8d59cf; path=/; secure; HttpOnly
-      - _web_tracking=5668b0930d57ff4cd758f411182efa14; path=/; expires=Thu, 04-Jun-2015
-        14:28:52 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:28 GMT; secure
+      - _session_id=85e0953dc0cf7ab7202adfe4ab1470e1; path=/; secure; HttpOnly
+      - _web_tracking=e9b1acaefb8fc68c95569eb4740d84cc; path=/; expires=Sat, 06-Jun-2015
+        07:58:28 GMT; secure
       X-Request-Id:
-      - 39c2ace8-acee-4ee7-9593-1864abd95405
+      - 9a7dc6b2-20fb-4e42-a99c-d9998b6b9b3b
       X-Runtime:
-      - '0.349674'
+      - '0.044157'
       X-Rack-Cache:
       - miss
       P3p:
@@ -108,6 +108,6 @@ http_interactions:
         <a data-type=\"link\" hreflang=\"en\" href=\"/en/static/debt-advice\">Debt
         advice</a> l <a data-type=\"link\" hreflang=\"en\" href=\"/en/static/accountability-and-funding\">Oversight,
         accountability and funding</a>\u00a0\u00a0 </p>"}'
-    http_version:
-  recorded_at: Wed, 04 Jun 2014 14:28:53 GMT
-recorded_with: VCR 2.9.0
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:58:28 GMT
+recorded_with: VCR 2.9.2

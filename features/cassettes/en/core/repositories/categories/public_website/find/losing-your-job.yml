@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/losing-your-job.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:58:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 14907e351d752b93bc7f485574ca1bf7
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:11 GMT; secure
+      - _session_id=14907e351d752b93bc7f485574ca1bf7; path=/; secure; HttpOnly
+      - _web_tracking=60cfe87ea18607e8b577a9b19a655956; path=/; expires=Sat, 06-Jun-2015
+        07:58:11 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.066791'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"losing-your-job","title":"Losing your job","description":"How
+        to get your money under control when faced with redundancy or job loss","parent_id":"money-topics","contents":[{"id":"redundancy---be-prepared","type":"category","title":"Redundancy
+        - be prepared","description":"Managing money if your job is at risk, insuring
+        yourself against redundancy\r\n                                    and what
+        to do if you''re asked to work reduced hours\r\n                                "},{"id":"your-redundancy-rights","type":"category","title":"Your
+        redundancy rights","description":"Redundancy advice and your legal rights,
+        what process your employer must follow and how to tell if you''ve been a victim
+        of unfair dismissal\r\n                                "},{"id":"redundancy-payments","type":"category","title":"Redundancy
+        payments","description":"Are you entitled to redundancy pay, how much will
+        you get and will you have to\r\n                                    pay tax
+        on it?\r\n                                "},{"id":"benefits-and-entitlements-if-you-lose-your-job","type":"category","title":"Benefits
+        and entitlements if you lose your job","description":"Benefits and tax credits
+        you can claim after losing your job, can you claim a\r\n                                    tax
+        rebate and what happens to your pension?\r\n                                "},{"id":"budgeting-when-out-of-work","type":"category","title":"Budgeting
+        when out of work","description":"Use our out-of-work checklist to stay in
+        control of your finances, plus how to\r\n                                    make
+        the most of your redundancy pay\r\n                                "},{"id":"managing-debt-when-out-of-work","type":"category","title":"Managing
+        debt when out of work","description":"How to review and prioritise your debts,
+        how to start paying it off and where\n                                    to
+        get help if you''re struggling with debt\n                                "},{"id":"voluntary-redundancy-and-early-retirement","type":"category","title":"Voluntary
+        redundancy and early retirement","description":"Weigh up the pros and cons
+        of voluntary redundancy and early retirement and\n                                    consider
+        the impact on your finances\n                                "},{"id":"help-with-finding-a-job","type":"category","title":"Help
+        with finding a job","description":"CV advice, job searching and interview
+        tips; plus where to go if you''re\n                                    thinking
+        of a career change or starting a business\n                                "}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:58:11 GMT
+recorded_with: VCR 2.9.2

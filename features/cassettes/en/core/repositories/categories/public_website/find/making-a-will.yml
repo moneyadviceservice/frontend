@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/making-a-will.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:58:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8fe559c217302973e064aae9143bc918
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:05 GMT; secure
+      - _session_id=8fe559c217302973e064aae9143bc918; path=/; secure; HttpOnly
+      - _web_tracking=db6b4d9ecfd993b1541b3ac3300087c9; path=/; expires=Sat, 06-Jun-2015
+        07:58:05 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.035970'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"making-a-will","title":"Making a will","description":"Learn
+        how to make and change a will and find out about the different options available.","parent_id":"births-deaths-and-family","contents":[{"id":"why-you-should-make-a-will","type":"guide","title":"Why
+        you should make a will","description":"A will is easy to prepare and ensures
+        your money, possessions and property go to the right people when you die"},{"id":"make-a-will-to-protect-your-family","type":"guide","title":"Making
+        a will to protect your family","description":"When you become a parent, it\u2019s
+        even more important to make a will so your family is protected"},{"id":"writing-a-will-your-options","type":"guide","title":"Writing
+        a will \u2013 your options","description":"There are a number of ways you
+        can get a will written \u2013 find out more about your options and which may
+        be most suitable for you"},{"id":"changing-your-will","type":"guide","title":"Changing
+        your will","description":"Need to update your will? There are two ways to
+        do it \u2013 find out which is right for you"},{"id":"what-happens-if-you-dont-leave-a-will","type":"guide","title":"What
+        happens if you don''t leave a will","description":"If you don\u2019t make
+        a will, you don\u2019t get to decide who gets what when you die"},{"id":"storing-your-will-where-others-can-find-it","type":"guide","title":"Storing
+        your will where others can find it","description":"Your executor needs to
+        know where your will is kept - find out where you can put it for safekeeping"},{"id":"will-writing-services-pros-and-cons","type":"guide","title":"Will
+        writing services \u2013 pros and cons","description":"You may be able to save
+        money by using a will writing service but it''s not for everyone \u2013 find
+        out if it''s suitable for you"},{"id":"talking-to-your-family-about-your-will","type":"guide","title":"Talking
+        to your family about your will","description":"Don\u2019t keep your plans
+        for your estate to yourself \u2013 find out why it\u2019s good to talk to
+        your family about your will and get tips on how to do it"},{"id":"planning-what-to-leave-in-your-will","type":"guide","title":"Making
+        a will and planning what to leave","description":"Think about who you want
+        to benefit from your will and what you want to leave them"},{"id":"using-a-solicitor-to-write-your-will","type":"guide","title":"Using
+        a solicitor to write your will","description":"What you can expect if you
+        use a solicitor to help with your will, how much it may cost and how to find
+        one"},{"id":"diy-wills-what-you-need-to-know","type":"guide","title":"DIY
+        wills \u2013 what you need to know","description":"Writing your own will could
+        save you money \u2013 but makes sure you know exactly what you''re doing"},{"id":"putting-your-affairs-in-order","type":"guide","title":"Putting
+        your affairs in order","description":"Practical things you can do to tidy
+        up your money before you die, making it easier for those you leave behind"},{"id":"preparing-for-illness-old-age-and-death","type":"guide","title":"Preparing
+        for illness, old age and death","description":"Considering how your money
+        will be managed if you become ill and when you die is an important part of
+        financial planning"},{"id":"choosing-your-executor","type":"guide","title":"Choosing
+        your executor","description":"Your executor sorts out your will after you
+        die, so it\u2019s important to choose the right person"},{"id":"top-five-ways-to-cut-your-inheritance-tax","type":"guide","title":"Top
+        5 ways to cut your Inheritance Tax","description":"Looking to reduce the Inheritance
+        Tax on your estate after you\u2019ve gone? Here are five perfectly legal ways
+        to do it"},{"id":"gifts-and-transfers-exempt-from-inheritance-tax","type":"guide","title":"Gifts
+        and transfers exempt from Inheritance Tax","description":"Making gifts can
+        be useful way of reducing Inheritance Tax on your estate. But you have to
+        know exactly what you''re doing"},{"id":"life-insurance-and-inheritance-tax","type":"guide","title":"Life
+        insurance and Inheritance Tax","description":"Taking out life  insurance could
+        make Inheritance Tax easier for your family to manage when you die"},{"id":"will-you-have-to-pay-inheritance-tax","type":"guide","title":"When
+        do you pay Inheritance Tax?","description":"Depending on how much you leave
+        when you die, there might be Inheritance Tax to pay. Find out if you''re affected"},{"id":"the-tax-benefits-of-giving-to-charity","type":"guide","title":"The
+        tax benefits of giving to charity","description":"Leaving something to charity
+        in your will helps a good cause \u2013 but it can also help reduce your Inheritance
+        Tax"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:58:05 GMT
+recorded_with: VCR 2.9.2

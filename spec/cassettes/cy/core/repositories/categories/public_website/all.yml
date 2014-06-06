@@ -1,0 +1,286 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 4c22d275-192c-425f-aa62-dd1916136ddc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 68e41163e284be124e6629efb5c1576e
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:38 GMT; secure
+      - _session_id=68e41163e284be124e6629efb5c1576e; path=/; secure; HttpOnly
+      - _web_tracking=ed433a89fe76ed17596bdf2b39899aca; path=/; expires=Sat, 06-Jun-2015
+        07:59:38 GMT; secure
+      X-Request-Id:
+      - 4c22d275-192c-425f-aa62-dd1916136ddc
+      X-Runtime:
+      - '0.023512'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"managing-your-money","type":"category","title":"Rheoli eich
+        arian","description":"Cyngor, awgrymiadau ac offer i''ch helpu chi i gael
+        trefn ar eich materion ariannol a gwneud i''ch arian fynd ymhellach.","contents":[{"id":"young-people-and-money","type":"category","title":"Gadael
+        yr ysgol neu goleg","description":"Dechrau swydd neu ddod yn fyfyriwr, bydd
+        angen i chi wneud penderfyniadau ariannol pwysig","contents":[{"id":"moving-into-work","type":"category","title":"Symud
+        i waith","description":"Dysgwch am sut fyddwch yn cael eich talu a\u2019ch
+        trethu yn y gwaith, a chymrwn olwg ar sylfaeni slipiau cyflog","contents":[]},{"id":"independent-living","type":"category","title":"Byw\u2019n
+        annibynnol ","description":"Cyngor ar y ffordd orau o dalu biliau, cost rhedeg
+        car a mwy","contents":[]}]},{"id":"travel-money-or-sending-money-overseas","type":"category","title":"Arian
+        teithio neu anfon arian dramor","description":"Prynu arian tramor, cardiau
+        rhad i''w defnyddio dramor a dewis y ffordd orau o anfon arian dramor","contents":[]},{"id":"work-and-money","type":"category","title":"Gwaith
+        ac arian","description":"Penderfyniadau t\u00e2l, treth a budd-daliadau y
+        bydd rhaid i chi eu gwneud yn y gwaith neu pan fyddwch yn gweithio drosoch
+        eich hunan ","contents":[{"id":"pay-and-benefits","type":"category","title":"T\u00e2l
+        a buddion","description":"Gwirio eich opsiynau ar gyfer t\u00e2l, treth a
+        budd-daliadau fel cyflogai neu weithiwr asiantaeth","contents":[]},{"id":"pensions-in-the-workplace","type":"category","title":"Pensiynau
+        yn y gweithle","description":"Paratoi ar gyfer newidiadau i bensiynau gweithle
+        a deall rhyddhad treth ar gyfraniadau pensiwn","contents":[]},{"id":"working-for-yourself","type":"category","title":"Gweithio
+        drosoch eich hunan","description":"Gwirio eich opsiynau ar gyfer t\u00e2l,
+        treth yswiriant a phensiynau fel unigolyn hunangyflogedig","contents":[]}]},{"id":"money-complaints-and-compensation","type":"category","title":"Cwynion
+        arian ac iawndal","description":"Eich hawliau a sut i gwyno - cael eich trin
+        yn annheg neu gamwerthu, iawndal ariannol os bydd eich banc neu ddarparwr
+        yn mynd i''r wal","contents":[]},{"id":"financial-help-and-advice","type":"category","title":"Cymorth
+        a chyngor ariannol","description":"Dewis a defnyddio cynghorydd ariannol a
+        ble i gael cyngor ariannol am ddim","contents":[]}]},{"id":"money-topics","type":"category","title":"Pynciau
+        ariannol","description":"Cynilo a buddsoddi, benthyca a dyledion, cartrefi
+        a morgeisi, yswiriant, pensiynau ac ymddeol","contents":[{"id":"debt-and-borrowing","type":"category","title":"Dyled
+        a benthyca","description":"Cymryd rheolaeth dros ddyled, cael cyngor am ddim
+        ar ddyledion, a sut i fenthyca''n fforddadwy.","contents":[{"id":"before-you-borrow","type":"category","title":"Cyn
+        i chi fenthyca arian","description":"Dysgwch a oes arnoch angen benthyca arian
+        ac a allwch ei fforddio. Dysgwch sut i gyfrifo gwir gost benthyca.","contents":[]},{"id":"taking-control-of-debt","type":"category","title":"Cymryd
+        rheolaeth ar ddyled","description":"Ble i fynd i gael cyngor rhad ac am ddim
+        ar ddyledion, sut i siarad \u00e2''r bobl y mae arnoch arian iddynt, ac awgrymiadau
+        i''ch helpu i ad-dalu''ch dyledion yn y drefn iawn.","contents":[]},{"id":"mortgage-and-rent-problems","type":"category","title":"Problemau
+        morgais a rhent","description":"Cymorth os ydych yn profi anawsterau gyda''ch
+        taliadau morgais neu rent a gwybodaeth ar gymorth gan y llywodraeth os na
+        allwch dalu''ch morgais.","contents":[]},{"id":"help-with-loans","type":"category","title":"Cymorth
+        gyda benthyciadau","description":"Dysgwch am sut mae benthyciadau personol
+        yn gweithio, dewisiadau eraill gwell na benthyciadau diwrnod cyflog, a chymorth
+        wrth fenthyca gan undeb credyd.","contents":[]},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Cardiau
+        credyd a statws credyd","description":"Dysgwch sut i reoli cerdyn credyd,
+        sut i wirio''ch adroddiad credyd, ac awgrymiadau ynghylch sut y gallwch wella''ch
+        statws credyd.","contents":[]}]},{"id":"budgeting-and-managing-money","type":"category","title":"Cyllidebu
+        a rheoli arian","description":"Cyngor ar redeg cyfrif banc, cynllunio''ch
+        arian, a thorri ar gostau.","contents":[{"id":"running-a-bank-account","type":"category","title":"Rhedeg
+        cyfrif banc","description":"Dysgwch sut i reoli cyfrif banc, o dalu arian
+        i mewn i gadw llygad ar log a ffioedd.","contents":[]},{"id":"managing-money","type":"category","title":"Rheoli
+        arian","description":"Gwiriwch sut y gallwch wneud i''ch arian fynd ymhellach
+        a defnyddiwch ein Cynllunyddcyllideb i weld faint o arian sydd gennych yn
+        dod i mewn ac ar beth yr ydych yn ei wario.","contents":[]},{"id":"student-and-graduate-money","type":"category","title":"Arian
+        myfyrwyr a graddedigion","description":"Cymorth gyda pharatoi eich plentyn
+        ar gyfer bywyd myfyrwyr, gan gynnwys awgrymiadau ar gyllidebu yn y coleg neu''r
+        brifysgol.","contents":[]},{"id":"cutting-costs","type":"category","title":"Torri
+        costau","description":"Cymorth gyda thorri''ch biliau ynni, ff\u00f4n cartref
+        a band eang, ac awgrymiadau ynghylch cael gwyliau am lai o arian.","contents":[]}]},{"id":"saving-and-investing","type":"category","title":"Cynilo
+        a buddsoddi","description":"Sut i gynilo arian, mathau o gyfrifon cynilo a
+        rhoi cychwyn arni gyda buddsoddi.","contents":[{"id":"how-to-save-money","type":"category","title":"Sut
+        i gynilo arian","description":"Cyfrifwch faint allwch fforddio ei gynilo a
+        dysgwch sut i sefydlu a chyrraedd eich nod cynilo.","contents":[]},{"id":"savings-types","type":"category","title":"Mathau
+        o gynilo","description":"Dysgwch am gyfrifon cynilo, ISAs arian parod a sut
+        i gynilo ar gyfer plant.","contents":[]},{"id":"how-to-invest-money","type":"category","title":"Sut
+        i fuddsoddi arian","description":"Dysgwch am hanfodion buddsoddi, sut i lunio
+        cynllun buddsoddi, a deall eich agwedd tuag at risg.","contents":[]},{"id":"investment-types","type":"category","title":"Mathau
+        o fuddsoddiad","description":"Gwybodaeth am stociau a chyfranddaliadau, bondiau
+        buddsoddi, cronfeydd tracio, polis\u00efau gydag-elw a gwaddol.","contents":[]}]},{"id":"pensions-and-retirement","type":"category","title":"Pensiynau
+        ac ymddeol","description":"Sut a phryd i ddechrau cynilo ar gyfer pensiwn,
+        cael y gorau o''ch cronfa bensiwn a rheoli''ch arian yn ystod eich ymddeoliad","contents":[{"id":"saving-into-a-pension-for-the-first-time","type":"category","title":"Cynilo
+        mewn pensiwn am y tro cyntaf","description":"Y cyfan fydd ei angen arnoch
+        i roi cychwyn arni, gan gynnwys cyfrifydd cyflym sy''n amcangyfrif faint y
+        dylech chi fod yn ei gynilo bob mis","contents":[]},{"id":"types-of-pension","type":"category","title":"Mathau
+        o bensiwn","description":"Pensiwn y wladwriaeth, pensiynau gweithle a phensiynau
+        personol - golwg gyffredinol ar sut mae pob un yn gweithio","contents":[]},{"id":"review-the-health-your-pension-savings","type":"category","title":"Adolygu
+        iechyd eich cynilion pensiwn","description":"Defnyddiwch ein canllaw cam-wrth-gam
+        i osod nod ar gyfer eich incwm ymddeol a gwirio''ch cynnydd tuag at y nod
+        hwnnw","contents":[]},{"id":"pensions-and-tax","type":"category","title":"Pensiynau
+        a threth","description":"Gostyngiadau treth ar yr arian y byddwch yn ei gynilo
+        yn eich pensiwn, sut mae''ch incwm pensiwn yn cael ei drethu a''r lwfans oes","contents":[]},{"id":"approaching-retirement","type":"category","title":"Nes\u00e1u
+        at ymddeol","description":"Wrth nes\u00e1u at oed ymddeol mae penderfyniadau
+        mawr i''w gwneud, megis pa fath o flwydd-dal i''w ystyried - rydym yn egluro''r
+        cyfan","contents":[]},{"id":"transferring-between-pension-schemes","type":"category","title":"Trosglwyddo
+        rhwng cynlluniau pensiwn","description":"Sut i drosglwyddo pensiynau rhwng
+        darparwyr, er enghraifft os ydych chi eisiau cyfuno potiau pensiwn gwahanol
+        rydych wedi''u cronni","contents":[]},{"id":"managing-your-finances-in-retirement","type":"category","title":"Rheoli''ch
+        arian ar \u00f4l ymddeol","description":"Gall newidiadau mawr ddigwydd i''ch
+        incwm wrth ichi ymddeol a hefyd i''ch alldaliadau a''ch hawl i fudd-daliadau''r
+        wladwriaeth","contents":[]},{"id":"using-your-home-to-generate-retirement-income","type":"category","title":"Defnyddio''ch
+        cartref i greu incwm ymddeol","description":"Pa un a ydych chi''n berchen
+        ar eich cartref neu beidio, cewch ei ddefnyddio i roi hwb i''ch incwm, er
+        enghraifft drwy ryddhau ecwiti neu rentu ystafell","contents":[]},{"id":"workplace-pensions-changes","type":"category","title":"Cofrestru
+        awtomatig","description":"Yn raddol, bydd yn rhaid i bob cyflogwr gynilo yng
+        nghynlluniau pensiwn eu gweithwyr","contents":[]},{"id":"benefits-and-tax-in-retirement","type":"category","title":"Budd-daliadau
+        a threth ar \u00f4l ymddeol","description":"Eich hawl i Bensiwn y Wladwriaeth,
+        Credyd Pensiwn os ydych chi ar incwm isel, treth a lwfansau sy''n gysylltiedig
+        ag oedran ar \u00f4l ymddeol","contents":[]},{"id":"choosing-a-pension","type":"category","title":"Dewis
+        pensiwn","description":"Darllenwch ein hawgrymiadau gorau ar gyfer dewis pensiynau
+        a chael gwybod am brynu pensiwn a chael cyngor ariannol","contents":[]},{"id":"events-that-may-affect-your-pension","type":"category","title":"Digwyddiadau
+        a allai effeithio ar eich pensiwn","description":"Byddwch yn ymwybodol o''r
+        effaith y gallai digwyddiadau eu cael ar eich pensiwn gan gynnwys dod yn rhiant,
+        ysgariad, colli''ch gwaith ac ymddeol dramor","contents":[]},{"id":"taking-income-from-your-pension","type":"category","title":"Cymryd
+        incwm allan o''ch pensiwn","description":"Rydym yn eich tywys drwy''r holl
+        opsiynau, gan gynnwys cyfandaliadau arian a''r holl wahanol fathau o flwydd-daliadau
+        y gallwch eu prynu","contents":[]},{"id":"getting-help-with-pensions","type":"category","title":"Cael
+        help gyda phensiynau","description":"Ble i fynd am gyngor ar bensiynau, a
+        beth i''w wneud os ydych chi eisiau cwyno am gynghorydd neu ddarparwr pensiwn","contents":[]}]},{"id":"benefits","type":"category","title":"Budd-daliadau","description":"Edrychwch
+        pa fudd-daliadau y mae gennych hawl iddynt a dysgu am Gredyd Cynhwysol.","contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
+        gyda\u2019ch budd-daliadau","description":"Help wrth gael yr hawliadau cywir,
+        ble i gael cymorth a chyngor ynghylch budd-daliadau a beth i''w wneud os torrir
+        eich taliadau.","contents":[]},{"id":"child-benefit","type":"category","title":"Budd-dal
+        Plant","description":"Dysgwch sut mae Budd-dal plant yn gweithio a faint y
+        gallech ei hawlio.","contents":[]},{"id":"universal-credit","type":"category","title":"Credyd
+        Cynhwysol","description":"Paratowch am y taliad misol sengl newydd sydd wedi
+        dechrau disodli chwe budd-daliad presennol.","contents":[]},{"id":"benefits-at-work","type":"category","title":"Budd-daliadau
+        yn y gwaith","description":"Dysgwch am fudd-daliadau cyflogeion, cynlluniau
+        aberthu cyflog a budd-daliadau a chredydau treth y gallwch eu hawlio ar \u00f4l
+        colli eich swydd.","contents":[]}]},{"id":"births-deaths-and-family","type":"category","title":"Genedigaethau,
+        marwolaethau a theulu","description":"Cael babi, gwneud ewyllys, ac ymdrin
+        ag ysgaru a gwahanu.","contents":[{"id":"having-a-baby","type":"category","title":"Cael
+        babi","description":"Cymorth gyda rheoli eich arian cyn, yn ystod ac ar \u00f4l
+        genedigaeth eich babi.","contents":[]},{"id":"maternity-and-paternity-rights","type":"category","title":"Hawliau
+        mamolaeth a thadolaeth","description":"Dysgwch sut i hawlio t\u00e2l ac absenoldeb
+        mamolaeth gan eich cyflogwr a''ch hawliau wrth ddychwelyd i''r gwaith.","contents":[]},{"id":"making-a-will","type":"category","title":"Gwneud
+        ewyllys","description":"Dysgwch sut i wneud a newid ewyllys a dysgu am y gwahanol
+        opsiynau sydd ar gael.","contents":[]},{"id":"when-someone-dies","type":"category","title":"Pan
+        fydd rhywun yn marw","description":"Dysgwch sut i ddelio ag arian ar \u00f4l
+        i rywun farw, o dalu am yr angladd i ofalu am y gwaith papur a biliau''r cartref.","contents":[]},{"id":"divorce-and-separation","type":"category","title":"Ysgaru
+        a gwahanu","description":"Dysgwch sut i reoli''ch arian a rhannu''r hyn rydych
+        yn berchen arno wrth fynd trwy ysgariad neu ymwahaniad.","contents":[]}]},{"id":"insurance","type":"category","title":"Yswiriant","description":"Cymorth
+        a chyngor ynghylch gwarchod eich teulu a chael yr yswiriant cartref a char
+        cywir.","contents":[{"id":"help-with-insurance","type":"category","title":"Cymorth
+        gydag yswiriant","description":"Deall beth yw yswiriant a sut mae''n gweithio.
+        Dysgwch sut i brynu yswiriant a sut mae mynd ati i wneud hawliad.","contents":[]},{"id":"home-insurance","type":"category","title":"Yswiriant
+        cartref","description":"Dysgwch a oes arnoch angen yswiriant adeiladau a chynnwys
+        a chael cymorth i ddewis y polisi a sicrwydd cywir.","contents":[]},{"id":"life-and-protection-insurance","type":"category","title":"Yswiriant
+        oes a diogelu","description":"Dysgwch am y gwahaniaethau rhwng yswiriant oes,
+        salwch critigol a diogelu incwm.","contents":[]},{"id":"car-insurance","type":"category","title":"Yswiriant
+        car","description":"Dewis y lefel warchodaeth gywir, cael y fargen orau, ac
+        awgrymiadau i yrwyr ifanc.","contents":[]},{"id":"travel-insurance","type":"category","title":"Yswiriant
+        teithio","description":"Dysgwch sut i ddewis y lefel gywir o sicrwydd, cael
+        y fargen orau, a sut i wneud hawliad ar yswiriant teithio.","contents":[]},{"id":"pet-insurance","type":"category","title":"Yswiriant
+        anifeiliaid anwes","description":"Cymorth wrth ddewis y polisi a''r yswiriant
+        cywir ar gyfer anifail anwes.","contents":[]}]},{"id":"homes-and-mortgages","type":"category","title":"Cartrefi
+        a morgeisi","description":"Popeth y mae angen i chi ei wybod am brynu cartref
+        a dewis y morgais cywir.","contents":[{"id":"buying-a-home","type":"category","title":"Prynu
+        cartref","description":"Cyfrifwch eich costau prynu a symud cyffredinol, cyngor
+        i brynwyr tro cyntaf, ac awgrymiadau ac offer i''ch helpu chi i gyfrifo beth
+        allwch ei fforddio.","contents":[]},{"id":"help-with-mortgages","type":"category","title":"Cymorth
+        gyda morgeisi","description":"Dechreuwch arno gyda''n canllaw dechreuwyr i
+        forgeisi, cael y fargen gywir, ac awgrymiadau os ydych yn profi anawsterau
+        wrth dalu.","contents":[]},{"id":"types-of-mortgage","type":"category","title":"Mathau
+        o forgeisi","description":"Dysgwch am wahanol fathau o forgeisi, o ad-daliad
+        a llog yn unig i ecwiti a rennir a phrynu-i-osod.","contents":[]},{"id":"renting-and-letting","type":"category","title":"Rhentu
+        a gosod","description":"Cyngor i''ch helpu i gyfrifo faint o rent y gallwch
+        chi fforddio, a sut i gyllidebu a rhannu costau wrth rentu.","contents":[]}]},{"id":"care-and-disability","type":"category","title":"Gofal
+        ac anabledd","description":"Dewis y gwasanaethau gofal cywir, cymorth i ofalwyr
+        a thalu am gost gofal.","contents":[{"id":"care-advice-and-help","type":"category","title":"Cyngor
+        a chymorth ynghylch gofal","description":"Cymorth gyda dewis y gwasanaethau
+        gofal cywir, sefydlu atwrneiaeth, ac ymdrin ag unrhyw broblemau.","contents":[]},{"id":"paying-for-care","type":"category","title":"Talu
+        am ofal","description":"Dysgwch am opsiynau GIG a hunan-ariannu, rheoli taliadau
+        uniongyrchol, a ffyrdd eraill i dalu am eich gofal.","contents":[]},{"id":"support-for-carers","type":"category","title":"Cymorth
+        i ofalwyr","description":"Dysgwch am gymorth sydd ar gael i ofalwyr a sut
+        i reoli arian rhywun yr ydych yn gofalu amdanynt.","contents":[]},{"id":"illness-and-disability","type":"category","title":"Pobl
+        anabl","description":"Cymorth ynghylch Taliad Annibyniaeth Bersonol, grantiau
+        anabledd, cymhorthion a chyfarpar.","contents":[]}]},{"id":"losing-your-job","type":"category","title":"Colli''ch
+        swydd","description":"Sut i gael trefn ar eich arian os ydych chi''n wynebu
+        colli''ch swydd neu os ydy''ch swydd yn cael ei dileu","contents":[{"id":"redundancy---be-prepared","type":"category","title":"Eich
+        swydd yn cael ei dileu - byddwch yn barod","description":"Cadw trefn ar eich
+        arian os ydy''ch swydd mewn perygl, yswirio''ch hun rhag y risg o golli''ch
+        swydd, a beth i''w wneud os gofynnir ichi weithio llai o oriau","contents":[]},{"id":"your-redundancy-rights","type":"category","title":"Eich
+        hawliau os caiff eich swydd ei dileu","description":"Cyngor wedi colli swydd
+        a\u2019ch hawliau cyfreithiol, pa brosesau sy\u2019n rhaid i\u2019ch cyflogwr
+        ddilyn a sut i ddweud os ydych wedi eich diswyddo\u2019n annheg","contents":[]},{"id":"redundancy-payments","type":"category","title":"Taliadau
+        dileu swydd","description":"Oes gennych chi hawl i d\u00e2l diswyddo, faint
+        gewch chi ac a fydd raid ichi dalu treth arno?","contents":[]},{"id":"benefits-and-entitlements-if-you-lose-your-job","type":"category","title":"Budd-daliadau
+        a hawliau os byddwch yn colli''ch swydd","description":"Budd-daliadau a chredydau
+        treth y gallwch eu hawlio ar \u00f4l colli''ch swydd, allwch chi hawlio gostyngiad
+        treth a beth sy''n digwydd i''ch pensiwn?","contents":[]},{"id":"budgeting-when-out-of-work","type":"category","title":"Cyllidebu
+        pan fyddwch yn ddi-waith","description":"Defnyddiwch ein rhestr wirio allan-o-waith
+        i gadw trefn ar eich sefyllfa ariannol, a hefyd sut i wneud y gorau o''ch
+        t\u00e2l diswyddo","contents":[]},{"id":"managing-debt-when-out-of-work","type":"category","title":"Rheoli
+        dyled pan fyddwch yn ddi-waith","description":"Sut i adolygu a blaenoriaethu''ch
+        dyledion, sut i ddechrau talu''ch dyledion yn \u00f4l a ble i gael cymorth
+        os ydych chi''n cael trafferth gyda dyledion","contents":[]},{"id":"voluntary-redundancy-and-early-retirement","type":"category","title":"Diswyddo
+        gwirfoddol ac ymddeol yn gynnar","description":"Ystyriwch beth yw manteision
+        ac anfanteision diswyddo gwirfoddol ac ymddeol yn gynnar ac ystyriwch yr effaith
+        ar eich sefyllfa ariannol","contents":[]},{"id":"help-with-finding-a-job","type":"category","title":"Help
+        i ddod o hyd i swydd","description":"Cyngor ar lunio CV, awgrymiadau ar sut
+        i chwilio am waith a chyfweliadau; a hefyd ble i fynd os ydych chi''n ystyried
+        newid gyrfa neu gychwyn busnes","contents":[]}]}]},{"id":"tools--resources","type":"category","title":"Offer
+        ac adnoddau","description":"Cyfrifianellau, templedi llythyrau a chanllawiau
+        am ddim \u2013 offer ac adnoddau defnyddiol i\u2019ch helpu","contents":[{"id":"budget-planner","type":"category","title":"Cynllunydd
+        cyllideb","description":"Defnyddiwch y cynllunydd cyllideb hwn i weld faint
+        o arian sydd gennych yn dod i mewn ac ar beth yr ydych yn ei wario","contents":[]},{"id":"health-check","type":"category","title":"Gwiriad
+        Iechyd Ariannol","description":"Ymunwch \u00e2\u2019r ychydig dros hanner
+        miliwn o bobl sydd wedi cymryd ein Gwiriad Iechyd Ariannol ar-lein a dechrau
+        gwneud y defnydd gorau o\u2019ch arian heddiw","contents":[]},{"id":"action-plans","type":"category","title":"Cynlluniau
+        gweithredu","description":"Rheolwch eich cyllid ac ysgogwch eich hunan i fynd
+        i''r afael '' materion ariannol bywyd trwy ddilyn ein cynlluniau gweithredu.","contents":[{"id":"action-plans-pensions","type":"category","title":"Cynlluniau
+        gweithredu - Pensiynau","description":"Os ydych yn cael eich cofrestru i bensiwn
+        gweithle am y tro cyntaf neu''n cyfrifo''ch incwm ar gyfer ymddeoliad, canfyddwch
+        yr holl gamau y bydd angen ichi eu cymryd gyda''n cynlluniau gweithredu defnyddiol.","contents":[]},{"id":"action-plans-losing-your-job","type":"category","title":"Cynlluniau
+        gweithredu - Colli eich swydd","description":"Canfyddwch beth i''w wneud i
+        warchod eich arian os ydych wedi colli''ch swydd, neu os ydych yn meddwl y
+        cewch eich diswyddo.","contents":[]}]},{"id":"calculators","type":"category","title":"Cyfrifianellau","description":"Gall
+        ein cyfrifianellau hawdd eu defnyddio eich helpu i lunio cyllideb, arbed arian
+        a thorri eich costau","contents":[]},{"id":"comparison-tables","type":"category","title":"Tablau
+        cymharu","description":"Mae ein tablau cymharu yn gwbl ddiduedd \u2013 fe\u2019n
+        sefydlwyd gan y llywodraeth ac nid ydym yn derbyn unrhyw gymhelliant na chomisiwn
+        os ydych yn mynd ymlaen i ddewis cynnyrch","contents":[]},{"id":"letter-templates","type":"category","title":"Templedi
+        llythyrau","description":"Mae ein templedi llythyrau hawdd eu defnyddio yma
+        i\u2019ch helpu os bydd arnoch angen sefydlu, canslo neu gwyno am rywbeth","contents":[]},{"id":"order-forms","type":"category","title":"Ffurflenni
+        archebu","description":"Defnyddiwch y ffurflenni hyn i archebu ein canllawiau
+        printiedig am ddim, sy\u2019n rhoi gwybodaeth glir, ddiduedd a chyngor mewn
+        iaith glir","contents":[]},{"id":"free-printed-guides","type":"category","title":"Canllawiau
+        printiedig am ddim","description":"Darllenwch ein canllawiau printiedig am
+        ddim, sy\u2019n rhoi gwybodaeth glir, ddiduedd a chyngor mewn iaith glir","contents":[]},{"id":"videos","type":"category","title":"Fideos","description":"Edrychwch
+        ar ein fideos, yn trafod materion fel yswiriant, cynilo ar gyfer ymddeol a
+        chwyddiant","contents":[]},{"id":"workplace-pension-advice-tool","type":"category","title":"Offeryn
+        cynghori pensiwn gweithle","description":"Mae pensiynau gweithle yn newid.
+        Defnyddiwch ein hofferyn i wirio a yw cynilo mewn pensiwn gweithle\u2019n
+        gywir i chi","contents":[]},{"id":"interactive-timelines","type":"category","title":"Amserlenni
+        rhyngweithiol","description":"Ewch drwy ein llinellau amser arian i chi wybod
+        beth i\u2019w wneud a phethau a allai effeithio ar eich incwm","contents":[]}]},{"id":"news","type":"category","title":"Newyddion
+        ac erthyglau","description":"Darllenwch ein newyddion, erthyglau ac erthyglau
+        nodwedd ariannol amserol","contents":[]}]'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:38 GMT
+recorded_with: VCR 2.9.2

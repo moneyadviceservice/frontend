@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/pensions-in-the-workplace.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 4c22d275-192c-425f-aa62-dd1916136ddc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 00aea7914cc71d3e8832d0adbc4cf892
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:38 GMT; secure
+      - _session_id=00aea7914cc71d3e8832d0adbc4cf892; path=/; secure; HttpOnly
+      - _web_tracking=665232c27d0f7749b4d8c114e45ebf5e; path=/; expires=Sat, 06-Jun-2015
+        07:59:38 GMT; secure
+      X-Request-Id:
+      - 4c22d275-192c-425f-aa62-dd1916136ddc
+      X-Runtime:
+      - '0.022375'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pensions-in-the-workplace","title":"Pensiynau yn y gweithle","description":"Paratoi
+        ar gyfer newidiadau i bensiynau gweithle a deall rhyddhad treth ar gyfraniadau
+        pensiwn","parent_id":"work-and-money","contents":[{"id":"gostyngiad-treth-ar-gyfraniadau-pensiwn","type":"guide","title":"Gostyngiad
+        treth ar gyfraniadau pensiwn","description":"Byddwch yn cael gostyngiad treth
+        ar unrhyw arian yr ydych yn ei roi yn eich pensiwn, hyd at drothwy blynyddol
+        o \u00a350,000 neu eich enillion am y flwyddyn"},{"id":"cofrestriad-awtomatig-ar-bensiwn-man-gwaith","type":"guide","title":"Cofrestru
+        awtomatig \u2013 cyflwyniad","description":"Mae ymuno \u00e2 chynllun pensiwn
+        eich man gwaith yn ffordd ddidrafferth o ddechrau cynilo ar gyfer yn hwyrach
+        mewn bywyd"},{"id":"pam-cynilo-mewn-pensiwn","type":"guide","title":"Pam cynilo
+        mewn pensiwn?","description":"Mae pensiynau\u2019n ffordd effeithlon o gynilo
+        at eich ymddeoliad. Bydd y dyn treth, a chyflogwyr yn aml, yn ychwanegu at
+        eich cyfraniadau"},{"id":"cyfrifiannell-pensiwn","type":"tool","title":"Cyfrifiannell
+        pensiwn","description":"Defnyddiwch y gyfrifiannell hon i''ch helpu i gyfrifo
+        faint o incwm ymddeol y gallech ei gael trwy gynilo mewn pensiwn personol,
+        rhanddeiliaid neu gr\u0175p"},{"id":"cyfrifiannell-cyfraniadau-pensiwn-gweithle","type":"tool","title":"Cyfrifiannell
+        cyfraniadau pensiwn gweithle","description":"Defnyddiwch y gyfrifiannell hon
+        i weld faint y byddwch chi a\u2019ch cyflogwr yn ei roi yn eich cronfa bensiwn"},{"id":"offeryn-cynghori-pensiwn-gweithle","type":"tool","title":"Offeryn
+        cynghori pensiwn gweithle","description":"Cwestiynau cyflym i\u2019ch helpu
+        i benderfynu a yw bod mewn pensiwn gweithle yn addas i chi"},{"id":"newidiadau-pensiwn-yn-y-gweithle-y-wybodaeth-sylfaenol","type":"video","title":"Newidiadau
+        i bensiynau gweithle - yr hanfodion","description":"Mae\u2019r fideo hwn yn
+        egluro sut mae\u2019r broses yn gweithio a\u2019r pwysigrwydd o gynilo ar
+        gyfer ymddeoliad"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:38 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/how-to-invest-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 22c8361b0138382165d18f5b9f95f091
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:54 GMT; secure
+      - _session_id=22c8361b0138382165d18f5b9f95f091; path=/; secure; HttpOnly
+      - _web_tracking=efc5680c09c5d746d922295f7e875bef; path=/; expires=Sat, 06-Jun-2015
+        07:59:54 GMT; secure
+      X-Request-Id:
+      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      X-Runtime:
+      - '0.033514'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-invest-money","title":"How to invest money","description":"Learn
+        about investing basics, how to make an investment plan, and understanding
+        your attitude to risk.","parent_id":"saving-and-investing","contents":[{"id":"investing-beginners-guide","type":"guide","title":"Investing
+        \u2013 beginner\u2019s guide","description":"Using investments can improve
+        your profits \u2013 and spread risk"},{"id":"assessing-the-performance-of-your-savings-and-investments","type":"guide","title":"Assessing
+        the performance of your savings and investments","description":"How to measure
+        the performance of your savings and investments to see how hard they''re working
+        and decide whether to make changes"},{"id":"asset-classes-explained","type":"guide","title":"Asset
+        classes explained","description":"The mix of asset classes - such as cash,
+        fixed-interest and shares - may account for between a third and three-quarters
+        of the variation in returns between different investment portfolios"},{"id":"ethical-saving-and-investing","type":"guide","title":"Ethical
+        saving and investing","description":"If you want to support fair working practices
+        and would prefer to avoid investing in the arms race, tobacco and gambling,
+        ethical saving and investing might be for you"},{"id":"top-tips-for-choosing-investments","type":"guide","title":"Top
+        tips for choosing investments","description":"Key things to think about when
+        choosing between possible investment options"},{"id":"investing-a-lump-sum","type":"guide","title":"Investing
+        a lump sum","description":"Wondering how, when and where to invest your lump
+        sum? It''s easier to get started if you take it step by step"},{"id":"decide-how-to-invest-a-lump-sum","type":"action_plan","title":"Action
+        plan - Decide how to invest a lump sum","description":"Simple steps to invest
+        in a way matches your needs and goals"},{"id":"do-you-need-a-financial-adviser","type":"guide","title":"Do
+        you need a financial adviser?","description":"Find out when you may need to
+        get financial advice and when going it alone may be okay"},{"id":"endowment-policies","type":"guide","title":"Endowment
+        policies","description":"Saving for a long-term goal? Endowment policies give
+        you a package that includes life assurance and some potential tax benefits"},{"id":"investing-in-property","type":"guide","title":"Investing
+        in property","description":"Find out about the potential risks and rewards
+        of investing in property and learn about the different ways to invest"},{"id":"what-happens-when-your-with-profits-fund-closes","type":"guide","title":"What
+        happens when your with-profits fund closes","description":"Is your with-profits
+        policy transferring to a new insurance company or closing to new investors?
+        Here''s what you need to know"},{"id":"reviewing-your-savings-and-investments","type":"guide","title":"Review
+        your savings and investments","description":"Make your money work harder \u2013
+        when, why and how to carry out a check of your savings and investments"},{"id":"key-facts-documents-and-cooling-off-periods-what-you-need-to-know","type":"guide","title":"Key
+        information and cooling off periods","description":"Good investment decisions
+        require information and time \u2013 so ask for the key facts and use your
+        cooling off period"},{"id":"understanding-investment-fees","type":"guide","title":"Understanding
+        investment fees","description":"The different types of investment fees you
+        could be charged and the things you need to think about before paying them"},{"id":"get-started-with-investing","type":"action_plan","title":"Action
+        plan - Get started with investing","description":"Find the most appropriate
+        places to invest your money"},{"id":"getting-more-informed-about-investing","type":"guide","title":"Getting
+        more informed about investing","description":"Keeping up with investment and
+        money news can help you with investing decisions, or will, at least, keep
+        your financial adviser on their toes"},{"id":"complete-a-money-fact-find","type":"guide","title":"Complete
+        a money fact find","description":"Different investments suit different goals
+        in life \u2013 so what are yours? Find out with a money fact find"},{"id":"know-your-risk-appetite","type":"guide","title":"Know
+        your risk appetite","description":"Work out how much financial risk you are
+        comfortable with \u2013 it is key to planning and managing your investments"},{"id":"making-an-investment-plan","type":"guide","title":"Making
+        an investment plan","description":"How an investment plan based on your circumstances
+        and goals can pay off, what to put in it and how to use it to find the products
+        you need"},{"id":"make-an-investment-plan","type":"action_plan","title":"Action
+        plan - Make an investment plan","description":"Create an investment plan and
+        find the right financial products to achieve your goals"},{"id":"diversifying-the-smart-way-to-save-and-invest","type":"guide","title":"Diversifying
+        \u2013 the smart way to save and invest","description":"If you put your investment
+        eggs in many different baskets, you can cut risk and improve your chance of
+        keeping up with inflation"},{"id":"beware-toxic-saving-and-investment-products","type":"guide","title":"Beware
+        hazardous savings and investment products","description":"Don\u2019t get bitten
+        by a wolf in sheep\u2019s clothing. Take care when investing and avoid toxic
+        products"},{"id":"what-are-pooled-investment-funds","type":"guide","title":"What
+        are pooled investment funds?","description":"Looking for an investment that
+        may be easier and less risky than shares? Pooled investments spread the risks"},{"id":"how-to-buy-investments","type":"guide","title":"How
+        to buy investments","description":"Beware of scams and don\u2019t be persuaded
+        into buying products you don\u2019t understand or if the charges and risks
+        are not clearly spelt out"},{"id":"high-risk-investment-products","type":"guide","title":"High-risk
+        investment products","description":"Risky investments can offer a chance at
+        big rewards \u2013 but if you go for them, you need to know exactly what you\u2019re
+        getting into"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:54 GMT
+recorded_with: VCR 2.9.2

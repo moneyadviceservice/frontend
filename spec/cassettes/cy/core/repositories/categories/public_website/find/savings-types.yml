@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/savings-types.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:59:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 2f130de9336a8a067c3af02de7b81b6c
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:48 GMT; secure
+      - _session_id=2f130de9336a8a067c3af02de7b81b6c; path=/; secure; HttpOnly
+      - _web_tracking=ed516a7b2d71b95e1f86551fcde3e8fe; path=/; expires=Sat, 06-Jun-2015
+        07:59:48 GMT; secure
+      X-Request-Id:
+      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      X-Runtime:
+      - '0.020157'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"savings-types","title":"Mathau o gynilo","description":"Dysgwch
+        am gyfrifon cynilo, ISAs arian parod a sut i gynilo ar gyfer plant.","parent_id":"saving-and-investing","contents":[{"id":"cynilo","type":"guide","title":"Cyfrifon
+        cynilo, ISAs arian parod a bondiau cynilo","description":"Defnyddiwch ein
+        tablau cymharu ar gyfrifon cynilo, ISAs arian parod a bondiau cynilo"},{"id":"cipolwg-ar-gynilion-arian-parod","type":"guide","title":"Cipolwg
+        ar gynilion arian parod","description":"Peidiwch \u00e2 chadw eich arian parod
+        o dan y fatras! Edrychwch pa fath o gyfrif sy''n addas ar gyfer eich cynilion
+        arian parod, a dechreuwch gymharu heddiw"},{"id":"cyfrifon-cronfa-ymddiriedolaeth-plant","type":"guide","title":"Cyfrifon
+        Cronfa Ymddiriedolaeth Plant","description":"Pwy sy''n dal yn gymwys ar gyfer
+        Cronfa Ymddiriedolaeth Plant, sut maent yn gweithio a beth i''w wneud gyda
+        thaleb heb ei defnyddio"},{"id":"isas-i-bobl-iau","type":"guide","title":"ISAs
+        i Bobl Iau","description":"Cynilwch neu buddsoddwch ar ran eich plant, a gwyliwch
+        yr arian yn tyfu hyd yn oed yn gynt gydag enillion di-dreth"},{"id":"cyfrifon-cynilo-i-blant","type":"guide","title":"Cyfrifon
+        cynilo i blant","description":"Rhowch eich plentyn ar ben ffordd a''i annog
+        i ddod i''r arfer \u00e2 chynilo \u2013 dysgwch am y cyfrifon cynilo diogel
+        a syml i blant y gallwch eu hagor"},{"id":"cynilion-plant","type":"video","title":"Cynilion
+        plant","description":""},{"id":"opsiynau-cynilo-i-blant","type":"guide","title":"Opsiynau
+        cynilo i blant","description":"Dysgwch eich plant am gynilo a''u helpu i gael
+        y cychwyn ariannol gorau mewn bywyd gyda chynlluniau cynilo i blant"},{"id":"isas-a-ffyrdd-effeithlon-eraill-o-ran-treth-o-gynilo-neu-fuddsoddi","type":"guide","title":"ISAs
+        a ffyrdd effeithlon eraill o ran treth o gynilo neu fuddsoddi","description":"Cadwch
+        fwy o''ch arian drwy ddewis cynilion gyda manteision o ran treth"},{"id":"gair-o-gyngor-ar-gyfer-dewis-cyfrif-cynilo","type":"guide","title":"Gair
+        o gyngor ar gyfer dewis cyfrif cynilo","description":"Pethau allweddol i''w
+        gwneud wrth ddewis cartref ar gyfer eich cynilion"},{"id":"clybiau-a-chynlluniau-cynilo-ar-gyfer-y-nadolig","type":"guide","title":"Clybiau
+        a chynlluniau cynilo ar gyfer y Nadolig","description":"Ffordd boblogaidd
+        i gynilo ar gyfer eich siopa Nadolig, ond ceir cyfyngiadau o ran sut a phryd
+        y gallwch wario''r hyn y byddwch yn ei gynilo"},{"id":"cyfrifon-cynilo-rheolaidd","type":"guide","title":"Cyfrifon
+        cynilo rheolaidd","description":"Yn chwilio am gyfradd llog byrdymor dda ac
+        yn awyddus i ddechrau cynilo''n rheolaidd? Gallai cyfrif cynilo rheolaidd
+        fod yn addas ar eich cyfer chi"},{"id":"cyfrifon-cynilo-dim-rhybudd","type":"guide","title":"Cyfrifon
+        cynilo dim rhybudd","description":"Enillwch fwy o log ar eich arian parod
+        a chodwch arian pryd bynnag y byddwch am wneud hynny gyda chyfrif cynilo dim
+        rhybudd neu gyfrif cynilo lle bydd eich arian ar gael yn hawdd"},{"id":"cynilion-nsi","type":"guide","title":"Cynilion
+        a buddsoddiadau NS&I [Cynilion a Buddsoddiadau Cenedlaethol]","description":"Os
+        ydych yn chwilio am y cartref mwyaf diogel ar gyfer eich arian, dylech ystyried
+        Cynilion a Buddsoddiadau Cenedlaethol"},{"id":"cynilion-syn-cydymffurfio-a-chyfraith-sharia","type":"guide","title":"Cynilion
+        sy''n cydymffurfio \u00e2 chyfraith Sharia","description":"Cynlluniwyd cyfrifon
+        Sharia yn unol \u00e2 chyfraith Islamaidd a ch\u00e2nt eu rhedeg yn unol \u00e2
+        hynny. Maent yn cynnig adenillion \u2013 elw \u2013 yn hytrach na llog"},{"id":"cyfrifon-cynilo-undebau-credyd","type":"guide","title":"Cyfrifon
+        cynilo undebau credyd","description":"A oes angen dewis amgen hyblyg arnoch
+        i gynilo gyda banc neu gymdeithas adeiladu? Edrychwch i weld a allai undeb
+        credyd lleol fod yn addas ar eich cyfer"},{"id":"bondiau-premiwm","type":"guide","title":"Bondiau
+        Premiwm","description":"Mae Bondiau Premiwm yn cynnig gwobrau di-dreth o \u00a325
+        i \u00a3100,000, yn ogystal ag un wobr \u00a31 miliwn bob mis"},{"id":"bondiau-cynilo","type":"guide","title":"Bondiau
+        cynilo","description":"A oes gennych arian parod y gallwch ei ymrwymo am chwe
+        mis neu fwy? Gall Bondiau Cynilo gynnig gwell adenillion na chynilion rheolaidd"},{"id":"cyfrifon-cynilo-syn-gysylltiedig-a-mynegeion","type":"guide","title":"Cyfrifon
+        cynilo sy''n gysylltiedig \u00e2 mynegeion","description":"Os ydych yn poeni
+        y bydd chwyddiant yn effeithio ar eich cynilion, ystyriwch gyfrif cynilo sy''n
+        gysylltiedig \u00e2 mynegeion"},{"id":"cyfrifon-isa-arian-parod","type":"guide","title":"Cyfrifon
+        ISA Arian Parod","description":"Gwnewch i''ch cynilion dyfu''n gyflymach gyda
+        llog di-dreth, ond cofiwch chwilio am gyfradd dda"},{"id":"cynlluniau-ffioedd-ysgolion","type":"guide","title":"Cynlluniau
+        ffioedd ysgolion","description":"Os ydych yn poeni am gost addysg breifat
+        a ffioedd prifysgolion, efallai y byddwch yn ystyried cynllun ffioedd ysgolion
+        \u2013 ond ai hon yw''r ffordd orau o gynilo mewn gwirionedd?"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:59:50 GMT
+recorded_with: VCR 2.9.2

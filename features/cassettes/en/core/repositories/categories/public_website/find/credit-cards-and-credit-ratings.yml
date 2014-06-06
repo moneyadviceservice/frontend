@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/credit-cards-and-credit-ratings.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 06 Jun 2014 07:57:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 1a11e4f1c673a78c7080f3d51f6f4108
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:54 GMT; secure
+      - _session_id=1a11e4f1c673a78c7080f3d51f6f4108; path=/; secure; HttpOnly
+      - _web_tracking=b6b3106bd56732a66adeadb395f4b90f; path=/; expires=Sat, 06-Jun-2015
+        07:57:54 GMT; secure
+      X-Request-Id:
+      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      X-Runtime:
+      - '0.038930'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"credit-cards-and-credit-ratings","title":"Credit cards and credit
+        ratings","description":"Find out how to manage a credit card, how to check
+        your credit report, and tips on how you can improve your credit rating.","parent_id":"debt-and-borrowing","contents":[{"id":"what-to-do-if-you-have-been-refused-a-loan-or-credit-card","type":"guide","title":"Refused
+        credit or refused a loan - What you can do","description":"If you\u2019ve
+        been turned down for credit find out what steps you can take to find out why"},{"id":"store-cards-explained","type":"guide","title":"Store
+        cards","description":"A discount in your favourite store or a sneaky way to
+        charge you high interest? See the pros and cons of store cards"},{"id":"catalogue-credit-or-shopping-accounts","type":"guide","title":"Catalogue
+        credit or shopping accounts","description":"Putting your catalogue purchases
+        on credit makes them more expensive, so make sure you understand how much
+        you will end up paying"},{"id":"credit-card-calculator","type":"tool","title":"Credit
+        card calculator","description":"If you want to clear your credit card balance
+        you can use this calculator to help you work out how long it will take you
+        or how much you''ll need to repay each month"},{"id":"credit-card-cheques","type":"guide","title":"Credit
+        card cheques","description":"Credit card cheques are more expensive than credit
+        cards and are often a bad idea \u2013 find out why"},{"id":"how-youre-protected-when-you-pay-by-card","type":"guide","title":"How
+        you\u2019re protected when you pay by card","description":"If you pay with
+        your card, you may be able to get a refund from your card company if there\u2019s
+        a problem"},{"id":"charge-cards-explained","type":"guide","title":"Charge
+        cards","description":"Like credit cards, with a difference \u2013 no interest,
+        no wriggle room on repayments and either a higher spending limit or no limit
+        at all"},{"id":"choosing-and-applying-for-a-credit-card","type":"guide","title":"Choosing
+        and applying for a credit card","description":"Which credit card is right
+        for you? Get tips on how to choose, and see the need-to-know info for when
+        you apply"},{"id":"reclaiming-unfair-credit-card-charges","type":"guide","title":"Reclaiming
+        unfair credit card charges","description":"Find out if you could reclaim credit
+        card charges for missed or late payments and for going over your credit limit"},{"id":"paying-off-your-credit-card","type":"guide","title":"Paying
+        off your credit card","description":"Get organised and put a plan in place
+        to pay off as much of your credit card debt as you can afford to each month"},{"id":"in-store-credit-and-hire-purchase","type":"guide","title":"In-store
+        credit and hire purchase","description":"Buy now, pay later\u2026 but make
+        sure you know the real cost"},{"id":"cashback-credit-cards","type":"guide","title":"Cashback
+        credit cards","description":"Cashback credit cards allow you to make money
+        from your spending. If you pay the balance off every month they can be a real
+        benefit to you"},{"id":"deciding-whether-to-transfer-your-credit-card-balance","type":"guide","title":"Should
+        you transfer your credit card balance?","description":"How balance transfers
+        work, when to consider making one and what you need to take into account"},{"id":"how-to-improve-your-credit-rating","type":"action_plan","title":"Action
+        plan \u2013 How to improve your credit rating","description":"Take steps to
+        boost your credit rating and improve your chances of borrowing credit"},{"id":"how-your-credit-score-affects-the-cost-of-borrowing","type":"guide","title":"How
+        your credit score affects the cost of borrowing","description":"Read this
+        guide to find out how lenders use your credit score to decide how much to
+        charge you for borrowing"},{"id":"how-to-check-your-credit-report","type":"guide","title":"How
+        to check your credit report","description":"If you want to take out a loan,
+        mortgage or credit card, it makes sense to check your credit report before
+        you apply"},{"id":"deciding-on-the-best-type-of-credit-for-you","type":"guide","title":"Deciding
+        on the best type of credit for you","description":"If you need to borrow money,
+        make sure you choose the best option for you and your budget"},{"id":"getting-credit-for-the-first-time","type":"guide","title":"How
+        to get credit for the first time","description":"If you haven\u2019t borrowed
+        before, here\u2019s what you need to know"},{"id":"ways-to-increase-your-credit-limit","type":"guide","title":"How
+        do you increase your credit limit?","description":"If you need to borrow more
+        through your credit card or overdraft, how can you increase your credit limit?
+        And should you?"},{"id":"credit-cards","type":"guide","title":"Credit cards","description":"Borrowing
+        money on a credit card can be expensive, but there are lots of benefits as
+        well. Do the pros outweigh the cons?"},{"id":"credit-card-comparison-tables","type":"guide","title":"How
+        to use credit card comparison tables","description":"It\u2019s important to
+        know that many comparison websites and best buy tables don\u2019t always show
+        you the best products on offer upfront"},{"id":"managing-your-credit-card-account","type":"guide","title":"Managing
+        your credit card account","description":"How to stay safe, avoid fees and
+        make your credit card work for you"},{"id":"credit-and-debit-cards-a-quick-guide","type":"guide","title":"Credit,
+        debit and other cards","description":"If you prefer plastic to cash \u2013
+        and many people do \u2013 you have lots of options open to you"}]}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 07:57:54 GMT
+recorded_with: VCR 2.9.2

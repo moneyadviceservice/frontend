@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/deees/rspec_junit_formatter.git
-  revision: 976e1bf73ef21ced3792718a542cf57f41ce8aeb
-  branch: features/rspec3
-  specs:
-    rspec_junit_formatter (0.1.6)
-      builder
-      rspec (~> 3.0)
-
-GIT
   remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
   revision: 58d47bccbddf32bfcb25ce4e286661a08942d7da
   specs:
@@ -294,6 +285,10 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.0)
+    rspec_junit_formatter (0.2.0)
+      builder (< 4)
+      rspec (>= 2, < 4)
+      rspec-core (!= 2.12.0)
     rubytree (0.9.3)
       json (~> 1.8)
       structured_warnings (~> 0.1)
@@ -410,7 +405,7 @@ DEPENDENCIES
   rails (= 4.1.1)
   rouge
   rspec-rails (~> 3.0)
-  rspec_junit_formatter!
+  rspec_junit_formatter
   rubytree
   sass-rails (~> 4.0.0)
   sdoc

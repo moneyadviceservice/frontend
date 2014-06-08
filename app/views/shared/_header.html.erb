@@ -6,13 +6,11 @@
         <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
       <% end %>
 
-      <nav role="navigation" aria-label="primary">
-        <%= render 'shared/mobile_nav', categories: category_navigation %>
+      <%= render 'shared/mobile_nav' %>
 
-        <% if display_search_box_in_header? %>
-          <%= render 'shared/search' %>
-        <% end %>
-      </nav>
+      <% if display_search_box_in_header? %>
+        <%= render 'shared/search' %>
+      <% end %>
     </div>
   </header>
 

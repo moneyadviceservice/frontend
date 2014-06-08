@@ -1,4 +1,5 @@
-<form class="search" action="<%= main_app.search_results_path %>" method="get" role="search">
+<form  action="<%= main_app.search_results_path %>" method="get"
+       role="search" class="search" id="search-bar">
   <label class="visually-hidden"><%= t('search_box.label') %></label>
   <input class="search__input" type="search" name="query" value="<%= params[:query] %>" placeholder="<%= t('search_box.placeholder') %>"/>
   <button class="search__submit" type="submit">

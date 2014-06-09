@@ -6,19 +6,19 @@
 .mobile-nav__item {
   @extend %type-navigation;
   float: left;
-  margin: $baseline-unit*2 $baseline-unit*1.5 0 0;
+  margin: $baseline-unit*1.5 $baseline-unit*1.5 $baseline-unit*1.5 0;
   border-radius: $baseline-unit/2;
   background-color: $color-green-tertiary;
 }
 
 .mobile-nav__link {
   @extend %link-nav-primary;
-  padding: $baseline-unit*1.5;
+  padding: $baseline-unit*2;
   display: block;
 }
 
 .mobile-nav__link--search {
-  padding: 9px 7px 5px 11px;
+  padding: 12px 7px 8px 11px;
 }
 
 .mobile-nav__link--menu.is-on {

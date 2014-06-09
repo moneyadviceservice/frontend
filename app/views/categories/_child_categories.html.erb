@@ -1,36 +1,18 @@
-<div class="l-2col">
-  <div class="l-2col-side">
-    <ul class="category-filter">
-      <% contents.each do |child_category| %>
-        <li class="category-filter__list-item"><%= link_to child_category.title, "##{child_category.id}" %></li>
-      <% end %>
-    </ul>
-  </div>
+<% contents.each_with_index do |child_category, i| %>
+  <section class="category-detail category-detail--<%= i+1 %>">
+    <h2 id="<%= child_category.id %>">
+      <%= link_to child_category.title, child_category.path, class: 'category-detail__heading' %>
+    </h2>
 
-  <div class="l-2col-main">
+    <p><%= child_category.description %></p>
 
-    <% contents.each_with_index do |child_category, i| %>
-      <section class="category-detail category-detail--<%= i+1 %>">
-        <h2 class="category-detail__heading" id="<%= child_category.id %>"><%= link_to child_category.title, child_category.path %></h2>
-
-        <p><%= child_category.description %></p>
-
-        <% if child_category.contents.present? %>
-          <ol class="category-detail__list">
-            <% child_category.contents.each do |content_item| %>
-              <li class="category-detail__list-item">
-                <span class="visually-hidden"><%= content_item.label %></span>
-                <%= link_to content_item.title, content_item.path %>
-              </li>
-            <% end %>
-          </ol>
-        <% end %>
-
-        <a class="link-to-top-inline" href="#top">
-          <span class="icon icon--up-arrow"></span>
-          <%= t('categories.show.go_to_top_html') %>
-        </a>
-      </section>
+    <% if child_category.contents.present? %>
+      <%= render 'content_items', contents: child_category.contents %>
     <% end %>
-  </div>
-</div>
+
+    <a class="link-to-top-inline" href="#top">
+      <span class="icon icon--up-arrow"></span>
+      <%= t('categories.show.go_to_top_html') %>
+    </a>
+  </section>
+<% end %>

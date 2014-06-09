@@ -1,77 +1,33 @@
 .category-detail {
   border-bottom: 1px solid $color-category-border;
-  &:last-child {
-    margin-bottom: $baseline-unit*6;
-  }
-}
-
-@if $responsive == true {
-  .category-detail {
-    &:nth-of-type(2n+1) {
-
-      @include respond-to($mq-m) {
-        clear: both;
-      }
-
-      @include respond-to($mq-l) {
-        clear: none;
-      }
-    }
-
-    &:nth-of-type(3n+1) {
-      @include respond-to($mq-l) {
-        clear: both;
-      }
-    }
-  }
-
-} @else {
-  // cannot use nth-of-type in IE8 so appending an nth-of-type class to stack the sections
-  .category-detail--3,
-  .category-detail--5,
-  .category-detail--7,
-  .category-detail--9,
-  .category-detail--11 {
-
-    @include respond-to($mq-m) {
-      clear: both;
-    }
-
-    @include respond-to($mq-l) {
-      clear: none;
-    }
-  }
-
-  .category-detail--4,
-  .category-detail--7,
-  .category-detail--10 {
-    @include respond-to($mq-l) {
-      clear: both;
-    }
-  }
+  margin-bottom: $baseline-unit*6;
 }
 
 .category-detail__heading {
-  a {
-    color: $color-heading-default;
-    pointer-events: none;
-    cursor: default;
+  color: $color-heading-default;
+  pointer-events: none;
+  cursor: default;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
+  &:visited {
+    color: $color-heading-default;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
   }
 }
 
 .category-detail__list {
-  @extend .unstyled-list;
-  margin-top: $baseline-unit*3;
+  list-style: none;
+  padding: 0;
+  margin-top: $baseline-unit*4;
+}
 
-  li {
-    margin-bottom: $baseline-unit*3;
-    @include respond-to($mq-m) {
-      margin-bottom: $baseline-unit*2;
-    }
+.category-detail__list-item {
+  margin-bottom: $baseline-unit*3;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*2;
   }
 }

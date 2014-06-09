@@ -1,10 +1,8 @@
-<div class="l-1col">
-  <ol class="category-detail__list contents">
-    <% contents.each do |item| %>
-      <li class="category-detail__list-item">
-        <span class="visually-hidden"><%= item.label %></span>
-        <%= link_to item.title, item.path %>
-      </li>
-    <% end %>
-  </ol>
-</div>
+<ol class="category-detail__list contents">
+  <% contents.each do |item| %>
+    <li class="category-detail__list-item">
+      <span class="visually-hidden"><%= item.label %></span>
+      <%= link_to item.title, item.path %>
+    </li>
+  <% end %>
+</ol>

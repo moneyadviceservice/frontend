@@ -86,13 +86,3 @@ Then(/^the category page should have alternate tags for the supported locales$/)
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end
-
-Then(/^I should see a filterable list of contents$/) do
-  items = current_category['contents'].map { |c| c['title'] }
-
-  expect(category_page.filterable_items.count).to eq(items.count)
-
-  category_page.filterable_items.each do |item|
-    expect(items).to include(item.text)
-  end
-end

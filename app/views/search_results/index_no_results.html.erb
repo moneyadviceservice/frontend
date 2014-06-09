@@ -8,12 +8,17 @@
   });
 </script>
 
-<main>
-  <div class="l-1col">
+<div class="l-main">
+  <main role="main">
     <h1><%= t('.page_title', query: params[:query]) %></h1>
-  </div>
-  <div class="l-search-results">
-    <%= render 'shared/search_box' %>
-    <p><%= t('.body') %></p>
-  </div>
-</main>
+
+    <div class="l-search-results">
+      <%= render 'shared/search_box' %>
+      <p><%= t('.body') %></p>
+    </div>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>

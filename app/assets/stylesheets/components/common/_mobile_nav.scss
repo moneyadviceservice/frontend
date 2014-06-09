@@ -18,9 +18,19 @@
 }
 
 .mobile-nav__link--search {
-  padding: 12px 7px 8px 11px;
+  padding: 12px 9px 8px 13px;
 }
 
 .mobile-nav__link--menu.is-on {
-  background:red;
+  &:before {
+    position: absolute;
+    bottom: 2px;
+    left: 24px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: $color-green-tertiary transparent transparent transparent;
+  }
 }

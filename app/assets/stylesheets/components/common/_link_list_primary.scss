@@ -8,6 +8,7 @@
 
 .link-list-primary__item {
   @extend .unstyled-list;
+  @include body(16, 22);
   border-bottom: 1px solid $color-link-list-primary-border-color;
 }
 

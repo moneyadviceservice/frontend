@@ -2,13 +2,6 @@
 //
 // Styleguide Breadcrumbs
 
-//.breadcrumbs {
-//
-//  ul {
-//    height: 24px;
-//  }
-//}
-
 .breadcrumbs__item {
   @include body(14, 18);
   @include inline-block;

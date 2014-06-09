@@ -18,4 +18,14 @@
   @include respond-to($mq-m) {
     @include column(3);
   }
+
+  .link-list-primary {
+    @include column(12);
+  }
+
+  .link-to-top-block {
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
 }

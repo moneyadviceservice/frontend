@@ -10,10 +10,12 @@
 }
 
 .l-nav {
-  @include column(12);
+  float: left;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 42px;
 
   @include respond-to($mq-m) {
     @include column(3);
-    margin-top: 60px;
   }
 }

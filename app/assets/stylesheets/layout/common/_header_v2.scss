@@ -22,11 +22,14 @@
   }
 
   .search {
+    border-bottom: 2px solid $color-off-white;
+
     @include respond-to($mq-m) {
       @include column(4);
       float: right;
       margin-top: $baseline-unit*3;
       margin-bottom: $baseline-unit*3;
+      border: 0;
     }
   }
 
@@ -67,8 +70,9 @@
 }
 
 .l-menu-nav {
-  background: $color-white;
   @extend %clearfix;
+  background: $color-white;
+  margin-top: 2px;
 
   @include respond-to($mq-m) {
     display:none;

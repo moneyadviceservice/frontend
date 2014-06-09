@@ -1,0 +1,6 @@
+.link-to-top-inline {
+  @extend %type-small;
+  display: block;
+  text-align: right;
+  margin-top: $baseline-unit*4;
+}

@@ -24,6 +24,7 @@
   }
 
   a {
+    @include body(14, 18);
     @include inline-block;
     text-decoration: none;
     padding: $baseline-unit*3;

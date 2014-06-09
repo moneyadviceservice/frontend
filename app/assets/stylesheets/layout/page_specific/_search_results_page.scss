@@ -1,17 +1,6 @@
-.l-search-results {
-  min-height: $baseline-unit*50;
-  @include column(12);
-
-  @include respond-to($mq-m) {
-    @include column(9);
-  }
-
-  @include respond-to($mq-l) {
-    @include column(7);
-  }
-
+.l-main {
   .search-box {
-    margin-bottom: $baseline-unit*2;
+    margin-bottom: $baseline-unit*4;
   }
 
   .search-box__input {

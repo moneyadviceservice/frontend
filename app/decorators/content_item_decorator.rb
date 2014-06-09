@@ -18,11 +18,7 @@ class ContentItemDecorator < Draper::Decorator
   end
 
   def content
-    @content ||= HTMLProcessor::NodeRemover.new(processed_body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
-  end
-
-  def intro
-    @intro ||= HTMLProcessor::NodeContents.new(processed_body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
+    processed_body.html_safe
   end
 
   def parent_categories

@@ -1,11 +1,16 @@
 <% set_meta_tags(title: t('.document_title'),
                  robots: 'noindex') %>
 
-<main>
-  <div class="l-1col">
+<div class="l-main">
+  <main role="main">
     <h1><%= t('.page_title') %></h1>
-  </div>
-  <div class="l-search-results">
-    <%= render 'shared/search_box' %>
-  </div>
-</main>
+
+    <div class="l-search-results">
+      <%= render 'shared/search_box' %>
+    </div>
+  </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>

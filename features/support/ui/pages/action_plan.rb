@@ -4,6 +4,6 @@ module UI::Pages
   class ActionPlan < UI::Page
     set_url '{/locale}/action_plans{/id}'
 
-    element :content, '#action-plan-content'
+    element :content, '.l-main'
   end
 end

@@ -2,13 +2,18 @@
                  canonical:   action_plan.canonical_url,
                  alternate:   action_plan.alternate_options) %>
 
-<div class="l-action-plan editorial">
-  <h1><%= title action_plan.title %></h1>
+<div class="l-main editorial">
+  <main role="main">
+    <h1><%= title action_plan.title %></h1>
 
-  <div id="action-plan-content">
     <%= action_plan.content %>
-  </div>
+  </main>
 </div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>
+
 <% content_for(:alternate_link) do %>
   <% action_plan.footer_alternate_options.each do |locale, url| %>
     <%= link_to(url, id: "#{locale}Link", lang: locale) do %>

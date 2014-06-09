@@ -8,4 +8,8 @@ class HomeController < ApplicationController
       @directory_categories = Core::CategoryTreeReader.new.call
     end
   end
+
+  def display_menu_button_in_header?
+    false
+  end
 end

@@ -34,6 +34,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_search_box_in_header?
 
+  def display_menu_button_in_header?
+    true
+  end
+
+  helper_method :display_menu_button_in_header?
+
   private
 
   def category_tree
@@ -45,5 +51,4 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :category_navigation
-
 end

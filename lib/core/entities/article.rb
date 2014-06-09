@@ -15,7 +15,7 @@ module Core
       end
     end
 
-    def one_parent?
+    def only_child?
       categories.compact.one?
     end
   end

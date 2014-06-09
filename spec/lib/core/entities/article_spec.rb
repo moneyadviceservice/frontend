@@ -58,21 +58,23 @@ module Core
       end
     end
 
-    describe '#one_parent?' do
-      context 'when article has more than one category' do
+    describe '#only_child?' do
+      context 'belonging to more than one category' do
         let(:categories) { [double, double] }
 
-        it { should_not be_one_parent }
+        it { expect(subject).to_not be_only_child }
       end
 
-      context 'when article has one category' do
+      context 'belonging to one category' do
         let(:categories) { [double] }
 
-        it { should be_one_parent }
+        it { expect(subject).to be_only_child }
       end
 
-      context 'when article has no categories' do
-        it { expect(subject).to_not be_one_parent }
+      context 'belonging to no categories' do
+        let(:categories) { [] }
+
+        it { expect(subject).to_not be_only_child }
       end
     end
   end

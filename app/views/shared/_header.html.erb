@@ -9,7 +9,9 @@
       <%= render 'shared/mobile_nav' %>
 
       <% if display_search_box_in_header? %>
-        <%= render 'shared/search', search_in_page_header: true %>
+        <div class="l-search" id="search-bar">
+          <%= render 'shared/search', search_in_page_header: true %>
+        </div>
       <% end %>
     </div>
   </header>

@@ -22,7 +22,7 @@
   }
 
   .search {
-    border-bottom: 2px solid $color-off-white;
+    border-bottom: 1px solid $color-search-bar-border;
 
     @include respond-to($mq-m) {
       @include column(4);
@@ -80,6 +80,10 @@
 
   .link-list-primary {
     @include column(12);
+  }
+
+  .link-list-primary__item:last-child {
+    border-bottom: 0;
   }
 }
 

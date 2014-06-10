@@ -13,7 +13,7 @@
     <h1><%= t('.page_title', query: params[:query]) %></h1>
 
     <div class="l-search-results">
-      <%= render 'shared/search_box' %>
+      <%= render 'shared/search', search_in_page_header: false %>
       <p><%= t('.body') %></p>
     </div>
   </main>

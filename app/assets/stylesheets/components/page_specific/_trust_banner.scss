@@ -4,50 +4,44 @@
 
 .trust-banner {
   position: relative;
-  height: 280px;
-  background: image_url('illustrated_people.png') 94% 100% no-repeat;
+  height: 240px;
+  background: image_url('illustrated_people.png') 100% 100% no-repeat;
+  background-size: 100%;
 
-  @include respond-to(31.875em) {
+  @include respond-to($mq-s) {
+    background-size: 40%;
     height: auto;
   }
 }
 
 .trust-banner__heading {
-  @include body(30, 36);
+  @include body(30, 30);
   color: $trust-banner-heading;
   margin: 0;
   padding-top: $baseline-unit*4;
+  padding-bottom: $baseline-unit*6;
 
   .theme-cy & {
     @include respond-to($mq-xs, $mq-s) {
-      @include body(23, 30);
+      @include body(24, 30);
     }
   }
 
-  @include respond-to(31.875em) {
-    @include body(32, 36);
-    padding-top: $baseline-unit*6;
-    padding-bottom: $baseline-unit*9;
-    max-width: 251px;
+  @include respond-to($mq-s) {
+    width: 60%;
   }
 
-  @include respond-to(38.75em) {
-    @include body(36, 42);
-    padding-top: $baseline-unit*9;
-    max-width: 360px;
+  @include respond-to($mq-m) {
+    @include body(36, 36);
+    padding-top: $baseline-unit*8;
   }
 
   @include respond-to($mq-l) {
-    max-width: 100%;
-    padding-top: $baseline-unit*11;
-    padding-bottom: $baseline-unit*13;
-
-    .theme-cy & {
-      max-width: 75%;
-    }
+    @include body(42, 42);
+    padding-bottom: $baseline-unit*12;
   }
 
-  @include respond-to(65em) {
-    @include body(40, 48);
+  @include respond-to($mq-xl) {
+    @include body(46, 46);
   }
 }

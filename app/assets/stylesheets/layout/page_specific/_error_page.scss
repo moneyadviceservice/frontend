@@ -1,3 +1,15 @@
-.l-error-page {
-  margin: $baseline-unit*15 0 $baseline-unit*29 0;
+.l-error-page-message {
+  @include column(12);
+  text-align: center;
+  margin-top: $baseline-unit*10;
+
+  p:last-child {
+    text-align: left;
+    margin-top: $baseline-unit*20;
+    margin-bottom: $baseline-unit*6;
+  }
+
+  & + .directory {
+    background-color: transparent;
+  }
 }

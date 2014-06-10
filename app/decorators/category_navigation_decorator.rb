@@ -11,6 +11,10 @@ class CategoryNavigationDecorator < Draper::Decorator
     category.title
   end
 
+  def description
+    category.description
+  end
+
   def contents
     CategoryNavigationDecorator.decorate_collection(object.children)
   end

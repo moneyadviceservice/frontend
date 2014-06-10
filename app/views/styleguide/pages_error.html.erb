@@ -1,11 +1,11 @@
-<div class="l-error-page">
-  <main>
-    <div class="error-page-message ">
-      <h1>Sorry!</h1>
+<main role="main">
+  <div class="l-error-page-message">
+    <h1>Sorry!</h1>
 
-      <p class="intro">The page you were looking for was not found</p>
+    <p>The page you were looking for was not found</p>
 
-      <a href="/" class="button button--primary">Homepage</a>
-    </div>
-  </main>
-</div>
+    <p>You might find what you’re looking for in one of the following sections.</p>
+  </div>
+
+  <%= render 'shared/directory', items: category_navigation %>
+</main>

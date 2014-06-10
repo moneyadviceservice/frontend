@@ -3,14 +3,14 @@
   <%= render 'shared/header' %>
 
   <div class="l-constrained">
-    <div class="l-error-page">
-      <main>
-        <div class="error-page-message ">
-          <%= yield %>
-          <%= link_to t('layouts.home'), root_path, class: 'button button--primary' %>
-        </div>
-      </main>
-    </div>
+    <main role="main">
+      <div class="l-error-page-message">
+
+        <%= yield %>
+
+        <%= render 'shared/directory', items: category_navigation %>
+      </div>
+    </main>
   </div>
 
   <footer class="l-footer">

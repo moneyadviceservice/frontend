@@ -20,7 +20,7 @@ cy:
 
   errors:
     show:
-      heading: Mae'n ddrwg gennym!
+      heading: Mae'n ddrwg gennym
       bad_request:
         title: Cais Drwg
       forbidden:
@@ -34,6 +34,7 @@ cy:
       not_found:
         title: Heb ei ddarganfod
         intro: Ni chanfuwyd y dudalen yr oeddech yn chwilio amdani
+        message:
       not_implemented:
         title: Heb ei Weithredu
       unauthorized:

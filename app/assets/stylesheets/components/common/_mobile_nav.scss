@@ -21,29 +21,19 @@
   padding: 12px 9px 8px 12px;
   &.is-on {
     &:before {
+      @include triangle(bottom, 7, 14, $color-green-tertiary);
       position: absolute;
       bottom: 2px;
       right: 20px;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 7px 7px 0 7px;
-      border-color: $color-green-tertiary transparent transparent transparent;
     }
   }
 }
 
 .mobile-nav__link--menu.is-on {
   &:before {
+    @include triangle(bottom, 7, 14, $color-green-tertiary);
     position: absolute;
     bottom: 2px;
     left: 24px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 7px 7px 0 7px;
-    border-color: $color-green-tertiary transparent transparent transparent;
   }
 }

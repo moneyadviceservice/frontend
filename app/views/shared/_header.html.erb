@@ -1,40 +1,15 @@
-<% if Feature.active?(:new_header) %>
+<header class="l-header" role="banner">
+  <div class="l-constrained">
+    <%= link_to root_path do %>
+      <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
+    <% end %>
 
-  <header class="l-header" role="banner">
-    <div class="l-constrained">
-      <%= link_to root_path do %>
-        <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
-      <% end %>
-
-      <%= render 'shared/mobile_nav' %>
-
-      <% if display_search_box_in_header? %>
-        <div class="l-search" id="search-bar">
-          <%= render 'shared/search', search_in_page_header: true %>
-        </div>
-      <% end %>
-    </div>
-  </header>
-
-<% else %>
-
-  <header class="l-header" role="banner">
-    <div class="l-constrained">
-      <%= link_to root_path do %>
-        <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
-      <% end %>
-
-      <nav role="navigation" aria-label="primary">
-        <%= render 'shared/mobile_nav', categories: category_navigation %>
-        <%= render 'shared/primary_nav', categories: category_navigation %>
-      </nav>
-    </div>
+    <%= render 'shared/mobile_nav' %>
 
     <% if display_search_box_in_header? %>
-      <div class="l-header__search" id="search-bar">
-        <%= render 'shared/search_box' %>
+      <div class="l-search" id="search-bar">
+        <%= render 'shared/search', search_in_page_header: true %>
       </div>
     <% end %>
-  </header>
-
-<% end %>
+  </div>
+</header>

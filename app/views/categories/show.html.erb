@@ -3,7 +3,7 @@
                  description: category.description) %>
 
 <% content_for(:context_bar) do %>
-  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs unless breadcrumbs.empty? %>
 <% end %>
 
 <div class="l-main editorial">

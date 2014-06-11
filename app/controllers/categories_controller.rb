@@ -10,8 +10,6 @@ class CategoriesController < ApplicationController
       not_found
     end
 
-    @breadcrumbs = Core::BreadcrumbsReader.new(params[:id], category_tree).call do
-      Core::CategoryParentsReader.new(@category).call
-    end
+    @breadcrumbs = Core::BreadcrumbsReader.new(params[:id], category_tree).call { [] }
   end
 end

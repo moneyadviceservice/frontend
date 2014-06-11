@@ -2,7 +2,7 @@
 
   <%= render 'shared/header' %>
 
-  <div class="l-constrained">
+  <div class="l-constrained l-error-page">
     <main role="main">
       <div class="l-error-page-message">
 
@@ -10,7 +10,7 @@
 
       </div>
 
-      <%= render 'shared/directory', items: category_navigation %>
+      <%= yield(:directory) %>
     </main>
   </div>
 

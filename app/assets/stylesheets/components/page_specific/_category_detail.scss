@@ -1,20 +1,30 @@
 .category-detail {
-  border-bottom: 1px solid $color-category-border;
+  border-bottom: 3px solid $color-category-border;
   margin-bottom: $baseline-unit*6;
+  padding-left: 42px;
+  padding-bottom: $baseline-unit*4;
 }
 
 .category-detail__heading {
-  color: $color-heading-default;
-  pointer-events: none;
-  cursor: default;
+  position: relative;
+  left: -42px;
 
-  &:visited {
-    color: $color-heading-default;
+  .icon {
+    padding-right: $baseline-unit*5;
   }
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  a {
+    //  pointer-events: none;
+    //  cursor: default;
+    color: $color-heading-default;
+    &:visited {
+      color: $color-heading-default;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 

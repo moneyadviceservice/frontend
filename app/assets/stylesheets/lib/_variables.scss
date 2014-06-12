@@ -37,6 +37,7 @@ $color-submenu-border: $color-green-primary !default;
 $color-submenu-list-border: $color-grey-palest !default;
 
 $color-skip-to-content: $color-grey-pale !default;
+$color-search-bar-border: $color-grey-pale;
 
 // Category Pages
 $color-category-border: $color-grey-paleo !default;
@@ -60,7 +61,9 @@ $color-cookie-message-button-background: $color-green-secondary !default;
 
 // Link Lists - category nav
 $color-link-list-primary-border-color: $color-grey-pale !default;
-$color-link-list-background: $color-grey-pale !default;
+$color-link-list-background: $color-white !default;
+$color-link-to-top-background: $color-grey-pale !default;
+$color-link-list-selected-background: $color-grey-pale !default;
 $color-link-list-arrow: $color-bluegrey-dark !default;
 
 // Contact

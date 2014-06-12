@@ -4,12 +4,8 @@
 
 <%= render 'shared/trust_banner' %>
 
-<% if Feature.active?(:dynamic_directory) %>
-  <div class="temp-dynamic-directory-container">
-    <%= render 'shared/directory', items: category_navigation %>
-  </div>
-<% else %>
-  <%= render 'shared/directory', items: t('.featured').map(&:to_ostruct) %>
-<% end %>
+<div class="temp-dynamic-directory-container">
+  <%= render 'shared/directory', items: category_navigation %>
+</div>
 
 <%= render 'shared/promos', items: t('.promoted') %>

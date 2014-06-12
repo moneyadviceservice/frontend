@@ -35,15 +35,23 @@ require(['common'], function(MAS) {
 
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
-      // Primary Nav
-      new Collapsable({
-        name: 'primaryNav',
-        closeOffFocus: true,
-        accordion: true,
-        triggerEl: '#primary-nav > li > a',
-        targetEl: '.primary-nav__dropdown',
-        parentWrapper: '#primary-nav'
-      });
+
+      if ($('.primary-nav').length > 0) {
+        // Primary Nav
+        new Collapsable({
+          name: 'primaryNav',
+          closeOffFocus: true,
+          accordion: true,
+          triggerEl: '#primary-nav > li > a',
+          targetEl: '.primary-nav__dropdown',
+          parentWrapper: '#primary-nav'
+        });
+      } else {
+        $('#primary-nav')
+            .clone()
+            .insertAfter('.mobile-nav')
+            .wrap('<div class="l-menu-nav"></div>');
+      }
 
       // Mobile Nav
       new Collapsable({

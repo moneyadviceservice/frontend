@@ -22,6 +22,6 @@ module UI
     section :footer_social_links, UI::Sections::FooterSocialLinks, '.footer-social-links'
     section :opt_out_bar, UI::Sections::OptOutBar, '.opt-out'
     section :header, UI::Sections::Header, '.l-header'
-    section :search_box, UI::Sections::SearchBox, '.search-box'
+    section :search_box, UI::Sections::SearchBox, '.search'
   end
 end

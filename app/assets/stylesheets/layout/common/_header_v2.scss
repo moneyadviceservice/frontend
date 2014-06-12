@@ -10,7 +10,8 @@
   .mas-logo {
     @include respond-to($mq-m) {
       float: left;
-      margin-top: $baseline-unit;
+      margin-top: $baseline-unit*1.5;
+      margin-bottom: $baseline-unit*1.5;
     }
   }
 
@@ -22,15 +23,30 @@
   }
 
   .search {
+    width: 100%;
+    margin: 0;
+  }
+
+  .l-search {
+    background-color: $color-grey-pale;
+    padding: $baseline-unit*3 $baseline-unit;
+
     @include respond-to($mq-m) {
+      padding: 0;
+
       @include column(4);
       float: right;
       margin-top: $baseline-unit*3;
       margin-bottom: $baseline-unit*3;
+
+      .search__input {
+        border: 0;
+      }
     }
   }
 
-  .js & .mobile-nav {
+
+  .mobile-nav {
     display: block;
     position: absolute;
     top: 0;
@@ -41,8 +57,19 @@
     }
   }
 
-  .js & .primary-nav,
-  .js & .l-header__search {
+  .no-js & .mobile-nav__item--search {
+    display: none;
+  }
+
+  .js & .nav {
+    display: none;
+
+    &.is-on {
+      display: block;
+    }
+  }
+
+  .js & .l-search {
     display: none;
 
     &.is-on {
@@ -53,7 +80,24 @@
       display: block;
     }
   }
+}
 
+.l-menu-nav {
+  @extend %clearfix;
+  background: $color-white;
+  margin-top: 2px;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+
+  .link-list-primary {
+    @include column(12);
+  }
+
+  .link-list-primary__item:last-child {
+    border-bottom: 0;
+  }
 }
 
 // 1. Hide by default as don't want non-js users to see all sub-category links as page will be unusable.

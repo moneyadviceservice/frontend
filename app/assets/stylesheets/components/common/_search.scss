@@ -7,7 +7,7 @@
 
   .search__input {
     @extend %font-body;
-    height: $baseline-unit*7;
+    height: $baseline-unit*8;
     padding-left: $baseline-unit*2;
     background-color: $color-white;
     border: 1px solid $color-bluegrey-light;
@@ -28,16 +28,16 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: $baseline-unit*7;
-  height: $baseline-unit*7;
+  width: $baseline-unit*8;
+  height: $baseline-unit*8;
   font-size: 24px;
   color: $color-search-text;
 
   .icon--search {
     @include search-icon-colour(green);
     position: absolute;
-    top: $baseline-unit*2;
-    left: $baseline-unit*2;
+    top: $baseline-unit*2.5;
+    left: $baseline-unit*2.5;
   }
 
   &:focus {
@@ -52,7 +52,7 @@
 
 .search__submit--green {
   @include respond-to($mq-m) {
-    background-color: $color-search-background;
+    background-color: $color-header-buttons;
     border-bottom-right-radius: $baseline-unit/2;
     border-top-right-radius: $baseline-unit/2;
 

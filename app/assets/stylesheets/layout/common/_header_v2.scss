@@ -1,7 +1,7 @@
 .l-header {
   position: relative;
   background: $color-green-primary;
-  min-height: $baseline-unit*10;
+  min-height: $baseline-unit*11;
 
   .mobile-nav {
     display: none;
@@ -30,8 +30,11 @@
   .l-search {
     background-color: $color-grey-pale;
     padding: $baseline-unit*3 $baseline-unit;
+    border-bottom: 1px solid $color-white;
+
 
     @include respond-to($mq-m) {
+      border: 0;
       background-color: transparent;
       padding: 0;
 

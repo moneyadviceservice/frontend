@@ -8,20 +8,20 @@
   float: left;
   margin: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 0;
   border-radius: $baseline-unit/2;
-  background-color: $color-green-tertiary;
+  background-color: $color-header-buttons;
 }
 
 .mobile-nav__link {
   @extend %link-nav-primary;
-  padding: $baseline-unit*2;
+  padding: $baseline-unit*2.5;
   display: block;
 }
 
 .mobile-nav__link--search {
-  padding: 12px 9px 8px 12px;
+  padding: 15px 10px 11px 12px;
   &.is-on {
     &:before {
-      @include triangle(bottom, 7, 14, $color-green-tertiary);
+      @include triangle(bottom, 7, 14, $color-header-buttons);
       position: absolute;
       bottom: 2px;
       right: 20px;
@@ -31,9 +31,9 @@
 
 .mobile-nav__link--menu.is-on {
   &:before {
-    @include triangle(bottom, 7, 14, $color-green-tertiary);
+    @include triangle(bottom, 7, 14, $color-header-buttons);
     position: absolute;
     bottom: 2px;
-    left: 24px;
+    left: 27px;
   }
 }

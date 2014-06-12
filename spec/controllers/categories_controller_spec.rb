@@ -1,4 +1,3 @@
-require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/category_reader'
 require 'core/interactors/category_tree_reader'
 
@@ -19,9 +18,7 @@ RSpec.describe CategoriesController, :type => :controller do
           instance_double(Core::CategoryReader, call: category)
         end
 
-        allow(Core::BreadcrumbsReader).to receive(:new) do
-          instance_double(Core::BreadcrumbsReader, call: breadcrumbs)
-        end
+        allow(BreadcrumbTrail).to receive(:build) { breadcrumbs }
       end
 
       it 'is successful' do

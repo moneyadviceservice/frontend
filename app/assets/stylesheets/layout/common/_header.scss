@@ -56,7 +56,7 @@
 
 .l-header__search {
   @extend %clearfix;
-  background-color: $color-search-background;
+  background-color: $color-header-buttons;
   padding: $baseline-unit 0;
 
   .search-box {

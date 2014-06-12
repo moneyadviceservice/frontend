@@ -1,8 +1,14 @@
 <% set_meta_tags(title: t(".#{@rescue_response}.title")) %>
 
-<h1>
-  <%= t(".#{@rescue_response}.heading", default: t('.heading')) %>
-</h1>
-<p class="intro">
-  <%= t(".#{@rescue_response}.intro", default: t(".#{@rescue_response}.title")) %>
-</p>
+<h1><%= t(".#{@rescue_response}.heading", default: t('.heading')) %></h1>
+
+<p class="error-page__text"><%= t(".#{@rescue_response}.intro", default: t(".#{@rescue_response}.title")) %></p>
+
+<% if @rescue_response == :not_found %>
+  <p class="error-page__directory-text"><%= t('.not_found.message') %></p>
+
+  <%= content_for(:directory) do %>
+    <%= render 'shared/directory', items: category_navigation %>
+  <% end %>
+<% end %>
+

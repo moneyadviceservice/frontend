@@ -20,7 +20,7 @@ cy:
 
   errors:
     show:
-      heading: Mae'n ddrwg gennym!
+      heading: Mae'n ddrwg gennym
       bad_request:
         title: Cais Drwg
       forbidden:
@@ -33,7 +33,9 @@ cy:
         title: Annerbyniol
       not_found:
         title: Heb ei ddarganfod
-        intro: Ni chanfuwyd y dudalen yr oeddech yn chwilio amdani
+        intro: Ni allwn ddod o hyd i’r dudalen hon
+        message: |
+          Mae’n bosibl y byddwch yn dod o hyd i’r hyn rydych yn chwilio amdano yn un o’r categorïau isod:
       not_implemented:
         title: Heb ei Weithredu
       unauthorized:

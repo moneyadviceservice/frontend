@@ -20,7 +20,7 @@ en:
 
   errors:
     show:
-      heading: Sorry!
+      heading: Sorry
       bad_request:
         title: Bad Request
       forbidden:
@@ -33,7 +33,9 @@ en:
         title: Not Acceptable
       not_found:
         title: Not Found
-        intro: The page you were looking for was not found
+        intro: We can't find this page
+        message: |
+          You may find what you're looking for in one of the categories below:
       not_implemented:
         title: Not Implemented
       unauthorized:

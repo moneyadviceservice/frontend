@@ -39,6 +39,7 @@
 
 .footer-site-links__internal-links {
   @extend %clearfix;
+  @extend .unstyled-list;
   padding: $baseline-unit*3 0;
 }
 

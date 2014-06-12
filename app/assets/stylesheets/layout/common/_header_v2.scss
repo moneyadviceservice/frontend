@@ -32,6 +32,7 @@
     padding: $baseline-unit*3 $baseline-unit;
 
     @include respond-to($mq-m) {
+      background-color: transparent;
       padding: 0;
 
       @include column(4);
@@ -41,6 +42,7 @@
 
       .search__input {
         border: 0;
+        border-radius: $baseline-unit/2;
       }
     }
   }

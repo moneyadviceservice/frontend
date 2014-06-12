@@ -53,6 +53,8 @@
 .search__submit--green {
   @include respond-to($mq-m) {
     background-color: $color-search-background;
+    border-bottom-right-radius: $baseline-unit/2;
+    border-top-right-radius: $baseline-unit/2;
 
     .icon--search {
       @include search-icon-colour(white);

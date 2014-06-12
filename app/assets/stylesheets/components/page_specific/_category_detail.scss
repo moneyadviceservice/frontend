@@ -1,19 +1,23 @@
 .category-detail {
   border-bottom: 3px solid $color-category-border;
   margin-bottom: $baseline-unit*6;
-  padding-left: 42px;
   padding-bottom: $baseline-unit*4;
 }
 
-.category-detail__heading {
-  position: relative;
-  left: -42px;
+.category-detail--parent {
+  padding-left: 42px;
 
-  .icon {
-    padding-right: $baseline-unit*5;
+  .category-detail__heading {
+    position: relative;
+    left: -42px;
+    .icon {
+      padding-right: $baseline-unit*5;
+    }
   }
 
-  a {
+}
+
+.category-detail__link {
     //  pointer-events: none;
     //  cursor: default;
     color: $color-heading-default;
@@ -25,7 +29,6 @@
     &:focus {
       text-decoration: none;
     }
-  }
 }
 
 .category-detail__list {

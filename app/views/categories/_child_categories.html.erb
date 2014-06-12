@@ -1,7 +1,11 @@
 <% contents.each_with_index do |child_category, i| %>
   <section class="category-detail category-detail--<%= i+1 %>">
-    <h2 id="<%= child_category.id %>">
-      <%= link_to child_category.title, child_category.path, class: 'category-detail__heading' %>
+    <h2 class="category-detail__heading" id="<%= child_category.id %>">
+      <%= link_to child_category.path, class: '' do %>
+        <span class="icon icon--plus"></span>
+        <span class="visually-hidden">Expand</span>
+        <%= child_category.title %>
+      <% end %>
     </h2>
 
     <p><%= child_category.description %></p>
@@ -9,10 +13,5 @@
     <% if child_category.contents.present? %>
       <%= render 'content_items', contents: child_category.contents %>
     <% end %>
-
-    <a class="link-to-top-inline" href="#top">
-      <span class="icon icon--up-arrow"></span>
-      <%= t('back_to_top') %>
-    </a>
   </section>
 <% end %>

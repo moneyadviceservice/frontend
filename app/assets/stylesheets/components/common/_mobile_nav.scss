@@ -18,13 +18,13 @@
 }
 
 .mobile-nav__link--search {
-  padding: 15px 10px 11px 12px;
+  padding: 15px 13px 11px 15px;
   &.is-on {
     &:before {
       @include triangle(bottom, 7, 14, $color-header-buttons);
       position: absolute;
       bottom: 2px;
-      right: 20px;
+      right: 23px;
     }
   }
 }

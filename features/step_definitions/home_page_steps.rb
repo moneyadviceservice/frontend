@@ -43,7 +43,7 @@ Then(/^I should see information about contacting the Money Advice Service call c
     to have_content(strip_tags(I18n.t('contact.introduction')))
 
   expect(home_page.contact_number).
-    to have_content(strip_tags('0300 500 5000'))
+    to have_content(I18n.t('contact.telephone_number'))
 end
 
 Then(/^I should be taken to that social media profile$/) do

@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:50 GMT
+      - Fri, 13 Jun 2014 07:50:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - c49a7e8d459cc934ec2b772703e48f29
+      - c513a7806bccd8e7059e7f0848b86b57
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:50 GMT; secure
-      - _session_id=c49a7e8d459cc934ec2b772703e48f29; path=/; secure; HttpOnly
-      - _web_tracking=8dd796d95639e944342bfcc7387215b9; path=/; expires=Sat, 06-Jun-2015
-        07:59:50 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:38 GMT; secure
+      - _session_id=c513a7806bccd8e7059e7f0848b86b57; path=/; secure; HttpOnly
+      - _web_tracking=9f57e9f807ff80d4cdd32809464091a6; path=/; expires=Sat, 13-Jun-2015
+        07:50:38 GMT; secure
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       X-Runtime:
-      - '0.175924'
+      - '0.409577'
       X-Rack-Cache:
       - miss
       P3p:
@@ -61,14 +61,7 @@ http_interactions:
         am hanfodion buddsoddi, sut i lunio cynllun buddsoddi, a deall eich agwedd
         tuag at risg.","parent_id":"saving-and-investing","contents":[{"id":"buddsoddi-canllaw-i-ddechreuwyr","type":"guide","title":"Buddsoddi
         \u2013 canllaw i ddechreuwyr","description":"Gall defnyddio buddsoddiadau
-        wella eich elw \u2013 a lledaenu''r risg"},{"id":"asesu-perfformiad-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Asesu
-        perfformiad eich cynilion a''ch buddsoddiadau","description":"Sut i fesur
-        perfformiad eich cynilion a''ch buddsoddiadau i weld pa mor galed y maent
-        yn gweithio a phenderfynu p''un a ddylech wneud newidiadau"},{"id":"eglurhad-o-ddosbarthiadau-asedau","type":"guide","title":"Eglurhad
-        o ddosbarthiadau asedau","description":"Gallai\u2019r gymysgedd o ddosbarthiadau
-        asedau \u2013 megis arian parod, llog sefydlog a chyfranddaliadau gyfrif am
-        rhwng traean a thri chwarter o\u2019r amrywiaeth mewn elw rhwng gwahanol bortffolios
-        buddsoddi."},{"id":"cynilo-a-buddsoddi-moesegol","type":"guide","title":"Cynilo
+        wella eich elw \u2013 a lledaenu''r risg"},{"id":"cynilo-a-buddsoddi-moesegol","type":"guide","title":"Cynilo
         a buddsoddi moesegol","description":"Os ydych am gefnogi arferion gweithio
         teg a hoffech osgoi buddsoddi yn y ras arfau, tybaco a hapchwarae, gallai
         cynilo a buddsoddi moesegol fod yn iawn i chi"},{"id":"gair-o-gyngor-ar-gyfer-dewis-buddsoddiadau","type":"guide","title":"Gair
@@ -88,14 +81,28 @@ http_interactions:
         buddsoddi mewn eiddo ac am y ffyrdd gwahanol o fuddsoddi"},{"id":"beth-fydd-yn-digwydd-pan-fydd-eich-cronfa-gydag-elw-yn-cau","type":"guide","title":"Beth
         fydd yn digwydd pan fydd eich cronfa gydag elw yn cau","description":"A yw
         eich polisi gydag elw yn trosglwyddo i gwmni yswiriant newydd neu''n cau i
-        fuddsoddwyr newydd? Dyma''r wybodaeth sydd angen i chi ei gwybod"},{"id":"adolygwch-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Adolygwch
+        fuddsoddwyr newydd? Dyma''r wybodaeth sydd angen i chi ei gwybod"},{"id":"cynhyrchion-buddsoddi-risg-uchel","type":"guide","title":"Cynhyrchion
+        buddsoddi risg uchel","description":"Gall buddsoddiadau risg uchel gynnig
+        cyfle i ennill gwobrau mawr \u2013 ond os byddwch yn mynd amdani, mae angen
+        i chi wybod yn union beth sy''n eich wynebu"},{"id":"digollediad-os-ydych-wedi-colli-arian-trwy-gam-werthu","type":"guide","title":"Digollediad
+        os ydych wedi colli arian trwy gam-werthu","description":"Gwiriwch beth allech
+        ei gael gan y Cynllun Digolledu Gwasanaethau Ariannol os ydych wedi colli
+        arian wedi derbyn cyngor ariannol gwael"},{"id":"cam-werthu-ariannol-beth-iw-wneud-os-ydych-wedich-effeithio","type":"guide","title":"Cam-werthu
+        ariannol \u2013 beth i\u2019w wneud os ydych wedi\u2019ch effeithio","description":"A
+        gam-werthwyd cynnyrch ariannol i chi, fel yswiriant neu fuddsoddiad? Efallai
+        y bydd gennych achos i gwyno a chael digollediad"},{"id":"beth-iw-wneud-pan-fydd-pethaun-mynd-o-chwith-taliadau","type":"guide","title":"Beth
+        i\u2019w wneud pan fydd pethau\u2019n mynd o chwith \u2013 taliadau","description":"Camau
+        syml i osgoi problemau gyda thaliadau a throsglwyddiadau, a chyngor ar roi
+        trefn ar broblemau sy\u2019n codi"},{"id":"eglurhad-o-ddosbarthiadau-asedau","type":"guide","title":"Eglurhad
+        o ddosbarthiadau asedau","description":"Gallai\u2019r gymysgedd o ddosbarthiadau
+        asedau \u2013 megis arian parod, llog sefydlog a chyfranddaliadau gyfrif am
+        rhwng traean a thri chwarter o\u2019r amrywiaeth mewn elw rhwng gwahanol bortffolios
+        buddsoddi."},{"id":"asesu-perfformiad-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Asesu
+        perfformiad eich cynilion a''ch buddsoddiadau","description":"Sut i fesur
+        perfformiad eich cynilion a''ch buddsoddiadau i weld pa mor galed y maent
+        yn gweithio a phenderfynu p''un a ddylech wneud newidiadau"},{"id":"adolygwch-eich-cynilion-ach-buddsoddiadau","type":"guide","title":"Adolygwch
         eich cynilion a''ch buddsoddiadau","description":"Gwnewch i''ch arian weithio''n
-        galetach \u2013 pryd, pam a sut i fwrw golwg dros eich cynilion a''ch buddsoddiadau"},{"id":"gwybodaeth-allweddol-a-chyfnodau-ailfeddwl","type":"guide","title":"Gwybodaeth
-        allweddol a chyfnodau ailfeddwl","description":"Mae penderfyniadau buddsoddi
-        da yn gofyn am wybodaeth ac amser \u2013 felly gofynnwch am y ffeithiau allweddol
-        a defnyddiwch eich cyfnod ailfeddwl"},{"id":"deall-ffioedd-buddsoddi","type":"guide","title":"Deall
-        ffioedd buddsoddi","description":"Y gwahanol fathau o ffioedd buddsoddi y
-        gellid eu codi arnoch a''r pethau sydd angen i chi eu hystyried cyn eu talu"},{"id":"dechrau-arni-gyda-buddsoddi","type":"action_plan","title":"Cynllun
+        galetach \u2013 pryd, pam a sut i fwrw golwg dros eich cynilion a''ch buddsoddiadau"},{"id":"dechrau-arni-gyda-buddsoddi","type":"action_plan","title":"Cynllun
         gweithredu - Dechrau arni gyda buddsoddi","description":"Canfyddwch y lleoedd
         mwyaf priodol i fuddsoddi\u2019ch arian"},{"id":"dysgu-mwy-am-fuddsoddi","type":"guide","title":"Dysgu
         mwy am fuddsoddi","description":"Gall gwybod am y newyddion diweddaraf am
@@ -123,10 +130,15 @@ http_interactions:
         yn lledaenu''r risgiau"},{"id":"sut-i-brynu-buddsoddiadau","type":"guide","title":"Sut
         i brynu buddsoddiadau","description":"Byddwch yn wyliadwrus o dwyll a pheidiwch
         \u00e2 chael eich perswadio i brynu cynhyrchion nad ydych yn eu deall neu
-        os nad yw\u2019r taliadau a\u2019r risgiau yn glir ichi"},{"id":"cynhyrchion-buddsoddi-risg-uchel","type":"guide","title":"Cynhyrchion
-        buddsoddi risg uchel","description":"Gall buddsoddiadau risg uchel gynnig
-        cyfle i ennill gwobrau mawr \u2013 ond os byddwch yn mynd amdani, mae angen
-        i chi wybod yn union beth sy''n eich wynebu"}]}'
+        os nad yw\u2019r taliadau a\u2019r risgiau yn glir ichi"},{"id":"deall-ffioedd-buddsoddi","type":"guide","title":"Deall
+        ffioedd buddsoddi","description":"Y gwahanol fathau o ffioedd buddsoddi y
+        gellid eu codi arnoch a''r pethau sydd angen i chi eu hystyried cyn eu talu"},{"id":"gwybodaeth-allweddol-a-chyfnodau-ailfeddwl","type":"guide","title":"Gwybodaeth
+        allweddol a chyfnodau ailfeddwl","description":"Mae penderfyniadau buddsoddi
+        da yn gofyn am wybodaeth ac amser \u2013 felly gofynnwch am y ffeithiau allweddol
+        a defnyddiwch eich cyfnod ailfeddwl"},{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:50 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:40 GMT
 recorded_with: VCR 2.9.2

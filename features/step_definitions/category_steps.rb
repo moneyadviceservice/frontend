@@ -16,15 +16,6 @@ When(/^I view a category containing child categories in (.*)$/) do |language|
   browse_to_category(category_containing_child_categories, locale)
 end
 
-When(/^I view a category containing child and grandchild categories$/) do
-  step 'I view a category containing child and grandchild categories in English'
-end
-
-When(/^I view a category containing child and grandchild categories in (.*)$/) do |language|
-  locale = language_to_locale(language)
-  browse_to_category(category_containing_child_and_grandchild_categories, locale)
-end
-
 Then(/^I should see the category name and description$/) do
   expect(category_page.heading).to have_content(current_category.title)
   expect(category_page.description).to have_content(current_category.description)
@@ -55,17 +46,6 @@ Then(/^I should see the child categories$/) do
 
   category_page.child_categories.each do |child_category|
     expect(child_categories).to include(child_category.title.text)
-  end
-end
-
-Then(/^I should see the grandchild categories$/) do
-  current_category.contents.each_with_index do |child_category, i|
-    grandchild_categories = child_category.contents.map { |c| c.title }
-    expect(category_page.child_categories[i].items.count).to eq(grandchild_categories.count)
-
-    category_page.child_categories[i].items.each do |item|
-      expect(grandchild_categories).to include(item.text)
-    end
   end
 end
 

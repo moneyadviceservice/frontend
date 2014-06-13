@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:48 GMT
+      - Fri, 13 Jun 2014 07:50:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 2345ac0a562695b072c76cf5de34ee20
+      - 78bc06182d901f6b24339faf9447d1c1
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:47 GMT; secure
-      - _session_id=2345ac0a562695b072c76cf5de34ee20; path=/; secure; HttpOnly
-      - _web_tracking=821e0887abdbb284fb511c2b15f50b36; path=/; expires=Sat, 06-Jun-2015
-        07:59:47 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:36 GMT; secure
+      - _session_id=78bc06182d901f6b24339faf9447d1c1; path=/; secure; HttpOnly
+      - _web_tracking=2f91a3a6fe4e0d8515de920929f22280; path=/; expires=Sat, 13-Jun-2015
+        07:50:36 GMT; secure
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       X-Runtime:
-      - '0.389664'
+      - '1.249615'
       X-Rack-Cache:
       - miss
       P3p:
@@ -58,7 +58,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":"saving-and-investing","title":"Cynilo a buddsoddi","description":"Sut
-        i gynilo arian, mathau o gyfrifon cynilo a rhoi cychwyn arni gyda buddsoddi.","parent_id":"money-topics","contents":[{"id":"how-to-save-money","type":"category","title":"Sut
+        i gynilo arian, mathau o gyfrifon cynilo a rhoi cychwyn arni gyda buddsoddi.","parent_id":null,"contents":[{"id":"how-to-save-money","type":"category","title":"Sut
         i gynilo arian","description":"Cyfrifwch faint allwch fforddio ei gynilo a
         dysgwch sut i sefydlu a chyrraedd eich nod cynilo."},{"id":"savings-types","type":"category","title":"Mathau
         o gynilo","description":"Dysgwch am gyfrifon cynilo, ISAs arian parod a sut
@@ -68,5 +68,5 @@ http_interactions:
         o fuddsoddiad","description":"Gwybodaeth am stociau a chyfranddaliadau, bondiau
         buddsoddi, cronfeydd tracio, polis\u00efau gydag-elw a gwaddol."}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:48 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:38 GMT
 recorded_with: VCR 2.9.2

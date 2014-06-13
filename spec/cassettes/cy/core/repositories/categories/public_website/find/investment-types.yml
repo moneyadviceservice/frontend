@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:51 GMT
+      - Fri, 13 Jun 2014 07:50:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 1c6c027adceab193163c644ec95e7478
+      - d2ffb7adebd5a35e036ac81459992c42
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:51 GMT; secure
-      - _session_id=1c6c027adceab193163c644ec95e7478; path=/; secure; HttpOnly
-      - _web_tracking=5bf658ce4950de8bc6ae1133e847732c; path=/; expires=Sat, 06-Jun-2015
-        07:59:51 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:39 GMT; secure
+      - _session_id=d2ffb7adebd5a35e036ac81459992c42; path=/; secure; HttpOnly
+      - _web_tracking=79d3ccac759c6564342d0a4521830ee7; path=/; expires=Sat, 13-Jun-2015
+        07:50:39 GMT; secure
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       X-Runtime:
-      - '0.293348'
+      - '0.272888'
       X-Rack-Cache:
       - miss
       P3p:
@@ -125,5 +125,5 @@ http_interactions:
         ei reoli ar eich rhan ac sy''n cynnwys aswiriant bywyd? Gallai cronfa gydag
         elw fod yn addas ar eich cyfer chi"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:51 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:41 GMT
 recorded_with: VCR 2.9.2

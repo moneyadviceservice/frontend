@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      - ead010c5-09c9-44b3-b502-feccc02c1dea
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:53 GMT
+      - Fri, 13 Jun 2014 07:50:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 066e40051a5a7e2a30781ba56b7df8de
+      - a7d4d2354bd0e261bcaec0c58f717f42
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:52 GMT; secure
-      - _session_id=066e40051a5a7e2a30781ba56b7df8de; path=/; secure; HttpOnly
-      - _web_tracking=b6e799b4635bb3b96faf82a0440a63cb; path=/; expires=Sat, 06-Jun-2015
-        07:59:52 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:32 GMT; secure
+      - _session_id=a7d4d2354bd0e261bcaec0c58f717f42; path=/; secure; HttpOnly
+      - _web_tracking=70d5a84f1f951bd88630a57134b0daa6; path=/; expires=Sat, 13-Jun-2015
+        07:50:32 GMT; secure
       X-Request-Id:
-      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      - ead010c5-09c9-44b3-b502-feccc02c1dea
       X-Runtime:
-      - '0.446912'
+      - '0.496044'
       X-Rack-Cache:
       - miss
       P3p:
@@ -58,7 +58,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":"saving-and-investing","title":"Saving and investing","description":"How
-        to save money, types of savings account, and getting started with investing.","parent_id":"money-topics","contents":[{"id":"how-to-save-money","type":"category","title":"How
+        to save money, types of savings account, and getting started with investing.","parent_id":null,"contents":[{"id":"how-to-save-money","type":"category","title":"How
         to save money","description":"Work out how much you can afford to save and
         find out how to set and reach your savings goal."},{"id":"savings-types","type":"category","title":"Types
         of savings","description":"Learn about savings accounts, cash ISAs, and how
@@ -68,5 +68,5 @@ http_interactions:
         of investment","description":"Information about stocks and shares, investment
         bonds, tracker funds, with-profits and endowment policies."}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:53 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:33 GMT
 recorded_with: VCR 2.9.2

@@ -10,20 +10,20 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:57:52 GMT
+      - Fri, 13 Jun 2014 07:19:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,52 +33,139 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Session-Id:
-      - 6f80a3a59b12e5d7e5b250ae54e28217
+      - 27400b0996b9df953479a6182e64bd8d
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:52 GMT; secure
-      - _session_id=6f80a3a59b12e5d7e5b250ae54e28217; path=/; secure; HttpOnly
-      - _web_tracking=ed659503c850af958f71d92db1feca70; path=/; expires=Sat, 06-Jun-2015
-        07:57:52 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:19:02 GMT; secure
+      - _session_id=27400b0996b9df953479a6182e64bd8d; path=/; secure; HttpOnly
+      - _web_tracking=0e83f15a52895b2e7d8f236c61c5fa81; path=/; expires=Sat, 13-Jun-2015
+        07:19:02 GMT; secure
       X-Request-Id:
-      - 598ee20f-8a58-48da-8587-50eb0ba46c69
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
       X-Runtime:
-      - '0.138901'
+      - '0.076592'
       X-Rack-Cache:
       - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
     body:
       encoding: UTF-8
-      string: '{"id":"money-topics","title":"Money topics","description":"Saving and
-        investing, borrowing and debt, homes and mortgages, insurance, pensions and
-        retirement","parent_id":null,"contents":[{"id":"debt-and-borrowing","type":"category","title":"Debt
-        and borrowing","description":"Taking control of debt, getting free debt advice,
-        and how to borrow affordably."},{"id":"budgeting-and-managing-money","type":"category","title":"Budgeting
-        and managing money","description":"Advice on running a bank account, planning
-        your finances, and cutting costs."},{"id":"saving-and-investing","type":"category","title":"Saving
-        and investing","description":"How to save money, types of savings account,
-        and getting started with investing."},{"id":"pensions-and-retirement","type":"category","title":"Pensions
-        and retirement","description":"How and when to start saving for a pension,
-        getting the most from your pension\r\n                                fund
-        and managing your money in retirement\r\n                            "},{"id":"benefits","type":"category","title":"Benefits","description":"Find
-        out what benefits you''re entitled to and learn about Universal Credit."},{"id":"births-deaths-and-family","type":"category","title":"Births,
-        deaths and family","description":"Having a baby, making a will, and dealing
-        with divorce and separation."},{"id":"insurance","type":"category","title":"Insurance","description":"Help
-        and advice on protecting your family and getting the right home and car insurance."},{"id":"homes-and-mortgages","type":"category","title":"Homes
-        and mortgages","description":"Everything you need to know about buying a home
-        and choosing the right mortgage."},{"id":"care-and-disability","type":"category","title":"Care
-        and disability","description":"Choosing the right care services, support for
-        carers and paying for the cost of care."},{"id":"losing-your-job","type":"category","title":"Losing
-        your job","description":"How to get your money under control when faced with
-        redundancy or job loss\n                            "}]}'
+      string: " "
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:57:52 GMT
+  recorded_at: Fri, 13 Jun 2014 07:19:03 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/money-topics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 13 Jun 2014 07:19:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - 3427b3440709449644960b081fdb6a26
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:19:02 GMT; secure
+      - _session_id=3427b3440709449644960b081fdb6a26; path=/; secure; HttpOnly
+      - _web_tracking=7828b66965d0266cf861e6e9f9c7ba83; path=/; expires=Sat, 13-Jun-2015
+        07:19:02 GMT; secure
+      X-Request-Id:
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
+      X-Runtime:
+      - '0.050952'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 07:19:03 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/money-topics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 13 Jun 2014 07:19:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - 6e2de90e58583f92eb0833804e41a1a2
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:19:02 GMT; secure
+      - _session_id=6e2de90e58583f92eb0833804e41a1a2; path=/; secure; HttpOnly
+      - _web_tracking=7d88e2a74b4191628191dc49a08817d8; path=/; expires=Sat, 13-Jun-2015
+        07:19:02 GMT; secure
+      X-Request-Id:
+      - c99508ea-4cc7-4d8d-a7ae-e64f61871f87
+      X-Runtime:
+      - '0.045514'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 07:19:03 GMT
 recorded_with: VCR 2.9.2

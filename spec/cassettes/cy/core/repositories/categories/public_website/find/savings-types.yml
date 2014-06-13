@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:48 GMT
+      - Fri, 13 Jun 2014 07:50:38 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 2f130de9336a8a067c3af02de7b81b6c
+      - 34ce9293f3bfde518b5c472bee2ecb6a
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:48 GMT; secure
-      - _session_id=2f130de9336a8a067c3af02de7b81b6c; path=/; secure; HttpOnly
-      - _web_tracking=ed516a7b2d71b95e1f86551fcde3e8fe; path=/; expires=Sat, 06-Jun-2015
-        07:59:48 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:38 GMT; secure
+      - _session_id=34ce9293f3bfde518b5c472bee2ecb6a; path=/; secure; HttpOnly
+      - _web_tracking=89ddd5575c55c8cc40de7a43a197ee3b; path=/; expires=Sat, 13-Jun-2015
+        07:50:38 GMT; secure
       X-Request-Id:
-      - f143e4de-5477-46de-9d01-e488e21aa1b3
+      - 8a7fb01f-77d8-4156-b80b-a130a100bd65
       X-Runtime:
-      - '0.020157'
+      - '0.026486'
       X-Rack-Cache:
       - miss
       P3p:
@@ -110,5 +110,5 @@ http_interactions:
         a ffioedd prifysgolion, efallai y byddwch yn ystyried cynllun ffioedd ysgolion
         \u2013 ond ai hon yw''r ffordd orau o gynilo mewn gwirionedd?"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:50 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:39 GMT
 recorded_with: VCR 2.9.2

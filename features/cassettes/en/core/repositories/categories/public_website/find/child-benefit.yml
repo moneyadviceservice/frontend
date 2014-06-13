@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 42c05761-5bae-46dc-a5d8-140f664fc06d
+      - a95b5a46-d232-449d-a8ba-73d0df6aa911
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:57:46 GMT
+      - Fri, 13 Jun 2014 07:18:57 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 43ef3238d38b1b86526a9eeeceef21d7
+      - 0955daa457b382c08f984b287e14c352
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:46 GMT; secure
-      - _session_id=43ef3238d38b1b86526a9eeeceef21d7; path=/; secure; HttpOnly
-      - _web_tracking=737685be691d091865005f0c8e113026; path=/; expires=Sat, 06-Jun-2015
-        07:57:46 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:18:56 GMT; secure
+      - _session_id=0955daa457b382c08f984b287e14c352; path=/; secure; HttpOnly
+      - _web_tracking=1a68ad359c47282d291f00dd0e4b081c; path=/; expires=Sat, 13-Jun-2015
+        07:18:56 GMT; secure
       X-Request-Id:
-      - 42c05761-5bae-46dc-a5d8-140f664fc06d
+      - a95b5a46-d232-449d-a8ba-73d0df6aa911
       X-Runtime:
-      - '0.030833'
+      - '0.214374'
       X-Rack-Cache:
       - miss
       P3p:
@@ -78,5 +78,5 @@ http_interactions:
         Allowance and other benefits are available to support parents or children
         with a disability"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:57:46 GMT
+  recorded_at: Fri, 13 Jun 2014 07:18:58 GMT
 recorded_with: VCR 2.9.2

@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/pension-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - de9156cd-db27-4de9-b9a1-1356c824f279
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 13 Jun 2014 07:50:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - aef449d7c749bacfb41ad3d90fd7f1ab
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:19 GMT; secure
+      - _session_id=aef449d7c749bacfb41ad3d90fd7f1ab; path=/; secure; HttpOnly
+      - _web_tracking=9472a18b09fad7a03693b6757b11c0ab; path=/; expires=Sat, 13-Jun-2015
+        07:50:19 GMT; secure
+      X-Request-Id:
+      - de9156cd-db27-4de9-b9a1-1356c824f279
+      X-Runtime:
+      - '0.032130'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pension-basics","title":"Pension basics","description":"Find
+        out why and when to save into a pension and how to work out what your pension
+        pot might be.","parent_id":"work-pensions-and-retirement","contents":[{"id":"why-save-into-a-pension","type":"guide","title":"Why
+        save into a pension?","description":"Pensions are an efficient way to save
+        for retirement. Contributions are topped up by the taxman and often by employers"},{"id":"your-options-if-things-go-wrong-with-your-pension","type":"guide","title":"Your
+        options if things go wrong with your pension","description":"How to tackle
+        problems related to the State Pension, personal and workplace pensions, or
+        pensions-related financial advice"},{"id":"pension-release-or-pension-unlocking","type":"guide","title":"Pension
+        release or pension unlocking","description":"Over 55 and want to start using
+        your pension benefits before you retire? Find out about pension release"},{"id":"protecting-your-state-pension-when-you-have-a-baby","type":"guide","title":"Protecting
+        your State Pension when you have a baby","description":"While you\u2019re
+        off work looking after your children, your State Pension is protected \u2013
+        but only if you claim Child Benefit"},{"id":"transferring-out-of-a-defined-benefit-pension-scheme","type":"guide","title":"Transferring
+        out of a defined benefit pension scheme","description":"If you''re thinking
+        about transferring out of a salary-related pension scheme get financial advice
+        first \u2013 transfers are often a bad move"},{"id":"pension-liberation-fraud","type":"guide","title":"Pension
+        liberation fraud","description":"''Pension loans'' or cash incentives are
+        being used alongside misleading information to entice savers as the number
+        of pension scams increases. Find out more"},{"id":"the-lifetime-allowance-for-pension-savings","type":"guide","title":"Lifetime
+        Allowance for pension savings","description":"If you accumulate more than
+        \u00a31.5 million in pension savings, you risk suffering a heavy tax penalty"},{"id":"compensation-if-youve-lost-money-through-mis-selling","type":"guide","title":"Compensation
+        if you\u2019ve lost money through mis-selling","description":"Check what you
+        might get from the Financial Services Compensation Scheme if you\u2019ve lost
+        money after getting poor financial advice"},{"id":"what-to-do-when-things-go-wrong-payments","type":"guide","title":"What
+        to do when things go wrong \u2013 payments","description":"Simple steps for
+        avoiding problems with payments and transfers, plus advice on sorting out
+        problems that do arise"},{"id":"sort-out-a-money-problem-make-a-complaint-or-get-compensation","type":"guide","title":"Sort
+        out a money problem or make a complaint","description":"Sorting out problems,
+        making complaints and getting compensation from banks or other financial companies"},{"id":"trace-lost-pensions-and-request-pension-forecasts","type":"guide","title":"Trace
+        lost pensions and request pension forecasts","description":"A step-by-step
+        guide to tracking down your pensions and finding out how much you\u2019re
+        likely to receive from them"},{"id":"transferring-defined-contribution-pensions","type":"guide","title":"Transferring
+        defined contribution pensions","description":"We set out seven key questions
+        you should ask yourself before transferring pension savings from one scheme
+        to another"},{"id":"how-to-deal-with-a-gap-in-your-pension-savings","type":"tool","title":"How
+        to deal with a gap in your pension savings","description":"Use our ready reckoner
+        to estimate the pension contributions needed to fill a shortfall in your likely
+        retirement income"},{"id":"your-first-pension-the-options","type":"guide","title":"Your
+        first pension \u2013 the options","description":"If you have access to a workplace
+        pension it\u2019s likely to be the best option, particularly if your employer
+        will contribute to it"},{"id":"worried-about-the-cost-of-starting-a-pension","type":"guide","title":"Worried
+        about the cost of starting a pension?","description":"Even if you\u2019ve
+        left it longer than you meant to, the sooner you start the less it costs to
+        save for your retirement"},{"id":"when-and-where-to-get-pensions-help-and-advice","type":"guide","title":"When
+        and where to get pensions help and advice","description":"Pensions can be
+        daunting. But there are a number of places where you can get help and advice"},{"id":"do-you-need-a-financial-adviser","type":"guide","title":"Do
+        you need a financial adviser?","description":"Find out when you may need to
+        get financial advice and when going it alone may be okay"},{"id":"making-the-most-of-your-pensions","type":"guide","title":"Making
+        the most of your pensions","description":"Even if your pension savings are
+        on track to meet your goal, there may be steps you can take to boost their
+        performance"},{"id":"ways-to-boost-your-pension-in-the-run-up-to-retirement","type":"guide","title":"Ways
+        to boost your pension in the run-up to retirement","description":"Even if
+        you\u2019re only a few years from retiring, you may still be able to make
+        a significant difference to your retirement income"},{"id":"check-the-progress-of-your-pension-and-retirement-savings","type":"guide","title":"Check
+        the progress of your pension and retirement savings","description":"Step-by-step
+        instructions to help you work out whether your pension and other retirement
+        savings are on track"},{"id":"what-to-do-about-someones-pension-when-theyve-died","type":"guide","title":"What
+        to do about someone\u2019s pension when they''ve died","description":"Find
+        out when you might be due a payout from the pension scheme of someone who
+        has died"},{"id":"pension-calculator","type":"tool","title":"Pension calculator","description":"Use
+        this calculator to help you work out how much retirement income you might
+        receive from saving in a personal, stakeholder or group pension"},{"id":"the-financial-services-compensation-scheme---quick-guide","type":"guide","title":"Financial
+        Services Compensation Scheme","description":"The Financial Services Compensation
+        Scheme may be able to provide compensation if a financial services firm goes
+        out of business"}]}'
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 07:50:20 GMT
+recorded_with: VCR 2.9.2

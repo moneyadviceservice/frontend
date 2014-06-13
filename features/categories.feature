@@ -13,9 +13,3 @@ Feature: Categories
     Then I should see the category name and description
     And I should see the child categories
     And I should see the child category content items
-
-  Scenario: View a grandparent category
-    When I view a category containing child and grandchild categories
-    Then I should see the category name and description
-    And I should see the child categories
-    And I should see the grandchild categories

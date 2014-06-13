@@ -12,10 +12,6 @@ module World
       fixture 'categories/insurance.yml'
     end
 
-    def category_containing_child_and_grandchild_categories
-      fixture 'categories/money-topics.yml'
-    end
-
     def browse_to_category(category, locale)
       self.current_category = category
 

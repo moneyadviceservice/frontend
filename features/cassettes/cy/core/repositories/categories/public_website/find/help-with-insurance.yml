@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 765d9f93-3b2d-4811-b3c5-c5e5b36e581f
+      - 5930964e-ae08-4470-a142-920c31ab9cf5
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:58:25 GMT
+      - Fri, 13 Jun 2014 07:19:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - de1c9d447ebc8747fd62bcc4e3650bc8
+      - 2a44706d5b0f9ba7e17b701f143c3428
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:58:25 GMT; secure
-      - _session_id=de1c9d447ebc8747fd62bcc4e3650bc8; path=/; secure; HttpOnly
-      - _web_tracking=a76a40b2a279603c2ea10f0f7c9a94c4; path=/; expires=Sat, 06-Jun-2015
-        07:58:25 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:19:10 GMT; secure
+      - _session_id=2a44706d5b0f9ba7e17b701f143c3428; path=/; secure; HttpOnly
+      - _web_tracking=cb2c0ae76275e20d199418cd7ed3c94a; path=/; expires=Sat, 13-Jun-2015
+        07:19:10 GMT; secure
       X-Request-Id:
-      - 765d9f93-3b2d-4811-b3c5-c5e5b36e581f
+      - 5930964e-ae08-4470-a142-920c31ab9cf5
       X-Runtime:
-      - '0.175848'
+      - '0.301933'
       X-Rack-Cache:
       - miss
       P3p:
@@ -59,7 +59,21 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":"help-with-insurance","title":"Cymorth gydag yswiriant","description":"Deall
         beth yw yswiriant a sut mae''n gweithio. Dysgwch sut i brynu yswiriant a sut
-        mae mynd ati i wneud hawliad.","parent_id":"insurance","contents":[{"id":"beth-yw-yswiriant","type":"guide","title":"Beth
+        mae mynd ati i wneud hawliad.","parent_id":"insurance","contents":[{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"},{"id":"cael-trefn-ar-broblem-ariannol-neu-wneud-cwyn","type":"guide","title":"Cael
+        trefn ar broblem ariannol neu wneud cwyn","description":"Cael trefn ar broblemau,
+        gwneud cwynion a chael digollediad gan fanciau neu gwmn\u00efau ariannol eraill"},{"id":"beth-iw-wneud-pan-fydd-pethaun-mynd-o-chwith-taliadau","type":"guide","title":"Beth
+        i\u2019w wneud pan fydd pethau\u2019n mynd o chwith \u2013 taliadau","description":"Camau
+        syml i osgoi problemau gyda thaliadau a throsglwyddiadau, a chyngor ar roi
+        trefn ar broblemau sy\u2019n codi"},{"id":"cam-werthu-ariannol-beth-iw-wneud-os-ydych-wedich-effeithio","type":"guide","title":"Cam-werthu
+        ariannol \u2013 beth i\u2019w wneud os ydych wedi\u2019ch effeithio","description":"A
+        gam-werthwyd cynnyrch ariannol i chi, fel yswiriant neu fuddsoddiad? Efallai
+        y bydd gennych achos i gwyno a chael digollediad"},{"id":"digollediad-os-ydych-wedi-colli-arian-trwy-gam-werthu","type":"guide","title":"Digollediad
+        os ydych wedi colli arian trwy gam-werthu","description":"Gwiriwch beth allech
+        ei gael gan y Cynllun Digolledu Gwasanaethau Ariannol os ydych wedi colli
+        arian wedi derbyn cyngor ariannol gwael"},{"id":"beth-yw-yswiriant","type":"guide","title":"Beth
         yw yswiriant?","description":"Ddim yn si\u0175r beth yw yswiriant neu sut
         mae\u2019n gweithio? Deall y pethau sylfaenol fel y gallwch gael y diogelwch
         cywir ar eich cyfer chi a\u2019ch teulu"},{"id":"mathau-o-yswiriant","type":"guide","title":"Mathau
@@ -91,5 +105,5 @@ http_interactions:
         \u2013 neu hyd yn oed ddim ond dirwy efallai? Cymerwch gyngor yngl\u0177n
         \u00e2 beth i\u2019w wneud a lle i fynd ar gyfer yswiriant"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:58:25 GMT
+  recorded_at: Fri, 13 Jun 2014 07:19:11 GMT
 recorded_with: VCR 2.9.2

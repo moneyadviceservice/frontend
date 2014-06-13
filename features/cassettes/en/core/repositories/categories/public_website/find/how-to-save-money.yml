@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - f3d2302f-211e-478c-8761-d4db761041ee
+      - f3213a9f-7413-4319-9302-6efa4807d3a3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:57:37 GMT
+      - Fri, 13 Jun 2014 07:18:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - ad365d65f877032520c8a22a7643d5c2
+      - ed4172271916b422ba3c7355d016e29c
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:37 GMT; secure
-      - _session_id=ad365d65f877032520c8a22a7643d5c2; path=/; secure; HttpOnly
-      - _web_tracking=004dc49ce87ab5e588a70256329779cf; path=/; expires=Sat, 06-Jun-2015
-        07:57:37 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:18:43 GMT; secure
+      - _session_id=ed4172271916b422ba3c7355d016e29c; path=/; secure; HttpOnly
+      - _web_tracking=a057a24811369420f6fd23a1a0509bea; path=/; expires=Sat, 13-Jun-2015
+        07:18:43 GMT; secure
       X-Request-Id:
-      - f3d2302f-211e-478c-8761-d4db761041ee
+      - f3213a9f-7413-4319-9302-6efa4807d3a3
       X-Runtime:
-      - '0.018403'
+      - '0.039274'
       X-Rack-Cache:
       - miss
       P3p:
@@ -120,5 +120,5 @@ http_interactions:
         keep cash under the mattress","description":"Got cash stashed at home? Keep
         it safe and make it work for you by putting it into a savings account"},{"id":"inflation","type":"video","title":"Inflation","description":""}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:57:37 GMT
+  recorded_at: Fri, 13 Jun 2014 07:18:44 GMT
 recorded_with: VCR 2.9.2

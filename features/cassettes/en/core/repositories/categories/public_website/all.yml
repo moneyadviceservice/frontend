@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - dfb5bd82-b54c-4ebf-98f2-c91bcf7d4d05
+      - 4bcf615d-e02b-49b3-b699-6b472b4c5e65
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:57:33 GMT
+      - Fri, 13 Jun 2014 07:18:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - f3ceccc613f8649049a36811d0b5a6fc
+      - 1701e8327a29bc5c6cc573ac38a2d6bf
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:57:33 GMT; secure
-      - _session_id=f3ceccc613f8649049a36811d0b5a6fc; path=/; secure; HttpOnly
-      - _web_tracking=44c37db4909c9b493e455b4333c1e869; path=/; expires=Sat, 06-Jun-2015
-        07:57:33 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:18:40 GMT; secure
+      - _session_id=1701e8327a29bc5c6cc573ac38a2d6bf; path=/; secure; HttpOnly
+      - _web_tracking=1ac5c685015b107e8c62e1c890791615; path=/; expires=Sat, 13-Jun-2015
+        07:18:40 GMT; secure
       X-Request-Id:
-      - dfb5bd82-b54c-4ebf-98f2-c91bcf7d4d05
+      - 4bcf615d-e02b-49b3-b699-6b472b4c5e65
       X-Runtime:
-      - '0.100361'
+      - '0.019812'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,35 +57,8 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '[{"id":"managing-your-money","type":"category","title":"Managing your
-        money","description":"Advice, tips and tools to help you get your finances
-        under control and make your money go further\r\n                        ","contents":[{"id":"young-people-and-money","type":"category","title":"Leaving
-        school or college","description":"Help and advice on staying on in education,
-        moving into work and paying your own way as a young adult","contents":[{"id":"moving-into-work","type":"category","title":"Moving
-        into work","description":"Learn about how you\u2019re paid and taxed at work,
-        plus we look at payslip basics","contents":[]},{"id":"independent-living","type":"category","title":"Independent
-        living","description":"Advice on the best ways to pay bills, the cost of running
-        a car and more","contents":[]}]},{"id":"travel-money-or-sending-money-overseas","type":"category","title":"Travel
-        money or sending money overseas","description":"Buying foreign currency, cheap
-        cards to use abroad and choosing the best way\r\n                                    to
-        send money overseas\r\n                                ","contents":[]},{"id":"work-and-money","type":"category","title":"Work
-        and money","description":"Pay, tax and benefits decisions you may have to
-        take at work or when you work for yourself","contents":[{"id":"pay-and-benefits","type":"category","title":"Pay
-        and benefits","description":"Checking your options for pay, tax and benefits
-        as an employee or agency worker","contents":[]},{"id":"pensions-in-the-workplace","type":"category","title":"Pensions
-        in the workplace","description":"Preparing for changes to workplace pensions
-        and understanding about tax relief on pension contributions","contents":[]},{"id":"working-for-yourself","type":"category","title":"Working
-        for yourself","description":"Checking your options for pay, tax, insurance
-        and pensions as a self-employed person","contents":[]}]},{"id":"money-complaints-and-compensation","type":"category","title":"Money
-        complaints and compensation","description":"Your rights and how to complain
-        - unfair treatment or mis-selling, financial\n                                compensation
-        if your bank or provider goes bust\n                            ","contents":[]},{"id":"financial-help-and-advice","type":"category","title":"Financial
-        help and advice","description":"Choosing and using a financial adviser and
-        where to get free financial advice\r\n                            ","contents":[]}]},{"id":"money-topics","type":"category","title":"Money
-        topics","description":"Saving and investing, borrowing and debt, homes and
-        mortgages, insurance, pensions and\r\n                            retirement\r\n                        ","contents":[{"id":"debt-and-borrowing","type":"category","title":"Debt
-        and borrowing","description":"Taking control of debt, getting free debt advice,
-        and how to borrow affordably.","contents":[{"id":"before-you-borrow","type":"category","title":"Before
+      string: '[{"id":"debt-and-borrowing","type":"category","title":"Debt and borrowing","description":"Taking
+        control of debt, getting free debt advice, and how to borrow affordably.","contents":[{"id":"before-you-borrow","type":"category","title":"Before
         you borrow","description":"Find out if you need to borrow money and whether
         you can afford it. Learn how to work out the true cost of borrowing.","contents":[]},{"id":"taking-control-of-debt","type":"category","title":"Taking
         control of debt","description":"Where to get free debt advice, how to speak
@@ -119,51 +92,22 @@ http_interactions:
         to invest money","description":"Learn about investing basics, how to make
         an investment plan, and understanding your attitude to risk.","contents":[]},{"id":"investment-types","type":"category","title":"Types
         of investment","description":"Information about stocks and shares, investment
-        bonds, tracker funds, with-profits and endowment policies.","contents":[]}]},{"id":"pensions-and-retirement","type":"category","title":"Pensions
-        and retirement","description":"How and when to start saving for a pension,
-        getting the most from your pension\r\n                                fund
-        and managing your money in retirement\r\n                            ","contents":[{"id":"saving-into-a-pension-for-the-first-time","type":"category","title":"Saving
-        into a pension for the first time","description":"All you need to get started,
-        including a ready reckoner that estimates how\n                                    much
-        you should be saving each month\n                                ","contents":[]},{"id":"types-of-pension","type":"category","title":"Types
-        of pension","description":"State pension, workplace pensions and personal
-        pensions - an overview of\r\n                                        how each
-        works\r\n                                    ","contents":[]},{"id":"review-the-health-your-pension-savings","type":"category","title":"Review
-        the health of your pension savings","description":"Use our step-by-step guidance
-        to set your retirement income goal and check\n                                    your
-        progress towards it\n                                ","contents":[]},{"id":"pensions-and-tax","type":"category","title":"Pensions
-        and tax","description":"Tax relief on money you save into your pension, how
-        your pension income is\n                                        taxed and
-        the lifetime allowance\n                                    ","contents":[]},{"id":"approaching-retirement","type":"category","title":"Approaching
-        retirement","description":"As retirement nears there are big decisions to
-        make, such as what kind of\r\n                                    annuity
-        to shop around for - we explain it all\r\n                                ","contents":[]},{"id":"transferring-between-pension-schemes","type":"category","title":"Transferring
-        between pension schemes","description":"How to transfer pensions between providers,
-        for example if you want to\n                                        merge
-        different pension pots you''ve built up\n                                    ","contents":[]},{"id":"managing-your-finances-in-retirement","type":"category","title":"Managing
-        your finances in retirement","description":"Retirement can bring significant
-        changes to your income and your outgoings and\n                                    your
-        entitlement to government benefits\n                                ","contents":[]},{"id":"using-your-home-to-generate-retirement-income","type":"category","title":"Using
-        your home to generate retirement income","description":"Whether or not you
-        own your home you can use it to boost your income, for\n                                        example
-        through equity release or renting a room\n                                    ","contents":[]},{"id":"workplace-pensions-changes","type":"category","title":"Automatic
-        enrolment","description":"Gradually all employers will be required to save
-        into their workers'' pension\r\n                                    schemes\r\n                                ","contents":[]},{"id":"benefits-and-tax-in-retirement","type":"category","title":"Benefits
-        and tax in retirement","description":"Your State Pension entitlement, Pension
-        Credit if you''re on a low income,\n                                        tax
-        and age-related allowances in retirement\n                                    ","contents":[]},{"id":"choosing-a-pension","type":"category","title":"Choosing
-        a pension","description":"Read our top tips for choosing pensions and find
-        out about buying a pension\n                                    and getting
-        financial advice\n                                ","contents":[]},{"id":"events-that-may-affect-your-pension","type":"category","title":"Events
-        that may affect your pension","description":"Be aware of the possible effects
-        on your pension of events including\n                                        parenthood,
-        divorce, redundancy and retiring abroad\n                                    ","contents":[]},{"id":"taking-income-from-your-pension","type":"category","title":"Taking
-        income from your pension","description":"We walk you through all the options,
-        including cash lump sums and all the\r\n                                    different
-        types of annuity you can buy\r\n                                ","contents":[]},{"id":"getting-help-with-pensions","type":"category","title":"Getting
-        help with pensions","description":"Where to go for advice about pensions,
-        and what to do if you want to complain\n                                    about
-        a pension provider or adviser\n                                ","contents":[]}]},{"id":"benefits","type":"category","title":"Benefits","description":"Find
+        bonds, tracker funds, with-profits and endowment policies.","contents":[]}]},{"id":"work-pensions-and-retirement","type":"category","title":"Work,
+        pensions and retirement","description":"Includes redundancy advice, types
+        of pension and retirement income, and information on automatic enrolment.","contents":[{"id":"jobs-and-tax","type":"category","title":"Jobs
+        and tax","description":"Help with understanding your payslip and what to look
+        for in your employment contract.","contents":[]},{"id":"redundancy","type":"category","title":"Redundancy","description":"Help
+        with making a redundancy plan, benefits you can claim, and your legal rights.","contents":[]},{"id":"pension-basics","type":"category","title":"Pension
+        basics","description":"Find out why and when to save into a pension and how
+        to work out what your pension pot might be.","contents":[]},{"id":"types-of-pensions","type":"category","title":"Types
+        of pensions","description":"From defined contribution and benefit schemes,
+        to personal pensions and pensions for the self-employed.","contents":[]},{"id":"automatic-enrolment","type":"category","title":"Automatic
+        enrolment","description":"Learn about automatic enrolment and how it affects
+        you, and use our workplace pension advice tool and calculator.","contents":[]},{"id":"retirement-income-basics","type":"category","title":"Retirement
+        income basics","description":"Setting a clear retirement income goal and managing
+        your money once you\u2019ve stopped working.","contents":[]},{"id":"types-of-retirement-income","type":"category","title":"Types
+        of retirement income","description":"Learn about the different types of annuity
+        and other types of pension and retirement income.","contents":[]}]},{"id":"benefits","type":"category","title":"Benefits","description":"Find
         out what benefits you''re entitled to and learn about Universal Credit.","contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
         with your benefits","description":"Help with getting the right entitlements,
         where to get benefits support and advice and what to do if your payments are
@@ -218,62 +162,19 @@ http_interactions:
         for carers","description":"Find out about support available to carers and
         how to manage the money of someone you''re caring for.","contents":[]},{"id":"illness-and-disability","type":"category","title":"Illness
         and disability","description":"Advice about Personal Independence Payment,
-        disability grants, aids and equipment.","contents":[]}]},{"id":"losing-your-job","type":"category","title":"Losing
-        your job","description":"How to get your money under control when faced with
-        redundancy or job loss\n                            ","contents":[{"id":"redundancy---be-prepared","type":"category","title":"Redundancy
-        - be prepared","description":"Managing money if your job is at risk, insuring
-        yourself against redundancy\r\n                                    and what
-        to do if you''re asked to work reduced hours\r\n                                ","contents":[]},{"id":"your-redundancy-rights","type":"category","title":"Your
-        redundancy rights","description":"Redundancy advice and your legal rights,
-        what process your employer must follow and how to tell if you''ve been a victim
-        of unfair dismissal\r\n                                ","contents":[]},{"id":"redundancy-payments","type":"category","title":"Redundancy
-        payments","description":"Are you entitled to redundancy pay, how much will
-        you get and will you have to\r\n                                    pay tax
-        on it?\r\n                                ","contents":[]},{"id":"benefits-and-entitlements-if-you-lose-your-job","type":"category","title":"Benefits
-        and entitlements if you lose your job","description":"Benefits and tax credits
-        you can claim after losing your job, can you claim a\r\n                                    tax
-        rebate and what happens to your pension?\r\n                                ","contents":[]},{"id":"budgeting-when-out-of-work","type":"category","title":"Budgeting
-        when out of work","description":"Use our out-of-work checklist to stay in
-        control of your finances, plus how to\r\n                                    make
-        the most of your redundancy pay\r\n                                ","contents":[]},{"id":"managing-debt-when-out-of-work","type":"category","title":"Managing
-        debt when out of work","description":"How to review and prioritise your debts,
-        how to start paying it off and where\n                                    to
-        get help if you''re struggling with debt\n                                ","contents":[]},{"id":"voluntary-redundancy-and-early-retirement","type":"category","title":"Voluntary
-        redundancy and early retirement","description":"Weigh up the pros and cons
-        of voluntary redundancy and early retirement and\n                                    consider
-        the impact on your finances\n                                ","contents":[]},{"id":"help-with-finding-a-job","type":"category","title":"Help
-        with finding a job","description":"CV advice, job searching and interview
-        tips; plus where to go if you''re\n                                    thinking
-        of a career change or starting a business\n                                ","contents":[]}]}]},{"id":"tools--resources","type":"category","title":"Tools
-        & resources","description":"Calculators, letter templates and free printed
-        guides \u2013 useful tools and resources to help you","contents":[{"id":"budget-planner","type":"category","title":"Budget
-        planner","description":"Use this planner to work out how much money you have
-        coming in and what you''re spending it on","contents":[]},{"id":"health-check","type":"category","title":"Money
-        Health Check","description":"Join over half a million people who have taken
-        our online Money Health Check and start to make the most of your money today","contents":[]},{"id":"action-plans","type":"category","title":"Action
-        plans","description":"Take control of your finances and get motivated to tackle
-        life''s money matters by following our action plans. ","contents":[{"id":"action-plans-pensions","type":"category","title":"Action
-        plans - Pensions","description":"Whether you''re being enrolled into a workplace
-        pension for the first time or working out your retirement income, find out
-        all the steps you need to take with our useful action plans.","contents":[]},{"id":"action-plans-losing-your-job","type":"category","title":"Action
-        plans - Losing your job","description":"Find out what to do to protect your
-        finances if you have lost your job, or if you think you might be made redundant.","contents":[]}]},{"id":"calculators","type":"category","title":"Calculators","description":"Our
-        easy-to-use calculators can help you budget, save and cut back on costs","contents":[]},{"id":"comparison-tables","type":"category","title":"Comparison
-        tables","description":"Our comparison tables are completely unbiased - we
-        are set up by government and don\u2019t receive any incentive or commission
-        if you go on to choose a product","contents":[]},{"id":"letter-templates","type":"category","title":"Letter
-        templates","description":"Our easy-to-use letter templates are here to help
-        you if you need to set up, cancel or complain about something","contents":[]},{"id":"order-forms","type":"category","title":"Order
-        forms","description":"Use these forms to order our free printed guides, which
-        give you clear, unbiased information and advice in Plain English","contents":[]},{"id":"free-printed-guides","type":"category","title":"Free
-        printed guides","description":"Read our free printed guides, which give you
-        clear, unbiased information and advice in Plain English","contents":[]},{"id":"videos","type":"category","title":"Videos","description":"See
-        our videos, covering subjects such as insurance, retirement savings and inflation","contents":[]},{"id":"workplace-pension-advice-tool","type":"category","title":"Workplace
-        pension advice tool","description":"Workplace pensions are changing. Use our
-        tool to see if saving in a workplace pension is right for you","contents":[]},{"id":"interactive-timelines","type":"category","title":"Interactive
-        timelines","description":"Explore our money timelines so you know the actions
-        to take and things that could affect your income","contents":[]}]},{"id":"news","type":"category","title":"News
-        & features","description":"Read our topical news articles and features","contents":[]}]'
+        disability grants, aids and equipment.","contents":[]}]},{"id":"cars-and-travel","type":"category","title":"Cars
+        and travel","description":"Help with buying, running and selling a car, buying
+        foreign currency, and sending money abroad.","contents":[{"id":"how-to-buy-a-car","type":"category","title":"How
+        to buy a car","description":"What to consider before buying a new or used
+        car, including your budget, car finance options, and how to negotiate the
+        best deal.","contents":[]},{"id":"running-a-car","type":"category","title":"Running
+        a car","description":"Find out about your rights if something goes wrong with
+        your new car, help with car insurance claims and renewals, and how to manage
+        without a car.","contents":[]},{"id":"selling-your-car","type":"category","title":"How
+        to sell a car","description":"Learn about the different ways to sell a car,
+        how to negotiate a good price, and your options for disposing of an old car.","contents":[]},{"id":"travel-money-and-sending-money-abroad","type":"category","title":"Travel
+        money and sending money abroad","description":"Buying foreign currency, cheap
+        cards to use abroad, and choosing the best way to send money overseas.","contents":[]}]}]'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:57:33 GMT
+  recorded_at: Fri, 13 Jun 2014 07:18:41 GMT
 recorded_with: VCR 2.9.2

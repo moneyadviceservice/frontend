@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/pension-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 4f63acec-f2fc-4633-b654-6b1860f55d96
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 13 Jun 2014 07:50:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 7634dde8ffb8ac539393c6d156b64715
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:22 GMT; secure
+      - _session_id=7634dde8ffb8ac539393c6d156b64715; path=/; secure; HttpOnly
+      - _web_tracking=510f9ac557061d2ebf30bbe2b27b82f9; path=/; expires=Sat, 13-Jun-2015
+        07:50:22 GMT; secure
+      X-Request-Id:
+      - 4f63acec-f2fc-4633-b654-6b1860f55d96
+      X-Runtime:
+      - '0.355433'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pension-basics","title":"Ffeithiau sylfaenol ynghylch pensiynau","description":"Dysgwch
+        pam a phryd i gynilo i bensiwn a sut i gyfrifo faint fydd eich cronfa bensiwn.","parent_id":"work-pensions-and-retirement","contents":[{"id":"pam-cynilo-mewn-pensiwn","type":"guide","title":"Pam
+        cynilo mewn pensiwn?","description":"Mae pensiynau\u2019n ffordd effeithlon
+        o gynilo at eich ymddeoliad. Bydd y dyn treth, a chyflogwyr yn aml, yn ychwanegu
+        at eich cyfraniadau"},{"id":"eich-opsiynau-os-bydd-pethaun-mynd-o-le-gydach-pensiwn","type":"guide","title":"Eich
+        opsiynau os bydd pethau\u2019n mynd o le gyda\u2019ch pensiwn","description":"Sut
+        i fynd i\u2019r afael \u00e2 phroblemau cysylltiedig \u00e2 Phensiwn y Wladwriaeth,
+        pensiynau personol neu bensiynau man gwaith, neu gyda chyngor ariannol cysylltiedig
+        a phensiynau"},{"id":"rhyddhad-pensiwn-neu-ddatgloi-pensiwn","type":"guide","title":"Rhyddhad
+        pensiwn neu ddatgloi pensiwn","description":"A ydych chi dros 55 oed ac am
+        ddefnyddio eich buddion pensiwn cyn i chi ymddeol? Darganfyddwch am ryddhad
+        pensiwn"},{"id":"diogelu\u2019ch-pensiwn-y-wladwriaeth-pan-fyddwch-yn-cael-babi","type":"guide","title":"Diogelu\u2019ch
+        Pensiwn y Wladwriaeth pan fyddwch yn cael babi","description":"Tra byddwch
+        i ffwrdd o\u2019ch gwaith yn gofalu am ein plant, mae eich Pensiwn gan y Wladwriaeth
+        yn cael ei ddiogelu \u2013 ond dim ond os ydych chi\u2019n hawlio Budd-dal
+        Plant"},{"id":"trosglwyddo-allan-o-gynllun-pensiwn-buddion-wediu-diffinio","type":"guide","title":"Trosglwyddo
+        allan o gynllun pensiwn buddion wedi\u2019u diffinio","description":"Os byddwch
+        yn ystyried trosglwyddo allan o gynllun pensiwn sy\u2019n gysylltiedig \u00e2
+        chyflog, gofynnwch am gyngor ariannol gyntaf \u2013 mae trosglwyddiadau yn
+        aml yn ddewis gwael"},{"id":"twyll-rhyddhau-pensiynau","type":"guide","title":"Twyll
+        rhyddhau pensiynau","description":"Mae \u2018Benthyciadau pensiwn\u2019 neu
+        gymhelliant ariannol yn cael eu defnyddio gyda gwybodaeth gamarweiniol i ddenu\u2019r
+        rhai sy\u2019n cynilo wrth i nifer y cynlluniau i dwyllo yn ymwneud \u00e2
+        phensiwn gynyddu. Dod o hyd i ragor o wybodaeth"},{"id":"y-lwfans-oes-ar-gyfer-cynilion-pensiwn","type":"guide","title":"Y
+        Lwfans Oes ar gyfer cynilion pensiwn","description":"Os ydych yn cronni mwy
+        na \u00a31.5 mewn cynilion pensiwn, mae risg y byddwch yn cael eich cosbi\u2019n
+        llym mewn treth"},{"id":"digollediad-os-ydych-wedi-colli-arian-trwy-gam-werthu","type":"guide","title":"Digollediad
+        os ydych wedi colli arian trwy gam-werthu","description":"Gwiriwch beth allech
+        ei gael gan y Cynllun Digolledu Gwasanaethau Ariannol os ydych wedi colli
+        arian wedi derbyn cyngor ariannol gwael"},{"id":"beth-iw-wneud-pan-fydd-pethaun-mynd-o-chwith-taliadau","type":"guide","title":"Beth
+        i\u2019w wneud pan fydd pethau\u2019n mynd o chwith \u2013 taliadau","description":"Camau
+        syml i osgoi problemau gyda thaliadau a throsglwyddiadau, a chyngor ar roi
+        trefn ar broblemau sy\u2019n codi"},{"id":"cael-trefn-ar-broblem-ariannol-neu-wneud-cwyn","type":"guide","title":"Cael
+        trefn ar broblem ariannol neu wneud cwyn","description":"Cael trefn ar broblemau,
+        gwneud cwynion a chael digollediad gan fanciau neu gwmn\u00efau ariannol eraill"},{"id":"olrhain-pensiynau-coll-a-gwneud-cais-am-ragolygon-pensiwn","type":"guide","title":"Olrhain
+        pensiynau coll a gwneud cais am ragolygon pensiwn","description":"Canllaw
+        cam wrth gam i olrhain eich pensiynau a chael gwybod faint yr ydych yn debygol
+        o\u2019i gael ohonynt"},{"id":"trosglwyddo-pensiynau-cyfraniadau-wediu-diffinio","type":"guide","title":"Trosglwyddo
+        pensiynau cyfraniadau wedi\u2019u diffinio","description":"Rydym yn nodi saith
+        cwestiwn allweddol y dylech eu gofyn i\u2019ch hun cyn trosglwyddo cynilion
+        pensiwn o un cynllun i un arall"},{"id":"sut-i-ymdrin-a-bwlch-yn-eich-cynilion-pensiwn","type":"tool","title":"Sut
+        i ymdrin \u00e2 bwlch yn eich cynilion pensiwn","description":"Defnyddiwch
+        ein canllaw cyflym i amcangyfrif y cyfraniadau pensiwn sydd eu hangen i lenwi
+        diffyg yn eich incwm tebygol ar \u00f4l ymddeol"},{"id":"eich-pensiwn-cyntaf-y-dewisiadau","type":"guide","title":"Eich
+        pensiwn cyntaf \u2013 y dewisiadau","description":"Os oes pensiwn man gwaith
+        ar gael i chi, mae\u2019n debygol mai hwn fydd y dewis gorau \u2013 yn enwedig
+        os gwnaiff eich cyflogwr gyfrannu ato"},{"id":"pr004-ydych-chian-poeni-am-gost-dechrau-pensiwn","type":"guide","title":"Ydych
+        chi\u2019n poeni am gost dechrau pensiwn?","description":"Hyd yn oed os ydych
+        wedi gadael pethau\u2019n hwyrach nag yr oeddech yn bwriadu gwneud, gorau
+        po gyntaf y dechreuwch gynilo at eich ymddeoliad"},{"id":"pryd-a-ble-i-gael-cymorth-a-chyngor-ar-bensiynau","type":"guide","title":"Pryd
+        a ble i gael cymorth a chyngor ar bensiynau","description":"Gall pensiynau
+        fod yn anodd iawn i\u2019w deall Ond gallwch gael cymorth a chyngor o sawl
+        lle"},{"id":"a-oes-arnoch-angen-cynghorydd-ariannol","type":"guide","title":"A
+        oes arnoch angen cynghorydd ariannol?","description":"Dysgwch pryd fydd angen
+        i chi gael cyngor ariannol a phryd y gallai ei wneud eich hun fod yn iawn"},{"id":"gwneud-y-gorau-och-pensiynau","type":"guide","title":"Gwneud
+        y gorau o\u2019ch pensiynau","description":"Defnyddiwch ein canllaw cyflym
+        i amcangyfrif y cyfraniadau pensiwn sydd eu hangen i lenwi diffyg yn eich
+        incwm tebygol ar \u00f4l ymddeol"},{"id":"ffyrdd-o-gynyddu-eich-pensiwn-wrth-ich-ymddeoliad-agosau","type":"guide","title":"Ffyrdd
+        o gynyddu eich pensiwn wrth i\u2019ch ymddeoliad agos\u00e1u","description":"Hyd
+        yn oed os mai dim ond rhai blynyddoedd sydd gennych cyn i chi ymddeol, efallai
+        y gallwch ddal i wneud gwahaniaeth sylweddol i incwm eich pensiwn"},{"id":"dilyn-hynt-eich-pensiwn-a-chynilion-ymddeoliad-eraill","type":"guide","title":"Dilyn
+        hynt eich pensiwn a chynilion ymddeoliad eraill","description":"Cyfarwyddiadau
+        cam wrth gam i\u2019ch helpu i gyfrifo a yw eich pensiwn a\u2019ch cynilion
+        ymddeoliad eraill ar y trywydd iawn"},{"id":"beth-iw-wneud-am-bensiwn-rhywun-pan-fyddant-wedi-marw","type":"guide","title":"Beth
+        i\u2019w wneud am bensiwn rhywun pan fyddant wedi marw","description":"Dylech
+        wybod pryd y gall taliad fod yn ddyledus i chi o gynllun pensiwn rhywun sydd
+        wedi marw"},{"id":"cyfrifiannell-pensiwn","type":"tool","title":"Cyfrifiannell
+        pensiwn","description":"Defnyddiwch y gyfrifiannell hon i''ch helpu i gyfrifo
+        faint o incwm ymddeol y gallech ei gael trwy gynilo mewn pensiwn personol,
+        rhanddeiliaid neu gr\u0175p"},{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"}]}'
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 07:50:23 GMT
+recorded_with: VCR 2.9.2

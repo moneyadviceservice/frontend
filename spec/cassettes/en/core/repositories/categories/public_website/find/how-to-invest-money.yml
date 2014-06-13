@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      - ead010c5-09c9-44b3-b502-feccc02c1dea
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 06 Jun 2014 07:59:54 GMT
+      - Fri, 13 Jun 2014 07:50:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 22c8361b0138382165d18f5b9f95f091
+      - 2a9a8653cba77572fcc65f06c630eabe
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 06-Jun-2015 07:59:54 GMT; secure
-      - _session_id=22c8361b0138382165d18f5b9f95f091; path=/; secure; HttpOnly
-      - _web_tracking=efc5680c09c5d746d922295f7e875bef; path=/; expires=Sat, 06-Jun-2015
-        07:59:54 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 13-Jun-2015 07:50:34 GMT; secure
+      - _session_id=2a9a8653cba77572fcc65f06c630eabe; path=/; secure; HttpOnly
+      - _web_tracking=1083136dd3bf734605ec8e29bd50e4e2; path=/; expires=Sat, 13-Jun-2015
+        07:50:34 GMT; secure
       X-Request-Id:
-      - 1db05f57-06f0-4b98-94b7-c376301a3ea5
+      - ead010c5-09c9-44b3-b502-feccc02c1dea
       X-Runtime:
-      - '0.033514'
+      - '0.025251'
       X-Rack-Cache:
       - miss
       P3p:
@@ -61,13 +61,7 @@ http_interactions:
         about investing basics, how to make an investment plan, and understanding
         your attitude to risk.","parent_id":"saving-and-investing","contents":[{"id":"investing-beginners-guide","type":"guide","title":"Investing
         \u2013 beginner\u2019s guide","description":"Using investments can improve
-        your profits \u2013 and spread risk"},{"id":"assessing-the-performance-of-your-savings-and-investments","type":"guide","title":"Assessing
-        the performance of your savings and investments","description":"How to measure
-        the performance of your savings and investments to see how hard they''re working
-        and decide whether to make changes"},{"id":"asset-classes-explained","type":"guide","title":"Asset
-        classes explained","description":"The mix of asset classes - such as cash,
-        fixed-interest and shares - may account for between a third and three-quarters
-        of the variation in returns between different investment portfolios"},{"id":"ethical-saving-and-investing","type":"guide","title":"Ethical
+        your profits \u2013 and spread risk"},{"id":"ethical-saving-and-investing","type":"guide","title":"Ethical
         saving and investing","description":"If you want to support fair working practices
         and would prefer to avoid investing in the arms race, tobacco and gambling,
         ethical saving and investing might be for you"},{"id":"top-tips-for-choosing-investments","type":"guide","title":"Top
@@ -85,14 +79,27 @@ http_interactions:
         of investing in property and learn about the different ways to invest"},{"id":"what-happens-when-your-with-profits-fund-closes","type":"guide","title":"What
         happens when your with-profits fund closes","description":"Is your with-profits
         policy transferring to a new insurance company or closing to new investors?
-        Here''s what you need to know"},{"id":"reviewing-your-savings-and-investments","type":"guide","title":"Review
+        Here''s what you need to know"},{"id":"high-risk-investment-products","type":"guide","title":"High-risk
+        investment products","description":"Risky investments can offer a chance at
+        big rewards \u2013 but if you go for them, you need to know exactly what you\u2019re
+        getting into"},{"id":"compensation-if-youve-lost-money-through-mis-selling","type":"guide","title":"Compensation
+        if you\u2019ve lost money through mis-selling","description":"Check what you
+        might get from the Financial Services Compensation Scheme if you\u2019ve lost
+        money after getting poor financial advice"},{"id":"financial-mis-selling-what-to-do-if-you-think-its-affected-you","type":"guide","title":"Financial
+        mis-selling \u2013 what to do if you''re affected","description":"Have you
+        been mis-sold a financial product, like insurance or an investment? You may
+        have a case to complain and get compensation"},{"id":"what-to-do-when-things-go-wrong-payments","type":"guide","title":"What
+        to do when things go wrong \u2013 payments","description":"Simple steps for
+        avoiding problems with payments and transfers, plus advice on sorting out
+        problems that do arise"},{"id":"asset-classes-explained","type":"guide","title":"Asset
+        classes explained","description":"The mix of asset classes - such as cash,
+        fixed-interest and shares - may account for between a third and three-quarters
+        of the variation in returns between different investment portfolios"},{"id":"assessing-the-performance-of-your-savings-and-investments","type":"guide","title":"Assessing
+        the performance of your savings and investments","description":"How to measure
+        the performance of your savings and investments to see how hard they''re working
+        and decide whether to make changes"},{"id":"reviewing-your-savings-and-investments","type":"guide","title":"Review
         your savings and investments","description":"Make your money work harder \u2013
-        when, why and how to carry out a check of your savings and investments"},{"id":"key-facts-documents-and-cooling-off-periods-what-you-need-to-know","type":"guide","title":"Key
-        information and cooling off periods","description":"Good investment decisions
-        require information and time \u2013 so ask for the key facts and use your
-        cooling off period"},{"id":"understanding-investment-fees","type":"guide","title":"Understanding
-        investment fees","description":"The different types of investment fees you
-        could be charged and the things you need to think about before paying them"},{"id":"get-started-with-investing","type":"action_plan","title":"Action
+        when, why and how to carry out a check of your savings and investments"},{"id":"get-started-with-investing","type":"action_plan","title":"Action
         plan - Get started with investing","description":"Find the most appropriate
         places to invest your money"},{"id":"getting-more-informed-about-investing","type":"guide","title":"Getting
         more informed about investing","description":"Keeping up with investment and
@@ -117,10 +124,15 @@ http_interactions:
         may be easier and less risky than shares? Pooled investments spread the risks"},{"id":"how-to-buy-investments","type":"guide","title":"How
         to buy investments","description":"Beware of scams and don\u2019t be persuaded
         into buying products you don\u2019t understand or if the charges and risks
-        are not clearly spelt out"},{"id":"high-risk-investment-products","type":"guide","title":"High-risk
-        investment products","description":"Risky investments can offer a chance at
-        big rewards \u2013 but if you go for them, you need to know exactly what you\u2019re
-        getting into"}]}'
+        are not clearly spelt out"},{"id":"understanding-investment-fees","type":"guide","title":"Understanding
+        investment fees","description":"The different types of investment fees you
+        could be charged and the things you need to think about before paying them"},{"id":"key-facts-documents-and-cooling-off-periods-what-you-need-to-know","type":"guide","title":"Key
+        information and cooling off periods","description":"Good investment decisions
+        require information and time \u2013 so ask for the key facts and use your
+        cooling off period"},{"id":"the-financial-services-compensation-scheme---quick-guide","type":"guide","title":"Financial
+        Services Compensation Scheme","description":"The Financial Services Compensation
+        Scheme may be able to provide compensation if a financial services firm goes
+        out of business"}]}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 07:59:54 GMT
+  recorded_at: Fri, 13 Jun 2014 07:50:35 GMT
 recorded_with: VCR 2.9.2

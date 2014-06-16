@@ -10,6 +10,6 @@ class BreadcrumbTrail
       end
     end
 
-    BreadcrumbDecorator.decorate_collection(categories)
+    categories.map(&Breadcrumb.public_method(:new))
   end
 end

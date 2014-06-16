@@ -1,17 +1,13 @@
 require 'core/interactors/article_reader'
-require 'core/interactors/breadcrumbs_reader'
 
 class ArticlesController < ApplicationController
   decorates_assigned :article, with: ContentItemDecorator
-  decorates_assigned :breadcrumb_trails, with: BreadcrumbTrailsDecorator
 
   def show
     @article = Core::ArticleReader.new(params[:id]).call do
       not_found
     end
 
-    @breadcrumb_trails = @article.categories.map do |category|
-      Core::BreadcrumbsReader.new(category.id, category_tree).call { [] } << category
-    end
+    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
   end
 end

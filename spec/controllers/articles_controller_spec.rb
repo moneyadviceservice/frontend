@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/article_reader'
 
 RSpec.describe ArticlesController, :type => :controller do
@@ -22,7 +21,7 @@ RSpec.describe ArticlesController, :type => :controller do
           double(Core::ArticleReader, call: article)
         end
 
-        allow_any_instance_of(Core::BreadcrumbsReader).to receive(:call) { breadcrumbs }
+        allow(BreadcrumbTrail).to receive(:build) { breadcrumbs }
       end
 
       it 'is successful' do
@@ -37,50 +36,16 @@ RSpec.describe ArticlesController, :type => :controller do
         expect(assigns(:article)).to eq(article)
       end
 
-      context 'when the article belongs to one category' do
-        let(:category) { Core::Category.new('a-category') }
-        let(:categories) { [category] }
+      it 'reads the breadcrumbs for the article' do
+        expect(BreadcrumbTrail).to receive(:build).with(article, category_tree)
 
-        it 'reads the breadcrumbs for the category' do
-          expect(Core::BreadcrumbsReader).
-            to receive(:new).with(category.id, category_tree).and_call_original
-
-          get :show, id: article.id, locale: I18n.locale
-        end
-
-        it 'assigns the breadcrumbs to @breadcrumb_trails' do
-          get :show, id: article.id, locale: I18n.locale
-
-          expect(assigns(:breadcrumb_trails)).to eq([breadcrumbs])
-        end
+        get :show, id: article.id, locale: I18n.locale
       end
 
-      context 'when the article belongs to many categories' do
-        let(:first_category) { Core::Category.new('a-category') }
-        let(:second_category) { Core::Category.new('b-category') }
-        let(:categories) { [first_category, second_category] }
+      it 'assigns the breadcrumbs to @breadcrumbs' do
+        get :show, id: article.id, locale: I18n.locale
 
-        it 'reads the breadcrumbs for both categories' do
-          expect(Core::BreadcrumbsReader).
-            to receive(:new).with(first_category.id, category_tree).and_call_original
-          expect(Core::BreadcrumbsReader).
-            to receive(:new).with(second_category.id, category_tree).and_call_original
-
-          get :show, id: article.id, locale: I18n.locale
-        end
-
-        it 'assigns the breadcrumbs to @breadcrumb_trails' do
-          allow(Core::BreadcrumbsReader).
-            to receive(:new).with(first_category.id, anything) { double(call: %w(a b c)) }
-
-          allow(Core::BreadcrumbsReader).
-            to receive(:new).with(second_category.id, anything) { double(call: %w(x y z)) }
-
-          get :show, id: article.id, locale: I18n.locale
-
-          expect(assigns(:breadcrumb_trails)).
-            to eq([%w(a b c) << first_category, %w(x y z) << second_category])
-        end
+        expect(assigns(:breadcrumbs)).to eq(breadcrumbs)
       end
     end
 

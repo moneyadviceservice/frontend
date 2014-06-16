@@ -1,15 +1,13 @@
-require 'core/interactors/breadcrumbs_reader'
 require 'core/interactors/category_reader'
 
 class CategoriesController < ApplicationController
   decorates_assigned :category, with: CategoryDecorator
-  decorates_assigned :breadcrumbs, with: BreadcrumbDecorator
 
   def show
     @category = Core::CategoryReader.new(params[:id]).call do
       not_found
     end
 
-    @breadcrumbs = Core::BreadcrumbsReader.new(params[:id], category_tree).call { [] }
+    @breadcrumbs = BreadcrumbTrail.build(@category, category_tree)
   end
 end

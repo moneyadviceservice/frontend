@@ -21,6 +21,10 @@ module World
     def all_categories
       Core::Registries::Repository[:category].all
     end
+
+    def find_category(id)
+      Core::Registries::Repository[:category].find(id)
+    end
   end
 end
 

@@ -23,16 +23,6 @@
   <%= render 'shared/related_links', categories: @categories.map { |c| [c, c.contents] } %>
 <% end %>
 
-<%= styleguide_section sections['Directory'] do %>
-  <%= render 'shared/directory',
-             items: @categories_for_directory_en %>
-<% end %>
-
-<%= styleguide_section sections['Main navigation'] do %>
-  <%= render 'shared/nav', categories: @categories_for_directory_en %>
-<% end %>
-
-
 <%= styleguide_section sections['Social Links'] do %>
   <%= render 'shared/social_links' %>
 <% end %>
@@ -47,8 +37,17 @@
   <%= render 'shared/trust_banner' %>
 <% end %>
 
+<%= styleguide_section sections['Directory'] do %>
+  <%= render 'shared/directory',
+             items: @categories_for_directory_en %>
+<% end %>
+
 <%= styleguide_section sections['Promo'] do %>
   <%= render 'shared/promos', items: t('home.show.promoted') %>
+<% end %>
+
+<%= styleguide_section sections['Main navigation'] do %>
+  <%= render 'shared/nav', categories: @categories_for_directory_en %>
 <% end %>
 
 <%= styleguide_section sections['Search box'] do %>

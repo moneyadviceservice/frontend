@@ -55,6 +55,9 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:static_page)
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
+
+    resource :subscription, only: :create, module: 'newsletter', path: 'newsletter-subscription'
+
     resource :styleguide,
              controller: 'styleguide',
              only: 'show',

@@ -6,23 +6,6 @@ class StyleguideController < ApplicationController
   end
 
   def components_website
-    @categories = [
-      {
-        title:    'Insurance',
-        contents: [
-                    { title: 'Choosing home insurance cover' },
-                    { title: 'Do I need car insurance' },
-                    { title: 'Making a claim' }
-                  ]
-      },
-      {
-        title:    'Debt',
-        contents: [
-                    { title: 'Avoiding the bailiff' },
-                    { title: 'Does money grow on trees - we investigate' }
-                  ]
-      }
-    ].map(&:to_ostruct)
   end
 
   def pages_home
@@ -99,7 +82,26 @@ class StyleguideController < ApplicationController
   end
 
   def pages_guide
-    @categories = [
+    render layout: 'styleguide/page'
+  end
+
+  def pages_guide_v2
+    render layout: 'styleguide/page'
+  end
+
+  def pages_action_plan
+    render layout: 'styleguide/page'
+  end
+
+  def pages_error
+    render layout: 'styleguide/page'
+  end
+
+
+  private
+
+  def categories
+    [
       {
         title:    'Insurance',
         contents: [
@@ -116,42 +118,8 @@ class StyleguideController < ApplicationController
                   ]
       }
     ].map(&:to_ostruct)
-
-    render layout: 'styleguide/page'
   end
-
-  def pages_guide_v2
-    @categories = [
-        {
-            title:    'Insurance',
-            contents: [
-                { title: 'Choosing home insurance cover' },
-                { title: 'Do I need car insurance' },
-                { title: 'Making a claim' }
-            ]
-        },
-        {
-            title:    'Debt',
-            contents: [
-                { title: 'Avoiding the bailiff' },
-                { title: 'Does money grow on trees - we investigate' }
-            ]
-        }
-    ].map(&:to_ostruct)
-
-    render layout: 'styleguide/page'
-  end
-
-  def pages_action_plan
-    render layout: 'styleguide/page'
-  end
-
-  def pages_error
-    render layout: 'styleguide/page'
-  end
-
-
-  private
+  helper_method :categories
 
   def categories_for_directory_en
     [

@@ -18,5 +18,9 @@ module Core
     def only_child?
       categories.compact.one?
     end
+
+    def parent_category_ids
+      categories.map(&:parent_id).find_all(&:present?).uniq
+    end
   end
 end

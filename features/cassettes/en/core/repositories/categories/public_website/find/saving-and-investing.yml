@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/saving-and-investing.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - ee9f44b0-498f-4b45-8395-d19716eb8931
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 16 Jun 2014 15:43:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 57761798b6517ac0cf4ce3e74a613e9b
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 16-Jun-2015 15:43:18 GMT; secure
+      - _session_id=57761798b6517ac0cf4ce3e74a613e9b; path=/; secure; HttpOnly
+      - _web_tracking=4c7ac77ff2ec50cb065f8ebbae27a038; path=/; expires=Tue, 16-Jun-2015
+        15:43:18 GMT; secure
+      X-Request-Id:
+      - ee9f44b0-498f-4b45-8395-d19716eb8931
+      X-Runtime:
+      - '0.044095'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"saving-and-investing","title":"Saving and investing","description":"How
+        to save money, types of savings account, and getting started with investing.","parent_id":null,"contents":[{"id":"how-to-save-money","type":"category","title":"How
+        to save money","description":"Work out how much you can afford to save and
+        find out how to set and reach your savings goal."},{"id":"savings-types","type":"category","title":"Types
+        of savings","description":"Learn about savings accounts, cash ISAs, and how
+        to save for children."},{"id":"how-to-invest-money","type":"category","title":"How
+        to invest money","description":"Learn about investing basics, how to make
+        an investment plan, and understanding your attitude to risk."},{"id":"investment-types","type":"category","title":"Types
+        of investment","description":"Information about stocks and shares, investment
+        bonds, tracker funds, with-profits and endowment policies."}]}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 15:43:18 GMT
+recorded_with: VCR 2.9.2

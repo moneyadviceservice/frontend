@@ -1,0 +1,304 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 26ce0c4d-697d-4c4b-95b0-f3667c175067
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 16 Jun 2014 16:33:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvd2hhdC10by1kby1pZi15b3UtaGF2ZS1iZWVuLXJlZnVzZWQtYS1s
+        b2FuLW9yLWNyZWRpdC1jYXJkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5n
+        PSJlbi1HQiI7IHRpdGxlPSJSZWZ1c2VkIGNyZWRpdCBvciByZWZ1c2VkIGEg
+        bG9hbiAtIFdoYXQgeW91IGNhbiBkbyIsIDxodHRwczovL3d3dy5tb25leWFk
+        dmljZXNlcnZpY2Uub3JnLnVrL2N5L2FydGljbGVzL2JldGgtaXctd25ldWQt
+        b3MtZ3dydGhvZHd5ZC1iZW50aHljaWFkLW5ldS1nZXJkeW4tY3JlZHlkLWkt
+        Y2hpPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeS1HQiI7IHRpdGxl
+        PSJCZXRoIGnigJl3IHduZXVkIG9zIGd3cnRob2R3eWQgYmVudGh5Y2lhZCBu
+        ZXUgZ2VyZHluIGNyZWR5ZCBpIGNoaSI=
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 953bb8b95bef581a409bc6fb67d8621c
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 16-Jun-2015 16:33:33 GMT; secure
+      - _session_id=953bb8b95bef581a409bc6fb67d8621c; path=/; secure; HttpOnly
+      - _web_tracking=397c23e649a1f3a2a3b65d006e2d1932; path=/; expires=Tue, 16-Jun-2015
+        16:33:33 GMT; secure
+      X-Request-Id:
+      - 26ce0c4d-697d-4c4b-95b0-f3667c175067
+      X-Runtime:
+      - '0.361586'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"what-to-do-if-you-have-been-refused-a-loan-or-credit-card","title":"Refused
+        credit or refused a loan - What you can do","description":"If you\u2019ve
+        been turned down for credit find out what steps you can take to find out why","body":"<p
+        class=\"intro\"><img src=\"/images/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.jpg\"/>If
+        you\u2019ve been turned down for a credit card or loan there are steps you
+        can take to understand why. There are also things you should avoid doing which
+        could make it even harder for you to get credit in the future. Read on to
+        find out more and to learn about alternative borrowing options to consider
+        or avoid. </p><h2>What you should be told if you have been refused credit
+        or a loan </h2><p>If you\u2019re turned down for a loan or credit card, the
+        credit card or loan company should tell you whether you were turned down as
+        a result of a search on your credit file and, if so, which credit reference
+        agency they used. You can ask for more information about why you were refused
+        but they don\u2019t have to give you a detailed reply. However mistakes can
+        happen\u00a0and if you do spot a mistake, write to the credit reference agency
+        and ask for it to be corrected immediately. Make sure you include an explanation
+        about why it''s wrong, and include any evidence you have. The agency has 28
+        days to act, and the relevant detail in your credit report will be marked
+        as ''disputed'' while it is investigated. </p><h2>Don\u2019t keep applying
+        </h2><p>You might ask ''why have I been refused credit?''. If you have been
+        refused a loan or turned down for a credit card, the worst thing you can do
+        is to keep applying for more credit because any credit applications you make
+        \u2013 whether or not you\u2019ve been successful \u2013 will show up on your
+        credit file. Several applications in a short space of time may make lenders
+        think you are desperate for cash and this will damage your credit rating further.
+        Your credit rating affects whether you can get credit, how much you can borrow
+        and \u2013 sometimes \u2013 the interest rate you may be charged. </p><h2>What
+        to do next </h2><p>What to do next depends on why you are looking for credit.
+        </p><h3>If you need to borrow to pay off other debts </h3><p>If you\u2019re
+        looking to borrow in order to pay off other debts or to help you pay bills
+        and living expenses at the end of the month then it\u2019s worth talking to
+        a free debt adviser as soon as you can. They will be able to help you come
+        up with a plan and avoid getting deeper into debt. Follow the link below for
+        more information. </p><p><div class=\"add-action\"><a href=\"/en/articles/where-to-go-to-get-free-debt-advice\">Where
+        to go to get free debt advice</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"where-to-go-to-get-free-debt-advice\" data-article-type=\"guide\"
+        id=\"email_me_where-to-go-to-get-free-debt-advice\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=where-to-go-to-get-free-debt-advice&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=where-to-go-to-get-free-debt-advice&amp;article_type=guide\"
+        method=\"post\" name=\"guide_where-to-go-to-get-free-debt-advice\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><h3>If
+        you\u2019re looking to fund a purchase and can afford the repayments </h3><p>If
+        you\u2019re looking for credit to fund a purchase, such as buying a car, and
+        you can afford the credit or loan repayments, then check your <strong>credit
+        rating</strong>. You do this by getting hold of your credit report \u2013
+        this is crucial in influencing the lender\u2019s decision about whether to
+        give you credit or not. </p><p>You can see your report by subscribing to a
+        full credit report service or just buying a one-off report. </p><p><div class=\"add-action\"><a
+        href=\"/en/articles/how-to-check-your-credit-report\">Read our guide How to
+        check your credit report</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"how-to-check-your-credit-report\" data-article-type=\"guide\"
+        id=\"email_me_how-to-check-your-credit-report\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=how-to-check-your-credit-report&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-check-your-credit-report&amp;article_type=guide\"
+        method=\"post\" name=\"guide_how-to-check-your-credit-report\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><h2>Bad
+        credit reports - Before you look to borrow elsewhere </h2><p>If you\u2019ve
+        been turned down for a loan or card it could be a good opportunity for you
+        to think about your current money situation. </p><p>If you already have debts
+        you\u2019re struggling to repay, you should talk to someone about them. There
+        are a number of organisations that offer free, confidential debt advice. </p><p><div
+        class=\"add-action\"><a href=\"/en/articles/where-to-go-to-get-free-debt-advice\">Where
+        to go to get free debt advice</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"where-to-go-to-get-free-debt-advice\" data-article-type=\"guide\"
+        id=\"email_me_where-to-go-to-get-free-debt-advice\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=where-to-go-to-get-free-debt-advice&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=where-to-go-to-get-free-debt-advice&amp;article_type=guide\"
+        method=\"post\" name=\"guide_where-to-go-to-get-free-debt-advice\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><p>If
+        you have paid off your debts, you should think about trying to save some money
+        if you can to build up an emergency savings fund. </p><p><div class=\"add-action\"><a
+        href=\"/en/articles/living-on-a-low-income-tips\">Living on a low income \u2013
+        tips</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"living-on-a-low-income-tips\"
+        data-article-type=\"guide\" id=\"email_me_living-on-a-low-income-tips\" tabindex=\"0\">Email
+        this <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=living-on-a-low-income-tips&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=living-on-a-low-income-tips&amp;article_type=guide\"
+        method=\"post\" name=\"guide_living-on-a-low-income-tips\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><p><div class=\"add-action\"><a href=\"/en/tools/budget-planner\">Use
+        our Budget planner to see if you can make any savings</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"budget-planner\" data-article-type=\"tool\"
+        id=\"email_me_budget-planner\" tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=budget-planner&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=budget-planner&amp;article_type=tool\"
+        method=\"post\" name=\"tool_budget-planner\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><h2>Alternative borrowing options if you have a
+        poor credit rating </h2><p>If you need to borrow some money for a purchase
+        and you can afford the repayments, there are other options beyond credit cards
+        and personal loans. </p><h3>Credit unions </h3><p>If you need to borrow some
+        money at an affordable interest rate, find out if there is a credit union
+        near you. Credit unions are non-profit organisations that have been set up
+        to help people in their local communities. There\u2019s a cap on the amount
+        of interest they can charge on their loans of 2% a month or 26.8% a year APR
+        and there are no hidden charges or penalties if you repay the loan early.
+        With some credit unions, you have to save for a period before you''re allowed
+        to borrow. </p><p><div class=\"add-action\"><a href=\"/en/articles/credit-unions\">Read
+        our guide to Borrowing from a credit union</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"credit-unions\" data-article-type=\"guide\"
+        id=\"email_me_credit-unions\" tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=credit-unions&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=credit-unions&amp;article_type=guide\"
+        method=\"post\" name=\"guide_credit-unions\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><h3>Budgeting loans from the Social Fund </h3><p>If
+        you desperately need to borrow money, you may be able to apply for an interest-free
+        Budgeting Loan from the Social Fund. Alternatively, other help may be available
+        from your local authority in England, or the Scottish and Welsh governments.
+        </p><p><div class=\"add-action\"><a href=\"/en/articles/budgeting-loans-from-the-social-fund\">Read
+        about Budgeting loans from the Social fund</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"budgeting-loans-from-the-social-fund\"
+        data-article-type=\"guide\" id=\"email_me_budgeting-loans-from-the-social-fund\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=budgeting-loans-from-the-social-fund&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=budgeting-loans-from-the-social-fund&amp;article_type=guide\"
+        method=\"post\" name=\"guide_budgeting-loans-from-the-social-fund\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><h3>Lenders
+        of last resort </h3><p>Think carefully before borrowing using payday loans,
+        home credit or by using a pawnbroker. And avoid illegal loan sharks altogether.
+        </p><p><strong>Payday loans </strong></p><p>Taking out a payday loan can be
+        a very expensive way to borrow. It\u2019s also all too easy to roll over your
+        loans from month to month and lender to lender, leading to your initial debt
+        quickly growing into an unmanageable one. </p><p><div class=\"add-action\"><a
+        href=\"/en/articles/payday-loans\">Find out more in our guide to Payday loans</a>
+        <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"payday-loans\"
+        data-article-type=\"guide\" id=\"email_me_payday-loans\" tabindex=\"0\">Email
+        this <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=payday-loans&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=payday-loans&amp;article_type=guide\"
+        method=\"post\" name=\"guide_payday-loans\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><p><strong>Home credit or doorstep lending </strong></p><p>Home
+        credit, also known as doorstep lending, is when a salesperson lends you money
+        at your home. It can be very expensive so think very carefully before you
+        take on this type of loan. For example, if you borrow at a high interest rate,
+        will you be able to pay off your loan? Make sure you only use a licensed lender
+        and don\u2019t borrow from anyone who calls at your house you offering a loan
+        as this is illegal. </p><p><div class=\"add-action\"><a href=\"/en/articles/home-credit-or-doorstep-lending\">Read
+        more in our guide Home credit or doorstep lending</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"home-credit-or-doorstep-lending\" data-article-type=\"guide\"
+        id=\"email_me_home-credit-or-doorstep-lending\" tabindex=\"0\">Email this
+        <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=home-credit-or-doorstep-lending&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=home-credit-or-doorstep-lending&amp;article_type=guide\"
+        method=\"post\" name=\"guide_home-credit-or-doorstep-lending\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><p><strong>Pawnbrokers</strong></p><p>Pawnbrokers
+        will lend you money but at higher rates of interest than high street banks
+        and you\u2019ll have to leave something valuable, normally jewellery, as security.
+        The item is known as a \u2018pawn\u2019. If you can\u2019t pay back your debt,
+        you\u2019ll lose your item. </p><p>For extra peace of mind, check that your
+        pawnbroker is a member of the National Pawnbrokers Association, a central
+        organisation that promotes high standards of business conduct. </p><p><div
+        class=\"add-action\"><a href=\"/en/articles/pawnbrokers-how-they-work\">Read
+        more in Pawnbrokers \u2013 how they work</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"pawnbrokers-how-they-work\" data-article-type=\"guide\"
+        id=\"email_me_pawnbrokers-how-they-work\" tabindex=\"0\">Email this <span
+        class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=pawnbrokers-how-they-work&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=pawnbrokers-how-they-work&amp;article_type=guide\"
+        method=\"post\" name=\"guide_pawnbrokers-how-they-work\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><p><strong>Loan sharks </strong></p><p>Loan sharks
+        are illegal lenders who often target low income and desperate families. They
+        may seem friendly at first but borrowing from them is never a good idea \u2013
+        even if your credit rating is poor or you only need a small amount for a short
+        while. Avoid them at all costs. </p><p>As they are not licensed, loan sharks
+        will charge extortionate rates of interest and you may be harassed if you
+        get behind with your repayments. If you owe money to a loan shark, you do
+        not have to pay it back as they are illegal. Report them to the Stop Loan
+        Sharks team. </p><p><div class=\"add-action\"><a href=\"/en/articles/how-to-spot-a-loan-shark\">Find
+        out more about how to spot them in our guide to Loan sharks</a> <a href=\"#\"
+        class=\"action-email\" data-action-id=\"\" data-article-id=\"how-to-spot-a-loan-shark\"
+        data-article-type=\"guide\" id=\"email_me_how-to-spot-a-loan-shark\" tabindex=\"0\">Email
+        this <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=how-to-spot-a-loan-shark&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-spot-a-loan-shark&amp;article_type=guide\"
+        method=\"post\" name=\"guide_how-to-spot-a-loan-shark\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\"
+        /></div></form> </div></p><p><div class=\"add-action\"><span class=\"action-text\"><a
+        target=\"_blank\" href=\"http://www.direct.gov.uk/en/MoneyTaxAndBenefits/ManagingDebt/DebtsAndArrears/DG_10035958\">Contact
+        the Stop Loan Sharks team</a></span> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"1280\" data-article-id=\"\" data-article-type=\"\" id=\"email_me_1280\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/external?external_action_id=1280\" class=\"action-form\"
+        data-remote=\"true\" data-resource-path=\"/en/action_items/external?external_action_id=1280\"
+        method=\"post\" name=\"1280\"><div><input class=\"action-submit\" data-action-event=\"add\"
+        tabindex=\"0\" type=\"submit\" value=\"Add to my to do list\" /><input name=\"authenticity_token\"
+        type=\"hidden\" value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form>
+        </div></p><p><strong>Cash for gold </strong></p><p>If you want to sell old
+        gold there are several different options to choose from including postal gold
+        websites, specialist gold merchants, TV gold websites and traditional pawnbrokers.
+        Think very carefully if you are considering selling gold to get hold of cash.
+        </p><p><div class=\"add-action\"><a href=\"/en/articles/quick-access-to-cash-your-options\">See
+        more in our guide to Quick access to cash your options</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"quick-access-to-cash-your-options\"
+        data-article-type=\"guide\" id=\"email_me_quick-access-to-cash-your-options\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=quick-access-to-cash-your-options&amp;article_type=guide\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=quick-access-to-cash-your-options&amp;article_type=guide\"
+        method=\"post\" name=\"guide_quick-access-to-cash-your-options\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><h2>Rebuilding
+        your credit rating </h2><p>There are steps you can take to rebuild your credit
+        rating after being in debt. </p><p><div class=\"add-action\"><a href=\"/en/action_plans/how-to-improve-your-credit-rating\">Read
+        more in How to improve your credit rating</a> <a href=\"#\" class=\"action-email\"
+        data-action-id=\"\" data-article-id=\"how-to-improve-your-credit-rating\"
+        data-article-type=\"action-plan\" id=\"email_me_how-to-improve-your-credit-rating\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=how-to-improve-your-credit-rating&amp;article_type=action-plan\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=how-to-improve-your-credit-rating&amp;article_type=action-plan\"
+        method=\"post\" name=\"action-plan_how-to-improve-your-credit-rating\"><div><input
+        class=\"action-submit\" data-action-event=\"add\" tabindex=\"0\" type=\"submit\"
+        value=\"Add to my to do list\" /><input name=\"authenticity_token\" type=\"hidden\"
+        value=\"0RJCpsyw8VwqFBs/LKWt/gZOcztwBbz7qkh1jTeNUD0=\" /></div></form> </div></p><ul><li>If
+        you found this page useful, <a href=\"https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions/new\">sign
+        up for our free newsletter</a> full of top money tips and advice\u00a0\u00a0\u00a0
+        </li></ul>","categories":["help-with-loans","credit-cards-and-credit-ratings"]}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 16:33:33 GMT
+recorded_with: VCR 2.9.2

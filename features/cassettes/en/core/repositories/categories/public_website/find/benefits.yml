@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/benefits.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b2e175bc-f4f5-42b4-bd22-83ed1a6d4613
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 16 Jun 2014 16:45:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b6d126092f5868a5a99c01b697683cf4
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 16-Jun-2015 16:45:38 GMT; secure
+      - _session_id=b6d126092f5868a5a99c01b697683cf4; path=/; secure; HttpOnly
+      - _web_tracking=cc45d3b97522d0937a72997848be44f6; path=/; expires=Tue, 16-Jun-2015
+        16:45:38 GMT; secure
+      X-Request-Id:
+      - b2e175bc-f4f5-42b4-bd22-83ed1a6d4613
+      X-Runtime:
+      - '0.034567'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"benefits","title":"Benefits","description":"Find out what benefits
+        you''re entitled to and learn about Universal Credit.","parent_id":null,"contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
+        with your benefits","description":"Help with getting the right entitlements,
+        where to get benefits support and advice and what to do if your payments are
+        cut."},{"id":"child-benefit","type":"category","title":"Child Benefit","description":"Find
+        out how Child Benefit works and how much you might be entitled to claim."},{"id":"universal-credit","type":"category","title":"Universal
+        Credit","description":"Get ready for the new single monthly payment which
+        has started to replace six existing benefits."},{"id":"benefits-at-work","type":"category","title":"Benefits
+        at work","description":"Learn about employee benefits, salary sacrifice schemes
+        and benefits and tax credits you can claim after job loss."}]}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 16:45:38 GMT
+recorded_with: VCR 2.9.2

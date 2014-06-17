@@ -8,6 +8,7 @@
 
 .link-list-secondary__item {
   @extend .unstyled-list;
+  @include body(16, 22);
 }
 
 .link-list-secondary__link {

@@ -1,3 +1,5 @@
+<% active_categories = [] unless (defined?(:active_categories) && active_categories.present?) %>
+
 <a href="#top" class="link-to-top-block"><%= t('back_to_top') %>
   <span class="icon icon--up-chevron-blue"></span>
 </a>
@@ -6,9 +8,25 @@
   <nav class="nav" role="navigation" aria-label="main" id="primary-nav">
     <ul class="link-list-primary">
       <% categories.each do |category| %>
-        <li class="link-list-primary__item">
-          <%= link_to category.title, category.path, class: 'link-list-primary__link' %>
-        </li>
+        <% if active_categories.member? category.id %>
+          <li class="link-list-primary__item link-list-primary__item--selected">
+            <%= link_to category.title, category.path, class: 'link-list-primary__link' %>
+            <ul class="link-list-secondary">
+              <% category.contents.each do |sub_category| %>
+                <li class="link-list-secondary__item">
+                  <%=
+                    link_to sub_category.title, sub_category.path,
+                      class: "link-list-secondary__link #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
+                  %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+        <% else %>
+          <li class="link-list-primary__item">
+            <%= link_to category.title, category.path, class: 'link-list-primary__link' %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </nav>

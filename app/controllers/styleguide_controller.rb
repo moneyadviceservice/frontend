@@ -23,13 +23,9 @@ class StyleguideController < ApplicationController
                   ]
       }
     ].map(&:to_ostruct)
-
-    @categories_for_directory_en = categories_for_directory_en
   end
 
   def pages_home
-    @categories_for_directory_en = categories_for_directory_en
-
     @categories_for_directory_cy = [
       {
         title:       'Dyled a benthyca',
@@ -155,6 +151,8 @@ class StyleguideController < ApplicationController
   end
 
 
+  private
+
   def categories_for_directory_en
     [
       {
@@ -209,9 +207,7 @@ class StyleguideController < ApplicationController
       }
     ].map(&:to_ostruct)
   end
-
-
-  private
+  helper_method :categories_for_directory_en
 
   def sections
     @sections ||= Styleguide.new.sections.each_with_object({}) do |(k, v), h|

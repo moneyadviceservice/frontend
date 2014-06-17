@@ -6,79 +6,9 @@ class StyleguideController < ApplicationController
   end
 
   def components_website
-    @categories = [
-      {
-        title:    'Insurance',
-        contents: [
-                    { title: 'Choosing home insurance cover' },
-                    { title: 'Do I need car insurance' },
-                    { title: 'Making a claim' }
-                  ]
-      },
-      {
-        title:    'Debt',
-        contents: [
-                    { title: 'Avoiding the bailiff' },
-                    { title: 'Does money grow on trees - we investigate' }
-                  ]
-      }
-    ].map(&:to_ostruct)
   end
 
   def pages_home
-    @categories_for_directory_en = [
-      {
-        title:       'Debt and borrowing',
-        description: 'Taking control of debt, getting free debt advice, and how to borrow affordably',
-        path:        '#url'
-      },
-      {
-        title:       'Budgeting and managing money',
-        description: 'Advice on running a bank account, planning your finances, and cutting costs',
-        path:        '#url'
-      },
-      {
-        title:       'Saving and investing',
-        description: 'How to save money, types of savings account, and getting started with investing',
-        path:        '#url'
-      },
-      {
-        title:       'Work, pensions and retirement',
-        description: 'Includes redundancy advice, types of pension and annuity, and automatic enrolment information',
-        path:        '#url'
-      },
-      {
-        title:       'Benefits',
-        description: 'Find out what benefits you’re entitled to and learn about Universal Credit',
-        path:        '#url'
-      },
-      {
-        title:       'Births, deaths and family',
-        description: 'Having a baby, making a will, and dealing with divorce and separation',
-        path:        '#url'
-      },
-      {
-        title:       'Insurance',
-        description: 'Help and advice on protecting your family and getting the right home and car insurance',
-        path:        '#url'
-      },
-      {
-        title:       'Homes and mortgages',
-        description: 'Everything you need to know about buying a home and choosing the right mortgage',
-        path:        '#url'
-      },
-      {
-        title:       'Care and disability',
-        description: 'Choosing the right care services, support for carers and paying for the cost of care',
-        path:        '#url'
-      },
-      {
-        title:       'Cars and travel',
-        description: 'Help with buying and running a car, buying foreign currency, and sending money abroad',
-        path:        '#url'
-      }
-    ].map(&:to_ostruct)
-
     @categories_for_directory_cy = [
       {
         title:       'Dyled a benthyca',
@@ -152,7 +82,26 @@ class StyleguideController < ApplicationController
   end
 
   def pages_guide
-    @categories = [
+    render layout: 'styleguide/page'
+  end
+
+  def pages_guide_v2
+    render layout: 'styleguide/page'
+  end
+
+  def pages_action_plan
+    render layout: 'styleguide/page'
+  end
+
+  def pages_error
+    render layout: 'styleguide/page'
+  end
+
+
+  private
+
+  def categories
+    [
       {
         title:    'Insurance',
         contents: [
@@ -169,41 +118,64 @@ class StyleguideController < ApplicationController
                   ]
       }
     ].map(&:to_ostruct)
-
-    render layout: 'styleguide/page'
   end
+  helper_method :categories
 
-  def pages_guide_v2
-    @categories = [
-        {
-            title:    'Insurance',
-            contents: [
-                { title: 'Choosing home insurance cover' },
-                { title: 'Do I need car insurance' },
-                { title: 'Making a claim' }
-            ]
-        },
-        {
-            title:    'Debt',
-            contents: [
-                { title: 'Avoiding the bailiff' },
-                { title: 'Does money grow on trees - we investigate' }
-            ]
-        }
+  def categories_for_directory_en
+    [
+      {
+        title:       'Debt and borrowing',
+        description: 'Taking control of debt, getting free debt advice, and how to borrow affordably',
+        path:        '#url'
+      },
+      {
+        title:       'Budgeting and managing money',
+        description: 'Advice on running a bank account, planning your finances, and cutting costs',
+        path:        '#url'
+      },
+      {
+        title:       'Saving and investing',
+        description: 'How to save money, types of savings account, and getting started with investing',
+        path:        '#url'
+      },
+      {
+        title:       'Work, pensions and retirement',
+        description: 'Includes redundancy advice, types of pension and annuity, and automatic enrolment information',
+        path:        '#url'
+      },
+      {
+        title:       'Benefits',
+        description: 'Find out what benefits you’re entitled to and learn about Universal Credit',
+        path:        '#url'
+      },
+      {
+        title:       'Births, deaths and family',
+        description: 'Having a baby, making a will, and dealing with divorce and separation',
+        path:        '#url'
+      },
+      {
+        title:       'Insurance',
+        description: 'Help and advice on protecting your family and getting the right home and car insurance',
+        path:        '#url'
+      },
+      {
+        title:       'Homes and mortgages',
+        description: 'Everything you need to know about buying a home and choosing the right mortgage',
+        path:        '#url'
+      },
+      {
+        title:       'Care and disability',
+        description: 'Choosing the right care services, support for carers and paying for the cost of care',
+        path:        '#url'
+      },
+      {
+        title:       'Cars and travel',
+        description: 'Help with buying and running a car, buying foreign currency, and sending money abroad',
+        path:        '#url'
+      }
     ].map(&:to_ostruct)
-
-    render layout: 'styleguide/page'
   end
-
-  def pages_action_plan
-    render layout: 'styleguide/page'
-  end
-
-  def pages_error
-    render layout: 'styleguide/page'
-  end
-
-  private
+  helper_method :categories_for_directory_en
 
   def sections
     @sections ||= Styleguide.new.sections.each_with_object({}) do |(k, v), h|

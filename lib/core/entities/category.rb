@@ -13,9 +13,5 @@ module Core
     def parent?
       contents.any? { |c| c.try(:child?) }
     end
-
-    def grandparent?
-      contents.any? { |c| c.try(:parent?) }
-    end
   end
 end

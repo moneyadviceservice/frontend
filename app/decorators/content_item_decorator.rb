@@ -1,7 +1,7 @@
 require 'html_processor'
 
 class ContentItemDecorator < Draper::Decorator
-  delegate :title, :description, :parent_category_ids
+  delegate :title, :description, :categories, :parent_category_ids
 
   def alternate_options
     object.alternates.each_with_object({}) do |alternate, hash|
@@ -30,10 +30,6 @@ class ContentItemDecorator < Draper::Decorator
       each_with_object({}) do |(category, contents), hash|
         hash[CategoryDecorator.decorate(category)] = CategoryContentDecorator.decorate_collection(contents)
       end
-  end
-
-  def categories
-    object.categories.compact
   end
 
   private

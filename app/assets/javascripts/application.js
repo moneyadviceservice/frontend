@@ -58,6 +58,15 @@ require(['common'], function(MAS) {
         showIcon: true,
         useButton: true
       });
+
+      // Category Collapsables
+      new Collapsable({
+        name: 'categoryCollapsables',
+        showIcon: true,
+        useButton: true,
+        triggerEl: '.category-detail__heading',
+        targetEl: '.category-detail__list-container'
+      });
     });
   });
 

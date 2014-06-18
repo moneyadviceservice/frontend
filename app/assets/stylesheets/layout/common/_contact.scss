@@ -11,10 +11,10 @@
   }
 
   @include respond-to($mq-l) {
-    @include column(4);
+    @include column(3);
 
     &:first-child {
-      @include column(4);
+      @include column(3);
     }
   }
 }

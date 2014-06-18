@@ -67,11 +67,12 @@ group :production do
 end
 
 group :test, :development do
-  gem 'ejs'
-  gem 'dotenv-rails'
-  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
-  gem 'chai-jquery-rails'
   gem 'byebug'
+  gem 'chai-jquery-rails'
+  gem 'dotenv-rails'
+  gem 'ejs'
+  gem 'konacha'
+  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'rspec-rails', '~> 3.0'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end

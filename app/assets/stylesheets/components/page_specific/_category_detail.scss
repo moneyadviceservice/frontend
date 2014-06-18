@@ -34,6 +34,11 @@
   button {
     margin-left:-$category-inset;
     padding-left:$category-inset;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   & .icon--toggle {

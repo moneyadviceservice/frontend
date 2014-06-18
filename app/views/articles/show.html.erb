@@ -24,7 +24,7 @@
   <%=
     render 'shared/nav',
       categories: category_navigation,
-      active_categories: (article.parent_category_ids + article.categories.map(&:id))
+      active_categories: active_categories
   %>
 </div>
 

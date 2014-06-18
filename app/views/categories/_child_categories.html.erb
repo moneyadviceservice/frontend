@@ -1,13 +1,15 @@
 <% contents.each_with_index do |child_category, i| %>
-  <section class="category-detail category-detail--<%= i+1 %>">
+  <section class="category-detail">
     <h2 class="category-detail__heading" id="<%= child_category.id %>">
-      <%= link_to child_category.title, child_category.path, class: 'category-detail__link' %>
+      <%= child_category.title %>
     </h2>
 
     <p><%= child_category.description %></p>
 
     <% if child_category.contents.present? %>
+      <div class="category-detail__list-container">
       <%= render 'content_items', contents: child_category.contents %>
+      </div>
     <% end %>
   </section>
 <% end %>

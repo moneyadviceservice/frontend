@@ -42,7 +42,9 @@ define(['jquery', 'common'], function($, MAS) {
   var _getTarget = function($el, opts) {
     switch (opts.targetType) {
       case 'class':
-        return $el.next(opts.targetEl);
+        var $immediateSibling = $el.next(opts.targetEl),
+            targetIsImmediateSibling = !!$immediateSibling.length;
+        return (targetIsImmediateSibling)? $immediateSibling: $el.siblings(opts.targetEl);
       case 'href':
         var href = $el.attr('href'),
             $t = $(href);

@@ -1,20 +1,12 @@
 .category-detail {
-  border-bottom: 1px solid $color-category-border;
+  border-bottom: 3px solid $color-category-border;
   margin-bottom: $baseline-unit*6;
-}
+  padding-bottom: $baseline-unit*4;
 
-.category-detail__heading {
-  color: $color-heading-default;
-  pointer-events: none;
-  cursor: default;
-
-  &:visited {
-    color: $color-heading-default;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  &:last-child {
+    @include respond-to(0, $mq-m) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -30,4 +22,45 @@
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
   }
+}
+
+
+.category-detail__heading {
+  @extend %collapsable-trigger;
+}
+
+.category-detail__list-container {
+  @extend %collapsable-target;
+}
+
+.js .category-detail__heading {
+  position:relative;
+  padding-left:$category-inset;
+
+  button {
+    margin-left:-$category-inset;
+    padding-left:$category-inset;
+    text-align:left;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & .icon--toggle {
+    @extend .icon--plus;
+    position:absolute;
+    top:6px;
+    left:0;
+  }
+
+  &.is-on .icon--toggle {
+    @extend .icon--minus;
+  }
+}
+
+.js .category-detail p,
+.js .category-detail__list-container {
+  padding-left:$category-inset;
 }

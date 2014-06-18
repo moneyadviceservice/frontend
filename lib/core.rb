@@ -56,6 +56,10 @@ module Core
       autoload :PublicWebsite, 'core/repository/static_pages/public_website'
     end
 
+    module Newsletter
+      autoload :PublicWebsite, 'core/repositories/newsletter/subscriptions/public_website'
+    end
+
     module Search
       autoload :ContentService, 'core/repository/search/content_service'
       autoload :FakeContentService, 'core/repository/search/fake_content_service'

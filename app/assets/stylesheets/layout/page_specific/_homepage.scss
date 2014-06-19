@@ -14,7 +14,6 @@
       @include respond-to($mq-m) {
         flex-flow: row;
         flex-wrap: wrap;
-        flex-direction: row;
       }
     }
 
@@ -31,6 +30,23 @@
 
       @include respond-to($mq-l) {
         max-width: 30%;
+      }
+    }
+
+    .ie9 & {
+      .directory__item {
+        @include column(12);
+
+        @include respond-to($mq-m) {
+          @include column(6);
+          min-height: 126px;
+        }
+
+        @include respond-to($mq-l) {
+          @include column(4);
+          min-height: 156px;
+          margin-bottom: $baseline-unit*4;
+        }
       }
     }
 

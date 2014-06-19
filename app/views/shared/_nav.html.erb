@@ -8,19 +8,25 @@
   <nav class="nav" role="navigation" aria-label="main" id="primary-nav">
     <ul class="link-list-primary">
       <% categories.each do |category| %>
-        <% if active_categories.member? category.id %>
-          <li class="link-list-primary__item link-list-primary__item--selected">
-            <%= link_to category.title, category.path, class: 'link-list-primary__link' %>
+        <% if active_categories.member?(category.id) %>
+          <li class="link-list-primary__item">
+
+            <% if child_selected = category.contents && category.contents.any? { |c| active_categories.include?(c.id) } %>
+              <%= link_to category.title, category.path, class: "link-list-primary__link" %>
+            <% else %>
+              <span class="link-list-primary__link is-selected"><%= category.title %></span>
+            <% end %>
+
             <ul class="link-list-secondary">
               <% category.contents.each do |sub_category| %>
                 <li class="link-list-secondary__item">
-                  <%=
-                    link_to sub_category.title, sub_category.path,
-                      class: "link-list-secondary__link #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
+                  <%= link_to sub_category.title, sub_category.path,
+                              class: "link-list-secondary__link #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
                   %>
                 </li>
               <% end %>
             </ul>
+
           </li>
         <% else %>
           <li class="link-list-primary__item">

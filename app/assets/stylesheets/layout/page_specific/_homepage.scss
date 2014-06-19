@@ -2,29 +2,54 @@
   @include column(12);
 }
 
-.l-directory__item {
-  @include column(12);
+.l-directory {
+  @extend .clearfix;
 
-  @include respond-to($mq-m) {
-    @include column(6);
-    min-height:126px;
-  }
+  @if $responsive {
 
-  @include respond-to($mq-l) {
-    @include column(4);
-    margin-bottom: $baseline-unit*4;
-  }
-}
+    & .l-constrained {
+      display: flex;
+      flex-flow: column;
 
-.temp-dynamic-directory-container .l-directory__item {
-  @include respond-to($mq-m) {
-    min-height:156px;
-  }
-}
+      @include respond-to($mq-m) {
+        flex-flow: row;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
 
-.theme-cy .temp-dynamic-directory-container .l-directory__item {
-  @include respond-to($mq-m) {
-    min-height:144px;
+    .directory__item {
+      flex-grow: 1;
+      margin-left: 1.6667%;
+      margin-right: 1.6667%;
+      margin-bottom: px(12);
+
+      @include respond-to($mq-m) {
+        max-width: 45%;
+        margin-bottom: px(18);
+      }
+
+      @include respond-to($mq-l) {
+        max-width: 30%;
+      }
+    }
+
+  } @else {
+
+    .directory__item {
+      @include column(12);
+
+      @include respond-to($mq-m) {
+        @include column(6);
+        min-height: 126px;
+      }
+
+      @include respond-to($mq-l) {
+        @include column(4);
+        min-height: 180px;
+        margin-bottom: $baseline-unit*4;
+      }
+    }
   }
 }
 

@@ -22,6 +22,7 @@
 .link-list-secondary__text.is-selected {
   position: relative;
   background: $color-link-list-selected-background;
+  margin-bottom:1px;
 
   &:before {
     content: '';

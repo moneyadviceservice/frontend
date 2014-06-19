@@ -1,7 +1,7 @@
-<div class="directory">
-  <section class="l-constrained clearfix">
+<div class="directory l-directory">
+  <section class="l-constrained">
     <% items.each do |item| %>
-      <div class="directory__item l-directory__item">
+      <div class="directory__item">
         <h2 class="directory__title"><a href="<%= item.path %>"><%= item.title %></a></h2>
 
         <p class="directory__description"><%= item.description %></p>

@@ -5,10 +5,15 @@
 .trust-banner {
   position: relative;
   height: 240px;
-  background: image_url('illustrated_people.png') 100% 100% no-repeat;
+  background: image_url('illustrated_people.png') 50% 100% no-repeat;
   background-size: 100%;
 
+  @include respond-to(25.25em) {
+    background-size: auto 157px;
+  }
+
   @include respond-to($mq-s) {
+    background-position: 100% 100%;
     background-size: 40%;
     height: auto;
   }

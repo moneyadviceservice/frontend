@@ -1,13 +1,13 @@
-<form class="newsletter">
-  <h3 class="newsletter__heading">Free newsletter</h3>
+<%= form_tag(subscription_path, class: 'newsletter', remote: true) do %>
+  <h3 class="newsletter__heading"><%= t('newsletter.heading') %></h3>
   <ul class="list--benefits list--benefits--small">
-    <li>Receive top money saving tips</li>
-    <li>Get the latest money news</li>
-    <li>Free, unbiased advice to help you</li>
+    <% t('newsletter.benefits').each do |benefit| %>
+      <li><%= benefit %></li>
+    <% end %>
   </ul>
-  <label class="visually-hidden" for="email">Email</label>
+  <%= label_tag('subscription[email]', 'Email', class: 'visually-hidden') %>
   <div class="newsletter__form">
-    <input class="newsletter__input" id="email" type="email">
-    <button class="button-link newsletter__button" type="submit">Sign up</button>
+    <%= email_field_tag('subscription[email]', nil, class: 'newsletter__input') %>
+    <%= button_tag('Sign up', type: 'submit', class: 'button-link newsletter__button') %>
   </div>
-</form>
+<% end %>

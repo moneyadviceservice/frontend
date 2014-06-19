@@ -9,7 +9,7 @@ RSpec.describe CategoriesController, :type => :controller do
   end
 
   describe 'GET show' do
-    let(:category) { instance_double(Core::Category, id: 'test') }
+    let(:category) { Core::Category.new('test') }
     let(:breadcrumbs) { double }
 
     context 'when the category exists' do

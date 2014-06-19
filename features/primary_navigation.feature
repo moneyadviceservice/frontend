@@ -1,7 +1,7 @@
 Feature: Primary Navigation
   As a user reading an article
   I want to understand the breadth of the website
-  And be able to quickly jump to other relevenat sections
+  And be able to quickly jump to other relevant sections
   So that I can orientate myself
 
   Scenario: Primary Navigation for an article in 1 category

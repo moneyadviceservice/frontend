@@ -9,7 +9,7 @@
     <ul class="link-list-primary">
       <% categories.each do |category| %>
         <% if active_categories.member?(category.id) %>
-          <li class="link-list-primary__item">
+          <li class="link-list-primary__item link-list-primary__item--selected">
 
             <% if child_selected = category.contents && category.contents.any? { |c| active_categories.include?(c.id) } %>
               <%= link_to category.title, category.path, class: "link-list-primary__text" %>

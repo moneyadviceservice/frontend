@@ -18,3 +18,23 @@
     }
   }
 }
+
+.l-contact-cell--separated {
+  position: relative;
+
+  &:after {
+    background: #ccc;
+    bottom: 0;
+    content: '';
+    display: none;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+
+    @include respond-to($mq-l) {
+      display: block;
+    };
+  }
+}

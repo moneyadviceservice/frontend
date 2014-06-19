@@ -9,11 +9,21 @@
 }
 
 .newsletter .newsletter__input {
-  @include respond-to($mq-m) {
-    width: auto;
-  };
+  margin-right: 6px;
+  margin-bottom: $baseline-unit;
+  width: auto;
 }
 
-.newsletter__form {
+.newsletter__form-controls {
   display: table;
+}
+
+.newsletter__error {
+  @extend %font-body;
+  display: none;
+  margin-bottom: $baseline-unit;
+}
+
+.newsletter__error--is-active {
+  display: block;
 }

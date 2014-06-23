@@ -6,6 +6,7 @@ Feature: View a news article
   Scenario Outline: View a news article
     When I view the news article in <language>
     Then I should see the news article in <language>
+    And I should see its publication date
 
   Examples:
     | language |
@@ -21,8 +22,4 @@ Feature: View a news article
     | original_language | translated_language |
     | English           | Welsh               |
     | Welsh             | English             |
-
-  Scenario: View news article's publication date
-    When I view a news article
-    Then I should see its publication date
 

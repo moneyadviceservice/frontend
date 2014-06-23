@@ -1,0 +1,7 @@
+<% if subscription.success? %>
+$('.js-newsletter-form').removeClass('is-errored');
+$('.js-newsletter-form').html('<%= subscription.success_message %>');
+<% else %>
+$('.js-newsletter-form').addClass('is-errored');
+$('.js-newsletter-form').prepend('<%= subscription.error_message %>');
+<% end %>

@@ -8,7 +8,6 @@
   </ul>
   <%= label_tag('subscription[email]', 'Email', class: 'visually-hidden') %>
   <div class="newsletter__form-controls js-newsletter-form">
-    <p class="newsletter__error js-newsletter-error-msg">Please provide a valid email</p>
     <%= email_field_tag('subscription[email]', nil, class: 'newsletter__input') %>
     <%= button_tag('Sign up', type: 'submit', class: 'button button--input newsletter__button') %>
   </div>

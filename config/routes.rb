@@ -70,7 +70,6 @@ Rails.application.routes.draw do
         scope 'pages' do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
-          get 'pages_guide_v2', path: '/guide_v2'
           get 'pages_error', path: '/error'
           get 'pages_action_plan', path: '/action-plan'
           get 'pages_home', path: '/home'

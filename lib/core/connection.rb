@@ -14,6 +14,7 @@ module Core
     ClientError      = Class.new(Error)
     ConnectionFailed = Class.new(Error)
     ResourceNotFound = Class.new(Error)
+    UnprocessableEntity = Class.new(Error)
 
     def get(*args)
       __getobj__.get(*args)
@@ -28,5 +29,22 @@ module Core
       raise ClientError
 
     end
+
+    def post(*args)
+      __getobj__.post(*args)
+
+    rescue Faraday::Error::ConnectionFailed
+      raise ConnectionFailed
+
+    rescue Faraday::Error::ClientError => error
+      case error.response[:status]
+        when 422
+          raise UnprocessableEntity
+        else
+          raise ClientError
+      end
+
+    end
+
   end
 end

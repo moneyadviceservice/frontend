@@ -24,6 +24,10 @@
   background: $color-link-list-selected-background;
   margin-bottom:1px;
 
+  .link-list-secondary__item:last-child & {
+    margin-bottom:0;
+  }
+
   &:before {
     content: '';
     position: absolute;

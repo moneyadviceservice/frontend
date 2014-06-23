@@ -6,7 +6,6 @@ Feature: View a news article
   Scenario Outline: View a news article
     When I view the news article in <language>
     Then I should see the news article in <language>
-    And I should see its publication date
 
   Examples:
     | language |

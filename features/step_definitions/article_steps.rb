@@ -24,18 +24,6 @@ Then(/^I should see an article in (.*)$/) do |language|
   expect(article_page.content).to have_content(strip_tags(sample_of_body_text))
 end
 
-Then(/^I should not see an article title in the related content in (.*)$/) do |language|
-  article           = article_for_locale(language_to_locale(language))
-  decorated_article = ContentItemDecorator.decorate(article)
-
-  decorated_article.related_categories.each do |category, contents|
-    expect(article_page.related_content).to have_content(category.title)
-    contents.each do |item|
-      expect(article_page.related_content).to have_content(item.title)
-    end
-  end
-end
-
 Then(/^the article should have a canonical tag for that language version$/) do
   expected_href = article_url(id: current_article.id, locale: current_article.locale)
 

@@ -3,7 +3,7 @@ require 'html_processor'
 class ContentItemDecorator < Draper::Decorator
   decorates_association :categories, with: CategoryDecorator
 
-  delegate :title, :description, :parent_category_ids
+  delegate :title, :description
 
   def alternate_options
     object.alternates.each_with_object({}) do |alternate, hash|

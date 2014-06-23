@@ -1,6 +1,7 @@
 require 'core/interactors/searcher'
 
 class SearchResultCollectionDecorator < Draper::Decorator
+  decorates_association :items, with: SearchResultDecorator
 
   delegate :per_page
 
@@ -18,10 +19,6 @@ class SearchResultCollectionDecorator < Draper::Decorator
     else
       object.total_results
     end
-  end
-
-  def items
-    @items ||= SearchResultDecorator.decorate_collection(object.items)
   end
 
   def first_page?

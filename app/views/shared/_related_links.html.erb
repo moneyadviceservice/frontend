@@ -10,11 +10,13 @@
         </li>
       <% end %>
     </ul>
-    <%= link_to category.path, class: 'related-links__all'  do %>
-      <%= t('articles.show.related_links.link') %>
-      <span class="visually-hidden">
-        <%= t('articles.show.related_links.hidden_link', category: category.title) %>
-      </span>
+    <% if (article.categories.find { |c| c == category.object }.try(:contents).try(:count) || 0) > (category.contents.count + 1) %>
+      <%= link_to category.path, class: 'related-links__all' do %>
+        <%= t('articles.show.related_links.link') %>
+        <span class="visually-hidden">
+          <%= t('articles.show.related_links.hidden_link', category: category.title) %>
+        </span>
+      <% end %>
     <% end %>
   </div>
 <% end %>

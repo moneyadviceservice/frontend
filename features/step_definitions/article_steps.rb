@@ -2,7 +2,7 @@ When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   browse_to_article article(language)
 end
 
-When(/^I translate the article into (.*)$/) do |language|
+When(/^I translate an article into (.*)$/) do |language|
   locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
@@ -12,7 +12,7 @@ When(/^I translate the article into (.*)$/) do |language|
   home_page.footer_site_links.send("#{language.downcase}_link").click
 end
 
-Then(/^I should see the article in (.*)$/) do |language|
+Then(/^I should see an article in (.*)$/) do |language|
   article = article(language)
 
   body_text           = Nokogiri::HTML(article.body).inner_html
@@ -24,7 +24,7 @@ Then(/^I should see the article in (.*)$/) do |language|
   expect(article_page.content).to have_content(strip_tags(sample_of_body_text))
 end
 
-Then(/^I should not see the article title in the related content in (.*)$/) do |language|
+Then(/^I should not see an article title in the related content in (.*)$/) do |language|
   article           = article_for_locale(language_to_locale(language))
   decorated_article = ContentItemDecorator.decorate(article)
 

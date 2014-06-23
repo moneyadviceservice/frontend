@@ -1,8 +1,3 @@
-require 'core/entities/article'
-require 'core/interactors/article_reader'
-require 'core/registries/repository'
-require 'core/repositories/articles/fake'
-
 module World
   module Articles
     attr_accessor :current_article

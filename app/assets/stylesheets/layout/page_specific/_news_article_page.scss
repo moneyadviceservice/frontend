@@ -1,0 +1,7 @@
+.l-main {
+
+  // make the publication date smaller than the normal paragraph size
+  h1 + p {
+    @extend %type-small;
+  }
+}

@@ -1,0 +1,15 @@
+// Newsletter component for the website
+//
+// Styleguide newsletter
+
+.newsletter {}
+
+.newsletter__heading {
+  margin-top: 0;
+}
+
+.newsletter .newsletter__input {
+  @include respond-to($mq-m) {
+    width: auto;
+  };
+}

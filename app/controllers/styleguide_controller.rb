@@ -1,8 +1,8 @@
 class StyleguideController < ApplicationController
-  layout 'styleguide/documentation_1col'
+  layout 'styleguide/documentation'
 
   def layouts
-    render layout: 'styleguide/documentation_1col'
+    render layout: 'styleguide/documentation'
   end
 
   def components_website

@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/how-to-open-a-bank-account.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - de841e37-9d30-4e01-a1c5-4cf3de111a5b
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Jun 2014 16:13:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/action_plans/how-to-open-a-bank-account>
+        rel="alternate"; hreflang="en-GB"; title="Action plan - How to open a bank
+        account", <https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-agor-cyfrif-banc>
+        rel="alternate"; hreflang="cy-GB"; title="Cynllun gweithredu - Sut i agor
+        cyfrif banc"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - ee15f85cbe2ae7f77c7ba1fab37d1e87
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 24-Jun-2015 16:13:39 GMT; secure
+      - _session_id=ee15f85cbe2ae7f77c7ba1fab37d1e87; path=/; secure; HttpOnly
+      - _web_tracking=b8b97068cc91e7a289fa3f8f736a62bb; path=/; expires=Wed, 24-Jun-2015
+        16:13:39 GMT; secure
+      X-Request-Id:
+      - de841e37-9d30-4e01-a1c5-4cf3de111a5b
+      X-Runtime:
+      - '0.027586'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-open-a-bank-account","title":"Action plan - How to open
+        a bank account","description":"Learn how to open the most suitable bank account
+        for you. View this action plan to compare bank accounts and select the most
+        appropriate option for you.","body":"<p class=\"intro\"><img src=\"/images/new_action_plan_icon.jpg\"/>Follow
+        these steps to choose and open a bank account that''s right for you. </p><div
+        class=\"action-item\"><h3>Compare accounts to get the best one for you </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Fees, charges and
+        interest vary a lot between bank accounts so it''s important to choose an
+        account that suits the way you manage your money. </p></div><div class=\"how\"><h4>How?
+        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-choose-the-right-bank-account\">Check
+        our guide How to choose the right bank account</a></li><li><a title=\"Compare
+        current accounts\" href=\"https://compare.moneyadviceservice.org.uk/currentaccounts/Step1?language=en\">Use
+        our unbiased current account comparison table to compare the cost of accounts\u00a0</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Decide whether you want a joint or a single account
+        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Joint
+        accounts can be a convenient way to manage shared expenses but there are risks
+        involved, especially if one of you has a poor credit history. </p></div><div
+        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/should-we-manage-money-jointly-or-separately\">Check
+        our guide Should you manage money jointly or separately? </a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/joint-accounts\">See
+        our guide Joint accounts </a></li></ul></div></div></div><div class=\"action-item\"><h3>Check
+        your credit report </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>If you have a poor credit history, the bank can turn down your application.
+        It''s a good idea to have any errors on your report corrected before the bank
+        runs their credit checks. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-check-your-credit-report\">Read
+        our guide How to check your credit report </a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating\">Find
+        out how to improve your credit rating </a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Get documents ready for the bank''s identity check
+        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>All banks
+        will ask for proof of your identity and address. You can speed things up by
+        having these documents to hand when you apply for your account. </p></div><div
+        class=\"how\"><h4>How? </h4><p>If you don''t have the exact documents the
+        bank asks for, don''t worry. Talk to someone at the bank and they will tell
+        you what alternative letters or documents you can provide. </p></div></div></div>","categories":["running-a-bank-account"]}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 16:13:39 GMT
+recorded_with: VCR 2.9.2

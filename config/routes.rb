@@ -73,6 +73,7 @@ Rails.application.routes.draw do
           get 'pages_error', path: '/error'
           get 'pages_news_article', path: '/news_article'
           get 'pages_action_plan', path: '/action_plan'
+          get 'pages_news_index', path: '/news_index'
           get 'pages_home', path: '/home'
           get 'pages_search_results', path: '/search_results'
           get 'pages_parent_category_page', path: '/parent_category_page'

@@ -93,6 +93,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_news_index
+    render layout: 'styleguide/page'
+  end
+
   def pages_news_article
     render layout: 'styleguide/page'
   end

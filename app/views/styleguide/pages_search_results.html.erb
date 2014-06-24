@@ -1,5 +1,5 @@
-<div class="l-search-results">
-  <main>
+<div class="l-search-results l-main">
+  <main role="main">
     <h1>Search results for </h1>
 
     <%= render 'shared/search', search_in_page_header: false %>
@@ -185,4 +185,8 @@
     <%= render 'styleguide/pagination' %>
 
   </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
 </div>

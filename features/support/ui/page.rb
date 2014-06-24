@@ -1,4 +1,5 @@
 require 'site_prism'
+require_relative 'sections/newsletter'
 require_relative 'sections/footer_cookie_message'
 require_relative 'sections/footer_site_links'
 require_relative 'sections/footer_social_links'
@@ -17,6 +18,7 @@ module UI
     element :contact_heading, '.contact__heading'
     element :contact_introduction, '.contact__introduction'
     element :contact_number, '.bubble__text'
+    section :newsletter, UI::Sections::Newsletter, '.newsletter'
     section :footer_cookie_message, UI::Sections::FooterCookieMessage, '.cookie-message'
     section :footer_site_links, UI::Sections::FooterSiteLinks, '.footer-site-links'
     section :footer_social_links, UI::Sections::FooterSocialLinks, '.footer-social-links'

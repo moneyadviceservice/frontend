@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
+    body:
+      encoding: UTF-8
+      string: '{"newsletter_subscription":{"email":"clark.kent@gmail.com"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 4086dd8e-5afd-4fbd-b82c-d989f48fec0f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 27 Jun 2014 19:53:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7215ee9c7d9dc229d2921a40e899ec5f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - "-"
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 27-Jun-2015 19:53:16 GMT; secure
+      - _session_id=fc1c8963b35d3ea89f9a49026dc66a92; path=/; secure; HttpOnly
+      - _web_tracking=27040e5f292680955c4cb824af7466aa; path=/; expires=Sat, 27-Jun-2015
+        19:53:16 GMT; secure
+      - newsletter_subscription=BAhU--883388be754dfddb3d8a21a2758a50b8dc81224a; path=/;
+        expires=Tue, 27-Jun-2034 19:53:16 GMT
+      X-Request-Id:
+      - 4086dd8e-5afd-4fbd-b82c-d989f48fec0f
+      X-Runtime:
+      - '0.093633'
+      X-Rack-Cache:
+      - invalidate, pass
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Fri, 27 Jun 2014 19:53:16 GMT
+recorded_with: VCR 2.9.2

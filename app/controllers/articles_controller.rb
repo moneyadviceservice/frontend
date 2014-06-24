@@ -2,6 +2,7 @@ require 'core/interactors/article_reader'
 
 class ArticlesController < ApplicationController
   decorates_assigned :article, with: ContentItemDecorator
+  decorates_assigned :related_content, with: CategoryDecorator
 
   include Navigation
 
@@ -11,9 +12,12 @@ class ArticlesController < ApplicationController
     end
 
     @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
+    @related_content = CategoriesWithRestrictedContents.build(@article.categories,
+      RelatedContent.build(@article))
 
-    (@article.categories.map(&:id) + @article.parent_category_ids).each do |category|
-      active_category category
+    @article.categories.each do |category|
+      active_category category.id
+      active_category category.parent_id if category.child?
     end
   end
 end

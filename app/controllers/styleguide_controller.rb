@@ -85,10 +85,6 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_guide_v2
-    render layout: 'styleguide/page'
-  end
-
   def pages_action_plan
     render layout: 'styleguide/page'
   end

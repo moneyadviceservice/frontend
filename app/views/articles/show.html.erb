@@ -5,8 +5,8 @@
 <% content_for(:context_bar) do %>
   <% if @breadcrumbs.present? %>
     <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
-  <% elsif article.parent_categories.present? %>
-    <%= render 'shared/related_categories', categories: article.parent_categories %>
+  <% elsif article.categories.present? %>
+    <%= render 'shared/related_categories', categories: article.categories %>
   <% end %>
 <% end %>
 
@@ -16,7 +16,7 @@
 
     <%= article.content %>
 
-    <%= render 'shared/related_links', categories: article.related_categories %>
+    <%= render 'shared/related_links', categories: related_content %>
   </main>
 </div>
 

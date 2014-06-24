@@ -1,5 +1,15 @@
-<div class="l-article editorial">
-  <main>
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: categories %>
+<% end %>
+
+<div class="l-main editorial">
+  <main role="main">
     <%= render 'styleguide/shared/guide' %>
+
+    <%= render 'shared/related_links', categories: categories %>
   </main>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav' %>
 </div>

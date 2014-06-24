@@ -1,12 +1,10 @@
 class CategoryContentDecorator < Draper::Decorator
+  decorates_association :contents, with: CategoryContentDecorator
+
   delegate :id, :title, :description
 
   def label
     "#{object.type.titleize} - "
-  end
-
-  def contents
-    CategoryContentDecorator.decorate_collection(object.contents || [])
   end
 
   def path

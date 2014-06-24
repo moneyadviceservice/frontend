@@ -10,8 +10,7 @@ RSpec.describe SearchResultCollectionDecorator do
 
   describe '#items' do
     it "decorates the collection's items with SearchResultDecorator" do
-      expect(SearchResultDecorator).to receive(:decorate_collection).with(items)
-      subject.items
+      expect(subject.items).to be_a SearchResultDecorator
     end
   end
 

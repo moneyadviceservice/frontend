@@ -7,5 +7,7 @@ class ActionPlansController < ApplicationController
     @action_plan = Core::ActionPlanReader.new(params[:id]).call do
       not_found
     end
+
+    @breadcrumbs = BreadcrumbTrail.build(@action_plan, category_tree)
   end
 end

@@ -5,15 +5,23 @@ Feature: Article breadcrumbs
 
   Scenario: Breadcrumb on an article page
     When I read an article belonging to a single category
-    Then I can see breadcrumbs for that category and it's parents
+    Then I can see breadcrumbs for the article
+
+  Scenario: Breadcrumb on an action plan page
+    When I read an action plan belonging to a single category
+    Then I can see breadcrumbs for the action plan
 
  Scenario: Breadcrumb on an category page
     When I read a category
-    Then I can see breadcrumbs for it's parents
+    Then I can see breadcrumbs for the category
 
   Scenario: Related categories breadcrumb on an article page
     When I read an article belonging to multiple categories
-    Then I can see that it appears in those categories
+    Then I can see that the article appears in those categories
+
+  Scenario: Related categories breadcrumb on an action plan page
+    When I read an action plan belonging to multiple categories
+    Then I can see that the action plan appears in those categories
 
   Scenario: No breadcrumbs are shown for an article that has no parents
     When I read an orphaned article

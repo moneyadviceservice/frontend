@@ -18,6 +18,10 @@ module World
           raise ArgumentError, "invalid action plan locale `#{locale}'"
       end
     end
+
+    def action_plan_in_multiple_categories
+      fixture 'action_plans/how-to-manage-your-money-better.yml'
+    end
   end
 end
 

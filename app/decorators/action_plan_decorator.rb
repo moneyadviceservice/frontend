@@ -1,6 +1,8 @@
 require 'html_processor'
 
 class ActionPlanDecorator < Draper::Decorator
+  decorates_association :categories, with: CategoryDecorator
+
   delegate :id, :title, :description
 
   def alternate_options

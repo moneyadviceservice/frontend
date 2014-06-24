@@ -71,13 +71,9 @@ Rails.application.routes.draw do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
           get 'pages_error', path: '/error'
-<<<<<<< HEAD
           get 'pages_news_article', path: '/news_article'
           get 'pages_action_plan', path: '/action_plan'
-=======
           get 'pages_news_index', path: '/news_index'
-          get 'pages_action_plan', path: '/action-plan'
->>>>>>> Add HTML for the news index page
           get 'pages_home', path: '/home'
           get 'pages_search_results', path: '/search_results'
           get 'pages_parent_category_page', path: '/parent_category_page'

@@ -22,6 +22,10 @@
   </button>
 <% end %>
 
+<%= styleguide_section sections['pagination'] do %>
+  <%= render 'styleguide/pagination' %>
+<% end %>
+
 <%= styleguide_section sections['Call out'] do %>
   <%= render 'styleguide/shared/callout' %>
 <% end %>
@@ -32,8 +36,4 @@
 
 <%= styleguide_section sections['Scrollable Table'] do %>
   <%= render 'styleguide/shared/table' %>
-<% end %>
-
-<%= styleguide_section sections['pagination'] do %>
-  <%= render 'styleguide/pagination' %>
 <% end %>

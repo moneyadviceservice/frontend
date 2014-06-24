@@ -1,7 +1,7 @@
 .l-header {
   position: relative;
   background: $color-green-primary;
-  min-height: $baseline-unit*10;
+  min-height: $baseline-unit*11;
 
   .mobile-nav {
     display: none;
@@ -10,18 +10,41 @@
   .mas-logo {
     @include respond-to($mq-m) {
       float: left;
-      margin-top: $baseline-unit;
+      margin-top: $baseline-unit*1.5;
+      margin-bottom: $baseline-unit*1.5;
     }
   }
 
-  .primary-nav {
+  .search {
+    width: 100%;
+    margin: 0;
+  }
+
+  .l-search {
+    background-color: $color-grey-pale;
+    padding: $baseline-unit*3 $baseline-unit;
+    border-bottom: 1px solid $color-white;
+
+
     @include respond-to($mq-m) {
-      margin: $baseline-unit*2 0;
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+
+      @include column(4);
       float: right;
+      margin-top: $baseline-unit*3;
+      margin-bottom: $baseline-unit*3;
+
+      .search__input {
+        border: 0;
+        border-radius: $baseline-unit/2;
+      }
     }
   }
 
-  .js & .mobile-nav {
+
+  .mobile-nav {
     display: block;
     position: absolute;
     top: 0;
@@ -32,8 +55,19 @@
     }
   }
 
-  .js & .primary-nav,
-  .js & .l-header__search {
+  .no-js & .mobile-nav__item--search {
+    display: none;
+  }
+
+  .js & .nav {
+    display: none;
+
+    &.is-on {
+      display: block;
+    }
+  }
+
+  .js & .l-search {
     display: none;
 
     &.is-on {
@@ -44,56 +78,22 @@
       display: block;
     }
   }
-
-  .search {
-    @include respond-to($mq-m) {
-      @include column(4);
-      float: right;
-      margin: $baseline-unit*3 0;
-    }
-  }
 }
 
-.l-header__search {
+.l-menu-nav {
   @extend %clearfix;
-  background-color: $color-header-buttons;
-  padding: $baseline-unit 0;
-
-  .search-box {
-    @extend %clearfix;
-    position: relative;
-    @include column(12);
-
-    @include respond-to($mq-m) {
-      @include column(6);
-      @include push(3);
-    }
-  }
-}
-
-// 1. Hide by default as don't want non-js users to see all sub-category links as page will be unusable.
-//    They are able to get to sublinks on page refresh
-
-.l-primary-nav-dropdown {
-  @extend %collapsable-target;
-  display: none; // 1
+  background: $color-white;
+  margin-top: 2px;
 
   @include respond-to($mq-m) {
-    &.is-on {
-      position: absolute;
-      top: $baseline-unit*14;
-      left: 0;
-      z-index: 10;
-    }
+    display: none;
   }
 
-  .theme-cy & {
-    top: 76px;
+  .link-list-primary {
+    @include column(12);
   }
 
-  ul {
-    margin: 0 auto;
-    max-width: $mq-xl;
+  .link-list-primary__item:last-child {
+    border-bottom: 0;
   }
 }
-

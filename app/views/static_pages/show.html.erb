@@ -1,18 +1,19 @@
 <% set_meta_tags(description: static_page.description,
-                 canonical:   static_page.canonical_url,
-                 alternate:   static_page.alternate_options) %>
+                 canonical: static_page.canonical_url,
+                 alternate: static_page.alternate_options) %>
 
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
+  <main class="l-main__primary" role="main">
     <h1><%= title static_page.title %></h1>
 
     <%= static_page.content %>
   </main>
 </div>
+
 
 <div class="l-nav">
   <%= render 'shared/nav', categories: category_navigation %>

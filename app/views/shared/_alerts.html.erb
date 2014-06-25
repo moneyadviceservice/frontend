@@ -1,0 +1,10 @@
+<% flash.each do |name, msg| %>
+  <!-- XXX: Replace with the right classes @ourmaninamsterdam -->
+  <div class="opt-out">
+    <div class="l-constrained l-padded">
+      <div class="l-1col">
+        <%= content_tag :p, msg, class: "alert alert-#{name}" %>
+      </div>
+    </div>
+  </div>
+<% end %>

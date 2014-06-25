@@ -2,6 +2,7 @@ require_relative 'shared_examples/optional_failure_block'
 
 require 'core/entities/action_plan'
 require 'core/interactors/action_plan_reader'
+require 'core/interactors/category_reader'
 
 module Core
   RSpec.describe ActionPlanReader do
@@ -47,9 +48,10 @@ module Core
         let(:title) { 'The Action Plan' }
         let(:description) { 'The Action Plan has a description' }
         let(:body) { '<h1>The Action Plan</h1><p>Lorem ipsum dolor sit amet</p>' }
+        let(:categories) { [] }
 
         let(:data) do
-          { title: title, description: description, body: body }
+          { title: title, description: description, body: body, categories: categories }
         end
 
         it "maps the action_plan's `id' to the repositories' `id' value" do
@@ -85,6 +87,20 @@ module Core
           end
 
           it_has_behavior 'optional failure block'
+        end
+
+        context 'when there is a category' do
+          let(:category_id) { 'category-id' }
+          let(:categories)  { [category_id] }
+          let(:category)    { double }
+
+          before do
+            allow(CategoryReader).to receive(:new).with(category_id) { -> { category } }
+          end
+
+          it 'populates the category entity' do
+            expect(subject.call.categories).to eql [category]
+          end
         end
       end
 

@@ -2,10 +2,13 @@ require 'core/interactors/action_plan_reader'
 require 'core/entities/action_plan'
 
 RSpec.describe ActionPlansController, :type => :controller do
-  let(:action_plan) { instance_double(Core::ActionPlan, id: 'test') }
+  let(:action_plan) { instance_double(Core::ActionPlan, id: 'test', categories: []) }
   let(:action_plan_reader) { instance_double(Core::ActionPlanReader, call: action_plan) }
 
-  before { allow_any_instance_of(Core::ActionPlanReader).to receive(:call) { action_plan } }
+  before do
+    allow(Core::ActionPlanReader).to receive(:new) { -> { action_plan } }
+    allow(controller).to receive(:category_tree)
+  end
 
   describe 'GET show' do
     it 'is successful' do
@@ -28,7 +31,7 @@ RSpec.describe ActionPlansController, :type => :controller do
 
     context 'when an action plan does not exist' do
       it 'raises an ActionController RoutingError' do
-        allow_any_instance_of(Core::ActionPlanReader).to receive(:call).and_yield
+        allow(Core::ActionPlanReader).to receive(:new) { ->(&block) { block.call } }
 
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end

@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/how-to-manage-your-money-better.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 75048eea-82e5-406b-b7a2-47be29d90315
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 25 Jun 2014 14:08:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
+        aW9uX3BsYW5zL2hvdy10by1tYW5hZ2UteW91ci1tb25leS1iZXR0ZXI+IHJl
+        bD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9IkFjdGlv
+        biBwbGFuIC0gSG93IHRvIG1hbmFnZSB5b3VyIG1vbmV5IGJldHRlciIsIDxo
+        dHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2N5L2FjdGlv
+        bl9wbGFucy9zdXQtaS1yZW9saWNoLWFyaWFuLXluLXdlbGw+IHJlbD0iYWx0
+        ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW4gZ3dl
+        aXRocmVkdSAtIFN1dCBpIHJlb2xp4oCZY2ggYXJpYW4geW4gd2VsbCI=
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - f37a778c1e1d11995f2bbe94b586ee4b
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 25-Jun-2015 14:08:31 GMT; secure
+      - _session_id=f37a778c1e1d11995f2bbe94b586ee4b; path=/; secure; HttpOnly
+      - _web_tracking=6841a830e4442f4f1bc853c4591e0365; path=/; expires=Thu, 25-Jun-2015
+        14:08:31 GMT; secure
+      X-Request-Id:
+      - 75048eea-82e5-406b-b7a2-47be29d90315
+      X-Runtime:
+      - '0.188528'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-manage-your-money-better","title":"Action plan - How
+        to manage your money better","description":"Step by step advice on drawing
+        up a budget, starting to save and clearing debts.","body":"<p class=\"intro\"><img
+        src=\"/images/new_action_plan_icon.jpg\"/>Follow these simple\u00a0steps to
+        help you draw up a budget, make the most of your money, pay off outstanding
+        debts and even start saving. </p><div class=\"action-item\"><h3>Step 1 - Draw
+        up a budget </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If
+        you want to get on top of your finances then doing a budget - a record of
+        all your incomings and outgoings - is the essential first step. </p></div><div
+        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">
+        Use our online Budget planner </a></li></ul><p>Alternatively, use a spreadsheet
+        on your computer or just write it all down on a piece of paper. </p></div></div></div><div
+        class=\"action-item\"><h3>Step 2 - Identify where you can cut back </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If you''re spending
+        more than you have each month you need to look at where you can cut back.
+        Otherwise you''ll never be out of the red. </p></div><div class=\"how\"><h4>How?
+        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner
+        \">Look at the breakdown of where your spending goes each month with our Budget
+        planner</a></li></ul><p>Cut back on non-essentials like takeaway coffees or
+        magazines. </p><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator
+        \"> Find out how much something you buy regularly costs you each month using
+        our Cut-back calculator</a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/categories/money-saving-tips\">Read
+        our no-nonsense money saving tips to help you cut costs around the home and
+        when you''re out and about</a></li></ul></div></div></div><div class=\"action-item\"><h3>Step
+        3 - Pay off loans and credit cards </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>Loan and credit card repayments can put a real strain on your finances.
+        And only paying the minimum each month means your debt will be with you for
+        years. </p></div><div class=\"how\"><h4>How? </h4><p>Identify the debt that
+        charges the highest rate of interest and pay that off first - it''s the fastest
+        way to clear your debts. </p><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/categories/how-to-review-or-reduce-borrowing\">Find
+        out more in our guides How to review or reduce borrowing</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Step 4 - Start saving </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Why? </h4><p>If you save regularly, you''ll quickly find
+        that your money adds up and keeps growing. </p></div><div class=\"how\"><h4>How?
+        </h4><p>Set aside some emergency savings - money to fall back on if you really
+        need it. </p><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/emergency-savings-how-much-is-enough\">
+        Read our guide Emergency savings - how much is enough?</a></li></ul></div></div></div>","categories":["taking-control-of-debt","managing-money"]}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:08:32 GMT
+recorded_with: VCR 2.9.2

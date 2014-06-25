@@ -2,6 +2,14 @@
                  canonical:   action_plan.canonical_url,
                  alternate:   action_plan.alternate_options) %>
 
+<% content_for(:context_bar) do %>
+  <% if @breadcrumbs.present? %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <% elsif action_plan.categories.present? %>
+    <%= render 'shared/related_categories', categories: action_plan.categories %>
+  <% end %>
+<% end %>
+
 <div class="l-main editorial">
   <main role="main">
     <h1><%= title action_plan.title %></h1>

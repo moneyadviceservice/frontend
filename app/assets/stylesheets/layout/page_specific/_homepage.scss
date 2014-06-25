@@ -18,18 +18,17 @@
     }
 
     .directory__item {
-      flex-grow: 1;
-      margin-left: 1.6667%;
-      margin-right: 1.6667%;
+      margin-right: $gutter;
+      margin-left: $gutter;
       margin-bottom: px(12);
 
       @include respond-to($mq-m) {
-        max-width: 45%;
         margin-bottom: px(18);
+        flex-basis: 46%;
       }
 
-      @include respond-to($mq-l) {
-        max-width: 30%;
+      @include respond-to($mq-l) {;
+        flex-basis: 30%;
       }
     }
 

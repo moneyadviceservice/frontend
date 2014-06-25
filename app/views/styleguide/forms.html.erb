@@ -145,3 +145,31 @@
   </div>
 
 </form>
+
+<h2>Errors</h2>
+
+<div class="validation-summary">
+  <div class="validation-summary__content-container">
+    <p class="validation-summary__title">
+      1 error
+      prevented calculation:
+    </p>
+    <ol class="validation-summary__list">
+      <li>
+        <a href="#savings_goal-errors">Your savings goal can't be blank</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="form__row is-errored">
+  <div id="savings_goal-errors">
+    <p>1. Your savings goal can't be blank</p>
+  </div>
+  <label class="form__label-heading" for="input4" id="form-label4">What is your savings goal?</label>
+    <span class="form__input-container">
+      <span class="form__input-label" id="input-label4a">£</span>
+      <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label4a input-label4b">
+      <span class="form__input-outline"></span>
+    </span>
+</div>

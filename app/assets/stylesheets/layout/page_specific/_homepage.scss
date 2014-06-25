@@ -2,12 +2,12 @@
   @include column(12);
 }
 
+/* @lintingIgnoreBegin */
+
 .l-directory {
   @extend .clearfix;
 
   @if $responsive {
-
-    /* @lintingIgnoreBegin */
 
     // TODO - remove when csslint is updated
 
@@ -35,8 +35,6 @@
         flex-basis: 30%;
       }
     }
-
-    /* @lintingIgnoreEnd */
 
     .ie9 & {
       .directory__item {
@@ -73,6 +71,8 @@
     }
   }
 }
+
+/* @lintingIgnoreEnd */
 
 .l-constrained.l-promos {
   margin-bottom: $baseline-unit*2;

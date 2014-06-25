@@ -97,6 +97,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_contact
+    render layout: 'styleguide/page'
+  end
+
   private
 
   def article

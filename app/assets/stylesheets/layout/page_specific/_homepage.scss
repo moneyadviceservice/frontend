@@ -7,6 +7,10 @@
 
   @if $responsive {
 
+    /* @lintingIgnoreBegin */
+
+    // TODO - remove when csslint is updated
+
     & .l-constrained {
       display: flex;
       flex-flow: column;
@@ -31,6 +35,8 @@
         flex-basis: 30%;
       }
     }
+
+    /* @lintingIgnoreEnd */
 
     .ie9 & {
       .directory__item {

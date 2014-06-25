@@ -7,13 +7,15 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
-    <h1><%= title category.title %></h1>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= title category.title %></h1>
 
-    <p class="intro"><%= category.description %></p>
+      <p class="intro"><%= category.description %></p>
 
-    <%= category.render_contents %>
-  </main>
+      <%= category.render_contents %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

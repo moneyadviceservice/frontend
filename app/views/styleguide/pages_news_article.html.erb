@@ -3,14 +3,21 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
-    <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
-      <h1 itemprop="headline">One in 11 Britons has less than £10 a month disposable income</h1>
-      <hr>
-      <p class="smallprint"><time itemprop="datePublished" datetime="">18 Nov 2013</time></p>
-      <%= render 'styleguide/shared/news_article' %>
-    </article>
-  </main>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
+        <h1 itemprop="headline">One in 11 Britons has less than £10 a month disposable income</h1>
+
+        <hr>
+
+        <p class="smallprint">
+          <time itemprop="datePublished" datetime="">18 Nov 2013</time>
+        </p>
+
+        <%= render 'styleguide/shared/news_article' %>
+      </article>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

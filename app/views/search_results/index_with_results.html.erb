@@ -2,17 +2,19 @@
                  robots: 'noindex') %>
 
 <div class="l-main">
-  <main role="main">
-    <h1><%= t('.page_title', query: params[:query]) %></h1>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= t('.page_title', query: params[:query]) %></h1>
 
-    <div class="l-search-results">
-      <%= render 'shared/search', search_in_page_header: false %>
-      <ol class="search-results">
-        <%= render partial: 'search_result', collection: search_results.items %>
-      </ol>
-      <%= render 'pagination', search_results: search_results %>
-    </div>
-  </main>
+      <div class="l-search-results">
+        <%= render 'shared/search', search_in_page_header: false %>
+        <ol class="search-results">
+          <%= render partial: 'search_result', collection: search_results.items %>
+        </ol>
+        <%= render 'pagination', search_results: search_results %>
+      </div>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

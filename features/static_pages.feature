@@ -12,6 +12,15 @@ Feature: Viewing a static page
     | English  |
     | Welsh    |
 
+  Scenario Outline: View the contact page
+    When I view the contact page in <language>
+    Then I should see the contact page in <language>
+
+  Examples:
+    | language |
+    | English  |
+    | Welsh    |
+
   Scenario Outline: Translate a static page
     Given I view a static page in <original_language>
     When I translate the static page into <translated_language>

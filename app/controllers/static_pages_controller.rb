@@ -7,5 +7,11 @@ class StaticPagesController < ApplicationController
     end
 
     @breadcrumbs = BreadcrumbTrail.build(@static_page, category_tree)
+
+    if template_exists?("/static_pages/#{params[:id].underscore}")
+      render template: "/static_pages/#{params[:id].underscore}"
+    else
+      render :show
+    end
   end
 end

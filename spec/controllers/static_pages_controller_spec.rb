@@ -2,7 +2,8 @@ RSpec.describe StaticPagesController, :type => :controller do
   describe 'GET show' do
     let(:categories) { [] }
     let(:parents) { [] }
-    let(:static_page) { Core::StaticPage.new('test', categories: categories) }
+    let(:static_page_id) { 'test' }
+    let(:static_page) { Core::StaticPage.new(static_page_id, categories: categories) }
     let(:static_page_reader) { double(Core::StaticPageReader, call: static_page) }
 
     context 'when an static_page does exist' do
@@ -29,6 +30,23 @@ RSpec.describe StaticPagesController, :type => :controller do
         get :show, locale: I18n.locale, id: static_page.id
 
         expect(assigns(:static_page)).to eq(static_page)
+      end
+
+      context 'if there is a custom template' do
+        let(:static_page_id) { 'contact-us' }
+        subject { get :show, locale: I18n.locale, id: static_page.id }
+
+        it 'renders the custom template' do
+          expect(subject).to render_template("static_pages/#{static_page_id.underscore}")
+        end
+      end
+
+      context 'if there is no custom template' do
+        subject { get :show, locale: I18n.locale, id: static_page.id }
+
+        it 'renders the default template' do
+          expect(subject).to render_template("static_pages/show")
+        end
       end
     end
 

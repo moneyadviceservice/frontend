@@ -3,11 +3,13 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
-    <%= render 'styleguide/shared/guide' %>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <%= render 'styleguide/shared/guide' %>
 
-    <%= render 'shared/related_links', categories: categories %>
-  </main>
+      <%= render 'shared/related_links', categories: categories %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

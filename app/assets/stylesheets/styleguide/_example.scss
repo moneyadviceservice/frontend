@@ -123,6 +123,16 @@
 }
 
 // Layouts
+.styleguide-element {
+  .l-main__cell-single,
+  .l-main__cell-double-primary,
+  .l-main__cell-double-secondary {
+    margin-top: 0;
+    height: 600px;
+    background: #ccc;
+  }
+}
+
 #section-layout-container,
 #section-layout-1col,
 #section-layout-2col,

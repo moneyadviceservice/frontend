@@ -1,0 +1,28 @@
+.sidebar {
+
+  p, li {
+    @include body(16, 24);
+  }
+
+  // TODO - temporary implementation until panel rules are understood and refactored
+
+  .panel {
+    margin: 0;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .editorial & img {
+    max-width: 260px;
+  }
+}
+
+.sidebar__smallprint {
+  margin-top: px(24);
+
+  .smallprint {
+    @extend .smallprint;
+  }
+}

@@ -34,3 +34,25 @@ Then(/^I should see the static page's intro on the page$/) do
   sample_of_intro_text = strip_tags(Nokogiri::HTML(current_static_page.body).at('p.intro').inner_html)
   expect(static_page.intro).to have_content(strip_tags(sample_of_intro_text))
 end
+
+When(/^I view the contact page in (.*)$/) do |language|
+  locale = language_to_locale(language)
+
+  case locale
+  when 'en'
+    static_page.load(locale: locale, id: 'contact-us')
+  when 'cy'
+    static_page.load(locale: locale, id: 'cysylltu-a-ni')
+  end
+end
+
+Then(/^I should see the contact page in (.*)$/) do |language|
+  locale = language_to_locale(language)
+
+  case locale
+  when 'en'
+    expect(static_page.heading).to have_content('Contact Us')
+  when 'cy'
+    expect(static_page.heading).to have_content('Cysylltu â ni')
+  end
+end

@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/static/contact-us.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 9593909b-e9b8-4fff-8615-c192406b79da
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 07 Jul 2014 14:48:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vc3Rh
+        dGljL2NvbnRhY3QtdXM+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVu
+        LUdCIjsgdGl0bGU9IkNvbnRhY3QgdXMiLCA8aHR0cHM6Ly93d3cubW9uZXlh
+        ZHZpY2VzZXJ2aWNlLm9yZy51ay9jeS9zdGF0aWMvY3lzeWxsdHUtYS1uaT4g
+        cmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iY3ktR0IiOyB0aXRsZT0iQ3lz
+        eWxsdHUgw6Igbmki
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b91c1f5d6fd76aa72c9cbe42330e2b2a
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 07-Jul-2015 14:48:52 GMT; secure
+      - _session_id=b91c1f5d6fd76aa72c9cbe42330e2b2a; path=/; secure; HttpOnly
+      - _web_tracking=15f1597915bdbbd1cb196a78692da841; path=/; expires=Tue, 07-Jul-2015
+        14:48:52 GMT; secure
+      X-Request-Id:
+      - 9593909b-e9b8-4fff-8615-c192406b79da
+      X-Runtime:
+      - '0.158875'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"contact-us","title":"Contact us","description":"For information
+        and advice on money matters Our trained staff are here to help you work out
+        what\u2019s right for you. Whatever your question we\u2019re here to ...","body":"<h2>For
+        information and advice on money matters </h2><p>Our trained staff are here
+        to help you work out what\u2019s right for you. Whatever your question we\u2019re
+        here to help and, if we don\u2019t know the answer, we''ll point you in the
+        right direction to someone who does. No problem or question is too small \u2013
+        try us and see. </p><p>We\u2019re not regulated by the Financial Conduct Authority
+        so we can\u2019t give you a specific recommendation on whether a particular
+        product is suitable for you. If you need regulated financial advice, you''ll
+        need to consult a professional financial adviser. </p><p>Call our Money Advice
+        Line on 0300 500 5000 (English) or 0300 500 5555 (Welsh)* <br/> Typetalk:
+        18001 0300 500 5000* <br/> From overseas: +44 1443 827658\u00a0 </p><p>Monday
+        to Friday: 8am\u20138pm <br/> Saturday: 9am\u20131pm <br/> Sunday and Bank
+        Holidays: closed </p><p><em>* <strong>Whatever tariff you\u2019re on, the
+        cost of an 0300 number is the same as calling a normal phone number. If your
+        calls are free, then it\u2019s free, even from mobiles. We\u2019re committed
+        to providing you with a quality service, so calls may be recorded or monitored
+        for training purposes.</strong></em></p><h2>To book a face-to-face session
+        </h2><p>If you would prefer to speak to someone face to face, we work with
+        a number of partners across the UK to deliver free unbiased money advice face
+        to face. To book a face-to-face Money Advice session please see below (call
+        rates may vary). </p><ul><li>England \u2013 0333 321 3434 or <a title=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\">book
+        online</a></li><li>Wales \u2013 0300 330 0520 or email <a title=\"moneyadviser@citizensadvice.org.uk\"
+        target=\"_blank\" href=\"mailto:moneyadviser@citizensadvice.org.uk\">moneyadviser@citizensadvice.org.uk</a></li><li>Scotland
+        \u2013 0808 800 0118 or <a title=\"http://www.cas.org.uk/book-face-face-money-advice-service-session\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://www.cas.org.uk/book-face-face-money-advice-service-session\">book
+        online</a></li><li>Northern Ireland \u2013 0333 321 2424 or <a title=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\">book
+        online</a></li></ul><h2>To order Money Advice Service printed guides </h2><p>Use
+        our\u00a0<a title=\"Order forms\" href=\"/en/articles/order-forms\">online
+        order forms</a>. </p><h2>To get in touch with our organisation (general enquiries)\u00a0
+        </h2><p>Email us \u2013 <a title=\"enquiries@moneyadviceservice.org.uk\" target=\"_blank\"
+        href=\"mailto:enquiries@moneyadviceservice.org.uk\">enquiries@moneyadviceservice.org.uk
+        </a></p><p>Phone us \u2013 0300 500 5000 (English) or 0300 500 5555 (Welsh)*
+        </p><p>Write to us \u2013 The Money Advice Service, Holborn Centre, 120 Holborn,
+        London, EC1N 2TD </p><p><em><strong>* Whatever tariff you\u2019re on, the
+        cost of an 0300 number is the same as calling a normal phone number. If your
+        calls are free, then it\u2019s free, even from mobiles. We\u2019re committed
+        to providing you with a quality service, so calls may be recorded or monitored
+        for training purposes.</strong></em></p><h2>How to find us </h2><p><img alt=\"Map
+        of our location\" src=\"/images/location_map.jpg\"/>\u00a0 </p><h2>To make
+        a complaint </h2><p>We are committed to helping people understand and engage
+        with their money. Our <a title=\"Our complaints policy\" target=\"_blank\"
+        data-link-type=\"attachment\" href=\"/files/final-external-complaints-policy-20120125.pdf\">complaints
+        policy</a>\u00a0(PDF) sets out how we will handle your complaint. </p><ul><li>Email
+        us \u2013 <a title=\"complaints@moneyadviceservice.org.uk\" target=\"_blank\"
+        href=\"mailto:complaints@moneyadviceservice.org.uk\">complaints@moneyadviceservice.org.uk</a></li><li>Write
+        to us \u2013 The Money Advice Service, Holborn Centre, 120 Holborn, London,
+        EC1N 2TD</li></ul><br/><p>We will send you an acknowledgement within five
+        working days and reply to you within twenty working days. </p><p>To ensure
+        that we learn from the feedback we receive, our Board gets regular reports
+        summarising any complaints and comments we have received and the actions we
+        have taken. </p><h2>Press Office (journalists only) </h2><p>Email us \u2013\u00a0<a
+        title=\"pressoffice@moneyadviceservice.org.uk\" target=\"_blank\" href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p><p>Phone
+        us \u2013 020 7943 0593 (07767 438 670 for out-of-hours or urgent calls) </p><p>Write
+        to us \u2013 The Money Advice Service, Holborn Centre, 120 Holborn, London,
+        EC1N 2TD\u00a0 </p><p>The press office regrets it cannot take sales and marketing
+        enquiries, please email <a href=\"mailto:marketing@moneyadviceservice.org.uk\">marketing@moneyadviceservice.org.uk</a></p>"}'
+    http_version:
+  recorded_at: Mon, 07 Jul 2014 14:48:54 GMT
+recorded_with: VCR 2.9.2

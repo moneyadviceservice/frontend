@@ -27,8 +27,15 @@ a:not([href*="moneyadviceservice"]):after {
 
 // override for links that do not contain moneyadviceservice but are not external links
 a[href^="/"]:after,
-a[href^="#"]:after {
+a[href^="#"]:after,
+a[href^="tel"]:after,
+a[href^="mailto:"]:after,
+a[href*="/maps/"]:after {
   display: none;
+}
+
+a[href^="mailto:"] {
+  word-break: break-all;
 }
 
 a[href$=".doc"] {

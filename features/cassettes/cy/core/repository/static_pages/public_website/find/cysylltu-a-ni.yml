@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/static/cysylltu-a-ni.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 74752c2b-b14e-42b2-aacd-97dd4737a7fd
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 07 Jul 2014 14:48:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvc3Rh
+        dGljL2N5c3lsbHR1LWEtbmk+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9
+        ImN5LUdCIjsgdGl0bGU9IkN5c3lsbHR1IMOiIG5pIiwgPGh0dHBzOi8vd3d3
+        Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vc3RhdGljL2NvbnRhY3Qt
+        dXM+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9
+        IkNvbnRhY3QgdXMi
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - df7b4cc82846458e70139ba66b2db3ce
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 07-Jul-2015 14:48:53 GMT; secure
+      - _session_id=df7b4cc82846458e70139ba66b2db3ce; path=/; secure; HttpOnly
+      - _web_tracking=034d48bab25efa5c6706f1d8300d7b3d; path=/; expires=Tue, 07-Jul-2015
+        14:48:53 GMT; secure
+      X-Request-Id:
+      - 74752c2b-b14e-42b2-aacd-97dd4737a7fd
+      X-Runtime:
+      - '0.051731'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"cysylltu-a-ni","title":"Cysylltu \u00e2 ni","description":"Am
+        wybodaeth a chyngor ar faterion ariannol Mae ein staff hyfforddedig yma i\u2019ch
+        helpu i benderfynu beth sy\u2019n iawn i chi. Beth bynnag yw eich cwestiwn  ...","body":"<h2>Am
+        wybodaeth a chyngor ar faterion ariannol </h2><p>Mae ein staff hyfforddedig
+        yma i\u2019ch helpu i benderfynu beth sy\u2019n iawn i chi. Beth bynnag yw
+        eich cwestiwn rydym yma i\u2019ch helpu ac, os na wyddom yr ateb, byddwn yn
+        eich cyfeirio at rywun a \u0175yr. Nid yw unrhyw broblem neu gwestiwn yn rhy
+        fach \u2013 dewch aton ni a gweld drosoch eich hun. </p><p>Nid ydym yn cael
+        ein rheoleiddio gan yr Awdurdod Ymddygiad Ariannol felly ni allwn roi argymhelliad
+        penodol ichi ynghylch pa mor addas yw cynnyrch neilltuol ar eich cyfer. Os
+        oes angen cyngor ariannol rheoleiddedig arnoch, bydd angen ichi ymgynghori
+        \u00e2 chynghorwr ariannol proffesiynol. </p><p>Ffoniwch ein Llinell Cynghori
+        Ariannol ar 0300 500 5000 (Saesneg) neu 0300 500 5555 (Cymraeg)* <br/> Typetalk:
+        18001 0300 500 5000* <br/> O dramor: +44 1443 827658\u00a0 </p><p>Llun i Gwener:
+        8am-8pm <br/> Dydd Sadwrn: 9am-1pm <br/> Dydd Sul a Gwyliau Banc: ar gau </p><p><em><strong>*
+        Pa dariff bynnag rydych arno, mae cost rhif 0300 yr un \u00e2 chost galwad
+        ff\u00f4n gyffredin. Os yw\u2019ch galwadau am ddim, yna bydd yn rhad ac am
+        ddim, hyd yn oed o ffonau symudol. Rydym yn ymroddedig i ddarparu gwasanaeth
+        o safon uchel, felly gall galwadau gael eu recordio neu eu monitro at ddibenion
+        hyfforddi.</strong></em></p><h2>I drefnu sesiwn wyneb yn wyneb </h2><p>Os
+        byddai\u2019n well gennych siarad \u00e2 rhywun wyneb yn wyneb, rydym yn gweithio
+        gyda nifer o bartneriaid ledled y DU i roi cyngor ariannol diduedd wyneb yn
+        wyneb. I drefnu sesiwn cyngor ariannol wyneb yn wyneb, gweler isod (gall cyfraddau
+        galwadau amrywio). </p><ul><li>Lloegr \u2013 0333 321 3434 neu <a title=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\">drefnu
+        ar-lein</a></li><li>Cymru \u2013 0300 330 0520 neu e-bostio <a title=\"moneyadviser@citizensadvice.org.uk\"
+        target=\"_blank\" href=\"mailto:moneyadviser@citizensadvice.org.uk\">moneyadviser@citizensadvice.org.uk</a></li><li>Yr
+        Alban \u2013 0808 800 0118 neu <a title=\"http://www.cas.org.uk/book-face-face-money-advice-service-session\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://www.cas.org.uk/book-face-face-money-advice-service-session\">drefnu
+        ar-lein</a></li><li>Gogledd Iwerddon \u2013 0333 321 2424 neu <a title=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://moneyadviceservice.a4e.co.uk/eService/viewcase.aspx\">drefnu
+        ar-lein</a></li></ul><h2>Er mwyn archebu canllawiau print y Gwasanaeth Cynghori
+        Ariannol </h2><p>Defnyddiwch ein\u00a0<a title=\"Order forms\" href=\"/cy/articles/ffurflenni-archebu\">ffurflen
+        archebu ar-lein</a>. </p><h2>Er mwyn cysylltu \u00e2\u2019n sefydliad (ymholiadau
+        cyffredinol) </h2><p>Ffoniwch ein Llinell Cynghori Ariannol ar 0300 500 5000
+        (Saesneg) neu 0300 500 5555 (Cymraeg)* <br/> Typetalk: 18001 0300 500 5000*
+        <br/> O dramor: +44 1443 827658 </p><p><em><strong>* Pa dariff bynnag rydych
+        arno, mae cost rhif 0300 yr un \u00e2 chost galwad ff\u00f4n gyffredin. Os
+        yw\u2019ch galwadau am ddim, yna bydd yn rhad ac am ddim, hyd yn oed o ffonau
+        symudol. Rydym yn ymroddedig i ddarparu gwasanaeth o safon uchel, felly gall
+        galwadau gael eu recordio neu eu monitro at ddibenion hyfforddi.</strong></em>\u00a0
+        </p><h2>Sut i ddod o hyd inni </h2><p><img alt=\"Map of our location\" src=\"/images/location_map.jpg\"/>\u00a0
+        </p><h2>I wneud cwyn </h2><p>Rydym yn ymroddedig i helpu pobl i ddeall ac
+        ymwneud \u00e2\u2019u harian. Ein <a title=\"Our complaints policy\" target=\"_blank\"
+        data-link-type=\"attachment\" href=\"/files/final-external-complaints-policy-20120125-bilingual.pdf\">polisi
+        ynghylch cwynion</a>\u00a0Mae\u00a0(PDF) yn cyflwyno\u2019r ffordd y byddwn
+        yn delio \u00e2\u2019ch cwyn. </p><ul><li>Anfonwch e-bost atom\u00a0 \u2013\u00a0<a
+        title=\"complaints@moneyadviceservice.org.uk\" target=\"_blank\" href=\"mailto:complaints@moneyadviceservice.org.uk\">complaints@moneyadviceservice.org.uk</a></li><li>Ysgrifennwch
+        atom\u00a0 \u2013\u00a0Y Gwasanaeth Cynghori Ariannol, Holborn Centre, 120
+        Holborn, Llundain, EC1N 2TD.</li></ul><br/><p>Fe fyddwn yn anfon cydnabyddiaeth
+        atoch cyn pen pum diwrnod gwaith ac yn ateb cyn pen ugain diwrnod gwaith.
+        </p><p>Er mwyn gwneud yn si\u0175r ein bod yn dysgu oddi wrth yr adborth yr
+        ydym yn ei dderbyn, mae ein Bwrdd yn cael adroddiadau cyson yn crynhoi unrhyw
+        gwynion a sylwadau y byddwn wedi eu derbyn a\u2019r camau a gymerwyd gennym.
+        </p><h2>Swyddfa\u2019r wasg (newyddiadurwyr yn unig) </h2><p>Anfonwch e-bost
+        atom -\u00a0<a title=\"pressoffice@moneyadviceservice.org.uk\" target=\"_blank\"
+        href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p><p>Ffoniwch
+        ni\u00a0\u2013 020 7943 0593 (07767 438 670 ar gyfer galwadau allan o oriau
+        neu alwadau brys) </p><p>Ysgrifennwch atom\u00a0\u2013 Y Gwasanaeth Cynghori
+        Ariannol, Holborn Centre, 120 Holborn, Llundain, EC1N 2TD </p><p>Mae\u2019n
+        flin gan swyddfa\u2019r wasg nodi na all dderbyn ymholiadau gwerthiant a marchnata,
+        anfonwch e-bost at <a href=\"mailto:marketing@moneyadviceservice.org.uk\">marketing@moneyadviceservice.org.uk</a></p>"}'
+    http_version:
+  recorded_at: Mon, 07 Jul 2014 14:48:54 GMT
+recorded_with: VCR 2.9.2

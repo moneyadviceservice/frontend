@@ -9,7 +9,7 @@ module World
     end
 
     def news_article(locale='en')
-      fixture 'news/tell-ma-were-listening.yml'
+      fixture 'news/what-your-credit-report-reveals-about-you.yml'
     end
   end
 end

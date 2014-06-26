@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/news/what-your-credit-report-reveals-about-you.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - aa38b543-da92-48a1-a944-3cafa479b69f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Link:
+      - !binary |-
+        PGh0dHA6Ly9sb2NhbGhvc3QvZW4vbmV3cy93aGF0LXlvdXItY3JlZGl0LXJl
+        cG9ydC1yZXZlYWxzLWFib3V0LXlvdT4gcmVsPSJhbHRlcm5hdGUiOyBocmVm
+        bGFuZz0iZW4tR0IiOyB0aXRsZT0iV2hhdCB5b3VyIGNyZWRpdCByZXBvcnQg
+        cmV2ZWFscyBhYm91dCB5b3UiLCA8aHR0cDovL2xvY2FsaG9zdC9jeS9uZXdz
+        L2JldGgtbWFlY2gtYWRyb2RkaWFkLWNyZWR5ZC15bi1laS1kZGF0Z2VsdS1h
+        bWRhbm9jaD4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iY3ktR0IiOyB0
+        aXRsZT0iQmV0aCBtYWXigJljaCBhZHJvZGRpYWQgY3JlZHlkIHluIGVpIGRk
+        YXRnZWx1IGFtZGFub2NoIg==
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Meta-Request-Version:
+      - 0.2.8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"9ffd5324a1ba06426a1cdf24798bbfb4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 67d4dc6ad58b2de73f8b37d04b8099aa
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 26-Jun-2015 13:13:48 GMT
+      - _session_id=67d4dc6ad58b2de73f8b37d04b8099aa; path=/; HttpOnly
+      - _web_tracking=c12951e3739e000b1f8a753633d8b212; path=/; expires=Fri, 26-Jun-2015
+        13:13:48 GMT
+      X-Request-Id:
+      - aa38b543-da92-48a1-a944-3cafa479b69f
+      X-Runtime:
+      - '1.232322'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"id":"what-your-credit-report-reveals-about-you","title":"What your
+        credit report reveals about you","description":"Too few people are checking
+        their credit report on a regular basis.","body":"<p> A good credit report
+        could be your ticket to better lending, so it''s important to keep track of
+        it and know how to improve your score. </p><p>But new Money Advice Service
+        research shows that not only are too few people checking theirs, many don''t
+        know exactly what they are used for.\u00a0 </p><p>Credit reference agencies
+        produce the reports to be used by lenders to rate the credit worthiness of
+        an individual - put simply, the better your credit rating the lower the risk
+        you will default on any existing or future credit obligations. This means
+        you will be less likely to be <a title=\"Refused credit\" href=\"https://www.moneyadviceservice.org.uk/en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card\">refused
+        credit</a> in the future. </p><h2>What a credit report includes </h2><p>So
+        what exactly is in a credit report? </p><p>They not only include information
+        that financial companies use to verify identity, they also show previous credit
+        history, such as if you\u2019ve defaulted on a loan or any late payments.
+        Companies use this information to help them decide whether to allow you to
+        open an account or offer you credit, and on what terms. </p><p>If you take
+        a credit report out you can expect to see your credit history over the last
+        six years, plus: </p><ul><li>Your name, current and previous addresses (covering
+        the last six years), and date of birth</li><li>Your current account provider
+        and details of any overdrafts you have</li><li>A list of any credit and store
+        cards, loans or mortgages you have</li><li>Details of any late or missed payments</li><li>Public
+        record information, such as County Court Judgments (or Decrees in Scotland),
+        property repossessions and bankruptcies for up to six years after they occur.</li></ul><p>Your
+        credit report may also show whether <a title=\"Protect yourself from fraud\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/protecting-yourself-from-scams-and-theft\">your
+        identity has been fraudulently used</a> in the past \u2013 if you have reported
+        it to your bank, lender or another financial provider. It can also reveal
+        if you are on the Electoral Register for identification purposes. Having a
+        thorought understanding of your credit report can indicate <a title=\"Improve
+        your credit rating\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating\">ways
+        to improve your rating</a>, perhaps by changing your behaviour. </p><h2>What
+        credit reports don\u2019t show </h2><p>You can get a credit report from any
+        one of the three main credit reference agencies \u2013 Callcredit (Noddle),
+        Equifax and Experian. These agencies won\u2019t record some sensitive information
+        such as a criminal record, your basic salary or religion. Money Advice Service
+        research reveals 13% of people\u00a0thought checking for criminal records
+        was the purpose of requesting a credit report. </p><h2>Checklist </h2><p><strong>Have
+        you checked your credit report?</strong> \u2013 <a title=\"Too many adults
+        dont check their credit report\" href=\"https://www.moneyadviceservice.org.uk/en/news/do-you-know-your-credit-score-most-uk-adults-havent-checked-theirs-in-five-years\">just
+        one in three has taken out a credit report</a>, so many people risk paying
+        more than necessary because of issues and errors they can rectify. </p><p><strong>How
+        to improve your credit report</strong> \u2013 it is possible to <a title=\"How
+        to check and improve your credit report\" href=\"https://www.moneyadviceservice.org.uk/en/news/how-to-improve-your-credit-report-and-get-a-better-deal\">boost
+        your chances of being accepted for credit</a> by taking steps such as by avoiding
+        multiple credit applications and getting on the electoral role. </p><p><strong>Free
+        credit reports</strong> - Money Advice Service website users can get a <a
+        title=\"Free credit report\" href=\"https://www.moneyadviceservice.org.uk/en/static/get-your-free-credit-report?utm_campaign=3735691&amp;utm_content=10198295742&amp;utm_medium=email&amp;utm_source=Emailvision\">free
+        credit report</a> from two of the main agencies, for a limited period only.
+        </p><p><strong>Myth buster</strong> - <a title=\"Credit report quiz\" href=\"https://www.moneyadviceservice.org.uk/en/tools/quiz-the-truth-about-credit-reports\">take
+        our quiz </a>to see if you are credit savvy. </p><p><strong>Don\u2019t miss
+        out!</strong> - for more money advice and news straight to your inbox, <a
+        title=\"Newsletter\" href=\"https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions/new\">sign
+        up to our emails here</a>. </p><p><em>Photo: PA</em></p>","date":"2014-03-17T09:42:11+00:00"}'
+    http_version: 
+  recorded_at: Thu, 26 Jun 2014 13:13:50 GMT
+recorded_with: VCR 2.9.2

@@ -70,6 +70,15 @@ require(['common'], function(MAS) {
         triggerEl: '.category-detail__heading',
         targetEl: '.category-detail__list-container'
       });
+
+      // Category Collapsables
+      new Collapsable({
+        name: 'contactCollapsables',
+        showIcon: true,
+        useButton: true,
+        triggerEl: '.contact-detail__heading',
+        targetEl: '.contact-detail__content'
+      });
     });
   });
 

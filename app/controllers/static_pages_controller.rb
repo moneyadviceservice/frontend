@@ -7,5 +7,7 @@ class StaticPagesController < ApplicationController
     @static_page = Core::StaticPageReader.new(params[:id]).call do
       not_found
     end
+
+    @breadcrumbs = [Breadcrumb.new(nil)]
   end
 end

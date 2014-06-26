@@ -12,7 +12,7 @@
 .l-main__primary {
   @include column(12);
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     @include column(8);
   }
 }
@@ -20,7 +20,7 @@
 .l-main__secondary {
   @include column(12);
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     @include column(4);
     margin-top: 130px;
     float: right;

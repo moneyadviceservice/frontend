@@ -8,6 +8,6 @@ class StaticPagesController < ApplicationController
       not_found
     end
 
-    @breadcrumbs = [Breadcrumb.new(nil)]
+    @breadcrumbs = BreadcrumbTrail.build(@static_page, category_tree)
   end
 end

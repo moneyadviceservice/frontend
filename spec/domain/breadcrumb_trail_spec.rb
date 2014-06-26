@@ -1,8 +1,10 @@
 require 'core/entities/article'
 require 'core/entities/category'
+require 'core/entities/static_page'
 
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Core::Article.new('the-article') }
+  let(:static_page)           { Core::StaticPage.new(double) }
   let(:category_title)        { 'the-category' }
   let(:category)              { Core::Category.new(category_title, title: category_title) }
   let(:parent_category_title) { 'the-category' }
@@ -38,5 +40,11 @@ RSpec.describe BreadcrumbTrail, '.build' do
     subject { described_class.build(category, category_tree) }
 
     specify { expect(subject.map(&:title)).to eq([parent_category_title]) }
+  end
+
+  context 'when item is a static page' do
+    subject { described_class.build(static_page, category_tree) }
+
+    specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
   end
 end

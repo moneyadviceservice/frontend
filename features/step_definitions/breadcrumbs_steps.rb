@@ -10,6 +10,10 @@ Given(/^I read an action plan belonging to multiple categories$/) do
   browse_to_action_plan action_plan_in_multiple_categories
 end
 
+Given(/^I read a static page$/) do
+  static_page.load(locale: 'en', id: 'privacy')
+end
+
 Given(/^I read a category$/) do
   browse_to_category(category, 'en')
 end
@@ -28,6 +32,10 @@ end
 
 Then(/^I can see breadcrumbs for the action plan$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
+end
+
+Then(/^I can see breadcrumbs for the static page$/) do
+  expect(static_page.breadcrumbs.text).to eq('Home')
 end
 
 Then(/^I can see breadcrumbs for the category$/) do

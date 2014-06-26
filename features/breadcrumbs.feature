@@ -11,6 +11,10 @@ Feature: Article breadcrumbs
     When I read an action plan belonging to a single category
     Then I can see breadcrumbs for the action plan
 
+  Scenario: Breadcrumb on a static page
+    When I read a static page
+    Then I can see breadcrumbs for the static page
+
  Scenario: Breadcrumb on an category page
     When I read a category
     Then I can see breadcrumbs for the category

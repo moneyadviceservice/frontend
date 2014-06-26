@@ -1,40 +1,111 @@
-.l-contact-cell {
+.l-contact {}
+
+.l-contact__group {}
+
+.l-contact__group--details {
   @include column(12);
-  @extend %clearfix;
+  position: relative;
 
   @include respond-to($mq-s) {
     @include column(6);
+  };
 
-    &:first-child {
-      @include column(12);
+  @include respond-to($mq-l) {
+    @include column(9);
+
+    // Border
+    &:after {
+      background: $color-contact-border;
+      bottom: 0;
+      content: '';
+      display: none;
+      height: 100%;
+      right: 0;
+      position: absolute;
+      top: 0;
+      width: 1px;
+
+      @include respond-to($mq-l) {
+        display: block;
+      };
     }
-  }
+
+  };
+}
+
+.l-contact__group--newsletter {
+  @include column(12);
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  };
 
   @include respond-to($mq-l) {
     @include column(3);
-
-    &:first-child {
-      @include column(3);
-    }
-  }
+  };
 }
 
-.l-contact-cell--separated {
-  position: relative;
+.l-contact__group--details .l-contact__group-row {
+  @include row(12);
 
-  &:after {
-    background: #ccc;
-    bottom: 0;
-    content: '';
-    display: none;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 1px;
+  @include respond-to($mq-s) {
+    @include row(6);
+  };
 
-    @include respond-to($mq-l) {
-      display: block;
-    };
-  }
+  @include respond-to($mq-l) {
+    @include row(9);
+  };
+}
+
+.l-contact__group--newsletter .l-contact__group-row {
+  @include row(12);
+
+  margin-bottom: $baseline-unit*4;
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-s) {
+    margin-top: 0;
+    margin-bottom: 0;
+  };
+
+  @include respond-to($mq-m) {
+    @include row(6);
+  };
+
+  @include respond-to($mq-l) {
+    @include row(3);
+  };
+}
+
+
+.l-contact__cell--details {
+  margin-top: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*4;
+  };
+}
+
+.l-contact__group--details .l-contact__cell {
+  @include column(12,12);
+
+  @include respond-to($mq-s) {
+    @include column(6,6);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(3,9);
+  };
+}
+
+.l-contact__group--newsletter .l-contact__cell {
+  @include column(12,12);
+
+  @include respond-to($mq-s) {
+    @include column(6,6);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(3,3);
+  };
 }

@@ -9,27 +9,37 @@
 }
 
 .contact__heading {
-  @include body(24, 30);
   @extend %font-heading-heavy;
+  @include body(21, 22);
   margin-top: 0;
-  margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
-    margin-top: $baseline-unit*3;
-    @include body(29, 30);
-  }
+    @include body(21, 22);
+  };
+
+  @include respond-to($mq-l) {
+    margin-bottom: $baseline-unit*5;
+  };
 }
 
 .contact__introduction {
-  margin-bottom: $baseline-unit*3;
+  @include body(16, 24);
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*3;
+  };
 }
 
 .contact__details-heading {
-  @extend %font-heading-medium;
+  @extend %font-heading-heavy;
+  @include body(16, 24);
   color: $color-contact-heading;
   margin-top: 0;
+  margin-bottom: $baseline-unit;
 }
 
 .contact__details-text {
   @include body(16, 24);
+  padding-right: 6px;
 }

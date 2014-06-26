@@ -1,4 +1,4 @@
-Given(/^I have not previously acknowleged the cookie message$/) do
+Given(/^I have not previously acknowledged the cookie message$/) do
   case Capybara.current_driver
   when :rack_test
     page.driver.browser.clear_cookies
@@ -7,7 +7,7 @@ Given(/^I have not previously acknowleged the cookie message$/) do
   end
 end
 
-Given(/^I have previously acknowleged the cookie message$/) do
+Given(/^I have previously acknowledged the cookie message$/) do
   case Capybara.current_driver
   when :rack_test
     page.driver.browser.set_cookie('_cookie_notice=y')

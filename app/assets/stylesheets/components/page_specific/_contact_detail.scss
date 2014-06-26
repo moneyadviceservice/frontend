@@ -1,14 +1,12 @@
 .contact-detail {
-  padding-bottom: px(12);
-
   @include respond-to($mq-xs, $mq-m) {
+    padding-bottom: px(12);
     border-bottom: $default-border-thick;
 
     &:last-of-type {
       margin-bottom: px(24);
     }
   }
-
 }
 
 .contact-detail__heading {
@@ -73,6 +71,5 @@
     &.is-off {
       display: block;
     }
-
   }
 }

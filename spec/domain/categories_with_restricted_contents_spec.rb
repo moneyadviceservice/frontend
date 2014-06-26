@@ -14,4 +14,12 @@ RSpec.describe CategoriesWithRestrictedContents, '.build' do
   specify { expect(subject).to eq(categories) }
   specify { expect(subject.first.contents).to contain_exactly(item_1, item_2) }
   specify { expect(subject.last.contents).to contain_exactly(item_3) }
+
+  context 'with duplicate contents' do
+    let(:category_1) { Core::Category.new(double, contents: [item_1, item_2, other_item_1]) }
+    let(:category_2) { Core::Category.new(double, contents: [item_1, item_3, other_item_2]) }
+
+    specify { expect(subject.first.contents).to contain_exactly(item_1, item_2) }
+    specify { expect(subject.last.contents).to contain_exactly(item_3) }
+  end
 end

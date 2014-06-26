@@ -1,0 +1,16 @@
+.sidebar {
+  @extend %clearfix;
+
+  p, li {
+    @include body(16, 24);
+  }
+
+  .smallprint {
+    @include body(14, 24)
+  }
+}
+
+.sidebar--green {
+  padding: 0 px(24);
+  background-color: $color-green-three;
+}

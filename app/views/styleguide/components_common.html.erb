@@ -22,6 +22,40 @@
   </button>
 <% end %>
 
+<%= styleguide_section sections['pagination'] do %>
+  <%= render 'styleguide/pagination' %>
+<% end %>
+
+<%= styleguide_section sections['inset-block'] do %>
+  <div class="inset-block">
+    <div class="inset-block__content-container">
+      <p class="inset-block__text">This tool is designed to give you an approximate
+        idea of how much a lender might offer for a mortgage, and if you could
+        afford it. Actual amounts and affordability criteria will differ
+        across lenders</p>
+    </div>
+  </div>
+<% end %>
+
+<%= styleguide_section sections['validation-summary'] do %>
+  <div class="validation-summary">
+    <div class="validation-summary__content-container">
+      <p class="validation-summary__title">
+        2 errors
+        prevented calculation:
+      </p>
+      <ol class="validation-summary__list">
+        <li>
+          <a href="#savings_goal-errors">Your savings goal can't be blank</a>
+        </li>
+        <li>
+          <a href="#regular_deposit-errors">The amount you can save can't be blank</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+<% end %>
+
 <%= styleguide_section sections['Call out'] do %>
   <%= render 'styleguide/shared/callout' %>
 <% end %>
@@ -32,8 +66,4 @@
 
 <%= styleguide_section sections['Scrollable Table'] do %>
   <%= render 'styleguide/shared/table' %>
-<% end %>
-
-<%= styleguide_section sections['pagination'] do %>
-  <%= render 'styleguide/pagination' %>
 <% end %>

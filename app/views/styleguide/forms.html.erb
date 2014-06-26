@@ -3,7 +3,11 @@
 
 <h2>Fieldsets, Legends, and Form Elements</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim
+  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
+  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
+  vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
+  volutpat justo, eu volutpat enim diam eget metus.</p>
 
 <form class="form" novalidate>
 
@@ -13,13 +17,16 @@
   </div>
 
   <div class="form__row">
-    <label for="text_field_hint" class="form__label-heading">Text Field with hint</label>
+    <label for="text_field_hint" class="form__label-heading">Text Field with
+      hint</label>
     <input type="text" id="text_field_hint" aria-describedby="f">
+
     <p class="form__hint" id="frmhint1">e.g. 01/01/1970</p>
   </div>
 
   <div class="form__row">
-    <label for="disabled" class="form__label-heading">Disabled Text Field</label>
+    <label for="disabled" class="form__label-heading">Disabled Text
+      Field</label>
     <input type="text" id="disabled" value="Some disabled text" disabled>
   </div>
 
@@ -29,7 +36,8 @@
   </div>
 
   <div class="form__row">
-    <label for="select_element" class="form__label-heading">Select Element</label>
+    <label for="select_element" class="form__label-heading">Select
+      Element</label>
     <select name="select_element" id="select_element">
       <optgroup label="Option Group 1">
         <option value="1">Option 1</option>
@@ -69,6 +77,13 @@
   </div>
 
   <div class="form__row">
+    <div data-mas-component="RangeInput">
+      <label for="range" class="form__label-heading">Range Input <strong>(Work in progress)</strong></label>
+      <input type="text" id="range" data-mas-range-input class="form__input--range">
+    </div>
+  </div>
+
+  <div class="form__row">
     <fieldset class="form__group form__group--inline">
       <legend>Form group (inline)</legend>
       <div class="form__group-item">
@@ -93,7 +108,8 @@
   </div>
 
   <div class="form__row">
-    <label class="form__label-heading" for="input4" id="form-label4">Inset label (single)</label>
+    <label class="form__label-heading" for="input4" id="form-label4">Inset label
+      (single)</label>
     <span class="form__input-container">
       <span class="form__input-label" id="input-label4a">&pound;</span>
       <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label4a input-label4b">
@@ -102,7 +118,8 @@
   </div>
 
   <div class="form__row">
-    <label class="form__label-heading" for="input3" id="form-label3">Inset label (multiple)</label>
+    <label class="form__label-heading" for="input3" id="form-label3">Inset label
+      (multiple)</label>
     <span class="form__input-container">
       <span class="form__input-label" id="input-label3a">APR</span>
       <input id="input3" class="form__input" type="text" aria-labelledby="form-label3 input-label3a input-label3b">
@@ -130,7 +147,8 @@
   </div>
 
   <div class="form__row">
-    <label for="number" class="form__label-heading">Number (with <code>type="text"</code> and <code>pattern</code> attribute)</label>
+    <label for="number" class="form__label-heading">Number (with
+      <code>type="text"</code> and <code>pattern</code> attribute)</label>
     <input id="number" type="text" min="0" max="100000" step="1" value="5" pattern="\d*">
   </div>
 
@@ -145,3 +163,32 @@
   </div>
 
 </form>
+
+<h2>Errors</h2>
+
+<div class="validation-summary">
+  <div class="validation-summary__content-container">
+    <p class="validation-summary__title">
+      1 error
+      prevented calculation:
+    </p>
+    <ol class="validation-summary__list">
+      <li>
+        <a href="#savings_goal-errors">Your savings goal can't be blank</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="form__row is-errored">
+  <div id="savings_goal-errors">
+    <p>1. Your savings goal can't be blank</p>
+  </div>
+  <label class="form__label-heading" for="input4" id="form-label4">What is your
+    savings goal?</label>
+    <span class="form__input-container">
+      <span class="form__input-label" id="input-label4a">£</span>
+      <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label4a input-label4b">
+      <span class="form__input-outline"></span>
+    </span>
+</div>

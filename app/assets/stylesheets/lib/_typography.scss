@@ -101,3 +101,10 @@
   @extend %font-heading-medium;
   @include body(14, 18);
 }
+
+%underlined,
+.underlined {
+  border-bottom: $default-border-thin;
+  padding-bottom: px(12);
+  margin-bottom: px(24);
+}

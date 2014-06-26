@@ -23,6 +23,7 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
+gem 'warden'
 
 group :assets do
   gem 'autoprefixer-rails'

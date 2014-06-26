@@ -4,8 +4,8 @@ class Breadcrumb
   attr_accessor :path, :title
 
   def initialize(category)
-    @path, @title = if category.nil?
-      [root_path(locale: I18n.locale), I18n.t('layouts.home')]
+    @path, @title = if category.is_a? HomeCategory
+      [category.path, category.title]
     else
       [category_path(category.id, locale: I18n.locale), category.title]
     end

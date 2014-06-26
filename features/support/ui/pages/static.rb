@@ -6,5 +6,6 @@ module UI::Pages
 
     element :intro, 'p.intro'
     element :content, '.l-main'
+    element :breadcrumbs, '.l-context-bar'
   end
 end

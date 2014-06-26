@@ -2,6 +2,10 @@
                  canonical:   static_page.canonical_url,
                  alternate:   static_page.alternate_options) %>
 
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+<% end %>
+
 <div class="l-main editorial">
   <main role="main">
     <h1><%= title static_page.title %></h1>

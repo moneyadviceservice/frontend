@@ -29,7 +29,8 @@ a:not([href*="moneyadviceservice"]):after {
 a[href^="/"]:after,
 a[href^="#"]:after,
 a[href^="tel"]:after,
-a[href^="mailto:"]:after {
+a[href^="mailto:"]:after,
+a[href*="/maps/"]:after {
   display: none;
 }
 

@@ -18,7 +18,7 @@ Feature: Beta Message interaction
     Then I should see the opt out bar
     And I should see the opt out footer button
 
-  @with_and_without_javascript
+#  @with_and_without_javascript
   Scenario: Dismissing the opt out bar
     Given I have not previously dismissed the opt out bar or opted out of the beta
     And I visit the website and see the opt out bar
@@ -26,7 +26,7 @@ Feature: Beta Message interaction
     Then I should not see the opt out bar
     And I should see the opt out footer button
 
-  @with_and_without_javascript
+#  @with_and_without_javascript
   Scenario: Dismissing the opt out bar and then navigating to another page
     Given I have not previously dismissed the opt out bar or opted out of the beta
     And I visit the website and dismiss the opt out bar

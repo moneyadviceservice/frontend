@@ -34,6 +34,10 @@ a[href*="/maps/"]:after {
   display: none;
 }
 
+a[href^="mailto:"] {
+  word-break: break-all;
+}
+
 a[href$=".doc"] {
   margin-top: $baseline-unit*3;
 

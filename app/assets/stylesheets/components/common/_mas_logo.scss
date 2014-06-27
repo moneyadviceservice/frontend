@@ -1,5 +1,5 @@
 .mas-logo {
-  padding: $baseline-unit*2.5 0 $baseline-unit*2.5 $baseline-unit*2;
+  padding: $baseline-unit*2.5 $baseline-unit*2;
   width: 180px;
 
   @include respond-to($mq-m) {
@@ -7,6 +7,6 @@
   }
 
   a:focus & {
-    outline: 1px solid #fff;
+    outline: 2px solid $color-green-secondary;
   }
 }

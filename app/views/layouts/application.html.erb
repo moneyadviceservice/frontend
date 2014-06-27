@@ -1,6 +1,7 @@
 <% content_for :content do %>
   <a class="skip-to-content" href="#main">Skip to main content</a>
   <%= render 'shared/opt_out_bar' unless dismissed_beta_opt_out? %>
+  <%= render 'shared/alerts' if alerts? %>
   <%= render 'shared/header' %>
 
   <%= content_for?(:main) ? yield(:main) : yield %>

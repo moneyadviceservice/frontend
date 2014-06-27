@@ -40,6 +40,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_menu_button_in_header?
 
+  def alerts?
+    flash.keys.any?
+  end
+
+  helper_method :alerts?
+
   private
 
   def category_tree

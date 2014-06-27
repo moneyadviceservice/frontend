@@ -11,6 +11,7 @@ RSpec.describe StaticPagesController, :type => :controller do
     context 'when an static_page does exist' do
       before do
         allow(Core::StaticPageReader).to receive(:new) { static_page_reader }
+        allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
       end
 
       it 'is successful' do

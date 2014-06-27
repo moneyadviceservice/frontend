@@ -26,6 +26,10 @@ Given(/^I read an orphaned article$/) do
   browse_to_article orphan_article
 end
 
+Given(/^I read an orphaned action plan$/) do
+  browse_to_action_plan orphan_action_plan
+end
+
 Then(/^I can see breadcrumbs for the article$/) do
   expect(article_page.breadcrumbs.text).to eq(current_article.context)
 end
@@ -48,8 +52,4 @@ end
 
 Then(/^I can see that the action plan appears in those categories$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
-end
-
-Then(/^I should not see breadcrumbs$/) do
-  expect(article_page).to_not have_breadcrumbs
 end

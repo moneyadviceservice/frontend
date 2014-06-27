@@ -27,6 +27,10 @@ Feature: Article breadcrumbs
     When I read an action plan belonging to multiple categories
     Then I can see that the action plan appears in those categories
 
-  Scenario: No breadcrumbs are shown for an article that has no parents
+  Scenario: Breadcrumb on an orphaned article page
     When I read an orphaned article
-    Then I should not see breadcrumbs
+    Then I can see breadcrumbs for the article
+
+  Scenario: Breadcrumb on an orphaned action plan page
+    When I read an orphaned action plan
+    Then I can see breadcrumbs for the action plan

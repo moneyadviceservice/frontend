@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/claim-child-maintenance-from-your-ex.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 9000a556-1779-4a53-ab01-d1e2aca47dda
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 27 Jun 2014 11:18:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/action_plans/claim-child-maintenance-from-your-ex>
+        rel="alternate"; hreflang="en-GB"; title="Action plan - Arrange child maintenance
+        with  your ex", <https://www.moneyadviceservice.org.uk/cy/action_plans/hawlio-cynhaliaeth-plant-gan-eich-cyn-gymar>
+        rel="alternate"; hreflang="cy-GB"; title="Cynllun gweithredu - Hawliwch gynhaliaeth
+        plant gan eich cyn bartner"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 37ae6465ed5d28839399b6f3753abac6
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 27-Jun-2015 11:18:28 GMT; secure
+      - _session_id=37ae6465ed5d28839399b6f3753abac6; path=/; secure; HttpOnly
+      - _web_tracking=0f02798a252ccf4ead7b460e88b07d8e; path=/; expires=Sat, 27-Jun-2015
+        11:18:28 GMT; secure
+      X-Request-Id:
+      - 9000a556-1779-4a53-ab01-d1e2aca47dda
+      X-Runtime:
+      - '0.109246'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"claim-child-maintenance-from-your-ex","title":"Action plan -
+        Arrange child maintenance with  your ex","description":"Advice on claiming
+        child maintenance from your ex including utilising the Child Support Agency
+        (CSA) and striving to establish a family-based arrangement","body":"<p class=\"intro\"><img
+        src=\"/images/new_action_plan_icon.jpg\"/>You can arrange child maintenance
+        directly with your child\u2019s other parent or, if you can\u2019t agree,
+        you can ask the Statutory Child Maintenance Service (formerly the Child Support
+        Agency or CSA), or the courts to get involved. Follow this action plan to
+        sort out your child maintenance payments.\u00a0\u00a0 </p><div class=\"action-item\"><h3>Step
+        1 - Try to establish a family-based arrangement </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Why? </h4><p>It''s the quickest and easiest way to arrange
+        child maintenance and has the advantage of being flexible and keeping open
+        the lines of communication between you and your ex. </p></div><div class=\"how\"><h4>How?
+        </h4><ul><li><a target=\"_blank\" data-link-type=\"external\" href=\"http://www.cmoptions.org/en/calculator/calculator.asp\">Use
+        the child maintenance calculator on the CM Options website to see how much
+        you could expect to receive</a></li><li><a target=\"_blank\" data-link-type=\"external\"
+        href=\"http://www.cmoptions.org/en/family/index.asp\">Go to the CM Options
+        website to get more information on family-based arrangements and download
+        a form to record what you''ve agreed</a></li></ul></div></div></div><div class=\"action-item\"><h3>Step
+        2 - Set up a statutory arrangement through the Statutory Child Maintenance
+        Service </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If
+        your family-based arrangement doesn''t work out, the Statutory Child Maintenance
+        Service\u00a0can calculate the child maintenance amount and, if necessary,
+        collect it and pass it on. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a
+        target=\"_blank\" data-link-type=\"external\" href=\"http://www.cmoptions.org/en/other-arrangements/statutory-service.asp\">Follow
+        this step-by-step guide to setting up a statutory child maintenance arrangement
+        on the CM Options website </a></li><li><a title=\"child-maintenance\" target=\"_blank\"
+        data-link-type=\"external\" href=\"http://www.nidirect.gov.uk/child-maintenance\">If
+        you live in Northern Ireland, the agency to contact is the Child Maintenance
+        Service</a></li></ul></div></div></div><div class=\"action-item\"><h3>Step
+        3 - Use a court order </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>You can use the courts to enforce child maintenance arrangements but
+        it usually only happens if you''re going to court for another reason, often
+        at the time of a divorce. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a
+        target=\"_blank\" data-link-type=\"external\" href=\"http://www.cmoptions.org/en/other-arrangements/consent-orders-minutes-of-agreement.asp\">Find
+        out more about using the courts to arrange child maintenance on the CM Options
+        website</a></li></ul><p>Make sure you''ve agreed on the arrangements and the
+        amounts before you both get to court. </p></div></div></div>","categories":[]}'
+    http_version:
+  recorded_at: Fri, 27 Jun 2014 11:18:28 GMT
+recorded_with: VCR 2.9.2

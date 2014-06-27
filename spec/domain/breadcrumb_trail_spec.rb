@@ -1,8 +1,10 @@
 require 'core/entities/article'
 require 'core/entities/category'
+require 'core/entities/static_page'
 
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Core::Article.new('the-article') }
+  let(:static_page)           { Core::StaticPage.new(double) }
   let(:category_title)        { 'the-category' }
   let(:category)              { Core::Category.new(category_title, title: category_title) }
   let(:parent_category_title) { 'the-category' }
@@ -19,7 +21,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     context 'and it exists in a single category' do
       before do
-        expect(article).to receive(:categories).and_return([category]).twice
+        expect(article).to receive(:categories).and_return([category]).at_least(:once)
       end
 
       specify { expect(subject.map(&:title)).to eq([parent_category_title, category_title]) }
@@ -27,10 +29,18 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     context 'and it exists in more than one category' do
       before do
-        expect(article).to receive(:categories).and_return([double , double])
+        expect(article).to receive(:categories).and_return([double , double]).at_least(:once)
       end
 
       it { is_expected.to be_empty }
+    end
+
+    context 'and it does not exist within a category' do
+      before do
+        expect(article).to receive(:categories).and_return([])
+      end
+
+      specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
     end
   end
 
@@ -38,5 +48,11 @@ RSpec.describe BreadcrumbTrail, '.build' do
     subject { described_class.build(category, category_tree) }
 
     specify { expect(subject.map(&:title)).to eq([parent_category_title]) }
+  end
+
+  context 'when item is a static page' do
+    subject { described_class.build(static_page, category_tree) }
+
+    specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
   end
 end

@@ -7,6 +7,7 @@ RSpec.describe HomeCategory do
     allow(I18n).to receive(:locale).and_return(locale)
   end
 
+  specify { expect(subject).to be_home }
   specify { expect(subject.title).to eq(I18n.t('layouts.home')) }
   specify { expect(subject.path).to eq(root_path(locale: locale)) }
 end

@@ -13,5 +13,9 @@ module Core
     def parent?
       contents.any? { |c| c.try(:child?) }
     end
+
+    def home?
+      false
+    end
   end
 end

@@ -2,7 +2,7 @@ RSpec.describe Breadcrumb do
   let(:locale)   { :en }
   let(:id)       { 'category-id' }
   let(:title)    { 'category-title' }
-  let(:category) { double(id: id, title: title) }
+  let(:category) { double(id: id, title: title, home?: false) }
 
   subject { described_class.new(category) }
 

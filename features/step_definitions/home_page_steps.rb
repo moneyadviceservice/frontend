@@ -30,7 +30,7 @@ Then(/^I should see directory items$/) do
 end
 
 Then(/^I should see promoted content$/) do
-  expected_text = I18n.t('home.show.promoted').map { |item| item['text'] }
+  expected_text = I18n.t('home.show.promoted').map { |item| item[:text] }
   actual_text   = home_page.promos.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)

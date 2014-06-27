@@ -62,9 +62,9 @@ features:
 At runtime you can use these toggles in order to decide whether or not to show a feature:
 
 ```rb
-Feature.active(:an_active_feature) # => true/false
+Feature.active?(:an_active_feature) # => true/false
 
-Feature.deactive?(:an_active_feature) # => true/false
+Feature.inactive?(:an_active_feature) # => true/false
 
 Feature.with(:an_active_feature) do
   # code

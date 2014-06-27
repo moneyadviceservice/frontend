@@ -73,10 +73,6 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_grandchild_category_page
-    render layout: 'styleguide/page'
-  end
-
   def pages_child_category_page
     render layout: 'styleguide/page'
   end

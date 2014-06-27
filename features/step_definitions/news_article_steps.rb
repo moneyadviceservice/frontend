@@ -2,6 +2,16 @@ When(/^I view a news article in (.*)$/) do |language|
   browse_to_news_article(news_article(language))
 end
 
+When(/^I translate a news article into (.*)$/) do |language|
+  locale           = language_to_locale(language)
+  current_language = locale_to_language(I18n.locale)
+
+  expect(news_article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(news_article_page.footer_site_links).to_not send("have_#{current_language}_link")
+
+  home_page.footer_site_links.send("#{language.downcase}_link").click
+end
+
 Then(/^I should see a news article in (.*)$/) do |language|
   news_article = news_article(language)
 

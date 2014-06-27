@@ -30,9 +30,10 @@ requirejs.config({
     jquery: '<%= requirejs_path('jquery/dist/jquery') %>',
     waypoints: '<%= requirejs_path('jquery-waypoints/waypoints') %>',
     ujs: '<%= requirejs_path('jquery-ujs/src/rails') %>',
+    eventsWithPromises: '<%= requirejs_path('eventsWithPromises/src/eventsWithPromises') %>',
 
     // Internal modules
-    MASModule: '<%= requirejs_path('frontend-assets/js/lib/MASModule') %>',
+    DoughBaseComponent: '<%= requirejs_path('frontend-assets/js/components/DoughBaseComponent') %>',
     featureDetect: '<%= requirejs_path('frontend-assets/js/lib/featureDetect') %>',
 
     globals: '<%= requirejs_path('modules/globals') %>',

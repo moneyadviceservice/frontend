@@ -11,6 +11,10 @@
   </main>
 </div>
 
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>
+
 <% content_for(:alternate_link) do %>
   <% news_article.footer_alternate_options.each do |locale, url| %>
     <%= link_to(url, id: "#{locale}Link", lang: locale) do %>

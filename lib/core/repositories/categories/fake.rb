@@ -6,7 +6,7 @@ module Core::Repositories
       end
 
       def all
-        @filtered_categories ||= remove_non_categories(@categories)
+        remove_non_categories(@categories)
       end
 
       def find(id)

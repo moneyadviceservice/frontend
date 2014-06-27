@@ -3,8 +3,6 @@ RSpec.describe 'Home redirection', :type => :request do
     before { get('/') }
 
     it "redirects to '/en'" do
-      skip 'Waiting for github.com/rspec/rspec-rails/issues/916'
-
       expect(request).to redirect_to('/en')
     end
   end

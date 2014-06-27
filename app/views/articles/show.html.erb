@@ -11,13 +11,15 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main class="l-main__primary" role="main">
-    <h1><%= title article.title %></h1>
+  <div class="l-grid-container">
+    <main class="l-main__primary" role="main">
+      <h1><%= title article.title %></h1>
 
-    <%= article.content %>
+      <%= article.content %>
 
-    <%= render 'shared/related_links', article: @article, categories: related_content %>
-  </main>
+      <%= render 'shared/related_links', article: @article, categories: related_content %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

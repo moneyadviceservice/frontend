@@ -1,9 +1,11 @@
+JSHINTRC_LOCATION = 'vendor/assets/bower_components/frontend-assets/.jshintrc'
+
 desc 'Run jshint on all javascript assets'
 task :jshint => :environment do
   # Prevent linting as part of the asset pipeline
   Rails.application.assets.instance_variable_get('@postprocessors')['application/javascript'].delete(AssetPipeline::Processors::JsHint)
 
-  jshintrc = File.join(Rails.root, '.jshintrc')
+  jshintrc = File.join(Rails.root, JSHINTRC_LOCATION)
   lint_options = JSON.parse(File.read(jshintrc))
 
   assets = [].tap do |a|

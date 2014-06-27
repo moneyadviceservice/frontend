@@ -8,3 +8,16 @@
   background-color: $color-green-primary;
   position: relative; // fix white space issue in Safari
 }
+
+.footer-social-links__home {
+
+  display: block;
+  width: 76px;
+  height: 44px;
+  padding: 0 10px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-green-secondary;
+  }
+}

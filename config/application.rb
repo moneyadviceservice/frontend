@@ -37,7 +37,7 @@ module Frontend
     # Configure additional application JS assets to precompile.
     config.assets.precompile += %w(components/Toggler.js
                                    html_inspector.js
-                                   lib/MASModule.js
+                                   components/DoughBaseComponent.js
                                    lib/MicroEvent.js
                                    modules/common.js
                                    modules/globals.js

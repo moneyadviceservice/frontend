@@ -1,9 +1,13 @@
 <% flash.each do |name, msg| %>
-  <!-- XXX: Replace with the right classes @ourmaninamsterdam -->
-  <div class="opt-out">
+  <div class="global-alert">
     <div class="l-constrained l-padded">
       <div class="l-1col">
-        <%= content_tag :p, msg, class: "alert alert-#{name}" %>
+        <div class="global-alert__content-container">
+          <strong class="global-alert__heading">#{name}</strong>
+          <p class="global-alert__message">
+            <%= content_tag :p, msg %>
+          </p>
+        </div>
       </div>
     </div>
   </div>

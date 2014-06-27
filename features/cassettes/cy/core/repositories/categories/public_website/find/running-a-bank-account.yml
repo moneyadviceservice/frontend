@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/running-a-bank-account.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 3eb31285-cab9-4eb7-ba11-ef58362460e2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 27 Jun 2014 07:03:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 29261a965cb319e5ea3b785aa7568ebc
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 27-Jun-2015 07:03:17 GMT; secure
+      - _session_id=29261a965cb319e5ea3b785aa7568ebc; path=/; secure; HttpOnly
+      - _web_tracking=5e3edbe641cba4ba56bd9e22a1b1feea; path=/; expires=Sat, 27-Jun-2015
+        07:03:17 GMT; secure
+      X-Request-Id:
+      - 3eb31285-cab9-4eb7-ba11-ef58362460e2
+      X-Runtime:
+      - '0.648755'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"running-a-bank-account","title":"Rhedeg cyfrif banc","description":"Dysgwch
+        sut i reoli cyfrif banc, o dalu arian i mewn i gadw llygad ar log a ffioedd.","parent_id":"budgeting-and-managing-money","contents":[{"id":"sut-mae-dewis-y-cyfrif-banc-cywir","type":"guide","title":"Sut
+        mae dewis y cyfrif banc cywir","description":"Dewis y cyfrif banc cywir i
+        chi gyda\u2019r nodweddion rydych chi eu heisiau, am y pris cywir"},{"id":"sut-i-agor-cyfrif-banc","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i agor cyfrif banc","description":"Dilynwch y camau hyn i
+        ddewis ac agor cyfrif banc"},{"id":"rheoli-eich-cyfrif-banc","type":"guide","title":"Rheoli
+        eich cyfrif banc","description":"Sut mae rheoli eich cyfrif banc \u2013 arbed
+        arian, arbed ymdrech, bod yn drefnus a chadw\u2019n ddiogel"},{"id":"cyfrifon-cyfredol","type":"guide","title":"Cyfrifon
+        cyfredol","description":"Ceir cyfrifon cyfredol o bob math a maint \u2013
+        mae rhai am ddim tra bo eraill yn cynnig ychwanegiadau am ffi"},{"id":"sut-mae-adfer-ffioedd-banc-annheg","type":"guide","title":"Sut
+        mae adfer ffioedd banc annheg","description":"Beth i\u2019w wneud os ydych
+        chi\u2019n meddwl bod eich banc wedi codi ffioedd gormodol ac annheg arnoch
+        chi"},{"id":"sut-mae-newid-cyfrifon-banc","type":"action_plan","title":"Cynllun
+        gweithredu - Sut mae newid cyfrifon banc","description":"Mae newid cyfrifon
+        banc yn syml a didrafferth. Dilynwch ein canllaw cam wrth gam a\u2019n rhestr
+        wirio i drosglwyddo\u2019n rhwydd"},{"id":"dewis-cyfrif-banc-ar-gyfer-eich-taliad-credyd-cynhwysol","type":"guide","title":"Dewis
+        cyfrif banc ar gyfer eich taliad Credyd Cynhwysol","description":"Os oes arnoch
+        angen cyfrif banc neu gymdeithas adeiladu i\u2019ch Credyd Cynhwysol gael
+        ei dalu iddo, dyma sut i benderfynu ar yr un iawn i chi"},{"id":"debydau-uniongyrchol-ac-archebion-sefydlog","type":"guide","title":"Debydau
+        Uniongyrchol ac archebion sefydlog","description":"Angen talu biliau neu drosglwyddo
+        arian yn rheolaidd? Debydau Uniongyrchol ac archebion sefydlog yw\u2019r ffordd
+        i wneud hynny. Dyma sut"},{"id":"cyfrifon-banc-sylfaenol","type":"guide","title":"Cyfrifon
+        banc sylfaenol","description":"Cyfrifon banc sylfaenol yw\u2019r math symlaf
+        o gyfrif banc os nad ydych chi eisiau gorddrafft, neu os nad ydych yn cael
+        gorddrafft"},{"id":"dewis-ac-agor-cyfrif-banc-sylfaenol","type":"action_plan","title":"Cynllun
+        gweithredu - Dewis ac agor cyfrif banc sylfaenol","description":"Dilynwch
+        ein canllaw ar beth i edrych amdano wrth agor cyfrif banc gan gynnwys gwiriadau
+        credyd a\u2019r gwasanaeth banc a gynigir"},{"id":"e-daliadau-pam-pryd-a-sut-mae-eu-defnyddio","type":"guide","title":"E-daliadau
+        \u2013 pam, pryd a sut mae eu defnyddio","description":"Manteision ac anfanteision
+        defnyddio cwmn\u00efau e-daliad fel PayPal neu Google Checkout wrth siopa
+        ar-lein"},{"id":"cael-trefn-ar-broblem-ariannol-neu-wneud-cwyn","type":"guide","title":"Cael
+        trefn ar broblem ariannol neu wneud cwyn","description":"Cael trefn ar broblemau,
+        gwneud cwynion a chael digollediad gan fanciau neu gwmn\u00efau ariannol eraill"},{"id":"cardiau-debyd","type":"guide","title":"Cardiau
+        debyd","description":"Gwell gennych dalu gyda phlastig a ddim am fenthyg?
+        Efallai mai cerdyn debyd yw''r union beth mae ei angen arnoch. Dyma''r manteision
+        a''r anfanteision"},{"id":"gorddrafftiau-sut-iw-defnyddio-nhw-heb-wario-gormod","type":"guide","title":"Gorddrafftiau
+        \u2013 sut i\u2019w defnyddio nhw heb wario gormod","description":"Os oes
+        arnoch angen gorddrafft, dyma sut mae osgoi wynebu ffioedd enfawr"},{"id":"mym019-cipolwg-ar-ffioedd-banc","type":"guide","title":"Cipolwg
+        ar ffioedd banc","description":"Pa ffioedd a godir gan fanciau? Deall beth
+        fyddwch chi\u2019n ei dalu a chael gwybod sut mae lleihau ffioedd"},{"id":"egluro-gorddrafftiau","type":"guide","title":"Egluro
+        gorddrafftiau","description":"Sut mae gorddrafftiau\u2019n gweithio a sut
+        mae osgoi ffioedd gorddrafft uchel?"},{"id":"taliadau-i-mewn-ich-cyfrif-banc","type":"guide","title":"Taliadau
+        i mewn i\u2019ch cyfrif banc","description":"Angen talu siec i mewn neu sefydlu
+        eich taliadau cyflog? Dyma sut mae cael arian i mewn i\u2019ch cyfrif"},{"id":"cyfrifon-ar-y-cyd","type":"guide","title":"Cyfrifon
+        ar y cyd","description":"Penderfynu a ydi cyfrif ar y cyd yn addas i chi \u2013
+        a sut mae ei reoli\u2019n ddiogel"},{"id":"cyfrifon-cyfredol-undebau-credyd","type":"guide","title":"Cyfrifon
+        cyfredol undebau credyd","description":"Methu cael cyfrif cyfredol gyda banc
+        neu gymdeithas adeiladu? Cymrwch olwg yma i weld a allai cyfrif undeb credyd
+        fod yn ateb addas i chi"},{"id":"rheoli-eich-arian-trwy-ddefnyddioar-ymagwedd-pot-jam","type":"guide","title":"Rheoli
+        eich arian trwy ddefnyddio\u2019r ymagwedd pot jam","description":"Ceisiwch
+        y ffordd seml hon o drefnu\u2019ch arian er mwyn sicrhau bod gennych ddigon
+        ar gyfer eich holl filiau a\u2019ch gwariant cartref yn ystod y mis"},{"id":"sut-mae-cau-eich-cyfrif-banc","type":"action_plan","title":"Cynllun
+        gweithredu - Sut mae cau eich cyfrif banc","description":"Gweld ein cynllun
+        gweithredu ar gyfer cau\u2019ch cyfrif banc i sicrhau nad ydych wedi colli
+        rhywbeth"},{"id":"sut-mae-agor-newid-neu-gau-eich-cyfrif-banc","type":"guide","title":"Sut
+        mae agor, newid neu gau eich cyfrif banc","description":"Dylai agor, newid
+        neu gau eich cyfrif banc fod yn hawdd a didrafferth; cewch wybod sut gyda\u2019r
+        canllaw syml yma"},{"id":"ffyrdd-i-gynyddu-eich-terfyn-credyd","type":"guide","title":"Ffyrdd
+        i gynyddu eich terfyn credyd","description":"Os oes angen arnoch chi fenthyg
+        mwy trwy eich credyn credyd neu orddrafft, sut allwch chi gynyddu eich terfyn
+        credyd? Ac a ddylech chi?"},{"id":"gwneud-trosglwyddiadau-dros-y-ffon-neu-drwy-fancio-ar-lein","type":"guide","title":"Gwneud
+        trosglwyddiadau dros y ff\u00f4n neu drwy fancio ar-lein","description":"Sut
+        mae trosglwyddo arian a thalu biliau o gyfforddusrwydd eich soffa drwy fancio
+        dros y ff\u00f4n neu ar-lein"},{"id":"dod-o-hyd-i-gyfrifon-banc-cynilion-neu-fondiau-premiwm-coll","type":"guide","title":"Dod
+        o hyd i gyfrifon banc, cynilion neu Fondiau Premiwm coll","description":"Ydych
+        chi wedi colli cyfrif banc? Gallwch ddod o hyd iddo eto gyda gwasanaeth ar-lein
+        syml am ddim"},{"id":"cyfrifon-pecyn","type":"guide","title":"Cyfrifon pecyn","description":"Cyfle
+        i ddysgu beth mae cyfrif pecyn yn ei gynnig sy\u2019n well na chyfrif cyfredol
+        safonol, a gweld a yw\u2019n addas i chi"},{"id":"defnyddio-sieciau-a-drafftiau-banc","type":"guide","title":"Defnyddio
+        sieciau a drafftiau banc","description":"Sut mae ysgrifennu sieciau\u2019n
+        gywir a chael drafftiau banc a\u2019u defnyddio\u2019n ddiogel i wneud taliadau
+        unigol"},{"id":"siopa-diogel-ar-lein","type":"guide","title":"Siopa diogel
+        ar-lein","description":"Sut mae osgoi sgamiau a chwmn\u00efau amheus ar y
+        rhyngrwyd, a chadw\u2019n ddiogel wrth siopa ar-lein"},{"id":"canllaw-dechreuwr-i-dwyll","type":"guide","title":"Canllaw
+        dechreuwr i dwyll","description":"Gwybod am, ac amddiffyn eich hun rhag twyll.
+        Efallai eich bod wedi clywed am we-rwydo \u2013 ond beth am dwyll ystafell
+        boeler?"},{"id":"lladrad-a-thwyll-hunaniaeth-ar-gyfer-beth-ydych-chin-atebol","type":"guide","title":"Lladrad
+        a thwyll hunaniaeth \u2013 ar gyfer beth ydych chi\u2019n atebol","description":"Dysgwch
+        a ydych yn atebol os ydych yn dioddef o ladrad neu dwyll hunaniaeth"},{"id":"diogelu-eich-hun-rhag-twyll-a-lladrad","type":"guide","title":"Diogelu
+        eich hun rhag twyll a lladrad","description":"Dysgwch am y camau allweddol
+        i\u2019ch diogelu''ch hun rhag twyll hunaniaeth a sgamiau"},{"id":"digollediad-os-bydd-eich-banc-neu-gymdeithas-adeiladu-yn-mynd-ir-wal","type":"guide","title":"Digollediad
+        os bydd eich banc neu gymdeithas adeiladu yn mynd i\u2019r wal","description":"Faint
+        o arian fyddech chi\u2019n ei gael yn \u00f4l pe byddai\u2019ch banc, cymdeithas
+        adeiladu neu undeb credyd yn methu?"},{"id":"beth-iw-wneud-pan-fydd-pethaun-mynd-o-chwith-taliadau","type":"guide","title":"Beth
+        i\u2019w wneud pan fydd pethau\u2019n mynd o chwith \u2013 taliadau","description":"Camau
+        syml i osgoi problemau gyda thaliadau a throsglwyddiadau, a chyngor ar roi
+        trefn ar broblemau sy\u2019n codi"},{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"}]}'
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 07:03:19 GMT
+recorded_with: VCR 2.9.2

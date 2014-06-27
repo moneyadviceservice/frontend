@@ -23,4 +23,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Configure active record session store.
+  config.session_store :active_record_store
+
 end

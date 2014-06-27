@@ -9,6 +9,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.2'
 
+gem 'activerecord-session_store'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -61,7 +62,6 @@ group :test do
 end
 
 group :production do
-  gem 'activerecord-session_store'
   gem 'mysql2'
   gem 'syslog-logger'
   gem 'unicorn-rails'

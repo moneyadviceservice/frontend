@@ -21,7 +21,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     context 'and it exists in a single category' do
       before do
-        expect(article).to receive(:categories).and_return([category]).twice
+        expect(article).to receive(:categories).and_return([category]).at_least(:once)
       end
 
       specify { expect(subject.map(&:title)).to eq([parent_category_title, category_title]) }
@@ -29,10 +29,18 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     context 'and it exists in more than one category' do
       before do
-        expect(article).to receive(:categories).and_return([double , double])
+        expect(article).to receive(:categories).and_return([double , double]).at_least(:once)
       end
 
       it { is_expected.to be_empty }
+    end
+
+    context 'and it does not exist within a category' do
+      before do
+        expect(article).to receive(:categories).and_return([])
+      end
+
+      specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
     end
   end
 

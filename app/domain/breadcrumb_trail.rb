@@ -6,7 +6,9 @@ class BreadcrumbTrail
       when Core::StaticPage
         [HomeCategory.new]
       else
-        if item.categories.one?
+        if item.categories.empty?
+          [HomeCategory.new]
+        elsif item.categories.one?
           RootToNodePath.build(item.categories.first, category_tree)
         else
           []

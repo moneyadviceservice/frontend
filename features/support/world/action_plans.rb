@@ -22,6 +22,10 @@ module World
     def action_plan_in_multiple_categories
       fixture 'action_plans/how-to-manage-your-money-better.yml'
     end
+
+    def orphan_action_plan
+      fixture 'action_plans/claim-child-maintenance-from-your-ex.yml'
+    end
   end
 end
 

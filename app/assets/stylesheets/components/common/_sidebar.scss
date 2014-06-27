@@ -1,16 +1,25 @@
 .sidebar {
-  @extend %clearfix;
+//  @extend %clearfix;
 
   p, li {
     @include body(16, 24);
   }
 
-  .smallprint {
-    @include body(14, 24)
+  // TODO - temporary implementation until panel rules are understood and refactored
+
+  .panel {
+    margin: 0;
+
+    h2 {
+      margin-top: 0;
+    }
   }
 }
 
-.sidebar--green {
-  padding: 0 px(24);
-  background-color: $color-green-three;
+.sidebar__smallprint {
+  margin-top: px(24);
+
+  .smallprint {
+    @extend .smallprint;
+  }
 }

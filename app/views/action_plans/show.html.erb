@@ -1,6 +1,6 @@
 <% set_meta_tags(description: action_plan.description,
-                 canonical:   action_plan.canonical_url,
-                 alternate:   action_plan.alternate_options) %>
+                 canonical: action_plan.canonical_url,
+                 alternate: action_plan.alternate_options) %>
 
 <% content_for(:context_bar) do %>
   <% if @breadcrumbs.present? %>
@@ -11,11 +11,13 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main class="l-main__primary" role="main">
-    <h1><%= title action_plan.title %></h1>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= title action_plan.title %></h1>
 
-    <%= action_plan.content %>
-  </main>
+      <%= action_plan.content %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

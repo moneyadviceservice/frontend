@@ -6,6 +6,7 @@
   @include column(12);
   text-align: center;
   margin-top: $baseline-unit*10;
+  margin-bottom: px(120);
 
   & + .directory {
     background-color: transparent;

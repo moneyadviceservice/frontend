@@ -1,4 +1,4 @@
-<% set_meta_tags(title:  t('.document_title', query: params[:query]),
+<% set_meta_tags(title: t('.document_title', query: params[:query]),
                  robots: 'noindex') %>
 
 <script>
@@ -9,14 +9,16 @@
 </script>
 
 <div class="l-main">
-  <main class="l-main__primary" role="main">
-    <h1><%= t('.page_title', query: params[:query]) %></h1>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= t('.page_title', query: params[:query]) %></h1>
 
-    <div class="l-search-results">
-      <%= render 'shared/search', search_in_page_header: false %>
-      <p><%= t('.body') %></p>
-    </div>
-  </main>
+      <div class="l-search-results">
+        <%= render 'shared/search', search_in_page_header: false %>
+        <p><%= t('.body') %></p>
+      </div>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

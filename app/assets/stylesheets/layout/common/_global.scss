@@ -1,9 +1,3 @@
-.l-grid-container {
-  @include row(9);
-}
-
-////////////////////////////////////
-
 .l-main {
   @include column(12);
   min-height: $baseline-unit*100;
@@ -16,7 +10,23 @@
   }
 }
 
-.l-main__primary {
+.l-main__row {
+  @include row(9);
+}
+
+// Single-celled (single column) layout
+
+.l-main__cell-single {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(9);
+  }
+}
+
+// Double-celled (two column) layout
+
+.l-main__cell-double-primary {
   @include column(12);
 
   @include respond-to($mq-l) {
@@ -24,7 +34,7 @@
   }
 }
 
-.l-main__secondary {
+.l-main__cell-double-secondary {
   @include column(12);
 
   @include respond-to($mq-l) {

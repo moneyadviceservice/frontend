@@ -1,14 +1,14 @@
 <ul class="mobile-nav">
   <% if display_menu_button_in_header? %>
     <li class="mobile-nav__item">
-      <a class="mobile-nav__link mobile-nav__link--menu" href="#primary-nav">Menu</a>
+      <a class="mobile-nav__link mobile-nav__link--menu" href="#primary-nav"><%= t('mobile_nav.menu') %></a>
     </li>
   <% end %>
   <% if display_search_box_in_header? %>
     <li class="mobile-nav__item mobile-nav__item--search">
       <a class="mobile-nav__link mobile-nav__link--search" href="#search-bar">
         <span class="icon icon--search-white"></span>
-        <span class="visually-hidden">Search</span>
+        <span class="visually-hidden"><%= t('mobile_nav.search') %></span>
       </a>
     </li>
   <% end %>

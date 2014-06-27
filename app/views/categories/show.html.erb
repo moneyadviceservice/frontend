@@ -1,5 +1,5 @@
-<% set_meta_tags(canonical:   category.canonical_url,
-                 alternate:   category.alternate_options,
+<% set_meta_tags(canonical: category.canonical_url,
+                 alternate: category.alternate_options,
                  description: category.description) %>
 
 <% content_for(:context_bar) do %>
@@ -7,17 +7,19 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main class="l-main__primary" role="main">
-    <h1><%= title category.title %></h1>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= title category.title %></h1>
 
-    <p class="intro"><%= category.description %></p>
+      <p class="intro"><%= category.description %></p>
 
-    <%= category.render_contents %>
-  </main>
+      <%= category.render_contents %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">
   <%= render 'shared/nav',
-             categories:        category_navigation,
+             categories: category_navigation,
              active_categories: active_categories %>
 </div>

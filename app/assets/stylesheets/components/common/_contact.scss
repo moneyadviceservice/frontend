@@ -24,11 +24,8 @@
 
 .contact__introduction {
   @include body(16, 24);
-  margin-bottom: $baseline-unit;
-
-  @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*3;
-  };
+  margin-bottom: 0;
+  margin-top: $baseline-unit;
 }
 
 .contact__details-heading {

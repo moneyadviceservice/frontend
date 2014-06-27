@@ -2,31 +2,28 @@
 //
 // Styleguide newsletter
 
-.newsletter {}
-
 .newsletter__heading {
   @extend %font-heading-heavy;
   @include body(21, 22);
   margin-top: 0;
 }
 
+.newsletter .newsletter__input {
+  margin: 0 6px $baseline-unit 0;
+}
+
 .newsletter__form {
   display: table;
-  width: 100%;
+  max-width: 260px;
 }
 
 .newsletter__form-cell {
   display: table-cell;
   vertical-align: top;
-  width: 100%;
 
   &:first-child {
-    margin-right: 8px;
+    padding-right: 8px;
   }
-}
-
-.newsletter__form-cell--input {
-  padding-right: 8px;
 }
 
 .newsletter__error {

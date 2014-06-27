@@ -1,14 +1,10 @@
 <% flash.each do |name, msg| %>
   <div class="global-alert">
-    <div class="l-constrained l-padded">
-      <div class="l-1col">
         <div class="global-alert__content-container">
           <strong class="global-alert__heading">#{name}</strong>
           <p class="global-alert__message">
             <%= content_tag :p, msg %>
           </p>
-        </div>
-      </div>
     </div>
   </div>
 <% end %>

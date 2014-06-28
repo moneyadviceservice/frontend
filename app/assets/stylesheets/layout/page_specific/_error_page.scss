@@ -1,11 +1,11 @@
 .l-error-page {
-  min-height: 600px;
+  min-height: px(600);
 }
 
 .l-error-page-message {
   @include column(12);
   text-align: center;
-  margin-top: $baseline-unit*10;
+  margin-top: px(60);
 
   & + .directory {
     background-color: transparent;
@@ -18,7 +18,7 @@
 
 .error-page__directory-text {
   text-align: left;
-  margin-top: $baseline-unit*20;
-  margin-bottom: $baseline-unit*6;
+  margin-top: px(120);
+  margin-bottom: px(36);
 
 }

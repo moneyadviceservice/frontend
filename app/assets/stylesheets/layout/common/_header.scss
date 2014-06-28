@@ -1,7 +1,7 @@
 .l-header {
   position: relative;
   background: $color-green-primary;
-  min-height: $baseline-unit*11;
+  min-height: px(66);
 
   .mobile-nav {
     display: none;
@@ -10,8 +10,8 @@
   .mas-logo {
     @include respond-to($mq-m) {
       float: left;
-      margin-top: $baseline-unit*1.5;
-      margin-bottom: $baseline-unit*1.5;
+      margin-top: px(9);
+      margin-bottom: px(9);
     }
   }
 
@@ -22,7 +22,7 @@
 
   .l-search {
     background-color: $color-grey-pale;
-    padding: $baseline-unit*3 $baseline-unit;
+    padding: px(18) px(6);
     border-bottom: 1px solid $color-white;
 
 
@@ -33,12 +33,12 @@
 
       @include column(4);
       float: right;
-      margin-top: $baseline-unit*3;
-      margin-bottom: $baseline-unit*3;
+      margin-top: px(18);
+      margin-bottom: px(18);
 
       .search__input {
         border: 0;
-        border-radius: $baseline-unit/2;
+        border-radius: px(3);
       }
     }
   }

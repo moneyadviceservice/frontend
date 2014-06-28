@@ -32,7 +32,7 @@ a[href^="#"]:after {
 }
 
 a[href$=".doc"] {
-  margin-top: $baseline-unit*3;
+  margin-top: px(18);
 
   &:before {
     content: '';
@@ -43,7 +43,7 @@ a[href$=".doc"] {
 }
 
 a[href$=".pdf"] {
-  margin-top: $baseline-unit*3;
+  margin-top: px(18);
 
   &:before {
     content: '';

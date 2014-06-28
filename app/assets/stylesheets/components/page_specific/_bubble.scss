@@ -1,9 +1,9 @@
 .bubble {
   position: relative;
   background-color: $color-contact-bubble-background;
-  padding: $baseline-unit*4;
+  padding: px(24);
   border-radius: 20px;
-  margin-bottom: $baseline-unit*5;
+  margin-bottom: px(30);
 
   &:before {
     position: absolute;
@@ -22,7 +22,7 @@
   @include body(24, 24);
   @extend %font-heading-medium;
   margin-top: 0;
-  margin-bottom: $baseline-unit;
+  margin-bottom: px(6);
   color: white;
 }
 

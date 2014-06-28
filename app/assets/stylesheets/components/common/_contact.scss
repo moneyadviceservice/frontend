@@ -4,8 +4,8 @@
 
 .contact {
   border-top: 3px solid $home-feature-list-border;
-  padding-top: $baseline-unit*6;
-  margin-bottom: $baseline-unit*4;
+  padding-top: px(36);
+  margin-bottom: px(24);
 }
 
 
@@ -13,16 +13,16 @@
   @include body(24, 30);
   @extend %font-heading-heavy;
   margin-top: 0;
-  margin-bottom: $baseline-unit;
+  margin-bottom: px(6);
 
   @include respond-to($mq-m) {
-    margin-top: $baseline-unit*3;
+    margin-top: px(18);
     @include body(29, 30);
   }
 }
 
 .contact__introduction {
-  margin-bottom: $baseline-unit*3;
+  margin-bottom: px(18);
 }
 
 .contact__details-heading {

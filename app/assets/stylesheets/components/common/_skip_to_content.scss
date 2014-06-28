@@ -3,7 +3,7 @@
 // Styleguide Skip to content
 
 .skip-to-content {
-  @extend %type-small;
+  @extend .smallprint;
   white-space: nowrap;
   display: block;
   padding: $baseline-unit;

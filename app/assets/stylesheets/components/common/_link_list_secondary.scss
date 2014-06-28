@@ -8,7 +8,8 @@
 
 .link-list-secondary__item {
   @extend .unstyled-list;
-  @include body(16, 22);
+  @include font-size($artemis);
+  @include line-height(22, $artemis);
 }
 
 .link-list-secondary__text {

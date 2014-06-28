@@ -4,7 +4,9 @@
 }
 
 .mobile-nav__item {
-  @extend %type-navigation;
+  @include font-size($hera);
+  @include line-height(18, $hera);
+  @include font-weight(medium);
   float: left;
   margin: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 0;
   border-radius: $baseline-unit/2;

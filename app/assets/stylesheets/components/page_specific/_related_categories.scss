@@ -3,11 +3,13 @@
 // Styleguide related categories
 
 %related-links-type {
-  @include body(14, 24);
-  font-weight: 300;
+  @include font-size($hera);
+  @include line-height(24, $hera);
+  @include font-weight(light);
 
   @include respond-to($mq-m) {
-    @include body(16, 24);
+    @include font-size($artemis);
+    @include line-height(24, $artemis);
   }
 }
 
@@ -32,7 +34,9 @@
 }
 
 .related-categories__divider {
-  @include body(16, 18);
+  @include font-size($artemis);
+  @include line-height(18, $artemis);
+
   color: $breadcrumbs-divider-color;
   display: none;
 

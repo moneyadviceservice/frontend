@@ -19,18 +19,19 @@
 }
 
 .bubble__heading {
-  @include body(24, 24);
-  @extend %font-heading-medium;
+  @include font-size($poseidon);
+  @include line-height(24, $poseidon);
+  @include font-weight(medium);
   margin-top: 0;
   margin-bottom: $baseline-unit;
   color: white;
 }
 
 .bubble__text[href^=tel] {
-  @extend %font-heading-heavy;
-  @include body(30, 36);
-    letter-spacing: -1px;
-    color: $color-telephone-number-hover;
+  @include font-size($zeus);
+  @include line-height(36, $zeus);
+  @include font-weight(bold);
+  color: $color-telephone-number-hover;
 
   &:hover {
     text-decoration: none;

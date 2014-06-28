@@ -30,19 +30,18 @@
   right: 0;
   width: px(48);
   height: px(48);
-  font-size: 24px;
-  color: $color-search-text;
 
   .icon--search {
     @include search-icon-colour(green);
     position: absolute;
-    top: px(15);
-    left: px(15);
+    top: 30%;
+    left: 30%;
   }
 
   &:focus {
     outline: 0;
     background-color: $color-green-secondary;
+
     .icon--search {
       @include search-icon-colour(white);
     }

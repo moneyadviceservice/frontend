@@ -2,10 +2,37 @@
   @include column(12);
 }
 
+/* @lintingIgnoreBegin */
+
 .l-directory {
   @extend .clearfix;
 
-  .directory__item {
+  .flexbox & .l-constrained {
+    display: flex;
+    flex-flow: column;
+
+    @include respond-to($mq-m) {
+      flex-flow: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .flexbox & .directory__item {
+    margin-right: $gutter;
+    margin-left: $gutter;
+    margin-bottom: px(12);
+
+    @include respond-to($mq-m) {
+      margin-bottom: px(18);
+      flex-basis: 46%;
+    }
+
+    @include respond-to($mq-l) {;
+      flex-basis: 30%;
+    }
+  }
+
+  .no-flexbox & .directory__item {
     @include column(12);
 
     @include respond-to($mq-m) {
@@ -24,6 +51,8 @@
     }
   }
 }
+
+/* @lintingIgnoreEnd */
 
 .l-constrained.l-promos {
   margin-bottom: $baseline-unit*2;

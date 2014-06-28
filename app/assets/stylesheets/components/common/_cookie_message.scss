@@ -6,7 +6,7 @@
 }
 
 .cookie-message__content {
-  @extend %type-small;
+  @extend .smallprint;
   @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
@@ -14,7 +14,7 @@
 
   a {
     display: block;
-    @extend %type-small;
+    @extend .smallprint;
     @include respond-to($mq-l) {
       display: inline;
     }

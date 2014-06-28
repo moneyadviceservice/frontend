@@ -3,12 +3,14 @@
 // Styleguide Breadcrumbs
 
 .breadcrumbs__item {
-  @include body(14, 18);
+  @include font-size($hera);
+  @include line-height(18, $hera);
   @include inline-block;
   margin-bottom: 0;
 
   @include respond-to($mq-l) {
-    @include body(16, 24);
+    @include font-size($artemis);
+    @include line-height(18, $artemis);
   }
 }
 
@@ -19,7 +21,7 @@
 }
 
 .breadcrumbs__divider:before {
-  @extend %font-body;
+  @include font-weight(light);
   font-size: 32px;
   line-height: 0;
   color: $breadcrumbs-divider-color;

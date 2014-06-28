@@ -8,7 +8,9 @@
 
 .link-list-primary__item {
   @extend .unstyled-list;
-  @include body(16, 22);
+  @include font-size($artemis);
+  @include line-height(22, $artemis);
+
   border-bottom: 1px solid $color-link-list-primary-border-color;
   color: $color-link-list-text;
 }

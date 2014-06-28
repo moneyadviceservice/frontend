@@ -25,14 +25,16 @@
   }
 
   li > a {
-    @extend %type-footer;
-    font-weight: 300;
+    @include font-size($artemis);
+    @include line-height(24, $artemis);
+    @include font-weight(light);
     padding: $baseline-unit 0;
   }
 
   button {
-    @extend %type-footer;
-    font-weight: 300;
+    @include font-size($artemis);
+    @include line-height(24, $artemis);
+    @include font-weight(light);
     text-align: left;
   }
 }
@@ -119,7 +121,8 @@
 }
 
 .footer-site-links__opt_out {
-  @extend %type-footer;
+  @include font-size($artemis);
+  @include line-height(24, $artemis);
   @extend %link-nav-secondary;
   padding: 0;
   margin: 0;

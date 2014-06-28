@@ -3,7 +3,8 @@
 }
 
 .styleguide-nav {
-  @include body(14, 18);
+  @include font-size($hera);
+  @include line-height(18, $hera);
   font-weight: 500;
   z-index: 9;
   background-color: $color-nav-background;
@@ -24,7 +25,8 @@
   }
 
   a {
-    @include body(14, 18);
+    @include font-size($hera);
+    @include line-height(18, $hera);
     @include inline-block;
     text-decoration: none;
     padding: $baseline-unit*3;

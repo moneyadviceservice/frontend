@@ -8,13 +8,15 @@
 }
 
 .promo__heading {
-  @extend %font-heading-medium;
-  @include body(24, 30);
+  @include font-size($poseidon);
+  @include line-height(30, $poseidon);
+  @include font-weight(medium);
   margin-top: 0;
 
   .theme-cy & {
     @include respond-to($mq-m) {
-      @include body(18, 24);
+      @include font-size($apollo);
+      @include line-height(24, $apollo);
     }
   }
 }

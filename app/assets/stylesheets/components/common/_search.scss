@@ -40,9 +40,11 @@
     left: $baseline-unit*2.5;
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: 0;
     background-color: $color-green-secondary;
+    
     .icon--search {
       @include search-icon-colour(white);
     }

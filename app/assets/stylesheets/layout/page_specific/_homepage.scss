@@ -10,17 +10,17 @@
 
     @include respond-to($mq-m) {
       @include column(6);
-      min-height: 133px;
+      min-height: px(133);
     }
 
     @include respond-to($mq-l) {
       @include column(4);
-      min-height: 180px;
+      min-height: px(190);
       margin-bottom: px(24);
     }
 
     @include respond-to($mq-xl) {
-      min-height: 128px;
+      min-height: px(132);
     }
   }
 }

@@ -4,7 +4,7 @@
 
 .trust-banner {
   position: relative;
-  height: 240px;
+  height: 260px;
   background: image_url('illustrated_people.png') 50% 100% no-repeat;
   background-size: 100%;
 
@@ -23,8 +23,8 @@
   @include body(30, 30);
   color: $trust-banner-heading;
   margin: 0;
-  padding-top: $baseline-unit*4;
-  padding-bottom: $baseline-unit*6;
+  padding-top: px(18);
+  padding-bottom: px(30);
 
   .theme-cy & {
     @include respond-to($mq-xs, $mq-s) {
@@ -38,12 +38,10 @@
 
   @include respond-to($mq-m) {
     @include body(36, 36);
-    padding-top: $baseline-unit*8;
   }
 
   @include respond-to($mq-l) {
     @include body(42, 42);
-    padding-bottom: $baseline-unit*12;
   }
 
   @include respond-to($mq-xl) {

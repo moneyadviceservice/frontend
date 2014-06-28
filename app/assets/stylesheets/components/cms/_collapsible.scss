@@ -5,8 +5,8 @@
 .collapsible {
   @extend %collapsable-trigger;
   @extend %heading-small;
-  margin-bottom: $baseline-unit*4;
-  padding: $baseline-unit  $baseline-unit*7 $baseline-unit $baseline-unit*2;
+  margin-bottom: px(24);
+  padding: px(6) px(42) px(6) px(12);
   position: relative;
   color: $color-action-item-heading;
   background-color: $color-action-item-heading-bg;
@@ -26,8 +26,8 @@
 
   .icon--toggle {
     position: absolute;
-    top: $baseline-unit*2;
-    right: $baseline-unit*2;
+    top: px(12);
+    right: px(12);
   }
 
   &.is-on {
@@ -40,6 +40,6 @@
   border-left: 1px solid $color-action-item-border;
   border-right: 1px solid $color-action-item-border;
   border-bottom: 2px solid $color-action-item-border;
-  padding: $baseline-unit*4 $baseline-unit*2 0 $baseline-unit*2;
-  margin: $baseline-unit/3 0 $baseline-unit*6 0;
+  padding: px(24) px(12) 0 px(12);
+  margin: px(2) 0 px(36) 0;
 }

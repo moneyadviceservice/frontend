@@ -10,32 +10,32 @@
 
     @include respond-to($mq-m) {
       @include column(6);
-      min-height: 133px;
+      min-height: px(133);
     }
 
     @include respond-to($mq-l) {
       @include column(4);
-      min-height: 180px;
-      margin-bottom: $baseline-unit*4;
+      min-height: px(190);
+      margin-bottom: px(24);
     }
 
     @include respond-to($mq-xl) {
-      min-height: 128px;
+      min-height: px(132);
     }
   }
 }
 
 .l-constrained.l-promos {
-  margin-bottom: $baseline-unit*2;
+  margin-bottom: px(12);
 }
 
 .l-homepage-promo {
-  margin-top: $baseline-unit*4;
-  margin-bottom: $baseline-unit*6;
+  margin-top: px(24);
+  margin-bottom: px(36);
 
   @include respond-to($mq-s) {
     @include column(6);
-    margin-top: $baseline-unit*4;
+    margin-top: px(24);
     min-height: 335px;
   }
 
@@ -45,7 +45,7 @@
 
   @include respond-to($mq-l) {
     @include column(3);
-    margin-bottom: $baseline-unit*4;
-    margin-top: $baseline-unit*4;
+    margin-bottom: px(24);
+    margin-top: px(24);
   }
 }

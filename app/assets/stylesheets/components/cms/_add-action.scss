@@ -1,9 +1,9 @@
 .add-action {
   position: relative;
   background-color: $color-article-cta;
-  padding: $baseline-unit $baseline-unit*2;
+  padding: px(6) px(12);
   display: block;
-  margin: $baseline-unit*5 0;
+  margin: px(30) 0;
   clear: both;
 
   &:before {

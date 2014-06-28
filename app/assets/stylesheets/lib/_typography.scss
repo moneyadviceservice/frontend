@@ -57,7 +57,7 @@
   letter-spacing: -1px;
 
   @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*2;
+    margin-bottom: px(12);
     @include body(24, 30);
   }
 

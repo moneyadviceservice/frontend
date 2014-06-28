@@ -1,7 +1,7 @@
 .category-detail {
   border-bottom: 3px solid $color-category-border;
-  margin-bottom: $baseline-unit*6;
-  padding-bottom: $baseline-unit*4;
+  margin-bottom: px(36);
+  padding-bottom: px(24);
 
   &:last-child {
     @include respond-to(0, $mq-m) {
@@ -13,14 +13,14 @@
 .category-detail__list {
   list-style: none;
   padding: 0;
-  margin-top: $baseline-unit*4;
+  margin-top: px(24);
 }
 
 .category-detail__list-item {
-  margin-bottom: $baseline-unit*3;
+  margin-bottom: px(18);
 
   @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*2;
+    margin-bottom: px(12);
   }
 }
 

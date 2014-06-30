@@ -38,8 +38,11 @@ require(['common'], function(MAS) {
 
       $('#primary-nav')
             .clone()
+            .attr('id', 'js-primary-nav')
             .insertAfter('.mobile-nav')
             .wrap('<div class="l-menu-nav"></div>');
+
+      $('.mobile-nav__link--menu').attr('href', '#js-primary-nav');
 
       // Mobile Nav
       new Collapsable({
@@ -48,7 +51,7 @@ require(['common'], function(MAS) {
         accordion: true,
         triggerEl: '.mobile-nav a',
         targetType: 'href',
-        parentWrapper: '#primary-nav'
+        parentWrapper: '#js-primary-nav'
       });
 
       // Article Collapsables

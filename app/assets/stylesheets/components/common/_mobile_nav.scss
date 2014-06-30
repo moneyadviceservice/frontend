@@ -1,20 +1,28 @@
+// Buttons to open menu and search on mobile
+//
+// Styleguide Mobile navigation
+
 .mobile-nav {
   @extend .unstyled-list;
-  display: none;
 }
 
 .mobile-nav__item {
   @extend %type-navigation;
   float: left;
   margin: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 0;
-  border-radius: $baseline-unit/2;
-  background-color: $color-header-buttons;
 }
 
 .mobile-nav__link {
   @extend %link-nav-primary;
   padding: $baseline-unit*2.5;
   display: block;
+  border-radius: $baseline-unit/2;
+  background-color: $color-header-buttons;
+
+  &:hover,
+  &:focus {
+    background-color: $color-green-secondary;
+  }
 }
 
 .mobile-nav__link--search {
@@ -35,5 +43,14 @@
     position: absolute;
     bottom: 2px;
     left: 27px;
+  }
+}
+
+.mobile-nav__link--search.is-on:hover,
+.mobile-nav__link--search.is-on:focus,
+.mobile-nav__link--menu.is-on:hover,
+.mobile-nav__link--menu.is-on:focus {
+  &:before {
+    @include triangle(bottom, 7, 14, $color-green-secondary);
   }
 }

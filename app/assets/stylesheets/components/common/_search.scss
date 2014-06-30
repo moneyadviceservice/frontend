@@ -40,8 +40,8 @@
     left: $baseline-unit*2.5;
   }
 
-  &:focus,
-  &:hover {
+  &:hover,
+  &:focus {
     outline: 0;
     background-color: $color-green-secondary;
     

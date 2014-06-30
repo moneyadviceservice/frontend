@@ -2,13 +2,8 @@
 
 
 <!-- Molecules -->
-
-<%= styleguide_section sections['link-list-primary'] do %>
-  <%= render 'styleguide/shared/link_list_primary' %>
-<% end %>
-
-<%= styleguide_section sections['link-list-secondary'] do %>
-  <%= render 'styleguide/shared/link_list_secondary' %>
+<%= styleguide_section sections['Mobile navigation'] do %>
+  <%= render 'shared/mobile_nav' %>
 <% end %>
 
 <%= styleguide_section sections['Breadcrumbs'] do %>
@@ -21,6 +16,14 @@
 
 <%= styleguide_section sections['related link'] do %>
   <%= render 'shared/related_links', categories: categories %>
+<% end %>
+
+<%= styleguide_section sections['link-list-primary'] do %>
+  <%= render 'styleguide/shared/link_list_primary' %>
+<% end %>
+
+<%= styleguide_section sections['link-list-secondary'] do %>
+  <%= render 'styleguide/shared/link_list_secondary' %>
 <% end %>
 
 <%= styleguide_section sections['Social Links'] do %>

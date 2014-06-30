@@ -11,9 +11,9 @@ module Core
       end
     end
 
-    ClientError      = Class.new(Error)
-    ConnectionFailed = Class.new(Error)
-    ResourceNotFound = Class.new(Error)
+    ClientError         = Class.new(Error)
+    ConnectionFailed    = Class.new(Error)
+    ResourceNotFound    = Class.new(Error)
     UnprocessableEntity = Class.new(Error)
 
     def get(*args)

@@ -21,6 +21,7 @@
 
 .trust-banner__heading {
   @include body(30, 30);
+  font-weight: 700;
   color: $trust-banner-heading;
   margin: 0;
   padding-top: $baseline-unit*4;

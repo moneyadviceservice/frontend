@@ -12,7 +12,7 @@ class NewsArticleDecorator < ContentItemDecorator
   private
 
   def formatted_date
-    h.l(Date.parse(object.date), format: :short)
+    h.l(object.date, format: :short)
   end
 
   def processed_body

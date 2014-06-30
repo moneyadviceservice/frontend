@@ -14,7 +14,7 @@ module Newsletter
           if subscription.success?
             flash[:info] = subscription.success_message
           else
-            flash[:error]  = subscription.error_message
+            flash[:error] = subscription.error_message
           end
 
           redirect_to :back

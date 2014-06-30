@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/news/what-your-credit-report-reveals-about-you.json
+    uri: https://www.moneyadviceservice.org.uk/en/news/what-your-credit-report-reveals-about-you.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - aa38b543-da92-48a1-a944-3cafa479b69f
+      - b52b76db-2bb3-4de4-88e2-e263ed5c1952
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,41 +20,52 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Link:
-      - !binary |-
-        PGh0dHA6Ly9sb2NhbGhvc3QvZW4vbmV3cy93aGF0LXlvdXItY3JlZGl0LXJl
-        cG9ydC1yZXZlYWxzLWFib3V0LXlvdT4gcmVsPSJhbHRlcm5hdGUiOyBocmVm
-        bGFuZz0iZW4tR0IiOyB0aXRsZT0iV2hhdCB5b3VyIGNyZWRpdCByZXBvcnQg
-        cmV2ZWFscyBhYm91dCB5b3UiLCA8aHR0cDovL2xvY2FsaG9zdC9jeS9uZXdz
-        L2JldGgtbWFlY2gtYWRyb2RkaWFkLWNyZWR5ZC15bi1laS1kZGF0Z2VsdS1h
-        bWRhbm9jaD4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iY3ktR0IiOyB0
-        aXRsZT0iQmV0aCBtYWXigJljaCBhZHJvZGRpYWQgY3JlZHlkIHluIGVpIGRk
-        YXRnZWx1IGFtZGFub2NoIg==
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 14:37:02 GMT
       Content-Type:
       - application/json; charset=utf-8
-      X-Meta-Request-Version:
-      - 0.2.8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vbmV3
+        cy93aGF0LXlvdXItY3JlZGl0LXJlcG9ydC1yZXZlYWxzLWFib3V0LXlvdT4g
+        cmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iZW4tR0IiOyB0aXRsZT0iV2hh
+        dCB5b3VyIGNyZWRpdCByZXBvcnQgcmV2ZWFscyBhYm91dCB5b3UiLCA8aHR0
+        cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9jeS9uZXdzL2Jl
+        dGgtbWFlY2gtYWRyb2RkaWFkLWNyZWR5ZC15bi1laS1kZGF0Z2VsdS1hbWRh
+        bm9jaD4gcmVsPSJhbHRlcm5hdGUiOyBocmVmbGFuZz0iY3ktR0IiOyB0aXRs
+        ZT0iQmV0aCBtYWXigJljaCBhZHJvZGRpYWQgY3JlZHlkIHluIGVpIGRkYXRn
+        ZWx1IGFtZGFub2NoIg==
       X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"9ffd5324a1ba06426a1cdf24798bbfb4"'
+      - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 67d4dc6ad58b2de73f8b37d04b8099aa
+      - aa20e68e8962b3c4bcf4b398dd2cda25
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 26-Jun-2015 13:13:48 GMT
-      - _session_id=67d4dc6ad58b2de73f8b37d04b8099aa; path=/; HttpOnly
-      - _web_tracking=c12951e3739e000b1f8a753633d8b212; path=/; expires=Fri, 26-Jun-2015
-        13:13:48 GMT
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 14:37:02 GMT; secure
+      - _session_id=aa20e68e8962b3c4bcf4b398dd2cda25; path=/; secure; HttpOnly
+      - _web_tracking=7182cf5c73e321186c14703f096afc71; path=/; expires=Tue, 30-Jun-2015
+        14:37:02 GMT; secure
       X-Request-Id:
-      - aa38b543-da92-48a1-a944-3cafa479b69f
+      - b52b76db-2bb3-4de4-88e2-e263ed5c1952
       X-Runtime:
-      - '1.232322'
-      Connection:
-      - close
-      Server:
-      - thin 1.5.1 codename Straight Razor
+      - '0.035830'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"what-your-credit-report-reveals-about-you","title":"What your
@@ -102,15 +113,12 @@ http_interactions:
         to improve your credit report</strong> \u2013 it is possible to <a title=\"How
         to check and improve your credit report\" href=\"https://www.moneyadviceservice.org.uk/en/news/how-to-improve-your-credit-report-and-get-a-better-deal\">boost
         your chances of being accepted for credit</a> by taking steps such as by avoiding
-        multiple credit applications and getting on the electoral role. </p><p><strong>Free
-        credit reports</strong> - Money Advice Service website users can get a <a
-        title=\"Free credit report\" href=\"https://www.moneyadviceservice.org.uk/en/static/get-your-free-credit-report?utm_campaign=3735691&amp;utm_content=10198295742&amp;utm_medium=email&amp;utm_source=Emailvision\">free
-        credit report</a> from two of the main agencies, for a limited period only.
-        </p><p><strong>Myth buster</strong> - <a title=\"Credit report quiz\" href=\"https://www.moneyadviceservice.org.uk/en/tools/quiz-the-truth-about-credit-reports\">take
+        multiple credit applications and getting on the electoral role. </p><p><strong>Myth
+        buster</strong> - <a title=\"Credit report quiz\" href=\"https://www.moneyadviceservice.org.uk/en/tools/quiz-the-truth-about-credit-reports\">take
         our quiz </a>to see if you are credit savvy. </p><p><strong>Don\u2019t miss
         out!</strong> - for more money advice and news straight to your inbox, <a
         title=\"Newsletter\" href=\"https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions/new\">sign
-        up to our emails here</a>. </p><p><em>Photo: PA</em></p>","date":"2014-03-17T09:42:11+00:00"}'
+        up to our emails here</a>. </p><p><em>Photo: PA</em></p>","date":"2014-04-22T11:05:36+00:00"}'
     http_version: 
-  recorded_at: Thu, 26 Jun 2014 13:13:50 GMT
+  recorded_at: Mon, 30 Jun 2014 14:37:03 GMT
 recorded_with: VCR 2.9.2

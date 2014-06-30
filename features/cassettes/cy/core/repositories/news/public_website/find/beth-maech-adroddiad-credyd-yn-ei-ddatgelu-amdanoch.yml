@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.json
+    uri: https://www.moneyadviceservice.org.uk/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 072039e9-6b81-49b0-a13b-2890fd2ffe76
+      - c2b9c4ba-f126-45ec-9dfe-aa5c6c7ca1df
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,41 +20,52 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Link:
-      - !binary |-
-        PGh0dHA6Ly9sb2NhbGhvc3QvY3kvbmV3cy9iZXRoLW1hZWNoLWFkcm9kZGlh
-        ZC1jcmVkeWQteW4tZWktZGRhdGdlbHUtYW1kYW5vY2g+IHJlbD0iYWx0ZXJu
-        YXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkJldGggbWFl4oCZY2gg
-        YWRyb2RkaWFkIGNyZWR5ZCB5biBlaSBkZGF0Z2VsdSBhbWRhbm9jaCIsIDxo
-        dHRwOi8vbG9jYWxob3N0L2VuL25ld3Mvd2hhdC15b3VyLWNyZWRpdC1yZXBv
-        cnQtcmV2ZWFscy1hYm91dC15b3U+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxh
-        bmc9ImVuLUdCIjsgdGl0bGU9IldoYXQgeW91ciBjcmVkaXQgcmVwb3J0IHJl
-        dmVhbHMgYWJvdXQgeW91Ig==
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 14:37:03 GMT
       Content-Type:
       - application/json; charset=utf-8
-      X-Meta-Request-Version:
-      - 0.2.8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvbmV3
+        cy9iZXRoLW1hZWNoLWFkcm9kZGlhZC1jcmVkeWQteW4tZWktZGRhdGdlbHUt
+        YW1kYW5vY2g+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsg
+        dGl0bGU9IkJldGggbWFl4oCZY2ggYWRyb2RkaWFkIGNyZWR5ZCB5biBlaSBk
+        ZGF0Z2VsdSBhbWRhbm9jaCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNl
+        cnZpY2Uub3JnLnVrL2VuL25ld3Mvd2hhdC15b3VyLWNyZWRpdC1yZXBvcnQt
+        cmV2ZWFscy1hYm91dC15b3U+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9
+        ImVuLUdCIjsgdGl0bGU9IldoYXQgeW91ciBjcmVkaXQgcmVwb3J0IHJldmVh
+        bHMgYWJvdXQgeW91Ig==
       X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"17acf3e893402eb706da8a773e992b79"'
+      - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - a3d15cc2d277948cc640def17f04f934
+      - 07ec604f6000c6f60a9e8f308e0e35ce
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 26-Jun-2015 14:31:09 GMT
-      - _session_id=a3d15cc2d277948cc640def17f04f934; path=/; HttpOnly
-      - _web_tracking=6156c2890cb1d045f815ea1875248e89; path=/; expires=Fri, 26-Jun-2015
-        14:31:09 GMT
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 14:37:03 GMT; secure
+      - _session_id=07ec604f6000c6f60a9e8f308e0e35ce; path=/; secure; HttpOnly
+      - _web_tracking=50cd43a4aa1e3ddbe7b45dad1dec1c28; path=/; expires=Tue, 30-Jun-2015
+        14:37:03 GMT; secure
       X-Request-Id:
-      - 072039e9-6b81-49b0-a13b-2890fd2ffe76
+      - c2b9c4ba-f126-45ec-9dfe-aa5c6c7ca1df
       X-Runtime:
-      - '0.791953'
-      Connection:
-      - close
-      Server:
-      - thin 1.5.1 codename Straight Razor
+      - '0.239174'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '{"id":"beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch","title":"Beth
@@ -113,5 +124,5 @@ http_interactions:
         i\u2019ch blwch e-bost, <a title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
         yma i gael ein e-byst</a>. </p><p><em>Llun: PA</em></p>","date":"2014-03-07T11:03:41+00:00"}'
     http_version: 
-  recorded_at: Thu, 26 Jun 2014 14:31:10 GMT
+  recorded_at: Mon, 30 Jun 2014 14:37:04 GMT
 recorded_with: VCR 2.9.2

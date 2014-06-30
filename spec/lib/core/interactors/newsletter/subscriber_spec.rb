@@ -9,7 +9,7 @@ module Core::Newsletter
 
     describe '#call' do
       before do
-        allow(Core::Registries::Repository).to receive(:[]).with(:newsletter) do
+        allow(Core::Registries::Repository).to receive(:[]).with(:newsletter_subscriptions) do
           double(register: email)
         end
       end

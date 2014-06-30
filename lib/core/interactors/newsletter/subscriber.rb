@@ -10,7 +10,7 @@ module Core::Newsletter
     end
 
     def call
-      success, message = Core::Registries::Repository[:newsletter].register(email)
+      success, message = Core::Registries::Repository[:newsletter_subscriptions].register(email)
       Subscription.new(success, message)
     end
   end

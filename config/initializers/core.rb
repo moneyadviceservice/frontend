@@ -33,5 +33,5 @@ Core::Registry::Repository[:static_page] =
 Core::Registry::Repository[:news] =
   Core::Repository::News::PublicWebsite.new
 
-Core::Registry::Repository[:newsletter] =
-  Core::Repositories::Newsletter::Subscriptions::PublicWebsite.new
+Core::Registry::Repository[:newsletter_subscriptions] =
+  Core::Repository::Newsletter::Subscriptions::PublicWebsite.new

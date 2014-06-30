@@ -2,7 +2,7 @@ require 'html_processor'
 
 class NewsArticleDecorator < ContentItemDecorator
   def date
-    @date || formatted_date
+    @date ||= formatted_date
   end
 
   def content
@@ -12,8 +12,7 @@ class NewsArticleDecorator < ContentItemDecorator
   private
 
   def formatted_date
-    date = DateTime.parse(object.date)
-    date.strftime("%d %b %Y")
+    h.l(Date.parse(object.date), format: :short)
   end
 
   def processed_body

@@ -14,6 +14,10 @@ Given(/^I read a static page$/) do
   static_page.load(locale: 'en', id: 'privacy')
 end
 
+Given(/^I read a non-navigational category$/) do
+  browse_to_category(non_navigational_category, 'en')
+end
+
 Given(/^I read a category$/) do
   browse_to_category(category, 'en')
 end

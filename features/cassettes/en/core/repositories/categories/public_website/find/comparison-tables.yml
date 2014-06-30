@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/comparison-tables.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 11:04:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - d874c37d7cf6ecbce735e353ff8e96aa
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 11:04:05 GMT; secure
+      - _session_id=d874c37d7cf6ecbce735e353ff8e96aa; path=/; secure; HttpOnly
+      - _web_tracking=0a16e852a9468a975f42fa6db96948a0; path=/; expires=Tue, 30-Jun-2015
+        11:04:05 GMT; secure
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      X-Runtime:
+      - '0.019022'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"comparison-tables","title":"Comparison tables","description":"Our
+        comparison tables are completely unbiased - we are set up by government and
+        don\u2019t receive any incentive or commission if you go on to choose a product","parent_id":"tools--resources","contents":[{"id":"saving","type":"guide","title":"Savings
+        comparison table","description":"Use our comparison tables on saving accounts,
+        cash ISAs and saving bonds"},{"id":"credit","type":"guide","title":"Current
+        accounts comparison table","description":"Use our comparison tables on credit
+        cards, current accounts and unsecured loans"},{"id":"mortgages","type":"guide","title":"Mortgages
+        comparison table","description":"Use our comparison table on mortgages"},{"id":"retirement","type":"guide","title":"Annuities
+        comparison table","description":"Use our comparison table on Pensions, SIPPs
+        and annuities"}]}'
+    http_version: 
+  recorded_at: Mon, 30 Jun 2014 11:04:05 GMT
+recorded_with: VCR 2.9.2

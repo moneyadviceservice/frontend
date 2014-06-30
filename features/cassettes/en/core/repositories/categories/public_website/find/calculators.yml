@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/calculators.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 11:04:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 06aabc8e375b85398dd5e04fee01c150
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 11:04:05 GMT; secure
+      - _session_id=06aabc8e375b85398dd5e04fee01c150; path=/; secure; HttpOnly
+      - _web_tracking=c138a574ef7b124852b05e0f1a7d2d9f; path=/; expires=Tue, 30-Jun-2015
+        11:04:05 GMT; secure
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      X-Runtime:
+      - '0.024169'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"calculators","title":"Calculators","description":"Our easy-to-use
+        calculators can help you budget, save and cut back on costs","parent_id":"tools--resources","contents":[{"id":"savings-calculator","type":"tool","title":"Savings
+        calculator","description":"You can use this calculator to find out how your
+        savings might grow in the future or to help you work out how you can meet
+        your savings goal"},{"id":"baby-costs-calculator","type":"tool","title":"Baby
+        costs calculator","description":"Did you know that a baby could cost as much
+        as \u00a37,200 or as little as \u00a31,600 in their first year, excluding
+        childcare?"},{"id":"budget-planner","type":"tool","title":"Budget planner","description":"You
+        can use this planner to work out how much money you have coming in and what
+        you''re spending it on"},{"id":"health-check","type":"tool","title":"Money
+        Health Check","description":"Use the Money Health Check to give you a picture
+        of your finances and an action plan"},{"id":"loan-calculator","type":"tool","title":"Loan
+        calculator","description":"You can use this calculator to find out how much
+        your monthly loan repayments could be. This can help you work out how much
+        you can afford to borrow"},{"id":"mortgage-calculator","type":"tool","title":"Mortgage
+        calculator","description":"Use this calculator to find out how much your monthly
+        mortgage payments could be. This can help you work out how much you can afford
+        to borrow"},{"id":"workplace-pension-contribution-calculator","type":"tool","title":"Workplace
+        pension contribution calculator","description":"Use this calculator to work
+        out how much you and your employer will each put into your pension pot"},{"id":"debt-test","type":"tool","title":"Debt
+        test","description":"Use our debt test tool to find out more about your circumstances"},{"id":"credit-card-calculator","type":"tool","title":"Credit
+        card calculator","description":"If you want to clear your credit card balance
+        you can use this calculator to help you work out how long it will take you
+        or how much you''ll need to repay each month"},{"id":"workplace-pension-advice-tool","type":"tool","title":"Workplace
+        pension advice tool","description":"Quick questions to help you decide if
+        being in a workplace pension is right for you"},{"id":"cut-back-calculator","type":"tool","title":"Cut-back
+        calculator","description":"Where does all your money go? The Cut-back calculator
+        can help you see where you can make savings on things you buy regularly"},{"id":"cost-of-childcare-calculator","type":"tool","title":"Cost
+        of childcare calculator","description":"This calculator estimates how much
+        you might spend on childcare"},{"id":"pension-calculator","type":"tool","title":"Pension
+        calculator","description":"Use this calculator to help you work out how much
+        retirement income you might receive from saving in a personal, stakeholder
+        or group pension"},{"id":"money-stretcher","type":"tool","title":"Money stretcher
+        calculator","description":"Are you worried you''ll run out of money before
+        you next get paid?"},{"id":"divorce-and-separation-calculator","type":"tool","title":"Divorce
+        and separation calculator","description":"It will help you draw up a budget,
+        work out what you have and what you owe and create scenarios for splitting
+        what you have"},{"id":"smart-mover-calculator","type":"tool","title":"Smart
+        mover calculator","description":"Use the Smart mover calculator to work out
+        how much your move could cost you"},{"id":"estimate-what-you-need-to-save-for-retirement","type":"tool","title":"Estimate
+        what you need to save for retirement","description":"Use our pensions ready
+        reckoner to estimate how much you need to start saving each month to generate
+        your target retirement income"},{"id":"christmas-money-planner","type":"tool","title":"Christmas
+        money planner","description":"Use our Christmas money planner to help you
+        work out how much Christmas is going to cost you"},{"id":"stamp-duty-calculator","type":"tool","title":"Stamp
+        Duty calculator","description":"Use our Stamp Duty calculator to get an estimate
+        of how much Stamp Duty you\u2019ll need to pay on your new home."}]}'
+    http_version: 
+  recorded_at: Mon, 30 Jun 2014 11:04:05 GMT
+recorded_with: VCR 2.9.2

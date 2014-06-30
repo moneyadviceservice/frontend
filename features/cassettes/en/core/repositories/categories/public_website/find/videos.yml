@@ -1,0 +1,181 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/videos.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 11:04:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - f83ece2762b8731a218981e6a4e0cf81
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 11:04:06 GMT; secure
+      - _session_id=f83ece2762b8731a218981e6a4e0cf81; path=/; secure; HttpOnly
+      - _web_tracking=7afff603a2582631150b6da17d4d3e16; path=/; expires=Tue, 30-Jun-2015
+        11:04:06 GMT; secure
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      X-Runtime:
+      - '0.034341'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"videos","title":"Videos","description":"See our videos, covering
+        subjects such as insurance, retirement savings and inflation","parent_id":"tools--resources","contents":[{"id":"get-ready-universal-credit","type":"video","title":"Get
+        ready for Universal Credit","description":"In April 2013, the government started
+        bringing in a new type of financial support called Universal Credit."},{"id":"your-top-tips-for-buying-and-running-a-car","type":"video","title":"Your
+        top tips for buying and running a car","description":"Watch this video to
+        find out how people would buy and run a car."},{"id":"timeline-to-buying-a-home","type":"video","title":"Timeline
+        to buying a home","description":"Watch our video to find out the key steps
+        in purchasing a property"},{"id":"should-you-overpay-your-mortgage","type":"video","title":"Should
+        you overpay your mortgage?","description":"If you have spare cash at the end
+        of the month, watch our video to find out if you could benefit from overpaying
+        your mortgage"},{"id":"saving-for-a-holiday-tv-advert","type":"video","title":"\u2018Saving
+        for a holiday\u2019 TV advert","description":"See how you might save for a
+        break away."},{"id":"unexpected-costs-tv-advert","type":"video","title":"\u2018Unexpected
+        bills\u2019 TV advert","description":"See how best to cope with unexpected
+        bills."},{"id":"how-do-you-save-money-on-your-back-to-school-shopping","type":"video","title":"How
+        do you save on back-to-school shopping?","description":"Parents reveal their
+        top tips for saving money on back-to-school shopping, plus the hidden costs
+        to look out for"},{"id":"buy-to-let-mortgage-guide","type":"video","title":"Buy-to-let
+        mortgage guide","description":"Considering a buy-to-let mortgage? Watch our
+        video to get you started"},{"id":"make-a-redundancy-plan-video","type":"video","title":"Make
+        a redundancy plan","description":"Our video gives advice on how to make a
+        redundancy plan and top money tips for how to cope with the impact on your
+        finances"},{"id":"buildings-insurance","type":"video","title":"Buildings insurance","description":"This
+        video will explain about buildings insurance"},{"id":"financial-responsibilities","type":"video","title":"Financial
+        responsibilities if you rent out a property","description":"If you rent out
+        a property - whether you own one property or lots of properties - there are
+        certain things you have to do as a landlord"},{"id":"remortgaging-your-property","type":"video","title":"Remortgaging
+        your property","description":"This video explains what to look out for when
+        weighing up various deals on offer when remortgaging your property"},{"id":"taking-over-the-budget-after-your-partner-dies","type":"video","title":"Taking
+        over the purse strings after your partner dies","description":""},{"id":"workplace-pension-changes-the-basics","type":"video","title":"Workplace
+        pension changes - the basics","description":"This video explains how the automatic
+        enrolment process works and the importance of saving for retirement"},{"id":"compound-interest","type":"video","title":"Compound
+        interest","description":""},{"id":"inflation","type":"video","title":"Inflation","description":""},{"id":"young-drivers-insurance","type":"video","title":"Young
+        drivers\u2019 insurance","description":""},{"id":"child-savings","type":"video","title":"Child
+        savings","description":""},{"id":"losing-your-job","type":"video","title":"Losing
+        your job","description":""},{"id":"everyday-budgeting","type":"video","title":"Everyday
+        budgeting","description":""},{"id":"buying-a-house","type":"video","title":"Buying
+        a house","description":""},{"id":"pet-insurance","type":"video","title":"Pet
+        insurance","description":""},{"id":"what-is-an-offset-mortgage","type":"video","title":"What
+        is an Offset Mortgage?","description":"Watch this video to find out what an
+        Offset Mortgage is and whether it might be right for you"},{"id":"what-is-an-annuity","type":"video","title":"What
+        is an annuity?","description":"Watch this video to discover what an annuity
+        is and why it might be important for your retirement plans."},{"id":"shopping-around-for-an-annuity","type":"video","title":"Shopping
+        around for an annuity","description":"Watch this video to discover why it
+        might be a good idea to shop around for an annuity and what to bear in mind
+        when making your retirement plans."},{"id":"your-tips-for-paying-for-a-holiday","type":"video","title":"Your
+        tips for paying for a holiday","description":"Watch this video to find out
+        how people are planning to pay for their summer holiday."},{"id":"your-tips-on-saving-money","type":"video","title":"Your
+        tips on saving money","description":"People tell us their tips on saving money."},{"id":"your-tips-on-saving-money-are-you-a-regular-saver","type":"video","title":"Your
+        tips on saving money - Are you a regular saver?","description":"People tell
+        us their tips for saving money on a regular basis."},{"id":"your-tips-on-saving-money-how-do-you-save-for-emergencies","type":"video","title":"Your
+        tips on saving money - How do you save for emergencies?","description":"People
+        tell us their tips for saving money for emergencies."},{"id":"your-tips-on-saving-money-cutting-back-to-help-you-save","type":"video","title":"Your
+        tips on saving money - Cutting back to help you save","description":"People
+        tell us their tips for cutting back to save money."},{"id":"your-tips-on-saving-money-your-tips-for-cutting-back","type":"video","title":"Your
+        tips on saving money - Your tips for cutting back","description":"People tell
+        us their tips for cutting back on spending to help with saving."},{"id":"your-tips-for-paying-and-saving-for-a-wedding","type":"video","title":"Your
+        tips for paying and saving for a wedding","description":"People tell us their
+        top tips for paying and saving for the wedding."},{"id":"your-tips-for-borrowing-money-and-paying-it-back","type":"video","title":"Your
+        tips for borrowing money and paying it back","description":"People tell us
+        their tips for borrowing money and paying it back."},{"id":"making-the-most-of-your-money-introduction","type":"video","title":"Making
+        the most of your money - Introduction","description":"Learn how to make the
+        most of your money with our series of tutorial guides"},{"id":"making-the-most-of-your-money-taking-control","type":"video","title":"Making
+        the most of your money - Taking control","description":"Learn how to make
+        the most of your money by taking control of your finances with our tutorial
+        guide"},{"id":"making-the-most-of-your-money-saving-and-investing","type":"video","title":"Making
+        the most of your money - Saving and investing","description":"Learn how to
+        make the most of your money when saving and investing with our tutorial guide"},{"id":"making-the-most-of-your-money-protecting-family-and-possessions","type":"video","title":"Making
+        the most of your money \u2013 Protecting family and possessions","description":"Learn
+        how to make the most of your money by protecting your family and possessions
+        with our tutorial guide"},{"id":"making-the-most-of-your-money-planning-for-your-later-life","type":"video","title":"Making
+        the most of your money \u2013 Planning for your later life","description":"Learn
+        how to make the most of your money by planning for retirement with our tutorial
+        guide"},{"id":"making-the-most-of-your-money-borrowing","type":"video","title":"Making
+        the most of your money - Borrowing","description":"Learn how to make the most
+        of your money when borrowing with our tutorial guide"},{"id":"how-to-choose-a-bank-account","type":"video","title":"How
+        to choose a bank account","description":"Look at the types of bank account
+        that are available and work out which one is best for you."},{"id":"how-to-make-payments-using-your-bank-account","type":"video","title":"How
+        to make payments using your bank account","description":"If you want to pay
+        regular bills out of your bank account, there are two main ways to go about
+        it: Direct Debits and standing orders."},{"id":"how-to-use-your-bank-account-to-make-budgeting-easier","type":"video","title":"How
+        to use your bank account to make budgeting easier","description":"If you stay
+        on top of how much is in your account, you''re more likely to stay in credit."},{"id":"worried-about-paying-your-rent","type":"video","title":"Worried
+        about paying your rent?","description":"If you''re having trouble paying your
+        rent, or you''re worried about paying your rent in the future, there are things
+        you should do straight away."},{"id":"how-to-open-a-bank-account-video","type":"video","title":"How
+        to open a bank account","description":"So you need a bank account. Perhaps
+        this is your first account, or maybe you''ve got one already but need a new
+        one."},{"id":"when-its-gone-its-gone","type":"video","title":"When it''s gone
+        it''s gone","description":"Clinical child psychologist, Dr Elizabeth Kilbey,
+        explains how parents can best approach talking to their children about money."},{"id":"where-do-we-learn-money-habits-from","type":"video","title":"Where
+        do we learn money habits from?","description":"One mother explains how a fun
+        activity can get your children thinking about money."},{"id":"teaching-your-children-what-money-is-used-for","type":"video","title":"Teaching
+        your children what money is used for","description":"Parents explain how they
+        teach their children that they pay for different things in different ways."},{"id":"letting-your-children-have-a-go-with-money","type":"video","title":"Letting
+        your children have a go with money","description":"Dr Elizabeth Kilbey advises
+        how parents can let go once their children have established relationship with
+        money."},{"id":"getting-your-children-familiar-with-money","type":"video","title":"Getting
+        your children familiar with money","description":"Parents explain how they
+        are getting their children familiar with recognising different coins and notes."},{"id":"your-children-and-virtual-money","type":"video","title":"Your
+        children and virtual money","description":"Dr Elizabeth Kilbey explains how
+        best help your children get to grips with money online and via apps."},{"id":"making-money-go-further-with-your-children","type":"video","title":"Making
+        money go further with your children","description":"Dr Elizabeth Kilbey explains
+        how helping your children plan and budget can make their money go further."},{"id":"the-cost-of-christmas","type":"video","title":"The
+        cost of Christmas","description":"How much does Christmas cost? We asked the
+        kids what they think!"},{"id":"should-you-save-or-pay-off-debts","type":"video","title":"Should
+        you save or pay off debts?","description":"Ever wondered whether to save or
+        pay off your debts?"},{"id":"when-and-where-to-get-pensions-help-and-advice-video","type":"video","title":"When
+        and where to get pensions help and advice","description":"Find out why it
+        pays to shop around and how a financial adviser can help if you\u2019re looking
+        to turn your pension pot into a steady retirement income."},{"id":"writing-a-will-your-options-video","type":"video","title":"Making
+        a will - your options","description":"Making a will is one of the most important
+        things you can do."},{"id":"save-money-on-your-gas-and-bills-video","type":"video","title":"Save
+        money on your gas and bills","description":"Are you paying too much for your
+        energy bills? Find out how you can check your supplier is giving you the best
+        deal."},{"id":"why-it-pays-to-save-regularly-video","type":"video","title":"Why
+        it pays to save regularly","description":"Whether you\u2019re starting a family,
+        planning a dream holiday or buying your first flat, it\u2019s vital to get
+        into the habit of saving regularly."}]}'
+    http_version: 
+  recorded_at: Mon, 30 Jun 2014 11:04:07 GMT
+recorded_with: VCR 2.9.2

@@ -2,7 +2,11 @@ class BreadcrumbTrail
   def self.build(item, category_tree)
     categories = case item
       when Core::Category
-        RootToNodePath.build(item, category_tree)[0 ... -1]
+        if item.parent_id.present?
+          RootToNodePath.build(item, category_tree)[0 ... -1]
+        else
+          [HomeCategory.new]
+        end
       when Core::StaticPage
         [HomeCategory.new]
       else

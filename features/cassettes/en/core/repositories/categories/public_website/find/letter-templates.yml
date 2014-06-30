@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/letter-templates.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 11:04:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - a3c69c2d0dccd02c2d17347b44321e7e
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 11:04:05 GMT; secure
+      - _session_id=a3c69c2d0dccd02c2d17347b44321e7e; path=/; secure; HttpOnly
+      - _web_tracking=6a7ee41edba34d31fde599319b32266b; path=/; expires=Tue, 30-Jun-2015
+        11:04:05 GMT; secure
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      X-Runtime:
+      - '0.017054'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"letter-templates","title":"Letter templates","description":"Our
+        easy-to-use letter templates are here to help you if you need to set up, cancel
+        or complain about something","parent_id":"tools--resources","contents":[{"id":"letter-templates","type":"guide","title":"Letter
+        templates","description":"Here are some helpful letter templates for you to
+        use if you need to set up, cancel or complain about something"}]}'
+    http_version: 
+  recorded_at: Mon, 30 Jun 2014 11:04:05 GMT
+recorded_with: VCR 2.9.2

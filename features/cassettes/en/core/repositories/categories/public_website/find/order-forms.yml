@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/order-forms.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 30 Jun 2014 11:04:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - cfba21d64701933b8e6c1001cad6ee08
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Tue, 30-Jun-2015 11:04:06 GMT; secure
+      - _session_id=cfba21d64701933b8e6c1001cad6ee08; path=/; secure; HttpOnly
+      - _web_tracking=fd0e2ac9d38c9bea13510a4bfac4ad76; path=/; expires=Tue, 30-Jun-2015
+        11:04:06 GMT; secure
+      X-Request-Id:
+      - 844078f6-da8e-4e8e-8239-0e1e2770f25a
+      X-Runtime:
+      - '0.020240'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"order-forms","title":"Order forms","description":"Use these
+        forms to order our free printed guides, which give you clear, unbiased information
+        and advice in Plain English","parent_id":"tools--resources","contents":[{"id":"order-forms","type":"guide","title":"Order
+        forms","description":"Order our free printed guides, which give you clear,
+        unbiased information and advice in plain English"}]}'
+    http_version: 
+  recorded_at: Mon, 30 Jun 2014 11:04:06 GMT
+recorded_with: VCR 2.9.2

@@ -3,7 +3,7 @@
   width: 180px;
 
   @include respond-to($mq-m) {
-    width: 244px;
+    width: 256px;
   }
 
   a:focus & {

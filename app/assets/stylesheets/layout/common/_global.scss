@@ -14,7 +14,9 @@
   @include row(9);
 }
 
-// Single-celled (single column) layout
+// Main content container with only one column
+//
+// Styleguide layout-main-single
 
 .l-main__cell-single {
   @include column(12);
@@ -24,7 +26,9 @@
   }
 }
 
-// Double-celled (two column) layout
+// Main content container with two columns
+//
+// Styleguide layout-main-double
 
 .l-main__cell-double-primary {
   @include column(12);

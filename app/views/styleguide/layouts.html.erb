@@ -6,6 +6,23 @@
   </div>
 <% end %>
 
+<%= styleguide_section sections['layout-main-single'] do %>
+  <div class="l-main">
+    <main class="l-main__row" role="main">
+      <div class="l-main__cell-single"></div>
+    </main>
+  </div>
+<% end %>
+
+<%= styleguide_section sections['layout-main-double'] do %>
+  <div class="l-main">
+    <main class="l-main__row" role="main">
+      <div class="l-main__cell-double-primary"></div>
+      <div class="l-main__cell-double-secondary"></div>
+    </main>
+  </div>
+<% end %>
+
 <%= styleguide_section sections['layout-1col'] do %>
   <div class="l-constrained">
     <div class="l-1col">
@@ -13,6 +30,7 @@
     </div>
   </div>
 <% end %>
+
 
 <%= styleguide_section sections['layout-2col'] do %>
   <div class="l-constrained">

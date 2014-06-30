@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   layout 'constrained'
   protect_from_forgery with: :exception
 
+  include Authentication
   include Localisation
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'

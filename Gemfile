@@ -9,6 +9,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.2'
 
+gem 'activerecord-session_store'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -23,6 +24,7 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
+gem 'warden'
 
 group :assets do
   gem 'autoprefixer-rails'
@@ -60,7 +62,6 @@ group :test do
 end
 
 group :production do
-  gem 'activerecord-session_store'
   gem 'mysql2'
   gem 'syslog-logger'
   gem 'unicorn-rails'

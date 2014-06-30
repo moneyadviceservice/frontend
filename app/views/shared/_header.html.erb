@@ -6,6 +6,12 @@
 
     <%= render 'shared/mobile_nav' %>
 
+    <% if logged_in? %>
+      <%= button_to 'Sign Out', "http://localhost:3000/#{I18n.locale}/users/sign_out", method: :delete %>
+    <% else %>
+      <%= link_to 'Sign In', "http://localhost:3000/#{I18n.locale}/users/sign_in" %>
+    <% end %>
+
     <% if display_search_box_in_header? %>
       <div class="l-search" id="search-bar">
         <%= render 'shared/search', search_in_page_header: true %>

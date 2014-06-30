@@ -12,6 +12,10 @@ module World
       fixture 'categories/insurance.yml'
     end
 
+    def non_navigational_category
+      fixture 'categories/tools--resources.yml'
+    end
+
     def browse_to_category(category, locale)
       self.current_category = category
 

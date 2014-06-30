@@ -34,3 +34,7 @@ Feature: Article breadcrumbs
   Scenario: Breadcrumb on an orphaned action plan page
     When I read an orphaned action plan
     Then I can see breadcrumbs for the action plan
+
+ Scenario: Breadcrumb on a non-navigational category page
+    When I read a non-navigational category
+    Then I can see breadcrumbs for the category

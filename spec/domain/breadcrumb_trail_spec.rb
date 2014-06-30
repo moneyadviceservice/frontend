@@ -6,7 +6,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Core::Article.new('the-article') }
   let(:static_page)           { Core::StaticPage.new(double) }
   let(:category_title)        { 'the-category' }
-  let(:category)              { Core::Category.new(category_title, title: category_title) }
+  let(:category)              { Core::Category.new(category_title, title: category_title, parent_id: parent_category.id) }
   let(:parent_category_title) { 'the-category' }
   let(:parent_category)       { Core::Category.new(parent_category_title, title: parent_category_title) }
   let(:path_to_category)      { [parent_category, category] }
@@ -48,6 +48,14 @@ RSpec.describe BreadcrumbTrail, '.build' do
     subject { described_class.build(category, category_tree) }
 
     specify { expect(subject.map(&:title)).to eq([parent_category_title]) }
+
+    context 'and has no parent category' do
+      before do
+        allow(category).to receive(:parent_id).and_return(nil)
+      end
+
+      specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
+    end
   end
 
   context 'when item is a static page' do

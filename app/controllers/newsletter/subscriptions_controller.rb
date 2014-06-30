@@ -9,16 +9,7 @@ module Newsletter
 
       respond_to do |format|
         format.js { render :show }
-
-        format.html do
-          if subscription.success?
-            flash[:info] = subscription.success_message
-          else
-            flash[:error] = subscription.error_message
-          end
-
-          redirect_to :back
-        end
+        format.html { redirect_to :back, flash: { @subscription.status => subscription.message } }
       end
     end
 

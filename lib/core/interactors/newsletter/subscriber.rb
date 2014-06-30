@@ -9,9 +9,15 @@ module Core::Newsletter
       self.email = email
     end
 
-    def call
-      success, message = Core::Registries::Repository[:newsletter_subscriptions].register(email)
-      Subscription.new(success, message)
+    def call(&block)
+      status, message = Core::Registries::Repository[:newsletter_subscriptions].register(email)
+      subscription = Subscription.new(status, message)
+
+      if subscription.valid?
+        subscription
+      else
+        block.call(subscription) if block_given?
+      end
     end
   end
 end

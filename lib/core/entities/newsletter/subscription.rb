@@ -3,18 +3,22 @@ module Core::Newsletter
     include ActiveModel::Validations
     include Draper::Decoratable
 
-    attr_accessor :success, :message
+    STATUS = [:error, :success]
 
-    validates :success, inclusion: { in: [true, false] }
+    private_constant :STATUS
+
+    attr_accessor :status, :message
+
+    validates :status, inclusion: { in: STATUS }
     validates :message, presence: true, allow_blank: true
 
-    def initialize(success, message)
-      self.success = success
+    def initialize(status, message)
+      self.status = status
       self.message = message
     end
 
     def success?
-      success
+      status == :success
     end
   end
 end

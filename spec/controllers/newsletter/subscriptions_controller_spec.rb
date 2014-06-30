@@ -3,7 +3,7 @@ require 'core/entities/newsletter/subscription'
 
 module Newsletter
   RSpec.describe SubscriptionsController, :type => :controller do
-    let(:subscription) { instance_double(Core::Newsletter::Subscription, success: double, message: '') }
+    let(:subscription) { instance_double(Core::Newsletter::Subscription, status: double, message: '') }
     let(:subscriber) { instance_double(Core::Newsletter::Subscriber, email: email) }
 
     before do
@@ -55,10 +55,12 @@ module Newsletter
 
         let(:email) { { email: 'clark.kent@example.com' } }
 
-        it 'adds a flash info message' do
+        it 'adds a flash success message' do
+          allow(subscription).to receive(:status).and_return(:success)
+
           post :create, locale: I18n.locale, subscription: email
 
-          expect(request.flash[:info]).to include I18n.t('newsletter.subscription.success')
+          expect(request.flash[:success]).to include I18n.t('newsletter.subscription.success')
         end
 
         it 'redirects back' do
@@ -74,6 +76,8 @@ module Newsletter
         let(:email) { { email: 'clark.kent@dailyplanet' } }
 
         it 'adds a flash error message' do
+          allow(subscription).to receive(:status).and_return(:error)
+
           post :create, locale: I18n.locale, subscription: email
 
           expect(request.flash[:error]).to include I18n.t('newsletter.subscription.error')

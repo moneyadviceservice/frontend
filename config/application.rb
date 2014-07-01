@@ -57,7 +57,7 @@ module Frontend
                                    jquery-waypoints/waypoints.js
                                    jquery-ujs/src/rails.js
                                    requirejs/require.js
-                                   modernizer-flexbox-cssclasses.js)
+                                   frontend-assets/vendor/assets/modernizr/modernizr.js)
 
     # Configure Google Tag Manager ID
     config.google_tag_manager_id = 'GTM-WVFLH9'

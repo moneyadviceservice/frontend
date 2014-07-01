@@ -45,9 +45,10 @@
   <%# Any JS that is required before DOM is created should be in this block
       includes feature detection, analytics setup, json bootstrap %>
 
-  <%= javascript_include_tag 'modernizer-flexbox-cssclasses.js' %>
-
   <script type="text/javascript">
+
+    <%# // Inline custom Modernizr %>
+    <%= Rails.application.assets['frontend-assets/vendor/assets/modernizr/modernizr.js'] %>
 
     <%# // Required for Google Tag Manager %>
     var dataLayer = [

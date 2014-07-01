@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/planning-for-retirement-fl.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 507a474b-4732-432f-b08c-9545d4d4b0ec
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Meta-Request-Version:
+      - 0.2.8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"3a1d80988c73bf580c9f653320f5ecec"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b30dbccd04fc2c201d15700d91c28f1c
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 27-Jun-2015 08:24:44 GMT
+      - _session_id=b30dbccd04fc2c201d15700d91c28f1c; path=/; HttpOnly
+      - _web_tracking=1ed37d4343efa2c2159e4e2450dd8411; path=/; expires=Sat, 27-Jun-2015
+        08:24:44 GMT
+      X-Request-Id:
+      - 507a474b-4732-432f-b08c-9545d4d4b0ec
+      X-Runtime:
+      - '0.504721'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"id":"planning-for-retirement-fl","title":"Planning for retirement","description":"From
+        how and when to start saving for a pension to getting the most from your pension
+        fund, we have the tools to help you with your retirement planning goals. Our
+        Money Health Check will also show you what you can do to make the most of
+        your money.","parent_id":null,"contents":[{"id":"pam-cynilo-mewn-pensiwn","type":"guide","title":"Pam
+        cynilo mewn pensiwn?","description":"Mae pensiynau\u2019n ffordd effeithlon
+        o gynilo at eich ymddeoliad. Bydd y dyn treth, a chyflogwyr yn aml, yn ychwanegu
+        at eich cyfraniadau"},{"id":"gostyngiad-treth-ar-gyfraniadau-pensiwn","type":"guide","title":"Gostyngiad
+        treth ar gyfraniadau pensiwn","description":"Byddwch yn cael gostyngiad treth
+        ar unrhyw arian yr ydych yn ei roi yn eich pensiwn, hyd at drothwy blynyddol
+        o \u00a350,000 neu eich enillion am y flwyddyn"},{"id":"cyfrifiannell-pensiwn","type":"tool","title":"Cyfrifiannell
+        pensiwn","description":"Defnyddiwch y gyfrifiannell hon i''ch helpu i gyfrifo
+        faint o incwm ymddeol y gallech ei gael trwy gynilo mewn pensiwn personol,
+        rhanddeiliaid neu gr\u0175p"},{"id":"cyfrifiannell-cyfraniadau-pensiwn-gweithle","type":"tool","title":"Cyfrifiannell
+        cyfraniadau pensiwn gweithle","description":"Defnyddiwch y gyfrifiannell hon
+        i weld faint y byddwch chi a\u2019ch cyflogwr yn ei roi yn eich cronfa bensiwn"},{"id":"offeryn-cynghori-pensiwn-gweithle","type":"tool","title":"Offeryn
+        cynghori pensiwn gweithle","description":"Cwestiynau cyflym i\u2019ch helpu
+        i benderfynu a yw bod mewn pensiwn gweithle yn addas i chi"},{"id":"cynllunydd-cyllideb","type":"tool","title":"Cynllunydd
+        cyllideb","description":"Gallwch ddefnyddio\u2019r cynllunydd hwn i weld faint
+        o arian sy\u2019n dod i mewn ac ar beth yr ydych yn ei wario"},{"id":"gwiriad-iechyd","type":"tool","title":"Gwiriad
+        Iechyd Ariannol","description":"Defnyddiwch y Gwiriad Iechyd Ariannol i roi
+        darlun ichi o\u2019ch sefyllfa ariannol a chynllun gweithredu"},{"id":"ymddeoliad","type":"guide","title":"Tablau
+        cymharu blwydd-daliadau a phensiynau","description":"Defnyddiwch ein tablau
+        cymharu ar Bensiynau, SIPPs, a blwydd-daliadau"}]}'
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 08:24:45 GMT
+recorded_with: VCR 2.9.2

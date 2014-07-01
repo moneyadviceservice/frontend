@@ -44,6 +44,7 @@ Rails.application.routes.draw do
     resources :categories, only: 'show',
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
+    resources :news, only: 'show'
 
     resources :static_pages,
               path:        'static',

@@ -4,8 +4,8 @@ Feature: View an article
   So that I can gain understanding about their subject matter
 
   Scenario Outline: View an article
-    When I view the article in <language>
-    Then I should see the article in <language>
+    When I view an article in <language>
+    Then I should see an article in <language>
 
   Examples:
     | language |
@@ -13,9 +13,9 @@ Feature: View an article
     | Welsh    |
 
   Scenario Outline: Translate an article
-    Given I view the article in <original_language>
-    When I translate the article into <translated_language>
-    Then I should see the article in <translated_language>
+    Given I view an article in <original_language>
+    When I translate an article into <translated_language>
+    Then I should see an article in <translated_language>
 
   Examples:
     | original_language | translated_language |

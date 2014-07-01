@@ -2,7 +2,7 @@ When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   browse_to_article article(language)
 end
 
-When(/^I translate the article into (.*)$/) do |language|
+When(/^I translate an article into (.*)$/) do |language|
   locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
@@ -12,7 +12,7 @@ When(/^I translate the article into (.*)$/) do |language|
   home_page.footer_site_links.send("#{language.downcase}_link").click
 end
 
-Then(/^I should see the article in (.*)$/) do |language|
+Then(/^I should see an article in (.*)$/) do |language|
   article = article(language)
 
   body_text           = Nokogiri::HTML(article.body).inner_html
@@ -22,18 +22,6 @@ Then(/^I should see the article in (.*)$/) do |language|
   expect(article_page.description[:content]).to include(article.description)
   expect(article_page.heading).to have_content(article.title)
   expect(article_page.content).to have_content(strip_tags(sample_of_body_text))
-end
-
-Then(/^I should not see the article title in the related content in (.*)$/) do |language|
-  article           = article_for_locale(language_to_locale(language))
-  decorated_article = ContentItemDecorator.decorate(article)
-
-  decorated_article.related_categories.each do |category, contents|
-    expect(article_page.related_content).to have_content(category.title)
-    contents.each do |item|
-      expect(article_page.related_content).to have_content(item.title)
-    end
-  end
 end
 
 Then(/^the article should have a canonical tag for that language version$/) do

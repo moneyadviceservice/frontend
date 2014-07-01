@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 23f5df2c-dd65-46c5-a1d7-24af3030c8d0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 01 Jul 2014 11:17:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvbmV3
+        cy9iZXRoLW1hZWNoLWFkcm9kZGlhZC1jcmVkeWQteW4tZWktZGRhdGdlbHUt
+        YW1kYW5vY2g+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsg
+        dGl0bGU9IkJldGggbWFl4oCZY2ggYWRyb2RkaWFkIGNyZWR5ZCB5biBlaSBk
+        ZGF0Z2VsdSBhbWRhbm9jaCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNl
+        cnZpY2Uub3JnLnVrL2VuL25ld3Mvd2hhdC15b3VyLWNyZWRpdC1yZXBvcnQt
+        cmV2ZWFscy1hYm91dC15b3U+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9
+        ImVuLUdCIjsgdGl0bGU9IldoYXQgeW91ciBjcmVkaXQgcmVwb3J0IHJldmVh
+        bHMgYWJvdXQgeW91Ig==
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 5b17c6b5cd05d65fb178bb4eaab463c5
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 01-Jul-2015 11:17:34 GMT; secure
+      - _session_id=5b17c6b5cd05d65fb178bb4eaab463c5; path=/; secure; HttpOnly
+      - _web_tracking=a8a08ff2ccecd76100c2392214ece135; path=/; expires=Wed, 01-Jul-2015
+        11:17:34 GMT; secure
+      X-Request-Id:
+      - 23f5df2c-dd65-46c5-a1d7-24af3030c8d0
+      X-Runtime:
+      - '0.086987'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch","title":"Beth
+        mae\u2019ch adroddiad credyd yn ei ddatgelu amdanoch","description":"Mae rhy
+        ychydig o bobl yn gwirio eu hadroddiad credyd ar sylfaen reolaidd.","body":"<p>
+        Gallai adroddiad credyd da fod yn docyn ichi dderbyn benthyciadau gwell, felly
+        mae\u2019n bwysig cadw llygad arno a gwybod sut i wella\u2019ch sg\u00f4r.
+        </p><p>Ond mae ymchwil newydd gan y Gwasanaeth Cynghori Ariannol yn dangos
+        nid yn unig bod rhy ychydig o bobl yn gwirio eu hadroddiad credyd, nid yw
+        llawer yn gwybod am beth y\u2019i defnyddir yn union.\u00a0 </p><p>Mae asiantaethau
+        gwirio credyd yn cynhyrchu\u2019r adroddiadau i\u2019w defnyddio gan ddarparwyr
+        benthyciadau er mwyn graddoli teilyngdod credyd unigolyn - yn syml, po orau
+        eich statws credyd po isaf y risg y byddwch yn diffygdalu ar unrhyw ymrwymiadau
+        credyd presennol neu\u2019r dyfodol. Mae hyn yn golygu ei fod yn llai tebygol
+        y cewch eich <a title=\"Credyd wedi\u2019i wrthod\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/beth-iw-wneud-os-gwrthodwyd-benthyciad-neu-gerdyn-credyd-i-chi\">gwrthod
+        am gredyd</a> yn y dyfodol. </p><h2>Beth mae adroddiad credyd yn ei gynnwys
+        </h2><p>Felly beth yn union sydd mewn adroddiad credyd? </p><p>Maent yn cynnwys
+        nid yn unig gwybodaeth mae cwmn\u00efau ariannol yn ei defnyddio er mwyn dilysu\u2019ch
+        hunaniaeth, hefyd maent yn dangos hanes credyd blaenorol fel os ydych wedi
+        diffygdalu ar fenthyciad neu unrhyw daliadau hwyr. Mae cwmn\u00efau\u2019n
+        defnyddio\u2019r wybodaeth hon i\u2019w helpu i benderfynu a ddylent ganiat\u00e1u
+        ichi agor cyfrif neu gynnig credyd ichi, ac ar ba delerau. </p><p>Os ydych
+        yn cymryd adroddiad credyd gallwch ddisgwyl gweld eich hanes credyd dros y
+        chwe blynedd diwethaf, ac: </p><ul><li>Eich enw, cyfeiriadau presennol a blaenorol,
+        (yn cynnwys y chwe blynedd diwethaf), a\u2019ch dyddiad geni</li><li>Darparwr
+        eich cyfrif cyfredol a manylion unrhyw orddrafftiau sydd gennych</li><li>Rhestr
+        o unrhyw gardiau credyd a chardiau siop, benthyciadau neu forgeisi sydd gennych</li><li>Manylion
+        unrhyw daliadau hwyr neu daliadau a fethwyd</li><li>Gwybodaeth o gofnodion
+        cyhoeddus fel Dyfarniadau Llys Sirol (a elwir yn ''Archddyfarniadau'' yn yr
+        Alban), achosion o feddiannu t\u0177 a methdaliad am chwe blynedd ar \u00f4l
+        iddynt ddigwydd.</li></ul><p>Hefyd gall eich adroddiad credyd ddangos a ddefnyddiwyd
+        <a title=\"Diogelu eich hun rhag twyll\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/diogelu-eich-hun-rhag-twyll-a-lladrad
+        \">eich hunaniaeth yn dwyllodrus </a>yn y gorffennol - os ydych wedi\u2019i
+        adrodd wrth eich banc, darparwr benthyciadau neu ddarparwr ariannol arall.
+        Hefyd gall ddatgelu a ydych ar y Gofrestr Etholiadol at ddibenion adnabod.
+        </p><h2>Beth nad yw adroddiadau credyd yn eu dangos </h2><p>Gallwch gael adroddiad
+        credyd gan unrhyw un o\u2019r tair prif asiantaeth gwirio credyd - Callcredit
+        (Noddle), Equifax ac Experian. Ni fydd yr asiantaethau hyn yn cofnodi gwybodaeth
+        sensitif fel cofnod troseddol, eich cyflog sylfaenol neu grefydd. Mae ymchwil
+        gan y Gwasanaeth Cynghori Ariannol yn datgelu bod 13% o bobl\u00a0 yn meddwl
+        mai gwirio am gofnodion troseddol oedd pwrpas gofyn am adroddiad credyd. </p><h2>Rhestr
+        wirio </h2><p><strong>Ydych chi wedi gwirio\u2019ch adroddiad credyd?</strong>
+        \u2013 <a title=\"Nid oes digon o oedolion yn gwirio eu hadroddiad credyd\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/news/a-wyddoch-beth-yw-eich-sgor-credyd-nid-ywr-mwyafrif-o-oedolion-yn-y-du-wedi-gwirio-eu-sgor-credyd-ers-pum-mlynedd\">dim
+        ond un o bob tri sydd wedi cymryd adroddiad credyd</a>, felly mae llawer o
+        bobl yn rhedeg y risg o dalu mwy na sydd ei angen oherwydd problemau a gwallau
+        y gallant eu cywiro </p><p><strong>Sut i wella\u2019ch adroddiad credyd</strong>
+        \u2013 mae\u2019n bosibl <a title=\"Sut i wirio a gwella\u2019ch adroddiad
+        credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/news/sut-i-wellach-adroddiad-credyd-a-chael-bargen-well\">rhoi
+        hwb i\u2019ch gobeithion o gael eich derbyn am gredyd </a>trwy gymryd camau
+        fel osgoi ceisiadau lluosog am gredyd a rhoi\u2019ch enw ar y gofrestr etholiadol.
+        </p><p><strong>Chwalwr mythau</strong> \u2013 <a title=\"Cwis chwalu mythau
+        adroddiad credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cwis-y-gwir-am-adroddiadau-credyd\">cymerwch
+        ein cwis </a>er mwyn gweld a ydych yn gwybod digon am gredyd. </p><p><strong>Peidiwch
+        \u00e2 cholli cyfle!</strong>- Am ragor o gyngor ariannol a newyddion yn syth
+        i\u2019ch blwch e-bost, <a title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e-byst</a>. </p><p><em>Llun: PA</em></p>","date":"2014-03-07T11:03:41+00:00"}'
+    http_version: 
+  recorded_at: Tue, 01 Jul 2014 11:17:34 GMT
+recorded_with: VCR 2.9.2

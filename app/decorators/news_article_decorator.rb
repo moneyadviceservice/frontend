@@ -1,8 +1,8 @@
 require 'html_processor'
 
 class NewsArticleDecorator < ContentItemDecorator
-  def date
-    @date ||= formatted_date
+  def date(options={})
+    h.l(object.date, format: options.fetch(:format, :short))
   end
 
   def content
@@ -10,10 +10,6 @@ class NewsArticleDecorator < ContentItemDecorator
   end
 
   private
-
-  def formatted_date
-    h.l(object.date, format: :short)
-  end
 
   def processed_body
     processor = HTMLProcessor::NodeRemover

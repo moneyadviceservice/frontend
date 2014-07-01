@@ -1,13 +1,13 @@
 <% set_meta_tags(description: news_article.description,
-                 canonical: news_article.canonical_url,
-                 alternate: news_article.alternate_options) %>
+                 canonical:   news_article.canonical_url,
+                 alternate:   news_article.alternate_options) %>
 
 <div class="l-main editorial">
   <main role="main">
     <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
       <h1 itemprop="headline"><%= title news_article.title %></h1>
       <hr>
-      <p class="smallprint"><time itemprop="datePublished" datetime="2001-05-15 19:00"><%= news_article.date %></time></p>
+      <p class="smallprint"><time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %></time></p>
 
       <%= news_article.content %>
     </article>

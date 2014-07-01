@@ -33,8 +33,12 @@ RSpec.describe NewsArticleDecorator do
     let(:attributes) { { date: '2014-03-17T09:42:11+00:00' } }
     let(:news_article) { Core::NewsArticle.new('news_article_id', attributes) }
 
-    it 'formats the date' do
+    it "returns the date with format 'day abbr_month year'" do
       expect(decorator.date).to eq('17 Mar 2014')
+    end
+
+    it "returns the date with format 'year month day time'" do
+      expect(decorator.date(format: :long)).to eq('2014-03-17 09:42')
     end
   end
 end

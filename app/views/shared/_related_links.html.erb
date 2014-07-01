@@ -3,7 +3,7 @@
     <h2 class="related-links__heading">
       <%= t('articles.show.related_links.title_prefix', category: category.title) %>
     </h2>
-    <ul class="unstyled-list">
+    <ul class="plain-list">
       <% category.contents.each do |article| %>
         <li class="related-links__link">
           <%= link_to article.title, article.path %>

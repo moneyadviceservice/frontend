@@ -18,6 +18,9 @@
   .search {
     width: 100%;
     margin: 0;
+    @include respond-to($mq-m) {
+      padding-right: 46px;
+    }
   }
 
   .l-search {
@@ -37,7 +40,6 @@
       margin-bottom: $baseline-unit*3;
 
       .search__input {
-        border: 0;
         border-radius: $baseline-unit/2;
       }
     }

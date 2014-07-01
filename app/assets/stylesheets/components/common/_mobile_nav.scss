@@ -3,7 +3,9 @@
 // Styleguide Mobile navigation
 
 .mobile-nav {
-  @extend .unstyled-list;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .mobile-nav__item {

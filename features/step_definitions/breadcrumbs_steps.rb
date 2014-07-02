@@ -14,6 +14,10 @@ Given(/^I read a static page$/) do
   static_page.load(locale: 'en', id: 'privacy')
 end
 
+Given(/^I read a news article$/) do
+  browse_to_news_article news_article
+end
+
 Given(/^I read a non-navigational category$/) do
   browse_to_category(non_navigational_category, 'en')
 end
@@ -44,6 +48,10 @@ end
 
 Then(/^I can see breadcrumbs for the static page$/) do
   expect(static_page.breadcrumbs.text).to eq('Home')
+end
+
+Then(/^I can see breadcrumbs for the news article$/) do
+  expect(news_article_page.breadcrumbs.text).to eq(current_news_article.context)
 end
 
 Then(/^I can see breadcrumbs for the category$/) do

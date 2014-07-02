@@ -25,6 +25,7 @@ module Core
     it { is_expected.to validate_presence_of(:title) }
 
     specify { expect(subject).to_not be_home }
+    specify { expect(subject).to_not be_news }
 
     describe 'category hierarchy' do
       let(:category_with_nil_contents) { build :category, contents: nil }

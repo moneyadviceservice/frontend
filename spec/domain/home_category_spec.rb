@@ -8,6 +8,7 @@ RSpec.describe HomeCategory do
   end
 
   specify { expect(subject).to be_home }
+  specify { expect(subject).to_not be_news }
   specify { expect(subject.title).to eq(I18n.t('layouts.home')) }
   specify { expect(subject.path).to eq(root_path(locale: locale)) }
 end

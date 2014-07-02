@@ -15,5 +15,9 @@ module Core
     def home?
       false
     end
+
+    def news?
+      false
+    end
   end
 end

@@ -1,6 +1,7 @@
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Core::Article.new('the-article') }
   let(:static_page)           { Core::StaticPage.new(double) }
+  let(:news_article)          { Core::NewsArticle.new(double) }
   let(:category_title)        { 'the-category' }
   let(:category)              { Core::Category.new(category_title, title: category_title, parent_id: parent_category.id) }
   let(:parent_category_title) { 'the-category' }
@@ -58,6 +59,12 @@ RSpec.describe BreadcrumbTrail, '.build' do
     subject { described_class.build(static_page, category_tree) }
 
     specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
+  end
+
+  context 'when item is a news article' do
+    subject { described_class.build(news_article, category_tree) }
+
+    specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title, NewsCategory.new.title]) }
   end
 end
 

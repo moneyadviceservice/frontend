@@ -9,6 +9,8 @@ class BreadcrumbTrail
         end
       when Core::StaticPage
         [HomeCategory.new]
+      when Core::NewsArticle
+        [HomeCategory.new, NewsCategory.new]
       else
         if item.categories.empty?
           [HomeCategory.new]

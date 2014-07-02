@@ -4,6 +4,12 @@ module Core::Repositories::News
   RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
 
+    before do
+        allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
+          Core::ConnectionFactory.build(url)
+        end
+      end
+
     describe '#find' do
       subject(:repository) { described_class.new }
 
@@ -11,10 +17,6 @@ module Core::Repositories::News
       let(:headers) { {} }
 
       before do
-        allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory.build(url)
-        end
-
         stub_request(:get, "https://example.com/en/news/#{id}.json").
           to_return(status: status, body: body, headers: headers)
       end
@@ -69,6 +71,31 @@ module Core::Repositories::News
         it 'raises an API::RequestError' do
           expect { repository.find(id) }.to raise_error(PublicWebsite::RequestError)
         end
+      end
+    end
+
+    describe '#all' do
+      subject { described_class.new.all }
+
+      before do
+      stub_request(:get, "https://example.com/en/news.json").
+        to_return(status: status, body: body, headers: {})
+      end
+
+      context 'when the request is successful' do
+        let(:body) { "[#{File.read('spec/fixtures/news.json')}]" }
+        let(:status) { 200 }
+        let(:first_id) { "women-are-feeling-the-financial-squeeze-more-than-men" }
+
+        it { is_expected.to be_a(Array) }
+        specify { expect(subject.first['id']).to eq(first_id) }
+      end
+
+      context 'when there is an error' do
+        let(:body) { nil }
+        let(:status) { 500 }
+
+        specify { expect { subject }.to raise_error(described_class::RequestError) }
       end
     end
   end

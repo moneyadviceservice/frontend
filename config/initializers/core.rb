@@ -39,5 +39,5 @@ Core::Registries::Repository[:search] =
 Core::Registries::Repository[:static_page] =
   Core::Repositories::StaticPages::PublicWebsite.new
 
-Core::Registries::Repository[:news_article] =
+Core::Registries::Repository[:news] =
   Core::Repositories::News::PublicWebsite.new

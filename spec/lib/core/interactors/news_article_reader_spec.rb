@@ -11,7 +11,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registries::Repository).to receive(:[]).with(:news_article) do
+        allow(Registries::Repository).to receive(:[]).with(:news) do
           double(find: data)
         end
       end

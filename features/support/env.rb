@@ -10,14 +10,14 @@ article_repository      = Core::Registry::Repository[:article]
 category_repository     = Core::Registry::Repository[:category]
 search_repository       = Core::Registry::Repository[:search]
 static_page_repository  = Core::Registry::Repository[:static_page]
-news_article_repository = Core::Registry::Repository[:news_article]
+news_article_repository = Core::Registry::Repository[:news]
 
 Core::Registry::Repository[:action_plan]  = Core::Repository::VCR.new(action_plan_repository)
 Core::Registry::Repository[:article]      = Core::Repository::VCR.new(article_repository)
 Core::Registry::Repository[:category]     = Core::Repository::VCR.new(category_repository)
 Core::Registry::Repository[:search]       = Core::Repository::VCR.new(search_repository)
 Core::Registry::Repository[:static_page]  = Core::Repository::VCR.new(static_page_repository)
-Core::Registry::Repository[:news_article] = Core::Repository::VCR.new(news_article_repository)
+Core::Registry::Repository[:news]         = Core::Repository::VCR.new(news_article_repository)
 
 Before('@fake-articles') do
   @real_article_repository = Core::Registry::Repository[:article]

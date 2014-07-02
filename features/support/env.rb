@@ -28,3 +28,5 @@ end
 After('@fake-articles') do
   Core::Registries::Repository[:article] = @real_article_repository
 end
+
+Capybara.default_wait_time = 20

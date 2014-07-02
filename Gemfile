@@ -23,6 +23,7 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
+gem 'uglifier', '>= 1.3.0'
 
 group :assets do
   gem 'autoprefixer-rails'
@@ -32,7 +33,6 @@ group :assets do
   gem 'compass-rails'
   gem 'jquery-rails'
   gem 'sass-rails', '~> 4.0.0'
-  gem 'uglifier', '>= 1.3.0'
 end
 
 group :development do

@@ -27,6 +27,15 @@ RSpec.describe NewsArticleDecorator do
     it 'removes the image author paragraph' do
       expect(html.search(HTMLProcessor::IMAGE_AUTHOR)).to be_empty
     end
+
+    it 'strips action email links' do
+        expect(html.search(HTMLProcessor::ACTION_EMAIL)).to be_empty
+      end
+
+    it 'strips action forms' do
+      expect(html.search(HTMLProcessor::ACTION_FORM)).to be_empty
+    end
+
   end
 
   describe '#date' do

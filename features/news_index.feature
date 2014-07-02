@@ -3,9 +3,14 @@ Feature: View news index
   I want to see a selection of news
   So that I can select an article to read easily
 
-  Scenario: User sees a list of news
-    When I visit the news page
-    Then I see a list of news
+  Scenario Outline: User sees a list of news
+    When I visit the news page in <language>
+    Then I see a list of news in <language>
+
+  Examples:
+    | language |
+    | English  |
+    | Welsh    |
 
   Scenario: Browsing paginated results
     When I visit the news page

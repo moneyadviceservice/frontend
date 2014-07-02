@@ -12,7 +12,10 @@ class NewsArticleDecorator < ContentItemDecorator
   private
 
   def processed_body
-    processor = HTMLProcessor::NodeRemover
-    processor.new(object.body).process(HTMLProcessor::IMAGE_AUTHOR)
+    processor = HTMLProcessor::NodeRemover.new(object.body)
+
+    processor.process(HTMLProcessor::IMAGE_AUTHOR)
+    processor.process(HTMLProcessor::ACTION_EMAIL)
+    processor.process(HTMLProcessor::ACTION_FORM)
   end
 end

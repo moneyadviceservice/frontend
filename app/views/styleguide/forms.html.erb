@@ -1,25 +1,20 @@
 <h1>Forms</h1>
 
-
 <h2>Fieldsets, Legends, and Form Elements</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim
-  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
-  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-  vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
-  volutpat justo, eu volutpat enim diam eget metus.</p>
+<p>* Indicates required fields</p>
 
 <form class="form" novalidate>
 
   <div class="form__row">
-    <label for="text_field" class="form__label-heading">Text Field</label>
-    <input type="text" id="text_field">
+    <label for="text_field" class="form__label-heading">Text Field * <span class="visually-hidden">required</span></label>
+    <input type="text" id="text_field" aria-required="true">
   </div>
 
   <div class="form__row">
     <label for="text_field_hint" class="form__label-heading">Text Field with
       hint</label>
-    <input type="text" id="text_field_hint" aria-describedby="f">
+    <input type="text" id="text_field_hint" aria-describedby="frmhint1">
 
     <p class="form__hint" id="frmhint1">e.g. 01/01/1970</p>
   </div>
@@ -184,11 +179,11 @@
   <div id="savings_goal-errors">
     <p>1. Your savings goal can't be blank</p>
   </div>
-  <label class="form__label-heading" for="input4" id="form-label4">What is your
+  <label class="form__label-heading" for="input5" id="form-label5">What is your
     savings goal?</label>
     <span class="form__input-container">
-      <span class="form__input-label" id="input-label4a">£</span>
-      <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label4a input-label4b">
+      <span class="form__input-label" id="input-label5a">£</span>
+      <input id="input5" class="form__input" type="text" aria-labelledby="form-label5 input-label5a input-label5b">
       <span class="form__input-outline"></span>
     </span>
 </div>

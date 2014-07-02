@@ -1,5 +1,3 @@
-require 'core/interactors/searcher'
-
 RSpec.describe SearchResultsController, :type => :controller do
   describe 'GET index' do
     let(:query) { 'query' }

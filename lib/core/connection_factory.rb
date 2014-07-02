@@ -1,5 +1,3 @@
-require 'core/connection'
-require 'faraday'
 require 'faraday/request/request_id'
 require 'faraday/response/link_header'
 

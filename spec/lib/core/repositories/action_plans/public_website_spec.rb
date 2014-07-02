@@ -1,6 +1,4 @@
-require 'core/repositories/action_plans/public_website'
-
-module Core::Repositories::ActionPlans
+module Core::Repository::ActionPlans
   RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
 
@@ -11,7 +9,7 @@ module Core::Repositories::ActionPlans
       let(:headers) { {} }
 
       before do
-        allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
+        allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
           Core::ConnectionFactory.build(url)
         end
 

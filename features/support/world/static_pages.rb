@@ -1,5 +1,3 @@
-require 'core/interactors/static_page_reader'
-
 module World
   module StaticPages
     def static_page_id_for_locale(locale)

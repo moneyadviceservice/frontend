@@ -1,5 +1,3 @@
-require 'core/interactors/action_plan_reader'
-
 class ActionPlansController < ApplicationController
   decorates_assigned :action_plan, with: ActionPlanDecorator
 

@@ -1,5 +1,3 @@
-require 'core/interactors/category_tree_reader'
-
 class ApplicationController < ActionController::Base
   layout 'constrained'
   protect_from_forgery with: :exception

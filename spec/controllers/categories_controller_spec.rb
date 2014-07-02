@@ -1,6 +1,3 @@
-require 'core/interactors/category_reader'
-require 'core/interactors/category_tree_reader'
-
 RSpec.describe CategoriesController, :type => :controller do
   before do
     allow(Core::CategoryTreeReader).to receive(:new) do

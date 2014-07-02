@@ -1,5 +1,3 @@
-require 'core/entities/article'
-
 module Core
   RSpec.describe Article do
     subject { described_class.new(double, attributes) }

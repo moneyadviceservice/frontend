@@ -1,5 +1,3 @@
-require 'core/interactors/searcher'
-
 class SearchResultsController < ApplicationController
   decorates_assigned :search_results, with: SearchResultCollectionDecorator
 

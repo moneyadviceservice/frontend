@@ -1,8 +1,5 @@
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/interactors/news_article_reader'
-require 'core/entities/news_article'
-
 module Core
   RSpec.describe NewsArticleReader do
     subject { described_class.new(id) }
@@ -11,7 +8,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registries::Repository).to receive(:[]).with(:news_article) do
+        allow(Registry::Repository).to receive(:[]).with(:news_article) do
           double(find: data)
         end
       end

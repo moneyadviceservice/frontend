@@ -1,5 +1,3 @@
-require 'core/interactors/category_reader'
-
 class CategoriesController < ApplicationController
   decorates_assigned :category, with: CategoryDecorator
 

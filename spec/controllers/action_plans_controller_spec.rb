@@ -1,6 +1,3 @@
-require 'core/interactors/action_plan_reader'
-require 'core/entities/action_plan'
-
 RSpec.describe ActionPlansController, :type => :controller do
   let(:action_plan) { instance_double(Core::ActionPlan, id: 'test', categories: []) }
   let(:action_plan_reader) { instance_double(Core::ActionPlanReader, call: action_plan) }

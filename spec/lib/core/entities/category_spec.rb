@@ -1,5 +1,3 @@
-require 'core/entities/category'
-
 module Core
   RSpec.describe Category do
     subject { described_class.new(double, attributes) }

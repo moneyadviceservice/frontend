@@ -1,9 +1,5 @@
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/action_plan'
-require 'core/interactors/action_plan_reader'
-require 'core/interactors/category_reader'
-
 module Core
   RSpec.describe ActionPlanReader do
     subject { described_class.new(id) }
@@ -12,7 +8,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registries::Repository).to receive(:[]).with(:action_plan) do
+        allow(Registry::Repository).to receive(:[]).with(:action_plan) do
           double(find: data)
         end
       end

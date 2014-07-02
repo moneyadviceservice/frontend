@@ -1,5 +1,3 @@
-require 'core/interactors/searcher'
-
 class SearchResultCollectionDecorator < Draper::Decorator
   decorates_association :items, with: SearchResultDecorator
 

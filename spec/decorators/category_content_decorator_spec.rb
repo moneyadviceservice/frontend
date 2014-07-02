@@ -1,7 +1,3 @@
-Dir[File.join(File.dirname(__FILE__), '..', '..', 'lib', 'core', 'entities', '*')].each do |entity|
-  require entity
-end
-
 RSpec.describe CategoryContentDecorator do
   include Draper::ViewHelpers
 

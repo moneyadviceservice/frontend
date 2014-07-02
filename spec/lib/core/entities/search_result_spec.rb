@@ -1,5 +1,3 @@
-require 'core/entities/search_result'
-
 module Core
   RSpec.describe SearchResult do
     subject { described_class.new(double, attributes) }

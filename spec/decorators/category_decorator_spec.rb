@@ -1,5 +1,3 @@
-require 'core/entities/category'
-
 RSpec.describe CategoryDecorator do
   include Draper::ViewHelpers
 

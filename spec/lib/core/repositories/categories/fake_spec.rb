@@ -1,6 +1,4 @@
-require 'core/repositories/categories/fake'
-
-RSpec.describe Core::Repositories::Categories::Fake do
+RSpec.describe Core::Repository::Categories::Fake do
   let(:article) { build :article_hash }
   let(:subcategory) { build :category_hash, contents: [article] }
   let(:category) { build :category_hash, contents: [subcategory] }

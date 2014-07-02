@@ -1,5 +1,3 @@
-require 'core/entities/search_result_collection'
-
 module Core
   RSpec.describe SearchResultCollection do
     let(:items) { [] }

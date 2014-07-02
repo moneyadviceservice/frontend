@@ -1,5 +1,3 @@
-require 'core/entities/article'
-
 RSpec.describe ContentItemDecorator do
   include Draper::ViewHelpers
 

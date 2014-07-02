@@ -1,5 +1,3 @@
-require 'core/interactors/article_reader'
-
 class ArticlesController < ApplicationController
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator

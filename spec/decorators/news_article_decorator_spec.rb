@@ -1,5 +1,3 @@
-require 'core/entities/news_article'
-
 RSpec.describe NewsArticleDecorator do
 
   subject(:decorator) { described_class.decorate(news_article) }

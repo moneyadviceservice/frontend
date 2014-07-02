@@ -25,6 +25,7 @@ I18n.available_locales = [:en, :cy]
 
 PageValidations::HTMLValidation.ignored_attribute_errors = %w(tabindex itemscope itemtype itemprop)
 PageValidations::HTMLValidation.ignored_tag_errors       = ['main']
+PageValidations::HTMLValidation.ignored_errors           = ['letter not allowed here']
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'

@@ -1,19 +1,14 @@
 <h1>Forms</h1>
 
-
 <h2>Fieldsets, Legends, and Form Elements</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim
-  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
-  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-  vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
-  volutpat justo, eu volutpat enim diam eget metus.</p>
+<p>* Indicates required fields</p>
 
 <form class="form" novalidate>
 
   <div class="form__row">
-    <label for="text_field" class="form__label-heading">Text Field</label>
-    <input type="text" id="text_field">
+    <label for="text_field" class="form__label-heading">Text Field * <span class="visually-hidden">required</span></label>
+    <input type="text" id="text_field" aria-required="true">
   </div>
 
   <div class="form__row">

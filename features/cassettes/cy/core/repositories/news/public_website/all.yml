@@ -1,0 +1,1044 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/news.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 7c0e30d6-2b93-49b1-9e08-937c724d1006
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Meta-Request-Version:
+      - 0.2.8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"fe92197f19aa04b05bb29e3549886d70"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8bba51b3670cb2132c93f67f3f72d1e0
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 03-Jul-2015 13:20:24 GMT
+      - _session_id=8bba51b3670cb2132c93f67f3f72d1e0; path=/; HttpOnly
+      - _web_tracking=b51c8ed8f791761b8a818e1ca108a67d; path=/; expires=Fri, 03-Jul-2015
+        13:20:24 GMT
+      X-Request-Id:
+      - 7c0e30d6-2b93-49b1-9e08-937c724d1006
+      X-Runtime:
+      - '3.719019'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '[{"id":"pum-peth-mae-angen-i-chi-eu-gwybod-am-fenthyciadau-diwrnod-cyflog","title":"Pum
+        peth mae angen i chi eu gwybod am fenthyciadau diwrnod cyflog","description":"Mae
+        hysbysebion ar gyfer benthyciadau diwrnod cyflog yn cynnig arian parod cyflym
+        a rhwydd yn ymddangos ymhobman y dyddiau hyn.","body":"<p class=\"intro\">
+        Mae hysbysebion ar gyfer benthyciadau diwrnod cyflog yn cynnig arian parod
+        cyflym a rhwydd yn ymddangos ymhobman y dyddiau hyn. </p><p>Ac er bod rheolau
+        newydd yn golygu bod rhaid i\u2019r hysbysebion hyn gynnwys rhybudd ynghylch
+        cost uchel credyd tymor byr, nid oes gan y mwyafrif ddigon o le i egluro\u2019r
+        risgiau sydd ynghlwm wrth gymryd benthyciad, er gwaethaf y ffaith bod llawer
+        o bobl yn or-optimistaidd ynghylch eu gallu i\u2019w ad-dalu\u2019n llawn
+        yn brydlon. </p><p>Dyma beth sydd angen i chi ei wybod os ydych yn ystyried
+        cymryd benthyciad diwrnod cyflog. </p><h2>1.\u00a0\u00a0\u00a0\u00a0Mae gan
+        fenthyciadau diwrnod cyflog gyfraddau llog uchel </h2><p>Rydym i gyd yn gwybod
+        bod cyfraddau llog yn uwch ar fenthyciadau nag ar gynilion, ond gall y gwahaniaeth
+        fod yn syfrdanol. Gallwch ddisgwyl ennill llai na 3% y gyfradd flynyddol gyfatebol
+        (AER) ar gyfrif cynilo, ond fel arfer byddwch yn talu ychydig yn llai na 20%
+        y gyfradd flynyddol ganrannol (APR) ar gerdyn credyd. Mae hyn yn ddibwys pan
+        yw\u2019n cael ei gymharu \u00e2 chyfraddau llog ar fenthyciadau diwrnod cyflog,
+        sydd fel arfer yn amrywio o 2,000% APR hyd at bron i 6,000% APR. </p><p>Mae
+        benthyciadau diwrnod cyflog yn gredyd tymor byr, a gynllunir i\u2019ch cynorthwyo
+        pan yw\u2019r annisgwyl yn digwydd ac nad oes gennych ddigon o arian tan eich
+        bod yn cael eich talu nesaf. Y broblem yw y gall ei ad-dalu fod yn gostus
+        iawn. Er enghraifft, pe byddech yn benthyca \u00a3100 am un mis gan ddarparwr
+        benthyciadau sy\u2019n codi 3,000% APR byddech yn ad-dalu oddeutu \u00a330
+        mewn llog, a allai fod yn anodd i ddod o hyd iddo ar eich diwrnod cyflog nesaf.
+        </p><h2>2.\u00a0\u00a0\u00a0\u00a0Gwyliwch am ffioedd am dalu\u2019n hwyr,
+        ffioedd diffygdalu, neu ffioedd eraill </h2><p>Hefyd mae nifer o ddarparwyr
+        benthyciadau yn codi ffioedd gweinyddu neu ffioedd trafodion, fel arfer \u00a35.
+        Fel arfer cynhwysir y rhain yn y swm rydych yn cytuno ei fenthyca. Hefyd mae
+        ffioedd cosb os methwch \u00e2 gwneud eich ad-daliad ar y dyddiad dyledus.
+        Fel arfer mae ffi osod o rhwng \u00a320 a \u00a330, fel \u00a330 am ddiffygdalu,
+        neu ganran o, dyweder, 2% o swm y benthyciad am bob diwrnod rydych yn mynd
+        heibio i\u2019r cyfnod a gytunwyd. </p><h2>3.\u00a0\u00a0\u00a0\u00a0Gwyliwch
+        am \u2018drosglwyddiad\u2019 y benthyciad diwrnod cyflog </h2><p>Os sylweddolwch
+        na allwch ad-dalu\u2019r benthyciad a thalu am eich alldaliadau hanfodol,
+        yn y pen draw gallech orfod cytuno i estyniad ar y benthyciad (a elwir hefyd
+        yn drosglwyddiad), sy\u2019n golygu y byddwch yn talu llawer mwy mewn llog
+        a ffioedd eraill, gan ei wneud hyd yn oed yn anos i glirio\u2019ch dyled.
+        Er enghraifft, benthyca \u00a3300, gohirio swm y benthyciad, ond talu\u2019r
+        llog o \u00a390 ar \u00f4l y mis cyntaf a\u2019r ail fis ac yn y pen draw
+        byddech yn ad-dalu cyfanswm o \u00a3570 - dyna\u2019ch benthyciad o \u00a3300
+        a \u00a3270 mewn llog. </p><h2>4.\u00a0\u00a0\u00a0\u00a0Beth mae''n rhaid
+        i ddarparwyr benthyciadau ei ddweud wrthych </h2><p>Wrth hysbysebu benthyciadau
+        mae\u2019n rhaid i ddarparwyr benthyciadau diwrnod cyflog ddangos \u2018enghraifft
+        gynrychiadol\u2019 o gost benthyciad nodweddiadol. Fodd bynnag, gan fod angen
+        i\u2019r gyfradd llog hon fod yn gymwys dim ond i 51% o\u2019r cwsmeriaid
+        sy\u2019n gwneud cais am fenthyciad, bydd angen ichi wirio\u2019r gyfradd
+        llog sy\u2019n cael ei chodi arnoch, a beth fydd cyfanswm eich ad-daliad dros
+        wahanol gyfnodau benthyciad. Po hwyaf yw tymor y benthyciad, po fwyaf y byddwch
+        yn ei ad-dalu mewn llog. </p><p>Cyn ichi gytuno i fenthyciad, dylech wirio
+        cytundeb y benthyciad bob amser. Mae''n rhaid i\u2019r ddogfen hon ddweud
+        wrthych: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y cyfanswm mae\u2019n rhaid
+        ichi\u2019i dalu iddynt a\u2019u cyfradd ganrannol flynyddol (APR) </p><p>\u2022\u00a0\u00a0\u00a0\u00a0swm
+        ac amlder eich ad-daliadau </p><p>\u2022\u00a0\u00a0\u00a0\u00a0hyd cytundeb
+        y benthyciad </p><p>\u2022\u00a0\u00a0\u00a0\u00a0beth fydd yn digwydd os
+        nad ydych yn ad-dalu\u2019ch benthyciad yn brydlon </p><p>\u2022\u00a0\u00a0\u00a0\u00a0eich
+        hawliau os ydych am ganslo\u2019r benthyciad, gan gynnwys cyfnod ystyried
+        o 14 diwrnod </p><p>Os nad ydych yn si\u0175r am rywbeth, gofynnwch i\u2019r
+        darparwr benthyciadau ei esbonio. </p><h2>5.\u00a0\u00a0\u00a0\u00a0Mae dewisiadau
+        eraill heblaw am fenthyciadau diwrnod cyflog </h2><p>Yr allwedd i gael credyd
+        da neu fenthyciad rhesymol, hyd yn oed ar fyr rybudd, yw sefydlu\u2019r hyn
+        y gallwch ei fforddio\u2019n brydlon a chwilio o gwmpas am y math gorau o
+        gredyd ar gyfer eich anghenion. Os ydych yn cael anhawster i dalu biliau a
+        chostau byw beunyddiol neu os oes arnoch angen arian parod ar fyr rybudd,
+        mae\u2019n werth ystyried y <a title=\"Opsiynau eraill heblaw benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/opsiynau-eraill-heblaw-benthyciadau-diwrnod-cyflog\">dewisiadau
+        eraill heblaw am fenthyciadau diwrnod cyflog</a>. </p><p>Os oes gennych statws
+        credyd gwael peidiwch \u00e2 rhagdybio na allwch gael benthyciad gwell rywle
+        arall. Mae dewisiadau eraill ar gael. <a title=\"Benthyciadau diwrnod cyflog\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/benthyciadau-diwrnod-cyflog\">Gweler
+        ein Hofferyn benthyciadau diwrnod cyflog </a>am ragor o wybodaeth ar eich
+        dewisiadau credyd cyn cymryd un, a ble i gael cyngor diduedd am ddim ar ddyledion.
+        </p>","date":"2014-05-07T09:49:31+00:00"},{"id":"gall-benthyciad-diwrnod-cyflog-wneud-pethaun-haws-ar-y-funud-ond-gwyliwch-rhag-ofn-fod-arwyddion-y-bydd-yn-creu-poen-barhaus","title":"Gall
+        benthyciad diwrnod cyflog wneud pethau\u2019n haws ar y funud, ond gwyliwch
+        rhag ofn fod arwyddion y bydd yn creu poen barhaus","description":"Yn yr amser
+        a gymerwch i ddarllen yr erthygl hon, fe allech chi fod wedi cymryd benthyciad
+        diwrnod cyflog mae\u2019n debyg.","body":"<p class=\"intro\"> Yn yr amser
+        a gymerwch i ddarllen yr erthygl hon, fe allech chi fod wedi cymryd benthyciad
+        diwrnod cyflog mae\u2019n debyg. Fe allai cael mynediad mor gyflym at arian
+        parod ymddangos yn wych, ac fe all hynny fod yn wir ar yr amod eich bod yn
+        si\u0175r y gallwch ei dalu yn \u00f4l yn syth. </p><p>Ond fe allech chi fod
+        mewn sefyllfa lle mae arnoch chi lawer mwy nag yr oeddech wedi bwriadu, oni
+        bai eich bod yn defnyddio <a title=\"Cyfrifiannell benthyciadau\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-benthyciadau\">cyfrifiannell
+        benthyciadau</a> a chyfrifo faint y gallwch chi ei fforddio \u2013 ac fe all
+        gymryd llawer mwy o amser i\u2019w glirio nag yr oeddech wedi meddwl. </p><p>Mae\u2019r
+        benthyciadau tymor byr yma wedi denu sylw negyddol oherwydd stor\u00efau am
+        bobl sydd wedi cymryd benthyciad \u2018cyflym\u2019 cymharol fychan, ychydig
+        gannoedd o bunnoedd efallai i\u2019w cadw am ryw fis, ond yn y pen draw yn
+        cael trafferth i dalu\u2019r hyn sy\u2019n ddyledus yn \u00f4l oherwydd y
+        cyfraddau llog uchel. </p><p>Felly mae\u2019r Awdurdod Ymddygiad Ariannol
+        (FCA) yn ceisio ymdrin \u00e2\u2019r problemau yma trwy gyflwyno rheolau newydd
+        i fenthycwyr, i sicrhau bod y rhai sy\u2019n benthyca yn cael eu trin yn deg.
+        </p><h2>Gwyliwch rhag cael eich tynnu i drobwll dyledion </h2><p>Mae benthyciadau
+        diwrnod cyflog yn codi cyfraddau llog uchel, yn nodweddiadol rhwng 1,250%
+        a 6,000% APR (Cyfradd Llog Canrannol Blynyddol) \u2013 ar gyfartaledd maent
+        yn codi tua \u00a330 y mis ar fenthyciad o \u00a3100. </p><p>Ac i rai pobl
+        mae\u2019r ad-daliadau yn rhy uchel, gan eu gorfodi i geisio gohirio neu barhau\u2019r
+        ddyled, neu gymryd benthyciad newydd i dalu\u2019r hyn sy\u2019n ddyledus.
+        </p><p>Gall hyn arwain at ddyled sy\u2019n cynyddu\u2019n barhaus. Dywedwch
+        eich bod wedi cymryd benthyciad o \u00a3300, a arweiniodd at ad-daliad o \u00a3390
+        gan gynnwys y llogau ar ddiwedd un mis. </p><p>Os na allwch chi fforddio talu\u2019r
+        swm yma ar \u00f4l mis, fe allech barhau\u2019r ddyled gychwynnol. </p><p>Hyd
+        yn oed petaech chi\u2019n talu\u2019r llogau o \u00a390 fe allech chi fod
+        \u00e2 dyled sylweddol mewn ychydig iawn o amser, yn arbennig petai\u2019r
+        un sefyllfa yn digwydd y mis canlynol, gyda\u2019r llogau o \u00a390 yn cael
+        ei dalu eto ond y benthyciad yn dal i barhau. </p><p>Gan mai dim ond ddwywaith
+        y gallwch barhau\u2019r benthyciad, fe fyddai\u2019n rhaid i chi ad-dalu cyfanswm
+        o \u00a3570 i glirio\u2019r gweddill ar ddiwedd tri mis \u2013 y cyfan am
+        na allech chi fforddio ad-dalu\u2019r benthyciad o \u00a3300 i gychwyn, a\u2019r
+        llogau ar y dyddiad ad-dalu. </p><p>Nid benthyciadau diwrnod cyflog yw\u2019r
+        unig ddewis i unrhyw un sydd angen arian parod o bell ffordd. Gweler ein <a
+        title=\"Benthyciadau diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/benthyciadau-diwrnod-cyflog\">Hofferyn
+        benthyciadau diwrnod cyflog</a> am ragor o wybodaeth am ddewisiadau eraill
+        cyn cymryd un. </p><h2>Rheolau newydd i fenthycwyr diwrnod cyflog </h2><p>Mae
+        mwy nag un o bob tri o fenthycwyr yn cael trafferth i ad-dalu benthyciadau
+        diwrnod cyflog, yn \u00f4l yr FCA, sef corff craffu\u2019r Ddinas. Mae llawer
+        wedi cymryd benthyciadau eraill i ad-dalu\u2019r darparwyr benthyciadau oedd
+        ganddynt eisoes, gan arwain at drobwll o ddyledion. </p><p>Mae rheolau newydd
+        yr FCA yn cynnwys: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0cyfyngu\u2019r nifer
+        o weithiau y gall benthyciad gael ei ohirio neu ei barhau i ddau </p><p>\u2022\u00a0\u00a0\u00a0\u00a0cyfeirio
+        benthycwyr sy\u2019n gofyn am barhau benthyciad at asiantaeth gynghori dyledion
+        rad ac am ddim </p><p>\u2022\u00a0\u00a0\u00a0\u00a0dim ond ddwywaith y gall
+        y rhai a roddodd y benthyciad wneud cais am daliad gan ddefnyddio awdurdod
+        taliad parhaus (mae hyn yn caniat\u00e1u iddyn nhw gymryd arian yn uniongyrchol
+        o gyfrif banc yr un a gymerodd fenthyciad) ac ni allant gymryd rhandaliad
+        \u2013 felly os nad oes digon o arian yn y cyfrif neu fod yr arian ar gyfer
+        biliau hanfodol mae hyn yn helpu i atal taliadau gorddrafft a thaliadau eraill
+        i\u2019r banc. </p><p>Darllenwch ein canllaw i gael rhagor o wybodaeth am
+        gredyd a <a title=\"Opsiynau eraill heblaw benthyciadau diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/opsiynau-eraill-heblaw-benthyciadau-diwrnod-cyflog\">dewisiadau
+        ar wah\u00e2n i fenthyciadau diwrnod cyflog</a>. </p>","date":"2014-05-07T09:49:25+00:00"},{"id":"gwnewch-yn-siwr-fod-cost-benthyca-arian-yn-gwneud-synnwyr-i-chi","title":"Gwnewch
+        yn si\u0175r fod cost benthyca arian yn gwneud synnwyr i chi","description":"Os
+        oes arnoch angen benthyca arian, mae sawl ffordd i\u2019w wneud. Gweler ein
+        canllaw yma","body":"<p class=\"intro\">Bydd bron pob un ohonom angen benthyca
+        arian yn ein bywyd, ar gyfer unrhyw beth o gar newydd i welliannau cartref.
+        </p><p>Gall yr ystod o opsiynau ymddangos yn ddryslyd, a gall y costau sy\u2019n
+        gysylltiedig \u00e2 benthyca arian amrywio\u2019n eang. </p><p>Rydym yn ystyried
+        rhai o\u2019r opsiynau ynghylch benthyca arian - a faint y gallant ei gostio.
+        </p><h2>Benthyciadau diwrnod cyflog </h2><p>Benthyciadau byr dymor, gyda\u2019r
+        bwriad o roi arian i chi tan eich diwrnod cyflog nesaf. </p><p>Manteision
+        </p><ul><li>Gall taliad gymryd ychydig o funudau\u2019n unig, \u00e2\u2019r
+        gwaith papur lleiaf i\u2019w ddarparu.</li><li>Derbynnir credyd gwael.</li></ul><h3>Anfanteision
+        </h3><ul><li>Mae\u2019r mwyafrif o ddarparwyr benthyciadau diwrnod cyflog
+        yn codi rhwng \u00a325 a \u00a330 mewn llog y mis am bob \u00a3100 rydych
+        yn ei fenthyca.</li><li>Dim ond os ydych yn ad-dalu\u2019r benthyciad yn brydlon
+        y bydd hyn yn digwydd. Os ydych yn ad-dalu\u2019n hwyr, fel arfer codir ffi
+        ddiffygdalu o oddeutu \u00a330 arnoch a llog dyddiol ar ben.</li><li>Felly
+        mae benthyciad diwrnod cyflog yn rheoladwy dim ond os ydych yn ei ad-dalu\u2019n
+        brydlon heb ei rolio drosodd. Fel arall, byddwch yn talu mwy o log a ffioedd
+        ar falans sy\u2019n cynyddu fwyfwy bob mis.</li><li>Gall y benthyciadau hyn
+        arwain at ddyled ddifrifol; cyn cymryd un, gweler ein <a title=\"Benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans\">Cyngor
+        ar fenthyciadau diwrnod cyflog</a></li></ul><h2>Gorddrafftiau: </h2><p>Gall
+        gorddrafft banc fod wedi neu heb ei awdurdodi.\u00a0Trefnir gorddrafftiau
+        awdurdodedig o flaen llaw. Rydych yn cytuno i gyfyngiad benthyca gyda\u2019ch
+        banc, a gallwch wario arian hyd at y cyfyngiad hwnnw. </p><p>Mae gorddrafftiau
+        heb awdurdod yn digwydd pan rydych yn gwario mwy na sydd gennych yn eich cyfrif
+        banc heb gytuno ar hynny ymlaen llaw ac rydych chi\u2019n mynd i orddrafft
+        neu os ydych yn mynd dros y cyfyngiad gorddrafft rydych wedi\u2019i gytuno
+        gyda\u2019ch banc. </p><h3>Manteision </h3><ul><li>Mae gorddrafftiau\u2019n
+        ddefnyddiol os yw eich cyfrif bron yn wag erbyn diwedd y mis \u2013 er enghraifft,
+        i\u2019ch helpu chi i wneud taliad mawr ychydig ddyddiau cyn eich diwrnod
+        cyflog.\u00a0</li><li>Gall gorddrafft wedi\u2019i awdurdodi eich helpu chi
+        i osgoi ffioedd mwy os byddwch chi\u2019n llithro i\u2019r coch</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel - fel rheol mae banciau a chymdeithasau adeiladu\u2019n
+        codi oddeutu 15%-20% mewn llog, hyd yn oed ar gyfer gorddrafftiau wedi\u2019i
+        awdurdodi.</li><li>Mae\u2019r llog ar orddrafft heb ei awdurdodi\u2019n uwch
+        fel rheol.\u00a0</li><li>Ffioedd. Oni bai fod eich cyfrif yn un addas iawn
+        i orddrafft, mae pob gorddrafft wedi\u2019i awdurdodi\u2019n costio ffi o
+        tua \u00a35 i \u00a310 bob mis - mae gorddrafftiau heb eu hawdurdodi\u2019n
+        costio mwy</li></ul><h2>Cardiau credyd: </h2><p>Mae cerdyn credyd yn caniat\u00e1u
+        i chi wario arian ar gredyd. Gallwch wario hyd at eich terfyn credyd, a allai
+        fod yn ychydig gannoedd neu hyd yn oed ychydig filoedd o bunnoedd, gan ddibynnu
+        ar ba mor hyderus mae''r banc y gallwch chi ei dalu''n \u00f4l. </p><p>Manteision
+        </p><ul><li>Mae cardiau credyd yn hawdd i\u2019w cael a\u2019u defnyddio.</li><li>Mae\u2019r
+        mwyafrif o gardiau credyd yn eich diogelu ar gyfer unrhyw bryniad dros \u00a3100
+        ac yn llai na \u00a330,000.</li><li>Hefyd maent yn fwy diogel nag arian parod
+        - os yw\u2019ch cerdyn yn cael ei ddwyn, gallwch ei ganslo.\u00a0</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel. Os na fyddwch yn talu eich balans ar ddiwedd pob
+        mis, bydd rhaid i chi dalu llog a thaliadau.</li><li>Ffioedd - heblaw am y
+        llog, gall ffioedd fod yn uchel os collwch daliad misol neu os ewch heibio
+        i\u2019ch terfyn credyd.</li><li>Gwyliwch rhag dyledion. Os byddwch yn colli
+        hyd yn oed un taliad, bydd y llog yn dechrau cronni. Oni bai eich bod yn talu''r
+        hyn sy''n ddyledus bob mis, gallwch fynd \u00a0i ddyled yn gyflym iawn.</li><li>Darllenwch
+        ein canllaw defnyddiol i <a title=\"Cardiau credyd\" href=\"https://www.moneyadviceservice.org.uk/en/articles/credit-cards\">Gardiau
+        credyd</a></li></ul><h2>Benthyciadau nas gwarentir </h2><p>Mae benthyciadau
+        personol nas gwarentir ar gael i bawb ag o leiaf sg\u00f4r credyd rhesymol
+        - nid oes rhaid ichi fod yn berchennog cartref i wneud cais. </p><p>Yn cael
+        eu cynnig gan y mwyafrif o fanciau a darparwyr benthyciadau eraill, gellir
+        defnyddio benthyciadau personol er mwyn benthyca unrhyw swm o \u00a31,000
+        hyd at oddeutu \u00a325,000. </p><h3>Manteision </h3><ul><li>Cyllidebu \u2013
+        bydd y taliad misol a\u2019r gyfradd llog fel arfer yn sefydlog am y tymor
+        benthyciad cyfan</li><li>Pryniadau wedi\u2019u cynllunio e.e car neu er mwyn
+        rhoi trefn ar ddyledion presennol ar gerdyn credyd a cherdyn siop</li></ul><h3>Anfanteision
+        </h3><ul><li>Fe allech beidio \u00e2 chael yr APR a hysbysebir gan ei fod
+        yn dibynnu ar eich statws credyd \u2013 felly gwiriwch yr amodau a thelerau
+        yn ofalus cyn i chi dderbyn y benthyciad.</li><li>Bydd cymryd y benthyciad
+        dros dymor hirach yn lleihau eich taliadau misol ond bydd y swm gyfan fydd
+        i\u2019w had-dalu yn uwch</li></ul><h2>Dewis y math cywir o gredyd ar eich
+        cyfer chi </h2><p>Dylech hefyd wneud yn si\u0175r eich bod yn dewis y math
+        gorau o gredyd neu fenthyciad ar gyfer eich sefyllfa chi. Fel arall, gallech
+        fod yn talu mwy nag y mae angen ichi ei dalu. Chwiliwch i weld beth sydd ar
+        gael a chymharu cynigion, gan ystyried y canlynol: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y
+        gyfradd llog (APR) </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y gost bob wythnos
+        neu bob mis </p><p>\u2022\u00a0\u00a0\u00a0\u00a0faint y byddwch chi''n ei
+        dalu''n \u00f4l i gyd, ac </p><p>\u2022\u00a0\u00a0\u00a0\u00a0unrhyw gosbau
+        am fethu taliadau neu daliadau hwyr </p><p>Nid yw pob opsiwn credyd yn rhai
+        da na diogel. Os oes gennych chi statws credyd gwael, efallai y cewch eich
+        temtio i ddefnyddio benthyciwr carreg drws neu gwmni benthyciad diwrnod cyflog.
+        Fodd bynnag, mae\u2019r rhain yn ddrud a dylid eu hosgoi. </p><u></u>","date":"2014-05-07T08:55:33+00:00"},{"id":"gwnewch-yn-si\u0175r-fod-cost-benthyca-arian-yn-gwneud-synnwyr-i-chi","title":"Gwnewch
+        yn si\u0175r fod cost benthyca arian yn gwneud synnwyr i chi","description":"Os
+        oes arnoch angen benthyca arian, mae sawl ffordd i\u2019w wneud. Gweler ein
+        canllaw yma","body":"<p class=\"intro\">Bydd bron pob un ohonom angen benthyca
+        arian yn ein bywyd, ar gyfer unrhyw beth o gar newydd i welliannau cartref.
+        </p><p>Gall yr ystod o opsiynau ymddangos yn ddryslyd, a gall y costau sy\u2019n
+        gysylltiedig \u00e2 benthyca arian amrywio\u2019n eang. </p><p>Rydym yn ystyried
+        rhai o\u2019r opsiynau ynghylch benthyca arian - a faint y gallant ei gostio.
+        </p><h2>Benthyciadau diwrnod cyflog </h2><p>Benthyciadau byr dymor, gyda\u2019r
+        bwriad o roi arian i chi tan eich diwrnod cyflog nesaf. </p><p>Manteision
+        </p><ul><li>Gall taliad gymryd ychydig o funudau\u2019n unig, \u00e2\u2019r
+        gwaith papur lleiaf i\u2019w ddarparu.</li><li>Derbynnir credyd gwael.</li></ul><h3>Anfanteision
+        </h3><ul><li>Mae\u2019r mwyafrif o ddarparwyr benthyciadau diwrnod cyflog
+        yn codi rhwng \u00a325 a \u00a330 mewn llog y mis am bob \u00a3100 rydych
+        yn ei fenthyca.</li><li>Dim ond os ydych yn ad-dalu\u2019r benthyciad yn brydlon
+        y bydd hyn yn digwydd. Os ydych yn ad-dalu\u2019n hwyr, fel arfer codir ffi
+        ddiffygdalu o oddeutu \u00a330 arnoch a llog dyddiol ar ben.</li><li>Felly
+        mae benthyciad diwrnod cyflog yn rheoladwy dim ond os ydych yn ei ad-dalu\u2019n
+        brydlon heb ei rolio drosodd. Fel arall, byddwch yn talu mwy o log a ffioedd
+        ar falans sy\u2019n cynyddu fwyfwy bob mis.</li><li>Gall y benthyciadau hyn
+        arwain at ddyled ddifrifol; cyn cymryd un, gweler ein <a title=\"Benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans\">Cyngor
+        ar fenthyciadau diwrnod cyflog</a></li></ul><h2>Gorddrafftiau: </h2><p>Gall
+        gorddrafft banc fod wedi neu heb ei awdurdodi.\u00a0Trefnir gorddrafftiau
+        awdurdodedig o flaen llaw. Rydych yn cytuno i gyfyngiad benthyca gyda\u2019ch
+        banc, a gallwch wario arian hyd at y cyfyngiad hwnnw. </p><p>Mae gorddrafftiau
+        heb awdurdod yn digwydd pan rydych yn gwario mwy na sydd gennych yn eich cyfrif
+        banc heb gytuno ar hynny ymlaen llaw ac rydych chi\u2019n mynd i orddrafft
+        neu os ydych yn mynd dros y cyfyngiad gorddrafft rydych wedi\u2019i gytuno
+        gyda\u2019ch banc. </p><h3>Manteision </h3><ul><li>Mae gorddrafftiau\u2019n
+        ddefnyddiol os yw eich cyfrif bron yn wag erbyn diwedd y mis \u2013 er enghraifft,
+        i\u2019ch helpu chi i wneud taliad mawr ychydig ddyddiau cyn eich diwrnod
+        cyflog.\u00a0</li><li>Gall gorddrafft wedi\u2019i awdurdodi eich helpu chi
+        i osgoi ffioedd mwy os byddwch chi\u2019n llithro i\u2019r coch</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel - fel rheol mae banciau a chymdeithasau adeiladu\u2019n
+        codi oddeutu 15%-20% mewn llog, hyd yn oed ar gyfer gorddrafftiau wedi\u2019i
+        awdurdodi.</li><li>Mae\u2019r llog ar orddrafft heb ei awdurdodi\u2019n uwch
+        fel rheol.\u00a0</li><li>Ffioedd. Oni bai fod eich cyfrif yn un addas iawn
+        i orddrafft, mae pob gorddrafft wedi\u2019i awdurdodi\u2019n costio ffi o
+        tua \u00a35 i \u00a310 bob mis - mae gorddrafftiau heb eu hawdurdodi\u2019n
+        costio mwy</li></ul><h2>Cardiau credyd: </h2><p>Mae cerdyn credyd yn caniat\u00e1u
+        i chi wario arian ar gredyd. Gallwch wario hyd at eich terfyn credyd, a allai
+        fod yn ychydig gannoedd neu hyd yn oed ychydig filoedd o bunnoedd, gan ddibynnu
+        ar ba mor hyderus mae''r banc y gallwch chi ei dalu''n \u00f4l. </p><p>Manteision
+        </p><ul><li>Mae cardiau credyd yn hawdd i\u2019w cael a\u2019u defnyddio.</li><li>Mae\u2019r
+        mwyafrif o gardiau credyd yn eich diogelu ar gyfer unrhyw bryniad dros \u00a3100
+        ac yn llai na \u00a330,000.</li><li>Hefyd maent yn fwy diogel nag arian parod
+        - os yw\u2019ch cerdyn yn cael ei ddwyn, gallwch ei ganslo.\u00a0</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel. Os na fyddwch yn talu eich balans ar ddiwedd pob
+        mis, bydd rhaid i chi dalu llog a thaliadau.</li><li>Ffioedd - heblaw am y
+        llog, gall ffioedd fod yn uchel os collwch daliad misol neu os ewch heibio
+        i\u2019ch terfyn credyd.</li><li>Gwyliwch rhag dyledion. Os byddwch yn colli
+        hyd yn oed un taliad, bydd y llog yn dechrau cronni. Oni bai eich bod yn talu''r
+        hyn sy''n ddyledus bob mis, gallwch fynd \u00a0i ddyled yn gyflym iawn.</li><li>Darllenwch
+        ein canllaw defnyddiol i <a title=\"Cardiau credyd\" href=\"https://www.moneyadviceservice.org.uk/en/articles/credit-cards\">Gardiau
+        credyd</a></li></ul><h2>Benthyciadau nas gwarentir </h2><p>Mae benthyciadau
+        personol nas gwarentir ar gael i bawb ag o leiaf sg\u00f4r credyd rhesymol
+        - nid oes rhaid ichi fod yn berchennog cartref i wneud cais. </p><p>Yn cael
+        eu cynnig gan y mwyafrif o fanciau a darparwyr benthyciadau eraill, gellir
+        defnyddio benthyciadau personol er mwyn benthyca unrhyw swm o \u00a31,000
+        hyd at oddeutu \u00a325,000. </p><h3>Manteision </h3><ul><li>Cyllidebu \u2013
+        bydd y taliad misol a\u2019r gyfradd llog fel arfer yn sefydlog am y tymor
+        benthyciad cyfan</li><li>Pryniadau wedi\u2019u cynllunio e.e car neu er mwyn
+        rhoi trefn ar ddyledion presennol ar gerdyn credyd a cherdyn siop</li></ul><h3>Anfanteision
+        </h3><ul><li>Fe allech beidio \u00e2 chael yr APR a hysbysebir gan ei fod
+        yn dibynnu ar eich statws credyd \u2013 felly gwiriwch yr amodau a thelerau
+        yn ofalus cyn i chi dderbyn y benthyciad.</li><li>Bydd cymryd y benthyciad
+        dros dymor hirach yn lleihau eich taliadau misol ond bydd y swm gyfan fydd
+        i\u2019w had-dalu yn uwch</li></ul><h2>Dewis y math cywir o gredyd ar eich
+        cyfer chi </h2><p>Dylech hefyd wneud yn si\u0175r eich bod yn dewis y math
+        gorau o gredyd neu fenthyciad ar gyfer eich sefyllfa chi. Fel arall, gallech
+        fod yn talu mwy nag y mae angen ichi ei dalu. Chwiliwch i weld beth sydd ar
+        gael a chymharu cynigion, gan ystyried y canlynol: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y
+        gyfradd llog (APR) </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y gost bob wythnos
+        neu bob mis </p><p>\u2022\u00a0\u00a0\u00a0\u00a0faint y byddwch chi''n ei
+        dalu''n \u00f4l i gyd, ac </p><p>\u2022\u00a0\u00a0\u00a0\u00a0unrhyw gosbau
+        am fethu taliadau neu daliadau hwyr </p><p>Nid yw pob opsiwn credyd yn rhai
+        da na diogel. Os oes gennych chi statws credyd gwael, efallai y cewch eich
+        temtio i ddefnyddio benthyciwr carreg drws neu gwmni benthyciad diwrnod cyflog.
+        Fodd bynnag, mae\u2019r rhain yn ddrud a dylid eu hosgoi. </p><u></u>","date":"2014-05-07T08:36:10+00:00"},{"id":"nifer-o-gartrefi-mewn-sefyllfa-ariannol-fregus-wedi-treblu-ers-2007","title":"Nifer
+        o gartrefi \u2018mewn sefyllfa ariannol fregus\u2019 wedi treblu ers 2007","description":"Mae\u2019r
+        nifer o gartrefi mewn sefyllfa ariannol fregus ym Mhrydain Fawr wedi treblu
+        yn y pum mlynedd diwethaf gydag un o bob pump wedi eu heffeithio, mae adroddiad
+        newydd yn ei honni.","body":"<p><strong> Dyddiad cyhoeddi: 27 Mawrth 2013</strong></p><p
+        class=\"intro\">Mae\u2019r nifer o gartrefi mewn sefyllfa ariannol fregus
+        ym Mhrydain Fawr wedi treblu yn y pum mlynedd diwethaf gydag un o bob pump
+        wedi eu heffeithio, mae adroddiad newydd yn ei honni. </p><p>Ar ben arall
+        y raddfa, mae astudiaeth y Genworth Index yn dangos bod llai nag un o bob
+        deg o gartrefi\u2019n ystyried eu bod yn ariannol ddiogel. </p><p>Pan ofynnwyd
+        iddynt am ddewis y ffactorau pwysicaf wrth asesu eu sefyllfa ariannol yn y
+        dyfodol dywedodd preswylwyr cartrefi Prydain eu bod yn poeni am gostau byw
+        cynyddol, lefel yr incwm maent yn ei dderbyn o\u2019r gwaith, lefel eu cynilion,
+        a diogelwch swydd. </p><p>Mae\u2019r adroddiad yn honni bod y wasgfa hon ar
+        gynilion yn effeithio\u2019n uniongyrchol ar y farchnad dai yn y Deyrnas Unedig
+        gyda llawer o ddefnyddwyr yn methu cynilo digon i ddod o hyd i\u2019r ernesau
+        mawr mae darparwyr benthyciadau eu hangen heddiw er mwyn prynu cartref cyntaf
+        neu symud i fyny\u2019r ysgol eiddo. </p><p>Mae cipion o\u2019r astudiaeth
+        fyd-eang yn dangos bod Prydain o flaen Ffrainc a\u2019r Almaen ond ar \u00f4l
+        y gwledydd Nordig ynghylch diogelwch ariannol. Ar waelod y tabl mae\u2019r
+        Eidal, Portiwgal a Groeg. </p><p>Hefyd mae\u2019r Genworth Index yn amlygu
+        lefel uchel o besimistiaeth yng nghartrefi Prydain Fawr ynghylch a fydd eu
+        rhagolygon ariannol yn gwella dros y 12 mis nesaf. </p><p>Mae mwy nag un o
+        bob pedwar yn disgwyl y bydd eu sefyllfa ariannol yn gwaethygu yn ystod y
+        cyfnod hwn o amser tra bod dau o bob pump yn unig yn meddwl y bydd yn gwella.
+        </p><p>Mae deiliaid tai yng ngraddau cymdeithasol D ac E yn poeni am daliadau
+        nawdd cymdeithasol fwyaf tra bod y rhai hynny yng ngraddau cymdeithasol A
+        a B yn poeni am lefel eu hincwm o\u2019r gwaith fwyaf. </p><p><a title=\"Genworth
+        Index\" target=\"_blank\" href=\"http://www.genworth.co.uk/about-us/research/genworth-index.html\">Darllenwch
+        fanylion llawn y Genworth Index</a>. </p><p><strong>Teimlo\u2019r wasgfa?
+        <a title=\"money stretcher\" href=\"/cy/tools/cyfrifiannell-estynnydd-arian\">Gall
+        ein Cyfrifiannell estynnydd arian eich helpu i weithio allan am faint all
+        eich arian bara dros gyfnod penodol</a>.</strong></p><p><em>Credyd llun: oxfordian.world</em></p>","date":"2014-04-30T09:31:05+00:00"},{"id":"cyllideb-2014-cynilion-pensiynau-seidr-a-bingo","title":"Cyllideb
+        2014: Cynilion, pensiynau, seidr a bingo","description":"Pwy oedd yr enillwyr
+        a chollwyr yn y gyllideb eleni?","body":"<p class=\"intro\"> Cyffyrddodd Cyllideb
+        2014 \u00e2 phopeth o filiau ynni ac ISAs i bris chwisgi a threth bingo. </p><p>Cynhwyswyd
+        tyllau yn yr heol a hediadau pellter hir, a datgelwyd darn arian \u00a31 newydd,
+        ond y newyddion mawr oedd yr hyn ynghylch pensiynau a chynilion. </p><p>Felly,
+        os ydych yn drethdalwr neu\u2019n gynilwr - neu\u2019r ddau - sut fydd cyhoeddiadau
+        heddiw yn effeithio arnoch chi? Cymerwch ein harolwg isod a rhowch wybod inni
+        sut rydych yn ystyried y bydd y newidiadau\u2019n effeithio arnoch chi. </p><h2>Cynilwyr\u00a0
+        </h2><p><strong>Beth:</strong> Bydd y terfyn ISA\u2019n codi o \u00a311,520
+        i \u00a315,000 o 1 Gorffennaf, a bydd cynilwyr yn gallu rhoi eu holl arian
+        mewn <a title=\"ISA arian parod\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cyfrifon-isa-arian-parod\">ISA
+        arian parod</a>. Hyd at yn awr, dim ond hanner y gellid ei roi mewn ISA arian
+        parod, tra bod rhaid buddsoddi\u2019r gweddill mewn ISA stociau a chyfranddaliadau.
+        </p><p> Hefyd bydd cynilwyr ifanc yn elwa o\u2019r siglad i gynilion, gan
+        fod y terfynau ar gyfer <a title=\"ISA Iau\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/isas-i-bobl-iau\">ISAs
+        i Bobl iau</a> a <a href=\"/cy/articles/cyfrifon-cronfa-ymddiriedolaeth-plant\">Chronfeydd
+        Ymddiriedolaeth Plant</a> yn codi o \u00a33,720 hyd at \u00a34,000. </p><p>
+        Ar hyn o bryd trethir y \u00a32,790 cyntaf o gynilion uwchlaw\u2019r lwfans
+        personol di-dreth ar gyfradd o 10%. Ond mae\u2019r Canghellor wedi tynnu\u2019r
+        dreth hon i helpu cynilwyr ar incwm is. Mae\u2019r llywodraeth yn amcangyfrif
+        y bydd 1.5 miliwn o bobl yn elwa o\u2019r fargen hon. </p><p>Hefyd bydd gan
+        gefnogwyr <a title=\"Bondiau Premiwm\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/bondiau-premiwm\">Bondiau
+        Premiwm</a> reswm i wenu, gan fod y cap ar fuddsoddiadau yn y ffefryn Cynilion
+        a Buddsoddiadau Cenedlaethol yn mynd i gael ei godi, am y tro cyntaf ers 2003,
+        yn codi o \u00a330,000 i \u00a340,000. Bydd y swm y gall pobl ei fuddsoddi
+        mewn Bondiau Premiwm yn cynyddu eto yn 2015-2016, yn codi i \u00a350,000.
+        A bydd y nifer o wobrau \u00a31 miliwn yn dyblu hyd at ddwy y mis. </p><p><strong>Pryd</strong>:
+        O 1 Gorffennaf (ISAs), Mehefin (cynnydd yn y cap buddsoddi) ac Awst (cynnydd
+        yn y wobr) 2014. </p><h2>Trethdalwyr </h2><p><strong>Beth</strong>: Bydd y
+        <a title=\"Eich cyfradd treth\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/eich-cyfradd-dreth-a-pam-ei-bod-yn-bwysig\">lwfans
+        personol</a> di-dreth yn codi o \u00a310,000 i \u00a310,500. Ystyrir y bydd
+        y trethdalwr sylfaenol neu gyfradd uwch cyfartalog yn elwa o \u00a3100 y flwyddyn.
+        </p><p>Bydd trethdalwyr sy\u2019n briod yn gweld newid i\u2019w trethi hefyd,
+        gan fod y Canghellor wedi cadarnhau y sefydlir y lwfans treth trosglwyddadwy
+        ar gyfer cyplau priod a phartneriaid sifil ar 10% o\u2019r lwfans personol
+        o 2015-2016 ymlaen - dyna \u00a31,050 yr unigolyn. </p><p>Bydd y trothwy ar
+        gyfer treth incwm 40c yn codi oddi ar \u00a341,450 hyd at \u00a341,865 ac
+        o 1% pellach hyd at \u00a342,285 o 2015 ymlaen. </p><p><strong>Pryd</strong>:
+        Ebrill 2014 </p><h2>Gweithwyr </h2><p><strong>Beth</strong>:Bydd yr Isafswm
+        Cyflog Cenedlaethol yn codi o 3% hyd at \u00a36.50 yr awr. Hefyd bydd cynnydd
+        o 2% yn yr isafswm cyflog ar gyfer gweithwyr ifanc a phrentisiaid - 1 miliwn
+        arfaethedig o oedolion yn elwa. </p><p><strong>Pryd</strong>: O Hydref 2014
+        ymlaen </p><h2>Rhieni </h2><p><strong>Beth:</strong> Caiff y cap ar <a title=\"Eich
+        dewisiadau gofal plant\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/deall-eich-opsiynau-gofal-plant\">gostau
+        gofal plant</a> di-dreth - y gall rhieni hawlio 20% o gymorth yn ei erbyn
+        gan y Wladwriaeth - ei gynyddu hyd at \u00a310,000 oddi ar y cap blaenorol
+        o \u00a36,000. Mae hyn yn golygu, ar gyfer pob 80c mae rhieni\u2019n ei wario
+        ar ofal plant, bydd y llywodraeth yn ychwanegu 20c. </p><p><strong>Pryd:</strong>
+        O hydref 2015 ymlaen </p><h2>Pensiynwyr </h2><p><strong>Beth</strong>: Mae\u2019r
+        llywodraeth wedi codi rhai cyfyngiadau treth ar allu pensiynwyr i gyrchu eu
+        <a title=\"Cyngor ar bensiynau\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/pryd-a-ble-i-gael-cymorth-a-chyngor-ar-bensiynau\">cronfa
+        bensiwn</a> - gan ddiddymu\u2019r gofyniad effeithiol i brynu blwydd-dal.
+        Codir y rhan drethadwy o\u2019r gronfa bensiwn a gymerir fel arian parod ar
+        ymddeoliad ar y gyfradd dreth incwm arferol. </p><p><strong>Pryd</strong>:
+        Ebrill 2014 - Ionawr 2015 </p><h2>Gyrwyr </h2><p><strong>Beth</strong>: Ni
+        fydd y doll ar danwydd, y bwriadwyd y byddai\u2019n cynyddu ym mis Medi o
+        2c, yn codi. </p><p><strong>Pryd</strong>: Dim gweithredu </p><h2>Perchnogion
+        tai:\u00a0 </h2><p><strong>Beth:</strong> Caiff y <a title=\"Cymorth i brynu\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/cynllun-help-i-brynu-cael-gwybod-popeth-sydd-ei-angen-arnoch\">cynllun
+        Cymorth i Brynu</a> ar gyfer cartrefi Adeiladu Newydd ei ymestyn er mwyn annog
+        mwy o dwf yn y \u00a0farchnad eiddo domestig. Bydd cefnogaeth ariannol er
+        mwyn annog mwy na 200,000 o gartrefi newydd eu hadeiladu, a chlustnodwyd \u00a3140
+        miliwn ar gyfer trwsiadau a chynhaliaeth ynghylch amddiffyn rhag llifogydd.
+        Hefyd mae \u00a3200 miliwn ar gyfer trwsio tyllau ffordd. Mae\u2019n debygol
+        y bydd biliau ynni\u00a0 cartrefi\u2019n lleihau o \u00a315 y flwyddyn ar
+        gyfartaledd yn dilyn cap ar Gymorth Pris Carbon. </p><p><strong>Pryd</strong>:
+        Yn syth </p><h2>Yfwyr, ysmygwyr a chwaraewyr bingo </h2><p><strong>Beth:</strong>
+        Dylai chwaraewyr bingo elwa\u2019n anuniongyrchol o ganlyniad i\u2018r hanneru
+        ar y doll ar chwarae bingo, sy\u2019n golygu y bydd rhaid i\u2019r sefydliadau
+        dalu 10% yn unig o ran toll yn hytrach na 20% - mae\u2019n bosibl y byddant
+        yn trosglwyddo rhai arbedion i gwsmeriaid mewn gwobrau mwy. Bydd yfwyr seidr
+        a gwirodydd yn croesawu\u2019r ffaith bod y doll wedi\u2019i rhewi. Hefyd
+        bydd gan yfwyr cwrw reswm i godi eu gwydryn gan fod y Canghellor wedi cadarnhau
+        y tynnir ceiniog oddi ar bris peint. Bydd tybaco\u2019n dal i ddenu cynnydd
+        blynyddol o 2% yn y doll </p><p><strong>Pryd</strong>: Ebrill 2014 </p><h2>Teithwyr
+        </h2><p><strong>Beth:</strong>\u00a0 Caiff yr holl gyfraddau tollau ar hediadau
+        pellter hir eu lleihau i\u2019r un swm a godir ar hyn o bryd ar hediadau i\u2019r
+        UD, lleihad o rhwng \u00a316 a \u00a327 yr unigolyn yr hediad. </p><p><strong>Pryd:</strong>
+        O 1 Ebrill, 2015 </p>","date":"2014-04-25T16:11:05+00:00"},{"id":"sut-i-wellach-adroddiad-credyd-a-chael-bargen-well","title":"Sut
+        i wella''ch adroddiad credyd a chael bargen well","description":"Dywed un
+        o bob chwech o Brydeinwyr fod eu statws credyd wedi achosi problemau ariannol
+        iddynt.","body":"<p class=\"intro\"> Dywed un o bob chwech o Brydeinwyr fod
+        eu graddiad credyd wedi achosi problemau ariannol iddynt mewn sefyllfaoedd
+        yn amrywio\u00a0 o gael morgais i gymryd contract ff\u00f4n symudol. </p><p>Mae
+        ymchwil newydd gan y Gwasanaeth Cynghori Ariannol yn dangos nad yw dau o bob
+        tri wedi gwirio eu hadroddiadau credyd yn y pum mlynedd diwethaf, ac nad yw
+        llawer yn gwybod sut i fynd ati i wella eu graddiad credyd.\u00a0 </p><p>Mae
+        adroddiadau credyd yn darparu adroddiad manwl o hanes credyd unigolyn, a ddefnyddir
+        wedyn gan ddarparwyr benthyciadau i benderfynu eu teilygdod credyd - mewn
+        geiriau eraill, pa mor debygol ydyw y byddwch yn ad-dalu\u2019r benthyciad
+        gwreiddiol. Po uchaf y risg po fwyaf tebygol y caiff eich cais am gredyd ei
+        wrthod neu y caiff y gost o gael credyd ei chynyddu. </p><p>Felly mae\u2019n
+        bwysig eu gwirio\u2019n rheolaidd, ac yn arbennig cyn gwneud cais mawr am
+        gredyd fel morgais, er mwyn cynyddu\u2019ch gobeithion o wneud cais llwyddiannus
+        am gredyd.\u00a0 </p><h2>Sut i gael ffeil gredyd </h2><p>Mae gennych hawl
+        i gael copi o\u2019ch Adroddiad Statudol am \u00a32 gan un o\u2019r prif asiantaethau
+        credyd - Experian, Equifax a Callcredit (Noddle) - sydd hefyd yn darparu mynediad
+        am ddim\u00a0 at ystod o wasanaethau eraill am gyfnod treialu sydd fel arfer
+        yn parhau am 30 diwrnod. Cofiwch y byddwch angen canslo cyn diwedd y cyfnod
+        treialu os nad ydych eisiau\u2019r gwasanaethau ychwanegol, sydd fel arfer
+        yn costio oddeutu \u00a315 y mis. </p><h2>Os gwelwch wall </h2><p>Unwaith
+        y cewch eich ffeil gredyd, gwiriwch hi am gywirdeb - dywedodd oddeutu un o
+        bob pump o\u2019r bobl yn ein harolwg eu bod wedi canfod gwallau, a allai
+        arwain at delerau llai ffafriol neu hyd yn oed gweld eich cais am gredyd yn
+        cael ei wrthod yn gyfangwbl. </p><p>Os gwelwch wall, fel y cod post anghywir
+        ar gyfer eich cyfeiriad, cysylltwch \u00e2\u2019r asiantaeth gredyd i\u2019w
+        gywiro. Gall rhai gwallau fod yn fwy difrifol, fel taliadau a fethwyd rydych
+        yn dadlau yn eu cylch. Mae\u2019n bosibl y gofynnir ichi ddarparu tystiolaeth
+        o\u2019r gwall dan sylw. </p><p>Yn y cyfamser gallwch ofyn i nodyn gael ei
+        ychwanegu at eich ffeil tra\u2019ch bod yn ceisio cywiriad gan yr asiantaeth
+        gredyd. Os nad ydych yn fodlon o hyd gallwch ofyn i <a title=\"Swyddfa\u2019r
+        Comisiynydd Gwybodaeth\" target=\"_blank\" href=\"http://ico.org.uk/complaints\">Swyddfa\u2019r
+        Comisiynydd Gwybodaeth</a> adolygu unrhyw anghydfodau. </p><h2>Sut i wella''ch
+        adroddiad credyd </h2><p>Nid yw pob problem gydag adroddiadau credyd wedi\u2019i
+        hachosi gan wallau. </p><p>Mae pethau y gallwch eu gwneud i <a title=\"Sut
+        i wellach adroddiad credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd\">wella\u2019ch
+        adroddiad credyd</a>. Er enghraifft, problem nodweddiadol - yn arbennig ymhlith
+        pobl ifanc - yw nad ydych ar y Gofrestr Etholiadol, sy\u2019n ei wneud yn
+        anos i ddarparwyr benthyciadau brofi\u2019ch hunaniaeth neu wirio\u2019ch
+        hanes credyd. </p><p>Bydd gwneud ad-daliadau credyd yn brydlon, ac osgoi gwneud
+        ceisiadau lluosog o fewn cyfnod byr o amser yn helpu i wella\u2019ch graddiad
+        credyd. Hefyd gallai cysylltiadau ariannol \u00e2 phobl eraill, fel eich gwraig
+        neu \u0175r neu hyd yn oed priod neu bartner blaenorol, effeithio ar eich
+        gallu i gael credyd neu hyd yn oed i agor cyfrif banc os oes ganddynt hanes
+        credyd gwael. </p><h2>Adolygu\u2019ch cyllideb bersonol </h2><p>Mae rhai ffactorau\u2019n
+        gymharol gyflym i\u2019w trafod, ond bydd eraill yn cymryd mwy o amser i ymdrin
+        \u00e2 nhw. Os oes gennych lawer o ddyledion presennol mae\u2019n bosibl y
+        bydd darparwyr benthyciadau\u2019n amheus ynghylch gwneud busnes gyda chi.
+        Oherwydd hyn mae\u2019n syniad da i <a title=\"Cynllunydd cyllideb\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">adolygu\u2019ch
+        cyllideb bersonol</a> a chwilio am ffyrdd i leihau\u2019r hyn sydd arnoch
+        ar hyn o bryd cyn edrych am fwy o gredyd. </p><p>Hyd yn oed os na allwch leihau\u2019ch
+        lefel o ddyled y tu hwnt i\u2019ch ad-daliadau cyt\u00fbn, sicrhewch eich
+        bod yn gwneud ad-daliadau\u2019n brydlon. Cofnodir taliadau a fethwyd ar eich
+        ffeil gredyd am hyd at chwe blynedd a gallent atal darparwyr benthyciadau
+        rhag gwneud busnes gyda chi yn y dyfodol. </p><h2>Awgrymiadau defnyddiol gan
+        yr asiantaethau credyd </h2><p>Siaradon ni \u00e2\u2019r asiantaethau gwirio
+        credyd, a drosglwyddodd yr awgrymiadau defnyddiol dilynol ynghylch darllen
+        a defnyddio adroddiadau credyd: </p><ul><li>Defnyddiwch rywfaint o gredyd
+        ar yn rheolaidd, ond peidiwch byth \u00e2 chymryd mwy na\u2019r hyn y gallwch
+        ei fforddio</li><li>Arhoswch o fewn terfynau credyd cyt\u00fbn ac ad-dalwch
+        yn brydlon bob amser, gan dalu mwy na\u2019r isafswm ar filiau cerdyn credyd
+        bob mis os yn bosibl</li><li>Gwiriwch fod eich adroddiad yn gywir. Gall asiantaethau
+        credyd eich helpu i ddadlau ynghylch unrhyw wybodaeth rydych yn ystyried ei
+        bod yn anghywir. Hefyd gallwch ychwanegu \u2018hysbysiad o gywiro\u2019 fel
+        y bydd gan ddarparwyr benthyciadau ddealltwriaeth lawnach o unrhyw faterion
+        perthnasol</li><li>Rhowch eich enw ar y gofrestr etholiadol, gan fod darparwyr
+        benthyciadau\u2019n defnyddio\u2019r gofrestr hon i gadarnhau eich hunaniaeth
+        ac i helpu i frwydro yn erbyn twyll hunaniaeth</li><li>Ceuwch gardiau credyd
+        a chyfrifon nas defnyddir, gan y gallai darparwyr benthyciadau fod yn amheus
+        ynghylch benthyca i gwsmeriaid sydd \u00e2 ffynonellau eraill o gredyd nas
+        defnyddir.</li></ul><h2> Rhestr wirio </h2><p><strong>Pam mae\u2019ch adroddiad
+        credyd yn bwysig</strong> - adroddiad credyd da yw eich tocyn i fenthyciad,
+        morgais a chytundebau credyd gwell, felly mae\u2019n gwneud synnwyr i <a title=\"Beth
+        mae\u2019ch adroddiad credyd yn ei ddatgelu amdanoch\" href=\"https://www.moneyadviceservice.org.uk/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch\">ddeall
+        sut maent yn gweithio</a>. </p><p><strong>Ydych chi wedi gwirio\u2019ch adroddiad
+        credyd?</strong> - <a title=\"A wyddoch beth yw eich sg\u00f4r credyd?\" href=\"https://www.moneyadviceservice.org.uk/cy/news/a-wyddoch-beth-yw-eich-sgor-credyd-nid-ywr-mwyafrif-o-oedolion-yn-y-du-wedi-gwirio-eu-sgor-credyd-ers-pum-mlynedd\">Dim
+        ond un o bob tri sydd wedi cymryd adroddiad credyd</a>, sy\u2019n golygu bod
+        llawer o bobl yn rhedeg y risg o dalu mwy na sydd ei angen oherwydd problemau
+        a gwallau y gallant eu cywiro </p><p><strong>Chwalwr mythau</strong> - <a
+        title=\"Cwis chwalu mythau adroddiad credyd\" href=\"/cy/tools/cwis-y-gwir-am-adroddiadau-credyd\">er
+        mwyn gweld a ydych yn gwybod digon am gredyd</a>. </p><p><strong>Peidiwch
+        \u00e2 cholli cyfle!</strong> - Am ragor o gyngor ariannol a newyddion yn
+        syth i\u2019ch blwch e-bost, <a title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e-byst</a>. </p>","date":"2014-04-25T15:55:00+00:00"},{"id":"a-wyddoch-beth-yw-eich-sgor-credyd-nid-ywr-mwyafrif-o-oedolion-yn-y-du-wedi-gwirio-eu-sgor-credyd-ers-pum-mlynedd","title":"A
+        wyddoch beth yw eich sg\u00f4r credyd? Nid yw\u2019r mwyafrif o oedolion yn
+        y DU wedi gwirio eu sg\u00f4r credyd ers pum mlynedd","description":"Dim ond
+        un o bob tri oedolyn sydd wedi gwirio eu sg\u00f4r credyd yn y pum mlynedd
+        diwethaf.","body":"<p class=\"intro\"> Nid yw dau o bob tri o oedolion y DU
+        wedi gwirio eu hadroddiad credyd yn y pum mlynedd diwethaf - er bod 97% yn
+        dweud eu bod wedi clywed amdanynt. </p><p>Mae ymchwil newydd gan y Gwasanaeth
+        Cynghori Ariannol yn dangos, er bod y mwyafrif o bobl yn gyfarwydd \u00e2\u2019r
+        term, na wyddant ddigon am ei bwrpas - er enghraifft, roedd 13% yn meddwl
+        y\u2019i defnyddir i wirio a oes gennych gofnod troseddol. </p><p>Mae adroddiad
+        credyd yn darparu gwybodaeth ffeithiol ynghylch eich hanes credyd.\u00a0 </p><p>Gall
+        darpar fenthycwyr \u00e2 statws credyd da ddisgwyl mwynhau cyfraddau llog
+        mwy deniadol, tra gwelir y rhai hynny \u00e2 graddiad credyd gwael fel risg
+        uwch sy\u2019n fwy tebygol o dynnu costau mwy ar gyfer credyd, neu o weld
+        eu cais yn cael ei wrthod. </p><h2>Gall adroddiad credyd gwael olygu problemau
+        ariannol </h2><p>Dywed un o bob chwech o Brydeinwyr fod eu graddiad credyd
+        wedi achosi problemau ariannol iddynt. </p><p>Mae naw o bob deg yn deall bod
+        cwmn\u00efau ariannol yn chwilio eu <a title=\"Sut i wirio eich adroddiad
+        credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gweld-eich-adroddiad-credyd\">hadroddiad
+        credyd</a> pan maent yn gwneud cais am gredyd, ond pump o bob deg yn unig
+        a oedd yn sylweddoli y byddai darparwr benthyciadau\u2019n gwirio eu hadroddiad
+        credyd pan maent yn gwneud cais am gontract ff\u00f4n symudol neu wrth iddynt
+        geisio sicrhau llety rhentu. </p><p>Bydd adroddiad credyd yn cynnwys cyfeiriadau
+        at unrhyw ddyfarniadau\u2019r Llys Sirol, <a title=\"Sut i ddelio \u00e2 llythyrau
+        am daliadau hwyr a gorchmynion\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/dylech-flaenoriaethu-a-delio-a-llythyrau-am-daliad-hwyr\">taliadau
+        credyd hwyr</a> a cheisiadau eraill am gredyd - gallai gormod awgrymu eich
+        bod yn profi anawsterau wrth gwrdd \u00e2\u2019ch cytundebau credyd presennol
+        a\u2019ch bod yn cynrychioli cynnig mwy peryglus i ddarparwyr benthyciadau,
+        gan gynyddu\u2019r posibilrwydd y caiff cais ei wrthod. </p><p>Nid yw darparwyr
+        benthyciadau\u2019n defnyddio\u2019ch adroddiad credyd i wirio\u2019ch hanes
+        credyd blaenorol yn unig ond hefyd fel modd profi\u2019ch hunaniaeth. Yn aml
+        mae peidio \u00e2 bod ar y Gofrestr Etholiadol yn rheswm pam mae pobl yn cael
+        eu gwrthod neu\u2019n ei gael yn anodd i gael credyd. </p><h2>Pam gwirio\u2019ch
+        adroddiad credyd? </h2><p>Bydd pob darparwr benthyciadau\u2019n defnyddio
+        meini prawf gwahanol er mwyn asesu\u2019ch teilyngdod credyd, a dyna pam mae\u2019n
+        werth gwirio adroddiadau am eu cywirdeb.\u00a0 </p><p>A gan fod 21% o bobl
+        a gafodd adroddiad credyd yn y pum mlynedd diwethaf yn dweud eu bod wedi canfod
+        gwallau, mae\u2019n gwneud synnwyr i wirio bod yr wybodaeth a ddelir ar eich
+        adroddiad credyd yn gywir ar yn flynyddol ac yn ddelfrydol cyn gwneud unrhyw
+        geisiadau mawr am gredyd fel morgais neu fenthyciad car. </p><p>Hefyd mae\u2019n
+        werth chwilio am ffyrdd o wella\u2019ch graddiad - dywedodd 62% o bobl yn
+        ein harolwg nad oeddynt yn gwybod sut i wneud hyn. </p><h2>Eich Adroddiad
+        Credyd Statudol am \u00a32 </h2><p>Dim ond 26% o oedolion oedd yn gwybod y
+        gallent weld eu Hadroddiad Credyd Statudol am \u00a32, gydag ychydig mwy nag
+        un o bob deg yn dewis y dull hwn. </p><p>Aeth tri o bob pump o oedolion a
+        gafodd adroddiad credyd at Experian. Defnyddiodd eraill\u00a0y ddwy brif asiantaeth
+        gredyd arall, Equifax a Call Credit (Noddle). Erbyn hyn mae\u2019r mwyafrif
+        o asiantaethau credyd yn cynnig cyfnodau treial am ddim sy\u2019n cynnwys
+        ystod o wasanaethau ychwanegol, fel diweddariadau sydyn pan mae newidiadau\u2019n
+        ymddangos ar eich adroddiad credyd, gan ddarparu system rybudd cynnar yn erbyn
+        dwyn hunaniaeth. Fodd bynnag, mae\u2019r treialon yn parhau am gyfnod byr
+        o amser y codir ffi fisol ar ei \u00f4l, fel arfer \u00a315 y mis, os nad
+        ydynt yn cael eu canslo. </p><h2>Rhestr wirio </h2><p><strong>Pam mae\u2019ch
+        adroddiad credyd yn bwysig</strong> - adroddiad credyd da yw eich tocyn i
+        fenthyciad, morgais a chytundebau credyd gwell, felly mae\u2019n gwneud synnwyr
+        i <a title=\"Nid oes digon o oedolion yn gwirio sut mae adroddiadau credyd
+        yn gweithio\" href=\"https://www.moneyadviceservice.org.uk/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch\">ddeall
+        sut maent yn gweithio</a>. </p><p><strong>Sut i wella\u2019ch adroddiad credyd</strong>
+        - <a title=\"sut i wirio a gwella\u2019ch adroddiad credyd\" href=\"/cy/news/sut-i-wellach-adroddiad-credyd-a-chael-bargen-well\">Mae\u2019n
+        bosibl rhoi hwb i\u2019ch gobeithion o gael eich derbyn am gredyd</a> trwy
+        gymryd camau fel osgoi ceisiadau lluosog am gredyd a rhoi\u2019ch enw ar y
+        gofrestr etholiadol. </p><p><strong>Chwalwr mythau</strong> - <a title=\"Cwis
+        chwalu mythau adroddiad credyd\" href=\"/cy/tools/cwis-y-gwir-am-adroddiadau-credyd\">cymerwch
+        ein cwis</a> er mwyn gweld a ydych yn gwybod digon am gredyd. </p><p><strong>Peidiwch
+        \u00e2 cholli cyfle!</strong> - Am ragor o gyngor ariannol a newyddion yn
+        syth i\u2019ch blwch e-bost, <a title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e-byst</a>. </p>","date":"2014-04-25T15:50:06+00:00"},{"id":"prynwyr-tro-cyntaf-yn-wynebu-edifeirwch-ar-ol-ymestyn-i-gychwyn-ar-yr-ysgol-dai","title":"Prynwyr
+        tro cyntaf yn wynebu edifeirwch ar \u00f4l ymestyn i gychwyn ar yr ysgol dai","description":"Mae
+        prynwyr tro cyntaf yn ymestyn eu cyllidebau ar \u00f4l syrthio mewn cariad
+        \u00e2 chartref eu breuddwydion.","body":"<p class=\"intro\"> Mae prynwyr
+        tro cyntaf yn ymestyn eu cyllidebau i\u2019r eithaf ar \u00f4l syrthio mewn
+        cariad \u00e2 chartref eu breuddwydion - ond mae un o bob pump yn difaru na
+        fyddent wedi dewis eiddo rhatach. </p><p>Yn \u00f4l ymchwil gan y Gwasanaeth
+        Cynghori Ariannol, aeth tri o bob pump o brynwyr tro cyntaf diweddar heibio
+        i\u2019w cyllideb\u00a0i brynu eu heiddo newydd, tra dywedodd pedwar o bob
+        pump o brynwyr posibl y byddent yn fodlon gorwario. </p><p>Dywedodd hanner
+        y prynwyr tro cyntaf a aeth dros eu terfyn ei fod oherwydd iddynt syrthio
+        mewn cariad \u00e2 chartref eu breuddwydion. Rheswm allweddol arall - a ddatganwyd
+        gan un o bob tri - oedd y\u00a0dymuniad i fyw mewn ardal ffafriol. Diffyg
+        eiddo fforddadwy oedd y prif reswm i un o bob pedwar o bobl rwygo eu cynllun
+        gwario. </p><p>Dywedodd un o bob pump fod eu teulu wedi\u2019u perswadio i
+        ymestyn eu hunain, tra pherswadiwyd un o bob saith i wario mwy nag yr oeddynt
+        wedi\u2019i fwriadu gan asiant tai. </p><h2>Cost gwirioneddol prynu cartref
+        </h2><p>Dywedodd mwy na hanner fod costau ychwanegol prynu cartref yn uwch
+        na\u2019r disgwyl - er enghraifft, dywedodd 78% nad oeddynt wedi ystyried
+        ffioedd symud. Fel arfer mae\u2019r rhain yn costio rhwng \u00a3300 a \u00a3600.
+        </p><p>Mae ein hymchwil yn datgelu mai dim ond tri o bob pedwar o brynwyr
+        tro cyntaf diweddar oedd wedi ystyried ffioedd cyfreithwyr, o gymharu \u00e2
+        dau o bob tri o brynwyr tro cyntaf posibl. Fel arfer mae ffioedd cyfreithiol
+        yn costio rhwng \u00a3500 a \u00a3750, a TAW. </p><p>Roedd oddeutu hanner
+        yr holl brynwyr tro cyntaf diweddar yn ymwybodol o\u2019r angen i gylldebu
+        ar gyfer <a title=\"Treth Stamp\" href=\"/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp\">Treth
+        tir y doll Stamp</a>, sy\u2019n daladwy ar eiddo\u2019n costio \u00a3125,000
+        neu\u2019n fwy, ar gyfradd o 1% ar gartrefi hyd at \u00a3250,000 a 3% ar eiddo\u2019n
+        costio dros \u00a3250,000 hyd at \u00a3500,000. Mae cartrefi o werth uwch
+        yn denu cyfraddau Treth Stamp uwch. </p><h2>Costau rhedeg parhaol </h2><p>Dywedodd
+        mwy nag un o bob deg nad oeddynt wedi ystyried beth fyddai cost barhaol rhedeg
+        eiddo. </p><p>Ac ar \u00f4l symud i mewn i\u2019w cartref newydd, dywedodd
+        mwy na hanner fod cynhaliaeth a biliau dydd-i-ddydd wedi bod yn uwch na\u2019r
+        disgwyl, gan greu anawsterau ariannol i rai. </p><p>Darparodd llai na dau
+        o bob tri o brynwyr tro cyntaf diweddar ar gyfer un neu fwy o\u2019r costau
+        parhaol arferol, sy\u2019n cynnwys addurno a dodrefn newydd, cynnal a chadw
+        ac atgyweiriadau, yswiriant bywyd a chostau teithio. </p><p>Mae prynwyr tro
+        cyntaf posibl yn tueddu i fod \u00e2 gafael gwell ar yr hyn y bydd angen iddynt
+        ei dalu. Fodd bynnag, roeddynt hwy hefyd yn gymharol annhebygol o ystyried
+        yr angen i drefnu diogelu ar ffurf <a href=\"/cy/action_plans/gwiriwch-a-oes-angen-yswiriant-bywyd-arnoch-a-threfnur-sicrwydd-cywir\">yswiriant
+        bywyd</a>, diogelu incwm a chynhyrchion eraill o\u2019r fath - gofyniad tebygol
+        i unrhyw un ag asedau neu ddibynyddion. </p><h2>Gallwch fforddio eich morgais,
+        ond a allwch fforddio\u2019ch cartref? </h2><p>Cytunodd prynwyr tro cyntaf
+        a\u2019r rhai hynny sy\u2019n bwriadu cychwyn ar yr ysgol dai y dylent glywed
+        mwy am gost gyffredinol prynu a rhedeg cartref - dywedodd mwy na phedwar o
+        bob pump y dylai\u2019r wybodaeth hon gael ei rhoi iddynt pan ydynt yn bwriadu
+        prynu. </p><p>Wrth wneud sylwadau ar y casgliadau, dywedodd Caroline Rookes,
+        Prif Swyddog Gweithredol y Gwasanaeth Cynghori Ariannol: <em>\u201c</em><em>Mae\u2019n
+        peri pryder gwirioneddol i glywed bod cymaint o brynwyr tro cyntaf diweddar
+        wedi\u2019u gorymestyn eu hunain</em>\u00a0<em>yn ariannol.\u00a0</em><em>Rwyf
+        yn annog prynwyr cartref i gyd - hyd yn oed y rhai hynny\u2019n uwch ar yr
+        ysgol eido - i sicrhau nad ydynt yn cymryd gormod ar eu hysgwyddau os ydynt
+        wedi benthyca\u2019r uchafswm sydd ar gael. Nid yw\u2019r gallu i fforddio\u2019r
+        morgais yn golygu y gallwch fforddio\u2019r cartref o angenrheidrwydd - a\u2019r
+        holl gostau cysylltiedig. Mae\u2019n hanfodol gwybod sut y byddwch yn talu\u2019r
+        costau rhedeg.</em></p><p><em>\u201cNid yw\u2019n rhy hwyr i lunio cyllideb,
+        a dechrau rhoi cronfa wrth gefn heibio i dalu am gostau hysbys ac annisgwyl.
+        Rwyf yn annog prynwyr cartref i gyd - yn arbennig prynwyr tro cyntaf - i fod
+        yn barod; gwnewch eich cyllideb a gwybyddwch pa forgais sydd gennych. Byddwch
+        yn ymwybodol o\u2019r holl gostau prynu a rhedeg sy\u2019n gysylltiedig, fel
+        y gallwch gael gafael cadarn ar dreuliau\u2019ch cartref</em><em>.\u201d</em></p><h2>Rheolau
+        diogelu newydd i ddod i mewn cyn bo hir </h2><p>Bydd rheolau newydd o Ebrill
+        eleni ymlaen yn gosod mwy o bwyslais ar ddarparwyr benthyciadau i sicrhau
+        y gall benthycwyr brofi eu gallu i gynnal ad-daliadau morgais, gan gynnwys
+        darparu tystiolaeth o incwm a threuliau. </p><p>Bydd yn rhaid i brynwyr posibl
+        fod yn gwbl dryloyw ynghylch yr hyn y gallant ei fforddio nawr a chymryd i
+        gyfrif newidiadau posibl eraill fel cost gynyddol byw a digwyddiadau bywyd,
+        a allai effeithio ar eu gallu i barhau i wneud ad-daliadau a rhedeg eu cartref.
+        </p><p>Gallai effeithio\u2019n wirioneddol ar yr un o bob pedwar o\u2019r
+        rhai hynny \u00e2 chyllideb a ddywedodd wrthym eu bod yn fodlon gorwario os
+        na allent gael yr hyn maent ei eisiau am eu cyllideb wreiddiol.\u00a0 </p><h2>Rhestr
+        wirio </h2><p><strong>1. Costau ychwanegol prynu cartref</strong> \u2013 mae\u2019n
+        rhy hawdd o lawer i anghofio rhai o\u2019r <a title=\"Costau prynu cartref\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-methu-a-chyfrifo-costau-prynu-cartref\">biliau
+        anochel sy\u2019n gysylltiedig \u00e2 phrynu\u2019ch cartref cyntaf</a>, fel
+        costau cyfreithiwr a ffioedd symud. Ysgrifennwch restr o\u2019r holl gostau
+        tebygol y bydd angen ichi eu talu wrth gyllidebu ar gyfer prynu cartref. </p><p><strong>2.
+        Costau rhedeg</strong> \u2013 bydd angen ichi gyllidebu ar gyfer <a title=\"Costau
+        parhaol cartref\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-cael-eu-maglu-gan-gostau-rhedeg-cartref\">nifer
+        o gostau parhaol</a>, fel Treth Gyngor ac yswiriant cartref. Gwnewch yn si\u0175r
+        eich bod yn gallu fforddio\u2019r holl dreuliau rheolaidd tebygol, a rhowch
+        ychydig o arian heibio i dalu costau annisgwyl. </p><p><strong>3. Cyfrifwch
+        eich cyllideb</strong> \u2013 mae gormod o bobl nad ydynt yn cyllidebu\u2019n
+        ddigonol ar gyfer prynu a rhedeg eu heiddo cyntaf. Defnyddiwch ein <a title=\"Cynlluniwr
+        Cyllideb\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">Cynlluniwr
+        Cyllideb</a> i sicrhau y gallwch fforddio\u2019ch cartref. </p><p><strong>4.
+        A ydych chi\u2019n barod?</strong> \u2013 mae prynu cartref yn gyfrifoldeb
+        mawr, ond gall rhai pobl gael eu maglu gan <a title=\"Costau argyfwng i berchenogion
+        cartref\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng\">ddigwyddiadau
+        annisgwyl drud</a>, megis dileu swydd a salwch. Mae yswiriant diogelu\u2019n
+        hanfodol i lawer o berchenogion cartref newydd felly gwiriwch a oes angen
+        yswiriant arnoch. </p><p><strong>5. Peidiwch \u00e2 cholli cyfle!</strong>\u00a0-
+        Am ragor o gyngor ariannol a newyddion yn syth i\u2019ch blwch e-bost, <a
+        title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e-byst</a>. </p>","date":"2014-04-25T15:34:15+00:00"},{"id":"costau-annisgwyl-ai-yswiriant-ywr-ateb","title":"Costau
+        Annisgwyl: Ai yswiriant yw''r ateb?","description":"Gall yswiriant a gwarantau
+        helpu gyda chostau annisgwyl ond mae''n bosibl na fyddant yn helpu bob tro.","body":"<p
+        class=\"intro\"> Bu\u2019n rhaid i gartrefi ym Mhrydain ddelio \u00e2 chostau
+        annisgwyl o \u00a31,101 ar gyfartaledd yn y flwyddyn ddiwethaf, ac er y gall
+        yswiriant a gwarantau helpu, mae''n bosibl na fyddant yn helpu bob tro. </p><p>Datgela
+        ymchwil gan y Gwasanaeth Cynghori Ariannol y byddai cynilo \u00a33 y dydd
+        yn talu am y bil digroeso cyfartalog. Mewn rhai achosion byddai''n talu''n
+        hawdd am o leiaf un o''r costau annisgwyl mwyaf cyffredin, fel peiriant golchi
+        sydd wedi torri \u2013 sydd fel arfer yn costio''n llai na \u00a3250 i''w
+        drwsio. </p><p>Mae cynilo \u00a33 y dydd dros flwyddyn yn dod i \u00a31,095
+        a byddai hyn hefyd yn talu i raddau helaeth am drychineb cysylltiedig \u00e2
+        char, sy''n costio \u00a31,341 ar gyfartaledd. </p><h2>Y broblem \u00e2 chostau
+        annisgwyl </h2><p>Efallai y bydd rhai problemau, fel cynnyrch trydanol diffygiol,
+        yn cael eu cynnwys mewn polisi yswiriant presennol neu warant neu warantiad
+        y darparwr, ond a allwch ddibynnu ar y rhain i ddatrys eich problem? </p><p>Mae''n
+        hawdd rhagdybio y bydd polis\u00efau yswiriant yn talu am bob problem, ond
+        yn aml nid yw hynny''n wir. Ni fydd polis\u00efau yswiriant safonol yn talu
+        am atgyweiriadau cyffredinol o ganlyniad i draul. Felly, ni fydd eich polisi
+        yswiriant car yn talu am filiau sy''n deillio o fethiant yn y prawf MOT, er
+        enghraifft. Yn yr un ffordd ni fydd yswiriant adeiladau a chynnwys yn talu
+        am atgyweiriadau cyffredinol a gwelliannau cartref. </p><h2>Mae damweiniau''n
+        digwydd </h2><p>Nid yw''r holl atgyweiriadau neu amnewidiadau''n tarddu o
+        draul gyffredinol, eto yn aml nid yw polis\u00efau safonol yn talu am y rhain.
+        Mae''n debygol y bydd angen eich bod wedi talu premiwm ychwanegol am niwed
+        damweiniol. </p><p>Mae''n debygol y bydd cynilo swm bach bob mis yn opsiwn
+        gwell, hyd yn oed os bydd hyn yn golygu\u00a0gwneud m\u00e2n aberthau rhywle
+        arall i dalu am eich cronfa argyfwng. Neu defnyddiwch ein <a href=\"/cy/tools/cyfrifiannell-torrin-ol\">cyfrifiannell
+        cwtogi</a> i weld ble gallwch wneud arbedion ar bethau yr ydych yn eu prynu
+        yn rheolaidd </p><h2>Wedi''i yswirio, ond am bris </h2><p>Dylech ystyried
+        budd cyffredinol gwneud hawliad bob tro. Er enghraifft, os yw''ch peiriant
+        golchi''n torri, gallech dynnu ar eich polisi yswiriant cartref, ond bydd
+        rhaid ichi dalu''r t\u00e2l dros ben o flaen llaw. Mae hyn yn debygol o fod
+        o leiaf \u00a3100. Bydd hefyd yn effeithio ar eich Disgownt Dim Hawliadau,
+        ac mae''n bosibl y byddai\u2019n rhaid ichi dalu premiymau uwch yn y dyfodol
+        </p><h2>Gwarantau a derbynebau </h2><p>Mae cynhyrchion a gynllunnir ar gyfer
+        defnydd rheolaidd, fel peiriannau golchi a setiau teledu, yn dod gyda gwarant
+        y gwerthwr a allai''ch helpu i gael trwsiad, amnewidiad neu ad-daliad. </p><p>Efallai
+        y nodir y telerau ac amodau ar y dderbynneb neu ar wybodaeth y byddwch yn
+        ei chael gyda''r cynnyrch a bydd hyn yn ddilys ar gyfer cyfnod penodol yn
+        unig, fel arfer 12 mis ar gyfer pryniadau llai \u2013 felly cadwch dderbynebau
+        a gwybodaeth arall ynghylch y pryniad rywle diogel. </p><p>Hefyd, mae''n werth
+        sylwi y cynllunnir llawer o eitemau i barhau''n llawer hwy. Byddech yn disgwyl
+        i beiriant golchi weithio am nifer o flynyddoedd, felly os bydd un yn mynd
+        o chwith yn gyflymach efallai nad yw''n addas i''r diben, sy''n ofyniad cyfreithiol
+        dan Ddeddf Gwerthu Nwyddau 1979. Cysylltwch \u00e2''r gwerthwr ac egluro hyn
+        cyn talu am fodel newydd. </p><ul><li>Ewch i Which? am ragor o wybodaeth ar
+        y <a title=\"Ddeddf Gwerthu Nwyddau\" target=\"_blank\" href=\"http://www.which.co.uk/consumer-rights/regulation/sale-of-goods-act\">Ddeddf
+        Gwerthu Nwyddau</a>.</li></ul><h2>Rhybudd: gwarantau estynedig </h2><p>Gallwch
+        dalu am warant estynedig, a gynlluniwyd i ddiogelu''ch pryniad ar \u00f4l
+        i''r warant am ddim ddod i ben. Fodd bynnag, gall <a title=\"Gwarantau estynedig\"
+        href=\"/cy/articles/gwarantau-estynedig-ydyn-nhwn-werth-chweil\">gwarantau
+        estynedig</a> fod yn ddrud. </p><p>Fel sy''n wir gyda dibynnu ar yswiriant
+        ar gyfer taliadau cymharol fach, byddech yn well eich byd yn cynilo swm bach
+        bob wythnos a thalu am amnewidiad newydd os bydd angen ichi \u2013 hefyd mae''n
+        debygol y byddech yn cael model gwell na''r amnewidiad a gynigir dan y warantiad.
+        Os nad ydych yn si\u0175r sut i gronni cronfa argyfwng, rhowch gynnig ar ein
+        hofferyn <a href=\"/cy/tools/gwiriad-iechyd\">costau argyfwng mwyaf cyffredin
+        a drud</a>. </p><h2>Rhestr wirio </h2><p><strong>1. Costau annisgwyl</strong>
+        \u2013 Dysgwch ragor am y <a href=\"/cy/news/y-pum-prif-gost-annisgwyl-y-gallech-eu-hwynebu-eleni\">costau
+        argyfwng mwyaf cyffredin a drud</a>. </p><p><strong>2. Mynnwch eich hawliau</strong>
+        \u2013 Os bydd rhywbeth yn mynd o chwith gyda rhywbeth rydych wedi''i brynu
+        neu os ydych wedi''ch twyllo, efallai fod gennych <a title=\"Your consumer
+        rights\" href=\"/cy/news/costau-annisgwyl-gwiriwch-eich-hawliau-fel-defnyddiwr-cyn-talur-bil\">amddiffyniad
+        dan y gyfraith neu gytundebau''r diwydiant</a>. </p><p><strong>3. Mynnwch
+        gyngor</strong> - Os ydych yn cael eich hunan yn wynebu bil mawr, siaradwch
+        \u00e2''ch darparwr benthyciad cyn gwario mwy nag y gallwch ei fforddio.Peidiwch
+        ag anghofio cymryd <a title=\"Free financial advice\" href=\"/cy/articles/cyngor-ariannol-am-ddim-eich-opsiynau\">cyngor
+        ariannol am ddim</a> os byddwch ei angen. </p><p><strong>4. Peidiwch \u00e2
+        cholli allan!</strong> - I gael mwy o gyngor a newyddion ariannol yn syth
+        ich mewnflwch, <a href=\"/cy/newsletter-subscriptions/new\">cofrestrwch i
+        dderbyn ein negeseuon e-bost yma</a>. </p>","date":"2014-04-25T15:21:40+00:00"},{"id":"prynwyr-tro-cyntaf-yn-cael-eu-maglu-gan-gostau-rhedeg-cartref","title":"Prynwyr
+        tro cyntaf yn cael eu maglu gan gostau rhedeg cartref","description":"Canfu
+        mwy na hanner yr holl brynwyr tro cyntaf fod costau dydd-i-ddydd a biliau
+        cynhaliaeth yn uwch na\u2019r disgwyl.","body":"<p class=\"intro\"> Canfu
+        mwy na hanner yr holl brynwyr tro cyntaf fod costau dydd-i-ddydd a biliau
+        cynhaliaeth yn uwch na\u2019r disgwyl ar \u00f4l symud i mewn i\u2019w cartref
+        newydd - \u00a0gan adael un o bob pump o\u2019r perchenogion eiddo newydd
+        hyn yn wynebu problemau ariannol. </p><p>Mae ymchwil gan y Gwasanaeth Cynghori
+        Ariannol yn dangos, tra roedd naw o bob deg yn ystyried cost Treth Gyngor
+        cyn symud i mewn, dim ond dau o bob tri oedd wedi cyfrif am fand eang neu
+        deledu lloeren, ac ystyriodd llai na phedwar o bob deg gostau teithio. </p><p>O\u2019r
+        rhai hynny a danamcangyfrifodd eu costau rhedeg, ni wnaeth 15% ystyried cyllidebu
+        ar gyfer trydan a nwy. </p><p>Mae llai na hanner yr holl brynwyr tro cyntaf
+        wedi ystyried cymryd <a title=\"A oes angen yswiriant bywyd arnoch?\" href=\"/cy/articles/oes-angen-yswiriant-bywyd-arnoch\">polisi
+        diogelu</a>, fel yswiriant bywyd neu ddiogelu incwm. Efallai y bydd prynwyr
+        cartrefi am ystyried y mathau hyn o gynhyrchion diogelu os mai nhw yw\u2019r
+        prif enillwr cyflog. </p><h2>Diffyg cyllideb </h2><p>Mae traean o brynwyr
+        tro cyntaf diweddar\u00a0yn edifarhau peidio\u00a0\u00e2 chyllidebu\u2019n
+        iawn ar gyfer costau ychwanegol. Meddai un wrthym: <em>\u201cRydym yn edifarhau
+        nad oeddem wedi rhoi mwy o arian heibio ar gyfer cronfa ddiwrnod glawiog.\"</em></p><p>Meddai
+        un arall:\u00a0<em>\u201cByddai wedi bod yn dda gennyf wybod y gallai biliau\u2019r
+        mis cyntaf fod ychydig yn fwy nag yr oeddem wedi\u2019i amcangyfrif. Pan ydych
+        yn sefydlu debydau uniongyrchol newydd fel arfer mae\u2019r taliad cyntaf
+        ychydig yn fwy.\u201d</em></p><p>Darganfyddwch fwy am sefydlu <a title=\"Cynilwch
+        ar gyfer argyfyngau\" href=\"/cy/campaigns/cynilwch-gbp3-y-dydd-ar-gyfer-argyfyngau\">cronfa
+        ddiwrnod glawiog</a> i dalu costau os aiff rhywbeth o chwith. </p><h2>Rheolau
+        newydd i ddiogelu prynwyr </h2><p>Cyflwynir rheolau newydd i gynyddu diogelwch
+        defnyddwyr ac i annog benthyca cyfrifol ym mis Ebrill. Erbyn hyn bydd darparwyr
+        benthyciadau angen tystiolaeth incwm er mwyn sicrhau nad yw benthycwyr yn
+        eu gorymestyn eu hunain. </p><h2>Rhestr wirio </h2><p><strong>1. Ystyriwch
+        yr holl gostau</strong> \u2013 mae ymchwil gan y Gwasanaeth Cyngor Ariannol
+        yn datgelu\u2019r <a title=\"Costau prynwr tro cyntaf\" href=\"/cy/news/prynwyr-tro-cyntaf-yn-wynebu-edifeirwch-ar-ol-ymestyn-i-gychwyn-ar-yr-ysgol-dai\">prif
+        gostau mae prynwyr tro cyntaf fel arfer yn eu hanghofio</a> wrth brynu a cheisio
+        rhedeg eu cartref newydd. Mae talu costau parhaol, fel biliau cyfleustodau,
+        mor bwysig \u00e2 chwrdd ag ad-daliadau morgais. </p><p><strong>2. Costau
+        ychwanegol prynu cartref</strong> \u2013 mae\u2019n rhy hawdd o lawer i anghofio
+        rhai o\u2019r <a title=\"Costau prynu cartref\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-methu-a-chyfrifo-costau-prynu-cartref\">biliau
+        anochel sy\u2019n gysylltiedig \u00e2 phrynu\u2019ch cartref cyntaf</a>, fel
+        costau cyfreithiwr a ffioedd symud. Ysgrifennwch restr o\u2019r holl gostau
+        tebygol y bydd angen ichi eu talu wrth gyllidebu ar gyfer prynu cartref. </p><p><strong>3.
+        Cyfrifwch eich cyllideb</strong> \u2013 mae gormod o bobl nad ydynt yn cyllidebu\u2019n
+        ddigonol ar gyfer prynu a rhedeg eu heiddo cyntaf. Defnyddiwch ein <a title=\"Cynlluniwr
+        Cyllideb\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">Cynlluniwr
+        Cyllideb</a> i sicrhau y gallwch fforddio\u2019ch cartref. </p><p><strong>4.
+        A ydych chi\u2019n barod?</strong> \u2013 mae prynu cartref yn gyfrifoldeb
+        mawr, ond gall rhai pobl gael eu maglu gan <a title=\"Costau argyfwng i berchenogion
+        cartref\" href=\"/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng\">ddigwyddiadau
+        annisgwyl drud</a>, megis dileu swydd a salwch. Mae yswiriant diogelu\u2019n
+        hanfodol i lawer o berchenogion cartref newydd felly gwiriwch a oes angen
+        yswiriant arnoch </p><p><strong>5. Peidiwch \u00e2 cholli cyfle!</strong>
+        - Am ragor o gyngor ariannol a newyddion yn syth i\u2019ch blwch e-bost, <a
+        title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e byst</a>. </p>","date":"2014-04-25T14:53:52+00:00"},{"id":"prynwyr-tro-cyntaf-yn-methu-a-chyfrifo-costau-prynu-cartref","title":"Prynwyr
+        tro cyntaf yn methu \u00e2 chyfrifo costau prynu cartref","description":"Mae
+        gan ychydig dros bedwar o bob deg o brynwyr tro cyntaf ddealltwriaeth dda
+        ynghylch pa gostau ychwanegol y bydd angen iddynt eu talu wrth brynu eu cartref
+        cyntaf.","body":"<p class=\"intro\"> Methodd mwy na hanner y prynwyr tro cyntaf
+        \u00e2 chyfrifo\u2019r costau gwirioneddol o brynu eu cartref ar \u00f4l anghofio
+        cyfrif am dreuliau fel ffioedd symud.\u00a0\u00a0 </p><p>Mae ymchwil newydd
+        gan y Gwasanaeth Cynghori Ariannol yn datgelu bod 55% wedi canfod bod y bil
+        llawn am brynu eu cartref newydd - ar ben y morgais - yn uwch na\u2019r disgwyl
+        o bron i \u00a31,300.\u00a0 </p><h2>Mae\u2019r mwyafrif yn anghofio am o leiaf
+        un prif gost eu cartref </h2><p>Adnabu tri o bob pedwar prynwr tro cyntaf
+        diweddar <strong>ffioedd cyfreithiwr</strong> fel costau y byddai angen iddynt
+        gyfrif amdanynt, o gymharu \u00e2 dau o bob tri o ran prynwyr posibl. Ond
+        oddeutu hanner o berchenogion cartref yn unig a ystyriodd\u00a0 <a title=\"Treth
+        Stamp\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp\"><strong>Dreth
+        Stamp</strong></a> \u2013 sy\u2019n daladwy ar gyfradd o 1% ar bris prynu
+        eiddo sy\u2019n costio mwy na \u00a3125,000, a 3% ar bryniadau dros \u00a3250,000.
+        O gofio mai\u2019r <a title=\"Cyfrifiannell Morgais\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais\">
+        morgais cyfartalog</a>\u00a0a gymerir gan brynwr tro cyntaf diweddar, byddai
+        angen i\u2019r perchenogion cartref hyn fod wedi cyllidebu ar gyfer taliad
+        nodweddiadol o fwy na \u00a31,400 ar 1% ar Dreth Stamp. </p><p>Cofiodd ychydig
+        llai nag un o bob pedwar o berchenogion cartref newydd i gyllidebu ar gyfer
+        <strong>ffioedd symud</strong>, er gwaethaf y ffaith bod hon yn un o\u2019r
+        costau amlycach i\u2019w hyswirio. </p><h2>Mae costau ychwanegol yn cynyddu\u2019n
+        gyflym </h2><p>Ymhlith prynwyr tro cyntaf a oedd wedi ystyried o leiaf un
+        o\u2019r costau y sonir amdanynt uchod, dim ond dau o bob pump oedd wedi cyllidebu\u2019n
+        ddigonol ar gyfer y treuliau hyn. Yn anffodus, cyfaddefodd mwy na hanner yr
+        holl brynwyr tro cyntaf fod y <a title=\"Amcangyfrifwch eich holl gostau prynu\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol\">costau\u2019n
+        uwch na\u2019r disgwyl</a>, gyda\u2019r gost ychwanegol gyfartalog yn cyrraedd
+        \u00a31,267. </p><h2>Rhestr wirio </h2><p><strong>1. Ystyriwch yr holl gostau</strong>
+        \u2013 mae ymchwil gan y Gwasanaeth Cyngor Ariannol yn datgelu\u2019r <a title=\"Costau
+        prynwr tro cyntaf\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-wynebu-edifeirwch-ar-ol-ymestyn-i-gychwyn-ar-yr-ysgol-dai\">prif
+        gostau mae prynwyr tro cyntaf fel arfer yn eu hanghofio</a> wrth brynu a cheisio
+        rhedeg eu cartref newydd. Mae talu costau parhaol, fel biliau cyfleustodau,
+        mor bwysig \u00e2 chwrdd ag ad-daliadau morgais. </p><p><strong>2. Costau
+        rhedeg</strong> \u2013 bydd angen ichi gyllidebu ar gyfer nifer o <a title=\"Costau
+        parhaol cartref\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-cael-eu-maglu-gan-gostau-rhedeg-cartref\">gostau
+        parhaol</a>, fel Treth Gyngor ac yswiriant cartref. Gwnewch yn si\u0175r eich
+        bod yn gallu fforddio\u2019r holl dreuliau parhaol tebygol, a rhowch ychydig
+        o arian heibio i dalu costau annisgwyl. </p><p><strong>3.</strong><strong>A
+        ydych chi\u2019n barod?</strong> \u2013 mae prynu cartref yn gyfrifoldeb mawr,
+        ond gall rhai pobl gael eu maglu gan <a title=\"Costau argyfwng i berchenogion
+        cartref\" href=\"https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng\">ddigwyddiadau
+        annisgwyl drud</a>, megis dileu swydd a salwch. Mae yswiriant diogelu\u2019n
+        hanfodol i lawer o berchenogion cartref newydd felly gwiriwch a oes angen
+        yswiriant arnoch. </p><p><strong>4. Cyfrifwch eich cyllideb</strong> \u2013
+        mae gormod o bobl nad ydynt yn cyllidebu\u2019n ddigonol ar gyfer prynu a
+        rhedeg eu heiddo cyntaf. Defnyddiwch ein <a title=\"Cynlluniwr Cyllideb\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">Cynlluniwr
+        Cyllideb</a> i sicrhau y gallwch fforddio\u2019ch cartref. </p><p><strong>5.
+        Peidiwch \u00e2 cholli cyfle!</strong>\u00a0- am ragor o gyngor ariannol a
+        newyddion yn syth i\u2019ch blwch e-bost, <a title=\"Cylchlythyr\" href=\"https://www.moneyadviceservice.org.uk/cy/newsletter-subscriptions/new\">tanysgrifiwch
+        yma i gael ein e-byst.</a></p>","date":"2014-04-25T08:47:57+00:00"},{"id":"ymunwch-a-ni-yn-yr-ideal-home-show","title":"Ymunwch
+        \u00e2 ni yn yr Ideal Home Show","description":"Oes gennych ymholiad ymghylch
+        materion ariannol bywyd? Yna dewch i ymuno \u00e2 ni yn yr Ideal Home Show
+        eleni.","body":"<p><strong> Dyddiad cyhoeddi: 15 Mawrth 2013\u00a0</strong></p><p
+        class=\"intro\">Oes gennych ymholiad ymghylch materion ariannol bywyd? Yna
+        dewch i ymuno \u00e2 ni yn yr Ideal Home Show eleni. </p><p>O gael babi i
+        symud neu brynu cartref, neu i gael help ynghylch diswyddo ac opsiynau ar
+        gyfer ymddeoliad, dysgwch beth mae MA yn ei feddwl. </p><p>Ymwelwch \u00e2
+        ni ar y stondin Money Saving Expert \\Arbenigwr Arbed Arian a siarad \u00e2\u2019n
+        Cynghorwyr Ariannol. Beth bynnag yw\u2019ch sefyllfa ariannol, ta waeth pa
+        mor fach neu fawr eich ymholiad, byddant yn hapus i\u2019ch helpu. </p><p>Bydd
+        t\u00eem y Gwasanaeth Cynghori Ariannol yn y sioe ar: </p><ul><li>Ddydd Sadwrn
+        16 Mawrth o 11am - 6pm</li><li>Dydd Mawrth 19 Mawrth o 11am - 6pm</li><li>Dydd
+        Sadwrn 30 Mawrth o 11am - 6pm</li><li>Dydd Llun 1 Ebrill o 11am - 6pm</li></ul><br/><p>Hefyd
+        bydd ymwelwyr yn gallu cymryd rhan yng nghwis MoneySavingExpert.com \u2018Faint
+        allwch chi ei arbed?\u2019 am ddim. </p><p>Ar ben hynny, gallwch weld Martin
+        Lewis, Money Saving Expert \\Arbenigwr Arbed Arian yn yr Ideal Super Theatre
+        lle bydd yn trafod \u2018Lleihau\u2019ch Biliau a Mynnu Chwarae Teg\u2019
+        a chyflwyno sesiynau holi ac ateb ar sut i arbed arian. </p><p>Mae\u2019r
+        Ideal Home Show yn digwydd yn Earls Court, Llundain, o 15 Mawrth - 1 Ebrill
+        2013. </p>","date":"2014-04-24T13:39:41+00:00"},{"id":"rhenti-cynyddol-yn-golygu-toriadau-i-fywyd-y-teulu","title":"Rhenti
+        cynyddol yn golygu toriadau i fywyd y teulu","description":"Mae bron i ddwy
+        ran o dair o rentwyr yn profi trafferthion gyda\u2019u rhent neu\u2019n methu
+        ei dalu, yn \u00f4l arolwg newydd gan Shelter.","body":"<p><strong> Dyddiad
+        cyhoeddi: 15 Mawrth 2013</strong></p><p class=\"intro\">Mae bron i ddwy ran
+        o dair o rentwyr yn profi trafferthion gyda\u2019u rhent neu\u2019n methu
+        ei dalu, yn \u00f4l arolwg newydd gan Shelter. </p><p>Dywedodd un o bob pedwar
+        o\u2019r rheini a arolygwyd eu bod wedi wynebu codiad rhent yn ystod y flwyddyn
+        ddiwethaf, gyda theuluoedd \u00e2 phlant yn fwy tebygol o wynebu anawsterau.
+        </p><p>Hefyd mae\u2019r arolwg o 4,300 o rentwyr preifat \u2013 sy\u2019n
+        honni i fod y mwyaf o\u2019i fath a gynhaliwyd erioed \u2013 yn dangos yr
+        effaith ganlyniadol mae rhenti cynyddol yn ei chael ar fywyd y teulu: </p><ul><li>Mae
+        un o bob tri o rentwyr yn cwtogi ar anrhegion pen-blwydd a Nadolig.</li><li>Mae
+        un o bob pedwar o deuluoedd sy\u2019n rhentu yn ymweld llai \u00e2\u2019r
+        teulu a ffrindiau.</li><li>Mae un o bob saith o rentwyr wedi defnyddio cerdyn
+        credyd i dalu eu rhent.</li><li>Mae un o bob deuddeg o rieni sy\u2019n rhentu
+        wedi benthyca arian gan eu plant i dalu\u2019r rhent.</li></ul><p>Hefyd datgelodd
+        yr astudiaeth fod un o bob 16 o rentwyr, yn gyfwerth \u00e2 bron i 515,000
+        o bobl, wedi\u2019u gorfodi i symud cartref oherwydd codiad mewn rhent. </p><p>Mae
+        pwysau ar y farchnad osod yn tyfu, gyda mwy na naw miliwn o bobl yn rhentu
+        eu cartref gan landlord preifat erbyn hyn. </p><p>Mae\u2019r galw hwn wedi
+        gwthio rhenti i fyny, a gododd gan bron i \u00a3300 ar gyfartaledd y llynedd
+        yn Lloegr, tra bod cyflogau wedi aros yn ddisymud. </p><p>Meddai Campbell
+        Robb, Prif Weithredwr Shelter, \u201cDyma dystiolaeth fod cost gynyddol rhentu\u2019n
+        taro teuluoedd ble mae\u2019n brifo, yn eu gorfodi nhw i wneud dewisiadau
+        amhosibl ynghylch yr hyn y gallant dorri\u2019n \u00f4l arno nesaf.\u201d
+        </p><p><strong>Yn wynebu dewisiadau anodd ynghylch eich gwario? <a title=\"cut-back
+        calculator\" href=\"/cy/tools/cyfrifiannell-torrin-ol\">Defnyddiwch ein Cyfrifiannell
+        torri\u2019n \u00f4l i weld ble y gallwch wneud arbedion</a></strong></p><p><strong>Hefyd,
+        darllenwch ein canllaw <a href=\"/cy/articles/faint-o-rent-y-gallwch-chi-ei-fforddio\">Faint
+        o rent allwch chi ei fforddio?</a></strong></p><p><em>Credyd llun: PA.</em></p>","date":"2014-04-24T13:31:53+00:00"},{"id":"y-gwasanaeth-cynghori-ariannol-yn-cefnogi-cynlluniau-i-gyfyngu-ar-wasanaethau-benthyciadau-diwrnod-cyflog","title":"Y
+        Gwasanaeth Cynghori Ariannol yn cefnogi cynlluniau i gyfyngu ar wasanaethau
+        benthyciadau diwrnod cyflog","description":"Mae\u2019r Gwasanaeth Cynghori
+        Ariannol yn cefnogi cynigion y llywodraeth i gyflwyno cyfyngiadau hysbysebu
+        a goruchwyliaeth agosach ar gyfer y diwydiant benthyciadau diwrnod cyflog","body":"<p><strong>Dyddiad
+        cyhoeddi: 7 Mawrth 2013\u00a0</strong></p><p class=\"intro\">Mae\u2019r Gwasanaeth
+        Cynghori Ariannol yn cefnogi cynigion y llywodraeth i gyflwyno cyfyngiadau
+        hysbysebu a goruchwyliaeth agosach ar gyfer y diwydiant benthyciadau diwrnod
+        cyflog. </p><p>Cyhoeddwyd y cynlluniau yn sgil ymchwiliad blwyddyn o hyd gan
+        Y Swyddfa Masnachu Teg (OFT). </p><p>Mae\u2019r Swyddfa\u2019n rhoi 12 wythnos
+        i\u2019r 50 darparwr benthyciadau diwrnod cyflog mwyaf i wella\u2019u harferion
+        neu wynebu\u2019r posibilrwydd o gael eu cau. </p><p>Mae\u2019r llywodraeth
+        am gyfyngu\u2019r nifer o hysbysebion a ddangosir ar y teledu yn ogystal \u00e2
+        sicrhau fod y telerau ac amodau\u2019n cael eu harddangos yn amlycach. </p><p>Bwriad
+        y cynlluniau newydd yw sicrhau na fydd cwmn\u00efau\u2019n cymryd mantais
+        ar bobl sydd eisoes yn brwydro \u00e2 dyled. </p><p>Mae cyfraddau llog lefel
+        uchel a gynigir gan ddarparwyr benthyciadau diwrnod cyflog yn golygu y gall
+        benthyciad o gannoedd o bunnau droi\u2019n filoedd yn gyflym os nas telir
+        yn \u00f4l ar ddiwedd y cyfnod a gytunwyd ar gyfer y benthyciad. </p><p>Meddai
+        Caroline Siarkiewicz, Pennaeth y rhaglen Cyngor Dyled y Deyrnas Unedig gyda\u2019r
+        Gwasanaeth Cynghori Ariannol, \u201cMae\u2019r Gwasanaeth Cynghori Ariannol
+        yn croesawu\u2019r newyddion heddiw bod yr OFT yn rhoi 12 wythnos i 90% o\u2019r
+        farchnad ar gyfer benthyciadau diwrnod cyflog (50 o ddarparwyr benthyciadau)
+        i newid eu harferion busnes. </p><p>\u201cMae\u2019r cam hwn yn mynd ychydig
+        o\u2019r ffordd tuag at ddiogelu defnyddwyr yn erbyn unrhyw arferion anghyfrifol
+        a niweidiol ym maes hwn y farchnad ar gyfer darparu benthyciadau ansicredig.\u201d
+        </p><p>Ychwanegodd \u201cRwy\u2019n annog unrhyw un sy\u2019n ystyried cymryd
+        credyd trwy gwmni sy\u2019n darparu benthyciadau diwrnod cyflog i ddefnyddio
+        ein hadnoddau diduedd, am ddim yn gyntaf, cyn eu bod yn gwneud penderfyniad.
+        Mae gennym ddigon o gyngor syml a fydd yn eu helpu\u2019n gyflym i wneud dewis
+        deallus. </p><p>\u201cGallai treulio ond deng munud ar ein gwefan er mwyn
+        canfod y ffeithiau gwirioneddol gadw rhywun rhag gwneud camgymeriad drud a
+        fyddai\u2019n effeithio\u2019n barhaol a niweidiol ar eu bywyd. </p><p><strong>Eisiau
+        cael mwy o wybodaeth? Darllenwch ein canllawiau:</strong></p><ul><li><strong><a
+        title=\"diwrnod cyflog\" href=\"/cy/articles/benthyciadau-diwrnod-cyflog\">Benthyciadau
+        diwrnod cyflog</a></strong></li><li><strong><a title=\"taliadau\" href=\"/cy/articles/defnyddio-taliadau-cylchol-ar-gyfer-benthyciadau-diwrnod-talu\">Defnyddio
+        taliadau cylchol ar gyfer benthyciadau diwrnod cyflog</a></strong></li><li><strong><a
+        title=\"mynediad i arian parod\" href=\"/cy/articles/cyrchu-arian-yn-gyflym-eich-opsiynau\">Cyrchu
+        arian yn gyflym \u2013 eich opsiynau</a></strong></li></ul><p><em>Credyd llun:
+        PA.\u00a0</em></p>","date":"2014-04-24T11:46:02+00:00"},{"id":"ymddiriedaeth-yng-nghyflenwyr-ynnin-lleihau","title":"Ymddiriedaeth
+        yng nghyflenwyr ynni\u2019n lleihau","description":"Mae cyfuniad o gwynion,
+        gwasanaeth gwael i gwsmeriaid a\u2019r prisiau ynni uchaf erioed yn golygu
+        mai dim ond pedwar o bob deg o ddefnyddwyr sy\u2019n ymddiried yng nghyflenwyr
+        ynni Prydain erbyn hyn.","body":"<p><strong> Dyddiad cyhoeddi: 22 Chwefror
+        2013</strong></p><p class=\"intro\">Mae cyfuniad o gwynion, gwasanaeth gwael
+        i gwsmeriaid a\u2019r prisiau ynni uchaf erioed yn golygu mai dim ond pedwar
+        o bob deg o ddefnyddwyr sy\u2019n ymddiried yng nghyflenwyr ynni Prydain erbyn
+        hyn. </p><p>Yn \u00f4l canfyddiadau gan uSwitch.com, mae helbul yn y diwydiant
+        wedi erydu ymddiriedaeth, gyda dau o bob pump o ddefnyddwyr yn ymddiried yng
+        nghyflenwyr yn llai erbyn hyn nag yr oeddynt ddwy flynedd yn \u00f4l. </p><p>O\u2019r
+        rheini nad ydynt yn ymddiried yn eu cyflenwr, mae bron i un o bob dau\u2019n
+        dweud mai oherwydd nad ydynt yn rhoi gwerth da am arian yw\u2019r rheswm tra
+        bod dau o bob pump yn rhoi\u2019r bai ar ddiffyg didwylledd neu dryloywder.
+        </p><p>Nawr mae cyflenwyr yn cael eu rhybuddio bod angen iddynt ddwys\u00e1u
+        eu hymdrechion i ailadeiladu perthnasau \u00e2\u2019u cwsmeriaid. </p><p>Ymhlith
+        y cwsmeriaid hynny sy\u2019n ymddiried yn eu cyflenwr mae bron i un o bob
+        dau\u2019n dweud eu bod wedi eu perswadio gan filiau a gwybodaeth hawdd eu
+        deall. </p><p>Mae gwasanaeth da i gwsmeriaid a rhwyddineb cyfathrebu wedi
+        creu argraff ar ddau o bob pump, tra bod tri o bob deg yn s\u00f4n am gymwynasgarwch.
+        </p><p><strong>Yn poeni am gost eich biliau? <a title=\"gas and elec\" href=\"/cy/articles/arbedwch-arian-ar-eich-biliau-nwy-a-thrydan\">Darllenwch
+        ein canllaw Arbedwch arian ar eich biliau nwy a thrydan</a>. </strong></p><p><em>Credyd
+        llun: PA.</em></p>","date":"2014-04-24T11:42:05+00:00"},{"id":"bydd-rheolau-morgais-newydd-yn-ei-wneud-yn-anos-i-brofi-y-gallwch-wir-fforddio-cartref-eich-breuddwydion","title":"Bydd
+        rheolau morgais newydd yn ei wneud yn anos i brofi y gallwch wir fforddio
+        cartref eich breuddwydion","description":"Mae newidiadau mawr i reolau darparu
+        benthyciad am forgais yn golygu y bydd benthycwyr yn destun gwiriadau newydd
+        ynghylch fforddiadwyedd.","body":"<p class=\"intro\"> Mae newidiadau mawr
+        i reolau darparu benthyciad am forgais yn golygu y bydd rhaid i fenthycwyr
+        roi trefn ar eu cyllid er mwyn mynd trwy wiriadau llymach ynghylch fforddiadwyedd
+        mor ddi-boen \u00e2 phosibl. </p><p>O 26 Ebrill ymlaen, gwirir sefyllfa ariannol
+        unrhyw un sydd eisiau morgais yn llym i brofi y gallant wir fforddio eu cartref
+        newydd. </p><p>Bydd y broses o gael morgais - neu ail-forgeisio - yn fanylach
+        ac mae\u2019n debygol y bydd yn cymryd mwy o amser nag o\u2019r blaen oherwydd
+        yn awr bydd angen i ddarparwyr benthyciadau ofyn mwy o gwestiynau am amgylchiadau
+        a threuliau cartref unigol unigolyn fel gofal plant a biliau cyfleustodau.
+        </p><p>Os mai dyma\u2019ch morgais cyntaf, gweler ein <a title=\"Cyngor i
+        brynwr tro cyntaf\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf\">Cyngor
+        i brynwr tro cyntaf</a> am fwy o fanylion. </p><h2>Rheolau a gynllunir i atal
+        perchnogion tai rhag orymestyn. </h2><p>Bydd y rheolau newydd yn sicrhau bod
+        unrhyw un sy\u2019n prynu cartref nid yn unig yn gallu fforddio\u2019r gost
+        gychwynnol i brynu\u2019r eiddo, ond hefyd y gallant reoli ad-daliadau nawr
+        ac yn y dyfodol - hyd yn oed os bydd cyfraddau llog yn codi. </p><p>Mae ymchwil
+        gan y Gwasanaeth Cynghori Ariannol yn dangos bod llawer o berchnogion tai
+        wedi methu \u00e2 chyfrifo\u2019r costau gwirioneddol ynghylch fforddio eu
+        cartref newydd, gan achosi anawsterau ariannol i rai. </p><p>Cyfaddefodd tri
+        o bob pedwar o brynwyr tro cyntaf iddynt orymestyn eu cyllidebau er mwyn dechrau
+        ar yr ysgol dai, y mwyafrif gan eu bod wedi syrthio mewn cariad \u00e2 chartref
+        eu breuddwydion ac heb allu ei wrthsefyll. </p><p>Canfu mwy na hanner fod
+        y bil llawn am brynu eu cartref - ar ben y morgais - yn uwch na\u2019r disgwyl
+        o bron i \u00a31,300. </p><p>Ac ar \u00f4l symud i mewn i\u2019w cartref newydd,
+        dywedodd mwy na hanner fod cynhaliaeth a biliau dydd-i-ddydd wedi bod yn uwch
+        na\u2019r disgwyl.\u00a0 </p><p>Bydd yn rhaid i berchnogion tai posibl ddarparu
+        mwy o dystiolaeth nag erioed o\u2019r blaen, gan gynnwys: </p><p><strong>Prawf
+        o incwm</strong></p><p>Gall darparwyr benthyciadau ofyn am dystiolaeth o incwm,
+        a allai gynnwys slipiau cyflog a chyfriflenni banc yn mynd yn \u00f4l am o
+        leiaf tri mis, neu incwm ymddeol. Bydd angen i gwsmeriaid ddweud wrth eu darparwr
+        benthyciad am eu halldaliadau fel Treth Gyngor a biliau cyfleustodau, a threuliau
+        byw cysylltiedig eraill. </p><p><strong>Tystiolaeth o allu\u00a0i gwrdd ag
+        ymrwymiadau morgais</strong></p><p>Bydd darparwyr benthyciadau angen prawf
+        y gall benthyciwr nid yn unig gwrdd \u00e2\u2019r ad-daliad morgais cychwynnol
+        ond hefyd y costau parhaol, gan gymryd i gyfrif newidiadau rhagweladwy ynghylch
+        amgylchiadau personol, efallai ostyngiad mewn incwm o ganlyniad i ddechrau
+        teulu neu ymddeol. </p><p>Hefyd bydd angen i fenthycwyr sicrhau darparwyr
+        benthyciadau y gallent ddal i \u00a0wneud eu hymrwymiadau ad-dalu\u00a0 os
+        bydd cyfraddau llog yn codi. Er enghraifft, byddai\u2019n rhaid i berchnogion
+        tai gyda morgais o \u00a3140,000, yn gwneud ad-daliadau misol o \u00a3749
+        ar 3.4% APR, ddod o hyd i \u00a3171 y mis ychwanegol pe byddai cyfraddau llog
+        yn codi o 2%. </p><p>Dangosodd ein hymchwil hefyd, pe byddai cyfraddau llog
+        yn codi o 3%, byddai bron i hanner y prynwyr tro cyntaf yn profi anawsterau
+        i gwrdd \u00e2\u2019r swm ad-dalu ychwanegol o \u00a3265 y mis. </p><p><a
+        title=\"Cynllun gweithredu - cyfrifwch pa forgais y gallwch ei fforddio\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/amcangyfrifwch-gyfanswm-y-morgais-y-gallwch-ei-fforddio\">Defnyddiwch
+        ein Cynllun gweithredu - Cyfrifwch pa forgais y gallwch ei fforddio</a></p><h2>Ailforgeisio\u00a0
+        </h2><p>Os ydych yn ailforgeisio ac yn poeni am gwrdd \u00e2\u2019r gofynion
+        newydd ynghylch darparu benthyciadau, mae\u2019n bosibl y bydd gan ddarparwyr
+        benthyciadau rhywfaint o hyblygrwydd yn y ffordd yr asesir eich cais, cyhyd
+        \u00e2 nad ydych yn bwriadu cynyddu maint y benthyciad. Fodd bynnag, mae eithriadau
+        cyfyngedig fel pan yw\u2019r benthyciad yn cynnwys ffi cynnyrch neu drefnu.
+        Gweler ein canllaw ar <a title=\"Ailforgeisio\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/ail-forgeisio-er-mwyn-lleihau-costau\">Ailforgeisio.</a></p><p>Cewch
+        atebion i\u2019ch cwestiynau ar newidiadau morgais yn ein canllaw: <a title=\"Ystyried
+        morgais? Beth sydd angen i chi ei wybod am newidiadau i reolau ynghylch darparu
+        benthyciadau\" href=\"https://www.moneyadviceservice.org.uk/cy/news/ystyried-morgais\">Ystyried
+        morgais? Beth sydd angen i chi ei wybod am newidiadau i reolau ynghylch darparu
+        benthyciadau\u00a0</a></p><p><em>Llun: PA</em></p>","date":"2014-04-04T11:53:21+00:00"}]'
+    http_version:
+  recorded_at: Thu, 03 Jul 2014 13:20:27 GMT
+recorded_with: VCR 2.9.2

@@ -1,5 +1,3 @@
-require 'core/entities/static_page'
-
 module Core
   RSpec.describe StaticPage do
     subject { described_class.new(double, attributes) }

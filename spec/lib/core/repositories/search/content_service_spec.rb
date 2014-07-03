@@ -1,6 +1,4 @@
-require 'core/repositories/search/content_service'
-
-RSpec.describe Core::Repositories::Search::ContentService do
+RSpec.describe Core::Repository::Search::ContentService do
   let(:url) { 'https://example.com/path/to/url' }
   let(:locale) { :en }
   let(:limit) { 25 }
@@ -11,7 +9,7 @@ RSpec.describe Core::Repositories::Search::ContentService do
     connection = Core::ConnectionFactory.build(url)
     connection.builder.delete(FaradayMiddleware::Instrumentation)
 
-    allow(Core::Registries::Connection).to receive(:[]).with(:content_service) { connection }
+    allow(Core::Registry::Connection).to receive(:[]).with(:content_service) { connection }
   end
 
   describe '#perform' do

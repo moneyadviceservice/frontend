@@ -1,5 +1,3 @@
-require 'core/interactors/static_page_reader'
-
 class StaticPagesController < ApplicationController
   decorates_assigned :static_page, with: ContentItemDecorator
 

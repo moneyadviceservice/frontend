@@ -1,5 +1,3 @@
-require 'core/interactors/news_article_reader'
-
 class NewsController < ApplicationController
   decorates_assigned :news_article, with: NewsArticleDecorator
 

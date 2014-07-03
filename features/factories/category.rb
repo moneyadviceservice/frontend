@@ -1,5 +1,3 @@
-require 'core/entities/category'
-
 FactoryGirl.define do
   factory :category, class: Core::Category do
     sequence(:id) { |i| "category-#{i}" }

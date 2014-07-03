@@ -1,7 +1,5 @@
-require 'core/repositories/categories/fake'
-
 RSpec.describe 'Styleguide', :type => :request do
-  let(:repository) { Core::Repositories::Categories::Fake.new }
+  let(:repository) { Core::Repository::Categories::Fake.new }
   let(:routes) do
     Rails.application.routes.routes.map do |route|
       route.path.spec.to_s
@@ -15,7 +13,7 @@ RSpec.describe 'Styleguide', :type => :request do
   end
 
   before do
-    allow(Core::Registries::Repository).to receive(:[]).with(:category).and_return(repository)
+    allow(Core::Registry::Repository).to receive(:[]).with(:category).and_return(repository)
   end
 
   it 'gives a 200 for each styleguide page' do

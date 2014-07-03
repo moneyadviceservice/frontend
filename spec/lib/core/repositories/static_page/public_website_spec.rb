@@ -1,6 +1,4 @@
-require 'core/repositories/static_pages/public_website'
-
-module Core::Repositories::StaticPages
+module Core::Repository::StaticPages
   RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
 
@@ -11,7 +9,7 @@ module Core::Repositories::StaticPages
       let(:headers) { {} }
 
       before do
-        allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
+        allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
           Core::ConnectionFactory.build(url)
         end
 

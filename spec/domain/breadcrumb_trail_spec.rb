@@ -1,7 +1,3 @@
-require 'core/entities/article'
-require 'core/entities/category'
-require 'core/entities/static_page'
-
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Core::Article.new('the-article') }
   let(:static_page)           { Core::StaticPage.new(double) }

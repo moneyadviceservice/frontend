@@ -1,6 +1,3 @@
-require 'core/entities/search_result'
-require 'core/interactors/searcher'
-
 module Core
   RSpec.describe Searcher do
     let(:query) { double }
@@ -93,14 +90,14 @@ module Core
       let(:per_page) { 10 }
 
       describe '#data' do
-        let(:repository) { instance_double(Repositories::Search::GoogleCustomSearchEngine) }
+        let(:repository) { instance_double(Repository::Search::GoogleCustomSearchEngine) }
         let(:data) { double }
 
         before do
           allow(subject).to receive(:query) { query }
           allow(subject).to receive(:request_page) { page }
           allow(subject).to receive(:request_per_page) { per_page }
-          allow(Registries::Repository).to receive(:[]).with(:search) { repository }
+          allow(Registry::Repository).to receive(:[]).with(:search) { repository }
           allow(repository).to receive(:perform) { data }
         end
 

@@ -1,8 +1,5 @@
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/static_page'
-require 'core/interactors/static_page_reader'
-
 module Core
   RSpec.describe StaticPageReader do
     subject { described_class.new(id) }
@@ -11,7 +8,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registries::Repository).to receive(:[]).with(:static_page) do
+        allow(Registry::Repository).to receive(:[]).with(:static_page) do
           double(find: data)
         end
       end

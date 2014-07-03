@@ -11,7 +11,6 @@ end
 require_relative '../config/environment'
 require 'mas/development_dependencies/rspec/spec_helper'
 
-require 'core/repositories/vcr'
 require 'factory_girl'
 require 'html_validation'
 require 'webmock/rspec'
@@ -43,21 +42,21 @@ RSpec.configure do |c|
   c.disable_monkey_patching!
 
   c.around(:example, :type => :feature) do |example|
-    action_plan_repository = Core::Registries::Repository[:action_plan]
-    article_repository     = Core::Registries::Repository[:article]
-    category_repository    = Core::Registries::Repository[:category]
-    search_repository      = Core::Registries::Repository[:search]
+    action_plan_repository = Core::Registry::Repository[:action_plan]
+    article_repository     = Core::Registry::Repository[:article]
+    category_repository    = Core::Registry::Repository[:category]
+    search_repository      = Core::Registry::Repository[:search]
 
-    Core::Registries::Repository[:action_plan] = Core::Repositories::VCR.new(action_plan_repository)
-    Core::Registries::Repository[:article]     = Core::Repositories::VCR.new(article_repository)
-    Core::Registries::Repository[:category]    = Core::Repositories::VCR.new(category_repository)
-    Core::Registries::Repository[:search]      = Core::Repositories::VCR.new(search_repository)
+    Core::Registry::Repository[:action_plan] = Core::Repository::VCR.new(action_plan_repository)
+    Core::Registry::Repository[:article]     = Core::Repository::VCR.new(article_repository)
+    Core::Registry::Repository[:category]    = Core::Repository::VCR.new(category_repository)
+    Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
 
     example.run
 
-    Core::Registries::Repository[:action_plan] = action_plan_repository
-    Core::Registries::Repository[:article]     = article_repository
-    Core::Registries::Repository[:category]    = category_repository
-    Core::Registries::Repository[:search]      = search_repository
+    Core::Registry::Repository[:action_plan] = action_plan_repository
+    Core::Registry::Repository[:article]     = article_repository
+    Core::Registry::Repository[:category]    = category_repository
+    Core::Registry::Repository[:search]      = search_repository
   end
 end

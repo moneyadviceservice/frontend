@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'core/interactors/article_reader'
-
 RSpec.describe ArticlesController, :type => :controller do
   before do
     allow(Core::CategoryTreeReader).to receive(:new) do

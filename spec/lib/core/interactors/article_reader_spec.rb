@@ -1,8 +1,5 @@
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/article'
-require 'core/interactors/article_reader'
-
 module Core
   RSpec.describe ArticleReader do
     subject { described_class.new(id) }
@@ -11,7 +8,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registries::Repository).to receive(:[]).with(:article) do
+        allow(Registry::Repository).to receive(:[]).with(:article) do
           double(find: data)
         end
       end

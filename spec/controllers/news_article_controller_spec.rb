@@ -1,6 +1,3 @@
-require 'core/interactors/news_article_reader'
-require 'core/entities/news_article'
-
 RSpec.describe NewsController, type: :controller do
   describe 'GET show' do
     let(:news_article) { instance_double(Core::NewsArticle, id: 'test') }

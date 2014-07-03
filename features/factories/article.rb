@@ -1,5 +1,3 @@
-require 'core/entities/article'
-
 FactoryGirl.define do
   factory :article, class: Core::Article do
     id { Faker::Lorem.words.join('-') }

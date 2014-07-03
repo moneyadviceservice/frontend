@@ -23,11 +23,11 @@ module World
     end
 
     def all_categories
-      Core::Registries::Repository[:category].all
+      Core::Registry::Repository[:category].all
     end
 
     def find_category(id)
-      Core::Registries::Repository[:category].find(id)
+      Core::Registry::Repository[:category].find(id)
     end
   end
 end

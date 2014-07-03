@@ -1,5 +1,3 @@
-require 'core/entities/search_result_collection'
-
 RSpec.describe SearchResultCollectionDecorator do
   include Draper::ViewHelpers
 

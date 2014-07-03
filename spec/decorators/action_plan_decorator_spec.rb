@@ -1,5 +1,3 @@
-require 'core/entities/action_plan'
-
 RSpec.describe ActionPlanDecorator do
   include Draper::ViewHelpers
 

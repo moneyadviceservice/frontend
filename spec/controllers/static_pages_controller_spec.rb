@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'core/interactors/static_page_reader'
-
 RSpec.describe StaticPagesController, :type => :controller do
   describe 'GET show' do
     let(:categories) { [] }

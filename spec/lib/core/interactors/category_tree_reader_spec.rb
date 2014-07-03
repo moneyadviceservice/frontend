@@ -1,14 +1,11 @@
 require_relative 'shared_examples/optional_failure_block'
 
-require 'core/entities/category'
-require 'core/interactors/category_tree_reader'
-
 module Core
   RSpec.describe CategoryTreeReader, '#call' do
     subject(:category_tree_reader) { described_class.new }
 
     before do
-      allow(Registries::Repository).to receive(:[]).with(:category) do
+      allow(Registry::Repository).to receive(:[]).with(:category) do
         double(all: data)
       end
     end

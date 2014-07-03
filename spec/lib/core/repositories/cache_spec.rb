@@ -1,6 +1,4 @@
-require 'core/repositories/cache'
-
-RSpec.describe Core::Repositories::Cache do
+RSpec.describe Core::Repository::Cache do
   let(:repository) { instance_double('Core::Repositories::Test') }
   let(:cache) { double }
   let(:contents) { 'the contents' }

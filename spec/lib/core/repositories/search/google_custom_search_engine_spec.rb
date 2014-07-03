@@ -1,6 +1,4 @@
-require 'core/repositories/search/google_custom_search_engine'
-
-module Core::Repositories::Search
+module Core::Repository::Search
   RSpec.describe GoogleCustomSearchEngine do
     let(:key) { double }
     let(:cx_en) { double }
@@ -12,7 +10,7 @@ module Core::Repositories::Search
     let(:mapped_response) { double }
 
     before do
-      allow(Core::Registries::Connection).to receive(:[]).with(:google_api) { connection }
+      allow(Core::Registry::Connection).to receive(:[]).with(:google_api) { connection }
       allow_any_instance_of(GoogleCustomSearchEngine::ResponseMapper).
         to receive(:mapped_response).and_return(mapped_response)
     end

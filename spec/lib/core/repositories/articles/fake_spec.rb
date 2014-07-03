@@ -1,6 +1,4 @@
-require 'core/repositories/articles/fake'
-
-RSpec.describe Core::Repositories::Articles::Fake do
+RSpec.describe Core::Repository::Articles::Fake do
   let(:article) { build :article_hash }
   let(:invalid_id) { 'fake' }
   let(:repository) { described_class.new(article) }

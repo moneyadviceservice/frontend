@@ -1,5 +1,3 @@
-require 'core/connection_factory'
-
 RSpec.describe Core::ConnectionFactory, '.build' do
   subject(:factory) { described_class.build('http://example.com') }
 

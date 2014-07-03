@@ -1,5 +1,3 @@
-require 'core/entities/news_article'
-
 module Core
   RSpec.describe NewsArticle do
     subject { described_class.new('news_article_id', attributes) }

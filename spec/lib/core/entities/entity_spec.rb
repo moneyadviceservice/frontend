@@ -1,5 +1,3 @@
-require 'core/entities/entity'
-
 module Core
   RSpec.describe Entity do
     subject { described_class.new(double, attributes) }

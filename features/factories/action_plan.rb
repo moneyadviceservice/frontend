@@ -1,5 +1,3 @@
-require 'core/entities/action_plan'
-
 FactoryGirl.define do
   factory :action_plan, class: Core::ActionPlan do
     id { Faker::Lorem.words.join('-') }

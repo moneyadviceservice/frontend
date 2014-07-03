@@ -1,6 +1,4 @@
-require 'core/repositories/search/google_custom_search_engine/response_mapper'
-
-module Core::Repositories::Search
+module Core::Repository::Search
   RSpec.describe GoogleCustomSearchEngine::ResponseItemMapper do
 
     describe '#mapped_item_response' do

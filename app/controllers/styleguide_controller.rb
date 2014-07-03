@@ -186,6 +186,16 @@ class StyleguideController < ApplicationController
 
   helper_method :categories_for_directory_en
 
+  def news
+    [{
+      title: "Women are feeling the financial squeeze more than men",
+      date: "10 Jun 2014",
+      intro: "Four in ten women feel financially worse off than they did a year ago, according to a new report from SavvyWoman."
+    }].map(&:to_ostruct)
+  end
+
+  helper_method :news
+
   def sections
     @sections ||= Styleguide.new.sections.each_with_object({}) do |(k, v), h|
       h[k] = StyleguideSectionDecorator.new(v)

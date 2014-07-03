@@ -21,4 +21,8 @@ class BreadcrumbTrail
 
     categories.map(&Breadcrumb.public_method(:new))
   end
+
+  def self.home
+    [Breadcrumb.new(HomeCategory.new)]
+  end
 end

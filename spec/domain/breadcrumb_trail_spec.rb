@@ -60,3 +60,10 @@ RSpec.describe BreadcrumbTrail, '.build' do
     specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
   end
 end
+
+
+RSpec.describe BreadcrumbTrail, '.home' do
+  subject { described_class.home }
+
+  specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
+end

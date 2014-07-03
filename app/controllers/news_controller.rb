@@ -1,7 +1,9 @@
 require 'core/interactors/news_article_reader'
+require 'core/interactors/news_reader'
 
 class NewsController < ApplicationController
   decorates_assigned :news_article, with: NewsArticleDecorator
+  decorates_assigned :news, with: NewsArticleDecorator
 
   def index
     @news = Core::NewsReader.new.call do

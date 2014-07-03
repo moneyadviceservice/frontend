@@ -8,11 +8,13 @@
   </ul>
   <%= label_tag('subscription[email]', 'Email address', class: 'visually-hidden') %>
   <div class="newsletter__form js-newsletter-form">
-    <div class="newsletter__form-cell newsletter__form-cell--input">
-      <%= email_field_tag('subscription[email]', nil, class: 'newsletter__input') %>
-    </div>
-    <div class="newsletter__form-cell">
-      <%= button_tag('Sign up', type: 'submit', class: 'button button--inline-input newsletter__button') %>
+    <div class="newsletter__form-row">
+      <div class="newsletter__form-cell newsletter__form-cell--input">
+        <%= email_field_tag('subscription[email]', nil, class: 'newsletter__input') %>
+      </div>
+      <div class="newsletter__form-cell">
+        <%= button_tag('Sign up', type: 'submit', class: 'button button--inline-input newsletter__button') %>
+      </div>
     </div>
   </div>
 <% end %>

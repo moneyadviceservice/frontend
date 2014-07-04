@@ -1,3 +1,7 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+<% end %>
+
 <div class="l-main editorial">
   <main role="main">
     <h1 itemprop="headline"><%= title t('news.title') %></h1>

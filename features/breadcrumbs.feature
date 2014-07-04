@@ -38,3 +38,7 @@ Feature: Article breadcrumbs
  Scenario: Breadcrumb on a non-navigational category page
     When I read a non-navigational category
     Then I can see breadcrumbs for the category
+
+  Scenario: Breadcrumb on the news page
+    When I read the news page
+    Then I can see breadcrumbs for the news page

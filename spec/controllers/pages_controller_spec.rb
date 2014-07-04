@@ -1,6 +1,6 @@
 RSpec.describe PagesController, :type => :controller do
   describe 'GET show' do
-    context 'when an page does exist' do
+    context 'when a page does exist' do
       it 'is successful' do
         get :show, id: 'car', locale: I18n.locale
 

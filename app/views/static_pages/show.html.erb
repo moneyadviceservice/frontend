@@ -9,17 +9,11 @@
 <div class="l-main editorial">
   <div class="l-main__row">
 
-    <main class="l-main__cell-double-primary" role="main">
+    <main class="l-main__cell-single" role="main">
       <h1><%= title static_page.title %></h1>
 
       <%= static_page.content %>
     </main>
-
-    <% if static_page.secondary_content? %>
-      <div class=" l-main__cell-double-secondary">
-        <%= static_page.secondary_content %>
-      </div>
-    <% end %>
 
   </div>
 </div>

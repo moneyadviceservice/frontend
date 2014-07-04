@@ -6,6 +6,8 @@ class NewsController < ApplicationController
     @news = Core::NewsReader.new(params[:page]).call do
       not_found
     end
+
+    @breadcrumbs = BreadcrumbTrail.home
   end
 
   def show

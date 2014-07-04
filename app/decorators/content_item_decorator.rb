@@ -20,35 +20,7 @@ class ContentItemDecorator < Draper::Decorator
   end
 
   def content
-    case object
-      when Core::StaticPage
-
-        case object.id
-          when 'contact-us'
-            h.render 'contact_page/en_contact_detail_primary'
-          else
-            processed_body.html_safe
-        end
-      else
-        processed_body.html_safe
-    end
-  end
-
-  def secondary_content
-    case object
-      when Core::StaticPage
-
-        case object.id
-          when 'contact-us'
-            h.render 'contact_page/en_contact_detail_secondary'
-        end
-      else
-        nil
-    end
-  end
-
-  def secondary_content?
-    !!secondary_content
+    processed_body.html_safe
   end
 
   private

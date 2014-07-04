@@ -1,9 +1,12 @@
 RSpec.describe NewsController, type: :controller do
   describe 'GET show' do
-    let(:news_article) { instance_double(Core::NewsArticle, id: 'test') }
+    let(:news_article) { instance_double(Core::NewsArticle, id: 'test', categories: []) }
     let(:news_reader) { instance_double(Core::NewsArticleReader, call: news_article) }
 
-    before { allow_any_instance_of(Core::NewsArticleReader).to receive(:call) { news_article } }
+    before do
+      allow(Core::NewsArticleReader).to receive(:new) { news_reader }
+      allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+    end
 
     it 'is succesful' do
       get :show, locale: I18n.locale, id: news_article.id
@@ -26,7 +29,7 @@ RSpec.describe NewsController, type: :controller do
     context 'when a news article does not exist' do
 
       it 'raises an ActionController RoutingError' do
-        allow_any_instance_of(Core::NewsArticleReader).to receive(:call).and_yield
+        allow(Core::NewsArticleReader).to receive(:new) { ->(&block) { block.call } }
 
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end

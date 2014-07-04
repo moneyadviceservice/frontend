@@ -15,6 +15,10 @@ Feature: Article breadcrumbs
     When I read a static page
     Then I can see breadcrumbs for the static page
 
+  Scenario: Breadcrumb on a news article
+    When I read a news article
+    Then I can see breadcrumbs for the news article
+
  Scenario: Breadcrumb on an category page
     When I read a category
     Then I can see breadcrumbs for the category

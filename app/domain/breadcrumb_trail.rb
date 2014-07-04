@@ -9,6 +9,8 @@ class BreadcrumbTrail
         end
       when Core::StaticPage
         [HomeCategory.new]
+      when Core::NewsArticle
+        [HomeCategory.new, NewsCategory.new]
       else
         if item.categories.empty?
           [HomeCategory.new]
@@ -20,5 +22,9 @@ class BreadcrumbTrail
     end
 
     categories.map(&Breadcrumb.public_method(:new))
+  end
+
+  def self.home
+    [Breadcrumb.new(HomeCategory.new)]
   end
 end

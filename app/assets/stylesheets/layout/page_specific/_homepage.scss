@@ -43,7 +43,7 @@
     min-height: 0;
 
     @include respond-to($mq-m) {
-      margin-bottom: baseline-unit(*3);
+      margin-bottom: $baseline-unit*3;
       flex-basis: 46%;
     }
 

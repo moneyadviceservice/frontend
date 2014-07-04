@@ -46,6 +46,8 @@ Rails.application.routes.draw do
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: 'show'
 
+    resources :pages, only: :show
+
     resources :static_pages,
               path:        'static',
               only:        'show',

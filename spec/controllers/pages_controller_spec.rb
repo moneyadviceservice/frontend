@@ -8,7 +8,7 @@ RSpec.describe PagesController, :type => :controller do
       end
 
       context 'when requesting a dodgy looking page' do
-        it 'is sanatized' do
+        it 'is sanitized' do
           get :show, id: '../car', locale: I18n.locale
 
           expect(response).to be_ok

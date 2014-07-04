@@ -37,13 +37,13 @@
   }
 
   .flexbox & .directory__item {
-    margin-right: $gutter;
-    margin-left: $gutter;
-    margin-bottom: px(12);
+    margin-right: 1.666667%;
+    margin-left: 1.666667%;
+    margin-bottom: $baseline-unit*2;
     min-height: 0;
 
     @include respond-to($mq-m) {
-      margin-bottom: px(18);
+      margin-bottom: baseline-unit(*3);
       flex-basis: 46%;
     }
 

@@ -5,11 +5,37 @@
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-double-primary" role="main">
-      <%= render 'contact_page/contact_detail_primary' %>
+      <h1><%= t('contact_page.title') %></h1>
+
+      <p class="intro"><%= t('contact_page.intro') %></p>
+
+      <% t('contact_page.details').each do |detail| %>
+        <div class="contact-detail">
+          <h2 class="contact-detail__heading"><%= detail[:heading] %></h2>
+
+          <div class="contact-detail__content">
+            <%= raw detail[:content_html] %>
+          </div>
+        </div>
+      <% end %>
     </main>
 
     <div class=" l-main__cell-double-secondary">
-      <%= render 'contact_page/contact_detail_secondary' %>
+      <div class="sidebar">
+        <div class="panel">
+          <h2 class="heading-extra-small"><%= t('contact_page.panel_heading') %></h2>
+          <%= t('contact_page.panel_content_html') %>
+        </div>
+
+        <% t('contact_page.secondary_details').each do |detail| %>
+          <h2 class="heading-extra-small"><%= detail[:heading] %></h2>
+          <%= raw detail[:content_html] %>
+        <% end %>
+
+        <div class="sidebar__smallprint">
+          <%= t('contact_page.smallprint_html') %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

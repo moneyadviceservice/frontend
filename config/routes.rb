@@ -10,7 +10,7 @@ class ValidResource
                        linking-parhub
                        examples-parhub
                        licence-agreement-parhub),
-    :campaigns   => %w(),
+    :campaign   => %w(),
     :category    => %w(partners
                        partners-uc-banks
                        partners-uc-landlords
@@ -22,7 +22,7 @@ class ValidResource
 
   WHITELIST = {
     :article     => %w(),
-    :campaigns   => %w(revealed-the-true-cost-of-buying-a-car),
+    :campaign    => %w(revealed-the-true-cost-of-buying-a-car),
     :category    => %w(),
     :article     => %w(),
     :static_page => %w()
@@ -54,7 +54,8 @@ Rails.application.routes.draw do
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: 'show'
 
-    resources :campaigns, only: :show
+    resources :campaigns, only: :show,
+              constraints: ValidResource.new(:campaign)
 
     resources :static_pages,
               path:        'static',

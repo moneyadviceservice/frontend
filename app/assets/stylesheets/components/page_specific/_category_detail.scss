@@ -33,7 +33,7 @@
   @extend %collapsable-target;
 }
 
-.js .category-detail__heading {
+.supports-js .category-detail__heading {
   position:relative;
   padding-left:$category-inset;
 
@@ -61,7 +61,7 @@
   }
 }
 
-.js .category-detail p,
-.js .category-detail__list-container {
+.supports-js .category-detail p,
+.supports-js .category-detail__list-container {
   padding-left:$category-inset;
 }

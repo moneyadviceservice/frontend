@@ -62,7 +62,7 @@
     display: none;
   }
 
-  .js & .nav {
+  .supports-js & .nav {
     display: none;
 
     &.is-on {
@@ -70,7 +70,7 @@
     }
   }
 
-  .js & .l-search {
+  .supports-js & .l-search {
     display: none;
 
     &.is-on {

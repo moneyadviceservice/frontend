@@ -12,7 +12,7 @@ Feature: Viewing a static page
     | English  |
     | Welsh    |
 
-  Scenario Outline: View a the contact page
+  Scenario Outline: View the contact page
     When I view the contact page in <language>
     Then I should see the contact page in <language>
 

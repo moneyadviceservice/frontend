@@ -8,22 +8,14 @@ module Core::Newsletter
     end
 
     def call(&block)
+      result = Core::Registry::Repository[:newsletter_subscription].register(email)
 
-      # if status == 'OK'
-      #   true
-      # else
-      #   block.call if block_given?
-      # else
-      #   false
-      # end
-
-      status, message = Core::Registry::Repository[:newsletter_subscription].register(email)
-      subscription = Subscription.new(status, message)
-
-      if subscription.success?
-        subscription
+      if result
+        result
+      elsif block_given?
+        block.call
       else
-        block.call(subscription) if block_given?
+        false
       end
     end
   end

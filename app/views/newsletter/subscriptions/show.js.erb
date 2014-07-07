@@ -1,7 +1,6 @@
-<% if subscription.success? %>
-$('.js-newsletter-form').removeClass('is-errored');
-$('.js-newsletter-form').html('<%= subscription.success_message %>');
+<% if @success %>
+$('.js-newsletter-form').removeClass('is-errored').html('<%= flash[:success] %>');
 <% else %>
-$('.js-newsletter-form').addClass('is-errored');
-$('.js-newsletter-form').prepend('<%= subscription.error_message %>');
+var error = $('<p />').addClass('newsletter__text js-newsletter-error-msg').text('<%= flash[:error] %>');
+$('.js-newsletter-form').addClass('is-errored').prepend(error);
 <% end %>

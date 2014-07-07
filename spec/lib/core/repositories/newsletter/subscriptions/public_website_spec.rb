@@ -19,14 +19,14 @@ module Core::Repository::Newsletter
           let(:email) { 'clark.kent@example.com' }
           let(:status) { 201 }
 
-          specify { expect(repository.register(email)).to eq [:success, nil] }
+          specify { expect(repository.register(email)).to be_truthy }
         end
 
         context 'with invalid email' do
           let(:email) { 'clark.kent@daily.planet' }
           let(:status) { 422 }
 
-          specify { expect(repository.register(email)).to eq [:error, nil] }
+          specify { expect(repository.register(email)).to be_falsey }
         end
 
         context 'when there is an internal server error' do

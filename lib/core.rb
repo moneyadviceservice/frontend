@@ -25,7 +25,6 @@ module Core
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
   module Newsletter
-    autoload :Subscription, 'core/entity/newsletter/subscription'
     autoload :Subscriber,   'core/interactor/newsletter/subscriber'
   end
 

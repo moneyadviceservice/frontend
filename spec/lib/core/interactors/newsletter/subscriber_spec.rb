@@ -1,5 +1,3 @@
-require_relative '../shared_examples/optional_failure_block'
-
 module Core::Newsletter
   RSpec.describe Subscriber do
     subject(:subscriber) { described_class.new(email) }
@@ -9,26 +7,28 @@ module Core::Newsletter
     describe '#call' do
       before do
         allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
-          double(register: email)
+          double(register: result)
         end
       end
 
-      context 'when the Subscription entity is valid' do
-        before do
-          expect_any_instance_of(Subscription).to receive(:valid?) { true }
-        end
+      context 'when the repository result is true' do
+        let(:result) { true }
 
-        it 'returns a Subscription' do
-          expect(subject.call).to be_a(Subscription)
-        end
+        specify { expect(subject.call).to be_truthy }
       end
 
-      context 'when the Subscription is invalid' do
-        before do
-          expect_any_instance_of(Subscription).to receive(:valid?) { false }
-        end
+      context 'when the repository result is false' do
+        let(:result) { false }
 
-        it_has_behavior 'optional failure block'
+        specify { expect(subject.call).to be_falsey }
+      end
+
+      context 'when a failure block is given' do
+        let(:result) { nil }
+
+        it 'calls the block' do
+          expect { |x| (subject.call(&x)) }.to yield_with_no_args
+        end
       end
     end
   end

@@ -9,12 +9,11 @@ module Core::Repository
         def register(email)
           params = { newsletter_subscription: email }
 
-          response = connection.post('/%{locale}/newsletter-subscriptions.json' % { locale: I18n.locale }, params)
-
-          [:success, response.body]
+          connection.post('/%{locale}/newsletter-subscriptions.json' % { locale: I18n.locale }, params)
+          true
 
         rescue Core::Connection::UnprocessableEntity
-          [:error, nil]
+          false
 
         rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
           raise RequestError, 'Unable to create newsletter subscription on Public Website'

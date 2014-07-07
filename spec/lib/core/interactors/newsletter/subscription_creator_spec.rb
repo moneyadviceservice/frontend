@@ -1,5 +1,5 @@
 module Core::Newsletter
-  RSpec.describe Subscriber do
+  RSpec.describe SubscriptionCreator do
     subject(:subscriber) { described_class.new(email) }
 
     let(:email) { 'clark.kent@example.com' }

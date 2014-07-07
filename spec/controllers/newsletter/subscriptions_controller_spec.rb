@@ -1,9 +1,9 @@
 module Newsletter
   RSpec.describe SubscriptionsController, :type => :controller do
-    let(:subscriber) { instance_double(Core::Newsletter::Subscriber, email: email) }
+    let(:subscriber) { instance_double(Core::Newsletter::SubscriptionCreator, email: email) }
 
     before do
-      allow_any_instance_of(Core::Newsletter::Subscriber).to receive(:call) { result }
+      allow_any_instance_of(Core::Newsletter::SubscriptionCreator).to receive(:call) { result }
       allow(subscriber).to receive(:call) { result }
     end
 
@@ -13,7 +13,7 @@ module Newsletter
         let(:result) { true }
 
         it 'instantiates a subscriber' do
-          expect(Core::Newsletter::Subscriber).to receive(:new).with(email) { subscriber }
+          expect(Core::Newsletter::SubscriptionCreator).to receive(:new).with(email) { subscriber }
 
           xhr :post, :create, locale: I18n.locale, subscription: email
         end

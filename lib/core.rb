@@ -25,7 +25,7 @@ module Core
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
   module Newsletter
-    autoload :Subscriber,   'core/interactor/newsletter/subscriber'
+    autoload :SubscriptionCreator, 'core/interactor/newsletter/subscription_creator'
   end
 
   module Registry

@@ -2,7 +2,7 @@ module Newsletter
   class SubscriptionsController < ApplicationController
 
     def create
-      @success = Core::Newsletter::Subscriber.new(subscription_params).call
+      @success = Core::Newsletter::SubscriptionCreator.new(subscription_params).call
 
       if @success
         flash[:success] = I18n.t('newsletter.subscription.success')

@@ -51,8 +51,7 @@ Rails.application.routes.draw do
 
     resources :static_pages,
               path:        'static',
-              only:        'show',
-              constraints: ValidResource.new(:static_page)
+              only:        'show'
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 

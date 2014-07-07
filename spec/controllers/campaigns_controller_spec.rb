@@ -1,18 +1,10 @@
-RSpec.describe PagesController, :type => :controller do
+RSpec.describe CampaignsController, :type => :controller do
   describe 'GET show' do
     context 'when a page does exist' do
       it 'is successful' do
-        get :show, id: 'car', locale: I18n.locale
+        get :show, id: 'revealed-the-true-cost-of-buying-a-car', locale: I18n.locale
 
         expect(response).to be_ok
-      end
-
-      context 'when requesting a dodgy looking page' do
-        it 'is sanitized' do
-          get :show, id: '../car', locale: I18n.locale
-
-          expect(response).to be_ok
-        end
       end
     end
 

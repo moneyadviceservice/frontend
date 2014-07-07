@@ -11,7 +11,7 @@ module HTMLProcessor
   DATATABLE_DEFAULT = '//table[contains(@class, "datatable-default")]'.freeze
   INTRO_IMG         = '//p[@class="intro"]/img'.freeze
   INTRO_PARAGRAPH   = '//p[@class="intro"]'.freeze
-  IMAGE_AUTHOR      = '//p/em'.freeze
+  IMAGE_AUTHOR      = '//p/em/text()[contains(., "Photo:")]'.freeze
   VIDEO_IFRAME      = '//iframe[starts-with(@src, "https://www.youtube.com/embed")]'.freeze
   COLLAPSIBLE_SPAN  = '//span[@class="collapse"]'.freeze
 

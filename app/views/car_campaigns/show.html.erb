@@ -1,1 +1,12 @@
+<% set_meta_tags(canonical: campaigns_revealed_the_true_cost_of_buying_a_car_url,
+                 alternate: { en: campaigns_revealed_the_true_cost_of_buying_a_car_url,
+                              cy: campaigns_revealed_the_true_cost_of_buying_a_car_url }) %>
+
+<% content_for(:alternate_link) do %>
+  <%= link_to(campaigns_revealed_the_true_cost_of_buying_a_car_url, id: "cyLink", lang: "cy-GB") do %>
+    <span class="icon icon--globe"></span>
+    <%= t("locales.cy") %>
+  <% end %>
+<% end %>
+
 car stuff

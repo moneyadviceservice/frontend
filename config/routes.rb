@@ -1,5 +1,4 @@
 class ValidResource
-
   BLACKLIST = {
     :article     => %w(about-our-debt-work am-ein-gwaith-dyled
                        debt-publications cyhoeddiadau-ar-ddyledion
@@ -11,6 +10,7 @@ class ValidResource
                        linking-parhub
                        examples-parhub
                        licence-agreement-parhub),
+    :campaign    => %w(),
     :category    => %w(partners
                        partners-uc-banks
                        partners-uc-landlords
@@ -20,6 +20,14 @@ class ValidResource
                        were-here-to-help rydym-yma-i-helpu)
   }
 
+  WHITELIST = {
+    :article     => %w(),
+    :campaign    => %w(revealed-the-true-cost-of-buying-a-car),
+    :category    => %w(),
+    :article     => %w(),
+    :static_page => %w()
+  }
+
   attr_accessor :type
 
   def initialize(type)
@@ -27,7 +35,7 @@ class ValidResource
   end
 
   def matches?(request)
-    BLACKLIST[type].exclude?(request.parameters['id'])
+    BLACKLIST[type].exclude?(request.parameters['id']) || WHITELIST[type].include?(request.parameters['id'])
   end
 end
 
@@ -45,6 +53,9 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: 'show'
+
+    resources :campaigns, only: :show,
+              constraints: ValidResource.new(:campaign)
 
     resources :static_pages,
               path:        'static',

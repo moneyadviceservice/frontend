@@ -126,7 +126,7 @@
           }
 
           <%# // JS support > Update className %>
-          html.className = html.className.replace('no-js', 'js js-' + supports.js);
+          html.className = html.className.replace('supports-js', 'supports-js js js-' + supports.js);
 
           <% if Rails.env.production? %>
             <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>

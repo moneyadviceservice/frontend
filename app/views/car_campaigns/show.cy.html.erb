@@ -1,0 +1,12 @@
+<% set_meta_tags(canonical: campaigns_revealed_the_true_cost_of_buying_a_car_url(locale: :en),
+                 alternate: { en: campaigns_revealed_the_true_cost_of_buying_a_car_url(locale: :en),
+                              cy: campaigns_edrychwch_cost_gwirioneddol_prynu_car_url(locale: :cy) }) %>
+
+<% content_for(:alternate_link) do %>
+  <%= link_to(campaigns_revealed_the_true_cost_of_buying_a_car_url(locale: :en), id: "cyLink", lang: "cy-GB") do %>
+    <span class="icon icon--globe"></span>
+    <%= t("locales.en") %>
+  <% end %>
+<% end %>
+
+welsh car stuff

@@ -1,5 +1,3 @@
-require 'core/interactors/newsletter/subscriber'
-
 module Newsletter
   class SubscriptionsController < ApplicationController
     decorates_assigned :subscription, with: SubscriptionDecorator

@@ -1,5 +1,3 @@
-require 'core/entities/newsletter/subscription'
-
 module Core::Newsletter
   RSpec.describe Subscription do
     subject(:subscription) { described_class.new(status, message) }

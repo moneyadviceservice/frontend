@@ -11,7 +11,7 @@ category_repository                = Core::Registry::Repository[:category]
 search_repository                  = Core::Registry::Repository[:search]
 static_page_repository             = Core::Registry::Repository[:static_page]
 news_article_repository            = Core::Registry::Repository[:news]
-newsletter_subscription_repository = Core::Registry::Repository[:newsletter]
+newsletter_subscription_repository = Core::Registry::Repository[:newsletter_subscription]
 
 Core::Registry::Repository[:action_plan]             = Core::Repository::VCR.new(action_plan_repository)
 Core::Registry::Repository[:article]                 = Core::Repository::VCR.new(article_repository)

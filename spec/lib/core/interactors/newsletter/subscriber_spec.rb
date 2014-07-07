@@ -1,8 +1,5 @@
 require_relative '../shared_examples/optional_failure_block'
 
-require 'core/entities/newsletter/subscription'
-require 'core/interactors/newsletter/subscriber'
-
 module Core::Newsletter
   RSpec.describe Subscriber do
     subject(:subscriber) { described_class.new(email) }
@@ -11,7 +8,7 @@ module Core::Newsletter
 
     describe '#call' do
       before do
-        allow(Core::Registries::Repository).to receive(:[]).with(:newsletter_subscriptions) do
+        allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
           double(register: email)
         end
       end

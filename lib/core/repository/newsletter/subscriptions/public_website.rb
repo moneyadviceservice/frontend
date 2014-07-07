@@ -1,13 +1,9 @@
-require 'core/connection'
-require 'core/registries/connection'
-require 'core/repositories/repository'
-
-module Core::Repositories
+module Core::Repository
   module Newsletter
     module Subscriptions
-      class PublicWebsite < Core::Repository
+      class PublicWebsite < Core::Repository::Base
         def initialize
-          self.connection = Core::Registries::Connection[:public_website]
+          self.connection = Core::Registry::Connection[:public_website]
         end
 
         def register(email)

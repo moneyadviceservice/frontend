@@ -24,6 +24,11 @@ module Core
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
+  module Newsletter
+    autoload :Subscription, 'core/entity/newsletter/subscription'
+    autoload :Subscriber,   'core/interactor/newsletter/subscriber'
+  end
+
   module Registry
     autoload :Connection, 'core/registry/connection'
     autoload :Repository, 'core/registry/repository'
@@ -57,7 +62,9 @@ module Core
     end
 
     module Newsletter
-      autoload :PublicWebsite, 'core/repositories/newsletter/subscriptions/public_website'
+      module Subscriptions
+        autoload :PublicWebsite, 'core/repository/newsletter/subscriptions/public_website'
+      end
     end
 
     module Search

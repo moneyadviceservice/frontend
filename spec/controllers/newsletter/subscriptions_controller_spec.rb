@@ -1,6 +1,3 @@
-require 'core/interactors/newsletter/subscriber'
-require 'core/entities/newsletter/subscription'
-
 module Newsletter
   RSpec.describe SubscriptionsController, :type => :controller do
     let(:subscription) { instance_double(Core::Newsletter::Subscription, status: double, message: '') }

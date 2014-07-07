@@ -1,7 +1,4 @@
-require 'core/repositories/newsletter/subscriptions/public_website'
-require 'html_processor'
-
-module Core::Repositories::Newsletter
+module Core::Repository::Newsletter
   module Subscriptions
     RSpec.describe PublicWebsite do
       let(:url) { 'https://example.com/path/to/url' }
@@ -10,7 +7,7 @@ module Core::Repositories::Newsletter
         subject(:repository) { described_class.new }
 
         before do
-          allow(Core::Registries::Connection).to receive(:[]).with(:public_website) do
+          allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
             Core::ConnectionFactory.build(url)
           end
 

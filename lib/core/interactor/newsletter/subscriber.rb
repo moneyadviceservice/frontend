@@ -1,5 +1,3 @@
-require 'core/entities/newsletter/subscription'
-
 module Core::Newsletter
   class Subscriber
     attr_accessor :email
@@ -10,10 +8,19 @@ module Core::Newsletter
     end
 
     def call(&block)
-      status, message = Core::Registries::Repository[:newsletter_subscriptions].register(email)
+
+      # if status == 'OK'
+      #   true
+      # else
+      #   block.call if block_given?
+      # else
+      #   false
+      # end
+
+      status, message = Core::Registry::Repository[:newsletter_subscription].register(email)
       subscription = Subscription.new(status, message)
 
-      if subscription.valid?
+      if subscription.success?
         subscription
       else
         block.call(subscription) if block_given?

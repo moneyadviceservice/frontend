@@ -12,6 +12,16 @@ When(/^I sign up to the newsletter with an invalid email address$/) do
   current_page.newsletter.signup.click
 end
 
+When(/^I have already signed up for the newsletter$/) do
+  step "I visit the website"
+  step "I sign up to the newsletter with a valid email address"
+end
+
+When(/^I sign up to the newsletter again with the same email address$/) do
+  step "I visit the website"
+  step "I sign up to the newsletter with a valid email address"
+end
+
 Then(/^I should see a message that my subscription was successful$/) do
   expect(current_page.newsletter).to have_text(I18n.t('newsletter.subscription.success'))
 end

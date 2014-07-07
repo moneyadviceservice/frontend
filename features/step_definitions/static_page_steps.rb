@@ -47,6 +47,12 @@ When(/^I view the contact page in (.*)$/) do |language|
 end
 
 Then(/^I should see the contact page in (.*)$/) do |language|
-  expect(static_page.heading).to have_content(I18n.t('contact_us.title'))
-  expect(static_page.intro).to have_content(I18n.t('contact_us.intro'))
+  locale = language_to_locale(language)
+
+  case locale
+  when 'en'
+    expect(static_page.heading).to have_content('Contact Us')
+  when 'cy'
+    expect(static_page.heading).to have_content('Cysylltu â ni')
+  end
 end

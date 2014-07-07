@@ -10,7 +10,7 @@ class ValidResource
                        linking-parhub
                        examples-parhub
                        licence-agreement-parhub),
-    :campaign   => %w(),
+    :campaign    => %w(),
     :category    => %w(partners
                        partners-uc-banks
                        partners-uc-landlords

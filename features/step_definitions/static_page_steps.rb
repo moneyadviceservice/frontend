@@ -40,9 +40,9 @@ When(/^I view the contact page in (.*)$/) do |language|
 
   case locale
   when 'en'
-    static_page.load(locale: locale, id: StaticPagesController::CONTACT_PAGE_ID_EN)
+    static_page.load(locale: locale, id: 'contact-us')
   when 'cy'
-    static_page.load(locale: locale, id: StaticPagesController::CONTACT_PAGE_ID_CY)
+    static_page.load(locale: locale, id: 'cysylltu-a-ni')
   end
 end
 

@@ -1,18 +1,17 @@
 class StaticPagesController < ApplicationController
   decorates_assigned :static_page, with: ContentItemDecorator
 
-  CONTACT_PAGE_ID_EN = 'contact-us'
-  CONTACT_PAGE_ID_CY = 'cysylltu-a-ni'
-
   def show
-    @breadcrumbs = BreadcrumbTrail.home
+    @static_page = Core::StaticPageReader.new(params[:id]).call do
+      not_found
+    end
 
-    if [CONTACT_PAGE_ID_EN, CONTACT_PAGE_ID_CY].include?(params[:id])
-      render :template => 'static_pages/show_contact_us'
+    @breadcrumbs = BreadcrumbTrail.build(@static_page, category_tree)
+
+    if template_exists?("/static_pages/#{params[:id].underscore}")
+      render template: "/static_pages/#{params[:id].underscore}"
     else
-      @static_page = Core::StaticPageReader.new(params[:id]).call do
-        not_found
-      end
+      render :show
     end
   end
 end

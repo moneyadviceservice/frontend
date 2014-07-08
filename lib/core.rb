@@ -8,6 +8,7 @@ module Core
   autoload :Article, 'core/entity/article'
   autoload :Category, 'core/entity/category'
   autoload :Entity, 'core/entity'
+  autoload :Feedback, 'core/entity/feedback'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :Other, 'core/entity/other'

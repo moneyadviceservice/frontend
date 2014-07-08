@@ -37,10 +37,10 @@ require(['common'], function(MAS) {
     $(document).ready(function() {
 
       $('#primary-nav')
-            .clone()
-            .attr('id', 'js-primary-nav')
-            .insertAfter('.mobile-nav')
-            .wrap('<div class="l-menu-nav"></div>');
+        .clone()
+        .attr('id', 'js-primary-nav')
+        .insertAfter('.mobile-nav')
+        .wrap('<div class="l-menu-nav"></div>');
 
       $('.mobile-nav__link--menu').attr('href', '#js-primary-nav');
 

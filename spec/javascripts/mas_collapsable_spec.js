@@ -1,10 +1,4 @@
-//= require spec_helper
-//= require templates/collapsable
-
-
-
 describe('mas_collapsable basics', function () {
-
   'use strict';
 
   var validcollapsable,
@@ -12,10 +6,10 @@ describe('mas_collapsable basics', function () {
       $body;
 
   before(function (done) {
-    $('body').html(JST['templates/collapsable']());
-    $body = $('body');
-
     require(['collapsable'], function (Mod) {
+      $('body').html(window.__html__['spec/javascripts/templates/collapsable.html']);
+      $body = $('body');
+
       validcollapsable = new Mod({showOnlyFirst:true});
       emptycollapsable = new Mod({triggerEl:'.doesntExist'});
       done();
@@ -171,10 +165,10 @@ describe('mas_collapsable#options', function(){
       $body;
 
   before(function(done){
-    $('body').html(JST['templates/collapsable']());
-    $body = $('body');
-
     require(['collapsable'], function (Mod) {
+      $('body').html(window.__html__['spec/javascripts/templates/collapsable.html']);
+      $body = $('body');
+
       collapsable = new Mod({
         triggerEl: $('#optionsTest > li > a'),
         targetEl: 'ul',

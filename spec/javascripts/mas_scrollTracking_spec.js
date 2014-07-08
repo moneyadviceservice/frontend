@@ -1,6 +1,3 @@
-//= require spec_helper
-//= require templates/scrollTracking
-
 describe('scrollTracking', function () {
   'use strict';
 
@@ -8,9 +5,10 @@ describe('scrollTracking', function () {
       $body;
 
   before(function (done) {
-    $('body').html(JST['templates/scrollTracking']());
-    $body = $('body');
     require(['scrollTracking'], function (ma) {
+      $('body').html(window.__html__['spec/javascripts/templates/scrollTracking.html']);
+      $body = $('body');
+
       scrollTracking = ma;
       done();
     }, done);

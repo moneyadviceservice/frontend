@@ -126,12 +126,9 @@
 
 .l-car-campaign__section--buy .l-car-campaign__section-media {
   @include column(6,12);
-  background: transparent -75px top image_url('car_landing/buy-car.png') no-repeat;
-  background-size: cover;
+
   float: left;
-  min-height: 350px;
   margin-left: 0;
-  padding-bottom: 70.8%;
 
   @include respond-to(0, $mq-m){
     margin-bottom: $baseline-unit*3;
@@ -139,17 +136,33 @@
 
   @include respond-to($mq-m){
     @include column(4,8);
-    background-position: top right;
-    background-size: contain;
     float: right;
     min-height: inherit;
     margin-top: -$baseline-unit*10;
     padding-left: 30px;
-    padding-bottom: 65.8%;
   };
 
+  &:before {
+    background: transparent top center image_url('car_landing/buy-car.png') no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    min-height: 230px;
+    width: 100%;
+
+    @include respond-to($mq-m){
+      background-position: top right;
+      min-height: 500px;
+    };
+  }
+
+  // IE8 overrides to make the images play nice
   .ie8 & {
     padding-left: 0;
+
+    &:before {
+      width: 330px;
+    }
   }
 }
 
@@ -270,6 +283,7 @@
       padding-bottom: 0;
     };
 
+    // IE8 overrides to make the images play nice
     .ie8 & {
       left: 0;
       width: 575px;

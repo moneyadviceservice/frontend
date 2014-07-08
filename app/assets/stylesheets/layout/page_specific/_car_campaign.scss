@@ -47,6 +47,10 @@
 .l-car-campaign__section--intro {
   @include column(12);
   @include respond-to($mq-m){
+    @include column(10);
+    @include push(1);
+  };
+  @include respond-to($mq-l){
     @include column(8);
     @include push(2);
   };
@@ -67,18 +71,19 @@
   };
 
   @include respond-to($mq-m){
-    @include column(10);
-    @include push(1);
+    @include column(12);
     background-position: 50% 50%;
     background-size: 90%;
-    height: 85px;
+    height: 125px;
     margin-bottom: $baseline-unit*9;
     margin-top: $baseline-unit*7;
     padding-bottom: 0;
   };
 
   @include respond-to($mq-l){
-    height: 125px;
+    @include column(10);
+    @include push(1);
+
   };
 
 }
@@ -88,6 +93,10 @@
 .l-car-campaign__section--buy {
   @include column(12);
   @include respond-to($mq-m){
+    @include column(10);
+    @include push(1);
+  };
+  @include respond-to($mq-l){
     @include column(8);
     @include push(2);
   };
@@ -96,6 +105,9 @@
 .l-car-campaign__section--buy .l-car-campaign__section-row {
   @include row(12);
   @include respond-to($mq-m){
+    @include row(10);
+  };
+  @include respond-to($mq-l){
     @include row(8);
   };
 }
@@ -103,14 +115,19 @@
 .l-car-campaign__section--buy .l-car-campaign__section-heading{
   @include column(12,12);
   @include respond-to($mq-m){
+    @include column(10,10);
+  };
+  @include respond-to($mq-l){
     @include column(8,8);
   };
 }
 
 .l-car-campaign__section--buy .l-car-campaign__section-text {
   @include column(12,12);
-
   @include respond-to($mq-m){
+    @include column(5,10);
+  };
+  @include respond-to($mq-l){
     @include column(4,8);
   };
 }
@@ -119,8 +136,11 @@
   @include column(6,12);
   float: right;
   @include respond-to($mq-m){
-    @include column(4,8);
+    @include column(5,10);
     float: left;
+  };
+  @include respond-to($mq-l){
+    @include column(4,8);
   };
 }
 
@@ -172,6 +192,10 @@
   margin-bottom: $baseline-unit*11;
 
   @include respond-to($mq-m){
+    @include column(10);
+    @include push(1);
+  };
+  @include respond-to($mq-l){
     @include column(9);
     @include push(1);
     margin-bottom: $baseline-unit*17;
@@ -181,6 +205,9 @@
 .l-car-campaign__section--run .l-car-campaign__section-row {
   @include row(12);
   @include respond-to($mq-m){
+    @include row(10);
+  };
+  @include respond-to($mq-l){
     @include row(9);
   };
 }
@@ -189,7 +216,6 @@
   background: transparent 60px 100% image_url('car_landing/run-car.png') no-repeat;
   float: left;
   min-height: 305px;
-  width: 100%;
 
   @include respond-to(0, $mq-m){
     margin-bottom: $baseline-unit*3;
@@ -200,7 +226,7 @@
   };
 
   @include respond-to($mq-m){
-    @include column(5,9);
+    @include column(5,10);
     background-position: top left;
     background-size: contain;
     float: left;
@@ -208,11 +234,19 @@
     padding-right: 30px;
     padding-bottom: 0;
   };
+
+  @include respond-to($mq-l){
+    @include column(5,9);
+  };
 }
 
 .l-car-campaign__section--run .l-car-campaign__section-text {
   @include column(12);
   @include respond-to($mq-m){
+    @include column(5,10);
+    float: right;
+  };
+  @include respond-to($mq-l){
     @include column(4,9);
     float: right;
   };
@@ -225,8 +259,12 @@
 
   @include respond-to($mq-m){
     @include column(10);
-    @include push(2);
+    @include push(1);
     margin-bottom: $baseline-unit*6;
+  };
+  @include respond-to($mq-l){
+    @include column(10);
+    @include push(2);
   };
 }
 
@@ -256,7 +294,6 @@
 
 .l-car-campaign__section--sell .l-car-campaign__section-media {
   float: left;
-  width: 100%;
 
   @include respond-to($mq-m){
     @include column(6,10);
@@ -278,7 +315,7 @@
     };
 
     @include respond-to($mq-l){
-      min-height: 700px;
+      min-height: 600px;
       left: -70px;
       padding-bottom: 0;
     };

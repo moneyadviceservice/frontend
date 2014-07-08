@@ -304,19 +304,25 @@
     background-size: cover;
     content: '';
     display: block;
-    height: 525px;
+    height: 570px;
     position: relative;
     width: 100%;
 
     @include respond-to($mq-s){
       background-position: center top;
       background-size: contain;
+      height: auto;
+      min-height: 500px;
     };
 
     @include respond-to($mq-l){
       min-height: 600px;
-      left: -70px;
+      left: -40px;
       padding-bottom: 0;
+    };
+
+    @include respond-to($mq-xl){
+      left: -110px;
     };
 
     // IE8 overrides to make the images play nice

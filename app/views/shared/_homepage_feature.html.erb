@@ -7,6 +7,7 @@
         <% items.each do |item| %>
           <li class="home-feature__list-item">
             <a class="home-feature__heading" href="<%= item['url'] %>"><%= item['title'] %></a>
+
             <p><%= item['description'] %></p>
           </li>
         <% end %>

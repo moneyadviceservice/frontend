@@ -14,10 +14,10 @@
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <!--[if IE]>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" /><![endif]-->
   <!--[if IEMobile]>
   <meta http-equiv="cleartype" content="on"><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="HandheldFriendly" content="True">
 
   <%= baseline_grid %>
@@ -35,8 +35,8 @@
 
   <%# Responsive styles for all modern devices, excluded from older IE version %>
   <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
-    <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
-    <script>var responsiveStyle = true;</script>
+  <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
+  <script>var responsiveStyle = true;</script>
   <!--<![endif]-->
 
   <%= yield :head %>
@@ -60,11 +60,11 @@
 
     var require = {
       config: {
-        globals: (function (w, d) {
+        globals: (function(w, d) {
           var html, appendFile, bootstrap, fonts, supports;
 
           <%# // Set variables and default values %>
-          appendFile = function (tag, src, content) {
+          appendFile = function(tag, src, content) {
             var position = d.getElementsByTagName('script')[0],
                 file = d.createElement(tag);
             if (tag === 'script') {
@@ -93,7 +93,7 @@
           }
 
           <%# // Run support tests and cache values %>
-          supports = (function () {
+          supports = (function() {
             var S = {};
 
             function supportTest(prop, context) {
@@ -107,14 +107,13 @@
             S.js = ( supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ) ? 'advanced' : 'basic';
             S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w) );
             S.localstorage = supportTest('localStorage', w);
-            S.svg = (function () {
+            S.svg = (function() {
               return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect
             })();
             S.test = supportTest;
 
             return S
           })();
-
 
           <%# //// Run modify DOM and load files %>
 
@@ -129,11 +128,11 @@
           html.className = html.className.replace('supports-js', 'supports-js js js-' + supports.js);
 
           <% if Rails.env.production? %>
-            <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
-            setTimeout(function () {
-              var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
-              appendFile('script', src);
-            }, 1);
+          <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
+          setTimeout(function() {
+            var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
+            appendFile('script', src);
+          }, 1);
           <% end %>
 
           <%#
@@ -144,13 +143,13 @@
           var vp, ua, gs, sf;
           vp = d.querySelector && d.querySelector('meta[name="viewport"]');
           ua = navigator.userAgent;
-          sf = function () {
+          sf = function() {
             if (vp && /iPhone|iPad|iPod/.test(ua) && !/Opera Mini/.test(ua)) {
               vp.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
               d.addEventListener("gesturestart", gs, false);
             }
           };
-          gs = function () {
+          gs = function() {
             vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
           };
 
@@ -173,18 +172,18 @@
 <%# START Google Analytics scripts %>
 <noscript>
   <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
-          height="0" width="0" style="display:none;visibility:hidden"
-          title="Google Tag Manager"></iframe>
+  height="0" width="0" style="display:none;visibility:hidden"
+  title="Google Tag Manager"></iframe>
 </noscript>
 <script>
-  (function (w, d, s, l, i) {
+  (function(w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
     var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
+    j.async = true;
+    j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
 </script>
 <%# END Google Analytics scripts %>
@@ -205,7 +204,7 @@
 <% end %>
 
 <%# START RequireJS load of application %>
-<%= javascript_include_tag 'requirejs/require', data: {main: javascript_path('application')} %>
+<%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
 <%# END RequireJS load of application %>
 
 <%= yield :javascripts %>

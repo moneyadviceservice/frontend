@@ -61,7 +61,7 @@
           <%= yield(:alternate_link) %>
         <% else %>
           <% locals.each do |locale| %>
-            <%= link_to({locale: locale}, id: "#{locale}Link", lang: locale) do %>
+            <%= link_to({ locale: locale }, id: "#{locale}Link", lang: locale) do %>
               <span class="icon icon--globe"></span>
               <%= t("locales.#{locale}") %>
             <% end %>

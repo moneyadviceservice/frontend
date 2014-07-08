@@ -16,9 +16,9 @@
   </div>
 
   <% unless section.modifiers.empty? %>
-    <%= render partial: 'element',
+    <%= render partial:    'element',
                collection: section.modifiers,
-               locals: {source: yield} %>
+               locals:     { source: yield } %>
   <% end %>
 
   <div class="styleguide-html">

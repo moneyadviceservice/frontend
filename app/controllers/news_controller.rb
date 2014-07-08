@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   decorates_assigned :news_article, with: NewsArticleDecorator
-  decorates_assigned :news, with: NewsArticleDecorator
+  decorates_assigned :news, with: NewsDecorator
 
   def index
     @news = Core::NewsReader.new(params[:page]).call do

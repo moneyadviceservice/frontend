@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/news.json
+    uri: https://www.moneyadviceservice.org.uk/cy/news.json?page_number=1
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 7c0e30d6-2b93-49b1-9e08-937c724d1006
+      - 16a13d9a-cf61-4abe-8ca2-c4be7669e282
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,31 +20,41 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 08 Jul 2014 14:34:07 GMT
       Content-Type:
       - application/json; charset=utf-8
-      X-Meta-Request-Version:
-      - 0.2.8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
       X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"fe92197f19aa04b05bb29e3549886d70"'
+      - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 8bba51b3670cb2132c93f67f3f72d1e0
+      - 1513e058ffc60f248df49808900c05e0
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 03-Jul-2015 13:20:24 GMT
-      - _session_id=8bba51b3670cb2132c93f67f3f72d1e0; path=/; HttpOnly
-      - _web_tracking=b51c8ed8f791761b8a818e1ca108a67d; path=/; expires=Fri, 03-Jul-2015
-        13:20:24 GMT
+      - _cookie_notice=y; path=/; expires=Wed, 08-Jul-2015 14:34:07 GMT; secure
+      - _session_id=1513e058ffc60f248df49808900c05e0; path=/; secure; HttpOnly
+      - _web_tracking=c11c3697c03fd6ad482e9ac734c4d764; path=/; expires=Wed, 08-Jul-2015
+        14:34:07 GMT; secure
       X-Request-Id:
-      - 7c0e30d6-2b93-49b1-9e08-937c724d1006
+      - 16a13d9a-cf61-4abe-8ca2-c4be7669e282
       X-Runtime:
-      - '3.719019'
-      Connection:
-      - close
-      Server:
-      - thin 1.5.1 codename Straight Razor
+      - '0.262594'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
       string: '[{"id":"pum-peth-mae-angen-i-chi-eu-gwybod-am-fenthyciadau-diwrnod-cyflog","title":"Pum
@@ -1040,5 +1050,5 @@ http_interactions:
         morgais? Beth sydd angen i chi ei wybod am newidiadau i reolau ynghylch darparu
         benthyciadau\u00a0</a></p><p><em>Llun: PA</em></p>","date":"2014-04-04T11:53:21+00:00"}]'
     http_version:
-  recorded_at: Thu, 03 Jul 2014 13:20:27 GMT
+  recorded_at: Tue, 08 Jul 2014 14:34:08 GMT
 recorded_with: VCR 2.9.2

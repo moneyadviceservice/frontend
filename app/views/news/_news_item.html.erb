@@ -1,0 +1,8 @@
+<article>
+  <h2 class="heading-small"><a href="/"><%= news_article.title %></a></h2>
+  <p class="smallprint">
+    <time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %>
+    </time>
+  </p>
+<p class='t-news-intro'><%= news_article.intro %></p>
+</article>

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/news.json
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?page_number=2
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 6ad37543-158f-4ca3-88c8-f5a050c8cfb4
+      - e6c5e997-32d4-4acc-8571-88be60c5dbc9
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,34 +20,78 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 08 Jul 2014 14:34:08 GMT
       Content-Type:
       - application/json; charset=utf-8
-      X-Meta-Request-Version:
-      - 0.2.8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
       X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"e07fca31546b9016d0d0c88bcb3feaea"'
+      - IE=Edge,chrome=1
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 003cdf3beb1df4bb75cc8481d4e94def
+      - 0fd9726334dfcfe16450a14f34552cf8
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 03-Jul-2015 10:20:46 GMT
-      - _session_id=003cdf3beb1df4bb75cc8481d4e94def; path=/; HttpOnly
-      - _web_tracking=378979a24236c3359dc7cda7cc1f6d5c; path=/; expires=Fri, 03-Jul-2015
-        10:20:46 GMT
+      - _cookie_notice=y; path=/; expires=Wed, 08-Jul-2015 14:34:08 GMT; secure
+      - _session_id=0fd9726334dfcfe16450a14f34552cf8; path=/; secure; HttpOnly
+      - _web_tracking=640858bf8521ac7529cc358680ad49c2; path=/; expires=Wed, 08-Jul-2015
+        14:34:08 GMT; secure
       X-Request-Id:
-      - 6ad37543-158f-4ca3-88c8-f5a050c8cfb4
+      - e6c5e997-32d4-4acc-8571-88be60c5dbc9
       X-Runtime:
-      - '1.271758'
-      Connection:
-      - close
-      Server:
-      - thin 1.5.1 codename Straight Razor
+      - '0.352937'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
     body:
       encoding: UTF-8
-      string: '[{"id":"women-are-feeling-the-financial-squeeze-more-than-men","title":"Women
+      string: '[{"id":"students-turn-to-parents-rather-than-work-to-meet-money-shortfalls","title":"Students
+        turn to parents rather than work to meet money shortfalls","description":"More
+        students are relying on their parents for cash rather than work to see them
+        through their studies.","body":"<p class=\"intro\">More students are relying
+        on their parents for cash rather than work to see them through their studies.
+        </p><p>According to this year\u2019s <a title=\"student money survey\" target=\"_blank\"
+        href=\"http://www.savethestudent.org/money/student-money-survey-results.html\">National
+        Student Money Survey</a> by Save the Student, the average student in 2014
+        spends \u00a3735 a month (down 5% on 2013), whilst a typical maintenance loan
+        only covers \u00a3458 of that. This leaves a shortfall of \u00a3277 of income
+        every month. </p><p>Just one in six students has a part-time job while one
+        in five admits to relying on their parents for income. </p><p>But one in three
+        university students feel that the Bank of Mum and Dad doesn\u2019t give them
+        enough financial support. </p><p>Whilst many students seem to believe that
+        their parents could do more to help, most are grateful they\u2019re able to
+        support them at all. Others would rather accept full responsibility for their
+        own financial situation than approach their parents. </p><p>The biggest surprise
+        is that universities provide some level of financial support to just one in
+        ten students, despite increased hardship funding being a condition of the
+        2012 tuition fee hike. </p><p>Less than one in ten students said they would
+        turn to their university in a financial emergency, with one in four preferring
+        a bank loan. </p><p>The stress resulting from having to make up the shortfall
+        appears to be having a knock-on effect on broader student welfare too. Almost
+        half of those surveyed claim that money issues affect their academic studies
+        and almost two in three admit that their diet suffers due to a lack of money.
+        </p><p><em>\u201cIt\u2019s a thorny issue of how much parents should contribute
+        to the shortfall, and it entirely depends on individual circumstances. Ultimately
+        I don\u2019t believe parents should have the expectation put upon them,\u201d
+        </em>said Jake Butler, editor of Save the Student </p><p><em>\u201cHowever
+        with hearing daily horror stories of students living on the breadline, I feel
+        it\u2019s still important that parents are made more aware of the situation
+        their child at university may be in.\u201d </em></p><p><strong>Graduation
+        looming? Use our <a title=\"money tips for graduates\" href=\"https://www.moneyadviceservice.org.uk/en/tools/money-tips-for-graduates\">Money
+        tips for graduates tool</a> to get free, personalised tips and start planning
+        the next stage of your life.</strong></p>","date":"2014-06-13T08:32:23+00:00"},{"id":"women-are-feeling-the-financial-squeeze-more-than-men","title":"Women
         are feeling the financial squeeze more than men","description":"Four in ten
         women feel financially worse off than they did a year ago, according to a
         new report from Savvywoman.","body":"<p class=\"intro\"> Four in ten women
@@ -169,45 +213,7 @@ http_interactions:
         as a society to prepare young people for the challenges they will face throughout
         their adult lives. </em></p><p><em>\u201cMy Money Week is a great way for
         schools to give their pupils a head start in gaining the financial skills,
-        knowledge and confidence they need.</em>\u201d </p>","date":"2014-06-09T08:00:01+00:00"},{"id":"want-to-buy-to-let","title":"Want
-        to buy-to-let? Three things you need to consider","description":"If you''re
-        thinking of buy-to-let, there are differences to standard mortgages.","body":"<p
-        class=\"intro\"> Buy-to-let mortgages might sound like a good way to make
-        money, but they can be more expensive and risky than a standard house purchase
-        - plus there are other expenses to bear in mind. </p><p> And even if you''ve
-        already calculated you can afford the risk, there are some things you need
-        to know. </p><p>New HSBC research shows rental properties in Southampton are
-        yielding 8.73% - that\u2019s the percentage of additional rent over the mortgage
-        value - with Manchester, Nottingham, Blackpool and Hull the next best for
-        returns. Meanwhile Brighton and Reading have the fastest growing returns as
-        rental prices rise there. </p><p>They\u2019re lower in London as house prices
-        have risen faster than rents. Any future increase in interest rates would
-        affect yields too. </p><p> See our advice below to see whether buy-to-let
-        is right for you. </p><h2>It can be difficult to get one </h2><p>You\u2019ll
-        struggle to get a buy-to-let mortgage if you don\u2019t already own your own
-        home, whether outright or with an outstanding mortgage. And you are likely
-        to find it hard to get a buy-to-let mortgage unless you earn at least \u00a325,000
-        a year. </p><p> You\u2019ll also need good credit and be able to finish the
-        mortgage by the time you are 70. </p><p> For more details of who can get one
-        and how read our <a title=\"Buy-to-let mortgages\" href=\"https://www.moneyadviceservice.org.uk/en/articles/buy-to-let-mortgages\">Buy-to-let
-        mortgages</a> guide. </p><h2>They''re not subject to the new\u00a0mortgage
-        rules </h2><p>Unlike buying a home to live in, the mortgage will be treated
-        as a commercial loan, and as such it''s unregulated. That means you won''t
-        necessarily go through the same affordability tests. Instead it will be based
-        around your rental income - although some lenders will look at what you can
-        afford based on income to check you can still make the payments when the property
-        is empty. </p><p>The rental income will need to be verified by a surveyor
-        and it will typically need to be 25% higher than the mortgage payment. So
-        if your monthly payment is \u00a31000, the rent you charge needs to be at
-        least \u00a31,250. </p><h2>Don\u2019t forget the additional costs </h2><p>It\u2019s
-        not just\u00a0a solicitor you need to account for. You may have fees for letting
-        agents, maintenance costs, special landlord and rent\u00a0insurances\u00a0and
-        even capital gains taxes when you sell. Plus the property could be empty between
-        tenants. </p><p> There are also many other costs that come with any house
-        purchase. Money Advice Service research revealed that 55% found the total
-        bill for buying a home more than they expected. </p><p> Read <a title=\"First-time
-        buyers fail to add up key house-purchase costs\" href=\"https://www.moneyadviceservice.org.uk/en/news/first-time-buyers-caught-out-by-key-home-buying-costs-14022014\">First-time
-        buyers fail to add up key house-purchase costs</a></p><p><em>Photo: PA</em></p>","date":"2014-06-05T10:02:16+00:00"},{"id":"tell-ma-were-listening","title":"Tell
+        knowledge and confidence they need.</em>\u201d </p>","date":"2014-06-09T08:00:01+00:00"},{"id":"tell-ma-were-listening","title":"Tell
         MA \u2013 we\u2019re listening","description":"We\u2019ve launched Tell MA,
         a new online community from The Money Advice Service.","body":"<p class=\"intro\">We\u2019ve
         launched Tell MA, a new online community from The Money Advice Service in
@@ -387,40 +393,7 @@ http_interactions:
         Helpline, claimants are being urged to have the right documents to hand, for
         example, payslips, end of year P60 forms and childcare payment details. </p><p><strong>Read
         more on <a title=\"tax credits\" href=\"https://www.moneyadviceservice.org.uk/en/articles/claiming-tax-credits\">Claiming
-        tax credits</a>.</strong></p>","date":"2014-06-04T08:51:17+00:00"},{"id":"students-turn-to-parents-rather-than-work-to-meet-money-shortfalls","title":"Students
-        turn to parents rather than work to meet money shortfalls","description":"More
-        students are relying on their parents for cash rather than work to see them
-        through their studies.","body":"<p class=\"intro\">More students are relying
-        on their parents for cash rather than work to see them through their studies.
-        </p><p>According to this year\u2019s National Student Money Survey by Save
-        the Student, the average student in 2014 spends \u00a3735 a month (down 5%
-        on 2013), whilst a typical maintenance loan only covers \u00a3458 of that.
-        This leaves a shortfall of \u00a3277 of income every month. </p><p>Just one
-        in six students has a part-time job while one in five admits to relying on
-        their parents for income. </p><p>But one in three university students feel
-        that the Bank of Mum and Dad doesn\u2019t give them enough financial support.
-        </p><p>Whilst many students seem to believe that their parents could do more
-        to help, most are grateful they\u2019re able to support them at all. Others
-        would rather accept full responsibility for their own financial situation
-        than approach their parents. </p><p>The biggest surprise is that universities
-        provide some level of financial support to just one in ten students, despite
-        increased hardship funding being a condition of the 2012 tuition fee hike.
-        </p><p>Less than one in ten students said they would turn to their university
-        in a financial emergency, with one in four preferring a bank loan. </p><p>The
-        stress resulting from having to make up the shortfall appears to be having
-        a knock-on effect on broader student welfare too. Almost half of those surveyed
-        claim that money issues affect their academic studies and almost two in three
-        admit that their diet suffers due to a lack of money. </p><p><em>\u201cIt\u2019s
-        a thorny issue of how much parents should contribute to the shortfall, and
-        it entirely depends on individual circumstances. Ultimately I don\u2019t believe
-        parents should have the expectation put upon them,\u201d </em>said Jake Butler,
-        editor of Save the Student </p><p><em>\u201cHowever with hearing daily horror
-        stories of students living on the breadline, I feel it\u2019s still important
-        that parents are made more aware of the situation their child at university
-        may be in.\u201d </em></p><p><strong>Graduation looming? Use our <a title=\"money
-        tips for graduates\" href=\"https://www.moneyadviceservice.org.uk/en/tools/money-tips-for-graduates\">Money
-        tips for graduates tool</a> to get free, personalised tips and start planning
-        the next stage of your life.</strong></p>","date":"2014-06-03T11:07:48+00:00"},{"id":"how-to-get-rid-of-clutter-and-make-money","title":"How
+        tax credits</a>.</strong></p>","date":"2014-06-04T08:51:17+00:00"},{"id":"how-to-get-rid-of-clutter-and-make-money","title":"How
         to get rid of clutter and make money","description":"Money Advice Service
         research shows the average online shopper spends \u00a3948 a year on the net,
         but ends up with \u00a3107 of unused goods, which they could sell.","body":"<p
@@ -702,7 +675,54 @@ http_interactions:
         Licencing website</a>, or call TV Licensing on 0300 790 6113. </p><p>If you
         are at college you may find our Tools and Guides about <a title=\"student
         budgeting\" href=\"https://www.moneyadviceservice.org.uk/en/campaigns/student-budgeting\">managing
-        your money as a student</a> helpful. </p>","date":"2014-05-15T09:22:04+00:00"}]'
+        your money as a student</a> helpful. </p>","date":"2014-05-15T09:22:04+00:00"},{"id":"new-advice-service-to-help-millions-whose-money-worries-are-causing-mental-health-issues","title":"Are
+        your money worries affecting your health?","description":"The Money Advice
+        Service has teamed up with NHS Choices to produce a free and impartial advice
+        tool for anyone who may be suffering from stress or depression as a result
+        of money worries.","body":"<p class=\"intro\"> If worrying about cash is driving
+        up your stress levels, you''re not alone - money, debt and finances were named
+        among the major causes of anxiety in a survey by the Mental Health Foundation.
+        </p><p>In the research, done to mark Mental Health Awareness Week, 45% of
+        people said money was a source of anxiety in their everyday lives.\u00a0 </p><p>
+        Now the Money Advice Service has teamed up with NHS Choices to produce a free
+        and impartial advice tool for anyone who may be suffering from stress or depression
+        as a result of money worries. </p><p>The new <a title=\"Money worries advice
+        tool\" href=\"http://www.nhs.uk/Tools/Pages/Money-worries.aspx\">Money worries
+        advice tool </a>is designed to help people who feel overwhelmed by debt concerns
+        take the first steps towards\u00a0regaining control of their finances and
+        relieving the pressure. </p><h2>Free, impartial and easy to use money worries
+        tool </h2><p>Anyone using the tool is asked 12 simple questions about how
+        current circumstances are affecting their wellbeing. Based on the answers
+        given, tailored advice and guidance is given on how to address key money concerns,
+        such as <a title=\"How to prioritise your debts\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-prioritise-your-debts\">how
+        to prioritise debts</a>, and where to go for help in dealing with mental health
+        issues. </p><h2>Dealing with debt and mental health </h2><p>The tool, also
+        launched to coincide with the start of Mental Health Awareness Week, points
+        visitors to articles, videos and audio guides on the NHS Choices website.
+        The information available covers a range of issues, offering advice on how
+        to deal with common problems such as anxiety and insomnia. </p><h2>Just 1.5
+        million seek debt advice </h2><p>Money Advice Service CEO Caroline Rookes
+        said: \u201cWe are delighted to be working with NHS Choices on what is a very
+        important partnership in reaching vulnerable members of society. Almost 9
+        million adults in the UK are struggling with debt, but only 1.5 million are
+        seeking advice. </p><p>\u201cThe vast majority of over-indebted people feel
+        anxious, stressed and unhappy, but we know that accessing free advice can
+        provide enormous help to them in improving their wellbeing.\u201d </p><h2>Well-established
+        link between debt and mental health </h2><p>Mental Health Awareness Week,
+        which runs until 18 May, is a campaign run by the Mental Health Foundation.
+        Its chief executive Jenny Edwards said: \u201cThe link between debt and mental
+        ill health is well established, with the Mental Health Foundation\u2019s anxiety
+        survey, showing money, debt and finances as the most frequently cited cause
+        of anxiety. </p><p>\u201cThis valuable tool from the Money Advice Service
+        can help people who are feeling stressed or anxious about money take the first
+        step towards helping themselves, seeking further support and feeling more
+        in control of their situation. </p><p>\u201cAnxiety affects us all and in
+        this Mental Health Awareness Week we are asking everyone to better understand,
+        talk about and manage their anxiety, and to feel empowered to seek help and
+        support without fear of stigma or discrimination.\u201d </p><p>If debt worries
+        are causing you mental health issues, visit the Money Advice Service and NHS
+        Choices <a title=\"Money worries advice tool\" href=\"http://www.nhs.uk/Tools/Pages/Money-worries.aspx\">Money
+        worries advice tool</a> for help and advice. </p>","date":"2014-05-13T12:10:13+00:00"}]'
     http_version:
-  recorded_at: Thu, 03 Jul 2014 10:20:48 GMT
+  recorded_at: Tue, 08 Jul 2014 14:34:10 GMT
 recorded_with: VCR 2.9.2

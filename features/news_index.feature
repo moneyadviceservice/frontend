@@ -14,10 +14,13 @@ Feature: View news index
 
   Scenario: Browsing paginated results
     When I visit the news page
-    And I have two pages of results
     Then I should see the 'Older' button
     And I should not see the 'Newer' button
     When I go to the next page of results
-    Then I should see what page of results I am on
-    And I should not see the 'Older' button
+    And I should see the 'Older' button
+    And I should see the 'Newer' button
+
+  Scenario: Last page
+    When I visit the last news page
+    Then I should not see the 'Older' button
     And I should see the 'Newer' button

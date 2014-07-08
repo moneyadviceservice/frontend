@@ -2,7 +2,8 @@
   <main role="main">
     <h1 itemprop="headline"><%= title t('.title') %></h1>
     <% news.each do |news_article| %>
-      <%= render 'shared/news_item', news_article: news_article %>
+      <%= render 'news_item', news_article: news_article %>
     <% end %>
+    <%= render 'pagination', news: news %>
   </main>
 </div>

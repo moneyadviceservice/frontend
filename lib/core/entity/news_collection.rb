@@ -1,6 +1,7 @@
 module Core
   class NewsCollection
     include Enumerable
+    extend Forwardable
 
     attr_accessor :items, :page
 

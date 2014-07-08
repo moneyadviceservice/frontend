@@ -21,7 +21,7 @@
   position: absolute;
   top: 86px;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
 
   @include respond-to($mq-xl){
     background: transparent 0 0 image_url('car_landing/car-banner-grad-bg.png') repeat-x;
@@ -83,7 +83,6 @@
   @include respond-to($mq-l){
     @include column(10);
     @include push(1);
-
   };
 
 }

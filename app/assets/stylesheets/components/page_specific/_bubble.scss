@@ -29,8 +29,8 @@
 .bubble__text[href^=tel] {
   @extend %font-heading-heavy;
   @include body(30, 36);
-    letter-spacing: -1px;
-    color: $color-telephone-number-hover;
+  letter-spacing: -1px;
+  color: $color-telephone-number-hover;
 
   &:hover {
     text-decoration: none;

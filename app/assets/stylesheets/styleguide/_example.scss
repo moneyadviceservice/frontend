@@ -31,7 +31,7 @@
     border-bottom: 1px solid #ddd;
 
     > p {
-      margin-top:1em;
+      margin-top: 1em;
     }
 
     p:last-child {
@@ -110,7 +110,7 @@
 
 // high contrast background for icons
 #section-icons .styleguide-element {
-  background-color: darken(#F9F9F9, 10%);
+  background-color: darken(#f9f9f9, 10%);
 }
 
 // add space between buttons so focus state is more visible
@@ -119,7 +119,7 @@
 }
 
 #section-primary-navigation .styleguide-element {
-  background-color: darken(#F9F9F9, 20%);
+  background-color: darken(#f9f9f9, 20%);
 }
 
 // Layouts
@@ -208,4 +208,5 @@
 
   }
 }
+
 /* @lintingIgnoreEnd */

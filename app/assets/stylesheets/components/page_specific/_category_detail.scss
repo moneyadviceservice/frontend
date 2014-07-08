@@ -24,7 +24,6 @@
   }
 }
 
-
 .category-detail__heading {
   @extend %collapsable-trigger;
 }
@@ -34,26 +33,26 @@
 }
 
 .js .category-detail__heading {
-  position:relative;
-  padding-left:$category-inset;
+  position: relative;
+  padding-left: $category-inset;
 
   button {
-    margin-left:-$category-inset;
-    padding-left:$category-inset;
-    text-align:left;
+    margin-left: -$category-inset;
+    padding-left: $category-inset;
+    text-align: left;
 
     &:focus,
     &:hover {
-      outline:none;
+      outline: none;
       text-decoration: underline;
     }
   }
 
   & .icon--toggle {
     @extend .icon--plus;
-    position:absolute;
-    top:6px;
-    left:0;
+    position: absolute;
+    top: 6px;
+    left: 0;
   }
 
   &.is-on .icon--toggle {
@@ -63,5 +62,5 @@
 
 .js .category-detail p,
 .js .category-detail__list-container {
-  padding-left:$category-inset;
+  padding-left: $category-inset;
 }

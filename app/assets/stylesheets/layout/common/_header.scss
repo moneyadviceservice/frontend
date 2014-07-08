@@ -28,7 +28,6 @@
     padding: $baseline-unit*3 $baseline-unit;
     border-bottom: 1px solid $color-white;
 
-
     @include respond-to($mq-m) {
       border: 0;
       background-color: transparent;
@@ -45,7 +44,6 @@
       }
     }
   }
-
 
   .mobile-nav {
     display: block;

@@ -20,6 +20,7 @@ module Core
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
+  autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'

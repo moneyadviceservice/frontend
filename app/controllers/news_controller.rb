@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   decorates_assigned :news, with: NewsArticleDecorator
 
   def index
-    @news = Core::NewsReader.new.call do
+    @news = Core::NewsReader.new(params[:page]).call do
       not_found
     end
   end

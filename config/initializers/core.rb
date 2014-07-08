@@ -24,6 +24,9 @@ Core::Registry::Repository[:article] =
 Core::Registry::Repository[:category] = Core::Repository::Cache.new(
   Core::Repository::Categories::PublicWebsite.new, Rails.cache)
 
+Core::Registry::Repository[:feedback] =
+  Core::Repository::Feedback::Email.new
+
 Core::Registry::Repository[:search] =
   Core::Repository::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
 

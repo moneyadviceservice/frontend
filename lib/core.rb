@@ -50,6 +50,10 @@ module Core
       autoload :PublicWebsite, 'core/repository/categories/public_website'
     end
 
+    module Feedback
+      autoload :Email, 'core/repository/feedback/email'
+    end
+
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
     end

@@ -1,33 +1,50 @@
-body {
-  @include respond-to($mq-xl){
-    background: transparent 0 px(80) image_url('car_landing/car-banner-grad-bg.png') repeat-x;
-  };
+// General
+.l-car-campaign {
+  position: relative;
+  z-index: 2;
 }
 
-// General
-.l-car-landing__media {
+.l-car-campaign__media {
   width: 100%;
 }
 
-.l-car-landing__section .l-car-landing__section-text {
+.l-car-campaign__section .l-car-campaign__section-text {
   h2 {
     margin-top: 0;
   }
 }
 
+// Page BG
+.l-car-campaign-page-bg {
+  height: 600px;
+  left: 0;
+  position: absolute;
+  top: 86px;
+  width: 100%;
+  z-index: 1;
+
+  @include respond-to($mq-xl){
+    background: transparent 0 0 image_url('car_landing/car-banner-grad-bg.png') repeat-x;
+  };
+}
+
 // Banner
-.l-car-landing__banner {
+.l-car-campaign__banner {
   background: transparent 50% 100% image_url('car_landing/car-banner.jpg') no-repeat;
   background-size: cover;
   min-height: 300px;
   max-height: 600px;
+  padding-bottom: 50%;
   width: 100%;
-  padding-bottom: 45%;
 
+  .ie8 & {
+    min-height: 600px;
+    padding-bottom: 0;
+  }
 }
 
 // Intro
-.l-car-landing__section--intro {
+.l-car-campaign__section--intro {
   @include column(12);
   @include respond-to($mq-m){
     @include column(8);
@@ -35,7 +52,7 @@ body {
   };
 }
 
-.l-car-landing__section-separator {
+.l-car-campaign__section-separator {
   background: transparent 50% 95% image_url('car_landing/separator.png') no-repeat;
   background-size: 180%;
   float: left;
@@ -68,7 +85,7 @@ body {
 
 
 // Buying a car
-.l-car-landing__section--buy {
+.l-car-campaign__section--buy {
   @include column(12);
   @include respond-to($mq-m){
     @include column(8);
@@ -76,20 +93,21 @@ body {
   };
 }
 
-.l-car-landing__section--buy .l-car-landing__section-row {
+.l-car-campaign__section--buy .l-car-campaign__section-row {
   @include row(12);
   @include respond-to($mq-m){
     @include row(8);
   };
 }
 
-.l-car-landing__section--buy .l-car-landing__section-heading{
+.l-car-campaign__section--buy .l-car-campaign__section-heading{
   @include column(12,12);
   @include respond-to($mq-m){
     @include column(8,8);
   };
 }
-.l-car-landing__section--buy .l-car-landing__section-text {
+
+.l-car-campaign__section--buy .l-car-campaign__section-text {
   @include column(12,12);
 
   @include respond-to($mq-m){
@@ -97,7 +115,7 @@ body {
   };
 }
 
-.l-car-landing__section--buy .l-car-landing__section-heading + .l-car-landing__section-text {
+.l-car-campaign__section--buy .l-car-campaign__section-heading + .l-car-campaign__section-text {
   @include column(6,12);
   float: right;
   @include respond-to($mq-m){
@@ -106,7 +124,7 @@ body {
   };
 }
 
-.l-car-landing__section--buy .l-car-landing__section-media {
+.l-car-campaign__section--buy .l-car-campaign__section-media {
   @include column(6,12);
   background: transparent -75px top image_url('car_landing/buy-car.png') no-repeat;
   background-size: cover;
@@ -129,10 +147,14 @@ body {
     padding-left: 30px;
     padding-bottom: 65.8%;
   };
+
+  .ie8 & {
+    padding-left: 0;
+  }
 }
 
 // Running a car
-.l-car-landing__section--run {
+.l-car-campaign__section--run {
   @include column(12);
   margin-bottom: $baseline-unit*11;
 
@@ -143,14 +165,14 @@ body {
   };
 }
 
-.l-car-landing__section--run .l-car-landing__section-row {
+.l-car-campaign__section--run .l-car-campaign__section-row {
   @include row(12);
   @include respond-to($mq-m){
     @include row(9);
   };
 }
 
-.l-car-landing__section--run .l-car-landing__section-media {
+.l-car-campaign__section--run .l-car-campaign__section-media {
   background: transparent 60px 100% image_url('car_landing/run-car.png') no-repeat;
   float: left;
   min-height: 305px;
@@ -175,7 +197,7 @@ body {
   };
 }
 
-.l-car-landing__section--run .l-car-landing__section-text {
+.l-car-campaign__section--run .l-car-campaign__section-text {
   @include column(12);
   @include respond-to($mq-m){
     @include column(4,9);
@@ -184,7 +206,7 @@ body {
 }
 
 // Selling a car
-.l-car-landing__section--sell {
+.l-car-campaign__section--sell {
   @include column(12);
   margin-bottom: $baseline-unit*11;
 
@@ -195,29 +217,31 @@ body {
   };
 }
 
-.l-car-landing__section--sell .l-car-landing__section-row {
+.l-car-campaign__section--sell .l-car-campaign__section-row {
   @include row(12);
   @include respond-to($mq-m){
     @include row(10);
   };
 
-  .l-car-landing__section-text:first-child {
+  .l-car-campaign__section-text:first-child {
     @include respond-to($mq-m){
       margin-top: 10%;
     };
   }
 }
 
-.l-car-landing__section--sell .l-car-landing__section-text {
+.l-car-campaign__section--sell .l-car-campaign__section-text {
+  @include column(12);
+
   position: relative;
   z-index: 1;
-  @include column(12);
+
   @include respond-to($mq-m){
     @include column(4,10);
   };
 }
 
-.l-car-landing__section--sell .l-car-landing__section-media {
+.l-car-campaign__section--sell .l-car-campaign__section-media {
   float: left;
   width: 100%;
 
@@ -241,12 +265,14 @@ body {
     };
 
     @include respond-to($mq-l){
+      min-height: 700px;
+      left: -70px;
       padding-bottom: 0;
     };
 
-    @include respond-to($mq-l){
-      min-height: 700px;
-      left: -70px;
-    };
+    .ie8 & {
+      left: 0;
+      width: 575px;
+    }
   }
 }

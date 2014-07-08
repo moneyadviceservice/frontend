@@ -9,17 +9,19 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
-    <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
-      <h1 itemprop="headline"><%= title news_article.title %></h1>
-      <hr>
-      <p class="smallprint">
-        <time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %></time>
-      </p>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
+        <h1 itemprop="headline"><%= title news_article.title %></h1>
+        <hr>
+        <p class="smallprint">
+          <time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %></time>
+        </p>
 
-      <%= news_article.content %>
-    </article>
-  </main>
+        <%= news_article.content %>
+      </article>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

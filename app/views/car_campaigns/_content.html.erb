@@ -1,0 +1,79 @@
+<div class="l-car-campaign-page-bg"></div>
+
+<div class="l-car-campaign editorial">
+  <div class="l-car-campaign__banner"></div>
+
+  <div class="l-car-campaign__section l-car-campaign__section--intro">
+    <div class="l-car-campaign__section-text">
+      <header>
+        <h1><%= t("campaigns.car.h1") %></h1>
+        <p class="intro"><%= t("campaigns.car.intro_html") %></p>
+      </header>
+    </div>
+  </div>
+
+  <div class="l-car-campaign__section l-car-campaign__section--buy">
+    <div class="l-car-campaign__section-row">
+      <h2 class="l-car-campaign__section-heading"><%= t("campaigns.car.how_buy.title") %></h2>
+      <div class="l-car-campaign__section-text">
+        <p><%= t("campaigns.car.how_buy.intro") %></p>
+      </div>
+
+      <div class="l-car-campaign__section-media"></div>
+
+      <div class="l-car-campaign__section-text">
+        <ul class="unstyled-list">
+          <% (1..9).each do |i |%>
+            <li>
+              <%= t("campaigns.car.how_buy.link_#{i}_html") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-car-campaign__section-separator"></div>
+
+  <div class="l-car-campaign__section l-car-campaign__section--run">
+    <div class="l-car-campaign__section-row">
+      <div class="l-car-campaign__section-text">
+        <h2><%= t("campaigns.car.running.title") %></h2>
+        <p><%= t("campaigns.car.running.intro") %></p>
+      </div>
+
+      <div class="l-car-campaign__section-media"></div>
+
+      <div class="l-car-campaign__section-text">
+        <ul class="unstyled-list">
+          <% (1..5).each do |i| %>
+            <li>
+              <%= t("campaigns.car.running.link_#{i}_html") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-car-campaign__section l-car-campaign__section--sell">
+    <div class="l-car-campaign__section-row">
+      <div class="l-car-campaign__section-text">
+        <h2><%= t("campaigns.car.sell.title") %></h2>
+        <p><%= t("campaigns.car.sell.intro") %></p>
+      </div>
+
+      <div class="l-car-campaign__section-media"></div>
+
+      <div class="l-car-campaign__section-text">
+        <ul class="unstyled-list">
+          <% (1..5).each do |i| %>
+            <li>
+              <%= t("campaigns.car.sell.link_#{i}_html") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

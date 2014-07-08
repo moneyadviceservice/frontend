@@ -55,4 +55,12 @@ RSpec.describe NewsArticleDecorator do
     end
   end
 
+  describe '#path' do
+    before { allow(helpers).to receive_messages(news_article_path: '/news/test') }
+
+    it 'returns the path to the news article' do
+      expect(subject.path).to eq('/news/test')
+    end
+  end
+
 end

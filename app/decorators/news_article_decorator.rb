@@ -15,6 +15,10 @@ class NewsArticleDecorator < ContentItemDecorator
     processor.new(object.body).process(HTMLProcessor::INTRO_PARAGRAPH)
   end
 
+  def path
+    h.news_article_path(object.id)
+  end
+
   private
 
   def processed_body

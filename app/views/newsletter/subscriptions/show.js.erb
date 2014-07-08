@@ -1,8 +1,9 @@
-(function () {
-<% if @success %>
-$('.js-newsletter-form').removeClass('is-errored').html('<%= flash[:success] %>');
-<% else %>
-var error = $('<p />').addClass('newsletter__text js-newsletter-error-msg').text('<%= flash[:error] %>');
-$('.js-newsletter-form').addClass('is-errored').prepend(error);
-<% end %>
+(function() {
+  <% if @success %>
+  $('.js-newsletter-form').removeClass('is-errored').html('<%= flash[:success] %>');
+  <% else %>
+  $('p.js-newsletter-error-msg').remove();
+  var error = $('<p />').addClass('newsletter__text js-newsletter-error-msg').text('<%= flash[:error] %>');
+  $('.js-newsletter-form').addClass('is-errored').prepend(error);
+  <% end %>
 })();

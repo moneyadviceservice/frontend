@@ -1,5 +1,5 @@
-<% set_meta_tags(canonical: category.canonical_url,
-                 alternate: category.alternate_options,
+<% set_meta_tags(canonical:   category.canonical_url,
+                 alternate:   category.alternate_options,
                  description: category.description) %>
 
 <% content_for(:context_bar) do %>
@@ -20,6 +20,6 @@
 
 <div class="l-nav">
   <%= render 'shared/nav',
-             categories: category_navigation,
+             categories:        category_navigation,
              active_categories: active_categories %>
 </div>

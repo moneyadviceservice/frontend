@@ -184,28 +184,50 @@ cy:
       how_buy:
         title: "Sut i brynu car"
         intro: "Beth i’w ystyried cyn prynu car newydd neu ail-law, gan gynnwys eich cyllideb, opsiynau cyllid car, a sut i gael y fargen orau."
-        link_1_html: "<a href=\"/cy/articles/sut-mae-dod-o-hyd-ir-car-iawn-ar-gyfer-eich-cyllideb\">Sut mae dod o hyd i'r car iawn ar gyfer eich cyllideb</a>"
-        link_2_html: '<a href="/cy/articles/cyllid-car-wedii-esbonio">Cyllid car wedi’i esbonio</a>'
-        link_3_html: '<a href="/cy/articles/sicrhau-y-gallwch-gwrdd-ach-taliadau-car">Sicrhau y gallwch gwrdd â’ch taliadau car</a>'
-        link_4_html: '<a href="/cy/articles/ble-i-brynu-car-newydd">Ble i brynu car newydd</a>'
-        link_5_html: '<a href="/cy/articles/ble-i-brynu-car-ail-law">Ble i brynu car ail-law</a>'
-        link_6_html: '<a href="/cy/articles/pryd-i-brynu-car">Pryd i brynu car</a>'
-        link_7_html: '<a href="/cy/articles/sut-i-fargeinio-wrth-brynu-car">Sut i fargeinio wrth brynu car</a>'
-        link_8_html: '<a href="/cy/articles/sut-mae-rhoi-prawf-gyrru-a-gwirio-car-newydd">Sut mae rhoi prawf gyrru a gwirio car newydd</a>'
-        link_9_html: '<a href="/cy/articles/sut-mae-rhoi-prawf-gyrru-a-gwirio-car-ail-law">Sut mae rhoi prawf gyrru a gwirio car ail-law</a>'
+        articles:
+          - id: "sut-mae-dod-o-hyd-ir-car-iawn-ar-gyfer-eich-cyllideb"
+            text: "Sut mae dod o hyd i'r car iawn ar gyfer eich cyllideb"
+          - id: "cyllid-car-wedii-esbonio"
+            text: "Cyllid car wedi’i esbonio"
+          - id: "sicrhau-y-gallwch-gwrdd-ach-taliadau-car"
+            text: "Sicrhau y gallwch gwrdd â’ch taliadau car"
+          - id: "ble-i-brynu-car-newydd"
+            text: "Ble i brynu car newydd"
+          - id: "ble-i-brynu-car-ail-law"
+            text: "Ble i brynu car ail-law"
+          - id: "pryd-i-brynu-car"
+            text: "Pryd i brynu car"
+          - id: "sut-i-fargeinio-wrth-brynu-car"
+            text: "Sut i fargeinio wrth brynu car"
+          - id: "sut-mae-rhoi-prawf-gyrru-a-gwirio-car-newydd"
+            text: "Sut mae rhoi prawf gyrru a gwirio car newydd"
+          - id: "sut-mae-rhoi-prawf-gyrru-a-gwirio-car-ail-law"
+            text: "Sut mae rhoi prawf gyrru a gwirio car ail-law"
       running:
         title: "Rhedeg car"
         intro: "Eich hawliau os oes problem gyda'ch car newydd, torri costau cyllid car, awgrymiadau defnyddiol am yr MOT, cyngor ar gyfer gyrwyr iau, ac a allech ymdopi heb gar?"
-        link_1_html: '<a href="/cy/articles/eich-hawliau-os-oes-rhywbeth-oi-le-ar-eich-car">Eich hawliau os oes rhywbeth o’i le ar eich car</a>'
-        link_2_html: '<a href="/cy/articles/prawf-mot-wedii-esbonio">Prawf MOT wedi’i esbonio</a>'
-        link_3_html: '<a href="/cy/articles/ceisiwch-leihau-ar-gostau-cyllid-car-hurbryniant-a-chostau-cyllid-eraill">Cwtogi costau cyllid car</a>'
-        link_4_html: '<a href="/cy/articles/rhedeg-car-fel-gyrrwr-ifanc">Rhedeg car fel gyrrwr ifanc</a>'
-        link_5_html: '<a href="/cy/articles/ymdopi-heb-gar">Ymdopi heb gar</a>'
+        articles:
+          - id: "eich-hawliau-os-oes-rhywbeth-oi-le-ar-eich-car"
+            text: "Eich hawliau os oes rhywbeth o’i le ar eich car"
+          - id: "prawf-mot-wedii-esbonio"
+            text: "Prawf MOT wedi’i esbonio"
+          - id: "ceisiwch-leihau-ar-gostau-cyllid-car-hurbryniant-a-chostau-cyllid-eraill"
+            text: "Cwtogi costau cyllid car"
+          - id: "rhedeg-car-fel-gyrrwr-ifanc"
+            text: "Rhedeg car fel gyrrwr ifanc"
+          - id: "ymdopi-heb-gar"
+            text: "Ymdopi heb gar"
       sell:
         title: "Sut i werthu car"
         intro: "Dysgwch am y gwahanol ffyrdd o werthu car, sut i negodi pris da, a’ch dewisiadau wrth gael gwared ar hen gar."
-        link_1_html: '<a href="/cy/articles/gwerthuch-car">Gwerthu’ch car</a>'
-        link_2_html: "<a href=\"/cy/articles/sut-i-werthuch-car-yn-breifat\">Sut i werthu'ch car yn breifat</a>"
-        link_3_html: '<a href="/cy/articles/sut-i-baratoi-eich-car-ar-gyfer-ei-werthu">Sut i baratoi eich car ar gyfer ei werthu</a>'
-        link_4_html: '<a href="/cy/articles/trafod-telerau-wrth-werthu-car">Trafod telerau wrth werthu car</a>'
-        link_5_html: '<a href="/cy/articles/sut-i-gael-gwared-ar-hen-gar">Sut i gael gwared ar hen gar</a>'
+        articles:
+          - id: "gwerthuch-car"
+            text: "Gwerthu’ch car"
+          - id: "sut-i-werthuch-car-yn-breifat"
+            text: "Sut i werthu'ch car yn breifat"
+          - id: "sut-i-baratoi-eich-car-ar-gyfer-ei-werthu"
+            text: "Sut i baratoi eich car ar gyfer ei werthu"
+          - id: "trafod-telerau-wrth-werthu-car"
+            text: "Trafod telerau wrth werthu car"
+          - id: "sut-i-gael-gwared-ar-hen-gar"
+            text: "Sut i gael gwared ar hen gar"

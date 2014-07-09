@@ -23,9 +23,9 @@
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% (1..9).each do |i |%>
+          <% t(".how_buy.articles").each do |article| %>
             <li>
-              <%= t(".how_buy.link_#{i}_html") %>
+              <%= link_to article[:text], article_path(article[:id]) %>
             </li>
           <% end %>
         </ul>
@@ -46,9 +46,9 @@
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% (1..5).each do |i| %>
+          <% t(".running.articles").each do |article| %>
             <li>
-              <%= t(".running.link_#{i}_html") %>
+              <%= link_to article[:text], article_path(article[:id]) %>
             </li>
           <% end %>
         </ul>
@@ -67,9 +67,9 @@
 
       <div class="l-car-campaign__section-text">
         <ul class="unstyled-list">
-          <% (1..5).each do |i| %>
+          <% t(".sell.articles").each do |article| %>
             <li>
-              <%= t(".sell.link_#{i}_html") %>
+              <%= link_to article[:text], article_path(article[:id]) %>
             </li>
           <% end %>
         </ul>

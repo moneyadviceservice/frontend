@@ -12,7 +12,7 @@ module Core
     end
 
     def call(&block)
-      data         = Registry::Repository[:news_article].find(id)
+      data         = Registry::Repository[:news].find(id)
       news_article = NewsArticle.new(id, data)
 
       if news_article.valid?

@@ -8,7 +8,7 @@ module Core
 
     describe '.call' do
       before do
-        allow(Registry::Repository).to receive(:[]).with(:news_article) do
+        allow(Registry::Repository).to receive(:[]).with(:news) do
           double(find: data)
         end
       end

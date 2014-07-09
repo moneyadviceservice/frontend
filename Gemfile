@@ -73,7 +73,6 @@ group :test, :development do
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'
   gem 'ejs'
-  gem 'konacha'
   gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'rspec-rails', '~> 3.0'
   gem 'sqlite3' # the database is not used yet, so sqlite is sufficient

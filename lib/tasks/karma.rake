@@ -1,8 +1,6 @@
 namespace 'spec' do
   desc 'Run the code examples in spec/javascript'
-  task :javascript => :environment do
-    exit 1 unless ::Konacha.run
-  end
+  task :javascript => ['karma:install', 'karma:run_once']
 end
 
 task(:spec).enhance ['spec:javascript']

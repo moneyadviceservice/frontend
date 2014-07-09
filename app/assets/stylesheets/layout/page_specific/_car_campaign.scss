@@ -1,0 +1,351 @@
+// General
+.l-car-campaign {
+  position: relative;
+  z-index: 2;
+}
+
+.l-car-campaign__section-media {
+  width: 100%;
+}
+
+.l-car-campaign__section .l-car-campaign__section-text {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+// Page BG
+.l-car-campaign-page-bg {
+  @include respond-to($mq-xl) {
+    background: transparent 0 0 image_url('car_campaign/car-banner-grad-bg.png') repeat-x;
+    height: 600px;
+    left: 0;
+    position: absolute;
+    top: 86px;
+    width: 100%;
+    z-index: -1;
+  };
+}
+
+// Banner
+.l-car-campaign__banner {
+  background: transparent 50% 100% image_url('car_campaign/car-banner.jpg') no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  max-height: 600px;
+  padding-bottom: 50%;
+  width: 100%;
+
+  .ie8 & {
+    min-height: 600px;
+    padding-bottom: 0;
+  }
+}
+
+// Intro
+.l-car-campaign__section--intro {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(10);
+    @include push(1);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    @include push(2);
+  };
+}
+
+.l-car-campaign__section-separator {
+  background: transparent 50% 95% image_url('car_campaign/separator.png') no-repeat;
+  background-size: 180%;
+  float: left;
+  height: 65px;
+  margin-bottom: $baseline-unit*4;
+  margin-top: $baseline-unit*4;
+  padding-bottom: 18.74%;
+  width: 100%;
+
+  @include respond-to($mq-s,$mq-m) {
+    background-size: cover;
+  };
+
+  @include respond-to($mq-m) {
+    @include column(12);
+    background-position: 50% 50%;
+    background-size: 90%;
+    height: 125px;
+    margin-bottom: $baseline-unit*9;
+    margin-top: $baseline-unit*7;
+    padding-bottom: 0;
+  };
+
+  @include respond-to($mq-l) {
+    @include column(10);
+    @include push(1);
+  };
+
+}
+
+
+// Buying a car
+.l-car-campaign__section--buy {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(10);
+    @include push(1);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    @include push(2);
+  };
+}
+
+.l-car-campaign__section--buy .l-car-campaign__section-row {
+  @include row(12);
+
+  @include respond-to($mq-m) {
+    @include row(10);
+  };
+
+  @include respond-to($mq-l) {
+    @include row(8);
+  };
+}
+
+.l-car-campaign__section--buy .l-car-campaign__section-heading {
+  @include column(12,12);
+
+  @include respond-to($mq-m) {
+    @include column(10,10);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(8,8);
+  };
+}
+
+.l-car-campaign__section--buy .l-car-campaign__section-text {
+  @include column(12,12);
+
+  @include respond-to($mq-m) {
+    @include column(5,10);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(4,8);
+  };
+}
+
+.l-car-campaign__section--buy .l-car-campaign__section-heading + .l-car-campaign__section-text {
+  @include column(6,12);
+  float: right;
+
+  @include respond-to($mq-m) {
+    @include column(5,10);
+    float: left;
+  };
+
+  @include respond-to($mq-l) {
+    @include column(4,8);
+  };
+}
+
+.l-car-campaign__section--buy .l-car-campaign__section-media {
+  @include column(6,12);
+
+  float: left;
+  margin-left: 0;
+
+  @include respond-to(0, $mq-m) {
+    margin-bottom: $baseline-unit*3;
+  };
+
+  @include respond-to($mq-m) {
+    @include column(4,8);
+    float: right;
+    min-height: inherit;
+    margin-top: -$baseline-unit*10;
+    padding-left: 30px;
+  };
+
+  &:before {
+    background: transparent top center image_url('car_campaign/buy-car.png') no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    min-height: 230px;
+    width: 100%;
+
+    @include respond-to($mq-m) {
+      background-position: top right;
+      min-height: 500px;
+    };
+  }
+
+  // IE8 overrides to make the images play nice
+  .ie8 & {
+    padding-left: 0;
+
+    &:before {
+      width: 330px;
+    }
+  }
+}
+
+// Running a car
+.l-car-campaign__section--run {
+  @include column(12);
+  margin-bottom: $baseline-unit*11;
+
+  @include respond-to($mq-m) {
+    @include column(10);
+    @include push(1);
+  };
+
+  @include respond-to($mq-l) {
+    @include column(9);
+    @include push(1);
+    margin-bottom: $baseline-unit*17;
+  };
+}
+
+.l-car-campaign__section--run .l-car-campaign__section-row {
+  @include row(12);
+
+  @include respond-to($mq-m) {
+    @include row(10);
+  };
+
+  @include respond-to($mq-l) {
+    @include row(9);
+  };
+}
+
+.l-car-campaign__section--run .l-car-campaign__section-media {
+  background: transparent 60px 100% image_url('car_campaign/run-car.png') no-repeat;
+  float: left;
+  min-height: 305px;
+
+  @include respond-to(0, $mq-m) {
+    margin-bottom: $baseline-unit*3;
+  };
+
+  @include respond-to($mq-s) {
+    background-position: right top;
+  };
+
+  @include respond-to($mq-m) {
+    @include column(5,10);
+    background-position: top left;
+    background-size: contain;
+    float: left;
+    margin-top: $baseline-unit*14;
+    padding-right: 30px;
+  };
+
+  @include respond-to($mq-l) {
+    @include column(5,9);
+  };
+}
+
+.l-car-campaign__section--run .l-car-campaign__section-text {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(5,10);
+    float: right;
+  };
+
+  @include respond-to($mq-l) {
+    @include column(4,9);
+    float: right;
+  };
+}
+
+// Selling a car
+.l-car-campaign__section--sell {
+  @include column(12);
+  margin-bottom: $baseline-unit*11;
+
+  @include respond-to($mq-m) {
+    @include column(10);
+    @include push(1);
+    margin-bottom: $baseline-unit*6;
+  };
+
+  @include respond-to($mq-l) {
+    @include column(10);
+    @include push(2);
+  };
+}
+
+.l-car-campaign__section--sell .l-car-campaign__section-row {
+  @include row(12);
+
+  @include respond-to($mq-m) {
+    @include row(10);
+  };
+
+  .l-car-campaign__section-text:first-child {
+    @include respond-to($mq-m) {
+      margin-top: 10%;
+    };
+  }
+}
+
+.l-car-campaign__section--sell .l-car-campaign__section-text {
+  @include column(12);
+
+  position: relative;
+  z-index: 1;
+
+  @include respond-to($mq-m) {
+    @include column(4,10);
+  };
+}
+
+.l-car-campaign__section--sell .l-car-campaign__section-media {
+  float: left;
+
+  @include respond-to($mq-m) {
+    @include column(6,10);
+    float: right;
+  };
+
+  &:before {
+    background: transparent -100px 0 image_url('car_campaign/sell-car.png') no-repeat;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 570px;
+    position: relative;
+    width: 100%;
+
+    @include respond-to($mq-s) {
+      background-position: center top;
+      background-size: contain;
+      height: auto;
+      min-height: 500px;
+    };
+
+    @include respond-to($mq-l) {
+      min-height: 600px;
+      left: -40px;
+    };
+
+    @include respond-to($mq-xl) {
+      left: -110px;
+    };
+
+    // IE8 overrides to make the images play nice
+    .ie8 & {
+      left: 0;
+      height: 700px;
+      width: 575px;
+    }
+  }
+}

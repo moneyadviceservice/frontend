@@ -16,5 +16,7 @@ bundle install --jobs $BUNDLE_JOBS
 bower cache clean
 bower install --production --config.interactive=false
 
+rake karma:install
+rake karma:run_once
 rake spec
 rake cucumber

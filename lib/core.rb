@@ -19,6 +19,7 @@ module Core
   autoload :CategoryReader,     'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :NewsArticleReader,  'core/interactor/news_article_reader'
+  autoload :NewsReader,         'core/interactor/news_reader'
   autoload :Searcher,           'core/interactor/searcher'
   autoload :StaticPageReader,   'core/interactor/static_page_reader'
 

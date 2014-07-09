@@ -246,7 +246,6 @@
     float: left;
     margin-top: $baseline-unit*14;
     padding-right: 30px;
-    padding-bottom: 0;
   };
 
   @include respond-to($mq-l) {
@@ -337,7 +336,6 @@
     @include respond-to($mq-l) {
       min-height: 600px;
       left: -40px;
-      padding-bottom: 0;
     };
 
     @include respond-to($mq-xl) {

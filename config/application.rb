@@ -74,6 +74,7 @@ module Frontend
     # Convert HEAD requests to GET and return an empty body
     config.middleware.use 'OverrideHead'
 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'car_campaigns', '*.yml').to_s]
   end
 end
 

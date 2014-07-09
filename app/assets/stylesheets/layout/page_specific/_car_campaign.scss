@@ -16,15 +16,14 @@
 
 // Page BG
 .l-car-campaign-page-bg {
-  height: 600px;
-  left: 0;
-  position: absolute;
-  top: 86px;
-  width: 100%;
-  z-index: -1;
-
   @include respond-to($mq-xl) {
     background: transparent 0 0 image_url('car_landing/car-banner-grad-bg.png') repeat-x;
+    height: 600px;
+    left: 0;
+    position: absolute;
+    top: 86px;
+    width: 100%;
+    z-index: -1;
   };
 }
 

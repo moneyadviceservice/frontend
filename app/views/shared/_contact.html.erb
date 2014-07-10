@@ -24,11 +24,11 @@
         </div>
       </div>
 
-      <% if Feature.active?(:newsletter_subscription) %>
+      <% if Feature.active?(:newsletter_subscriptions) %>
       <div class="l-contact__group l-contact__group--newsletter">
         <div class="l-contact__group-row">
           <div class="l-contact__group-cell">
-            <%= render partial: 'newsletter/subscriptions/form' %>
+            <%= render 'newsletter_subscriptions/form' %>
           </div>
         </div>
       </div>

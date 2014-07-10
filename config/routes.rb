@@ -56,7 +56,7 @@ Rails.application.routes.draw do
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 
-    resource :subscription, only: :create, module: 'newsletter', path: 'newsletter-subscription'
+    resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
 
     resource :styleguide,
              controller: 'styleguide',

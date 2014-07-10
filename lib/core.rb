@@ -21,12 +21,9 @@ module Core
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
+  autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
-
-  module Newsletter
-    autoload :SubscriptionCreator, 'core/interactor/newsletter/subscription_creator'
-  end
 
   module Registry
     autoload :Connection, 'core/registry/connection'
@@ -56,14 +53,12 @@ module Core
       autoload :PublicWebsite, 'core/repository/news/public_website'
     end
 
-    module StaticPages
-      autoload :PublicWebsite, 'core/repository/static_pages/public_website'
+    module NewsletterSubscriptions
+      autoload :PublicWebsite, 'core/repository/newsletter_subscriptions/public_website'
     end
 
-    module Newsletter
-      module Subscriptions
-        autoload :PublicWebsite, 'core/repository/newsletter/subscriptions/public_website'
-      end
+    module StaticPages
+      autoload :PublicWebsite, 'core/repository/static_pages/public_website'
     end
 
     module Search

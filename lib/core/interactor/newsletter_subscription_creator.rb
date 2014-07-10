@@ -1,5 +1,5 @@
-module Core::Newsletter
-  class SubscriptionCreator
+module Core
+  class NewsletterSubscriptionCreator
     attr_accessor :email
     private :email=
 

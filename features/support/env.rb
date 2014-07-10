@@ -19,7 +19,7 @@ Core::Registry::Repository[:category]                = Core::Repository::VCR.new
 Core::Registry::Repository[:search]                  = Core::Repository::VCR.new(search_repository)
 Core::Registry::Repository[:static_page]             = Core::Repository::VCR.new(static_page_repository)
 Core::Registry::Repository[:news]                    = Core::Repository::VCR.new(news_article_repository)
-Core::Registry::Repository[:newsletter_subscription] = Core::Repositories::VCR.new(newsletter_subscription_repository)
+Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 
 Before('@fake-articles') do
   @real_article_repository = Core::Registry::Repository[:article]

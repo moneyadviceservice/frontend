@@ -34,4 +34,4 @@ Core::Registry::Repository[:news] =
   Core::Repository::News::PublicWebsite.new
 
 Core::Registry::Repository[:newsletter_subscription] =
-  Core::Repository::Newsletter::Subscriptions::PublicWebsite.new
+  Core::Repository::NewsletterSubscriptions::PublicWebsite.new

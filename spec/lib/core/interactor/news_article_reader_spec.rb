@@ -49,20 +49,10 @@ module Core
           { title: title, description: description, body: body }
         end
 
-        it "maps the news article's 'id' to the repositories 'id' value" do
-          expect(NewsArticle).to receive(:new).with(id, kind_of(Hash)).and_call_original
+        it 'instantiates the news article with the id and the attributes from the repository' do
+          expect(NewsArticle).to receive(:new).with(id, data).and_call_original
 
           subject.call
-        end
-
-        %w(title description body).each do |attribute|
-          it "maps the article's '#{attribute}'' to the repositories '#{attribute}' value" do
-            expect(NewsArticle).to receive(:new) do |_, attributes|
-              expect(attributes[attribute.to_sym].to eq(send(attribute)))
-            end.and_call_original
-
-            subject.call
-          end
         end
 
         context 'when the News Article entity is valid' do

@@ -1,9 +1,8 @@
 RSpec.describe SearchResultCollectionDecorator do
   include Draper::ViewHelpers
 
-  let(:query) { double }
   let(:items) { double }
-  let(:result_collection) { Core::SearchResultCollection.new(query, items: items) }
+  let(:result_collection) { Core::SearchResultCollection.new(items: items) }
   subject(:decorator) { described_class.decorate(result_collection) }
 
   describe '#items' do

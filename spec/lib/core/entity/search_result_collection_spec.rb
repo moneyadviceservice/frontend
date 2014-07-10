@@ -2,10 +2,7 @@ module Core
   RSpec.describe SearchResultCollection do
     let(:items) { [] }
     let(:attributes) { { items: items } }
-    subject(:result_collection) { described_class.new(double, attributes) }
-
-    it { is_expected.to respond_to :query }
-    it { is_expected.to respond_to :query= }
+    subject(:result_collection) { described_class.new(attributes) }
 
     it { is_expected.to respond_to :total_results }
     it { is_expected.to respond_to :total_results= }

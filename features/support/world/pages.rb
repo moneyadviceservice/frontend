@@ -4,7 +4,19 @@ module World
       UI::Page.new
     end
 
-    %w(article home action_plan category partners search_results static news_article).each do |page|
+    pages = %w(
+      article
+      home
+      action_plan
+      category
+      partners
+      search_results
+      static
+      news_article
+      news
+    )
+
+    pages.each do |page|
       define_method("#{page}_page") do
         "UI::Pages::#{page.camelize}".constantize.new
       end

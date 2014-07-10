@@ -38,6 +38,10 @@ Given(/^I read an orphaned action plan$/) do
   browse_to_action_plan orphan_action_plan
 end
 
+Given(/^I read the news page$/) do
+  step 'I visit the news page in English'
+end
+
 Then(/^I can see breadcrumbs for the article$/) do
   expect(article_page.breadcrumbs.text).to eq(current_article.context)
 end
@@ -64,4 +68,8 @@ end
 
 Then(/^I can see that the action plan appears in those categories$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
+end
+
+Then(/^I can see breadcrumbs for the news page$/) do
+  expect(news_page.breadcrumbs.text).to eq('Home')
 end

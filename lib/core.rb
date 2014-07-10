@@ -9,6 +9,7 @@ module Core
   autoload :Category,               'core/entity/category'
   autoload :Entity,                 'core/entity'
   autoload :NewsArticle,            'core/entity/news_article'
+  autoload :NewsCollection,         'core/entity/news_collection'
   autoload :Other,                  'core/entity/other'
   autoload :SearchResult,           'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
@@ -19,6 +20,7 @@ module Core
   autoload :CategoryReader,     'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :NewsArticleReader,  'core/interactor/news_article_reader'
+  autoload :NewsReader,         'core/interactor/news_reader'
   autoload :Searcher,           'core/interactor/searcher'
   autoload :StaticPageReader,   'core/interactor/static_page_reader'
 

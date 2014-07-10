@@ -1,5 +1,3 @@
-require 'core/entities/other'
-
 module Core
   RSpec.describe Other do
     subject { described_class.new(double, attributes) }

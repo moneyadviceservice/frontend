@@ -1,5 +1,6 @@
 module Core
   class SearchResultCollection
+    include Enumerable
     extend Forwardable
 
     attr_accessor :items, :page, :per_page, :total_results
@@ -15,8 +16,8 @@ module Core
       self.total_results = attributes[:total_results]
     end
 
-    def items
-      @items ||= []
+    def each(*args, &block)
+      items.each(*args, &block)
     end
   end
 end

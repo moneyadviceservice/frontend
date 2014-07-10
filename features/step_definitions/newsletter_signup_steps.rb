@@ -1,3 +1,7 @@
+Given /^The newsletter subscription feature is enabled$/ do
+  pending unless Feature.active?(:newsletter_subscription)
+end
+
 Then(/^I should see a newsletter sign up form$/) do
   expect(current_page).to have_newsletter
 end

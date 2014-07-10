@@ -48,21 +48,11 @@ module Core
         { title: title, description: description, contents: contents }
       end
 
-      it "maps the category's `id' to the repositories' `id' value" do
+      it 'instantiates the category with the id and the attributes from the repository' do
         expect(Category).
-          to receive(:new).with(id, kind_of(Hash)).and_call_original
+          to receive(:new).with(id, data).and_call_original
 
         subject.call
-      end
-
-      %W(title description content).each do |attribute|
-        it "maps the category's `#{attribute}' to the repositories' `#{attribute}' value" do
-          expect(Category).to(receive(:new)) { |_, attributes|
-            expect(attributes[attribute.to_sym]).to eq(send(attribute))
-          }.and_call_original
-
-          subject.call
-        end
       end
 
       context 'when the Category entity is valid' do

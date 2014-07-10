@@ -50,21 +50,11 @@ module Core
           { title: title, description: description, body: body, categories: categories }
         end
 
-        it "maps the action_plan's `id' to the repositories' `id' value" do
+        it 'instantiates the action plan with the id and the attributes from the repository' do
           expect(ActionPlan).
-            to receive(:new).with(id, kind_of(Hash)).and_call_original
+            to receive(:new).with(id, data).and_call_original
 
           subject.call
-        end
-
-        %W(title description body).each do |attribute|
-          it "maps the article's `#{attribute}' to the repositories' `#{attribute}' value" do
-            expect(ActionPlan).to(receive(:new)) { |_, attributes|
-              expect(attributes[attribute.to_sym]).to eq(send(attribute))
-            }.and_call_original
-
-            subject.call
-          end
         end
 
         context 'when the Action Plan entity is valid' do

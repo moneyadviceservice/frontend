@@ -2,9 +2,9 @@ module Core
   class SearchResultCollection
     extend Forwardable
 
-    attr_accessor :query, :page, :per_page, :total_results
+    attr_accessor :query, :items, :page, :per_page, :total_results
 
-    attr_writer :items
+    private :items=
 
     def_delegators :items, :<<
 

@@ -75,7 +75,7 @@ Feature.without(:an_active_feature) do
 end
 ```
 
-Our feature toggles are designed to be used to hide partly build features, often
+Our feature toggles are designed to be used to hide partly built features, often
 referred to as **release toggles**. A toggle and any conditional behaviour must
 be removed once a feature is complete.
 

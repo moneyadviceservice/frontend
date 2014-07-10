@@ -24,7 +24,7 @@ module Core
         items.each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
           if new_result.valid?
-            results_collection.items << new_result
+            results_collection << new_result
           else
             Rails.logger.info("Invalid search result: #{new_result.inspect}")
           end

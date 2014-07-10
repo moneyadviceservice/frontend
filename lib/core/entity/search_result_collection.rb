@@ -7,10 +7,10 @@ module Core
 
     def initialize(query, attributes = {})
       self.query = query
-
-      Array(attributes).each do |name, value|
-        send("#{name}=", value) if respond_to?("#{name}=")
-      end
+      self.items = attributes.fetch(:items) { [] }
+      self.page = attributes[:page]
+      self.per_page = attributes[:per_page]
+      self.total_results = attributes[:total_results]
     end
 
     def items

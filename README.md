@@ -79,6 +79,29 @@ Our feature toggles are designed to be used to hide partly build features, often
 referred to as **release toggles**. A toggle and any conditional behaviour must
 be removed once a feature is complete.
 
+Note that the local configuration file *config/features.yml* is ignored in git so
+make sure to run any acceptance tests with the feature toggled on and off locally.
+
+If necessary, use a precondition in any tests to check for the status of the feature.
+For example, in feature tests you can use:
+
+```gherkin
+Background:
+  Given The feature is active
+
+Scenario: View great new feature
+  When I visit the website
+  Then I should see this great new feature
+```
+
+with the corresponding step being:
+
+```rb
+Given /^The feature is active$/ do
+  pending unless Feature.active?(:new_feature)
+end
+```
+
 ### Feature Development
 
 We like to develop features from the outside in. We write our user stories in a

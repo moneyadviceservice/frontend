@@ -38,6 +38,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_menu_button_in_header?
 
+  def display_skip_to_main_navigation?
+    true
+  end
+
+  helper_method :display_skip_to_main_navigation?
+
   def alerts?
     flash.keys.any?
   end

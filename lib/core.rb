@@ -21,6 +21,7 @@ module Core
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
+  autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
@@ -50,6 +51,10 @@ module Core
 
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
+    end
+
+    module NewsletterSubscriptions
+      autoload :PublicWebsite, 'core/repository/newsletter_subscriptions/public_website'
     end
 
     module StaticPages

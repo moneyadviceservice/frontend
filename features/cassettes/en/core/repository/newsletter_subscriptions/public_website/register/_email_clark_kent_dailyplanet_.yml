@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
+    body:
+      encoding: UTF-8
+      string: '{"newsletter_subscription":{"email":"clark.kent@dailyplanet"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Jul 2014 15:14:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - "-"
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
+      - _session_id=846f2652adfc6e42a2791778f7b5d5f0; path=/; secure; HttpOnly
+      - _web_tracking=db7f4e8eec7d9229b25f513af13bfbc8; path=/; expires=Fri, 10-Jul-2015
+        15:14:45 GMT; secure
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      X-Runtime:
+      - '0.132603'
+      X-Rack-Cache:
+      - invalidate, pass
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Thu, 10 Jul 2014 15:14:45 GMT
+- request:
+    method: post
+    uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Jul 2014 15:14:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - "-"
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
+      - _session_id=3cc9c9988ba49baab73e6a15f708a499; path=/; secure; HttpOnly
+      - _web_tracking=9636a46b28b12451fcdd9481892955cf; path=/; expires=Fri, 10-Jul-2015
+        15:14:45 GMT; secure
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      X-Runtime:
+      - '0.025057'
+      X-Rack-Cache:
+      - invalidate, pass
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Thu, 10 Jul 2014 15:14:46 GMT
+- request:
+    method: post
+    uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Jul 2014 15:14:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - "-"
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
+      - _session_id=9a782263facdcbf41fb96611eeae21b4; path=/; secure; HttpOnly
+      - _web_tracking=fc7d2abb5299ffdd0431e70f24d20da5; path=/; expires=Fri, 10-Jul-2015
+        15:14:45 GMT; secure
+      X-Request-Id:
+      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      X-Runtime:
+      - '0.032711'
+      X-Rack-Cache:
+      - invalidate, pass
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Thu, 10 Jul 2014 15:14:46 GMT
+recorded_with: VCR 2.9.2

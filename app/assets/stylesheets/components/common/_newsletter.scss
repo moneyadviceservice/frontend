@@ -2,14 +2,36 @@
 //
 // Styleguide newsletter
 
-.newsletter {}
-
 .newsletter__heading {
+  @extend %font-heading-heavy;
+  @include body(21, 22);
   margin-top: 0;
 }
 
 .newsletter .newsletter__input {
-  @include respond-to($mq-m) {
-    width: auto;
-  };
+  margin: 0 6px $baseline-unit 0;
+}
+
+.newsletter__form-row {
+  display: table;
+  max-width: 260px;
+}
+
+.newsletter__form-cell {
+  display: table-cell;
+  vertical-align: top;
+
+  &:first-child {
+    padding-right: 8px;
+  }
+}
+
+.newsletter__error {
+  @extend %font-body;
+  display: none;
+  margin-bottom: $baseline-unit;
+}
+
+.newsletter__error--is-active {
+  display: block;
 }

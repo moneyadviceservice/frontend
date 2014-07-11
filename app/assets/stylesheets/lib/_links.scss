@@ -29,3 +29,10 @@
     text-decoration: underline;
   }
 }
+
+%button-as-link,
+.button-link {
+  @extend a;
+  background: transparent;
+  border: none;
+}

@@ -1,5 +1,7 @@
 <% content_for :content do %>
-  <a class="skip-to-content" href="#main">Skip to main content</a>
+  <a class="skip-to-link" href="#main">Skip to main content</a>
+  <a class="skip-to-link" href="#primary-nav">Skip to main navigation</a>
+
   <%= render 'shared/opt_out_bar' unless dismissed_beta_opt_out? %>
   <%= render 'shared/alerts' if alerts? %>
   <%= render 'shared/header' %>

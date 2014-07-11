@@ -1,5 +1,5 @@
 module Core::Repository
-  module Articles
+  module Cms
     class Cms < Core::Repository::Base
       def initialize(options={})
         self.connection = Core::Registry::Connection[:cms]
@@ -7,11 +7,16 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('/articles/%{id}.json' %
+        response = connection.get('/%{id}.json' %
                                     { locale: I18n.locale, id: id })
 
         attributes = response.body
         links      = response.headers['link'].try(:links) || []
+
+        attributes['title'] = attributes['label']
+        attributes['body'] = BlockComposer.new(attributes['blocks']).to_html
+
+        attributes['categories'] = attributes['category_names']
 
         attributes['alternates'] = []
         links.each do |link|
@@ -29,7 +34,6 @@ module Core::Repository
       private
 
       attr_accessor :connection, :fallback_repository
-
     end
   end
 end

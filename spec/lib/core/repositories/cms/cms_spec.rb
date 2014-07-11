@@ -1,4 +1,4 @@
-module Core::Repository::Articles
+module Core::Repository::Cms
   RSpec.describe Cms do
     let(:url) { 'https://localhost:5000' }
 
@@ -20,7 +20,7 @@ module Core::Repository::Articles
       end
 
       context 'when the type exists' do
-        let(:body) { File.read('spec/fixtures/%s.json' % id) }
+        let(:body) { File.read('spec/fixtures/cms/%s.json' % id) }
         let(:status) { 200 }
 
         it 'returns a hash of attributes' do

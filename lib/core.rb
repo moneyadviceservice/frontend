@@ -67,7 +67,6 @@ module Core
     module Articles
       autoload :Fake, 'core/repository/articles/fake'
       autoload :PublicWebsite, 'core/repository/articles/public_website'
-      autoload :Cms,           'core/repository/articles/cms'
     end
 
     module Categories
@@ -86,6 +85,11 @@ module Core
     module Customers
       autoload :Fake, 'core/repository/customers/fake'
       autoload :Cream, 'core/repository/customers/cream'
+    end
+
+    module Cms
+      autoload :Cms,           'core/repository/cms/cms'
+      autoload :BlockComposer, 'core/repository/cms/block_composer'
     end
 
     module News

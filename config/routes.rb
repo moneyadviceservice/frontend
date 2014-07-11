@@ -15,9 +15,7 @@ class ValidResource
                        partners-uc-banks
                        partners-uc-landlords
                        resources-for-professionals-working-with-young-people-and-parents),
-    :static_page => %w(accessibility hygyrchedd
-                       be-prepared-for-a-rainy-day
-                       were-here-to-help rydym-yma-i-helpu)
+    :static_page => %w(accessibility hygyrchedd)
   }
 
   attr_accessor :type

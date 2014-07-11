@@ -21,6 +21,10 @@ RSpec.describe Core::ConnectionFactory::Http, '.build' do
     expect(factory.builder.handlers).to include(Faraday::Request::Retry)
   end
 
+  it 'defaults to 2 retries' do
+    expect(factory.options[:retries]).to eq(2)
+  end
+
   it "defaults to including an `X-Request-Id' request header" do
     expect(factory.builder.handlers).to include(Faraday::Request::RequestId)
   end

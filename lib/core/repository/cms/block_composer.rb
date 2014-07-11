@@ -1,5 +1,7 @@
 module Core::Repository
   module Cms
+    # Recombines CMS blocks to emulate current public website repo.
+    # TODO: replace with native support for displaying blocks outside of frontend core
     class BlockComposer
       class Block < OpenStruct; end
 

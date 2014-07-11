@@ -11,19 +11,11 @@ module Core::Repository
                                     { locale: I18n.locale, id: id })
 
         attributes = response.body
-        links      = response.headers['link'].try(:links) || []
 
-        attributes['title'] = attributes['label']
-        attributes['body'] = BlockComposer.new(attributes['blocks']).to_html
-
+        attributes['title']      = attributes['label']
+        attributes['body']       = BlockComposer.new(attributes['blocks']).to_html
         attributes['categories'] = attributes['category_names']
-
         attributes['alternates'] = []
-        links.each do |link|
-          next unless link['rel'] == 'alternate'
-
-          attributes['alternates'] << { url: link.href, title: link['title'], hreflang: link['hreflang'] }
-        end
 
         attributes
 

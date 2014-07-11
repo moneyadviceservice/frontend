@@ -7,16 +7,16 @@ module Core::Repository
 
       attr_reader :blocks
 
-      def initialize(blocks)
-        @blocks = blocks.map {|block| Block.new(block) }
+      def initialize(blocks=[])
+        @blocks = Array(blocks)
       end
 
       def find(id)
-        Block.new(blocks.detect { |e| e['identifier'] == id })
+        Block.new(blocks.detect { |block| block['identifier'] == id })
       end
 
       def to_html
-        find('content').content
+        find('content').content.to_s
       end
     end
   end

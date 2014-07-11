@@ -1,6 +1,6 @@
 module Core::Repository::Cms
   RSpec.describe Cms do
-    let(:url) { 'https://localhost:5000' }
+    let(:url) { 'https://example.com' }
 
     describe '#find' do
       subject(:repository) { described_class.new(fallback: fallback) }
@@ -15,7 +15,7 @@ module Core::Repository::Cms
           Core::ConnectionFactory.build(url)
         end
 
-        stub_request(:get, "https://example.com/en/articles/#{id}.json").
+        stub_request(:get, "https://example.com/#{id}.json").
           to_return(status: status, body: body, headers: headers)
       end
 
@@ -25,22 +25,7 @@ module Core::Repository::Cms
 
         it 'returns a hash of attributes' do
           expect(repository.find(id)).to be_a(Hash)
-          expect(repository.find(id)['id']).to eq(id)
-        end
-
-        context 'and an alternates links header is returned' do
-          let(:alternate_links) do
-            [
-              '<https://example.com/cy/path/to/cy/alternate>; rel="alternate"; hreflang="cy"; title="alternate"',
-              '<https://example.com/path/to/en/alternate>; rel="alternate"; hreflang="en"; title="alternate"'
-            ]
-          end
-          let(:headers) { { 'Link' => alternate_links } }
-
-          it 'returns an array of attributes' do
-            expect(repository.find(id)['alternates']).to be_a(Array)
-            expect(repository.find(id)['alternates'].size).to eq(alternate_links.size)
-          end
+          expect(repository.find(id)['slug']).to eq(id)
         end
       end
 

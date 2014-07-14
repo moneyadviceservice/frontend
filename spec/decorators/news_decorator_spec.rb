@@ -56,4 +56,12 @@ RSpec.describe NewsDecorator do
       subject.canonical_url
     end
   end
+
+  describe '#alternate_options' do
+    it 'returns an alternates hash' do
+      allow(helpers).to receive(:news_url).and_return('/sample_url')
+
+      expect(subject.alternate_options).to eq({ en: '/sample_url', cy: '/sample_url' })
+    end
+  end
 end

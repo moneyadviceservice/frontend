@@ -8,7 +8,7 @@ class NewsletterSubscriptionsController < ApplicationController
     end
 
     respond_to do |format|
-      format.js { render :show }
+      format.js   { flash.discard and render :show }
       format.html { redirect_to :back }
     end
   end

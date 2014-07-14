@@ -22,4 +22,8 @@ class NewsDecorator < Draper::CollectionDecorator
   def prev_page?
     object.page > 1
   end
+
+  def canonical_url
+    h.news_url
+  end
 end

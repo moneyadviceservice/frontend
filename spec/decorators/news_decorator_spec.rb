@@ -48,4 +48,12 @@ RSpec.describe NewsDecorator do
       specify { expect(subject.prev_page?).to be_falsy }
     end
   end
+
+  describe '#canonical_url' do
+    it 'calls to the correct path helper' do
+      expect(helpers).to receive(:news_url)
+
+      subject.canonical_url
+    end
+  end
 end

@@ -26,7 +26,7 @@
     }
   }
 
-  .supports-flexbox & .l-constrained {
+  .flexbox & .l-constrained {
     display: flex;
     flex-flow: column;
 
@@ -36,7 +36,7 @@
     }
   }
 
-  .supports-flexbox & .directory__item {
+  .flexbox & .directory__item {
     margin-right: 1.666667%;
     margin-left: 1.666667%;
     margin-bottom: $baseline-unit*2;

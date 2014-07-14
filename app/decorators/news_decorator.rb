@@ -22,4 +22,14 @@ class NewsDecorator < Draper::CollectionDecorator
   def prev_page?
     object.page > 1
   end
+
+  def canonical_url
+    h.news_url
+  end
+
+  def alternate_options
+    I18n.available_locales.each_with_object({}) do |locale, hash|
+      hash[locale] = h.news_url(locale)
+    end
+  end
 end

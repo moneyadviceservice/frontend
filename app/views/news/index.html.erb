@@ -1,3 +1,6 @@
+<% set_meta_tags(canonical: news.canonical_url,
+                 alternate: news.alternate_options) %>
+
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
 <% end %>

@@ -3,13 +3,15 @@
 <% end %>
 
 <div class="l-main editorial">
-  <main role="main">
-    <h1 itemprop="headline"><%= title t('.title') %></h1>
-    <% news.each do |news_article| %>
-      <%= render 'news_item', news_article: news_article %>
-    <% end %>
-    <%= render 'pagination', news: news %>
-  </main>
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1 itemprop="headline"><%= title t('.title') %></h1>
+      <% news.each do |news_article| %>
+        <%= render 'news_item', news_article: news_article %>
+      <% end %>
+      <%= render 'pagination', news: news %>
+    </main>
+  </div>
 </div>
 
 <div class="l-nav">

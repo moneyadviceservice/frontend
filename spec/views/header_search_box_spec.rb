@@ -2,6 +2,7 @@ RSpec.describe 'shared/_header', :type => :view do
   before do
     controller.extend(Localisation)
 
+    allow(view).to receive(:user_signed_in?) { false }
     allow(view).to receive(:display_menu_button_in_header?) { true }
     allow(view).to receive(:display_search_box_in_header?) { display }
   end

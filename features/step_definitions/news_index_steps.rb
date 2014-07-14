@@ -30,8 +30,14 @@ end
 Then(/^I see a list of news in (.*)$/) do |language|
   news = news(language)
 
+  language_link = case language
+  when 'English' then 'welsh_link'
+  when 'Welsh'   then 'english_link'
+  end
+
   expect(news_page.title).to eq("#{I18n.t('news.index.title')} - #{I18n.t('layouts.base.title')}")
   expect(news_page.items_titles.first.text).to eq(news.first_item_title)
   expect(news_page.items_dates.first.text).to eq(news.first_item_date)
   expect(news_page.items_intros.first.text).to eq(news.first_item_intro)
+  expect(news_page.footer_site_links.send("#{language_link}")[:href]).to include('page')
 end

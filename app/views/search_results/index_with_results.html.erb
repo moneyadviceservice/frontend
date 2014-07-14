@@ -9,7 +9,7 @@
       <div class="l-search-results">
         <%= render 'shared/search', search_in_page_header: false %>
         <ol class="search-results">
-          <%= render partial: 'search_result', collection: search_results.items %>
+          <%= render partial: 'search_result', collection: search_results %>
         </ol>
         <%= render 'pagination', search_results: search_results %>
       </div>

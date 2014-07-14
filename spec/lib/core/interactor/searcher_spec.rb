@@ -29,16 +29,15 @@ module Core
       let(:items) { [item_data] }
 
       before do
-        allow(subject).to receive(:query) { query }
         allow(subject).to receive(:request_page) { page }
         allow(subject).to receive(:request_per_page) { per_page }
         allow(subject).to receive(:total_results) { total_results }
         allow(subject).to receive(:items) { items }
       end
 
-      it 'calls the repository with the query, page and per_page' do
+      it 'calls the repository with the page and per_page' do
         expect(SearchResultCollection).to receive(:new).
-                                            with(query, total_results: total_results, page: page, per_page: per_page).
+                                            with(total_results: total_results, page: page, per_page: per_page).
                                             and_call_original
 
         subject.call

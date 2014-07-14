@@ -20,11 +20,11 @@ module Core
 
     def call
       options = { total_results: total_results, page: request_page, per_page: request_per_page }
-      SearchResultCollection.new(query, options).tap do |results_collection|
+      SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
           if new_result.valid?
-            results_collection.items << new_result
+            results_collection << new_result
           else
             Rails.logger.info("Invalid search result: #{new_result.inspect}")
           end

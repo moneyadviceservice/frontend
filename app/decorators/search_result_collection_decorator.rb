@@ -1,7 +1,10 @@
-class SearchResultCollectionDecorator < Draper::Decorator
-  decorates_association :items, with: SearchResultDecorator
+class SearchResultCollectionDecorator < Draper::CollectionDecorator
 
   delegate :per_page
+
+  def decorator_class
+    SearchResultDecorator
+  end
 
   def page
     if object.page > number_of_pages

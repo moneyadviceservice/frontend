@@ -3,9 +3,6 @@ Feature: Newsletter sign up
   I want to sign up to the newsletter
   So that I can receive free money advice emails
 
-  Background:
-    Given The newsletter subscription feature is enabled
-
   Scenario: View newsletter sign up
     When I visit the website
     Then I should see a newsletter sign up form

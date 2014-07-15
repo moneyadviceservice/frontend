@@ -1,0 +1,73 @@
+.contact-detail {
+  @include respond-to($mq-xs, $mq-m) {
+    padding: $baseline-unit*3 0 $baseline-unit 0;
+    border-bottom: $default-border-thick;
+  }
+}
+
+.contact-detail__heading {
+  @include respond-to($mq-xs, $mq-m) {
+    @include body(16, 30);
+    font-weight: 300;
+    margin: 0 0 $baseline-unit*2 0;
+    user-select: none;
+  }
+}
+
+.contact-detail__content {
+  @include respond-to($mq-xs, $mq-m) {
+    .js & {
+      display: none;
+    }
+
+    &.is-on {
+      display: block;
+    }
+
+    &.is-off {
+      display: none;
+    }
+  }
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+
+}
+
+.js .contact-detail__heading {
+  @include respond-to($mq-xs, $mq-m) {
+    position: relative;
+    padding-left: $category-inset;
+
+    button {
+      margin-left: -$category-inset;
+      padding-left: $category-inset;
+      text-align: left;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & .icon--toggle {
+    @extend .icon--plus;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+  }
+
+  &.is-on .icon--toggle {
+    @extend .icon--minus;
+  }
+
+}
+
+.js .contact-detail__content {
+  @include respond-to($mq-xs, $mq-m) {
+    padding-left: $category-inset;
+  }
+}

@@ -1,5 +1,10 @@
 <% content_for :main do %>
-  <a class="skip-to-content" href="#main">Skip to main content</a>
+  <a class="skip-to-link" href="#main">Skip to main content</a>
+
+  <% if display_skip_to_main_navigation? %>
+    <a class="skip-to-link" href="#primary-nav">Skip to main navigation</a>
+  <% end %>
+
   <%= render 'shared/opt_out_bar' %>
   <%= render 'shared/header' %>
 

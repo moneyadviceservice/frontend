@@ -1,0 +1,48 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: categories %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1>Give us your feedback</h1>
+
+      <p>* Indicates required fields</p>
+
+      <!--<div class="form__row">-->
+        <!--<label for="disabled" class="form__label-heading">What is your feedback about?</label>-->
+        <!--<input type="text" id="disabled" value="The information on this page: Help to Buy Scheme" disabled="">-->
+      <!--</div>-->
+
+      <div class="form__row">
+        <fieldset class="form__group form__group--inline">
+          <legend>Was this page useful? * <span class="visually-hidden">required</span></legend>
+          <div class="form__group-item">
+            <label>
+              <input type="radio" name="fsitem2" class="form__group-input">
+              Yes
+            </label>
+          </div>
+          <div class="form__group-item">
+            <label>
+              <input type="radio" name="fsitem2" class="form__group-input">
+              No
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form__row">
+        <label for="email" class="form__label-heading">Please tell us more * <span class="visually-hidden">required</span></label>
+        <textarea id="comment" aria-required="true"></textarea>
+      </div>
+
+      <input class="button button--primary" type="submit" value="Submit feedback">
+
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav' %>
+</div>

@@ -117,7 +117,7 @@ We like to develop features from the outside in. We write our user stories in a
 7. Keep your unit tests isolated.
 8. Test the [Routing][routing specs], [Models][model specs],
    [Controllers][controller specs], [Decorators][decorator specs],
-   [Helpers][helper specs] and [JavaScript][konacha] of your feature.
+   [Helpers][helper specs] and [JavaScript][karma] of your feature.
 9. Test your features against the [mock API] and record interactions with [VCR].
 
 ### API
@@ -185,7 +185,7 @@ presentational concerns.
 [feature branches]: http://martinfowler.com/bliki/FeatureBranch.html
 [feature toggles]: http://martinfowler.com/bliki/FeatureToggle.html
 [git]: http://git-scm.com
-[konacha]: https://github.com/jfirebaugh/konacha
+[karma]: https://karma-runner.github.io
 [kss]: https://github.com/kneath/kss
 [mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
 [mock api]: https://moneyadviceservice.apiary.io

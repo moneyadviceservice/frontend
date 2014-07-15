@@ -77,13 +77,3 @@ module Frontend
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'car_campaigns', '*.yml').to_s]
   end
 end
-
-Capybara.server do |app, port|
-
-  if Konacha.mode == :runner
-    require 'rack/handler/thin'
-    Rack::Handler::Thin.run(app, Port: port)
-  else
-    Capybara.run_default_server(app, port)
-  end
-end if defined?(Capybara)

@@ -55,7 +55,6 @@ group :test do
   gem 'faker'
   gem 'html_validation'
   gem 'rspec_junit_formatter'
-  gem 'thin'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
   gem 'vcr'
   gem 'webmock'

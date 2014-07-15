@@ -61,7 +61,7 @@ RSpec.describe NewsDecorator do
     it 'returns an alternates hash' do
       allow(helpers).to receive(:news_url).and_return('/sample_url')
 
-      expect(subject.alternate_options).to eq({ en: '/sample_url', cy: '/sample_url' })
+      expect(subject.alternate_options).to eq({ :'en-GB' => '/sample_url', :'cy-GB' => '/sample_url' })
     end
   end
 end

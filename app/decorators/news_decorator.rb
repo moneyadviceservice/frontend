@@ -2,6 +2,7 @@ class NewsDecorator < Draper::CollectionDecorator
   delegate :page
 
   PAGE_SIZE = 17
+  ALTERNATES_SUFIX = 'GB'
 
   def decorator_class
     NewsArticleDecorator
@@ -29,7 +30,7 @@ class NewsDecorator < Draper::CollectionDecorator
 
   def alternate_options
     I18n.available_locales.each_with_object({}) do |locale, hash|
-      hash[locale] = h.news_url(locale)
+      hash[:"#{locale}-#{ALTERNATES_SUFIX}"] = h.news_url(locale)
     end
   end
 end

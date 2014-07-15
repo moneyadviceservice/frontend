@@ -8,13 +8,18 @@ module Core
   autoload :Article, 'core/entity/article'
   autoload :Category, 'core/entity/category'
   autoload :Entity, 'core/entity'
-  autoload :Feedback, 'core/entity/feedback'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :Other, 'core/entity/other'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
+
+  module Feedback
+    autoload :Base, 'core/entity/feedback/base'
+    autoload :Article, 'core/entity/feedback/article'
+    autoload :Technical, 'core/entity/feedback/technical'
+  end
 
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticleReader, 'core/interactor/article_reader'

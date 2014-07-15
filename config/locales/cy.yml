@@ -54,6 +54,16 @@ cy:
       unprocessable_entity:
         title: Endid na ellir ei brosesu
 
+  activemodel:
+    errors:
+      models:
+        core/feedback/article:
+          attributes:
+            useful:
+              blank: Dewiswch opsiwn
+            suggestions:
+              blank: Os gwelwch yn dda rhowch rhagor o fanylion
+
   contact:
     heading: Methu canfod beth sydd ei angen arnoch chi?
     introduction: Mae ein staff hyfforddedig wrth law i helpu
@@ -199,6 +209,19 @@ cy:
       related_categories:
         title: Mae'r erthygl hon yn ymddangos mewn
 
+  article_feedbacks:
+    new:
+      title: Rhowch eich adborth i ni
+      mandatory_warning: Cwblhewch bob maes
+      subtitle: "Rydych yn darparu adborth ar: '%{article_title}'"
+      was_page_useful_html: A oedd y dudalen hon yn ddefnyddiol? <span class="visually-hidden">angen</span>
+      yes: Ie
+      no: Na
+      tell_us_more_html: Dywedwch ragor wrthym<span class="visually-hidden">angen</span>
+      submit_button: Cyflwyno adborth
+    create:
+      flash_notice: Diolch am eich adborth
+
   search_box:
     label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol
     placeholder: Chwilio
@@ -249,3 +272,4 @@ cy:
     sign_out: Cofnodi Allan
     register: Cofrestru
     my_account: Fy nghyfrif
+

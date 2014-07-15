@@ -1,0 +1,49 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= t('.title') %></h1>
+
+      <p><%= t('.mandatory_warning') %></p>
+
+      <p><%= t('.title', article_title: article.title) %></p>
+
+      <%= form_for new_feedback, as: :feedback, url: article_feedback_path(article.id), builder: Dough::Forms::Builders::Validation do |f| %>
+        <%= f.validation_summary %>
+        <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:useful) %>">
+          <%= f.errors_for :useful %>
+          <fieldset class="form__group form__group--inline">
+            <legend><%= t('.was_page_useful_html') %></legend>
+            <div class="form__group-item">
+              <label>
+                <%= f.radio_button :useful, true, class: 'form__group-input' %>
+                <%= t('.yes') %>
+              </label>
+            </div>
+            <div class="form__group-item">
+              <label>
+                <%= f.radio_button :useful, true, class: 'form__group-input' %>
+                <%= t('.no') %>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:suggestions) %>">
+          <%= f.errors_for :suggestions %>
+          <label for="email" class="form__label-heading"><%= t('.tell_us_more_html') %></label>
+          <%= f.text_area :suggestions, :cols => 60, :rows => 6, 'aria-required' => true %>
+        </div>
+
+        <input class="button button--primary" type="submit" value="<%= t('.submit_button') %>">
+      <% end %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>

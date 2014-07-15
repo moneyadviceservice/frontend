@@ -51,6 +51,16 @@ en:
       unprocessable_entity:
         title: Unprocessable Entity
 
+  activemodel:
+    errors:
+      models:
+        core/feedback/article:
+          attributes:
+            useful:
+              blank: Please choose an option
+            suggestions:
+              blank: Please give further details
+
   contact:
     heading: Can’t find what you need?
     introduction: Our trained staff are on hand to help you
@@ -153,6 +163,19 @@ en:
         hidden_link: articles in %{category}
       related_categories:
         title: This article appears in
+
+  article_feedbacks:
+    new:
+      title: Give us your feedback
+      mandatory_warning: Please complete all fields
+      subtitle: "You're providing feedback on: '%{article_title}'"
+      was_page_useful_html: Was this page useful? <span class="visually-hidden">required</span>
+      yes: Yes
+      no: No
+      tell_us_more_html: Please tell us more <span class="visually-hidden">required</span>
+      submit_button: Submit feedback
+    create:
+      flash_notice: Thanks for your feedback
 
   search_box:
     label: Search the Money Advice Service

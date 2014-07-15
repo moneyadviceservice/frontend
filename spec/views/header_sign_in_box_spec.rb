@@ -3,23 +3,22 @@ RSpec.describe 'shared/_sign_in_box', :type => :view do
 
   before do
     allow(view).to receive(:user_signed_in?) { logged_in }
+    render
   end
 
   context 'when the user is not signed in' do
-    it 'displays a sign in link' do
-      render
-
-      expect(rendered).to include(t('authentication.sign_in'))
-    end
+    specify { expect(rendered).to include(t('authentication.sign_in')) }
+    specify { expect(rendered).to_not include(t('authentication.sign_out')) }
+    specify { expect(rendered).to include(t('authentication.register')) }
+    specify { expect(rendered).to_not include(t('authentication.my_account')) }
   end
 
   context 'when the user is signed in' do
     let(:logged_in) { true }
 
-    it 'displays a sign out link' do
-      render
-
-      expect(rendered).to include(t('authentication.sign_out'))
-    end
+    specify { expect(rendered).to_not include(t('authentication.sign_in')) }
+    specify { expect(rendered).to include(t('authentication.sign_out')) }
+    specify { expect(rendered).to_not include(t('authentication.register')) }
+    specify { expect(rendered).to include(t('authentication.my_account')) }
   end
 end

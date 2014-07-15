@@ -65,6 +65,8 @@ Rails.application.routes.draw do
               only:        'show',
               constraints: ValidResource.new(:static_page)
 
+    resource :feedback, only: [:new, :create], controller: :technical_feedbacks
+
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 
     resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'

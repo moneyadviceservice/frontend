@@ -1,0 +1,34 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: BreadcrumbTrail.home %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= t('.title') %></h1>
+
+      <p><%= t('.mandatory_warning') %></p>
+
+      <%= form_for new_feedback, as: :feedback, url: feedback_path, builder: Dough::Forms::Builders::Validation do |f| %>
+        <%= f.validation_summary %>
+        <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:attempting) %>">
+          <%= f.errors_for :attempting %>
+          <label for="email" class="form__label-heading"><%= t('.trying_to_do_html') %></label>
+          <%= f.text_area :attempting, :cols => 60, :rows => 6, 'aria-required' => true %>
+        </div>
+
+        <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:occurred) %>">
+          <%= f.errors_for :occurred %>
+          <label for="email" class="form__label-heading"><%= t('.what_went_wrong_html') %></label>
+          <%= f.text_area :occurred, :cols => 60, :rows => 6, 'aria-required' => true %>
+        </div>
+
+        <input class="button button--primary" type="submit" value="<%= t('.submit_button') %>">
+      <% end %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>

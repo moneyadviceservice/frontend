@@ -64,6 +64,13 @@ cy:
             suggestions:
               blank: Os gwelwch yn dda rhowch rhagor o fanylion
 
+        core/feedback/technical:
+          attributes:
+            useful:
+              attempting: Os gwelwch yn dda rhowch wybod i ni beth oeddech chi'n geisio ei wneud
+            suggestions:
+              occurred: Os gwelwch yn dda rhowch rhagor o fanylion
+
   contact:
     heading: Methu canfod beth sydd ei angen arnoch chi?
     introduction: Mae ein staff hyfforddedig wrth law i helpu
@@ -272,4 +279,14 @@ cy:
     sign_out: Cofnodi Allan
     register: Cofrestru
     my_account: Fy nghyfrif
+
+  technical_feedbacks:
+    new:
+      title: Rhowch eich adborth i ni
+      mandatory_warning: Cwblhewch bob maes
+      submit_button: Cyflwyno adborth
+      trying_to_do_html: Beth oeddech chi'n geisio'i wneud? <span class="visually-hidden">angen</span>
+      what_went_wrong_html: Beth aeth o'i le? <span class="visually-hidden">angen</span>
+    create:
+      flash_notice: Diolch am eich adborth
 

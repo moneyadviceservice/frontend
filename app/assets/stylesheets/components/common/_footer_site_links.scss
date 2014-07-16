@@ -40,7 +40,7 @@
 .footer-site-links__internal-links {
   @extend %clearfix;
   @extend .unstyled-list;
-  padding: $baseline-unit*3 0;
+  padding: $baseline-unit*2 0;
 }
 
 .footer-site-links__cookie-link {
@@ -60,6 +60,7 @@
 }
 
 .footer-site-links__language {
+  @extend .unstyled-list;
   @extend %clearfix;
   padding: $baseline-unit*2 0;
   border-top: 1px solid darken($color-grey-pale, 5%);
@@ -76,7 +77,7 @@
   .icon--globe {
     @extend %icon-width;
     position: relative;
-    top: 3px;
+    top: 6px;
     height: 18px;
   }
 
@@ -94,7 +95,6 @@
 
   li {
     padding: $baseline-unit 0;
-    margin-bottom: $baseline-unit;
     margin-left: 0;
 
     a {
@@ -131,4 +131,9 @@
     outline: none;
     text-decoration: underline;
   }
+}
+
+.footer-site-links__pipe {
+  color: $color-link-nav;
+  padding: 0 $baseline-unit*2;
 }

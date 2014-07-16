@@ -55,7 +55,7 @@
   <% end %>
 
   <div class="l-constrained l-padded">
-    <ul class="footer-site-links__language unstyled-list">
+    <ul class="footer-site-links__language">
       <li>
         <% if content_for?(:alternate_link) %>
           <%= yield(:alternate_link) %>
@@ -80,6 +80,13 @@
       <li>
         <span class="icon icon--speech-green"></span>
         <a href="<%= raw t('feedback.email_contents').gsub(/\n/, '') %>"><%= t('feedback.title') %></a>
+      </li>
+
+      <li class="footer-site-links__login">
+        <span class="icon icon--account"></span>
+        <a href=""><%= t('account.sign_in') %></a>
+        <span class="footer-site-links__pipe">|</span>
+        <a href=""><%= t('account.register') %></a>
       </li>
     </ul>
   </div>

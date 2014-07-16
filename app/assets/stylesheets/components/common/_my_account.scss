@@ -1,0 +1,17 @@
+.my-account {
+  @extend .unstyled-list;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.my-account__item {
+  display: inline;
+  padding: 0 0 0 30px;
+}
+
+.my-account__link,
+.my-account__link:visited {
+  @include body(16, 18);
+  @extend %font-heading-medium;
+  color: $color-white;
+}

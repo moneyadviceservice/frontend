@@ -1,20 +1,20 @@
 <ul class="authentication">
   <% if user_signed_in? %>
     <li class="authentication__item">
-      <%= button_to t('authentication.sign_out'), "/#{I18n.locale}/users/sign_out", method: :delete, class: 'my-account__link' %>
+      <%= button_to t('authentication.sign_out'), "/#{I18n.locale}/users/sign_out", method: :delete, class: 'authentication__link' %>
     </li>
 
     <li class="authentication__item">
-      <%= button_to t('authentication.my_account'), "/#{I18n.locale}/users/edit", class: 'my-account__link' %>
+      <%= button_to t('authentication.my_account'), "/#{I18n.locale}/users/edit", class: 'authentication__link' %>
     </li>
 
   <% else %>
     <li class="authentication__item">
-      <%= button_to t('authentication.sign_in'), "/#{I18n.locale}/users/sign_in", class: 'my-account__link' %>
+      <%= button_to t('authentication.sign_in'), "/#{I18n.locale}/users/sign_in", class: 'authentication__link' %>
     </li>
 
     <li class="authentication__item">
-      <%= button_to t('authentication.register'), "/#{I18n.locale}/users/sign_up", class: 'my-account__link' %>
+      <%= button_to t('authentication.register'), "/#{I18n.locale}/users/sign_up", class: 'authentication__link' %>
     </li>
   <% end %>
 </ul>

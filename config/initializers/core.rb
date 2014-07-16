@@ -37,4 +37,4 @@ Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new
 
 # Prepare the category tree so that it is available to the application
-Core::CategoryTreeReader.new.call if Rails.env.production?
+Core::CategoryTreeReader.new.call if Rails.env.production? and defined?(Rails::Server)

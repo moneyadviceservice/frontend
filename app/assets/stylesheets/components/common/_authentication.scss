@@ -1,0 +1,21 @@
+.authentication {
+  @extend .unstyled-list;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.authentication__item {
+  @include inline-block;
+  padding: 0 0 0 30px;
+}
+
+.authentication__link[type="submit"] {
+  @include body(16, 18);
+  @extend .unstyled-button;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+}

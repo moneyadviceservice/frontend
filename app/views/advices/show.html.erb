@@ -1,0 +1,19 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <h1><%= t('.title') %></h1>
+
+      <p><%= t('.greeting') %></p>
+
+      <%= render 'shared/call_us' %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav', categories: category_navigation %>
+</div>

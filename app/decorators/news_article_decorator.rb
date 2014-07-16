@@ -12,7 +12,7 @@ class NewsArticleDecorator < ContentItemDecorator
 
   def intro
     processor = HTMLProcessor::NodeContents
-    processor.new(object.body).process(HTMLProcessor::INTRO_PARAGRAPH)
+    processor.new(object.body).process(HTMLProcessor::INTRO_PARAGRAPH).html_safe
   end
 
   def path

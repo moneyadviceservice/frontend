@@ -9,16 +9,17 @@
 
       <p>For help and money advice, please contact us:</p>
 
-      <h2>Call us</h2>
+      <div class="call-us">
+        <h2 class="call-us__title"><%= t('contact.call_us') %></h2>
 
-      <p><strong><a href="tel:+443005005000">0300 500 5000</a></strong></p>
+        <a href="<%= t('contact.telephone_number_href') %>" class="call-us__number"><%= t('contact.telephone_number') %></a>
 
-      <p>
-        Monday–Friday: <strong>8am–8pm</strong><br>
-        Saturday: <strong>9am–1pm</strong>
-      </p>
+        <p class="call-us__opening_hours">
+          <%= t('contact.opening_hours_html') %>
+        </p>
 
-      <a href="/en/static/contact-us">Find out about call charges</a>
+        <p><%= t('contact.call_charges_html') %></p>
+      </div>
 
     </main>
   </div>

@@ -1,0 +1,24 @@
+// Call us component found on the 'Help and money advice' page
+//
+// Styleguide Call Us
+
+.call-us__title {
+  display: inline;
+  @extend %font-heading-medium;
+  @extend %paragraph;
+  color: $color-text-default;
+}
+
+.call-us__number[href^=tel] {
+  @extend %font-heading-heavy;
+  @include body(36, 36);
+  letter-spacing: -1px;
+  color: $color-call-us-number;
+  display:inline-block;
+  margin-left:$baseline-unit*3;
+  margin-bottom:$baseline-unit*3;
+}
+
+.call-us__opening_hours {
+  @extend %type;
+}

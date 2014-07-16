@@ -1,4 +1,4 @@
-RSpec.describe 'shared/_sign_in_box', :type => :view do
+RSpec.describe 'shared/_authentication', :type => :view do
   let(:logged_in) { false }
 
   before do

@@ -12,7 +12,7 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application
-    config.session_store :cookie_store, key: '_mas_session'
+    config.session_store :active_record_store
 
     config.filter_parameters += [:password]
     config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', 'car_campaigns', '*.yml').to_s]

@@ -9,6 +9,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.2'
 
+gem 'activerecord-session_store'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -17,6 +18,7 @@ gem 'gaffe'
 gem 'kss'
 gem 'link_header'
 gem 'meta-tags'
+gem 'mysql2'
 gem 'nokogiri'
 gem 'nunes'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
@@ -55,14 +57,13 @@ group :test do
   gem 'faker'
   gem 'html_validation'
   gem 'rspec_junit_formatter'
+  gem 'sqlite3'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
   gem 'vcr'
   gem 'webmock'
 end
 
 group :production do
-  gem 'activerecord-session_store'
-  gem 'mysql2'
   gem 'syslog-logger'
   gem 'unicorn-rails'
 end
@@ -74,7 +75,6 @@ group :test, :development do
   gem 'ejs'
   gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'rspec-rails', '~> 3.0'
-  gem 'sqlite3' # the database is not used yet, so sqlite is sufficient
 end
 
 group :doc do

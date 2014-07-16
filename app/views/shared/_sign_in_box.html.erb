@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <%= button_to t('authentication.sign_out'), "/#{I18n.locale}/users/sign_out", method: :delete %>
+  <%= button_to t('authentication.my_account'), "/#{I18n.locale}/users/edit" %>
+<% else %>
+  <%= button_to t('authentication.sign_in'), "/#{I18n.locale}/users/sign_in" %>
+  <%= button_to t('authentication.register'), "/#{I18n.locale}/users/sign_up" %>
+<% end %>

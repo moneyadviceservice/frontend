@@ -8,10 +8,20 @@
   }
 
   .mas-logo {
+    @include column(8);
+    margin-top: $baseline-unit*3;
+
     @include respond-to($mq-m) {
-      float: left;
-      margin-top: $baseline-unit*1.5;
-      margin-bottom: $baseline-unit*1.5;
+      @include column(4);
+    }
+  }
+
+  .my-account {
+    @include column(4);
+    display: none;
+
+    @include respond-to($mq-m) {
+      display: block;
     }
   }
 

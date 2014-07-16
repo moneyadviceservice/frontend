@@ -1,11 +1,13 @@
 <header class="l-header" role="banner">
   <div class="l-constrained">
-    <%= link_to root_path do %>
-      <%= image_tag("mas-logo.png", alt: 'the Money Advice Service', class: 'mas-logo') %>
+    <%= link_to root_path, class: 'mas-logo' do %>
+      <%= image_tag("mas-logo.png", alt: 'the Money Advice Service') %>
     <% end %>
 
     <%= render 'shared/mobile_nav' %>
     <%= render 'shared/sign_in_box' %>
+
+    <%= render 'shared/my_account' %>
 
     <% if display_search_box_in_header? %>
       <div class="l-search" id="search-bar">

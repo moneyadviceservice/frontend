@@ -16,12 +16,21 @@
     }
   }
 
-  .my-account {
+  .authentication {
     @include column(4);
     display: none;
 
     @include respond-to($mq-m) {
       display: block;
+    }
+  }
+
+  .authentication__link {
+    @extend %font-heading-medium;
+    color: $color-white;
+
+    &:visited {
+      color: $color-white;
     }
   }
 

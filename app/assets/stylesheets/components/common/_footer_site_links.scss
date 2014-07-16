@@ -72,6 +72,7 @@
 
   %icon-width {
     width: 20px;
+    margin-right: 6px;
   }
 
   .icon--globe {
@@ -91,6 +92,10 @@
     @extend %icon-width;
     position: relative;
     top: 3px;
+  }
+
+  .icon--account {
+    @extend %icon-width;
   }
 
   li {

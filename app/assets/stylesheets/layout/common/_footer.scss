@@ -11,6 +11,14 @@
     @include respond-to($mq-m) {
       display: none;
     }
+
+    > form {
+      @include inline-block;
+    }
+
   }
 
+  .authentication__link {
+    @extend %link-nav-secondary;
+  }
 }

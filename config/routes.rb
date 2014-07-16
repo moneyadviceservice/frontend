@@ -56,6 +56,7 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
+    resource  :advice, only: :show
 
     get 'campaigns/revealed-the-true-cost-of-buying-a-car', to: "car_campaigns#show"
     get 'campaigns/edrychwch-cost-gwirioneddol-prynu-car', to: "car_campaigns#show"

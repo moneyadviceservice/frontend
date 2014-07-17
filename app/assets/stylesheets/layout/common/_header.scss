@@ -35,6 +35,10 @@
     }
   }
 
+  .l-authentication {
+    @include column(8);
+  }
+
   .search {
     width: 100%;
     margin: 0;

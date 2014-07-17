@@ -7,6 +7,7 @@ RSpec.describe 'shared/_authentication', :type => :view do
     end
 
     allow(view).to receive(:user_signed_in?) { logged_in }
+    allow(view).to receive(:display_search_box_in_header?)
 
     render
   end

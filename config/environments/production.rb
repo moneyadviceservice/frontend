@@ -85,4 +85,11 @@ Rails.application.configure do
 
   # Configure active record session store.
   config.session_store :active_record_store
+
+  # Use sendmail to send mails in production
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {
+    from: 'Development.Team@moneyadviceservice.org.uk'
+  }
 end

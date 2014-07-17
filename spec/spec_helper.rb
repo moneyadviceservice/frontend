@@ -12,6 +12,7 @@ require_relative '../config/environment'
 require 'mas/development_dependencies/rspec/spec_helper'
 
 require 'factory_girl'
+require 'feature/testing'
 require 'html_validation'
 require 'webmock/rspec'
 

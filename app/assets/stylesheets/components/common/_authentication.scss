@@ -9,9 +9,9 @@
   padding: 0 0 0 30px;
 }
 
-.authentication__link[type="submit"] {
-  @include body(16, 18);
+.authentication__link {
   @extend .unstyled-button;
+  @include body(16, 18);
 
   &:hover,
   &:focus {

@@ -108,7 +108,6 @@
 .l-menu-nav {
   @extend %clearfix;
   background: $color-white;
-  margin-top: 2px;
   clear: both;
 
   @include respond-to($mq-m) {

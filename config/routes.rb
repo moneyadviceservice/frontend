@@ -30,6 +30,8 @@ class ValidResource
 end
 
 Rails.application.routes.draw do
+  NOT_IMPLEMENTED = -> (env) { [501, {}, []] }
+
   get '/' => redirect("/en")
   resource :beta_opt_out, only: [:create, :destroy], path: 'opt-out'
 
@@ -37,10 +39,10 @@ Rails.application.routes.draw do
     root 'home#show'
 
     scope '/users' do
-      match '/sign_in', to: 'home#show', via: 'get', as: 'new_user_session'
-      match '/sign_out', to: 'home#show', via: 'delete', as: 'destroy_user_session'
-      match '/sign_up', to: 'home#show', via: 'get', as: 'new_user_registration'
-      match '/edit', to: 'home#show', via: 'get', as: 'edit_user_registration'
+      match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'
+      match '/sign_out', to: NOT_IMPLEMENTED, via: 'delete', as: 'destroy_user_session'
+      match '/sign_up', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_registration'
+      match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
     end
 
     resources :action_plans, only: 'show'
@@ -105,5 +107,5 @@ Rails.application.routes.draw do
     end
   end
 
-  match '*path', via: :all, to: -> env { [501, {}, []] }
+  match '*path', via: :all, to: NOT_IMPLEMENTED
 end

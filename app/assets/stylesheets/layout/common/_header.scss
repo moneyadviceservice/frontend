@@ -50,12 +50,11 @@
     clear: both;
 
     @include respond-to($mq-m) {
+      @include column(4);
       border: 0;
       background-color: transparent;
       padding: 0;
       clear: none;
-
-      @include column(4);
       margin-top: $baseline-unit*3;
       margin-bottom: $baseline-unit*3;
 
@@ -106,6 +105,7 @@
   @extend %clearfix;
   background: $color-white;
   margin-top: 2px;
+  clear: both;
 
   @include respond-to($mq-m) {
     display: none;

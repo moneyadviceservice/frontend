@@ -6,7 +6,7 @@
 
 .authentication__item {
   @include inline-block;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 $baseline-unit*2;
 }
 
 .authentication__link {

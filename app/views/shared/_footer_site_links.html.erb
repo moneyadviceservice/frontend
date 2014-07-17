@@ -86,13 +86,17 @@
         <li class="footer-site-links__login">
           <span class="icon icon--account"></span>
           <% if user_signed_in? %>
-            <%= button_to t('authentication.sign_out'), "/#{I18n.locale}/users/sign_out", method: :delete, class: 'authentication__link' %>
+            <%= button_to t('authentication.sign_out'), destroy_user_session_path,
+                          class: 'authentication__link', method: :delete %>
             <span class="footer-site-links__pipe">|</span>
-            <%= link_to t('authentication.my_account'), "/#{I18n.locale}/users/edit", class: 'authentication__link' %>
+            <%= link_to t('authentication.my_account'), edit_user_registration_path,
+                        class: 'authentication__link' %>
           <% else %>
-            <%= link_to t('authentication.sign_in'), "/#{I18n.locale}/users/sign_in", class: 'authentication__link' %>
+            <%= link_to t('authentication.sign_in'), new_user_session_path,
+                        class: 'authentication__link' %>
             <span class="footer-site-links__pipe">|</span>
-            <%= link_to t('authentication.register'), "/#{I18n.locale}/users/sign_up", class: 'authentication__link' %>
+            <%= link_to t('authentication.register'), new_user_registration_path,
+                        class: 'authentication__link' %>
           <% end %>
         </li>
       <% end %>

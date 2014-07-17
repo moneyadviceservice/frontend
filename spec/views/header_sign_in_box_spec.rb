@@ -2,7 +2,12 @@ RSpec.describe 'shared/_authentication', :type => :view do
   let(:logged_in) { false }
 
   before do
+    allow(controller).to receive(:default_url_options) do
+      { locale: I18n.default_locale }
+    end
+
     allow(view).to receive(:user_signed_in?) { logged_in }
+
     render
   end
 

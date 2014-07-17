@@ -35,6 +35,14 @@ Rails.application.routes.draw do
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
+
+    scope '/users' do
+      match '/sign_in', to: 'home#show', via: 'get', as: 'new_user_session'
+      match '/sign_out', to: 'home#show', via: 'delete', as: 'destroy_user_session'
+      match '/sign_up', to: 'home#show', via: 'get', as: 'new_user_registration'
+      match '/edit', to: 'home#show', via: 'get', as: 'edit_user_registration'
+    end
+
     resources :action_plans, only: 'show'
     resources :articles,
               only: 'show',

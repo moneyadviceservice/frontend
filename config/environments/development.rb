@@ -23,4 +23,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Don't send mails in development
+  config.action_mailer.delivery_method = :test
+
 end

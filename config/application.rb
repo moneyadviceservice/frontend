@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'action_controller/railtie'
+require 'action_mailer/railtie'
 require 'action_view/railtie'
 require 'active_model/railtie'
 require 'active_record/railtie'

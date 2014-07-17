@@ -18,6 +18,11 @@
       <%= article.content %>
 
       <%= render 'shared/related_links', article: @article, categories: related_content %>
+
+      <% if Feature.active?(:feedback) %>
+        <%= render 'shared/feedback_panel', article: @article %>
+      <% end %>
+
     </main>
   </div>
 </div>

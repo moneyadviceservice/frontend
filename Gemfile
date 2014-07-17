@@ -10,6 +10,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.2'
 
 gem 'activerecord-session_store'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', require: 'dough'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'

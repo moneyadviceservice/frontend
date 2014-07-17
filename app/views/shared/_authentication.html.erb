@@ -1,0 +1,23 @@
+<% if Feature.active?(:authentication) %>
+  <ul class="authentication">
+    <% if user_signed_in? %>
+      <li class="authentication__item">
+        <%= button_to t('authentication.sign_out'), destroy_user_session_path,
+                      class: 'authentication__link', method: :delete %>
+      </li>
+      <li class="authentication__item">
+        <%= link_to t('authentication.my_account'), edit_user_registration_path,
+                    class: 'authentication__link' %>
+      </li>
+    <% else %>
+      <li class="authentication__item">
+        <%= link_to t('authentication.sign_in'), new_user_session_path,
+                    class: 'authentication__link' %>
+      </li>
+      <li class="authentication__item">
+        <%= link_to t('authentication.register'), new_user_registration_path,
+                    class: 'authentication__link' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

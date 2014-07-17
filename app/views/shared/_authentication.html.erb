@@ -1,5 +1,5 @@
 <% if Feature.active?(:authentication) %>
-  <ul class="authentication">
+  <ul class="authentication <% unless display_search_box_in_header? %>l-authentication<% end %>">
     <% if user_signed_in? %>
       <li class="authentication__item">
         <%= button_to t('authentication.sign_out'), destroy_user_session_path,

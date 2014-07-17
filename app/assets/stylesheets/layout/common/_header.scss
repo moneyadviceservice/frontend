@@ -10,6 +10,7 @@
   .mas-logo {
     @include column(8);
     margin-top: $baseline-unit*3;
+    margin-bottom: $baseline-unit*2;
 
     @include respond-to($mq-m) {
       @include column(4);
@@ -46,14 +47,15 @@
     background-color: $color-grey-pale;
     padding: $baseline-unit*3 $baseline-unit;
     border-bottom: 1px solid $color-white;
+    clear: both;
 
     @include respond-to($mq-m) {
       border: 0;
       background-color: transparent;
       padding: 0;
+      clear: none;
 
       @include column(4);
-      float: right;
       margin-top: $baseline-unit*3;
       margin-bottom: $baseline-unit*3;
 

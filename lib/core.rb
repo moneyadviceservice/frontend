@@ -3,10 +3,12 @@ require 'registry'
 module Core
   module Connection
     autoload :Http, 'core/connection/http'
+    autoload :Smtp, 'core/connection/smtp'
   end
 
   module ConnectionFactory
     autoload :Http, 'core/connection_factory/http'
+    autoload :Smtp, 'core/connection_factory/smtp'
   end
 
   autoload :ActionPlan, 'core/entity/action_plan'

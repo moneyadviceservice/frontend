@@ -85,4 +85,10 @@ Rails.application.configure do
 
   # Configure active record session store.
   config.session_store :active_record_store
+
+  # Custom configuration options for feedback settings
+  config.feedback_delivery_method = :sendmail
+  config.raise_feedback_delivery_errors = true
+  config.article_feedback_email = 'foo@bar.com'
+  config.technical_feedback_email = 'foo@bar.com'
 end

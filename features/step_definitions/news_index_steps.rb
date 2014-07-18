@@ -38,7 +38,7 @@ Then(/^I see a list of news in (.*)$/) do |language|
   expect(news_page.title).to eq("#{I18n.t('news.index.title')} - #{I18n.t('layouts.base.title')}")
   expect(news_page.items_titles.first.text).to eq(news.first_item_title)
   expect(news_page.items_dates.first.text).to eq(news.first_item_date)
-  expect(news_page.items_intros.first.text).to eq(news.first_item_intro)
+  expect(news_page.items_descriptions.first.text).to eq(news.first_item_description)
   expect(news_page.footer_site_links.send("#{language_link}")[:href]).to include('page_number')
   expect(news_page.items_titles.size).to eq(10)
 end

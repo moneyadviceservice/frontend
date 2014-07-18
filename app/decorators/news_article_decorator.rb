@@ -1,6 +1,7 @@
 require 'html_processor'
 
 class NewsArticleDecorator < ContentItemDecorator
+  delegate :description
 
   def date(options={})
     h.l(object.date, format: options.fetch(:format, :short))

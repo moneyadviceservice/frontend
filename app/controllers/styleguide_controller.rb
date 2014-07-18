@@ -206,7 +206,7 @@ class StyleguideController < ApplicationController
     [{
       title: "Women are feeling the financial squeeze more than men",
       date: "10 Jun 2014",
-      intro: "Four in ten women feel financially worse off than they did a year ago, according to a new report from SavvyWoman."
+      description: "Four in ten women feel financially worse off than they did a year ago, according to a new report from SavvyWoman."
     }].map(&:to_ostruct)
   end
 

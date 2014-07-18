@@ -3,9 +3,7 @@ class NewsController < ApplicationController
   decorates_assigned :news, with: NewsDecorator
 
   def index
-    @news = Core::NewsReader.new(params).call do
-      not_found
-    end
+    @news = Core::NewsReader.new(params).call
 
     @breadcrumbs = BreadcrumbTrail.home
   end

@@ -42,34 +42,34 @@ Given(/^I read the news page$/) do
   step 'I visit the news page in English'
 end
 
-Then(/^I can see breadcrumbs for the article$/) do
+Then(/^I should see breadcrumbs for the article$/) do
   expect(article_page.breadcrumbs.text).to eq(current_article.context)
 end
 
-Then(/^I can see breadcrumbs for the action plan$/) do
+Then(/^I should see breadcrumbs for the action plan$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
 end
 
-Then(/^I can see breadcrumbs for the static page$/) do
+Then(/^I should see breadcrumbs for the static page$/) do
   expect(static_page.breadcrumbs.text).to eq('Home')
 end
 
-Then(/^I can see breadcrumbs for the news article$/) do
+Then(/^I should see breadcrumbs for the news article$/) do
   expect(news_article_page.breadcrumbs.text).to eq(current_news_article.context)
 end
 
-Then(/^I can see breadcrumbs for the category$/) do
+Then(/^I should see breadcrumbs for the category$/) do
   expect(category_page.breadcrumbs.text).to eq(current_category.context)
 end
 
-Then(/^I can see that the article appears in those categories$/) do
+Then(/^I should see that the article appears in those categories$/) do
   expect(article_page.breadcrumbs.text).to eq(current_article.context)
 end
 
-Then(/^I can see that the action plan appears in those categories$/) do
+Then(/^I should see that the action plan appears in those categories$/) do
   expect(action_plan_page.breadcrumbs.text).to eq(current_action_plan.context)
 end
 
-Then(/^I can see breadcrumbs for the news page$/) do
+Then(/^I should see breadcrumbs for the news page$/) do
   expect(news_page.breadcrumbs.text).to eq('Home')
 end

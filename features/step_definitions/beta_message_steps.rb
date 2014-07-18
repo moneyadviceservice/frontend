@@ -25,11 +25,11 @@ Then(/^I should not see the opt out bar$/) do
   expect(current_page).to have_no_opt_out_bar
 end
 
-Then(/^I can choose to dismiss the opt out bar$/) do
+Then(/^I should be able to dismiss the opt out bar$/) do
   expect(current_page.opt_out_bar).to have_dismiss_button
 end
 
-Then(/^I can choose to opt out of the beta$/) do
+Then(/^I should be able to opt out of the beta$/) do
   expect(current_page.opt_out_bar).to have_opt_out_button
   step 'I should see the opt out footer button'
 end

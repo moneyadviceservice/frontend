@@ -5,7 +5,7 @@
   }
 
   > img {
-    width: 192px;
+    width: 180px;
     @include respond-to($mq-m) {
       width: 256px;
     }

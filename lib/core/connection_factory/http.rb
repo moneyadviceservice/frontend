@@ -19,7 +19,7 @@ module Core
           faraday.adapter Faraday.default_adapter
         end
 
-        Connection.new(connection)
+        Core::Connection::Http.new(connection)
       end
     end
   end

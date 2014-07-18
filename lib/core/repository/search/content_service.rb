@@ -22,7 +22,7 @@ module Core::Repository
             :type        => result_data['type']
           }
         end
-      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+      rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
         raise RequestError, 'Unable to fetch Search Results JSON from Content Service'
       end
 

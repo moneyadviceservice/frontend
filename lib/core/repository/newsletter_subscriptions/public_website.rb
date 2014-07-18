@@ -11,10 +11,10 @@ module Core::Repository
         connection.post('/%{locale}/newsletter-subscriptions.json' % { locale: I18n.locale }, params)
         true
 
-      rescue Core::Connection::UnprocessableEntity
+      rescue Core::Connection::Http::UnprocessableEntity
         false
 
-      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+      rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
         raise RequestError, 'Unable to create newsletter subscription on Public Website'
       end
 

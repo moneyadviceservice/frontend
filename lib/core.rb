@@ -1,7 +1,9 @@
 require 'registry'
 
 module Core
-  autoload :Connection, 'core/connection'
+  module Connection
+    autoload :Http, 'core/connection/http'
+  end
 
   module ConnectionFactory
     autoload :Http, 'core/connection_factory/http'

@@ -21,9 +21,9 @@ module Core::Repository
 
         attributes
 
-      rescue Core::Connection::ResourceNotFound
+      rescue Core::Connection::Http::ResourceNotFound
         nil
-      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+      rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
         raise RequestError, 'Unable to fetch StaticPage JSON from Public Website'
       end
 

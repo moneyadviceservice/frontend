@@ -1,7 +1,7 @@
 module Core::Repository::News
   RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
-    let(:connection) { Core::ConnectionFactory.build(url) }
+    let(:connection) { Core::ConnectionFactory::Http.build(url) }
 
     before do
       allow(Core::Registry::Connection).to receive(:[]).with(:public_website) { connection }
@@ -15,7 +15,7 @@ module Core::Repository::News
 
       before do
         allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory.build(url)
+          Core::ConnectionFactory::Http.build(url)
         end
 
         stub_request(:get, "https://example.com/en/news/#{id}.json")

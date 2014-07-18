@@ -2,7 +2,10 @@ require 'registry'
 
 module Core
   autoload :Connection, 'core/connection'
-  autoload :ConnectionFactory, 'core/connection_factory'
+
+  module ConnectionFactory
+    autoload :Http, 'core/connection_factory/http'
+  end
 
   autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'

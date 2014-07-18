@@ -6,7 +6,7 @@ RSpec.describe Core::Repository::Search::ContentService do
   let(:event_name) { 'request.content-service.search' }
 
   before do
-    connection = Core::ConnectionFactory.build(url)
+    connection = Core::ConnectionFactory::Http.build(url)
     connection.builder.delete(FaradayMiddleware::Instrumentation)
 
     allow(Core::Registry::Connection).to receive(:[]).with(:content_service) { connection }

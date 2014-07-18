@@ -4,7 +4,7 @@ RSpec.describe Core::Repository::Categories::PublicWebsite do
 
   before do
     allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-      Core::ConnectionFactory.build(url)
+      Core::ConnectionFactory::Http.build(url)
     end
   end
 

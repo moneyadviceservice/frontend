@@ -1,4 +1,4 @@
-RSpec.describe Core::ConnectionFactory, '.build' do
+RSpec.describe Core::ConnectionFactory::Http, '.build' do
   subject(:factory) { described_class.build('http://example.com') }
 
   it "manufactures a `Core::Connection'" do

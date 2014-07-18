@@ -3,8 +3,8 @@ require 'core'
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
 
-google_api_connection     = Core::ConnectionFactory.build('https://www.googleapis.com/')
-public_website_connection = Core::ConnectionFactory.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
+google_api_connection     = Core::ConnectionFactory::Http.build('https://www.googleapis.com/')
+public_website_connection = Core::ConnectionFactory::Http.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
 
 public_website_connection.builder.insert_after(Faraday::Request::RequestId,
                                                Faraday::Request::HostHeader)

@@ -4,7 +4,7 @@ task :sitemap => :environment do
   require 'core/connection_factory'
   require 'csv'
 
-  connection = Core::ConnectionFactory.build('https://www.moneyadviceservice.org.uk')
+  connection = Core::ConnectionFactory::Http.build('https://www.moneyadviceservice.org.uk')
   categories = connection.get('/en/categories.json').body
 
   CSV.open('tmp/sitemap.csv', 'wb') do |csv|

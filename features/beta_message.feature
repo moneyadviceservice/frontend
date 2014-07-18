@@ -8,8 +8,8 @@ Feature: Beta Message interaction
     When I visit the website
     Then I should see the opt out bar
     And I should see the opt out footer button
-    And I can choose to dismiss the opt out bar
-    And I can choose to opt out of the beta
+    And I should be able to dismiss the opt out bar
+    And I should be able to opt out of the beta
 
   Scenario: Visiting the website and seeing the opt out bar and footer link on subsequent requests
     Given I have not previously dismissed the opt out bar or opted out of the beta

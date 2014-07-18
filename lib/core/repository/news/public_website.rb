@@ -26,8 +26,9 @@ module Core::Repository
         raise RequestError, 'Unable to fetch News JSON from Public Website'
       end
 
-      def all(page=1)
-        response = connection.get('/%{locale}/news.json?page_number=%{page}' % {locale: I18n.locale, page: page})
+      def all(options = {})
+        response = connection.get('/%{locale}/news.json?page_number=%{page}&limit=%{limit}' %
+                                  { locale: I18n.locale, page: options[:page], limit: options[:limit]})
         response.body
       rescue
         raise RequestError, 'Unable to fetch News JSON from Public Website'

@@ -1,0 +1,761 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?limit=10&page_number=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 98796d3f-5d23-417b-b00f-1c9995bfbc7d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Jul 2014 09:44:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 9cd4dbd1ee9eaf9b3d443cff2d43a35c
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 18-Jul-2015 09:44:31 GMT; secure
+      - _session_id=9cd4dbd1ee9eaf9b3d443cff2d43a35c; path=/; secure; HttpOnly
+      - _web_tracking=2239dcdd7f428b5f18ddfb886d31a3b9; path=/; expires=Sat, 18-Jul-2015
+        09:44:31 GMT; secure
+      X-Request-Id:
+      - 98796d3f-5d23-417b-b00f-1c9995bfbc7d
+      X-Runtime:
+      - '0.252201'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"how-haggling-when-buying-a-second-hand-car-can-pay-dividends","title":"How
+        haggling when buying a second-hand car can pay dividends","description":"Haggling
+        over a used car? Six out of ten owners said their wallets preferred it","body":"<p
+        class=\"intro\"> Haggling over the price you''re being asked to pay might
+        not seem like a very British thing to do. But it seems when it comes to buying
+        a second-hand car most of us aren\u2019t afraid to try to beat down a price
+        to get the best deal. </p><p>New research by the Money Advice Service into
+        buying a used car shows eight out of 10 of people who bought a car in the
+        past year tried to negotiate a discount when buying. </p><p>And more than
+        six in 10 people got some money off the price - men fared slightly better
+        than women, with 67% bagging a discount compared to 60%. </p><p>If you\u2019re
+        new to the art of haggling, don\u2019t be daunted. Use our advice to get the
+        best price for your next car. </p><h2>Know your Saab from your Seat </h2><p>If
+        you don\u2019t know which car you are after do your research. Start looking
+        at cars on the road, at your local car dealers, and in car magazines and motoring
+        websites. </p><p>Even if you are after a particular model, set yourself a
+        budget for what you can afford to pay. Don''t forget to look at running costs.
+        </p><p>Visit our <a title=\"Car costs calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        costs calculator</a> to discover the cost of owning the sort of cars you''re
+        thinking of buying. </p><p>If you''re not sure which car you can afford, read
+        our guide <a title=\"How to find the right car for your budget\" target=\"_blank\"
+        href=\"http://www.moneyadviceservice.org.uk/en/articles/how-to-find-the-right-car-for-your-budget\">How
+        to find the right car for your budget</a>. </p><p>When you have found the
+        model you\u2019re after, check online for rival dealers in your area to see
+        if any of them are offering deals on the same car. This can be a good bargaining
+        tool. </p><p>If you\u2019re part-exchanging your current car, make sure you
+        know what it\u2019s worth so you get the best price for it to put towards
+        your new purchase. You''ll probably get more for it if you sell it privately
+        but it can take you more time and effort. </p><p>Before you do anything, find
+        out the value of your car. Sites such as <a title=\"Glasss\" target=\"_blank\"
+        href=\"http://www.glass.co.uk/\">Glass\u2019s Guide</a> and <a title=\"Parkers\"
+        target=\"_blank\" href=\"http://www.parkers.co.uk/\">Parkers</a> have car
+        valuation tools. </p><h3>Tell Ma tips - Advice from members of our online
+        community: </h3><p><em>\"Best time to buy is last day of the month - or last
+        day of the quarter is even better. I''ve walked out of a showroom at 3pm only
+        to be phoned back by the dealer at 5pm with the deal that I want as they have
+        bonuses to make. Know how the industry works and get a deal.\"</em></p><h2>Seal
+        the deal with a garage </h2><p>If you are negotiating with a dealer, be friendly
+        and polite, but never let the salesperson know your maximum limit. </p><p>If
+        you\u2019re a cash buyer, don\u2019t tell the salesperson this straight away.
+        </p><p>Dealers make bigger profits on finance deals, so let them negotiate
+        the car\u2019s price on that basis. You can then decline the finance deal
+        later in the process. </p><p>Start off by stating an amount lower than you\u2019re
+        actually prepared to pay \u2013 you can then gradually increase it if necessary.
+        Try to avoid raising your price by far more than the dealer is dropping his
+        price. </p><p>When you make an offer, don\u2019t speak again until the salesperson
+        replies. </p><p>It also pays to be positive about your aims: for example,
+        don\u2019t say <em>\u201ccan I have a discount?\u201d</em>, but instead say
+        <em>\u201chow much discount can I have?\u201d</em></p><p>If you are struggling
+        to get a discount but really want the car, offer to buy the car there and
+        then. A quick sale may help you agree a price. </p><p>And don\u2019t be afraid
+        to walk out if the dealer won\u2019t negotiate \u2013 there are plenty more
+        fish in the sea when it comes to used cars. </p><p>For more haggling tips,
+        read our guide <a title=\"How to negotiate when buying a car\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-negotiate-when-buying-a-car\">How
+        to negotiate when buying a car</a>. </p><h3>Tell Ma tips - Advice from members
+        of our online community: </h3><p><em>\"We never buy a car in the first showroom
+        and instead look at several models at several showrooms and then play one
+        off against the other - garage A will do a xxx at \u00a3xx with xx months
+        road tax thrown in for example.\"</em></p><h2>It\u2019s a private matter </h2><p>Buying
+        a used car privately can be risky because if there are problems afterwards
+        you have less legal comeback than you have with a dealer. </p><p>But you have
+        more bargaining tools at your disposal. </p><p>The seller may have already
+        bought their next car and need to offload their old one. So it might be worth
+        asking some gentle questions about why they are selling. Or, they may have
+        seen the perfect car for them and need to free up some cash. </p><p>When buying
+        a used car you\u2019ll need to decide whether you want to take the chance
+        of unexpected repair bills, although you can always pay an expert to inspect
+        the car before buying. Companies such as the AA and RAC offer this type of
+        service. Any faults or even chips and dents on the bodywork could be used
+        to bring down the price. </p><p>Visit our guide for <a title=\"Theres more
+        to buying a car than the upfront cost\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/news/dont-be-caught-out-when-buying-a-used-car\">more
+        information on the true cost of buying and running a car</a>. </p><p>If you
+        aren''t using savings to pay for your next car, there are a variety of options
+        available. Visit our guide <a title=\"Car finance explained\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/car-finance-explained\">Car
+        finance explained</a> to understand the different pros and cons. </p><h3>See
+        our infographic for more on the benefits of haggling </h3><p><img alt=\" \"
+        src=\"/images/sealing_the_deal_on_a_used_car.jpg\"/></p>","date":"2014-07-10T08:49:30+00:00"},{"id":"avoiding-bumps-in-the-road-five-second-hand-car-buying-tips","title":"Avoiding
+        bumps in the road - five second-hand car buying tips","description":"Buying
+        a car is an exciting time. You''re making one of the biggest purchases in
+        your life so make sure you have a realistic budget","body":"<p class=\"intro\">
+        Buying a car is an exciting time. You''re making one of the biggest purchases
+        in your life so make sure you have a realistic budget. </p><p> Here are our
+        five top tips when carrying out research and doing your checks before <a title=\"How
+        to buy a car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/categories/how-to-buy-a-car\">buying
+        a car</a>. </p><h2>1) Have a realistic budget </h2><p>Before you do anything
+        else, you must work out how much you have to spend on a car. Don\u2019t let
+        your heart rule your head. </p><p>Look beyond the basic purchase price, an
+        d monthly finance repayments if you''re planning to borrow, and consider running
+        costs. Fuel, road tax, maintenance, breakdown cover and insurance all add
+        up to give you a total cost which can be as much as \u00a33,500 a year. </p><p><a
+        title=\"Car costs calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Get
+        an overall picture of how much it costs to run a used car for a year</a>.
+        All you need is the registration number of the car you want to buy to get
+        started. </p><p>Use our simple <a title=\"Budget planner\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">Budget
+        planner</a> to work out how much you can afford to spend buying a car. </p><p>Use
+        our <a title=\"Cut-back calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator\">Cut-back
+        calculator</a> to discover how much you could start saving towards your new
+        car. </p><h2>2) Choose the right car for you </h2><p>Once you''ve worked out
+        your budget, it''s time to see what you can get for your money. Here there
+        are more decisions to make, such as whether you''re going to buy new or used,
+        and will it be petrol, diesel, hybrid or electric? </p><p>Do your research
+        and find out about reliability, safety and values. Get recommendations from
+        friends and family and look at car websites such as <a title=\"WhatCar?\"
+        target=\"_blank\" href=\"http://www.whatcar.com/\">WhatCar?</a> and <a title=\"Which?
+        Car\" target=\"_blank\" href=\"http://www.which.co.uk/cars/\">Which?</a> for
+        advice on which cars to buy. </p><p>Also consider depreciation (the difference
+        between a car\u2019s value when you buy it and when you come to sell it) and
+        a car''s tax band. Broadly speaking, the lower the band the less you pay in
+        road tax , insurance and fuel. </p><p>Use our <a title=\"Car costs calculator\"
+        target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        costs calculator</a> to find out how much your used car will depreciate \u2013
+        all you need is the registration number of the car you\u2019re thinking of
+        buying. </p><h2>3) Buy at the right time </h2><p>Getting a good deal on a
+        used car can also depend on the time of year you buy it. Make sure you take
+        advantage of seasonal factors that affect the car trade. </p><p>For instance,
+        March and September are the peak months for sales of new cars, often through
+        part-exchange deals. So dealers will have lots of used cars to sell, which
+        puts you in a strong position when negotiating. </p><p><a title=\"When to
+        buy a car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/when-to-buy-a-car\">More
+        tips on when to buy a car</a></p><h2>4) Check it out </h2><p>Carry out checks
+        before handing over your hard-earned cash on a used car. </p><p>Many cars
+        have hidden histories so start by carrying out a history check to discover
+        who owns the car or whether it''s the subject of an outstanding finance agreement.
+        It will also tell you whether it''s been an insurance write-off or has any
+        or mileage inconsistencies. </p><p>The following are some of the organisations
+        that provide this service: </p><ul><li><a title=\"HPI Limited\" target=\"_blank\"
+        href=\"https://www.hpicheck.com/\">HPI Limited</a></li><li><a title=\"The
+        AA\" target=\"_blank\" href=\"http://www.theaa.com/car-data-checks/index.html\">AA</a></li><li><a
+        title=\"RAC\" target=\"_blank\" href=\"http://www.rac.co.uk/buying-a-car/rac-car-data-check/\">RAC</a></li><li><a
+        title=\"WhatCar?\" target=\"_blank\" href=\"http://www.whatcar.com/\">WhatCar?</a></li><li><a
+        title=\"Experian AutoCheck\" target=\"_blank\" href=\"http://www.autocheck.co.uk\">Experian
+        AutoCheck</a></li></ul><p>A clean bill of health when it comes to a car''s
+        history is one thing, but how does it drive? </p><p>Read our <a title=\"How
+        to test drive and check a used car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-test-drive-and-check-a-used-car\">top
+        tips for test driving a used car</a> - they cover everything from checking
+        the car\u2019s exterior and interior, to testing the engine, steering, clutch,
+        brakes and suspension. </p><p>You may also want to consider paying an independent
+        vehicle inspector to check the car as well. The AA, the RAC and a number of
+        other companies provide such services. </p><h2>5) Negotiate the price </h2><p>For
+        many, the hardest part of the car-buying process is negotiating, or haggling,
+        with the seller. Whether it''s a dealer or private seller, you''re going to
+        have to shake on a deal. Read our <a title=\"How to negotiate when buying
+        a car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-negotiate-when-buying-a-car\">top
+        tips for negotiating the price of a used car</a>. </p><p>But before discussing
+        the price, make sure you know your budget, you''ve researched the value of
+        the car by looking at similar ones for sale on websites and in classified
+        ads, or by looking at car valuation guides in magazines and websites such
+        as WhatCar? and Auto Trader. </p>","date":"2014-07-09T16:42:18+00:00"},{"id":"buying-a-used-car-when-to-walk-away","title":"Buying
+        a used car - when to walk away","description":"The right information will
+        help you spot rogue traders.","body":"<p> Buying privately from the owner
+        is generally the cheapest way to buy a used car, but it''s also the riskiest.
+        </p><p>However, if you''re armed with the right information it will help you
+        spot scams and rogue traders. Ultimately, if you sense something is wrong,
+        simply walk away. Here\u2019s some clues to possibly dodgy practices. </p><h2>Private
+        adverts </h2><p>When you phone the number advertised, always ask: \"Is the
+        car still for sale?\" You should be suspicious if the reply is: \"Which one?\"
+        A rogue seller may have more than one car for sale. </p><h2>Meeting place
+        </h2><p>Always arrange to meet at the seller''s home. Sometimes a seller might
+        suggest meeting halfway, at a motorway service station for instance, so you
+        can view the car. </p><p>It may seem like a kind gesture, but beware, this
+        is a common ruse used by criminals selling stolen or cloned vehicles. If you\u2019re
+        buying privately, you should always view the car at the registered keeper\u2019s
+        address, as detailed on the V5 (log book). </p><p>Never buy a car in a service
+        station or pub car park. To find out how to test drive and check a used car
+        go to our guide on <a title=\"How to test drive and check a used car\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-test-drive-and-check-a-used-car\">How
+        to test drive and check a used car</a>. </p><h2>Documents check </h2><p>At
+        the very least, a used car should come with a V5 document (log book) and a
+        valid MOT. Also check that the V5C has a watermark and there are no spelling
+        mistakes or alterations. </p><p>The name and address on the V5C should match
+        the seller''s (if in doubt, ask to see the seller''s driving licence) and
+        check the the VIN (chassis number) on the V5C matches the VIN number on the
+        car. </p><p>The VIN number can be found in various places, but it is often
+        embossed on a metal plate in the engine bay or on the body of the car - sometimes
+        around a door. Be suspicious if the plate looks damaged or has been tampered
+        with. </p><p>The VIN should also be engraved at the base of the windscreen
+        on the passenger\u2019s side. The car also must have an MOT to demonstrate
+        that it''s roadworthy. A sign of a good used car is when it comes with previous
+        MOT documents. It\u2019s even better if I has a service history too. </p><h2>Genuine
+        mileage? </h2><p>If the car has no service history or previous MOTs it''s
+        difficult to check its mileage there and then. However, there are still a
+        few signs to look out for. </p><p>For instance, the mileage is low, but the
+        wear and tear looks heavy or maybe the steering wheel and gear knob look newer
+        than the rest of the car, suggesting they have been changed for the sale.
+        Also, if the milometer is analogue (not digital), check to see if the numbers
+        are out of line. </p><p>Back home, if you have the V5C registration certificate,
+        number plate and MOT test number, you can check free via the <a title=\"Check
+        MOT history vehicle\" target=\"_blank\" href=\"https://www.gov.uk/check-mot-history-vehicle\">Driver
+        and Vehicle Standards Agency</a> (DVSA). </p><h2>The price is right </h2><p>If
+        you''ve done your research and the asking price is so low it''s too good to
+        be true, then it probably is. The car may well have a hidden history, be stolen
+        or it does not belong to the person selling it. </p><p>Use our <a title=\"car
+        cost calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        costs calculator</a> to find out how much your dream car will cost to run.
+        </p><h2>Independent inspection </h2><p>Various motoring organisations, such
+        as the RAC and Green Flag, carry out vehicle inspections for a fee to give
+        you a little extra peace of mind. If the seller refuses to allow an independent
+        inspection, then they''ve probably got something to hide. </p>","date":"2014-07-09T15:53:28+00:00"},{"id":"keep-on-running-six-ways-to-save-on-car-maintenance","title":"Keep
+        on running \u2013 six ways to save on car maintenance","description":"Paying
+        to maintain your car can be expensive. Find out how to cut down your maintenance
+        bills.","body":"<p class=\"intro\"> One of the best ways to cut down on the
+        cost of running a car is to make sure that it needs as little repair work
+        as possible. </p><p>However, one in three motorists lack the basic knowledge
+        to keep their car maintained, despite nearly 59% feeling such maintenance
+        is essential, according to a survey for Auto Trader. </p><p>With care and
+        attention, shopping around and planning, it''s possible to cut your costs.
+        A 2013 survey by Trust My Garage, the national independent garage scheme,
+        found that 64% of car owners have had to find up to \u00a3500 for unexpected
+        car repair bills. Over a fifth had to pay more than \u00a3500, whilst 10%
+        of motorists had to shell out more than \u00a31,000. </p><h2>1) Save money
+        on servicing </h2><p>Big savings can be made on your car''s annual service
+        by going to a local independent garage instead of main dealers. According
+        to the Independent Garage Association, a visit to an independent garage costs
+        \u00a340 an hour less on average than a franchise dealer. </p><p>If you''re
+        trying a garage for the first time, get a quote, ask for a list with prices
+        and compare prices locally. </p><p>Also consider chains such as Halfords Autocentre
+        which offers full services from \u00a3134 and claims to be up to 40% less
+        than main dealers when booked online. </p><p>You can find recommended garages
+        at <a title=\"MotorCodes\" target=\"_blank\" href=\"http://www.motorcodes.co.uk/\">MotorCodes</a>
+        and <a title=\"Trust My Garage\" target=\"_blank\" href=\"http://www.trustmygarage.co.uk/\">Trust
+        My Garage</a></p><h2>2) Don''t forget basic checks </h2><ul><li>Check the
+        tyres regularly. Running them at the right pressure not only saves fuel, but
+        makes them last longer. Tyres that are over or under pressure wear unevenly
+        and will need to be replaced sooner. Check the tracking regularly too as wheels
+        that are out of alignment wear unevenly.</li><li>Consider ordering your tyres
+        online. Some companies will fit them at your home, others have a network of
+        trusted fitters.</li><li>Avoid possible nasty repair bills by keeping your
+        oil, coolant and brake fluid levels topped up.</li><li>According to the AA,
+        flat batteries are their most common call-out, many failing after only a few
+        years because they are not fully charged. Modern batteries need the odd long
+        journey to fully charge. The AA estimates 240 miles of driving with no load
+        or eight hours of continuous driving. Alternatively, using a battery trickle
+        charger occasionally might extend your car battery''s life.</li></ul><h2>3)
+        Get a cut-price MOT </h2><p>Companies can only charge up to the official maximum
+        of \u00a354.85 for an MOT but a quick search online will turn up many garages
+        which will test your car for as much as half the price. You may also be able
+        to get a discount using online vouchers and getting your MOT done at the same
+        time as a service. </p><p>You can also get an MOT done at a local council
+        test centre. They don\u2019t normally carry out repairs as well as MOTs which
+        means they are impartial when inspecting your car. </p><p>For a list of local
+        council MOT test centres that don\u2019t carry our repairs, visit the <a title=\"UKMOT
+        website\" target=\"_blank\" href=\"http://www.ukmot.com/MOT%20test/Council%20MOT%20Test%20Centers.asp\">UKMOT
+        website</a>. </p><p>Find out about more <a title=\"MOT explained\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/mot-test-explained\">MOT
+        savings</a></p><h2>4) Cut the cost of repairs </h2><p>Compare quotes from
+        garages and ask them for an itemised list of parts and labour. You are now
+        equipped with all the information you need to go to online or visit your local
+        auto recycling company to see if you can source the parts cheaper yourself.
+        However, before buying anything, make sure the garage you have chosen will
+        fit your parts. </p><h2>5) Learn how to do it yourself </h2><p>Ask friends
+        and family or go on a basic car maintenance course so that you''re able to
+        carry out ongoing checks and maybe even the odd repair yourself. With labour
+        costs in garages upwards of \u00a340 per hour, learning how to change windscreen
+        wipers, bulbs or even brake pads could save you hundreds of pounds. </p><h2>6)
+        Be prepared </h2><p>Whether you''re buying a new car or just want to check
+        on the one you already own, our <a title=\"Car cost calculator\" target=\"_blank\"
+        href=\"http://www.moneyadviceservice.org.uk/car-costs-calculator\">Car costs
+        calculator</a> will give you an idea of potential servicing costs. </p><p>Once
+        you know what you could be facing, <a title=\"Setting a savings goal\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal\">setting
+        a saving goal</a> will help you be prepared. </p>","date":"2014-07-09T15:52:52+00:00"},{"id":"steer-clear-of-used-cars-with-a-hidden-history","title":"Steer
+        clear of used cars with a hidden history","description":"Buying a used car
+        is risky, especially if you''re purchasing privately. Uncover its secrets
+        by getting a history check","body":"<p class=\"intro\"> Buying a used car
+        is risky, especially if you''re purchasing privately. As many as one in three
+        used cars has a dodgy past. </p><p> You can uncover its secrets by having
+        a history check which will verify details including ownership, make, model,
+        whether it''s been stolen, written off by the insurer and confirm its VIN
+        (chassis number). </p><p><a title=\"Buying a selling a car\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/categories/cars-and-travel\">Read
+        our complete guide to buying and selling a car</a></p><h2>Car ownership </h2><p>Hundreds
+        of cars are stolen in the UK every day, a large number of which are sold on
+        to unsuspecting buyers. A car history check will tell you if the vehicle has
+        been stolen. </p><p>It will also reveal whether the car has been ''cloned''
+        which is when criminals disguise the identity of a stolen vehicle with that
+        of a legitimate one using fake documents. </p><h2>Outstanding finance </h2><p>One
+        in four vehicles checked by vehicle information company HPI is still subject
+        to an outstanding finance agreement. A check will determine whether the car
+        is still on a finance deal and therefore still owned by a finance company.
+        </p><p>Remember, the registered keeper of the vehicle (the name on the V5
+        registration certificate) is not necessarily the owner of the vehicle or the
+        person who is paying for it. Anyone trying to sell a car that has finance
+        outstanding is breaking the law - even if they had no knowledge of the agreement,
+        as they are not the legal owner of the vehicle. </p><h2>Insurance write-off
+        </h2><p>According to vehicle information service, AutoCheck, 13% of used cars
+        have previously been written off. When a vehicle is written off it is placed
+        into an industry recognised damage classification, depending on its condition.
+        </p><p>Category A or B write-offs are vehicles that should be crushed and
+        never returned to the road for safety reasons. Category C and D vehicles can
+        go back on the road, but buyers must be sure that they are roadworthy before
+        they drive them. A car history check will tell you whether a car has been
+        written off and which category it\u2019s been given. </p><h2>Suspect mileage
+        </h2><p>''Clocking'' a vehicle to alter its mileage can add thousands of pounds
+        to the value of a car. A car history check should also produce mileage data.
+        If the seller has old MOT certificates, you can also check the mileage section
+        of them. If you''re still suspicious, you can even contact previous owners
+        named on the V5 registration certificate. </p><p>You can also <a title=\"Discover
+        a vehicles full MOT and mileage history since 2005\" target=\"_blank\" href=\"http://www.gov.uk/check-mot-history-vehicle\">discover
+        a vehicle''s full MOT and mileage history since 2005 for free</a>. </p><p>Our
+        <a title=\"Car costs calculator\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/car-costs-calculator\">Car
+        costs calculator</a> is also able to tell you whether a car has been reported
+        as scrapped, imported from elsewhere or exported. </p><p>Or you can <a title=\"Vehicle
+        Identity Check (VIC)\" target=\"_blank\" href=\"https://www.gov.uk/vehicle-identity-check/check-if-a-car-has-a-vic-marker\">go
+        straight to the DVLA for a Vehicle Identity Check (VIC)</a></p><p>The following
+        are some of the organisations that provide the full car history check service:
+        </p><p><a title=\"HPI Limited\" target=\"_blank\" href=\"https://www.hpicheck.com/\">HPI
+        Limited</a></p><p><a title=\"The AA\" target=\"_blank\" href=\"http://www.theaa.com/car-data-checks/index.html\">AA</a></p><p><a
+        title=\"RAC\" target=\"_blank\" href=\"http://www.rac.co.uk/buying-a-car/rac-car-data-check/\">RAC</a></p><p><a
+        title=\"WhatCar?\" target=\"_blank\" href=\"https://www.whatcarhistorycheck.com/\">WhatCar?</a></p><p><a
+        title=\"Experian AutoCheck\" target=\"_blank\" href=\"https://www.autocheck.co.uk/\">Experian
+        AutoCheck</a></p>","date":"2014-07-09T15:51:50+00:00"},{"id":"young-drivers-six-ways-to-cut-insurance","title":"Young
+        drivers - six ways to cut insurance","description":"Car insurance is expensive
+        enough for experienced motorists, but it''s often prohibitive for young drivers.
+        Read our tips for getting the best deals","body":"<p class=\"intro\">The cost
+        of car insurance is expensive enough for experienced motorists, but it''s
+        often prohibitive for young drivers aged 17-25. </p><p> There are almost three
+        million drivers under 25 on UK roads paying an average of nearly \u00a32,000
+        in insurance each year, according to the Association of British Insurers (ABI).
+        Costs are set to rise as experts predict car insurance premiums will go up
+        by as much as 15% in 2014/15. </p><p>Read our top tips for getting the best
+        young person\u2019s insurance deal\u2026 </p><h2>1) Choose a car in a low
+        insurance group </h2><p>Cars are divided into 50 insurance groups according
+        to various factors including their engine size and the likely cost of repairs.
+        The higher the insurance group, the higher the premium. So if you are a young
+        driver, it pays to check a car''s insurance rating before committing to buy
+        it. </p><p>Generally speaking, insurance groups 1-2 are packed with small
+        city cars such as the Hyundai i10, Skoda Citigo, Nissan Pixo, Vauxhall Corsa,
+        Dacia Sandero and Volkwagen Up! </p><p>Insurance group 3 cars includes more
+        common everyday cars such as the Ford Fiesta, Citroen C1, Toyota Aygo, Vauxhall
+        Adam and Skoda Fabia. </p><p>The same applies for used cars, which are more
+        likely targets for young drivers. Popular used car buys include the Vauxhall
+        Corsa, Citroen Saxo, Ford Ka and Reanult Clio. </p><h2>2) Pick a suitable
+        level of cover </h2><p>Although by law you must have car insurance, there
+        are three different levels of cover: </p><ul><li>third party</li><li>third
+        party, fire and theft</li><li>comprehensive</li></ul><p>Broadly speaking,
+        if you''d struggle to replace your car if it was written off in an accident,
+        it''s best to go for fully comprehensive insurance, but if you''re driving
+        a car that''s worth \u00a31,000 or less, third party insurance might be a
+        good option. However, fully comprehensive cover can cost less than third party,
+        so it''s always worth comparing prices. </p><p>Third party is the minimum
+        cover you can legally have and it covers other people (third parties), but
+        not you. If you injure someone or damage their property, they\u2019re covered
+        but if your own car is damaged or stolen, you have to pay for the loss yourself.
+        </p><p>Third party, fire and theft cover is similar to third party in that
+        it covers other people so if your own car is damaged, you have to pay for
+        it yourself. The difference is that it does cover repairs or replacement if
+        your car is stolen or damaged by fire. </p><p>Fully comprehensive is the highest
+        level of cover - it\u2019s the only type that covers you if you damage your
+        own car, even if the accident was your fault. </p><h2>3) Drive carefully and
+        safely </h2><p>Prove you are low-risk by driving safely and having no accidents,
+        not making claims and not incurring any penalty points on your licence in
+        your first years of driving. </p><p>These will all have an impact on your
+        premium when you come to renew your insurance. </p><p>However, careful young
+        drivers still end up getting penalised for the accidents and bad driving of
+        some of their peers. </p><p>This is where black box or telematics insurance
+        schemes are worth considering. Aimed at drivers under 25, the schemes involve
+        fitting a \"black box\" to a car which records how you drive. It can save
+        young drivers as much as \u00a3800 a year on premiums. </p><p>The black box
+        records builds up a picture of a driver''s behaviour at the wheel, recording
+        the time of day, mileage, acceleration, braking and cornering. </p><h2>4)
+        Build up your No -Claims Bonus </h2><p>It''s worth remembering that every
+        claim-free year that passes, you build up a year\u2019s no-claims bonus (NCB)
+        which gives you a discount on your following year''s premium. </p><p>Once
+        you''ve built up five claim-free years\u2019 driving, the discount could be
+        worth as much as 70% off the cost of your cover. </p><p>There may also be
+        another way to build up your no-claims bonus in less time. Some insurers offer
+        a \"bonus accelerator\" policy. It runs for 10 months and providing you have
+        been claim free, you will earn a full year''s no claims bonus. In theory,
+        you could build up three years'' NCB in 2.5 years. However, not all insurers
+        accept an accelerated NCB so you should check if you''re planning to switch
+        company. </p><p>Finally, consider adding an older named driver, such as a
+        parent, to bring down the cost. However, this person can\u2019t pretend to
+        be the main driver \u2013 this is called ''fronting'' and is illegal. </p><h2>5)
+        Get extra driving qualifications </h2><p>You could earn a reduction on your
+        car premium by improving your driving skills. However, before signing up for
+        any advanced driving course, it''s best to check with your insurer to make
+        sure a discount is available. </p><p>The Driver and Vehicle Standards Agency
+        (DVSA) Pass Plus course is a practical training course that takes at l east
+        six hours and is aimed at newly qualified drivers and covers driving on all
+        types of road, all weathers and at night. You can find more information at
+        <a target=\"_blank\" href=\"https://www.gov.uk/pass-plus/overview\">gov.uk/pass-plus/overview</a></p><p>The
+        Institute of Advanced Motorists and RoSPA also offer advanced driving skills
+        courses. </p><h3>6) Shop around for the best deal </h3><p>Use a comparison
+        site or get on the phone to compare quotes from different insurers. The more
+        time you put in, the more likely you are to get better cover and a cheaper
+        price. </p><p>Finally, <a title=\"Find a broker\" target=\"_blank\" href=\"http://www.biba.org.uk/ConsumerHome.aspx\">find
+        a broker on the British Insurers Brokers'' Association (BIBA) website</a>
+        to see if they can beat your quote, or call them on 0870 950 1790. </p><p>Or
+        <a title=\"Money Saving Expert\" target=\"_blank\" href=\"http://www.moneysavingexpert.com/car-insurance/young-drivers#step2\">follow
+        the advice of MoneySavingExpert on comparison sites</a> (now owned by MoneySupermarket)
+        </p><p>Also, Google \u2018specialist car insurers 17 to 25\u2019 to find deals
+        not on comparison sites. </p><p>You can also learn more about <a title=\"What
+        makes a good car insurance policy\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/a-good-car-insurance-policy\">What
+        makes a good car insurance policy</a>.\u00a0 </p>","date":"2014-07-09T15:44:20+00:00"},{"id":"five-used-car-buying-myths","title":"Five
+        used car buying myths","description":"More than five million of us do it every
+        year, yet buying a used car can be a minefield. Here are five used car buying
+        myths to watch out for","body":"<p class=\"intro\"> More than five million
+        of us do it every year, yet buying a used car can be a minefield. </p><p>Getting
+        good advice from friends and family is important, but they may not always
+        be right - common misconceptions can lead to costly mistakes. Here are five
+        used car buying myths to watch out for... </p><h2>Myth 1 </h2><p><strong>The
+        car is mine once I''ve paid for it and the paperwork has been exchanged.</strong></p><p>Not
+        quite. A registration document (V5), or logbook, is not proof of ownership.
+        The V5 only shows the registered keeper of the vehicle - not necessarily the
+        owner of the vehicle or the person who is paying for it. </p><p>For instance,
+        if you are buying your car on a finance deal such as PCP (Personal Contract
+        Purchase) or HP, the car belongs to the finance company until you have made
+        the final payment. </p><p>Before buying a used car, <a title=\"How to test
+        drive and check a used car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-test-drive-and-check-a-used-car\">consider
+        having an HPI check</a> to determine who owns the car. </p><h2>Myth 2 </h2><p><strong>It\u2019s
+        illegal to sell a car that\u2019s been a write-off - it must be scrapped and
+        never driven again.</strong></p><p>Wrong. Any vehicle that has been declared
+        a total loss (often referred to as \u201ca write-off\u201d) by an insurance
+        company will be because the insurer believes it\u2019s uneconomical to repair.
+        </p><p>When the vehicle is written off, it is given a damage classification,
+        depending on its condition. A or B category write-offs are vehicles that should
+        be crushed and never returned to the road for safety reasons. Category C and
+        D vehicles can be repaired, but buyers must be sure that they are roadworthy.
+        An HPI check will show which category it\u2019s been given. </p><h2>Myth 3
+        </h2><p><strong>Buying at a \u2018mutually convenient\u2019 public location
+        is safe.</strong></p><p>Wrong. Sometimes a seller will suggest meeting halfway,
+        at a motorway service station for instance, so you can view the car. It may
+        seem like a kind gesture, but beware, this is a common ruse used by criminals
+        selling stolen or cloned vehicles. </p><p>If you\u2019re buying privately,
+        you should always view the car at the registered keeper\u2019s address, as
+        detailed on the V5. Never buy a car in a service station or pub car park.
+        </p><h2>Myth 4 </h2><p><strong>New cars are cheaper than used cars to run.</strong></p><p>Yes,
+        at first glance, because new cars are generally more fuel efficient than used
+        cars. </p><p>However, fuel is not necessarily the biggest cost. A new car
+        loses as much as 50% of its value in the first three years of its life. And
+        while used cars depreciate too, it''s not at such a dramatic rate. </p><p>Consider
+        the total cost of motoring, rather than just the original purchase price or
+        ongoing car finance. Factor in depreciation, fuel economy, servicing, MOT
+        tests, maintenance, insurance, road tax and breakdown cover. </p><div class=\"callout\"><p>Find
+        out the true cost of motoring with our\u00a0<a title=\"Car costs calculator\"
+        target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/car-costs-calculator\">Car
+        costs calculator</a>. </p></div><p><a title=\"Parkers\" target=\"_blank\"
+        href=\"http://parkers.car-costs.co.uk/vrm_parkers_plugin.php\">Parkers</a>
+        has a tool which allows you to compare the total costs of buying a new car
+        versus a used car. The results can be surprising. If you''re buying outright,
+        it can be cheaper to run a used car than a new car. </p><p>Based on the first
+        three years of ownership, comparing a new and used Mini Clubman 1.6 Cooper
+        Diesel Estate showed that a used 2011 version will cost more than \u00a31,000
+        a year less to run. </p><div class=\"callout\"><p><a title=\"What Car? car
+        depreciation calculator\" target=\"_blank\" href=\"http://www.whatcar.com/car-depreciation-calculator/\">What
+        Car?</a> also has a tool which only looks at depreciation. </p></div><p>The
+        new Mini may have a three-year warranty, but depreciation is much higher -
+        \u00a33,500 compared with \u00a31,791. </p><p>Assuming the new and used Minis
+        were bought outright, the estimated total cost of motoring for the first year
+        is \u00a35,375 for the new car and \u00a34,221 for the used car. Over three
+        years, the new Mini will cost a total of \u00a314,434 compared with \u00a311,160
+        for the used Mini. </p><h2>Myth 5 </h2><p><strong>Buying a used car from a
+        dealer is more expensive than buying privately, but I''m getting a warranty
+        so I''m covered if anything goes wrong.</strong></p><p>Not necessarily. A
+        warranty from a dealer may give you peace of mind initially, but warranties
+        sold for used cars often have so many conditions that it\u2019s difficult
+        to work out exactly what they include. This could lead to a nasty surprise
+        if you need to make a claim. </p><p>A report by Which? magazine in March 2014
+        said: \"Pricey premiums and endless exclusions mean we can''t recommend any
+        used-car warranties.\" </p><p>However, you have more legal protection when
+        buying from a dealer where you are covered by the Sale of Goods Act 1979.
+        It states that the car must be \u201cof a satisfactory quality\u201d, \u201cfit
+        for purpose\u201d and \u201cas described\u201d. </p><p> If the car you bought
+        fails on any of these points, you\u2018re entitled to have it repaired or
+        replaced, or to get a partial or full refund. </p>","date":"2014-07-09T15:43:51+00:00"},{"id":"going-further-costs-more","title":"Going
+        further costs more. How to get value on overseas holidays","description":"If
+        you''re going overseas on holiday, our tips will help you get it for less.","body":"<p
+        class=\"intro\">The staycation may have had it''s day as overseas holidays
+        become more affordable. </p><p>Over the last few years, holidays at home in
+        Britain \u2013 the staycation \u2013 have proved popular.\u00a0Research by
+        Mintel found that 78% of Brits said price was the most important factor when
+        choosing an airline. So with higher fuel costs and passenger duties, plus
+        increased fees for landing at airports, going further became too expensive
+        for many. </p><p>But going abroad looks like it''s become more affordable
+        again.\u00a0Mintel\u2019s analysts believe that new budget routes to long
+        haul destinations and cheaper tickets for travellers only taking hand luggage\u00a0could
+        see a return to increasing numbers heading out of the UK on holiday. </p><p>If
+        you are tempted, it\u2019s worth bearing in mind that going overseas is still
+        more expensive. The research found that the average spend on a UK trip last
+        year was \u00a3234, rising to \u00a3625 for those who went abroad.\u00a0Despite
+        the high costs, 57% of those who say they are struggling financially still
+        went on a holiday in 2013, with 22% saying they\u2019d take a holiday whatever
+        their finances. </p><p>So if you do want to go further this year, here are
+        our top tips on how you can get the best value. </p><p><strong>Find out what
+        you can afford</strong></p><p>A budget is a great tool to help you know what
+        you have and what you need. The Money Advice Service\u2019s\u00a0<a title=\"Budget
+        planner\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">Budget
+        planner\u00a0</a>will do the sums for you. You don\u2019t have to complete
+        your budget in one go - you can save your figures and log in again later with
+        a unique ID. </p><p><strong>See where you can cut back</strong></p><p>It\u2019ll
+        surprise you how spending on little things add up over a week, a month and
+        a year. Use our\u00a0<a title=\"cut back calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator\">cut
+        back calculator\u00a0</a>to see where you can find extra money for your holiday
+        budget.\u00a0 </p><p><strong>Have a savings plan</strong></p><p>Rather than
+        spend a year paying off your credit card bill and having to pay more through
+        interest as a result, if you can save in advance the holiday will ultimately
+        cost less. If you have a specific holiday to aim for, you\u2019ll also know
+        how much you\u2019ll need and it will keep you motivated. </p><p>Read our\u00a0<a
+        title=\"Saving for a holiday\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-holiday\">saving
+        for a holiday</a>\u00a0guide for more information. </p><p><strong>Our other
+        top tips </strong></p><ul><li>Package holidays tend to be cheaper, but DIY
+        holidays where you put flights and accommodation together yourself can bring
+        some great savings.</li><li>If you\u2019re dealing with a person, rather than
+        buying online, try haggling to see if you can get extras thrown in for free\u00a0or
+        discounts.\u00a0</li><li>Book late if you\u2019re flexible where and when
+        you want to go. If you''re looking for a specific destination and time, book
+        early.\u00a0</li><li>Work out the cost of your travel money before you go.
+        The right card can be cheaper than cash.\u00a0</li><li>Don\u2019t buy travel
+        insurance direct from your agent. Compare the different providers first.</li><li>Turn
+        off roaming and your data on your mobile phone, or you could get caught with
+        some hefty charges. Only use wi-fi for internet, and\u00a0find out about\u00a0apps
+        that let you call and text for free.</li></ul><p>For more detail on all these
+        read our <a title=\"Get holidays for less\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/get-holidays-for-less\">Get
+        holidays for less </a>guide. \u00a0 </p>","date":"2014-07-09T10:02:06+00:00"},{"id":"top-student-budgeting-tips","title":"Top
+        student budgeting tips","description":"Do you know how to manage a student
+        budget? Read our tips and advice to help you make the most of your money.","body":"<p
+        class=\"intro\"> It can be a really exciting time experiencing life as a new
+        student \u2013 lots to think about as you start your course, meet new friends,
+        and, if you move away from home, live in a strange new place. You have a whole
+        set of life skills to master, managing your student money being one of them.
+        </p><p>A 2013 survey by <strong><a title=\"student survey\" target=\"_blank\"
+        href=\"http://www.savethestudent.org/money/students-and-money-infographic.html\">Save
+        the Student!</a>\u00a0\u00a0</strong>found that students spend \u00a3763 a
+        month on average, with three quarters of this sum devoted to rent, food and
+        bills. With such high expenditure, it makes sense to look for ways to keep
+        in control of your outgoings. Rent in particular is an important expense to
+        manage. This is because you are signing a contract, which may have legal implications
+        if you fail to pay all the rent you\u2019ve committed to. </p><h2>Student
+        bank accounts </h2><p>Aside from finding somewhere to live and figuring out
+        what course modules to study, fresher\u2019s week provides the opportunity
+        to think about where to put your student loan and any grant or bursary you\u2019re
+        entitled to. In many cases, this will mean opening a new bank account, There
+        are lots out there, but what do you really need from one? </p><p>In truth
+        it\u2019s fairly simple \u2013 you want an account that will give you access
+        to your cash as you require and has an interest-free overdraft facility. Remember
+        that you have the right to switch your account to another bank \u2013 without
+        having to return any freebies \u2013 but you will have to clear any overdraft
+        you have. </p><a data-type=\"action\" href=\"managing-money-as-a-student\">Read
+        our guide Managing money as a student</a><br/><a data-type=\"action\" hreflang=\"en\"
+        href=\"/content/guides/overdrafts-explained\">Find out more in our guide Overdrafts
+        explained</a><h2>Sort out bills and rent </h2><p>As soon as your student loan
+        or grant hits your account it might be a good idea to put most of it into
+        an easy-access savings account. You can then transfer your weekly budget from
+        your savings account to your student current account. </p><p>Use online banking
+        facilities to arrange automatic transfers to your current account to pay bills
+        and rent, and set up direct debits to pay these outgoings. </p><p><a data-type=\"action\"
+        href=\"student-loans-for-higher-education\">Find out more in Student loans
+        for higher education</a></p><p><a data-type=\"action\" hreflang=\"en\" href=\"/content/guides/direct-debits-and-standing-orders\">Read
+        our guide Direct Debits and standing orders</a></p><h2>Set yourself a budget
+        </h2><p>With your rent and bills in order, the next step is to set up a weekly
+        budget. You should aim to cover all your food, travel and leisure costs, and
+        to have a small sum left over to pay for unexpected purchases, clothes, and
+        treats, such as festival tickets or a holiday. After paying your rent and
+        other essential bills, then transfer your weekly budget from your savings
+        account into your current account so that it\u2019s easier to keep track of
+        your discretionary spending. </p><p>You could use a <a title=\"student calculator\"
+        href=\"http://studentcalculator.org/\"><strong>student calculator</strong></a>\u00a0(if
+        you are studying in England), and speak to a student money adviser in your
+        university or college for more help with budgeting. </p><h2>Be thrifty and
+        shop around </h2><p>You are bound to need books and other study aids, but
+        why pay through the nose for them? It\u2019s worth riffling through second-hand
+        and charity shops, as previous generations of students may have sold or gifted
+        no-longer-wanted books and materials. Keep a look out for sales notices on
+        student blogs and your university website too. </p><p>You have to eat, so
+        work out where the cheapest supermarkets and market stalls are for different
+        purchases. Independent greengrocers and butchers can also deliver quality,
+        low-cost food, so don\u2019t forget to visit them. </p><p>Shopping around
+        may seem a chore, but even if you just end up spending a few pounds less every
+        week on like-for-like goods, your savings will soon mount up. </p><h2>Five
+        top tips for savvy students </h2><p>The quicker you get to grips with your
+        finances, the better. Here are five things to consider building into your
+        student routine: </p><p><strong>1. Avoid eating out</strong> \u2013 It may
+        be tempting to pop into your local caf\u00e9 each day for lunch, but you\u2019ll
+        pay a hefty sum for the privilege. Try to get in the habit of taking a packed
+        lunch: it\u2019s cheaper and you can avoid the seemingly endless food queues.
+        </p><br/><p><strong>2. Buy in bulk</strong> \u2013 Where possible look for
+        multi-buy deals, perhaps <a title=\"flatmates\" href=\"https://www.moneyadviceservice.org.uk/en/articles/budgeting-and-sharing-costs-when-renting\">splitting
+        the cost with housemates</a>, and consider bulking out your meals with cheap,
+        nutritional items such as lentils and black-eyed beans. Don\u2019t forget
+        to invest in some herbs and spices, which will help make otherwise bland dishes
+        tastier. </p><br/><p><strong>3. Use discounts</strong> \u2013 Check which
+        shops will give you a discount if you have an NUS card, and make use of online
+        discount voucher websites to get money off a range of goods and services.
+        </p><br/><p><strong>4. Get protected</strong> \u2013 The chances are your
+        room will be filled with expensive kit, from a computer and TV to clothes.
+        Insuring them is important. However, home contents insurance for a student
+        house isn\u2019t always straightforward. This can be because policies cover
+        the house, not the person, making it problematic if you are sharing a property.
+        Ask your parents to check their cover - if they have home insurance, it may
+        cover you under the ''temporarily removed from the home'' section while you''re
+        a student. </p><br/><p><strong>5. Beware of too much deb</strong><strong>t</strong>
+        \u2013 It\u2019s very easy to overspend at university or college, but living
+        within your means is a must. Unauthorised overdrafts can be very expensive,
+        and student credit cards if applied for should only be used for emergencies.
+        Likewise, avoid faceless credit like payday loans, as you could end up paying
+        interest at a rate of more than 4,000%. If you are running out of money, speak
+        to your bank to see if they can extend your overdraft, also review your budget
+        and look for further ways to cut your spending. Finally, consider getting
+        a job. Your student union may be able to help you find one, but also check
+        local newspapers and ask friends for tips on which employers to approach.
+        </p><p><a data-type=\"action\" hreflang=\"en\" href=\"/content/guides/avoid-high-fees-and-hidden-borrowing-costs\">Find
+        out more in our guide Avoid high fees and hidden borrowing costs</a></p><p><a
+        data-type=\"action\" href=\"taking-out-your-first-credit-card-or-loan\">Help
+        and advice on Taking out your first credit or loan</a></p><p><em>Photo: PA</em></p>","date":"2014-07-08T15:16:39+00:00"},{"id":"10-worst-ways-to-waste-your-hard-earned-cash","title":"10
+        worst ways to waste your hard-earned cash","description":"No one has money
+        to burn, so it makes sense to avoid spending more than you need to on financial
+        products and services.","body":"<p class=\"intro\"> No one has money to burn,
+        so it always makes sense to steer clear of unnecessary spending. We\u2019ve
+        put together a list of 10 things to avoid if you want to cut your overheads.
+        </p><p class=\"intro\">It\u2019s unlikely you\u2019ll be able to make all
+        the savings mentioned here, but if you did you could save yourself more than
+        \u00a36,000 a year. </p><h2>1.\u00a0\u00a0\u00a0\u00a0Paying your energy bill
+        by cash or cheque </h2><p>No one wants to pay more for their energy than they
+        have to, yet according to <em>Which?</em> paying by cash or cheque costs \u00a392
+        more on average than paying by direct debit. </p><p>Energy companies tend
+        to offer a cheaper tariff if you set up a monthly payment plan.\u00a0\u00a0If
+        you''re worried you''ll end up paying too much,\u00a0you can read your meter
+        regularly and often provide your supplier with the figures to help keep you
+        on track.\u00a0\u00a0 </p><p>Read our guide <a title=\"Save money on your
+        bills\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/save-money-on-your-gas-and-bills\">Save
+        money on your\u00a0utility bills</a> for ways to make savings. </p><h2>2.\u00a0\u00a0\u00a0\u00a0Falling
+        into the overdraft trap </h2><p>Overdrafts can prove useful if you need cash
+        in the short term. But, don\u2019t get suckered into using an unauthorised
+        overdraft, as you can expect to pay from \u00a35 to more than \u00a335 a month
+        in fees as well as interest. </p><p>If you find yourself getting close to
+        your limit, ask your bank to extend your authorised overdraft. </p><p>Read
+        our guide <a title=\"Overdrafts explained\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/overdrafts-explained\">Overdrafts
+        explained</a> for more on this. </p><h2>3.\u00a0\u00a0\u00a0\u00a0 Paying
+        too much for childcare </h2><p>Parents can register online to claim 20% back
+        in tax-free childcare (up to \u00a310,000 a year). As the average cost of
+        childcare for an under two-year old tops \u00a310,000 this could save you
+        \u00a32,000 a year \u2013 per child. </p><p>For more information see our guide
+        - <a title=\"Tax credits and other help with childcare costs\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/tax-credits-and-other-help-with-childcare-costs\">Tax
+        credit and other help with childcare costs</a>. </p><h2>4.\u00a0\u00a0\u00a0\u00a0Hoarding
+        your junk </h2><p>The average online shopper spends \u00a3948 a year, of which
+        \u00a3107 of purchases are never used. You often have a month in which to\u00a0return
+        your purchases.\u00a0 Yet eight in 10 shoppers told us they don\u2019t return
+        unwanted goods because it\u2019s \u2018too much hassle\u2019, so they are
+        missing out. </p><p>Read our guide <a title=\"Protect against unexpected costs
+        by knowing your rights\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/news/protect-against-unexpected-costs-by-knowing-your-consumer-rights\">Protect
+        against unexpected costs by knowing your consumer rights </a>for more on returns.
+        </p><h2>5.\u00a0\u00a0\u00a0\u00a0Overspending on your new home\u2026 </h2><p>Overstretching
+        to get your dream home can prove a nightmare, so it makes sense to work out
+        a realistic budget. Our research found one in five recent first-time buyers
+        would\u2019ve bought somewhere cheaper if they\u2019d known the true costs
+        involved, while over half found their purchasing costs were\u00a0almost \u00a31,300
+        on average more than expected. </p><p>Our guide <a title=\"Estimate your overall
+        buying and moving costs\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs\">Estimate
+        your overall cost of buying a house and moving costs</a>\u00a0can help. </p><h2>6.\u00a0\u00a0\u00a0\u00a0\u2026And
+        spending too much on a car </h2><p>Almost one in five drivers admits to blowing
+        their budget when buying a new car, spending an average of \u00a31,815 more
+        than they intended. Half of those who overspent told us they did so because
+        they \u2018just really liked the car\u2019. </p><p>Running costs can also
+        prove hard to cover, with one in four spending \u00a3421 on average more than
+        expected over a year. </p><p>Our <a title=\"Saving for a car tool\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-car\">Saving
+        for a car tool</a> can help you stick to your budget. </p><h2>7.\u00a0\u00a0\u00a0\u00a0Being
+        lazy when buying insurance </h2><p>Drivers could save around \u00a3220 a year
+        by not automatically renewing their car insurance. Moneysupermarket.com found
+        more than eight million motorists are guilty of not shopping around for like-for-like
+        policies, despite the carrot of a cheaper annual premium. </p><p>See our guide
+        for more on <a title=\"how to buy insurance using comparison sites\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-buy-insurance-using-comparison-sites\">How
+        to buy insurance using comparison sites</a>. </p><h2>8.\u00a0\u00a0\u00a0\u00a0Not
+        using your ISA allowance </h2><p>Don\u2019t forget to use your ISA allowance.
+        The new ISA limit of \u00a315,000 from1 July, means that basic-rate taxpayers
+        who put the full amount in an ISA paying 1.5% will have a total of \u00a315,225
+        after 12 months. </p><p>This is \u00a345 more than if the money is put in
+        a standard savings account also paying 1.5% as the interest will be taxed.
+        ISAs and other savings are a good idea - especailly if interest rates go up.
+        </p><p>It''s worth noting that saving rather than paying off debts, such as\u00a0a
+        credit card bill, may not be such a great idea. In this case the interest
+        you are incurring when\u00a0paying off your cards will outstrip what you earn
+        from savings. </p><p>See our guide, <a title=\"ISAs and other tax-efficient
+        ways to save or invest\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/isas-and-other-tax-efficient-ways-to-save-or-invest\">ISAs
+        and other tax efficient ways to save or invest</a> for more information. </p><h2>9.\u00a0\u00a0\u00a0\u00a0Having
+        the wrong bank accounts </h2><p>Packaged accounts typically cost around \u00a315
+        a month. For this outlay you can expect to receive a range of benefits, such
+        as travel insurance and car breakdown cover. It''s worth considering when
+        you''d use these extra benefits and whether you can buy them for less elsewhere.\u00a0
+        </p><p>Also, check the exclusions, policy limitations\u00a0and eligibility
+        to ensure these products meet your needs \u2013 for instance, many have an
+        upper age limit of 70 or 75 on travel insurance.\u00a0 </p><p>Our guide to
+        <a title=\"Packaged accounts\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/packaged-accounts\">Packaged
+        accounts </a>has more on the pros and cons. </p><h2>10.\u00a0\u00a0\u00a0\u00a0Falling
+        for scams </h2><p>Fraud cost individuals \u00a39.1 billion in 2012-2013, that\u2019s
+        around \u00a3185 per adult. Recent popular scams include fake dating websites
+        which trick victims into calling premium rate phone numbers and fake lottery
+        wins, which see you needing to send money in order to claim your winnings.
+        Investment cons, such as boiler room scams\u00a0and pyramid schemes\u00a0are
+        also to be avoided. </p><p>You can avoid losing out to fraudsters by never
+        giving personal or financial information in response to unsolicited callers
+        and emails. Remember, if a deal seems too good to be true, it probably is.\u00a0
+        </p><p>Read our <a title=\"beginners guide to scams\" href=\"https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-scams\">Beginners
+        guide to scams</a> for more on how to avoid fraud. </p>","date":"2014-07-08T13:29:25+00:00"}]'
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 09:44:34 GMT
+recorded_with: VCR 2.9.2

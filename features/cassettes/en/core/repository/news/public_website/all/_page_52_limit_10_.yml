@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/news.json?page_number=30
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?limit=10&page_number=52
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 8583b9a1-843a-49d2-96f2-d834e5a23dd9
+      - 7d31177f-2a16-4da6-bf42-ab1b13278125
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 08 Jul 2014 14:34:09 GMT
+      - Fri, 18 Jul 2014 09:44:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 15dce44d8303c24fab3b9c0c79562131
+      - 5c45a0f31aed6deed201e84a2e38adc0
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 08-Jul-2015 14:34:09 GMT; secure
-      - _session_id=15dce44d8303c24fab3b9c0c79562131; path=/; secure; HttpOnly
-      - _web_tracking=a3fa6b253d3040aba036a9c87c98ee50; path=/; expires=Wed, 08-Jul-2015
-        14:34:09 GMT; secure
+      - _cookie_notice=y; path=/; expires=Sat, 18-Jul-2015 09:44:35 GMT; secure
+      - _session_id=5c45a0f31aed6deed201e84a2e38adc0; path=/; secure; HttpOnly
+      - _web_tracking=743fdc3e263e6d9372f9c6c50474b863; path=/; expires=Sat, 18-Jul-2015
+        09:44:35 GMT; secure
       X-Request-Id:
-      - 8583b9a1-843a-49d2-96f2-d834e5a23dd9
+      - 7d31177f-2a16-4da6-bf42-ab1b13278125
       X-Runtime:
-      - '0.284799'
+      - '0.055118'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,47 +57,7 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '[{"id":"disability-benefit-changes-need-a-rethink","title":"Disability
-        benefit changes ''need a rethink\u2019","description":"Thousands of disabled
-        people could lose some benefits because of changes to the new system of Personal
-        Independence Payments, a campaign group has warned","body":"<p><strong> Date
-        published: 13 January 2013\u00a0</strong></p><p class=\"intro\">Thousands
-        of disabled people could lose some benefits because of changes to the new
-        system of Personal Independence Payments, a campaign group has warned. </p><p>According
-        to We Are Spartacus, tougher rules that assess how far a person can walk means
-        many claimants will lose help with transport from April. </p><p>Under the
-        new rules, those unable to walk more than 20 metres would be eligible, rather
-        than the previous distance of 50 metres used as a qualifier for Disability
-        Living Allowance (DLA). </p><p>About 3.2 million people receive DLA, a payment
-        of between \u00a320.55 and \u00a3131.50 a week to help them in leading independent
-        lives. </p><p>The move is to Personal Independence Payments is being taken
-        by the Department of Work and Pensions in a bid to bring the benefit up to
-        date and make it much clearer. </p><p>It claims that a similar number of people
-        currently under DLA will be entitled to extra mobility help. </p><p><strong>Do
-        you have mobility issues? <a title=\"action plan\" href=\"https://www.moneyadviceservice.org.uk/en/action_plans/find-out-what-benefits-you-qualify-for\">Take
-        our Action plan - Find out what benefits you qualify for</a></strong>. </p><p><em>Photo
-        credit: PA\u00a0</em></p>","date":"2013-01-16T12:12:27+00:00"},{"id":"nine-million-relying-on-a-windfall-to-fund-retirement","title":"Nine
-        million relying on a windfall to fund retirement","description":"More than
-        nine million workers \u2013 almost one in five of the population \u2013 are
-        relying on some sort of windfall to fund their retirement years, according
-        to new findings from LV=","body":"<p><strong> Date published: 14 January 2013</strong></p><p
-        class=\"intro\">More than nine million workers \u2013 almost one in five of
-        the population \u2013 are relying on some sort of windfall to fund their retirement
-        years, according to new findings from LV=. </p><p>According to the report,
-        more than two in three Britons expect their savings pots to be underfunded
-        by the time they retire, or worse still have no idea if they will have sufficient
-        retirement savings in place or not. </p><p>Even more worryingly, 3.6 million
-        workers today are counting on a lottery win to pay for their retirement, despite
-        the odds of winning standing at over 14 million to one. </p><p>A further one
-        in fourteen are relying on some sort of inheritance to cover their living
-        costs in old age, while the hopes of one in twenty rest on the value of their
-        homes increasing substantially. </p><p>Higher earners in particular have not
-        considered the future, with almost two in five of those earning over \u00a340,000
-        a year admitting they are relying on some sort of retirement windfall, compared
-        to one in four of those earning under \u00a340,000. </p><p><strong>Unsure
-        about your retirement funds?<a title=\"action plan\" href=\"https://www.moneyadviceservice.org.uk/en/action_plans/work-out-your-likely-pension-income\">
-        Take our Action plan - Work out your likely pension income</a>.</strong></p><p><em>Photo
-        credit: PA\u00a0</em></p>","date":"2013-01-16T12:12:13+00:00"},{"id":"energy-bills-for-elderly-have-doubled-since-2005","title":"Energy
+      string: '[{"id":"energy-bills-for-elderly-have-doubled-since-2005","title":"Energy
         bills for elderly have doubled since 2005","description":"Energy bills for
         the elderly have doubled since 2005, according to new research","body":"<p><strong>Date
         published: 11 January 2013</strong>\u00a0\u00a0 </p><p class=\"intro\">Energy
@@ -217,5 +177,5 @@ http_interactions:
         that the standards they follow are in line with the framework. </p><p><a href=\"/en/static/money-advice-service-consults-on-improving-the-quality-of-debt-advice-in-the-uk\">Read
         the press release in full </a></p>","date":"2013-01-16T12:10:35+00:00"}]'
     http_version:
-  recorded_at: Tue, 08 Jul 2014 14:34:10 GMT
+  recorded_at: Fri, 18 Jul 2014 09:44:38 GMT
 recorded_with: VCR 2.9.2

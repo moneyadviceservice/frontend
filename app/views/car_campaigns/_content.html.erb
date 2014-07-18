@@ -10,6 +10,12 @@
         <p class="intro"><%= t(".intro_html") %></p>
       </header>
     </div>
+
+    <% if local_assigns.fetch(:show_car_costs_calculator_cta) { true } %>
+      <%= link_to t(".car_costs_calculator_button_content"), tool_path(t(".car_costs_calculator")),
+                  class: "button button--primary" %>
+    <% end %>
+
   </div>
 
   <div class="l-car-campaign__section l-car-campaign__section--buy">

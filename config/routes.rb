@@ -45,6 +45,8 @@ Rails.application.routes.draw do
       match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
     end
 
+    match '/tools/:id', to: NOT_IMPLEMENTED, via: 'get', as: 'tool'
+
     resources :action_plans, only: 'show'
     resources :articles,
               only: 'show',

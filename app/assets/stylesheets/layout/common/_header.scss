@@ -8,12 +8,14 @@
   }
 
   .mas-logo {
-    @include column(8);
+    @include column(7);
     margin-top: $baseline-unit*3;
-    margin-bottom: $baseline-unit*2;
+    margin-bottom: $baseline-unit*3;
 
     @include respond-to($mq-m) {
       @include column(4);
+      margin-top: $baseline-unit*2;
+      margin-bottom: 0;
     }
   }
 
@@ -36,7 +38,9 @@
   }
 
   .l-authentication {
-    @include column(8);
+    @include respond-to($mq-m) {
+      @include column(8);
+    }
   }
 
   .search {
@@ -59,8 +63,8 @@
       background-color: transparent;
       padding: 0;
       clear: none;
-      margin-top: $baseline-unit*3;
-      margin-bottom: $baseline-unit*3;
+      margin-top: $baseline-unit*2;
+      margin-bottom: $baseline-unit*2;
 
       .search__input {
         border: 0;
@@ -72,7 +76,7 @@
   .mobile-nav {
     display: block;
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 0;
 
     @include respond-to($mq-m) {

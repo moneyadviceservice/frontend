@@ -5,7 +5,7 @@ module UI::Pages
     set_url '{/locale}/news{?page_number}'
 
     elements :items_titles, '.heading-small'
-    elements :items_intros, '.t-news-intro'
+    elements :items_descriptions, '.t-news-description'
     elements :items_dates,  '.smallprint'
 
     element :newer_button,  '.t-button--previous'

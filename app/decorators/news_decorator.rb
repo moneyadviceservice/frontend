@@ -1,7 +1,7 @@
 class NewsDecorator < Draper::CollectionDecorator
   delegate :page
 
-  PAGE_SIZE = 17
+  PAGE_SIZE = 10
   ALTERNATES_SUFIX = 'GB'
 
   def decorator_class

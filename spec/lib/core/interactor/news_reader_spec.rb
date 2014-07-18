@@ -2,9 +2,11 @@ require_relative 'shared_examples/optional_failure_block'
 
 module Core
   RSpec.describe NewsReader do
-    subject(:news_reader) { described_class.new(page) }
+    subject(:news_reader) { described_class.new(options) }
 
-    let(:page) { nil }
+    let(:page) { 2 }
+    let(:limit) { 11 }
+    let(:options) { { page_number: page, limit: limit } }
     let(:public_website) { double }
 
     before do
@@ -12,7 +14,7 @@ module Core
         double(all: data)
       end
 
-      allow(public_website).to receive(:all).and_return(data)
+      allow(public_website).to receive(:all).with(page: 2, limit: 11).and_return(data)
       allow(Registry::Repository).to receive(:[]).with(:news).and_return(public_website)
     end
 

@@ -8,7 +8,7 @@ When(/^I visit the news page$/) do
 end
 
 When(/^I visit the last news page$/) do
-  news_page.load(locale: 'en', page_number: '30')
+  news_page.load(locale: 'en', page_number: '52')
 end
 
 Then(/^I should( not)? see the 'Older' button$/) do |negate|
@@ -40,4 +40,5 @@ Then(/^I see a list of news in (.*)$/) do |language|
   expect(news_page.items_dates.first.text).to eq(news.first_item_date)
   expect(news_page.items_intros.first.text).to eq(news.first_item_intro)
   expect(news_page.footer_site_links.send("#{language_link}")[:href]).to include('page_number')
+  expect(news_page.items_titles.size).to eq(10)
 end

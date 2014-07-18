@@ -1,12 +1,11 @@
 module Core::Repository::News
   RSpec.describe PublicWebsite do
     let(:url) { 'https://example.com/path/to/url' }
+    let(:connection) { Core::ConnectionFactory.build(url) }
 
     before do
-        allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory.build(url)
-        end
-      end
+      allow(Core::Registry::Connection).to receive(:[]).with(:public_website) { connection }
+    end
 
     describe '#find' do
       subject(:repository) { described_class.new }
@@ -19,8 +18,8 @@ module Core::Repository::News
           Core::ConnectionFactory.build(url)
         end
 
-        stub_request(:get, "https://example.com/en/news/#{id}.json").
-          to_return(status: status, body: body, headers: headers)
+        stub_request(:get, "https://example.com/en/news/#{id}.json")
+          .to_return(status: status, body: body, headers: headers)
       end
 
       context 'when the type exists' do
@@ -79,15 +78,18 @@ module Core::Repository::News
     describe '#all' do
       subject { described_class.new.all }
 
+      let(:body) { "[#{File.read('spec/fixtures/news.json')}]" }
+      let(:status) { 200 }
+      let(:page) { '' }
+      let(:limit) { '' }
+
       before do
-        stub_request(:get, "https://example.com/en/news.json?page_number=1").
-        to_return(status: status, body: body, headers: {})
+        stub_request(:get, "https://example.com/en/news.json?page_number=#{page}&limit=#{limit}")
+          .to_return(status: status, body: body, headers: {})
       end
 
       context 'when the request is successful' do
-        let(:body) { "[#{File.read('spec/fixtures/news.json')}]" }
-        let(:status) { 200 }
-        let(:first_id) { "women-are-feeling-the-financial-squeeze-more-than-men" }
+        let(:first_id) { 'women-are-feeling-the-financial-squeeze-more-than-men' }
 
         it { is_expected.to be_a(Array) }
         specify { expect(subject.first['id']).to eq(first_id) }
@@ -98,6 +100,21 @@ module Core::Repository::News
         let(:status) { 500 }
 
         specify { expect { subject }.to raise_error(described_class::RequestError) }
+      end
+
+      context 'when optional parameters are given' do
+        subject { described_class.new }
+
+        let(:page) { 1 }
+        let(:limit) { 10 }
+        let(:options) { { page: page, limit: limit } }
+
+        it 'calls the end point with the given parameters' do
+          expect(connection).to receive(:get).with("/en/news.json?page_number=#{page}&limit=#{limit}")
+            .and_return(double(body: []))
+
+          subject.all(options)
+        end
       end
     end
   end

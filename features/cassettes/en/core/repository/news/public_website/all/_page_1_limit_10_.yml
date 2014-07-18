@@ -1,0 +1,555 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?limit=10&page_number=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - e36cbc93-2b8c-4810-9ba4-633e9a66118d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Jul 2014 09:44:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - e139fb43489623b50968b93511a438e8
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 18-Jul-2015 09:44:22 GMT; secure
+      - _session_id=e139fb43489623b50968b93511a438e8; path=/; secure; HttpOnly
+      - _web_tracking=100e8b5d53ed68bd9000d190e21cd7d7; path=/; expires=Sat, 18-Jul-2015
+        09:44:22 GMT; secure
+      X-Request-Id:
+      - e36cbc93-2b8c-4810-9ba4-633e9a66118d
+      X-Runtime:
+      - '0.256654'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"think-twice-before-taking-out-these-financial-products","title":"Think
+        twice before taking out these financial products","description":"There are
+        many financial products that might seem appealing at first but are less so
+        when you dig a little deeper. Here\u2019s a selection of goods you might want
+        to avoid","body":"<p class=\"intro\"> As if life wasn\u2019t difficult enough,
+        there are numerous financial products that might seem good on first viewing
+        but are less appealing when you dig a little deeper. Here\u2019s a selection
+        of goods you might want to avoid, unless you are sure you\u2019ll enjoy the
+        benefits. </p><h2>Mobile phone insurance </h2><p>Mobile phone insurance could
+        be a waste of money if you don\u2019t have a history of losing your handset
+        or your phone is cheap. That\u2019s because mobile phone cover can cost anything
+        from \u00a316 to \u00a3300 a year. </p><p>However, it may be worth considering
+        if you have an expensive phone or are locked into a long-term contract. If
+        you couldn''t afford to replace your phone without insuring it, consider starting
+        to save to replace it. </p><p>Also your phone could be included in your home
+        insurance policy. There is usually no point in doubling up on insurance (as
+        you could only draw on one policy for an individual claim). </p><p>On the
+        other hand, the high excesses on home insurance \u2013 you typically have
+        to pay the first \u00a350 to \u00a3100 of a claim \u2013 and the damage to
+        your no claims bonus could make mobile phone insurance worthwhile. If you
+        can\u2019t live without your phone, look at how quickly your home insurer
+        will replace it as they may be slower. </p><p>If you are unsure, see our guide
+        <a title=\"Do you need mobile phone insurance?\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/en/articles/do-you-need-mobile-phone-insurance\">Do
+        you need mobile phone insurance?</a></p><h2>Extended warranties </h2><p><a
+        title=\"Extended warranties\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/en/articles/extended-warranties-are-they-worth-it\">Extended
+        warranties</a> cover repair costs, usually on white goods, after the retailer\u2019s
+        guarantee lapses. They typically last for between one and five years depending
+        on the purchase price of the item being protected, and they are expensive.
+        </p><p>For example, a five-year extended warranty on a \u00a3449 TV could
+        cost nearly \u00a3150. But as a consumer you have rights to protect you against
+        faulty purchases. </p><p>If the goods you bought are faulty, you\u2019re covered
+        by the 1979 Sale of Goods Act. This says that goods sold should be of satisfactory
+        quality, fit for purpose and last for a reasonable time. If they are not,
+        you can return them and ask for a refund or replacement. </p><p>Provided the
+        cause isn\u2019t reasonable wear and tear, you are within your rights to return
+        goods up to six years after you bought them. </p><h2>ID theft insurance </h2><p>ID
+        theft insurance can cost around \u00a310 a year. This may seem a small sum
+        for peace of mind. </p><p>But you are already covered for any financial loss
+        if your identity is used fraudulently by your bank or credit card provider.
+        For a claim to be rejected your provider must prove you were grossly negligent
+        or committed fraud. </p><p>The provider can withhold the first \u00a350 of
+        any loss, but they invariably waive this \u2013 so you shouldn\u2019t be left
+        out of pocket. </p><p>It\u2019s also worth noting that Visit our <a title=\"ID
+        theft\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/en/articles/identity-theft-and-scams-what-you-are-liable-for\">ID
+        theft</a> guide for more information. </p><h2>Store cards </h2><p>Shop at
+        a specific big-name retailer and the chances are you\u2019ll be invited take
+        out a <a title=\"Store cards explained\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/en/articles/store-cards-explained\">store
+        card</a>. These are credit cards branded to specific shops, and offer incentives
+        such as a discount off your initial purchase, freebees and exclusive offers.
+        </p><p>As long as they don\u2019t tempt you to overspend and you pay your
+        bill off in full on time, they\u2019re fine. However, you will pay very high
+        interest rates if you don\u2019t clear your balance each month. </p><p>The
+        Money Advice Service estimates that some store cards charge twice as much
+        interest as credit cards. So, a 10% sign-up discount could cost you more in
+        the long run. </p><h2>Packaged bank accounts </h2><p>You can pay around \u00a315
+        a month for a <a title=\"Packaged accounts\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/en/articles/packaged-accounts\">packaged
+        account</a>, which provides a range of extra features, such as free travel
+        insurance, mobile phone cover or better exchange rates. </p><p>However, if
+        you don\u2019t expect to use these benefits, it\u2019s an expensive option.
+        If you do want some of these extras, you may be able to buy them cheaper separately.
+        </p><p>You also need to check the terms and conditions for exclusions and
+        excesses. For instance, many accounts won\u2019t cover you under their travel
+        insurance element if you are over 70 or 75. </p>","date":"2014-07-18T09:29:58+00:00"},{"id":"from-civil-war-to-sonic-booms-unexpected-insurance-exclusions-explained","title":"From
+        smart phones to sonic booms: unexpected insurance exclusions explained","description":"You\u2019d
+        expect a claim to be turned down if your car isn\u2019t taxed, but what about
+        if your car is damaged by a falling coconut?","body":"<p class=\"intro\">You\u2019d
+        expect a claim to be turned down if your car isn\u2019t taxed, but what about
+        if your car is damaged by a falling coconut? </p><p>There is a reason why
+        insurance policy documents never appear on the bestseller lists. They are
+        frequently long and very dry. However, it\u2019s worth taking time to understand
+        what is and isn\u2019t included, especially when compared with the considerable
+        hassle of having to make a claim that gets turned down at a later stage.\u00a0
+        </p><h2>Quirky insurance clauses </h2><p>Some surprising exclusions are industry
+        wide, others feature on only some policies. Here are some of the more unexpected
+        exclusions we found in insurance policies: </p><h2>Within arms\u2019 length
+        </h2><p>You\u2019d think one of the main points of having a <a title=\"Do
+        you need mobile phone insurance?\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/do-you-need-mobile-phone-insurance\">policy
+        covering mobile phones</a> would be to protect against theft when you\u2019re
+        out and about. But, if you knowingly leave your mobile out of reach at any
+        time you\u2019re likely to have any claim for theft rejected. </p><h2>Airmiles
+        and timeshare problems </h2><p>Some <a title=\"Good travel insurance policies\"
+        target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/a-good-travel-insurance-policy\">travel
+        policy</a> providers will not cover you for unused trips or accommodation
+        booked using airline mileage or similar reward schemes.\u00a0 Some will pay
+        up if you can prove the schemes have a specific monetary value. Likewise,
+        some insurers will turn down claims relating to timeshare fees, such as management,
+        maintenance and exchange costs.\u00a0 </p><h2>Valet parking </h2><p>Recent
+        research reveals around half of <a title=\"Car insurance - choose the right
+        level of cover\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/car-insurance-choose-the-right-level-of-cover\">car
+        insurance policies</a> won\u2019t pay up if you hand your car keys to a valet
+        parking service and it\u2019s subsequently damaged. This includes parking
+        services at airports and hotels. </p><h2>Burglar alarms </h2><p>Many home
+        <a title=\"Contents insurance\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/contents-insurance-get-the-right-policy-and-cover\">contents
+        insurance</a> policies won\u2019t pay a burglary-related claim if you tell
+        your insurer you have an alarm, but don\u2019t use it when away from home.
+        Some will reject claims where the alarm is not set up to cover unoccupied
+        rooms when you\u2019re asleep. They can do this if the policy states the alarm
+        must be activated in these circumstances. </p><h2>Low flying planes </h2><p>Many
+        home <a title=\"Buildings insurance\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/buildings-insurance-what-does-a-good-policy-look-like\">buildings
+        insurance</a> and car insurance\u00a0will exclude damage caused by sonic booms
+        from low flying aircraft. These are pressure waves from aircraft travelling
+        at or above the speed of sound. </p><p>Although Concorde is no longer flying,
+        military aircraft do crisscross the skies in some areas of the country, so
+        this could be an issue if you live in the vicinity of an RAF base or under
+        a regularly-used flight path. </p><h2>Falling coconuts </h2><p>If you\u2019re
+        travelling to a tropical destination and hire a car, be careful where you
+        park. Many standard <a title=\"Car insurance when driving abroad\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/car-insurance-when-driving-abroad\">car
+        hire policies</a> will exclude damage caused by falling coconuts. If this
+        sounds strange, remember that coconuts grow in abundance in the Caribbean,
+        Cook Islands and Polynesia among other places and it\u2019s tempting to park
+        in the shade of a coconut tree.\u00a0 </p><p>Check your policy (when you pick
+        up your car at the local depot) and upgrade to one that will protect against
+        this surprisingly common cause of claims. </p><h2>What you can do </h2><p>Some
+        of these exclusions are so unlikely that it\u2019s probably not worth worrying
+        about, as is the case with nuclear explosions or invasions, and in any event
+        you\u2019d probably struggle to get insured for anywhere near a reasonable
+        sum. </p><p>Others are worth scrutinising the small print for and either shopping
+        around or asking your insurance for an upgrade, as could be the case if you\u2019re
+        visiting coconut territory. </p><p>In any event, always read policy terms
+        and conditions before signing on the dotted line, and speak to the insurer
+        if you have a query. </p><p><em>Photo: PA</em></p>","date":"2014-07-18T09:29:21+00:00"},{"id":"can-you-afford-a-mortgage-try-our-new-calculator","title":"Can
+        you afford a mortgage? Try our new calculator","description":"Just having
+        enough for the deposit to buy a home is no longer enough. Now you need to
+        think about other costs too.","body":"<p class=\"intro\">Taking out a mortgage,
+        whether to buy your first home or simply to remortgage, became more difficult
+        in April this year when new rules changed how lenders decide how much they
+        will loan you. </p><p>The rules, called the Mortgage Market Review (MMR),
+        mean that it\u2019s not only your income that is taken into account. Now they\u2019ll
+        look closely at your outgoings too and how you spend. If you\u2019re buying
+        with a partner, their finances will also be examined. They\u2019ll look at
+        how you would cope with a rise in interest rates and take into account changes
+        in your lifestyle, such as whether you are likely to retire or have children.
+        </p><p>The result could be that you may not get the amount you need to buy
+        the home you want. </p><p>We\u2019ve developed a tool to help you get an idea
+        of how your finances affect your mortgage application. The <a title=\"Mortgage
+        affordability calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/house-buying/mortgage-affordability-calculator\">Mortgage
+        affordability calculator</a>\u00a0will estimate how much you can afford to
+        borrow to buy a home. </p><p>This calculator is a guide as lenders will all
+        have different affordability criteria when deciding how much to lend to you.
+        A mortgage interview can take around 1.5 hours and this calculator will help
+        you prepare. </p><h2>How the calculator works\u00a0 </h2><p>To complete the
+        tool you\u2019ll need need information on income, take home pay, estimates
+        on loans and credit payments, food and groceries, bills, insurance, child
+        care, etc. </p><p>If you are buying with someone else, please include this
+        information for them. </p><p>The tool will also give you an idea of whether
+        you could manage with the mortgage repayments easily or whether you may be
+        overstretched. If your potential mortgage repayments are high as a percentage
+        of your income and outgoings, you run a high risk of overstretching your budget
+        to meet them, especially if interest rates rise. There are also links to our
+        guides to help you find an affordable mortgage. </p><p>Use our <a title=\"Mortgage
+        affordability calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/house-buying/mortgage-affordability-calculator\">Mortgage
+        affordability calculator</a>. </p><p>You can read more about the changes to
+        mortgage rules in our article \u2018<a title=\"How much can you afford to
+        borrow\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow\">How
+        much can you afford to borrow''</a>. </p>","date":"2014-07-16T15:42:47+00:00"},{"id":"ten-surprisingly-tax-free-cars","title":"Ten
+        surprisingly tax-free cars","description":"Want to pay zero road tax, but
+        don''t want to drive a small electric car? Here are some surprising options...","body":"<p>
+        As motoring costs spiral, making savings wherever you can is more important
+        than ever. </p><p>Paying little or no road tax is one area you could consider
+        when buying your next car, and you don\u2019t have to buy a small electric
+        city car to avoid paying tax - there\u2019s more choice than you think. </p><p>Road
+        tax, or vehicle excise duty (VED), depends on how environmentally-friendly
+        a car is. It is based on how many grams of carbon dioxide (CO2) it emits per
+        kilometre driven. </p><p>There are 13 tax bands with costs ranging from \u00a30
+        (for Band A cars) to \u00a31,090 for Band M* gas-guzzlers (\u00a3500pa from
+        year 2). </p><p>Band A (CO2 emissions up to and including 100g/km) is packed
+        with pure electric cars such as the Nissan Leaf, Renault Zoe, Volkswagen e-UP!
+        And the BMW i3, but there are a few surprises too. </p><p>Read our guide <a
+        title=\"Car tax bands explained\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/car-tax-bands-explained\">Car
+        tax bands explained</a></p><h2>More miles per gallon from plug-in hybrids
+        </h2><p>Band A also includes hybrids (cars that combine a conventional petrol
+        or diesel engine with an electric motor). </p><p>You may be surprised to learn
+        that a large luxury car like the \u00a389,3278 Porsche Panamera 3.0 S E-Hybrid
+        Tiptronic S (includes \u00a35,000 government plug-in car grant) qualifies
+        for \u00a30 car tax. </p><p>The big 4x4 Mitsubishi Outlander PHEV 2.0 GX3h
+        Auto, another plug-in hybrid, also fits into Band A. </p><p><img src=\"/images/porsche_panamera_hybrid_new_size.jpg\"/>However,
+        it\u2019s worth delving into the detail and looking at the total cost of motoring
+        for any new car before splashing out. </p><p>Use our simple <a title=\"Car
+        Cost Calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator?utm_source=pr&amp;utm_medium=offline&amp;utm_campaign=o-car%20launch\">Cost
+        of Motoring tool</a>. </p><p>For instance, the Porsche Panamera has a range
+        of up to 22 miles when relying on electric power, but may only do around 30-40mpg
+        when running on petrol.\u00a0 </p><p>The Panamera is also in the highest insurance
+        group and will depreciate by as much as 50% after three years based on driving
+        10,000 miles a year, according to\u00a0Parkers.co.uk. </p><p>Read our guide
+        <a title=\"Car insurance - how to get the best deal\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/car-insurance-how-to-get-the-best-deal\">Car
+        insurance \u2013 How to get the best deal</a></p><p><img src=\"/images/outlander_phev_260.jpg\"/>The
+        Mitsubishi Outlander PHEV, which costs from \u00a328,249 (includes \u00a35,000
+        government plug-in car grant)\u00a0 is theoretically capable of 148mpg, and
+        can run on pure electric for 32.5 miles. </p><p>However, the miles per gallon
+        will drop to closer to 40 when the 2.0-litre petrol engine is used, while
+        depreciation could be as high as 49% after three years. </p><p>For motorists
+        living in London, both cars are exempt from the \u00a311.50 per day congestion
+        charge. </p><h2>Economical, clean diesels </h2><p>Fuel efficient, low emission
+        new diesel cars, including the Citroen C4 Picasso 1.6 e-HDi Airdream VTR+
+        5dr ETG6, which is a large MPV, also pay no congestion charge. </p><p>The
+        Peugeot 308 2.0 BlueHDi Active 150 Stop-Start, is also Band A, despite its
+        relatively large diesel engine. </p><p>Both cars are capable of 74mpg, but
+        again, you should look at the total cost of motoring, taking depreciation,
+        insurance and other running costs into consideration. </p><p>Use our simple
+        <a title=\"Car cost calculator\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/car-costs-calculator\">Car
+        cost calculator</a></p><p>Read our guide <a title=\"Choosing between petrol
+        and diesel power\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/choosing-between-petrol-and-diesel-power\">Choosing
+        between petrol and diesel power</a></p><h2>Our Top 10 Band A surprises </h2><ol><li>Porsche
+        Panamera 3.0 S E-Hybrid Tiptronic S - 71g/km of CO2, 91mpg</li><li>Mitsubishi
+        Outlander PHEV 2.0 GX3h Auto - 44g/km, 148mpg</li><li>Citroen C4 Grand Picasso
+        1.6 e-HDi VTR Airdream 90hp ETG6 - 98g/km / 74mpg</li><li>Mercedes-Benz B-Class
+        B 180 CDI ECO SE - 98g/km, 74mpg</li><li>Vauxhall Insignia Hatch 2.0 CDTi
+        Design 120PS ecoFLEX Start/Stop - 98g/km, 76mpg</li><li>Renault Captur 1.5
+        dCi Expression 90 Stop and Start - 95 g/km, 79mpg</li><li>Skoda Octavia Estate
+        1.6 TDI CR SE 105PS 4x4 - 99 g/km, 74mpg</li><li>BMW 1 Series 116d EfficientDynamics
+        - 99 g/km, 74mpg</li><li>Volvo V40 2.0 D4 190HP SE - 99 g/km, 74mpg</li><li>
+        Peugeot 308 2.0 BlueHDi Active 150 Stop-Start - 99 g/km, 74mpg</li></ol>","date":"2014-07-16T14:55:27+00:00"},{"id":"two-thirds-struggle-to-repay-their-payday-loan","title":"Two-thirds
+        of users of our Payday loans tool struggle to repay","description":"Stats
+        from our payday loans tool shows you should look for alternatives now, rather
+        than wait for new rules","body":"<p class=\"intro\">Payday loans could be
+        capped so people never have to pay back more than double the amount borrowed.
+        The daily interest rate could be capped at 0.8% while any default fees would
+        be limited to \u00a315, cutting back how much people could end up owing. </p><p>The
+        Financial Conduct Authority (FCA), who regulate the financial services in
+        the UK, have proposed the caps and will now consult on the suggestions. The
+        new rules could come into effect in January 2015. The FCA estimate that it
+        would save consumers an average of \u00a3193 a year. </p><p>Until any changes
+        take place, if you\u2019re considering a payday loan, or are having trouble
+        paying back an existing one, make sure you understand how they work and whether
+        you have other options. </p><p>Some people who get a payday loan are able
+        to pay it back on time. But for others, its easy to get caught out by the
+        high interest rates. </p><p>The Money Advice Service has a helpful <a title=\"Payday
+        loans\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans\">payday
+        loan advice tool</a>\u00a0showing you the alternatives to taking out a loan
+        and where to go for debt advice. Since it\u2019s launch in April, over 45,000
+        people have used it. Nearly two-thirds (63%) of those who searched for alternatives
+        with our tool were struggling to repay a payday loan, while nearly one in
+        five people (19%) said that they were looking for a new payday loan to pay
+        off an existing one. </p><p>We asked our <a title=\"Tell Ma\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/news/tell-ma-were-listening\">Tell
+        MA</a>\u00a0community for their experiences. One said she thought she was
+        \u201clucky\u201d not to have to take one out because she managed to borrow
+        from friends. Another said she was \u201ctempted\u201d but considered it \u201cthe
+        last straw\u201d. </p><p>One of those who had taken out a loan said they\u2019d
+        got \u201cstuck in a vicious cycle\u201d as the amount of money owed just
+        kept building up. </p><p>It\u2019s not just our people in the Tell Ma community
+        who have thought about or taken a loan, but also their friends and families.
+        Unaware that her husband had taken payday loans, one told us \u201cI only
+        became aware of the problem when the phone starting ringing\u201d which was
+        \u201cScary and stressful\u201d. </p><p>If any of these comments sound familiar,
+        take a look at the advice below to see what your options could be. </p><h2>Thinking
+        of getting a payday loan? </h2><p>Our figures show that three out of four
+        (76%) people who used our tool are getting payday loans to meet another debt
+        or to pay for essentials such as food. If you are thinking of getting one,
+        first make sure you understand how they work, and whether there are any cheaper
+        alternatives available to you. </p><p><strong>How They Work</strong></p><p>Payday
+        loans are designed to give people some extra cash to tide them over for a
+        short time until they get paid. Interest rates are very high which can cause
+        problems if you miss your repayment deadline. Only get one if you are 100%
+        sure you can pay it back on time and in full. </p><p>You\u2019re no longer
+        able to roll over your payday loan to another one more than twice. </p><p>Read
+        more about <a title=\"What you need to know\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/payday-loans-what-you-need-to-know\">what
+        you need to know</a>.\u00a0 </p><p><strong>Make sure there aren\u2019t cheaper
+        alternatives</strong></p><p>Though they might seem easy, payday loans shouldn\u2019t
+        be your first thought. Look to see if there are other ways to get money that
+        won\u2019t cost you as much. </p><p>For example, if you\u2019re struggling
+        to pay bills such as gas or electricity, you could find that you can arrange
+        a payment plan with them. </p><p>Or you might be able to get a 0% interest
+        credit card for a big purchase, which you could pay off before the interest
+        kicks in. </p><p>These and many other options are listed in our <a title=\"Payday
+        loans tool\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans/self_service\">tool</a>,
+        with some alternatives listed by why you need the money. </p><h2>Struggling
+        with an existing debts </h2><p><strong>Can\u2019t repay your existing payday
+        loan?</strong></p><p>One in three fails to repay a payday loan in full and
+        on time. If you rollover a loan, it\u2019s very possible you can slip into
+        a spiral where it gets harder and harder to pay it off. Though there could
+        be pressure to get another, you do have rights that protect you. Don\u2019t
+        panic or be pressured into something that could cost you even more in the
+        long run. Our<a title=\"Payday loans tool\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans/existing_pdl\">
+        payday loans tool</a> can point you in the direction to sort out that debt.
+        </p><p><strong>See where you can get free help </strong></p><p>There\u2019s
+        a chance that if you are thinking about getting a payday loan, it\u2019s because
+        you are overstretched and having trouble managing your money. You can use
+        our <a title=\"Debt advice locator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/debt-advice-locator\">debt
+        advice locator tool</a>\u00a0to find free, impartial advice to help you get
+        your finances back on track. </p>","date":"2014-07-16T13:17:06+00:00"},{"id":"my-dog-ate-my-tax-credits-renewal-form","title":"My
+        dog ate my tax credits renewal form","description":"Don''t use one of these
+        excuses if you miss the deadline","body":"<p class=\"intro\">The top 10 excuses
+        for missing the deadline to renew tax credit claims were revealed today by
+        HM Revenue &amp; Customs. </p><p>Excuses by claimants included: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I
+        didn\u2019t need the money because I\u2019d met a rich bloke, but he dumped
+        me </p><p>\u2022\u00a0\u00a0\u00a0\u00a0My mum usually does this for me </p><p>\u2022\u00a0\u00a0\u00a0\u00a0The
+        form was locked in the boot of my car, and then my car caught fire </p><p>\u2022\u00a0\u00a0\u00a0\u00a0My
+        baby used the paperwork as a colouring book </p><p>\u2022\u00a0\u00a0\u00a0\u00a0My
+        dog ate the form </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I got confused with
+        the 31 January Self Assessment deadline </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I
+        booked the last two weeks of July for a holiday and forgot all about it </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I\u2019ve
+        been in hospital but am feeling much better now </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I
+        was unable to get income details from my employers in time </p><p>\u2022\u00a0\u00a0\u00a0\u00a0I
+        thought I\u2019d already renewed </p><p>Claimants have until the 31 July deadline
+        to renew their tax credits, but if they don\u2019t, they risk losing their
+        payments. Last year, more than 650,000 people failed to renew on time. </p><p>This
+        year, as well as being able to renew by post and by phone, claimants with
+        no changes to report are also able to renew online via <a title=\"www.gov.uk/renewtaxcredits\"
+        target=\"_blank\" href=\"http://www.gov.uk/renewtaxcredits\">www.gov.uk/renewtaxcredits</a></p><p>Find
+        out more about <a title=\"claiming tax credits\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/claiming-tax-credits\">claiming
+        tax credits </a></p>","date":"2014-07-15T15:37:36+00:00"},{"id":"one-in-11-britons-has-less-than-gbp10-a-month-disposable-income-02102013","title":"One
+        in 11 Britons has less than \u00a310 a month disposable income","description":"One
+        in 11 people, or 4.5 million British adults, have less than \u00a310 a month
+        left over once they have paid their essential bills, new research from thinkmoney
+        has found.","body":"<p class=\"intro\">One in 11 people, or 4.5 million British
+        adults, have less than \u00a310 a month left over once they have paid their
+        essential bills, research from thinkmoney has found. </p><p>With many households
+        struggling to make ends meet, the findings from budgeting account provider
+        thinkmoney reveal the worryingly small amounts of disposable income people
+        have left once they''ve met all their financial commitments. </p><p>Of the
+        2,149 people polled, one in four said they had less than \u00a350 a month
+        to spend after bills. </p><p>Across the UK, the average monthly disposable
+        income was \u00a3224.50. However, there was a wide gender difference with
+        men reporting having disposable incomes averaging \u00a3272.50, while women
+        saying there''s was \u00a3190.20. </p><p>Young people reported having the
+        least disposable income, with 18-24 year-olds averaging \u00a3174.20 \u2013
+        some 22% below the overall UK average. Almost one in three people in this
+        age group have less than \u00a350 a month to spend after bills. </p><p>By
+        contrast, the wealthiest in terms of post-bills spending money are people
+        over 65, with an average of \u00a3269.50 a month available to spend. </p><p>The
+        amount of disposable income also varies depending on where people live. It
+        is highest in London, at an average of \u00a3261, and the South East, at \u00a3244.
+        People in the North East and Wales have the lowest disposable incomes, at
+        \u00a3199 and \u00a3181 respectively. </p><p>Worryingly, one in six people
+        questioned in Wales said they had less than \u00a310 a month to spend after
+        bills. </p><p><em>\u201cIt\u2019s stressful not knowing if you will have enough
+        money to pay the bills and afford added extras each month,\u201d</em> said
+        Ian Williams, director of communications at thinkmoney. </p><p><a data-type=\"action\"
+        hreflang=\"en\" href=\"/content/tools/budget-planner\">Use our Budget planner
+        to work out how much money you have coming in and what you''re spending it
+        on</a></p><p><em>Photo: PA. </em></p>","date":"2014-07-15T10:07:51+00:00"},{"id":"five-ways-to-buy-your-next-car","title":"Five
+        ways to pay for your new car","description":"Your options for financing a
+        new set of wheels","body":"<p class=\"intro\"> New car sales in the UK are
+        rising and the new \u201c14\u201d registration plates are just released, so
+        plenty of drivers are finding ways to afford a new set of wheels. </p><p>And
+        there are a range of payment options, from buying outright to taking out finance.
+        </p><p>But before taking the plunge, it''s important to make sure you understand
+        exactly what''s involved before splashing out on what will probably be the
+        most expensive thing you''ll buy after your home.\u00a0 </p><p>Here are five
+        ways to afford your new car: </p><h2> 1. Using cash or savings </h2><p>The
+        reality is few people can afford to buy a new car without needing to borrow
+        money for some or all of the cost, although using savings is the cheapest
+        way to finance a car purchase. </p><p>If you don\u2019t have enough savings
+        to buy the car outright, you could use them to give you the biggest deposit
+        possible. </p><p>Even if you use money from your savings, you may be better
+        off buying the car on your credit card (although you should pay the bill off
+        in full the next month) so you benefit from credit card purchase protection.
+        </p><h2>2. Personal loan </h2><p>You can get a personal loan from a bank,
+        building society or finance provider, and these are usually the cheapest way
+        to finance a car (so long as your credit rating is good). </p><p>Make sure
+        the loan is not secured against your home, otherwise you will be putting your
+        home at risk if you failed to keep up with repayments. </p><p>Shop around
+        for the best interest rate by comparing the APR (or annual percentage rate,
+        which includes charges you have to pay as well as the interest). </p><h2>
+        3. Hire purchase </h2><p>Hire purchase is a form of finance and is paid in
+        installments spread over 12-60 months and you usually (but not always) have
+        to put down a 10% deposit. </p><p>They are arranged by the car dealer and
+        are often very competitive for new cars (less so for used cars). The loan
+        is secured against the car, so you don\u2019t own it until the last payment
+        is made. </p><h2>4. Personal Contract Plan </h2><p>This type of car finance
+        deal is a variation on hire purchase and tends to result in lower monthly
+        payments. </p><p>Instead of paying for the car outright, you agree to pay
+        the difference between its sale price and its price for resale back to the
+        dealer, based on a forecast of annual mileage over the term of the agreement.
+        </p><p>Payments are spread over a shorter term of 12 to 36 months. </p><h2>5.
+        Personal Leasing </h2><p>You can pay the dealer a fixed monthly amount for
+        the use of a car, with servicing and maintenance included, as long as the
+        mileage doesn\u2019t exceed a specified limit. </p><p>At the end of the agreement,
+        you hand the car back. It never belongs to you.\u00a0 </p><h2>Car financing:
+        Things to watch out for\u00a0\u00a0 </h2><p>As you compare car financing,
+        <strong>there are a few key things to do</strong> before making a final choice.
+        </p><ul><li>Make sure you can afford the monthly payment.</li><li>Make sure
+        you compare interest rates by looking at the APR (annual percentage rate),
+        which includes all the charges you have to pay. Remember that a higher deposit
+        will normally mean a lower interest rate.</li><li>Compare the total cost of
+        borrowing, including all charges over the loan.</li><li>Think carefully before
+        buying payment protection insurance (PPI) or other insurance, which can be
+        expensive and may give limited cover.</li><li>Beware of early repayment or
+        other charges, which kick in if you exceed the forecast mileage in personal
+        contract plans (and also personal leasing).</li></ul><p><a title=\"Guide to
+        buying a car\" href=\"https://www.moneyadviceservice.org.uk/en/categories/how-to-buy-a-car\">To
+        find out more information read our guide: How to buy a car</a></p><p><em>Photo:
+        PA.</em></p>","date":"2014-07-14T14:28:59+00:00"},{"id":"guilty-pleasures-what-would-make-you-cut-back","title":"Guilty
+        pleasures \u2013 what would make you cut back?","description":"There are some
+        things Brits just won''t go without","body":"<p class=\"intro\">Holidays,
+        eating out and gym membership are all extras we consider so important in our
+        lives that we don\u2019t want to give them up. </p><p>More than one in four
+        people (21%) would not give up any luxuries in order to help them save, according
+        to a survey by Nationwide. </p><p>The biggest priority and least likely to
+        be sacrificed was a holiday; with only 3% of those asked saying they are willing
+        to consider not going away. At the other end of the scale, nearly a third
+        would be willing to stop eating out. </p><p>Surprisingly, people surveyed
+        were more likely to stop going out socially (19%) than going to the gym (just
+        3%), suggesting we\u2019d rather be fit than have fun. Is there something
+        you won\u2019t go without, even if you needed to save money? </p><p>As much
+        as we all like to have non-essentials, if you are saving for something or
+        struggling to pay your bills, not changing your spending habits could push
+        you into debt. </p><p>Here are our top tips to help you start managing your
+        money </p><p><strong>Set up a budget </strong></p><p>If you want to get on
+        top of your finances, a budget is a really good way to start. It\u2019s just
+        a record of money you have coming in (from things like your salary or wages
+        to pensions or benefits) and money going out (such as your rent or mortgage,
+        insurance and Council Tax as well as living expenses and regular and irregular
+        spending). </p><p>A great way to work out your budget is with our <a title=\"Budget
+        planner\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">online
+        budget planner</a>. </p><p><strong>Check where your money goes </strong></p><p>Keeping
+        a spending diary is an effective way of seeing exactly what you spend your
+        money on. Try making a note of what you spend for at least a month (including
+        even small purchases). If you can do it for even longer, you\u2019ll get a
+        fuller picture of what you spend your money on. </p><p>Then look through your
+        diary to see where you can cut back. </p><p>Our <a title=\"Cutback calculator\"
+        target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator\">cut-back
+        calculator</a> will quickly show you how small changes to your day-to-day
+        spending can save you money in the long run. Even small amounts \u2013 for
+        things such as magazines, sandwiches at lunchtime or takeaways \u2013 can
+        add up. </p><p><strong>Set a savings goal </strong></p><p>Some people find
+        it hard to get motivated about saving, but it\u2019s often much easier if
+        you <a title=\"Set a savings goal\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal\">set
+        a goal</a> perhaps to pay for a holiday or a deposit on a new home. That way,
+        rather than thinking about the money you are setting aside each month, you
+        can focus on what you will be able to do with it once you\u2019ve reached
+        your target. </p><p>You might decide cutting back on one or two luxuries is
+        easier when you know it can help you achieve your goal. </p><p>Photo: PA</p>","date":"2014-07-14T09:08:00+00:00"},{"id":"dont-be-caught-out-when-buying-a-used-car","title":"Don''t
+        be caught out when buying a used car","description":"Why buying a used car
+        could leave drivers free-wheeling into financial difficulties or debt","body":"<p
+        class=\"intro\"> Buying a used car could leave drivers free-wheeling into
+        financial difficulties or debt with one in five spending more than they planned.\u00a0
+        </p><p>One in three people are likely to be in the red because of their purchase
+        or have increased their debt as a result of buying their car even before they
+        have to deal with running costs. </p><p>New Money Advice Service research
+        shows almost one in five motorists who bought a used car in the last two years
+        blew their budget, spending \u00a31,815 more than they intended to. More than
+        half found running costs for the first year \u00a3587 higher than expected.
+        </p><h2>The cost of buying a car </h2><p>Motorists spent an average of \u00a35,736
+        on a second-hand car bought in the past two year, with the 65-plus age group
+        spending the most at \u00a37,649 on average and 18-24s spending the least
+        on average at \u00a34,197. </p><p>Money Advice Service findings show almost
+        one in five admitted to spending more than they wanted. The result was those
+        who blew their budget overspent by \u00a31,815 on average. </p><p>Half of
+        those who overstretched did so because they \u2018just really liked the car\u2019,
+        while 38% realised they couldn\u2019t get what they wanted for their original
+        budget. A similar proportion overspent because they wanted a better car with
+        better features. </p><p>See our guide <a title=\"Saving for a car\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-car\">Saving
+        for a car</a> for top tips on affording the car you want. </p><h2>Saving to
+        buy a car </h2><p>A car may be one of the most expensive things we buy, which
+        is why most drivers rely on savings to pay for them. Friends and family stumped
+        up some or all of the money in 13% of cases (many of whom will have to pay
+        back what they are given), while 10% opted for a car finance deal. One in
+        seven either used a personal loan or paid for their car on a credit card.
+        </p><p>If you are thinking of using finance to buy a car, read our guide <a
+        title=\"Whats the best way to finance a car?\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/whats-the-best-way-to-finance-buying-a-car\">What''s
+        the best way to finance a car?</a></p><h2>Running costs stall personal finances
+        for many motorists </h2><p>It\u2019s not just buying the car that\u2019s likely
+        to end up burning a hole in your pocket. Maintenance and repairs account for
+        the largest unexpected cost, with a quarter of motorists spending \u00a3421
+        on average more than they expected in the first 12 months. </p><p>Fuel costs
+        have been high for some time, but they still caught out more than one in four
+        drivers, who spent \u00a3295 on average more than they estimated. </p><p>Unexpectedly
+        large insurance premiums were a headache for 23%, with the average policy
+        costing \u00a3293 more than expected. It\u2019s of little surprise that two
+        in ten car owners ended up in debt as a result of their purchase. </p><h2>Depreciation
+        gets forgotten </h2><p>While the vast majority of recent second-hand car buyers
+        took into account the purchase cost of buying a car, as well as fuel, insurance,
+        possible repairs and maintenance as well as vehicle tax, more than one in
+        four gave no thought to the MOT or depreciation. </p><p>All cars older than
+        three years must have an annual MOT test - apart from the cost of the test
+        you may have to pay to replace worn out parts or other repairs. </p><p>All
+        cars will suffer from depreciation becoming worth less to reflect wear and
+        tear as well as other factors, but some makes and models hold their value
+        better than others. </p><p>It is an important issue for drivers who intend
+        to sell their car after a few years, and hope to recoup a decent amount of
+        their initial spend. </p><p>Our <a title=\"Car costs calculator\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        costs calculator</a> allows you to see the effects of depreciation on the
+        value of a car, as well as typical amounts you\u2019d expect to pay for the
+        vehicle, maintenance and insurance. </p><h2>More than one in four struggled
+        to cover car-running costs </h2><p>While many drivers can cope with higher-than-expected
+        motor-related bills, 27% said they found it hard to meet the costs of keeping
+        their car on the road. Parents with children living at home and female drivers
+        in particular struggled to meet the essentials. </p><p>Three in five of those
+        who experienced difficulties in keeping their car on the road said they were
+        forced to cut back on other things, such as treats and clothing, to pay their
+        bills. Almost one in four of these motorists felt it had a big impact on household
+        finance, but more worrying is that one in five got into debt or increased
+        their debt in order to pay for car-running costs. </p><h2>Haggling? </h2><p>If
+        you want to save cash on a car purchase, consider haggling. Our guide gives
+        some <a title=\"Haggling\" target=\"_blank\" href=\"/en/news/how-haggling-when-buying-a-second-hand-car-can-pay-dividends\">top
+        tips on how to make a killing in the car purchase market</a>. </p><h3>See
+        our infographic on the true cost of buying and running a car </h3><p><img
+        alt=\"Used cars can bring unexpected costs\" src=\"/images/used_cars_can_bring_unexpected_costs.jpg\"/></p>","date":"2014-07-10T09:11:09+00:00"}]'
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 09:44:22 GMT
+recorded_with: VCR 2.9.2

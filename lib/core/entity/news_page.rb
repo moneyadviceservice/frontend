@@ -20,5 +20,9 @@ module Core
     def each(*args, &block)
       items.each(*args, &block)
     end
+
+    def next_page?
+      items.size == DEFAULT_PAGE_SIZE
+    end
   end
 end

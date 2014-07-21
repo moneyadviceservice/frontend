@@ -3,13 +3,16 @@ module Core
     include Enumerable
     extend Forwardable
 
+    FIRST_PAGE = 1
+    DEFAULT_PAGE_SIZE = 10
+
     attr_accessor :items, :page
 
     private :items=, :page=
 
     def_delegators :items, :size, :empty?
 
-    def initialize(opt={})
+    def initialize(opt = {})
       self.items     = opt.fetch(:items) { [] }
       self.page      = opt[:page]
     end

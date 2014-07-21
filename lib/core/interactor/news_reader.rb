@@ -1,14 +1,12 @@
 module Core
   class NewsReader
-    FIRST_PAGE = 1
-    DEFAULT_PAGE_SIZE = 10
 
     attr_accessor :page, :limit
     private :page, :limit
 
     def initialize(options = {})
-      self.page = options.fetch(:page_number, FIRST_PAGE).to_i
-      self.limit = options.fetch(:limit, DEFAULT_PAGE_SIZE).to_i
+      self.page = options.fetch(:page_number, NewsCollection::FIRST_PAGE).to_i
+      self.limit = options.fetch(:limit, NewsCollection::DEFAULT_PAGE_SIZE).to_i
     end
 
     def call

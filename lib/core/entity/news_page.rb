@@ -28,5 +28,9 @@ module Core
     def prev_page?
       page_number > FIRST_PAGE_NUMBER
     end
+
+    def next_page_number
+      page_number + 1
+    end
   end
 end

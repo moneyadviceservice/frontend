@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.1.2'
+gem 'rails', '~> 4.1'
 
 gem 'activerecord-session_store'
 gem 'draper', '~> 1.3.0'

@@ -36,5 +36,21 @@ module Core
         specify { expect(page.next_page?).to be_falsy }
       end
     end
+
+    describe '#prev_page' do
+      let(:options) { { page_number: page_number } }
+
+      context 'when current page smaller than 2' do
+        let(:page_number) { 1 }
+
+        specify { expect(page.prev_page?).to be_falsy }
+      end
+
+      context 'when current page bigger than 1' do
+        let(:page_number) { 2 }
+
+        specify { expect(page.prev_page?).to be_truthy }
+      end
+    end
   end
 end

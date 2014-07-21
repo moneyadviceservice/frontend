@@ -24,5 +24,9 @@ module Core
     def next_page?
       items.size == DEFAULT_PAGE_SIZE
     end
+
+    def prev_page?
+      page_number > FIRST_PAGE_NUMBER
+    end
   end
 end

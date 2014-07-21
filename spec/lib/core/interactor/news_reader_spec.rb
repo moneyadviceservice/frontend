@@ -24,7 +24,7 @@ module Core
       context 'when the repository returns no data' do
         let(:data) { nil }
 
-        it { is_expected.to be_a(NewsCollection) }
+        it { is_expected.to be_a(NewsPage) }
 
         it 'is empty collection' do
           expect(subject).to be_empty
@@ -42,7 +42,7 @@ module Core
           }]
         end
 
-        it { is_expected.to be_a(NewsCollection) }
+        it { is_expected.to be_a(NewsPage) }
 
         specify 'colection items are news article entities' do
           expect(news.first).to be_a(NewsArticle)

@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe NewsCollection do
+  RSpec.describe NewsPage do
     subject(:news_collection) { described_class.new() }
 
     it { is_expected.to respond_to :items }

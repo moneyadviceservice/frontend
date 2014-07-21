@@ -1,5 +1,5 @@
 module Core
-  class NewsCollection
+  class NewsPage
     include Enumerable
     extend Forwardable
 
@@ -13,8 +13,8 @@ module Core
     def_delegators :items, :size, :empty?
 
     def initialize(opt = {})
-      self.items     = opt.fetch(:items) { [] }
-      self.page      = opt[:page]
+      self.items = opt.fetch(:items) { [] }
+      self.page  = opt[:page]
     end
 
     def each(*args, &block)

@@ -3,7 +3,7 @@ RSpec.describe NewsDecorator do
 
   let(:items) { [double, double] }
   let(:page) { 1 }
-  let(:news_collection) { Core::NewsCollection.new(items: items, page: page) }
+  let(:news_collection) { Core::NewsPage.new(items: items, page: page) }
 
   it 'decorates the collection items with NewsArticleDecorator' do
     expect(decorator.first).to be_a(NewsArticleDecorator)

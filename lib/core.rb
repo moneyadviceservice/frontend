@@ -9,7 +9,7 @@ module Core
   autoload :Category, 'core/entity/category'
   autoload :Entity, 'core/entity'
   autoload :NewsArticle, 'core/entity/news_article'
-  autoload :NewsCollection, 'core/entity/news_collection'
+  autoload :NewsPage, 'core/entity/news_page'
   autoload :Other, 'core/entity/other'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'

@@ -32,5 +32,9 @@ module Core
     def next_page_number
       page_number + 1
     end
+
+    def prev_page_number
+      page_number - 1
+    end
   end
 end

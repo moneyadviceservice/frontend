@@ -61,5 +61,15 @@ module Core
         specify { expect(page.next_page_number).to eq(2) }
       end
     end
+
+    describe '#prev_page_number' do
+      let(:options) { { page_number: page_number } }
+
+      context 'when current page is 3' do
+        let(:page_number) { 3 }
+
+        specify { expect(page.prev_page_number).to eq(2) }
+      end
+    end
   end
 end

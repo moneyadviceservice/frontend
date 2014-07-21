@@ -3,7 +3,7 @@ module Core
     subject(:news_collection) { described_class.new() }
 
     it { is_expected.to respond_to :items }
-    it { is_expected.to respond_to :page }
+    it { is_expected.to respond_to :page_number }
 
     it 'is a collection' do
       expect(subject.to_a).to be_kind_of(Array)
@@ -13,9 +13,9 @@ module Core
       expect(subject).to be_empty
     end
 
-    describe '#page' do
+    describe '#page_number' do
       it 'is nil by default' do
-        expect(subject.page).to be_nil
+        expect(subject.page_number).to be_nil
       end
     end
   end

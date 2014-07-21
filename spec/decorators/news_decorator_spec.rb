@@ -2,21 +2,21 @@ RSpec.describe NewsDecorator do
   subject(:decorator) { described_class.decorate(news_collection) }
 
   let(:items) { [double, double] }
-  let(:page) { 1 }
-  let(:news_collection) { Core::NewsPage.new(items: items, page: page) }
+  let(:page_number) { 1 }
+  let(:news_collection) { Core::NewsPage.new(items: items, page_number: page_number) }
 
   it 'decorates the collection items with NewsArticleDecorator' do
     expect(decorator.first).to be_a(NewsArticleDecorator)
   end
 
   describe '#prev_page' do
-    let(:page) { 2 }
+    let(:page_number) { 2 }
 
     specify { expect(decorator.prev_page).to eq(1) }
   end
 
   describe '#next_page' do
-    let(:page) { 1 }
+    let(:page_number) { 1 }
 
     specify { expect(decorator.next_page).to eq(2) }
   end
@@ -36,13 +36,13 @@ RSpec.describe NewsDecorator do
   end
 
   describe '#prev_page?' do
-    context 'when page is bigger than 1' do
-      let(:page) { 2 }
+    context 'when page number is bigger than 1' do
+      let(:page_number) { 2 }
 
       specify { expect(subject.prev_page?).to be_truthy }
     end
 
-    context 'when page is smaller than 2' do
+    context 'when page  number is smaller than 2' do
       let(:page) { 1 }
 
       specify { expect(subject.prev_page?).to be_falsy }

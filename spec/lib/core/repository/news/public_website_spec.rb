@@ -80,11 +80,11 @@ module Core::Repository::News
 
       let(:body) { "[#{File.read('spec/fixtures/news.json')}]" }
       let(:status) { 200 }
-      let(:page) { '' }
+      let(:page_number) { '' }
       let(:limit) { '' }
 
       before do
-        stub_request(:get, "https://example.com/en/news.json?page_number=#{page}&limit=#{limit}")
+        stub_request(:get, "https://example.com/en/news.json?page_number=#{page_number}&limit=#{limit}")
           .to_return(status: status, body: body, headers: {})
       end
 
@@ -105,12 +105,12 @@ module Core::Repository::News
       context 'when optional parameters are given' do
         subject { described_class.new }
 
-        let(:page) { 1 }
+        let(:page_number) { 1 }
         let(:limit) { 10 }
-        let(:options) { { page: page, limit: limit } }
+        let(:options) { { page_number: page_number, limit: limit } }
 
         it 'calls the end point with the given parameters' do
-          expect(connection).to receive(:get).with("/en/news.json?page_number=#{page}&limit=#{limit}")
+          expect(connection).to receive(:get).with("/en/news.json?page_number=#{page_number}&limit=#{limit}")
             .and_return(double(body: []))
 
           subject.all(options)

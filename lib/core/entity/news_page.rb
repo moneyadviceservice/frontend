@@ -8,7 +8,7 @@ module Core
 
     attr_accessor :items, :page_number
 
-    private :items=, :page_number=
+    private :items, :page_number=
 
     def_delegators :items, :size, :empty?
 

@@ -4,7 +4,6 @@ module Core
 
     let(:options) { {} }
 
-    it { is_expected.to respond_to :items }
     it { is_expected.to respond_to :page_number }
 
     it 'is a collection' do
@@ -37,7 +36,7 @@ module Core
       end
     end
 
-    describe '#prev_page' do
+    describe '#prev_page?' do
       let(:options) { { page_number: page_number } }
 
       context 'when current page smaller than 2' do

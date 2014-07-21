@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/homes-and-morgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Jul 2014 09:42:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - bbf47470335739706f46a5f961798cc5
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 22-Jul-2015 09:42:53 GMT; secure
+      - _session_id=bbf47470335739706f46a5f961798cc5; path=/; secure; HttpOnly
+      - _web_tracking=2c0c208bad7e12d7ef4778d0b2c56470; path=/; expires=Wed, 22-Jul-2015
+        09:42:53 GMT; secure
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      X-Runtime:
+      - '0.052376'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Tue, 22 Jul 2014 09:42:53 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/homes-and-morgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Jul 2014 09:42:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - 5a072ba351d947765613490416341d46
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 22-Jul-2015 09:42:53 GMT; secure
+      - _session_id=5a072ba351d947765613490416341d46; path=/; secure; HttpOnly
+      - _web_tracking=edcc2e838cae5b5faed77ad143974171; path=/; expires=Wed, 22-Jul-2015
+        09:42:53 GMT; secure
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      X-Runtime:
+      - '0.036821'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Tue, 22 Jul 2014 09:42:53 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/homes-and-morgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Jul 2014 09:42:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - a98d475833df6e751e30bac99cab67f6
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 22-Jul-2015 09:42:54 GMT; secure
+      - _session_id=a98d475833df6e751e30bac99cab67f6; path=/; secure; HttpOnly
+      - _web_tracking=702169071a8df4ae87991a23c449f3bf; path=/; expires=Wed, 22-Jul-2015
+        09:42:54 GMT; secure
+      X-Request-Id:
+      - 38daed01-78af-4a38-8cbc-94bfb5bf9b23
+      X-Runtime:
+      - '0.038761'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Tue, 22 Jul 2014 09:42:54 GMT
+recorded_with: VCR 2.9.2

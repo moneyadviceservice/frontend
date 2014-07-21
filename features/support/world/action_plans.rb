@@ -19,6 +19,16 @@ module World
       end
     end
 
+    alias_method :action_plan_with_single_parent, :action_plan
+
+    def action_plan_with_two_child_and_one_parent_category
+      fixture 'action_plans/decide-whether-to-rent-or-buy.yml'
+    end
+
+    def action_plan_with_multiple_parents
+      fixture 'action_plans/claim-work-entitlements-when-pregnant.yml'
+    end
+
     def action_plan_in_multiple_categories
       fixture 'action_plans/how-to-manage-your-money-better.yml'
     end

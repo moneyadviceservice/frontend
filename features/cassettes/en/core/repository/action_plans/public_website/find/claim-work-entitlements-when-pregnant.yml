@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/action_plans/claim-work-entitlements-when-pregnant.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 6aa2e8e5-d9be-4f96-b8cd-441df526d7ba
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Jul 2014 09:55:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
+        aW9uX3BsYW5zL2NsYWltLXdvcmstZW50aXRsZW1lbnRzLXdoZW4tcHJlZ25h
+        bnQ+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9
+        IkFjdGlvbiBwbGFuIC0gQ2xhaW0gd29yayBlbnRpdGxlbWVudHMgd2hlbiBw
+        cmVnbmFudCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3Jn
+        LnVrL2N5L2FjdGlvbl9wbGFucy9oYXdsaW8tYnVkZGlvbi1nd2FpdGgtcGFu
+        LWZ5ZGR3Y2gteW4tZmVpY2hpb2c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxh
+        bmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW4gZ3dlaXRocmVkdSDigJMgSGF3
+        bGlvIGJ1ZGRpb24gZ3dhaXRoIHBhbiBmeWRkd2NoIHluIGZlaWNoaW9nIg==
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 0d5cf3a588e2aa3eb288382b1cbfd44b
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 22-Jul-2015 09:55:15 GMT; secure
+      - _session_id=0d5cf3a588e2aa3eb288382b1cbfd44b; path=/; secure; HttpOnly
+      - _web_tracking=fbf9cdfa965bb564bd62124d2af64740; path=/; expires=Wed, 22-Jul-2015
+        09:55:15 GMT; secure
+      X-Request-Id:
+      - 6aa2e8e5-d9be-4f96-b8cd-441df526d7ba
+      X-Runtime:
+      - '0.146861'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"claim-work-entitlements-when-pregnant","title":"Action plan
+        - Claim work entitlements when pregnant","description":"Find out what time
+        off, maternity leave and maternity pay you\u2019re due","body":"<p class=\"intro\"><img
+        alt=\"action plan icon\" src=\"/images/new_action_plan_icon.jpg\"/>If you
+        are pregnant and working you are entitled to paid time off for your antenatal
+        appointments. After a certain stage in your pregnancy you should also be entitled
+        to maternity leave and maternity pay. </p><div class=\"action-item\"><h3>Get
+        paid time off for antenatal care </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
+        </h4><p>No matter how long you''ve been in your job you have a right to paid
+        time off from work so that you can go to your antenatal appointments. </p></div><div
+        class=\"how\"><h4>How? </h4> Give your employer as much notice as possible
+        of your antenatal appointments to help with work planning - and try to arrange
+        appointments at quiet times or outside work hours if you can. </div></div></div><div
+        class=\"action-item\"><h3>Arrange your maternity leave </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Why? </h4><p>No matter how long you''ve been in the job
+        - you''re entitled to a year''s maternity leave. </p></div><div class=\"how\"><h4>How?
+        </h4> Tell your employer when you want to start your maternity leave at least
+        15 weeks before the beginning of the week when your baby is due. <br/><ul><li><a
+        data-link-type=\"attachment\" href=\"https://www.moneyadviceservice.org.uk/files/letter-for-maternity-leave-to-an-employer-300523.doc\">Use
+        our template letter to notify your employer in writing</a></li><li><a target=\"_blank\"
+        data-link-type=\"external\" href=\"https://www.gov.uk/maternity-leave\">Find
+        out more about Statutory Maternity Leave on the Gov.uk website </a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Check how much maternity pay you''ll get </h3><div
+        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>As long as you''ve
+        worked for your employer for 26 weeks and you earn above \u00a3111 a week
+        you should qualify for Statutory Maternity Pay. Some employers pay even more
+        than the statutory amount. </p></div><div class=\"how\"><h4>How? </h4> Look
+        at your contract or talk to your boss or human resources department to find
+        out how much maternity pay you''re entitled to. <br/><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/maternity-pay-and-leave\">Find
+        out more about Statutory Maternity Pay in our guide Maternity pay and leave</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Check whether you''re entitled to Maternity Allowance
+        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If you''re
+        self-employed or haven''t been working for your employer for long enough,
+        you might be able to claim Maternity Allowance instead of Statutory Maternity
+        Pay. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/maternity-allowance\">Read
+        our guide on Maternity Allowance to find out whether you qualify and how to
+        claim</a></li></ul></div></div></div>","categories":["child-benefit","having-a-baby"]}'
+    http_version:
+  recorded_at: Tue, 22 Jul 2014 09:55:15 GMT
+recorded_with: VCR 2.9.2

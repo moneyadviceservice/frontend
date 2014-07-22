@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/homes-and-mortgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 99f08144-dda2-4734-9347-52b8966f9ccb
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Jul 2014 09:44:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - a79dcc2788bc4f3237be6704f0465e07
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 22-Jul-2015 09:44:33 GMT; secure
+      - _session_id=a79dcc2788bc4f3237be6704f0465e07; path=/; secure; HttpOnly
+      - _web_tracking=37e637a120aeaba96ced2a53a6da995a; path=/; expires=Wed, 22-Jul-2015
+        09:44:33 GMT; secure
+      X-Request-Id:
+      - 99f08144-dda2-4734-9347-52b8966f9ccb
+      X-Runtime:
+      - '0.046218'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"homes-and-mortgages","title":"Homes and mortgages","description":"Everything
+        you need to know about buying a home and choosing the right mortgage","parent_id":null,"contents":[{"id":"buying-a-home","type":"category","title":"Buying
+        a home","description":"Work out your overall buying and moving costs, first
+        time buyer advice, and tips and tools to help you work out what you can afford."},{"id":"help-with-mortgages","type":"category","title":"Help
+        with mortgages","description":"Get started with our beginner''s guide to mortgages,
+        getting the right deal, and tips if you''re struggling to pay."},{"id":"types-of-mortgage","type":"category","title":"Types
+        of mortgage","description":"Learn about different kinds of mortgages, from
+        repayment and interest-only to shared equity and buy-to-let."},{"id":"renting-and-letting","type":"category","title":"Renting
+        and letting","description":"Advice to help you work out how much rent you
+        can afford, and how to budget and share costs when renting."}]}'
+    http_version:
+  recorded_at: Tue, 22 Jul 2014 09:44:33 GMT
+recorded_with: VCR 2.9.2

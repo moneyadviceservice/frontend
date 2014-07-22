@@ -1,0 +1,73 @@
+@media print {
+
+  // Remove all background images and colours
+
+  * {
+    background: none !important;
+  }
+
+  // Hide unnecessary components
+
+  .l-header,
+  .l-context-bar,
+  .l-nav,
+  .contact,
+  .related-links,
+  .video-wrapper,
+  .l-footer {
+    display: none;
+  }
+
+  // Resize main column
+  .l-main {
+    width: 100%;
+  }
+
+  // Reset headings and paragraphs to black
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-black;
+  }
+
+  p,
+  .intro {
+    color: $color-black;
+  }
+
+  // Reset add-action elements
+  .editorial .add-action {
+    background: none !important;
+    padding: 0 !important;
+
+    &:before {
+      content: none !important;
+    }
+
+  }
+
+  // Add a simple print style for links displaying the URL
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:link:after {
+    display: inline-block !important;
+    background: none !important;
+    height: auto !important;
+    width: auto !important;
+    content: " (" attr(href) ") " !important;
+  }
+
+  // Reset bullet points to black
+  
+  .list > li:before {
+    color: $color-black !important;
+  }
+}
+

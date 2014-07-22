@@ -1,12 +1,12 @@
 <div class="pagination">
   <% if news.prev_page? %>
-    <%= link_to news_path(page_number: news.prev_page), class: 'button button--compact t-button--previous' do %>
+    <%= link_to news_path(page_number: news.prev_page_number), class: 'button button--compact t-button--previous' do %>
       <span class="icon icon--left-chevron"></span>
       <span class="button--compact__text"><%= t('news.index.newer')%></span>
     <% end %>
   <% end %>
   <% if news.next_page? %>
-     <%= link_to news_path(page_number: news.next_page), class: 'button button--compact t-button--next' do %>
+     <%= link_to news_path(page_number: news.next_page_number), class: 'button button--compact t-button--next' do %>
       <span class="button--compact__text"><%= t('news.index.older')%></span>
       <span class="icon icon--right-chevron"></span>
     <% end %>

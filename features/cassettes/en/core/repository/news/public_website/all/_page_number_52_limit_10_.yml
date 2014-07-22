@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 7d31177f-2a16-4da6-bf42-ab1b13278125
+      - 47579404-19fc-4e26-9312-0daa5a97be89
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 18 Jul 2014 09:44:35 GMT
+      - Mon, 21 Jul 2014 10:33:00 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 5c45a0f31aed6deed201e84a2e38adc0
+      - f490e9988218e99c6b5f1fd8c8933523
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 18-Jul-2015 09:44:35 GMT; secure
-      - _session_id=5c45a0f31aed6deed201e84a2e38adc0; path=/; secure; HttpOnly
-      - _web_tracking=743fdc3e263e6d9372f9c6c50474b863; path=/; expires=Sat, 18-Jul-2015
-        09:44:35 GMT; secure
+      - _cookie_notice=y; path=/; expires=Tue, 21-Jul-2015 10:33:00 GMT; secure
+      - _session_id=f490e9988218e99c6b5f1fd8c8933523; path=/; secure; HttpOnly
+      - _web_tracking=628fb1ef1cf2c28178b6265b34c30bb1; path=/; expires=Tue, 21-Jul-2015
+        10:33:00 GMT; secure
       X-Request-Id:
-      - 7d31177f-2a16-4da6-bf42-ab1b13278125
+      - 47579404-19fc-4e26-9312-0daa5a97be89
       X-Runtime:
-      - '0.055118'
+      - '0.163750'
       X-Rack-Cache:
       - miss
       P3p:
@@ -57,7 +57,28 @@ http_interactions:
       - max-age=16070400
     body:
       encoding: UTF-8
-      string: '[{"id":"energy-bills-for-elderly-have-doubled-since-2005","title":"Energy
+      string: '[{"id":"nine-million-relying-on-a-windfall-to-fund-retirement","title":"Nine
+        million relying on a windfall to fund retirement","description":"More than
+        nine million workers \u2013 almost one in five of the population \u2013 are
+        relying on some sort of windfall to fund their retirement years, according
+        to new findings from LV=","body":"<p><strong> Date published: 14 January 2013</strong></p><p
+        class=\"intro\">More than nine million workers \u2013 almost one in five of
+        the population \u2013 are relying on some sort of windfall to fund their retirement
+        years, according to new findings from LV=. </p><p>According to the report,
+        more than two in three Britons expect their savings pots to be underfunded
+        by the time they retire, or worse still have no idea if they will have sufficient
+        retirement savings in place or not. </p><p>Even more worryingly, 3.6 million
+        workers today are counting on a lottery win to pay for their retirement, despite
+        the odds of winning standing at over 14 million to one. </p><p>A further one
+        in fourteen are relying on some sort of inheritance to cover their living
+        costs in old age, while the hopes of one in twenty rest on the value of their
+        homes increasing substantially. </p><p>Higher earners in particular have not
+        considered the future, with almost two in five of those earning over \u00a340,000
+        a year admitting they are relying on some sort of retirement windfall, compared
+        to one in four of those earning under \u00a340,000. </p><p><strong>Unsure
+        about your retirement funds?<a title=\"action plan\" href=\"https://www.moneyadviceservice.org.uk/en/action_plans/work-out-your-likely-pension-income\">
+        Take our Action plan - Work out your likely pension income</a>.</strong></p><p><em>Photo
+        credit: PA\u00a0</em></p>","date":"2013-01-16T12:12:13+00:00"},{"id":"energy-bills-for-elderly-have-doubled-since-2005","title":"Energy
         bills for elderly have doubled since 2005","description":"Energy bills for
         the elderly have doubled since 2005, according to new research","body":"<p><strong>Date
         published: 11 January 2013</strong>\u00a0\u00a0 </p><p class=\"intro\">Energy
@@ -176,6 +197,6 @@ http_interactions:
         which receive funding from the Money Advice Service will need to demonstrate
         that the standards they follow are in line with the framework. </p><p><a href=\"/en/static/money-advice-service-consults-on-improving-the-quality-of-debt-advice-in-the-uk\">Read
         the press release in full </a></p>","date":"2013-01-16T12:10:35+00:00"}]'
-    http_version:
-  recorded_at: Fri, 18 Jul 2014 09:44:38 GMT
+    http_version: 
+  recorded_at: Mon, 21 Jul 2014 10:33:00 GMT
 recorded_with: VCR 2.9.2

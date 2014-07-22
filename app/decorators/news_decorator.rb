@@ -1,27 +1,10 @@
 class NewsDecorator < Draper::CollectionDecorator
-  delegate :page
+  delegate :next_page?, :prev_page?, :next_page_number, :prev_page_number, :page_number
 
-  PAGE_SIZE = 10
   ALTERNATES_SUFIX = 'GB'
 
   def decorator_class
     NewsArticleDecorator
-  end
-
-  def prev_page
-    object.page - 1
-  end
-
-  def next_page
-    object.page + 1
-  end
-
-  def next_page?
-    object.size == PAGE_SIZE
-  end
-
-  def prev_page?
-    object.page > 1
   end
 
   def canonical_url

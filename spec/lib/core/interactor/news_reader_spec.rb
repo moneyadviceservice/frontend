@@ -4,9 +4,9 @@ module Core
   RSpec.describe NewsReader do
     subject(:news_reader) { described_class.new(options) }
 
-    let(:page) { 2 }
+    let(:page_number) { 2 }
     let(:limit) { 11 }
-    let(:options) { { page_number: page, limit: limit } }
+    let(:options) { { page_number: page_number, limit: limit } }
     let(:public_website) { double }
 
     before do
@@ -14,7 +14,7 @@ module Core
         double(all: data)
       end
 
-      allow(public_website).to receive(:all).with(page: 2, limit: 11).and_return(data)
+      allow(public_website).to receive(:all).with(page_number: 2, limit: 11).and_return(data)
       allow(Registry::Repository).to receive(:[]).with(:news).and_return(public_website)
     end
 
@@ -24,7 +24,7 @@ module Core
       context 'when the repository returns no data' do
         let(:data) { nil }
 
-        it { is_expected.to be_a(NewsCollection) }
+        it { is_expected.to be_a(NewsPage) }
 
         it 'is empty collection' do
           expect(subject).to be_empty
@@ -42,7 +42,7 @@ module Core
           }]
         end
 
-        it { is_expected.to be_a(NewsCollection) }
+        it { is_expected.to be_a(NewsPage) }
 
         specify 'colection items are news article entities' do
           expect(news.first).to be_a(NewsArticle)

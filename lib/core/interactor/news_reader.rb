@@ -1,33 +1,30 @@
 module Core
   class NewsReader
-    FIRST_PAGE = 1
-    DEFAULT_PAGE_SIZE = 10
-
-    attr_accessor :page, :limit
-    private :page, :limit
+    attr_accessor :page_number, :limit
+    private :page_number, :limit
 
     def initialize(options = {})
-      self.page = options.fetch(:page_number, FIRST_PAGE).to_i
-      self.limit = options.fetch(:limit, DEFAULT_PAGE_SIZE).to_i
+      self.page_number = options.fetch(:page_number, NewsPage::FIRST_PAGE_NUMBER).to_i
+      self.limit       = options.fetch(:limit, NewsPage::DEFAULT_PAGE_SIZE).to_i
     end
 
     def call
-      if (items = retrieve_page(page))
+      if (items = retrieve_page(page_number))
         news_items = items.map do |news_article|
           id = news_article.delete('id')
           NewsArticle.new(id, news_article)
         end
 
-        NewsCollection.new(items: news_items, page: page)
+        NewsPage.new(items: news_items, page_number: page_number)
       else
-        NewsCollection.new
+        NewsPage.new
       end
     end
 
     private
 
-    def retrieve_page(page)
-      Registry::Repository[:news].all(page: page, limit: limit)
+    def retrieve_page(page_number)
+      Registry::Repository[:news].all(page_number: page_number, limit: limit)
     end
   end
 end

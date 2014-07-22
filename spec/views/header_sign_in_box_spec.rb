@@ -12,36 +12,19 @@ RSpec.describe 'shared/_authentication', :type => :view do
     render
   end
 
-  context 'when authentication is enabled' do
-    around do |example|
-      Feature.run_with_activated(:authentication) { example.run }
-    end
-
-    context 'when the user is not signed in' do
-      specify { expect(rendered).to include(t('authentication.sign_in')) }
-      specify { expect(rendered).to_not include(t('authentication.sign_out')) }
-      specify { expect(rendered).to include(t('authentication.register')) }
-      specify { expect(rendered).to_not include(t('authentication.my_account')) }
-    end
-
-    context 'when the user is signed in' do
-      let(:logged_in) { true }
-
-      specify { expect(rendered).to_not include(t('authentication.sign_in')) }
-      specify { expect(rendered).to include(t('authentication.sign_out')) }
-      specify { expect(rendered).to_not include(t('authentication.register')) }
-      specify { expect(rendered).to include(t('authentication.my_account')) }
-    end
+  context 'when the user is not signed in' do
+    specify { expect(rendered).to include(t('authentication.sign_in')) }
+    specify { expect(rendered).to_not include(t('authentication.sign_out')) }
+    specify { expect(rendered).to include(t('authentication.register')) }
+    specify { expect(rendered).to_not include(t('authentication.my_account')) }
   end
 
-  context 'when authentication is disabled' do
-    around do |example|
-      Feature.run_with_deactivated(:authentication) { example.run }
-    end
+  context 'when the user is signed in' do
+    let(:logged_in) { true }
 
     specify { expect(rendered).to_not include(t('authentication.sign_in')) }
-    specify { expect(rendered).to_not include(t('authentication.sign_out')) }
+    specify { expect(rendered).to include(t('authentication.sign_out')) }
     specify { expect(rendered).to_not include(t('authentication.register')) }
-    specify { expect(rendered).to_not include(t('authentication.my_account')) }
+    specify { expect(rendered).to include(t('authentication.my_account')) }
   end
 end

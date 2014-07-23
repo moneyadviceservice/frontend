@@ -20,14 +20,16 @@ module Core
 
         NewsCollection.new(items: news_items, page: page)
       else
-        NewsCollection.new
+        block.call if block_given?
       end
     end
 
     private
 
     def retrieve_page(page)
-      Registry::Repository[:news].all(page: page, limit: limit)
+      items = Registry::Repository[:news].all(page: page, limit: limit)
+
+      items if items && items.any?
     end
   end
 end

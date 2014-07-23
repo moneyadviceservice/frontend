@@ -19,19 +19,20 @@ module Core
     end
 
     describe '#call' do
-      subject(:news) { news_reader.call }
-
       context 'when the repository returns no data' do
         let(:data) { nil }
 
-        it { is_expected.to be_a(NewsCollection) }
+        it_behaves_like 'optional failure block'
+      end
 
-        it 'is empty collection' do
-          expect(subject).to be_empty
-        end
+      context 'when the repository returns an empty collection' do
+        let(:data) { [] }
+
+        it_behaves_like 'optional failure block'
       end
 
       context 'when the repository returns data' do
+        subject(:news) { news_reader.call }
 
         let(:data) do
           [{

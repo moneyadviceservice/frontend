@@ -11,7 +11,7 @@ module Core
       self.limit = options.fetch(:limit, DEFAULT_PAGE_SIZE).to_i
     end
 
-    def call
+    def call(&block)
       if (items = retrieve_page(page))
         news_items = items.map do |news_article|
           id = news_article.delete('id')
@@ -20,14 +20,16 @@ module Core
 
         NewsCollection.new(items: news_items, page: page)
       else
-        NewsCollection.new
+        block.call if block_given?
       end
     end
 
     private
 
     def retrieve_page(page)
-      Registry::Repository[:news].all(page: page, limit: limit)
+      items = Registry::Repository[:news].all(page: page, limit: limit)
+
+      items if items && items.any?
     end
   end
 end

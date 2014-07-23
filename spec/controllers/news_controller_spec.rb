@@ -60,5 +60,13 @@ RSpec.describe NewsController, type: :controller do
 
       expect(assigns(:news)).to eq(news)
     end
+
+    context 'when news index does not exist' do
+      it 'raises an ActionController RoutingError' do
+        allow_any_instance_of(Core::NewsReader).to receive(:call).and_yield
+
+        expect { get :index, locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+      end
+    end
   end
 end

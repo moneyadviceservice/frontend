@@ -6,7 +6,11 @@
 
 .authentication__item {
   @include inline-block;
-  padding: 0 0 0 $baseline-unit*2;
+  padding: 0 0 0 $baseline-unit*4;
+
+  .theme-cy & {
+    padding-left: $baseline-unit*2;
+  }
 }
 
 .authentication__link {

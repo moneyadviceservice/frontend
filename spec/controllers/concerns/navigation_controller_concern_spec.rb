@@ -51,4 +51,38 @@ RSpec.describe Navigation, :type => :controller do
 
     specify { expect(controller.active_categories).to be_empty }
   end
+
+  describe '#assign_active_categories' do
+    let(:klass) do
+      Class.new(ApplicationController) do
+        include Navigation
+
+        public :assign_active_categories, :active_categories, :clear_active_categories
+      end
+    end
+    let(:parent_id_1) { 'parent-id-1' }
+    let(:category) do
+      instance_double(Core::Category, id: category_id_1, parent_id: parent_id_1, child?: child)
+    end
+    let(:controller) { klass.new }
+
+    subject { controller.active_categories }
+
+    before do
+      controller.clear_active_categories
+      controller.assign_active_categories(category, category)
+    end
+
+    context 'when category is a child category' do
+      let(:child) { true }
+
+      it { is_expected.to eq([category_id_1, parent_id_1, category_id_1, parent_id_1]) }
+    end
+
+    context 'when category is not a child category' do
+      let(:child) { false }
+
+      it { is_expected.to eq([category_id_1, category_id_1]) }
+    end
+  end
 end

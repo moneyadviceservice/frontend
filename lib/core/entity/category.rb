@@ -5,7 +5,7 @@ module Core
     validates_presence_of :title
 
     def child?
-      !contents.present? or contents.any? { |c| c.class != Category }
+      contents.blank? or contents.any? { |c| c.class != Category }
     end
 
     def parent?

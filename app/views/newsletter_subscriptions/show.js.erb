@@ -11,14 +11,16 @@
 
     $newsletterInput.attr({'aria-invalid' : false });
   <% else %>
-    var $error;
+    var newsletterErrorID = 'newsletter_error',
+        $error;
+
     $('p.js-newsletter-error-msg').remove();
     $error = $('<p />')
                 .addClass('newsletter__text js-newsletter-error-msg')
                 .text('<%= flash[:error] %>')
-                .attr('id', 'newsletter_error');
+                .attr('id', newsletterErrorID);
 
     $newsletterForm.addClass(errorClass).prepend($error);
-    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : 'newsletter_error'}).focus();
+    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : newsletterErrorID}).focus();
   <% end %>
 })();

@@ -6,6 +6,10 @@
     background: none !important;
   }
 
+  .mas-logo {
+    display: block !important;
+  }
+
   // Hide unnecessary components
 
   .l-header,
@@ -80,6 +84,10 @@
 
   a[href^="http"]:link:after {
     content: " (" attr(href) ") " !important;
+  }
+
+  a:before {
+    content: none !important;
   }
 
   // Reset bullet points to black

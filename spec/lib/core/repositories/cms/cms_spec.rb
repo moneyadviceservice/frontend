@@ -1,5 +1,5 @@
-module Core::Repository::Cms
-  RSpec.describe Cms do
+module Core::Repository::CMS
+  RSpec.describe CMS do
     let(:url) { 'https://example.com' }
 
     describe '#find' do

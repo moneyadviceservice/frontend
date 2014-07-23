@@ -87,8 +87,8 @@ module Core
       autoload :Cream, 'core/repository/customers/cream'
     end
 
-    module Cms
-      autoload :Cms,           'core/repository/cms/cms'
+    module CMS
+      autoload :CMS,           'core/repository/cms/cms'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
     end
 

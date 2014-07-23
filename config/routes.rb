@@ -45,6 +45,11 @@ Rails.application.routes.draw do
       match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
     end
 
+    Feature.with(:pensions_calculator) do
+      mount PensionsCalculator::Engine => '/tools/:tool_id',
+        constraints: { tool_id: %r{pension-calculator|cyfrifiannell-pensiwn} }
+    end
+
     match '/tools/:id', to: NOT_IMPLEMENTED, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'

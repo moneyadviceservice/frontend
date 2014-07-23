@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'http://gems.test.mas'
 
 # RULES OF THE GEMFILE
 #
@@ -10,6 +11,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.1'
 
 gem 'activerecord-session_store'
+gem 'bowndler'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -26,6 +28,8 @@ gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
+
+gem 'pensions_calculator', '~> 0.1', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: 'mount_in_responsive'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -45,7 +45,7 @@
 
   <% if cookies_not_accepted? %>
     <div class="cookie-message l-constrained l-padded">
-      <%= form_tag cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+      <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
         <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
         <button class="cookie-message__close-button">
           <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
@@ -85,16 +85,16 @@
       <li class="footer-site-links__login">
         <span class="icon icon--account"></span>
         <% if user_signed_in? %>
-          <%= button_to t('authentication.sign_out'), destroy_user_session_path,
+          <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path,
                         class: 'authentication__link', method: :delete %>
           <span class="footer-site-links__pipe">|</span>
-          <%= link_to t('authentication.my_account'), edit_user_registration_path,
+          <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path,
                       class: 'authentication__link' %>
         <% else %>
-          <%= link_to t('authentication.sign_in'), new_user_session_path,
+          <%= link_to t('authentication.sign_in'), main_app.new_user_session_path,
                       class: 'authentication__link' %>
           <span class="footer-site-links__pipe">|</span>
-          <%= link_to t('authentication.register'), new_user_registration_path,
+          <%= link_to t('authentication.register'), main_app.new_user_registration_path,
                       class: 'authentication__link' %>
         <% end %>
       </li>

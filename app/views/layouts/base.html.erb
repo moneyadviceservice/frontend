@@ -75,15 +75,15 @@
             if (src) file.src = src;
             if (content) file.innerHTML = content;
             position.parentNode.insertBefore(file, position);
-          }
+          };
 
           html = d.getElementsByTagName('html')[0];
 
           bootstrap = {
             env: '<%= Rails.env %>',
             timestamp: new Date().getTime(), <%# needs to be run as soon to page load as possible %>
-            i18nLocale: '<%= I18n.locale %>',
-          }
+            i18nLocale: '<%= I18n.locale %>'
+          };
 
           fonts = {
             url: '<%= stylesheet_path('frontend-assets/stylesheets/font_base64') %>',
@@ -91,7 +91,7 @@
             loadClass: 'wf-museosans-n4-active fontsLoaded',
             localstorage: undefined,
             loadWithJS: responsiveStyle <%# for responsive load with JS, for fixed load inline in CSS %>
-          }
+          };
 
           <%# Run support tests and cache values %>
           supports = (function() {
@@ -105,8 +105,8 @@
               }
             }
 
-            S.js = ( supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ) ? 'advanced' : 'basic';
-            S.touch = ( supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w) );
+            S.js = supportTest('querySelector', d) && supportTest('localStorage', w) && supportTest('addEventListener', w) ? 'advanced' : 'basic';
+            S.touch = supportTest('ontouchstart', w) || supportTest('onmsgesturechange', w);
             S.localstorage = supportTest('localStorage', w);
             S.svg = (function() {
               return !!d.createElementNS && !!d.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect

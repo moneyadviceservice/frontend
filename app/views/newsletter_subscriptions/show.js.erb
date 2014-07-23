@@ -1,9 +1,24 @@
 (function() {
+  var $newsletterForm = $('.js-newsletter-form'),
+      $newsletterInput = $newsletterForm.find('.js-newsletter-input'),
+      errorClass = 'is-errored';
+
   <% if @success %>
-  $('.js-newsletter-form').removeClass('is-errored').html('<%= flash[:success] %>');
+    $newsletterForm
+      .attr({'role':'alert', 'aria-live': 'polite'})
+      .removeClass(errorClass)
+      .html('<%= flash[:success] %>');
+
+    $newsletterInput.attr({'aria-invalid' : false });
   <% else %>
-  $('p.js-newsletter-error-msg').remove();
-  var error = $('<p />').addClass('newsletter__text js-newsletter-error-msg').text('<%= flash[:error] %>');
-  $('.js-newsletter-form').addClass('is-errored').prepend(error);
+    var $error;
+    $('p.js-newsletter-error-msg').remove();
+    $error = $('<p />')
+                .addClass('newsletter__text js-newsletter-error-msg')
+                .text('<%= flash[:error] %>')
+                .attr('id', 'newsletter_error');
+
+    $newsletterForm.addClass(errorClass).prepend($error);
+    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : 'newsletter_error'}).focus();
   <% end %>
 })();

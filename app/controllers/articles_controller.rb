@@ -13,9 +13,6 @@ class ArticlesController < ApplicationController
     @related_content = CategoriesWithRestrictedContents.build(@article.categories,
       RelatedContent.build(@article))
 
-    @article.categories.each do |category|
-      active_category category.id
-      active_category category.parent_id if category.child?
-    end
+    assign_active_categories(*@article.categories)
   end
 end

@@ -8,17 +8,8 @@ class ActionPlansController < ApplicationController
       not_found
     end
 
-    add_active_categories(@action_plan.categories)
+    assign_active_categories(*@action_plan.categories)
 
     @breadcrumbs = BreadcrumbTrail.build(@action_plan, category_tree)
-  end
-
-  private
-
-  def add_active_categories(categories)
-    categories.each do |category|
-      active_category category.id
-      active_category category.parent_id if category.child?
-    end
   end
 end

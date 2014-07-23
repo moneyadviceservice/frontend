@@ -10,7 +10,6 @@ class CategoriesController < ApplicationController
 
     @breadcrumbs = BreadcrumbTrail.build(@category, category_tree)
 
-    active_category @category.id
-    active_category @category.parent_id if @category.child?
+    assign_active_categories(@category)
   end
 end

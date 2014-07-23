@@ -14,16 +14,16 @@
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:attempting) %>">
           <%= f.errors_for :attempting %>
           <label for="email" class="form__label-heading"><%= t('.trying_to_do_html') %></label>
-          <%= f.text_area :attempting, :cols => 60, :rows => 6, 'aria-required' => true %>
+          <%= f.text_area :attempting, :cols => 60, :rows => 6, 'aria-required' => true, :class => 't-technical-feedback__attempting' %>
         </div>
 
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:occurred) %>">
           <%= f.errors_for :occurred %>
           <label for="email" class="form__label-heading"><%= t('.what_went_wrong_html') %></label>
-          <%= f.text_area :occurred, :cols => 60, :rows => 6, 'aria-required' => true %>
+          <%= f.text_area :occurred, :cols => 60, :rows => 6, 'aria-required' => true, :class => 't-technical-feedback__occurred' %>
         </div>
 
-        <input class="button button--primary" type="submit" value="<%= t('.submit_button') %>">
+        <input class="button button--primary t-technical-feedback__submit" type="submit" value="<%= t('.submit_button') %>">
       <% end %>
     </main>
   </div>

@@ -5,7 +5,7 @@ require 'faraday/request/x_forwarded_proto'
 
 google_api_connection     = Core::ConnectionFactory::Http.build('https://www.googleapis.com/')
 public_website_connection = Core::ConnectionFactory::Http.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
-internal_email_connection = Core::ConnectionFactory::Smtp.build(from_address: 'Development.Team@moneyadviceservice.org.uk')
+internal_email_connection = Core::ConnectionFactory::Smtp.build(from_address: 'jon.gilbraith.mas@gmail.com')
 
 public_website_connection.builder.insert_after(Faraday::Request::RequestId,
                                                Faraday::Request::HostHeader)

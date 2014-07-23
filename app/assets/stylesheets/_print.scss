@@ -31,12 +31,12 @@
   h4,
   h5,
   h6 {
-    color: $color-black;
+    color: $color-text-default;
   }
 
   p,
   .intro {
-    color: $color-black;
+    color: $color-text-default;
   }
 
   // Reset add-action elements
@@ -65,9 +65,9 @@
   }
 
   // Reset bullet points to black
-  
+
   .list > li:before {
-    color: $color-black !important;
+    color: $color-text-default !important;
   }
 }
 

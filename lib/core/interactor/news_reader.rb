@@ -11,7 +11,7 @@ module Core
       self.limit = options.fetch(:limit, DEFAULT_PAGE_SIZE).to_i
     end
 
-    def call
+    def call(&block)
       if (items = retrieve_page(page))
         news_items = items.map do |news_article|
           id = news_article.delete('id')

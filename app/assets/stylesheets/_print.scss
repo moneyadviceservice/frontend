@@ -39,6 +39,15 @@
     color: $color-text-default;
   }
 
+  .callout {
+    margin: 0 !important;
+  }
+
+  .callout h3,
+  .callout p {
+    margin-left: 0 !important;
+  }
+
   // Reset add-action elements
   .editorial .add-action {
     background: none !important;

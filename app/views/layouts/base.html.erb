@@ -22,10 +22,12 @@
 
   <%= baseline_grid %>
 
-  <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
+  <%# Basic styles for all devices, doesn't contain anything that could cause rendering issues
+      such as positional info %>
   <%= stylesheet_link_tag 'frontend-assets/stylesheets/basic' %>
 
-  <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
+  <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries,
+      but will include .ie specific fixes %>
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
     <%= stylesheet_link_tag 'frontend-assets/stylesheets/font_files' %>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
@@ -41,10 +43,9 @@
 
   <%= yield :head %>
 
-  <%# START MAS setup JS %>
-  <%# Any JS that is required before DOM is created should be in this block
-      includes feature detection, analytics setup, json bootstrap %>
-
+  <%# START MAS JAVASCRIPT SETUP
+      Any JS that is required before DOM is created should be in this block
+      includes feature detection, analytics setup, JSON bootstrap %>
   <script type="text/javascript">
 
     <%# // Inline custom Modernizr %>
@@ -80,7 +81,7 @@
 
           bootstrap = {
             env: '<%= Rails.env %>',
-            timestamp: new Date().getTime(), <%# // needs to be run as soon to page load as possible %>
+            timestamp: new Date().getTime(), <%# needs to be run as soon to page load as possible %>
             i18nLocale: '<%= I18n.locale %>',
           }
 
@@ -89,10 +90,10 @@
             cacheName: 'MAS.fonts',
             loadClass: 'wf-museosans-n4-active fontsLoaded',
             localstorage: undefined,
-            loadWithJS: responsiveStyle <%# // for responsive load with JS, for fixed load inline in CSS %>
+            loadWithJS: responsiveStyle <%# for responsive load with JS, for fixed load inline in CSS %>
           }
 
-          <%# // Run support tests and cache values %>
+          <%# Run support tests and cache values %>
           supports = (function() {
             var S = {};
 
@@ -115,31 +116,29 @@
             return S
           })();
 
-          <%# //// Run modify DOM and load files %>
+          <%# Run modify DOM and load files %>
 
-          <%# // Load font from localStorage %>
+          <%# Load font from localStorage %>
           if (supports.localstorage && localStorage.getItem(fonts.cacheName) !== null) {
             html.className = html.className += (' ' + fonts.loadClass);
             appendFile('style', false, localStorage.getItem(fonts.cacheName));
             fonts.localstorage = true;
           }
 
-          <%# // JS support > Update className %>
+          <%# JS support > Update className %>
           html.className = html.className.replace('supports-js', 'supports-js js js-' + supports.js);
 
           <% if Rails.env.production? %>
-          <%# // LOAD: Crazy Egg Heatmaps 3rd Party code %>
+          <%# LOAD: Crazy Egg Heatmaps 3rd Party code %>
           setTimeout(function() {
             var src = d.location.protocol + "<%= Rails.application.config.crazy_egg_url %>?" + Math.floor(new Date().getTime() / 3600000);
             appendFile('script', src);
           }, 1);
           <% end %>
 
-          <%#
-          // Fix for iPhone viewport scale bug  => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
-          // Copied from Mobile Boiler Plate
-          // vp = viewport / ua = useragent / gs = gesture start / sf = scaleFix
-          %>
+          <%# Fix for iPhone viewport scale bug => http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug
+              Copied from Mobile Boiler Plate
+              vp = viewport / ua = user agent / gs = gesture start / sf = scaleFix %>
           var vp, ua, gs, sf;
           vp = d.querySelector && d.querySelector('meta[name="viewport"]');
           ua = navigator.userAgent;
@@ -153,7 +152,7 @@
             vp.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
           };
 
-          <%# // Return values to be assigned to MAS global namespace %>
+          <%# Return values to be assigned to MAS global namespace %>
           return {
             bootstrap: bootstrap,
             fonts: fonts,
@@ -164,12 +163,12 @@
     };
 
   </script>
-  <%# END MAS setup JS %>
+  <%# END MAS JAVASCRIPT SETUP %>
 
 </head>
 <body class="<%= locale_class %> l-body">
 
-<%# START Google Analytics scripts %>
+<%# START Google Tag Manager embed code %>
 <% if Rails.env.production? %>
   <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
@@ -188,7 +187,7 @@
     })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
   </script>
 <% end %>
-<%# END Google Analytics scripts %>
+<%# END Google Tag Manager embed code %>
 
 <a id="top"></a>
 

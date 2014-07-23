@@ -5,6 +5,7 @@
 .newsletter__heading {
   @extend %font-heading-heavy;
   @include body(21, 22);
+  color: $color-newsletter-heading;
   margin-top: 0;
 }
 

@@ -10,8 +10,8 @@ class ArticlesController < ApplicationController
     end
 
     @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
-    @related_content = CategoriesWithRestrictedContents.build(@article.categories,
-      RelatedContent.build(@article))
+    @related_content = CategoriesWithRestrictedContents
+      .build(@article.categories, RelatedContent.build(@article))
 
     assign_active_categories(*@article.categories)
   end

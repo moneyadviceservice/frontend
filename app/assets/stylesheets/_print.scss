@@ -57,10 +57,19 @@
   }
 
   a:link:after {
+    font-size: 80%;
     display: inline-block !important;
     background: none !important;
     height: auto !important;
     width: auto !important;
+    margin-left: 0 !important;
+  }
+
+  a[href^="/en/"]:link:after {
+    content: " (https://www.moneyadviceservice.org.uk" attr(href) ") " !important;
+  }
+
+  a[href^="http"]:link:after {
     content: " (" attr(href) ") " !important;
   }
 

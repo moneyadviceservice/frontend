@@ -8,7 +8,7 @@ When(/^I visit the news page$/) do
 end
 
 When(/^I visit the last news page$/) do
-  news_page.load(locale: 'en', page_number: '52')
+  news_page.load(locale: 'en', page_number: '53')
 end
 
 Then(/^I should( not)? see the 'Older' button$/) do |negate|

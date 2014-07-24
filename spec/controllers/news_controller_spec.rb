@@ -7,6 +7,7 @@ RSpec.describe NewsController, type: :controller do
     before do
       allow(Core::NewsArticleReader).to receive(:new) { news_reader }
       allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+      allow(Core::NewsReader).to receive(:new) { -> { [] } }
     end
 
     it 'is succesful' do

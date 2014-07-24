@@ -1,0 +1,367 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?limit=6&page_number=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - c5192b5b-5e29-4f4d-8436-005019a6118e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 Jul 2014 13:51:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 396e9f223c0b04d5ddd51f899f607c59
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 24-Jul-2015 13:51:55 GMT; secure
+      - _session_id=396e9f223c0b04d5ddd51f899f607c59; path=/; secure; HttpOnly
+      - _web_tracking=136fb859039cf13c01bad84e3bcfd806; path=/; expires=Fri, 24-Jul-2015
+        13:51:55 GMT; secure
+      X-Request-Id:
+      - c5192b5b-5e29-4f4d-8436-005019a6118e
+      X-Runtime:
+      - '0.067721'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"buying-a-car-uks-most-reliable-cars-revealed-in-new-survey","title":"Buying
+        a car? UK''s most reliable cars revealed in new survey","description":"Which?
+        Car Survey unveils its 2014 winners in eight categories","body":"<p class=\"intro\">Which?
+        Car Survey, the UK''s biggest round-up of car reliability and satisfaction,
+        has unveiled its 2014 winners in eight categories. </p><p>This year, more
+        than 49,000 car owners reported back on 58,055 cars and Which? Car rated 283
+        models on durability, breakdowns, faults and time off the road. </p><p>The
+        Citro\u00ebn C1 supermini, which has just been replaced by a new model, was
+        the most reliable new car of 2014, with a reliability rating of 99.3% for
+        the first three years. </p><p>The Toyota Avensis was the most reliable car
+        over three years old, with a score of 97% </p><p>BMW and Toyota took joint
+        manufacturer honours - both coming top in two of the eight car classes. </p><h2>Most
+        reliable cars in each class </h2><p><strong>Superminis</strong>: Citro\u00ebn
+        C1 (2005-2014, petrol versions) 99.3% </p><p><strong>Medium cars: </strong>Toyota
+        Auris (2012-) 98.8% </p><p><strong>Large cars:</strong> Skoda Octavia (2013-)
+        98.7% </p><p><strong>Luxury cars:</strong> Mercedes-Benz E-class (2009-) 94.5%
+        </p><p><strong>Estate cars:</strong> BMW 3 Series Touring (2012-) 96.6% </p><p><strong>MPVs:
+        </strong>Toyota Verso (2009-) 98.5% </p><p><strong>4x4s/SUVs:</strong> Honda
+        CR-V (2012-, petrol versions) 98.5% </p><p><strong>Sports cars:</strong> BMW
+        3 Series Coup\u00e9 (2006-2013) 96.6% </p><p>You can find out more about <a
+        title=\"Car reliability guide\" href=\"https://www.moneyadviceservice.org.uk/en/articles/the-most-reliable-cars-to-own\">car
+        reliability</a> in our full<a title=\"Guide to buying, selling and running
+        a car\" href=\"https://www.moneyadviceservice.org.uk/en/categories/cars-and-travel\">
+        guide to buying, selling and running a car.</a></p><p>However, reliability
+        is not the only factor you need to consider when buying a car - you should
+        look at setting a<a title=\"Setting a car buying budget\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-find-the-right-car-for-your-budget\">
+        realistic budget</a> and the total cost of motoring using our <a title=\"Car
+        Costs Calculator\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        Costs Calculator.</a>\u00a0 </p><h2>Top 10 questions to ask yourself before
+        buying a car </h2><p>Ask yourself the following questions so that you don\u2019t
+        overlook any of your essential practical needs when choosing your car: </p><ul><li>Do
+        I need to keep running costs such as tax, insurance and fuel to a minimum?</li><li>Do
+        I want a car that will hold its value well?</li><li>How much space do I need
+        for passengers, including perhaps a dog?</li><li>Would I like to buy one of
+        the most reliable cars?</li><li>Will I normally be driving short distances
+        or longer journeys?</li><li>Do I want my car to be environmentally-friendly
+        and economical?</li><li>Do I want one of the safest cars on the road?</li><li>Do
+        I need to be sure the car will fit in my garage?</li><li>What length of warranty
+        am I looking for?</li><li>Does my car need to be able to tow a caravan?\u00a0</li></ul><br/><p>You
+        have to be a Which? member to access the Which? Car Survey 2014. However,
+        Which? offers a month\u2019s trial membership for just \u00a31, but remember
+        to set the cancellation reminder or you could end up being charged for a full
+        subscription. Find out more at <a title=\"Which? Car Survey\" href=\"http://www.which.co.uk/cars/survey\">which.co.uk/cars/survey.\u00a0</a></p>","date":"2014-07-24T12:47:13+00:00"},{"id":"ten-surprisingly-tax-free-cars","title":"Ten
+        surprisingly tax-free cars","description":"Want to pay zero road tax, but
+        don''t want to drive a small electric car? Here are some surprising options...","body":"<p
+        class=\"intro\"> As motoring costs spiral, making savings wherever you can
+        is more important than ever. </p><p>Paying little or no road tax is one area
+        you could consider when buying your next car, and you don\u2019t have to buy
+        a small electric city car to avoid paying tax - there\u2019s more choice than
+        you think. </p><p>Road tax, or vehicle excise duty (VED), depends on how environmentally-friendly
+        a car is. It is based on how many grams of carbon dioxide (CO2) it emits per
+        kilometre driven. </p><p>There are 13 tax bands with costs ranging from \u00a30
+        (for Band A cars) to \u00a31,090 for Band M* gas-guzzlers (\u00a3500pa from
+        year 2). </p><p>Band A (CO2 emissions up to and including 100g/km) is packed
+        with pure electric cars such as the Nissan Leaf, Renault Zoe, Volkswagen e-UP!
+        And the BMW i3, but there are a few surprises too. </p><p>Read our guide <a
+        title=\"Car tax bands explained\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/car-tax-bands-explained\">Car
+        tax bands explained</a></p><h2>More miles per gallon from plug-in hybrids
+        </h2><p>Band A also includes hybrids (cars that combine a conventional petrol
+        or diesel engine with an electric motor). </p><p>You may be surprised to learn
+        that a large luxury car like the \u00a389,3278 Porsche Panamera 3.0 S E-Hybrid
+        Tiptronic S (includes \u00a35,000 government plug-in car grant) qualifies
+        for \u00a30 car tax. </p><p>The big 4x4 Mitsubishi Outlander PHEV 2.0 GX3h
+        Auto, another plug-in hybrid, also fits into Band A. </p><p><img src=\"/images/porsche_panamera_hybrid_new_size.jpg\"/>However,
+        it\u2019s worth delving into the detail and looking at the total cost of motoring
+        for any new car before splashing out. </p><p>Use our simple <a title=\"Car
+        Cost Calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator?utm_source=pr&amp;utm_medium=offline&amp;utm_campaign=o-car%20launch\">Cost
+        of Motoring tool</a>. </p><p>For instance, the Porsche Panamera has a range
+        of up to 22 miles when relying on electric power, but may only do around 30-40mpg
+        when running on petrol.\u00a0 </p><p>The Panamera is also in the highest insurance
+        group and will depreciate by as much as 50% after three years based on driving
+        10,000 miles a year, according to\u00a0Parkers.co.uk. </p><p>Read our guide
+        <a title=\"Car insurance - how to get the best deal\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/car-insurance-how-to-get-the-best-deal\">Car
+        insurance \u2013 How to get the best deal</a></p><p><img src=\"/images/mitsubishi.jpg\"/>The
+        Mitsubishi Outlander PHEV, which costs from \u00a328,249 (includes \u00a35,000
+        government plug-in car grant)\u00a0 is theoretically capable of 148mpg, and
+        can run on pure electric for 32.5 miles. </p><p>However, the miles per gallon
+        will drop to closer to 40 when the 2.0-litre petrol engine is used, while
+        depreciation could be as high as 49% after three years. </p><p>For motorists
+        living in London, both cars are exempt from the \u00a311.50 per day congestion
+        charge. </p><h2>Economical, clean diesels </h2><p>Fuel efficient, low emission
+        new diesel cars, including the Citroen C4 Picasso 1.6 e-HDi Airdream VTR+
+        5dr ETG6, which is a large MPV, also pay no congestion charge. </p><p>The
+        Peugeot 308 2.0 BlueHDi Active 150 Stop-Start, is also Band A, despite its
+        relatively large diesel engine. </p><p>Both cars are capable of 74mpg, but
+        again, you should look at the total cost of motoring, taking depreciation,
+        insurance and other running costs into consideration. </p><p>Use our simple
+        <a title=\"Car cost calculator\" target=\"_blank\" href=\"http://www.moneyadviceservice.org.uk/car-costs-calculator\">Car
+        cost calculator</a></p><p>Read our guide <a title=\"Choosing between petrol
+        and diesel power\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/choosing-between-petrol-and-diesel-power\">Choosing
+        between petrol and diesel power</a></p><h2>Our Top 10 Band A surprises </h2><ol><li>Porsche
+        Panamera 3.0 S E-Hybrid Tiptronic S - 71g/km of CO2, 91mpg</li><li>Mitsubishi
+        Outlander PHEV 2.0 GX3h Auto - 44g/km, 148mpg</li><li>Citroen C4 Grand Picasso
+        1.6 e-HDi VTR Airdream 90hp ETG6 - 98g/km / 74mpg</li><li>Mercedes-Benz B-Class
+        B 180 CDI ECO SE - 98g/km, 74mpg</li><li>Vauxhall Insignia Hatch 2.0 CDTi
+        Design 120PS ecoFLEX Start/Stop - 98g/km, 76mpg</li><li>Renault Captur 1.5
+        dCi Expression 90 Stop and Start - 95 g/km, 79mpg</li><li>Skoda Octavia Estate
+        1.6 TDI CR SE 105PS 4x4 - 99 g/km, 74mpg</li><li>BMW 1 Series 116d EfficientDynamics
+        - 99 g/km, 74mpg</li><li>Volvo V40 2.0 D4 190HP SE - 99 g/km, 74mpg</li><li>
+        Peugeot 308 2.0 BlueHDi Active 150 Stop-Start - 99 g/km, 74mpg</li></ol>","date":"2014-07-24T10:00:18+00:00"},{"id":"the-shocking-truth-about-car-depreciation","title":"Shocking
+        truth about car depreciation revealed","description":"Find out why depreciation
+        is a key factor when buying a car, plus gets tips on how to beat it","body":"<p
+        class=\"intro\"> The difference between a car\u2019s value when it is bought
+        and sold, known as depreciation, is the single biggest\u00a0cost of owning
+        a car. </p><p>In most cases it even outweighs the cost of fuel, servicing,
+        insurance and car tax added together. </p><p>This drop in value can vary between
+        makes and models, but is typically between 10% and 25% in the first year and
+        can rise to 50% - or even higher - over three years. </p><p>Experts believe
+        it is far more important to choose a car for its depreciation in terms of
+        saving cash. </p><p>Motoring cost body CAP Automotive reckons an average medium-sized
+        family car bought three years ago will have lost around \u00a312,559 of its
+        value by now. By contrast, the car\u2019s fuel costs would have been around
+        \u00a34,000, based on 12,000 miles a year. </p><p>If you\u2019re looking for
+        your next car, take into account the total cost of motoring. Try our <a title=\"Cost
+        of Motoring Calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Car
+        Costs Calculator</a>. </p><h2>Top depreciation busting cars </h2><p>Glass\u2019s
+        top ten manufacturers for holding value, plus their average annual rate of
+        depreciation: </p><ol><li><strong>Mini</strong> 16.4%</li><li><strong>Land
+        Rover</strong> 17.00%</li><li><strong>Toyota</strong> 17.50%</li><li><strong>Honda</strong>
+        17.90%</li><li><strong>Volkswagen</strong> 18.30%</li><li><strong>Smart</strong>
+        18.60%</li><li><strong>Jeep</strong> 18.80%</li><li><strong>Audi</strong>
+        19.50%</li><li><strong>SEAT</strong> 19.60%</li><li><strong>Skoda </strong>20.30%</li></ol><p>To
+        see the results for all 34 manufacturers, go to the <a target=\"_blank\" href=\"http://www.autoexpress.co.uk/mini/86757/mini-tops-list-of-brands-with-best-residual-car-values\">AutoExpress</a>\u00a0website.
+        </p><p>Use the <a title=\"What Car? depreciation calculator\" target=\"_blank\"
+        href=\"http://www.whatcar.com/car-depreciation-calculator/\">What Car? depreciation
+        calculator</a>\u00a0to find out how much different makes of car depreciate
+        by over four years. </p><h2>What factors affect a car\u2019s depreciation
+        rate? </h2><p>The amount that a vehicle depreciates varies depending on the
+        make, model, year, type and other factors associated with the car. </p><p>If
+        you are looking to retain as much value as you can for your new car, there
+        are some tips that will influence the rate of depreciation for your vehicle.<strong><br/>Mileage</strong>
+        \u2013 the average mileage is around 10,000 per year. The more miles, the
+        less your car is worth. </p><p><strong>Reliability</strong> \u2013 some cars
+        have a reputation for unreliability. This can be based on <a title=\"The most
+        reliable cars to own\" href=\"https://www.moneyadviceservice.org.uk/en/articles/the-most-reliable-cars-to-own\">customer
+        satisfaction surveys</a></p><p><strong>Number of owners</strong> \u2013 the
+        fewer the better. So check the number of previous owners on the car\u2019s
+        logbook or V5C registration. </p><p><strong>General condition</strong> \u2013
+        damage to the bodywork, interior and exterior will reduce value. Make sure
+        you <a title=\"How to test drive and check a used car\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-test-drive-and-check-a-used-car\">inspect
+        a used car </a>carefully before buying. </p><p><strong>Service history</strong>
+        \u2013 the more complete this is the better. The service book should have
+        stamps/receipts showing servicing in line with the manufacturer\u2019s recommendations.
+        </p><p><strong>Length of warranty</strong> \u2013 three years is good, but
+        some manufacturers now offer as long as seven years, which is a bonus when
+        selling your car. </p><p><strong>Desirability</strong> \u2013 some models
+        are \u2018face-lifted\u2019 or replaced every few years, while some go on
+        for 10 or more. The more recent the model, the better it will hold its value.
+        </p><p><strong>Size</strong> \u2013 big luxury cars tend to depreciate more
+        than smaller cars because they cost more to run and have higher bill for parts
+        and maintenance. </p><p><strong>Fuel economy</strong> \u2013 the more miles
+        per gallon the better for many buyers. This is one reason why diesels cars
+        hold their value slightly better than petrol cars, although it\u2019s becoming
+        less true as petrol car engine efficiency improves. </p><p><strong>Road Fund
+        Licence (road tax) </strong>is also a consideration. Fuel guzzling cars cost
+        much more to tax each year, which makes them less desirable when selling second-hand.\u00a0
+        </p><h2>Tips for minimising depreciation </h2><ul><li> Do your research before
+        buying a car \u2013 search the most up-to-date <a target=\"_blank\" href=\"http://www.whatcar.com/car-depreciation-calculator/\">What
+        Car?</a> depreciation tables.</li><li>Maintain your car well \u2013 a full
+        service history gives potential buyers peace of mind, so remember to keep
+        all your car documents like service records and receipts safe and in one place.</li><li>Keep
+        the mileage down.</li><li>Look after your car and repair any damage as soon
+        as possible.</li><li>Consider leasing rather than owning \u2013 then there\u2019s
+        no worry about the car\u2019s depreciation, which will built into your monthly
+        payments.</li><li>Sell your car well before its replacement model arrives
+        in the showrooms. To keep up to date with the latest news, read motoring magazines
+        and websites such as <a title=\"what car\" target=\"_blank\" href=\"http://www.whatcar.com/\">What
+        Car?</a>, <a title=\"autocar\" target=\"_blank\" href=\"http://www.autocar.co.uk/\">Autocar</a>
+        and <a title=\"carbuyer\" target=\"_blank\" href=\"http://www.carbuyer.co.uk/\">Carbuyer</a></li><li>Sell
+        at the right time of year \u2013 for example, convertibles in the summer and
+        4x4s in the winter.</li><li>Avoid \u2018boy racer\u2019 modifications such
+        as spoilers, wide wheels and flared wheel arches.</li><li>Choose the right
+        options when you buy \u2013 for example, metallic paint and leather are best
+        on executive cars, while built-in sat nav and air con are desirable on mainstream
+        cars.</li></ul>","date":"2014-07-24T09:58:15+00:00"},{"id":"travellers-advised-to-tell-their-bank-when-abroad-22072014","title":"Travellers
+        advised to tell their bank when abroad","description":"Holidaymakers are being
+        warned that they should tell their bank when travelling overseas to avoid
+        their credit card being turned down.","body":"<p class=\"intro\">Holidaymakers
+        are being warned that they should tell their bank when travelling overseas
+        to avoid their credit card being turned down. </p><p>According to new findings
+        from TSB, more than three in four card users who had their card rejected suffered
+        because they had not informed their bank they were going overseas. </p><p>More
+        than half said that they had not realised they needed to tell their bank about
+        their travels, while two in five felt that they should not have to inform
+        their bank. </p><p>If you don\u2019t tell your bank about your holiday travel
+        plans it could result in ''no fun in the sun'', adding stress to what should
+        be a relaxing time with sun, sea and sangria. </p><p>When a credit card was
+        declined, half of those surveyed worried that they couldn''t pay for the goods
+        or services just they were trying to pay for, three out of four were frustrated
+        that they needed to call their bank in the UK or were just plain embarrassed.
+        </p><p>An additional seven out of ten were concerned that they wouldn\u2019t
+        be able to pay for anything else on holiday while two in three were worried
+        that something had happened to all of their bank accounts back in the UK.
+        </p><p><em>\u201cTickets. Passport. Money. They''re the traditional going
+        away checklist and making sure your cards work abroad should be included in
+        that,\u201d</em> said Jatin Patel from TSB Bank. </p><p><em>\u201cCard transactions
+        abroad are one of the most common fraud indicators and therefore your card
+        may be declined if you have not already informed your bank of your intention
+        to travel. </em></p><p><em>\u201cThis can be expensive, frustrating and time
+        consuming to sort out, especially if there are different time zones involved.\u201d
+        </em></p><p><strong>Don\u2019t be caught out. Use our guide <a title=\"travel
+        money\" href=\"https://www.moneyadviceservice.org.uk/en/articles/travel-money-options-cash-cards-and-travellers-cheques\">Travel
+        money options \u2013 cash, cards and traveller\u2019s cheques</a>. </strong></p>","date":"2014-07-23T10:49:31+00:00"},{"id":"summer-family-fun-on-a-low-income","title":"Summer
+        family fun on a low income","description":"Cheap and free activities that
+        won''t break the bank","body":"<p class=\"intro\">Keeping the children entertained
+        over the summer holidays can be a real challenge, especially on a low income.
+        Extra childcare, treats, tickets to attractions and days out can all squeeze
+        the family budget. </p><p>If your childcare costs increase over the summer,
+        make sure you include the additional amount when applying for tax credits.
+        Also, even if you only pay for childcare during the school holidays, you might
+        still be eligible for the childcare element of Working Tax Credit, and get
+        money towards the extra expense. </p><p>Read more about <a title=\"Tax credits
+        and other help with childcare costs\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/tax-credits-and-other-help-with-childcare-costs\">tax
+        credits and other help with childcare costs </a></p><p>Remember that tax credits
+        can only be used to pay for registered or approved provision, so check if
+        this applies to any holiday club you are considering, before signing up. Childcare
+        vouchers from your employer can also be used to pay towards registered childcare.
+        Find out about childcare vouchers in <a title=\"Help from your employer with
+        childcare costs\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/help-from-your-employer-with-childcare-costs\">help
+        from your employer with childcare costs</a>. </p><p>Yet surviving the school
+        holidays doesn\u2019t have to break the bank, if you take advantage of cheap
+        and free activities in your local area. </p><h3>1. Plan for playschemes </h3><p>See
+        if your local authority, schools, <a title=\"Sure start centres\" target=\"_blank\"
+        href=\"http://childrenscentresfinder.direct.gov.uk/childrenscentresfinder\">Sure
+        Start Centres</a>, churches and community groups run any playschemes or holiday
+        clubs during the summer holidays. If you receive income support, benefits
+        or tax credits, your children may qualify for a discount on any charges. </p><h3>2.
+        Look up your local leisure centre </h3><p>Again, low income families may qualify
+        for concessions at your local leisure centre or swimming pool. Check the timetable
+        for family swimming sessions, or see if your children would like to try different
+        classes and sports. </p><h3>3. Locate your library </h3><p>Investigate activities
+        at your local library, from story time for toddlers to craft activities, reading
+        groups and even writing sessions for older children. </p><p>Most libraries
+        run the <a title=\"Summer reading challenge\" target=\"_blank\" href=\"http://summerreadingchallenge.org.uk/\">Summer
+        Reading Challenge</a>, which is completely free. It encourages children aged
+        between four and eleven years old to read six books from the library during
+        their summer holiday with rewards like posters, stickers and bookmarks. </p><h3>4.
+        Make the most of museums and galleries </h3><p>Many museums and galleries
+        offer free entrance to their main collections, and may also run special exhibitions,
+        events or arts and crafts sessions for children. </p><h3>5. Have fun with
+        a film </h3><p>Cinemas often offer cut-price tickets to family films during
+        weekends and school holidays, if you are willing to go to a morning showing.
+        </p><h3>6. Ride the railway </h3><p>If you fancy going further afield, consider
+        buying a <a title=\"Family &amp; Friends railcard\" target=\"_blank\" href=\"http://www.familyandfriends-railcard.co.uk/\">Family
+        &amp; Friends Railcard</a> to cut the cost of train fares. A one-year card
+        costs \u00a330, but can then save you a third off adult tickets and 60% off
+        children\u2019s fares. </p><h3>7. Take advantage of 2 for 1 tickets </h3><p>If
+        you buy National Rail tickets, you can also get two tickets for the price
+        of one on loads of child-friendly activities like zoos, aquariums, theme parks,
+        theatres and exhibitions. Register at <a title=\"Days out guide\" target=\"_blank\"
+        href=\"http://www.daysoutguide.co.uk/\">Days Out Guide</a>, work out where
+        you would like to go, and then print out the relevant vouchers to take along.
+        </p><h3>8. Save with supermarket vouchers </h3><p>If you use a supermarket
+        loyalty card when you shop, check if you can exchange points or vouchers for
+        days out, meals and travel. With some schemes, your points can be worth two
+        or four times as much when used to pay for activities, compared to using them
+        for money off your shopping. </p><h3>9. Think of the theatre </h3><p>Going
+        to the theatre need not cost an arm and a leg if you look out for offers and
+        discounted tickets. </p><p>For example, kids go free to top London shows during
+        <a title=\"Kids week\" target=\"_blank\" href=\"http://www.kidsweek.co.uk/\">Kids
+        Week</a>, which actually runs for the whole of August. If you can afford an
+        adult ticket, then one child under 16 goes free, and you can buy tickets for
+        another two children at half price. </p><h3>10. Pack a picnic </h3><p>A picnic
+        in a local park can become a fun day out in itself. Also, meals out can really
+        drive up the cost of any activity, so plan ahead and take food, drinks and
+        snacks whenever you head off. </p><p><em>Photo:\u00a0PA</em></p>","date":"2014-07-23T10:18:41+00:00"},{"id":"five-summer-driving-fuel-economy-tips","title":"Five
+        summer driving fuel economy tips","description":"Find out how to drive your
+        car more economically during the summer months","body":"<p class=\"intro\">Millions
+        of cars take to the roads in the summer during the school holidays. </p><p>Packed
+        with kids and luggage, they are not at their most economical so it''s more
+        important than ever to squeeze as many miles as you can from your car''s fuel
+        tank. </p><p><a title=\"Cheap petrol and diesel\" href=\"https://www.moneyadviceservice.org.uk/en/articles/choosing-between-petrol-and-diesel-power\">Shopping
+        around for the cheapest petrol or diesel </a>and avoiding expensive motorway
+        service stations will help, but there are other things you can try too...
+        </p><h2>Air conditioning or windows? </h2><p>Air-conditioning increases fuel
+        consumption, especially at low speeds. If it\u2019s a hot day, use the air
+        conditioning for high speed driving, but open the windows around town. </p><h2>Adjust
+        your driving style </h2><p>Read the road ahead, anticipating the actions of
+        other drivers and potential hazards. The less braking and acceleration, the
+        less fuel used. For instance, drive smoothly in heavy traffic, so avoid driving
+        fast to catch up to the car in front, then having to brake. Broadly speaking,
+        the smoother your drive, the more miles per gallon. </p><p>According to the
+        AA, driving at 70mph uses up to 9% more fuel than at 60mph and up to 15% more
+        than at 50mph. Cruising at 80mph can use up to 25% more fuel than at 70mph.
+        For instance, driving 100 motorway miles at 70mph might cost you \u00a315
+        at 70mph, but \u00a320 at 80mph. </p><p>Finally, watch and listen to your
+        revs. Some drivers let the revs (revolutions per minute or RPM) run to 3,000
+        per minute (petrol car) and 2,500 (diesel) before changing up a gear. It\u2019s
+        more efficient to move up a gear at 2,500 (petrol) and 2,000 (diesel). Also,
+        use high gears such as fifth and sixth gears sooner than later. </p><h2>Keep
+        your car maintained </h2><p>Get your car serviced regularly to maintain engine
+        efficiency and make sure you\u2019re using the correct engine oil (check the
+        handbook). </p><p>Well maintained tyres are essential for safe and economical
+        driving. Check tyres pressures regularly (especially before a motorway journey).
+        The RAC claims that correctly inflated tyres can improve fuel consumption
+        by up to 2% </p><h2>Stay slippery </h2><p>Broadly speaking the most aerodynamic
+        cars are the most fuel efficient cars. </p><p>Wind resistance increases fuel
+        consumption, so try to keep windows closed at high speeds and remove roof
+        racks and boxes when not in use. Removing a roof-top cargo box can save as
+        much as 20% on fuel over a year. </p><h2>Reduce weight </h2><p>Lighter cars
+        use less fuel, so don\u2019t drive around with unnecessary items in your boot
+        and unless you\u2019re on a long journey, consider running your fuel tank
+        half full or less. </p><p>Read our full guide to <u><a title=\"Guide to buying,
+        selling and owning a car\" href=\"https://www.moneyadviceservice.org.uk/en/categories/cars-and-travel\">buying,
+        selling and owning a car.</a></u></p>","date":"2014-07-22T13:56:35+00:00"}]'
+    http_version:
+  recorded_at: Thu, 24 Jul 2014 13:51:55 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,494 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/news.json?limit=6&page_number=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 2fb30b3f-e567-402a-b6fc-340686054999
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 Jul 2014 11:12:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 19b8629833290f996b674d657699c514
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 24-Jul-2015 11:12:45 GMT; secure
+      - _session_id=19b8629833290f996b674d657699c514; path=/; secure; HttpOnly
+      - _web_tracking=1cc1daee2aef55b3be9487dad90eea78; path=/; expires=Fri, 24-Jul-2015
+        11:12:45 GMT; secure
+      X-Request-Id:
+      - 2fb30b3f-e567-402a-b6fc-340686054999
+      X-Runtime:
+      - '0.034536'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"sut-i-elwa-drwy-fargeinio-wrth-brynu-car-ail-law","title":"Sut
+        i elwa drwy fargeinio wrth brynu car ail-law","description":"Bargeinio i brynu
+        car ail-law? Dywedodd chwech o bob deg perchennog bod eu waledi\u2019n llawnach","body":"<p
+        class=\"intro\"> Efallai nad yw bargeinio dros y pris y disgwylir i chi ei
+        dalu yn ymddangos yn beth Prydeinig iawn i\u2019w wneud. Ond, ymddengys pan
+        mae hi\u2019n amser prynu car ail-law nid yw\u2019r rhan fwyaf ohonom ofn
+        ceisio gostwng y pris i gael y fargen orau. </p><p>Dengys ymchwil newydd gan
+        y Gwasanaeth Cynghori Ariannol ar brynu car ail-law bod wyth allan o bob 10
+        a brynodd gar yn ystod y flwyddyn ddiwethaf wedi ceisio sicrhau gostyngiad
+        wrth brynu. </p><p>A llwyddodd chwech o bob 10 i gael rhywfaint o ostyngiad
+        yn y pris - llwyddodd dynion ychydig yn well na merched, gyda 67% yn hoelio
+        bargen o\u2019i gymharu \u00e2 60% o ferched. </p><p>Os nad ydych wedi bargeinio
+        o\u2019r blaen, nid oes angen i chi bryderu. Defnyddiwch ein cyngor i gael
+        y pris gorau am eich car nesaf. </p><h2>Adnabod eich Saab o\u2019ch Seat </h2><p>Os
+        nad ydych yn gwybod pa gar i\u2019w brynu gwnewch eich gwaith cartref. Dechreuwch
+        edrych ar geir ar y ffyrdd, gyda\u2019ch delwyr ceir lleol, ac mewn cylchgronau
+        ceir a gwefannau moduro. </p><p>Hyd yn oed os yw eich bryd ar fodel neilltuol,
+        gosodwch gyllideb ar gyfer yr hyn y gallwch ei fforddio. Peidiwch ag anghofio
+        ystyried costau rhedeg. </p><p>Edrychwch ar ein <a title=\"Cyfrifiannell costau
+        car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Cyfrifiannell
+        costau car</a> i weld beth yw cost bod yn berchen ar gar yr ydych yn ystyried
+        ei brynu. </p><p>Os nad ydych yn si\u0175r pa gar y gallwch ei fforddio, darllenwch
+        ein canllaw ar <a title=\"Sut mae dod o hyd ir car iawn ar gyfer eich cyllideb\"
+        target=\"_blank\" href=\"/cy/articles/sut-mae-dod-o-hyd-ir-car-iawn-ar-gyfer-eich-cyllideb\">Sut
+        mae dod o hyd i''r car iawn ar gyfer eich cyllideb</a>. </p><p>Pan fyddwch
+        wedi dod o hyd i\u2019ch model delfrydol, gwiriwch ar-lein am werthwyr ceir
+        eraill yn eich ardal i weld a oes unrhyw un ohonynt yn cynnig bargen well
+        am yr un car. Gall hyn fod yn ddefnyddiol wrth fargeinio. </p><p>Os ydych
+        yn cyfnewid eich car presennol, gwnewch yn si\u0175r eich bod yn gwybod ei
+        werth er mwyn i chi gael y pris gorau amdano ar gyfer eich pryniant newydd.
+        Mae\u2019n debyg y cewch fwy amdano wrth ei werthu\u2019n breifat ond gall
+        hyn fod yn fwy o ymdrech a chymryd mwy o amser. </p><p>Cyn i chi wneud dim
+        byd arall, canfyddwch beth yw gwerth eich car. Mae gan safleoedd megis <a
+        title=\"Glass\u2019\" target=\"_blank\" href=\"http://www.glass.co.uk/\">Glass\u2019s
+        Guide</a> a <a title=\"Parkers\" target=\"_blank\" href=\"http://www.parkers.co.uk/\">Parkers</a>
+        offer prisio ceir. </p><h3>Awgrymiadau dweud wrth Mam - Cyngor gan aelodau
+        o\u2019n cymuned ar-lein: </h3><p><em>\u201cYr adeg orau i brynu yw diwrnod
+        olaf y mis - neu ddiwrnod olaf y chwarter sydd yn well fyth. Cyn heddiw cerddais
+        allan o siop gwerthu ceir am 3pm ond cefais alwad gan y gwerthwr am 5pm yn
+        cynnig y fargen y gofynnais amdani gan fod angen i\u2019r siop sicrhau ei
+        bonws. Dysgwch sut mae\u2019r diwydiant yn gweithio a sut i gael y fargen
+        orau.\u201d</em></p><h2>Sut i ddelio \u00e2\u2019r garej </h2><p>Os ydych
+        yn negodi gyda\u2019r gwerthwr, byddwch yn gwrtais a chyfeillgar, ond peidiwch
+        \u00e2 gadael i\u2019r gwerthwr wybod beth yw eich uchafswm. </p><p>Os ydych
+        yn talu ag arian parod, peidiwch \u00e2 dweud wrth y gwerthwr yn syth. </p><p>Mae
+        gwerthwyr yn gwneud mwy o elw ar fenthyciadau ariannol, felly gadewch iddynt
+        negodi pris y car ar y sail honno. Gallwch wrthod y fargen ariannu yn nes
+        ymlaen yn y broses. </p><p>Cychwynnwch drwy nodi swm sydd yn is na\u2019r
+        hyn yr ydych yn barod i\u2019w dalu \u2013 felly gallwch chi gynyddu\u2019n
+        raddol os bydd angen. Ceisiwch osgoi codi eich pris fwy na\u2019r swm y mae\u2019r
+        gwerthwr yn dymuno gostwng ei bris. </p><p>Pan fyddwch yn rhoi cynnig, peidiwch
+        \u00e2 siarad eto nes bydd y gwerthwr yn ateb. </p><p>Mae o fantais bod yn
+        gadarnhaol am eich nodau: er enghraifft, peidiwch \u00e2 dweud <em>\u201cga
+        i ostyngiad?\u201d</em>, ond yn hytrach dywedwch<em> \u201cfaint o ostyngiad
+        ga i?\u201d</em></p><p>Os byddwch yn ei chael yn anodd cael gostyngiad ond
+        eich bod yn awyddus iawn i gael y car, cynigiwch brynu\u2019r car yn y fan
+        a\u2019r lle. Gall gwerthiant sydyn fod o gymorth i chi gytuno ar bris. </p><p>A
+        pheidiwch \u00e2 bod ofn cerdded allan os na fydd y gwerthwr yn fodlon negodi
+        \u2013 mae miloedd o geir ail-law ar gael. </p><p>Am ragor o awgrymiadau da
+        ar sut i fargeinio, darllenwch ein canllaw ar <a title=\"Sut i fargeinio wrth
+        brynu car\" target=\"_blank\" href=\"/cy/articles/sut-i-fargeinio-wrth-brynu-car\">Sut
+        i fargeinio wrth brynu car</a>. </p><h3>Awgrymiadau dweud wrth Mam - Cyngor
+        gan aelodau o\u2019n cymuned ar-lein: </h3><p><em>\u201cNi fyddwn fyth yn
+        prynu car gan y gwerthwr ceir cyntaf. Yn hytrach byddwn yn edrych ar sawl
+        model mewn sawl siop ac yna bargeinio un yn erbyn y llall - mae garej A yn
+        fodlon gwneud xxx am \u00a3xx gyda xx o dreth cerbyd am ddim er enghraifft.\u201d</em></p><h2>Mae\u2019n
+        fater preifat </h2><p>Gall prynu car ail-law yn breifat fod yn beryglus oherwydd
+        pe byddai problemau wedyn mae gennych lai o hawliau cyfreithiol nag a fyddai
+        gennych gyda gwerthwr ceir. </p><p>Ond mae gennych fwy o fodd i fargeinio.
+        </p><p>Efallai bod y gwerthwr eisoes wedi prynu ei gar nesaf ac angen cael
+        gwared \u00e2\u2019r hen un. Felly gall fod o werth gofyn rhai cwestiynau
+        gofalus fel ei reswm am fod eisiau gwerthu. Neu, efallai ei fod wedi gweld
+        ei gar perffaith ac angen arian parod ar gyfer hynny. </p><p>Pan fyddwch yn
+        prynu car ail-law bydd angen i chi benderfynu a ydych am fentro na fydd biliau
+        trwsio annisgwyl angen eu talu, er gallwch dalu arbenigwr i archwilio\u2019r
+        car cyn prynu. Mae cwmn\u00efau fel yr AA a\u2019r RAC yn cynnig y math hwn
+        o wasanaeth. Gellid defnyddio unrhyw namau neu farciau neu dolciau ar gorff
+        y car i ostwng y pris. </p><p>Gweler ein canllaw ar <a title=\"Cychwyn y daith
+        yn unig yw\u2019r gost o brynu\u2019r car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/news/dont-get-caught-out-consider-the-costs-before-buying-a-used-car\">ragor
+        o wybodaeth ar y gwir gost o brynu a rhedeg car</a>. </p><p>Os nad ydych yn
+        defnyddio cynilion i dalu am eich car nesaf, mae amryw o ddewisiadau ar gael.
+        Gweler ein canllaw <a title=\"Cyllid car wedi\u2019i esbonio\" target=\"_blank\"
+        href=\"/cy/articles/cyllid-car-wedii-esbonio\">Cyllid car wedi\u2019i esbonio</a>
+        i ddeall y manteision a\u2019r anfanteision. </p>","date":"2014-07-10T08:50:11+00:00"},{"id":"byddwch-yn-wyliadwrus-wrth-brynu-car-ail-law","title":"Byddwch
+        yn wyliadwrus wrth brynu car ail-law","description":"Pam y gallai prynu car
+        ail-law arwain at yrwyr yn llithro i anawsterau ariannol neu i ddyled","body":"<p
+        class=\"intro\"> Gallai prynu car ail-law arwain at yrwyr yn llithro i anawsterau
+        ariannol neu i ddyled gydag un o bob pump yn gwario mwy na\u2019r disgwyl.
+        </p><p>Mae un o bob tri yn debygol o fynd i\u2019r coch yn sgil eu pryniant
+        neu wedi cynyddu eu dyled yn sgil hynny hyd yn oed cyn wynebu costau rhedeg.
+        </p><p>Dengys ymchwil newydd gan y Gwasanaeth Cynghori Ariannol y bu i bron
+        i un o bob pump o fodurwyr a brynodd gar ail-law yn ystod y ddwy flynedd ddiwethaf
+        wario eu cyllideb i gyd, gan wario \u00a31,815 yn fwy nag a fwriadwyd. Profodd
+        dros hanner y bobl hyn gostau rhedeg o \u00a3587 yn uwch na\u2019r disgwyl
+        yn y flwyddyn gyntaf. </p><h2>Y gost o brynu car </h2><p>Gwariodd modurwyr
+        \u00a35,736 ar gyfartaledd ar geir ail-law yn ystod y ddwy flynedd ddiwethaf,
+        gyda\u2019r gr\u0175p oedran 65 a h\u0177n yn gwario\u2019r swm uchaf sef
+        \u00a37,649 a\u2019r gr\u0175p 18-24 yn gwario\u2019r swm lleiaf sef \u00a34,197.
+        </p><p>Dengys canfyddiadau\u2019r Gwasanaeth Cynghori Ariannol y bu i bron
+        i un o bob pump gyfaddef gwario mwy nag a ddymunwyd. Canlyniad hyn oedd bod
+        y rhai a wariodd eu cyllideb i gyd wedi gorwario o \u00a31,815 ar gyfartaledd.
+        </p><p>Bu i hanner y rhai a orwariodd wneud hynny gan eu bod \u2018wrth eu
+        boddau \u00e2\u2019r car\u2019, tra sylweddolodd 38% na allent gael eu car
+        delfrydol gyda\u2019u cyllideb wreiddiol. Gorwariodd cyfran debyg o bobl gan
+        eu bod y dymuno cael car gyda nodweddion gwell. </p><p>Gweler ein canllaw
+        <a title=\"Cynilo ar gyfer car\" target=\"_blank\" href=\"/cy/tools/cynilo-ar-gyfer-car\">Cynilo
+        ar gyfer car</a> i gael awgrymiadau ar sut i fforddio\u2019ch car delfrydol.
+        </p><h2>Cynilo i brynu car </h2><p>Gall car fod yn un o\u2019r pethau drutaf
+        a brynwn, sy\u2019n egluro pam fod y rhan fwyaf o yrwyr yn dibynnu ar gynilion
+        i dalu amdano. Llwyddodd ffrindiau a theulu i gyfrannu rhan neu\u2019r cyfan
+        o\u2019r arian mewn 13% o\u2019r achosion (a bydd yn rhaid i lawer ad-dalu\u2019r
+        hyn a gawsant), tra dewisodd 10% fenthyciad ariannol ar gyfer car. Defnyddiodd
+        un o bob saith fenthyciad personol neu dalu am eu car ar gerdyn credyd. </p><p>Os
+        ydych yn ystyried trefnu benthyciad ariannol i brynu car, darllenwch ein canllaw
+        <a title=\"Beth yw\u2019r ffordd orau o ariannu car?\" target=\"_blank\" href=\"/cy/articles/beth-ywr-ffordd-orau-o-brynu-car-drwy-drefniant-ariannol\">Beth
+        yw\u2019r ffordd orau o ariannu car?</a></p><h2>Mae costau rhedeg yn atal
+        benthyciadau personol i nifer o yrwyr </h2><p>Nid y gost o brynu\u2019r car
+        yn unig sy\u2019n debygol o wagio\u2019ch pocedi. Gwaith cynnal ac atgyweirio
+        yw\u2019r costau annisgwyl mwyaf, gyda chwarter y gyrwyr yn gwario \u00a3421
+        ar gyfartaledd yn fwy na\u2019r disgwyl yn ystod y 12 mis cyntaf. </p><p>Bu
+        costau tanwydd yn uchel ers tro byd, ond llwyddodd hyn i fod yn ffactor annisgwyl
+        serch hynny i un o bob pedwar gyrrwr, a wariodd \u00a3295 yn fwy na\u2019r
+        disgwyl. </p><p>Roedd premiymau yswiriant annisgwyl o ddrud yn gur pen i 23%
+        o yrwyr, gyda pholisi\u2019n costio \u00a3293 yn fwy na\u2019r disgwyl ar
+        gyfartaledd. Nid yw\u2019n syndod bod dau o bob deg gyrrwr yn mynd i ddyled
+        o ganlyniad i\u2019w pryniant. </p><h2>Mae pobl yn anghofio am ddibrisiant
+        </h2><p>Tra y bu i\u2019r rhan fwyaf o brynwyr ail-law ystyried y gost o brynu
+        car, yn ogystal \u00e2 thanwydd, yswiriant, atgyweiriadau posib a gwaith cynnal
+        yn ogystal \u00e2 threth cerbyd, ni roddodd un o bob pedwar unrhyw ystyriaeth
+        i MOT neu ddibrisiant. </p><p>Rhaid i bob car sydd yn dair oed neu yn h\u0177n
+        gael prawf MOT blynyddol - ar wah\u00e2n i gost y prawf efallai y bydd angen
+        i chi dalu am newid darnau sydd wedi gwisgo neu atgyweiriadau eraill. </p><p>Bydd
+        pob car yn dibrisio gan fod yn werth llai o arian wrth i\u2019r darnau wisgo
+        yn ogystal \u00e2 ffactorau eraill, ond mae rhai gwneuthuriadau a modelau
+        yn dal eu gwerth yn well nag eraill. </p><p>Mae\u2019n fater pwysig i yrwyr
+        sy\u2019n bwriadu gwerthu eu ceir wedi ychydig o flynyddoedd, ac yn gobeithio
+        ad-ennill rhan sylweddol o\u2019r gwariant gwreiddiol. </p><p>Mae ein <a title=\"Cyfrifiannell
+        costau car\" target=\"_blank\" href=\"/cy/tools/cyfrifiannell-costau-car\">Cyfrifiannell
+        costau car</a> yn eich galluogi i weld effaith dibrisiant ar werth car, yn
+        ogystal \u00e2\u2019r symiau nodweddiadol y disgwylid i chi eu talu am y cerbyd,
+        ei gynhaliaeth a\u2019i yswiriant. </p><h2>Bu i fwy nag un o bob pedwar brofi
+        anawsterau wrth geisio talu am gostau rhedeg car </h2><p>Tra y gall nifer
+        o yrwyr ymdopi \u00e2 biliau uwch na\u2019r disgwyl ynghlwm \u00e2 cherbydau,
+        dywedodd 27% eu bod yn ei chael hi\u2019n anodd cwrdd \u00e2\u2019r costau
+        o gadw eu car ar y ffordd. Bu i rieni gyda phlant yn byw adref a gyrwyr benywaidd
+        yn enwedig ei chael hi\u2019n anodd cwrdd \u00e2\u2019r costau hanfodol. </p><p>Dywedodd
+        tri o bob pump a brofodd anawsterau gyda\u2019r taliadau i gadw eu ceir ar
+        y ffordd eu bod wedi eu gorfodi i dorri\u2019n \u00f4l ar bethau eraill, megis
+        pethau moethus neu ddillad, er mwyn medru talu biliau. Dywedodd bron i un
+        o bob pedwar o\u2019r gyrwyr hyn fod hyn wedi cael effaith fawr ar sefyllfa
+        ariannol y cartref, ond y ffaith sy\u2019n achosi\u2019r pryder mwyaf yw bod
+        un o bob pump wedi mynd i ddyled neu ragor o ddyled er mwyn medru talu costau
+        rhedeg car. </p><h2>Bargeinio? </h2><p>Os ydych eisiau arbed arian wrth brynu
+        car, rhowch gynnig ar fargeinio. Mae ein canllaw yn rhoi rhai <a title=\"Bargeinio\"
+        target=\"_blank\" href=\"/cy/news/sut-i-elwa-drwy-fargeinio-wrth-brynu-car-ail-law\">awgrymiadau
+        da ar sut i gael andros o fargen yn y farchnad geir</a>. </p>","date":"2014-07-10T08:47:03+00:00"},{"id":"daliwch-i-fynd-a-chwe-ffordd-i-arbed-arian-ar-waith-cynnal-car","title":"Daliwch
+        i fynd \u2013 chwe ffordd i arbed arian ar waith cynnal car","description":"Gall
+        talu i gynnal eich car fod yn ddrud. Dysgwch sut i gwtogi ar eich biliau cynnal
+        car.","body":"<p> Un o\u2019r ffyrdd gorau o gwtogi ar y gost o redeg car
+        yw gwneud yn si\u0175r mai ychydig o waith atgyweirio sydd ei angen arno.
+        </p><p>Serch hynny, nid oes gan un o bob tri modurwr y wybodaeth sylfaenol
+        i fedru cynnal eu ceir, er i 59% ohonynt gydnabod pwysigrwydd gwaith cynnal
+        o\u2019r fath, yn \u00f4l arolwg ar gyfer Auto Trader. </p><p>Gyda gofal ac
+        ymroddiad, chwilio am fargen a chynllunio, gallwch gwtogi\u2019ch costau.
+        Mewn arolwg yn 2013 gan Trust My Garage, y cynllun garej annibynnol cenedlaethol,
+        gwelwyd y bu angen i 64% o berchnogion ceir wario \u00a3500 ar gostau annisgwyl
+        o atgyweirio ceir. Bu\u2019n rhaid i un o bob pump dalu mwy na \u00a3500 ,
+        a 10% ohonynt orfod talu dros \u00a31,000. </p><h2>1) Arbed arian ar wasanaeth
+        </h2><p>Gellir arbed cryn dipyn o arian ar wasanaeth blynyddol eich car drwy
+        fynd at garej annibynnol lleol yn hytrach na\u2019r prif werthwyr ceir. Yn
+        \u00f4l y Sefydliad Garej Annibynnol, mae ymweld \u00e2 garej annibynnol yn
+        costio \u00a340 yr awr yn llai ar gyfartaledd na gwerthwr breiniol. </p><p>Os
+        byddwch yn ymweld \u00e2\u2019r garej am y tro cyntaf, gofynnwch am ddyfynbris,
+        a gofynnwch am restr \u00e2 phrisiau a chymharwch brisiau\u2019n lleol. </p><p>Rhowch
+        ystyriaeth hefyd i siopau fel Halfords Autocentre sy\u2019n cynnig gwasanaethau
+        llawn o \u00a3134 ac sy\u2019n honni eu bod 40% yn rhatach na\u2019r prif
+        ddarparwyr os archebir ar-lein. </p><p>Gallwch ddod o hyd i sawl garej a argymhellir
+        yn <a title=\"MotorCodes\" target=\"_blank\" href=\"http://www.motorcodes.co.uk/\">MotorCodes</a>
+        a <a title=\"Trust My Garage\" target=\"_blank\" href=\"http://www.trustmygarage.co.uk/\">Trust
+        My Garage</a></p><h2>2) Peidiwch ag anghofio am wiriadau sylfaenol </h2><ul><li>Gwiriwch
+        y teiars yn rheolaidd. Mae rhoi\u2019r pwysedd cywir yn eich teiars nid yn
+        unig yn arbed tanwydd ond byddant yn para\u2019n hirach hefyd. Bydd teiars
+        sydd \u00e2 gormod o bwysedd neu ddim digon yn gwisgo\u2019n anwastad ac angen
+        eu newid yn amlach. Gwiriwch y tracio\u2019n rheolaidd hefyd gan fod olwynion
+        sydd heb eu gosod yn gywir felly yn gwisgo\u2019n anwastad.</li><li>Ystyriwch
+        archebu\u2019ch teiars ar-lein. Bydd rhai cwmn\u00efau\u2019n eu gosod yn
+        eich cartref, tra mae gan eraill rwydwaith o osodwyr cymwys.</li><li>Ceisiwch
+        osgoi biliau atgyweirio drud drwy wneud yn si\u0175r fod digon o olew, oerydd
+        a hylif breciau yn y car.</li><li>Yn \u00f4l yr AA, batris fflat yw\u2019r
+        prif reswm dros alwadau, gyda rhai\u2019n torri wedi ychydig o flynyddoedd
+        yn unig gan na lwyddwyd i\u2019w trydanu\u2019n llawn. Mae batris modern angen
+        ambell daith hir i\u2019w trydanu\u2019n llawn. Mae\u2019r AA yn amcangyfrif
+        240 milltir o daith heb lwyth neu wyth awr o yrru di-baid. Neu, gall defnyddio
+        trydanwr graddol ar gyfer batri ymestyn oes eich batri car o bosib.</li></ul><h2>3)
+        Cael MOT rhatach </h2><p>Gall cwmn\u00efau ond codi hyd at yr uchafswm swyddogol
+        ar gyfer MOT, sef \u00a354.85 ond drwy chwilio\u2019n sydyn ar-lein cewch
+        hyd i sawl garej sy\u2019n cynnig profi\u2019ch car am hanner y pris hwn.
+        Efallai y gallwch gael gostyngiad drwy ddefnyddio talebau ar-lein a chwblhau
+        eich MOT yr un pryd \u00e2\u2019r gwasanaeth. </p><p>Hefyd gallwch drefnu
+        prawf MOT mewn canolfan brofi eich cyngor lleol. Nid ydynt fel arfer yn gwneud
+        gwaith atgyweirio yn ogystal \u00e2 MOTs sy\u2019n golygu y byddant yn ddiduedd
+        wrth archwilio eich car. </p><p>I weld rhestr o ganolfannau profi MOT gan
+        gyngor lleol nad ydynt yn gwneud gwaith atgyweirio, ewch i <a title=\"Gwefan
+        UKMOT\" target=\"_blank\" href=\"http://www.ukmot.com/MOT%20test/Council%20MOT%20Test%20Centers.asp\">wefan
+        UKMOT</a>. <br/>Dysgwch ragor am <a title=\"Egluro MOT\" target=\"_blank\"
+        href=\"/cy/articles/prawf-mot-wedii-esbonio\">arbedion MOT</a></p><h2>4) Cwtogwch
+        ar gost atgyweirio </h2><p>Cymharwch ddyfynbrisiau gan sawl garej a gofyn
+        iddynt am restr eitemau o ddarnau a llafur. Nawr mae\u2019r holl wybodaeth
+        gennych ar gyfer mynd ar-lein neu i\u2019ch canolfan ailgylchu darnau ceir
+        i weld a allwch chi ddod o hyd i\u2019r darnau yn rhatach eich hun. Serch
+        hynny, cyn prynu unrhyw beth, gwnewch yn si\u0175r y bydd y garej a ddewisoch
+        yn fodlon ffitio\u2019ch darnau. </p><h2>5) Dysgwch sut i wneud y gwaith eich
+        hun. </h2><p>Gofynnwch i ffrindiau neu deulu neu ewch ar gwrs sylfaenol ar
+        gynnal car er mwyn i chi fedru gwirio unrhyw beth yn barhaus a chwblhau ambell
+        i dasg atgyweirio eich hun. Gyda chostau llafur mewn sawl garej yn uwch na
+        \u00a340 yr awr, gallai dysgu sut i newid sychwyr sgrin wynt, bylbiau neu
+        hyd yn oed badiau br\u00eacs, arbed cannoedd o bunnoedd i chi. </p><h2> 6)
+        Byddwch yn barod </h2><p>Pa un ai\u2019ch bod yn prynu car newydd neu\u2019n
+        dymuno gwirio\u2019r un sy\u2019n perthyn i chi eisoes, bydd ein <a title=\"Cyfrifiannell
+        costau car\" target=\"_blank\" href=\"/cy/tools/cyfrifiannell-costau-car\">Cyfrifiannell
+        costau car</a> yn rhoi syniad i chi o\u2019r costau gwasanaethu posibl. </p><p>Unwaith
+        y cewch argraff o\u2019r gost honno, gallwch <a title=\"Sut i bennu nod cynilo\"
+        target=\"_blank\" data-type=\"link\" hreflang=\"cy\" href=\"/content/tools/sut-i-bennu-nod-cynilo\">osod
+        nod cynilo</a> a fydd yn rhoi cymorth i chi baratoi. </p>","date":"2014-07-10T08:28:12+00:00"},{"id":"pum-peth-mae-angen-i-chi-eu-gwybod-am-fenthyciadau-diwrnod-cyflog","title":"Pum
+        peth mae angen i chi eu gwybod am fenthyciadau diwrnod cyflog","description":"Mae
+        hysbysebion ar gyfer benthyciadau diwrnod cyflog yn cynnig arian parod cyflym
+        a rhwydd yn ymddangos ymhobman y dyddiau hyn.","body":"<p class=\"intro\">
+        Mae hysbysebion ar gyfer benthyciadau diwrnod cyflog yn cynnig arian parod
+        cyflym a rhwydd yn ymddangos ymhobman y dyddiau hyn. </p><p>Ac er bod rheolau
+        newydd yn golygu bod rhaid i\u2019r hysbysebion hyn gynnwys rhybudd ynghylch
+        cost uchel credyd tymor byr, nid oes gan y mwyafrif ddigon o le i egluro\u2019r
+        risgiau sydd ynghlwm wrth gymryd benthyciad, er gwaethaf y ffaith bod llawer
+        o bobl yn or-optimistaidd ynghylch eu gallu i\u2019w ad-dalu\u2019n llawn
+        yn brydlon. </p><p>Dyma beth sydd angen i chi ei wybod os ydych yn ystyried
+        cymryd benthyciad diwrnod cyflog. </p><h2>1.\u00a0\u00a0\u00a0\u00a0Mae gan
+        fenthyciadau diwrnod cyflog gyfraddau llog uchel </h2><p>Rydym i gyd yn gwybod
+        bod cyfraddau llog yn uwch ar fenthyciadau nag ar gynilion, ond gall y gwahaniaeth
+        fod yn syfrdanol. Gallwch ddisgwyl ennill llai na 3% y gyfradd flynyddol gyfatebol
+        (AER) ar gyfrif cynilo, ond fel arfer byddwch yn talu ychydig yn llai na 20%
+        y gyfradd flynyddol ganrannol (APR) ar gerdyn credyd. Mae hyn yn ddibwys pan
+        yw\u2019n cael ei gymharu \u00e2 chyfraddau llog ar fenthyciadau diwrnod cyflog,
+        sydd fel arfer yn amrywio o 2,000% APR hyd at bron i 6,000% APR. </p><p>Mae
+        benthyciadau diwrnod cyflog yn gredyd tymor byr, a gynllunir i\u2019ch cynorthwyo
+        pan yw\u2019r annisgwyl yn digwydd ac nad oes gennych ddigon o arian tan eich
+        bod yn cael eich talu nesaf. Y broblem yw y gall ei ad-dalu fod yn gostus
+        iawn. Er enghraifft, pe byddech yn benthyca \u00a3100 am un mis gan ddarparwr
+        benthyciadau sy\u2019n codi 3,000% APR byddech yn ad-dalu oddeutu \u00a330
+        mewn llog, a allai fod yn anodd i ddod o hyd iddo ar eich diwrnod cyflog nesaf.
+        </p><h2>2.\u00a0\u00a0\u00a0\u00a0Gwyliwch am ffioedd am dalu\u2019n hwyr,
+        ffioedd diffygdalu, neu ffioedd eraill </h2><p>Hefyd mae nifer o ddarparwyr
+        benthyciadau yn codi ffioedd gweinyddu neu ffioedd trafodion, fel arfer \u00a35.
+        Fel arfer cynhwysir y rhain yn y swm rydych yn cytuno ei fenthyca. Hefyd mae
+        ffioedd cosb os methwch \u00e2 gwneud eich ad-daliad ar y dyddiad dyledus.
+        Fel arfer mae ffi osod o rhwng \u00a320 a \u00a330, fel \u00a330 am ddiffygdalu,
+        neu ganran o, dyweder, 2% o swm y benthyciad am bob diwrnod rydych yn mynd
+        heibio i\u2019r cyfnod a gytunwyd. </p><h2>3.\u00a0\u00a0\u00a0\u00a0Gwyliwch
+        am \u2018drosglwyddiad\u2019 y benthyciad diwrnod cyflog </h2><p>Os sylweddolwch
+        na allwch ad-dalu\u2019r benthyciad a thalu am eich alldaliadau hanfodol,
+        yn y pen draw gallech orfod cytuno i estyniad ar y benthyciad (a elwir hefyd
+        yn drosglwyddiad), sy\u2019n golygu y byddwch yn talu llawer mwy mewn llog
+        a ffioedd eraill, gan ei wneud hyd yn oed yn anos i glirio\u2019ch dyled.
+        Er enghraifft, benthyca \u00a3300, gohirio swm y benthyciad, ond talu\u2019r
+        llog o \u00a390 ar \u00f4l y mis cyntaf a\u2019r ail fis ac yn y pen draw
+        byddech yn ad-dalu cyfanswm o \u00a3570 - dyna\u2019ch benthyciad o \u00a3300
+        a \u00a3270 mewn llog. </p><h2>4.\u00a0\u00a0\u00a0\u00a0Beth mae''n rhaid
+        i ddarparwyr benthyciadau ei ddweud wrthych </h2><p>Wrth hysbysebu benthyciadau
+        mae\u2019n rhaid i ddarparwyr benthyciadau diwrnod cyflog ddangos \u2018enghraifft
+        gynrychiadol\u2019 o gost benthyciad nodweddiadol. Fodd bynnag, gan fod angen
+        i\u2019r gyfradd llog hon fod yn gymwys dim ond i 51% o\u2019r cwsmeriaid
+        sy\u2019n gwneud cais am fenthyciad, bydd angen ichi wirio\u2019r gyfradd
+        llog sy\u2019n cael ei chodi arnoch, a beth fydd cyfanswm eich ad-daliad dros
+        wahanol gyfnodau benthyciad. Po hwyaf yw tymor y benthyciad, po fwyaf y byddwch
+        yn ei ad-dalu mewn llog. </p><p>Cyn ichi gytuno i fenthyciad, dylech wirio
+        cytundeb y benthyciad bob amser. Mae''n rhaid i\u2019r ddogfen hon ddweud
+        wrthych: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y cyfanswm mae\u2019n rhaid
+        ichi\u2019i dalu iddynt a\u2019u cyfradd ganrannol flynyddol (APR) </p><p>\u2022\u00a0\u00a0\u00a0\u00a0swm
+        ac amlder eich ad-daliadau </p><p>\u2022\u00a0\u00a0\u00a0\u00a0hyd cytundeb
+        y benthyciad </p><p>\u2022\u00a0\u00a0\u00a0\u00a0beth fydd yn digwydd os
+        nad ydych yn ad-dalu\u2019ch benthyciad yn brydlon </p><p>\u2022\u00a0\u00a0\u00a0\u00a0eich
+        hawliau os ydych am ganslo\u2019r benthyciad, gan gynnwys cyfnod ystyried
+        o 14 diwrnod </p><p>Os nad ydych yn si\u0175r am rywbeth, gofynnwch i\u2019r
+        darparwr benthyciadau ei esbonio. </p><h2>5.\u00a0\u00a0\u00a0\u00a0Mae dewisiadau
+        eraill heblaw am fenthyciadau diwrnod cyflog </h2><p>Yr allwedd i gael credyd
+        da neu fenthyciad rhesymol, hyd yn oed ar fyr rybudd, yw sefydlu\u2019r hyn
+        y gallwch ei fforddio\u2019n brydlon a chwilio o gwmpas am y math gorau o
+        gredyd ar gyfer eich anghenion. Os ydych yn cael anhawster i dalu biliau a
+        chostau byw beunyddiol neu os oes arnoch angen arian parod ar fyr rybudd,
+        mae\u2019n werth ystyried y <a title=\"Opsiynau eraill heblaw benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/opsiynau-eraill-heblaw-benthyciadau-diwrnod-cyflog\">dewisiadau
+        eraill heblaw am fenthyciadau diwrnod cyflog</a>. </p><p>Os oes gennych statws
+        credyd gwael peidiwch \u00e2 rhagdybio na allwch gael benthyciad gwell rywle
+        arall. Mae dewisiadau eraill ar gael. <a title=\"Benthyciadau diwrnod cyflog\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/benthyciadau-diwrnod-cyflog\">Gweler
+        ein Hofferyn benthyciadau diwrnod cyflog </a>am ragor o wybodaeth ar eich
+        dewisiadau credyd cyn cymryd un, a ble i gael cyngor diduedd am ddim ar ddyledion.
+        </p>","date":"2014-05-07T09:49:31+00:00"},{"id":"gall-benthyciad-diwrnod-cyflog-wneud-pethaun-haws-ar-y-funud-ond-gwyliwch-rhag-ofn-fod-arwyddion-y-bydd-yn-creu-poen-barhaus","title":"Gall
+        benthyciad diwrnod cyflog wneud pethau\u2019n haws ar y funud, ond gwyliwch
+        rhag ofn fod arwyddion y bydd yn creu poen barhaus","description":"Yn yr amser
+        a gymerwch i ddarllen yr erthygl hon, fe allech chi fod wedi cymryd benthyciad
+        diwrnod cyflog mae\u2019n debyg.","body":"<p class=\"intro\"> Yn yr amser
+        a gymerwch i ddarllen yr erthygl hon, fe allech chi fod wedi cymryd benthyciad
+        diwrnod cyflog mae\u2019n debyg. Fe allai cael mynediad mor gyflym at arian
+        parod ymddangos yn wych, ac fe all hynny fod yn wir ar yr amod eich bod yn
+        si\u0175r y gallwch ei dalu yn \u00f4l yn syth. </p><p>Ond fe allech chi fod
+        mewn sefyllfa lle mae arnoch chi lawer mwy nag yr oeddech wedi bwriadu, oni
+        bai eich bod yn defnyddio <a title=\"Cyfrifiannell benthyciadau\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-benthyciadau\">cyfrifiannell
+        benthyciadau</a> a chyfrifo faint y gallwch chi ei fforddio \u2013 ac fe all
+        gymryd llawer mwy o amser i\u2019w glirio nag yr oeddech wedi meddwl. </p><p>Mae\u2019r
+        benthyciadau tymor byr yma wedi denu sylw negyddol oherwydd stor\u00efau am
+        bobl sydd wedi cymryd benthyciad \u2018cyflym\u2019 cymharol fychan, ychydig
+        gannoedd o bunnoedd efallai i\u2019w cadw am ryw fis, ond yn y pen draw yn
+        cael trafferth i dalu\u2019r hyn sy\u2019n ddyledus yn \u00f4l oherwydd y
+        cyfraddau llog uchel. </p><p>Felly mae\u2019r Awdurdod Ymddygiad Ariannol
+        (FCA) yn ceisio ymdrin \u00e2\u2019r problemau yma trwy gyflwyno rheolau newydd
+        i fenthycwyr, i sicrhau bod y rhai sy\u2019n benthyca yn cael eu trin yn deg.
+        </p><h2>Gwyliwch rhag cael eich tynnu i drobwll dyledion </h2><p>Mae benthyciadau
+        diwrnod cyflog yn codi cyfraddau llog uchel, yn nodweddiadol rhwng 1,250%
+        a 6,000% APR (Cyfradd Llog Canrannol Blynyddol) \u2013 ar gyfartaledd maent
+        yn codi tua \u00a330 y mis ar fenthyciad o \u00a3100. </p><p>Ac i rai pobl
+        mae\u2019r ad-daliadau yn rhy uchel, gan eu gorfodi i geisio gohirio neu barhau\u2019r
+        ddyled, neu gymryd benthyciad newydd i dalu\u2019r hyn sy\u2019n ddyledus.
+        </p><p>Gall hyn arwain at ddyled sy\u2019n cynyddu\u2019n barhaus. Dywedwch
+        eich bod wedi cymryd benthyciad o \u00a3300, a arweiniodd at ad-daliad o \u00a3390
+        gan gynnwys y llogau ar ddiwedd un mis. </p><p>Os na allwch chi fforddio talu\u2019r
+        swm yma ar \u00f4l mis, fe allech barhau\u2019r ddyled gychwynnol. </p><p>Hyd
+        yn oed petaech chi\u2019n talu\u2019r llogau o \u00a390 fe allech chi fod
+        \u00e2 dyled sylweddol mewn ychydig iawn o amser, yn arbennig petai\u2019r
+        un sefyllfa yn digwydd y mis canlynol, gyda\u2019r llogau o \u00a390 yn cael
+        ei dalu eto ond y benthyciad yn dal i barhau. </p><p>Gan mai dim ond ddwywaith
+        y gallwch barhau\u2019r benthyciad, fe fyddai\u2019n rhaid i chi ad-dalu cyfanswm
+        o \u00a3570 i glirio\u2019r gweddill ar ddiwedd tri mis \u2013 y cyfan am
+        na allech chi fforddio ad-dalu\u2019r benthyciad o \u00a3300 i gychwyn, a\u2019r
+        llogau ar y dyddiad ad-dalu. </p><p>Nid benthyciadau diwrnod cyflog yw\u2019r
+        unig ddewis i unrhyw un sydd angen arian parod o bell ffordd. Gweler ein <a
+        title=\"Benthyciadau diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/benthyciadau-diwrnod-cyflog\">Hofferyn
+        benthyciadau diwrnod cyflog</a> am ragor o wybodaeth am ddewisiadau eraill
+        cyn cymryd un. </p><h2>Rheolau newydd i fenthycwyr diwrnod cyflog </h2><p>Mae
+        mwy nag un o bob tri o fenthycwyr yn cael trafferth i ad-dalu benthyciadau
+        diwrnod cyflog, yn \u00f4l yr FCA, sef corff craffu\u2019r Ddinas. Mae llawer
+        wedi cymryd benthyciadau eraill i ad-dalu\u2019r darparwyr benthyciadau oedd
+        ganddynt eisoes, gan arwain at drobwll o ddyledion. </p><p>Mae rheolau newydd
+        yr FCA yn cynnwys: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0cyfyngu\u2019r nifer
+        o weithiau y gall benthyciad gael ei ohirio neu ei barhau i ddau </p><p>\u2022\u00a0\u00a0\u00a0\u00a0cyfeirio
+        benthycwyr sy\u2019n gofyn am barhau benthyciad at asiantaeth gynghori dyledion
+        rad ac am ddim </p><p>\u2022\u00a0\u00a0\u00a0\u00a0dim ond ddwywaith y gall
+        y rhai a roddodd y benthyciad wneud cais am daliad gan ddefnyddio awdurdod
+        taliad parhaus (mae hyn yn caniat\u00e1u iddyn nhw gymryd arian yn uniongyrchol
+        o gyfrif banc yr un a gymerodd fenthyciad) ac ni allant gymryd rhandaliad
+        \u2013 felly os nad oes digon o arian yn y cyfrif neu fod yr arian ar gyfer
+        biliau hanfodol mae hyn yn helpu i atal taliadau gorddrafft a thaliadau eraill
+        i\u2019r banc. </p><p>Darllenwch ein canllaw i gael rhagor o wybodaeth am
+        gredyd a <a title=\"Opsiynau eraill heblaw benthyciadau diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/opsiynau-eraill-heblaw-benthyciadau-diwrnod-cyflog\">dewisiadau
+        ar wah\u00e2n i fenthyciadau diwrnod cyflog</a>. </p>","date":"2014-05-07T09:49:25+00:00"},{"id":"gwnewch-yn-siwr-fod-cost-benthyca-arian-yn-gwneud-synnwyr-i-chi","title":"Gwnewch
+        yn si\u0175r fod cost benthyca arian yn gwneud synnwyr i chi","description":"Os
+        oes arnoch angen benthyca arian, mae sawl ffordd i\u2019w wneud. Gweler ein
+        canllaw yma","body":"<p class=\"intro\">Bydd bron pob un ohonom angen benthyca
+        arian yn ein bywyd, ar gyfer unrhyw beth o gar newydd i welliannau cartref.
+        </p><p>Gall yr ystod o opsiynau ymddangos yn ddryslyd, a gall y costau sy\u2019n
+        gysylltiedig \u00e2 benthyca arian amrywio\u2019n eang. </p><p>Rydym yn ystyried
+        rhai o\u2019r opsiynau ynghylch benthyca arian - a faint y gallant ei gostio.
+        </p><h2>Benthyciadau diwrnod cyflog </h2><p>Benthyciadau byr dymor, gyda\u2019r
+        bwriad o roi arian i chi tan eich diwrnod cyflog nesaf. </p><p>Manteision
+        </p><ul><li>Gall taliad gymryd ychydig o funudau\u2019n unig, \u00e2\u2019r
+        gwaith papur lleiaf i\u2019w ddarparu.</li><li>Derbynnir credyd gwael.</li></ul><h3>Anfanteision
+        </h3><ul><li>Mae\u2019r mwyafrif o ddarparwyr benthyciadau diwrnod cyflog
+        yn codi rhwng \u00a325 a \u00a330 mewn llog y mis am bob \u00a3100 rydych
+        yn ei fenthyca.</li><li>Dim ond os ydych yn ad-dalu\u2019r benthyciad yn brydlon
+        y bydd hyn yn digwydd. Os ydych yn ad-dalu\u2019n hwyr, fel arfer codir ffi
+        ddiffygdalu o oddeutu \u00a330 arnoch a llog dyddiol ar ben.</li><li>Felly
+        mae benthyciad diwrnod cyflog yn rheoladwy dim ond os ydych yn ei ad-dalu\u2019n
+        brydlon heb ei rolio drosodd. Fel arall, byddwch yn talu mwy o log a ffioedd
+        ar falans sy\u2019n cynyddu fwyfwy bob mis.</li><li>Gall y benthyciadau hyn
+        arwain at ddyled ddifrifol; cyn cymryd un, gweler ein <a title=\"Benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/en/payday-loans\">Cyngor
+        ar fenthyciadau diwrnod cyflog</a></li></ul><h2>Gorddrafftiau: </h2><p>Gall
+        gorddrafft banc fod wedi neu heb ei awdurdodi.\u00a0Trefnir gorddrafftiau
+        awdurdodedig o flaen llaw. Rydych yn cytuno i gyfyngiad benthyca gyda\u2019ch
+        banc, a gallwch wario arian hyd at y cyfyngiad hwnnw. </p><p>Mae gorddrafftiau
+        heb awdurdod yn digwydd pan rydych yn gwario mwy na sydd gennych yn eich cyfrif
+        banc heb gytuno ar hynny ymlaen llaw ac rydych chi\u2019n mynd i orddrafft
+        neu os ydych yn mynd dros y cyfyngiad gorddrafft rydych wedi\u2019i gytuno
+        gyda\u2019ch banc. </p><h3>Manteision </h3><ul><li>Mae gorddrafftiau\u2019n
+        ddefnyddiol os yw eich cyfrif bron yn wag erbyn diwedd y mis \u2013 er enghraifft,
+        i\u2019ch helpu chi i wneud taliad mawr ychydig ddyddiau cyn eich diwrnod
+        cyflog.\u00a0</li><li>Gall gorddrafft wedi\u2019i awdurdodi eich helpu chi
+        i osgoi ffioedd mwy os byddwch chi\u2019n llithro i\u2019r coch</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel - fel rheol mae banciau a chymdeithasau adeiladu\u2019n
+        codi oddeutu 15%-20% mewn llog, hyd yn oed ar gyfer gorddrafftiau wedi\u2019i
+        awdurdodi.</li><li>Mae\u2019r llog ar orddrafft heb ei awdurdodi\u2019n uwch
+        fel rheol.\u00a0</li><li>Ffioedd. Oni bai fod eich cyfrif yn un addas iawn
+        i orddrafft, mae pob gorddrafft wedi\u2019i awdurdodi\u2019n costio ffi o
+        tua \u00a35 i \u00a310 bob mis - mae gorddrafftiau heb eu hawdurdodi\u2019n
+        costio mwy</li></ul><h2>Cardiau credyd: </h2><p>Mae cerdyn credyd yn caniat\u00e1u
+        i chi wario arian ar gredyd. Gallwch wario hyd at eich terfyn credyd, a allai
+        fod yn ychydig gannoedd neu hyd yn oed ychydig filoedd o bunnoedd, gan ddibynnu
+        ar ba mor hyderus mae''r banc y gallwch chi ei dalu''n \u00f4l. </p><p>Manteision
+        </p><ul><li>Mae cardiau credyd yn hawdd i\u2019w cael a\u2019u defnyddio.</li><li>Mae\u2019r
+        mwyafrif o gardiau credyd yn eich diogelu ar gyfer unrhyw bryniad dros \u00a3100
+        ac yn llai na \u00a330,000.</li><li>Hefyd maent yn fwy diogel nag arian parod
+        - os yw\u2019ch cerdyn yn cael ei ddwyn, gallwch ei ganslo.\u00a0</li></ul><h3>Anfanteision
+        </h3><ul><li>Llog uchel. Os na fyddwch yn talu eich balans ar ddiwedd pob
+        mis, bydd rhaid i chi dalu llog a thaliadau.</li><li>Ffioedd - heblaw am y
+        llog, gall ffioedd fod yn uchel os collwch daliad misol neu os ewch heibio
+        i\u2019ch terfyn credyd.</li><li>Gwyliwch rhag dyledion. Os byddwch yn colli
+        hyd yn oed un taliad, bydd y llog yn dechrau cronni. Oni bai eich bod yn talu''r
+        hyn sy''n ddyledus bob mis, gallwch fynd \u00a0i ddyled yn gyflym iawn.</li><li>Darllenwch
+        ein canllaw defnyddiol i <a title=\"Cardiau credyd\" href=\"https://www.moneyadviceservice.org.uk/en/articles/credit-cards\">Gardiau
+        credyd</a></li></ul><h2>Benthyciadau nas gwarentir </h2><p>Mae benthyciadau
+        personol nas gwarentir ar gael i bawb ag o leiaf sg\u00f4r credyd rhesymol
+        - nid oes rhaid ichi fod yn berchennog cartref i wneud cais. </p><p>Yn cael
+        eu cynnig gan y mwyafrif o fanciau a darparwyr benthyciadau eraill, gellir
+        defnyddio benthyciadau personol er mwyn benthyca unrhyw swm o \u00a31,000
+        hyd at oddeutu \u00a325,000. </p><h3>Manteision </h3><ul><li>Cyllidebu \u2013
+        bydd y taliad misol a\u2019r gyfradd llog fel arfer yn sefydlog am y tymor
+        benthyciad cyfan</li><li>Pryniadau wedi\u2019u cynllunio e.e car neu er mwyn
+        rhoi trefn ar ddyledion presennol ar gerdyn credyd a cherdyn siop</li></ul><h3>Anfanteision
+        </h3><ul><li>Fe allech beidio \u00e2 chael yr APR a hysbysebir gan ei fod
+        yn dibynnu ar eich statws credyd \u2013 felly gwiriwch yr amodau a thelerau
+        yn ofalus cyn i chi dderbyn y benthyciad.</li><li>Bydd cymryd y benthyciad
+        dros dymor hirach yn lleihau eich taliadau misol ond bydd y swm gyfan fydd
+        i\u2019w had-dalu yn uwch</li></ul><h2>Dewis y math cywir o gredyd ar eich
+        cyfer chi </h2><p>Dylech hefyd wneud yn si\u0175r eich bod yn dewis y math
+        gorau o gredyd neu fenthyciad ar gyfer eich sefyllfa chi. Fel arall, gallech
+        fod yn talu mwy nag y mae angen ichi ei dalu. Chwiliwch i weld beth sydd ar
+        gael a chymharu cynigion, gan ystyried y canlynol: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y
+        gyfradd llog (APR) </p><p>\u2022\u00a0\u00a0\u00a0\u00a0y gost bob wythnos
+        neu bob mis </p><p>\u2022\u00a0\u00a0\u00a0\u00a0faint y byddwch chi''n ei
+        dalu''n \u00f4l i gyd, ac </p><p>\u2022\u00a0\u00a0\u00a0\u00a0unrhyw gosbau
+        am fethu taliadau neu daliadau hwyr </p><p>Nid yw pob opsiwn credyd yn rhai
+        da na diogel. Os oes gennych chi statws credyd gwael, efallai y cewch eich
+        temtio i ddefnyddio benthyciwr carreg drws neu gwmni benthyciad diwrnod cyflog.
+        Fodd bynnag, mae\u2019r rhain yn ddrud a dylid eu hosgoi. </p><u></u>","date":"2014-05-07T08:55:33+00:00"}]'
+    http_version:
+  recorded_at: Thu, 24 Jul 2014 11:12:46 GMT
+recorded_with: VCR 2.9.2

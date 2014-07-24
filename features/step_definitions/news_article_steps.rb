@@ -20,3 +20,13 @@ Then(/^I should see a news article in (.*)$/) do |language|
   expect(news_article_page.content).to have_content(news_article.sample_of_body)
   expect(news_article_page.date).to have_content(news_article.formatted_date)
 end
+
+Then(/^I should see the latest news in (.+)$/) do |language|
+  article_titles = news(language).map(&:title)
+
+  expect(news_article_page.latest_news.count).to eq(6)
+
+  news_article_page.latest_news.each do |article|
+    expect(article_titles).to include(article.text)
+  end
+end

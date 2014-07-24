@@ -7,5 +7,7 @@ module UI::Pages
     element :content, '.l-main'
     element :date,    '.smallprint'
     element :breadcrumbs, '.l-context-bar'
+
+    elements :latest_news, '.related-links li'
   end
 end

@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/news.json?limit=10&page_number=53
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - a0dd64f7-5fbb-4916-8d1f-9cc7271af908
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 Jul 2014 13:38:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 708068d23336c4156c303376a48fabce
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 24-Jul-2015 13:38:53 GMT; secure
+      - _session_id=708068d23336c4156c303376a48fabce; path=/; secure; HttpOnly
+      - _web_tracking=092fc55c2fe5fecc55828a1e60b46af8; path=/; expires=Fri, 24-Jul-2015
+        13:38:53 GMT; secure
+      X-Request-Id:
+      - a0dd64f7-5fbb-4916-8d1f-9cc7271af908
+      X-Runtime:
+      - '0.100049'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"money-advice-service-consults-on-improving-debt-advice-in-uk","title":"Money
+        Advice Service consults on improving debt advice in the UK","description":"The
+        Money Advice Service has begun a 12 week consultation on quality standards
+        within the debt advice sector in the UK","body":"<p><strong> Date published:
+        19 December 2012\u00a0</strong></p><p class=\"intro\">The Money Advice Service
+        has begun a 12 week consultation on quality standards within the debt advice
+        sector in the UK. </p><p>We took on responsibility for the co-ordination of
+        the sector earlier in 2012, with a remit to improve the accessibility, quality
+        and consistency of debt advice. </p><p>The quality of debt advice is recognised
+        to vary across the country and the new consultation invites views on a framework
+        which will set a benchmark for debt advice delivery and bring about greater
+        consistency. </p><p>The framework has been informed by an independent review
+        carried out by the Money Advice Trust, which found that there is great diversity
+        in the way debt advice is delivered, monitored and accredited. </p><p>It will
+        apply to organisations and individuals working in the sector and is designed
+        to build upon the good practice which already exists. </p><p>We are proposing
+        that three principles for organisations sit at the heart of the framework:
+        being receptive to client needs, demonstrating strong governance and promoting
+        reflective and on-going learning. </p><p>The framework proposes greater clarity
+        around the role profiles of debt advisers and sets out a minimum range of
+        skills, knowledge and competencies for individuals working in the sector.
+        </p><p>Following the consultation, the Money Advice Service will finalise
+        details of the framework. It will then work with those operating in the sector,
+        including organisations not currently funded by the Service, to ensure that
+        the standards they follow meet the new benchmark. </p><p>By April 2014, organisations
+        which receive funding from the Money Advice Service will need to demonstrate
+        that the standards they follow are in line with the framework. </p><p><a href=\"/en/static/money-advice-service-consults-on-improving-the-quality-of-debt-advice-in-the-uk\">Read
+        the press release in full </a></p>","date":"2013-01-16T12:10:35+00:00"}]'
+    http_version:
+  recorded_at: Thu, 24 Jul 2014 13:38:53 GMT
+recorded_with: VCR 2.9.2

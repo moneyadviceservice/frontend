@@ -22,9 +22,9 @@ module World
     def news(locale='en')
       case locale.to_s
       when 'en', 'english', 'English'
-        fixture 'news/news-en.yml'
+        fixture('news/news-en.yml').articles
       when 'cy', 'welsh', 'Welsh'
-        fixture 'news/news-cy.yml'
+        fixture('news/news-cy.yml').articles
       else
         raise ArgumentError, "invalid article locale '#{locale}'"
       end

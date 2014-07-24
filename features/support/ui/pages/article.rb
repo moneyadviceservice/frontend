@@ -7,7 +7,6 @@ module UI::Pages
 
     element :content, '.l-main'
     element :related_categories, '.related-categories'
-    element :related_content, '.related-links'
     element :breadcrumbs, '.l-context-bar'
 
     section :category_nav, UI::Sections::CategoryNav, 'nav .link-list-primary'

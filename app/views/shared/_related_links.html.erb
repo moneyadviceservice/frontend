@@ -12,7 +12,7 @@
     </ul>
     <% if category_has_more_content?(article, category.object) %>
       <%= link_to category.path, class: 'related-links__all' do %>
-        <%= t('articles.show.related_links.link') %>
+        <%= t('articles.show.related_links.link_html') %>
         <span class="visually-hidden">
           <%= t('articles.show.related_links.hidden_link', category: category.title) %>
         </span>

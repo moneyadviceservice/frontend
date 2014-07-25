@@ -15,4 +15,10 @@ class ArticlesController < ApplicationController
 
     assign_active_categories(*@article.categories)
   end
+
+  def preview
+    @article = Core::ArticlePreviewer.new(params[:id]).call do
+      not_found
+    end
+  end
 end

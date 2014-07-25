@@ -55,4 +55,32 @@ RSpec.describe ArticlesController, :type => :controller do
       end
     end
   end
+
+  describe 'GET preview' do
+    let(:article) { double(id: 'an-article-from-the-cms') }
+
+    context 'when preview exists for article' do
+      before do
+        allow(Core::ArticlePreviewer).to receive(:new) do
+          double(Core::ArticlePreviewer, call: article)
+        end
+      end
+
+
+      it 'is succesful' do
+        get :preview, id: article.id, locale: I18n.locale
+
+        expect(response).to be_ok
+      end
+    end
+
+    context 'when preview does not exist for article' do
+      before { allow_any_instance_of(Core::ArticlePreviewer).to receive(:call).and_yield }
+
+      it 'raises an ActionController RoutingError' do
+        expect { get :preview, id: article.id, locale: I18n.locale }.
+            to raise_error(ActionController::RoutingError)
+      end
+    end
+  end
 end

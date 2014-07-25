@@ -17,7 +17,7 @@
   .l-search,
   .l-context-bar,
   .l-nav,
-  .contact,
+  .newsletter,
   .related-links,
   .l-footer,
   .promo img,
@@ -42,9 +42,15 @@
   }
 
   // Shrink video
+
+  .video-wrapper {
+    padding: 0 !important;
+    height: 150px !important;
+  }
+
   .video-wrapper iframe {
-    width:30% !important;
-    height:30% !important;
+    width:250px !important;
+    height:150px !important;
   }
 
   // Reset callouts
@@ -81,6 +87,10 @@
   // override height of trust banner
   .trust-banner {
     height:60px;
+  }
+
+  .bubble__content-container:before {
+    content: none !important;
   }
 
   // Add a simple print style for links displaying the URL

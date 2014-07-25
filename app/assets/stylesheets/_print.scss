@@ -19,7 +19,10 @@
   .l-nav,
   .contact,
   .related-links,
-  .l-footer {
+  .l-footer,
+  .promo img,
+  .search,
+  .pagination .button {
     display: none !important;
   }
 
@@ -62,7 +65,22 @@
     &:before {
       content: none !important;
     }
+  }
 
+  // expand collapsed content
+  .is-off.category-detail__list-container,
+  .editorial .is-off.collapsible-section {
+    display: block;
+  }
+
+  // override button text size
+  .category-detail .unstyled-button {
+    font-size: 28px;
+  }
+
+  // override height of trust banner
+  .trust-banner {
+    height:60px;
   }
 
   // Add a simple print style for links displaying the URL

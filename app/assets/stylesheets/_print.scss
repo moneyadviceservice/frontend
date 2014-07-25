@@ -1,0 +1,119 @@
+// It's ok to use !important in this file so need CSSLint to ignore them
+
+/* @lintingIgnoreBegin */
+@media print {
+
+  // Remove all background images and colours and make text black
+
+  * {
+    background: none !important;
+    color: #000 !important;
+  }
+
+  // Hide unnecessary components
+
+  .mobile-nav,
+  .l-menu-nav,
+  .l-search,
+  .l-context-bar,
+  .l-nav,
+  .contact,
+  .related-links,
+  .l-footer,
+  .promo img,
+  .search,
+  .pagination .button {
+    display: none !important;
+  }
+
+  // Resize main column
+  .l-main {
+    width: 100%;
+  }
+
+  // style logo
+  .mas-logo {
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .l-header {
+    min-height: 0;
+  }
+
+  // Shrink video
+  .video-wrapper iframe {
+    width:30% !important;
+    height:30% !important;
+  }
+
+  // Reset callouts
+  .callout {
+    margin: 0 !important;
+  }
+
+  .callout h3,
+  .callout p {
+    margin-left: 0 !important;
+  }
+
+  // Reset add-action elements
+  .editorial .add-action {
+    background: none !important;
+    padding: 0 !important;
+
+    &:before {
+      content: none !important;
+    }
+  }
+
+  // expand collapsed content
+  .is-off.category-detail__list-container,
+  .editorial .is-off.collapsible-section {
+    display: block;
+  }
+
+  // override button text size
+  .category-detail .unstyled-button {
+    font-size: 28px;
+  }
+
+  // override height of trust banner
+  .trust-banner {
+    height:60px;
+  }
+
+  // Add a simple print style for links displaying the URL
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:link:after {
+    font-size: 80%;
+    display: inline-block !important;
+    background: none !important;
+    height: auto !important;
+    width: auto !important;
+    margin-left: 0 !important;
+  }
+
+  a[href^="/en/"]:link:after {
+    content: " (https://www.moneyadviceservice.org.uk" attr(href) ") " !important;
+  }
+
+  a[href^="http"]:link:after {
+    content: " (" attr(href) ") " !important;
+  }
+
+  a:before {
+    content: none !important;
+  }
+
+  // Reset bullet points to black
+
+  .list > li:before {
+    color: $color-text-default !important;
+  }
+}
+/* @lintingIgnoreEnd */

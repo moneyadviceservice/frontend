@@ -8,23 +8,37 @@
 
   .mas-logo {
     display: block !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .l-header {
+    min-height: 0;
   }
 
   // Hide unnecessary components
 
-  .l-header,
+  //.l-header,
+  .mobile-nav,
+  .l-menu-nav,
+  .l-search,
   .l-context-bar,
   .l-nav,
   .contact,
   .related-links,
-  .video-wrapper,
   .l-footer {
-    display: none;
+    display: none !important;
   }
 
   // Resize main column
   .l-main {
     width: 100%;
+  }
+
+  // Shrink video
+  .video-wrapper iframe {
+    width:30% !important;
+    height:30% !important;
   }
 
   // Reset headings and paragraphs to black

@@ -1,24 +1,17 @@
+// It's ok to use !important in this file so need CSSLint to ignore them
+
+/* @lintingIgnoreBegin */
 @media print {
 
-  // Remove all background images and colours
+  // Remove all background images and colours and make text black
 
   * {
     background: none !important;
-  }
-
-  .mas-logo {
-    display: block !important;
-    margin-top:0 !important;
-    margin-bottom:0 !important;
-  }
-
-  .l-header {
-    min-height: 0;
+    color: #000 !important;
   }
 
   // Hide unnecessary components
 
-  //.l-header,
   .mobile-nav,
   .l-menu-nav,
   .l-search,
@@ -35,28 +28,23 @@
     width: 100%;
   }
 
+  // style logo
+  .mas-logo {
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .l-header {
+    min-height: 0;
+  }
+
   // Shrink video
   .video-wrapper iframe {
     width:30% !important;
     height:30% !important;
   }
 
-  // Reset headings and paragraphs to black
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $color-text-default;
-  }
-
-  p,
-  .intro {
-    color: $color-text-default;
-  }
-
+  // Reset callouts
   .callout {
     margin: 0 !important;
   }
@@ -110,4 +98,4 @@
     color: $color-text-default !important;
   }
 }
-
+/* @lintingIgnoreEnd */

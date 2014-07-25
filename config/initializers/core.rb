@@ -55,3 +55,6 @@ Core::Registry::Repository[:user] =
 
 # Prepare the category tree so that it is available to the application
 Core::CategoryTreeReader.new.call if Rails.env.production? and defined?(Rails::Server)
+
+Core::Registry::Repository[:preview] =
+  Core::Repository::CMS::Preview.new

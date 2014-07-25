@@ -90,6 +90,7 @@ module Core
     module CMS
       autoload :CMS,           'core/repository/cms/cms'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
+      autoload :Preview,       'core/repository/cms/preview'
     end
 
     module News

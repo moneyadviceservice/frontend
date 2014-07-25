@@ -101,4 +101,11 @@ require(['common'], function(MAS) {
     });
   });
 
+  $('[data-engine]').each(function(){
+    var engine = $(this).attr('data-engine'),
+      dependencies = [];
+
+    dependencies.push(engine);
+    require(dependencies);
+  });
 });

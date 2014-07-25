@@ -49,7 +49,10 @@ requirejs.config({
 
     componentLoader: '<%= requirejs_path('frontend-assets/js/lib/componentLoader') %>',
     RangeInput: '<%= requirejs_path('frontend-assets/js/components/RangeInput') %>',
-    TabSelector: '<%= requirejs_path('frontend-assets/js/components/TabSelector') %>'
+    TabSelector: '<%= requirejs_path('frontend-assets/js/components/TabSelector') %>',
+
+    // Engines
+    pensionsCalculator: '<%= requirejs_path('pensions_calculator/application') %>'
   },
   shim: {
     'ujs': ['jquery']

@@ -30,6 +30,7 @@ module Core
   end
 
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
+  autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'

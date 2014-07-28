@@ -28,8 +28,8 @@ Around('@fake-articles') do |scenario, block|
   Core::Registry::Repository[:article] = @real_article_repository
 end
 
-Around('@enable-sign-up') do |scenario, block|
-  Feature.run_with_activated(:sign_up) do
+Around('@enable-registration') do |scenario, block|
+  Feature.run_with_activated(:registration) do
     block.call
   end
 end

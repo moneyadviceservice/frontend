@@ -2,6 +2,7 @@ ENV['RAILS_ENV']  = 'test'
 ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'mas/development_dependencies/cucumber/env'
+require 'feature/testing'
 
 I18n.available_locales = [:en, :cy]
 
@@ -21,12 +22,16 @@ Core::Registry::Repository[:static_page]             = Core::Repository::VCR.new
 Core::Registry::Repository[:news]                    = Core::Repository::VCR.new(news_article_repository)
 Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 
-Before('@fake-articles') do
+Around('@fake-articles') do |scenario, block|
   @real_article_repository = Core::Registry::Repository[:article]
+  block.call
+  Core::Registry::Repository[:article] = @real_article_repository
 end
 
-After('@fake-articles') do
-  Core::Registry::Repository[:article] = @real_article_repository
+Around('@enable-registration') do |scenario, block|
+  Feature.run_with_activated(:registration) do
+    block.call
+  end
 end
 
 Capybara.default_wait_time = 20

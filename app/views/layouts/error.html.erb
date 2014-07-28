@@ -1,4 +1,4 @@
-<% content_for :content do %>
+<% render layout: 'layouts/base' do %>
 
   <%= render 'shared/header' %>
 
@@ -18,5 +18,3 @@
     <%= render 'shared/footer_social_links' %>
   </footer>
 <% end %>
-
-<%= render template: 'layouts/base' %>

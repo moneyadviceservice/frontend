@@ -1,4 +1,4 @@
-<% content_for :main do %>
+<%= render layout: 'layouts/styleguide' do %>
   <a class="skip-to-link" href="#main">Skip to main content</a>
 
   <% if display_skip_to_main_navigation? %>
@@ -23,5 +23,3 @@
   <%= render 'shared/contact' %>
   <%= render 'shared/footer' %>
 <% end %>
-
-<%= render template: 'layouts/styleguide' %>

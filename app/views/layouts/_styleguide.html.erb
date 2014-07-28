@@ -9,13 +9,11 @@
   <!--<![endif]-->
 <% end %>
 
-<% content_for :content do %>
-  <%= render 'navigation' unless params.key?('no-nav') %>
-  <%= yield :main %>
-<% end %>
-
 <% content_for :javascripts do %>
   <%= javascript_include_tag :styleguide %>
 <% end %>
 
-<%= render template: 'layouts/base' %>
+<%= render layout: 'layouts/base' do %>
+  <%= render 'navigation' unless params.key?('no-nav') %>
+  <%= yield %>
+<% end %>

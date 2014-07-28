@@ -1,7 +1,5 @@
-<% content_for :main do %>
+<%= render layout: 'layouts/application' do %>
   <div id="main" tabindex="-1">
     <%= yield %>
   </div>
 <% end %>
-
-<%= render template: 'layouts/application' %>

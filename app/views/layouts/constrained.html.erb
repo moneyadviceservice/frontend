@@ -1,4 +1,4 @@
-<% content_for :main do %>
+<%= render layout: 'layouts/application' do %>
 
   <% if content_for?(:context_bar) %>
     <div class="l-context-bar">
@@ -13,4 +13,3 @@
   </div>
 <% end %>
 
-<%= render template: 'layouts/application' %>

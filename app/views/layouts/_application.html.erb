@@ -1,4 +1,4 @@
-<% content_for :content do %>
+<%= render layout: 'layouts/base' do %>
   <a class="skip-to-link" href="#main">Skip to main content</a>
 
   <% if display_skip_to_main_navigation? %>
@@ -9,10 +9,8 @@
   <%= render 'shared/alerts' if alerts? %>
   <%= render 'shared/header' %>
 
-  <%= content_for?(:main) ? yield(:main) : yield %>
+  <%= yield %>
 
   <%= render 'shared/contact' %>
   <%= render 'shared/footer' %>
 <% end %>
-
-<%= render template: 'layouts/base' %>

@@ -2,6 +2,7 @@ ENV['RAILS_ENV']  = 'test'
 ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'mas/development_dependencies/cucumber/env'
+require 'feature/testing'
 
 I18n.available_locales = [:en, :cy]
 
@@ -30,3 +31,9 @@ After('@fake-articles') do
 end
 
 Capybara.default_wait_time = 20
+
+Around('@enable-sign-up') do |scenario, block|
+  Feature.run_with_activated(:sign_up) do
+    block.call
+  end
+end

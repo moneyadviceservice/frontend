@@ -14,6 +14,7 @@ module World
       static
       news_article
       news
+      sign_up
     )
 
     pages.each do |page|

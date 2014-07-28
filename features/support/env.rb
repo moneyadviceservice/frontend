@@ -22,11 +22,9 @@ Core::Registry::Repository[:static_page]             = Core::Repository::VCR.new
 Core::Registry::Repository[:news]                    = Core::Repository::VCR.new(news_article_repository)
 Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 
-Before('@fake-articles') do
+Around('@fake-articles') do |scenario, block|
   @real_article_repository = Core::Registry::Repository[:article]
-end
-
-After('@fake-articles') do
+  block.call
   Core::Registry::Repository[:article] = @real_article_repository
 end
 

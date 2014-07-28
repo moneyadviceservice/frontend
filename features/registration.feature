@@ -7,7 +7,7 @@ Scenario: Registering disabled
   When  I register
   Then  Registration is not implemented
 
-@enable-registration
+@enable-registration @pending
 Scenario: Registration
   When  I register
   Then  My MAS account should be created
@@ -15,12 +15,12 @@ Scenario: Registration
   And   I should see an "account created" notification
   And   I should be at the page I was on
 
-@enable-registration
+@enable-registration @pending
 Scenario: Registration from a direct link
   When I register from a direct link
   Then I should be at the home page
 
-@enable-registration
+@enable-registration @pending
 Scenario Outline: Attempt to register with bad details
   When I attempt to register with <Problem>
   Then No MAS account should be created

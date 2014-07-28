@@ -4,8 +4,8 @@ Feature: Sign in
   So that I get better financial tools and advice
 
 Scenario: User can't sign in when the feature is disabled
-  When I sign in
-  Then sign in is not implemented
+  When I attempt to sign in
+  Then I am directed to the old website
 
 @enable-sign-in @pending
 Scenario: Sign in

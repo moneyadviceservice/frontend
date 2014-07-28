@@ -30,10 +30,10 @@ After('@fake-articles') do
   Core::Registry::Repository[:article] = @real_article_repository
 end
 
-Capybara.default_wait_time = 20
-
 Around('@enable-sign-up') do |scenario, block|
   Feature.run_with_activated(:sign_up) do
     block.call
   end
 end
+
+Capybara.default_wait_time = 20

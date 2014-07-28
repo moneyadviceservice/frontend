@@ -11,7 +11,6 @@ source 'http://gems.test.mas'
 gem 'rails', '~> 4.1'
 
 gem 'activerecord-session_store'
-gem 'bowndler'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -43,6 +42,7 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'bowndler'
   gem 'binding_of_caller'
   gem 'guard-bundler'
   gem 'guard-cucumber'

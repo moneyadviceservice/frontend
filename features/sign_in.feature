@@ -3,9 +3,9 @@ Feature: Sign in
   I want to sign in
   So that I get better financial tools and advice
 
-Scenario: Sign in disabled
+Scenario: User can't sign in when the feature is disabled
   When I sign in
-  Then Sign in is not implemented
+  Then sign in is not implemented
 
 @enable-sign-in @pending
 Scenario: Sign in

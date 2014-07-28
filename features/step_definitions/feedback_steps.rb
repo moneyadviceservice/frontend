@@ -1,5 +1,6 @@
 Given(/^I am viewing an article$/) do
   browse_to_article article('en')
+  article_page.page.driver.header('User-Agent', 'agent')
 end
 
 Given(/^I am on the article feedback page$/) do
@@ -91,10 +92,9 @@ Then(/^I should see a confirmation message that my technical feedback has been r
   expect(current_page).to have_content(I18n.t('technical_feedbacks.create.flash_notice'))
 end
 
-Then(/^the article feedback email should have been sent$/) do
-  expect(Mail::TestMailer.deliveries.last.subject).to eql 'Article Feedback'
-end
-
-Then(/^the technical feedback email should have been sent$/) do
-  expect(Mail::TestMailer.deliveries.last.subject).to eql 'Technical Feedback'
+Then(/^the (technical|article) feedback email should have been sent$/) do |type|
+  expect(Mail::TestMailer.deliveries.last.subject).to eql "#{type.camelcase} Feedback"
+  expect(Mail::TestMailer.deliveries.last.body).to have_content("Url: #{article.url}")
+  expect(Mail::TestMailer.deliveries.last.body).to have_content('User Agent: agent')
+  expect(Mail::TestMailer.deliveries.last.body).to have_content('Date/Time: ')
 end

@@ -19,7 +19,12 @@ class ArticleFeedbacksController < ApplicationController
 
   def feedback_params
     if params[:feedback]
-      params.require(:feedback).permit(:topic, :useful, :suggestions)
+      feedback = params.require(:feedback).permit(:topic, :useful, :suggestions)
+      feedback[:url] = request.url
+      feedback[:user_agent] = request.user_agent
+      feedback[:time] = Time.current
+
+      feedback
     else
       {}
     end

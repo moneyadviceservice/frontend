@@ -37,7 +37,7 @@ module Core::Repository
       end
 
       def body_for_entity(entity)
-        case entity
+        body = case entity
         when Core::Feedback::Article
           "Did they find the article useful: #{entity.useful}\n\n" +
           "Their suggestions:\n\n" +
@@ -48,6 +48,14 @@ module Core::Repository
           "What happened when they tried:\n\n" +
           "#{entity.occurred}"
         end
+
+        body + "/n/n" + session_data_for_entity(entity)
+      end
+
+      def session_data_for_entity(entity)
+        "Url: #{entity.url}/n/n" +
+        "User Agent: #{entity.user_agent}/n/n" +
+        "Date/Time: #{entity.time}/n/n"
       end
 
     end

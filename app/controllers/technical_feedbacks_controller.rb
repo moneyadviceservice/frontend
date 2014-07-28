@@ -1,5 +1,4 @@
 class TechnicalFeedbacksController < ApplicationController
-
   def new
   end
 
@@ -25,7 +24,12 @@ class TechnicalFeedbacksController < ApplicationController
 
   def feedback_params
     if params[:feedback]
-      params.require(:feedback).permit(:issue_type, :attempting, :occurred)
+      feedback = params.require(:feedback).permit(:issue_type, :attempting, :occurred)
+      feedback[:url] = request.url
+      feedback[:user_agent] = request.user_agent
+      feedback[:time] = Time.current
+
+      feedback
     else
       {}
     end

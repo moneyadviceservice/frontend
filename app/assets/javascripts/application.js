@@ -100,10 +100,10 @@ require(['common'], function(MAS) {
   });
 
   $('[data-engine]').each(function(){
-    var engine = $(this).attr('data-engine'),
-      dependencies = [];
+    var engine = $(this).attr('data-engine');
 
-    dependencies.push(engine);
-    require(dependencies);
+    require([engine + 'Config'], function() {
+      require([engine]);
+    });
   });
 });

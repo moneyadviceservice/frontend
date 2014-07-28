@@ -1,7 +1,7 @@
 class EmbeddedToolsController < ApplicationController
 
   def parent_template
-    'layouts/constrained'
+    'layouts/engine'
   end
 
   helper_method :parent_template

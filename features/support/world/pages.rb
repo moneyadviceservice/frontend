@@ -15,6 +15,7 @@ module World
       news_article
       news
       sign_up
+      sign_in
     )
 
     pages.each do |page|

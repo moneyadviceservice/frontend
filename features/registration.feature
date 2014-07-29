@@ -5,7 +5,7 @@ Feature: Registration
 
 Scenario: Registering disabled
   When  I register
-  Then  Registration is not implemented
+  Then  I am told that the functionality is not implemented
 
 @enable-registration @pending
 Scenario: Registration

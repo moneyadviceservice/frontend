@@ -34,4 +34,10 @@ Around('@enable-registration') do |scenario, block|
   end
 end
 
+Around('@enable-sign-in') do |scenario, block|
+  Feature.run_with_activated(:sign_in) do
+    block.call
+  end
+end
+
 Capybara.default_wait_time = 20

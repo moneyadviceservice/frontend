@@ -26,6 +26,7 @@ gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
+gem 'devise'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -4,7 +4,7 @@ Feature: Registration
   So that I can sign in and get better financial tools and advice
 
 Scenario: Registering disabled
-  When  I register
+  When  I attempt to register
   Then  I am told that the functionality is not implemented
 
 @enable-registration @pending

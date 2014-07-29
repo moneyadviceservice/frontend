@@ -5,7 +5,7 @@ Feature: Sign in
 
 Scenario: User can't sign in when the feature is disabled
   When I attempt to sign in
-  Then I am directed to the old website
+  Then I am told that the functionality is not implemented
 
 @enable-sign-in @pending
 Scenario: Sign in

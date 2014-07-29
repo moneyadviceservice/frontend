@@ -1,13 +1,18 @@
-.mas-logo {
+.mas-logo__img {
+  max-width: none;
+  width: 200%;
+}
+
+.mas-logo__link {
+  display: block;
+  overflow: hidden;
+  width: 180px;
+
+  @include respond-to($mq-m) {
+    width: 250px;
+  }
 
   &:focus {
     outline: 2px solid $color-green-secondary;
-  }
-
-  > img {
-    width: 180px;
-    @include respond-to($mq-m) {
-      width: 256px;
-    }
   }
 }

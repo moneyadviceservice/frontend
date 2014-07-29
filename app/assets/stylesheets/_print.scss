@@ -1,6 +1,7 @@
 // It's ok to use !important in this file so need CSSLint to ignore them
 
 /* @lintingIgnoreBegin */
+
 @media print {
 
   // Remove all background images and colours and make text black
@@ -29,12 +30,17 @@
   // Resize main column
   .l-main {
     width: 100%;
+    min-height: 0;
   }
 
   // style logo
   .mas-logo {
     margin-top:0 !important;
     margin-bottom:0 !important;
+  }
+
+  .mas-logo__img {
+    margin-left: -100%;
   }
 
   .l-header {

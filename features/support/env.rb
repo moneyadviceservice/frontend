@@ -28,14 +28,15 @@ Around('@fake-articles') do |scenario, block|
   Core::Registry::Repository[:article] = @real_article_repository
 end
 
-Around('@enable-registration') do |scenario, block|
-  Feature.run_with_activated(:registration) do
-    block.call
-  end
-end
+Around do |scenario, block|
+  enable_tag = scenario.scenario_tags.detect{|tag| tag.name =~ /@enable-.*/} if scenario.respond_to?(:scenario_tags)
+  enable_feature = enable_tag.name.gsub('@enable-','').gsub('-','_').to_sym if enable_tag
 
-Around('@enable-sign-in') do |scenario, block|
-  Feature.run_with_activated(:sign_in) do
+  if enable_feature
+    Feature.run_with_activated(enable_feature) do
+      block.call
+    end
+  else
     block.call
   end
 end

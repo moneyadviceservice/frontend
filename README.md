@@ -82,25 +82,17 @@ be removed once a feature is complete.
 Note that the local configuration file *config/features.yml* is ignored in git so
 make sure to run any acceptance tests with the feature toggled on and off locally.
 
-If necessary, use a precondition in any tests to check for the status of the feature.
+If you need to enable a feature in any tests you can use tags.
 For example, in feature tests you can use:
 
 ```gherkin
-Background:
-  Given The feature is active
-
+@enable-feature-name
 Scenario: View great new feature
   When I visit the website
   Then I should see this great new feature
 ```
 
-with the corresponding step being:
-
-```rb
-Given /^The feature is active$/ do
-  pending unless Feature.active?(:new_feature)
-end
-```
+Where the cucumber tag `@enable-feature-name` will enable the feature `feature_name` for the cucumber scenario.
 
 ### Feature Development
 

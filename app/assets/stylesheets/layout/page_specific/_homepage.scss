@@ -5,12 +5,7 @@
 /* @lintingIgnoreBegin */
 
 .l-directory {
-  @include respond-to($mq-l) {
-    width: 105%;
-    margin-left: -2.5%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
+  @extend .clearfix;
 
   .directory__item {
     @include column(12);
@@ -31,7 +26,7 @@
     }
   }
 
-  .flexbox .l-constrained & {
+  .flexbox & .l-constrained {
     display: flex;
     flex-flow: column;
 
@@ -60,6 +55,10 @@
 }
 
 /* @lintingIgnoreEnd */
+
+.l-constrained.l-promos {
+  margin-bottom: $baseline-unit*2;
+}
 
 .l-homepage-promo {
   overflow: hidden;

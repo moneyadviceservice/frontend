@@ -1,8 +1,10 @@
 <header class="l-header" role="banner">
   <div class="l-constrained">
-    <%= link_to root_path, class: 'mas-logo' do %>
-      <%= image_tag("mas-logo.png", alt: 'the Money Advice Service') %>
-    <% end %>
+    <div class="mas-logo">
+      <%= link_to root_path, class: 'mas-logo__link' do %>
+        <%= image_tag("logo-sprite.png", alt: 'the Money Advice Service', class: 'mas-logo__img') %>
+      <% end %>
+    </div>
 
     <%= render 'shared/mobile_nav' %>
 

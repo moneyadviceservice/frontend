@@ -2,29 +2,11 @@
 //
 // Styleguide Trust banner
 
-.trust-banner {
-  position: relative;
-  height: 240px;
-  background: image_url('illustrated_people.png') 50% 100% no-repeat;
-  background-size: 100%;
-
-  @include respond-to(25.25em) {
-    background-size: auto 157px;
-  }
-
-  @include respond-to($mq-s) {
-    background-position: 100% 100%;
-    background-size: 40%;
-    height: auto;
-  }
-}
-
-.trust-banner__heading {
-  @include body(30, 30);
+.trust-banner-heading {
+  @include body(30, 36);
   font-weight: 700;
-  color: $trust-banner-heading;
   margin: 0;
-  padding-top: $baseline-unit*4;
+  padding-top: $baseline-unit*6;
   padding-bottom: $baseline-unit*6;
 
   .theme-cy & {
@@ -34,20 +16,12 @@
   }
 
   @include respond-to($mq-s) {
-    width: 60%;
-  }
-
-  @include respond-to($mq-m) {
-    @include body(36, 36);
-    padding-top: $baseline-unit*8;
+    padding-top: $baseline-unit*11;
+    padding-bottom: $baseline-unit*12;
+    text-align: center;
   }
 
   @include respond-to($mq-l) {
-    @include body(42, 42);
-    padding-bottom: $baseline-unit*12;
-  }
-
-  @include respond-to($mq-xl) {
-    @include body(46, 46);
+    @include body(48, 48);
   }
 }

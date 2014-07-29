@@ -27,6 +27,7 @@ gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
+gem 'devise'
 
 gem 'pensions_calculator', '~> 0.1'
 

@@ -3,13 +3,10 @@
 // Styleguide Directory
 
 .directory {
+  overflow: hidden;
   background-color: $home-page-feature;
-  padding-top: $baseline-unit*4;
+  padding-top: $baseline-unit*5;
   padding-bottom: $baseline-unit*2;
-
-  @include respond-to($mq-m) {
-    padding-top: $baseline-unit*7;
-  }
 }
 
 .directory__title {
@@ -19,8 +16,8 @@
   margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*2;
     @include body(24, 30);
+    margin-bottom: $baseline-unit*2;
   }
 
   .theme-cy & {

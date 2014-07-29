@@ -10,8 +10,6 @@
 .promo__heading {
   @extend %font-heading-medium;
   @include body(24, 30);
-  display: block;
-  margin-bottom: $baseline-unit;
   margin-top: 0;
 
   .theme-cy & {
@@ -19,9 +17,4 @@
       @include body(18, 24);
     }
   }
-}
-
-.promo__content,
-.promo__heading {
-  @include column(12);
 }

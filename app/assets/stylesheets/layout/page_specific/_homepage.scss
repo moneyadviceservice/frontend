@@ -58,15 +58,16 @@
 
 .l-constrained.l-promos {
   margin-bottom: $baseline-unit*2;
+  margin-top: $baseline-unit*6;
 }
 
 .l-homepage-promo {
-  overflow: hidden;
   margin-top: $baseline-unit*4;
-  margin-bottom: $baseline-unit*4;
+  margin-bottom: $baseline-unit*6;
 
   @include respond-to($mq-s) {
     @include column(6);
+    margin-top: $baseline-unit*4;
     min-height: 335px;
   }
 
@@ -76,5 +77,7 @@
 
   @include respond-to($mq-l) {
     @include column(3);
+    margin-bottom: $baseline-unit*4;
+    margin-top: $baseline-unit*4;
   }
 }

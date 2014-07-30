@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  layout 'unconstrained'
 
   decorates_assigned :directory_categories, with: CategoryDecorator
 

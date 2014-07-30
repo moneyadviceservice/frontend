@@ -31,7 +31,7 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.session_store :cookie_store
+  config.session_store :active_record_store
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)

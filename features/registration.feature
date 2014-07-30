@@ -7,7 +7,7 @@ Scenario: Registering disabled
   When  I attempt to register
   Then  I am told that the functionality is not implemented
 
-@enable-registration @pending
+@enable-registration
 Scenario: Registration
   When  I register
   Then  My MAS account should be created

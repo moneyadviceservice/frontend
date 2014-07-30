@@ -38,11 +38,18 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    if Feature.active?(:registration)
+      devise_for :users, only: [:registrations]
+    else
+      scope '/users' do
+        match '/sign_up', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_registration'
+        match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
+      end
+    end
+
     scope '/users' do
       match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'
       match '/sign_out', to: NOT_IMPLEMENTED, via: 'delete', as: 'destroy_user_session'
-      match '/sign_up', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_registration'
-      match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
     end
 
     Feature.with(:pensions_calculator) do

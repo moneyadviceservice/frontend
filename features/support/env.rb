@@ -48,4 +48,9 @@ Around do |scenario, block|
   end
 end
 
+AfterConfiguration do
+  DatabaseCleaner.clean
+  ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
+end
+
 Capybara.default_wait_time = 20

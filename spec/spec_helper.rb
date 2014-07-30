@@ -15,6 +15,9 @@ require 'factory_girl'
 require 'feature/testing'
 require 'html_validation'
 require 'webmock/rspec'
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :deletion
 
 Draper::ViewContext.test_strategy :fast
 
@@ -59,5 +62,10 @@ RSpec.configure do |c|
     Core::Registry::Repository[:article]     = article_repository
     Core::Registry::Repository[:category]    = category_repository
     Core::Registry::Repository[:search]      = search_repository
+  end
+
+  c.before(:suite) do
+    DatabaseCleaner.clean
+    ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
   end
 end

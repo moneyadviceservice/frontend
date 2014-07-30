@@ -24,18 +24,6 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
-GIT
-  remote: git@github.com:moneyadviceservice/pensions_calculator
-  revision: f30cbdec0a5c0456e25e1a9993e7e8b7d45406da
-  branch: mount_in_responsive
-  specs:
-    pensions_calculator (0.1.0)
-      autoprefixer-rails
-      dough-ruby
-      rails (~> 4.1)
-      sass-rails (~> 4.0.3)
-      uglifier
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -143,7 +131,7 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (0.1.0.89)
+    dough-ruby (0.1.0.91)
       rails (>= 3.2)
     draper (1.3.1)
       actionpack (>= 3.0)
@@ -242,6 +230,12 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nunes (0.3.1)
+    pensions_calculator (0.1.0.206)
+      autoprefixer-rails
+      dough-ruby
+      rails (~> 4.1)
+      sass-rails (~> 4.0.3)
+      uglifier
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -422,7 +416,7 @@ DEPENDENCIES
   mysql2
   nokogiri
   nunes
-  pensions_calculator (~> 0.1)!
+  pensions_calculator (~> 0.1)
   psych (>= 2.0.5)
   rails (~> 4.1)
   rouge

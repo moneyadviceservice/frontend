@@ -28,7 +28,7 @@ gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'pensions_calculator', '~> 0.1', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: 'mount_in_responsive'
+gem 'pensions_calculator', '~> 0.1'
 
 group :assets do
   gem 'autoprefixer-rails'

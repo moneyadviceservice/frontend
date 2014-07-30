@@ -49,7 +49,7 @@
   <script type="text/javascript">
 
     <%# // Inline custom Modernizr %>
-    <%= raw Uglifier.compile(Rails.application.assets['frontend-assets/vendor/assets/modernizr/modernizr.js']) %>
+    <%= raw Rails.application.assets['frontend-assets/vendor/assets/modernizr/modernizr.js'] %>
 
     <%# // Required for Google Tag Manager %>
     var dataLayer = [

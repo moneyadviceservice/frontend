@@ -39,7 +39,9 @@ Around do |scenario, block|
 
   if enable_feature
     Feature.run_with_activated(enable_feature) do
+      Rails.application.reload_routes!
       block.call
+      Rails.application.reload_routes!
     end
   else
     block.call

@@ -89,6 +89,6 @@ Rails.application.configure do
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :sendmail
   config.raise_feedback_delivery_errors = true
-  config.article_feedback_email = 'foo@bar.com'
-  config.technical_feedback_email = 'foo@bar.com'
+  config.article_feedback_email   = 'tools.feedback@moneyadviceservice.org.uk'
+  config.technical_feedback_email = 'matt.lucht@moneyadviceservice.org.uk'
 end

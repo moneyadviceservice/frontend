@@ -7,17 +7,17 @@
         <%= devise_error_messages! %>
 
         <%= f.form_row :email do %>
-          <%= f.label :email %>
+          <%= f.label :email, :class => "form__label-heading" %>
           <%= f.email_field :email, autofocus: true %>
         <% end %>
 
         <%= f.form_row :password do %>
-          <%= f.label :password %>
+          <%= f.label :password, :class => "form__label-heading" %>
           <%= f.password_field :password, autocomplete: "off" %>
         <% end %>
 
         <%= f.form_row :password_confirmation do %>
-          <%= f.label :password_confirmation %>
+          <%= f.label :password_confirmation, :class => "form__label-heading" %>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         <% end %>
 

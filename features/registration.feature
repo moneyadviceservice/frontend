@@ -12,7 +12,7 @@ Scenario: Registration
   When  I register
   Then  My MAS account should be created
   And   I should be signed in
-  And   I should see an "account created" notification
+  And   I should see an "Welcome! You have signed up successfully." notification
   And   I should be at the page I was on
 
 @enable-registration

@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
   devise :registerable,
-         :database_authenticatable
+         :database_authenticatable,
+         :encryptable
          # :timeoutable,
          # :confirmable,
          # :invitable,
          # :recoverable,
          # :trackable,
          # :validatable,
-         # :encryptable,
          # :crm_authenticatable,
          # :lockable
 end

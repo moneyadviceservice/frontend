@@ -1,7 +1,44 @@
+<div class="l-nav">
+  <nav class="nav" role="navigation" aria-label="main" id="primary-nav" tabindex="-1">
+    <ul class="link-list-primary">
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/debt-and-borrowing">Debt and borrowing</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/budgeting-and-managing-money">Budgeting and managing money</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/saving-and-investing">Saving and investing</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/work-pensions-and-retirement">Work, pensions and retirement</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/benefits">Benefits</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/births-deaths-and-family">Births, deaths and family</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/insurance">Insurance</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/homes-and-mortgages">Homes and mortgages</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/care-and-disability">Care and disability</a>
+      </li>
+      <li class="link-list-primary__item">
+        <a class="link-list-primary__text" href="/en/categories/cars-and-travel">Cars and travel</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h2>Sign up</h2>
+      <h1>Register</h1>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form"}) do |f| %>
         <%= devise_error_messages! %>

@@ -71,8 +71,11 @@ group :production do
   gem 'unicorn-rails'
 end
 
-group :test, :development do
+group :build, :test, :development do
   gem 'bowndler'
+end
+
+group :test, :development do
   gem 'byebug'
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'

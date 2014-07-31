@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  layout 'constrained'
   protect_from_forgery with: :exception
 
   include Authentication

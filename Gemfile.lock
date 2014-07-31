@@ -24,6 +24,13 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: 4ae3dcc0cb0358c72f046e2702380b3b49002649
+  specs:
+    dough-ruby (0.1.0)
+      rails (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -407,6 +414,7 @@ DEPENDENCIES
   devise
   devise-encryptable
   dotenv-rails
+  dough-ruby!
   draper (~> 1.3.0)
   ejs
   faker

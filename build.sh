@@ -3,6 +3,7 @@
 set -e
 
 unset RUBYOPT
+export PATH=./bin:$PATH
 export BUNDLE_WITHOUT="test:development"
 
 version_number=${GO_PIPELINE_COUNTER-0}

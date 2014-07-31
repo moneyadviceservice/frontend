@@ -42,7 +42,6 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'bowndler'
   gem 'binding_of_caller'
   gem 'guard-bundler'
   gem 'guard-cucumber'
@@ -73,6 +72,7 @@ group :production do
 end
 
 group :test, :development do
+  gem 'bowndler'
   gem 'byebug'
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'

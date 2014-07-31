@@ -33,3 +33,6 @@ Then(/^I should see an "(.*?)" notification$/) do |notification|
   expect(page.html).to include(notification)
 end
 
+Then(/^I should be at the page I was on$/) do
+  expect(page.current_path).to eql('/en/articles/why-it-pays-to-save-regularly')
+end

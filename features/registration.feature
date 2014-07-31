@@ -8,7 +8,8 @@ Scenario: Registering disabled
   Then  I am told that the functionality is not implemented
 
 @enable-registration
-Scenario: Registration
+Scenario: Registration when browsing MAS
+  Given I am on an article that lives in a single category
   When  I register
   Then  My MAS account should be created
   And   I should be signed in

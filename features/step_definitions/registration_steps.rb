@@ -21,6 +21,10 @@ Then(/^My MAS account should be created$/) do
   expect(User.count(email: "phil@example.com")).to eql(1)
 end
 
+Then(/^I should be signed in$/) do
+  expect(page.html).to include('My Account')
+end
+
 Then(/^I should be at the home page$/) do
   expect(page.current_path).to eql('/en')
 end

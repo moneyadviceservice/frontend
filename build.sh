@@ -29,9 +29,9 @@ echo "Running Bower cache clean"
 echo "----"
 bower cache clean
 
-echo "Running Bower install"
+echo "Running Bower install (via bowndler)"
 echo "----"
-bower install --production --config.interactive=false
+bowndler install --production --config.interactive=false
 
 echo "Precompiling assets"
 echo "----"

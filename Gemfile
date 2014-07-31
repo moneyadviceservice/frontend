@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'http://gems.test.mas'
 
 # RULES OF THE GEMFILE
 #
@@ -27,6 +28,8 @@ gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'pensions_calculator', '~> 0.1'
+
 group :assets do
   gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 4.0.0'
@@ -39,6 +42,7 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'bowndler'
   gem 'binding_of_caller'
   gem 'guard-bundler'
   gem 'guard-cucumber'

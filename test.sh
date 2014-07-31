@@ -14,7 +14,7 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 bundle install --jobs $BUNDLE_JOBS
 bower cache clean
-bower install --production --config.interactive=false
+bowndler install --production --config.interactive=false
 
 RAILS_ENV=development rake karma:install karma:run_once
 rake spec

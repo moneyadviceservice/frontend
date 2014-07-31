@@ -1,5 +1,3 @@
-//= require require_config
-
 require(['common'], function(MAS) {
   'use strict';
 
@@ -101,4 +99,11 @@ require(['common'], function(MAS) {
     });
   });
 
+  $('[data-engine]').each(function(){
+    var engine = $(this).attr('data-engine');
+
+    require([engine + 'Config'], function() {
+      require([engine]);
+    });
+  });
 });

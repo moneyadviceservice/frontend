@@ -7,12 +7,10 @@ development:
   encoding: utf8
 
 test:
-  adapter: mysql2
-  username: root
-  database: mas_test
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
   timeout: 5000
-  encoding: utf8
 
 production:
   adapter: mysql2

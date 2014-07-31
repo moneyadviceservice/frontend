@@ -39,7 +39,8 @@ Rails.application.routes.draw do
     root 'home#show'
 
     if Feature.active?(:registration)
-      devise_for :users, only: [:registrations]
+      devise_for :users, only: [:registrations],
+                         controllers: { registrations: "registrations" }
     else
       scope '/users' do
         match '/sign_up', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_registration'

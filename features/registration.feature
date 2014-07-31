@@ -15,7 +15,7 @@ Scenario: Registration
   And   I should see an "account created" notification
   And   I should be at the page I was on
 
-@enable-registration @pending
+@enable-registration
 Scenario: Registration from a direct link
   When I register from a direct link
   Then I should be at the home page

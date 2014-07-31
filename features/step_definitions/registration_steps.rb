@@ -13,6 +13,15 @@ When(/^I register$/) do
   sign_up_page.submit.click
 end
 
+When(/^I register from a direct link$/) do
+  step "I register"
+end
+
 Then(/^My MAS account should be created$/) do
   expect(User.count(email: "phil@example.com")).to eql(1)
 end
+
+Then(/^I should be at the home page$/) do
+  expect(page.current_path).to eql('/en')
+end
+

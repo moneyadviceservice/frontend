@@ -5,7 +5,6 @@ end
 When(/^I register$/) do
   Rails.application.reload_routes!
   Devise.regenerate_helpers!
-  User.delete_all
 
   sign_up_page.load(locale: 'en')
   sign_up_page.email.set "phil@example.com"

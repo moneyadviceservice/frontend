@@ -29,8 +29,13 @@ Around('@fake-articles') do |scenario, block|
 end
 
 Around do |scenario, block|
-  enable_tag = scenario.scenario_tags.detect{|tag| tag.name =~ /@enable-.*/} if scenario.respond_to?(:scenario_tags)
-  enable_feature = enable_tag.name.gsub('@enable-','').gsub('-','_').to_sym if enable_tag
+  enable_feature_tag = /^@enable-/
+  enable_tags        = scenario.source_tag_names.grep(enable_feature_tag)
+  enable_feature     = if enable_tags.size > 1
+                         fail StandardError.new('Only singular feature tags are supported')
+                       elsif enable_tags.size > 0
+                         enable_tags.first.gsub(enable_feature_tag, '').underscore.to_sym
+                       end
 
   if enable_feature
     Feature.run_with_activated(enable_feature) do

@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
   DISMISS_BETA_OPT_OUT_COOKIE_NAME  = 'dismiss_opt_out'
   DISMISS_BETA_OPT_OUT_COOKIE_VALUE = 'y'
 
-  before_action :store_return_to_location
-
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
@@ -53,10 +51,6 @@ class ApplicationController < ActionController::Base
   helper_method :alerts?
 
   private
-
-  def store_return_to_location
-    session[:return_to] = request.fullpath
-  end
 
   def category_tree
     @category_tree ||= Core::CategoryTreeReader.new.call

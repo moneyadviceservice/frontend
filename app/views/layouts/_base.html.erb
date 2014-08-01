@@ -208,7 +208,7 @@
 <%= javascript_include_tag 'requirejs/require' %>
 <script>
   <%= raw Rails.application.assets['require_config.js'] %>
-  require(['<%= javascript_path('application') %>']);
+  require(['application']);
 </script>
 <%# END RequireJS load of application %>
 

@@ -2,12 +2,16 @@
   <h1>Register</h1>
   <p class="intro">To get great benefits I promise</p>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form"}) do |f| %>
-    <%= devise_error_messages! %>
+  <%= form_for(resource, as: resource_name,
+                         url: registration_path(resource_name),
+                         html: {:class => "form"},
+                         builder: Dough::Forms::Builders::Validation) do |f| %>
+    <%= f.validation_summary %>
 
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :email do %>
+          <%= f.errors_for :email %>
           <%= f.label :email, :class => "form__label-heading" %>
           <%= f.email_field :email, autofocus: true, "aria-describedby" => "tooltip_1" %>
         <% end %>
@@ -25,6 +29,7 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :password do %>
+          <%= f.errors_for :password %>
           <%= f.label :password, :class => "form__label-heading" %>
           <%= f.password_field :password, autocomplete: "off", "aria-describedby" => "tooltip_2" %>
         <% end %>
@@ -42,6 +47,7 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :password_confirmation do %>
+          <%= f.errors_for :password_confirmation %>
           <%= f.label :password_confirmation, :class => "form__label-heading" %>
           <%= f.password_field :password_confirmation, autocomplete: "off", "aria-describedby" => "tooltip_3" %>
         <% end %>

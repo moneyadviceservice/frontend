@@ -10,5 +10,7 @@ class User < ActiveRecord::Base
          # :validatable,
          # :crm_authenticatable,
          # :lockable
+
+  validates_with Validators::Email, attributes: [:email]
 end
 

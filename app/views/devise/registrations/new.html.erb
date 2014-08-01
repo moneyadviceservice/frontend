@@ -1,70 +1,69 @@
-<div class="l-nav">
-  <nav class="nav" role="navigation" aria-label="main" id="primary-nav" tabindex="-1">
-    <ul class="link-list-primary">
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/debt-and-borrowing">Debt and borrowing</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/budgeting-and-managing-money">Budgeting and managing money</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/saving-and-investing">Saving and investing</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/work-pensions-and-retirement">Work, pensions and retirement</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/benefits">Benefits</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/births-deaths-and-family">Births, deaths and family</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/insurance">Insurance</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/homes-and-mortgages">Homes and mortgages</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/care-and-disability">Care and disability</a>
-      </li>
-      <li class="link-list-primary__item">
-        <a class="link-list-primary__text" href="/en/categories/cars-and-travel">Cars and travel</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<main role="main" class="l-registration">
+  <h1>Register</h1>
+  <p class="intro">To get great benefits I promise</p>
 
-<div class="l-main editorial">
-  <div class="l-main__row">
-    <main class="l-main__cell-single" role="main">
-      <h1>Register</h1>
-      <p class="intro">To get great benefits I promise</p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form"}) do |f| %>
+    <%= devise_error_messages! %>
 
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form"}) do |f| %>
-        <div class="panel">
-          <%= devise_error_messages! %>
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :email do %>
+          <%= f.label :email, :class => "form__label-heading" %>
+          <%= f.email_field :email, autofocus: true %>
+        <% end %>
+      </div>
 
-          <%= f.form_row :email do %>
-            <%= f.label :email, :class => "form__label-heading" %>
-            <%= f.email_field :email, autofocus: true %>
-          <% end %>
+      <div class="registration__helper">
+        <div class="tooltip tooltip--onfocus" role="tooltip">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text">This is the tooltip, is it not.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <%= f.form_row :password do %>
-            <%= f.label :password, :class => "form__label-heading" %>
-            <%= f.password_field :password, autocomplete: "off" %>
-          <% end %>
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :password do %>
+          <%= f.label :password, :class => "form__label-heading" %>
+          <%= f.password_field :password, autocomplete: "off" %>
+        <% end %>
+      </div>
 
-          <%= f.form_row :password_confirmation do %>
-            <%= f.label :password_confirmation, :class => "form__label-heading" %>
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          <% end %>
+      <div class="registration__helper">
+        <div class="tooltip tooltip--onfocus" role="tooltip">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text">This is the tooltip, is it not.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :password_confirmation do %>
+          <%= f.label :password_confirmation, :class => "form__label-heading" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="tooltip tooltip--onfocus" role="tooltip">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text">This is the tooltip, is it not.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
+        <div class="form__row">
           <%= f.submit "Sign up", class: "button button--primary" %>
         </div>
-      <% end %>
+      </div>
+    </div>
+  <% end %>
 
-      <%= render "devise/shared/links" %>
-    </main>
-  </div>
-</div>
+  <%= render "devise/shared/links" %>
+</main>

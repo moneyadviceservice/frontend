@@ -205,11 +205,7 @@
 <% end %>
 
 <%# START RequireJS load of application %>
-<%= javascript_include_tag 'requirejs/require' %>
-<script>
-  <%= raw Rails.application.assets['require_config.js'] %>
-  require(['<%= javascript_path('application') %>']);
-</script>
+<%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
 <%# END RequireJS load of application %>
 
 <%= yield :javascripts %>

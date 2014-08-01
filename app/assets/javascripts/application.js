@@ -1,3 +1,5 @@
+//= require require_config
+
 require(['common'], function(MAS) {
   'use strict';
 

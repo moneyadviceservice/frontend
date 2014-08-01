@@ -9,12 +9,12 @@
       <div class="registration__field">
         <%= f.form_row :email do %>
           <%= f.label :email, :class => "form__label-heading" %>
-          <%= f.email_field :email, autofocus: true %>
+          <%= f.email_field :email, autofocus: true, "aria-describedby" => "tooltip_1" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="tooltip tooltip--onfocus" role="tooltip">
+        <div class="field-tooltip" role="tooltip" id="tooltip_1" data-dough-component="FieldTooltip">
           <div class="tooltip__content-container">
             <p class="tooltip__text">This is the tooltip, is it not.</p>
           </div>
@@ -26,12 +26,12 @@
       <div class="registration__field">
         <%= f.form_row :password do %>
           <%= f.label :password, :class => "form__label-heading" %>
-          <%= f.password_field :password, autocomplete: "off" %>
+          <%= f.password_field :password, autocomplete: "off", "aria-describedby" => "tooltip_2" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="tooltip tooltip--onfocus" role="tooltip">
+        <div class="field-tooltip" role="tooltip" id="tooltip_2" data-dough-component="FieldTooltip">
           <div class="tooltip__content-container">
             <p class="tooltip__text">This is the tooltip, is it not.</p>
           </div>
@@ -43,12 +43,12 @@
       <div class="registration__field">
         <%= f.form_row :password_confirmation do %>
           <%= f.label :password_confirmation, :class => "form__label-heading" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", "aria-describedby" => "tooltip_3" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="tooltip tooltip--onfocus" role="tooltip">
+        <div class="field-tooltip" role="tooltip" id="tooltip_3" data-dough-component="FieldTooltip">
           <div class="tooltip__content-container">
             <p class="tooltip__text">This is the tooltip, is it not.</p>
           </div>

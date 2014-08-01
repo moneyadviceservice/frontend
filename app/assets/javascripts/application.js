@@ -109,3 +109,8 @@ require(['common'], function(MAS) {
     });
   });
 });
+
+// Components
+require(['componentLoader'], function(componentLoader) {
+  componentLoader.init($('body'));
+});

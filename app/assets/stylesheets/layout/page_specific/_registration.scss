@@ -1,0 +1,36 @@
+.l-registration {
+  @include column(12);
+
+  .registration__row {
+    @include row(12);
+  }
+
+  .registration__field {
+    @include column(12);
+
+    @include respond-to($mq-m) {
+      // @include row(5);
+      @include column(5);
+    }
+
+    @include respond-to($mq-l) {
+      @include row(12);
+      @include column(4, 12);
+    }
+  }
+
+  .registration__helper {
+    @include column(12);
+
+    @include respond-to($mq-m) {
+      @include column(6);
+      @include push(1);
+    }
+
+    @include respond-to($mq-l) {
+      @include row(12);
+      @include column(7, 12);
+      @include push(1);
+    }
+  }
+}

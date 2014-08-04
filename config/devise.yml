@@ -1,0 +1,6 @@
+development:
+  pepper: "<%= ENV['DEVISE_PEPPER'] || 'pepper' %>"
+test:
+  pepper: "<%= ENV['DEVISE_PEPPER'] || 'pepper' %>"
+production:
+  pepper: "<%= ENV['DEVISE_PEPPER'] %>"

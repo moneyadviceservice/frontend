@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  config.pepper = "pepper"
+  config.pepper = YAML::load(ERB.new(File.read(Rails.root.join("config/devise.yml"))).result)[Rails.env]['pepper']
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

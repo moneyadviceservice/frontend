@@ -7,7 +7,8 @@
 <form class="form" novalidate>
 
   <div class="form__row">
-    <label for="text_field" class="form__label-heading">Text Field * <span class="visually-hidden">required</span></label>
+    <label for="text_field" class="form__label-heading">Text Field *
+      <span class="visually-hidden">required</span></label>
     <input type="text" id="text_field" aria-required="true">
   </div>
 
@@ -72,9 +73,18 @@
   </div>
 
   <div class="form__row">
-    <div data-dough-component="RangeInput">
-      <label for="range" class="form__label-heading">Range Input <strong>(Work in progress)</strong></label>
-      <input type="text" id="range" data-dough-range-input class="form__input--range">
+    <label for="range" class="form__label-heading">Range Input</label>
+    <div class="form__group form__group--pri-sec" data-dough-component="RangeInput">
+      <div class="form__group-item form__group-item--secondary">
+        <span class="form__input-container">
+          <span class="form__input-label" id="input-label-slider">&pound;</span>
+          <input id="input4" class="form__input" type="text" aria-labelledby="form-label4 input-label-slider" data-dough-range-input class="">
+          <span class="form__input-outline"></span>
+        </span>
+      </div>
+      <div class="form__group-item form__group-item--primary" data-dough-range-input-slider>
+
+      </div>
     </div>
   </div>
 

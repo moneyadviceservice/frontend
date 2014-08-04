@@ -101,16 +101,15 @@ require(['common'], function(MAS) {
     });
   });
 
-  $('[data-engine]').each(function(){
-    var engine = $(this).attr('data-engine');
+  // Kick off component loader
+  var engines = [];
+  $('[data-engine]').each(function() {
+    engines.push($(this).attr('data-engine') + 'Config');
+  });
 
-    require([engine + 'Config'], function() {
-      require([engine]);
+  require(engines, function() {
+    require(['componentLoader'], function(componentLoader) {
+      componentLoader.init($('body'));
     });
   });
-});
-
-// Components
-require(['componentLoader'], function(componentLoader) {
-  componentLoader.init($('body'));
 });

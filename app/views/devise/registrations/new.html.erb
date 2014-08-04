@@ -10,6 +10,16 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :first_name do %>
+          <%= f.errors_for :first_name %>
+          <%= f.label :first_name, :class => "form__label-heading" %>
+          <%= f.text_field :first_name, autofocus: true %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <%= f.form_row :email do %>
           <%= f.errors_for :email %>
           <%= f.label :email, :class => "form__label-heading" %>

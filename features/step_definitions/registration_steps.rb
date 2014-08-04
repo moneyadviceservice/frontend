@@ -7,6 +7,7 @@ When(/^I register$/) do
   Devise.regenerate_helpers!
 
   sign_up_page.load(locale: 'en')
+  sign_up_page.first_name.set "phil"
   sign_up_page.email.set "phil@example.com"
   sign_up_page.password.set "password"
   sign_up_page.password_confirmation.set "password"

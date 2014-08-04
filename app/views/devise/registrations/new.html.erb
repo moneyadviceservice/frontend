@@ -74,6 +74,16 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :post_code do %>
+          <%= f.errors_for :post_code %>
+          <%= f.label :post_code, :class => "form__label-heading" %>
+          <%= f.text_field :post_code %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <div class="form__row">
           <%= f.submit "Sign up", class: "button button--primary" %>
         </div>

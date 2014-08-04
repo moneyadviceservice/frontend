@@ -11,6 +11,7 @@ When(/^I register$/) do
   sign_up_page.email.set "phil@example.com"
   sign_up_page.password.set "password"
   sign_up_page.password_confirmation.set "password"
+  sign_up_page.post_code.set "NE1 6EE"
   sign_up_page.submit.click
 end
 

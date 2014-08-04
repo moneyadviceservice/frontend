@@ -8,6 +8,7 @@ module UI::Pages
     element :email, "input[name='user[email]']"
     element :password, "input[name='user[password]']"
     element :password_confirmation, "input[name='user[password_confirmation]']"
+    element :post_code, "input[name='user[post_code]']"
     element :submit, "input[value='Sign up']"
   end
 end

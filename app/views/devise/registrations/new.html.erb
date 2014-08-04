@@ -84,6 +84,16 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :newsletter_subscription do %>
+          <%= f.errors_for :newsletter_subscription %>
+          <%= f.label :newsletter_subscription, :class => "form__label-heading" %>
+          <%= f.check_box :newsletter_subscription %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <div class="form__row">
           <%= f.submit "Sign up", class: "button button--primary" %>
         </div>

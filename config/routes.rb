@@ -48,9 +48,13 @@ Rails.application.routes.draw do
       end
     end
 
-    scope '/users' do
-      match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'
-      match '/sign_out', to: NOT_IMPLEMENTED, via: 'delete', as: 'destroy_user_session'
+    if Feature.active?(:sign_in)
+      devise_for :users, only: [:sessions]
+    else
+      scope '/users' do
+        match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'
+        match '/sign_out', to: NOT_IMPLEMENTED, via: 'delete', as: 'destroy_user_session'
+      end
     end
 
     Feature.with(:pensions_calculator) do

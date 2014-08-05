@@ -1,4 +1,9 @@
 .l-footer {
+  position: relative; // Fixes Safari bug
+  background-color: $color-footer-bg;
+
+  // OLD FOOTER STYLES
+
   .social-links {
     float: right;
   }
@@ -20,4 +25,59 @@
   .authentication__link {
     @extend %link-nav-secondary;
   }
+
+  // NEW FOOTER COMPONENT STYLES
+
+  .footer-secondary__list--left {
+    @include column(12);
+
+    @include respond-to($mq-s) {
+      @include column(6);
+    }
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+
+  .footer-secondary__list--right {
+    @include column(12);
+
+    @include respond-to($mq-s) {
+      @include column(6);
+    }
+
+    @include respond-to($mq-l) {
+      @include column(8);
+      text-align: right;
+      float: right;
+    }
+  }
+
+  .footer-newsletter-signup {
+    @include column(12);
+
+    @include respond-to($mq-l) {
+      @include column(8);
+    }
+  }
+
+  .footer-page-links {
+    @include column(12);
+
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+
+  .footer-page-links__item {
+    width: 50%;
+    float: left;
+
+    &:nth-child(6),
+    &:nth-child(7) {
+      clear: left;
+    }
+  }
+
 }

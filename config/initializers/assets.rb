@@ -23,7 +23,6 @@ Rails.application.configure do
   # Application JavaScript
   config.assets.precompile += %w(components/Toggler.js
                                    html_inspector.js
-                                   components/DoughBaseComponent.js
                                    lib/MicroEvent.js
                                    modules/common.js
                                    modules/globals.js
@@ -35,15 +34,18 @@ Rails.application.configure do
                                    styleguide.js
                                    supports.js
                                    translations/cy.js
-                                   translations/en.js)
+                                   translations/en.js
+                                   frontend-assets/js/lib/*.js
+                                   frontend-assets/js/components/*.js)
 
   # Vendor JavaScript
   config.assets.precompile += %w(html5shiv/dist/html5shiv.js
                                    jquery/dist/jquery.js
                                    jquery-waypoints/waypoints.js
                                    jquery-ujs/src/rails.js
+                                   eventsWithPromises/src/eventsWithPromises.js
+                                   rsvp/rsvp.amd.js
                                    requirejs/require.js
-                                   modernizer-flexbox-cssclasses.js
-                                   frontend-assets/js/lib/componentLoader.js)
+                                   modernizer-flexbox-cssclasses.js)
 end
 

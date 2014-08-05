@@ -1,6 +1,5 @@
 .l-footer {
-  position: relative; // Fixes Safari bug
-  background-color: $color-footer-bg;
+  position: relative; // Fixes Safari bug so please don't remove
 
   // OLD FOOTER STYLES
 
@@ -54,7 +53,7 @@
     }
   }
 
-  .footer-newsletter-signup {
+  .newsletter-signup {
     @include column(12);
 
     @include respond-to($mq-l) {
@@ -62,7 +61,7 @@
     }
   }
 
-  .footer-page-links {
+  .footer-primary__list {
     @include column(12);
 
     @include respond-to($mq-l) {
@@ -70,7 +69,7 @@
     }
   }
 
-  .footer-page-links__item {
+  .footer-primary__list-item {
     width: 50%;
     float: left;
 

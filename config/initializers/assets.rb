@@ -44,6 +44,6 @@ Rails.application.configure do
                                    jquery-ujs/src/rails.js
                                    requirejs/require.js
                                    modernizer-flexbox-cssclasses.js
-                                   lib/componentLoader.js)
+                                   frontend-assets/js/lib/componentLoader.js)
 end
 

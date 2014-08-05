@@ -6,7 +6,7 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('/preview/%{id}.json' % { id: id })
+        response = connection.get('preview/%{id}.json' % { id: id })
 
         attributes = response.body
 

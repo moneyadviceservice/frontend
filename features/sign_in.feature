@@ -7,7 +7,7 @@ Scenario: User can't sign in when the feature is disabled
   When I attempt to sign in
   Then I am told that the functionality is not implemented
 
-@enable-sign-in @pending
+@enable-sign-in
 Scenario: Sign in
   When I sign in
   Then I should be signed in

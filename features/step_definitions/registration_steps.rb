@@ -10,7 +10,6 @@ When(/^I register$/) do
   sign_up_page.first_name.set "phil"
   sign_up_page.email.set "phil@example.com"
   sign_up_page.password.set "password"
-  sign_up_page.password_confirmation.set "password"
   sign_up_page.post_code.set "NE1 6EE"
   sign_up_page.newsletter_subscription.set true
   sign_up_page.submit.click
@@ -59,7 +58,6 @@ When(/^I attempt to register with invalid email$/) do
   sign_up_page.load(locale: 'en')
   sign_up_page.email.set "invalidemail"
   sign_up_page.password.set "password"
-  sign_up_page.password_confirmation.set "password"
   sign_up_page.submit.click
 end
 

@@ -56,24 +56,6 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.form_row :password_confirmation do %>
-          <%= f.errors_for :password_confirmation %>
-          <%= f.label :password_confirmation, :class => "form__label-heading" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", "aria-describedby" => "tooltip_3" %>
-        <% end %>
-      </div>
-
-      <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_3" data-dough-component="FieldHelpText">
-          <div class="tooltip__content-container">
-            <p class="tooltip__text">This is the tooltip, is it not.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="registration__row">
-      <div class="registration__field">
         <%= f.form_row :post_code do %>
           <%= f.errors_for :post_code %>
           <%= f.label :post_code, :class => "form__label-heading" %>

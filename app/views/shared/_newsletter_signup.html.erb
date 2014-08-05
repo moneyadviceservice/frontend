@@ -1,0 +1,20 @@
+<div class="newsletter-signup">
+  <%= form_tag(newsletter_subscription_path, class: 'newsletter', remote: true) do %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+    <fieldset>
+      <legend class="newsletter-signup__heading"><%= t('newsletter_subscriptions.title') %></legend>
+
+      <ul class="newsletter-signup__benefits-list list-benefits">
+        <% t('newsletter_subscriptions.benefits').each do |benefit| %>
+          <li><%= benefit %></li>
+        <% end %>
+      </ul>
+
+      <div class="newsletter-signup__form js-newsletter-form">
+        <%= label_tag('subscription[email]', 'Email address', class: 'newsletter-signup__form-label') %>
+        <%= text_field_tag('subscription[email]', nil, class: 'js-newsletter-input newsletter-signup__input', placeholder: 'example@example.com') %>
+        <%= button_tag('Sign up', type: 'submit', class: 'button button--inline-input newsletter-signup__button') %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

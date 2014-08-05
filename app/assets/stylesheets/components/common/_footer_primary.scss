@@ -1,9 +1,13 @@
-.footer-page-links {
+.footer-primary {
+  background-color: $color-footer-bg;
+}
+
+.footer-primary__list {
   @extend .unstyled-list;
   margin-top: $baseline-unit*6;
   margin-bottom: $baseline-unit*4;
 }
 
-.footer-page-links__item {
+.footer-primary__list-item {
   @include body(16, 18);
 }

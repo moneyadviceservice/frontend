@@ -142,7 +142,7 @@ en:
       body_html: |
         We use cookies to ensure that you get the best possible experience.
         By continuing to use our website you are agreeing to their use.
-        <a href="%{url}">Find out more about cookies.</a>
+        <a class="cookie-message__link" href="%{url}">Find out more about cookies.</a>
       close_button: Close cookie message
 
   articles:

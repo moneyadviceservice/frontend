@@ -43,6 +43,7 @@ Rails.application.configure do
                                    jquery-waypoints/waypoints.js
                                    jquery-ujs/src/rails.js
                                    requirejs/require.js
-                                   modernizer-flexbox-cssclasses.js)
-
+                                   modernizer-flexbox-cssclasses.js
+                                   lib/componentLoader.js)
 end
+

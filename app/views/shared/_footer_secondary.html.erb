@@ -1,21 +1,21 @@
-<div class="footer-utility-links">
+<div class="footer-secondary">
   <div class="l-constrained">
 
-    <ul class="footer-utility-links__list footer-utility-links__list--left">
-      <li class="footer-utility-links__item language-link">
+    <ul class="footer-secondary__list footer-secondary__list--left">
+      <li class="footer-secondary__list-item language-link">
         <% if content_for?(:alternate_link) %>
           <%= yield(:alternate_link) %>
         <% else %>
           <% locals.each do |locale| %>
-            <%= link_to({ locale: locale }, id: "#{locale}Link", lang: locale, class: 'footer-utility-links__link') do %>
+            <%= link_to({ locale: locale }, id: "#{locale}Link", lang: locale, class: 'footer-secondary__link') do %>
               <span class="icon icon--globe"></span><%= t("locales.#{locale}") %>
             <% end %>
           <% end %>
         <% end %>
       </li>
 
-      <li class="footer-utility-links__item accessibility-feedback-link">
-        <a class="footer-utility-links__link" href="http://accessin.org/usersubmit_mas.php?param=nojscript" onclick="window.open('http://accessin.org/usersubmit_mas.php?param=' + window.location,'',
+      <li class="footer-secondary__list-item accessibility-feedback-link">
+        <a class="footer-secondary__link" href="http://accessin.org/usersubmit_mas.php?param=nojscript" onclick="window.open('http://accessin.org/usersubmit_mas.php?param=' + window.location,'',
             'resizable=yes,location=no,scrollbars=yes,toolbar=no,left=20,top=0,height=900,width=800');
             return false;" title="Please use this button to tell us if you have an accessibility issue on our website"
            target="_blank">
@@ -26,25 +26,25 @@
       </li>
     </ul>
 
-    <ul class="footer-utility-links__list footer-utility-links__list--right">
-      <li class="footer-utility-links__item">
-        <a class="footer-utility-links__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
+    <ul class="footer-secondary__list footer-secondary__list--right">
+      <li class="footer-secondary__list-item">
+        <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
       </li>
 
-      <li class="footer-utility-links__item">
-        <a class="footer-utility-links__link" href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
+      <li class="footer-secondary__list-item">
+        <a class="footer-secondary__link" href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
       </li>
 
-      <li class="footer-utility-links__item">
-        <a class="footer-utility-links__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
+      <li class="footer-secondary__list-item">
+        <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
       </li>
 
-      <li class="footer-utility-links__item">
-        <a class="footer-utility-links__link" href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
+      <li class="footer-secondary__list-item">
+        <a class="footer-secondary__link" href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
       </li>
 
-      <li class="footer-utility-links__item">
-        <a class="footer-utility-links__link" href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
+      <li class="footer-secondary__list-item">
+        <a class="footer-secondary__link" href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
       </li>
     </ul>
 

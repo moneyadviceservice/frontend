@@ -11,6 +11,10 @@
 
   <%= yield %>
 
-  <%= render 'shared/contact' %>
+  <% if Feature.active?(:new_footer) %>
+    <%= render 'shared/contact_panels' %>
+  <% else %>
+    <%= render 'shared/contact' %>
+  <% end %>
   <%= render 'shared/footer' %>
 <% end %>

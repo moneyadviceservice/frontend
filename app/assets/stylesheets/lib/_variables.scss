@@ -14,8 +14,9 @@ $color-link-nav-visited: $color-green-quinary !default;
 $color-related-links-background: $color-blue-pale !default;
 $color-link-external: $color-grey-light !default;
 
-// Footer
 $color-footer-bg: $color-grey-pale !default;
+$color-newsletter-heading: $color-green-primary;
+$color-newsletter-input-border:  $color-bluegrey-medium !default;
 
 // Message Bars
 $color-opt-out-background: $color-blue-pale !default;
@@ -72,11 +73,7 @@ $color-contact-bubble-background: $color-green-secondary;
 $color-contact-bubble-heading: $color-black;
 $color-contact-heading: $color-black;
 $color-contact-border: $color-grey-palest;
-
 $color-telephone-number-hover: $color-white;
-
-// Newsletter Signup
-$color-newsletter-heading: $color-green-primary;
 
 // Article Page
 $related-links-border: 1px solid $color-grey-palest !default;

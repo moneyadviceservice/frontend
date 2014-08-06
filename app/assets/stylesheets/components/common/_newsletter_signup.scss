@@ -5,25 +5,23 @@
   color: $color-newsletter-heading;
 }
 
-.newsletter-signup__form-label {
+.newsletter-signup__label {
   @include body(18, 24);
   display: block;
   margin-bottom: $baseline-unit*2;
 }
 
-.newsletter-signup {
-  .newsletter-signup__input {
-    @include body(16, 22);
-    height: auto;
-    padding: $baseline-unit*2;
-    border: 1px solid #cbdae0;
-    margin-right: $baseline-unit;
-    margin-bottom: $baseline-unit*3;
-    max-width: 238px;
+.newsletter-signup__input[type="text"] {
+  @include body(16, 22);
+  border: 1px solid $color-newsletter-input-border;
+  height: auto;
+  padding: $baseline-unit*2;
+  margin-right: $baseline-unit;
+  margin-bottom: $baseline-unit*3;
+  max-width: 238px;
 
-    @include respond-to($mq-l, $mq-xl) {
-      max-width: 165px;
-    }
+  @include respond-to($mq-l, $mq-xl) {
+    max-width: 165px;
   }
 }
 
@@ -31,4 +29,29 @@
   @include body(18, 24);
   height: auto;
   padding: 10px 12px;
+}
+
+.newsletter-signup__benefits-list {
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-m) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.newsletter-signup__form {
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  &.is-errored {
+    margin-top: -$baseline-unit;
+
+    @include respond-to($mq-xl) {
+      margin-top: -$baseline-unit*2.5;
+    }
+  }
 }

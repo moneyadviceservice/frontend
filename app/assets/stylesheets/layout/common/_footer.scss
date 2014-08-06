@@ -24,84 +24,60 @@
   .authentication__link {
     @extend %link-nav-secondary;
   }
+}
 
-  // NEW FOOTER COMPONENT STYLES
+// NEW FOOTER COMPONENT STYLES
 
-  .footer-secondary__list--left {
-    @include column(12);
+.l-footer-primary {
+  background-color: $color-footer-bg;
+}
 
-    @include respond-to($mq-s) {
-      @include column(6);
-    }
+.l-footer-primary__left {
+  @include column(12);
+  margin-top: $baseline-unit*6;
 
-    @include respond-to($mq-l) {
-      @include column(4);
-    }
+  @include respond-to($mq-l) {
+    @include column(8);
   }
+}
 
-  .footer-secondary__list--right {
-    @include column(12);
+.l-footer-primary__right {
+  @include column(12);
 
-    @include respond-to($mq-s) {
-      @include column(6);
-    }
-
-    @include respond-to($mq-l) {
-      @include column(8);
-      text-align: right;
-      float: right;
-    }
+  @include respond-to($mq-l) {
+    @include column(4);
   }
+}
 
-  .newsletter-signup {
-    @include column(12);
-    margin-top: $baseline-unit*6;
+.l-footer-secondary {
+  overflow: hidden;
+  color: $color-text-icon;
+  background-color: $color-green-primary;
+  position: relative; // fix white space issue in Safari
+}
 
-    @include respond-to($mq-l) {
-      @include column(8);
-    }
-  }
+.l-footer-secondary__list--left {
+  @include column(12);
 
-  .newsletter-signup__benefits-list {
-    margin-top: $baseline-unit*4;
-
-    @include respond-to($mq-m) {
-      float: left;
-      width: 50%;
-    }
-  }
-
-  .newsletter-signup__form {
-    margin-top: $baseline-unit*4;
-
-    @include respond-to($mq-s) {
-      @include column(6);
-    }
-
-    &.is-errored {
-      margin-top: -$baseline-unit;
-
-      @include respond-to($mq-xl) {
-        margin-top: -$baseline-unit*2.5;
-      }
-    }
-  }
-
-  .footer-primary__list {
-    @include column(12);
-
-    @include respond-to($mq-l) {
-      @include column(4);
-    }
-  }
-
-  .footer-primary__list-item {
+  @include respond-to($mq-s) {
     @include column(6);
-
-    &:nth-child(6),
-    &:nth-child(7) {
-      clear: left;
-    }
   }
 
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.l-footer-secondary__list--right {
+  @include column(12);
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    text-align: right;
+    float: right;
+  }
 }

@@ -49,7 +49,8 @@ Rails.application.routes.draw do
     end
 
     if Feature.active?(:sign_in)
-      devise_for :users, only: [:sessions]
+      devise_for :users, only: [:sessions],
+                         controllers: { sessions: "sessions" }
     else
       scope '/users' do
         match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'

@@ -16,3 +16,7 @@ When(/^I sign in$/) do
   sign_in_page.password.set user.password
   sign_in_page.submit.click
 end
+
+Then(/^I should receive a "(.*?)" notification$/) do |notification|
+  expect(page.body).to include(notification)
+end

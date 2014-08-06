@@ -111,6 +111,11 @@ en:
       %20Friday%3A%208am-8pm%0ASaturday%3A%209am-1pm%0ASunday%20and%20Bank
       %20Holidays%3A%20closed
 
+  footer_secondary:
+    title: Accessibility feedback
+    link_title: Please use this button to tell us if you have an accessibility issue on our website
+    hidden_accessibility: Feedback form opens in a new window
+
   footer:
     accessibility: Accessibility
     accessibility_link: /en/static/accessibility
@@ -188,7 +193,8 @@ en:
 
   newsletter_subscriptions:
     title: Newsletter
-    heading: Free money advice emails
+    hidden_title: Sign up to our free newsletter
+#    heading: Free money advice emails
     benefits:
       - Top tips on managing money
       - Useful tools and money news

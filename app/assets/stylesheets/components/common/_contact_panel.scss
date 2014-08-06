@@ -1,0 +1,68 @@
+.contact-panel {
+  text-align: left;
+  padding: $baseline-unit*4;
+  border-bottom: 1px solid $color-newsletter-input-border;
+
+  @include respond-to($mq-m) {
+    text-align: center;
+    border: 0;
+  }
+}
+
+.contact-panel__heading,
+.contact-panel__heading:visited {
+  color: $color-black;
+
+}
+
+.contact-panel__list {
+  margin: $baseline-unit*2 0;
+}
+
+.contact-panel__additional-info {
+  @include body(16, 22);
+  margin-bottom: 0;
+}
+
+.contact-panel__button {
+  @include inline-block;
+  margin: $baseline-unit*4 0;
+}
+
+.contact-panel__button--sharing {
+  width: 70px;
+  height: 50px;
+
+  .icon {
+    float: left;
+  }
+}
+
+.contact-panel__telephone,
+.contact-panel__telephone:visited {
+  @extend %font-heading-heavy;
+  @include body(30, 30);
+  letter-spacing: -1px;
+  @include inline-block;
+  color: $color-heading-default;
+  margin: $baseline-unit*4 0;
+}
+
+.contact-panel__border {
+  border-right: 1px solid $color-newsletter-input-border;
+  height: 0;
+  float: left;
+  margin-left: -1px;
+
+  @include respond-to($mq-m) {
+    height: 350px;
+  }
+}
+
+.contact-panel__collapsible {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}

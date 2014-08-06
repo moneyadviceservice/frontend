@@ -1,7 +1,3 @@
-.footer-primary {
-  background-color: $color-footer-bg;
-}
-
 .footer-primary__list {
   @extend .unstyled-list;
   margin-top: $baseline-unit*6;
@@ -9,5 +5,11 @@
 }
 
 .footer-primary__list-item {
+  @include column(6);
   @include body(16, 22);
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    clear: left;
+  }
 }

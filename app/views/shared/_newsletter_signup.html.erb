@@ -10,11 +10,9 @@
   </ul>
 
   <fieldset class="newsletter-signup__form js-newsletter-form">
-    <legend class="visually-hidden">Sign up to our newsletter</legend>
-    <div class="">
-      <%= label_tag('subscription[email]', 'Email address', class: 'newsletter-signup__form-label') %>
-      <%= text_field_tag('subscription[email]', nil, class: 'js-newsletter-input newsletter-signup__input', placeholder: 'example@example.com') %>
-      <%= button_tag('Sign up', type: 'submit', class: 'button button--inline-input newsletter-signup__button') %>
-    </div>
+    <legend class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></legend>
+    <%= label_tag('subscription[email]', 'Email address', class: 'newsletter-signup__label') %>
+    <%= text_field_tag('subscription[email]', nil, class: 'js-newsletter-input newsletter-signup__input', placeholder: 'example@example.com') %>
+    <%= button_tag('Sign up', type: 'submit', class: 'button button--inline-input newsletter-signup__button') %>
   </fieldset>
 <% end %>

@@ -8,9 +8,6 @@ end
 
 
 When(/^I sign in$/) do
-  Rails.application.reload_routes!
-  Devise.regenerate_helpers!
-
   email = 'testing@man.net'
   password = 'secretpass'
   User.new(:email => email, :password => password, :password_confirmation => password).save!

@@ -10,6 +10,16 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :first_name do %>
+          <%= f.errors_for :first_name %>
+          <%= f.label :first_name, :class => "form__label-heading" %>
+          <%= f.text_field :first_name, autofocus: true %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <%= f.form_row :email do %>
           <%= f.errors_for :email %>
           <%= f.label :email, :class => "form__label-heading" %>
@@ -46,19 +56,21 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.form_row :password_confirmation do %>
-          <%= f.errors_for :password_confirmation %>
-          <%= f.label :password_confirmation, :class => "form__label-heading" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", "aria-describedby" => "tooltip_3" %>
+        <%= f.form_row :post_code do %>
+          <%= f.errors_for :post_code %>
+          <%= f.label :post_code, :class => "form__label-heading" %>
+          <%= f.text_field :post_code %>
         <% end %>
       </div>
+    </div>
 
-      <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_3" data-dough-component="FieldHelpText">
-          <div class="tooltip__content-container">
-            <p class="tooltip__text">This is the tooltip, is it not.</p>
-          </div>
-        </div>
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :newsletter_subscription do %>
+          <%= f.errors_for :newsletter_subscription %>
+          <%= f.label :newsletter_subscription, :class => "form__label-heading" %>
+          <%= f.check_box :newsletter_subscription %>
+        <% end %>
       </div>
     </div>
 

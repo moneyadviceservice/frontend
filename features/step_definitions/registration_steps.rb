@@ -7,9 +7,11 @@ When(/^I register$/) do
   Devise.regenerate_helpers!
 
   sign_up_page.load(locale: 'en')
+  sign_up_page.first_name.set "phil"
   sign_up_page.email.set "phil@example.com"
   sign_up_page.password.set "password"
-  sign_up_page.password_confirmation.set "password"
+  sign_up_page.post_code.set "NE1 6EE"
+  sign_up_page.newsletter_subscription.set true
   sign_up_page.submit.click
 end
 
@@ -21,7 +23,11 @@ Then(/^My MAS account should (not )?be created$/) do |negated|
   if negated
     expect(User.count).to eql(0)
   else
-    expect(User.count).to eql(1)
+    expect(User.where(email: 'phil@example.com').
+                where(first_name: 'phil').
+                where(post_code: 'NE1 6EE').
+                where(newsletter_subscription: true).
+                count).to eql(1)
   end
 end
 
@@ -52,7 +58,6 @@ When(/^I attempt to register with invalid email$/) do
   sign_up_page.load(locale: 'en')
   sign_up_page.email.set "invalidemail"
   sign_up_page.password.set "password"
-  sign_up_page.password_confirmation.set "password"
   sign_up_page.submit.click
 end
 

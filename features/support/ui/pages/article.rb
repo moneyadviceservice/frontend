@@ -10,5 +10,7 @@ module UI::Pages
     element :breadcrumbs, '.l-context-bar'
 
     section :category_nav, UI::Sections::CategoryNav, 'nav .link-list-primary'
+
+    element :sign_out, "header input[value='Sign out']"
   end
 end

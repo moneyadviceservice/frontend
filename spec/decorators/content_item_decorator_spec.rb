@@ -86,6 +86,10 @@ RSpec.describe ContentItemDecorator do
 
         expect(nodes).to_not be_empty
       end
+
+      it 'adds title to the iframe' do
+        expect(html.search('//iframe[starts-with(@title, "Video")]')).to_not be_empty
+      end
     end
 
     context 'when the object contains a table' do

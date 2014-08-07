@@ -12,5 +12,12 @@ class User < ActiveRecord::Base
          # :lockable
 
   validates_with Validators::Email, attributes: [:email]
+
+  before_save :fake_send_confirmation_email
+
+
+  def fake_send_confirmation_email
+    self.confirmation_sent_at = DateTime.now
+  end
 end
 

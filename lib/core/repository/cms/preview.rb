@@ -10,8 +10,10 @@ module Core::Repository
 
         attributes = response.body
 
-        attributes['title'] = attributes['label']
-        attributes['body']  = BlockComposer.new(attributes['blocks']).to_html
+        attributes['title']      = attributes['label']
+        attributes['body']       = BlockComposer.new(attributes['blocks']).to_html
+        attributes['categories'] = attributes['category_names']
+
         attributes
 
       rescue Core::Connection::ResourceNotFound

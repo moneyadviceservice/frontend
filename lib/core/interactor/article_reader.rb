@@ -9,7 +9,7 @@ module Core
     end
 
     def call
-      data    = Registry::Repository[:article].find(id)
+      data    = repository.find(id)
       article = Article.new(id, data)
 
       if article.valid?
@@ -22,6 +22,10 @@ module Core
     end
 
     private
+
+    def repository
+      Registry::Repository[:article]
+    end
 
     def build_categories(category_ids)
       category_ids.map do |category_id|

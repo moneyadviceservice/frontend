@@ -1,15 +1,10 @@
 module Core
   class ArticlePreviewer < ArticleReader
 
-    def call(&block)
-      data    = Registry::Repository[:preview].find(id)
-      article = Article.new(id, data)
+    private
 
-      if article.valid?
-        article
-      else
-        block.call if block_given?
-      end
+    def repository
+      Registry::Repository[:preview]
     end
 
   end

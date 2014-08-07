@@ -5,20 +5,34 @@ class ArticlesController < ApplicationController
   include Navigation
 
   def show
-    @article = Core::ArticleReader.new(params[:id]).call do
+    @article = interactor.call do
       not_found
     end
 
-    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
-    @related_content = CategoriesWithRestrictedContents
-      .build(@article.categories, RelatedContent.build(@article))
-
-    assign_active_categories(*@article.categories)
+    set_breadcrumbs
+    set_related_content
+    set_categories
   end
 
-  def preview
-    @article = Core::ArticlePreviewer.new(params[:id]).call do
-      not_found
+  private
+
+  def interactor
+    Core::ArticleReader.new(params[:id])
+  end
+
+  def set_breadcrumbs
+    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
+  end
+
+  def set_related_content
+    @related_content = CategoriesWithRestrictedContents.build(@article.categories,
+                                                              RelatedContent.build(@article))
+  end
+
+  def set_categories
+    @article.categories.each do |category|
+      active_category category.id
+      active_category category.parent_id if category.child?
     end
   end
 end

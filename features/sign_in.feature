@@ -20,11 +20,11 @@ Scenario: Sign in from a direct link
   When I sign in
   Then I should be at the home page
 
-@enable-sign-in @pending
+@enable-sign-in
 Scenario: Attempt to sign in with invalid details
   When I attempt to sign in with invalid credentials
   Then I should remain signed out
-  And  I should receive a "bad credentials" validation message
+  And  I should receive a "Invalid email or password." validation message
 
 @enable-sign-in @pending
 Scenario: Sign in elsewhere

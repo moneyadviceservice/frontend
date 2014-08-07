@@ -23,3 +23,16 @@ end
 Then(/^I should receive a "(.*?)" notification$/) do |arg1|
   expect(page.html).to include(notification)
 end
+
+When(/^I attempt to sign in with invalid credentials$/) do
+  sign_in_page.load(locale: 'en')
+
+  sign_in_page.email.set 'complete'
+  sign_in_page.password.set 'rubbish'
+  sign_in_page.submit.click
+end
+
+Then(/^I should receive a "(.*?)" validation message$/) do |message|
+  expect(page.body).to include(message)
+end
+

@@ -3,9 +3,6 @@ When(/^I attempt to register$/) do
 end
 
 When(/^I register$/) do
-  Rails.application.reload_routes!
-  Devise.regenerate_helpers!
-
   sign_up_page.load(locale: 'en')
   sign_up_page.first_name.set "phil"
   sign_up_page.email.set "phil@example.com"
@@ -52,9 +49,6 @@ Then(/^I should be at the page I was on$/) do
 end
 
 When(/^I attempt to register with invalid email$/) do
-  Rails.application.reload_routes!
-  Devise.regenerate_helpers!
-
   sign_up_page.load(locale: 'en')
   sign_up_page.email.set "invalidemail"
   sign_up_page.password.set "password"

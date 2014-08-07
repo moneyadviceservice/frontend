@@ -20,7 +20,7 @@ When(/^I sign in$/) do
   sign_in_page.submit.click
 end
 
-Then(/^I should receive a "(.*?)" notification$/) do |arg1|
+Then(/^I should receive a "(.*?)" notification$/) do |notification|
   expect(page.html).to include(notification)
 end
 

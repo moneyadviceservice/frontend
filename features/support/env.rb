@@ -51,7 +51,6 @@ end
 ['@enable-sign-in', '@enable-registration'].each do |tag|
   Around(tag) do |scenario, block|
     Feature.run_with_activated(:sign_in) do
-      Rails.application.reload_routes!
       Devise.regenerate_helpers!
       Devise.class_variable_set(:@@warden_configured, false)
       Devise.configure_warden!
@@ -59,7 +58,6 @@ end
       block.call
     end
 
-    Rails.application.reload_routes!
     Devise.regenerate_helpers!
     Devise.class_variable_set(:@@warden_configured, false)
     Devise.configure_warden!

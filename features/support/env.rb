@@ -48,13 +48,14 @@ Around do |scenario, block|
   end
 end
 
-['@enable-sign-in', '@enable-registraion'].each do |tag|
+['@enable-sign-in', '@enable-registration'].each do |tag|
   Around(tag) do |scenario, block|
     Feature.run_with_activated(:sign_in) do
       Rails.application.reload_routes!
       Devise.regenerate_helpers!
       Devise.class_variable_set(:@@warden_configured, false)
       Devise.configure_warden!
+
       block.call
     end
 

@@ -1,6 +1,6 @@
 //= require require_config
 
-require(['common'], function(MAS) {
+require(['common', 'jquery'], function(MAS, $) {
   'use strict';
 
   if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
@@ -108,8 +108,11 @@ require(['common'], function(MAS) {
   });
 
   require(engines, function() {
-    require(['componentLoader'], function(componentLoader) {
+    require(['componentLoader', 'eventsWithPromises'], function(componentLoader, eventsWithPromises) {
       componentLoader.init($('body'));
+      eventsWithPromises.subscribe('component:contentChange', function(data) {
+        componentLoader.init(data.$container);
+      });
     });
   });
 });

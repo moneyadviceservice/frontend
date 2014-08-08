@@ -32,3 +32,12 @@ Scenario: Sign in elsewhere
   When  I sign in elsewhere
   Then  I should be signed in in both places
 
+@enable-sign-in
+Scenario: Sign out
+  Given I am signed in
+  And   I am on an article that lives in a single category
+  When  I sign out
+  Then  I should be signed out
+  And   I should be at the page I was on
+  And   I should receive a "Signed out successfully." notification
+

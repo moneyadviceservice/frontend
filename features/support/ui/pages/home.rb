@@ -13,6 +13,5 @@ module UI::Pages
     element :feature_list, '.home-feature__list'
     elements :promoted_items, '.home-promoted__item'
     element :directory_items, '.directory'
-
   end
 end

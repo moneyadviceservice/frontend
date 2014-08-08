@@ -32,7 +32,7 @@ Then(/^I should be signed in$/) do
   expect(page.html).to include('My Account')
 end
 
-Then(/^I should remain signed out$/) do
+Then(/^I should (?:be|remain) signed out$/) do
   expect(page.html).to_not include('My Account')
 end
 

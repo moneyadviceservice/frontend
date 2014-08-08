@@ -32,3 +32,11 @@ Then(/^I should receive a "(.*?)" validation message$/) do |message|
   expect(page.body).to include(message)
 end
 
+Given(/^I am signed in$/) do
+  step "I sign in"
+end
+
+When(/^I sign out$/) do
+  article_page.sign_out.click
+end
+

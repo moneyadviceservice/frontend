@@ -66,6 +66,45 @@ cy:
     call_charges_html: |
       <a href="/cy/static/cysylltu-a-ni">Dysgwch am gostau galwadau</a>
 
+  contact_panels:
+    web_chat:
+      title: Web chat
+      available:
+        button: Launch chat
+        description: Got a question? Our advisors will point you in the right direction.
+      busy:
+        button: Currently busy
+        description: Sorry, all of our advisors are currently busy. Please try again later.
+      unavailable:
+        button: Unavailable
+        description: Sorry, web chat is only available on internet browsers with JavaScript.
+      offline:
+        button: Offline
+        description: Web chat is available from
+      coming_soon:
+        description_html: Coming soon.<br>
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Monday to Friday: 8am to 10pm</li>
+          <li class="contact-panel__additional-info">Saturday: 10am to 10pm</li>
+          <li class="contact-panel__additional-info">Sunday: 10am to 10pm</li>
+        </ul>
+      smallprint: Web chat is only available in English.
+    call_us:
+      title: Call us
+      description: Give us a call for free and impartial money advice.
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Monday to Friday: 8am to 8pm</li>
+          <li class="contact-panel__additional-info">Saturday: 9am to 1pm</li>
+        </ul>
+      smallprint: Calls cost no more than to standard UK-wide numbers.
+    sharing:
+      title: Follow us
+      description: Get up-to-date money advice from Twitter, Facebook and YouTube.
+      more_info_html: |
+        For more ways to get in touch, go to our <a href="/en/static/contact-us">contact us</a> page.
+
   home:
     show:
       description: >

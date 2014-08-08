@@ -1,4 +1,5 @@
 .footer-primary__list {
+  @extend %clearfix;
   @extend .unstyled-list;
   margin-top: $baseline-unit*6;
   margin-bottom: $baseline-unit*4;

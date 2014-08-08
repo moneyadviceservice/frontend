@@ -9,10 +9,32 @@
   }
 }
 
-.contact-panel__heading,
-.contact-panel__heading:visited {
+.contact-panel__heading {
+  margin-top: $baseline-unit*16;
+}
+
+.contact-panel__link,
+.contact-panel__link:visited {
+  position: relative;
   color: $color-black;
 
+  .icon--web-chat {
+    position: absolute;
+    top: -90px;
+    left: 30px;
+  }
+
+  .icon--call-us {
+    position: absolute;
+    top: -90px;
+    left: 19px;
+  }
+
+  .icon--sharing {
+    position: absolute;
+    top: -90px;
+    left: 19px;
+  }
 }
 
 .contact-panel__list {
@@ -39,11 +61,13 @@
 }
 
 .contact-panel__telephone,
-.contact-panel__telephone:visited {
-  @extend %font-heading-heavy;
-  @include body(30, 30);
-  letter-spacing: -1px;
+.contact-panel__telephone:visited,
+.contact-panel__telephone:hover {
   @include inline-block;
+  @extend %font-heading-heavy;
+  @include body(30, 48);
+  letter-spacing: -1px;
+  text-decoration: none;
   color: $color-heading-default;
   margin: $baseline-unit*4 0;
 }
@@ -59,7 +83,7 @@
   }
 }
 
-.contact-panel__collapsible {
+.contact-panel__content {
   display: none;
 
   @include respond-to($mq-m) {

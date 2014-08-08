@@ -3,17 +3,22 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel">
-        <h2><a class="contact-panel__heading" href="">Chat online</a></h2>
+        <h2 class="contact-panel__heading">
+          <a class="contact-panel__link" href="">
+            <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
+          </a>
+        </h2>
 
-        <div class="contact-panel__collapsible">
-          <p>Got a question? Our chat team will point you in the right direction.</p>
+        <div class="contact-panel__content">
+          <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>*</p>
 
-          <button class="contact-panel__button button">Launch chat</button>
+          <button class="contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
 
-          <ul class="contact-panel__list unstyled-list">
-            <li class="contact-panel__additional-info">Monday to Friday: 9am–5pm</li>
-            <li class="contact-panel__additional-info">Saturday: 10am–3pm</li>
-          </ul>
+          <%= t('contact_panels.web_chat.opening_times_html') %>
+
+          <% if translation?('contact_panels.web_chat.smallprint') %>
+            <p class="smallprint">* <%= t('contact_panels.web_chat.smallprint') %></p>
+          <% end %>
         </div>
       </div>
     </div>
@@ -22,19 +27,22 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel">
-        <h2><a class="contact-panel__heading" href="">Call us</a></h2>
+        <h2 class="contact-panel__heading">
+          <a class="contact-panel__link" href="">
+            <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
+          </a>
+        </h2>
 
-        <div class="contact-panel__collapsible">
-          <p>Give us a call for free and impartial money advice.</p>
+        <div class="contact-panel__content">
+          <p><%= t('contact_panels.call_us.description') %></p>
 
-          <p><a class="contact-panel__telephone" href="">0300 500 5000*</a></p>
+          <p>
+            <a class="contact-panel__telephone" href="+tel:<%= t('contact.telephone_number_href') %>"><%= t('contact.telephone_number') %>
+              *</a></p>
 
-          <ul class="contact-panel__list unstyled-list">
-            <li class="contact-panel__additional-info">Monday to Friday: 8am–8pm</li>
-            <li class="contact-panel__additional-info">Saturday: 9am–1pm</li>
-          </ul>
+          <%= t('contact_panels.call_us.opening_times_html') %>
 
-          <p class="smallprint">*Calls cost no more than to standard UK-wide numbers.</p>
+          <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
         </div>
       </div>
     </div>
@@ -43,10 +51,14 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel">
-        <h2><a class="contact-panel__heading" href="">Follow us</a></h2>
+        <h2 class="contact-panel__heading">
+          <a class="contact-panel__link" href="">
+            <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
+          </a>
+        </h2>
 
-        <div class="contact-panel__collapsible">
-          <p>Get up-to-date money advice from Twitter, Facebook and YouTube.</p>
+        <div class="contact-panel__content">
+          <p><%= t('contact_panels.sharing.description') %></p>
 
           <a class="button contact-panel__button contact-panel__button--sharing">
             <span class="icon icon--twitter"></span>
@@ -63,38 +75,10 @@
             <span class="visually-hidden">Youtube</span>
           </a>
 
-          <p class="contact-panel__additional-info">For more ways to get in touch, go to our <a href="">contact us</a>
-            page.</p>
+          <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
         </div>
       </div>
     </div>
-
-    <!--<div class="l-contact">-->
-    <!--<div class="l-contact__group l-contact__group--details">-->
-    <!--<div class="l-contact__group-row">-->
-    <!--<div class="l-contact__group-cell">-->
-    <!--<h2 class="contact__heading"><%= t('contact.heading') %></h2>-->
-
-    <!--<p class="contact__introduction"><%= t('contact.introduction') %></p>-->
-    <!--</div>-->
-    <!--<div class="l-contact__group-cell l-contact__group-cell--details">-->
-    <!--<div class="bubble">-->
-    <!--<h3 class="bubble__heading"><%= t('contact.call_us') %>&hellip;</h3>-->
-
-    <!--<div class="bubble__content-container">-->
-    <!--<a class="bubble__text" href="<%= t('contact.telephone_number_href') %>"><%= t('contact.telephone_number') %></a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<p class="contact__details-text"><%= t('contact.call_charges_html') %></p>-->
-    <!--</div>-->
-    <!--<div class="l-contact__group-cell l-contact__group-cell--details">-->
-    <!--<h3 class="contact__details-heading"><%= t('contact.opening_hours_heading') %></h3>-->
-
-    <!--<p class="contact__details-text"><%= t('contact.opening_hours_html') %></p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
 
   </div>
 </div>

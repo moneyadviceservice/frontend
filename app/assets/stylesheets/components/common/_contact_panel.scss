@@ -7,10 +7,18 @@
     text-align: center;
     border: 0;
   }
+
+  p {
+    clear: both;
+  }
 }
 
 .contact-panel__heading {
-  margin-top: $baseline-unit*16;
+  margin-top: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*16;
+  }
 }
 
 .contact-panel__link,
@@ -18,22 +26,47 @@
   position: relative;
   color: $color-black;
 
+  .icon {
+    float: left;
+    position: relative;
+    margin-right: $baseline-unit*2;
+
+    @include respond-to($mq-m) {
+      margin-right: 0
+    }
+  }
+
   .icon--web-chat {
-    position: absolute;
-    top: -90px;
-    left: 30px;
+    top: -17px;
+
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: -90px;
+      left: 30px;
+    }
   }
 
   .icon--call-us {
-    position: absolute;
-    top: -90px;
-    left: 19px;
+    top: -18px;
+    margin-left: $baseline-unit*2;
+    margin-right: $baseline-unit*5;
+
+    @include respond-to($mq-m) {
+      margin: 0;
+      position: absolute;
+      top: -90px;
+      left: 19px;
+    }
   }
 
   .icon--sharing {
-    position: absolute;
-    top: -90px;
-    left: 19px;
+    top: -20px;
+
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: -90px;
+      left: 19px;
+    }
   }
 }
 
@@ -65,11 +98,16 @@
 .contact-panel__telephone:hover {
   @include inline-block;
   @extend %font-heading-heavy;
-  @include body(30, 48);
+  @include body(24, 48);
   letter-spacing: -1px;
   text-decoration: none;
   color: $color-heading-default;
-  margin: $baseline-unit*4 0;
+  margin: $baseline-unit*2 0;
+
+  @include respond-to($mq-m) {
+    @include body(30, 48);
+    margin: $baseline-unit*4 0;
+  }
 }
 
 .contact-panel__border {
@@ -80,13 +118,5 @@
 
   @include respond-to($mq-m) {
     height: 350px;
-  }
-}
-
-.contact-panel__content {
-  display: none;
-
-  @include respond-to($mq-m) {
-    display: block;
   }
 }

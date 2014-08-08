@@ -68,42 +68,42 @@ cy:
 
   contact_panels:
     web_chat:
-      title: Web chat
+      title: Gwe-sgwrs
       available:
-        button: Launch chat
-        description: Got a question? Our advisors will point you in the right direction.
+        button: Lansio sgwrs
+        description: A oes gennych chi gwestiwn? Bydd ein cynghorwyr yn eich arwain i’r cyfeiriad cywir.
       busy:
-        button: Currently busy
-        description: Sorry, all of our advisors are currently busy. Please try again later.
+        button: Yn brysur ar hyn o bryd
+        description: Mae’n ddrwg gennym, mae pob un o’n cynghorwyr yn brysur ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
       unavailable:
-        button: Unavailable
-        description: Sorry, web chat is only available on internet browsers with JavaScript.
+        button: Ddim ar gael
+        description: Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar borwyr rhyngrwyd JavaScript yn unig.
       offline:
-        button: Offline
-        description: Web chat is available from
+        button: All-lein
+        description: Gwe-sgwrs ar gael o
       coming_soon:
-        description_html: Coming soon.<br>
+        description_html: Yn dod yn fuan.<br>
       opening_times_html: |
         <ul class="contact-panel__list unstyled-list">
-          <li class="contact-panel__additional-info">Monday to Friday: 8am to 10pm</li>
-          <li class="contact-panel__additional-info">Saturday: 10am to 10pm</li>
-          <li class="contact-panel__additional-info">Sunday: 10am to 10pm</li>
+          <li class="contact-panel__additional-info">Llun i Wener: 8am i 10pm</li>
+          <li class="contact-panel__additional-info">Dydd Sadwrn: 10am i 10pm</li>
+          <li class="contact-panel__additional-info">Dydd Sul: 10am i 10pm</li>
         </ul>
-      smallprint: Web chat is only available in English.
+      smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
     call_us:
-      title: Call us
-      description: Give us a call for free and impartial money advice.
+      title: Ffoniwch ni
+      description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
       opening_times_html: |
         <ul class="contact-panel__list unstyled-list">
-          <li class="contact-panel__additional-info">Monday to Friday: 8am to 8pm</li>
-          <li class="contact-panel__additional-info">Saturday: 9am to 1pm</li>
+          <li class="contact-panel__additional-info">Llun i Wener: 8am – 8pm</li>
+          <li class="contact-panel__additional-info">Dydd Sadwrn: 9am – 1pm</li>
         </ul>
-      smallprint: Calls cost no more than to standard UK-wide numbers.
+      smallprint: Nid yw galwadau’n costio mwy na rhai i rifau safonol yn y DU.
     sharing:
-      title: Follow us
-      description: Get up-to-date money advice from Twitter, Facebook and YouTube.
+      title: Dilynwch ni
+      description: Ceisiwch y wybodaeth ddiweddaraf o Twitter, Facebook a YouTube.
       more_info_html: |
-        For more ways to get in touch, go to our <a href="/en/static/contact-us">contact us</a> page.
+        Am ragor o ffyrdd i gysylltu, ewch i’n tudalen <a href="/cy/static/cysylltu-a-ni">cysylltwch â ni</a>
 
   home:
     show:

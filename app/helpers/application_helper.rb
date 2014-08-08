@@ -51,6 +51,12 @@ module ApplicationHelper
     "theme-#{I18n.locale}" unless I18n.locale == :en
   end
 
+  def translation?(key)
+    I18n.translate!(key)
+  rescue I18n::MissingTranslationData
+    false
+  end
+
   private
 
   def strip_leading_indentation_from_source(source)

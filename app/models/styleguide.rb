@@ -8,7 +8,7 @@ class Styleguide
 
   def initialize
     paths = [Rails.root.join('app/assets/stylesheets'),
-             Rails.root.join('vendor/assets/bower_components/frontend-assets/stylesheets')]
+             "#{Bundler.rubygems.find_name('dough-ruby').first.full_gem_path}/app/assets/stylesheets/dough"]
 
     @parser = Kss::Parser.new(*paths)
   end

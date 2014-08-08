@@ -7,7 +7,10 @@ Then(/^I am told that the functionality is not implemented$/) do
 end
 
 When(/^I (?:sign|am signed) in$/) do
-  user = User.new(email: 'user@example.com', password: 'password')
+  user = User.new(email: 'user@example.com',
+                  first_name: 'Phil',
+                  password: 'password',
+                  post_code: 'NE1 6EE')
   user.save!
 
   sign_in_page.load(locale: 'en')

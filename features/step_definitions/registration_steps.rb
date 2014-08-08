@@ -58,3 +58,15 @@ end
 Then(/^I should receive a invalid email validation error$/) do
   expect(page.html).to include("Please double-check for the following errors:")
 end
+
+When(/^I attempt to register with insecure password$/) do
+  sign_up_page.load(locale: 'en')
+  sign_up_page.email.set "poor_password@example.com"
+  sign_up_page.password.set "abc"
+  sign_up_page.submit.click
+end
+
+Then(/^I should receive a insecure password validation error$/) do
+  expect(page.html).to include("Password is too short")
+end
+

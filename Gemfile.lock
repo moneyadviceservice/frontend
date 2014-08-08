@@ -26,10 +26,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 8be1ff5285acf18441afe3bc208d996940215aac
+  revision: 31f4f7b1cdc71aea3ed9ee92be68f4e24849e5e2
   specs:
-    dough-ruby (1.0.0)
+    dough-ruby (2.0.1)
       rails (>= 3.2)
+      sass-rails
 
 GEM
   remote: https://rubygems.org/
@@ -246,7 +247,7 @@ GEM
       mini_portile (= 0.6.0)
     nunes (0.3.1)
     orm_adapter (0.5.0)
-    pensions_calculator (0.1.0.262)
+    pensions_calculator (0.1.0.266)
       autoprefixer-rails
       dough-ruby
       rails (~> 4.1)

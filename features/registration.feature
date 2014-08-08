@@ -32,6 +32,4 @@ Scenario Outline: Attempt to register with bad details
     | Problem                                       |
     | invalid email                                 |
     | an already registered email address           |
-    | different password and password confirmations |
-    | unaccepted terms & conditions                 |
     | insecure password                             |

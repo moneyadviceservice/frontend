@@ -9,17 +9,15 @@
           </a>
         </h2>
 
-        <div class="contact-panel__content">
-          <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>*</p>
+        <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>*</p>
 
-          <button class="contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
+        <button class="contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
 
-          <%= t('contact_panels.web_chat.opening_times_html') %>
+        <%= t('contact_panels.web_chat.opening_times_html') %>
 
-          <% if translation?('contact_panels.web_chat.smallprint') %>
-            <p class="smallprint">* <%= t('contact_panels.web_chat.smallprint') %></p>
-          <% end %>
-        </div>
+        <% if translation?('contact_panels.web_chat.smallprint') %>
+          <p class="smallprint">* <%= t('contact_panels.web_chat.smallprint') %></p>
+        <% end %>
       </div>
     </div>
 
@@ -33,17 +31,15 @@
           </a>
         </h2>
 
-        <div class="contact-panel__content">
-          <p><%= t('contact_panels.call_us.description') %></p>
+        <p><%= t('contact_panels.call_us.description') %></p>
 
-          <p>
-            <a class="contact-panel__telephone" href="+tel:<%= t('contact.telephone_number_href') %>"><%= t('contact.telephone_number') %>
-              *</a></p>
+        <p>
+          <a class="contact-panel__telephone" href="+tel:<%= t('contact.telephone_number_href') %>"><%= t('contact.telephone_number') %>
+            *</a></p>
 
-          <%= t('contact_panels.call_us.opening_times_html') %>
+        <%= t('contact_panels.call_us.opening_times_html') %>
 
-          <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
-        </div>
+        <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
       </div>
     </div>
 
@@ -57,26 +53,24 @@
           </a>
         </h2>
 
-        <div class="contact-panel__content">
-          <p><%= t('contact_panels.sharing.description') %></p>
+        <p><%= t('contact_panels.sharing.description') %></p>
 
-          <a class="button contact-panel__button contact-panel__button--sharing">
-            <span class="icon icon--twitter"></span>
-            <span class="visually-hidden">Twitter</span>
-          </a>
+        <a class="button contact-panel__button contact-panel__button--sharing">
+          <span class="icon icon--twitter"></span>
+          <span class="visually-hidden">Twitter</span>
+        </a>
 
-          <a class="button contact-panel__button contact-panel__button--sharing">
-            <span class="icon icon--facebook"></span>
-            <span class="visually-hidden">Facebook</span>
-          </a>
+        <a class="button contact-panel__button contact-panel__button--sharing">
+          <span class="icon icon--facebook"></span>
+          <span class="visually-hidden">Facebook</span>
+        </a>
 
-          <a class="button contact-panel__button contact-panel__button--sharing">
-            <span class="icon icon--youtube"></span>
-            <span class="visually-hidden">Youtube</span>
-          </a>
+        <a class="button contact-panel__button contact-panel__button--sharing">
+          <span class="icon icon--youtube"></span>
+          <span class="visually-hidden">Youtube</span>
+        </a>
 
-          <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
-        </div>
+        <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
       </div>
     </div>
 

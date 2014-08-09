@@ -13,7 +13,7 @@
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h1><%= title action_plan.title %></h1>
+      <%= heading_tag(action_plan.title, heading_level: 1) %>
 
       <%= action_plan.content %>
     </main>
@@ -22,8 +22,8 @@
 
 <div class="l-nav">
   <%= render 'shared/nav',
-              categories: category_navigation,
-              active_categories: active_categories
+             categories:        category_navigation,
+             active_categories: active_categories
   %>
 </div>
 

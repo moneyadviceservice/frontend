@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def heading_tag(text, options = {})
+    heading_level = options[:heading_level]
+    content_tag("h#{heading_level}", text, 'role' => :heading, 'aria-level' => heading_level)
+  end
+
   def css(line_numbers: false, &block)
     source = strip_leading_indentation_from_source(capture(&block))
     tokens = Rouge::Lexers::CSS.lex(source)

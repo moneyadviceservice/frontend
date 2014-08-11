@@ -34,12 +34,9 @@ Scenario Outline: Attempt to register with bad details
     | insecure password                             |
 
 @enable-registration
-Scenario Outline: Attempt to register with bad details
-  When I attempt to register with <Problem>
+Scenario: Attempt to register with existing account
+  When I attempt to register with an already registered email address
   Then My MAS account should have already been created
   Then I should remain signed out
-  And  I should receive a <Problem> validation error
+  And  I should receive an already registered email address validation error
 
-  Examples:
-    | Problem                                       |
-    | an already registered email address           |

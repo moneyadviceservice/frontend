@@ -84,7 +84,7 @@ Then(/^My MAS account should have already been created$/) do
               count).to eql(1)
 end
 
-Then(/^I should receive a an already registered email address validation error$/) do
+Then(/^I should receive an already registered email address validation error$/) do
   expect(page).to have_content('has already been taken')
 end
 

@@ -6,6 +6,7 @@ require_relative 'sections/footer_social_links'
 require_relative 'sections/opt_out_bar'
 require_relative 'sections/header'
 require_relative 'sections/search_box'
+require_relative 'sections/auth'
 
 module UI
   class Page < SitePrism::Page
@@ -25,5 +26,6 @@ module UI
     section :opt_out_bar, UI::Sections::OptOutBar, '.opt-out'
     section :header, UI::Sections::Header, '.l-header'
     section :search_box, UI::Sections::SearchBox, '.search'
+    section :auth, UI::Sections::Auth, '.authentication'
   end
 end

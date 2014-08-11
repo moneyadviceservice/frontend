@@ -50,8 +50,7 @@ Rails.application.routes.draw do
 
     if Feature.active?(:sign_in)
       devise_for :users, only: [:sessions],
-                         controllers: { sessions: "sessions" },
-                         failure_app: Devise::FailureAppWithCustomFlash
+                         controllers: { sessions: "sessions" }
     else
       scope '/users' do
         match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'

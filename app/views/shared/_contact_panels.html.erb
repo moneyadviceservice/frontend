@@ -9,7 +9,9 @@
           </a>
         </h2>
 
-        <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>*</p>
+        <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>
+          <% if translation?('contact_panels.web_chat.smallprint') %>*<% end %>
+        </p>
 
         <button class="contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
 

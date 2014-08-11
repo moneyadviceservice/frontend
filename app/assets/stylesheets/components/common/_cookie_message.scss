@@ -1,5 +1,9 @@
 .cookie-message {
   @extend %clearfix;
+
+  .l-constrained {
+    position: relative;
+  }
 }
 
 .cookie-message__content {

@@ -26,7 +26,7 @@ Scenario: Attempt to sign in with invalid details
   Then I should remain signed out
   And  I should receive a "Invalid email or password." validation message
 
-@enable-sign-in @pending
+@enable-sign-in
 Scenario: Sign in elsewhere
   Given I am signed in
   When  I sign in elsewhere

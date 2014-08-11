@@ -15,8 +15,8 @@ require.config({
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',
 
     // Internal modules
-    DoughBaseComponent: 'vendor/assets/bower_components/frontend-assets/js/components/DoughBaseComponent',
-    featureDetect: 'vendor/assets/bower_components/frontend-assets/js/lib/featureDetect',
+    DoughBaseComponent: 'vendor/assets/bower_components/dough/assets/js/components/DoughBaseComponent',
+    featureDetect: 'vendor/assets/bower_components/dough/assets/js/lib/featureDetect',
 
     globals: 'app/assets/javascripts/modules/globals',
     common: 'app/assets/javascripts/modules/common',
@@ -29,9 +29,9 @@ require.config({
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp.amd',
 
-    componentLoader: 'vendor/assets/bower_components/frontend-assets/js/lib/componentLoader',
-    RangeInput: 'vendor/assets/bower_components/frontend-assets/js/components/RangeInput',
-    TabSelector: 'vendor/assets/bower_components/frontend-assets/js/components/TabSelector'
+    componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',
+    RangeInput: 'vendor/assets/bower_components/dough/assets/js/components/RangeInput',
+    TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector'
   },
   shim: {
     'ujs': ['jquery']

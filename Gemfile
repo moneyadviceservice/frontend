@@ -14,7 +14,7 @@ gem 'activerecord-session_store'
 gem 'aes'
 gem 'devise'
 gem 'devise-encryptable'
-gem 'dough-ruby', '~> 1.0'
+gem 'dough-ruby', '~> 3.0'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'
@@ -33,7 +33,7 @@ gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_timeliness'
 
-gem 'pensions_calculator', '~> 0.1'
+gem 'pensions_calculator', '~> 0.2'
 
 group :assets do
   gem 'autoprefixer-rails'

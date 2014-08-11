@@ -8,7 +8,7 @@ class Styleguide
 
   def initialize
     paths = [Rails.root.join('app/assets/stylesheets'),
-             Rails.root.join('vendor/assets/bower_components/frontend-assets/stylesheets')]
+             Rails.root.join('vendor/assets/bower_components/dough/assets/stylesheets')]
 
     @parser = Kss::Parser.new(*paths)
   end

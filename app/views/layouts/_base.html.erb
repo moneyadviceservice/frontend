@@ -22,12 +22,12 @@
 
   <%# Basic styles for all devices, doesn't contain anything that could cause rendering issues
       such as positional info %>
-  <%= stylesheet_link_tag 'frontend-assets/stylesheets/basic' %>
+  <%= stylesheet_link_tag 'dough/assets/stylesheets/basic' %>
 
   <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries,
       but will include .ie specific fixes %>
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
-    <%= stylesheet_link_tag 'frontend-assets/stylesheets/font_files' %>
+    <%= stylesheet_link_tag 'dough/assets/stylesheets/font_files' %>
     <%= stylesheet_link_tag 'enhanced_fixed', media: 'all' %>
     <%= javascript_include_tag 'html5shiv/dist/html5shiv.js' %>
     <script>var responsiveStyle = false;</script>
@@ -84,7 +84,7 @@
           };
 
           fonts = {
-            url: '<%= stylesheet_path('frontend-assets/stylesheets/font_base64') %>',
+            url: '<%= stylesheet_path('dough/assets/stylesheets/font_base64') %>',
             cacheName: 'MAS.fonts',
             loadClass: 'wf-museosans-n4-active fontsLoaded',
             localstorage: undefined,

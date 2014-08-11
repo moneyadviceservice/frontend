@@ -2,6 +2,8 @@ class SessionsController < Devise::SessionsController
   skip_before_action :store_location
 
   def new
+    # This method is mostly copied devise code
+    # With one tweak to add the error to resource from the flash hash
     self.resource = resource_class.new(sign_in_params)
     self.resource.errors.add(:base, flash[:alert]) if flash[:alert]
     clean_up_passwords(resource)

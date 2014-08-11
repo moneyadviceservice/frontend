@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+FORMAT_URL = 'url'
+FORMAT_FILESYSTEM = 'fs'
+FORMAT_UNRECOGNISED = 'noop'
+
+require 'optparse'
+
+options = { path_format: FORMAT_FILESYSTEM }
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: read_asset -a <asset path> [other options]"
+
+  opts.on("-a", "--asset ASSET_PATH", "The asset path of the asset you wish to read (as would be passed to the asset_path helper).") do |a|
+    options[:asset_path] = a
+  end
+
+  opts.on("-f", "--path-format FORMAT", "'URL' will return asset paths in url format, 'FILESYSTEM' (default) will replace those with filesystem paths") do |f|
+    case f
+      when 'url', 'URL'
+        options[:path_format] = FORMAT_URL
+      when 'fs', 'filesystem', 'FS', 'FILESYSTEM'
+        options[:path_format] = FORMAT_FILESYSTEM
+      else
+        options[:path_format] = FORMAT_UNRECOGNISED
+    end
+  end
+end
+
+begin
+  parser.parse!
+
+  raise OptionParser::MissingArgument if options[:asset_path].nil? || options[:path_format] == FORMAT_UNRECOGNISED
+
+  require File.expand_path(File.join(File.dirname(__FILE__), '..', 'config', 'environment'))
+
+  asset = Rails.application.assets[options[:asset_path]]
+
+  if asset.present?
+    if options[:path_format] == FORMAT_FILESYSTEM
+      puts asset.to_s.gsub(/(\'|\")\/assets\//, "\\1vendor/assets/bower_components/")
+    else
+      puts asset.to_s
+    end
+  end
+
+rescue OptionParser::MissingArgument
+
+  puts parser
+
+end

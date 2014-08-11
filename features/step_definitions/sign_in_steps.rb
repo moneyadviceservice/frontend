@@ -36,7 +36,12 @@ Then(/^I should receive a "(.*?)" validation message$/) do |message|
 end
 
 When(/^I sign out$/) do
-  article_page.sign_out.click
+  # The `Feature` library does not support multiple feature toggles enabled
+  # Need to enable the feature otherwise there is no other way to sign out
+  Feature.run_with_activated(:sign_in) do
+    Rails.application.reload_routes!
+    sign_up_page.auth.sign_out.click
+  end
 end
 
 When(/^I sign in elsewhere$/) do

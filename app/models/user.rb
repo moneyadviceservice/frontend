@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   before_validation :uppercase_post_code
 
   validates_with Validators::Email, attributes: [:email]
+  validates :email, uniqueness: true
   validates :post_code, presence: true,
                         format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' },
                         on: :create

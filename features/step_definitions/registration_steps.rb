@@ -70,3 +70,21 @@ Then(/^I should receive a insecure password validation error$/) do
   expect(page.html).to include("Password is too short")
 end
 
+When(/^I attempt to register with an already registered email address$/) do
+  step "I register"
+  step "I sign out"
+  step "I register"
+end
+
+Then(/^My MAS account should have already been created$/) do
+  expect(User.where(email: 'phil@example.com').
+              where(first_name: 'phil').
+              where(post_code: 'NE1 6EE').
+              where(newsletter_subscription: true).
+              count).to eql(1)
+end
+
+Then(/^I should receive a an already registered email address validation error$/) do
+  expect(page.html).to include('has already been taken')
+end
+

@@ -11,7 +11,7 @@ source 'http://gems.test.mas'
 gem 'rails', '~> 4.1'
 
 gem 'activerecord-session_store'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', require: 'dough'
+gem 'dough-ruby', '~> 1.0'
 gem 'draper', '~> 1.3.0'
 gem 'faraday_middleware'
 gem 'feature'

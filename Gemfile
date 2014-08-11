@@ -76,7 +76,7 @@ group :production do
 end
 
 group :build, :test, :development do
-  gem 'bowndler'
+  gem 'bowndler', '~> 1.0'
 end
 
 group :test, :development do

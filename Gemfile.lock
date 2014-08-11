@@ -69,7 +69,7 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bowndler (0.9.0)
+    bowndler (1.0.2)
       thor
     builder (3.2.2)
     byebug (2.7.0)
@@ -397,7 +397,7 @@ DEPENDENCIES
   autoprefixer-rails
   better_errors
   binding_of_caller
-  bowndler
+  bowndler (~> 1.0)
   byebug
   chai-jquery-rails
   codeclimate-test-reporter

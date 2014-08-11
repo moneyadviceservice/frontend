@@ -1,0 +1,18 @@
+<h2>Sign in</h2>
+
+<%= form_for(resource, as: resource_name,
+                       url: session_path(resource_name),
+                       builder: Dough::Forms::Builders::Validation) do |f| %>
+
+  <%= f.validation_summary %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.submit "Sign in" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

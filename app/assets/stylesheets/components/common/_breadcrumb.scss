@@ -4,7 +4,7 @@
 
 .breadcrumbs__item {
   @include body(14, 18);
-  @include inline-block;
+  display: inline;
   margin-bottom: 0;
 
   @include respond-to($mq-l) {

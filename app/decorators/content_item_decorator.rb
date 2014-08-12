@@ -37,15 +37,14 @@ class ContentItemDecorator < Draper::Decorator
 
   def html_processors
     {
-      HTMLProcessor::NodeRemover  => [HTMLProcessor::INTRO_IMG,
-                                      HTMLProcessor::ACTION_EMAIL,
-                                      HTMLProcessor::ACTION_FORM,
-                                      HTMLProcessor::COLLAPSIBLE_SPAN
-      ],
+      HTMLProcessor::NodeRemover       => [HTMLProcessor::INTRO_IMG,
+                                           HTMLProcessor::ACTION_EMAIL,
+                                           HTMLProcessor::ACTION_FORM,
+                                           HTMLProcessor::COLLAPSIBLE_SPAN],
 
-      HTMLProcessor::VideoWrapper => [HTMLProcessor::VIDEO_IFRAME],
-
-      HTMLProcessor::TableWrapper => [HTMLProcessor::DATATABLE_DEFAULT]
+      HTMLProcessor::VideoWrapper      => [HTMLProcessor::VIDEO_IFRAME],
+      HTMLProcessor::TableWrapper      => [HTMLProcessor::DATATABLE_DEFAULT],
+      HTMLProcessor::HeadingAttributes => [HTMLProcessor::HEADINGS]
     }
   end
 end

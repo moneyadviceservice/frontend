@@ -4,6 +4,7 @@ require 'html_processor/node_remover'
 require 'html_processor/node_replacer'
 require 'html_processor/table_wrapper'
 require 'html_processor/video_wrapper'
+require 'html_processor/heading_attributes'
 
 module HTMLProcessor
   ACTION_EMAIL      = '//a[@class="action-email"]'.freeze
@@ -17,4 +18,5 @@ module HTMLProcessor
 
   TABLE_WRAPPER     = '<div class="table-wrapper"/>'.freeze
   VIDEO_TAG_WRAPPER = '<div class="video-wrapper"/>'.freeze
+  HEADINGS          = '//*[self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6]'.freeze
 end

@@ -75,6 +75,16 @@ RSpec.describe ContentItemDecorator do
       it 'strips action forms' do
         expect(html.search(HTMLProcessor::ACTION_FORM)).to be_empty
       end
+
+      it 'adds accesible attributes to headings' do
+        html.search(HTMLProcessor::HEADINGS).each do |heading|
+          expect(heading.attributes.keys).to include('role', 'aria-level')
+        end
+      end
+
+      it 'adds the right aria-level to the heading attribute' do
+        expect(html.search('//h2').attribute('aria-level').value).to eq('2')
+      end
     end
 
     context 'when the object body contains a video embeded in an iframe' do

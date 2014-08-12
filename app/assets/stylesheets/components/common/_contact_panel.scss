@@ -1,5 +1,5 @@
 .contact-panel {
-  color: #6a6d6d;
+  color: $color-grey-medium-dark;
   text-align: left;
   padding: $baseline-unit*4 0;
   margin-bottom: $baseline-unit*2;
@@ -15,22 +15,17 @@
   }
 
   p {
-    clear: both;
+    clear: both; // REFACTOR ME
   }
 }
 
 .contact-panel__heading {
+  position: relative;
   margin-top: $baseline-unit*2;
 
   @include respond-to($mq-m) {
     margin-top: $baseline-unit*16;
   }
-}
-
-.contact-panel__link,
-.contact-panel__link:visited {
-  position: relative;
-  color: $color-black;
 
   .icon {
     float: left;
@@ -38,7 +33,7 @@
     margin-right: $baseline-unit*2;
 
     @include respond-to($mq-m) {
-      margin-right: 0
+      margin-right: 0;
     }
   }
 
@@ -48,7 +43,7 @@
     @include respond-to($mq-m) {
       position: absolute;
       top: -90px;
-      left: 25px;
+      left: 118px;
     }
   }
 
@@ -61,10 +56,10 @@
       margin: 0;
       position: absolute;
       top: -90px;
-      left: 19px;
+      left: 134px;
 
       .theme-cy & {
-        left: 46px;
+        left: 128px;
       }
     }
   }
@@ -77,7 +72,7 @@
     @include respond-to($mq-m) {
       position: absolute;
       top: -90px;
-      left: 31px;
+      left: 117px;
     }
   }
 }
@@ -116,8 +111,6 @@
   @include inline-block;
   @extend %font-heading-heavy;
   @include body(24, 48);
-  letter-spacing: -1px;
-  text-decoration: none;
   color: $color-heading-default;
   margin: $baseline-unit*2 0 $baseline-unit 0;
 

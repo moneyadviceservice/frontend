@@ -50,17 +50,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :alerts?
 
-
-  def display_old_newsletter_signup?
-    if Feature.active?(:new_footer)
-      false
-    else
-      true
-    end
-  end
-
-  helper_method :display_old_newsletter_signup?
-
   private
 
   def category_tree

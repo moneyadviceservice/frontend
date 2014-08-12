@@ -1,7 +1,7 @@
 .l-footer {
   position: relative; // Fixes Safari bug so please don't remove
 
-  // OLD FOOTER STYLES
+  // Old footer styles - to be removed once new footer is turned on.
 
   .social-links {
     float: right;
@@ -26,7 +26,7 @@
   }
 }
 
-// NEW FOOTER COMPONENT STYLES
+// New footer components
 
 .l-footer-primary {
   background-color: $color-footer-bg;

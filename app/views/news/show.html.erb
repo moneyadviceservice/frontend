@@ -14,7 +14,7 @@
       <article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/NewsArticle">
         <h1 itemprop="headline"><%= title news_article.title %></h1>
         <hr>
-        <p class="smallprint">
+        <p class="smallprint t-news-article-date">
           <time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %></time>
         </p>
 

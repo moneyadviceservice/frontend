@@ -43,11 +43,11 @@ When(/^I opt out of the beta via the opt out bar button$/) do
 end
 
 When(/^I opt out of the beta via the footer button$/) do
-  current_page.footer_site_links.opt_out_button.click
+  current_page.footer_secondary.opt_out_button.click
 end
 
 Then(/^I should see the opt out footer button$/) do
-  expect(current_page.footer_site_links).to have_opt_out_button
+  expect(current_page.footer_secondary).to have_opt_out_button
 end
 
 When(/^I visit the website and see the opt out bar$/) do

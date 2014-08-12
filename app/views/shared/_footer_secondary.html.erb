@@ -1,4 +1,4 @@
-<div class="l-footer-secondary">
+<div class="l-footer-secondary t-footer-secondary">
   <div class="l-constrained">
 
     <div class="l-footer-secondary__list--left">
@@ -33,7 +33,7 @@
         <li class="footer-secondary__list-item">
           <%= form_tag(main_app.beta_opt_out_path) do %>
             <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
-            <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link') do %>
+            <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
               <%= t('opt_out.title') %>
             <% end %>
           <% end %>
@@ -66,7 +66,7 @@
 <% if cookies_not_accepted? %>
   <div class="cookie-message">
     <div class="l-constrained">
-      <%= form_tag cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+      <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
         <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
         <button class="cookie-message__close-button">
           <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>

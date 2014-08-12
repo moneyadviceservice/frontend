@@ -7,10 +7,10 @@ When(/^I translate (?:a|an|the) static page into (.*)$/) do |language|
   locale = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
-  expect(static_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
-  expect(static_page.footer_site_links).to_not send("have_#{current_language}_link")
+  expect(static_page.footer_secondary.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(static_page.footer_secondary).to_not send("have_#{current_language}_link")
 
-  static_page.footer_site_links.send("#{language.downcase}_link").click
+  static_page.footer_secondary.send("#{language.downcase}_link").click
 end
 
 Then(/^I should see the static page in (.*)$/) do |language|

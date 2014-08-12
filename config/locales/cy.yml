@@ -66,6 +66,45 @@ cy:
     call_charges_html: |
       <a href="/cy/static/cysylltu-a-ni">Dysgwch am gostau galwadau</a>
 
+  contact_panels:
+    web_chat:
+      title: Gwe-sgwrs
+      available:
+        button: Lansio sgwrs
+        description: A oes gennych chi gwestiwn? Bydd ein cynghorwyr yn eich arwain i’r cyfeiriad cywir.
+      busy:
+        button: Yn brysur ar hyn o bryd
+        description: Mae’n ddrwg gennym, mae pob un o’n cynghorwyr yn brysur ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
+      unavailable:
+        button: Ddim ar gael
+        description: Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar borwyr rhyngrwyd JavaScript yn unig.
+      offline:
+        button: All-lein
+        description: Gwe-sgwrs ar gael o
+      coming_soon:
+        description_html: Yn dod yn fuan.
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Llun i Wener, 8am i 10pm</li>
+          <li class="contact-panel__additional-info">Dydd Sadwrn, 9am i 10pm</li>
+          <li class="contact-panel__additional-info">Dydd Sul, 10am i 10pm</li>
+        </ul>
+      smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
+    call_us:
+      title: Ffoniwch ni
+      description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Llun i Wener, 8am – 8pm</li>
+          <li class="contact-panel__additional-info">Dydd Sadwrn, 9am – 1pm</li>
+        </ul>
+      smallprint: Nid yw galwadau’n costio mwy na rhai i rifau safonol yn y DU.
+    sharing:
+      title: Dilynwch ni
+      description: Ceisiwch y wybodaeth ddiweddaraf o Twitter, Facebook a YouTube.
+      more_info_html: |
+        Am ragor o ffyrdd i gysylltu, ewch i’n tudalen <a href="/cy/static/cysylltu-a-ni">cysylltwch â ni</a>
+
   home:
     show:
       title: Am ddim a diduedd a sefydlwyd gan y llywodraeth
@@ -114,6 +153,11 @@ cy:
       %201443%20827658%20%0ALlun%20i%20Wener%3A%208am-8pm%20%0ADydd%20Sadwrn%3A
       %209am-1pm%20%0ADydd%20Sul%20a%20Gwyliau%20Banc%3A%20ar%20gau
 
+  footer_secondary:
+    title: Accessibility feedback
+    link_title: Please use this button to tell us if you have an accessibility issue on our website
+    hidden_accessibility: Feedback form opens in a new window
+
   footer:
     accessibility: Hygyrchedd
     accessibility_link: /cy/static/hygyrchedd
@@ -145,7 +189,7 @@ cy:
       body_html: |
         Rydym yn defnyddio cwcis i sicrhau eich bod yn cael y profiad gorau posibl.
         Drwy barhau i ddefnyddio ein gwefan rydych yn cytuno â'r defnydd a wneir ohoni.
-        <a href="%{url}">Canfyddwch fwy am cwcis.</a>
+        <a class="cookie-message__link" href="%{url}">Canfyddwch fwy am cwcis.</a>
       close_button: Cau
 
   articles:
@@ -190,7 +234,9 @@ cy:
       link_html: Gweld yr holl &hellip;
 
   newsletter_subscriptions:
-    heading: Negeseuon e-bost yn rhoi cyngor am ddim ar arian (Saesneg)
+    title: Newyddlen
+    hidden_title: Sign up to our free newsletter
+    heading: Negeseuon e-bost yn rhoi cyngor am ddim ar arian (Saesneg) # required for the newsletter component
     benefits:
       - Offer da a newyddion am arian
       - Diolch am gofrestru

@@ -1,0 +1,77 @@
+<div class="l-footer-secondary t-footer-secondary">
+  <div class="l-constrained">
+
+    <div class="l-footer-secondary__list--left">
+      <ul class="footer-secondary__list">
+        <li class="footer-secondary__list-item language-link">
+          <% if content_for?(:alternate_link) %>
+            <%= yield(:alternate_link) %>
+          <% else %>
+            <% locals.each do |locale| %>
+              <%= link_to({ locale: locale }, id: "#{locale}Link", lang: locale, class: 'footer-secondary__link') do %>
+                <span class="icon icon--globe"></span><%= t("locales.#{locale}") %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </li>
+
+        <li class="footer-secondary__list-item accessibility-feedback-link">
+          <a class="footer-secondary__link" href="http://accessin.org/usersubmit_mas.php?param=nojscript"
+             onclick="window.open('http://accessin.org/usersubmit_mas.php?param=' + window.location,'',
+                 'resizable=yes,location=no,scrollbars=yes,toolbar=no,left=20,top=0,height=900,width=800');
+                 return false;" title="<%= t('footer_secondary.link_title') %>"
+             target="_blank">
+            <span class="icon icon--accessibility"></span><%= t('footer_secondary.title') %>
+            <span class="visually-hidden"><%= t('footer_secondary.hidden_accessibility') %></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="l-footer-secondary__list--right">
+      <ul class="footer-secondary__list">
+        <li class="footer-secondary__list-item">
+          <%= form_tag(main_app.beta_opt_out_path) do %>
+            <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
+            <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
+              <%= t('opt_out.title') %>
+            <% end %>
+          <% end %>
+        </li>
+
+        <li class="footer-secondary__list-item">
+          <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
+        </li>
+
+        <li class="footer-secondary__list-item">
+          <a class="footer-secondary__link" href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
+        </li>
+
+        <li class="footer-secondary__list-item">
+          <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
+        </li>
+
+        <li class="footer-secondary__list-item">
+          <a class="footer-secondary__link" href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
+        </li>
+
+        <li class="footer-secondary__list-item">
+          <a class="footer-secondary__link" href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<% if cookies_not_accepted? %>
+  <div class="cookie-message">
+    <div class="l-constrained">
+      <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+        <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
+        <button class="cookie-message__close-button">
+          <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
+        </button>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,130 @@
+.contact-panel {
+  color: $color-grey-medium-dark;
+  text-align: left;
+  padding: $baseline-unit*4 0;
+  margin-bottom: $baseline-unit*2;
+  border-bottom: 1px solid $color-newsletter-input-border;
+
+  @include respond-to($mq-m) {
+    text-align: center;
+    border: 0;
+  }
+
+  @include respond-to($mq-xl) {
+    padding: $baseline-unit*4;
+  }
+
+  p {
+    clear: both; // REFACTOR ME
+  }
+}
+
+.contact-panel__heading {
+  position: relative;
+  margin-top: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*16;
+  }
+
+  .icon {
+    float: left;
+    position: relative;
+    margin-right: $baseline-unit*2;
+
+    @include respond-to($mq-m) {
+      margin-right: 0;
+    }
+  }
+
+  .icon--web-chat {
+    top: -17px;
+
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      margin-left: -40px;
+    }
+  }
+
+  .icon--call-us {
+    top: -18px;
+    margin-left: $baseline-unit*3;
+    margin-right: $baseline-unit*4;
+
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      margin-left: -25px;
+    }
+  }
+
+  .icon--sharing {
+    top: -20px;
+    margin-left: $baseline-unit;
+    margin-right: $baseline-unit*4;
+
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      margin-left: -30px;
+    }
+  }
+}
+
+.contact-panel__list {
+  margin: $baseline-unit*2 0;
+}
+
+.contact-panel__additional-info {
+  @include body(16, 22);
+  margin-bottom: 0;
+}
+
+.contact-panel__button {
+  @include inline-block;
+  margin: $baseline-unit*2 0;
+
+  @include respond-to($mq-l) {
+    margin: $baseline-unit*4 0;
+  }
+}
+
+.contact-panel__button--sharing {
+  padding: 12px 20px;
+  width: 65px;
+  height: 50px;
+
+  .icon {
+    float: left;
+  }
+}
+
+.contact-panel__telephone:link,
+.contact-panel__telephone:visited,
+.contact-panel__telephone:hover {
+  @include inline-block;
+  @include body(24, 48);
+  @extend %font-heading-heavy;
+  margin: $baseline-unit*2 0 $baseline-unit 0;
+  color: $color-heading-default;
+
+  @include respond-to($mq-l) {
+    @include body(30, 48);
+    margin: $baseline-unit*2 0 $baseline-unit 0;
+  }
+}
+
+.contact-panel__border {
+  border-right: 1px solid $color-newsletter-input-border;
+  height: 0;
+  float: left;
+  margin-left: -1px;
+
+  @include respond-to($mq-m) {
+    height: 400px;
+  }
+}

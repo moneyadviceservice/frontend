@@ -63,6 +63,45 @@ en:
     call_charges_html: |
       <a href="/en/static/contact-us">Find out about call charges</a>
 
+  contact_panels:
+    web_chat:
+      title: Web chat
+      available:
+        button: Launch chat
+        description: Got a question? Our advisors will point you in the right direction.
+      busy:
+        button: Currently busy
+        description: Sorry, all of our advisors are currently busy. Please try again later.
+      unavailable:
+        button: Unavailable
+        description: Sorry, web chat is only available on internet browsers with JavaScript.
+      offline:
+        button: Offline
+        description: Web chat is available from
+      coming_soon:
+        description_html: Coming soon.
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Monday to Friday, 8am to 10pm</li>
+          <li class="contact-panel__additional-info">Saturday, 9am to 10pm</li>
+          <li class="contact-panel__additional-info">Sunday, 10am to 10pm</li>
+        </ul>
+    call_us:
+      title: Call us
+      description: Give us a call for free and impartial money advice.
+      opening_times_html: |
+        <ul class="contact-panel__list unstyled-list">
+          <li class="contact-panel__additional-info">Monday to Friday, 8am to 8pm</li>
+          <li class="contact-panel__additional-info">Saturday, 9am to 1pm</li>
+        </ul>
+      smallprint: Calls cost no more than to standard UK-wide numbers.
+    sharing:
+      title: Follow us
+      description: Get up-to-date money advice from Twitter, Facebook and YouTube.
+      more_info_html: |
+        For more ways to get in touch, go to our <a href="/en/static/contact-us">contact us</a> page.
+
+
   home:
     show:
       title: Free, impartial & set up by government
@@ -112,6 +151,11 @@ en:
       %20Friday%3A%208am-8pm%0ASaturday%3A%209am-1pm%0ASunday%20and%20Bank
       %20Holidays%3A%20closed
 
+  footer_secondary:
+    title: Accessibility feedback
+    link_title: Please use this button to tell us if you have an accessibility issue on our website
+    hidden_accessibility: Feedback form opens in a new window
+
   footer:
     accessibility: Accessibility
     accessibility_link: /en/static/accessibility
@@ -143,7 +187,7 @@ en:
       body_html: |
         We use cookies to ensure that you get the best possible experience.
         By continuing to use our website you are agreeing to their use.
-        <a href="%{url}">Find out more about cookies.</a>
+        <a class="cookie-message__link" href="%{url}">Find out more about cookies.</a>
       close_button: Close cookie message
 
   articles:
@@ -188,7 +232,9 @@ en:
       link_html: View all &hellip;
 
   newsletter_subscriptions:
-    heading: Free money advice emails
+    title: Newsletter
+    hidden_title: Sign up to our free newsletter
+    heading: Free money advice emails # required for the newsletter component
     benefits:
       - Top tips on managing money
       - Useful tools and money news

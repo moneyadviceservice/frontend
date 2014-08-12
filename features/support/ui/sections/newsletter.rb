@@ -2,7 +2,7 @@ require_relative '../section'
 
 module UI::Sections
   class Newsletter < UI::Section
-    element :email, '.newsletter__input'
-    element :signup, '.newsletter__button'
+    element :email, '.t-newsletter-email'
+    element :signup, '.t-newsletter-button'
   end
 end

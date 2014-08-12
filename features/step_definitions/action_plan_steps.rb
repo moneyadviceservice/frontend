@@ -7,10 +7,10 @@ When(/^I translate the action plan into (.*)$/) do |language|
   locale = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
-  expect(action_plan_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
-  expect(action_plan_page.footer_site_links).to_not send("have_#{current_language}_link")
+  expect(action_plan_page.footer_secondary.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(action_plan_page.footer_secondary).to_not send("have_#{current_language}_link")
 
-  action_plan_page.footer_site_links.send("#{language.downcase}_link").click
+  action_plan_page.footer_secondary.send("#{language.downcase}_link").click
 end
 
 Then(/^I should see the action plan in (.*)$/) do |language|

@@ -43,7 +43,7 @@ Given(/^I visit the site and acknowledge the cookie message$/) do
 end
 
 When(/^I visit another page$/) do
-  current_page.footer_site_links.partners_link.click
+  current_page.footer_primary.partners_link.click
 end
 
 When(/^I close the cookie message$/) do
@@ -51,5 +51,5 @@ When(/^I close the cookie message$/) do
 end
 
 When(/^I click on the "Cookie Policy" link in the footer$/) do
-  current_page.footer_site_links.cookie_guide_link.click
+  current_page.footer_secondary.cookie_guide_link.click
 end

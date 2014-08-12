@@ -6,10 +6,10 @@ When(/^I translate an article into (.*)$/) do |language|
   locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
 
-  expect(article_page.footer_site_links.send("#{language.downcase}_link")[:lang]).to eq(locale)
-  expect(article_page.footer_site_links).to_not send("have_#{current_language}_link")
+  expect(article_page.footer_secondary.send("#{language.downcase}_link")[:lang]).to eq(locale)
+  expect(article_page.footer_secondary).to_not send("have_#{current_language}_link")
 
-  home_page.footer_site_links.send("#{language.downcase}_link").click
+  home_page.footer_secondary.send("#{language.downcase}_link").click
 end
 
 Then(/^I should see an article in (.*)$/) do |language|

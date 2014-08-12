@@ -1,0 +1,76 @@
+<div class="l-constrained">
+  <div class="l-contact-panels t-contact-panels">
+
+    <div class="l-contact-panel">
+      <div class="contact-panel">
+        <h2 class="contact-panel__heading">
+          <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
+        </h2>
+
+        <p><%= t('contact_panels.web_chat.coming_soon.description_html') %>
+          <% if translation?('contact_panels.web_chat.smallprint') %>*
+          <% end %>
+        </p>
+
+        <button disabled class="contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
+
+        <%= t('contact_panels.web_chat.opening_times_html') %>
+
+        <% if translation?('contact_panels.web_chat.smallprint') %>
+          <p class="smallprint">* <%= t('contact_panels.web_chat.smallprint') %></p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="contact-panel__border"></div>
+
+    <div class="l-contact-panel">
+      <div class="contact-panel">
+        <h2 class="contact-panel__heading t-contact-heading">
+          <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
+        </h2>
+
+        <p class="t-contact-introduction"><%= t('contact_panels.call_us.description') %></p>
+
+        <p>
+          <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
+            <%= t('contact.telephone_number') %> *</a>
+        </p>
+
+        <%= t('contact_panels.call_us.opening_times_html') %>
+
+        <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
+      </div>
+    </div>
+
+    <div class="contact-panel__border"></div>
+
+    <div class="l-contact-panel">
+      <div class="contact-panel t-footer-social-links">
+        <h2 class="contact-panel__heading">
+          <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
+        </h2>
+
+        <p><%= t('contact_panels.sharing.description') %></p>
+
+        <a class="button contact-panel__button contact-panel__button--sharing t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice">
+          <span class="icon icon--twitter"></span>
+          <span class="visually-hidden">Twitter</span>
+        </a>
+
+        <a class="button contact-panel__button contact-panel__button--sharing t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas">
+          <span class="icon icon--facebook"></span>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+
+        <a class="button contact-panel__button contact-panel__button--sharing t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService">
+          <span class="icon icon--youtube"></span>
+          <span class="visually-hidden">YouTube</span>
+        </a>
+
+        <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
+      </div>
+    </div>
+
+  </div>
+</div>

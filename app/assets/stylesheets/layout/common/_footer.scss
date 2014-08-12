@@ -1,4 +1,8 @@
 .l-footer {
+  position: relative; // Fixes Safari bug so please don't remove
+
+  // Old footer styles - to be removed once new footer is turned on.
+
   .social-links {
     float: right;
   }
@@ -19,5 +23,84 @@
 
   .authentication__link {
     @extend %link-nav-secondary;
+  }
+}
+
+// New footer components
+
+.l-footer-primary {
+  background-color: $color-footer-bg;
+}
+
+.l-footer-primary__left {
+  @include column(12);
+  margin-top: $baseline-unit*6;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(8);
+  }
+}
+
+.l-footer-primary__right {
+  @include column(12);
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.l-footer-primary__list {
+  @extend %clearfix;
+  @extend .unstyled-list;
+  margin-top: $baseline-unit*6;
+  margin-bottom: $baseline-unit*4;
+}
+
+.l-footer-primary__list--left {
+  @include column(6);
+
+  @include respond-to($mq-s, 37.5em) {
+    @include column(12);
+  }
+}
+
+.l-footer-primary__list--right {
+  @include column(6);
+
+  @include respond-to($mq-s, 37.5em) {
+    @include column(12);
+  }
+}
+
+.l-footer-secondary {
+  overflow: hidden;
+  color: $color-text-icon;
+  background-color: $color-green-primary;
+  position: relative; // fix white space issue in Safari
+}
+
+.l-footer-secondary__list--left {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.l-footer-secondary__list--right {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    text-align: right;
+    float: right;
   }
 }

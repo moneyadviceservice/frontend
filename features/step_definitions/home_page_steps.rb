@@ -9,15 +9,14 @@ Given(/^I view the home page in (.*)$/) do |language|
 end
 
 When(/^I choose to view the Welsh version$/) do
-  expect(home_page.footer_site_links.welsh_link[:lang]).
+  expect(home_page.footer_secondary.welsh_link[:lang]).
     to eq('cy')
 
-  home_page.footer_site_links.welsh_link.click
+  home_page.footer_secondary.welsh_link.click
 end
 
 Then(/^I should see the Money Advice Service brand identity$/) do
   expect(home_page.header.logo).to be_visible
-  expect(home_page.footer_social_links.logo).to be_visible
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
@@ -37,10 +36,10 @@ Then(/^I should see promoted content$/) do
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
-  expect(home_page.contact_heading).to have_content(I18n.t('contact.heading'))
+  expect(home_page.contact_heading).to have_content(I18n.t('contact_panels.call_us.title'))
 
   expect(home_page.contact_introduction).
-    to have_content(strip_tags(I18n.t('contact.introduction')))
+    to have_content(strip_tags(I18n.t('contact_panels.call_us.description')))
 
   expect(home_page.contact_number).
     to have_content(I18n.t('contact.telephone_number'))
@@ -63,7 +62,7 @@ Then(/^I should be see links to MAS social media profiles$/) do
     to eq('https://www.facebook.com/MoneyAdviceService?ref=mas')
 
   expect(twitter_link[:href]).
-    to eq('http://twitter.com/YourMoneyAdvice')
+    to eq('https://twitter.com/YourMoneyAdvice')
 
   expect(youtube_link[:href]).
     to eq('https://www.youtube.com/user/MoneyAdviceService')

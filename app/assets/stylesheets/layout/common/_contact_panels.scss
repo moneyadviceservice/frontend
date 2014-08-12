@@ -1,0 +1,11 @@
+.l-contact-panels {
+  border-top: 3px solid $home-feature-list-border;
+}
+
+.l-contact-panel {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
+}

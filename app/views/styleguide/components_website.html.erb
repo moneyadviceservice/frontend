@@ -57,20 +57,10 @@
   <%= render 'shared/search', search_in_page_header: true %>
 <% end %>
 
-<%= styleguide_section sections['contact'] do %>
-  <%= render 'shared/contact' %>
-<% end %>
-
 <%= styleguide_section sections['Call Us'] do %>
   <%= render 'shared/call_us' %>
 <% end %>
 
 <%= styleguide_section sections['Footer Site Links'] do %>
   <%= render 'shared/footer_secondary', locals: %w(en) %>
-<% end %>
-
-<%= styleguide_section sections['Footer Social Links'] do %>
-  <div class="l-footer">
-    <%= render 'shared/footer_social_links' %>
-  </div>
 <% end %>

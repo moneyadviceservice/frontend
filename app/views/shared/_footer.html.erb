@@ -1,9 +1,4 @@
 <footer class="l-footer">
-  <% if Feature.active?(:new_footer) %>
-    <%= render 'shared/footer_primary' %>
-    <%= render 'shared/footer_secondary', locals: alternate_locales %>
-  <% else %>
-    <%= render 'shared/footer_site_links', locals: alternate_locales %>
-    <%= render 'shared/footer_social_links' %>
-  <% end %>
+  <%= render 'shared/footer_primary' %>
+  <%= render 'shared/footer_secondary', locals: alternate_locales %>
 </footer>

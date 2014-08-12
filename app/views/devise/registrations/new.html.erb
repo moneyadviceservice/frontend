@@ -2,6 +2,8 @@
   <h1>Register</h1>
   <p class="intro">To get great benefits I promise</p>
 
+  <%= render "devise/shared/links" %>
+
   <%= form_for(resource, as: resource_name,
                          url: registration_path(resource_name),
                          html: {:class => "form"},
@@ -82,6 +84,4 @@
       </div>
     </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
 </main>

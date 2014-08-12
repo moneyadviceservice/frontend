@@ -1,7 +1,8 @@
-<% content_for(:editorial) do %>
+<% set_meta_tags(title: 'Contact Us') %>
 
+<% content_for(:editorial) do %>
   <main class="l-main__cell-double-primary" role="main">
-    <h1><%= title 'Contact Us' %></h1>
+    <%= heading_tag 'Contact Us' %>
 
     <p class="intro">
       Our trained staff can help you work out what’s right for you. Whatever your question, we’re
@@ -10,7 +11,7 @@
     </p>
 
     <div class="contact-detail">
-      <h2 class="contact-detail__heading">For face-to-face advice</h2>
+      <%= heading_tag 'For face-to-face advice', level: 2, class: 'contact-detail__heading' %>
 
       <div class="contact-detail__content">
         <p>If you would prefer to speak to someone face to face, we work with a number of partners
@@ -37,7 +38,9 @@
     </div>
 
     <div class="contact-detail">
-      <h2 class="contact-detail__heading">For Money Advice Service printed guides</h2>
+      <%= heading_tag 'For Money Advice Service printed guides',
+                      level: 2,
+                      class: 'contact-detail__heading' %>
 
       <div class="contact-detail__content">
         <p>
@@ -51,7 +54,7 @@
     </div>
 
     <div class="contact-detail">
-      <h2 class="contact-detail__heading">To make a complaint</h2>
+      <%= heading_tag 'To make a complaint', level: 2, class: 'contact-detail__heading' %>
 
       <div class="contact-detail__content">
         <p>
@@ -71,7 +74,9 @@
     </div>
 
     <div class="contact-detail">
-      <h2 class="contact-detail__heading">For press office enquiries (journalists only)</h2>
+      <%= heading_tag(level: 2, class: 'contact-detail__heading') do %>
+        For press office enquiries (journalists only)
+      <% end %>
 
       <div class="contact-detail__content">
         <p>Email
@@ -95,7 +100,7 @@
   <div class=" l-main__cell-double-secondary">
     <div class="sidebar">
       <div class="panel">
-        <h2 class="heading-extra-small">What we can’t help with</h2>
+        <%= heading_tag 'What we can’t help with', level: 2, class: 'heading-extra-small' %>
 
         <p>
           We’re not regulated by the Financial Conduct Authority which means we can’t give you
@@ -109,7 +114,7 @@
         </p>
       </div>
 
-      <h2 class="heading-extra-small">Our head office address is</h2>
+      <%= heading_tag 'Our head office address is', level: 2, class: 'heading-extra-small' %>
 
       <p>
         <a href="https://www.google.co.uk/maps/place/The+Money+Advice+Service/@51.5178989,-0.1080938,19z/data=!4m7!1m4!3m3!1s0x48761b4dace22dd7:0xbcae8d3aa50a5134!2sThe+Money+Advice+Service!3b1!3m1!1s0x48761b4dace22dd7:0xbcae8d3aa50a5134">
@@ -120,20 +125,21 @@
         <img src="https://maps.googleapis.com/maps/api/staticmap?center=51.5180658,-0.108537&zoom=17&size=260x200&scale=2&markers=color:green%7Clabel:M%7C51.5180658,-0.108537" />
       </a>
 
-      <h2 class="heading-extra-small">Our general email address is</h2>
+      <%= heading_tag 'Our general email address is', level: 2, class: 'heading-extra-small' %>
 
       <p>
         <a href="mailto:enquiries@moneyadviceservice.org.uk">enquiries@moneyadviceservice.org.uk</a>
       </p>
 
-      <h2 class="heading-extra-small">Our opening hours are</h2>
+      <%= heading_tag 'Our opening hours are', level: 2, class: 'heading-extra-small' %>
+
       <ul class="unstyled-list">
         <li class="unstyled-list__item">Monday to Friday: 8am to 8pm</li>
         <li class="unstyled-list__item">Saturday: 9am to 1pm</li>
         <li class="unstyled-list__item">Sunday and Bank Holidays: closed</li>
       </ul>
 
-      <h2 class="heading-extra-small">Call our Money Advice Line on</h2>
+      <%= heading_tag 'Call our Money Advice Line on', level: 2, class: 'heading-extra-small' %>
       <ul class="unstyled-list">
         <li class="unstyled-list__item"><a href="tel:+443005005000">0300 500 5000</a> (English)*</li>
         <li class="unstyled-list__item"><a href="tel:+443005005555">0300 500 5555</a> (Welsh)*</li>
@@ -156,7 +162,6 @@
       </div>
     </div>
   </div>
-
 <% end %>
 
 <%= render template: '/static_pages/show' %>

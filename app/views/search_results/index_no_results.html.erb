@@ -11,7 +11,7 @@
 <div class="l-main">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h1><%= t('.page_title', query: params[:query]) %></h1>
+      <%= heading_tag t('.page_title', query: params[:query]) %>
 
       <div class="l-search-results">
         <%= render 'shared/search', search_in_page_header: false %>

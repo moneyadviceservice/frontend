@@ -1,3 +1,5 @@
+<%= set_meta_tags(title: t(".title")) %>
+
 <div class="l-car-campaign-page-bg"></div>
 
 <div class="l-car-campaign editorial">
@@ -6,7 +8,7 @@
   <div class="l-car-campaign__section l-car-campaign__section--intro">
     <div class="l-car-campaign__section-text">
       <header>
-        <h1><%= title t(".title") %></h1>
+        <%= heading_tag t(".title") %>
         <p class="intro"><%= t(".intro_html") %></p>
       </header>
     </div>
@@ -20,7 +22,8 @@
 
   <div class="l-car-campaign__section l-car-campaign__section--buy">
     <div class="l-car-campaign__section-row">
-      <h2 class="l-car-campaign__section-heading"><%= t(".how_buy.title") %></h2>
+      <%= heading_tag t(".how_buy.title"), level: 2, class: 'l-car-campaign__section-heading' %>
+
       <div class="l-car-campaign__section-text">
         <p><%= t(".how_buy.intro") %></p>
       </div>
@@ -44,7 +47,7 @@
   <div class="l-car-campaign__section l-car-campaign__section--run">
     <div class="l-car-campaign__section-row">
       <div class="l-car-campaign__section-text">
-        <h2><%= t(".running.title") %></h2>
+        <%= heading_tag t(".running.title"), level: 2 %>
         <p><%= t(".running.intro") %></p>
       </div>
 
@@ -65,7 +68,7 @@
   <div class="l-car-campaign__section l-car-campaign__section--sell">
     <div class="l-car-campaign__section-row">
       <div class="l-car-campaign__section-text">
-        <h2><%= t(".sell.title") %></h2>
+        <%= heading_tag t(".sell.title"), level: 2 %>
         <p><%= t(".sell.intro") %></p>
       </div>
 

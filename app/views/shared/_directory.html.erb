@@ -2,7 +2,9 @@
   <section class="l-constrained">
     <% items.each do |item| %>
       <div class="directory__item">
-        <h2 class="directory__title"><a href="<%= item.path %>"><%= item.title %></a></h2>
+        <%= heading_tag(level: 2, class: 'directory__title') do %>
+          <%= link_to item.title, item.path %>
+        <% end %>
 
         <p class="directory__description"><%= item.description %></p>
       </div>

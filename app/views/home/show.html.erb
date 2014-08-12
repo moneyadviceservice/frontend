@@ -3,7 +3,8 @@
                  title:       t('.title'),
                  description: t('.description').strip) %>
 
-<h1 class="visually-hidden"><%= t('layouts.base.title') %></h1>
+
+<%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
 <%= render 'shared/trust_banner' %>
 <%= render 'shared/directory', items: category_navigation %>

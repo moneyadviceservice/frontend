@@ -1,4 +1,5 @@
-<% set_meta_tags(description: action_plan.description,
+<% set_meta_tags(title:       action_plan.title,
+                 description: action_plan.description,
                  canonical:   action_plan.canonical_url,
                  alternate:   action_plan.alternate_options) %>
 
@@ -13,8 +14,7 @@
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h1><%= title action_plan.title %></h1>
-
+      <%= heading_tag action_plan.title %>
       <%= action_plan.content %>
     </main>
   </div>
@@ -22,8 +22,8 @@
 
 <div class="l-nav">
   <%= render 'shared/nav',
-              categories: category_navigation,
-              active_categories: active_categories
+             categories:        category_navigation,
+             active_categories: active_categories
   %>
 </div>
 

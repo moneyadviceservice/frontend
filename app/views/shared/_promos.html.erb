@@ -2,12 +2,12 @@
   <section class="clearfix">
     <% items.each do |item| %>
       <div class="promo l-homepage-promo">
-        <h2>
+        <%= heading_tag(level: 2) do %>
           <%= link_to item[:url] do %>
             <%= image_tag("promos/#{item[:image]}", alt: '') %>
             <span class="promo__heading"><%= item[:text] %></span>
           <% end %>
-        </h2>
+        <% end %>
 
         <p class="promo__content"><%= item[:content] %></p>
       </div>

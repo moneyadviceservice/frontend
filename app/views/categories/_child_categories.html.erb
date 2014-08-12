@@ -1,8 +1,9 @@
 <% contents.each_with_index do |child_category, i| %>
   <section class="category-detail">
-    <h2 class="category-detail__heading" id="<%= child_category.id %>">
-      <%= child_category.title %>
-    </h2>
+    <%= heading_tag child_category.title,
+                    level: 2,
+                    id:    child_category.id,
+                    class: 'category-detail__heading' %>
 
     <p><%= child_category.description %></p>
 

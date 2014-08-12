@@ -1,5 +1,7 @@
 <li class="search-results__item">
-  <h2><%= link_to search_result.title, search_result.path %></h2>
+  <%= heading_tag(level: 2) do %>
+    <%= link_to search_result.title, search_result.path %>
+  <% end %>
 
   <p><%= search_result.description %></p>
 </li>

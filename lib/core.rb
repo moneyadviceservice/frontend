@@ -21,6 +21,7 @@ module Core
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
+  autoload :Customer, 'core/entity/customer'
 
   module Feedback
     autoload :Base, 'core/entity/feedback/base'

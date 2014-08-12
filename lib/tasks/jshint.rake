@@ -1,4 +1,4 @@
-JSHINTRC_LOCATION = 'vendor/assets/bower_components/frontend-assets/.jshintrc'
+JSHINTRC_LOCATION = 'vendor/assets/bower_components/dough/.jshintrc'
 
 desc 'Run jshint on all javascript assets'
 task :jshint => :environment do

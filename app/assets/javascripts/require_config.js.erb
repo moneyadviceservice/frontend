@@ -14,12 +14,12 @@
 //= depend_on_asset modules/mas_scrollTracking
 //= depend_on_asset modules/mas_collapsable
 
-//= depend_on_asset frontend-assets/js/lib/featureDetect
-//= depend_on_asset frontend-assets/js/lib/componentLoader
-//= depend_on_asset frontend-assets/js/components/DoughBaseComponent
-//= depend_on_asset frontend-assets/js/components/RangeInput
-//= depend_on_asset frontend-assets/js/components/TabSelector
-//= depend_on_asset frontend-assets/js/components/FieldHelpText
+//= depend_on_asset dough/assets/js/lib/featureDetect
+//= depend_on_asset dough/assets/js/lib/componentLoader
+//= depend_on_asset dough/assets/js/components/DoughBaseComponent
+//= depend_on_asset dough/assets/js/components/RangeInput
+//= depend_on_asset dough/assets/js/components/TabSelector
+//= depend_on_asset dough/assets/js/components/FieldHelpText
 
 <%
   def requirejs_path(asset)
@@ -61,12 +61,12 @@
 
   # Dough
   requirejs_config[:paths].merge!({
-    featureDetect: requirejs_path('frontend-assets/js/lib/featureDetect'),
-    componentLoader: requirejs_path('frontend-assets/js/lib/componentLoader'),
-    DoughBaseComponent: requirejs_path('frontend-assets/js/components/DoughBaseComponent'),
-    RangeInput: requirejs_path('frontend-assets/js/components/RangeInput'),
-    TabSelector: requirejs_path('frontend-assets/js/components/TabSelector'),
-    FieldHelpText: requirejs_path('frontend-assets/js/components/FieldHelpText')
+    featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
+    componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
+    DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
+    RangeInput: requirejs_path('dough/assets/js/components/RangeInput'),
+    TabSelector: requirejs_path('dough/assets/js/components/TabSelector'),
+    FieldHelpText: requirejs_path('dough/assets/js/components/FieldHelpText')
   })
 %>
 

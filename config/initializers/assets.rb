@@ -14,9 +14,9 @@ Rails.application.configure do
   # Application Stylesheets
   config.assets.precompile += %w(enhanced_fixed.css
                                   enhanced_responsive.css
-                                  frontend-assets/stylesheets/basic.css
-                                  frontend-assets/stylesheets/font_files.css
-                                  frontend-assets/stylesheets/font_base64.css
+                                  dough/assets/stylesheets/basic.css
+                                  dough/assets/stylesheets/font_files.css
+                                  dough/assets/stylesheets/font_base64.css
                                   styleguide/styleguide_fixed.css
                                   styleguide/styleguide_responsive.css)
 
@@ -35,8 +35,8 @@ Rails.application.configure do
                                    supports.js
                                    translations/cy.js
                                    translations/en.js
-                                   frontend-assets/js/lib/*.js
-                                   frontend-assets/js/components/*.js)
+                                   dough/assets/js/lib/*.js
+                                   dough/assets/js/components/*.js)
 
   # Vendor JavaScript
   config.assets.precompile += %w(html5shiv/dist/html5shiv.js

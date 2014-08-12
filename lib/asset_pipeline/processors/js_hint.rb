@@ -4,7 +4,7 @@ module AssetPipeline
   module Processors
     class JsHint < Sprockets::Processor
 
-      JSHINTRC_LOCATION = 'vendor/assets/bower_components/frontend-assets/.jshintrc'
+      JSHINTRC_LOCATION = 'vendor/assets/bower_components/dough/.jshintrc'
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js(:?.erb)?\z/
 
       def evaluate(context, locals)

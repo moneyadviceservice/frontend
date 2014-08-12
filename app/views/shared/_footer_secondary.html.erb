@@ -31,6 +31,15 @@
     <div class="l-footer-secondary__list--right">
       <ul class="footer-secondary__list">
         <li class="footer-secondary__list-item">
+          <%= form_tag(main_app.beta_opt_out_path) do %>
+            <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
+            <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link') do %>
+              <%= t('opt_out.title') %>
+            <% end %>
+          <% end %>
+        </li>
+
+        <li class="footer-secondary__list-item">
           <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
         </li>
 

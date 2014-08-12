@@ -22,6 +22,20 @@
   line-height: 2.2;
 }
 
+.footer-secondary__opt-out {
+    @extend %type-footer;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration: underline;
+  }
+}
+
 .language-link .icon--globe {
   position: relative;
   top: 4px;

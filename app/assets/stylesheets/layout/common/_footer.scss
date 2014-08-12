@@ -90,10 +90,6 @@
 .l-footer-secondary__list--left {
   @include column(12);
 
-  //  @include respond-to($mq-s) {
-  //    @include column(6);
-  //  }
-
   @include respond-to($mq-l) {
     @include column(4);
   }
@@ -101,10 +97,6 @@
 
 .l-footer-secondary__list--right {
   @include column(12);
-
-  //  @include respond-to($mq-s) {
-  //    @include column(6);
-  //  }
 
   @include respond-to($mq-l) {
     @include column(8);

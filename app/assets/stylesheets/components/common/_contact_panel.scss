@@ -107,13 +107,13 @@
 .contact-panel__telephone:visited,
 .contact-panel__telephone:hover {
   @include inline-block;
-  @extend %font-heading-heavy;
   @include body(24, 48);
-  color: $color-heading-default;
+  @extend %font-heading-heavy;
   margin: $baseline-unit*2 0 $baseline-unit 0;
 
   @include respond-to($mq-l) {
     @include body(30, 48);
+  color: $color-heading-default;
     margin: $baseline-unit*2 0 $baseline-unit 0;
   }
 }

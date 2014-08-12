@@ -68,6 +68,10 @@ module Core
       autoload :Email, 'core/repository/feedback/email'
     end
 
+    module Customers
+      autoload :Fake, 'core/repository/customers/fake'
+    end
+
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
     end

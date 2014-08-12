@@ -6,7 +6,7 @@
 
   <%= form_for(resource, as: resource_name,
                          url: registration_path(resource_name),
-                         html: {:class => "form"},
+                         html: {:class => "form", novalidate: 'novalidate'},
                          builder: Dough::Forms::Builders::Validation) do |f| %>
     <%= f.validation_summary %>
 

@@ -2,7 +2,8 @@
 
 <%= form_for(resource, as: resource_name,
                        url: session_path(resource_name),
-                       builder: Dough::Forms::Builders::Validation) do |f| %>
+                       builder: Dough::Forms::Builders::Validation,
+                       html: { novalidate: 'novalidate'}) do |f| %>
 
   <%= f.validation_summary %>
 

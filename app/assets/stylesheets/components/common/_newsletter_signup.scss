@@ -29,27 +29,34 @@
   @include body(18, 24);
   height: auto;
   padding: 10px 12px;
+
+  &:hover {
+    background-color: $color-newsletter-button-on-hover;
+  }
 }
 
 .newsletter-signup__benefits-list {
   margin-top: $baseline-unit*4;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     float: left;
     width: 50%;
   }
 }
 
 .newsletter-signup__form {
-  margin-top: $baseline-unit*4;
+  margin-top: $baseline-unit*6;
+  margin-bottom: -$baseline-unit*2;
 
-  @include respond-to($mq-s) {
+  @include respond-to($mq-s){
+    margin-bottom: $baseline-unit*2;
+  }
+
+  @include respond-to($mq-l) {
     @include column(6);
   }
 
   &.is-errored {
-    margin-top: -$baseline-unit;
-
     @include respond-to($mq-xl) {
       margin-top: -$baseline-unit*2.5;
     }

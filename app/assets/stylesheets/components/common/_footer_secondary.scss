@@ -6,7 +6,7 @@
 .footer-secondary__list-item {
   margin: 0;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-s) {
     @include inline-block;
     margin-right: $baseline-unit*3;
 

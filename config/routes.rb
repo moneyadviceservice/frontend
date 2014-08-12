@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   NOT_IMPLEMENTED = -> (env) { [501, {}, []] }
 
   get '/' => redirect("/en")
-  resource :beta_opt_out, only: [:create, :destroy], path: 'opt-out'
+  resource :beta_opt_out, only: [:create], path: 'opt-out'
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'

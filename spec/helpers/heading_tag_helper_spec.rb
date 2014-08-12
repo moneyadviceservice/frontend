@@ -4,7 +4,7 @@ RSpec.describe HeadingTagHelper, '#heading_tag', type: :helper do
   subject(:tag) { Nokogiri::HTML.fragment(html).children.first }
 
   let(:text) { 'My heading' }
-  
+
   context 'when no level is defined' do
     let(:html) { helper.heading_tag(text) }
 
@@ -38,6 +38,18 @@ RSpec.describe HeadingTagHelper, '#heading_tag', type: :helper do
     it "has an 'role' of 'heading'" do
       expect(tag.attributes['role'].name).to eq('role')
       expect(tag.attributes['role'].value).to eq('heading')
+    end
+  end
+
+  context 'when optional attributes are specified' do
+    let(:html) { helper.heading_tag(text, class: 'foo') }
+
+    it 'is a h1 tag' do
+      expect(tag.name).to eq('h1')
+    end
+
+    it 'includes the specified attributes' do
+      expect(tag.attributes).to include('aria-level', 'role', 'class')
     end
   end
 end

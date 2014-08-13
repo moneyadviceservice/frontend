@@ -31,5 +31,14 @@ module Core
     it { expect(subject.newsletter_subscription).to eql(true) }
     it { expect(subject.date_of_birth).to eql(Time.new(1988, 1, 1)) }
     it { expect(subject.status_code).to eql('123') }
+
+    describe '#active?' do
+      context 'when state is 0' do
+        it 'returns true' do
+          subject.state = 0
+          expect(subject.active?).to be_truthy
+        end
+      end
+    end
   end
 end

@@ -18,21 +18,21 @@ RSpec.describe ActionPlanDecorator do
 
     context 'when the object body needs processing' do
       let(:fixture) { 'spec/fixtures/action-plan.json' }
+      let(:h3_nodes) { html.search('//div[@class="action-item"]//h3') }
+      let(:h2_nodes) { html.search('//div[@class="action-item"]/h2') }
+      let(:h4_nodes) { html.search('//div[@class="action-item"]/h4') }
 
       it 'replaces action item h3s with h2s ' do
-        h3_nodes = html.search('//div[@class="action-item"]/h3')
-        h2_nodes = html.search('//div[@class="action-item"]/h2')
-
-        expect(h3_nodes).to be_empty
         expect(h2_nodes).to_not be_empty
       end
 
       it 'replaces action item h4s with h3s ' do
-        h4_nodes = html.search('//div[@class="action-item"]//h4')
-        h3_nodes = html.search('//div[@class="action-item"]//h3')
-
         expect(h4_nodes).to be_empty
         expect(h3_nodes).to_not be_empty
+      end
+
+      it 'keeps the right aria-level value' do
+        expect(h3_nodes.attribute('aria-level').value).to eq('3')
       end
     end
   end

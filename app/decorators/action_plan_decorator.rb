@@ -5,7 +5,7 @@ class ActionPlanDecorator < ContentItemDecorator
 
   def initialize(object, options = {})
     super
-    processors << [HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]//h4', 'h3']]
-    processors << [HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]/h3', 'h2']]
+    processors.unshift([HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]//h4', 'h3']])
+    processors.unshift([HTMLProcessor::NodeReplacer, ['//div[@class="action-item"]/h3', 'h2']])
   end
 end

@@ -2,10 +2,6 @@ Given(/^chat is online$/) do
   pending
 end
 
-Given(/^chat is offline$/) do
-  pending
-end
-
 Given(/^an advisor is available$/) do
   pending
 end
@@ -14,16 +10,18 @@ Given(/^all advisors are busy$/) do
   pending
 end
 
+Given(/^chat will be next online later today$/) do
+  Timecop.travel(Time.now.beginning_of_day)
+  home_page.load(locale: :en)
+end
+
+Given(/^chat will be next online tomorrow$/) do
+  Timecop.travel(Time.now.end_of_day)
+  home_page.load(locale: :en)
+end
+
 When(/^I visit the website in Welsh$/) do
   home_page.load(locale: :cy)
-end
-
-When(/^chat will be next online later today$/) do
-  pending
-end
-
-When(/^chat will be next online tomorrow$/) do
-  pending
 end
 
 Then(/^I should be able to start a chat with an advisor$/) do

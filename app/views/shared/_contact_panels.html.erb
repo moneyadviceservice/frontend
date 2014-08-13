@@ -7,10 +7,29 @@
           <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
         <% end %>
 
-        <p class="t-chat-description"><%= t('contact_panels.web_chat.coming_soon.description_html') %>
-          <% if translation?('contact_panels.web_chat.smallprint') %>*
+        <% if Feature.active?(:chat) %>
+
+          <% if chat_open? %>
+            <p class="contact-panels__webchat-description t-web-chat-description">
+              <%= t('contact_panels.web_chat.available.description') %>
+            </p>
+
+            <p class="contact-panels__webchat-javascript t-web-chat-javascript">
+              <%= t('contact_panels.web_chat.javascript.description_html') %>
+            </p>
+          <% else %>
+            <p class="contact-panels__webchat-description t-web-chat-description">
+              <%= t('contact_panels.web_chat.offline.description') %>
+            </p>
           <% end %>
-        </p>
+
+        <% else %>
+
+          <p class="t-chat-description"><%= t('contact_panels.web_chat.coming_soon.description_html') %>
+            <%= '*' if translation?('contact_panels.web_chat.smallprint') %>
+          </p>
+
+        <% end %>
 
         <button disabled class="t-chat-button contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
 

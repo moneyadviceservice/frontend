@@ -75,9 +75,10 @@ cy:
       busy:
         button: Yn brysur ar hyn o bryd
         description: Mae’n ddrwg gennym, mae pob un o’n cynghorwyr yn brysur ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
-      unavailable:
-        button: Ddim ar gael
-        description: Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar borwyr rhyngrwyd JavaScript yn unig.
+      javascript:
+        description_html: |
+          Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar
+          <a href="http://www.enable-javascript.com/">borwyr rhyngrwyd JavaScript yn unig</a>.
       offline:
         button: All-lein
         description: Gwe-sgwrs ar gael o

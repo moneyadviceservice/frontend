@@ -72,9 +72,10 @@ en:
       busy:
         button: Currently busy
         description: Sorry, all of our advisors are currently busy. Please try again later.
-      unavailable:
-        button: Unavailable
-        description: Sorry, web chat is only available on internet browsers with JavaScript.
+      javascript:
+        description_html: |
+          Sorry, web chat is only available on
+          <a href="http://www.enable-javascript.com/">internet browsers with JavaScript</a>.
       offline:
         button: Offline
         description: Web chat is available from

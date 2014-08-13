@@ -46,6 +46,8 @@ Around do |scenario, block|
   else
     block.call
   end
+
+  Timecop.return
 end
 
 ['@enable-sign-in', '@enable-registration'].each do |tag|

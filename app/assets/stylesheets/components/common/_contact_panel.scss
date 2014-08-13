@@ -133,3 +133,11 @@
     height: 400px;
   }
 }
+
+.js .contact-panels__webchat-javascript {
+  display: none;
+}
+
+.no-js .contact-panels__webchat-description {
+  display: none;
+}

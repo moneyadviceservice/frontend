@@ -2,7 +2,7 @@
   <div class="l-contact-panels t-contact-panels">
 
     <div class="l-contact-panel">
-      <div class="contact-panel">
+      <div class="contact-panel t-chat">
         <h2 class="contact-panel__heading t-chat-heading">
           <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
         </h2>
@@ -17,7 +17,7 @@
         <%= t('contact_panels.web_chat.opening_times_html') %>
 
         <% if translation?('contact_panels.web_chat.smallprint') %>
-          <p class="smallprint">* <%= t('contact_panels.web_chat.smallprint') %></p>
+          <p class="smallprint t-welsh-warning">* <%= t('contact_panels.web_chat.smallprint') %></p>
         <% end %>
       </div>
     </div>

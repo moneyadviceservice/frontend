@@ -1,6 +1,7 @@
-<% set_meta_tags(canonical:   news.canonical_url,
-                 alternate:   news.alternate_options,
-                 description: t('.description')) %>
+<% set_meta_tags(title:       t('.title'),
+                 description: t('.description'),
+                 canonical:   news.canonical_url,
+                 alternate:   news.alternate_options) %>
 
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
@@ -9,7 +10,7 @@
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h1 itemprop="headline"><%= title t('.title') %></h1>
+      <%= heading_tag t('.title'), itemprop: 'headline' %>
       <% news.each do |news_article| %>
         <%= render 'news_item', news_article: news_article %>
       <% end %>

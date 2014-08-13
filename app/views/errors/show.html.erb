@@ -1,6 +1,6 @@
 <% set_meta_tags(title: t(".#{@rescue_response}.title")) %>
 
-<h1><%= t(".#{@rescue_response}.heading", default: t('.heading')) %></h1>
+<%= heading_tag t(".#{@rescue_response}.heading", default: t('.heading')) %>
 
 <p class="error-page__text"><%= t(".#{@rescue_response}.intro", default: t(".#{@rescue_response}.title")) %></p>
 

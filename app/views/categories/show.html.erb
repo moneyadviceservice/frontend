@@ -1,6 +1,7 @@
-<% set_meta_tags(canonical:   category.canonical_url,
-                 alternate:   category.alternate_options,
-                 description: category.description) %>
+<% set_meta_tags(title:       category.title,
+                 description: category.description,
+                 canonical:   category.canonical_url,
+                 alternate:   category.alternate_options) %>
 
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
@@ -9,10 +10,8 @@
 <div class="l-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
-      <h1><%= title category.title %></h1>
-
+      <%= heading_tag category.title %>
       <p class="intro"><%= category.description %></p>
-
       <%= category.render_contents %>
     </main>
   </div>

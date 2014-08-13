@@ -1,7 +1,6 @@
 <div class="related-links">
-  <h2 class="related-links__heading">
-    <%= t('.title') %>
-  </h2>
+  <%= heading_tag t('.title'), level: 2, class: 'related-links__heading' %>
+
   <ul class="unstyled-list">
     <% news_articles.each do |news_article| %>
       <li class="related-links__link">

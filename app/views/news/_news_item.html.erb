@@ -1,5 +1,7 @@
 <article>
-  <h2 class="heading-small"><a href="<%= news_article.path %>"><%= news_article.title %></a></h2>
+  <%= heading_tag(level: 2, class: 'heading-small') do %>
+    <%= link_to news_article.title, news_article.path %>
+  <% end %>
   <p class="smallprint">
     <time itemprop="datePublished" datetime=<%= news_article.date(format: :long) %>><%= news_article.date %>
     </time>

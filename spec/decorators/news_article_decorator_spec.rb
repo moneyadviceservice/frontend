@@ -23,15 +23,6 @@ RSpec.describe NewsArticleDecorator do
     it 'does not remove quoted phrases' do
       expect(html.search('//p/em')).to_not be_empty
     end
-
-    it 'strips action email links' do
-        expect(html.search(HTMLProcessor::ACTION_EMAIL)).to be_empty
-      end
-
-    it 'strips action forms' do
-      expect(html.search(HTMLProcessor::ACTION_FORM)).to be_empty
-    end
-
   end
 
   describe '#date' do

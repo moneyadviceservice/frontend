@@ -26,8 +26,16 @@
   <%= render 'styleguide/shared/link_list_secondary' %>
 <% end %>
 
-<%= styleguide_section sections['Social Links'] do %>
-  <%= render 'shared/social_links' %>
+<%= styleguide_section sections['Secondary Footer'] do %>
+  <%= render 'shared/footer_secondary', locals: alternate_locales %>
+<% end %>
+
+<%= styleguide_section sections['Newsletter Signup'] do %>
+  <%= render 'shared/newsletter_signup' %>
+<% end %>
+
+<%= styleguide_section sections['Contact Panel'] do %>
+  <%= render 'styleguide/shared/contact_panel' %>
 <% end %>
 
 <!-- Organisms -->

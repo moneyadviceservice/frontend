@@ -1,3 +1,7 @@
+// Contact Panel
+//
+// Styleguide Contact Panel
+
 .contact-panel {
   color: $color-grey-medium-dark;
   text-align: left;
@@ -76,6 +80,7 @@
 }
 
 .contact-panel__list {
+  @extend .unstyled-list;
   margin: $baseline-unit*2 0;
 }
 

@@ -14,6 +14,10 @@
   margin-bottom: $baseline-unit;
   margin-top: 0;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   .theme-cy & {
     @include respond-to($mq-m) {
       @include body(18, 24);

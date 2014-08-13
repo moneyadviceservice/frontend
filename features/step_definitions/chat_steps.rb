@@ -15,7 +15,7 @@ Given(/^all advisors are busy$/) do
 end
 
 When(/^I visit the website in Welsh$/) do
-  pending
+  home_page.load(locale: :cy)
 end
 
 When(/^chat will be next online later today$/) do
@@ -31,7 +31,7 @@ Then(/^I should be able to start a chat with an advisor$/) do
 end
 
 Then(/^I should not be able to start a chat with an advisor$/) do
-  pending
+  expect(home_page.chat.button).to be_disabled
 end
 
 Then(/^I should see a message informing me that I need JavaScript in order chat with an advisor$/) do
@@ -51,5 +51,5 @@ Then(/^I should see a message informing me that chat will be online tomorrow wit
 end
 
 Then(/^I should see a message informing me that chat is only available in English$/) do
-  pending
+  expect(home_page.chat).to have_welsh_warning
 end

@@ -46,7 +46,7 @@ Feature: Chat online
     Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat will be online tomorrow with tomorrow's opening hours
 
-  @enable-chat @pending
+  @enable-chat
   Scenario: Chat is not supported for Welsh users
     When I visit the website in Welsh
     Then I should not be able to start a chat with an advisor

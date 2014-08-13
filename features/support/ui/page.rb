@@ -7,6 +7,7 @@ require_relative 'sections/footer_social_links'
 require_relative 'sections/header'
 require_relative 'sections/search_box'
 require_relative 'sections/auth'
+require_relative 'sections/chat'
 
 module UI
   class Page < SitePrism::Page
@@ -27,5 +28,6 @@ module UI
     section :header, UI::Sections::Header, '.l-header'
     section :search_box, UI::Sections::SearchBox, '.search'
     section :auth, UI::Sections::Auth, '.authentication'
+    section :chat, UI::Sections::Chat, '.t-chat'
   end
 end

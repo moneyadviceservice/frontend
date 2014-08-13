@@ -12,7 +12,7 @@
   <fieldset class="newsletter-signup__form js-newsletter-form">
     <legend class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></legend>
     <%= label_tag('subscription[email]', t('newsletter_subscriptions.label'), class: 'newsletter-signup__label') %>
-    <%= text_field_tag('subscription[email]', nil, class: 't-newsletter-email js-newsletter-input newsletter-signup__input', placeholder: 'example@example.com') %>
+    <%= text_field_tag('subscription[email]', nil, class: 't-newsletter-email js-newsletter-input newsletter-signup__input') %>
     <%= button_tag(t('newsletter_subscriptions.button'), type: 'submit', class: 't-newsletter-button button button--inline-input newsletter-signup__button') %>
   </fieldset>
 <% end %>

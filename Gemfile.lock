@@ -241,6 +241,8 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nunes (0.3.1)
+    opening_hours (0.0.7)
+      activesupport
     orm_adapter (0.5.0)
     pensions_calculator (0.2.0.303)
       autoprefixer-rails
@@ -437,6 +439,7 @@ DEPENDENCIES
   mysql2
   nokogiri
   nunes
+  opening_hours
   pensions_calculator (~> 0.2)
   psych (>= 2.0.5)
   rails (~> 4.1)

@@ -26,6 +26,7 @@ gem 'meta-tags'
 gem 'mysql2'
 gem 'nokogiri'
 gem 'nunes'
+gem 'opening_hours'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'rouge'
 gem 'rubytree'

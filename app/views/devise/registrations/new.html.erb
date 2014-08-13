@@ -70,8 +70,16 @@
       <div class="registration__field">
         <%= f.form_row :newsletter_subscription do %>
           <%= f.errors_for :newsletter_subscription %>
-          <%= f.label :newsletter_subscription, :class => "form__label-heading" %>
-          <%= f.check_box :newsletter_subscription %>
+
+          <fieldset class="form__group">
+            <div class="form__group-item">
+              <%= f.label :newsletter_subscription, :class => "form__label-heading" do %>
+                <%= f.check_box :newsletter_subscription, :class => "form__group-input" %>
+                <%= t("newsletter_subscription") %>
+              <% end %>
+            </div>
+          </fieldset>
+
         <% end %>
       </div>
     </div>

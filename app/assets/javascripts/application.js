@@ -93,11 +93,6 @@ require(['common', 'jquery'], function(MAS, $) {
         $('.cookie-message').hide();
         $('.footer-site-links__cookie-link').removeClass('is-on');
       });
-
-      // Responsive Opt Out
-      $('.js-close-opt-out').bind('ajax:success', function() {
-        $('.opt-out').addClass('is-hidden');
-      });
     });
   });
 

@@ -40,6 +40,12 @@ module Core
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
+  module Interactors
+    module Customers
+      autoload :Finder, 'core/interactor/customers/finder'
+    end
+  end
+
   module Registry
     autoload :Connection, 'core/registry/connection'
     autoload :Repository, 'core/registry/repository'

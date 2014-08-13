@@ -3,9 +3,9 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel t-chat">
-        <h2 class="contact-panel__heading t-chat-heading">
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
           <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
-        </h2>
+        <% end %>
 
         <p class="t-chat-description"><%= t('contact_panels.web_chat.coming_soon.description_html') %>
           <% if translation?('contact_panels.web_chat.smallprint') %>*
@@ -26,9 +26,9 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel">
-        <h2 class="contact-panel__heading t-contact-heading">
+        <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
           <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
-        </h2>
+        <% end %>
 
         <p class="t-contact-introduction"><%= t('contact_panels.call_us.description') %></p>
 
@@ -47,9 +47,9 @@
 
     <div class="l-contact-panel">
       <div class="contact-panel t-footer-social-links">
-        <h2 class="contact-panel__heading">
+        <%=  heading_tag level: 2, class: 'contact-panel__heading' do %>
           <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
-        </h2>
+        <% end %>
 
         <p><%= t('contact_panels.sharing.description') %></p>
 

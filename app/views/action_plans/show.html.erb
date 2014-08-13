@@ -29,7 +29,7 @@
 
 <% content_for(:alternate_link) do %>
   <% action_plan.footer_alternate_options.each do |locale, url| %>
-    <%= link_to(url, id: "#{locale}Link", lang: locale) do %>
+    <%= link_to(url, id: "#{locale}Link", lang: locale, class: 'footer-secondary__link') do %>
       <span class="icon icon--globe"></span>
       <%= t("locales.#{locale}") %>
     <% end %>

@@ -61,3 +61,14 @@ Then(/^I should be signed in in both places$/) do
   home_page.load(locale: 'en')
   step "I should be signed in"
 end
+
+Given(/^I have an account$/) do
+  step 'I sign in'
+  step 'I sign out'
+end
+
+Then(/^I click on 'Forgot your password\?'$/) do
+  sign_in_page.load(locale: 'en')
+  sign_in_page.forgot_password.click
+end
+

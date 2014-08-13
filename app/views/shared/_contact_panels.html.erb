@@ -2,24 +2,34 @@
   <div class="l-contact-panels t-contact-panels">
 
     <div class="l-contact-panel">
-      <div class="contact-panel t-chat">
+      <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-        <span class="icon icon--web-chat"></span><%= t('contact_panels.web_chat.title') %>
+          <span class="icon icon--web-chat"></span><%= t('contact_panels.chat.title') %>
         <% end %>
 
-        <p class="t-chat-description"><%= t('contact_panels.web_chat.coming_soon.description_html') %>
-          <% if translation?('contact_panels.web_chat.smallprint') %>*
-          <% end %>
+        <p class="contact-panel__chat-javascript t-chat-javascript">
+          <%= t('contact_panels.chat.javascript.description_html') %>
         </p>
 
-        <div class="contact-panel__button-container">
-          <button disabled class="t-chat-button contact-panel__button button is-disabled"><%= t('contact_panels.web_chat.unavailable.button') %></button>
+        <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
+          <div class="contact-panel__preloader"></div>
+
+          <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
+            <%= chat_opening_hours.description %>
+            <%= '*' if translation?('contact_panels.chat.smallprint') %>
+          </p>
+
+          <div class="contact-panel__button-container" id="js-chat-cta">
+            <div class="contact-panel__button button is-disabled t-chat-button">
+              <%= chat_opening_hours.call_to_action %>
+            </div>
+          </div>
         </div>
 
-        <%= t('contact_panels.web_chat.opening_times_html') %>
+        <%= t('contact_panels.chat.opening_times_html') %>
 
-        <% if translation?('contact_panels.web_chat.smallprint') %>
-        <p class="smallprint t-welsh-warning">* <%= t('contact_panels.web_chat.smallprint') %></p>
+        <% if translation?('contact_panels.chat.smallprint') %>
+          <p class="smallprint t-welsh-smallprint">* <%= t('contact_panels.chat.smallprint') %></p>
         <% end %>
       </div>
     </div>
@@ -29,7 +39,7 @@
     <div class="l-contact-panel">
       <div class="contact-panel">
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
-        <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
+          <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
         <% end %>
 
         <p class="t-contact-introduction"><%= t('contact_panels.call_us.description') %></p>
@@ -37,44 +47,115 @@
         <p>
           <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
             <%= t('contact.telephone_number') %></a>
-          </p>
+        </p>
 
-          <%= t('contact_panels.call_us.opening_times_html') %>
+        <%= t('contact_panels.call_us.opening_times_html') %>
 
-          <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
-        </div>
+        <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
       </div>
-
-      <div class="contact-panel__border"></div>
-
-      <div class="l-contact-panel">
-        <div class="contact-panel contact-panel--last t-footer-social-links">
-          <%=  heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
-          <% end %>
-
-          <p><%= t('contact_panels.sharing.description') %></p>
-
-          <div class="contact-panel__button-container">
-            <a class="button contact-panel__button contact-panel__button--sharing t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice">
-              <span class="icon icon--twitter"></span>
-              <span class="visually-hidden">Twitter</span>
-            </a>
-
-            <a class="button contact-panel__button contact-panel__button--sharing t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas">
-              <span class="icon icon--facebook"></span>
-              <span class="visually-hidden">Facebook</span>
-            </a>
-
-            <a class="button contact-panel__button contact-panel__button--sharing t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService">
-              <span class="icon icon--youtube"></span>
-              <span class="visually-hidden">YouTube</span>
-            </a>
-          </div>
-
-          <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
-        </div>
-      </div>
-
     </div>
+
+    <div class="contact-panel__border"></div>
+
+    <div class="l-contact-panel">
+      <div class="contact-panel contact-panel--last t-footer-social-links">
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
+          <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
+        <% end %>
+
+        <p><%= t('contact_panels.sharing.description') %></p>
+
+        <div class="contact-panel__button-container">
+          <a class="button contact-panel__button contact-panel__button--sharing t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice">
+            <span class="icon icon--twitter"></span>
+            <span class="visually-hidden">Twitter</span>
+          </a>
+
+          <a class="button contact-panel__button contact-panel__button--sharing t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas">
+            <span class="icon icon--facebook"></span>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+
+          <a class="button contact-panel__button contact-panel__button--sharing t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService">
+            <span class="icon icon--youtube"></span>
+            <span class="visually-hidden">YouTube</span>
+          </a>
+        </div>
+
+        <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<%= content_for :javascripts do %>
+  <script type='text/javascript' src='https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>'></script>
+  <script type='text/javascript'>
+    sWOProtocol = 'https:';
+
+    sWOImageLoaded = function() {
+
+      <% if chat_opening_hours.open? %>
+
+      var chatCTA = document.getElementById('js-chat-cta'),
+          chatDescription = document.getElementById('js-chat-description'),
+          chatContent = document.getElementById('js-chat-content');
+
+      if (sWOImage.width == 1) {
+
+        var sWOChatElement = document.createElement('div');
+        var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
+
+        sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
+        sWOChatElement.appendChild(sWOChatElementText);
+
+        chatCTA.innerHTML = "";
+        chatCTA.appendChild(sWOChatElement);
+        chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+
+        <% if translation?('contact_panels.chat.smallprint') %>
+        chatDescription.innerHTML += '&nbsp;*';
+        <% end %>
+
+        chatContent.className = "contact-panel__dynamic-content is-loaded";
+
+      } else {
+
+        var sWOChatElement = document.createElement('a');
+        var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
+        sWOChatElement.className = "contact-panel__button button t-chat-button";
+        sWOChatElement.appendChild(sWOChatElementText);
+
+        chatCTA.innerHTML = "";
+        chatCTA.appendChild(sWOChatElement);
+        chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
+        chatContent.className = "contact-panel__dynamic-content is-loaded";
+
+        <% if translation?('contact_panels.chat.smallprint') %>
+        chatDescription.innerHTML += '&nbsp;*';
+        <% end %>
+
+        sWOChatElement.onclick = function() {
+          window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+          return false;
+        };
+
+        sWOChatElement.href = sWOChatstart;
+        sWOChatElement.target = "_blank";
+
+      }
+
+      <% end %>
+
+    };
+
+    if (typeof sWOTrackPage == 'function') {
+      sWOTrackPage();
+
+      <%# Track page enagagement (a visit lasting more than 30 seconds) %>
+      setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
+    }
+
+  </script>
+<% end %>

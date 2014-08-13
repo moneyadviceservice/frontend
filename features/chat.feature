@@ -13,41 +13,38 @@ Feature: Chat online
   - Sat 9am-10pm
   - Sun 10am-10pm
 
-  @enable-chat @pending @javascript
+  @enable-chat @javascript
   Scenario: Chat is online, advisors are available, and the user has JavaScript enabled
     Given chat is online
     And an advisor is available
     Then I should be able to start a chat with an advisor
 
-  @enable-chat @pending
+  @enable-chat
   Scenario: Chat is online, advisors are available, and the user has JavaScript disabled
     Given chat is online
     And an advisor is available
     Then I should see a message informing me that I need JavaScript in order chat with an advisor
 
-  @enable-chat @pending
+  @enable-chat @javascript
   Scenario: Chat is online but all advisors are busy
     Given chat is online
     And all advisors are busy
     Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat is currently busy
 
-  @enable-chat @pending
+  @enable-chat @javascript
   Scenario: Chat is offline, but will be online later that day
-    Given chat is offline
-    When chat will be next online later today
+    Given chat will be next online later today
     Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat will be online between today's opening hours
 
-  @enable-chat @pending
+  @enable-chat @javascript
   Scenario: Chat is offline and will not online until tomorrow
-    Given chat is offline
-    When chat will be next online tomorrow
+    Given chat will be next online tomorrow
     Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat will be online tomorrow with tomorrow's opening hours
 
   @enable-chat
   Scenario: Chat is not supported for Welsh users
     When I visit the website in Welsh
-    Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat is only available in English

@@ -91,20 +91,23 @@ en:
       * Calls cost no more than to standard UK-wide numbers.
 
   contact_panels:
-    web_chat:
+    chat:
       title: Web chat
       available:
-        button: Launch chat
+        call_to_action: Launch chat
         description: Got a question? Our advisors will point you in the right direction.
-      busy:
-        button: Currently busy
-        description: Sorry, all of our advisors are currently busy. Please try again later.
       unavailable:
-        button: Unavailable
-        description: Sorry, web chat is only available on internet browsers with JavaScript.
+        call_to_action: Unavailable
+      busy:
+        call_to_action: Currently busy
+        description: Sorry, all of our advisors are currently busy. Please try again later.
+      javascript:
+        description_html: |
+          Sorry, web chat is only available on
+          <a href="http://www.enable-javascript.com/">internet browsers with JavaScript</a>.
       offline:
-        button: Offline
-        description: Web chat is available from
+        call_to_action: Offline
+        description: Please try again later.
       coming_soon:
         description_html: Coming soon.
       opening_times_html: |

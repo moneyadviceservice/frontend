@@ -89,6 +89,7 @@ GEM
     chai-jquery-rails (1.2.1)
       railties (>= 3.1)
       sprockets
+    chronic (0.10.2)
     chunky_png (1.3.0)
     cliver (0.3.2)
     codeclimate-test-reporter (0.3.0)
@@ -406,6 +407,7 @@ DEPENDENCIES
   bowndler (~> 1.0)
   byebug
   chai-jquery-rails
+  chronic
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   compass-rails

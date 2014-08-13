@@ -25,6 +25,14 @@
   }
 }
 
+.theme-cy .newsletter-signup__input[type="text"] {
+  max-width: 208px;
+
+  @include respond-to($mq-l, $mq-xl) {
+    max-width: 135px;
+  }
+}
+
 .newsletter-signup__button {
   @include body(18, 24);
   height: auto;

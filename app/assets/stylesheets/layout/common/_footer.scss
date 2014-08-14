@@ -90,7 +90,7 @@
 .l-footer-secondary__list--left {
   @include column(12);
 
-  @include respond-to(65.125em) {
+  @include respond-to($mq-xl) {
     @include column(4);
   }
 }
@@ -98,7 +98,7 @@
 .l-footer-secondary__list--right {
   @include column(12);
 
-  @include respond-to(65.125em) {
+  @include respond-to($mq-xl) {
     @include column(8);
     text-align: right;
     float: right;

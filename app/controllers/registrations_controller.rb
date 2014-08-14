@@ -2,6 +2,10 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :store_location
   before_action :configure_permitted_parameters
 
+  def edit
+    head :not_implemented
+  end
+
   private
 
   def after_sign_up_path_for(resource)

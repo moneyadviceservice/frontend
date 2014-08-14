@@ -88,3 +88,7 @@ Then(/^I should receive an already registered email address validation error$/) 
   expect(page).to have_content('has already been taken')
 end
 
+When(/^I attempt to edit my account$/) do
+  account_page.load(locale: 'en')
+end
+

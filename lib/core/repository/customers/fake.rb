@@ -26,6 +26,10 @@ module Core
         def clear
           customers.clear
         end
+
+        def valid_for_authentication?(id)
+          find(id)
+        end
       end
     end
   end

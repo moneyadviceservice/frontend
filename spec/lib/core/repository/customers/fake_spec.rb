@@ -56,5 +56,22 @@ module Core
         end
       end
     end
+
+    describe '#valid_for_authentication?' do
+      context 'when customer exists' do
+        it 'returns true' do
+          customer = Customer.new('customer_id', first_name: 'Phil')
+          subject.create(customer)
+
+          expect(subject.valid_for_authentication?('customer_id')).to be_truthy
+        end
+      end
+
+      context 'when customer does not exist' do
+        it 'returns false' do
+          expect(subject.valid_for_authentication?('customer_id')).to be_falsey
+        end
+      end
+    end
   end
 end

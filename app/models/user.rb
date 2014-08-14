@@ -37,6 +37,10 @@ class User < ActiveRecord::Base
   before_save :fake_send_confirmation_email
   before_create :create_to_crm
 
+  def valid_for_authentication?
+    super && active? && Core::Registry::Repository[:customers].valid_for_authentication?(customer_id)
+  end
+
   private
 
   def create_to_crm

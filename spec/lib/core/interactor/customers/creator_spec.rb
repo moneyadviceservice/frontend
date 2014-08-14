@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'lib/core/interactor/shared_examples/optional_failure_block'
 
 module Core
   module Interactors
@@ -19,10 +20,17 @@ module Core
             let(:customer){ Customer.new('phil', first_name: 'Phil') }
             subject{ described_class.new(customer) }
 
-            it 'throws an exception' do
+            before :each do
               subject.call
-              expect{ subject.call }.to raise_error
             end
+
+            it 'throws an exception' do
+              expect do
+                subject.call{ raise 'hello' }
+              end.to raise_error('hello')
+            end
+
+            it_has_behavior 'optional failure block'
           end
 
           context 'when customer does not exists' do

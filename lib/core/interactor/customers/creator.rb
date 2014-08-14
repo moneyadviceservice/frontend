@@ -8,8 +8,10 @@ module Core
           @customer = customer
         end
 
-        def call
+        def call(&block)
           Registry::Repository[:customers].create(customer)
+        rescue
+          block.call if block_given?
         end
       end
     end

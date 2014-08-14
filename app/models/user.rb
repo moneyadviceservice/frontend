@@ -35,8 +35,17 @@ class User < ActiveRecord::Base
   validates :age_range, inclusion: { in: VALID_AGE_RANGES }, allow_nil: true
 
   before_save :fake_send_confirmation_email
+  before_create :create_to_crm
 
   private
+
+  def create_to_crm
+    Core::Registry::Repository[:customers].create(to_customer)
+  end
+
+  def to_customer
+    Converters::UserToCustomer.new(self).call
+  end
 
   def uppercase_post_code
     self.post_code.upcase! if post_code

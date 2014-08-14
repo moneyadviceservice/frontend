@@ -9,18 +9,26 @@ RSpec.describe User, :type => :model do
     }
   end
 
-  describe '#fake_send_confirmation_email' do
-    subject(:user) { described_class.new(attributes) }
+  subject{ described_class.new(attributes) }
 
+  around :each do |example|
+    old = (Core::Registry::Repository[:customers] rescue nil)
+    Core::Registry::Repository[:customers] = Core::Repository::Customers::Fake.new
+    Core::Registry::Repository[:customers].clear
+
+    example.run
+
+    Core::Registry::Repository[:customers] = old
+  end
+
+  describe '#fake_send_confirmation_email' do
     it "sends a fake confirmation email when user is saved" do
-      user.save!
-      expect(user.confirmation_sent_at).to_not be_nil
+      subject.save!
+      expect(subject.confirmation_sent_at).to_not be_nil
     end
   end
 
   describe 'validations' do
-    subject{ described_class.new(attributes) }
-
     it { should allow_value('PasswordWithMoreThan8Characters').for(:password) }
     it { should allow_value('P@55word').for(:password) }
     it { should allow_value('12345678').for(:password) }
@@ -89,5 +97,13 @@ RSpec.describe User, :type => :model do
   it 'should upcase post code' do
     user = User.create!(attributes.merge(post_code: 'n7 0hs'))
     expect(user.post_code).to eq('N7 0HS')
+  end
+
+  describe 'callbacks' do
+    describe 'before create' do
+      it 'creates the CRM customer' do
+        expect{ subject.save }.to change{ Core::Registry::Repository[:customers].customers.size }.by(1)
+      end
+    end
   end
 end

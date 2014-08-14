@@ -21,7 +21,7 @@ module Core::Repository
         end
         ResponseMapper.new(response).mapped_response
 
-      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+      rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
         raise RequestError, 'Unable to fetch Search Results from Google Custom Search'
       end
 

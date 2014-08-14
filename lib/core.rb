@@ -1,8 +1,15 @@
 require 'registry'
 
 module Core
-  autoload :Connection, 'core/connection'
-  autoload :ConnectionFactory, 'core/connection_factory'
+  module Connection
+    autoload :Http, 'core/connection/http'
+    autoload :Smtp, 'core/connection/smtp'
+  end
+
+  module ConnectionFactory
+    autoload :Http, 'core/connection_factory/http'
+    autoload :Smtp, 'core/connection_factory/smtp'
+  end
 
   autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'
@@ -15,10 +22,17 @@ module Core
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
 
+  module Feedback
+    autoload :Base, 'core/entity/feedback/base'
+    autoload :Article, 'core/entity/feedback/article'
+    autoload :Technical, 'core/entity/feedback/technical'
+  end
+
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
+  autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
@@ -47,6 +61,10 @@ module Core
     module Categories
       autoload :Fake, 'core/repository/categories/fake'
       autoload :PublicWebsite, 'core/repository/categories/public_website'
+    end
+
+    module Feedback
+      autoload :Email, 'core/repository/feedback/email'
     end
 
     module News

@@ -1,8 +1,8 @@
-RSpec.describe Core::ConnectionFactory, '.build' do
+RSpec.describe Core::ConnectionFactory::Http, '.build' do
   subject(:factory) { described_class.build('http://example.com') }
 
-  it "manufactures a `Core::Connection'" do
-    expect(factory).to be_a(Core::Connection)
+  it "manufactures a `Core::Connection::Http'" do
+    expect(factory).to be_a(Core::Connection::Http)
   end
 
   it 'has a default timeout of 5 seconds' do

@@ -10,7 +10,7 @@ module Core::Repository::StaticPages
 
       before do
         allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory.build(url)
+          Core::ConnectionFactory::Http.build(url)
         end
 
         stub_request(:get, "https://example.com/en/static/#{id}.json").

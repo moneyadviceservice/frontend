@@ -1,0 +1,17 @@
+<section class="panel feedback-panel">
+  <h2 class="feedback-panel__title"><%= t('feedback_panel.title') %></h2>
+
+  <p><%= t('feedback_panel.greeting') %></p>
+
+  <ul>
+    <li>
+      <%= link_to t('feedback_panel.article_feedback_link_text'), new_article_feedback_path(article.object.id), class: 't-feedback-panel__article-feedback-link' %>
+    </li>
+    <li>
+      <%= link_to t('feedback_panel.technical_feedback_link_text'), new_feedback_path, class: 't-feedback-panel__technical-feedback-link' %>
+    </li>
+    <li>
+      <%= link_to t('feedback_panel.advice_link_text'), advice_path, class: 't-feedback-panel__advice-link' %>
+    </li>
+  </ul>
+</section>

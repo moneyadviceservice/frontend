@@ -7,7 +7,7 @@ module Core::Repository::NewsletterSubscriptions
 
       before do
         allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory.build(url)
+          Core::ConnectionFactory::Http.build(url)
         end
 
         stub_request(:post, 'https://example.com/en/newsletter-subscriptions.json').

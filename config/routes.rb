@@ -68,11 +68,15 @@ Rails.application.routes.draw do
     resources :action_plans, only: 'show'
     resources :articles,
               only: 'show',
-              constraints: ValidResource.new(:article)
+              constraints: ValidResource.new(:article) do
+                resource :feedback, only: [:new, :create], controller: :article_feedbacks
+              end
+
     resources :categories, only: 'show',
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
+    resource  :advice, only: :show
 
     get 'campaigns/revealed-the-true-cost-of-buying-a-car', to: "car_campaigns#show"
     get 'campaigns/edrychwch-cost-gwirioneddol-prynu-car', to: "car_campaigns#show"
@@ -81,6 +85,8 @@ Rails.application.routes.draw do
               path:        'static',
               only:        'show',
               constraints: ValidResource.new(:static_page)
+
+    resource :feedback, only: [:new, :create], controller: :technical_feedbacks
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 

@@ -17,9 +17,9 @@ module Core::Repository
         response = connection.get('/%{locale}/categories/%{id}.json' %
                                     { locale: I18n.locale, id: id })
         response.body
-      rescue Core::Connection::ResourceNotFound
+      rescue Core::Connection::Http::ResourceNotFound
         nil
-      rescue Core::Connection::ConnectionFailed, Core::Connection::ClientError
+      rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
         raise RequestError, 'Unable to fetch Category JSON from Public Website'
       end
 

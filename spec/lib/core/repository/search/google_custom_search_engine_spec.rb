@@ -36,7 +36,7 @@ module Core::Repository::Search
 
       context 'when there is an error' do
         before do
-          allow(connection).to receive(:get).and_raise(Core::Connection::ClientError)
+          allow(connection).to receive(:get).and_raise(Core::Connection::Http::ClientError)
         end
 
         it 'raises a request error' do

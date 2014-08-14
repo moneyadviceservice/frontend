@@ -6,12 +6,14 @@ module World
 
     pages = %w(
       article
+      article_feedback
       home
       action_plan
       category
       partners
       search_results
       static
+      technical_feedback
       news_article
       news
       sign_up

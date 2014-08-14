@@ -51,6 +51,23 @@ en:
       unprocessable_entity:
         title: Unprocessable Entity
 
+  activemodel:
+    errors:
+      models:
+        core/feedback/article:
+          attributes:
+            useful:
+              blank: Please choose an option
+            suggestions:
+              blank: Please give further details
+
+        core/feedback/technical:
+          attributes:
+            useful:
+              attempting: Please tell us what you were trying to do
+            suggestions:
+              occurred: Please give further details
+
   contact:
     heading: Can’t find what you need?
     introduction: Our trained staff are on hand to help you
@@ -197,6 +214,19 @@ en:
       related_categories:
         title: This article appears in
 
+  article_feedbacks:
+    new:
+      title: Give us your feedback
+      mandatory_warning: Please complete all fields
+      subtitle: "You're providing feedback on: '%{article_title}'"
+      was_page_useful_html: Was this page useful? <span class="visually-hidden">required</span>
+      yes: Yes
+      no: No
+      tell_us_more_html: Please tell us more <span class="visually-hidden">required</span>
+      submit_button: Submit feedback
+    create:
+      flash_notice: Thanks for your feedback
+
   search_box:
     label: Search the Money Advice Service
     placeholder: Search
@@ -247,3 +277,25 @@ en:
     sign_out: Sign out
     register: Register
     my_account: My Account
+
+  technical_feedbacks:
+    new:
+      title: Give us your feedback
+      mandatory_warning: Please complete all fields
+      submit_button: Submit feedback
+      trying_to_do_html: What were you trying to do? <span class="visually-hidden">required</span>
+      what_went_wrong_html: What went wrong? <span class="visually-hidden">required</span>
+    create:
+      flash_notice: Thanks for your feedback
+
+  advices:
+    show:
+      title: Help and money advice
+      greeting: "For help and money advice, please contact us:"
+
+  feedback_panel:
+    title: Give us your feedback
+    greeting: What is your feedback about?
+    article_feedback_link_text: The information on this page
+    technical_feedback_link_text: I had a technical issue
+    advice_link_text: I need money advice

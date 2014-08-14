@@ -43,6 +43,7 @@ module Core
   module Interactors
     module Customers
       autoload :Finder, 'core/interactor/customers/finder'
+      autoload :Creator, 'core/interactor/customers/creator'
     end
   end
 

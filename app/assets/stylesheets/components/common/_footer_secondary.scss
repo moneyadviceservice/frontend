@@ -21,22 +21,27 @@
 }
 
 .footer-secondary__link {
-  @extend %type-navigation;
+  @extend %font-body;
+  @include body(14, 18);
   @extend %link-nav-primary;
   line-height: 2.2;
+
+  .cy-theme & {
+    @include body(13, 18);
+  }
 }
 
 .footer-secondary__opt-out {
-    @extend %type-footer;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background: transparent;
+  @extend %type-footer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
 
-    &:hover,
-    &:focus {
-      outline: none;
-      text-decoration: underline;
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: underline;
   }
 }
 

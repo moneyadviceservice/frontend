@@ -1,38 +1,10 @@
-class ValidResource
-
-  BLACKLIST = {
-    :article     => %w(about-our-debt-work am-ein-gwaith-dyled
-                       debt-publications cyhoeddiadau-ar-ddyledion
-                       partners-overview-parhub
-                       partner-reg-parhub
-                       syndicating-tools-parhub
-                       video-syndication-parhub
-                       toolkits-parhub pecynnau-cymorth-cyngor-ariannol
-                       linking-parhub
-                       examples-parhub
-                       licence-agreement-parhub),
-    :category    => %w(partners
-                       partners-uc-banks
-                       partners-uc-landlords
-                       resources-for-professionals-working-with-young-people-and-parents),
-    :static_page => %w(accessibility hygyrchedd)
-  }
-
-  attr_accessor :type
-
-  def initialize(type)
-    self.type = type
-  end
-
-  def matches?(request)
-    BLACKLIST[type].exclude?(request.parameters['id'])
-  end
-end
-
 Rails.application.routes.draw do
-  NOT_IMPLEMENTED = -> (env) { [501, {}, []] }
 
-  get '/' => redirect("/en")
+  def not_implemented
+    -> (env) { [501, {}, []] }
+  end
+
+  get '/' => redirect('/en')
   resource :beta_opt_out, only: [:create], path: 'opt-out'
 
   scope '/:locale', locale: /en|cy/ do
@@ -40,46 +12,45 @@ Rails.application.routes.draw do
 
     if Feature.active?(:registration)
       devise_for :users, only: [:registrations],
-                         controllers: { registrations: "registrations" }
+                 controllers:  { registrations: 'registrations' }
     else
       scope '/users' do
-        match '/sign_up', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_registration'
-        match '/edit', to: NOT_IMPLEMENTED, via: 'get', as: 'edit_user_registration'
+        match '/sign_up', to: not_implemented, via: 'get', as: 'new_user_registration'
+        match '/edit', to: not_implemented, via: 'get', as: 'edit_user_registration'
       end
     end
 
     if Feature.active?(:sign_in)
       devise_for :users, only: [:sessions],
-                         controllers: { sessions: "sessions" }
+                 controllers:  { sessions: 'sessions' }
     else
       scope '/users' do
-        match '/sign_in', to: NOT_IMPLEMENTED, via: 'get', as: 'new_user_session'
-        match '/sign_out', to: NOT_IMPLEMENTED, via: 'delete', as: 'destroy_user_session'
+        match '/sign_in', to: not_implemented, via: 'get', as: 'new_user_session'
+        match '/sign_out', to: not_implemented, via: 'delete', as: 'destroy_user_session'
       end
     end
 
     Feature.with(:pensions_calculator) do
       mount PensionsCalculator::Engine => '/tools/:tool_id',
-        constraints: { tool_id: %r{pension-calculator|dilyn-hynt-eich-pensiwn-a-chynilion-ymddeoliad-eraill} }
+            constraints:               { tool_id: %r{pension-calculator|dilyn-hynt-eich-pensiwn-a-chynilion-ymddeoliad-eraill} }
     end
 
-    match '/tools/:id', to: NOT_IMPLEMENTED, via: 'get', as: 'tool'
+    match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'
     resources :articles,
-              only: 'show',
+              only:        'show',
               constraints: ValidResource.new(:article) do
-                resource :feedback, only: [:new, :create], controller: :article_feedbacks
-              end
-
+      resource :feedback, only: [:new, :create], controller: :article_feedbacks
+    end
     resources :categories, only: 'show',
-              constraints: ValidResource.new(:category)
+              constraints:       ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
-    resource  :advice, only: :show
+    resource :advice, only: :show
 
-    get 'campaigns/revealed-the-true-cost-of-buying-a-car', to: "car_campaigns#show"
-    get 'campaigns/edrychwch-cost-gwirioneddol-prynu-car', to: "car_campaigns#show"
+    get 'campaigns/revealed-the-true-cost-of-buying-a-car', to: 'car_campaigns#show'
+    get 'campaigns/edrychwch-cost-gwirioneddol-prynu-car', to: 'car_campaigns#show'
 
     resources :static_pages,
               path:        'static',
@@ -93,9 +64,9 @@ Rails.application.routes.draw do
     resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
 
     resource :styleguide,
-             controller: 'styleguide',
-             only: 'show',
-             constraints: {locale: I18n.default_locale} do
+             controller:  'styleguide',
+             only:        'show',
+             constraints: { locale: I18n.default_locale } do
       member do
 
         scope 'components' do
@@ -136,5 +107,6 @@ Rails.application.routes.draw do
     end
   end
 
-  match '*path', via: :all, to: NOT_IMPLEMENTED
+  match '*path', via: :all, to: not_implemented
+
 end

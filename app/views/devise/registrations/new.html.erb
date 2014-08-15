@@ -1,6 +1,6 @@
 <main role="main" class="l-registration">
-  <%= heading_tag 'Register' %>
-  <p class="intro">To get great benefits I promise</p>
+  <h1><%= t("authentication.registration.title") %></h1>
+  <p class="intro"><%= t("authentication.registration.intro") %></p>
 
   <%= render "devise/shared/links" %>
 
@@ -15,8 +15,16 @@
         <%= f.form_row :first_name do %>
           <%= f.errors_for :first_name %>
           <%= f.label :first_name, :class => "form__label-heading" %>
-          <%= f.text_field :first_name, autofocus: true %>
+          <%= f.text_field :first_name, autofocus: true, "aria-describedby" => "tooltip_first_name" %>
         <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_first_name" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.registration.field_help_texts.first_name") %></p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -25,14 +33,14 @@
         <%= f.form_row :email do %>
           <%= f.errors_for :email %>
           <%= f.label :email, :class => "form__label-heading" %>
-          <%= f.email_field :email, autofocus: true, "aria-describedby" => "tooltip_1" %>
+          <%= f.email_field :email, autofocus: true, "aria-describedby" => "tooltip_email" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_1" data-dough-component="FieldHelpText">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_email" data-dough-component="FieldHelpText">
           <div class="tooltip__content-container">
-            <p class="tooltip__text">This is the tooltip, is it not.</p>
+            <p class="tooltip__text"><%= t("authentication.registration.field_help_texts.email") %></p>
           </div>
         </div>
       </div>
@@ -43,14 +51,14 @@
         <%= f.form_row :password do %>
           <%= f.errors_for :password %>
           <%= f.label :password, :class => "form__label-heading" %>
-          <%= f.password_field :password, autocomplete: "off", "aria-describedby" => "tooltip_2" %>
+          <%= f.password_field :password, autocomplete: "off", "aria-describedby" => "tooltip_password" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_2" data-dough-component="FieldHelpText">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_password" data-dough-component="FieldHelpText">
           <div class="tooltip__content-container">
-            <p class="tooltip__text">This is the tooltip, is it not.</p>
+            <p class="tooltip__text"><%= t("authentication.registration.field_help_texts.password") %></p>
           </div>
         </div>
       </div>
@@ -61,8 +69,16 @@
         <%= f.form_row :post_code do %>
           <%= f.errors_for :post_code %>
           <%= f.label :post_code, :class => "form__label-heading" %>
-          <%= f.text_field :post_code %>
+          <%= f.text_field :post_code, "aria-describedby" => "tooltip_postcode" %>
         <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_postcode" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.registration.field_help_texts.postcode") %></p>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -1,32 +1,6 @@
 .l-footer {
   position: relative; // Fixes Safari bug so please don't remove
-
-  // Old footer styles - to be removed once new footer is turned on.
-
-  .social-links {
-    float: right;
-  }
-
-  .icon--logo {
-    margin-top: $baseline-unit*2;
-  }
-
-  .footer-site-links__login {
-    @include respond-to($mq-m) {
-      display: none;
-    }
-
-    > form {
-      @include inline-block;
-    }
-  }
-
-  .authentication__link {
-    @extend %link-nav-secondary;
-  }
 }
-
-// New footer components
 
 .l-footer-primary {
   background-color: $color-footer-bg;

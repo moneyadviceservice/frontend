@@ -1,11 +1,15 @@
 <div class="call-us">
   <%= heading_tag t('contact.call_us'), level: 2, class: 'call-us__title' %>
 
-  <a href="<%= t('contact.telephone_number_href') %>" class="call-us__number"><%= t('contact.telephone_number') %></a>
+  <a href="<%= t('contact.telephone_number_href') %>" class="call-us__number">
+    <%= t('contact.telephone_number') %>
+  </a>
 
   <p class="call-us__opening_hours">
     <%= t('contact.opening_hours_html') %>
   </p>
 
-  <p><%= t('contact.call_charges_html') %></p>
+  <p>
+    <%= t('contact.call_charges_html') %>
+  </p>
 </div>

@@ -1,4 +1,7 @@
 class ArticleFeedbacksController < ApplicationController
+  before_action :retrieve_article
+  decorates_assigned :article, with: ArticleFeedbackDecorator
+
   def new
   end
 
@@ -7,10 +10,16 @@ class ArticleFeedbacksController < ApplicationController
       render :new and return
     end
 
-    redirect_to article_path(article.id), success: t('.flash_notice')
+    redirect_to article_path(@article.id), success: t('.flash_notice')
   end
 
   private
+
+  def retrieve_article
+    @article ||= Core::ArticleReader.new(params[:article_id]).call do
+      not_found
+    end
+  end
 
   def new_feedback
     @new_feedback ||= Core::Feedback::Article.new(feedback_params)
@@ -30,15 +39,8 @@ class ArticleFeedbacksController < ApplicationController
     end
   end
 
-  def article
-    @article ||= Core::ArticleReader.new(params[:article_id]).call do
-      not_found
-    end
-  end
-  helper_method :article
-
   def breadcrumbs
-    @breadcrumbs ||= BreadcrumbTrail.build(article, category_tree)
+    @breadcrumbs ||= BreadcrumbTrail.build(@article, category_tree)
   end
   helper_method :breadcrumbs
 end

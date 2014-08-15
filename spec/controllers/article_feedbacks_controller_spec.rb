@@ -1,12 +1,25 @@
 RSpec.describe ArticleFeedbacksController, :type => :controller do
   let(:article_id) { 'article-id' }
   let(:article) { double(id: article_id) }
+  let(:article) { Core::Article.new(article_id) }
+  let(:article_reader) { double }
+
+  before do
+    allow(article_reader).to receive(:call) { article }
+    allow(Core::ArticleReader).to receive(:new).with(article_id) { article_reader }
+  end
 
   describe 'GET new' do
     it 'is successful' do
       get :new, article_id: article.id, locale: I18n.locale
 
       expect(response).to be_ok
+    end
+
+    it 'assigns @article' do
+      get :new, article_id: article.id, locale: I18n.locale
+
+      expect(assigns(:article)).to be_a(Core::Article)
     end
   end
 
@@ -21,6 +34,12 @@ RSpec.describe ArticleFeedbacksController, :type => :controller do
       allow(Core::Feedback::Article).to receive(:new) { feedback_entity }
       allow(Core::FeedbackWriter).to receive(:new) { feedback_writer }
       allow(feedback_writer).to receive(:call)
+    end
+
+    it 'assigns @article' do
+      get :new, article_id: article.id, locale: I18n.locale
+
+      expect(assigns(:article)).to be_a(Core::Article)
     end
 
     it 'creates an article feedback entity' do

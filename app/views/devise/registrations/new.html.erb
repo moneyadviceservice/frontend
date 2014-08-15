@@ -113,7 +113,8 @@
     <div class="registration__row">
       <div class="registration__field">
         <div class="form__row">
-          <%= f.submit "Sign up", class: "button button--primary" %>
+          <p><%= t("authentication.registration.terms") %></p>
+          <%= f.submit t("authentication.registration.label"), class: "button button--primary" %>
         </div>
       </div>
     </div>

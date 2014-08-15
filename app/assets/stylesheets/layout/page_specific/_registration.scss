@@ -18,10 +18,20 @@
     }
   }
 
-  .registration__helper,
-  .field-help-text {
+  .registration__helper {
     @include column(12);
 
+    @include respond-to($mq-m) {
+      @include column(6);
+    }
+
+    @include respond-to($mq-l) {
+      @include row(12);
+      @include column(7, 12);
+    }
+  }
+
+  .field-help-text {
     @include respond-to($mq-m) {
       @include column(6);
     }

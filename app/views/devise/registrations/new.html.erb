@@ -1,6 +1,6 @@
 <main role="main" class="l-registration">
   <h1><%= t("authentication.registration.title") %></h1>
-  <p class="intro"><%= t("authentication.registration.intro") %></p>
+  <p class="intro"><%= t("authentication.registration.intro_html", url: t('footer.privacy_statement_link')) %></p>
 
   <%= render "devise/shared/links" %>
 
@@ -88,7 +88,7 @@
 
           <h3><%= t("authentication.registration.newsletter.title") %></h3>
           <p><%= t("authentication.registration.newsletter.intro") %></p>
-          <ul class="list-benefits">
+          <ul class="list">
             <% t('authentication.registration.newsletter.benefits').each do |benefit| %>
               <li><%= benefit %></li>
             <% end %>
@@ -113,7 +113,7 @@
     <div class="registration__row">
       <div class="registration__field">
         <div class="form__row">
-          <p><%= t("authentication.registration.terms") %></p>
+          <p><%= t("authentication.registration.terms_html", url: t("footer.terms_and_conditions_link")) %></p>
           <%= f.submit t("authentication.registration.label"), class: "button button--primary" %>
         </div>
       </div>

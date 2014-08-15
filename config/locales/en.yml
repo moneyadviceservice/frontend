@@ -289,8 +289,8 @@ en:
     my_account: My Account
     registration:
       title: Register to get more from your money
-      intro: Your personal information will be kept private and confidential and will not be shared with third parties. Read our privacy policy for more details.
-      terms: "By clicking 'Register', you're agreeing to our Terms and Conditions."
+      intro_html: Your personal information will be kept private and confidential and will not be shared with third parties. Read our <a href="%{url}">privacy policy</a> for more details.
+      terms_html: "By clicking 'Register', you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
       label: Register now
       field_help_texts:
         first_name: "This is your own personal space where you can be open and honest about your money.  We will only ever view what you’ve saved if you contact us for money advice and ask us to review your details."

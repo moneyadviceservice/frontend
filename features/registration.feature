@@ -40,3 +40,9 @@ Scenario: Attempt to register with existing account
   Then I should remain signed out
   And  I should receive an already registered email address validation error
 
+@enable-registration
+Scenario: Edit account details
+  Given I register
+  When I attempt to edit my account
+  Then I am told that the functionality is not implemented
+

@@ -5,6 +5,7 @@ module World
     end
 
     pages = %w(
+      account
       article
       article_feedback
       home

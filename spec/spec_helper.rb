@@ -67,5 +67,11 @@ RSpec.configure do |c|
   c.before(:suite) do
     DatabaseCleaner.clean
     ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
+
+    Core::Registry::Repository[:customers] = Core::Repository::Customers::Fake.new
+  end
+
+  c.before :each do
+    Core::Registry::Repository[:customers].clear
   end
 end

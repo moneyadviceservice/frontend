@@ -5,16 +5,6 @@ module Core
   module Interactors
     module Customers
       RSpec.describe Creator do
-        around :each do |example|
-          old = (Core::Registry::Repository[:customers] rescue nil)
-          Core::Registry::Repository[:customers] = Core::Repository::Customers::Fake.new
-          Core::Registry::Repository[:customers].clear
-
-          example.run
-
-          Core::Registry::Repository[:customers] = old
-        end
-
         describe '#call' do
           context 'when customer already exists' do
             let(:customer){ Customer.new(nil, first_name: 'Phil') }

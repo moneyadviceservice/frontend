@@ -26,7 +26,7 @@ Feature: Giving feedback on an article
     And I provide the information about what I was trying to do
     And I provide the information about what happened
     When I submit my technical feedback
-    Then I should be on the technical feedback page
+    Then I should be back on the original article
     And I should see a confirmation message that my technical feedback has been received
     And the technical feedback email should have been sent
 

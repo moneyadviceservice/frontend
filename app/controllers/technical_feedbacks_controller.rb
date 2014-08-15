@@ -1,5 +1,6 @@
 class TechnicalFeedbacksController < ApplicationController
   def new
+    session[:return_to] ||= request.referer
   end
 
   def create
@@ -7,7 +8,7 @@ class TechnicalFeedbacksController < ApplicationController
       render :new and return
     end
 
-    redirect_to new_feedback_path, success: t('.flash_notice')
+    redirect_to session.delete(:return_to), success: t('.flash_notice')
   end
 
   private

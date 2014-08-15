@@ -62,6 +62,10 @@
   @include respond-to($mq-l) {
     margin: $baseline-unit*4 0;
   }
+
+  &.is-disabled {
+    visibility: hidden;
+  }
 }
 
 .contact-panel__button--sharing {

@@ -9,7 +9,9 @@ module Core
         end
 
         def call(&block)
-          Registry::Repository[:customers].create(customer)
+          customer_id = Registry::Repository[:customers].create(customer)
+          customer.send :id=, customer_id
+          customer
         rescue
           block.call if block_given?
         end

@@ -9,12 +9,15 @@ module Core
           customers.detect{|c| c.id == id}
         end
 
+        # return customer id
         def create(customer)
           raise('Already exists') if customers.detect{|c| c.id == customer.id}
 
+          customer = customer.dup
+          customer.send :id=, "customer_#{rand(1000000)}"
           customers << customer
 
-          "customer_#{rand(1000000)}"
+          customer.id
         end
 
         def update(customer)

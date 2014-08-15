@@ -17,7 +17,7 @@ module Core
 
         describe '#call' do
           context 'when customer already exists' do
-            let(:customer){ Customer.new('phil', first_name: 'Phil') }
+            let(:customer){ Customer.new(nil, first_name: 'Phil') }
             subject{ described_class.new(customer) }
 
             before :each do
@@ -33,8 +33,8 @@ module Core
             it_has_behavior 'optional failure block'
           end
 
-          context 'when customer does not exists' do
-            let(:customer){ Customer.new('phil', first_name: 'Phil') }
+          context 'when customer does not exist' do
+            let(:customer){ Customer.new(nil, first_name: 'Phil') }
             subject{ described_class.new(customer) }
 
             it 'creates them' do
@@ -46,6 +46,12 @@ module Core
               subject.call
               saved_customer = Core::Registry::Repository[:customers].find(customer.id)
               expect(saved_customer.first_name).to include(customer.first_name)
+            end
+
+            it 'calls back to set user.customer.id' do
+              subject.call
+              saved_customer = Core::Registry::Repository[:customers].find(customer.id)
+              expect(customer.id).to eql(saved_customer.id)
             end
           end
         end

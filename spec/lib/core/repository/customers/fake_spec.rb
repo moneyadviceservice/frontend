@@ -11,11 +11,11 @@ module Core
 
       context 'when the customer exists' do
         before :each do
-          customer = Customer.new('known', first_name: 'exists')
-          subject.create(customer)
+          customer = Customer.new(nil, first_name: 'exists')
+          @customer_id = subject.create(customer)
         end
 
-        it { expect(subject.find('known').id).to eql('known') }
+        it { expect(subject.find(@customer_id).first_name).to eql('exists') }
       end
     end
 
@@ -34,8 +34,9 @@ module Core
 
       context 'when the customer already exists' do
         it 'throws an exception' do
-          customer = Customer.new('phil', first_name: 'Phil')
-          subject.create(customer)
+          customer = Customer.new(nil, first_name: 'Phil')
+          customer_id = subject.create(customer)
+          customer.send :id=, customer_id
 
           expect{ subject.create(customer) }.to raise_error
         end
@@ -44,13 +45,13 @@ module Core
 
     describe '#update' do
       it 'updates the customer' do
-        customer = Customer.new('phil', first_name: 'Phil')
-        subject.create(customer)
+        customer = Customer.new(nil, first_name: 'Phil')
+        customer_id = subject.create(customer)
 
-        customer = Customer.new('phil', first_name: 'Philip')
+        customer = Customer.new(customer_id, first_name: 'Philip')
         subject.update(customer)
 
-        expect(subject.find('phil').first_name).to eql('Philip')
+        expect(subject.find(customer_id).first_name).to eql('Philip')
       end
 
       context 'when the customer does not exist' do
@@ -65,10 +66,10 @@ module Core
     describe '#valid_for_authentication?' do
       context 'when customer exists' do
         it 'returns true' do
-          customer = Customer.new('customer_id', first_name: 'Phil')
-          subject.create(customer)
+          customer = Customer.new(nil, first_name: 'Phil')
+          customer_id = subject.create(customer)
 
-          expect(subject.valid_for_authentication?('customer_id')).to be_truthy
+          expect(subject.valid_for_authentication?(customer_id)).to be_truthy
         end
       end
 

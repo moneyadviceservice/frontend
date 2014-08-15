@@ -41,14 +41,14 @@ class User < ActiveRecord::Base
     super && active? && Core::Registry::Repository[:customers].valid_for_authentication?(customer_id)
   end
 
+  def to_customer
+    Converters::UserToCustomer.new(self).call
+  end
+
   private
 
   def create_to_crm
     Core::Registry::Repository[:customers].create(to_customer)
-  end
-
-  def to_customer
-    Converters::UserToCustomer.new(self).call
   end
 
   def uppercase_post_code

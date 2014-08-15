@@ -41,3 +41,10 @@ Scenario: Sign out
   And   I should be at the page I was on
   And   I should receive a "Signed out successfully." notification
 
+@enable-sign-in
+Scenario: Forgotten password
+  Given I have an account
+  And   I attempt to sign in
+  When  I click on 'Forgot your password?'
+  Then  I am told that the functionality is not implemented
+

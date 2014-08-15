@@ -7,5 +7,7 @@ module UI::Pages
     element :email, "input[name='user[email]']"
     element :password, "input[name='user[password]']"
     element :submit, "input[value='Sign in']"
+
+    element :forgot_password, "a[href='/en/users/password/new']"
   end
 end

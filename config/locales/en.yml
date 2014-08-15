@@ -75,8 +75,8 @@ en:
         email: Email address
         password: Password
         post_code: Postcode
-        newsletter: Sign me up for money advice emails
-        register_button: Register now
+        newsletter: Give me free advice
+        register_button: Register
 
   contact:
     heading: Can’t find what you need?
@@ -291,17 +291,17 @@ en:
       sign_in_html: "Already registered? <a href=\"%{url}\">Sign in</a>."
     registration:
       title: Register to get more from your money
-      intro_html: Your personal information will be kept private and confidential and will not be shared with third parties. Read our <a href="%{url}">privacy policy</a> for more details.
+      intro_html: "We offer free impartial advice and are set up by government. When you register, your information will be kept private. For more information see our <a href=\"%{url}\">privacy policy</a>."
       terms_html: "By clicking 'Register', you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
-      label: Register now
+      label: Register
       field_help_texts:
-        first_name: "This is your own personal space where you can be open and honest about your money.  We will only ever view what you’ve saved if you contact us for money advice and ask us to review your details."
-        email: "We need this to help register your account. You'll only receive emails from us if you tick the ‘Sign me up’ box below."
-        password: Enter a password to keep your personal space secure.
-        postcode: Please enter a valid UK postcode. This will help us give you information and advice relevant to your area.
+        first_name: "Please enter your first name"
+        email: "We need your email for you to register"
+        password: Please enter a password to keep your information private
+        postcode: Please enter a valid UK postcode
       newsletter:
-        title: "Money advice emails:"
-        intro: "You’ll receive advice about:"
+        title: "Money advice for you"
+        intro: "We can help with..."
         benefits:
           - Budgeting on a low income
           - Setting your own personal money goals

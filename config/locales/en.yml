@@ -287,6 +287,8 @@ en:
     sign_out: Sign out
     register: Register
     my_account: My Account
+    links:
+      sign_in_html: "Already registered? <a href=\"%{url}\">Sign in</a>."
     registration:
       title: Register to get more from your money
       intro_html: Your personal information will be kept private and confidential and will not be shared with third parties. Read our <a href="%{url}">privacy policy</a> for more details.

@@ -1,6 +1,6 @@
 <ul class="unstyled-list">
 <%- if controller_name != 'sessions' %>
-  <li><%= link_to "Sign in", new_session_path(resource_name) %></li>
+  <li><%= t("authentication.links.sign_in_html", url: new_session_path(resource_name)) %></li>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

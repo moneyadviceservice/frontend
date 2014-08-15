@@ -14,11 +14,12 @@ module Core
               post_code: 'NE1 6EE'
             }
           end
-          let!(:user){ User.create!(attributes) }
+          let(:user){ User.create!(attributes) }
           subject{ described_class.new(user) }
 
           context 'when customer already exists' do
             before :each do
+              user
               subject.call
             end
 

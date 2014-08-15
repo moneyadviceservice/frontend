@@ -85,6 +85,16 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :newsletter_subscription do %>
+
+          <h3><%= t("authentication.registration.newsletter.title") %></h3>
+          <p><%= t("authentication.registration.newsletter.intro") %></p>
+          <ul class="list">
+            <% t('authentication.registration.newsletter.benefits').each do |benefit| %>
+              <li><%= benefit %></li>
+            <% end %>
+          </ul>
+
+
           <%= f.errors_for :newsletter_subscription %>
 
           <fieldset class="form__group">

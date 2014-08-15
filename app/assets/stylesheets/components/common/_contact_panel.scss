@@ -55,14 +55,17 @@
   margin-bottom: 0;
 }
 
-.contact-panel__button {
-  @include inline-block;
+.contact-panel__button-container {
   margin: $baseline-unit*2 0;
 
   @include respond-to($mq-l) {
     margin: $baseline-unit*4 0;
   }
+}
 
+.contact-panel__button {
+  @include inline-block;
+  
   &.is-disabled {
     visibility: hidden;
   }

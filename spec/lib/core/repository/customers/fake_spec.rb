@@ -21,10 +21,15 @@ module Core
 
     describe '#create' do
       it 'creates the customer' do
-        customer = Customer.new(first_name: 'Phil')
+        customer = Customer.new(nil, first_name: 'Phil')
         subject.create(customer)
 
         expect(subject.customers).to_not be_empty
+      end
+
+      it 'returns the customer id' do
+        customer = Customer.new(nil, first_name: 'Phil')
+        expect(subject.create(customer)).to match(/\Acustomer_(\d)*\z/)
       end
 
       context 'when the customer already exists' do

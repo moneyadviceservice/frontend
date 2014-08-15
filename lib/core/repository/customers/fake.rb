@@ -13,6 +13,8 @@ module Core
           raise('Already exists') if customers.detect{|c| c.id == customer.id}
 
           customers << customer
+
+          "customer_#{rand(1000000)}"
         end
 
         def update(customer)

@@ -65,7 +65,7 @@
 
 .contact-panel__button {
   @include inline-block;
-  
+
   &.is-disabled {
     visibility: hidden;
   }
@@ -104,5 +104,67 @@
 
   @include respond-to($mq-m) {
     height: 400px;
+  }
+}
+
+.js .contact-panel__preloader {
+  width: 30px;
+  height: 30px;
+  background: image_url('preloader_30x30.gif');
+  margin: 0 auto;
+}
+
+.js .contact-panel__chat-javascript {
+  display: none;
+}
+
+.no-js .contact-panel__chat-description {
+  display: none;
+}
+
+.js .contact-panel__dynamic-content {
+  &.is-loading {
+    .contact-panel__chat-description,
+    .contact-panel__button {
+      visibility: hidden;
+    }
+    .contact-panel__preloader {
+      visibility: visible;
+    }
+  }
+
+  &.is-loaded {
+    .contact-panel__chat-description,
+    .contact-panel__button {
+      visibility: visible;
+    }
+    .contact-panel__preloader {
+      display: none;
+    }
+  }
+}
+
+.js .contact-panel__chat-inactive,
+.js .contact-panel__chat-closed {
+  .contact-panel__dynamic-content {
+    &.is-loading {
+      .contact-panel__chat-description,
+      .contact-panel__button {
+        visibility: visible;
+      }
+      .contact-panel__preloader {
+        display: none;
+      }
+    }
+  }
+}
+
+.js .contact-panel__chat-inactive {
+  .contact-panel__dynamic-content {
+    &.is-loading {
+      .contact-panel__button {
+        visibility: hidden;
+      }
+    }
   }
 }

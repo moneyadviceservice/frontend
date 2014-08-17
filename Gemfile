@@ -63,6 +63,7 @@ group :development do
 end
 
 group :test do
+  gem 'chronic'
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
   gem 'html_validation'

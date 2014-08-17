@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success
 
   include Authentication
+  include Chat
   include Localisation
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'

@@ -84,20 +84,23 @@ cy:
       * Nid yw galwadau’n costio mwy na rhai i rifau safonol yn y DU.
 
   contact_panels:
-    web_chat:
+    chat:
       title: Gwe-sgwrs
       available:
-        button: Lansio sgwrs
+        call_to_action: Lansio sgwrs
         description: A oes gennych chi gwestiwn? Bydd ein cynghorwyr yn eich arwain i’r cyfeiriad cywir.
-      busy:
-        button: Yn brysur ar hyn o bryd
-        description: Mae’n ddrwg gennym, mae pob un o’n cynghorwyr yn brysur ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
       unavailable:
-        button: Ddim ar gael
-        description: Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar borwyr rhyngrwyd JavaScript yn unig.
+        call_to_action: Ddim ar gael
+      busy:
+        call_to_action: Yn brysur ar hyn o bryd
+        description: Mae’n ddrwg gennym, mae pob un o’n cynghorwyr yn brysur ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
+      javascript:
+        description_html: |
+          Mae’n ddrwg gennym, mae gwe-sgwrs ar gael ar
+          <a href="http://www.enable-javascript.com/">borwyr rhyngrwyd JavaScript yn unig</a>.
       offline:
-        button: All-lein
-        description: Gwe-sgwrs ar gael o
+        call_to_action: All-lein
+        description: Rhowch gynnig arall arni yn nes ymlaen.
       coming_soon:
         description_html: Yn dod yn fuan.
       opening_times_html: |

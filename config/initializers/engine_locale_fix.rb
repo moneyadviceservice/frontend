@@ -8,7 +8,13 @@ module Rails
 
         problem_engines = Rails::Engine.subclasses.keep_if do |engine|
           Rails.application.routes.routes.any? do |route|
-            route.app == engine && route.required_parts.include?(:locale)
+            app = if route.app.is_a?(ActionDispatch::Routing::Mapper::Constraints)
+              route.app.app
+            else
+              route.app
+            end
+
+            app == engine && route.required_parts.include?(:locale)
           end
         end
 

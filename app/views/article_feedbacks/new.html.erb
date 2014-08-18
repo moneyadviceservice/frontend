@@ -11,7 +11,7 @@
 
       <p><%= t('.subtitle', article_title: article.title) %></p>
 
-      <%= form_for new_feedback, as: :feedback, url: article_feedback_path(article.id), builder: Dough::Forms::Builders::Validation do |f| %>
+      <%= form_for new_feedback, as: :feedback, url: article.feedback_path, builder: Dough::Forms::Builders::Validation do |f| %>
         <%= f.validation_summary %>
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:useful) %>">
           <%= f.errors_for :useful %>
@@ -47,3 +47,12 @@
 <div class="l-nav">
   <%= render 'shared/nav', categories: category_navigation %>
 </div>
+
+<% content_for(:alternate_link) do %>
+  <% article.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, id: "#{locale}Link", lang: locale, class: 'footer-secondary__link') do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

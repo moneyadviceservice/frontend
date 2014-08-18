@@ -12,14 +12,24 @@ module Core::Repository::News
 
       let(:id) { 'tell-ma-were-listening' }
       let(:headers) { {} }
+      let(:body) { {} }
+      let(:status) { 200 }
 
       before do
-        allow(Core::Registry::Connection).to receive(:[]).with(:public_website) do
-          Core::ConnectionFactory::Http.build(url)
-        end
-
         stub_request(:get, "https://example.com/en/news/#{id}.json")
           .to_return(status: status, body: body, headers: headers)
+      end
+
+      context 'when id contains special characters' do
+        let(:id) { 'jobs-for-students-–-the-taxing-questions' }
+        let(:encoded_url) { '/en/news/jobs-for-students-%E2%80%93-the-taxing-questions.json' }
+        let(:response) { double(body: body, headers: headers) }
+
+        it 'encodes url' do
+          expect(connection).to receive(:get).with(encoded_url).and_return(response)
+
+          repository.find(id)
+        end
       end
 
       context 'when the type exists' do

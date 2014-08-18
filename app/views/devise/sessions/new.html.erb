@@ -1,19 +1,60 @@
-<%= heading_tag 'Sign in', level: 2 %>
+<main role="main" class="l-registration">
+  <h1><%= t("authentication.sign_in_page.title") %></h1>
 
-<%= form_for(resource, as: resource_name,
-                       url: session_path(resource_name),
-                       builder: Dough::Forms::Builders::Validation,
-                       html: { novalidate: 'novalidate'}) do |f| %>
+  <%= form_for(resource, as: resource_name,
+                         url: session_path(resource_name),
+                         builder: Dough::Forms::Builders::Validation,
+                         html: { :class => "form", novalidate: 'novalidate'}) do |f| %>
 
-  <%= f.validation_summary %>
+    <%= f.validation_summary %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :email do %>
+          <%= f.errors_for :email %>
+          <%= f.label :email, :class => "form__label-heading" %>
+          <%= f.email_field :email, autofocus: true, "aria-describedby" => "tooltip_email" %>
+        <% end %>
+      </div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_email" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.sign_in_page.field_help_texts.email") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :password do %>
+          <%= f.errors_for :password %>
+          <%= f.label :password, :class => "form__label-heading" %>
+          <%= f.password_field :password, autocomplete: "off", "aria-describedby" => "tooltip_password" %>
 
-<%= render "devise/shared/links" %>
+          <div class="registration__links">
+            <%= render "devise/shared/links" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_password" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.sign_in_page.field_help_texts.password") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.submit t("authentication.sign_in_page.label"), class: "button button--primary" %>
+      </div>
+    </div>
+  <% end %>
+
+  <h2><%= t("authentication.sign_in_page.links.register_title") %></h2>
+  <p><%= t("authentication.sign_in_page.links.register_html", url: new_registration_path(resource_name)) %></p>
+</main>

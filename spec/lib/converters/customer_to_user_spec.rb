@@ -3,7 +3,7 @@ require 'spec_helper'
 module Converters
   RSpec.describe CustomerToUser do
     context 'when user exists' do
-      let(:customer){ Core::Customer.new(user.customer_id, {}) }
+      let(:customer){ Core::Customer.new(user.customer_id, first_name: 'Philip') }
       let!(:user) do
         Rails.configuration.active_record.record_timestamps = true
         user = User.new(first_name: 'Phil',
@@ -19,7 +19,12 @@ module Converters
         expect(subject.call).to eql(user)
       end
 
-      it 'updates new attributes'
+      it 'updates new attributes' do
+        expect(User).to receive(:find_by).with(customer_id: customer.id){ user }
+        subject.call
+        expect(user.first_name).to eql('Philip')
+        expect(user.email).to eql('phil@example.com')
+      end
     end
 
     context 'when user does not exist' do
@@ -31,6 +36,12 @@ module Converters
 
         expect(user).to be_a(User)
         expect(user.first_name).to eql('Phil')
+      end
+
+      it 'sets user.customer_id' do
+        user = subject.call
+
+        expect(user.customer_id).to eql('customer_phil')
       end
     end
 

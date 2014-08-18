@@ -9,13 +9,26 @@ module Converters
     def call
       raise('customer is not persisted') if customer.id.blank?
 
-      User.find_by(customer_id: customer.id) || User.new(customer_attributes)
+      existing_user = User.find_by(customer_id: customer.id)
+
+      if existing_user
+        existing_user.attributes = existing_customer_attributes
+        existing_user
+      else
+        User.new(new_customer_attributes)
+      end
     end
 
     private
 
-    def customer_attributes
-      customer.attributes.reject{|k,_| [:state, :topics, :status_code].include?(k)}
+    def existing_customer_attributes
+      customer.attributes.reject{|k,_| [:state, :topics, :status_code].include?(k)}.compact
+    end
+
+    def new_customer_attributes
+      attributes = existing_customer_attributes
+      attributes[:customer_id] = customer.id
+      attributes
     end
   end
 end

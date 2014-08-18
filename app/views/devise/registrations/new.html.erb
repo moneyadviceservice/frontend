@@ -8,6 +8,8 @@
                          url: registration_path(resource_name),
                          html: {:class => "form", novalidate: 'novalidate'},
                          builder: Dough::Forms::Builders::Validation) do |f| %>
+
+    <p><%= t("authentication.mandatory_warning") %></p>
     <%= f.validation_summary %>
 
     <div class="registration__row">

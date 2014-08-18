@@ -6,6 +6,8 @@
                          builder: Dough::Forms::Builders::Validation,
                          html: { :class => "form", novalidate: 'novalidate'}) do |f| %>
 
+    <p><%= t("authentication.mandatory_warning") %></p>
+
     <%= f.validation_summary %>
 
     <div class="registration__row">

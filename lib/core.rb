@@ -44,6 +44,7 @@ module Core
     module Customers
       autoload :Finder, 'core/interactor/customers/finder'
       autoload :Creator, 'core/interactor/customers/creator'
+      autoload :Updater, 'core/interactor/customers/updater'
     end
   end
 

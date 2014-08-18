@@ -26,7 +26,7 @@ class TechnicalFeedbacksController < ApplicationController
   def feedback_params
     if params[:feedback]
       feedback = params.require(:feedback).permit(:issue_type, :attempting, :occurred)
-      feedback[:url] = request.url
+      feedback[:url] = session.fetch(:return_to, request.url)
       feedback[:user_agent] = request.user_agent
       feedback[:time] = Time.current
 

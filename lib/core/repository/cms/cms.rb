@@ -7,8 +7,7 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('/%{id}.json' %
-                                    { locale: I18n.locale, id: id })
+        response = connection.get('%{id}.json' % { locale: I18n.locale, id: id })
 
         attributes = response.body
 

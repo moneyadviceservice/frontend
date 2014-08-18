@@ -5,10 +5,11 @@ module Core::Repository
     class BlockComposer
       class Block < OpenStruct; end
 
-      attr_reader :blocks
+      attr_reader :blocks, :parser
 
-      def initialize(blocks=[])
+      def initialize(blocks=[], parser=Kramdown::Document)
         @blocks = Array(blocks)
+        @parser = parser
       end
 
       def find(id)
@@ -16,7 +17,7 @@ module Core::Repository
       end
 
       def to_html
-        find('content').content.to_s
+        parser.new(find('content').content.to_s).to_html
       end
     end
   end

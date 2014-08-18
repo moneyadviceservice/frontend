@@ -270,6 +270,7 @@ GEM
       execjs
     json (1.8.1)
     kgio (2.9.2)
+    kramdown (1.4.1)
     kss (0.5.0)
     launchy (2.4.2)
       addressable (~> 2.3)
@@ -538,6 +539,7 @@ DEPENDENCIES
   html_validation!
   jquery-rails
   jshint_ruby
+  kramdown
   kss
   letter_opener
   link_header

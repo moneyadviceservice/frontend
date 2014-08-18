@@ -1,5 +1,6 @@
 .l-registration {
   @include column(12);
+  margin-bottom: $baseline-unit*4;
 
   .registration__row {
     @include row(12);
@@ -40,5 +41,9 @@
       @include row(12);
       @include column(7, 12);
     }
+  }
+
+  .registration__links {
+    margin-top: $baseline-unit*2;
   }
 }

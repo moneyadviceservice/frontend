@@ -1,5 +1,5 @@
 When(/^I attempt to sign in$/) do
-  sign_in_page.load
+  sign_in_page.load(locale: 'en')
 end
 
 Then(/^I am told that the functionality is not implemented$/) do

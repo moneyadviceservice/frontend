@@ -1,8 +1,18 @@
 en:
+  date:
+    days:
+      mon: Monday
+      tue: Tuesday
+      wed: Wednesday
+      thu: Thursday
+      fri: Friday
+      sat: Saturday
+      sun: Sunday
   time:
     formats:
       short: "%d %b %Y"
       long: "%Y-%m-%d %H:%M"
+  seperator: to
 
   back_to_top: Back to top
 
@@ -110,12 +120,6 @@ en:
         description: Please try again later.
       coming_soon:
         description_html: Coming soon.
-      opening_times_html: |
-        <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <li class="contact-panel__additional-info">Monday to Friday, 8am to 10pm</li>
-          <li class="contact-panel__additional-info">Saturday, 9am to 10pm</li>
-          <li class="contact-panel__additional-info">Sunday, 10am to 10pm</li>
-        </ul>
     call_us:
       title: Call us
       description: Give us a call for free and impartial money advice.

@@ -40,13 +40,13 @@ module Core
             it 'sets the correct attributes' do
               subject.call
               saved_customer = Core::Registry::Repository[:customers].find(user.customer_id)
-              expect(saved_customer.first_name).to include(user.first_name)
+              expect(saved_customer[:first_name]).to include(user.first_name)
             end
 
             it 'calls back to set user.customer_id' do
               subject.call
               saved_customer = Core::Registry::Repository[:customers].find(user.customer_id)
-              expect(user.customer_id).to eql(saved_customer.id)
+              expect(user.customer_id).to eql(saved_customer[:id])
             end
 
             it 'persists user.customer_id' do

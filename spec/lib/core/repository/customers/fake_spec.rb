@@ -15,7 +15,7 @@ module Core
           @customer_id = subject.create(customer)
         end
 
-        it { expect(subject.find(@customer_id).first_name).to eql('exists') }
+        it { expect(subject.find(@customer_id)[:first_name]).to eql('exists') }
       end
     end
 
@@ -51,7 +51,7 @@ module Core
         customer = Customer.new(customer_id, first_name: 'Philip')
         subject.update(customer)
 
-        expect(subject.find(customer_id).first_name).to eql('Philip')
+        expect(subject.find(customer_id)[:first_name]).to eql('Philip')
       end
 
       context 'when the customer does not exist' do

@@ -25,7 +25,7 @@ module Core
               subject.call
 
               customer = Core::Registry::Repository[:customers].customers.first
-              expect(customer.first_name).to eql('Philip')
+              expect(customer[:first_name]).to eql('Philip')
             end
           end
 

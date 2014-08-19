@@ -1,4 +1,6 @@
 class ArticleFeedbackDecorator < Draper::Decorator
+  decorates_association :categories, with: CategoryDecorator
+
   delegate :title
 
   def feedback_path

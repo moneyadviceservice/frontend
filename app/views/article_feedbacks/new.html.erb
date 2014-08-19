@@ -1,6 +1,6 @@
 <% content_for(:context_bar) do %>
-  <% if @breadcrumbs.present? %>
-    <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <% if breadcrumbs.present? %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
   <% elsif article.categories.present? %>
     <%= render 'shared/related_categories', categories: article.categories %>
   <% end %>

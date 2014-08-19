@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
   validates :post_code, presence: true,
                         format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' },
                         on: :create
-  validates :password, length: 7..128
+  validates :password, presence: true, on: :create
+  validates :password, length: 7..128, allow_blank: true
   validates :first_name, presence: true,
                          format: { with: /\A[A-Za-z '-\.]+\z/, if: 'last_name.present?' },
                          length: { maximum: 24 }

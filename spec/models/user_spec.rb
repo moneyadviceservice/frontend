@@ -92,6 +92,13 @@ RSpec.describe User, :type => :model do
     it { should allow_value(1.days.ago).for(:date_of_birth) }
     it { should allow_value('31/12/1970').for(:date_of_birth) }
     it { should_not allow_value('31/02/1970').for(:date_of_birth) }
+
+    it 'allows update with blank password' do
+      user = FactoryGirl.create(:user)
+      user = User.first
+      user.first_name = 'Philip'
+      expect{ user.save! }.to_not raise_error
+    end
   end
 
   it 'should upcase post code' do

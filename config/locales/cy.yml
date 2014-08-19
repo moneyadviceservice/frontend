@@ -2,10 +2,19 @@ cy:
   date:
     abbr_month_names:
       [~, Ion, Chwe, Maw, Ebr, Mai, Meh, Gorff, Awst, Medi, Hyd, Tach, Rhag]
+    days:
+      mon: Dydd Llun
+      tue: Dydd Mawrth
+      wed: Dydd Mercher
+      thu: Dydd Iau
+      fri: Dydd Gwener
+      sat: Dydd Sadwrn
+      sun: Dydd Sul
   time:
     formats:
       short: "%d %b %Y"
       long: "%Y-%m-%d %H:%M"
+  seperator: i
 
   back_to_top: Ewch i'r brig
 
@@ -103,12 +112,6 @@ cy:
         description: Rhowch gynnig arall arni yn nes ymlaen.
       coming_soon:
         description_html: Yn dod yn fuan.
-      opening_times_html: |
-        <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <li class="contact-panel__additional-info">Llun i Wener, 8am i 10pm</li>
-          <li class="contact-panel__additional-info">Dydd Sadwrn, 9am i 10pm</li>
-          <li class="contact-panel__additional-info">Dydd Sul, 10am i 10pm</li>
-        </ul>
       smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
     call_us:
       title: Ffoniwch ni

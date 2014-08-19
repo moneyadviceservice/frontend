@@ -26,7 +26,11 @@
           </div>
         </div>
 
-        <%= t('contact_panels.chat.opening_times_html') %>
+        <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+          <% chat_opening_hours.periods.each do |period| %>
+            <li class="contact-panel__additional-info"><%= period %></li>
+          <% end %>
+        </ul>
 
         <% if translation?('contact_panels.chat.smallprint') %>
           <p class="smallprint t-welsh-smallprint">* <%= t('contact_panels.chat.smallprint') %></p>

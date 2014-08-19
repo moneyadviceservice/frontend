@@ -1,5 +1,5 @@
 RSpec.describe 'Request blacklisted resource', :type => :request do
-  %W(about-our-debt-work am-ein-gwaith-dyled
+  %w(about-our-debt-work am-ein-gwaith-dyled
      debt-publications cyhoeddiadau-ar-ddyledion
      partners-overview-parhub
      partner-reg-parhub
@@ -18,7 +18,7 @@ RSpec.describe 'Request blacklisted resource', :type => :request do
     end
   end
 
-  %W(partners
+  %w(partners
      partners-uc-banks
      partners-uc-landlords
      resources-for-professionals-working-with-young-people-and-parents).each do |category|
@@ -31,7 +31,7 @@ RSpec.describe 'Request blacklisted resource', :type => :request do
     end
   end
 
-  %W(accessibility hygyrchedd).each do |static_page|
+  %w(accessibility hygyrchedd).each do |static_page|
     context "request static page #{static_page}" do
       it 'returns a 501 response' do
         get("/en/static/#{static_page}")

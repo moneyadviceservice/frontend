@@ -6,7 +6,7 @@ module Rails
         reload_without_engine_locale_fix!
       ensure
 
-        problem_engines = Rails::Engine.subclasses.keep_if do |engine|
+        problem_engines = Rails::Engine.descendants.keep_if do |engine|
           Rails.application.routes.routes.any? do |route|
             app = if route.app.is_a?(ActionDispatch::Routing::Mapper::Constraints)
               route.app.app

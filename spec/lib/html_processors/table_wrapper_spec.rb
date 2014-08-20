@@ -18,31 +18,31 @@ RSpec.describe HTMLProcessor::TableWrapper do
 
   context 'when the table has a malformed class' do
     it_behaves_like 'a table wrapper' do
-      let(:html) {
+      let(:html) do
         <<-EOHTML
-<table class=" datatable-default"><tr><td>Item</td></tr></table>
+          <table class=" datatable-default"><tr><td>Item</td></tr></table>
         EOHTML
-      }
+      end
     end
   end
 
   context 'when the table has a well formed class' do
     it_behaves_like 'a table wrapper' do
-      let(:html) {
+      let(:html) do
         <<-EOHTML
-<table class="datatable-default"><tr><td>Item</td></tr></table>
+          <table class="datatable-default"><tr><td>Item</td></tr></table>
         EOHTML
-      }
+      end
     end
   end
 
   context 'when the table has multiple classes' do
     it_behaves_like 'a table wrapper' do
-      let(:html) {
+      let(:html) do
         <<-EOHTML
-<table class="fancy datatable-default red-herring"><tr><td>Item</td></tr></table>
+          <table class="fancy datatable-default red-herring"><tr><td>Item</td></tr></table>
         EOHTML
-      }
+      end
     end
   end
 end

@@ -97,5 +97,9 @@ module Core
       autoload :FakeContentService, 'core/repository/search/fake_content_service'
       autoload :GoogleCustomSearchEngine, 'core/repository/search/google_custom_search_engine'
     end
+
+    module Users
+      autoload :Fake, 'core/repository/users/fake'
+    end
   end
 end

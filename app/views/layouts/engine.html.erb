@@ -1,3 +1,11 @@
 <%= render layout: 'layouts/constrained' do %>
+
+  <% content_for(:alternate_link) do %>
+    <%= link_to(alternate_path, id: "#{alternate_locale}Link", lang: alternate_locale, class: 'footer-secondary__link') do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{alternate_locale}") %>
+    <% end %>
+  <% end %>
+
   <%= yield :engine_content %>
 <% end %>

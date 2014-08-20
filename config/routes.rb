@@ -35,7 +35,7 @@ Rails.application.routes.draw do
 
     Feature.with(:pensions_calculator) do
       mount PensionsCalculator::Engine => '/tools/:tool_id',
-            constraints:               { tool_id: %r{pension-calculator|dilyn-hynt-eich-pensiwn-a-chynilion-ymddeoliad-eraill} }
+            constraints: ToolMountPoint.for(:pensions_calculator)
     end
 
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'

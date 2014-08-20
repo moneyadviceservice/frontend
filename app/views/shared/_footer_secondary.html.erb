@@ -30,15 +30,16 @@
 
     <div class="l-footer-secondary__list--right">
       <ul class="footer-secondary__list">
-        <li class="footer-secondary__list-item">
-          <%= form_tag(main_app.beta_opt_out_path) do %>
-            <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
-            <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
-              <%= t('opt_out.title') %>
+        <% if display_opt_out_link_in_footer? %>
+          <li class="footer-secondary__list-item">
+            <%= form_tag(main_app.beta_opt_out_path) do %>
+              <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
+              <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
+                <%= t('opt_out.title') %>
+              <% end %>
             <% end %>
-          <% end %>
-        </li>
-
+          </li>
+        <% end %>
         <li class="footer-secondary__list-item">
           <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
         </li>

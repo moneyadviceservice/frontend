@@ -8,6 +8,11 @@ module ToolMountPoint
       self.class::CY_ID
     end
 
+    def matches?(request)
+      (request.params[:locale] == 'en' && request.params[:tool_id] == en_id) ||
+        (request.params[:locale] == 'cy' && request.params[:tool_id] == cy_id)
+    end
+
     def alternate_locale(current_locale)
       { 'en' => 'cy', 'cy' => 'en' }.fetch(current_locale)
     end

@@ -4,6 +4,7 @@ module Converters
 
     def initialize(customer)
       @customer = customer
+      @reject_email = true
     end
 
     def call
@@ -21,8 +22,17 @@ module Converters
 
     private
 
+    # We don't want to the crm to update the our user email by default
+    # otherwise if crm changes email users cannot login
+    # override with caution
+    def reject_email
+      @reject_email
+    end
+
     def existing_customer_attributes
-      customer.attributes.reject{|k,_| [:state, :topics, :status_code].include?(k)}.compact
+      hash = customer.attributes.reject{|k,_| [:state, :topics, :status_code].include?(k)}.compact
+      hash.delete(:email) if reject_email
+      hash
     end
 
     def new_customer_attributes

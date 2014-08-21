@@ -89,9 +89,10 @@ module Core
     end
 
     module CMS
-      autoload :CMS,           'core/repository/cms/cms'
-      autoload :BlockComposer, 'core/repository/cms/block_composer'
-      autoload :Preview,       'core/repository/cms/preview'
+      autoload :CMS,              'core/repository/cms/cms'
+      autoload :BlockComposer,    'core/repository/cms/block_composer'
+      autoload :Preview,          'core/repository/cms/preview'
+      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
     end
 
     module News

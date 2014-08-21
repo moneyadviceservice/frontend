@@ -8,16 +8,7 @@ module Core::Repository
 
       def find(id)
         response = connection.get('%{id}.json' % { locale: I18n.locale, id: id })
-
-        attributes = response.body
-
-        attributes['title']      = attributes['label']
-        attributes['body']       = BlockComposer.new(attributes['blocks']).to_html
-        attributes['categories'] = attributes['category_names']
-        attributes['alternates'] = []
-
-        attributes
-
+        AttributeBuilder.build(response)
       rescue
         fallback_repository.find(id)
       end

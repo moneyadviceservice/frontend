@@ -7,16 +7,7 @@ module Core::Repository
 
       def find(id)
         response = connection.get('preview/%{id}.json' % { id: id })
-
-        attributes = response.body
-
-        attributes['title']      = attributes['label']
-        attributes['body']       = BlockComposer.new(attributes['blocks']).to_html
-        attributes['categories'] = attributes['category_names']
-        attributes['alternates'] = []
-
-        attributes
-
+        AttributeBuilder.build(response)
       rescue Core::Connection::Http::ResourceNotFound
         nil
       rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError

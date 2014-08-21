@@ -3,13 +3,18 @@ module Core::Repository
     # Recombines CMS blocks to emulate current public website repo.
     # TODO: replace with native support for displaying blocks outside of frontend core
     class BlockComposer
-      class Block < OpenStruct; end
+      class Block < OpenStruct
+        def to_s
+          content.to_s
+        end
+      end
 
-      attr_reader :blocks, :parser
+      attr_reader :blocks, :id, :parser
 
-      def initialize(blocks=[], parser=Kramdown::Document)
+      def initialize(blocks=[], id="content", parser=Kramdown::Document)
         @blocks = Array(blocks)
         @parser = parser
+        @id = id
       end
 
       def find(id)
@@ -17,7 +22,11 @@ module Core::Repository
       end
 
       def to_html
-        parser.new(find('content').content.to_s).to_html
+        parser.new(self.to_s).to_html
+      end
+
+      def to_s
+        find(id).to_s
       end
     end
   end

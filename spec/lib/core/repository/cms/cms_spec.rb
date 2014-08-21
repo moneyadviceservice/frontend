@@ -27,6 +27,10 @@ module Core::Repository::CMS
           expect(repository.find(id)).to be_a(Hash)
           expect(repository.find(id)['slug']).to eq(id)
         end
+
+        it 'returns the meta description' do
+          expect(repository.find(id)['description']).to eq("meta description")
+        end
       end
 
       context 'when the type is non-existent' do

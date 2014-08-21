@@ -78,6 +78,7 @@ module Core
 
     module Customers
       autoload :Fake, 'core/repository/customers/fake'
+      autoload :Cream, 'core/repository/customers/cream'
     end
 
     module News

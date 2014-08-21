@@ -144,7 +144,6 @@
   }
 }
 
-.js .contact-panel__chat-inactive,
 .js .contact-panel__chat-closed {
   .contact-panel__dynamic-content {
     &.is-loading {
@@ -154,16 +153,6 @@
       }
       .contact-panel__preloader {
         display: none;
-      }
-    }
-  }
-}
-
-.js .contact-panel__chat-inactive {
-  .contact-panel__dynamic-content {
-    &.is-loading {
-      .contact-panel__button {
-        visibility: hidden;
       }
     }
   }

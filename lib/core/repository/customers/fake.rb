@@ -10,9 +10,10 @@ module Core
         end
 
         # return customer id
-        def create(customer)
-          raise('Already exists') if customers.detect{|c| c.id == customer.id}
+        def create(user)
+          raise('Already exists') if customers.detect{|c| c.id == user.customer_id}
 
+          customer = user.to_customer
           hash = customer.attributes
           hash[:id] = "customer_#{rand(1000000)}"
           customers << hash

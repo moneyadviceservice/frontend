@@ -24,7 +24,7 @@ module Core
         end
 
         def customer
-          Core::Interactors::Customers::Finder.new(customer_id).call
+          Core::Interactors::Customer::Finder.new(customer_id).call
         end
       end
     end

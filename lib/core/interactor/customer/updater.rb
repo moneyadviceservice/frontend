@@ -1,6 +1,6 @@
 module Core
   module Interactors
-    module Customers
+    module Customer
       class Updater
         attr_reader :user
 

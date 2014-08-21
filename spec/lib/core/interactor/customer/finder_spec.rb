@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Core
   module Interactors
-    module Customers
+    module Customer
       RSpec.describe Finder do
         describe 'call' do
           context 'when customer exists' do
@@ -22,7 +22,7 @@ module Core
             end
 
             it 'returns a customer' do
-              expect(subject.call).to be_a(Customer)
+              expect(subject.call).to be_a(::Core::Customer)
             end
 
             it 'returns the correct customer' do

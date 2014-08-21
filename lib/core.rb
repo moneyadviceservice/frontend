@@ -41,10 +41,10 @@ module Core
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
 
   module Interactors
-    module Customers
-      autoload :Finder, 'core/interactor/customers/finder'
-      autoload :Creator, 'core/interactor/customers/creator'
-      autoload :Updater, 'core/interactor/customers/updater'
+    module Customer
+      autoload :Finder, 'core/interactor/customer/finder'
+      autoload :Creator, 'core/interactor/customer/creator'
+      autoload :Updater, 'core/interactor/customer/updater'
     end
   end
 

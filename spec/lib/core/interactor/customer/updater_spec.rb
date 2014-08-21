@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Core
   module Interactors
-    module Customers
+    module Customer
       RSpec.describe Updater do
         describe '#call' do
           let(:attributes) do

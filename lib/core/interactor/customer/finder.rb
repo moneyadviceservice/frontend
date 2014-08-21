@@ -1,6 +1,6 @@
 module Core
   module Interactors
-    module Customers
+    module Customer
       class Finder
         attr_reader :id
 
@@ -12,7 +12,7 @@ module Core
           data = Registry::Repository[:customer].find(id)
 
           if data
-            customer = Customer.new(id, data)
+            customer = ::Core::Customer.new(id, data)
           else
             block.call if block_given?
           end

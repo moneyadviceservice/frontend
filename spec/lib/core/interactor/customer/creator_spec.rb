@@ -3,7 +3,7 @@ require 'lib/core/interactor/shared_examples/optional_failure_block'
 
 module Core
   module Interactors
-    module Customers
+    module Customer
       RSpec.describe Creator do
         describe '#call' do
           let(:attributes) do

@@ -61,7 +61,7 @@ class User < ActiveRecord::Base
   private
 
   def create_to_crm
-    Core::Interactors::Customers::Creator.new(self).call
+    Core::Interactors::Customer::Creator.new(self).call
   end
 
   def uppercase_post_code

@@ -16,7 +16,7 @@ module Core
             end
 
             before do
-              allow(Registry::Repository).to receive(:[]).with(:customers) do
+              allow(Registry::Repository).to receive(:[]).with(:customer) do
                 double(find: data)
               end
             end
@@ -38,7 +38,7 @@ module Core
             subject{ described_class.new('unknown') }
 
             before do
-              allow(Registry::Repository).to receive(:[]).with(:customers) do
+              allow(Registry::Repository).to receive(:[]).with(:customer) do
                 double(find: nil)
               end
             end

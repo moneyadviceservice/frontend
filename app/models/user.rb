@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   before_create :create_to_crm
 
   def valid_for_authentication?
-    super && active? && Core::Registry::Repository[:customers].valid_for_authentication?(customer_id)
+    super && active? && Core::Registry::Repository[:customer].valid_for_authentication?(customer_id)
   end
 
   def to_customer

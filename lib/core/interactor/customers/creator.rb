@@ -9,7 +9,7 @@ module Core
         end
 
         def call(&block)
-          customer_id = Registry::Repository[:customers].create(user.to_customer)
+          customer_id = Registry::Repository[:customer].create(user.to_customer)
           user.customer_id = customer_id
           user
         rescue

@@ -15,7 +15,7 @@ module Core
 
         before :each do
           user
-          Registry::Repository[:customers].clear
+          Registry::Repository[:customer].clear
         end
 
         it 'raises an exception' do
@@ -29,7 +29,7 @@ module Core
 
         before :each do
           user
-          customer = Registry::Repository[:customers].customers.first
+          customer = Registry::Repository[:customer].customers.first
           customer[:first_name] = 'Newfirstname'
           customer[:last_name] = 'Newlastname'
           customer[:email] = 'new@example.com'

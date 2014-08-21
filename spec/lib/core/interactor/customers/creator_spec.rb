@@ -34,24 +34,24 @@ module Core
 
           context 'when customer does not exist' do
             it 'creates them' do
-              expect{ subject.call }.to change{ Core::Registry::Repository[:customers].customers.size }.by(1)
+              expect{ subject.call }.to change{ Core::Registry::Repository[:customer].customers.size }.by(1)
             end
 
             it 'sets the correct attributes' do
               subject.call
-              saved_customer = Core::Registry::Repository[:customers].find(user.customer_id)
+              saved_customer = Core::Registry::Repository[:customer].find(user.customer_id)
               expect(saved_customer[:first_name]).to include(user.first_name)
             end
 
             it 'calls back to set user.customer_id' do
               subject.call
-              saved_customer = Core::Registry::Repository[:customers].find(user.customer_id)
+              saved_customer = Core::Registry::Repository[:customer].find(user.customer_id)
               expect(user.customer_id).to eql(saved_customer[:id])
             end
 
             it 'persists user.customer_id' do
               subject.call
-              saved_customer = Core::Registry::Repository[:customers].find(user.customer_id)
+              saved_customer = Core::Registry::Repository[:customer].find(user.customer_id)
               expect(user.changed?).to be_falsey
             end
           end

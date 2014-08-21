@@ -99,7 +99,7 @@ RSpec.describe User, :type => :model do
   describe 'callbacks' do
     describe 'before create' do
       it 'creates the CRM customer' do
-        expect{ subject.save }.to change{ Core::Registry::Repository[:customers].customers.size }.by(1)
+        expect{ subject.save }.to change{ Core::Registry::Repository[:customer].customers.size }.by(1)
       end
     end
   end

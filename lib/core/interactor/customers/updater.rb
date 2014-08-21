@@ -9,7 +9,7 @@ module Core
         end
 
         def call
-          Registry::Repository[:customers].update(customer)
+          Registry::Repository[:customer].update(customer)
         end
 
         private

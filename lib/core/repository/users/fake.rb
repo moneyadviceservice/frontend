@@ -4,27 +4,23 @@ module Core
       class Fake
         attr_reader :user
 
-        def initialize(user)
-          @user = user
-        end
+        def update_from_crm(user)
+          raise 'customer_id is blank' if customer_id(user).blank?
+          raise 'customer not in CRM' if customer(user).nil?
 
-        def update_from_crm
-          raise 'customer_id is blank' if customer_id.blank?
-          raise 'customer not in CRM' if customer.nil?
-
-          updated_user = ::Converters::CustomerToUser.new(customer).call
+          updated_user = ::Converters::CustomerToUser.new(customer(user)).call
           updated_user.save!
           updated_user
         end
 
         private
 
-        def customer_id
+        def customer_id(user)
           user.customer_id
         end
 
-        def customer
-          Core::Interactors::Customer::Finder.new(customer_id).call
+        def customer(user)
+          Core::Interactors::Customer::Finder.new(customer_id(user)).call
         end
       end
     end

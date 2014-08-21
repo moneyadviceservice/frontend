@@ -46,6 +46,8 @@ module Core
       autoload :Creator, 'core/interactor/customer/creator'
       autoload :Updater, 'core/interactor/customer/updater'
     end
+
+    autoload :UserUpdater, 'core/interactor/user_updater'
   end
 
   module Registry

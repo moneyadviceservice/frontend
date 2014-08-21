@@ -69,6 +69,7 @@ RSpec.configure do |c|
     ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
 
     Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
+    Core::Registry::Repository[:user] = Core::Repository::Users::Fake.new
   end
 
   c.before :each do

@@ -11,16 +11,6 @@ RSpec.describe User, :type => :model do
 
   subject{ described_class.new(attributes) }
 
-  around :each do |example|
-    old = (Core::Registry::Repository[:customers] rescue nil)
-    Core::Registry::Repository[:customers] = Core::Repository::Customers::Fake.new
-    Core::Registry::Repository[:customers].clear
-
-    example.run
-
-    Core::Registry::Repository[:customers] = old
-  end
-
   describe '#fake_send_confirmation_email' do
     it "sends a fake confirmation email when user is saved" do
       subject.save!

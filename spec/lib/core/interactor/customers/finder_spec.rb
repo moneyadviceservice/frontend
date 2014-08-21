@@ -25,7 +25,7 @@ module Core
               expect(subject.call).to be_a(Customer)
             end
 
-            it 'retursn the correct customer' do
+            it 'returns the correct customer' do
               customer = subject.call
 
               expect(customer.id).to eql('known')

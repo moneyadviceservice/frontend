@@ -19,19 +19,25 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     if open?
       I18n.t('contact_panels.chat.available.description')
     else
-      I18n.t('contact_panels.chat.offline.description')
+      I18n.t('contact_panels.chat.offline.description', hours: next_period_hours).html_safe
     end
   end
 
   def periods
-    days.reduce([]) { |result, day|
-      if result.last && result.last.hours == week[day]
-        result.last.days << day
-      else
-        result << OpeningPeriod.new([day], week[day])
-      end
-      result
-    }.map { |opening_period| opening_period.to_s }
+    @periods ||= begin
+      days.reduce([]) { |result, day|
+        if result.last && result.last.hours == week[day]
+          result.last.days << day
+        else
+          result << Period.new([day], week[day])
+        end
+        result
+      }.map { |opening_period| opening_period.to_s }
+    end
+  end
+
+  def next_period_hours
+    @next_period_hours ||= Hours.new(next_period.open, next_period.close).to_s
   end
 
   private
@@ -39,10 +45,19 @@ class ChatOpeningHoursDecorator < Draper::Decorator
   delegate :week
 
   def days
-    week.keys.rotate # our week starts on a Monday
+    @days ||= week.keys.rotate # our week starts on a Monday
   end
 
-  OpeningPeriod = Struct.new(:days, :hours) do
+  def next_period
+    @next_period ||= begin
+      time_next_open = Time.parse(object.calculate_deadline(0, Time.zone.now.to_s))
+      day_next_open  = time_next_open.strftime('%a').downcase.to_sym
+
+      week[day_next_open]
+    end
+  end
+
+  Period = Struct.new(:days, :hours) do
     def to_s
       formatted_days = if days.size > 1
                          '%s %s %s' % [I18n.t("date.days.#{days.first}"),
@@ -52,10 +67,15 @@ class ChatOpeningHoursDecorator < Draper::Decorator
                          I18n.t("date.days.#{days.first}")
                        end
 
-      '%s, %s %s %s' % [formatted_days,
-                        formatted_time(hours.open),
-                        I18n.t('seperator'),
-                        formatted_time(hours.close)]
+      formatted_hours = Hours.new(hours.open, hours.close).to_s
+
+      '%s, %s' % [formatted_days, formatted_hours]
+    end
+  end
+
+  Hours = Struct.new(:open, :close) do
+    def to_s
+      '%s&nbsp;%s&nbsp;%s' % [formatted_time(open), I18n.t('seperator'), formatted_time(close)]
     end
 
     private

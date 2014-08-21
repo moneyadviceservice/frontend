@@ -46,6 +46,18 @@ class User < ActiveRecord::Base
     Converters::UserToCustomer.new(self).call
   end
 
+  def registered?
+    !!accept_terms_conditions
+  end
+
+  def invitation_sent?
+    invitation_sent_at.present?
+  end
+
+  def invited_by
+    invited_by_id.present?
+  end
+
   private
 
   def create_to_crm

@@ -127,4 +127,49 @@ RSpec.describe User, :type => :model do
       end
     end
   end
+
+  describe '#registered?' do
+    context 'when user has accepted TCs' do
+      it 'returns true' do
+        subject.accept_terms_conditions = 1
+        expect(subject.registered?).to eql(true)
+      end
+    end
+
+    context 'when user has not accepted TCs' do
+      it 'returns false' do
+        expect(subject.registered?).to eql(false)
+      end
+    end
+  end
+
+  describe '#invitation_sent?' do
+    context 'when an invite has been sent' do
+      it 'returns true' do
+        subject.invitation_sent_at = 1.minute.ago
+        expect(subject.invitation_sent?).to be(true)
+      end
+    end
+
+    context 'when an invite has not been sent' do
+      it 'returns false' do
+        expect(subject.invitation_sent?).to be(false)
+      end
+    end
+  end
+
+  describe '#invited_by' do
+    context 'invited by someone' do
+      it 'returns truthy' do
+        subject.invited_by_id = 123
+        expect(subject.invited_by).to be_truthy
+      end
+    end
+
+    context 'not invited by someone' do
+      it 'returns falsey' do
+        expect(subject.invited_by).to be_falsey
+      end
+    end
+  end
 end

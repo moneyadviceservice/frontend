@@ -43,4 +43,8 @@ class ArticleFeedbacksController < ApplicationController
     @breadcrumbs ||= BreadcrumbTrail.build(@article, category_tree)
   end
   helper_method :breadcrumbs
+
+  def display_opt_out_link_in_footer?
+    false
+  end
 end

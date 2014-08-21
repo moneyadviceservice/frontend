@@ -6,6 +6,13 @@ class RegistrationsController < Devise::RegistrationsController
     head :not_implemented
   end
 
+  protected
+
+  def build_resource(hash=nil)
+    hash[:accept_terms_conditions] = true if hash
+    super(hash)
+  end
+
   private
 
   def after_sign_up_path_for(resource)

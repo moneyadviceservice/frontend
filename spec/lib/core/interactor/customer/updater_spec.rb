@@ -17,14 +17,16 @@ module Core
           subject{ described_class.new(user) }
 
           context 'when customer exists' do
+            let(:first_name){ 'Philip' }
+
             it 'updates attributes' do
-              user.first_name = 'Philip'
+              user.first_name = first_name
 
               subject = described_class.new(user)
               subject.call
 
               customer = Core::Registry::Repository[:customer].customers.first
-              expect(customer[:first_name]).to eql('Philip')
+              expect(customer[:first_name]).to eql(first_name)
             end
           end
 

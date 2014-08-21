@@ -41,7 +41,7 @@ module Core
           customer[:active] = 'true'
           # topics to be implemented
 
-          subject.call
+          subject.update_from_crm
           user.reload
         end
 

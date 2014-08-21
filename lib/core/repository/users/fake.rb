@@ -8,7 +8,7 @@ module Core
           @user = user
         end
 
-        def call
+        def update_from_crm
           raise 'customer_id is blank' if customer_id.blank?
           raise 'customer not in CRM' if customer.nil?
 

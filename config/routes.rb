@@ -59,6 +59,7 @@ Rails.application.routes.draw do
     resources :articles,
               only: 'show',
               constraints: ValidResource.new(:article) do
+                resource :feedback, only: [:new, :create], controller: :article_feedbacks
                 get 'preview', on: :member, to: 'articles_preview#show'
               end
               

@@ -10,7 +10,7 @@ module Core::Repository::CMS
 
       before do
         allow(Core::Registry::Connection).to receive(:[]).with(:cms) do
-          Core::ConnectionFactory.build(url)
+          Core::ConnectionFactory::Http.build(url)
         end
 
         stub_request(:get, "https://example.com/preview/#{id}.json").

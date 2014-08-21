@@ -24,6 +24,17 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
+GIT
+  remote: git@github.com:moneyadviceservice/cream.git
+  revision: 40840ecc0756c3f44e231ab42f1d0a76a17d55f3
+  branch: client
+  specs:
+    cream (0.0.1)
+      faraday (~> 0.8.7)
+      faraday_middleware (~> 0.9.0)
+      hashie (~> 2.0.5)
+      mechanize (= 2.5.1)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -141,6 +152,8 @@ GEM
       devise (>= 2.1.0)
     diff-lcs (1.2.5)
     docile (1.1.3)
+    domain_name (0.5.20)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
@@ -207,6 +220,7 @@ GEM
       sass (>= 3.1)
     guard-shell (0.6.1)
       guard (>= 1.1.0)
+    hashie (2.0.5)
     hike (1.2.3)
     html_validation (1.1.1)
     http_parser.rb (0.6.0)
@@ -231,6 +245,14 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.5.1)
+      domain_name (~> 0.5, >= 0.5.1)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (~> 0.0, >= 0.0.9)
     meta-tags (2.0.0)
       actionpack (>= 3.0.0)
     method_source (0.8.2)
@@ -241,8 +263,11 @@ GEM
     multi_test (0.1.1)
     multipart-post (1.2.0)
     mysql2 (0.3.15)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
+    ntlm-http (0.1.1)
     nunes (0.3.1)
     opening_hours (0.0.7)
       activesupport
@@ -379,6 +404,9 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
     unicorn (4.8.3)
       kgio (~> 2.6)
       rack
@@ -394,6 +422,7 @@ GEM
     webmock (1.18.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
+    webrobots (0.1.1)
     websocket-driver (0.3.4)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -414,6 +443,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   compass-rails
+  cream!
   csslint_ruby
   devise
   devise-encryptable

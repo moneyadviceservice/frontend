@@ -1,0 +1,23 @@
+module Core
+  module Interactors
+    module Customer
+      class Updater
+        attr_reader :user
+
+        def initialize(user)
+          @user = user
+        end
+
+        def call
+          Registry::Repository[:customer].update(customer)
+        end
+
+        private
+
+        def customer
+          user.to_customer
+        end
+      end
+    end
+  end
+end

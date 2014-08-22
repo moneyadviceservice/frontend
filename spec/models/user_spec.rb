@@ -9,18 +9,16 @@ RSpec.describe User, :type => :model do
     }
   end
 
-  describe '#fake_send_confirmation_email' do
-    subject(:user) { described_class.new(attributes) }
+  subject{ described_class.new(attributes) }
 
+  describe '#fake_send_confirmation_email' do
     it "sends a fake confirmation email when user is saved" do
-      user.save!
-      expect(user.confirmation_sent_at).to_not be_nil
+      subject.save!
+      expect(subject.confirmation_sent_at).to_not be_nil
     end
   end
 
   describe 'validations' do
-    subject{ described_class.new(attributes) }
-
     it { should allow_value('PasswordWithMoreThan8Characters').for(:password) }
     it { should allow_value('P@55word').for(:password) }
     it { should allow_value('12345678').for(:password) }
@@ -84,10 +82,94 @@ RSpec.describe User, :type => :model do
     it { should allow_value(1.days.ago).for(:date_of_birth) }
     it { should allow_value('31/12/1970').for(:date_of_birth) }
     it { should_not allow_value('31/02/1970').for(:date_of_birth) }
+
+    it 'allows update with blank password' do
+      user = FactoryGirl.create(:user)
+      user = User.first
+      user.first_name = 'Philip'
+      expect{ user.save! }.to_not raise_error
+    end
   end
 
   it 'should upcase post code' do
     user = User.create!(attributes.merge(post_code: 'n7 0hs'))
     expect(user.post_code).to eq('N7 0HS')
+  end
+
+  describe 'callbacks' do
+    describe 'before create' do
+      it 'creates the CRM customer' do
+        expect{ subject.save }.to change{ Core::Registry::Repository[:customer].customers.size }.by(1)
+      end
+    end
+  end
+
+  describe '#valid_for_authentication?' do
+    context 'when user does not exist in crm' do
+      it 'returns false' do
+        subject.active = 1
+        expect(subject.valid_for_authentication?).to be_falsey
+      end
+    end
+
+    context 'when user is not active' do
+      it 'returns false' do
+        subject.active = 0
+        expect(subject.valid_for_authentication?).to be_falsey
+      end
+    end
+
+    context 'when user is in crm and active' do
+      it 'returns true' do
+        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?){ true }
+        subject.active = 1
+        expect(subject.valid_for_authentication?).to be_truthy
+      end
+    end
+  end
+
+  describe '#registered?' do
+    context 'when user has accepted TCs' do
+      it 'returns true' do
+        subject.accept_terms_conditions = 1
+        expect(subject.registered?).to eql(true)
+      end
+    end
+
+    context 'when user has not accepted TCs' do
+      it 'returns false' do
+        expect(subject.registered?).to eql(false)
+      end
+    end
+  end
+
+  describe '#invitation_sent?' do
+    context 'when an invite has been sent' do
+      it 'returns true' do
+        subject.invitation_sent_at = 1.minute.ago
+        expect(subject.invitation_sent?).to be(true)
+      end
+    end
+
+    context 'when an invite has not been sent' do
+      it 'returns false' do
+        expect(subject.invitation_sent?).to be(false)
+      end
+    end
+  end
+
+  describe '#invited_by' do
+    context 'invited by someone' do
+      it 'returns truthy' do
+        subject.invited_by_id = 123
+        expect(subject.invited_by).to be_truthy
+      end
+    end
+
+    context 'not invited by someone' do
+      it 'returns falsey' do
+        expect(subject.invited_by).to be_falsey
+      end
+    end
   end
 end

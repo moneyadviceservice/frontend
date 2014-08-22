@@ -67,6 +67,12 @@ end
 AfterConfiguration do
   DatabaseCleaner.clean
   ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
+
+  Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
+end
+
+Before do
+  Core::Registry::Repository[:customer].clear
 end
 
 Capybara.default_wait_time = 20

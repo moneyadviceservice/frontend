@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
   validates :post_code, presence: true,
                         format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' },
                         on: :create
-  validates :password, length: 7..128
+  validates :password, presence: true, on: :create
+  validates :password, length: 7..128, allow_blank: true
   validates :first_name, presence: true,
                          format: { with: /\A[A-Za-z '-\.]+\z/, if: 'last_name.present?' },
                          length: { maximum: 24 }
@@ -35,8 +36,33 @@ class User < ActiveRecord::Base
   validates :age_range, inclusion: { in: VALID_AGE_RANGES }, allow_nil: true
 
   before_save :fake_send_confirmation_email
+  before_create :create_to_crm
+
+  def valid_for_authentication?
+    super && active? && Core::Registry::Repository[:customer].valid_for_authentication?(customer_id)
+  end
+
+  def to_customer
+    Converters::UserToCustomer.new(self).call
+  end
+
+  def registered?
+    !!accept_terms_conditions
+  end
+
+  def invitation_sent?
+    invitation_sent_at.present?
+  end
+
+  def invited_by
+    invited_by_id.present?
+  end
 
   private
+
+  def create_to_crm
+    Core::Interactors::Customer::Creator.new(self).call
+  end
 
   def uppercase_post_code
     self.post_code.upcase! if post_code

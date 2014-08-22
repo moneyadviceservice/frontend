@@ -21,6 +21,7 @@ module Core
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
+  autoload :Customer, 'core/entity/customer'
 
   module Feedback
     autoload :Base, 'core/entity/feedback/base'
@@ -38,6 +39,14 @@ module Core
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
+
+  module Interactors
+    module Customer
+      autoload :Finder, 'core/interactor/customer/finder'
+      autoload :Creator, 'core/interactor/customer/creator'
+      autoload :Updater, 'core/interactor/customer/updater'
+    end
+  end
 
   module Registry
     autoload :Connection, 'core/registry/connection'
@@ -67,6 +76,10 @@ module Core
       autoload :Email, 'core/repository/feedback/email'
     end
 
+    module Customers
+      autoload :Fake, 'core/repository/customers/fake'
+    end
+
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
     end
@@ -83,6 +96,10 @@ module Core
       autoload :ContentService, 'core/repository/search/content_service'
       autoload :FakeContentService, 'core/repository/search/fake_content_service'
       autoload :GoogleCustomSearchEngine, 'core/repository/search/google_custom_search_engine'
+    end
+
+    module Users
+      autoload :Fake, 'core/repository/users/fake'
     end
   end
 end

@@ -1,9 +1,9 @@
+require 'spec_helper'
+
 module Core
   RSpec.describe Repository::Users::Fake do
-    describe '#update' do
+    describe '#update_from_crm' do
       context 'when customer_id is blank' do
-        subject{ described_class.new }
-
         it 'raises an exception' do
           expect{ subject.update_from_crm(User.new) }.to raise_error
         end

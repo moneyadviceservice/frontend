@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module Core
-  RSpec.describe Repository::Users::Fake do
+  RSpec.describe Repository::Users::Default do
     describe '#update_from_crm' do
       context 'when customer_id is blank' do
         it 'raises an exception' do

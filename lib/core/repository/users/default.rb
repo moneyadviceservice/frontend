@@ -1,7 +1,7 @@
 module Core
   module Repository
     module Users
-      class Fake
+      class Default
         def update_from_crm(user)
           raise 'customer_id is blank' if customer_id(user).blank?
           raise 'customer not in CRM' if customer(user).nil?

@@ -43,5 +43,8 @@ Core::Registry::Repository[:newsletter_subscription] =
 Core::Registry::Repository[:customer] =
   Core::Repository::Customers::Cream.new
 
+Core::Registry::Repository[:user] =
+  Core::Repository::Users::Default.new
+
 # Prepare the category tree so that it is available to the application
 Core::CategoryTreeReader.new.call if Rails.env.production? and defined?(Rails::Server)

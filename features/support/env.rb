@@ -23,7 +23,6 @@ Core::Registry::Repository[:news]                    = Core::Repository::VCR.new
 Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 
 Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
-Core::Registry::Repository[:user] = Core::Repository::Users::Fake.new
 
 Around('@fake-articles') do |scenario, block|
   @real_article_repository = Core::Registry::Repository[:article]

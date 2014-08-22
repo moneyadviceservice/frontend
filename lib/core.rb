@@ -102,7 +102,7 @@ module Core
     end
 
     module Users
-      autoload :Fake, 'core/repository/users/fake'
+      autoload :Default, 'core/repository/users/default'
     end
   end
 end

@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
          :database_authenticatable,
          :encryptable,
          :lockable,
-         :trackable
+         :trackable,
+         :timeoutable
          # :recoverable
-         # :timeoutable,
          # :confirmable,
          # :invitable,
 

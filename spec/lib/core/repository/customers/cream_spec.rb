@@ -68,5 +68,21 @@ module Core
         end
       end
     end
+
+    describe '#valid_for_authentication?' do
+      context 'when they exist in crm' do
+        it 'returns true' do
+          allow(subject).to receive(:find){ Object.new }
+          expect(subject.valid_for_authentication?(1)).to be_truthy
+        end
+      end
+
+      context 'when they no not exist in crm' do
+        it 'returns false' do
+          allow(subject).to receive(:find){ nil }
+          expect(subject.valid_for_authentication?(1)).to be_falsey
+        end
+      end
+    end
   end
 end

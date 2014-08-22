@@ -10,7 +10,7 @@ module Core
 
       describe '#call' do
         it 'updates the user' do
-          customer = Core::Registry::Repository[:customers].customers.first
+          customer = Core::Registry::Repository[:customer].customers.first
           customer[:first_name] = 'Philip'
 
           subject.call

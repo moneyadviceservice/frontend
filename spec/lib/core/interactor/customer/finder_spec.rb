@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'lib/core/interactor/shared_examples/optional_failure_block'
 
 module Core
   module Interactors
@@ -17,7 +18,7 @@ module Core
 
             before do
               allow(Registry::Repository).to receive(:[]).with(:customer) do
-                double(find: data)
+                double(find: ::Core::Customer.new('known', data))
               end
             end
 

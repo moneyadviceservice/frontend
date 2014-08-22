@@ -6,7 +6,8 @@ module Core
         cattr_reader :customers
 
         def find(id)
-          customers.detect{|c| c[:id] == id}
+          response = customers.detect{|c| c[:id] == id}
+          Core::Customer.new(response[:id], response) if response
         end
 
         # return customer id
@@ -22,7 +23,7 @@ module Core
         end
 
         def update(customer)
-          c = find(customer.id)
+          c = customers.detect{|c| c[:id] == customer.id}
 
           raise 'does not exist' unless c
 

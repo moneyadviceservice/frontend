@@ -1,6 +1,8 @@
 <div class="tool-category-links">
 <% categories.each do |category| %>
-    <h4 class="tool-category-links__heading"><%= link_to category.title, category.path %></h4>
+    <%= heading_tag(level: 4, class: 'tool-category-links__heading') do %>
+      <%= link_to category.title, category.path %>
+    <% end %>
     <p>
       <%= category.contents.map do |sub_category|
           link_to sub_category.title, sub_category.path,

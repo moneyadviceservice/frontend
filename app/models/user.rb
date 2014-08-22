@@ -8,12 +8,12 @@ class User < ActiveRecord::Base
   devise :registerable,
          :database_authenticatable,
          :encryptable,
-         :lockable
+         :lockable,
+         :trackable
          # :recoverable
          # :timeoutable,
          # :confirmable,
          # :invitable,
-         # :trackable,
 
   before_validation :uppercase_post_code
 

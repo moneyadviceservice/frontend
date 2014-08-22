@@ -17,6 +17,10 @@ module Core
           Customer.new(mapping[:id], mapping)
         end
 
+        def update(customer)
+          ::Cream::Client.instance.update_customer(customer.id, customer.to_crm_hash)
+        end
+
         private
 
         class FindMapper

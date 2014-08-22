@@ -23,5 +23,9 @@ module Core
         status_code: status_code
       }
     end
+
+    def to_crm_hash
+      {}
+    end
   end
 end

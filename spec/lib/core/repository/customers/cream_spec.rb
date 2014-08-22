@@ -52,5 +52,21 @@ module Core
         expect(subject.create(user)).to eql('123')
       end
     end
+
+    describe '#update' do
+      context 'when customer exists' do
+        let(:client){ double("client", find_customer: response) }
+        let(:user){ FactoryGirl.create(:user) }
+        let(:response){ true }
+
+        it 'updates the customer' do
+          client = double("client", create_customer: response)
+          expect(::Cream::Client).to receive(:instance).and_return(client)
+
+          expect(client).to receive(:update_customer).with(user.customer_id, {}).and_return(response)
+          expect(subject.update(user.to_customer)).to eql(response)
+        end
+      end
+    end
   end
 end

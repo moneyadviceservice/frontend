@@ -2,59 +2,9 @@
   @include column(12);
 }
 
-/* @lintingIgnoreBegin */
-
-.l-directory {
-  @extend .clearfix;
-
-  .directory__item {
-    @include column(12);
-
-    @include respond-to($mq-m) {
-      @include column(6);
-      min-height: 133px;
-    }
-
-    @include respond-to($mq-l) {
-      @include column(4);
-      min-height: 180px;
-      margin-bottom: $baseline-unit*4;
-    }
-
-    @include respond-to($mq-xl) {
-      min-height: 128px;
-    }
-  }
-
-  .flexbox & .l-constrained {
-    display: flex;
-    flex-flow: column;
-
-    @include respond-to($mq-m) {
-      flex-flow: row;
-      flex-wrap: wrap;
-    }
-  }
-
-  .flexbox & .directory__item {
-    margin-right: 1.666667%;
-    margin-left: 1.666667%;
-    margin-bottom: $baseline-unit*2;
-    min-height: 0;
-
-    @include respond-to($mq-m) {
-      margin-bottom: $baseline-unit*3;
-      flex-basis: 46%;
-    }
-
-    @include respond-to($mq-l) {;
-      flex-basis: 30%;
-    }
-  }
-
+.l-home-directory {
+  background-color: $color-directory-emphasized-bg;
 }
-
-/* @lintingIgnoreEnd */
 
 .l-homepage-promo {
   overflow: hidden;

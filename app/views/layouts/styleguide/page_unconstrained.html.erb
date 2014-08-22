@@ -6,7 +6,16 @@
   <% end %>
 
   <%= render 'shared/header' %>
+
+  <% if content_for?(:context_bar) %>
+    <div class="l-context-bar">
+      <div class="l-constrained">
+        <%= yield :context_bar %>
+      </div>
+    </div>
+  <% end %>
+
   <%= yield %>
-  <%= render 'shared/contact_panels' %>
+  <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top? %>
   <%= render 'shared/footer' %>
 <% end %>

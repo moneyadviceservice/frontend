@@ -7,5 +7,11 @@
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
 <%= render 'shared/trust_banner' %>
-<%= render 'shared/directory', items: category_navigation %>
+
+<div class="l-home-directory">
+  <div class="l-constrained">
+    <%= render 'shared/directory', items: category_navigation %>
+  </div>
+</div>
+
 <%= render 'shared/promos', items: t('.promoted') %>

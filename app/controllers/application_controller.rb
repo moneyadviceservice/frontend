@@ -31,6 +31,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_menu_button_in_header?
 
+  def contact_panels_border_top?
+    false
+  end
+
+  helper_method :contact_panels_border_top?
+
   def display_skip_to_main_navigation?
     true
   end

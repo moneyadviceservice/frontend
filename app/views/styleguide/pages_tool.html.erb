@@ -1,0 +1,35 @@
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: categories %>
+<% end %>
+
+
+<div class="l-constrained">
+  <div class="tool-placeholder">
+    insert tool here
+  </div>
+</div>
+
+
+<div class="l-tool-nav">
+  <div class="l-constrained">
+    <div class="tool-nav">
+
+      <div class="l-1col">
+        <h2>You may also be interested in...</h2>
+
+        <h3 class="heading-extra-small">From this section</h3>
+        insert_category_links
+
+        <h3 class="heading-extra-small">More from the Money Advice Service</h3>
+      </div>
+
+      <%= render 'shared/directory',
+                 items: categories_for_directory_en, heading_level: 4 %>
+
+    </div>
+  </div>
+</div>
+
+
+
+

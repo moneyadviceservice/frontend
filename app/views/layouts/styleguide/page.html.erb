@@ -19,6 +19,6 @@
     <%= yield %>
   </div>
 
-  <%= render 'shared/contact_panels' %>
+  <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top? %>
   <%= render 'shared/footer' %>
 <% end %>

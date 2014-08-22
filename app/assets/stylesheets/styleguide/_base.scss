@@ -10,6 +10,13 @@ code {
   color: $color-red-dark;
 }
 
+.tool-placeholder {
+  height: 400px;
+  border: 1px dotted $color-grey-medium;
+  @include column(12);
+
+}
+
 .swatches {
   > li,
   > dd {

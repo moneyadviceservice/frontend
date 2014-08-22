@@ -65,6 +65,15 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page_unconstrained'
   end
 
+  def pages_tool
+
+    def contact_panels_border_top?
+      true
+    end
+
+    render layout: 'styleguide/page_unconstrained'
+  end
+
   def pages_search_results
     render layout: 'styleguide/page'
   end
@@ -219,4 +228,10 @@ class StyleguideController < ApplicationController
   end
 
   helper_method :sections
+
+  def contact_panels_border_top?
+    false
+  end
+
+  helper_method :contact_panels_border_top?
 end

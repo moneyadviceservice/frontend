@@ -54,4 +54,8 @@ class EmbeddedToolsController < ApplicationController
 
   helper_method :alternate_tool_id
 
+  def contact_panels_border_top?
+    true
+  end
+
 end

@@ -1,5 +1,10 @@
 .l-contact-panels {
-  border-top: 3px solid $home-feature-list-border;
+  border-top: 3px solid $contact-panels-border;
+}
+
+.l-contact-panels--no-border-top {
+  margin-top:40px;
+  border-top:none;
 }
 
 .l-contact-panel {

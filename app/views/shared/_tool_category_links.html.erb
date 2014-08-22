@@ -1,0 +1,12 @@
+<div class="tool-category-links">
+<% categories.each do |category| %>
+    <h4 class="tool-category-links__heading"><%= link_to category.title, category.path %></h4>
+    <p>
+      <%= category.contents.map do |sub_category|
+          link_to sub_category.title, sub_category.path,
+                  class: "tool-category-links__link"
+        end.join(', ').html_safe
+      %>
+    </p>
+<% end %>
+</div>

@@ -40,7 +40,7 @@ Core::Registry::Repository[:news] =
 Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new
 
-Core::Registry::Repository[:customers] =
+Core::Registry::Repository[:customer] =
   Core::Repository::Customers::Cream.new
 
 # Prepare the category tree so that it is available to the application

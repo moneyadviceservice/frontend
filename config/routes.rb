@@ -97,6 +97,7 @@ Rails.application.routes.draw do
           get 'pages_parent_category_page', path: '/parent_category_page'
           get 'pages_child_category_page', path: '/child_category_page'
           get 'pages_contact', path: '/contact'
+          get 'pages_tool', path: '/tool'
         end
 
         scope 'css' do

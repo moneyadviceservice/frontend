@@ -1,0 +1,9 @@
+.tool-category-links__heading {
+  @extend %font-heading-medium;
+  @include body(18, 24);
+  margin-top: 0;
+
+  @include respond-to($mq-m) {
+    @include body(24, 30);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="tool-category-links">
+<% categories.each do |category| %>
+    <%= heading_tag(level: 4, class: 'tool-category-links__heading') do %>
+      <%= link_to category.title, category.path %>
+    <% end %>
+    <p>
+      <%= category.contents.map do |sub_category|
+          link_to sub_category.title, sub_category.path,
+                  class: "tool-category-links__link"
+        end.join(', ').html_safe
+      %>
+    </p>
+<% end %>
+</div>

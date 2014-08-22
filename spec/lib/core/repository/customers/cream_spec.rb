@@ -63,7 +63,7 @@ module Core
           client = double("client", create_customer: response)
           expect(::Cream::Client).to receive(:instance).and_return(client)
 
-          expect(client).to receive(:update_customer).with(user.customer_id, {}).and_return(response)
+          expect(client).to receive(:update_customer).with(user.customer_id, kind_of(Hash)).and_return(response)
           expect(subject.update(user.to_customer)).to eql(response)
         end
       end

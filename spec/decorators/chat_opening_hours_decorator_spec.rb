@@ -10,7 +10,7 @@ RSpec.describe ChatOpeningHoursDecorator do
       let(:opening_hours) { OpeningHours.new('9:00 AM', '5:00 PM') }
 
       it 'returns the days and hours open as one period' do
-        is_expected.to include('Monday to Sunday, 9am to 5pm')
+        is_expected.to include('Monday to Sunday, 9am&nbsp;to&nbsp;5pm')
       end
     end
 
@@ -22,7 +22,8 @@ RSpec.describe ChatOpeningHoursDecorator do
       end
 
       it 'returns the days and hours open as multiple periods' do
-        is_expected.to include('Monday to Saturday, 9am to 5pm', 'Sunday, 10am to 10pm')
+        is_expected.to include('Monday to Saturday, 9am&nbsp;to&nbsp;5pm',
+                               'Sunday, 10am&nbsp;to&nbsp;10pm')
       end
     end
   end
@@ -34,7 +35,7 @@ RSpec.describe ChatOpeningHoursDecorator do
       let(:opening_hours) { OpeningHours.new('9:00 AM', '5:00 PM') }
 
       it 'returns the hours open' do
-        is_expected.to eq('9am to 5pm')
+        is_expected.to eq('9am&nbsp;to&nbsp;5pm')
       end
     end
 
@@ -49,7 +50,7 @@ RSpec.describe ChatOpeningHoursDecorator do
         before { Timecop.travel(Chronic.parse('Tuesday 5am')) }
 
         it 'returns the hours open that day' do
-          is_expected.to eq('9am to 5pm')
+          is_expected.to eq('9am&nbsp;to&nbsp;5pm')
         end
       end
 
@@ -57,7 +58,7 @@ RSpec.describe ChatOpeningHoursDecorator do
         before { Timecop.travel(Chronic.parse('Saturday 11pm')) }
 
         it 'returns the hours open that day' do
-          is_expected.to eq('10am to 10pm')
+          is_expected.to eq('10am&nbsp;to&nbsp;10pm')
         end
       end
     end

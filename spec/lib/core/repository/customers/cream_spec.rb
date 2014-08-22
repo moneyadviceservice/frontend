@@ -40,7 +40,7 @@ module Core
       let(:user){ User.new }
       let(:response) do
         {
-          'd' => { 'ContactId' => '123' }
+          'd' => { 'mas_CustomerId' => '123' }
         }
       end
 

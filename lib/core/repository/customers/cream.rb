@@ -4,7 +4,7 @@ module Core
       class Cream
         def create(user)
           response = ::Cream::Client.instance.create_customer(user)
-          response["d"]["ContactId"]
+          response["d"]["mas_CustomerId"]
         end
 
         def find(id)

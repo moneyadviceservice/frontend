@@ -16,7 +16,7 @@ define(['globals'], function(globals) {
     logs[opts[l]] =
       (window && window.console && globals.bootstrap.env &&
         globals.bootstrap.env === 'development') ?
-        console[opts[l]].bind(console) :
+          console[opts[l]].bind && console[opts[l]].bind(console) :
         logIt;
   }
 

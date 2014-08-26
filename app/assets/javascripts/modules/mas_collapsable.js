@@ -65,7 +65,7 @@ define(['jquery', 'common'], function($, MAS) {
         i = 0;
 
     if (l === 0) {
-      return MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
+      return MAS.warn && MAS.warn('mas_collapsible => no trigger elements in page: ' + this.o.triggerEl);
     }
 
     for (i; i < l; i++) {
@@ -76,7 +76,7 @@ define(['jquery', 'common'], function($, MAS) {
       this.$parent = $(this.o.parentWrapper);
 
       if (!this.o.parentWrapper || !this.$parent.length) {
-        MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work');
+        MAS.warn && MAS.warn('options.parentWrapper should be set & valid for closeOffFocus to work');
         return;
       }
 

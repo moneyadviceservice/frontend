@@ -7,6 +7,8 @@ class BreadcrumbTrail
         else
           [HomeCategory.new]
         end
+      when ToolCategory
+        RootToNodePath.build(item, category_tree)
       when Core::StaticPage
         [HomeCategory.new]
       when Core::NewsArticle

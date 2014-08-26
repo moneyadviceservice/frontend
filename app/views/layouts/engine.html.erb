@@ -1,5 +1,9 @@
 <% set_meta_tags(alternate: alternate_options) %>
 
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<% end %>
+
 <%= render layout: 'layouts/constrained' do %>
 
   <% content_for(:alternate_link) do %>

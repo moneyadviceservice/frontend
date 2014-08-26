@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.9
       X-Request-Id:
-      - 3eb31285-cab9-4eb7-ba11-ef58362460e2
+      - 926a0a69-0a9e-4601-8b78-0e3ad4519d3d
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 27 Jun 2014 07:03:18 GMT
+      - Tue, 26 Aug 2014 14:59:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,16 +39,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Session-Id:
-      - 29261a965cb319e5ea3b785aa7568ebc
+      - 30661c4c0e3d8e0611ac735618606b1e
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 27-Jun-2015 07:03:17 GMT; secure
-      - _session_id=29261a965cb319e5ea3b785aa7568ebc; path=/; secure; HttpOnly
-      - _web_tracking=5e3edbe641cba4ba56bd9e22a1b1feea; path=/; expires=Sat, 27-Jun-2015
-        07:03:17 GMT; secure
+      - _cookie_notice=y; path=/; expires=Wed, 26-Aug-2015 14:59:39 GMT; secure
+      - _session_id=30661c4c0e3d8e0611ac735618606b1e; path=/; secure; HttpOnly
+      - _web_tracking=4b0d85a8e55c6d3c342642ef5c10bc56; path=/; expires=Wed, 26-Aug-2015
+        14:59:39 GMT; secure
+      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
       X-Request-Id:
-      - 3eb31285-cab9-4eb7-ba11-ef58362460e2
+      - 926a0a69-0a9e-4601-8b78-0e3ad4519d3d
       X-Runtime:
-      - '0.648755'
+      - '0.035132'
       X-Rack-Cache:
       - miss
       P3p:
@@ -133,8 +135,8 @@ http_interactions:
         rhyngrwyd, a chadw\u2019n ddiogel wrth siopa ar-lein"},{"id":"canllaw-dechreuwr-i-dwyll","type":"guide","title":"Canllaw
         dechreuwr i dwyll","description":"Gwybod am, ac amddiffyn eich hun rhag twyll.
         Efallai eich bod wedi clywed am we-rwydo \u2013 ond beth am dwyll ystafell
-        boeler?"},{"id":"lladrad-a-thwyll-hunaniaeth-ar-gyfer-beth-ydych-chin-atebol","type":"guide","title":"Lladrad
-        a thwyll hunaniaeth \u2013 ar gyfer beth ydych chi\u2019n atebol","description":"Dysgwch
+        boeler?"},{"id":"lladrad-a-thwyll-hunaniaeth-ar-gyfer-beth-ydych-chin-atebol","type":"guide","title":"Dwyn
+        a thwyll hunaniaeth: sut i gael eich arian yn \u00f4l","description":"Dysgwch
         a ydych yn atebol os ydych yn dioddef o ladrad neu dwyll hunaniaeth"},{"id":"diogelu-eich-hun-rhag-twyll-a-lladrad","type":"guide","title":"Diogelu
         eich hun rhag twyll a lladrad","description":"Dysgwch am y camau allweddol
         i\u2019ch diogelu''ch hun rhag twyll hunaniaeth a sgamiau"},{"id":"digollediad-os-bydd-eich-banc-neu-gymdeithas-adeiladu-yn-mynd-ir-wal","type":"guide","title":"Digollediad
@@ -148,5 +150,5 @@ http_interactions:
         Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
         ariannol yn mynd allan o fusnes"}]}'
     http_version: 
-  recorded_at: Fri, 27 Jun 2014 07:03:19 GMT
+  recorded_at: Tue, 26 Aug 2014 14:59:40 GMT
 recorded_with: VCR 2.9.2

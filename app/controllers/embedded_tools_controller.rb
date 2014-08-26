@@ -35,7 +35,7 @@ class EmbeddedToolsController < ApplicationController
 
   def alternate_options
     {
-      "#{params[:locale]}-GB" => url_for(params),
+      "#{params[:locale]}-GB" => request.url,
       "#{alternate_locale }-GB"=> alternate_url
     }
   end

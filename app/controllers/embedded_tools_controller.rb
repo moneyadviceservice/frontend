@@ -6,6 +6,16 @@ class EmbeddedToolsController < ApplicationController
 
   helper_method :parent_template
 
+  def breadcrumbs
+    BreadcrumbTrail.build(category, category_tree)
+  end
+
+  helper_method :breadcrumbs
+
+  def category
+    @category ||= ToolCategory.new(category_id)
+  end
+
   def alternate_url
     # First dup the params for the current request
     new_params = params.dup

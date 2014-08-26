@@ -32,7 +32,7 @@ Then(/^I should see the search page$/) do
 end
 
 Then(/^I should see search results$/) do
-  expected_heading = I18n.t('search_results.index_with_results.page_title', query: 'health')
+  expected_heading = strip_tags(I18n.t('search_results.index_with_results.page_title_html', query: 'health'))
   expected_title   = '%s - %s' % [I18n.t('search_results.index_with_results.document_title', query: 'health'),
                                   I18n.t('layouts.base.title')]
 
@@ -42,7 +42,7 @@ Then(/^I should see search results$/) do
 end
 
 Then(/^I should see no search results$/) do
-  expected_heading = I18n.t('search_results.index_no_results.page_title', query: 'tiger')
+  expected_heading = strip_tags(I18n.t('search_results.index_no_results.page_title_html', query: 'tiger'))
   expected_title   = '%s - %s' % [I18n.t('search_results.index_no_results.document_title', query: 'tiger'),
                                   I18n.t('layouts.base.title')]
 

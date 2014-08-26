@@ -245,12 +245,12 @@ cy:
 
     index_no_results:
       document_title: Ni chafwyd unrhyw ganlyniadau chwilio
-      page_title: Canlyniadau chwilio ar gyfer "%{query}"
+      page_title: Canlyniadau chwilio <span class="visually-hidden"> ar gyfer "%{query}"</span>
       body: Ni chanfuwyd unrhyw ganlyniadau. Chwiliwch am rywbeth gwahanol.
 
     index_with_results:
       document_title: "%{query} - Chwilio"
-      page_title: Canlyniadau chwilio ar gyfer "%{query}"
+      page_title: Canlyniadau chwilio <span class="visually-hidden"><span class="visually-hidden"> ar gyfer "%{query}"</span>
       prev_button_html: <span class="visually-hidden">Tudalen</span> flaenorol
       next_button_html: <span class="visually-hidden">Tudalen</span> nesaf
       pagination_counter: Tudalen %{page_number} o %{total_pages}

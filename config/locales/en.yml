@@ -254,12 +254,12 @@ en:
 
     index_no_results:
       document_title: No search results found
-      page_title: Search results for “%{query}”
+      page_title: Search results<span class="visually-hidden"> for “%{query}”</span>
       body: No results were found. Please try a different search.
 
     index_with_results:
       document_title: "%{query} - Search"
-      page_title: Search results for “%{query}”
+      page_title: Search results <span class="visually-hidden">for “%{query}”</span>
       prev_button_html: Prev<span class="visually-hidden">ious Page</span>
       next_button_html: Next <span class="visually-hidden">Page</span>
       pagination_counter: Page %{page_number} of %{total_pages}

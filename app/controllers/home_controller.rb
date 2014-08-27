@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
 
-  decorates_assigned :directory_categories, with: CategoryDecorator
-
   def show
 
   end

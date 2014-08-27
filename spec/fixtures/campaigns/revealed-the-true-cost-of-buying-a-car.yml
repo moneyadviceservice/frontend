@@ -1,0 +1,10 @@
+--- !ruby/object:Campaign
+name: myname
+sections:
+- !ruby/object:Section
+  name: how_buy
+  articles:
+  - !ruby/object:Article
+    name: articlename
+  - !ruby/object:Article
+    namme: otherarticle_name

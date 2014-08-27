@@ -9,18 +9,27 @@
     @extend %font-body;
     height: $baseline-unit*8;
     padding-left: $baseline-unit*2;
-    background-color: $color-white;
     border: 1px solid $color-bluegrey-light;
+    line-height: 1;
 
     &::-webkit-input-placeholder {
       color: $color-search-text;
     }
 
-    &:focus {
-      background-color: $color-white;
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent;
     }
   }
 }
+
 
 .search__submit {
   @extend .unstyled-button;

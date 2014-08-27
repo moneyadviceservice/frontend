@@ -5,6 +5,10 @@
     <a class="skip-to-link" href="#primary-nav">Skip to main navigation</a>
   <% end %>
 
+  <% if Feature.active?(:accessibility_link) %>
+    <a class="skip-to-link" href="<%= t('footer.accessibility_link') %>">Accessibility Statement</a>
+  <% end %>
+
   <%= render 'shared/alerts' if alerts? %>
   <%= render 'shared/header' %>
 

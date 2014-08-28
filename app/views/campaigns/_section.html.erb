@@ -1,17 +1,15 @@
 <div class="l-car-campaign__section l-car-campaign__section--<%= section.css_name %>">
   <div class="l-car-campaign__section-row">
     <div class="l-car-campaign__section-text">
-      <%= heading_tag campaign.section_title(section), level: 2, class: 'l-car-campaign__section-heading' %>
-      <p><%= campaign.section_intro(section) %></p>
+      <%= heading_tag section.title, level: 2, class: 'l-car-campaign__section-heading' %>
+      <p><%= section.intro %></p>
     </div>
 
     <div class="l-car-campaign__section-media"></div>
 
     <div class="l-car-campaign__section-text">
       <ul class="unstyled-list">
-        <% section.each do |article| %>
-        <li><%= campaign.article_link(section, article) %></li>
-        <% end %>
+        <%= render partial: 'article', collection: section %>
       </ul>
     </div>
   </div>

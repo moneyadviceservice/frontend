@@ -1,4 +1,4 @@
-class CarCampaignsController < ApplicationController
+class CampaignsController < ApplicationController
   decorates_assigned :campaign, with: CampaignDecorator
 
   def show

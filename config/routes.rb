@@ -55,7 +55,7 @@ Rails.application.routes.draw do
     resources :news, only: [:show, :index]
     resource :advice, only: :show
 
-    resources :car_campaigns, only: 'show',
+    resources :campaigns, only: 'show',
                               path: 'campaigns',
                               constraints: {
                                 id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car}

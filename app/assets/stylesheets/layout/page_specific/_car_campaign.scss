@@ -90,7 +90,7 @@
 
 
 // Buying a car
-.l-car-campaign__section--buy {
+.l-car-campaign__section--how-buy {
   @include column(12);
 
   @include respond-to($mq-m) {
@@ -104,7 +104,7 @@
   };
 }
 
-.l-car-campaign__section--buy .l-car-campaign__section-row {
+.l-car-campaign__section--how-buy .l-car-campaign__section-row {
   @include row(12);
 
   @include respond-to($mq-m) {
@@ -116,7 +116,7 @@
   };
 }
 
-.l-car-campaign__section--buy .l-car-campaign__section-heading {
+.l-car-campaign__section--how-buy .l-car-campaign__section-heading {
   @include column(12,12);
 
   @include respond-to($mq-m) {
@@ -128,7 +128,7 @@
   };
 }
 
-.l-car-campaign__section--buy .l-car-campaign__section-text {
+.l-car-campaign__section--how-buy .l-car-campaign__section-text {
   @include column(12,12);
 
   @include respond-to($mq-m) {
@@ -140,7 +140,7 @@
   };
 }
 
-.l-car-campaign__section--buy .l-car-campaign__section-heading + .l-car-campaign__section-text {
+.l-car-campaign__section--how-buy .l-car-campaign__section-heading + .l-car-campaign__section-text {
   @include column(6,12);
   float: right;
 
@@ -154,7 +154,7 @@
   };
 }
 
-.l-car-campaign__section--buy .l-car-campaign__section-media {
+.l-car-campaign__section--how-buy .l-car-campaign__section-media {
   @include column(6,12);
 
   float: left;
@@ -197,7 +197,7 @@
 }
 
 // Running a car
-.l-car-campaign__section--run {
+.l-car-campaign__section--running {
   @include column(12);
   margin-bottom: $baseline-unit*11;
 
@@ -213,7 +213,7 @@
   };
 }
 
-.l-car-campaign__section--run .l-car-campaign__section-row {
+.l-car-campaign__section--running .l-car-campaign__section-row {
   @include row(12);
 
   @include respond-to($mq-m) {
@@ -225,7 +225,7 @@
   };
 }
 
-.l-car-campaign__section--run .l-car-campaign__section-media {
+.l-car-campaign__section--running .l-car-campaign__section-media {
   background: transparent 40px 100% image_url('car_campaign/run-car.png') no-repeat;
   float: left;
   min-height: 305px;
@@ -252,7 +252,7 @@
   };
 }
 
-.l-car-campaign__section--run .l-car-campaign__section-text {
+.l-car-campaign__section--running .l-car-campaign__section-text {
   @include column(12);
 
   @include respond-to($mq-m) {

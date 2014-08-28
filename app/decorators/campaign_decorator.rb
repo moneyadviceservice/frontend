@@ -9,6 +9,21 @@ class CampaignDecorator < Draper::CollectionDecorator
     I18n.t("#{name}.title")
   end
 
+  def description
+    I18n.t("#{name}.description")
+  end
+
+  def canonical_url
+    h.campaign_url(name)
+  end
+
+  def alternate_options
+    {
+      'en-GB' => h.campaign_path(id: name, locale: :en),
+      'cy-GB' => h.campaign_path(id: name, locale: :cy)
+    }
+  end
+
   def intro_html
     I18n.t("#{name}.intro_html").html_safe
   end

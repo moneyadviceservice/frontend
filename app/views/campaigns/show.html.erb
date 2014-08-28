@@ -1,4 +1,7 @@
-<% set_meta_tags(title: campaign.title) %>
+<% set_meta_tags(title:       campaign.title,
+                 description: campaign.description,
+                 canonical:   campaign.canonical_url,
+                 alternate:   campaign.alternate_options) %>
 
 <div class="l-car-campaign-page-bg"></div>
 

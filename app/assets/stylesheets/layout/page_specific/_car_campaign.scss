@@ -1,4 +1,3 @@
-// General
 .l-car-campaign {
   position: relative;
   z-index: 2;
@@ -8,14 +7,11 @@
   width: 100%;
 }
 
-.l-car-campaign__section .l-car-campaign__section-text {
-  h2 {
-    margin-top: 0;
-  }
+.l-car-campaign__section .l-car-campaign__section-text h2 {
+  margin-top: 0;
 }
 
-// Page BG
-.l-car-campaign-page-bg {
+.l-car-campaign-page-background {
   @include respond-to($mq-xl) {
     background: transparent 0 0 image_url('car_campaign/car-banner-grad-bg.png') repeat-x;
     height: 600px;
@@ -27,7 +23,6 @@
   };
 }
 
-// Banner
 .l-car-campaign__banner {
   background: transparent 50% 100% image_url('car_campaign/car-banner.jpg') no-repeat;
   background-size: cover;
@@ -42,7 +37,6 @@
   }
 }
 
-// Intro
 .l-car-campaign__section--intro {
   @include column(12);
 
@@ -85,11 +79,29 @@
     @include column(10);
     @include push(1);
   };
-
 }
 
+.l-car-campaign__trust-message {
+  @include column(12,12);
+  padding: $baseline-unit*3;
+  background-color: $breadcrumbs-background-color;
+  margin-bottom: $baseline-unit*3;
+  min-width: 350px;
 
-// Buying a car
+  @include respond-to(70.3125em){
+    @include column(6,12);
+    float: right;
+    margin-top: -$baseline-unit*7;
+  }
+
+  > h2 {
+    @extend %font-heading-heavy;
+    @include body(30, 36);
+    color: $color-heading-black;
+    margin-top: $baseline-unit*3;
+  }
+}
+
 .l-car-campaign__section--how-buy {
   @include column(12);
 

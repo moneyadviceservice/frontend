@@ -63,6 +63,15 @@
   }
 }
 
+.search__clear-button {
+  @extend .unstyled-button;
+  position: absolute;
+  bottom: 0;
+  right: 48px;
+  width: $baseline-unit*8;
+  height: $baseline-unit*8;
+}
+
 .search__submit--green {
   @include respond-to($mq-m) {
     background-color: $color-white;

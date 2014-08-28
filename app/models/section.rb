@@ -1,4 +1,6 @@
 class Section
+  include Enumerable
+
   attr_accessor :name, :articles
   private :name=, :articles=
 
@@ -6,5 +8,9 @@ class Section
     attributes.each do |name, value|
       send("#{name}=", value)
     end
+  end
+
+  def each(*args, &block)
+    articles.each(*args, &block)
   end
 end

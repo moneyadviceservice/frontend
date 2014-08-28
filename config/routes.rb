@@ -11,6 +11,11 @@ Rails.application.routes.draw do
     root 'home#show'
 
     if Feature.active?(:registration)
+      scope '/users' do
+        match '/', to: not_implemented, via: ['put', 'patch']
+        match '/edit', to: not_implemented, via: 'get'
+      end
+
       devise_for :users, only: [:registrations],
                  controllers:  { registrations: 'registrations' }
     else

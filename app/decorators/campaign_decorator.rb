@@ -24,6 +24,14 @@ class CampaignDecorator < Draper::CollectionDecorator
     }
   end
 
+  def footer_alternate_options
+    if I18n.locale == :en
+      { 'cy' => h.campaign_path(id: name, locale: :cy) }
+    else
+      { 'en' => h.campaign_path(id: name, locale: :en) }
+    end
+  end
+
   def intro_html
     I18n.t("#{name}.intro_html").html_safe
   end

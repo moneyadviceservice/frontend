@@ -39,6 +39,7 @@
 
 .l-car-campaign__section--intro {
   @include column(12);
+  margin-bottom: $baseline-unit*6;
 
   @include respond-to($mq-m) {
     @include column(10);
@@ -125,18 +126,6 @@
 
   @include respond-to($mq-l) {
     @include row(8);
-  };
-}
-
-.l-car-campaign__section--how-buy .l-car-campaign__section-heading {
-  @include column(12,12);
-
-  @include respond-to($mq-m) {
-    @include column(10,10);
-  };
-
-  @include respond-to($mq-l) {
-    @include column(8,8);
   };
 }
 

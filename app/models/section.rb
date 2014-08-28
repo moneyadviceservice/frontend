@@ -1,7 +1,7 @@
 class Section
   include Enumerable
 
-  attr_accessor :name, :articles
+  attr_accessor :name, :articles, :separator
   private :name=, :articles=
 
   def initialize(attributes = {})

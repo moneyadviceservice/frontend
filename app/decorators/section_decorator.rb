@@ -1,8 +1,12 @@
 class SectionDecorator < Draper::CollectionDecorator
-  delegate :name, :separator
+  delegate :name
 
   def decorator_class
     ArticleDecorator
+  end
+
+  def separator?
+    object.separator == true
   end
 
   def css_name

@@ -38,6 +38,10 @@ echo "Precompiling assets"
 echo "----"
 RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile
 
+echo "Uploading assets"
+echo "----"
+/usr/local/bin/upload-responsive-assets.sh $(pwd)/public
+
 echo "Creating RPM"
 echo "----"
 cd ..

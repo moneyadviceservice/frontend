@@ -2,14 +2,15 @@
  * Instead of using 2 javascript files hosted on webchat.moneyadviceservice.org.uk we are using a single local file
  * Originally the first file (invite.js) uses a document.write for the second file (include.js)
  * I have commented out the document.write - see the numbered comments below
- * 1. start copy of https://webchat.moneyadviceservice.org.uk/invite.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
- * 2. comment out document.write of include.js
- * 3. start copy of https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
+ * [1] start copy of https://webchat.moneyadviceservice.org.uk/invite.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
+ * [2] set sWOProtocol to 'https:'
+ * [3] comment out document.write of include.js
+ * [4] start copy of https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
  * */
 
 
 /*
-* 1. start copy of https://webchat.moneyadviceservice.org.uk/invite.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
+* [1] start copy of https://webchat.moneyadviceservice.org.uk/invite.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
 * */
 
 var sWOGateway = "webchat.moneyadviceservice.org.uk";
@@ -31,7 +32,7 @@ var sWOName = "";
 var sWOCompany = "";
 var sWOEmail = "";
 var sWOTelephone = "";
-var sWOProtocol = window.location.protocol;
+var sWOProtocol = "https:"; // [2] set sWOProtocol to https:
 var sWOImage = document.createElement('img');
 var sWOChatElement;
 var sWOSession;
@@ -108,14 +109,14 @@ function sWOTrackPage() {
   }
 
   /*
-   * 2. comment out document.write of include.js
+   * [3] comment out document.write of include.js
    * */
   //sWOUrl = sWOProtocol + "//" + sWOGateway + "/invite.js?domain=" + sWODomain;
   //if (sWOInvite == "Y") document.write("<sc" + "ript src='" + sWOUrl + "'><\/scr" + "ipt>");
 }
 
 /*
- * 3. start copy of https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
+ * [4] start copy of https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>
  * */
 
 var iWOGateway = 'https://webchat.moneyadviceservice.org.uk';

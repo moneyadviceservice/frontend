@@ -96,7 +96,6 @@
 <%= content_for :javascripts do %>
   <%= javascript_include_tag 'webchat.js' %>
   <script type='text/javascript'>
-    sWOProtocol = 'https:';
     sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
 
     sWOImageLoaded = function() {

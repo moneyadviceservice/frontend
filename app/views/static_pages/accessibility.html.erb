@@ -1,9 +1,13 @@
 <% set_meta_tags(title: 'Accessibility Statement') %>
 
 <% content_for(:editorial) do %>
-  <% if Feature.active?(:accessibility_statement) %>
-    <h1>Accessibility Statement</h1>
-  <% end %>
+  <main class="l-main__cell-double-primary" role="main">
+    <% if Feature.active?(:accessibility_statement) %>
+      <%= heading_tag 'Accessibility Statement' %>
+      <p>The Money Advice Service is committed to providing a website that is accessible to the widest possible audience, regardless of disability, capability or technology.</p>
+      <p>At the Money Advice Service we also routinely check web pages - when amendments are made to existing pages and when new pages are released - to ensure that they meet our accessibility requirements, and we do respond positively to feedback regarding the accessibility of any of our pages or services.</p>
+    <% end %>
+  </main>
 <% end %>
 
 <%= render template: '/static_pages/show' %>

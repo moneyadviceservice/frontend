@@ -1,7 +1,7 @@
 <div class="l-car-campaign__section l-car-campaign__section--<%= section.css_name %>">
   <div class="l-car-campaign__section-row">
     <div class="l-car-campaign__section-text">
-     <%= heading_tag campaign.section_title(section), level: 2, class: 'l-car-campaign__section-heading' %>
+      <%= heading_tag campaign.section_title(section), level: 2, class: 'l-car-campaign__section-heading' %>
       <p><%= campaign.section_intro(section) %></p>
     </div>
 
@@ -10,7 +10,7 @@
     <div class="l-car-campaign__section-text">
       <ul class="unstyled-list">
         <% section.each do |article| %>
-          <li><%= campaign.article_link(section, article) %></li>
+        <li><%= campaign.article_link(section, article) %></li>
         <% end %>
       </ul>
     </div>

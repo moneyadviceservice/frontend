@@ -1,0 +1,9 @@
+<% set_meta_tags(title: 'Accessibility Statement') %>
+
+<% content_for(:editorial) do %>
+  <% if Feature.active?(:accessibility_statement) %>
+    <h1>Accessibility Statement</h1>
+  <% end %>
+<% end %>
+
+<%= render template: '/static_pages/show' %>

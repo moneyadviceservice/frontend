@@ -46,6 +46,8 @@ module Core
       autoload :Creator, 'core/interactor/customer/creator'
       autoload :Updater, 'core/interactor/customer/updater'
     end
+
+    autoload :UserUpdater, 'core/interactor/user_updater'
   end
 
   module Registry
@@ -78,6 +80,7 @@ module Core
 
     module Customers
       autoload :Fake, 'core/repository/customers/fake'
+      autoload :Cream, 'core/repository/customers/cream'
     end
 
     module News
@@ -99,7 +102,7 @@ module Core
     end
 
     module Users
-      autoload :Fake, 'core/repository/users/fake'
+      autoload :Default, 'core/repository/users/default'
     end
   end
 end

@@ -12,6 +12,7 @@ gem 'rails', '~> 4.1'
 
 gem 'activerecord-session_store'
 gem 'aes'
+gem 'cream'
 gem 'devise'
 gem 'devise-encryptable'
 gem 'dough-ruby', '~> 3.0'

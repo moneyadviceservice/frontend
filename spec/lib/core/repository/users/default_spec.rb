@@ -1,17 +1,17 @@
-module Core
-  RSpec.describe Repository::Users::Fake do
-    describe '#update' do
-      context 'when customer_id is blank' do
-        subject{ described_class.new(User.new) }
+require 'spec_helper'
 
+module Core
+  RSpec.describe Repository::Users::Default do
+    describe '#update_from_crm' do
+      context 'when customer_id is blank' do
         it 'raises an exception' do
-          expect{ subject.call }.to raise_error
+          expect{ subject.update_from_crm(User.new) }.to raise_error
         end
       end
 
       context 'when customer does not exist in CRM' do
         let(:user){ FactoryGirl.create(:user) }
-        subject{ described_class.new(user) }
+        subject{ described_class.new }
 
         before :each do
           user
@@ -19,13 +19,13 @@ module Core
         end
 
         it 'raises an exception' do
-          expect{ subject.call }.to raise_error
+          expect{ subject.update_from_crm(user) }.to raise_error
         end
       end
 
       context 'when customer exists in CRM' do
         let(:user){ FactoryGirl.create(:user) }
-        subject{ described_class.new(user) }
+        subject{ described_class.new }
 
         before :each do
           user
@@ -41,7 +41,7 @@ module Core
           customer[:active] = 'true'
           # topics to be implemented
 
-          subject.call
+          subject.update_from_crm(user)
           user.reload
         end
 

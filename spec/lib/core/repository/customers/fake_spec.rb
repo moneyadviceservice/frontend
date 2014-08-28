@@ -11,47 +11,48 @@ module Core
 
       context 'when the customer exists' do
         before :each do
-          customer = Customer.new(nil, first_name: 'exists')
-          @customer_id = subject.create(customer)
+          user = User.new(first_name: 'exists')
+          @customer_id = subject.create(user)
         end
 
-        it { expect(subject.find(@customer_id)[:first_name]).to eql('exists') }
+        it { expect(subject.find(@customer_id).first_name).to eql('exists') }
       end
     end
 
     describe '#create' do
       it 'creates the customer' do
-        customer = Customer.new(nil, first_name: 'Phil')
-        subject.create(customer)
+        user = User.new(first_name: 'Phil')
+        subject.create(user)
 
         expect(subject.customers).to_not be_empty
       end
 
       it 'returns the customer id' do
-        customer = Customer.new(nil, first_name: 'Phil')
-        expect(subject.create(customer)).to match(/\Acustomer_(\d)*\z/)
+        user = User.new(first_name: 'Phil')
+        expect(subject.create(user)).to match(/\Acustomer_(\d)*\z/)
       end
 
       context 'when the customer already exists' do
         it 'throws an exception' do
-          customer = Customer.new(nil, first_name: 'Phil')
-          customer_id = subject.create(customer)
-          customer.send :id=, customer_id
+          user = User.new(first_name: 'Phil')
+          customer_id = subject.create(user)
+          user.customer_id = customer_id
 
-          expect{ subject.create(customer) }.to raise_error
+          expect{ subject.create(user) }.to raise_error
         end
       end
     end
 
     describe '#update' do
       it 'updates the customer' do
+        user = User.new(first_name: 'Phil')
         customer = Customer.new(nil, first_name: 'Phil')
-        customer_id = subject.create(customer)
+        customer_id = subject.create(user)
 
         customer = Customer.new(customer_id, first_name: 'Philip')
         subject.update(customer)
 
-        expect(subject.find(customer_id)[:first_name]).to eql('Philip')
+        expect(subject.find(customer_id).first_name).to eql('Philip')
       end
 
       context 'when the customer does not exist' do
@@ -66,8 +67,9 @@ module Core
     describe '#valid_for_authentication?' do
       context 'when customer exists' do
         it 'returns true' do
+          user = User.new(first_name: 'Phil')
           customer = Customer.new(nil, first_name: 'Phil')
-          customer_id = subject.create(customer)
+          customer_id = subject.create(user)
 
           expect(subject.valid_for_authentication?(customer_id)).to be_truthy
         end

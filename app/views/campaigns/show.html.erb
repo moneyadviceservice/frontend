@@ -15,7 +15,7 @@
       </header>
     </div>
 
-    <% if local_assigns.fetch(:show_car_costs_calculator_cta) { true } %>
+    <% if campaign.cost_calculator_link? %>
       <%= campaign.cost_calculator_link %>
     <% end %>
   </div>

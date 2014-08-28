@@ -2,8 +2,8 @@ module CampaignPage
   class Campaign
     include Enumerable
 
-    attr_accessor :name, :sections
-    private :name=, :sections=
+    attr_accessor :name, :sections, :cost_calculator_link
+    private :name=, :sections=, :cost_calculator_link=
 
     def initialize(attributes = {})
       attributes.each do |name, value|

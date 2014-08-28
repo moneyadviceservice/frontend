@@ -1,10 +1,10 @@
---- !ruby/object:Campaign
+--- !ruby/object:CampaignPage::Campaign
 name: myname
 sections:
-- !ruby/object:Section
+- !ruby/object:CampaignPage::Section
   name: how_buy
   articles:
-  - !ruby/object:Article
+  - !ruby/object:CampaignPage::Article
     name: articlename
-  - !ruby/object:Article
+  - !ruby/object:CampaignPage::Article
     namme: otherarticle_name

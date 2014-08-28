@@ -1,7 +1,7 @@
 if Rails.env.development?
-  require_dependency 'campaign'
-  require_dependency 'section'
-  require_dependency 'article'
+  require_dependency 'campaign_page/campaign'
+  require_dependency 'campaign_page/section'
+  require_dependency 'campaign_page/article'
 end
 
 class Template

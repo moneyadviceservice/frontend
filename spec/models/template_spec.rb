@@ -1,6 +1,6 @@
-require 'campaign'
-require 'section'
-require 'article'
+require 'campaign_page/campaign'
+require 'campaign_page/section'
+require 'campaign_page/article'
 
 RSpec.describe Template do
   let(:id) { 'revealed-the-true-cost-of-buying-a-car' }
@@ -12,7 +12,7 @@ RSpec.describe Template do
   describe '#build_campaign' do
     subject(:plan) { template.build_campaign(id) }
 
-    it { is_expected.to be_an_instance_of(Campaign) }
+    it { is_expected.to be_an_instance_of(CampaignPage::Campaign) }
 
     context 'when template is not found' do
       let(:id) { 'fake-id' }

@@ -1,0 +1,21 @@
+<div class="l-car-campaign__section l-car-campaign__section--<%= section %>">
+  <div class="l-car-campaign__section-row">
+    <div class="l-car-campaign__section-text">
+     <%= heading_tag campaign.section_title(section), level: 2, class: 'l-car-campaign__section-heading' %>
+      <p><%= campaign.section_intro(section) %></p>
+    </div>
+
+    <div class="l-car-campaign__section-media"></div>
+
+    <div class="l-car-campaign__section-text">
+      <ul class="unstyled-list">
+        <% section.each do |article| %>
+          <li><%= campaign.article_link(section, article) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<% if false %>
+<div class="l-car-campaign__section-separator"></div>
+<% end %>

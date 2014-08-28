@@ -1,6 +1,8 @@
 class CarCampaignsController < ApplicationController
+  decorates_assigned :campaign, with: CampaignDecorator
+
   def show
-     @campaign = Template.new.build_campaign(params[:id])
+    @campaign = Template.new.build_campaign(params[:id])
   end
 
   def display_menu_button_in_header?

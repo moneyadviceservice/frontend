@@ -1,20 +1,21 @@
-<%
-   meta_tags = {
-     canonical: campaigns_revealed_the_true_cost_of_buying_a_car_url(locale: :en),
-     alternate: {
-       en: campaigns_revealed_the_true_cost_of_buying_a_car_url(locale: :en),
-       cy: campaigns_edrychwch_cost_gwirioneddol_prynu_car_url(locale: :cy)
-     }
-   }.merge(t('.meta_tags'))
+<% set_meta_tags(title: campaign.title) %>
 
-   set_meta_tags(meta_tags)
-%>
+<div class="l-car-campaign-page-bg"></div>
 
-<% content_for(:alternate_link) do %>
-  <%= link_to(campaigns_edrychwch_cost_gwirioneddol_prynu_car_url(locale: :cy), lang: :cy) do %>
-    <span class="icon icon--globe"></span>
-    <%= t('locales.cy') %>
-  <% end %>
-<% end %>
+<div class="l-car-campaign editorial">
+  <div class="l-car-campaign__banner"></div>
+  <div class="l-car-campaign__section l-car-campaign__section--intro">
+    <div class="l-car-campaign__section-text">
+      <header>
+        <%= heading_tag campaign.title %>
+        <p class="intro"><%= campaign.intro_html %></p>
+      </header>
+    </div>
 
-<%= render 'content' %>
+    <% if local_assigns.fetch(:show_car_costs_calculator_cta) { true } %>
+      <%= campaign.cost_calculator_link %>
+    <% end %>
+  </div>
+
+  <%= render partial: 'section', collection: campaign %>
+</div>

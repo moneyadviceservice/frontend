@@ -94,9 +94,10 @@
 </div>
 
 <%= content_for :javascripts do %>
-  <script type='text/javascript' src='https://webchat.moneyadviceservice.org.uk/include.js?domain=<%= ENV['WEBCHAT_DOMAIN'] %>'></script>
+  <%= javascript_include_tag 'webchat.js' %>
   <script type='text/javascript'>
     sWOProtocol = 'https:';
+    sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
 
     sWOImageLoaded = function() {
 

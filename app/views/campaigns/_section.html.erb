@@ -5,7 +5,17 @@
       <p><%= section.intro %></p>
     </div>
 
-    <div class="l-car-campaign__section-media"></div>
+    <% if section.trust_message? %>
+      <div class="l-car-campaign__trust-message">
+        <div class="logo logo--green">
+          <span class="visually-hidden">section.hidden_logo_message </span>
+        </div>
+        <%= heading_tag section.trust_title, level: 2 %>
+        <%= section.trust_content %>
+      </div>
+    <% else %>
+      <div class="l-car-campaign__section-media"></div>
+    <% end %>
 
     <div class="l-car-campaign__section-text">
       <ul class="unstyled-list">

@@ -10,7 +10,7 @@ module Referer
 
     uri = URI.parse(http_referer)
 
-    return nil unless uri.host.match internal_domain_regexp
+    return nil unless uri.host.match(internal_domain_regexp)
 
     uri.to_s
   rescue

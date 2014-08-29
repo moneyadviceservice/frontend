@@ -27,7 +27,7 @@ Make sure all dependencies are available to the application:
 
 ```sh
 $ bundle install
-$ bower install
+$ bowndler install
 ```
 
 ## Usage

@@ -44,5 +44,15 @@ RSpec.describe Referer, :type => :controller do
         expect(controller.referer).to be_nil
       end
     end
+
+    context 'when referer is dodgee' do
+      it 'returns nil' do
+        referer = 'foo'
+        request.env["HTTP_REFERER"] = referer
+        get :index
+
+        expect(controller.referer).to be_nil
+      end
+    end
   end
 end

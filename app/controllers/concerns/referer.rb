@@ -13,6 +13,8 @@ module Referer
     return nil unless uri.host.match internal_domain_regexp
 
     uri.to_s
+  rescue
+    nil
   end
 
   private

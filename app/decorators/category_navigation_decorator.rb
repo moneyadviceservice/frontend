@@ -1,9 +1,9 @@
 class CategoryNavigationDecorator < Draper::Decorator
   def path
     if id == 'news'
-      h.url_for('/%s/news' % I18n.locale)
+      h.main_app.url_for('/%s/news' % I18n.locale)
     else
-      h.category_path(id)
+      h.main_app.category_path(id)
     end
   end
 

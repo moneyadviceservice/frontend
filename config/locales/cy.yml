@@ -80,6 +80,16 @@ cy:
             suggestions:
               occurred: Os gwelwch yn dda rhowch rhagor o fanylion
 
+  activerecord:
+    attributes:
+      user:
+        first_name: "Enw Cyntaf"
+        email: "Cyfeiriad E-bost"
+        password: "Cyfrinair"
+        post_code: "Cod post"
+        newsletter: "Cofrestrwch i gael y cylchlythyr"
+        register_button: "Cofrestru"
+
   contact:
     heading: Methu canfod beth sydd ei angen arnoch chi?
     introduction: Mae ein staff hyfforddedig wrth law i helpu
@@ -283,6 +293,37 @@ cy:
     sign_out: Cofnodi Allan
     register: Cofrestru
     my_account: Fy nghyfrif
+    mandatory_warning: Mae pob maes yn ofynnol
+    links:
+      sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
+    registration:
+      title: Cofrestrwch i wneud y mwyaf o'ch arian
+      intro_html: "Rydym yn cynnig cyngor am ddim a diduedd a chawsom ein sefydlu gan y llywodraeth. Pan fyddwch yn cofrestru, cedwir eich gwybodaeth yn gyfrinachol. Am ragor o wybodaeth, gweler ein <a href=\"%{url}\">polisi preifatrwydd</a>."
+      terms_html: "Wrth glicio ar 'Cofrestru', byddwch yn cytuno a'n <a href=\"%{url}\">Hamodau a Thelerau</a>."
+      label: Cofrestru
+      field_help_texts:
+        first_name: Rhowch eich enw cyntaf
+        email: "Rydym angen eich cyfeiriad e-bost er mwyn i chi gofrestru"
+        password: "Rhowch gyfrinair er mwyn cadw'ch gwybodaeth yn breifat"
+        postcode: "Rhowch god post dilys o'r DU"
+      newsletter:
+        title: Cyngor ariannol i chi
+        intro: "Gallwn roi cymorth gyda..."
+        benefits:
+          - Cyllidebu ar incwm isel
+          - Gosod eich nodau ariannol personol eich hun
+          - Y gwir gost o redeg car
+          - Sut i fforddio prynu cartref
+    sign_in_page:
+      title: Mewngofnodi
+      label: Mewngofnodi
+      links:
+        register_title: "Heb gofrestru gyda ni?"
+        register_html: "Gwneud y mwyaf o'ch arian wrth <a href=\"%{url}\">gofrestru gyda'r Gwasanaeth Cynghori Ariannol</a>."
+      field_help_texts:
+        email: "Rhowch eich e-bost a ddefnyddiwyd wrth gofrestru"
+        password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
+      forgot_password: "Wedi anghofio cyfrinair?"
 
   technical_feedbacks:
     new:

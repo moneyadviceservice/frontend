@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-  skip_before_action :store_location
+  before_action :store_pre_auth_location, only: [:new]
 
   def new
     # This method is mostly copied devise code
@@ -11,6 +11,10 @@ class SessionsController < Devise::SessionsController
   end
 
   private
+
+  def store_pre_auth_location
+    session[:pre_auth_location] = referer
+  end
 
   def after_sign_in_path_for(resource)
     last_known_path_or_root_path
@@ -28,6 +32,6 @@ class SessionsController < Devise::SessionsController
   end
 
   def last_known_path_or_root_path
-    session[:user_return_to] || root_path
+    session[:pre_auth_location] || root_path
   end
 end

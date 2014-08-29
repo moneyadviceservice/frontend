@@ -71,7 +71,7 @@
     background-position: 50% 50%;
     background-size: 90%;
     height: 125px;
-    margin-bottom: $baseline-unit*9;
+    margin-bottom: $baseline-unit*18;
     margin-top: $baseline-unit*7;
     padding-bottom: 0;
   }
@@ -92,7 +92,7 @@
   @include respond-to(70.3125em) {
     @include column(6, 12);
     float: right;
-    margin-bottom: $baseline-unit*10;
+    margin-bottom: $baseline-unit*18;
   }
 
   > h2 {
@@ -242,7 +242,7 @@
       background-position: top left;
       background-size: contain;
       float: left;
-      margin-top: $baseline-unit*14;
+      margin-top: -$baseline-unit*8;
       padding-right: 30px;
     }
 

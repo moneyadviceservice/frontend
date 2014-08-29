@@ -1,4 +1,3 @@
-@enable-pensions-calculator
 Feature: View the Pensions Calculator
   As a visitor to the website
   I want to view the Pensions Calculator

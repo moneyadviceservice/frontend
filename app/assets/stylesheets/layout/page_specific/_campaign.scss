@@ -92,7 +92,7 @@
   @include respond-to(70.3125em){
     @include column(6,12);
     float: right;
-    margin-top: -$baseline-unit*7;
+    margin-bottom: $baseline-unit*10;
   }
 
   > h2 {
@@ -210,7 +210,7 @@
   @include respond-to($mq-l) {
     @include column(9);
     @include push(1);
-    margin-bottom: $baseline-unit*17;
+    margin-bottom: $baseline-unit*10;
   };
 }
 

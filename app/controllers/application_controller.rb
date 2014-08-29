@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success
 
   include Authentication
+  include Referer
   include Chat
   include Localisation
 

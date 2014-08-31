@@ -1,4 +1,16 @@
 <ul class="authentication <% unless display_search_box_in_header? %>l-authentication<% end %>">
+  <li class="authentication__item authentication__item--language">
+    <% if content_for?(:alternate_link) %>
+      <%= yield(:alternate_link) %>
+    <% else %>
+      <% locals.each do |locale| %>
+        <%= link_to({ locale: locale }, { id: "#{locale}Link", lang: locale, :class => 'authentication__link' }) do %>
+          <%= t("locales.#{locale}") %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </li>
+
   <% if user_signed_in? %>
     <li class="authentication__item">
       <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path,

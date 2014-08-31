@@ -52,7 +52,7 @@
 }
 
 .language-link {
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: none;
   }
 

@@ -23,7 +23,7 @@
     @include column(4);
     display: none;
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       display: block;
     }
   }
@@ -56,6 +56,7 @@
 
     @include respond-to($mq-m) {
       @include column(4);
+      @include push(4);
       border: 0;
       background-color: transparent;
       padding: 0;
@@ -67,6 +68,10 @@
         border: 0;
         border-radius: $baseline-unit/2;
       }
+    }
+
+    @include respond-to($mq-l) {
+      @include push(0);
     }
   }
 

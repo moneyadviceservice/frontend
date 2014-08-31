@@ -8,7 +8,7 @@
 
     <%= render 'shared/mobile_nav' %>
 
-    <%= render 'shared/authentication' %>
+    <%= render 'shared/authentication', locals: alternate_locales %>
 
     <% if display_search_box_in_header? %>
       <div class="l-search" id="search-bar">

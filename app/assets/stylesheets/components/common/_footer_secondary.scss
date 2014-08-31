@@ -45,10 +45,22 @@
   }
 }
 
-.language-link .icon--globe {
-  position: relative;
-  top: 4px;
-  margin-right: 4px;
+.authentication-link {
+  @include respond-to($mq-l) {
+    display: none;
+  }
+}
+
+.language-link {
+  @include respond-to($mq-l) {
+    display: none;
+  }
+
+  & .icon--globe {
+    position: relative;
+    top: 4px;
+    margin-right: 4px;
+  }
 }
 
 .accessibility-feedback-link .icon--accessibility {

@@ -7,10 +7,15 @@
 
   .search__input {
     @extend %font-body;
+    @include body(14,14);
     height: $baseline-unit*8;
-    padding-left: $baseline-unit*2;
+    padding: 0 46px 0 $baseline-unit*2;
     border: 1px solid $color-bluegrey-light;
     line-height: 1;
+
+    &:focus {
+      outline-offset: initial;
+    }
 
     &::-webkit-input-placeholder {
       color: $color-search-text;
@@ -51,7 +56,7 @@
   &:hover,
   &:focus {
     outline: 0;
-    background-color: $color-green-secondary;
+    background-color: $color-header-buttons;
 
     .icon--search {
       @include search-icon-colour(white);
@@ -62,12 +67,12 @@
 
 .search__submit--green {
   @include respond-to($mq-m) {
-    background-color: $color-header-buttons;
+    background-color: $color-white;
     border-bottom-right-radius: $baseline-unit/2;
     border-top-right-radius: $baseline-unit/2;
 
     .icon--search {
-      @include search-icon-colour(white);
+      @include search-icon-colour(green);
     }
   }
 }

@@ -83,16 +83,23 @@
 }
 
 .l-campaign__trust-message {
-  @include column(12, 12);
+  display: none;
   padding: $baseline-unit*3;
   background-color: $breadcrumbs-background-color;
+  margin-top: -$baseline-unit*3;
   margin-bottom: $baseline-unit*3;
   min-width: 350px;
 
-  @include respond-to(70.3125em) {
-    @include column(6, 12);
-    float: right;
+  @include respond-to($mq-m) {
+    @include column(10);
+    @include push(1);
+    display: block;
     margin-bottom: $baseline-unit*18;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    @include push(2);
   }
 
   > h2 {
@@ -168,16 +175,16 @@
       @include column(4, 8);
       float: right;
       min-height: inherit;
-      margin-top: -$baseline-unit*10;
+      margin-top: -$baseline-unit*5;
       padding-left: 30px;
     }
 
     &:before {
-      background: transparent top center image_url('car_campaign/buy-car.png') no-repeat;
+      background: transparent top center image_url('car_campaign/sell-car.png') no-repeat;
       background-size: contain;
       content: '';
       display: block;
-      min-height: 280px;
+      min-height: 220px;
       width: 100%;
 
       @include respond-to($mq-m) {
@@ -315,7 +322,7 @@
     }
 
     &:before {
-      background: transparent -162px 0 image_url('car_campaign/sell-car.png') no-repeat;
+      background: transparent -162px 0 image_url('car_campaign/buy-car.png') no-repeat;
       background-size: cover;
       content: '';
       display: block;

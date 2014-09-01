@@ -21,6 +21,16 @@
     <% end %>
   </div>
 
+  <% if campaign.trust_message? %>
+    <div class="l-campaign__trust-message">
+      <div class="logo logo--green">
+        <span class="visually-hidden"><%= campaign.hidden_logo_message %> </span>
+      </div>
+      <%= heading_tag campaign.trust_title, level: 2 %>
+      <%= campaign.trust_content %>
+    </div>
+  <% end %>
+
   <%= render partial: 'section', collection: campaign %>
 </div>
 

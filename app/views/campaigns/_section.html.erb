@@ -5,17 +5,7 @@
       <p><%= section.intro %></p>
     </div>
 
-    <% if section.trust_message? %>
-      <div class="l-campaign__trust-message">
-        <div class="logo logo--green">
-          <span class="visually-hidden">section.hidden_logo_message </span>
-        </div>
-        <%= heading_tag section.trust_title, level: 2 %>
-        <%= section.trust_content %>
-      </div>
-    <% else %>
-      <div class="l-campaign__section-media"></div>
-    <% end %>
+    <div class="l-campaign__section-media"></div>
 
     <div class="l-campaign__section-text">
       <ul class="unstyled-list">
@@ -24,6 +14,7 @@
     </div>
   </div>
 </div>
+
 <% if section.separator? %>
-<div class="l-campaign__section-separator"></div>
+  <div class="l-campaign__section-separator"></div>
 <% end %>

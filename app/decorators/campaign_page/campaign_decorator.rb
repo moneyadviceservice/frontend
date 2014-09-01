@@ -45,6 +45,22 @@ module CampaignPage
       I18n.t("#{name}.intro_html").html_safe
     end
 
+    def trust_message?
+      I18n.t("#{name}.trust_message", default: '').present?
+    end
+
+    def hidden_logo_message
+      I18n.t("#{name}.trust_message.hidden_logo")
+    end
+
+    def trust_title
+      I18n.t("#{name}.trust_message.title")
+    end
+
+    def trust_content
+      I18n.t("#{name}.trust_message.content_html").html_safe
+    end
+
     def button_content
       I18n.t("#{name}.button_content")
     end

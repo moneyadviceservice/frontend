@@ -30,6 +30,12 @@ $ bundle install
 $ bowndler install
 ```
 
+Setup the database:
+
+```sh
+bundle exec rake db:create && bundle exec rake db:schema:load
+```
+
 ## Usage
 
 To start the application:

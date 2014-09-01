@@ -46,6 +46,7 @@ Rails.application.configure do
                                    eventsWithPromises/src/eventsWithPromises.js
                                    rsvp/rsvp.amd.js
                                    requirejs/require.js
-                                   modernizer-flexbox-cssclasses.js)
+                                   modernizer-flexbox-cssclasses.js
+                                   webchat.js)
 end
 

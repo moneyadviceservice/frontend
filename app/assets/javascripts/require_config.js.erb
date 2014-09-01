@@ -27,7 +27,7 @@
   end
 
   requirejs_config = {
-    baseUrl: (Rails.application.config.action_controller.asset_host.try(:call) || '') + \
+    baseUrl: (Rails.application.config.action_controller.asset_host || '') + \
       Rails.application.config.assets.prefix,
     paths: {
       # Translation JSON files

@@ -1,5 +1,6 @@
 require_relative '../lib/tool_mount_point/base'
 require_relative '../lib/tool_mount_point/pensions_calculator'
+require_relative '../lib/tool_mount_point/budget_planner'
 
 module ToolMountPoint
 

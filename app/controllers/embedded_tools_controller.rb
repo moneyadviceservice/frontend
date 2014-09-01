@@ -1,10 +1,10 @@
 class EmbeddedToolsController < ApplicationController
 
-  def parent_template
+protected
+
+  helper_method def parent_template
     'layouts/engine'
   end
-
-  helper_method :parent_template
 
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
@@ -47,9 +47,7 @@ class EmbeddedToolsController < ApplicationController
   end
 
   def engine_name
-    if self.class.parent == PensionsCalculator
-      :pensions_calculator
-    end
+    self.class.parent.name.underscore
   end
 
   def alternate_locale

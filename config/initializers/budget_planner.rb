@@ -1,7 +1,10 @@
-module BudgetPlanner
-  CommitBudgetCommand = Struct.new(:wip_budget_id, :step_name)
+BudgetPlanner.parent_controller = '::BudgetPlannerController'
+BudgetPlanner.url_ids.merge!({en: 'budget-planner'})
+BudgetPlanner.url_ids.merge!({cy: 'cynllunydd-cyllideb'})
+BudgetPlanner.enable_short_form = true
+BudgetPlanner.enable_new_start_page = true
+BudgetPlanner.enable_long_form_in_place_validation = true
+BudgetPlanner.enable_bp3_spreadsheet = true
 
-  def self.const_missing(name)
-    const_set(name, Class.new)
-  end
-end
+BudgetPlanner.feedback = {}
+BudgetPlanner.enable_feedback = false

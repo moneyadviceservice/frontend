@@ -112,6 +112,7 @@
 
 .l-campaign__section--how-buy {
   @include column(12);
+  margin-bottom: $baseline-unit*11;
 
   @include respond-to($mq-m) {
     @include column(10);
@@ -322,8 +323,8 @@
     }
 
     &:before {
-      background: transparent -162px 0 image_url('car_campaign/buy-car.png') no-repeat;
-      background-size: cover;
+      background: transparent 0 0 image_url('car_campaign/buy-car.png') no-repeat;
+      background-size: contain;
       content: '';
       display: block;
       height: 570px;
@@ -332,7 +333,6 @@
 
       @include respond-to($mq-s) {
         background-position: center top;
-        background-size: contain;
         height: auto;
         min-height: 500px;
       }

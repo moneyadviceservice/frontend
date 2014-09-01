@@ -190,7 +190,7 @@
 
       @include respond-to($mq-m) {
         background-position: top right;
-        min-height: 500px;
+        min-height: 400px;
       }
     }
 
@@ -250,7 +250,7 @@
       background-position: top left;
       background-size: contain;
       float: left;
-      margin-top: -$baseline-unit*8;
+      // margin-top: -$baseline-unit*8;
       padding-right: 30px;
     }
 
@@ -338,7 +338,7 @@
       }
 
       @include respond-to($mq-l) {
-        min-height: 600px;
+        min-height: 500px;
         left: -40px;
       }
 

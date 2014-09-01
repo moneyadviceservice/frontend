@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
+    get 'blank', to: 'home#blank'
 
     if Feature.active?(:registration)
       scope '/users' do

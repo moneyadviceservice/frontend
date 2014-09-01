@@ -4,6 +4,10 @@ class HomeController < ApplicationController
 
   end
 
+  def blank
+  	
+  end
+
   def display_menu_button_in_header?
     false
   end

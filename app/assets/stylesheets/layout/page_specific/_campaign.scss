@@ -182,7 +182,6 @@
 
     &:before {
       background: transparent top center image_url('car_campaign/sell-car.png') no-repeat;
-      background-size: contain;
       content: '';
       display: block;
       min-height: 220px;
@@ -199,6 +198,7 @@
       padding-left: 0;
 
       &:before {
+        height: 300px;
         width: 330px;
       }
     }
@@ -250,7 +250,6 @@
       background-position: top left;
       background-size: contain;
       float: left;
-      // margin-top: -$baseline-unit*8;
       padding-right: 30px;
     }
 

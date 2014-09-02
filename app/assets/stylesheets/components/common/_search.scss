@@ -15,6 +15,7 @@
 
     &:focus {
       outline-offset: initial;
+      padding-right: 96px;
     }
 
     &::-webkit-input-placeholder {
@@ -63,13 +64,23 @@
   }
 }
 
-.search__clear-button {
+.search__clear {
   @extend .unstyled-button;
   position: absolute;
   bottom: 0;
-  right: 48px;
+  right: 50px;
   width: $baseline-unit*8;
   height: $baseline-unit*8;
+  background-color: $color-white;
+
+  & .icon--clear {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.search__input:not(:valid) ~ .search__clear {
+  display: none;
 }
 
 .search__submit--green {

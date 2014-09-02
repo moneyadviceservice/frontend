@@ -1,8 +1,9 @@
 <form action="<%= main_app.search_results_path %>" method="get" role="search" class="search">
   <label class="visually-hidden" for="search"><%= t('search_box.label') %></label>
-  <input class="search__input" id="search" type="search" name="query" value="<%= params[:query] %>" placeholder="<%= t('search_box.placeholder') %>" />
+  <input class="search__input" id="search" required type="search" name="query" value="<%= params[:query] %>"
+    placeholder="<%= t('search_box.placeholder') %>" />
 
-  <button class="search__clear-button">
+  <button type="reset" class="search__clear">
     <span class="icon icon--clear"></span>
     <span class="visually-hidden">clear the search field</span>
   </button>

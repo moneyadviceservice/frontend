@@ -1,0 +1,52 @@
+--- !ruby/object:CampaignPage::Campaign
+name: revealed-the-true-cost-of-buying-a-car
+cost_calculator_link: true
+sections:
+- !ruby/object:CampaignPage::Section
+  name: how_buy
+  separator: true
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-find-the-right-car-for-your-budget"
+  - !ruby/object:CampaignPage::Article
+    name: "car-finance-explained"
+  - !ruby/object:CampaignPage::Article
+    name: "making-sure-you-can-meet-your-car-payments"
+  - !ruby/object:CampaignPage::Article
+    name: "where-to-buy-a-new-car"
+  - !ruby/object:CampaignPage::Article
+    name: "where-to-buy-a-used-car"
+  - !ruby/object:CampaignPage::Article
+    name: "when-to-buy-a-car"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-negotiate-when-buying-a-car"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-test-drive-and-check-a-new-car"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-test-drive-and-check-a-used-car"
+- !ruby/object:CampaignPage::Section
+  name: running
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "your-rights-if-something-is-wrong-with-your-car"
+  - !ruby/object:CampaignPage::Article
+    name: "mot-test-explained"
+  - !ruby/object:CampaignPage::Article
+    name: "cut-your-car-finance-hire-purchase-and-other-finance-costs"
+  - !ruby/object:CampaignPage::Article
+    name: "running-a-car-as-a-young-driver"
+  - !ruby/object:CampaignPage::Article
+    name: "managing-without-a-car"
+- !ruby/object:CampaignPage::Section
+  name: sell
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "selling-your-car"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-sell-your-car-privately"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-prepare-your-car-for-sale"
+  - !ruby/object:CampaignPage::Article
+    name: "negotiating-when-selling-your-car"
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-dispose-of-an-old-car"

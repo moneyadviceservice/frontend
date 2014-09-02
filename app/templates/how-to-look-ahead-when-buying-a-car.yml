@@ -1,0 +1,25 @@
+--- !ruby/object:CampaignPage::Campaign
+name: how-to-look-ahead-when-buying-a-car
+cost_calculator_link: false
+sections:
+- !ruby/object:CampaignPage::Section
+  name: how_buy
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "how-to-find-the-right-car-for-your-budget"
+  - !ruby/object:CampaignPage::Article
+    name: "car-finance-explained"
+- !ruby/object:CampaignPage::Section
+  name: running
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "cut-your-car-finance-hire-purchase-and-other-finance-costs"
+  - !ruby/object:CampaignPage::Article
+    name: "your-rights-if-something-is-wrong-with-your-car"
+- !ruby/object:CampaignPage::Section
+  name: sell
+  articles:
+  - !ruby/object:CampaignPage::Article
+    name: "working-out-a-repayment-plan-for-money-you-are-borrowing"
+  - !ruby/object:CampaignPage::Article
+    name: "good-car-insurance-policy"

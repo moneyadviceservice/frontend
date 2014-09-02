@@ -16,7 +16,7 @@ module Frontend
     config.session_store :active_record_store
 
     config.filter_parameters += [:password]
-    config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', 'car_campaigns', '*.yml').to_s]
+    config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', '**/*', '*.yml').to_s]
 
     config.crazy_egg_url         = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
     config.google_tag_manager_id = 'GTM-WVFLH9'

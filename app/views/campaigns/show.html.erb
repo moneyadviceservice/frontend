@@ -1,0 +1,44 @@
+<% set_meta_tags(title:       campaign.title,
+                 description: campaign.description,
+                 canonical:   campaign.canonical_url,
+                 alternate:   campaign.alternate_options) %>
+
+<div class="l-campaign-page-background"></div>
+
+<div class="l-campaign editorial">
+  <div class="l-campaign__banner"></div>
+
+  <div class="l-campaign__section l-campaign__section--intro">
+    <div class="l-campaign__section-text">
+      <header>
+        <%= heading_tag campaign.title %>
+        <%= campaign.intro_html %>
+      </header>
+    </div>
+
+    <% if campaign.cost_calculator_link? %>
+      <%= campaign.cost_calculator_link %>
+    <% end %>
+  </div>
+
+  <% if campaign.trust_message? %>
+    <div class="l-campaign__trust-message">
+      <div class="logo logo--green">
+        <span class="visually-hidden"><%= campaign.hidden_logo_message %> </span>
+      </div>
+      <%= heading_tag campaign.trust_title, level: 2 %>
+      <%= campaign.trust_content %>
+    </div>
+  <% end %>
+
+  <%= render partial: 'section', collection: campaign %>
+</div>
+
+<% content_for(:alternate_link) do %>
+  <% campaign.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, id: "#{locale}Link", lang: locale, class: 'footer-secondary__link') do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

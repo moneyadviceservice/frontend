@@ -23,7 +23,8 @@
   border-right: 0;
 }
 
-.authentication__link {
+.authentication__link,
+.authentication__item > a {
   @extend .unstyled-button;
   @include body(14, 14);
 

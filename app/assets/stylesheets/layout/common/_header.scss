@@ -28,6 +28,12 @@
     }
   }
 
+  .language-link {
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
+
   .authentication__item {
     display: none;
 
@@ -36,13 +42,14 @@
     }
   }
 
-  .authentication__item--language {
+  .l-language-link {
     @include respond-to($mq-m) {
       @include inline-block;
     }
   }
 
-  .authentication__link {
+  .authentication__link,
+  .authentication__item > a {
     @extend %font-heading-medium;
     color: $color-white;
 
@@ -55,6 +62,10 @@
     @include respond-to($mq-m) {
       @include column(8);
     }
+  }
+
+  .icon--globe {
+    display: none;
   }
 
   .search {

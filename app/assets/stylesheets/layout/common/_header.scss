@@ -81,7 +81,6 @@
 
     @include respond-to($mq-m) {
       @include column(4);
-      // @include push(4);
       border: 0;
       background-color: transparent;
       padding: 0;

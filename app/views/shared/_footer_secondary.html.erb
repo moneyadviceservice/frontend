@@ -3,13 +3,15 @@
 
     <div class="l-footer-secondary__list--left">
       <ul class="footer-secondary__list">
-        <li class="footer-secondary__list-item language-link">
+
+        <li class="footer-secondary__list-item l-language-link">
           <% if content_for?(:alternate_link) %>
             <%= yield(:alternate_link) %>
           <% else %>
             <% locals.each do |locale| %>
-              <%= link_to({ locale: locale }, { id: "#{locale}Link", lang: locale, :class => 'footer-secondary__link' }) do %>
-                <span class="icon icon--globe"></span><%= t("locales.#{locale}") %>
+              <%= link_to({ locale: locale }, { lang: locale, :class => "t-#{locale}-link" }) do %>
+                <span class="icon icon--globe"></span>
+                <%= t("locales.#{locale}") %>
               <% end %>
             <% end %>
           <% end %>
@@ -25,11 +27,25 @@
             <span class="visually-hidden"><%= t('footer_secondary.hidden_accessibility') %></span>
           </a>
         </li>
+
       </ul>
     </div>
 
     <div class="l-footer-secondary__list--right">
       <ul class="footer-secondary__list">
+
+        <li class="footer-secondary__list-item l-footer-authentication-link">
+          <% if user_signed_in? %>
+            <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
+            <span class="footer-site-links__pipe">|</span>
+            <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link footer-secondary__link' %>
+          <% else %>
+            <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>
+            <span class="authentication__item-divider">|</span>
+            <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link footer-secondary__link' %>
+          <% end %>
+        </li>
+
         <% if display_opt_out_link_in_footer? %>
           <li class="footer-secondary__list-item">
             <%= form_tag(main_app.beta_opt_out_path) do %>
@@ -40,6 +56,7 @@
             <% end %>
           </li>
         <% end %>
+
         <li class="footer-secondary__list-item">
           <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
         </li>

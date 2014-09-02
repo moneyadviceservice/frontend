@@ -1,25 +1,40 @@
 .authentication {
   @extend .unstyled-list;
   text-align: right;
-  margin-top: 23px;
+  margin-top: 22px;
 }
 
 .authentication__item {
   @include inline-block;
-  padding: 0 0 0 $baseline-unit*4;
+  margin-right: -4px;
+  line-height: 1;
+
+  @include respond-to($mq-l) {
+    padding: 0 $baseline-unit*2;
+    border-right: 1px solid $color-primary-nav;
+  }
 
   .theme-cy & {
     padding-left: $baseline-unit*2;
   }
 }
 
-.authentication__link {
+.authentication__item--last {
+  border-right: 0;
+}
+
+.authentication__link,
+.authentication__item > a {
   @extend .unstyled-button;
-  @include body(16, 18);
+  @include body(14, 14);
 
   &:hover,
   &:focus {
     outline: none;
     text-decoration: underline;
   }
+}
+
+.authentication__item-divider {
+  margin: 0 $baseline-unit;
 }

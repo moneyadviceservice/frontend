@@ -24,11 +24,32 @@
     display: none;
 
     @include respond-to($mq-m) {
-      display: block;
+      @include inline-block;
     }
   }
 
-  .authentication__link {
+  .language-link {
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
+
+  .authentication__item {
+    display: none;
+
+    @include respond-to($mq-l) {
+      @include inline-block;
+    }
+  }
+
+  .l-language-link {
+    @include respond-to($mq-m) {
+      @include inline-block;
+    }
+  }
+
+  .authentication__link,
+  .authentication__item > a {
     @extend %font-heading-medium;
     color: $color-white;
 
@@ -43,12 +64,13 @@
     }
   }
 
+  .icon--globe {
+    display: none;
+  }
+
   .search {
     width: 100%;
     margin: 0;
-    @include respond-to($mq-m) {
-      padding-right: 46px;
-    }
   }
 
   .l-search {
@@ -70,6 +92,10 @@
         border: 0;
         border-radius: $baseline-unit/2;
       }
+    }
+
+    @include respond-to($mq-l) {
+      @include push(0);
     }
   }
 

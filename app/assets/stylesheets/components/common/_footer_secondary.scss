@@ -20,7 +20,8 @@
   }
 }
 
-.footer-secondary__link {
+.footer-secondary__link,
+.footer-secondary__list-item > a {
   @extend %font-body;
   @include body(14, 18);
   @extend %link-nav-primary;
@@ -28,6 +29,12 @@
 
   .cy-theme & {
     @include body(13, 18);
+  }
+
+  & .icon--globe {
+    position: relative;
+    top: 4px;
+    margin-right: 4px;
   }
 }
 
@@ -43,12 +50,6 @@
     outline: none;
     text-decoration: underline;
   }
-}
-
-.language-link .icon--globe {
-  position: relative;
-  top: 4px;
-  margin-right: 4px;
 }
 
 .accessibility-feedback-link .icon--accessibility {

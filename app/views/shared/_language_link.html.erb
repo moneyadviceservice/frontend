@@ -1,0 +1,9 @@
+<% if content_for?(:alternate_link) %>
+  <%= yield(:alternate_link) %>
+<% else %>
+  <% locals.each do |locale| %>
+    <%= link_to({ locale: locale }, { lang: locale, :class => '' }) do %>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

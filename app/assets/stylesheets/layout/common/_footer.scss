@@ -64,6 +64,10 @@
     @include respond-to($mq-l) {
       display: none;
     }
+
+    > form {
+      @include inline-block;
+    }
   }
 
   .l-language-link {

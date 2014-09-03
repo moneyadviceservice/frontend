@@ -40,8 +40,13 @@ Core::Registry::Repository[:news] =
 Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new
 
-Core::Registry::Repository[:customer] =
-  Core::Repository::Customers::Cream.new
+if Rails.env.development?
+  Core::Registry::Repository[:customer] =
+    Core::Repository::Customers::Fake.new
+else
+  Core::Registry::Repository[:customer] =
+    Core::Repository::Customers::Cream.new
+end
 
 Core::Registry::Repository[:user] =
   Core::Repository::Users::Default.new

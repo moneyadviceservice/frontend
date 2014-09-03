@@ -67,10 +67,10 @@
 .search__clear {
   @extend .unstyled-button;
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   right: 50px;
   width: $baseline-unit*8;
-  height: $baseline-unit*8;
+  height: 44px;
   background-color: $color-white;
 
   & .icon--clear {

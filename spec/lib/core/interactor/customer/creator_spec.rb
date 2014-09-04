@@ -20,16 +20,25 @@ module Core
           context 'when customer already exists' do
             before :each do
               user
-              subject.call
+              user.update_attribute(:customer_id, nil)
             end
 
-            it 'throws an exception' do
+            it 'does not throw an exception' do
               expect do
                 subject.call{ raise 'hello' }
-              end.to raise_error('hello')
+              end.not_to raise_error
             end
 
-            it_has_behavior 'optional failure block'
+            it 'does not create another CRM customer' do
+              expect do
+                subject.call
+              end.to_not change{ Registry::Repository[:customer].customers.size }
+            end
+
+            it 'associates user and customer' do
+              customer = subject.call
+              expect(customer.customer_id).to eql(Registry::Repository[:customer].customers.last[:id])
+            end
           end
 
           context 'when customer does not exist' do

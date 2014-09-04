@@ -6,16 +6,17 @@ module Core
 
     describe '#find' do
       context 'when the customer is non-existent' do
-        it { expect(subject.find('unknown')).to be_nil }
+        it { expect(subject.find(id: 'unknown')).to be_nil }
       end
 
       context 'when the customer exists' do
         before :each do
-          user = User.new(first_name: 'exists')
+          user = User.new(first_name: 'exists', email: 'phil@example.com')
           @customer_id = subject.create(user)
         end
 
-        it { expect(subject.find(@customer_id).first_name).to eql('exists') }
+        it { expect(subject.find(id: @customer_id).first_name).to eql('exists') }
+        it { expect(subject.find(email: 'phil@example.com').first_name).to eql('exists') }
       end
     end
 
@@ -52,7 +53,7 @@ module Core
         customer = Customer.new(customer_id, first_name: 'Philip')
         subject.update(customer)
 
-        expect(subject.find(customer_id).first_name).to eql('Philip')
+        expect(subject.find(id: customer_id).first_name).to eql('Philip')
       end
 
       context 'when the customer does not exist' do

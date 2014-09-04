@@ -9,7 +9,7 @@ module Core
         end
 
         def call(&block)
-          customer = Registry::Repository[:customer].find(id)
+          customer = Registry::Repository[:customer].find(id: id)
 
           if customer
             customer

@@ -5,8 +5,11 @@ module Core
         @@customers = []
         cattr_reader :customers
 
-        def find(id)
-          response = customers.detect{|c| c[:id] == id}
+        def find(options = {})
+          id = options[:id]
+          email = options[:email]
+
+          response = customers.detect{|c| c[:id] == id || c[:email] == email}
           Core::Customer.new(response[:id], response) if response
         end
 
@@ -35,7 +38,7 @@ module Core
         end
 
         def valid_for_authentication?(id)
-          find(id)
+          find(id: id)
         end
       end
     end

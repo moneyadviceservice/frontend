@@ -27,10 +27,7 @@ module Core
         private
 
         def find_options(options)
-          id = options[:id]
-          email = options[:email]
-
-          { customer_id: id, email: email }.compact
+          { customer_id: options[:id], email: options[:email] }.compact
         end
 
         class FindMapper
@@ -58,6 +55,8 @@ module Core
               }
             end
           end
+
+          private
 
           def time_in_seconds(date)
             /\/Date\((?<timestamp>.*)\)/.match(date)[:timestamp].to_i / 1000

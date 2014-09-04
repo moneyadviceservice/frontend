@@ -11,14 +11,13 @@ module Core
         def call(&block)
           customer = Registry::Repository[:customer].find(email: user.email)
 
-          if customer
-            user.customer_id = customer.id
-            user
+          user.customer_id = if customer
+            customer.id
           else
-            customer_id = Registry::Repository[:customer].create(user)
-            user.customer_id = customer_id
-            user
+            Registry::Repository[:customer].create(user)
           end
+
+          user
         rescue
           block.call if block_given?
         end

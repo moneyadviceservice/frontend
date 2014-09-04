@@ -9,7 +9,7 @@ module Core
           id = options[:id]
           email = options[:email]
 
-          response = customers.detect{|c| c[:id] == id || c[:email] == email}
+          response = customers.detect { |c| c[:id] == id || c[:email] == email }
           Core::Customer.new(response[:id], response) if response
         end
 
@@ -26,7 +26,7 @@ module Core
         end
 
         def update(customer)
-          c = customers.detect{|c| c[:id] == customer.id}
+          c = customers.detect { |c| c[:id] == customer.id }
 
           raise 'does not exist' unless c
 

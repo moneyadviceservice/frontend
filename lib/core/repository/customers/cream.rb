@@ -7,9 +7,8 @@ module Core
           response["d"]["mas_CustomerId"]
         end
 
-        def find(id)
-          options = { customer_id: id }
-          response = ::Cream::Client.instance.find_customer(options)
+        def find(options)
+          response = ::Cream::Client.instance.find_customer(find_options(options))
           mapping = FindMapper.new(response).call
 
           return nil if mapping.nil?
@@ -22,10 +21,17 @@ module Core
         end
 
         def valid_for_authentication?(id)
-          find(id)
+          find(id: id)
         end
 
         private
+
+        def find_options(options)
+          id = options[:id]
+          email = options[:email]
+
+          { customer_id: id, email: email }.compact
+        end
 
         class FindMapper
           attr_reader :response
@@ -52,8 +58,6 @@ module Core
               }
             end
           end
-
-          private
 
           def time_in_seconds(date)
             /\/Date\((?<timestamp>.*)\)/.match(date)[:timestamp].to_i / 1000

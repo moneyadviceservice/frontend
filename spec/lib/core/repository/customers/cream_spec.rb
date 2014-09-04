@@ -15,7 +15,7 @@ module Core
 
           expect(client).to receive(:find_customer).with({customer_id: 123}).and_return(response)
 
-          expect(subject.find(123)).to be_a(Customer)
+          expect(subject.find(id: 123)).to be_a(Customer)
         end
       end
 
@@ -31,7 +31,7 @@ module Core
 
           expect(client).to receive(:find_customer).with({customer_id: 123}).and_return(response)
 
-          expect(subject.find(123)).to be_nil
+          expect(subject.find(id: 123)).to be_nil
         end
       end
     end
@@ -72,7 +72,7 @@ module Core
     describe '#valid_for_authentication?' do
       context 'when they exist in crm' do
         it 'returns true' do
-          allow(subject).to receive(:find){ Object.new }
+          allow(subject).to receive(:find).with(id: 1){ Object.new }
           expect(subject.valid_for_authentication?(1)).to be_truthy
         end
       end

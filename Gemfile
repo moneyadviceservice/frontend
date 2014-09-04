@@ -36,7 +36,7 @@ gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_timeliness'
 
-gem 'pensions_calculator', path: '/Users/jgilbraith/dev.web/pensions_calculator/work'
+gem 'pensions_calculator', '~> 0.2'
 
 group :assets do
   gem 'autoprefixer-rails'

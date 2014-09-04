@@ -68,4 +68,12 @@ class EmbeddedToolsController < ApplicationController
     true
   end
 
+  def display_menu_button_in_header?
+    false
+  end
+
+  def display_opt_out_link_in_footer?
+    false
+  end
+
 end

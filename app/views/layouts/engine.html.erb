@@ -20,12 +20,14 @@
     </div>
   </div>
 
-  <div class="l-tool-nav">
-    <div class="l-constrained">
-      <section class="tool-nav">
-        <%= render 'shared/directory',
-                   items: category_navigation, heading_level: 4 %>
-      </section>
+  <% if display_category_directory? %>
+    <div class="l-tool-nav">
+      <div class="l-constrained">
+        <section class="tool-nav">
+          <%= render 'shared/directory',
+                     items: category_navigation, heading_level: 4 %>
+        </section>
+      </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

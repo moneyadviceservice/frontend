@@ -76,4 +76,10 @@ class EmbeddedToolsController < ApplicationController
     false
   end
 
+  def display_category_directory?
+    true
+  end
+
+  helper_method :display_category_directory?
+
 end

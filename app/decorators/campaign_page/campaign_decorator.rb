@@ -67,7 +67,7 @@ module CampaignPage
 
     def cost_calculator_link
       h.link_to(I18n.t("#{name}.button_content"),
-                h.tool_path('car-cost-calculator'),
+                h.tool_path('car-costs-calculator'),
                 class: 'button button--primary')
     end
   end

@@ -46,7 +46,24 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
     total_results <= per_page ? 1 : (((total_results - 1) / per_page) + 1)
   end
 
+  def spelling_suggestion
+    return unless object.spelling_suggestion?
+
+    I18n.t('search_results.spelling_suggestion_html',
+            link: spelling_link,
+            query: object.query
+          ).html_safe
+  end
+
   private
+
+  def spelling_link
+    h.link_to(object.spelling_suggestion, search_path(object.spelling_suggestion))
+  end
+
+  def search_path(query)
+    h.search_results_path(query: query, locale: I18n.locale)
+  end
 
   def result_limit
     Core::Searcher::PAGE_LIMIT * Core::Searcher::DEFAULT_PER_PAGE

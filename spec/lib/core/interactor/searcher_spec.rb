@@ -78,21 +78,27 @@ module Core
     describe '#call' do
       let(:query) { double }
       let(:total_results) { double }
+      let(:spelling_suggestion) { double }
       let(:item_id) { double }
       let(:item_data_without_id) { { foo: :bar } }
       let(:item_data) { { id: item_id, foo: :bar } }
       let(:items) { [item_data] }
-      let(:options) do {
-        total_results: total_results,
-        page: page.to_i,
-        per_page: per_page.to_i,
-        query: query
-      } end
+      let(:options) do
+        {
+          total_results: total_results,
+          page: page.to_i,
+          per_page: per_page.to_i,
+          spelling_suggestion: spelling_suggestion,
+          query: query
+        }
+      end
 
       before do
-        allow(subject).to receive(:request_per_page) { per_page }
-        allow(subject).to receive(:total_results) { total_results }
-        allow(subject).to receive(:items) { items }
+        allow(subject).to receive_messages(
+          items: items,
+          spelling_suggestion: spelling_suggestion,
+          total_results: total_results
+        )
       end
 
       it 'instantiates a SearchResultCollection with the correct options' do
@@ -177,6 +183,18 @@ module Core
 
         it 'returns the the value from the data hash' do
           expect(subject.send(:total_results)).to eq total_results
+        end
+      end
+
+      describe '#spelling_suggestion' do
+        let(:spelling_suggestion) { double }
+
+        before do
+          allow(subject).to receive(:data) { { spelling_suggestion: spelling_suggestion } }
+        end
+
+        it 'returns the the value from the data hash' do
+          expect(subject.send(:spelling_suggestion)).to eq(spelling_suggestion)
         end
       end
 

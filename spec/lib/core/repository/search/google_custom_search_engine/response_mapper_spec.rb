@@ -7,6 +7,7 @@ module Core::Repository::Search
       let(:start_index) { 1 }
       let(:item_data) { double }
       let(:mapped_item_data) { double }
+      let(:spelling) { double }
 
       let(:body) do
         {
@@ -15,7 +16,10 @@ module Core::Repository::Search
               'totalResults' => total_results.to_s
             ]
           },
-          'items'   => [item_data]
+          'items'   => [item_data],
+          'spelling' => {
+            'correctedQuery' => spelling
+          }
         }
       end
 
@@ -29,6 +33,10 @@ module Core::Repository::Search
 
       it 'maps the total results correctly' do
         expect(subject[:total_results]).to eq(total_results)
+      end
+
+      it 'maps the spelling suggestion' do
+        expect(subject[:spelling_suggestion]).to eq(spelling)
       end
 
       context 'for each item' do

@@ -20,6 +20,7 @@ module Core
         total_results: total_results,
         page: page,
         per_page: per_page,
+        spelling_suggestion: spelling_suggestion,
         query: query
       }
 
@@ -59,6 +60,10 @@ module Core
 
     def items
       data[:items]
+    end
+
+    def spelling_suggestion
+      data[:spelling_suggestion]
     end
   end
 end

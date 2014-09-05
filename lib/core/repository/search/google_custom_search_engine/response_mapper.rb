@@ -11,7 +11,8 @@ module Core::Repository
         def mapped_response
           {
             total_results: total_results,
-            items: items
+            items: items,
+            spelling_suggestion: spelling_sugestion
           }
         end
 
@@ -35,6 +36,10 @@ module Core::Repository
 
         def offset
           paging_metadata['startIndex'].to_i - 1
+        end
+
+        def spelling_sugestion
+          body.fetch('spelling', {}).fetch('correctedQuery', nil)
         end
       end
     end

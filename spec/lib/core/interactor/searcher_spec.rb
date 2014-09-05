@@ -4,7 +4,7 @@ module Core
     let(:page) { '1' }
     let(:per_page) { '10' }
 
-    subject { described_class.new(query, page: page, per_page: per_page) }
+    subject(:searcher) { described_class.new(query, page: page, per_page: per_page) }
 
     describe '#initialize' do
 
@@ -21,6 +21,40 @@ module Core
       end
     end
 
+    describe '#page' do
+      subject { searcher.page }
+
+      context 'when page value is a string' do
+        let(:page) { '1' }
+
+        it { is_expected.to eq(1) }
+      end
+
+      context 'when page value has no value' do
+        let(:page) { nil }
+
+        it { is_expected.to eq(Searcher::DEFAULT_PAGE) }
+      end
+
+      context 'when page value is 0' do
+        let(:page) { '0' }
+
+        it { is_expected.to eq(1) }
+      end
+
+      context 'when page value is greater than the page limit' do
+        let(:page) { '20' }
+
+        it { is_expected.to eq(Searcher::PAGE_LIMIT) }
+      end
+
+      context '#page is below zero' do
+        let(:page) { -1 }
+
+        it { is_expected.to eq(Searcher::DEFAULT_PAGE) }
+      end
+    end
+
     describe '#call' do
       let(:total_results) { double }
       let(:item_id) { double }
@@ -29,7 +63,6 @@ module Core
       let(:items) { [item_data] }
 
       before do
-        allow(subject).to receive(:request_page) { page }
         allow(subject).to receive(:request_per_page) { per_page }
         allow(subject).to receive(:total_results) { total_results }
         allow(subject).to receive(:items) { items }
@@ -37,7 +70,7 @@ module Core
 
       it 'calls the repository with the page and per_page' do
         expect(SearchResultCollection).to receive(:new).
-                                            with(total_results: total_results, page: page, per_page: per_page).
+                                            with(total_results: total_results, page: page.to_i, per_page: per_page).
                                             and_call_original
 
         subject.call
@@ -110,22 +143,6 @@ module Core
         end
       end
 
-      describe '#page' do
-        context 'if a value has been assigned' do
-          it 'returns the assigned value' do
-            expect(subject.send(:page)).to eq page
-          end
-        end
-
-        context 'if the a page has not been assigned' do
-          subject { described_class.new(query) }
-
-          it 'returns DEFAULT_PAGE' do
-            expect(subject.send(:page)).to eq Searcher::DEFAULT_PAGE
-          end
-        end
-      end
-
       describe '#per_page' do
         context 'if a value has been assigned' do
           it 'returns the assigned value' do
@@ -138,40 +155,6 @@ module Core
 
           it 'returns DEFAULT_PAGE' do
             expect(subject.send(:per_page)).to eq Searcher::DEFAULT_PER_PAGE
-          end
-        end
-      end
-
-      describe '#request_page' do
-        context '#page is below zero' do
-          let(:page) { -1 }
-
-          it 'returns 1' do
-            expect(subject.send(:request_page)).to eq 1
-          end
-        end
-
-        context '#page is zero' do
-          let(:page) { 0 }
-
-          it 'returns 1' do
-            expect(subject.send(:request_page)).to eq 1
-          end
-        end
-
-        context '#page is less than PAGE_LIMIT' do
-          let(:page) { 1 }
-
-          it 'returns #page' do
-            expect(subject.send(:request_page)).to eq page
-          end
-        end
-
-        context '#page is greater than PAGE_LIMIT' do
-          let(:page) { 100 }
-
-          it 'returns #page' do
-            expect(subject.send(:request_page)).to eq Searcher::PAGE_LIMIT
           end
         end
       end

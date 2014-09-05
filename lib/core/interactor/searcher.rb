@@ -8,18 +8,20 @@ module Core
     PER_PAGE_LIMIT = 10
 
     attr_accessor :query
-    attr_writer :page, :per_page
+    attr_writer :per_page
+    attr_reader :page
 
-    private :query=, :page=, :per_page=
+    private :query=, :per_page=
 
     def initialize(query, options = {})
       self.query = query
-      self.page = options[:page].to_i if options[:page]
       self.per_page = options[:per_page].to_i if options[:per_page]
+      self.page = options.fetch(:page, DEFAULT_PAGE).to_i
     end
 
     def call
-      options = { total_results: total_results, page: request_page, per_page: request_per_page }
+      options = { total_results: total_results, page: page, per_page: request_per_page }
+
       SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
@@ -34,24 +36,20 @@ module Core
 
     private
 
-    def data
-      @data ||= Registry::Repository[:search].perform(query, request_page, request_per_page)
+    def page=(new_page)
+      @page = if new_page > 0
+        [new_page, PAGE_LIMIT].min
+      else
+        DEFAULT_PAGE
+      end
     end
 
-    def page
-      @page ||= DEFAULT_PAGE
+    def data
+      @data ||= Registry::Repository[:search].perform(query, page, request_per_page)
     end
 
     def per_page
       @per_page ||= DEFAULT_PER_PAGE
-    end
-
-    def request_page
-      if page > 0
-        [page, PAGE_LIMIT].min
-      else
-        1
-      end
     end
 
     def request_per_page

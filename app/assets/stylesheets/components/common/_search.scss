@@ -72,15 +72,16 @@
   width: $baseline-unit*8;
   height: 44px;
   background-color: $color-white;
+  display: none;
 
   & .icon--clear {
     position: relative;
     top: -1px;
   }
-}
 
-.search__input:not(:valid) ~ .search__clear {
-  display: none;
+  &.is-active {
+    display: block;
+  }
 }
 
 .search__submit--green {

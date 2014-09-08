@@ -15,7 +15,7 @@ module Core
 
           expect(client).to receive(:find_customer).with({customer_id: 123}).and_return(response)
 
-          expect(subject.find(123)).to be_a(Customer)
+          expect(subject.find(id: 123)).to be_a(Customer)
         end
       end
 
@@ -31,16 +31,17 @@ module Core
 
           expect(client).to receive(:find_customer).with({customer_id: 123}).and_return(response)
 
-          expect(subject.find(123)).to be_nil
+          expect(subject.find(id: 123)).to be_nil
         end
       end
     end
 
     describe '#create' do
       let(:user){ User.new }
+      let(:mas_customer_id){ '123' }
       let(:response) do
         {
-          'd' => { 'mas_CustomerId' => '123' }
+          'd' => { 'mas_CustomerId' => mas_customer_id }
         }
       end
 
@@ -49,7 +50,7 @@ module Core
         expect(::Cream::Client).to receive(:instance).and_return(client)
 
         expect(client).to receive(:create_customer).with(user).and_return(response)
-        expect(subject.create(user)).to eql('123')
+        expect(subject.create(user)).to eql(mas_customer_id)
       end
     end
 
@@ -70,17 +71,19 @@ module Core
     end
 
     describe '#valid_for_authentication?' do
+      let(:id){ 1 }
+
       context 'when they exist in crm' do
         it 'returns true' do
-          allow(subject).to receive(:find){ Object.new }
-          expect(subject.valid_for_authentication?(1)).to be_truthy
+          allow(subject).to receive(:find).with(id: id){ Object.new }
+          expect(subject.valid_for_authentication?(id)).to be_truthy
         end
       end
 
       context 'when they no not exist in crm' do
         it 'returns false' do
           allow(subject).to receive(:find){ nil }
-          expect(subject.valid_for_authentication?(1)).to be_falsey
+          expect(subject.valid_for_authentication?(id)).to be_falsey
         end
       end
     end

@@ -27,6 +27,9 @@ require.config({
     scrollTracking: 'app/assets/javascripts/modules/mas_scrollTracking',
     collapsable: 'app/assets/javascripts/modules/mas_collapsable',
 
+    // Dough components
+    ClearInput: 'app/assets/javascripts/components/ClearInput',
+
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp.amd',
 
     componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',

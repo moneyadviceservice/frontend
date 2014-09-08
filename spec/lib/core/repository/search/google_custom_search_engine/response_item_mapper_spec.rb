@@ -10,10 +10,10 @@ module Core::Repository::Search
       let(:snippet) { 'Action plan snippet' }
       let(:item) do
         {
-          'link'    => link,
-          'title'   => title,
-          'snippet' => snippet,
-          'pagemap' => {
+          'link'      => link,
+          'htmlTitle' => title,
+          'snippet'   => snippet,
+          'pagemap'   => {
             'metatags' => [
               {
                 'csrf-param'     => 'authenticity_token',

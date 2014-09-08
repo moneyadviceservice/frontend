@@ -45,6 +45,6 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
   private
 
   def result_limit
-    Core::Searcher::PAGE_LIMIT * Core::Searcher::PER_PAGE_LIMIT
+    Core::Searcher::PAGE_LIMIT * Core::Searcher::DEFAULT_PER_PAGE
   end
 end

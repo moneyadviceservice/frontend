@@ -354,3 +354,27 @@
     }
   }
 }
+
+// New campaign template styles
+.l-campaign {
+  //
+  //
+  // BEWARE this class is also being used by the car campaign tools
+  //
+  //
+
+  margin-bottom: $baseline-unit*10;
+}
+
+.l-campaign--left {
+  @include respond-to($mq-l) {
+    @include column(7);
+  }
+}
+
+.l-campaign--right {
+  @include respond-to($mq-l) {
+    @include column(5);
+    margin-top: $baseline-unit*11;
+  }
+}

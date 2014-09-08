@@ -91,6 +91,7 @@ Rails.application.routes.draw do
         scope 'pages' do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
+          get 'pages_campaign', path: '/campaign'
           get 'pages_feedback_information', path: '/feedback_information'
           get 'pages_feedback_technical', path: '/feedback_technical'
           get 'pages_feedback_advice', path: '/feedback_advice'

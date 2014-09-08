@@ -1,26 +1,22 @@
 module Core
   class Searcher
-
     DEFAULT_PAGE = 1
     DEFAULT_PER_PAGE = 10
-
     PAGE_LIMIT = 5
-    PER_PAGE_LIMIT = 10
 
     attr_accessor :query
-    attr_writer :per_page
-    attr_reader :page
+    attr_reader :page, :per_page
 
-    private :query=, :per_page=
+    private :query=
 
     def initialize(query, options = {})
       self.query = query
-      self.per_page = options[:per_page].to_i if options[:per_page]
       self.page = options.fetch(:page, DEFAULT_PAGE).to_i
+      self.per_page = options.fetch(:per_page, DEFAULT_PER_PAGE).to_i
     end
 
     def call
-      options = { total_results: total_results, page: page, per_page: request_per_page }
+      options = { total_results: total_results, page: page, per_page: per_page }
 
       SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|
@@ -44,16 +40,12 @@ module Core
       end
     end
 
+    def per_page=(new_per_page)
+      @per_page = [new_per_page, DEFAULT_PER_PAGE].min
+    end
+
     def data
-      @data ||= Registry::Repository[:search].perform(query, page, request_per_page)
-    end
-
-    def per_page
-      @per_page ||= DEFAULT_PER_PAGE
-    end
-
-    def request_per_page
-      [per_page, PER_PAGE_LIMIT].min
+      @data ||= Registry::Repository[:search].perform(query, page, per_page)
     end
 
     def total_results

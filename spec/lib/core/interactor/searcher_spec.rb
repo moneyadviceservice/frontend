@@ -55,6 +55,26 @@ module Core
       end
     end
 
+    describe '#per_page' do
+      subject { searcher.per_page }
+
+      context 'when per_page value is a string' do
+        let(:per_page) { '10' }
+
+        it { is_expected.to eq(10) }
+      end
+
+      context 'when per_page has no value' do
+        it { is_expected.to eq(Searcher::DEFAULT_PER_PAGE) }
+      end
+
+      context 'when per_page value is greater than PER_PAGE_LIMIT' do
+        let(:per_page) { '50' }
+
+        it { is_expected.to eq(Searcher::DEFAULT_PER_PAGE) }
+      end
+    end
+
     describe '#call' do
       let(:total_results) { double }
       let(:item_id) { double }
@@ -70,7 +90,7 @@ module Core
 
       it 'calls the repository with the page and per_page' do
         expect(SearchResultCollection).to receive(:new).
-                                            with(total_results: total_results, page: page.to_i, per_page: per_page).
+                                            with(total_results: total_results, page: page.to_i, per_page: per_page.to_i).
                                             and_call_original
 
         subject.call
@@ -140,40 +160,6 @@ module Core
 
         it 'returns the result of the call to #perform' do
           expect(subject.send(:data)).to eq data
-        end
-      end
-
-      describe '#per_page' do
-        context 'if a value has been assigned' do
-          it 'returns the assigned value' do
-            expect(subject.send(:per_page)).to eq per_page
-          end
-        end
-
-        context 'if no value has been assigned' do
-          subject { described_class.new(query) }
-
-          it 'returns DEFAULT_PAGE' do
-            expect(subject.send(:per_page)).to eq Searcher::DEFAULT_PER_PAGE
-          end
-        end
-      end
-
-      describe '#request_per_page' do
-        context '#per_page is less than PAGE_LIMIT' do
-          let(:per_page) { 1 }
-
-          it 'returns #per_page' do
-            expect(subject.send(:request_per_page)).to eq per_page
-          end
-        end
-
-        context '#per_page is greater than PAGE_LIMIT' do
-          let(:per_page) { 100 }
-
-          it 'returns #per_page' do
-            expect(subject.send(:request_per_page)).to eq Searcher::PER_PAGE_LIMIT
-          end
         end
       end
 

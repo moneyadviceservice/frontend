@@ -10,7 +10,7 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def title
-    object.title.sub(Regexp.union(title_suffix_regexps), '')
+    object.title.sub(Regexp.union(title_suffix_regexps), '').html_safe
   end
 
   private

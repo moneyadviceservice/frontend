@@ -89,17 +89,17 @@ module Core
       end
 
       it 'calls the repository with the page and per_page' do
-        expect(SearchResultCollection).to receive(:new).
-                                            with(total_results: total_results, page: page.to_i, per_page: per_page.to_i).
-                                            and_call_original
+        expect(SearchResultCollection).to receive(:new)
+                                            .with(total_results: total_results, page: page.to_i, per_page: per_page.to_i)
+                                            .and_call_original
 
         subject.call
       end
 
       it 'instantiates a SearchResult with each element of #items' do
-        expect(SearchResult).to receive(:new).
-                                  with(item_id, item_data_without_id).
-                                  and_call_original
+        expect(SearchResult).to receive(:new)
+                                  .with(item_id, item_data_without_id)
+                                  .and_call_original
 
         subject.call
       end

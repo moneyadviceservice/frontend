@@ -78,7 +78,7 @@ module Core
     describe '#call' do
       let(:total_results) { double }
       let(:item_id) { double }
-      let(:item_data_without_id) { { foo: :bar } }
+      let(:item_data_without_id) { { foo: :bar, query: query } }
       let(:item_data) { { id: item_id, foo: :bar } }
       let(:items) { [item_data] }
 

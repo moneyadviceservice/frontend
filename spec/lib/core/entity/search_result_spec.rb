@@ -10,6 +10,9 @@ module Core
     it { is_expected.to respond_to :description }
     it { is_expected.to respond_to :description= }
 
+    it { is_expected.to respond_to :query }
+    it { is_expected.to respond_to :query= }
+
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
   end

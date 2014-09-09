@@ -16,7 +16,7 @@ module Core::Repository
         end
 
         def title
-          data['title']
+          data['htmlTitle']
         end
 
         def description

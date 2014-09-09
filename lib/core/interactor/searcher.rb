@@ -20,7 +20,7 @@ module Core
 
       SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|
-          new_result = SearchResult.new(result_data.delete(:id), result_data)
+          new_result = SearchResult.new(result_data.delete(:id), result_data.merge(query: query))
           if new_result.valid?
             results_collection << new_result
           else

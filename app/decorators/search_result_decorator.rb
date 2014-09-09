@@ -1,6 +1,4 @@
 class SearchResultDecorator < Draper::Decorator
-  delegate :description
-
   def to_partial_path
     'search_result'
   end
@@ -10,7 +8,15 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def title
-    object.title.sub(Regexp.union(title_suffix_regexps), '')
+    object.title.sub(Regexp.union(title_suffix_regexps), '').html_safe
+  end
+
+  def description
+    if object.query.present?
+      object.description.gsub(/#{object.query}/, "<b>#{object.query}</b>").html_safe
+    else
+      object.description
+    end
   end
 
   private

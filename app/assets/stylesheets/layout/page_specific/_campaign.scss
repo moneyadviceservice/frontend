@@ -378,3 +378,9 @@
     margin-top: $baseline-unit*11;
   }
 }
+
+.l-campaign__strapline {
+  @include column(12);
+  padding: $baseline-unit*4;
+  background-color: $breadcrumbs-background-color;
+}

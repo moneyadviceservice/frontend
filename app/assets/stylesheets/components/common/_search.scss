@@ -15,6 +15,7 @@
 
     &:focus {
       outline-offset: initial;
+      padding-right: 96px;
     }
 
     &::-webkit-input-placeholder {
@@ -60,6 +61,26 @@
     .icon--search {
       @include search-icon-colour(white);
     }
+  }
+}
+
+.search__clear {
+  @extend .unstyled-button;
+  position: absolute;
+  bottom: 2px;
+  right: 50px;
+  width: $baseline-unit*8;
+  height: 44px;
+  background-color: $color-white;
+  display: none;
+
+  & .icon--clear {
+    position: relative;
+    top: -1px;
+  }
+
+  &.is-active {
+    display: block;
   }
 }
 

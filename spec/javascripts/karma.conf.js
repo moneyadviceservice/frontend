@@ -4,16 +4,17 @@
 module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '..',
+    basePath: '../../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['requirejs', 'mocha', 'sinon-chai'],
+    frameworks: ['requirejs', 'mocha', 'chai-jquery', 'chai', 'sinon','sinon-chai', 'jquery-1.11.0'],
 
     // list of files / patterns to load in the browser
     files: [
       'spec/javascripts/test-main.js',
       'spec/javascripts/templates/*.html',
-      'spec/javascripts/*_spec.js',
+      'spec/javascripts/fixtures/*.html',
+      'spec/javascripts/**/*_spec.js',
       {pattern: 'app/assets/javascripts/**/*.js', included: false},
       {pattern: 'vendor/assets/bower_components/**/*.js', included: false}
     ],
@@ -24,23 +25,15 @@ module.exports = function(config) {
       }
     },
 
-    plugins: [
-      // these plugins will be require() by Karma
-      'karma-mocha',
-      'karma-requirejs',
-      'karma-sinon-chai',
-      'karma-phantomjs-launcher',
-      'karma-html2js-preprocessor'
-    ],
-
     // list of files / patterns to exclude
     exclude: [],
 
     preprocessors: {
-      '**/*.html': 'html2js'
+     '**/*.html': ['html2js'],
+     'app/assets/javascripts/pensions_calculator/**/*.js': ['coverage']
     },
 
-    reporters: ['dots'],
+    reporters: ['coverage', 'spec'],
 
     // web server port
     port: 9876,
@@ -71,6 +64,11 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+
+    coverageReporter: {
+     type : 'html',
+     dir : 'spec/javascripts/coverage/'
+   }
   });
 };

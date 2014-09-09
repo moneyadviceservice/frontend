@@ -2,8 +2,12 @@
   @extend .unstyled-list;
 }
 
-.search-results__item {
-  h2 {
-    @extend %heading-small;
-  }
+.search-results__item b {
+  // Google outputs the <b> tag for highlighted terms.
+  @extend %font-heading-heavy;
+}
+
+.search-results__heading {
+  @extend %font-heading-medium;
+  @include body(22, 30);
 }

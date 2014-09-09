@@ -31,6 +31,7 @@ Rails.application.configure do
                                    modules/mas_collapsable.js
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
+                                   components/*.js
                                    styleguide.js
                                    supports.js
                                    translations/cy.js
@@ -49,4 +50,3 @@ Rails.application.configure do
                                    modernizer-flexbox-cssclasses.js
                                    webchat.js)
 end
-

@@ -23,6 +23,11 @@ When(/^I search for an incorrectly spelt term with results$/) do
   home_page.search_box.submit.click
 end
 
+When(/^I search for an incorrectly spelt term with no results$/) do
+  home_page.search_box.input.set('monuy')
+  home_page.search_box.submit.click
+end
+
 Then(/^I should see the search box$/) do
   expect(home_page).to have_search_box
 end
@@ -57,6 +62,11 @@ Then(/^I should see no search results$/) do
 end
 
 Then(/^I should have search results$/) do
+  expect(search_results_page).to have_results
+end
+
+Then(/^I should have corrected search results$/) do
+  expect(search_results_page.corrected_query).to have_content('money')
   expect(search_results_page).to have_results
 end
 

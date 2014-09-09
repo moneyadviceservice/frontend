@@ -3,9 +3,9 @@ class SearchResultsController < ApplicationController
 
   def index
     if params[:query].present?
-      @search_results = Core::Searcher.new(params[:query], page: params[:page]).call
+      @search_results = PerformCorrectiveSearch.new(params[:query], params[:page]).call
 
-      if @search_results.items.present?
+      if @search_results.any?
         render 'search_results/index_with_results'
       else
         render 'search_results/index_no_results'

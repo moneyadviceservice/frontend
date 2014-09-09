@@ -8,7 +8,8 @@
 
       <div class="l-search-results">
         <%= render 'shared/search', search_in_page_header: false %>
-        <p class='t-spelling-suggestion'><%= search_results.spelling_suggestion %></p>
+        <%= search_results.spelling_suggestion %>
+        <%= search_results.corrected_query %>
         <ol class="search-results">
           <%= render partial: 'search_result', collection: search_results %>
         </ol>

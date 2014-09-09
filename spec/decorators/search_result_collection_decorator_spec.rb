@@ -182,7 +182,6 @@ RSpec.describe SearchResultCollectionDecorator do
     let(:translation) { 'translation' }
 
     context 'when result_collection has spelling suggestion' do
-
       before do
         allow(result_collection).to receive(:spelling_suggestion?) { true }
         allow(helpers).to receive(:search_results_path) { '/path' }
@@ -195,5 +194,19 @@ RSpec.describe SearchResultCollectionDecorator do
     context 'when the result_collection has no spelling suggestion' do
       it { is_expected.to be_nil }
     end
+  end
+
+  describe '#corrected_query' do
+    subject { decorator.corrected_query }
+
+    let(:query) { double }
+    let(:translation) { 'translation' }
+    let(:result_collection) do
+      instance_double(Core::SearchResultCollection, corrected_query?: true, query: query)
+    end
+
+    before { expect(I18n).to receive(:t).with(anything, query: query) { translation } }
+
+    it { is_expected.to eq(translation) }
   end
 end

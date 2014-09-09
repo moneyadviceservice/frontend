@@ -1,5 +1,4 @@
 class SearchResultCollectionDecorator < Draper::CollectionDecorator
-
   delegate :per_page
 
   def decorator_class
@@ -49,10 +48,17 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
   def spelling_suggestion
     return unless object.spelling_suggestion?
 
-    I18n.t('search_results.spelling_suggestion_html',
-            link: spelling_link,
-            query: object.query
-          ).html_safe
+    I18n.t(
+      'search_results.spelling_suggestion_html',
+      link: spelling_link,
+      query: object.query
+    ).html_safe
+  end
+
+  def corrected_query
+    return unless object.corrected_query?
+
+    I18n.t('search_results.spelling_correction_html', query: object.query).html_safe
   end
 
   private

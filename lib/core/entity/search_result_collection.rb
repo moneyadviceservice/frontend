@@ -3,11 +3,11 @@ module Core
     include Enumerable
     extend Forwardable
 
-    attr_accessor :items, :page, :per_page, :total_results, :spelling_suggestion, :query
+    attr_accessor :items, :page, :per_page, :total_results, :spelling_suggestion, :query, :corrected_query
 
     private :items=, :query=
 
-    def_delegators :items, :<<
+    def_delegators :items, :<<, :empty?
 
     def initialize(attributes = {})
       self.items = attributes.fetch(:items) { [] }
@@ -23,7 +23,11 @@ module Core
     end
 
     def spelling_suggestion?
-      !!spelling_suggestion
+      !spelling_suggestion.nil?
+    end
+
+    def corrected_query?
+      !corrected_query.nil?
     end
   end
 end

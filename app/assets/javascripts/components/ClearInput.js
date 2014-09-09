@@ -9,7 +9,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       };
 
   ClearInput = function($el, config) {
-    var _this = this;
     this.uiEvents = uiEvents;
     ClearInput.baseConstructor.call(this, $el, config);
 
@@ -31,9 +30,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   ClearInput.prototype.updateResetButton = function() {
-    var fn = (this.$resetInput.val() == '') ? 'removeClass' : 'addClass';
+    var fn = this.$resetInput.val() === '' ? 'removeClass' : 'addClass';
     this.$resetButton[fn]('is-active');
   };
+
+// We are progressively enhancing the form with JS. The CSS button, type 'reset'
+// resets the form faster than the JS can run, so we need to invoke reset() to ensure the correct behaviour.
 
   ClearInput.prototype.resetForm = function() {
     this.$el[0].reset();

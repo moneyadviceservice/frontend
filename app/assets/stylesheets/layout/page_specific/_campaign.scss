@@ -105,7 +105,7 @@
   > h2 {
     @extend %font-heading-heavy;
     @include body(30, 36);
-    color: $color-heading-black;
+    color: $color-heading-extra-small;
     margin-top: $baseline-unit*3;
   }
 }

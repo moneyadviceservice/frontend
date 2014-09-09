@@ -41,6 +41,7 @@
       ujs: requirejs_path('jquery-ujs/src/rails'),
       eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
       rsvp: requirejs_path('rsvp/rsvp'),
+      jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
 
       # Internal modules
       globals: requirejs_path('modules/globals'),
@@ -67,6 +68,7 @@
   # Dough
   requirejs_config[:paths].merge!({
     featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
+    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries'),
     componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
     DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
     RangeInput: requirejs_path('dough/assets/js/components/RangeInput'),

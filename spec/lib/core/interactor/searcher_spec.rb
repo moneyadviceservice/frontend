@@ -76,11 +76,18 @@ module Core
     end
 
     describe '#call' do
+      let(:query) { double }
       let(:total_results) { double }
       let(:item_id) { double }
       let(:item_data_without_id) { { foo: :bar } }
       let(:item_data) { { id: item_id, foo: :bar } }
       let(:items) { [item_data] }
+      let(:options) do {
+        total_results: total_results,
+        page: page.to_i,
+        per_page: per_page.to_i,
+        query: query
+      } end
 
       before do
         allow(subject).to receive(:request_per_page) { per_page }
@@ -88,10 +95,8 @@ module Core
         allow(subject).to receive(:items) { items }
       end
 
-      it 'calls the repository with the page and per_page' do
-        expect(SearchResultCollection).to receive(:new)
-                                            .with(total_results: total_results, page: page.to_i, per_page: per_page.to_i)
-                                            .and_call_original
+      it 'instantiates a SearchResultCollection with the correct options' do
+        expect(SearchResultCollection).to receive(:new).with(options).and_call_original
 
         subject.call
       end

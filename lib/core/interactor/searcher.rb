@@ -16,7 +16,12 @@ module Core
     end
 
     def call
-      options = { total_results: total_results, page: page, per_page: per_page }
+      options = {
+        total_results: total_results,
+        page: page,
+        per_page: per_page,
+        query: query
+      }
 
       SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|

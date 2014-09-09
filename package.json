@@ -19,5 +19,8 @@
     "mocha": "~1.15.1",
     "phantomjs": ">= 1.9.7-1",
     "sinon": "^1.9.0"
+  },
+    "scripts": {
+    "test": "./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js"
   }
 }

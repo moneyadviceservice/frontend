@@ -14,6 +14,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     this.$resetInput = this.$el.find('[data-dough-clear-input]');
     this.$resetButton = this.$el.find('[data-dough-clear-input-button]');
+
+    this.updateResetButton();
   };
 
   /**
@@ -37,9 +39,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 // We are progressively enhancing the form with JS. The CSS button, type 'reset'
 // resets the form faster than the JS can run, so we need to invoke reset() to ensure the correct behaviour.
 
-  ClearInput.prototype.resetForm = function() {
-    this.$el[0].reset();
+  ClearInput.prototype.resetForm = function(e) {
+    this.$resetInput.val('');
     this.updateResetButton();
+    this.$resetInput.focus();
+    e.preventDefault();
   };
 
   return ClearInput;

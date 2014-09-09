@@ -4,8 +4,9 @@ RSpec.describe SearchResultDecorator do
   subject(:decorator) { described_class.decorate(search_result) }
 
   let(:title) { double }
+  let(:description) { double }
   let(:search_result) do
-    instance_double(Core::SearchResult, id: 'item-id', title: title, description: double)
+    instance_double(Core::SearchResult, id: 'item-id', title: title, description: description)
   end
 
   it { is_expected.to respond_to(:path) }
@@ -53,6 +54,41 @@ RSpec.describe SearchResultDecorator do
 
     it 'retuns the link' do
       expect(subject.path).to be(link)
+    end
+  end
+
+  describe '#description' do
+    let(:description) { 'the quick fox jumps over the lazy dog' }
+    let(:query) { '' }
+
+    subject { decorator.description }
+
+    before do
+      decorator.context = { query: query }
+    end
+
+    context 'when the query is empty' do
+      it { is_expected.to eq(description) }
+    end
+
+    context 'when the query is non-empty' do
+      context 'and does not appear in the description' do
+        let(:query) { 'budget' }
+
+        it { is_expected.to eq(description) }
+      end
+
+      context 'and appears in the description once' do
+        let(:query) { 'fox' }
+
+        it { is_expected.to eq('the quick <b>fox</b> jumps over the lazy dog') }
+      end
+
+      context 'and appears in the description more than once' do
+        let(:query) { 'the' }
+
+        it { is_expected.to eq('<b>the</b> quick fox jumps over <b>the</b> lazy dog') }
+      end
     end
   end
 end

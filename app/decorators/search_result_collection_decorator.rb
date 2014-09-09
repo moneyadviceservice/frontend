@@ -6,6 +6,10 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
     SearchResultDecorator
   end
 
+  def context
+    { query: object.query }
+  end
+
   def page
     if object.page > number_of_pages
       number_of_pages

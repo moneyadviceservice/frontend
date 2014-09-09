@@ -4,11 +4,7 @@ module Core
       let(:attributes) { double }
       subject(:technical) { described_class.new(attributes) }
 
-      it { is_expected.to respond_to :attempting }
-      it { is_expected.to respond_to :attempting= }
-
-      it { is_expected.to respond_to :occurred }
-      it { is_expected.to respond_to :occurred= }
+      it { is_expected.to have_attributes(:attempting, :occurred) }
 
       describe '#recipient' do
         subject { technical.recipient }

@@ -38,6 +38,8 @@ end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
 RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
   c.include PageValidations

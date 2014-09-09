@@ -4,11 +4,7 @@ module Core
       let(:attributes) { double }
       subject(:article) { described_class.new(attributes) }
 
-      it { is_expected.to respond_to :useful }
-      it { is_expected.to respond_to :useful= }
-
-      it { is_expected.to respond_to :suggestions }
-      it { is_expected.to respond_to :suggestions= }
+      it { is_expected.to have_attributes(:useful, :suggestions) }
 
       describe '#recipient' do
         subject { article.recipient }

@@ -4,11 +4,7 @@ module Core
 
     let(:attributes) { { title: double, description: double } }
 
-    it { is_expected.to respond_to :title }
-    it { is_expected.to respond_to :title= }
-
-    it { is_expected.to respond_to :description }
-    it { is_expected.to respond_to :description= }
+    it { is_expected.to have_attributes(:title, :description) }
 
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }

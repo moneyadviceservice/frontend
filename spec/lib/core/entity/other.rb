@@ -6,13 +6,6 @@ module Core
       { title: double }
     end
 
-    it { is_expected.to respond_to :type }
-    it { is_expected.to respond_to :type= }
-
-    it { is_expected.to respond_to :title }
-    it { is_expected.to respond_to :title= }
-
-    it { is_expected.to respond_to :description }
-    it { is_expected.to respond_to :description= }
+    it { is_expected.to have_attributes(:type, :title, :description) }
   end
 end

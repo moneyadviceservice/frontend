@@ -4,9 +4,7 @@ module Core
 
     let(:attributes) { Hash.new }
 
-    it { is_expected.to respond_to :id }
-    it { is_expected.not_to respond_to :id= }
-
+    it { is_expected.to have_read_only_attributes(:id) }
     it { is_expected.to validate_presence_of(:id) }
 
     context 'when passed unexpected data' do

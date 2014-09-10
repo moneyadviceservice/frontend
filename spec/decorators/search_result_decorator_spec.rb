@@ -90,5 +90,12 @@ RSpec.describe SearchResultDecorator do
         it { is_expected.to eq('<b>the</b> quick fox jumps over <b>the</b> lazy dog') }
       end
     end
+
+    context 'when the description includes capitalisation' do
+      let(:description) { 'the quick Fox jumps over the lazy dog' }
+      let(:query) { 'fox' }
+
+      it { is_expected.to eq('the quick <b>Fox</b> jumps over the lazy dog') }
+    end
   end
 end

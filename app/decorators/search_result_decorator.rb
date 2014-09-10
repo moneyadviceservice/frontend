@@ -13,7 +13,7 @@ class SearchResultDecorator < Draper::Decorator
 
   def description
     if context[:query].present?
-      object.description.gsub(/#{context[:query]}/, "<b>#{context[:query]}</b>").html_safe
+      object.description.gsub(/(#{context[:query]})/i, "<b>\\0</b>").html_safe
     else
       object.description
     end

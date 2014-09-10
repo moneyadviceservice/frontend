@@ -6,7 +6,7 @@
           <span class="visually-hidden">&gt;</span>
           <span class="breadcrumbs__divider" aria-hidden="true"></span>
         <% end %>
-        <%= link_to breadcrumb.path, itemprop: 'url' do %>
+        <%= link_to breadcrumb.path, itemprop: 'url', class: 'breadcrumbs__link' do %>
           <span itemprop="title"><%= breadcrumb.title %></span>
         <% end %>
       </li>

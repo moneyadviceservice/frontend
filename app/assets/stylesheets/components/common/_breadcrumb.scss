@@ -12,7 +12,11 @@
   }
 }
 
-.breadcrumbs__divider:before {
+.breadcrumbs__link {
+  white-space: nowrap;
+}
+
+.breadcrumbs__divider:after {
   @extend %font-body;
   font-size: 32px;
   line-height: 0;

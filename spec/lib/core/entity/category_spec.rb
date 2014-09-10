@@ -7,21 +7,7 @@ module Core
                          description: double,
                          contents:    double } }
 
-    it { is_expected.to respond_to :type }
-    it { is_expected.to respond_to :type= }
-
-    it { is_expected.to respond_to :parent_id }
-    it { is_expected.to respond_to :parent_id= }
-
-    it { is_expected.to respond_to :title }
-    it { is_expected.to respond_to :title= }
-
-    it { is_expected.to respond_to :description }
-    it { is_expected.to respond_to :description= }
-
-    it { is_expected.to respond_to :contents }
-    it { is_expected.to respond_to :contents= }
-
+    it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents) }
     it { is_expected.to validate_presence_of(:title) }
 
     specify { expect(subject).to_not be_home }

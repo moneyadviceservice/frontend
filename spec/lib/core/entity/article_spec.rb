@@ -12,21 +12,7 @@ module Core
       }
     end
 
-    it { is_expected.to respond_to :type }
-    it { is_expected.to respond_to :type= }
-
-    it { is_expected.to respond_to :title }
-    it { is_expected.to respond_to :title= }
-
-    it { is_expected.to respond_to :description }
-    it { is_expected.to respond_to :description= }
-
-    it { is_expected.to respond_to :body }
-    it { is_expected.to respond_to :body= }
-
-    it { is_expected.to respond_to :alternates }
-    it { is_expected.to respond_to :alternates= }
-
+    it { is_expected.to have_attributes(:type, :title, :description, :body, :alternates) }
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:body) }
 

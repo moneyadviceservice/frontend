@@ -249,7 +249,7 @@ en:
 
   search_results:
     spelling_suggestion_html: <p class='t-spelling-suggestion'>Showing results for %{query}. Did you mean %{link}?</p>
-    spelling_correction_html: <p class='t-corrected-query'>Showing results for %{query}.</p>
+    spelling_correction_html: <p class='t-corrected-query'>Showing results for <b>%{query}</b>.</p>
     index:
       document_title: Search
       page_title: Search the Money Advice Service

@@ -18,6 +18,16 @@ When(/^I submit a search with no query$/) do
   home_page.search_box.submit.click
 end
 
+When(/^I search for an incorrectly spelt term with results$/) do
+  home_page.search_box.input.set('buget')
+  home_page.search_box.submit.click
+end
+
+When(/^I search for an incorrectly spelt term with no results$/) do
+  home_page.search_box.input.set('monuy')
+  home_page.search_box.submit.click
+end
+
 Then(/^I should see the search box$/) do
   expect(home_page).to have_search_box
 end
@@ -51,6 +61,15 @@ Then(/^I should see no search results$/) do
   expect(search_results_page).to have_no_results
 end
 
+Then(/^I should have search results$/) do
+  expect(search_results_page).to have_results
+end
+
+Then(/^I should have corrected search results$/) do
+  expect(search_results_page.corrected_query).to have_content('money')
+  expect(search_results_page).to have_results
+end
+
 Then(/^I should prompted to try another search term$/) do
   expect(search_results_page).to have_content(I18n.t('search_results.index_no_results.body'))
 end
@@ -77,6 +96,10 @@ end
 
 Then(/^I should not see the "Prev" button$/) do
   expect(search_results_page.pagination).to_not have_previous_button
+end
+
+Then(/^I should see a spelling suggestion$/) do
+  expect(search_results_page).to have_spelling_suggestion
 end
 
 When(/^I go to the next page of results$/) do

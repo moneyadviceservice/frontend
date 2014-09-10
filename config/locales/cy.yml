@@ -249,6 +249,8 @@ cy:
     button_text: Chwilio
 
   search_results:
+    spelling_suggestion_html: <p class='t-spelling-suggestion'>Yn dangos canlyniadau ar gyfer %{query}. Oeddech chi'n meddwl %{link}?</p>
+    spelling_correction_html: <p class='t-corrected-query'>Yn dangos canlyniadau ar gyfer <b>%{query}</b>.</p>
     index:
       document_title: Chwilio
       page_title: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol

@@ -6,7 +6,7 @@
     <% end %>
   <% end %>
 
-  <p class="pagination__counter">
+  <p class="t-pagination__counter <% unless search_results.first_page? %>pagination__counter<% end %>">
     <%= t('search_results.index_with_results.pagination_counter', page_number: search_results.page, total_pages: search_results.number_of_pages) %>
   </p>
 

@@ -18,6 +18,17 @@ Feature: Searching
     Then I should see no search results
     And I should prompted to try another search term
 
+  Scenario: Display spelling suggestion when search terms are misspelled
+    Given I am on the home page
+    When I search for an incorrectly spelt term with results
+    Then I should have search results
+    And I should see a spelling suggestion
+
+  Scenario: Correct search when search terms are misspelled
+    Given I am on the home page
+    When I search for an incorrectly spelt term with no results
+    Then I should have corrected search results
+
   Scenario: A relevant message is displayed if a search is performed with no keywords
     Given I am on the home page
     When I submit a search with no query

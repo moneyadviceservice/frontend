@@ -12,12 +12,6 @@
   }
 }
 
-@include respond-to($mq-xs, $mq-m) {
-  .breadcrumbs__item:not(:last-child) {
-    @include visually-hidden;
-  }
-}
-
 .breadcrumbs__divider:before {
   @extend %font-body;
   font-size: 32px;
@@ -26,10 +20,5 @@
   position: relative;
   top: 4px;
   padding: 0 6px;
-  content: '\002039';
-
-  @include respond-to($mq-m) {
-    content: '\00203A';
-  }
+  content: '\00203A';
 }
-

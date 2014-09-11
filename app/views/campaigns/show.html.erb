@@ -3,13 +3,13 @@
                  canonical:   campaign.canonical_url,
                  alternate:   campaign.alternate_options) %>
 
-<div class="l-campaign-page-background"></div>
+<div class="l-car-campaign-page-background"></div>
 
-<div class="l-campaign editorial">
-  <div class="l-campaign__banner"></div>
+<div class="l-car-campaign editorial">
+  <div class="l-car-campaign__banner"></div>
 
-  <div class="l-campaign__section l-campaign__section--intro">
-    <div class="l-campaign__section-text">
+  <div class="l-car-campaign__section l-car-campaign__section--intro">
+    <div class="l-car-campaign__section-text">
       <header>
         <%= heading_tag campaign.title %>
         <%= campaign.intro_html %>
@@ -22,7 +22,7 @@
   </div>
 
   <% if campaign.trust_message? %>
-    <div class="l-campaign__trust-message">
+    <div class="l-car-campaign__trust-message">
       <div class="logo logo--green">
         <span class="visually-hidden"><%= campaign.hidden_logo_message %> </span>
       </div>

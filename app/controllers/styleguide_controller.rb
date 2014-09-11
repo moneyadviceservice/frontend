@@ -83,7 +83,7 @@ class StyleguideController < ApplicationController
   end
 
   def pages_campaign
-    render layout: 'styleguide/page'
+    render layout: 'styleguide/page_unconstrained'
   end
 
   def pages_child_category_page

@@ -1,48 +1,70 @@
-<div class="campaign__page-image"></div>
+<div class="l-campaign-masthead">
+  <%= image_tag('campaign/generic-campaign-bg.png', alt: '', class: 'l-campaign-image') %>
 
-<div>
-  <h1 class="campaign__page-heading">Cars can come with unexpected extras</h1>
-  <p class="campaign__page-tagline">Check the running costs of the car you want to buy</p>
-  <button class="button button--primary">Use our Car Cost Calculator</button>
+  <div class="l-constrained">
+    <section class="l-campaign-masthead__message">
+      <h1 class="l-campaign-masthead__heading">Cars can come with unexpected extras</h1>
+      <p class="l-campaign-masthead__tagline">Check the running costs of the car you want to buy</p>
+      <div class="l-campaign-masthead__button">
+        <button class="button button--primary">Use our Car Cost Calculator</button>
+      </div>
+    </section>
+  </div>
 </div>
 
-<div class="l-campaign__strapline">
-  <p class="">Free, impartial & set up by government</p>
+<div class="mas-strapline">
+  <div class="l-constrained">
+    <p class="mas-strapline__content">Free, impartial & set up by government</p>
+    <span class="logo logo--green"></span>
+  </div>
 </div>
 
-<section class="l-campaign l-campaign--left">
-  <h2 class="heading-extra-large">Get prepared for all the additional costs</h2>
+<section>
+  <div class="l-constrained">
+    <h2 class="l-campaign-heading">Get prepared for all the additional costs</h2>
 
-  <p class="intro">When buying a used car, think beyond the sale price. There are also the running costs to take into account.</p>
-  <p>According to a recent MA survey, 56% of people who bought a secondhand car had higher than expected bills. Fortunately, the Money Advice Service has a tool that shows you the real running costs of the car you want to buy. Making those unexpected extras less of a problem.</p>
+    <div class="l-campaign-left">
+      <p class="intro">When buying a used car, think beyond the sale price. There are also the running costs to take into account.</p>
+      <p>According to a recent MA survey, 56% of people who bought a secondhand car had higher than expected bills. Fortunately, the Money Advice Service has a tool that shows you the real running costs of the car you want to buy. Making those unexpected extras less of a problem.</p>
 
-  <ul>
-    <li>Car Cost Calcualtor is awesome</li>
-    <li>Car Cost Calcualtor is awesome</li>
-    <li>Car Cost Calcualtor is awesome</li>
-  </ul>
+      <ul>
+        <li>Car Cost Calcualtor is awesome</li>
+        <li>Car Cost Calcualtor is awesome</li>
+        <li>Car Cost Calcualtor is awesome</li>
+      </ul>
 
-  <p>Buying a car is often the second biggest purchase people make after their home. Your budget will determine whether you can buy new or used and how much you can afford in running costs. It’s crucial that you are realistic about your budget. Over-extending yourself can lead to problems down the line – particularly if you have little or no savings. Use our cut-back calculator to disc+over how much you could start saving towards your new car. It only takes five minutes.</p>
+      <p>Buying a car is often the second biggest purchase people make after their home. Your budget will determine whether you can buy new or used and how much you can afford in running costs. It’s crucial that you are realistic about your budget. Over-extending yourself can lead to problems down the line – particularly if you have little or no savings. Use our cut-back calculator to disc+over how much you could start saving towards your new car. It only takes five minutes.</p>
+    </div>
+
+    <section class="l-campaign-right">
+      <h2 class="heading-extra-small">Next steps...</h2>
+
+      <div class="next-step">
+        <a href="/en/">
+          <h3 class="next-step__heading">Try the Car costs calculator</h3>
+          <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
+        </a>
+      </div>
+
+      <div class="next-step next-step--blue">
+        <a href="/en/">
+          <h3 class="next-step__heading">Car finance explained</h3>
+          <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
+        </a>
+      </div>
+
+      <div class="next-step next-step--red">
+        <a href="/en/">
+          <h3 class="next-step__heading">Where to buy a used car</h3>
+          <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
+        </a>
+      </div>
+    </section>
+  </div>
 </section>
 
-<section class="l-campaign l-campaign--right">
-  <h2 class="heading-extra-small">Next steps...</h2>
-
-  <div class="next-step">
-    <h3 class="next-step__heading">Try the Car costs calculator</h3>
-    <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
   </div>
-
-  <div class="next-step">
-    <h3 class="next-step__heading">Try the Car costs calculator</h3>
-    <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
-  </div>
-
-  <div class="next-step">
-    <h3 class="next-step__heading">Try the Car costs calculator</h3>
-    <p class="next-step__content">Use our Car costs calculator to avoid surprises</p>
-  </div>
-</section>
-
-
-<%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+</div>

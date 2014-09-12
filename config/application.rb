@@ -30,5 +30,7 @@ module Frontend
     config.middleware.use 'OverrideHead' # convert HEAD requests to GET and return an empty body
     config.middleware.use 'RouteProbe' # respond to requests probing for a implemented route
     config.middleware.use 'VersionHeader' # add version of the running app to each response
+
+    config.assets.initialize_on_precompile = true
   end
 end

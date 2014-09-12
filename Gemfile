@@ -36,6 +36,7 @@ gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_timeliness'
 
+gem 'budget_planner', '~> 4.0'
 gem 'pensions_calculator', '~> 0.2'
 
 group :assets do

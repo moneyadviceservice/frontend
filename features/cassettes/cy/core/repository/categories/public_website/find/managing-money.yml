@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/managing-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 70ab4bb7-de16-4609-ae54-7757204a0956
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 10 Sep 2014 12:45:45 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - 70ab4bb7-de16-4609-ae54-7757204a0956
+      X-Runtime:
+      - '1.264727'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 12:45:45 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/managing-money.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - 70ab4bb7-de16-4609-ae54-7757204a0956
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 10 Sep 2014 12:45:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 9a7edbead5846c6e099707a24bdcb4a8
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 10-Sep-2015 12:45:45 GMT; secure
+      - _session_id=9a7edbead5846c6e099707a24bdcb4a8; path=/; secure; HttpOnly
+      - _web_tracking=80f85d2a44d30924ac6424042b600994; path=/; expires=Thu, 10-Sep-2015
+        12:45:45 GMT; secure
+      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      X-Request-Id:
+      - 70ab4bb7-de16-4609-ae54-7757204a0956
+      X-Runtime:
+      - '0.326428'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-money","title":"Rheoli arian","description":"Gwiriwch
+        sut y gallwch wneud i''ch arian fynd ymhellach a defnyddiwch ein Cynllunyddcyllideb
+        i weld faint o arian sydd gennych yn dod i mewn ac ar beth yr ydych yn ei
+        wario.","parent_id":"budgeting-and-managing-money","contents":[{"id":"canllaw-syml-i-reoli-eich-arian","type":"guide","title":"Canllaw
+        syml i reoli eich arian","description":"Sut i osod cyllideb, aros ar y blaen
+        i ddyledion a dechrau cynilo''n rheolaidd"},{"id":"sut-i-wneud-ich-arian-bara-drwyr-wythnos","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i wneud i\u2019ch arian bara drwy\u2019r wythnos","description":"Tri
+        cham tuag at ymestyn eich arian ychydig ymhellach"},{"id":"byw-ar-incwm-isel-awgrymiadau","type":"guide","title":"Awgrymiadau
+        cyllidebu pan ydych ar incwm isel","description":"Y pethau allweddol i\u2019w
+        gofio os ydych ar incwm isel yw\u2019r rhain: cyllidwch yn ofalus, cwtogwch
+        ar eich costau a gwnewch yn si\u0175r eich bod yn hawlio\u2019ch holl fudd-daliadau"},{"id":"cynllunydd-cyllideb","type":"tool","title":"Cynllunydd
+        cyllideb","description":"Gallwch ddefnyddio\u2019r cynllunydd hwn i weld faint
+        o arian sy\u2019n dod i mewn ac ar beth yr ydych yn ei wario"},{"id":"gwiriad-iechyd","type":"tool","title":"Gwiriad
+        Iechyd Ariannol","description":"Defnyddiwch y Gwiriad Iechyd Ariannol i roi
+        darlun ichi o\u2019ch sefyllfa ariannol a chynllun gweithredu"},{"id":"sut-i-gael-deupen-llinyn-ynghyd-ar-incwm-isel","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i gael deupen llinyn ynghyd ar incwm isel","description":"Cadwch
+        reolaeth ar eich arian pan yw\u2019ch incwm yn isel"},{"id":"sut-mae-gwneud-i-ch-arian-fynd-ymhellach","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Sut mae gwneud i\u2019ch arian fynd ymhellach","description":"Dilynwch
+        y cynllun gweithredu hwn i\u2019ch helpu i arbed arian yn y cartref a phan
+        fyddwch yn mynd allan"},{"id":"sut-i-reolich-arian-yn-well","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i reoli\u2019ch arian yn well","description":"Lluniwch gyllideb
+        i wneud y mwyaf o\u2019ch arian a thalu dyledion"},{"id":"defnyddio-cyfrif-banc-sylfaenol-neu-gerdyn-rhagdaledig-i-osgoi-dyled","type":"guide","title":"Sut
+        i osgoi dyled trwy ddefnyddio cyfrif banc a cherdyn rhagdalu","description":"Dwy
+        ffordd synhwyrol o atal eich hun rhag mynd i ddyled yn y dyfodol"},{"id":"y-ffyrdd-gorau-i-dalu-biliau","type":"guide","title":"Y
+        ffyrdd gorau i dalu biliau","description":"Pa ffordd yw\u2019r orau i dalu
+        eich biliau pan fyddwch yn gadael cartref am y tro cyntaf? Byddwn yn trafod
+        y gwahanol ddulliau talu - o Ddebyd Uniongyrchol i fesurydd."},{"id":"talu-drosoch-eich-hun","type":"guide","title":"Talu
+        drosoch eich hun","description":"Sut i gymryd cyfrifoldeb am gostau byw o
+        ddydd i ddydd."},{"id":"a-ddylech-chi-reoli-arian-ar-y-cyd-neu-ar-wahan","type":"guide","title":"A
+        ddylech chi reoli arian ar y cyd neu ar wah\u00e2n?","description":"Mae llawer
+        o ffyrdd o reoli eich arian gyda\u2019ch gilydd \u2013 edrychwch i weld beth
+        allwch chi ei wneud er mwyn gwneud i\u2019ch cyllid ar y cyd weithio ar eich
+        rhan chi a\u2019ch partner"},{"id":"sut-i-oroesi-fel-cwpwl-os-bydd-un-ohonoch-yn-gwario-gormod","type":"guide","title":"Sut
+        i oroesi fel cwpwl os bydd un ohonoch yn gwario gormod","description":"Oes
+        gennych chi neu''ch partner broblem gwario? Dysgwch sut allwch gael y gwario
+        dan reolaeth a diogelu\u2019ch teulu"},{"id":"siarad-am-arian-gydach-partner","type":"guide","title":"Siarad
+        am arian gyda\u2019ch partner","description":"Peidiwch \u00e2 gadael i ddadleuon
+        am arian sbwylio\u2019r cyffro o gael babi newydd yn eich bywydau. Darllenwch
+        ein hawgrymiadau da ar sut i siarad am arian"},{"id":"rheoli-arian","type":"video","title":"Rheoli
+        arian","description":"Pa ffordd sy\u2019n well i gadw trefn ar eich arian
+        ac i reoli\u2019ch arian?"},{"id":"rheoli-eich-arian-trwy-ddefnyddioar-ymagwedd-pot-jam","type":"guide","title":"Rheoli
+        eich arian trwy ddefnyddio\u2019r ymagwedd pot jam","description":"Ceisiwch
+        y ffordd seml hon o drefnu\u2019ch arian er mwyn sicrhau bod gennych ddigon
+        ar gyfer eich holl filiau a\u2019ch gwariant cartref yn ystod y mis"},{"id":"cyfrifiannell-torrin-ol","type":"tool","title":"Cyfrifiannell
+        torri''n \u00f4l","description":"I ble mae eich arian i gyd yn mynd? Gall
+        y Gyfrifiannell torri\u2019n \u00f4l eich helpu i weld ble gallwch chi arbed
+        arian ar bethau yr ydych yn eu prynu yn gyson"},{"id":"cardiau-rhagdaledig","type":"guide","title":"Cardiau
+        rhagdaledig","description":"Os na allwch gael cerdyn credyd neu ddebyd, mae
+        cardiau rhagdaledig yn ddewis defnyddiol \u2013 felly, sut maent yn gweithio?"},{"id":"cyfrifiannell-estynnydd-arian","type":"tool","title":"Cyfrifiannell
+        estynnydd arian","description":"A ydych yn bryderus y byddwch yn rhedeg allan
+        o arian cyn i chi gael eich talu nesaf?"},{"id":"sut-i-dalu-eich-biliau-ar-amser-ac-i-arbed-arian","type":"guide","title":"Sut
+        i dalu eich biliau ar amser ac i arbed arian","description":"Defnyddiwch ein
+        canllaw cam wrth gam i roi cymorth i chi gadw trefn ar eich biliau ac arbed
+        arian"},{"id":"sut-i-gadw-at-gyllideb-a-chynilo-arian","type":"guide","title":"Sut
+        i gadw at gyllideb a chynilo arian","description":"Y ffordd orau i gynilo
+        arian a chadw llygad ar eich gwario yw cadw at gyllideb. Dilynwch ein camau
+        syml i wneud cyllidebu\u2019n haws"}]}'
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 12:45:46 GMT
+recorded_with: VCR 2.9.2

@@ -1,44 +1,35 @@
 <div class="tab-selector" data-dough-component="TabSelector">
-  <div class="tab-selector__items" data-dough-tabselector-wrapper>
-    <ul class="tab-selector__items-inner" data-dough-tabselector-triggers>
-      <li class="tab-selector__item is-active" data-dough-tabselector-trigger="1">
-        <a class="tab-selector__trigger" href="#panel-1">
-          Show panel 1
-          <span class="tab-selector__item-info">Summary 1</span>
-          <span class="tab-selector__icon icon icon--down-chevron-blue"></span>
-        </a>
-      </li>
-      <li class="tab-selector__item is-inactive" data-dough-tabselector-trigger="2">
-        <a class="tab-selector__trigger" href="#panel-2">
-          Show panel 2
-          <span class="tab-selector__item-info">Summary 2</span>
-          <span class="tab-selector__icon icon icon--down-chevron-blue"></span>
-        </a>
-      </li>
-      <li class="tab-selector__item is-inactive" data-dough-tabselector-trigger="3">
-        <a class="tab-selector__trigger" href="#panel-3">
-          Show panel 3
-          <span class="tab-selector__item-info">Summary 3</span>
-          <span class="tab-selector__icon icon icon--down-chevron-blue"></span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="tab-selector__target is-active" id="panel-1" data-dough-tabselector-target="1">
-    Panel 1
-  </div>
-  <div class="tab-selector__target is-inactive" id="panel-2" data-dough-tabselector-target="2">
-    <div class="is-active" data-dough-tabselector-trigger="1">
-      <a href="#panel-1">Show panel 1</a>
-    </div>
-    <div class="is-inactive" data-dough-tabselector-trigger="2">
-      <a href="#panel-2">Show panel 2</a>
-    </div>
-    <div class="is-inactive" data-dough-tabselector-trigger="3">
-      <a href="#panel-3">Show panel 3</a>
+  <div data-dough-tab-selector-triggers-outer class="tab-selector__triggers-outer">
+    <div data-dough-tab-selector-triggers-inner class="tab-selector__triggers-inner">
+      <div class="tab-selector__trigger-container is-active" data-dough-tab-selector-trigger-container>
+        <a class="tab-selector__trigger" href="#panel-1" data-dough-tab-selector-trigger="1">panel 1
+          <span class="tab-selector__item-info">Summary 1</span></a>
+      </div>
+      <div class="tab-selector__trigger-container is-inactive" data-dough-tab-selector-trigger-container>
+        <a class="tab-selector__trigger" href="#panel-2" data-dough-tab-selector-trigger="2">panel 2
+          <span class="tab-selector__item-info">Summary 2</span></a>
+      </div>
+      <div class="tab-selector__trigger-container is-inactive" data-dough-tab-selector-trigger-container>
+        <a class="tab-selector__trigger" href="#panel-3" data-dough-tab-selector-trigger="3">panel 3
+          <span class="tab-selector__item-info">Summary 3</span></a>
+      </div>
     </div>
   </div>
-  <div class="tab-selector__target is-inactive" id="panel-3" data-dough-tabselector-target="3">
-    Panel 3
+  <div class="tab-selector__target is-active" id="panel-1" data-dough-tab-selector-target="1">
+    <h2 class="tab-selector__target-heading">Panel 1</h2>
+    Content
   </div>
+  <div class="tab-selector__target is-inactive" id="panel-2" data-dough-tab-selector-target="2">
+    <h2 class="tab-selector__target-heading">Panel 2</h2>
+    <p>
+      <a href="#panel-1" class="is-active" data-dough-tab-selector-trigger="1">panel 1</a> or <a href="#panel-2" class="is-inactive" data-dough-tab-selector-trigger="2">panel 2</a>
+    </p>
+    <p>
+      <a href="#panel-3" class="is-inactive" data-dough-tab-selector-trigger="3">panel 3</a>
+    </p>
+  </div>
+  <div class="tab-selector__target is-inactive" id="panel-3" data-dough-tab-selector-target="3">
+    <h2 class="tab-selector__target-heading">Panel 3</h2>
+  </div>
+
 </div>

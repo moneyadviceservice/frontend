@@ -22,11 +22,6 @@
       color: $color-search-text;
     }
 
-    &:-webkit-autofill {
-      // hack to remove Chrome's yellow background on autofill
-      -webkit-box-shadow: 0 0 0 1000px $color-white inset;
-    }
-
     &:focus::-webkit-input-placeholder {
       color: transparent;
     }

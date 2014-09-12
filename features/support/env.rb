@@ -31,22 +31,29 @@ Around('@fake-articles') do |scenario, block|
 end
 
 Around do |scenario, block|
-  enable_feature_tag = /^@enable-/
-  enable_tags        = scenario.source_tag_names.grep(enable_feature_tag)
-  enable_feature     = if enable_tags.size > 1
-                         fail StandardError.new('Only singular feature tags are supported')
-                       elsif enable_tags.size > 0
-                         enable_tags.first.gsub(enable_feature_tag, '').underscore.to_sym
-                       end
+  enabled_feature_tag = /^@enable-/
+  enabled_tags     = scenario.source_tag_names.grep(enabled_feature_tag)
+  enabled_features = enabled_tags.map{|t| t.gsub(enabled_feature_tag, '').underscore.to_sym}
 
-  if enable_feature
-    Feature.run_with_activated(enable_feature) do
+  if !enabled_features.empty?
+    enable_features(enabled_features) do
       Rails.application.reload_routes!
       block.call
     end
+
     Rails.application.reload_routes!
   else
     block.call
+  end
+end
+
+def enable_features(features, &block)
+  if features.empty?
+    yield
+  else
+    Feature.run_with_activated(features.shift) do
+      enable_features(features, &block)
+    end
   end
 end
 

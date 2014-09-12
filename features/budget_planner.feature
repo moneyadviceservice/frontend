@@ -1,4 +1,4 @@
-@enable-budget-planner
+@enable-budget-planner @enable-registration
 Feature: View the Budget Planner
   As a visitor to the website
   I want to view the Budget Planner

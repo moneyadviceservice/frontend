@@ -1,356 +1,84 @@
-.l-campaign {
+.l-campaign-masthead {
   position: relative;
-  z-index: 2;
+
+  @include respond-to($mq-m) {
+    margin-bottom: -6px;
+  }
 }
 
-.l-campaign__section-media {
+.l-campaign-image {
   width: 100%;
 }
 
-.l-campaign__section-text h2 {
-  margin-top: 0;
-}
+.l-campaign-masthead__message {
+  margin: $baseline-unit 0;
 
-.l-campaign-page-background {
-  @include respond-to($mq-xl) {
-    background: transparent 0 0 image_url('car_campaign/car-banner-grad-bg.png') repeat-x;
-    height: 600px;
-    left: 0;
+  @include respond-to($mq-m) {
     position: absolute;
-    top: 72px;
-    width: 100%;
-    z-index: -1;
+    bottom: 50px;
+    margin-left: $default-gutter;
   }
 }
 
-.l-campaign__banner {
-  background: transparent 50% 100% image_url('car_campaign/car-banner.jpg') no-repeat;
-  background-size: cover;
-  min-height: 300px;
-  max-height: 600px;
-  padding-bottom: 50%;
-  width: 100%;
+.l-campaign-masthead__heading {
+  color: $color-heading-extra-small;
+  padding: $baseline-unit*2;
+  background-color: $color-white;
+  margin: 0;
 
-  .ie8 & {
-    min-height: 600px;
-    padding-bottom: 0;
+  @include respond-to($mq-m) {
+    max-width: 500px;
+  }
+
+  @include respond-to($mq-l) {
+    @include body(48, 54);
   }
 }
 
-.l-campaign__section--intro {
+.l-campaign-masthead__tagline {
+  @extend .intro;
+  padding: $baseline-unit*2;
+  background-color: $color-white;
+  margin-bottom: 0;
+}
+
+.l-campaign-masthead__button {
+  padding: $baseline-unit*2;
+  background-color: $color-white;
+  width: 296px;
+}
+
+.l-campaign-heading {
+  @extend .heading-extra-large;
   @include column(12);
-  margin-bottom: $baseline-unit*6;
+  color: $color-heading-default;
+  margin-top: $baseline-unit*6;
 
   @include respond-to($mq-m) {
-    @include column(10);
-    @include push(1);
-  }
-
-  @include respond-to($mq-l) {
-    @include column(8);
-    @include push(2);
-  }
-}
-
-.l-campaign__section-separator {
-  background: transparent 50% 95% image_url('car_campaign/separator.png') no-repeat;
-  background-size: 180%;
-  float: left;
-  height: 65px;
-  margin-bottom: $baseline-unit*4;
-  margin-top: $baseline-unit*4;
-  padding-bottom: 18.74%;
-  width: 100%;
-
-  @include respond-to($mq-s, $mq-m) {
-    background-size: cover;
-  }
-
-  @include respond-to($mq-m) {
-    @include column(12);
-    background-position: 50% 50%;
-    background-size: 90%;
-    height: 125px;
-    margin-bottom: $baseline-unit*18;
-    margin-top: $baseline-unit*7;
-    padding-bottom: 0;
-  }
-
-  @include respond-to($mq-l) {
-    @include column(10);
-    @include push(1);
-  }
-}
-
-.l-campaign__trust-message {
-  display: none;
-  padding: $baseline-unit*3;
-  background-color: $breadcrumbs-background-color;
-  margin-top: -$baseline-unit*3;
-  margin-bottom: $baseline-unit*3;
-  min-width: 350px;
-
-  @include respond-to($mq-m) {
-    @include column(10);
-    @include push(1);
-    display: block;
-    margin-bottom: $baseline-unit*18;
-  }
-
-  @include respond-to($mq-l) {
-    @include column(8);
-    @include push(2);
-  }
-
-  > h2 {
-    @extend %font-heading-heavy;
-    @include body(30, 36);
-    color: $color-heading-extra-small;
-    margin-top: $baseline-unit*3;
-  }
-}
-
-.l-campaign__section--how-buy {
-  @include column(12);
-  margin-bottom: $baseline-unit*11;
-
-  @include respond-to($mq-m) {
-    @include column(10);
-    @include push(1);
-  }
-
-  @include respond-to($mq-l) {
-    @include column(8);
-    @include push(2);
-  }
-
-  & .l-campaign__section-row {
-    @include row(12);
-
-    @include respond-to($mq-m) {
-      @include row(10);
-    }
-
-    @include respond-to($mq-l) {
-      @include row(8);
-    }
-  }
-
-  & .l-campaign__section-text {
-    @include column(12, 12);
-
-    @include respond-to($mq-m) {
-      @include column(5, 10);
-    }
-
-    @include respond-to($mq-l) {
-      @include column(4, 8);
-    }
-  }
-
-  & .l-campaign__section-heading + .l-campaign__section-text {
-    @include column(6, 12);
-    float: right;
-
-    @include respond-to($mq-m) {
-      @include column(5, 10);
-      float: left;
-    }
-
-    @include respond-to($mq-l) {
-      @include column(4, 8);
-    }
-  }
-
-  & .l-campaign__section-media {
-    @include column(6, 12);
-
-    float: left;
-    margin-left: 0;
-
-    @include respond-to(0, $mq-m) {
-      margin-bottom: $baseline-unit*3;
-    }
-
-    @include respond-to($mq-m) {
-      @include column(4, 8);
-      float: right;
-      min-height: inherit;
-      margin-top: -$baseline-unit*5;
-      padding-left: 30px;
-    }
-
-    &:before {
-      background: transparent top center image_url('car_campaign/sell-car.png') no-repeat;
-      content: '';
-      display: block;
-      min-height: 220px;
-      width: 100%;
-
-      @include respond-to($mq-m) {
-        background-position: top right;
-        min-height: 400px;
-      }
-    }
-
-    // IE8 overrides to make the images play nice
-    .ie8 & {
-      padding-left: 0;
-
-      &:before {
-        height: 300px;
-        width: 330px;
-      }
-    }
-  }
-}
-
-.l-campaign__section--running {
-  @include column(12);
-  margin-bottom: $baseline-unit*11;
-
-  @include respond-to($mq-m) {
-    @include column(10);
-    @include push(1);
-  }
-
-  @include respond-to($mq-l) {
-    @include column(9);
-    @include push(1);
-    margin-bottom: $baseline-unit*10;
-  }
-
-  & .l-campaign__section-row {
-    @include row(12);
-
-    @include respond-to($mq-m) {
-      @include row(10);
-    }
-
-    @include respond-to($mq-l) {
-      @include row(9);
-    }
-  }
-
-  & .l-campaign__section-media {
-    background: transparent 40px 100% image_url('car_campaign/run-car.png') no-repeat;
-    float: left;
-    min-height: 305px;
-
-    @include respond-to(0, $mq-m) {
-      margin-bottom: $baseline-unit*3;
-    }
-
-    @include respond-to($mq-s) {
-      background-position: right top;
-    }
-
-    @include respond-to($mq-m) {
-      @include column(5, 10);
-      background-position: top left;
-      background-size: contain;
-      float: left;
-      padding-right: 30px;
-    }
-
-    @include respond-to($mq-l) {
-      @include column(5, 9);
-    }
-  }
-
-  & .l-campaign__section-text {
-    @include column(12);
-
-    @include respond-to($mq-m) {
-      @include column(5, 10);
-      float: right;
-    }
-
-    @include respond-to($mq-l) {
-      @include column(4, 9);
-      float: right;
-    }
-  }
-}
-
-.l-campaign__section--sell {
-  @include column(12);
-  margin-bottom: $baseline-unit*11;
-
-  @include respond-to($mq-m) {
-    @include column(10);
-    @include push(1);
+    margin-top: $baseline-unit*12;
     margin-bottom: $baseline-unit*6;
   }
+}
 
-  @include respond-to($mq-l) {
-    @include column(10);
-    @include push(2);
+.l-campaign-left {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(7);
   }
+}
 
-  & .l-campaign__section-row {
-    @include row(12);
+.l-campaign-right {
+  @include column(12);
 
-    @include respond-to($mq-m) {
-      @include row(10);
-    }
-
-    .l-campaign__section-text:first-child {
-      @include respond-to($mq-m) {
-        margin-top: 10%;
-      }
-    }
+  @include respond-to($mq-m) {
+    @include column(5);
+    margin-top: -$baseline-unit*3;
   }
+}
 
-  & .l-campaign__section-text {
-    @include column(12);
-
-    position: relative;
-    z-index: 1;
-
-    @include respond-to($mq-m) {
-      @include column(4, 10);
-    }
-  }
-
-  & .l-campaign__section-media {
-    float: left;
-
-    @include respond-to($mq-m) {
-      @include column(6, 10);
-      float: right;
-    }
-
-    &:before {
-      background: transparent 0 0 image_url('car_campaign/buy-car.png') no-repeat;
-      background-size: contain;
-      content: '';
-      display: block;
-      height: 570px;
-      position: relative;
-      width: 100%;
-
-      @include respond-to($mq-s) {
-        background-position: center top;
-        height: auto;
-        min-height: 500px;
-      }
-
-      @include respond-to($mq-l) {
-        min-height: 500px;
-        left: -40px;
-      }
-
-      @include respond-to($mq-xl) {
-        left: -110px;
-      }
-
-      // IE8 overrides to make the images play nice
-      .ie8 & {
-        left: 0;
-        height: 700px;
-        width: 575px;
-      }
-    }
-  }
+.l-campaign-directory {
+  background-color: $color-directory-emphasized-bg;
+  margin-top: $baseline-unit*10;
+  margin-bottom: $baseline-unit*10;
 }

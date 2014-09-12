@@ -1,13 +1,13 @@
-<div class="l-campaign__section l-campaign__section--<%= section.css_name %>">
-  <div class="l-campaign__section-row">
-    <div class="l-campaign__section-text">
-      <%= heading_tag section.title, level: 2, class: 'l-campaign__section-heading' %>
+<div class="l-car-campaign__section l-car-campaign__section--<%= section.css_name %>">
+  <div class="l-car-campaign__section-row">
+    <div class="l-car-campaign__section-text">
+      <%= heading_tag section.title, level: 2, class: 'l-car-campaign__section-heading' %>
       <p><%= section.intro %></p>
     </div>
 
-    <div class="l-campaign__section-media"></div>
+    <div class="l-car-campaign__section-media"></div>
 
-    <div class="l-campaign__section-text">
+    <div class="l-car-campaign__section-text">
       <ul class="unstyled-list">
         <%= render partial: 'article', collection: section %>
       </ul>
@@ -16,5 +16,5 @@
 </div>
 
 <% if section.separator? %>
-  <div class="l-campaign__section-separator"></div>
+  <div class="l-car-campaign__section-separator"></div>
 <% end %>

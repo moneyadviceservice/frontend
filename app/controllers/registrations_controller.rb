@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  skip_before_action :store_location
+  before_action :store_pre_auth_location, only: [:new]
   before_action :configure_permitted_parameters
 
   def edit
@@ -15,8 +15,12 @@ class RegistrationsController < Devise::RegistrationsController
 
   private
 
+  def store_pre_auth_location
+    session[:pre_auth_location] = referer
+  end
+
   def after_sign_up_path_for(resource)
-    session[:user_return_to] || root_path
+    session[:pre_auth_location] || root_path
   end
 
   def set_flash_message(key, kind, options = {})

@@ -1,7 +1,7 @@
 module Core::Repository
   module CMS
     class CMS < Core::Repository::Base
-      def initialize(options={})
+      def initialize(options = {})
         self.connection = Core::Registry::Connection[:cms]
         self.fallback_repository = options[:fallback]
       end

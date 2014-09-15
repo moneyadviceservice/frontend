@@ -1,9 +1,4 @@
 class ArticlesPreviewController < ArticlesController
-
-  def show
-    super
-  end
-
   private
 
   def interactor

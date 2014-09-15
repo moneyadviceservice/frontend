@@ -7,7 +7,9 @@ module Core
           raise 'customer not in CRM' if customer(user).nil?
 
           updated_user = ::Converters::CustomerToUser.new(customer(user)).call
-          updated_user.save!
+          success = updated_user.save # do not raise errors. otherwise user cannot login
+          Rails.logger.warn("Tried to update user with id #{updated_user.id} from CRM but did not save") unless success
+
           updated_user
         end
 

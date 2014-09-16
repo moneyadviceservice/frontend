@@ -2,8 +2,16 @@ class EmbeddedToolsController < ApplicationController
 
 protected
 
+  def syndicated_tool_request?
+    true
+  end
+
   helper_method def parent_template
-    'layouts/engine'
+    if syndicated_tool_request?
+      'layouts/engine_syndicated'
+    else
+      'layouts/engine'
+    end
   end
 
   def breadcrumbs

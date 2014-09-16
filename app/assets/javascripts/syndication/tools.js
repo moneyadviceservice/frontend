@@ -19,7 +19,7 @@ this.masConfig = {
         path: "en/tools/pension-calculator"
       },
       cy: {
-        path: "cy/tools/"
+        path: "cy/tools/cyfrifiannell-pensiwn"
       },
       width: "100%",
       height: "800px",

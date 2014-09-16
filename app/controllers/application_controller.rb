@@ -9,6 +9,23 @@ class ApplicationController < ActionController::Base
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
+  def syndicated_tool_request?
+    !!request.headers['X-SYNDICATED-TOOL']
+  end
+
+  helper_method :syndicated_tool_request?
+
+  def parent_template
+    if syndicated_tool_request?
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+      'layouts/engine_syndicated'
+    else
+      'layouts/engine'
+    end
+  end
+
+  helper_method :parent_template
+
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end

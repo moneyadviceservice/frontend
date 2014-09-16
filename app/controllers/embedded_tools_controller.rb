@@ -2,19 +2,6 @@ class EmbeddedToolsController < ApplicationController
 
 protected
 
-  def syndicated_tool_request?
-    !!request.headers['HTTP_X_SYNDICATED_TOOL']
-  end
-
-  helper_method def parent_template
-    if syndicated_tool_request?
-      response.headers['X-Frame-Options'] = 'ALLOWALL'
-      'layouts/engine_syndicated'
-    else
-      'layouts/engine'
-    end
-  end
-
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
   end

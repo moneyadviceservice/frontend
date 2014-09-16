@@ -1,4 +1,6 @@
 window.iframeResizer = function(msgPrefix, targetOrigin, minFrameHeight) {
+  'use strict';
+
   var timer, frameDefaultOverflow;
 
   minFrameHeight = minFrameHeight || 250;
@@ -8,6 +10,12 @@ window.iframeResizer = function(msgPrefix, targetOrigin, minFrameHeight) {
     start: function() {
       if (!window.postMessage) {
         return;
+      }
+
+      if( !window.getComputedStyle) {
+        window.getComputedStyle = function(e) {
+          return e.currentStyle;
+        };
       }
 
       var currentHeight = 0,

@@ -3,7 +3,7 @@ class EmbeddedToolsController < ApplicationController
 protected
 
   def syndicated_tool_request?
-    true
+    !!request.headers['HTTP_X_SYNDICATED_TOOL']
   end
 
   helper_method def parent_template

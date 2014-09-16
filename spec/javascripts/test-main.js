@@ -13,6 +13,7 @@ require.config({
     waypoints: 'vendor/assets/bower_components/jquery-waypoints/waypoints',
     ujs: 'vendor/assets/bower_components/jquery-ujs/src/rails',
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',
+    typeahead: 'vendor/assets/bower_components/typeahead.js/dist/typeahead.jquery',
 
     // Internal modules
     DoughBaseComponent: 'vendor/assets/bower_components/dough/assets/js/components/DoughBaseComponent',
@@ -37,7 +38,8 @@ require.config({
     TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector'
   },
   shim: {
-    'ujs': ['jquery']
+    'ujs': ['jquery'],
+    'typeahead': ['jquery']
   },
   config: {
     globals: (function() {

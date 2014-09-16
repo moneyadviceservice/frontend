@@ -4,6 +4,7 @@
 //= depend_on_asset jquery/dist/jquery
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
+//= depend_on_asset typeahead.js/dist/typeahead.jquery
 
 //= depend_on_asset modules/globals
 //= depend_on_asset modules/common
@@ -44,6 +45,7 @@
       eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
       rsvp: requirejs_path('rsvp/rsvp'),
       jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
+      typeahead: requirejs_path('typeahead.js/dist/typeahead.jquery'),
 
       # Internal modules
       globals: requirejs_path('modules/globals'),
@@ -63,7 +65,8 @@
       pensionsCalculator: requirejs_path('pensions_calculator/application'),
     },
     shim: {
-      ujs: ['jquery']
+      ujs: ['jquery'],
+      typeahead: ['jquery']
     }
   }
 

@@ -15,7 +15,7 @@
   <% content_for(:javascripts) do %>
     <%= javascript_include_tag "syndication/iframeResizer" %>
     <script>
-      window.iframeResizer('MASRESIZE-', 'http://localhost:4000').start();
+      window.iframeResizer('MASRESIZE-').start();
     </script>
     <%= javascript_include_tag "syndication/tools" %>
   <% end %>

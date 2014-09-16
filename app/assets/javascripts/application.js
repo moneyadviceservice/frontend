@@ -68,7 +68,9 @@ require(['common', 'jquery'], function(MAS, $) {
         showIcon: true,
         useButton: true,
         triggerEl: '.category-detail__heading',
-        targetEl: '.category-detail__list-container'
+        targetEl: '.category-detail__list-container',
+        targetItems: '.category-detail__list-item',
+        numberItemsToDisplay: 6
       });
 
 

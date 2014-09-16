@@ -8,8 +8,10 @@ define(['jquery', 'common'], function($, MAS) {
     triggerEl: '.collapsible',
     targetEl: '.collapsible-section',
     targetType: 'class', // class / href / data-attr
+    targetItems: '.item',
     activeClass: 'is-on',
     inactiveClass: 'is-off',
+    numberItemsToDisplay: 6,
     closeOffFocus: false,
     parentWrapper: false,
     accordion: false,
@@ -52,6 +54,10 @@ define(['jquery', 'common'], function($, MAS) {
       default:
         return false;
     }
+  };
+
+  var _getItems = function($el, opt) {
+    return $el.find(opt.targetItems);
   };
 
   var Collapsible = function(opts) {
@@ -144,10 +150,12 @@ define(['jquery', 'common'], function($, MAS) {
   Collapsible.prototype._setupEach = function(i, el) {
     var $el = $(el),
         _this = this,
-        _target = _getTarget($el, _this.o);
+        _target = _getTarget($el, _this.o),
+        _items = _getItems(_target, _this.o);
 
     this.sections[i] = {
       index: i,
+      items:  _items,
       trigger: $el,
       target: _target,
       hidden: _isHidden(_target, _this.o)
@@ -215,12 +223,16 @@ define(['jquery', 'common'], function($, MAS) {
       action: 'show'
     });
 
-    var item = this.sections[i];
-    item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    item.target.attr('aria-hidden', 'false');
-    item.hidden = false;
-    if (this.o.showText) item.txt.text(this.o.textString.hideThisSection + ' ');
+    var section = this.sections[i];
+    var itemsToDisplay = section.items.slice(0, this.o.numberItemsToDisplay);
+
+    section.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+    section.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+    section.target.attr('aria-hidden', 'false');
+    section.hidden = false;
+    itemsToDisplay.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+    itemsToDisplay.attr('aria-hidden', 'false');
+    if (this.o.showText) section.txt.text(this.o.textString.hideThisSection + ' ');
     if (this.o.accordion && (this.selected !== false && this.selected !== i)) {
       this.hide(this.selected, false);
     }
@@ -235,12 +247,16 @@ define(['jquery', 'common'], function($, MAS) {
       action: 'hide'
     });
 
-    var item = this.sections[i];
-    item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    item.target.attr('aria-hidden', 'true');
-    item.hidden = true;
-    if (this.o.showText) item.txt.text(this.o.textString.showThisSection + ' ');
+    var section = this.sections[i];
+    var items = section.items;
+    section.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+    section.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+    section.target.attr('aria-hidden', 'true');
+    section.hidden = true;
+    items.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+    items.attr('aria-hidden', 'true');
+
+    if (this.o.showText) section.txt.text(this.o.textString.showThisSection + ' ');
     return this;
   };
 

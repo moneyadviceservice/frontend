@@ -27,23 +27,26 @@ describe('mas_collapsable basics', function () {
       expect(validcollapsable.o).to.have.property('activeClass');
       expect(validcollapsable.o).to.have.property('closeOffFocus');
       expect(validcollapsable.o).to.have.property('accordion');
+      expect(validcollapsable.o).to.have.property('numberItemsToDisplay');
     });
   });
 
   describe('onload', function () {
-    var buttonVisible, targetVisible, buttonHidden, targetHidden;
+    var buttonVisible, targetVisible, buttonHidden, targetHidden, visibleItems, invisibleItems;
 
     before(function(){
-      buttonVisible = $body.find('#toggleButton1');
-      targetVisible = $body.find('#toggleTarget1');
-      buttonHidden = $body.find('#toggleButton2');
-      targetHidden = $body.find('#toggleTarget2');
+      buttonVisible  = $body.find('#toggleButton1');
+      targetVisible  = $body.find('#toggleTarget1');
+      buttonHidden   = $body.find('#toggleButton2');
+      targetHidden   = $body.find('#toggleTarget2');
+      visibleItems   = $body.find('li.is-on');
+      invisibleItems = $body.find('li.is-off');
     });
 
     it('adds aria-role=button to all toggle trigger elements', function(){
       expect(buttonVisible.attr('aria-role')).to.equal('button');
     });
-    
+
     describe('target element is hidden', function () {
       it('adds aria-hidden=true to target element', function(){
         expect(targetHidden.attr('aria-hidden')).to.equal('true');
@@ -51,6 +54,10 @@ describe('mas_collapsable basics', function () {
       it('adds (inactive class) on both target and trigger elements', function(){
         expect(buttonHidden.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
         expect(targetHidden.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
+      });
+
+      it('adds (inactive class) on the target items', function() {
+        expect(invisibleItems).to.have.length(8);
       });
     });
 
@@ -61,6 +68,10 @@ describe('mas_collapsable basics', function () {
       it('adds (active class) on both target and trigger elements', function(){
         expect(buttonVisible.hasClass(validcollapsable.o.activeClass)).to.be.true;
         expect(targetVisible.hasClass(validcollapsable.o.activeClass)).to.be.true;
+      });
+
+      it('adds (active class) on the first six items', function() {
+        expect(visibleItems).to.have.length(6);
       });
     });
   });
@@ -93,7 +104,7 @@ describe('mas_collapsable basics', function () {
       setTargetToHidden(true);
       button.trigger('click');
       expect(button.hasClass(validcollapsable.o.activeClass)).to.be.true;
-      expect(target.hasClass(validcollapsable.o.activeClass)).to.be.true;      
+      expect(target.hasClass(validcollapsable.o.activeClass)).to.be.true;
     });
 
     it('adds keyboard(space) support to trigger elements', function(done){
@@ -112,7 +123,7 @@ describe('mas_collapsable basics', function () {
   });
 
   describe('when trigger is activated on an open element', function(){
-    var button, target;
+    var button, target, visibleItems;
 
     function setTargetToHidden( hidden ){
       if( hidden && target.hasClass(validcollapsable.o.activeClass) ){
@@ -123,8 +134,9 @@ describe('mas_collapsable basics', function () {
     }
 
     before(function(){
-      button = $body.find('#toggleButton1');
-      target = $body.find('#toggleTarget1');
+      button       = $body.find('#toggleButton1');
+      target       = $body.find('#toggleTarget1');
+      visibleItems = $body.find('li.is-on');
     });
 
     it('sets aria-hidden=true on target element', function(){
@@ -139,7 +151,7 @@ describe('mas_collapsable basics', function () {
       setTargetToHidden(false);
       button.trigger('click');
       expect(button.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
-      expect(target.hasClass(validcollapsable.o.inactiveClass)).to.be.true;      
+      expect(target.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
     });
 
     it('adds keyboard(space) support to trigger elements', function(done){
@@ -154,6 +166,10 @@ describe('mas_collapsable basics', function () {
       expect(target.hasClass(validcollapsable.o.activeClass)).to.be.false;
       expect(target.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
       done();
+    });
+
+    it('adds (active class) on the first six items', function() {
+        expect(visibleItems).to.have.length(6);
     });
   });
 });

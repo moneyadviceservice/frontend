@@ -1,0 +1,22 @@
+<%= render layout: 'layouts/base' do %>
+  <% set_meta_tags(alternate: alternate_options) %>
+
+  <% content_for(:alternate_link) do %>
+    <%= link_to(alternate_url, lang: alternate_locale, class: "t-#{alternate_locale}-link") do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{alternate_locale}") %>
+    <% end %>
+  <% end %>
+  <div id="main" tabindex="-1">
+    <div class="l-constrained">
+      <%= yield :engine_content %>
+    </div>
+  </div>
+  <% content_for(:javascripts) do %>
+    <%= javascript_include_tag "syndication/iframeResizer" %>
+    <script>
+      window.iframeResizer('MASRESIZE-').start();
+    </script>
+  <% end %>
+<% end %>
+

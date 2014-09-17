@@ -2,10 +2,6 @@ class EmbeddedToolsController < ApplicationController
 
 protected
 
-  helper_method def parent_template
-    'layouts/engine'
-  end
-
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
   end

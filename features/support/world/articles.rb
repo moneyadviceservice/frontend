@@ -46,6 +46,14 @@ module World
           raise ArgumentError, "invalid article locale `#{locale}'"
       end
     end
+
+    def article_with_callback_requester
+      fixture 'articles/managing-your-money-if-your-job-is-at-risk.yml'
+    end
+
+    def article_without_callback_requester
+      article_with_single_parent
+    end
   end
 end
 

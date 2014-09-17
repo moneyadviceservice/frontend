@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/articles/managing-your-money-if-your-job-is-at-risk.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b1f44eef-182d-4089-be37-1d2dc9109b5d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 17 Sep 2014 15:53:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - !binary |-
+        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
+        aWNsZXMvbWFuYWdpbmcteW91ci1tb25leS1pZi15b3VyLWpvYi1pcy1hdC1y
+        aXNrPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJlbi1HQiI7IHRpdGxl
+        PSJNYW5hZ2luZyBtb25leSBpZiB5b3VyIGpvYiBpcyBhdCByaXNrIiwgPGh0
+        dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvY3kvYXJ0aWNs
+        ZXMvY2Fkdy10cmVmbi1hci1laWNoLWFyaWFuLW9zLXl3Y2gtc3d5ZGQtbWV3
+        bi1wZXJ5Z2w+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsg
+        dGl0bGU9IkNhZHcgdHJlZm4gYXIgZWljaCBhcmlhbiBvcyB5d+KAmWNoIHN3
+        eWRkIG1ld24gcGVyeWdsIg==
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - cafdb46bd36469aabfa41f03bbdcff9e
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 17-Sep-2015 15:53:49 GMT; secure
+      - _session_id=cafdb46bd36469aabfa41f03bbdcff9e; path=/; secure; HttpOnly
+      - _web_tracking=ecbef6cfe1b1632f89dad292f5ef703c; path=/; expires=Thu, 17-Sep-2015
+        15:53:49 GMT; secure
+      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      X-Request-Id:
+      - b1f44eef-182d-4089-be37-1d2dc9109b5d
+      X-Runtime:
+      - '0.031899'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-your-money-if-your-job-is-at-risk","title":"Managing
+        money if your job is at risk","description":"Job loss on the horizon? How
+        to take control of your finances and survive a period out of work","body":"<p
+        class=\"intro\"><img src=\"/images/managing-money-if-your-job-is-at-risk.png\"/>Whether
+        your job is already at risk or you''re worrying about potential cuts, one
+        of the most important things you can do at this time is to take stock of your
+        finances and, in doing so, start to take control. </p><h2>Step 1 \u2013 Take
+        stock </h2><p>If you don''t already have a budget \u2013 listing all your
+        income and spending \u2013 now''s the time to do it. Take care here. Most
+        people underestimate how much they actually spend each month. </p><p>This
+        may seem quite a daunting task, but it really is an essential first step.
+        Anything else is the financial equivalent of sticking your head in the sand
+        and will only result in nasty surprises later on. </p><p><div class=\"add-action\"><a
+        href=\"/en/tools/budget-planner\">Use our Budget planner to get a clear idea
+        of your incomings and outgoings</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\"
+        data-article-id=\"budget-planner\" data-article-type=\"tool\" id=\"email_me_budget-planner\"
+        tabindex=\"0\">Email this <span class=\"visuallyhidden\">page</span></a><form
+        action=\"/en/action_items/internal?article_id=budget-planner&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=budget-planner&amp;article_type=tool\"
+        method=\"post\" name=\"tool_budget-planner\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5P6zLhbjRNP94BkZzJ07KW8/+cPkr16N+6YNTFqH6F0=\"
+        /></div></form> </div></p><h2>Step 2 \u2013 Find ways to cut back </h2><p>Now
+        is also a good time to start thinking about how your budget will be affected
+        if you lose your job. As your income will be a lot less, it\u2019s a good
+        idea to work out what spending you\u2019ll need to cut back on so that you
+        don\u2019t spend more than your income.\u00a0 </p><p>Cutting back now could
+        also let you build up a savings cushion to help you get by if you lose your
+        job. </p><p>Take a close look at what you spend your money on and divide it
+        into essential and non-essential items. </p><p>For the <strong>essentials</strong>
+        \u2013 things like food and energy bills \u2013 try shopping around to get
+        a better deal elsewhere. </p><ul><li><a title=\"Save money on your gas and
+        electricity bills\" href=\"/en/articles/save-money-on-your-gas-and-bills\">Save
+        money on your gas and electricity bills</a></li><li><a title=\"Smarter shopping
+        \u2013 tips and tricks to save money\" href=\"/en/articles/smarter-shopping---tips-and-tricks-to-save-money-when-shopping\">Smarter
+        shopping \u2013 tips and tricks to save money</a></li></ul><p>For the <strong>non-essentials</strong>
+        \u2013 look at Direct Debits that go out of your account each month, things
+        like gym membership and magazine subscriptions. Now think about whether you''re
+        getting value for money out of all of them. If not, cancel them. </p><p>Next
+        try listing the smaller non-essential items you buy each day \u2013 take-away
+        coffees, bottled water or drinks after work. Put them in order of priority.
+        Pick off the lower priority items first and cut them out one at a time. You
+        will be surprised how much you can save by cutting back on just these items.
+        </p><p><div class=\"add-action\"><a href=\"/en/tools/cut-back-calculator\">Find
+        out how much something you buy regularly costs you per month using our Cut-back
+        calculator</a> <a href=\"#\" class=\"action-email\" data-action-id=\"\" data-article-id=\"cut-back-calculator\"
+        data-article-type=\"tool\" id=\"email_me_cut-back-calculator\" tabindex=\"0\">Email
+        this <span class=\"visuallyhidden\">page</span></a><form action=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
+        class=\"action-form\" data-remote=\"true\" data-resource-path=\"/en/action_items/internal?article_id=cut-back-calculator&amp;article_type=tool\"
+        method=\"post\" name=\"tool_cut-back-calculator\"><div><input class=\"action-submit\"
+        data-action-event=\"add\" tabindex=\"0\" type=\"submit\" value=\"Add to my
+        to do list\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"5P6zLhbjRNP94BkZzJ07KW8/+cPkr16N+6YNTFqH6F0=\"
+        /></div></form> </div></p><h2>Step 3 \u2013 Get those debts under control
+        </h2><p>While you''re still in work your credit score will be better than
+        if you find yourself without a job. So seize the moment \u2013 now''s the
+        time to look at all your debts. Switch lenders to get the best rates and look
+        at paying off as much of the debt as you can, but watch out for early repayment
+        charges. </p><ul><li><a title=\"Find out more about cutting the cost of your
+        loans on the MoneySavingExpert website\" target=\"_blank\" data-link-type=\"external\"
+        href=\"http://www.moneysavingexpert.com/loans/cut-existing-loan-costs\">Find
+        out more about cutting the cost of your loans on the MoneySavingExpert website</a></li></ul><ul><li><a
+        title=\"Best balance transfers on credit cards on the MoneySavingExpert website\"
+        target=\"_blank\" data-link-type=\"external\" href=\"http://www.moneysavingexpert.com/cards/balance-transfer-credit-cards\">Best
+        balance transfers on credit cards on the MoneySavingExpert website</a></li></ul><p>Make
+        sure you pay off priority debts first. These are debts such as mortgage or
+        rent arrears, fuel bills and other debts. Follow the link below to help work
+        out which these are. </p><p><a title=\"prioritise debts\" href=\"/en/articles/how-to-prioritise-your-debts\">Work
+        out which debts to pay off first</a></p><h2>Step 4 \u2013 Check for any insurance
+        </h2><p>Check for any mortgage payment protection insurance (MPPI), payment
+        protection insurance (PPI), or short-term income protection (STIP) insurance
+        you may have previously taken out. If you lose your job or are too ill to
+        work, you may be able to make a claim. </p><p>In the past, because of the
+        way payment protection policies were sold, you may not realise that you have
+        this cover. Ask your lender whether your mortgage, loan or credit card is
+        covered by insurance. </p><p>If you have insurance and your claim is refused,
+        you may have been mis-sold the policy and could be eligible to claim compensation.
+        </p><ul><li><a href=\"/en/articles/reclaiming-payment-protection-insurance\">Reclaiming
+        payment protection insurance</a></li></ul><h2>Step 5 \u2013 Try to build up
+        a savings cushion to see you through the lean times </h2><p>Ideally, aim to
+        have between three and six months of your living expenses saved in an easy
+        access, high-interest bank or building society account. Even a smaller amount
+        will be useful. Having cash in the bank is always good, especially if you''re
+        going to have a period of time on a reduced income. </p><ul><li><a href=\"/en/articles/top-tips-for-choosing-savings-accounts\">Top
+        tips for choosing savings accounts</a></li></ul><h2>Step 6 \u2013 Look at
+        ways of making money </h2><p>Think about other sources of income you can tap
+        into. For example, did you know that if you have a spare room, you could rent
+        it out and not pay tax on the first \u00a34,250 of rental income? You\u2019ll
+        need permission from your mortgage provider or landlord to have a lodger and
+        you should let your buildings and contents insurance companies know. </p><ul><li><a
+        href=\"/en/articles/top-tips-for-making-money-when-faced-with-job-loss\">Top
+        tips for making money when faced with job loss</a></li></ul>","categories":["redundancy"]}'
+    http_version: 
+  recorded_at: Wed, 17 Sep 2014 15:53:49 GMT
+recorded_with: VCR 2.9.2

@@ -22,6 +22,14 @@
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
   }
+
+  &.is-off {
+    display: none;
+  }
+}
+
+.category-detail__view-all.is-off{
+  display: none;
 }
 
 .category-detail__heading {

@@ -1,0 +1,14 @@
+<section class="panel callback-panel">
+  <div class="callback-panel__icon-column">
+    <span class="icon icon--call-us"></span>
+  </div>
+
+  <div class="callback-panel__content-column">
+    <h4 class="callback-panel__title"><%= t("callback_requester.title") %></h4>
+    <p><%= t("callback_requester.#{article.categories.first.title.underscore.gsub(' ', '_')}_message") %></p>
+    <%= link_to t('callback_requester.button'),
+                "https://www.moneyadviceservice.org.uk/sdp/moneyadviceservice",
+                class: 'button button--primary' %>
+  </div>
+</section>
+

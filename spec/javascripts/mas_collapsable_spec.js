@@ -28,19 +28,29 @@ describe('mas_collapsable basics', function () {
       expect(validcollapsable.o).to.have.property('closeOffFocus');
       expect(validcollapsable.o).to.have.property('accordion');
       expect(validcollapsable.o).to.have.property('numberItemsToDisplay');
+      expect(validcollapsable.o).to.have.property('viewAllButton');
     });
   });
 
   describe('onload', function () {
-    var buttonVisible, targetVisible, buttonHidden, targetHidden, visibleItems, invisibleItems;
+    var buttonVisible,
+      targetVisible,
+      buttonHidden,
+      targetHidden,
+      visibleItems,
+      invisibleItems,
+      buttonViewAllHidden,
+      buttonViewAllVisible;
 
     before(function(){
-      buttonVisible  = $body.find('#toggleButton1');
-      targetVisible  = $body.find('#toggleTarget1');
-      buttonHidden   = $body.find('#toggleButton2');
-      targetHidden   = $body.find('#toggleTarget2');
-      visibleItems   = $body.find('li.is-on');
-      invisibleItems = $body.find('li.is-off');
+      buttonVisible        = $body.find('#toggleButton1');
+      targetVisible        = $body.find('#toggleTarget1');
+      buttonViewAllVisible = $body.find('#viewAll1');
+      buttonHidden         = $body.find('#toggleButton2');
+      buttonViewAllHidden  = $body.find('#viewAll2');
+      targetHidden         = $body.find('#toggleTarget2');
+      visibleItems         = $body.find('li.is-on');
+      invisibleItems       = $body.find('li.is-off');
     });
 
     it('adds aria-role=button to all toggle trigger elements', function(){
@@ -48,9 +58,11 @@ describe('mas_collapsable basics', function () {
     });
 
     describe('target element is hidden', function () {
+
       it('adds aria-hidden=true to target element', function(){
         expect(targetHidden.attr('aria-hidden')).to.equal('true');
       });
+
       it('adds (inactive class) on both target and trigger elements', function(){
         expect(buttonHidden.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
         expect(targetHidden.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
@@ -59,13 +71,22 @@ describe('mas_collapsable basics', function () {
       it('adds (inactive class) on the target items', function() {
         expect(invisibleItems).to.have.length(8);
       });
+
+      it('adds (inactive class) on the view all button', function() {
+        expect(buttonViewAllHidden.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
+      });
+
+      it('adds aria-hidden=true on the view all button', function() {
+        expect(buttonViewAllHidden.attr('aria-hidden')).to.equal('true');
+      });
     });
 
     describe('target element is visible', function () {
       it('adds aria-hidden=false to target element', function(){
         expect(targetVisible.attr('aria-hidden')).to.equal('false');
       });
-      it('adds (active class) on both target and trigger elements', function(){
+
+      it('adds (active class) on both target and trigger elements', function() {
         expect(buttonVisible.hasClass(validcollapsable.o.activeClass)).to.be.true;
         expect(targetVisible.hasClass(validcollapsable.o.activeClass)).to.be.true;
       });
@@ -73,11 +94,19 @@ describe('mas_collapsable basics', function () {
       it('adds (active class) on the first six items', function() {
         expect(visibleItems).to.have.length(6);
       });
+
+      it('adds (active class) on the view all button', function(){
+        expect(buttonViewAllVisible.hasClass(validcollapsable.o.activeClass)).to.be.true;
+      });
+
+      it('adds aria-hidden=false on the view all button', function(){
+        expect(buttonViewAllVisible.attr('aria-hidden')).to.equal('false');
+      });
     });
   });
 
   describe('when trigger is activated on closed element', function(){
-    var button, target;
+    var button, target, viewAll;
 
     function setTargetToHidden( hidden ){
       if(hidden && target.hasClass(validcollapsable.o.activeClass)){
@@ -88,23 +117,25 @@ describe('mas_collapsable basics', function () {
     }
 
     before(function(){
-      button = $body.find('#toggleButton1');
-      target = $body.find('#toggleTarget1');
+      button  = $body.find('#toggleButton1');
+      target  = $body.find('#toggleTarget1');
+      viewAll = $body.find('#viewAll1');
     });
 
-    it('sets aria-hidden=false on target element', function(){
+    it('sets aria-hidden=false on target and view all elements', function() {
       // Set initial state to hidden then trigger toggle
       setTargetToHidden(true);
       button.trigger('click');
       expect(target.attr('aria-hidden')).to.equal('false');
+      expect(viewAll.attr('aria-hidden')).to.equal('false');
     });
-    
-    it('adds (active class) on both target and trigger elements', function(){
-      // Set initial state to hidden then trigger toggle
+
+    it('adds (active class) on target, view all and trigger elements', function() {
       setTargetToHidden(true);
       button.trigger('click');
       expect(button.hasClass(validcollapsable.o.activeClass)).to.be.true;
       expect(target.hasClass(validcollapsable.o.activeClass)).to.be.true;
+      expect(viewAll.hasClass(validcollapsable.o.activeClass)).to.be.true;
     });
 
     it('adds keyboard(space) support to trigger elements', function(done){
@@ -123,7 +154,7 @@ describe('mas_collapsable basics', function () {
   });
 
   describe('when trigger is activated on an open element', function(){
-    var button, target, visibleItems;
+    var button, target, visibleItems, viewAll;
 
     function setTargetToHidden( hidden ){
       if( hidden && target.hasClass(validcollapsable.o.activeClass) ){
@@ -134,24 +165,25 @@ describe('mas_collapsable basics', function () {
     }
 
     before(function(){
-      button       = $body.find('#toggleButton1');
-      target       = $body.find('#toggleTarget1');
+      button = $body.find('#toggleButton1');
+      target = $body.find('#toggleTarget1');
+      viewAll = $body.find('#viewAll1');
       visibleItems = $body.find('li.is-on');
     });
 
-    it('sets aria-hidden=true on target element', function(){
-      // Set initial state to hidden then trigger toggle
+    it('sets aria-hidden=true on target and view all elements', function() {
       setTargetToHidden(false);
       button.trigger('click');
       expect(target.attr('aria-hidden')).to.equal('true');
+      expect(viewAll.attr('aria-hidden')).to.equal('true');
     });
-    
-    it('adds (inactive class) on both target and trigger elements', function(){
-      // Set initial state to hidden then trigger toggle
+
+    it('adds (inactive class) on target, view all and trigger elements', function() {
       setTargetToHidden(false);
       button.trigger('click');
       expect(button.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
       expect(target.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
+      expect(viewAll.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
     });
 
     it('adds keyboard(space) support to trigger elements', function(done){
@@ -170,6 +202,37 @@ describe('mas_collapsable basics', function () {
 
     it('adds (active class) on the first six items', function() {
         expect(visibleItems).to.have.length(6);
+    });
+  });
+
+  describe('when view all is activated on an open element', function() {
+    var button, target, visibleItems, viewAll;
+
+    function setTargetToHidden( hidden ){
+      if( hidden && target.hasClass(validcollapsable.o.activeClass) ) {
+        button.trigger('click');
+      }else if( !hidden && target.hasClass(validcollapsable.o.inactiveClass) ) {
+        button.trigger('click');
+      }
+    }
+
+    before(function(){
+      button = $body.find('#toggleButton1');
+      target = $body.find('#toggleTarget1');
+      viewAll = $body.find('#viewAll1');
+    });
+
+    it('add (active class) to all items', function() {
+      setTargetToHidden(false);
+      viewAll.trigger('click');
+      visibleItems = $body.find('li.is-on');
+      expect(visibleItems).to.have.length(8);
+    });
+
+    it('add (inactive class) to viewAll', function() {
+      setTargetToHidden(false);
+      viewAll.trigger('click');
+      expect(viewAll.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
     });
   });
 });

@@ -9,6 +9,7 @@ define(['jquery', 'common'], function($, MAS) {
     targetEl: '.collapsible-section',
     targetType: 'class', // class / href / data-attr
     targetItems: '.item',
+    viewAllButton: '.view-all',
     activeClass: 'is-on',
     inactiveClass: 'is-off',
     numberItemsToDisplay: 6,
@@ -58,6 +59,10 @@ define(['jquery', 'common'], function($, MAS) {
 
   var _getItems = function($el, opt) {
     return $el.find(opt.targetItems);
+  };
+
+  var _getViewAll = function($el, opt) {
+    return $el.find(opt.viewAllButton);
   };
 
   var Collapsible = function(opts) {
@@ -151,13 +156,15 @@ define(['jquery', 'common'], function($, MAS) {
     var $el = $(el),
         _this = this,
         _target = _getTarget($el, _this.o),
-        _items = _getItems(_target, _this.o);
+        _items = _getItems(_target, _this.o),
+        _viewAll = _getViewAll(_target, _this.o);
 
     this.sections[i] = {
       index: i,
       items:  _items,
       trigger: $el,
       target: _target,
+      viewAll: _viewAll,
       hidden: _isHidden(_target, _this.o)
     };
 
@@ -186,6 +193,12 @@ define(['jquery', 'common'], function($, MAS) {
       // Check for callbacks
       if (typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
       _this.setVisibility(_this.sections[i].hidden, i);
+    });
+
+    this.sections[i].viewAll.on('click', i, function(e) {
+      e.preventDefault();
+      showElement(_this.sections[i].items, _this);
+      hideElement(_this.sections[i].viewAll, _this);
     });
 
     // Accessibility support for spacebar
@@ -227,11 +240,12 @@ define(['jquery', 'common'], function($, MAS) {
     var itemsToDisplay = section.items.slice(0, this.o.numberItemsToDisplay);
 
     section.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    section.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    section.target.attr('aria-hidden', 'false');
+
+    showElement(section.target, this);
+    showElement(itemsToDisplay, this);
+    showElement(section.viewAll, this);
+
     section.hidden = false;
-    itemsToDisplay.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    itemsToDisplay.attr('aria-hidden', 'false');
     if (this.o.showText) section.txt.text(this.o.textString.hideThisSection + ' ');
     if (this.o.accordion && (this.selected !== false && this.selected !== i)) {
       this.hide(this.selected, false);
@@ -239,6 +253,16 @@ define(['jquery', 'common'], function($, MAS) {
     this.selected = i;
     return this;
   };
+
+  function hideElement(element, conf) {
+    element.removeClass(conf.o.activeClass).addClass(conf.o.inactiveClass);
+    element.attr('aria-hidden', 'true');
+  }
+
+  function showElement(element, conf) {
+    element.removeClass(conf.o.inactiveClass).addClass(conf.o.activeClass);
+    element.attr('aria-hidden', 'false');
+  }
 
   Collapsible.prototype.hide = function(i, userInitiated) {
     publishEvent(userInitiated, {
@@ -250,13 +274,17 @@ define(['jquery', 'common'], function($, MAS) {
     var section = this.sections[i];
     var items = section.items;
     section.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    section.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    section.target.attr('aria-hidden', 'true');
-    section.hidden = true;
-    items.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    items.attr('aria-hidden', 'true');
 
-    if (this.o.showText) section.txt.text(this.o.textString.showThisSection + ' ');
+    hideElement(section.target, this);
+    hideElement(section.viewAll, this);
+    hideElement(items, this);
+
+    section.hidden = true;
+
+    if (this.o.showText) {
+      section.txt.text(this.o.textString.showThisSection + ' ');
+    }
+
     return this;
   };
 

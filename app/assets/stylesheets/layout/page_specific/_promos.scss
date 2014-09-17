@@ -16,6 +16,7 @@
   @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
+  min-height: 133px;
 
   @include respond-to($mq-s) {
     @include column(6);

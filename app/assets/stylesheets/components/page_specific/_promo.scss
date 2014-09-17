@@ -8,8 +8,12 @@
 
 .promo__heading {
   @extend %font-heading-medium;
-  @include body(22, 30);
+  @include body(18, 24);
   margin-top: 0;
+
+  @include respond-to($mq-m) {
+    @include body(22, 30);
+  }
 
   .icon {
     position: relative;

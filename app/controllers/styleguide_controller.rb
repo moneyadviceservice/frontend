@@ -13,52 +13,62 @@ class StyleguideController < ApplicationController
       {
         title:       'Dyled a benthyca',
         description: 'Cymryd rheolaeth dros ddyled, cael cyngor am ddim ar ddyledion, a sut i fenthyca’n fforddadwy',
-        path:        '#url'
+        path:        '#url',
+        icon:        'debt'
       },
       {
         title:       'Cyllidebu a rheoli arian',
         description: 'Cyngor ar redeg cyfrif banc, cynllunio’ch arian, a thorri ar gostau',
-        path:        '#url'
+        path:        '#url',
+        icon:        'budgeting'
       },
       {
         title:       'Cynilo a budsoddi',
         description: 'Sut i gynilo arian, mathau o gyfrifon cynilo a rhoi cychwyn arni gyda buddsoddi',
-        path:        '#url'
+        path:        '#url',
+        icon:        'saving'
       },
       {
         title:       'Gwaith, pensiynau ac ymddeol',
         description: 'Yn cynnwys cyngor ar ddileu swydd, mathau o bensiwn a blwydd-dal, a gwybodaeth ar gofrestru awtomatig',
-        path:        '#url'
+        path:        '#url',
+        icon:        'work'
       },
       {
         title:       'Budd-daliadau',
         description: 'Edrychwch pa fudd-daliadau y mae gennych hawl iddynt a dysgu am Gredyd Cynhwysol',
-        path:        '#url'
+        path:        '#url',
+        icon:        'benefits'
       },
       {
         title:       'Genedigaethau, marwolaethau a theulu',
         description: 'Cael babi, gwneud ewyllys, ac ymdrin ag ysgaru a gwahanu',
-        path:        '#url'
+        path:        '#url',
+        icon:        'births'
       },
       {
         title:       'Yswiriant',
         description: 'Cymorth a chyngor ynghylch gwarchod eich teulu a chael yr yswiriant cartref a char cywir',
-        path:        '#url'
+        path:        '#url',
+        icon:        'insurance'
       },
       {
         title:       'Cartrefi a morgeisi',
         description: 'Popeth y mae angen i chi ei wybod am brynu cartref a dewis y morgais cywir',
-        path:        '#url'
+        path:        '#url',
+        icon:        'homes'
       },
       {
         title:       'Gofal ac anabledd',
         description: 'Dewis y gwasanaethau gofal cywir, cymorth i ofalwyr a thalu am gost gofal',
-        path:        '#url'
+        path:        '#url',
+        icon:        'care'
       },
       {
         title:       'Awaiting title',
         description: 'Awaiting description',
-        path:        '#url'
+        path:        '#url',
+        icon:        'cars'
       }
     ].map(&:to_ostruct)
 

@@ -3,24 +3,16 @@
 }
 
 .l-home-directory {
-  background-color: $color-directory-emphasized-bg;
-}
-
-.l-homepage-promo {
-  overflow: hidden;
-  margin-top: $baseline-unit*4;
-  margin-bottom: $baseline-unit*4;
-
-  @include respond-to($mq-s) {
-    @include column(6);
-    min-height: 335px;
-  }
-
-  @include respond-to($mq-m) {
-    min-height: 397px;
-  }
+  margin-bottom: $baseline-unit*3;
 
   @include respond-to($mq-l) {
-    @include column(3);
+    background-color: $color-directory-emphasized-bg;
   }
+}
+
+.l-home-directory__intro {
+  @extend %font-heading-medium;
+  @include column(12);
+  color: $color-heading-default;
+  margin-top: $baseline-unit*6;
 }

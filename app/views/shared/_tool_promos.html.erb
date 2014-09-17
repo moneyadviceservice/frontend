@@ -1,0 +1,26 @@
+<div class="l-constrained">
+  <section class="l-promos">
+    <%= heading_tag('Popular tools and calculators', level: 2, class: 'l-promos__heading') %>
+
+    <% items.each do |item| %>
+    <div class="l-promos__item">
+      <div class="tool-promo">
+        <%= heading_tag(level: 3, class: 'promo__heading') do %>
+          <%= link_to item[:url] do %>
+            <span class="icon <%= item[:icon] %>"></span>
+            <%= item[:heading] %>
+          <% end %>
+        <% end %>
+
+        <p><%= item[:text] %></p>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="l-promo__view-all">
+      <%= link_to('en/src') do %>
+        View all...<span class="visually-hidden"> of our popular tools and calculators</span>
+      <% end %>
+    </div>
+  </section>
+</div>

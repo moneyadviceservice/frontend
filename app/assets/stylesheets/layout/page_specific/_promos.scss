@@ -1,0 +1,40 @@
+.l-promos {
+  @extend .clearfix;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: $baseline-unit*4;
+}
+
+.l-promos__heading {
+  @extend .heading-extra-small;
+  @include column(12);
+  margin-top: $baseline-unit*6;
+  margin-bottom: 0;
+}
+
+.l-promos__item {
+  @include column(12);
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+  }
+}
+
+.l-promo__view-all {
+  @extend %font-heading-medium;
+  @include column(12);
+  text-align: left;
+
+  @include respond-to($mq-m) {
+    position: absolute;
+    left: 0;
+    top: 38px;
+    text-align: right;
+  }
+}

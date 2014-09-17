@@ -1,31 +1,23 @@
-// Promo section of the home page
+// Promos can be promoted articles or promoted tools on the homepage
 //
 // Styleguide Promo
 
-.promo img {
-  width: 100%;
-  margin-bottom: $baseline-unit*2;
+.promo {
+  // no styles
 }
 
 .promo__heading {
   @extend %font-heading-medium;
-  @include body(24, 30);
-  display: block;
-  margin-bottom: $baseline-unit;
+  @include body(22, 30);
   margin-top: 0;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
-  .theme-cy & {
-    @include respond-to($mq-m) {
-      @include body(18, 24);
-    }
+  .icon {
+    position: relative;
+    top: 6px;
   }
 }
 
-.promo__content,
-.promo__heading {
-  @include column(12);
+.promo__img {
+  width: 100%;
+  margin-bottom: $baseline-unit*2;
 }

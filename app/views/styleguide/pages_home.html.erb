@@ -1,17 +1,41 @@
 <%= render 'shared/trust_banner' %>
 
+<<<<<<< HEAD
 <% if params.key?('welsh') %>
   <div class="theme-cy">
+=======
+<div class="l-home-directory">
+  <div class="l-constrained">
+    <p class="l-home-directory__intro">Choose a section to get started…</p>
+
+    <% if params.key?('welsh') %>
+    <div class="theme-cy">
+      <div class="temp-dynamic-directory-container">
+        <%= render 'shared/directory', items: @categories_for_directory_cy %>
+      </div>
+    </div>
+    <% else %>
+>>>>>>> aac4e56... Refactor article promo section and create tool promo section
     <div class="temp-dynamic-directory-container">
       <%= render 'shared/directory',
                  items: @categories_for_directory_cy %>
     </div>
   </div>
+<<<<<<< HEAD
 <% else %>
   <div class="temp-dynamic-directory-container">
     <%= render 'shared/directory',
                items: categories_for_directory_en %>
   </div>
 <% end %>
+=======
+</div>
 
-<%= render 'shared/promos', items: t('home.show.promoted') %>
+<%= render 'shared/tool_promos', items: t('home.show.tools') %>
+
+<div class="l-constrained">
+  <hr class="hr hr--inset">
+</div>
+>>>>>>> aac4e56... Refactor article promo section and create tool promo section
+
+<%= render 'shared/article_promos', items: t('home.show.promoted') %>

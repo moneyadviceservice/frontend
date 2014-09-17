@@ -5,7 +5,7 @@
                     id:    child_category.id,
                     class: 'category-detail__heading' %>
 
-    <p><%= child_category.description %></p>
+    <p class="category-detail__intro"><%= child_category.description %></p>
 
     <% if child_category.contents.present? %>
       <div class="category-detail__list-container">

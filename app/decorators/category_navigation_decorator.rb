@@ -15,10 +15,6 @@ class CategoryNavigationDecorator < Draper::Decorator
     category.description
   end
 
-  def icon
-    category.title.split(/\s|,/).first.downcase
-  end
-
   def contents
     CategoryNavigationDecorator.decorate_collection(object.children)
   end

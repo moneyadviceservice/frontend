@@ -70,6 +70,7 @@ require(['common', 'jquery'], function(MAS, $) {
         triggerEl: '.category-detail__heading',
         targetEl: '.category-detail__list-container',
         targetItems: '.category-detail__list-item',
+        viewAllButton: '.js-category-detail__view-all',
         numberItemsToDisplay: 6
       });
 

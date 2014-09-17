@@ -10,6 +10,10 @@
   }
 }
 
+.l-homepage-divider {
+  @include column(12);
+}
+
 .l-home-directory__intro {
   @extend %font-heading-medium;
   @include column(12);

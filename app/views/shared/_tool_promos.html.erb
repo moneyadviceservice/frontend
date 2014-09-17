@@ -1,13 +1,14 @@
 <div class="l-constrained">
   <section class="l-promos">
-    <%= heading_tag('Popular tools and calculators', level: 2, class: 'l-promos__heading') %>
+    <%= heading_tag(level: 2, class: 'l-promos__heading') do %>
+      <%= t('home.show.tools_heading') %>
+    <% end %>
 
     <% items.each do |item| %>
     <div class="l-promos__item">
       <div class="tool-promo">
         <%= heading_tag(level: 3, class: 'promo__heading') do %>
           <%= link_to item[:url] do %>
-            <span class="icon <%= item[:icon] %>"></span>
             <%= item[:heading] %>
           <% end %>
         <% end %>
@@ -19,7 +20,7 @@
 
     <div class="l-promo__view-all">
       <%= link_to('en/src') do %>
-        View all...<span class="visually-hidden"> of our popular tools and calculators</span>
+        <%= t('home.show.view_all_link_html') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
       <% end %>
     </div>
   </section>

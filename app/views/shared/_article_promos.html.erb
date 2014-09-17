@@ -1,6 +1,8 @@
 <div class="l-constrained">
   <section class="l-promos">
-    <%= heading_tag('Featured articles', level: 2, class: 'l-promos__heading') %>
+    <%= heading_tag(level: 2, class: 'l-promos__heading') do %>
+      <%= t('home.show.promoted_heading') %>
+    <% end %>
 
     <% items.each do |item| %>
       <div class="l-promos__item">

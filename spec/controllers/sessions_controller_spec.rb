@@ -35,4 +35,24 @@ RSpec.describe SessionsController, type: :controller do
       end
     end
   end
+
+  describe '#new' do
+    context 'non xhr requests' do
+      it 'returns a 200' do
+        @request.env["devise.mapping"] = Devise.mappings[:user]
+        get :new, locale: :en
+
+        expect(response).to be_success
+      end
+    end
+
+    context 'xhr requests' do
+      it 'returns a 501' do
+        @request.env["devise.mapping"] = Devise.mappings[:user]
+        xhr :get, :new, locale: :en
+
+        expect(response.status).to eql(501)
+      end
+    end
+  end
 end

@@ -28,7 +28,7 @@ RSpec.describe SessionsController, type: :controller do
       end
 
       it 'persists this to the database' do
-        @request.env["devise.mapping"] = Devise.mappings[:user]
+        @request.env['devise.mapping'] = Devise.mappings[:user]
         post :create, user: { email: 'phil@example.com', password: 'password' }, locale: 'en'
 
         expect(User.first.reload.first_name).to eql(new_first_name)
@@ -39,7 +39,7 @@ RSpec.describe SessionsController, type: :controller do
   describe '#new' do
     context 'non xhr requests' do
       it 'returns a 200' do
-        @request.env["devise.mapping"] = Devise.mappings[:user]
+        @request.env['devise.mapping'] = Devise.mappings[:user]
         get :new, locale: :en
 
         expect(response).to be_success
@@ -48,7 +48,7 @@ RSpec.describe SessionsController, type: :controller do
 
     context 'xhr requests' do
       it 'returns a 501' do
-        @request.env["devise.mapping"] = Devise.mappings[:user]
+        @request.env['devise.mapping'] = Devise.mappings[:user]
         xhr :get, :new, locale: :en
 
         expect(response.status).to eql(501)

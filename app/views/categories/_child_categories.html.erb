@@ -10,7 +10,7 @@
     <% if child_category.contents.present? %>
       <div class="category-detail__list-container">
         <%= render 'content_items', contents: child_category.contents %>
-        <p class="category-detail__view-all js-category-detail__view-all">View all ..</p>
+        <p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>
       </div>
     <% end %>
   </section>

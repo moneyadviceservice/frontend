@@ -193,6 +193,10 @@ define(['jquery', 'common'], function($, MAS) {
       // Check for callbacks
       if (typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
       _this.setVisibility(_this.sections[i].hidden, i);
+
+      if (_this.sections[i].items.length <= _this.o.numberItemsToDisplay) {
+        hideElement(_this.sections[i].viewAll, _this);
+      }
     });
 
     this.sections[i].viewAll.on('click', i, function(e) {

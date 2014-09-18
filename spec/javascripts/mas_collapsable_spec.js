@@ -49,8 +49,8 @@ describe('mas_collapsable basics', function () {
       buttonHidden         = $body.find('#toggleButton2');
       buttonViewAllHidden  = $body.find('#viewAll2');
       targetHidden         = $body.find('#toggleTarget2');
-      visibleItems         = $body.find('li.is-on');
-      invisibleItems       = $body.find('li.is-off');
+      visibleItems         = targetVisible.find('li.is-on');
+      invisibleItems       = targetHidden.find('li.is-off');
     });
 
     it('adds aria-role=button to all toggle trigger elements', function() {
@@ -151,6 +151,24 @@ describe('mas_collapsable basics', function () {
       expect(target.hasClass(validcollapsable.o.activeClass)).to.be.true;
       done();
     });
+
+    describe('when target contains less than six items', function () {
+      var buttonVisible,
+      targetVisible,
+      buttonViewAll;
+
+      before(function() {
+        buttonVisible = $body.find('#toggleButton3');
+        targetVisible = $body.find('#toggleTarget3');
+        buttonViewAll = $body.find('#viewAll3');
+      });
+
+      it('hides the view all button', function() {
+        buttonVisible.trigger('click');
+        expect(buttonViewAll.hasClass(validcollapsable.o.inactiveClass)).to.be.true;
+        expect(buttonViewAll.attr('aria-hidden')).to.equal('true');
+      })
+    });
   });
 
   describe('when trigger is activated on an open element', function() {
@@ -168,7 +186,7 @@ describe('mas_collapsable basics', function () {
       button = $body.find('#toggleButton1');
       target = $body.find('#toggleTarget1');
       viewAll = $body.find('#viewAll1');
-      visibleItems = $body.find('li.is-on');
+      visibleItems = target.find('li.is-on');
     });
 
     it('sets aria-hidden=true on target and view all elements', function() {
@@ -225,7 +243,7 @@ describe('mas_collapsable basics', function () {
     it('add (active class) to all items', function() {
       setTargetToHidden(false);
       viewAll.trigger('click');
-      visibleItems = $body.find('li.is-on');
+      visibleItems = target.find('li.is-on');
       expect(visibleItems).to.have.length(8);
     });
 

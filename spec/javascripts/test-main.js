@@ -27,6 +27,7 @@ require.config({
     pubsub: 'app/assets/javascripts/modules/mas_pubsub',
     scrollTracking: 'app/assets/javascripts/modules/mas_scrollTracking',
     collapsable: 'app/assets/javascripts/modules/mas_collapsable',
+    googleComplete: 'app/assets/javascripts/modules/google_complete',
 
     // Dough components
     ClearInput: 'app/assets/javascripts/components/ClearInput',

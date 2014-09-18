@@ -30,8 +30,13 @@
 }
 
 .category-detail__view-all {
+  display: none;
   color: $color-link-default;
   cursor: pointer;
+
+  .js & {
+    display: block;
+  }
 
   &:hover,
   &:focus {

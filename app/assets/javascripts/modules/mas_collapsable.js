@@ -36,35 +36,6 @@ define(['jquery', 'common'], function($, MAS) {
     onFocusout: false
   };
 
-  var _isHidden = function(target, opts) {
-    if (target.hasClass(opts.inactiveClass)) return true;
-    if (target.hasClass(opts.activeClass)) return false;
-    return target.is(':hidden');
-  };
-
-  var _getTarget = function($el, opts) {
-    switch (opts.targetType) {
-      case 'class':
-        var $immediateSibling = $el.next(opts.targetEl),
-            targetIsImmediateSibling = !!$immediateSibling.length;
-        return (targetIsImmediateSibling) ? $immediateSibling : $el.siblings(opts.targetEl);
-      case 'href':
-        var href = $el.attr('href'),
-            $t = $(href);
-        return ($t.length) ? $t : false;
-      default:
-        return false;
-    }
-  };
-
-  var _getItems = function($el, opt) {
-    return $el.find(opt.targetItems);
-  };
-
-  var _getViewAll = function($el, opt) {
-    return $el.find(opt.viewAllButton);
-  };
-
   var Collapsible = function(opts) {
     this.o = $.extend({}, defaults, opts);
     this.sections = [];
@@ -93,6 +64,35 @@ define(['jquery', 'common'], function($, MAS) {
 
       this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
     }
+  };
+
+  var _isHidden = function(target, opts) {
+    if (target.hasClass(opts.inactiveClass)) return true;
+    if (target.hasClass(opts.activeClass)) return false;
+    return target.is(':hidden');
+  };
+
+  var _getTarget = function($el, opts) {
+    switch (opts.targetType) {
+      case 'class':
+        var $immediateSibling = $el.next(opts.targetEl),
+            targetIsImmediateSibling = !!$immediateSibling.length;
+        return (targetIsImmediateSibling) ? $immediateSibling : $el.siblings(opts.targetEl);
+      case 'href':
+        var href = $el.attr('href'),
+            $t = $(href);
+        return ($t.length) ? $t : false;
+      default:
+        return false;
+    }
+  };
+
+  var _getItems = function($el, opt) {
+    return $el.find(opt.targetItems);
+  };
+
+  var _getViewAll = function($el, opt) {
+    return $el.find(opt.viewAllButton);
   };
 
   Collapsible.prototype._delayDomCheck = function() {

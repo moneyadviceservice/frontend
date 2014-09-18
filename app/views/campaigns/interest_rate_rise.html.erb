@@ -1,0 +1,41 @@
+<div class="l-campaign-masthead">
+  <%= image_tag('campaign/generic-campaign-bg.png', alt: '', class: 'l-campaign-image') %>
+
+  <div class="l-constrained">
+    <section class="l-campaign-masthead__message">
+      <%= heading_tag t('interest-rate-campaign.title'), class: 'l-campaign-masthead__heading' %>
+      <%= t('interest-rate-campaign.tagline_html') %>
+      <div class="l-campaign-masthead__button">
+        <button class="button button--primary">Use our Car Cost Calculator</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="mas-strapline">
+  <div class="l-constrained">
+    <%= t('interest-rate-campaign.strapline_html') %>
+    <span class="logo logo--green"></span>
+  </div>
+</div>
+
+<section>
+  <div class="l-constrained">
+    <%= heading_tag t('interest-rate-campaign.section.heading'), class: 'l-campaign-heading', level: 2 %>
+    <div class="l-campaign-left">
+      <%= t('interest-rate-campaign.section.intro_html') %>
+      <%= t('interest-rate-campaign.section.content_html') %>
+    </div>
+
+    <section class="l-campaign-right">
+      <%= heading_tag t('interest-rate-campaign.section.next'), class: 'heading-extra-small', level: 2 %>
+      <%= t('interest-rate-campaign.section.steps_html') %>
+    </section>
+  </div>
+</section>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

@@ -74,6 +74,10 @@ module Core
       autoload :PublicWebsite, 'core/repository/categories/public_website'
     end
 
+    module CallbackRequestable
+      autoload :Static, 'core/repository/callback_requestable/static'
+    end
+
     module Feedback
       autoload :Email, 'core/repository/feedback/email'
     end

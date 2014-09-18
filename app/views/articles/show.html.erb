@@ -17,6 +17,12 @@
       <%= heading_tag article.title %>
       <%= article.content %>
 
+      <% if Feature.active?(:callback_requester) %>
+        <% if article.callback_requestable? %>
+          <%= render 'callback_requester'  %>
+        <% end %>
+      <% end %>
+
       <%= render 'shared/related_links', article: @article, categories: related_content %>
 
       <% if Feature.active?(:feedback) %>

@@ -16,5 +16,9 @@ module Core
     def only_child?
       categories.compact.one?
     end
+
+    def callback_requestable?
+      Repository::CallbackRequestable::Static.new(self).call
+    end
   end
 end

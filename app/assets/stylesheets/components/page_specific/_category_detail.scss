@@ -1,5 +1,5 @@
 .category-detail {
-  border-bottom: 3px solid $color-category-border;
+  border-bottom: $default-border-thin;
   margin-bottom: $baseline-unit*6;
   padding-bottom: $baseline-unit*4;
 
@@ -14,6 +14,7 @@
   list-style: none;
   padding: 0;
   margin-top: $baseline-unit*4;
+  margin-bottom: 0;
 }
 
 .category-detail__list-item {
@@ -21,6 +22,31 @@
 
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
+  }
+
+  &.is-off {
+    display: none;
+  }
+}
+
+.category-detail__view-all {
+  display: none;
+  color: $color-link-default;
+  cursor: pointer;
+
+  .js & {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-link-default;
+    text-decoration: underline;
+  }
+
+  &.is-off{
+    display: none;
   }
 }
 
@@ -60,7 +86,7 @@
   }
 }
 
-.js .category-detail p,
+.js .category-detail__intro,
 .js .category-detail__list-container {
   padding-left: $category-inset;
 }

@@ -4,35 +4,23 @@
 
 .trust-banner {
   position: relative;
-
-  @include respond-to($mq-m) {
-    // background: image_url('illustrated_people.png') 50% 100% no-repeat;
-    background-size: 100%;
-  }
-
-  @include respond-to($mq-s) {
-    background-position: 100% 100%;
-    background-size: 40%;
-    height: auto;
-  }
 }
 
 .trust-banner__heading {
-  @include body(30, 36);
   @extend %font-heading-heavy;
+  @include body(30, 36);
   color: $color-heading-extra-small;
+  padding-top: 1em;
+  padding-bottom: 0.6em;
   margin: 0;
-  padding-top: 1.5em;
-  padding-bottom: 2em;
 
   @include respond-to($mq-m) {
-    width: 60%;
     @include body(36, 42);
-
+    width: 60%;
   }
 
   @include respond-to($mq-l) {
-    @include body(48, 52);
+    @include body(50, 52);
   }
 }
 
@@ -46,5 +34,20 @@
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+}
+
+.trust-banner__content {
+  @extend .unstyled-list;
+  @extend .list-benefits;
+  margin-bottom: $baseline-unit*4;
+
+  @include respond-to($mq-l) {
+    margin-bottom: $baseline-unit*10;
+  }
+
+  > li {
+    @include body(16,24);
+    margin-bottom: $baseline-unit;
   }
 }

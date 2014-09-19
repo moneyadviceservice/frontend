@@ -99,6 +99,12 @@ require(['common', 'jquery'], function(MAS, $) {
     });
   });
 
+  require(['googleComplete'], function(googleComplete) {
+    $(document).ready(function() {
+      new googleComplete({input: '#search'});
+    });
+  });
+
   // Kick off component loader
   var engines = [];
   $('[data-engine]').each(function() {

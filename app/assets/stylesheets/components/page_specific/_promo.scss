@@ -12,13 +12,17 @@
   margin-top: 0;
 
   @include respond-to($mq-m) {
-    @include body(22, 30);
+    @include body(20, 24);
   }
 
   .icon {
     position: relative;
     top: 6px;
   }
+}
+
+.promo__content {
+  @include body(16, 24);
 }
 
 .promo__img {

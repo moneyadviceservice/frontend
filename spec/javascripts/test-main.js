@@ -49,7 +49,8 @@ require.config({
       MAS.bootstrap = {
         env: 'production',
         timestamp: new Date().getTime(),
-        I18nLocale: 'en'
+        I18nLocale: 'en',
+        googleApiCx: '123'
       };
 
       MAS.supports = (function(w,d){

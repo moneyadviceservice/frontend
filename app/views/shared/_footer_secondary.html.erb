@@ -46,16 +46,9 @@
           <% end %>
         </li>
 
-        <% if display_opt_out_link_in_footer? %>
-          <li class="footer-secondary__list-item">
-            <%= form_tag(main_app.beta_opt_out_path) do %>
-              <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
-              <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
-                <%= t('opt_out.title') %>
-              <% end %>
-            <% end %>
-          </li>
-        <% end %>
+        <li class="footer-secondary__list-item">
+          <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
+        </li>
 
         <li class="footer-secondary__list-item">
           <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
@@ -77,6 +70,17 @@
           <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
         </li>
 
+
+        <% if display_opt_out_link_in_footer? %>
+          <li class="footer-secondary__list-item">
+            <%= form_tag(main_app.beta_opt_out_path) do %>
+              <input type="hidden" name="redirection_page" value="<%= request.original_url %>">
+              <%= button_tag(class: 'footer-secondary__opt-out footer-secondary__link t-opt-out-button') do %>
+                <%= t('opt_out.title') %>
+              <% end %>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

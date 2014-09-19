@@ -2,7 +2,7 @@
   <% items.each do |item| %>
   <div class="directory__item">
     <%= heading_tag(level: heading_level ||= 2, class: 'directory__title') do %>
-    <%= link_to item.title, item.path %>
+    <%= link_to item.title, item.path, class: 'directory__link' %>
     <% end %>
 
     <p class="directory__description"><%= item.description %></p>

@@ -1,4 +1,4 @@
-define(['jquery', 'typeahead'], function($, typeahead) {
+define(['jquery', 'typeahead', 'globals'], function($, typeahead, globals) {
   'use strict';
 
   var GoogleComplete = function(options) {
@@ -10,6 +10,20 @@ define(['jquery', 'typeahead'], function($, typeahead) {
   };
 
   GoogleComplete.prototype.completions = function(query, cb) {
+    var url = 'http://clients1.google.com/complete/search?q=' + query +
+      '&hl=en&client=partner&source=gcsc&ds=cse&partnerid=' +
+      globals.bootstrap.googleApiCx;
+
+    $.ajax({
+      url: url,
+      dataType: 'jsonp',
+      success: function(data) {
+        var results = $.map(data[1], function(item) {
+          return { value: item[0] };
+        });
+        cb(results);
+      }
+    });
   }
 
   return GoogleComplete;

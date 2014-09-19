@@ -2,7 +2,8 @@ describe('googleComplete', function() {
   'use strict';
 
   var $input,
-      stubCompletions;
+      stubCompletions,
+      module;
 
   function simulateInput(value) {
     $input.focus();
@@ -15,11 +16,16 @@ describe('googleComplete', function() {
       var $body = $('body').html(window.__html__['spec/javascripts/templates/google_complete.html']);
       $input = $body.find('#search');
 
+      module = googleComplete;
       stubCompletions = sinon.stub(googleComplete.prototype, 'completions');
       new googleComplete({input: '#search'})
 
       done();
     }, done);
+  });
+
+  after(function() {
+    module.prototype.completions.restore();
   });
 
   it('initialises the typeahead library', function() {
@@ -38,5 +44,48 @@ describe('googleComplete', function() {
       simulateInput('ab');
       expect(stubCompletions.called).to.be.true;
     });
+  });
+});
+
+
+describe('googleComplete#completions', function() {
+  'use strict';
+
+  var module,
+      query = 'ta',
+      response = ["ta",[["tax"],["tax credits"]],{"q":"xICyRJzwB2eUKd10u0jujw13BQw","k":1}],
+      completions = [{value: "tax"}, {value: "tax credits"}],
+      googleApiCx = '123-abc',
+      url = 'http://clients1.google.com/complete/search?q=' + query +
+        '&hl=en&client=partner&source=gcsc&ds=cse&partnerid=' + googleApiCx;
+
+  before(function(done) {
+    require(['googleComplete', 'globals'], function(googleComplete, globals) {
+      module = googleComplete;
+      globals.bootstrap.googleApiCx = googleApiCx;
+
+      done();
+    }, done);
+  });
+
+  afterEach(function() {
+    $.ajax.restore();
+  });
+
+  it('calls the correct URL', function() {
+    sinon.stub($, 'ajax', function(options) {
+      expect(options.url).to.equal(url);
+    });
+
+    module.prototype.completions(query, null);
+  });
+
+  it('passes the completions to the callback', function() {
+    sinon.stub($, 'ajax').yieldsTo('success', response);
+
+    var callback = sinon.spy();
+    module.prototype.completions(query, callback);
+
+    expect(callback.firstCall.args[0]).to.eql(completions);
   });
 });

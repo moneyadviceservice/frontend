@@ -4,12 +4,10 @@
 
 .trust-banner {
   position: relative;
-  height: 240px;
-  background: image_url('illustrated_people.png') 50% 100% no-repeat;
-  background-size: 100%;
 
-  @include respond-to(25.25em) {
-    background-size: auto 157px;
+  @include respond-to($mq-m) {
+    // background: image_url('illustrated_people.png') 50% 100% no-repeat;
+    background-size: 100%;
   }
 
   @include respond-to($mq-s) {
@@ -20,34 +18,33 @@
 }
 
 .trust-banner__heading {
-  @include body(30, 30);
-  font-weight: 700;
-  color: $trust-banner-heading;
+  @include body(30, 36);
+  @extend %font-heading-heavy;
+  color: $color-heading-extra-small;
   margin: 0;
-  padding-top: $baseline-unit*4;
-  padding-bottom: $baseline-unit*6;
-
-  .theme-cy & {
-    @include respond-to($mq-xs, $mq-s) {
-      @include body(24, 30);
-    }
-  }
-
-  @include respond-to($mq-s) {
-    width: 60%;
-  }
+  padding-top: 1.5em;
+  padding-bottom: 2em;
 
   @include respond-to($mq-m) {
-    @include body(36, 36);
-    padding-top: $baseline-unit*8;
+    width: 60%;
+    @include body(36, 42);
+
   }
 
   @include respond-to($mq-l) {
-    @include body(42, 42);
-    padding-bottom: $baseline-unit*12;
+    @include body(48, 52);
   }
+}
 
-  @include respond-to($mq-xl) {
-    @include body(46, 46);
+.trust-banner__image {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+    width: 38%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }

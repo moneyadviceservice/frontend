@@ -8,12 +8,10 @@
   background-color: $color-directory-emphasized-bg;
 
   @include respond-to($mq-m) {
-    padding-top: $baseline-unit*4;
     padding-bottom: $baseline-unit*2;
   }
 
   .flexbox & {
-    /* @lintingIgnoreBegin */
     display: flex;
     flex-flow: column;
 
@@ -21,7 +19,6 @@
       flex-flow: row;
       flex-wrap: wrap;
     }
-    /* @lintingIgnoreEnd */
   }
 
 }
@@ -54,7 +51,6 @@
   margin-bottom: 0;
   min-height: 0;
 
-  /* @lintingIgnoreBegin */
   @include respond-to($mq-m) {
     flex-basis: 46%;
   }
@@ -62,7 +58,6 @@
   @include respond-to($mq-l) {;
     flex-basis: 30%;
   }
-  /* @lintingIgnoreEnd */
 }
 
 .directory__title {
@@ -71,23 +66,16 @@
   margin-bottom: $baseline-unit;
 
   @include respond-to($mq-m) {
-    @include body(22, 30);
-    margin-bottom: $baseline-unit*2;
+    @include body(20, 24);
   }
 }
 
 .directory__link {
   @extend %font-heading-medium;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:focus {
-    color: $color-heading-extra-small;
-  }
 }
 
 .directory__description {
+  @include body(16, 24);
   display: none;
 
   @include respond-to($mq-m) {

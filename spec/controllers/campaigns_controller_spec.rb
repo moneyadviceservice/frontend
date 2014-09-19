@@ -3,20 +3,31 @@ RSpec.describe CampaignsController, :type => :controller do
     let(:id) { 'revealed-the-true-cost-of-buying-a-car' }
     let(:template) { double }
 
-    before { allow(Template).to receive(:new) { template } }
+    context 'if there are no custom template' do
+      before { allow(Template).to receive(:new) { template } }
 
-    it 'builds a campaing' do
-      expect(template).to receive(:build_campaign).with(id)
+      it 'builds a campaing' do
+        expect(template).to receive(:build_campaign).with(id)
 
-      get :show, locale: I18n.locale, id: id
+        get :show, locale: I18n.locale, id: id
+      end
+
+      it 'is successful' do
+        allow(template).to receive(:build_campaign) { double }
+
+        get :show, locale: I18n.locale, id: id
+
+        expect(response).to be_ok
+      end
     end
 
-    it 'is successful' do
-      allow(template).to receive(:build_campaign) { double }
+    context 'if there are a custom template' do
+      let(:campaign_page_id) { 'interest-rate-campaign' }
+      subject { get :show, locale: I18n.locale, id: campaign_page_id }
 
-      get :show, locale: I18n.locale, id: id
-
-      expect(response).to be_ok
+      it 'renders the custom template' do
+        expect(subject).to render_template("campaigns/#{campaign_page_id.underscore}")
+      end
     end
   end
 end

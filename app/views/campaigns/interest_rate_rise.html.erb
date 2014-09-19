@@ -1,0 +1,41 @@
+<div class="l-campaign-masthead">
+  <%= image_tag('campaign/generic-campaign-bg.png', alt: '', class: 'l-campaign-image') %>
+
+  <div class="l-constrained">
+    <section class="l-campaign-masthead__message">
+      <%= heading_tag t('interest-rate-rise.title'), class: 'l-campaign-masthead__heading' %>
+      <%= t('interest-rate-rise.tagline_html') %>
+      <div class="l-campaign-masthead__button">
+        <button class="button button--primary"><%= t('interest-rate-rise.call_to_action') %></button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="mas-strapline">
+  <div class="l-constrained">
+    <%= t('interest-rate-rise.strapline_html') %>
+    <span class="logo logo--green"></span>
+  </div>
+</div>
+
+<section>
+  <div class="l-constrained">
+    <%= heading_tag t('interest-rate-rise.section.heading'), class: 'l-campaign-heading', level: 2 %>
+    <div class="l-campaign-left">
+      <%= t('interest-rate-rise.section.intro_html') %>
+      <%= t('interest-rate-rise.section.content_html') %>
+    </div>
+
+    <section class="l-campaign-right">
+      <%= heading_tag t('interest-rate-rise.section.next'), class: 'heading-extra-small', level: 2 %>
+      <%= t('interest-rate-rise.section.steps_html') %>
+    </section>
+  </div>
+</section>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

@@ -333,9 +333,11 @@ en:
 
   technical_feedbacks:
     new:
-      title: Give us your feedback
+      title: Report a technical issue
+      instructions_html: |
+        Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/en/static/contact-us">contact us</a> page.
       mandatory_warning: All fields are required
-      submit_button: Submit feedback
+      submit_button: Submit
       trying_to_do_html: What were you trying to do? <span class="visually-hidden">required</span>
       what_went_wrong_html: What went wrong? <span class="visually-hidden">required</span>
     create:
@@ -352,6 +354,9 @@ en:
     article_feedback_link_text: The information on this page
     technical_feedback_link_text: I had a technical issue
     advice_link_text: I need money advice
+
+  inline_feedback:
+    technical_feedback_link: Report a technical issue with this page
 
   callback_requester:
     title: Need more help?

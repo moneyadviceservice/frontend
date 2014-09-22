@@ -26,7 +26,7 @@
       <%= render 'shared/related_links', article: @article, categories: related_content %>
 
       <% if Feature.active?(:feedback) %>
-        <%= render 'shared/feedback_panel', article: article %>
+        <%= render 'shared/inline_feedback', article: article %>
       <% end %>
 
     </main>

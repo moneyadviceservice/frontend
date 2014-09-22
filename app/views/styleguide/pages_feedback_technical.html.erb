@@ -7,16 +7,18 @@
     <main class="l-main__cell-single" role="main">
       <h1>Give us your feedback</h1>
 
-      <p>All fields are mandatory</p>
+      <p>Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/en/static/contact-us">contact us</a> page.</p>
+
+      <p class="feedback__warning">All fields are mandatory</p>
 
       <div class="form__row">
         <label for="trying" class="form__label-heading">What were you trying to do? <span class="visually-hidden">required</span></label>
-        <textarea id="trying" cols="60" rows="6" aria-required="true"></textarea>
+        <textarea class="feedback__input" id="trying" cols="60" rows="6" aria-required="true"></textarea>
       </div>
 
       <div class="form__row">
         <label for="wrong" class="form__label-heading">What went wrong? <span class="visually-hidden">required</span></label>
-        <textarea id="wrong" cols="60" rows="6" aria-required="true"></textarea>
+        <textarea class="feedback__input" id="wrong" cols="60" rows="6" aria-required="true"></textarea>
       </div>
 
       <input class="button button--primary" type="submit" value="Submit feedback">

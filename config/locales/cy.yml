@@ -234,18 +234,18 @@ cy:
     show:
       view_all: Gweld yr holl ...
 
-  article_feedbacks:
-    new:
-      title: Rhowch eich adborth i ni
-      mandatory_warning: Mae pob maes yn angenrheidiol
-      subtitle: "Rydych yn darparu adborth ar: '%{article_title}'"
-      was_page_useful_html: A oedd y dudalen hon yn ddefnyddiol? <span class="visually-hidden">angen</span>
-      "yes": "Ie"
-      "no": "Na"
-      tell_us_more_html: Dywedwch ragor wrthym<span class="visually-hidden">angen</span>
-      submit_button: Cyflwyno adborth
-    create:
-      flash_notice: Diolch am eich adborth
+#  article_feedbacks:
+#    new:
+#      title: Rhowch eich adborth i ni
+#      mandatory_warning: Mae pob maes yn angenrheidiol
+#      subtitle: "Rydych yn darparu adborth ar: '%{article_title}'"
+#      was_page_useful_html: A oedd y dudalen hon yn ddefnyddiol? <span class="visually-hidden">angen</span>
+#      "yes": "Ie"
+#      "no": "Na"
+#      tell_us_more_html: Dywedwch ragor wrthym<span class="visually-hidden">angen</span>
+#      submit_button: Cyflwyno adborth
+#    create:
+#      flash_notice: Diolch am eich adborth
 
   search_box:
     label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol
@@ -332,28 +332,17 @@ cy:
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
       forgot_password: "Wedi anghofio cyfrinair?"
 
-  technical_feedbacks:
+  technical_feedback:
     new:
       title: Rhowch eich adborth i ni
       mandatory_warning: Mae pob maes yn angenrheidiol
-      submit_button: Cyflwyno adborth
+      instructions_html: |
+        Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/cy/static/cysylltu-a-ni">contact us</a> page.
+      submit_button: Cyflwyno
       trying_to_do_html: Beth oeddech chi'n geisio'i wneud? <span class="visually-hidden">angen</span>
       what_went_wrong_html: Beth aeth o'i le? <span class="visually-hidden">angen</span>
     create:
       flash_notice: Diolch am eich adborth
 
-  advices:
-    show:
-      title: Cymorth a chyngor ariannol
-      greeting: "Am gymorth a chyngor ariannol, cysylltwch â ni."
-      subtitle: Ffoniwch ni
-      monday_friday_times_html: "Dydd Llun–Dydd Gwener: <strong>8am–8pm</strong>"
-      saturday_times_html: "dydd Sadwrn: <strong>9am–1pm</strong>"
-      about_call_charges: Dysgwch am gostau galwadau
-
-  feedback_panel:
-    title: Rhowch eich adborth i ni
-    greeting: Beth yw natur eich adborth?
-    article_feedback_link_text: Y wybodaeth ar y dudalen hon
-    technical_feedback_link_text: Roedd gennyf fater technegol
-    advice_link_text: Mae arnaf angen cymorth ariannol
+  inline_feedback:
+    technical_feedback_link: Roedd gennyf fater technegol / Report a technical issue with this page

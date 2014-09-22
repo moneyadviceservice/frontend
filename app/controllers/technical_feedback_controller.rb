@@ -1,4 +1,4 @@
-class TechnicalFeedbacksController < ApplicationController
+class TechnicalFeedbackController < ApplicationController
   def new
     session[:return_to] ||= request.referer
   end

@@ -1,0 +1,8 @@
+.feedback__warning {
+  @extend .smallprint;
+  text-align: right;
+}
+
+.feedback__input {
+  padding: $baseline-unit*2;
+}

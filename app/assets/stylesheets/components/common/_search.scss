@@ -99,3 +99,27 @@
 .twitter-typeahead {
   width: 100%;
 }
+
+.tt-dropdown-menu {
+  background: $color-white;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-top: -3px;
+  border-left: $default-border-thin;
+  border-right: $default-border-thin;
+  border-bottom: $default-border-thin;
+}
+
+.tt-suggestion {
+  & p {
+    @include body(16, 24);
+    padding: $baseline-unit*2;
+    margin: 0;
+  }
+
+  &.tt-cursor {
+    color: $color-white;
+    background-color: $color-green-primary;
+  }
+}

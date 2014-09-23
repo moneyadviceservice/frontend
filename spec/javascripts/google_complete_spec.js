@@ -3,6 +3,7 @@ describe('googleComplete', function() {
 
   var $input,
       stubCompletions,
+      stubSubmit,
       module;
 
   function simulateInput(value) {
@@ -16,9 +17,12 @@ describe('googleComplete', function() {
       var $body = $('body').html(window.__html__['spec/javascripts/templates/google_complete.html']);
       $input = $body.find('#search');
 
+      var form = {submit: function(){}};
+      stubSubmit = sinon.spy(form, 'submit');
+
       module = googleComplete;
       stubCompletions = sinon.stub(googleComplete.prototype, 'completions');
-      new googleComplete({input: '#search'})
+      new googleComplete({input: $input, form: form})
 
       done();
     }, done);
@@ -43,6 +47,13 @@ describe('googleComplete', function() {
     it('fetches the completions', function() {
       simulateInput('ab');
       expect(stubCompletions.called).to.be.true;
+    });
+  });
+
+  context('when a suggestion is selected', function() {
+    it('submits the form', function() {
+      $input.trigger('typeahead:selected');
+      expect(stubSubmit.called).to.be.true;
     });
   });
 });

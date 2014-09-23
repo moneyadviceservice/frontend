@@ -7,13 +7,19 @@
     <% items.each do |item| %>
     <div class="l-promos__item">
       <div class="tool-promo">
-        <%= heading_tag(level: 3, class: 'promo__heading') do %>
+        <%= heading_tag(level: 3, class: 'visually-hidden promo__heading') do %>
           <%= link_to item[:url] do %>
             <%= item[:heading] %>
           <% end %>
         <% end %>
 
-        <p class="promo__content"><%= item[:text] %></p>
+        <%= image_tag(item[:src], class: 'promo__img') %>
+
+        <p class="promo__content promo__content--grey">
+          <%= link_to item[:url] do %>
+            <%= item[:text] %>
+          <% end %>
+          </p>
       </div>
     </div>
     <% end %>

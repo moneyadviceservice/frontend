@@ -18,7 +18,7 @@ describe('googleComplete', function() {
 
       module = googleComplete;
       stubCompletions = sinon.stub(googleComplete.prototype, 'completions');
-      new googleComplete({input: '#search'})
+      new googleComplete({input: $input})
 
       done();
     }, done);

@@ -101,7 +101,7 @@ require(['common', 'jquery'], function(MAS, $) {
 
   require(['googleComplete'], function(googleComplete) {
     $(document).ready(function() {
-      new googleComplete({input: '#search'});
+      new googleComplete({input: $('#search')});
       $('[data-dough-component="ClearInput"]').find('.tt-hint').removeAttr('data-dough-clear-input');
     });
   });

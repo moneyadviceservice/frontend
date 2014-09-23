@@ -2,7 +2,7 @@ define(['jquery', 'typeahead', 'globals'], function($, typeahead, globals) {
   'use strict';
 
   var GoogleComplete = function(options) {
-    $(options.input).typeahead({
+    options.input.typeahead({
       minLength: 2
     }, {
       source: this.completions

@@ -49,6 +49,7 @@ Rails.application.configure do
                                    eventsWithPromises/src/eventsWithPromises.js
                                    rsvp/rsvp.amd.js
                                    requirejs/require.js
+                                   typeahead.js/dist/typeahead.jquery.js
                                    modernizer-flexbox-cssclasses.js
                                    webchat.js)
 end

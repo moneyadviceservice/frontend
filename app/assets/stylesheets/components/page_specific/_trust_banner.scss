@@ -20,7 +20,7 @@
   }
 
   @include respond-to($mq-l) {
-    @include body(50, 52);
+    @include body(48, 54);
   }
 }
 
@@ -29,7 +29,7 @@
 
   @include respond-to($mq-m) {
     display: block;
-    width: 38%;
+    width: 40%;
 
     position: absolute;
     bottom: 0;

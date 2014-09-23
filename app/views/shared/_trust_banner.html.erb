@@ -4,9 +4,9 @@
     <%= image_tag("illustrated_people.png", alt: '', class: 'trust-banner__image') %>
 
     <ul class="trust-banner__content">
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Curabitur blandit tempus porttitor.</li>
-      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <% items.each do |item| %>
+        <li><%= item[:text] %></li>
+      <% end %>
     </ul>
   </div>
 </div>

@@ -13,6 +13,54 @@
 
 ActiveRecord::Schema.define(version: 20140702134657) do
 
+  create_table "car_cost_tool_car_adjustments", force: true do |t|
+    t.integer "user_data_id"
+    t.string  "cap_id"
+    t.string  "vrm"
+    t.integer "current_mileage"
+    t.decimal "annual_insurance",  precision: 8, scale: 2
+    t.decimal "purchase_price",    precision: 8, scale: 2
+    t.decimal "depreciation",      precision: 8, scale: 2
+    t.integer "registration_year"
+  end
+
+  create_table "car_cost_tool_fuel_prices", force: true do |t|
+    t.string   "fuel_type"
+    t.decimal  "price_in_pence", precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "car_cost_tool_user_data", force: true do |t|
+    t.string  "token"
+    t.integer "annual_mileage"
+    t.integer "intended_ownership_term"
+  end
+
+  add_index "car_cost_tool_user_data", ["token"], name: "index_car_cost_tool_user_data_on_token", unique: true, using: :btree
+
+  create_table "car_cost_tool_ved_capacity_rates", force: true do |t|
+    t.integer  "cc_lower_limit"
+    t.integer  "cc_upper_limit"
+    t.integer  "annual_price_in_pence"
+    t.integer  "six_month_price_in_pence"
+    t.string   "tax_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "car_cost_tool_ved_co2_bands", force: true do |t|
+    t.string   "band"
+    t.string   "fuel_type"
+    t.integer  "co2_lower_limit"
+    t.integer  "co2_upper_limit"
+    t.integer  "annual_price_in_pence"
+    t.integer  "six_month_price_in_pence"
+    t.string   "tax_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "csr_users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -34,7 +82,6 @@ ActiveRecord::Schema.define(version: 20140702134657) do
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
 
-
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -44,7 +91,6 @@ ActiveRecord::Schema.define(version: 20140702134657) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", using: :btree
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
-
 
   create_table "users", force: true do |t|
     t.string   "email",                              default: "",    null: false

@@ -9,7 +9,6 @@ source 'http://gems.test.mas'
 # 4. Only use version specifiers where appropriate
 
 gem 'rails', '4.1.5'
-
 gem 'activerecord-session_store'
 gem 'aes'
 gem 'cream'
@@ -38,6 +37,7 @@ gem 'validates_timeliness'
 
 gem 'budget_planner', '~> 4.0'
 gem 'pensions_calculator', '~> 0.2'
+gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'move_to_responsive_site'
 
 group :assets do
   gem 'autoprefixer-rails'

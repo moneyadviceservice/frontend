@@ -24,6 +24,19 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
+GIT
+  remote: git@github.com:moneyadviceservice/car_cost_tool.git
+  revision: 8115e390bec5217956ee3129ad320ad30aa8ee17
+  branch: move_to_responsive_site
+  specs:
+    car_cost_tool (0.3.2)
+      dough-ruby
+      nokogiri
+      rails (~> 4.1)
+      rest-client
+      roo
+      sass-rails (~> 4.0.3)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -302,6 +315,7 @@ GEM
     mysql2 (0.3.15)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
+    netrc (0.7.7)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     ntlm-http (0.1.1)
@@ -360,6 +374,13 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     request_store (1.0.6)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    roo (1.13.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
     rouge (1.3.3)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -389,6 +410,7 @@ GEM
     rubytree (0.9.3)
       json (~> 1.8)
       structured_warnings (~> 0.1)
+    rubyzip (1.1.6)
     safe_yaml (1.0.3)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -482,6 +504,7 @@ DEPENDENCIES
   bowndler (~> 1.0)
   budget_planner (~> 4.0)
   byebug
+  car_cost_tool!
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

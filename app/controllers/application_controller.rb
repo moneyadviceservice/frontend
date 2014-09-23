@@ -60,12 +60,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_skip_to_main_navigation?
 
-  def display_opt_out_link_in_footer?
-    true
-  end
-
-  helper_method :display_opt_out_link_in_footer?
-
   def alerts?
     flash.keys.any?
   end

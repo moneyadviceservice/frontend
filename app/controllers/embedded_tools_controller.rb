@@ -66,10 +66,6 @@ protected
     false
   end
 
-  def display_opt_out_link_in_footer?
-    false
-  end
-
   def display_category_directory?
     true
   end

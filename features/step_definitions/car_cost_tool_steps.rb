@@ -12,7 +12,7 @@ end
 
 Then(/^I should see the Car Cost Tool in (.*)$/) do |language|
   locale = language_to_locale(language).to_sym
-  expect(current_page).to have_content(I18n.t('search_introduction_heading', locale: locale))
+  expect(current_page).to have_content(I18n.t('car_cost_tool.search_introduction_heading', locale: locale))
 end
 
 When(/^I translate the Car Cost Tool into (.*)$/) do |language|

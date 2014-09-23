@@ -23,6 +23,8 @@
 }
 
 .contact-panel__heading {
+  @include body(24, 30);
+  color: $color-heading-extra-small;
   position: relative;
   margin-top: $baseline-unit*16;
 

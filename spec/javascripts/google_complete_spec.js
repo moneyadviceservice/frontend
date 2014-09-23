@@ -56,7 +56,7 @@ describe('googleComplete#completions', function() {
       response = ["ta",[["tax"],["tax credits"]],{"q":"xICyRJzwB2eUKd10u0jujw13BQw","k":1}],
       completions = [{value: "tax"}, {value: "tax credits"}],
       googleApiCx = '123-abc',
-      url = 'http://clients1.google.com/complete/search?q=' + query +
+      url = 'https://clients1.google.com/complete/search?q=' + query +
         '&hl=en&client=partner&source=gcsc&ds=cse&partnerid=' + googleApiCx;
 
   before(function(done) {

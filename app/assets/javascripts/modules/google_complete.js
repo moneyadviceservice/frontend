@@ -10,7 +10,7 @@ define(['jquery', 'typeahead', 'globals'], function($, typeahead, globals) {
   };
 
   GoogleComplete.prototype.completions = function(query, cb) {
-    var url = 'http://clients1.google.com/complete/search?q=' + query +
+    var url = 'https://clients1.google.com/complete/search?q=' + query +
       '&hl=en&client=partner&source=gcsc&ds=cse&partnerid=' +
       globals.bootstrap.googleApiCx;
 

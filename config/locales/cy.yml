@@ -332,11 +332,15 @@ cy:
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
       forgot_password: "Wedi anghofio cyfrinair?"
 
-  technical_feedbacks:
+  technical_feedback:
     new:
-      title: Rhowch eich adborth i ni
+      title: Adrodd ar anhawster technegol
+      instructions_html: |
+        Defnyddiwch y ffurflen hon i ddweud wrthym a gafwyd anhawster technegol gyda’r dudalen hon ar y we wrth i chi ei darllen. Ar gyfer pob ymholiad arall gweler ein <a href="/cy/static/cysylltu-a-ni">tudalen gyswllt</a>.
       mandatory_warning: Mae pob maes yn angenrheidiol
-      submit_button: Cyflwyno adborth
+      input_one_example_text: e.e. Roeddwn yn ceisio clicio ar ddolen
+      input_two_example_text: e.e. nid oedd y ddolen yn gweithio
+      submit_button: Cyflwyno
       trying_to_do_html: Beth oeddech chi'n geisio'i wneud? <span class="visually-hidden">angen</span>
       what_went_wrong_html: Beth aeth o'i le? <span class="visually-hidden">angen</span>
     create:
@@ -357,3 +361,6 @@ cy:
     article_feedback_link_text: Y wybodaeth ar y dudalen hon
     technical_feedback_link_text: Roedd gennyf fater technegol
     advice_link_text: Mae arnaf angen cymorth ariannol
+
+  inline_feedback:
+    technical_feedback_link: Adrodd ar anhawster technegol gyda’r dudalen hon

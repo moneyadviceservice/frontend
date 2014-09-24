@@ -1,3 +1,4 @@
 .l-container-tool {
   @include column(12);
+  margin-bottom: $baseline-unit * 8;
 }

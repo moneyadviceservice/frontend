@@ -7,10 +7,6 @@ module Core
       self.id = id
     end
 
-    def initialize(id)
-      self.id = id
-    end
-
     def call
       data         = Registry::Repository[:news].find(id)
       news_article = NewsArticle.new(id, data)

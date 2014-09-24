@@ -17,10 +17,12 @@
   </div>
 </div>
 
-<%= render 'shared/tool_promos', items: t('.tools') %>
+<% if Feature.active?(:tools_promos) %>
+  <%= render 'shared/tool_promos', items: t('.tools') %>
 
-<div class="l-constrained">
-  <hr class="l-homepage-divider">
-</div>
+  <div class="l-constrained">
+    <hr class="l-homepage-divider">
+  </div>
+<% end %>
 
 <%= render 'shared/article_promos', items: t('.promoted') %>

@@ -5,7 +5,6 @@
 .directory {
   @extend .clearfix;
   width:100%;
-  background-color: $color-directory-emphasized-bg;
 
   @include respond-to($mq-m) {
     padding-bottom: $baseline-unit*2;

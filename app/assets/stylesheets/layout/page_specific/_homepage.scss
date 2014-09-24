@@ -3,9 +3,7 @@
 }
 
 .l-home-directory {
-  @include respond-to($mq-m) {
-    background-color: $color-directory-emphasized-bg;
-  }
+  background-color: $color-directory-emphasized-bg;
 }
 
 .l-home-directory__title {

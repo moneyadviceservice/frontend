@@ -11,7 +11,7 @@ module Core
       self.limit = options.fetch(:limit, DEFAULT_PAGE_SIZE).to_i
     end
 
-    def call(&block)
+    def call
       if (items = retrieve_page(page))
         news_items = items.map do |news_article|
           id = news_article.delete('id')
@@ -19,8 +19,8 @@ module Core
         end
 
         NewsCollection.new(items: news_items, page: page)
-      else
-        block.call if block_given?
+      elsif block_given?
+        yield
       end
     end
 

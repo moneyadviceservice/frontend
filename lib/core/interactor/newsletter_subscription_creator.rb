@@ -7,13 +7,13 @@ module Core
       self.email = email
     end
 
-    def call(&block)
+    def call
       result = Core::Registry::Repository[:newsletter_subscription].register(email)
 
       if result
         result
       elsif block_given?
-        block.call
+        yield
       else
         false
       end

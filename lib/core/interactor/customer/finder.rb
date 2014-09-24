@@ -8,13 +8,13 @@ module Core
           @id = id
         end
 
-        def call(&block)
+        def call
           customer = Registry::Repository[:customer].find(id: id)
 
           if customer
             customer
-          else
-            block.call if block_given?
+          elsif block_given?
+            yield
           end
         end
       end

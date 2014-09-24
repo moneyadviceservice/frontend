@@ -73,7 +73,7 @@ GEM
       sass (~> 3.2)
     bowndler (1.0.2)
       thor
-    budget_planner (4.0.0.634)
+    budget_planner (4.0.0.636)
       bootstrap-sass
       coffee-rails
       i18n-js (= 3.0.0.mas)
@@ -127,8 +127,8 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.2.19)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
+    compass-rails (2.0.0)
+      compass (>= 0.12.2)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     cream (0.0.3)
@@ -269,10 +269,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mas-assets (1.1.0.32)
-      compass-rails (~> 1.0.3)
+    mas-assets (1.1.0.30)
+      compass-rails
       google-analytics-rails
-      sass (~> 3.2.19)
       sass-rails
       susy
     mas-feedback (1.0.1.41)

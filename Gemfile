@@ -68,7 +68,7 @@ group :test do
   gem 'chronic'
   gem 'codeclimate-test-reporter', require: false
   gem 'faker'
-  gem 'html_validation'
+  gem 'html_validation', github: 'moneyadviceservice/html_validation', ref: '3fb1b65'
   gem 'rspec_junit_formatter'
   gem 'sqlite3'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'

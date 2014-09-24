@@ -1,14 +1,14 @@
 module Core
   class CategoryTreeReader
-    def call(&block)
+    def call
       if (categories = Registry::Repository[:category].all)
         Tree::TreeNode.new('home', HomeCategory.new).tap do |root|
           categories.each do |attributes|
             build_tree(root, attributes)
           end
         end
-      else
-        block.call if block_given?
+      elsif block_given?
+        yield
       end
     end
 

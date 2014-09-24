@@ -8,7 +8,7 @@ module Core
           @user = user
         end
 
-        def call(&block)
+        def call
           customer = Registry::Repository[:customer].find(email: user.email)
 
           user.customer_id = if customer
@@ -19,7 +19,7 @@ module Core
 
           user
         rescue
-          block.call if block_given?
+          yield if block_given?
         end
       end
     end

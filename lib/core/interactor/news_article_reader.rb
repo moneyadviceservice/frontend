@@ -11,14 +11,14 @@ module Core
       self.id = id
     end
 
-    def call(&block)
+    def call
       data         = Registry::Repository[:news].find(id)
       news_article = NewsArticle.new(id, data)
 
       if news_article.valid?
         news_article
-      else
-        block.call if block_given?
+      elsif block_given?
+        yield
       end
     end
   end

@@ -7,7 +7,7 @@ module Core
       self.id = id
     end
 
-    def call(&block)
+    def call
       data        = Registry::Repository[:action_plan].find(id)
       action_plan = ActionPlan.new(id, data)
 
@@ -15,8 +15,8 @@ module Core
         action_plan.tap do |a|
           a.categories = build_categories(a.categories)
         end
-      else
-        block.call if block_given?
+      elsif block_given?
+        yield
       end
     end
 

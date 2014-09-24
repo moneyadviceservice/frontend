@@ -60,7 +60,7 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-sass'
   gem 'guard-shell'
-  gem "letter_opener"
+  gem 'letter_opener'
   gem 'listen', '~> 2.0'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'

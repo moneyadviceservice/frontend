@@ -1,0 +1,22 @@
+<div class="l-constrained">
+  <section class="l-promos">
+    <%= heading_tag(level: 2, class: 'l-promos__heading') do %>
+      <%= t('home.show.promoted_heading') %>
+    <% end %>
+
+    <% items.each do |item| %>
+      <div class="l-promos__item">
+        <div class="promo">
+          <%= heading_tag(level: 2, class: 'promo__heading') do %>
+            <%= link_to item[:url] do %>
+              <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
+              <span><%= item[:text] %></span>
+            <% end %>
+          <% end %>
+
+          <p class="promo__content"><%= item[:content] %></p>
+        </div>
+      </div>
+    <% end %>
+  </section>
+</div>

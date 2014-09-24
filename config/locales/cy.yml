@@ -138,12 +138,39 @@ cy:
 
   home:
     show:
-      title: Am ddim a diduedd a sefydlwyd gan y llywodraeth
-      heading: Am ddim a diduedd a sefydlwyd gan y llywodraeth
-      strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
+      title: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      heading: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      strapline: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      trust_banner_list:
+        - text: Cyngor a chanllawiau i roi cymorth i chi wella’ch materion ariannol
+        - text: Offer a chyfrifianellau i roi cymorth i chi gadw ar y trywydd iawn a chynllunio ymlaen
+        - text: Cefnogaeth bersonol, dros y ffôn ac ar-lein
+      directory_heading: Dewiswch ran i gychwyn arni...
       description: >
         Mae'r Gwasanaeth Cynghori Ariannol yn eich helpu i reoli eich arian yn well. Defnyddiwch
         ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
+      tools_heading: Offer a chyfrifianellau poblogaidd
+      tools:
+        - url: /cy/tools/cynllunydd-cyllideb
+          src: budget-planner.png
+          heading: Cynllunydd cyllideb
+          text: Lluniwch eich cyllideb heddiw
+        - url: /cy/tools/gwiriad-iechyd
+          src: budget-planner.png
+          heading: Gwiriad iechyd ariannol
+          text: Rhowch eich sefyllfa ariannol ar brawf
+          src: budget-planner.png
+        - url: /cy/tools/cyfrifiannell-pensiwn
+          src: budget-planner.png
+          heading: Cyfrifiannell pensiwn
+          text: Dechreuwch gynllunio ar gyfer eich ymddeoliad
+        - url: /cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais
+          src: budget-planner.png
+          heading: Cyfrifiannell fforddiadwyedd morgais
+          text: Cyfrifwch eich ystod pris
+      view_all_link_html: |
+        Gweld pob&hellip;
+      promoted_heading: Beth sy'n newydd
       promoted:
         - url: /cy/categories/tools-and-calculators
           text: Offer a chyfrifianellau

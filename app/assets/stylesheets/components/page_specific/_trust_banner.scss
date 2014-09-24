@@ -20,31 +20,36 @@
   }
 
   @include respond-to($mq-l) {
+    width: 50%;
+  }
+
+  @include respond-to($mq-xl) {
     @include body(48, 54);
+    width: 60%;
   }
 }
 
 .trust-banner__image {
   display: none;
 
-  @include respond-to($mq-m) {
+  @include respond-to(56.25em) {
     display: block;
-    width: 40%;
+    width: 380px;
 
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  @include respond-to($mq-l) {
+    width: 440px;
   }
 }
 
 .trust-banner__content {
   @extend .unstyled-list;
   @extend .list-benefits;
-  margin-bottom: $baseline-unit*4;
-
-  @include respond-to($mq-l) {
-    margin-bottom: $baseline-unit*10;
-  }
+  margin-bottom: $baseline-unit*8;
 
   > li {
     @include body(16,24);

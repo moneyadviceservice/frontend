@@ -16,6 +16,7 @@ module Frontend
   class Application < Rails::Application
     config.session_store :active_record_store
 
+    config.action_mailer.delivery_method = :mailjet
     config.filter_parameters += [:password]
     config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', '**/*', '*.yml').to_s]
 

@@ -13,4 +13,17 @@ RSpec.describe SessionsHelper do
       end
     end
   end
+
+  describe '#authentication_registration_title' do
+    it 'returns the default translation ' do
+      expect(helper.authentication_registration_title).to eql('Register to get more from your money')
+    end
+
+    context 'when overwritten by session' do
+      it 'returns custom title' do
+        session['authentication_registration_title'] = 'hi'
+        expect(helper.authentication_registration_title).to eql('hi')
+      end
+    end
+  end
 end

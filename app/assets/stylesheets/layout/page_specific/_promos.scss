@@ -5,8 +5,10 @@
 }
 
 .l-promos__heading {
-  @extend .heading-extra-small;
+  @extend %font-heading-medium;
   @include column(12);
+  @include body(16, 24);
+  color: $color-heading-extra-small;
   margin-top: $baseline-unit*6;
   margin-bottom: $baseline-unit*2;
 }

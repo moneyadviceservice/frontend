@@ -19,6 +19,10 @@ class SearchResultDecorator < Draper::Decorator
     end
   end
 
+  def snippet
+    object.snippet.html_safe
+  end
+
   private
 
   def title_suffix_regexps

@@ -12,7 +12,7 @@ module Core::Repository::Search
         {
           'link'      => link,
           'htmlTitle' => title,
-          'snippet'   => snippet,
+          'htmlSnippet'   => snippet,
           'pagemap'   => {
             'metatags' => [
               {

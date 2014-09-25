@@ -28,7 +28,7 @@ module Core::Repository
         end
 
         def snippet
-          data['snippet']
+          data['htmlSnippet']
         end
 
         def mapped_item_response

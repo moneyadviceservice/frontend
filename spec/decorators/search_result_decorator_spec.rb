@@ -55,4 +55,16 @@ RSpec.describe SearchResultDecorator do
       expect(subject.path).to be(link)
     end
   end
+
+  describe '#snippet' do
+    subject { decorator.snippet }
+
+    let(:snippet) do
+      '<p>If you created your <b>budget</b> plan <br></p>'
+    end
+
+    before { allow(search_result).to receive(:snippet) { snippet } }
+
+    it { is_expected.to eq('<p>If you created your <b>budget</b> plan </p>') }
+  end
 end

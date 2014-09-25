@@ -12,7 +12,7 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def snippet
-    object.snippet.html_safe
+    object.snippet.gsub(/<br\s*\/?>/, '').html_safe
   end
 
   private

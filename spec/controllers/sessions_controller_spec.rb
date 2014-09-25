@@ -36,9 +36,11 @@ RSpec.describe SessionsController, type: :controller do
 
       it 'removes custom session messages' do
         session['authentication_sign_in_page_title'] = 'hello'
+        session['authentication_registration_title'] = 'hi'
         @request.env['devise.mapping'] = Devise.mappings[:user]
         post :create, user: { email: 'phil@example.com', password: 'password' }, locale: 'en'
         expect(session['authentication_sign_in_page_title']).to be_nil
+        expect(session['authentication_registration_title']).to be_nil
       end
     end
   end

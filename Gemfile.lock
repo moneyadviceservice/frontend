@@ -24,19 +24,6 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
-GIT
-  remote: git@github.com:moneyadviceservice/car_cost_tool.git
-  revision: 8115e390bec5217956ee3129ad320ad30aa8ee17
-  branch: move_to_responsive_site
-  specs:
-    car_cost_tool (0.3.2)
-      dough-ruby
-      nokogiri
-      rails (~> 4.1)
-      rest-client
-      roo
-      sass-rails (~> 4.0.3)
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -116,6 +103,13 @@ GEM
       capybara (>= 1.0, < 3)
       colorize
       launchy
+    car_cost_tool (0.4.0.77)
+      dough-ruby
+      nokogiri
+      rails (~> 4.1)
+      rest-client
+      roo
+      sass-rails (~> 4.0.3)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chai-jquery-rails (1.2.1)
@@ -504,7 +498,7 @@ DEPENDENCIES
   bowndler (~> 1.0)
   budget_planner (~> 4.0)
   byebug
-  car_cost_tool!
+  car_cost_tool (~> 0.4.0)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

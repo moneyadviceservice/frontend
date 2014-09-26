@@ -37,7 +37,7 @@ gem 'validates_timeliness'
 
 gem 'budget_planner', '~> 4.0'
 gem 'pensions_calculator', '~> 0.2'
-gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'move_to_responsive_site'
+gem 'car_cost_tool', '~> 0.4.0'
 
 group :assets do
   gem 'autoprefixer-rails'

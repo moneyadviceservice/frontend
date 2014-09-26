@@ -1,37 +1,25 @@
+// Next steps component found on campaign pages. The entire block is a clickable "call to action" link
+//
+// Styleguide Next step
+
 .next-step {
-  border-left: $baseline-unit*2 solid #b64600;
-  background-color: #f27426;
-  padding: $baseline-unit*2;
-  margin-top: $baseline-unit*4;
-  margin-bottom: $baseline-unit*4;
+  margin-top: $baseline-unit*5;
+  margin-bottom: $baseline-unit*5;
 
   & a:hover,
   & a:focus {
-    color: white;
+    color: $color-text-default;
   }
-}
-
-.next-step--blue {
-  background-color: $color-blue-bright;
-  border-color: #085a7e;
-}
-
-.next-step--red {
-  background-color: $color-red-bright;
-  border-color: #b32b29;
 }
 
 .next-step__heading {
-  color: $color-white;
+  @include body(20, 24);
+  color: $color-link-default;
   margin-top: 0;
+  margin-bottom: $baseline-unit;
 }
 
 .next-step__content {
-  @extend %font-heading-medium;
-  @include body(16,24);
-  color: $color-white;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  color: $color-text-default;
+  margin: 0;
 }

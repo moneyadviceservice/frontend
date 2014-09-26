@@ -8,8 +8,11 @@ define(['jquery', 'common'], function($, MAS) {
     triggerEl: '.collapsible',
     targetEl: '.collapsible-section',
     targetType: 'class', // class / href / data-attr
+    targetItems: '.item',
+    viewAllButton: '.view-all',
     activeClass: 'is-on',
     inactiveClass: 'is-off',
+    numberItemsToDisplay: 6,
     closeOffFocus: false,
     parentWrapper: false,
     accordion: false,
@@ -31,27 +34,6 @@ define(['jquery', 'common'], function($, MAS) {
     // Callbacks
     onSelect: false,
     onFocusout: false
-  };
-
-  var _isHidden = function(target, opts) {
-    if (target.hasClass(opts.inactiveClass)) return true;
-    if (target.hasClass(opts.activeClass)) return false;
-    return target.is(':hidden');
-  };
-
-  var _getTarget = function($el, opts) {
-    switch (opts.targetType) {
-      case 'class':
-        var $immediateSibling = $el.next(opts.targetEl),
-            targetIsImmediateSibling = !!$immediateSibling.length;
-        return (targetIsImmediateSibling) ? $immediateSibling : $el.siblings(opts.targetEl);
-      case 'href':
-        var href = $el.attr('href'),
-            $t = $(href);
-        return ($t.length) ? $t : false;
-      default:
-        return false;
-    }
   };
 
   var Collapsible = function(opts) {
@@ -82,6 +64,35 @@ define(['jquery', 'common'], function($, MAS) {
 
       this.$parent.on('focusout', $.proxy(_this._delayDomCheck, _this));
     }
+  };
+
+  var _isHidden = function(target, opts) {
+    if (target.hasClass(opts.inactiveClass)) return true;
+    if (target.hasClass(opts.activeClass)) return false;
+    return target.is(':hidden');
+  };
+
+  var _getTarget = function($el, opts) {
+    switch (opts.targetType) {
+      case 'class':
+        var $immediateSibling = $el.next(opts.targetEl),
+            targetIsImmediateSibling = !!$immediateSibling.length;
+        return (targetIsImmediateSibling) ? $immediateSibling : $el.siblings(opts.targetEl);
+      case 'href':
+        var href = $el.attr('href'),
+            $t = $(href);
+        return ($t.length) ? $t : false;
+      default:
+        return false;
+    }
+  };
+
+  var _getItems = function($el, opt) {
+    return $el.find(opt.targetItems);
+  };
+
+  var _getViewAll = function($el, opt) {
+    return $el.find(opt.viewAllButton);
   };
 
   Collapsible.prototype._delayDomCheck = function() {
@@ -144,12 +155,16 @@ define(['jquery', 'common'], function($, MAS) {
   Collapsible.prototype._setupEach = function(i, el) {
     var $el = $(el),
         _this = this,
-        _target = _getTarget($el, _this.o);
+        _target = _getTarget($el, _this.o),
+        _items = _getItems(_target, _this.o),
+        _viewAll = _getViewAll(_target, _this.o);
 
     this.sections[i] = {
       index: i,
+      items:  _items,
       trigger: $el,
       target: _target,
+      viewAll: _viewAll,
       hidden: _isHidden(_target, _this.o)
     };
 
@@ -178,6 +193,16 @@ define(['jquery', 'common'], function($, MAS) {
       // Check for callbacks
       if (typeof _this.o.onSelect === 'function') _this.o.onSelect(_this.sections[i]);
       _this.setVisibility(_this.sections[i].hidden, i);
+
+      if (_this.sections[i].items.length <= _this.o.numberItemsToDisplay) {
+        hideElement(_this.sections[i].viewAll, _this);
+      }
+    });
+
+    this.sections[i].viewAll.on('click', i, function(e) {
+      e.preventDefault();
+      showElement(_this.sections[i].items, _this);
+      hideElement(_this.sections[i].viewAll, _this);
     });
 
     // Accessibility support for spacebar
@@ -215,18 +240,33 @@ define(['jquery', 'common'], function($, MAS) {
       action: 'show'
     });
 
-    var item = this.sections[i];
-    item.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    item.target.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
-    item.target.attr('aria-hidden', 'false');
-    item.hidden = false;
-    if (this.o.showText) item.txt.text(this.o.textString.hideThisSection + ' ');
+    var section = this.sections[i];
+    var itemsToDisplay = section.items.slice(0, this.o.numberItemsToDisplay);
+
+    section.trigger.removeClass(this.o.inactiveClass).addClass(this.o.activeClass);
+
+    showElement(section.target, this);
+    showElement(itemsToDisplay, this);
+    showElement(section.viewAll, this);
+
+    section.hidden = false;
+    if (this.o.showText) section.txt.text(this.o.textString.hideThisSection + ' ');
     if (this.o.accordion && (this.selected !== false && this.selected !== i)) {
       this.hide(this.selected, false);
     }
     this.selected = i;
     return this;
   };
+
+  function hideElement(element, conf) {
+    element.removeClass(conf.o.activeClass).addClass(conf.o.inactiveClass);
+    element.attr('aria-hidden', 'true');
+  }
+
+  function showElement(element, conf) {
+    element.removeClass(conf.o.inactiveClass).addClass(conf.o.activeClass);
+    element.attr('aria-hidden', 'false');
+  }
 
   Collapsible.prototype.hide = function(i, userInitiated) {
     publishEvent(userInitiated, {
@@ -235,12 +275,20 @@ define(['jquery', 'common'], function($, MAS) {
       action: 'hide'
     });
 
-    var item = this.sections[i];
-    item.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    item.target.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
-    item.target.attr('aria-hidden', 'true');
-    item.hidden = true;
-    if (this.o.showText) item.txt.text(this.o.textString.showThisSection + ' ');
+    var section = this.sections[i];
+    var items = section.items;
+    section.trigger.removeClass(this.o.activeClass).addClass(this.o.inactiveClass);
+
+    hideElement(section.target, this);
+    hideElement(section.viewAll, this);
+    hideElement(items, this);
+
+    section.hidden = true;
+
+    if (this.o.showText) {
+      section.txt.text(this.o.textString.showThisSection + ' ');
+    }
+
     return this;
   };
 

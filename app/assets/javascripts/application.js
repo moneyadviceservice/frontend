@@ -68,7 +68,10 @@ require(['common', 'jquery'], function(MAS, $) {
         showIcon: true,
         useButton: true,
         triggerEl: '.category-detail__heading',
-        targetEl: '.category-detail__list-container'
+        targetEl: '.category-detail__list-container',
+        targetItems: '.category-detail__list-item',
+        viewAllButton: '.js-category-detail__view-all',
+        numberItemsToDisplay: 6
       });
 
 
@@ -93,6 +96,13 @@ require(['common', 'jquery'], function(MAS, $) {
         $('.cookie-message').hide();
         $('.footer-site-links__cookie-link').removeClass('is-on');
       });
+    });
+  });
+
+  require(['googleComplete'], function(googleComplete) {
+    $(document).ready(function() {
+      new googleComplete({input: $('#search'), form: $('form.search')});
+      $('[data-dough-component="ClearInput"]').find('.tt-hint').removeAttr('data-dough-clear-input');
     });
   });
 

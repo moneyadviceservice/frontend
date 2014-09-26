@@ -1,11 +1,7 @@
 RSpec.shared_examples_for 'optional failure block' do
   context 'when a block is given' do
-    let(:probe) { lambda {} }
-
     it 'calls the block' do
-      expect(probe).to receive(:call)
-
-      subject.call(&probe)
+      expect { |probe| subject.call(&probe) }.to yield_control
     end
   end
 

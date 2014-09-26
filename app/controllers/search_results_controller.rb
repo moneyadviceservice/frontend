@@ -2,14 +2,14 @@ class SearchResultsController < ApplicationController
   decorates_assigned :search_results, with: SearchResultCollectionDecorator
 
   def index
-    if params[:query].present?
-      @search_results = PerformCorrectiveSearch.new(params[:query], params[:page]).call
+    return if params[:query].blank?
 
-      if @search_results.any?
-        render 'search_results/index_with_results'
-      else
-        render 'search_results/index_no_results'
-      end
+    @search_results = PerformCorrectiveSearch.new(params[:query], params[:page]).call
+
+    if @search_results.any?
+      render 'search_results/index_with_results'
+    else
+      render 'search_results/index_no_results'
     end
   end
 

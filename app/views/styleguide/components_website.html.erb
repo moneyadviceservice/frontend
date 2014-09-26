@@ -41,7 +41,7 @@
 <!-- Organisms -->
 
 <%= styleguide_section sections['Trust banner'] do %>
-  <%= render 'shared/trust_banner' %>
+  <%= render 'shared/trust_banner', items: t('home.show.trust_banner_list') %>
 <% end %>
 
 <%= styleguide_section sections['Directory'] do %>
@@ -50,7 +50,7 @@
 <% end %>
 
 <%= styleguide_section sections['Promo'] do %>
-  <%= render 'shared/promos', items: t('home.show.promoted') %>
+  <%= render 'shared/article_promos', items: t('home.show.promoted') %>
 <% end %>
 
 <%= styleguide_section sections['Main navigation'] do %>

@@ -138,21 +138,48 @@ cy:
 
   home:
     show:
-      title: Am ddim a diduedd a sefydlwyd gan y llywodraeth
-      heading: Am ddim a diduedd a sefydlwyd gan y llywodraeth
-      strapline: Am ddim a diduedd a sefydlwyd gan y llywodraeth
+      title: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      heading: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      strapline: Am ddim & diduedd cyngor ariannol sefydlwyd gan y llywodraeth
+      trust_banner_list:
+        - text: Cyngor a chanllawiau i roi cymorth i chi wella’ch materion ariannol
+        - text: Offer a chyfrifianellau i roi cymorth i chi gadw ar y trywydd iawn a chynllunio ymlaen
+        - text: Cefnogaeth bersonol, dros y ffôn ac ar-lein
+      directory_heading: Dewiswch ran i gychwyn arni...
       description: >
         Mae'r Gwasanaeth Cynghori Ariannol yn eich helpu i reoli eich arian yn well. Defnyddiwch
         ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
+      tools_heading: Offer a chyfrifianellau poblogaidd
+      tools:
+        - url: /cy/tools/cynllunydd-cyllideb
+          src: budget-planner.png
+          heading: Cynllunydd cyllideb
+          text: Lluniwch eich cyllideb heddiw
+        - url: /cy/tools/gwiriad-iechyd
+          src: budget-planner.png
+          heading: Gwiriad iechyd ariannol
+          text: Rhowch eich sefyllfa ariannol ar brawf
+          src: budget-planner.png
+        - url: /cy/tools/cyfrifiannell-pensiwn
+          src: budget-planner.png
+          heading: Cyfrifiannell pensiwn
+          text: Dechreuwch gynllunio ar gyfer eich ymddeoliad
+        - url: /cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais
+          src: budget-planner.png
+          heading: Cyfrifiannell fforddiadwyedd morgais
+          text: Cyfrifwch eich ystod pris
+      view_all_link_html: |
+        Gweld pob&hellip;
+      promoted_heading: Beth sy'n newydd
       promoted:
         - url: /cy/categories/tools-and-calculators
           text: Offer a chyfrifianellau
           image: tools-calculators.jpg
           content: Rhowch gynnig ar ein cyfrifianellau, offer ac adnoddau i’ch helpu i reoli eich arian.
-        - url: /cy/campaigns/edrychwch-cost-gwirioneddol-prynu-car
-          text: Cost prynu car ail-law
-          image: buying-a-car.jpg
-          content: Ydych chi’n bwriadu prynu car? Cymrwch olwg ar ein canllawiau a chyfrifiannell newydd i gael syniad o faint fydd wir yn ei gostio i’w redeg.
+        - url: /cy/campaigns/edifeirwch-ariannol-pobl-ifanc
+          text: Edifeirwch ariannol pobl ifanc
+          image: money-regrets_responsive.jpg
+          content: "Gall camgymeriadau ariannol nawr gostio i chi yn y dyfodol. Darllenwch ein hadroddiad ar faglau ariannol cyffredinol a sut i'w hosgoi."
         - url: /cy/benthyciadau-diwrnod-cyflog
           text: Benthyciadau diwrnod cyflog - peidiwch â chael eich temtio gan arian parod cyflym
           image: payday-loans.jpg
@@ -183,7 +210,7 @@ cy:
       %209am-1pm%20%0ADydd%20Sul%20a%20Gwyliau%20Banc%3A%20ar%20gau
 
   footer_secondary:
-    title: Adborth ar hygyrchedd
+    title: Adrodd ar broblem hygyrchedd
     link_title: Defnyddiwch y botwm hwn i ddweud wrthym os oes gennych chi unrhyw faterion hygyrchedd i'w hadrodd am y wefan
     hidden_accessibility: Ffurflen adborth yn agor mewn ffenestr newydd
 
@@ -230,6 +257,10 @@ cy:
       related_categories:
         title: Mae'r erthygl hon yn ymddangos mewn
 
+  categories:
+    show:
+      view_all: Gweld yr holl ...
+
   article_feedbacks:
     new:
       title: Rhowch eich adborth i ni
@@ -247,6 +278,7 @@ cy:
     label: Chwiliwch drwy'r Gwasanaeth Cynghori Ariannol
     placeholder: Chwilio
     button_text: Chwilio
+    clear_hidden_text: clirio'r maes chwilio
 
   search_results:
     spelling_suggestion_html: <p class='t-spelling-suggestion'>Yn dangos canlyniadau ar gyfer %{query}. Oeddech chi'n meddwl %{link}?</p>
@@ -327,11 +359,15 @@ cy:
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
       forgot_password: "Wedi anghofio cyfrinair?"
 
-  technical_feedbacks:
+  technical_feedback:
     new:
-      title: Rhowch eich adborth i ni
+      title: Adrodd ar anhawster technegol
+      instructions_html: |
+        Defnyddiwch y ffurflen hon i ddweud wrthym a gafwyd anhawster technegol gyda’r dudalen hon ar y we wrth i chi ei darllen. Ar gyfer pob ymholiad arall gweler ein <a href="/cy/static/cysylltu-a-ni">tudalen gyswllt</a>.
       mandatory_warning: Mae pob maes yn angenrheidiol
-      submit_button: Cyflwyno adborth
+      input_one_example_text: e.e. Roeddwn yn ceisio clicio ar ddolen
+      input_two_example_text: e.e. nid oedd y ddolen yn gweithio
+      submit_button: Cyflwyno
       trying_to_do_html: Beth oeddech chi'n geisio'i wneud? <span class="visually-hidden">angen</span>
       what_went_wrong_html: Beth aeth o'i le? <span class="visually-hidden">angen</span>
     create:
@@ -352,3 +388,6 @@ cy:
     article_feedback_link_text: Y wybodaeth ar y dudalen hon
     technical_feedback_link_text: Roedd gennyf fater technegol
     advice_link_text: Mae arnaf angen cymorth ariannol
+
+  inline_feedback:
+    technical_feedback_link: Adrodd ar anhawster technegol gyda’r dudalen hon

@@ -7,20 +7,22 @@
     <main class="l-main__cell-single" role="main">
       <h1><%= t('.title') %></h1>
 
-      <p><%= t('.mandatory_warning') %></p>
+      <p><%= t('.instructions_html') %></p>
+
+      <p class="feedback__warning"><%= t('.mandatory_warning') %></p>
 
       <%= form_for new_feedback, as: :feedback, url: feedback_path, builder: Dough::Forms::Builders::Validation do |f| %>
         <%= f.validation_summary %>
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:attempting) %>">
           <%= f.errors_for :attempting %>
           <label for="email" class="form__label-heading"><%= t('.trying_to_do_html') %></label>
-          <%= f.text_area :attempting, :cols => 60, :rows => 6, 'aria-required' => true, :class => 't-technical-feedback__attempting' %>
+          <%= f.text_area :attempting, :cols => 60, :rows => 6, 'aria-required' => true, :class => 'feedback__input t-technical-feedback__attempting', :placeholder => t('.input_one_example_text') %>
         </div>
 
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:occurred) %>">
           <%= f.errors_for :occurred %>
           <label for="email" class="form__label-heading"><%= t('.what_went_wrong_html') %></label>
-          <%= f.text_area :occurred, :cols => 60, :rows => 6, 'aria-required' => true, :class => 't-technical-feedback__occurred' %>
+          <%= f.text_area :occurred, :cols => 60, :rows => 6, 'aria-required' => true, :class => 'feedback__input t-technical-feedback__occurred', :placeholder => t('.input_two_example_text') %>
         </div>
 
         <input class="button button--primary t-technical-feedback__submit" type="submit" value="<%= t('.submit_button') %>">

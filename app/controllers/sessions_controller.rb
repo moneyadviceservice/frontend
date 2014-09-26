@@ -1,5 +1,6 @@
 class SessionsController < Devise::SessionsController
   skip_before_action :store_location
+  before_action :xhr_not_implemented, only: [:new]
 
   def new
     # This method is mostly copied devise code
@@ -11,6 +12,10 @@ class SessionsController < Devise::SessionsController
   end
 
   private
+
+  def xhr_not_implemented
+    head :not_implemented if request.xhr?
+  end
 
   def after_sign_in_path_for(resource)
     last_known_path_or_root_path

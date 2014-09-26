@@ -15,7 +15,9 @@
   </div>
 
   <div class="l-constrained">
-    <%= yield :engine_content %>
+    <div class="l-container-tool">
+      <%= yield :engine_content %>
+    </div>
   </div>
 
   <% if display_category_directory? %>

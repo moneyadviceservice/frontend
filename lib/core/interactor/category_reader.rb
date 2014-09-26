@@ -7,7 +7,7 @@ module Core
       self.id = id
     end
 
-    def call(&block)
+    def call
       data     = Registry::Repository[:category].find(id)
       category = Category.new(id, data)
 
@@ -15,8 +15,8 @@ module Core
         category.tap do |cat|
           cat.contents = build_contents(cat.contents)
         end
-      else
-        block.call if block_given?
+      elsif block_given?
+        yield
       end
     end
 

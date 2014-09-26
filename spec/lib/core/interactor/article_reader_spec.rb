@@ -19,27 +19,6 @@ module Core
         it_has_behavior 'optional failure block'
       end
 
-      context 'when the repository returns some data' do
-        let(:title) { 'The Article' }
-        let(:data) { { title: title } }
-
-        context 'when a block is given' do
-          let(:probe) { lambda {} }
-
-          it 'calls the block' do
-            expect(probe).to receive(:call)
-
-            subject.call(&probe)
-          end
-        end
-
-        context 'when no block is given' do
-          it 'returns nil' do
-            expect(subject.call).to be_nil
-          end
-        end
-      end
-
       context 'when the repository returns data' do
         let(:title) { 'The Article' }
         let(:description) { 'The Article has a description' }

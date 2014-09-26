@@ -26,6 +26,7 @@ Rails.application.configure do
                                    lib/MicroEvent.js
                                    modules/common.js
                                    modules/globals.js
+                                   modules/google_complete.js
                                    modules/i18n.js
                                    modules/log.js
                                    modules/mas_collapsable.js
@@ -34,6 +35,7 @@ Rails.application.configure do
                                    components/*.js
                                    styleguide.js
                                    supports.js
+                                   syndication/iframeResizer.js
                                    translations/cy.js
                                    translations/en.js
                                    dough/assets/js/lib/*.js
@@ -47,6 +49,7 @@ Rails.application.configure do
                                    eventsWithPromises/src/eventsWithPromises.js
                                    rsvp/rsvp.amd.js
                                    requirejs/require.js
+                                   typeahead.js/dist/typeahead.jquery.js
                                    modernizer-flexbox-cssclasses.js
                                    webchat.js)
 end

@@ -1,5 +1,12 @@
 <div class="l-constrained">
   <div class="trust-banner l-trust-banner">
     <p class="trust-banner__heading"><%= t('home.show.heading') %></p>
+    <%= image_tag("illustrated_people.png", alt: '', class: 'trust-banner__image') %>
+
+    <ul class="trust-banner__content">
+      <% items.each do |item| %>
+        <li><%= item[:text] %></li>
+      <% end %>
+    </ul>
   </div>
 </div>

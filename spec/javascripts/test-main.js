@@ -13,6 +13,7 @@ require.config({
     waypoints: 'vendor/assets/bower_components/jquery-waypoints/waypoints',
     ujs: 'vendor/assets/bower_components/jquery-ujs/src/rails',
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',
+    typeahead: 'vendor/assets/bower_components/typeahead.js/dist/typeahead.jquery',
 
     // Internal modules
     DoughBaseComponent: 'vendor/assets/bower_components/dough/assets/js/components/DoughBaseComponent',
@@ -26,6 +27,7 @@ require.config({
     pubsub: 'app/assets/javascripts/modules/mas_pubsub',
     scrollTracking: 'app/assets/javascripts/modules/mas_scrollTracking',
     collapsable: 'app/assets/javascripts/modules/mas_collapsable',
+    googleComplete: 'app/assets/javascripts/modules/google_complete',
 
     // Dough components
     ClearInput: 'app/assets/javascripts/components/ClearInput',
@@ -37,7 +39,8 @@ require.config({
     TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector'
   },
   shim: {
-    'ujs': ['jquery']
+    'ujs': ['jquery'],
+    'typeahead': ['jquery']
   },
   config: {
     globals: (function() {
@@ -46,7 +49,8 @@ require.config({
       MAS.bootstrap = {
         env: 'production',
         timestamp: new Date().getTime(),
-        I18nLocale: 'en'
+        I18nLocale: 'en',
+        googleApiCx: '123'
       };
 
       MAS.supports = (function(w,d){

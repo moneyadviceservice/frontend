@@ -1,0 +1,33 @@
+<div class="l-constrained">
+  <section class="l-promos">
+    <%= heading_tag(level: 2, class: 'l-promos__heading') do %>
+      <%= t('home.show.tools_heading') %>
+    <% end %>
+
+    <% items.each do |item| %>
+    <div class="l-promos__item">
+      <div class="tool-promo">
+        <%= heading_tag(level: 3, class: 'visually-hidden promo__heading') do %>
+          <%= link_to item[:url] do %>
+            <%= item[:heading] %>
+          <% end %>
+        <% end %>
+
+        <%= image_tag(item[:src], class: 'promo__img') %>
+
+        <p class="promo__content promo__content--grey">
+          <%= link_to item[:url] do %>
+            <%= item[:text] %>
+          <% end %>
+          </p>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="l-promo__view-all">
+      <%= link_to('en/src') do %>
+        <%= t('home.show.view_all_link_html') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
+      <% end %>
+    </div>
+  </section>
+</div>

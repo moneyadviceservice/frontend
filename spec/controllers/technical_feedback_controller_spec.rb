@@ -1,4 +1,4 @@
-RSpec.describe TechnicalFeedbacksController, :type => :controller do
+RSpec.describe TechnicalFeedbackController, :type => :controller do
   describe 'GET new' do
     let(:expected_path) { 'return_path' }
 
@@ -53,7 +53,7 @@ RSpec.describe TechnicalFeedbacksController, :type => :controller do
       it 'sets the flash appropriately' do
         post :create, locale: I18n.locale
 
-        expect(flash[:success]).to eq(I18n.t('technical_feedbacks.create.flash_notice'))
+        expect(flash[:success]).to eq(I18n.t('technical_feedback.create.flash_notice'))
       end
 
       it 'redirects back to the previous page' do

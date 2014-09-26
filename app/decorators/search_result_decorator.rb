@@ -11,12 +11,8 @@ class SearchResultDecorator < Draper::Decorator
     object.title.sub(Regexp.union(title_suffix_regexps), '').html_safe
   end
 
-  def description
-    if context[:query].present?
-      object.description.gsub(/(#{context[:query]})/i, "<b>\\0</b>").html_safe
-    else
-      object.description
-    end
+  def snippet
+    object.snippet.gsub(/<br\s*\/?>/, '').html_safe
   end
 
   private

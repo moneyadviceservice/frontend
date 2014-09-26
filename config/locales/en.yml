@@ -85,7 +85,7 @@ en:
         email: Email address
         password: Password
         post_code: Postcode
-        newsletter: Give me free advice
+        newsletter: Give me free, occasional advice by email
         register_button: Register
 
   contact:
@@ -136,21 +136,48 @@ en:
 
   home:
     show:
-      title: Free, impartial & set up by government
-      heading: Free, impartial & set up by government
-      strapline: Free, impartial & set up by government
+      title: Free & impartial money advice, set up by government
+      heading: Free & impartial money advice, set up by government
+      strapline: Free & impartial money advice, set up by government
+      trust_banner_list:
+        - text: Advice and guides to help improve your finances
+        - text: Tools and calculators to help you keep track and plan ahead
+        - text: Support in person, over the phone and online
+      directory_heading: Choose a section to get started...
       description: >
         The Money Advice Service helps you manage your money better. Use our Health Check tool,
         calculators and comparison tables to make the most of your finances.
+      tools_heading: Popular tools and calculators
+      tools:
+        - url: /en/tools/budget-planner
+          src: budget-planner.png
+          heading: Budget planner
+          text: Create your budget today
+        - url: /en/tools/health-check
+          src: budget-planner.png
+          heading: Money health check
+          text: Put your money to the test
+        - url: /en/tools/pension-calculator
+          src: budget-planner.png
+          heading: Pension calculator
+          text: Start planning your retirement
+        - url: /en/tools/house-buying/mortgage-affordability-calculator
+          src: budget-planner.png
+          heading: Mortgage affordability calculator
+          text: Work out your price range
+      view_all_link_html: |
+        View all&hellip;
+      view_all_link_expanded: of our popular tools and calculators
+      promoted_heading: What's new
       promoted:
         - url: /en/categories/tools-and-calculators
           text: Tools and calculators
           image: tools-calculators.jpg
           content: Try our useful calculators, tools and resources to help you manage your money.
-        - url: /en/campaigns/revealed-the-true-cost-of-buying-a-car
-          text: The cost of buying a used car
-          image: buying-a-car.jpg
-          content: Planning to buy a car? Check out our new guides and calculator to get an idea of how much it really costs to run.
+        - url: /en/campaigns/young-peoples-money-regrets
+          text: "Young people's money regrets"
+          image: money-regrets_responsive.jpg
+          content: Money mistakes now can cost you in the future. Read our report on common money traps and how to avoid them.
         - url: /en/payday-loans
           text: Payday loans - don’t be tempted by fast cash
           image: payday-loans.jpg
@@ -182,7 +209,7 @@ en:
       %20Holidays%3A%20closed
 
   footer_secondary:
-    title: Accessibility feedback
+    title: Report an accessibility problem
     link_title: Please use this button to tell us if you have an accessibility issue on our website
     hidden_accessibility: Feedback form opens in a new window
 
@@ -229,6 +256,10 @@ en:
       related_categories:
         title: This article appears in
 
+  categories:
+    show:
+      view_all: View all ...
+
   article_feedbacks:
     new:
       title: Give us your feedback
@@ -246,6 +277,7 @@ en:
     label: Search the Money Advice Service
     placeholder: Search
     button_text: Search
+    clear_hidden_text: clear the search field
 
   search_results:
     spelling_suggestion_html: <p class='t-spelling-suggestion'>Showing results for %{query}. Did you mean %{link}?</p>
@@ -326,11 +358,15 @@ en:
         password: "Enter your password used on registration"
       forgot_password: "Forgot your password?"
 
-  technical_feedbacks:
+  technical_feedback:
     new:
-      title: Give us your feedback
+      title: Report a technical issue
+      instructions_html: |
+        Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/en/static/contact-us">contact us</a> page.
       mandatory_warning: All fields are required
-      submit_button: Submit feedback
+      input_one_example_text: e.g. I was trying to click a link
+      input_two_example_text: e.g. the link was broken
+      submit_button: Submit
       trying_to_do_html: What were you trying to do? <span class="visually-hidden">required</span>
       what_went_wrong_html: What went wrong? <span class="visually-hidden">required</span>
     create:
@@ -347,3 +383,13 @@ en:
     article_feedback_link_text: The information on this page
     technical_feedback_link_text: I had a technical issue
     advice_link_text: I need money advice
+
+  inline_feedback:
+    technical_feedback_link: Report a technical issue with this page
+
+  callback_requester:
+    title: Need more help?
+    button: Request a callback
+    when_someone_dies_message: "When dealing with money issues after a death it can be tough to know where to start. Our expert advisers can help you take control."
+    divorce_and_separation_message: "Dealing with money issues after a divorce or separation can be stressful. Our expert advisers can help you make sense of the situation."
+    redundancy_message: "When dealing with money issues after redundancy it can be tough to know where you stand. Our expert advisers can help you take control."

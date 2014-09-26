@@ -19,22 +19,17 @@ module Core::Repository
           data['htmlTitle']
         end
 
-        def description
-          metatags.map { |m| m['og:description'] }.compact.first || ''
-        end
-
         def link
           data['link']
         end
 
         def snippet
-          data['snippet']
+          data['htmlSnippet']
         end
 
         def mapped_item_response
           {
             id:          id,
-            description: description,
             title:       title,
             link:        link,
             snippet:     snippet
@@ -43,18 +38,9 @@ module Core::Repository
 
         private
 
-        def pagemap
-          data['pagemap'] || {}
-        end
-
-        def metatags
-          pagemap['metatags'] || []
-        end
-
         def link_tokens
           data['link'].split('/')
         end
-
       end
     end
   end

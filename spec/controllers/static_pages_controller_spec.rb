@@ -57,5 +57,25 @@ RSpec.describe StaticPagesController, :type => :controller do
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end
     end
+
+    context 'when an auth related page' do
+      context 'when privacy policy' do
+        it 'does not store location' do
+          VCR.use_cassette :privacy do
+            get :show, id: 'privacy', locale: I18n.locale
+          end
+          expect(session['user_return_to']).to be_nil
+        end
+      end
+
+      context 'when terms and conditions' do
+        it 'does not store location' do
+          VCR.use_cassette :terms do
+            get :show, id: 'terms-and-conditions', locale: I18n.locale
+          end
+          expect(session['user_return_to']).to be_nil
+        end
+      end
+    end
   end
 end

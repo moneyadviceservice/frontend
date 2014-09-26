@@ -1,3 +1,15 @@
+#
+# This migration defines the basic set of tables needed to run the frontend and
+# is a subset of those already introduced by the old public_website.
+#
+# To prevent collisions when these migrations are run against an existing
+# database initialised from the public_website, the timestamp has been chosen
+# to match that of the last migration from public_website already applied to
+# the live database, which at the time this was created was:
+#
+#   20140515170453_make_users_lockable.rb
+#
+
 class CreateInitialTables < ActiveRecord::Migration
   def change
     create_table "csr_users" do |t|

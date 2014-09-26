@@ -7,7 +7,7 @@
   width:100%;
 
   @include respond-to($mq-m) {
-    padding-bottom: $baseline-unit*2;
+    padding-bottom: $baseline-unit*6;
   }
 
   .flexbox & {
@@ -19,34 +19,27 @@
       flex-wrap: wrap;
     }
   }
-
 }
 
 .directory__item {
   @include column(12);
   border-bottom: 1px solid $color-white;
+  padding: $baseline-unit*3 0 $baseline-unit*2 0;
 
   @include respond-to($mq-m) {
     @include column(6);
-    min-height: 133px;
+    min-height: 145px;
     border-bottom: 0;
   }
 
   @include respond-to($mq-l) {
     @include column(4);
-    min-height: 180px;
-    margin-bottom: $baseline-unit*4;
-  }
-
-  @include respond-to($mq-xl) {
-    min-height: 128px;
   }
 }
 
 .flexbox .directory__item {
   margin-right: $default-gutter;
   margin-left: $default-gutter;
-  padding: $baseline-unit*3 0 $baseline-unit*2 0;
   margin-bottom: 0;
   min-height: 0;
 
@@ -75,6 +68,7 @@
 
 .directory__description {
   @include body(16, 24);
+  margin-bottom: 0;
   display: none;
 
   @include respond-to($mq-m) {

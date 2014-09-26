@@ -16,9 +16,10 @@
 }
 
 .l-campaign__tagline {
-  @extend %font-heading-medium;
+  @extend %font-heading-heavy;
   @include body(20, 24);
-  margin-top: 0;
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*4;
 }
 
 .l-campaign__content {
@@ -30,8 +31,7 @@
   }
 
   p {
-    @include body(18, 26);
-    margin-top: 0;
+    @include body(18, 28);
   }
 }
 
@@ -42,13 +42,12 @@
     @include column(4);
     @include push(1);
     margin-top: $baseline-unit*16;
-    margin-bottom: $baseline-unit*10;
   }
 }
 
 .l-campaign__next-steps-heading {
   color: $color-heading-extra-small;
-  @include body(18, 24);
+  @include body(16, 24);
   margin-top: 0;
 }
 

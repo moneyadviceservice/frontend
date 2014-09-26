@@ -3,7 +3,6 @@
 // Styleguide Next step
 
 .next-step {
-  margin-top: $baseline-unit*5;
   margin-bottom: $baseline-unit*5;
 
   & a:hover,
@@ -13,6 +12,7 @@
 }
 
 .next-step__heading {
+  @extend %font-heading-medium;
   @include body(20, 24);
   color: $color-link-default;
   margin-top: 0;

@@ -30,7 +30,8 @@ a[href^="/"]:after,
 a[href^="#"]:after,
 a[href^="tel"]:after,
 a[href^="mailto:"]:after,
-a[href*="/maps/"]:after {
+a[href*="/maps/"]:after,
+a[href^="https://www.accessin.org"]:after {
   display: none;
 }
 

@@ -8,7 +8,7 @@ module UI::Pages
 
     section :trust_banner, UI::Sections::TrustBanner, '.trust-banner'
 
-    sections :promos, UI::Sections::Promo, '.promo'
+    sections :promos, UI::Sections::Promo, '.t-article-promos'
 
     element :feature_list, '.home-feature__list'
     elements :promoted_items, '.home-promoted__item'

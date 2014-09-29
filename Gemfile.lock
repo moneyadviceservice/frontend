@@ -67,6 +67,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     aes (0.5.0)
+    angularjs-rails (1.2.26)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (3.1.0.20140911)
       execjs
@@ -300,6 +301,8 @@ GEM
     mas-feedback (1.0.1.41)
       rails (>= 3.2.13)
       sass-rails
+    mas-fonts (0.0.2.5)
+      rails
     mas-mailer (0.3.2.10)
       delayed_job_active_record
       hashie
@@ -318,6 +321,16 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     modernizr-rails (2.6.3)
+    mortgage_calculator (1.0.0.570)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 3.0)
+      jquery-rails
+      mas-feedback
+      mas-fonts
+      modernizr-rails
+      rails (~> 4.1)
+      sass-rails (~> 4.0.3)
+      underscore-rails
     multi_json (1.10.1)
     multi_test (0.1.1)
     multipart-post (1.2.0)
@@ -478,6 +491,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.7.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.6)
@@ -552,6 +566,7 @@ DEPENDENCIES
   mailjet
   mas-development_dependencies!
   meta-tags
+  mortgage_calculator (~> 1.0.0)
   mysql2
   nokogiri
   nunes

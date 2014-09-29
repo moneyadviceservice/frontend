@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   end
 
   get '/' => redirect('/en')
-  resource :beta_opt_out, only: [:create], path: 'opt-out'
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'

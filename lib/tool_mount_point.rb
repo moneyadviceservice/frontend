@@ -2,6 +2,7 @@ require_relative '../lib/tool_mount_point/base'
 require_relative '../lib/tool_mount_point/pensions_calculator'
 require_relative '../lib/tool_mount_point/budget_planner'
 require_relative '../lib/tool_mount_point/car_cost_tool'
+require_relative '../lib/tool_mount_point/debt_free_day_calculator'
 require_relative '../lib/tool_mount_point/mortgage_calculator'
 
 module ToolMountPoint

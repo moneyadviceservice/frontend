@@ -115,6 +115,32 @@ ActiveRecord::Schema.define(version: 20140515170453) do
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "debt_free_day_calculator_calculations", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+    t.string   "uuid"
+  end
+
+  add_index "debt_free_day_calculator_calculations", ["type"], name: "dfdc_calculations_type", using: :btree
+  add_index "debt_free_day_calculator_calculations", ["uuid"], name: "dfdc_calculations_uuid", using: :btree
+
+  create_table "debt_free_day_calculator_debts", force: true do |t|
+    t.string   "title",                                   default: ""
+    t.decimal  "balance",        precision: 10, scale: 2
+    t.decimal  "apr",            precision: 6,  scale: 2
+    t.decimal  "repayment",      precision: 10, scale: 2
+    t.decimal  "months",         precision: 10, scale: 2
+    t.integer  "calculation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+    t.decimal  "cost",           precision: 10, scale: 2
+    t.decimal  "interest",       precision: 10, scale: 2
+  end
+
+  add_index "debt_free_day_calculator_debts", ["type"], name: "dfdc_debts_type", using: :btree
+
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
     t.text     "data"

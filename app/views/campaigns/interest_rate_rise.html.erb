@@ -1,44 +1,46 @@
-<%= image_tag('campaign/interest-rate-rise-campaign-bg.jpg', alt: '', class: 'l-campaign-image') %>
+<% if Feature.active?(:interest_rate_campaign) %>
+  <%= image_tag('campaign/interest-rate-rise-campaign-bg.jpg', alt: '', class: 'l-campaign-image') %>
 
-<div class="l-constrained">
-  <article>
-    <div class="l-campaign__content">
-      <%= heading_tag t('interest-rate-rise.section.heading'), class: 'l-campaign__heading', level: 2 %>
-      <p class="l-campaign__tagline"><%= t('interest-rate-rise.section.tagline') %></p>
+  <div class="l-constrained">
+    <article>
+      <div class="l-campaign__content">
+        <%= heading_tag t('interest-rate-rise.section.heading'), class: 'l-campaign__heading', level: 2 %>
+        <p class="l-campaign__tagline"><%= t('interest-rate-rise.section.tagline') %></p>
 
-      <% t('interest-rate-rise.section.content').each do |item| %>
-        <p><%= item[:text] %></p>
-      <% end %>
-    </div>
-
-    <section class="l-campaign__next-steps">
-      <%= heading_tag t('interest-rate-rise.section.next_steps_heading'), class: 'l-campaign__next-steps-heading', level: 2 %>
-
-      <% t('interest-rate-rise.section.next_steps').each do |item| %>
-      <div class="next-step">
-        <%= link_to item[:url] do %>
-        <%= heading_tag(item[:heading], level: heading_level ||= 2, class: 'next-step__heading') %>
-        <p class="next-step__content"><%= item[:text] %></p>
+        <% t('interest-rate-rise.section.content').each do |item| %>
+          <p><%= item[:text] %></p>
         <% end %>
       </div>
+
+      <section class="l-campaign__next-steps">
+        <%= heading_tag t('interest-rate-rise.section.next_steps_heading'), class: 'l-campaign__next-steps-heading', level: 2 %>
+
+        <% t('interest-rate-rise.section.next_steps').each do |item| %>
+        <div class="next-step">
+          <%= link_to item[:url] do %>
+          <%= heading_tag(item[:heading], level: heading_level ||= 2, class: 'next-step__heading') %>
+          <p class="next-step__content"><%= item[:text] %></p>
+          <% end %>
+        </div>
+        <% end %>
+      </section>
+    </article>
+  </div>
+
+  <div class="mas-strapline">
+    <div class="l-constrained">
+      <p class="mas-strapline__content"><%= t('home.show.strapline') %></p>
+      <span class="logo logo--green"></span>
+    </div>
+  </div>
+
+  <div class="l-campaign-directory">
+    <div class="l-constrained">
+      <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+        <%= t('home.show.directory_heading_two') %>
       <% end %>
-    </section>
-  </article>
-</div>
 
-<div class="mas-strapline">
-  <div class="l-constrained">
-    <p class="mas-strapline__content"><%= t('home.show.strapline') %></p>
-    <span class="logo logo--green"></span>
+      <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+    </div>
   </div>
-</div>
-
-<div class="l-campaign-directory">
-  <div class="l-constrained">
-    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
-      <%= t('home.show.directory_heading_two') %>
-    <% end %>
-
-    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
-  </div>
-</div>
+<% end %>

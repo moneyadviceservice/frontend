@@ -37,14 +37,6 @@ Rails.application.routes.draw do
       end
     end
 
-    mount PensionsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:pensions_calculator)
-
-    Feature.with(:car_cost_tool) do
-      mount CarCostTool::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:car_cost_tool)
-    end
-
     Feature.with(:budget_planner) do
       bpmp = ToolMountPoint.for(:budget_planner)
       budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
@@ -52,6 +44,17 @@ Rails.application.routes.draw do
       mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
         constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
     end
+
+    Feature.with(:car_cost_tool) do
+      mount CarCostTool::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:car_cost_tool)
+    end
+
+    mount MortgageCalculator::Engine => '/tools/:tool_id',
+          constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
+
+    mount PensionsCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:pensions_calculator)
 
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
@@ -62,7 +65,7 @@ Rails.application.routes.draw do
                 resource :feedback, only: [:new, :create], controller: :article_feedbacks
                 get 'preview', on: :member, to: 'articles_preview#show'
               end
-              
+
     resources :categories, only: 'show',
               constraints:       ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'

@@ -11,7 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702134657) do
+ActiveRecord::Schema.define(version: 20140515170453) do
+
+  create_table "budget_planner_budgets", force: true do |t|
+    t.binary   "data",               null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "commited_from"
+    t.string   "last_commited_from"
+  end
+
+  add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
+
+  create_table "budget_planner_legacy_budgets", force: true do |t|
+    t.binary   "data",        null: false
+    t.string   "legacy_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "accessed_at"
+  end
+
+  add_index "budget_planner_legacy_budgets", ["legacy_id"], name: "index_budget_planner_legacy_budgets_on_legacy_id", unique: true, using: :btree
+
+  create_table "budget_planner_wip_budgets", force: true do |t|
+    t.binary   "data",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "source_budget_id"
+    t.string   "source_website"
+    t.datetime "commited_at"
+  end
+
+  add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id", using: :btree
 
   create_table "csr_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,7 +67,6 @@ ActiveRecord::Schema.define(version: 20140702134657) do
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
 
-
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -44,7 +76,6 @@ ActiveRecord::Schema.define(version: 20140702134657) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", using: :btree
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
-
 
   create_table "users", force: true do |t|
     t.string   "email",                              default: "",    null: false

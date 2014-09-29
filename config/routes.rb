@@ -80,6 +80,8 @@ Rails.application.routes.draw do
 
     resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
 
+    resource :empty, only: :show, controller: :empty
+
     resource :styleguide,
              controller:  'styleguide',
              only:        'show',

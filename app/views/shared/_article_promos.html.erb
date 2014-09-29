@@ -6,11 +6,11 @@
 
     <% items.each do |item| %>
       <div class="l-promos__item">
-        <div class="promo">
+        <div class="t-article-promos">
           <%= heading_tag(level: 2, class: 'promo__heading') do %>
-            <%= link_to item[:url] do %>
+            <%= link_to item[:url], class: 'promo__link' do %>
               <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
-              <span><%= item[:text] %></span>
+              <%= item[:text] %>
             <% end %>
           <% end %>
 

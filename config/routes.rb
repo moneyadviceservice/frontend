@@ -41,8 +41,10 @@ Rails.application.routes.draw do
     mount PensionsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pensions_calculator)
 
-    mount CarCostTool::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:car_cost_tool)
+    Feature.with(:car_cost_tool) do
+      mount CarCostTool::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:car_cost_tool)
+    end
 
     Feature.with(:budget_planner) do
       bpmp = ToolMountPoint.for(:budget_planner)

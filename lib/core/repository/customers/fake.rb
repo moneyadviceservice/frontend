@@ -15,7 +15,7 @@ module Core
 
         # return customer id
         def create(user)
-          raise('Already exists') if customers.detect{|c| c.id == user.customer_id}
+          raise('Already exists') if customers.detect{|c| c[:id] == user.customer_id}
 
           customer = user.to_customer
           hash = customer.attributes

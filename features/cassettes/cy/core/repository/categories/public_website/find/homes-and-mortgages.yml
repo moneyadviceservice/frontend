@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/homes-and-mortgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Sep 2014 14:08:21 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      X-Runtime:
+      - '0.042207'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 14:08:23 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/homes-and-mortgages.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Sep 2014 14:08:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 7a8eaf6c229c8c0c00588bf197f92217
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 30-Sep-2015 14:08:22 GMT; secure
+      - _session_id=7a8eaf6c229c8c0c00588bf197f92217; path=/; secure; HttpOnly
+      - _web_tracking=95b916a87d986dc47329a40b6fcc645c; path=/; expires=Wed, 30-Sep-2015
+        14:08:22 GMT; secure
+      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      X-Runtime:
+      - '0.046169'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"homes-and-mortgages","title":"Cartrefi a morgeisi","description":"Popeth
+        y mae angen i chi ei wybod am brynu cartref a dewis y morgais cywir","parent_id":null,"contents":[{"id":"buying-a-home","type":"category","title":"Prynu
+        cartref","description":"Cyfrifwch eich costau prynu a symud cyffredinol, cyngor
+        i brynwyr tro cyntaf, ac awgrymiadau ac offer i''ch helpu chi i gyfrifo beth
+        allwch ei fforddio."},{"id":"renting-and-letting","type":"category","title":"Rhentu
+        a gosod","description":"Cyngor i''ch helpu i gyfrifo faint o rent y gallwch
+        chi fforddio, a sut i gyllidebu a rhannu costau wrth rentu."},{"id":"types-of-mortgage","type":"category","title":"Mathau
+        o forgeisi","description":"Dysgwch am wahanol fathau o forgeisi, o ad-daliad
+        a llog yn unig i ecwiti a rennir a phrynu-i-osod."},{"id":"help-with-mortgages","type":"category","title":"Cymorth
+        gyda morgeisi","description":"Dechreuwch arno gyda''n canllaw dechreuwyr i
+        forgeisi, cael y fargen gywir, ac awgrymiadau os ydych yn profi anawsterau
+        wrth dalu."}]}'
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 14:08:23 GMT
+recorded_with: VCR 2.9.2

@@ -3,6 +3,7 @@ Feature: View the Car Cost Tool
   I want to view the Car Cost Tool
   So I can see the costs involved in running a car
 
+  @enable-car_cost_tool
   Scenario Outline: View the Car Cost Tool
     When I view the Car Cost Tool in <language>
     Then I should see the Car Cost Tool in <language>
@@ -12,6 +13,7 @@ Feature: View the Car Cost Tool
     | English  |
     | Welsh    |
 
+  @enable-car_cost_tool
   Scenario Outline: Translate the Car Cost Tool
     Given I view the Car Cost Tool in <original_language>
     When I translate the Car Cost Tool into <translated_language>

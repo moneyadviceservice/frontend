@@ -20,7 +20,7 @@
   }
 
   .authentication {
-    @include column(4);
+    @include column(5);
     display: none;
 
     @include respond-to($mq-m) {
@@ -80,7 +80,7 @@
     clear: both;
 
     @include respond-to($mq-m) {
-      @include column(4);
+      @include column(3);
       border: 0;
       background-color: transparent;
       padding: 0;
@@ -92,10 +92,6 @@
         border: 0;
         border-radius: $baseline-unit/2;
       }
-    }
-
-    @include respond-to($mq-l) {
-      @include push(0);
     }
   }
 

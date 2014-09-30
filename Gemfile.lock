@@ -110,6 +110,13 @@ GEM
       capybara (>= 1.0, < 3)
       colorize
       launchy
+    car_cost_tool (0.4.0.79)
+      dough-ruby
+      nokogiri
+      rails (~> 4.1)
+      rest-client
+      roo
+      sass-rails (~> 4.0.3)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chai-jquery-rails (1.2.1)
@@ -375,6 +382,10 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    roo (1.13.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
     rouge (1.3.3)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -404,6 +415,7 @@ GEM
     rubytree (0.9.3)
       json (~> 1.8)
       structured_warnings (~> 0.1)
+    rubyzip (1.1.6)
     safe_yaml (1.0.3)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -497,6 +509,7 @@ DEPENDENCIES
   bowndler (~> 1.0)
   budget_planner (~> 4.0)
   byebug
+  car_cost_tool (~> 0.4.0)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

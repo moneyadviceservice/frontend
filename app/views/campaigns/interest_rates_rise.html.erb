@@ -1,4 +1,3 @@
-<% if Feature.active?(:interest_rate_campaign) %>
 <%= image_tag('campaign/interest-rate-rise-campaign-bg.jpg', alt: '', class: 'l-campaign-image') %>
 
 <div class="l-constrained">
@@ -8,7 +7,7 @@
       <p class="l-campaign__tagline"><%= t('interest-rate-rise.section.tagline') %></p>
 
       <% t('interest-rate-rise.section.content').each do |item| %>
-      <p><%= item[:text] %></p>
+        <p><%= item[:text] %></p>
       <% end %>
     </div>
 
@@ -27,15 +26,19 @@
   </article>
 </div>
 
-<%= render 'shared/campaign_trust_banner' %>
+<div class="mas-strapline">
+  <div class="l-constrained">
+    <p class="mas-strapline__content"><%= t('home.show.strapline') %></p>
+    <span class="logo logo--green"></span>
+  </div>
+</div>
 
 <div class="l-campaign-directory">
   <div class="l-constrained">
     <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
-    <%= t('home.show.directory_heading_two') %>
+      <%= t('home.show.directory_heading_two') %>
     <% end %>
 
     <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
   </div>
 </div>
-<% end %>

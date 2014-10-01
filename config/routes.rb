@@ -70,7 +70,7 @@ Rails.application.routes.draw do
     resources :campaigns, only: 'show',
                               path: 'campaigns',
                               constraints: {
-                                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rate-rise}
+                                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
                               }
 
     resources :static_pages,

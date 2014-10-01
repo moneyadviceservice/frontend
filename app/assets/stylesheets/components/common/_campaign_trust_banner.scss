@@ -3,6 +3,9 @@
   background-color: $breadcrumbs-background-color;
 
   .logo {
+    position: relative;
+    top: -6px;
+
     @include respond-to($mq-xs, $mq-l) {
       background-size: 275px;
       width: 75px;
@@ -10,8 +13,6 @@
     }
 
     @include respond-to(30.625em, $mq-l) {
-      position: relative;
-      top: -$baseline-unit;
       width: 170px;
     }
   }

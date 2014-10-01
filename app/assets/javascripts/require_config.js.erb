@@ -90,4 +90,6 @@
 %>
 
 // RequireJS config
-requirejs.config(<%= JSON.pretty_generate(requirejs_config) %>);
+if(window.requirejs) {
+  requirejs.config(<%= JSON.pretty_generate(requirejs_config) %>);
+}

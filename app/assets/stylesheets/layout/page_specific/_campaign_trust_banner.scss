@@ -1,0 +1,19 @@
+.l-campaign-trust-banner {
+  @include column(12);
+  display: table;
+}
+
+.l-campaign-trust-banner__left {
+  padding-right: $baseline-unit;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.l-campaign-trust-banner__right {
+  display: table-cell;
+  vertical-align: middle;
+
+  .logo {
+    float: right;
+  }
+}

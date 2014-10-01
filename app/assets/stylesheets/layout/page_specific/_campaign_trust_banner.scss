@@ -1,0 +1,26 @@
+.l-campaign-trust-banner {
+  @include column(12);
+
+  & .l-constrained{
+    display: table;
+  }
+}
+
+.l-campaign-trust-banner__left {
+  // @include column(8);
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.l-campaign-trust-banner__right {
+  // @include column(4);
+  // float: none;
+  display: table-cell;
+  vertical-align: middle;
+
+
+  .logo {
+    float: right;
+    overflow: visible;
+  }
+}

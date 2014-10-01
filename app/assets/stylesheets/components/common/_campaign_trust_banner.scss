@@ -1,0 +1,54 @@
+.campaign-trust-banner {
+  overflow: hidden;
+  background-color: $breadcrumbs-background-color;
+
+  .logo {
+    @include respond-to($mq-xs, $mq-l) {
+      background-size: 275px;
+      width: 75px;
+      height: 30px;
+    }
+
+    @include respond-to(30.625em, $mq-l) {
+      position: relative;
+      top: -$baseline-unit;
+      width: 170px;
+    }
+  }
+
+  .logo--green {
+    @include respond-to($mq-xs, $mq-l) {
+      background-position: 0px -75px;
+    }
+
+    @include respond-to($mq-l) {
+      @include device-pixel-ratio() {
+        background-position: 0px -150px;
+      }
+    }
+  }
+}
+
+.campaign-trust-banner__content {
+  @extend %font-heading-medium;
+  @include body(14, 18);
+  color: $color-heading-extra-small;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  @include respond-to($mq-s) {
+    @include body(16, 22);
+  }
+
+  @include respond-to($mq-m) {
+    @include body(18, 24);
+  }
+
+  @include respond-to($mq-m) {
+    @include body(24, 30);
+  }
+
+  @include respond-to($mq-l) {
+    @include body(28, 34);
+  }
+}

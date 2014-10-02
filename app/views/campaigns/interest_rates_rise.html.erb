@@ -16,7 +16,7 @@
 
       <% t('interest-rate-rise.section.next_steps').each do |item| %>
       <div class="next-step">
-        <%= link_to item[:url] do %>
+        <%= link_to(item[:url], class: 'next-step__link') do %>
         <%= heading_tag(item[:heading], level: heading_level ||= 2, class: 'next-step__heading') %>
         <p class="next-step__content"><%= item[:text] %></p>
         <% end %>

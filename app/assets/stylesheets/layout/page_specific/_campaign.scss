@@ -42,6 +42,7 @@
     @include column(4);
     @include push(1);
     margin-top: $baseline-unit*16;
+    margin-bottom: $baseline-unit*10;
   }
 }
 

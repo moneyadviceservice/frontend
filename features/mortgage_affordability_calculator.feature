@@ -3,6 +3,7 @@ Feature: View the Mortgage Affordability Calculator
   I want to view the Mortgage Affordability Calculator
   So I can see how much a mortgage might cost me per month
 
+  @enable-mortgage_calculator
   Scenario Outline: View the Mortgage Affordability Calculator
     When I view the Mortgage Affordability Calculator in <language>
     Then I should see the Mortgage Affordability Calculator in <language>
@@ -12,6 +13,7 @@ Feature: View the Mortgage Affordability Calculator
     | English  |
     | Welsh    |
 
+  @enable-mortgage_calculator
   Scenario Outline: Translate the Mortgage Affordability Calculator
     Given I view the Mortgage Affordability Calculator in <original_language>
     When I translate the Mortgage Affordability Calculator into <translated_language>

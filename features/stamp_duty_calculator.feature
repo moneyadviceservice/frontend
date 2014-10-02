@@ -3,6 +3,7 @@ Feature: View the Stamp Duty Calculator
   I want to view the Stamp Duty Calculator
   So I can see how much a mortgage might cost me per month
 
+  @enable-mortgage_calculator
   Scenario Outline: View the Stamp Duty Calculator
     When I view the Stamp Duty Calculator in <language>
     Then I should see the Stamp Duty Calculator in <language>
@@ -12,6 +13,7 @@ Feature: View the Stamp Duty Calculator
     | English  |
     | Welsh    |
 
+  @enable-mortgage_calculator
   Scenario Outline: Translate the Stamp Duty Calculator
     Given I view the Stamp Duty Calculator in <original_language>
     When I translate the Stamp Duty Calculator into <translated_language>

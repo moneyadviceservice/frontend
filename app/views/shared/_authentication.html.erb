@@ -1,10 +1,10 @@
 <ul class="authentication <% unless display_search_box_in_header? %>l-authentication<% end %>">
 
-  <li class="authentication__item l-language-link <% if defined?(hide_elements_irrelevant_for_third_parties) %> authentication__item--last<% end %>">
+  <li class="authentication__item l-language-link <% if hide_elements_irrelevant_for_third_parties? %> authentication__item--last<% end %>">
     <%= render 'shared/language_link', locals: alternate_locales %>
   </li>
 
-  <% unless defined?(hide_elements_irrelevant_for_third_parties) %>
+  <% unless hide_elements_irrelevant_for_third_parties? %>
     <% if user_signed_in? %>
       <li class="authentication__item">
         <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>

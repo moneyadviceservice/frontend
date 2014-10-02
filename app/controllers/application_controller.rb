@@ -77,4 +77,10 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :category_navigation
+
+  def hide_elements_irrelevant_for_third_parties?
+    false
+  end
+
+  helper_method :hide_elements_irrelevant_for_third_parties?
 end

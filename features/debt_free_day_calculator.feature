@@ -1,3 +1,4 @@
+@enable-debt_free_day_calculator
 Feature: View one of the Debt Free Day Calculators
   As a visitor to the website
   I want to use the Debt Free Day Calculators

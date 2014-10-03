@@ -330,6 +330,8 @@ GEM
       sass-rails
     mas-fonts (0.0.2.5)
       rails
+    mas-frontend-helpers (0.0.1.9)
+      actionpack
     mas-mailer (0.3.2.10)
       delayed_job_active_record
       hashie
@@ -472,6 +474,15 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    savings_calculator (1.0.0.127)
+      autoprefixer-rails
+      dough-ruby
+      jquery-rails
+      mas-fonts
+      mas-frontend-helpers
+      meta-tags
+      rails (~> 4.1)
+      sass-rails (~> 4.0.3)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -613,6 +624,7 @@ DEPENDENCIES
   rspec_junit_formatter
   rubytree
   sass-rails (~> 4.0.0)
+  savings_calculator (~> 1.0.0)
   sdoc
   spring-commands-cucumber
   spring-commands-rspec

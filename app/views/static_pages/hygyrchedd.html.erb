@@ -1,0 +1,198 @@
+<% set_meta_tags(title: 'Accessibility Statement') %>
+
+<% content_for(:editorial) do %>
+<main class="l-main__cell-double-primary" role="main">
+  <%= heading_tag 'Datganiad hygyrchedd', class: '', level: 1 %>
+
+  <%= heading_tag 'Contents', class: 'visually-hidden', level: 2 %>
+  <ul class="contents-list">
+    <li class="contents-list__item"><a href="#using_the_website">Defnyddio’r wefan</a>
+      <ul class="contents-list">
+        <li class="contents-list__item"><a href="#keyboard_navigation">Llywio gyda bysellfwrdd</a></li>
+        <li class="contents-list__item">
+          <a href="#assistive_technology">Darllenydd sgrîn a llywio technolegol â chymorth</a></li>
+          <li class="contents-list__item"><a href="#aria">ARIA (Cymwysiadau Rhyngrwyd Hygyrch)</a></li>
+          <li class="contents-list__item"><a href="#colour_and_font">Newid lliw a ffont ar y sgrîn</a></li>
+          <li class="contents-list__item"><a href="#audio_and_video">Chwaraewyr sain a fideo</a></li>
+          <li class="contents-list__item"><a href="#links">Dolenni, ffenestri newydd a haenau</a></li>
+          <li class="contents-list__item"><a href="#files">Ffeiliau i’w lawrlwytho</a></li>
+          <li class="contents-list__item"><a href="#mobile">Ystyriaethau offer symudol</a></li>
+        </ul>
+      </li>
+      <li class="contents-list__item"><a href="#limitations">Cyfyngiadau Hygyrchedd</a></li>
+      <li class="contents-list__item"><a href="#guidelines">Canllawiau Hygyrchedd</a>
+        <ul class="contents-list">
+          <li class="contents-list__item"><a href="#accreditation">Achrediad hygyrchedd</a></li>
+          <li class="contents-list__item"><a href="#browsers">Cydweddoldeb Porwr</a></li>
+          <li class="contents-list__item"><a href="#web_standards">Safonau a thechnolegau’r We</a></li>
+        </ul>
+      </li>
+      <li class="contents-list__item"><a href="#contacting_us">Cysylltu â ni</a></li>
+      <li class="contents-list__item"><a href="#conformance_date">Dyddiad cydymffurfio</a></li>
+    </ul>
+
+    <%= heading_tag 'Trosolwg', class: 'l-editorial-heading', level: 2 %>
+
+    <p>Mae’r Gwasanaeth Cynghori Ariannol yn ymroddedig i ddarparu gwefan sy’n hygyrch i’r gynulleidfa ehangaf bosib, waeth beth yw’r rhwystrau ar sail anabledd, galluogrwydd neu dechnoleg.</p>
+
+    <p>Rydym yn gwirio tudalennau’r wefan hefyd - pan wneir newidiadau i dudalennau cyfredol neu pan ryddheir tudalennau newydd - i sicrhau eu bod yn bodloni gofynion hygyrchedd, ac rydym yn ymateb yn gadarnhaol i adborth ynghylch hygyrchedd unrhyw un o’n tudalennau a’n gwasanaethau.</p>
+
+    <p>Os cewch anhawster wrth gael mynediad i’r wefan yna mae croeso i chi <a href="#contacting_us">gysylltu â ni</a>.</p>
+
+    <%= heading_tag 'Defnyddio’r wefan', id: 'using_the_website', class: 'l-editorial-heading', level: 2 %>
+    <p>Ein nod yw darparu’r profiad mwyaf hygyrch â phosibl ar gyfer ein hymwelwyr ac rydym wedi creu’r nodweddion hygyrch canlynol:</p>
+
+    <%= heading_tag 'Llywio gyda bysellfwrdd', id: 'keyboard_navigation', class: 'l-editorial-heading', level: 3 %>
+    <ul>
+      <li>Darperir llywio rhesymegol a chyson ar gyfer defnyddwyr bysellfwrdd.</li>
+      <li>Gellir deall dolenni allan o gyd-destun ar gyfer defnyddwyr darllenwyr sgrîn.</li>
+      <li>Amlygir dolenni ar ffocws bysellfwrdd.</li>
+      <li>Mae ein logo’n cysylltu’n uniongyrchol â’r hafan.</li>
+      <li>Gallwch neidio’n syth i’r prif gynnwys, y prif lywio a’r dudalen hygyrchedd drwy bwyso’r fysell tab wedi i’r dudalen lwytho.</li>
+      <li>Rhoddwyd cyfleusterau chwilio ar draws y safle.</li>
+    </ul>
+
+    <%= heading_tag 'Darllenydd sgrîn a llywio technolegol â chymorth', id: 'assistive_technology', class: 'l-editorial-heading', level: 3 %>
+    <p>Dyluniwyd y wefan i fod yn hygyrch ar gyfer amrywiaeth o ddarllenwyr sgrîn a theclynnau cymorth, yn cynnwys:</p>
+
+    <ul>
+      <li>Darllenydd Sgrîn JAWS Fersiwn 12.0 ac uwch;</li>
+      <li>NVDA 2014 ac uwch;</li>
+      <li>Apple Voiceover (iOS 7 & 8);</li>
+      <li>Dragon Naturally Speaking 11.5 ac uwch; a</li>
+      <li>Chwyddwr Sgrîn ZoomText 9.1 ac uwch.</li>
+    </ul>
+
+    <p>Sylwch bydd gorchmynion bysellfwrdd i ddefnyddio’r darllenydd sgrîn yn amrywio’n ddibynnol ar y teclyn/meddalwedd cymorth penodol a ddefnyddiwch. Efallai y cewch anhawster gyda hen fersiynau o’r cymwysiadau hyn neu dechnolegau cymorth eraill. Os profwch anhawster, bydd croeso i chi <a href="#contacting_us">gysylltu â ni</a>.</p>
+
+    <%= heading_tag 'ARIA (Cymwysiadau Rhyngrwyd Hygyrch)', id: 'aria', class: 'l-editorial-heading', level: 3 %>
+    <p>Mae ARIA yn fanyleb dechnegol i sicrhau bod strwythur y safle’n hygyrch. Cafodd ei defnyddio ar draws y wefan er mwyn gwella profiad defnyddwyr sydd â nam ar y golwg.</p>
+
+    <p>Drwy aseinio rolau a nodau ARIA i elfennau o’r we, rydym wedi gwella’r modd y gall defnyddwyr darllenydd sgrîn lywio a defnyddio’n gwefan a rhai o’n hoffer mewnol.</p>
+
+    <%= heading_tag 'Newid lliw a ffont ar y sgrîn', id: 'colour_and_font', class: 'l-editorial-heading', level: 3 %>
+    <p>Er nad ydym yn cynnig amrywiaeth gwahanol o liwiau i’w harddangos ar y wefan, gallwch ddefnyddio’r nodweddion yn eich porwr i newid maint y testun neu’r lliw ar y sgrîn.</p>
+
+    <p>Fodd bynnag, nid yw newid maint y testun yn gweithio yn Internet Explorer 8. Yn hytrach, darperir sgrolio llorweddol er mwyn iddi fod yn bosib defnyddio’r bysellfwrdd i lywio o un ochr i’r llall. Gellir dod o hyd i gyfarwyddiadau cyfredol i wrth-wneud y wefan <a href="http://windows.microsoft.com/en-gb/windows/change-webpage-colors-fonts#1TC=windows-7">gosodiadau ffont a lliw yn Internet Explorer 9 (ac uwch)</a> ar wefan Microsoft.</p>
+
+    <%= heading_tag 'Chwaraewyr sain a fideo', id: 'audio_and_video', class: 'l-editorial-heading', level: 3 %>
+    <p>Gosodwyd sain a fideo i beidio â chwarae’n awtomatig. Ar hyn o bryd rydym yn defnyddio’r chwaraewyr fideo YouTube ond rydym yn datblygu chwaraewr fideo hygyrch amgenach sy’n cynnwys penawdau caeëdig.</p>
+
+    <p>Gweler y cyfarwyddiadau ar ddefnyddio’r bysellfwrdd ar <a href="https://support.google.com/youtube/answer/189278?hl=en-GB">wefan defnyddio bysellfwrdd YouTube.</a></p>
+
+    <%= heading_tag 'Dolenni, ffenestri newydd a haenau', id: 'links', class: 'l-editorial-heading', level: 3 %>
+    <p>Bydd dolenni i dudalennau ar yr un wefan yn agor yn yr un ffenestr. Bydd dolenni i dudalennau ar wefannau allanol yn agor mewn ffenestr newydd. Nodir y dolenni allanol hyn gan eicon bach wrth ymyl y ddolen:</p>
+
+    <p>Er enghraifft: <a href="http://www.w3.org/TR/WCAG20/">Canllawiau Hygyrchedd WCAG 2.0</a></p>
+
+    <p>Efallai y bydd rhai dolenni’n agor mewn haen newydd, fel “pop-up”, ar ben y dudalen sydd ar eich sgrîn.</p>
+
+    <p>Bydd dolenni i ddogfennau a ffeiliau y gellir eu lawrlwytho yn agor mewn ffenestr newydd er mwyn osgoi amharu ar dechnolegau cymorth.</p>
+
+    <p>Bydd y dolenni hyn yn defnyddio’r ffurf ganlynol:</p>
+
+    <p><a href="/en/example_document.pdf">Enw Ffeil (Math o Ffeil)</a></p>
+
+    <p>Gallwch agor dolenni mewn ffenestr newydd drwy ddefnyddio’r llwybr byr bysellfwrdd Shift + Enter ar y rhan fwyaf o borwyr modern. (gall y llwybr byr bysellfwrdd ar gyfer agor dolenni mewn ffenestr newydd fod yn wahanol yn ddibynnol ar y porwr a’r system weithredu.)</p>
+
+    <%= heading_tag 'Ffeiliau i’w lawrlwytho', id: 'files', class: 'l-editorial-heading', level: 3 %>
+    <p>Rydym wedi sicrhau bod y ffeiliau ar gael i’w lawrlwytho mewn amryw o ffurfiau. Y rhai mwyaf cyffredin yw: Adobe Acrobat (.pdf), Microsoft Word (.doc), a Microsoft Excel (.xls).</p>
+
+    <p>Os na allwch chi agor y mathau hyn o ddogfennau, lawrlwythwch a gosodwch y fersiynau diweddaraf o feddalwedd y syllwr rhad ac am ddim:</p>
+
+    <ul>
+      <li><a href="http://get.adobe.com/uk/reader/">Tudalen lawrlwytho Adobe Acrobat Reader</a></li>
+      <li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=4">Tudalen lawrlwytho Microsoft Word Viewer</a></li>
+      <li><a href="http://www.microsoft.com/en-gb/download/details.aspx?id=10">Tudalen lawrlwytho Microsoft Excel Viewer</a></li>
+    </ul>
+
+    <%= heading_tag 'Ystyriaethau offer symudol', id: 'mobile', class: 'l-editorial-heading', level: 3 %>
+    <p>Mae’r safle wedi ei adeiladu’n ymatebol, er mwyn iddo fedru addasu ar declynnau llai, gan alluogi’r defnyddiwr i weld a llywio drwy’r cynnwys yn hawdd. Mae’r safle ymatebol wedi ei ddatblygu gyda chyfeiriad at waith Consortiwm y We Fyd-Eang (W3C) sef Menter Hygyrchedd y We (WAI), gan ystyried Canllawiau Hygyrchedd Cynnwys y We (WCAG 2) ac Arferion Gorau y We Symudol (MWBP 1.0).</p>
+
+    <%= heading_tag 'Cyfyngiadau Hygyrchedd', id: 'limitations', class: 'l-editorial-heading', level: 2 %>
+    <p>Mae rhai technolegau a nodweddion yn debygol o achosi anawsterau hygyrchedd, megis</p>
+
+    <ul>
+      <li>Dogfennau i’w lawrlwytho fel Adobe PDF</li>
+      <li>Dogfennau i’w lawrlwytho fel Microsoft Word ac Excel</li>
+      <li>Cynnyrch Flash</li>
+      <li>Dolenni ar ffurf botymau</li>
+    </ul>
+
+    <p>Rydym yn ymdrechu’n galed i oresgyn y cyfyngiadau hyn drwy wella’u hygyrchedd a chynnig dulliau hygyrch amgenach. Os ydych yn dymuno fersiynau amgenach na’n dogfennau lawrlwytho (megis testun plaen neu braille), neu os profwch unrhyw anawsterau eraill o ran hygyrchedd gyda’n gwefan, cofiwch <a href="#contacting_us">gysylltu â ni</a>.</p>
+
+    <p>Gall peth ymarferoldeb gael ei ddarparu gan drydydd partïon. Nid oes gan y Gwasanaeth Cynghori Ariannol unrhyw reolaeth dros hygyrchedd y cymwysiadau hyn, fodd bynnag ceisiwn gynnig modd hygyrch amgenach.</p>
+
+    <p>Mae ymarferoldeb a ddarperir gan drydydd partïon nad yw’n hygyrch, neu’n rhannol hygyrch yn cynnwys:</p>
+
+    <ul>
+      <li>offeryn arolwg web engage;</li>
+      <li>offer flash;</li>
+      <li>gwe-sgwrs; a</li>
+      <li>chwaraewr fideo YouTube.</li>
+    </ul>
+
+    <p>Rydym yn defnyddio offeryn arolwg trydydd parti gan Web engage, sydd yn rhannol hygyrch. Gall yr arolwg hwn ymyrryd â defnyddiwr sy’n defnyddio Voiceover (neu ddarllenydd sgrîn tebyg) er mwyn llywio drwy’r dudalen.</p>
+
+    <p>Nid yw offer Flash megis yr offeryn ysgaru a gwahanu yn hygyrch. Maent yn y broses o gael eu hailadeiladu gan ddefnyddio HTML a CSS.</p>
+    <p>Mae amryw o ddolenni wedi eu dylunio i edrych fel botymau. Dylai defnyddwyr meddalwedd adnabod llais fod yn ymwybodol o hyn wrth geisio adnabod a nodi dolenni a botymau ar dudalen.</p>
+    <p>Rydym wrthi’n datblygu chwaraewr fideo cwbl hygyrch ar gyfer 2015.</p>
+
+
+    <%= heading_tag 'Canllawiau Hygyrchedd', id: 'guidelines', class: 'l-editorial-heading', level: 2 %>
+    <p>Mae’r safle hwn wedi ei ddatblygu er mwyn iddo gydymffurfio â lefel AA Canllawiau Hygyrchedd Cynnwys y We (WCAG 2.0) Consortiwm y We Fyd-Eang (W3C). Y canllawiau hyn yw’r meincnod a gydnabyddir yn rhynglwadol ar gyfer adeiladu gwefannau hygyrch. Mae’r Canllawiau Hygyrchedd Cynnwys y We yn egluro sut i wneud gwefannau’n fwy hygyrch ar gyfer pobl ag anableddau. Wrth gydymffurfio â’r canllawiau hyn daw gwefannau’n haws i’w defnyddio gan bawb hefyd.</p>
+
+    <%= heading_tag 'Achrediad hygyrchedd', id: 'accreditation', class: 'l-editorial-heading', level: 3 %>
+    <p>Cymaint yw ein hymroddiad i hygyrchedd, rydym wedi gofyn i’r Ganolfan Hygyrchedd Digidol archwilio’r safle hwn o ran hygyrchedd. Cwblhawyd yr archwiliad diwethaf at 7 Gorffennaf 2014. Mae’r safle’n cael ei wella’n barhaus er mwyn ceisio achrediad y Ganolfan Hygyrchedd Digidol. Am ragor o wybodaeth ynghylch archwilio hygyrchedd gan y Ganolfan Hygyrchedd Digidol, ewch i <a href="http://www.digitalaccessibilitycentre.org">wefan y Ganolfan Hygyrchedd Digidol</a>.</p>
+
+    <%= heading_tag 'Cydweddoldeb Porwr', id: 'browsers', class: 'l-editorial-heading', level: 3 %>
+    <p>Mae’r safle hwn wedi ei brofi ar draws llwyfannau ac ar draws porwyr ac ar hyn o bryd mae’n cydymffurfio â phorwyr byrddau gwaith modern yn cynnwys:</p>
+
+    <ul>
+      <li>Microsoft Internet Explorer 8+; a’r fersiwn ddiweddaraf o</li>
+      <li>Mozilla Firefox;</li>
+      <li>Apple Safari;</li>
+      <li>Google Chrome; ac</li>
+      <li>Opera.</li>
+    </ul>
+
+    <p>Mae’r safle’n cydymffurfio â phorwyr symudol modern yn cynnwys:</p>
+
+    <ul>
+      <li>Safari (iOS) fersiwn 6+;</li>
+      <li>y fersiwn ddiweddaraf o Chrome (iOS); ac</li>
+      <li>Android Webkit (fersiwn 2.x a 4.x).</li>
+    </ul>
+
+    <p>Adeiladwyd y safle’n defnyddio gwelliant cynyddol, felly dylai’r cynnwys fod ar gael i bob porwr. Serch hynny, efallai y cewch anhawster gyda hen fersiynau o’r porwyr hyn neu borwyr eraill o’r we. Os profwch anhawster, bydd croeso i chi <a href="#contacting_us">gysylltu â ni</a>.</p>
+
+    <p>Am ragor o fanylion am osodiadau hygyrchedd eich porwr, ewch i dudalennau cymorth a chefnogaeth gwerthwr y porwr.</p>
+
+    <%= heading_tag 'Safonau a thechnolegau’r We', id: 'web_standards', class: 'l-editorial-heading', level: 3 %>
+    <p>Datblygwyd y wefan hon er mwyn cydymffurfio â safonau Consortiwm y We Fyd-Eang (W3C) ar gyfer HTML (Iaith Arwyddnodi Hyperdestun) a CSS (Templedi Arddull Rhaeadrol).</p>
+
+    <p>Mae’r wefan hon yn dibynnu ar HTML a CSS i fedru darllen cynnwys. Mae technolegau ychwanegol wedi eu defnyddio yn cynnwys JavaScript, serch hynny, nid yw’r wefan hon yn ddibynnol ar y technolegau hynny gan eu bod yn cael eu defnyddio i wella ymarferoldeb yn unig. Gwnaed pob ymdrech i sicrhau bod y technolegau hyn mor hygyrch â phosibl.</p>
+
+    <%= heading_tag 'Cysylltu â ni', id: 'contacting_us', class: 'l-editorial-heading', level: 2 %>
+    <p>Rydym bob amser yn chwilio am ffyrdd i roi cymorth i bobl gael y profiadau gorau o’r wefan hon. Os oes unrhyw wybodaeth y credwch y dylid ei chynnwys ar y dudalen hon, neu os profwch anhawster wrth gael mynediad i’r wefan yna mae croeso i chi gysylltu â ni ar:</p>
+
+    <ul class="unstyled-list">
+      <li><a href="mailto:enquiries@moneyadviceservice.org.uk">enquiries@moneyadviceservice.org.uk</a>;</li>
+      <li><a href="tel:+443005005000">0300 500 5000</a> (DU) or <a href="tel:+443005005555">0300 500 5555</a> (Cymru); or</li>
+      <li>Y Gwasanaeth Cynghori Ariannol,</br> Holborn Centre,</br> 120 Holborn,</br> Llundain,</br> EC1N 2TD.</li>
+    </ul>
+
+    <p><a href="https://accessin.org/"><%= image_tag('https://accessin.org/images/LogoAndStraplineNew.jpg', width: '300px') %></a></p>
+    <p>Gallwch ddefnyddio eich nodwedd cymorth hygyrchedd amser real i adrodd unrhyw anawsterau hygyrchedd. Fe’i gelwir yn <a href="https://accessin.org/">AccessIN</a> ac mae i’w weld ar waelod pob tudalen ar ein gwefan, wedi ei labelu “Adroddwch broblem hygyrchedd”.</p>
+    <p>Cewch gais i gwblhau ffurflen fer iawn fel rhan o’r broses syml. Rhowch gymaint o wybodaeth â phosibl er mwyn ein helpu i adnabod a chywiro’r broblem ar unwaith.</p>
+    <p>Cefnogir AccessIN yn llwyr gan y tîm yn y Ganolfan Hygyrchedd Digidol a byddant yn cydweithio â ni i ddatrys eich problem mor gyflym â phosibl.</p>
+
+
+    <%= heading_tag 'Dyddiad cydymffurfio', id: 'conformance_date', class: 'l-editorial-heading', level: 2 %>
+    <p>Cyhoeddwyd y datganiad hygyrchedd hwn ar 21/08/2014 a’i ddiweddaru ddiwethaf ar 21/08/2014.</p>
+
+    <p>Ein nod yw adolygu’n datganiad hygyrchedd ar 21/08/2015, serch hynny byddwn yn diweddaru’r datganiad hygyrchedd pan ychwanegir nodwedd newydd sylweddol.</p>
+  </main>
+  <% end %>
+
+  <%= render template: '/static_pages/show' %>

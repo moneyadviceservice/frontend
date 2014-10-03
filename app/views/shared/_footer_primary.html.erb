@@ -1,7 +1,9 @@
 <div class="l-footer-primary t-footer-primary">
   <div class="l-constrained">
     <div class="l-footer-primary__left">
-      <%= render 'shared/newsletter_signup' %>
+      <% unless hide_elements_irrelevant_for_third_parties? %>
+        <%= render 'shared/newsletter_signup' %>
+      <% end %>
     </div>
 
     <div class="l-footer-primary__right">

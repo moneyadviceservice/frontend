@@ -1,9 +1,13 @@
 class EmptyController < ApplicationController
-
   def show
   end
 
   private
+
+  def hide_elements_irrelevant_for_third_parties?
+    true
+  end
+  helper_method :hide_elements_irrelevant_for_third_parties?
 
   def optimizely_include_tag
   end

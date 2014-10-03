@@ -1,4 +1,4 @@
-RSpec.describe 'shared/_authentication', :type => :view do
+RSpec.describe 'shared/_authentication', type: :view do
   let(:logged_in) { false }
 
   before do
@@ -9,6 +9,7 @@ RSpec.describe 'shared/_authentication', :type => :view do
     allow(view).to receive(:user_signed_in?) { logged_in }
     allow(view).to receive(:display_search_box_in_header?)
     allow(view).to receive(:alternate_locales) { [] }
+    allow(view).to receive(:hide_elements_irrelevant_for_third_parties?) { false }
 
     render
   end
@@ -29,3 +30,4 @@ RSpec.describe 'shared/_authentication', :type => :view do
     specify { expect(rendered).to include(t('authentication.my_account')) }
   end
 end
+

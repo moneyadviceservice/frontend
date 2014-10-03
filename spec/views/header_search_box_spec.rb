@@ -1,4 +1,4 @@
-RSpec.describe 'shared/_header', :type => :view do
+RSpec.describe 'shared/_header', type: :view do
   before do
     controller.extend(Localisation)
 
@@ -6,6 +6,7 @@ RSpec.describe 'shared/_header', :type => :view do
     allow(view).to receive(:display_menu_button_in_header?) { true }
     allow(view).to receive(:display_search_box_in_header?) { display }
     allow(view).to receive(:alternate_locales) { [] }
+    allow(view).to receive(:hide_elements_irrelevant_for_third_parties?) { false }
   end
 
   context 'when the search box should be displayed in the header' do
@@ -28,3 +29,4 @@ RSpec.describe 'shared/_header', :type => :view do
     end
   end
 end
+

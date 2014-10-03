@@ -4,45 +4,27 @@
 
 .trust-banner {
   position: relative;
+
+  @include respond-to($mq-l) {
+    background: image_url('illustrated_people.png') 100% 100% no-repeat;
+  }
 }
 
 .trust-banner__heading {
   @extend %font-heading-heavy;
-  @include body(24, 30);
+  @include body(36, 42);
   color: $color-heading-extra-small;
-  padding-top: 1em;
-  padding-bottom: 0.6em;
+  padding-top: 1.2em;
+  padding-bottom: 1em;
   margin: 0;
 
   @include respond-to($mq-m) {
-    @include body(36, 42);
-    width: 60%;
-  }
-
-  @include respond-to($mq-l) {
-    width: 50%;
-  }
-
-  @include respond-to($mq-xl) {
     @include body(48, 54);
-    width: 60%;
-  }
-}
+    max-width: 700px;
 
-.trust-banner__image {
-  display: none;
-
-  @include respond-to(56.25em) {
-    display: block;
-    width: 380px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
-  @include respond-to($mq-l) {
-    width: 440px;
+    .theme-cy & {
+      max-width: 820px;
+    }
   }
 }
 
@@ -54,5 +36,12 @@
   > li {
     @include body(16,24);
     margin-bottom: $baseline-unit;
+    @extend %font-heading-medium;
+  }
+
+  @include respond-to($mq-l, $mq-xl) {
+    .theme-cy & {
+      max-width: 50%;
+    }
   }
 }

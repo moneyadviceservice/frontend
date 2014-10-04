@@ -2,6 +2,16 @@
   @extend .clearfix;
   overflow: hidden;
   position: relative;
+
+  .flexbox & {
+    display: flex;
+    flex-flow: column;
+
+    @include respond-to($mq-s) {
+      flex-flow: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .l-promos__heading {
@@ -25,6 +35,16 @@
 
   @include respond-to($mq-l) {
     @include column(3);
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      flex-basis: 46%;
+    }
+
+    @include respond-to($mq-l) {;
+      flex-basis: 21.55%;
+    }
   }
 }
 

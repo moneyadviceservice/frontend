@@ -1,0 +1,8 @@
+.contents-list {
+  margin: $baseline-unit 0;
+}
+
+.contents-list__item {
+  @include body(14,18);
+  margin-bottom: $baseline-unit;
+}

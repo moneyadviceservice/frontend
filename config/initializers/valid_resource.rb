@@ -14,7 +14,7 @@ class ValidResource
                     partners-uc-banks
                     partners-uc-landlords
                     resources-for-professionals-working-with-young-people-and-parents),
-    static_page: %w(accessibility hygyrchedd)
+    static_page: %w()
   }
 
   attr_accessor :type

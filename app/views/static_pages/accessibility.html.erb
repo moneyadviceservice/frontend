@@ -1,0 +1,198 @@
+<% set_meta_tags(title: 'Accessibility Statement') %>
+
+<% content_for(:editorial) do %>
+<main class="l-main__cell-double-primary" role="main">
+  <%= heading_tag 'Accessibility statement', class: '', level: 1 %>
+
+  <%= heading_tag 'Contents', class: 'visually-hidden', level: 2 %>
+  <ul class="contents-list">
+    <li class="contents-list__item"><a href="#using_the_website">Using the website</a>
+      <ul class="contents-list">
+        <li class="contents-list__item"><a href="#keyboard_navigation">Keyboard navigation</a></li>
+        <li class="contents-list__item">
+          <a href="#assistive_technology">Screen reader and assistive technology navigation</a></li>
+          <li class="contents-list__item"><a href="#aria">ARIA (Accessible Rich Internet Applications)</a></li>
+          <li class="contents-list__item"><a href="#colour_and_font">Changing the display colour and font</a></li>
+          <li class="contents-list__item"><a href="#audio_and_video">Audio and video players</a></li>
+          <li class="contents-list__item"><a href="#links">Links, new windows and layers</a></li>
+          <li class="contents-list__item"><a href="#files">Downloadable files</a></li>
+          <li class="contents-list__item"><a href="#mobile">Mobile considerations</a></li>
+        </ul>
+      </li>
+      <li class="contents-list__item"><a href="#limitations">Accessibility limitations</a></li>
+      <li class="contents-list__item"><a href="#guidelines">Accessibility guidelines</a>
+        <ul class="contents-list">
+          <li class="contents-list__item"><a href="#accreditation">Accessibility accreditation</a></li>
+          <li class="contents-list__item"><a href="#browsers">Browser compatibility</a></li>
+          <li class="contents-list__item"><a href="#web_standards">Web standards and technologies</a></li>
+        </ul>
+      </li>
+      <li class="contents-list__item"><a href="#contacting_us">Contact us</a></li>
+      <li class="contents-list__item"><a href="#conformance_date">Conformance date</a></li>
+    </ul>
+
+    <%= heading_tag 'Overview', class: 'l-editorial-heading', level: 2 %>
+
+    <p>The Money Advice Service is committed to providing a website that is accessible to the widest possible audience, regardless of disability, capability or technology.</p>
+
+    <p>We also routinely check web pages - when amendments are made to existing pages and when new pages are released - to ensure that they meet accessibility requirements, and we do respond positively to feedback regarding the accessibility of any of our pages and services.</p>
+
+    <p>If you experience any problem accessing the website then please feel free to <a href="#contacting_us">contact us</a>.</p>
+
+    <%= heading_tag 'Using the website', id: 'using_the_website', class: 'l-editorial-heading', level: 2 %>
+    <p>We aim to provide the most accessible experience possible for our visitors and have implemented the following accessibility features:</p>
+
+    <%= heading_tag 'Keyboard navigation', id: 'keyboard_navigation', class: 'l-editorial-heading', level: 3 %>
+    <ul>
+      <li>Logical and consistent navigation is provided for keyboard users.</li>
+      <li>Links can be understood out of context for screen reader users.</li>
+      <li>Links are highlighted on keyboard focus.</li>
+      <li>Our logo links directly to the home page.</li>
+      <li>You can skip to the main content, main navigation and the accessibility page by pressing the tab key after the page loads.</li>
+      <li>Site-wide search facilities have been implemented.</li>
+    </ul>
+
+    <%= heading_tag 'Screen reader and assistive technology navigation', id: 'assistive_technology', class: 'l-editorial-heading', level: 3 %>
+    <p>The website has been designed to be accessible to a variety of screen readers and assistive devices, including:</p>
+
+    <ul>
+      <li>JAWS version 12.0 Screen Reader and above;</li>
+      <li>NVDA 2014 and above;</li>
+      <li>Apple Voiceover (iOS 7 & 8);</li>
+      <li>Dragon Naturally Speaking 11.5 and above; and</li>
+      <li>ZoomText 9.1 Screen Magnifier and above.</li>
+    </ul>
+
+    <p>Please note that keyboard commands to operate the screen reader will vary depending on the specific assistive device/software you use. You may experience issues with older versions of these applications or other assistive technologies. If you experience any issues, please feel free to <a href="#contacting_us">contact us</a>.</p>
+
+    <%= heading_tag 'ARIA (Accessible Rich Internet Applications)', id: 'aria', class: 'l-editorial-heading', level: 3 %>
+    <p>ARIA is a technical specification for ensuring that site structure is accessible. It has been used throughout the site to enhance the experience for visually impaired users.</p>
+
+    <p>By assigning ARIA roles and landmarks to web elements, we have enhanced the ability of screen reader users to navigate and interact with our website and some of our in-house tools.</p>
+
+    <%= heading_tag 'Changing the display colour and font', id: 'colour_and_font', class: 'l-editorial-heading', level: 3 %>
+    <p>Although we do not offer any alternate colour schemes to display the website, you can use the controls in your browser to change the size of the text or the colour of the display.</p>
+
+    <p>However, text resizing will not work in Internet Explorer 8. Instead, horizontal scrolling will be provided so that it is possible to use the keyboard to navigate from side to side. Up-to-date instructions to override the website <a href="http://windows.microsoft.com/en-gb/windows/change-webpage-colors-fonts#1TC=windows-7">font and colour settings in Internet Explorer 9 (and above)</a> can be found on Microsoft's website.</p>
+
+    <%= heading_tag 'Audio and video players', id: 'audio_and_video', class: 'l-editorial-heading', level: 3 %>
+    <p>Audio and video has been set not to play automatically. We currently use the YouTube video player but we are developing an alternate accessible video player that includes closed captions.</p>
+
+    <p>See instructions on operating the keyboard on <a href="https://support.google.com/youtube/answer/189278?hl=en-GB">YouTube's keyboard controls webpage.</a></p>
+
+    <%= heading_tag 'Links, new windows and layers', id: 'links', class: 'l-editorial-heading', level: 3 %>
+    <p>Links to pages on the same website will open in the same window. Links to pages on external websites will open in a new window. These external links are indicated by a small icon next to the link:</p>
+
+    <p>For example: <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0 Accessibility Guidelines</a></p>
+
+    <p>Some links may also open in a new layer, like a pop up, on top of the page you are viewing.</p>
+
+    <p>Links to downloadable documents and files will open in a new window to avoid conflicting with assistive technologies.</p>
+
+    <p>These links will use the following format:</p>
+
+    <p><a href="/en/example_document.pdf">Filename (File Type)</a></p>
+
+    <p>You can open links in a new window by using the keyboard shortcut Shift + Enter in most modern browsers. (The keyboard shortcut for opening links in a new window may be different depending on the browser and operating system.)</p>
+
+    <%= heading_tag 'Downloadable files', id: 'files', class: 'l-editorial-heading', level: 3 %>
+    <p>We have made files available to download in a variety of formats. The most common are: Adobe Acrobat (.pdf), Microsoft Word (.doc), and Microsoft Excel (.xls).</p>
+
+    <p>If you are unable to open these types of documents, please download and install the latest versions of the free viewer software:</p>
+
+    <ul>
+      <li><a href="http://get.adobe.com/uk/reader/">Adobe Acrobat Reader download page</a></li>
+      <li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=4">Microsoft Word Viewer download page</a></li>
+      <li><a href="http://www.microsoft.com/en-gb/download/details.aspx?id=10">Microsoft Excel Viewer download page</a></li>
+    </ul>
+
+    <%= heading_tag 'Mobile considerations', id: 'mobile', class: 'l-editorial-heading', level: 3 %>
+    <p>The site has been built responsively, so that it adapts on smaller devices, allowing the user to view and navigate the content with ease. The responsive site has been developed with reference to the work of the World-Wide-Web Consortium's (W3C) Web Accessibility Initiative (WAI), taking into consideration the Web Content Accessibility Guidelines (WCAG 2) and Mobile Web Best Practices (MWBP 1.0).</p>
+
+    <%= heading_tag 'Accessibility limitations', id: 'limitations', class: 'l-editorial-heading', level: 2 %>
+    <p>Some technologies and features are likely to cause accessibility issues, such as:</p>
+
+    <ul>
+      <li>Adobe PDF downloadable documents</li>
+      <li>Microsoft Word and Excel downloadable documents</li>
+      <li>Flash based applications</li>
+      <li>Links styled as buttons</li>
+    </ul>
+
+    <p>We make every effort to overcome these limitations by improving their accessibility and providing accessible alternatives. If you require alternative versions to our downloadable documents (such as plain text or braille), or if you experience any accessibility problems with our site, please <a href="#contacting_us">contact us</a>.</p>
+
+    <p>Some functionality may be delivered by third parties. The Money Advice Service has no control over the accessibility of these applications, however we will attempt to offer an accessible alternative.</p>
+
+    <p>Functionality that is provided by third parties and is not accessible, or is partially accessible include:</p>
+
+    <ul>
+      <li>the web engage survey tool;</li>
+      <li>flash-based tools;</li>
+      <li>web chat; and</li>
+      <li>the YouTube video player.</li>
+    </ul>
+
+    <p>We use a third-party survey tool by Web engage, which is partially accessible. This survey can interrupt a user who is using Voiceover (or similar screen reader) to navigate the page.</p>
+
+    <p>Flash-based tools such as the divorce and separation tool are inaccessible. They are in the process of being re-built using accessible HTML and CSS.</p>
+    <p>Various links are styled to look like buttons. Users of voice recognition software should be aware of this when looking to identify and mark links and buttons on a page.</p>
+    <p>We are working on developing a fully accessible video player in 2015.</p>
+
+
+    <%= heading_tag 'Accessibility guidelines', id: 'guidelines', class: 'l-editorial-heading', level: 2 %>
+    <p>This site has been developed to conform to level AA of the World Wide Web Consortium’s (W3C) Web Content Accessibility Guidelines 2.0 (WCAG 2.0). These guidelines are the internationally recognised benchmark for building accessible web sites. The Web Content Accessibility Guidelines explain how to make websites more accessible for people with disabilities. Conformity to these guidelines also makes websites more user-friendly for all people.</p>
+
+    <%= heading_tag 'Accessibility accreditation', id: 'accreditation', class: 'l-editorial-heading', level: 3 %>
+    <p>Such is our commitment to accessibility, we asked the Digital Accessibility Centre to audit this site for accessibility. The audit was last carried out on the 7th July 2014. The site is constantly being improved in order to attain Digital Accessibility Centre accreditation. For more information about Digital Accessibility Centre accessibility auditing, please visit the <a href="http://www.digitalaccessibilitycentre.org/">Digital Accessibility Centre website</a>.</p>
+
+    <%= heading_tag 'Browser compatibility', id: 'browsers', class: 'l-editorial-heading', level: 3 %>
+    <p>The site has been cross-platform and cross-browser tested and is currently compatible with modern desktop browsers including:</p>
+
+    <ul>
+      <li>Microsoft Internet Explorer 8+; and the latest version of</li>
+      <li>Mozilla Firefox;</li>
+      <li>Apple Safari;</li>
+      <li>Google Chrome; and</li>
+      <li>Opera.</li>
+    </ul>
+
+    <p>The site is compatible with modern mobile browsers including:</p>
+
+    <ul>
+      <li>Safari (iOS) version 6+;</li>
+      <li>the latest version of Chrome (iOS); and</li>
+      <li>Android Webkit (version 2.x and 4.x).</li>
+    </ul>
+
+    <p>The site has been built using progressive enhancement, so content should be available to all browsers. However, you may experience issues with older versions of these browsers or other web browsers. If you experience any issues, please feel free to <a href="#contacting_us">contact us</a>.</p>
+
+    <p>For more advice on your browser’s accessibility settings, please see the browser vendor’s help and support pages.</p>
+
+    <%= heading_tag 'Web standards and technologies', id: 'web_standards', class: 'l-editorial-heading', level: 3 %>
+    <p>This website has been developed to conform to World Wide Web Consortium (W3C) standards for HTML (HyperText Mark-up Language) and CSS (Cascading Style Sheets).</p>
+
+    <p>This website is reliant upon HTML and CSS to render content. Additional technologies including JavaScript have been utilised, however, this website is not reliant on these technologies as they are only used to enhance functionality. Every effort has been made to make these technologies as accessible as possible.</p>
+
+    <%= heading_tag 'Contact us', id: 'contacting_us', class: 'l-editorial-heading', level: 2 %>
+    <p>We are always looking for ways to help people get the best experience from this website. If there is information you think should be included on this page, or if you experience any problem accessing the website then please feel free to contact us on:</p>
+
+    <ul class="unstyled-list">
+      <li><a href="mailto:enquiries@moneyadviceservice.org.uk">enquiries@moneyadviceservice.org.uk</a>;</li>
+      <li><a href="tel:+443005005000">0300 500 5000</a> (UK) or <a href="tel:+443005005555">0300 500 5555</a> (Wales); or</li>
+      <li>The Money Advice Service,</br> Holborn Centre,</br> 120 Holborn,</br> London,</br> EC1N 2TD.</li>
+    </ul>
+
+    <p><a href="https://accessin.org/"><%= image_tag('https://accessin.org/images/LogoAndStraplineNew.jpg', width: '300px') %></a></p>
+    <p>You can use our real-time accessibility help feature to report any accessibility issues. It is called <a href="https://accessin.org/">AccessIN</a> and can be found at the bottom of each page on our website, labeled “Report an accessibility problem”.</p>
+    <p>You will be asked to complete a very short form as part of the simple process. Please provide as much information as possible to help us identify and correct the problem quickly.</p>
+    <p>AccessIN is fully supported by the team at the Digital Accessibility Centre and they will work with us to resolve your problem quickly wherever possible.</p>
+
+
+    <%= heading_tag 'Conformance date', id: 'conformance_date', class: 'l-editorial-heading', level: 2 %>
+    <p>This accessibility statement was issued on 21/08/2014 and last updated on 21/08/2014.</p>
+
+    <p>We plan to review our accessibility statement on 21/08/2015, however we will update the accessibility statement when a major new feature is added.</p>
+  </main>
+  <% end %>
+
+  <%= render template: '/static_pages/show' %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515170453) do
+ActiveRecord::Schema.define(version: 20140603112042) do
 
   create_table "budget_planner_budgets", force: true do |t|
     t.binary   "data",               null: false

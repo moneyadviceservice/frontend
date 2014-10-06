@@ -1,5 +1,6 @@
 require 'faraday/request/request_id'
 require 'faraday/response/link_header'
+require 'faraday/conductivity'
 
 module Core
   module ConnectionFactory
@@ -10,6 +11,7 @@ module Core
           faraday.request :json
           faraday.request :request_id
           faraday.request :retry, retries
+          faraday.request :user_agent, app: 'Mas-Responsive', version: 1.0
 
           faraday.response :raise_error
           faraday.response :json

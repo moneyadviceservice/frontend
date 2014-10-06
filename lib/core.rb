@@ -30,6 +30,7 @@ module Core
   end
 
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
+  autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
@@ -85,6 +86,13 @@ module Core
     module Customers
       autoload :Fake, 'core/repository/customers/fake'
       autoload :Cream, 'core/repository/customers/cream'
+    end
+
+    module CMS
+      autoload :CMS, 'core/repository/cms/cms'
+      autoload :BlockComposer, 'core/repository/cms/block_composer'
+      autoload :Preview, 'core/repository/cms/preview'
+      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
     end
 
     module News

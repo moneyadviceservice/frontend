@@ -57,10 +57,12 @@ Rails.application.routes.draw do
 
     resources :action_plans, only: 'show'
     resources :articles,
-              only:        'show',
+              only: 'show',
               constraints: ValidResource.new(:article) do
                 resource :feedback, only: [:new, :create], controller: :article_feedbacks
+                get 'preview', on: :member, to: 'articles_preview#show'
               end
+              
     resources :categories, only: 'show',
               constraints:       ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'

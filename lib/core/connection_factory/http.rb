@@ -4,12 +4,12 @@ require 'faraday/response/link_header'
 module Core
   module ConnectionFactory
     class Http
-      def self.build(url, timeout: 5, open_timeout: 5)
-        options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
+      def self.build(url, timeout: 5, open_timeout: 5, retries: 2)
+        options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout, retries: retries } }
         connection = Faraday.new(options) do |faraday|
           faraday.request :json
           faraday.request :request_id
-          faraday.request :retry
+          faraday.request :retry, retries
 
           faraday.response :raise_error
           faraday.response :json

@@ -6,6 +6,7 @@ require 'faraday/request/x_forwarded_proto'
 google_api_connection     = Core::ConnectionFactory::Http.build('https://www.googleapis.com/')
 public_website_connection = Core::ConnectionFactory::Http.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
 internal_email_connection = Core::ConnectionFactory::Smtp.build(from_address: 'development.team@moneyadviceservice.org.uk')
+cms_connection            = Core::ConnectionFactory::Http.build(ENV['MAS_CMS_URL'], retries: 0)
 
 public_website_connection.builder.insert_after(Faraday::Request::RequestId,
                                                Faraday::Request::HostHeader)
@@ -16,6 +17,7 @@ public_website_connection.builder.insert_after(Faraday::Request::RequestId,
 Core::Registry::Connection[:google_api]     = google_api_connection
 Core::Registry::Connection[:public_website] = public_website_connection
 Core::Registry::Connection[:internal_email] = internal_email_connection
+Core::Registry::Connection[:cms]            = cms_connection
 
 Core::Registry::Repository[:action_plan] =
   Core::Repository::ActionPlans::PublicWebsite.new
@@ -53,3 +55,6 @@ Core::Registry::Repository[:user] =
 
 # Prepare the category tree so that it is available to the application
 Core::CategoryTreeReader.new.call if Rails.env.production? and defined?(Rails::Server)
+
+Core::Registry::Repository[:preview] =
+  Core::Repository::CMS::Preview.new

@@ -1,0 +1,94 @@
+.l-landing-page__banner {
+  background-image: linear-gradient(180deg, #ffffff, #F3F3F3);
+  padding-top: $baseline-unit*6;
+  padding-bottom: $baseline-unit*4;
+  margin-bottom: $baseline-unit*8;
+}
+
+.l-landing-page__heading {
+  @include column(12);
+  color: #61a612;
+  margin-top: 0;
+}
+
+.l-landing-page__heading--alt {
+  color: $color-heading-extra-small;
+  margin-bottom: 0;
+}
+
+.l-landing-page__citation {
+  display: block;
+  font-style: normal;
+  margin-top: $baseline-unit*2;
+}
+
+.landing-page__heading--secondary {
+  color: $color-heading-extra-small;
+}
+
+.l-landing-page__video-container {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(7);
+  }
+}
+
+.l-landing-page__video {
+  width: 100%;
+  min-height: 284px;
+  margin-top: $baseline-unit*4;
+  margin-bottom: -12px;
+}
+
+.landing-page__cta {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(5);
+    margin-top: $baseline-unit*10;
+  }
+}
+
+.l-landing-page__panel {
+  @include column(12);
+  overflow: hidden;
+
+  background-color: #edf0f0;
+  padding: 1.125rem;
+  margin-top: $baseline-unit*8;
+  margin-bottom: 1.5rem;
+}
+
+.l-landing-page__3col {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
+}
+
+.l-landing-page__2col {
+  @include column(12);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
+
+.l-landing-page__image {
+  @include column(10);
+  @include push(1);
+  margin-bottom: $baseline-unit*4;
+
+  @include respond-to($mq-m) {
+    @include column(5);
+    @include pull(1);
+    margin-bottom: 0;
+    float: right;
+  }
+}

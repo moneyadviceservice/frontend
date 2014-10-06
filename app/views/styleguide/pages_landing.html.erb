@@ -1,0 +1,104 @@
+<% content_for(:context_bar) do %>
+<%= render 'shared/breadcrumbs', breadcrumbs: categories %>
+<% end %>
+
+<div class="l-landing-page__banner">
+  <div class="l-constrained">
+    <h1 class="l-landing-page__heading">Understand and compare annuities</h1>
+
+    <div class="l-landing-page__video-container">
+
+    <!--
+    By use of this code snippet, I agree to the Brightcove Publisher T and C
+    found at https://accounts.brightcove.com/en/terms-and-conditions/.
+    -->
+
+    <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+    <object id="myExperience3815308761001" class="l-landing-page__video BrightcoveExperience">
+      <param name="bgcolor" value="#FFFFFF" />
+      <param name="width" value="100%" />
+      <param name="height" value="470" />
+      <param name="playerID" value="3715052732001" />
+      <param name="playerKey" value="AQ~~,AAADSDtymlk~,HgUAk1SkaoH6WQl7hbEPXow7YFuDoLBn" />
+      <param name="isVid" value="true" />
+      <param name="isUI" value="true" />
+      <param name="dynamicStreaming" value="true" />
+
+      <param name="@videoPlayer" value="3815308761001" />
+    </object>
+
+    <!--
+    This script tag will cause the Brightcove Players defined above it to be created as soon
+    as the line is read by the browser. If you wish to have the player instantiated only after
+    the rest of the HTML is processed and the page load is complete, remove the line.
+    -->
+    <script type="text/javascript">brightcove.createExperiences();</script>
+
+    <!-- End of Brightcove Player -->
+
+  <p id="video-description">Liz tells how she shopped around for her annuity</p>
+</div>
+
+<div class="landing-page__cta">
+  <ul class="list">
+    <li>Learn about your annuity options</li>
+    <li>Compare different types of annuity</li>
+    <li>Find out how to get the best deal</li>
+  </ul>
+
+  <button class="button button--primary">Compare annuities</button>
+  <p>or <a>retrieve a saved quote </a></p>
+</div>
+</div>
+</div>
+
+<div class="l-constrained">
+  <%= image_tag('car_campaign/run-car.png', class: 'l-landing-page__image') %>
+
+  <div class="l-landing-page__2col">
+    <h2>It pays to shop around for an annuity</h2>
+
+    <ul class="list">
+      <li>A recent survey showed that 8 out of 10 people who stayed with their existing provider lost out by not shopping around.
+        <cite class="l-landing-page__citation"><a href="">Source: Financial Conduct Authority, Thematic Review of Annuities, Feb 2014</a></cite>
+      </li>
+      <li>It’s your right to shop around and you’ll usually get a higher retirement income.</li>
+    </ul>
+  </div>
+
+  <div class="l-landing-page__panel">
+    <h3 class="l-landing-page__heading l-landing-page__heading--alt">Tips before you shop around</h3>
+
+    <p class="l-landing-page__3col">If your existing pension provider offers a Guaranteed Annuity Rate it will be hard to match – be sure to ask and then compare quotes.</p>
+
+    <p class="l-landing-page__3col">You don’t have to take out an annuity when you retire.  You can delay until later or – for pots of £30,000 or less – you may be able to take all cash: <a href="">New pension rules from 27 March 2014 </a></p>
+
+    <p class="l-landing-page__3col">If you have a large pension pot or are willing to take more risk these options may be more suitable:
+      <a href="">Income drawdown</a>, <a href="">Investment-linked annuities</a> or <a href="">Fixed-term annuities</a>.</p>
+    </div>
+
+    <div class="l-landing-page__2col">
+      <h3>Useful links</h3>
+
+      <ul class="unstyled-list">
+        <li><a href="">What is an annuity?</a></li>
+        <li><a href="">How to shop around for an annuity?</a></li>
+        <li><a href="">Decide how to take your retirement income</a></li>
+        <li><a href="">What are my retirement income options?</a></li>
+        <li><a href="">Tips on how to increase your retirement income?</a></li>
+      </ul>
+    </div>
+
+    <div class="l-landing-page__2col">
+      <h3>Our promise to you</h3>
+
+      <ul class="list-benefits">
+        <li>We are set up by government so our tables and results are unbiased</li>
+        <li>We search all of the annuity brokers</li>
+        <li>We don’t receive any incentive or commission</li>
+        <li>We will not contact you or share your details</li>
+      </ul>
+    </div>
+
+  </div>

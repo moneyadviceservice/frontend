@@ -126,6 +126,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_landing
+    render layout: 'styleguide/page_unconstrained'
+  end
+
   private
 
   def article

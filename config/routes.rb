@@ -28,7 +28,7 @@ Rails.application.routes.draw do
       devise_for :users, only: [:sessions, :passwords],
                          controllers: { sessions: 'sessions' }
       scope '/users' do
-        match '/password/new', to: not_implemented, as: 'new_password', via: 'get'
+        match '/password/new', as: 'new_password', via: 'get'
       end
     else
       scope '/users' do

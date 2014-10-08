@@ -72,3 +72,6 @@ Then(/^I click on 'Forgot your password\?'$/) do
   sign_in_page.forgot_password.click
 end
 
+Then(/^I should be on a page instructing me of the next steps$/) do
+  expect(page.current_path).to eql('/en/users/password/new')
+end

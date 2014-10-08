@@ -46,5 +46,5 @@ Scenario: Forgotten password
   Given I have an account
   And   I attempt to sign in
   When  I click on 'Forgot your password?'
-  Then  I am told that the functionality is not implemented
+  Then  I should be on a page instructing me of the next steps
 

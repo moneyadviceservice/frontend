@@ -4,7 +4,7 @@
 <% end -%>
 
 <%- if controller_name != 'passwords' && controller_name != 'registrations' %>
-  <li><%= link_to I18n.t('authentication.sign_in_page.forgot_password'), new_password_path %></li>
+  <li><%= link_to I18n.t('authentication.sign_in_page.forgot_password'), new_password_path(resource_name) %></li>
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

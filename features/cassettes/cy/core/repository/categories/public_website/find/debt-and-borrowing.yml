@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/debt-and-borrowing.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 29 Sep 2014 15:02:28 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      X-Runtime:
+      - '1.677108'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Mon, 29 Sep 2014 15:02:28 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/debt-and-borrowing.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 29 Sep 2014 15:02:31 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      X-Runtime:
+      - '1.492768'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Mon, 29 Sep 2014 15:02:31 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/debt-and-borrowing.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 29 Sep 2014 15:02:31 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b6b450be-f57a-4c0e-9333-f850a2229d31
+      X-Runtime:
+      - '0.239170'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Mon, 29 Sep 2014 15:02:31 GMT
+recorded_with: VCR 2.9.2

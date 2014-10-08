@@ -69,21 +69,23 @@
         <li class="footer-secondary__list-item">
           <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
         </li>
-        
+
       </ul>
     </div>
   </div>
 </div>
 
 <% if cookies_not_accepted? %>
-  <div class="cookie-message">
-    <div class="l-constrained">
-      <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
-        <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
-        <button class="cookie-message__close-button">
-          <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
-        </button>
-      <% end %>
+  <% unless hide_elements_irrelevant_for_third_parties? %>
+    <div class="cookie-message">
+      <div class="l-constrained">
+        <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+          <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
+          <button class="cookie-message__close-button">
+            <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
+          </button>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

@@ -26,4 +26,10 @@ class CategoryDecorator < Draper::Decorator
 
     h.render partial, contents: contents
   end
+
+  def related_links_title
+    h.heading_tag(level: 2, class: 'related-links__heading') do
+      I18n.t('articles.show.related_links.title_prefix', category: object.title)
+    end
+  end
 end

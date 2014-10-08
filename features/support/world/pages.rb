@@ -19,6 +19,7 @@ module World
       news
       sign_up
       sign_in
+      forgot_password
     )
 
     pages.each do |page|

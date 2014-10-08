@@ -50,6 +50,10 @@
   }
 }
 
+.newsletter-signup__button--third-party {
+  margin-top: $baseline-unit*7;
+}
+
 .newsletter-signup__benefits-list {
   @extend %footer-secondary-text-size;
   margin-top: $baseline-unit*4;

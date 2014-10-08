@@ -28,6 +28,8 @@ class CategoryDecorator < Draper::Decorator
   end
 
   def related_links_title
+    return if object.contents.blank?
+
     h.heading_tag(level: 2, class: 'related-links__heading') do
       I18n.t('articles.show.related_links.title_prefix', category: object.title)
     end

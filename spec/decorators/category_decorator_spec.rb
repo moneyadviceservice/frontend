@@ -47,11 +47,19 @@ RSpec.describe CategoryDecorator do
   describe '#related_links_title' do
     subject { decorator.related_links_title }
 
-    let(:category) { double(contents: [double]) }
-    let(:heading_html) { double }
+    context 'when category has content' do
+      let(:category) { double(contents: [double]) }
+      let(:heading_html) { double }
 
-    before { allow(helpers).to receive(:heading_tag) { heading_html } }
+      before { allow(helpers).to receive(:heading_tag) { heading_html } }
 
-    it { is_expected.to eq(heading_html) }
+      it { is_expected.to eq(heading_html) }
+    end
+
+    context 'when category has no content' do
+      let(:category) { double(contents: []) }
+
+      it { is_expected.to be_nil }
+    end
   end
 end

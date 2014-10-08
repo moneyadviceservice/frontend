@@ -3,6 +3,7 @@ ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'mas/development_dependencies/cucumber/env'
 require 'feature/testing'
+require 'email_spec/cucumber'
 
 I18n.available_locales = [:en, :cy]
 

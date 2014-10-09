@@ -13,7 +13,7 @@ module Core::Repository::CMS
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:get, "https://example.com/preview/#{id}.json").
+        stub_request(:get, "https://example.com/preview/#{I18n.locale}/#{id}.json").
           to_return(status: status, body: body, headers: headers)
       end
 

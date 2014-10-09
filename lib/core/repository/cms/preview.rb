@@ -6,7 +6,7 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('preview/%{id}.json' % { id: id })
+        response = connection.get('preview/%{locale}/%{id}.json' % { id: id, locale: I18n.locale })
         AttributeBuilder.build(response)
       rescue Core::Connection::Http::ResourceNotFound
         nil

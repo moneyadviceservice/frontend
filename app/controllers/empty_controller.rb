@@ -13,15 +13,6 @@ class EmptyController < ApplicationController
   end
   helper_method :optimizely_include_tag
 
-  def javascript_include_tag(path, options = {})
-  end
-  helper_method :javascript_include_tag
-
-  def content_for(name)
-    super if name != :javascripts
-  end
-  helper_method :content_for
-
   def raw(stringish)
   end
   helper_method :raw

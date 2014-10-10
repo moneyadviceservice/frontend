@@ -203,9 +203,11 @@
   <!--<![endif]-->
 <% end %>
 
-<%# START RequireJS load of application %>
-<%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
-<%# END RequireJS load of application %>
+<% unless hide_elements_irrelevant_for_third_parties? %>
+  <%# START RequireJS load of application %>
+  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
+  <%# END RequireJS load of application %>
+<% end %>
 
 <%= yield :javascripts %>
 </body>

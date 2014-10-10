@@ -8,6 +8,6 @@ module UI::Pages
     element :password, "input[name='user[password]']"
     element :submit, "input[value='Sign in']"
 
-    element :forgot_password, "a[href='/en/users/password/new']"
+    element :forgot_password, ".registration__links a"
   end
 end

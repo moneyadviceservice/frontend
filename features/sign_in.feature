@@ -42,13 +42,19 @@ Scenario: Sign out
   And   I should receive a "Signed out successfully." notification
 
 @enable-sign-in
+Scenario: User can't reset their password when the feature is disabled
+  When I attempt to sign in
+  And  I click on 'Forgot your password?'
+  Then I am told that the functionality is not implemented
+
+@enable-sign-in @enable-reset-passwords
 Scenario: Forgotten password
   Given I have an account
   And   I attempt to sign in
   When  I click on 'Forgot your password?'
   Then  I should be on a page instructing me of the next steps
 
-@enable-sign-in
+@enable-sign-in @enable-reset-passwords
 Scenario: Resetting password
     Given I have an account
     And   I attempt to sign in

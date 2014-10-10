@@ -24,10 +24,15 @@ Rails.application.routes.draw do
       end
     end
 
-    if Feature.active?(:sign_in)
+    if Feature.active?(:sign_in) && Feature.active?(:reset_passwords)
       devise_for :users, only: [:sessions, :passwords],
                          controllers: { sessions: 'sessions', passwords: 'passwords' }
-
+    elsif Feature.active?(:sign_in)
+      devise_for :users, only: [:sessions],
+                         controllers: { sessions: 'sessions' }
+      scope '/users' do
+        match '/password/new', to: not_implemented, as: 'new_password', via: 'get'
+      end
     else
       scope '/users' do
         match '/sign_in', to: not_implemented, via: 'get', as: 'new_user_session'

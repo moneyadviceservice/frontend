@@ -124,7 +124,7 @@ Rails.application.routes.draw do
           get 'pages_search_results', path: '/search_results'
           get 'pages_parent_category_page', path: '/parent_category_page'
           get 'pages_child_category_page', path: '/child_category_page'
-          get 'pages_landing', path: '/landing_page'
+          get 'pages_annuities_landing_page', path: '/annuities_landing_page'
           get 'pages_contact', path: '/contact'
           get 'pages_tool', path: '/tool'
         end

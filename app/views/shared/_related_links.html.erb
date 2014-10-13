@@ -1,8 +1,6 @@
 <% categories.each do |category| %>
   <div class="related-links">
-    <%= heading_tag(level: 2, class: 'related-links__heading') do %>
-      <%= t('articles.show.related_links.title_prefix', category: category.title) %>
-    <% end %>
+    <%= category.related_links_title %>
     <ul class="unstyled-list">
       <% category.contents.each do |article| %>
         <li class="related-links__link">

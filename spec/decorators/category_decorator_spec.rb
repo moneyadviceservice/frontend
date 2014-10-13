@@ -43,4 +43,23 @@ RSpec.describe CategoryDecorator do
       expect(subject.canonical_url).to eq('/categories/bob')
     end
   end
+
+  describe '#related_links_title' do
+    subject { decorator.related_links_title }
+
+    context 'when category has content' do
+      let(:category) { double(contents: [double]) }
+      let(:heading_html) { double }
+
+      before { allow(helpers).to receive(:heading_tag) { heading_html } }
+
+      it { is_expected.to eq(heading_html) }
+    end
+
+    context 'when category has no content' do
+      let(:category) { double(contents: []) }
+
+      it { is_expected.to be_nil }
+    end
+  end
 end

@@ -1,0 +1,11 @@
+Documentation:
+  Enabled: false
+Style/LineLength:
+  Max: 110
+AllCops:
+  Exclude:
+  - 'db/**/*'
+  - 'config/**/*'
+  - 'script/**/*'
+  - 'spec/spec_helper.rb'
+  - 'vendor/**/*'

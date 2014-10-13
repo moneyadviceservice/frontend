@@ -13,13 +13,13 @@ class EmptyController < ApplicationController
   end
   helper_method :optimizely_include_tag
 
-  def raw(stringish)
+  def raw(_stringish)
   end
   helper_method :raw
 
   def render(*args)
     super
-    root = "#{request.protocol}#{request.host_with_port.sub(/:80$/, "")}/"
+    root = "#{request.protocol}#{request.host_with_port.sub(/:80$/, '')}/"
     response.body = response.body.gsub(%r{href=\"/}, "href=\"#{root}")
   end
 end

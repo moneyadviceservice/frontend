@@ -2,7 +2,7 @@ When(/^I view the Car Cost Tool in (.*)$/) do |language|
   locale = language_to_locale(language).to_sym
   paths = {
     en:  "/en/tools/#{ToolMountPoint::CarCostTool::EN_ID}",
-    cy:  "/cy/tools/#{ToolMountPoint::CarCostTool::CY_ID}",
+    cy:  "/cy/tools/#{ToolMountPoint::CarCostTool::CY_ID}"
   }
 
   VCR.use_cassette('car_cost_tool/get_manufacturers') do

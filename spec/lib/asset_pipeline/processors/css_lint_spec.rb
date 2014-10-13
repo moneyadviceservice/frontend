@@ -16,7 +16,7 @@ module AssetPipeline
         end
 
         context 'when css is valid' do
-          let(:css) { "body { background: red; }" }
+          let(:css) { 'body { background: red; }' }
 
           it 'returns the css without modifications' do
             expect(subject.evaluate(context, locals)).to eq(css)
@@ -24,7 +24,7 @@ module AssetPipeline
         end
 
         context 'when css lint report errors' do
-          let(:css) { "p { color: red !important; }" }
+          let(:css) { 'p { color: red !important; }' }
           let(:formatted_errors) { double }
 
           before do
@@ -61,7 +61,7 @@ module AssetPipeline
 
         context 'when the file is outside the assets directory' do
           let(:pathname) { double(to_s: File.join(Rails.root, 'vendor', 'assets', 'stylesheets', 'foo.css')) }
-          let(:css) { "p { color: red !important; }" }
+          let(:css) { 'p { color: red !important; }' }
 
           it 'does not lint the file' do
             expect(CsslintRuby).not_to receive(:run)

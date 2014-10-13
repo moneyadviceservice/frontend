@@ -1,11 +1,11 @@
-RSpec.describe CookieNoticeAcceptancesController, :type => :controller do
+RSpec.describe CookieNoticeAcceptancesController, type: :controller do
   describe 'POST create' do
     let(:locale) { 'en' }
     let(:referrer) { '/foo/bar' }
     let(:expected_cookie_name) { '_cookie_notice' }
     let(:expected_cookie_value) { 'y' }
 
-    before { request.env["HTTP_REFERER"] = referrer }
+    before { request.env['HTTP_REFERER'] = referrer }
 
     context 'the cookie' do
       let(:cookie_jar_chain) { double }

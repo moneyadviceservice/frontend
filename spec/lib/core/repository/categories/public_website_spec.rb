@@ -12,7 +12,7 @@ RSpec.describe Core::Repository::Categories::PublicWebsite do
     subject { described_class.new.all }
 
     before do
-      stub_request(:get, "https://example.com/en/categories.json").
+      stub_request(:get, 'https://example.com/en/categories.json').
         to_return(status: status, body: body, headers: {})
     end
 

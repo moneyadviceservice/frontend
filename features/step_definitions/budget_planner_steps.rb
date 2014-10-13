@@ -2,7 +2,7 @@ When(/^I view the Budget Planner in (.*)$/) do |language|
   locale = language_to_locale(language).to_sym
   paths = {
     en:  "/en/tools/#{ToolMountPoint::BudgetPlanner::EN_ID}",
-    cy:  "/cy/tools/#{ToolMountPoint::BudgetPlanner::CY_ID}",
+    cy:  "/cy/tools/#{ToolMountPoint::BudgetPlanner::CY_ID}"
   }
 
   visit paths[locale]

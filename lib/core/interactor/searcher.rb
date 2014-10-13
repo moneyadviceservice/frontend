@@ -40,7 +40,7 @@ module Core
 
     def page=(new_page)
       @page = if new_page > 0
-        [new_page, PAGE_LIMIT].min
+                [new_page, PAGE_LIMIT].min
       else
         DEFAULT_PAGE
       end

@@ -22,7 +22,7 @@ class OptimizelyScript
   end
 
   def script_tag
-    %{<script src="#{url}"></script>}
+    %(<script src="#{url}"></script>)
   end
 
   def url

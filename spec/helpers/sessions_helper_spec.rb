@@ -8,7 +8,7 @@ RSpec.describe SessionsHelper do
 
     context 'when overwritten by session' do
       it 'returns custom title' do
-        I18n.backend.store_translations :en, {test: {title: 'hello'}}
+        I18n.backend.store_translations :en, test: { title: 'hello' }
         session['authentication_sign_in_title'] = 'test.title'
         expect(helper.authentication_sign_in_title).to eql('hello')
       end
@@ -22,7 +22,7 @@ RSpec.describe SessionsHelper do
 
     context 'when overwritten by session' do
       it 'returns custom title' do
-        I18n.backend.store_translations :en, {test: {title: 'hi'}}
+        I18n.backend.store_translations :en, test: { title: 'hi' }
         session['authentication_registration_title'] = 'test.title'
         expect(helper.authentication_registration_title).to eql('hi')
       end

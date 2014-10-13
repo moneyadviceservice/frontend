@@ -26,7 +26,7 @@ module Core
       let(:url) { 'www.example.com' }
       let(:hreflang) { 'cy' }
 
-      before { subject.alternates=([{ title: alternate_title, url: url, hreflang: hreflang }]) }
+      before { subject.alternates = ([{ title: alternate_title, url: url, hreflang: hreflang }]) }
 
       it 'assigns alternate title' do
         expect(subject.alternates.first.title).to eq(alternate_title)

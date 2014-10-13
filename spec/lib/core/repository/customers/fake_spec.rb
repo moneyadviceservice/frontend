@@ -10,7 +10,7 @@ module Core
       end
 
       context 'when the customer exists' do
-        let(:email){ 'phil@example.com' }
+        let(:email) { 'phil@example.com' }
 
         before :each do
           user = User.new(first_name: 'exists', email: email)
@@ -23,7 +23,7 @@ module Core
     end
 
     describe '#create' do
-      let(:first_name){ 'Phil' }
+      let(:first_name) { 'Phil' }
 
       it 'creates the customer' do
         user = User.new(first_name: first_name)
@@ -43,14 +43,14 @@ module Core
           customer_id = subject.create(user)
           user.customer_id = customer_id
 
-          expect{ subject.create(user) }.to raise_error
+          expect { subject.create(user) }.to raise_error
         end
       end
     end
 
     describe '#update' do
-      let(:old_first_name){ 'Phil' }
-      let(:new_first_name){ 'Philip' }
+      let(:old_first_name) { 'Phil' }
+      let(:new_first_name) { 'Philip' }
 
       it 'updates the customer' do
         user = User.new(first_name: old_first_name)
@@ -67,7 +67,7 @@ module Core
         it 'throws an exception' do
           customer = Customer.new('phil', first_name: old_first_name)
 
-          expect{ subject.update(customer) }.to raise_error('does not exist')
+          expect { subject.update(customer) }.to raise_error('does not exist')
         end
       end
     end

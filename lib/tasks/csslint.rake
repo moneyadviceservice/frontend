@@ -1,5 +1,5 @@
 desc 'Run csslint on all css assets'
-task :csslint => :environment do
+task csslint: :environment do
   # Prevent linting as part of the asset pipeline
   Rails.application.assets.instance_variable_get('@postprocessors')['text/css'].delete(AssetPipeline::Processors::CssLint)
 
@@ -19,7 +19,7 @@ task :csslint => :environment do
         errors.each do |error|
           puts "  line: #{error['line']}, col: #{error['col']}, message: #{error['message']}: #{error['evidence']}"
           puts "  rule: #{error['rule']['name']}: #{error['rule']['desc']}"
-          puts "----------"
+          puts '----------'
         end
       else
         puts '- no errors'

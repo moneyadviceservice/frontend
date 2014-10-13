@@ -1,4 +1,4 @@
-RSpec.describe HomeController, :type => :controller do
+RSpec.describe HomeController, type: :controller do
   describe 'GET show' do
     specify do
       get :show, locale: :en

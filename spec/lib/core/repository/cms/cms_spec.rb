@@ -29,7 +29,7 @@ module Core::Repository::CMS
         end
 
         it 'returns the meta description' do
-          expect(repository.find(id)['description']).to eq("meta description")
+          expect(repository.find(id)['description']).to eq('meta description')
         end
       end
 

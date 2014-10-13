@@ -22,7 +22,7 @@ module Core
       context 'when the repository returns data' do
         let(:title) { 'The news article' }
         let(:description) { 'The description' }
-        let(:body) { '<h1>The news article</h1><p>Lorem ipsum dolor sit amet</p>'}
+        let(:body) { '<h1>The news article</h1><p>Lorem ipsum dolor sit amet</p>' }
 
         let(:data) do
           { title: title, description: description, body: body }

@@ -8,14 +8,14 @@ class RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  def build_resource(hash=nil)
+  def build_resource(hash = nil)
     hash[:accept_terms_conditions] = true if hash
     super(hash)
   end
 
   private
 
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(_resource)
     session[:user_return_to] || root_path
   end
 

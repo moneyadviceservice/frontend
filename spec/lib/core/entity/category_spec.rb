@@ -2,10 +2,10 @@ module Core
   RSpec.describe Category do
     subject { described_class.new(double, attributes) }
 
-    let(:attributes) { { title:       double,
-                         parent_id:   double,
-                         description: double,
-                         contents:    double } }
+    let(:attributes) do { title:       double,
+                          parent_id:   double,
+                          description: double,
+                          contents:    double } end
 
     it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents) }
     it { is_expected.to validate_presence_of(:title) }

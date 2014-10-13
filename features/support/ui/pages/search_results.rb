@@ -7,10 +7,10 @@ module UI::Pages
   class SearchResults < UI::Page
     set_url '{/locale}/search'
 
-    element  :robots_tag, :xpath, "//meta[@name='robots']", visible: false
-    element  :spelling_suggestion, '.t-spelling-suggestion'
-    element  :corrected_query, '.t-corrected-query'
+    element :robots_tag, :xpath, "//meta[@name='robots']", visible: false
+    element :spelling_suggestion, '.t-spelling-suggestion'
+    element :corrected_query, '.t-corrected-query'
     elements :results, '.search-results__item'
-    section  :pagination, UI::Sections::Pagination, '.pagination'
+    section :pagination, UI::Sections::Pagination, '.pagination'
   end
 end

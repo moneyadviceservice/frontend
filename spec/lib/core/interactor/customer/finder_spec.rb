@@ -7,7 +7,7 @@ module Core
       RSpec.describe Finder do
         describe 'call' do
           context 'when customer exists' do
-            subject{ described_class.new('known') }
+            subject { described_class.new('known') }
 
             let(:data) do
               {
@@ -36,7 +36,7 @@ module Core
           end
 
           context 'when customer does not exist' do
-            subject{ described_class.new('unknown') }
+            subject { described_class.new('unknown') }
 
             before do
               allow(Registry::Repository).to receive(:[]).with(:customer) do

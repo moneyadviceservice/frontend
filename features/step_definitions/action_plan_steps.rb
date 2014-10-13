@@ -29,7 +29,7 @@ Then(/^the action plan should have a canonical tag for that language version$/) 
 end
 
 Then(/^the action plan page should have alternate tags for the supported locales$/) do
-  expected_hreflangs = ["en-GB", "cy-GB"]
+  expected_hreflangs = ['en-GB', 'cy-GB']
   expected_hrefs = I18n.available_locales.map do |locale|
     action_plan_url(id: action_plan(locale).id, locale: locale, protocol: 'https', host: 'www.moneyadviceservice.org.uk')
   end

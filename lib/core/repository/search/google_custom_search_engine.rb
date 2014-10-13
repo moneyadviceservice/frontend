@@ -32,7 +32,6 @@ module Core::Repository
       def localized_cx
         send("cx_#{I18n.locale}")
       end
-
     end
   end
 end

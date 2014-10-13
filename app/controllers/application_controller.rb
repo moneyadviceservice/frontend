@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   helper_method :parent_template
 
   def not_found
-    raise ActionController::RoutingError.new('Not Found')
+    fail ActionController::RoutingError.new('Not Found')
   end
 
   def cookies_not_accepted?

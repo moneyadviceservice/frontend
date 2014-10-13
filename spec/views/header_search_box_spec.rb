@@ -29,4 +29,3 @@ RSpec.describe 'shared/_header', type: :view do
     end
   end
 end
-

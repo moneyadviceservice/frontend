@@ -10,4 +10,3 @@ module CampaignPage
     end
   end
 end
-

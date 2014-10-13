@@ -12,14 +12,14 @@ RSpec.describe Core::Repository::Cache do
 
   describe '#all' do
     it 'uses the correct cache key' do
-      expect(cache).to receive(:fetch).with("en/r_spec/mocks/instance_verifying_double/all")
+      expect(cache).to receive(:fetch).with('en/r_spec/mocks/instance_verifying_double/all')
       subject.all
     end
 
     context 'when the cache key does not exist' do
       before do
         allow(repository).to receive(:all).and_return(contents)
-        allow(cache).to receive(:fetch) do |key, &block|
+        allow(cache).to receive(:fetch) do |_key, &block|
           block.call
         end
       end
@@ -54,14 +54,14 @@ RSpec.describe Core::Repository::Cache do
     let(:id) { 'the-id' }
 
     it 'uses the correct cache key' do
-      expect(cache).to receive(:fetch).with("en/r_spec/mocks/instance_verifying_double/find/the-id")
+      expect(cache).to receive(:fetch).with('en/r_spec/mocks/instance_verifying_double/find/the-id')
       subject.find(id)
     end
 
     context 'when the cache key does not exist' do
       before do
         allow(repository).to receive(:find).with(id).and_return(contents)
-        allow(cache).to receive(:fetch) do |key, &block|
+        allow(cache).to receive(:fetch) do |_key, &block|
           block.call
         end
       end

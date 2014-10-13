@@ -6,7 +6,7 @@ module Core
       let!(:user) do
         FactoryGirl.create :user
       end
-      subject{ described_class.new user }
+      subject { described_class.new user }
 
       describe '#call' do
         it 'updates the user' do

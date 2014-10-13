@@ -2,14 +2,14 @@ require 'spec_helper'
 
 module Converters
   RSpec.describe UserToCustomer do
-    let(:user){ User.new(attributes) }
+    let(:user) { User.new(attributes) }
     let(:attributes) do
       {
         first_name: 'Phil',
         customer_id: 'customer_123'
       }
     end
-    subject{ described_class.new(user) }
+    subject { described_class.new(user) }
 
     describe '#call' do
       it 'returns a customer' do

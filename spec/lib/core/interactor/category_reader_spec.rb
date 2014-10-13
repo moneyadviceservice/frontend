@@ -53,7 +53,7 @@ module Core
       end
 
       context 'when the returned category contains sub-categories, action plans and articles' do
-        let(:contents) { %w{article_hash action_plan_hash category_hash}.map(&method(:build)) }
+        let(:contents) { %w(article_hash action_plan_hash category_hash).map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, contents: contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }

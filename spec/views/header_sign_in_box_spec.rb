@@ -30,4 +30,3 @@ RSpec.describe 'shared/_authentication', type: :view do
     specify { expect(rendered).to include(t('authentication.my_account')) }
   end
 end
-

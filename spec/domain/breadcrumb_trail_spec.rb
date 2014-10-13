@@ -29,7 +29,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     context 'and it exists in more than one category' do
       before do
-        expect(article).to receive(:categories).and_return([double , double]).at_least(:once)
+        expect(article).to receive(:categories).and_return([double, double]).at_least(:once)
       end
 
       it { is_expected.to be_empty }
@@ -78,7 +78,6 @@ RSpec.describe BreadcrumbTrail, '.build' do
     specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title, NewsCategory.new.title]) }
   end
 end
-
 
 RSpec.describe BreadcrumbTrail, '.home' do
   subject { described_class.home }

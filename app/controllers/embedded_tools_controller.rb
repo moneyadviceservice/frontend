@@ -1,6 +1,5 @@
 class EmbeddedToolsController < ApplicationController
-
-protected
+  protected
 
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
@@ -22,7 +21,7 @@ protected
 
     # Remove the locale and tool_id as we've dealt with those in the script_name.
     # (And if we don't they'll be added to the query string.)
-    new_params.delete_if { |key, _| ['locale', 'tool_id'].include?(key) }
+    new_params.delete_if { |key, _| %w(locale tool_id).include?(key) }
 
     url = url_for(new_params)
 
@@ -38,7 +37,7 @@ protected
   def alternate_options
     {
       "#{params[:locale]}-GB" => request.url,
-      "#{alternate_locale }-GB"=> alternate_url
+      "#{alternate_locale }-GB" => alternate_url
     }
   end
 
@@ -77,5 +76,4 @@ protected
   end
 
   helper_method :display_category_directory?
-
 end

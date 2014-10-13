@@ -13,7 +13,7 @@ RSpec.describe Faraday::Request::HostHeader do
   end
 
   before do
-    stub_const('ENV', { 'FARADAY_HOST' => host })
+    stub_const('ENV',  'FARADAY_HOST' => host)
   end
 
   context "when ENV['FARADAY_HOST']" do

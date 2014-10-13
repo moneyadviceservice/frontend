@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe User, :type => :model do
+RSpec.describe User, type: :model do
   let(:attributes) do
     { email:                 'david@example.com',
       password:              'password',
@@ -9,10 +9,10 @@ RSpec.describe User, :type => :model do
     }
   end
 
-  subject{ described_class.new(attributes) }
+  subject { described_class.new(attributes) }
 
   describe '#fake_send_confirmation_email' do
-    it "sends a fake confirmation email when user is saved" do
+    it 'sends a fake confirmation email when user is saved' do
       subject.save!
       expect(subject.confirmation_sent_at).to_not be_nil
     end
@@ -87,7 +87,7 @@ RSpec.describe User, :type => :model do
       user = FactoryGirl.create(:user)
       user = User.first
       user.first_name = 'Philip'
-      expect{ user.save! }.to_not raise_error
+      expect { user.save! }.to_not raise_error
     end
   end
 
@@ -99,7 +99,7 @@ RSpec.describe User, :type => :model do
   describe 'callbacks' do
     describe 'before create' do
       it 'creates the CRM customer' do
-        expect{ subject.save }.to change{ Core::Registry::Repository[:customer].customers.size }.by(1)
+        expect { subject.save }.to change { Core::Registry::Repository[:customer].customers.size }.by(1)
       end
     end
   end
@@ -121,7 +121,7 @@ RSpec.describe User, :type => :model do
 
     context 'when user is in crm and active' do
       it 'returns true' do
-        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?){ true }
+        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { true }
         subject.active = 1
         expect(subject.valid_for_authentication?).to be_truthy
       end

@@ -9,8 +9,8 @@ Given(/^I view the home page in (.*)$/) do |language|
 end
 
 When(/^I choose to view the Welsh version$/) do
-  expect(home_page.footer_secondary.welsh_link[:lang]).
-    to eq('cy')
+  expect(home_page.footer_secondary.welsh_link[:lang])
+    .to eq('cy')
 
   home_page.footer_secondary.welsh_link.click
 end
@@ -20,8 +20,8 @@ Then(/^I should see the Money Advice Service brand identity$/) do
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
-  expect(home_page.trust_banner.heading).
-    to have_content(I18n.t('home.show.strapline'))
+  expect(home_page.trust_banner.heading)
+    .to have_content(I18n.t('home.show.strapline'))
 end
 
 Then(/^I should see directory items$/) do
@@ -38,11 +38,11 @@ end
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do
   expect(home_page.contact_heading).to have_content(I18n.t('contact_panels.call_us.title'))
 
-  expect(home_page.contact_introduction).
-    to have_content(strip_tags(I18n.t('contact_panels.call_us.description')))
+  expect(home_page.contact_introduction)
+    .to have_content(strip_tags(I18n.t('contact_panels.call_us.description')))
 
-  expect(home_page.contact_number).
-    to have_content(I18n.t('contact.telephone_number'))
+  expect(home_page.contact_number)
+    .to have_content(I18n.t('contact.telephone_number'))
 end
 
 Then(/^I should be taken to that social media profile$/) do
@@ -58,14 +58,14 @@ Then(/^I should be see links to MAS social media profiles$/) do
   expect(twitter_link[:lang]).to eq('en')
   expect(youtube_link[:lang]).to eq('en')
 
-  expect(facebook_link[:href]).
-    to eq('https://www.facebook.com/MoneyAdviceService?ref=mas')
+  expect(facebook_link[:href])
+    .to eq('https://www.facebook.com/MoneyAdviceService?ref=mas')
 
-  expect(twitter_link[:href]).
-    to eq('https://twitter.com/YourMoneyAdvice')
+  expect(twitter_link[:href])
+    .to eq('https://twitter.com/YourMoneyAdvice')
 
-  expect(youtube_link[:href]).
-    to eq('https://www.youtube.com/user/MoneyAdviceService')
+  expect(youtube_link[:href])
+    .to eq('https://www.youtube.com/user/MoneyAdviceService')
 end
 
 Then(/^the home page should have a canonical tag for that language version$/) do
@@ -75,7 +75,7 @@ Then(/^the home page should have a canonical tag for that language version$/) do
 end
 
 Then(/^the home page should have alternate tags for the supported locales$/) do
-  expected_hreflangs = ["en-GB", "cy-GB"]
+  expected_hreflangs = ['en-GB', 'cy-GB']
   expected_hrefs = []
   I18n.available_locales.each { |locale| expected_hrefs << root_url(locale: locale) }
 

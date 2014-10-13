@@ -25,7 +25,7 @@ Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new
 
 Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
 
-Around('@fake-articles') do |scenario, block|
+Around('@fake-articles') do |_scenario, block|
   @real_article_repository = Core::Registry::Repository[:article]
   block.call
   Core::Registry::Repository[:article] = @real_article_repository
@@ -34,7 +34,7 @@ end
 Around do |scenario, block|
   enabled_feature_tag = /^@enable-/
   enabled_tags     = scenario.source_tag_names.grep(enabled_feature_tag)
-  enabled_features = enabled_tags.map{|t| t.gsub(enabled_feature_tag, '').underscore.to_sym}
+  enabled_features = enabled_tags.map { |t| t.gsub(enabled_feature_tag, '').underscore.to_sym }
 
   if !enabled_features.empty?
     enable_features(enabled_features) do

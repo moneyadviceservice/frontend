@@ -33,7 +33,7 @@ Then(/^I should see the search box$/) do
 end
 
 Then(/^I should see the search page$/) do
-  expected_heading = ""
+  expected_heading = ''
   expected_title   = '%s - %s' % [I18n.t('search_results.index.document_title'),
                                   I18n.t('layouts.base.title')]
 

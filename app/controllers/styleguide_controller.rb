@@ -66,7 +66,6 @@ class StyleguideController < ApplicationController
   end
 
   def pages_tool
-
     def contact_panels_border_top?
       true
     end
@@ -149,18 +148,18 @@ class StyleguideController < ApplicationController
         title:    'Insurance',
         object:   { contents: [] },
         contents: [
-                    { title: 'Choosing home insurance cover' },
-                    { title: 'Do I need car insurance' },
-                    { title: 'Making a claim' }
-                  ]
+          { title: 'Choosing home insurance cover' },
+          { title: 'Do I need car insurance' },
+          { title: 'Making a claim' }
+        ]
       },
       {
         title:    'Debt',
         object:   { contents: [] },
         contents: [
-                    { title: 'Avoiding the bailiff' },
-                    { title: 'Does money grow on trees - we investigate' }
-                  ]
+          { title: 'Avoiding the bailiff' },
+          { title: 'Does money grow on trees - we investigate' }
+        ]
       }
     ].map(&:to_ostruct)
   end
@@ -226,9 +225,9 @@ class StyleguideController < ApplicationController
 
   def news
     [{
-      title: "Women are feeling the financial squeeze more than men",
-      date: "10 Jun 2014",
-      description: "Four in ten women feel financially worse off than they did a year ago, according to a new report from SavvyWoman."
+      title: 'Women are feeling the financial squeeze more than men',
+      date: '10 Jun 2014',
+      description: 'Four in ten women feel financially worse off than they did a year ago, according to a new report from SavvyWoman.'
     }].map(&:to_ostruct)
   end
 

@@ -1,6 +1,6 @@
 require_relative './shared_examples/get_article'
 
-RSpec.describe ArticlesPreviewController, :type => :controller do
+RSpec.describe ArticlesPreviewController, type: :controller do
   describe 'GET show' do
     context 'when preview exists for an article' do
       before do

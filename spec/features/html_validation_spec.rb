@@ -1,4 +1,4 @@
-RSpec.describe 'HTML validation', :type => :feature do
+RSpec.describe 'HTML validation', type: :feature do
   describe 'home page' do
     before { visit root_path(locale: locale) }
 

@@ -39,8 +39,8 @@ RSpec.describe Core::Repository::Search::ContentService do
         let(:source_body) { JSON.parse(body) }
 
         context 'for content types of results' do
-          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'action-plan' } }
-          let(:reformatted_data) { subject.detect { |result| result[:type] == 'action-plan' } }
+          let(:source_data) { source_body['searchResults'].find { |result| result['type'] == 'action-plan' } }
+          let(:reformatted_data) { subject.find { |result| result[:type] == 'action-plan' } }
 
           it 'maps the id correctly' do
             expect(reformatted_data[:id]).to eql source_data['id']
@@ -60,8 +60,8 @@ RSpec.describe Core::Repository::Search::ContentService do
         end
 
         context 'for category results' do
-          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'category' } }
-          let(:reformatted_data) { subject.detect { |result| result[:type] == 'category' } }
+          let(:source_data) { source_body['searchResults'].find { |result| result['type'] == 'category' } }
+          let(:reformatted_data) { subject.find { |result| result[:type] == 'category' } }
 
           it 'maps the id correctly' do
             expect(reformatted_data[:id]).to eql source_data['id']

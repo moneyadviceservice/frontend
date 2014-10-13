@@ -15,7 +15,7 @@ module World
         when 'cy', 'welsh', 'Welsh'
           fixture 'articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd.yml'
         else
-          raise ArgumentError, "invalid article locale `#{locale}'"
+          fail ArgumentError, "invalid article locale `#{locale}'"
       end
     end
 
@@ -28,7 +28,7 @@ module World
         when 'cy', 'welsh', 'Welsh'
           fixture 'articles/newidiadau-i-fudd-dal-plant-o-2013-ymlaen.yml'
         else
-          raise ArgumentError, "invalid article locale `#{locale}'"
+          fail ArgumentError, "invalid article locale `#{locale}'"
       end
     end
 
@@ -43,7 +43,7 @@ module World
         when 'cy', 'welsh', 'Welsh'
           fixture 'articles/os-ywch-babi-yn-farw-anedig.yml'
         else
-          raise ArgumentError, "invalid article locale `#{locale}'"
+          fail ArgumentError, "invalid article locale `#{locale}'"
       end
     end
 

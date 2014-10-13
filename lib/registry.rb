@@ -8,7 +8,7 @@ class Registry
 
     def [](type)
       objects.fetch(type) do
-        raise Error, "`%s' not registered" % type
+        fail Error, "`%s' not registered" % type
       end
     end
 

@@ -1,4 +1,4 @@
-RSpec.describe 'Request blacklisted resource', :type => :request do
+RSpec.describe 'Request blacklisted resource', type: :request do
   %w(about-our-debt-work am-ein-gwaith-dyled
      debt-publications cyhoeddiadau-ar-ddyledion
      partners-overview-parhub

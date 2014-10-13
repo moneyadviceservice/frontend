@@ -1,4 +1,4 @@
-RSpec.describe 'Authentication routing', :type => :routing do
+RSpec.describe 'Authentication routing', type: :routing do
   %w(en cy).each do |locale|
     it "routes GET /#{locale}/users/sign_in to the home controller" do
       expect(get("/#{locale}/users/sign_in")).not_to be_routable

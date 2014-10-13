@@ -1,4 +1,4 @@
-RSpec.describe ArticleFeedbacksController, :type => :controller do
+RSpec.describe ArticleFeedbacksController, type: :controller do
   let(:article_id) { 'article-id' }
   let(:article) { double(id: article_id) }
   let(:article) { Core::Article.new(article_id) }

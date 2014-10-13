@@ -21,7 +21,7 @@ RSpec.describe OptimizelyScript do
         expect(File).to receive(:open).and_return(double(read: '{broken json}'))
       end
 
-      it { is_expected.to eq(%{<script src="/a/optimizely/.js"></script>}) }
+      it { is_expected.to eq(%(<script src="/a/optimizely/.js"></script>)) }
     end
 
     context 'with version file' do
@@ -30,7 +30,7 @@ RSpec.describe OptimizelyScript do
         expect(File).to receive(:open).and_return(double(read: JSON[data]))
       end
 
-      it { is_expected.to eq(%{<script src="/a/optimizely/#{digest}.js"></script>}) }
+      it { is_expected.to eq(%(<script src="/a/optimizely/#{digest}.js"></script>)) }
     end
   end
 end

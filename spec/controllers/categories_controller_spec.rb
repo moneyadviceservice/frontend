@@ -1,4 +1,4 @@
-RSpec.describe CategoriesController, :type => :controller do
+RSpec.describe CategoriesController, type: :controller do
   before do
     allow(Core::CategoryTreeReader).to receive(:new) do
       instance_double(Core::CategoryTreeReader, call: double)

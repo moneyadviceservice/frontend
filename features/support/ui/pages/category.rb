@@ -11,7 +11,7 @@ module UI::Pages
 
     # can have one of the following two
     sections :child_categories, UI::Sections::ChildCategory, '.category-detail'
-    elements  :items, 'ol li a'
+    elements :items, 'ol li a'
     element :breadcrumbs, '.l-context-bar'
   end
 end

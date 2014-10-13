@@ -1,4 +1,4 @@
-RSpec.describe 'Styleguide', :type => :request do
+RSpec.describe 'Styleguide', type: :request do
   let(:repository) { Core::Repository::Categories::Fake.new }
 
   routes = Rails.application.routes.routes.map do |route|

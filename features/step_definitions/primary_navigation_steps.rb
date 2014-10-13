@@ -13,7 +13,7 @@ Given (/^I am on an (article|action_plan) that lives in 2 categories in differen
   send("browse_to_#{entity}", fixture)
 end
 
-Then (/^I should see the (article|action_plan)'s primary navigation with (the parent category|both parent categories) expanded$/) do |entity, num_parent_categories|
+Then (/^I should see the (article|action_plan)'s primary navigation with (the parent category|both parent categories) expanded$/) do |entity, _num_parent_categories|
   entity_page = send("#{entity}_page")
   current_entity = send("current_#{entity}")
 
@@ -36,7 +36,7 @@ Then (/^I should see the (article|action_plan)'s primary navigation with (the pa
   expect(selected_categories.sort).to eq(parent_categories.sort)
 end
 
-And (/^the relevant (article|action_plan)'s child categor(y|ies) selected$/) do |entity, plural|
+And (/^the relevant (article|action_plan)'s child categor(y|ies) selected$/) do |entity, _plural|
   entity_page = send("#{entity}_page")
   current_entity = send("current_#{entity}")
 

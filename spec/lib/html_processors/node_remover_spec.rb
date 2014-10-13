@@ -4,14 +4,14 @@ require 'nokogiri'
 RSpec.describe HTMLProcessor::NodeRemover do
   subject(:processor) { described_class.new(html) }
 
-  let(:html) {
+  let(:html) do
     <<-EOHTML
 <p>
   my paragraph <span id='foo'>is</span> super <strong>awesome</strong>
   and <strong class='super-strong'>awesome</strong>
 </p>
     EOHTML
-  }
+  end
 
   describe '.process' do
     subject(:processed_html) { processor.process(*args) }

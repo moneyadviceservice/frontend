@@ -2,7 +2,6 @@ module AssetPipeline
   module Processors
     class JsHint < Sprockets::Processor
       class ErrorsFound < StandardError
-
         attr_accessor :errors
 
         def initialize(errors)
@@ -10,8 +9,8 @@ module AssetPipeline
         end
 
         def to_s
-          "#{error_count} #{'error'.pluralize(error_count)} found on " +
-          "#{line_count} #{'line'.pluralize(line_count)}. " +
+          "#{error_count} #{'error'.pluralize(error_count)} found on " \
+          "#{line_count} #{'line'.pluralize(line_count)}. " \
           "Run 'rake jshint' for a complete report."
         end
 
@@ -22,7 +21,7 @@ module AssetPipeline
         end
 
         def line_count
-          errors.collect { |e| e['line'] }.uniq.length
+          errors.map { |e| e['line'] }.uniq.length
         end
       end
     end

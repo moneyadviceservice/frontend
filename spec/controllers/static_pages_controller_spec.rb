@@ -1,4 +1,4 @@
-RSpec.describe StaticPagesController, :type => :controller do
+RSpec.describe StaticPagesController, type: :controller do
   describe 'GET show' do
     let(:categories) { [] }
     let(:parents) { [] }
@@ -45,7 +45,7 @@ RSpec.describe StaticPagesController, :type => :controller do
         subject { get :show, locale: I18n.locale, id: static_page.id }
 
         it 'renders the default template' do
-          expect(subject).to render_template("static_pages/show")
+          expect(subject).to render_template('static_pages/show')
         end
       end
     end

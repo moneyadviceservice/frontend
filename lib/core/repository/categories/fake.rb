@@ -27,13 +27,13 @@ module Core::Repository
             'type' => 'category',
             'parent_id' => 'category-1',
             'contents' => []
-          },{
+          }, {
             'id' => 'subcategory-2',
             'type' => 'category',
             'title' => 'Subcategory 2',
             'contents' => []
           }]
-        },{
+        }, {
           'id' => 'category-2',
           'type' => 'category',
           'title' => 'Category 2',

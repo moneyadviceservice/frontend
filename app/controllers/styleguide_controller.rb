@@ -141,6 +141,11 @@ class StyleguideController < ApplicationController
   def categories
     [
       {
+        title:    'Home',
+        object:   { contents: [] },
+        contents: []
+      },
+      {
         title:    'Insurance',
         object:   { contents: [] },
         contents: [

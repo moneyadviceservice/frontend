@@ -48,17 +48,17 @@ Around do |scenario, block|
   end
 end
 
-def enable_features(features, &block)
+def enable_features(features)
   if features.empty?
     yield
   else
-    Feature.run_with_activated(features.shift) do
-      enable_features(features, &block)
+    Feature.run_with_activated(features) do
+      yield
     end
   end
 end
 
-['@enable-sign-in', '@enable-registration'].each do |tag|
+['@enable-sign-in', '@enable-registration', '@enable-reset-passwords'].each do |tag|
   Around(tag) do |scenario, block|
     Feature.run_with_activated(:sign_in) do
       Devise.regenerate_helpers!

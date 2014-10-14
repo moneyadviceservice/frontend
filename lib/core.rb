@@ -109,7 +109,6 @@ module Core
 
     module Search
       autoload :ContentService, 'core/repository/search/content_service'
-      autoload :FakeContentService, 'core/repository/search/fake_content_service'
       autoload :GoogleCustomSearchEngine, 'core/repository/search/google_custom_search_engine'
     end
 

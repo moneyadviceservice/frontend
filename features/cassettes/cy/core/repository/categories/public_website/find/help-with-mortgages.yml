@@ -1,0 +1,253 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/help-with-mortgages.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Sep 2014 14:08:24 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      X-Runtime:
+      - '0.019554'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 14:08:25 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/help-with-mortgages.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Sep 2014 14:08:24 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 500 Internal Server Error
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      X-Runtime:
+      - '0.019554'
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 14:08:25 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/help-with-mortgages.json
+    body:
+      encoding: UTF-8
+      string: |-
+        500 Internal Server Error
+        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Sep 2014 14:08:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 732e14e3d86f185a61bc553f586d8b3a
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 30-Sep-2015 14:08:24 GMT; secure
+      - _session_id=732e14e3d86f185a61bc553f586d8b3a; path=/; secure; HttpOnly
+      - _web_tracking=ba0d9c359cc6159908d7842b87954422; path=/; expires=Wed, 30-Sep-2015
+        14:08:24 GMT; secure
+      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
+      X-Request-Id:
+      - b4bb5df7-faec-42c0-86b5-d4da14dfd0ca
+      X-Runtime:
+      - '0.028841'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-mortgages","title":"Cymorth gyda morgeisi","description":"Dechreuwch
+        arno gyda''n canllaw dechreuwyr i forgeisi, cael y fargen gywir, ac awgrymiadau
+        os ydych yn profi anawsterau wrth dalu.","parent_id":"homes-and-mortgages","contents":[{"id":"morgeisi-canllaw-i-ddechreuwyr","type":"guide","title":"Morgeisi
+        \u2013 canllaw i ddechreuwyr","description":"Mae morgeisi\u2019n gyfrifoldeb
+        ariannol mawr. Gwnewch yn si\u0175r eich bod yn deall beth rydych yn ei brynu
+        cyn ymrwymo"},{"id":"sut-i-ddewis-y-morgais-cywir","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Sut i ddewis y morgais cywir","description":"Dilynwch y
+        camau hyn i sicrhau eich bod yn dewis y morgais cywir i chi"},{"id":"cyfrifiannell-fforddiadwyedd-morgais","type":"tool","title":"Cyfrifiannell
+        fforddiadwyedd morgais","description":"Cyfrifiannell fforddiadwyedd morgais"},{"id":"ol-ddyledion-morgais-neu-broblemau-wrth-daluch-morgais","type":"guide","title":"\u00d4l-ddyledion
+        morgais neu broblemau wrth dalu''ch morgais","description":"Os oes gennych
+        chi \u00f4l-ddyledion ar eich morgais mae angen ichi weithredu ar unwaith.
+        Dilynwch yr awgrymiadau hyn i gael help ac i leihau costau"},{"id":"sut-i-gael-morgais-gyda-blaendal-bychan","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Cael morgais gyda blaendal isel","description":"Os ydych
+        chi''n cael trafferth casglu\u2019r blaendal, mae gennych nifer o opsiynau"},{"id":"amcangyfrifwch-gyfanswm-y-morgais-y-gallwch-ei-fforddio","type":"action_plan","title":"Cynllun
+        gweithredu - Amcangyfrifwch gyfanswm y morgais y gallwch ei fforddio","description":"Cyfrifwch
+        faint allwch chi fforddio ei fenthyca os ydych yn prynu cartref neu\u2019n
+        ail-forgeisio"},{"id":"morgeisi","type":"guide","title":"Tabl cymharu morgeisi","description":"Defnyddiwch
+        ein tablau cymharu ar morgeisi"},{"id":"dewis-morgais-sut-mae-cael-y-cynnig-iawn","type":"guide","title":"Cyngor
+        morgais: ble i fynd i gael y fargen orau ar forgais","description":"Yma cewch
+        wybod beth i chwilio amdano os ydych chi''n dewis morgais eich hun, a gweld
+        beth yw manteision defnyddio cynghorydd morgeisi"},{"id":"pam-ei-bod-yn-werth-ichi-adolygu-eich-morgais-yn-rheolaidd","type":"guide","title":"Pam
+        ei bod yn werth ichi adolygu eich morgais yn rheolaidd","description":"Dylech
+        fynd i''r arfer o adolygu eich cynnig morgais bob blwyddyn. Gallech arbed
+        ffortiwn wrth newid i gyfradd fwy cystadleuol"},{"id":"cyfrifiannell-morgais","type":"tool","title":"Cyfrifiannell
+        morgais","description":"Defnyddiwch y gyfrifiannell i ganfod faint y gallai\u2019ch
+        taliadau misol fod. Gall hyn eich helpu i weithio allan faint allwch chi fforddio\u2019i
+        fenthyca"},{"id":"cymorth-gan-y-llywodraeth-os-na-allwch-daluch-morgais","type":"guide","title":"Cymorth
+        gan y llywodraeth os na allwch dalu''ch morgais","description":"Efallai y
+        byddwch yn gymwys i gael help drwy gynlluniau''r llywodraeth fel y cynllun
+        Achub Morgeisi neu Cymorth ar gyfer Llog ar Forgais"},{"id":"ail-forgeisio-er-mwyn-lleihau-costau","type":"guide","title":"Ail-forgeisio
+        er mwyn lleihau costau","description":"Yma cewch wybod a oes modd ichi arbed
+        arian drwy newid benthyciwr \u2013 ond dylech chi ddeall anfanteision ail-forgeisio
+        er mwyn cael gwared \u00e2 dyled"},{"id":"cynydduch-morgais-cael-benthyciad-ychwanegol-ar-y-morgais","type":"guide","title":"Cynyddu''ch
+        morgais \u2013 cael benthyciad ychwanegol ar y morgais","description":"Manteision
+        ac anfanteision cynyddu''ch morgais i ariannu gwariant mawr \u2013 pryd mae
+        hynny''n beth doeth i''w wneud a phryd mae''n well osgoi hynny"},{"id":"a-ddylech-chi-glirioch-morgais-yn-gynnar","type":"guide","title":"A
+        ddylech chi glirio\u2019ch morgais yn gynnar?","description":"Clirio eich
+        morgais yn gynnar neu gadw eich cynilion? Byddwn ni\u2019n pwyso a mesur yr
+        opsiynau i\u2019ch helpu i benderfynu"},{"id":"gwyliau-talu-morgais","type":"guide","title":"Canllaw
+        ar gyfer cymryd seibiant o daliadau morgais","description":"Sut mae gwyliau
+        talu morgais yn gweithio, yr effaith ar y gost gyfan o fenthyca a\u2019r effaith
+        ar eich ffeil credyd"},{"id":"cyfrifo-a-ywn-werth-ail-forgeisio","type":"action_plan","title":"Cynllun
+        gweithredu - Cyfrifo a yw\u2019n werth ail-forgeisio","description":"Y cyfan
+        mae angen ichi ei ystyried wrth feddwl am newid benthycwyr morgais"},{"id":"dulliau-ad-dalu-morgais-llog-yn-unig","type":"guide","title":"Dulliau
+        ad-dalu morgais llog yn unig","description":"Os ydych yn meddwl am forgais
+        llog yn unig, bydd angen i chi ddangos bod gennych gynllun i\u2019w ad-dalu
+        i gyd"},{"id":"camau-nesaf-os-na-allwch-gael-morgais","type":"action_plan","title":"Cynllun
+        gweithredu - Camau nesaf os na allwch gael morgais","description":"Camau y
+        gallwch eu cymryd i\u2019ch helpu i gael morgais"},{"id":"gwnewch-gynllun-ad-dalu-llog-yn-unig","type":"action_plan","title":"Cynllun
+        Gweithredu - Cynlluniwch eich strategaeth i ad-dalu\u2019ch morgais llog yn
+        unig","description":"Dilynwch y camau hyn isod i roi eich cynllun ad-dalu
+        morgais llog yn unig mewn trefn"},{"id":"dogfennau-ffeithiau-allweddol-syn-esbonioch-morgais","type":"guide","title":"Dogfennau
+        ffeithiau allweddol sy''n esbonio''ch morgais","description":"Bwriad y dogfennau
+        Ffeithiau allweddol yw eich helpu i gymharu morgeisi''n hawdd a deall y math
+        o gyngor rydych yn ei gael a chost y cyngor hwnnw"},{"id":"beth-iw-wneud-os-cewch-eich-bygwth-ag-adfeddiannu","type":"guide","title":"Beth
+        i''w wneud os cewch eich bygwth ag adfeddiannu","description":"Beth i''w wneud
+        os oes arnoch chi arian i''ch benthyciwr morgais ac yn wynebu adfeddiannu"},{"id":"beth-iw-wneud-pan-fydd-pethaun-mynd-o-chwith-taliadau","type":"guide","title":"Beth
+        i\u2019w wneud pan fydd pethau\u2019n mynd o chwith \u2013 taliadau","description":"Camau
+        syml i osgoi problemau gyda thaliadau a throsglwyddiadau, a chyngor ar roi
+        trefn ar broblemau sy\u2019n codi"},{"id":"cam-werthu-ariannol-beth-iw-wneud-os-ydych-wedich-effeithio","type":"guide","title":"Cam-werthu
+        ariannol \u2013 beth i\u2019w wneud os ydych wedi\u2019ch effeithio","description":"A
+        gam-werthwyd cynnyrch ariannol i chi, fel yswiriant neu fuddsoddiad? Efallai
+        y bydd gennych achos i gwyno a chael digollediad"},{"id":"morgeisi-gwaddol-a-gamwerthwyd","type":"guide","title":"Morgeisi
+        gwaddol a gamwerthwyd","description":"Os ydych chi\u2019n meddwl bod morgais
+        gwaddol wedi ei gamwerthu i chi, ewch ati yn ddiymdroi \u2013 terfynau amser
+        a phroses hawlio iawndal"},{"id":"eich-rhestr-wirio-wrth-gymharu-morgeisi","type":"guide","title":"Eich
+        rhestr wirio wrth gymharu morgeisi","description":"Wrth ddefnyddio''r rhestr
+        wirio hon i gymharu morgeisi, rydych yn fwy tebygol o gael y morgais gorau
+        i chi"},{"id":"a-ddylech-chi-ordalu-eich-morgais","type":"video","title":"A
+        ddylech chi ordalu eich morgais?","description":"Os oes gennych chi arian
+        dros ben ar ddiwedd y mis, gwyliwch ein fideo i weld a allech elwa o ordalu
+        eich morgais"},{"id":"awgrymiadau-os-ydych-chin-cael-trafferth-cael-morgais","type":"guide","title":"Awgrymiadau
+        os ydych chi''n cael trafferth cael morgais","description":"Os ydych chi''n
+        ei chael yn anodd cael morgais, yma cewch rywfaint o awgrymiadau i''ch helpu
+        i wella''ch siawns"},{"id":"opsiynau-ad-dalu-morgais","type":"guide","title":"Esbonio
+        opsiynau ad-dalu morgais","description":"Ad-daliad, llog yn unig neu gyfun?
+        Y dewisiadau ad-dalu morgeisi gwahanol, sut maent yn gweithio a beth i fod
+        yn ofalus amdano"},{"id":"cyfraddau-llogau-morgeisi-y-mathau-gwahanol","type":"guide","title":"Deall
+        gwahanol fathau o forgeisi","description":"Trosolwg cyflym o\u2019r mathau
+        gwahanol o gyfraddau llog gan gynnwys manteision ac anfanteision"},{"id":"cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi","type":"guide","title":"Canllaw
+        i ffioedd a chostau morgeisi","description":"Pan fyddwch yn cymryd morgais,
+        nid ad-daliadau yw eich unig gostau morgais. Bydd angen i chi ystyried y gwahanol
+        ffioedd a chostau hefyd sydd ynghlwm \u00e2 phrynu cartref"},{"id":"nodweddion-arbennig-morgeisi","type":"guide","title":"Canllaw
+        i forgeisi gyda nodweddion arbennig","description":"Yma cewch wybod mwy am
+        nodweddion arbennig fel arian yn \u00f4l, gwrthbwyso (offsetting) a gordaliadau"},{"id":"yswiriant-a-werthir-gyda-morgeisi-chwiliwch-am-y-fargen-orau-yn-gyntaf","type":"guide","title":"Diogelu
+        eich hun a\u2019ch cartref: chwilio am yswiriant","description":"Chwiliwch
+        am y fargen orau os oes arnoch angen yswiriant wrth dynnu morgais allan \u2013
+        gallech gael un gwell yn rhatach yn rhywle arall"},{"id":"delio-a-diffyg-mewn-gwaddol","type":"guide","title":"Delio
+        \u00e2 diffyg mewn gwaddol","description":"Peidiwch ag anwybyddu diffyg mewn
+        morgais gwaddol \u2013 edrychwch ar eich dewisiadau"},{"id":"cyfrifiannell-torrin-ol","type":"tool","title":"Cyfrifiannell
+        torri''n \u00f4l","description":"I ble mae eich arian i gyd yn mynd? Gall
+        y Gyfrifiannell torri\u2019n \u00f4l eich helpu i weld ble gallwch chi arbed
+        arian ar bethau yr ydych yn eu prynu yn gyson"},{"id":"digollediad-os-ydych-wedi-colli-arian-trwy-gam-werthu","type":"guide","title":"Digollediad
+        os ydych wedi colli arian trwy gam-werthu","description":"Gwiriwch beth allech
+        ei gael gan y Cynllun Digolledu Gwasanaethau Ariannol os ydych wedi colli
+        arian wedi derbyn cyngor ariannol gwael"},{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"}]}'
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 14:08:26 GMT
+recorded_with: VCR 2.9.2

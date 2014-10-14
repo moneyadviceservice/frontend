@@ -24,7 +24,13 @@ protected
     # (And if we don't they'll be added to the query string.)
     new_params.delete_if { |key, _| ['locale', 'tool_id'].include?(key) }
 
-    url_for(new_params)
+    url = url_for(new_params)
+
+    if mount_point.respond_to? :alternate_url
+      mount_point.alternate_url(url, alternate_locale)
+    else
+      url
+    end
   end
 
   helper_method :alternate_url

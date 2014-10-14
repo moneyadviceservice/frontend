@@ -25,7 +25,7 @@ class ChatOpeningHoursDecorator < Draper::Decorator
 
   def periods
     @periods ||= begin
-      days.reduce([]) do |result, day|
+      days.each_with_object([]) do |day, result|
         if result.last && result.last.hours == week[day]
           result.last.days << day
         else

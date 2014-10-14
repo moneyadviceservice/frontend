@@ -5,15 +5,14 @@ class RelatedContent
 
     until category_contents.all?(&:empty?)
       category_contents.each do |contents|
-        related_content << item if item = contents.shift
+        item = contents.shift
+        related_content << item if item
         return related_content if related_content.count == limit
       end
     end
 
     related_content
   end
-
-  private
 
   def self.sibling_and_cousin_contents(item)
     item.categories.map do |category|

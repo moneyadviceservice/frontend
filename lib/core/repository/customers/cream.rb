@@ -38,22 +38,21 @@ module Core
           end
 
           def call
-            if customer_details
-              {
-                id:                      customer_details['mas_CustomerId'],
-                first_name:              customer_details['FirstName'],
-                last_name:               customer_details['LastName'],
-                email:                   customer_details['EMailAddress1'],
-                post_code:               customer_details['Address1_PostalCode'],
-                state:                   customer_details['StateCode']['Value'],
-                age_range:               age_range(customer_details['mas_AgeRange']['Value']),
-                gender:                  gender(customer_details['GenderCode']['Value']),
-                topics:                  customer_details['mas_FinancialInterest1'],
-                newsletter_subscription: !customer_details['DoNotBulkEMail'],
-                date_of_birth:           date_of_birth(customer_details),
-                status_code:             customer_details['StatusCode']['Value']
-              }
-            end
+            return unless customer_details
+
+            { id:                      customer_details['mas_CustomerId'],
+              first_name:              customer_details['FirstName'],
+              last_name:               customer_details['LastName'],
+              email:                   customer_details['EMailAddress1'],
+              post_code:               customer_details['Address1_PostalCode'],
+              state:                   customer_details['StateCode']['Value'],
+              age_range:               age_range(customer_details['mas_AgeRange']['Value']),
+              gender:                  gender(customer_details['GenderCode']['Value']),
+              topics:                  customer_details['mas_FinancialInterest1'],
+              newsletter_subscription: !customer_details['DoNotBulkEMail'],
+              date_of_birth:           date_of_birth(customer_details),
+              status_code:             customer_details['StatusCode']['Value']
+            }
           end
 
           private

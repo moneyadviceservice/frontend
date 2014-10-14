@@ -12,9 +12,7 @@ class OptimizelyScript
   end
 
   def config_file
-    @_config_file ||= if File.exist?(config_path)
-                        File.open(config_path, 'r')
-                      end
+    @_config_file ||= (File.open(config_path, 'r') if File.exist?(config_path))
   end
 
   def config_path

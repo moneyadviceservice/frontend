@@ -35,13 +35,13 @@ module Core
 
     def klass_for(type)
       klass_name = case type
-        when 'guide'
-          'Article'
-        when nil
-          'Category'
-        else
-          type.classify
-      end
+                   when 'guide'
+                     'Article'
+                   when nil
+                     'Category'
+                   else
+                     type.classify
+                   end
 
       if Core.const_defined? klass_name
         Core.const_get(klass_name)

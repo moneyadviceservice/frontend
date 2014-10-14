@@ -6,9 +6,8 @@ module Faraday
       @app.call(env).on_complete do
         response_headers = env[:response_headers]
 
-        if link_header = response_headers['Link']
-          response_headers['Link'] = LinkHeader.parse(link_header)
-        end
+        link_header = response_headers['Link']
+        response_headers['Link'] = (LinkHeader.parse(link_header) if link_header)
       end
     end
   end

@@ -20,6 +20,6 @@ class EmptyController < ApplicationController
   def render(*args)
     super
     root = "#{request.protocol}#{request.host_with_port.sub(/:80$/, '')}/"
-    response.body = response.body.gsub(%r{href=\"/}, "href=\"#{root}")
+    response.body = response.body.gsub(/href=\"\//, "href=\"#{root}")
   end
 end

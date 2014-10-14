@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
          :trackable,
          :timeoutable,
          :recoverable
-         # :confirmable,
-         # :invitable,
+  # :confirmable,
+  # :invitable,
 
   before_validation :uppercase_post_code
 
@@ -68,7 +68,8 @@ class User < ActiveRecord::Base
   end
 
   def fake_send_confirmation_email
-    # Temporary fix to trick Devise into thinking an email confirmation is sent to the user so they can sign in desktop site.
+    # Temporary fix to trick Devise into thinking an email confirmation is sent to the user
+    # so they can sign in desktop site.
     self.confirmation_sent_at = DateTime.now
   end
 end

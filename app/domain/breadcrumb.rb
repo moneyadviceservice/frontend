@@ -6,8 +6,8 @@ class Breadcrumb
   def initialize(category)
     @path, @title = if category.home? || category.news?
                       [category.path, category.title]
-    else
-      [category_path(category.id, locale: I18n.locale), category.title]
-    end
+                    else
+                      [category_path(category.id, locale: I18n.locale), category.title]
+                    end
   end
 end

@@ -1,9 +1,11 @@
 class BudgetPlannerController < EmbeddedToolsController
   protected
 
-  helper_method def incognito?
-                  params.key?(:incognito)
+  def incognito?
+    params.key?(:incognito)
   end
+
+  helper_method :incognito
 
   def category_id
     'managing-money'

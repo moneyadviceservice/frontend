@@ -20,9 +20,9 @@ class CategoryDecorator < Draper::Decorator
   def render_contents
     partial = if object.parent?
                 'child_categories'
-    elsif object.child?
+              elsif object.child?
                 'content_items'
-    end
+              end
 
     h.render partial, contents: contents
   end

@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/taking-control-of-debt.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Cadens-MacBook-Pro.local; caden; 94188) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 700e37d9-122f-4720-ba73-f60c08e2a524
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 Oct 2014 11:37:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 1588add105b10c8fa2ca2a6214729069
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 16-Oct-2015 11:37:54 GMT; secure
+      - _session_id=1588add105b10c8fa2ca2a6214729069; path=/; secure; HttpOnly
+      - _web_tracking=b92c3316176acf81f41daffe305dfdc5; path=/; expires=Fri, 16-Oct-2015
+        11:37:54 GMT; secure
+      X-Request-Id:
+      - 700e37d9-122f-4720-ba73-f60c08e2a524
+      X-Runtime:
+      - '0.349231'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"taking-control-of-debt","title":"Cymryd rheolaeth ar ddyled","description":"Ble
+        i fynd i gael cyngor rhad ac am ddim ar ddyledion, sut i siarad \u00e2''r
+        bobl y mae arnoch arian iddynt, ac awgrymiadau i''ch helpu i ad-dalu''ch dyledion
+        yn y drefn iawn.","parent_id":"debt-and-borrowing","contents":[{"id":"ble-i-gael-cyngor-am-ddim-ynghylch-dyled","type":"guide","title":"Ble
+        i gael cyngor am ddim ynghylch dyled","description":"Cewch wybod ble i gael
+        cymorth cyfrinachol am ddim os ydych yn cael trafferthion \u00e2 dyled"},{"id":"sut-i-flaenoriaethuch-dyledion","type":"guide","title":"Sut
+        i flaenoriaethu\u2019ch dyledion","description":"Os ydych yn ei chael yn anodd
+        talu\u2019ch holl ddyledion, mae angen i chi wybod pa rai y dylech fod yn
+        rhoi blaenoriaeth i\u2019w talu"},{"id":"siaradwch-ar-bobl-y-mae-arnoch-arian-iddynt","type":"guide","title":"Siaradwch
+        \u00e2\u2019r bobl y mae arnoch arian iddynt","description":"Pan fydd dyledion
+        yn dechrau cynyddu, gall fod yn anodd gwybod ble i droi, ond dylech ddechrau
+        trwy siarad \u00e2\u2019ch credydwyr"},{"id":"help-os-ydych-chin-cael-trafferth-gyda-dyledion","type":"guide","title":"Help
+        os ydych chi\u2019n cael trafferth gyda dyledion","description":"Os ydy dyledion
+        yn gwneud ichi deimlo nad oes gennych chi unman i droi, yna mae''n bryd ichi
+        siarad \u00e2 rhywun a fydd yn gallu helpu"},{"id":"gwiriad-iechyd-cyflym-a-hawdd-och-dyled","type":"guide","title":"Gwiriad
+        iechyd cyflym a hawdd o\u2019ch dyled","description":"Os ydych yn poeni am
+        eich dyledion, dyma ychydig o awgrymiadau ar sut i gadw golwg fanwl ar eich
+        sefyllfa a phenderfynu ar eich camau nesaf"},{"id":"opsiynau-ar-gyfer-clirioch-dyledion-cymru-a-lloegr","type":"guide","title":"Opsiynau
+        ar gyfer clirio\u2019ch dyledion \u2013 Cymru a Lloegr","description":"Mae
+        sawl opsiwn ar gyfer clirio\u2019ch dyledion, ond mae\u2019n hanfodol eich
+        bod yn cael cymorth arbenigol cyn penderfynu pa un sy\u2019n iawn i chi"},{"id":"osgoi-ffioedd-uchel-a-chostau-benthyca-cudd","type":"guide","title":"Osgoi
+        ffioedd uchel a chostau benthyca cudd","description":"Byddwch yn gall \u2013
+        byddwch yn ofalus o''r costau ychwanegol a holwch am eich hawliau os ydych
+        chi''n meddwl eich bod wedi gorfod talu symiau annheg"},{"id":"cyrchu-arian-yn-gyflym-eich-opsiynau","type":"guide","title":"Cyrchu
+        arian yn gyflym \u2013 eich opsiynau","description":"Mae cynlluniau benthyciadau
+        hyd ddiwrnod t\u00e2l, gwystlo (pawnbroking) ac arian parod am aur yn edrych
+        fel opsiynau hawdd \u2013 ond gallant gostio\u2019n ddrud i chi"},{"id":"canllaw-syml-i-reoli-eich-arian","type":"guide","title":"Canllaw
+        syml i reoli eich arian","description":"Sut i osod cyllideb, aros ar y blaen
+        i ddyledion a dechrau cynilo''n rheolaidd"},{"id":"sut-i-ddelio-act-dyledion-myfyrwyr-wedi-i-chi-raddio","type":"guide","title":"Sut
+        i ddelio \u00e2 dyledion myfyrwyr wedi i chi raddio","description":"Yn cael
+        anhawster gyda dyled myfyrwyr? Dysgwch pa ffyrdd yw\u2019r rhai gorau i reoli
+        eich dyled myfyrwyr a chadw trefn ar eich arian"},{"id":"sut-i-reolich-arian-yn-well","type":"action_plan","title":"Cynllun
+        gweithredu - Sut i reoli\u2019ch arian yn well","description":"Lluniwch gyllideb
+        i wneud y mwyaf o\u2019ch arian a thalu dyledion"},{"id":"sut-i-leihau-cost-dyled-eich-cerdyn-credyd-ach-cerdyn-siop","type":"guide","title":"Sut
+        i leihau cost dyled eich cerdyn credyd a\u2019ch cerdyn siop","description":"Talwch
+        y ddyled ar y cerdyn siop neu\u2019r cerdyn credyd cywir i ddechrau, neu newidiwch
+        i dd\u00eal arall, a gallech arbed miloedd"},{"id":"ble-i-gael-cymorth-cyfreithiol-os-ydych-chi-mewn-dyled","type":"guide","title":"Ble
+        i gael cymorth cyfreithiol os ydych chi mewn dyled","description":"Pan fyddwch
+        yn cael eich bygwth \u00e2 chamau cyfreithiol, peidiwch \u00e2 chynhyrfu \u2013
+        mae cymorth a chyngor am ddim ar gael i chi"},{"id":"gweithredwch-i-leihau-eich-dyledion","type":"guide","title":"Gweithredwch
+        i leihau eich dyledion","description":"Os ydy''ch dyledion yn cronni, mae''n
+        bryd cymryd y camau cyntaf i gael trefn arnynt"},{"id":"sut-i-leihau-cost-eich-benthyciadau-personol","type":"guide","title":"Sut
+        i leihau cost eich benthyciadau personol","description":"Sut i ddod i wybod
+        p\u2019un a fydd newid i gyfradd llog is yn arbed arian i chi, a ffyrdd eraill
+        o leihau costau benthyciadau"},{"id":"cynllunydd-cyllideb","type":"tool","title":"Cynllunydd
+        cyllideb","description":"Gallwch ddefnyddio\u2019r cynllunydd hwn i weld faint
+        o arian sy\u2019n dod i mewn ac ar beth yr ydych yn ei wario"},{"id":"eich-awgrymau-ar-gyfer-benthyg-arian-ai-dalu-yn-ol","type":"video","title":"Eich
+        awgrymau ar gyfer benthyg arian a\u2019i dalu yn \u00f4l","description":"Dyma
+        bobl yn dweud wrthym eu hawgrymau ar gyfer benthyg arian a\u2019i dalu yn
+        \u00f4l."},{"id":"cyngor-ariannol-am-ddim-eich-opsiynau","type":"guide","title":"Cyngor
+        a gwybodaeth ariannol am ddim","description":"Cyngor ariannol ac yn ymwneud
+        ag arian am ddim \u2013 beth sydd ar gael, ble i ddod o hyd iddo"},{"id":"dylech-flaenoriaethu-a-delio-a-llythyrau-am-daliad-hwyr","type":"guide","title":"Dylech
+        flaenoriaethu a delio \u00e2 llythyrau am daliad hwyr","description":"Os ydych
+        chi\u2019n cael llythyrau am daliad hwyr, mae angen i chi ddeall sut i ymateb
+        iddynt a pha ddyledion i ganolbwyntio arnynt yn gyntaf"},{"id":"delio-a-dyfarniadau-llys-sirol-ccjs","type":"guide","title":"Delio
+        \u00e2 Dyfarniadau Llys Sirol (CCJs)","description":"Pan fyddwch yn cael trafferthion
+        ariannol, mae bygythiad CCJ dim ond yn ychwanegu at y gofid \u2013 cewch wybod
+        beth y mae\u2019n ei olygu a sut i osgoi un"},{"id":"ymdrin-a-dyledion-rhywun-sydd-wedi-marw","type":"guide","title":"Ymdrin
+        \u00e2 dyledion rhywun sydd wedi marw","description":"Ydych chi''n gyfrifol
+        am ddyledion rhywun sydd wedi marw? Dylech gael gwybod pa ddyledion y gellir
+        eu dileu a pha rai sydd angen eu talu"}]}'
+    http_version: 
+  recorded_at: Thu, 16 Oct 2014 11:37:55 GMT
+recorded_with: VCR 2.9.2

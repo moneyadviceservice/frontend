@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/moneyadviceservice/feature.git
+  revision: 036ceab78e3fb34c76162ac90799f7d49e94d329
+  specs:
+    feature (1.1.0)
+
+GIT
   remote: git://github.com/moneyadviceservice/html_validation.git
   revision: 3fb1b655a1f5d2963345d980ec819b3e17e9a187
   ref: 3fb1b65
@@ -236,7 +242,6 @@ GEM
       faraday (~> 0.8)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    feature (1.0.0)
     ffi (1.9.3)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -569,7 +574,7 @@ DEPENDENCIES
   faker
   faraday-conductivity
   faraday_middleware
-  feature
+  feature!
   foreman
   gaffe
   guard-bundler

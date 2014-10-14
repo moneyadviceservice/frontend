@@ -180,15 +180,14 @@ GEM
     database_cleaner (1.3.0)
     debt_finance_calculator (1.0.0.6)
       bigdecimal (= 1.2.5)
-    debt_free_day_calculator (2.0.0.123)
+    debt_free_day_calculator (2.0.0.125)
       autoprefixer-rails
       debt_finance_calculator
-      dough-ruby
+      dough-ruby (~> 3.1)
       draper (~> 1.3)
       email_validator (~> 1.4.0)
       i18n-js (= 3.0.0.mas)
       jquery-rails
-      mas-feedback
       meta-tags
       rails (~> 4.1)
       roadie (~> 2.4.3)

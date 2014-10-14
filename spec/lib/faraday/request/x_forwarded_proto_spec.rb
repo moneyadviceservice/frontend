@@ -13,7 +13,7 @@ RSpec.describe Faraday::Request::XForwardedProto do
   end
 
   before do
-    stub_const('ENV', { 'FARADAY_X_FORWARDED_PROTO' => protocol })
+    stub_const('ENV',  'FARADAY_X_FORWARDED_PROTO' => protocol)
   end
 
   context "when ENV['FARADAY_X_FORWARDED_PROTO']" do

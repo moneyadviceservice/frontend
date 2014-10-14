@@ -33,11 +33,11 @@ When(/^I visit the website in Welsh$/) do
 end
 
 Then(/^I should be able to start a chat with an advisor$/) do
-  expect(home_page.chat.button).
-    to have_content(I18n.t('contact_panels.chat.available.call_to_action'))
+  expect(home_page.chat.button)
+    .to have_content(I18n.t('contact_panels.chat.available.call_to_action'))
 
-  expect(home_page.chat.description).
-    to have_content(I18n.t('contact_panels.chat.available.description'))
+  expect(home_page.chat.description)
+    .to have_content(I18n.t('contact_panels.chat.available.description'))
 end
 
 Then(/^I should not be able to start a chat with an advisor$/) do
@@ -49,21 +49,21 @@ Then(/^I should see a message informing me that I need JavaScript in order chat 
 end
 
 Then(/^I should see a message informing me that chat is currently busy$/) do
-  expect(home_page.chat.button).
-    to have_content(I18n.t('contact_panels.chat.busy.call_to_action'))
+  expect(home_page.chat.button)
+    .to have_content(I18n.t('contact_panels.chat.busy.call_to_action'))
 
-  expect(home_page.chat.description).
-    to have_content(I18n.t('contact_panels.chat.busy.description'))
+  expect(home_page.chat.description)
+    .to have_content(I18n.t('contact_panels.chat.busy.description'))
 end
 
 Then(/^I should see a message informing me that chat will be online between today's opening hours$/) do
-  expect(home_page.chat.description).
-    to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 10pm'))
+  expect(home_page.chat.description)
+    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 10pm'))
 end
 
 Then(/^I should see a message informing me that chat will be online tomorrow with tomorrow's opening hours$/) do
-  expect(home_page.chat.description).
-    to have_content(I18n.t('contact_panels.chat.offline.description', hours: '10am to 10pm'))
+  expect(home_page.chat.description)
+    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '10am to 10pm'))
 end
 
 Then(/^I should see a message informing me that chat is only available in English$/) do

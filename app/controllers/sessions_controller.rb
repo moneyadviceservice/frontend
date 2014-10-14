@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     # This method is mostly copied devise code
     # With one tweak to add the error to resource from the flash hash
     self.resource = resource_class.new(sign_in_params)
-    self.resource.errors.add(:base, flash[:alert]) if flash[:alert]
+    resource.errors.add(:base, flash[:alert]) if flash[:alert]
     clean_up_passwords(resource)
     respond_with(resource, serialize_options(resource))
   end
@@ -17,11 +17,11 @@ class SessionsController < Devise::SessionsController
     head :not_implemented if request.xhr?
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     last_known_path_or_root_path
   end
 
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path_for(_resource)
     last_known_path_or_root_path
   end
 

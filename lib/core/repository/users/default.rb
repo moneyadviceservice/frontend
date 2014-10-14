@@ -3,8 +3,8 @@ module Core
     module Users
       class Default
         def update_from_crm(user)
-          raise 'customer_id is blank' if customer_id(user).blank?
-          raise 'customer not in CRM' if customer(user).nil?
+          fail 'customer_id is blank' if customer_id(user).blank?
+          fail 'customer not in CRM' if customer(user).nil?
 
           updated_user = ::Converters::CustomerToUser.new(customer(user)).call
           success = updated_user.save # do not raise errors. otherwise user cannot login

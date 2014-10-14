@@ -35,7 +35,7 @@ RSpec.describe HTMLProcessor::VideoWrapper do
       let(:html) do
         <<-EOHTML
          <p>
-          <iframe title="Video: test video" frameborder="0" height="413" width="680" src="https://www.youtube.com/embed/3ciEDiokPkw">
+          <iframe title="Video: test video" frameborder="0" width="680" src="https://www.youtube.com/embed/3ciEDiokPkw">
           </iframe>
         </p>
         EOHTML

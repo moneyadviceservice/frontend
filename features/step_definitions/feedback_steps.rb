@@ -15,7 +15,6 @@ Given(/^I am on the technical feedback page$/) do
   step 'I should be on the technical feedback page'
 end
 
-
 Then(/^I should see the feedback panel$/) do
   expect(article_page).to have_feedback_panel
 end

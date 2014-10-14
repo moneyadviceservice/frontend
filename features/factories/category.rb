@@ -11,7 +11,7 @@ FactoryGirl.define do
       type 'category'
 
       trait :content_items do
-        contents { %w{article_hash action_plan_hash}.map(&method(:build)) }
+        contents { %w(article_hash action_plan_hash).map(&method(:build)) }
       end
 
       initialize_with do

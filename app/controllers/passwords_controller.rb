@@ -3,7 +3,7 @@ class PasswordsController < Devise::PasswordsController
 
   private
 
-    def after_resetting_password_path_for(resource)
-      session[:user_return_to] || root_path
-    end
+  def after_resetting_password_path_for(_resource)
+    session[:user_return_to] || root_path
+  end
 end

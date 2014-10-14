@@ -1,4 +1,4 @@
-RSpec.describe NewsletterSubscriptionsController, :type => :controller do
+RSpec.describe NewsletterSubscriptionsController, type: :controller do
   let(:subscriber) { instance_double(Core::NewsletterSubscriptionCreator, email: email) }
 
   before do

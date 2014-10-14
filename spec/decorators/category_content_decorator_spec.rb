@@ -16,8 +16,8 @@ RSpec.describe CategoryContentDecorator do
   it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:icon_class) }
 
-  describe "#label" do
-    let(:item) { double(type: "foo_bar-baz") }
+  describe '#label' do
+    let(:item) { double(type: 'foo_bar-baz') }
 
     it "returns a capitalised representation of the object type with a ` - ' suffix" do
       expect(subject.label).to eq('Foo Bar Baz - ')
@@ -56,7 +56,7 @@ RSpec.describe CategoryContentDecorator do
       let(:item) { Core::Other.new('item-id') }
 
       it 'returns the correct path' do
-        ['campaign', 'news', 'tool', 'video'].each do |type|
+        %w(campaign news tool video).each do |type|
           allow(item).to receive_messages(type: type)
           expect(subject.path).to eq "/#{locale}/#{type.pluralize}/#{item.id}"
         end
@@ -65,7 +65,7 @@ RSpec.describe CategoryContentDecorator do
   end
 
   describe '#icon_class' do
-    let(:item) { double(type: "foo_bar-baz") }
+    let(:item) { double(type: 'foo_bar-baz') }
 
     it "returns a dasherised representation of the object type prefixed with `icon--'" do
       expect(subject.icon_class).to eq('icon--foo-bar-baz')

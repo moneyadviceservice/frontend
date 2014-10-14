@@ -33,13 +33,13 @@ Then(/^I can acknowledge I understand$/) do
 end
 
 Given(/^I visit the site and see the cookie message$/) do
-  step "I visit the website"
-  step "I should see the cookie message"
+  step 'I visit the website'
+  step 'I should see the cookie message'
 end
 
 Given(/^I visit the site and acknowledge the cookie message$/) do
-  step "I visit the website"
-  step "I close the cookie message"
+  step 'I visit the website'
+  step 'I close the cookie message'
 end
 
 When(/^I visit another page$/) do

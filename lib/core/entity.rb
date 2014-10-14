@@ -15,8 +15,8 @@ module Core
       end
     end
 
-    def ==(other_entity)
-      self.class == other_entity.class && self.id == other_entity.id
+    def ==(other)
+      self.class == other.class && id == other.id
     end
     alias_method :eql?, :==
   end

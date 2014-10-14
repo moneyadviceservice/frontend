@@ -1,7 +1,7 @@
 module Core::Repository
   module CMS
     class Preview < Core::Repository::Base
-      def initialize(options = {})
+      def initialize(_options = {})
         self.connection = Core::Registry::Connection[:cms]
       end
 

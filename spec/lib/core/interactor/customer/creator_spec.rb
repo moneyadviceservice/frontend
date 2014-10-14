@@ -14,8 +14,8 @@ module Core
               post_code: 'NE1 6EE'
             }
           end
-          let(:user){ User.create!(attributes) }
-          subject{ described_class.new(user) }
+          let(:user) { User.create!(attributes) }
+          subject { described_class.new(user) }
 
           context 'when customer already exists' do
             before :each do
@@ -25,12 +25,12 @@ module Core
 
             it 'does not throw an exception' do
               expect do
-                subject.call{ raise 'hello' }
+                subject.call { fail 'hello' }
               end.not_to raise_error
             end
 
             it 'does not create another CRM customer' do
-              expect { subject.call }.to_not change{ Registry::Repository[:customer].customers.size }
+              expect { subject.call }.to_not change { Registry::Repository[:customer].customers.size }
             end
 
             it 'associates user and customer' do
@@ -40,10 +40,10 @@ module Core
           end
 
           context 'when customer does not exist' do
-            let(:saved_customer){ Core::Registry::Repository[:customer].find(id: user.customer_id) }
+            let(:saved_customer) { Core::Registry::Repository[:customer].find(id: user.customer_id) }
 
             it 'creates them' do
-              expect{ subject.call }.to change{ Core::Registry::Repository[:customer].customers.size }.by(1)
+              expect { subject.call }.to change { Core::Registry::Repository[:customer].customers.size }.by(1)
             end
 
             it 'sets the correct attributes' do

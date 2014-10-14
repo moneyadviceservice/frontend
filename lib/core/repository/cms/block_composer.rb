@@ -11,18 +11,18 @@ module Core::Repository
 
       attr_reader :blocks, :id, :parser
 
-      def initialize(blocks = [], id = "content", parser = Kramdown::Document)
+      def initialize(blocks = [], id = 'content', parser = Kramdown::Document)
         @blocks = Array(blocks)
         @parser = parser
         @id = id
       end
 
       def find(id)
-        Block.new(blocks.detect { |block| block['identifier'] == id })
+        Block.new(blocks.find { |block| block['identifier'] == id })
       end
 
       def to_html
-        parser.new(self.to_s).to_html
+        parser.new(to_s).to_html
       end
 
       def to_s

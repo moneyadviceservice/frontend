@@ -13,8 +13,8 @@ module Core::Repository::StaticPages
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:get, "https://example.com/en/static/#{id}.json").
-          to_return(status: status, body: body, headers: headers)
+        stub_request(:get, "https://example.com/en/static/#{id}.json")
+          .to_return(status: status, body: body, headers: headers)
       end
 
       context 'when the type exists' do

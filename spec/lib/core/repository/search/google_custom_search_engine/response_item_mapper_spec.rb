@@ -11,7 +11,7 @@ module Core::Repository::Search
         {
           'link'      => link,
           'htmlTitle' => title,
-          'htmlSnippet'   => snippet,
+          'htmlSnippet'   => snippet
         }
       end
 

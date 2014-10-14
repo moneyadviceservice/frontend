@@ -6,10 +6,10 @@ module AssetPipeline
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.css\z/
       IGNORED_TAG = '@codingStandardsIgnore'
 
-      def evaluate(context, locals)
+      def evaluate(context, _locals)
         if context.pathname.to_s =~ REGEX
           lint_results = CsslintRuby.run(data, settings)
-          raise CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
+          fail CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
         end
         data
       end

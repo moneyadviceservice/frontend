@@ -1,4 +1,4 @@
-RSpec.describe TechnicalFeedbackController, :type => :controller do
+RSpec.describe TechnicalFeedbackController, type: :controller do
   describe 'GET new' do
     let(:expected_path) { 'return_path' }
 

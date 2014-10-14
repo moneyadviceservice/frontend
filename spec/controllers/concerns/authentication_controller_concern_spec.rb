@@ -1,4 +1,4 @@
-RSpec.describe Authentication, :type => :controller do
+RSpec.describe Authentication, type: :controller do
   let(:session) { {} }
 
   controller do

@@ -4,13 +4,13 @@ require 'html_processor/node_replacer'
 RSpec.describe HTMLProcessor::NodeReplacer do
   subject(:processor) { described_class.new(html) }
 
-  let(:html) {
+  let(:html) do
     <<-EOHTML
 <div>
     <h3>a rather important title</h3>
 </div>
     EOHTML
-  }
+  end
 
   describe '.process' do
     subject(:processed_html) { processor.process('//h3', 'h2') }

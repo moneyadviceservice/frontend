@@ -30,8 +30,8 @@ module Core
         end
 
         it 'instantiates the action plan with the id and the attributes from the repository' do
-          expect(ActionPlan).
-            to receive(:new).with(id, data).and_call_original
+          expect(ActionPlan)
+            .to receive(:new).with(id, data).and_call_original
 
           subject.call
         end

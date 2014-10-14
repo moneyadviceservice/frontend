@@ -1,5 +1,5 @@
 desc 'Generate Sitemap CSV'
-task :sitemap => :environment do
+task sitemap: :environment do
 
   require 'core/connection_factory'
   require 'csv'

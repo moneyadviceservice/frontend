@@ -31,7 +31,7 @@ module Core
         end
 
         context 'with categories' do
-          let(:categories) { ['money', 'budget'] }
+          let(:categories) { %w(money budget) }
 
           it 'builds categories' do
             expect(previewer).to receive(:build_categories).with(categories) { double }

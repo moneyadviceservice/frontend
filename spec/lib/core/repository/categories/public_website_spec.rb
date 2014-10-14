@@ -12,8 +12,8 @@ RSpec.describe Core::Repository::Categories::PublicWebsite do
     subject { described_class.new.all }
 
     before do
-      stub_request(:get, "https://example.com/en/categories.json").
-        to_return(status: status, body: body, headers: {})
+      stub_request(:get, 'https://example.com/en/categories.json')
+        .to_return(status: status, body: body, headers: {})
     end
 
     context 'when the request is successful' do
@@ -36,8 +36,8 @@ RSpec.describe Core::Repository::Categories::PublicWebsite do
     subject { described_class.new.find(id) }
 
     before do
-      stub_request(:get, "https://example.com/en/categories/#{id}.json").
-        to_return(status: status, body: body, headers: {})
+      stub_request(:get, "https://example.com/en/categories/#{id}.json")
+        .to_return(status: status, body: body, headers: {})
     end
 
     context 'when the category exists' do

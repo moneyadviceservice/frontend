@@ -3,14 +3,13 @@ require_relative 'js_hint/errors_found'
 module AssetPipeline
   module Processors
     class JsHint < Sprockets::Processor
-
       JSHINTRC_LOCATION = 'vendor/assets/bower_components/dough/.jshintrc'
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.js(:?.erb)?\z/
 
-      def evaluate(context, locals)
+      def evaluate(context, _locals)
         if context.pathname.to_s =~ REGEX
           errors = JshintRuby.run(data, jshint_options).errors
-          raise ErrorsFound.new(errors) if errors.present?
+          fail ErrorsFound.new(errors) if errors.present?
         end
         data
       end

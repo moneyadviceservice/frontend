@@ -3,9 +3,8 @@ require 'current_request_id'
 module Faraday
   class Request::RequestId < Faraday::Middleware
     def call(env)
-      if request_id = CurrentRequestId.get
-        env[:request_headers]['X-Request-Id'] = request_id
-      end
+      request_id = CurrentRequestId.get
+      env[:request_headers]['X-Request-Id'] = request_id if request_id
 
       @app.call(env)
     end

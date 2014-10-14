@@ -9,26 +9,26 @@ module Core
           id = options[:id]
           email = options[:email]
 
-          response = customers.detect { |c| c[:id] == id || c[:email] == email }
+          response = customers.find { |c| c[:id] == id || c[:email] == email }
           Core::Customer.new(response[:id], response) if response
         end
 
         # return customer id
         def create(user)
-          raise('Already exists') if customers.detect{|c| c[:id] == user.customer_id}
+          fail('Already exists') if customers.find { |c| c[:id] == user.customer_id }
 
           customer = user.to_customer
           hash = customer.attributes
-          hash[:id] = "customer_#{rand(1000000)}"
+          hash[:id] = "customer_#{rand(1_000_000)}"
           customers << hash
 
           hash[:id]
         end
 
         def update(customer)
-          c = customers.detect { |c| c[:id] == customer.id }
+          c = customers.find { |c| c[:id] == customer.id }
 
-          raise 'does not exist' unless c
+          fail 'does not exist' unless c
 
           c[:first_name] = customer.first_name
         end

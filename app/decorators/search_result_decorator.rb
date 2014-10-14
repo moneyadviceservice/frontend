@@ -28,5 +28,4 @@ class SearchResultDecorator < Draper::Decorator
                                                   ellipsis: is_truncated ? ' ...' : nil })
     end
   end
-
 end

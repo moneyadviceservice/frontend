@@ -6,7 +6,7 @@ module Core
       Error = Class.new(StandardError) do
         attr_reader :original
 
-        def initialize(original=$!)
+        def initialize(original = $ERROR_INFO)
           super
           @original = original
         end
@@ -28,7 +28,6 @@ module Core
 
       rescue Faraday::Error::ClientError
         raise ClientError
-
       end
 
       def post(*args)
@@ -39,14 +38,12 @@ module Core
 
       rescue Faraday::Error::ClientError => error
         case error.response[:status]
-          when 422
-            raise UnprocessableEntity
-          else
-            raise ClientError
+        when 422
+          raise UnprocessableEntity
+        else
+          raise ClientError
         end
-
       end
-
     end
   end
 end

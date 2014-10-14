@@ -15,7 +15,7 @@ module World
         when 'cy', 'Welsh'
           fixture 'action_plans/sut-i-agor-cyfrif-banc.yml'
         else
-          raise ArgumentError, "invalid action plan locale `#{locale}'"
+          fail ArgumentError, "invalid action plan locale `#{locale}'"
       end
     end
 

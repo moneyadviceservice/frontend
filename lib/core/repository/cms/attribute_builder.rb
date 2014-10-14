@@ -6,7 +6,7 @@ module Core::Repository
 
         attributes['title']       = attributes['label']
         attributes['body']        = BlockComposer.new(attributes['blocks']).to_html
-        attributes['description'] = BlockComposer.new(attributes['blocks'], "meta_description").to_s
+        attributes['description'] = BlockComposer.new(attributes['blocks'], 'meta_description').to_s
         attributes['categories']  = attributes['category_names']
         attributes['alternates']  = []
 

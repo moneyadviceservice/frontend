@@ -1,4 +1,4 @@
-RSpec.describe SearchResultsController, :type => :controller do
+RSpec.describe SearchResultsController, type: :controller do
   describe 'GET index' do
     let(:query) { 'query' }
     let(:search_results_collection) { double(any?: true) }

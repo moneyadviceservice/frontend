@@ -28,8 +28,8 @@ module Core
       end
 
       it 'instantiates the category with the id and the attributes from the repository' do
-        expect(Category).
-          to receive(:new).with(id, data).and_call_original
+        expect(Category)
+          .to receive(:new).with(id, data).and_call_original
 
         subject.call
       end
@@ -53,7 +53,7 @@ module Core
       end
 
       context 'when the returned category contains sub-categories, action plans and articles' do
-        let(:contents) { %w{article_hash action_plan_hash category_hash}.map(&method(:build)) }
+        let(:contents) { %w(article_hash action_plan_hash category_hash).map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, contents: contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }

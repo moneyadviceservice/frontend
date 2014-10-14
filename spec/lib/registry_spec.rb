@@ -15,8 +15,8 @@ RSpec.describe Registry do
   describe 'when fetching an object for a given type' do
     context 'when the registry has no object for that type' do
       it 'raises an object registry error' do
-        expect { described_class[type] }.
-          to raise_error(Registry::Error)
+        expect { described_class[type] }
+          .to raise_error(Registry::Error)
       end
     end
 

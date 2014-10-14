@@ -2,7 +2,6 @@ module Core::Repository
   module Search
     class GoogleCustomSearchEngine < Core::Repository::Base
       class ResponseItemMapper
-
         SECOND_TO_LAST_INDEX = -2
 
         attr_accessor :data

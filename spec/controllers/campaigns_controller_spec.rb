@@ -1,4 +1,4 @@
-RSpec.describe CampaignsController, :type => :controller do
+RSpec.describe CampaignsController, type: :controller do
   describe 'GET show' do
     let(:id) { 'revealed-the-true-cost-of-buying-a-car' }
     let(:template) { double }

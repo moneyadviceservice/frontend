@@ -9,7 +9,7 @@ module Core
 
     def_delegators :items, :size, :empty?
 
-    def initialize(opt={})
+    def initialize(opt = {})
       self.items     = opt.fetch(:items) { [] }
       self.page      = opt[:page]
     end

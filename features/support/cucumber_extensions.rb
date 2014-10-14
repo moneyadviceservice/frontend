@@ -6,7 +6,7 @@ module Cucumber
         visitor.visit_comment(@comment) unless @comment.empty?
         visitor.visit_tags(@tags)
         visitor.visit_feature_name(@keyword, indented_name)
-        visitor.visit_background(@background) if !@background.is_a?(EmptyBackground)
+        visitor.visit_background(@background) unless @background.is_a?(EmptyBackground)
         @feature_elements.each do |feature_element|
           if with_and_without_javascript?(feature_element)
             visit_feature_element_twice(feature_element, visitor)
@@ -17,6 +17,7 @@ module Cucumber
       end
 
       private
+
       def with_and_without_javascript?(feature_element)
         source_tag_names.include?('@with_and_without_javascript') ||
           feature_element.scenario_tags.map(&:name).include?('@with_and_without_javascript')
@@ -24,7 +25,7 @@ module Cucumber
 
       def visit_feature_element_twice(feature_element, visitor)
         line = feature_element.scenario_tags.map(&:line).first
-        feature_element.scenario_tags.delete_if {|t| t.name == '@with_and_without_javascript'}
+        feature_element.scenario_tags.delete_if { |t| t.name == '@with_and_without_javascript' }
 
         visitor.visit_feature_element(feature_element)
 
@@ -77,13 +78,13 @@ module Cucumber
       end
 
       def force_invoke!
-        examples_array.each { |examples| examples.force_invoke! }
+        examples_array.each(&:force_invoke!)
       end
     end
 
     class StepCollection
       def force_invoke!
-        @steps.each{|step_invocation| step_invocation.force_invoke!}
+        @steps.each(&:force_invoke!)
       end
     end
 

@@ -1,4 +1,4 @@
-RSpec.describe ActionPlansController, :type => :controller do
+RSpec.describe ActionPlansController, type: :controller do
   let(:action_plan) { instance_double(Core::ActionPlan, id: 'test', categories: []) }
   let(:action_plan_reader) { instance_double(Core::ActionPlanReader, call: action_plan) }
 

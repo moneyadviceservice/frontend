@@ -100,6 +100,7 @@ group :test, :development do
   gem 'ejs'
   gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
   gem 'rspec-rails', '~> 3.0'
+  gem 'rubocop'
 end
 
 group :doc do

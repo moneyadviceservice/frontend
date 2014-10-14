@@ -7,7 +7,7 @@ RSpec.describe 'errors/show', type: :view do
     it 'displays an error message' do
       render
 
-      expect(rendered).to match /We can&#39;t find this page/
+      expect(rendered).to match(/We can&#39;t find this page/)
     end
   end
 end

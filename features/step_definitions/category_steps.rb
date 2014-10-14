@@ -22,7 +22,7 @@ Then(/^I should see the category name and description$/) do
 end
 
 Then(/^I should see the category content items$/) do
-  category_titles = current_category.contents.collect(&:title)
+  category_titles = current_category.contents.map(&:title)
 
   expect(category_page.items.count).to eq(category_titles.count)
 
@@ -35,7 +35,7 @@ Then(/^I should see the child category content items$/) do
   category_page.child_categories.each do |category|
     child = current_category.contents.find { |c| c.id == category.heading['id'] }
 
-    expect(category.items.collect(&:text)).to eq(child.contents.collect(&:title))
+    expect(category.items.map(&:text)).to eq(child.contents.map(&:title))
   end
 end
 
@@ -56,7 +56,7 @@ Then(/^the category should have a canonical tag for that language version$/) do
 end
 
 Then(/^the category page should have alternate tags for the supported locales$/) do
-  expected_hreflangs = ["en-GB", "cy-GB"]
+  expected_hreflangs = ['en-GB', 'cy-GB']
   expected_hrefs     = []
   I18n.available_locales.each { |locale| expected_hrefs << category_url(id: current_category['id'], locale: locale) }
 

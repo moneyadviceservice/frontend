@@ -27,7 +27,7 @@ module Core
       let(:url) { 'www.example.com' }
       let(:hreflang) { 'cy' }
 
-      before { subject.alternates=([{ title: alternate_title, url: url, hreflang: hreflang }]) }
+      before { subject.alternates = ([{ title: alternate_title, url: url, hreflang: hreflang }]) }
 
       it 'assigns alternate title' do
         expect(subject.alternates.first.title).to eq(alternate_title)
@@ -70,7 +70,7 @@ module Core
       end
 
       context 'when it is requestable' do
-        subject { described_class.new("managing-your-money-if-your-job-is-at-risk", attributes) }
+        subject { described_class.new('managing-your-money-if-your-job-is-at-risk', attributes) }
 
         it 'returns true' do
           expect(subject.callback_requestable?).to be_truthy

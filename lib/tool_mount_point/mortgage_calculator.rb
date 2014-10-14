@@ -16,11 +16,11 @@ module ToolMountPoint
         'mortgage-calculator'   => 'cyfrifiannell-morgais',
         'cyfrifiannell-morgais' => 'mortgage-calculator',
         'house-buying'          => 'prynu-ty',
-        'prynu-ty'              => 'house-buying',
+        'prynu-ty'              => 'house-buying'
       }.fetch(current_tool_id)
     end
 
-    def alternate_url(url, locale=nil)
+    def alternate_url(url, locale = nil)
       return url if locale.nil?
       ADDITIONAL_TOOLS[locale].keys.each do |calculator_name|
         if url.include?(calculator_name)

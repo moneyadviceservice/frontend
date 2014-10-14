@@ -1,4 +1,4 @@
-RSpec.describe 'Request we have no implementation for', :type => :request do
+RSpec.describe 'Request we have no implementation for', type: :request do
   it 'returns a 501 response' do
     get('/unsupported')
 

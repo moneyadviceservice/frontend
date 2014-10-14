@@ -19,15 +19,15 @@ RSpec.describe Core::Repository::Search::ContentService do
     let(:status) { 200 }
 
     before do
-      stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}").
-        to_return(status: status, body: body, headers: {})
+      stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}")
+        .to_return(status: status, body: body, headers: {})
     end
 
     it 'records an event with Rails instrumentation' do
-      expect(ActiveSupport::Notifications).
-        to receive(:instrument).
-             with(event_name, query: query, locale: locale, limit: limit).
-             and_call_original
+      expect(ActiveSupport::Notifications)
+        .to receive(:instrument)
+             .with(event_name, query: query, locale: locale, limit: limit)
+             .and_call_original
 
       subject
     end
@@ -39,8 +39,8 @@ RSpec.describe Core::Repository::Search::ContentService do
         let(:source_body) { JSON.parse(body) }
 
         context 'for content types of results' do
-          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'action-plan' } }
-          let(:reformatted_data) { subject.detect { |result| result[:type] == 'action-plan' } }
+          let(:source_data) { source_body['searchResults'].find { |result| result['type'] == 'action-plan' } }
+          let(:reformatted_data) { subject.find { |result| result[:type] == 'action-plan' } }
 
           it 'maps the id correctly' do
             expect(reformatted_data[:id]).to eql source_data['id']
@@ -60,8 +60,8 @@ RSpec.describe Core::Repository::Search::ContentService do
         end
 
         context 'for category results' do
-          let(:source_data) { source_body['searchResults'].detect { |result| result['type'] == 'category' } }
-          let(:reformatted_data) { subject.detect { |result| result[:type] == 'category' } }
+          let(:source_data) { source_body['searchResults'].find { |result| result['type'] == 'category' } }
+          let(:reformatted_data) { subject.find { |result| result[:type] == 'category' } }
 
           it 'maps the id correctly' do
             expect(reformatted_data[:id]).to eql source_data['id']

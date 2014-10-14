@@ -16,14 +16,6 @@ module Core
     end
 
     def call
-      options = {
-        total_results: total_results,
-        page: page,
-        per_page: per_page,
-        spelling_suggestion: spelling_suggestion,
-        query: query
-      }
-
       SearchResultCollection.new(options).tap do |results_collection|
         items.each do |result_data|
           new_result = SearchResult.new(result_data.delete(:id), result_data)
@@ -38,12 +30,22 @@ module Core
 
     private
 
+    def options
+      {
+        total_results: total_results,
+        page: page,
+        per_page: per_page,
+        spelling_suggestion: spelling_suggestion,
+        query: query
+      }
+    end
+
     def page=(new_page)
       @page = if new_page > 0
-        [new_page, PAGE_LIMIT].min
-      else
-        DEFAULT_PAGE
-      end
+                [new_page, PAGE_LIMIT].min
+              else
+                DEFAULT_PAGE
+              end
     end
 
     def per_page=(new_per_page)

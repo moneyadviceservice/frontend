@@ -13,11 +13,11 @@ module Core
               post_code: 'NE1 6EE'
             }
           end
-          let!(:user){ User.create!(attributes) }
-          subject{ described_class.new(user) }
+          let!(:user) { User.create!(attributes) }
+          subject { described_class.new(user) }
 
           context 'when customer exists' do
-            let(:first_name){ 'Philip' }
+            let(:first_name) { 'Philip' }
 
             it 'updates attributes' do
               user.first_name = first_name
@@ -31,9 +31,9 @@ module Core
           end
 
           context 'when customer does not exist' do
-            let(:user){ User.new(customer_id: 'customer_123') }
+            let(:user) { User.new(customer_id: 'customer_123') }
             it 'raises an exception' do
-              expect{ subject.call }.to raise_error
+              expect { subject.call }.to raise_error
             end
           end
         end

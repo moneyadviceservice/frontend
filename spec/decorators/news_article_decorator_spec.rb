@@ -12,7 +12,7 @@ RSpec.describe NewsArticleDecorator do
   it { is_expected.to respond_to(:intro) }
 
   describe '#content' do
-    let(:attributes) { { body: '<p>Body content</><p><em>Photo: PA</em></p>'} }
+    let(:attributes) { { body: '<p>Body content</><p><em>Photo: PA</em></p>' } }
 
     let(:html) { Nokogiri::HTML(decorator.content) }
 

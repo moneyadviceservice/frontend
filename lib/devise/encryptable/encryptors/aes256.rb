@@ -6,15 +6,15 @@ module Devise
           # Returns a Base64 encrypted password where pepper is used for the key,
           # and the initialization_vector is randomly generated and prepended onto
           # encoded ciphertext
-          def digest(password, stretches, salt, pepper)
+          def digest(password, _stretches, salt, pepper)
             return password if password.blank?
 
-            ::AES.encrypt(password, pepper, {:iv => salt})
+            ::AES.encrypt(password, pepper, iv: salt)
           end
-          alias :encrypt :digest
+          alias_method :encrypt, :digest
 
           # Returns a base64 encoded salt
-          def salt(stretches=0)
+          def salt(_stretches = 0)
             ::AES.iv(:base_64)
           end
 
@@ -28,4 +28,3 @@ module Devise
     end
   end
 end
-

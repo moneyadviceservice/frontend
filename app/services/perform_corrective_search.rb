@@ -1,5 +1,4 @@
 class PerformCorrectiveSearch
-
   def initialize(query, page)
     @query = query
     @page  = page

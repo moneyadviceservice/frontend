@@ -1,4 +1,4 @@
-RSpec.describe Navigation, :type => :controller do
+RSpec.describe Navigation, type: :controller do
   let(:category_id_1) { 'category-1' }
   let(:category_id_2) { 'category-2' }
   let(:categories) { [category_id_1, category_id_2] }

@@ -1,4 +1,4 @@
-RSpec.describe Localisation, :type => :controller do
+RSpec.describe Localisation, type: :controller do
   let(:status) { :ok }
 
   controller do

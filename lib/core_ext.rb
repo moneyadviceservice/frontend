@@ -1,5 +1,4 @@
 class Hash
-
   def to_ostruct
     OpenStruct.new(self).tap do |ostruct|
       ostruct.each_pair do |attribute, value|
@@ -15,5 +14,4 @@ class Hash
       end
     end
   end
-
 end

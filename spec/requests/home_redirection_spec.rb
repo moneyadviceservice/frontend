@@ -1,4 +1,4 @@
-RSpec.describe 'Home redirection', :type => :request do
+RSpec.describe 'Home redirection', type: :request do
   context "when '/' is requested" do
     before { get('/') }
 

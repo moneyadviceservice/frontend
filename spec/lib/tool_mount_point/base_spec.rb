@@ -7,7 +7,7 @@ RSpec.describe ToolMountPoint::Base do
     let(:params) do
       {
         locale: request_locale,
-        tool_id: request_tool_id,
+        tool_id: request_tool_id
       }
     end
     let(:request) { double('request', params: params) }

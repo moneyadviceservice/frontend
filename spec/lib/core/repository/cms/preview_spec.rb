@@ -13,8 +13,8 @@ module Core::Repository::CMS
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:get, "https://example.com/preview/#{I18n.locale}/#{id}.json").
-          to_return(status: status, body: body, headers: headers)
+        stub_request(:get, "https://example.com/preview/#{I18n.locale}/#{id}.json")
+          .to_return(status: status, body: body, headers: headers)
       end
 
       context 'when article exists' do
@@ -28,7 +28,7 @@ module Core::Repository::CMS
 
         it 'returns the description' do
           expect(repository.find(id)).to be_a(Hash)
-          expect(repository.find(id)['description']).to eq("meta description")
+          expect(repository.find(id)['description']).to eq('meta description')
         end
       end
 

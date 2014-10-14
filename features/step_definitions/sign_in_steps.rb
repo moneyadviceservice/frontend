@@ -59,7 +59,7 @@ Then(/^I should be signed in in both places$/) do
   end
 
   home_page.load(locale: 'en')
-  step "I should be signed in"
+  step 'I should be signed in'
 end
 
 Given(/^I have an account$/) do

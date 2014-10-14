@@ -1,15 +1,10 @@
-RSpec.describe 'Styleguide', :type => :request do
+RSpec.describe 'Styleguide', type: :request do
   let(:repository) { Core::Repository::Categories::Fake.new }
 
   routes = Rails.application.routes.routes.map do |route|
-             route.path.spec.to_s
-           end.select do |route|
-             route =~ /styleguide/
-           end.map do |route|
-             route.sub(/\(.:format\)/, '')
-           end.map do |route|
-             route.sub(/:locale/, 'en')
-           end
+    path = route.path.spec.to_s
+    path.sub(/\(.:format\)/, '').sub(/:locale/, 'en') if path =~ /styleguide/
+  end.compact
 
   before do
     allow(Core::Registry::Repository).to receive(:[]).with(:category).and_return(repository)

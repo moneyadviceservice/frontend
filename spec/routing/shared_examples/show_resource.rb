@@ -3,13 +3,15 @@ RSpec.shared_examples 'a resource for' do |resource_name|
 
   context "when the locale is `en'" do
     it "routes /en/#{resource_name}/{id} to the #{resource_name} controller" do
-      expect(get("/en/#{resource_name}/foo")).to route_to(controller: resource_name, action: 'show', locale: 'en', id: id)
+      expect(get("/en/#{resource_name}/foo"))
+        .to route_to(controller: resource_name, action: 'show', locale: 'en', id: id)
     end
   end
 
   context "when the locale is `cy'" do
     it "routes /cy/#{resource_name}/{id} to the #{resource_name} controller" do
-      expect(get("/cy/#{resource_name}/foo")).to route_to(controller: resource_name, action: 'show', locale: 'cy', id: id)
+      expect(get("/cy/#{resource_name}/foo"))
+        .to route_to(controller: resource_name, action: 'show', locale: 'cy', id: id)
     end
   end
 end

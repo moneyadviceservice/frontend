@@ -20,7 +20,7 @@ module CampaignPage
     end
 
     def css_name
-      name.tr("_", "-")
+      name.tr('_', '-')
     end
 
     private

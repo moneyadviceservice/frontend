@@ -4,5 +4,4 @@ class ArticlesPreviewController < ArticlesController
   def interactor
     Core::ArticlePreviewer.new(params[:id])
   end
-
 end

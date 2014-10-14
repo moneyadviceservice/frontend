@@ -91,7 +91,7 @@ RSpec.describe ContentItemDecorator do
       let(:fixture) { 'spec/fixtures/responsive-video.json' }
 
       it 'wraps the content in a div[@class="video-wrapper"]' do
-        nodes = html.search('//div[@class="video-wrapper"]/p/iframe' +
+        nodes = html.search('//div[@class="video-wrapper"]/p/iframe' \
                               '[starts-with(@src, "https://www.youtube.com/embed")]')
 
         expect(nodes).to_not be_empty

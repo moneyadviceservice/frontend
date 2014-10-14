@@ -16,10 +16,10 @@ module Core::Repository
 
         response.body['searchResults'].map do |result_data|
           {
-            :id          => result_data['id'],
-            :title       => result_data['preview']['title'],
-            :description => result_data['preview']['preview'] || result_data['preview']['description'],
-            :type        => result_data['type']
+            id: result_data['id'],
+            title: result_data['preview']['title'],
+            description: result_data['preview']['preview'] || result_data['preview']['description'],
+            type: result_data['type']
           }
         end
       rescue Core::Connection::Http::ConnectionFailed, Core::Connection::Http::ClientError
@@ -29,7 +29,6 @@ module Core::Repository
       private
 
       attr_accessor :connection
-
     end
   end
 end

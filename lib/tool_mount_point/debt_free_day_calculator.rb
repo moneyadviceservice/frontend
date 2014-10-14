@@ -1,6 +1,5 @@
 module ToolMountPoint
   class DebtFreeDayCalculator < Base
-
     class LoanCalculator < Base
       EN_ID = 'loan-calculator'
       CY_ID = 'cyfrifiannell-benthyciadau'
@@ -41,7 +40,7 @@ module ToolMountPoint
     private
 
     def unsupported(method_name)
-      raise("Unsupported: there is no logical implementation of `#{method_name}` for this class")
+      fail("Unsupported: there is no logical implementation of `#{method_name}` for this class")
     end
   end
 end

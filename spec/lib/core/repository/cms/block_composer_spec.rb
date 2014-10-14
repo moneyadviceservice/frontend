@@ -1,6 +1,6 @@
 module Core::Repository::CMS
   RSpec.describe BlockComposer do
-    let(:id) { "content" }
+    let(:id) { 'content' }
     subject(:composer) { described_class.new(blocks, id) }
 
     let(:content_block) do
@@ -26,10 +26,10 @@ module Core::Repository::CMS
     describe '#to_s' do
       context 'description' do
         let(:blocks) { [{ 'identifier' => 'description', 'content' => 'meta description' }] }
-        let(:id) { "description" }
+        let(:id) { 'description' }
 
         it 'returns the meta description string' do
-          expect(composer.to_s).to eql("meta description")
+          expect(composer.to_s).to eql('meta description')
         end
       end
     end

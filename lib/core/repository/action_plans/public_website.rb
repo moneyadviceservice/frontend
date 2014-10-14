@@ -29,7 +29,6 @@ module Core::Repository
       private
 
       attr_accessor :connection
-
     end
   end
 end

@@ -10,12 +10,7 @@ module Core
 
         def call
           customer = Registry::Repository[:customer].find(email: user.email)
-
-          user.customer_id = if customer
-            customer.id
-          else
-            Registry::Repository[:customer].create(user)
-          end
+          user.customer_id = customer ? customer.id : Registry::Repository[:customer].create(user)
 
           user
         rescue

@@ -2,7 +2,7 @@ module Core
   RSpec.describe Customer do
     subject { described_class.new(customer_id, attributes) }
 
-    let(:customer_id){ 'customer_123' }
+    let(:customer_id) { 'customer_123' }
     let(:attributes) do
       {
         first_name: 'Phil',

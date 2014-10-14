@@ -1,5 +1,4 @@
 class ToolCategory
-
   attr_reader :id
 
   def initialize(category_id)
@@ -23,5 +22,4 @@ class ToolCategory
   def entity
     @entity ||= Core::CategoryReader.new(id).call
   end
-
 end

@@ -3,7 +3,7 @@ class BreadcrumbTrail
     categories = case item
       when Core::Category
         if item.parent_id.present?
-          RootToNodePath.build(item, category_tree)[0 ... -1]
+          RootToNodePath.build(item, category_tree)[0...-1]
         else
           [HomeCategory.new]
         end

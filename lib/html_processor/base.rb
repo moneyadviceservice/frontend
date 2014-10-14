@@ -6,7 +6,7 @@ module HTMLProcessor
       @doc = Nokogiri::HTML.parse(html)
     end
 
-    def process(*args)
+    def process(*_args)
       doc.xpath('//body').inner_html.to_s
     end
   end

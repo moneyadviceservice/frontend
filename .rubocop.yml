@@ -1,0 +1,41 @@
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 15
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/FormatString:
+  Enabled: false
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/Not:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/RaiseArgs:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+AllCops:
+  Exclude:
+  - 'app/helpers/application_helper.rb'
+  - 'bin/**/*'
+  - 'config/**/*'
+  - 'db/**/*'
+  - 'Guardfile'
+  - 'lib/tasks/**/*'
+  - 'node_modules/**/*'
+  - 'script/**/*'
+  - 'spec/spec_helper.rb'
+  - 'spec/cassettes/**/*'
+  - 'features/**/*'
+  - 'tmp/**/*'
+  - 'vendor/**/*'
+  # TODO clean this classes
+  - 'app/controllers/styleguide_controller.rb'
+  - 'app/domain/breadcrumb_trail.rb'
+  - 'lib/core/repository/callback_requestable/static.rb'
+  - 'lib/core/repository/categories/fake.rb'
+  - 'lib/core/repository/customers/fake.rb'

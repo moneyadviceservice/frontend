@@ -3,13 +3,12 @@ require 'html_processor'
 class NewsArticleDecorator < ContentItemDecorator
   delegate :description
 
-
   def initialize(object, options = {})
     super
     processors << [HTMLProcessor::NodeRemover, [HTMLProcessor::IMAGE_AUTHOR]]
   end
 
-  def date(options={})
+  def date(options = {})
     h.l(object.date, format: options.fetch(:format, :short))
   end
 

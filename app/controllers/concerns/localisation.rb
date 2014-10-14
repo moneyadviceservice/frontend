@@ -20,7 +20,7 @@ module Localisation
     I18n.available_locales - Array(I18n.locale)
   end
 
-  def default_url_options(options={})
+  def default_url_options(_options = {})
     { locale: I18n.locale }
   end
 

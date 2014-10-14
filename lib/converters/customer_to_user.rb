@@ -8,7 +8,7 @@ module Converters
     end
 
     def call
-      raise('customer is not persisted') if customer.id.blank?
+      fail('customer is not persisted') if customer.id.blank?
 
       existing_user = User.find_by(customer_id: customer.id)
 
@@ -25,12 +25,10 @@ module Converters
     # We don't want to the crm to update the our user email by default
     # otherwise if crm changes email users cannot login
     # override with caution
-    def reject_email
-      @reject_email
-    end
+    attr_reader :reject_email
 
     def existing_customer_attributes
-      hash = customer.attributes.reject{|k,_| [:state, :topics, :status_code].include?(k)}.compact
+      hash = customer.attributes.reject { |k, _| [:state, :topics, :status_code].include?(k) }.compact
       hash.delete(:email) if reject_email
       hash
     end

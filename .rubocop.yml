@@ -1,7 +1,15 @@
 Documentation:
   Enabled: false
-Style/LineLength:
-  Max: 110
+Metrics/LineLength:
+  Max: 120
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/FormatString:
+  Enabled: false
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/Not:
+  Enabled: false
 AllCops:
   Exclude:
   - 'db/**/*'

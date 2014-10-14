@@ -15,8 +15,8 @@ module Core::Repository::CMS
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:get, "https://example.com/#{id}.json").
-          to_return(status: status, body: body, headers: headers)
+        stub_request(:get, "https://example.com/#{id}.json")
+          .to_return(status: status, body: body, headers: headers)
       end
 
       context 'when the type exists' do

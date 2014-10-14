@@ -24,12 +24,12 @@ module Core
           'id'          => 'life-events',
           'type'        => 'category',
           'title'       => 'Life events',
-          'description' => 'When big things happen - having a baby, losing your job, getting divorced or retiring\n - it helps to be in control of your money\n',
+          'description' => 'When big things happen - getting divorced or retiring\n - your money\n',
           'contents'    => [{
             'id'          => 'setting-up-home',
             'type'        => 'category',
             'title'       => 'Setting up home',
-            'description' => 'Deciding whether to rent or buy, working out what you can afford and managing\n money when sharing with others\n',
+            'description' => 'Deciding whether to rent or buy, \n money when sharing with others\n',
             'contents'    => []
           }]
         }]

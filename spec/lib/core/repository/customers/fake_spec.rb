@@ -54,7 +54,6 @@ module Core
 
       it 'updates the customer' do
         user = User.new(first_name: old_first_name)
-        customer = Customer.new(nil, first_name: old_first_name)
         customer_id = subject.create(user)
 
         customer = Customer.new(customer_id, first_name: new_first_name)
@@ -76,7 +75,6 @@ module Core
       context 'when customer exists' do
         it 'returns true' do
           user = User.new(first_name: 'Phil')
-          customer = Customer.new(nil, first_name: 'Phil')
           customer_id = subject.create(user)
 
           expect(subject.valid_for_authentication?(customer_id)).to be_truthy

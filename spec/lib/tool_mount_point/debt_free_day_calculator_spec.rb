@@ -7,18 +7,20 @@ RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
 
     context 'for the Loan Calculator' do
       it 'matches a request for the English version' do
-        request = double('request', params: {
+        request = double('request', params:
+        {
           locale: 'en',
-          tool_id: 'loan-calculator',
+          tool_id: 'loan-calculator'
         })
 
         expect(subject.matches?(request)).to be_truthy
       end
 
       it 'matches a request for the Welsh version' do
-        request = double('request', params: {
+        request = double('request', params:
+        {
           locale: 'cy',
-          tool_id: 'cyfrifiannell-benthyciadau',
+          tool_id: 'cyfrifiannell-benthyciadau'
         })
 
         expect(subject.matches?(request)).to be_truthy
@@ -27,18 +29,20 @@ RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
 
     context 'for the Credit Card Calculator' do
       it 'matches a request for the English version' do
-        request = double('request', params: {
+        request = double('request', params:
+        {
           locale: 'en',
-          tool_id: 'credit-card-calculator',
+          tool_id: 'credit-card-calculator'
         })
 
         expect(subject.matches?(request)).to be_truthy
       end
 
       it 'matches a request for the Welsh version' do
-        request = double('request', params: {
+        request = double('request', params:
+        {
           locale: 'cy',
-          tool_id: 'cyfrifiannell-cerdyn-credyd',
+          tool_id: 'cyfrifiannell-cerdyn-credyd'
         })
 
         expect(subject.matches?(request)).to be_truthy
@@ -73,14 +77,14 @@ RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
     end
   end
 
-  describe "#en_id" do
+  describe '#en_id' do
     it 'is not supported' do
       expect { subject.en_id }.to raise_error(
         'Unsupported: there is no logical implementation of `en_id` for this class')
     end
   end
 
-  describe "#cy_id" do
+  describe '#cy_id' do
     it 'is not supported' do
       expect { subject.cy_id }.to raise_error(
         'Unsupported: there is no logical implementation of `cy_id` for this class')

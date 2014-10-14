@@ -27,8 +27,8 @@ module Core::Repository::Search
       subject { described_class.new(response).mapped_response }
 
       before do
-        allow_any_instance_of(GoogleCustomSearchEngine::ResponseItemMapper).
-          to receive(:mapped_item_response) { mapped_item_data }
+        allow_any_instance_of(GoogleCustomSearchEngine::ResponseItemMapper)
+          .to receive(:mapped_item_response) { mapped_item_data }
       end
 
       it 'maps the total results correctly' do
@@ -41,8 +41,8 @@ module Core::Repository::Search
 
       context 'for each item' do
         it 'instantiates an item mapper' do
-          expect(GoogleCustomSearchEngine::ResponseItemMapper).
-            to receive(:new).with(item_data).and_call_original
+          expect(GoogleCustomSearchEngine::ResponseItemMapper)
+            .to receive(:new).with(item_data).and_call_original
           subject
         end
 

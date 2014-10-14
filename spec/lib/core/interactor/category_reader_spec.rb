@@ -28,8 +28,8 @@ module Core
       end
 
       it 'instantiates the category with the id and the attributes from the repository' do
-        expect(Category).
-          to receive(:new).with(id, data).and_call_original
+        expect(Category)
+          .to receive(:new).with(id, data).and_call_original
 
         subject.call
       end

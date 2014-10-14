@@ -43,10 +43,8 @@ RSpec.describe ToolMountPoint::MortgageCalculator do
       end
     end
 
-
     describe 'rewriting mortgage affordability tool urls' do
       it 'returns a correct looking url untampered' do
-        locale = 'cy'
         url    = 'http://test.url/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais'
         expect(subject.alternate_url(url)).to eq(url)
       end

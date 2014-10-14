@@ -10,8 +10,8 @@ module Core::Repository::NewsletterSubscriptions
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:post, 'https://example.com/en/newsletter-subscriptions.json').
-          to_return(status: status, body: nil)
+        stub_request(:post, 'https://example.com/en/newsletter-subscriptions.json')
+          .to_return(status: status, body: nil)
       end
 
       context 'with valid email' do

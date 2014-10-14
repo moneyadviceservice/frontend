@@ -3,12 +3,14 @@ RSpec.describe BreadcrumbTrail, '.build' do
   let(:static_page)           { Core::StaticPage.new(double) }
   let(:news_article)          { Core::NewsArticle.new(double) }
   let(:category_title)        { 'the-category' }
-  let(:category)              { Core::Category.new(category_title, title: category_title, parent_id: parent_category.id) }
   let(:tool_category)         { ToolCategory.new(category_title) }
   let(:parent_category_title) { 'the-category' }
   let(:parent_category)       { Core::Category.new(parent_category_title, title: parent_category_title) }
   let(:path_to_category)      { [parent_category, category] }
   let(:category_tree)         { double }
+  let(:category) do
+    Core::Category.new(category_title, title: category_title, parent_id: parent_category.id)
+  end
 
   before do
     allow(tool_category).to receive(:entity) { category }

@@ -11,8 +11,8 @@ module Core::Repository::Search
 
     before do
       allow(Core::Registry::Connection).to receive(:[]).with(:google_api) { connection }
-      allow_any_instance_of(GoogleCustomSearchEngine::ResponseMapper).
-        to receive(:mapped_response).and_return(mapped_response)
+      allow_any_instance_of(GoogleCustomSearchEngine::ResponseMapper)
+        .to receive(:mapped_response).and_return(mapped_response)
     end
 
     describe '#perform' do
@@ -26,10 +26,10 @@ module Core::Repository::Search
       it 'records an event with Rails instrumentation' do
         allow(connection).to receive(:get) { double(body: {}) }
 
-        expect(ActiveSupport::Notifications).
-          to receive(:instrument).
-               with(event_name, hash_including(query: query, locale: I18n.locale, page: page, per_page: per_page)).
-               and_call_original
+        expect(ActiveSupport::Notifications)
+          .to receive(:instrument)
+               .with(event_name, hash_including(query: query, locale: I18n.locale, page: page, per_page: per_page))
+               .and_call_original
 
         perform_search
       end

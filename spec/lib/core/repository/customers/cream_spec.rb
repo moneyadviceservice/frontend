@@ -4,8 +4,8 @@ module Core
   RSpec.describe Repository::Customers::Cream do
     describe '#find' do
       context 'when customer exists' do
-        let(:client){ double("client", find_customer: response) }
-        let(:user){ User.new }
+        let(:client) { double('client', find_customer: response) }
+        let(:user) { User.new }
         let(:response) { JSON.parse(File.read('spec/fixtures/customers/cream_response.json')) }
 
         it 'returns the customer' do

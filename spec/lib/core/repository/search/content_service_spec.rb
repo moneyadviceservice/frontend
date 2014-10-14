@@ -19,15 +19,15 @@ RSpec.describe Core::Repository::Search::ContentService do
     let(:status) { 200 }
 
     before do
-      stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}").
-        to_return(status: status, body: body, headers: {})
+      stub_request(:get, "https://example.com/path/to/url/search.json?limit=#{limit}&locale=#{locale}&query=#{query}")
+        .to_return(status: status, body: body, headers: {})
     end
 
     it 'records an event with Rails instrumentation' do
-      expect(ActiveSupport::Notifications).
-        to receive(:instrument).
-             with(event_name, query: query, locale: locale, limit: limit).
-             and_call_original
+      expect(ActiveSupport::Notifications)
+        .to receive(:instrument)
+             .with(event_name, query: query, locale: locale, limit: limit)
+             .and_call_original
 
       subject
     end

@@ -41,8 +41,8 @@ RSpec.describe CategoriesController, type: :controller do
       before { allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield }
 
       it 'raises an ActionController RoutingError' do
-        expect { get :show, id: category.id, locale: I18n.locale }.
-          to raise_error(ActionController::RoutingError)
+        expect { get :show, id: category.id, locale: I18n.locale }
+          .to raise_error(ActionController::RoutingError)
       end
     end
   end

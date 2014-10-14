@@ -39,7 +39,7 @@ end
 
 RSpec.shared_examples 'an unsuccessful get article request' do
   it 'raises an ActionController RoutingError' do
-    expect { get :show, id: 'does-not-exist', locale: I18n.locale }.
-        to raise_error(ActionController::RoutingError)
+    expect { get :show, id: 'does-not-exist', locale: I18n.locale }
+        .to raise_error(ActionController::RoutingError)
   end
 end

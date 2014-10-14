@@ -5,8 +5,8 @@ RSpec.describe 'Article routing', type: :routing do
 
   it 'provides locale aware routes to preview article' do
     I18n.available_locales.map(&:to_s).each do |locale|
-      expect(get("/#{locale}/articles/example/preview")).
-          to route_to(controller: 'articles_preview', action: 'show', locale: locale, id: 'example')
+      expect(get("/#{locale}/articles/example/preview"))
+          .to route_to(controller: 'articles_preview', action: 'show', locale: locale, id: 'example')
     end
   end
 end

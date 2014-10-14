@@ -30,8 +30,8 @@ module Core
         end
 
         it 'instantiates the article with the id and the attributes from the repository' do
-          expect(Article).
-            to receive(:new).with(id, data).and_call_original
+          expect(Article)
+            .to receive(:new).with(id, data).and_call_original
 
           subject.call
         end

@@ -42,7 +42,6 @@ Around do |scenario, block|
       block.call
     end
 
-    Rails.application.reload_routes!
   else
     block.call
   end

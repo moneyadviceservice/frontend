@@ -66,8 +66,10 @@ Rails.application.routes.draw do
     mount PensionsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pensions_calculator)
 
-    mount SavingsCalculator::Engine => '/tools/:tool_id',
+    Feature.with(:savings_calculator) do
+      mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)
+    end
 
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 

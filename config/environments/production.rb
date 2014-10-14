@@ -86,6 +86,8 @@ Rails.application.configure do
   # Configure active record session store.
   config.session_store :active_record_store
 
+  config.action_mailer.default_url_options = {:host => "#{'qa.test.' if ENV['MAS_ENVIRONMENT'] == 'qa'}moneyadviceservice.org.uk"}
+
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :sendmail
   config.raise_feedback_delivery_errors = true

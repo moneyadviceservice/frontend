@@ -1,0 +1,81 @@
+.l-annuities__banner {
+  padding-top: $baseline-unit*6;
+  padding-bottom: $baseline-unit*2;
+  background-image: linear-gradient(180deg, #ffffff, #F3F3F3);
+}
+
+.l-annuities__banner-left {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(7);
+  }
+}
+
+.l-annuities__banner-right {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(5);
+  }
+}
+
+.l-annuities__list {
+  margin-top: $baseline-unit*2;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*18;
+  }
+}
+
+.l-annuities__video {
+  width: 100%;
+  min-height: 284px;
+  margin-top: $baseline-unit*4;
+}
+
+.l-annuities__video-caption {
+  @extend %paragraph;
+  margin-top: $baseline-unit*2;
+}
+
+.l-annuities__image {
+  @include column(11);
+  @include push(1);
+  margin-bottom: $baseline-unit*4;
+  margin-top: $baseline-unit*7;
+
+  @include respond-to($mq-m) {
+    @include column(5);
+    @include pull(1);
+    float: right;
+    margin-bottom: $baseline-unit*6;
+  }
+}
+
+.l-annuities__heading {
+  @include column(12);
+  margin-top: 0;
+}
+
+.l-annuities__small-heading {
+  @include body(22,26);
+  color: $color-heading-extra-small;
+}
+
+.l-annuities__citation {
+  display: block;
+  margin-top: $baseline-unit*2;
+}
+
+.l-annuities__panel {
+  clear: both;
+  overflow: hidden;
+  background-color: $color-panel-background;
+  padding: $baseline-unit*3 0;
+  margin-bottom: $baseline-unit*2;
+
+  p {
+    @extend %paragraph;
+  }
+}

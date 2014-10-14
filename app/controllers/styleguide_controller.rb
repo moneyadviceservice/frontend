@@ -126,6 +126,10 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
+  def pages_annuities_landing_page
+    render layout: 'styleguide/page_unconstrained'
+  end
+
   private
 
   def article
@@ -136,6 +140,11 @@ class StyleguideController < ApplicationController
 
   def categories
     [
+      {
+        title:    'Home',
+        object:   { contents: [] },
+        contents: []
+      },
       {
         title:    'Insurance',
         object:   { contents: [] },

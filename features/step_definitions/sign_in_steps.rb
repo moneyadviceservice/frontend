@@ -72,3 +72,16 @@ Then(/^I click on 'Forgot your password\?'$/) do
   sign_in_page.forgot_password.click
 end
 
+Then(/^I should be on a page instructing me of the next steps$/) do
+  expect(page.current_path).to eql('/en/users/password/new')
+end
+
+When(/^I fill in my email$/) do
+  forgot_password_page.load(locale: 'en')
+  forgot_password_page.email.set 'user@example.com'
+  forgot_password_page.submit.click
+end
+
+Then(/^I should be able to change my password$/) do
+  expect(page.current_path).to include('/en/users/password/edit')
+end

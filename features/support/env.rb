@@ -3,6 +3,7 @@ ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'mas/development_dependencies/cucumber/env'
 require 'feature/testing'
+require 'email_spec/cucumber'
 
 I18n.available_locales = [:en, :cy]
 
@@ -41,23 +42,22 @@ Around do |scenario, block|
       block.call
     end
 
-    Rails.application.reload_routes!
   else
     block.call
   end
 end
 
-def enable_features(features, &block)
+def enable_features(features)
   if features.empty?
     yield
   else
-    Feature.run_with_activated(features.shift) do
-      enable_features(features, &block)
+    Feature.run_with_activated(features) do
+      yield
     end
   end
 end
 
-['@enable-sign-in', '@enable-registration'].each do |tag|
+['@enable-sign-in', '@enable-registration', '@enable-reset-passwords'].each do |tag|
   Around(tag) do |scenario, block|
     Feature.run_with_activated(:sign_in) do
       Devise.regenerate_helpers!

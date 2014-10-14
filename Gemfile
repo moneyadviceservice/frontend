@@ -74,6 +74,7 @@ end
 group :test do
   gem 'chronic'
   gem 'codeclimate-test-reporter', require: false
+  gem 'email_spec'
   gem 'faker'
   gem 'html_validation', github: 'moneyadviceservice/html_validation', ref: '3fb1b65'
   gem 'rspec_junit_formatter'

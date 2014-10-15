@@ -4,12 +4,12 @@
 <p><%= t('.goal_introduction') %></p>
 <%= form_for current_user, html: {id: 'goal_form', class: 'form'}, url: profile_path, method: :put do |f| %>
   <div class="form__row">
-    <label for="goal_text" class="form__label-heading"><%= t('.goal_text_label') %></label>
-    <input type="text" name="goal_text" aria-describedby="frmhint1" value="<%= current_user.goal_text %>">
+    <label for="goal_statement" class="form__label-heading"><%= t('.goal_text_label') %></label>
+    <input type="text" name="goal_statement" aria-describedby="frmhint1" value="<%= current_user.goal_statement %>">
   </div>
   <div class="form__row">
-    <label for="goal_date" class="form__label-heading"><%= t('.goal_date_label') %></label>
-    <input type="text" name="goal_date" aria-describedby="frmhint1" value="<%= current_user.goal_date %>">
+    <label for="goal_deadline" class="form__label-heading"><%= t('.goal_date_label') %></label>
+    <input type="text" name="goal_deadline" aria-describedby="frmhint1" value="<%= current_user.goal_deadline%>">
   </div>
   <div class="form__row">
     <input class="button button--primary" type="submit" value="<%= t('.goal_save_label') %>">

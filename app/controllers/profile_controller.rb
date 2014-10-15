@@ -5,8 +5,8 @@ class ProfileController < ArticlesController
   end
 
   def update
-    current_user.goal_text = params[:goal_text]
-    current_user.goal_date = params[:goal_date]
+    current_user.goal_statement = params[:goal_statement]
+    current_user.goal_deadline = params[:goal_deadline]
     current_user.save!
 
     render :edit

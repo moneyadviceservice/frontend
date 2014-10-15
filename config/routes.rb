@@ -12,11 +12,10 @@ Rails.application.routes.draw do
     if Feature.active?(:registration)
       scope '/users' do
         match '/', to: not_implemented, via: ['put', 'patch']
+        match '/edit', to: not_implemented, via: 'get'
 
         if Feature.active?(:profile)
-          match '/edit', to: 'profile#edit', via: 'get'
-        else
-          match '/edit', to: not_implemented, via: 'get'
+          match '/profile', to: 'profile#edit', via: 'get'
         end
       end
 

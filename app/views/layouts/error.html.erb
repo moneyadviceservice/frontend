@@ -14,5 +14,13 @@
     </main>
   </div>
 
+  <% content_for(:javascripts) do %>
+  <script>
+  if (Object.prototype.toString.call(dataLayer) === '[object Array]') {
+    dataLayer.push({'event': 'error_500'});
+  }
+  </script>
+  <% end %>
+
   <%= render 'shared/footer' %>
 <% end %>

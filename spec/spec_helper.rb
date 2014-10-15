@@ -58,7 +58,15 @@ RSpec.configure do |c|
     Core::Registry::Repository[:category]    = Core::Repository::VCR.new(category_repository)
     Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
 
-    example.run
+    if example.metadata[:features]
+      Feature.run_with_activated(example.metadata[:features]) do
+        Rails.application.reload_routes!
+        example.run
+      end
+      Rails.application.reload_routes!
+    else
+      example.run
+    end
 
     Core::Registry::Repository[:action_plan] = action_plan_repository
     Core::Registry::Repository[:article]     = article_repository

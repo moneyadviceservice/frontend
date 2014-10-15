@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe SessionsController, type: :controller do
   around :each do |example|
     Feature.run_with_activated(:sign_in) do

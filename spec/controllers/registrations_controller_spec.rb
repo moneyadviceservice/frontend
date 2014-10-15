@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe RegistrationsController, type: :controller do
   describe '#build_resource' do
     it 'sets user to have accepted terms and conditions' do

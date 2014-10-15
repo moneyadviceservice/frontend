@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe 'Registration routing', features: [:registration], type: :request do
   it '501 on user updating account details' do
     get('/en/users/edit')

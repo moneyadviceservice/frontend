@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Core
   RSpec.describe Repository::Customers::Cream do
     describe '#find' do

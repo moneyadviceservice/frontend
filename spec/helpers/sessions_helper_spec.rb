@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe SessionsHelper do
   describe '#authentication_sign_in_title' do
     it 'returns the default translation ' do

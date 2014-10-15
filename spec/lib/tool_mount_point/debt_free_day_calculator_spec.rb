@@ -1,6 +1,3 @@
-require 'tool_mount_point/base'
-require 'tool_mount_point/debt_free_day_calculator'
-
 RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
 
   describe '#matches?' do

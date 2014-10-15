@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Core
   module Interactors
     RSpec.describe UserUpdater do

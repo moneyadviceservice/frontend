@@ -1,5 +1,3 @@
-require 'current_request_id'
-
 RSpec.describe CaptureRequestId do
   subject(:capture_request_middleware) do
     described_class.new(double(call: nil))

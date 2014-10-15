@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe Core::Repository::CallbackRequestable::Static do
   describe '#call' do
     context 'when it is callback requestable' do

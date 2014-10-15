@@ -1,5 +1,3 @@
-require 'registry'
-
 RSpec.describe Registry do
   let(:type) { double }
   let(:object) { double }

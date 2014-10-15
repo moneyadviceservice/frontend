@@ -1,5 +1,3 @@
-require 'tool_mount_point/base'
-
 RSpec.describe ToolMountPoint::Base do
   subject(:mount_point) { described_class.new }
 

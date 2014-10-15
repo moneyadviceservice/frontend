@@ -1,5 +1,3 @@
-require 'current_request_id'
-
 RSpec.describe CurrentRequestId do
   let(:request_id_key) { 'request-id' }
   let(:request_id) { '123' }

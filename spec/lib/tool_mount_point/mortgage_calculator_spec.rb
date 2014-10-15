@@ -1,6 +1,3 @@
-require 'tool_mount_point/base'
-require 'tool_mount_point/mortgage_calculator'
-
 RSpec.describe ToolMountPoint::MortgageCalculator do
 
   describe '#alternate_tool_id' do

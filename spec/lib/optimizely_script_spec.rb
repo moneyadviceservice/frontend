@@ -1,5 +1,3 @@
-require 'optimizely_script'
-
 RSpec.describe OptimizelyScript do
   describe '#to_s' do
     let(:data) { { digest: digest } }

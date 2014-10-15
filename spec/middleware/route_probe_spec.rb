@@ -1,5 +1,3 @@
-require 'route_probe'
-
 RSpec.describe RouteProbe do
   include Rack::Test::Methods
 

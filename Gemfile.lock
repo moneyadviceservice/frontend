@@ -279,6 +279,9 @@ GEM
     guard-rspec (4.2.10)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
+    guard-rubocop (1.1.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     guard-sass (1.4.0)
       guard (>= 1.1.0)
       sass (>= 3.1)
@@ -600,6 +603,7 @@ DEPENDENCIES
   guard-livereload
   guard-rails
   guard-rspec
+  guard-rubocop
   guard-sass
   guard-shell
   html_validation!

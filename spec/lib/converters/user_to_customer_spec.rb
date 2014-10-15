@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Converters
   RSpec.describe UserToCustomer do
     let(:user) { User.new(attributes) }

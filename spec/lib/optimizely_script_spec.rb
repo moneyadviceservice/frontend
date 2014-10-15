@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'optimizely_script'
 
 RSpec.describe OptimizelyScript do

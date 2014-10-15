@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Core
   RSpec.describe Repository::Users::Default do
     describe '#update_from_crm' do

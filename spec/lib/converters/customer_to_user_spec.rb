@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module Converters
   RSpec.describe CustomerToUser do
     context 'when user exists' do

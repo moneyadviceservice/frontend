@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'lib/core/interactor/shared_examples/optional_failure_block'
 
 module Core

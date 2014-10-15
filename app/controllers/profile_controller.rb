@@ -4,6 +4,14 @@ class ProfileController < ArticlesController
   def edit
   end
 
+  def update
+    current_user.goal_text = params[:goal_text]
+    current_user.goal_date = params[:goal_date]
+    current_user.save!
+
+    render :edit
+  end
+
   private
 
   def require_sign_in

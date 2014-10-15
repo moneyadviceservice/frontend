@@ -424,8 +424,9 @@ en:
       word_page: Page
       title: Your Profile
       intro: This section is all about you
-      goal_heading: Your Goal
-      goal_introduction: Use this area to set a goal for yourself and add a date for when you want to achieve your goal by.
-      goal_text_label: I commit to
-      goal_date_label: By
-      goal_save_label: Set my goal
+      goal:
+        heading: Your Goal
+        introduction: Use this area to set a goal for yourself and add a date for when you want to achieve your goal by.
+        statement_field_label: I commit to
+        deadline_field_label: By
+        save_button_text: Set my goal

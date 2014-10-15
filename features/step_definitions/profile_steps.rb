@@ -3,7 +3,7 @@ When(/^I view my profile page$/) do
 end
 
 Then(/^I see my name$/) do
-  expect(profile_page.heading.text).to include(User.all.first.first_name)
+  expect(profile_page.heading.text).to include(User.first.first_name)
 end
 
 Then(/^I see my goal and goal date is blank$/) do
@@ -18,6 +18,6 @@ When(/^I set a new goal and goal date$/) do
 end
 
 And(/^I see my goal and goal date$/) do
-  expect(profile_page.goal_text.value).to eql(User.all.first.goal_text)
-  expect(profile_page.goal_date.value).to eql(User.all.first.goal_date)
+  expect(profile_page.goal_text.value).to eql(User.first.goal_text)
+  expect(profile_page.goal_date.value).to eql(User.first.goal_date)
 end

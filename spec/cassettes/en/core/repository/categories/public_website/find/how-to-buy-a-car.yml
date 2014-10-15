@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/how-to-buy-a-car.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (cortado.local; swilkin; 25504) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - f413d299-4030-4c80-9101-d758b3bc691e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 15 Oct 2014 14:33:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 0ec073db29fb256ea000aeb6d9b49884
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 15-Oct-2015 14:33:07 GMT; secure
+      - _session_id=0ec073db29fb256ea000aeb6d9b49884; path=/; secure; HttpOnly
+      - _web_tracking=17ae83e16a990b3177c20976bc18fd0f; path=/; expires=Thu, 15-Oct-2015
+        14:33:07 GMT; secure
+      X-Request-Id:
+      - f413d299-4030-4c80-9101-d758b3bc691e
+      X-Runtime:
+      - '0.353344'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-buy-a-car","title":"How to buy a car","description":"What
+        to consider before buying a new or used car, including your budget, car finance
+        options, and how to negotiate the best deal.","parent_id":"cars-and-travel","contents":[{"id":"how-to-find-the-right-car-for-your-budget","type":"guide","title":"How
+        to find the right car for your budget","description":"Tools and tips to help
+        you work out your car-buying budget and practical needs, then find the car
+        that meets them"},{"id":"car-finance-explained","type":"guide","title":"Car
+        finance explained","description":"Different car finance options and what to
+        consider when deciding how to pay for a new or used car"},{"id":"making-sure-you-can-meet-your-car-payments","type":"guide","title":"Making
+        sure you can meet your car payments","description":"How to be prepared for
+        unexpected expenses or a drop in income that could make it difficult to keep
+        up the payments on your car"},{"id":"car-costs-calculator","type":"tool","title":"Car
+        costs calculator","description":"Find out how much it costs to run a used
+        car over a year - all you need is the registration number of the car you\u2019re
+        looking to buy to get started"},{"id":"deciding-how-to-pay-for-a-car","type":"guide","title":"Deciding
+        how to pay for a car","description":"What you need to consider before deciding
+        whether to use cash, a personal loan or a dealer finance plan to buy your
+        new or used car"},{"id":"buying-a-car-through-a-personal-loan","type":"guide","title":"Buying
+        a car through a personal loan","description":"What you need to know about
+        the pros and cons of using a personal loan from a bank or building society
+        to buy a new or used car"},{"id":"leasing-a-car","type":"guide","title":"Leasing
+        a car","description":"Thinking of leasing a car? Find out which car leasing
+        option would be best for you \u2013 personal contract hire or personal contract
+        purchase"},{"id":"buying-a-car-through-hire-purchase","type":"guide","title":"Buying
+        a car through hire purchase","description":"Key facts about buying a car through
+        hire purchase, to help you decide whether it might be the car finance option
+        you\u2019re looking for"},{"id":"the-most-reliable-cars-to-own","type":"guide","title":"The
+        most reliable cars to own","description":"How to find the latest information
+        about the most reliable new and used cars, based on three leading surveys
+        of UK car-owners\u2019 experiences"},{"id":"the-safest-cars-to-drive","type":"guide","title":"The
+        safest cars to drive","description":"How to find the safest cars on the road,
+        including information on Euro NCAP tests and their best-in-class cars for
+        safety in 2013"},{"id":"car-depreciation-explained","type":"guide","title":"Car
+        depreciation explained","description":"What car depreciation is and why it\u2019s
+        one of the most important things to consider before buying a new or used car"},{"id":"car-tax-bands-explained","type":"guide","title":"Car
+        tax bands explained","description":"An explanation of road tax, plus advice
+        and tools to help you compare the tax you\u2019d need to pay on different
+        types of cars"},{"id":"choosing-between-petrol-and-diesel-power","type":"guide","title":"Choosing
+        between petrol and diesel power","description":"Before choosing between a
+        petrol or diesel car make sure you know the pros and cons of each, and how
+        you can cut the costs of everyday motoring"},{"id":"alternatives-to-petrol-and-diesel-cars","type":"guide","title":"Alternatives
+        to petrol and diesel cars","description":"If you\u2019re looking for a car
+        that\u2019s environmentally-friendly and cost-effective to run, here are the
+        alternatives to cars powered by petrol or diesel alone"},{"id":"where-to-buy-a-new-car","type":"guide","title":"Where
+        to buy a new car","description":"Can\u2019t decide whether to use a dealer
+        or a broker when it comes to buying your new car? Here are the pros and cons
+        of both"},{"id":"where-to-buy-a-used-car","type":"guide","title":"Where to
+        buy a used car","description":"Different ways to buy a used car \u2013 including
+        from a dealer, a private seller or a car auction \u2013 plus their pros and
+        cons"},{"id":"when-to-buy-a-car","type":"guide","title":"When to buy a car","description":"Knowing
+        the best time of year to buy a new or used car can save you a lot of money.
+        Read our tips for making seasonal savings"},{"id":"how-to-negotiate-when-buying-a-car","type":"guide","title":"How
+        to negotiate when buying a car","description":"Getting a good deal on your
+        next car could depend on your negotiating skills \u2013 so make sure you read
+        our top tips"},{"id":"how-to-test-drive-and-check-a-used-car","type":"guide","title":"How
+        to test drive and check a used car","description":"What to look out for when
+        test driving and checking a used car, plus tips on personal safety when buying
+        privately"},{"id":"how-to-test-drive-and-check-a-new-car","type":"guide","title":"How
+        to test drive and check a new car","description":"Things to look out for when
+        test driving a new car, plus what to check when your car is delivered to you"},{"id":"car-warranties","type":"guide","title":"Car
+        warranties","description":"An explanation of car warranties and what you need
+        to consider if you\u2019re thinking of taking out a warranty on a used car"}]}'
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 14:33:07 GMT
+recorded_with: VCR 2.9.2

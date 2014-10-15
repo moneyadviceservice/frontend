@@ -15,8 +15,7 @@ Rails.application.routes.draw do
         match '/edit', to: not_implemented, via: 'get'
 
         if Feature.active?(:profile)
-          match '/profile', to: 'profile#edit', via: 'get'
-          match '/profile', to: 'profile#update', via: 'put'
+          resource :profile, only: %i(edit update), controller: :profile
         end
       end
 

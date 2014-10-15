@@ -2,7 +2,7 @@ require_relative '../page'
 
 module UI::Pages
   class Profile < UI::Page
-    set_url '{/locale}/users/profile'
+    set_url '{/locale}/users/profile/edit'
 
     element :heading, 'h1'
     element :goal_text, '#goal_form input[name="goal_text"]'

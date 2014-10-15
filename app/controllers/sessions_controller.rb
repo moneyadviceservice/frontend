@@ -17,11 +17,11 @@ class SessionsController < Devise::SessionsController
     head :not_implemented if request.xhr?
   end
 
-  def after_sign_in_path_for(_resource)
+  def after_sign_in_path_for(*)
     last_known_path_or_root_path
   end
 
-  def after_sign_out_path_for(_resource)
+  def after_sign_out_path_for(*)
     last_known_path_or_root_path
   end
 

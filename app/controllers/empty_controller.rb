@@ -13,7 +13,7 @@ class EmptyController < ApplicationController
   end
   helper_method :optimizely_include_tag
 
-  def raw(_stringish)
+  def raw(*)
   end
   helper_method :raw
 

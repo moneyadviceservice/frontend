@@ -39,3 +39,8 @@ end
 guard :shell do
   watch('bower.json') { `bower install` }
 end
+
+guard :rubocop do
+  watch(%r{.+\.rb$})
+  watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
+end

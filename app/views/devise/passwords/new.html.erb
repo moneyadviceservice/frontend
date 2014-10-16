@@ -1,5 +1,9 @@
 <main role="main" class="l-registration">
-  <h1>Forgot your password?</h1>
+  <h1><%= t("authentication.reset_password_page.title") %></h1>
+
+  <p><%= t("authentication.reset_password_page.intro") %></p>
+
+  <p><%= t("authentication.reset_password_page.instructions") %></p>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, :class => 'form' }) do |f| %>
     <%= devise_error_messages! %>
@@ -15,7 +19,7 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.submit "Send me reset password instructions", class: 'button button--primary' %>
+        <%= f.submit t("authentication.reset_password_page.button_label"), class: 'button button--primary' %>
       </div>
     </div>
   <% end %>

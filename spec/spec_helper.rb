@@ -47,7 +47,7 @@ RSpec.configure do |c|
 
   c.disable_monkey_patching!
 
-  c.around(:example, :type => :feature) do |example|
+  c.around(:example) do |example|
     action_plan_repository = Core::Registry::Repository[:action_plan]
     article_repository     = Core::Registry::Repository[:article]
     category_repository    = Core::Registry::Repository[:category]

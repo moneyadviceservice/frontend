@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/how-to-buy-a-car.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (cortado.local; swilkin; 25504) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 849d8c7d-40c1-4174-831f-19912b878b40
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 15 Oct 2014 14:33:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 158de3012c53f0c677f5f70c80830c41
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 15-Oct-2015 14:33:05 GMT; secure
+      - _session_id=158de3012c53f0c677f5f70c80830c41; path=/; secure; HttpOnly
+      - _web_tracking=9b8188da28bd229be322eff5c50fb53f; path=/; expires=Thu, 15-Oct-2015
+        14:33:05 GMT; secure
+      X-Request-Id:
+      - 849d8c7d-40c1-4174-831f-19912b878b40
+      X-Runtime:
+      - '0.472280'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-buy-a-car","title":"Sut i brynu car","description":"Beth
+        i''w ystyried cyn prynu car newydd neu ail-law, gan gynnwys eich cyllideb,
+        opsiynau cyllid car, a sut i gael y fargen orau.","parent_id":"cars-and-travel","contents":[{"id":"sut-mae-dod-o-hyd-ir-car-iawn-ar-gyfer-eich-cyllideb","type":"guide","title":"Sut
+        mae dod o hyd i''r car iawn ar gyfer eich cyllideb","description":"Offer ac
+        awgrymiadau i\u2019ch helpu i gyfrifo\u2019ch cyllideb ar gyfer prynu car
+        a\u2019ch anghenion ymarferol, yna dod o hyd i''r car sy\u2019n eu diwallu"},{"id":"cyllid-car-wedii-esbonio","type":"guide","title":"Cyllid
+        car wedi\u2019i esbonio","description":"Gwahanol opsiynau ar gyfer cyllid
+        car a beth i\u2019w ystyried wrth benderfynu ar sut i dalu am gar newydd neu
+        ail-law"},{"id":"sicrhau-y-gallwch-gwrdd-ach-taliadau-car","type":"guide","title":"Sicrhau
+        y gallwch gwrdd \u00e2\u2019ch taliadau car","description":"Sut i baratoi
+        ar gyfer treuliau annisgwyl neu ostyngiad mewn incwm a allai ei wneud yn anodd
+        i dalu\u2019r taliadau ar eich car"},{"id":"cyfrifiannell-costau-car","type":"tool","title":"Cyfrifiannell
+        Costau Car","description":"Dysgwch beth yw cost rhedeg car ail-law dros flwyddyn.
+        Rhowch rif cofrestru\u2019r car y dymunwch ei brynu er mwyn cychwyn arni"},{"id":"penderfynu-sut-i-dalu-am-gar","type":"guide","title":"Penderfynu
+        sut i dalu am gar","description":"Yr hyn mae angen ichi ei ystyried cyn penderfynu
+        a ddylech ddefnyddio arian parod, benthyciad personol neu gynllun cyllido\u2019r
+        deliwr i brynu\u2019ch car newydd neu ail-law"},{"id":"prynu-car-trwy-fenthyciad-personol","type":"guide","title":"Prynu
+        car trwy fenthyciad personol","description":"Beth sydd angen ichi ei wybod
+        ynghylch manteision ac anfanteision defnyddio benthyciad personol oddi wrth
+        fanc neu gymdeithas adeiladu er mwyn prynu car newydd neu ail-law"},{"id":"prydlesu-car","type":"guide","title":"Prydlesu
+        car","description":"Crynodeb o brydlesu neu \u2018hurio contract personol
+        (PCP)\u2019 i\u2019ch helpu i ddewis yr opsiwn cyllido car cywir ar gyfer
+        eich amgylchiadau"},{"id":"cyn-prynu-car-trwy-hurbwrcasu","type":"guide","title":"Cyn
+        prynu car trwy hurbwrcasu","description":"Ffeithiau allweddol ynghylch prynu
+        car trwy hurbwrcasu, i\u2019ch helpu i benderfynu ai hwn yw\u2019r opsiwn
+        cyllido car rydych yn chwilio amdano"},{"id":"y-ceir-mwyaf-dibynadwy-iw-berchen","type":"guide","title":"Y
+        ceir mwyaf dibynadwy i\u2019w berchen","description":"Sut mae dod o hyd i\u2019r
+        wybodaeth ddiweddaraf ynghylch y ceir newydd ac ail-law mwyaf dibynadwy, ar
+        sail tri arolwg blaengar o brofiadau prynwyr ceir yn y DU"},{"id":"y-ceir-diogelaf-iw-gyrru","type":"guide","title":"Y
+        ceir diogelaf i\u2019w gyrru","description":"Sut mae dod o hyd i\u2019r ceir
+        diogelaf ar y ffyrdd, gan gynnwys gwybodaeth ar brofion Euro NCAP a\u2019u
+        ceir gorau-yn-y-dosbarth ar gyfer diogelwch yn 2013"},{"id":"dibrisiant-car-wedii-esbonio","type":"guide","title":"Dibrisiant
+        car wedi\u2019i esbonio","description":"Beth yw dibrisiant car a pham mae\u2019n
+        un o\u2019r pethau pwysicaf i\u2019w ystyried cyn prynu car newydd neu gar
+        ail-law"},{"id":"bandiau-treth-car-wediu-hesbonio","type":"guide","title":"Bandiau
+        treth car wedi\u2019u hesbonio","description":"Esboniad o dreth ffordd, a
+        chyngor ac offer i\u2019ch helpu i gymharu\u2019r dreth y byddai angen ichi
+        ei thalu ar fathau gwahanol o geir"},{"id":"dewis-rhwng-pwer-petrol-a-diesel","type":"guide","title":"Dewis
+        rhwng p\u0175er petrol a diesel","description":"Cyn dewis rhwng car petrol
+        neu ddiesel gwnewch yn si\u0175r eich bod yn gwybod am fanteision ac anfanteision
+        pob un, a sut y gallwch torri costau moduro bob dydd"},{"id":"dewisiadau-ar-wahan-i-geir-petrol-a-disel","type":"guide","title":"Dewisiadau
+        ar wah\u00e2n i geir petrol a disel","description":"Os ydych chi\u2019n chwilio
+        am gar sy\u2019n amgylcheddol gyfeillgar ac yn gost effeithiol i\u2019w redeg,
+        dyma\u2019r dewisiadau ar wah\u00e2n i geir sy\u2019n cael eu gyrru gan betrol
+        neu ddisel yn unig"},{"id":"ble-i-brynu-car-newydd","type":"guide","title":"Ble
+        i brynu car newydd","description":"Yn methu penderfynu a ydych am ddefnyddio
+        gwerthwr neu frocer pan ddaw yn fater o brynu car newydd? Dyma fanteision
+        ac anfanteision y ddau"},{"id":"ble-i-brynu-car-ail-law","type":"guide","title":"Ble
+        i brynu car ail-law","description":"Ffyrdd gwahanol i brynu car ail-law \u2013
+        gan gynnwys gan werthwr ceir, gwerthwr preifat neu arwerthiant ceir \u2013
+        a\u2019u manteision a\u2019u hanfanteision"},{"id":"pryd-i-brynu-car","type":"guide","title":"Pryd
+        i brynu car","description":"Gall gwybod pryd yw\u2019r amser gorau o\u2019r
+        flwyddyn i brynu car newydd neu ail-law arbed llawer iawn o arian i chi. Darllenwch
+        ein hawgrymiadau i wneud arbediadau tymhorol"},{"id":"sut-i-fargeinio-wrth-brynu-car","type":"guide","title":"Sut
+        i fargeinio wrth brynu car","description":"Gall cael bargen dda ar eich car
+        nesaf ddibynnu ar eich sgiliau bargeinio \u2013 felly gwnewch yn si\u0175r
+        eich bod yn darllen ein hawgrymiadau"},{"id":"sut-mae-rhoi-prawf-gyrru-a-gwirio-car-ail-law","type":"guide","title":"Sut
+        mae rhoi prawf gyrru a gwirio car ail-law","description":"Beth i fod yn wyliadwrus
+        ohono wrth roi prawf gyrru a gwirio car ail-law, ac awgrymiadau ar ddiogelwch
+        personol wrth brynu yn breifat"},{"id":"sut-mae-rhoi-prawf-gyrru-a-gwirio-car-newydd","type":"guide","title":"Sut
+        mae rhoi prawf gyrru a gwirio car newydd","description":"Pethau i gadw llygad
+        amdanynt wrth roi prawf gyrru i gar newydd, a beth i chwilio amdanynt pan
+        fydd eich car yn cael ei roi i chi"},{"id":"gwarantau-ceir","type":"guide","title":"Gwarantau
+        ceir","description":"Esboniad o warantau ceir a\u2019r hyn y dylech ei ystyried
+        os byddwch yn meddwl am gymryd gwarant ar gar ail-law"}]}'
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 14:33:06 GMT
+recorded_with: VCR 2.9.2

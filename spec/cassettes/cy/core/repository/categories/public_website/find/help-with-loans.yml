@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/help-with-loans.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (cortado.local; swilkin; 28809) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - c4b04f83-629d-452a-a270-48b2bbe9cb1d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 15 Oct 2014 15:30:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - f4430037aa65acb0d2b76d73e686cb74
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Thu, 15-Oct-2015 15:30:42 GMT; secure
+      - _session_id=f4430037aa65acb0d2b76d73e686cb74; path=/; secure; HttpOnly
+      - _web_tracking=c10e36f0c423ea280586358346df6279; path=/; expires=Thu, 15-Oct-2015
+        15:30:42 GMT; secure
+      X-Request-Id:
+      - c4b04f83-629d-452a-a270-48b2bbe9cb1d
+      X-Runtime:
+      - '0.274143'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"help-with-loans","title":"Cymorth gyda benthyciadau","description":"Dysgwch
+        am sut mae benthyciadau personol yn gweithio, dewisiadau eraill gwell na benthyciadau
+        diwrnod cyflog, a chymorth wrth fenthyca gan undeb credyd.","parent_id":"debt-and-borrowing","contents":[{"id":"benthyciadau-personol","type":"guide","title":"Benthyciadau
+        personol","description":"Gwnewch yn si\u0175r eich bod yn cael y benthyciad
+        iawn ar eich cyfer chi ac nad ydych chi\u2019n talu mwy na\u2019r hyn y mae
+        angen ichi ei dalu"},{"id":"ail-forgeisi-neu-forgeisi-ail-arwystl","type":"guide","title":"Ail
+        forgeisi neu forgeisi ail arwystl","description":"Benthyciadau wedi''u gwarantu
+        ar eich cartref yw morgeisi ail arwystl. Gall fod yn ddewis arall yn lle ailforgeisio,
+        ond mae peryglon"},{"id":"benthyciadau-diwrnod-cyflog","type":"guide","title":"Offeryn
+        cyngor ar fenthyciadau diwrnod cyflog","description":"Mae benthyciadau diwrnod
+        cyflog yn ymddangos fel ateb rhwydd pan fydd arian yn brin, ond yn aml maent
+        yn arwain at ddyled ddifrifol. Defnyddiwch ein hofferyn ar-lein i ddod o hyd
+        i ddewis arall sy\u2019n rhatach, gyda llai o risg"},{"id":"opsiynau-eraill-heblaw-benthyciadau-diwrnod-cyflog","type":"guide","title":"Opsiynau
+        eraill heblaw benthyciadau diwrnod cyflog","description":"Cyn cael benthyciad
+        diwrnod cyflog, gwnewch yn si\u0175r eich bod wedi stopio i ystyried yr opsiynau
+        eraill hyn"},{"id":"beth-iw-wneud-os-gwrthodwyd-benthyciad-neu-gerdyn-credyd-i-chi","type":"guide","title":"Beth
+        i\u2019w wneud os gwrthodwyd benthyciad neu gerdyn credyd i chi","description":"Os
+        ydych chi wedi cael eich gwrthod am gredyd, cewch wybod pa gamau y gallwch
+        eu cymryd i ganfod pam"},{"id":"cyfrifiannell-benthyciadau","type":"tool","title":"Cyfrifiannell
+        benthyciadau","description":"Cyfrifiannell benthyciadau"},{"id":"benthyciadau-cyllidebu-gan-y-gronfa-gymdeithasol","type":"guide","title":"Benthyciadau
+        Cyllidebu gan y Gronfa Gymdeithasol","description":"Os oes angen arian arnoch,
+        a\u2019ch bod ar incwm isel ac yn derbyn rhai budd-daliadau sy\u2019n gysylltiedig
+        ag incwm, fe allech chi fod yn gymwys i gael help."},{"id":"benthyca-gan-undeb-credyd","type":"guide","title":"Benthyca
+        gan undeb credyd","description":"Cymunedau ariannol ydy undebau credyd. Maent
+        yn cael eu rhedeg ar gyfer eu haelodau ac yn cynnig trefn fenthyca hawdd ei
+        defnyddio ar log isel"},{"id":"benthycwyr-arian-didrwydded","type":"guide","title":"Benthycwyr
+        arian didrwydded","description":"Mae benthycwyr arian didrwydded yn anghyfreithlon,
+        yn beryglus a gallant ddefnyddio bygythiadau neu drais \u2013 peidiwch \u00e2''u
+        defnyddio"},{"id":"gwystlwyr-sut-maent-yn-gweithio","type":"guide","title":"Gwystlwyr
+        \u2013 sut maent yn gweithio","description":"Cyn defnyddio gwystlwr i gael
+        benthyg arian, gwnewch yn si\u0175r eich bod yn gwybod gwerth yr hyn rydych
+        yn ei wystlo a pha hawliau sydd gennych"},{"id":"credyd-cartref-neu-fenthyciadau-carreg-drws","type":"guide","title":"Credyd
+        cartref neu fenthyciadau carreg drws","description":"Mae benthyciad carreg
+        drws yn ffordd ddrud iawn o gael benthyg arian. Dewch i wybod mwy am sut maent
+        yn gweithio ac a oes opsiwn gwell ar gael"},{"id":"benthyciadau-llyfr-cofrestru-cerbyd","type":"guide","title":"Benthyciadau
+        llyfr cofrestru cerbyd","description":"Gyda benthyciadau llyfr cofrestru rydych
+        yn benthyg arian gan ddefnyddio''ch car fel gwarant, ond mae ffyrdd llawer
+        gwell a llai peryglus o fenthyca"},{"id":"problemauan-ad-dalu-benthyciadau-diwrnod-cyflog","type":"guide","title":"Problemau
+        wrth ad-dalu benthyciad diwrnod cyflog","description":"Wedi cymryd benthyciad
+        diwrnod cyflog ac yn cael anhawster i\u2019w ad-dalu? Mynnwch help a chyngor
+        ar beth i\u2019w wneud a sut i gyfyngu ar eich taliadau llog."},{"id":"benthyciadau-diwrnod-cyflog-beth-sydd-angen-i-chi-ei-wybod","type":"guide","title":"Benthyciadau
+        diwrnod cyflog - beth sydd angen i chi ei wybod","description":"Mae benthyciadau
+        diwrnod cyflog yn ffordd ddrud o fenthyca, yn enwedig os na fyddwch yn gallu''u
+        talu''n \u00f4l ar amser. Dysgwch fwy am y peryglon a''r opsiynau eraill sydd
+        ar gael"},{"id":"benthyciadau-cyfoed-i-gyfoed","type":"guide","title":"Benthyciadau
+        cyfoed i gyfoed","description":"Mae benthyciadau cyfoed i gyfoed yn ffordd
+        gymharol newydd o gael benthyg arian ond mae\u2019n bosibl na fyddant yn rhatach
+        na banciau neu gymdeithasau adeiladu"},{"id":"benthyciadau-cyfuno-dyledion","type":"guide","title":"Benthyciadau
+        cyfuno dyledion","description":"Mae\u2019n ddoeth cyfuno\u2019ch gwahanol
+        fenthyciadau mewn un benthyciad mawr sydd wedi\u2019i sicrhau yn erbyn eich
+        cartref?"},{"id":"cynllun-digolledu-gwasanaethau-ariannol","type":"guide","title":"Cynllun
+        Digolledu Gwasanaethau Ariannol","description":"Efallai y bydd y Cynllun Digolledu
+        Gwasanaethau Ariannol yn gallu darparu digollediad os bydd cwmni gwasanaethau
+        ariannol yn mynd allan o fusnes"}]}'
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 15:30:43 GMT
+recorded_with: VCR 2.9.2

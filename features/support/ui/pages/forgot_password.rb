@@ -5,6 +5,6 @@ module UI::Pages
     set_url '{/locale}/users/password/new'
 
     element :email, "input[name='user[email]']"
-    element :submit, "input[value='Send me reset password instructions']"
+    element :submit, "input[value='Send']"
   end
 end

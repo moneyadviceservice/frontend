@@ -16,7 +16,8 @@ Scenario: Resetting password
     And   I attempt to sign in
     When  I click on 'Forgot your password?'
     And   I fill in my email
-    Then  I should receive 1 email
+    Then  I should see an email sent notification
+    And   I should receive 1 email
     When  I open the email
     Then  I should see "Change my password" in the email body
     When  I follow "Change my password" in the email

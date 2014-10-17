@@ -1,5 +1,7 @@
 <main role="main" class="l-registration">
-  <h1>Change your password</h1>
+  <h1><%= t("authentication.edit_password_page.title") %></h1>
+
+  <p><%= t("authentication.edit_password_page.steps") %></p>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, :class => 'form' }) do |f| %>
     <%= devise_error_messages! %>
@@ -8,7 +10,7 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :password do %>
-          <%= f.label :password, "New password" %>
+          <%= f.label :password, t("authentication.edit_password_page.field_label_password") %>
           <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
         <% end %>
       </div>
@@ -18,7 +20,7 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :password_confirmation do %>
-          <%= f.label :password_confirmation, "Confirm new password" %>
+          <%= f.label :password_confirmation, t("authentication.edit_password_page.field_label_confirm") %>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         <% end %>
       </div>
@@ -26,7 +28,7 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.submit "Change my password", class: 'button button--primary' %>
+        <%= f.submit t("authentication.edit_password_page.button_label"), class: 'button button--primary' %>
       </div>
     </div>
   <% end %>

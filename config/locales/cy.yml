@@ -359,6 +359,29 @@ cy:
         email: "Rhowch eich e-bost a ddefnyddiwyd wrth gofrestru"
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
       forgot_password: "Wedi anghofio cyfrinair?"
+    reset_password_page:
+      title: Ydych chi wedi anghofio’ch cyfrinair?
+      intro: Dim problem!
+      instructions: Teipiwch eich cyfeiriad e-bost isod ac fe anfonwn e-bost atoch yn cynnwys yr holl wybodaeth fydd ei hangen arnoch i ailosod eich cyfrinair.
+      button_label: Anfon
+    edit_password_page:
+      title: Dewiswch gyfrinair newydd
+      steps: Rhaid iddo gynnwys 8 o nodau o leiaf gyda phrif lythyren a rhif ynddo.
+      field_label_password: Cyfrinair newydd
+      field_label_confirm: Aildeipio cyfrinair newydd
+      button_label: Newid fy nghyfrinair
+    emails:
+      reset_passwords:
+        greeting: Hello
+        intro:  Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i’w ailosod.
+        step_1: 1) Ewch i’r dudalen hon ar wefan y Gwasanaeth Cynghori Ariannol. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
+        link_label: Newid fy nghyfrinair
+        step_2: 2) Meddyliwch am gyfrinair y byddwch yn ei gofio (ond nid pobl eraill) a’i deipio ar y wefan pan ofynnir i chi wneud hynny.
+        step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan y Gwasanaeth Cynghori Ariannol.
+        expired_token_tip: Beth i’w wneud os bydd eich dolen ailosod cyfrinair (uchod) wedi dirwyn i ben
+        expired_token_tip_steps_html: 'Ewch yn ôl i’r dudalen <a href="%{url}">Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch.'
+        signature: Cofion,
+        sender: Y Gwasanaeth Cynghori Ariannol
 
   technical_feedback:
     new:

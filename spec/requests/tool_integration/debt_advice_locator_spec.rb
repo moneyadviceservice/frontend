@@ -1,4 +1,4 @@
-RSpec.describe 'Debt advice locator', type: :request do
+RSpec.describe 'Debt advice locator', features: [:debt_advice_locator], type: :request do
   %W(
     /en/tools/#{ToolMountPoint::DebtAdviceLocator::EN_ID}
     /cy/tools/#{ToolMountPoint::DebtAdviceLocator::CY_ID}

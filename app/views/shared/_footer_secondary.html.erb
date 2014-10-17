@@ -34,17 +34,19 @@
     <div class="l-footer-secondary__list--right">
       <ul class="footer-secondary__list">
 
-        <li class="footer-secondary__list-item l-footer-authentication-link">
-          <% if user_signed_in? %>
-            <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
-            <span class="footer-site-links__pipe">|</span>
-            <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link footer-secondary__link' %>
-          <% else %>
-            <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>
-            <span class="authentication__item-divider">|</span>
-            <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link footer-secondary__link' %>
-          <% end %>
-        </li>
+        <% unless hide_elements_irrelevant_for_third_parties? %>
+          <li class="footer-secondary__list-item l-footer-authentication-link">
+            <% if user_signed_in? %>
+              <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
+              <span class="footer-site-links__pipe">|</span>
+              <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link footer-secondary__link' %>
+            <% else %>
+              <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>
+              <span class="authentication__item-divider">|</span>
+              <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link footer-secondary__link' %>
+            <% end %>
+          </li>
+        <% end %>
 
         <li class="footer-secondary__list-item">
           <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>

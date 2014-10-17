@@ -11,7 +11,7 @@
 
   <fieldset class="newsletter-signup__form js-newsletter-form" id="newsletter_signup">
     <% if hide_elements_irrelevant_for_third_parties? %>
-      <a href="https://www.moneyadviceservice.org.uk/en/static/contact-us#newsletter_signup" class="t-newsletter-button button newsletter-signup__button newsletter-signup__button--third-party"><%= t('newsletter_subscriptions.third_party_button') %></a>
+      <a href="https://www.moneyadviceservice.org.uk<%= t('footer.contact_us_link') %>#newsletter_signup" class="t-newsletter-button button newsletter-signup__button newsletter-signup__button--third-party"><%= t('newsletter_subscriptions.hidden_title') %></a>
     <% else %>
       <legend class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></legend>
       <%= label_tag('subscription[email]', t('newsletter_subscriptions.label'), class: 'newsletter-signup__label') %>

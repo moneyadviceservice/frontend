@@ -8,11 +8,7 @@
         <% end %>
 
         <p class="contact-panel__chat-javascript t-chat-javascript">
-          <% if hide_elements_irrelevant_for_third_parties? %>
-            <%= t('contact_panels.chat.third_party.description_html') %>
-          <% else %>
-            <%= t('contact_panels.chat.javascript.description_html') %>
-          <% end %>
+          <%= t('contact_panels.chat.javascript.description_html') %>
         </p>
 
         <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">

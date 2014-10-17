@@ -11,6 +11,6 @@ class PasswordsController < Devise::PasswordsController
     super
 
     flash[:success] = flash[:notice]
-    flash[:notice] = nil
+    flash.delete(:notice)
   end
 end

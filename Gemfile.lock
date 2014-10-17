@@ -126,8 +126,9 @@ GEM
       capybara (>= 1.0, < 3)
       colorize
       launchy
-    car_cost_tool (0.4.0.80)
+    car_cost_tool (1.0.1.83)
       dough-ruby
+      font-awesome-rails (~> 4.1)
       nokogiri
       rails (~> 4.1)
       rest-client
@@ -268,6 +269,8 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.3)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
@@ -619,7 +622,7 @@ DEPENDENCIES
   bowndler (~> 1.0)
   budget_planner (~> 4.0)
   byebug
-  car_cost_tool (~> 0.4.0)
+  car_cost_tool (~> 1.0.1)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

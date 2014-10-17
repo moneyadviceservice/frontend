@@ -40,7 +40,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'validates_timeliness'
 
 gem 'budget_planner', '~> 4.0'
-gem 'car_cost_tool', '~> 0.4.0'
+gem 'car_cost_tool', '~> 1.0.1'
 gem 'debt_advice_locator', '~> 2.0'
 gem 'debt_free_day_calculator', '~> 2.0'
 gem 'mortgage_calculator', '~> 1.0.0'

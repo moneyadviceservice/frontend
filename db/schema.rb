@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801133923) do
+ActiveRecord::Schema.define(version: 20141017134140) do
 
   create_table "budget_planner_budgets", force: true do |t|
     t.binary   "data",               null: false
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20140801133923) do
 
   create_table "car_cost_tool_fuel_prices", force: true do |t|
     t.string   "fuel_type"
-    t.decimal  "price_in_pence", precision: 10, scale: 0
+    t.decimal  "price_in_pence", precision: 10, scale: 6
     t.datetime "created_at"
     t.datetime "updated_at"
   end

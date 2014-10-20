@@ -36,14 +36,16 @@ Around do |scenario, block|
   enabled_tags     = scenario.source_tag_names.grep(enabled_feature_tag)
   enabled_features = enabled_tags.map { |t| t.gsub(enabled_feature_tag, '').underscore.to_sym }
 
-  if !enabled_features.empty?
+  if enabled_features.empty?
+    block.call
+  else
     enable_features(enabled_features) do
       Rails.application.reload_routes!
       block.call
     end
 
-  else
-    block.call
+    # Reload routes after features have been restored.
+    Rails.application.reload_routes!
   end
 end
 

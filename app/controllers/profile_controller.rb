@@ -1,5 +1,5 @@
 class ProfileController < ArticlesController
-  before_action :require_sign_in
+  before_action :authenticate_user!
 
   def edit
   end
@@ -9,11 +9,5 @@ class ProfileController < ArticlesController
     flash[:success] = I18n.t('profile.update.save_success_message')
 
     render :edit
-  end
-
-  private
-
-  def require_sign_in
-    redirect_to new_user_session_path unless user_signed_in?
   end
 end

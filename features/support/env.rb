@@ -57,7 +57,7 @@ def enable_features(features)
   end
 end
 
-['@enable-sign-in', '@enable-registration', '@enable-reset-passwords', '@enable-profile'].each do |tag|
+['@enable-sign-in', '@enable-registration', '@enable-reset-passwords'].each do |tag|
   Around(tag) do |scenario, block|
     Feature.run_with_activated(:sign_in) do
       Devise.regenerate_helpers!

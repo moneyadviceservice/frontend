@@ -221,6 +221,8 @@ ActiveRecord::Schema.define(version: 20141017134140) do
     t.integer  "failed_attempts",                    default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
+    t.string   "goal_statement"
+    t.string   "goal_deadline"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -19,6 +19,7 @@ module World
       news
       sign_up
       sign_in
+      profile
       forgot_password
     )
 

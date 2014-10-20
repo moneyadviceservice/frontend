@@ -13,6 +13,10 @@ Rails.application.routes.draw do
       scope '/users' do
         match '/', to: not_implemented, via: ['put', 'patch']
         match '/edit', to: not_implemented, via: 'get'
+
+        if Feature.active?(:profile)
+          resource :profile, only: %i(edit update), controller: :profile
+        end
       end
 
       devise_for :users, only: [:registrations],

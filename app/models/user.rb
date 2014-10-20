@@ -57,6 +57,12 @@ class User < ActiveRecord::Base
     invited_by_id.present?
   end
 
+  def update_goal!(statement, deadline)
+    write_attribute(:goal_statement, statement)
+    write_attribute(:goal_deadline, deadline)
+    save!
+  end
+
   private
 
   def create_to_crm

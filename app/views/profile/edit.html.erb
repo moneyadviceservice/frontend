@@ -1,0 +1,17 @@
+<h1><%= t('.heading', first_name_with_possession: singular_noun_possessive(current_user.first_name)) %></h1>
+<p class="intro"><%= t('.intro') %></p>
+<h2><%= t('.goal.heading') %></h2>
+<p><%= t('.goal.introduction') %></p>
+<%= form_for current_user, html: {id: 'goal_form', class: 'form'}, url: profile_path, method: :put do |f| %>
+  <div class="form__row">
+    <label for="goal_statement" class="form__label-heading"><%= t('.goal.statement_field_label') %></label>
+    <input type="text" name="goal_statement" aria-describedby="frmhint1" value="<%= current_user.goal_statement %>">
+  </div>
+  <div class="form__row">
+    <label for="goal_deadline" class="form__label-heading"><%= t('.goal.deadline_field_label') %></label>
+    <input type="text" name="goal_deadline" aria-describedby="frmhint1" value="<%= current_user.goal_deadline%>">
+  </div>
+  <div class="form__row">
+    <input class="button button--primary" type="submit" value="<%= t('.goal.save_button_text') %>">
+  </div>
+<% end %>

@@ -1,7 +1,7 @@
 <% flash.to_hash.slice('info', 'success', 'error').each do |name, msg| %>
   <div class="global-alert global-alert--<%= name %>">
     <div class="global-alert__content-container">
-      <strong class="global-alert__heading"><%= name.titleize %></strong>
+      <strong class="global-alert__heading"><%= t("flash.label.#{name}").titleize %></strong>
       <%= content_tag :p, msg, class: 'global-alert__message' %>
     </div>
   </div>

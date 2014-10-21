@@ -39,23 +39,11 @@ Around do |scenario, block|
   if enabled_features.empty?
     block.call
   else
-    enable_features(enabled_features) do
+    Feature.run_with_activated(enabled_features) do
       Rails.application.reload_routes!
       block.call
     end
-
-    # Reload routes after features have been restored.
     Rails.application.reload_routes!
-  end
-end
-
-def enable_features(features)
-  if features.empty?
-    yield
-  else
-    Feature.run_with_activated(features) do
-      yield
-    end
   end
 end
 

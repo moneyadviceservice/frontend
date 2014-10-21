@@ -305,7 +305,7 @@ ActiveRecord::Schema.define(version: 20141017134140) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "index_debt_health_answer_resources_on_answer_id_and_resource_id", using: :btree
+  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "index_on_answer_id_and_resource_id", using: :btree
 
   create_table "debt_health_answers", force: true do |t|
     t.string   "title"

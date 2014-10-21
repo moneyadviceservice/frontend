@@ -377,6 +377,14 @@ cy:
       field_label_confirm: Aildeipio cyfrinair newydd
       button_label: Newid fy nghyfrinair
     emails:
+      layout:
+        purpose: Rydych yn cael yr e-bost hwn gan eich bod wedi cysylltu â’r Gwasanaeth Cynghori Ariannol.
+        greeting: Helo
+        signature: Cofion,
+        sender: Y Gwasanaeth Cynghori Ariannol
+        contact_html: "Dyma e-bost a gynhyrchir yn awtomatig – peidiwch â’i ateb. I gysylltu â’r <a href='https://www.moneyadviceservice.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>Gwasanaeth Cynghori Ariannol</a>, ffoniwch ni ar <a href='tel:+443005005000' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0300&nbsp;500&nbsp;5000</a>"
+        terms_one: "Mae’r llinellau ar agor o ddydd Llun i ddydd Gwener 8am - 8pm, dydd Sadwrn 8am - 1pm, wedi cau ar ddydd Sul a Gwyliau’r Banc. Mae galwadau’n cael eu recordio er dibenion hyfforddi ac ansawdd. Ni chymerir unrhyw gyfrifoldeb am golled neu ddifrod yn sgil feirysau neu newidiadau a wnaed i’r neges hon wedi iddi gael ei hanfon."
+        terms_two: "Y Gwasanaeth Cynghori Ariannol ydym ni, cwmni cyfyngedig sydd wedi'i gofrestru yng Nghymru a Lloegr. Cyfeiriad ein swyddfa gofrestredig yw 120 Holborn, London, England EC1N 2TD a'n rhif cofrestredig yw 07172704."
       reset_passwords:
         intro:  Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i'w ailosod.
         step_1: 1) Ewch i'r dudalen hon ar wefan y Gwasanaeth Cynghori Ariannol. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
@@ -385,8 +393,6 @@ cy:
         step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan y Gwasanaeth Cynghori Ariannol.
         expired_token_tip: Beth i'w wneud os bydd eich dolen ailosod cyfrinair (uchod) wedi dirwyn i ben
         expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='%{url}'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
-        signature: Cofion,
-        sender: Y Gwasanaeth Cynghori Ariannol
 
   technical_feedback:
     new:

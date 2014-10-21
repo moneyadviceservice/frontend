@@ -74,7 +74,7 @@
               <br clear="all">
 
               <div style="font-size: 11px; line-height: 1.4; color:#6b6b6b; text-align: left;">
-                You’re receiving this email as you contacted the Money Advice Service.
+                <%= t("authentication.emails.layout.purpose") %>
               </div>
               <br clear="all">
               <br clear="all">
@@ -85,7 +85,7 @@
               <br clear="all">
 
               <div style="font-size: 14px; line-height: 1; color: #6b6b6b;">
-                <%= yield(:email_template_heading) %>
+                <%= t("authentication.emails.layout.greeting") %> <%= yield(:email_template_subject_name) %>
               </div>
               <br clear="all">
             </td>
@@ -105,6 +105,9 @@
                       <tr>
                         <td align="left" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif; color: #6b6b6b;" valign="top">
                           <%=yield(:email_template_body) %>
+
+                          <p><%= t("authentication.emails.layout.signature")%></p>
+                          <p><%= t("authentication.emails.layout.sender")%></p>
                         </td>
                       </tr>
                     </table>
@@ -123,9 +126,7 @@
               <br>
 
               <div class="contact-links" style="font-size: 14px ; font-family: Arial, sans-serif; font-weight: 500; line-height: 22px; display: inline; color: #6b6b6b;">
-                This is an automatically generated email – please don’t reply to it. To contact the <a href="https://www.moneyadviceservice.org.uk" style="line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;">
-                Money Advice Service</a>, please call us on <a href="tel:+443005005000" style="line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;">
-                0300&nbsp;500&nbsp;5000</a>
+                <%= t("authentication.emails.layout.contact_html")%>
               </div>
               <br>
               <br>
@@ -135,9 +136,9 @@
           <tr>
             <td align="left" style="background-color: #ffffff; color: #333; font-family: Arial, sans-serif; font-size: 13px; line-height: 20px; padding-left: 40px; padding-right: 40px">
               <div style="font-size: 11px; border-top: 1px solid #ddd; text-align: left;">
-                <br> Lines are open Monday to Friday 8am - 8pm, Saturday 8am - 1pm, Sunday & Bank Holidays Closed. Calls are recorded for training and quality purposes. No responsibility is accepted for loss or damage arising from viruses or changes made to this message after it was sent.
+                <br> <%= t("authentication.emails.layout.terms_one")%>
                 <br>
-                <br> We are the Money Advice Service, a limited company registered in England and Wales. Our registered office is at 120 Holborn, London, England EC1N 2TD and our registered number is 07172704.
+                <br> <%= t("authentication.emails.layout.terms_two")%>
               </div>
               <br>
               <br>

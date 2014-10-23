@@ -7,7 +7,7 @@ ActiveSupport::Notifications.subscribe('request.faraday') do |name, starts, ends
 end
 
 statsd = Statsd.new(ENV['STATSD_HOST'], ENV['STATSD_PORT']).tap do |client|
-  client.namespace = "#{ENV['GRAPHITE_API_KEY']}.frontend"
+  client.namespace = 'frontend'
 end
 
 ActiveSupport::Notifications.subscribe('request.content-service.search') do |_, starts, ends, _, options|

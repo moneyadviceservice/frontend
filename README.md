@@ -13,6 +13,7 @@ The Money Advice Service's responsive website.
 * [Node.js][Node]
 * [Bundler]
 * [Bower]
+* [MySQL](http://www.mysql.com/)
 
 
 ## Installation
@@ -23,12 +24,18 @@ Clone the repository:
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
 ```
 
+Make sure you've added the following line to your `/etc/hosts` file
+
+`10.50.6.148	gems.test.mas`
+
 Make sure all dependencies are available to the application:
 
 ```sh
 $ bundle install
 $ bowndler install
 ```
+
+Make sure MySQL is running.
 
 Setup the database:
 

@@ -8,27 +8,6 @@
       <h1 class="l-annuities__heading"><%= t('annuities.page_heading') %></h1>
 
       <div class="l-annuities__banner-left">
-
-        <!-- Brightcove Video Player START -->
-
-        <!-- TODO needs to be added as a JS module that loads the scripts with a data-dough-attribute is detected -->
-
-        <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
-        <object id="myExperience3815308761001" class="l-annuities__video BrightcoveExperience">
-          <param name="bgcolor" value="#FFFFFF" />
-          <param name="width" value="100%" />
-          <param name="height" value="470" />
-          <param name="playerID" value="3715052732001" />
-          <param name="playerKey" value="AQ~~,AAADSDtymlk~,HgUAk1SkaoH6WQl7hbEPXow7YFuDoLBn" />
-          <param name="isVid" value="true" />
-          <param name="isUI" value="true" />
-          <param name="dynamicStreaming" value="true" />
-          <param name="@videoPlayer" value="3815308761001" />
-        </object>
-        <script type="text/javascript">brightcove.createExperiences();</script>
-
-        <!-- Brightcove Video Player END -->
-
         <p class="l-annuities__video-caption"><%= t('annuities.video_caption') %></p>
       </div>
 
@@ -39,15 +18,13 @@
           <% end %>
         </ul>
 
-        <button class="button button--primary"><%= t('annuities.cta.button') %></button>
+        <a href="<%= t('annuities.cta.button_link') %>" class="button button--primary"><%= t('annuities.cta.button') %></a>
         <p><%= t('annuities.cta.retrieve_quote_html') %></p>
       </div>
     </div>
   </div>
 
   <div class="l-constrained">
-    <%= image_tag('car_campaign/run-car.png', class: 'l-annuities__image') %>
-
     <div class="l-2col-even">
       <h2><%= t('annuities.section_one.heading') %></h2>
       <ul class="list">
@@ -55,7 +32,7 @@
       </ul>
     </div>
 
-    <div class="l-annuities__panel">
+    <div class="l-1col l-annuities__panel">
       <h2 class="l-annuities__heading l-annuities__small-heading"><%= t('annuities.section_two.heading') %></h2>
 
       <% t('annuities.section_two.content').each do |item| %>

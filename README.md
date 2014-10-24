@@ -13,7 +13,7 @@ The Money Advice Service's responsive website.
 * [Node.js][Node]
 * [Bundler]
 * [Bower]
-* [MySQL]
+* [MySQL](http://www.mysql.com/)
 
 
 ## Installation

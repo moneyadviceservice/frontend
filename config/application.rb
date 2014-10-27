@@ -36,7 +36,7 @@ module Frontend
     config.assets.initialize_on_precompile = true
 
     config.to_prepare do
-      Devise::Mailer.layout "email"
+      Devise::Mailer.layout 'email'
     end
   end
 end

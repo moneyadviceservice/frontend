@@ -34,5 +34,9 @@ module Frontend
     config.middleware.use 'VersionHeader' # add version of the running app to each response
 
     config.assets.initialize_on_precompile = true
+
+    config.to_prepare do
+      Devise::Mailer.layout 'email'
+    end
   end
 end

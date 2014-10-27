@@ -1,0 +1,57 @@
+<main role="main">
+  <div class="l-annuities__banner">
+    <div class="l-constrained">
+      <h1 class="l-annuities__heading"><%= t('annuities.page_heading') %></h1>
+
+      <div class="l-annuities__banner-left">
+        <p class="l-annuities__video-caption"><%= t('annuities.video_caption') %></p>
+      </div>
+
+      <div class="l-annuities__banner-right">
+        <ul class="l-annuities__list list">
+          <% t('annuities.cta.list').each do |item| %>
+          <li><%= item[:text] %></li>
+          <% end %>
+        </ul>
+
+        <a href="<%= t('annuities.cta.button_link') %>" class="button button--primary"><%= t('annuities.cta.button') %></a>
+        <p><%= t('annuities.cta.retrieve_quote_html') %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-constrained">
+    <div class="l-2col-even">
+      <h2><%= t('annuities.section_one.heading') %></h2>
+      <ul class="list">
+        <%= t('annuities.section_one.list_html') %>
+      </ul>
+    </div>
+
+    <div class="l-1col l-annuities__panel">
+      <h2 class="l-annuities__heading l-annuities__small-heading"><%= t('annuities.section_two.heading') %></h2>
+
+      <% t('annuities.section_two.content').each do |item| %>
+      <p class="l-3col-even"><%= raw item[:text] %></p>
+      <% end %>
+    </div>
+
+    <div class="l-2col-even">
+      <h2 class="l-annuities__small-heading"><%= t('annuities.section_three.heading') %></h2>
+      <ul class="unstyled-list">
+        <% t('annuities.section_three.list').each do |item| %>
+        <li><a href="<%= item[:url] %>"><%= item[:text] %></a></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="l-2col-even">
+      <h2 class="l-annuities__small-heading"><%= t('annuities.section_four.heading') %></h2>
+      <ul class="list-benefits">
+        <% t('annuities.section_four.list').each do |item| %>
+        <li><%= item[:text] %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</main>

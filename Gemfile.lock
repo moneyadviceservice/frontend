@@ -5,13 +5,6 @@ GIT
     feature (1.1.0)
 
 GIT
-  remote: git://github.com/moneyadviceservice/html_validation.git
-  revision: 3fb1b655a1f5d2963345d980ec819b3e17e9a187
-  ref: 3fb1b65
-  specs:
-    html_validation (1.1.1)
-
-GIT
   remote: git://github.com/moneyadviceservice/mas-development_dependencies.git
   revision: de00ee49c85b92f24cc4bb1de273c991ae90b964
   specs:
@@ -317,6 +310,7 @@ GEM
       guard (>= 1.1.0)
     hashie (2.0.5)
     hike (1.2.3)
+    html_validation (1.1.2)
     http_parser.rb (0.6.0)
     i18n (0.6.11)
     i18n-js (3.0.0.mas)
@@ -654,7 +648,7 @@ DEPENDENCIES
   guard-rubocop
   guard-sass
   guard-shell
-  html_validation!
+  html_validation
   jquery-rails
   jshint_ruby
   kramdown

@@ -79,7 +79,7 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'email_spec'
   gem 'faker'
-  gem 'html_validation', github: 'moneyadviceservice/html_validation', ref: '3fb1b65'
+  gem 'html_validation'
   gem 'rspec_junit_formatter'
   gem 'sqlite3'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'

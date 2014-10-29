@@ -1,12 +1,9 @@
 class ToolCategory
   attr_reader :id
+  delegate :title, to: :entity
 
   def initialize(category_id)
     @id = category_id.to_s
-  end
-
-  def title
-    entity.title
   end
 
   def home?

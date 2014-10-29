@@ -1,4 +1,6 @@
 class CategoryNavigationDecorator < Draper::Decorator
+  delegate :id, :title, :description, to: :category
+
   def path
     if id == 'news'
       h.main_app.url_for('/%s/news' % I18n.locale)
@@ -7,20 +9,8 @@ class CategoryNavigationDecorator < Draper::Decorator
     end
   end
 
-  def title
-    category.title
-  end
-
-  def description
-    category.description
-  end
-
   def contents
     CategoryNavigationDecorator.decorate_collection(object.children)
-  end
-
-  def id
-    category.id
   end
 
   private

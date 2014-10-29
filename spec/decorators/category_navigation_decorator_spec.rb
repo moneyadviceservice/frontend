@@ -15,7 +15,7 @@ RSpec.describe CategoryNavigationDecorator do
   describe '#path' do
     let(:id) { 'expected-id' }
     let(:category) { build(:category, id: id) }
-    let(:item) { double(id: double, content: category) }
+    let(:item) { double(id: id, content: category) }
 
     it 'calls to the correct path helper' do
       expect(main_app_helper).to receive(:category_path).with(id)

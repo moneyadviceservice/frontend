@@ -58,8 +58,8 @@ class User < ActiveRecord::Base
   end
 
   def update_goal!(statement, deadline)
-    write_attribute(:goal_statement, statement)
-    write_attribute(:goal_deadline, deadline)
+    self[:goal_statement] = statement
+    self[:goal_deadline] = deadline
     save!
   end
 

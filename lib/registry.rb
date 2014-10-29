@@ -2,9 +2,7 @@ class Registry
   Error = Class.new(StandardError)
 
   class << self
-    def []=(type, repository)
-      objects[type] = repository
-    end
+    delegate :[]=, to: :objects
 
     def [](type)
       objects.fetch(type) do

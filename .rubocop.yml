@@ -27,6 +27,7 @@ Style/StringLiterals:
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
 AllCops:
+  RunRailsCops: true
   Exclude:
   - 'app/helpers/application_helper.rb'
   - 'bin/**/*'

@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
       hash[:accept_terms_conditions] = true
       hash[:newsletter_subscription] = true unless request.post?
     end
-    super(hash)
+    super
   end
 
   private

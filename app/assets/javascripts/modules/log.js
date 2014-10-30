@@ -5,7 +5,10 @@ define(['globals'], function(globals) {
   var opts = ['log', 'info', 'warn', 'error'],
       l = opts.length,
       logs = {},
-      logged = [];
+      logged = [],
+      useConsole = typeof window !== 'undefined' && window.console &&
+        globals.bootstrap.env && typeof Function.prototype.bind === 'function' &&
+        globals.bootstrap.env === 'development';
 
   function logIt(name, options) {
     logged.push([name, options, type]);
@@ -13,14 +16,10 @@ define(['globals'], function(globals) {
 
   while (l--) {
     var type = l;
-    logs[opts[l]] =
-      (window && window.console && globals.bootstrap.env &&
-        globals.bootstrap.env === 'development') ?
-          console[opts[l]].bind && console[opts[l]].bind(console) :
-        logIt;
+    logs[opts[l]] = useConsole ? console[opts[l]].bind(console) : logIt;
   }
 
-  if (window) window.logged = logged;
+  if (typeof window !== 'undefined') window.logged = logged;
 
   return logs;
 });

@@ -170,4 +170,15 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe '#send_devise_notification' do
+    it 'should invode the devise mailer via delay_job' do
+      expectedcount = Delayed::Job.count + 1
+      subject.save!
+      subject.send_reset_password_instructions
+      expect(Delayed::Job.count).to eql(expectedcount)
+    end
+  end    
+  
+
 end

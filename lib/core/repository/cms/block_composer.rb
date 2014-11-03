@@ -9,7 +9,7 @@ module Core::Repository
 
       attr_reader :blocks, :id, :parser
 
-      def initialize(blocks = [], id = 'content', parser = Kramdown::Document)
+      def initialize(blocks = [], id = 'content', parser = Mastalk::Document)
         @blocks = Array(blocks)
         @parser = parser
         @id = id

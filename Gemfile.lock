@@ -176,6 +176,7 @@ GEM
       mime-types (~> 1.16)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    daemons (1.1.9)
     database_cleaner (1.3.0)
     debt_advice_locator (2.0.2.63)
       active_attr (~> 0.8)
@@ -625,8 +626,10 @@ DEPENDENCIES
   compass-rails
   cream
   csslint_ruby
+  daemons
   debt_advice_locator (~> 2.0)
   debt_free_day_calculator (~> 2.0)
+  delayed_job_active_record
   devise
   devise-encryptable
   dotenv-rails

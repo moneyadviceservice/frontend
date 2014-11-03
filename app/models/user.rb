@@ -63,6 +63,10 @@ class User < ActiveRecord::Base
     save!
   end
 
+  def send_devise_notification(notification, *args)
+    devise_mailer.delay.send(notification, self, *args)
+  end
+
   private
 
   def create_to_crm

@@ -9,7 +9,9 @@
   <% end %>
   <div id="main" tabindex="-1">
     <div class="l-constrained">
-      <%= yield :engine_content %>
+      <div class="l-container-tool">
+        <%= yield :engine_content %>
+      </div>
     </div>
   </div>
   <% content_for(:javascripts) do %>

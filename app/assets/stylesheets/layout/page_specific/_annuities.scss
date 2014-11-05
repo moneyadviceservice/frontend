@@ -39,20 +39,6 @@
   margin-top: $baseline-unit*2;
 }
 
-.l-annuities__image {
-  @include column(11);
-  @include push(1);
-  margin-bottom: $baseline-unit*4;
-  margin-top: $baseline-unit*7;
-
-  @include respond-to($mq-m) {
-    @include column(5);
-    @include pull(1);
-    float: right;
-    margin-bottom: $baseline-unit*6;
-  }
-}
-
 .l-annuities__heading {
   @include column(12);
   margin-top: 0;
@@ -73,7 +59,8 @@
   overflow: hidden;
   background-color: $color-panel-background;
   padding: $baseline-unit*3 0;
-  margin-bottom: $baseline-unit*2;
+  margin-top: $baseline-unit*6;
+  margin-bottom: $baseline-unit*6;
 
   p {
     @extend %paragraph;

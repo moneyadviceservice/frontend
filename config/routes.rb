@@ -80,7 +80,10 @@ Rails.application.routes.draw do
           constraints: ToolMountPoint.for(:savings_calculator)
     end
 
-    get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
+    Feature.with(:annuities_landing_page) do
+      get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
+    end
+
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'

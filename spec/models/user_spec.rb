@@ -170,4 +170,31 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe '#send_devise_notification' do
+    it 'should invoke the devise mailer via delayed_job' do
+      expect do
+        subject.save!
+        subject.send_reset_password_instructions
+      end.to change { Delayed::Job.count }.by(1)
+    end
+
+    it 'adds the job to the mailjet queue' do
+      subject.save!
+      subject.send_reset_password_instructions
+
+      expect(Delayed::Job.last.queue).to eql('frontend_email')
+    end
+
+    context 'when the job runs', features: [:sign_in, :reset_passwords] do
+      it 'sends an email' do
+        subject.save!
+        subject.send_reset_password_instructions
+
+        expect do
+          Delayed::Job.last.payload_object.perform
+        end.to change { ActionMailer::Base.deliveries.count }.by(1)
+      end
+    end
+  end
 end

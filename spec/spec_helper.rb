@@ -61,9 +61,17 @@ RSpec.configure do |c|
     if example.metadata[:features]
       Feature.run_with_activated(example.metadata[:features]) do
         Rails.application.reload_routes!
+        Devise.regenerate_helpers!
+        Devise.class_variable_set(:@@warden_configured, false)
+        Devise.configure_warden!
+
         example.run
       end
+
       Rails.application.reload_routes!
+      Devise.regenerate_helpers!
+      Devise.class_variable_set(:@@warden_configured, false)
+      Devise.configure_warden!
     else
       example.run
     end

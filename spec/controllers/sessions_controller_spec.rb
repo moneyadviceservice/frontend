@@ -1,20 +1,4 @@
-RSpec.describe SessionsController, type: :controller do
-  around :each do |example|
-    Feature.run_with_activated(:sign_in) do
-      Rails.application.reload_routes!
-      Devise.regenerate_helpers!
-      Devise.class_variable_set(:@@warden_configured, false)
-      Devise.configure_warden!
-
-      example.run
-    end
-
-    Rails.application.reload_routes!
-    Devise.regenerate_helpers!
-    Devise.class_variable_set(:@@warden_configured, false)
-    Devise.configure_warden!
-  end
-
+RSpec.describe SessionsController, type: :controller, features: [:sign_in, :reset_passwords] do
   describe '#create' do
     context 'when user has been updated in CRM' do
       let!(:user) { FactoryGirl.create(:user) }

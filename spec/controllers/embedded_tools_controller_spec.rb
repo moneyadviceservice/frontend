@@ -1,4 +1,4 @@
-RSpec.describe EmbeddedToolsController do
+RSpec.describe EmbeddedToolsController, type: :controller do
 
   describe '#alternate_url' do
     before do

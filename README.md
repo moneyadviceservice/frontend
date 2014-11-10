@@ -200,3 +200,11 @@ presentational concerns.
 [rubygems]: http://rubygems.org
 [site prism]: https://github.com/natritmeyer/site_prism
 [vcr]: https://github.com/vcr/vcr
+
+## Running Karma javascript tests
+
+Run the following in the command line.
+
+```
+RAILS_ENV=development bundle exec rake karma:install karma:run_once
+```

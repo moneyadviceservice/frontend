@@ -7,13 +7,11 @@
   <% end %>
 <% end %>
 
-<%= render layout: 'layouts/unconstrained' do %>
-  <div class="l-context-bar">
-    <div class="l-constrained">
-      <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
-    </div>
-  </div>
+<% content_for :context_bar do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<% end %>
 
+<%= render layout: 'layouts/unconstrained' do %>
   <div class="l-constrained">
     <div class="l-container-tool">
       <%= yield :engine_content %>

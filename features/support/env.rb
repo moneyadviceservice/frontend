@@ -1,11 +1,23 @@
 ENV['RAILS_ENV']  = 'test'
 ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
-require 'mas/development_dependencies/cucumber/env'
+require 'cucumber/rails'
+require 'capybara'
+require 'capybara-screenshot'
+require 'capybara-screenshot/cucumber'
+require 'capybara/poltergeist'
+require 'site_prism'
+require 'timecop'
 require 'feature/testing'
 require 'email_spec/cucumber'
 
 I18n.available_locales = [:en, :cy]
+Time.zone = 'London'
+
+ActionController::Base.allow_rescue = false
+
+DatabaseCleaner.strategy                      = :transaction
+Cucumber::Rails::Database.javascript_strategy = :truncation
 
 action_plan_repository             = Core::Registry::Repository[:action_plan]
 article_repository                 = Core::Registry::Repository[:article]
@@ -74,4 +86,5 @@ Before do
   Core::Registry::Repository[:customer].clear
 end
 
+Capybara.javascript_driver = :poltergeist
 Capybara.default_wait_time = 20

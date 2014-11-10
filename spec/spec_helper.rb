@@ -9,13 +9,19 @@ rescue LoadError
 end
 
 require_relative '../config/environment'
-require 'mas/development_dependencies/rspec/spec_helper'
 
+require 'rspec/rails'
 require 'factory_girl'
 require 'feature/testing'
 require 'html_validation'
 require 'webmock/rspec'
 require 'database_cleaner'
+require 'shoulda-matchers'
+require 'timecop'
+
+Time.zone = 'London'
+# this seems to be required for the CI to work properly
+ENV['TZ'] = 'Europe/London'
 
 DatabaseCleaner.strategy = :deletion
 
@@ -42,8 +48,15 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
+  c.include Devise::TestHelpers, type: :controller
   c.include PageValidations
+  c.include Rails.application.routes.url_helpers
+
+  c.infer_base_class_for_anonymous_controllers = false
   c.alias_it_should_behave_like_to :it_has_behavior, 'exhibits behaviour of an'
+  c.use_transactional_fixtures = true
+  c.order = 'random'
+  c.run_all_when_everything_filtered = true
 
   c.disable_monkey_patching!
 
@@ -90,6 +103,7 @@ RSpec.configure do |c|
   end
 
   c.before :each do
+    I18n.locale = :en
     Core::Registry::Repository[:customer].clear
   end
 end

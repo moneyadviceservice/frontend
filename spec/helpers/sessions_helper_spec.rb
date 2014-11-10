@@ -1,4 +1,4 @@
-RSpec.describe SessionsHelper do
+RSpec.describe SessionsHelper, type: :helper do
   describe '#authentication_sign_in_title' do
     it 'returns the default translation ' do
       expect(helper.authentication_sign_in_title).to eql('Sign in')

@@ -76,14 +76,23 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'chronic'
   gem 'codeclimate-test-reporter', require: false
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'email_spec'
+  gem 'factory_girl'
   gem 'faker'
   gem 'html_validation'
+  gem 'poltergeist'
   gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers'
+  gem 'site_prism'
   gem 'sqlite3'
   gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
+  gem 'timecop'
   gem 'vcr'
   gem 'webmock'
 end
@@ -103,7 +112,9 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'ejs'
   gem 'guard-rubocop'
-  gem 'mas-development_dependencies', github: 'moneyadviceservice/mas-development_dependencies'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rack-livereload'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop'
 end

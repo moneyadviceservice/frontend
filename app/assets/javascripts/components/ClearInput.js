@@ -3,14 +3,15 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
   var ClearInput,
-      uiEvents = {
-      'keydown [data-dough-clear-input]' : 'updateResetButton',
-      'click [data-dough-clear-input-button]' : 'resetForm'
+      defaultConfig = {
+        uiEvents: {
+          'keydown [data-dough-clear-input]' : 'updateResetButton',
+          'click [data-dough-clear-input-button]' : 'resetForm'
+        }
       };
 
   ClearInput = function($el, config) {
-    this.uiEvents = uiEvents;
-    ClearInput.baseConstructor.call(this, $el, config);
+    ClearInput.baseConstructor.call(this, $el, config, defaultConfig);
 
     this.$resetInput = this.$el.find('[data-dough-clear-input]');
     this.$resetButton = this.$el.find('[data-dough-clear-input-button]');

@@ -58,3 +58,6 @@ Core::CategoryTreeReader.new.call if Rails.env.production? and defined?(Rails::S
 
 Core::Registry::Repository[:preview] =
   Core::Repository::CMS::Preview.new
+
+Core::Registry::Repository[:recommended_tool_class] =
+  Core::Repository::RecommendedTools::Static

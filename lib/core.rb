@@ -103,6 +103,10 @@ module Core
       autoload :PublicWebsite, 'core/repository/newsletter_subscriptions/public_website'
     end
 
+    module RecommendedTools
+      autoload :Static, 'core/repository/recommended_tools/static'
+    end
+
     module StaticPages
       autoload :PublicWebsite, 'core/repository/static_pages/public_website'
     end

@@ -46,6 +46,8 @@ RSpec.describe ChatOpeningHoursDecorator do
         end
       end
 
+      after { Timecop.return }
+
       context 'when open later that day' do
         before { Timecop.travel(Chronic.parse('Tuesday 5am')) }
 

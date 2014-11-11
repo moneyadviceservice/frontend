@@ -1,0 +1,28 @@
+// Add 'Back to top' link to headings
+
+.link-to-top-heading {
+  position: relative;
+  padding-right: 26px;
+
+  @include respond-to($mq-m) {
+    padding-left: 26px;
+    padding-right: 0;
+  }
+}
+
+.link-to-top-heading__link {
+  display: block;
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  text-indent: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @include respond-to($mq-m) {
+    left: 0;
+    right: auto;
+  }
+}

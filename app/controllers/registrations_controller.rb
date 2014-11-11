@@ -22,13 +22,6 @@ class RegistrationsController < Devise::RegistrationsController
     session[:user_return_to] || root_path
   end
 
-  def set_flash_message(key, kind, options = {})
-    super
-
-    flash[:success] = flash[:notice]
-    flash[:notice] = nil
-  end
-
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :first_name
     devise_parameter_sanitizer.for(:sign_up) << :post_code

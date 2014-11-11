@@ -1,6 +1,7 @@
 <main role="main" class="l-registration">
   <h1><%= authentication_registration_title %></h1>
-  <p class="intro"><%= t("authentication.registration.intro_html", url: t('footer.privacy_statement_link')) %></p>
+  <p class="intro"><%= t("authentication.registration.intro") %></p>
+  <p class="intro"><%= t("authentication.registration.secondary_intro_html", url: t('footer.privacy_statement_link')) %></p>
 
   <%= render "devise/shared/links" %>
 

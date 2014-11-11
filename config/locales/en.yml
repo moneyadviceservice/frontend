@@ -434,14 +434,13 @@ en:
 
   profile:
     edit:
-      title: Your Profile
       heading: "%{first_name_with_possession} Page"
-      intro: This section is all about you
+      intro: Your financial goals and saved information.
       goal:
-        heading: Your Goal
-        introduction: Use this area to set a goal for yourself and add a date for when you want to achieve your goal by.
-        statement_field_label: I commit to
+        heading: Goal tracker
+        introduction: Planning for something big or just saving for a rainy day? Most people find it easier to reach a goal by setting a deadline.
+        statement_field_label: I will
         deadline_field_label: By
-        save_button_text: Set my goal
+        save_button_text: Set goal
     update:
       save_success_message: Your goal was set successfully

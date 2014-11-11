@@ -14,6 +14,6 @@ RSpec.describe Core::Repository::RecommendedTools::Static do
 
     expect(subject.quotee_name).to eql('Debbie')
     expect(subject.quotee_location).to eql('London')
-    expect(subject.quote).to eql('Our interactive calculators can help you manage your money and plan for the future.')
+    expect(subject.quote).to eql('I loved the budget planner. I was able to easily manipulate my figures until I was in the clear.')
   end
 end

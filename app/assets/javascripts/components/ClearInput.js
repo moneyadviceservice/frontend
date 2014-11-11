@@ -5,7 +5,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   var ClearInput,
       defaultConfig = {
         uiEvents: {
-          'keydown [data-dough-clear-input]' : 'updateResetButton',
+          'keyup [data-dough-clear-input]' : 'updateResetButton',
           'click [data-dough-clear-input-button]' : 'resetForm'
         }
       };

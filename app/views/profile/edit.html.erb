@@ -23,3 +23,28 @@
     <% end %>
   </div>
 </div>
+
+<div class="l-recommended-tools">
+  <div class="l-recommended-tools__intro">
+    <h2><%= t('recommended_tools.title') %></h2>
+    <p><%= t('recommended_tools.description') %></p>
+  </div>
+
+  <% I18n.t("recommended_tools.tools").keys.each do |tool_name| %>
+    <% tool = Core::Registry::Repository[:recommended_tool_class].new(tool_name) %>
+
+    <div class="tool">
+      <p><%= tool.title %></p>
+      <p><%= tool.subtitle %></p>
+      <p><%= link_to tool.link_copy, tool.link_url %></p>
+      <p><%= tool.description %></p>
+
+      <p><%= tool.time_to_complete %></p>
+      <p><%= tool.completion_copy %></p>
+
+      <p><%= tool.quotee_name %></p>
+      <p><%= tool.quotee_location %></p>
+      <p><%= tool.quote %></p>
+    </div>
+  <% end %>
+</div>

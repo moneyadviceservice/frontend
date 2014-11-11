@@ -106,6 +106,7 @@ RSpec.describe User, type: :model do
     context 'when user does not exist in crm' do
       it 'returns false' do
         subject.active = 1
+        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { false }
         expect(subject.valid_for_authentication?).to be_falsey
       end
     end
@@ -113,6 +114,7 @@ RSpec.describe User, type: :model do
     context 'when user is not active' do
       it 'returns false' do
         subject.active = 0
+        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { true }
         expect(subject.valid_for_authentication?).to be_falsey
       end
     end

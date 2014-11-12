@@ -7,15 +7,12 @@ Then(/^I am told that the functionality is not implemented$/) do
 end
 
 When(/^I (?:sign|am signed) in$/) do
-  user = User.new(email: 'user@example.com',
-                  first_name: 'Phil',
-                  password: 'password',
-                  post_code: 'NE1 6EE')
-  user.save!
+  @user = create(:user)
+  @user.save!
 
   sign_in_page.load(locale: 'en')
-  sign_in_page.email.set user.email
-  sign_in_page.password.set user.password
+  sign_in_page.email.set @user.email
+  sign_in_page.password.set @user.password
   sign_in_page.submit.click
 end
 
@@ -47,8 +44,8 @@ end
 When(/^I sign in elsewhere$/) do
   Capybara.using_session(:other_session) do
     sign_in_page.load(locale: 'en')
-    sign_in_page.email.set 'user@example.com'
-    sign_in_page.password.set 'password'
+    sign_in_page.email.set @user.email
+    sign_in_page.password.set @user.password
     sign_in_page.submit.click
   end
 end
@@ -78,7 +75,7 @@ end
 
 When(/^I fill in my email$/) do
   forgot_password_page.load(locale: 'en')
-  forgot_password_page.email.set 'user@example.com'
+  forgot_password_page.email.set @user.email
   forgot_password_page.submit.click
 end
 

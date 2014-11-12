@@ -21,6 +21,7 @@ module World
       sign_in
       profile
       forgot_password
+      settings
     )
 
     pages.each do |page|

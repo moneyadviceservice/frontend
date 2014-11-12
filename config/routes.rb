@@ -9,38 +9,28 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
-    if Feature.active?(:registration)
-      scope '/users' do
-        match '/', to: not_implemented, via: ['put', 'patch']
-        match '/edit', to: not_implemented, via: 'get'
+    scope '/users' do
+      match '/', to: not_implemented, via: ['put', 'patch']
+    end
 
-        if Feature.active?(:profile)
-          resource :profile, only: %i(edit update), controller: :profile
-        end
-      end
-
-      devise_for :users, only: [:registrations],
-                 controllers:  { registrations: 'registrations' }
-    else
+    unless Feature.active?(:reset_passwords)
       scope '/users' do
-        match '/sign_up', to: not_implemented, via: 'get', as: 'new_user_registration'
-        match '/edit', to: not_implemented, via: 'get', as: 'edit_user_registration'
+        match '/password/new', to: not_implemented, via: 'get'
       end
     end
 
-    if Feature.active?(:sign_in) && !Feature.active?(:reset_passwords)
-      devise_for :users, only: [:sessions],
-                         controllers: { sessions: 'sessions' }
+    unless Feature.active?(:settings)
       scope '/users' do
-        match '/password/new', to: not_implemented, as: 'new_password', via: 'get'
+        match '/edit', to: not_implemented, via: 'get'
       end
-    elsif Feature.active?(:sign_in) && Feature.active?(:reset_passwords)
-      devise_for :users, only: [:sessions, :passwords],
-                   controllers: { sessions: 'sessions', passwords: 'passwords' }
-    else
+    end
+
+    devise_for :users, only: [:registrations, :sessions, :passwords],
+      controllers: { registrations: 'registrations', sessions: 'sessions', passwords: 'passwords'}
+
+    if Feature.active?(:profile)
       scope '/users' do
-        match '/sign_in', to: not_implemented, via: 'get', as: 'new_user_session'
-        match '/sign_out', to: not_implemented, via: 'delete', as: 'destroy_user_session'
+        resource :profile, only: [:edit, :update], controller: :profile
       end
     end
 

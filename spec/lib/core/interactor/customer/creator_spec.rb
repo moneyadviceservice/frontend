@@ -19,7 +19,7 @@ module Core
           context 'when customer already exists' do
             before :each do
               user
-              user.update_attribute(:customer_id, nil)
+              user.update_column(:customer_id, nil)
             end
 
             it 'does not throw an exception' do

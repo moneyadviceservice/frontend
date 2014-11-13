@@ -114,6 +114,9 @@
         <%= f.form_row :newsletter_subscription do %>
 
           <h3><%= t("authentication.settings.newsletter.title") %></h3>
+
+          <%= f.errors_for :newsletter_subscription %>
+
           <fieldset class="form__group">
             <div class="form__group-item">
               <%= f.label :newsletter_subscription, class: "form__label-heading" do %>
@@ -128,8 +131,6 @@
               <li><%= benefit %></li>
             <% end %>
           </ul>
-
-          <%= f.errors_for :newsletter_subscription %>
 
         <% end %>
       </div>

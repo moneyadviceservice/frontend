@@ -9,10 +9,6 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
-    scope '/users' do
-      match '/', to: not_implemented, via: ['put', 'patch']
-    end
-
     unless Feature.active?(:reset_passwords)
       scope '/users' do
         match '/password/new', to: not_implemented, via: 'get'

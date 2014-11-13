@@ -395,6 +395,19 @@ cy:
         step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan y Gwasanaeth Cynghori Ariannol.
         expired_token_tip: Beth i'w wneud os bydd eich dolen ailosod cyfrinair (uchod) wedi dirwyn i ben
         expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='%{url}'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
+    settings:
+      title: Golygu fy ngosodiadau
+      secondary_intro_html: "Yn ôl i dudalen <a href=\"%{url}\">fy nghyfrif</a>."
+      label: Diweddaru
+      field_help_texts:
+        email: Rhowch gyfeiriad e-bost dilys os hoffech newid yr un cyfredol
+        password: O leiaf 8 o nodau. Gadewch yn wag os nad ydych yn dymuno newid eich cyfrinair
+        password_confirmation: Gadewch yn wag os nad ydych yn dymuno newid eich cyfrinair
+        postcode: Rhowch god post dilys o’r DU os hoffech chi ddiweddaru’r un gyfredol
+        current_password: Rydym angen eich cyfrinair cyfredol i gadarnhau eich newidiadau
+      newsletter:
+        title: Rheoli cyngor ar ddewisiadau e-bost
+        intro: "Parhewch i danysgrifio er mwyn cael…"
 
   technical_feedback:
     new:

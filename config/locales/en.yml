@@ -395,6 +395,19 @@ en:
         step_3: 3) You will be signed in automatically so you can carry on getting advice from The Money Advice Service.
         expired_token_tip: "What to do if your reset password link (above) has expired:"
         expired_token_tip_steps_html: 'Go back to the <a href="%{url}">Forgotten Password page</a> and input your email address again so that we can send you another one.'
+    settings:
+      title: Edit my settings
+      secondary_intro_html: "Back to my <a href=\"%{url}\">account page</a>."
+      label: Update
+      field_help_texts:
+        email: Please enter a valid email address if you would like to change your current one
+        password: At least 8 characters. Leave blank if you don't want to change your password.
+        password_confirmation: Leave blank if you don't want to change your password
+        postcode: Please enter a valid UK postcode if would like to update your current one
+        current_password: We need your current password to confirm your changes
+      newsletter:
+        title: Manage advice email preferences
+        intro: "Stay subscribed to get..."
 
   technical_feedback:
     new:

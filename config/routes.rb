@@ -57,6 +57,11 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:debt_advice_locator)
     end
 
+    Feature.with(:health_check) do
+      mount AdvicePlans::Engine => '/tools/:tool_id',
+      constraints: ToolMountPoint.for(:advice_plans)
+    end
+
     Feature.with(:mortgage_calculator) do
       mount MortgageCalculator::Engine => '/tools/:tool_id',
             constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }

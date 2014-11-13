@@ -66,6 +66,9 @@ class ApplicationController < ActionController::Base
 
   helper_method :alerts?
 
+  def set_tool_instance
+  end
+
   private
 
   def category_tree

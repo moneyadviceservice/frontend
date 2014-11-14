@@ -33,7 +33,6 @@ Then(/^I should receive a "(.*?)" validation message$/) do |message|
 end
 
 When(/^I sign out$/) do
-  Rails.application.reload_routes!
   sign_up_page.auth.sign_out.click
 end
 

@@ -68,7 +68,7 @@
         <%= f.form_row :password_confirmation do %>
           <%= f.errors_for :password_confirmation %>
           <%= f.label :password_confirmation, class: "form__label-heading" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", "aria-describedby" => "tooltip_password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
         <% end %>
       </div>
     </div>
@@ -78,12 +78,12 @@
         <%= f.form_row :current_password do %>
           <%= f.errors_for :current_password %>
           <%= f.label :current_password, class: "form__label-heading" %>
-          <%= f.password_field :current_password, autocomplete: "off", "aria-describedby" => "tooltip_password" %>
+          <%= f.password_field :current_password, autocomplete: "off", "aria-describedby" => "tooltip_current_password" %>
         <% end %>
       </div>
 
       <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_password" data-dough-component="FieldHelpText">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_current_password" data-dough-component="FieldHelpText">
           <div class="tooltip__content-container">
             <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.current_password") %></p>
           </div>
@@ -136,12 +136,11 @@
       </div>
     </div>
 
-    <p><%= t("authentication.settings.secondary_intro_html", url: edit_profile_path) %></p>
-
     <div class="registration__row">
       <div class="registration__field">
         <div class="form__row">
           <%= f.submit t("authentication.settings.label"), class: "button button--primary" %>
+          <p class="tertiary-link"><%= t("authentication.settings.secondary_intro_html", url: edit_profile_path) %></p>
         </div>
       </div>
     </div>

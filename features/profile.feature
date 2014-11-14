@@ -3,8 +3,8 @@ Feature: Profile page
   I want to view my personal profile page
   So that I may manage information particular to my account
 
-@enable-profile
-Scenario:
-  Given I am signed in
-  When I view my profile page
-  Then I see my name
+  @enable-profile
+  Scenario:
+    Given I am signed in
+    When I view my profile page
+    Then I see my name

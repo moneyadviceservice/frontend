@@ -8,7 +8,6 @@ end
 
 When(/^I (?:sign|am signed) in$/) do
   @user = create(:user)
-  @user.save!
 
   sign_in_page.load(locale: 'en')
   sign_in_page.email.set @user.email

@@ -6,7 +6,7 @@ RSpec.describe Core::Repository::RecommendedTools::Static do
     expect(subject.title).to eql('Do you know where all your money goes each month?')
     expect(subject.subtitle).to eql('Most people find it hard to keep track of their costs without a budget.')
     expect(subject.link_copy).to eql('Work out your budget')
-    expect(subject.link_url).to eql('link_url')
+    expect(subject.link_url).to eql('/en/tools/budget-planner/')
     expect(subject.description).to eql('Our budget planner helps you see where ' \
                                        'you’re spending and plan for unexpected bills.')
 

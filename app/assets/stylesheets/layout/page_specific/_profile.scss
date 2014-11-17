@@ -1,5 +1,7 @@
 .l-profile {
-  margin-bottom: $baseline-unit*4;
+  @include clearfix();
+  padding-bottom: $baseline-unit*7;
+  border-bottom: 1px solid $color-horizontal-rule;
 }
 
 .l-profile__intro {
@@ -14,6 +16,80 @@
   }
 }
 
+.l-profile__your-tools {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(4);
+
+    .link-to-top-heading__link {
+      display: none;
+    }
+  }
+}
+
+.l-profile__your-tools .link-to-top-heading {
+  @include respond-to($mq-l) {
+    padding-left: 0;
+  }
+}
+
+.l-profile__your-tools .link-to-top-heading__link {
+  @include respond-to($mq-l) {
+    display: none;
+  }
+}
 
 
+.l-recommended-tools {
+  margin-bottom: $baseline-unit*4;
+}
 
+.l-recommended-tools__intro {
+  @include column(12);
+  margin-bottom: $baseline-unit*4;
+}
+
+.l-recommended-tools__tool {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-xl) {
+    @include column(4);
+  }
+}
+
+.l-recommended-tools__tool--1 {
+  @include respond-to(0, $mq-m) {
+    display: none;
+  }
+}
+
+.l-recommended-tools__tool--2 {
+  @include respond-to(0, $mq-xl) {
+    display: none;
+  }
+}
+
+.l-recommended-tools .recommended-tool__header {
+  @include respond-to($mq-m) {
+    min-height: $baseline-unit*26;
+  }
+
+  @include respond-to($mq-l) {
+    min-height: $baseline-unit*20;
+  }
+
+  @include respond-to($mq-xl) {
+    min-height: $baseline-unit*31;
+  }
+
+  .theme-cy & {
+    @include respond-to($mq-xl) {
+      min-height: $baseline-unit*34;
+    }
+  }
+}

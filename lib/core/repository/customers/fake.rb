@@ -31,6 +31,9 @@ module Core
           fail 'does not exist' unless c
 
           c[:first_name] = customer.first_name
+          c[:email] = customer.email
+          c[:post_code] = customer.post_code
+          c[:newsletter_subscription] = customer.newsletter_subscription
         end
 
         def clear

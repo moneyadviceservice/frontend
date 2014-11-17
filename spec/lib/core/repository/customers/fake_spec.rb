@@ -49,22 +49,53 @@ module Core
     end
 
     describe '#update' do
-      let(:old_first_name) { 'Phil' }
-      let(:new_first_name) { 'Philip' }
+      let(:old_attributes) do
+        {
+          first_name: 'Phil',
+          email: 'phil@example.com',
+          post_code: 'NE1 6EE',
+          newsletter_subscription: true
+        }
+      end
 
-      it 'updates the customer' do
-        user = User.new(first_name: old_first_name)
-        customer_id = subject.create(user)
+      let(:new_attributes) do
+        {
+          first_name: 'Jon',
+          email: 'jon@example.com',
+          post_code: 'NE2 8EE',
+          newsletter_subscription: false
+        }
+      end
+      let(:user) { User.new(old_attributes) }
+      let(:customer_id) { subject.create(user) }
+      let(:customer) { Customer.new(customer_id, new_attributes) }
 
-        customer = Customer.new(customer_id, first_name: new_first_name)
-        subject.update(customer)
+      context 'personal details' do
 
-        expect(subject.find(id: customer_id).first_name).to eql(new_first_name)
+        before(:each) do
+          subject.update(customer)
+        end
+
+        it 'updates the customers first name' do
+          expect(subject.find(id: customer_id).first_name).to eql(new_attributes[:first_name])
+        end
+
+        it 'updates the customers email address' do
+          expect(subject.find(id: customer_id).email).to eql(new_attributes[:email])
+        end
+
+        it 'updates the customers post code' do
+          expect(subject.find(id: customer_id).post_code).to eql(new_attributes[:post_code])
+        end
+
+        it 'updates the customers newsletter subscription settings' do
+          expect(subject.find(id: customer_id).newsletter_subscription).to eql(new_attributes[:newsletter_subscription])
+        end
       end
 
       context 'when the customer does not exist' do
         it 'throws an exception' do
-          customer = Customer.new('phil', first_name: old_first_name)
+          customer = Customer.new('phil', first_name: old_attributes[:first_name])
 
           expect { subject.update(customer) }.to raise_error('does not exist')
         end

@@ -1,4 +1,4 @@
-RSpec.describe SessionsController, type: :controller, features: [:sign_in, :reset_passwords] do
+RSpec.describe SessionsController, type: :controller, features: [:reset_passwords] do
   describe '#create' do
     context 'when user has been updated in CRM' do
       let!(:user) { FactoryGirl.create(:user) }
@@ -11,7 +11,7 @@ RSpec.describe SessionsController, type: :controller, features: [:sign_in, :rese
 
       it 'persists this to the database' do
         @request.env['devise.mapping'] = Devise.mappings[:user]
-        post :create, user: { email: 'phil@example.com', password: 'password' }, locale: 'en'
+        post :create, user: { email: user.email, password: user.password }, locale: 'en'
 
         expect(User.first.reload.first_name).to eql(new_first_name)
       end
@@ -20,7 +20,7 @@ RSpec.describe SessionsController, type: :controller, features: [:sign_in, :rese
         session['authentication_sign_in_page_title'] = 'hello'
         session['authentication_registration_title'] = 'hi'
         @request.env['devise.mapping'] = Devise.mappings[:user]
-        post :create, user: { email: 'phil@example.com', password: 'password' }, locale: 'en'
+        post :create, user: { email: user.email, password: user.password }, locale: 'en'
         expect(session['authentication_sign_in_page_title']).to be_nil
         expect(session['authentication_registration_title']).to be_nil
       end

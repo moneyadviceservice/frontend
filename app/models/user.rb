@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
 
   before_save :fake_send_confirmation_email
   before_create :create_to_crm
+  after_update :update_to_crm
 
   def valid_for_authentication?
     super && active? && Core::Registry::Repository[:customer].valid_for_authentication?(customer_id)
@@ -71,6 +72,10 @@ class User < ActiveRecord::Base
 
   def create_to_crm
     Core::Interactors::Customer::Creator.new(self).call
+  end
+
+  def update_to_crm
+    Core::Interactors::Customer::Updater.new(self).call
   end
 
   def uppercase_post_code

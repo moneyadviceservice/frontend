@@ -7,15 +7,11 @@ Then(/^I am told that the functionality is not implemented$/) do
 end
 
 When(/^I (?:sign|am signed) in$/) do
-  user = User.new(email: 'user@example.com',
-                  first_name: 'Phil',
-                  password: 'password',
-                  post_code: 'NE1 6EE')
-  user.save!
+  @user = create(:user)
 
   sign_in_page.load(locale: 'en')
-  sign_in_page.email.set user.email
-  sign_in_page.password.set user.password
+  sign_in_page.email.set @user.email
+  sign_in_page.password.set @user.password
   sign_in_page.submit.click
 end
 
@@ -36,19 +32,14 @@ Then(/^I should receive a "(.*?)" validation message$/) do |message|
 end
 
 When(/^I sign out$/) do
-  # The `Feature` library does not support multiple feature toggles enabled
-  # Need to enable the feature otherwise there is no other way to sign out
-  Feature.run_with_activated(:sign_in) do
-    Rails.application.reload_routes!
-    sign_up_page.auth.sign_out.click
-  end
+  sign_up_page.auth.sign_out.click
 end
 
 When(/^I sign in elsewhere$/) do
   Capybara.using_session(:other_session) do
     sign_in_page.load(locale: 'en')
-    sign_in_page.email.set 'user@example.com'
-    sign_in_page.password.set 'password'
+    sign_in_page.email.set @user.email
+    sign_in_page.password.set @user.password
     sign_in_page.submit.click
   end
 end
@@ -78,7 +69,7 @@ end
 
 When(/^I fill in my email$/) do
   forgot_password_page.load(locale: 'en')
-  forgot_password_page.email.set 'user@example.com'
+  forgot_password_page.email.set @user.email
   forgot_password_page.submit.click
 end
 

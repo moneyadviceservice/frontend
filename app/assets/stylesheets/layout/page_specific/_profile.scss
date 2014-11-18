@@ -16,27 +16,26 @@
   }
 }
 
+.l-profile__your-goal__form .form__group {
+  @include respond-to($mq-m) {
+    width: 75%;
+    padding-right: $gutter-width/2;
+  }
+}
+
+.l-profile__your-goal__form .form__group--last {
+  padding-top: $baseline-unit*6;
+}
+
+.l-profile__your-goal__form .form__row {
+  margin-bottom: $baseline-unit*2;
+}
+
 .l-profile__your-tools {
   @include column(12);
 
   @include respond-to($mq-l) {
     @include column(4);
-
-    .link-to-top-heading__link {
-      display: none;
-    }
-  }
-}
-
-.l-profile__your-tools .link-to-top-heading {
-  @include respond-to($mq-l) {
-    padding-left: 0;
-  }
-}
-
-.l-profile__your-tools .link-to-top-heading__link {
-  @include respond-to($mq-l) {
-    display: none;
   }
 }
 
@@ -45,9 +44,46 @@
   margin-bottom: $baseline-unit*4;
 }
 
-.l-recommended-tools__intro {
+.l-recommended-tools__heading {
   @include column(12);
-  margin-bottom: $baseline-unit*4;
+
+  padding-right: 25px;
+  position: relative;
+
+  button {
+    text-align: left;
+  }
+
+  @include respond-to($mq-l) {
+    padding-right: 0;
+    padding-left: 25px;
+  }
+}
+
+.l-recommended-tools__heading .collapsable__trigger-icon {
+  position: absolute;
+  right: 0;
+  top: $baseline-unit*2;
+
+  @include respond-to($mq-l) {
+    right: auto;
+    left: 0;
+  }
+}
+
+.l-recommended-tools__content {
+  @include clearfix();
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.l-recommended-tools__content__intro {
+  @include column(12);
+  margin-top: 0;
+  margin-bottom: $baseline-unit*8;
 }
 
 .l-recommended-tools__tool {

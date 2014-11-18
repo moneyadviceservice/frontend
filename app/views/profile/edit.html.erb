@@ -6,7 +6,7 @@
   <div class="l-profile__your-goal">
     <h2><%= t('.goal.heading') %></h2>
     <p><%= t('.goal.introduction') %></p>
-    <%= form_for current_user, html: {id: 'goal_form', class: 'form form--your-goal'}, url: profile_path, method: :put do |f| %>
+    <%= form_for current_user, html: {id: 'goal_form', class: 'form l-profile__your-goal__form'}, url: profile_path, method: :put do |f| %>
       <fieldset class="form__group">
         <div class="form__row">
           <label class="form__label-heading" for="goal_statement" ><%= t('.goal.statement_field_label') %></label>
@@ -18,7 +18,7 @@
         </div>
       </fieldset>
       <div class="form__group form__group--last">
-        <input class="button button--primary button--fill-width" type="submit" value="<%= t('.goal.save_button_text') %>">
+        <input class="button button--primary" type="submit" value="<%= t('.goal.save_button_text') %>">
       </div>
     <% end %>
   </div>
@@ -27,52 +27,51 @@
 </div>
 
 <div class="l-recommended-tools">
-  <div class="l-recommended-tools__intro">
-    <h2 class="link-to-top-heading">
-      <%= t('recommended_tools.title') %>
-      <a class="link-to-top-heading__link icon icon--up-chevron-grey" href="#top" title="<%= t('back_to_top') %>">
-        <%= t('back_to_top') %>
-      </a>
-    </h2>
-    <p><%= t('recommended_tools.description') %></p>
-  </div>
+  <h2 class="l-recommended-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="recommended-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('recommended_tools.title') %>
+  </h2>
 
-  <% I18n.t("recommended_tools.tools").keys.each_with_index do |tool_name, index| %>
-    <% tool = Core::Registry::Repository[:recommended_tool_class].new(tool_name) %>
+  <div class="l-recommended-tools__content is-active" data-dough-collapsable-target="recommended-tools">
+    <p class="l-recommended-tools__content__intro">
+      <%= t('recommended_tools.description') %>
+    </p>
 
-    <div class="l-recommended-tools__tool l-recommended-tools__tool--<%= index %>">
-      <div class="recommended-tool">
-        <div class="recommended-tool__header">
-          <h3 class="recommended-tool__header__title">
-            <span class="recommended-tool__header__title__border"><%= tool.title %></span>
-          </h3>
-          <p class="recommended-tool__header__subtitle">
-            <%= tool.subtitle %>
-          </p>
-        </div>
-        <div class="recommended-tool__body">
-          <%= link_to tool.link_copy, tool.link_url, class: "button button--primary button--fill-width button--wrap-text" %>
-          <h4 class="recommended-tool__body__summary-title">
-            <%= t('recommended_tools.summary_title') %>
-          </h4>
-          <p class="recommended-tool__body__description">
-            <%= tool.description %>
-          </p>
-          <p class="recommended-tool__body__time">
-            <%= tool.time_to_complete %>
-          </p>
-        </div>
-        <div class="recommended-tool__footer">
-          <p class="recommended-tool__footer__completion">
-            <span class="icon icon--tick"></span>
-            <%= tool.completion_copy %>
-          </p>
-          <blockquote class="recommended-tool__footer__quote"><%= tool.quote %></blockquote>
-          <p class="recommended-tool__footer__quotee">
-            <%= tool.quotee_name %>, <%= tool.quotee_location %>
-          </p>
+    <% I18n.t("recommended_tools.tools").keys.each_with_index do |tool_name, index| %>
+      <% tool = Core::Registry::Repository[:recommended_tool_class].new(tool_name) %>
+
+      <div class="l-recommended-tools__tool l-recommended-tools__tool--<%= index %>">
+        <div class="recommended-tool">
+          <div class="recommended-tool__header">
+            <h3 class="recommended-tool__header__title">
+              <span class="recommended-tool__header__title__border"><%= tool.title %></span>
+            </h3>
+            <p class="recommended-tool__header__subtitle">
+              <%= tool.subtitle %>
+            </p>
+          </div>
+          <div class="recommended-tool__body">
+            <%= link_to tool.link_copy, tool.link_url, class: "button button--primary button--fill-width button--wrap-text" %>
+            <h4 class="recommended-tool__body__summary-title">
+              <%= t('recommended_tools.summary_title') %>
+            </h4>
+            <p class="recommended-tool__body__description">
+              <%= tool.description %>
+            </p>
+            <p class="recommended-tool__body__time">
+              <%= tool.time_to_complete %>
+            </p>
+          </div>
+          <div class="recommended-tool__footer">
+            <p class="recommended-tool__footer__completion">
+              <span class="icon icon--tick"></span>
+              <%= tool.completion_copy %>
+            </p>
+            <blockquote class="recommended-tool__footer__quote"><%= tool.quote %></blockquote>
+            <p class="recommended-tool__footer__quotee">
+              <%= tool.quotee_name %>, <%= tool.quotee_location %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

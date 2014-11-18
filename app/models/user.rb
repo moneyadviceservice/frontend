@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   before_validation :uppercase_post_code
 
   validates_with Validators::Email, attributes: [:email]
+  validates_with Validators::DateOfBirth, attributes: [:date_of_birth]
   validates :email, uniqueness: true
   validates :post_code, presence: true,
                         format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' },
@@ -31,7 +32,6 @@ class User < ActiveRecord::Base
                         allow_blank: true,
                         length: { maximum: 24 }
   validates :gender, inclusion: { in: %w(female male) }, allow_nil: true
-  validates :date_of_birth, timeliness: { before: Date.today, allow_nil: true, type: :date }
   validates :age_range, inclusion: { in: VALID_AGE_RANGES }, allow_nil: true
 
   before_save :fake_send_confirmation_email

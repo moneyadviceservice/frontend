@@ -1,3 +1,5 @@
 module Validators
-  autoload :Email, 'validators/email'
+  extend ActiveSupport::Autoload
+
+  autoload :Email
 end

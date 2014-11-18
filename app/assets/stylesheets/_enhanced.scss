@@ -2,8 +2,11 @@
 
 @import 'dough/assets/stylesheets/lib';
 
-@import 'lib/mediaqueries';
 @import 'lib/grid';
+@import 'lib/mediaqueries';
+@import 'lib/variables';
+@import 'lib/links';
+@import 'lib/typography';
 
 @import 'base/*';
 @import 'helpers/*';
@@ -11,15 +14,14 @@
 @import 'dough/assets/stylesheets/common';
 @import 'dough/assets/stylesheets/optional';
 
-@import 'lib/variables';
-@import 'lib/links';
-@import 'lib/typography';
-
 
 @import 'layout/common/all';
 @import 'layout/page_specific/all';
 @import 'components/common/all';
 @import 'components/page_specific/all';
+
+@import 'components/dough_theme/variables';
+@import 'components/dough_theme/*/_all.scss';
 
 .editorial {
   @import 'components/cms/all';

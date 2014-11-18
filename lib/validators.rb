@@ -1,3 +1,6 @@
 module Validators
-  autoload :Email, 'validators/email'
+  extend ActiveSupport::Autoload
+
+  autoload :DateOfBirth
+  autoload :Email
 end

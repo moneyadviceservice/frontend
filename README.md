@@ -141,14 +141,6 @@ write Ruby code. As a contributor you should update the styleguide as you update
 the application. The CSS styleguide is powered by [KSS], a documenting syntax
 for CSS.
 
-### Development Dependencies
-
-The application depends on [mas-development_dependencies], a dependency layer
-common to all applications and engines developed by the
-[Money Advice Service team]. This Gem unifies development and test dependencies
-and provides opinionated default configuration. When introducing a dependency,
-first consider whether it should be promoted to this common layer.
-
 ### Front-end Package Management
 
 The application uses [Bower] to manage front-end packages. Dependencies should
@@ -192,7 +184,6 @@ presentational concerns.
 [git]: http://git-scm.com
 [karma]: https://karma-runner.github.io
 [kss]: https://github.com/kneath/kss
-[mas-development_dependencies]: https://github.com/moneyadviceservice/mas-development_dependencies
 [mock api]: https://moneyadviceservice.apiary.io
 [money advice service team]: https://github.com/moneyadviceservice
 [node]: http://nodejs.org/

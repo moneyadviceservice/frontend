@@ -7,7 +7,7 @@
   <% unless hide_elements_irrelevant_for_third_parties? %>
     <% if user_signed_in? %>
       <li class="authentication__item">
-        <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>
+        <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link gtm-my-account-link', method: :delete %>
       </li>
       <li class="authentication__item authentication__item--last">
         <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link' %>

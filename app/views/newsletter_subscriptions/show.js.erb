@@ -4,6 +4,14 @@
       errorClass = 'is-errored';
 
   <% if @success %>
+    require(['common'], function (MAS) {
+      MAS.publish('analytics:trigger', {
+        category: 'Newsletter SignUp',
+        event: 'Click',
+        label: 'Successful'
+      });
+    });
+
     $newsletterForm
       .attr({'role':'alert', 'aria-live': 'polite'})
       .removeClass(errorClass)
@@ -11,6 +19,14 @@
 
     $newsletterInput.attr({'aria-invalid' : false });
   <% else %>
+    require(['common'], function (MAS) {
+      MAS.publish('analytics:trigger', {
+        category: 'Newsletter SignUp',
+        event: 'Click',
+        label: 'Not successful'
+      });
+    });
+
     var newsletterErrorID = 'newsletter_error',
         $error;
 

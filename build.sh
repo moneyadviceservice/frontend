@@ -30,6 +30,10 @@ echo "Running Bower cache clean"
 echo "----"
 bower cache clean
 
+echo "Purging bower components"
+echo "----"
+rm -r vendor/assets/bower_components
+
 echo "Running Bower update (via bowndler)"
 echo "----"
 bowndler update --production --config.interactive=false

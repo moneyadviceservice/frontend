@@ -23,16 +23,22 @@
     <% end %>
   </div>
   <div class="l-profile__your-tools">
-    <h2><%= t('saved_tools.heading') %></h2>
-    <% if saved_tools.any? %>
-    <ul>
-    <% saved_tools.each do |tool| %>
-      <li><a href="<%= tool.link_url %>"><%= tool.link_copy %></a></li>
-    <% end %>
-    </ul>
-    <% else %>
-    <p><%= t('saved_tools.no_data_message') %></p>
-    <% end %>
+    <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('saved_tools.heading') %>
+    </h2>
+
+    <div class="l-profile__your-tools__content is-active" data-dough-collapsable-target="your-tools">
+      <% if saved_tools.any? %>
+        <ul class="list l-profile__your-tools__content__list">
+        <% saved_tools.each do |tool| %>
+          <li><%= link_to tool.link_copy, tool.link_url, class: "gtm-your-tool-link" %></li>
+        <% end %>
+        </ul>
+      <% else %>
+        <p class="l-profile__your-tools__content__empty">
+          <%= t('saved_tools.no_data_message') %>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
 

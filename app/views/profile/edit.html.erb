@@ -23,6 +23,16 @@
     <% end %>
   </div>
   <div class="l-profile__your-tools">
+    <h2><%= t('saved_tools.heading') %></h2>
+    <% if saved_tools.any? %>
+    <ul>
+    <% saved_tools.each do |tool| %>
+      <li><a href="<%= tool.link_url %>"><%= tool.link_copy %></a></li>
+    <% end %>
+    </ul>
+    <% else %>
+    <p><%= t('saved_tools.no_data_message') %></p>
+    <% end %>
   </div>
 </div>
 

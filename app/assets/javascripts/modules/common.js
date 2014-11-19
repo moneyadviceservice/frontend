@@ -5,7 +5,7 @@ define(
     'use strict';
 
     var MAS = $.extend({}, globals, pubsub, log);
-    var dataLayer = dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
     MAS.text = i18n;
 
@@ -13,7 +13,7 @@ define(
     // TO USE: MAS.publish('analytics:trigger', {object with props})
     MAS.subscribe('analytics:trigger', function(e, data) {
       MAS.log('mas_analytics.triggerAnalytics', data);
-      dataLayer.push(data);
+      window.dataLayer.push(data);
     });
 
     return MAS;

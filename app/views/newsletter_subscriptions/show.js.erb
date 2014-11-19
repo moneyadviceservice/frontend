@@ -6,9 +6,10 @@
   <% if @success %>
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
-        category: 'Newsletter SignUp',
-        event: 'Click',
-        label: 'Successful'
+        gaEventCat: 'Newsletter SignUp',
+        gaEventAct: 'Click',
+        gaEventLab: 'Successful',
+        event: 'gaEvent'
       });
     });
 
@@ -21,9 +22,10 @@
   <% else %>
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
-        category: 'Newsletter SignUp',
-        event: 'Click',
-        label: 'Not successful'
+        gaEventCat: 'Newsletter SignUp',
+        gaEventAct: 'Click',
+        gaEventLab: 'Not successful',
+        event: 'gaEvent'
       });
     });
 

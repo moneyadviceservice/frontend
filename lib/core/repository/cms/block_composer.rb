@@ -4,7 +4,7 @@ module Core::Repository
     # TODO: replace with native support for displaying blocks outside of frontend core
     class BlockComposer
       class Block < OpenStruct
-        delegate :to_s, to: :content
+        delegate :to_s, to: :last_published_content
       end
 
       attr_reader :blocks, :id, :parser

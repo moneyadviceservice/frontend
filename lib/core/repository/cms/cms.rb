@@ -7,7 +7,7 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('%{id}.json' % { locale: I18n.locale, id: id })
+        response = connection.get('%{locale}/%{id}.json' % { locale: I18n.locale, id: id })
         AttributeBuilder.build(response)
       rescue
         fallback_repository.find(id)

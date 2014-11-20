@@ -44,5 +44,5 @@ And(/^I have saved data for the "([^"]*)" tool$/) do |tool_name|
 end
 
 Then(/^I see the "([^"]*)" tool listed under saved tools$/) do |tool_title|
-  expect(profile_page.saved_tools_list.text).to include('')
+  expect(profile_page.saved_tools_list.text).to include(tool_title)
 end

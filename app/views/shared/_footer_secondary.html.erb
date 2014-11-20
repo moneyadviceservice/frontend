@@ -40,9 +40,9 @@
               <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
               <span class="footer-site-links__pipe">|</span>
               <% if Feature.active?(:profile) %>
-                <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link' %>
+                <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link footer-secondary__link gtm-my-account-link' %>
               <% else %>
-                <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link footer-secondary__link gtm-my-account-link' %>
+                <%= link_to t('authentication.my_account'), main_app.edit_user_registration_path, class: 'authentication__link' %>
               <% end %>
             <% else %>
               <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>

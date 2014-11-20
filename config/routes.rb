@@ -60,6 +60,9 @@ Rails.application.routes.draw do
     Feature.with(:health_check) do
       mount AdvicePlans::Engine => '/tools/:tool_id',
       constraints: ToolMountPoint.for(:advice_plans)
+
+      mount DecisionTrees::Engine => '/tools/:tool_id',
+        constraints: ToolMountPoint.for(:decision_trees)
     end
 
     Feature.with(:mortgage_calculator) do

@@ -68,8 +68,8 @@ class User < ActiveRecord::Base
     devise_mailer.delay(queue: 'frontend_email').send(notification, self, *args)
   end
 
-  def has_data_for(tool_name)
-    method = "has_#{tool_name}_data".to_sym
+  def data_for?(tool_name)
+    method = "data_for_#{tool_name}?".to_sym
     send(method) if respond_to?(method)
   end
 

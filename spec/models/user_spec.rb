@@ -200,10 +200,10 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe '#has_data_for' do
+  describe '#data_for?' do
     context 'when no tool specific method exists' do
       it 'returns nil' do
-        expect(subject.has_data_for(:no_tool)).to be_nil
+        expect(subject.data_for?(:no_tool)).to be_nil
       end
     end
 
@@ -212,11 +212,11 @@ RSpec.describe User, type: :model do
       let(:has_data) { true }
 
       before do
-        allow(subject).to receive("has_#{tool_name}_data".to_sym).and_return(has_data)
+        allow(subject).to receive(:"data_for_#{tool_name}?").and_return(has_data)
       end
 
       it 'returns the value from that method' do
-        expect(subject.has_data_for(:money_tool)).to eql(has_data)
+        expect(subject.data_for?(:money_tool)).to eql(has_data)
       end
     end
   end

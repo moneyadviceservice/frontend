@@ -30,7 +30,7 @@ And(/^I see my goal and goal date$/) do
 end
 
 And(/^I have no saved data for any tools$/) do
-  allow(@user).to receive(:has_data_for).and_return(false)
+  allow(@user).to receive(:data_for?).and_return(false)
 end
 
 Then(/^I see a message prompting me to try a tool$/) do
@@ -38,7 +38,7 @@ Then(/^I see a message prompting me to try a tool$/) do
 end
 
 And(/^I have saved data for the "([^"]*)" tool$/) do |tool_name|
-  allow(@user).to receive(:has_data_for) do |argument|
+  allow(@user).to receive(:data_for?) do |argument|
     argument == tool_name.to_sym
   end
 end

@@ -6,6 +6,27 @@
 
 .l-profile__intro {
   @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(8);
+  }
+
+  .intro {
+    float: left;
+  }
+}
+
+.l-profile__intro__heading {
+  margin-bottom: 0;
+}
+
+.l-profile__intro__links {
+  float: right;
+  margin-top: 0;
+
+  @include respond-to($mq-l) {
+    @include body(18, 30);
+  }
 }
 
 .l-profile__your-goal {

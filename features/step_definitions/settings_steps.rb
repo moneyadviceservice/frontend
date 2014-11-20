@@ -36,3 +36,7 @@ end
 Then(/^I should see a successful update notification$/) do
   expect(page.html).to include(I18n.t('devise.registrations.updated', locale: 'en'))
 end
+
+Then(/^I see my settings page$/) do
+  expect(settings_page).to be_displayed
+end

@@ -3,6 +3,7 @@ require_relative '../page'
 module UI::Pages
   class Settings < UI::Page
     set_url '{/locale}/users/edit'
+    set_url_matcher %r((en|cy)/users/edit)
 
     element :first_name, "input[name='user[first_name]']"
     element :email, "input[name='user[email]']"

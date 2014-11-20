@@ -1,7 +1,8 @@
 <div class="l-profile">
   <div class="l-profile__intro">
-    <h1><%= t('.heading', first_name_with_possession: singular_noun_possessive(current_user.first_name)) %></h1>
+    <h1 class="l-profile__intro__heading"><%= t('.heading', first_name_with_possession: singular_noun_possessive(current_user.first_name)) %></h1>
     <p class="intro"><%= t('.intro') %></p>
+    <p class="l-profile__intro__links"><%= link_to t('.change_settings'), edit_user_registration_path %></p>
   </div>
   <div class="l-profile__your-goal">
     <h2><%= t('.goal.heading') %></h2>

@@ -107,6 +107,10 @@ module Core
       autoload :Static, 'core/repository/recommended_tools/static'
     end
 
+    module SavedTools
+      autoload :Static, 'core/repository/saved_tools/static'
+    end
+
     module StaticPages
       autoload :PublicWebsite, 'core/repository/static_pages/public_website'
     end

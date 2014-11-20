@@ -61,3 +61,5 @@ Core::Registry::Repository[:preview] =
 
 Core::Registry::Repository[:recommended_tool_class] =
   Core::Repository::RecommendedTools::Static
+
+Core::Registry::Repository[:saved_tools] = Core::Repository::SavedTools::Static

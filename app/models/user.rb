@@ -68,6 +68,11 @@ class User < ActiveRecord::Base
     devise_mailer.delay(queue: 'frontend_email').send(notification, self, *args)
   end
 
+  def data_for?(tool_name)
+    method = "data_for_#{tool_name}?".to_sym
+    send(method) if respond_to?(method)
+  end
+
   private
 
   def create_to_crm

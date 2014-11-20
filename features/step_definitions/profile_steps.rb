@@ -6,7 +6,7 @@ end
 
 Given(/^I am signed in with warden$/) do
   @user = create(:user)
-  login_as(@user, :scope => :user)
+  login_as(@user, scope: :user)
 end
 
 Then(/^I see my name$/) do

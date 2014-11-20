@@ -13,9 +13,10 @@ class ProfileController < ArticlesController
 
   private
 
-  helper_method def saved_tools
+  def saved_tools
     t('saved_tools.tools').keys.map do |tool_name|
       Core::Registry::Repository[:saved_tools].new(tool_name) if current_user.has_data_for(tool_name)
     end.compact
   end
+  helper_method :saved_tools
 end

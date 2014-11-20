@@ -14,4 +14,4 @@ Feature: My Account
     Given I am signed in
     And   I am on the home page
     When  I click on "My Account"
-    Then  I see my settings page
+    Then  I don't see my account page

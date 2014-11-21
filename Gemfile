@@ -40,7 +40,7 @@ gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'budget_planner', '~> 4.0'
+gem 'budget_planner', '~> 4.0', '>= 4.0.0.675'
 gem 'car_cost_tool', '~> 1.0.1'
 gem 'debt_advice_locator', '~> 2.0'
 gem 'debt_free_day_calculator', '~> 2.0'

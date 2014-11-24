@@ -1,6 +1,11 @@
 begin
   require 'cucumber/rake/task'
 
+  # cucumber tasks are also defined in some of the the engines causing
+  # the features to be run multiple times, delete these duplicates
+  tasks = Rake.application.instance_variable_get('@tasks')
+  tasks.reject! { |task, deps| task =~ /cucumber/ }
+
   namespace :cucumber do
     ::Cucumber::Rake::Task.new({ ok: 'test:prepare' },
                                'Run features that should pass') do |t|

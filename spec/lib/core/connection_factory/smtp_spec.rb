@@ -27,7 +27,7 @@ end
 
 RSpec.describe Core::ConnectionFactory::PseudoSmtpServer do
   let(:from_address) { double }
-  let(:mail) { Mail.new }
+  let(:mail) { double.as_null_object }
   let(:config) { double }
   subject(:smtp_server) { described_class.new(from_address: from_address, mail: mail, config: config) }
 
@@ -54,33 +54,33 @@ RSpec.describe Core::ConnectionFactory::PseudoSmtpServer do
     end
 
     it 'sets the delivery method' do
-      expect(mail).to receive(:delivery_method).with(delivery_method).and_call_original
+      expect(mail).to receive(:delivery_method).with(delivery_method)
       subject.deliver(message_details)
     end
 
     it 'sets the delivery errors' do
-      expect(mail).to receive(:raise_delivery_errors=).with(delivery_errors).and_call_original
+      expect(mail).to receive(:raise_delivery_errors=).with(delivery_errors)
       subject.deliver(message_details)
     end
 
     it 'sets the from address on the mailer' do
-      expect(mail).to receive(:from=).with(from_address).and_call_original
+      expect(mail).to receive(:from=).with(from_address)
       subject.deliver(message_details)
     end
 
     it 'sets the to address on the mailer' do
-      expect(mail).to receive(:to=).with(recipient).and_call_original
+      expect(mail).to receive(:to=).with(recipient)
 
       subject.deliver(message_details)
     end
 
     it 'sets the subject on the mailer' do
-      expect(mail).to receive(:subject=).with(email_subject).and_call_original
+      expect(mail).to receive(:subject=).with(email_subject)
       subject.deliver(message_details)
     end
 
     it 'sets the body on the mailer' do
-      expect(mail).to receive(:body=).with(body).and_call_original
+      expect(mail).to receive(:body=).with(body)
 
       subject.deliver(message_details)
     end

@@ -1,0 +1,18 @@
+<div class="news-signup-test">
+  <div class="news-signup-test__image"></div>
+  <div class="news-signup-test__container">
+    <div class="news-signup-test__container__intro">
+      <h3>Get money saving tips straight to your inbox</h3>
+      <p>Join 100,000+ subscribers to get our free newsletter packed with tips and advice.</p>
+    </div>
+    <div class="news-signup-test__container__form">
+      <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+        <%= label_tag('subscription[email]', 'Enter your email address', for: 'news-signup-email', class: 'newsletter-signup__container__form__label') %>
+        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-test__container__form__email js-news-signup-test-input') %>
+        <%= button_tag('Sign up now', type: 'submit', class: 'button button--primary') %>
+      <% end %>
+      <p class="news-signup-test__container__form__privacy">Privacy promise: We will never share your data or spam you.</p>
+    </div>
+  </div>
+</div>

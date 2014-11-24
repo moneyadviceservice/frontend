@@ -1,12 +1,16 @@
 (function() {
-  var $newsletterForm = $('.js-newsletter-form'),
-      $newsletterInput = $newsletterForm.find('.js-newsletter-input'),
-      errorClass = 'is-errored';
+  // @todo: set `isTest` based on hidden input
+  var isTest = true,
+      $newsletterForm = isTest ? $('.js-news-signup-test-form') : $('.js-newsletter-form'),
+      $newsletterInput = isTest ?
+        $('.js-news-signup-test-input') : $newsletterForm.find('.js-newsletter-input'),
+      errorClass = 'is-errored'
+      gaEventCat = isTest ? 'Newsletter SignUp Test' : 'Newsletter SignUp';
 
   <% if @success %>
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
-        gaEventCat: 'Newsletter SignUp',
+        gaEventCat: gaEventCat,
         gaEventAct: 'Click',
         gaEventLab: 'Successful',
         event: 'gaEvent'
@@ -22,7 +26,7 @@
   <% else %>
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
-        gaEventCat: 'Newsletter SignUp',
+        gaEventCat: gaEventCat,
         gaEventAct: 'Click',
         gaEventLab: 'Not successful',
         event: 'gaEvent'
@@ -32,13 +36,27 @@
     var newsletterErrorID = 'newsletter_error',
         $error;
 
-    $('p.js-newsletter-error-msg').remove();
-    $error = $('<p />')
-                .addClass('newsletter__text js-newsletter-error-msg')
-                .text('<%= flash[:error] %>')
-                .attr('id', newsletterErrorID);
+    if (isTest) {
+      $newsletterForm.addClass(errorClass);
+      $newsletterForm.find('label')
+        .attr('id', newsletterErrorID)
+        .text('<%= flash[:error] %>');
+      $newsletterInput
+        .attr({'aria-invalid' : true, 'aria-describedby': newsletterErrorID})
+        .focus();
+    } else {
+      $('p.js-newsletter-error-msg').remove();
+      $error = $('<p />')
+                  .addClass('newsletter__text js-newsletter-error-msg')
+                  .text('<%= flash[:error] %>')
+                  .attr('id', newsletterErrorID);
 
-    $newsletterForm.addClass(errorClass).prepend($error);
-    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : newsletterErrorID}).focus();
+      $newsletterForm
+        .addClass(errorClass)
+        .prepend($error);
+      $newsletterInput
+        .attr({'aria-invalid' : true, 'aria-describedby': newsletterErrorID})
+        .focus();
+    }
   <% end %>
 })();

@@ -58,7 +58,7 @@ module Core
     }
 
     def iso8601_date_of_birth
-      date_of_birth ? user.date_of_birth.to_time.utc.iso8601 : nil
+      date_of_birth ? date_of_birth.to_time.utc.iso8601 : nil
     end
   end
 end

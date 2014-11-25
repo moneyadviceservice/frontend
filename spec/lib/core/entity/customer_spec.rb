@@ -3,6 +3,7 @@ module Core
     subject { described_class.new(customer_id, attributes) }
 
     let(:customer_id) { 'customer_123' }
+    let(:date_of_birth) { Time.new(1988, 1, 1) }
     let(:attributes) do
       {
         first_name: 'Phil',
@@ -14,7 +15,7 @@ module Core
         state: 0,
         topics: [1, 2, 3],
         newsletter_subscription: true,
-        date_of_birth: Time.new(1988, 1, 1),
+        date_of_birth: date_of_birth,
         status_code: '123'
       }
     end
@@ -55,6 +56,25 @@ module Core
         }
 
         expect(subject.to_crm_hash).to eql(expected)
+      end
+
+      context 'when date of birth not present' do
+        let(:date_of_birth) { nil }
+
+        it 'returns hash with correct attributes' do
+          expected = {
+            FirstName: attributes[:first_name],
+            LastName: attributes[:last_name],
+            mas_ContactEmail: attributes[:email],
+            Address1_PostalCode: attributes[:post_code],
+            GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
+            mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
+            BirthDate: nil,
+            DoNotBulkEMail: !attributes[:newsletter_subscription]
+          }
+
+          expect(subject.to_crm_hash).to eql(expected)
+        end
       end
     end
   end

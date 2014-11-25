@@ -40,5 +40,22 @@ module Core
         end
       end
     end
+
+    describe '#to_crm_hash' do
+      it 'returns hash with correct attributes' do
+        expected = {
+          FirstName: attributes[:first_name],
+          LastName: attributes[:last_name],
+          mas_ContactEmail: attributes[:email],
+          Address1_PostalCode: attributes[:post_code],
+          GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
+          mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
+          BirthDate: attributes[:date_of_birth].to_time.utc.iso8601,
+          DoNotBulkEMail: !attributes[:newsletter_subscription]
+        }
+
+        expect(subject.to_crm_hash).to eql(expected)
+      end
+    end
   end
 end

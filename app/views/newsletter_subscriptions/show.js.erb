@@ -1,6 +1,5 @@
 (function() {
-  // @todo: set `isTest` based on hidden input
-  var isTest = true,
+  var isTest = <%= params[:subscription][:optimizely_test] || false %>,
       $newsletterForm = isTest ? $('.js-news-signup-test-form') : $('.js-newsletter-form'),
       $newsletterInput = isTest ?
         $('.js-news-signup-test-input') : $newsletterForm.find('.js-newsletter-input'),

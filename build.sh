@@ -32,7 +32,7 @@ bower cache clean
 
 echo "Purging bower components"
 echo "----"
-rm -r vendor/assets/bower_components
+[ -d vendor/assets/bower_components ] && rm -r vendor/assets/bower_components
 
 echo "Running Bower update (via bowndler)"
 echo "----"

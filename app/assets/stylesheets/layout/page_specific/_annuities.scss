@@ -72,3 +72,65 @@
     @extend %paragraph;
   }
 }
+
+.l-annuities-logos {
+  margin-top: $baseline-unit*6;
+  padding-top: $baseline-unit*3;
+  border-top: $default-border-thin;
+}
+
+.l-annuities-logos__list {
+  margin-top: $baseline-unit*4;
+
+  > li {
+    float:left;
+  }
+}
+
+.l-annuities-logos__image--aviva {
+  width: 102px;
+}
+
+.l-annuities-logos__image--canada-life {
+  width: 122px;
+}
+
+.l-annuities-logos__image--friends-life {
+  width: 122px;
+}
+
+.l-annuities-logos__image--hodge-lifetime {
+  width: 113px;
+}
+
+.l-annuities-logos__image--just-retirement {
+  width: 172px;
+}
+
+.l-annuities-logos__image--legal-general {
+  width: 125px;
+}
+
+.l-annuities-logos__image--liverpool-victoria {
+  width: 140px;
+}
+
+.l-annuities-logos__image--mgm {
+  width: 188px;
+}
+
+.l-annuities-logos__image--partnership {
+  width: 188px;
+}
+
+.l-annuities-logos__image--prudential {
+  width: 157px;
+}
+
+.l-annuities-logos__image--saga {
+  width: 157px;
+}
+
+.l-annuities-logos__image--standard-life {
+  width: 160px;
+}

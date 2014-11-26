@@ -50,12 +50,11 @@
     <%= raw Rails.application.assets['modernizr/modernizr'] %>
 
     <%# // Required for Google Tag Manager %>
-    var dataLayer = [
-      {
-        'Responsive page': 'Yes',
-        'event': 'Responsive page'
-      }
-    ];
+    var dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'Responsive page': 'Yes',
+      'event': 'Responsive page'
+    });
 
     var require = {
       config: {
@@ -189,6 +188,8 @@
 <%# END Google Tag Manager embed code %>
 
 <a id="top"></a>
+
+<%= render 'shared/news_signup_test' %>
 
 <%= yield %>
 

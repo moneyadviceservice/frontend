@@ -5,7 +5,7 @@
 
   <div class="callback-panel__content-column">
     <h4 class="callback-panel__title"><%= t("callback_requester.title") %></h4>
-    <p><%= t("callback_requester.#{article.categories.first.title.underscore.gsub(' ', '_')}_message") %></p>
+    <p><%= t("callback_requester.#{article.categories.first.title.underscore.gsub(' ', '_')}_message") unless article.categories.empty? %></p>
     <%= link_to t('callback_requester.button'),
                 "https://www.moneyadviceservice.org.uk/sdp/moneyadviceservice",
                 class: 'button button--primary' %>

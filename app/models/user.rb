@@ -21,7 +21,8 @@ class User < ActiveRecord::Base
   validates_with Validators::DateOfBirth, attributes: [:date_of_birth]
   validates :email, uniqueness: true
   validates :post_code, presence: true,
-                        format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' }
+                        format: { with: /\A[A-Z]{1,2}\d{1,2}[A-NP-Z]? ?\d[A-Z]{2}\z/, if: 'post_code.present?' },
+                        on: :create
   validates :password, presence: true, on: :create
   validates :password, length: 7..128, allow_blank: true
   validates :first_name, presence: true,

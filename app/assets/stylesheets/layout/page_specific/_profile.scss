@@ -13,6 +13,7 @@
 }
 
 .l-profile__intro__links {
+  @extend .list--inline;
   margin-bottom: 0;
 
   @include respond-to($mq-l) {

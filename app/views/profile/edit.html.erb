@@ -2,9 +2,9 @@
   <div class="l-profile__intro">
     <h1 class="l-profile__intro__heading"><%= t('.heading', first_name_with_possession: singular_noun_possessive(current_user.first_name)) %></h1>
     <p class="intro"><%= t('.intro') %></p>
-    <ul>
-      <li class="l-profile__intro__links"><%= link_to t('.change_settings'), edit_user_registration_path %></li>
-      <li class="l-profile__intro__links"><%= link_to t('.feedback'), feedback.root_path(source: 'account') %></li>
+    <ul class="l-profile__intro__links list list--inline">
+      <li><%= link_to t('.change_settings'), edit_user_registration_path %></li>
+      <li><%= link_to t('.feedback'), feedback.root_path(source: 'account') %></li>
     </ul>
   </div>
   <div class="l-profile__your-goal">

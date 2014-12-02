@@ -238,7 +238,7 @@ GEM
       faraday (~> 0.8)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    feedback (0.1.0.14)
+    feedback (0.1.1.15)
       dough-ruby (~> 4.0)
       rails (~> 4.1.8)
     ffi (1.9.3)
@@ -617,7 +617,7 @@ DEPENDENCIES
   faraday-conductivity
   faraday_middleware
   feature!
-  feedback (~> 0.1)
+  feedback (~> 0.1.1)
   foreman
   gaffe
   guard-bundler

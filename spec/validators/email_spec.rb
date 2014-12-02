@@ -11,7 +11,7 @@ module Validators
     subject { TestEmailValidatorModel.new }
 
     context 'when email is blank' do
-      it { should_not be_valid }
+      it { is_expected.not_to be_valid }
     end
 
     context 'when email is present' do
@@ -20,7 +20,7 @@ module Validators
           subject.email = 'me@example.com'
         end
 
-        it { should be_valid }
+        it { is_expected.to be_valid }
       end
 
       context 'when format is invalid' do
@@ -28,7 +28,7 @@ module Validators
           subject.email = 'notanemail.com'
         end
 
-        it { should_not be_valid }
+        it { is_expected.not_to be_valid }
       end
     end
   end

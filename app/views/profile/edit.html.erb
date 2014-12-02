@@ -4,7 +4,9 @@
     <p class="intro"><%= t('.intro') %></p>
     <ul class="l-profile__intro__links list list--inline">
       <li><%= link_to t('.change_settings'), edit_user_registration_path %></li>
-      <li><%= link_to t('.feedback'), feedback.root_path(source: 'account') %></li>
+      <% if Feature.active?(:improvements) %>
+        <li><%= link_to t('.feedback'), feedback.root_path(source: 'account') %></li>
+      <% end %>
     </ul>
   </div>
   <div class="l-profile__your-goal">

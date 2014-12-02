@@ -1,6 +1,7 @@
 RSpec.describe 'Feedback', type: :request, features: [:improvements] do
   %w(
     /en/improvements
+    /cy/improvements
   ).each do |path|
     describe path do
       before do

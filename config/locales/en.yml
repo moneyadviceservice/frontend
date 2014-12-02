@@ -450,6 +450,7 @@ en:
       heading: "%{first_name_with_possession} Page"
       intro: Your financial goals and saved information.
       change_settings: Change my settings
+      feedback: Improve this page
       goal:
         heading: Goal tracker
         introduction: Planning for something big or just saving for a rainy day? Most people find it easier to reach a goal by setting a deadline.
@@ -460,3 +461,21 @@ en:
         save_button_text: Set goal
     update:
       save_success_message: Your goal was set successfully
+
+  feedback:
+    submissions:
+      index:
+        account:
+          heading: Help us improve the Account page
+          intro_html: |
+            <p>Only use this form to suggest changes to your account page. We can’t reply to individual ideas.</p>
+
+            <p>Need help or advice? Use our <a href="https://www.moneyadviceservice.org.uk/en/static/contact-us">contact us page</a>.</p>
+      create:
+        account:
+          heading: Thanks for letting us know
+          outro_html: |
+            <p>Your feedback will be viewed by the team. If you need to talk to us please use one of the methods below:</p>
+          contact_html:
+            <p>Need help or advice? Use our <a href="https://www.moneyadviceservice.org.uk/en/static/contact-us">contact us page</a>.</p>
+          back: Go back to your account page

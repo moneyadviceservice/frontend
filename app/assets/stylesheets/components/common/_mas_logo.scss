@@ -7,10 +7,10 @@
 .mas-logo__link {
   display: block;
   overflow: hidden;
-  width: 180px;
+  width: 200px;
 
   @include respond-to($mq-m) {
-    width: 250px;
+    width: 285px;
   }
 
   &:focus {

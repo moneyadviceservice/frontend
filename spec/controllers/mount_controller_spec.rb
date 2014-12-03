@@ -12,11 +12,9 @@ RSpec.describe MountController, type: :controller do
   end
 
   describe '#alternate_url' do
-    context 'returns alternate_url' do
-      it 'returns an alternate_url if one is available' do
-        expect(subject).to receive(:url_for).with({ 'script_name' => '/cy/alternative_engine' })
-        subject.send(:alternate_url)
-      end
+    it 'returns an alternate_url if one is available' do
+      expect(subject).to receive(:url_for).with({ 'script_name' => '/cy/alternative_engine' })
+      subject.send(:alternate_url)
     end
   end
 

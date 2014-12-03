@@ -3,8 +3,6 @@ ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'cucumber/rails'
 require 'capybara'
-require 'capybara-screenshot'
-require 'capybara-screenshot/cucumber'
 require 'capybara/poltergeist'
 require 'site_prism'
 require 'timecop'

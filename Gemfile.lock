@@ -174,7 +174,7 @@ GEM
       validate_url
     debt_finance_calculator (1.0.0.6)
       bigdecimal (= 1.2.5)
-    debt_free_day_calculator (2.0.1.134)
+    debt_free_day_calculator (2.1.0.136)
       autoprefixer-rails
       debt_finance_calculator
       dough-ruby (~> 4.0)
@@ -603,7 +603,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   debt_advice_locator (~> 2.0)
-  debt_free_day_calculator (~> 2.0)
+  debt_free_day_calculator (~> 2.1.0)
   delayed_job_active_record
   devise
   devise-encryptable

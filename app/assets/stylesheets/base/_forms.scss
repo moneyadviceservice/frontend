@@ -29,8 +29,8 @@ input[type="checkbox"],
 input[type="radio"],
 textarea {
   &:focus {
-    @extend %form-input-focus;
-    @extend %form-input-focus-outline;
+    @include form-input-focus;
+    @include form-input-focus-outline;
   }
 }
 
@@ -45,7 +45,7 @@ input[type="submit"],
 button,
 select {
   &:focus {
-    @extend %form-input-focus-outline;
+    @include form-input-focus-outline;
   }
 }
 

@@ -47,7 +47,7 @@ gem 'debt_free_day_calculator', '~> 2.0'
 gem 'feedback', '~> 0.2.0'
 gem 'mortgage_calculator', '~> 1.1.0'
 gem 'pensions_calculator', '~> 0.2'
-gem 'savings_calculator', '~> 1.0.0'
+gem 'savings_calculator', '~> 1.1.0'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (cortado.local; swilkin; 39054) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 90943e5b-f676-472c-b478-b174ca71a6e4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 04 Dec 2014 10:54:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd>
+        rel="alternate"; hreflang="cy-GB"; title="Pam bod cynilo'n rheolaidd yn talu
+        ffordd", <https://www.moneyadviceservice.org.uk/en/articles/why-it-pays-to-save-regularly>
+        rel="alternate"; hreflang="en-GB"; title="Why it pays to save regularly"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 3309403af02b7118906be97030055d28
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 04-Dec-2015 10:54:22 GMT; secure
+      - _session_id=3309403af02b7118906be97030055d28; path=/; secure; HttpOnly
+      - _web_tracking=f9c35817aa39ad4349ff444aaba1b5dc; path=/; expires=Fri, 04-Dec-2015
+        10:54:22 GMT; secure
+      X-Request-Id:
+      - 90943e5b-f676-472c-b478-b174ca71a6e4
+      X-Runtime:
+      - '0.075704'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"pam-bod-cynilon-rheolaidd-yn-talu-ffordd","title":"Pam bod cynilo''n
+        rheolaidd yn talu ffordd","description":"Mae mynd i''r arfer o gynilo''n rheolaidd
+        yn golygu y bydd eich cynilion yn tyfu''n gyflym \u2013 mae''n gyflym ac yn
+        hawdd dechrau arni","body":"<p class=\"intro\"><img src=\"/images/why-it-pays-to-save-regularly.png\"/>Os
+        ydych yn cynilo\u2019n rheolaidd, byddwch yn sylweddoli\u2019n gyflym bod
+        eich cynilion yn ffynnu ac yn dal i gynyddu. Ewch i''r arfer a gwyliwch wrth
+        i''ch arian droi''n fwy o arian. </p><h2>Gwnewch gynilo\u2019n arferiad </h2><div
+        class=\"callout\"><h3>AWGRYM DA </h3><p>Mae mynd i''r arfer o gynilo''n rheolaidd
+        yn bwysicach na faint y byddwch yn ei gynilo - cewch eich synnu o weld pa
+        mor gyflym y gall ychydig bunnoedd y mis dyfu! </p></div><p>Y ffordd hawsaf
+        o gynilo''n llwyddiannus yw trefnu eich bod yn ychwanegu ychydig yn awtomatig
+        at eich cynilion bob mis. Drwy wneud hynny, ni fydd yn rhaid i chi gofio gwneud
+        y taliad ac ni chewch eich temtio i fethu mis. Cyn pen dim, byddwch wedi tyfu
+        swm sylweddol o gynilion; er enghraifft, un ffordd i arbed treth yn effeithlon
+        yw trwy ISA arian parod. </p><p>Un o\u2019r ffyrdd cyflymaf i wneud hyn yw
+        trefnu archeb sefydlog (taliad rheolaidd) o gyfrif cyfredol banc i mewn i''ch
+        dewis gyfrif cynilo. </p><p><a title=\"Canfyddwch fwy am archebion sefydlog\"
+        data-type=\"link\" hreflang=\"cy\" href=\"/cy/articles/debydau-uniongyrchol-ac-archebion-sefydlog\">Canfyddwch
+        fwy am archebion sefydlog</a></p><h2>Gwnewch ef ar ddiwrnod cyflog </h2><p>Yr
+        amser gorau i roi arian o''r neilltu yw yn syth ar \u00f4l i chi gael eich
+        talu, felly trefnwch eich archeb sefydlog i fynd allan ar, neu''n syth wedi,
+        diwrnod cyflog. </p><p>Neu gofynnwch i''ch gweithle a oes ganddynt gynllun
+        cynilo - ac ystyriwch ymuno ag ef os felly. Mae hyn yn ei gwneud hi''n haws
+        byth cynilo, oherwydd bydd yr arian yn dod yn syth allan o''ch cyflog, yn
+        union fel eich treth a''ch cyfraniadau Yswiriant Gwladol. </p><p><a title=\"Mwy
+        am Gynlluniau cynilo a buddsoddi yn y gweithle\" data-type=\"link\" hreflang=\"cy\"
+        href=\"/cy/articles/cynlluniau-buddsoddi-yn-y-gweithle\">Mwy am Gynlluniau
+        cynilo a buddsoddi yn y gweithle</a></p><h2>Ennill llog ar log </h2><p>Wrth
+        i\u2019ch cynilion gronni, byddant yn tyfu\u2019n gynt \u2013 hyd yn oed os
+        mai dim ond yr un swm rheolaidd yr ydych yn ei dalu i mewn bob tro. Y rheswm
+        am hyn yw bob tro y caiff y llog y byddwch yn ei ennill ar eich arian ei dalu
+        i mewn i''ch cyfrif, bydd yn dechrau ennill llog hefyd. </p><p>Gelwir y llog-ar-log
+        hwn yn adlog, a thros y tymor hwy, mae''n gwneud gwahaniaeth mawr i werth
+        eich cynilion. </p><h2>Faint allwch fforddio ei gynilo? </h2><p>Os oes gennych
+        arian yn weddill ar ddiwedd pob wythnos neu fis, da iawn chi - mae gennych
+        fan cychwyn yn barod. Byddwch yn gallu cynilo''r swm hwn - ac hyd yn oed yn
+        fwy o bosibl. </p><p>Ond hyd yn oed os nad oes unrhyw beth yn weddill fel
+        arfer, nid yw''n golygu na allwch gynilo - nid yw''n hawdd newid faint o arian
+        sy''n dod i mewn gennych ond gall y rhan fwyaf o bobl<strong> newid</strong>
+        faint sy''n mynd allan. Er mwyn cael awgrymiadau ar sut i dorri''n \u00f4l
+        a <strong>datgloi eich potensial</strong> cynilo ewch i''n hadran <a title=\"Awgrymiadau
+        ar gynilo arian\" data-type=\"link\" hreflang=\"cy\" href=\"/cy/articles/siopa-mwy-deallus-awgrymiadau-a-thriciau-i-arbed-arian\">Awgrymiadau
+        ar gynilo arian</a>. </p><p><a title=\"Cyfrifiannell torrin \u00f4l\" data-type=\"link\"
+        hreflang=\"cy\" href=\"/cy/tools/cyfrifiannell-torrin-ol\">Cyfrifiannell torri''n
+        \u00f4l</a></p><h2>Beth am fuddsoddi\u2019n rheolaidd? </h2><p>Mae llywodraeth
+        y DU yn diffinio cynilo fel rhoi arian o\u2019r neilltu heb risg, ac fel arfer
+        gyda\u2019r bosibilrwydd o ennill llog. Mae buddsoddi\u2019n golygu ymrwymo
+        arian i gerbyd buddsoddi yn y gobaith o ennill yn ariannol. Mae buddsoddi\u2019n
+        wahanol i gynilo gan ei fod yn golygu lefel uwch o risg ac nid oes gwarant
+        y byddwch yn cael eich arian yn \u00f4l. </p><p>Gallwch wneud taliadau rheolaidd
+        o gyn lleied \u00e2 \u00a325 y mis i gynnyrch buddsoddi, fel ISA Stociau a
+        Chyfranddaliadau neu Gronfeydd Buddsoddi Ymddiriedolaethau Uned. Mae cynnyrch
+        buddsoddi yn gynnyrch tymor hwy a dim ond os oes gennych ddigon o gynilion
+        arian parod i''ch cadw i fynd am gyfnod o 3-6 mis pe byddai angen y byddant
+        yn addas fel arfer. Yn gyffredinol, mae buddsoddiadau yn perfformio''n well
+        na chynilion arian parod dros y tymor hwy, ond gall eu gwerth godi a gostwng,
+        felly rhaid i chi fod yn barod i fentro rhywfaint. Gallent fod yn an addas
+        ar gyfer pobl nad ydynt angen mynediad hwylus i\u2019w harian a sydd yn barod
+        i dderbyn rhywfaint o risg. </p><p><a title=\"A ddylwn gynilo neu fuddsoddi?\"
+        data-type=\"link\" hreflang=\"cy\" href=\"/cy/articles/a-ddylwn-gynilo-neu-fuddsoddi\">A
+        ddylwn gynilo neu fuddsoddi?</a></p><h2>Y camau nesaf </h2><p><a title=\"Gair
+        o gyngor o ran dewis cyfrif cynilo\" data-type=\"link\" hreflang=\"cy\" href=\"/cy/articles/gair-o-gyngor-ar-gyfer-dewis-cyfrif-cynilo\">Gair
+        o gyngor o ran dewis cyfrif cynilo</a></p><p><a title=\"Gair o gyngor o ran
+        dewis buddsoddiadau\" data-type=\"link\" hreflang=\"cy\" href=\"/cy/articles/gair-o-gyngor-ar-gyfer-dewis-buddsoddiadau\">Gair
+        o gyngor o ran dewis buddsoddiadau</a></p><p><a title=\"Tablau cymharu\" href=\"/cy/categories/comparison-tables\">Dewis
+        cyfrif cynilo neu fuddsoddi</a></p>","categories":["how-to-save-money"]}'
+    http_version: 
+  recorded_at: Thu, 04 Dec 2014 10:54:22 GMT
+recorded_with: VCR 2.9.2

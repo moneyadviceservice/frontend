@@ -44,6 +44,9 @@ Rails.application.configure do
   config.raise_feedback_delivery_errors = false
   config.article_feedback_email   = 'content.feedback@moneyadviceservice.org.uk'
   config.technical_feedback_email = 'matt.lucht@moneyadviceservice.org.uk'
+
+  # Missing translations should raise exceptions
+  config.action_view.raise_on_missing_translations = true
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)

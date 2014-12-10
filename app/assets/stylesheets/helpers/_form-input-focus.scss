@@ -1,0 +1,14 @@
+@mixin form-input-focus {
+  background-color: white;
+  border-color: transparent;
+}
+
+@mixin form-input-focus-container {
+  background-color: white;
+  border: 2px solid $color-input-focus-border-color;
+  outline: none;
+}
+
+@mixin form-input-focus-outline {
+  outline: 2px solid $color-input-focus-border-color;
+}

@@ -24,9 +24,6 @@
       such as positional info %>
   <%= stylesheet_link_tag 'dough/assets/stylesheets/basic' %>
 
-  <%# Output head contents here, so that frontend styles take priority over the tools %>
-  <%= yield :head %>
-
   <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries,
       but will include .ie specific fixes %>
   <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
@@ -41,6 +38,8 @@
   <%= stylesheet_link_tag 'enhanced_responsive', media: 'only all' %>
   <script>var responsiveStyle = true;</script>
   <!--<![endif]-->
+
+  <%= yield :head %>
 
   <%# START MAS JAVASCRIPT SETUP
       Any JS that is required before DOM is created should be in this block

@@ -47,7 +47,7 @@ gem 'debt_advice_locator', '~> 2.0'
 gem 'debt_free_day_calculator', '~> 2.1.0'
 gem 'decision_trees', '~> 2.0.0'
 gem 'feedback', '~> 0.3.0'
-gem 'mortgage_calculator', '~> 1.3.4'
+gem 'mortgage_calculator', '~> 1.3.5'
 gem 'pensions_calculator', '~> 0.2'
 gem 'savings_calculator', '~> 1.1.0'
 

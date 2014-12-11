@@ -1,0 +1,19 @@
+.faq__q {
+  margin-top: 45px;
+  font-weight: 700;
+  &:before {
+    margin-left: -20px;
+    content: 'Q: ';
+  }
+}
+
+.faq__a {
+  &:before {
+    margin-left: -20px;
+    content: 'A: ';
+  }
+  
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
+}

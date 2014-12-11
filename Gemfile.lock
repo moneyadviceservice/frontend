@@ -50,7 +50,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    advice_plans (2.0.1.333)
+    advice_plans (3.0.0.336)
       devise (~> 3.2.4)
       dough-ruby (~> 5.0.0)
       friendly_id (~> 5.0.0)
@@ -621,7 +621,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-session_store
-  advice_plans (~> 2.0.0)
+  advice_plans (~> 3.0.0)
   aes
   autoprefixer-rails
   better_errors

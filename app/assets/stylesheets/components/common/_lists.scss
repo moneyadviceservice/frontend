@@ -1,3 +1,24 @@
+// The basic unordered list style with coloured bullet points
+//
+// Styleguide list
+
+.list {
+  list-style: none;
+
+  > li:before {
+    content: '\2022';
+    color: $color-list-bullet;
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    left: -20px;
+    top: -1px;
+  }
+}
+
+// An inline list with items separated by pipes
+
 .list--inline {
   list-style: none;
   padding-left: 0;
@@ -20,25 +41,6 @@
   > li:last-child:after {
     content: '';
     padding: 0;
-  }
-}
-
-// The basic unordered list style with coloured bullet points
-//
-// Styleguide list
-
-.list {
-  list-style: none;
-
-  > li:before {
-    content: '\2022';
-    color: $color-list-bullet;
-    display: block;
-    position: relative;
-    width: 0;
-    height: 0;
-    left: -20px;
-    top: -1px;
   }
 }
 

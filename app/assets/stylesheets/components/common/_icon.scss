@@ -30,7 +30,7 @@
 //
 // Styleguide icons
 
-//= depend_on_asset dough/assets/images/icon-sprite.png
+//= depend_on_asset icon-sprite.png
 
 @mixin search-icon-colour($search-icon-colour) {
   @if ($search-icon-colour == green) {

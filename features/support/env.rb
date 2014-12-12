@@ -51,7 +51,7 @@ Around do |scenario, block|
   if enabled_features.empty?
     block.call
   else
-    Feature.run_with_activated(enabled_features) do
+    Feature.run_with_activated(*enabled_features) do
       Rails.application.reload_routes!
       block.call
     end

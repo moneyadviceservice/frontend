@@ -72,7 +72,7 @@ RSpec.configure do |c|
     Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
 
     if example.metadata[:features]
-      Feature.run_with_activated(example.metadata[:features]) do
+      Feature.run_with_activated(*example.metadata[:features]) do
         Rails.application.reload_routes!
         Devise.regenerate_helpers!
         Devise.class_variable_set(:@@warden_configured, false)

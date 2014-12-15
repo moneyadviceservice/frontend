@@ -41,20 +41,24 @@
   <section class="l-debtmanagement">
     <h3>Options available to you</h3>
 
-    <% t('advisors').each do |item| %>
-      <section class="debt-advisor l-debtmanagement__advisor">
-        <%= image_tag(item[:logo], alt: item[:company_name]) %>
-        <p><%= item[:description] %></p>
-        <h4 class="debt-advisor__heading"><%= item[:chat_heading] %></h4>
-        <p><%= item[:chat_description] %></p>
-        <h5 class="debt-advisor__subheading"><%= item[:opening_hours_heading] %></h5>
-        <%= raw item[:chat_opening_hours_html] %>
-        <a href="" class="button button--primary"><%= item[:button] %></a>
-        <h4 class="debt-advisor__heading"><%= item[:phone_heading] %></h4>
-        <a href="tel:%<%= item[:phone_number] %>"><%= item[:phone_number_readable] %></a>
-        <h5 class="debt-advisor__subheading"><%= item[:opening_hours_heading] %></h5>
-        <%= raw item[:phone_opening_hours] %>
-        <a href="mailto:<%= item[:email] %>"><%= item[:email] %></a>
+    <% t('advisors').each do |country, advisors| %>
+      <section data-country="<%= country %>">
+        <% advisors.each do |advisor| %>
+          <section class="debt-advisor l-debtmanagement__advisor">
+            <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
+            <p><%= advisor[:description] %></p>
+            <h4 class="debt-advisor__heading"><%= advisor[:chat_heading] %></h4>
+            <p><%= advisor[:chat_description] %></p>
+            <h5 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h5>
+            <%= raw advisor[:chat_opening_hours_html] %>
+            <a href="" class="button button--primary"><%= advisor[:button] %></a>
+            <h4 class="debt-advisor__heading"><%= advisor[:phone_heading] %></h4>
+            <a href="tel:%<%= advisor[:phone_number] %>"><%= advisor[:phone_number_readable] %></a>
+            <h5 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h5>
+            <%= raw advisor[:phone_opening_hours] %>
+            <a href="mailto:<%= advisor[:email] %>"><%= advisor[:email] %></a>
+          </section>
+      <% end %>
       </section>
     <% end %>
   </section>

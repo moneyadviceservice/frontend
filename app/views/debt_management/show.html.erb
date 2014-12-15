@@ -3,46 +3,68 @@
 <div class="l-constrained">
   <section class="l-debtmanagement">
     <div class="l-debtmanagement__inner">
-      <h1>What to do now your debt management firm has closed down</h1>
-      <p>Now that the firm that runs your debt management plan has closed down you may be wondering what to do.</p>
-      <p>There’s no need to worry.  We can help to get you free debt advice now. So you can keep up the good work you’ve already done to take control of your debts and make sure your repayments stay on track.</p>
-      <p>A free debt advice provider will help you look at all your options and check that staying in a debt management plan is still the right thing for you. If it is, they’ll help you set one up for free, so you could be debt free sooner than you’d planned.</p>
-      <p>What’s more, if a debt management plan is no longer appropriate, they’ll advise you about other ways to manage your debt and help you to decide what’s best for you.</p>
+      <h1><%= t('page_heading') %></h1>
+      <% t('section_one.content').each do |item| %>
+        <p><%= item[:text] %></p>
+      <% end %>
     </div>
 
-    <a class="l-debtmanagement__button button button--primary" href="#go_to_faq">Get debt help now</a>
     <%= image_tag('http://placehold.it/300x300', alt: '', class: 'l-debtmanagement__image-small') %>
+    <a class="l-debtmanagement__button button button--primary" href="#go_to_faq"><%= t('primary_button') %></a>
   </section>
 
   <section class="l-debtmanagement">
     <%= image_tag('http://placehold.it/300x300', alt: '', class: 'l-debtmanagement__image-small l-debtmanagement__image-small--left') %>
-
     <div class="l-debtmanagement__inner">
-      <h2>Act quickly to manage your debts</h2>
-      <p>It’s really important to talk to an expert adviser about your situation as soon as you can. The people you owe money to will be sympathetic if you act quickly. If you don’t, things could get worse and you may end up deeper in debt.</p>
-      <p>All the free debt advice providers we recommend are confidential, impartial and give high-quality advice.</p>
-      <p>They will understand the situation you’re in and they give expert advice to hundreds of thousands of people every year.</p>
-      <p>For more information read our <a id="go_to_faq" href="/faq">Frequently Asked Questions</a>
+      <h2><%= t('section_two.heading') %></h2>
+      <% t('section_two.content').each do |item| %>
+        <p><%= raw item[:text] %></p>
+      <% end %>
     </div>
   </section>
 
 
   <section class="l-debtmanagement">
-    <h2>Get free advice</h2>
+    <h2><%= t('section_three.heading') %></h2>
+    <%= raw t('section_three.advice_benefits') %>
+  </section>
 
-    <p>You can get free advice online, email or face to face. Getting advice means you can</p>
-
-    <ul class="list-benefits">
-      <li>Continue to repay what you owe</li>
-      <li>Get on-going support if you need it</li>
-      <li>Ask your debt adviser to talk to the people you owe money to on your behalf.</li>
-    </ul>
-
+  <section class="l-debtmanagement">
+  <h2><%= t('section_four.heading') %></h2>
     <form>
-      <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /> England</label>
-      <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /> Wales</label>
-      <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /> Scotland</label>
-      <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /> Northern Ireland</label>
+      <% t('countries').each do |item| %>
+        <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /><%= item[:text] %></label>
+      <% end %>
     </form>
   </section>
+
+  <section class="l-debtmanagement">
+    <h3>Options available to you</h3>
+
+    <% t('advisors').each do |item| %>
+      <section class="debt-advisor l-debtmanagement__advisor">
+        <%= image_tag(item[:logo], alt: item[:company_name]) %>
+        <p><%= item[:description] %></p>
+        <h4 class="debt-advisor__heading"><%= item[:chat_heading] %></h4>
+        <p><%= item[:chat_description] %></p>
+        <h5 class="debt-advisor__subheading"><%= item[:opening_hours_heading] %></h5>
+        <%= raw item[:chat_opening_hours_html] %>
+        <a href="" class="button button--primary"><%= item[:button] %></a>
+        <h4 class="debt-advisor__heading"><%= item[:phone_heading] %></h4>
+        <a href="tel:%<%= item[:phone_number] %>"><%= item[:phone_number_readable] %></a>
+        <h5 class="debt-advisor__subheading"><%= item[:opening_hours_heading] %></h5>
+        <%= raw item[:phone_opening_hours] %>
+        <a href="mailto:<%= item[:email] %>"><%= item[:email] %></a>
+      </section>
+    <% end %>
+  </section>
+</div>
+
+<div class="l-tool-advert">
+  <div class="l-constrained">
+    <div class="l-tool-advert__inner">
+      <h2 class="l-tool-advert__heading"><%= t('tool_advert.heading') %></h2>
+      <p><%= t('tool_advert.description_html') %></p>
+    </div>
+  </div>
 </div>

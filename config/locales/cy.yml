@@ -459,3 +459,20 @@ cy:
         save_button_text: Gosodwch nod
     update:
       save_success_message:
+
+  feedback:
+    submissions:
+      index:
+        account:
+          heading: Rhowch gymorth i ni wella'r dudalen Cyfrifon
+          intro_html: |
+            <p>Defnyddiwch y ffurflen hon i awgrymu newidiadau i’ch tudalen cyfrifon yn unig. Ni allwn ymateb i syniadau unigol.</p>
+
+            <p>Angen cymorth neu gyngor? <a href='https://www.moneyadviceservice.org.uk/cy/static/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>.</p>
+      create:
+        account:
+          heading: Diolch am adael i ni wybod
+          outro_html: "Bydd y tîm yn edrych ar eich adborth. Os bydd angen i chi siarad efo ni defnyddiwch un o'r dulliau canlynol:"
+          contact_html: "Angen cymorth neu gyngor? <a href='https://www.moneyadviceservice.org.uk/cy/static/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>."
+          back: Ewch yn ol i'ch tudalen cyfrif
+

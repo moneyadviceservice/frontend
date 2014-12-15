@@ -85,7 +85,7 @@ GEM
       sass (~> 3.2)
     bowndler (1.0.2)
       thor
-    budget_planner (4.0.0.677)
+    budget_planner (4.0.0.678)
       bootstrap-sass
       coffee-rails
       i18n-js (= 3.0.0.mas)
@@ -97,7 +97,7 @@ GEM
       mas-mailer (~> 0.3)
       modernizr-rails (~> 2.6.2)
       rails (~> 4.0)
-      sass-rails
+      sass-rails (~> 4.0.3)
       spreadsheet
       syslog-logger
       uglifier (>= 1.0.3)
@@ -629,7 +629,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner (~> 4.0, >= 4.0.0.677)
+  budget_planner (~> 4.0, >= 4.0.0.678)
   byebug
   capybara
   capybara-screenshot

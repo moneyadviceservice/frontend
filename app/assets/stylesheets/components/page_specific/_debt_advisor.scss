@@ -1,0 +1,20 @@
+.debt-advisor {
+
+}
+
+.debt-advisor__heading {
+  @include body(24,24);
+}
+
+.debt-advisor__subheading {
+  @include body(18,24);
+  font-weight: 300;
+  color: $color-text-default;
+  margin: 0;
+}
+
+.debt-advisor__opening-hours {
+  > li {
+    margin-bottom: 0;
+  }
+}

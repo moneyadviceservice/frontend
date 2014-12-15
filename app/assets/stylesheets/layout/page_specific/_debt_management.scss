@@ -1,5 +1,5 @@
 .l-debtmanagement {
-  @include body(18, 30);
+  @include body(18, 24);
   overflow: hidden;
   clear: both;
   margin-top: 30px;
@@ -19,7 +19,11 @@
 }
 
 .l-debtmanagement__image-small {
-  display: block;
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
 }
 
 .l-debtmanagement__image-small--left {
@@ -28,13 +32,46 @@
 }
 
 .l-debtmanagement__button {
-  margin-top: 120px;
-  margin-bottom: $baseline-unit*2;
+  margin: $baseline-unit*2 0;
 }
 
 .l-debtmanagement__radio-item {
+  display: block;
   margin: $baseline-unit;
+
+  @include respond-to($mq-m) {
+    display: inline-block;
+  }
+
   input {
     margin-right: $baseline-unit;
   }
+}
+
+.l-debtmanagement__advisor {
+  margin-top: $baseline-unit*4;
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+  
+  &:first-of-type {
+    border-right: 1px solid #C4C8C8;
+  }
+}
+
+.l-tool-advert {
+  background-color: #EDF0F0;
+  border-bottom: 1px solid #C4C8C8;
+  padding-bottom: $baseline-unit*3;
+}
+
+.l-tool-advert__inner {
+  @include column(12);
+}
+
+.l-tool-advert__heading {
+  @include body(24, 24);
+  color: black;
 }

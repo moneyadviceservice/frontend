@@ -1,10 +1,10 @@
 class DebtManagementController < ApplicationController
+  layout '_unconstrained'
+
   def show
-    render layout: '_unconstrained'
   end
 
   def faq
-    render layout: '_unconstrained'
   end
 
   def hide_contact_panels?

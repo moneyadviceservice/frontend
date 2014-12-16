@@ -20,5 +20,14 @@ module Core
     def callback_requestable?
       Repository::CallbackRequestable::Static.new(self).call
     end
+
+    def popular_links
+      [
+        ArticleLink.new('Get some help with debt.', '#'),
+        ArticleLink.new('Get some help with credit cards.', '#'),
+        ArticleLink.new('Calculate how to get more money.', '#')
+      ]
+    end
+
   end
 end

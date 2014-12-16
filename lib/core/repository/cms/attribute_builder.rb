@@ -9,6 +9,21 @@ module Core::Repository
         attributes['description'] = attributes['meta_description']
         attributes['categories']  = attributes['category_names']
         attributes['alternates']  = []
+        attributes['related_content'] = { 'popular_links' => [
+                                            {
+                                              'title' => 'Get some help with debt.',
+                                              'path' => '#'
+                                            },
+                                            {
+                                              'title' => 'Get some help with credit cards.',
+                                              'path' => '#'
+                                            },
+                                            {
+                                              'title' => 'Calculate how to get more money.',
+                                              'path' => '#'
+                                            }
+                                          ]
+                                        }
 
         attributes
       end

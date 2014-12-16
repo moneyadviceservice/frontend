@@ -1,11 +1,11 @@
 module Core
   class ArticleLink
     attr_reader :title
-    attr_reader :url
+    attr_reader :path
 
-    def initialize(title, url)
+    def initialize(title, path)
       @title = title
-      @url = url
+      @path = path
     end
   end
 end

@@ -2,7 +2,7 @@ module Core
   class Article < Entity
     Alternate = Struct.new(:title, :url, :hreflang)
 
-    attr_accessor :type, :title, :description, :body, :categories
+    attr_accessor :type, :title, :description, :body, :categories, :related_content
     attr_reader :alternates
 
     validates_presence_of :title, :body
@@ -22,11 +22,10 @@ module Core
     end
 
     def popular_links
-      [
-        ArticleLink.new('Get some help with debt.', '#'),
-        ArticleLink.new('Get some help with credit cards.', '#'),
-        ArticleLink.new('Calculate how to get more money.', '#')
-      ]
+      return [] if related_content.blank?
+      related_content['popular_links'].map do |popular_link|
+        ArticleLink.new(popular_link['title'], popular_link['path'])
+      end
     end
 
   end

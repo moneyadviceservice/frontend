@@ -13,6 +13,6 @@ module Authentication
   end
 
   def store_location
-    session[:user_return_to] = request.fullpath
+    session[:user_return_to] = request.fullpath unless request.xhr?
   end
 end

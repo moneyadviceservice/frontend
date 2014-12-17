@@ -1,21 +1,22 @@
-<%= image_tag('campaign/interest-rate-rise-campaign-bg.jpg', alt: '', class: 'l-campaign-image') %>
-
 <div class="l-constrained">
   <section class="l-debtmanagement">
-    <div class="l-debtmanagement__inner">
+    <div class="l-debtmanagement__inner l-debtmanagement__inner--with-image">
       <h1><%= t('page_heading') %></h1>
       <% t('section_one.content').each do |item| %>
         <p><%= item[:text] %></p>
       <% end %>
     </div>
 
-    <%= image_tag('http://placehold.it/300x300', alt: '', class: 'l-debtmanagement__image-small') %>
-    <a class="l-debtmanagement__button button button--primary" href="#go_to_faq"><%= t('primary_button') %></a>
+    <%= image_tag('campaign/debt-management-side1.jpg', alt: '', class: 'l-debtmanagement__image-small') %>
+
+    <div class="l-debtmanagement__button">
+      <a class=" button button--primary button--fill-width" href="#get-debt-help-now"><%= t('primary_button') %></a>
+    </div>
   </section>
 
   <section class="l-debtmanagement">
-    <%= image_tag('http://placehold.it/300x300', alt: '', class: 'l-debtmanagement__image-small l-debtmanagement__image-small--left') %>
-    <div class="l-debtmanagement__inner">
+    <%= image_tag('campaign/debt-management-side2.jpg', alt: '', class: 'l-debtmanagement__image-small l-debtmanagement__image-small--left') %>
+    <div class="l-debtmanagement__inner l-debtmanagement__inner--with-image">
       <h2><%= t('section_two.heading') %></h2>
       <% t('section_two.content').each do |item| %>
         <p><%= raw item[:text] %></p>
@@ -25,46 +26,72 @@
 
 
   <section class="l-debtmanagement">
-    <h2><%= t('section_three.heading') %></h2>
-    <%= raw t('section_three.advice_benefits') %>
+    <div class="l-debtmanagement__inner">
+      <h2><%= t('section_three.heading') %></h2>
+      <%= raw t('section_three.advice_benefits') %>
+    </div>
   </section>
 
-  <section class="l-debtmanagement">
-  <h2><%= t('section_four.heading') %></h2>
-    <form>
-      <% t('countries').each do |item| %>
-        <label class="l-debtmanagement__radio-item"><input type="radio" name="country_group" /><%= item[:text] %></label>
+  <a name="get-debt-help-now"></a>
+
+  <section class="l-debtmanagement js-debtmanagement-filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target":".js-debtmanagement-options, .js-tool-advert"}'>
+    <div class="l-debtmanagement__inner">
+      <h2><%= t('section_four.heading') %></h2>
+      <form>
+        <% t('countries').each do |id, country| %>
+          <span class="l-debtmanagement__radio-item input-filter">
+            <input class="input-filter__input" type="radio" name="country_group" id="country-group-<%= id %>" data-country="<%= id %>" />
+            <label class="input-filter__label" for="country-group-<%= id %>">
+              <%= country %>
+            </label>
+            <span class="input-filter__border"></span>
+          </span>
+        <% end %>
+      </form>
+    </div>
+  </section>
+
+  <section class="l-debtmanagement js-debtmanagement-options">
+    <div class="l-debtmanagement__inner">
+      <h3>Options available to you</h3>
+
+      <% t('advisors').each do |country, advisors| %>
+        <section class="js-debtmanagement-country" data-dough-input-filter="country-group-<%= country %>">
+          <h4 class="l-debtmanagement__country-heading"><%= t('countries')[country] %></h4>
+          <% advisors.each do |advisor| %>
+            <section class="debt-advisor l-debtmanagement__advisor<%= cycle(' l-debtmanagement__advisor--even', '') %>">
+              <a href="<%= advisor[:url] %>">
+                <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
+              </a>
+              <p><%= advisor[:description] %></p>
+              <h5 class="debt-advisor__heading"><%= advisor[:online_heading] %></h5>
+              <p><%= advisor[:online_description] %></p>
+              <% if advisor[:online_opening_hours_heading] %>
+                <h6 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h6>
+              <% end %>
+              <%= raw advisor[:online_opening_hours_html] %>
+              <a href="<%= advisor[:url] %>" class="button button--primary debt-advisor__go-to-button">
+                <%= advisor[:button] %>
+              </a>
+              <hr />
+              <h5 class="debt-advisor__heading"><%= advisor[:phone_heading] %></h5>
+              <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><%= advisor[:phone_number_readable] %></a>
+              <% if advisor[:phone_opening_hours_heading] %>
+                <h6 class="debt-advisor__subheading"><%= advisor[:phone_opening_hours_heading] %></h6>
+              <% end %>
+              <%= raw advisor[:phone_opening_hours] %>
+              <% if advisor[:email] %>
+                <a class="debt-advisor__email" href="mailto:<%= advisor[:email] %>"><%= advisor[:email] %></a>
+              <% end %>
+            </section>
+        <% end %>
+        </section>
       <% end %>
-    </form>
-  </section>
-
-  <section class="l-debtmanagement">
-    <h3>Options available to you</h3>
-
-    <% t('advisors').each do |country, advisors| %>
-      <section data-country="<%= country %>">
-        <% advisors.each do |advisor| %>
-          <section class="debt-advisor l-debtmanagement__advisor">
-            <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
-            <p><%= advisor[:description] %></p>
-            <h4 class="debt-advisor__heading"><%= advisor[:chat_heading] %></h4>
-            <p><%= advisor[:chat_description] %></p>
-            <h5 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h5>
-            <%= raw advisor[:chat_opening_hours_html] %>
-            <a href="" class="button button--primary"><%= advisor[:button] %></a>
-            <h4 class="debt-advisor__heading"><%= advisor[:phone_heading] %></h4>
-            <a href="tel:%<%= advisor[:phone_number] %>"><%= advisor[:phone_number_readable] %></a>
-            <h5 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h5>
-            <%= raw advisor[:phone_opening_hours] %>
-            <a href="mailto:<%= advisor[:email] %>"><%= advisor[:email] %></a>
-          </section>
-      <% end %>
-      </section>
-    <% end %>
-  </section>
+    </section>
+  </div>
 </div>
 
-<div class="l-tool-advert">
+<div class="l-tool-advert js-tool-advert">
   <div class="l-constrained">
     <div class="l-tool-advert__inner">
       <h2 class="l-tool-advert__heading"><%= t('tool_advert.heading') %></h2>

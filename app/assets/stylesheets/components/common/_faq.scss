@@ -1,19 +1,64 @@
-.faq__q {
-  margin-top: 45px;
+.faq__toc {
+  list-style-type: none;
+  padding-left: 0;
   font-weight: 700;
-  &:before {
-    margin-left: -20px;
+
+  li:before {
     content: 'Q: ';
   }
 }
 
-.faq__a {
-  &:before {
-    margin-left: -20px;
-    content: 'A: ';
+.faq__toc__link {
+  display: block;
+  white-space: nowrap;
+
+  @include respond-to($mq-m) {
+    display: inline;
   }
-  
+}
+
+.faq__faqs {
+  @include body(18, 24);
+}
+
+.faq__faqs__q {
+  margin-top: 45px;
+  font-weight: 700;
+
+  h2 {
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+
+    &:before {
+      content: 'Q: ';
+    }
+  }
+}
+
+.faq__faqs__a {
+  margin-left: 0;
+
+  &:before {
+    content: 'A: ';
+    float: left;
+    position: relative;
+    line-height: 1.5;
+    padding-right: 0.3em;
+  }
+
   &:last-of-type {
     margin-bottom: 50px;
   }
+}
+
+.faq__back-to-top {
+  @include body(16, 16);
+
+  float: right;
+}
+
+.faq__back-to-top .icon {
+  vertical-align: middle;
+  margin-right: 0.2em;
 }

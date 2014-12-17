@@ -12,8 +12,10 @@
 
 .l-debtmanagement__inner {
   @include column(12);
+}
 
-  @include respond-to($mq-m) {
+.l-debtmanagement__inner--with-image {
+  @include respond-to($mq-l) {
     @include column(7);
   }
 }
@@ -21,44 +23,61 @@
 .l-debtmanagement__image-small {
   display: none;
 
-  @include respond-to($mq-m) {
-    display: block;
+  @include respond-to($mq-l) {
+    @include column(5);
   }
 }
 
 .l-debtmanagement__image-small--left {
   float: left;
-  margin-right: 30px;
 }
 
 .l-debtmanagement__button {
-  margin: $baseline-unit*2 0;
+  padding: $baseline-unit*2;
+
+  @include respond-to($mq-l) {
+    @include column(5);
+    background: $color-grey-pale;
+  }
 }
 
 .l-debtmanagement__radio-item {
   display: block;
+  position: relative;
   margin: $baseline-unit;
+  @include column(6);
 
   @include respond-to($mq-m) {
-    display: inline-block;
-  }
-
-  input {
-    margin-right: $baseline-unit;
+    @include column(3);
   }
 }
 
 .l-debtmanagement__advisor {
   margin-top: $baseline-unit*4;
+  margin-bottom: $baseline-unit*6;
   @include column(12);
 
   @include respond-to($mq-m) {
     @include column(6);
   }
-  
-  &:first-of-type {
-    border-right: 1px solid #C4C8C8;
+
+  hr {
+    margin-left: 0;
+    border-color: #C4C8C8;
+    max-width: 70%;
   }
+}
+
+.l-debtmanagement__advisor--even {
+  @include respond-to($mq-m) {
+    border-right: 1px solid #C4C8C8;
+    padding-right: 3.3333333%;
+    clear: both;
+  }
+}
+
+.l-debtmanagement__country-heading {
+  clear: both;
 }
 
 .l-tool-advert {
@@ -74,4 +93,21 @@
 .l-tool-advert__heading {
   @include body(24, 24);
   color: black;
+}
+
+.no-js .js-debtmanagement-filters,
+.js .js-debtmanagement-options,
+.js .js-debtmanagement-country,
+.js .js-tool-advert {
+  display: none;
+}
+
+.js .js-debtmanagement-options.is-visible,
+.js .js-debtmanagement-country.is-visible,
+.js .js-tool-advert.is-visible {
+  display: block;
+}
+
+.js .js-debtmanagement-country h4 {
+  display: none;
 }

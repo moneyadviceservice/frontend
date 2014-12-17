@@ -20,7 +20,7 @@ Core::Registry::Connection[:internal_email] = internal_email_connection
 Core::Registry::Connection[:cms]            = cms_connection
 
 Core::Registry::Repository[:action_plan] =
-  Core::Repository::ActionPlans::PublicWebsite.new
+  Core::Repository::CMS::CMS.new(fallback: Core::Repository::ActionPlans::PublicWebsite.new)
 
 Core::Registry::Repository[:article] =
   Core::Repository::CMS::CMS.new(fallback: Core::Repository::Articles::PublicWebsite.new)

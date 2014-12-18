@@ -37,6 +37,9 @@
   <section class="l-debtmanagement js-debtmanagement-filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target":".js-debtmanagement-options, .js-tool-advert"}'>
     <div class="l-debtmanagement__inner">
       <h2><%= t('section_four.heading') %></h2>
+      <% t('section_four.content').each do |item| %>
+        <p><%= raw item[:text] %></p>
+      <% end %>
       <form>
         <% t('countries').each do |id, country| %>
           <span class="l-debtmanagement__radio-item input-filter">

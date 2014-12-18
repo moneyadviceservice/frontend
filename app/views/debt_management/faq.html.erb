@@ -7,7 +7,7 @@
     <ul class="faq__toc">
       <% t('faq.faqs').each_with_index do |item, index| %>
         <li>
-          <%= item[:q] %> <a class="faq__toc__link" href="#q<%= index + 1 %>"><%= t('faqs.see_answer') %></a>
+          <%= item[:q] %> <a class="faq__toc__link" href="#q<%= index + 1 %>"><%= t('faq.see_answer') %></a>
         </li>
       <% end %>
     </ul>
@@ -24,5 +24,7 @@
         </dd>
       <% end %>
     </dl>
-    <%= link_to t('primary_button'), campaigns_debt_management_path, class: 'button button--primary' %>
+    <p>
+      <%= link_to t('primary_button'), campaigns_debt_management_path, class: 'button button--primary' %>
+    </p>
 </div>

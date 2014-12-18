@@ -16,7 +16,8 @@
 }
 
 .input-filter__label {
-  background: $color-grey-normal;
+  color: $color-button-text;
+  background: $color-button-primary;
   cursor: pointer;
   padding: $baseline-unit $baseline-unit*1.5 $baseline-unit*1.5 $baseline-unit*1.5;
   border-radius: 4px;
@@ -28,7 +29,7 @@
 }
 
 .input-filter__border {
-  background: $color-grey-seven;
+  background: $color-button-primary-border;
   display: block;
   bottom: 3px;
   border-radius: 4px;
@@ -41,12 +42,12 @@
 }
 
 .input-filter--is-checked .input-filter__label {
-  background: #0B7CB6;
-  color: #fff;
+  top: 3px;
+  background: $color-button-primary-active;
 }
 
 .input-filter--is-checked .input-filter__border {
+  border-color: $color-button-primary-border-active;
   bottom: 0;
   line-height: 1;
-  bottom: 0;
 }

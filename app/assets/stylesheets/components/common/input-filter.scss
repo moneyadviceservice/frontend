@@ -1,0 +1,52 @@
+.input-filter {
+}
+
+.input-filter__input {
+  @include opacity(0);
+  margin-right: $baseline-unit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input-filter__label {
+  background: $color-grey-normal;
+  cursor: pointer;
+  padding: $baseline-unit $baseline-unit*1.5 $baseline-unit*1.5 $baseline-unit*1.5;
+  border-radius: 4px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.input-filter__border {
+  background: $color-grey-seven;
+  display: block;
+  bottom: 3px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: 0;
+  z-index: 1;
+}
+
+.input-filter--is-checked .input-filter__label {
+  background: #0B7CB6;
+  color: #fff;
+}
+
+.input-filter--is-checked .input-filter__border {
+  bottom: 0;
+  line-height: 1;
+  bottom: 0;
+}

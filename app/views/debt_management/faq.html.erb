@@ -1,0 +1,28 @@
+<div class="l-constrained">
+  <div class="l-campaign__content">
+    <h1><%= t('faq.page_heading') %></h1>
+    <% t('faq.section_one').each do |item| %>
+      <p><%= item[:text] %></p>
+    <% end %>
+    <ul class="faq__toc">
+      <% t('faq.faqs').each_with_index do |item, index| %>
+        <li>
+          <%= item[:q] %> <a class="faq__toc__link" href="#q<%= index + 1 %>"><%= t('faqs.see_answer') %></a>
+        </li>
+      <% end %>
+    </ul>
+    <dl class="faq__faqs">
+      <% t('faq.faqs').each_with_index do |item, index| %>
+        <dt class="faq__faqs__q" id="q<%= index + 1 %>">
+          <h2><%= item[:q] %></h2>
+        </dt>
+        <dd class="faq__faqs__a">
+          <%= raw item[:a_html] %>
+          <a class="faq__back-to-top" href="#top">
+            <span class="icon icon--up-chevron-grey"></span><%= t('faq.back_to_top') %>
+          </a>
+        </dd>
+      <% end %>
+    </dl>
+    <%= link_to t('primary_button'), campaigns_debt_management_path, class: 'button button--primary' %>
+</div>

@@ -1,0 +1,42 @@
+.debt-advisor {
+
+}
+
+.debt-advisor__heading {
+  @include body(24,24);
+
+  color: $color-black;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.debt-advisor__subheading {
+  @include body(18,24);
+  font-weight: 300;
+  color: $color-text-default;
+  margin: 0;
+}
+
+.debt-advisor__opening-hours {
+  > li {
+    margin-bottom: 0;
+  }
+}
+
+.debt-advisor__go-to-button {
+  margin: 0.5em 0 1em 0;
+}
+
+[href^=tel].debt-advisor__phone {
+  @include body(24,24);
+  color: $color-green-secondary;
+  display: block;
+  font-weight: 700;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.debt-advisor__email {
+  margin-top: 1em;
+  display: block;
+}

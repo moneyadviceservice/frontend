@@ -104,6 +104,9 @@ Rails.application.routes.draw do
                                 id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
                               }
 
+    get '/campaigns/debt-management', to: 'debt_management#show'
+    get '/campaigns/debt-management/faq', to: 'debt_management#faq'
+
     resources :static_pages,
               path:        'static',
               only:        'show',

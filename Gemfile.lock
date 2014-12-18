@@ -111,10 +111,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-screenshot (0.3.21)
-      capybara (>= 1.0, < 3)
-      colorize
-      launchy
     car_cost_tool (1.0.4.103)
       dough-ruby (~> 5.0)
       font-awesome-rails (~> 4.1)
@@ -141,7 +137,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    colorize (0.7.3)
     columnize (0.3.6)
     compass (0.12.7)
       chunky_png (~> 1.2)
@@ -631,7 +626,6 @@ DEPENDENCIES
   budget_planner (~> 4.0.1)
   byebug
   capybara
-  capybara-screenshot
   car_cost_tool (~> 1.0.1)
   chai-jquery-rails
   chronic

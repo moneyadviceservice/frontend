@@ -79,7 +79,6 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-screenshot'
   gem 'chronic'
   gem 'codeclimate-test-reporter', require: false
   gem 'cucumber-rails', require: false

@@ -3,21 +3,23 @@ module Core
     subject { described_class.new(double, attributes) }
 
     let(:categories) { [] }
-    let(:related_content){  {
-          'popular_links' => [
-            {
-              'title' => 'Most popular link.',
-              'path' => '/most-popular-link'
-            },
-            {
-              'title' => 'Next popular link.',
-              'path' => '/next-popular-link'
-            }
-          ]
-        }
+    let(:related_content) do
+      {
+        'popular_links' => [
+          {
+            'title' => 'Most popular link.',
+            'path' => '/most-popular-link'
+          },
+          {
+            'title' => 'Next popular link.',
+            'path' => '/next-popular-link'
+          }
+        ]
       }
+    end
     let(:attributes) do
-      { title:       double,
+      {
+        title:       double,
         description: double,
         body:        double,
         alternates:  [{ title: double, url: double, hreflang: double }],
@@ -27,7 +29,7 @@ module Core
     end
 
     describe '#popular_links' do
-      context "provide data" do
+      context 'provide data' do
         it 'has 2 article links' do
           expect(subject.popular_links.length).to eq(2)
           expect(subject.popular_links.first).to be_an_instance_of(ArticleLink)
@@ -41,7 +43,7 @@ module Core
       end
 
       context 'no popular links' do
-        let(:related_content){ {} }
+        let(:related_content) { {} }
 
         it 'results in empty list' do
           expect(subject.popular_links).to be_empty
@@ -50,7 +52,7 @@ module Core
 
       context 'empty popular links' do
 
-        let(:related_content){ {'popular_links' => []} }
+        let(:related_content) { { 'popular_links' => [] } }
 
         it 'results in empty list' do
           expect(subject.popular_links).to be_empty
@@ -58,7 +60,7 @@ module Core
       end
 
       context 'no related content' do
-        let(:related_content){ nil }
+        let(:related_content) { nil }
 
         it 'results in empty list' do
           expect(subject.popular_links).to be_empty

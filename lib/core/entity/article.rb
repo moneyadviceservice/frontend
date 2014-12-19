@@ -27,6 +27,5 @@ module Core
         ArticleLink.new(popular_link['title'], popular_link['path'])
       end
     end
-
   end
 end

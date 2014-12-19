@@ -34,7 +34,7 @@
 
   <a name="get-debt-help-now"></a>
 
-  <section class="l-debtmanagement js-debtmanagement-filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target":".js-debtmanagement-options, .js-tool-advert"}'>
+  <section class="l-debtmanagement l-debtmanagement--filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target": ".l-debtmanagement--options, .js-tool-advert", "jumpTo": "options"}'>
     <div class="l-debtmanagement__inner">
       <h2><%= t('section_four.heading') %></h2>
       <% t('section_four.content').each do |item| %>
@@ -54,9 +54,9 @@
     </div>
   </section>
 
-  <section class="l-debtmanagement js-debtmanagement-options">
+  <section class="l-debtmanagement l-debtmanagement--options">
     <div class="l-debtmanagement__inner">
-      <h3>Options available to you</h3>
+      <h3 id="options" class="l-debtmanagement__inner__heading"><%= t('options_heading') %></h3>
 
       <% t('advisors').each do |country, advisors| %>
         <section class="js-debtmanagement-country" data-dough-input-filter="country-group-<%= country %>">
@@ -66,23 +66,30 @@
               <a href="<%= advisor[:url] %>">
                 <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
               </a>
-              <p><%= advisor[:description] %></p>
+              <% if advisor[:description] %>
+                <p><%= advisor[:description] %></p>
+              <% end %>
               <h5 class="debt-advisor__heading"><%= advisor[:online_heading] %></h5>
-              <p><%= advisor[:online_description] %></p>
+              <% if advisor[:online_description] %>
+                <p><%= advisor[:online_description] %></p>
+              <% end %>
               <% if advisor[:online_opening_hours_heading] %>
                 <h6 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h6>
               <% end %>
-              <%= raw advisor[:online_opening_hours_html] %>
+              <% if advisor[:online_opening_hours_html] %>
+                <%= raw advisor[:online_opening_hours_html] %>
+              <% end %>
               <a href="<%= advisor[:url] %>" class="button button--primary debt-advisor__go-to-button">
                 <%= advisor[:button] %>
               </a>
-              <hr />
               <h5 class="debt-advisor__heading"><%= advisor[:phone_heading] %></h5>
               <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><%= advisor[:phone_number_readable] %></a>
               <% if advisor[:phone_opening_hours_heading] %>
                 <h6 class="debt-advisor__subheading"><%= advisor[:phone_opening_hours_heading] %></h6>
               <% end %>
-              <%= raw advisor[:phone_opening_hours] %>
+              <% if advisor[:phone_opening_hours] %>
+                <%= raw advisor[:phone_opening_hours] %>
+              <% end %>
               <% if advisor[:email] %>
                 <a class="debt-advisor__email" href="mailto:<%= advisor[:email] %>"><%= advisor[:email] %></a>
               <% end %>
@@ -98,7 +105,7 @@
   <div class="l-constrained">
     <div class="l-tool-advert__inner">
       <h2 class="l-tool-advert__heading"><%= t('tool_advert.heading') %></h2>
-      <p><%= t('tool_advert.description_html') %></p>
+      <%= t('tool_advert.description_html') %>
     </div>
   </div>
 </div>

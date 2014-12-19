@@ -5,6 +5,10 @@
 
   li:before {
     content: 'Q: ';
+
+    [lang="cy"] & {
+      content: 'C: ';
+    }
   }
 }
 
@@ -22,7 +26,7 @@
 }
 
 .faq__faqs__q {
-  margin-top: 45px;
+  margin-top: $baseline_unit*10;
   font-weight: 700;
 
   h2 {

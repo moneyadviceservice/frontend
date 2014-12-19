@@ -14,7 +14,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     visibleClass: 'is-visible',
     checkedClass: 'input-filter--is-checked',
     trigger: 'input[type=radio], input[type=checkbox]',
-    triggerContainer: '.input-filter'
+    triggerContainer: '.input-filter',
+    jumpTo: null
   },
 
     /**
@@ -28,7 +29,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   DoughBaseComponent.extend(InputFilters);
 
   InputFilters.prototype.init = function() {
-    this.$el.on('change', this.config.trigger, $.proxy(this.refresh, this));
+    this.$el.on('change', this.config.trigger, $.proxy(this._onChange, this));
 
     this.refresh();
     return this;
@@ -56,6 +57,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
    panelsMethod = onePanelVisible ? 'addClass' : 'removeClass';
    $target[panelsMethod](config.visibleClass);
+  };
+
+  InputFilters.prototype._onChange = function () {
+    this.refresh();
+
+    if (this.config.jumpTo) {
+      window.location = '#' + this.config.jumpTo;
+    }
   };
 
 

@@ -34,7 +34,7 @@
 
   <a name="get-debt-help-now"></a>
 
-  <section class="l-debtmanagement l-debtmanagement--filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target": ".l-debtmanagement--options, .js-tool-advert", "jumpTo": "options"}'>
+  <section class="l-debtmanagement l-debtmanagement--filters" data-dough-component="InputFilters" data-dough-input-filters-config='{"target": ".l-debtmanagement--options, .js-tool-advert", "jumpTo": "get-debt-help-now"}'>
     <div class="l-debtmanagement__inner">
       <h2><%= t('section_four.heading') %></h2>
       <% t('section_four.content').each do |item| %>
@@ -56,7 +56,7 @@
 
   <section class="l-debtmanagement l-debtmanagement--options">
     <div class="l-debtmanagement__inner">
-      <h3 id="options" class="l-debtmanagement__inner__heading"><%= t('options_heading') %></h3>
+      <h3 class="l-debtmanagement__inner__heading"><%= t('options_heading') %></h3>
 
       <% t('advisors').each do |country, advisors| %>
         <section class="js-debtmanagement-country" data-dough-input-filter="country-group-<%= country %>">

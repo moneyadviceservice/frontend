@@ -7,6 +7,10 @@ class DebtManagementController < ApplicationController
   def faq
   end
 
+  def display_menu_button_in_header?
+    false
+  end
+
   def hide_contact_panels?
     true
   end

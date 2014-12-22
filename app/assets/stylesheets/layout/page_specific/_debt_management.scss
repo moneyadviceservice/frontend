@@ -31,13 +31,34 @@
 
 .l-debtmanagement__inner--with-image {
   @include respond-to($mq-l) {
-    @include column(7);
+    @include column(6);
+  }
+}
+
+.l-debtmanagement--image-first .l-debtmanagement__inner--with-image {
+  @include respond-to($mq-l) {
+    @include column(6);
+    @include push(1);
+  }
+}
+
+img.l-debtmanagement__image-small,
+.l-debtmanagement__image-small img {
+  display: none;
+
+  @include respond-to($mq-l) {
+    display: block;
   }
 }
 
 .l-debtmanagement__image-small {
-  display: none;
+  @include respond-to($mq-l) {
+    @include column(5);
+    @include push(1);
+  }
+}
 
+.l-debtmanagement--image-first .l-debtmanagement__image-small {
   @include respond-to($mq-l) {
     @include column(5);
   }
@@ -52,7 +73,6 @@
   margin-top: $baseline-unit*2;
 
   @include respond-to($mq-l) {
-    @include column(5);
     background: $color-grey-pale;
   }
 }

@@ -1,0 +1,17 @@
+<% if Feature.active?(:previous_and_next_links) && @article.popular_links.present? %>
+  <div>
+    <span class='previous'>
+      <strong>&lt; <%= t('.previous') %></strong>
+      <div>
+        <a href='#'>Goverment schemes for first-time buyers and existing homeowners</a>
+      </div>
+    </span>
+
+    <span class='next'>
+      <strong><%= t('.next') %> &gt;</strong>
+      <div>
+        <a href='#'>Store cards and loyalty cards aren't the same: How not to get caught out</a>
+      </div>
+    </span>
+  </div>
+<% end %>

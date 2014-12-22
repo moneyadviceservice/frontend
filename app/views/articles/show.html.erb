@@ -23,6 +23,8 @@
         <% end %>
       <% end %>
 
+      <%= render 'previous_and_next' %>
+
       <%= render 'shared/related_links', article: @article, categories: related_content %>
 
       <%= render 'shared/feedback', article: article %>

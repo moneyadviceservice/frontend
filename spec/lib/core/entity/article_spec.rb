@@ -28,6 +28,102 @@ module Core
       }
     end
 
+    describe '#previous_link' do
+      context 'exists' do
+        let(:related_content) do
+          {
+            'previous_link' => {
+              'title' => 'Previous link.',
+              'path' => '/previous-link'
+            }
+          }
+        end
+
+        it 'has a previous_link' do
+          expect(subject.previous_link.title).to eq('Previous link.')
+          expect(subject.previous_link.path).to eq('/previous-link')
+        end
+      end
+
+      context 'previous_link is empty' do
+        let(:related_content) do
+          { 'previous_link' => {} }
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+
+      context 'previous_link is missing' do
+        let(:related_content) do
+          {}
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+
+      context 'related_content is missing' do
+        let(:related_content) do
+          nil
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+    end
+
+    describe '#next_link' do
+      context 'exists' do
+        let(:related_content) do
+          {
+            'next_link' => {
+              'title' => 'Next link.',
+              'path' => '/next-link'
+            }
+          }
+        end
+
+        it 'has a next_link' do
+          expect(subject.next_link.title).to eq('Next link.')
+          expect(subject.next_link.path).to eq('/next-link')
+        end
+      end
+
+      context 'next_link is empty' do
+        let(:related_content) do
+          { 'next_link' => {} }
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+
+      context 'next_link is missing' do
+        let(:related_content) do
+          {}
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+
+      context 'related_content is missing' do
+        let(:related_content) do
+          nil
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+    end
+
     describe '#popular_links' do
       context 'provide data' do
         it 'has 2 article links' do

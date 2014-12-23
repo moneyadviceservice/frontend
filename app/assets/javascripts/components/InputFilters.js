@@ -59,11 +59,18 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
    $target[panelsMethod](config.visibleClass);
   };
 
-  InputFilters.prototype._onChange = function () {
+  InputFilters.prototype._onChange = function (e) {
+    var $input = $(e.currentTarget),
+        focus = $input.is(':focus');
+
     this.refresh();
 
     if (this.config.jumpTo) {
       window.location = '#' + this.config.jumpTo;
+
+      if (focus) {
+        $input.focus();
+      }
     }
   };
 

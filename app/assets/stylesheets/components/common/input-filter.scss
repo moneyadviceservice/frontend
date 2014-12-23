@@ -48,6 +48,10 @@
 
 .input-filter--is-checked .input-filter__border {
   border-color: $color-button-primary-border-active;
-  bottom: 0;
+  bottom: -3px;
   line-height: 1;
+}
+
+.input-filter__input:focus + .input-filter__label + .input-filter__border {
+  @include form-input-focus-outline;
 }

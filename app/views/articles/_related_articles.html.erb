@@ -5,7 +5,7 @@
     <ul class="unstyled-list">
       <% @article.popular_links.each do |popular_link| %>
         <li class="related-links__link">
-          <%= link_to popular_link.title, popular_link.path %>
+          <%= render popular_link %>
         </li>
       <% end %>
     </ul>

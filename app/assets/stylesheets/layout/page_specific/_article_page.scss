@@ -3,3 +3,48 @@
     margin-top: $baseline-unit*4;
   }
 }
+
+// Following isn't in Styleguide. Possibly to be extracted later.
+
+@mixin column-shift($cols) {
+  position: relative;
+  left: (100%/12)*$cols;
+}
+
+// The classes below are sensitive to DOM-order.
+// Only use them in this order: main, right, left.
+// This is so that the main column comes first in the DOM,
+// for accessibility reasons.
+
+.l-article-3col-main {
+  @include column(12);
+  @include column-shift(3);
+  min-height: $baseline-unit*100;
+
+  @include respond-to($mq-m) {
+    @include column(6);
+
+    margin-bottom: 42px;
+  }
+}
+
+%l-3col-side {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(3);
+
+    margin-top: 60px;
+    margin-bottom: 42px;
+  }
+}
+
+.l-article-3col-left {
+  @extend %l-3col-side;
+  @include column-shift(-9);
+}
+
+.l-article-3col-right {
+  @extend %l-3col-side;
+  @include column-shift(3);
+}

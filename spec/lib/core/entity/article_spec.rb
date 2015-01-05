@@ -3,13 +3,69 @@ module Core
     subject { described_class.new(double, attributes) }
 
     let(:categories) { [] }
+    let(:related_content) do
+      {
+        'popular_links' => [
+          {
+            'title' => 'Most popular link.',
+            'path' => '/most-popular-link'
+          },
+          {
+            'title' => 'Next popular link.',
+            'path' => '/next-popular-link'
+          }
+        ]
+      }
+    end
     let(:attributes) do
-      { title:       double,
+      {
+        title:       double,
         description: double,
         body:        double,
         alternates:  [{ title: double, url: double, hreflang: double }],
-        categories:  categories
+        categories:  categories,
+        related_content: related_content
       }
+    end
+
+    describe '#popular_links' do
+      context 'provide data' do
+        it 'has 2 article links' do
+          expect(subject.popular_links.length).to eq(2)
+          expect(subject.popular_links.first).to be_an_instance_of(ArticleLink)
+          expect(subject.popular_links.last).to be_an_instance_of(ArticleLink)
+        end
+
+        it 'has links correctly built' do
+          expect(subject.popular_links.first.title).to eq('Most popular link.')
+          expect(subject.popular_links.first.path).to eq('/most-popular-link')
+        end
+      end
+
+      context 'no popular links' do
+        let(:related_content) { {} }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
+
+      context 'empty popular links' do
+
+        let(:related_content) { { 'popular_links' => [] } }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
+
+      context 'no related content' do
+        let(:related_content) { nil }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
     end
 
     it { is_expected.to have_attributes(:type, :title, :description, :body, :alternates) }

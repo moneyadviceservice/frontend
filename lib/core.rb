@@ -13,6 +13,7 @@ module Core
 
   autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'
+  autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'
   autoload :Entity, 'core/entity'
   autoload :NewsArticle, 'core/entity/news_article'

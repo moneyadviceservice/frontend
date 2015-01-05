@@ -27,8 +27,6 @@ module Frontend
     config.chat_opening_hours = OpeningHours.new('8:00 AM', '10:00 PM')
     config.chat_opening_hours.update(:sat, '09:00 AM', '10:00 PM')
     config.chat_opening_hours.update(:sun, '10:00 AM', '10:00 PM')
-    config.chat_opening_hours.closed("Dec 25, 2014")
-    config.chat_opening_hours.closed("Jan 1, 2015")
 
     config.middleware.use 'CaptureRequestId' # capture X-Request-ID header
     config.middleware.use 'OverrideHead' # convert HEAD requests to GET and return an empty body

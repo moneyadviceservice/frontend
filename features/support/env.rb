@@ -22,7 +22,8 @@ article_repository                 = Core::Registry::Repository[:article]
 category_repository                = Core::Registry::Repository[:category]
 search_repository                  = Core::Registry::Repository[:search]
 static_page_repository             = Core::Registry::Repository[:static_page]
-news_article_repository            = Core::Registry::Repository[:news]
+news_repository                    = Core::Registry::Repository[:news]
+news_article_repository            = Core::Registry::Repository[:news_article]
 newsletter_subscription_repository = Core::Registry::Repository[:newsletter_subscription]
 
 Core::Registry::Repository[:action_plan]             = Core::Repository::VCR.new(action_plan_repository)
@@ -30,7 +31,8 @@ Core::Registry::Repository[:article]                 = Core::Repository::VCR.new
 Core::Registry::Repository[:category]                = Core::Repository::VCR.new(category_repository)
 Core::Registry::Repository[:search]                  = Core::Repository::VCR.new(search_repository)
 Core::Registry::Repository[:static_page]             = Core::Repository::VCR.new(static_page_repository)
-Core::Registry::Repository[:news]                    = Core::Repository::VCR.new(news_article_repository)
+Core::Registry::Repository[:news]                    = Core::Repository::VCR.new(news_repository)
+Core::Registry::Repository[:news_article]            = Core::Repository::VCR.new(news_article_repository)
 Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 
 Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new

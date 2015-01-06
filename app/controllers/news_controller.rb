@@ -16,7 +16,6 @@ class NewsController < ApplicationController
       not_found
     end
 
-    @latest_news = Core::NewsReader.new(page_number: 1, limit: 6).call
     @breadcrumbs = BreadcrumbTrail.build(@news_article, category_tree)
   end
 end

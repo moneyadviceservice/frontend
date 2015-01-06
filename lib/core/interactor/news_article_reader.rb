@@ -8,7 +8,7 @@ module Core
     end
 
     def call
-      data         = Registry::Repository[:news].find(id)
+      data         = Registry::Repository[:news_article].find(id)
       news_article = NewsArticle.new(id, data)
 
       if news_article.valid?

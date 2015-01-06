@@ -19,6 +19,7 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 action_plan_repository             = Core::Registry::Repository[:action_plan]
 article_repository                 = Core::Registry::Repository[:article]
+video_repository                   = Core::Registry::Repository[:video]
 category_repository                = Core::Registry::Repository[:category]
 search_repository                  = Core::Registry::Repository[:search]
 static_page_repository             = Core::Registry::Repository[:static_page]
@@ -28,6 +29,7 @@ newsletter_subscription_repository = Core::Registry::Repository[:newsletter_subs
 
 Core::Registry::Repository[:action_plan]             = Core::Repository::VCR.new(action_plan_repository)
 Core::Registry::Repository[:article]                 = Core::Repository::VCR.new(article_repository)
+Core::Registry::Repository[:video]                   = Core::Repository::VCR.new(video_repository)
 Core::Registry::Repository[:category]                = Core::Repository::VCR.new(category_repository)
 Core::Registry::Repository[:search]                  = Core::Repository::VCR.new(search_repository)
 Core::Registry::Repository[:static_page]             = Core::Repository::VCR.new(static_page_repository)

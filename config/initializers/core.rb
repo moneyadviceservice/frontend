@@ -25,6 +25,9 @@ Core::Registry::Repository[:action_plan] =
 Core::Registry::Repository[:article] =
   Core::Repository::CMS::CMS.new(fallback: Core::Repository::Articles::PublicWebsite.new)
 
+Core::Registry::Repository[:video] =
+  Core::Repository::CMS::CMS.new(fallback: Core::Repository::Videos::PublicWebsite.new)
+
 Core::Registry::Repository[:category] = Core::Repository::Cache.new(
   Core::Repository::Categories::PublicWebsite.new, Rails.cache)
 

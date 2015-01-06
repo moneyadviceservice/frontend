@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/jobs-and-tax.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 36245) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Jan 2015 10:03:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 02befc5c04778f705819d2786b73c7a3
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 13-Jan-2016 10:03:54 GMT; secure
+      - _session_id=02befc5c04778f705819d2786b73c7a3; path=/; secure; HttpOnly
+      - _web_tracking=f2c3bcfb507a5da1f8f097c0ba4fe47c; path=/; expires=Wed, 13-Jan-2016
+        10:03:54 GMT; secure
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      X-Runtime:
+      - '0.041290'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"jobs-and-tax","title":"Swyddi a threth","description":"Cymorth
+        gyda deall eich slip cyflog a beth i edrych amdano yn eich cytundeb cyflogaeth.","parent_id":"work-pensions-and-retirement","contents":[{"id":"gostyngiad-treth-ar-gyfraniadau-pensiwn","type":"guide","title":"Gostyngiad
+        treth ar gyfraniadau pensiwn","description":"Byddwch yn cael gostyngiad treth
+        ar unrhyw arian yr ydych yn ei roi yn eich pensiwn, hyd at drothwy blynyddol
+        o \u00a350,000 neu eich enillion am y flwyddyn"},{"id":"yswiriant-personol-pan-fyddwch-yn-hunangyflogedig","type":"guide","title":"Cymryd
+        yswiriant personol pan ewch yn hunangyflogedig","description":"Pan fyddwch
+        yn gweithio i chi\u2019ch hun, mae angen arnoch chi roi ystyriaeth i\u2019ch
+        anghenion yswiriant yn eich cartref ac yn eich gwaith"},{"id":"yswiriant-busnes-pan-fyddwch-yn-hunangyflogedig","type":"guide","title":"Yswiriant
+        busnes pan fyddwch yn hunangyflogedig","description":"Os byddwch yn gweithio
+        i chi\u2019ch hun, bydd angen i chi ystyried eich anghenion yswiriant adref
+        ac yn y gwaith"},{"id":"ydych-chin-ystyried-dechrau-busnes","type":"guide","title":"Ydych
+        chi\u2019n ystyried dechrau busnes?","description":"Wedi colli\u2019ch swydd
+        ac yn ystyried dechrau\u2019ch busnes eich hun neu hunangyflogaeth? Cael gwybod
+        mwy"},{"id":"newid-gyrfa-ar-ol-dileu-swydd","type":"guide","title":"Newid
+        gyrfa ar \u00f4l dileu swydd","description":"Yn wynebu dileu\u2019ch swydd
+        ac yn ystyried newid gyrfa? Mae digonedd o gymorth ariannol ar gael ar gyfer
+        ailhyfforddi"},{"id":"gwirio-eich-cytundeb-cyflogaeth","type":"guide","title":"Cytundebau
+        cyflogaeth: eich hawliau a thermau allweddol wedi eu hegluro","description":"Deall
+        eich cytundeb cyflogaeth, eich hawliau cyfreithiol a\u2019ch hawliau cytundebol,
+        yn ogystal \u00e2 beth i\u2019w wneud os yw eich cytundeb yn un annheg"},{"id":"prentisiaethau-i-bobl-ifanc","type":"guide","title":"Prentisiaethau
+        i bobl ifanc","description":"Canfyddwch beth allwch ei hawlio fel prentis"},{"id":"cymorth-a-chyngor-wrth-ymgeisio-am-swydd","type":"guide","title":"Cymorth
+        a chyngor wrth ymgeisio am swydd","description":"Mynnwch help a chyngor gyda\u2019ch
+        CV, chwilio am swydd a chyfweliadau pan fyddwch yn chwilio am waith"},{"id":"deall-eich-slip-cyflog","type":"guide","title":"Deall
+        eich slip cyflog","description":"Gwnewch yn siwr eich bod yn gwirio eich slip
+        cyflog. Dyma ddadansoddiad i roi cymorth i chi ddeall beth ydych chi wedi
+        ei dalu a pha ddidyniadau a wnaethpwyd"},{"id":"cyllidebu-ar-gyfer-eich-swydd-gyntaf","type":"guide","title":"Cyllidebu
+        ar gyfer eich swydd gyntaf","description":"Golwg ar rai o''r costau y gallech
+        chi ddod ar eu traws wrth i chi ddechrau eich oes weithio"},{"id":"sut-ydw-in-cael-fy-nhalu","type":"guide","title":"Sut
+        ydw i\u2019n cael fy nhalu?","description":"Dysgwch am y gwahanol ffyrdd mae
+        cyflogwyr yn talu gweithwyr yn y canllaw hwn."},{"id":"deall-eich-slip-cyflog-cyntaf","type":"guide","title":"Deall
+        eich slip cyflog cyntaf","description":"Rydym yn eich arwain drwy\u2019r gwahanol
+        dermau ar eich slip cyflog a chynnig awgrymiadau i roi cymorth i chi wirio
+        eich bod yn cael y taliad cywir"},{"id":"treth-incwm-ac-yswiriant-gwladol","type":"guide","title":"Treth
+        Incwm ac Yswiriant Gwladol","description":"Ddim yn si\u0175r am Dreth Incwm
+        ac Yswiriant Gwladol? Rydym yn esbonio sut mae\u2019r system dreth yn gweithio
+        a beth i\u2019w wneud os ydych chi\u2019n credu eich bod yn gordalu."},{"id":"gostyngiadau-treth-ac-yswiriant-cenedlaethol","type":"guide","title":"Gostyngiadau
+        Treth ac Yswiriant Cenedlaethol","description":"Os ydych yn cael eich cyflogi,
+        yn talu Treth Incwm ac Yswiriant Cenedlaethol ar eich cyflog trwy drefn a
+        elwir yn Talu Wrth Ennill (PAYE)"},{"id":"tal-a-threth-pan-fyddwch-chin-gweithio-mewn-mwy-nag-un-swydd","type":"guide","title":"T\u00e2l
+        a threth pan fyddwch chi\u2019n gweithio mewn mwy nag un swydd","description":"Mae
+        dwy swydd yn golygu dau gyflog, ond darllenwch ein canllaw gwirio i wneud
+        yn si\u0175r eich bod yn talu\u2019r dreth gywir ac yn gwybod eich hawliau"},{"id":"treth-ac-yswiriant-cenedlaethol-pan-ydych-yn-hunan-gyflogedig","type":"guide","title":"Treth
+        ac Yswiriant Cenedlaethol pan ydych yn hunan-gyflogedig","description":"Os
+        ydych yn hunan-gyflogedig, rydych yn gyfrifol am dalu eich treth a\u2019ch
+        Yswiriant Cenedlaethol eich hun"},{"id":"lwfansau-personol-cysylltiedig-ag-oedran","type":"guide","title":"Lwfansau
+        personol cysylltiedig ag oedran","description":"Os cawsoch eich geni cyn 6
+        Ebrill 1948, mae\u2019n debygol eich bod yn derbyn Lwfans Personol di-dreth
+        uwch na threthdalwyr iau"}]}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 10:03:54 GMT
+recorded_with: VCR 2.9.2

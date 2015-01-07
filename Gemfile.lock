@@ -11,6 +11,13 @@ GIT
   specs:
     tidy-html5 (0.1.1)
 
+GIT
+  remote: git@github.com:moneyadviceservice/rio.git
+  revision: eab48916be23d5530a87e728a3fcbd8aa07fb279
+  specs:
+    rio (0.0.3)
+      rails (~> 4.1)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
@@ -687,6 +694,7 @@ DEPENDENCIES
   psych (>= 2.0.5)
   rack-livereload
   rails (= 4.1.8)
+  rio!
   rouge
   rspec-rails (~> 3.0)
   rspec_junit_formatter

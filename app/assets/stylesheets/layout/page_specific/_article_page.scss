@@ -18,11 +18,11 @@
 
 .l-article-3col-main {
   @include column(12);
-  @include column-shift(3);
   min-height: $baseline-unit*100;
 
   @include respond-to($mq-m) {
     @include column(6);
+    @include column-shift(3);
 
     margin-bottom: 42px;
   }
@@ -41,10 +41,16 @@
 
 .l-article-3col-left {
   @extend %l-3col-side;
-  @include column-shift(-9);
+
+  @include respond-to($mq-m) {
+    @include column-shift(-9);
+  }
 }
 
 .l-article-3col-right {
   @extend %l-3col-side;
-  @include column-shift(3);
+
+  @include respond-to($mq-m) {
+    @include column-shift(3);
+  }
 }

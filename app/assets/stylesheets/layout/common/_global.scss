@@ -14,7 +14,19 @@
   @include row(9);
 }
 
-// Main content container with only one column
+// Main content container with only one full-width column
+//
+// Styleguide layout-main-single
+
+.l-main__cell-full {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(12);
+  }
+}
+
+// Main content container with only one narrow column
 //
 // Styleguide layout-main-single
 

@@ -28,3 +28,12 @@
   @extend .l-2col-even;
   float: right;
 }
+
+.l-2col-even--unresponsive {
+  @include column(6);
+}
+
+.l-2col-even-right--unresponsive {
+  @extend .l-2col-even--unresponsive;
+  float: right;
+}

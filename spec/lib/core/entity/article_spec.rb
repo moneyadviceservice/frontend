@@ -3,13 +3,165 @@ module Core
     subject { described_class.new(double, attributes) }
 
     let(:categories) { [] }
+    let(:related_content) do
+      {
+        'popular_links' => [
+          {
+            'title' => 'Most popular link.',
+            'path' => '/most-popular-link'
+          },
+          {
+            'title' => 'Next popular link.',
+            'path' => '/next-popular-link'
+          }
+        ]
+      }
+    end
     let(:attributes) do
-      { title:       double,
+      {
+        title:       double,
         description: double,
         body:        double,
         alternates:  [{ title: double, url: double, hreflang: double }],
-        categories:  categories
+        categories:  categories,
+        related_content: related_content
       }
+    end
+
+    describe '#previous_link' do
+      context 'exists' do
+        let(:related_content) do
+          {
+            'previous_link' => {
+              'title' => 'Previous link.',
+              'path' => '/previous-link'
+            }
+          }
+        end
+
+        it 'has a previous_link' do
+          expect(subject.previous_link.title).to eq('Previous link.')
+          expect(subject.previous_link.path).to eq('/previous-link')
+        end
+      end
+
+      context 'previous_link is empty' do
+        let(:related_content) do
+          { 'previous_link' => {} }
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+
+      context 'previous_link is missing' do
+        let(:related_content) do
+          {}
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+
+      context 'related_content is missing' do
+        let(:related_content) do
+          nil
+        end
+
+        it 'previous_link is nil' do
+          expect(subject.previous_link).to be_nil
+        end
+      end
+    end
+
+    describe '#next_link' do
+      context 'exists' do
+        let(:related_content) do
+          {
+            'next_link' => {
+              'title' => 'Next link.',
+              'path' => '/next-link'
+            }
+          }
+        end
+
+        it 'has a next_link' do
+          expect(subject.next_link.title).to eq('Next link.')
+          expect(subject.next_link.path).to eq('/next-link')
+        end
+      end
+
+      context 'next_link is empty' do
+        let(:related_content) do
+          { 'next_link' => {} }
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+
+      context 'next_link is missing' do
+        let(:related_content) do
+          {}
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+
+      context 'related_content is missing' do
+        let(:related_content) do
+          nil
+        end
+
+        it 'next_link is nil' do
+          expect(subject.next_link).to be_nil
+        end
+      end
+    end
+
+    describe '#popular_links' do
+      context 'provide data' do
+        it 'has 2 article links' do
+          expect(subject.popular_links.length).to eq(2)
+          expect(subject.popular_links.first).to be_an_instance_of(ArticleLink)
+          expect(subject.popular_links.last).to be_an_instance_of(ArticleLink)
+        end
+
+        it 'has links correctly built' do
+          expect(subject.popular_links.first.title).to eq('Most popular link.')
+          expect(subject.popular_links.first.path).to eq('/most-popular-link')
+        end
+      end
+
+      context 'no popular links' do
+        let(:related_content) { {} }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
+
+      context 'empty popular links' do
+
+        let(:related_content) { { 'popular_links' => [] } }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
+
+      context 'no related content' do
+        let(:related_content) { nil }
+
+        it 'results in empty list' do
+          expect(subject.popular_links).to be_empty
+        end
+      end
     end
 
     it { is_expected.to have_attributes(:type, :title, :description, :body, :alternates) }

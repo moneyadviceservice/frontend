@@ -6,7 +6,7 @@ module UI::Pages
   class Article < UI::Page
     set_url '{/locale}/articles{/id}'
 
-    element :content, '.l-main'
+    element :content, '.l-article-3col-main'
     element :related_categories, '.related-categories'
     element :breadcrumbs, '.l-context-bar'
 

@@ -11,9 +11,9 @@
   <% end %>
 <% end %>
 
-<div class="l-main editorial">
+<div class="l-article-3col-main editorial">
   <div class="l-main__row">
-    <main class="l-main__cell-single" role="main">
+    <main class="l-main__cell-full" role="main">
       <%= heading_tag article.title %>
       <%= article.content %>
 
@@ -23,6 +23,8 @@
         <% end %>
       <% end %>
 
+      <%= render 'previous_and_next' %>
+
       <%= render 'shared/related_links', article: @article, categories: related_content %>
 
       <%= render 'shared/feedback', article: article %>
@@ -30,7 +32,11 @@
   </div>
 </div>
 
-<div class="l-nav">
+<div class="l-nav l-article-3col-right">
+  <%= render 'articles/related_articles'  %>
+</div>
+
+<div class="l-article-3col-left">
   <%= render 'shared/nav',
              categories:        category_navigation,
              active_categories: active_categories

@@ -124,6 +124,66 @@ module Core
       end
     end
 
+    describe '#latest_blog_post_links' do
+      context 'provide data' do
+        let(:related_content) do
+          {
+            'latest_blog_post_links' => [
+              {
+                'title' => 'Latest post.',
+                'path' => '/latest-post',
+                'date' => '2015-01-02'
+              },
+              {
+                'title' => 'Oldest post.',
+                'path' => '/oldest-post',
+                'date' => '2015-01-01'
+              }
+            ]
+          }
+        end
+
+        it 'has 2 article' do
+          expect(subject.latest_blog_post_links.length).to eq(2)
+        end
+
+        it 'all links are ArticleLink' do
+          expect(subject.latest_blog_post_links.first).to be_an_instance_of(ArticleLink)
+          expect(subject.latest_blog_post_links.last).to be_an_instance_of(ArticleLink)
+        end
+
+        it 'has links correctly built' do
+          expect(subject.latest_blog_post_links.first.title).to eq('Latest post.')
+          expect(subject.latest_blog_post_links.first.path).to eq('/latest-post')
+          expect(subject.latest_blog_post_links.first.date).to eq(Date.parse('2015-01-02'))
+        end
+      end
+
+      context 'no latest_blog_post_links' do
+        let(:related_content) { {} }
+
+        it 'results in empty list' do
+          expect(subject.latest_blog_post_links).to be_empty
+        end
+      end
+
+      context 'empty latest_blog_post_links' do
+        let(:related_content) { { 'latest_blog_post_links' => [] } }
+
+        it 'results in empty list' do
+          expect(subject.latest_blog_post_links).to be_empty
+        end
+      end
+
+      context 'no related content' do
+        let(:related_content) { nil }
+
+        it 'results in empty list' do
+          expect(subject.latest_blog_post_links).to be_empty
+        end
+      end
+    end
+
     describe '#popular_links' do
       context 'provide data' do
         it 'has 2 article links' do

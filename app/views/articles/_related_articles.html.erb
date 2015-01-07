@@ -1,13 +1,7 @@
 <% if Feature.active?(:popular_links) && @article.popular_links.present? %>
-  <h2 class="related-links__heading"><%= t('.popular_links_title') %></h2>
+  <%= render 'articles/article_links', title: t('.popular_links_title'), article_links: @article.popular_links %>
+<% end %>
 
-  <div class="related-links">
-    <ul class="unstyled-list">
-      <% @article.popular_links.each do |popular_link| %>
-        <li class="related-links__link">
-          <%= render popular_link %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<% if Feature.active?(:latest_blog_post_links) && @article.latest_blog_post_links.present? %>
+  <%= render 'articles/article_links', title: t('.latest_blog_posts_title'), article_links: @article.latest_blog_post_links %>
 <% end %>

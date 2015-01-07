@@ -21,11 +21,12 @@ module Core
       Repository::CallbackRequestable::Static.new(self).call
     end
 
+    def latest_blog_post_links
+      build_article_links 'latest_blog_post_links'
+    end
+
     def popular_links
-      return [] if related_content.blank?
-      related_content['popular_links'].map do |popular_link|
-        build_article_link popular_link
-      end
+      build_article_links 'popular_links'
     end
 
     def previous_link
@@ -38,8 +39,15 @@ module Core
 
     private
 
-    def build_article_link(title_and_path)
-      ArticleLink.new(title_and_path['title'], title_and_path['path'])
+    def build_article_links(key)
+      return [] if related_content.blank?
+      related_content[key].map do |link_data|
+        build_article_link link_data
+      end
+    end
+
+    def build_article_link(data)
+      ArticleLink.new(data['title'], data['path'], data['date'])
     end
 
     def navigation_link(key)

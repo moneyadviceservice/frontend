@@ -40,22 +40,22 @@
       i18nTokens: requirejs_path('translations/' + I18n.locale.to_s),
 
       # External dependancies
-      jquery: requirejs_path('jquery/dist/jquery'),
-      waypoints: requirejs_path('jquery-waypoints/waypoints'),
-      ujs: requirejs_path('jquery-ujs/src/rails'),
       eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
-      rsvp: requirejs_path('rsvp/rsvp'),
+      jquery: requirejs_path('jquery/dist/jquery'),
       jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
+      rsvp: requirejs_path('rsvp/rsvp'),
       typeahead: requirejs_path('typeahead.js/dist/typeahead.jquery'),
+      ujs: requirejs_path('jquery-ujs/src/rails'),
+      waypoints: requirejs_path('jquery-waypoints/waypoints'),
 
       # Internal modules
-      globals: requirejs_path('modules/globals'),
       common: requirejs_path('modules/common'),
-      log: requirejs_path('modules/log'),
+      globals: requirejs_path('modules/globals'),
+      googleComplete: requirejs_path('modules/google_complete'),
       i18n: requirejs_path('modules/i18n'),
+      log: requirejs_path('modules/log'),
       pubsub: requirejs_path('modules/mas_pubsub'),
       scrollTracking: requirejs_path('modules/mas_scrollTracking'),
-      googleComplete: requirejs_path('modules/google_complete'),
       # old collapsable
       collapsable: requirejs_path('modules/mas_collapsable'),
 
@@ -64,30 +64,27 @@
       InputFilters: requirejs_path('components/InputFilters'),
 
       # Engines
-      pensionsCalculatorConfig: requirejs_path('pensions_calculator/require_config'),
-      debtFreeDayCalculatorConfig: requirejs_path('debt_free_day_calculator/require_config'),
-
       carCostToolConfig: requirejs_path('car_cost_tool/require_config'),
-
+      pensionsCalculatorConfig: requirejs_path('pensions_calculator/require_config'),
       debtAdviceLocatorConfig: requirejs_path('debt_advice_locator/require_config'),
-
+      debtFreeDayCalculatorConfig: requirejs_path('debt_free_day_calculator/require_config'),
     },
     shim: {
+      typeahead: ['jquery'],
       ujs: ['jquery'],
-      typeahead: ['jquery']
     }
   }
 
   # Dough
   requirejs_config[:paths].merge!({
-    featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
-    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries'),
-    componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
+    Collapsable: requirejs_path('dough/assets/js/components/Collapsable'),
     DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
+    FieldHelpText: requirejs_path('dough/assets/js/components/FieldHelpText'),
     RangeInput: requirejs_path('dough/assets/js/components/RangeInput'),
     TabSelector: requirejs_path('dough/assets/js/components/TabSelector'),
-    Collapsable: requirejs_path('dough/assets/js/components/Collapsable'),
-    FieldHelpText: requirejs_path('dough/assets/js/components/FieldHelpText')
+    componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
+    featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
+    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries'),
   })
 %>
 

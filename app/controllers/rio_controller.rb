@@ -2,6 +2,6 @@ class RioController < EmbeddedToolsController
   protected
 
   def category_id
-    'managing-money'
+    'work-pensions-and-retirement'
   end
 end

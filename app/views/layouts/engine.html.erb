@@ -12,7 +12,11 @@
 <% end %>
 
 <%= render layout: 'layouts/unconstrained' do %>
-  <%= yield :engine_content %>
+  <div class="l-constrained">
+    <div class="l-container-tool">
+      <%= yield :engine_content %>
+    </div>
+  </div>
 
   <% if display_category_directory? %>
     <div class="l-tool-nav">

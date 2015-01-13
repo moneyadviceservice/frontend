@@ -20,8 +20,10 @@ class VideosController < ApplicationController
   end
 
   def set_related_content
-    @related_content = CategoriesWithRestrictedContents.build(@video.categories,
-                                                              RelatedContent.build(@video))
+    @related_content = CategoriesWithRestrictedContents.build(
+      @video.categories,
+      RelatedContent.build(@video)
+    )
   end
 
   def set_categories

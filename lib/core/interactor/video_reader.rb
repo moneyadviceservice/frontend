@@ -1,15 +1,13 @@
 module Core
   class VideoReader
-    attr_accessor :id
-
-    private :id=
+    attr_reader :id
 
     def initialize(id)
-      self.id = id
+      @id = id
     end
 
     def call
-      data    = repository.find(id)
+      data  = repository.find(id)
       video = Video.new(id, data)
 
       if video.valid?

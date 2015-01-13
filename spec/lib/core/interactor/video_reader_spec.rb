@@ -36,19 +36,12 @@ module Core
           subject.call
         end
 
-        context 'when the Video entity is valid' do
-          before do
-            expect_any_instance_of(Video).to receive(:valid?) { true }
-          end
-
-          it 'returns an Video' do
-            expect(subject.call).to be_a(Video)
-          end
-        end
-
         context 'when the Video is invalid' do
+          let(:video) { double(Video) }
+
           before do
-            expect_any_instance_of(Video).to receive(:valid?) { false }
+            allow(Video).to receive(:new) { video }
+            allow(video).to receive(:valid?) { false }
           end
 
           it_has_behavior 'optional failure block'
@@ -58,19 +51,11 @@ module Core
           let(:category) { 'foo' }
           let(:categories) { [category] }
           let(:category_entity) { double }
+          let(:category_reader) { double }
 
           before do
-            allow_any_instance_of(CategoryReader).to receive(:call) { category_entity }
-          end
-
-          it 'instantiates a category reader with the category' do
-            expect(CategoryReader).to receive(:new).with(category).and_call_original
-            subject.call
-          end
-
-          it 'calls the category reader' do
-            expect_any_instance_of(CategoryReader).to receive(:call)
-            subject.call
+            allow(CategoryReader).to receive(:new) { category_reader }
+            allow(category_reader).to receive(:call) { category_entity }
           end
 
           it 'returns the category reader results' do

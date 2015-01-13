@@ -6,8 +6,10 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('/%{locale}/action_plans/%{id}.json' %
-                                    { locale: I18n.locale, id: id })
+        response = connection.get(
+          '/%{locale}/action_plans/%{id}.json' %
+          { locale: I18n.locale, id: id }
+        )
         attributes = response.body
         links      = response.headers['link'].try(:links) || []
 

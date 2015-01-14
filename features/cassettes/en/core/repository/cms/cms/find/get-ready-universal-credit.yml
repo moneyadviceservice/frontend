@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/videos/get-ready-universal-credit.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 22811) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 78996d32-9511-457e-a0e2-643c13d300b9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 08 Jan 2015 15:04:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/en/videos/get-ready-universal-credit>
+        rel="alternate"; hreflang="en-GB"; title="Get ready for Universal Credit",
+        <https://www.moneyadviceservice.org.uk/cy/videos/paratoi-ar-gyfer-credyd>
+        rel="alternate"; hreflang="cy-GB"; title="Paratowch at Gredyd Uniongyrchol"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 0575a4ec706b37e01019ff9df6293537
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 08-Jan-2016 15:04:29 GMT; secure
+      - _session_id=0575a4ec706b37e01019ff9df6293537; path=/; secure; HttpOnly
+      - _web_tracking=4321119909707debde1ed4c236fe95bb; path=/; expires=Fri, 08-Jan-2016
+        15:04:29 GMT; secure
+      X-Request-Id:
+      - 78996d32-9511-457e-a0e2-643c13d300b9
+      X-Runtime:
+      - '0.048036'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"get-ready-universal-credit","title":"Get ready for Universal Credit","body":"<p>In April 2013, the government started bringing in a new type of financial support called Universal Credit. </p><p>Its for people who are looking for work or on a low income and it will eventually replace many of the benefits and tax credits theyre getting at the moment. </p><p>There are things you can do beforehand to make sure youre ready for the changes when they happen.\u00a0 </p><p><iframe id=\"video-link\" width=\"620\" height=\"380\" src=\"https://www.youtube.com/embed/HvJTdPEKYzo?wmode=transparent&rel=0&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe></p><ul><li><a title=\"get ready\" href=\"https://www.moneyadviceservice.org.uk/files/get-ready-for-universal-credit-doc.doc\">Read a transcript of this video (Doc)</a>\u00a0</li></ul>","categories":["videos","universal-credit"],"videoUrl":"https://www.youtube.com/embed/HvJTdPEKYzo"}'
+    http_version:
+  recorded_at: Thu, 08 Jan 2015 15:04:29 GMT
+recorded_with: VCR 2.9.2

@@ -11,7 +11,7 @@ class CategoryContentDecorator < Draper::Decorator
     case object
     when Core::Article, Core::Category
       h.send("#{object.class.to_s.demodulize.underscore}_path", object.id, locale: I18n.locale)
-    when Core::Other
+    when Core::Other, Core::Video
       "/#{I18n.locale}/#{object.type.pluralize}/#{object.id}"
     end
   end

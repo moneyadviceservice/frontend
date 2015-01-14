@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/automatic-enrolment.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 36245) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Jan 2015 10:03:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 95b16a4dd98d9cffcca043c59e432438
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 13-Jan-2016 10:03:55 GMT; secure
+      - _session_id=95b16a4dd98d9cffcca043c59e432438; path=/; secure; HttpOnly
+      - _web_tracking=03f5e47f735cc5dd1b688690daa3d929; path=/; expires=Wed, 13-Jan-2016
+        10:03:55 GMT; secure
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      X-Runtime:
+      - '0.040168'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"automatic-enrolment","title":"Cofrestru awtomatig","description":"Dysgwch
+        am gofrestru awtomatig a sut mae\u2019n effeithio arnoch, a defnyddiwch ein
+        hofferyn a chyfrifiannell cyngor pensiwn gweithle.","parent_id":"work-pensions-and-retirement","contents":[{"id":"cofrestriad-awtomatig-ar-bensiwn-man-gwaith","type":"guide","title":"Cofrestru
+        awtomatig \u2013 cyflwyniad","description":"Mae ymuno \u00e2 chynllun pensiwn
+        eich man gwaith yn ffordd ddidrafferth o ddechrau cynilo ar gyfer yn hwyrach
+        mewn bywyd"},{"id":"cyfrifiannell-cyfraniadau-pensiwn-gweithle","type":"tool","title":"Cyfrifiannell
+        cyfraniadau pensiwn gweithle","description":"Defnyddiwch y gyfrifiannell hon
+        i weld faint y byddwch chi a\u2019ch cyflogwr yn ei roi yn eich cronfa bensiwn"},{"id":"newidiadau-pensiwn-yn-y-gweithle-y-wybodaeth-sylfaenol","type":"video","title":"Newidiadau
+        i bensiynau gweithle - yr hanfodion","description":"Mae\u2019r fideo hwn yn
+        egluro sut mae\u2019r broses yn gweithio a\u2019r pwysigrwydd o gynilo ar
+        gyfer ymddeoliad"},{"id":"offeryn-cynghori-pensiwn-gweithle","type":"tool","title":"Offeryn
+        cynghori pensiwn gweithle","description":"Cwestiynau cyflym i\u2019ch helpu
+        i benderfynu a yw bod mewn pensiwn gweithle yn addas i chi"},{"id":"cofrestru-awtomatig-os-ydych-chi-dros-oedran-pensiwn-y-wladwriaeth","type":"guide","title":"Cofrestru
+        awtomatig os ydych chi dros oedran Pensiwn y Wladwriaeth","description":"Beth
+        mae cofrestru awtomatig yn ei olygu os ydych chi dros oedran Pensiwn y Wladwriaeth"},{"id":"gall-cofrestru-awtomatig-ennill-hyd-at-agbp9440-i-chi","type":"guide","title":"Gall
+        cofrestru awtomatig ennill hyd at \u00a310,000 i chi","description":"Esboniad
+        o''ch hawl i ymuno \u00e2 phensiwn gweithle"},{"id":"cofrestru-awtomatig-os-ydych-yn-21-oed-neun-iau","type":"guide","title":"Cofrestru
+        awtomatig os ydych yn 21 oed neu\u2019n iau","description":"Dysgwch sut i
+        ddechrau cronfa bensiwn os ydych yn 21 oed neu\u2019n iau"},{"id":"cofrestru-awtomatig-os-ydych-chin-agos-at-ymddeol","type":"guide","title":"Cofrestru
+        awtomatig os ydych chi''n agos at ymddeol","description":"Tra bo cofrestru
+        awtomatig yn ffordd ardderchog o ddechrau cynilo mewn pensiwn, wrth i chi
+        nes\u00e1u at ymddeol, mae''r effaith y mae hyn yn debygol o''i gael ar eich
+        incwm yn ystod eich ymddeoliad yn lleihau. Dod o hyd i ragor o wybodaeth"},{"id":"cofrestru-awtomatig-os-oes-gennych-ddyledion","type":"guide","title":"Cofrestru
+        awtomatig os oes gennych ddyledion","description":"Os oes gennych ddyledion
+        nad ydych yn gallu eu rheoli\u2019n ddidrafferth, dyma beth i\u2019w wneud"},{"id":"gwneud-y-mwyaf-o-gofrestru-awtomatig","type":"action_plan","title":"Cynllun
+        gweithredu - Gwneud y mwyaf o gofrestru awtomatig","description":"Canfyddwch
+        faint fydd eich cyfraniadau pensiwn yn ei gostio ichi a pha fath o incwm ymddeoliad
+        y byddant yn ei gynhyrchu"},{"id":"cofrestru-awtomatig-beth-iw-ddisgwyl-gan-eich-cyflogwr","type":"guide","title":"Cofrestru
+        awtomatig - beth i\u2019w ddisgwyl gan eich cyflogwr","description":"Canfyddwch
+        beth i\u2019w ddisgwyl pan fydd cofrestru awtomatig yn dod i rym yn eich gweithle"},{"id":"cyfrifiannell-pensiwn","type":"tool","title":"Cyfrifiannell
+        pensiwn","description":"Defnyddiwch y gyfrifiannell hon i''ch helpu i gyfrifo
+        faint o incwm ymddeol y gallech ei gael trwy gynilo mewn pensiwn personol,
+        rhanddeiliaid neu gr\u0175p"}]}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 10:03:55 GMT
+recorded_with: VCR 2.9.2

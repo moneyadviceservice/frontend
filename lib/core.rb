@@ -23,6 +23,7 @@ module Core
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
   autoload :Customer, 'core/entity/customer'
+  autoload :Video, 'core/entity/video'
 
   module Feedback
     autoload :Base, 'core/entity/feedback/base'
@@ -41,6 +42,7 @@ module Core
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
+  autoload :VideoReader, 'core/interactor/video_reader'
 
   module Interactors
     module Customer
@@ -64,6 +66,10 @@ module Core
 
     module ActionPlans
       autoload :PublicWebsite, 'core/repository/action_plans/public_website'
+    end
+
+    module Videos
+      autoload :PublicWebsite, 'core/repository/videos/public_website'
     end
 
     module Articles

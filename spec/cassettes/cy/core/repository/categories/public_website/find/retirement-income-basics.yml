@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/retirement-income-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 36245) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Jan 2015 10:03:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8b7d49343b87afd166bfc9525b3fdef0
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 13-Jan-2016 10:03:55 GMT; secure
+      - _session_id=8b7d49343b87afd166bfc9525b3fdef0; path=/; secure; HttpOnly
+      - _web_tracking=f2b642b5d17260ad2814b9dd28b6e946; path=/; expires=Wed, 13-Jan-2016
+        10:03:55 GMT; secure
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      X-Runtime:
+      - '0.028317'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"retirement-income-basics","title":"Ffeithiau sylfaenol ynghylch
+        incwm ymddeol","description":"Gosod nod incwm ymddeol a rheoli\u2019ch arian
+        ar \u00f4l ichi orffen gweithio.","parent_id":"work-pensions-and-retirement","contents":[{"id":"rheolau-newydd-ynghylch-pensiynau-o-27-mawrth-2014-ymlaen","type":"guide","title":"Rheolau
+        newydd ynghylch pensiynau o 27 Mawrth 2014 ymlaen","description":"Darllenwch
+        ein cyngor ar newidiadau arfaethedig y llywodraeth i bensiynau o Ebrill 2015
+        a rheolau wedi\u2019u llacio dros dro ar gyfer cyfandaliadau arian parod a
+        thynnu incwm"},{"id":"diogelu-eich-incwm-ar-ol-ymddeol","type":"guide","title":"Diogelu
+        eich incwm ar \u00f4l ymddeol","description":"Gyda chyfnod gwarant neu fudd
+        marwolaeth cyfandaliad, efallai y byddai eich partner neu\u2019ch dibynnydd
+        yn derbyn rhywfaint o\u2019ch pensiwn pe baech yn marw"},{"id":"incwm-pensiwn-uwch-i-bobl-syn-sal","type":"guide","title":"Incwm
+        pensiwn uwch i bobl sy\u2019n s\u00e2l","description":"Gall blwydd-daliadau
+        uwch gynnig incwm pensiwn uwch os byddwch yn s\u00e2l, neu os oes gennych
+        ffordd o fyw nad yw\u2019n iach"},{"id":"rheolwch-eich-arian-ar-ol-ymddeol","type":"guide","title":"Rheolwch
+        eich arian ar \u00f4l ymddeol","description":"Gall ymddeol achosi newidiadau
+        ariannol sylweddol. Dyma amrywiaeth o awgrymiadau a syniadau i\u2019ch helpu
+        i reoli\u2019r newid"},{"id":"treth-a-budd-daliadau-ar-ol-i-chi-ymddeol","type":"guide","title":"Treth
+        a budd-daliadau ar \u00f4l i chi ymddeol","description":"Rhestr o ffactorau
+        a all effeithio ar eich bil treth ar \u00f4l ymddeol, ac o daliadau megis
+        Pensiwn y Wladwriaeth y gallai fod gennych hawl i\u2019w cael"},{"id":"eich-dewisiadau-cyfandaliad-pensiwn","type":"guide","title":"Eich
+        dewisiadau cyfandaliad pensiwn","description":"Gallwch godi rhywfaint o\u2019ch
+        pensiwn fel cyfandaliad pan fyddwch yn 55 oed. Ond mae\u2019n rhaid ystyried
+        treth a ffactorau eraill"},{"id":"a-ddylech-gymryd-cyfandaliad-arian-parod-och-pensiwn","type":"guide","title":"A
+        ddylech gymryd cyfandaliad arian parod di-dreth o\u2019ch pensiwn?","description":"Mae\u2019r
+        rhan fwyaf o bobl yn cymryd cyfandaliad arian parod o\u2019u pensiwn, ond
+        mae angen i chi ystyried ei effaith ar eich incwm ar \u00f4l ymddeol"},{"id":"rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau","type":"guide","title":"Rhestr
+        wirio \u2013 pethau i\u2019w gwneud wrth i\u2019ch ymddeoliad agos\u00e1u","description":"Y
+        camau allweddol yn y misoedd a\u2019r blynyddoedd cyn i chi ymddeol \u2013
+        o siopa am flwydd-dal i gyllidebu ar gyfer eich ymddeoliad"},{"id":"cyfrifwch-eich-incwm-pensiwn-tebygol","type":"guide","title":"Cyfrifwch
+        eich incwm ymddeol tebygol","description":"Os ydych yn agos\u00e1u at eich
+        ymddeoliad, mae angen i chi baratoi i wneud penderfyniadau pwysig am droi
+        eich cynilion pensiwn yn incwm"},{"id":"gosodwch-darged-clir-ar-gyfer-incwm-ymddeoliad","type":"guide","title":"Gosodwch
+        darged clir ar gyfer incwm ymddeoliad","description":"Y cam cyntaf wrth adolygu
+        eich cynilion pensiwn yw cyfrifo\u2019r incwm ymddeoliad yr ydych yn anelu
+        ato"},{"id":"penderfynwch-ar-bryd-i-gymryd-eich-pensiwn","type":"action_plan","title":"Cynllun
+        gweithredu - Penderfynwch ar bryd i gymryd eich pensiwn","description":"Penderfynwch
+        ar bryd i ddechrau cymryd eich pensiwn gyda\u2019r dyddiad sy\u2019n iawn
+        i chi"},{"id":"ymddeoliad-a-pam-ddylwn-i-gael-cyngor","type":"guide","title":"Ymddeoliad
+        \u2013 pam ddylwn i gael cyngor?","description":"Cael gwybod sut i droi eich
+        cronfa bensiwn yn incwm ymddeol a ble y gallwch fynd i gael help a chyngor"}]}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 10:03:55 GMT
+recorded_with: VCR 2.9.2

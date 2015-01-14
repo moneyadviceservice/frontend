@@ -1,0 +1,7 @@
+module Core
+  class Video < Entity
+    attr_accessor :type, :title, :description, :body, :categories
+
+    validates_presence_of :title, :body
+  end
+end

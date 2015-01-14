@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/types-of-pensions.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 36245) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Jan 2015 10:03:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - f72fce87c1e8a80aef157a3dcfee26b8
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 13-Jan-2016 10:03:55 GMT; secure
+      - _session_id=f72fce87c1e8a80aef157a3dcfee26b8; path=/; secure; HttpOnly
+      - _web_tracking=64e310073d676ef093077df48a18b534; path=/; expires=Wed, 13-Jan-2016
+        10:03:55 GMT; secure
+      X-Request-Id:
+      - 7cdd542e-ddf8-4d5c-8541-29db450bf3c5
+      X-Runtime:
+      - '0.027026'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"types-of-pensions","title":"Mathau o bensiynau","description":"O
+        gynlluniau cyfraniad diffiniedig a buddion, i bensiynau personol a phensiynau
+        ar gyfer pobl hunangyflogedig.","parent_id":"work-pensions-and-retirement","contents":[{"id":"blwydd-daliadau-a-mathau-eraill-o-incwm-pensiwn","type":"guide","title":"Blwydd-daliadau
+        a mathau eraill o incwm ymddeol","description":"Golwg gyffredinol ar nodweddion,
+        manteision a risgiau gwahanol fathau o flwydd-daliadau a chategor\u00efau
+        eraill o incwm pensiwn"},{"id":"pensiynau-ir-hunangyflogedig","type":"guide","title":"Pensiynau
+        i\u2019r hunangyflogedig","description":"Mae cynilo ar gyfer pensiwn yn peri
+        nifer o heriau os byddwch yn hunangyflogedig, ond mae\u2019n haws cychwyn
+        arni nag y byddech yn meddwl"},{"id":"dewisiadau-buddsoddi-pensiwn-trosolwg","type":"guide","title":"Dewisiadau
+        buddsoddi pensiwn \u2013 trosolwg","description":"Mae\u2019n bwysig ystyried
+        sut y mae eich pensiwn yn cael ei fuddsoddi yn ogystal \u00e2 faint rydych
+        yn ei gynilo iddo"},{"id":"cynlluniau-pensiwn-amlgyflogwr","type":"guide","title":"Cynlluniau
+        pensiwn amlgyflogwr","description":"Mae cynlluniau amlgyflogwr mawr yn anelu
+        at ddarparu pensiynau cost-isel, hyblyg - canfyddwch ragor"},{"id":"pensiynaur-ymddiriedolaeth-cynilion-cyflogaeth-genedlaethol-nest","type":"guide","title":"Pensiynau
+        NEST","description":"Darganfyddwch ragor am NEST, pensiwn isel ei gost y gallech
+        ymuno ag o drwy eich gweithle neu os ydych yn hunangyflogedig"},{"id":"pensiynau-personol","type":"guide","title":"Pensiynau
+        personol","description":"Mae sefydlu pensiwn personol yn syniad da os nad
+        oes gennych bensiwn man gwaith"},{"id":"pensiynau-buddsoddi-personol-sippau","type":"guide","title":"Pensiynau
+        buddsoddi personol (SIPPau)","description":"Darganfyddwch am SIPPau (pensiynau
+        buddsoddi personol) ac a fyddai\u2019r math hwn o bensiwn yn gweithio i chi"},{"id":"pensiynau-cyfranddeiliaid","type":"guide","title":"Pensiynau
+        cyfranddeiliaid","description":"Mae\u2019r costau sy\u2019n gysylltiedig \u00e2
+        phensiynau cyfranddeiliaid yn isel a gallant gael eu cynnig gan gyflogwr neu
+        gallwch gychwyn un eich hun"},{"id":"cynlluniau-buddion-wediu-diffinio","type":"guide","title":"Cynlluniau
+        buddion wedi\u2019u diffinio","description":"Mewn cynllun pensiwn buddion
+        wedi\u2019u diffinio neu ar sail cyflog, mae eich incwm ar \u00f4l ymddeol
+        yn gysylltiedig \u00e2\u2019ch enillion pan roeddech yn gweithio"},{"id":"cynlluniau-pensiwn-cyfraniadau-wediu-diffinio","type":"guide","title":"Cynlluniau
+        ymddeol cyfraniadau wedi\u2019u diffinio","description":"Mewn cynllun pensiwn
+        cyfraniadau wedi\u2019u diffinio neu bryniant arian, rydych yn casglu cronfa
+        i\u2019w defnyddio i brynu incwm ar \u00f4l ymddeol"},{"id":"pensiynau-personol-grwp","type":"guide","title":"Pensiynau
+        personol gr\u0175p","description":"Math o gynllun cyfraniadau wedi\u2019u
+        diffinio a gynigir gan rai cyflogwyr yw pensiwn personol gr\u0175p"}]}'
+    http_version: 
+  recorded_at: Tue, 13 Jan 2015 10:03:55 GMT
+recorded_with: VCR 2.9.2

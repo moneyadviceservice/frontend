@@ -14,7 +14,7 @@ RSpec.describe 'Decision Trees', type: :request, features: [:health_check, :regi
 
   describe 'advice_plans_url' do
     it 'generates a url' do
-      path = DecisionTrees.advice_plans_url.call('en', ['ap_1_1', 'ap_1_2'])
+      path = DecisionTrees.advice_plans_url.call('en', %w(ap_1_1 ap_1_2))
 
       expect(path).to eql('/en/tools/health-check/plans/configure?codes[]=ap_1_1&codes[]=ap_1_2')
     end

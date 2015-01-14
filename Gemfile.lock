@@ -81,6 +81,10 @@ GEM
       sass-rails (~> 4.0.3)
       transitions (~> 0.1.11)
     aes (0.5.0)
+    agreements (2.0.1.49)
+      dough-ruby
+      hashie (~> 2.0.5)
+      sass
     angularjs-rails (1.2.26)
     arel (5.0.1.20140414130214)
     ast (2.0.0)
@@ -631,6 +635,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.1.0)
   aes
+  agreements (~> 2.0.1)
   autoprefixer-rails
   better_errors
   binding_of_caller

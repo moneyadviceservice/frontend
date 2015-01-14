@@ -87,6 +87,10 @@ Rails.application.routes.draw do
       get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
     end
 
+    if Feature.active?(:agreements)
+      mount Agreements::Engine => '/agreements'
+    end
+
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'

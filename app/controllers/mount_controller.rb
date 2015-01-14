@@ -47,6 +47,6 @@ class MountController < ApplicationController
   private
 
   def alternate_engine_id
-    fail NotImplementedError
+    raise NotImplementedError
   end
 end

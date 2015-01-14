@@ -1,0 +1,26 @@
+<div class="want-to-talk" data-dough-component="WantToTalk" data-open="<%= t('want_to_talk.open') %>" data-close="<%= t('want_to_talk.close') %>">
+  <div class="want-to-talk__trigger">
+    <button class="want-to-talk__trigger__button">
+      <span class="want-to-talk__trigger__button__text visually-hidden">
+        <%= t('want_to_talk.open') %>
+      </span>
+    </button>
+  </div>
+  <button class="want-to-talk__title">
+    <h2 class="want-to-talk__title__text"><%= t('want_to_talk.title') %></h2>
+  </button>
+  <div class="want-to-talk__body" aria-hidden="true">
+    <p class="want-to-talk__body__intro">
+      <%= t('want_to_talk.intro') %>
+    </p>
+    <p class="want-to-talk__body__small-print">
+      <%= t('want_to_talk.small_print') %>
+    </p>
+    <p class="want-to-talk__body__call-us">
+      <%= t('want_to_talk.call_us') %>
+    </p>
+    <a href="<%= t('want_to_talk.phone_number') %>" class="want-to-talk__body__phone">
+      <%= t('want_to_talk.phone_number_readable') %>
+    </a>
+  </div>
+</div>

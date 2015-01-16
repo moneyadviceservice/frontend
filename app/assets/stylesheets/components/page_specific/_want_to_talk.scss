@@ -1,0 +1,210 @@
+.want-to-talk {
+  display: none;
+  position: relative;
+}
+
+.want-to-talk--sidebar {
+  text-align: center;
+}
+
+.want-to-talk--inline {
+  position: relative;
+  margin-top: $baseline_unit*4;
+  padding-bottom: 8px;
+}
+
+.want-to-talk--inline.want-to-talk--open {
+  padding-bottom: 0;
+}
+
+.want-to-talk--fixed {
+  position: fixed;
+  top: 0;
+}
+
+.want-to-talk--bottom {
+  position: absolute;
+  bottom: 0
+}
+
+.want-to-talk--initialised.want-to-talk--inline {
+  display: block;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.want-to-talk--initialised.want-to-talk--sidebar {
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}
+
+.want-to-talk__body {
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.want-to-talk--inline .want-to-talk__body {
+  margin-left: 70px;
+}
+
+.want-to-talk--open .want-to-talk__body {
+  max-height: 20em;
+}
+
+.want-to-talk--inline.want-to-talk--open .want-to-talk__body {
+  padding-bottom: 20px;
+}
+
+.want-to-talk__title {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.want-to-talk--inline .want-to-talk__title {
+  position: relative;
+  z-index: 2;
+  margin-left: 70px;
+}
+
+.want-to-talk--inline.want-to-talk--open .want-to-talk__title {
+  margin-bottom: 0;
+}
+
+.want-to-talk__title__text {
+  @include body(24, 28);
+  margin-top: $baseline_unit;
+  margin-bottom: $baseline_unit*1.5;
+  color: $color-black;
+}
+
+.want-to-talk__trigger {
+  display: block;
+
+  &:before {
+    display: block;
+    content: " ";
+    border-bottom: 1px solid $color-white;
+    border-bottom-radius: 50%;
+    box-shadow: 0 2px 3px 0 rgba(200, 200, 200, 0.75);
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    width: 100%;
+  }
+}
+
+.want-to-talk--inline .want-to-talk__trigger {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+
+  &:before {
+    top: 45px;
+  }
+}
+
+.want-to-talk__trigger__button {
+  display: block;
+  width: 58px;
+  height: 58px;
+  background: #e7ba33;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  border: none;
+  border-radius: 50%;
+  border: 4px solid $color-white;
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 58px;
+    height: 58px;
+    border: 4px solid $color-white;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px 0 rgba(200, 200, 200, 0.75);
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    clip-path: inset(34px 0 0 0);
+  }
+
+  &:after {
+    @include body(24, 40);
+    content: "+";
+    color: $color-black;
+    font-weight: 700;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-input-focus-border-color;
+
+    &:before {
+    border-color: $color-input-focus-border-color;
+    }
+  }
+
+  .want-to-talk--open &:after {
+    content: "\2013"; // => &ndash
+  }
+}
+
+.want-to-talk--inline .want-to-talk__trigger__button {
+  margin: 0;
+
+  &:before {
+    clip-path: inset(54px 0 0 0);
+  }
+}
+
+.want-to-talk__body__intro {
+  @include body(18, 24);
+  margin-top: 0;
+}
+
+.want-to-talk__body__small-print {
+  @include body(16, 20);
+  margin-top: 0;
+
+  // For specificity of inline version
+  .editorial & {
+    @include body(14, 18);
+  }
+}
+
+.want-to-talk__body__call-us {
+  @include body(18, 24);
+  margin-top: $baseline_unit*4;
+  margin-bottom: $baseline_unit;
+  color: $color-black;
+}
+
+.want-to-talk--inline .want-to-talk__body__call-us {
+  @include body(18, 24);
+  margin-bottom: 0;
+}
+
+// For specificity
+.want-to-talk__body__phone {
+  @include body(20, 24);
+  font-weight: 700;
+}
+
+// For specificity
+a[href^=tel].want-to-talk__body__phone {
+  color: $color-link-default;
+}
+
+.want-to-talk--inline .want-to-talk__body__phone {
+  @include body(30, 34);
+}

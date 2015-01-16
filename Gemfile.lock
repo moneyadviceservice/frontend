@@ -20,9 +20,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
-  revision: eab48916be23d5530a87e728a3fcbd8aa07fb279
+  revision: 6fcce9090843e0158a85b520a11b98b1d9231c7c
   specs:
     rio (0.0.3)
+      bowndler
+      dough-ruby
       rails (~> 4.1)
 
 GEM

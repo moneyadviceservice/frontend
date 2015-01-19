@@ -8,4 +8,11 @@
     <p class="directory__description"><%= item.description %></p>
   </div>
   <% end %>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to t("home.show.blog_title"), t("footer.blog_link"), class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description"><%= t("home.show.blog_description") %></p>
+  </div>
 </div>

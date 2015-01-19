@@ -147,11 +147,6 @@ module Core
           expect(subject.latest_blog_post_links.length).to eq(2)
         end
 
-        it 'all links are ArticleLink' do
-          expect(subject.latest_blog_post_links.first).to be_an_instance_of(ArticleLink)
-          expect(subject.latest_blog_post_links.last).to be_an_instance_of(ArticleLink)
-        end
-
         it 'has links correctly built' do
           expect(subject.latest_blog_post_links.first.title).to eq('Latest post.')
           expect(subject.latest_blog_post_links.first.path).to eq('/latest-post')
@@ -188,8 +183,6 @@ module Core
       context 'provide data' do
         it 'has 2 article links' do
           expect(subject.popular_links.length).to eq(2)
-          expect(subject.popular_links.first).to be_an_instance_of(ArticleLink)
-          expect(subject.popular_links.last).to be_an_instance_of(ArticleLink)
         end
 
         it 'has links correctly built' do
@@ -243,8 +236,6 @@ module Core
       context 'provide data' do
         it 'has 2 article links' do
           expect(subject.related_links.length).to eq(2)
-          expect(subject.related_links.first).to be_an_instance_of(ArticleLink)
-          expect(subject.related_links.last).to be_an_instance_of(ArticleLink)
         end
 
         it 'has links correctly built' do

@@ -147,11 +147,6 @@ module Core
           expect(subject.latest_blog_post_links.length).to eq(2)
         end
 
-        it 'all links are ArticleLink' do
-          expect(subject.latest_blog_post_links.first).to be_an_instance_of(ArticleLink)
-          expect(subject.latest_blog_post_links.last).to be_an_instance_of(ArticleLink)
-        end
-
         it 'has links correctly built' do
           expect(subject.latest_blog_post_links.first.title).to eq('Latest post.')
           expect(subject.latest_blog_post_links.first.path).to eq('/latest-post')
@@ -188,8 +183,6 @@ module Core
       context 'provide data' do
         it 'has 2 article links' do
           expect(subject.popular_links.length).to eq(2)
-          expect(subject.popular_links.first).to be_an_instance_of(ArticleLink)
-          expect(subject.popular_links.last).to be_an_instance_of(ArticleLink)
         end
 
         it 'has links correctly built' do
@@ -220,6 +213,67 @@ module Core
 
         it 'results in empty list' do
           expect(subject.popular_links).to be_empty
+        end
+      end
+    end
+
+    describe '#related_links' do
+      let(:related_content) do
+        {
+          'related_links' => [
+            {
+              'title' => 'Most related link.',
+              'path' => '/most-related-link'
+            },
+            {
+              'title' => 'Next related link.',
+              'path' => '/next-related-link'
+            }
+          ]
+        }
+      end
+
+      context 'provide data' do
+        it 'has 2 article links' do
+          expect(subject.related_links.length).to eq(2)
+        end
+
+        it 'has links correctly built' do
+          expect(subject.related_links.first.title).to eq('Most related link.')
+          expect(subject.related_links.first.path).to eq('/most-related-link')
+        end
+      end
+
+      context 'no related links' do
+        let(:related_content) { {} }
+
+        it 'results in empty list' do
+          expect(subject.related_links).to be_empty
+        end
+      end
+
+      context 'empty related links' do
+
+        let(:related_content) { { 'related_links' => [] } }
+
+        it 'results in empty list' do
+          expect(subject.related_links).to be_empty
+        end
+      end
+
+      context 'no related content' do
+        let(:related_content) { nil }
+
+        it 'results in empty list' do
+          expect(subject.related_links).to be_empty
+        end
+      end
+
+      context 'no related related' do
+        let(:related_content) { { 'related_links' => nil } }
+
+        it 'results in empty list' do
+          expect(subject.related_links).to be_empty
         end
       end
     end

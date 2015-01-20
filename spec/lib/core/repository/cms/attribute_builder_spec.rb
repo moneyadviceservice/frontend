@@ -14,6 +14,10 @@ module Core::Repository::CMS
         expect(subject['related_content']['popular_links']).to be_present
       end
 
+      it 'has related links' do
+        expect(subject['related_content']['related_links']).to be_present
+      end
+
       it 'has latest blog post links' do
         expect(subject['related_content']['latest_blog_post_links']).to be_present
       end

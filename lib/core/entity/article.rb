@@ -29,6 +29,10 @@ module Core
       build_article_links 'popular_links'
     end
 
+    def related_links
+      build_article_links 'related_links'
+    end
+
     def previous_link
       navigation_link 'previous_link'
     end
@@ -40,7 +44,7 @@ module Core
     private
 
     def build_article_links(key)
-      return [] if related_content.blank?
+      return [] if related_content.blank? || related_content[key].blank?
       related_content[key].map do |link_data|
         build_article_link link_data
       end

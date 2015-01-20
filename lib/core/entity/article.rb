@@ -51,7 +51,7 @@ module Core
     end
 
     def build_article_link(data)
-      ArticleLink.new(data['title'], data['path'], data['date'])
+      ArticleLink.new(data['title'], data['path'])
     end
 
     def navigation_link(key)

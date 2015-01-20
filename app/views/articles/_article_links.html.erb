@@ -5,11 +5,6 @@
     <% article_links.each do |article_link| %>
       <li class="related-links__link">
         <%= render article_link %>
-        <% if article_link.date.present? %>
-          <div>
-            <%= article_link.date.strftime("#{article_link.date.day.ordinalize} %B %Y") %>
-          </div>
-        <% end %>
       </li>
     <% end %>
   </ul>

@@ -2,6 +2,19 @@
 //
 // Styleguide related link
 
+.related-links--mobile {
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.related-links--desktop {
+  display: none;
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}
+
 .related-links__heading {
   @include body(18, 24);
   letter-spacing: 0;

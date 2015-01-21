@@ -131,13 +131,11 @@ module Core
             'latest_blog_post_links' => [
               {
                 'title' => 'Latest post.',
-                'path' => '/latest-post',
-                'date' => '2015-01-02'
+                'path' => '/latest-post'
               },
               {
                 'title' => 'Oldest post.',
-                'path' => '/oldest-post',
-                'date' => '2015-01-01'
+                'path' => '/oldest-post'
               }
             ]
           }
@@ -150,7 +148,6 @@ module Core
         it 'has links correctly built' do
           expect(subject.latest_blog_post_links.first.title).to eq('Latest post.')
           expect(subject.latest_blog_post_links.first.path).to eq('/latest-post')
-          expect(subject.latest_blog_post_links.first.date).to eq(Date.parse('2015-01-02'))
         end
       end
 

@@ -19,4 +19,4 @@ bowndler install --production --config.interactive=false
 
 RAILS_ENV=development rake karma:install karma:run_once
 rake spec
-rake cucumber
+bundle exec cucumber

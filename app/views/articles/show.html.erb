@@ -25,6 +25,10 @@
 
       <%= render 'previous_and_next' %>
 
+      <div class='related-links--mobile'>
+        <%= render 'articles/related_articles' %>
+      </div>
+
       <%= render 'shared/related_links', article: @article, categories: related_content %>
 
       <%= render 'shared/feedback', article: article %>
@@ -33,7 +37,9 @@
 </div>
 
 <div class="l-nav l-article-3col-right">
-  <%= render 'articles/related_articles'  %>
+  <div class='related-links--desktop'>
+    <%= render 'articles/related_articles' %>
+  </div>
 
   <%= render 'shared/want_to_talk' %>
 </div>

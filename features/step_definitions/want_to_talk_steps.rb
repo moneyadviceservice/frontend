@@ -1,5 +1,14 @@
 And(/^the want to talk feature is enabled$/) do
-  page.evaluate_script('window.masInitWantToTalk()')
+  Timeout.timeout(Capybara.default_wait_time) do
+    loop do
+      begin
+        page.evaluate_script('window.masInitWantToTalk()')
+        break
+      rescue
+        retry
+      end
+    end
+  end
 end
 
 Then(/^I see the want to talk panel in the sidebar$/) do

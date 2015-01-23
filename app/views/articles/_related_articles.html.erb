@@ -8,4 +8,5 @@
 
 <% if Feature.active?(:latest_blog_post_links) && @article.latest_blog_post_links.present? %>
   <%= render 'articles/article_links', title: t('.latest_blog_posts_title'), article_links: @article.latest_blog_post_links %>
+  <%= t('articles.related_articles.latest_blog_posts_note') %>
 <% end %>

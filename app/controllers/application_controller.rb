@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   add_flash_types :success
 
+  layout :check_syndicated_layout
+
   include Authentication
   include Chat
   include Localisation
@@ -70,6 +72,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def check_syndicated_layout
+    if syndicated_tool_request?
+      'syndicated'
+    else
+      'application'
+    end
+  end
 
   def category_tree
     @category_tree ||= Core::CategoryTreeReader.new.call

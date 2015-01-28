@@ -42,7 +42,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'advice_plans', '~> 3.1.0'
 gem 'agreements', '~> 2.0.1'
-gem 'budget_planner', '~> 4.0.1'
+gem 'budget_planner', '~> 4.0.1.688'
 gem 'car_cost_tool', '~> 1.0.1'
 gem 'debt_advice_locator', '~> 2.0'
 gem 'debt_free_day_calculator', '~> 2.1.0'

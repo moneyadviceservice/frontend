@@ -33,7 +33,7 @@ module.exports = function(config) {
      'app/assets/javascripts/pensions_calculator/**/*.js': ['coverage']
     },
 
-    reporters: ['coverage', 'spec'],
+    reporters: ['coverage', 'spec', 'osx'],
 
     // web server port
     port: 9876,

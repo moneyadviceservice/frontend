@@ -1,4 +1,4 @@
-@javascript
+@wip @javascript
 Feature: Want to Talk
   As user
   I want to talk to someone

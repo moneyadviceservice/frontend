@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   layout :check_syndicated_layout
 
+  before_action :set_syndicated_x_frame
+
   include Authentication
   include Chat
   include Localisation
@@ -19,7 +21,6 @@ class ApplicationController < ActionController::Base
 
   def parent_template
     if syndicated_tool_request?
-      response.headers['X-Frame-Options'] = 'ALLOWALL'
       'layouts/engine_syndicated'
     else
       'layouts/engine'
@@ -72,6 +73,10 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def set_syndicated_x_frame
+    response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?
+  end
 
   def check_syndicated_layout
     if syndicated_tool_request?

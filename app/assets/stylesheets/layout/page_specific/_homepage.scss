@@ -1,9 +1,66 @@
+.l-home-top {
+  @include column(12);
+  background: image_url('illustrated_people.png') 0 100% no-repeat;
+  background-size: 135%;
+  padding-bottom: 50%;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  display: block;
+
+  @include respond-to($mq-m) {
+    background-position: 165% 108%;
+    background-size: 70%;
+    padding-bottom: 0;
+  }
+
+  @include respond-to($mq-l) {
+    background-size: 65%;
+    background-position: 141% 100%;
+  }
+
+  @include respond-to($mq-xl) {
+    background: none;
+    overflow: hidden;
+  }
+}
+
+.l-home-top__image {
+  @include respond-to($mq-xl) {
+    width: 1350px;
+    height: 309px;
+    margin: 0 auto;
+    position: relative;
+    background: image_url('illustrated_people.png') 100% 52% no-repeat;
+    background-size: 49%;
+
+    .theme-cy & {
+      height: 351px;
+      background-position: 100% 100%;
+      background-size: 51%;
+    }
+  }
+}
+
 .l-trust-banner {
   @include column(12);
+
+  @include respond-to(px(600), px(719)) {
+    margin-bottom: $baseline-unit*9;
+  }
+}
+
+.l-promo-link {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(5);
+  }
 }
 
 .l-home-directory {
   background-color: $color-directory-emphasized-bg;
+  clear: both;
 }
 
 .l-home-directory__title {

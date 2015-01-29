@@ -21,7 +21,19 @@
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
-<%= render 'shared/trust_banner', items: t('.trust_banner_list') %>
+<svg style="display: none;">
+  <symbol id="icon-arrow-right" viewBox="0 0 22 34">
+    <polygon points="0,5 5,0 22,17 5.1,34 0,29 12,17" />
+  </symbol>
+</svg>
+
+<div class="l-home-top">
+  <div class="l-home-top__image"></div>
+  <div class="l-constrained">
+    <%= render 'shared/trust_banner', items: t('.trust_banner_list') %>
+    <%= render 'shared/promo_link' %>
+  </div>
+</div>
 
 <div class="l-home-directory">
   <div class="l-constrained">

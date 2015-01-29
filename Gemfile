@@ -50,7 +50,7 @@ gem 'decision_trees', '~> 2.0.0'
 gem 'feedback', '~> 0.3.0'
 gem 'mortgage_calculator', '~> 1.3.5'
 gem 'pensions_calculator', '~> 0.2'
-gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git'
+gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', ref: 'bb267ca11932fd7958077d89f9802c9ae2d60d5b'
 gem 'savings_calculator', '~> 1.1.0'
 
 group :assets do

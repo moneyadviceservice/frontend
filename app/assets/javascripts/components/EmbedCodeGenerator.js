@@ -6,14 +6,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       defaultConfig = {
         selectors: {
           activeClass: 'is-active',
-          embedTarget: '[data-dough-embedcodegenerator-display]',
+          embedTarget: '[data-dough-embedcodegenerator-target]',
+          embedTargetContainer: '[data-dough-embedcodegenerator-target-container]',
           langInput: '[data-dough-embedcodegenerator-lang]',
           submit: '[data-dough-embedcodegenerator-submit]',
           widthInput: '[data-dough-embedcodegenerator-width]',
           widthUnitInput: '[data-dough-embedcodegenerator-width-unit]'
-        },
-        uiEvents: {
-          'focus [data-dough-embedcodegenerator-display]': '_handleEmbedTargetFocus'
         }
       };
 
@@ -29,12 +27,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$el.on('submit', $.proxy(this._handleSubmit, this));
     this._cacheComponentElements();
     this._addAccessibility();
-    this.embedCodeTemplate = this.$embedTarget.val().trim();
+    this.embedCodeTemplate = this.$embedTarget.text().trim();
     this._initialisedSuccess(initialised);
   };
 
   EmbedCodeGeneratorProto._cacheComponentElements = function() {
     this.$embedTarget = this.$el.find(this.config.selectors.embedTarget);
+    this.$embedTargetContainer = this.$el.find(this.config.selectors.embedTargetContainer);
     this.$langInput = this.$el.find(this.config.selectors.langInput);
     this.$submit = this.$el.find(this.config.selectors.submit);
     this.$widthInput = this.$el.find(this.config.selectors.widthInput);
@@ -47,18 +46,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     return false;
   };
 
-  EmbedCodeGeneratorProto._handleEmbedTargetFocus = function() {
-    setTimeout($.proxy(function(){
-      this.$embedTarget.select();
-    }, this), 100);
-  };
-
   EmbedCodeGeneratorProto._addAccessibility = function() {
-    this.$embedTarget.attr('aria-hidden', true);
+    this.$embedTargetContainer.attr('aria-hidden', true);
   };
 
   EmbedCodeGeneratorProto.showEmbedTarget = function() {
-    this.$embedTarget
+    this.$embedTargetContainer
       .addClass(this.config.selectors.activeClass)
       .attr('aria-hidden', false);
   };
@@ -86,7 +79,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   EmbedCodeGeneratorProto.updateEmbedCodeDisplay = function(text) {
     this.showEmbedTarget();
-    this.$embedTarget.val(text);
+    this.$embedTarget.text(text);
   };
 
   return EmbedCodeGenerator;

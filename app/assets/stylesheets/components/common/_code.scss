@@ -1,0 +1,14 @@
+// Code
+//
+// Styleguide Code
+
+.code__content {
+  background-color: $color-panel-background;
+  padding: $baseline-unit*2;
+}
+
+.code__content--wrapped {
+  @include respond-to($mq-m) {
+    word-wrap: break-word;
+  };
+}

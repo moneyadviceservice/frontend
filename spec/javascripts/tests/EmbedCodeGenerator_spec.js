@@ -28,11 +28,12 @@ describe('EmbedCodeGenerator', function () {
     });
 
     it('should find and cache all necessary DOM elements', function() {
-      expect(this.component.$langInput).should.exist;
-      expect(this.component.$widthInput).should.exist;
-      expect(this.component.$widthUnitInput).should.exist;
-      expect(this.component.$submit).should.exist;
-      expect(this.component.$embedTarget).should.exist;
+      expect(this.component.$langInput.length).to.be.at.least(1);
+      expect(this.component.$widthInput.length).to.be.at.least(1);
+      expect(this.component.$widthUnitInput.length).to.be.at.least(1);
+      expect(this.component.$submit.length).to.be.at.least(1);
+      expect(this.component.$embedTarget.length).to.be.at.least(1);
+      expect(this.component.$embedTargetContainer.length).to.be.at.least(1);
     });
   });
 
@@ -78,10 +79,9 @@ describe('EmbedCodeGenerator', function () {
     it('should update the text of the display target', function() {
       var text = 'foo';
 
-      this.component.$embedTarget.eq(0).val('');
       this.component.updateEmbedCodeDisplay(text);
 
-      expect(this.component.$embedTarget.eq(0)).to.have.value(text);
+      expect(this.component.$embedTarget.eq(0).text()).to.equal(text);
     });
 
     it('should call the #showEmbedTarget method', function() {
@@ -131,12 +131,12 @@ describe('EmbedCodeGenerator', function () {
 
     it('should add the active class to the embed target', function() {
       this.component.showEmbedTarget();
-      expect(this.component.$embedTarget).to.have.class(this.component.config.selectors.activeClass);
+      expect(this.component.$embedTargetContainer).to.have.class(this.component.config.selectors.activeClass);
     });
 
     it('should set aria-hidden on the embed target to false', function() {
       this.component.showEmbedTarget();
-      expect(this.component.$embedTarget).to.have.attr('aria-hidden', 'false');
+      expect(this.component.$embedTargetContainer).to.have.attr('aria-hidden', 'false');
     });
   });
 });

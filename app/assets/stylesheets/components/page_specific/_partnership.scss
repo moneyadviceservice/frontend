@@ -1,0 +1,35 @@
+.partnership-promo {
+  @include row(12);
+}
+
+.partnership-promo__media-container {
+  @include respond-to($mq-m) {
+    @include column(7);
+    float: left;
+  };
+}
+
+.partnership-promo__media {
+  width: 100%;
+}
+
+.partnership-promo__content {
+  @include respond-to($mq-m) {
+    @include column(5);
+    float: right;
+  };
+}
+
+.partnership-promo__panel,
+.partnership-promo__panel-heading {
+  margin-top: 0;
+}
+
+.partnership-promo__panel-heading {
+  @extend %heading-related-links;
+}
+
+.partnership-promo__panel-list,
+.partnership-promo__panel-text:last-child {
+  margin-bottom: 0;
+}

@@ -10,6 +10,7 @@
   @extend %font-heading-medium;
   @include body(18, 24);
   margin-top: 0;
+  margin-bottom: 0;
 
   @include respond-to($mq-m) {
     @include body(20, 24);
@@ -24,4 +25,13 @@
 .promo__img {
   width: 100%;
   margin-bottom: $baseline-unit*2;
+}
+
+.promo__arrow {
+  fill: #e7c02e;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  height: 34px;
+  width: 21px;
 }

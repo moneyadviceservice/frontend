@@ -7,7 +7,7 @@
     display: flex;
     flex-flow: column;
 
-    @include respond-to($mq-s) {
+    @include respond-to($mq-l) {
       flex-flow: row;
       flex-wrap: wrap;
     }
@@ -17,19 +17,26 @@
 .l-promos__heading {
   @extend %font-heading-medium;
   @include column(12);
-  @include body(16, 24);
+  @include body(30, 34);
   color: $color-heading-extra-small;
-  margin-top: $baseline-unit*6;
+  margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*2;
 }
 
 .l-promos__item {
   @include column(12);
-  margin-top: $baseline-unit*3;
-  margin-bottom: $baseline-unit*3;
-  min-height: 133px;
+  margin-bottom: $baseline-unit*1;
+  position: relative;
+  border-top: 1px solid #b3afa6;
+  padding-top: $baseline-unit*3;
+  padding-bottom: $baseline-unit*2;
 
-  @include respond-to($mq-s) {
+  &:nth-child(2),
+  &:first-child {
+    border-top: 0;
+  }
+
+  @include respond-to($mq-m) {
     @include column(6);
   }
 
@@ -37,12 +44,16 @@
     @include column(3);
   }
 
-  .flexbox & {
-    @include respond-to($mq-s) {
-      flex-basis: 46%;
-    }
+  &:first-child {
+    border-bottom: 5px solid #000;
+  }
 
-    @include respond-to($mq-l) {;
+  .flexbox & {
+    // @include respond-to($mq-m) {
+    //   flex-basis: 46%;
+    // }
+
+    @include respond-to($mq-l) {
       flex-basis: 21.55%;
     }
   }
@@ -52,11 +63,5 @@
   @extend %font-heading-medium;
   @include column(12);
   text-align: left;
-
-  @include respond-to($mq-m) {
-    position: absolute;
-    left: 0;
-    top: 38px;
-    text-align: right;
-  }
+  padding-bottom: $baseline-unit;
 }

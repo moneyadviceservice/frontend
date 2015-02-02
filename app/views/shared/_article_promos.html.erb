@@ -1,11 +1,11 @@
 <div class="l-constrained">
-  <section class="l-promos">
-    <%= heading_tag(level: 2, class: 'visually-hidden') do %>
+  <section class="l-promo-articles">
+    <%= heading_tag(level: 2, class: 'l-promo-articles__heading') do %>
       <%= t('home.show.promoted_heading') %>
     <% end %>
 
     <% items.each do |item| %>
-      <div class="l-promos__item">
+      <div class="l-promo-articles__item">
         <div class="t-article-promos">
           <%= heading_tag(level: 2, class: 'promo__heading') do %>
             <%= link_to item[:url], class: 'promo__link' do %>

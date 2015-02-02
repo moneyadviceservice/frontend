@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     set_breadcrumbs
     set_related_content
     set_categories
+    set_show_newsletter_signup
   end
 
   private
@@ -34,5 +35,17 @@ class ArticlesController < ApplicationController
       active_category category.id
       active_category category.parent_id if category.child?
     end
+  end
+
+  def set_show_newsletter_signup
+    exclusions = YAML.load(
+      File.read(File.expand_path("#{Rails.root}/config/newsletter_article_exclusion_list.yml", __FILE__))
+    )
+
+    exclusions.reject! do
+      |slug| slug != params[:id]
+    end
+
+    @newsletter_excluded = exclusions.count > 0 || I18n.locale == :cy ? true : false
   end
 end

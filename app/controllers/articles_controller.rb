@@ -40,8 +40,8 @@ class ArticlesController < ApplicationController
   def set_show_newsletter_signup
     exclusions = ::NewsletterExclusions::slugs
 
-    exclusions.reject! do
-      |slug| slug != params[:id]
+    exclusions.reject! do |slug|
+      slug != params[:id]
     end
 
     @newsletter_excluded = exclusions.count > 0 || I18n.locale == :cy ? true : false

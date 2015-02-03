@@ -1,0 +1,1 @@
+require 'newsletter_exclusions'

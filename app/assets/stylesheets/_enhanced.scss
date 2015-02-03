@@ -16,7 +16,16 @@
 @import 'components/common/all';
 @import 'components/page_specific/all';
 @import 'components/dough_theme/variables';
-@import 'components/dough_theme/*/_all.scss';
+
+@import 'components/dough_theme/button/all';
+@import 'components/dough_theme/callout/all';
+@import 'components/dough_theme/collapsable/all';
+@import 'components/dough_theme/field_help_text/all';
+@import 'components/dough_theme/form/all';
+@import 'components/dough_theme/pagination_counter/all';
+@import 'components/dough_theme/progress_indicator/all';
+@import 'components/dough_theme/tab_selector/all';
+@import 'components/dough_theme/tabular_tooltip/all';
 
 .editorial {
   @import 'components/cms/all';

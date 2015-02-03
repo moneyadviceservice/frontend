@@ -40,18 +40,18 @@ gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'advice_plans', '~> 3.1.0'
+gem 'advice_plans', git: 'git@github.com:moneyadviceservice/advice_plans.git', branch: 'unpin_sass_rails'
 gem 'agreements', '~> 2.0.1'
-gem 'budget_planner', '~> 4.0.1.689'
-gem 'car_cost_tool', '~> 1.0.1'
-gem 'debt_advice_locator', '~> 2.0'
-gem 'debt_free_day_calculator', '~> 2.1.0'
-gem 'decision_trees', '~> 2.0.0'
+gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'unpin_sass_rails'
+gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'unpin_sass_rails'
+gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'unpin_sass_rails'
+gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator.git', branch: 'unpin_sass_rails'
+gem 'decision_trees', git: 'git@github.com:moneyadviceservice/decision_trees.git', branch: 'unpin_sass_rails'
 gem 'feedback', '~> 0.3.0'
-gem 'mortgage_calculator', '~> 1.3.5'
-gem 'pensions_calculator', '~> 0.2'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'unpin_sass_rails'
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'unpin_sass_rails'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', ref: 'bb267ca11932fd7958077d89f9802c9ae2d60d5b'
-gem 'savings_calculator', '~> 1.1.0'
+gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'unpin_sass_rails'
 
 group :assets do
   gem 'autoprefixer-rails'
@@ -60,7 +60,7 @@ group :assets do
   gem 'csslint_ruby'
   gem 'compass-rails'
   gem 'jquery-rails'
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails', '~> 5.0'
 end
 
 group :development do

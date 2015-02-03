@@ -31,8 +31,9 @@ require.config({
 
     // Dough components
     ClearInput: 'app/assets/javascripts/components/ClearInput',
+    Newsletter: 'app/assets/javascripts/components/Newsletter',
 
-    rsvp: 'vendor/assets/bower_components/rsvp/rsvp.amd',
+    rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 
     componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',
     RangeInput: 'vendor/assets/bower_components/dough/assets/js/components/RangeInput',

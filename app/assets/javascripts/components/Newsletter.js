@@ -15,57 +15,45 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   DoughBaseComponent.extend(Newsletter);
 
   /**
-  * Set up and populate the model from the form inputs
   * @param {Promise} initialised
   */
   Newsletter.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
-    this.showInArticle($);
+    this.showInArticle();
+    return this;
   };
 
-  Newsletter.prototype.showInArticle = function($) {
-    var $panel = this.getPanel($);
-    var $article = $('.editorial main');
+  Newsletter.prototype.showInArticle = function() {
+    var $panel = this.getPanel();
+    var $article = $('[data-article]');
 
-    if (!$panel.length || !$article.length) {
-      setTimeout(function () {
-        this.showInArticle($);
-      }, 50);
-      return;
-    }
-
-    this.moveToArticle($panel, $article, $);
+    this.moveToArticle($panel, $article);
 
     $panel.addClass('news-signup-test--with-image news-signup-test--in-article');
   };
 
-  Newsletter.prototype.moveToArticle = function($form, $article, $) {
-    var article = $article[0];
-    var placed = false;
-    var minimumPosition;
+  Newsletter.prototype.moveToArticle = function($panel, $article) {
+    var article = $article[0],
+        placed = false,
+        minimumPosition = article.offsetHeight / 4;
 
-    minimumPosition = article.offsetHeight / 4;
-
-    $form.css('clear', 'both');
+    $panel.css('clear', 'both');
 
     $article.find('> h2, > h3').each(function (i, el) {
-      if (placed) {
-        return;
-      }
-
       if (el.offsetTop >= minimumPosition) {
-        $form.insertBefore(el);
+        $panel.insertBefore(el);
         placed = true;
+        return false;
       }
     });
 
     if (!placed) {
-      $form.insertAfter($article.children().last());
+      $panel.insertAfter($article.children().last());
     }
   };
 
-  Newsletter.prototype.getPanel = function($) {
-    return $('.news-signup-test');
+  Newsletter.prototype.getPanel = function() {
+    return $('[data-dough-component="Newsletter"]');
   };
 
   return Newsletter;

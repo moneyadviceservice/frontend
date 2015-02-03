@@ -38,9 +38,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_show_newsletter_signup
-    exclusions = YAML.load(
-      File.read(File.expand_path("#{Rails.root}/config/newsletter_article_exclusion_list.yml", __FILE__))
-    )
+    exclusions = ::NewsletterExclusions::slugs
 
     exclusions.reject! do
       |slug| slug != params[:id]

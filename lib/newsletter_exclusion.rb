@@ -1,5 +1,4 @@
 module NewsletterExclusions
-
   def self.slugs
     [
       'making-or-reviewing-your-will-after-someone-dies',

@@ -87,7 +87,8 @@ module NewsletterExclusions
       'if-the-person-you-want-to-help-has-lost-mental-capacity',
       'putting-your-affairs-in-order',
       'preparing-for-illness-old-age-and-death',
-      'choosing-your-executor'
+      'choosing-your-executor',
+      'raising-standards'
     ]
   end
 end

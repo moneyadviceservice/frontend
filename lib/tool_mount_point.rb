@@ -9,6 +9,7 @@ require_relative '../lib/tool_mount_point/mortgage_calculator'
 require_relative '../lib/tool_mount_point/pensions_calculator'
 require_relative '../lib/tool_mount_point/rio'
 require_relative '../lib/tool_mount_point/savings_calculator'
+require_relative '../lib/tool_mount_point/timelines'
 
 module ToolMountPoint
   def self.for(tool)

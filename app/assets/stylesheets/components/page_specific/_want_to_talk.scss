@@ -62,27 +62,31 @@
   padding-bottom: 20px;
 }
 
-.want-to-talk__title {
+.want-to-talk__intro {
   border: none;
   background: none;
   padding: 0;
 }
 
-.want-to-talk--inline .want-to-talk__title {
+.want-to-talk--inline .want-to-talk__intro {
   position: relative;
   z-index: 2;
   margin-left: 70px;
 }
 
-.want-to-talk--inline.want-to-talk--open .want-to-talk__title {
+.want-to-talk--inline.want-to-talk--open .want-to-talk__intro {
   margin-bottom: 0;
 }
 
-.want-to-talk__title__text {
+.want-to-talk__intro__title {
   @include body(24, 28);
   margin-top: $baseline_unit;
   margin-bottom: $baseline_unit*1.5;
   color: $color-black;
+}
+
+.want-to-talk--inline .want-to-talk__intro__title {
+  text-align: left;
 }
 
 .want-to-talk__trigger {
@@ -168,14 +172,18 @@
   }
 }
 
-.want-to-talk__body__intro {
+.want-to-talk__intro__text {
   @include body(18, 24);
   margin-top: 0;
+
+  // For specificity of inline version
+  .editorial & {
+    @include body(18, 24);
+  }
 }
 
 .want-to-talk__body__small-print {
   @include body(16, 20);
-  margin-top: 0;
 
   // For specificity of inline version
   .editorial & {
@@ -183,16 +191,19 @@
   }
 }
 
+.want-to-talk--inline .want-to-talk__body__small-print {
+  margin-top: $baseline_unit;
+}
+
 .want-to-talk__body__call-us {
   @include body(18, 24);
-  margin-top: $baseline_unit*4;
-  margin-bottom: $baseline_unit;
-  color: $color-black;
+  margin-top: 0;
+  margin-bottom: $baseline_unit*2;
 }
 
 .want-to-talk--inline .want-to-talk__body__call-us {
   @include body(18, 24);
-  margin-bottom: 0;
+  margin-bottom: $baseline_unit;
 }
 
 // For specificity

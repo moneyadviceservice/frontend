@@ -6,21 +6,21 @@
       </span>
     </button>
   </div>
-  <button class="want-to-talk__title">
-    <h2 class="want-to-talk__title__text"><%= t('want_to_talk.title') %></h2>
-  </button>
-  <div class="want-to-talk__body" aria-hidden="true">
-    <p class="want-to-talk__body__intro">
+  <button class="want-to-talk__intro">
+    <h2 class="want-to-talk__intro__title"><%= t('want_to_talk.title') %></h2>
+    <p class="want-to-talk__intro__text">
       <%= t('want_to_talk.intro') %>
     </p>
-    <p class="want-to-talk__body__small-print">
-      <%= t('want_to_talk.small_print') %>
-    </p>
+  </button>
+  <div class="want-to-talk__body" aria-hidden="true">
     <p class="want-to-talk__body__call-us">
       <%= t('want_to_talk.call_us') %>
     </p>
     <a href="<%= t('want_to_talk.phone_number') %>" class="want-to-talk__body__phone">
-      <%= t('want_to_talk.phone_number_readable') %>
+      <%= t('want_to_talk.phone_number_readable') %>*
     </a>
+    <p class="want-to-talk__body__small-print">
+      <%= t('want_to_talk.small_print') %>
+    </p>
   </div>
 </div>

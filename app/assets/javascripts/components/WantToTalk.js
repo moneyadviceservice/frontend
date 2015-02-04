@@ -14,7 +14,7 @@ define(
         BOTTOM_CLASS = 'want-to-talk--bottom',
         OPEN_CLASS = 'want-to-talk--open',
         INITIALISED_CLASS = 'want-to-talk--initialised',
-        TRIGGER_SELECTOR = '.want-to-talk__trigger__button, .want-to-talk__title',
+        TRIGGER_SELECTOR = '.want-to-talk__trigger__button, .want-to-talk__intro',
         LABEL_SELECTOR = '.want-to-talk__trigger__button__text',
         TEL_LINK_SELECTOR = '.want-to-talk__body__phone',
         TRACK_CATEGORY = 'TriagePhase1',

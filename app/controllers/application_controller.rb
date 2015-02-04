@@ -79,11 +79,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_syndicated_layout
-    if syndicated_tool_request?
-      'syndicated'
-    else
-      'application'
-    end
+    'syndicated' if syndicated_tool_request?
   end
 
   def category_tree

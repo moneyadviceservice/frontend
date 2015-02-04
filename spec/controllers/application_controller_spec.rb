@@ -28,14 +28,14 @@ RSpec.describe ApplicationController, type: :controller do
       end
 
       def index
-        render inline: 'example', layout: true
+        render inline: 'example', layout: nil
       end
     end
 
     subject { get :index }
 
-    it 'renders application layout' do
-      expect(subject).to render_template('layouts/application')
+    it 'does not render syndicated layout' do
+      expect(subject).to_not render_template('layouts/syndicated')
     end
 
     it 'sets x frame options to SAMEORIGIN' do

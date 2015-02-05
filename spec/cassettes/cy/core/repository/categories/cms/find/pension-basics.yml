@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/pension-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 9272) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 26ead335-f407-46d0-8c14-a8b4596032d1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"935fa4835da3dd22b8028b0838b3fd5d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 26ead335-f407-46d0-8c14-a8b4596032d1
+      X-Runtime:
+      - '0.009153'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Mon, 02 Feb 2015 14:29:54 GMT
+      Content-Length:
+      - '207'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"pension-basics","type":"category","title":"Ffeithiau sylfaenol
+        ynghylch pensiynau","description":"Dysgwch pam a phryd i gynilo i bensiwn
+        a sut i gyfrifo faint fydd eich cronfa bensiwn.","contents":[]}'
+    http_version: 
+  recorded_at: Mon, 02 Feb 2015 14:29:54 GMT
+recorded_with: VCR 2.9.2

@@ -17,8 +17,9 @@ module Core
     def build_tree(node, attributes)
       id       = attributes.delete('id')
       contents = attributes.delete('contents')
+      return unless attributes.delete('type') == 'category'
 
-      category      = Category.new(id, attributes)
+      category = Category.new(id, attributes)
       category_node = Tree::TreeNode.new(id, category)
 
       contents.each do |content_attributes|

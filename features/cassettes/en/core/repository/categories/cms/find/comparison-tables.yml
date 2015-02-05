@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/comparison-tables.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 64811) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 539183bd-49a6-4ff2-9dc0-9707743a9c9d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1b854391f286ecf01d6f2cc392a580e8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 539183bd-49a6-4ff2-9dc0-9707743a9c9d
+      X-Runtime:
+      - '0.008920'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Tue, 03 Feb 2015 16:53:30 GMT
+      Content-Length:
+      - '295'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNvbXBhcmlzb24tdGFibGVzIiwidHlwZSI6ImNhdGVnb3J5Iiwi
+        dGl0bGUiOiJDb21wYXJpc29uIHRhYmxlcyIsImRlc2NyaXB0aW9uIjoiT3Vy
+        IGNvbXBhcmlzb24gdGFibGVzIGFyZSBjb21wbGV0ZWx5IHVuYmlhc2VkIC0g
+        d2UgYXJlIHNldCB1cCBieSBnb3Zlcm5tZW50IGFuZCBkb27igJl0IHJlY2Vp
+        dmUgYW55IGluY2VudGl2ZSBvciBjb21taXNzaW9uIGlmIHlvdSBnbyBvbiB0
+        byBjaG9vc2UgYSBwcm9kdWN0IiwicGFyZW50X2lkIjoidG9vbHMtYW5kLWNh
+        bGN1bGF0b3JzIiwiY29udGVudHMiOltdfQ==
+    http_version: 
+  recorded_at: Tue, 03 Feb 2015 16:53:30 GMT
+recorded_with: VCR 2.9.2

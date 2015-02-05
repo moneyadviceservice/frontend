@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/buying-a-home.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 9272) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 69c2d730-b189-4c9f-aa4a-ba1a93940c85
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"40fd27cc94d0ad6d75e4f3e205b57bb1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 69c2d730-b189-4c9f-aa4a-ba1a93940c85
+      X-Runtime:
+      - '0.009667'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Mon, 02 Feb 2015 14:30:14 GMT
+      Content-Length:
+      - '452'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"buying-a-home","type":"category","title":"Buying a home","description":"Work
+        out your overall buying and moving costs, first time buyer advice, and tips
+        and tools to help you work out what you can afford.","contents":[{"id":"understand-and-compare-annuities","type":"guide","title":"Understand
+        and compare annuities","description":"It pays to shop around for an annuity
+        - watch this short video of people describing their annuity experience."}]}'
+    http_version: 
+  recorded_at: Mon, 02 Feb 2015 14:30:14 GMT
+recorded_with: VCR 2.9.2

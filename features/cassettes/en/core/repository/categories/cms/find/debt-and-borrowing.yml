@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/debt-and-borrowing.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 48248) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 93c0ee5b-be72-4ac0-948a-a6fcbe3513d4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"ca491938cb1bfdc6f10b36ec945d9283"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 93c0ee5b-be72-4ac0-948a-a6fcbe3513d4
+      X-Runtime:
+      - '0.019338'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Tue, 03 Feb 2015 14:32:56 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"debt-and-borrowing","type":"category","title":"Debt and borrowing","description":"Taking
+        control of debt, getting free debt advice, and how to borrow affordably","parent_id":"","contents":[{"id":"taking-control-of-debt","type":"category","title":"Taking
+        control of debt","description":"Where to get free debt advice, how to speak
+        to the people you owe money to, and tips to help you pay back your debts in
+        the right order.","parent_id":"debt-and-borrowing","contents":[]},{"id":"before-you-borrow","type":"category","title":"Before
+        you borrow","description":"Find out if you need to borrow money and whether
+        you can afford it. Learn how to work out the true cost of borrowing.","parent_id":"debt-and-borrowing","contents":[{"id":"debt-advice-evaluation-toolkit-registration","type":"guide","title":"Debt
+        advice evaluation toolkit","description":"The Money Advice Service has developed
+        a debt advice evaluation toolkit. This resource has been designed for debt
+        advice organisation in the UK to use with clients to measure the impact of
+        their debt advice service."},{"id":"letting-your-children-have-a-go-with-money","type":"guide","title":"Letting
+        your children have a go with money","description":"Dr Elizabeth Kilbey advises
+        how parents can let go once their children have established relationship with
+        money."}]},{"id":"mortgage-and-rent-problems","type":"category","title":"Mortgage
+        and rent problems","description":"Help if you''re struggling with your mortgage
+        or rent payments and information on government support if you can''t pay your
+        mortgage.","parent_id":"debt-and-borrowing","contents":[]},{"id":"help-with-loans","type":"category","title":"Help
+        with loans","description":"Learn about how personal loans work, better alternatives
+        to payday loans, and help when borrowing from a credit union.","parent_id":"debt-and-borrowing","contents":[]},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Credit
+        cards and credit ratings","description":"Find out how to manage a credit card,
+        how to check your credit report, and tips on how you can improve your credit
+        rating.","parent_id":"debt-and-borrowing","contents":[]}]}'
+    http_version: 
+  recorded_at: Tue, 03 Feb 2015 14:32:56 GMT
+recorded_with: VCR 2.9.2

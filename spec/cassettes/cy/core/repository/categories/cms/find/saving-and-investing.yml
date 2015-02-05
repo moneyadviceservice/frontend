@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/saving-and-investing.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 74111) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"31da48c914fe86f0ba09ae7db6152e9f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      X-Runtime:
+      - '0.017482'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 04 Feb 2015 15:00:43 GMT
+      Content-Length:
+      - '1334'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InNhdmluZy1hbmQtaW52ZXN0aW5nIiwidHlwZSI6ImNhdGVnb3J5
+        IiwidGl0bGUiOiJDeW5pbG8gYSBidWRkc29kZGkiLCJkZXNjcmlwdGlvbiI6
+        IlN1dCBpIGd5bmlsbyBhcmlhbiwgbWF0aGF1IG8gZ3lmcmlmb24gY3luaWxv
+        IGEgcmhvaSBjeWNod3luIGFybmkgZ3lkYSBidWRkc29kZGkiLCJwYXJlbnRf
+        aWQiOiIiLCJjb250ZW50cyI6W3siaWQiOiJob3ctdG8tc2F2ZS1tb25leSIs
+        InR5cGUiOiJjYXRlZ29yeSIsInRpdGxlIjoiU3V0IGkgZ3luaWxvIGFyaWFu
+        IiwiZGVzY3JpcHRpb24iOiJDeWZyaWZ3Y2ggZmFpbnQgYWxsd2NoIGZmb3Jk
+        ZGlvIGVpIGd5bmlsbyBhIGR5c2d3Y2ggc3V0IGkgc2VmeWRsdSBhIGNoeXJy
+        YWVkZCBlaWNoIG5vZCBjeW5pbG8uIiwicGFyZW50X2lkIjoic2F2aW5nLWFu
+        ZC1pbnZlc3RpbmciLCJjb250ZW50cyI6W119LHsiaWQiOiJzYXZpbmdzLXR5
+        cGVzIiwidHlwZSI6ImNhdGVnb3J5IiwidGl0bGUiOiJNYXRoYXUgbyBneW5p
+        bG8iLCJkZXNjcmlwdGlvbiI6IkR5c2d3Y2ggYW0gZ3lmcmlmb24gY3luaWxv
+        LCBJU0FzIGFyaWFuIHBhcm9kIGEgc3V0IGkgZ3luaWxvIGFyIGd5ZmVyIHBs
+        YW50LiIsInBhcmVudF9pZCI6InNhdmluZy1hbmQtaW52ZXN0aW5nIiwiY29u
+        dGVudHMiOltdfSx7ImlkIjoiaG93LXRvLWludmVzdC1tb25leSIsInR5cGUi
+        OiJjYXRlZ29yeSIsInRpdGxlIjoiU3V0IGkgZnVkZHNvZGRpIGFyaWFuIiwi
+        ZGVzY3JpcHRpb24iOiJEeXNnd2NoIGFtIGhhbmZvZGlvbiBidWRkc29kZGks
+        IHN1dCBpIGx1bmlvIGN5bmxsdW4gYnVkZHNvZGRpLCBhIGRlYWxsIGVpY2gg
+        YWd3ZWRkIHR1YWcgYXQgcmlzZy4iLCJwYXJlbnRfaWQiOiJzYXZpbmctYW5k
+        LWludmVzdGluZyIsImNvbnRlbnRzIjpbXX0seyJpZCI6ImludmVzdG1lbnQt
+        dHlwZXMiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6Ik1hdGhhdSBvIGZ1
+        ZGRzb2RkaWFkIiwiZGVzY3JpcHRpb24iOiJHd3lib2RhZXRoIGFtIHN0b2Np
+        YXUgYSBjaHlmcmFuZGRhbGlhZGF1LCBib25kaWF1IGJ1ZGRzb2RkaSwgY3Jv
+        bmZleWRkIHRyYWNpbywgcG9saXPDr2F1IGd5ZGFnLWVsdyBhIGd3YWRkb2wu
+        IiwicGFyZW50X2lkIjoic2F2aW5nLWFuZC1pbnZlc3RpbmciLCJjb250ZW50
+        cyI6W119LHsiaWQiOiJ3aHktaXQtcGF5cy10by1zYXZlLXJlZ3VsYXJseSIs
+        InR5cGUiOiJndWlkZSIsInRpdGxlIjoiV2h5IGl0IHBheXMgdG8gc2F2ZSBy
+        ZWd1bGFybHkiLCJkZXNjcmlwdGlvbiI6IkEgcmVndWxhciBzYXZpbmdzIGhh
+        Yml0IG1ha2VzIHlvdXIgc2F2aW5ncyBncm93IGZhc3Qg4oCTIGdldHRpbmcg
+        c3RhcnRlZCBpcyBxdWljayBhbmQgZWFzeSJ9XX0=
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 15:00:43 GMT
+recorded_with: VCR 2.9.2

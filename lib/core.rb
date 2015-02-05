@@ -80,6 +80,7 @@ module Core
     module Categories
       autoload :Fake, 'core/repository/categories/fake'
       autoload :PublicWebsite, 'core/repository/categories/public_website'
+      autoload :CMS, 'core/repository/categories/cms'
     end
 
     module CallbackRequestable

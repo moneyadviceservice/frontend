@@ -1,9 +1,2 @@
 --color
 --require spec_helper
---format html
---out tmp/spec.html
---format RspecJunitFormatter
---out tmp/spec.xml
---format progress
---profile
---deprecation-out log/rspec_deprecations.txt

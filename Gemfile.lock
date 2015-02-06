@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/advice_plans.git
-  revision: e7c095601543e4a5a254659b9961269124b0581b
+  revision: 36cf506a1f81ea118b82c044926bbbe5cdcb58a5
   branch: unpin_sass_rails
   specs:
     advice_plans (3.1.1)
@@ -238,7 +238,7 @@ GEM
       parser (>= 2.2.0.pre.3, < 3.0)
     autoprefixer-rails (4.0.2.1)
       execjs
-    bcrypt (3.1.9)
+    bcrypt (3.1.10)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -319,10 +319,10 @@ GEM
       bigdecimal (= 1.2.5)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
-    delayed_job (4.0.4)
-      activesupport (>= 3.0, < 4.2)
-    delayed_job_active_record (4.0.2)
-      activerecord (>= 3.0, < 4.2)
+    delayed_job (4.0.6)
+      activesupport (>= 3.0, < 5.0)
+    delayed_job_active_record (4.0.3)
+      activerecord (>= 3.0, < 5.0)
       delayed_job (>= 3.0, < 4.1)
     devise (3.2.4)
       bcrypt (~> 3.0)

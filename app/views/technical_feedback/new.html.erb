@@ -11,7 +11,7 @@
 
       <p class="feedback__warning"><%= t('.mandatory_warning') %></p>
 
-      <%= form_for new_feedback, as: :feedback, url: feedback_path, builder: Dough::Forms::Builders::Validation do |f| %>
+      <%= form_for new_feedback, as: :feedback, url: technical_feedback_path, builder: Dough::Forms::Builders::Validation do |f| %>
         <%= f.validation_summary %>
         <div class="form__row <%= 'form__row--is-errored' if f.object.errors.include?(:attempting) %>">
           <%= f.errors_for :attempting %>

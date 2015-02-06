@@ -11,8 +11,7 @@ module Core::Repository
         response = connection.get(resource_url)
         AttributeBuilder.build(response)
       rescue => e
-        Rails.logger.error(e.message)
-        Rails.logger.info('Fallback to #{fallback_repository}')
+        Rails.logger.error("Tried to fetch from Contento. Error message: #{e.message}")
         fallback_repository.find(id)
       end
 

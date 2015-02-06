@@ -132,7 +132,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    car_cost_tool (1.0.4.108)
+    car_cost_tool (1.0.4.109)
       dough-ruby (~> 5.0)
       font-awesome-rails (~> 4.1)
       nokogiri
@@ -288,7 +288,7 @@ GEM
       dough-ruby (~> 5.0)
       rails (~> 4.1.8)
     ffi (1.9.3)
-    font-awesome-rails (4.2.0.0)
+    font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -541,7 +541,7 @@ GEM
     rubytree (0.9.3)
       json (~> 1.8)
       structured_warnings (~> 0.1)
-    rubyzip (1.1.6)
+    rubyzip (1.1.7)
     safe_yaml (1.0.3)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -643,7 +643,7 @@ DEPENDENCIES
   budget_planner (~> 4.0.1.689)
   byebug
   capybara
-  car_cost_tool (~> 1.0.1)
+  car_cost_tool (~> 1.0.4.109)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

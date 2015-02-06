@@ -7,10 +7,17 @@ module Core::Repository
       end
 
       def find(id)
-        response = connection.get('%{locale}/%{id}.json' % { locale: I18n.locale, id: id })
+        resource_url = '%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
+        response = connection.get(resource_url)
         AttributeBuilder.build(response)
-      rescue
+      rescue => e
+        Rails.logger.error(e.message)
+        Rails.logger.info('Fallback to #{fallback_repository}')
         fallback_repository.find(id)
+      end
+
+      def resource_name
+        self.class.name.split('::')[-2].underscore
       end
 
       private

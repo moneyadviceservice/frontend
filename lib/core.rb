@@ -66,15 +66,18 @@ module Core
 
     module ActionPlans
       autoload :PublicWebsite, 'core/repository/action_plans/public_website'
+      autoload :CMS, 'core/repository/action_plans/cms'
     end
 
     module Videos
       autoload :PublicWebsite, 'core/repository/videos/public_website'
+      autoload :CMS, 'core/repository/videos/cms'
     end
 
     module Articles
       autoload :Fake, 'core/repository/articles/fake'
       autoload :PublicWebsite, 'core/repository/articles/public_website'
+      autoload :CMS, 'core/repository/articles/cms'
     end
 
     module Categories
@@ -104,6 +107,7 @@ module Core
 
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
+      autoload :CMS, 'core/repository/news/cms'
     end
 
     module NewsletterSubscriptions

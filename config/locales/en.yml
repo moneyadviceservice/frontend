@@ -151,6 +151,7 @@ en:
         - text: Tools and calculators to help you keep track and plan ahead
         - text: Support in person, over the phone and online
       promo_link_text: What to do when your debt management plan stops
+      promo_link_url: /en/campaigns/debt-management
       directory_heading: Choose a section to get started...
       directory_heading_two: Browse the Money Advice Service website
       description: >
@@ -173,22 +174,35 @@ en:
       view_all_link_expanded: of our popular tools and calculators
       promoted_heading: What's new
       promoted:
-        - url: /en/categories/tools-and-calculators
-          text: Tools and calculators
-          image: tools-calculators.jpg
-          content: Try our useful calculators, tools and resources to help you manage your money.
+        - url: https://blog.moneyadviceservice.org.uk/can-you-switch-your-energy-to-a-cheaper-deal
+          text: Can you switch to a cheaper energy deal?
+          image: cooking.jpg
+          content: New rules mean you can change tariff in just 17 days
+          blog: true
         - url: /en/news/do-you-have-a-money-resolution-make-2015-the-year-of-your-finances-with-our-five-tips
           text: Five money resolutions for 2015
-          image: new-year-2014.jpg
+          image: keys.jpg
           content: Get your finances in shape for the New Year.
+        - url: https://blog.moneyadviceservice.org.uk/what-are-pensioner-bonds-ten-things-you-need-to-know
+          text: What are Pensioner Bonds?
+          image: pensioner.jpg
+          content: 10 things you need to know about the new savings account
+          blog: true
+        - url: /en/articles/living-on-a-low-income-tips
+          text: How to live on a low income
+          image: piggybanks.jpg
+          content: Positive steps to help make your money go further
+      promoted_no_image:
         - url: /en/payday-loans
-          text: Payday loans - don't be tempted by fast cash
-          image: payday-loans.jpg
-          content: Payday loans seem an easy solution when money's short, but often lead to serious debt.
-        - url: /en/tools/debt-advice-locator
-          text: Where to go to get free debt advice
-          image: free-debt-advice.jpg
-          content: Find out where you can get free, confidential help if you are struggling with debt.
+          text: "Payday loans: Late repayment can cause you serious problems"
+          content: Before you take one out, use this tool to get advice
+        - url: /en/tools/health-check
+          text: Money Health Check tool
+          content: Don't know where you stand with money? Use our tool now to find out how to improve your situation
+      stripe_banner:
+        url: /en/tools/debt-advice-locator
+        worried_about_debt: Worried about debt?
+        find_out_where: Find out where to get free, confidential help now
       blog_title: Your Money Advice blog
       blog_description: Tips, news and views on all things money from mortgages and savings to budgeting and benefits
 

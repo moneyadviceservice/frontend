@@ -1,0 +1,49 @@
+.stripe-banner {
+  background: #f3f3f3 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgODAgODAiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMCA4MEw4MCAwIi8+PC9zdmc+);
+  background-size: 8px;
+  text-align: center;
+  margin-top: $baseline-unit*8;
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*14;
+  }
+}
+
+.stripe-banner__link {
+  display: block;
+  position: relative;
+  padding: $baseline-unit*6;
+  font-size: 30px;
+  line-height: 32px;
+  &:link,
+  &:visited,
+  &:hover {
+    color: #000;
+  }
+
+  @include respond-to($mq-s) {
+    padding-right: 16%;
+  }
+}
+
+.stripe-banner__bold {
+  font-weight: 700;
+}
+
+.stripe-banner__arrow {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: $baseline-unit auto 0 auto;
+
+  @include respond-to($mq-s) {
+    position: absolute;
+    top: 25%;
+    right: 3%;
+  }
+
+  @include respond-to($mq-l) {
+    top: 15%;
+    right: 9%;
+  }
+}

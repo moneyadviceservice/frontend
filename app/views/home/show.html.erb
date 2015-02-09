@@ -45,4 +45,6 @@
 </div>
 
 <%= render 'shared/tool_promos', items: t('.tools') %>
-<%= render 'shared/article_promos', items: t('.promoted') %>
+<%= render 'shared/article_promos', items_with_image: t('.promoted'), items_without_image: t('.promoted_no_image') %>
+
+<%= render 'shared/stripe_banner', item: t('.stripe_banner') %>

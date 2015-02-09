@@ -1,20 +1,32 @@
 <div class="l-constrained">
   <section class="l-promo-articles">
-    <%= heading_tag(level: 2, class: 'l-promo-articles__heading') do %>
+    <%= heading_tag(level: 2, class: 'visually-hidden') do %>
       <%= t('home.show.promoted_heading') %>
     <% end %>
 
-    <% items.each do |item| %>
+    <% items_with_image.each do |item| %>
       <div class="l-promo-articles__item">
         <div class="t-article-promos">
-          <%= heading_tag(level: 2, class: 'promo__heading') do %>
-            <%= link_to item[:url], class: 'promo__link' do %>
-              <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
+          <%= link_to item[:url], class: 'promo__link' do %>
+            <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
+            <%= heading_tag(level: 2, class: "promo__heading #{item[:blog] ? 'promo__heading--blog' : ''}") do %>
               <%= item[:text] %>
             <% end %>
+            <p class="promo__content"><%= item[:content] %></p>
           <% end %>
+        </div>
+      </div>
+    <% end %>
 
-          <p class="promo__content"><%= item[:content] %></p>
+    <% items_without_image.each do |item| %>
+      <div class="l-promo-articles__item l-promo-articles__item--no-image">
+        <div class="t-article-promos">
+          <%= link_to item[:url], class: 'promo__link' do %>
+            <%= heading_tag(level: 2, class: 'promo__heading') do %>
+              <%= item[:text] %>
+            <% end %>
+            <p class="promo__content"><%= item[:content] %></p>
+          <% end %>
         </div>
       </div>
     <% end %>

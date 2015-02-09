@@ -71,4 +71,16 @@ RSpec.describe CategoryContentDecorator do
       expect(subject.icon_class).to eq('icon--foo-bar-baz')
     end
   end
+
+  describe '#guide?' do
+    context 'category' do
+      let(:item) { double(type: 'category') }
+      specify { expect(decorator).to_not be_guide }
+    end
+
+    context 'guide' do
+      let(:item) { double(type: 'guide') }
+      specify { expect(decorator).to be_guide }
+    end
+  end
 end

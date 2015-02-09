@@ -36,6 +36,7 @@ module Core
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
+  autoload :CorporateReader, 'core/interactor/corporate_reader'
   autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
@@ -69,15 +70,19 @@ module Core
       autoload :CMS, 'core/repository/action_plans/cms'
     end
 
-    module Videos
-      autoload :PublicWebsite, 'core/repository/videos/public_website'
-      autoload :CMS, 'core/repository/videos/cms'
-    end
-
     module Articles
       autoload :Fake, 'core/repository/articles/fake'
       autoload :PublicWebsite, 'core/repository/articles/public_website'
       autoload :CMS, 'core/repository/articles/cms'
+    end
+
+    module Corporate
+      autoload :CMS, 'core/repository/corporate/cms'
+    end
+
+    module Videos
+      autoload :PublicWebsite, 'core/repository/videos/public_website'
+      autoload :CMS, 'core/repository/videos/cms'
     end
 
     module Categories

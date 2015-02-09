@@ -107,6 +107,7 @@ Rails.application.routes.draw do
     resources :news, only: [:show, :index]
     resource :advice, only: :show
     resources :videos, only: :show
+    resources :corporate, only: [:show]
 
     resources :campaigns, only: 'show',
                               path: 'campaigns',

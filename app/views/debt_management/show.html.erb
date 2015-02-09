@@ -98,10 +98,24 @@
         </section>
       <% end %>
     </section>
+
+    <section class="l-debtmanagement">
+      <div class="l-debtmanagement__inner l-debtmanagement__inner--with-image">
+        <h2 class="l-debtmanagement__companies-heading"><%= t('companies.title') %></h2>
+        <div class="l-debtmanagement__companies-list">
+          <%= t('companies.intro_html') %>
+          <ul>
+            <% t('companies.companies').each do |item| %>
+              <li><%= item[:text] %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 
-<div class="l-tool-advert js-tool-advert">
+<div class="l-tool-advert">
   <div class="l-constrained">
     <div class="l-tool-advert__inner">
       <h2 class="l-tool-advert__heading"><%= t('tool_advert.heading') %></h2>

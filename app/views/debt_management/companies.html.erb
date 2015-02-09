@@ -1,0 +1,15 @@
+<div class="l-constrained">
+  <div class="l-campaign__content">
+    <h1><%= t('companies.standalone_title') %></h1>
+    <p><%= t('companies.standalone_intro') %></p>
+
+    <ul>
+      <% t('companies.companies').each do |item| %>
+        <li><%= item[:text] %></li>
+      <% end %>
+    </ul>
+
+    <p>
+      <%= t('companies.back_to_faq_html') %>
+    </p>
+</div>

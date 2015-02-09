@@ -7,6 +7,9 @@ class DebtManagementController < ApplicationController
   def faq
   end
 
+  def companies
+  end
+
   def display_menu_button_in_header?
     false
   end

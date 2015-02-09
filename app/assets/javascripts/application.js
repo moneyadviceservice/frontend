@@ -74,6 +74,14 @@ require(['common', 'jquery'], function(MAS, $) {
         numberItemsToDisplay: 6
       });
 
+      // Debt Campaign Companies affected
+      new Collapsable({
+        name: 'companiesAffected',
+        showIcon: true,
+        useButton: true,
+        triggerEl: '.l-debtmanagement__companies-heading',
+        targetEl: '.l-debtmanagement__companies-list'
+      });
 
       if($(this).width() <= 720){
         new Collapsable({

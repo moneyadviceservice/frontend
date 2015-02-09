@@ -103,6 +103,42 @@
   clear: both;
 }
 
+.l-debtmanagement__companies-heading {
+  @extend %collapsable-trigger;
+}
+
+.l-debtmanagement__companies-list {
+  @extend %collapsable-target;
+}
+
+.js .l-debtmanagement__companies-heading {
+  position: relative;
+  padding-left: $category-inset;
+
+  button {
+    margin-left: -$category-inset;
+    padding-left: $category-inset;
+    text-align: left;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+
+  & .icon--toggle {
+    @extend .icon--plus;
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+
+  &.is-on .icon--toggle {
+    @extend .icon--minus;
+  }
+}
+
 .l-tool-advert {
   background-color: $color-grey-pale;
   border-bottom: 1px solid $color-grey-palest;

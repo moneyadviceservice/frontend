@@ -40,8 +40,8 @@
 
 <!-- Organisms -->
 
-<%= styleguide_section sections['Trust banner'] do %>
-  <%= render 'shared/trust_banner', items: t('home.show.trust_banner_list') %>
+<%= styleguide_section sections['Home Top'] do %>
+  <%= render 'shared/home_top' %>
 <% end %>
 
 <%= styleguide_section sections['Directory'] do %>
@@ -50,7 +50,7 @@
 <% end %>
 
 <%= styleguide_section sections['Promo'] do %>
-  <%= render 'shared/article_promos', items: t('home.show.promoted') %>
+  <%= render 'shared/article_promos', items_with_image: t('home.show.promoted'), items_without_image: t('home.show.promoted_no_image') %>
 <% end %>
 
 <%= styleguide_section sections['Main navigation'] do %>

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/pension-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 9272) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 6a53ee55-ee1f-4651-8e5b-68c17d029c9f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"6d5425da1feb6fbf29a47af6f600242d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a53ee55-ee1f-4651-8e5b-68c17d029c9f
+      X-Runtime:
+      - '0.008228'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Mon, 02 Feb 2015 14:29:53 GMT
+      Content-Length:
+      - '193'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"pension-basics","type":"category","title":"Pension basics","description":"Find
+        out why and when to save into a pension and how to work out what your pension
+        pot might be.","contents":[]}'
+    http_version: 
+  recorded_at: Mon, 02 Feb 2015 14:29:53 GMT
+recorded_with: VCR 2.9.2

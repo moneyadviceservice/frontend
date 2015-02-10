@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/how-to-save-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 74111) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a98786ea7dcfde8acb01095e115c3e9b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      X-Runtime:
+      - '0.010209'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 04 Feb 2015 15:00:43 GMT
+      Content-Length:
+      - '233'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-save-money","type":"category","title":"Sut i gynilo arian","description":"Cyfrifwch
+        faint allwch fforddio ei gynilo a dysgwch sut i sefydlu a chyrraedd eich nod
+        cynilo.","parent_id":"saving-and-investing","contents":[]}'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 15:00:43 GMT
+recorded_with: VCR 2.9.2

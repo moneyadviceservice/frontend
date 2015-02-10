@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/how-to-invest-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 74264) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 84afd808-0a98-435d-ae31-5ef143b10aee
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1013ac831fd701e595bd6650fde2b20f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 84afd808-0a98-435d-ae31-5ef143b10aee
+      X-Runtime:
+      - '0.010073'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 04 Feb 2015 15:01:33 GMT
+      Content-Length:
+      - '244'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"how-to-invest-money","type":"category","title":"How to invest
+        money","description":"Learn about investing basics, how to make an investment
+        plan, and understanding your attitude to risk.","parent_id":"saving-and-investing","contents":[]}'
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 15:01:33 GMT
+recorded_with: VCR 2.9.2

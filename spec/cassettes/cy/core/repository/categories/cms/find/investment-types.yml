@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/investment-types.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 74111) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"6dcf2e2af73650821dba9b6815445e31"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7862dc5c-4462-4f4d-bbec-d65a9c16fcab
+      X-Runtime:
+      - '0.008340'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 04 Feb 2015 15:00:43 GMT
+      Content-Length:
+      - '249'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImludmVzdG1lbnQtdHlwZXMiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0
+        aXRsZSI6Ik1hdGhhdSBvIGZ1ZGRzb2RkaWFkIiwiZGVzY3JpcHRpb24iOiJH
+        d3lib2RhZXRoIGFtIHN0b2NpYXUgYSBjaHlmcmFuZGRhbGlhZGF1LCBib25k
+        aWF1IGJ1ZGRzb2RkaSwgY3JvbmZleWRkIHRyYWNpbywgcG9saXPDr2F1IGd5
+        ZGFnLWVsdyBhIGd3YWRkb2wuIiwicGFyZW50X2lkIjoic2F2aW5nLWFuZC1p
+        bnZlc3RpbmciLCJjb250ZW50cyI6W119
+    http_version: 
+  recorded_at: Wed, 04 Feb 2015 15:00:43 GMT
+recorded_with: VCR 2.9.2

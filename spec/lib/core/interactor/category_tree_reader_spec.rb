@@ -30,7 +30,12 @@ module Core
             'type'        => 'category',
             'title'       => 'Setting up home',
             'description' => 'Deciding whether to rent or buy, \n money when sharing with others\n',
-            'contents'    => []
+            'contents'    => [{
+              'id'          => 'setting-up-home-child',
+              'type'        => 'guide',
+              'title'       => 'Setting up home child',
+              'description' => 'Deciding whether to rent or buy, \n money when sharing with others\n'
+            }]
           }]
         }]
       end

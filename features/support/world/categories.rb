@@ -13,7 +13,7 @@ module World
     end
 
     def non_navigational_category
-      fixture 'categories/tools--resources.yml'
+      fixture 'categories/tools-and-calculators.yml'
     end
 
     def browse_to_category(category, locale)

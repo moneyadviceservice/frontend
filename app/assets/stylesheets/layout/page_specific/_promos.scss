@@ -1,4 +1,4 @@
-.l-promos {
+.l-tool-promos {
   @extend .clearfix;
   overflow: hidden;
   position: relative;
@@ -32,7 +32,7 @@
   }
 }
 
-.l-promos__heading {
+.l-tool-promos__heading {
   @extend %font-heading-medium;
   @include body(30, 34);
   color: $color-heading-extra-small;
@@ -44,7 +44,7 @@
   }
 }
 
-.l-promos__item {
+.l-tool-promos__item {
   @include column(12);
   margin-bottom: $baseline-unit*1;
   position: relative;
@@ -68,7 +68,7 @@
       fill: $color-button-primary-active;
     }
 
-    .l-promo__view-all {
+    .l-tool-promos__view-all {
       text-decoration: underline;
     }
   }
@@ -117,7 +117,7 @@
   }
 }
 
-.l-promo__view-all {
+.l-tool-promos__view-all {
   @extend %font-heading-medium;
   text-align: left;
   padding-bottom: $baseline-unit*3;

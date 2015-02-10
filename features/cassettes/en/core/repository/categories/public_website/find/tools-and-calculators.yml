@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/tools-and-calculators.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Douglas-Roper.local; droper; 4981) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 518320a3-6b84-4772-aec1-83a2e3d05fc7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 14:11:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - b4b3db13ca9519206b96070faba130df
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 14:11:42 GMT; secure
+      - _session_id=b4b3db13ca9519206b96070faba130df; path=/; secure; HttpOnly
+      - _web_tracking=d362db53ca4e52f3c85dba0a59499e5a; path=/; expires=Wed, 10-Feb-2016
+        14:11:42 GMT; secure
+      X-Request-Id:
+      - 518320a3-6b84-4772-aec1-83a2e3d05fc7
+      X-Runtime:
+      - '0.179892'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"tools-and-calculators","title":"Tools & calculators","description":"Calculators,
+        letter templates and free printed guides \u2013 useful tools and resources
+        to help you","parent_id":null,"contents":[{"id":"calculators","type":"category","title":"Calculators","description":"Our
+        easy-to-use calculators can help you budget, save and cut back on costs"},{"id":"comparison-tables","type":"category","title":"Comparison
+        tables","description":"Our comparison tables are completely unbiased - we
+        are set up by government and don\u2019t receive any incentive or commission
+        if you go on to choose a product"},{"id":"letter-templates","type":"category","title":"Letter
+        templates","description":"Our easy-to-use letter templates are here to help
+        you if you need to set up, cancel or complain about something"},{"id":"order-forms","type":"category","title":"Order
+        forms","description":"Use these forms to order our free printed guides, which
+        give you clear, unbiased information and advice"},{"id":"free-printed-guides","type":"category","title":"Free
+        printed guides","description":"Read our free printed guides, which give you
+        clear, unbiased information and advice"},{"id":"videos","type":"category","title":"Videos","description":"See
+        our videos, covering subjects such as insurance, retirement savings and inflation"},{"id":"interactive-timelines","type":"category","title":"Interactive
+        timelines","description":"Explore our money timelines so you know the actions
+        to take and things that could affect your income"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 14:11:42 GMT
+recorded_with: VCR 2.9.2

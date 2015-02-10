@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/videos/paratoi-ar-gyfer-credyd.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 15130) ruby/2.1.2
+        (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 7767559a-568d-4d59-9811-fa372499c3c1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 15:43:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c743d5ee9f414f85c27f488491fb4543
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 15:43:16 GMT; secure
+      - _session_id=c743d5ee9f414f85c27f488491fb4543; path=/; secure; HttpOnly
+      - _web_tracking=a9fa13840eefacc1dc97958d5501d983; path=/; expires=Wed, 10-Feb-2016
+        15:43:16 GMT; secure
+      X-Request-Id:
+      - 7767559a-568d-4d59-9811-fa372499c3c1
+      X-Runtime:
+      - '0.724857'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"paratoi-ar-gyfer-credyd","title":"Paratowch at Gredyd Uniongyrchol","body":"<p>Ym
+        mis Ebrill 2013, dechreuodd y llywodraeth gyflwyno math newydd o gymorth ariannol
+        o\u2019r enw\u00a0Gredyd Uniongyrchol. </p><p>Mae ar gyfer pobl sy\u2019n
+        chwilio am waith neu sydd ar incwm isel ac yn y pendraw bydd yn disodli llawer
+        o\u2019r budd-daliadau a chredydau treth maent yn eu derbyn ar hyn o bryd.
+        </p><p>Mae yna bethau y gallwch eu gwneud nawr i sicrhau eich bod yn barod
+        am y newidiadau pan fyddant yn digwydd. </p><p><iframe id=\"video-link\" width=\"620\"
+        height=\"380\" src=\"https://www.youtube.com/embed/Bf3UL0EbeJE?wmode=transparent&rel=0&iv_load_policy=3\"
+        frameborder=\"0\" allowfullscreen></iframe></p><p><a title=\"get ready welsh\"
+        href=\"https://www.moneyadviceservice.org.uk/files/get-ready-for-universal-credit-welsh-doc.doc\">Darllenwch
+        drawsgri fiad y fideo (Doc)</a></p>","categories":["videos","universal-credit"],"videoUrl":"https://www.youtube.com/embed/Bf3UL0EbeJE"}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 15:43:17 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,32 @@
+<% content_for(:context_bar) do %>
+  <% if @breadcrumbs.present? %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <% elsif corporate.categories.present? %>
+    <%= render 'shared/related_categories', categories: corporate.categories %>
+  <% end %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <%= heading_tag corporate.title %>
+      <%= corporate.content %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/nav',
+             categories:        category_navigation,
+             active_categories: active_categories
+  %>
+</div>
+
+<% content_for(:alternate_link) do %>
+  <% corporate.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, lang: locale, class: "t-#{locale}-link") do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/action_plans/sut-i-agor-cyfrif-banc.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 12720) ruby/2.1.2
+        (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 5cc2d336-f224-4b3c-86c5-17286e86c069
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5cc2d336-f224-4b3c-86c5-17286e86c069
+      X-Runtime:
+      - '0.025209'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Tue, 10 Feb 2015 14:46:02 GMT
+      Content-Length:
+      - '28'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"message":"Page not found"}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 14:46:02 GMT
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-agor-cyfrif-banc.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 12720) ruby/2.1.2
+        (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 5cc2d336-f224-4b3c-86c5-17286e86c069
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 14:46:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Link:
+      - <https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-agor-cyfrif-banc>
+        rel="alternate"; hreflang="cy-GB"; title="Cynllun gweithredu - Sut i agor
+        cyfrif banc", <https://www.moneyadviceservice.org.uk/en/action_plans/how-to-open-a-bank-account>
+        rel="alternate"; hreflang="en-GB"; title="Action plan - How to open a bank
+        account"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - e18f9a678e5e8ac22b9ea7b864c5630f
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 14:46:02 GMT; secure
+      - _session_id=e18f9a678e5e8ac22b9ea7b864c5630f; path=/; secure; HttpOnly
+      - _web_tracking=50766ba870d1c3cc7691d99b4594d802; path=/; expires=Wed, 10-Feb-2016
+        14:46:02 GMT; secure
+      X-Request-Id:
+      - 5cc2d336-f224-4b3c-86c5-17286e86c069
+      X-Runtime:
+      - '0.033893'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"sut-i-agor-cyfrif-banc","title":"Cynllun gweithredu - Sut i
+        agor cyfrif banc","description":"Dysgwch sut i agor y cyfrif banc mwyaf addas
+        i chi. Edrychwch ar y cynllun gweithredu hwn er mwyn cymharu cyfrifon banc
+        a dewis yr opsiwn mwyaf priodol i chi.","body":"<p class=\"intro\"><img src=\"/images/new_action_plan_icon.jpg\"/>Dilynwch
+        y camau hyn i ddewis ac agor cyfrif banc sy\u2019n gywir i chi. </p><div class=\"action-item\"><h3>Cymharwch
+        gyfrifon i gael yr un gorau i chi </h3><div class=\"collapsable\"><div class=\"why\"><h4>Pam?
+        </h4><p>Mae cryn amrywiaeth rhwng ffioedd, taliadau a llog cyfrifon banc felly
+        mae\u2019n bwysig dewis cyfrif sy\u2019n addas ar gyfer y ffordd rydych yn
+        rheoli\u2019ch arian. </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-dewis-y-cyfrif-banc-cywir\">Gwiriwch
+        ein canllaw Sut i ddewis y cyfrif banc cywir</a></li><li><a title=\"Cymharu
+        cyfrifon cyfredol\" href=\"https://compare.moneyadviceservice.org.uk/currentaccounts/Step1?language=cy\">Defnyddiwch
+        ein tabl cymharu cyfrifon cyfredol diduedd i gymharu cost cyfrifon.</a></li></ul></div></div></div><div
+        class=\"action-item\"><h3>Penderfynwch p\u2019un a ydych eisiau cyfrif ar
+        y cyd neu gyfrif sengl </h3><div class=\"collapsable\"><div class=\"why\"><h4>Pam?
+        </h4><p>Gall cyfrifon ar y cyd fod yn ffordd gyfleus i reoli treuliau a rennir
+        ond mae risgiau ymhlyg, yn arbennig os oes gan un ohonoch hanes credyd gwael.
+        </p></div><div class=\"how\"><h4>Sut? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-chi-reoli-arian-ar-y-cyd-neu-ar-wahan\">Gwiriwch
+        ein canllaw A ddylech chi reoli arian ar y cyd neu ar wah\u00e2n?</a></li><li><a
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/cyfrifon-ar-y-cyd\">Gweler
+        ein canllaw Cyfrifon ar y Cyd</a></li></ul></div></div></div><div class=\"action-item\"><h3>Gwiriwch
+        eich adroddiad credyd </h3><div class=\"collapsable\"><div class=\"why\"><h4>Pam?
+        </h4><p>Os oes gennych hanes credyd gwael, gall y banc wrthod eich cais. Mae\u2019n
+        syniad da i sicrhau bod unrhyw wallau ar eich adroddiad yn cael eu cywiro
+        cyn bod y banc yn gwneud eu gwiriadau credyd. </p></div><div class=\"how\"><h4>Sut?
+        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gweld-eich-adroddiad-credyd\">Darllenwch
+        ein canllaw Sut i wirio\u2019ch adroddiad credyd</a></li><li><a href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd\">Canfyddwch
+        sut i wella\u2019ch statws credyd</a></li></ul></div></div></div><div class=\"action-item\"><h3>Paratowch
+        ddogfennau ar gyfer gwiriad hunaniaeth y banc </h3><div class=\"collapsable\"><div
+        class=\"why\"><h4>Pam? </h4><p>Bydd pob banc yn gofyn ichi ddarparu tystiolaeth
+        o\u2019ch hunaniaeth a\u2019ch cyfeiriad. Gallwch gyflymu pethau trwy sicrhau
+        bod y dogfennau hyn wrth law pan ydych yn gwneud cais am eich cyfrif. </p></div><div
+        class=\"how\"><h4>Sut? </h4><p>Os nad oes gennych yr union ddogfennau mae\u2019r
+        banc yn gofyn amdanynt, peidiwch \u00e2 phoeni. Siaradwch gyda rhywun yn y
+        banc a byddant yn dweud wrthych chi pa lythyrau neu ddogfennau eraill y cewch
+        eu darparu. </p></div></div></div>","categories":["running-a-bank-account"]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 14:46:02 GMT
+recorded_with: VCR 2.9.2

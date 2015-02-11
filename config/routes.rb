@@ -98,8 +98,9 @@ Rails.application.routes.draw do
               only: 'show',
               constraints: ValidResource.new(:article) do
                 resource :feedback, only: [:new, :create], controller: :article_feedbacks
-                get 'preview', on: :member, to: 'articles_preview#show'
               end
+
+    get '/:page_type/:id/preview' => 'articles_preview#show', page_type: /articles|action_plans|news|videos|corporate/, constraints: ValidResource.new(:article)
 
     resources :categories, only: 'show',
               constraints:       ValidResource.new(:category)

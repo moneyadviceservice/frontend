@@ -8,7 +8,9 @@ module Core::Repository
         attributes['body']        = BlockComposer.new(attributes['blocks']).to_html
         attributes['description'] = attributes['meta_description']
         attributes['categories']  = attributes['category_names']
-        attributes['alternates']  = []
+        attributes['alternates']  = Array(attributes['translations']).map do |translation|
+          { url: translation['link'], title: translation['label'], hreflang: translation['language'] }
+        end
 
         attributes
       end

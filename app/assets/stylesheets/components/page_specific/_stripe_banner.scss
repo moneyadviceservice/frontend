@@ -3,8 +3,8 @@
 // Styleguide Stripe banner
 
 .stripe-banner {
-  background: #f3f3f3 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgODAgODAiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMCA4MEw4MCAwIi8+PC9zdmc+);
-  background-size: 8px;
+  background: #f3f3f3 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgODAgODAiPjxwYXRoIHN0cm9rZT0iIzAwMCIgZD0iTTAgODBMODAgMCIvPjwvc3ZnPg==);
+  background-size: 8px 8px;
   text-align: center;
   margin-top: $baseline-unit*8;
 
@@ -26,7 +26,15 @@
   }
 
   @include respond-to($mq-s) {
+    padding-right: 20%;
+  }
+
+  @include respond-to($mq-l) {
     padding-right: 16%;
+  }
+
+  @include respond-to($mq-xl) {
+    padding-right: 12%;
   }
 }
 
@@ -34,7 +42,7 @@
   font-weight: 700;
 }
 
-.stripe-banner__arrow {
+.stripe-banner-arrow {
   width: 64px;
   height: 64px;
   display: block;
@@ -43,11 +51,20 @@
   @include respond-to($mq-s) {
     position: absolute;
     top: 25%;
-    right: 3%;
+    right: 7%;
   }
 
   @include respond-to($mq-l) {
     top: 15%;
-    right: 9%;
+    right: 7%;
+  }
+}
+
+.stripe-banner-arrow__circle {
+  fill: $color-button-primary;
+
+  .stripe-banner__link:hover &,
+  .stripe-banner__link:focus & {
+    fill: $color-button-primary-active;
   }
 }

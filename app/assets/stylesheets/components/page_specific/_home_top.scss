@@ -20,6 +20,12 @@
   @include respond-to($mq-l) {
     background-size: 65%;
     background-position: 141% 100%;
+
+    @if ($responsive == false) {
+      width: $mq-l;
+      margin: 0 auto;
+      float: none;
+    }
   }
 
   @include respond-to($mq-xl) {

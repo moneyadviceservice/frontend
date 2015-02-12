@@ -9,13 +9,13 @@
   margin-right: -4px;
   line-height: 1;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-xl) {
     padding: 0 $baseline-unit*2;
     border-right: 1px solid $color-primary-nav;
   }
 
   .theme-cy & {
-    padding-left: $baseline-unit*2;
+    padding-left: $baseline-unit;
   }
 }
 

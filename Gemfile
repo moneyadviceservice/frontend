@@ -53,6 +53,8 @@ gem 'pensions_calculator', '~> 0.2'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git'
 gem 'savings_calculator', '~> 1.1.0'
 
+gem 'timelines', '>= 1.2.0', git: 'git@github.com:moneyadviceservice/timelines.git'
+
 group :assets do
   gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 4.0.0'

@@ -1,6 +1,6 @@
 module ToolMountPoint
   class Timelines < Base
-    EN_ID = 'timelines'
-    CY_ID = 'llinellau-amser'
+    EN_ID = 'baby-money-timeline'
+    CY_ID = 'llinell-amser-arian-babi'
   end
 end

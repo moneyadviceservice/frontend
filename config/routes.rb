@@ -93,9 +93,8 @@ Rails.application.routes.draw do
     end
 
     Feature.with(:timelines) do
-      mount Timelines::Engine => '/tools/:tool_id/:id',
-        # constraints: ToolMountPoint.for(:timelines)
-            constraints: { tool_id: %r{timelines|llinell-amser} }
+      mount Timelines::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:timelines)
     end
 
     if Feature.active?(:agreements)

@@ -4,6 +4,7 @@
       <%= link_to main_app.root_path, class: 'mas-logo__link' do %>
         <%= image_tag("logo-sprite-#{I18n.locale}.png", alt: t('layouts.base.title'), class: 'mas-logo__img') %>
       <% end %>
+      <div class="l-header__strapline"><%= t('layouts.base.strapline') %></div>
     </div>
 
     <%= render 'shared/mobile_nav' %>

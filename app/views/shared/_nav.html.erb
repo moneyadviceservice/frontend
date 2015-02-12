@@ -6,6 +6,7 @@
 
 <% if categories.present? %>
   <nav class="nav" role="navigation" aria-label="main" id="primary-nav" tabindex="-1">
+    <span class="nav__strapline"><%= t('layouts.base.strapline') %></span>
     <ul class="link-list-primary">
       <% categories.each do |category| %>
         <% if active_categories.member?(category.id) %>

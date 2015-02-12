@@ -18,17 +18,19 @@
       </div>
     <% end %>
 
-    <% items_without_image.each do |item| %>
-      <div class="l-promo-articles__item l-promo-articles__item--no-image">
-        <div class="t-article-promos">
-          <%= link_to item[:url], class: 'promo__link' do %>
-            <%= heading_tag(level: 2, class: 'promo__heading') do %>
-              <%= item[:text] %>
+    <div class="l-promo-articles__noimages">
+      <% items_without_image.each do |item| %>
+        <div class="l-promo-articles__item l-promo-articles__item--no-image">
+          <div class="t-article-promos-no-image">
+            <%= link_to item[:url], class: 'promo__link' do %>
+              <%= heading_tag(level: 2, class: 'promo__heading') do %>
+                <%= item[:text] %>
+              <% end %>
+              <p class="promo__content"><%= item[:content] %></p>
             <% end %>
-            <p class="promo__content"><%= item[:content] %></p>
-          <% end %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </section>
 </div>

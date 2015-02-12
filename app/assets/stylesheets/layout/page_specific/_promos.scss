@@ -2,6 +2,7 @@
   @extend .clearfix;
   overflow: hidden;
   position: relative;
+  margin-top: $baseline-unit*6;
 
   .flexbox & {
     display: flex;
@@ -17,7 +18,6 @@
       display: flex;
       flex-flow: row;
       flex-wrap: wrap;
-      margin-top: $baseline-unit*4;
 
       &:after {
         @include column(12);
@@ -36,11 +36,16 @@
   @extend %font-heading-medium;
   @include body(30, 34);
   color: $color-heading-extra-small;
-  margin-top: $baseline-unit*3;
+  margin-top: 0;
   margin-bottom: $baseline-unit*2;
+  padding-right: $baseline-unit*9;
 
-  @include respond-to($mq-m) {
-    margin-top: 0;
+  @include respond-to($mq-l) {
+    max-width: 200px;
+  }
+
+  @include respond-to($mq-xl) {
+    padding-right: 0;
   }
 }
 
@@ -92,7 +97,6 @@
   @include respond-to($mq-l) {
     @include column(3);
     border-top: 0;
-    padding-right: 3%;
     margin-bottom: 0;
   }
 
@@ -127,6 +131,7 @@
   @extend .clearfix;
   overflow: hidden;
   position: relative;
+  margin-top: $baseline-unit*6;
 
   @include respond-to($mq-l) {
     margin-top: $baseline-unit*7;
@@ -168,7 +173,7 @@
 
   .flexbox & {
     @include respond-to($mq-s) {
-      flex-basis: 46%;
+      flex-basis: 46.6666667%;
     }
 
     @include respond-to($mq-l) {
@@ -179,8 +184,8 @@
 
 .l-promo-articles__item--no-image {
   min-height: 0;
-  border-left: 6px solid $color-green-secondary;
-  padding-left: 20px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMSI+PHBhdGggZmlsbD0iIzYxQTc0NCIgZD0iTTAgMGg2djFIMHoiLz48L3N2Zz4=) repeat-y; // using background instead of border-left due to ie flex box issues
+  background-size: 6px 1px;
 
   @include respond-to($mq-l) {
     @include column(6);
@@ -191,4 +196,14 @@
       flex-basis: 46%;
     }
   }
+}
+
+.l-promo-articles__noimages {
+  clear: both;
+}
+
+.l-tool-promos__calculator {
+  position: absolute;
+  right: 0;
+  top: $baseline-unit*3;
 }

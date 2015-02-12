@@ -9,8 +9,7 @@
 .promo__heading {
   @extend %font-heading-medium;
   @include body(18, 24);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 0 $baseline-unit;
   position: relative;
 
   @include respond-to($mq-m) {
@@ -18,6 +17,10 @@
   }
 
   color: $color-blue-medium;
+
+  .l-tool-promos__item & {
+    padding-right: $baseline-unit*3;
+  }
 }
 
 .promo__heading--blog:after {
@@ -45,6 +48,11 @@
     .promo__heading {
       text-decoration: underline;
     }
+  }
+
+  .l-promo-articles__item--no-image & {
+    display: block;
+    margin-left: 20px;
   }
 }
 

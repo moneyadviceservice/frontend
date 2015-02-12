@@ -18,7 +18,7 @@ RSpec.describe CorporateController, type: :controller do
       end
 
       it 'assigns corporate page' do
-        expect(assigns[:corporate]).to be(corporate)
+        expect(assigns[:article]).to be(corporate)
       end
     end
 

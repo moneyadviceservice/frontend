@@ -1,14 +1,7 @@
-class CorporateController < ApplicationController
-  decorates_assigned :corporate, with: ContentItemDecorator
-  include Navigation
+class CorporateController < ArticlesController
+  private
 
-  def show
-    @corporate = Core::CorporateReader.new(params[:id]).call do
-      not_found
-    end
-
-    assign_active_categories(*@corporate.categories)
-
-    @breadcrumbs = BreadcrumbTrail.build(@corporate, category_tree)
+  def interactor
+    Core::CorporateReader.new(params[:id])
   end
 end

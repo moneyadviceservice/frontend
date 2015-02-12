@@ -23,6 +23,10 @@ Feature: Home page
     When I visit the home page
     Then I should see promoted content
 
+  Scenario: User show stripe banner
+    When I visit the home page
+    Then I should see stripe banner
+
   Scenario: User can navigate to Money Advice Service social media profiles
     When I visit the home page
     Then I should be see links to MAS social media profiles

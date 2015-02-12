@@ -99,26 +99,26 @@
   }
 }
 
-.home-top-trust__content {
+.home-top-trust-content {
   @extend .unstyled-list;
   @extend .list-benefits;
   margin-bottom: $baseline-unit*2;
+}
 
-  > li {
-    @include body(16,24);
-    margin-bottom: $baseline-unit;
-    @extend %font-heading-medium;
+.home-top-trust-content__item {
+  @include body(16,24);
+  margin-bottom: $baseline-unit;
+  @extend %font-heading-medium;
 
-    @include respond-to($mq-m) {
-      max-width: 45%;
-    }
+  @include respond-to($mq-m) {
+    max-width: 45%;
+  }
 
-    @include respond-to($mq-l) {
-      max-width: none;
+  @include respond-to($mq-l) {
+    max-width: none;
 
-      .theme-cy & {
-        max-width: 570px;
-      }
+    .theme-cy & {
+      max-width: 570px;
     }
   }
 

@@ -3,9 +3,9 @@
   <div class="l-constrained">
     <div class="home-top-trust l-home-top-trust">
       <p class="home-top-trust__heading"><%= t('home.show.heading') %></p>
-      <ul class="home-top-trust__content">
+      <ul class="home-top-trust-content">
         <% t('home.show.trust_banner_list').each do |item| %>
-          <li><%= item[:text] %></li>
+          <li class="home-top-trust-content__item"><%= item[:text] %></li>
         <% end %>
       </ul>
     </div>

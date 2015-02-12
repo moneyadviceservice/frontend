@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   def not_implemented
-    -> (env) { [501, {}, []] }
+    -> (_) { [501, {}, []] }
   end
 
   get '/' => redirect('/en')
@@ -25,8 +25,13 @@ Rails.application.routes.draw do
       end
     end
 
-    devise_for :users, only: [:registrations, :sessions, :passwords],
-      controllers: { registrations: 'registrations', sessions: 'sessions', passwords: 'passwords'}
+    devise_for :users,
+               only: [:registrations, :sessions, :passwords],
+               controllers: {
+                 registrations: 'registrations',
+                 sessions: 'sessions',
+                 passwords: 'passwords'
+               }
 
     if Feature.active?(:profile)
       scope '/users' do
@@ -39,7 +44,7 @@ Rails.application.routes.draw do
       budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
 
       mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
-        constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
+            constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
     end
 
     Feature.with(:car_cost_tool) do
@@ -59,10 +64,10 @@ Rails.application.routes.draw do
 
     Feature.with(:health_check) do
       mount AdvicePlans::Engine => '/tools/:tool_id',
-      constraints: ToolMountPoint.for(:advice_plans)
+            constraints: ToolMountPoint.for(:advice_plans)
 
       mount DecisionTrees::Engine => '/tools/:tool_id',
-        constraints: ToolMountPoint.for(:decision_trees)
+            constraints: ToolMountPoint.for(:decision_trees)
     end
 
     Feature.with(:mortgage_calculator) do
@@ -75,12 +80,12 @@ Rails.application.routes.draw do
 
     Feature.with(:rio) do
       mount Rio::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:rio)
+            constraints: ToolMountPoint.for(:rio)
     end
 
     Feature.with(:savings_calculator) do
       mount SavingsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:savings_calculator)
+            constraints: ToolMountPoint.for(:savings_calculator)
     end
 
     Feature.with(:annuities_landing_page) do
@@ -100,21 +105,25 @@ Rails.application.routes.draw do
                 resource :feedback, only: [:new, :create], controller: :article_feedbacks
               end
 
-    get '/:page_type/:id/preview' => 'articles_preview#show', page_type: /articles|action_plans|news|videos|corporate/, constraints: ValidResource.new(:article)
+    get '/:page_type/:id/preview' => 'articles_preview#show',
+        page_type: /articles|action_plans|news|videos|corporate|tools/,
+        constraints: ValidResource.new(:article)
 
-    resources :categories, only: 'show',
-              constraints:       ValidResource.new(:category)
+    resources :categories,
+              only: 'show',
+              constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
     resource :advice, only: :show
     resources :videos, only: :show
     resources :corporate, only: [:show]
 
-    resources :campaigns, only: 'show',
-                              path: 'campaigns',
-                              constraints: {
-                                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
-                              }
+    resources :campaigns,
+              only: 'show',
+              path: 'campaigns',
+              constraints: {
+                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
+              }
 
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'

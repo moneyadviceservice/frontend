@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/having-a-baby.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Sebastian-Nanek-00079.local; sebastiannanek; 89659) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 4d890bf1-03df-4c54-b0e0-acd117ab6b20
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Feb 2015 17:02:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 22441ac23176325698cb399dc5105162
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 12-Feb-2016 17:02:47 GMT; secure
+      - _session_id=22441ac23176325698cb399dc5105162; path=/; secure; HttpOnly
+      - _web_tracking=f7f74b1c3f176091c6bfc73d26a92a18; path=/; expires=Fri, 12-Feb-2016
+        17:02:47 GMT; secure
+      X-Request-Id:
+      - 4d890bf1-03df-4c54-b0e0-acd117ab6b20
+      X-Runtime:
+      - '0.240848'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"having-a-baby","title":"Cael babi","description":"Cymorth gyda
+        rheoli eich arian cyn, yn ystod ac ar \u00f4l genedigaeth eich babi.","parent_id":"births-deaths-and-family","contents":[{"id":"hawliau-or-gwaith-pan-fyddwch-yn-feichiog","type":"guide","title":"Hawliau
+        o\u2019r gwaith pan fyddwch yn feichiog","description":"Mae\u2019n rhaid i\u2019ch
+        cyflogwr roi amser i ffwrdd gyda th\u00e2l i chi ar gyfer apwyntiadau cyn
+        geni ac absenoldeb mamolaeth, yn ogystal \u00e2 th\u00e2l mamolaeth"},{"id":"cael-trefn-ar-gyllid-y-teulu-ar-ol-cael-babi","type":"guide","title":"Cael
+        trefn ar gyllid y teulu ar \u00f4l cael babi","description":"Efallai mai dyma\u2019r
+        tro cyntaf y byddwch wedi rhannu\u2019ch arian. Dysgwch sut i gael yr egwyddorion
+        sylfaenol yn eu lle er mwyn i bethau weithio\u2019n ddidrafferth"},{"id":"cyfyngu-ar-wario-pan-fyddwch-yn-cael-babi-awgrymiadau-da","type":"guide","title":"Cyfyngu
+        ar wario pan fyddwch yn cael babi \u2013 awgrymiadau da","description":"Mae
+        cael babi yn gallu bod yn gostus ond does dim rhaid iddo fod. Edrychwch drwy\u2019r
+        syniadau gwych hyn ar arbed arian a gwario\u2019n gall"},{"id":"cyfrifiannell-costau-babi","type":"tool","title":"Cyfrifiannell
+        costau babi","description":"A wyddech chi fod babi\u2019n gallu costio cymaint
+        \u00e2 \u00a37,200 neu gyn lleied \u00e2 \u00a31,600 yn y flwyddyn gyntaf,
+        ac eithrio gofal plant?"},{"id":"budd-daliadau-y-gallwch-eu-hawlio-pan-ydych-yn-feichiog","type":"guide","title":"Budd-daliadau
+        y gallwch eu hawlio pan ydych yn feichiog","description":"Os ydych chi\u2019n
+        feichiog ac ar incwm isel, fe allech gael grant i brynu pethau i\u2019r babi,
+        neu dalebau i\u2019ch helpu i fwyta\u2019n iach"},{"id":"chi-eich-plant-a-ch-arian","type":"tool","title":"Chi,
+        eich plant a''ch arian","description":"Fideos a gweithgareddau difyr i roi
+        cymorth i chi ddysgu arferion ariannol da i\u2019ch plentyn"},{"id":"credydau-treth-a-help-arall-gyda-chostau-gofal-plant","type":"guide","title":"Credydau
+        treth a help arall gyda chostau gofal plant","description":"Gall credydau
+        treth dalu am fwy na \u00a310,000 o gostau gofal plant bob blwyddyn. Yma cewch
+        wybod sut y gallwch chi hawlio"},{"id":"llinell-amser-arian-babi","type":"tool","title":"Cael
+        babi \u2013 llinell amser arian rhyngweithiol","description":"Sgroliwch drwy
+        ein llinell amser arian rhyngweithiol ar gyfer dyddiadau allweddol pan fyddwch
+        yn cael babi yn ogystal \u00e2 dolenni at ragor o wybodaeth"},{"id":"cyfrifiannell-costau-gofal-plant","type":"tool","title":"Cyfrifiannell
+        costau gofal plant","description":"Mae\u2019r gyfrifiannell hon yn amcangyfrif
+        faint y gallech ei wario ar ofal plant"},{"id":"adolygu-eich-yswiriant-ar-ol-cael-babi","type":"guide","title":"Adolygu
+        eich yswiriant ar \u00f4l cael babi","description":"Os ydych yn dad newydd,
+        dylech gael rhywfaint o d\u00e2l tadolaeth gan eich cyflogwr tra byddwch i
+        ffwrdd o\u2019r gwaith yn gofalu am eich babi newydd"},{"id":"newidiadau-i-fudd-dal-plant-o-2013-ymlaen","type":"guide","title":"Budd-dal
+        Plant ar gyfer pobl sy''n ennill \u00a3 50,000 +","description":"Mae''r rheolau
+        ar gyfer Budd-dal Plant wedi newid ym mis Ionawr 2013 - darganfyddwch sut
+        y bydd y newidiadau\u2019n effeithio arnoch chi a beth yw\u2019ch opsiynau"},{"id":"rhoi-trefn-ar-eich-arian-pan-fyddwch-yn-disgwyl-babi","type":"guide","title":"Rhoi
+        trefn ar eich arian pan fyddwch yn disgwyl babi","description":"Cadwch eich
+        cyllideb dan reolaeth cyn genedigaeth eich babi - dydy hi byth yn rhy gynnar
+        i gynllunio at y dyfodol"},{"id":"cyfrifwch-gost-babi-newydd","type":"guide","title":"Cyfrifwch
+        gost babi newydd","description":"Defnyddiwch ein Cyfrifydd costau babi i gynllunio
+        cost babi o flaen llaw a helpu i osgoi unrhyw gostau annisgwyl"},{"id":"cyfrifwch-gost-dewisiadau-gofal-plant","type":"action_plan","title":"Cynllun
+        gweithredu - Cyfrifwch gost dewisiadau gofal plant","description":"Defnyddiwch
+        y cynllun hwn i gymharu cost gwahanol ddewisiadau gofal plant a chanfod a
+        allech gael unrhyw gymorth ariannol"},{"id":"presgripsiynau-a-thriniaeth-ddeintyddol-am-ddim-gan-y-gig-yn-ystod-beichiogrwydd","type":"guide","title":"Presgripsiynau
+        a thriniaeth ddeintyddol am ddim gan y GIG yn ystod beichiogrwydd","description":"Ni
+        fydd rhaid i chi dalu am unrhyw bresgripsiynau GIG na gofal deintyddol GIG
+        tra byddwch yn feichiog, neu am flwyddyn wedi\u2019r enedigaeth"},{"id":"babi-newydd-pam-cyllidebu","type":"guide","title":"Babi
+        newydd \u2013 pam cyllidebu?","description":"Lluniwch gyllideb i\u2019ch cartref
+        a chymryd rheolaeth dros eich cyllid"},{"id":"paratowch-am-y-gost-o-gael-babi","type":"action_plan","title":"Cynllun
+        gweithredu - Paratowch am y gost o gael babi","description":"Defnyddiwch y
+        cynllun gweithredu hwn i amcangyfrif faint y bydd cael babi yn ei gostio"},{"id":"cwtogi-ar-gostau-wrth-siopa-ar-gyfer-eich-babi","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Cwtogi ar gostau wrth siopa ar gyfer eich babi","description":"Awgrymiadau
+        ar gyfer cwtogi ar gostau pan ydych yn cael babi newydd"},{"id":"sut-y-gallai-babi-effeithio-ar-eich-arian","type":"action_plan","title":"Cynllun
+        gweithredu - Sut y gallai babi effeithio ar eich arian","description":"Dilynwch
+        y camau hyn i ganfod sut gyflwr fydd ar eich sefyllfa ariannol pan fydd eich
+        babi\u2019n cyrraedd er mwyn osgoi unrhyw gostau annisgwyl."},{"id":"gofal-meddygol-am-ddim-pan-yn-feichiog","type":"action_plan","title":"Cynllun
+        gweithredu - Gofal meddygol am ddim pan yn feichiog","description":"Cymorth
+        gyda phresgripsiynau a gofal deintyddol pan yn"},{"id":"hawlio-buddion-gwaith-pan-fyddwch-yn-feichiog","type":"action_plan","title":"Cynllun
+        gweithredu \u2013 Hawlio buddion gwaith pan fyddwch yn feichiog","description":"Dysgwch
+        pa amser i ffwrdd, absenoldeb mamolaeth a th\u00e2l mamolaeth fydd gennych
+        hawl i\u2019w gael"},{"id":"os-ywch-babi-yn-farw-anedig","type":"guide","title":"Os
+        yw\u2019ch babi yn farw-anedig","description":"Os byddwch yn gorfod wynebu
+        trychineb marw-enedigaeth, ni fydd materion ariannol yn bwysig, ond mae rhywfaint
+        o gymorth ariannol ar gael"},{"id":"dychwelyd-i-astudio-ar-ol-cael-babi","type":"guide","title":"Dychwelyd
+        i astudio ar \u00f4l cael babi","description":"Os ydych chi''n dymuno dychwelyd
+        i''r ysgol neu''r coleg mae help ariannol ar gael, yn enwedig i helpu i dalu
+        am gostau gofal plant"}]}'
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 17:02:47 GMT
+recorded_with: VCR 2.9.2

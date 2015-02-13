@@ -1,5 +1,13 @@
 .l-home-top {
   @include column(12);
+  width: 100%;
+  margin: 0;
+
+  @if ($responsive == false) {
+    width: $mq-l;
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .l-home-top-trust {

@@ -92,6 +92,11 @@ Rails.application.routes.draw do
       get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
     end
 
+    Feature.with(:timelines) do
+      mount Timelines::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:timelines)
+    end
+
     if Feature.active?(:agreements)
       mount Agreements::Engine => '/agreements'
     end

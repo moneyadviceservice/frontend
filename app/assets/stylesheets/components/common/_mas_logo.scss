@@ -1,13 +1,13 @@
 .mas-logo__img {
+  margin-left: -100%;
   max-width: none;
   width: 200%;
-  margin-left: -100%;
 }
 
 .mas-logo__link {
   display: inline-block;
-  vertical-align: middle;
   overflow: hidden;
+  vertical-align: middle;
   width: 200px;
 
   @include respond-to($mq-m) {

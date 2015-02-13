@@ -1,7 +1,7 @@
 .l-header {
-  position: relative;
   background: $color-green-primary;
   min-height: $baseline-unit*11;
+  position: relative;
 
   .mobile-nav {
     display: none;
@@ -9,8 +9,8 @@
 
   .mas-logo {
     @include column(4);
-    margin-top: $baseline-unit*3;
     margin-bottom: $baseline-unit*3;
+    margin-top: $baseline-unit*3;
 
     @include respond-to(px(600)) {
       @include column(10);
@@ -85,24 +85,24 @@
   }
 
   .search {
-    width: 100%;
     margin: 0;
+    width: 100%;
   }
 
   .l-search {
     background-color: $color-grey-pale;
-    padding: $baseline-unit*3 $baseline-unit;
     border-bottom: 1px solid $color-white;
     clear: both;
+    padding: $baseline-unit*3 $baseline-unit;
 
     @include respond-to($mq-l) {
       @include column(3);
       border: 0;
       background-color: transparent;
-      padding: 0;
       clear: none;
       margin-top: $baseline-unit*2;
       margin-bottom: $baseline-unit*2;
+      padding: 0;
 
       .search__input {
         border: 0;
@@ -140,9 +140,9 @@
 
       .nav__strapline {
         @include column(12);
-        padding: $baseline-unit*2 10px;
-        color: #000;
         background: $color-grey-pale;
+        color: #000;
+        padding: $baseline-unit*2 10px;
 
         @include respond-to(px(600)) {
           display: none;
@@ -187,11 +187,12 @@
 
   @include respond-to(px(600)) {
     @include paragraph(16, 24);
+    border-left: 1px solid rgb(255,255,255);
     border-left: 1px solid rgba(255,255,255,.3);
-    display: inline-block;
-    padding-left: $baseline-unit*3;
-    margin-top: $baseline-unit*4;
     color: $color-white;
+    display: inline-block;
+    margin-top: $baseline-unit*4;
+    padding-left: $baseline-unit*3;
 
     .theme-cy & {
       padding-left: $baseline-unit;

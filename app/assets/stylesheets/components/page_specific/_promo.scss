@@ -9,14 +9,13 @@
 .promo__heading {
   @extend %font-heading-medium;
   @include body(18, 24);
+  color: $color-blue-medium;
   margin: 0 0 $baseline-unit;
   position: relative;
 
   @include respond-to($mq-m) {
     @include body(20, 24);
   }
-
-  color: $color-blue-medium;
 
   .l-tool-promos__item & {
     padding-right: $baseline-unit*3;
@@ -28,11 +27,11 @@
   border-radius: 4px;
   bottom: 0;
   color: $color-white;
+  content: "Blog";
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
   height: 30px;
-  content: "Blog";
   left: 37%;
   padding: $baseline-unit/2 $baseline-unit*2.5;
   position: absolute;
@@ -69,10 +68,10 @@
 
 .promo__arrow {
   fill: $color-button-primary;
+  height: 34px;
   position: absolute;
   right: 0;
   top: 30%;
-  height: 34px;
   width: 21px;
 
   @include respond-to($mq-l) {

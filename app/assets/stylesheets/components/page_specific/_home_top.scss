@@ -141,7 +141,7 @@
 .home-top-promo__text {
   @extend %font-heading-heavy;
   @include body(22, 30);
-  background: #000;
+  background: $color-true-black;
   border-radius: 6px;
   margin: 0 $baseline-unit*3;
   max-width: 400px;

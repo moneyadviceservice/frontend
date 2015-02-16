@@ -22,7 +22,7 @@
   &:link,
   &:visited,
   &:hover {
-    color: #000;
+    color: $color-true-black;
   }
 
   @include respond-to($mq-s) {

@@ -14,12 +14,18 @@
 
     @include respond-to($mq-small-tablet) {
       @include column(10);
+      margin-bottom: $baseline-unit*3;
       margin-top: 0;
       vertical-align: top;
     }
 
+    @include respond-to($mq-m) {
+      margin-bottom: $baseline-unit*2;
+    }
+
     @include respond-to($mq-l) {
       @include column(8);
+      margin-bottom: $baseline-unit;
     }
 
     @include respond-to($mq-xl) {
@@ -191,6 +197,7 @@
     border-left: 1px solid rgba(255,255,255,.3);
     color: $color-white;
     display: inline-block;
+    margin-bottom: 0;
     margin-top: $baseline-unit*4;
     padding-left: $baseline-unit*3;
 

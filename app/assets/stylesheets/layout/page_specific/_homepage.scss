@@ -13,7 +13,7 @@
 .l-home-top-trust {
   @include column(12);
 
-  @include respond-to(px(600), px(719)) {
+  @include respond-to($mq-small-tablet, $mq-m - 1) {
     margin-bottom: $baseline-unit*9;
   }
 }

@@ -7,22 +7,23 @@
     width: $mq-l;
     margin: 0 auto;
     float: none;
+    display: block;
   }
-}
 
-.l-home-top-trust {
-  @include column(12);
+  .home-top-trust {
+    @include column(12);
 
-  @include respond-to($mq-small-tablet, $mq-m - 1) {
-    margin-bottom: $baseline-unit*9;
+    @include respond-to($mq-small-tablet, $mq-m - 1) {
+      margin-bottom: $baseline-unit*9;
+    }
   }
-}
 
-.l-home-top-promo {
-  @include column(12);
+  .home-top-promo {
+    @include column(12);
 
-  @include respond-to($mq-l) {
-    @include column(5);
+    @include respond-to($mq-l) {
+      @include column(5);
+    }
   }
 }
 

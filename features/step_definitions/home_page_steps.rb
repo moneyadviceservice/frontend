@@ -33,6 +33,21 @@ Then(/^I should see promoted content$/) do
   actual_text   = home_page.promos.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)
+
+  expected_text = I18n.t('home.show.promoted_no_image').map { |item| item[:text] }
+  actual_text = home_page.promos_no_image.map { |item| item.heading.text }
+
+  expect(actual_text).to eq(expected_text)
+end
+
+Then(/^I should see stripe banner$/) do
+  expected_url = I18n.t('home.show.stripe_banner')[:url]
+  actual_url  = home_page.stripe_banner.link[:href]
+  expect(actual_url).to eq(expected_url)
+
+  expected_text = I18n.t('home.show.stripe_banner')[:worried_about_debt] + " " + I18n.t('home.show.stripe_banner')[:find_out_where]
+  actual_text  = home_page.stripe_banner.link.text
+  expect(actual_text).to eq(expected_text)
 end
 
 Then(/^I should see information about contacting the Money Advice Service call centre$/) do

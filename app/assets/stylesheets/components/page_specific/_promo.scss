@@ -9,19 +9,73 @@
 .promo__heading {
   @extend %font-heading-medium;
   @include body(18, 24);
-  margin-top: 0;
+  color: $color-blue-medium;
+  margin: 0 0 $baseline-unit;
+  position: relative;
 
   @include respond-to($mq-m) {
     @include body(20, 24);
+  }
+
+  .l-tool-promos__item & {
+    padding-right: $baseline-unit*3;
+  }
+}
+
+.promo__heading--blog:after {
+  background: $color-mas-blog-blue;
+  border-radius: 4px;
+  bottom: 0;
+  color: $color-white;
+  content: "Blog";
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  height: 30px;
+  left: 50%;
+  padding: $baseline-unit/2 $baseline-unit*2.5;
+  position: absolute;
+  text-transform: uppercase;
+  top: -$baseline-unit*6;
+  transform: translateX(-50%);
+}
+
+.promo__link {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .promo__heading {
+      text-decoration: underline;
+    }
+  }
+
+  .l-promo-articles__item--no-image & {
+    display: block;
+    margin-left: 20px;
   }
 }
 
 .promo__content {
   @include body(16, 24);
   margin: 0;
+  color: $color-grey-primary;
 }
 
 .promo__img {
   width: 100%;
   margin-bottom: $baseline-unit*2;
+}
+
+.promo__arrow {
+  fill: $color-button-primary;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 21px;
+
+  @include respond-to($mq-l) {
+    top: 13%;
+  }
 }

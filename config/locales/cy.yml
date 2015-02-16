@@ -40,6 +40,7 @@ cy:
     home: Hafan
     base:
       title: Y Gwasanaeth Cynghori Ariannol
+      strapline: Am ddim & diduedd cyngor ariannol
 
   locales:
     cy: Cymraeg
@@ -152,6 +153,8 @@ cy:
         - text: Cyngor a chanllawiau i roi cymorth i chi wella'ch materion ariannol
         - text: Offer a chyfrifianellau i roi cymorth i chi gadw ar y trywydd iawn a chynllunio ymlaen
         - text: Cefnogaeth bersonol, dros y ffôn ac ar-lein
+      promo_link_text: Beth i’w wneud nawr bod eich cynllun rheoli dyledion wedi stopio
+      promo_link_url: /cy/campaigns/debt-management
       directory_heading: Dewiswch ran i gychwyn arni...
       directory_heading_two: Pori'r wefan y Gwasanaeth Cynghori Ariannol
       description: >
@@ -160,20 +163,13 @@ cy:
       tools_heading: Offer a chyfrifianellau poblogaidd
       tools_view_all: /cy/categories/tools-and-calculators
       tools:
-        - image: tools_promos/budget-planner-promo.png
-          url: /cy/tools/cynllunydd-cyllideb
+        - url: /cy/tools/cynllunydd-cyllideb
           heading: Cynllunydd cyllideb
           text: Lluniwch eich cyllideb heddiw
-        - image: tools_promos/annuities-promo.png
-          url: /cy/tools/annuities
+        - url: /cy/tools/annuities
           heading: Chymharu blwydd-daliadau
           text: Dysgwch sut i gael y fargen orau
-        - image: tools_promos/pensions-calc-promo.png
-          url: /cy/tools/cyfrifiannell-pensiwn
-          heading: Cyfrifiannell pensiwn
-          text: Dechreuwch gynllunio ar gyfer eich ymddeoliad
-        - image: tools_promos/mortgage-calc-promo.png
-          url:  /cy/tools/cyfrifiannell-morgais
+        - url:  /cy/tools/cyfrifiannell-morgais
           heading: Cyfrifiannell morgais
           text: Faint allwch chi ei fenthyca?
       view_all_link_html: |
@@ -181,22 +177,35 @@ cy:
       view_all_link_expanded: o'n offer a chyfrifianellau poblogaidd
       promoted_heading: Beth sy'n newydd
       promoted:
-        - url: /cy/categories/tools-and-calculators
-          text: Offer a chyfrifianellau
-          image: tools-calculators.jpg
-          content: Rhowch gynnig ar ein cyfrifianellau, offer ac adnoddau i'ch helpu i reoli eich arian.
-        - url: /cy/news/a-oes-gennych-chi-adduned-ariannol
-          text: 5 adduned ariannol ar gyfer 2015
-          image: new-year-2014.jpg
-          content: Rhowch drefn ar eich materion ariannol ar gyfer y Flwyddyn Newydd.
-        - url: /cy/benthyciadau-diwrnod-cyflog
-          text: Benthyciadau diwrnod cyflog - peidiwch â chael eich temtio gan arian parod cyflym
-          image: payday-loans.jpg
-          content: Mae benthyciadau diwrnod cyflog yn ymddangos fel ateb rhwydd pan fydd arian yn brin, ond yn aml maent yn arwain at ddyled ddifrifol. Defnyddiwch ein hofferyn ar-lein i ddod o hyd i ddewis arall sy'n rhatach, gyda llai o risg.
-        - url: /cy/tools/canfyddwr-cyngor-ar-ddyledion
-          text: Ble i gael cyngor am ddim ynghylch dyled
-          image: free-debt-advice.jpg
-          content: Cewch wybod ble i gael cymorth cyfrinachol am ddim os ydych yn cael trafferthion â dyled.
+        - url: https://blog.moneyadviceservice.org.uk/can-you-switch-your-energy-to-a-cheaper-deal
+          text: Allwch chi newid i gael bargen well ar eich ynni?
+          image: cooking.jpg
+          content: Golyga rheolau newydd y gallwch chi newid eich tariff mewn 17 diwrnod yn unig
+          blog: true
+        - url: /cy/articles/first-time-buyer-money-tips
+          text: Cyngor i brynwr tro cyntaf
+          image: keys.jpg
+          content: Popeth y mae angen i chi ei wybod am brynu eich cartref cyntaf
+        - url: https://blog.moneyadviceservice.org.uk/what-are-pensioner-bonds-ten-things-you-need-to-know
+          text: Beth yw Bondiau Pensiynwyr?
+          image: pensioner.jpg
+          content: 10 peth mae angen i chi eu gwybod am y cyfrif cynilo newydd
+          blog: true
+        - url: /cy/articles/living-on-a-low-income-tips
+          text: Sut i fyw ar incwm isel
+          image: piggybanks.jpg
+          content: Camau cadarnhaol i roi cymorth i’ch arian fynd ymhellach
+      promoted_no_image:
+        - url: /cy/payday-loans
+          text: "Payday loans: Gall ad-daliad hwyr achosi problemau difrifol i chi"
+          content: Cyn ichi gymryd un, defnyddiwch yr offeryn hwn i gael cyngor
+        - url: /cy/tools/health-check
+          text: Offeryn Gwiriad Iechyd Ariannol
+          content: Yn ansicr o’ch sefyllfa ariannol? Defnyddiwch ein hofferyn yn awr i ganfod sut allwch chi wella’ch sefyllfa
+      stripe_banner:
+        url: /cy/tools/debt-advice-locator
+        worried_about_debt: Ydych chi’n pryderu am ddyledion?
+        find_out_where: Dysgwch lle i gael cymorth cyfrinachol yn rhad ac am ddim yn awr
       blog_title: Eich blog Cyngor Ariannol
       blog_description: Awgrymiadau, newyddion a safbwyntiau ar bopeth sydd ynghlwm ag arian, o forgeisi a chynilion i gyllido a budd-daliadau.
 

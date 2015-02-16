@@ -1,30 +1,52 @@
 .l-header {
-  position: relative;
   background: $color-green-primary;
   min-height: $baseline-unit*11;
+  position: relative;
 
   .mobile-nav {
     display: none;
   }
 
   .mas-logo {
-    @include column(7);
-    margin-top: $baseline-unit*3;
+    @include column(4);
     margin-bottom: $baseline-unit*3;
+    margin-top: $baseline-unit*3;
+
+    @include respond-to($mq-small-tablet) {
+      @include column(10);
+      margin-bottom: $baseline-unit*3;
+      margin-top: 0;
+      vertical-align: top;
+    }
 
     @include respond-to($mq-m) {
-      @include column(4);
-      margin-top: $baseline-unit*2;
-      margin-bottom: 0;
+      margin-bottom: $baseline-unit*2;
+    }
+
+    @include respond-to($mq-l) {
+      @include column(8);
+      margin-bottom: $baseline-unit;
+    }
+
+    @include respond-to($mq-xl) {
+      @include column(6);
+
+      .theme-cy & {
+        @include column(7);
+      }
     }
   }
 
   .authentication {
-    @include column(5);
+    @include column(1);
     display: none;
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       @include inline-block;
+    }
+
+    @include respond-to($mq-xl) {
+      @include column(3);
     }
   }
 
@@ -37,7 +59,7 @@
   .authentication__item {
     display: none;
 
-    @include respond-to($mq-l) {
+    @include respond-to($mq-xl) {
       @include inline-block;
     }
   }
@@ -69,28 +91,34 @@
   }
 
   .search {
-    width: 100%;
     margin: 0;
+    width: 100%;
   }
 
   .l-search {
     background-color: $color-grey-pale;
-    padding: $baseline-unit*3 $baseline-unit;
     border-bottom: 1px solid $color-white;
     clear: both;
+    padding: $baseline-unit*3 $baseline-unit;
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       @include column(3);
       border: 0;
       background-color: transparent;
-      padding: 0;
       clear: none;
       margin-top: $baseline-unit*2;
       margin-bottom: $baseline-unit*2;
+      padding: 0;
 
       .search__input {
         border: 0;
         border-radius: $baseline-unit/2;
+      }
+    }
+
+    .theme-cy & {
+      @include respond-to($mq-xl) {
+        @include column(2);
       }
     }
   }
@@ -101,7 +129,7 @@
     top: 3px;
     right: 0;
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       display: none;
     }
   }
@@ -115,6 +143,17 @@
 
     &.is-on {
       display: block;
+
+      .nav__strapline {
+        @include column(12);
+        background: $color-grey-pale;
+        color: $color-true-black;
+        padding: $baseline-unit*2 10px;
+
+        @include respond-to($mq-small-tablet) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -125,7 +164,7 @@
       display: block;
     }
 
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       display: block;
     }
   }
@@ -136,7 +175,7 @@
   background: $color-white;
   clear: both;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     display: none;
   }
 
@@ -146,5 +185,30 @@
 
   .link-list-primary__item:last-child {
     border-bottom: 0;
+  }
+}
+
+.l-header__strapline {
+  display: none;
+
+  @include respond-to($mq-small-tablet) {
+    @include paragraph(16, 24);
+    border-left: 1px solid rgb(255,255,255);
+    border-left: 1px solid rgba(255,255,255,.3);
+    color: $color-white;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: $baseline-unit*4;
+    padding-left: $baseline-unit*3;
+
+    .theme-cy & {
+      padding-left: $baseline-unit;
+    }
+  }
+
+  @include respond-to($mq-m) {
+    .theme-cy & {
+      padding-left: $baseline-unit*3;
+    }
   }
 }

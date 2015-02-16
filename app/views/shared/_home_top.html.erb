@@ -1,0 +1,25 @@
+<div class="l-home-top">
+  <div class="home-top">
+    <div class="home-top__image"></div>
+    <div class="l-constrained">
+      <div class="home-top-trust">
+        <p class="home-top-trust__heading"><%= t('home.show.heading') %></p>
+        <ul class="home-top-trust-content">
+          <% t('home.show.trust_banner_list').each do |item| %>
+            <li class="home-top-trust-content__item"><%= item[:text] %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="home-top-promo">
+        <p class="home-top-promo__text">
+          <a href="<%= t('home.show.promo_link_url') %>" class="home-top-promo-link">
+            <%= t('home.show.promo_link_text') %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="home-top-promo-link__arrow">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

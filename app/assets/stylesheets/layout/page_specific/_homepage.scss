@@ -1,9 +1,35 @@
-.l-trust-banner {
+.l-home-top {
   @include column(12);
+  width: 100%;
+  margin: 0;
+
+  @if ($responsive == false) {
+    width: $mq-l;
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
+
+  .home-top-trust {
+    @include column(12);
+
+    @include respond-to($mq-small-tablet, $mq-m - 1) {
+      margin-bottom: $baseline-unit*9;
+    }
+  }
+
+  .home-top-promo {
+    @include column(12);
+
+    @include respond-to($mq-l) {
+      @include column(5);
+    }
+  }
 }
 
 .l-home-directory {
   background-color: $color-directory-emphasized-bg;
+  clear: both;
 }
 
 .l-home-directory__title {

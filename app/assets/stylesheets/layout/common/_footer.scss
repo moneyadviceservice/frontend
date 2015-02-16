@@ -61,7 +61,7 @@
   position: relative; // fix white space issue in Safari
 
   .l-footer-authentication-link {
-    @include respond-to($mq-l) {
+    @include respond-to($mq-xl) {
       display: none;
     }
 
@@ -71,7 +71,7 @@
   }
 
   .l-language-link {
-    @include respond-to($mq-m) {
+    @include respond-to($mq-l) {
       display: none;
     }
   }

@@ -1,0 +1,70 @@
+// Stripe banner which appears on the homepage
+//
+// Styleguide Stripe banner
+
+.stripe-banner {
+  background: $color-off-white url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%228%22%20viewBox%3D%220%200%2080%2080%22%20enable-background%3D%22new%200%200%2080%2080%22%3E%3Cpath%20stroke%3D%22%23000%22%20d%3D%22M0%2080L80%200%22%2F%3E%3C%2Fsvg%3E);
+  background-size: 8px 8px;
+  text-align: center;
+  margin-top: $baseline-unit*8;
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*14;
+  }
+}
+
+.stripe-banner__link {
+  display: block;
+  position: relative;
+  padding: $baseline-unit*6;
+  font-size: 30px;
+  line-height: 32px;
+  &:link,
+  &:visited,
+  &:hover {
+    color: $color-true-black;
+  }
+
+  @include respond-to($mq-s) {
+    padding-right: 20%;
+  }
+
+  @include respond-to($mq-l) {
+    padding-right: 16%;
+  }
+
+  @include respond-to($mq-xl) {
+    padding-right: 12%;
+  }
+}
+
+.stripe-banner__bold {
+  font-weight: 700;
+}
+
+.stripe-banner-arrow {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: $baseline-unit auto 0 auto;
+
+  @include respond-to($mq-s) {
+    position: absolute;
+    top: 25%;
+    right: 7%;
+  }
+
+  @include respond-to($mq-l) {
+    top: 15%;
+    right: 7%;
+  }
+}
+
+.stripe-banner-arrow__circle {
+  fill: $color-button-primary;
+
+  .stripe-banner__link:hover &,
+  .stripe-banner__link:focus & {
+    fill: $color-button-primary-active;
+  }
+}

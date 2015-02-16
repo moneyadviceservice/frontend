@@ -1,7 +1,141 @@
-.l-promos {
+.l-tool-promos {
   @extend .clearfix;
   overflow: hidden;
   position: relative;
+  margin-top: $baseline-unit*6;
+
+  .flexbox & {
+    display: flex;
+    flex-flow: column;
+
+    @include respond-to($mq-m) {
+      display: block;
+      flex-flow: row nowrap;
+      flex-wrap: nowrap;
+    }
+
+    @include respond-to($mq-l) {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+
+      &:after {
+        @include column(12);
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $color-grey-seven;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+}
+
+.l-tool-promos__heading {
+  @extend %font-heading-medium;
+  @include body(30, 34);
+  color: $color-heading-extra-small;
+  margin-top: 0;
+  margin-bottom: $baseline-unit*2;
+  padding-right: $baseline-unit*9;
+
+  @include respond-to($mq-l) {
+    max-width: 200px;
+  }
+
+  @include respond-to($mq-xl) {
+    padding-right: 0;
+  }
+}
+
+.l-tool-promos__item {
+  @include column(12);
+  margin-bottom: $baseline-unit*1;
+  position: relative;
+  border-top: 1px solid $color-grey-seven;
+  padding-top: $baseline-unit*3;
+  padding-bottom: $baseline-unit*2;
+
+  &:nth-child(2),
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:first-child {
+    border-bottom: 2px solid $color-true-black;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    .promo__arrow {
+      fill: $color-button-primary-active;
+    }
+
+    .l-tool-promos__view-all {
+      text-decoration: underline;
+    }
+  }
+
+  &:hover &,
+  &:focus & {
+    text-decoration: none;
+  }
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    float: right;
+    clear: right;
+
+    &:first-of-type {
+      float: left;
+      clear: none;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+    border-top: 0;
+    margin-bottom: 0;
+  }
+
+  .flexbox & {
+    @include respond-to($mq-l) {
+      flex-basis: 21.55%;
+    }
+  }
+
+  .l-promos--articles & {
+    border-top: 0;
+  }
+}
+
+.l-promos--articles {
+  .l-promos__item {
+    .flexbox & {
+      @include respond-to($mq-s) {
+        flex-basis: 46%;
+      }
+    }
+  }
+}
+
+.l-tool-promos__view-all {
+  @extend %font-heading-medium;
+  text-align: left;
+  padding-bottom: $baseline-unit*3;
+}
+
+.l-promo-articles {
+  @extend .clearfix;
+  overflow: hidden;
+  position: relative;
+  margin-top: $baseline-unit*6;
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*7;
+  }
 
   .flexbox & {
     display: flex;
@@ -14,7 +148,7 @@
   }
 }
 
-.l-promos__heading {
+.l-promo-articles__heading {
   @extend %font-heading-medium;
   @include column(12);
   @include body(16, 24);
@@ -23,7 +157,7 @@
   margin-bottom: $baseline-unit*2;
 }
 
-.l-promos__item {
+.l-promo-articles__item {
   @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
@@ -39,24 +173,37 @@
 
   .flexbox & {
     @include respond-to($mq-s) {
-      flex-basis: 46%;
+      flex-basis: 46.6666667%;
     }
 
-    @include respond-to($mq-l) {;
+    @include respond-to($mq-l) {
       flex-basis: 21.55%;
     }
   }
 }
 
-.l-promo__view-all {
-  @extend %font-heading-medium;
-  @include column(12);
-  text-align: left;
+.l-promo-articles__item--no-image {
+  min-height: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMSI+PHBhdGggZmlsbD0iIzYxQTc0NCIgZD0iTTAgMGg2djFIMHoiLz48L3N2Zz4=) repeat-y; // using background instead of border-left due to ie flex box issues
+  background-size: 6px 1px;
 
-  @include respond-to($mq-m) {
-    position: absolute;
-    left: 0;
-    top: 38px;
-    text-align: right;
+  @include respond-to($mq-l) {
+    @include column(6);
   }
+
+  .flexbox & {
+    @include respond-to($mq-l) {
+      flex-basis: 46%;
+    }
+  }
+}
+
+.l-promo-articles__noimages {
+  clear: both;
+}
+
+.l-tool-promos__calculator {
+  position: absolute;
+  right: 0;
+  top: $baseline-unit*3;
 }

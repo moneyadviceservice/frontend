@@ -1,4 +1,4 @@
-<%= render 'shared/trust_banner', items: t('home.show.trust_banner_list') %>
+<%= render 'shared/home_top' %>
 
 <div class="l-home-directory">
   <div class="l-constrained">
@@ -18,4 +18,6 @@
   <hr class="hr hr--inset">
 </div>
 
-<%= render 'shared/article_promos', items: t('home.show.promoted') %>
+<%= render 'shared/article_promos', items_with_image: t('home.show.promoted'), items_without_image: t('home.show.promoted_no_image') %>
+
+<%= render 'shared/stripe_banner', item: t('home.show.stripe_banner') %>

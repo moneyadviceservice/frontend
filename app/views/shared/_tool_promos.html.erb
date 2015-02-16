@@ -1,31 +1,26 @@
 <div class="l-constrained">
-  <section class="l-promos">
-    <%= heading_tag(level: 2, class: 'l-promos__heading') do %>
-      <%= t('home.show.tools_heading') %>
+  <section class="l-tool-promos">
+    <%= link_to(t('home.show.tools_view_all'), class: 'l-tool-promos__item promo__link') do %>
+      <span class="icon icon--calculator l-tool-promos__calculator"></span>
+      <%= heading_tag(level: 2, class: 'l-tool-promos__heading') do %>
+        <%= t('home.show.tools_heading') %>
+      <% end %>
+      <div class="l-tool-promos__view-all">
+        <%= t('home.show.view_all_link_html') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
+      </div>
     <% end %>
-
     <% items.each do |item| %>
-    <div class="l-promos__item">
-      <div>
-
+      <%= link_to item[:url], class: 'l-tool-promos__item promo__link' do %>
         <%= heading_tag(level: 3, class: 'promo__heading') do %>
-          <%= link_to item[:url], class: 'promo__link' do %>
-            <%= image_tag(item[:image], class: 'promo__img') %>
-            <%= item[:heading] %>
-          <% end %>
+          <%= item[:heading] %>
         <% end %>
-
         <p class="promo__content">
           <%= item[:text] %>
         </p>
-      </div>
-    </div>
-    <% end %>
-
-    <div class="l-promo__view-all">
-      <%= link_to t('home.show.tools_view_all') do %>
-      <%= t('home.show.view_all_link_html') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="promo__arrow">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
       <% end %>
-    </div>
+    <% end %>
   </section>
 </div>

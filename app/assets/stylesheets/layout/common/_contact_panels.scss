@@ -1,6 +1,16 @@
+.l-contact-panels {
+  margin-top: 40px;
+  border-top: $default-border-thin;
+}
+
 .l-contact-panels--no-border-top {
-  margin-top:40px;
-  border-top:none;
+  margin-top: 40px;
+  border-top: 0;
+}
+
+.l-contact-panels--homepage {
+  border-top: 0;
+  margin-top: 0;
 }
 
 .l-contact-panel {

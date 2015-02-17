@@ -10,7 +10,7 @@
   line-height: 1;
 
   @include respond-to($mq-xl) {
-    padding: 0 $baseline-unit*2;
+    padding: 0 $baseline-unit*1.5;
     border-right: 1px solid $color-primary-nav;
   }
 

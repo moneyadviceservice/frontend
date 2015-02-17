@@ -81,8 +81,12 @@
   }
 
   .l-authentication {
-    @include respond-to($mq-m) {
-      @include column(8);
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+
+    @include respond-to($mq-xl) {
+      @include column(6);
     }
   }
 

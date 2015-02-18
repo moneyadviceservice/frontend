@@ -87,6 +87,10 @@
 
     @include respond-to($mq-xl) {
       @include column(6);
+
+      .theme-cy & {
+        @include column(5);
+      }
     }
   }
 

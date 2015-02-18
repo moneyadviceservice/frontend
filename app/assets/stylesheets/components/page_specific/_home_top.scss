@@ -61,7 +61,7 @@
   padding-bottom: $baseline-unit*5;
   padding-top: $baseline-unit*5;
 
-  @include respond-to($mq-small-tablet, $mq-m - 1) {
+  @include respond-to($mq-small-tablet, $mq-small-tablet-end) {
     max-width: 500px;
   }
 
@@ -123,7 +123,7 @@
 .home-top-promo {
   clear: both;
 
-  @include respond-to($mq-small-tablet, $mq-m - 1) {
+  @include respond-to($mq-small-tablet, $mq-small-tablet-end) {
     bottom: 0;
     left: 0;
     position: absolute;

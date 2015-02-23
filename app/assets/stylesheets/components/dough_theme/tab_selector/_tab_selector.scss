@@ -64,6 +64,7 @@
       }
 
       .tab-selector__trigger {
+        @extend %type;
         border-width: 0;
         padding-right: 35px;
         padding-left: 12px;

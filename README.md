@@ -53,8 +53,7 @@ $ foreman s
 
 ### Change CMS URL Path
 
-The frontend locally will try to look for CMS locally. In order to change the
-CMS URL, you can change on [.env]
+The frontend locally will try to look for CMS locally. You can change the MAS_CMS_URL on [.env](https://github.com/moneyadviceservice/frontend/blob/master/.env#L2) file.
 
 Don't forget to restart the server after the modification.
 

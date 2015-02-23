@@ -42,6 +42,20 @@
 .l-article-3col-left {
   @extend %l-3col-side;
 
+  .link-list-primary {
+    @include column(12);
+  }
+
+  .nav__strapline {
+    display: none;
+  }
+
+  .link-to-top-block {
+    @include respond-to($mq-m) {
+      display: none;
+    }
+  }
+
   @include respond-to($mq-m) {
     @include column-shift(-9);
   }

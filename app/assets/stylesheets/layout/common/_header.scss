@@ -153,6 +153,7 @@
       display: block;
 
       .nav__strapline {
+        display: block;
         @include column(12);
         background: $color-grey-pale;
         color: $color-true-black;

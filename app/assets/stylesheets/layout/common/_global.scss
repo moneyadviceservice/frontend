@@ -74,13 +74,13 @@
     @include column(12);
   }
 
+  .nav__strapline {
+    display: none;
+  }
+
   .link-to-top-block {
     @include respond-to($mq-m) {
       display: none;
     }
-  }
-
-  .nav__strapline {
-    display: none;
   }
 }

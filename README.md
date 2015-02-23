@@ -43,6 +43,12 @@ Setup the database:
 bundle exec rake db:create && bundle exec rake db:schema:load
 ```
 
+Make sure to copy the .env.dev file:
+
+```sh
+cp .env.dev .env
+```
+
 ## Usage
 
 To start the application:
@@ -50,6 +56,13 @@ To start the application:
 ```sh
 $ foreman s
 ```
+
+### Change CMS URL Path
+
+When you run the frontend locally, it will try to look for CMS locally. In order to change the
+CMS URL, you can change the MAS_CMS_URL on .env file.
+
+Don't forget to restart the server after the modification.
 
 ## Contributing
 

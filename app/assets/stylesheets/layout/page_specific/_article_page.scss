@@ -40,10 +40,15 @@
 }
 
 .l-article-3col-left {
-  @extend %l-3col-side;
+  clear: both;
 
-  .link-list-primary {
-    @include column(12);
+  @include respond-to($mq-m) {
+    clear: none;
+    @extend %l-3col-side;
+
+    .link-list-primary {
+      @include column(12);
+    }
   }
 
   .nav__strapline {

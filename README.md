@@ -51,6 +51,13 @@ To start the application:
 $ foreman s
 ```
 
+### Change CMS URL Path
+
+The frontend locally will try to look for CMS locally. In order to change the
+CMS URL, you can change on [.env]
+
+Don't forget to restart the server after the modification.
+
 ## Contributing
 
 1. Fork it

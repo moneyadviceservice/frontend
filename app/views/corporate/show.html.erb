@@ -1,0 +1,63 @@
+<% content_for(:context_bar) do %>
+  <% if @breadcrumbs.present? %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <% elsif article.categories.present? %>
+    <%= render 'shared/related_categories', categories: article.categories %>
+  <% end %>
+<% end %>
+
+<div class="l-article-3col-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+      <%= heading_tag article.title %>
+
+      <% unless @newsletter_excluded %>
+        <%= render 'shared/news_signup_test' %>
+      <% end %>
+
+      <%= article.content %>
+
+      <%= render article.extra_content_partial if article.extra_content? %>
+
+      <% if Feature.active?(:callback_requester) %>
+        <% if article.callback_requestable? %>
+          <%= render 'callback_requester'  %>
+        <% end %>
+      <% end %>
+
+      <%= render 'previous_and_next' %>
+
+      <div class='related-links--mobile'>
+        <%= render 'articles/related_articles' %>
+      </div>
+
+      <%= render 'shared/related_links', article: @article, categories: related_content %>
+
+      <%= render 'shared/feedback', article: article %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav l-article-3col-right">
+  <div class='related-links--desktop'>
+    <%= render 'articles/related_articles' %>
+  </div>
+
+  <%= render 'shared/want_to_talk' %>
+</div>
+
+<div class="l-article-3col-left">
+  <%= render 'shared/nav',
+             categories:        category_navigation,
+             active_categories: active_categories
+  %>
+</div>
+
+<% content_for(:alternate_link) do %>
+  <% article.footer_alternate_options.each do |locale, url| %>
+    <%= link_to(url, lang: locale, class: "t-#{locale}-link") do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -80,6 +80,22 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   EmbedCodeGeneratorProto.updateEmbedCodeDisplay = function(text) {
     this.showEmbedTarget();
     this.$embedTarget.text(text);
+    this.selectEmbedCodeText();
+  };
+
+  EmbedCodeGeneratorProto.selectEmbedCodeText = function() {
+    var range,
+        embedTarget = this.$embedTarget[0];
+
+    if(document.selection) {
+        range = document.body.createTextRange();
+        range.moveToElementText(embedTarget);
+        range.select();
+    } else if (window.getSelection) {
+        range = document.createRange();
+        range.selectNode(embedTarget);
+        window.getSelection().addRange(range);
+    }
   };
 
   return EmbedCodeGenerator;

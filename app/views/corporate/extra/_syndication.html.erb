@@ -1,0 +1,55 @@
+<%= form_for '/', class: 'form t-embed-form', data: { dough_component: 'EmbedCodeGenerator Validation' }, html: { id: 'embed_code', novalidate: 'noValidate', } do |f| %>
+  <%= heading_tag 'Get this tool', level: 2 %>
+
+  <p>
+    By taking our embed code you agree to our <a href="#" target="_blank">Terms &amp; Conditions</a>
+  </p>
+
+  <div class="form__row">
+    <fieldset class="form__group form__group--inline">
+      <legend>Language</legend>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'lang', 'en', checked: true, class: 't-lang-en form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          English
+        <% end %>
+      </div>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'lang', 'cy', class: 't-lang-cy form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          Welsh
+        <% end %>
+      </div>
+  </div>
+
+  <div class="form__row">
+    <fieldset class="form__group form__group--inline">
+      <legend>Width unit</legend>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'width-unit', 'px', class: 't-width-unit-px form__group-input', checked: true, data: {dough_embedcodegenerator_width_unit: 'pixels'} %>
+          px (pixels)
+        <% end %>
+      </div>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'width-unit', '%', class: 't-width-unit-percentage form__group-input', data: {dough_embedcodegenerator_width_unit: 'percentage'} %>
+          % (percentage)
+        <% end %>
+      </div>
+  </div>
+
+  <div class="form__row">
+    <%= f.label :width, 'Width', class: 'form__label-heading' %>
+    <%= f.text_field :width, class: 't-width form__input form__input--small',
+      data: { dough_embedcodegenerator_width: true, dough_validation_empty: 'You must enter a number', dough_validation_invalid: 'You must enter a valid number, e.g. 75' }, min: 1, max: '999999', maxlength: 6, pattern: '\d*', required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+  </div>
+
+  <div class="form__row">
+    <%= f.button t('corporate.partnerships.syndication.submit'), class: 't-submit-embed button button--small button--primary', data: { dough_embedcodegenerator_submit: true } %>
+  </div>
+
+  <div class="form__row form__row--is-hidden" data-dough-embedcodegenerator-target-container>
+    <pre class="code"><code class="code__content code__content--wrapped t-embed-code" data-dough-embedcodegenerator-target aria-live="polite"><%= render('tools/embed_code').to_str %></code></pre>
+  </div>
+<% end %>

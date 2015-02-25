@@ -6,6 +6,18 @@
   </p>
 
   <div class="form__row">
+    <%= f.label :organisation, 'Organisation', class: 'form__label-heading' %>
+    <%= f.text_field :organisation, class: 't-organisation form__input',
+    data: { dough_validation_empty: 'You must enter an organisation' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+  </div>
+
+  <div class="form__row">
+    <%= f.label :email, 'Email address', class: 'form__label-heading' %>
+    <%= f.email_field :email, class: 't-organisation-email form__input',
+    data: { dough_validation_empty: 'You must enter an email address', dough_validation_invalid: 'You must enter a valid email address' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true', pattern: '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$' %>
+  </div>
+
+  <div class="form__row">
     <fieldset class="form__group form__group--inline">
       <legend>Language</legend>
       <div class="form__group-item">

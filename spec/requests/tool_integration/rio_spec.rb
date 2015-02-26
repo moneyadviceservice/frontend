@@ -1,4 +1,4 @@
-RSpec.describe 'RIO', type: :request, features: [:rio] do
+RSpec.describe 'RIO', type: :request, features: [:rio, :improvements] do
   %W(
     /en/tools/#{ToolMountPoint::Rio::EN_ID}
     /cy/tools/#{ToolMountPoint::Rio::CY_ID}

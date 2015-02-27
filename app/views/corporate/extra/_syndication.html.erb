@@ -1,67 +1,129 @@
-<%= form_for '/', class: 'form t-embed-form', data: { dough_component: 'EmbedCodeGenerator Validation' }, html: { id: 'embed_code', novalidate: 'noValidate', } do |f| %>
-  <%= heading_tag 'Get this tool', level: 2 %>
+<div class="l-promo-partnerships promo promo--partnerships">
+  <div class="l-promo-partnerships__item">
+    <%= heading_tag(level: 3, class: 'promo__heading') do %>
+      <%= link_to '#', class: 'promo__link' do %>
+        <%= image_tag('http://placehold.it/200x180', class: 'promo__img') %>
+        Lorem ipsum dolor
+      <% end %>
+    <% end %>
+    <p class="promo__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, repudiandae ea corporis nihil.
+    </p>
+  </div>
+  <div class="l-promo-partnerships__item">
+    <%= heading_tag(level: 3, class: 'promo__heading') do %>
+      <%= link_to '#', class: 'promo__link' do %>
+        <%= image_tag('http://placehold.it/200x180', class: 'promo__img') %>
+        Lorem ipsum dolor
+      <% end %>
+    <% end %>
+    <p class="promo__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, repudiandae ea corporis nihil.
+    </p>
+  </div>
+  <div class="l-promo-partnerships__item">
+    <%= heading_tag(level: 3, class: 'promo__heading') do %>
+      <%= link_to '#', class: 'promo__link' do %>
+        <%= image_tag('http://placehold.it/200x180', class: 'promo__img') %>
+        Lorem ipsum dolor
+      <% end %>
+    <% end %>
+    <p class="promo__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, repudiandae ea corporis nihil.
+    </p>
+  </div>
+</div>
 
-  <p>
-    By taking our embed code you agree to our <a href="#" target="_blank">Terms &amp; Conditions</a>
-  </p>
+<%= heading_tag 'All tools', level: 2 %>
 
-  <div class="form__row">
-    <%= f.label :organisation, 'Organisation', class: 'form__label-heading' %>
-    <%= f.text_field :organisation, class: 't-organisation form__input',
-    data: { dough_validation_empty: 'You must enter an organisation' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum, beatae dicta.
+</p>
+
+<div class="directory directory--partnerships">
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+    <p class="directory__description">Also available in Welsh</p>
   </div>
 
-  <div class="form__row">
-    <%= f.label :email, 'Email address', class: 'form__label-heading' %>
-    <%= f.email_field :email, class: 't-organisation-email form__input',
-    data: { dough_validation_empty: 'You must enter an email address', dough_validation_invalid: 'You must enter a valid email address' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true', pattern: '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$' %>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
   </div>
 
-  <div class="form__row">
-    <fieldset class="form__group form__group--inline">
-      <legend>Language</legend>
-      <div class="form__group-item">
-        <%= f.label nil do %>
-          <%= f.radio_button 'lang', 'en', checked: true, class: 't-lang-en form__group-input', data: {dough_embedcodegenerator_lang: true} %>
-          English
-        <% end %>
-      </div>
-      <div class="form__group-item">
-        <%= f.label nil do %>
-          <%= f.radio_button 'lang', 'cy', class: 't-lang-cy form__group-input', data: {dough_embedcodegenerator_lang: true} %>
-          Welsh
-        <% end %>
-      </div>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
   </div>
 
-  <div class="form__row">
-    <fieldset class="form__group form__group--inline">
-      <legend>Width unit</legend>
-      <div class="form__group-item">
-        <%= f.label nil do %>
-          <%= f.radio_button 'width-unit', 'px', class: 't-width-unit-px form__group-input', checked: true, data: {dough_embedcodegenerator_width_unit: 'pixels'} %>
-          px (pixels)
-        <% end %>
-      </div>
-      <div class="form__group-item">
-        <%= f.label nil do %>
-          <%= f.radio_button 'width-unit', '%', class: 't-width-unit-percentage form__group-input', data: {dough_embedcodegenerator_width_unit: 'percentage'} %>
-          % (percentage)
-        <% end %>
-      </div>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
   </div>
 
-  <div class="form__row">
-    <%= f.label :width, 'Width', class: 'form__label-heading' %>
-    <%= f.text_field :width, class: 't-width form__input form__input--small',
-      data: { dough_embedcodegenerator_width: true, dough_validation_empty: 'You must enter a number', dough_validation_invalid: 'You must enter a valid number, e.g. 75' }, min: 1, max: '999999', maxlength: 6, pattern: '\d*', required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+    <p class="directory__description">Also available in Welsh</p>
+
   </div>
 
-  <div class="form__row">
-    <%= f.button t('corporate.partnerships.syndication.submit'), class: 't-submit-embed button button--small button--primary', data: { dough_embedcodegenerator_submit: true } %>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
   </div>
 
-  <div class="form__row form__row--is-hidden" data-dough-embedcodegenerator-target-container>
-    <pre class="code"><code class="code__content code__content--wrapped t-embed-code" data-dough-embedcodegenerator-target aria-live="polite"><%= render('tools/embed_code').to_str %></code></pre>
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+    <p class="directory__description">Also available in Welsh</p>
   </div>
-<% end %>
+
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+  </div>
+
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+  </div>
+
+  <div class="directory__item">
+    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
+    <% end %>
+
+    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
+    <p class="directory__description">Also available in Welsh</p>
+  </div>
+
+</div>

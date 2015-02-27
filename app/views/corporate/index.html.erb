@@ -1,0 +1,8 @@
+<div class="l-home-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('.directory_heading') %>
+    <% end %>
+    <%= render 'shared/directory', items: @categories %>
+  </div>
+</div>

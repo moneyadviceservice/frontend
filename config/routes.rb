@@ -136,9 +136,9 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
-    resource :advice, only: :show
+    resource  :advice, only: :show
     resources :videos, only: :show
-    resources :corporate, only: [:show]
+    resources :corporate, only: [:show, :index]
 
     resources :campaigns,
               only: 'show',

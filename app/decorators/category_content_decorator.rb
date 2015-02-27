@@ -20,7 +20,7 @@ class CategoryContentDecorator < Draper::Decorator
     "icon--#{object.type.dasherize}"
   end
 
-  def category?
-    object.type == 'category'
+  def guide?
+    object.type == 'guide'
   end
 end

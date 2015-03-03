@@ -12,12 +12,8 @@
   }
 }
 
-.directory--partnerships .directory__title {
-  @include body(16, 20);
-}
-
 .directory--partnerships .directory__description {
-  @include body(14, 18);
+  @extend %type-small;
   display: block;
 }
 

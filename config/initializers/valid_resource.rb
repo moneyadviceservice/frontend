@@ -1,15 +1,6 @@
 class ValidResource
   BLACKLIST = {
-    article:     %w(about-our-debt-work am-ein-gwaith-dyled
-                    debt-publications cyhoeddiadau-ar-ddyledion
-                    partners-overview-parhub
-                    partner-reg-parhub
-                    syndicating-tools-parhub
-                    video-syndication-parhub
-                    toolkits-parhub pecynnau-cymorth-cyngor-ariannol
-                    linking-parhub
-                    examples-parhub
-                    licence-agreement-parhub),
+    article:     %w(),
     category:    %w(partners
                     partners-uc-banks
                     partners-uc-landlords

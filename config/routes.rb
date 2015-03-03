@@ -104,15 +104,12 @@ Rails.application.routes.draw do
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'
-    resources :articles,
-              only: 'show',
-              constraints: ValidResource.new(:article) do
-                resource :feedback, only: [:new, :create], controller: :article_feedbacks
-              end
+    resources :articles, only: 'show' do
+      resource :feedback, only: [:new, :create], controller: :article_feedbacks
+    end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',
-        page_type: /articles|action_plans|news|videos|corporate|tools/,
-        constraints: ValidResource.new(:article)
+        page_type: /articles|action_plans|news|videos|corporate|tools/
 
     resources :categories,
               only: 'show',
@@ -136,8 +133,7 @@ Rails.application.routes.draw do
 
     resources :static_pages,
               path:        'static',
-              only:        'show',
-              constraints: ValidResource.new(:static_page)
+              only:        'show'
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

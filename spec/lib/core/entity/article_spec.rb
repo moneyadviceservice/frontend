@@ -21,6 +21,7 @@ module Core
       {
         title:       double,
         description: double,
+        slug:        double,
         body:        double,
         alternates:  [{ title: double, url: double, hreflang: double }],
         categories:  categories,
@@ -250,7 +251,6 @@ module Core
       end
 
       context 'empty related links' do
-
         let(:related_content) { { 'related_links' => [] } }
 
         it 'results in empty list' do

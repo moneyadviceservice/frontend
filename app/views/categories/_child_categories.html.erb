@@ -1,4 +1,4 @@
-<% contents.reject(&:guide?).each_with_index do |child_category, i| %>
+<% contents.select(&:category?).each_with_index do |child_category, i| %>
   <section class="category-detail">
     <%= heading_tag child_category.title,
                     level: 2,

@@ -72,15 +72,15 @@ RSpec.describe CategoryContentDecorator do
     end
   end
 
-  describe '#guide?' do
+  describe '#category??' do
     context 'category' do
       let(:item) { double(type: 'category') }
-      specify { expect(decorator).to_not be_guide }
+      specify { expect(decorator).to be_category }
     end
 
     context 'guide' do
       let(:item) { double(type: 'guide') }
-      specify { expect(decorator).to be_guide }
+      specify { expect(decorator).to_not be_category }
     end
   end
 end

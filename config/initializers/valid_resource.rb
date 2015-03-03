@@ -1,11 +1,9 @@
 class ValidResource
   BLACKLIST = {
-    article:     %w(),
     category:    %w(partners
                     partners-uc-banks
                     partners-uc-landlords
-                    resources-for-professionals-working-with-young-people-and-parents),
-    static_page: %w()
+                    resources-for-professionals-working-with-young-people-and-parents)
   }
 
   attr_accessor :type

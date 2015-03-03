@@ -10,7 +10,8 @@ class MountController < ApplicationController
   def alternate_url
     new_params = params.dup
     new_params[:script_name] = "/#{alternate_locale}/#{alternate_engine_id}"
-    url_for(new_params)
+    string = url_for(new_params)
+    string.split("?").first
   end
 
   helper_method :alternate_url

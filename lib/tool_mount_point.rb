@@ -7,7 +7,6 @@ require_relative '../lib/tool_mount_point/debt_free_day_calculator'
 require_relative '../lib/tool_mount_point/decision_trees'
 require_relative '../lib/tool_mount_point/mortgage_calculator'
 require_relative '../lib/tool_mount_point/pensions_calculator'
-require_relative '../lib/tool_mount_point/rio'
 require_relative '../lib/tool_mount_point/savings_calculator'
 require_relative '../lib/tool_mount_point/timelines'
 

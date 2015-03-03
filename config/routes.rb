@@ -111,8 +111,7 @@ Rails.application.routes.draw do
               end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',
-        page_type: /articles|action_plans|news|videos|corporate|tools/,
-        constraints: ValidResource.new(:article)
+        page_type: /articles|action_plans|news|videos|corporate|tools/
 
     resources :categories,
               only: 'show',

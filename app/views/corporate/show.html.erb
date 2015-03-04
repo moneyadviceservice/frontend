@@ -11,19 +11,9 @@
     <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
       <%= heading_tag article.title %>
 
-      <% unless @newsletter_excluded %>
-        <%= render 'shared/news_signup_test' %>
-      <% end %>
-
       <%= article.content %>
 
       <%= render article.extra_content_partial if article.extra_content? %>
-
-      <% if Feature.active?(:callback_requester) %>
-        <% if article.callback_requestable? %>
-          <%= render 'callback_requester'  %>
-        <% end %>
-      <% end %>
 
       <%= render 'previous_and_next' %>
 

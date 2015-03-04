@@ -1,0 +1,10 @@
+.l-inpage-nav {
+  @include row(12);
+  margin-bottom: $baseline-unit*6;
+}
+
+.l-inpage-nav__item {
+  @include respond-to($mq-s) {
+    @include column(6);
+  };
+}

@@ -13,6 +13,10 @@
   color: $color-link-list-text;
 }
 
+.link-list-primary--no-border .link-list-primary__item {
+  border-bottom: none;
+}
+
 .link-list-primary__text {
   padding: $baseline-unit*2 10px;
   display: block;

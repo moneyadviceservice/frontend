@@ -244,8 +244,8 @@
   .flexbox & {
     @include respond-to($mq-s) {
       margin-left: 0;
-      margin-right: 7%;
-      flex: 1 1 46%;
+      margin-right: 5.7%;
+      flex-basis: 47%;
 
       &:nth-child(even) {
         margin-right: 0;

@@ -1,7 +1,7 @@
 RSpec.describe 'RIO', type: :request, features: [:rio, :improvements] do
   %W(
-    /en/tools/#{ToolMountPoint::Rio::EN_ID}
-    /cy/tools/#{ToolMountPoint::Rio::CY_ID}
+    /en/#{EngineMountPoint::Rio::EN_ID}
+    /cy/#{EngineMountPoint::Rio::CY_ID}
   ).each do |path|
     describe path do
       before do

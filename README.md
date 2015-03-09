@@ -43,6 +43,12 @@ Setup the database:
 bundle exec rake db:create && bundle exec rake db:schema:load
 ```
 
+Copy the features.yml.sample to the config dir:
+
+```sh
+cp config/features.yml.sample config/features.yml
+```
+
 ## Usage
 
 To start the application:

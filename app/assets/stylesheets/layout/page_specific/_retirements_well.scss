@@ -1,0 +1,13 @@
+.l-retirements-well {
+  background: $color-grey-paler;
+  padding: $baseline_unit*4 $baseline_unit $baseline_unit*2 $baseline_unit;
+  border-radius: 4px;
+
+  h2 {
+    @include body(22, 26);
+
+    color: $color-green-secondary;
+    margin-top: 0;
+    font-weight: normal;
+  }
+}

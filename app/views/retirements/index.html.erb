@@ -1,1 +1,100 @@
-retirements landing page
+<div class="l-section l-section--intro">
+  <div class="l-constrained">
+      <h1 class="l-1col"><%= t('retirements.section1.title') %></h1>
+      <div class="l-2col-even">
+        <%= image_tag('retirements/video_placeholder.jpg', style: 'width: 100%') %>
+        <p><%= raw t('retirements.section1.video_caption_html') %></p>
+      </div>
+      <div class="l-2col-even">
+        <p class="intro"><%= t('retirements.section1.intro') %></p>
+        <ul class="list">
+          <% t('retirements.section1.bullets').each do |text| %>
+            <li><%= text %></li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="l-section">
+  <div class="l-constrained">
+    <% t('retirements.section2').each do |panel| %>
+      <div class="l-3col-even retirements-panel">
+        <a href="<%= panel[:url] %>">
+          <% if (panel.has_key?(:image)) then %>
+            <%= image_tag panel[:image], class: 'retirements-panel__image', alt: '' %>
+          <% else %>
+            <div class="retirements-panel__image--placeholder"></div>
+          <% end %>
+          <h2 class="retirements-panel__title"><%= panel[:text] %></h2>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="l-section l-section--odd">
+  <div class="l-constrained">
+    <% t('retirements.section3').each do |panel| %>
+      <div class="l-3col-even">
+        <h2><%= panel[:title] %></h2>
+        <ul class="link-list">
+          <% panel[:links].each do |link| %>
+            <li><%= link_to link[:text], link[:url] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="l-section">
+  <div class="l-constrained">
+    <h2 class="l-1col"><%= t('retirements.section4.title') %></h2>
+    <div class="l-row retirements-panels retirements-panels--first">
+      <% t('retirements.section4.panels1').each do |panel| %>
+        <div class="l-3col-even retirements-panels__panel">
+          <h3><%= panel[:title] %></h3>
+          <ul class="link-list">
+            <% panel[:links].each do |link| %>
+              <li><%= link_to link[:text], link[:url] %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="l-row retirements-panels retirements-panels--last">
+      <% t('retirements.section4.panels1').each do |panel| %>
+        <div class="l-3col-even retirements-panels__panel">
+          <h3><%= panel[:title] %></h3>
+          <ul class="link-list">
+            <% panel[:links].each do |link| %>
+              <li><%= link_to link[:text], link[:url] %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="l-constrained">
+  <div class="l-1col l-retirements-well">
+    <div class="l-2col-even">
+      <h2><%= t('retirements.section5.panel1.title') %></h2>
+      <ul class="link-list">
+        <% t('retirements.section5.panel1.links').each do |link| %>
+          <li><%= link_to link[:text], link[:url] %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="l-2col-even">
+      <h2><%= t('retirements.section5.panel2.title') %></h2>
+      <ul class="list-benefits">
+        <% t('retirements.section5.panel2.items').each do |item| %>
+          <li><%= item %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

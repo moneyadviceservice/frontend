@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/redundancy.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MAS-Mac-Image.local; jonesagyemang; 28714) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 73ab973a-c9c8-4df7-a426-cedf5937dd49
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Mar 2015 12:14:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 2b0840ac3b39e04f20fc348509e226b3
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 12-Mar-2016 12:14:51 GMT; secure
+      - _session_id=2b0840ac3b39e04f20fc348509e226b3; path=/; secure; HttpOnly
+      - _web_tracking=f551a9357cb34dc7847ace6cd293548f; path=/; expires=Sat, 12-Mar-2016
+        12:14:51 GMT; secure
+      X-Request-Id:
+      - 73ab973a-c9c8-4df7-a426-cedf5937dd49
+      X-Runtime:
+      - '0.035857'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"redundancy","title":"Dileu swydd","description":"Cymorth gyda
+        llunio cynllun dileu swydd, budd-daliadau y gallwch eu hawlio, a\u2019ch hawliau
+        cyfreithiol.","parent_id":"work-pensions-and-retirement","contents":[{"id":"cadw-trefn-ar-eich-arian-os-ywch-swydd-mewn-perygl","type":"guide","title":"Cadw
+        trefn ar eich arian os yw\u2019ch swydd mewn perygl","description":"Ydych
+        chi\u2019n debygol o golli\u2019ch swydd? Sut i gael eich arian dan reolaeth
+        ac ymdopi \u00e2 chyfnod allan o waith"},{"id":"dileu-swydd","type":"tool","title":"Cynllun
+        Gweithredu - Dileu Swydd","description":"Os ydych newydd golli''ch swydd neu''n
+        credu bod hynny''n debygol yn y dyfodol agos, defnyddiwch y cynllun gweithredu
+        hwn sy''n dangos i chi, mewn camau, sut i reoli''r sefyllfa"},{"id":"tal-dileu-swydd","type":"guide","title":"T\u00e2l
+        dileu swydd","description":"Ar \u00f4l dwy flynedd gyda\u2019r un cyflogwr
+        fe gewch d\u00e2l dileu swydd. Darganfyddwch faint sydd gennych hawl i\u2019w
+        gael"},{"id":"newid-gyrfa-ar-ol-dileu-swydd","type":"guide","title":"Newid
+        gyrfa ar \u00f4l dileu swydd","description":"Yn wynebu dileu\u2019ch swydd
+        ac yn ystyried newid gyrfa? Mae digonedd o gymorth ariannol ar gael ar gyfer
+        ailhyfforddi"},{"id":"hawlio-eich-ad-daliad-treth-ar-ol-colli-eich-swydd","type":"guide","title":"Hawlio
+        eich ad-daliad treth ar \u00f4l colli eich swydd","description":"Pryd y gallai
+        ad-daliad treth fod yn ddyledus i chi a sut i wneud cais amdano"},{"id":"rhestr-wirio-os-ydych-allan-o-waith-pethau-iw-gwneud-os-ydych-wedi-colli-eich-swydd","type":"guide","title":"Rhestr
+        wirio os ydych allan o waith \u2013 pethau i\u2019w gwneud os ydych wedi colli
+        eich swydd","description":"Os ydych wedi colli eich gwaith ac allan o waith,
+        defnyddiwch ein rhestr wirio i\u2019ch helpu i fod yn feistr ar eich cyllidebu"},{"id":"adolygwch-eich-cyllideb-ar-ol-gostyngiad-mewn-incwm","type":"guide","title":"Adolygwch
+        eich cyllideb ar \u00f4l gostyngiad mewn incwm","description":"Sut i reoli
+        cyllideb eich cartref ar \u00f4l colli eich swydd, a beth y gallwch ei wneud
+        i ymdopi \u00e2 cholli enillion"},{"id":"gwneud-y-gorau-och-tal-dileu-swydd","type":"guide","title":"Gwneud
+        y gorau o\u2019ch t\u00e2l dileu swydd","description":"Ydych chi wedi derbyn
+        cyfandaliad? Fe allech ei ddefnyddio i dalu dyled, ei fuddsoddi neu hyd yn
+        oed sefydlu busnes"},{"id":"budd-daliadau-a-chredydau-treth-ar-ol-colli-swydd","type":"action_plan","title":"Cynllun
+        Gweithredu - Budd-daliadau a chredydau treth ar \u00f4l colli swydd","description":"Defnyddiwch
+        y cynllun gweithredu hwn i\u2019ch helpu i gael gwybod pa fudd-daliadau a
+        hawliau eraill sydd ar gael yn sgil diswyddiad"},{"id":"budd-daliadau-a-chredydau-treth-pan-ydych-wedi-colli-eich-swydd","type":"guide","title":"Budd-daliadau
+        a chredydau treth pan ydych wedi colli eich swydd","description":"Os ydych
+        yn chwilio am waith, efallai y gallwch gael Lwfans Ceisio Gwaith a budd-daliadau
+        neu grantiau eraill. Darganfyddwch sut i hawlio"},{"id":"beth-iw-wneud-ynglyn-ach-dyled-os-byddwch-yn-collich-swydd","type":"guide","title":"Beth
+        i\u2019w wneud yngl\u0177n \u00e2\u2019ch dyled os byddwch yn colli\u2019ch
+        swydd","description":"Cyngor, awgrymiadau a dewisiadau ar dalu ad-daliadau
+        ar amser a rheoli dyledion os ydych wedi colli eich swydd"},{"id":"eich-dewisiadau-o-ran-pensiwn-os-yw-eich-swydd-yn-cael-ei-dileu","type":"guide","title":"Eich
+        dewisiadau o ran pensiwn os yw eich swydd yn cael ei dileu","description":"Os
+        yw eich swydd ar fin cael ei dileu ac rydych chi\u2019n poeni am eich pensiwn
+        gweithle, edrychwch pa ddewis sydd gennych yma"},{"id":"oes-rhaid-i-chi-dalu-treth-ar-eich-tal-dileu-swydd","type":"guide","title":"Oes
+        rhaid i chi dalu treth ar eich t\u00e2l dileu swydd?","description":"Mae\u2019r
+        rhan fwyaf o gyfandaliadau dileu swydd yn ddi-dreth ond mae\u2019n rhaid i
+        chi dalu treth ar d\u00e2l gwyliau a th\u00e2l yn lle rhybudd"},{"id":"awgrymiadau-da-ar-gyfer-gwneud-arian-pan-fyddwch-yn-wynebu-collich-swydd","type":"guide","title":"Awgrymiadau
+        da ar gyfer gwneud arian pan fyddwch yn wynebu colli\u2019ch swydd","description":"Yn
+        wynebu colli\u2019ch swydd? Darllenwch am y ffyrdd y mae pobl eraill wedi
+        llwyddo i greu ychydig o arian ychwanegol ar \u00f4l colli eu swyddi"},{"id":"a-allwch-yswirioch-hun-rhag-dileuch-swydd","type":"guide","title":"A
+        allwch yswirio\u2019ch hun rhag dileu\u2019ch swydd?","description":"Mae\u2019n
+        bosibl y gall polis\u00efau diogelu taliadau eich helpu gyda\u2019ch ad-daliadau
+        morgais a benthyciad os byddwch yn colli\u2019ch swydd"},{"id":"gweithio-llai-o-oriau-yn-lle-dileu-swydd","type":"guide","title":"Gweithio
+        llai o oriau yn lle dileu swydd","description":"Wedi cael cynnig gwaith amser
+        byr neu derfynu cyflogaeth dros dro yn lle dileu\u2019ch swydd? Dyma beth
+        sydd angen i chi ei wybod"},{"id":"eich-hawliau-cyfreithiol-wrth-wynebu-dileu-swydd","type":"guide","title":"Eich
+        hawliau cyfreithiol wrth wynebu dileu swydd","description":"Cyngor ar gyfnodau
+        rhybudd, absenoldeb garddio, amser o\u2019r gwaith at gyfweliadau swydd a
+        chytundebau cyfaddawd"},{"id":"dileu-swydd-yn-erbyn-diswyddo-annheg","type":"guide","title":"Dileu
+        swydd yn erbyn diswyddo annheg","description":"Sut i weld a yw hi\u2019n deg
+        bod eich swydd wedi ei dileu a beth i\u2019w wneud os ydych chi\u2019n meddwl
+        eich bod wedi eich diswyddo yn annheg"},{"id":"ystyried-dileu-swydd-yn-wirfoddol","type":"guide","title":"Ystyried
+        dileu swydd yn wirfoddol","description":"Ystyriwch beth yw manteision ac anfanteision
+        dileu swydd yn wirfoddol ac ystyriwch yr effaith ar eich sefyllfa ariannol,
+        diogelu eich incwm a swyddi yn y dyfodol"},{"id":"ystyried-ymddeoliad-cynnar-yn-lle-dileu-swydd","type":"guide","title":"Ystyried
+        ymddeoliad cynnar yn lle dileu swydd","description":"Cyn cymryd ymddeoliad
+        cynnar, mae arnoch angen gwybod y manteision a\u2019r anfanteision - a pha
+        un a allwch ei fforddio ai peidio"}]}'
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 12:14:51 GMT
+recorded_with: VCR 2.9.2

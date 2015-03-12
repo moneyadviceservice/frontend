@@ -19,6 +19,19 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/cutback-calculator.git
+  revision: 8691df0e24a25fcc570c2183204720cbdd1065cb
+  specs:
+    cutback_calculator (0.9.9)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      rails (~> 4.1)
+      responders
+      sass-rails (~> 4.0.0)
+      uglifier
+
+GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: b82b9b4d39809fda135e8671e6597d3cafe1825c
   specs:
@@ -662,6 +675,7 @@ DEPENDENCIES
   cream
   csslint_ruby
   cucumber-rails
+  cutback_calculator!
   database_cleaner
   debt_advice_locator (~> 2.0)
   debt_free_day_calculator (~> 2.1.0)

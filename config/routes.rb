@@ -52,6 +52,11 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:car_cost_tool)
     end
 
+    Feature.with(:cutback_calculator) do 
+      mount CutbackCalculator::Engine => '/tools/:tool_id', 
+            constraints: ToolMountPoint.for(:cutback_calculator)
+    end
+
     Feature.with(:debt_free_day_calculator) do
       mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:debt_free_day_calculator)

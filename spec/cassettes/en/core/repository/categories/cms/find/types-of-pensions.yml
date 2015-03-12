@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/types-of-pensions.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MAS-Mac-Image.local; jonesagyemang; 28714) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 6bd05a66-bdfd-414d-924d-211aa8a01a8e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Mar 2015 12:14:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 768670a184079693cb62fa33afc32be7
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 12-Mar-2016 12:14:53 GMT; secure
+      - _session_id=768670a184079693cb62fa33afc32be7; path=/; secure; HttpOnly
+      - _web_tracking=929d232462d99b34229a1d657bb7e5ae; path=/; expires=Sat, 12-Mar-2016
+        12:14:53 GMT; secure
+      X-Request-Id:
+      - 6bd05a66-bdfd-414d-924d-211aa8a01a8e
+      X-Runtime:
+      - '0.017139'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"types-of-pensions","title":"Types of pension","description":"From
+        defined contribution and benefit schemes, to personal pensions and pensions
+        for the self-employed.","parent_id":"work-pensions-and-retirement","contents":[{"id":"annuities-and-other-types-of-pension-income-your-options","type":"guide","title":"Annuities
+        and other types of retirement income","description":"An overview of the features,
+        benefits and risks of different types of annuity and other categories of pension
+        income"},{"id":"pensions-for-the-self-employed","type":"guide","title":"Pensions
+        for the self-employed","description":"If you\u2019re self-employed, saving
+        for a pension poses a number of challenges, but it\u2019s easier to get started
+        than you might think"},{"id":"pension-investment-options-an-overview","type":"guide","title":"Pension
+        investment options \u2013 an overview","description":"It\u2019s important
+        to think about how your pension is being invested as well as how much you\u2019re
+        saving into it"},{"id":"multi-employer-pension-schemes","type":"guide","title":"Multi-employer
+        pension schemes","description":"Large multi-employer schemes aim to provide
+        low-cost, flexible pensions - find out more"},{"id":"nest-pensions","type":"guide","title":"NEST
+        pensions","description":"Find out more about NEST, a low-cost pension you
+        may be able to join through your workplace or if you are self-employed"},{"id":"personal-pensions","type":"guide","title":"Personal
+        pensions","description":"If you haven''t got a workplace pension then setting
+        up a personal pension is a good idea"},{"id":"self-invested-personal-pensions","type":"guide","title":"Self-invested
+        personal pensions (SIPPs)","description":"Find out about SIPPs (self-invested
+        personal pensions) and whether this type of pension could work for you"},{"id":"stakeholder-pensions","type":"guide","title":"Stakeholder
+        pensions","description":"Stakeholder pensions have low charges and can be
+        offered by an employer or you can start one yourself"},{"id":"defined-benefit-schemes","type":"guide","title":"Defined
+        benefit schemes","description":"In a defined-benefit or salary-related pension
+        scheme, your income in retirement is tied to your earnings while you worked"},{"id":"defined-contribution-pension-schemes","type":"guide","title":"Defined
+        contribution pension schemes","description":"In a defined-contribution or
+        money-purchase pension scheme, you build up a fund with which to buy a retirement
+        income"},{"id":"group-personal-pensions","type":"guide","title":"What is a
+        group personal pension?","description":"A group personal pension is a type
+        of defined-contribution scheme offered by some employers"}]}'
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 12:14:54 GMT
+recorded_with: VCR 2.9.2

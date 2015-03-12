@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/automatic-enrolment.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (MAS-Mac-Image.local; jonesagyemang; 28714) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 6bd05a66-bdfd-414d-924d-211aa8a01a8e
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Mar 2015 12:14:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 36b768a9cecb997c139ee9e55ad825d1
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Sat, 12-Mar-2016 12:14:54 GMT; secure
+      - _session_id=36b768a9cecb997c139ee9e55ad825d1; path=/; secure; HttpOnly
+      - _web_tracking=2c5bd20736fabe252a7432c9182e3534; path=/; expires=Sat, 12-Mar-2016
+        12:14:54 GMT; secure
+      X-Request-Id:
+      - 6bd05a66-bdfd-414d-924d-211aa8a01a8e
+      X-Runtime:
+      - '0.018574'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"automatic-enrolment","title":"Automatic enrolment","description":"Learn
+        about automatic enrolment and how it affects you, and use our workplace pension
+        advice tool and calculator.","parent_id":"work-pensions-and-retirement","contents":[{"id":"automatic-enrolment-into-a-workplace-pension","type":"guide","title":"Automatic
+        enrolment \u2013 an introduction","description":"Joining your workplace pension
+        scheme is a hassle-free way to start saving for later life"},{"id":"workplace-pension-contribution-calculator","type":"tool","title":"Workplace
+        pension contribution calculator","description":"Use this calculator to work
+        out how much you and your employer will each put into your pension pot"},{"id":"workplace-pension-changes-the-basics","type":"video","title":"Workplace
+        pension changes - the basics","description":"This video explains how the automatic
+        enrolment process works and the importance of saving for retirement"},{"id":"workplace-pension-advice-tool","type":"tool","title":"Workplace
+        pension advice tool","description":"Quick questions to help you decide if
+        being in a workplace pension is right for you"},{"id":"automatic-enrolment-if-youre-above-state-pension-age","type":"guide","title":"Automatic
+        enrolment if you''re above State Pension age","description":"What automatic
+        enrolment means for you if you''re over the State Pension age"},{"id":"automatic-enrolment-if-you-earn-up-to-gbp9440","type":"guide","title":"Automatic
+        enrolment if you earn up to \u00a310,000","description":"Your rights to joining
+        a workplace pension explained"},{"id":"automatic-enrolment-if-youre-21-or-under","type":"guide","title":"Automatic
+        enrolment if you\u2019re 21 or under","description":"Find out how to start
+        a pension fund if you\u2019re 21 or under"},{"id":"automatic-enrolment-if-youre-close-to-retirement","type":"guide","title":"Automatic
+        enrolment if you''re close to retirement","description":"While automatic enrolment
+        is a great way to start saving into a pension, as you get closer to retiring,
+        its likely impact on your income in retirement gets smaller. Find out more"},{"id":"automatic-enrolment-if-you-have-debts","type":"guide","title":"Automatic
+        enrolment if you have debts","description":"If you have debts that aren\u2019t
+        comfortably under control here\u2019s what to do"},{"id":"make-the-most-of-automatic-enrolment","type":"action_plan","title":"Action
+        plan \u2013 Make the most of automatic enrolment","description":"Find out
+        what your pension contributions will cost you and what kind of retirement
+        income they\u2019ll generate"},{"id":"automatic-enrolment-what-to-expect-from-your-employer","type":"guide","title":"Automatic
+        enrolment - what to expect from your employer","description":"Find out what
+        to expect when automatic enrolment takes effect in your workplace"},{"id":"pension-calculator","type":"tool","title":"Pension
+        calculator","description":"Use this calculator to help you work out how much
+        retirement income you might receive from saving in a personal, stakeholder
+        or group pension"}]}'
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 12:14:54 GMT
+recorded_with: VCR 2.9.2

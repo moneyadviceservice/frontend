@@ -5,6 +5,8 @@
  I am being served from frontend
 ###
 
+console.log "I am being served from frontend"
+
 @masConfig =
   targetSelector: "mas-widget"
   containerClass: "mas-widget-container"

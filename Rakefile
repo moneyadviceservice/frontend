@@ -3,7 +3,7 @@ include FileUtils
 
 Rails.application.load_tasks
 
-Rake::Task["assets:precompile"].enhance do
+Rake::Task['assets:precompile'].enhance do
   Rake::Task[:copy_precompiled_tools_js].invoke
 end
 
@@ -26,13 +26,12 @@ def assets_dir_name
 end
 
 def precompiled_most_recent_tools_js(file_paths)
-  files_found = file_paths.map{|path| File.new(Rails.root.join(path))}
-  sorted_results = files_found.sort{|file1, file2| file2.stat <=> file1.stat}
+  files_found = file_paths.map { |path| File.new(Rails.root.join(path)) }
+  sorted_results = files_found.sort { |file1, file2| file2.stat <=> file1.stat }
   sorted_results.first
 end
 
 def update_tools_js?(precompiled_tools_js, tools_js_location)
-  !File.exists?(tools_js_location) ||
-  (File.exists?(tools_js_location) && !FileUtils.identical?(precompiled_tools_js, tools_js_location))
+  !File.exist?(tools_js_location) ||
+  (File.exist?(tools_js_location) && !FileUtils.identical?(precompiled_tools_js, tools_js_location))
 end
-

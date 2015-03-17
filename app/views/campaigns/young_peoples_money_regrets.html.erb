@@ -1,0 +1,63 @@
+<div class="l-constrained">
+  <div class="l-article-3col-main editorial">
+    <div class="l-main__row">
+      <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+        <%= heading_tag "Young people’s money regrets", level: 1 %>       
+        <p>
+          Are you leaving school or heading to college? Perhaps you’re starting full-time work for the first time?
+        </p>
+        <p>
+          Whatever your position, there will be some difficult money decisions to make. You’ll maybe move away from home and stop relying on your parents for money. But with independence comes responsibility.
+        </p>
+
+        <p>
+          You could have rent and bills to pay. Maybe you might buy a car, with all the associated running costs. And although it’s generally easy to get a credit card, it’s an easy way to slip into debt.
+        </p>
+
+        <p>
+          There’s a very real chance that you could make the wrong decisions – decisions that could impact on your finances for years. But we have tools and advice that can help.
+        </p>
+
+        <p>
+          Read more below to find out how to avoid making bad choices and look after your money better.
+        </p>
+
+        <%= heading_tag "Money regrets", level: 2 %>
+        <p>
+          Read about some of the bad choices young adults have made, how they are paying the price years later and how you can avoid making the same mistakes.
+        </p>
+        <p>
+          <a href="/en/news/financial-decisions-come-back-to-haunt-young-people">Find out</a>
+        </p>
+
+        <%= heading_tag "Report in full", level: 2 %>
+        <p>
+          Read our report ‘It’s time to talk: young people and money regrets’ in full, looking at the attitudes and behaviours of 16-21 year-olds.
+        </p>
+        <p>
+          <a href="/files/mas_money_regrets_online.pdf">Read more</a>
+        </p>
+
+        <%= heading_tag "Try our app", level: 2 %>
+        <p>
+          We've worked with 16-19 years olds to help develop Wishfund, a savings goal app, which is available to download from iTunes and Google Play.
+        </p>
+        <p>
+          <a href="/en/news/introducing-wishfund">Try it now</a>
+        </p>
+      </main>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

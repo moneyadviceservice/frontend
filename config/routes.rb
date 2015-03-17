@@ -129,7 +129,7 @@ Rails.application.routes.draw do
               only: 'show',
               path: 'campaigns',
               constraints: {
-                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
+                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise|what-does-ma-think|free-debt-advice|save-gbp3-a-day-for-emergencies|the-true-cost-of-affording-a-home|young-peoples-money-regrets}
               }
 
     get '/campaigns/debt-management', to: 'debt_management#show'

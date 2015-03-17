@@ -1,0 +1,95 @@
+<div class="l-constrained">
+  <div class="l-article-3col-main editorial">
+    <div class="l-main__row">
+      <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+        <%= heading_tag "What will you have to pay for your debts to be resolved?", level: 1 %>
+
+        <%= heading_tag "You can get debt advice & management services right now", level: 2 %>
+        
+        <ul class="yes-no">
+          <li class="yes">Non-judgemental and impartial</li>
+          <li class="yes">Completely confidential</li>
+          <li class="yes">Stop lenders chasing</li>
+          <li class="yes">Help you understand your legal rights and obligations</li>
+          <li class="yes">Help to get back on top of managing your money</li>
+        </ul>
+
+        <%= heading_tag "Saran's debt story", level: 3 %>      
+        <iframe width="467" height="263" src="//www.youtube.com/embed/zAj-obNgfpA?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe>
+
+        <%= heading_tag "These organisations provide FREE debt advice & management services", level: 2 %>
+
+        <table class="datatable-default table table--full-width">
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Online</th>
+              <th>Phone</th>
+              <th>Face to Face</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Advice UK</td>
+              <td>No</td>
+              <td>No</td>
+              <td><a href="http://www.adviceuk.org.uk/find-a-member/" target="_blank">Website</a></td>
+            </tr>
+            <tr>
+              <td>Christians Against Poverty</td>
+              <td>No</td>
+              <td>0800 328 0006</td>
+              <td><a href="https://www.capuk.org/i-want-help" target="_blank">Website</a></td>
+            </tr>
+            <tr>
+              <td>Citizens Advice</td>
+              <td>No</td>
+              <td>No</td>
+              <td><a href="http://www.citizensadvice.org.uk/index/getadvice.html" target="_blank">Website</a></td>
+            </tr>
+            <tr>
+              <td>StepChange</td>
+              <td><a href="http://www.stepchange.org/Debtremedy.aspx" target="_blank">Website</a></td>
+              <td>0800 138 1111</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Debt Action NI</td>
+              <td><a href="http://debtaction-ni.payplan.com/budget" target="_blank">Website</a></td>
+              <td>0800 917 4607 or Text 'Action' to 81025</td>
+              <td><a href="http://www.debtaction-ni.net/get-help" target="_blank">Website</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>
+          * Given the limited relevance of Debt Management Plans in Scotland this information is focused on service provision in England, Wales and Northern Ireland. StepChange deliver services in Scotland.
+        </p>
+
+        <%= heading_tag "If you want to use a fee charging company to manage your debts?", level: 3 %>
+        <p>
+          If you decide to use a fee charging company to manage your debt – make sure you shop around to get the best deal. Our advice is to choose a firm that has been approved to a set of best practice standards – the Debt Management Plan Protocol.
+        </p>
+        <p>
+          <a href="https://www.moneyadviceservice.org.uk/en/static/free-debt-advice-listings">See the list of companies that comply</a>
+        </p>
+        <p>
+          DEMSA and DRF are the main trade bodies for fee-charging debt management providers.
+        </p>
+      </main>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

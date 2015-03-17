@@ -1,0 +1,57 @@
+<div class="l-constrained">
+  <div class="l-article-3col-main editorial">
+    <div class="l-main__row">
+      <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+        <%= heading_tag "Save &pound;3 a day for emergencies", level: 1 %>
+        <p>
+          We can all be caught out by unplanned events and surprise bills. Our new ‘Unexpected Costs’ report reveals that seven out of ten households in the UK have experienced at least one unplanned expense in the past 12 months. It also shows that one in three people have no savings or investments to help them pay for out of the blue costs.
+        </p>
+        <p>
+          By cutting back and saving more you can be better prepared for the unanticipated. Once you set a goal and start saving, you can watch your money grow. Did you realise saving just &pound;3 a day adds up to &pound;1,095 over a year?
+        </p>
+        <p>
+          Find out <a href="/en/news/the-top-five-unexpected-costs-you-could-face-this-year">The top five unexpected costs you could face this year</a>; <a href="/en/news/insurance-and-unexpected-costs">Is insurance the answer?</a>; and <a href="/en/news/protect-against-unexpected-costs-by-knowing-your-consumer-rights">Check your consumer rights before paying the bill</a>. See our <a href="/en/static/be-prepared-for-a-rainy-day">Be prepared for a rainy day infographic</a>. 
+        </p>
+        <p>
+          Take the steps below to be better prepared for unexpected costs.
+        </p>
+
+        <%= heading_tag "Save", level: 2 %>
+        <p>
+          It’s best to have an emergency savings fund for sudden expenses but how much is enough? This handy guide will help you determine how much to save.
+        </p>
+        <p>
+          <a href="/en/articles/emergency-savings-how-much-is-enough">Read more</a>
+        </p>
+
+        <%= heading_tag "Act now", level: 2 %>
+        <p>
+          Follow this step-by-step action plan to help you save money on utility bills, shopping and travel costs, making your hard-earned cash go further.
+        </p>
+        <p>
+          <a href="/en/action_plans/how-to-make-your-money-go-further">Get started</a>
+        </p>
+
+        <%= heading_tag "Cut back", level: 2 %>
+        <p>
+          Use this calculator to work out where you can make savings on things that you buy regularly. It’s quick and easy and will only take five minutes to complete.
+        </p>
+        <p>
+          <a href="/en/tools/cut-back-calculator">Try it now</a>
+        </p>
+      </main>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

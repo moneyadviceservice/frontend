@@ -1,0 +1,63 @@
+<div class="l-constrained">
+  <div class="l-article-3col-main editorial">
+    <div class="l-main__row">
+      <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+        <%= heading_tag "What does MA do for me?", level: 1 %>
+        <p>
+          We can’t plan for everything in life. But it’s good to think ahead and consider the financial implications for things like being made <a href="/en/categories/redundancy">redundant</a>, <a href="/en/tools/savings-calculator">saving for a holiday</a> or even <a href="/en/articles/first-time-buyer-money-tips">moving home</a>.
+        </p>
+        <p>
+          Click the boxes below to find out how you can start planning for tomorrow now.
+        </p>
+
+        <%= heading_tag "Redundancy", level: 2 %>
+        <p>
+          Job loss on the horizon? Or now redundant? How to take control of your money and survive a period out of work.
+        </p>
+        <p> 
+          <a href="/en/categories/redundancy">Act now</a>
+        </p>
+
+        <%= heading_tag "Budgeting", level: 2 %>
+        <p>
+          Get to grips with your spending. Work out how much money you have coming in and what you're spending it on.
+        </p>
+        <p>
+          <a href="/en/tools/budget-planner">Act now</a>
+        </p>
+
+        <%= heading_tag "Moving home", level: 2 %>
+        <p>
+          Find out how much moving home will cost and why you should start saving now in preparation.
+        </p>
+        <p>
+          <a href="/en/articles/first-time-buyer-money-tips">Act now</a>
+        </p>
+
+        <%= heading_tag "Watch the ad again", level: 2 %>
+
+        <h3>Making of Everyday budgeting</h3>
+
+        <iframe frameborder="0" height="263" width="467" src="https://www.youtube.com/embed/fBohpOn635E?list=PLzJI8W1q5m7pks_mYtM46mI96yEL7ftss&amp;hl=en_US"></iframe>
+
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLzJI8W1q5m7qV5t7zCaK0atLEZqYOpKVc&feature=plcp">What does MA think?</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLzJI8W1q5m7pks_mYtM46mI96yEL7ftss&feature=plcp">Behind the scenes&hellip;</a></li>
+          <li><a href="https://www.youtube.com/user/MoneyAdviceService">MA YouTube channel</a></li>
+        </ul>
+      </main>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

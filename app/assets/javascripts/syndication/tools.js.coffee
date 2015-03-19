@@ -1,11 +1,7 @@
 #= require ./tool_syndication
 #= require ./resizer
 
-###
- I am being served from frontend
-###
-
-console.log "I am being served from frontend"
+served_from_frontend = "Served from frontend"
 
 @masConfig =
   targetSelector: "mas-widget"

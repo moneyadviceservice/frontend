@@ -35,6 +35,14 @@
   }
 }
 
+.l-campaign__content--padded-top {
+  margin-top: $baseline-unit*5;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*10;
+  }
+}
+
 .l-campaign__next-steps {
   @include column(12);
 

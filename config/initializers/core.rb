@@ -31,9 +31,8 @@ Core::Registry::Repository[:video] =
 Core::Registry::Repository[:corporate] =
   Core::Repository::Corporate::CMS.new(fallback: Core::Repository::Articles::PublicWebsite.new)
 
-Core::Registry::Repository[:category] = Core::Repository::Cache.new(
-  Core::Repository::Categories::CMS.new(
-    fallback: Core::Repository::Categories::PublicWebsite.new), Rails.cache)
+Core::Registry::Repository[:category] = 
+    Core::Repository::Categories::CMS.new
 
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 

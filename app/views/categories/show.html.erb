@@ -19,6 +19,6 @@
 
 <div class="l-nav">
   <%= render 'shared/nav',
-             categories:        category_navigation,
+             categories:        category_navigation(corporate_category?(category.object.id)),
              active_categories: active_categories %>
 </div>

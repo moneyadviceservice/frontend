@@ -93,12 +93,29 @@ class ApplicationController < ActionController::Base
     'syndicated' if syndicated_tool_request?
   end
 
-  def category_tree
-    @category_tree ||= Core::CategoryTreeReader.new.call
+  def category_tree(categories = Core::Registry::Repository[:category].all)
+    Core::CategoryTreeReader.new.call(categories)
   end
 
-  def category_navigation
-    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree.children)
+  def corporate_categories
+    Core::Registry::Repository[:category].find('corporate')['contents']
+  end
+
+  def corporate_category?(category, corporate = corporate_categories, categories = [])
+    categories << corporate.map {|c| c['id']} 
+    return true if categories.flatten.include?(category)
+    corporate_category?(category, corporate.first['contents'], categories.flatten) if corporate.first['contents']
+  end
+
+  helper_method :corporate_category?
+
+  def navigation_categories
+    Core::Registry::Repository[:category].all
+  end
+
+  def category_navigation(corporate = false)
+    categories = corporate ? corporate_categories : navigation_categories
+    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree(categories).children)
   end
 
   helper_method :category_navigation

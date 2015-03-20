@@ -1,0 +1,77 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Paying too much tax on savings?', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        Individual Savings Accounts (ISAs) are a tax-efficient way of saving money. There are two types of ISAs: Cash ISAs and Stocks and Shares ISAs.
+      </p>
+      <p>
+        <b>Cash ISAs</b> allow you to earn interest on your savings, tax free and work in much the same way as a normal savings account.
+      </p>
+      <p>
+        <b>Stocks and Shares ISAs</b> allow your investment to grow free of any Capital Gains tax liability.
+      </p>
+      <ul>
+        <li>
+          <a href="/en/news/two-in-five-have-never-paid-into-a-cash-isa">Are you one of the millions missing out on tax-free saving?</a>
+        </li>
+        <li>
+          <a href="/en/users/sign_up">Register on our website to receive an ISA alert.</a>
+        </li>
+      </ul>
+
+      <div class="callout">
+        <%= heading_tag 'Who is MA anyway?', level: 3 %>
+        <p>
+          We’re the Money Advice Service, an independent service set up by government to help people like you make the most of your money.
+        </p>
+        <p>
+          We give free, unbiased money advice online, on webchat, over the phone, in printed guides and face to face.
+        </p>
+      </div>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'Next steps', class: 'l-campaign__next-steps-heading', level: 2 %>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/articles/price-comparison-sites-guide">
+          <%= heading_tag 'Comparison sites', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            Use comparison websites to weigh up different options and help you find out what might be best for your money.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/articles/cash-isas">
+          <%= heading_tag 'Cash ISAs', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            Cash ISAs are savings accounts that pay tax-free interest, but with an upper limit on what you can save each year.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/articles/stocks-and-shares-isas">
+          <%= heading_tag 'Stocks & Shares ISAs', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            A Stocks and Shares ISA can contain a range of different investment products to help save you tax.
+          </p>
+        </a>
+      </div>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

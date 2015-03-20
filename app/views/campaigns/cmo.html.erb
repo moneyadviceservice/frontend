@@ -1,0 +1,54 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Child Maintenance arrears', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        If you pay child support – sometimes known as child maintenance – through the Child Support Agency or the Child Maintenance Service, it’s important to know that this is a legally binding arrangement and you must keep up-to-date with your payments.
+      </p>
+      <p>
+        If you do fall into arrears, the Child Support Agency or Child Maintenance Service can take action such as deducting payments straight from your earnings or bank account.
+      </p>
+      <p>
+        If you continue not to pay, you could even be forced to sell your home or other assets, have your driving licence taken away, or be sent to prison.
+      </p>
+      <p>
+        If you are having trouble keeping up with your payments or you’re facing money worries we can help. Use our Debt test to take those first steps towards taking control of your money.
+      </p>
+
+      <div class="callout">
+        <%= heading_tag 'Who is MA anyway?', level: 3 %>
+        <p>
+          We’re the Money Advice Service, an independent service set up by government to help people like you make the most of your money.
+        </p>
+        <p>
+          We give free, unbiased money advice online, on webchat, over the phone, in printed guides and face to face.
+        </p>
+      </div>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'Find out more', class: 'l-campaign__next-steps-heading', level: 2 %>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/tools/debt-test">
+          <%= heading_tag 'The Debt test', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            The Debt Test is a quick and simple tool to help you evaluate your level of debt and see how you can get back on track.
+          </p>
+        </a>
+      </div>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

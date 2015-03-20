@@ -1,0 +1,50 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Students and money ', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        It can be a really exciting time experiencing life as a student – lots to think about and a whole set of life skills to master, managing your student money being one of them.
+      </p>
+      <p>
+        We've got lots of helpful advice on saving money, reducing outgoings and budgeting smarter.
+      </p>
+
+      <%= heading_tag 'Managing money as a student', level: 2 %>
+      <p>
+        You’ll probably have access to student finance and have to make choices about your budget and banking options. Read on to get to grips with the basics.
+      </p>
+      <a href="/en/articles/managing-money-as-a-student">Read on</a>
+
+      <%= heading_tag 'Money stretcher calculator', level: 2 %>
+      <p>
+        Use the money stretcher calculator to work out how long your money could last over a particular period.
+      </p>
+      <a href="/en/tools/money-stretcher">Budget now</a>
+
+      <%= heading_tag 'How to make your money last all week', level: 2 %>
+      <p>
+        Follow this action plan to help you make your money go that little bit further and take an all-important step towards good money management.
+      </p>
+      <a href="/en/action_plans/how-to-make-your-money-last-all-week">Find out more</a>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'What is the Money Advice Service?', level: 3 %>
+      <p>
+        We are an independent service, set up by government to help people like you make the most of their money. We give free, unbiased money advice here online, over the phone and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

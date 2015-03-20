@@ -1,0 +1,89 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Borrowing - get the facts', class: 'l-campaign__heading', level: 1 %>
+
+      <p>
+        We may need to borrow money at some point in life – whether it be for home improvements, replacing a broken boiler, or repairing your car.
+      </p>
+      <p>
+        But it’s important that you know all the facts before deciding on taking out a loan or credit. You need to consider interest rates, how long you will take to pay it off and how much you will actually end up paying back.
+      </p>
+      <p>
+        That’s why it’s best to shop around to make the right decision and choose the best loan for you.
+      </p>
+      <p>
+        Find out what you need to know before applying for credit:
+      </p>
+
+      <ul>
+        <li>
+          <a href="/en/articles/do-you-need-to-borrow-money">Do you need to borrow money?</a>
+        </li>
+        <li>
+          <a href="/en/news/a-payday-loan-might-be-an-instant-gain-but-beware-the-signs-of-long-term-pain">A payday loan might be an instant gain, but beware the signs of long-term pain</a>
+        </li>
+        <li>
+          <a href="/en/payday-loans">Payday loan advice tool</a>
+        </li>
+        <li>
+          <a href="/en/tools/loan-calculator">Loan calculator</a>
+        </li>
+      </ul>
+
+      <div class="callout">
+        <%= heading_tag 'Who is MA anyway?', level: 3 %>
+        <p>
+          We’re the Money Advice Service, an independent service set up by government to help people like you make the most of your money.
+        </p>
+        <p>
+          We give free, unbiased money advice online, on webchat, over the phone, in printed guides and face to face.
+        </p>
+      </div>
+    </div>
+
+    <section class="l-campaign__next-steps">
+
+      <%= heading_tag 'Take the steps below to be better prepared when considering borrowing', class: 'l-campaign__next-steps-heading', level: 2 %>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/tools/do-you-know-your-ear-from-your-elbow">
+          <%= heading_tag 'Take our quiz', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            Tackle our jargon buster quiz to see if you know what the financial sector is talking about when it comes to money issues.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/news/five-things-you-need-to-know-about-payday-loans-06052014">
+          <%= heading_tag 'Need to know', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            How do you sort out the fact from the fiction when it comes to payday loans? We tell you the five things you need to know.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/news/make-sure-the-cost-of-borrowing-money-adds-up-for-you">
+          <%= heading_tag 'Best for you?', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            We explain different options for borrowing and credit to help you decide what might be best for you whatever your need for money.
+          </p>
+        </a>
+      </div>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

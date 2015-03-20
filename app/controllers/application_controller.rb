@@ -84,6 +84,11 @@ class ApplicationController < ActionController::Base
     response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?
   end
 
+  # This layout chops off the header and footer
+  # It is used when the login/registration are presented in an iframe
+  # e.g. https://partner-tools.moneyadviceservice.org.uk/en/users/sign_in
+  # For when tools/engines need users to authenticate as part of their flow
+  # This is vulnerable to clickjacking attacks
   def check_syndicated_layout
     'syndicated' if syndicated_tool_request?
   end

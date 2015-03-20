@@ -19,19 +19,6 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
-  remote: git@github.com:moneyadviceservice/cutback-calculator.git
-  revision: 8691df0e24a25fcc570c2183204720cbdd1065cb
-  specs:
-    cutback_calculator (0.9.9)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      rails (~> 4.1)
-      responders
-      sass-rails (~> 4.0.0)
-      uglifier
-
-GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: b82b9b4d39809fda135e8671e6597d3cafe1825c
   specs:
@@ -118,7 +105,7 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
-    autoprefixer-rails (5.1.5)
+    autoprefixer-rails (5.1.7.1)
       execjs
       json
     bcrypt (3.1.10)
@@ -209,6 +196,14 @@ GEM
       mime-types (~> 1.16)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    cutback_calculator (0.9.15)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      rails (~> 4.1)
+      responders
+      sass-rails (~> 4.0.0)
+      uglifier
     database_cleaner (1.3.0)
     debt_advice_locator (2.0.3.72)
       active_attr (~> 0.8)
@@ -274,7 +269,7 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (5.3.0.237)
+    dough-ruby (5.4.0.238)
       activesupport
       rails (>= 3.2)
       sass-rails (~> 4.0.0)
@@ -294,7 +289,7 @@ GEM
       activemodel
     erubis (2.7.0)
     eventmachine (1.0.3)
-    execjs (2.3.0)
+    execjs (2.4.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     faker (1.3.0)
@@ -616,14 +611,14 @@ GEM
     structured_warnings (0.1.4)
     syslog-logger (1.6.8)
     thor (0.19.1)
-    thread_safe (0.3.4)
+    thread_safe (0.3.5)
     tilt (1.4.1)
     timecop (0.7.1)
     timers (1.1.0)
     transitions (0.1.13)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.0)
+    uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     underscore-rails (1.8.2)
@@ -675,7 +670,7 @@ DEPENDENCIES
   cream
   csslint_ruby
   cucumber-rails
-  cutback_calculator!
+  cutback_calculator (~> 0.9.15)
   database_cleaner
   debt_advice_locator (~> 2.0)
   debt_free_day_calculator (~> 2.1.0)

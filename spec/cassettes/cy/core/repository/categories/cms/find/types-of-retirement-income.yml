@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/categories/types-of-retirement-income.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 23 Mar 2015 17:19:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 09dad9d08e618ee6c946ee380a41e15b
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:19:21 GMT; secure
+      - _session_id=09dad9d08e618ee6c946ee380a41e15b; path=/; secure; HttpOnly
+      - _web_tracking=09378bd0d10c9095f4977e185b96acf9; path=/; expires=Wed, 23-Mar-2016
+        17:19:21 GMT; secure
+      X-Request-Id:
+      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      X-Runtime:
+      - '0.026306'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"types-of-retirement-income","title":"Mathau o incwm ymddeol","description":"Darllenwch
+        am y gwahanol fathau o flwydd-dal a mathau eraill o bensiwn ac incwm ymddeol.","parent_id":"work-pensions-and-retirement","contents":[{"id":"rhyddhau-ecwiti","type":"guide","title":"Rhyddhau
+        ecwiti","description":"Mae cynlluniau rhyddhau ecwiti yn un ffordd i berchnogion
+        tai ariannu eu hymddeoliad, ond nid ydynt addas i bawb"},{"id":"rheolau-newydd-ynghylch-pensiynau-o-27-mawrth-2014-ymlaen","type":"guide","title":"Rheolau
+        newydd ynghylch pensiynau o 27 Mawrth 2014 ymlaen","description":"Darllenwch
+        ein cyngor ar newidiadau arfaethedig y llywodraeth i bensiynau o Ebrill 2015
+        a rheolau wedi\u2019u llacio dros dro ar gyfer cyfandaliadau arian parod a
+        thynnu incwm"},{"id":"dychweliad-cartref","type":"guide","title":"Dychweliad
+        Cartref","description":"Gyda chynllun dychweliad cartref byddwch yn gwerthu
+        rhan o\u2019ch cartref neu\u2019ch cartref cyfan ond yn cadw\u2019r hawl i
+        fyw ynddo heb dalu rhent"},{"id":"tynnu-incwm-i-lawr","type":"guide","title":"Tynnu
+        incwm i lawr","description":"A hoffech chi gymryd incwm o\u2019ch pensiwn,
+        ond nad ydych yn barod i brynu blwydd-dal oes? Gallai tynnu incwm i lawr fod
+        yn ddewis"},{"id":"pensiynauar-wladwriaeth","type":"guide","title":"Pensiynau\u2019r
+        Wladwriaeth","description":"Pwy sy\u2019n gymwys i dderbyn Pensiwn y Wladwriaeth,
+        pryd y byddwch yn ei dderbyn a faint y cewch chi"},{"id":"morgais-gydol-oes","type":"guide","title":"Morgais
+        gydol oes","description":"Sicrhewch eich bod yn deall sut y mae morgeisi gydol
+        oes yn gweithio a\u2019r hyn y mae angen i chi ei ystyried cyn trefnu un"},{"id":"ymddeoliad","type":"guide","title":"Deall
+        a chymharu blwydd-daliadau","description":"Defnyddiwch ein tablau cymharu
+        ar blwydd-daliadau"},{"id":"blwydd-daliadau-tymor-penodol","type":"guide","title":"Blwydd-daliadau
+        tymor penodol","description":"Bydd blwydd-dal tymor penodol yn darparu incwm
+        pensiwn am nifer penodol o flynyddoedd a swm penodedig ar y diwedd"},{"id":"blwydd-daliadau-syn-gysylltiedig-a-buddsoddiadau","type":"guide","title":"Blwydd-daliadau
+        sy\u2019n gysylltiedig \u00e2 buddsoddiadau","description":"Y buddion a\u2019r
+        risgiau posibl o gysylltu eich incwm ar \u00f4l ymddeol \u00e2 pherfformiad
+        buddsoddiadau fel stociau a chyfranddaliadau"},{"id":"blwydd-daliadau-unigol-neu-ar-y-cyd","type":"guide","title":"Blwydd-daliadau
+        unigol neu ar y cyd","description":"Os oes gennych bartner neu ddibynnydd,
+        mae angen i chi benderfynu a oes angen incwm ymddeol unigol neu ar y cyd arnoch"},{"id":"blwydd-daliadau-sefydlog-neu-gynyddol","type":"guide","title":"Blwydd-daliadau
+        sefydlog neu gynyddol","description":"Os byddwch wedi talu i mewn i bensiwn,
+        darganfyddwch am incwm ar \u00f4l ymddeol sefydlog a chynyddol i weld pa un
+        sydd orau i chi"},{"id":"chwilio-am-flwydd-dal","type":"action_plan","title":"Cynllun
+        gweithredu - chwilio am flwydd-dal","description":"Chwiliwch am y blwydd-dal
+        gorau gyda\u2019ch pot pensiwn"},{"id":"sut-i-siopa-o-gwmpas-am-flwydd-dal","type":"guide","title":"Sut
+        i siopa o gwmpas am flwydd-dal","description":"Os ydych ar fin ymddeol o gynllun
+        \u00e2 chyfraniadau wedi\u2019u diffinio, defnyddiwch y \u2018dewis marchnad
+        agored\u2019 i siopa o gwmpas \u2013 dyma sut"},{"id":"beth-yw-blwydd-dal","type":"video","title":"Beth
+        yw blwydd-dal?","description":"Gwyliwch y fideo hwn i ddysgu beth yw blwydd-dal
+        a pham y gallai fod yn bwysig ar gyfer eich cynlluniau ymddeoliad"},{"id":"blwydd-daliadau-a-mathau-eraill-o-incwm-pensiwn","type":"guide","title":"Blwydd-daliadau
+        a mathau eraill o incwm ymddeol","description":"Golwg gyffredinol ar nodweddion,
+        manteision a risgiau gwahanol fathau o flwydd-daliadau a chategor\u00efau
+        eraill o incwm pensiwn"},{"id":"gwybodaeth-am-gynlluniau-rhyddhau-ecwiti","type":"guide","title":"Gwybodaeth
+        am gynlluniau rhyddhau ecwiti","description":"Gwybodaeth bwysig am gael cyngor
+        a phethau allweddol y byddwch eu hangen cyn ymrwymo i gynllun rhyddhau ecwiti"},{"id":"budd-daliadau-ymddeoliad-eraill","type":"guide","title":"Budd-daliadau
+        ymddeoliad eraill","description":"Mae llawer o fudd-daliadau y gallwch wneud
+        cais amdanynt i\u2019ch helpu ar \u00f4l i chi ymddeol \u2013 edrychwch beth
+        ydyn nhw ac os ydych chi\u2019n gymwys i\u2019w cael"},{"id":"credyd-pensiwn","type":"guide","title":"Credyd
+        Pensiwn","description":"Mae Credyd Pensiwn yn fudd-dal gwerthfawr \u2013 ond
+        mae\u2019n rhaid i chi wneud cais amdano Dyma sut y mae\u2019n gweithio a
+        sut i gael gwybod os ydych yn gymwys"}]}'
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 17:19:22 GMT
+recorded_with: VCR 2.9.2

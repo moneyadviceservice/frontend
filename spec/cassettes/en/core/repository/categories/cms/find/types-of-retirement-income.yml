@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/types-of-retirement-income.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 23 Mar 2015 17:18:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - bf89989f7b37c1501ad572138f14ad4f
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:18:08 GMT; secure
+      - _session_id=bf89989f7b37c1501ad572138f14ad4f; path=/; secure; HttpOnly
+      - _web_tracking=be2853663cac32389bf05031637c1c03; path=/; expires=Wed, 23-Mar-2016
+        17:18:08 GMT; secure
+      X-Request-Id:
+      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      X-Runtime:
+      - '0.022301'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"types-of-retirement-income","title":"Types of retirement income","description":"Learn
+        about the different types of annuity and other types of pension and retirement
+        income.","parent_id":"work-pensions-and-retirement","contents":[{"id":"equity-release","type":"guide","title":"Equity
+        release","description":"Equity release schemes are one way for home owners
+        to fund retirement, but they are not suitable for everyone"},{"id":"new-rules-about-pensions-from-27-march-2014","type":"guide","title":"New
+        rules about pensions from 27 March 2014","description":"Read our advice on
+        the government\u2019s proposed pension changes from April 2015 and interim
+        relaxed rules for cash lump sums and income withdrawal"},{"id":"home-reversion","type":"guide","title":"Home
+        reversion","description":"Home reversion involves selling all or part of your
+        home, while keeping the right to carry on living in it rent free"},{"id":"income-drawdown","type":"guide","title":"Income
+        drawdown","description":"Want to take an income from your pension, but not
+        ready to buy a lifetime annuity? Income drawdown may be an option"},{"id":"state-pensions","type":"guide","title":"State
+        Pensions","description":"Who\u2019s eligible for a State Pension, when you
+        get it and how much you\u2019ll get"},{"id":"lifetime-mortgage","type":"guide","title":"Lifetime
+        mortgage","description":"Understand how lifetime mortgages work and what you
+        need to consider before taking one out"},{"id":"retirement","type":"guide","title":"Understand
+        and compare annuities","description":"Use our comparison table on annuities"},{"id":"fixed-term-annuities","type":"guide","title":"Fixed-term
+        annuities","description":"A fixed-term annuity provides a pension income for
+        a set number of years and a fixed sum at the end"},{"id":"investment-linked-annuities","type":"guide","title":"Investment-linked
+        annuities","description":"The potential benefits and risks of tying your retirement
+        income to the performance of investments such as stocks and shares"},{"id":"individual-or-joint-annuities","type":"guide","title":"Individual
+        or joint annuities","description":"If you have a partner or dependant, you
+        need to decide whether you need an individual retirement income or a joint
+        one"},{"id":"fixed-or-increasing-annuities","type":"guide","title":"Fixed
+        or increasing annuities","description":"If you\u2019ve paid into a pension,
+        find out about fixed and increasing retirement income, and work out which
+        one\u2019s best for you"},{"id":"shop-around-for-an-annuity","type":"action_plan","title":"Action
+        plan \u2013 Shop around for an annuity","description":"Shop for the best annuity
+        with your pension pot."},{"id":"how-to-shop-around-for-an-annuity","type":"guide","title":"How
+        to shop around for an annuity","description":"If you''re about to retire from
+        a defined contribution scheme, use the ''open market option'' to shop around
+        - here''s how"},{"id":"what-is-an-annuity","type":"video","title":"What is
+        an annuity?","description":"Watch this video to discover what an annuity is
+        and why it might be important for your retirement plans."},{"id":"annuities-and-other-types-of-pension-income-your-options","type":"guide","title":"Annuities
+        and other types of retirement income","description":"An overview of the features,
+        benefits and risks of different types of annuity and other categories of pension
+        income"},{"id":"equity-release-help","type":"guide","title":"Equity release
+        help","description":"Important information on getting advice and key things
+        you need before committing to an equity release scheme"},{"id":"benefits-in-retirement","type":"guide","title":"Benefits
+        in retirement","description":"There are many benefits you can apply for to
+        help you in retirement \u2013 find out what they are and see if you\u2019re
+        eligible"},{"id":"pension-credit","type":"guide","title":"Pension Credit","description":"Pension
+        Credit is a valuable benefit \u2013 but you need to apply for it. Here\u2019s
+        how it works and how to find out if you\u2019re eligible"}]}'
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 17:18:09 GMT
+recorded_with: VCR 2.9.2

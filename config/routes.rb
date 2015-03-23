@@ -133,6 +133,7 @@ Rails.application.routes.draw do
                       borrowing-get-the-facts|
                       budgeting-to-get-through-january|
                       cmo|
+                      coping-with-unexpected-bills|
                       csa|
                       free-debt-advice|
                       friends-life-lander|

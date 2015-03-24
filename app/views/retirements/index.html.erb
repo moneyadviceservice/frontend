@@ -20,14 +20,18 @@
   <div class="l-constrained">
     <% t('retirements.section2').each do |panel| %>
       <div class="l-3col-even retirements-panel">
-        <a href="<%= panel[:url] %>">
+        <% if panel.has_key?(:url) then %>
+          <a href="<%= panel[:url] %>">
+        <% end %>
           <% if (panel.has_key?(:image)) then %>
             <%= image_tag panel[:image], class: 'retirements-panel__image', alt: '' %>
           <% else %>
             <div class="retirements-panel__image--placeholder"></div>
           <% end %>
           <h2 class="retirements-panel__title"><%= panel[:text] %></h2>
-        </a>
+        <% if panel.has_key?(:url) then %>
+          </a>
+        <% end %>
       </div>
     <% end %>
   </div>

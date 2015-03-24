@@ -1,0 +1,66 @@
+.retirements-panels {
+  position: relative;
+  clear: both;
+
+  @include respond-to($mq-m) {
+    padding-top: $baseline_unit*2;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 33.33333%;
+      right: 33.33333%;
+      border-left: 1px solid $color-grey-pale;
+      border-right: 1px solid $color-grey-pale;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      top: 0;
+      bottom: 0;
+      margin-left: 1.666666%;
+      margin-right: 1.666666%;
+      overflow: hidden;
+      border-bottom: 1px solid $color-grey-pale;
+    }
+  }
+}
+
+.retirements-panels--first {
+  padding-top: 0;
+}
+
+.retirements-panels--last {
+  border-bottom: none;
+  padding-bottom: 0;
+
+  @include respond-to($mq-m) {
+    &:after {
+      border-bottom: none;
+    }
+  }
+}
+
+.retirements-panels__panel {
+  padding-top: $baseline_unit*2;
+  padding-bottom: $baseline_unit*2;
+  border-bottom: 1px solid $color-grey-pale;
+  position: relative;
+
+  @include respond-to($mq-m) {
+    padding-top: 0;
+    border-bottom: none;
+  }
+}
+
+.retirements-panels--last .retirements-panels__panel {
+  padding-bottom: 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

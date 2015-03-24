@@ -1,0 +1,18 @@
+.l-section {
+  @include clearfix();
+
+  padding: $baseline_unit*8 0;
+
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+}
+
+.l-section--odd {
+  background: $color-grey-paler;
+}
+
+.l-section--intro {
+  background: $color-grey-paler;
+  background-image: linear-gradient(to bottom, $color-white 0%, $color-white 30%, $color-grey-paler 100%);
+}

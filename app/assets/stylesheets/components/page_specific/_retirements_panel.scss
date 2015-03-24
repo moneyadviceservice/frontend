@@ -1,0 +1,23 @@
+.retirements-panel {
+
+}
+
+.retirements-panel__title {
+  @include body(20, 26);
+
+  color: $color-link-default;
+
+  a:visited & {
+    color: $color-link-visited;
+  }
+}
+
+.retirements-panel__image {
+  display: block;
+  padding-bottom: $baseline_unit*2;
+}
+
+.retirements-panel__image--placeholder {
+  height: 0;
+  padding-bottom: 48.5%;
+}

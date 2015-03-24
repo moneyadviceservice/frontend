@@ -93,6 +93,10 @@ Rails.application.routes.draw do
             constraints: EngineMountPoint.for(:rio)
     end
 
+    Feature.with(:pensions_and_retirement) do
+      get '/pensions-and-retirement', to: 'retirements#index'
+    end
+
     Feature.with(:savings_calculator) do
       mount SavingsCalculator::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:savings_calculator)

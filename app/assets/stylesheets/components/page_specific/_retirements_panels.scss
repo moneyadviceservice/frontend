@@ -49,6 +49,7 @@
   padding-top: $baseline_unit*2;
   padding-bottom: $baseline_unit*2;
   border-bottom: 1px solid $color-grey-pale;
+  position: relative;
 
   @include respond-to($mq-m) {
     padding-top: 0;

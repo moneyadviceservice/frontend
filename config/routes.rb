@@ -67,6 +67,11 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:debt_advice_locator)
     end
 
+    Feature.with(:debt_test) do 
+      mount DebtTest::Engine => '/tools/:tool_id', 
+            constraints: ToolMountPoint.for(:debt_test)
+    end
+
     Feature.with(:health_check) do
       mount AdvicePlans::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:advice_plans)

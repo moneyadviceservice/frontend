@@ -86,7 +86,9 @@ Rails.application.routes.draw do
     Feature.with(:rio) do
       mount Rio::Engine => '/:engine_id',
             constraints: EngineMountPoint.for(:rio)
+    end
 
+    Feature.with(:pensions_and_retirement) do
       get '/pensions-and-retirement', to: 'retirements#index'
     end
 

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/en/categories/work-pensions-and-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 23 Mar 2015 17:17:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 533090564bf45030cadd4a99cbffccbc
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:17:06 GMT; secure
+      - _session_id=533090564bf45030cadd4a99cbffccbc; path=/; secure; HttpOnly
+      - _web_tracking=564fd949959a686b6f170c1721df6e21; path=/; expires=Wed, 23-Mar-2016
+        17:17:06 GMT; secure
+      X-Request-Id:
+      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      X-Runtime:
+      - '1.137411'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '{"id":"work-pensions-and-retirement","title":"Work, pensions and retirement","description":"Includes
+        retirement advice, types of pension and retirement income, and information
+        on automatic enrolment","parent_id":null,"contents":[{"id":"jobs-and-tax","type":"category","title":"Jobs
+        and tax","description":"Help with understanding your payslip and what to look
+        for in your employment contract."},{"id":"redundancy","type":"category","title":"Redundancy","description":"Help
+        with making a redundancy plan, benefits you can claim, and your legal rights."},{"id":"pension-basics","type":"category","title":"Pension
+        basics","description":"Find out why and when to save into a pension and how
+        to work out what your pension pot might be."},{"id":"types-of-pensions","type":"category","title":"Types
+        of pension","description":"From defined contribution and benefit schemes,
+        to personal pensions and pensions for the self-employed."},{"id":"automatic-enrolment","type":"category","title":"Automatic
+        enrolment","description":"Learn about automatic enrolment and how it affects
+        you, and use our workplace pension advice tool and calculator."},{"id":"retirement-income-basics","type":"category","title":"Retirement
+        income basics","description":"Setting a clear retirement income goal and managing
+        your money once you\u2019ve stopped working."},{"id":"types-of-retirement-income","type":"category","title":"Types
+        of retirement income","description":"Learn about the different types of annuity
+        and other types of pension and retirement income."}]}'
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 17:17:08 GMT
+recorded_with: VCR 2.9.2

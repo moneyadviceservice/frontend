@@ -77,24 +77,3 @@
     </div>
   </div>
 </div>
-
-<div class="l-constrained">
-  <div class="l-1col l-retirements-well">
-    <div class="l-2col-even">
-      <h2><%= t('retirements.section5.panel1.title') %></h2>
-      <ul class="link-list">
-        <% t('retirements.section5.panel1.links').each do |link| %>
-          <li><%= link_to link[:text], link[:url] %></li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="l-2col-even">
-      <h2><%= t('retirements.section5.panel2.title') %></h2>
-      <ul class="list-benefits">
-        <% t('retirements.section5.panel2.items').each do |item| %>
-          <li><%= item %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>

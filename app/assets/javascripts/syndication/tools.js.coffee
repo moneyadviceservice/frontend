@@ -1,8 +1,6 @@
 #= require ./tool_syndication
 #= require ./resizer
 
-served_from_frontend = "Served from frontend"
-
 @masConfig =
   targetSelector: "mas-widget"
   containerClass: "mas-widget-container"

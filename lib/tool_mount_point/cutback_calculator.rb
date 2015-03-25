@@ -1,7 +1,6 @@
 module ToolMountPoint
   class CutbackCalculator < Base
     EN_ID = 'quick-cash-finder'
-    #TODO [add] welsh id for this tool [status: \awaiting translation]
-    CY_ID = ''
+    CY_ID = 'canfod-arian-parod-yn-gyflym'
   end
 end

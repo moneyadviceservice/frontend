@@ -15,4 +15,8 @@
 .l-section--intro {
   background: $color-grey-paler;
   background-image: linear-gradient(to bottom, $color-white 0%, $color-white 30%, $color-grey-paler 100%);
+
+  .video-wrapper {
+    margin-top: 0;
+  }
 }

@@ -1,0 +1,76 @@
+<%
+  set_meta_tags(
+    title: t('budgeting.meta.title'),
+    description: t('budgeting.meta.description'),
+    canonical: t('budgeting.meta.canonical')
+  )
+%>
+
+<div class="l-retirements">
+  <div class="l-section l-section--intro">
+    <div class="l-constrained">
+      <h1 class="l-1col"><%= t('budgeting.section1.title') %></h1>
+      <div class="l-2col-main">
+        <div class="video-wrapper">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/tKSNHvdwM9U?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p><%= t('budgeting.section1.video_caption_html').html_safe %></p>
+      </div>
+      <div class="l-2col-side">
+        <p class="intro"><%= t('budgeting.section1.intro') %></p>
+        <ul class="list">
+          <% t('budgeting.section1.bullets').each do |text| %>
+            <li><%= text %></li>
+          <% end %>
+        </ul>
+
+        <%= link_to t('budgeting.section1.button_label'), t('budgeting.section1.button_url'), class: "button button--primary" %>
+
+        <p><%= link_to t('budgeting.section1.worksheet_text'), t('budgeting.section1.worksheet_url') %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-section">
+    <div class="l-constrained l-row">
+      <div class="l-2col-main">
+        <h2><%= t('budgeting.section2.title') %></h2>
+        <p><%= t('budgeting.section2.p1') %></p>
+      </div>
+
+      <div class="l-2col-side">
+        <%= image_tag(t('budgeting.section2.image'), class: 'l-retirements__image') %>
+      </div>
+    </div>
+
+    <div class="l-constrained l-row">
+      <div class="l-2col-side">
+        <%= image_tag(t('budgeting.section3.image'), class: 'l-retirements__image') %>
+      </div>
+
+      <div class="l-2col-main">
+        <h2><%= t('budgeting.section3.title') %></h2>
+        <p><%= t('budgeting.section3.p1') %></p>
+        <p><%= t('budgeting.section3.p2') %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-section l-section--odd">
+    <div class="l-constrained">
+      <div class="l-2col-even l-retirements__cell">
+        <h2><%= t('budgeting.section4.title') %></h2>
+        <p><%= t('budgeting.section4.p1') %></p>
+
+        <%= link_to t('budgeting.section4.button_label'), t('budgeting.section4.button_url'), class: "button button--primary" %>
+      </div>
+
+      <div class="l-2col-even l-retirements__cell">
+        <h2><%= t('budgeting.section5.title') %></h2>
+        <p><%= t('budgeting.section5.p1') %></p>
+
+        <%= link_to t('budgeting.section5.button_label'), t('budgeting.section5.button_url'), class: "button button--primary" %>
+      </div>
+    </div>
+  </div>
+</div>

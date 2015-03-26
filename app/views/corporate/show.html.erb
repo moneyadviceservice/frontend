@@ -6,9 +6,9 @@
   <% end %>
 <% end %>
 
-<div class="l-article-3col-main editorial">
+<div class="l-article-3col-main">
   <div class="l-main__row">
-    <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
+    <main class="l-main__cell-full" role="main">
       <%= heading_tag article.title %>
 
       <%= article.content %>
@@ -32,8 +32,6 @@
   <div class='related-links--desktop'>
     <%= render 'articles/related_articles' %>
   </div>
-
-  <%= render 'shared/want_to_talk' %>
 </div>
 
 <div class="l-article-3col-left">

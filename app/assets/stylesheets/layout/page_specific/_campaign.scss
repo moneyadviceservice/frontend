@@ -3,8 +3,15 @@
   margin-bottom: $baseline-unit*2;
 
   @include respond-to($mq-l) {
-    width: 80%;
-    margin-left: 10%;
+    display: block;
+    margin: 0 auto $baseline-unit*3;
+    width: 95%;
+  }
+}
+
+.l-campaign-image--fill-width {
+  @include respond-to($mq-l) {
+    width: 100%;
   }
 }
 
@@ -32,6 +39,18 @@
 
   p {
     @include body(18, 28);
+  }
+}
+
+.l-campaign__content--padded-top {
+  margin-top: $baseline-unit*5;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*7;
+  }
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*10;
   }
 }
 

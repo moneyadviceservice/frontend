@@ -1,0 +1,78 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Pensions in the workplace', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        After you’ve retired you’ll still need an income, which a pension can provide. It’s worth understanding their benefits, because your State Pension – while providing a foundation – may not be enough to live on. You need to save more, and a workplace pension can often be the easiest route in.
+      </p>
+      <p>
+        From how and when to start saving for a pension to getting the most from your pension fund, we have the tools to help you manage your money and plan your retirement goals.
+      </p>
+      <p>
+        If you would like help with your wider financial needs our free and confidential Money Health Check will show you what you can do to make the most of your money in easy-to-follow steps.
+      </p>
+
+      <%= heading_tag 'Why save into a pension?', level: 2 %>
+      <p>
+        It's worth understanding the benefits of your pensions, read our helpful articles to find out more.
+      </p>
+      <ul>
+        <li>
+          <a href="/en/articles/why-save-into-a-pension">Why save into a pension?</a>
+        </li>
+        <li>
+          <a href="/en/articles/tax-relief-on-pension-contributions">Tax relief on pension contributions</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Pension calculators and tools', level: 2 %>
+      <p>
+        Use our pension calculators and advice tools to help you with planning your retirement goals.
+      </p>
+      <ul>
+        <li>
+          <a href="/en/tools/pension-calculator">Pension calculator</a>
+        </li>
+        <li>
+          <a href="/en/tools/workplace-pension-advice-tool">Workplace pension advice tool</a>
+        </li>
+        <li>
+          <a href="/en/tools/workplace-pension-contribution-calculator">Workplace pension contribution calculator</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Make the most of your money', level: 2 %>
+      <p>
+        Get a clear picture of where you stand with your finances with the Money Health Check and use the Budget Planner to create your own personal budget.
+      </p>
+      <ul>
+        <li>
+          <a href="/en/tools/budget-planner">Budget Planner</a>
+        </li>
+        <li>
+          <a href="/en/tools/health-check">Money Health Check</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'About us', level: 3 %>
+      <p>
+        We’re the Money Advice Service, an independent service set up by government to help people like you make the most of their money. We give free, unbiased money advice online, on webchat, over the phone, in printed guides and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

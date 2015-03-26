@@ -1,0 +1,63 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Child maintenance arrears', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        Making payments towards your child maintenance arrears can be difficult when you have lots of other outgoings. But it's essential for your child's wellbeing, and sorting out your finances could really help.
+      </p>
+      <p>
+        We've got lots of helpful advice on saving money, reducing outgoings and budgeting smarter.
+      </p>
+
+      <%= heading_tag 'Saving money', level: 2 %>
+      <p>
+        Take a look at some suggestions for reducing your outgoings and making savings that could help you to free up money to make child maintenance payments.
+      </p>
+      <p>
+        <a href="/en/categories/money-saving-tips">
+          Save now
+        </a>
+      </p>
+
+      <%= heading_tag 'Budgeting smartly', level: 2 %>
+      <p>
+        See if our cut back calculator, money health check or budget planner can help you to see where your money goes, and where it could be saved.
+      </p>
+      <p>
+        <a href="/en/categories/budgeting-and-taking-control">
+          Budget now
+        </a>
+      </p>
+
+      <%= heading_tag 'Maintenance', level: 2 %>
+      <p>
+        Use our general information and advice about child and spousal maintenance to answer any you might have.
+      </p>
+      <p>
+        <a href="/en/search?utf8=%E2%9C%93&query=child+maintenance">
+          More information
+        </a>
+      </p>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'What is the Money Advice Service?', level: 3 %>
+      <p>
+        We are an independent service, set up by government to help people like you make the most of their money. We give free, unbiased money advice here online, over the phone and face to face.
+      </p>
+    </section>
+
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

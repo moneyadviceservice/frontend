@@ -1,0 +1,90 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'The cost of caring', class: 'l-campaign__heading', level: 1 %>
+
+      <p>
+        The ‘sandwich generation’ is an ever-growing group of adults who care for their ageing parents while supporting their own children. <a href="/files/sandwich-generation-report-final-100613.pdf">Our research</a> reveals that almost a third of carers struggle to cover basic living costs, with over one in five in debt and struggling to cope financially.
+      </p>
+      <p>
+        Here at the Money Advice Service, we offer free and impartial advice for sandwich carers, including guides, tools and calculators.
+      </p>
+
+      <%= heading_tag 'Caring for loved ones', level: 2 %>
+      <p>
+        Caring for a relative often means helping them with their own money matters as best you can. Read our guides to see how to care for your loved ones in the knowledge that you’re protecting your own finances, especially your retirement income:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/categories/budgeting-and-taking-control">Budgeting and taking control</a>
+        </li>
+        <li>
+          <a href="/en/categories/should-you-borrow-or-save-or-repay">Should you borrow or save or repay</a>
+        </li>
+        <li>
+          <a href="/en/categories/money-advice-for-carers">Universal credit and other benefits</a>
+        </li>
+        <li>
+          <a href="/en/categories/approaching-retirement">Approaching retirement</a>
+        </li>
+        <li>
+          <a href="/en/categories/protecting-your-family-or-dependants">Protecting your family or dependants</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Managing your dependants\' money', level: 2 %>
+      <p>
+        If your dependants are young or old and need physical and/or mental healthcare, you can use these guides to find out how to protect their financial interests:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/categories/managing-money-in-ill-health">Managing money in ill health</a>
+        </li>
+        <li>
+          <a href="/en/categories/helping-others-manage-money">Helping others manage money</a>
+        </li>
+        <li>
+          <a href="/en/categories/problems-when-helping-others-with-money">Problems when helping others with money</a>
+        </li>
+        <li>
+          <a href="/en/categories/funding-your-long-term-care">Funding your long-term care</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Helping young people', level: 2 %>
+      <p>
+        Help young adults to help themselves, whether they’re leaving school, setting up home or starting a family:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/categories/renting-for-the-first-time">Renting for the first time</a>
+        </li>
+        <li>
+          <a href="/en/categories/budgeting-for-a-family">Budgeting for a family</a>
+        </li>
+        <li>
+          <a href="/en/categories/young-people-and-money">Young people and money</a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'About us', level: 3 %>
+      <p>
+        We're the Money Advice Service - an independent service set up by government to help people like you make the most of their money. We give free, unbiased money advice online, over the phone and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

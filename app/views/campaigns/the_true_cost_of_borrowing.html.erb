@@ -1,0 +1,78 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'The true cost of borrowing', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        When borrowing money for expensive purchases it’s important not to simply look for a loan with the lowest monthly repayment. We explain why, before you sign on the dotted line, it’s essential that you know the total cost of repaying your debt.
+      </p>
+      <p>
+        Use these guides, Action plan and videos to make the right decisions whatever you are borrowing for.
+      </p>
+
+      <%= heading_tag 'The true cost of borrowing', level: 2 %>
+      <p>
+        It’s essential to identify the cheapest credit option and repay a loan as quickly as you can. We look at some different options:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/articles/how-to-work-out-the-true-cost-of-borrowing">Things to look out for</a>
+        </li>
+        <li>
+          <a href="/en/articles/compare-the-cost-of-borrowing-gbp5000">Compare the cost of borrowing £5,000</a>
+        </li>
+        <li>
+          <a href="/en/videos/your-tips-for-borrowing-money-and-paying-it-back">Your tips for borrowing money and paying it back</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Borrowing for a big purchase', level: 2 %>
+      <p>
+        Some purchases can involve a lot of money so make sure you look around to get the best deal on financing:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/articles/whats-the-best-way-to-finance-buying-a-car">What’s the best way to finance a car?</a>
+        </li>
+        <li>
+          <a href="/en/action_plans/how-to-pay-for-home-improvements">How to pay for home improvements</a>
+        </li>
+        <li>
+          <a href="/en/videos/your-top-tips-for-buying-and-running-a-car">How to save money on your car</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Do you need to borrow?', level: 2 %>
+      <p>
+        Before you sign up for a credit card, bank loan or store card, or add to an existing card or loan it makes sense to think about whether you really need to borrow money. You should ask yourself if you can afford to pay back the money you’re planning to borrow:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/articles/do-you-need-to-borrow-money">Things you need to consider</a>
+        </li>
+        <li>
+          <a href="/en/tools/loan-calculator">Use our Loan calculator</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'About us', level: 3 %>
+      <p>
+        We're the Money Advice Service - an independent service set up by government to help people like you make the most of their money. We give free, unbiased money advice online, over the phone and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

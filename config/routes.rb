@@ -138,7 +138,34 @@ Rails.application.routes.draw do
               only: 'show',
               path: 'campaigns',
               constraints: {
-                id: %r{revealed-the-true-cost-of-buying-a-car|how-to-look-ahead-when-buying-a-car|interest-rates-rise}
+                id: %r{
+                      borrowing-get-the-facts|
+                      budgeting-to-get-through-january|
+                      cmo|
+                      coping-with-unexpected-bills|
+                      csa|
+                      free-debt-advice|
+                      friends-life-lander|
+                      get-set-for-summer|
+                      have-a-savvy-christmas|
+                      how-to-look-ahead-when-buying-a-car|
+                      interest-only-mortgages|
+                      interest-rates-rise|
+                      life-and-critical-illness|
+                      paying-too-much-tax-on-savings|
+                      revealed-the-true-cost-of-buying-a-car|
+                      save-gbp3-a-day-for-emergencies|
+                      saving-for-a-holiday|
+                      start-living-your-life-free-of-debt|
+                      student-budgeting|
+                      sw-saving-and-debt|
+                      the-cost-of-caring|
+                      the-true-cost-of-affording-a-home|
+                      the-true-cost-of-borrowing|
+                      uk-money-habits-study|
+                      what-does-ma-think|
+                      young-peoples-money-regrets
+                    }x
               }
 
     get '/campaigns/debt-management', to: 'debt_management#show'

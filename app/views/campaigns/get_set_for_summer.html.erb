@@ -1,0 +1,83 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Get set for summer', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        What are your plans for this summer? Whatever you have in mind – from one-off special occasions to days out with family or friends – our <a href="/static/tools/summer_planner/index.html">Summer Costs Calculator</a> will help you make the most of your money.
+      </p>
+      <p>
+        It will show you how the costs stack up overall, and help you balance your monthly budgets so you can relax and enjoy your summer.
+      </p>
+      <p>
+        Your choices are confidential – we won't see them, store them or pass them to anyone else.
+      </p>
+
+      <%= heading_tag 'The true cost of holidays', level: 2 %>
+      <p>
+        How much does the average summer holiday cost per person? Our latest research reveals how deep you might have to dig and how people are funding their trips:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/news/one-in-three-not-taking-a-summer-holiday-this-year">Read findings in full</a>
+        </li>
+        <li>
+          <a href="/en/tools/saving-for-a-holiday">Saving for a holiday</a>
+        </li>
+        <li>
+          <a href="/en/action_plans/action-plan-paying-for-your-summer-holiday">Action plan - Paying for your summer holiday</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'The true cost of holidays', level: 2 %>
+      <p>
+        Members of the public tell how they best plan and save their money to take a holiday in a new video. We’ve also produced a guide with some more ideas to get you started:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/videos/your-tips-for-paying-for-a-holiday">Your tips for paying for a holiday</a>
+        </li>
+        <li>
+          <a href="/en/news/top-money-tips-for-planning-your-summer-holiday">Top money ideas for planning your summer holiday</a>
+        </li>
+        <li>
+          <a href="/en/articles/get-holidays-for-less">Get holidays for less</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Make sure you\'re covered', level: 2 %>
+      <p>
+        Travel insurance (or holiday insurance) is a must if you want to make sure you’ll be able to afford medical care when you’re abroad. But don't just go for the cheapest travel insurance policy - find out what cover you need and where to get it at the best price:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/articles/do-you-need-travel-insurance">Do you need travel insurance?</a>
+        </li>
+        <li>
+          <a href="/en/articles/how-to-get-the-best-deal-on-travel-insurance">How to get the best deal on travel insurance</a>
+        </li>
+        <li>
+          <a href="/en/articles/a-good-travel-insurance-policy">What does a good policy look like?</a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'About us', level: 3 %>
+      <p>
+        We’re the Money Advice Service, an independent service set up by government to help people like you make the most of their money. We give free, unbiased money advice online, on webchat, over the phone, in printed guides and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

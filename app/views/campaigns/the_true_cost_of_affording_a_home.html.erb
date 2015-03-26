@@ -1,0 +1,78 @@
+<div class="l-constrained">
+  <%= image_tag('campaign/true-cost-of-affording-a-home.jpg', alt: '', class: 'l-campaign-image l-campaign-image--fill-width') %>
+
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'The true cost of affording a home', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        From 26 April 2014, mortgage rules are about to get a lot tougher. Lenders will have to thoroughly examine your finances to be sure you can really afford the true cost of your home.
+      </p>
+      <p>
+        Our research shows three in four first-time buyers overstretch their budgets to get on the housing ladder. What’s more, not adding up the true costs of their home caused financial difficulties for one in five.
+      </p>
+      <p>
+        The changes are designed to make sure borrowers don’t overstretch themselves and fall into debt. They mean you’ll have to present more evidence than ever before of your income and outgoings before you can get a mortgage.
+      </p>
+      <p>
+        Find out more what you need to know before applying for a mortgage:
+      </p>
+
+      <ul>
+        <li>
+          <a href="/en/news/new-mortgage-rules-will-make-it-harder-to-prove-you-can-really-afford-your-dream-home">New mortgage rules will make it harder to prove you can really afford your dream home</a>
+        </li>
+        <li>
+          <a href="/en/news/thinking-about-a-mortgage-what-you-need-to-know-about-changes-to-lending-rules">Thinking about a mortgage? What you need to know about changes to lending rules</a>
+        </li>
+        <li>
+          <a href="/en/news/first-time-buyers-caught-out-by-key-home-buying-costs-14022014">First-time buyers caught out by key home buying costs</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'Take the steps below to be better prepared for affording your home.', class: 'l-campaign__next-steps-heading', level: 2 %>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/articles/first-time-buyer-money-tips">
+          <%= heading_tag 'First-time buyer', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            If you’re finding it difficult to save enough for a deposit or get a mortgage, make sure you know where you can get help and advice.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/action_plans/work-out-what-mortgage-you-can-afford">
+          <%= heading_tag 'Mortgage costs', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            Work out how much you can really afford to borrow – so you’ll be sure that you can afford your mortgage now and if things change.
+          </p>
+        </a>
+      </div>
+
+      <div class="next-step">
+        <a class="next-step__link" href="/en/articles/remortgaging-to-cut-costs">
+          <%= heading_tag 'Remortgaging', level: 2, class: 'next-step__heading' %>
+          <p class="next-step__content">
+            You may have good reasons for thinking about remortgaging – not least saving money – but you need to consider the costs first.
+          </p>
+        </a>
+      </div>
+
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

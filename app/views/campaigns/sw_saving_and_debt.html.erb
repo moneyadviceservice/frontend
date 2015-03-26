@@ -1,0 +1,41 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'Help improve your finances', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        Want to take control of your money and make sure you’re making the most of what you have? Take a look at our money saving tips and find out where to get help to regain control of your finances.
+      </p>
+
+      <%= heading_tag 'Money saving tips', level: 2 %>
+      <p>
+        No-nonsense tips to help you save money around the home and when out and about.
+      </p>
+      <a href="/en/categories/money-saving-tips">Read on</a>
+
+      <%= heading_tag 'Struggling with debt?', level: 2 %>
+      <p>
+        Where to get free debt advice, debt action plans and other tips to get in control.
+      </p>
+      <a href="/en/categories/help-if-struggling-with-debt">Find out more</a>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'What is the Money Advice Service?', level: 3 %>
+      <p>
+        We are an independent service, set up by government to help people like you make the most of their money. We give free, unbiased money advice here online, over the phone and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

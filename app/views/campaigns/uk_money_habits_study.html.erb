@@ -1,0 +1,77 @@
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag 'UK money habits study', class: 'l-campaign__heading', level: 1 %>
+      <p>
+        A major new study published by the Money Advice Service highlights that people are changing their financial behaviours and developing positive money habits to deal with their money matters.
+      </p>
+      <p>
+        However it also reveals how half of UK adults struggle to keep up with their bills and credit commitments.
+      </p>
+
+      <%= heading_tag 'Money habits - key findings', level: 2 %>
+      <p>
+        Read the key findings from ‘The Financial Capability of the UK’ study.
+      </p>
+      <ul>
+        <li>
+          <a href="/en/news/uk-developing-positive-money-habits-despite-struggles-with-bills-13082013">Get them here</a>
+        </li>
+        <li>
+          <a href="/en/tools/budget-planner">Use our Budget planner</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Read the report in full', level: 2 %>
+      <p>
+        Access in-depth analysis by reading the full findings of the study (PDF).
+      </p>
+      <ul>
+        <li>
+          <a href="/files/the-financial-capability-of-the-uk.pdf">Get the report</a>
+        </li>
+        <li>
+          <a href="/en/static/uk-money-habits-key-facts">Infographic</a>
+        </li>
+      </ul>
+
+      <%= heading_tag 'Money lives', level: 2 %>
+      <p>
+        Read stories on how real people across the UK are managing their money:
+      </p>
+      <ul>
+        <li>
+          <a href="/en/static/money-lives-barbara">Barbara</a>
+        </li>
+        <li>
+          <a href="/en/static/money-lives-paul">Paul</a>
+        </li>
+        <li>
+          <a href="/en/static/money-lives-karen">Karen</a>
+        </li>
+        <li>
+          <a href="/en/static/money-lives-charlotte">Charlotte</a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="l-campaign__next-steps">
+      <%= heading_tag 'About us', level: 3 %>
+      <p>
+        We're the Money Advice Service - an independent service set up by government to help people like you make the most of their money. We give free, unbiased money advice online, over the phone and face to face.
+      </p>
+    </section>
+  </article>
+</div>
+
+<%= render 'shared/campaign_trust_banner' %>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>

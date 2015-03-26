@@ -5,10 +5,14 @@
 .retirements-panel__title {
   @include body(20, 26);
 
-  color: $color-link-default;
+  color: $color-black;
+
+  a:link & {
+    color: $color-link-default;
+  }
 
   a:visited & {
-    color: $color-link-visited;
+    color: $color-link-default;
   }
 }
 

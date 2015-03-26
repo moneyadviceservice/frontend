@@ -23,6 +23,7 @@
 // .icon--down-chevron-blue - down chevron icon
 // .icon--left-chevron - left chevron icon
 // .icon--right-chevron - right chevron icon
+// .icon--previous-section - go back icon
 // .icon--close - close icon
 // .icon--search - green search icon
 // .icon--search-white - white search icon
@@ -232,6 +233,12 @@
   background-position: -453px -73px;
   width: 12px;
   height: 19px;
+}
+
+.icon--previous-section {
+  background-position: -105px -459px;
+  width: 13px;
+  height: 16px;
 }
 
 .icon--plus {

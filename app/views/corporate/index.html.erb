@@ -1,18 +1,44 @@
-<div class="l-home-directory">
-  <div class="l-constrained">
-    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
-      <%= t('.directory_heading') %>
-    <% end %>
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
 
-    <div class="l-promo-corporate">
-      <% @categories.each do |category| %>
+      <div class="l-promo-corporate">
         <div class="l-promo-corporate__item">
-          <%= heading_tag(level: heading_level ||= 3, class: 'promo__heading') do %>
-            <%= link_to category.title, category.path, class: 'promo__link' %>
-          <% end %>
-          <p class="promo__content"><%= category.description %></p>
+          <a class="promo__link" href="/en/about-us">
+            <img alt="" class="promo__img" src="/assets/corporate/about_us_promo.jpg">
+            <h2 aria-level="2" class="promo__heading" role="heading">About us</h2>
+            <p class="promo__content">Content...</p>
+          </a>
         </div>
-      <% end %>
-    </div>
+        <div class="l-promo-corporate__item">
+          <a class="promo__link" href="/en/media-centre">
+            <img alt="" class="promo__img" src="/assets/corporate/media_centre_promo.jpg">
+            <h2 aria-level="2" class="promo__heading" role="heading">Media centre</h2>
+            <p class="promo__content">Content...</p>
+          </a>
+        </div>
+        <div class="l-promo-corporate__item">
+          <a class="promo__link" href="/en/our-debt-work">
+            <img alt="" class="promo__img" src="/assets/corporate/our_debt_work_promo.jpg">
+            <h2 aria-level="2" class="promo__heading" role="heading">Our debt work</h2>
+            <p class="promo__content">Content...</p>
+          </a>
+        </div>
+        <div class="l-promo-corporate__item">
+          <a class="promo__link" href="/en/resources-for-professionals">
+            <img alt="" class="promo__img" src="/assets/corporate/professional_resources_promo.jpg">
+            <h2 aria-level="2" class="promo__heading" role="heading">Resources for professionals</h2>
+            <p class="promo__content">Content...</p>
+          </a>
+        </div>
+      </div>
+    </main>
   </div>
+</div>
+
+
+<div class="l-nav">
+  <%= render 'shared/nav',
+             categories:        category_navigation(corporate_category?(category.object.id)),
+             active_categories: active_categories %>
 </div>

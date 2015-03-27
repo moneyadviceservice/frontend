@@ -1,5 +1,7 @@
 class CorporateController < ArticlesController
   decorates_assigned :article, with: CorporateDecorator
+  decorates_assigned :category, with: CategoryDecorator
+
   before_filter :assign_categories
   def index
   end
@@ -15,9 +17,11 @@ class CorporateController < ArticlesController
   end
 
   def assign_categories
-    @category = Core::Registry::Repository[:category].find('corporate')
-    @categories = CategoryNavigationDecorator.decorate_collection(
-      category_tree(@category['contents']).children
-    )
+    @category = Core::CategoryReader.new('corporate-home').call
+    assign_active_categories(@category)
+    # @other = Core::Registry::Repository[:category].find('corporate')
+    # @categories = CategoryNavigationDecorator.decorate_collection(
+    #   category_tree(@other['contents']).children
+    # )
   end
 end

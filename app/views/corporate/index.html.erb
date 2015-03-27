@@ -4,31 +4,31 @@
 
       <div class="l-promo-corporate">
         <div class="l-promo-corporate__item">
-          <a class="promo__link" href="/en/about-us">
+          <a class="promo__link" href="/en/categories/about-us">
             <img alt="" class="promo__img" src="/assets/corporate/about_us_promo.jpg">
             <h2 aria-level="2" class="promo__heading" role="heading">About us</h2>
-            <p class="promo__content">Content...</p>
+            <p class="promo__content"><%= t('corporate_home.about_us') %></p>
           </a>
         </div>
         <div class="l-promo-corporate__item">
-          <a class="promo__link" href="/en/media-centre">
+          <a class="promo__link" href="/en/categories/media-centre">
             <img alt="" class="promo__img" src="/assets/corporate/media_centre_promo.jpg">
             <h2 aria-level="2" class="promo__heading" role="heading">Media centre</h2>
-            <p class="promo__content">Content...</p>
+            <p class="promo__content"><%= t('corporate_home.media_centre') %></p>
           </a>
         </div>
         <div class="l-promo-corporate__item">
-          <a class="promo__link" href="/en/our-debt-work">
+          <a class="promo__link" href="/en/categories/our-debt-work">
             <img alt="" class="promo__img" src="/assets/corporate/our_debt_work_promo.jpg">
             <h2 aria-level="2" class="promo__heading" role="heading">Our debt work</h2>
-            <p class="promo__content">Content...</p>
+            <p class="promo__content"><%= t('corporate_home.our_debt_work') %></p>
           </a>
         </div>
         <div class="l-promo-corporate__item">
-          <a class="promo__link" href="/en/resources-for-professionals">
+          <a class="promo__link" href="/en/categories/resources-for-professionals">
             <img alt="" class="promo__img" src="/assets/corporate/professional_resources_promo.jpg">
             <h2 aria-level="2" class="promo__heading" role="heading">Resources for professionals</h2>
-            <p class="promo__content">Content...</p>
+            <p class="promo__content"><%= t('corporate_home.resources') %></p>
           </a>
         </div>
       </div>
@@ -36,8 +36,10 @@
   </div>
 </div>
 
-
 <div class="l-nav">
+  <a href="#" class="link-to-section-block">Money advice sections
+    <span class="icon icon--previous-section"></span>
+  </a>
   <%= render 'shared/nav',
              categories:        category_navigation(corporate_category?(category.object.id)),
              active_categories: active_categories %>

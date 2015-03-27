@@ -115,6 +115,11 @@ Rails.application.routes.draw do
       mount Agreements::Engine => '/agreements'
     end
 
+    Feature.with(:action_plans) do
+      mount ActionPlans::Engine => '/:engine_id',
+            constraints: EngineMountPoint.for(:action_plans)
+    end
+
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'

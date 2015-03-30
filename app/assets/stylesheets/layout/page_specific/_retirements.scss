@@ -1,0 +1,31 @@
+.l-retirements {
+  .l-2col-side {
+    @include column(12);
+    @include respond-to($mq-m) {
+      @include column(5);
+    }
+  }
+
+  .l-2col-main {
+    @include column(12);
+    @include respond-to($mq-m) {
+      @include column(7);
+    }
+  }
+}
+
+.l-retirements__cell {
+  margin-bottom: $baseline_unit*4;
+
+  @include respond-to($mq-m) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.l-retirements__image {
+  margin-bottom: $baseline-unit*4;
+}

@@ -3,25 +3,33 @@
 // Styleguide Home Top
 
 .home-top {
-  background: image-url("illustrated_people.png") 0 100% no-repeat;
-  background-size: 135%;
+  background: image-url("retirement_shop_en.png") 0 100% no-repeat;
+  background-size: 100%;
   padding-bottom: 50%;
   position: relative;
 
+  .theme-cy & {
+    background-image: image-url("retirement_shop_cy.png");
+  }
+
   @include respond-to($mq-m) {
-    background-position: 165% 108%;
-    background-size: 70%;
+    background-position: 113% 108%;
+    background-size: 60%;
     padding-bottom: 0;
   }
 
   @include respond-to($mq-l) {
-    background-position: 141% 100%;
-    background-size: 65%;
+    background-position: 107% 100%;
+    background-size: 54%;
   }
 
   @include respond-to($mq-xl) {
     background: none;
     overflow: hidden;
+
+    .theme-cy & {
+      background: none;
+    }
   }
 }
 
@@ -37,7 +45,7 @@
 
 .home-top__image {
   @include respond-to($mq-xl) {
-    background: image-url("illustrated_people.png") 100% 52% no-repeat;
+    background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
     background-size: 49%;
     height: 309px;
     margin: 0 auto;
@@ -45,9 +53,7 @@
     width: 1350px;
 
     .theme-cy & {
-      background-position: 100% 100%;
-      background-size: 51%;
-      height: 351px;
+      background-image: image-url("retirement_shop_cy.png");
     }
   }
 }
@@ -165,6 +171,8 @@
 }
 
 .home-top-promo-link {
+  display: block;
+
   &:link,
   &:focus,
   &:visited,

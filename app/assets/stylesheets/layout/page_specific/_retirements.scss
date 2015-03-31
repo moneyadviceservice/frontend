@@ -12,6 +12,12 @@
       @include column(7);
     }
   }
+
+  .l-2col-main,
+  .l-2col-even,
+  .l-2col-side {
+    @include body(18, 24);
+  }
 }
 
 .l-retirements__cell {

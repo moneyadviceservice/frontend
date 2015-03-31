@@ -8,6 +8,10 @@
   padding-bottom: 50%;
   position: relative;
 
+  .theme-cy & {
+    background-image: image-url("retirement_shop_cy.png");
+  }
+
   @include respond-to($mq-m) {
     background-position: 113% 108%;
     background-size: 60%;
@@ -22,6 +26,10 @@
   @include respond-to($mq-xl) {
     background: none;
     overflow: hidden;
+
+    .theme-cy & {
+      background: none;
+    }
   }
 }
 
@@ -45,9 +53,7 @@
     width: 1350px;
 
     .theme-cy & {
-      background-position: 100% 100%;
-      background-size: 51%;
-      height: 351px;
+      background-image: image-url("retirement_shop_cy.png");
     }
   }
 }

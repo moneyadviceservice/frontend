@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
-  revision: b6c8153f89a8d0181f528bbdbcb72691f3fc8eeb
+  revision: 132763866ee0f21e8bfe704a48d9fb4c0a1f6973
   specs:
     rio (0.0.3)
       bowndler
@@ -42,6 +42,13 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.test.mas/
   specs:
+    action_plans (3.0.0.293)
+      autoprefixer-rails
+      dough-ruby
+      draper
+      hashie
+      jquery-rails-cdn
+      rails (~> 4.1.8)
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
       actionview (= 4.1.8)
@@ -196,7 +203,7 @@ GEM
       mime-types (~> 1.16)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
-    cutback_calculator (0.9.18)
+    cutback_calculator (0.9.25)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       meta-tags
@@ -234,11 +241,11 @@ GEM
       rails (~> 4.1)
       roadie (~> 2.4.3)
       sass-rails (~> 4.0.0)
-    debt_test (1.2.22.7)
+    debt_test (1.2.26.12)
       historyjs-rails (>= 1.0.1)
       jquery-rails (= 3.1.2)
       rails (~> 4.1.8)
-      sass-rails
+      sass-rails (~> 4.0.0)
       uglifier (>= 1.0.3)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
@@ -463,7 +470,7 @@ GEM
     parser (2.2.0.pre.5)
       ast (>= 1.1, < 3.0)
       slop (~> 3.4, >= 3.4.5)
-    pensions_calculator (0.2.3.525)
+    pensions_calculator (0.2.3.527)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       meta-tags
@@ -678,7 +685,7 @@ DEPENDENCIES
   cream
   csslint_ruby
   cucumber-rails
-  cutback_calculator
+  cutback_calculator (~> 0.9.25)
   database_cleaner
   debt_advice_locator (~> 2.0)
   debt_free_day_calculator (~> 2.1.0)
@@ -725,7 +732,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
-  pensions_calculator (= 0.2.3.525)
+  pensions_calculator (= 0.2.3.527)
   poltergeist
   pry-rails
   pry-rescue

@@ -55,6 +55,9 @@
       'Responsive page': 'Yes',
       'event': 'Responsive page'
     });
+    <% if content_for?(:tool_tracking_id) %>
+    dataLayer.push({'toolTrackingId': '<%= content_for(:tool_tracking_id) %>'});
+    <% end %>
 
     var require = {
       config: {

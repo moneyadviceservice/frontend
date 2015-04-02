@@ -41,7 +41,10 @@
 
   <div class="l-constrained">
     <div class="l-2col-even">
-      <h2><%= t('annuities.section_one.heading') %></h2>
+      <h2><%= t('annuities.section_one.heading_one') %></h2>
+      <p class="l-annuities__intro"><%= t('annuities.section_one.content.intro') %></p>
+      <p><%= t('annuities.section_one.content.text').html_safe %></p>
+      <h2><%= t('annuities.section_one.heading_two') %></h2>
       <ul class="list">
         <%= t('annuities.section_one.list_html') %>
       </ul>
@@ -95,6 +98,7 @@
         <li><%= image_tag('annuities/provider_logos/prudential@2x.png', alt: 'Prudential', class: 'l-annuities-logos__image--prudential') %></li>
         <li><%= image_tag('annuities/provider_logos/saga@2x.png', alt: 'Saga', class: 'l-annuities-logos__image--saga') %>
         <li><%= image_tag('annuities/provider_logos/standard-life@2x.png', alt: 'Standard Life', class: 'l-annuities-logos__image--standard-life') %></li>
+        <li><%= image_tag('annuities/provider_logos/scottish-widows@2x.png', alt: 'Scottish Widows', class: 'l-annuities-logos__image--scottish-widows') %></li>
       </ul>
     </div>
   </div>

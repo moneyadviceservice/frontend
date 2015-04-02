@@ -43,8 +43,6 @@ Feature: Chat online
     Then I should not be able to start a chat with an advisor
     And I should see a message informing me that chat will be online tomorrow with tomorrow's opening hours
 
-  # until easter times have been reverted
-  @wip
   Scenario: Chat is not supported for Welsh users
     When I visit the website in Welsh
     And I should see a message informing me that chat is only available in English

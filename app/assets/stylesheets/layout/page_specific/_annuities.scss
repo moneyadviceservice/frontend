@@ -55,6 +55,10 @@
   color: $color-heading-extra-small;
 }
 
+.l-annuities__intro {
+  @extend %heading-extra-small;
+}
+
 .l-annuities__citation {
   display: block;
   margin-top: $baseline-unit*2;
@@ -133,4 +137,8 @@
 
 .l-annuities-logos__image--standard-life {
   width: 160px;
+}
+
+.l-annuities-logos__image--scottish-widows {
+  width: 150px;
 }

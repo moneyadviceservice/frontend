@@ -1,6 +1,4 @@
 RSpec.describe 'HTML validation', type: :feature do
-  pending("fails ci due to tidy-bin in tidy-html5-gem") do
-
   describe 'home page' do
     before { visit root_path(locale: locale) }
 
@@ -92,6 +90,4 @@ RSpec.describe 'HTML validation', type: :feature do
       end
     end
   end
-
-  end # pending
 end

@@ -138,6 +138,7 @@ Rails.application.routes.draw do
     resources :news, only: [:show, :index]
     resource  :advice, only: :show
     resources :videos, only: :show
+    resources :corporate_categories, only: [:show]
     resources :corporate, only: [:show, :index]
 
     resources :campaigns,

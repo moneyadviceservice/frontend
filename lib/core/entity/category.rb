@@ -19,5 +19,19 @@ module Core
     def news?
       false
     end
+
+    def corporate?
+      false
+    end
+
+    def attributes
+      {
+        type: type,
+        parent_id: parent_id,
+        title: title,
+        description: description,
+        contents: contents
+      }
+    end
   end
 end

@@ -97,21 +97,21 @@ class ApplicationController < ActionController::Base
     Core::CategoryTreeReader.new.call(categories)
   end
 
+  def navigation_categories
+    Core::Registry::Repository[:category].all
+  end
+
   def corporate_categories
     Core::Registry::Repository[:category].find('corporate')['contents']
   end
 
   def corporate_category?(category, corporate = corporate_categories, categories = [])
-    categories << corporate.map {|c| c['id']} 
+    categories << corporate.map {|c| c['id']}
     return true if categories.flatten.include?(category)
     corporate_category?(category, corporate.first['contents'], categories.flatten) if corporate.first['contents']
   end
 
   helper_method :corporate_category?
-
-  def navigation_categories
-    Core::Registry::Repository[:category].all
-  end
 
   def category_navigation(corporate = false)
     categories = corporate ? corporate_categories : navigation_categories

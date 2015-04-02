@@ -11,7 +11,7 @@ module Navigation
   attr_reader :active_categories
 
   def assign_active_categories(*categories)
-    categories.each do |category|
+    categories.map do |category|
       active_category category.id
       active_category category.parent_id if category.child?
     end

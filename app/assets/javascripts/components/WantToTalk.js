@@ -57,11 +57,9 @@ define(
 
       measureDOM();
       showElement();
-      positionComponent();
 
       $(w)
-        .on('resize', debounce(handleResize, 200))
-        .on('scroll', handleScroll);
+        .on('resize', debounce(handleResize, 200));
 
       $(document)
         .on('click', TRIGGER_SELECTOR, handleTriggerClick)
@@ -115,58 +113,9 @@ define(
       }
     }
 
-    function positionComponent() {
-      var scrollTop;
-
-      if (!isInSidebar) {
-        return;
-      }
-
-      scrollTop = $(w).scrollTop();
-
-      if (!isFixed && !isAtBottom && scrollTop > top) {
-        $sidebarEl.addClass(FIXED_CLASS);
-        isFixed = true;
-        return;
-      }
-
-      if (isFixed) {
-        if (scrollTop < top) {
-          $sidebarEl.removeClass(FIXED_CLASS);
-          isFixed = false;
-          return;
-        }
-
-        if (scrollTop > bottom) {
-          $sidebarEl
-            .removeClass(FIXED_CLASS)
-            .addClass(BOTTOM_CLASS);
-          isFixed = false;
-          isAtBottom = true;
-          return;
-        }
-      }
-
-      if (isAtBottom && scrollTop < bottom) {
-        $sidebarEl
-          .addClass(FIXED_CLASS)
-          .removeClass(BOTTOM_CLASS);
-        isAtBottom = false;
-      }
-    }
-
     function handleResize() {
       measureDOM();
       showElement();
-      positionComponent();
-    }
-
-    function handleScroll() {
-      if (!isInSidebar) {
-        return;
-      }
-
-      positionComponent();
     }
 
     function track(action, label) {
@@ -216,7 +165,6 @@ define(
         // wait for CSS transition
         setTimeout(function() {
           measureDOM();
-          positionComponent();
         }, 400);
       }
     }

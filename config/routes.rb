@@ -121,6 +121,11 @@ Rails.application.routes.draw do
             constraints: EngineMountPoint.for(:action_plans)
     end
 
+    Feature.with(:baby_cost_calculator) do
+      mount BabyCostCalculator::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:baby_cost_calculator)
+    end
+
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
     resources :action_plans, only: 'show'

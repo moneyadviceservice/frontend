@@ -3,20 +3,20 @@
 // Styleguide Home Top
 
 .home-top {
-  background: image-url("retirement_shop_en.png") 0 100% no-repeat;
-  background-size: 100%;
+  background: image-url("illustrated_people.png") 0 100% no-repeat;
+  background-size: 135%;
   padding-bottom: 50%;
   position: relative;
 
   @include respond-to($mq-m) {
-    background-position: 113% 108%;
-    background-size: 60%;
+    background-position: 165% 108%;
+    background-size: 70%;
     padding-bottom: 0;
   }
 
   @include respond-to($mq-l) {
-    background-position: 107% 100%;
-    background-size: 54%;
+    background-position: 141% 100%;
+    background-size: 65%;
   }
 
   @include respond-to($mq-xl) {
@@ -37,7 +37,7 @@
 
 .home-top__image {
   @include respond-to($mq-xl) {
-    background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
+    background: image-url("illustrated_people.png") 100% 52% no-repeat;
     background-size: 49%;
     height: 309px;
     margin: 0 auto;

@@ -3,13 +3,21 @@
 // Styleguide Home Top
 
 .home-top {
-  background: image-url("retirement_shop_en.png") 0 100% no-repeat;
+  background: image-url("retirement_shop_small_en.png") 0 100% no-repeat;
   background-size: 100%;
   padding-bottom: 50%;
   position: relative;
 
+  @if $responsive {
+    background-image: image-url("retirement_shop_en.png");
+  }
+
   .theme-cy & {
-    background-image: image-url("retirement_shop_cy.png");
+    background-image: image-url("retirement_shop_small_cy.png");
+
+    @if $responsive {
+      background-image: image-url("retirement_shop_cy.png");
+    }
   }
 
   @include respond-to($mq-m) {
@@ -19,8 +27,12 @@
   }
 
   @include respond-to($mq-l) {
-    background-position: 107% 100%;
-    background-size: 53%;
+    background-position: 150% 100%;
+    background-size: 54%;
+
+    @if $responsive {
+      background-position: 107% 100%;
+    }
   }
 
   @include respond-to($mq-xl) {
@@ -189,4 +201,3 @@
   top: 30%;
   width: 21px;
 }
-

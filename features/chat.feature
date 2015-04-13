@@ -9,9 +9,8 @@ Feature: Chat online
   - Busy: All advisors are occupied
 
   Chat operational hours:
-  - Mon-Fri 8am-10pm
-  - Sat 9am-10pm
-  - Sun 10am-10pm
+  - Mon-Fri 8am-8pm
+  - Sat 9am-1pm
 
   @javascript
   Scenario: Chat is online, advisors are available, and the user has JavaScript enabled

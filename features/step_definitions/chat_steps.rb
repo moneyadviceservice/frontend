@@ -58,12 +58,12 @@ end
 
 Then(/^I should see a message informing me that chat will be online between today's opening hours$/) do
   expect(home_page.chat.description)
-    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 10pm'))
+    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 8pm'))
 end
 
 Then(/^I should see a message informing me that chat will be online tomorrow with tomorrow's opening hours$/) do
   expect(home_page.chat.description)
-    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '10am to 10pm'))
+    .to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 8pm'))
 end
 
 Then(/^I should see a message informing me that chat is only available in English$/) do

@@ -28,6 +28,21 @@ RSpec.describe ChatOpeningHoursDecorator do
     end
   end
 
+  describe '#open_periods' do
+    subject { decorator.open_periods }
+
+    let(:opening_hours) do
+      OpeningHours.new('9am', '5pm').tap do |opening_hours|
+        opening_hours.closed(:sun)
+      end
+    end
+
+    it 'excludes closed days' do
+      expect(subject.size).to eql(1)
+      is_expected.to include('Monday to Saturday, 9am&nbsp;to&nbsp;5pm')
+    end
+  end
+
   describe '#next_period_hours' do
     subject { decorator.next_period_hours }
 

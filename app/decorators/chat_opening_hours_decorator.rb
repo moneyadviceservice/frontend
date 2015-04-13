@@ -36,6 +36,21 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     end
   end
 
+  def open_periods
+    @open_periods ||= begin
+      days.each_with_object([]) do |day, result|
+        next if week[day].duration.zero?
+
+        if result.last && result.last.hours == week[day]
+          result.last.days << day
+        else
+          result << Period.new([day], week[day])
+        end
+        result
+      end.map(&:to_s)
+    end
+  end
+
   def next_period_hours
     @next_period_hours ||= Hours.new(next_period.open, next_period.close).to_s
   end

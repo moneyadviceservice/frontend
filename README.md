@@ -59,7 +59,7 @@ $ foreman s
 
 ### Change CMS URL Path
 
-The frontend locally will try to look for CMS locally. You can change the MAS_CMS_URL on [.env](https://github.com/moneyadviceservice/frontend/blob/master/.env#L2) file.
+The frontend locally will try to look for CMS locally. You can change the MAS_CMS_URL on [.env](https://github.com/moneyadviceservice/frontend/blob/master/.env#L2) file. Use http://comfy.moneyadviceservice.org.uk to point to LIVE content.
 
 Don't forget to restart the server after the modification.
 

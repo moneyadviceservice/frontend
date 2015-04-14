@@ -45,7 +45,8 @@
 .form__input-range::-ms-track {
   @include range-track-colors;
   color: transparent;
-  height: 20px;
+  height: 32px;
+  border: 0;
 }
 
 .form__input-range::-ms-fill-lower,
@@ -95,6 +96,7 @@
 
 .form__input-range::-ms-thumb {
   @include range-thumb-generic;
+  @include range-thumb-large;
   height: 20px;
 }
 

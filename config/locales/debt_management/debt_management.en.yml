@@ -47,7 +47,7 @@ en:
         online_description: Get free online help with their Debt Remedy tool. A personal action plan will recommend a debt solution tailored to your situation.
         online_opening_hours_html: |
           <p>StepChange Debt Remedy is available 24 hours a day.</p>
-        button: Go to StepChange website
+        button: Go to <br />StepChange website
         phone_heading: Phone
         phone_number: '+448081782822'
         phone_number_readable: 0808 178 2822
@@ -65,7 +65,7 @@ en:
         online_description: Get free online help with their My Money Steps tool.
         online_opening_hours_html: |
           <p>My Money Steps is available 24 hours a day.</p>
-        button: Go to National Debtline website
+        button: Go to National <br />Debtline website
         phone_heading: Phone
         phone_number: '+448088080124'
         phone_number_readable: 0808 808 0124
@@ -75,6 +75,15 @@ en:
             <li>Monday to Friday 9am to 9pm</li>
             <li>Saturday 9.30am to 1pm</li>
           </ul>
+      - logo: campaign/logo-cab.png
+        url: http://www.adviceguide.org.uk/england/about_this_site/web_chat_service.htm
+        company_name: Citizens Advice
+        description: "Citizens Advice offers free, independent and confidential debt advice through their Adviceguide website. Chat with a debt adviser online for help with working out what to do next."
+        online_heading: Online
+        online_description:
+        online_opening_hours_html: |
+          <p>Opening hours: Monday to Friday 10am to 4pm</p>
+        button: Go to Citizens Advice<br /> web chat service
     wales:
       - logo: campaign/logo-national-debtline.png
         url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx

@@ -77,7 +77,7 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:advice_plans)
 
       mount DecisionTrees::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:decision_trees)
+            constraints: { tool_id: %r{health-check-questions|workplace-pension-advice-tool} }
     end
 
     Feature.with(:mortgage_calculator) do

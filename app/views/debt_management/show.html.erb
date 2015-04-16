@@ -61,36 +61,34 @@
         <h4 class="l-debtmanagement__country-heading"><%= t('countries')[country] %></h4>
         <% advisors.each do |advisor| %>
           <section class="debt-advisor l-debtmanagement__advisor">
-            <a href="<%= advisor[:url] %>">
-              <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
-            </a>
-            <% if advisor[:description] %>
-              <p><%= advisor[:description] %></p>
-            <% end %>
-            <h5 class="debt-advisor__heading"><%= advisor[:online_heading] %></h5>
-            <% if advisor[:online_description] %>
-              <p><%= advisor[:online_description] %></p>
-            <% end %>
-            <% if advisor[:online_opening_hours_heading] %>
-              <h6 class="debt-advisor__subheading"><%= advisor[:opening_hours_heading] %></h6>
-            <% end %>
-            <% if advisor[:online_opening_hours_html] %>
-              <%= raw advisor[:online_opening_hours_html] %>
-            <% end %>
-            <a href="<%= advisor[:url] %>" class="button button--primary debt-advisor__go-to-button">
-              <%= raw advisor[:button] %>
-            </a>
-            <h5 class="debt-advisor__heading"><%= advisor[:phone_heading] %></h5>
-            <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><%= advisor[:phone_number_readable] %></a>
-            <% if advisor[:phone_opening_hours_heading] %>
-              <h6 class="debt-advisor__subheading"><%= advisor[:phone_opening_hours_heading] %></h6>
-            <% end %>
-            <% if advisor[:phone_opening_hours] %>
-              <%= raw advisor[:phone_opening_hours] %>
-            <% end %>
-            <% if advisor[:email] %>
-              <a class="debt-advisor__email" href="mailto:<%= advisor[:email] %>"><%= advisor[:email] %></a>
-            <% end %>
+            <div class="debit-advisor__online">
+              <a href="<%= advisor[:url] %>">
+                <%= image_tag(advisor[:logo], alt: advisor[:company_name]) %>
+              </a>
+              <% if advisor[:description] %>
+                <p><%= advisor[:description] %></p>
+              <% end %>
+              <% if advisor[:online_description] %>
+                <p><%= advisor[:online_description] %></p>
+              <% end %>
+              <a href="<%= advisor[:url] %>" class="button debt-advisor__go-to-button">
+                <%= raw advisor[:button] %>
+              </a>
+              <% if advisor[:online_opening_hours_html] %>
+                <%= raw advisor[:online_opening_hours_html] %>
+              <% end %>
+            </div>
+            <div class="debt-advisor__contact">
+              <% if advisor[:website_url] %>
+                <p class="debt-advisor__website">Visit <a href="<%= advisor[:website_url] %>"><%= advisor[:website_title] %></a></p>
+              <% end %>
+              <% if advisor[:phone_number] %>
+                <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><span class="debt-advisor__or-call">or call </span><%= advisor[:phone_number_readable] %></a>
+                <% if advisor[:phone_opening_hours] %>
+                  <%= raw advisor[:phone_opening_hours] %>
+                <% end %>
+              <% end %>
+            </div>
           </section>
       <% end %>
       </section>

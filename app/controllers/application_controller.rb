@@ -102,7 +102,7 @@ class ApplicationController < ActionController::Base
   end
 
   def corporate_categories
-    Core::Registry::Repository[:category].find('corporate')['contents']
+    Core::Registry::Repository[:category].find('corporate-categories')['contents']
   end
 
   def corporate_category?(category, corporate = corporate_categories, categories = [])

@@ -5,11 +5,14 @@ RSpec.describe StaticPagesController, type: :controller do
     let(:static_page_id) { 'test' }
     let(:static_page) { Core::StaticPage.new(static_page_id, categories: categories) }
     let(:static_page_reader) { double(Core::StaticPageReader, call: static_page) }
+    let(:category_tree) { double }
 
     context 'when an static_page does exist' do
       before do
         allow(Core::StaticPageReader).to receive(:new) { static_page_reader }
-        allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+        allow(Core::CategoryTreeReader).to receive(:new) do
+          instance_double(Core::CategoryTreeReader, call: category_tree)
+        end
       end
 
       it 'is successful' do

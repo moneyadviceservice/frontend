@@ -3,10 +3,13 @@ RSpec.describe NewsController, type: :controller do
     let(:news_article) { instance_double(Core::NewsArticle, id: 'test', categories: []) }
     let(:news_reader) { instance_double(Core::NewsArticleReader, call: news_article) }
     let(:news_article_reader) { instance_double(Core::NewsArticleReader, call: news_article) }
+    let(:category_tree) { double }
 
     before do
       allow(Core::NewsArticleReader).to receive(:new) { news_reader }
-      allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+      allow(Core::CategoryTreeReader).to receive(:new) do
+        instance_double(Core::CategoryTreeReader, call: category_tree)
+      end
       allow(Core::NewsReader).to receive(:new) { -> { [] } }
     end
 

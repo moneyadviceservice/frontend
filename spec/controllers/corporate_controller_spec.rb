@@ -2,9 +2,12 @@ RSpec.describe CorporateController, type: :controller do
   describe 'GET show' do
     let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
     let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
+    let(:category_tree) { double }
 
     before do
-      allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+      allow(Core::CategoryTreeReader).to receive(:new) do
+        instance_double(Core::CategoryTreeReader, call: category_tree)
+      end
     end
 
     context 'when corporate page exists' do

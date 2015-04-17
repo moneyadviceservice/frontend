@@ -41,128 +41,197 @@ cy:
   advisors:
     england:
       - logo: campaign/logo-stepchange.png
-        url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
+        url: http://www.stepchange.org/Debtremedy.aspx
         company_name: StepChange
-        online_opening_hours_html: |
-          <p>StepChange Debt Remedy sydd ar gael 24 awr y dyed</p>
-        button: Ewch i Step Change
-        phone_heading: Ffôn
+        description: Ceisiwch gyngor diduedd ar beth i’w wneud nesaf gan brif ddarparwr elusennol cynlluniau rheoli dyledion am ddim.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn Debt Remedy. Bydd cynllun gweithredu personol yn argymell datrysiad dyled sydd wedi ei addasu i’ch sefyllfa chi.
+        online_opening_hours_html:
+        button: Rhowch gynnig ar yr<br />offeryn Debt Remedy
+        visit: Ewch i
+        website_title: StepChange.org
+        website_url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
         phone_number: '+448081782822'
         phone_number_readable: 0808 178 2822
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 8am i 8pm</li>
-            <li>Dydd Sadwrn, 8am i 4pm</li>
+            <li>Dydd Llun i ddydd Gwener 8am i 8pm</li>
+            <li>Dydd Sadwrn 8am i 4pm</li>
           </ul>
       - logo: campaign/logo-national-debtline.png
-        url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx
+        url: https://www.mymoneysteps.org/
         company_name: National Debtline
-        online_opening_hours_html: |
-          <p>My Money Steps sydd ar gael 24 awr y dyed</p>
-        button: Ewch i National Debt Line
-        phone_heading: Ffôn
+        description: Mae National Debtline yn cynnig cyngor ar ddyledion am ddim ar-lein drwy ei offeryn My Money Steps, canllawiau gwefan, taflenni gwybodaeth a llythyrau sampl.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn My Money Steps.
+        online_opening_hours_html:
+        button: Defnyddiwch yr offeryn<br />My Money Steps
+        visit: Ewch i
+        website_title: NationalDebtline.org
+        website_url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx
         phone_number: '+448088080124'
         phone_number_readable: 0808 808 0124
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 9am i 9pm</li>
-            <li>Dydd Sadwrn, 9.30am i 1pm</li>
+            <li>Dydd Llun i ddydd Gwener 9am i 9pm</li>
+            <li>Dydd Sadwrn 9.30am i 1pm</li>
           </ul>
+      - logo: campaign/logo-cab.png
+        url: http://www.adviceguide.org.uk/england/about_this_site/web_chat_service.htm
+        company_name: Citizens Advice
+        description: "Mae Citizens Advice yn cynnig cyngor ar ddyledion annibynnol, cyfrinachol ac am ddim drwy ei wefan Adviceguide."
+        online_description: Ewch i gael sgwrs ar-lein gyda chynghorydd ar ddyledion er mwyn cael cymorth ynglŷn â’r camau nesaf i’w cymryd.
+        online_opening_hours_html: |
+          <p>Dydd Llun i ddydd Gwener o 10am i 4pm</p>
+        button: Siarad â chynghorydd ar-lein
+        visit: Ewch i
+        website_title: AdviceGuide.org.uk
+        website_url: http://www.adviceguide.org.uk/england/debt_e.htm
     wales:
       - logo: campaign/logo-national-debtline.png
-        url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx
+        url: https://www.mymoneysteps.org/
         company_name: National Debtline
-        online_opening_hours_html: |
-          <p>My Money Steps sydd ar gael 24 awr y dyed</p>
-        button: Ewch i National Debt Line
-        phone_heading: Ffôn
+        description: Mae National Debtline yn cynnig cyngor ar ddyledion am ddim ar-lein drwy ei offeryn My Money Steps, canllawiau gwefan, taflenni gwybodaeth a llythyrau sampl.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn My Money Steps.
+        online_opening_hours_html:
+        button: Defnyddiwch yr offeryn<br />My Money Steps
+        visit: Ewch i
+        website_title: NationalDebtline.org
+        website_url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx
         phone_number: '+448088080124'
         phone_number_readable: 0808 808 0124
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 9am i 9pm</li>
-            <li>Dydd Sadwrn, 9.30am i 1pm</li>
+            <li>Dydd Llun i ddydd Gwener 9am i 9pm</li>
+            <li>Dydd Sadwrn 9.30am i 1pm</li>
           </ul>
       - logo: campaign/logo-stepchange.png
-        url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
+        url: http://www.stepchange.org/Debtremedy.aspx
         company_name: StepChange
-        online_opening_hours_html: |
-          <p>StepChange Debt Remedy sydd ar gael 24 awr y dyed</p>
-        button: Ewch i Step Change
-        phone_heading: Ffôn
+        description: Ceisiwch gyngor diduedd ar beth i’w wneud nesaf gan brif ddarparwr elusennol cynlluniau rheoli dyledion am ddim.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn Debt Remedy. Bydd cynllun gweithredu personol yn argymell datrysiad dyled sydd wedi ei addasu i’ch sefyllfa chi.
+        online_opening_hours_html:
+        button: Rhowch gynnig ar yr <br />offeryn Debt Remedy
+        visit: Ewch i
+        website_title: StepChange.org
+        website_url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
         phone_number: '+448081782822'
         phone_number_readable: 0808 178 2822
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 8am i 8pm</li>
-            <li>Dydd Sadwrn, 8am i 4pm</li>
+            <li>Dydd Llun i ddydd Gwener 8am i 8pm</li>
+            <li>Dydd Sadwrn 8am i 4pm</li>
           </ul>
+      - logo: campaign/logo-cab.png
+        url: http://www.adviceguide.org.uk/england/about_this_site/web_chat_service.htm
+        company_name: Citizens Advice
+        description: "Mae Citizens Advice yn cynnig cyngor ar ddyledion annibynnol, cyfrinachol ac am ddim drwy ei wefan Adviceguide."
+        online_description: Ewch i gael sgwrs ar-lein gyda chynghorydd ar ddyledion er mwyn cael cymorth ynglŷn â’r camau nesaf i’w cymryd.
+        online_opening_hours_html: |
+          <p>Dydd Llun i ddydd Gwener o 10am i 4pm</p>
+        button: Siarad â chynghorydd ar-lein
+        visit: Ewch i
+        website_title: AdviceGuide.org.uk
+        website_url: http://www.adviceguide.org.uk/england/debt_e.htm
     scotland:
       - logo: campaign/logo-national-debtline.png
-        url: https://nationaldebtline.org/S/Pages/Debt-management-plan.aspx
+        url: https://www.mymoneysteps.org/
         company_name: National Debtline
-        online_opening_hours_html: |
-          <p>My Money Steps sydd ar gael 24 awr y dyed</p>
-        button: Ewch i National Debt Line
-        phone_heading: Ffôn
+        description: Mae National Debtline yn cynnig cyngor ar ddyledion am ddim ar-lein drwy ei offeryn My Money Steps, canllawiau gwefan, taflenni gwybodaeth a llythyrau sampl.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn My Money Steps.
+        online_opening_hours_html:
+        button: Defnyddiwch yr offeryn<br />My Money Steps
+        visit: Ewch i
+        website_title: NationalDebtline.org
+        website_url: https://nationaldebtline.org/EW/Pages/Debt-management-plan.aspx
         phone_number: '+448088080124'
         phone_number_readable: 0808 808 0124
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 9am i 9pm</li>
-            <li>Dydd Sadwrn, 9.30am i 1pm</li>
+            <li>Dydd Llun i ddydd Gwener 9am i 9pm</li>
+            <li>Dydd Sadwrn 9.30am i 1pm</li>
           </ul>
       - logo: campaign/logo-stepchange.png
-        url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
+        url: http://www.stepchange.org/Debtremedy.aspx
         company_name: StepChange
-        online_opening_hours_html: |
-          <p>StepChange Debt Remedy sydd ar gael 24 awr y dyed</p>
-        button: Ewch i Step Change
-        phone_heading: Ffôn
+        description: Ceisiwch gyngor diduedd ar beth i’w wneud nesaf gan brif ddarparwr elusennol cynlluniau rheoli dyledion am ddim.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn Debt Remedy. Bydd cynllun gweithredu personol yn argymell datrysiad dyled sydd wedi ei addasu i’ch sefyllfa chi.
+        online_opening_hours_html:
+        button: Rhowch gynnig ar yr<br />offeryn Debt Remedy
+        visit: Ewch i
+        website_title: StepChange.org
+        website_url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
         phone_number: '+448081782822'
         phone_number_readable: 0808 178 2822
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 8am i 8pm</li>
-            <li>Dydd Sadwrn, 8am i 4pm</li>
+            <li>Dydd Llun i ddydd Gwener 8am i 8pm</li>
+            <li>Dydd Sadwrn 8am i 4pm</li>
           </ul>
+      - logo: campaign/logo-cab.png
+        url: http://www.adviceguide.org.uk/england/about_this_site/web_chat_service.htm
+        company_name: Citizens Advice
+        description: "Mae Citizens Advice yn cynnig cyngor ar ddyledion annibynnol, cyfrinachol ac am ddim drwy ei wefan Adviceguide."
+        online_description: Ewch i gael sgwrs ar-lein gyda chynghorydd ar ddyledion er mwyn cael cymorth ynglŷn â’r camau nesaf i’w cymryd.
+        online_opening_hours_html: |
+          <p>Dydd Llun i ddydd Gwener o 10am i 4pm</p>
+        button: Siarad â chynghorydd ar-lein
+        visit: Ewch i
+        website_title: AdviceGuide.org.uk
+        website_url: http://www.adviceguide.org.uk/england/debt_e.htm
     northern_ireland:
       - logo: campaign/logo-debt-action-ni.png
-        url: http://www.debtaction-ni.net
+        url: http://www.debtaction-ni.net/virtual-adviser-service
         company_name: Debt Action NI
+        description: Mae Debt Action NI yn cynnig gwasanaethau cynghori ar ddyledion ac arian am ddim, cyfrinachol a diduedd ar draws Gogledd Iwerddon. Anfonwch neges destun ‘Action’ i 81025 a bydd cynghorydd yn cysylltu â chi.
+        online_description: Get free online help with their virtual adviser service.
         online_opening_hours_html: |
-          <p>Gwasanaeth ymgynghorydd ar gael 9:30-04:30 Dydd Llun i ddydd Gwener</p>
-        button: Ewch i Advice NI
-        phone_heading: Ffôn
+          <p>Dydd Llun i ddydd Gwener: 9:30am i 4:30pm</p>
+        button: Siarad â chynghorydd ar-lein
+        visit: Ewch i
+        website_title: DebtAction-NI.net
+        website_url: http://www.debtaction-ni.net/
         phone_number: '+448009174607'
         phone_number_readable: 0800 917 4607
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 8am i 8pm</li>
-            <li>Dydd Sadwrn a Dydd Sul, 8am i 4pm</li>
+            <li>Dydd Llun i ddydd Gwener 8am i 9pm</li>
+            <li>Dydd Sadwrn, 9am i 3pm</li>
           </ul>
       - logo: campaign/logo-stepchange.png
-        url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
+        url: http://www.stepchange.org/Debtremedy.aspx
         company_name: StepChange
-        online_opening_hours_html: |
-          <p>StepChange Debt Remedy sydd ar gael 24 awr y dyed</p>
-        button: Ewch i Step Change
-        phone_heading: Ffôn
+        description: Ceisiwch gyngor diduedd ar beth i’w wneud nesaf gan brif ddarparwr elusennol cynlluniau rheoli dyledion am ddim.
+        online_description: Ceisiwch gymorth ar-lein am ddim 24 awr y dydd gyda’i offeryn Debt Remedy. Bydd cynllun gweithredu personol yn argymell datrysiad dyled sydd wedi ei addasu i’ch sefyllfa chi.
+        online_opening_hours_html:
+        button: Rhowch gynnig ar yr<br />offeryn Debt Remedy
+        visit: Ewch i
+        website_title: StepChange.org
+        website_url: http://www.stepchange.org/Howwecanhelpyou/DebtManagementCompanyClosed.aspx?utm_source=MAS&utm_medium=referral&utm_campaign=DMC_Closure&utm_content=Link&domain=http://www.MAS_DMC_Firms.org&WT.mc_id=801000
         phone_number: '+448081782822'
         phone_number_readable: 0808 178 2822
-        phone_opening_hours_heading: Horiau agor yw
+        phone_number_or_call: neu ffoniwch
         phone_opening_hours: |
           <ul class="unstyled-list debt-advisor__opening-hours">
-            <li>Llun i Wener, 8am i 8pm</li>
-            <li>Dydd Sadwrn, 8am i 4pm</li>
+            <li>Dydd Llun i ddydd Gwener 8am i 8pm</li>
+            <li>Dydd Sadwrn 8am i 4pm</li>
           </ul>
+      - logo: campaign/logo-cab.png
+        url: http://www.adviceguide.org.uk/england/about_this_site/web_chat_service.htm
+        company_name: Citizens Advice
+        description: "Mae Citizens Advice yn cynnig cyngor ar ddyledion annibynnol, cyfrinachol ac am ddim drwy ei wefan Adviceguide."
+        online_description: Ewch i gael sgwrs ar-lein gyda chynghorydd ar ddyledion er mwyn cael cymorth ynglŷn â’r camau nesaf i’w cymryd.
+        online_opening_hours_html: |
+          <p>Dydd Llun i ddydd Gwener o 10am i 4pm</p>
+        button: Siarad â chynghorydd ar-lein
+        visit: Ewch i
+        website_title: AdviceGuide.org.uk
+        website_url: http://www.adviceguide.org.uk/england/debt_e.htm
   faq:
     page_heading: Cwestiynau cyffredin
     section_one:

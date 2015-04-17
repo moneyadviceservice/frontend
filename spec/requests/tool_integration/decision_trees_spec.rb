@@ -1,7 +1,9 @@
-RSpec.describe 'Decision Trees', type: :request, features: [:health_check, :registration] do
+RSpec.describe ToolMountPoint::DecisionTrees, type: :request, features: [:health_check, :registration] do
   %W(
-    /en/tools/#{ToolMountPoint::DecisionTrees::EN_ID}
-    /cy/tools/#{ToolMountPoint::DecisionTrees::CY_ID}
+    /en/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::EN_ID}
+    /cy/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::CY_ID}
+    /en/tools/#{ToolMountPoint::DecisionTrees::WorkplacePensionAdviceTool::EN_ID}
+    /cy/tools/#{ToolMountPoint::DecisionTrees::WorkplacePensionAdviceTool::CY_ID}
   ).each do |path|
     describe path do
       before do
@@ -9,6 +11,20 @@ RSpec.describe 'Decision Trees', type: :request, features: [:health_check, :regi
       end
 
       specify { expect(response).to be_ok }
+    end
+  end
+
+  describe 'alternate tool id' do
+    context 'changing from english to welsh' do
+      it 'retains english id for health check tool' do
+        alternate_id = subject.alternate_tool_id('health-check-questions')
+        expect(alternate_id).to eq('health-check-questions')
+      end
+
+      it 'retains english id for workplace pension advice tool' do
+        alternate_id = subject.alternate_tool_id('workplace-pension-advice-tool')
+        expect(alternate_id).to eq('workplace-pension-advice-tool')
+      end
     end
   end
 

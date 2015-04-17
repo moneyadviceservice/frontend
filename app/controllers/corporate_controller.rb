@@ -19,9 +19,5 @@ class CorporateController < ArticlesController
   def assign_categories
     @category = Core::CategoryReader.new('corporate-home').call
     assign_active_categories(@category)
-    # @other = Core::Registry::Repository[:category].find('corporate')
-    # @categories = CategoryNavigationDecorator.decorate_collection(
-    #   category_tree(@other['contents']).children
-    # )
   end
 end

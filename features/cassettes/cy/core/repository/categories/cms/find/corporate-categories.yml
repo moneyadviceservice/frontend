@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/corporate-categories.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (DavidKewal000769.local; dkewal; 76905) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 8209b9b4-ff26-42c0-9406-83357645553a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"e195c3bdafba39c9e51a365a3c76b51d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8209b9b4-ff26-42c0-9406-83357645553a
+      X-Runtime:
+      - '0.031158'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Fri, 17 Apr 2015 13:30:14 GMT
+      Content-Length:
+      - '1632'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"corporate-categories","type":"category","title":"Corporate Welsh","description":"Corporate
+        Welsh","parent_id":"","contents":[{"id":"corporate-home","type":"category","title":"Corporate
+        home welsh","description":"dummy","parent_id":"corporate-categories","contents":[{"id":"about-us","type":"category","title":"Amdanom
+        ni","description":"Amdanom ni","parent_id":"corporate-home","contents":[{"id":"os-byddwch-yn-cael-camesgoriad-hwyr-2","type":"guide","title":"Os
+        byddwch yn cael camesgoriad hwyr","description":"Os ydych wedi colli babi
+        rhwng 14 a 24 wythnos o feichiogrwydd, mae yna ambell beth y bydd angen i
+        chi wybod yn ystod y cyfnod anodd hwn"}]},{"id":"media-centre","type":"category","title":"ganolfan
+        cyfryngau","description":"ganolfan cyfryngau","parent_id":"corporate-home","contents":[]},{"id":"Partners","type":"category","title":"Partners","description":"This
+        page is not available in Welsh at this time. We apologise for any inconvenience.","parent_id":"corporate-home","contents":[]},{"id":"our-debt-work","type":"category","title":"Ein
+        Gwaith Dyled","description":"Pan fo pobl yn cael trafferthion gyda dyled mae''n
+        bwysicach nag erioed eu bod yn cael mynediad i gyngor effeithlon. Gweithiwn
+        gyda phartneriaid i''w gwneud yn rhwyddach chyflymach i gael cyngor ynghylch
+        dyled, ac i wella safonau ac ansawdd ar draws sector.","parent_id":"corporate-home","contents":[]},{"id":"resources-for-professionals","type":"category","title":"Adnoddau
+        ar gyfer gweithwyr proffesiynol ","description":"A wide variety of resources
+        on money management for professionals welsh.","parent_id":"corporate-home","contents":[]}]}]}'
+    http_version: 
+  recorded_at: Sat, 16 May 2015 22:00:40 GMT
+recorded_with: VCR 2.9.2

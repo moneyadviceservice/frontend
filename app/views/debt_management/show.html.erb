@@ -83,7 +83,7 @@
                 <p class="debt-advisor__website">Visit <a href="<%= advisor[:website_url] %>"><%= advisor[:website_title] %></a></p>
               <% end %>
               <% if advisor[:phone_number] %>
-                <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><span class="debt-advisor__or-call">or call </span><%= advisor[:phone_number_readable] %></a>
+                <a class="debt-advisor__phone" href="tel:<%= advisor[:phone_number] %>"><span class="debt-advisor__or-call"><%= advisor[:phone_number_or_call] %> </span><%= advisor[:phone_number_readable] %></a>
                 <% if advisor[:phone_opening_hours] %>
                   <%= raw advisor[:phone_opening_hours] %>
                 <% end %>

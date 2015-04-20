@@ -20,9 +20,10 @@
   margin-top: $baseline-unit*-4;
 }
 
-.l-debtmanagement--options .l-debtmanagement__inner__heading {
+.l-debtmanagement--options .l-debtmanagement__heading {
   color: $color-green-dark;
   padding-top: $baseline-unit*4;
+  @include column(12);
 }
 
 .l-debtmanagement__inner {
@@ -81,21 +82,48 @@
   margin-bottom: $baseline-unit*6;
   @include column(12);
 
-  @include respond-to($mq-m) {
-    @include column(6);
+  @include respond-to($mq-l) {
+    @include column(4);
   }
 }
 
-.l-debtmanagement__advisor--even {
+.l-debtmanagement__advisor:nth-of-type(1) {
   padding-bottom: $baseline-unit*8;
   border-bottom: 1px solid $color-grey-palest;
 
-  @include respond-to($mq-m) {
-    border-right: 1px solid $color-grey-palest;
+  @include respond-to($mq-l) {
     border-bottom: none;
-    padding-right: 3.3333333%;
     padding-bottom: 0;
-    clear: both;
+  }
+}
+
+.l-debtmanagement__advisor:nth-of-type(2) {
+  padding-bottom: $baseline-unit*8;
+  border-bottom: 1px solid $color-grey-palest;
+
+  @include respond-to($mq-l) {
+    position: relative;
+    border-bottom: none;
+    padding-bottom: 0;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      display: block;
+      border-left: 1px solid $color-grey-palest;
+    }
+
+    &:after {
+      right: -6%;
+    }
+
+    &:before {
+      left: -6%;
+    }
   }
 }
 

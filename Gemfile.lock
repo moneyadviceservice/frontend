@@ -20,11 +20,12 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
-  revision: bd66f8fef47147f3c0766f7b5cb17673f7872c02
+  revision: fdcc77549facf9a5d0f92dbba25fc8dccff0393a
   specs:
     rio (0.0.3)
       bowndler
       dough-ruby
+      pensions_calculator-calculations
       rails (~> 4.1)
 
 GIT
@@ -475,6 +476,8 @@ GEM
       responders
       sass-rails (~> 4.0.3)
       uglifier
+    pensions_calculator-calculations (1.0.0.4)
+      activesupport (~> 4.1)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)

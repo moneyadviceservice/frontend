@@ -1,4 +1,4 @@
-class BabyCostCalculator < ApplicationController
+class BabyCostCalculator < EmbeddedToolsController 
   protected
     def category_id
       'having-a-baby'

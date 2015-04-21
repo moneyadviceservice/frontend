@@ -1,11 +1,41 @@
 RSpec.describe CorporateController, type: :controller do
-  describe 'GET show' do
-    let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
-    let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
 
-    before do
-      allow(Core::CategoryTreeReader).to receive(:new) { -> { double } }
+  let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
+  let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
+  let(:category_tree) { double }
+  let(:corporate_category) { Core::Category.new('corporate-home') }
+  let(:corporate_category_reader) { instance_double(Core::CategoryReader, call: corporate_category) }
+
+  before do
+    allow(Core::CategoryTreeReader).to receive(:new) do
+      instance_double(Core::CategoryTreeReader, call: category_tree)
     end
+  end
+
+  describe "GET index" do
+    before do
+      allow(Core::CategoryReader).to receive(:new) do
+        instance_double(Core::CategoryReader, call: corporate_category)
+      end
+    end
+
+    context 'when corporate-home category exists' do
+      before do
+        expect(Core::CategoryReader).to receive(:new).with(corporate_category.id) { corporate_category_reader }
+        get :index, locale: I18n.locale
+      end
+
+      it "responds successfully" do
+        expect(response).to be_ok
+      end
+
+      it "assigns category" do
+        expect(assigns[:category]).to be(corporate_category)
+      end
+    end
+  end
+
+  describe 'GET show' do
 
     context 'when corporate page exists' do
       before do

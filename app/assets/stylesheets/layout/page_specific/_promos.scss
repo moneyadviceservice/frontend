@@ -208,3 +208,48 @@
   right: 0;
   top: $baseline-unit*3;
 }
+
+.l-promo-corporate {
+  @include row(12);
+  @extend .clearfix;
+  overflow: hidden;
+  position: relative;
+  margin-top: $baseline-unit*3;
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*5;
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+.l-promo-corporate__item {
+  @include column(12);
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*2;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      margin-left: 0;
+      margin-right: 7%;
+      flex: 0 0 46%;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+}

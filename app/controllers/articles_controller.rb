@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_breadcrumbs
-    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree)
+    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree(navigation_categories))
   end
 
   def set_related_content

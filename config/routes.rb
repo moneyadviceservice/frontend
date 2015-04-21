@@ -52,8 +52,8 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:car_cost_tool)
     end
 
-    Feature.with(:cutback_calculator) do 
-      mount CutbackCalculator::Engine => '/tools/:tool_id', 
+    Feature.with(:cutback_calculator) do
+      mount CutbackCalculator::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:cutback_calculator)
     end
 
@@ -67,8 +67,8 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:debt_advice_locator)
     end
 
-    Feature.with(:debt_test) do 
-      mount DebtTest::Engine => '/tools/:tool_id', 
+    Feature.with(:debt_test) do
+      mount DebtTest::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:debt_test)
     end
 
@@ -122,6 +122,7 @@ Rails.application.routes.draw do
     end
 
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
+    match '/corporate_categories/corporate-home', to: not_implemented, via: 'get'
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
@@ -136,9 +137,10 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
-    resource :advice, only: :show
+    resource  :advice, only: :show
     resources :videos, only: :show
-    resources :corporate, only: [:show]
+    resources :corporate_categories, only: [:show]
+    resources :corporate, only: [:show, :index]
 
     resources :campaigns,
               only: 'show',

@@ -15,6 +15,7 @@ module Core
   autoload :Article, 'core/entity/article'
   autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'
+  autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'

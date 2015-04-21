@@ -1,1 +1,1 @@
-BabyCostCalculator.parent_controller = '::ApplicationController'
+BabyCostCalculator.parent_controller = '::BabyCostCalculatorController'

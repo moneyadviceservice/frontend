@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/corporate-home.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (DavidKewal000769.local; dkewal; 45149) ruby/2.1.2 (95;
+        x86_64-darwin13.0)
+      X-Request-Id:
+      - 02c594aa-3fac-4b71-abe8-7250f3e8fc19
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4e78d766e7fe06493a029b156854cc7e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02c594aa-3fac-4b71-abe8-7250f3e8fc19
+      X-Runtime:
+      - '0.041040'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 22 Apr 2015 10:23:14 GMT
+      Content-Length:
+      - '1844'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNvcnBvcmF0ZS1ob21lIiwidHlwZSI6ImNhdGVnb3J5IiwidGl0
+        bGUiOiJDb3Jwb3JhdGUgaG9tZSIsImRlc2NyaXB0aW9uIjoiZHVtbXkiLCJw
+        YXJlbnRfaWQiOiJjb3Jwb3JhdGUtY2F0ZWdvcmllcyIsImNvbnRlbnRzIjpb
+        eyJpZCI6ImFib3V0LXVzIiwidHlwZSI6ImNhdGVnb3J5IiwidGl0bGUiOiJB
+        Ym91dCB1cyIsImRlc2NyaXB0aW9uIjoiQWJvdXQgdXMiLCJwYXJlbnRfaWQi
+        OiJjb3Jwb3JhdGUtaG9tZSIsImNvbnRlbnRzIjpbeyJpZCI6ImlmLXlvdS1o
+        YXZlLWhhZC1hLWxhdGUtbWlzY2FycmlhZ2UtMiIsInR5cGUiOiJjb3Jwb3Jh
+        dGUiLCJ0aXRsZSI6IklmIHlvdSBoYXZlIGEgbGF0ZSBtaXNjYXJyaWFnZSAy
+        IiwiZGVzY3JpcHRpb24iOiJJZiB5b3UgaGF2ZSBsb3N0IGEgYmFieSBiZXR3
+        ZWVuIDE0IGFuZCAyNCB3ZWVrcyBvZiBwcmVnbmFuY3ksIHRoZXJlIGFyZSBz
+        b21lIHRoaW5ncyB5b3UgbmVlZCB0byBrbm93IGF0IHRoaXMgZGlmZmljdWx0
+        IHRpbWUifV19LHsiaWQiOiJtZWRpYS1jZW50cmUiLCJ0eXBlIjoiY2F0ZWdv
+        cnkiLCJ0aXRsZSI6Ik1lZGlhIGNlbnRyZSAiLCJkZXNjcmlwdGlvbiI6Ik1l
+        ZGlhIGNlbnRyZSIsInBhcmVudF9pZCI6ImNvcnBvcmF0ZS1ob21lIiwiY29u
+        dGVudHMiOltdfSx7ImlkIjoiUGFydG5lcnMiLCJ0eXBlIjoiY2F0ZWdvcnki
+        LCJ0aXRsZSI6IlBhcnRuZXJzIiwiZGVzY3JpcHRpb24iOiJUaGUgUGFydG5l
+        cnNoaXBzIHRlYW0gYXQgdGhlIE1vbmV5IEFkdmljZSBTZXJ2aWNlIGFyZSBo
+        ZXJlIHRvIGZhY2lsaXRhdGUgdGhlIHN5bmRpY2F0aW9uIG9mIG91ciBndWlk
+        ZXMsIG5ld3MsIHRvb2xzIGFuZCB2aWRlbyBvbnRvIHlvdXIgb3duIHdlYnNp
+        dGUgLSBmcmVlIG9mIGNoYXJnZSAtIHRvIHByb3ZpZGUgeW91ciB1c2VycyB3
+        aXRoIGluZGVwZW5kZW50IGFuZCB1bmJpYXNlZCBhZHZpY2Ugb24gaG93IHRv
+        IG1hbmFnZSB0aGVpciBtb25leS4iLCJwYXJlbnRfaWQiOiJjb3Jwb3JhdGUt
+        aG9tZSIsImNvbnRlbnRzIjpbXX0seyJpZCI6Im91ci1kZWJ0LXdvcmsiLCJ0
+        eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6Ik91ciBEZWJ0IFdvcmsiLCJkZXNj
+        cmlwdGlvbiI6IldoZW4gcGVvcGxlIGFyZSBzdHJ1Z2dsaW5nIHdpdGggZGVi
+        dCBpdOKAmXMgbW9yZSBpbXBvcnRhbnQgdGhhbiBldmVyIHRoYXQgdGhleSBo
+        YXZlIGFjY2VzcyB0byBlZmZlY3RpdmUgYWR2aWNlLiBXZSB3b3JrIHdpdGgg
+        cGFydG5lcnMgdG8gbWFrZSBkZWJ0IGFkdmljZSBlYXNpZXIgYW5kIHF1aWNr
+        ZXIgdG8gYWNjZXNzLCBhbmQgdG8gaW1wcm92ZSBzdGFuZGFyZHMgYW5kIHF1
+        YWxpdHkgYWNyb3NzIHRoZSBzZWN0b3IuIiwicGFyZW50X2lkIjoiY29ycG9y
+        YXRlLWhvbWUiLCJjb250ZW50cyI6W119LHsiaWQiOiJyZXNvdXJjZXMtZm9y
+        LXByb2Zlc3Npb25hbHMiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6IlJl
+        c291cmNlcyBmb3IgUHJvZmVzc2lvbmFscyIsImRlc2NyaXB0aW9uIjoiQSB3
+        aWRlIHZhcmlldHkgb2YgcmVzb3VyY2VzIG9uIG1vbmV5IG1hbmFnZW1lbnQg
+        Zm9yIHByb2Zlc3Npb25hbHMuICIsInBhcmVudF9pZCI6ImNvcnBvcmF0ZS1o
+        b21lIiwiY29udGVudHMiOltdfSx7ImlkIjoiaWYteW91LWhhdmUtaGFkLWEt
+        bGF0ZS1taXNjYXJyaWFnZS0yIiwidHlwZSI6ImNvcnBvcmF0ZSIsInRpdGxl
+        IjoiSWYgeW91IGhhdmUgYSBsYXRlIG1pc2NhcnJpYWdlIDIiLCJkZXNjcmlw
+        dGlvbiI6IklmIHlvdSBoYXZlIGxvc3QgYSBiYWJ5IGJldHdlZW4gMTQgYW5k
+        IDI0IHdlZWtzIG9mIHByZWduYW5jeSwgdGhlcmUgYXJlIHNvbWUgdGhpbmdz
+        IHlvdSBuZWVkIHRvIGtub3cgYXQgdGhpcyBkaWZmaWN1bHQgdGltZSJ9XX0=
+    http_version: 
+  recorded_at: Wed, 22 Apr 2015 10:23:14 GMT
+recorded_with: VCR 2.9.2

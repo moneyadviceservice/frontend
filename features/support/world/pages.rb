@@ -11,6 +11,7 @@ module World
       home
       action_plan
       category
+      corporate
       partners
       search_results
       static

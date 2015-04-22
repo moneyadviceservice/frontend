@@ -52,7 +52,7 @@ gem 'debt_test'
 gem 'decision_trees', '~> 2.0.0'
 gem 'feedback', '~> 0.3.1'
 gem 'mortgage_calculator', '~> 1.3.5'
-gem 'pensions_calculator', '0.2.3.527'
+gem 'pensions_calculator', '~> 1.0.0'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git'
 gem 'savings_calculator', '~> 1.1.0'
 

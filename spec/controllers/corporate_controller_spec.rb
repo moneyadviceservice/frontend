@@ -1,4 +1,4 @@
-RSpec.describe CorporateController, type: :controller do
+RSpec.describe CorporateController, type: :controller, features: [:corporate] do
 
   let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
   let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }

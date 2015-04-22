@@ -96,72 +96,74 @@
 <% end %>
 
 <%= content_for :javascripts do %>
-  <%= javascript_include_tag 'webchat.js' %>
-  <script type='text/javascript'>
-    sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
+  <% unless hide_contact_panels? %>
+    <%= javascript_include_tag 'webchat.js' %>
+    <script type='text/javascript'>
+      sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
 
-    sWOImageLoaded = function() {
+      sWOImageLoaded = function() {
 
-      <% if chat_opening_hours.open? %>
+        <% if chat_opening_hours.open? %>
 
-      var chatCTA = document.getElementById('js-chat-cta'),
-          chatDescription = document.getElementById('js-chat-description'),
-          chatContent = document.getElementById('js-chat-content');
+        var chatCTA = document.getElementById('js-chat-cta'),
+            chatDescription = document.getElementById('js-chat-description'),
+            chatContent = document.getElementById('js-chat-content');
 
-      if (sWOImage.width == 1) {
+        if (sWOImage.width == 1) {
 
-        var sWOChatElement = document.createElement('div');
-        var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
+          var sWOChatElement = document.createElement('div');
+          var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
-        sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
-        sWOChatElement.appendChild(sWOChatElementText);
+          sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
+          sWOChatElement.appendChild(sWOChatElementText);
 
-        chatCTA.innerHTML = "";
-        chatCTA.appendChild(sWOChatElement);
-        chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+          chatCTA.innerHTML = "";
+          chatCTA.appendChild(sWOChatElement);
+          chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
 
-        <% if translation?('contact_panels.chat.smallprint') %>
-        chatDescription.innerHTML += '&nbsp;*';
+          <% if translation?('contact_panels.chat.smallprint') %>
+          chatDescription.innerHTML += '&nbsp;*';
+          <% end %>
+
+          chatContent.className = "contact-panel__dynamic-content is-loaded";
+
+        } else {
+
+          var sWOChatElement = document.createElement('a');
+          var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
+          sWOChatElement.className = "contact-panel__button button t-chat-button";
+          sWOChatElement.appendChild(sWOChatElementText);
+
+          chatCTA.innerHTML = "";
+          chatCTA.appendChild(sWOChatElement);
+          chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
+          chatContent.className = "contact-panel__dynamic-content is-loaded";
+
+          <% if translation?('contact_panels.chat.smallprint') %>
+          chatDescription.innerHTML += '&nbsp;*';
+          <% end %>
+
+          sWOChatElement.onclick = function() {
+            window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+            return false;
+          };
+
+          sWOChatElement.href = sWOChatstart;
+          sWOChatElement.target = "_blank";
+
+        }
+
         <% end %>
 
-        chatContent.className = "contact-panel__dynamic-content is-loaded";
+      };
 
-      } else {
+      if (typeof sWOTrackPage == 'function') {
+        sWOTrackPage();
 
-        var sWOChatElement = document.createElement('a');
-        var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
-        sWOChatElement.className = "contact-panel__button button t-chat-button";
-        sWOChatElement.appendChild(sWOChatElementText);
-
-        chatCTA.innerHTML = "";
-        chatCTA.appendChild(sWOChatElement);
-        chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
-        chatContent.className = "contact-panel__dynamic-content is-loaded";
-
-        <% if translation?('contact_panels.chat.smallprint') %>
-        chatDescription.innerHTML += '&nbsp;*';
-        <% end %>
-
-        sWOChatElement.onclick = function() {
-          window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
-          return false;
-        };
-
-        sWOChatElement.href = sWOChatstart;
-        sWOChatElement.target = "_blank";
-
+        <%# Track page enagagement (a visit lasting more than 30 seconds) %>
+        setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
       }
 
-      <% end %>
-
-    };
-
-    if (typeof sWOTrackPage == 'function') {
-      sWOTrackPage();
-
-      <%# Track page enagagement (a visit lasting more than 30 seconds) %>
-      setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
-    }
-
-  </script>
+    </script>
+  <% end %>
 <% end %>

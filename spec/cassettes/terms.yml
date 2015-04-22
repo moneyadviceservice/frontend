@@ -2,99 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/static/terms-and-conditions.json
+    uri: http://localhost:3000/en/corporate/terms-and-conditions.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 500
-      message: Internal Server Error
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 26 Sep 2014 10:06:13 GMT
-      Content-Type:
-      - text/plain
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 500 Internal Server Error
+      - Mas-Responsive/1.0 (phlee.local; plee; 7724) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 2a80cc57-5e57-4cf1-b56f-88e880cd966c
-      X-Runtime:
-      - '0.115998'
-    body:
-      encoding: UTF-8
-      string: |-
-        500 Internal Server Error
-        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
-    http_version: 
-  recorded_at: Fri, 26 Sep 2014 10:06:13 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/static/terms-and-conditions.json
-    body:
-      encoding: UTF-8
-      string: |-
-        500 Internal Server Error
-        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 500
-      message: Internal Server Error
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 26 Sep 2014 10:06:14 GMT
-      Content-Type:
-      - text/plain
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 500 Internal Server Error
-      X-Request-Id:
-      - 7a8d24ea-f2e6-4363-a4fd-af711beedf33
-      X-Runtime:
-      - '0.018142'
-    body:
-      encoding: UTF-8
-      string: |-
-        500 Internal Server Error
-        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
-    http_version: 
-  recorded_at: Fri, 26 Sep 2014 10:06:14 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/static/terms-and-conditions.json
-    body:
-      encoding: UTF-8
-      string: |-
-        500 Internal Server Error
-        If you are the administrator of this website, then please read this web application's log file and/or the web server's log file to find out what went wrong.
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
+      - 8cd8ae64-9346-4feb-b225-33127c4d66ac
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -102,405 +18,347 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Fri, 26 Sep 2014 10:06:14 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - <https://www.moneyadviceservice.org.uk/en/static/terms-and-conditions> rel="alternate";
-        hreflang="en-GB"; title="Terms and conditions", <https://www.moneyadviceservice.org.uk/cy/static/telerau-ac-amodau>
-        rel="alternate"; hreflang="cy-GB"; title="Telerau ac amodau"
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"cda0482f674f60bc12b83d5704944f17"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - ed5e32caded86e14e11c311dc17e2da3
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 26-Sep-2015 10:06:14 GMT; secure
-      - _session_id=ed5e32caded86e14e11c311dc17e2da3; path=/; secure; HttpOnly
-      - _web_tracking=ec69a571ca402838e7a0cdc500ebe3ad; path=/; expires=Sat, 26-Sep-2015
-        10:06:14 GMT; secure
-      - canary=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
-      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
       X-Request-Id:
-      - 718737ba729fc6a3d54fc93ba589c2e5
+      - 8cd8ae64-9346-4feb-b225-33127c4d66ac
       X-Runtime:
-      - '0.031177'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"terms-and-conditions","title":"Terms and conditions","description":"General
-        The following terms and conditions apply to all sections and pages under the
-        moneyadviceservice.org.uk website and, where relevant, to other s ...","body":"<h2>General
-        </h2><p>The following terms and conditions apply to all sections and pages
-        under the <a title=\"moneyadviceservice.org.uk\" href=\"http://www.moneyadviceservice.org.uk\">moneyadviceservice.org.uk</a>
-        website and, where relevant, to other services provided by us. Additional
-        terms and conditions may also apply to other services provided by us and these
-        are set out below and/or will be explained or made available to you if you
-        use these services. </p><p>Please read these terms and conditions carefully.
-        They govern our relationship with you in relation to this website. By using
-        or accessing any part of this website you will be deemed to have accepted
-        these terms in full. If you do not accept these terms and conditions please
-        do not continue to use this website. </p><p>We may modify these terms and
-        conditions by posting an updated copy of them on this website from time to
-        time. You should check this website from time to time to review the current
-        terms and conditions. By continuing to use this website you agree to the amended
-        terms and conditions. </p><h2>Information about us </h2><p>We are the Money
-        Advice Service, a limited company registered in England and Wales. Our registered
-        office is at 120 Holborn, London, England EC1N 2TD and our registered number
-        is 07172704. You can contact us by e-mail at <a title=\"enquiries@moneyadviceservice.org.uk\"
-        href=\"mailto:enquiries@moneyadviceservice.org.uk\">enquiries@moneyadviceservice.org.uk</a>.
-        </p><p>The website to which these terms and condition apply and for which
-        we are responsible is <a title=\"www.moneyadviceservice.org.uk\" href=\"http://www.moneyadviceservice.org.uk\">www.moneyadviceservice.org.uk</a>
-        and all related micro-sites. This website has not been approved by the FCA
-        or by any financial regulatory authority of any other state or jurisdiction.
-        </p><h2>Your use of this website and our intellectual property rights </h2><p>All
-        tools and information available on this website are provided as a free resource
-        and may not be used for commercial purposes of any kind without our prior
-        written consent. For the avoidance of doubt, the use of this website by advisers
-        seeking information to assist clients is not considered to be commercial or
-        quasi commercial use. Written requests to use the information available on
-        this website for commercial purposes may be submitted via email to <a title=\"enquiries@moneyadviceservice.org.uk\"
-        href=\"mailto:enquiries@moneyadviceservice.org.uk\">enquiries@moneyadviceservice.org.uk</a>
-        or by letter to \u2018Customer enquiries\u2019 at the Money Advice Service
-        registered address above. </p><p>We retain the right, without any obligation,
-        to modify, update, withdraw or deny access to this website at any time and
-        without notice. If the need arises, we may suspend access to this website
-        or close it down indefinitely. </p><p>Unless otherwise stated we own the copyright
-        and any other intellectual property rights in all material on this website
-        and in our publications (or are licensed to use the same). Materials include,
-        but are not limited to, the design, layout, look, appearance, graphics and
-        documents on this website, as well as other content such as articles and other
-        text. </p><p>All downloadable information materials on this site are licensed
-        for non-commercial use under the\u00a0<a title=\"Creative Commons Attribution-NonCommercial-No
-        Derivs 2.0 UK: England &amp; Wales License\" target=\"_blank\" data-link-type=\"external\"
-        href=\"http://creativecommons.org/licenses/by-nc-nd/2.0/uk/\">Creative Commons
-        Attribution-NonCommercial-No Derivs 2.0 UK: England &amp; Wales License</a>.
-        Under the terms of this licence you must not alter, transform, or build upon
-        these materials, use these materials for commercial use and you must identify
-        the Money Advice Service as the author of these materials. </p><p>In addition,
-        your use of the reports entitled <em>\"Financial Capability\"</em> of the
-        UK'' made available on this website on 2 August 2013, and <em>\u201cIndebted
-        Lives: The Complexities of Life in Debt\u201c</em> made available on this
-        website on 27 November 2013\u00a0(the \u201cReports\u201d) are subject to
-        the following additional provisions: </p><p>1.\u00a0\u00a0\u00a0\u00a0You
-        shall not use and/or display extracts from the Reports in a context from which
-        it may be reasonably inferred (in the opinion of the Money Advice Service)
-        that: </p><p>a.\u00a0\u00a0\u00a0\u00a0the Money Advice Service is promoting
-        or recommending your argument, opinion, or point of view; </p><p>b.\u00a0\u00a0\u00a0\u00a0your
-        opinions or the views that you promote are the same or similar to those of
-        the Money Advice Service; </p><p>c.\u00a0\u00a0\u00a0\u00a0the Money Advice
-        Service is endorsing or recommending you or your goods or services; or </p><p>d.\u00a0\u00a0\u00a0\u00a0the
-        Money Advice Service is affiliated in any way with you. </p><p>2.\u00a0\u00a0\u00a0\u00a0You
-        shall not make any addition to, deletion from, alteration or adaption of the
-        Reports (by selectively using extracts of the Reports or otherwise) that would
-        distort the Reports (or give a reader of your work a distorted impression
-        of the totality of the Reports) or otherwise affect the reputation of the
-        Money Advice Service; </p><p>3.\u00a0\u00a0\u00a0\u00a0You shall always attribute
-        any extracts of the Reports you use in your work to the Money Advice Service.
-        </p><p>4.\u00a0\u00a0\u00a0\u00a0You shall not use extracts of the Reports
-        in a work, or in part of a group of works which: </p><p>a.\u00a0\u00a0\u00a0\u00a0promotes
-        any form of illegal activity; </p><p>b.\u00a0\u00a0\u00a0\u00a0could be reasonably
-        considered by the Money Advice Service as defamatory; or </p><p>In the event
-        of any inconsistency between these additional terms and the rest of these
-        terms or the Creative Commons Attribution-NonCommercial-No Derivs 2.0 UK:
-        England &amp; Wales License, these additional terms will prevail in relation
-        to use of the Reports. </p><h2>Our liability to you </h2><p>This website,
-        our publications, telephone, face-to-face and web-chat services are here to
-        help you manage your money better and make informed choices. </p><p>Whilst
-        we try to ensure that the information on this website, in associated publications
-        and the advice given by our advisers via the Money Advice Line, face-to-face
-        and web-chat sessions is current and correct no undertaking, representation,
-        warranty or other assurance, express or implied, is made or given by or on
-        behalf of the Money Advice Service or any of our partners, employees, agents
-        or advisers or any other person as to the reliability, accuracy or completeness
-        of the information, opinions, advertising, data or other materials contained
-        on this website or the advice given by our advisers and no responsibility
-        or liability is accepted by any of them for any such information, opinions,
-        advertising or data. </p><p>We are not liable for any damages (including,
-        for example, damages for loss of business or loss of profits) arising in contract,
-        tort or otherwise from the use of or inability to use: the Money Advice Service
-        website, associated publications, the advice given by our advisers via the
-        Money Advice Line, face-to-face and/or web-chat sessions or any material contained
-        in them, or from any action or decision taken as a result of using this website,
-        associated publications, the Money Advice Line, face-to-face or web-chat sessions.
-        These terms and conditions do not exclude or limit our liability (if any)
-        to you for: </p><ul><li>personal injury or death resulting from our negligence</li><li>fraud
-        and fraudulent misrepresentation, or</li><li>any matter for which it would
-        be illegal for us to exclude or to attempt to exclude our liability.</li></ul><h2>Availability
-        of this website </h2><p>Whilst we try to ensure that this website is available
-        24 hours a day we are not liable if, for any reason, the site is unavailable
-        for any period of time. </p><p>We make no warranty that this website is free
-        from defects, viruses or anything else which may be harmful or destructive
-        or that any defects and viruses that do arise will be corrected. We do not
-        guarantee that this website will be compatible with all or any hardware and
-        software that you may use. </p><p>We do not control other websites linked
-        to or from this website and we are not responsible for the contents of them,
-        or any changes or updates to such websites. We are not responsible for webcasting
-        or any other form of transmission received from any other websites. </p><h2>Information
-        on this website </h2><p><strong>The Money Advice Service is not regulated
-        by the Financial Conduct Authority and the Money Advice Service does not provide
-        a regulated service. </strong></p><p><strong>The information and tools that
-        the Money Advice Service provides are generic and should be of general assistance
-        to you in managing your finances. However, the money advice service cannot
-        recommend specific financial products and always recommends that you seek
-        further information from an independent financial adviser, and/or further
-        information from the providers of specific financial products. </strong></p><p>If
-        you are using the financial health check or other resources on the website,
-        these are designed to give you information and advice to help you identify
-        your financial needs and manage your money better. In particular, the financial
-        health check provides a personal action plan which is based on the information
-        that you give us about your current financial circumstances. Please note that
-        the tools on the Money Advice Service website are not and can never be a substitute
-        for you thinking about your own circumstances and priorities. </p><p><strong>You
-        should not buy, sell or change the terms of a product purely on the basis
-        of any resources on the website. If you need regulated financial advice, consult
-        a professional financial adviser. </strong></p><p>Whilst we try to ensure
-        the information contained on the website is accurate and up to date, we cannot
-        be responsible for any inaccuracies in the information. We are under no responsibility
-        to provide you with access to any additional information or to update this
-        website, even if inaccuracies become apparent. </p><p>No person, especially
-        those who do not have professional experience in matters relating to investments,
-        may rely on the contents of this website. Retail investors should not enter
-        this website, rely on or act upon its contents. No responsibility is accepted
-        by us or any of our partners for any action taken on the basis of the content
-        of this website (to the extent permitted by applicable laws/regulatory rules).
-        Our liability to you as explained above remains unaffected by this. </p><h2>Contracting
-        online </h2><p>Nothing on this website is intended to be nor should be construed
-        as an offer to enter into a contractual relationship with you or anyone else,
-        except for these terms and conditions which govern the relationship between
-        us in relation to your use of the website. </p><p>If you make a contract with
-        a third party who is named or referred to on this website, it is your responsibility
-        to ensure that the terms of that contract are acceptable to you and to take
-        legal advice if necessary. </p><p>Special additional terms and conditions
-        applying to the Money Advice Line, face-to-face and web-chat sessions. </p><p>We
-        may record calls made to the Money Advice Line for quality control, evaluation
-        and training purposes. Any information that you provide will be treated in
-        accordance with the Data Protection Act 1998 \u2013 please see the section
-        \u2018Personal Information\u2019 below. </p><h2 id=\"prohibitions\">Prohibitions
-        on your use of this website </h2><p>You may not use this website for any purpose
-        that is unlawful or prohibited by these terms and conditions. In particular,
-        but not exclusively you are prohibited from posting or transmitting to or
-        from this website any material: </p><ul><li>that is threatening, defamatory,
-        obscene, indecent, seditious, offensive, pornographic, abusive, liable to
-        incite racial hatred, discriminatory, menacing, scandalous, inflammatory,
-        blasphemous, in breach of confidence, in breach of privacy or which may cause
-        annoyance or inconvenience</li><li>for which you have not obtained all necessary
-        licences and/or approvals</li><li>which constitutes or encourages conduct
-        that would be considered a criminal offence, give rise to civil liability,
-        or otherwise be contrary to the law of or infringe the intellectual property
-        rights of any third party, in any country in the world, or</li><li>which is
-        technically harmful (including, without limitation, computer viruses, logic
-        bombs, Trojan horses, worms, harmful components, corrupted data or other malicious
-        software or harmful data).</li></ul><br/><p>We shall fully cooperate with
-        any law enforcement authorities or court order requesting or directing us
-        to disclose the identity or locate anyone posting any material in breach of
-        this section. </p><h2>Other applicable terms </h2><p>Any contractual and non-contractual
-        obligations and other matters arising from or connected with these terms and
-        conditions shall be governed by English law and these terms and conditions
-        shall be construed in accordance with English law. </p><p>The courts of England
-        and Wales shall have exclusive jurisdiction to settle any dispute which may
-        arise out of or in connection with these terms and conditions. </p><p>Any
-        provision of these website terms and conditions which is, or may be, void
-        or unenforceable shall, to the extent of such invalidity or unenforceability,
-        be deemed severable and shall not affect any other provision of these website
-        terms and conditions. </p>"}'
-    http_version: 
-  recorded_at: Fri, 26 Sep 2014 10:06:14 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      - '0.030849'
       Server:
-      - nginx
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 26 Sep 2014 10:06:14 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      - Wed, 22 Apr 2015 14:41:55 GMT
+      Content-Length:
+      - '14027'
       Connection:
-      - close
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 36dd3c21c9a73d2903596755a7acc906
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Sat, 26-Sep-2015 10:06:14 GMT; secure
-      - _session_id=36dd3c21c9a73d2903596755a7acc906; path=/; secure; HttpOnly
-      - _web_tracking=d196e00208dab04ed0cc05b99efb574b; path=/; expires=Sat, 26-Sep-2015
-        10:06:14 GMT; secure
-      - roptin=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
-      - visited=1; path=/; expires=Wed, 05 Aug 2015 14:27:04 GMT
-      X-Request-Id:
-      - a1e4e1046b245d842b5509a5f775c991
-      X-Runtime:
-      - '0.019232'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '[{"id":"debt-and-borrowing","type":"category","title":"Debt and borrowing","description":"Taking
-        control of debt, getting free debt advice, and how to borrow affordably","contents":[{"id":"before-you-borrow","type":"category","title":"Before
-        you borrow","description":"Find out if you need to borrow money and whether
-        you can afford it. Learn how to work out the true cost of borrowing.","contents":[]},{"id":"taking-control-of-debt","type":"category","title":"Taking
-        control of debt","description":"Where to get free debt advice, how to speak
-        to the people you owe money to, and tips to help you pay back your debts in
-        the right order.","contents":[]},{"id":"mortgage-and-rent-problems","type":"category","title":"Mortgage
-        and rent problems","description":"Help if you''re struggling with your mortgage
-        or rent payments and information on government support if you can''t pay your
-        mortgage.","contents":[]},{"id":"help-with-loans","type":"category","title":"Help
-        with loans","description":"Learn about how personal loans work, better alternatives
-        to payday loans, and help when borrowing from a credit union.","contents":[]},{"id":"credit-cards-and-credit-ratings","type":"category","title":"Credit
-        cards and credit ratings","description":"Find out how to manage a credit card,
-        how to check your credit report, and tips on how you can improve your credit
-        rating.","contents":[]}]},{"id":"budgeting-and-managing-money","type":"category","title":"Budgeting
-        and managing money","description":"Advice on running a bank account, planning
-        your finances, and cutting costs","contents":[{"id":"running-a-bank-account","type":"category","title":"Running
-        a bank account","description":"Find out how to manage a bank account, from
-        paying money in to keeping track of interest and charges.","contents":[]},{"id":"managing-money","type":"category","title":"Managing
-        money","description":"See how you can make your money go further and use our
-        Budget planner to discover how much cash you have coming in and what you''re
-        spending it on.","contents":[]},{"id":"student-and-graduate-money","type":"category","title":"Student
-        and graduate money","description":"Help with preparing your child for student
-        life, including tips on budgeting at college or university.","contents":[]},{"id":"cutting-costs","type":"category","title":"Cutting
-        costs","description":"Help with trimming your energy, home phone and broadband
-        bills, and tips on getting holidays for less.","contents":[]}]},{"id":"saving-and-investing","type":"category","title":"Saving
-        and investing","description":"How to save money, types of savings account,
-        and getting started with investing","contents":[{"id":"how-to-save-money","type":"category","title":"How
-        to save money","description":"Work out how much you can afford to save and
-        find out how to set and reach your savings goal.","contents":[]},{"id":"savings-types","type":"category","title":"Types
-        of savings","description":"Learn about savings accounts, cash ISAs, and how
-        to save for children.","contents":[]},{"id":"how-to-invest-money","type":"category","title":"How
-        to invest money","description":"Learn about investing basics, how to make
-        an investment plan, and understanding your attitude to risk.","contents":[]},{"id":"investment-types","type":"category","title":"Types
-        of investment","description":"Information about stocks and shares, investment
-        bonds, tracker funds, with-profits and endowment policies.","contents":[]}]},{"id":"work-pensions-and-retirement","type":"category","title":"Work,
-        pensions and retirement","description":"Includes retirement advice, types
-        of pension and retirement income, and information on automatic enrolment","contents":[{"id":"jobs-and-tax","type":"category","title":"Jobs
-        and tax","description":"Help with understanding your payslip and what to look
-        for in your employment contract.","contents":[]},{"id":"redundancy","type":"category","title":"Redundancy","description":"Help
-        with making a redundancy plan, benefits you can claim, and your legal rights.","contents":[]},{"id":"pension-basics","type":"category","title":"Pension
-        basics","description":"Find out why and when to save into a pension and how
-        to work out what your pension pot might be.","contents":[]},{"id":"types-of-pensions","type":"category","title":"Types
-        of pension","description":"From defined contribution and benefit schemes,
-        to personal pensions and pensions for the self-employed.","contents":[]},{"id":"automatic-enrolment","type":"category","title":"Automatic
-        enrolment","description":"Learn about automatic enrolment and how it affects
-        you, and use our workplace pension advice tool and calculator.","contents":[]},{"id":"retirement-income-basics","type":"category","title":"Retirement
-        income basics","description":"Setting a clear retirement income goal and managing
-        your money once you\u2019ve stopped working.","contents":[]},{"id":"types-of-retirement-income","type":"category","title":"Types
-        of retirement income","description":"Learn about the different types of annuity
-        and other types of pension and retirement income.","contents":[]}]},{"id":"benefits","type":"category","title":"Benefits","description":"Find
-        out what benefits you''re entitled to and learn about Universal Credit","contents":[{"id":"help-with-your-benefits","type":"category","title":"Help
-        with your benefits","description":"Help with getting the right entitlements,
-        where to get benefits support and advice and what to do if your payments are
-        cut.","contents":[]},{"id":"child-benefit","type":"category","title":"Child
-        Benefit","description":"Find out how Child Benefit works and how much you
-        might be entitled to claim.","contents":[]},{"id":"universal-credit","type":"category","title":"Universal
-        Credit","description":"Get ready for the new single monthly payment which
-        has started to replace six existing benefits.","contents":[]},{"id":"benefits-at-work","type":"category","title":"Benefits
-        at work","description":"Learn about employee benefits, salary sacrifice schemes
-        and benefits and tax credits you can claim after job loss.","contents":[]}]},{"id":"births-deaths-and-family","type":"category","title":"Births,
-        deaths and family","description":"Having a baby, making a will, and dealing
-        with divorce and separation","contents":[{"id":"divorce-and-separation","type":"category","title":"Divorce
-        and separation","description":"Find out how to manage your money and divide
-        up what you own when going through divorce or separation.","contents":[]},{"id":"maternity-and-paternity-rights","type":"category","title":"Maternity
-        and paternity rights","description":"Find out how to claim maternity pay and
-        leave from your employer and your rights when returning to work.","contents":[]},{"id":"having-a-baby","type":"category","title":"Having
-        a baby","description":"Help with managing your money before, during and after
-        the birth of your baby.","contents":[]},{"id":"when-someone-dies","type":"category","title":"When
-        someone dies","description":"Learn how to deal with money after a death, from
-        paying for the funeral to looking after the paperwork and household bills.","contents":[]},{"id":"making-a-will","type":"category","title":"Making
-        a will","description":"Learn how to make and change a will and find out about
-        the different options available.","contents":[]}]},{"id":"insurance","type":"category","title":"Insurance","description":"Help
-        and advice on protecting your family and getting the right home and car insurance","contents":[{"id":"car-insurance","type":"category","title":"Car
-        insurance","description":"Choosing the right level of cover, getting the best
-        deal, and tips for young drivers.","contents":[]},{"id":"life-and-protection-insurance","type":"category","title":"Life
-        and protection insurance","description":"Learn about the differences between
-        life, critical illness and income protection insurance.","contents":[]},{"id":"home-insurance","type":"category","title":"Home
-        insurance","description":"Find out if you need buildings and contents insurance
-        and get help with choosing the right policy and cover.","contents":[]},{"id":"pet-insurance","type":"category","title":"Pet
-        insurance","description":"Help with choosing the right pet insurance policy
-        and cover.","contents":[]},{"id":"help-with-insurance","type":"category","title":"Help
-        with insurance","description":"Understand what insurance is and how it works.
-        Find out how to buy insurance and how to go about making a claim.","contents":[]},{"id":"travel-insurance","type":"category","title":"Travel
-        insurance","description":"Learn how to choose the right level of cover, get
-        the best deal, and how to make a travel insurance claim.","contents":[]}]},{"id":"homes-and-mortgages","type":"category","title":"Homes
-        and mortgages","description":"Everything you need to know about buying a home
-        and choosing the right mortgage","contents":[{"id":"buying-a-home","type":"category","title":"Buying
-        a home","description":"Work out your overall buying and moving costs, first
-        time buyer advice, and tips and tools to help you work out what you can afford.","contents":[]},{"id":"renting-and-letting","type":"category","title":"Renting
-        and letting","description":"Advice to help you work out how much rent you
-        can afford, and how to budget and share costs when renting.","contents":[]},{"id":"types-of-mortgage","type":"category","title":"Types
-        of mortgage","description":"Learn about different kinds of mortgages, from
-        repayment and interest-only to shared equity and buy-to-let.","contents":[]},{"id":"help-with-mortgages","type":"category","title":"Help
-        with mortgages","description":"Get started with our beginner''s guide to mortgages,
-        getting the right deal, and tips if you''re struggling to pay.","contents":[]}]},{"id":"care-and-disability","type":"category","title":"Care
-        and disability","description":"Choosing the right care services, support for
-        carers and paying for the cost of care","contents":[{"id":"support-for-carers","type":"category","title":"Support
-        for carers","description":"Find out about support available to carers and
-        how to manage the money of someone you''re caring for.","contents":[]},{"id":"illness-and-disability","type":"category","title":"Illness
-        and disability","description":"Advice about Personal Independence Payment,
-        disability grants, aids and equipment.","contents":[]},{"id":"care-advice-and-help","type":"category","title":"Care
-        advice and help","description":"Help with choosing the right care services,
-        setting up a power of attorney, and dealing with problems.","contents":[]},{"id":"paying-for-care","type":"category","title":"Paying
-        for care","description":"Learn about NHS and self-funding options, managing
-        direct payments, and other ways to pay for your care.","contents":[]}]},{"id":"cars-and-travel","type":"category","title":"Cars
-        and travel","description":"Help with buying, running and selling a car, buying
-        foreign currency, and sending money abroad","contents":[{"id":"travel-money-and-sending-money-abroad","type":"category","title":"Travel
-        money and sending money abroad","description":"Buying foreign currency, cheap
-        cards to use abroad, and choosing the best way to send money overseas.","contents":[]},{"id":"running-a-car","type":"category","title":"Running
-        a car","description":"Your rights if something\u2019s wrong with your new
-        car, cutting car finance costs, top MOT tips, advice for younger drivers,
-        plus could you manage without a car?","contents":[]},{"id":"how-to-buy-a-car","type":"category","title":"How
-        to buy a car","description":"What to consider before buying a new or used
-        car, including your budget, car finance options, and how to negotiate the
-        best deal.","contents":[]},{"id":"selling-your-car","type":"category","title":"How
-        to sell a car","description":"Find out about the different ways to sell a
-        car, how to negotiate a good price, and your options for disposing of an old
-        car.","contents":[]}]}]'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlRlcm1zIGFuZCBjb25kaXRpb25zIiwic2x1ZyI6InRlcm1z
+        LWFuZC1jb25kaXRpb25zIiwiZnVsbF9wYXRoIjoiL3Rlcm1zLWFuZC1jb25k
+        aXRpb25zIiwibWV0YV9kZXNjcmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIi
+        LCJjYXRlZ29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoiY29y
+        cG9yYXRlIiwicmVsYXRlZF9jb250ZW50Ijp7ImxhdGVzdF9ibG9nX3Bvc3Rf
+        bGlua3MiOltdLCJwb3B1bGFyX2xpbmtzIjpbeyJ0aXRsZSI6IkVzdGltYXRl
+        IHlvdXIgb3ZlcmFsbCBjb3N0IG9mIGJ1eWluZyBhIGhvdXNlIGFuZCBtb3Zp
+        bmciLCJwYXRoIjoiL2VuL2FydGljbGVzL2VzdGltYXRlLXlvdXItb3ZlcmFs
+        bC1idXlpbmctYW5kLW1vdmluZy1jb3N0cyJ9LHsidGl0bGUiOiJCZW5lZml0
+        cyB5b3UgYXJlIGVudGl0bGVkIHRvIHdoZW4gaGF2aW5nIGEgYmFieSIsInBh
+        dGgiOiIvZW4vYXJ0aWNsZXMvYmVuZWZpdHMtYW5kLWVudGl0bGVtZW50cy10
+        by1jbGFpbS13aGVuLXlvdS1oYXZlLWEtYmFieSJ9LHsidGl0bGUiOiJGaXJz
+        dC10aW1lIGhvbWUgYnV5ZXIgZ3VpZGUiLCJwYXRoIjoiL2VuL2FydGljbGVz
+        L2ZpcnN0LXRpbWUtYnV5ZXItbW9uZXktdGlwcyJ9XSwicmVsYXRlZF9saW5r
+        cyI6W10sInByZXZpb3VzX2xpbmsiOnt9LCJuZXh0X2xpbmsiOnt9fSwiYmxv
+        Y2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiIjIyBH
+        ZW5lcmFsXHJcblxyXG5UaGUgZm9sbG93aW5nIHRlcm1zIGFuZCBjb25kaXRp
+        b25zIGFwcGx5IHRvIGFsbCBzZWN0aW9ucyBhbmQgcGFnZXMgdW5kZXIgdGhl
+        IFttb25leWFkdmljZXNlcnZpY2Uub3JnLnVrXShodHRwOi8vd3d3Lm1vbmV5
+        YWR2aWNlc2VydmljZS5vcmcudWspd2Vic2l0ZSBhbmQsIHdoZXJlIHJlbGV2
+        YW50LCB0byBvdGhlciBzZXJ2aWNlcyBwcm92aWRlZCBieSB1cy4gQWRkaXRp
+        b25hbCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBtYXkgYWxzbyBhcHBseSB0byBv
+        dGhlciBzZXJ2aWNlcyBwcm92aWRlZCBieSB1cyBhbmQgdGhlc2UgYXJlIHNl
+        dCBvdXQgYmVsb3cgYW5kL29yIHdpbGwgYmUgZXhwbGFpbmVkIG9yIG1hZGUg
+        YXZhaWxhYmxlIHRvIHlvdSBpZiB5b3UgdXNlIHRoZXNlIHNlcnZpY2VzLlxy
+        XG5cclxuUGxlYXNlIHJlYWQgdGhlc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMg
+        Y2FyZWZ1bGx5LiBUaGV5IGdvdmVybiBvdXIgcmVsYXRpb25zaGlwIHdpdGgg
+        eW91IGluIHJlbGF0aW9uIHRvIHRoaXMgd2Vic2l0ZS4gQnkgdXNpbmcgb3Ig
+        YWNjZXNzaW5nIGFueSBwYXJ0IG9mIHRoaXMgd2Vic2l0ZSB5b3Ugd2lsbCBi
+        ZSBkZWVtZWQgdG8gaGF2ZSBhY2NlcHRlZCB0aGVzZSB0ZXJtcyBpbiBmdWxs
+        LiBJZiB5b3UgZG8gbm90IGFjY2VwdCB0aGVzZSB0ZXJtcyBhbmQgY29uZGl0
+        aW9ucyBwbGVhc2UgZG8gbm90IGNvbnRpbnVlIHRvIHVzZSB0aGlzIHdlYnNp
+        dGUuXHJcblxyXG5XZSBtYXkgbW9kaWZ5IHRoZXNlIHRlcm1zIGFuZCBjb25k
+        aXRpb25zIGJ5IHBvc3RpbmcgYW4gdXBkYXRlZCBjb3B5IG9mIHRoZW0gb24g
+        dGhpcyB3ZWJzaXRlIGZyb20gdGltZSB0byB0aW1lLiBZb3Ugc2hvdWxkIGNo
+        ZWNrIHRoaXMgd2Vic2l0ZSBmcm9tIHRpbWUgdG8gdGltZSB0byByZXZpZXcg
+        dGhlIGN1cnJlbnQgdGVybXMgYW5kIGNvbmRpdGlvbnMuIEJ5IGNvbnRpbnVp
+        bmcgdG8gdXNlIHRoaXMgd2Vic2l0ZSB5b3UgYWdyZWUgdG8gdGhlIGFtZW5k
+        ZWQgdGVybXMgYW5kIGNvbmRpdGlvbnMuXHJcblxyXG4jIyBJbmZvcm1hdGlv
+        biBhYm91dCB1c1xyXG5cclxuV2UgYXJlIHRoZSBNb25leSBBZHZpY2UgU2Vy
+        dmljZSwgYSBsaW1pdGVkIGNvbXBhbnkgcmVnaXN0ZXJlZCBpbiBFbmdsYW5k
+        IGFuZCBXYWxlcy4gT3VyIHJlZ2lzdGVyZWQgb2ZmaWNlIGlzIGF0IDEyMCBI
+        b2xib3JuLCBMb25kb24sIEVuZ2xhbmQgRUMxTiAyVEQgYW5kIG91ciByZWdp
+        c3RlcmVkIG51bWJlciBpcyAwNzE3MjcwNC4gWW91IGNhbiBjb250YWN0IHVz
+        IGJ5IGUtbWFpbCBhdCBbZW5xdWlyaWVzQG1vbmV5YWR2aWNlc2VydmljZS5v
+        cmcudWtdKG1haWx0bzplbnF1aXJpZXNAbW9uZXlhZHZpY2VzZXJ2aWNlLm9y
+        Zy51aykuXHJcblxyXG5UaGUgd2Vic2l0ZSB0byB3aGljaCB0aGVzZSB0ZXJt
+        cyBhbmQgY29uZGl0aW9uIGFwcGx5IGFuZCBmb3Igd2hpY2ggd2UgYXJlIHJl
+        c3BvbnNpYmxlIGlzIFt3d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51a10o
+        aHR0cDovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrKWFuZCBhbGwg
+        cmVsYXRlZCBtaWNyby1zaXRlcy4gVGhpcyB3ZWJzaXRlIGhhcyBub3QgYmVl
+        biBhcHByb3ZlZCBieSB0aGUgRkNBIG9yIGJ5IGFueSBmaW5hbmNpYWwgcmVn
+        dWxhdG9yeSBhdXRob3JpdHkgb2YgYW55IG90aGVyIHN0YXRlIG9yIGp1cmlz
+        ZGljdGlvbi5cclxuXHJcbiMjIFlvdXIgdXNlIG9mIHRoaXMgd2Vic2l0ZSBh
+        bmQgb3VyIGludGVsbGVjdHVhbCBwcm9wZXJ0eSByaWdodHNcclxuXHJcbkFs
+        bCB0b29scyBhbmQgaW5mb3JtYXRpb24gYXZhaWxhYmxlIG9uIHRoaXMgd2Vi
+        c2l0ZSBhcmUgcHJvdmlkZWQgYXMgYSBmcmVlIHJlc291cmNlIGFuZCBtYXkg
+        bm90IGJlIHVzZWQgZm9yIGNvbW1lcmNpYWwgcHVycG9zZXMgb2YgYW55IGtp
+        bmQgd2l0aG91dCBvdXIgcHJpb3Igd3JpdHRlbiBjb25zZW50LiBGb3IgdGhl
+        IGF2b2lkYW5jZSBvZiBkb3VidCwgdGhlIHVzZSBvZiB0aGlzIHdlYnNpdGUg
+        YnkgYWR2aXNlcnMgc2Vla2luZyBpbmZvcm1hdGlvbiB0byBhc3Npc3QgY2xp
+        ZW50cyBpcyBub3QgY29uc2lkZXJlZCB0byBiZSBjb21tZXJjaWFsIG9yIHF1
+        YXNpIGNvbW1lcmNpYWwgdXNlLiBXcml0dGVuIHJlcXVlc3RzIHRvIHVzZSB0
+        aGUgaW5mb3JtYXRpb24gYXZhaWxhYmxlIG9uIHRoaXMgd2Vic2l0ZSBmb3Ig
+        Y29tbWVyY2lhbCBwdXJwb3NlcyBtYXkgYmUgc3VibWl0dGVkIHZpYSBlbWFp
+        bCB0byBbZW5xdWlyaWVzQG1vbmV5YWR2aWNlc2VydmljZS5vcmcudWtdKC9l
+        bi9hcnRpY2xlcy9tYWlsdG86ZW5xdWlyaWVzQG1vbmV5YWR2aWNlc2Vydmlj
+        ZS5vcmcudWspb3IgYnkgbGV0dGVyIHRvIOKAmEN1c3RvbWVyIGVucXVpcmll
+        c+KAmSBhdCB0aGUgTW9uZXkgQWR2aWNlIFNlcnZpY2UgcmVnaXN0ZXJlZCBh
+        ZGRyZXNzIGFib3ZlLlxyXG5cclxuV2UgcmV0YWluIHRoZSByaWdodCwgd2l0
+        aG91dCBhbnkgb2JsaWdhdGlvbiwgdG8gbW9kaWZ5LCB1cGRhdGUsIHdpdGhk
+        cmF3IG9yIGRlbnkgYWNjZXNzIHRvIHRoaXMgd2Vic2l0ZSBhdCBhbnkgdGlt
+        ZSBhbmQgd2l0aG91dCBub3RpY2UuIElmIHRoZSBuZWVkIGFyaXNlcywgd2Ug
+        bWF5IHN1c3BlbmQgYWNjZXNzIHRvIHRoaXMgd2Vic2l0ZSBvciBjbG9zZSBp
+        dCBkb3duIGluZGVmaW5pdGVseS5cclxuXHJcblVubGVzcyBvdGhlcndpc2Ug
+        c3RhdGVkIHdlIG93biB0aGUgY29weXJpZ2h0IGFuZCBhbnkgb3RoZXIgaW50
+        ZWxsZWN0dWFsIHByb3BlcnR5IHJpZ2h0cyBpbiBhbGwgbWF0ZXJpYWwgb24g
+        dGhpcyB3ZWJzaXRlIGFuZCBpbiBvdXIgcHVibGljYXRpb25zIChvciBhcmUg
+        bGljZW5zZWQgdG8gdXNlIHRoZSBzYW1lKS4gTWF0ZXJpYWxzIGluY2x1ZGUs
+        IGJ1dCBhcmUgbm90IGxpbWl0ZWQgdG8sIHRoZSBkZXNpZ24sIGxheW91dCwg
+        bG9vaywgYXBwZWFyYW5jZSwgZ3JhcGhpY3MgYW5kIGRvY3VtZW50cyBvbiB0
+        aGlzIHdlYnNpdGUsIGFzIHdlbGwgYXMgb3RoZXIgY29udGVudCBzdWNoIGFz
+        IGFydGljbGVzIGFuZCBvdGhlciB0ZXh0LlxyXG5cclxuQWxsIGRvd25sb2Fk
+        YWJsZSBpbmZvcm1hdGlvbiBtYXRlcmlhbHMgb24gdGhpcyBzaXRlIGFyZSBs
+        aWNlbnNlZCBmb3Igbm9uLWNvbW1lcmNpYWwgdXNlIHVuZGVyIHRoZSBbQ3Jl
+        YXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbi1Ob25Db21tZXJjaWFsLU5vIERl
+        cml2cyAyLjAgVUs6IEVuZ2xhbmQgXHUwMDI2YW1wOyBXYWxlcyBMaWNlbnNl
+        XShodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1uYy1u
+        ZC8yLjAvdWsvKXs6dGFyZ2V0PSdfYmxhbmsnfS4gVW5kZXIgdGhlIHRlcm1z
+        IG9mIHRoaXMgbGljZW5jZSB5b3UgbXVzdCBub3QgYWx0ZXIsIHRyYW5zZm9y
+        bSwgb3IgYnVpbGQgdXBvbiB0aGVzZSBtYXRlcmlhbHMsIHVzZSB0aGVzZSBt
+        YXRlcmlhbHMgZm9yIGNvbW1lcmNpYWwgdXNlIGFuZCB5b3UgbXVzdCBpZGVu
+        dGlmeSB0aGUgTW9uZXkgQWR2aWNlIFNlcnZpY2UgYXMgdGhlIGF1dGhvciBv
+        ZiB0aGVzZSBtYXRlcmlhbHMuXHJcblxyXG5JbiBhZGRpdGlvbiwgeW91ciB1
+        c2Ugb2YgdGhlIHJlcG9ydHMgZW50aXRsZWQgX1wiRmluYW5jaWFsIENhcGFi
+        aWxpdHlcIl8gb2YgdGhlIFVLJyBtYWRlIGF2YWlsYWJsZSBvbiB0aGlzIHdl
+        YnNpdGUgb24gMiBBdWd1c3QgMjAxMywgYW5kIF/igJxJbmRlYnRlZCBMaXZl
+        czogVGhlIENvbXBsZXhpdGllcyBvZiBMaWZlIGluIERlYnTigJxfIG1hZGUg
+        YXZhaWxhYmxlIG9uIHRoaXMgd2Vic2l0ZSBvbiAyNyBOb3ZlbWJlciAyMDEz
+        ICh0aGUg4oCcUmVwb3J0c+KAnSkgYXJlIHN1YmplY3QgdG8gdGhlIGZvbGxv
+        d2luZyBhZGRpdGlvbmFsIHByb3Zpc2lvbnM6XHJcblxyXG4xLiAgWW91IHNo
+        YWxsIG5vdCB1c2UgYW5kL29yIGRpc3BsYXkgZXh0cmFjdHMgZnJvbSB0aGUg
+        UmVwb3J0cyBpbiBhIGNvbnRleHQgZnJvbSB3aGljaCBpdCBtYXkgYmUgcmVh
+        c29uYWJseSBpbmZlcnJlZCAoaW4gdGhlIG9waW5pb24gb2YgdGhlIE1vbmV5
+        IEFkdmljZSBTZXJ2aWNlKSB0aGF0OlxyXG5cclxuYS4gdGhlIE1vbmV5IEFk
+        dmljZSBTZXJ2aWNlIGlzIHByb21vdGluZyBvciByZWNvbW1lbmRpbmcgeW91
+        ciBhcmd1bWVudCwgb3Bpbmlvbiwgb3IgcG9pbnQgb2YgdmlldztcclxuXHJc
+        bmIuIHlvdXIgb3BpbmlvbnMgb3IgdGhlIHZpZXdzIHRoYXQgeW91IHByb21v
+        dGUgYXJlIHRoZSBzYW1lIG9yIHNpbWlsYXIgdG8gdGhvc2Ugb2YgdGhlIE1v
+        bmV5IEFkdmljZSBTZXJ2aWNlO1xyXG5cclxuYy4gdGhlIE1vbmV5IEFkdmlj
+        ZSBTZXJ2aWNlIGlzIGVuZG9yc2luZyBvciByZWNvbW1lbmRpbmcgeW91IG9y
+        IHlvdXIgZ29vZHMgb3Igc2VydmljZXM7IG9yXHJcblxyXG5kLiB0aGUgTW9u
+        ZXkgQWR2aWNlIFNlcnZpY2UgaXMgYWZmaWxpYXRlZCBpbiBhbnkgd2F5IHdp
+        dGggeW91LlxyXG5cclxuMS4gIFlvdSBzaGFsbCBub3QgbWFrZSBhbnkgYWRk
+        aXRpb24gdG8sIGRlbGV0aW9uIGZyb20sIGFsdGVyYXRpb24gb3IgYWRhcHRp
+        b24gb2YgdGhlIFJlcG9ydHMgKGJ5IHNlbGVjdGl2ZWx5IHVzaW5nIGV4dHJh
+        Y3RzIG9mIHRoZSBSZXBvcnRzIG9yIG90aGVyd2lzZSkgdGhhdCB3b3VsZCBk
+        aXN0b3J0IHRoZSBSZXBvcnRzIChvciBnaXZlIGEgcmVhZGVyIG9mIHlvdXIg
+        d29yayBhIGRpc3RvcnRlZCBpbXByZXNzaW9uIG9mIHRoZSB0b3RhbGl0eSBv
+        ZiB0aGUgUmVwb3J0cykgb3Igb3RoZXJ3aXNlIGFmZmVjdCB0aGUgcmVwdXRh
+        dGlvbiBvZiB0aGUgTW9uZXkgQWR2aWNlIFNlcnZpY2U7Mi4gWW91IHNoYWxs
+        IGFsd2F5cyBhdHRyaWJ1dGUgYW55IGV4dHJhY3RzIG9mIHRoZSBSZXBvcnRz
+        IHlvdSB1c2UgaW4geW91ciB3b3JrIHRvIHRoZSBNb25leSBBZHZpY2UgU2Vy
+        dmljZS4zLiBZb3Ugc2hhbGwgbm90IHVzZSBleHRyYWN0cyBvZiB0aGUgUmVw
+        b3J0cyBpbiBhIHdvcmssIG9yIGluIHBhcnQgb2YgYSBncm91cCBvZiB3b3Jr
+        cyB3aGljaDpcclxuXHJcbmEuIHByb21vdGVzIGFueSBmb3JtIG9mIGlsbGVn
+        YWwgYWN0aXZpdHk7XHJcblxyXG5iLiBjb3VsZCBiZSByZWFzb25hYmx5IGNv
+        bnNpZGVyZWQgYnkgdGhlIE1vbmV5IEFkdmljZSBTZXJ2aWNlIGFzIGRlZmFt
+        YXRvcnk7IG9yXHJcblxyXG5JbiB0aGUgZXZlbnQgb2YgYW55IGluY29uc2lz
+        dGVuY3kgYmV0d2VlbiB0aGVzZSBhZGRpdGlvbmFsIHRlcm1zIGFuZCB0aGUg
+        cmVzdCBvZiB0aGVzZSB0ZXJtcyBvciB0aGUgQ3JlYXRpdmUgQ29tbW9ucyBB
+        dHRyaWJ1dGlvbi1Ob25Db21tZXJjaWFsLU5vIERlcml2cyAyLjAgVUs6IEVu
+        Z2xhbmQgXHUwMDI2YW1wOyBXYWxlcyBMaWNlbnNlLCB0aGVzZSBhZGRpdGlv
+        bmFsIHRlcm1zIHdpbGwgcHJldmFpbCBpbiByZWxhdGlvbiB0byB1c2Ugb2Yg
+        dGhlIFJlcG9ydHMuXHJcblxyXG4jIyBPdXIgbGlhYmlsaXR5IHRvIHlvdVxy
+        XG5cclxuVGhpcyB3ZWJzaXRlLCBvdXIgcHVibGljYXRpb25zLCB0ZWxlcGhv
+        bmUsIGZhY2UtdG8tZmFjZSBhbmQgd2ViLWNoYXQgc2VydmljZXMgYXJlIGhl
+        cmUgdG8gaGVscCB5b3UgbWFuYWdlIHlvdXIgbW9uZXkgYmV0dGVyIGFuZCBt
+        YWtlIGluZm9ybWVkIGNob2ljZXMuXHJcblxyXG5XaGlsc3Qgd2UgdHJ5IHRv
+        IGVuc3VyZSB0aGF0IHRoZSBpbmZvcm1hdGlvbiBvbiB0aGlzIHdlYnNpdGUs
+        IGluIGFzc29jaWF0ZWQgcHVibGljYXRpb25zIGFuZCB0aGUgYWR2aWNlIGdp
+        dmVuIGJ5IG91ciBhZHZpc2VycyB2aWEgdGhlIE1vbmV5IEFkdmljZSBMaW5l
+        LCBmYWNlLXRvLWZhY2UgYW5kIHdlYi1jaGF0IHNlc3Npb25zIGlzIGN1cnJl
+        bnQgYW5kIGNvcnJlY3Qgbm8gdW5kZXJ0YWtpbmcsIHJlcHJlc2VudGF0aW9u
+        LCB3YXJyYW50eSBvciBvdGhlciBhc3N1cmFuY2UsIGV4cHJlc3Mgb3IgaW1w
+        bGllZCwgaXMgbWFkZSBvciBnaXZlbiBieSBvciBvbiBiZWhhbGYgb2YgdGhl
+        IE1vbmV5IEFkdmljZSBTZXJ2aWNlIG9yIGFueSBvZiBvdXIgcGFydG5lcnMs
+        IGVtcGxveWVlcywgYWdlbnRzIG9yIGFkdmlzZXJzIG9yIGFueSBvdGhlciBw
+        ZXJzb24gYXMgdG8gdGhlIHJlbGlhYmlsaXR5LCBhY2N1cmFjeSBvciBjb21w
+        bGV0ZW5lc3Mgb2YgdGhlIGluZm9ybWF0aW9uLCBvcGluaW9ucywgYWR2ZXJ0
+        aXNpbmcsIGRhdGEgb3Igb3RoZXIgbWF0ZXJpYWxzIGNvbnRhaW5lZCBvbiB0
+        aGlzIHdlYnNpdGUgb3IgdGhlIGFkdmljZSBnaXZlbiBieSBvdXIgYWR2aXNl
+        cnMgYW5kIG5vIHJlc3BvbnNpYmlsaXR5IG9yIGxpYWJpbGl0eSBpcyBhY2Nl
+        cHRlZCBieSBhbnkgb2YgdGhlbSBmb3IgYW55IHN1Y2ggaW5mb3JtYXRpb24s
+        IG9waW5pb25zLCBhZHZlcnRpc2luZyBvciBkYXRhLlxyXG5cclxuV2UgYXJl
+        IG5vdCBsaWFibGUgZm9yIGFueSBkYW1hZ2VzIChpbmNsdWRpbmcsIGZvciBl
+        eGFtcGxlLCBkYW1hZ2VzIGZvciBsb3NzIG9mIGJ1c2luZXNzIG9yIGxvc3Mg
+        b2YgcHJvZml0cykgYXJpc2luZyBpbiBjb250cmFjdCwgdG9ydCBvciBvdGhl
+        cndpc2UgZnJvbSB0aGUgdXNlIG9mIG9yIGluYWJpbGl0eSB0byB1c2U6IHRo
+        ZSBNb25leSBBZHZpY2UgU2VydmljZSB3ZWJzaXRlLCBhc3NvY2lhdGVkIHB1
+        YmxpY2F0aW9ucywgdGhlIGFkdmljZSBnaXZlbiBieSBvdXIgYWR2aXNlcnMg
+        dmlhIHRoZSBNb25leSBBZHZpY2UgTGluZSwgZmFjZS10by1mYWNlIGFuZC9v
+        ciB3ZWItY2hhdCBzZXNzaW9ucyBvciBhbnkgbWF0ZXJpYWwgY29udGFpbmVk
+        IGluIHRoZW0sIG9yIGZyb20gYW55IGFjdGlvbiBvciBkZWNpc2lvbiB0YWtl
+        biBhcyBhIHJlc3VsdCBvZiB1c2luZyB0aGlzIHdlYnNpdGUsIGFzc29jaWF0
+        ZWQgcHVibGljYXRpb25zLCB0aGUgTW9uZXkgQWR2aWNlIExpbmUsIGZhY2Ut
+        dG8tZmFjZSBvciB3ZWItY2hhdCBzZXNzaW9ucy4gVGhlc2UgdGVybXMgYW5k
+        IGNvbmRpdGlvbnMgZG8gbm90IGV4Y2x1ZGUgb3IgbGltaXQgb3VyIGxpYWJp
+        bGl0eSAoaWYgYW55KSB0byB5b3UgZm9yOlxyXG5cclxuKiAgIHBlcnNvbmFs
+        IGluanVyeSBvciBkZWF0aCByZXN1bHRpbmcgZnJvbSBvdXIgbmVnbGlnZW5j
+        ZVxyXG4qICAgZnJhdWQgYW5kIGZyYXVkdWxlbnQgbWlzcmVwcmVzZW50YXRp
+        b24sIG9yXHJcbiogICBhbnkgbWF0dGVyIGZvciB3aGljaCBpdCB3b3VsZCBi
+        ZSBpbGxlZ2FsIGZvciB1cyB0byBleGNsdWRlIG9yIHRvIGF0dGVtcHQgdG8g
+        ZXhjbHVkZSBvdXIgbGlhYmlsaXR5LlxyXG5cclxuIyMgQXZhaWxhYmlsaXR5
+        IG9mIHRoaXMgd2Vic2l0ZVxyXG5cclxuV2hpbHN0IHdlIHRyeSB0byBlbnN1
+        cmUgdGhhdCB0aGlzIHdlYnNpdGUgaXMgYXZhaWxhYmxlIDI0IGhvdXJzIGEg
+        ZGF5IHdlIGFyZSBub3QgbGlhYmxlIGlmLCBmb3IgYW55IHJlYXNvbiwgdGhl
+        IHNpdGUgaXMgdW5hdmFpbGFibGUgZm9yIGFueSBwZXJpb2Qgb2YgdGltZS5c
+        clxuXHJcbldlIG1ha2Ugbm8gd2FycmFudHkgdGhhdCB0aGlzIHdlYnNpdGUg
+        aXMgZnJlZSBmcm9tIGRlZmVjdHMsIHZpcnVzZXMgb3IgYW55dGhpbmcgZWxz
+        ZSB3aGljaCBtYXkgYmUgaGFybWZ1bCBvciBkZXN0cnVjdGl2ZSBvciB0aGF0
+        IGFueSBkZWZlY3RzIGFuZCB2aXJ1c2VzIHRoYXQgZG8gYXJpc2Ugd2lsbCBi
+        ZSBjb3JyZWN0ZWQuIFdlIGRvIG5vdCBndWFyYW50ZWUgdGhhdCB0aGlzIHdl
+        YnNpdGUgd2lsbCBiZSBjb21wYXRpYmxlIHdpdGggYWxsIG9yIGFueSBoYXJk
+        d2FyZSBhbmQgc29mdHdhcmUgdGhhdCB5b3UgbWF5IHVzZS5cclxuXHJcbldl
+        IGRvIG5vdCBjb250cm9sIG90aGVyIHdlYnNpdGVzIGxpbmtlZCB0byBvciBm
+        cm9tIHRoaXMgd2Vic2l0ZSBhbmQgd2UgYXJlIG5vdCByZXNwb25zaWJsZSBm
+        b3IgdGhlIGNvbnRlbnRzIG9mIHRoZW0sIG9yIGFueSBjaGFuZ2VzIG9yIHVw
+        ZGF0ZXMgdG8gc3VjaCB3ZWJzaXRlcy4gV2UgYXJlIG5vdCByZXNwb25zaWJs
+        ZSBmb3Igd2ViY2FzdGluZyBvciBhbnkgb3RoZXIgZm9ybSBvZiB0cmFuc21p
+        c3Npb24gcmVjZWl2ZWQgZnJvbSBhbnkgb3RoZXIgd2Vic2l0ZXMuXHJcblxy
+        XG4jIyBJbmZvcm1hdGlvbiBvbiB0aGlzIHdlYnNpdGVcclxuXHJcbioqVGhl
+        IE1vbmV5IEFkdmljZSBTZXJ2aWNlIGlzIG5vdCByZWd1bGF0ZWQgYnkgdGhl
+        IEZpbmFuY2lhbCBDb25kdWN0IEF1dGhvcml0eSBhbmQgdGhlIE1vbmV5IEFk
+        dmljZSBTZXJ2aWNlIGRvZXMgbm90IHByb3ZpZGUgYSByZWd1bGF0ZWQgc2Vy
+        dmljZS4qKlxyXG5cclxuKipUaGUgaW5mb3JtYXRpb24gYW5kIHRvb2xzIHRo
+        YXQgdGhlIE1vbmV5IEFkdmljZSBTZXJ2aWNlIHByb3ZpZGVzIGFyZSBnZW5l
+        cmljIGFuZCBzaG91bGQgYmUgb2YgZ2VuZXJhbCBhc3Npc3RhbmNlIHRvIHlv
+        dSBpbiBtYW5hZ2luZyB5b3VyIGZpbmFuY2VzLiBIb3dldmVyLCB0aGUgbW9u
+        ZXkgYWR2aWNlIHNlcnZpY2UgY2Fubm90IHJlY29tbWVuZCBzcGVjaWZpYyBm
+        aW5hbmNpYWwgcHJvZHVjdHMgYW5kIGFsd2F5cyByZWNvbW1lbmRzIHRoYXQg
+        eW91IHNlZWsgZnVydGhlciBpbmZvcm1hdGlvbiBmcm9tIGFuIGluZGVwZW5k
+        ZW50IGZpbmFuY2lhbCBhZHZpc2VyLCBhbmQvb3IgZnVydGhlciBpbmZvcm1h
+        dGlvbiBmcm9tIHRoZSBwcm92aWRlcnMgb2Ygc3BlY2lmaWMgZmluYW5jaWFs
+        IHByb2R1Y3RzLioqXHJcblxyXG5JZiB5b3UgYXJlIHVzaW5nIHRoZSBmaW5h
+        bmNpYWwgaGVhbHRoIGNoZWNrLCByZXRpcmVtZW50IGluZm9ybWF0aW9uIG9y
+        IHRvb2xzIG9yIGFueSBvdGhlciByZXNvdXJjZXMgb24gdGhlIHdlYnNpdGUs
+        IHRoZXNlIGFyZSBkZXNpZ25lZCB0byBnaXZlIHlvdSBpbmZvcm1hdGlvbiBh
+        bmQgYWR2aWNlIHRvIGhlbHAgeW91IGlkZW50aWZ5IHlvdXIgZmluYW5jaWFs
+        IG5lZWRzIGFuZCBtYW5hZ2UgeW91ciBtb25leSBiZXR0ZXIuIEluIHBhcnRp
+        Y3VsYXIsIHRoZSBmaW5hbmNpYWwgaGVhbHRoIGNoZWNrIHByb3ZpZGVzIGEg
+        cGVyc29uYWwgYWN0aW9uIHBsYW4gd2hpY2ggaXMgYmFzZWQgb24gdGhlIGlu
+        Zm9ybWF0aW9uIHRoYXQgeW91IGdpdmUgdXMgYWJvdXQgeW91ciBjdXJyZW50
+        IGZpbmFuY2lhbCBjaXJjdW1zdGFuY2VzLiBQbGVhc2Ugbm90ZSB0aGF0IHRo
+        ZSB0b29scyBvbiB0aGUgTW9uZXkgQWR2aWNlIFNlcnZpY2Ugd2Vic2l0ZSBh
+        cmUgbm90IGFuZCBjYW4gbmV2ZXIgYmUgYSBzdWJzdGl0dXRlIGZvciB5b3Ug
+        dGhpbmtpbmcgYWJvdXQgeW91ciBvd24gY2lyY3Vtc3RhbmNlcyBhbmQgcHJp
+        b3JpdGllcy5cclxuXHJcbioqWW91IHNob3VsZCBub3QgYnV5LCBzZWxsIG9y
+        IGNoYW5nZSB0aGUgdGVybXMgb2YgYSBwcm9kdWN0IHB1cmVseSBvbiB0aGUg
+        YmFzaXMgb2YgYW55IHJlc291cmNlcyBvbiB0aGUgd2Vic2l0ZS4gSWYgeW91
+        IG5lZWQgcmVndWxhdGVkIGZpbmFuY2lhbCBhZHZpY2UsIGNvbnN1bHQgYSBw
+        cm9mZXNzaW9uYWwgZmluYW5jaWFsIGFkdmlzZXIuKipcclxuXHJcbldoaWxz
+        dCB3ZSB0cnkgdG8gZW5zdXJlIHRoZSBpbmZvcm1hdGlvbiBjb250YWluZWQg
+        b24gdGhlIHdlYnNpdGUgaXMgYWNjdXJhdGUgYW5kIHVwIHRvIGRhdGUsIGlu
+        Y2x1ZGluZyB0aGUgcXVhbGlmaWNhdGlvbnMgYW5kIG90aGVyIGRldGFpbHMg
+        b2YgdGhlIGZpbmFuY2lhbCBhZHZpc2VycyBpbiBvdXIgcmV0aXJlbWVudCBh
+        ZHZpc29yIGRpcmVjdG9yeSwgd2UgY2Fubm90IGJlIHJlc3BvbnNpYmxlIGZv
+        ciBhbnkgaW5hY2N1cmFjaWVzIGluIHRoZSBpbmZvcm1hdGlvbi4gV2UgYXJl
+        IHVuZGVyIG5vIHJlc3BvbnNpYmlsaXR5IHRvIHByb3ZpZGUgeW91IHdpdGgg
+        YWNjZXNzIHRvIGFueSBhZGRpdGlvbmFsIGluZm9ybWF0aW9uIG9yIHRvIHVw
+        ZGF0ZSB0aGlzIHdlYnNpdGUsIGV2ZW4gaWYgaW5hY2N1cmFjaWVzIGJlY29t
+        ZSBhcHBhcmVudC5cclxuXHJcbk5vIHBlcnNvbiwgZXNwZWNpYWxseSB0aG9z
+        ZSB3aG8gZG8gbm90IGhhdmUgcHJvZmVzc2lvbmFsIGV4cGVyaWVuY2UgaW4g
+        bWF0dGVycyByZWxhdGluZyB0byBpbnZlc3RtZW50cywgbWF5IHJlbHkgb24g
+        dGhlIGNvbnRlbnRzIG9mIHRoaXMgd2Vic2l0ZS4gUmV0YWlsIGludmVzdG9y
+        cyBzaG91bGQgbm90IGVudGVyIHRoaXMgd2Vic2l0ZSwgcmVseSBvbiBvciBh
+        Y3QgdXBvbiBpdHMgY29udGVudHMuIE5vIHJlc3BvbnNpYmlsaXR5IGlzIGFj
+        Y2VwdGVkIGJ5IHVzIG9yIGFueSBvZiBvdXIgcGFydG5lcnMgZm9yIGFueSBh
+        Y3Rpb24gdGFrZW4gb24gdGhlIGJhc2lzIG9mIHRoZSBjb250ZW50IG9mIHRo
+        aXMgd2Vic2l0ZSAodG8gdGhlIGV4dGVudCBwZXJtaXR0ZWQgYnkgYXBwbGlj
+        YWJsZSBsYXdzL3JlZ3VsYXRvcnkgcnVsZXMpLiBPdXIgbGlhYmlsaXR5IHRv
+        IHlvdSBhcyBleHBsYWluZWQgYWJvdmUgcmVtYWlucyB1bmFmZmVjdGVkIGJ5
+        IHRoaXMuXHJcblxyXG4jIyBDb250cmFjdGluZyBvbmxpbmVcclxuXHJcbk5v
+        dGhpbmcgb24gdGhpcyB3ZWJzaXRlIGlzIGludGVuZGVkIHRvIGJlIG5vciBz
+        aG91bGQgYmUgY29uc3RydWVkIGFzIGFuIG9mZmVyIHRvIGVudGVyIGludG8g
+        YSBjb250cmFjdHVhbCByZWxhdGlvbnNoaXAgd2l0aCB5b3Ugb3IgYW55b25l
+        IGVsc2UsIGV4Y2VwdCBmb3IgdGhlc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMg
+        d2hpY2ggZ292ZXJuIHRoZSByZWxhdGlvbnNoaXAgYmV0d2VlbiB1cyBpbiBy
+        ZWxhdGlvbiB0byB5b3VyIHVzZSBvZiB0aGUgd2Vic2l0ZS5cclxuXHJcbklm
+        IHlvdSBtYWtlIGEgY29udHJhY3Qgd2l0aCBhIHRoaXJkIHBhcnR5IHdobyBp
+        cyBuYW1lZCBvciByZWZlcnJlZCB0byBvbiB0aGlzIHdlYnNpdGUsIGl0IGlz
+        IHlvdXIgcmVzcG9uc2liaWxpdHkgdG8gZW5zdXJlIHRoYXQgdGhlIHRlcm1z
+        IG9mIHRoYXQgY29udHJhY3QgYXJlIGFjY2VwdGFibGUgdG8geW91IGFuZCB0
+        byB0YWtlIGxlZ2FsIGFkdmljZSBpZiBuZWNlc3NhcnkuXHJcblxyXG5TcGVj
+        aWFsIGFkZGl0aW9uYWwgdGVybXMgYW5kIGNvbmRpdGlvbnMgYXBwbHlpbmcg
+        dG8gdGhlIE1vbmV5IEFkdmljZSBMaW5lLCBmYWNlLXRvLWZhY2UgYW5kIHdl
+        Yi1jaGF0IHNlc3Npb25zLlxyXG5cclxuV2UgbWF5IHJlY29yZCBjYWxscyBt
+        YWRlIHRvIHRoZSBNb25leSBBZHZpY2UgTGluZSBmb3IgcXVhbGl0eSBjb250
+        cm9sLCBldmFsdWF0aW9uIGFuZCB0cmFpbmluZyBwdXJwb3Nlcy4gQW55IGlu
+        Zm9ybWF0aW9uIHRoYXQgeW91IHByb3ZpZGUgd2lsbCBiZSB0cmVhdGVkIGlu
+        IGFjY29yZGFuY2Ugd2l0aCB0aGUgRGF0YSBQcm90ZWN0aW9uIEFjdCAxOTk4
+        IOKAkyBwbGVhc2Ugc2VlIHRoZSBzZWN0aW9uIOKAmFBlcnNvbmFsIEluZm9y
+        bWF0aW9u4oCZIGJlbG93LlxyXG5cclxuIyMgUHJvaGliaXRpb25zIG9uIHlv
+        dXIgdXNlIG9mIHRoaXMgd2Vic2l0ZVxyXG5cclxuWW91IG1heSBub3QgdXNl
+        IHRoaXMgd2Vic2l0ZSBmb3IgYW55IHB1cnBvc2UgdGhhdCBpcyB1bmxhd2Z1
+        bCBvciBwcm9oaWJpdGVkIGJ5IHRoZXNlIHRlcm1zIGFuZCBjb25kaXRpb25z
+        LiBJbiBwYXJ0aWN1bGFyLCBidXQgbm90IGV4Y2x1c2l2ZWx5IHlvdSBhcmUg
+        cHJvaGliaXRlZCBmcm9tIHBvc3Rpbmcgb3IgdHJhbnNtaXR0aW5nIHRvIG9y
+        IGZyb20gdGhpcyB3ZWJzaXRlIGFueSBtYXRlcmlhbDpcclxuXHJcbiogICB0
+        aGF0IGlzIHRocmVhdGVuaW5nLCBkZWZhbWF0b3J5LCBvYnNjZW5lLCBpbmRl
+        Y2VudCwgc2VkaXRpb3VzLCBvZmZlbnNpdmUsIHBvcm5vZ3JhcGhpYywgYWJ1
+        c2l2ZSwgbGlhYmxlIHRvIGluY2l0ZSByYWNpYWwgaGF0cmVkLCBkaXNjcmlt
+        aW5hdG9yeSwgbWVuYWNpbmcsIHNjYW5kYWxvdXMsIGluZmxhbW1hdG9yeSwg
+        Ymxhc3BoZW1vdXMsIGluIGJyZWFjaCBvZiBjb25maWRlbmNlLCBpbiBicmVh
+        Y2ggb2YgcHJpdmFjeSBvciB3aGljaCBtYXkgY2F1c2UgYW5ub3lhbmNlIG9y
+        IGluY29udmVuaWVuY2VcclxuKiAgIGZvciB3aGljaCB5b3UgaGF2ZSBub3Qg
+        b2J0YWluZWQgYWxsIG5lY2Vzc2FyeSBsaWNlbmNlcyBhbmQvb3IgYXBwcm92
+        YWxzXHJcbiogICB3aGljaCBjb25zdGl0dXRlcyBvciBlbmNvdXJhZ2VzIGNv
+        bmR1Y3QgdGhhdCB3b3VsZCBiZSBjb25zaWRlcmVkIGEgY3JpbWluYWwgb2Zm
+        ZW5jZSwgZ2l2ZSByaXNlIHRvIGNpdmlsIGxpYWJpbGl0eSwgb3Igb3RoZXJ3
+        aXNlIGJlIGNvbnRyYXJ5IHRvIHRoZSBsYXcgb2Ygb3IgaW5mcmluZ2UgdGhl
+        IGludGVsbGVjdHVhbCBwcm9wZXJ0eSByaWdodHMgb2YgYW55IHRoaXJkIHBh
+        cnR5LCBpbiBhbnkgY291bnRyeSBpbiB0aGUgd29ybGQsIG9yXHJcbiogICB3
+        aGljaCBpcyB0ZWNobmljYWxseSBoYXJtZnVsIChpbmNsdWRpbmcsIHdpdGhv
+        dXQgbGltaXRhdGlvbiwgY29tcHV0ZXIgdmlydXNlcywgbG9naWMgYm9tYnMs
+        IFRyb2phbiBob3JzZXMsIHdvcm1zLCBoYXJtZnVsIGNvbXBvbmVudHMsIGNv
+        cnJ1cHRlZCBkYXRhIG9yIG90aGVyIG1hbGljaW91cyBzb2Z0d2FyZSBvciBo
+        YXJtZnVsIGRhdGEpLlxyXG5cclxuV2Ugc2hhbGwgZnVsbHkgY29vcGVyYXRl
+        IHdpdGggYW55IGxhdyBlbmZvcmNlbWVudCBhdXRob3JpdGllcyBvciBjb3Vy
+        dCBvcmRlciByZXF1ZXN0aW5nIG9yIGRpcmVjdGluZyB1cyB0byBkaXNjbG9z
+        ZSB0aGUgaWRlbnRpdHkgb3IgbG9jYXRlIGFueW9uZSBwb3N0aW5nIGFueSBt
+        YXRlcmlhbCBpbiBicmVhY2ggb2YgdGhpcyBzZWN0aW9uLlxyXG5cclxuIyMg
+        T3RoZXIgYXBwbGljYWJsZSB0ZXJtc1xyXG5cclxuQW55IGNvbnRyYWN0dWFs
+        IGFuZCBub24tY29udHJhY3R1YWwgb2JsaWdhdGlvbnMgYW5kIG90aGVyIG1h
+        dHRlcnMgYXJpc2luZyBmcm9tIG9yIGNvbm5lY3RlZCB3aXRoIHRoZXNlIHRl
+        cm1zIGFuZCBjb25kaXRpb25zIHNoYWxsIGJlIGdvdmVybmVkIGJ5IEVuZ2xp
+        c2ggbGF3IGFuZCB0aGVzZSB0ZXJtcyBhbmQgY29uZGl0aW9ucyBzaGFsbCBi
+        ZSBjb25zdHJ1ZWQgaW4gYWNjb3JkYW5jZSB3aXRoIEVuZ2xpc2ggbGF3Llxy
+        XG5cclxuVGhlIGNvdXJ0cyBvZiBFbmdsYW5kIGFuZCBXYWxlcyBzaGFsbCBo
+        YXZlIGV4Y2x1c2l2ZSBqdXJpc2RpY3Rpb24gdG8gc2V0dGxlIGFueSBkaXNw
+        dXRlIHdoaWNoIG1heSBhcmlzZSBvdXQgb2Ygb3IgaW4gY29ubmVjdGlvbiB3
+        aXRoIHRoZXNlIHRlcm1zIGFuZCBjb25kaXRpb25zLlxyXG5cclxuQW55IHBy
+        b3Zpc2lvbiBvZiB0aGVzZSB3ZWJzaXRlIHRlcm1zIGFuZCBjb25kaXRpb25z
+        IHdoaWNoIGlzLCBvciBtYXkgYmUsIHZvaWQgb3IgdW5lbmZvcmNlYWJsZSBz
+        aGFsbCwgdG8gdGhlIGV4dGVudCBvZiBzdWNoIGludmFsaWRpdHkgb3IgdW5l
+        bmZvcmNlYWJpbGl0eSwgYmUgZGVlbWVkIHNldmVyYWJsZSBhbmQgc2hhbGwg
+        bm90IGFmZmVjdCBhbnkgb3RoZXIgcHJvdmlzaW9uIG9mIHRoZXNlIHdlYnNp
+        dGUgdGVybXMgYW5kIGNvbmRpdGlvbnMuIiwiY3JlYXRlZF9hdCI6IjIwMTUt
+        MDMtMjRUMTU6NTM6MjAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTAzLTI3
+        VDEwOjI0OjEyLjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3sibGFiZWwiOiJU
+        ZWxlcmF1IGFjIGFtb2RhdSIsImxpbmsiOiIvY3kvY29ycG9yYXRlL3RlbGVy
+        YXUtYWMtYW1vZGF1IiwibGFuZ3VhZ2UiOiJjeSJ9XX0=
     http_version: 
-  recorded_at: Fri, 26 Sep 2014 10:06:14 GMT
+  recorded_at: Wed, 22 Apr 2015 14:41:55 GMT
 recorded_with: VCR 2.9.2

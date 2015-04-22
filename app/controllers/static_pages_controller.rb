@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
       not_found
     end
 
-    @breadcrumbs = BreadcrumbTrail.build(@static_page, category_tree)
+    @breadcrumbs = BreadcrumbTrail.home
 
     if template_exists?("/static_pages/#{params[:id].underscore}")
       render template: "/static_pages/#{params[:id].underscore}"

@@ -41,7 +41,7 @@ Core::Registry::Repository[:search] =
   Core::Repository::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
 
 Core::Registry::Repository[:static_page] =
-  Core::Repository::StaticPages::PublicWebsite.new
+  Core::Repository::StaticPages::Cms.new
 
 Core::Registry::Repository[:news] =
   Core::Repository::News::PublicWebsite.new

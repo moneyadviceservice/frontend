@@ -108,7 +108,9 @@ class ApplicationController < ActionController::Base
   def corporate_category?(category, corporate = corporate_categories, categories = [])
     categories << corporate.map {|c| c['id']}
     return true if categories.flatten.include?(category)
-    corporate_category?(category, corporate.first['contents'], categories.flatten) if corporate.first['contents']
+    unless corporate.first['contents']
+      corporate_category?(category, corporate.first['contents'], categories.flatten)
+    end
   end
 
   helper_method :corporate_category?

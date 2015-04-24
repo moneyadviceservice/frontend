@@ -19,6 +19,13 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/baby_cost_calculator.git
+  revision: 0069995e10114ce0ba93d77a4b64cb937102b768
+  specs:
+    baby_cost_calculator (0.0.1)
+      rails (~> 4.1.8)
+
+GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: fdcc77549facf9a5d0f92dbba25fc8dccff0393a
   specs:
@@ -642,6 +649,7 @@ DEPENDENCIES
   aes
   agreements (~> 2.0.1)
   autoprefixer-rails
+  baby_cost_calculator!
   better_errors
   binding_of_caller
   bowndler (~> 1.0)

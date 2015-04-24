@@ -19,14 +19,22 @@ module Core
       contents = attributes.delete('contents')
       return unless attributes.delete('type') == 'category'
 
-      category = Category.new(id, attributes)
-      category_node = Tree::TreeNode.new(id, category)
+      category = category_builder(id, attributes)
+      category_node = node_builder(id, category)
 
       contents.each do |content_attributes|
         build_tree(category_node, content_attributes)
       end
 
       node << category_node
+    end
+
+    def category_builder(id, attributes)
+      Category.new(id, attributes)
+    end
+
+    def node_builder(id, category)
+      Tree::TreeNode.new(id, category)
     end
   end
 end

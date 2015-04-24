@@ -7,8 +7,7 @@
     <ul>
       <% first_nav.object.children.each do |second_nav| %>
         <li>
-          <% decorator = CategoryDecorator.new(second_nav.content) %>
-          <%= link_to decorator.title, decorator.path  %>
+          <%= link_to second_nav.content.title, second_nav.content.path  %>
         </li>
       <% end %>
     </ul>
@@ -23,8 +22,7 @@
       <ul>
         <% first_nav.object.children.each do |second_nav| %>
           <li>
-            <% decorator = CategoryDecorator.new(second_nav.content) %>
-            <%= link_to decorator.title, decorator.path  %>
+            <%= link_to second_nav.content.title, second_nav.content.path  %>
           </li>
         <% end %>
       </ul>

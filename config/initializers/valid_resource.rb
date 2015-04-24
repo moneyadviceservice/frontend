@@ -1,7 +1,6 @@
 class ValidResource
   BLACKLIST = {
-    category:    %w(partners
-                    partners-uc-banks
+    category:    %w(partners-uc-banks
                     partners-uc-landlords
                     resources-for-professionals-working-with-young-people-and-parents)
   }

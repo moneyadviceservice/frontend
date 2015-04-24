@@ -1,6 +1,5 @@
 RSpec.describe 'Request blacklisted resource', type: :request do
-  %w(partners
-     partners-uc-banks
+  %w(partners-uc-banks
      partners-uc-landlords
      resources-for-professionals-working-with-young-people-and-parents).each do |category|
     context "request category #{category}" do

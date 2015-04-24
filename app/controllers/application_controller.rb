@@ -97,6 +97,10 @@ class ApplicationController < ActionController::Base
     Core::CategoryTreeReader.new.call(categories)
   end
 
+  def category_tree_with_decorator(categories = Core::Registry::Repository[:category].all)
+    Core::CategoryTreeReaderWithDecorator.new.call(categories)
+  end
+
   def navigation_categories
     Core::Registry::Repository[:category].all
   end
@@ -117,10 +121,14 @@ class ApplicationController < ActionController::Base
 
   def category_navigation(corporate = false)
     categories = corporate ? corporate_categories : navigation_categories
-    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree(categories).children)
+    @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(categories).children)
   end
-
   helper_method :category_navigation
+
+  def corporate_category_navigation
+    @corporate_category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(corporate_categories).children)
+  end
+  helper_method :corporate_category_navigation
 
   def hide_elements_irrelevant_for_third_parties?
     false

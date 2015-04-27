@@ -1,9 +1,8 @@
 RSpec.describe CorporateController, type: :controller, features: [:corporate] do
-
   let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
   let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
-  let(:category_tree) { double }
-  let(:corporate_category) { Core::Category.new('corporate-home') }
+  let(:category_tree) { double.as_null_object }
+  let(:corporate_category) { Core::Category.new('corporate-home', contents: []) }
   let(:corporate_category_reader) { instance_double(Core::CategoryReader, call: corporate_category) }
 
   before do
@@ -36,8 +35,9 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
   end
 
   describe 'GET show' do
-
     context 'when corporate page exists' do
+      let(:corporate) { instance_double(Core::Article, id: 'test', categories: [corporate_category]) }
+
       before do
         expect(Core::CorporateReader).to receive(:new).with(corporate.id) { corporate_reader }
         get :show, locale: I18n.locale, id: corporate.id

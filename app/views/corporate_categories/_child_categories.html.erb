@@ -1,0 +1,17 @@
+<% contents.select(&:category?).each_with_index do |child_category, i| %>
+  <section class="category-detail">
+    <%= heading_tag child_category.title,
+                    level: 2,
+                    id:    child_category.id,
+                    class: 'category-detail__heading' %>
+
+    <p class="category-detail__intro"><%= child_category.description %></p>
+
+    <% if child_category.contents.present? %>
+      <div class="category-detail__list-container">
+        <%= render 'content_items', contents: child_category.contents %>
+        <p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>
+      </div>
+    <% end %>
+  </section>
+<% end %>

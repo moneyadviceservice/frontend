@@ -1,0 +1,27 @@
+<% set_meta_tags(title:       category.title,
+                 description: category.description,
+                 canonical:   category.canonical_url,
+                 alternate:   category.alternate_options) %>
+
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
+<% end %>
+
+<div class="l-main editorial">
+  <div class="l-main__row">
+    <main class="l-main__cell-single" role="main">
+      <%= heading_tag category.title %>
+      <p class="intro"><%= category.description %></p>
+      <%= category.render_contents %>
+
+      <%= @article.content %>
+    </main>
+  </div>
+</div>
+
+<div class="l-nav">
+  <%= render 'shared/mas_sections_link' if category_within_corporate_section?(category) %>
+  <%= render 'shared/nav',
+             categories:        category_navigation(corporate_category?(category.object.id)),
+             active_categories: active_categories %>
+</div>

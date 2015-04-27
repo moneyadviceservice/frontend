@@ -10,6 +10,7 @@ RSpec.describe ContentItemDecorator do
   it { is_expected.to respond_to(:content) }
   it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:title) }
+  it { is_expected.to respond_to(:id) }
 
   describe '#alternate_options' do
     context 'when there are no alternates' do

@@ -1,4 +1,6 @@
 class CorporateCategoryDecorator < CategoryDecorator
+  decorates_association :contents, with: CorporateCategoryContentDecorator
+
   delegate :third_level_navigation
 
   def render_contents

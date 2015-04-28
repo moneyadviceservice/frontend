@@ -2,7 +2,6 @@ class CorporateCategoriesController < CategoriesController
   def show
     super
 
-    @category = Core::CorporateCategory.new(@category.id, @category.attributes)
     set_article
   end
 

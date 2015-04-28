@@ -9,8 +9,9 @@ class CorporateController < ArticlesController
 
   def show
     super
+    @corporate_category = Core::CategoryReader.new('corporate-home').call
     @category = @article.categories.last
-    assign_active_categories(@category)
+    assign_active_categories(@corporate_category)
   end
 
   private

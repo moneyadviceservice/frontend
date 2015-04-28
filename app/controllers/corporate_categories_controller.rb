@@ -5,6 +5,8 @@ class CorporateCategoriesController < CategoriesController
     super
 
     set_article
+    @corporate_category = Core::CategoryReader.new('corporate-home').call
+    assign_active_categories(@corporate_category)
   end
 
   private

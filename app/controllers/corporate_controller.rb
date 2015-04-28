@@ -1,6 +1,6 @@
 class CorporateController < ArticlesController
   decorates_assigned :article, with: CorporateDecorator
-  decorates_assigned :category, with: CategoryDecorator
+  decorates_assigned :category, with: CorporateCategoryDecorator
 
   def index
     @category = Core::CategoryReader.new('corporate-home').call

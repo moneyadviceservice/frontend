@@ -1,4 +1,6 @@
 class CorporateCategoriesController < CategoriesController
+  decorates_assigned :category, with: CorporateCategoryDecorator
+
   def show
     super
 

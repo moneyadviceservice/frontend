@@ -11,7 +11,7 @@
     <main class="l-main__cell-full" role="main">
       <%= heading_tag article.title %>
 
-      <%= category.render_contents %>
+      <%= category.render_contents if category %>
 
       <%= article.content %>
 

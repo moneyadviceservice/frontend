@@ -6,5 +6,10 @@
 .l-inpage-nav__item {
   @include respond-to($mq-s) {
     @include column(6);
+    padding: $baseline-unit 10px;
   };
+
+  &.is-selected {
+    background: $color-link-list-selected-background;
+  }
 }

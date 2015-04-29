@@ -1,12 +1,24 @@
 class CorporateController < ArticlesController
   decorates_assigned :article, with: CorporateDecorator
-  decorates_assigned :category, with: CategoryDecorator
+  decorates_assigned :category, with: CorporateCategoryDecorator
 
-  before_filter :assign_categories
   def index
+    @category = corporate_category
+    assign_active_categories(@category)
+  end
+
+  def show
+    super
+    @corporate_category = corporate_category
+    @category = @article.categories.last
+    assign_active_categories(@corporate_category)
   end
 
   private
+
+  def corporate_category
+    @corporate_category ||= Core::CategoryReader.new('corporate-home').call
+  end
 
   def interactor
     Core::CorporateReader.new(params[:id])
@@ -14,10 +26,5 @@ class CorporateController < ArticlesController
 
   def category_tree(categories)
     Core::CategoryTreeReader.new.call(categories)
-  end
-
-  def assign_categories
-    @category = Core::CategoryReader.new('corporate-home').call
-    assign_active_categories(@category)
   end
 end

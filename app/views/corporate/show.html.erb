@@ -11,6 +11,8 @@
     <main class="l-main__cell-full" role="main">
       <%= heading_tag article.title %>
 
+      <%= category.render_contents if category %>
+
       <%= article.content %>
 
       <%= render article.extra_content_partial if article.extra_content? %>
@@ -36,7 +38,7 @@
 
 <div class="l-article-3col-left">
   <%= render 'shared/nav',
-             categories:        category_navigation,
+             categories:        corporate_category_navigation,
              active_categories: active_categories
   %>
 </div>

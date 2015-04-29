@@ -153,6 +153,8 @@ Rails.application.routes.draw do
     resources :videos, only: :show
 
     if Feature.active?(:corporate)
+      get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
+      get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
       resources :corporate_categories, only: [:show]
       resources :corporate, only: [:show, :index]
     end

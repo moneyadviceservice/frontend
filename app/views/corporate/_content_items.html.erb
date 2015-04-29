@@ -1,0 +1,15 @@
+<div class="l-inpage-nav">
+  <ol class="category-detail__list">
+    <% contents.each do |item| %>
+      <% if @article.id == item.id %>
+        <li class="category-detail__list-item l-inpage-nav__item is-selected">
+          <%= item.title %>
+        </li>
+      <% else %>
+        <li class="category-detail__list-item l-inpage-nav__item">
+          <%= link_to item.title, item.path %>
+        </li>
+      <% end %>
+    <% end %>
+  </ol>
+</div>

@@ -1,8 +1,12 @@
 module Core
   class Category < Entity
-    attr_accessor :type, :parent_id, :title, :description, :contents
+    attr_accessor :type, :parent_id, :title, :description, :contents, :third_level_navigation
 
     validates_presence_of :title
+
+    def third_level_navigation?
+      third_level_navigation
+    end
 
     def child?
       contents.blank? || contents.any? { |c| c.class != Category }

@@ -2,6 +2,6 @@ class ContributionCalculatorController < EmbeddedToolsController
   protected
   
     def category_id
-      'automatic-enrolment'
+      #'automatic-enrolment'
     end
 end

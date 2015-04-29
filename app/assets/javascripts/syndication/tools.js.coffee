@@ -276,6 +276,13 @@
         path: "cy/tools/cyfrifiannell-costau-car"
       title: "Car costs calculator"
 
+    quick_cash_finder:
+      en:
+        path: "en/tools/quick-cash-finder"
+      cy:
+        path: "cy/tools/canfod-arian-parod-yn-gyflym"
+      title: "Quick cash finder"
+
     default_dimensions:
       width: "680px"
       height: "1000px"

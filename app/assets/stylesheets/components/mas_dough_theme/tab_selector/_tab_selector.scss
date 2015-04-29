@@ -13,6 +13,22 @@
   }
 }
 
+.tab-selector__trigger-container {
+  .tab-selector__trigger {
+    @extend %type;
+    border-color: $color-tab-selector-border;
+    color: $color-tab-selector-text;
+    &:after {
+      border-bottom-color: $color-tab-selector-border;
+    }
+    .js & {
+      &.is-active {
+        background-color: $color-tab-selector-background-active;
+      }
+    }
+  }
+}
+
 .tab-selector__triggers-inner.is-active .tab-selector__trigger-container {
   .js & {
     display: inline-block;
@@ -65,7 +81,9 @@
 
       .tab-selector__trigger {
         @extend %type;
+        border-color: $color-tab-selector-border;
         border-width: 0;
+        color: $color-tab-selector-text;
         padding-right: 35px;
         padding-left: 12px;
         position: relative;
@@ -73,8 +91,12 @@
         display: block;
         text-align: left;
         width: 100%;
+        &:after {
+          border-bottom-color: $color-tab-selector-border;
+        }
         .js & {
           &.is-active {
+            background-color: $color-tab-selector-background-active;
             border-width: 1px;
             border-radius: 5px;
             .tab-selector__icon {

@@ -1,5 +1,7 @@
 class CorporateCategoriesController < CategoriesController
   decorates_assigned :category, with: CorporateCategoryDecorator
+  decorates_assigned :article, with: ContentItemDecorator
+
   before_action :paywall_debt_advice_evaluation_toolkit
 
   def show
@@ -26,7 +28,6 @@ class CorporateCategoriesController < CategoriesController
     @article = article_interactor.call do
       not_found
     end
-    @article = ContentItemDecorator.new(@article)
   end
 
   def default_article_id

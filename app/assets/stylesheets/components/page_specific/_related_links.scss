@@ -2,7 +2,9 @@
 //
 // Styleguide related link
 
-.related-links {
+.related-links--collapsable {
+  display: none;
+
   &.is-active {
     display: block;
     margin-bottom: $baseline-unit*2;

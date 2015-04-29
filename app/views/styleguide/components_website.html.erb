@@ -15,7 +15,11 @@
 <% end %>
 
 <%= styleguide_section sections['related link'] do %>
-  <%= render 'shared/related_links', article: article, categories: categories %>
+  <%= render 'shared/related_links', categories: categories_related_links %>
+<% end %>
+
+<%= styleguide_section sections['more in'] do %>
+  <%= render 'shared/more_in', article: article, categories: categories %>
 <% end %>
 
 <%= styleguide_section sections['link-list-primary'] do %>

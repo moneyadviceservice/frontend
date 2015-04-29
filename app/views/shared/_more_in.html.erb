@@ -1,0 +1,20 @@
+<% categories.each do |category| %>
+  <div class="more-in">
+    <%= category.related_links_title %>
+    <ul class="unstyled-list">
+      <% category.contents.each do |article| %>
+        <li class="more-in__link">
+          <%= link_to article.title, article.path %>
+        </li>
+      <% end %>
+    </ul>
+    <% if category_has_more_content?(article, category.object) %>
+      <%= link_to category.path, class: 'more-in__all' do %>
+        <%= t('articles.show.more_in.link_html') %>
+        <span class="visually-hidden">
+          <%= t('articles.show.more_in.hidden_link', category: category.title) %>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

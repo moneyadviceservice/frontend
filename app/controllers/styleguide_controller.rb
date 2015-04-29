@@ -166,6 +166,20 @@ class StyleguideController < ApplicationController
 
   helper_method :categories
 
+  def categories_related_links
+    [
+      {
+        contents: [
+          { title: 'Budgeting tips when you’re on a low income' },
+          { title: 'How much can you afford to borrow for a mortgage?' },
+          { title: 'Beginner’s guide to managing your money' }
+        ]
+      }
+    ].map(&:to_ostruct)
+  end
+
+  helper_method :categories_related_links
+
   def categories_for_directory_en
     [
       {

@@ -1,4 +1,4 @@
-RSpec.describe ToolMountPoint::ContributionCalculator, type: :request, features: [:workplace_pension_contribution_calculator] do 
+RSpec.describe ToolMountPoint::ContributionCalculator, type: :request, features: [:contribution_calculator] do
   %W(
     /en/tools/#{ToolMountPoint::ContributionCalculator::EN_ID}
     /cy/tools/#{ToolMountPoint::ContributionCalculator::CY_ID}

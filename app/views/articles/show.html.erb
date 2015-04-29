@@ -31,7 +31,7 @@
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>
-        <%= render 'articles/related_articles' %>
+        <%= render 'articles/related_articles', type: 'mobile' %>
       </div>
 
       <%= render 'shared/more_in', article: @article, categories: related_content %>
@@ -41,15 +41,15 @@
   </div>
 </div>
 
-<div class="l-nav l-article-3col-right" data-dough-component="StickyColumn">
+<div class="l-nav l-article-3col-right">
   <%= render 'shared/want_to_talk' %>
 
-  <div class='related-links--desktop'>
-    <%= render 'articles/related_articles' %>
+  <div class='related-links--desktop' data-dough-component="StickyColumn">
+    <%= render 'articles/related_articles', type: 'desktop' %>
   </div>
 </div>
 
-<div class="l-article-3col-left" data-dough-component="StickyColumn">
+<div class="l-article-3col-left">
   <%= render 'shared/nav',
              categories:        category_navigation,
              active_categories: active_categories

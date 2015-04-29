@@ -3,7 +3,7 @@
 <% end %>
 
 <% if Feature.active?(:popular_links) && @article.popular_links.present? %>
-  <%= render 'articles/article_links', title: t('.popular_links_title'), article_links: @article.popular_links, classes: 'related-links__heading--popular', open: false, type: type %>
+  <%= render 'articles/article_links', title: t('.popular_links_title'), article_links: @article.popular_links, classes: 'related-links__heading--popular', open: Feature.active?(:related_links) && @article.related_links.present? ? false : true, type: type %>
 <% end %>
 
 <% if Feature.active?(:latest_blog_post_links) && @article.latest_blog_post_links.present? %>

@@ -16,7 +16,7 @@ module Core
     end
 
     def alternates
-      @alternates + @translations
+      @translations
     end
 
     def alternates=(alternates)

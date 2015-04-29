@@ -12,13 +12,13 @@
     <main class="l-main__cell-single" role="main">
       <%= heading_tag category.title %>
 
-      <% unless category.third_level_navigation %>
+      <% unless category.third_level_navigation? %>
         <p class="intro"><%= category.description %></p>
       <% end %>
 
       <%= category.render_contents %>
 
-      <% if category.third_level_navigation %>
+      <% if category.third_level_navigation? %>
         <%= article.content %>
       <% end %>
     </main>

@@ -4,6 +4,10 @@ module Core
 
     validates_presence_of :title
 
+    def third_level_navigation?
+      third_level_navigation
+    end
+
     def child?
       contents.blank? || contents.any? { |c| c.class != Category }
     end

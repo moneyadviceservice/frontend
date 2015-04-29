@@ -25,9 +25,10 @@ class CorporateCategoriesController < CategoriesController
   end
 
   def set_article
-    @article = article_interactor.call do
-      not_found
-    end
+    @article = article_interactor.call
+  rescue
+    # TODO change this in the cms repository to return nil on 404
+    @article = nil
   end
 
   def default_article_id

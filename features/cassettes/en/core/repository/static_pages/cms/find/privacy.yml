@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 7724) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 6792) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 8cd8ae64-9346-4feb-b225-33127c4d66ac
+      - 5816f697-f474-4458-af1a-5c4b2e3f7037
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -33,13 +33,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8cd8ae64-9346-4feb-b225-33127c4d66ac
+      - 5816f697-f474-4458-af1a-5c4b2e3f7037
       X-Runtime:
-      - '0.029329'
+      - '0.029008'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Wed, 22 Apr 2015 14:41:55 GMT
+      - Wed, 22 Apr 2015 14:14:07 GMT
       Content-Length:
       - '6209'
       Connection:
@@ -186,5 +186,5 @@ http_interactions:
         bGFiZWwiOiJQb2xpc2kgcHJlaWZhdHJ3eWRkIiwibGluayI6Ii9jeS9jb3Jw
         b3JhdGUvcG9saXNpcHJlaWZhdHJ3eWRkIiwibGFuZ3VhZ2UiOiJjeSJ9XX0=
     http_version: 
-  recorded_at: Wed, 22 Apr 2015 14:41:55 GMT
+  recorded_at: Wed, 22 Apr 2015 14:14:07 GMT
 recorded_with: VCR 2.9.2

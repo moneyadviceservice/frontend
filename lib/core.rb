@@ -132,6 +132,7 @@ module Core
 
     module StaticPages
       autoload :PublicWebsite, 'core/repository/static_pages/public_website'
+      autoload :Cms, 'core/repository/static_pages/cms'
     end
 
     module Search

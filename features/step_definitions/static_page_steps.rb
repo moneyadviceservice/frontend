@@ -19,20 +19,10 @@ Then(/^I should see the static page in (.*)$/) do |language|
   expect(static_page.title).to eq("#{current_static_page.title} - #{I18n.t('layouts.base.title')}")
   expect(static_page.description[:content]).to include(current_static_page.description)
   expect(static_page.heading).to have_content(current_static_page.title)
-
-  sample_of_body_text = strip_tags(Nokogiri::HTML(current_static_page.body).at('p').inner_html).split(/\./)[0]
-  expect(static_page.content).to have_content(strip_tags(sample_of_body_text))
 end
 
 When(/^I view a static page with an intro$/) do
   static_page.load(locale: 'en', id: 'about-us')
-end
-
-Then(/^I should see the static page's intro on the page$/) do
-  current_static_page = Core::StaticPageReader.new('about-us').call
-
-  sample_of_intro_text = strip_tags(Nokogiri::HTML(current_static_page.body).at('p.intro').inner_html)
-  expect(static_page.intro).to have_content(strip_tags(sample_of_intro_text))
 end
 
 When(/^I view the contact page in (.*)$/) do |language|

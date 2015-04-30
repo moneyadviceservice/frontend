@@ -6,6 +6,15 @@
   )
 %>
 
+<% content_for(:alternate_link) do %>
+  <% locale_options.each do |locale, url| %>
+    <%= link_to(url, lang: locale, class: "t-#{locale}-link") do %>
+      <span class="icon icon--globe"></span>
+      <%= t("locales.#{locale}") %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <div class="l-retirements">
   <div class="l-section l-section--intro">
     <div class="l-constrained">

@@ -106,8 +106,10 @@ Rails.application.routes.draw do
     end
 
     Feature.with(:pensions_and_retirement) do
-      get '/pensions-and-retirement', to: 'retirements#index'
-      get '/pensions-and-retirement/budgeting', to: 'retirements#budgeting'
+      get RetirementsController::EN_ACTION_IDS[:index],     to: 'retirements#index'
+      get RetirementsController::EN_ACTION_IDS[:budgeting], to: 'retirements#budgeting'
+      get RetirementsController::CY_ACTION_IDS[:index],     to: 'retirements#index'
+      get RetirementsController::CY_ACTION_IDS[:budgeting], to: 'retirements#budgeting'
     end
 
     Feature.with(:savings_calculator) do

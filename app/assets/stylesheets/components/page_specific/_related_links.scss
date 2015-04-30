@@ -12,6 +12,8 @@
 }
 
 .related-links--mobile {
+  margin-top: $baseline-unit*10;
+
   @include respond-to($mq-m) {
     display: none;
   }

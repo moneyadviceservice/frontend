@@ -11,7 +11,9 @@
     <main class="l-main__cell-full editorial" role="main">
       <%= heading_tag article.title %>
 
-      <%= category.render_contents if category %>
+      <% if category && category.third_level_navigation? %>
+        <%= category.render_contents %>
+      <% end %>
 
       <%= article.content %>
 

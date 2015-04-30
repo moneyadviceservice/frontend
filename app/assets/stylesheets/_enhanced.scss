@@ -25,6 +25,13 @@
 // MAS site base element styles
 @import "base/*";
 
+// MAS Dough component theme variables
+// Overrides default global Dough component variables
+@import "components/mas_dough_theme/variables";
+
+// Overrides default individual Dough component settings
+@import "components/mas_dough_theme/*/_settings.scss";
+
 // Dough default components
 @import "dough/assets/stylesheets/common";
 
@@ -43,7 +50,6 @@
 
 // MAS Dough component theme
 // Overrides default Dough component theme
-@import "components/mas_dough_theme/variables";
 @import "components/mas_dough_theme/*/_all.scss";
 
 // CMS-generated content

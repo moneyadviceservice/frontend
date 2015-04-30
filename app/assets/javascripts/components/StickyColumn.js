@@ -2,22 +2,27 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   'use strict';
 
   var StickyColumn,
-      defaultConfig = {},
-      $parent,
-      contentHeight,
-      topMargin,
-      top,
-      bottom,
-      isFixed,
-      isAtBottom,
-      isInSidebar,
-      mainContentSelector = '.l-article-3col-main',
-      parentSelector = '.l-article-3col-right',
-      fixedClass = 'related-links--desktop-fixed',
-      bottomClass = 'related-links--desktop-bottom';
+      defaultConfig = {
+        selectors: {
+          mainContent: '.l-article-3col-main',
+          parent: '.l-article-3col-right'
+        },
+        classes: {
+          fixed: 'related-links--desktop-fixed',
+          bottom: 'related-links--desktop-bottom'
+        }
+      };
 
   StickyColumn = function($el, config) {
     StickyColumn.baseConstructor.call(this, $el, config, defaultConfig);
+
+    this.contentHeight = 0;
+    this.topMargin = 0;
+    this.top = 0;
+    this.bottom = 0;
+    this.isFixed = false;
+    this.isAtBottom = false;
+    this.isInSidebar = false;
   };
 
   /**
@@ -26,9 +31,9 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   DoughBaseComponent.extend(StickyColumn);
 
   /**
-   * [init description]
-   * @param  {[type]}
-   * @return {[type]}
+   * Initialize the component
+   * @param {Promise} initialised
+   * @return {StickyColumn}
    */
   StickyColumn.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
@@ -42,8 +47,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   };
 
   /**
-   * [_bindEvents description]
-   * @return {[type]}
+   * setup resize and scroll events to handle change in dimensions
    */
   StickyColumn.prototype._bindEvents = function() {
     $(window)
@@ -54,114 +58,111 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   };
 
   /**
-   * [_isMQMedium description]
+   * Test whether the element is visible on the page
    * @return {Boolean}
    */
-  StickyColumn.prototype._isMQMedium = function() {
-    return this.$el.is(':visible');
-  }
+  StickyColumn.prototype._isElementVisible = function($el) {
+    return $el.is(':visible');
+  };
 
   /**
-   * [_measureDom description]
-   * @return {[type]}
+   * Recalculate offsets based on content height and sticky column's contents
    */
   StickyColumn.prototype._measureDom = function() {
-    $parent = $(parentSelector);
-    contentHeight = $(mainContentSelector).height();
-    topMargin = parseInt($parent.css('marginTop'), 10);
-    top = $parent.offset().top;
-    bottom = $parent.offset().top + contentHeight - topMargin - this.$el.height();
+    this.$parent = $(this.config.selectors.parent);
+    this.contentHeight = $(this.config.selectors.mainContent).height();
+    this.topMargin = parseInt(this.$parent.css('marginTop'), 10);
+    this.top = this.$parent.offset().top;
+    this.bottom = this.$parent.offset().top + this.contentHeight - this.topMargin - this.$el.height();
 
-    if (isInSidebar) {
+    if (this.isInSidebar) {
       this._showInSidebar();
     }
   };
 
   /**
-   * [_showElement description]
-   * @return {[type]}
+   * Works out whether the sticky component is in the right side bar or not
    */
   StickyColumn.prototype._showElement = function() {
-    if (!isInSidebar && this._isMQMedium()) {
+    if (!this.isInSidebar && this._isElementVisible(this.$el)) {
       this._showInSidebar();
-      isInSidebar = true;
+      this.isInSidebar = true;
       return;
     }
 
-    if (isInSidebar && !this._isMQMedium()) {
+    if (this.isInSidebar && !this._isElementVisible(this.$el)) {
       this._hide();
-      isInSidebar = false;
+      this.isInSidebar = false;
     }
   };
 
   /**
-   * [_showInSidebar description]
+   * calculates the height of the parent container and the width of the sticky element
    * @return {[type]}
    */
   StickyColumn.prototype._showInSidebar = function() {
-    $parent.css('height', contentHeight - topMargin);
-    this.$el.css('width', $parent.width());
+    this.$parent.css('height', this.contentHeight - this.topMargin);
+    this.$el.css('width', this.$parent.width());
   }
 
   /**
-   * [_hide description]
+   * reset the parent container back to it's original height
    * @return {[type]}
    */
   StickyColumn.prototype._hide = function() {
-    $parent.css('height', 'auto');
+    this.$parent.css('height', 'auto');
   };
 
   /**
-   * [_positionComponent description]
-   * @return {[type]}
+   * Work out the position of the container in the context of the scroll of the page
    */
   StickyColumn.prototype._positionComponent = function() {
     var scrollTop;
 
-    if (!isInSidebar) {
+    if (!this.isInSidebar) {
       return;
     }
 
     scrollTop = $(window).scrollTop();
 
-    if (!isFixed && !isAtBottom && scrollTop > top) {
-      this.$el.addClass(fixedClass);
-      isFixed = true;
+    if (!this.isFixed && !this.isAtBottom && scrollTop > this.top) {
+      this.$el.addClass(this.config.classes.fixed);
+      this.isFixed = true;
       this._positionComponent();
       return;
     }
 
-    if (isFixed) {
-      if (scrollTop < top) {
-        this.$el.removeClass(fixedClass);
-        isFixed = false;
+    if (this.isFixed) {
+      if (scrollTop < this.top) {
+        this.$el.removeClass(this.config.classes.fixed);
+        this.isFixed = false;
         return;
       }
 
-      if (scrollTop > bottom) {
+      if (scrollTop > this.bottom) {
         this.$el
-          .removeClass(fixedClass)
-          .addClass(bottomClass);
-        isFixed = false;
-        isAtBottom = true;
+          .removeClass(this.config.classes.fixed)
+          .addClass(this.config.classes.bottom);
+        this.isFixed = false;
+        this.isAtBottom = true;
         return;
       }
     }
 
-    if (isAtBottom && scrollTop < bottom) {
+    if (this.isAtBottom && scrollTop < this.bottom) {
       this.$el
-        .addClass(fixedClass)
-        .removeClass(bottomClass);
-      isAtBottom = false;
+        .addClass(this.config.classes.fixed)
+        .removeClass(this.config.classes.bottom);
+      this.isAtBottom = false;
       return;
     }
   };
 
   /**
-   * [_debounce description]
-   * @param  {[type]}
-   * @param  {[type]}
-   * @return {[type]}
+   * Limit the amount of times a function is called within a set period
+   * @param  {function}
+   * @param  {int}
+   * @return {function}
    */
   StickyColumn.prototype._debounce = function(func, wait) {
     var timeout;
@@ -178,9 +179,8 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   };
 
   /**
-   * [_handleResize description]
-   * @param  {[type]}
-   * @return {[type]}
+   * Handle when the browser viewport changes size
+   * @param  {Event}
    */
   StickyColumn.prototype._handleResize = function(e) {
     this._measureDom();
@@ -189,11 +189,10 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   };
 
   /**
-   * [_handleScroll description]
-   * @return {[type]}
+   * Handles when the browser window is scrolled
    */
   StickyColumn.prototype._handleScroll = function() {
-    if (!isInSidebar) {
+    if (!this.isInSidebar) {
       return;
     }
 
@@ -201,9 +200,8 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   };
 
   /**
-   * [_handleSectionToggle description]
-   * @param  {[type]}
-   * @return {[type]}
+   * Handles when a dough collapsible item is toggled
+   * @param  {Event}
    */
   StickyColumn.prototype._handleSectionToggle = function(e) {
     if (e.emitter.$el.parents(this.$el).length > 0) {

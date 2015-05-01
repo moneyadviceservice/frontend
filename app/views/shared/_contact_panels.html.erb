@@ -31,6 +31,7 @@
           <% chat_opening_hours.open_periods.each do |period| %>
             <li class="contact-panel__additional-info"><%= period.html_safe %></li>
           <% end %>
+          <li class="contact-panel__additional-info"><%= t('contact_panels.chat.bank_holiday_html') %></li>
         </ul>
 
         <% if translation?('contact_panels.chat.smallprint') %>

@@ -131,6 +131,8 @@ en:
       offline:
         call_to_action: Offline
         description: Web chat is available from %{hours}.
+      bank_holiday_html: |
+        <li class="contact-panel__additional-info">Sunday and Bank Holidays, closed</li>
     call_us:
       title: Call us
       description: Give us a call for free and impartial money advice.
@@ -138,6 +140,7 @@ en:
         <ul class="contact-panel__list">
           <li class="contact-panel__additional-info">Monday to Friday, 8am to 8pm</li>
           <li class="contact-panel__additional-info">Saturday, 9am to 1pm</li>
+          <li class="contact-panel__additional-info">Sunday and Bank Holidays, closed</li>
         </ul>
       smallprint: Calls cost the same as a normal call, if your calls are free, it's included.
     sharing:

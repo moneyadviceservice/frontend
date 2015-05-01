@@ -134,6 +134,8 @@ cy:
         call_to_action: All-lein
         description: Gwe-sgwrs ar gael o %{hours}.
       smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
+      bank_holiday_html: |
+        <li class="contact-panel__additional-info">Dydd Sul a Gwyliau Banc, ar gau</li>
     call_us:
       title: Ffoniwch ni
       description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
@@ -141,6 +143,7 @@ cy:
         <ul class="contact-panel__list">
           <li class="contact-panel__additional-info">Llun i Wener, 8am i 8pm</li>
           <li class="contact-panel__additional-info">Dydd Sadwrn, 9am i 1pm</li>
+          <li class="contact-panel__additional-info">Dydd Sul a Gwyliau Banc, ar gau</li>
         </ul>
       smallprint: Yr un gost â galwad arferol, os yw eich galwadau am ddim, caiff ei gynnwys.
     sharing:

@@ -1,15 +1,3 @@
 .l-inpage-nav {
   @include row(12);
-  margin-bottom: $baseline-unit*6;
-}
-
-.l-inpage-nav__item {
-  @include respond-to($mq-s) {
-    @include column(6);
-    padding: $baseline-unit 10px;
-  };
-
-  &.is-selected {
-    background: $color-link-list-selected-background;
-  }
 }

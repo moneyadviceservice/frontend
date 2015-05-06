@@ -20,20 +20,18 @@ Core::Registry::Connection[:internal_email] = internal_email_connection
 Core::Registry::Connection[:cms]            = cms_connection
 
 Core::Registry::Repository[:action_plan] =
-  Core::Repository::ActionPlans::CMS.new(fallback: Core::Repository::ActionPlans::PublicWebsite.new)
+  Core::Repository::ActionPlans::CMS.new
 
 Core::Registry::Repository[:article] =
-  Core::Repository::Articles::CMS.new(fallback: Core::Repository::Articles::PublicWebsite.new)
+  Core::Repository::Articles::CMS.new
 
 Core::Registry::Repository[:video] =
-  Core::Repository::Videos::CMS.new(fallback: Core::Repository::Videos::PublicWebsite.new)
+  Core::Repository::Videos::CMS.new
 
 Core::Registry::Repository[:corporate] =
-  Core::Repository::Corporate::CMS.new(fallback: Core::Repository::Articles::PublicWebsite.new)
+  Core::Repository::Corporate::CMS.new
 
-Core::Registry::Repository[:category] = Core::Repository::Cache.new(
-  Core::Repository::Categories::CMS.new(
-    fallback: Core::Repository::Categories::PublicWebsite.new), Rails.cache)
+Core::Registry::Repository[:category] = Core::Repository::Cache.new(Core::Repository::Categories::CMS.new, Rails.cache)
 
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 
@@ -47,7 +45,7 @@ Core::Registry::Repository[:news] =
   Core::Repository::News::PublicWebsite.new
 
 Core::Registry::Repository[:news_article] =
-  Core::Repository::News::CMS.new(fallback: Core::Repository::News::PublicWebsite.new)
+  Core::Repository::News::CMS.new
 
 Core::Registry::Repository[:newsletter_subscription] =
   Core::Repository::NewsletterSubscriptions::PublicWebsite.new

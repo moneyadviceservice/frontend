@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/jobs-and-tax.json
+    uri: http://localhost:3000/en/categories/jobs-and-tax.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,89 +18,124 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:17:17 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"7100bce4d1ecdeb913593cf5e4d40a5c"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - afa7b89802c98481cca171944288ebb6
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:17:17 GMT; secure
-      - _session_id=afa7b89802c98481cca171944288ebb6; path=/; secure; HttpOnly
-      - _web_tracking=c93dc9313b7c023837308c0436453b2e; path=/; expires=Wed, 23-Mar-2016
-        17:17:17 GMT; secure
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       X-Runtime:
-      - '0.040652'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.093127'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:56 GMT
+      Content-Length:
+      - '3962'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"jobs-and-tax","title":"Jobs and tax","description":"Help with
-        understanding your payslip and what to look for in your employment contract.","parent_id":"work-pensions-and-retirement","contents":[{"id":"tax-relief-on-pension-contributions","type":"guide","title":"Tax
-        relief on pension contributions","description":"You\u2019ll get tax relief
-        on any money you save into your pension, up to an annual limit of \u00a350,000
-        or your earnings for the year"},{"id":"personal-insurance-when-youre-self-employed","type":"guide","title":"Personal
-        insurance when you\u2019re self-employed","description":"When working for
-        yourself, you need to consider your insurance needs at home and at work"},{"id":"business-insurance-when-youre-self-employed","type":"guide","title":"Business
-        insurance when you\u2019re self employed","description":"When working for
-        yourself, you need to consider your insurance needs at home and at work"},{"id":"thinking-of-starting-up-in-business","type":"guide","title":"Thinking
-        of starting up in business?","description":"Lost your job and thinking of
-        starting your own business or becoming self-employed? Find out more"},{"id":"changing-your-career-following-redundancy","type":"guide","title":"Changing
-        your career following redundancy","description":"Facing redundancy and thinking
-        about a career change? There\u2019s plenty of financial support available
-        for retraining"},{"id":"checking-your-employment-contract","type":"guide","title":"Employment
-        contracts: your rights and key terms explained","description":"Understanding
-        your contract of employment, your legal rights and contractual rights, plus,
-        what to do if your contract\u2019s unfair"},{"id":"apprenticeships-for-young-people","type":"guide","title":"Apprenticeships
-        for young people","description":"Find out how to get an apprenticeship and
-        what you\u2019re entitled to when working as an apprentice"},{"id":"help-and-advice-when-applying-for-a-job","type":"guide","title":"Help
-        and advice when applying for a job","description":"Get help and advice with
-        your CV, job search and interviews when looking for work"},{"id":"understanding-your-payslip","type":"guide","title":"Understanding
-        your payslip","description":"Make sure you check your payslip. Here\u2019s
-        a breakdown to help you understand what you\u2019ve been paid and what deductions
-        have been made"},{"id":"budgeting-for-your-first-job","type":"guide","title":"Budgeting
-        for your first job","description":"A look at some of the costs you might come
-        across as you start your working life."},{"id":"how-you-get-paid-at-work","type":"guide","title":"How
-        you get paid at work","description":"Find out how you get paid when you first
-        go into work after leaving school or college."},{"id":"understanding-your-first-payslip","type":"guide","title":"Understanding
-        your first payslip","description":"We talk you through the different terms
-        on your payslip and offer tips to help you check you''re being paid correctly"},{"id":"income-tax-and-national-insurance","type":"guide","title":"Income
-        Tax and National Insurance","description":"Unsure about Income Tax and National
-        Insurance? We explain how the tax system works and what to do if you think
-        you\u2019re overpaying"},{"id":"tax-and-national-insurance-deductions","type":"guide","title":"Tax
-        and National Insurance deductions","description":"If you\u2019re employed,
-        you pay Income Tax and National Insurance on your wages through a system called
-        Pay As You Earn (PAYE)"},{"id":"pay-and-tax-when-working-in-more-than-one-job","type":"guide","title":"Second
-        job tax and pay","description":"Two jobs means two salaries, but read our
-        checklist to make sure you\u2019re paying the right tax and you know your
-        rights"},{"id":"tax-and-national-insurance-when-youre-self-employed","type":"guide","title":"Tax
-        and National Insurance when you''re self-employed","description":"If you\u2019re
-        self-employed, you are responsible for paying your own tax and National Insurance"},{"id":"age-related-personal-allowances","type":"guide","title":"Age-related
-        personal allowances","description":"If you were born before 6 April 1948,
-        you''re probably getting a higher tax-free Personal Allowance than younger
-        taxpayers"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImpvYnMtYW5kLXRheCIsInR5cGUiOiJjYXRlZ29yeSIsInRpdGxl
+        IjoiSm9icyBhbmQgdGF4IiwiZGVzY3JpcHRpb24iOiJIZWxwIHdpdGggdW5k
+        ZXJzdGFuZGluZyB5b3VyIHBheXNsaXAgYW5kIHdoYXQgdG8gbG9vayBmb3Ig
+        aW4geW91ciBlbXBsb3ltZW50IGNvbnRyYWN0LiIsInBhcmVudF9pZCI6Indv
+        cmstcGVuc2lvbnMtYW5kLXJldGlyZW1lbnQiLCJ0aGlyZF9sZXZlbF9uYXZp
+        Z2F0aW9uIjpmYWxzZSwiY29udGVudHMiOlt7ImlkIjoicGVyc29uYWwtaW5z
+        dXJhbmNlLXdoZW4teW91cmUtc2VsZi1lbXBsb3llZCIsInR5cGUiOiJndWlk
+        ZSIsInRpdGxlIjoiUGVyc29uYWwgaW5zdXJhbmNlIHdoZW4geW914oCZcmUg
+        c2VsZi1lbXBsb3llZCIsImRlc2NyaXB0aW9uIjoiV2hlbiB3b3JraW5nIGZv
+        ciB5b3Vyc2VsZiwgeW91IG5lZWQgdG8gY29uc2lkZXIgeW91ciBpbnN1cmFu
+        Y2UgbmVlZHMgYXQgaG9tZSBhbmQgYXQgd29yayJ9LHsiaWQiOiJidXNpbmVz
+        cy1pbnN1cmFuY2Utd2hlbi15b3VyZS1zZWxmLWVtcGxveWVkIiwidHlwZSI6
+        Imd1aWRlIiwidGl0bGUiOiJCdXNpbmVzcyBpbnN1cmFuY2Ugd2hlbiB5b3Xi
+        gJlyZSBzZWxmIGVtcGxveWVkIiwiZGVzY3JpcHRpb24iOiJXaGVuIHdvcmtp
+        bmcgZm9yIHlvdXJzZWxmLCB5b3UgbmVlZCB0byBjb25zaWRlciB5b3VyIGlu
+        c3VyYW5jZSBuZWVkcyBhdCBob21lIGFuZCBhdCB3b3JrIn0seyJpZCI6InRo
+        aW5raW5nLW9mLXN0YXJ0aW5nLXVwLWluLWJ1c2luZXNzIiwidHlwZSI6Imd1
+        aWRlIiwidGl0bGUiOiJUaGlua2luZyBvZiBzdGFydGluZyB1cCBpbiBidXNp
+        bmVzcz8iLCJkZXNjcmlwdGlvbiI6Ikxvc3QgeW91ciBqb2IgYW5kIHRoaW5r
+        aW5nIG9mIHN0YXJ0aW5nIHlvdXIgb3duIGJ1c2luZXNzIG9yIGJlY29taW5n
+        IHNlbGYtZW1wbG95ZWQ/IEZpbmQgb3V0IG1vcmUifSx7ImlkIjoiY2hhbmdp
+        bmcteW91ci1jYXJlZXItZm9sbG93aW5nLXJlZHVuZGFuY3kiLCJ0eXBlIjoi
+        Z3VpZGUiLCJ0aXRsZSI6IkNoYW5naW5nIHlvdXIgY2FyZWVyIGZvbGxvd2lu
+        ZyByZWR1bmRhbmN5IiwiZGVzY3JpcHRpb24iOiJGYWNpbmcgcmVkdW5kYW5j
+        eSBhbmQgdGhpbmtpbmcgYWJvdXQgYSBjYXJlZXIgY2hhbmdlPyBUaGVyZeKA
+        mXMgcGxlbnR5IG9mIGZpbmFuY2lhbCBzdXBwb3J0IGF2YWlsYWJsZSBmb3Ig
+        cmV0cmFpbmluZyJ9LHsiaWQiOiJjaGVja2luZy15b3VyLWVtcGxveW1lbnQt
+        Y29udHJhY3QiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkVtcGxveW1lbnQg
+        Y29udHJhY3RzOiB5b3VyIHJpZ2h0cyBhbmQga2V5IHRlcm1zIGV4cGxhaW5l
+        ZCIsImRlc2NyaXB0aW9uIjoiVW5kZXJzdGFuZGluZyB5b3VyIGNvbnRyYWN0
+        IG9mIGVtcGxveW1lbnQsIHlvdXIgbGVnYWwgcmlnaHRzIGFuZCBjb250cmFj
+        dHVhbCByaWdodHMsIHBsdXMsIHdoYXQgdG8gZG8gaWYgeW91ciBjb250cmFj
+        dOKAmXMgdW5mYWlyIn0seyJpZCI6ImFwcHJlbnRpY2VzaGlwcy1mb3IteW91
+        bmctcGVvcGxlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJBcHByZW50aWNl
+        c2hpcHMgZm9yIHlvdW5nIHBlb3BsZSIsImRlc2NyaXB0aW9uIjoiRmluZCBv
+        dXQgaG93IHRvIGdldCBhbiBhcHByZW50aWNlc2hpcCBhbmQgd2hhdCB5b3Xi
+        gJlyZSBlbnRpdGxlZCB0byB3aGVuIHdvcmtpbmcgYXMgYW4gYXBwcmVudGlj
+        ZSJ9LHsiaWQiOiJoZWxwLWFuZC1hZHZpY2Utd2hlbi1hcHBseWluZy1mb3It
+        YS1qb2IiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhlbHAgYW5kIGFkdmlj
+        ZSB3aGVuIGFwcGx5aW5nIGZvciBhIGpvYiIsImRlc2NyaXB0aW9uIjoiR2V0
+        IGhlbHAgYW5kIGFkdmljZSB3aXRoIHlvdXIgQ1YsIGpvYiBzZWFyY2ggYW5k
+        IGludGVydmlld3Mgd2hlbiBsb29raW5nIGZvciB3b3JrIn0seyJpZCI6InVu
+        ZGVyc3RhbmRpbmcteW91ci1wYXlzbGlwIiwidHlwZSI6Imd1aWRlIiwidGl0
+        bGUiOiJVbmRlcnN0YW5kaW5nIHlvdXIgcGF5c2xpcCIsImRlc2NyaXB0aW9u
+        IjoiTWFrZSBzdXJlIHlvdSBjaGVjayB5b3VyIHBheXNsaXAuIEhlcmXigJlz
+        IGEgYnJlYWtkb3duIHRvIGhlbHAgeW91IHVuZGVyc3RhbmQgd2hhdCB5b3Xi
+        gJl2ZSBiZWVuIHBhaWQgYW5kIHdoYXQgZGVkdWN0aW9ucyBoYXZlIGJlZW4g
+        bWFkZSJ9LHsiaWQiOiJidWRnZXRpbmctZm9yLXlvdXItZmlyc3Qtam9iIiwi
+        dHlwZSI6ImNvcnBvcmF0ZSIsInRpdGxlIjoiQnVkZ2V0aW5nIGZvciB5b3Vy
+        IGZpcnN0IGpvYiIsImRlc2NyaXB0aW9uIjoiQSBsb29rIGF0IHNvbWUgb2Yg
+        dGhlIGNvc3RzIHlvdSBtaWdodCBjb21lIGFjcm9zcyBhcyB5b3Ugc3RhcnQg
+        eW91ciB3b3JraW5nIGxpZmUuIn0seyJpZCI6Imhvdy15b3UtZ2V0LXBhaWQt
+        YXQtd29yayIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiSG93IHlvdSBnZXQg
+        cGFpZCBhdCB3b3JrIiwiZGVzY3JpcHRpb24iOiJGaW5kIG91dCBob3cgeW91
+        IGdldCBwYWlkIHdoZW4geW91IGZpcnN0IGdvIGludG8gd29yayBhZnRlciBs
+        ZWF2aW5nIHNjaG9vbCBvciBjb2xsZWdlLiJ9LHsiaWQiOiJ1bmRlcnN0YW5k
+        aW5nLXlvdXItZmlyc3QtcGF5c2xpcCIsInR5cGUiOiJndWlkZSIsInRpdGxl
+        IjoiVW5kZXJzdGFuZGluZyB5b3VyIGZpcnN0IHBheXNsaXAiLCJkZXNjcmlw
+        dGlvbiI6IldlIHRhbGsgeW91IHRocm91Z2ggdGhlIGRpZmZlcmVudCB0ZXJt
+        cyBvbiB5b3VyIHBheXNsaXAgYW5kIG9mZmVyIHRpcHMgdG8gaGVscCB5b3Ug
+        Y2hlY2sgeW91J3JlIGJlaW5nIHBhaWQgY29ycmVjdGx5In0seyJpZCI6Imlu
+        Y29tZS10YXgtYW5kLW5hdGlvbmFsLWluc3VyYW5jZSIsInR5cGUiOiJndWlk
+        ZSIsInRpdGxlIjoiSW5jb21lIFRheCBhbmQgTmF0aW9uYWwgSW5zdXJhbmNl
+        IiwiZGVzY3JpcHRpb24iOiJVbnN1cmUgYWJvdXQgSW5jb21lIFRheCBhbmQg
+        TmF0aW9uYWwgSW5zdXJhbmNlPyBXZSBleHBsYWluIGhvdyB0aGUgdGF4IHN5
+        c3RlbSB3b3JrcyBhbmQgd2hhdCB0byBkbyBpZiB5b3UgdGhpbmsgeW914oCZ
+        cmUgb3ZlcnBheWluZyJ9LHsiaWQiOiJ0YXgtYW5kLW5hdGlvbmFsLWluc3Vy
+        YW5jZS1kZWR1Y3Rpb25zIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUYXgg
+        YW5kIE5hdGlvbmFsIEluc3VyYW5jZSBkZWR1Y3Rpb25zIiwiZGVzY3JpcHRp
+        b24iOiJJZiB5b3XigJlyZSBlbXBsb3llZCwgeW91IHBheSBJbmNvbWUgVGF4
+        IGFuZCBOYXRpb25hbCBJbnN1cmFuY2Ugb24geW91ciB3YWdlcyB0aHJvdWdo
+        IGEgc3lzdGVtIGNhbGxlZCBQYXkgQXMgWW91IEVhcm4gKFBBWUUpIn0seyJp
+        ZCI6InBheS1hbmQtdGF4LXdoZW4td29ya2luZy1pbi1tb3JlLXRoYW4tb25l
+        LWpvYiIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiU2Vjb25kIGpvYiB0YXgg
+        YW5kIHBheSIsImRlc2NyaXB0aW9uIjoiVHdvIGpvYnMgbWVhbnMgdHdvIHNh
+        bGFyaWVzLCBidXQgcmVhZCBvdXIgY2hlY2tsaXN0IHRvIG1ha2Ugc3VyZSB5
+        b3XigJlyZSBwYXlpbmcgdGhlIHJpZ2h0IHRheCBhbmQgeW91IGtub3cgeW91
+        ciByaWdodHMifSx7ImlkIjoidGF4LWFuZC1uYXRpb25hbC1pbnN1cmFuY2Ut
+        d2hlbi15b3VyZS1zZWxmLWVtcGxveWVkIiwidHlwZSI6Imd1aWRlIiwidGl0
+        bGUiOiJUYXggYW5kIE5hdGlvbmFsIEluc3VyYW5jZSB3aGVuIHlvdSdyZSBz
+        ZWxmLWVtcGxveWVkIiwiZGVzY3JpcHRpb24iOiJJZiB5b3XigJlyZSBzZWxm
+        LWVtcGxveWVkLCB5b3UgYXJlIHJlc3BvbnNpYmxlIGZvciBwYXlpbmcgeW91
+        ciBvd24gdGF4IGFuZCBOYXRpb25hbCBJbnN1cmFuY2UifSx7ImlkIjoiYWdl
+        LXJlbGF0ZWQtcGVyc29uYWwtYWxsb3dhbmNlcyIsInR5cGUiOiJndWlkZSIs
+        InRpdGxlIjoiQWdlLXJlbGF0ZWQgcGVyc29uYWwgYWxsb3dhbmNlcyIsImRl
+        c2NyaXB0aW9uIjoiSWYgeW91IHdlcmUgYm9ybiBiZWZvcmUgNiBBcHJpbCAx
+        OTQ4LCB5b3UncmUgcHJvYmFibHkgZ2V0dGluZyBhIGhpZ2hlciB0YXgtZnJl
+        ZSBQZXJzb25hbCBBbGxvd2FuY2UgdGhhbiB5b3VuZ2VyIHRheHBheWVycyJ9
+        XX0=
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:17:18 GMT
+  recorded_at: Wed, 06 May 2015 12:58:56 GMT
 recorded_with: VCR 2.9.2

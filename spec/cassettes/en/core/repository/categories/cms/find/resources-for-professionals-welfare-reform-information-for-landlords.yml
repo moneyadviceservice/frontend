@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/resources-for-professionals-welfare-reform-information-for-landlords.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 2d81b38e-ed49-48f6-b449-31783f1a25ea
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"ca8db5f96fc70c00ec36d732f47b1b57"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2d81b38e-ed49-48f6-b449-31783f1a25ea
+      X-Runtime:
+      - '0.033611'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:59:14 GMT
+      Content-Length:
+      - '1997'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlc291cmNlcy1mb3ItcHJvZmVzc2lvbmFscy13ZWxmYXJlLXJl
+        Zm9ybS1pbmZvcm1hdGlvbi1mb3ItbGFuZGxvcmRzIiwidHlwZSI6ImNhdGVn
+        b3J5IiwidGl0bGUiOiJSZXNvdXJjZXMgZm9yIFByb2Zlc3Npb25hbHMgV2Vs
+        ZmFyZSBSZWZvcm0gSW5mb3JtYXRpb24gZm9yIExhbmRsb3JkcyIsImRlc2Ny
+        aXB0aW9uIjoiVW5pdmVyc2FsIGNyZWRpdCwgY2hhbmdlcyB0byBIb3VzaW5n
+        IEJlbmVmaXQgYW5kIGhvdyB0byBoZWxwIHlvdXIgdGVuYW50cyB0byBtYW5h
+        Z2UgdGhlaXIgb3duIHJlbnQgcGF5bWVudHMuIiwicGFyZW50X2lkIjoicmVz
+        b3VyY2VzLWZvci1wcm9mZXNzaW9uYWxzIiwidGhpcmRfbGV2ZWxfbmF2aWdh
+        dGlvbiI6ZmFsc2UsImNvbnRlbnRzIjpbeyJpZCI6Imhvdy1pcy1ob3VzaW5n
+        LWJlbmVmaXQtY2hhbmdpbmctbGFuZGh1YiIsInR5cGUiOiJjb3Jwb3JhdGUi
+        LCJ0aXRsZSI6IkhvdyBIb3VzaW5nIEJlbmVmaXQgaXMgY2hhbmdpbmciLCJk
+        ZXNjcmlwdGlvbiI6IllvdXIgdGVuYW50cyB3aWxsIG5lZWQgdG8gc3RhcnQg
+        bWFuYWdpbmcgdGhlaXIgb3duIHJlbnQgcGF5bWVudHMgLSBpbmZvcm1hdGlv
+        biBmb3IgbGFuZGxvcmRzIGFib3V0IHRoZSBjaGFuZ2VzIn0seyJpZCI6Imhl
+        bHBpbmcteW91ci10ZW5hbnRzLWdldC1hLWJhbmstYWNjb3VudC1sYW5kaHVi
+        IiwidHlwZSI6ImNvcnBvcmF0ZSIsInRpdGxlIjoiSGVscGluZyB5b3VyIHRl
+        bmFudHMgdG8gZ2V0IGEgYmFuayBhY2NvdW50IiwiZGVzY3JpcHRpb24iOiJX
+        ZSBoYXZlIGEgcmFuZ2Ugb2YgcmVzb3VyY2VzIHlvdXIgdGVuYW50cyBjYW4g
+        dXNlIHRvIGhlbHAgdGhlbSBjaG9vc2UgYW5kIG9wZW4gYW4gYWNjb3VudCB0
+        aGF04oCZcyByaWdodCBmb3IgdGhlbSJ9LHsiaWQiOiJoZWxwaW5nLXRlbmFu
+        dHMtdG8tbWFuYWdlLXRoZWlyLW93bi1yZW50LXBheW1lbnRzLWxhbmRodWIi
+        LCJ0eXBlIjoiY29ycG9yYXRlIiwidGl0bGUiOiJIZWxwaW5nIHRlbmFudHMg
+        dG8gbWFuYWdlIHRoZWlyIG93biByZW50IHBheW1lbnRzIiwiZGVzY3JpcHRp
+        b24iOiJJZiB5b3VyIHRlbmFudHMgYXJlIGFib3V0IHRvIHN0YXJ0IHBheWlu
+        ZyB0aGVpciBvd24gcmVudCwgaGVyZSBhcmUgc29tZSByZXNvdXJjZXMgdG8g
+        c3VwcG9ydCB0aGVtIHdpdGggYnVkZ2V0aW5nIG9yIHNldHRpbmcgdXAgdGhl
+        aXIgcmVudCBwYXltZW50cyJ9LHsiaWQiOiJ1bml2ZXJzYWwtY3JlZGl0LWlu
+        Zm9ybWF0aW9uLWZvci1sYW5kbG9yZHMtbGFuZGh1YiIsInR5cGUiOiJjb3Jw
+        b3JhdGUiLCJ0aXRsZSI6IlVuaXZlcnNhbCBDcmVkaXQgLSBpbmZvcm1hdGlv
+        biBmb3IgbGFuZGxvcmRzIiwiZGVzY3JpcHRpb24iOiJJZiB5b3UncmUgYSBs
+        YW5kbG9yZCB3aXRoIHRlbmFudHMgb24gSG91c2luZyBCZW5lZml0IGhlcmUn
+        cyB3aGF0IHdlIHRoaW5rIHlvdSBtaWdodCBuZWVkIHRvIGtub3cgYWJvdXQg
+        VW5pdmVyc2FsIENyZWRpdCJ9LHsiaWQiOiJ3aGF0LXlvdS1uZWVkLXRvLWtu
+        b3ctaWYtYS10ZW5hbnQtaXMtY2xhaW1pbmctdW5pdmVyc2FsLWNyZWRpdC1s
+        YW5kaHViIiwidHlwZSI6ImNvcnBvcmF0ZSIsInRpdGxlIjoiV2hhdCB5b3Ug
+        bmVlZCB0byBrbm93IGlmIGEgdGVuYW50IGlzIGNsYWltaW5nIFVuaXZlcnNh
+        bCBDcmVkaXQiLCJkZXNjcmlwdGlvbiI6IkluZm9ybWF0aW9uICB0byBoZWxw
+        IHlvdSB3aGVuIHRhbGtpbmcgd2l0aCB0ZW5hbnRzIHdobyBhcmUgbW92aW5n
+        IG9udG8gVW5pdmVyc2FsIENyZWRpdCJ9LHsiaWQiOiJ3aGF0LXRvLWRvLWlm
+        LXlvdXItdGVuYW50LWlzLWluLWFycmVhcnMtbGFuZGh1YiIsInR5cGUiOiJj
+        b3Jwb3JhdGUiLCJ0aXRsZSI6IldoYXQgdG8gZG8gaWYgeW91ciB0ZW5hbnQg
+        aXMgaW4gYXJyZWFycyIsImRlc2NyaXB0aW9uIjoiV2hhdCB0byBkbyBpZiB5
+        b3VyIHRlbmFudHMgaGF2ZSByZW50IGFycmVhcnMsIGluY2x1ZGluZyBob3cg
+        YW5kIHdoZW4gdGhlIHJlbnQgcGF5bWVudHMgY2FuIGJlIHN3aXRjaGVkIHRv
+        IHRoZSBsYW5kbG9yZCJ9XX0=
+    http_version: 
+  recorded_at: Wed, 06 May 2015 12:59:14 GMT
+recorded_with: VCR 2.9.2

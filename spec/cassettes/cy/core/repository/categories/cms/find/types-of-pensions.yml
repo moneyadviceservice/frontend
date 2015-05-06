@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/categories/types-of-pensions.json
+    uri: http://localhost:3000/cy/categories/types-of-pensions.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      - efdc7c53-6522-4f44-80fc-d246ddda125e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,76 +18,105 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:18:50 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"7672ff9f515098d38a53d50ef47e5fbc"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 81fd190ed3b42d4c41619d3b5d7aba5b
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:18:50 GMT; secure
-      - _session_id=81fd190ed3b42d4c41619d3b5d7aba5b; path=/; secure; HttpOnly
-      - _web_tracking=8659e75080550733f6c84ad094a0ce53; path=/; expires=Wed, 23-Mar-2016
-        17:18:50 GMT; secure
       X-Request-Id:
-      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      - efdc7c53-6522-4f44-80fc-d246ddda125e
       X-Runtime:
-      - '0.028330'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.043056'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:57 GMT
+      Content-Length:
+      - '3121'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"types-of-pensions","title":"Mathau o bensiynau","description":"O
-        gynlluniau cyfraniad diffiniedig a buddion, i bensiynau personol a phensiynau
-        ar gyfer pobl hunangyflogedig.","parent_id":"work-pensions-and-retirement","contents":[{"id":"blwydd-daliadau-a-mathau-eraill-o-incwm-pensiwn","type":"guide","title":"Blwydd-daliadau
-        a mathau eraill o incwm ymddeol","description":"Golwg gyffredinol ar nodweddion,
-        manteision a risgiau gwahanol fathau o flwydd-daliadau a chategor\u00efau
-        eraill o incwm pensiwn"},{"id":"pensiynau-ir-hunangyflogedig","type":"guide","title":"Pensiynau
-        i\u2019r hunangyflogedig","description":"Mae cynilo ar gyfer pensiwn yn peri
-        nifer o heriau os byddwch yn hunangyflogedig, ond mae\u2019n haws cychwyn
-        arni nag y byddech yn meddwl"},{"id":"dewisiadau-buddsoddi-pensiwn-trosolwg","type":"guide","title":"Dewisiadau
-        buddsoddi pensiwn \u2013 trosolwg","description":"Mae\u2019n bwysig ystyried
-        sut y mae eich pensiwn yn cael ei fuddsoddi yn ogystal \u00e2 faint rydych
-        yn ei gynilo iddo"},{"id":"cynlluniau-pensiwn-amlgyflogwr","type":"guide","title":"Cynlluniau
-        pensiwn amlgyflogwr","description":"Mae cynlluniau amlgyflogwr mawr yn anelu
-        at ddarparu pensiynau cost-isel, hyblyg - canfyddwch ragor"},{"id":"pensiynaur-ymddiriedolaeth-cynilion-cyflogaeth-genedlaethol-nest","type":"guide","title":"Pensiynau
-        NEST","description":"Darganfyddwch ragor am NEST, pensiwn isel ei gost y gallech
-        ymuno ag o drwy eich gweithle neu os ydych yn hunangyflogedig"},{"id":"pensiynau-personol","type":"guide","title":"Pensiynau
-        personol","description":"Mae sefydlu pensiwn personol yn syniad da os nad
-        oes gennych bensiwn man gwaith"},{"id":"pensiynau-buddsoddi-personol-sippau","type":"guide","title":"Pensiynau
-        buddsoddi personol (SIPPau)","description":"Darganfyddwch am SIPPau (pensiynau
-        buddsoddi personol) ac a fyddai\u2019r math hwn o bensiwn yn gweithio i chi"},{"id":"pensiynau-cyfranddeiliaid","type":"guide","title":"Pensiynau
-        cyfranddeiliaid","description":"Mae\u2019r costau sy\u2019n gysylltiedig \u00e2
-        phensiynau cyfranddeiliaid yn isel a gallant gael eu cynnig gan gyflogwr neu
-        gallwch gychwyn un eich hun"},{"id":"cynlluniau-buddion-wediu-diffinio","type":"guide","title":"Cynlluniau
-        buddion wedi\u2019u diffinio","description":"Mewn cynllun pensiwn buddion
-        wedi\u2019u diffinio neu ar sail cyflog, mae eich incwm ar \u00f4l ymddeol
-        yn gysylltiedig \u00e2\u2019ch enillion pan roeddech yn gweithio"},{"id":"cynlluniau-pensiwn-cyfraniadau-wediu-diffinio","type":"guide","title":"Cynlluniau
-        ymddeol cyfraniadau wedi\u2019u diffinio","description":"Mewn cynllun pensiwn
-        cyfraniadau wedi\u2019u diffinio neu bryniant arian, rydych yn casglu cronfa
-        i\u2019w defnyddio i brynu incwm ar \u00f4l ymddeol"},{"id":"pensiynau-personol-grwp","type":"guide","title":"Pensiynau
-        personol gr\u0175p","description":"Math o gynllun cyfraniadau wedi\u2019u
-        diffinio a gynigir gan rai cyflogwyr yw pensiwn personol gr\u0175p"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InR5cGVzLW9mLXBlbnNpb25zIiwidHlwZSI6ImNhdGVnb3J5Iiwi
+        dGl0bGUiOiJNYXRoYXUgbyBiZW5zaXluYXUiLCJkZXNjcmlwdGlvbiI6Ik8g
+        Z3lubGx1bmlhdSBjeWZyYW5pYWQgZGlmZmluaWVkaWcgYSBidWRkaW9uLCBp
+        IGJlbnNpeW5hdSBwZXJzb25vbCBhIHBoZW5zaXluYXUgYXIgZ3lmZXIgcG9i
+        bCBodW5hbmd5ZmxvZ2VkaWcuIiwicGFyZW50X2lkIjoid29yay1wZW5zaW9u
+        cy1hbmQtcmV0aXJlbWVudCIsInRoaXJkX2xldmVsX25hdmlnYXRpb24iOmZh
+        bHNlLCJjb250ZW50cyI6W3siaWQiOiJjeW5sbHVuaWF1LXBlbnNpd24tYW1s
+        Z3lmbG9nd3IiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkN5bmxsdW5pYXUg
+        cGVuc2l3biBhbWxneWZsb2d3ciIsImRlc2NyaXB0aW9uIjoiTWFlIGN5bmxs
+        dW5pYXUgYW1sZ3lmbG9nd3IgbWF3ciB5biBhbmVsdSBhdCBkZGFycGFydSBw
+        ZW5zaXluYXUgY29zdC1pc2VsLCBoeWJseWcgLSBjYW5meWRkd2NoIHJhZ29y
+        In0seyJpZCI6InBlbnNpeW5hdS1idWRkc29kZGktcGVyc29ub2wtc2lwcGF1
+        IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5zaXluYXUgYnVkZHNvZGRp
+        IHBlcnNvbm9sIChTSVBQYXUpIiwiZGVzY3JpcHRpb24iOiJEYXJnYW5meWRk
+        d2NoIGFtIFNJUFBhdSAocGVuc2l5bmF1IGJ1ZGRzb2RkaSBwZXJzb25vbCkg
+        YWMgYSBmeWRkYWnigJlyIG1hdGggaHduIG8gYmVuc2l3biB5biBnd2VpdGhp
+        byBpIGNoaSJ9LHsiaWQiOiJwZW5zaXluYXUtaXItaHVuYW5neWZsb2dlZGln
+        IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5zaXluYXUgaeKAmXIgaHVu
+        YW5neWZsb2dlZGlnIiwiZGVzY3JpcHRpb24iOiJNYWUgY3luaWxvIGFyIGd5
+        ZmVyIHBlbnNpd24geW4gcGVyaSBuaWZlciBvIGhlcmlhdSBvcyBieWRkd2No
+        IHluIGh1bmFuZ3lmbG9nZWRpZywgb25kIG1hZeKAmW4gaGF3cyBjeWNod3lu
+        IGFybmkgbmFnIHkgYnlkZGVjaCB5biBtZWRkd2wifSx7ImlkIjoicGVuc2l5
+        bmF1LXBlcnNvbm9sIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5zaXlu
+        YXUgcGVyc29ub2wiLCJkZXNjcmlwdGlvbiI6Ik1hZSBzZWZ5ZGx1IHBlbnNp
+        d24gcGVyc29ub2wgeW4gc3luaWFkIGRhIG9zIG5hZCBvZXMgZ2VubnljaCBi
+        ZW5zaXduIG1hbiBnd2FpdGgifSx7ImlkIjoicGVuc2l5bmF1ci15bWRkaXJp
+        ZWRvbGFldGgtY3luaWxpb24tY3lmbG9nYWV0aC1nZW5lZGxhZXRob2wtbmVz
+        dCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiUGVuc2l5bmF1IE5FU1QiLCJk
+        ZXNjcmlwdGlvbiI6IkRhcmdhbmZ5ZGR3Y2ggcmFnb3IgYW0gTkVTVCwgcGVu
+        c2l3biBpc2VsIGVpIGdvc3QgeSBnYWxsZWNoIHltdW5vIGFnIG8gZHJ3eSBl
+        aWNoIGd3ZWl0aGxlIG5ldSBvcyB5ZHljaCB5biBodW5hbmd5ZmxvZ2VkaWci
+        fSx7ImlkIjoiY3lubGx1bmlhdS1wZW5zaXduLWN5ZnJhbmlhZGF1LXdlZGl1
+        LWRpZmZpbmlvIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJDeW5sbHVuaWF1
+        IHltZGRlb2wgY3lmcmFuaWFkYXUgd2VkaeKAmXUgZGlmZmluaW8iLCJkZXNj
+        cmlwdGlvbiI6Ik1ld24gY3lubGx1biBwZW5zaXduIGN5ZnJhbmlhZGF1IHdl
+        ZGnigJl1IGRpZmZpbmlvIG5ldSBicnluaWFudCBhcmlhbiwgcnlkeWNoIHlu
+        IGNhc2dsdSBjcm9uZmEgaeKAmXcgZGVmbnlkZGlvIGkgYnJ5bnUgaW5jd20g
+        YXIgw7RsIHltZGRlb2wifSx7ImlkIjoicGVuc2l5bmF1LWN5ZnJhbmRkZWls
+        aWFpZCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiUGVuc2l5bmF1IGN5ZnJh
+        bmRkZWlsaWFpZCIsImRlc2NyaXB0aW9uIjoiTWFl4oCZciBjb3N0YXUgc3ni
+        gJluIGd5c3lsbHRpZWRpZyDDoiBwaGVuc2l5bmF1IGN5ZnJhbmRkZWlsaWFp
+        ZCB5biBpc2VsIGEgZ2FsbGFudCBnYWVsIGV1IGN5bm5pZyBnYW4gZ3lmbG9n
+        d3IgbmV1IGdhbGx3Y2ggZ3ljaHd5biB1biBlaWNoIGh1biJ9LHsiaWQiOiJj
+        eW5sbHVuaWF1LWJ1ZGRpb24td2VkaXUtZGlmZmluaW8iLCJ0eXBlIjoiZ3Vp
+        ZGUiLCJ0aXRsZSI6IkVzYm9uaW8gY3lubGx1bmlhdSBwZW5zaXduIGJ1ZGRp
+        b24gZGlmZmluaWVkaWciLCJkZXNjcmlwdGlvbiI6IkN5bmxsdW4gcGVuc2l3
+        biBidWRkaW9uIGRpZmZpbmllZGlnIHl3IHVuIHBhbiBmeWRkIHkgc3dtIGEg
+        ZGVsaXIgaSBjaGkgeW4gY2FlbCBlaSBvc29kIHRyd3kgZGRlZm55ZGRpbyBm
+        Zm9ybWl3bGEgc3nigJluIGN5ZnJpZm8gZmFpbnQgbyBmbHlueWRkb2VkZCB5
+        ciB5ZHljaCB3ZWRpIGd3ZWl0aGlvIGHigJlyIGN5ZmxvZyB5ciB5ZHljaCB3
+        ZWRpIGVpIGVubmlsbCB5biBoeXRyYWNoIG5hIGd3ZXJ0aCBlaWNoIGJ1ZGRz
+        b2RkaWFkYXUgIn0seyJpZCI6ImRld2lzaWFkYXUtYnVkZHNvZGRpLXBlbnNp
+        d24tdHJvc29sd2ciLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkRld2lzaWFk
+        YXUgYnVkZHNvZGRpIHBlbnNpd24g4oCTIHRyb3NvbHdnIiwiZGVzY3JpcHRp
+        b24iOiJNYWXigJluIGJ3eXNpZyB5c3R5cmllZCBzdXQgeSBtYWUgZWljaCBw
+        ZW5zaXduIHluIGNhZWwgZWkgZnVkZHNvZGRpIHluIG9neXN0YWwgw6IgZmFp
+        bnQgcnlkeWNoIHluIGVpIGd5bmlsbyBpZGRvIn0seyJpZCI6InBlbnNpeW5h
+        dS1wZXJzb25vbC1ncndwIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5z
+        aXluYXUgcGVyc29ub2wgZ3LFtXAiLCJkZXNjcmlwdGlvbiI6Ik1hdGggbyBn
+        eW5sbHVuIGN5ZnJhbmlhZGF1IHdlZGnigJl1IGRpZmZpbmlvIGEgZ3luaWdp
+        ciBnYW4gcmFpIGN5ZmxvZ3d5ciB5dyBwZW5zaXduIHBlcnNvbm9sIGdyxbVw
+        In0seyJpZCI6InlyLW9wc2l5bmF1LWFyLWd5ZmVyLWRlZm55ZGRpb2NoLWNy
+        b25mYS1iZW5zaXduIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJZciBvcHNp
+        eW5hdSBhciBneWZlciBkZWZueWRkaW/igJljaCBjcm9uZmEgYmVuc2l3biIs
+        ImRlc2NyaXB0aW9uIjoiQ3ltZXJ3Y2ggZWljaCBhbXNlciBpIGRkZWFsbCBl
+        aWNoIG9wc2l5bmF1IGFyIGd5ZmVyIGN5bXJ5ZCBhcmlhbiBvJ2NoIGNyb25m
+        YSBiZW5zaXduIn0seyJpZCI6ImN5bXJ5ZC1laWNoLWNyb25mYS1iZW5zaXdu
+        LWd5ZmFuLWZlbC1hcmlhbiIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ3lt
+        cnlkIGVpY2ggY3JvbmZhIGJlbnNpd24gZ3lmYW4gZmVsIGFyaWFuICIsImRl
+        c2NyaXB0aW9uIjoiIn1dfQ==
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:18:51 GMT
+  recorded_at: Wed, 06 May 2015 12:58:57 GMT
 recorded_with: VCR 2.9.2

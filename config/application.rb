@@ -10,6 +10,7 @@ require 'sprockets/railtie'
 require_relative '../lib/core_ext'
 require_relative '../lib/tool_mount_point'
 require_relative '../lib/engine_mount_point'
+require_relative '../lib/landing_page_paths'
 
 Bundler.require(*Rails.groups(assets: %w(development test)))
 

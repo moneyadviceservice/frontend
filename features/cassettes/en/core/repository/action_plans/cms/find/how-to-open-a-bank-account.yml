@@ -2,16 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/action_plans/how-to-open-a-bank-account.json
+    uri: http://localhost:3000/en/action_plans/how-to-open-a-bank-account.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 98282) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 1dd1d727-b43d-4903-a86e-7761a292c1b3
+      - 5f96895c-5f7a-4119-9ff3-b9562408f545
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,85 +18,175 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Wed, 17 Dec 2014 13:50:48 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - <https://www.moneyadviceservice.org.uk/en/action_plans/how-to-open-a-bank-account>
-        rel="alternate"; hreflang="en-GB"; title="Action plan - How to open a bank
-        account", <https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-agor-cyfrif-banc>
-        rel="alternate"; hreflang="cy-GB"; title="Cynllun gweithredu - Sut i agor
-        cyfrif banc"
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"54e24d930c05b90e1bdd395721ddbc67"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 6c71c12246c1ff9a04ae8587d008d606
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 17-Dec-2015 13:50:48 GMT; secure
-      - _session_id=6c71c12246c1ff9a04ae8587d008d606; path=/; secure; HttpOnly
-      - _web_tracking=426f7830a03d06467e93b5b7f0a9a0a2; path=/; expires=Thu, 17-Dec-2015
-        13:50:48 GMT; secure
       X-Request-Id:
-      - 1dd1d727-b43d-4903-a86e-7761a292c1b3
+      - 5f96895c-5f7a-4119-9ff3-b9562408f545
       X-Runtime:
-      - '0.031720'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.092483'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:52:33 GMT
+      Content-Length:
+      - '6283'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"how-to-open-a-bank-account","title":"Action plan - How to open
-        a bank account","description":"Learn how to open the most suitable bank account
-        for you. View this action plan to compare bank accounts and select the most
-        appropriate option for you.","body":"<p class=\"intro\"><img src=\"/images/new_action_plan_icon.jpg\"/>Follow
-        these steps to choose and open a bank account that''s right for you. </p><div
-        class=\"action-item\"><h3>Compare accounts to get the best one for you </h3><div
-        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Fees, charges and
-        interest vary a lot between bank accounts so it''s important to choose an
-        account that suits the way you manage your money. </p></div><div class=\"how\"><h4>How?
-        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-choose-the-right-bank-account\">Check
-        our guide How to choose the right bank account</a></li><li><a title=\"Compare
-        current accounts\" href=\"https://compare.moneyadviceservice.org.uk/currentaccounts/Step1?language=en\">Use
-        our unbiased current account comparison table to compare the cost of accounts\u00a0</a></li></ul></div></div></div><div
-        class=\"action-item\"><h3>Decide whether you want a joint or a single account
-        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>Joint
-        accounts can be a convenient way to manage shared expenses but there are risks
-        involved, especially if one of you has a poor credit history. </p></div><div
-        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/should-we-manage-money-jointly-or-separately\">Check
-        our guide Should you manage money jointly or separately? </a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/joint-accounts\">See
-        our guide Joint accounts </a></li></ul></div></div></div><div class=\"action-item\"><h3>Check
-        your credit report </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
-        </h4><p>If you have a poor credit history, the bank can turn down your application.
-        It''s a good idea to have any errors on your report corrected before the bank
-        runs their credit checks. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a
-        href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-check-your-credit-report\">Read
-        our guide How to check your credit report </a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating\">Find
-        out how to improve your credit rating </a></li></ul></div></div></div><div
-        class=\"action-item\"><h3>Get documents ready for the bank''s identity check
-        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>All banks
-        will ask for proof of your identity and address. You can speed things up by
-        having these documents to hand when you apply for your account. </p></div><div
-        class=\"how\"><h4>How? </h4><p>If you don''t have the exact documents the
-        bank asks for, don''t worry. Talk to someone at the bank and they will tell
-        you what alternative letters or documents you can provide. </p></div></div></div>","categories":["running-a-bank-account"]}'
-    http_version:
-  recorded_at: Wed, 17 Dec 2014 13:50:48 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkFjdGlvbiBwbGFuIOKAkyBIb3cgdG8gb3BlbiBhIGJhbmsg
+        YWNjb3VudCIsInNsdWciOiJob3ctdG8tb3Blbi1hLWJhbmstYWNjb3VudCIs
+        ImZ1bGxfcGF0aCI6Ii9ob3ctdG8tb3Blbi1hLWJhbmstYWNjb3VudCIsIm1l
+        dGFfZGVzY3JpcHRpb24iOiJMZWFybiBob3cgdG8gb3BlbiB0aGUgbW9zdCBz
+        dWl0YWJsZSBiYW5rIGFjY291bnQgZm9yIHlvdS4gVmlldyB0aGlzIGFjdGlv
+        biBwbGFuIHRvIGNvbXBhcmUgYmFuayBhY2NvdW50cyBhbmQgc2VsZWN0IHRo
+        ZSBtb3N0IGFwcHJvcHJpYXRlIG9wdGlvbiBmb3IgeW91LiIsIm1ldGFfdGl0
+        bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6WyJydW5uaW5nLWEtYmFuay1hY2Nv
+        dW50Il0sImxheW91dF9pZGVudGlmaWVyIjoiYWN0aW9uX3BsYW4iLCJyZWxh
+        dGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W10sInBv
+        cHVsYXJfbGlua3MiOlt7InRpdGxlIjoiRXN0aW1hdGUgeW91ciBvdmVyYWxs
+        IGNvc3Qgb2YgYnV5aW5nIGEgaG91c2UgYW5kIG1vdmluZyIsInBhdGgiOiIv
+        ZW4vYXJ0aWNsZXMvZXN0aW1hdGUteW91ci1vdmVyYWxsLWJ1eWluZy1hbmQt
+        bW92aW5nLWNvc3RzIn0seyJ0aXRsZSI6IkJlbmVmaXRzIHlvdSBhcmUgZW50
+        aXRsZWQgdG8gd2hlbiBoYXZpbmcgYSBiYWJ5IiwicGF0aCI6Ii9lbi9hcnRp
+        Y2xlcy9iZW5lZml0cy1hbmQtZW50aXRsZW1lbnRzLXRvLWNsYWltLXdoZW4t
+        eW91LWhhdmUtYS1iYWJ5In0seyJ0aXRsZSI6IkZpcnN0LXRpbWUgaG9tZSBi
+        dXllciBndWlkZSIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvZmlyc3QtdGltZS1i
+        dXllci1tb25leS10aXBzIn1dLCJyZWxhdGVkX2xpbmtzIjpbeyJ0aXRsZSI6
+        Ik1ha2luZyBwaG9uZSBhbmQgb25saW5lIGJhbmsgdHJhbnNmZXJzIiwicGF0
+        aCI6Ii9lbi9hcnRpY2xlcy9tYWtpbmctcGhvbmUtb3Itb25saW5lLXRyYW5z
+        ZmVycyJ9LHsidGl0bGUiOiJQYXltZW50cyBpbnRvIHlvdXIgYmFuayBhY2Nv
+        dW50IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9wYXltZW50cy1pbnRvLXlvdXIt
+        YmFuay1hY2NvdW50In0seyJ0aXRsZSI6IkZpbmRpbmcgdGhlIGJlc3QgZGVh
+        bHMgd2l0aCBwcmljZSBjb21wYXJpc29uIHdlYnNpdGVzIiwicGF0aCI6Ii9l
+        bi9hcnRpY2xlcy9wcmljZS1jb21wYXJpc29uLXNpdGVzLWd1aWRlIn1dLCJw
+        cmV2aW91c19saW5rIjp7InRpdGxlIjoiRmluYW5jaWFsIFNlcnZpY2VzIENv
+        bXBlbnNhdGlvbiBTY2hlbWUiLCJwYXRoIjoiL2VuL2FydGljbGVzL3RoZS1m
+        aW5hbmNpYWwtc2VydmljZXMtY29tcGVuc2F0aW9uLXNjaGVtZS0tLXF1aWNr
+        LWd1aWRlIn0sIm5leHRfbGluayI6eyJ0aXRsZSI6IkFjdGlvbiBwbGFuIOKA
+        kyBIb3cgdG8gc3dpdGNoIGJhbmsgYWNjb3VudHMiLCJwYXRoIjoiL2VuL2Fy
+        dGljbGVzL2hvdy10by1zd2l0Y2gtYmFuay1hY2NvdW50cyJ9fSwiYmxvY2tz
+        IjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2Nw
+        XHUwMDNlXHUwMDNjc3Ryb25nXHUwMDNlRm9sbG93IHRoZXNlIHN0ZXBzIHRv
+        IGNob29zZSBhbmQgb3BlbiBhIGJhbmsgYWNjb3VudCB0aGF04oCZcyByaWdo
+        dCBmb3IgeW91Llx1MDAzYy9zdHJvbmdcdTAwM2VcdTAwM2MvcFx1MDAzZVxu
+        XG5cdTAwM2NoMyBpZD1cImNvbXBhcmUtYWNjb3VudHMtdG8tZ2V0LXRoZS1i
+        ZXN0LW9uZS1mb3IteW91XCJcdTAwM2VDb21wYXJlIGFjY291bnRzIHRvIGdl
+        dCB0aGUgYmVzdCBvbmUgZm9yIHlvdVx1MDAzYy9oM1x1MDAzZVxuXG5cdTAw
+        M2NoNCBpZD1cIndoeVwiXHUwMDNlV2h5P1x1MDAzYy9oNFx1MDAzZVxuXG5c
+        dTAwM2NwXHUwMDNlRmVlcywgY2hhcmdlcyBhbmQgaW50ZXJlc3QgdmFyeSBh
+        IGxvdCBiZXR3ZWVuIGJhbmsgYWNjb3VudHMgc28gaXTigJlzIGltcG9ydGFu
+        dCB0byBjaG9vc2UgYW4gYWNjb3VudCB0aGF0IHN1aXRzIHRoZSB3YXkgeW91
+        IG1hbmFnZSB5b3VyIG1vbmV5Llx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY2g0
+        IGlkPVwiaG93XCJcdTAwM2VIb3c/XHUwMDNjL2g0XHUwMDNlXG5cblx1MDAz
+        Y3VsXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlXHUwMDNjYSBocmVmPVwiaHR0
+        cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9lbi9hcnRpY2xl
+        cy9ob3ctdG8tY2hvb3NlLXRoZS1yaWdodC1iYW5rLWFjY291bnRcIlx1MDAz
+        ZUNoZWNrIG91ciBndWlkZSBIb3cgdG8gY2hvb3NlIHRoZSByaWdodCBiYW5r
+        IGFjY291bnRcdTAwM2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuXHUwMDNj
+        L3VsXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VDb21wYXJpc29uIHdlYnNpdGVz
+        IGFyZSBhIGdvb2Qgc3RhcnRpbmcgcG9pbnQgZm9yIGFueW9uZSB0cnlpbmcg
+        dG8gZmluZCBhIGN1cnJlbnQgYWNjb3VudCB0YWlsb3JlZCB0byB0aGVpciBu
+        ZWVkcy5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlV2UgcmVjb21t
+        ZW5kIHRoZSBmb2xsb3dpbmcgd2Vic2l0ZXMgZm9yIGNvbXBhcmluZyBjdXJy
+        ZW50IGFjY291bnRzOlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNl
+        XG4gIFx1MDAzY2xpXHUwMDNlXHUwMDNjYSBocmVmPVwiaHR0cDovL3d3dy5t
+        b25leXNhdmluZ2V4cGVydC5jb20vYmFua2luZy9jb21wYXJlLWJlc3QtYmFu
+        ay1hY2NvdW50c1wiIHRhcmdldD1cIl9ibGFua1wiXHUwMDNlTW9uZXkgU2F2
+        aW5nIEV4cGVydFx1MDAzYy9hXHUwMDNlKiAgIFx1MDAzY2EgaHJlZj1cImh0
+        dHA6Ly9tb25leS5nb2NvbXBhcmUuY29tL2N1cnJlbnRhY2NvdW50c1wiIHRh
+        cmdldD1cIl9ibGFua1wiXHUwMDNlR28gQ29tcGFyZVx1MDAzYy9hXHUwMDNl
+        KiAgIFx1MDAzY2EgaHJlZj1cImh0dHA6Ly93d3cubW9uZXlzdXBlcm1hcmtl
+        dC5jb20vY3VycmVudC1hY2NvdW50cy9zZWFyY2gvcmVzdWx0cy8/Z29hbD1D
+        VVJfSU5URVJFU1RcIiB0YXJnZXQ9XCJfYmxhbmtcIlx1MDAzZU1vbmV5IFN1
+        cGVybWFya2V0XHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2VcbiAgXHUw
+        MDNjbGlcdTAwM2VcdTAwM2NhIGhyZWY9XCJodHRwOi8vd3d3LnVzd2l0Y2gu
+        Y29tL2N1cnJlbnQtYWNjb3VudHMvYmFkLWNyZWRpdC9cIlx1MDAzZXVTd2l0
+        Y2hcdTAwM2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuXHUwMDNjL3VsXHUw
+        MDNlXG5cblx1MDAzY3BcdTAwM2VcdTAwM2NzdHJvbmdcdTAwM2VSZW1lbWJl
+        cjpcdTAwM2Mvc3Ryb25nXHUwMDNlXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNj
+        dWxcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VDb21wYXJpc29uIHdlYnNpdGVz
+        IHdvbuKAmXQgYWxsIGdpdmUgeW91IHRoZSBzYW1lIHJlc3VsdHMsIHNvIG1h
+        a2Ugc3VyZSB5b3UgdXNlIG1vcmUgdGhhbiBvbmUgc2l0ZSBiZWZvcmUgbWFr
+        aW5nIGEgZGVjaXNpb24uXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUw
+        MDNlSXQgaXMgYWxzbyBpbXBvcnRhbnQgdG8gZG8gc29tZSByZXNlYXJjaCBp
+        bnRvIHRoZSB0eXBlIG9mIHByb2R1Y3QgYW5kIGZlYXR1cmVzIHlvdSBuZWVk
+        IGJlZm9yZSBtYWtpbmcgYSBwdXJjaGFzZSBvciBjaGFuZ2luZyBzdXBwbGll
+        ci5cdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VGaW5kIG91dCBt
+        b3JlIGluIG91ciBcdTAwM2NhIGhyZWY9XCJodHRwczovL3d3dy5tb25leWFk
+        dmljZXNlcnZpY2Uub3JnLnVrL2VuL2FydGljbGVzL3ByaWNlLWNvbXBhcmlz
+        b24tc2l0ZXMtZ3VpZGVcIiB0YXJnZXQ9XCJfYmxhbmtcIlx1MDAzZWd1aWRl
+        IHRvIGNvbXBhcmlzb24gc2l0ZXNcdTAwM2MvYVx1MDAzZS5cdTAwM2MvbGlc
+        dTAwM2Vcblx1MDAzYy91bFx1MDAzZVxuXG5cdTAwM2NoMyBpZD1cImRlY2lk
+        ZS13aGV0aGVyLXlvdS13YW50LWEtam9pbnQtb3ItYS1zaW5nbGUtYWNjb3Vu
+        dFwiXHUwMDNlRGVjaWRlIHdoZXRoZXIgeW91IHdhbnQgYSBqb2ludCBvciBh
+        IHNpbmdsZSBhY2NvdW50XHUwMDNjL2gzXHUwMDNlXG5cblx1MDAzY2g0IGlk
+        PVwid2h5LTFcIlx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2VcblxuXHUwMDNj
+        cFx1MDAzZUpvaW50IGFjY291bnRzIGNhbiBiZSBhIGNvbnZlbmllbnQgd2F5
+        IHRvIG1hbmFnZSBzaGFyZWQgZXhwZW5zZXMgYnV0IHRoZXJlIGFyZSByaXNr
+        cyBpbnZvbHZlZCwgZXNwZWNpYWxseSBpZiBvbmUgb2YgeW91IGhhcyBhIHBv
+        b3IgY3JlZGl0IGhpc3RvcnkuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjaDQg
+        aWQ9XCJob3ctMVwiXHUwMDNlSG93P1x1MDAzYy9oNFx1MDAzZVxuXG5cdTAw
+        M2N1bFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cImh0
+        dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0aWNs
+        ZXMvc2hvdWxkLXdlLW1hbmFnZS1tb25leS1qb2ludGx5LW9yLXNlcGFyYXRl
+        bHlcIlx1MDAzZUNoZWNrIG91ciBndWlkZSBTaG91bGQgeW91IG1hbmFnZSBt
+        b25leSBqb2ludGx5IG9yIHNlcGFyYXRlbHk/XHUwMDNjL2FcdTAwM2VcdTAw
+        M2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VcdTAwM2NhIGhyZWY9XCJo
+        dHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2FydGlj
+        bGVzL2pvaW50LWFjY291bnRzXCJcdTAwM2VTZWUgb3VyIGd1aWRlIEpvaW50
+        IGFjY291bnRzXHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2Vcblx1MDAz
+        Yy91bFx1MDAzZVxuXG5cdTAwM2NoMyBpZD1cImNoZWNrLXlvdXItY3JlZGl0
+        LXJlcG9ydFwiXHUwMDNlQ2hlY2sgeW91ciBjcmVkaXQgcmVwb3J0XHUwMDNj
+        L2gzXHUwMDNlXG5cblx1MDAzY2g0IGlkPVwid2h5LTJcIlx1MDAzZVdoeT9c
+        dTAwM2MvaDRcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUlmIHlvdSBoYXZlIGEg
+        cG9vciBjcmVkaXQgaGlzdG9yeSwgdGhlIGJhbmsgY2FuIHR1cm4gZG93biB5
+        b3VyIGFwcGxpY2F0aW9uLiBJdOKAmXMgYSBnb29kIGlkZWEgdG8gaGF2ZSBh
+        bnkgZXJyb3JzIG9uIHlvdXIgcmVwb3J0IGNvcnJlY3RlZCBiZWZvcmUgdGhl
+        IGJhbmsgcnVucyB0aGVpciBjcmVkaXQgY2hlY2tzLlx1MDAzYy9wXHUwMDNl
+        XG5cblx1MDAzY2g0IGlkPVwiaG93LTJcIlx1MDAzZUhvdz9cdTAwM2MvaDRc
+        dTAwM2VcblxuXHUwMDNjdWxcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VcdTAw
+        M2NhIGhyZWY9XCJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3Jn
+        LnVrL2VuL2FydGljbGVzL2hvdy10by1jaGVjay15b3VyLWNyZWRpdC1yZXBv
+        cnRcIlx1MDAzZVJlYWQgb3VyIGd1aWRlIEhvdyB0byBjaGVjayB5b3VyIGNy
+        ZWRpdCByZXBvcnRcdTAwM2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuICBc
+        dTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3Lm1vbmV5
+        YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0aWNsZXMvaG93LXRvLWltcHJv
+        dmUteW91ci1jcmVkaXQtcmF0aW5nXCJcdTAwM2VGaW5kIG91dCBob3cgdG8g
+        aW1wcm92ZSB5b3VyIGNyZWRpdCByYXRpbmdcdTAwM2MvYVx1MDAzZVx1MDAz
+        Yy9saVx1MDAzZVxuXHUwMDNjL3VsXHUwMDNlXG5cblx1MDAzY2gzIGlkPVwi
+        Z2V0LWRvY3VtZW50cy1yZWFkeS1mb3ItdGhlLWJhbmtzLWlkZW50aXR5LWNo
+        ZWNrXCJcdTAwM2VHZXQgZG9jdW1lbnRzIHJlYWR5IGZvciB0aGUgYmFua+KA
+        mXMgaWRlbnRpdHkgY2hlY2tcdTAwM2MvaDNcdTAwM2VcblxuXHUwMDNjaDQg
+        aWQ9XCJ3aHktM1wiXHUwMDNlV2h5P1x1MDAzYy9oNFx1MDAzZVxuXG5cdTAw
+        M2NwXHUwMDNlQWxsIGJhbmtzIHdpbGwgYXNrIGZvciBwcm9vZiBvZiB5b3Vy
+        IGlkZW50aXR5IGFuZCBhZGRyZXNzLiBZb3UgY2FuIHNwZWVkIHRoaW5ncyB1
+        cCBieSBoYXZpbmcgdGhlc2UgZG9jdW1lbnRzIHRvIGhhbmQgd2hlbiB5b3Ug
+        YXBwbHkgZm9yIHlvdXIgYWNjb3VudC5cdTAwM2MvcFx1MDAzZVxuXG5cdTAw
+        M2NoNCBpZD1cImhvdy0zXCJcdTAwM2VIb3c/XHUwMDNjL2g0XHUwMDNlXG5c
+        blx1MDAzY3BcdTAwM2VJZiB5b3UgZG9u4oCZdCBoYXZlIHRoZSBleGFjdCBk
+        b2N1bWVudHMgdGhlIGJhbmsgYXNrcyBmb3IsIGRvbuKAmXQgd29ycnkuIFRh
+        bGsgdG8gc29tZW9uZSBhdCB0aGUgYmFuayBhbmQgdGhleSB3aWxsIHRlbGwg
+        eW91IHdoYXQgYWx0ZXJuYXRpdmUgbGV0dGVycyBvciBkb2N1bWVudHMgeW91
+        IGNhbiBwcm92aWRlLlx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0Ijoi
+        MjAxNC0xMi0xN1QxNDowNTo0Mi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTUt
+        MDMtMjdUMTA6MDQ6NDMuMDAwWiJ9XSwidHJhbnNsYXRpb25zIjpbeyJsYWJl
+        bCI6IkN5bmxsdW4gZ3dlaXRocmVkdSDigJMgU3V0IGkgYWdvciBjeWZyaWYg
+        YmFuYyIsImxpbmsiOiIvY3kvYWN0aW9uX3BsYW5zL3N1dC1pLWFnb3ItY3lm
+        cmlmLWJhbmMiLCJsYW5ndWFnZSI6ImN5In1dfQ==
+    http_version: 
+  recorded_at: Wed, 06 May 2015 13:52:33 GMT
 recorded_with: VCR 2.9.2

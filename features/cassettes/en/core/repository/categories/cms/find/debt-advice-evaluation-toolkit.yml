@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/debt-advice-evaluation-toolkit.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a0881cf6cd14ee18d3ec2b5df0bdaa70"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
+      X-Runtime:
+      - '0.029320'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:53:03 GMT
+      Content-Length:
+      - '445'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"debt-advice-evaluation-toolkit","type":"category","title":"Debt
+        Advice Evaluation Toolkit","description":"Debt Advice Evaluation Toolkit","parent_id":"our-debt-work","third_level_navigation":true,"contents":[{"id":"debt-advice-evaluation-toolkit","type":"corporate","title":"Debt
+        advice evaluation toolkit","description":""},{"id":"debt-advice-evaluation-toolkit-introduction","type":"corporate","title":"Introduction","description":""}]}'
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:03 GMT
+recorded_with: VCR 2.9.2

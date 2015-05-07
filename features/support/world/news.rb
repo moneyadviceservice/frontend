@@ -11,9 +11,9 @@ module World
     def news_article(locale = 'en')
       case locale.to_s
       when 'en', 'english', 'English'
-        fixture 'news_article/what-your-credit-report-reveals-about-you.yml'
+        fixture 'news_article/interest-rate-rises-why-they-matter.yml'
       when 'cy', 'welsh', 'Welsh'
-        fixture 'news_article/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.yml'
+        fixture 'news_article/codiadau-mewn-cyfraddau-llog-pam-eu-bod-yn-bwysig.yml'
       else
         fail ArgumentError, "invalid article locale '#{locale}'"
       end

@@ -8,10 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 48268) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 079fa085-eba2-40a0-97a8-a0dba0d389d4
+      - fa23a623-adcb-4736-8391-79e119b2d9b0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,85 +29,140 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"b04acfac109a033be038178f51a29a57"'
+      - '"603c0d7a87f95584db4f35ee48d5be55"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 079fa085-eba2-40a0-97a8-a0dba0d389d4
+      - fa23a623-adcb-4736-8391-79e119b2d9b0
       X-Runtime:
-      - '0.008719'
+      - '0.051269'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 03 Feb 2015 14:33:13 GMT
+      - Wed, 06 May 2015 13:52:46 GMT
       Content-Length:
-      - '242'
+      - '5188'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"life-and-protection-insurance","title":"Life and protection
-        insurance","description":"Learn about the differences between life, critical
-        illness and income protection insurance.","parent_id":"insurance","contents":[{"id":"do-you-need-life-insurance","type":"guide","title":"Do
-        you need life insurance?","description":"If your family relies on your income
-        \u2013 or you want your mortgage paid off when you die \u2013 then you probably
-        need life insurance"},{"id":"life-insurance-how-and-where-to-buy-it","type":"guide","title":"How
-        and where to buy life insurance","description":"Shop around to get the best
-        deal on life cover - find out where to get quotes and read our key buying
-        tips"},{"id":"life-insurance-choosing-the-right-policy-and-cover","type":"guide","title":"Life
-        insurance \u2013 choose the right policy and cover","description":"Find out
-        which type of life insurance policy offers the protection you want, and how
-        much cover your family really needs"},{"id":"do-you-need-income-protection-insurance","type":"guide","title":"Do
-        you need income protection insurance?","description":"If you can''t rely on
-        savings or employee benefits to see you through an illness, income protection
-        insurance might help"},{"id":"what-does-a-good-income-protection-policy-look-like","type":"guide","title":"Income
-        protection \u2013 what does a good policy look like?","description":"Check
-        your income protection insurance policy against our list of \u2018must have\u2019
-        features to make sure it\u2019s good enough"},{"id":"how-and-where-to-buy-income-protection-insurance","type":"guide","title":"How
-        and where to buy income protection insurance","description":"Avoid the comparison
-        sites \u2013 with income protection insurance it pays to get specialist help
-        from a broker or adviser"},{"id":"income-protection-insurance-choose-the-right-policy-and-cover","type":"guide","title":"Income
-        protection \u2013 choose the right policy","description":"Getting the right
-        type of policy and level of cover is crucial \u2013 make sure your money is
-        well spent"},{"id":"how-to-reclaim-ppi","type":"action_plan","title":"Action
-        plan - How to reclaim PPI","description":"Find out if you were mis-sold payment
-        protection insurance (PPI) and how to claim compensation"},{"id":"reclaiming-payment-protection-insurance","type":"guide","title":"How
-        to reclaim mis-sold payment protection insurance (PPI)","description":"Payment
-        protection insurance (PPI) has been widely mis-sold \u2013 if you are affected
-        you could get back thousands of pounds"},{"id":"short-term-income-protection-insurance","type":"guide","title":"Short-term
-        income protection insurance","description":"Short-term income protection can
-        help cover your essential outgoings if you can\u2019t work for a short period
-        \u2013 but is it right for you?"},{"id":"do-you-need-private-medical-insurance","type":"guide","title":"Do
-        you need private medical insurance?","description":"Don\u2019t want to rely
-        on the NHS? Private medical insurance will cover you for some treatments \u2013
-        but not all \u2013 and it can be costly"},{"id":"how-and-where-to-buy-critical-illness-insurance","type":"guide","title":"How
-        and where to buy critical illness insurance","description":"If you are buying
-        critical illness insurance it''s a good idea to get some specialist advice
-        before you commit"},{"id":"critical-illness-insurance-choose-the-right-policy-and-cover","type":"guide","title":"Critical
-        illness insurance \u2013 choose the right policy","description":"Make sure
-        your critical illness policy will actually pay out what you need, when you
-        need it"},{"id":"critical-illness-insurance-do-you-need-it","type":"guide","title":"Critical
-        illness cover - Do you need it?","description":"Find out if you need critical
-        illness cover \u2013 a type of insurance that can cover your mortgage if you
-        become seriously ill"},{"id":"a-good-critical-illness-insurance-policy","type":"guide","title":"Critical
-        illness \u2013 what does a good policy look like?","description":"Find out
-        what \u2018good\u2019 critical illness insurance policies cover, and what
-        to look for when choosing one that\u2019s right for you"},{"id":"critical-illness-or-income-protection-insurance","type":"guide","title":"Critical
-        illness or income protection insurance?","description":"A quick comparison
-        to help you decide whether critical illness or income protection insurance
-        suits you best"},{"id":"work-out-if-you-need-life-insurance-and-get-the-right-cover","type":"action_plan","title":"Action
-        plan - See if you need life insurance","description":"This step-by-step action
-        plan will help you decide whether or not you need life insurance and, if you
-        do, how much cover you need and where to buy it."},{"id":"are-claims-management-companies-worth-it","type":"guide","title":"Are
-        claims management companies worth it?","description":"Payment protection insurance
-        (PPI) has been widely mis-sold. But you can easily make a complaint yourself
-        \u2013 there is lots of free help available"},{"id":"do-you-need-payment-protection-insurance-ppi","type":"guide","title":"Do
-        you need payment protection insurance (PPI)?","description":"Payment protection
-        insurance (PPI) is designed to only pay out under very limited circumstances
-        \u2013 be careful"},{"id":"do-you-need-dental-insurance","type":"guide","title":"Do
-        you need dental insurance?","description":"If you can\u2019t find an NHS dentist
-        or need a lot of work on your teeth, there are two possible options \u2013
-        insurance or a dental plan"}]}'
-    http_version:
-  recorded_at: Tue, 03 Feb 2015 14:33:13 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImxpZmUtYW5kLXByb3RlY3Rpb24taW5zdXJhbmNlIiwidHlwZSI6
+        ImNhdGVnb3J5IiwidGl0bGUiOiJMaWZlIGFuZCBwcm90ZWN0aW9uIGluc3Vy
+        YW5jZSIsImRlc2NyaXB0aW9uIjoiTGVhcm4gYWJvdXQgdGhlIGRpZmZlcmVu
+        Y2VzIGJldHdlZW4gbGlmZSwgY3JpdGljYWwgaWxsbmVzcyBhbmQgaW5jb21l
+        IHByb3RlY3Rpb24gaW5zdXJhbmNlLiIsInBhcmVudF9pZCI6Imluc3VyYW5j
+        ZSIsInRoaXJkX2xldmVsX25hdmlnYXRpb24iOmZhbHNlLCJjb250ZW50cyI6
+        W3siaWQiOiJkby15b3UtbmVlZC1saWZlLWluc3VyYW5jZSIsInR5cGUiOiJn
+        dWlkZSIsInRpdGxlIjoiRG8geW91IG5lZWQgbGlmZSBpbnN1cmFuY2U/Iiwi
+        ZGVzY3JpcHRpb24iOiJJZiB5b3VyIGZhbWlseSByZWxpZXMgb24geW91ciBp
+        bmNvbWUg4oCTIG9yIHlvdSB3YW50IHlvdXIgbW9ydGdhZ2UgcGFpZCBvZmYg
+        d2hlbiB5b3UgZGllIOKAkyB0aGVuIHlvdSBwcm9iYWJseSBuZWVkIGxpZmUg
+        aW5zdXJhbmNlIn0seyJpZCI6ImxpZmUtaW5zdXJhbmNlLWhvdy1hbmQtd2hl
+        cmUtdG8tYnV5LWl0IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJIb3cgYW5k
+        IHdoZXJlIHRvIGJ1eSBsaWZlIGluc3VyYW5jZSIsImRlc2NyaXB0aW9uIjoi
+        U2hvcCBhcm91bmQgdG8gZ2V0IHRoZSBiZXN0IGRlYWwgb24gbGlmZSBjb3Zl
+        ciAtIGZpbmQgb3V0IHdoZXJlIHRvIGdldCBxdW90ZXMgYW5kIHJlYWQgb3Vy
+        IGtleSBidXlpbmcgdGlwcyJ9LHsiaWQiOiJsaWZlLWluc3VyYW5jZS1jaG9v
+        c2luZy10aGUtcmlnaHQtcG9saWN5LWFuZC1jb3ZlciIsInR5cGUiOiJndWlk
+        ZSIsInRpdGxlIjoiTGlmZSBpbnN1cmFuY2Ug4oCTIGNob29zZSB0aGUgcmln
+        aHQgcG9saWN5IGFuZCBjb3ZlciIsImRlc2NyaXB0aW9uIjoiRmluZCBvdXQg
+        d2hpY2ggdHlwZSBvZiBsaWZlIGluc3VyYW5jZSBwb2xpY3kgb2ZmZXJzIHRo
+        ZSBwcm90ZWN0aW9uIHlvdSB3YW50LCBhbmQgaG93IG11Y2ggY292ZXIgeW91
+        ciBmYW1pbHkgcmVhbGx5IG5lZWRzIn0seyJpZCI6ImRvLXlvdS1uZWVkLWlu
+        Y29tZS1wcm90ZWN0aW9uLWluc3VyYW5jZSIsInR5cGUiOiJndWlkZSIsInRp
+        dGxlIjoiRG8geW91IG5lZWQgaW5jb21lIHByb3RlY3Rpb24gaW5zdXJhbmNl
+        PyIsImRlc2NyaXB0aW9uIjoiSWYgeW91IGNhbid0IHJlbHkgb24gc2F2aW5n
+        cyBvciBlbXBsb3llZSBiZW5lZml0cyB0byBzZWUgeW91IHRocm91Z2ggYW4g
+        aWxsbmVzcywgaW5jb21lIHByb3RlY3Rpb24gaW5zdXJhbmNlIG1pZ2h0IGhl
+        bHAifSx7ImlkIjoid2hhdC1kb2VzLWEtZ29vZC1pbmNvbWUtcHJvdGVjdGlv
+        bi1wb2xpY3ktbG9vay1saWtlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJJ
+        bmNvbWUgcHJvdGVjdGlvbiDigJMgd2hhdCBkb2VzIGEgZ29vZCBwb2xpY3kg
+        bG9vayBsaWtlPyIsImRlc2NyaXB0aW9uIjoiQ2hlY2sgeW91ciBpbmNvbWUg
+        cHJvdGVjdGlvbiBpbnN1cmFuY2UgcG9saWN5IGFnYWluc3Qgb3VyIGxpc3Qg
+        b2Yg4oCYbXVzdCBoYXZl4oCZIGZlYXR1cmVzIHRvIG1ha2Ugc3VyZSBpdOKA
+        mXMgZ29vZCBlbm91Z2gifSx7ImlkIjoiaG93LWFuZC13aGVyZS10by1idXkt
+        aW5jb21lLXByb3RlY3Rpb24taW5zdXJhbmNlIiwidHlwZSI6Imd1aWRlIiwi
+        dGl0bGUiOiJIb3cgYW5kIHdoZXJlIHRvIGJ1eSBpbmNvbWUgcHJvdGVjdGlv
+        biBpbnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6IkF2b2lkIHRoZSBjb21wYXJp
+        c29uIHNpdGVzIOKAkyB3aXRoIGluY29tZSBwcm90ZWN0aW9uIGluc3VyYW5j
+        ZSBpdCBwYXlzIHRvIGdldCBzcGVjaWFsaXN0IGhlbHAgZnJvbSBhIGJyb2tl
+        ciBvciBhZHZpc2VyIn0seyJpZCI6ImluY29tZS1wcm90ZWN0aW9uLWluc3Vy
+        YW5jZS1jaG9vc2UtdGhlLXJpZ2h0LXBvbGljeS1hbmQtY292ZXIiLCJ0eXBl
+        IjoiZ3VpZGUiLCJ0aXRsZSI6IkluY29tZSBwcm90ZWN0aW9uIOKAkyBjaG9v
+        c2UgdGhlIHJpZ2h0IHBvbGljeSIsImRlc2NyaXB0aW9uIjoiR2V0dGluZyB0
+        aGUgcmlnaHQgdHlwZSBvZiBwb2xpY3kgYW5kIGxldmVsIG9mIGNvdmVyIGlz
+        IGNydWNpYWwg4oCTIG1ha2Ugc3VyZSB5b3VyIG1vbmV5IGlzIHdlbGwgc3Bl
+        bnQifSx7ImlkIjoicmVjbGFpbWluZy1wYXltZW50LXByb3RlY3Rpb24taW5z
+        dXJhbmNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJIb3cgdG8gY2xhaW0g
+        Zm9yIG1pcy1zb2xkIHBheW1lbnQgcHJvdGVjdGlvbiBpbnN1cmFuY2UgKFBQ
+        SSkiLCJkZXNjcmlwdGlvbiI6IlBheW1lbnQgcHJvdGVjdGlvbiBpbnN1cmFu
+        Y2UgKFBQSSkgaGFzIGJlZW4gd2lkZWx5IG1pcy1zb2xkIOKAkyBpZiB5b3Ug
+        YXJlIGFmZmVjdGVkIHlvdSBjb3VsZCBnZXQgYmFjayB0aG91c2FuZHMgb2Yg
+        cG91bmRzIn0seyJpZCI6InNob3J0LXRlcm0taW5jb21lLXByb3RlY3Rpb24t
+        aW5zdXJhbmNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJTaG9ydC10ZXJt
+        IGluY29tZSBwcm90ZWN0aW9uIGluc3VyYW5jZSIsImRlc2NyaXB0aW9uIjoi
+        U2hvcnQtdGVybSBpbmNvbWUgcHJvdGVjdGlvbiBjYW4gaGVscCBjb3ZlciB5
+        b3VyIGVzc2VudGlhbCBvdXRnb2luZ3MgaWYgeW91IGNhbuKAmXQgd29yayBm
+        b3IgYSBzaG9ydCBwZXJpb2Qg4oCTIGJ1dCBpcyBpdCByaWdodCBmb3IgeW91
+        PyJ9LHsiaWQiOiJkby15b3UtbmVlZC1wcml2YXRlLW1lZGljYWwtaW5zdXJh
+        bmNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJEbyB5b3UgbmVlZCBwcml2
+        YXRlIG1lZGljYWwgaW5zdXJhbmNlPyIsImRlc2NyaXB0aW9uIjoiRG9u4oCZ
+        dCB3YW50IHRvIHJlbHkgb24gdGhlIE5IUz8gUHJpdmF0ZSBtZWRpY2FsIGlu
+        c3VyYW5jZSB3aWxsIGNvdmVyIHlvdSBmb3Igc29tZSB0cmVhdG1lbnRzIOKA
+        kyBidXQgbm90IGFsbCDigJMgYW5kIGl0IGNhbiBiZSBjb3N0bHkifSx7Imlk
+        IjoiaG93LWFuZC13aGVyZS10by1idXktY3JpdGljYWwtaWxsbmVzcy1pbnN1
+        cmFuY2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhvdyBhbmQgd2hlcmUg
+        dG8gYnV5IGNyaXRpY2FsIGlsbG5lc3MgaW5zdXJhbmNlIiwiZGVzY3JpcHRp
+        b24iOiJJZiB5b3UgYXJlIGJ1eWluZyBjcml0aWNhbCBpbGxuZXNzIGluc3Vy
+        YW5jZSBpdCdzIGEgZ29vZCBpZGVhIHRvIGdldCBzb21lIHNwZWNpYWxpc3Qg
+        YWR2aWNlIGJlZm9yZSB5b3UgY29tbWl0In0seyJpZCI6ImNyaXRpY2FsLWls
+        bG5lc3MtaW5zdXJhbmNlLWNob29zZS10aGUtcmlnaHQtcG9saWN5LWFuZC1j
+        b3ZlciIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ3JpdGljYWwgaWxsbmVz
+        cyBpbnN1cmFuY2Ug4oCTIGNob29zZSB0aGUgcmlnaHQgcG9saWN5IiwiZGVz
+        Y3JpcHRpb24iOiJNYWtlIHN1cmUgeW91ciBjcml0aWNhbCBpbGxuZXNzIHBv
+        bGljeSB3aWxsIGFjdHVhbGx5IHBheSBvdXQgd2hhdCB5b3UgbmVlZCwgd2hl
+        biB5b3UgbmVlZCBpdCJ9LHsiaWQiOiJjcml0aWNhbC1pbGxuZXNzLWluc3Vy
+        YW5jZS1kby15b3UtbmVlZC1pdCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoi
+        Q3JpdGljYWwgaWxsbmVzcyBjb3ZlciDigJMgRG8geW91IG5lZWQgaXQ/Iiwi
+        ZGVzY3JpcHRpb24iOiJGaW5kIG91dCBpZiB5b3UgbmVlZCBjcml0aWNhbCBp
+        bGxuZXNzIGNvdmVyIOKAkyBhIHR5cGUgb2YgaW5zdXJhbmNlIHRoYXQgY2Fu
+        IGNvdmVyIHlvdXIgbW9ydGdhZ2UgaWYgeW91IGJlY29tZSBzZXJpb3VzbHkg
+        aWxsIn0seyJpZCI6ImEtZ29vZC1jcml0aWNhbC1pbGxuZXNzLWluc3VyYW5j
+        ZS1wb2xpY3kiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkNyaXRpY2FsIGls
+        bG5lc3Mg4oCTIHdoYXQgZG9lcyBhIGdvb2QgcG9saWN5IGxvb2sgbGlrZT8i
+        LCJkZXNjcmlwdGlvbiI6IkZpbmQgb3V0IHdoYXQg4oCYZ29vZOKAmSBjcml0
+        aWNhbCBpbGxuZXNzIGluc3VyYW5jZSBwb2xpY2llcyBjb3ZlciwgYW5kIHdo
+        YXQgdG8gbG9vayBmb3Igd2hlbiBjaG9vc2luZyBvbmUgdGhhdOKAmXMgcmln
+        aHQgZm9yIHlvdSJ9LHsiaWQiOiJjcml0aWNhbC1pbGxuZXNzLW9yLWluY29t
+        ZS1wcm90ZWN0aW9uLWluc3VyYW5jZSIsInR5cGUiOiJndWlkZSIsInRpdGxl
+        IjoiQ3JpdGljYWwgaWxsbmVzcyBvciBpbmNvbWUgcHJvdGVjdGlvbiBpbnN1
+        cmFuY2U/IiwiZGVzY3JpcHRpb24iOiJBIHF1aWNrIGNvbXBhcmlzb24gdG8g
+        aGVscCB5b3UgZGVjaWRlIHdoZXRoZXIgY3JpdGljYWwgaWxsbmVzcyBvciBp
+        bmNvbWUgcHJvdGVjdGlvbiBpbnN1cmFuY2Ugc3VpdHMgeW91IGJlc3QifSx7
+        ImlkIjoiYXJlLWNsYWltcy1tYW5hZ2VtZW50LWNvbXBhbmllcy13b3J0aC1p
+        dCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQXJlIGNsYWltcyBtYW5hZ2Vt
+        ZW50IGNvbXBhbmllcyB3b3J0aCBpdD8iLCJkZXNjcmlwdGlvbiI6IlBheW1l
+        bnQgcHJvdGVjdGlvbiBpbnN1cmFuY2UgKFBQSSkgaGFzIGJlZW4gd2lkZWx5
+        IG1pcy1zb2xkLiBCdXQgeW91IGNhbiBlYXNpbHkgbWFrZSBhIGNvbXBsYWlu
+        dCB5b3Vyc2VsZiDigJMgdGhlcmUgaXMgbG90cyBvZiBmcmVlIGhlbHAgYXZh
+        aWxhYmxlIn0seyJpZCI6ImRvLXlvdS1uZWVkLXBheW1lbnQtcHJvdGVjdGlv
+        bi1pbnN1cmFuY2UtcHBpIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJEbyB5
+        b3UgbmVlZCBwYXltZW50IHByb3RlY3Rpb24gaW5zdXJhbmNlIChQUEkpPyIs
+        ImRlc2NyaXB0aW9uIjoiUGF5bWVudCBwcm90ZWN0aW9uIGluc3VyYW5jZSAo
+        UFBJKSBpcyBkZXNpZ25lZCB0byBvbmx5IHBheSBvdXQgdW5kZXIgdmVyeSBs
+        aW1pdGVkIGNpcmN1bXN0YW5jZXMg4oCTIGJlIGNhcmVmdWwifSx7ImlkIjoi
+        ZG8teW91LW5lZWQtZGVudGFsLWluc3VyYW5jZSIsInR5cGUiOiJndWlkZSIs
+        InRpdGxlIjoiRG8geW91IG5lZWQgZGVudGFsIGluc3VyYW5jZT8iLCJkZXNj
+        cmlwdGlvbiI6IklmIHlvdSBjYW7igJl0IGZpbmQgYW4gTkhTIGRlbnRpc3Qg
+        b3IgbmVlZCBhIGxvdCBvZiB3b3JrIG9uIHlvdXIgdGVldGgsIHRoZXJlIGFy
+        ZSB0d28gcG9zc2libGUgb3B0aW9ucyDigJMgaW5zdXJhbmNlIG9yIGEgZGVu
+        dGFsIHBsYW4ifSx7ImlkIjoid2hvbGUtb2YtbGlmZS1wb2xpY2llcyIsInR5
+        cGUiOiJndWlkZSIsInRpdGxlIjoiV2hvbGUtb2YtbGlmZSBwb2xpY2llcyIs
+        ImRlc2NyaXB0aW9uIjoiV2hvbGUtb2YtbGlmZSBwb2xpY2llcyBjb21iaW5l
+        IGxpZmUgY292ZXIgd2l0aCBpbnZlc3RpbmcsIGdpdmluZyB5b3UgYSBjaGFu
+        Y2Ug4oCTIGJ1dCBub3QgYSBndWFyYW50ZWUg4oCTIHRvIGVhcm4gYSBsYXJn
+        ZXIgcGF5b3V0In1dfQ==
+    http_version: 
+  recorded_at: Wed, 06 May 2015 13:52:46 GMT
 recorded_with: VCR 2.9.2

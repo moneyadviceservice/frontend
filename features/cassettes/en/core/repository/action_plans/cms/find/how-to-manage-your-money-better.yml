@@ -8,18 +8,17 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 12720) ruby/2.1.2
-        (95; x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 4316ce05-1809-47ab-a4c8-50bb6ba1b80f
+      - e76e2b6a-9aa0-449c-b563-66fb153f7f6c
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: 'Not Found '
+      code: 200
+      message: 'OK '
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -29,130 +28,143 @@ http_interactions:
       - nosniff
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - '"c13fd1fc8607971f4c3cae2cf9ac63f9"'
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4316ce05-1809-47ab-a4c8-50bb6ba1b80f
+      - e76e2b6a-9aa0-449c-b563-66fb153f7f6c
       X-Runtime:
-      - '0.019096'
+      - '0.064602'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 10 Feb 2015 14:46:09 GMT
+      - Wed, 06 May 2015 13:52:42 GMT
       Content-Length:
-      - '28'
+      - '5304'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"message":"Page not found"}'
-    http_version:
-  recorded_at: Tue, 10 Feb 2015 14:46:09 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/action_plans/how-to-manage-your-money-better.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 12720) ruby/2.1.2
-        (95; x86_64-darwin13.0)
-      X-Request-Id:
-      - 4316ce05-1809-47ab-a4c8-50bb6ba1b80f
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Tue, 10 Feb 2015 14:46:09 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
-        aW9uX3BsYW5zL2hvdy10by1tYW5hZ2UteW91ci1tb25leS1iZXR0ZXI+IHJl
-        bD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9IkFjdGlv
-        biBwbGFuIC0gSG93IHRvIG1hbmFnZSB5b3VyIG1vbmV5IGJldHRlciIsIDxo
-        dHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2N5L2FjdGlv
-        bl9wbGFucy9zdXQtaS1yZW9saWNoLWFyaWFuLXluLXdlbGw+IHJlbD0iYWx0
-        ZXJuYXRlIjsgaHJlZmxhbmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW4gZ3dl
-        aXRocmVkdSAtIFN1dCBpIHJlb2xp4oCZY2ggYXJpYW4geW4gd2VsbCI=
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 7f39cad9b2e19f95e4987dd350f3ce9a
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 14:46:09 GMT; secure
-      - _session_id=7f39cad9b2e19f95e4987dd350f3ce9a; path=/; secure; HttpOnly
-      - _web_tracking=5fc74832f2b7817111cc6d1b82f28c3d; path=/; expires=Wed, 10-Feb-2016
-        14:46:09 GMT; secure
-      X-Request-Id:
-      - 4316ce05-1809-47ab-a4c8-50bb6ba1b80f
-      X-Runtime:
-      - '0.035958'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"how-to-manage-your-money-better","title":"Action plan - How
-        to manage your money better","description":"Step by step advice on drawing
-        up a budget, starting to save and clearing debts.","body":"<p class=\"intro\"><img
-        src=\"/images/new_action_plan_icon.jpg\"/>Follow these simple\u00a0steps to
-        help you draw up a budget, make the most of your money, pay off outstanding
-        debts and even start saving. </p><div class=\"action-item\"><h3>Step 1 - Draw
-        up a budget </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If
-        you want to get on top of your finances then doing a budget - a record of
-        all your incomings and outgoings - is the essential first step. </p></div><div
-        class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">Use
-        our online Budget planner</a></li></ul><p>Alternatively, use a spreadsheet
-        on your computer or just write it all down on a piece of paper. </p></div></div></div><div
-        class=\"action-item\"><h3>Step 2 - Identify where you can cut back </h3><div
-        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If you''re spending
-        more than you have each month you need to look at where you can cut back.
-        Otherwise you''ll never be out of the red. </p></div><div class=\"how\"><h4>How?
-        </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">Look
-        at the breakdown of where your spending goes each month with our Budget planner</a></li></ul><p>Cut
-        back on non-essentials like takeaway coffees or magazines. </p><ul><li><a
-        href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator\">
-        Find out how much something you buy regularly costs you each month using our
-        Cut-back calculator</a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/categories/money-saving-tips\">Read
-        our no-nonsense money saving tips to help you cut costs around the home and
-        when you''re out and about</a></li></ul></div></div></div><div class=\"action-item\"><h3>Step
-        3 - Pay off loans and credit cards </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
-        </h4><p>Loan and credit card repayments can put a real strain on your finances.
-        And only paying the minimum each month means your debt will be with you for
-        years. </p></div><div class=\"how\"><h4>How? </h4><p>Identify the debt that
-        charges the highest rate of interest and pay that off first - it''s the fastest
-        way to clear your debts. </p><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/categories/how-to-review-or-reduce-borrowing\">Find
-        out more in our guides How to review or reduce borrowing</a></li></ul></div></div></div><div
-        class=\"action-item\"><h3>Step 4 - Start saving </h3><div class=\"collapsable\"><div
-        class=\"why\"><h4>Why? </h4><p>If you save regularly, you''ll quickly find
-        that your money adds up and keeps growing. </p></div><div class=\"how\"><h4>How?
-        </h4><p>Set aside some emergency savings - money to fall back on if you really
-        need it. </p><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/emergency-savings-how-much-is-enough\">
-        Read our guide Emergency savings - how much is enough?</a></li></ul></div></div></div>","categories":["taking-control-of-debt","managing-money"]}'
-    http_version:
-  recorded_at: Tue, 10 Feb 2015 14:46:09 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkFjdGlvbiBwbGFuIOKAkyBIb3cgdG8gbWFuYWdlIHlvdXIg
+        bW9uZXkgYmV0dGVyIiwic2x1ZyI6Imhvdy10by1tYW5hZ2UteW91ci1tb25l
+        eS1iZXR0ZXIiLCJmdWxsX3BhdGgiOiIvaG93LXRvLW1hbmFnZS15b3VyLW1v
+        bmV5LWJldHRlciIsIm1ldGFfZGVzY3JpcHRpb24iOiJTdGVwIGJ5IHN0ZXAg
+        YWR2aWNlIG9uIGRyYXdpbmcgdXAgYSBidWRnZXQsIHN0YXJ0aW5nIHRvIHNh
+        dmUgYW5kIGNsZWFyaW5nIGRlYnRzLiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRl
+        Z29yeV9uYW1lcyI6WyJtYW5hZ2luZy1tb25leSIsInRha2luZy1jb250cm9s
+        LW9mLWRlYnQiXSwibGF5b3V0X2lkZW50aWZpZXIiOiJhY3Rpb25fcGxhbiIs
+        InJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpb
+        XSwicG9wdWxhcl9saW5rcyI6W3sidGl0bGUiOiJFc3RpbWF0ZSB5b3VyIG92
+        ZXJhbGwgY29zdCBvZiBidXlpbmcgYSBob3VzZSBhbmQgbW92aW5nIiwicGF0
+        aCI6Ii9lbi9hcnRpY2xlcy9lc3RpbWF0ZS15b3VyLW92ZXJhbGwtYnV5aW5n
+        LWFuZC1tb3ZpbmctY29zdHMifSx7InRpdGxlIjoiQmVuZWZpdHMgeW91IGFy
+        ZSBlbnRpdGxlZCB0byB3aGVuIGhhdmluZyBhIGJhYnkiLCJwYXRoIjoiL2Vu
+        L2FydGljbGVzL2JlbmVmaXRzLWFuZC1lbnRpdGxlbWVudHMtdG8tY2xhaW0t
+        d2hlbi15b3UtaGF2ZS1hLWJhYnkifSx7InRpdGxlIjoiRmlyc3QtdGltZSBo
+        b21lIGJ1eWVyIGd1aWRlIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9maXJzdC10
+        aW1lLWJ1eWVyLW1vbmV5LXRpcHMifV0sInJlbGF0ZWRfbGlua3MiOlt7InRp
+        dGxlIjoiQmVnaW5uZXLigJlzIGd1aWRlIHRvIG1hbmFnaW5nIHlvdXIgbW9u
+        ZXkiLCJwYXRoIjoiL2VuL2FydGljbGVzL2JlZ2lubmVycy1ndWlkZS10by1t
+        YW5hZ2luZy15b3VyLW1vbmV5In0seyJ0aXRsZSI6IkRlYWxpbmcgd2l0aCB0
+        aGUgZGVidHMgb2Ygc29tZW9uZSB3aG8gaGFzIGRpZWQiLCJwYXRoIjoiL2Vu
+        L2FydGljbGVzL2RlYWxpbmctd2l0aC10aGUtZGVidHMtb2Ytc29tZW9uZS13
+        aG8taGFzLWRpZWQifSx7InRpdGxlIjoiT3B0aW9ucyBmb3IgY2xlYXJpbmcg
+        eW91ciBkZWJ0cyDigJMgRW5nbGFuZCBhbmQgV2FsZXMiLCJwYXRoIjoiL2Vu
+        L2FydGljbGVzL29wdGlvbnMtZm9yLWNsZWFyaW5nLXlvdXItZGVidHMtZW5n
+        bGFuZC1hbmQtd2FsZXMifV0sInByZXZpb3VzX2xpbmsiOnsidGl0bGUiOiJB
+        Y3Rpb24gcGxhbiDigJMgSG93IHRvIG1ha2UgeW91ciBtb25leSBsYXN0IGFs
+        bCB3ZWVrIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9ob3ctdG8tbWFrZS15b3Vy
+        LW1vbmV5LWxhc3QtYWxsLXdlZWsifSwibmV4dF9saW5rIjp7InRpdGxlIjoi
+        QWN0aW9uIHBsYW4g4oCTIEhvdyB0byBtYWtlIGVuZHMgbWVldCBvbiBhIGxv
+        dyBpbmNvbWUiLCJwYXRoIjoiL2VuL2FydGljbGVzL2hvdy10by1tYWtlLWVu
+        ZHMtbWVldC1vbi1hLWxvdy1pbmNvbWUifX0sImJsb2NrcyI6W3siaWRlbnRp
+        ZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVx1MDAz
+        Y3N0cm9uZ1x1MDAzZUZvbGxvdyB0aGVzZSBzaW1wbGUgc3RlcHMgdG8gaGVs
+        cCB5b3UgZHJhdyB1cCBhIGJ1ZGdldCwgbWFrZSB0aGUgbW9zdCBvZiB5b3Vy
+        IG1vbmV5LCBwYXkgb2ZmIG91dHN0YW5kaW5nIGRlYnRzIGFuZCBldmVuIHN0
+        YXJ0IHNhdmluZy5cdTAwM2Mvc3Ryb25nXHUwMDNlXHUwMDNjL3BcdTAwM2Vc
+        blxuXHUwMDNjaDMgaWQ9XCJzdGVwLTEtZHJhdy11cC1hLWJ1ZGdldFwiXHUw
+        MDNlU3RlcCAxLiBEcmF3IHVwIGEgYnVkZ2V0XHUwMDNjL2gzXHUwMDNlXG5c
+        blx1MDAzY2g0IGlkPVwid2h5XCJcdTAwM2VXaHk/XHUwMDNjL2g0XHUwMDNl
+        XG5cblx1MDAzY3BcdTAwM2VJZiB5b3Ugd2FudCB0byBnZXQgb24gdG9wIG9m
+        IHlvdXIgZmluYW5jZXMgdGhlbiBkb2luZyBhIGJ1ZGdldCDigJMgYSByZWNv
+        cmQgb2YgYWxsIHlvdXIgaW5jb21pbmdzIGFuZCBvdXRnb2luZ3Mg4oCTIGlz
+        IHRoZSBlc3NlbnRpYWwgZmlyc3Qgc3RlcC5cdTAwM2MvcFx1MDAzZVxuXG5c
+        dTAwM2NoNCBpZD1cImhvd1wiXHUwMDNlSG93P1x1MDAzYy9oNFx1MDAzZVxu
+        XG5cdTAwM2N1bFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJl
+        Zj1cImh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4v
+        dG9vbHMvYnVkZ2V0LXBsYW5uZXJcIlx1MDAzZVVzZSBvdXIgb25saW5lIEJ1
+        ZGdldCBwbGFubmVyXHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2Vcblx1
+        MDAzYy91bFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlQWx0ZXJuYXRpdmVseSwg
+        dXNlIGEgc3ByZWFkc2hlZXQgb24geW91ciBjb21wdXRlciBvciBqdXN0IHdy
+        aXRlIGl0IGFsbCBkb3duIG9uIGEgcGllY2Ugb2YgcGFwZXIuXHUwMDNjL3Bc
+        dTAwM2VcblxuXHUwMDNjaDMgaWQ9XCJzdGVwLTItaWRlbnRpZnktd2hlcmUt
+        eW91LWNhbi1jdXQtYmFja1wiXHUwMDNlU3RlcCAyLiBJZGVudGlmeSB3aGVy
+        ZSB5b3UgY2FuIGN1dCBiYWNrXHUwMDNjL2gzXHUwMDNlXG5cblx1MDAzY2g0
+        IGlkPVwid2h5LTFcIlx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2VcblxuXHUw
+        MDNjcFx1MDAzZUlmIHlvdeKAmXJlIHNwZW5kaW5nIG1vcmUgdGhhbiB5b3Ug
+        aGF2ZSBlYWNoIG1vbnRoIHlvdSBuZWVkIHRvIGxvb2sgYXQgd2hlcmUgeW91
+        IGNhbiBjdXQgYmFjay4gT3RoZXJ3aXNlIHlvdeKAmWxsIG5ldmVyIGJlIG91
+        dCBvZiB0aGUgcmVkLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY2g0IGlkPVwi
+        aG93LTFcIlx1MDAzZUhvdz9cdTAwM2MvaDRcdTAwM2VcblxuXHUwMDNjdWxc
+        dTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VcdTAwM2NhIGhyZWY9XCJodHRwczov
+        L3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL3Rvb2xzL2J1ZGdl
+        dC1wbGFubmVyXCJcdTAwM2VMb29rIGF0IHRoZSBicmVha2Rvd24gb2Ygd2hl
+        cmUgeW91ciBzcGVuZGluZyBnb2VzIGVhY2ggbW9udGggd2l0aCBvdXIgQnVk
+        Z2V0IHBsYW5uZXJcdTAwM2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuXHUw
+        MDNjL3VsXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VDdXQgYmFjayBvbiBub24t
+        ZXNzZW50aWFscyBsaWtlIHRha2Vhd2F5IGNvZmZlZXMgb3IgbWFnYXppbmVz
+        Llx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG4gIFx1MDAzY2xp
+        XHUwMDNlXHUwMDNjYSBocmVmPVwiL2VuL3Rvb2xzL3F1aWNrLWNhc2gtZmlu
+        ZGVyXCJcdTAwM2VGaW5kIG91dCBob3cgbXVjaCBzb21ldGhpbmcgeW91IGJ1
+        eSByZWd1bGFybHkgY29zdHMgeW91IGVhY2ggbW9udGggdXNpbmcgb3VyIFF1
+        aWNrIGNhc2ggZmluZGVyXHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2Vc
+        biAgXHUwMDNjbGlcdTAwM2VcdTAwM2NhIGhyZWY9XCJodHRwczovL3d3dy5t
+        b25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2NhdGVnb3JpZXMvbW9uZXkt
+        c2F2aW5nLXRpcHNcIlx1MDAzZVJlYWQgb3VyIG5vLW5vbnNlbnNlIG1vbmV5
+        IHNhdmluZyB0aXBzIHRvIGhlbHAgeW91IGN1dCBjb3N0cyBhcm91bmQgdGhl
+        IGhvbWUgYW5kIHdoZW4geW914oCZcmUgb3V0IGFuZCBhYm91dFx1MDAzYy9h
+        XHUwMDNlXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcblxuXHUw
+        MDNjaDMgaWQ9XCJzdGVwLTMtcGF5LW9mZi1sb2Fucy1hbmQtY3JlZGl0LWNh
+        cmRzXCJcdTAwM2VTdGVwIDMuIFBheSBvZmYgbG9hbnMgYW5kIGNyZWRpdCBj
+        YXJkc1x1MDAzYy9oM1x1MDAzZVxuXG5cdTAwM2NoNCBpZD1cIndoeS0yXCJc
+        dTAwM2VXaHk/XHUwMDNjL2g0XHUwMDNlXG5cblx1MDAzY3BcdTAwM2VMb2Fu
+        IGFuZCBjcmVkaXQgY2FyZCByZXBheW1lbnRzIGNhbiBwdXQgYSByZWFsIHN0
+        cmFpbiBvbiB5b3VyIGZpbmFuY2VzLiBBbmQgb25seSBwYXlpbmcgdGhlIG1p
+        bmltdW0gZWFjaCBtb250aCBtZWFucyB5b3VyIGRlYnQgd2lsbCBiZSB3aXRo
+        IHlvdSBmb3IgeWVhcnMuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjaDQgaWQ9
+        XCJob3ctMlwiXHUwMDNlSG93P1x1MDAzYy9oNFx1MDAzZVxuXG5cdTAwM2Nw
+        XHUwMDNlSWRlbnRpZnkgdGhlIGRlYnQgdGhhdCBjaGFyZ2VzIHRoZSBoaWdo
+        ZXN0IHJhdGUgb2YgaW50ZXJlc3QgYW5kIHBheSB0aGF0IG9mZiBmaXJzdCDi
+        gJMgaXTigJlzIHRoZSBmYXN0ZXN0IHdheSB0byBjbGVhciB5b3VyIGRlYnRz
+        Llx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG4gIFx1MDAzY2xp
+        XHUwMDNlXHUwMDNjYSBocmVmPVwiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2Vz
+        ZXJ2aWNlLm9yZy51ay9lbi9jYXRlZ29yaWVzL2hvdy10by1yZXZpZXctb3It
+        cmVkdWNlLWJvcnJvd2luZ1wiXHUwMDNlRmluZCBvdXQgbW9yZSBpbiBvdXIg
+        Z3VpZGVzIEhvdyB0byByZXZpZXcgb3IgcmVkdWNlIGJvcnJvd2luZ1x1MDAz
+        Yy9hXHUwMDNlXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2MvdWxcdTAwM2Vcblxu
+        XHUwMDNjaDMgaWQ9XCJzdGVwLTQtc3RhcnQtc2F2aW5nXCJcdTAwM2VTdGVw
+        IDQuIFN0YXJ0IHNhdmluZ1x1MDAzYy9oM1x1MDAzZVxuXG5cdTAwM2NoNCBp
+        ZD1cIndoeS0zXCJcdTAwM2VXaHk/XHUwMDNjL2g0XHUwMDNlXG5cblx1MDAz
+        Y3BcdTAwM2VJZiB5b3Ugc2F2ZSByZWd1bGFybHksIHlvdeKAmWxsIHF1aWNr
+        bHkgZmluZCB0aGF0IHlvdXIgbW9uZXkgYWRkcyB1cCBhbmQga2VlcHMgZ3Jv
+        d2luZy5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NoNCBpZD1cImhvdy0zXCJc
+        dTAwM2VIb3c/XHUwMDNjL2g0XHUwMDNlXG5cblx1MDAzY3BcdTAwM2VTZXQg
+        YXNpZGUgc29tZSBlbWVyZ2VuY3kgc2F2aW5ncyDigJMgbW9uZXkgdG8gZmFs
+        bCBiYWNrIG9uIGlmIHlvdSByZWFsbHkgbmVlZCBpdC5cdTAwM2MvcFx1MDAz
+        ZVxuXG5cdTAwM2N1bFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVx1MDAzY2Eg
+        aHJlZj1cImh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsv
+        ZW4vYXJ0aWNsZXMvZW1lcmdlbmN5LXNhdmluZ3MtaG93LW11Y2gtaXMtZW5v
+        dWdoXCJcdTAwM2VSZWFkIG91ciBndWlkZSBFbWVyZ2VuY3kgc2F2aW5ncyDi
+        gJMgaG93IG11Y2ggaXMgZW5vdWdoP1x1MDAzYy9hXHUwMDNlXHUwMDNjL2xp
+        XHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcblxuIiwiY3JlYXRlZF9hdCI6IjIw
+        MTQtMTItMTdUMTQ6MDU6NDIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTA0
+        LTEwVDE0OjM0OjEzLjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3sibGFiZWwi
+        OiJDeW5sbHVuIGd3ZWl0aHJlZHUg4oCTIFN1dCBpIHJlb2xp4oCZY2ggYXJp
+        YW4geW4gd2VsbCIsImxpbmsiOiIvY3kvYWN0aW9uX3BsYW5zL3N1dC1pLXJl
+        b2xpY2gtYXJpYW4teW4td2VsbCIsImxhbmd1YWdlIjoiY3kifV19
+    http_version: 
+  recorded_at: Wed, 06 May 2015 13:52:42 GMT
 recorded_with: VCR 2.9.2

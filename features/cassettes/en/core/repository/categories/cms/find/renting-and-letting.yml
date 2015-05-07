@@ -8,10 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 48248) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - e9b6e12d-119f-4b62-99c3-7099c9196169
+      - b622ab20-f56b-4eae-9e5e-daf73fb7b58d
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,26 +29,88 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"a5762dbb738e522389b00c8c088b38cc"'
+      - '"2b2bb9f2c903e9537ae44c39e76a7069"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e9b6e12d-119f-4b62-99c3-7099c9196169
+      - b622ab20-f56b-4eae-9e5e-daf73fb7b58d
       X-Runtime:
-      - '0.008793'
+      - '0.100035'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 03 Feb 2015 14:32:57 GMT
+      - Wed, 06 May 2015 13:53:38 GMT
       Content-Length:
-      - '246'
+      - '2879'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"renting-and-letting","type":"category","title":"Renting and
-        letting","description":"Advice to help you work out how much rent you can
-        afford, and how to budget and share costs when renting.","parent_id":"homes-and-mortgages","contents":[]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlbnRpbmctYW5kLWxldHRpbmciLCJ0eXBlIjoiY2F0ZWdvcnki
+        LCJ0aXRsZSI6IlJlbnRpbmcgYW5kIGxldHRpbmciLCJkZXNjcmlwdGlvbiI6
+        IkFkdmljZSB0byBoZWxwIHlvdSB3b3JrIG91dCBob3cgbXVjaCByZW50IHlv
+        dSBjYW4gYWZmb3JkLCBhbmQgaG93IHRvIGJ1ZGdldCBhbmQgc2hhcmUgY29z
+        dHMgd2hlbiByZW50aW5nLiIsInBhcmVudF9pZCI6ImhvbWVzLWFuZC1tb3J0
+        Z2FnZXMiLCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiY29udGVu
+        dHMiOlt7ImlkIjoiaG93LW11Y2gtcmVudC1jYW4teW91LWFmZm9yZCIsInR5
+        cGUiOiJndWlkZSIsInRpdGxlIjoiSG93IG11Y2ggcmVudCBjYW4geW91IGFm
+        Zm9yZD8iLCJkZXNjcmlwdGlvbiI6IldoZW4gd29ya2luZyBvdXQgd2hhdCBy
+        ZW50IHlvdSBjYW4gYWZmb3JkLCByZW1lbWJlciB0byBmYWN0b3IgaW4gdXBm
+        cm9udCBjb3N0cyBhbmQgeW91ciBvbmdvaW5nIGJpbGxzIG9uY2UgeW914oCZ
+        dmUgbW92ZWQgaW4ifSx7ImlkIjoiYnVkZ2V0aW5nLWFuZC1zaGFyaW5nLWNv
+        c3RzLXdoZW4tcmVudGluZyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQnVk
+        Z2V0aW5nIGFuZCBzaGFyaW5nIGNvc3RzIHdoZW4gcmVudGluZyIsImRlc2Ny
+        aXB0aW9uIjoiSWYgeW91IHNoYXJlIHdpdGggb3RoZXIgcGVvcGxlLCBoZXJl
+        IGFyZSBzb21lIHdheXMgdG8gYnVkZ2V0IGFuZCBvcmdhbmlzZSB5b3VyIGJp
+        bGxzIHNvIHRoYXQgeW91IGRvbuKAmXQgbWlzcyBhbnkgcGF5bWVudHMifSx7
+        ImlkIjoicmVudC1hcnJlYXJzLXByb2JsZW1zLXBheWluZy15b3VyLXJlbnQi
+        LCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhlbHAgd2l0aCByZW50IGFycmVh
+        cnMgYW5kIHByb2JsZW1zIHdpdGggcGF5aW5nIHlvdXIgcmVudCIsImRlc2Ny
+        aXB0aW9uIjoiV2h5IHlvdSBuZWVkIHRvIHRha2UgYWN0aW9uIGFuZCB3aGF0
+        IHRvIGRvIGlmIHlvdeKAmXJlIGluIGFycmVhcnMgd2l0aCB5b3VyIHJlbnQg
+        b3IgYXJlIGF0IHJpc2sgb2YgZXZpY3Rpb24ifSx7ImlkIjoieW91ci1sZWdh
+        bC1hbmQtZmluYW5jaWFsLXJlc3BvbnNpYmlsaXRpZXMtd2hlbi1yZW50aW5n
+        IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJZb3VyIGxlZ2FsIGFuZCBmaW5h
+        bmNpYWwgcmVzcG9uc2liaWxpdGllcyB3aGVuIHJlbnRpbmciLCJkZXNjcmlw
+        dGlvbiI6IlNvbGUgb3Igam9pbnQgdGVuYW5jeT8gTmVlZCBhIGd1YXJhbnRv
+        cj8gS25vdyB5b3VyIHJpZ2h0cyBhbmQgcmVzcG9uc2liaWxpdGllcyBhcyBh
+        IHRlbmFudCB0byBhdm9pZCBhbnkgY29zdGx5IGRpc3B1dGVzIn0seyJpZCI6
+        InNob3VsZC15b3UtcmVudC1vci1idXkiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRs
+        ZSI6IlJlbnQgb3IgYnV5PyIsImRlc2NyaXB0aW9uIjoiQ2FuIHlvdSBhZmZv
+        cmQgdG8gYnV5IGEgcHJvcGVydHkgYW5kLCBldmVuIGlmIHlvdSBjYW4sIGlz
+        IGl0IGEgZ29vZCBpZGVhIOKAkyBvciB3b3VsZCB5b3UgYmUgYmV0dGVyIG9m
+        ZiByZW50aW5nIGluc3RlYWQ/In0seyJpZCI6ImRlY2lkZS13aGV0aGVyLXRv
+        LXJlbnQtb3ItYnV5IiwidHlwZSI6ImFjdGlvbl9wbGFuIiwidGl0bGUiOiJB
+        Y3Rpb24gcGxhbiAtIERlY2lkZSB3aGV0aGVyIHRvIHJlbnQgb3IgYnV5Iiwi
+        ZGVzY3JpcHRpb24iOiJQcmFjdGljYWwgYWR2aWNlIHRvIGhlbHAgeW91IHdv
+        cmsgb3V0IHdoZXRoZXIgYnV5aW5nIG9yIHJlbnRpbmcgYSBwcm9wZXJ0eSBp
+        cyBiZXN0IGZvciB5b3UuIn0seyJpZCI6ImZpbmFuY2lhbC1yZXNwb25zaWJp
+        bGl0aWVzLWlmLXlvdS1yZW50LW91dC1hLXByb3BlcnR5IiwidHlwZSI6Imd1
+        aWRlIiwidGl0bGUiOiJGaW5hbmNpYWwgcmVzcG9uc2liaWxpdGllcyBpZiB5
+        b3UgcmVudCBvdXQgYSBwcm9wZXJ0eSIsImRlc2NyaXB0aW9uIjoiS25vdyB3
+        aGF0IHlvdSBoYXZlIHRvIGRvIHRvIGJlIGEgbGVnYWxseSBjb21wbGlhbnQg
+        bGFuZGxvcmQgaWYgeW91IGFyZSByZW50aW5nIG91dCBhIHByb3BlcnR5IHRv
+        IHRlbmFudHMifSx7ImlkIjoiaG93LXRvLXNhdmUtbW9uZXktb24teW91ci1j
+        b3VuY2lsLXRheC1iaWxsIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJDb3Vu
+        Y2lsIFRheDogd2hhdCBpdCBpcywgaG93IG11Y2ggaXQgY29zdHMgYW5kIGhv
+        dyB0byBzYXZlIG1vbmV5IiwiZGVzY3JpcHRpb24iOiJNYWtlIHN1cmUgeW91
+        4oCZcmUgbm90IHBheWluZyBtb3JlIENvdW5jaWwgVGF4IHRoYW4geW91IGhh
+        dmUgdG8ifSx7ImlkIjoicmVudC1hLXJvb20tc2NoZW1lLWhvdy1pdC13b3Jr
+        cy1hbmQtdGF4LXJ1bGVzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJSZW50
+        IGEgUm9vbSBzY2hlbWUg4oCTIGhvdyBpdCB3b3JrcyBhbmQgdGF4IHJ1bGVz
+        IiwiZGVzY3JpcHRpb24iOiJZb3UgY2FuIHJlbnQgYSByb29tIGluIHlvdXIg
+        aG9tZSBmb3Igc29tZSBleHRyYSBpbmNvbWUgdW5kZXIgdGhpcyBzY2hlbWUs
+        IGJ1dCB5b3UgbmVlZCB0byBrbm93IHRoZSB0YXggcnVsZXMifSx7ImlkIjoi
+        YnV5LXRvLWxldC1tb3J0Z2FnZXMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6
+        IkJ1eS10by1sZXQgbW9ydGdhZ2VzIiwiZGVzY3JpcHRpb24iOiJIb3cgYnV5
+        LXRvLWxldCBtb3J0Z2FnZXMgd29yaywgdGhpbmdzIHRvIGNvbnNpZGVyIGJl
+        Zm9yZSB0YWtpbmcgb25lIG91dCBhbmQgd2hlcmUgeW91IGNhbiBnZXQgb25l
+        In0seyJpZCI6InJlbnRpbmctb3V0LWEtcm9vbSIsInR5cGUiOiJndWlkZSIs
+        InRpdGxlIjoiUmVudGluZyBvdXQgYSByb29tIGFuZCByZW50IGEgcm9vbSBy
+        ZWxpZWYiLCJkZXNjcmlwdGlvbiI6IlRoaXMgZ292ZXJubWVudCBzY2hlbWUg
+        bGV0cyB5b3UgZWFybiB1cCB0byDCozQsMjUwIGZyZWUgb2YgdGF4IGZvciBy
+        ZW50aW5nIG91dCBmdXJuaXNoZWQgcm9vbXMgaW4geW91ciBob3VzZSJ9XX0=
     http_version: 
-  recorded_at: Tue, 03 Feb 2015 14:32:57 GMT
+  recorded_at: Sat, 06 Jun 2015 22:00:38 GMT
 recorded_with: VCR 2.9.2

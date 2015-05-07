@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/categories/resources-for-professionals-working-with-young-people-and-parents.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"082c480573d58fe6ac9dc59d40477689"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
+      X-Runtime:
+      - '0.028992'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:53:03 GMT
+      Content-Length:
+      - '777'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"resources-for-professionals-working-with-young-people-and-parents","type":"category","title":"Resources
+        for professionals who work with young people and parents","description":"A
+        wide variety of resources on money management for professionals supporting
+        young people and parents","parent_id":"resources-for-professionals","third_level_navigation":false,"contents":[{"id":"preparing-your-son-or-daughter-for-student-life","type":"corporate","title":"Preparing
+        your son or daughter for student life","description":"Read our handy tips
+        on budgeting and borrowing"},{"id":"parenting-videos-yphub","type":"corporate","title":"Parenting
+        Videos","description":"Expert-led videos to guide parents about how they can
+        help their children develop positive money habits for life"}]}'
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:03 GMT
+recorded_with: VCR 2.9.2

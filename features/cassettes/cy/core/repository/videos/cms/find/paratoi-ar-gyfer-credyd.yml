@@ -2,16 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/videos/paratoi-ar-gyfer-credyd.json
+    uri: http://localhost:3000/cy/videos/paratoi-ar-gyfer-credyd.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 15130) ruby/2.1.2
-        (95; x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 7767559a-568d-4d59-9811-fa372499c3c1
+      - 07cd7ecc-124d-4a43-a17b-b76156ce19f0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,56 +18,91 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Tue, 10 Feb 2015 15:43:17 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"2b147b3af1e005e28d2cd05c7e201469"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - c743d5ee9f414f85c27f488491fb4543
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 15:43:16 GMT; secure
-      - _session_id=c743d5ee9f414f85c27f488491fb4543; path=/; secure; HttpOnly
-      - _web_tracking=a9fa13840eefacc1dc97958d5501d983; path=/; expires=Wed, 10-Feb-2016
-        15:43:16 GMT; secure
       X-Request-Id:
-      - 7767559a-568d-4d59-9811-fa372499c3c1
+      - 07cd7ecc-124d-4a43-a17b-b76156ce19f0
       X-Runtime:
-      - '0.724857'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.065143'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:54:03 GMT
+      Content-Length:
+      - '2490'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"paratoi-ar-gyfer-credyd","title":"Paratowch at Gredyd Uniongyrchol","body":"<p>Ym
-        mis Ebrill 2013, dechreuodd y llywodraeth gyflwyno math newydd o gymorth ariannol
-        o\u2019r enw\u00a0Gredyd Uniongyrchol. </p><p>Mae ar gyfer pobl sy\u2019n
-        chwilio am waith neu sydd ar incwm isel ac yn y pendraw bydd yn disodli llawer
-        o\u2019r budd-daliadau a chredydau treth maent yn eu derbyn ar hyn o bryd.
-        </p><p>Mae yna bethau y gallwch eu gwneud nawr i sicrhau eich bod yn barod
-        am y newidiadau pan fyddant yn digwydd. </p><p><iframe id=\"video-link\" width=\"620\"
-        height=\"380\" src=\"https://www.youtube.com/embed/Bf3UL0EbeJE?wmode=transparent&rel=0&iv_load_policy=3\"
-        frameborder=\"0\" allowfullscreen></iframe></p><p><a title=\"get ready welsh\"
-        href=\"https://www.moneyadviceservice.org.uk/files/get-ready-for-universal-credit-welsh-doc.doc\">Darllenwch
-        drawsgri fiad y fideo (Doc)</a></p>","categories":["videos","universal-credit"],"videoUrl":"https://www.youtube.com/embed/Bf3UL0EbeJE"}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlBhcmF0b3djaCBhdCBHcmVkeWQgVW5pb25neXJjaG9sIiwi
+        c2x1ZyI6InBhcmF0b2ktYXItZ3lmZXItY3JlZHlkIiwiZnVsbF9wYXRoIjoi
+        L2dldC1yZWFkeS11bml2ZXJzYWwtY3JlZGl0IiwibWV0YV9kZXNjcmlwdGlv
+        biI6IlltIG1pcyBFYnJpbGwgMjAxMywgZGVjaHJldW9kZCB5IGxseXdvZHJh
+        ZXRoIGd5Zmx3eW5vIG1hdGggbmV3eWRkIG8gZ3ltb3J0aCBhcmlhbm5vbCBv
+        4oCZciBlbncgQ3JlZHlkIEN5bmh3eXNvbC4iLCJtZXRhX3RpdGxlIjoiIiwi
+        Y2F0ZWdvcnlfbmFtZXMiOlsidW5pdmVyc2FsLWNyZWRpdCIsInZpZGVvcyJd
+        LCJsYXlvdXRfaWRlbnRpZmllciI6InZpZGVvIiwicmVsYXRlZF9jb250ZW50
+        Ijp7ImxhdGVzdF9ibG9nX3Bvc3RfbGlua3MiOltdLCJwb3B1bGFyX2xpbmtz
+        IjpbeyJ0aXRsZSI6IkFtY2FuZ3lmcmlmd2NoIGVpY2ggY29zdGF1IHByeW51
+        IGEgc3ltdWQgY3lmZnJlZGlub2wiLCJwYXRoIjoiL2N5L2FydGljbGVzL2Ft
+        Y2FuZ3lmcmlmd2NoLWVpY2gtY29zdGF1LXByeW51LWEtc3ltdWQtY3lmZnJl
+        ZGlub2wifSx7InRpdGxlIjoiQnVkZC1kYWxpYWRhdSBhIGhhd2xpYXUgaeKA
+        mXcgaGF3bGlvIHBhbiBmeWRkIGdlbm55Y2ggZmFiaSIsInBhdGgiOiIvY3kv
+        YXJ0aWNsZXMvYnVkZC1kYWxpYWRhdS1hLWhhd2xpYXUtaXctaGF3bGlvLXBh
+        bi1meWRkLWdlbm55Y2gtZmFiaSJ9LHsidGl0bGUiOiJDYW5sbGF3IHByeW53
+        ciBjYXJ0cmVmIGFtIHkgdHJvIGN5bnRhZiIsInBhdGgiOiIvY3kvYXJ0aWNs
+        ZXMvYXdncnltaWFkYXUtYXItYXJpYW4taS1icnlud3lyLXRyby1jeW50YWYi
+        fV0sInJlbGF0ZWRfbGlua3MiOlt7InRpdGxlIjoiQ3JlZHlkIFRyZXRoIEd3
+        YWl0aCIsInBhdGgiOiIvY3kvYXJ0aWNsZXMvY3JlZHlkLXRyZXRoLWd3YWl0
+        aCJ9LHsidGl0bGUiOiJBciBid3kgeSBtYWUgQ3JlZHlkIEN5bmh3eXNvbCB5
+        biBlZmZlaXRoaW8iLCJwYXRoIjoiL2N5L2FydGljbGVzL2FyLWJ3eS15LW1h
+        ZS1jcmVkeWQtY3luaHd5c29sLXluLWVmZmVpdGhpbyJ9LHsidGl0bGUiOiJD
+        YW5sbGF3IGkgR3JlZHlkIEN5bmh3eXNvbCBhciBneWZlciB5ciBodW5hbmd5
+        ZmxvZ2VkaWciLCJwYXRoIjoiL2N5L2FydGljbGVzL2NhbmxsYXctaS1ncmVk
+        eWQtY3luaHd5c29sLWFyLWd5ZmVyLXlyLWh1bmFuZ3lmbG9nZWRpZyJ9XSwi
+        cHJldmlvdXNfbGluayI6eyJ0aXRsZSI6IkN5bmxsdW4gZ3dlaXRocmVkdSAt
+        IFBhcmF0b2kgYXIgZ3lmZXIgQ3JlZHlkIEN5bmh3eXNvbCIsInBhdGgiOiIv
+        Y3kvYXJ0aWNsZXMvcGFyYXRvaS1hci1neWZlci1jcmVkeWQtY3luaHd5c29s
+        In0sIm5leHRfbGluayI6eyJ0aXRsZSI6IkN5bmxsdW55ZGQgY3lsbGlkZWIi
+        LCJwYXRoIjoiL2N5L2FydGljbGVzL2N5bmxsdW55ZGQtY3lsbGlkZWIifX0s
+        ImJsb2NrcyI6W3siaWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50Ijoi
+        XHUwMDNjcFx1MDAzZVltIG1pcyBFYnJpbGwgMjAxMywgZGVjaHJldW9kZCB5
+        IGxseXdvZHJhZXRoIGd5Zmx3eW5vIG1hdGggbmV3eWRkIG8gZ3ltb3J0aCBh
+        cmlhbm5vbCBv4oCZciBlbncgR3JlZHlkIFVuaW9uZ3lyY2hvbC5cdTAwM2Mv
+        cFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlTWFlIGFyIGd5ZmVyIHBvYmwgc3ni
+        gJluIGNod2lsaW8gYW0gd2FpdGggbmV1IHN5ZGQgYXIgaW5jd20gaXNlbCBh
+        YyB5biB5IHBlbmRyYXcgYnlkZCB5biBkaXNvZGxpIGxsYXdlciBv4oCZciBi
+        dWRkLWRhbGlhZGF1IGEgY2hyZWR5ZGF1IHRyZXRoIG1hZW50IHluIGV1IGRl
+        cmJ5biBhciBoeW4gbyBicnlkLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3Bc
+        dTAwM2VNYWUgeW5hIGJldGhhdSB5IGdhbGx3Y2ggZXUgZ3duZXVkIG5hd3Ig
+        aSBzaWNyaGF1IGVpY2ggYm9kIHluIGJhcm9kIGFtIHkgbmV3aWRpYWRhdSBw
+        YW4gZnlkZGFudCB5biBkaWd3eWRkLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAz
+        Y2lmcmFtZSBmcmFtZWJvcmRlcj1cIjBcIiBoZWlnaHQ9XCI0MTNcIiB3aWR0
+        aD1cIjY4MFwiIHNyYz1cImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2VtYmVk
+        L0JmM1VMMEViZUpFXCIgdGl0bGU9XCJWaWRlb1wiXHUwMDNlXG5cdTAwM2Mv
+        aWZyYW1lXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9XCJo
+        dHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2ZpbGVzL2dl
+        dC1yZWFkeS1mb3ItdW5pdmVyc2FsLWNyZWRpdC13ZWxzaC1kb2MuZG9jXCJc
+        dTAwM2VEYXJsbGVud2NoIGRyYXdzZ3JpIGZpYWQgeSBmaWRlbyAoRE9DIDMz
+        S0IpXHUwMDNjL2FcdTAwM2VcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9h
+        dCI6IjIwMTUtMDItMjNUMTQ6NDk6NTIuMDAwWiIsInVwZGF0ZWRfYXQiOiIy
+        MDE1LTAzLTA5VDExOjI4OjE1LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3si
+        bGFiZWwiOiJHZXQgcmVhZHkgZm9yIFVuaXZlcnNhbCBDcmVkaXQiLCJsaW5r
+        IjoiL2VuL3ZpZGVvcy9nZXQtcmVhZHktdW5pdmVyc2FsLWNyZWRpdCIsImxh
+        bmd1YWdlIjoiZW4ifV19
     http_version: 
-  recorded_at: Tue, 10 Feb 2015 15:43:17 GMT
+  recorded_at: Sat, 06 Jun 2015 22:01:03 GMT
 recorded_with: VCR 2.9.2

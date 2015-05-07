@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 73f770e0-8a1a-4346-904f-9539a0479cf6
+      - 55ff6632-ff6e-4072-bd09-0c9e306bc3d6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,13 +21,16 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Fri, 13 Jun 2014 07:19:06 GMT
+      - Wed, 06 May 2015 13:53:45 GMT
       Date:
-      - Fri, 13 Jun 2014 07:19:06 GMT
+      - Wed, 06 May 2015 13:53:45 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - '"U4UPN13WzcHmeExsljFL4IUcsFk/2ip_-h552DHizByurB9os6LKYWU"'
+      - '"ENTgmThqWzhSab7OnAl_tX_Fk04/OS3mSjGxINz3t3CBYuTNMdvNB7A"'
+      Vary:
+      - Origin
+      - X-Origin
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -41,7 +44,7 @@ http_interactions:
       Server:
       - GSE
       Alternate-Protocol:
-      - 443:quic
+      - 443:quic,p=1
     body:
       encoding: UTF-8
       string: |
@@ -67,12 +70,12 @@ http_interactions:
           ]
          },
          "searchInformation": {
-          "searchTime": 0.248798,
-          "formattedSearchTime": "0.25",
+          "searchTime": 0.215848,
+          "formattedSearchTime": "0.22",
           "totalResults": "0",
           "formattedTotalResults": "0"
          }
         }
     http_version: 
-  recorded_at: Fri, 13 Jun 2014 07:19:07 GMT
+  recorded_at: Sat, 06 Jun 2015 22:00:47 GMT
 recorded_with: VCR 2.9.2

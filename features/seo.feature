@@ -39,6 +39,8 @@ Feature: Search Engine Optimisation
     | English |
     | Welsh   |
 
+  # not implemented in contento
+  @wip
   Scenario Outline: Action Plan pages include an alternate tags for supported languages
     Given I view an action plan in <action_plan_locale>
     Then the action plan page should have alternate tags for the supported locales
@@ -57,6 +59,8 @@ Feature: Search Engine Optimisation
     | English |
     | Welsh   |
 
+  # not implemented in contento
+  @wip
   Scenario Outline: Article pages include an alternate tag
     Given I view an article in <article_locale>
     Then the article page should have alternate tags for the supported locales

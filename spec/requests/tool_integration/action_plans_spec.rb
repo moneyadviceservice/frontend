@@ -1,7 +1,7 @@
-RSpec.describe 'RIO', type: :request, features: [:action_plans] do
+RSpec.describe 'Redundancy pay calculator', type: :request, features: [:action_plans] do
   %W(
-    /en/#{EngineMountPoint::ActionPlans::EN_ID}/redundancy
-    /cy/#{EngineMountPoint::ActionPlans::CY_ID}/redundancy
+    /en/tools/#{ToolMountPoint::ActionPlans::EN_ID}
+    /cy/tools/#{ToolMountPoint::ActionPlans::CY_ID}
   ).each do |path|
     describe path do
       before do

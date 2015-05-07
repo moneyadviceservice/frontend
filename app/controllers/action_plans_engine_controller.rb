@@ -26,10 +26,10 @@ class ActionPlansEngineController < MountController
   end
 
   def en_engine_id
-    EngineMountPoint::ActionPlans::EN_ID
+    ToolMountPoint::ActionPlans::EN_ID
   end
 
   def cy_engine_id
-    EngineMountPoint::ActionPlans::CY_ID
+    ToolMountPoint::ActionPlans::CY_ID
   end
 end

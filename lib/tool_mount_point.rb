@@ -1,4 +1,5 @@
 require_relative '../lib/tool_mount_point/base'
+require_relative '../lib/tool_mount_point/action_plans'
 require_relative '../lib/tool_mount_point/advice_plans'
 require_relative '../lib/tool_mount_point/budget_planner'
 require_relative '../lib/tool_mount_point/baby_cost_calculator'

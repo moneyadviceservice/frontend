@@ -59,6 +59,11 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:car_cost_tool)
     end
 
+    Feature.with(:action_plans) do
+      mount ActionPlans::Engine => '/tools/:tool_id',
+            constraints: ToolMountPoint.for(:action_plans)
+    end
+
     Feature.with(:contribution_calculator) do
       mount ContributionCalculator::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:contribution_calculator)
@@ -126,11 +131,6 @@ Rails.application.routes.draw do
 
     if Feature.active?(:agreements)
       mount Agreements::Engine => '/agreements'
-    end
-
-    Feature.with(:action_plans) do
-      mount ActionPlans::Engine => '/:engine_id',
-            constraints: EngineMountPoint.for(:action_plans)
     end
 
     match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'

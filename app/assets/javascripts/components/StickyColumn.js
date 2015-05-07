@@ -121,7 +121,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
       return;
     }
 
-    scrollTop = $(window).scrollTop();
+    scrollTop = this._getWindowScroll();
 
     if (!this.isFixed && !this.isAtBottom && scrollTop > this.top) {
       this.$el.addClass(this.config.classes.fixed);
@@ -154,6 +154,10 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
       this.isAtBottom = false;
       return;
     }
+  };
+
+  StickyColumn.prototype._getWindowScroll = function() {
+    return $(window).scrollTop();
   };
 
   /**

@@ -73,7 +73,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
     this.contentHeight = $(this.config.selectors.mainContent).height();
     this.topMargin = parseInt(this.$parent.css('marginTop'), 10);
     this.top = this.$parent.offset().top;
-    this.bottom = this.$parent.offset().top + this.contentHeight - this.topMargin - this.$el.height();
+    this.bottom = this.top + this.contentHeight - this.topMargin - this.$el.height();
 
     if (this.isInSidebar) {
       this._showInSidebar();

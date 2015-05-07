@@ -23,6 +23,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
     this.isFixed = false;
     this.isAtBottom = false;
     this.isInSidebar = false;
+    this.$parent = $(this.config.selectors.parent);
   };
 
   /**
@@ -70,7 +71,6 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
    * Recalculate offsets based on content height and sticky column's contents
    */
   StickyColumn.prototype._measureDom = function() {
-    this.$parent = $(this.config.selectors.parent);
     this.contentHeight = $(this.config.selectors.mainContent).height();
     this.topMargin = parseInt(this.$parent.css('marginTop'), 10);
     this.top = this.$parent.offset().top;

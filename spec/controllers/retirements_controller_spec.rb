@@ -1,4 +1,4 @@
-RSpec.describe RetirementsController, type: :controller, features: [:rio] do
+RSpec.describe RetirementsController, type: :controller, features: [:pensions_and_retirement] do
   describe '#index' do
     it 'responds with success' do
       get :index, locale: :en

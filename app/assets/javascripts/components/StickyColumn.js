@@ -170,8 +170,9 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
     var timeout;
 
     return function() {
-      var context = this, args = arguments,
-          later = function () {
+      var context = this,
+          args = arguments,
+          later = function() {
             timeout = null;
             func.apply(context, args);
           };

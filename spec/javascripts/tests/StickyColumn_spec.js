@@ -287,7 +287,6 @@ describe('StickyColumn', function() {
   describe('_handleSectionToggle', function() {
     it('calls _handleResize if the event has been triggered inside the sticky element', function() {
       var stub = sinon.stub(this.obj, "_handleResize");
-      // if (e.emitter.$el.parents(this.$el).length > 0) {
 
       var element = $('<span />');
       this.component.append(element);

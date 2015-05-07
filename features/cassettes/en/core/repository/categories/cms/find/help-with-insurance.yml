@@ -8,10 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 48268) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - b4c6ee04-50fe-4341-9b4d-8d7f8f61587f
+      - b5fe78b1-a59d-4540-bf81-32efc20ba2ef
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,67 +29,125 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"5b63f3b7812d455c6154bb65d032c189"'
+      - '"146cc60209a46044ce2622aa4751df96"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b4c6ee04-50fe-4341-9b4d-8d7f8f61587f
+      - b5fe78b1-a59d-4540-bf81-32efc20ba2ef
       X-Runtime:
-      - '0.009061'
+      - '0.035668'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 03 Feb 2015 14:33:10 GMT
+      - Wed, 06 May 2015 13:52:41 GMT
       Content-Length:
-      - '243'
+      - '4545'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"help-with-insurance","title":"Help with insurance","description":"Understand
-        what insurance is and how it works. Find out how to buy insurance and how
-        to go about making a claim.","parent_id":"insurance","contents":[{"id":"the-financial-services-compensation-scheme---quick-guide","type":"guide","title":"Financial
-        Services Compensation Scheme","description":"The Financial Services Compensation
-        Scheme may be able to provide compensation if a financial services firm goes
-        out of business"},{"id":"sort-out-a-money-problem-make-a-complaint-or-get-compensation","type":"guide","title":"Sort
-        out a money problem or make a complaint","description":"Sorting out problems,
-        making complaints and getting compensation from banks or other financial companies"},{"id":"what-to-do-when-things-go-wrong-payments","type":"guide","title":"What
-        to do when things go wrong \u2013 payments","description":"Simple steps for
-        avoiding problems with payments and transfers, plus advice on sorting out
-        problems that do arise"},{"id":"financial-mis-selling-what-to-do-if-you-think-its-affected-you","type":"guide","title":"Financial
-        mis-selling \u2013 what to do if you''re affected","description":"Have you
-        been mis-sold a financial product, like insurance or an investment? You may
-        have a case to complain and get compensation"},{"id":"compensation-if-youve-lost-money-through-mis-selling","type":"guide","title":"Compensation
-        if you\u2019ve lost money through mis-selling","description":"Check what you
-        might get from the Financial Services Compensation Scheme if you\u2019ve lost
-        money after getting poor financial advice"},{"id":"what-is-insurance","type":"guide","title":"What
-        is insurance?","description":"Not sure what insurance is or how it works?
-        Understand the basics so you can get the right protection for you and your
-        family"},{"id":"types-of-insurance","type":"guide","title":"Types of insurance","description":"Not
-        sure what insurance you need? This table summarises what each type covers,
-        who needs it and the pros and cons of each"},{"id":"things-to-watch-out-for-when-buying-insurance","type":"guide","title":"Things
-        to look out for when buying insurance","description":"Before you commit, run
-        through this checklist to make sure you know what you\u2019re buying"},{"id":"how-to-buy-insurance-using-comparison-sites","type":"guide","title":"How
-        to buy insurance using comparison sites","description":"Find out how price
-        comparison websites could save you money and learn how to use them to buy
-        the right cover"},{"id":"when-to-use-an-insurance-broker","type":"guide","title":"When
-        to use an insurance broker","description":"Insurance brokers can help you
-        find the right policy for whatever you want to insure and save you time if
-        you need to make a claim"},{"id":"making-an-insurance-claim","type":"guide","title":"Making
-        an insurance claim","description":"Do you need to claim on your insurance?
-        You\u2019re more likely to succeed if you follow this step-by-step process"},{"id":"what-to-do-if-your-insurance-claim-is-rejected","type":"guide","title":"What
-        to do if your insurance claim is rejected","description":"If you think that
-        your insurance claim was unfairly rejected, you should consider complaining
-        \u2013 find out more about how to do that"},{"id":"making-a-complaint-about-an-insurance-company","type":"guide","title":"How
-        to make an insurance complaint","description":"If you\u2019re not happy with
-        the way your insurance company has treated you, you have the right to complain
-        \u2013 find out how"},{"id":"how-to-complain-about-an-insurer","type":"action_plan","title":"Action
-        plan - How to complain about an insurer","description":"Steps to take if you\u2019re
-        not happy with the service offered by your insurance company, or the way they
-        have treated you."},{"id":"getting-insurance-if-you-have-a-criminal-conviction","type":"guide","title":"Getting
-        insurance if you have a criminal conviction","description":"Do you have a
-        criminal record \u2013 or maybe just a fine? Get tips for what to do and where
-        to go for insurance"}]}'
-    http_version:
-  recorded_at: Tue, 03 Feb 2015 14:33:10 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImhlbHAtd2l0aC1pbnN1cmFuY2UiLCJ0eXBlIjoiY2F0ZWdvcnki
+        LCJ0aXRsZSI6IkhlbHAgd2l0aCBpbnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6
+        IlVuZGVyc3RhbmQgd2hhdCBpbnN1cmFuY2UgaXMgYW5kIGhvdyBpdCB3b3Jr
+        cy4gRmluZCBvdXQgaG93IHRvIGJ1eSBpbnN1cmFuY2UgYW5kIGhvdyB0byBn
+        byBhYm91dCBtYWtpbmcgYSBjbGFpbS4iLCJwYXJlbnRfaWQiOiJpbnN1cmFu
+        Y2UiLCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiY29udGVudHMi
+        Olt7ImlkIjoid2hhdC1pcy1pbnN1cmFuY2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0
+        aXRsZSI6IldoYXQgaXMgaW5zdXJhbmNlPyIsImRlc2NyaXB0aW9uIjoiTm90
+        IHN1cmUgd2hhdCBpbnN1cmFuY2UgaXMgb3IgaG93IGl0IHdvcmtzPyBVbmRl
+        cnN0YW5kIHRoZSBiYXNpY3Mgc28geW91IGNhbiBnZXQgdGhlIHJpZ2h0IHBy
+        b3RlY3Rpb24gZm9yIHlvdSBhbmQgeW91ciBmYW1pbHkifSx7ImlkIjoidHlw
+        ZXMtb2YtaW5zdXJhbmNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUeXBl
+        cyBvZiBpbnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6Ik5vdCBzdXJlIHdoYXQg
+        aW5zdXJhbmNlIHlvdSBuZWVkPyBUaGlzIHRhYmxlIHN1bW1hcmlzZXMgd2hh
+        dCBlYWNoIHR5cGUgY292ZXJzLCB3aG8gbmVlZHMgaXQgYW5kIHRoZSBwcm9z
+        IGFuZCBjb25zIG9mIGVhY2gifSx7ImlkIjoidGhpbmdzLXRvLXdhdGNoLW91
+        dC1mb3Itd2hlbi1idXlpbmctaW5zdXJhbmNlIiwidHlwZSI6Imd1aWRlIiwi
+        dGl0bGUiOiJUaGluZ3MgdG8gbG9vayBvdXQgZm9yIHdoZW4gYnV5aW5nIGlu
+        c3VyYW5jZSIsImRlc2NyaXB0aW9uIjoiQmVmb3JlIHlvdSBjb21taXQsIHJ1
+        biB0aHJvdWdoIHRoaXMgY2hlY2tsaXN0IHRvIG1ha2Ugc3VyZSB5b3Uga25v
+        dyB3aGF0IHlvdeKAmXJlIGJ1eWluZyJ9LHsiaWQiOiJob3ctdG8tYnV5LWlu
+        c3VyYW5jZS11c2luZy1jb21wYXJpc29uLXNpdGVzIiwidHlwZSI6Imd1aWRl
+        IiwidGl0bGUiOiJIb3cgdG8gYnV5IGluc3VyYW5jZSB1c2luZyBjb21wYXJp
+        c29uIHNpdGVzIiwiZGVzY3JpcHRpb24iOiJGaW5kIG91dCBob3cgcHJpY2Ug
+        Y29tcGFyaXNvbiB3ZWJzaXRlcyBjb3VsZCBzYXZlIHlvdSBtb25leSBhbmQg
+        bGVhcm4gaG93IHRvIHVzZSB0aGVtIHRvIGJ1eSB0aGUgcmlnaHQgY292ZXIi
+        fSx7ImlkIjoid2hlbi10by11c2UtYW4taW5zdXJhbmNlLWJyb2tlciIsInR5
+        cGUiOiJndWlkZSIsInRpdGxlIjoiV2hlbiB0byB1c2UgYW4gaW5zdXJhbmNl
+        IGJyb2tlciIsImRlc2NyaXB0aW9uIjoiSW5zdXJhbmNlIGJyb2tlcnMgY2Fu
+        IGhlbHAgeW91IGZpbmQgdGhlIHJpZ2h0IHBvbGljeSBmb3Igd2hhdGV2ZXIg
+        eW91IHdhbnQgdG8gaW5zdXJlIGFuZCBzYXZlIHlvdSB0aW1lIGlmIHlvdSBu
+        ZWVkIHRvIG1ha2UgYSBjbGFpbSJ9LHsiaWQiOiJtYWtpbmctYW4taW5zdXJh
+        bmNlLWNsYWltIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJNYWtpbmcgYW4g
+        aW5zdXJhbmNlIGNsYWltIiwiZGVzY3JpcHRpb24iOiJEbyB5b3UgbmVlZCB0
+        byBjbGFpbSBvbiB5b3VyIGluc3VyYW5jZT8gWW914oCZcmUgbW9yZSBsaWtl
+        bHkgdG8gc3VjY2VlZCBpZiB5b3UgZm9sbG93IHRoaXMgc3RlcC1ieS1zdGVw
+        IHByb2Nlc3MifSx7ImlkIjoibWFraW5nLWEtY29tcGxhaW50LWFib3V0LWFu
+        LWluc3VyYW5jZS1jb21wYW55IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJI
+        b3cgdG8gbWFrZSBhbiBpbnN1cmFuY2UgY29tcGxhaW50IiwiZGVzY3JpcHRp
+        b24iOiJJZiB5b3XigJlyZSBub3QgaGFwcHkgd2l0aCB0aGUgd2F5IHlvdXIg
+        aW5zdXJhbmNlIGNvbXBhbnkgaGFzIHRyZWF0ZWQgeW91LCB5b3UgaGF2ZSB0
+        aGUgcmlnaHQgdG8gY29tcGxhaW4g4oCTIGZpbmQgb3V0IGhvdyJ9LHsiaWQi
+        OiJzb3J0LW91dC1hLW1vbmV5LXByb2JsZW0tbWFrZS1hLWNvbXBsYWludC1v
+        ci1nZXQtY29tcGVuc2F0aW9uIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJT
+        b3J0IG91dCBhIG1vbmV5IHByb2JsZW0gb3IgbWFrZSBhIGNvbXBsYWludCIs
+        ImRlc2NyaXB0aW9uIjoiU29ydGluZyBvdXQgcHJvYmxlbXMsIG1ha2luZyBj
+        b21wbGFpbnRzIGFuZCBnZXR0aW5nIGNvbXBlbnNhdGlvbiBmcm9tIGJhbmtz
+        IG9yIG90aGVyIGZpbmFuY2lhbCBjb21wYW5pZXMifSx7ImlkIjoidGhlLWZp
+        bmFuY2lhbC1zZXJ2aWNlcy1jb21wZW5zYXRpb24tc2NoZW1lLS0tcXVpY2st
+        Z3VpZGUiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkZpbmFuY2lhbCBTZXJ2
+        aWNlcyBDb21wZW5zYXRpb24gU2NoZW1lIiwiZGVzY3JpcHRpb24iOiJUaGUg
+        RmluYW5jaWFsIFNlcnZpY2VzIENvbXBlbnNhdGlvbiBTY2hlbWUgbWF5IGJl
+        IGFibGUgdG8gcHJvdmlkZSBjb21wZW5zYXRpb24gaWYgYSBmaW5hbmNpYWwg
+        c2VydmljZXMgZmlybSBnb2VzIG91dCBvZiBidXNpbmVzcyJ9LHsiaWQiOiJ3
+        aGF0LXRvLWRvLXdoZW4tdGhpbmdzLWdvLXdyb25nLXBheW1lbnRzIiwidHlw
+        ZSI6Imd1aWRlIiwidGl0bGUiOiJXaGF0IHRvIGRvIHdoZW4gdGhpbmdzIGdv
+        IHdyb25nIOKAkyBwYXltZW50cyIsImRlc2NyaXB0aW9uIjoiU2ltcGxlIHN0
+        ZXBzIGZvciBhdm9pZGluZyBwcm9ibGVtcyB3aXRoIHBheW1lbnRzIGFuZCB0
+        cmFuc2ZlcnMsIHBsdXMgYWR2aWNlIG9uIHNvcnRpbmcgb3V0IHByb2JsZW1z
+        IHRoYXQgZG8gYXJpc2UifSx7ImlkIjoiZmluYW5jaWFsLW1pcy1zZWxsaW5n
+        LXdoYXQtdG8tZG8taWYteW91LXRoaW5rLWl0cy1hZmZlY3RlZC15b3UiLCJ0
+        eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkZpbmFuY2lhbCBtaXMtc2VsbGluZyDi
+        gJMgd2hhdCB0byBkbyBpZiB5b3UncmUgYWZmZWN0ZWQiLCJkZXNjcmlwdGlv
+        biI6IkhhdmUgeW91IGJlZW4gbWlzLXNvbGQgYSBmaW5hbmNpYWwgcHJvZHVj
+        dCwgbGlrZSBpbnN1cmFuY2Ugb3IgYW4gaW52ZXN0bWVudD8gWW91IG1heSBo
+        YXZlIGEgY2FzZSB0byBjb21wbGFpbiBhbmQgZ2V0IGNvbXBlbnNhdGlvbiJ9
+        LHsiaWQiOiJjb21wZW5zYXRpb24taWYteW91dmUtbG9zdC1tb25leS10aHJv
+        dWdoLW1pcy1zZWxsaW5nIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJDb21w
+        ZW5zYXRpb24gaWYgeW914oCZdmUgbG9zdCBtb25leSB0aHJvdWdoIG1pcy1z
+        ZWxsaW5nIiwiZGVzY3JpcHRpb24iOiJDaGVjayB3aGF0IHlvdSBtaWdodCBn
+        ZXQgZnJvbSB0aGUgRmluYW5jaWFsIFNlcnZpY2VzIENvbXBlbnNhdGlvbiBT
+        Y2hlbWUgaWYgeW914oCZdmUgbG9zdCBtb25leSBhZnRlciBnZXR0aW5nIHBv
+        b3IgZmluYW5jaWFsIGFkdmljZSJ9LHsiaWQiOiJ3aGF0LXRvLWRvLWlmLXlv
+        dXItaW5zdXJhbmNlLWNsYWltLWlzLXJlamVjdGVkIiwidHlwZSI6Imd1aWRl
+        IiwidGl0bGUiOiJXaGF0IHRvIGRvIGlmIHlvdXIgaW5zdXJhbmNlIGNsYWlt
+        IGlzIHJlamVjdGVkIiwiZGVzY3JpcHRpb24iOiJJZiB5b3UgdGhpbmsgdGhh
+        dCB5b3VyIGluc3VyYW5jZSBjbGFpbSB3YXMgdW5mYWlybHkgcmVqZWN0ZWQs
+        IHlvdSBzaG91bGQgY29uc2lkZXIgY29tcGxhaW5pbmcg4oCTIGZpbmQgb3V0
+        IG1vcmUgYWJvdXQgaG93IHRvIGRvIHRoYXQifSx7ImlkIjoiaG93LXRvLWNv
+        bXBsYWluLWFib3V0LWFuLWluc3VyZXIiLCJ0eXBlIjoiYWN0aW9uX3BsYW4i
+        LCJ0aXRsZSI6IkFjdGlvbiBwbGFuIOKAkyBIb3cgdG8gY29tcGxhaW4gYWJv
+        dXQgYW4gaW5zdXJlciIsImRlc2NyaXB0aW9uIjoiU3RlcCBieSBzdGVwIGFk
+        dmljZSBvbiBob3cgdG8gbG9kZ2UgYSBjb21wbGFpbnQgYWJvdXQgYW4gaW5z
+        dXJhbmNlIGNvbXBhbnkgaW5jbHVkaW5nIGxlZ2FsIGFkdmljZSJ9LHsiaWQi
+        OiJnZXR0aW5nLWluc3VyYW5jZS1pZi15b3UtaGF2ZS1hLWNyaW1pbmFsLWNv
+        bnZpY3Rpb24iLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkdldHRpbmcgaW5z
+        dXJhbmNlIGlmIHlvdSBoYXZlIGEgY3JpbWluYWwgY29udmljdGlvbiIsImRl
+        c2NyaXB0aW9uIjoiRG8geW91IGhhdmUgYSBjcmltaW5hbCByZWNvcmQg4oCT
+        IG9yIG1heWJlIGp1c3QgYSBmaW5lPyBHZXQgdGlwcyBmb3Igd2hhdCB0byBk
+        byBhbmQgd2hlcmUgdG8gZ28gZm9yIGluc3VyYW5jZSJ9LHsiaWQiOiJob3ct
+        dG8tcmVjbGFpbS1wcGkiLCJ0eXBlIjoiYWN0aW9uX3BsYW4iLCJ0aXRsZSI6
+        IkFjdGlvbiBwbGFuIOKAkyBIb3cgdG8gcmVjbGFpbSBQUEkiLCJkZXNjcmlw
+        dGlvbiI6IkhvdyB0byBmaW5kIG91dCBpZiB5b3UgaGF2ZSBiZWVuIG1pcy1z
+        b2xkIFBQSSBhbmQgdGhlIHN0ZXBzIHRvIHJlY2xhaW1pbmcgbW9uZXkifSx7
+        ImlkIjoid29yay1vdXQtaWYteW91LW5lZWQtbGlmZS1pbnN1cmFuY2UtYW5k
+        LWdldC10aGUtcmlnaHQtY292ZXIiLCJ0eXBlIjoiYWN0aW9uX3BsYW4iLCJ0
+        aXRsZSI6IkFjdGlvbiBwbGFuIOKAkyBTZWUgaWYgeW91IG5lZWQgbGlmZSBp
+        bnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6IlJlYWQgb3VyIGd1aWRlIGZvciBh
+        ZHZpY2Ugb24gd2hldGhlciB5b3UgbmVlZCBsaWZlIGluc3VyYW5jZSBhbmQg
+        d2hpY2ggd291bGQgYmUgdGhlIGJlc3Qgb3B0aW9uIGZvciB5b3UuIFZpZXcg
+        b3VyIGd1aWRlIGhlcmUgaW5jbHVkaW5nIGJ1ZGdldCBwbGFubmVycy4ifV19
+    http_version: 
+  recorded_at: Wed, 06 May 2015 13:52:41 GMT
 recorded_with: VCR 2.9.2

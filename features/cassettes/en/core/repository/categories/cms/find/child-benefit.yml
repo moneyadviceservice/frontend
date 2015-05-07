@@ -8,10 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 48248) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 4010ca67-70fb-420d-8989-b1267827fa03
+      - 295c5656-03cc-4b56-b899-b71ed8e65672
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,25 +29,66 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"dbdddeb41c08d3bd81a41d5642a847e7"'
+      - '"d70a8819223818ff20f2aaf1383e9944"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4010ca67-70fb-420d-8989-b1267827fa03
+      - 295c5656-03cc-4b56-b899-b71ed8e65672
       X-Runtime:
-      - '0.008707'
+      - '0.037372'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 03 Feb 2015 14:32:57 GMT
+      - Wed, 06 May 2015 13:52:42 GMT
       Content-Length:
-      - '195'
+      - '1887'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"child-benefit","type":"category","title":"Child Benefit","description":"Find
-        out how Child Benefit works and how much you might be entitled to claim.","parent_id":"benefits","contents":[]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoaWxkLWJlbmVmaXQiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRs
+        ZSI6IkNoaWxkIEJlbmVmaXQiLCJkZXNjcmlwdGlvbiI6IkZpbmQgb3V0IGhv
+        dyBDaGlsZCBCZW5lZml0IHdvcmtzIGFuZCBob3cgbXVjaCB5b3UgbWlnaHQg
+        YmUgZW50aXRsZWQgdG8gY2xhaW0uIiwicGFyZW50X2lkIjoiYmVuZWZpdHMi
+        LCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiY29udGVudHMiOlt7
+        ImlkIjoiY2hhbmdlcy10by1jaGlsZC1iZW5lZml0LWZyb20tMjAxMyIsInR5
+        cGUiOiJndWlkZSIsInRpdGxlIjoiQ2hpbGQgQmVuZWZpdCBmb3IgcGVvcGxl
+        IGVhcm5pbmcgwqM1MCwwMDArIiwiZGVzY3JpcHRpb24iOiJUaGUgcnVsZXMg
+        Zm9yIENoaWxkIEJlbmVmaXQgY2hhbmdlZCBpbiBKYW51YXJ5IDIwMTMg4oCT
+        IGZpbmQgb3V0IGhvdyB0aGUgY2hhbmdlcyBhZmZlY3QgeW91IGFuZCB3aGF0
+        IHlvdXIgb3B0aW9ucyBhcmUifSx7ImlkIjoiY2xhaW1pbmctY2hpbGQtYmVu
+        ZWZpdCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ2xhaW1pbmcgQ2hpbGQg
+        QmVuZWZpdCIsImRlc2NyaXB0aW9uIjoiWW91IG1heSBiZSBhYmxlIHRvIGNs
+        YWltIENoaWxkIEJlbmVmaXQgYXMgc29vbiBhcyB5b3VyIGJhYnkgaXMgYm9y
+        bi4gSGVyZeKAmXMgaG93IHRvIGRvIGl0In0seyJpZCI6ImNsYWltLXdvcmst
+        ZW50aXRsZW1lbnRzLXdoZW4tcHJlZ25hbnQiLCJ0eXBlIjoiYWN0aW9uX3Bs
+        YW4iLCJ0aXRsZSI6IkFjdGlvbiBwbGFuIOKAkyBDbGFpbSB3b3JrIGVudGl0
+        bGVtZW50cyB3aGVuIHByZWduYW50IiwiZGVzY3JpcHRpb24iOiJGaW5kIG91
+        dCB3aGF0IHRpbWUgb2ZmLCBtYXRlcm5pdHkgbGVhdmUgYW5kIG1hdGVybml0
+        eSBwYXkgeW914oCZcmUgZHVlIn0seyJpZCI6ImFycmFuZ2luZy1jaGlsZC1t
+        YWludGVuYW5jZS13aXRoLXlvdXItZXgtcGFydG5lciIsInR5cGUiOiJndWlk
+        ZSIsInRpdGxlIjoiQXJyYW5naW5nIGNoaWxkIG1haW50ZW5hbmNlIHdpdGgg
+        eW91ciBleC1wYXJ0bmVyIiwiZGVzY3JpcHRpb24iOiJJZiB5b3XigJlyZSBu
+        byBsb25nZXIgd2l0aCB5b3VyIGJhYnnigJlzIG90aGVyIHBhcmVudCwgeW91
+        IG1heSBiZSBhYmxlIHRvIGNsYWltIGNoaWxkIG1haW50ZW5hbmNlIGZyb20g
+        dGhlbSB0byBoZWxwIHdpdGggZGF5LXRvLWRheSBjb3N0cyJ9LHsiaWQiOiJi
+        ZW5lZml0cy1hbmQtZW50aXRsZW1lbnRzLXRvLWNsYWltLXdoZW4teW91LWhh
+        dmUtYS1iYWJ5IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJCZW5lZml0cyB5
+        b3UgYXJlIGVudGl0bGVkIHRvIHdoZW4gaGF2aW5nIGEgYmFieSIsImRlc2Ny
+        aXB0aW9uIjoiV2hldGhlciB5b3UncmUgcHJlZ25hbnQgb3IgaGF2ZSBhIG5l
+        dyBiYWJ5LCBzdGF0ZSBoZWxwIGlzIGF2YWlsYWJsZSB0b3dhcmRzIHRoZSBj
+        b3N0IG9mIHJhaXNpbmcgYSBmYW1pbHkifSx7ImlkIjoiY2hpbGQtdGF4LWNy
+        ZWRpdCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ2hpbGQgVGF4IENyZWRp
+        dCIsImRlc2NyaXB0aW9uIjoiQXJlIHlvdSBlbnRpdGxlZCB0byBDaGlsZCBU
+        YXggQ3JlZGl0PyBSZWFkIG91ciBndWlkZSB0byBmaW5kIG91dCBtdWNoIHlv
+        dSBjb3VsZCBnZXQgYW5kIGV4YWN0bHkgaG93IHRvIGNsYWltIn0seyJpZCI6
+        ImZpbmFuY2lhbC1zdXBwb3J0LWlmLXlvdS1vci15b3VyLWNoaWxkLWhhcy1h
+        LWRpc2FiaWxpdHkiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkZpbmFuY2lh
+        bCBzdXBwb3J0IGlmIHlvdSBvciB5b3VyIGNoaWxkIGhhcyBhIGRpc2FiaWxp
+        dHkiLCJkZXNjcmlwdGlvbiI6IkRpc2FiaWxpdHkgTGl2aW5nIEFsbG93YW5j
+        ZSBhbmQgb3RoZXIgYmVuZWZpdHMgYXJlIGF2YWlsYWJsZSB0byBzdXBwb3J0
+        IHBhcmVudHMgb3IgY2hpbGRyZW4gd2l0aCBhIGRpc2FiaWxpdHkifV19
     http_version: 
-  recorded_at: Tue, 03 Feb 2015 14:32:57 GMT
+  recorded_at: Wed, 06 May 2015 13:52:42 GMT
 recorded_with: VCR 2.9.2

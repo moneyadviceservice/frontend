@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/cy/categories/automatic-enrolment.json
+    uri: http://localhost:3000/cy/categories/automatic-enrolment.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      - efdc7c53-6522-4f44-80fc-d246ddda125e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,78 +18,111 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:19:00 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"c438dacf94c77c369474c207a78a6dc8"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - e0ab886bcd61cff380754607e58ac8ad
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:19:00 GMT; secure
-      - _session_id=e0ab886bcd61cff380754607e58ac8ad; path=/; secure; HttpOnly
-      - _web_tracking=aadb2eaa1f9ed0e084701c1c0b5ec0ad; path=/; expires=Wed, 23-Mar-2016
-        17:19:00 GMT; secure
       X-Request-Id:
-      - f9cafcce-1f50-4d6e-804e-eb18d976159b
+      - efdc7c53-6522-4f44-80fc-d246ddda125e
       X-Runtime:
-      - '0.042476'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.089856'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:57 GMT
+      Content-Length:
+      - '3408'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"automatic-enrolment","title":"Cofrestru awtomatig","description":"Dysgwch
-        am gofrestru awtomatig a sut mae\u2019n effeithio arnoch, a defnyddiwch ein
-        hofferyn a chyfrifiannell cyngor pensiwn gweithle.","parent_id":"work-pensions-and-retirement","contents":[{"id":"cofrestriad-awtomatig-ar-bensiwn-man-gwaith","type":"guide","title":"Cofrestru
-        awtomatig \u2013 cyflwyniad","description":"Mae ymuno \u00e2 chynllun pensiwn
-        eich man gwaith yn ffordd ddidrafferth o ddechrau cynilo ar gyfer yn hwyrach
-        mewn bywyd"},{"id":"cyfrifiannell-cyfraniadau-pensiwn-gweithle","type":"tool","title":"Cyfrifiannell
-        cyfraniadau pensiwn gweithle","description":"Defnyddiwch y gyfrifiannell hon
-        i weld faint y byddwch chi a\u2019ch cyflogwr yn ei roi yn eich cronfa bensiwn"},{"id":"newidiadau-pensiwn-yn-y-gweithle-y-wybodaeth-sylfaenol","type":"video","title":"Newidiadau
-        i bensiynau gweithle - yr hanfodion","description":"Mae\u2019r fideo hwn yn
-        egluro sut mae\u2019r broses yn gweithio a\u2019r pwysigrwydd o gynilo ar
-        gyfer ymddeoliad"},{"id":"offeryn-cynghori-pensiwn-gweithle","type":"tool","title":"Offeryn
-        cynghori pensiwn gweithle","description":"Cwestiynau cyflym i\u2019ch helpu
-        i benderfynu a yw bod mewn pensiwn gweithle yn addas i chi"},{"id":"cofrestru-awtomatig-os-ydych-chi-dros-oedran-pensiwn-y-wladwriaeth","type":"guide","title":"Cofrestru
-        awtomatig os ydych chi dros oedran Pensiwn y Wladwriaeth","description":"Beth
-        mae cofrestru awtomatig yn ei olygu os ydych chi dros oedran Pensiwn y Wladwriaeth"},{"id":"gall-cofrestru-awtomatig-ennill-hyd-at-agbp9440-i-chi","type":"guide","title":"Gall
-        cofrestru awtomatig ennill hyd at \u00a310,000 i chi","description":"Esboniad
-        o''ch hawl i ymuno \u00e2 phensiwn gweithle"},{"id":"cofrestru-awtomatig-os-ydych-yn-21-oed-neun-iau","type":"guide","title":"Cofrestru
-        awtomatig os ydych yn 21 oed neu\u2019n iau","description":"Dysgwch sut i
-        ddechrau cronfa bensiwn os ydych yn 21 oed neu\u2019n iau"},{"id":"cofrestru-awtomatig-os-ydych-chin-agos-at-ymddeol","type":"guide","title":"Cofrestru
-        awtomatig os ydych chi''n agos at ymddeol","description":"Tra bo cofrestru
-        awtomatig yn ffordd ardderchog o ddechrau cynilo mewn pensiwn, wrth i chi
-        nes\u00e1u at ymddeol, mae''r effaith y mae hyn yn debygol o''i gael ar eich
-        incwm yn ystod eich ymddeoliad yn lleihau. Dod o hyd i ragor o wybodaeth"},{"id":"cofrestru-awtomatig-os-oes-gennych-ddyledion","type":"guide","title":"Cofrestru
-        awtomatig os oes gennych ddyledion","description":"Os oes gennych ddyledion
-        nad ydych yn gallu eu rheoli\u2019n ddidrafferth, dyma beth i\u2019w wneud"},{"id":"gwneud-y-mwyaf-o-gofrestru-awtomatig","type":"action_plan","title":"Cynllun
-        gweithredu - Gwneud y mwyaf o gofrestru awtomatig","description":"Canfyddwch
-        faint fydd eich cyfraniadau pensiwn yn ei gostio ichi a pha fath o incwm ymddeoliad
-        y byddant yn ei gynhyrchu"},{"id":"cofrestru-awtomatig-beth-iw-ddisgwyl-gan-eich-cyflogwr","type":"guide","title":"Cofrestru
-        awtomatig - beth i\u2019w ddisgwyl gan eich cyflogwr","description":"Canfyddwch
-        beth i\u2019w ddisgwyl pan fydd cofrestru awtomatig yn dod i rym yn eich gweithle"},{"id":"cyfrifiannell-pensiwn","type":"tool","title":"Cyfrifiannell
-        pensiwn","description":"Defnyddiwch y gyfrifiannell hon i''ch helpu i gyfrifo
-        faint o incwm ymddeol y gallech ei gael trwy gynilo mewn pensiwn personol,
-        rhanddeiliaid neu gr\u0175p"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImF1dG9tYXRpYy1lbnJvbG1lbnQiLCJ0eXBlIjoiY2F0ZWdvcnki
+        LCJ0aXRsZSI6IkNvZnJlc3RydSBhd3RvbWF0aWciLCJkZXNjcmlwdGlvbiI6
+        IkR5c2d3Y2ggYW0gZ29mcmVzdHJ1IGF3dG9tYXRpZyBhIHN1dCBtYWXigJlu
+        IGVmZmVpdGhpbyBhcm5vY2gsIGEgZGVmbnlkZGl3Y2ggZWluIGhvZmZlcnlu
+        IGEgY2h5ZnJpZmlhbm5lbGwgY3luZ29yIHBlbnNpd24gZ3dlaXRobGUuIiwi
+        cGFyZW50X2lkIjoid29yay1wZW5zaW9ucy1hbmQtcmV0aXJlbWVudCIsInRo
+        aXJkX2xldmVsX25hdmlnYXRpb24iOmZhbHNlLCJjb250ZW50cyI6W3siaWQi
+        OiJnYWxsLWNvZnJlc3RydS1hd3RvbWF0aWctZW5uaWxsLWh5ZC1hdC1hZ2Jw
+        OTQ0MC1pLWNoaSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiR2FsbCBjb2Zy
+        ZXN0cnUgYXd0b21hdGlnIGVubmlsbCBoeWQgYXQgwqMxMCwwMDAgaSBjaGki
+        LCJkZXNjcmlwdGlvbiI6IkVzYm9uaWFkIG8nY2ggaGF3bCBpIHltdW5vIMOi
+        IHBoZW5zaXduIGd3ZWl0aGxlIn0seyJpZCI6ImNvZnJlc3RydS1hd3RvbWF0
+        aWctYmV0aC1pdy1kZGlzZ3d5bC1nYW4tZWljaC1jeWZsb2d3ciIsInR5cGUi
+        OiJndWlkZSIsInRpdGxlIjoiQ29mcmVzdHJ1IGF3dG9tYXRpZyDigJMgYmV0
+        aCBp4oCZdyBkZGlzZ3d5bCBnYW4gZWljaCBjeWZsb2d3ciIsImRlc2NyaXB0
+        aW9uIjoiQ2FuZnlkZHdjaCBiZXRoIGnigJl3IGRkaXNnd3lsIHBhbiBmeWRk
+        IGNvZnJlc3RydSBhd3RvbWF0aWcgeW4gZG9kIGkgcnltIHluIGVpY2ggZ3dl
+        aXRobGUifSx7ImlkIjoiY29mcmVzdHJ1LWF3dG9tYXRpZy1vcy15ZHljaC15
+        bi0yMS1vZWQtbmV1bi1pYXUiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkNv
+        ZnJlc3RydSBhd3RvbWF0aWcgb3MgeWR5Y2ggeW4gMjEgb2VkIG5ldeKAmW4g
+        aWF1IiwiZGVzY3JpcHRpb24iOiJEeXNnd2NoIHN1dCBpIGRkZWNocmF1IGNy
+        b25mYSBiZW5zaXduIG9zIHlkeWNoIHluIDIxIG9lZCBuZXXigJluIGlhdSJ9
+        LHsiaWQiOiJjb2ZyZXN0cnUtYXd0b21hdGlnLW9zLXlkeWNoLWNoaS1kcm9z
+        LW9lZHJhbi1wZW5zaXduLXktd2xhZHdyaWFldGgiLCJ0eXBlIjoiZ3VpZGUi
+        LCJ0aXRsZSI6IkNvZnJlc3RydSBhd3RvbWF0aWcgb3MgeWR5Y2ggY2hpIGRy
+        b3Mgb2VkcmFuIFBlbnNpd24geSBXbGFkd3JpYWV0aCIsImRlc2NyaXB0aW9u
+        IjoiQmV0aCBtYWUgY29mcmVzdHJ1IGF3dG9tYXRpZyB5biBlaSBvbHlndSBv
+        cyB5ZHljaCBjaGkgZHJvcyBvZWRyYW4gUGVuc2l3biB5IFdsYWR3cmlhZXRo
+        In0seyJpZCI6ImNvZnJlc3RydS1hd3RvbWF0aWctb3MteWR5Y2gtY2hpbi1h
+        Z29zLWF0LXltZGRlb2wiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkNvZnJl
+        c3RydSBhd3RvbWF0aWcgb3MgeWR5Y2ggY2hpJ24gYWdvcyBhdCB5bWRkZW9s
+        IiwiZGVzY3JpcHRpb24iOiJUcmEgYm8gY29mcmVzdHJ1IGF3dG9tYXRpZyB5
+        biBmZm9yZGQgYXJkZGVyY2hvZyBvIGRkZWNocmF1IGN5bmlsbyBtZXduIHBl
+        bnNpd24sIHdydGggaSBjaGkgbmVzw6F1IGF0IHltZGRlb2wsIG1hZSdyIGVm
+        ZmFpdGggeSBtYWUgaHluIHluIGRlYnlnb2wgbydpIGdhZWwgYXIgZWljaCBp
+        bmN3bSB5biB5c3RvZCBlaWNoIHltZGRlb2xpYWQgeW4gbGxlaWhhdS4gRG9k
+        IG8gaHlkIGkgcmFnb3IgbyB3eWJvZGFldGgifSx7ImlkIjoiY29mcmVzdHJ1
+        LWF3dG9tYXRpZy1vcy1vZXMtZ2VubnljaC1kZHlsZWRpb24iLCJ0eXBlIjoi
+        Z3VpZGUiLCJ0aXRsZSI6IkNvZnJlc3RydSBhd3RvbWF0aWcgb3Mgb2VzIGdl
+        bm55Y2ggZGR5bGVkaW9uIiwiZGVzY3JpcHRpb24iOiJPcyBvZXMgZ2Vubnlj
+        aCBkZHlsZWRpb24gbmFkIHlkeWNoIHluIGdhbGx1IGV1IHJoZW9saeKAmW4g
+        ZGRpZHJhZmZlcnRoLCBkeW1hIGJldGggaeKAmXcgd25ldWQifSx7ImlkIjoi
+        Y29mcmVzdHJpYWQtYXd0b21hdGlnLWFyLWJlbnNpd24tbWFuLWd3YWl0aCIs
+        InR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ29mcmVzdHJ1IGF3dG9tYXRpZyDi
+        gJMgY3lmbHd5bmlhZCIsImRlc2NyaXB0aW9uIjoiTWFlIHltdW5vIMOiIGNo
+        eW5sbHVuIHBlbnNpd24gZWljaCBtYW4gZ3dhaXRoIHluIGZmb3JkZCBkZGlk
+        cmFmZmVydGggbyBkZGVjaHJhdSBjeW5pbG8gYXIgZ3lmZXIgeW4gaHd5cmFj
+        aCBtZXduIGJ5d3lkIn0seyJpZCI6Im1hbnRlaXNpb24tY29mcmVzdHJ1LWF3
+        dG9tYXRpZyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiTWFudGVpc2lvbiBj
+        b2ZyZXN0cnUgYXd0b21hdGlnIiwiZGVzY3JpcHRpb24iOiJDYW5meWRkd2No
+        IGJldGggbWFlIGNvZnJlc3RydSBhd3RvbWF0aWcgeW4gZWkgb2x5Z3UgaSBj
+        aGkifSx7ImlkIjoibmV3aWRpYWRhdS1wZW5zaXduLXluLXktZ3dlaXRobGUt
+        eS13eWJvZGFldGgtc3lsZmFlbm9sIiwidHlwZSI6InZpZGVvIiwidGl0bGUi
+        OiJOZXdpZGlhZGF1IGkgYmVuc2l5bmF1IGd3ZWl0aGxlIOKAkyB5ciBoYW5m
+        b2Rpb24iLCJkZXNjcmlwdGlvbiI6IkN5Zmx3eW5pYWQgaSB5bXJlc3RydSBh
+        d3RvbWF0aWcsIGEgZnlkZCB5biBnb2x5Z3UgeSBieWRkIGxsYXdlciBtd3kg
+        byB3ZWl0aHd5ciB5biB5bXVubyDDoiBwaGVuc2l3biBnd2VpdGhsZSJ9LHsi
+        aWQiOiJjeWZyaWZpYW5uZWxsLXBlbnNpd24iLCJ0eXBlIjoidG9vbCIsInRp
+        dGxlIjoiQ3lmcmlmaWFubmVsbCBwZW5zaXduIiwiZGVzY3JpcHRpb24iOiJE
+        ZWZueWRkaXdjaCB5IGd5ZnJpZmlhbm5lbGwgaG9uIGknY2ggaGVscHUgaSBn
+        eWZyaWZvIGZhaW50IG8gaW5jd20geW1kZGVvbCB5IGdhbGxlY2ggZWkgZ2Fl
+        bCB0cnd5IGd5bmlsbyBtZXduIHBlbnNpd24gcGVyc29ub2wsIHJoYW5kZGVp
+        bGlhaWQgbmV1IGdyxbVwIn0seyJpZCI6ImN5ZnJpZmlhbm5lbGwtY3lmcmFu
+        aWFkYXUtcGVuc2l3bi1nd2VpdGhsZSIsInR5cGUiOiJ0b29sIiwidGl0bGUi
+        OiJDeWZyaWZpYW5uZWxsIGN5ZnJhbmlhZGF1IHBlbnNpd24gZ3dlaXRobGUi
+        LCJkZXNjcmlwdGlvbiI6IkRlZm55ZGRpd2NoIHkgZ3lmcmlmaWFubmVsbCBo
+        b24gaSB3ZWxkIGZhaW50IHkgYnlkZHdjaCBjaGkgYeKAmWNoIGN5ZmxvZ3dy
+        IHluIGVpIHJvaSB5biBlaWNoIGNyb25mYSBiZW5zaXduIn0seyJpZCI6Im9m
+        ZmVyeW4tY3luZ2hvcmktcGVuc2l3bi1nd2VpdGhsZSIsInR5cGUiOiJ0b29s
+        IiwidGl0bGUiOiJPZmZlcnluIGN5bmdob3JpIHBlbnNpd24gZ3dlaXRobGUi
+        LCJkZXNjcmlwdGlvbiI6IkN3ZXN0aXluYXUgY3lmbHltIGnigJljaCBoZWxw
+        dSBpIGJlbmRlcmZ5bnUgYSB5dyBib2QgbWV3biBwZW5zaXduIGd3ZWl0aGxl
+        IHluIGFkZGFzIGkgY2hpIn0seyJpZCI6Im1ha2UtdGhlLW1vc3Qtb2YtYXV0
+        b21hdGljLWVucm9sbWVudCIsInR5cGUiOiJhY3Rpb25fcGxhbiIsInRpdGxl
+        IjoiQWN0aW9uIHBsYW4g4oCTIE1ha2UgdGhlIG1vc3Qgb2YgYXV0b21hdGlj
+        IGVucm9sbWVudCIsImRlc2NyaXB0aW9uIjpudWxsfV19
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:19:01 GMT
+  recorded_at: Wed, 06 May 2015 12:58:57 GMT
 recorded_with: VCR 2.9.2

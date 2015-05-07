@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/automatic-enrolment.json
+    uri: http://localhost:3000/en/categories/automatic-enrolment.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,75 +18,101 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:17:48 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"d6b4b8ed89fad8aa95616e112b190655"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - ab3780db325ae5a817f07342d3a0c38b
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:17:48 GMT; secure
-      - _session_id=ab3780db325ae5a817f07342d3a0c38b; path=/; secure; HttpOnly
-      - _web_tracking=c487ed81314a82938b1f609113ff8da8; path=/; expires=Wed, 23-Mar-2016
-        17:17:48 GMT; secure
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       X-Runtime:
-      - '0.021868'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.043962'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:56 GMT
+      Content-Length:
+      - '2967'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"automatic-enrolment","title":"Automatic enrolment","description":"Learn
-        about automatic enrolment and how it affects you, and use our workplace pension
-        advice tool and calculator.","parent_id":"work-pensions-and-retirement","contents":[{"id":"automatic-enrolment-into-a-workplace-pension","type":"guide","title":"Automatic
-        enrolment \u2013 an introduction","description":"Joining your workplace pension
-        scheme is a hassle-free way to start saving for later life"},{"id":"workplace-pension-contribution-calculator","type":"tool","title":"Workplace
-        pension contribution calculator","description":"Use this calculator to work
-        out how much you and your employer will each put into your pension pot"},{"id":"workplace-pension-changes-the-basics","type":"video","title":"Workplace
-        pension changes - the basics","description":"This video explains how the automatic
-        enrolment process works and the importance of saving for retirement"},{"id":"workplace-pension-advice-tool","type":"tool","title":"Workplace
-        pension advice tool","description":"Quick questions to help you decide if
-        being in a workplace pension is right for you"},{"id":"automatic-enrolment-if-youre-above-state-pension-age","type":"guide","title":"Automatic
-        enrolment if you''re above State Pension age","description":"What automatic
-        enrolment means for you if you''re over the State Pension age"},{"id":"automatic-enrolment-if-you-earn-up-to-gbp9440","type":"guide","title":"Automatic
-        enrolment if you earn up to \u00a310,000","description":"Your rights to joining
-        a workplace pension explained"},{"id":"automatic-enrolment-if-youre-21-or-under","type":"guide","title":"Automatic
-        enrolment if you\u2019re 21 or under","description":"Find out how to start
-        a pension fund if you\u2019re 21 or under"},{"id":"automatic-enrolment-if-youre-close-to-retirement","type":"guide","title":"Automatic
-        enrolment if you''re close to retirement","description":"While automatic enrolment
-        is a great way to start saving into a pension, as you get closer to retiring,
-        its likely impact on your income in retirement gets smaller. Find out more"},{"id":"automatic-enrolment-if-you-have-debts","type":"guide","title":"Automatic
-        enrolment if you have debts","description":"If you have debts that aren\u2019t
-        comfortably under control here\u2019s what to do"},{"id":"make-the-most-of-automatic-enrolment","type":"action_plan","title":"Action
-        plan \u2013 Make the most of automatic enrolment","description":"Find out
-        what your pension contributions will cost you and what kind of retirement
-        income they\u2019ll generate"},{"id":"automatic-enrolment-what-to-expect-from-your-employer","type":"guide","title":"Automatic
-        enrolment - what to expect from your employer","description":"Find out what
-        to expect when automatic enrolment takes effect in your workplace"},{"id":"pension-calculator","type":"tool","title":"Pension
-        calculator","description":"Use this calculator to help you work out how much
-        retirement income you might receive from saving in a personal, stakeholder
-        or group pension"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImF1dG9tYXRpYy1lbnJvbG1lbnQiLCJ0eXBlIjoiY2F0ZWdvcnki
+        LCJ0aXRsZSI6IkF1dG9tYXRpYyBlbnJvbG1lbnQiLCJkZXNjcmlwdGlvbiI6
+        IkxlYXJuIGFib3V0IGF1dG9tYXRpYyBlbnJvbG1lbnQgYW5kIGhvdyBpdCBh
+        ZmZlY3RzIHlvdSwgYW5kIHVzZSBvdXIgd29ya3BsYWNlIHBlbnNpb24gYWR2
+        aWNlIHRvb2wgYW5kIGNhbGN1bGF0b3IuIiwicGFyZW50X2lkIjoid29yay1w
+        ZW5zaW9ucy1hbmQtcmV0aXJlbWVudCIsInRoaXJkX2xldmVsX25hdmlnYXRp
+        b24iOmZhbHNlLCJjb250ZW50cyI6W3siaWQiOiJhdXRvbWF0aWMtZW5yb2xt
+        ZW50LWludG8tYS13b3JrcGxhY2UtcGVuc2lvbiIsInR5cGUiOiJndWlkZSIs
+        InRpdGxlIjoiQXV0b21hdGljIGVucm9sbWVudCDigJMgYW4gaW50cm9kdWN0
+        aW9uIiwiZGVzY3JpcHRpb24iOiJKb2luaW5nIHlvdXIgd29ya3BsYWNlIHBl
+        bnNpb24gc2NoZW1lIGlzIGEgaGFzc2xlLWZyZWUgd2F5IHRvIHN0YXJ0IHNh
+        dmluZyBmb3IgbGF0ZXIgbGlmZSJ9LHsiaWQiOiJ3b3JrcGxhY2UtcGVuc2lv
+        bi1jb250cmlidXRpb24tY2FsY3VsYXRvciIsInR5cGUiOiJ0b29sIiwidGl0
+        bGUiOiJXb3JrcGxhY2UgcGVuc2lvbiBjb250cmlidXRpb24gY2FsY3VsYXRv
+        ciIsImRlc2NyaXB0aW9uIjoiVXNlIHRoaXMgY2FsY3VsYXRvciB0byB3b3Jr
+        IG91dCBob3cgbXVjaCB5b3UgYW5kIHlvdXIgZW1wbG95ZXIgd2lsbCBlYWNo
+        IHB1dCBpbnRvIHlvdXIgcGVuc2lvbiBwb3QifSx7ImlkIjoid29ya3BsYWNl
+        LXBlbnNpb24tY2hhbmdlcy10aGUtYmFzaWNzIiwidHlwZSI6InZpZGVvIiwi
+        dGl0bGUiOiJXb3JrcGxhY2UgcGVuc2lvbiBjaGFuZ2VzIOKAkyB0aGUgYmFz
+        aWNzIiwiZGVzY3JpcHRpb24iOiJBbiBpbnRyb2R1Y3Rpb24gdG8gYXV0b21h
+        dGljIGVucm9sbWVudCwgd2hpY2ggd2lsbCBzZWUgbWFueSBtb3JlIHdvcmtl
+        cnMgam9pbiBhIHdvcmtwbGFjZSBwZW5zaW9uIn0seyJpZCI6IndvcmtwbGFj
+        ZS1wZW5zaW9uLWFkdmljZS10b29sIiwidHlwZSI6InRvb2wiLCJ0aXRsZSI6
+        IldvcmtwbGFjZSBwZW5zaW9uIGFkdmljZSB0b29sIiwiZGVzY3JpcHRpb24i
+        OiJRdWljayBxdWVzdGlvbnMgdG8gaGVscCB5b3UgZGVjaWRlIGlmIGJlaW5n
+        IGluIGEgd29ya3BsYWNlIHBlbnNpb24gaXMgcmlnaHQgZm9yIHlvdSJ9LHsi
+        aWQiOiJhdXRvbWF0aWMtZW5yb2xtZW50LWlmLXlvdXJlLWFib3ZlLXN0YXRl
+        LXBlbnNpb24tYWdlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJBdXRvbWF0
+        aWMgZW5yb2xtZW50IGlmIHlvdSdyZSBhYm92ZSBTdGF0ZSBQZW5zaW9uIGFn
+        ZSIsImRlc2NyaXB0aW9uIjoiV2hhdCBhdXRvbWF0aWMgZW5yb2xtZW50IG1l
+        YW5zIGZvciB5b3UgaWYgeW91J3JlIG92ZXIgdGhlIFN0YXRlIFBlbnNpb24g
+        YWdlIn0seyJpZCI6ImF1dG9tYXRpYy1lbnJvbG1lbnQtaWYteW91LWVhcm4t
+        dXAtdG8tZ2JwOTQ0MCIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQXV0b21h
+        dGljIGVucm9sbWVudCBpZiB5b3UgZWFybiB1cCB0byDCozEwLDAwMCIsImRl
+        c2NyaXB0aW9uIjoiWW91ciByaWdodHMgdG8gam9pbmluZyBhIHdvcmtwbGFj
+        ZSBwZW5zaW9uIGV4cGxhaW5lZCJ9LHsiaWQiOiJhdXRvbWF0aWMtZW5yb2xt
+        ZW50LWlmLXlvdXJlLTIxLW9yLXVuZGVyIiwidHlwZSI6Imd1aWRlIiwidGl0
+        bGUiOiJBdXRvbWF0aWMgZW5yb2xtZW50IGlmIHlvdeKAmXJlIDIxIG9yIHVu
+        ZGVyIiwiZGVzY3JpcHRpb24iOiJGaW5kIG91dCBob3cgdG8gc3RhcnQgYSBw
+        ZW5zaW9uIGZ1bmQgaWYgeW914oCZcmUgMjEgb3IgdW5kZXIifSx7ImlkIjoi
+        YXV0b21hdGljLWVucm9sbWVudC1pZi15b3VyZS1jbG9zZS10by1yZXRpcmVt
+        ZW50IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJBdXRvbWF0aWMgZW5yb2xt
+        ZW50IGlmIHlvdSdyZSBjbG9zZSB0byByZXRpcmVtZW50IiwiZGVzY3JpcHRp
+        b24iOiJXaGlsZSBhdXRvbWF0aWMgZW5yb2xtZW50IGlzIGEgZ3JlYXQgd2F5
+        IHRvIHN0YXJ0IHNhdmluZyBpbnRvIGEgcGVuc2lvbiwgYXMgeW91IGdldCBj
+        bG9zZXIgdG8gcmV0aXJpbmcsIGl0cyBsaWtlbHkgaW1wYWN0IG9uIHlvdXIg
+        aW5jb21lIGluIHJldGlyZW1lbnQgZ2V0cyBzbWFsbGVyLiBGaW5kIG91dCBt
+        b3JlIn0seyJpZCI6ImF1dG9tYXRpYy1lbnJvbG1lbnQtaWYteW91LWhhdmUt
+        ZGVidHMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkF1dG9tYXRpYyBlbnJv
+        bG1lbnQgaWYgeW91IGhhdmUgZGVidHMiLCJkZXNjcmlwdGlvbiI6IklmIHlv
+        dSBoYXZlIGRlYnRzIHRoYXQgYXJlbuKAmXQgY29tZm9ydGFibHkgdW5kZXIg
+        Y29udHJvbCBoZXJl4oCZcyB3aGF0IHRvIGRvIn0seyJpZCI6ImF1dG9tYXRp
+        Yy1lbnJvbG1lbnQtd2hhdC10by1leHBlY3QtZnJvbS15b3VyLWVtcGxveWVy
+        IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJBdXRvbWF0aWMgZW5yb2xtZW50
+        IOKAkyB3aGF0IHRvIGV4cGVjdCBmcm9tIHlvdXIgZW1wbG95ZXIiLCJkZXNj
+        cmlwdGlvbiI6IkZpbmQgb3V0IHdoYXQgdG8gZXhwZWN0IHdoZW4gYXV0b21h
+        dGljIGVucm9sbWVudCB0YWtlcyBlZmZlY3QgaW4geW91ciB3b3JrcGxhY2Ui
+        fSx7ImlkIjoicGVuc2lvbi1jYWxjdWxhdG9yIiwidHlwZSI6InRvb2wiLCJ0
+        aXRsZSI6IlBlbnNpb24gY2FsY3VsYXRvciIsImRlc2NyaXB0aW9uIjoiVXNl
+        IHRoaXMgY2FsY3VsYXRvciB0byBoZWxwIHlvdSB3b3JrIG91dCBob3cgbXVj
+        aCByZXRpcmVtZW50IGluY29tZSB5b3UgbWlnaHQgcmVjZWl2ZSBmcm9tIHNh
+        dmluZyBpbiBhIHBlcnNvbmFsLCBzdGFrZWhvbGRlciBvciBncm91cCBwZW5z
+        aW9uIn0seyJpZCI6InRoZS1iZW5lZml0cy1vZi1hdXRvbWF0aWMtZW5yb2xt
+        ZW50IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUaGUgYmVuZWZpdHMgb2Yg
+        YXV0b21hdGljIGVucm9sbWVudCIsImRlc2NyaXB0aW9uIjoiRmluZCBvdXQg
+        d2hhdCBhdXRvbWF0aWMgZW5yb2xtZW50IG1lYW5zIGZvciB5b3UifV19
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:17:49 GMT
+  recorded_at: Wed, 06 May 2015 12:58:56 GMT
 recorded_with: VCR 2.9.2

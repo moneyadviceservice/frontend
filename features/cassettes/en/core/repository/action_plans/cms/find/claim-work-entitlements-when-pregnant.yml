@@ -8,10 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 98282) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 615c355a-4768-4117-97a4-cbdfe8319846
+      - 322d18c4-23c5-4987-a16b-963a3dfef9fd
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,1043 +18,146 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - text/html; charset=utf-8
-      Content-Length:
-      - '81637'
+      - application/json; charset=utf-8
+      Etag:
+      - '"f5361da159d1da3359cd7a46cecda60e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 615c355a-4768-4117-97a4-cbdfe8319846
+      - 322d18c4-23c5-4987-a16b-963a3dfef9fd
       X-Runtime:
-      - '0.093186'
+      - '0.066476'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Wed, 17 Dec 2014 13:51:53 GMT
+      - Wed, 06 May 2015 13:53:39 GMT
+      Content-Length:
+      - '4953'
       Connection:
       - Keep-Alive
     body:
-      encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
-        />\n  <title>Action Controller: Exception caught</title>\n  <style>\n    body
-        {\n      background-color: #FAFAFA;\n      color: #333;\n      margin: 0px;\n
-        \   }\n\n    body, p, ol, ul, td {\n      font-family: helvetica, verdana,
-        arial, sans-serif;\n      font-size:   13px;\n      line-height: 18px;\n    }\n\n
-        \   pre {\n      font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n
-        \   pre.box {\n      border: 1px solid #EEE;\n      padding: 10px;\n      margin:
-        0px;\n      width: 958px;\n    }\n\n    header {\n      color: #F0F0F0;\n
-        \     background: #C52F24;\n      padding: 0.5em 1.5em;\n    }\n\n    h1 {\n
-        \     margin: 0.2em 0;\n      line-height: 1.1em;\n      font-size: 2em;\n
-        \   }\n\n    h2 {\n      color: #C52F24;\n      line-height: 25px;\n    }\n\n
-        \   .details {\n      border: 1px solid #D0D0D0;\n      border-radius: 4px;\n
-        \     margin: 1em 0px;\n      display: block;\n      width: 978px;\n    }\n\n
-        \   .summary {\n      padding: 8px 15px;\n      border-bottom: 1px solid #D0D0D0;\n
-        \     display: block;\n    }\n\n    .details pre {\n      margin: 5px;\n      border:
-        none;\n    }\n\n    #container {\n      box-sizing: border-box;\n      width:
-        100%;\n      padding: 0 1.5em;\n    }\n\n    .source * {\n      margin: 0px;\n
-        \     padding: 0px;\n    }\n\n    .source {\n      border: 1px solid #D9D9D9;\n
-        \     background: #ECECEC;\n      width: 978px;\n    }\n\n    .source pre
-        {\n      padding: 10px 0px;\n      border: none;\n    }\n\n    .source .data
-        {\n      font-size: 80%;\n      overflow: auto;\n      background-color: #FFF;\n
-        \   }\n\n    .info {\n      padding: 0.5em;\n    }\n\n    .source .data .line_numbers
-        {\n      background-color: #ECECEC;\n      color: #AAA;\n      padding: 1em
-        .5em;\n      border-right: 1px solid #DDD;\n      text-align: right;\n    }\n\n
-        \   .line {\n      padding-left: 10px;\n    }\n\n    .line:hover {\n      background-color:
-        #F6F6F6;\n    }\n\n    .line.active {\n      background-color: #FFCCCC;\n
-        \   }\n\n    a { color: #980905; }\n    a:visited { color: #666; }\n    a:hover
-        { color: #C52F24; }\n\n      #route_table {\n    margin: 0 auto 0;\n    border-collapse:
-        collapse;\n  }\n\n  #route_table td {\n    padding: 0 30px;\n  }\n\n  #route_table
-        tr.bottom th {\n    padding-bottom: 10px;\n    line-height: 15px;\n  }\n\n
-        \ #route_table .matched_paths {\n    background-color: LightGoldenRodYellow;\n
-        \ }\n\n  #route_table .matched_paths {\n    border-bottom: solid 3px SlateGrey;\n
-        \ }\n\n  #path_search {\n    width: 80%;\n    font-size: inherit;\n  }\n\n
-        \ </style>\n\n  <script>\n    var toggle = function(id) {\n      var s = document.getElementById(id).style;\n
-        \     s.display = s.display == 'none' ? 'block' : 'none';\n      return false;\n
-        \   }\n    var show = function(id) {\n      document.getElementById(id).style.display
-        = 'block';\n    }\n    var hide = function(id) {\n      document.getElementById(id).style.display
-        = 'none';\n    }\n    var toggleTrace = function() {\n      return toggle('blame_trace');\n
-        \   }\n    var toggleSessionDump = function() {\n      return toggle('session_dump');\n
-        \   }\n    var toggleEnvDump = function() {\n      return toggle('env_dump');\n
-        \   }\n  </script>\n</head>\n<body>\n\n<header>\n  <h1>Routing Error</h1>\n</header>\n<div
-        id=\"container\">\n  <h2>Page Not Found at: &quot;claim-work-entitlements-when-pregnant&quot;</h2>\n\n
-        \ \n<p><code>Rails.root: /Users/droper/development/mas/cms</code></p>\n\n<div
-        id=\"traces\">\n    <a href=\"#\" onclick=\"hide(&#39;Framework-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Application-Trace&#39;);;
-        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Framework-Trace&#39;);;
-        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);;
-        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace\" style=\"display:
-        block;\">\n      <pre><code></code></pre>\n    </div>\n    <div id=\"Framework-Trace\"
-        style=\"display: none;\">\n      <pre><code>vendor/bundle/ruby/2.1.0comfortable_mexican_sofa
-        (1.12.1.58) app/controllers/comfy/cms/content_controller.rb:66:in `rescue
-        in page_not_found&#39;\nvendor/bundle/ruby/2.1.0comfortable_mexican_sofa (1.12.1.58)
-        app/controllers/comfy/cms/content_controller.rb:59:in `page_not_found&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/rescuable.rb:80:in `call&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/rescuable.rb:80:in `rescue_with_handler&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:15:in `rescue_with_handler&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:32:in `rescue in process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications.rb:159:in `instrument&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/abstract_controller/base.rb:136:in `process&#39;\nvendor/bundle/ruby/2.1.0actionview
-        (4.1.1) lib/action_view/rendering.rb:30:in `process&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal.rb:195:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal.rb:231:in `block in action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:35:in `block in call&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:34:in `catch&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:34:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/etag.rb:23:in `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2)
-        lib/rack/conditionalget.rb:25:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/head.rb:11:in `call&#39;\nvendor/bundle/ruby/2.1.0remotipart
-        (1.2.1) lib/remotipart/middleware.rb:27:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/session/abstract/id.rb:225:in `context&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/session/abstract/id.rb:220:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/query_cache.rb:36:in `call&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0activerecord (4.1.1) lib/active_record/migration.rb:380:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in
-        `block in call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/callbacks.rb:82:in
-        `run_callbacks&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:38:in
-        `call_app&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:20:in
-        `block in call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in
-        `block in tagged&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in
-        `tagged&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in
-        `tagged&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:20:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/methodoverride.rb:21:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/runtime.rb:17:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/sendfile.rb:112:in `call&#39;\nvendor/bundle/ruby/2.1.0railties
-        (4.1.1) lib/rails/engine.rb:514:in `call&#39;\nvendor/bundle/ruby/2.1.0railties
-        (4.1.1) lib/rails/application.rb:144:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2)
-        lib/rack/content_length.rb:14:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/handler/webrick.rb:60:in `service&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in
-        `service&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in
-        `run&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in
-        `block in start_thread&#39;</code></pre>\n    </div>\n    <div id=\"Full-Trace\"
-        style=\"display: none;\">\n      <pre><code>vendor/bundle/ruby/2.1.0comfortable_mexican_sofa
-        (1.12.1.58) app/controllers/comfy/cms/content_controller.rb:66:in `rescue
-        in page_not_found&#39;\nvendor/bundle/ruby/2.1.0comfortable_mexican_sofa (1.12.1.58)
-        app/controllers/comfy/cms/content_controller.rb:59:in `page_not_found&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/rescuable.rb:80:in `call&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/rescuable.rb:80:in `rescue_with_handler&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:15:in `rescue_with_handler&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:32:in `rescue in process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument&#39;\nvendor/bundle/ruby/2.1.0activesupport
-        (4.1.1) lib/active_support/notifications.rb:159:in `instrument&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/abstract_controller/base.rb:136:in `process&#39;\nvendor/bundle/ruby/2.1.0actionview
-        (4.1.1) lib/action_view/rendering.rb:30:in `process&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal.rb:195:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_controller/metal.rb:231:in `block in action&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:35:in `block in call&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:34:in `catch&#39;\nvendor/bundle/ruby/2.1.0warden
-        (1.2.3) lib/warden/manager.rb:34:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/etag.rb:23:in `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2)
-        lib/rack/conditionalget.rb:25:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/head.rb:11:in `call&#39;\nvendor/bundle/ruby/2.1.0remotipart
-        (1.2.1) lib/remotipart/middleware.rb:27:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/session/abstract/id.rb:225:in `context&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/session/abstract/id.rb:220:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/query_cache.rb:36:in `call&#39;\nvendor/bundle/ruby/2.1.0activerecord
-        (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0activerecord (4.1.1) lib/active_record/migration.rb:380:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in
-        `block in call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/callbacks.rb:82:in
-        `run_callbacks&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:38:in
-        `call_app&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:20:in
-        `block in call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in
-        `block in tagged&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in
-        `tagged&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in
-        `tagged&#39;\nvendor/bundle/ruby/2.1.0railties (4.1.1) lib/rails/rack/logger.rb:20:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/methodoverride.rb:21:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/runtime.rb:17:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
-        `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nvendor/bundle/ruby/2.1.0actionpack
-        (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/sendfile.rb:112:in `call&#39;\nvendor/bundle/ruby/2.1.0railties
-        (4.1.1) lib/rails/engine.rb:514:in `call&#39;\nvendor/bundle/ruby/2.1.0railties
-        (4.1.1) lib/rails/application.rb:144:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nvendor/bundle/ruby/2.1.0rack (1.5.2)
-        lib/rack/content_length.rb:14:in `call&#39;\nvendor/bundle/ruby/2.1.0rack
-        (1.5.2) lib/rack/handler/webrick.rb:60:in `service&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in
-        `service&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in
-        `run&#39;\n/Users/droper/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in
-        `block in start_thread&#39;</code></pre>\n    </div>\n</div>\n\n\n    <h2>\n
-        \     Routes\n    </h2>\n\n    <p>\n      Routes match in priority from top
-        to bottom\n    </p>\n\n    \n<table id='route_table' class='route_table'>\n
-        \ <thead>\n    <tr>\n      <th>Helper</th>\n      <th>HTTP Verb</th>\n      <th>Path</th>\n
-        \     <th>Controller#Action</th>\n    </tr>\n    <tr class='bottom'>\n      <th>\n
-        \       <a data-route-helper=\"_path\" href=\"#\" title=\"Returns a relative
-        path (without the http or domain)\">Path</a> /\n        <a data-route-helper=\"_url\"
-        href=\"#\" title=\"Returns an absolute url (with the http and domain)\">Url</a>\n
-        \     </th>\n      <th>\n      </th>\n      <th>\n        <input id=\"path_search\"
-        name=\"path[]\" placeholder=\"Path Match\" type=\"search\" />\n      </th>\n
-        \     <th>\n      </th>\n    </tr>\n  </thead>\n  <tbody class='matched_paths'
-        id='matched_paths'>\n  </tbody>\n  <tbody>\n    <tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_user_session'>\n      new_user_session<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/users/sign_in(.:format)'
-        data-regexp='^\\/users\\/sign_in(?:\\.([^\\/.?]+))?$'>\n    /users/sign_in(.:format)\n
-        \ </td>\n  <td data-route-reqs='devise/sessions#new'>\n    devise/sessions#new\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='user_session'>\n
-        \     user_session<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n
-        \   POST\n  </td>\n  <td data-route-path='/users/sign_in(.:format)' data-regexp='^\\/users\\/sign_in(?:\\.([^\\/.?]+))?$'>\n
-        \   /users/sign_in(.:format)\n  </td>\n  <td data-route-reqs='devise/sessions#create'>\n
-        \   devise/sessions#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='destroy_user_session'>\n      destroy_user_session<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/users/sign_out(.:format)' data-regexp='^\\/users\\/sign_out(?:\\.([^\\/.?]+))?$'>\n
-        \   /users/sign_out(.:format)\n  </td>\n  <td data-route-reqs='devise/sessions#destroy'>\n
-        \   devise/sessions#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='word_documents'>\n      word_documents<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/word_documents(.:format)'
-        data-regexp='^\\/word_documents(?:\\.([^\\/.?]+))?$'>\n    /word_documents(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#index'>\n    word_documents#index\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
-        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/word_documents(.:format)'
-        data-regexp='^\\/word_documents(?:\\.([^\\/.?]+))?$'>\n    /word_documents(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#create'>\n    word_documents#create\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='new_word_document'>\n
-        \     new_word_document<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/word_documents/new(.:format)' data-regexp='^\\/word_documents\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /word_documents/new(.:format)\n  </td>\n  <td data-route-reqs='word_documents#new'>\n
-        \   word_documents#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_word_document'>\n      edit_word_document<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/word_documents/:id/edit(.:format)' data-regexp='^\\/word_documents\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /word_documents/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='word_documents#edit'>\n
-        \   word_documents#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='word_document'>\n      word_document<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/word_documents/:id(.:format)'
-        data-regexp='^\\/word_documents\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /word_documents/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#show'>\n    word_documents#show\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
-        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/word_documents/:id(.:format)'
-        data-regexp='^\\/word_documents\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /word_documents/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#update'>\n    word_documents#update\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
-        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/word_documents/:id(.:format)'
-        data-regexp='^\\/word_documents\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /word_documents/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#update'>\n    word_documents#update\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
-        \ </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/word_documents/:id(.:format)'
-        data-regexp='^\\/word_documents\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /word_documents/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='word_documents#destroy'>\n    word_documents#destroy\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='admin_link'>\n
-        \     admin_link<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/admin/links(/*id)(.:format)' data-regexp='^\\/admin\\/links(?:\\/((.+?)))?(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/links(/*id)(.:format)\n  </td>\n  <td data-route-reqs='links#show'>\n
-        \   links#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_files'>\n      site_files<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/files(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files(.:format)\n  </td>\n  <td data-route-reqs='files#index'>\n
-        \   files#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files(.:format)\n  </td>\n  <td data-route-reqs='files#create'>\n
-        \   files#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_site_file'>\n      new_site_file<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/files/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/new(.:format)\n  </td>\n  <td data-route-reqs='files#new'>\n
-        \   files#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_site_file'>\n      edit_site_file<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='files#edit'>\n
-        \   files#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_file'>\n      site_file<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='files#show'>\n
-        \   files#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='files#update'>\n
-        \   files#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='files#update'>\n
-        \   files#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='files#destroy'>\n
-        \   files#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_page_notes'>\n      site_page_notes<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:page_id/notes(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/notes(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:page_id/notes(.:format)\n  </td>\n  <td data-route-reqs='notes#create'>\n
-        \   notes#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_pages'>\n      site_pages<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages(.:format)\n  </td>\n  <td data-route-reqs='pages#index'>\n
-        \   pages#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages(.:format)\n  </td>\n  <td data-route-reqs='pages#create'>\n
-        \   pages#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_site_page'>\n      new_site_page<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/new(.:format)\n  </td>\n  <td data-route-reqs='pages#new'>\n
-        \   pages#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_site_page'>\n      edit_site_page<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='pages#edit'>\n
-        \   pages#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_page'>\n      site_page<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='pages#show'>\n
-        \   pages#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='pages#update'>\n
-        \   pages#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='pages#update'>\n
-        \   pages#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='pages#destroy'>\n
-        \   pages#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_layouts'>\n      site_layouts<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts(.:format)\n  </td>\n  <td data-route-reqs='layouts#index'>\n
-        \   layouts#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts(.:format)\n  </td>\n  <td data-route-reqs='layouts#create'>\n
-        \   layouts#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_site_layout'>\n      new_site_layout<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/new(.:format)\n  </td>\n  <td data-route-reqs='layouts#new'>\n
-        \   layouts#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_site_layout'>\n      edit_site_layout<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='layouts#edit'>\n
-        \   layouts#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_layout'>\n      site_layout<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='layouts#show'>\n
-        \   layouts#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='layouts#update'>\n
-        \   layouts#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='layouts#update'>\n
-        \   layouts#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='layouts#destroy'>\n
-        \   layouts#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_snippets'>\n      site_snippets<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets(.:format)\n  </td>\n  <td data-route-reqs='snippets#index'>\n
-        \   snippets#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets(.:format)\n  </td>\n  <td data-route-reqs='snippets#create'>\n
-        \   snippets#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_site_snippet'>\n      new_site_snippet<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/new(.:format)\n  </td>\n  <td data-route-reqs='snippets#new'>\n
-        \   snippets#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_site_snippet'>\n      edit_site_snippet<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='snippets#edit'>\n
-        \   snippets#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_snippet'>\n      site_snippet<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='snippets#show'>\n
-        \   snippets#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='snippets#update'>\n
-        \   snippets#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='snippets#update'>\n
-        \   snippets#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='snippets#destroy'>\n
-        \   snippets#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_links_files'>\n      site_links_files<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/links/files(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/links\\/files(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/links/files(.:format)\n  </td>\n  <td data-route-reqs='links/files#index'>\n
-        \   links/files#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site_links_pages'>\n      site_links_pages<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/links/pages(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/links\\/pages(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/links/pages(.:format)\n  </td>\n  <td data-route-reqs='links/pages#index'>\n
-        \   links/pages#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='sites'>\n      sites<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites(.:format)'
-        data-regexp='^\\/admin\\/sites(?:\\.([^\\/.?]+))?$'>\n    /admin/sites(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#index'>\n    sites#index\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/admin/sites(.:format)'
-        data-regexp='^\\/admin\\/sites(?:\\.([^\\/.?]+))?$'>\n    /admin/sites(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#create'>\n    sites#create\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='new_site'>\n
-        \     new_site<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/admin/sites/new(.:format)' data-regexp='^\\/admin\\/sites\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/new(.:format)\n  </td>\n  <td data-route-reqs='sites#new'>\n
-        \   sites#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_site'>\n      edit_site<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='sites#edit'>\n
-        \   sites#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='site'>\n      site<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/sites/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#show'>\n    sites#show\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/admin/sites/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/sites/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#update'>\n    sites#update\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/admin/sites/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/sites/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#update'>\n    sites#update\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/admin/sites/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/sites/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='sites#destroy'>\n    sites#destroy\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='starting_by_tags'>\n
-        \     starting_by_tags<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/admin/tags/starting_by(.:format)'
-        data-regexp='^\\/admin\\/tags\\/starting_by(?:\\.([^\\/.?]+))?$'>\n    /admin/tags/starting_by(.:format)\n
-        \ </td>\n  <td data-route-reqs='tags#starting_by'>\n    tags#starting_by\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='delete_from_value_tags'>\n
-        \     delete_from_value_tags<span class='helper'>_path</span>\n  </td>\n  <td
-        data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/admin/tags/delete_from_value(.:format)'
-        data-regexp='^\\/admin\\/tags\\/delete_from_value(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/tags/delete_from_value(.:format)\n  </td>\n  <td data-route-reqs='tags#delete_from_value'>\n
-        \   tags#delete_from_value\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='tags'>\n      tags<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/tags(.:format)'
-        data-regexp='^\\/admin\\/tags(?:\\.([^\\/.?]+))?$'>\n    /admin/tags(.:format)\n
-        \ </td>\n  <td data-route-reqs='tags#index'>\n    tags#index\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/admin/tags(.:format)'
-        data-regexp='^\\/admin\\/tags(?:\\.([^\\/.?]+))?$'>\n    /admin/tags(.:format)\n
-        \ </td>\n  <td data-route-reqs='tags#create'>\n    tags#create\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='users'>\n      users<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/users(.:format)' data-regexp='^\\/admin\\/users(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/users(.:format)\n  </td>\n  <td data-route-reqs='users#index'>\n
-        \   users#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/users(.:format)' data-regexp='^\\/admin\\/users(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/users(.:format)\n  </td>\n  <td data-route-reqs='users#create'>\n
-        \   users#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_user'>\n      new_user<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/users/new(.:format)'
-        data-regexp='^\\/admin\\/users\\/new(?:\\.([^\\/.?]+))?$'>\n    /admin/users/new(.:format)\n
-        \ </td>\n  <td data-route-reqs='users#new'>\n    users#new\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='edit_user'>\n
-        \     edit_user<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/admin/users/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/users\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/users/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='users#edit'>\n
-        \   users#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='user'>\n      user<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/users/:id(.:format)'
-        data-regexp='^\\/admin\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/users/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='users#show'>\n    users#show\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/admin/users/:id(.:format)'
-        data-regexp='^\\/admin\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/users/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='users#update'>\n    users#update\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/admin/users/:id(.:format)'
-        data-regexp='^\\/admin\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/users/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='users#update'>\n    users#update\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
-        \ <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/admin/users/:id(.:format)'
-        data-regexp='^\\/admin\\/users\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /admin/users/:id(.:format)\n
-        \ </td>\n  <td data-route-reqs='users#destroy'>\n    users#destroy\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='version'>\n
-        \     version<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/version(.:format)' data-regexp='^\\/version(?:\\.([^\\/.?]+))?$'>\n
-        \   /version(.:format)\n  </td>\n  <td data-route-reqs='versions#show'>\n
-        \   versions#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='styleguide'>\n      styleguide<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/styleguide(.:format)'
-        data-regexp='^\\/styleguide(?:\\.([^\\/.?]+))?$'>\n    /styleguide(.:format)\n
-        \ </td>\n  <td data-route-reqs='styleguide#index'>\n    styleguide#index\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='root'>\n
-        \     root<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='/' data-regexp='^\\/$'>\n    /\n
-        \ </td>\n  <td data-route-reqs='redirect(301, /admin)'>\n    redirect(301,
-        /admin)\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td
-        data-route-name='comfy_admin_cms'>\n      comfy_admin_cms<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin(.:format)'
-        data-regexp='^\\/admin(?:\\.([^\\/.?]+))?$'>\n    /admin(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/base#jump'>\n    comfy/admin/cms/base#jump\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='form_blocks_comfy_admin_cms_site_page'>\n
-        \     form_blocks_comfy_admin_cms_site_page<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id/form_blocks(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/form_blocks(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id/form_blocks(.:format)\n  </td>\n  <td
-        data-route-reqs='comfy/admin/cms/pages#form_blocks'>\n    comfy/admin/cms/pages#form_blocks\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='toggle_branch_comfy_admin_cms_site_page'>\n
-        \     toggle_branch_comfy_admin_cms_site_page<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id/toggle_branch(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/toggle_branch(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id/toggle_branch(.:format)\n  </td>\n  <td
-        data-route-reqs='comfy/admin/cms/pages#toggle_branch'>\n    comfy/admin/cms/pages#toggle_branch\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='reorder_comfy_admin_cms_site_pages'>\n
-        \     reorder_comfy_admin_cms_site_pages<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/reorder(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/reorder(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/reorder(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#reorder'>\n
-        \   comfy/admin/cms/pages#reorder\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='revert_comfy_admin_cms_site_page_revision'>\n      revert_comfy_admin_cms_site_page_revision<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:page_id/revisions/:id/revert(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)\\/revert(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:page_id/revisions/:id/revert(.:format)\n
-        \ </td>\n  <td data-route-reqs='comfy/admin/cms/revisions#revert'>\n    comfy/admin/cms/revisions#revert\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_page_revisions'>\n
-        \     comfy_admin_cms_site_page_revisions<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:page_id/revisions(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/revisions(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:page_id/revisions(.:format)\n  </td>\n  <td
-        data-route-reqs='comfy/admin/cms/revisions#index'>\n    comfy/admin/cms/revisions#index\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_page_revision'>\n
-        \     comfy_admin_cms_site_page_revision<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:page_id/revisions/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:page_id/revisions/:id(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/revisions#show'>\n    comfy/admin/cms/revisions#show\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_pages'>\n
-        \     comfy_admin_cms_site_pages<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/pages(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#index'>\n
-        \   comfy/admin/cms/pages#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#create'>\n
-        \   comfy/admin/cms/pages#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_comfy_admin_cms_site_page'>\n      new_comfy_admin_cms_site_page<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#new'>\n
-        \   comfy/admin/cms/pages#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_comfy_admin_cms_site_page'>\n      edit_comfy_admin_cms_site_page<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#edit'>\n
-        \   comfy/admin/cms/pages#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site_page'>\n      comfy_admin_cms_site_page<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#update'>\n
-        \   comfy/admin/cms/pages#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#update'>\n
-        \   comfy/admin/cms/pages#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/pages/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/pages\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/pages/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/pages#destroy'>\n
-        \   comfy/admin/cms/pages#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='reorder_comfy_admin_cms_site_files'>\n      reorder_comfy_admin_cms_site_files<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/reorder(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/reorder(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/reorder(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#reorder'>\n
-        \   comfy/admin/cms/files#reorder\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site_files'>\n      comfy_admin_cms_site_files<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#index'>\n
-        \   comfy/admin/cms/files#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#create'>\n
-        \   comfy/admin/cms/files#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_comfy_admin_cms_site_file'>\n      new_comfy_admin_cms_site_file<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#new'>\n
-        \   comfy/admin/cms/files#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_comfy_admin_cms_site_file'>\n      edit_comfy_admin_cms_site_file<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#edit'>\n
-        \   comfy/admin/cms/files#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site_file'>\n      comfy_admin_cms_site_file<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#update'>\n
-        \   comfy/admin/cms/files#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#update'>\n
-        \   comfy/admin/cms/files#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/files/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/files\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/files/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/files#destroy'>\n
-        \   comfy/admin/cms/files#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='reorder_comfy_admin_cms_site_layouts'>\n      reorder_comfy_admin_cms_site_layouts<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/reorder(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/reorder(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/reorder(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#reorder'>\n
-        \   comfy/admin/cms/layouts#reorder\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='revert_comfy_admin_cms_site_layout_revision'>\n
-        \     revert_comfy_admin_cms_site_layout_revision<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:layout_id/revisions/:id/revert(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)\\/revert(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:layout_id/revisions/:id/revert(.:format)\n
-        \ </td>\n  <td data-route-reqs='comfy/admin/cms/revisions#revert'>\n    comfy/admin/cms/revisions#revert\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_layout_revisions'>\n
-        \     comfy_admin_cms_site_layout_revisions<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:layout_id/revisions(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)\\/revisions(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:layout_id/revisions(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/revisions#index'>\n    comfy/admin/cms/revisions#index\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_layout_revision'>\n
-        \     comfy_admin_cms_site_layout_revision<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:layout_id/revisions/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:layout_id/revisions/:id(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/revisions#show'>\n    comfy/admin/cms/revisions#show\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_layouts'>\n
-        \     comfy_admin_cms_site_layouts<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#index'>\n
-        \   comfy/admin/cms/layouts#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#create'>\n
-        \   comfy/admin/cms/layouts#create\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='new_comfy_admin_cms_site_layout'>\n
-        \     new_comfy_admin_cms_site_layout<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#new'>\n
-        \   comfy/admin/cms/layouts#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_comfy_admin_cms_site_layout'>\n      edit_comfy_admin_cms_site_layout<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#edit'>\n
-        \   comfy/admin/cms/layouts#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site_layout'>\n      comfy_admin_cms_site_layout<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#update'>\n
-        \   comfy/admin/cms/layouts#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n
-        \   PUT\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#update'>\n
-        \   comfy/admin/cms/layouts#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n
-        \   DELETE\n  </td>\n  <td data-route-path='/admin/sites/:site_id/layouts/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/layouts\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/layouts/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/layouts#destroy'>\n
-        \   comfy/admin/cms/layouts#destroy\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='reorder_comfy_admin_cms_site_snippets'>\n
-        \     reorder_comfy_admin_cms_site_snippets<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/reorder(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/reorder(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/reorder(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#reorder'>\n
-        \   comfy/admin/cms/snippets#reorder\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='revert_comfy_admin_cms_site_snippet_revision'>\n
-        \     revert_comfy_admin_cms_site_snippet_revision<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:snippet_id/revisions/:id/revert(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)\\/revert(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:snippet_id/revisions/:id/revert(.:format)\n
-        \ </td>\n  <td data-route-reqs='comfy/admin/cms/revisions#revert'>\n    comfy/admin/cms/revisions#revert\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_snippet_revisions'>\n
-        \     comfy_admin_cms_site_snippet_revisions<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:snippet_id/revisions(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)\\/revisions(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:snippet_id/revisions(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/revisions#index'>\n    comfy/admin/cms/revisions#index\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_snippet_revision'>\n
-        \     comfy_admin_cms_site_snippet_revision<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:snippet_id/revisions/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)\\/revisions\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:snippet_id/revisions/:id(.:format)\n  </td>\n
-        \ <td data-route-reqs='comfy/admin/cms/revisions#show'>\n    comfy/admin/cms/revisions#show\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_snippets'>\n
-        \     comfy_admin_cms_site_snippets<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#index'>\n
-        \   comfy/admin/cms/snippets#index\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n
-        \   POST\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#create'>\n
-        \   comfy/admin/cms/snippets#create\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='new_comfy_admin_cms_site_snippet'>\n
-        \     new_comfy_admin_cms_site_snippet<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#new'>\n
-        \   comfy/admin/cms/snippets#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_comfy_admin_cms_site_snippet'>\n      edit_comfy_admin_cms_site_snippet<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#edit'>\n
-        \   comfy/admin/cms/snippets#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site_snippet'>\n      comfy_admin_cms_site_snippet<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#update'>\n
-        \   comfy/admin/cms/snippets#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n
-        \   PUT\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#update'>\n
-        \   comfy/admin/cms/snippets#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n
-        \   DELETE\n  </td>\n  <td data-route-path='/admin/sites/:site_id/snippets/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/snippets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/snippets/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/snippets#destroy'>\n
-        \   comfy/admin/cms/snippets#destroy\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_categories'>\n
-        \     comfy_admin_cms_site_categories<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#index'>\n
-        \   comfy/admin/cms/categories#index\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n
-        \   POST\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#create'>\n
-        \   comfy/admin/cms/categories#create\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='new_comfy_admin_cms_site_category'>\n
-        \     new_comfy_admin_cms_site_category<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories/new(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#new'>\n
-        \   comfy/admin/cms/categories#new\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='edit_comfy_admin_cms_site_category'>\n
-        \     edit_comfy_admin_cms_site_category<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories/:id/edit(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#edit'>\n
-        \   comfy/admin/cms/categories#edit\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='comfy_admin_cms_site_category'>\n
-        \     comfy_admin_cms_site_category<span class='helper'>_path</span>\n  </td>\n
-        \ <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#update'>\n
-        \   comfy/admin/cms/categories#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n
-        \   PUT\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#update'>\n
-        \   comfy/admin/cms/categories#update\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n
-        \   DELETE\n  </td>\n  <td data-route-path='/admin/sites/:site_id/categories/:id(.:format)'
-        data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:site_id/categories/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/categories#destroy'>\n
-        \   comfy/admin/cms/categories#destroy\n  </td>\n</tr>\n<tr class='route_row'
-        data-helper='path'>\n  <td data-route-name='comfy_admin_cms_sites'>\n      comfy_admin_cms_sites<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites(.:format)' data-regexp='^\\/admin\\/sites(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#index'>\n
-        \   comfy/admin/cms/sites#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
-        \ </td>\n  <td data-route-path='/admin/sites(.:format)' data-regexp='^\\/admin\\/sites(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#create'>\n
-        \   comfy/admin/cms/sites#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='new_comfy_admin_cms_site'>\n      new_comfy_admin_cms_site<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/new(.:format)' data-regexp='^\\/admin\\/sites\\/new(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/new(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#new'>\n
-        \   comfy/admin/cms/sites#new\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='edit_comfy_admin_cms_site'>\n      edit_comfy_admin_cms_site<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/admin/sites/:id/edit(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)\\/edit(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:id/edit(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#edit'>\n
-        \   comfy/admin/cms/sites#edit\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_admin_cms_site'>\n      comfy_admin_cms_site<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
-        \ </td>\n  <td data-route-path='/admin/sites/:id(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#update'>\n
-        \   comfy/admin/cms/sites#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
-        \ </td>\n  <td data-route-path='/admin/sites/:id(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#update'>\n
-        \   comfy/admin/cms/sites#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
-        \ </td>\n  <td data-route-path='/admin/sites/:id(.:format)' data-regexp='^\\/admin\\/sites\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
-        \   /admin/sites/:id(.:format)\n  </td>\n  <td data-route-reqs='comfy/admin/cms/sites#destroy'>\n
-        \   comfy/admin/cms/sites#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='preview_content'>\n      preview_content<span class='helper'>_path</span>\n
-        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/preview(/*cms_path)(.:format)'
-        data-regexp='^\\/preview(?:\\/((.+?)))?(?:\\.([^\\/.?]+))?$'>\n    /preview(/*cms_path)(.:format)\n
-        \ </td>\n  <td data-route-reqs='content#preview'>\n    content#preview\n  </td>\n</tr>\n<tr
-        class='route_row' data-helper='path'>\n  <td data-route-name='content'>\n
-        \     content<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
-        \   GET\n  </td>\n  <td data-route-path='(/*cms_path)(.:format)' data-regexp='^(?:\\/((.+?)))?(?:\\.([^\\/.?]+))?$'>\n
-        \   (/*cms_path)(.:format)\n  </td>\n  <td data-route-reqs='content#show'>\n
-        \   content#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
-        \ <td data-route-name='comfy_cms_render_css'>\n      comfy_cms_render_css<span
-        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
-        \ </td>\n  <td data-route-path='/cms-css/:site_id/:identifier(/:cache_buster)(.:format)'
-        data-regexp='^\\/cms\\-css\\/([^\\/.?]+)\\/([^\\/.?]+)(?:\\/([^\\/.?]+))?(?:\\.([^\\/.?]+))?$'>\n
-        \   /cms-css/:site_id/:identifier(/:cache_buster)(.:format)\n  </td>\n  <td
-        data-route-reqs='comfy/cms/assets#render_css'>\n    comfy/cms/assets#render_css\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_cms_render_js'>\n
-        \     comfy_cms_render_js<span class='helper'>_path</span>\n  </td>\n  <td
-        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/cms-js/:site_id/:identifier(/:cache_buster)(.:format)'
-        data-regexp='^\\/cms\\-js\\/([^\\/.?]+)\\/([^\\/.?]+)(?:\\/([^\\/.?]+))?(?:\\.([^\\/.?]+))?$'>\n
-        \   /cms-js/:site_id/:identifier(/:cache_buster)(.:format)\n  </td>\n  <td
-        data-route-reqs='comfy/cms/assets#render_js'>\n    comfy/cms/assets#render_js\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_cms_preview_page'>\n
-        \     comfy_cms_preview_page<span class='helper'>_path</span>\n  </td>\n  <td
-        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/preview(/*cms_path)(.:format)'
-        data-regexp='^\\/preview(?:\\/((.+?)))?(?:\\.([^\\/.?]+))?$'>\n    /preview(/*cms_path)(.:format)\n
-        \ </td>\n  <td data-route-reqs='comfy/cms/content#preview'>\n    comfy/cms/content#preview\n
-        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='comfy_cms_render_page'>\n
-        \     comfy_cms_render_page<span class='helper'>_path</span>\n  </td>\n  <td
-        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/(*cms_path)(.:format)'
-        data-regexp='^\\/(?:((.+?)))?(?:\\.([^\\/.?]+))?$'>\n    /(*cms_path)(.:format)\n
-        \ </td>\n  <td data-route-reqs='comfy/cms/content#show'>\n    comfy/cms/content#show\n
-        \ </td>\n</tr>\n\n  </tbody>\n</table>\n\n<script type='text/javascript'>\n
-        \ function each(elems, func) {\n    if (!elems instanceof Array) { elems =
-        [elems]; }\n    for (var i = 0, len = elems.length; i < len; i++) {\n      func(elems[i]);\n
-        \   }\n  }\n\n  function setValOn(elems, val) {\n    each(elems, function(elem)
-        {\n      elem.innerHTML = val;\n    });\n  }\n\n  function onClick(elems,
-        func) {\n    each(elems, function(elem) {\n      elem.onclick = func;\n    });\n
-        \ }\n\n  // Enables functionality to toggle between `_path` and `_url` helper
-        suffixes\n  function setupRouteToggleHelperLinks() {\n    var toggleLinks
-        = document.querySelectorAll('#route_table [data-route-helper]');\n    onClick(toggleLinks,
-        function(){\n      var helperTxt   = this.getAttribute(\"data-route-helper\"),\n
-        \         helperElems = document.querySelectorAll('[data-route-name] span.helper');\n
-        \     setValOn(helperElems, helperTxt);\n    });\n  }\n\n  // takes an array
-        of elements with a data-regexp attribute and\n  // passes their parent <tr>
-        into the callback function\n  // if the regexp matches a given path\n  function
-        eachElemsForPath(elems, path, func) {\n    each(elems, function(e){\n      var
-        reg = e.getAttribute(\"data-regexp\");\n      if (path.match(RegExp(reg)))
-        {\n        func(e.parentNode.cloneNode(true));\n      }\n    })\n  }\n\n  //
-        Ensure path always starts with a slash \"/\" and remove params or fragments\n
-        \ function sanitizePath(path) {\n    var path = path.charAt(0) == '/' ? path
-        : \"/\" + path;\n    return path.replace(/\\#.*|\\?.*/, '');\n  }\n\n  //
-        Enables path search functionality\n  function setupMatchPaths() {\n    var
-        regexpElems     = document.querySelectorAll('#route_table [data-regexp]'),\n
-        \       pathElem        = document.querySelector('#path_search'),\n        selectedSection
-        = document.querySelector('#matched_paths'),\n        noMatchText     = '<tr><th
-        colspan=\"4\">None</th></tr>';\n\n\n    // Remove matches if no path is present\n
-        \   pathElem.onblur = function(e) {\n      if (pathElem.value === \"\") selectedSection.innerHTML
-        = \"\";\n    }\n\n    // On key press perform a search for matching paths\n
-        \   pathElem.onkeyup = function(e){\n      var path        = sanitizePath(pathElem.value),\n
-        \         defaultText = '<tr><th colspan=\"4\">Paths Matching (' + path +
-        '):</th></tr>';\n\n      // Clear out results section\n      selectedSection.innerHTML=
-        defaultText;\n\n      // Display matches if they exist\n      eachElemsForPath(regexpElems,
-        path, function(e){\n        selectedSection.appendChild(e);\n      });\n\n
-        \     // If no match present, tell the user\n      if (selectedSection.innerHTML
-        === defaultText) {\n        selectedSection.innerHTML = selectedSection.innerHTML
-        + noMatchText;\n      }\n    }\n  }\n\n  setupMatchPaths();\n  setupRouteToggleHelperLinks();\n</script>\n\n</div>\n\n\n</body>\n</html>\n"
-    http_version:
-  recorded_at: Sat, 17 Jan 2015 23:00:39 GMT
-- request:
-    method: get
-    uri: https://www.moneyadviceservice.org.uk/en/action_plans/claim-work-entitlements-when-pregnant.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mas-Responsive/1.0 (Douglas-Roper-00774.local; droper; 98282) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
-      X-Request-Id:
-      - 615c355a-4768-4117-97a4-cbdfe8319846
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Wed, 17 Dec 2014 13:51:53 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYWN0
-        aW9uX3BsYW5zL2NsYWltLXdvcmstZW50aXRsZW1lbnRzLXdoZW4tcHJlZ25h
-        bnQ+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxhbmc9ImVuLUdCIjsgdGl0bGU9
-        IkFjdGlvbiBwbGFuIC0gQ2xhaW0gd29yayBlbnRpdGxlbWVudHMgd2hlbiBw
-        cmVnbmFudCIsIDxodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3Jn
-        LnVrL2N5L2FjdGlvbl9wbGFucy9oYXdsaW8tYnVkZGlvbi1nd2FpdGgtcGFu
-        LWZ5ZGR3Y2gteW4tZmVpY2hpb2c+IHJlbD0iYWx0ZXJuYXRlIjsgaHJlZmxh
-        bmc9ImN5LUdCIjsgdGl0bGU9IkN5bmxsdW4gZ3dlaXRocmVkdSDigJMgSGF3
-        bGlvIGJ1ZGRpb24gZ3dhaXRoIHBhbiBmeWRkd2NoIHluIGZlaWNoaW9nIg==
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 892b02204408b3aff924282962eb1df9
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Thu, 17-Dec-2015 13:51:53 GMT; secure
-      - _session_id=892b02204408b3aff924282962eb1df9; path=/; secure; HttpOnly
-      - _web_tracking=10545d32b2a7dcce66209f94b5304549; path=/; expires=Thu, 17-Dec-2015
-        13:51:53 GMT; secure
-      X-Request-Id:
-      - 615c355a-4768-4117-97a4-cbdfe8319846
-      X-Runtime:
-      - '0.140375'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
-    body:
-      encoding: UTF-8
-      string: '{"id":"claim-work-entitlements-when-pregnant","title":"Action plan
-        - Claim work entitlements when pregnant","description":"Find out what time
-        off, maternity leave and maternity pay you\u2019re due","body":"<p class=\"intro\"><img
-        alt=\"action plan icon\" src=\"/images/new_action_plan_icon.jpg\"/>If you
-        are pregnant and working you are entitled to paid time off for your antenatal
-        appointments. After a certain stage in your pregnancy you should also be entitled
-        to maternity leave and maternity pay. </p><div class=\"action-item\"><h3>Get
-        paid time off for antenatal care </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why?
-        </h4><p>No matter how long you''ve been in your job you have a right to paid
-        time off from work so that you can go to your antenatal appointments. </p></div><div
-        class=\"how\"><h4>How? </h4> Give your employer as much notice as possible
-        of your antenatal appointments to help with work planning - and try to arrange
-        appointments at quiet times or outside work hours if you can. </div></div></div><div
-        class=\"action-item\"><h3>Arrange your maternity leave </h3><div class=\"collapsable\"><div
-        class=\"why\"><h4>Why? </h4><p>No matter how long you''ve been in the job
-        - you''re entitled to a year''s maternity leave. </p></div><div class=\"how\"><h4>How?
-        </h4> Tell your employer when you want to start your maternity leave at least
-        15 weeks before the beginning of the week when your baby is due. <br/><ul><li><a
-        data-link-type=\"attachment\" href=\"https://www.moneyadviceservice.org.uk/files/letter-for-maternity-leave-to-an-employer-300523.doc\">Use
-        our template letter to notify your employer in writing</a></li><li><a target=\"_blank\"
-        data-link-type=\"external\" href=\"https://www.gov.uk/maternity-leave\">Find
-        out more about Statutory Maternity Leave on the Gov.uk website </a></li></ul></div></div></div><div
-        class=\"action-item\"><h3>Check how much maternity pay you''ll get </h3><div
-        class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>As long as you''ve
-        worked for your employer for 26 weeks and you earn above \u00a3111 a week
-        you should qualify for Statutory Maternity Pay. Some employers pay even more
-        than the statutory amount. </p></div><div class=\"how\"><h4>How? </h4> Look
-        at your contract or talk to your boss or human resources department to find
-        out how much maternity pay you''re entitled to. <br/><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/maternity-pay-and-leave\">Find
-        out more about Statutory Maternity Pay in our guide Maternity pay and leave</a></li></ul></div></div></div><div
-        class=\"action-item\"><h3>Check whether you''re entitled to Maternity Allowance
-        </h3><div class=\"collapsable\"><div class=\"why\"><h4>Why? </h4><p>If you''re
-        self-employed or haven''t been working for your employer for long enough,
-        you might be able to claim Maternity Allowance instead of Statutory Maternity
-        Pay. </p></div><div class=\"how\"><h4>How? </h4><ul><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/maternity-allowance\">Read
-        our guide on Maternity Allowance to find out whether you qualify and how to
-        claim</a></li></ul></div></div></div>","categories":["child-benefit","having-a-baby"]}'
-    http_version:
-  recorded_at: Sat, 17 Jan 2015 23:00:40 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkFjdGlvbiBwbGFuIOKAkyBDbGFpbSB3b3JrIGVudGl0bGVt
+        ZW50cyB3aGVuIHByZWduYW50Iiwic2x1ZyI6ImNsYWltLXdvcmstZW50aXRs
+        ZW1lbnRzLXdoZW4tcHJlZ25hbnQiLCJmdWxsX3BhdGgiOiIvY2xhaW0td29y
+        ay1lbnRpdGxlbWVudHMtd2hlbi1wcmVnbmFudCIsIm1ldGFfZGVzY3JpcHRp
+        b24iOiJGaW5kIG91dCB3aGF0IHRpbWUgb2ZmLCBtYXRlcm5pdHkgbGVhdmUg
+        YW5kIG1hdGVybml0eSBwYXkgeW914oCZcmUgZHVlIiwibWV0YV90aXRsZSI6
+        IiIsImNhdGVnb3J5X25hbWVzIjpbImNoaWxkLWJlbmVmaXQiLCJoYXZpbmct
+        YS1iYWJ5Il0sImxheW91dF9pZGVudGlmaWVyIjoiYWN0aW9uX3BsYW4iLCJy
+        ZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W10s
+        InBvcHVsYXJfbGlua3MiOlt7InRpdGxlIjoiRXN0aW1hdGUgeW91ciBvdmVy
+        YWxsIGNvc3Qgb2YgYnV5aW5nIGEgaG91c2UgYW5kIG1vdmluZyIsInBhdGgi
+        OiIvZW4vYXJ0aWNsZXMvZXN0aW1hdGUteW91ci1vdmVyYWxsLWJ1eWluZy1h
+        bmQtbW92aW5nLWNvc3RzIn0seyJ0aXRsZSI6IkJlbmVmaXRzIHlvdSBhcmUg
+        ZW50aXRsZWQgdG8gd2hlbiBoYXZpbmcgYSBiYWJ5IiwicGF0aCI6Ii9lbi9h
+        cnRpY2xlcy9iZW5lZml0cy1hbmQtZW50aXRsZW1lbnRzLXRvLWNsYWltLXdo
+        ZW4teW91LWhhdmUtYS1iYWJ5In0seyJ0aXRsZSI6IkZpcnN0LXRpbWUgaG9t
+        ZSBidXllciBndWlkZSIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvZmlyc3QtdGlt
+        ZS1idXllci1tb25leS10aXBzIn1dLCJyZWxhdGVkX2xpbmtzIjpbeyJ0aXRs
+        ZSI6IkJlbmVmaXRzIHlvdSBhcmUgZW50aXRsZWQgdG8gd2hlbiBoYXZpbmcg
+        YSBiYWJ5IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9iZW5lZml0cy1hbmQtZW50
+        aXRsZW1lbnRzLXRvLWNsYWltLXdoZW4teW91LWhhdmUtYS1iYWJ5In0seyJ0
+        aXRsZSI6IkJlbmVmaXRzIHlvdSBjYW4gY2xhaW0gd2hlbiBwcmVnbmFudCIs
+        InBhdGgiOiIvZW4vYXJ0aWNsZXMvYmVuZWZpdHMteW91LWNhbi1jbGFpbS13
+        aGVuLXlvdXJlLXByZWduYW50In0seyJ0aXRsZSI6IkVudGl0bGVtZW50cyBm
+        cm9tIHdvcmsgd2hlbiBwcmVnbmFudCIsInBhdGgiOiIvZW4vYXJ0aWNsZXMv
+        ZW50aXRsZW1lbnRzLWZyb20td29yay13aGVuLXByZWduYW50In1dLCJwcmV2
+        aW91c19saW5rIjp7InRpdGxlIjoiQ2hpbGQgVGF4IENyZWRpdCIsInBhdGgi
+        OiIvZW4vYXJ0aWNsZXMvY2hpbGQtdGF4LWNyZWRpdCJ9LCJuZXh0X2xpbmsi
+        Ont9fSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRl
+        bnQiOiJcdTAwM2NwXHUwMDNlXHUwMDNjc3Ryb25nXHUwMDNlSWYgeW91IGFy
+        ZSBwcmVnbmFudCBhbmQgd29ya2luZyB5b3UgYXJlIGVudGl0bGVkIHRvIHBh
+        aWQgdGltZSBvZmYgZm9yIHlvdXIgYW50ZW5hdGFsIGFwcG9pbnRtZW50cy4g
+        QWZ0ZXIgYSBjZXJ0YWluIHN0YWdlIGluIHlvdXIgcHJlZ25hbmN5IHlvdSBz
+        aG91bGQgYWxzbyBiZSBlbnRpdGxlZCB0byBtYXRlcm5pdHkgbGVhdmUgYW5k
+        IG1hdGVybml0eSBwYXkuXHUwMDNjL3N0cm9uZ1x1MDAzZVx1MDAzYy9wXHUw
+        MDNlXG5cblx1MDAzY2gzIGlkPVwiZ2V0LXBhaWQtdGltZS1vZmYtZm9yLWFu
+        dGVuYXRhbC1jYXJlXCJcdTAwM2VHZXQgcGFpZCB0aW1lIG9mZiBmb3IgYW50
+        ZW5hdGFsIGNhcmVcdTAwM2MvaDNcdTAwM2VcblxuXHUwMDNjaDQgaWQ9XCJ3
+        aHlcIlx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2VcblxuXHUwMDNjcFx1MDAz
+        ZU5vIG1hdHRlciBob3cgbG9uZyB5b3XigJl2ZSBiZWVuIGluIHlvdXIgam9i
+        IHlvdSBoYXZlIGEgcmlnaHQgdG8gcGFpZCB0aW1lIG9mZiBmcm9tIHdvcmsg
+        c28gdGhhdCB5b3UgY2FuIGdvIHRvIHlvdXIgYW50ZW5hdGFsIGFwcG9pbnRt
+        ZW50cy5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NoNCBpZD1cImhvd1wiXHUw
+        MDNlSG93P1x1MDAzYy9oNFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlR2l2ZSB5
+        b3VyIGVtcGxveWVyIGFzIG11Y2ggbm90aWNlIGFzIHBvc3NpYmxlIG9mIHlv
+        dXIgYW50ZW5hdGFsIGFwcG9pbnRtZW50cyB0byBoZWxwIHdpdGggd29yayBw
+        bGFubmluZyAtIGFuZCB0cnkgdG8gYXJyYW5nZSBhcHBvaW50bWVudHMgYXQg
+        cXVpZXQgdGltZXMgb3Igb3V0c2lkZSB3b3JrIGhvdXJzIGlmIHlvdSBjYW4u
+        XHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjaDMgaWQ9XCJhcnJhbmdlLXlvdXIt
+        bWF0ZXJuaXR5LWxlYXZlXCJcdTAwM2VBcnJhbmdlIHlvdXIgbWF0ZXJuaXR5
+        IGxlYXZlXHUwMDNjL2gzXHUwMDNlXG5cblx1MDAzY2g0IGlkPVwid2h5LTFc
+        Ilx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2VcblxuXHUwMDNjcFx1MDAzZU5v
+        IG1hdHRlciBob3cgbG9uZyB5b3XigJl2ZSBiZWVuIGluIHRoZSBqb2IgLSB5
+        b3XigJlyZSBlbnRpdGxlZCB0byBhIHllYXLigJlzIG1hdGVybml0eSBsZWF2
+        ZS5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NoNCBpZD1cImhvdy0xXCJcdTAw
+        M2VIb3c/XHUwMDNjL2g0XHUwMDNlXG5cblx1MDAzY3BcdTAwM2VUZWxsIHlv
+        dXIgZW1wbG95ZXIgd2hlbiB5b3Ugd2FudCB0byBzdGFydCB5b3VyIG1hdGVy
+        bml0eSBsZWF2ZSBhdCBsZWFzdCAxNSB3ZWVrcyBiZWZvcmUgdGhlIGJlZ2lu
+        bmluZyBvZiB0aGUgd2VlayB3aGVuIHlvdXIgYmFieSBpcyBkdWUuXHUwMDNj
+        L3BcdTAwM2VcblxuXHUwMDNjdWxcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2Vc
+        dTAwM2NhIGhyZWY9XCJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uu
+        b3JnLnVrL2ZpbGVzL2xldHRlci1mb3ItbWF0ZXJuaXR5LWxlYXZlLXRvLWFu
+        LWVtcGxveWVyLTMwMDUyMy5kb2NcIlx1MDAzZVVzZSBvdXIgdGVtcGxhdGUg
+        bGV0dGVyIHRvIG5vdGlmeSB5b3VyIGVtcGxveWVyIGluIHdyaXRpbmdcdTAw
+        M2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVx1
+        MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3Lmdvdi51ay9tYXRlcm5pdHktbGVh
+        dmVcIiB0YXJnZXQ9XCJfYmxhbmtcIlx1MDAzZUZpbmQgb3V0IG1vcmUgYWJv
+        dXQgU3RhdHV0b3J5IE1hdGVybml0eSBMZWF2ZSBvbiB0aGUgR09WLlVLIHdl
+        YnNpdGVcdTAwM2MvYVx1MDAzZVx1MDAzYy9saVx1MDAzZVxuXHUwMDNjL3Vs
+        XHUwMDNlXG5cblx1MDAzY2gzIGlkPVwiY2hlY2staG93LW11Y2gtbWF0ZXJu
+        aXR5LXBheS15b3VsbC1nZXRcIlx1MDAzZUNoZWNrIGhvdyBtdWNoIG1hdGVy
+        bml0eSBwYXkgeW914oCZbGwgZ2V0XHUwMDNjL2gzXHUwMDNlXG5cblx1MDAz
+        Y2g0IGlkPVwid2h5LTJcIlx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2Vcblxu
+        XHUwMDNjcFx1MDAzZUFzIGxvbmcgYXMgeW914oCZdmUgd29ya2VkIGZvciB5
+        b3VyIGVtcGxveWVyIGZvciAyNiB3ZWVrcyBhbmQgeW91IGVhcm4gYWJvdmUg
+        wqMxMTIgYSB3ZWVrIHlvdSBzaG91bGQgcXVhbGlmeSBmb3IgU3RhdHV0b3J5
+        IE1hdGVybml0eSBQYXkuIFNvbWUgZW1wbG95ZXJzIHBheSBldmVuIG1vcmUg
+        dGhhbiB0aGUgc3RhdHV0b3J5IGFtb3VudC5cdTAwM2MvcFx1MDAzZVxuXG5c
+        dTAwM2NoNCBpZD1cImhvdy0yXCJcdTAwM2VIb3c/XHUwMDNjL2g0XHUwMDNl
+        XG5cblx1MDAzY3BcdTAwM2VMb29rIGF0IHlvdXIgY29udHJhY3Qgb3IgdGFs
+        ayB0byB5b3VyIGJvc3Mgb3IgaHVtYW4gcmVzb3VyY2VzIGRlcGFydG1lbnQg
+        dG8gZmluZCBvdXQgaG93IG11Y2ggbWF0ZXJuaXR5IHBheSB5b3XigJlyZSBl
+        bnRpdGxlZCB0by5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2N1bFx1MDAzZVxu
+        ICBcdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3Lm1v
+        bmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0aWNsZXMvbWF0ZXJuaXR5
+        LXBheS1hbmQtbGVhdmVcIlx1MDAzZUZpbmQgb3V0IG1vcmUgYWJvdXQgU3Rh
+        dHV0b3J5IE1hdGVybml0eSBQYXkgaW4gb3VyIGd1aWRlIE1hdGVybml0eSBw
+        YXkgYW5kIGxlYXZlXHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2Vcblx1
+        MDAzYy91bFx1MDAzZVxuXG5cdTAwM2NoMyBpZD1cImNoZWNrLXdoZXRoZXIt
+        eW91cmUtZW50aXRsZWQtdG8tbWF0ZXJuaXR5LWFsbG93YW5jZVwiXHUwMDNl
+        Q2hlY2sgd2hldGhlciB5b3XigJlyZSBlbnRpdGxlZCB0byBNYXRlcm5pdHkg
+        QWxsb3dhbmNlXHUwMDNjL2gzXHUwMDNlXG5cblx1MDAzY2g0IGlkPVwid2h5
+        LTNcIlx1MDAzZVdoeT9cdTAwM2MvaDRcdTAwM2VcblxuXHUwMDNjcFx1MDAz
+        ZUlmIHlvdeKAmXJlIHNlbGYtZW1wbG95ZWQgb3IgaGF2ZW7igJl0IGJlZW4g
+        d29ya2luZyBmb3IgeW91ciBlbXBsb3llciBmb3IgbG9uZyBlbm91Z2gsIHlv
+        dSBtaWdodCBiZSBhYmxlIHRvIGNsYWltIE1hdGVybml0eSBBbGxvd2FuY2Ug
+        aW5zdGVhZCBvZiBTdGF0dXRvcnkgTWF0ZXJuaXR5IFBheS5cdTAwM2MvcFx1
+        MDAzZVxuXG5cdTAwM2NoNCBpZD1cImhvdy0zXCJcdTAwM2VIb3c/XHUwMDNj
+        L2g0XHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNl
+        XHUwMDNjYSBocmVmPVwiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNl
+        Lm9yZy51ay9lbi9hcnRpY2xlcy9tYXRlcm5pdHktYWxsb3dhbmNlXCJcdTAw
+        M2VSZWFkIG91ciBndWlkZSBvbiBNYXRlcm5pdHkgQWxsb3dhbmNlIHRvIGZp
+        bmQgb3V0IHdoZXRoZXIgeW91IHF1YWxpZnkgYW5kIGhvdyB0byBjbGFpbVx1
+        MDAzYy9hXHUwMDNlXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2MvdWxcdTAwM2Vc
+        blxuIiwiY3JlYXRlZF9hdCI6IjIwMTQtMTItMTdUMTQ6MDU6MzkuMDAwWiIs
+        InVwZGF0ZWRfYXQiOiIyMDE1LTAzLTE3VDEyOjUxOjI5LjAwMFoifV0sInRy
+        YW5zbGF0aW9ucyI6W3sibGFiZWwiOiJDeW5sbHVuIGd3ZWl0aHJlZHUg4oCT
+        IEhhd2xpbyBidWRkaW9uIGd3YWl0aCBwYW4gZnlkZHdjaCB5biBmZWljaGlv
+        ZyIsImxpbmsiOiIvY3kvYWN0aW9uX3BsYW5zL2hhd2xpby1idWRkaW9uLWd3
+        YWl0aC1wYW4tZnlkZHdjaC15bi1mZWljaGlvZyIsImxhbmd1YWdlIjoiY3ki
+        fV19
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:39 GMT
 recorded_with: VCR 2.9.2

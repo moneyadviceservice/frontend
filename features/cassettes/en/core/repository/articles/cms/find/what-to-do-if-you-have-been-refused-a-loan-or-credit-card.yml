@@ -2,16 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.json
+    uri: http://localhost:3000/en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (MacBook-Air-de-Tomas-7.local; tomas-stefano; 15371) ruby/2.1.2
-        (95; x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 1a786962-49fc-4572-96f4-4b3e69b32197
+      - 458c0689-06ae-4525-80a1-5ef1db0ad515
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,181 +18,318 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Tue, 10 Feb 2015 15:49:42 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      Link:
-      - !binary |-
-        PGh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvZW4vYXJ0
-        aWNsZXMvd2hhdC10by1kby1pZi15b3UtaGF2ZS1iZWVuLXJlZnVzZWQtYS1s
-        b2FuLW9yLWNyZWRpdC1jYXJkPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5n
-        PSJlbi1HQiI7IHRpdGxlPSJSZWZ1c2VkIGNyZWRpdCBvciByZWZ1c2VkIGEg
-        bG9hbiAtIFdoYXQgeW91IGNhbiBkbyIsIDxodHRwczovL3d3dy5tb25leWFk
-        dmljZXNlcnZpY2Uub3JnLnVrL2N5L2FydGljbGVzL2JldGgtaXctd25ldWQt
-        b3MtZ3dydGhvZHd5ZC1iZW50aHljaWFkLW5ldS1nZXJkeW4tY3JlZHlkLWkt
-        Y2hpPiByZWw9ImFsdGVybmF0ZSI7IGhyZWZsYW5nPSJjeS1HQiI7IHRpdGxl
-        PSJCZXRoIGnigJl3IHduZXVkIG9zIGd3cnRob2R3eWQgYmVudGh5Y2lhZCBu
-        ZXUgZ2VyZHluIGNyZWR5ZCBpIGNoaSI=
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"a24fb43a38118fad6e231b461e583668"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - ac13a6d6fa1ba12cd2d214a7b3b4bf28
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 10-Feb-2016 15:49:42 GMT; secure
-      - _session_id=ac13a6d6fa1ba12cd2d214a7b3b4bf28; path=/; secure; HttpOnly
-      - _web_tracking=c00d970118e958c8c0816fb55c1d07f2; path=/; expires=Wed, 10-Feb-2016
-        15:49:42 GMT; secure
       X-Request-Id:
-      - 1a786962-49fc-4572-96f4-4b3e69b32197
+      - 458c0689-06ae-4525-80a1-5ef1db0ad515
       X-Runtime:
-      - '0.234203'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.200733'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:53:37 GMT
+      Content-Length:
+      - '12718'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"what-to-do-if-you-have-been-refused-a-loan-or-credit-card","title":"Refused
-        credit or refused a loan - What you can do","description":"If you\u2019ve
-        been turned down for credit find out what steps you can take to find out why","body":"<p
-        class=\"intro\"><img src=\"/images/what-to-do-if-you-have-been-refused-a-loan-or-credit-card.jpg\"/>If
-        you\u2019ve been turned down for a credit card or loan there are steps you
-        can take to understand why. There are also things you should avoid doing which
-        could make it even harder for you to get credit in the future. Read on to
-        find out more and to learn about alternative borrowing options to consider
-        or avoid. </p><h2>What you should be told if you have been refused credit
-        or a loan </h2><p>If you\u2019re turned down for a loan or credit card, the
-        credit card or loan company should tell you whether you were turned down as
-        a result of a search on your credit file and, if so, which credit reference
-        agency they used. You can ask for more information about why you were refused
-        but they don\u2019t have to give you a detailed reply. However mistakes can
-        happen and if you do spot a mistake, write to the credit reference agency
-        and ask for it to be corrected immediately. Make sure you include an explanation
-        about why it''s wrong, and include any evidence you have. The agency has 28
-        days to act, and the relevant detail in your credit report will be marked
-        as ''disputed'' while it is investigated. </p><h2>Don\u2019t keep applying
-        </h2><p>You might ask ''why have I been refused credit?''. If you have been
-        refused a loan or turned down for a credit card, the worst thing you can do
-        is to keep applying for more credit because any credit applications you make
-        \u2013 whether or not you\u2019ve been successful \u2013 will show up on your
-        credit file. Several applications in a short space of time may make lenders
-        think you are desperate for cash and this will damage your credit rating further.
-        Your credit rating affects whether you can get credit, how much you can borrow
-        and \u2013 sometimes \u2013 the interest rate you may be charged. </p><h2>What
-        to do next </h2><p>What to do next depends on why you are looking for credit.
-        </p><h3>If you need to borrow to pay off other debts </h3><p>If you\u2019re
-        looking to borrow in order to pay off other debts or to help you pay bills
-        and living expenses at the end of the month then it\u2019s worth talking to
-        a free debt adviser as soon as you can. They will be able to help you come
-        up with a plan and avoid getting deeper into debt. Follow the link below for
-        more information. </p><p><a title=\"Where to go to get free debt advice\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/articles/where-to-go-to-get-free-debt-advice\">Where
-        to go to get free debt advice</a></p><h3>If you\u2019re looking to fund a
-        purchase and can afford the repayments </h3><p>If you\u2019re looking for
-        credit to fund a purchase, such as buying a car, and you can afford the credit
-        or loan repayments, then check your <strong>credit rating</strong>. You do
-        this by getting hold of your credit report \u2013 this is crucial in influencing
-        the lender\u2019s decision about whether to give you credit or not. </p><p>You
-        can see your report by subscribing to a full credit report service or just
-        buying a one-off report. </p><p><a title=\"How to check your credit report\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/articles/how-to-check-your-credit-report\">Read
-        our guide How to check your credit report</a></p><h2>Bad credit reports \u2013
-        Before you look to borrow elsewhere </h2><p>If you\u2019ve been turned down
-        for a loan or card it could be a good opportunity for you to think about your
-        current money situation. </p><p>If you already have debts you\u2019re struggling
-        to repay, you should talk to someone about them. There are a number of organisations
-        that offer free, confidential debt advice. </p><p><a title=\"Where to go to
-        get free debt advice\" data-type=\"link\" hreflang=\"en\" href=\"/en/articles/where-to-go-to-get-free-debt-advice\">Where
-        to go to get free debt advice</a></p><p>If you have paid off your debts, you
-        should think about trying to save some money if you can to build up an emergency
-        savings fund. </p><p><a title=\"Living on a low income \u2013 tips\" data-type=\"link\"
-        hreflang=\"en\" href=\"/en/articles/living-on-a-low-income-tips\">Living on
-        a low income \u2013 tips</a></p><p><a title=\"Budget planner\" data-type=\"link\"
-        hreflang=\"en\" href=\"/en/tools/budget-planner\">Use our Budget planner to
-        see if you can make any savings</a></p><h2>Alternative borrowing options if
-        you have a poor credit rating </h2><p>If you need to borrow some money for
-        a purchase and you can afford the repayments, there are other options beyond
-        credit cards and personal loans. </p><h3>Credit unions </h3><p>If you need
-        to borrow some money at an affordable interest rate, find out if there is
-        a credit union near you. Credit unions are non-profit organisations that have
-        been set up to help people in their local communities. There\u2019s a cap
-        on the amount of interest they can charge on their loans of 2% a month or
-        26.8% a year APR and there are no hidden charges or penalties if you repay
-        the loan early. With some credit unions, you have to save for a period before
-        you''re allowed to borrow. </p><p><a title=\"Borrowing from a credit union\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/articles/credit-unions\">Read
-        our guide to Borrowing from a credit union</a></p><h3>Budgeting loans from
-        the Social Fund </h3><p>If you desperately need to borrow money, you may be
-        able to apply for an interest-free Budgeting Loan from the Social Fund. Alternatively,
-        other help may be available from your local authority in England, or the Scottish
-        and Welsh governments. </p><p><a title=\"Budgeting loans from the Social fund\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/articles/budgeting-loans-from-the-social-fund\">Read
-        about Budgeting loans from the Social fund</a></p><h3>Lenders of last resort
-        </h3><p>Think carefully before borrowing using payday loans, home credit or
-        by using a pawnbroker. And avoid illegal loan sharks altogether. </p><p><strong>Payday
-        loans</strong></p><p>Taking out a payday loan can be a very expensive way
-        to borrow. It\u2019s also all too easy to roll over your loans from month
-        to month and lender to lender, leading to your initial debt quickly growing
-        into an unmanageable one. </p><p><a title=\"Payday loans\" data-type=\"link\"
-        hreflang=\"en\" href=\"/en/articles/payday-loans\">Find out more in our guide
-        to Payday loans</a></p><p><strong>Home credit or doorstep lending </strong></p><p>Home
-        credit, also known as doorstep lending, is when a salesperson lends you money
-        at your home. It can be very expensive so think very carefully before you
-        take on this type of loan. For example, if you borrow at a high interest rate,
-        will you be able to pay off your loan? Make sure you only use a licensed lender
-        and don\u2019t borrow from anyone who calls at your house you offering a loan
-        as this is illegal. </p><p><a title=\"Home credit or doorstep lending\" data-type=\"link\"
-        hreflang=\"en\" href=\"/en/articles/home-credit-or-doorstep-lending\">Read
-        more in our guide Home credit or doorstep lending</a></p><p><strong>Pawnbrokers</strong></p><p>Pawnbrokers
-        will lend you money but at higher rates of interest than high street banks
-        and you\u2019ll have to leave something valuable, normally jewellery, as security.
-        The item is known as a \u2018pawn\u2019. If you can\u2019t pay back your debt,
-        you\u2019ll lose your item. </p><p>For extra peace of mind, check that your
-        pawnbroker is a member of the National Pawnbrokers Association, a central
-        organisation that promotes high standards of business conduct. </p><p><a title=\"Pawnbrokers
-        \u2013 how they work\" data-type=\"link\" hreflang=\"en\" href=\"/en/articles/pawnbrokers-how-they-work\">Read
-        more in Pawnbrokers \u2013 how they work</a></p><p><strong>Loan sharks</strong></p><p>Loan
-        sharks are illegal lenders who often target low income and desperate families.
-        They may seem friendly at first but borrowing from them is never a good idea
-        \u2013 even if your credit rating is poor or you only need a small amount
-        for a short while. Avoid them at all costs. </p><p>As they are not licensed,
-        loan sharks will charge extortionate rates of interest and you may be harassed
-        if you get behind with your repayments. If you owe money to a loan shark,
-        you do not have to pay it back as they are illegal. Report them to the Stop
-        Loan Sharks team. </p><p><a title=\"Loan sharks\" data-type=\"link\" hreflang=\"en\"
-        href=\"/en/articles/how-to-spot-a-loan-shark\">Find out more about how to
-        spot them in our guide to Loan sharks</a></p><p><a title=\"Contact the Stop
-        Loan Sharks team\" target=\"_blank\" data-link-type=\"external\" href=\"https://www.gov.uk/report-loan-shark\">Contact
-        the Stop Loan Sharks team</a></p><p><strong>Cash for gold</strong></p><p>If
-        you want to sell old gold there are several different options to choose from
-        including postal gold websites, specialist gold merchants, TV gold websites
-        and traditional pawnbrokers. Think very carefully if you are considering selling
-        gold to get hold of cash. </p><p><a title=\"Quick access to cash your options\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/articles/quick-access-to-cash-your-options\">See
-        more in our guide to Quick access to cash your options</a></p><h2>Rebuilding
-        your credit rating </h2><p>There are steps you can take to rebuild your credit
-        rating after being in debt. </p><p><a title=\"How to improve your credit rating\"
-        data-type=\"link\" hreflang=\"en\" href=\"/en/action_plans/how-to-improve-your-credit-rating\">Read
-        more in How to improve your credit rating</a></p><p>If you found this page
-        useful, <a href=\"https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions/new\">sign
-        up for our free newsletter</a> full of top money tips and advice. </p>","categories":["help-with-loans","credit-cards-and-credit-ratings"]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlJlZnVzZWQgY3JlZGl0IG9yIHJlZnVzZWQgYSBsb2FuIOKA
+        kyBXaGF0IHlvdSBjYW4gZG8iLCJzbHVnIjoid2hhdC10by1kby1pZi15b3Ut
+        aGF2ZS1iZWVuLXJlZnVzZWQtYS1sb2FuLW9yLWNyZWRpdC1jYXJkIiwiZnVs
+        bF9wYXRoIjoiL3doYXQtdG8tZG8taWYteW91LWhhdmUtYmVlbi1yZWZ1c2Vk
+        LWEtbG9hbi1vci1jcmVkaXQtY2FyZCIsIm1ldGFfZGVzY3JpcHRpb24iOiJJ
+        ZiB5b3XigJl2ZSBiZWVuIHR1cm5lZCBkb3duIGZvciBjcmVkaXQgZmluZCBv
+        dXQgd2hhdCBzdGVwcyB5b3UgY2FuIHRha2UgdG8gZmluZCBvdXQgd2h5Iiwi
+        bWV0YV90aXRsZSI6IldoYXQgVG8gRG8gSWYgWW91J3ZlIEJlZW4gUmVmdXNl
+        ZCBhIExvYW4gb3IgQ3JlZGl0IENhcmQiLCJjYXRlZ29yeV9uYW1lcyI6WyJj
+        cmVkaXQtY2FyZHMtYW5kLWNyZWRpdC1yYXRpbmdzIiwiaGVscC13aXRoLWxv
+        YW5zIl0sImxheW91dF9pZGVudGlmaWVyIjoiYXJ0aWNsZSIsInJlbGF0ZWRf
+        Y29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbXSwicG9wdWxh
+        cl9saW5rcyI6W3sidGl0bGUiOiJFc3RpbWF0ZSB5b3VyIG92ZXJhbGwgY29z
+        dCBvZiBidXlpbmcgYSBob3VzZSBhbmQgbW92aW5nIiwicGF0aCI6Ii9lbi9h
+        cnRpY2xlcy9lc3RpbWF0ZS15b3VyLW92ZXJhbGwtYnV5aW5nLWFuZC1tb3Zp
+        bmctY29zdHMifSx7InRpdGxlIjoiQmVuZWZpdHMgeW91IGFyZSBlbnRpdGxl
+        ZCB0byB3aGVuIGhhdmluZyBhIGJhYnkiLCJwYXRoIjoiL2VuL2FydGljbGVz
+        L2JlbmVmaXRzLWFuZC1lbnRpdGxlbWVudHMtdG8tY2xhaW0td2hlbi15b3Ut
+        aGF2ZS1hLWJhYnkifSx7InRpdGxlIjoiRmlyc3QtdGltZSBob21lIGJ1eWVy
+        IGd1aWRlIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9maXJzdC10aW1lLWJ1eWVy
+        LW1vbmV5LXRpcHMifV0sInJlbGF0ZWRfbGlua3MiOlt7InRpdGxlIjoiQWx0
+        ZXJuYXRpdmVzIHRvIHBheWRheSBsb2FucyIsInBhdGgiOiIvZW4vYXJ0aWNs
+        ZXMvYWx0ZXJuYXRpdmVzLXRvLXBheWRheS1sb2FucyJ9LHsidGl0bGUiOiJI
+        b3cgdG8gZ2V0IGNyZWRpdCBmb3IgdGhlIGZpcnN0IHRpbWUiLCJwYXRoIjoi
+        L2VuL2FydGljbGVzL2dldHRpbmctY3JlZGl0LWZvci10aGUtZmlyc3QtdGlt
+        ZSJ9LHsidGl0bGUiOiJEZWNpZGluZyBvbiB0aGUgYmVzdCB0eXBlIG9mIGNy
+        ZWRpdCBmb3IgeW91IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9kZWNpZGluZy1v
+        bi10aGUtYmVzdC10eXBlLW9mLWNyZWRpdC1mb3IteW91In1dLCJwcmV2aW91
+        c19saW5rIjp7InRpdGxlIjoiSG93IHlvdeKAmXJlIHByb3RlY3RlZCB3aGVu
+        IHlvdSBwYXkgYnkgY2FyZCIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvaG93LXlv
+        dXJlLXByb3RlY3RlZC13aGVuLXlvdS1wYXktYnktY2FyZCJ9LCJuZXh0X2xp
+        bmsiOnsidGl0bGUiOiJSZWNsYWltaW5nIHVuZmFpciBjcmVkaXQgY2FyZCBj
+        aGFyZ2VzIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9yZWNsYWltaW5nLXVuZmFp
+        ci1jcmVkaXQtY2FyZC1jaGFyZ2VzIn19LCJibG9ja3MiOlt7ImlkZW50aWZp
+        ZXIiOiJjb250ZW50IiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VcdTAwM2Nz
+        dHJvbmdcdTAwM2VJZiB5b3XigJl2ZSBiZWVuIHR1cm5lZCBkb3duIGZvciBh
+        IGNyZWRpdCBjYXJkIG9yIGxvYW4gdGhlcmUgYXJlIHN0ZXBzIHlvdSBjYW4g
+        dGFrZSB0byB1bmRlcnN0YW5kIHdoeS4gVGhlcmUgYXJlIGFsc28gdGhpbmdz
+        IHlvdSBzaG91bGQgYXZvaWQgZG9pbmcgd2hpY2ggY291bGQgbWFrZSBpdCBl
+        dmVuIGhhcmRlciBmb3IgeW91IHRvIGdldCBjcmVkaXQgaW4gdGhlIGZ1dHVy
+        ZS4gUmVhZCBvbiB0byBmaW5kIG91dCBtb3JlIGFuZCB0byBsZWFybiBhYm91
+        dCBhbHRlcm5hdGl2ZSBib3Jyb3dpbmcgb3B0aW9ucyB0byBjb25zaWRlciBv
+        ciBhdm9pZC5cdTAwM2Mvc3Ryb25nXHUwMDNlXHUwMDNjL3BcdTAwM2Vcblxu
+        XHUwMDNjaDIgaWQ9XCJ3aGF0LXlvdS1zaG91bGQtYmUtdG9sZC1pZi15b3Ut
+        aGF2ZS1iZWVuLXJlZnVzZWQtY3JlZGl0LW9yLWEtbG9hblwiXHUwMDNlV2hh
+        dCB5b3Ugc2hvdWxkIGJlIHRvbGQgaWYgeW91IGhhdmUgYmVlbiByZWZ1c2Vk
+        IGNyZWRpdCBvciBhIGxvYW5cdTAwM2MvaDJcdTAwM2VcblxuXHUwMDNjcFx1
+        MDAzZUlmIHlvdeKAmXJlIHR1cm5lZCBkb3duIGZvciBhIGxvYW4gb3IgY3Jl
+        ZGl0IGNhcmQsIHRoZSBjcmVkaXQgY2FyZCBvciBsb2FuIGNvbXBhbnkgc2hv
+        dWxkIHRlbGwgeW91IHdoZXRoZXIgeW91IHdlcmUgdHVybmVkIGRvd24gYXMg
+        YSByZXN1bHQgb2YgYSBzZWFyY2ggb24geW91ciBjcmVkaXQgZmlsZSBhbmQs
+        IGlmIHNvLCB3aGljaCBjcmVkaXQgcmVmZXJlbmNlIGFnZW5jeSB0aGV5IHVz
+        ZWQuIFlvdSBjYW4gYXNrIGZvciBtb3JlIGluZm9ybWF0aW9uIGFib3V0IHdo
+        eSB5b3Ugd2VyZSByZWZ1c2VkIGJ1dCB0aGV5IGRvbuKAmXQgaGF2ZSB0byBn
+        aXZlIHlvdSBhIGRldGFpbGVkIHJlcGx5LiBIb3dldmVyIG1pc3Rha2VzIGNh
+        biBoYXBwZW4gYW5kIGlmIHlvdSBkbyBzcG90IGEgbWlzdGFrZSwgd3JpdGUg
+        dG8gdGhlIGNyZWRpdCByZWZlcmVuY2UgYWdlbmN5IGFuZCBhc2sgZm9yIGl0
+        IHRvIGJlIGNvcnJlY3RlZCBpbW1lZGlhdGVseS4gTWFrZSBzdXJlIHlvdSBp
+        bmNsdWRlIGFuIGV4cGxhbmF0aW9uIGFib3V0IHdoeSBpdOKAmXMgd3Jvbmcs
+        IGFuZCBpbmNsdWRlIGFueSBldmlkZW5jZSB5b3UgaGF2ZS4gVGhlIGFnZW5j
+        eSBoYXMgMjggZGF5cyB0byBhY3QsIGFuZCB0aGUgcmVsZXZhbnQgZGV0YWls
+        IGluIHlvdXIgY3JlZGl0IHJlcG9ydCB3aWxsIGJlIG1hcmtlZCBhcyDigJhk
+        aXNwdXRlZOKAmSB3aGlsZSBpdCBpcyBpbnZlc3RpZ2F0ZWQuXHUwMDNjL3Bc
+        dTAwM2VcblxuXHUwMDNjaDIgaWQ9XCJkb250LWtlZXAtYXBwbHlpbmdcIlx1
+        MDAzZURvbuKAmXQga2VlcCBhcHBseWluZ1x1MDAzYy9oMlx1MDAzZVxuXG5c
+        dTAwM2NwXHUwMDNlWW91IG1pZ2h0IGFzayDigJh3aHkgaGF2ZSBJIGJlZW4g
+        cmVmdXNlZCBjcmVkaXQ/4oCZLiBJZiB5b3UgaGF2ZSBiZWVuIHJlZnVzZWQg
+        YSBsb2FuIG9yIHR1cm5lZCBkb3duIGZvciBhIGNyZWRpdCBjYXJkLCB0aGUg
+        d29yc3QgdGhpbmcgeW91IGNhbiBkbyBpcyB0byBrZWVwIGFwcGx5aW5nIGZv
+        ciBtb3JlIGNyZWRpdCBiZWNhdXNlIGFueSBjcmVkaXQgYXBwbGljYXRpb25z
+        IHlvdSBtYWtlIOKAkyB3aGV0aGVyIG9yIG5vdCB5b3XigJl2ZSBiZWVuIHN1
+        Y2Nlc3NmdWwg4oCTIHdpbGwgc2hvdyB1cCBvbiB5b3VyIGNyZWRpdCBmaWxl
+        LiBTZXZlcmFsIGFwcGxpY2F0aW9ucyBpbiBhIHNob3J0IHNwYWNlIG9mIHRp
+        bWUgbWF5IG1ha2UgbGVuZGVycyB0aGluayB5b3UgYXJlIGRlc3BlcmF0ZSBm
+        b3IgY2FzaCBhbmQgdGhpcyB3aWxsIGRhbWFnZSB5b3VyIGNyZWRpdCByYXRp
+        bmcgZnVydGhlci4gWW91ciBjcmVkaXQgcmF0aW5nIGFmZmVjdHMgd2hldGhl
+        ciB5b3UgY2FuIGdldCBjcmVkaXQsIGhvdyBtdWNoIHlvdSBjYW4gYm9ycm93
+        IGFuZCDigJMgc29tZXRpbWVzIOKAkyB0aGUgaW50ZXJlc3QgcmF0ZSB5b3Ug
+        bWF5IGJlIGNoYXJnZWQuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjaDIgaWQ9
+        XCJ3aGF0LXRvLWRvLW5leHRcIlx1MDAzZVdoYXQgdG8gZG8gbmV4dFx1MDAz
+        Yy9oMlx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlV2hhdCB0byBkbyBuZXh0IGRl
+        cGVuZHMgb24gd2h5IHlvdSBhcmUgbG9va2luZyBmb3IgY3JlZGl0Llx1MDAz
+        Yy9wXHUwMDNlXG5cblx1MDAzY2gzIGlkPVwiaWYteW91LW5lZWQtdG8tYm9y
+        cm93LXRvLXBheS1vZmYtb3RoZXItZGVidHNcIlx1MDAzZUlmIHlvdSBuZWVk
+        IHRvIGJvcnJvdyB0byBwYXkgb2ZmIG90aGVyIGRlYnRzXHUwMDNjL2gzXHUw
+        MDNlXG5cblx1MDAzY3BcdTAwM2VJZiB5b3XigJlyZSBsb29raW5nIHRvIGJv
+        cnJvdyBpbiBvcmRlciB0byBwYXkgb2ZmIG90aGVyIGRlYnRzIG9yIHRvIGhl
+        bHAgeW91IHBheSBiaWxscyBhbmQgbGl2aW5nIGV4cGVuc2VzIGF0IHRoZSBl
+        bmQgb2YgdGhlIG1vbnRoIHRoZW4gaXTigJlzIHdvcnRoIHRhbGtpbmcgdG8g
+        YSBmcmVlIGRlYnQgYWR2aXNlciBhcyBzb29uIGFzIHlvdSBjYW4uIFRoZXkg
+        d2lsbCBiZSBhYmxlIHRvIGhlbHAgeW91IGNvbWUgdXAgd2l0aCBhIHBsYW4g
+        YW5kIGF2b2lkIGdldHRpbmcgZGVlcGVyIGludG8gZGVidC4gRm9sbG93IHRo
+        ZSBsaW5rIGJlbG93IGZvciBtb3JlIGluZm9ybWF0aW9uLlx1MDAzYy9wXHUw
+        MDNlXG5cblx1MDAzY2RpdiBjbGFzcz1cImFkZC1hY3Rpb25cIlx1MDAzZVxu
+        IFx1MDAzY2EgaHJlZj1cIi9lbi9hcnRpY2xlcy93aGVyZS10by1nby10by1n
+        ZXQtZnJlZS1kZWJ0LWFkdmljZVwiXHUwMDNlV2hlcmUgdG8gZ28gdG8gZ2V0
+        IGZyZWUgZGVidCBhZHZpY2VcdTAwM2MvYVx1MDAzZVxuXG5cdTAwM2MvZGl2
+        XHUwMDNlXG5cblx1MDAzY2gzIGlkPVwiaWYteW91cmUtbG9va2luZy10by1m
+        dW5kLWEtcHVyY2hhc2UtYW5kLWNhbi1hZmZvcmQtdGhlLXJlcGF5bWVudHNc
+        Ilx1MDAzZUlmIHlvdeKAmXJlIGxvb2tpbmcgdG8gZnVuZCBhIHB1cmNoYXNl
+        IGFuZCBjYW4gYWZmb3JkIHRoZSByZXBheW1lbnRzXHUwMDNjL2gzXHUwMDNl
+        XG5cblx1MDAzY3BcdTAwM2VJZiB5b3XigJlyZSBsb29raW5nIGZvciBjcmVk
+        aXQgdG8gZnVuZCBhIHB1cmNoYXNlLCBzdWNoIGFzIGJ1eWluZyBhIGNhciwg
+        YW5kIHlvdSBjYW4gYWZmb3JkIHRoZSBjcmVkaXQgb3IgbG9hbiByZXBheW1l
+        bnRzLCB0aGVuIGNoZWNrIHlvdXIgXHUwMDNjc3Ryb25nXHUwMDNlY3JlZGl0
+        IHJhdGluZ1x1MDAzYy9zdHJvbmdcdTAwM2UuIFlvdSBkbyB0aGlzIGJ5IGdl
+        dHRpbmcgaG9sZCBvZiB5b3VyIGNyZWRpdCByZXBvcnQg4oCTIHRoaXMgaXMg
+        Y3J1Y2lhbCBpbiBpbmZsdWVuY2luZyB0aGUgbGVuZGVy4oCZcyBkZWNpc2lv
+        biBhYm91dCB3aGV0aGVyIHRvIGdpdmUgeW91IGNyZWRpdCBvciBub3QuXHUw
+        MDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVlvdSBjYW4gc2VlIHlvdXIg
+        cmVwb3J0IGJ5IHN1YnNjcmliaW5nIHRvIGEgZnVsbCBjcmVkaXQgcmVwb3J0
+        IHNlcnZpY2Ugb3IganVzdCBidXlpbmcgYSBvbmUtb2ZmIHJlcG9ydC5cdTAw
+        M2MvcFx1MDAzZVxuXG5cdTAwM2NkaXYgY2xhc3M9XCJhZGQtYWN0aW9uXCJc
+        dTAwM2VcbiBcdTAwM2NhIGhyZWY9XCIvZW4vYXJ0aWNsZXMvaG93LXRvLWNo
+        ZWNrLXlvdXItY3JlZGl0LXJlcG9ydFwiXHUwMDNlUmVhZCBvdXIgZ3VpZGUg
+        SG93IHRvIGNoZWNrIHlvdXIgY3JlZGl0IHJlcG9ydFx1MDAzYy9hXHUwMDNl
+        XG5cblx1MDAzYy9kaXZcdTAwM2VcblxuXHUwMDNjaDIgaWQ9XCJiYWQtY3Jl
+        ZGl0LXJlcG9ydHMtLWJlZm9yZS15b3UtbG9vay10by1ib3Jyb3ctZWxzZXdo
+        ZXJlXCJcdTAwM2VCYWQgY3JlZGl0IHJlcG9ydHMg4oCTIEJlZm9yZSB5b3Ug
+        bG9vayB0byBib3Jyb3cgZWxzZXdoZXJlXHUwMDNjL2gyXHUwMDNlXG5cblx1
+        MDAzY3BcdTAwM2VJZiB5b3XigJl2ZSBiZWVuIHR1cm5lZCBkb3duIGZvciBh
+        IGxvYW4gb3IgY2FyZCBpdCBjb3VsZCBiZSBhIGdvb2Qgb3Bwb3J0dW5pdHkg
+        Zm9yIHlvdSB0byB0aGluayBhYm91dCB5b3VyIGN1cnJlbnQgbW9uZXkgc2l0
+        dWF0aW9uLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VJZiB5b3Ug
+        YWxyZWFkeSBoYXZlIGRlYnRzIHlvdeKAmXJlIHN0cnVnZ2xpbmcgdG8gcmVw
+        YXksIHlvdSBzaG91bGQgdGFsayB0byBzb21lb25lIGFib3V0IHRoZW0uIFRo
+        ZXJlIGFyZSBhIG51bWJlciBvZiBvcmdhbmlzYXRpb25zIHRoYXQgb2ZmZXIg
+        ZnJlZSwgY29uZmlkZW50aWFsIGRlYnQgYWR2aWNlLlx1MDAzYy9wXHUwMDNl
+        XG5cblx1MDAzY2RpdiBjbGFzcz1cImFkZC1hY3Rpb25cIlx1MDAzZVxuIFx1
+        MDAzY2EgaHJlZj1cIi9lbi9hcnRpY2xlcy93aGVyZS10by1nby10by1nZXQt
+        ZnJlZS1kZWJ0LWFkdmljZVwiXHUwMDNlV2hlcmUgdG8gZ28gdG8gZ2V0IGZy
+        ZWUgZGVidCBhZHZpY2VcdTAwM2MvYVx1MDAzZVxuXG5cdTAwM2MvZGl2XHUw
+        MDNlXG5cblx1MDAzY3BcdTAwM2VJZiB5b3UgaGF2ZSBwYWlkIG9mZiB5b3Vy
+        IGRlYnRzLCB5b3Ugc2hvdWxkIHRoaW5rIGFib3V0IHRyeWluZyB0byBzYXZl
+        IHNvbWUgbW9uZXkgaWYgeW91IGNhbiB0byBidWlsZCB1cCBhbiBlbWVyZ2Vu
+        Y3kgc2F2aW5ncyBmdW5kLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY2RpdiBj
+        bGFzcz1cImFkZC1hY3Rpb25cIlx1MDAzZVxuIFx1MDAzY2EgaHJlZj1cIi9l
+        bi9hcnRpY2xlcy9saXZpbmctb24tYS1sb3ctaW5jb21lLXRpcHNcIlx1MDAz
+        ZUxpdmluZyBvbiBhIGxvdyBpbmNvbWUg4oCTIHRpcHNcdTAwM2MvYVx1MDAz
+        ZVxuXG5cdTAwM2MvZGl2XHUwMDNlXG5cblx1MDAzY2RpdiBjbGFzcz1cImFk
+        ZC1hY3Rpb25cIlx1MDAzZVxuIFx1MDAzY2EgaHJlZj1cIi9lbi90b29scy9i
+        dWRnZXQtcGxhbm5lclwiXHUwMDNlVXNlIG91ciBCdWRnZXQgcGxhbm5lciB0
+        byBzZWUgaWYgeW91IGNhbiBtYWtlIGFueSBzYXZpbmdzXHUwMDNjL2FcdTAw
+        M2VcblxuXHUwMDNjL2Rpdlx1MDAzZVxuXG5cdTAwM2NoMiBpZD1cImFsdGVy
+        bmF0aXZlLWJvcnJvd2luZy1vcHRpb25zLWlmLXlvdS1oYXZlLWEtcG9vci1j
+        cmVkaXQtcmF0aW5nXCJcdTAwM2VBbHRlcm5hdGl2ZSBib3Jyb3dpbmcgb3B0
+        aW9ucyBpZiB5b3UgaGF2ZSBhIHBvb3IgY3JlZGl0IHJhdGluZ1x1MDAzYy9o
+        Mlx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlSWYgeW91IG5lZWQgdG8gYm9ycm93
+        IHNvbWUgbW9uZXkgZm9yIGEgcHVyY2hhc2UgYW5kIHlvdSBjYW4gYWZmb3Jk
+        IHRoZSByZXBheW1lbnRzLCB0aGVyZSBhcmUgb3RoZXIgb3B0aW9ucyBiZXlv
+        bmQgY3JlZGl0IGNhcmRzIGFuZCBwZXJzb25hbCBsb2Fucy5cdTAwM2MvcFx1
+        MDAzZVxuXG5cdTAwM2NoMyBpZD1cImNyZWRpdC11bmlvbnNcIlx1MDAzZUNy
+        ZWRpdCB1bmlvbnNcdTAwM2MvaDNcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUlm
+        IHlvdSBuZWVkIHRvIGJvcnJvdyBzb21lIG1vbmV5IGF0IGFuIGFmZm9yZGFi
+        bGUgaW50ZXJlc3QgcmF0ZSwgZmluZCBvdXQgaWYgdGhlcmUgaXMgYSBjcmVk
+        aXQgdW5pb24gbmVhciB5b3UuIENyZWRpdCB1bmlvbnMgYXJlIG5vbi1wcm9m
+        aXQgb3JnYW5pc2F0aW9ucyB0aGF0IGhhdmUgYmVlbiBzZXQgdXAgdG8gaGVs
+        cCBwZW9wbGUgaW4gdGhlaXIgbG9jYWwgY29tbXVuaXRpZXMuIFRoZXJl4oCZ
+        cyBhIGNhcCBvbiB0aGUgYW1vdW50IG9mIGludGVyZXN0IHRoZXkgY2FuIGNo
+        YXJnZSBvbiB0aGVpciBsb2FucyBvZiAyJSBhIG1vbnRoIG9yIDI2LjglIGEg
+        eWVhciBBUFIgYW5kIHRoZXJlIGFyZSBubyBoaWRkZW4gY2hhcmdlcyBvciBw
+        ZW5hbHRpZXMgaWYgeW91IHJlcGF5IHRoZSBsb2FuIGVhcmx5LiBXaXRoIHNv
+        bWUgY3JlZGl0IHVuaW9ucywgeW91IGhhdmUgdG8gc2F2ZSBmb3IgYSBwZXJp
+        b2QgYmVmb3JlIHlvdeKAmXJlIGFsbG93ZWQgdG8gYm9ycm93Llx1MDAzYy9w
+        XHUwMDNlXG5cblx1MDAzY2RpdiBjbGFzcz1cImFkZC1hY3Rpb25cIlx1MDAz
+        ZVxuIFx1MDAzY2EgaHJlZj1cIi9lbi9hcnRpY2xlcy9jcmVkaXQtdW5pb25z
+        XCJcdTAwM2VSZWFkIG91ciBndWlkZSB0byBCb3Jyb3dpbmcgZnJvbSBhIGNy
+        ZWRpdCB1bmlvblx1MDAzYy9hXHUwMDNlXG5cblx1MDAzYy9kaXZcdTAwM2Vc
+        blxuXHUwMDNjaDMgaWQ9XCJidWRnZXRpbmctbG9hbnMtZnJvbS10aGUtc29j
+        aWFsLWZ1bmRcIlx1MDAzZUJ1ZGdldGluZyBsb2FucyBmcm9tIHRoZSBTb2Np
+        YWwgRnVuZFx1MDAzYy9oM1x1MDAzZVxuXG5cdTAwM2NwXHUwMDNlSWYgeW91
+        IGRlc3BlcmF0ZWx5IG5lZWQgdG8gYm9ycm93IG1vbmV5LCB5b3UgbWF5IGJl
+        IGFibGUgdG8gYXBwbHkgZm9yIGFuIGludGVyZXN0LWZyZWUgQnVkZ2V0aW5n
+        IExvYW4gZnJvbSB0aGUgU29jaWFsIEZ1bmQuIEFsdGVybmF0aXZlbHksIG90
+        aGVyIGhlbHAgbWF5IGJlIGF2YWlsYWJsZSBmcm9tIHlvdXIgbG9jYWwgYXV0
+        aG9yaXR5IGluIEVuZ2xhbmQsIG9yIHRoZSBTY290dGlzaCBhbmQgV2Vsc2gg
+        Z292ZXJubWVudHMuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjZGl2IGNsYXNz
+        PVwiYWRkLWFjdGlvblwiXHUwMDNlXG4gXHUwMDNjYSBocmVmPVwiL2VuL2Fy
+        dGljbGVzL2J1ZGdldGluZy1sb2Fucy1mcm9tLXRoZS1zb2NpYWwtZnVuZFwi
+        XHUwMDNlUmVhZCBhYm91dCBCdWRnZXRpbmcgbG9hbnMgZnJvbSB0aGUgU29j
+        aWFsIGZ1bmRcdTAwM2MvYVx1MDAzZVxuXG5cdTAwM2MvZGl2XHUwMDNlXG5c
+        blx1MDAzY2gzIGlkPVwibGVuZGVycy1vZi1sYXN0LXJlc29ydFwiXHUwMDNl
+        TGVuZGVycyBvZiBsYXN0IHJlc29ydFx1MDAzYy9oM1x1MDAzZVxuXG5cdTAw
+        M2NwXHUwMDNlVGhpbmsgY2FyZWZ1bGx5IGJlZm9yZSBib3Jyb3dpbmcgdXNp
+        bmcgcGF5ZGF5IGxvYW5zLCBob21lIGNyZWRpdCBvciBieSB1c2luZyBhIHBh
+        d25icm9rZXIuIEFuZCBhdm9pZCBpbGxlZ2FsIGxvYW4gc2hhcmtzIGFsdG9n
+        ZXRoZXIuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVx1MDAzY3N0
+        cm9uZ1x1MDAzZVBheWRheSBsb2Fuc1x1MDAzYy9zdHJvbmdcdTAwM2VcdTAw
+        M2MvcFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlVGFraW5nIG91dCBhIHBheWRh
+        eSBsb2FuIGNhbiBiZSBhIHZlcnkgZXhwZW5zaXZlIHdheSB0byBib3Jyb3cu
+        IEl04oCZcyBhbHNvIGFsbCB0b28gZWFzeSB0byByb2xsIG92ZXIgeW91ciBs
+        b2FucyBmcm9tIG1vbnRoIHRvIG1vbnRoIGFuZCBsZW5kZXIgdG8gbGVuZGVy
+        LCBsZWFkaW5nIHRvIHlvdXIgaW5pdGlhbCBkZWJ0IHF1aWNrbHkgZ3Jvd2lu
+        ZyBpbnRvIGFuIHVubWFuYWdlYWJsZSBvbmUuXHUwMDNjL3BcdTAwM2Vcblxu
+        XHUwMDNjZGl2IGNsYXNzPVwiYWRkLWFjdGlvblwiXHUwMDNlXG4gXHUwMDNj
+        YSBocmVmPVwiL2VuL3BheWRheS1sb2Fuc1wiXHUwMDNlRmluZCBvdXQgbW9y
+        ZSBpbiBvdXIgZ3VpZGUgdG8gUGF5ZGF5IGxvYW5zXHUwMDNjL2FcdTAwM2Vc
+        blxuXHUwMDNjL2Rpdlx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlXHUwMDNjc3Ry
+        b25nXHUwMDNlSG9tZSBjcmVkaXQgb3IgZG9vcnN0ZXAgbGVuZGluZ1x1MDAz
+        Yy9zdHJvbmdcdTAwM2VcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNl
+        SG9tZSBjcmVkaXQsIGFsc28ga25vd24gYXMgZG9vcnN0ZXAgbGVuZGluZywg
+        aXMgd2hlbiBhIHNhbGVzcGVyc29uIGxlbmRzIHlvdSBtb25leSBhdCB5b3Vy
+        IGhvbWUuIEl0IGNhbiBiZSB2ZXJ5IGV4cGVuc2l2ZSBzbyB0aGluayB2ZXJ5
+        IGNhcmVmdWxseSBiZWZvcmUgeW91IHRha2Ugb24gdGhpcyB0eXBlIG9mIGxv
+        YW4uIEZvciBleGFtcGxlLCBpZiB5b3UgYm9ycm93IGF0IGEgaGlnaCBpbnRl
+        cmVzdCByYXRlLCB3aWxsIHlvdSBiZSBhYmxlIHRvIHBheSBvZmYgeW91ciBs
+        b2FuPyBNYWtlIHN1cmUgeW91IG9ubHkgdXNlIGEgbGljZW5zZWQgbGVuZGVy
+        IGFuZCBkb27igJl0IGJvcnJvdyBmcm9tIGFueW9uZSB3aG8gY2FsbHMgYXQg
+        eW91ciBob3VzZSB5b3Ugb2ZmZXJpbmcgYSBsb2FuIGFzIHRoaXMgaXMgaWxs
+        ZWdhbC5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NkaXYgY2xhc3M9XCJhZGQt
+        YWN0aW9uXCJcdTAwM2VcbiBcdTAwM2NhIGhyZWY9XCIvZW4vYXJ0aWNsZXMv
+        aG9tZS1jcmVkaXQtb3ItZG9vcnN0ZXAtbGVuZGluZ1wiXHUwMDNlUmVhZCBt
+        b3JlIGluIG91ciBndWlkZSBIb21lIGNyZWRpdCBvciBkb29yc3RlcCBsZW5k
+        aW5nXHUwMDNjL2FcdTAwM2VcblxuXHUwMDNjL2Rpdlx1MDAzZVxuXG5cdTAw
+        M2NwXHUwMDNlXHUwMDNjc3Ryb25nXHUwMDNlUGF3bmJyb2tlcnNcdTAwM2Mv
+        c3Ryb25nXHUwMDNlXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVBh
+        d25icm9rZXJzIHdpbGwgbGVuZCB5b3UgbW9uZXkgYnV0IGF0IGhpZ2hlciBy
+        YXRlcyBvZiBpbnRlcmVzdCB0aGFuIGhpZ2ggc3RyZWV0IGJhbmtzIGFuZCB5
+        b3XigJlsbCBoYXZlIHRvIGxlYXZlIHNvbWV0aGluZyB2YWx1YWJsZSwgbm9y
+        bWFsbHkgamV3ZWxsZXJ5LCBhcyBzZWN1cml0eS4gVGhlIGl0ZW0gaXMga25v
+        d24gYXMgYSDigJhwYXdu4oCZLiBJZiB5b3UgY2Fu4oCZdCBwYXkgYmFjayB5
+        b3VyIGRlYnQsIHlvdeKAmWxsIGxvc2UgeW91ciBpdGVtLlx1MDAzYy9wXHUw
+        MDNlXG5cblx1MDAzY3BcdTAwM2VGb3IgZXh0cmEgcGVhY2Ugb2YgbWluZCwg
+        Y2hlY2sgdGhhdCB5b3VyIHBhd25icm9rZXIgaXMgYSBtZW1iZXIgb2YgdGhl
+        IE5hdGlvbmFsIFBhd25icm9rZXJzIEFzc29jaWF0aW9uLCBhIGNlbnRyYWwg
+        b3JnYW5pc2F0aW9uIHRoYXQgcHJvbW90ZXMgaGlnaCBzdGFuZGFyZHMgb2Yg
+        YnVzaW5lc3MgY29uZHVjdC5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NkaXYg
+        Y2xhc3M9XCJhZGQtYWN0aW9uXCJcdTAwM2VcbiBcdTAwM2NhIGhyZWY9XCIv
+        ZW4vYXJ0aWNsZXMvcGF3bmJyb2tlcnMtaG93LXRoZXktd29ya1wiXHUwMDNl
+        UmVhZCBtb3JlIGluIFBhd25icm9rZXJzIOKAkyBob3cgdGhleSB3b3JrXHUw
+        MDNjL2FcdTAwM2VcblxuXHUwMDNjL2Rpdlx1MDAzZVxuXG5cdTAwM2NwXHUw
+        MDNlXHUwMDNjc3Ryb25nXHUwMDNlTG9hbiBzaGFya3NcdTAwM2Mvc3Ryb25n
+        XHUwMDNlXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUxvYW4gc2hh
+        cmtzIGFyZSBpbGxlZ2FsIGxlbmRlcnMgd2hvIG9mdGVuIHRhcmdldCBsb3cg
+        aW5jb21lIGFuZCBkZXNwZXJhdGUgZmFtaWxpZXMuIFRoZXkgbWF5IHNlZW0g
+        ZnJpZW5kbHkgYXQgZmlyc3QgYnV0IGJvcnJvd2luZyBmcm9tIHRoZW0gaXMg
+        bmV2ZXIgYSBnb29kIGlkZWEg4oCTIGV2ZW4gaWYgeW91ciBjcmVkaXQgcmF0
+        aW5nIGlzIHBvb3Igb3IgeW91IG9ubHkgbmVlZCBhIHNtYWxsIGFtb3VudCBm
+        b3IgYSBzaG9ydCB3aGlsZS4gQXZvaWQgdGhlbSBhdCBhbGwgY29zdHMuXHUw
+        MDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUFzIHRoZXkgYXJlIG5vdCBs
+        aWNlbnNlZCwgbG9hbiBzaGFya3Mgd2lsbCBjaGFyZ2UgZXh0b3J0aW9uYXRl
+        IHJhdGVzIG9mIGludGVyZXN0IGFuZCB5b3UgbWF5IGJlIGhhcmFzc2VkIGlm
+        IHlvdSBnZXQgYmVoaW5kIHdpdGggeW91ciByZXBheW1lbnRzLiBJZiB5b3Ug
+        b3dlIG1vbmV5IHRvIGEgbG9hbiBzaGFyaywgeW91IGRvIG5vdCBoYXZlIHRv
+        IHBheSBpdCBiYWNrIGFzIHRoZXkgYXJlIGlsbGVnYWwuIFJlcG9ydCB0aGVt
+        IHRvIHRoZSBTdG9wIExvYW4gU2hhcmtzIHRlYW0uXHUwMDNjL3BcdTAwM2Vc
+        blxuXHUwMDNjZGl2IGNsYXNzPVwiYWRkLWFjdGlvblwiXHUwMDNlXG4gXHUw
+        MDNjYSBocmVmPVwiL2VuL2FydGljbGVzL2hvdy10by1zcG90LWEtbG9hbi1z
+        aGFya1wiXHUwMDNlRmluZCBvdXQgbW9yZSBhYm91dCBob3cgdG8gc3BvdCB0
+        aGVtIGluIG91ciBndWlkZSB0byBMb2FuIHNoYXJrc1x1MDAzYy9hXHUwMDNl
+        XG5cblx1MDAzYy9kaXZcdTAwM2VcblxuXHUwMDNjZGl2IGNsYXNzPVwiYWRk
+        LWFjdGlvblwiXHUwMDNlXG4gXHUwMDNjYSBocmVmPVwiaHR0cHM6Ly93d3cu
+        Z292LnVrL3JlcG9ydC1sb2FuLXNoYXJrXCIgdGFyZ2V0PVwiX2JsYW5rXCJc
+        dTAwM2VDb250YWN0IHRoZSBTdG9wIExvYW4gU2hhcmtzIHRlYW1cdTAwM2Mv
+        YVx1MDAzZVxuXG5cdTAwM2MvZGl2XHUwMDNlXG5cblx1MDAzY3BcdTAwM2Vc
+        dTAwM2NzdHJvbmdcdTAwM2VDYXNoIGZvciBnb2xkXHUwMDNjL3N0cm9uZ1x1
+        MDAzZVx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VJZiB5b3Ugd2Fu
+        dCB0byBzZWxsIG9sZCBnb2xkIHRoZXJlIGFyZSBzZXZlcmFsIGRpZmZlcmVu
+        dCBvcHRpb25zIHRvIGNob29zZSBmcm9tIGluY2x1ZGluZyBwb3N0YWwgZ29s
+        ZCB3ZWJzaXRlcywgc3BlY2lhbGlzdCBnb2xkIG1lcmNoYW50cywgVFYgZ29s
+        ZCB3ZWJzaXRlcyBhbmQgdHJhZGl0aW9uYWwgcGF3bmJyb2tlcnMuIFRoaW5r
+        IHZlcnkgY2FyZWZ1bGx5IGlmIHlvdSBhcmUgY29uc2lkZXJpbmcgc2VsbGlu
+        ZyBnb2xkIHRvIGdldCBob2xkIG9mIGNhc2guXHUwMDNjL3BcdTAwM2Vcblxu
+        XHUwMDNjZGl2IGNsYXNzPVwiYWRkLWFjdGlvblwiXHUwMDNlXG4gXHUwMDNj
+        YSBocmVmPVwiL2VuL2FydGljbGVzL3F1aWNrLWFjY2Vzcy10by1jYXNoLXlv
+        dXItb3B0aW9uc1wiXHUwMDNlU2VlIG1vcmUgaW4gb3VyIGd1aWRlIHRvIFF1
+        aWNrIGFjY2VzcyB0byBjYXNoIHlvdXIgb3B0aW9uc1x1MDAzYy9hXHUwMDNl
+        XG5cblx1MDAzYy9kaXZcdTAwM2VcblxuXHUwMDNjaDIgaWQ9XCJyZWJ1aWxk
+        aW5nLXlvdXItY3JlZGl0LXJhdGluZ1wiXHUwMDNlUmVidWlsZGluZyB5b3Vy
+        IGNyZWRpdCByYXRpbmdcdTAwM2MvaDJcdTAwM2VcblxuXHUwMDNjcFx1MDAz
+        ZVRoZXJlIGFyZSBzdGVwcyB5b3UgY2FuIHRha2UgdG8gcmVidWlsZCB5b3Vy
+        IGNyZWRpdCByYXRpbmcgYWZ0ZXIgYmVpbmcgaW4gZGVidC5cdTAwM2MvcFx1
+        MDAzZVxuXG5cdTAwM2NkaXYgY2xhc3M9XCJhZGQtYWN0aW9uXCJcdTAwM2Vc
+        biBcdTAwM2NhIGhyZWY9XCIvZW4vYXJ0aWNsZXMvaG93LXRvLWltcHJvdmUt
+        eW91ci1jcmVkaXQtcmF0aW5nXCJcdTAwM2VSZWFkIG1vcmUgaW4gSG93IHRv
+        IGltcHJvdmUgeW91ciBjcmVkaXQgcmF0aW5nXHUwMDNjL2FcdTAwM2Vcblxu
+        XHUwMDNjL2Rpdlx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTQtMTItMDJU
+        MTY6Mzk6MjkuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTAxLTMwVDEyOjE2
+        OjE4LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3sibGFiZWwiOiJCZXRoIGni
+        gJl3IHduZXVkIG9zIGd3cnRob2R3eWQgYmVudGh5Y2lhZCBuZXUgZ2VyZHlu
+        IGNyZWR5ZCBpIGNoaSIsImxpbmsiOiIvY3kvYXJ0aWNsZXMvYmV0aC1pdy13
+        bmV1ZC1vcy1nd3J0aG9kd3lkLWJlbnRoeWNpYWQtbmV1LWdlcmR5bi1jcmVk
+        eWQtaS1jaGkiLCJsYW5ndWFnZSI6ImN5In1dfQ==
     http_version: 
-  recorded_at: Sat, 14 Mar 2015 23:00:40 GMT
+  recorded_at: Sat, 06 Jun 2015 22:00:37 GMT
 recorded_with: VCR 2.9.2

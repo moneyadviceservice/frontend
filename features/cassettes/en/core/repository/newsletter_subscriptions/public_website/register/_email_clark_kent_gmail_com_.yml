@@ -8,11 +8,11 @@ http_interactions:
       string: '{"newsletter_subscription":{"email":"clark.kent@gmail.com"}}'
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       Content-Type:
       - application/json
       X-Request-Id:
-      - a830e565-1d0b-444a-9932-76991b7f0c3e
+      - e5a10a0b-ad3d-4be8-902c-15c163998a91
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 10 Jul 2014 15:14:36 GMT
+      - Wed, 06 May 2015 13:53:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,16 +43,16 @@ http_interactions:
       X-Session-Id:
       - "-"
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:36 GMT; secure
-      - _session_id=05c7682147b67b0038dd30f757a5ac29; path=/; secure; HttpOnly
-      - _web_tracking=9a090b5eee4676536e99d1d82fa7564c; path=/; expires=Fri, 10-Jul-2015
-        15:14:36 GMT; secure
+      - _cookie_notice=y; path=/; expires=Fri, 06-May-2016 13:53:30 GMT; secure
+      - _session_id=cfbadb8d2d63003974c8804ea1138092; path=/; secure; HttpOnly
+      - _web_tracking=5d85aa1e79d30a6e2863fa25579e0d02; path=/; expires=Fri, 06-May-2016
+        13:53:30 GMT; secure
       - newsletter_subscription=BAhU--883388be754dfddb3d8a21a2758a50b8dc81224a; path=/;
-        expires=Mon, 10-Jul-2034 15:14:36 GMT
+        expires=Sun, 06-May-2035 13:53:31 GMT
       X-Request-Id:
-      - a830e565-1d0b-444a-9932-76991b7f0c3e
+      - e5a10a0b-ad3d-4be8-902c-15c163998a91
       X-Runtime:
-      - '0.257326'
+      - '0.235708'
       X-Rack-Cache:
       - invalidate, pass
       P3p:
@@ -62,6 +62,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: " "
-    http_version:
-  recorded_at: Thu, 10 Jul 2014 15:14:37 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:32 GMT
 recorded_with: VCR 2.9.2

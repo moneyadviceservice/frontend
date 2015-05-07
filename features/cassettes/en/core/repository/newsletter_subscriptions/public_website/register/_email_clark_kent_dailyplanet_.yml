@@ -8,11 +8,11 @@ http_interactions:
       string: '{"newsletter_subscription":{"email":"clark.kent@dailyplanet"}}'
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       Content-Type:
       - application/json
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 10 Jul 2014 15:14:45 GMT
+      - Wed, 06 May 2015 13:53:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,21 +41,21 @@ http_interactions:
       X-Session-Id:
       - "-"
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
-      - _session_id=846f2652adfc6e42a2791778f7b5d5f0; path=/; secure; HttpOnly
-      - _web_tracking=db7f4e8eec7d9229b25f513af13bfbc8; path=/; expires=Fri, 10-Jul-2015
-        15:14:45 GMT; secure
+      - _cookie_notice=y; path=/; expires=Fri, 06-May-2016 13:53:31 GMT; secure
+      - _session_id=4ae5835ded34936e3b99c555273f728b; path=/; secure; HttpOnly
+      - _web_tracking=018a58b5b48b7855eb8748a3090ddf30; path=/; expires=Fri, 06-May-2016
+        13:53:31 GMT; secure
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       X-Runtime:
-      - '0.132603'
+      - '0.023180'
       X-Rack-Cache:
       - invalidate, pass
     body:
       encoding: UTF-8
       string: " "
-    http_version:
-  recorded_at: Thu, 10 Jul 2014 15:14:45 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:32 GMT
 - request:
     method: post
     uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
@@ -64,11 +64,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       Content-Type:
       - application/json
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -83,7 +83,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 10 Jul 2014 15:14:45 GMT
+      - Wed, 06 May 2015 13:53:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -99,21 +99,21 @@ http_interactions:
       X-Session-Id:
       - "-"
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
-      - _session_id=3cc9c9988ba49baab73e6a15f708a499; path=/; secure; HttpOnly
-      - _web_tracking=9636a46b28b12451fcdd9481892955cf; path=/; expires=Fri, 10-Jul-2015
-        15:14:45 GMT; secure
+      - _cookie_notice=y; path=/; expires=Fri, 06-May-2016 13:53:31 GMT; secure
+      - _session_id=aae57e782c26e9a8d097ec30ca86564f; path=/; secure; HttpOnly
+      - _web_tracking=6ad4e6a6a9832a9cd11e40ad408b199f; path=/; expires=Fri, 06-May-2016
+        13:53:31 GMT; secure
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       X-Runtime:
-      - '0.025057'
+      - '0.014996'
       X-Rack-Cache:
       - invalidate, pass
     body:
       encoding: UTF-8
       string: " "
-    http_version:
-  recorded_at: Thu, 10 Jul 2014 15:14:46 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:33 GMT
 - request:
     method: post
     uri: https://www.moneyadviceservice.org.uk/en/newsletter-subscriptions.json
@@ -122,11 +122,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       Content-Type:
       - application/json
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -141,7 +141,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 10 Jul 2014 15:14:45 GMT
+      - Wed, 06 May 2015 13:53:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -157,19 +157,19 @@ http_interactions:
       X-Session-Id:
       - "-"
       Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Fri, 10-Jul-2015 15:14:45 GMT; secure
-      - _session_id=9a782263facdcbf41fb96611eeae21b4; path=/; secure; HttpOnly
-      - _web_tracking=fc7d2abb5299ffdd0431e70f24d20da5; path=/; expires=Fri, 10-Jul-2015
-        15:14:45 GMT; secure
+      - _cookie_notice=y; path=/; expires=Fri, 06-May-2016 13:53:31 GMT; secure
+      - _session_id=5e86b9f55c41e668792d8c15cf8bddd4; path=/; secure; HttpOnly
+      - _web_tracking=8a78f86946839c16f1c2a35dcfbd291f; path=/; expires=Fri, 06-May-2016
+        13:53:31 GMT; secure
       X-Request-Id:
-      - 7475998e-df65-4cba-bb53-9c5be874f35e
+      - 0b20a76c-733a-4adb-b723-54b85818e7de
       X-Runtime:
-      - '0.032711'
+      - '0.016335'
       X-Rack-Cache:
       - invalidate, pass
     body:
       encoding: UTF-8
       string: " "
-    http_version:
-  recorded_at: Thu, 10 Jul 2014 15:14:46 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jun 2015 22:00:33 GMT
 recorded_with: VCR 2.9.2

@@ -2,16 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/Partners.json
+    uri: http://localhost:3000/en/categories/partners.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (DavidKewal000769.local; dkewal; 45149) ruby/2.1.2 (95;
-        x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 02c594aa-3fac-4b71-abe8-7250f3e8fc19
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,28 +29,31 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"e7a3fd402f5f849ced2037c1fec6e116"'
+      - '"fa3cb32492b0e1a5833db283fdd5b77f"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 02c594aa-3fac-4b71-abe8-7250f3e8fc19
+      - 6a6602bf-87ea-4b28-aa9c-94356e82e241
       X-Runtime:
-      - '0.008935'
+      - '0.026585'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Wed, 22 Apr 2015 10:23:14 GMT
+      - Wed, 06 May 2015 13:53:03 GMT
       Content-Length:
-      - '369'
+      - '715'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"id":"Partners","type":"category","title":"Partners","description":"The
+      string: '{"id":"partners","type":"category","title":"Partners","description":"The
         Partnerships team at the Money Advice Service are here to facilitate the syndication
         of our guides, news, tools and video onto your own website - free of charge
         - to provide your users with independent and unbiased advice on how to manage
-        their money.","parent_id":"corporate-home","contents":[]}'
+        their money.","parent_id":"corporate-home","third_level_navigation":false,"contents":[{"id":"partners-overview-parhub","type":"corporate","title":"Partnerships
+        Overview","description":"An overview of how to syndicate Money Advice Service
+        guides, tools, videos"},{"id":"linking-parhub","type":"corporate","title":"Linking
+        to us","description":"A short guide on how to link to the Money Advice Service"}]}'
     http_version: 
-  recorded_at: Wed, 22 Apr 2015 10:23:14 GMT
+  recorded_at: Sat, 06 Jun 2015 22:00:03 GMT
 recorded_with: VCR 2.9.2

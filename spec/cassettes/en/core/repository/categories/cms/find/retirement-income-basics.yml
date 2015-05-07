@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/retirement-income-basics.json
+    uri: http://localhost:3000/en/categories/retirement-income-basics.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,82 +18,157 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:17:58 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"dda195620a6bf5e3ba0b93ded00dd223"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 7a2385622928821acc320df44a5a45a0
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:17:58 GMT; secure
-      - _session_id=7a2385622928821acc320df44a5a45a0; path=/; secure; HttpOnly
-      - _web_tracking=d2e5635c7a7a406a2f6d2b910c8c853c; path=/; expires=Wed, 23-Mar-2016
-        17:17:58 GMT; secure
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       X-Runtime:
-      - '0.016797'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.052974'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:56 GMT
+      Content-Length:
+      - '5446'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"retirement-income-basics","title":"Retirement income basics","description":"Setting
-        a clear retirement income goal and managing your money once you\u2019ve stopped
-        working.","parent_id":"work-pensions-and-retirement","contents":[{"id":"new-rules-about-pensions-from-27-march-2014","type":"guide","title":"New
-        rules about pensions from 27 March 2014","description":"Read our advice on
-        the government\u2019s proposed pension changes from April 2015 and interim
-        relaxed rules for cash lump sums and income withdrawal"},{"id":"protecting-your-retirement-income","type":"guide","title":"Protecting
-        your retirement income","description":"With a guarantee period or lump-sum
-        death benefit your partner or dependant may get some of your pension income
-        if you die"},{"id":"higher-pension-income-for-people-with-poor-health","type":"guide","title":"Higher
-        retirement income for people with poor health","description":"Enhanced annuities
-        can provide a higher pension income if you\u2019re in ill-health, or have
-        an unhealthy lifestyle"},{"id":"manage-your-money-in-retirement","type":"guide","title":"Manage
-        your money in retirement","description":"Retirement can bring significant
-        financial changes. Here\u2019s a range of tips and ideas to help you manage
-        the transition"},{"id":"tax-and-benefits-when-youre-retired","type":"guide","title":"Tax
-        and benefits when you\u2019re retired","description":"A list of factors that
-        can affect your tax bill in retirement, and of payments such as State Pension
-        you may be entitled to"},{"id":"your-pension-lump-sum-options","type":"guide","title":"Your
-        pension lump sum options","description":"Advice about your options under the
-        government\u2019s new interim rules on taking a cash lump sum from your pension
-        pot"},{"id":"should-you-take-a-pension-tax-free-cash-lump-sum","type":"guide","title":"Should
-        you take a tax-free cash lump sum from your pension?","description":"Many
-        people take a cash lump sum from their pension, but you need to consider the
-        impact on your retirement income"},{"id":"checklist-things-to-do-as-retirement-approaches","type":"guide","title":"Checklist
-        \u2013 things to do as retirement approaches","description":"The key steps
-        in the months and years before retirement \u2013 from shopping for an annuity
-        to budgeting for retirement"},{"id":"work-out-your-likely-pension-income","type":"guide","title":"Work
-        out your likely retirement income","description":"If you\u2019re approaching
-        retirement, you need to get ready to make important decisions about turning
-        your pension savings into an income"},{"id":"set-a-clear-retirement-income-goal","type":"guide","title":"Set
-        a clear retirement income goal","description":"The first step in reviewing
-        your pension savings is to work out the retirement income you\u2019re aiming
-        for"},{"id":"decide-when-to-take-your-pension","type":"action_plan","title":"Action
-        plan - Decide when to take your pension","description":"Decide when to start
-        taking your pension with the date that\u2019s right for you"},{"id":"retirement-why-should-i-get-advice","type":"guide","title":"Retirement
-        \u2013 why should I get advice?","description":"Find out how to convert your
-        pension pot into retirement income and where you can go for help and advice"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJldGlyZW1lbnQtaW5jb21lLWJhc2ljcyIsInR5cGUiOiJjYXRl
+        Z29yeSIsInRpdGxlIjoiUmV0aXJlbWVudCBpbmNvbWUgYmFzaWNzIiwiZGVz
+        Y3JpcHRpb24iOiJTZXR0aW5nIGEgY2xlYXIgcmV0aXJlbWVudCBpbmNvbWUg
+        Z29hbCBhbmQgbWFuYWdpbmcgeW91ciBtb25leSBvbmNlIHlvdeKAmXZlIHN0
+        b3BwZWQgd29ya2luZy4iLCJwYXJlbnRfaWQiOiJ3b3JrLXBlbnNpb25zLWFu
+        ZC1yZXRpcmVtZW50IiwidGhpcmRfbGV2ZWxfbmF2aWdhdGlvbiI6ZmFsc2Us
+        ImNvbnRlbnRzIjpbeyJpZCI6InJldGlyZW1lbnQtYWR2aXNlci1kaXJlY3Rv
+        cnkiLCJ0eXBlIjoidG9vbCIsInRpdGxlIjoiUmV0aXJlbWVudCBhZHZpc2Vy
+        IGRpcmVjdG9yeSIsImRlc2NyaXB0aW9uIjoiRkNBIHJlZ3VsYXRlZCBmaW5h
+        bmNpYWwgYWR2aXNlcnMgZm9yIGhlbHAgd2l0aCByZXRpcmVtZW50IHBsYW5u
+        aW5nLCBpbmhlcml0YW5jZSB0YXgsIGVxdWl0eSByZWxlYXNlLCB3aWxscyBh
+        bmQgcHJvYmF0ZSwgbG9uZy10ZXJtIGNhcmUgYW5kIHBlbnNpb24gdHJhbnNm
+        ZXJzLiJ9LHsiaWQiOiJwZW5zaW9ucy1hbmQtcmV0aXJlbWVudCIsInR5cGUi
+        OiJ0b29sIiwidGl0bGUiOiJQZW5zaW9ucyBhbmQgcmV0aXJlbWVudCIsImRl
+        c2NyaXB0aW9uIjoiIn0seyJpZCI6InByb3RlY3RpbmcteW91ci1yZXRpcmVt
+        ZW50LWluY29tZSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiUHJvdGVjdGlu
+        ZyB5b3VyIHJldGlyZW1lbnQgaW5jb21lIiwiZGVzY3JpcHRpb24iOiJXaXRo
+        IGEgZ3VhcmFudGVlIHBlcmlvZCBvciBsdW1wLXN1bSBkZWF0aCBiZW5lZml0
+        IHlvdXIgcGFydG5lciBvciBkZXBlbmRhbnQgbWF5IGdldCBzb21lIG9mIHlv
+        dXIgcGVuc2lvbiBpbmNvbWUgaWYgeW91IGRpZSJ9LHsiaWQiOiJoaWdoZXIt
+        cGVuc2lvbi1pbmNvbWUtZm9yLXBlb3BsZS13aXRoLXBvb3ItaGVhbHRoIiwi
+        dHlwZSI6Imd1aWRlIiwidGl0bGUiOiJIaWdoZXIgcmV0aXJlbWVudCBpbmNv
+        bWUgZm9yIHBlb3BsZSB3aXRoIHBvb3IgaGVhbHRoIiwiZGVzY3JpcHRpb24i
+        OiJFbmhhbmNlZCBhbm51aXRpZXMgY2FuIHByb3ZpZGUgYSBoaWdoZXIgcGVu
+        c2lvbiBpbmNvbWUgaWYgeW914oCZcmUgaW4gaWxsLWhlYWx0aCwgb3IgaGF2
+        ZSBhbiB1bmhlYWx0aHkgbGlmZXN0eWxlIn0seyJpZCI6Im1hbmFnZS15b3Vy
+        LW1vbmV5LWluLXJldGlyZW1lbnQiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6
+        Ik1hbmFnZSB5b3VyIG1vbmV5IGluIHJldGlyZW1lbnQiLCJkZXNjcmlwdGlv
+        biI6IlJldGlyZW1lbnQgY2FuIGJyaW5nIHNpZ25pZmljYW50IGZpbmFuY2lh
+        bCBjaGFuZ2VzLiBIZXJl4oCZcyBhIHJhbmdlIG9mIHRpcHMgYW5kIGlkZWFz
+        IHRvIGhlbHAgeW91IG1hbmFnZSB0aGUgdHJhbnNpdGlvbiJ9LHsiaWQiOiJ0
+        YXgtYW5kLWJlbmVmaXRzLXdoZW4teW91cmUtcmV0aXJlZCIsInR5cGUiOiJn
+        dWlkZSIsInRpdGxlIjoiQSBndWlkZSB0byB0YXggaW4gcmV0aXJlbWVudCIs
+        ImRlc2NyaXB0aW9uIjoiQSBsaXN0IG9mIGZhY3RvcnMgdGhhdCBjYW4gYWZm
+        ZWN0IHlvdXIgdGF4IGJpbGwgaW4gcmV0aXJlbWVudCwgYW5kIG9mIHBheW1l
+        bnRzIHN1Y2ggYXMgU3RhdGUgUGVuc2lvbiB5b3UgbWF5IGJlIGVudGl0bGVk
+        IHRvIn0seyJpZCI6ImNoZWNrbGlzdC10aGluZ3MtdG8tZG8tYXMtcmV0aXJl
+        bWVudC1hcHByb2FjaGVzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJDaGVj
+        a2xpc3Qg4oCTIHByZXBhcmluZyBmb3IgcmV0aXJlbWVudCIsImRlc2NyaXB0
+        aW9uIjoiVGhlIGtleSBzdGVwcyBpbiB0aGUgbW9udGhzIGFuZCB5ZWFycyBi
+        ZWZvcmUgcmV0aXJlbWVudCDigJMgZnJvbSBzaG9wcGluZyBmb3IgYW4gYW5u
+        dWl0eSB0byBidWRnZXRpbmcgZm9yIHJldGlyZW1lbnQifSx7ImlkIjoic2V0
+        LWEtY2xlYXItcmV0aXJlbWVudC1pbmNvbWUtZ29hbCIsInR5cGUiOiJndWlk
+        ZSIsInRpdGxlIjoiU2V0IGEgY2xlYXIgcmV0aXJlbWVudCBpbmNvbWUgZ29h
+        bCIsImRlc2NyaXB0aW9uIjoiVGhlIGZpcnN0IHN0ZXAgaW4gcmV2aWV3aW5n
+        IHlvdXIgcGVuc2lvbiBzYXZpbmdzIGlzIHRvIHdvcmsgb3V0IHRoZSByZXRp
+        cmVtZW50IGluY29tZSB5b3XigJlyZSBhaW1pbmcgZm9yIn0seyJpZCI6ImJv
+        b3N0LXlvdXItcGVuc2lvbi1uZWFyLXJldGlyZW1lbnQiLCJ0eXBlIjoiYWN0
+        aW9uX3BsYW4iLCJ0aXRsZSI6IkFjdGlvbiBwbGFuIOKAkyBCb29zdCB5b3Vy
+        IHBlbnNpb24gbmVhciByZXRpcmVtZW50IiwiZGVzY3JpcHRpb24iOiJQcmFj
+        dGljYWwgYWR2aWNlIG9uIGhvdyB0byBib29zdCB5b3VyIHBlbnNpb24gcGxh
+        biBpbmNsdWRpbmcgZGVmZXJyaW5nIHJldGlyZW1lbnQgYW5kIHBheWluZyBt
+        b3JlIGludG8geW91ciBwZW5zaW9uIHNjaGVtZS4ifSx7ImlkIjoiZGVjaWRl
+        LWhvdy10by10YWtlLXlvdXItcGVuc2lvbiIsInR5cGUiOiJhY3Rpb25fcGxh
+        biIsInRpdGxlIjoiQWN0aW9uIHBsYW4g4oCTIERlY2lkZSBob3cgdG8gdGFr
+        ZSB5b3VyIHBlbnNpb24gaW5jb21lIiwiZGVzY3JpcHRpb24iOiJEZWNpZGlu
+        ZyBob3cgdG8gdGFrZSB5b3VyIHBlbnNpb24gaW5jb21lIGNhbiBiZSBkaWZm
+        aWN1bHQsIHRoaXMgYWN0aW9uIHBsYW4gcHJvdmlkZXMgYWR2aWNlIG9uIGNo
+        b29zaW5nIHRoZSByaWdodCBwZW5zaW9uIHBsYW4uIn0seyJpZCI6Imhvdy1s
+        b25nLXdpbGwteW91ci1tb25leS1sYXN0LWluLXJldGlyZW1lbnQiLCJ0eXBl
+        IjoiZ3VpZGUiLCJ0aXRsZSI6IkhvdyBsb25nIHdpbGwgeW91ciBtb25leSBs
+        YXN0IGluIHJldGlyZW1lbnQ/IiwiZGVzY3JpcHRpb24iOiJZb3VyIHJldGly
+        ZW1lbnQgbW9uZXkgbmVlZHMgdG8gbGFzdCBhcyBsb25nIGFzIHlvdSBkby4g
+        TWFrZSBzdXJlIHlvdSBoYXZlIGVub3VnaCB0byBsaXZlIG9uIGZvciB0aGUg
+        d2hvbGUgb2YgeW91ciByZXRpcmVtZW50LiJ9LHsiaWQiOiJwbGFubmluZy1h
+        bmQtZnVuZGluZy15b3VyLWxvbmctdGVybS1jYXJlIiwidHlwZSI6Imd1aWRl
+        IiwidGl0bGUiOiJQbGFubmluZyBhbmQgZnVuZGluZyB5b3VyIGxvbmctdGVy
+        bSBjYXJlIiwiZGVzY3JpcHRpb24iOiJBcyB5b3UgYXBwcm9hY2ggcmV0aXJl
+        bWVudCwgeW91IG1pZ2h0IGJlIHRoaW5raW5nIGFib3V0IGhvdyB5b3XigJls
+        bCBjb3BlIHdpdGggdGhlIGNvc3RzIG9mIHBheWluZyBmb3IgbG9uZy10ZXJt
+        IGNhcmUsIGVpdGhlciBmb3IgeW91cnNlbGYgb3IgZm9yIGEgcmVsYXRpdmUu
+        In0seyJpZCI6Imxvb2tpbmctYWZ0ZXIteW91ci1kZXBlbmRhbnRzLWluLXJl
+        dGlyZW1lbnQiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6Ikxvb2tpbmcgYWZ0
+        ZXIgeW91ciBkZXBlbmRhbnRzIGluIHJldGlyZW1lbnQiLCJkZXNjcmlwdGlv
+        biI6IkhvdyB0byBtYWtlIHN1cmUgdGhhdCB5b3VyIHBhcnRuZXIgYW5kL29y
+        IGNoaWxkcmVuIHdpbGwgYmUgcHJvdmlkZWQgZm9yIHdoZW4geW91IHJldGly
+        ZS4ifSx7ImlkIjoidXNpbmcteW91ci1wZW5zaW9uLXBvdC10by1idXktYS1s
+        aWZldGltZS1hbm51aXR5IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJVc2lu
+        ZyB5b3VyIHBlbnNpb24gcG90IHRvIGJ1eSBhIGxpZmV0aW1lIGFubnVpdHki
+        LCJkZXNjcmlwdGlvbiI6IkEgbGlmZXRpbWUgYW5udWl0eSBpcyBhIHR5cGUg
+        b2YgcmV0aXJlbWVudCBpbmNvbWUgcHJvZHVjdCB0aGF0IHlvdSBidXkgd2l0
+        aCBzb21lIG9yIGFsbCBvZiB5b3VyIHBlbnNpb24gcG90LiBJdCBndWFyYW50
+        ZWVzIGEgcmVndWxhciByZXRpcmVtZW50IGluY29tZSBmb3IgbGlmZS4gIn0s
+        eyJpZCI6ImVzdGltYXRlLXlvdXItcmV0aXJlbWVudC1pbmNvbWUiLCJ0eXBl
+        IjoiZ3VpZGUiLCJ0aXRsZSI6Ildvcmsgb3V0IHlvdXIgbGlrZWx5IHJldGly
+        ZW1lbnQgaW5jb21lIiwiZGVzY3JpcHRpb24iOiJBcyByZXRpcmVtZW50IGFw
+        cHJvYWNoZXMsIGl04oCZcyBjcnVjaWFsIHRoYXQgeW91IHdvcmsgb3V0IHlv
+        dXIgcGVuc2lvbiBzYXZpbmdzIHRvIG1ha2Ugc3VyZSB0aGV5IGFyZSBvbiB0
+        cmFjayB0byBwcm92aWRlIHRoZSBsZXZlbCBvZiByZXRpcmVtZW50IGluY29t
+        ZSB5b3UgdGhpbmsgeW91IHdpbGwgbmVlZCB3aGVuIHlvdSBzdG9wIHdvcmsu
+        In0seyJpZCI6Imd1aWRlLXRvLWZpbmFuY2lhbC1hZHZpc2VyLWZlZXMiLCJ0
+        eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6Ikd1aWRlIHRvIGZpbmFuY2lhbCBhZHZp
+        c2VyIGZlZXMiLCJkZXNjcmlwdGlvbiI6IklmIHlvdSB3YW50IHRvIGdldCBm
+        aW5hbmNpYWwgYWR2aWNlLCB5b3Ugd2lsbCBoYXZlIHRvIHBheSBmb3IgaXQu
+        IEJ1dCB0aGVyZSBhcmUgc2V2ZXJhbCB3YXlzIHlvdSBjYW4gYmUgY2hhcmdl
+        ZCBhbmQgZmVlcyB3aWxsIGRlcGVuZCBvbiBib3RoIHlvdXIgc3BlY2lmaWMg
+        bmVlZHMgYW5kIGFuIGluZGl2aWR1YWwgZmlybeKAmXMgcHJpY2VzLiJ9LHsi
+        aWQiOiJrZXktcXVlc3Rpb25zLXRvLWFzay15b3VyLWZpbmFuY2lhbC1hZHZp
+        c2VyIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJLZXkgcXVlc3Rpb25zIHRv
+        IGFzayB5b3VyIGZpbmFuY2lhbCBhZHZpc2VyIiwiZGVzY3JpcHRpb24iOiJJ
+        ZiB5b3XigJlyZSBhcHByb2FjaGluZyByZXRpcmVtZW50IGFuZCB3YW50IHRv
+        IHNlZSBhIGZpbmFuY2lhbCBhZHZpc2VyLCBpdOKAmXMgYSBnb29kIGlkZWEg
+        dG8gc3BlYWsgdG8gYSBmZXcgc28geW91IGNhbiBjb21wYXJlIHRoZSBzZXJ2
+        aWNlIHRoZXkgb2ZmZXIgYW5kIGZpbmQgb3V0IGlmIHRoZXnigJlyZSByaWdo
+        dCBmb3IgeW91LiJ9LHsiaWQiOiJwZW5zaW9uLXdpc2UiLCJ0eXBlIjoiZ3Vp
+        ZGUiLCJ0aXRsZSI6IlVuZGVyc3RhbmRpbmcgd2hhdCBQZW5zaW9uIFdpc2Ug
+        aXMgYW5kIGhvdyB0byB1c2UgaXQgIiwiZGVzY3JpcHRpb24iOiJUaGlzIGd1
+        aWRlIGV4cGxhaW5zIGhvdyBQZW5zaW9uIFdpc2Ugd29ya3MgYW5kIGhvdyB0
+        byBwcmVwYXJlIGZvciB5b3VyIGFwcG9pbnRtZW50LiJ9LHsiaWQiOiJ3aGVu
+        LWNhbi1pLWFmZm9yZC10by1yZXRpcmUiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRs
+        ZSI6IldoZW4gY2FuIEkgYWZmb3JkIHRvIHJldGlyZT8iLCJkZXNjcmlwdGlv
+        biI6IiJ9LHsiaWQiOiJyZXRpcmluZy1hYnJvYWQiLCJ0eXBlIjoiZ3VpZGUi
+        LCJ0aXRsZSI6IlJldGlyaW5nIGFicm9hZCIsImRlc2NyaXB0aW9uIjoiTWFu
+        eSBwZW9wbGUgZHJlYW0gb2YgcmV0aXJpbmcgYWJyb2FkIG9yIHRyYXZlbGxp
+        bmcgbG9uZyB0ZXJtLiBJZiB5b3XigJlyZSB0aGlua2luZyBvZiByZXRpcmlu
+        ZyBhYnJvYWQsIGl04oCZcyBpbXBvcnRhbnQgdG8gdW5kZXJzdGFuZCBob3cg
+        eW91ciBwZW5zaW9ucyBtaWdodCBiZSBhZmZlY3RlZC4ifSx7ImlkIjoicGVu
+        c2lvbnMtYW5kLXJldGlyZW1lbnQtamFyZ29uLWJ1c3RlciIsInR5cGUiOiJn
+        dWlkZSIsInRpdGxlIjoiUGVuc2lvbnMgYW5kIHJldGlyZW1lbnQgamFyZ29u
+        IGJ1c3RlciIsImRlc2NyaXB0aW9uIjoiQWxsIHRoZSBrZXkgdGVybXMgcmVs
+        YXRpbmcgdG8gcGVuc2lvbnMgYW5kIHJldGlyZW1lbnQgZXhwbGFpbmVkIn1d
+        fQ==
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:17:59 GMT
+  recorded_at: Wed, 06 May 2015 12:58:56 GMT
 recorded_with: VCR 2.9.2

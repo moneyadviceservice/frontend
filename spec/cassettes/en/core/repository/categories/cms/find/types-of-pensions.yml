@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.moneyadviceservice.org.uk/en/categories/types-of-pensions.json
+    uri: http://localhost:3000/en/categories/types-of-pensions.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 8770) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 5841) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,74 +18,103 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 23 Mar 2015 17:17:38 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      Etag:
+      - '"172fa13d50c8312121f8259e53fbe7b7"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Session-Id:
-      - 54a61ef933f61f83c623ef6f2380a0ac
-      Set-Cookie:
-      - _cookie_notice=y; path=/; expires=Wed, 23-Mar-2016 17:17:38 GMT; secure
-      - _session_id=54a61ef933f61f83c623ef6f2380a0ac; path=/; secure; HttpOnly
-      - _web_tracking=5f8031c38ffaa543285d92793f1b6421; path=/; expires=Wed, 23-Mar-2016
-        17:17:38 GMT; secure
       X-Request-Id:
-      - 8025e04d-b305-4351-9e59-28d345e8aa99
+      - d27e5ef5-9ea0-4921-b903-8966c34f269e
       X-Runtime:
-      - '0.014541'
-      X-Rack-Cache:
-      - miss
-      P3p:
-      - CP="CAO PSA OUR"
-      Strict-Transport-Security:
-      - max-age=16070400
+      - '0.041544'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 12:58:56 GMT
+      Content-Length:
+      - '3052'
+      Connection:
+      - Keep-Alive
     body:
-      encoding: UTF-8
-      string: '{"id":"types-of-pensions","title":"Types of pension","description":"From
-        defined contribution and benefit schemes, to personal pensions and pensions
-        for the self-employed.","parent_id":"work-pensions-and-retirement","contents":[{"id":"annuities-and-other-types-of-pension-income-your-options","type":"guide","title":"Annuities
-        and other types of retirement income","description":"An overview of the features,
-        benefits and risks of different types of annuity and other categories of pension
-        income"},{"id":"pensions-for-the-self-employed","type":"guide","title":"Pensions
-        for the self-employed","description":"If you\u2019re self-employed, saving
-        for a pension poses a number of challenges, but it\u2019s easier to get started
-        than you might think"},{"id":"pension-investment-options-an-overview","type":"guide","title":"Pension
-        investment options \u2013 an overview","description":"It\u2019s important
-        to think about how your pension is being invested as well as how much you\u2019re
-        saving into it"},{"id":"multi-employer-pension-schemes","type":"guide","title":"Multi-employer
-        pension schemes","description":"Large multi-employer schemes aim to provide
-        low-cost, flexible pensions - find out more"},{"id":"nest-pensions","type":"guide","title":"NEST
-        pensions","description":"Find out more about NEST, a low-cost pension you
-        may be able to join through your workplace or if you are self-employed"},{"id":"personal-pensions","type":"guide","title":"Personal
-        pensions","description":"If you haven''t got a workplace pension then setting
-        up a personal pension is a good idea"},{"id":"self-invested-personal-pensions","type":"guide","title":"Self-invested
-        personal pensions (SIPPs)","description":"Find out about SIPPs (self-invested
-        personal pensions) and whether this type of pension could work for you"},{"id":"stakeholder-pensions","type":"guide","title":"Stakeholder
-        pensions","description":"Stakeholder pensions have low charges and can be
-        offered by an employer or you can start one yourself"},{"id":"defined-benefit-schemes","type":"guide","title":"Defined
-        benefit schemes","description":"In a defined-benefit or salary-related pension
-        scheme, your income in retirement is tied to your earnings while you worked"},{"id":"defined-contribution-pension-schemes","type":"guide","title":"Defined
-        contribution pension schemes","description":"In a defined-contribution or
-        money-purchase pension scheme, you build up a fund with which to buy a retirement
-        income"},{"id":"group-personal-pensions","type":"guide","title":"What is a
-        group personal pension?","description":"A group personal pension is a type
-        of defined-contribution scheme offered by some employers"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InR5cGVzLW9mLXBlbnNpb25zIiwidHlwZSI6ImNhdGVnb3J5Iiwi
+        dGl0bGUiOiJUeXBlcyBvZiBwZW5zaW9uIiwiZGVzY3JpcHRpb24iOiJGcm9t
+        IGRlZmluZWQgY29udHJpYnV0aW9uIGFuZCBiZW5lZml0IHNjaGVtZXMsIHRv
+        IHBlcnNvbmFsIHBlbnNpb25zIGFuZCBwZW5zaW9ucyBmb3IgdGhlIHNlbGYt
+        ZW1wbG95ZWQuIiwicGFyZW50X2lkIjoid29yay1wZW5zaW9ucy1hbmQtcmV0
+        aXJlbWVudCIsInRoaXJkX2xldmVsX25hdmlnYXRpb24iOmZhbHNlLCJjb250
+        ZW50cyI6W3siaWQiOiJwZW5zaW9ucy1mb3ItdGhlLXNlbGYtZW1wbG95ZWQi
+        LCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlBlbnNpb25zIGZvciB0aGUgc2Vs
+        Zi1lbXBsb3llZCIsImRlc2NyaXB0aW9uIjoiSWYgeW914oCZcmUgc2VsZi1l
+        bXBsb3llZCwgc2F2aW5nIGZvciBhIHBlbnNpb24gcG9zZXMgYSBudW1iZXIg
+        b2YgY2hhbGxlbmdlcywgYnV0IGl04oCZcyBlYXNpZXIgdG8gZ2V0IHN0YXJ0
+        ZWQgdGhhbiB5b3UgbWlnaHQgdGhpbmsifSx7ImlkIjoicGVuc2lvbi1pbnZl
+        c3RtZW50LW9wdGlvbnMtYW4tb3ZlcnZpZXciLCJ0eXBlIjoiZ3VpZGUiLCJ0
+        aXRsZSI6IlBlbnNpb24gaW52ZXN0bWVudCBvcHRpb25zIOKAkyBhbiBvdmVy
+        dmlldyIsImRlc2NyaXB0aW9uIjoiSXTigJlzIGltcG9ydGFudCB0byB0aGlu
+        ayBhYm91dCBob3cgeW91ciBwZW5zaW9uIGlzIGJlaW5nIGludmVzdGVkIGFz
+        IHdlbGwgYXMgaG93IG11Y2ggeW914oCZcmUgc2F2aW5nIGludG8gaXQifSx7
+        ImlkIjoibXVsdGktZW1wbG95ZXItcGVuc2lvbi1zY2hlbWVzIiwidHlwZSI6
+        Imd1aWRlIiwidGl0bGUiOiJNdWx0aS1lbXBsb3llciBwZW5zaW9uIHNjaGVt
+        ZXMiLCJkZXNjcmlwdGlvbiI6IkxhcmdlIG11bHRpLWVtcGxveWVyIHNjaGVt
+        ZXMgYWltIHRvIHByb3ZpZGUgbG93LWNvc3QsIGZsZXhpYmxlIHBlbnNpb25z
+        IOKAkyBmaW5kIG91dCBtb3JlIn0seyJpZCI6Im5lc3QtcGVuc2lvbnMiLCJ0
+        eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6Ik5FU1QgcGVuc2lvbnMiLCJkZXNjcmlw
+        dGlvbiI6IkZpbmQgb3V0IG1vcmUgYWJvdXQgTkVTVCwgYSBsb3ctY29zdCBw
+        ZW5zaW9uIHlvdSBtYXkgYmUgYWJsZSB0byBqb2luIHRocm91Z2ggeW91ciB3
+        b3JrcGxhY2Ugb3IgaWYgeW91IGFyZSBzZWxmLWVtcGxveWVkIn0seyJpZCI6
+        InBlcnNvbmFsLXBlbnNpb25zIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQ
+        ZXJzb25hbCBwZW5zaW9ucyIsImRlc2NyaXB0aW9uIjoiSWYgeW91IGhhdmVu
+        J3QgZ290IGEgd29ya3BsYWNlIHBlbnNpb24gdGhlbiBzZXR0aW5nIHVwIGEg
+        cGVyc29uYWwgcGVuc2lvbiBpcyBhIGdvb2QgaWRlYSJ9LHsiaWQiOiJzZWxm
+        LWludmVzdGVkLXBlcnNvbmFsLXBlbnNpb25zIiwidHlwZSI6Imd1aWRlIiwi
+        dGl0bGUiOiJTZWxmLWludmVzdGVkIHBlcnNvbmFsIHBlbnNpb25zIChTSVBQ
+        cykiLCJkZXNjcmlwdGlvbiI6IkZpbmQgb3V0IGFib3V0IFNJUFBzIChzZWxm
+        LWludmVzdGVkIHBlcnNvbmFsIHBlbnNpb25zKSBhbmQgd2hldGhlciB0aGlz
+        IHR5cGUgb2YgcGVuc2lvbiBjb3VsZCB3b3JrIGZvciB5b3UifSx7ImlkIjoi
+        c3Rha2Vob2xkZXItcGVuc2lvbnMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6
+        IlN0YWtlaG9sZGVyIHBlbnNpb25zIiwiZGVzY3JpcHRpb24iOiJTdGFrZWhv
+        bGRlciBwZW5zaW9ucyBoYXZlIGxvdyBjaGFyZ2VzIGFuZCBjYW4gYmUgb2Zm
+        ZXJlZCBieSBhbiBlbXBsb3llciBvciB5b3UgY2FuIHN0YXJ0IG9uZSB5b3Vy
+        c2VsZiJ9LHsiaWQiOiJkZWZpbmVkLWNvbnRyaWJ1dGlvbi1wZW5zaW9uLXNj
+        aGVtZXMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkRlZmluZWQgY29udHJp
+        YnV0aW9uIHBlbnNpb24gc2NoZW1lcyIsImRlc2NyaXB0aW9uIjoiSW4gYSBk
+        ZWZpbmVkLWNvbnRyaWJ1dGlvbiBvciBtb25leS1wdXJjaGFzZSBwZW5zaW9u
+        IHNjaGVtZSwgeW91IGJ1aWxkIHVwIGEgZnVuZCB3aXRoIHdoaWNoIHRvIGJ1
+        eSBhIHJldGlyZW1lbnQgaW5jb21lIn0seyJpZCI6ImRlZmluZWQtYmVuZWZp
+        dC1zY2hlbWVzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJEZWZpbmVkIGJl
+        bmVmaXQgcGVuc2lvbiBzY2hlbWVzIGV4cGxhaW5lZCIsImRlc2NyaXB0aW9u
+        IjoiQSBkZWZpbmVkIGJlbmVmaXQgcGVuc2lvbiBzY2hlbWUgaXMgb25lIHdo
+        ZXJlIHRoZSBhbW91bnQgcGFpZCB0byB5b3UgaXMgc2V0IHVzaW5nIGEgZm9y
+        bXVsYSBieSBob3cgbWFueSB5ZWFycyB5b3XigJl2ZSB3b3JrZWQgYW5kIHRo
+        ZSBzYWxhcnkgeW914oCZdmUgZWFybmVkIHJhdGhlciB0aGFuIHRoZSB2YWx1
+        ZSBvZiB5b3VyIGludmVzdG1lbnRzICJ9LHsiaWQiOiJncm91cC1wZXJzb25h
+        bC1wZW5zaW9ucyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiV2hhdCBpcyBh
+        IGdyb3VwIHBlcnNvbmFsIHBlbnNpb24/IiwiZGVzY3JpcHRpb24iOiJBIGdy
+        b3VwIHBlcnNvbmFsIHBlbnNpb24gaXMgYSB0eXBlIG9mIGRlZmluZWQtY29u
+        dHJpYnV0aW9uIHNjaGVtZSBvZmZlcmVkIGJ5IHNvbWUgZW1wbG95ZXJzIn0s
+        eyJpZCI6Im9wdGlvbnMtZm9yLXVzaW5nLXlvdXItcGVuc2lvbi1wb3QiLCJ0
+        eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6Ik9wdGlvbnMgZm9yIHVzaW5nIHlvdXIg
+        cGVuc2lvbiBwb3QiLCJkZXNjcmlwdGlvbiI6IlRha2UgeW91ciB0aW1lIHRv
+        IHVuZGVyc3RhbmQgeW91ciBvcHRpb25zIGZvciB0YWtpbmcgbW9uZXkgZnJv
+        bSB5b3VyIHBlbnNpb24gcG90LiJ9LHsiaWQiOiJ0YWtpbmcteW91ci13aG9s
+        ZS1wZW5zaW9uLXBvdC1hcy1jYXNoIiwidHlwZSI6Imd1aWRlIiwidGl0bGUi
+        OiJUYWtpbmcgeW91ciB3aG9sZSBwZW5zaW9uIHBvdCBhcyBjYXNoIiwiZGVz
+        Y3JpcHRpb24iOiJVbmRlciBuZXcgcnVsZXMgaW50cm9kdWNlZCBmcm9tIEFw
+        cmlsIDIwMTUgeW91IGNhbiB0YWtlIHRoZSB3aG9sZSBvZiB5b3VyIHBlbnNp
+        b24gcG90IGFzIGNhc2ggaW4gb25lIGdvIGlmIHlvdSB3aXNoIOKAkyBob3dl
+        dmVyIHlvdSBjb3VsZCBlbmQgdXAgd2l0aCBhIGxhcmdlIHRheCBiaWxsIGFu
+        ZCBydW4gb3V0IG9mIG1vbmV5IGluIHJldGlyZW1lbnQuIn1dfQ==
     http_version: 
-  recorded_at: Mon, 23 Mar 2015 17:17:39 GMT
+  recorded_at: Wed, 06 May 2015 12:58:56 GMT
 recorded_with: VCR 2.9.2

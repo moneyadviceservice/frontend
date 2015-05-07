@@ -3,16 +3,16 @@ module Core::Repository
     class CMS < Core::Repository::Base
       def initialize(options = {})
         self.connection = Core::Registry::Connection[:cms]
-        self.fallback_repository = options[:fallback]
       end
 
       def find(id)
         resource_url = '%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
         response = connection.get(resource_url)
         AttributeBuilder.build(response)
+      rescue Core::Connection::Http::ResourceNotFound
+        nil
       rescue => e
-        Rails.logger.error("Tried to fetch from Contento. Error message: #{e.message}")
-        fallback_repository.find(id)
+        raise RequestError, 'Unable to fetch Article JSON from Contento'
       end
 
       def resource_name
@@ -21,7 +21,7 @@ module Core::Repository
 
       private
 
-      attr_accessor :connection, :fallback_repository
+      attr_accessor :connection
     end
   end
 end

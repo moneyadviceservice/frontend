@@ -2,9 +2,7 @@ RSpec.shared_examples_for 'a cms resource' do
   let(:url) { 'https://example.com' }
 
   describe '#find' do
-    subject(:repository) { described_class.new(fallback: fallback) }
-
-    let(:fallback) { double }
+    subject(:repository) { described_class.new }
 
     let(:id) { 'beginners-guide-to-managing-your-money' }
     let(:headers) { {} }
@@ -38,9 +36,8 @@ RSpec.shared_examples_for 'a cms resource' do
       let(:body) { nil }
       let(:status) { 404 }
 
-      it 'falls back to the fallback repository' do
-        expect(fallback).to receive(:find).with(id)
-        repository.find(id)
+      it 'returns nil' do
+        expect(repository.find(id)).to be_nil
       end
     end
 
@@ -48,9 +45,8 @@ RSpec.shared_examples_for 'a cms resource' do
       let(:body) { nil }
       let(:status) { 407 }
 
-      it 'falls back to the fallback repository' do
-        expect(fallback).to receive(:find).with(id)
-        repository.find(id)
+      it 'raises an RequestError' do
+        expect { repository.find(id) }.to raise_error(Core::Repository::Base::RequestError)
       end
     end
 
@@ -58,9 +54,8 @@ RSpec.shared_examples_for 'a cms resource' do
       let(:body) { nil }
       let(:status) { 500 }
 
-      it 'falls back to the fallback repository' do
-        expect(fallback).to receive(:find).with(id)
-        repository.find(id)
+      it 'raises an RequestError' do
+        expect { repository.find(id) }.to raise_error(Core::Repository::Base::RequestError)
       end
     end
   end

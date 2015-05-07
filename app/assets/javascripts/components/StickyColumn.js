@@ -98,16 +98,14 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
 
   /**
    * calculates the height of the parent container and the width of the sticky element
-   * @return {[type]}
    */
   StickyColumn.prototype._showInSidebar = function() {
     this.$parent.css('height', this.contentHeight - this.topMargin);
     this.$el.css('width', this.$parent.width());
-  }
+  };
 
   /**
    * reset the parent container back to it's original height
-   * @return {[type]}
    */
   StickyColumn.prototype._hide = function() {
     this.$parent.css('height', 'auto');

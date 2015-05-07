@@ -59,6 +59,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
 
   /**
    * Test whether the element is visible on the page
+   * @param  {Object}  $el The element to test
    * @return {Boolean}
    */
   StickyColumn.prototype._isElementVisible = function($el) {
@@ -156,15 +157,19 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
     }
   };
 
+  /**
+   * Gets the window's scroll top value
+   * @return {Int}
+   */
   StickyColumn.prototype._getWindowScroll = function() {
     return $(window).scrollTop();
   };
 
   /**
    * Limit the amount of times a function is called within a set period
-   * @param  {function}
-   * @param  {int}
-   * @return {function}
+   * @param  {Function} func the function to be called
+   * @param  {Int} wait amount of milliseconds to wait
+   * @return {Function}
    */
   StickyColumn.prototype._debounce = function(func, wait) {
     var timeout;
@@ -183,7 +188,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
 
   /**
    * Handle when the browser viewport changes size
-   * @param  {Event}
+   * @param {Event}
    */
   StickyColumn.prototype._handleResize = function(e) {
     this._measureDom();
@@ -204,7 +209,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
 
   /**
    * Handles when a dough collapsible item is toggled
-   * @param  {Event}
+   * @param  {Event} e
    */
   StickyColumn.prototype._handleSectionToggle = function(e) {
     if (e.emitter.$el.parents(this.$el).length > 0) {

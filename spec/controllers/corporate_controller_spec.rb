@@ -39,6 +39,7 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
       let(:corporate) { instance_double(Core::Article, id: 'test', categories: [corporate_category]) }
 
       before do
+        expect(Core::CategoryReader).to receive(:new).with(corporate_category.id) { corporate_category_reader }
         expect(Core::CorporateReader).to receive(:new).with(corporate.id) { corporate_reader }
         get :show, locale: I18n.locale, id: corporate.id
       end

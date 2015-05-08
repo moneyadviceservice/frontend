@@ -3,14 +3,13 @@ module Core::Repository
     class CMS < Core::Repository::Base
       def initialize(options = {})
         self.connection = Core::Registry::Connection[:cms]
-        self.fallback_repository = options[:fallback]
       end
 
       def all
         response = connection.get('/%{locale}/categories.json' % { locale: I18n.locale })
         response.body
       rescue
-        fallback_repository.all
+        raise RequestError, 'Unable to fetch Category JSON from Contento'
       end
 
       def find(id)
@@ -18,12 +17,12 @@ module Core::Repository
                                     { locale: I18n.locale, id: id })
         response.body
       rescue
-        fallback_repository.find(id)
+        raise RequestError, 'Unable to fetch Category JSON from Contento'
       end
 
       private
 
-      attr_accessor :connection, :fallback_repository
+      attr_accessor :connection
     end
   end
 end

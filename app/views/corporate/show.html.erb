@@ -22,10 +22,10 @@
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>
-        <%= render 'articles/related_articles' %>
+        <%= render 'articles/related_articles', type: 'mobile' %>
       </div>
 
-      <%= render 'shared/related_links', article: @article, categories: related_content %>
+      <%= render 'shared/more_in', article: @article, categories: related_content %>
 
       <%= render 'shared/feedback', article: article %>
     </main>
@@ -33,8 +33,8 @@
 </div>
 
 <div class="l-nav l-article-3col-right">
-  <div class='related-links--desktop'>
-    <%= render 'articles/related_articles' %>
+  <div class='related-links--desktop' data-dough-component="StickyColumn">
+    <%= render 'articles/related_articles', type: 'desktop' %>
   </div>
 </div>
 

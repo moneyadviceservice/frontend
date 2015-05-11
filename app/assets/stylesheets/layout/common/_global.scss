@@ -63,11 +63,15 @@
 .l-nav {
   float: left;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 42px;
 
   @include respond-to($mq-m) {
     @include column(3);
+  }
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*10;
   }
 
   .link-list-primary {

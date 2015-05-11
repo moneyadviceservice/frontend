@@ -1,6 +1,6 @@
-<h2 class="related-links__heading"><%= title %></h2>
+<h2 class="related-links__heading related-links__heading--article-links <%= classes %>" data-dough-component="Collapsable" data-dough-collapsable-trigger="<%= classes + '-' + type %>" data-dough-collapsable-group="related-links-<%= type %>" data-dough-collapsable-config='{"oneGroupOpenOnly":"true"<% if open %>, "forceTo": "show"<% end %>}'><%= title %></h2>
 
-<div class="related-links">
+<div class="related-links related-links--collapsable" data-dough-collapsable-target="<%= classes + '-' + type %>">
   <ul class="unstyled-list">
     <% article_links.each do |article_link| %>
       <li class="related-links__link">

@@ -1,4 +1,4 @@
-class ActionPlansEngineController < MountController
+class ActionPlansEngineController < EmbeddedToolsController
   def parent_template
     'layouts/engine_unconstrained'
   end
@@ -9,6 +9,10 @@ class ActionPlansEngineController < MountController
 
   def breadcrumbs
     categories.map(&Breadcrumb.public_method(:new))
+  end
+
+  def mount_point
+    @mount_point ||= ToolMountPoint::ActionPlans.new
   end
 
   private

@@ -40,7 +40,7 @@ gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'action_plans', '~> 3.0.0'
+gem 'action_plans', '~> 4.0.0'
 gem 'advice_plans', '~> 3.1.0'
 gem 'agreements', '~> 2.0.1'
 gem 'budget_planner', '~> 4.0.1.689'

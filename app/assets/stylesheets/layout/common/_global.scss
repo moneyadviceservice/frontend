@@ -2,7 +2,7 @@
   @include column(12);
   min-height: $baseline-unit*100;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-3col-layout) {
     @include column(9);
 
     float: right;
@@ -66,7 +66,7 @@
   margin-top: 40px;
   margin-bottom: 42px;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-3col-layout) {
     @include column(3);
   }
 
@@ -83,7 +83,7 @@
   }
 
   .link-to-top-block {
-    @include respond-to($mq-m) {
+    @include respond-to($mq-3col-layout) {
       display: none;
     }
   }

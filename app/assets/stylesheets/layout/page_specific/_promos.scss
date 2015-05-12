@@ -209,7 +209,6 @@
   top: $baseline-unit*3;
 }
 
-<<<<<<< HEAD
 .l-promo-corporate {
   @include row(12);
   @extend .clearfix;
@@ -229,7 +228,32 @@
       margin-left: 0;
       margin-right: 0;
       width: 100%;
-=======
+    }
+  }
+}
+
+.l-promo-corporate__item {
+  @include column(12);
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*2;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      margin-left: 0;
+      margin-right: 7%;
+      flex: 0 0 46%;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 // Promo partnerships
 
 .l-promo-partnerships {
@@ -250,39 +274,20 @@
     @include respond-to($mq-s) {
       flex-flow: row;
       flex-wrap: wrap;
->>>>>>> Add syndication page and style
     }
   }
 }
 
-<<<<<<< HEAD
-.l-promo-corporate__item {
-  @include column(12);
-  margin-top: $baseline-unit*2;
-  margin-bottom: $baseline-unit*2;
-=======
 .l-promo-partnerships__item {
   @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
   min-height: 133px;
->>>>>>> Add syndication page and style
 
   @include respond-to($mq-s) {
     @include column(6);
   }
 
-<<<<<<< HEAD
-  .flexbox & {
-    @include respond-to($mq-s) {
-      margin-left: 0;
-      margin-right: 7%;
-      flex: 0 0 46%;
-
-      &:nth-child(even) {
-        margin-right: 0;
-      }
-=======
   @include respond-to($mq-l) {
     @include column(3);
   }
@@ -294,7 +299,6 @@
 
     @include respond-to($mq-l) {
       flex-basis: 29.91%;
->>>>>>> Add syndication page and style
     }
   }
 }

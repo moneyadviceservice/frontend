@@ -3,7 +3,12 @@
 // Styleguide related link
 
 .related-links--collapsable {
-  display: none;
+  margin-bottom: $baseline-unit*2;
+
+  .js & {
+    display: none;
+    margin-bottom: 0;
+  }
 
   &.is-active {
     display: block;
@@ -94,5 +99,10 @@
 
   &:last-child {
     margin-bottom: 0;
+    border-bottom: 0;
+
+    .js & {
+      border-bottom: 1px solid $color-grey-pale;
+    }
   }
 }

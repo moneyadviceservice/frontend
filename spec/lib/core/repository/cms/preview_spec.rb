@@ -28,7 +28,7 @@ module Core::Repository::CMS
 
         it 'returns the description' do
           expect(repository.find(id)).to be_a(Hash)
-          expect(repository.find(id)['description']).to eq('meta description')
+          expect(repository.find(id)['description']).to eq('How to set up a budget, keep on top of your debts and start to save regularly')
         end
       end
 

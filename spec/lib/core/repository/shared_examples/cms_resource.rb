@@ -28,7 +28,7 @@ RSpec.shared_examples_for 'a cms resource' do
       end
 
       it 'returns the meta description' do
-        expect(repository.find(id)['description']).to eq('meta description')
+        expect(repository.find(id)['description']).to eq('How to set up a budget, keep on top of your debts and start to save regularly')
       end
     end
 

@@ -148,12 +148,20 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
       }
     }
 
-    if (this.isAtBottom && scrollTop < this.bottom) {
+    if (this.isAtBottom && scrollTop < this.bottom && scrollTop > this.top) {
       this.$el
         .addClass(this.config.classes.fixed)
         .removeClass(this.config.classes.bottom);
       this.isAtBottom = false;
       return;
+    }
+
+    if (this.isAtBottom && scrollTop < this.top) {
+      this.$el
+        .removeClass(this.config.classes.fixed)
+        .removeClass(this.config.classes.bottom);
+      this.isAtBottom = false;
+      this.isFixed = false;
     }
   };
 

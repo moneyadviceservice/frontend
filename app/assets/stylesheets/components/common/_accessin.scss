@@ -1,0 +1,9 @@
+.accessin {
+}
+
+.accessin__submit {
+  background: transparent;
+  border: 0;
+  @include body(14, 24);
+  padding: 0;
+}

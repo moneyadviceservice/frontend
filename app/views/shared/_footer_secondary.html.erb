@@ -18,14 +18,15 @@
         </li>
 
         <li class="footer-secondary__list-item accessibility-feedback-link">
-          <a class="footer-secondary__link" href="http://accessin.org/usersubmit_mas.php?param=nojscript"
-             onclick="window.open('http://accessin.org/usersubmit_mas.php?param=' + window.location,'',
-                 'resizable=yes,location=no,scrollbars=yes,toolbar=no,left=20,top=0,height=900,width=800');
-                 return false;" title="<%= t('footer_secondary.link_title') %>"
-             target="_blank">
-            <span class="icon icon--accessibility"></span><%= t('footer_secondary.title') %>
-            <span class="visually-hidden"><%= t('footer_secondary.hidden_accessibility') %></span>
-          </a>
+          <form target="_blank" class="accessin" id="AccessIN_form" action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
+              <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
+              <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
+             <button type="submit" class="accessin__submit"><span class="icon icon--accessibility"></span>Report an accessibility problem</button>
+          </form>
+
+          <% content_for(:javascripts) do %>
+            <script type="text/javascript" src="https://accessin.org/app/accessin/resources/AccessIN.js"></script>
+          <% end %>
         </li>
 
       </ul>

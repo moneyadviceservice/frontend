@@ -1,6 +1,10 @@
 class ActionPlansEngineController < EmbeddedToolsController
   def parent_template
-    'layouts/engine_unconstrained'
+    if syndicated_tool_request?
+      'layouts/engine_syndicated'
+    else
+      'layouts/engine_unconstrained'
+    end
   end
 
   def category_id

@@ -235,9 +235,9 @@
 
     redundancy_action_plans:
       en:
-        path: "en/action-plans/redundancy"
+        path: "en/tools/redundancy-pay-calculator"
       cy:
-        path: "cy/action-plans/dileu-swydd"
+        path: "cy/tools/cyfrifiannell-tal-diswyddo"
       width: "100%"
       title: "Redundancy action plan"
 

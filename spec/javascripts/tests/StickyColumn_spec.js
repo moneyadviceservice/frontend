@@ -260,6 +260,20 @@ describe('StickyColumn', function() {
 
       expect(this.component.attr('class')).to.be.equal('sticky fixed');
     });
+
+    it('returns the sticky module back to its static position', function() {
+      var stub = sinon.stub(this.obj, '_getWindowScroll').returns(0);
+
+      this.obj.isInSidebar = true;
+      this.obj.isFixed = false;
+      this.obj.isAtBottom = true;
+      this.obj.top = 175;
+      this.obj.bottom = 4000;
+
+      this.obj._positionComponent();
+
+      expect(this.component.attr('class')).to.be.equal('sticky');
+    });
   });
 
   describe('_handleScroll', function() {

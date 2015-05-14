@@ -76,4 +76,10 @@ class EmbeddedToolsController < ApplicationController
   end
 
   helper_method :display_category_directory?
+
+  def exclude_syndicated_iframe_resizer?
+    false
+  end
+
+  helper_method :exclude_syndicated_iframe_resizer?
 end

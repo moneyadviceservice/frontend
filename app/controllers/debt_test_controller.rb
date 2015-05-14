@@ -7,6 +7,10 @@ class DebtTestController < EmbeddedToolsController
     end
   end
 
+  def exclude_syndicated_iframe_resizer?
+    syndicated_tool_request?
+  end
+
   protected
     def category_id
       'before-you-borrow'

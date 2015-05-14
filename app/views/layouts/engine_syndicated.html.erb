@@ -15,10 +15,12 @@
     </div>
   </div>
   <% content_for(:javascripts) do %>
-    <%= javascript_include_tag "syndication/iframeResizer" %>
-    <script>
-      window.iframeResizer('MASRESIZE-').start();
-    </script>
+    <% unless exclude_syndicated_iframe_resizer? %>
+      <%= javascript_include_tag "syndication/iframeResizer" %>
+      <script>
+        window.iframeResizer('MASRESIZE-').start();
+      </script>
+    <% end %>
   <% end %>
 <% end %>
 

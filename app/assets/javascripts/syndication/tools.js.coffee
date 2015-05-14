@@ -37,7 +37,7 @@
       cy:
         path: "cy/tools/prawf-dyledion"
       width: "100%"
-      height: "900px"
+      height: "1800px"
       include_ga: false
       title: "Debt test"
 

@@ -12,7 +12,8 @@
   height: 0;
   margin: $baseline-unit*4 0;
 
-  iframe {
+  iframe,
+  object { /* For Brightcove embed */
     position: absolute;
     top: 0;
     left: 0;

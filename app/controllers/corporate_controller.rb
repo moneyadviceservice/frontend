@@ -9,6 +9,7 @@ class CorporateController < ArticlesController
 
   def show
     super
+    set_syndication_tools
     @corporate_category = corporate_category
     @category = @article.categories.last
     assign_active_categories(@corporate_category)
@@ -18,6 +19,10 @@ class CorporateController < ArticlesController
 
   def corporate_category
     @corporate_category ||= Core::CategoryReader.new('corporate-home').call
+  end
+
+  def set_syndication_tools
+    @syndication_tools ||= Core::CategoryReader.new('syndication').call
   end
 
   def interactor

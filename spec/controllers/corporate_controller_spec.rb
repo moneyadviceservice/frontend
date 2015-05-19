@@ -3,7 +3,9 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
   let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
   let(:category_tree) { double.as_null_object }
   let(:corporate_category) { Core::Category.new('corporate-home', contents: []) }
+  let(:syndication_category) { Core::Category.new('syndication', contents: []) }
   let(:corporate_category_reader) { instance_double(Core::CategoryReader, call: corporate_category) }
+  let(:syndication_category_reader) { instance_double(Core::CategoryReader, call: syndication_category) }
 
   before do
     allow(Core::CategoryTreeReader).to receive(:new) do
@@ -40,6 +42,7 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
 
       before do
         expect(Core::CategoryReader).to receive(:new).with(corporate_category.id) { corporate_category_reader }
+        expect(Core::CategoryReader).to receive(:new).with(syndication_category.id) { syndication_category_reader }
         expect(Core::CorporateReader).to receive(:new).with(corporate.id) { corporate_reader }
         get :show, locale: I18n.locale, id: corporate.id
       end

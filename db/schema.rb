@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017134140) do
+ActiveRecord::Schema.define(version: 20150520103310) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -149,16 +149,6 @@ ActiveRecord::Schema.define(version: 20141017134140) do
 
   add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
 
-  create_table "budget_planner_legacy_budgets", force: true do |t|
-    t.binary   "data",        null: false
-    t.string   "legacy_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.datetime "accessed_at"
-  end
-
-  add_index "budget_planner_legacy_budgets", ["legacy_id"], name: "index_budget_planner_legacy_budgets_on_legacy_id", unique: true, using: :btree
-
   create_table "budget_planner_wip_budgets", force: true do |t|
     t.binary   "data",             null: false
     t.datetime "created_at",       null: false
@@ -240,31 +230,36 @@ ActiveRecord::Schema.define(version: 20141017134140) do
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "debt_advice_locator_organisation_standards", force: true do |t|
+    t.string "name"
+  end
+
   create_table "debt_advice_locator_organisations", force: true do |t|
     t.string   "name"
     t.text     "address_street_address"
     t.string   "address_locality"
     t.string   "address_region"
     t.string   "address_postcode"
-    t.float    "lat",                     limit: 24
-    t.float    "lng",                     limit: 24
+    t.float    "lat",                                          limit: 24
+    t.float    "lng",                                          limit: 24
     t.string   "email_address"
     t.string   "website_address"
     t.string   "minicom"
     t.text     "notes"
-    t.boolean  "provides_face_to_face",              default: false, null: false
-    t.boolean  "provides_telephone",                 default: false, null: false
-    t.boolean  "provides_web",                       default: false, null: false
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
+    t.boolean  "provides_face_to_face",                                   default: false, null: false
+    t.boolean  "provides_telephone",                                      default: false, null: false
+    t.boolean  "provides_web",                                            default: false, null: false
+    t.datetime "created_at",                                                              null: false
+    t.datetime "updated_at",                                                              null: false
     t.string   "telephone_en"
     t.string   "telephone_cy"
-    t.boolean  "region_england",                     default: false, null: false
-    t.boolean  "region_northern_ireland",            default: false, null: false
-    t.boolean  "region_scotland",                    default: false, null: false
-    t.boolean  "region_wales",                       default: false, null: false
+    t.boolean  "region_england",                                          default: false, null: false
+    t.boolean  "region_northern_ireland",                                 default: false, null: false
+    t.boolean  "region_scotland",                                         default: false, null: false
+    t.boolean  "region_wales",                                            default: false, null: false
     t.string   "website_address_text"
     t.string   "notes_cy"
+    t.integer  "debt_advice_locator_organisation_standard_id"
   end
 
   add_index "debt_advice_locator_organisations", ["lat", "lng"], name: "dal_organisations_lat_lng", using: :btree
@@ -532,6 +527,17 @@ ActiveRecord::Schema.define(version: 20141017134140) do
 
   add_index "partner_polling_widgets", ["partner_id"], name: "index_partner_polling_widgets_on_partner_id", using: :btree
   add_index "partner_polling_widgets", ["poll_id"], name: "index_partner_polling_widgets_on_poll_id", using: :btree
+
+  create_table "partners", force: true do |t|
+    t.string   "name",            null: false
+    t.string   "email",           null: false
+    t.string   "tool_name"
+    t.string   "tool_language"
+    t.string   "tool_width_unit"
+    t.integer  "tool_width",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "quiz_audit_records", force: true do |t|
     t.integer  "user_id"

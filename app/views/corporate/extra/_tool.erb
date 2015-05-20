@@ -1,59 +1,65 @@
-<%= form_for '/', class: 'form t-embed-form', data: { dough_component: 'EmbedCodeGenerator Validation' }, html: { id: 'embed_code', novalidate: 'noValidate', } do |f| %>
+<%= form_for(Partner.new, class: 'form t-embed-form',
+                          data: { dough_component: 'EmbedCodeGenerator Validation' },
+                          html: { id: 'embed_code', novalidate: 'noValidate', },
+                          url: partners_path,
+                          builder: Dough::Forms::Builders::Validation) do |f| %>
+
+  <%= f.validation_summary %>
 
   <div class="form__row">
-    <%= f.label :organisation, 'Organisation', class: 'form__label-heading' %>
-    <%= f.text_field :organisation, class: 't-organisation form__input',
+    <%= f.label :name, t('tool_page.form.name_label'), class: 'form__label-heading' %>
+    <%= f.text_field :name, class: 't-organisation form__input',
     data: { dough_validation_empty: 'You must enter an organisation' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
   </div>
 
   <div class="form__row">
-    <%= f.label :email, 'Email address', class: 'form__label-heading' %>
+    <%= f.label :email, t('tool_page.form.email_label'), class: 'form__label-heading' %>
     <%= f.email_field :email, class: 't-organisation-email form__input',
     data: { dough_validation_empty: 'You must enter an email address', dough_validation_invalid: 'You must enter a valid email address' }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true', pattern: '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$' %>
   </div>
 
   <div class="form__row">
     <fieldset class="form__group form__group--inline">
-      <legend>Language</legend>
+      <legend><%= t('tool_page.form.language_legend') %></legend>
       <div class="form__group-item">
         <%= f.label nil do %>
-          <%= f.radio_button 'lang', 'en', checked: true, class: 't-lang-en form__group-input', data: {dough_embedcodegenerator_lang: true} %>
-          English
+          <%= f.radio_button 'tool_language', 'en', checked: true, class: 't-lang-en form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          <%= t('tool_page.form.language_label_en') %>
         <% end %>
       </div>
       <div class="form__group-item">
         <%= f.label nil do %>
-          <%= f.radio_button 'lang', 'cy', class: 't-lang-cy form__group-input', data: {dough_embedcodegenerator_lang: true} %>
-          Welsh
+          <%= f.radio_button 'tool_language', 'cy', class: 't-lang-cy form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          <%= t('tool_page.form.language_label_cy') %>
         <% end %>
       </div>
   </div>
 
   <div class="form__row">
     <fieldset class="form__group form__group--inline">
-      <legend>Width unit</legend>
+      <legend><%= t('tool_page.form.width_legend') %></legend>
       <div class="form__group-item">
         <%= f.label nil do %>
-          <%= f.radio_button 'width-unit', 'px', class: 't-width-unit-px form__group-input', checked: true, data: {dough_embedcodegenerator_width_unit: 'pixels'} %>
-          px (pixels)
+          <%= f.radio_button 'tool_width_unit', 'px', class: 't-width-unit-px form__group-input', checked: true, data: {dough_embedcodegenerator_width_unit: 'pixels'} %>
+          <%= t('tool_page.form.width_value_px') %>
         <% end %>
       </div>
       <div class="form__group-item">
         <%= f.label nil do %>
-          <%= f.radio_button 'width-unit', '%', class: 't-width-unit-percentage form__group-input', data: {dough_embedcodegenerator_width_unit: 'percentage'} %>
-          % (percentage)
+          <%= f.radio_button 'tool_width_unit', '%', class: 't-width-unit-percentage form__group-input', data: {dough_embedcodegenerator_width_unit: 'percentage'} %>
+          <%= t('tool_page.form.width_value_percentage') %>
         <% end %>
       </div>
   </div>
 
   <div class="form__row">
-    <%= f.label :width, 'Width', class: 'form__label-heading' %>
-    <%= f.text_field :width, class: 't-width form__input form__input--small',
+    <%= f.label :tool_width, t('tool_page.form.width_label'), class: 'form__label-heading' %>
+    <%= f.text_field :tool_width, class: 't-width form__input form__input--small',
       data: { dough_embedcodegenerator_width: true, dough_validation_empty: 'You must enter a number', dough_validation_invalid: 'You must enter a valid number, e.g. 75' }, min: 1, max: '999999', maxlength: 6, pattern: '\d*', required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
   </div>
 
   <div class="form__row">
-    <%= f.button t('corporate.partnerships.syndication.submit'), class: 't-submit-embed button button--small button--primary', data: { dough_embedcodegenerator_submit: true } %>
+    <%= f.submit t('corporate.partnerships.syndication.submit'), class: 't-submit-embed button button--small button--primary', data: { dough_embedcodegenerator_submit: true } %>
   </div>
 
   <div class="form__row form__row--is-hidden" data-dough-embedcodegenerator-target-container>

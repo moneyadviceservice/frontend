@@ -1,129 +1,56 @@
+<%= heading_tag t('corporate_tool_directory.popular_tools.heading'), level: 2 %>
+
 <div class="l-promo-partnerships promo promo--partnerships">
   <div class="l-promo-partnerships__item">
     <%= heading_tag(level: 3, class: 'promo__heading') do %>
       <%= link_to tool_path('pension-calculator'), class: 'promo__link' do %>
         <%= image_tag('corporate/pension_calculator.png', class: 'promo__img') %>
-        Pension Calculator
+        <%= t('corporate_tool_directory.popular_tools.tool_one_heading') %>
       <% end %>
     <% end %>
     <p class="promo__content">
-      The Pension Calculator can help users work out what income they may have when they reach retirement, and encourages them to consider how increasing their pension savings can help them achieve their desired standard of living.
+      <%= t('corporate_tool_directory.popular_tools.tool_one_content') %>
     </p>
   </div>
   <div class="l-promo-partnerships__item">
     <%= heading_tag(level: 3, class: 'promo__heading') do %>
       <%= link_to tool_path('budget-planner'), class: 'promo__link' do %>
         <%= image_tag('corporate/budget_planner.png', class: 'promo__img') %>
-        Budget Planner
+        <%= t('corporate_tool_directory.popular_tools.tool_two_heading') %>
       <% end %>
     <% end %>
     <p class="promo__content">
-      The Budget Planner helps users track their income and outgoings. It also helps them plan for unexpected bills.
+      <%= t('corporate_tool_directory.popular_tools.tool_two_content') %>
     </p>
   </div>
   <div class="l-promo-partnerships__item">
     <%= heading_tag(level: 3, class: 'promo__heading') do %>
       <%= link_to tool_path('mortgage-affordability-calculator'), class: 'promo__link' do %>
         <%= image_tag('corporate/mortgage_affordability_calculator.png', class: 'promo__img') %>
-        Mortgage Affordability Calculator
+        <%= t('corporate_tool_directory.popular_tools.tool_three_heading') %>
       <% end %>
     <% end %>
     <p class="promo__content">
-      The Mortgage Affordability Calculator tells users how much they can afford to borrow and how changes in the interest rate will affect their monthly repayments.
+      <%= t('corporate_tool_directory.popular_tools.tool_three_content') %>
     </p>
   </div>
 </div>
 
-<%= heading_tag 'All tools', level: 2 %>
+<%= heading_tag t('corporate_tool_directory.all_tools.heading'), level: 2 %>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum, beatae dicta.
+  <%= t('corporate_tool_directory.all_tools.description') %>
 </p>
 
 <div class="directory directory--partnerships">
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
+  <% @syndication_tools.contents.each do |tool| %>
+    <div class="directory__item">
+      <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
+        <%= link_to tool.title, corporate_path(tool.id), class: 'directory__link' %>
+      <% end %>
 
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-    <p class="directory__description">Also available in Welsh</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-    <p class="directory__description">Also available in Welsh</p>
-
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-    <p class="directory__description">Also available in Welsh</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-  </div>
-
-  <div class="directory__item">
-    <%= heading_tag(level: heading_level ||= 3, class: 'directory__title') do %>
-      <%= link_to 'Ipsum Dolor Sim Amet', '#', class: 'directory__link' %>
-    <% end %>
-
-    <p class="directory__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolor sit amet, consectetur.</p>
-    <p class="directory__description">Also available in Welsh</p>
-  </div>
+      <p class="directory__description"><%= tool.description %></p>
+    </div>
+  <% end %>
 
 </div>

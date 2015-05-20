@@ -6,9 +6,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       defaultConfig = {
         selectors: {
           activeClass: 'is-active',
+          emailInput: '#_email',
+          embedForm: '#embed_code',
           embedTarget: '[data-dough-embedcodegenerator-target]',
           embedTargetContainer: '[data-dough-embedcodegenerator-target-container]',
           langInput: '[data-dough-embedcodegenerator-lang]',
+          organisationInput: '#_organisation',
           submit: '[data-dough-embedcodegenerator-submit]',
           widthInput: '[data-dough-embedcodegenerator-width]',
           widthUnitInput: '[data-dough-embedcodegenerator-width-unit]'
@@ -32,9 +35,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   EmbedCodeGeneratorProto._cacheComponentElements = function() {
+    this.$emailInput = this.$el.find(this.config.selectors.emailInput);
+    this.$embedForm = this.$el.find(this.config.selectors.embedForm);
     this.$embedTarget = this.$el.find(this.config.selectors.embedTarget);
     this.$embedTargetContainer = this.$el.find(this.config.selectors.embedTargetContainer);
     this.$langInput = this.$el.find(this.config.selectors.langInput);
+    this.$organisationInput = this.$el.find(this.config.selectors.organisationInput);
     this.$submit = this.$el.find(this.config.selectors.submit);
     this.$widthInput = this.$el.find(this.config.selectors.widthInput);
     this.$widthUnitInput = this.$el.find(this.config.selectors.widthUnitInput);
@@ -42,7 +48,26 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   EmbedCodeGeneratorProto._handleSubmit = function() {
     if(this.$el.find('.validation-summary__error').length) return;
-    this.updateEmbedCodeDisplay(this.generateEmbedCode());
+
+    var postVars = {
+      name: this.$organisationInput.val(),
+      email: this.$emailInput.val(),
+      'tool_name': this.$langInput.filter(':checked').val(),
+      'tool_width_unit': this.$widthUnitInput.filter(':checked').val(),
+      'tool_width': this.$widthInput.val()
+    };
+
+    $.ajax({
+      url: this.$embedForm.attr('action'),
+      type: 'post',
+      data: postVars,
+      success: function() {
+        // Todo: change temp success message
+        window.alert('Thanks! Please copy the embed code below.');
+        this.updateEmbedCodeDisplay(this.generateEmbedCode());
+      }
+    });
+
     return false;
   };
 

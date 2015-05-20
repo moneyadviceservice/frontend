@@ -102,6 +102,11 @@ Rails.application.routes.draw do
             constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
     end
 
+    Feature.with(:payday_loans) do
+      mount PaydayLoansIntervention::Engine => '/:tool_id',
+        constraints: ToolMountPoint.for(:payday_loans)
+    end
+
     mount PensionsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pensions_calculator)
 

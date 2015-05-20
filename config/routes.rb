@@ -159,12 +159,15 @@ Rails.application.routes.draw do
     resource  :advice, only: :show
     resources :videos, only: :show
 
-    if Feature.active?(:corporate)
-      get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
-      get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
-      resources :corporate_categories, only: [:show]
-      resources :corporate, only: [:show, :index]
+    unless Feature.active?(:corporate_tool_directory)
+      match '/corporate/syndication', to: not_implemented, via: 'get'
+      match '/corporate/:tool_name', to: not_implemented, via: 'get', constraints: { tool_name: /([a-zA-Z]+)-([a-zA-Z]+)-syndication/ }
     end
+
+    get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
+    get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
+    resources :corporate_categories, only: [:show]
+    resources :corporate, only: [:show, :index]
 
     resources :campaigns,
               only: 'show',

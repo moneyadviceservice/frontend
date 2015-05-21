@@ -64,4 +64,41 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
       end
     end
   end
+
+  describe 'POST create' do
+    let(:tool) { instance_double(Core::Article, id: "#{valid_partner[:tool_name].downcase.strip.gsub(' ', '-')}-syndication", categories: [syndication_category]) }
+    let(:valid_partner)   { FactoryGirl.attributes_for(:partner) }
+    let(:invalid_partner) { { name: 2323, width: 'sasd' } }
+
+    context 'with valid attributes' do
+      it 'creates a new partner' do
+        expect{
+          post :create, locale: I18n.locale, partner: valid_partner, id: tool.id
+        }.to change(Partner, :count).by(1)
+      end
+
+      it 'responds successfuly' do
+        expect(response).to be_ok
+      end
+
+    context 'with invalid attributes' do
+      before do
+        allow(Core::CorporateReader).to receive(:new).with(tool.id) do
+          instance_double(Core::CorporateReader, call: tool)
+        end
+      end
+
+      it 'does not save the new partner' do
+        expect{
+          post :create, locale: I18n.locale, partner: invalid_partner, id: tool.id
+        }.to_not change(Partner,:count)
+      end
+
+      it 're-renders the corporate tool page' do
+        post :create, locale: I18n.locale, partner: invalid_partner, id: tool.id
+        expect(response).to render_template('corporate/show')
+      end
+      end
+    end
+  end
 end

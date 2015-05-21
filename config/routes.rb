@@ -167,7 +167,7 @@ Rails.application.routes.draw do
     get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
     get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
     resources :corporate_categories, only: [:show]
-    resources :corporate, only: [:show, :index]
+    resources :corporate, only: [:index, :show, :create]
 
     resources :campaigns,
               only: 'show',

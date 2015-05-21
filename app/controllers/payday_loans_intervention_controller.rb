@@ -1,5 +1,5 @@
 class PaydayLoansInterventionController < EmbeddedToolsController
-  def alternate_url
+  def base_alternate_url
     "/#{alternate_locale}/#{alternate_tool_id}"
   end
 

@@ -5,19 +5,13 @@ class EmbeddedToolsController < ApplicationController
     BreadcrumbTrail.build(category, category_tree)
   end
 
-  helper_method :breadcrumbs
-
-  def category
-    @category ||= ToolCategory.new(category_id)
-  end
-
   def alternate_url
     # First dup the params for the current request
     new_params = params.dup
 
     # Since we can't influence the locale and tool_id in the mount point for this app,
     # we override :script_name instead.
-    new_params[:script_name] = "/#{alternate_locale}/tools/#{alternate_tool_id}"
+    new_params[:script_name] = base_alternate_url
 
     # Remove the locale and tool_id as we've dealt with those in the script_name.
     # (And if we don't they'll be added to the query string.)
@@ -33,6 +27,12 @@ class EmbeddedToolsController < ApplicationController
   end
 
   helper_method :alternate_url
+
+  helper_method :breadcrumbs
+
+  def category
+    @category ||= ToolCategory.new(category_id)
+  end
 
   def alternate_options
     {
@@ -82,4 +82,8 @@ class EmbeddedToolsController < ApplicationController
   end
 
   helper_method :exclude_syndicated_iframe_resizer?
+
+  def base_alternate_url
+    "/#{alternate_locale}/tools/#{alternate_tool_id}"
+  end
 end

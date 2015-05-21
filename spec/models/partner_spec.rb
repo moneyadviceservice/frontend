@@ -58,5 +58,23 @@ RSpec.describe Partner, type: :model do
 
     it { is_expected.to be_valid }
 
+    describe '#tool_id' do
+      it 'should return a hyphanated version of the tool name' do
+        expect(subject.tool_id).to eq('sample-tool')
+      end
+    end
+
+    describe '#tool_slug' do
+      it 'should return a slug of the tool' do
+        expect(subject.tool_slug).to eq('sample-tool-syndication')
+      end
+    end
+
+    describe '#total_tool_width' do
+      it 'should the full width with units' do
+        expect(subject.total_tool_width).to eq('500px')
+      end
+    end
+
   end
 end

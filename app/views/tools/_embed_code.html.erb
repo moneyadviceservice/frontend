@@ -2,7 +2,7 @@
 <div>
   <noscript><p>You have javascript turned off. Please turn javascript on to see the tools in action.</p></noscript>
   <p>
-    <a id="[id]" class="mas-widget" target="_blank" lang="{lang}" href="https://www.moneyadviceservice.org.uk/en/tools/[tool_url]" data-width="{width}">[tool_title]</a>
+    <a id="<%= partner.tool_id %>" class="mas-widget" target="_blank" lang="<%= I18n.locale %>" href="https://www.moneyadviceservice.org.uk/en/tools/<%= partner.tool_id %>" data-width="<%= partner.total_tool_width %>"><%= partner.tool_name %></a>
   </p>
 </div>
 <script class="application_scripts" src="https://www.moneyadviceservice.org.uk/assets/syndication/tools.js"></script>

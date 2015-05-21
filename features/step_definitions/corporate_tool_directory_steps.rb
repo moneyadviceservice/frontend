@@ -4,12 +4,12 @@ end
 
 Then(/^I should be presented with the most popular tools$/) do
   expect(corporate_tool_directory_page.popular_tools_heading)
-    .to have_content(I18n.t('corporate_tool_directory.popular_tools_heading'))
+    .to have_content(I18n.t('corporate_tool_directory.popular_tools.heading'))
 end
 
 Then(/^I should be presented with a list of all tools available$/) do
   expect(corporate_tool_directory_page.all_tools_heading)
-    .to have_content(I18n.t('corporate_tool_directory.all_tools_heading'))
+    .to have_content(I18n.t('corporate_tool_directory.all_tools.heading'))
 end
 
 Then(/^I should be on the corporate tool directory$/) do

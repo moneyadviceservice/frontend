@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520103310) do
+ActiveRecord::Schema.define(version: 20150522102637) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -207,6 +207,17 @@ ActiveRecord::Schema.define(version: 20150520103310) do
     t.string   "tax_year"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "corporate_partners", force: true do |t|
+    t.string   "name",            null: false
+    t.string   "email",           null: false
+    t.string   "tool_name"
+    t.string   "tool_language"
+    t.string   "tool_width_unit"
+    t.integer  "tool_width",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "csr_users", force: true do |t|
@@ -527,17 +538,6 @@ ActiveRecord::Schema.define(version: 20150520103310) do
 
   add_index "partner_polling_widgets", ["partner_id"], name: "index_partner_polling_widgets_on_partner_id", using: :btree
   add_index "partner_polling_widgets", ["poll_id"], name: "index_partner_polling_widgets_on_poll_id", using: :btree
-
-  create_table "partners", force: true do |t|
-    t.string   "name",            null: false
-    t.string   "email",           null: false
-    t.string   "tool_name"
-    t.string   "tool_language"
-    t.string   "tool_width_unit"
-    t.integer  "tool_width",      null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "quiz_audit_records", force: true do |t|
     t.integer  "user_id"

@@ -1,4 +1,4 @@
-class Partner < ActiveRecord::Base
+class CorporatePartner < ActiveRecord::Base
 
   validates :name, :tool_name, :tool_language, :tool_width_unit, :tool_width, presence: true
   validates_with Validators::Email, attributes: [:email]

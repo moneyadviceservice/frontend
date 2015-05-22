@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :partner, class: Partner do
+  factory :corporate_partner, class: CorporatePartner do
     name 'Tenacious Co'
     sequence(:email) { |i| "fakeorg#{i}@example.com" }
     tool_name 'Sample Tool'

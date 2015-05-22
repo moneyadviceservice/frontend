@@ -13,11 +13,11 @@ class CorporateController < ArticlesController
     retrieve_corporate_category
     set_corporate_category
     assign_active_categories(retrieve_corporate_category)
-    @partner = Partner.new
+    @partner = CorporatePartner.new
   end
 
   def create
-    @partner = Partner.new(partner_params)
+    @partner = CorporatePartner.new(partner_params)
     @partner.tool_name = tool_friendly_name
 
     if @partner.save
@@ -57,7 +57,7 @@ class CorporateController < ArticlesController
   end
 
   def partner_params
-    params.require(:partner).permit(:name, :email, :tool_language, :tool_width_unit, :tool_width)
+    params.require(:corporate_partner).permit(:name, :email, :tool_language, :tool_width_unit, :tool_width)
   end
 
   def tool_friendly_name

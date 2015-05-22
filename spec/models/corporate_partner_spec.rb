@@ -1,5 +1,5 @@
-RSpec.describe Partner, type: :model do
-  before { @partner = create(:partner) }
+RSpec.describe CorporatePartner, type: :model do
+  before { @partner = create(:corporate_partner) }
 
   subject { @partner }
 

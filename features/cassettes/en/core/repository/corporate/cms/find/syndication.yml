@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (thelab; David; 41022) ruby/2.1.2 (95; x86_64-darwin13.0)
+      - Mas-Responsive/1.0 (phlee.local; plee; 6081) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 0a90f7d1-bdb3-4555-9ff9-fbdaf6110811
+      - 3ef7d4a4-8f60-4655-bdf3-a0328b8bc564
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -29,62 +29,27 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"e9fa0edc7fcaeb01ae959fe56353c34e"'
+      - '"de3aba130207d799d49c4db58459e12c"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0a90f7d1-bdb3-4555-9ff9-fbdaf6110811
+      - 3ef7d4a4-8f60-4655-bdf3-a0328b8bc564
       X-Runtime:
-      - '0.515916'
+      - '0.111752'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Thu, 21 May 2015 12:11:42 GMT
+      - Tue, 26 May 2015 14:43:33 GMT
       Content-Length:
-      - '1693'
+      - '965'
       Connection:
       - Keep-Alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJsYWJlbCI6IlRvb2xzIGFuZCBDYWxjdWxhdG9yIFN5bmRpY2F0aW9uIiwi
-        c2x1ZyI6InN5bmRpY2F0aW9uIiwiZnVsbF9wYXRoIjoiL2VuL2NvcnBvcmF0
-        ZS9zeW5kaWNhdGlvbiIsIm1ldGFfZGVzY3JpcHRpb24iOiIiLCJtZXRhX3Rp
-        dGxlIjoiVG9vbHMgYW5kIENhbGN1bGF0b3IgU3luZGljYXRpb24iLCJjYXRl
-        Z29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoiY29ycG9yYXRl
-        IiwicmVsYXRlZF9jb250ZW50Ijp7ImxhdGVzdF9ibG9nX3Bvc3RfbGlua3Mi
-        Olt7InRpdGxlIjoiU2V2ZW4gZGF5cywgc2V2ZW4gd2F5cyB0byBzYXZlIGh1
-        bmRyZWRzIiwicGF0aCI6Imh0dHA6Ly9ibG9nLm1vbmV5YWR2aWNlc2Vydmlj
-        ZS5vcmcudWsvc2V2ZW4tZGF5cy1zZXZlbi13YXlzLXRvLXNhdmUtaHVuZHJl
-        ZHMifSx7InRpdGxlIjoiQSBtYXR0ZXIgb2YgbGlmZSBhbmQgZGVhdGgsIHll
-        dCB0aHJlZSBxdWFydGVycyBkb24ndCBoYXZlIGEgd2lsbCIsInBhdGgiOiJo
-        dHRwOi8vYmxvZy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2EtbWF0dGVy
-        LW9mLWxpZmUtYW5kLWRlYXRoLXlldC10aHJlZS1xdWFydGVycy1kb250LWhh
-        dmUtYS13aWxsIn0seyJ0aXRsZSI6IlF1aXo6IEFyZSB5b3UgYmFmZmxlZCBi
-        eSBob21lIGJ1eWluZz8iLCJwYXRoIjoiaHR0cDovL2Jsb2cubW9uZXlhZHZp
-        Y2VzZXJ2aWNlLm9yZy51ay9RdWl6LWFyZS15b3UtYmFmZmxlZC1ieS1ob21l
-        LWJ1eWluZyJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3Mi
-        OltdLCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxp
-        c2hlZF9hdCI6IjIwMTUtMDUtMjBUMTA6MTk6MTYuMDAwWiIsImJsb2NrcyI6
-        W3siaWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjcFx1
-        MDAzZUxvcmVtIElwc3VtIGlzIHNpbXBseSBkdW1teSB0ZXh0IG9mIHRoZSBw
-        cmludGluZyBhbmQgdHlwZXNldHRpbmcgaW5kdXN0cnkuIExvcmVtIElwc3Vt
-        IGhhcyBiZWVuIHRoZSBpbmR1c3RyeeKAmXMgc3RhbmRhcmQgZHVtbXkgdGV4
-        dCBldmVyIHNpbmNlIHRoZSAxNTAwcywgd2hlbiBhbiB1bmtub3duIHByaW50
-        ZXIgdG9vayBhIGdhbGxleSBvZiB0eXBlIGFuZCBzY3JhbWJsZWQgaXQgdG8g
-        bWFrZSBhIHR5cGUgc3BlY2ltZW4gYm9vay4gSXQgaGFzIHN1cnZpdmVkIG5v
-        dCBvbmx5IGZpdmUgY2VudHVyaWVzLCBidXQgYWxzbyB0aGUgbGVhcCBpbnRv
-        IGVsZWN0cm9uaWMgdHlwZXNldHRpbmcsIHJlbWFpbmluZyBlc3NlbnRpYWxs
-        eSB1bmNoYW5nZWQuIEl0IHdhcyBwb3B1bGFyaXNlZCBpbiB0aGUgMTk2MHMg
-        d2l0aCB0aGUgcmVsZWFzZSBvZiBMZXRyYXNldCBzaGVldHMgY29udGFpbmlu
-        ZyBMb3JlbSBJcHN1bSBwYXNzYWdlcywgYW5kIG1vcmUgcmVjZW50bHkgd2l0
-        aCBkZXNrdG9wIHB1Ymxpc2hpbmcgc29mdHdhcmUgbGlrZSBBbGR1cyBQYWdl
-        TWFrZXIgaW5jbHVkaW5nIHZlcnNpb25zIG9mIExvcmVtIElwc3VtLlx1MDAz
-        Yy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxNS0wNS0xNVQxMDo0OTow
-        NS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTUtMDUtMjBUMTA6MTk6MTYuMDAw
-        WiJ9XSwidHJhbnNsYXRpb25zIjpbeyJsYWJlbCI6IlRvb2xzIGFuZCBDYWxj
-        dWxhdG9yIFN5bmRpY2F0aW9uIiwibGluayI6Ii9jeS9jb3Jwb3JhdGUvc3lu
-        ZGljYXRpb24iLCJsYW5ndWFnZSI6ImN5In1dfQ==
+      encoding: UTF-8
+      string: '{"label":"syndication","slug":"syndication","full_path":"/en/corporate/syndication","meta_description":"","meta_title":"syndication","category_names":[],"layout_identifier":"corporate","related_content":{"latest_blog_post_links":[],"popular_links":[{"title":"Estimate
+        your overall cost of buying a house and moving","path":"/en/articles/estimate-your-overall-buying-and-moving-costs"},{"title":"Benefits
+        you are entitled to when having a baby","path":"/en/articles/benefits-and-entitlements-to-claim-when-you-have-a-baby"},{"title":"First-time
+        home buyer guide","path":"/en/articles/first-time-buyer-money-tips"}],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2015-05-26T14:43:14.000Z","blocks":[{"identifier":"content","content":"\u003cp\u003estuff\u003c/p\u003e\n","created_at":"2015-05-26T14:43:11.000Z","updated_at":"2015-05-26T14:43:11.000Z"}],"translations":[{"label":"syndication","link":"/cy/corporate/syndication","language":"cy"}]}'
     http_version: 
-  recorded_at: Thu, 21 May 2015 12:11:42 GMT
+  recorded_at: Tue, 26 May 2015 14:43:33 GMT
 recorded_with: VCR 2.9.2

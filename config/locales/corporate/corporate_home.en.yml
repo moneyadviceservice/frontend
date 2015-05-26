@@ -19,3 +19,32 @@ en:
     resources:
       heading: Resources for professionals
       content: Resources for professionals who work with young people and parents
+  corporate_tool_directory:
+    popular_tools:
+      heading: Our popular tools
+      tool_one_heading: Pension Calculator
+      tool_one_content: The Pension Calculator can help users work out what income they may have when they reach retirement, and encourages them to consider how increasing their pension savings can help them achieve their desired standard of living.
+      tool_two_heading: Budget Planner
+      tool_two_content: The Budget Planner helps users track their income and outgoings. It also helps them plan for unexpected bills.
+      tool_three_heading: Mortgage Affordability Calculator
+      tool_three_content: The Mortgage Affordability Calculator tells users how much they can afford to borrow and how changes in the interest rate will affect their monthly repayments.
+    all_tools:
+      heading: All tools
+      description: Some of our tools are available in english and welsh.
+  tool_page:
+    form:
+      name_label: Organisation
+      name_empty_validation: You must enter an organisation
+      email_label: Email address
+      email_empty_validation: You must enter an email address
+      email_invalid_validation: You must enter a valid email address
+      language_legend: Language
+      language_label_en: English
+      language_label_cy: Welsh
+      width_legend: Width unit
+      width_value_px: px (pixels)
+      width_value_percentage: "% (percentage)"
+      width_label: Width
+      width_validation_empty: You must enter a number
+      width_validation_invalid: You must enter a valid number, e.g. 75
+      success_flash: Thanks for partnering with us!

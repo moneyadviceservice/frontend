@@ -60,7 +60,8 @@ fieldset {
 }
 
 legend {
+  color: $color-fieldset-legend-fg;
   display: block;
+  font-weight: 500;
   margin-bottom: $baseline-unit*2;
 }
-

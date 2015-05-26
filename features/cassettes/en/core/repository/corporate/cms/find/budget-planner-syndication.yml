@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/en/corporate/budget-planner-syndication.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (thelab; David; 21466) ruby/2.1.2 (95; x86_64-darwin13.0)
+      X-Request-Id:
+      - 8b8077c7-f96a-4a85-be75-3fd803076f30
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"533d8c1a630f89e93a73670240945d57"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8b8077c7-f96a-4a85-be75-3fd803076f30
+      X-Runtime:
+      - '0.454359'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Fri, 22 May 2015 10:58:09 GMT
+      Content-Length:
+      - '2999'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkJ1ZGdldCBQbGFubmVyIFN5bmRpY2F0aW9uIiwic2x1ZyI6
+        ImJ1ZGdldC1wbGFubmVyLXN5bmRpY2F0aW9uIiwiZnVsbF9wYXRoIjoiL2Vu
+        L2NvcnBvcmF0ZS9idWRnZXQtcGxhbm5lci1zeW5kaWNhdGlvbiIsIm1ldGFf
+        ZGVzY3JpcHRpb24iOiJUaGlzIG1ldGEgZGVzY3JpcHRpb24gc2hvdWxkIHNo
+        b3cgdXAgaW4gdGhlIGRpcmVjdG9yeSBwYWdlIiwibWV0YV90aXRsZSI6IkJ1
+        ZGdldCBQbGFubmVyIC0gU3luZGljYXRpb24iLCJjYXRlZ29yeV9uYW1lcyI6
+        WyJzeW5kaWNhdGlvbiJdLCJsYXlvdXRfaWRlbnRpZmllciI6ImNvcnBvcmF0
+        ZSIsInJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtz
+        IjpbeyJ0aXRsZSI6IlRha2Vhd2F5cyBvdXQsIGhvdXNlIGRlcG9zaXRzIGlu
+        IGZvciBuYXRpb24ncyB5b3VuZyBzYXZlcnMiLCJwYXRoIjoiaHR0cDovL2Js
+        b2cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay90YWtlYXdheXMtb3V0LWhv
+        dXNlLWRlcG9zaXRzLWluLWZvci1uYXRpb24tcy15b3VuZy1zYXZlcnMifSx7
+        InRpdGxlIjoiU2V2ZW4gZGF5cywgc2V2ZW4gd2F5cyB0byBzYXZlIGh1bmRy
+        ZWRzIiwicGF0aCI6Imh0dHA6Ly9ibG9nLm1vbmV5YWR2aWNlc2VydmljZS5v
+        cmcudWsvc2V2ZW4tZGF5cy1zZXZlbi13YXlzLXRvLXNhdmUtaHVuZHJlZHMi
+        fSx7InRpdGxlIjoiQSBtYXR0ZXIgb2YgbGlmZSBhbmQgZGVhdGgsIHlldCB0
+        aHJlZSBxdWFydGVycyBkb24ndCBoYXZlIGEgd2lsbCIsInBhdGgiOiJodHRw
+        Oi8vYmxvZy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2EtbWF0dGVyLW9m
+        LWxpZmUtYW5kLWRlYXRoLXlldC10aHJlZS1xdWFydGVycy1kb250LWhhdmUt
+        YS13aWxsIn1dLCJwb3B1bGFyX2xpbmtzIjpbXSwicmVsYXRlZF9saW5rcyI6
+        W10sInByZXZpb3VzX2xpbmsiOnt9LCJuZXh0X2xpbmsiOnt9fSwicHVibGlz
+        aGVkX2F0IjoiMjAxNS0wNS0yMFQxMDoxODowMi4wMDBaIiwiYmxvY2tzIjpb
+        eyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUw
+        MDNlV2hlcmUgZG9lcyB5b3VyIG1vbmV5IGdvIGVhY2ggbW9udGg/IFdvcmsg
+        aXQgb3V0IG5vdywgd2l0aCBvdXIgbGlzdCBvZiBpdGVtcyB0aGF0IHdpbGwg
+        cmVtaW5kIHlvdSBvZiBhbGwgeW91ciBleHBlbnNlcy4gRmluZCBvdXQgaG93
+        IG11Y2ggc3BlbmRpbmcgbW9uZXkgeW91IGhhdmUgbGVmdCBhZnRlciB5b3Xi
+        gJl2ZSBwYWlkIHlvdXIgbW9zdCBpbXBvcnRhbnQgYmlsbHMuXHUwMDNjL3Bc
+        dTAwM2VcblxuXHUwMDNjaDIgaWQ9XCJiZW5lZml0c1wiXHUwMDNlQmVuZWZp
+        dHNcdTAwM2MvaDJcdTAwM2VcblxuXHUwMDNjdWwgY2xhc3M9XCJ5ZXMtbm9c
+        Ilx1MDAzZVx1MDAzY2xpIGNsYXNzPVwieWVzXCJcdTAwM2VNYW5hZ2UgeW91
+        ciBtb25leSBiZXR0ZXJcdTAwM2MvbGlcdTAwM2VcdTAwM2NsaSBjbGFzcz1c
+        Inllc1wiXHUwMDNlVGFrZSBjb250cm9sIG9mIHlvdXIgZmluYW5jZXNcdTAw
+        M2MvbGlcdTAwM2VcdTAwM2NsaSBjbGFzcz1cInllc1wiXHUwMDNlSW1wYXJ0
+        aWFsIGFuZCBmcmVlIHRvIHVzZVx1MDAzYy9saVx1MDAzZVx1MDAzY2xpIGNs
+        YXNzPVwieWVzXCJcdTAwM2VCZSBiZXR0ZXIgcHJlcGFyZWRcdTAwM2MvbGlc
+        dTAwM2VcdTAwM2NsaSBjbGFzcz1cInllc1wiXHUwMDNlUGxhbiBmb3IgdGhl
+        IGZ1dHVyZVx1MDAzYy9saVx1MDAzZVx1MDAzYy91bFx1MDAzZVxuXG5cdTAw
+        M2NwXHUwMDNlXHUwMDNjYSBocmVmPVwiaHR0cDovL2NvbWZ5Lm1vbmV5YWR2
+        aWNlc2VydmljZS5vcmcudWsvYWRtaW4vc2l0ZXMvMS9wYWdlcy8zNjkwL2Vk
+        aXQjZW1iZWRfY29kZVwiXHUwMDNlR2V0IGVtYmVkIGNvZGUgbm93XHUwMDNj
+        L2FcdTAwM2VcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NoMiBpZD1cInN5bmRp
+        Y2F0aW9uLWV4YW1wbGVzXCJcdTAwM2VTeW5kaWNhdGlvbiBleGFtcGxlc1x1
+        MDAzYy9oMlx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlW1RCQ11cdTAwM2MvcFx1
+        MDAzZVxuXG5cdTAwM2NkaXYgY2xhc3M9XCJsLWJsb2NrXCJcdTAwM2VcbiAg
+        XHUwMDNjZGl2IGNsYXNzPVwibC1ibG9ja19fbWVkaWFcIlx1MDAzZSAgXHUw
+        MDNjaW1nIHNyYz1cImh0dHA6Ly9jb21meS5tb25leWFkdmljZXNlcnZpY2Uu
+        b3JnLnVrLy9zeXN0ZW0vY29tZnkvY21zL2ZpbGVzL2ZpbGVzLzAwMC8wMDAv
+        MDM2L29yaWdpbmFsLzI2MF9zYXZpbmdzX2NhbGNfMV8uanBnXCIgYWx0PVwi
+        XCIgL1x1MDAzZVx1MDAzYy9kaXZcdTAwM2VcdTAwM2NkaXYgY2xhc3M9XCJs
+        LWJsb2NrX19jb250ZW50XCJcdTAwM2UgIFx1MDAzY2RpdiBjbGFzcz1cInBh
+        bmVsIHBhbmVsLS1ibG9ja1wiXHUwMDNlICAgIFx1MDAzY2gzIGlkPVwibGl2
+        ZS1leGFtcGxlc1wiXHUwMDNlTGl2ZSBleGFtcGxlc1x1MDAzYy9oM1x1MDAz
+        ZVx1MDAzY3VsXHUwMDNlICBcdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1c
+        Imh0dHA6Ly9jb21meS5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2FkbWlu
+        L3NpdGVzLzEvcGFnZXMvMzY5MC9Hb29nbGVcIiB0YXJnZXQ9XCJfYmxhbmtc
+        Ilx1MDAzZUdvb2dsZVx1MDAzYy9hXHUwMDNlXHUwMDNjL2xpXHUwMDNlICBc
+        dTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cImh0dHA6Ly9jb21meS5tb25l
+        eWFkdmljZXNlcnZpY2Uub3JnLnVrL2FkbWluL3NpdGVzLzEvcGFnZXMvMzY5
+        MC9Hb29nbGVcIiB0YXJnZXQ9XCJfYmxhbmtcIlx1MDAzZUdvb2dsZVx1MDAz
+        Yy9hXHUwMDNlXHUwMDNjL2xpXHUwMDNlXHUwMDNjL3VsXHUwMDNlICBcdTAw
+        M2MvZGl2XHUwMDNlXHUwMDNjL2Rpdlx1MDAzZVxuXHUwMDNjL2Rpdlx1MDAz
+        ZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTUtMDUtMThUMTE6MTQ6MTEuMDAwWiIs
+        InVwZGF0ZWRfYXQiOiIyMDE1LTA1LTE4VDExOjE0OjExLjAwMFoifV0sInRy
+        YW5zbGF0aW9ucyI6W3sibGFiZWwiOiJCdWRnZXQgUGxhbm5lciBTeW5kaWNh
+        dGlvbiIsImxpbmsiOiIvY3kvY29ycG9yYXRlL2J1ZGdldC1wbGFubmVyLXN5
+        bmRpY2F0aW9uIiwibGFuZ3VhZ2UiOiJjeSJ9XX0=
+    http_version: 
+  recorded_at: Fri, 22 May 2015 10:58:09 GMT
+recorded_with: VCR 2.9.2

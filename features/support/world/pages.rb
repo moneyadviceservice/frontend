@@ -12,6 +12,8 @@ module World
       action_plan
       category
       corporate
+      corporate_tool_directory
+      corporate_tool
       partners
       search_results
       static

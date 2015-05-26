@@ -1,0 +1,40 @@
+// Partnerships directory navigation component found on the Parternships homepage
+//
+// Styleguide Partnerships directory
+
+.directory--partnerships {
+  @include row(12);
+
+  .flexbox & {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
+
+.directory--partnerships .directory__description {
+  @extend %type-small;
+  display: block;
+}
+
+.directory--partnerships .directory__item {
+  @include column(12);
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      flex-basis: 46.49%;
+    }
+
+    @include respond-to($mq-l) {
+      flex-basis: 29.91%;
+    }
+  }
+}

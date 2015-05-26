@@ -253,3 +253,52 @@
     }
   }
 }
+
+// Promo partnerships
+
+.l-promo-partnerships {
+  @extend .clearfix;
+  @include row(12);
+  overflow: hidden;
+  position: relative;
+  margin-top: $baseline-unit*6;
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*7;
+  }
+
+  .flexbox & {
+    display: flex;
+    flex-flow: column;
+
+    @include respond-to($mq-s) {
+      flex-flow: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.l-promo-partnerships__item {
+  @include column(12);
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
+  min-height: 133px;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(3);
+  }
+
+  .flexbox & {
+    @include respond-to($mq-s) {
+      flex-basis: 46.49%;
+    }
+
+    @include respond-to($mq-l) {
+      flex-basis: 29.91%;
+    }
+  }
+}

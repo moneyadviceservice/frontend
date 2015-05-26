@@ -1,0 +1,58 @@
+// This block is used primarly with the partnership block snippet (outputted by Contento) but could be used anywhere
+// Styleguide Block
+
+.l-block {
+  @include row(12);
+  @extend %clearfix;
+  margin-bottom: $baseline-unit*4;
+}
+
+.l-block__media {
+  @include respond-to($mq-s) {
+    @include column(7);
+  };
+}
+
+.l-block__content {
+  @include respond-to($mq-s) {
+    @include column(5);
+  };
+}
+
+.l-block__content + .l-block__media,
+.l-block__media + .l-block__content {
+  @include respond-to($mq-s) {
+    float: right;
+  }
+}
+
+// The styles below are specific to Contento-managed content
+
+.editorial .l-block__content {
+  h3, h4, h5 {
+    @extend %type-callout;
+    margin: 0 0 $baseline-unit*2 0;
+  }
+}
+
+.editorial .l-block__content ul {
+  @extend %type;
+  @extend .unstyled-list;
+  margin: 0;
+}
+
+.editorial .l-block__content li {
+  margin-bottom: $baseline-unit;
+
+  &:before {
+    display: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.editorial .l-block__media img {
+  width: 100%;
+}

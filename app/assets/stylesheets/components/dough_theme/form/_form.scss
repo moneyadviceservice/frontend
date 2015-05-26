@@ -55,17 +55,23 @@
   }
 }
 
+.form__row--is-hidden {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
 .form__label-heading {
   display: block;
   padding-bottom: $baseline-unit*2;
 }
 
-
 .form__hint {
   font-size: 95%; // @TODO Make font-size into a placegolder
   margin: $baseline-unit*1 0 0;
 }
-
 
 .form__group-item {
   margin-bottom: $baseline-unit*2;
@@ -81,4 +87,8 @@
 
 .form__input-container .form__input:focus ~ .form__input-outline {
   @extend %form-input-focus-container
+}
+
+.form__input--small {
+  max-width: 80px;
 }

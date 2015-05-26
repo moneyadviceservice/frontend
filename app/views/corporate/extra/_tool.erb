@@ -1,0 +1,74 @@
+<%= form_for(@partner, class: 'form t-embed-form',
+                          data: { dough_component: 'EmbedCodeGenerator Validation' },
+                          html: { id: 'embed_code', novalidate: 'noValidate', },
+                          url: {action: 'create'},
+                          builder: Dough::Forms::Builders::Validation) do |f| %>
+
+  <%= f.validation_summary %>
+  <%= hidden_field_tag :id, article.id %>
+
+  <%= f.form_row :name do %>
+    <%= f.errors_for :name %>
+    <%= f.label :name, t('tool_page.form.name_label'), class: 'form__label-heading' %>
+    <%= f.text_field :name, class: 't-organisation form__input',
+    data: { dough_validation_empty: t('tool_page.form.name_empty_validation') }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+  <% end %>
+
+  <%= f.form_row :email do %>
+    <%= f.errors_for :email %>
+    <%= f.label :email, t('tool_page.form.email_label'), class: 'form__label-heading' %>
+    <%= f.email_field :email, class: 't-organisation-email form__input',
+    data: { dough_validation_empty: t('tool_page.form.email_empty_validation'), dough_validation_invalid: t('tool_page.form.email_invalid_validation') }, required: true, 'aria-required' => 'true', 'aria-invalid' => 'true', pattern: '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$' %>
+  <% end %>
+
+  <%= f.form_row :tool_language do %>
+    <fieldset class="form__group form__group--inline">
+      <legend><%= t('tool_page.form.language_legend') %></legend>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'tool_language', 'en', checked: true, class: 't-lang-en form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          <%= t('tool_page.form.language_label_en') %>
+        <% end %>
+      </div>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'tool_language', 'cy', class: 't-lang-cy form__group-input', data: {dough_embedcodegenerator_lang: true} %>
+          <%= t('tool_page.form.language_label_cy') %>
+        <% end %>
+      </div>
+  <% end %>
+
+  <%= f.form_row :tool_width_unit do %>
+    <fieldset class="form__group form__group--inline">
+      <legend><%= t('tool_page.form.width_legend') %></legend>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'tool_width_unit', 'px', class: 't-width-unit-px form__group-input', checked: true, data: {dough_embedcodegenerator_width_unit: 'pixels'} %>
+          <%= t('tool_page.form.width_value_px') %>
+        <% end %>
+      </div>
+      <div class="form__group-item">
+        <%= f.label nil do %>
+          <%= f.radio_button 'tool_width_unit', '%', class: 't-width-unit-percentage form__group-input', data: {dough_embedcodegenerator_width_unit: 'percentage'} %>
+          <%= t('tool_page.form.width_value_percentage') %>
+        <% end %>
+      </div>
+  <% end %>
+
+  <%= f.form_row :tool_width do %>
+    <%= f.errors_for :tool_width %>
+    <%= f.label :tool_width, t('tool_page.form.width_label'), class: 'form__label-heading' %>
+    <%= f.text_field :tool_width, class: 't-width form__input form__input--small',
+      data: { dough_embedcodegenerator_width: true, dough_validation_empty: t('tool_page.form.width_validation_empty'), dough_validation_invalid: t('tool_page.form.width_validation_invalid') }, min: 1, max: '999999', maxlength: 6, pattern: '\d*', required: true, 'aria-required' => 'true', 'aria-invalid' => 'true' %>
+  <% end %>
+
+  <div class="form__row">
+    <%= f.submit t('corporate.partnerships.syndication.submit'), class: 't-submit-embed button button--small button--primary', data: { dough_embedcodegenerator_submit: true } %>
+  </div>
+
+  <% if flash[:partner] %>
+    <div class="form__row" data-dough-embedcodegenerator-target-container>
+      <pre class="code"><code class="code__content code__content--wrapped t-embed-code" data-dough-embedcodegenerator-target aria-live="polite"><%= render(partial: 'tools/embed_code', locals: { partner: flash[:partner] }).to_str %></code></pre>
+    </div>
+  <% end %>
+<% end %>

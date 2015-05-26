@@ -34,7 +34,10 @@ en:
   tool_page:
     form:
       name_label: Organisation
+      name_empty_validation: You must enter an organisation
       email_label: Email address
+      email_empty_validation: You must enter an email address
+      email_invalid_validation: You must enter a valid email address
       language_legend: Language
       language_label_en: English
       language_label_cy: Welsh
@@ -42,4 +45,6 @@ en:
       width_value_px: px (pixels)
       width_value_percentage: "% (percentage)"
       width_label: Width
+      width_validation_empty: You must enter a number
+      width_validation_invalid: You must enter a valid number, e.g. 75
       success_flash: Thanks for partnering with us!

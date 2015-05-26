@@ -77,6 +77,20 @@ ActiveRecord::Schema.define(version: 20150522102637) do
     t.datetime "updated_at",                             null: false
   end
 
+  create_table "advice_plans_advice_plans", force: true do |t|
+    t.string   "code",                         null: false
+    t.boolean  "current",      default: false, null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "advice_plans_advice_plans_tasks", id: false, force: true do |t|
+    t.integer "advice_plan_id", null: false
+    t.integer "task_id",        null: false
+  end
+
   create_table "advice_plans_plans", force: true do |t|
     t.string   "code",                             null: false
     t.boolean  "current",      default: false,     null: false
@@ -116,6 +130,7 @@ ActiveRecord::Schema.define(version: 20150522102637) do
     t.string   "deadline_name"
     t.boolean  "email",             default: true
     t.string   "started_plan_slug"
+    t.date     "due_date"
   end
 
   add_index "advice_plans_tasks", ["code"], name: "index_advice_plans_tasks_on_code", using: :btree
@@ -183,6 +198,8 @@ ActiveRecord::Schema.define(version: 20150522102637) do
     t.string  "token"
     t.integer "annual_mileage"
     t.integer "intended_ownership_term"
+    t.integer "registration_year"
+    t.decimal "maintenance_cost",        precision: 10, scale: 0
   end
 
   add_index "car_cost_tool_user_data", ["token"], name: "index_car_cost_tool_user_data_on_token", unique: true, using: :btree
@@ -240,6 +257,11 @@ ActiveRecord::Schema.define(version: 20150522102637) do
 
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "debt_advice_locator_organisation_awards", force: true do |t|
+    t.integer "organisation_standard_id"
+    t.integer "organisation_id"
+  end
 
   create_table "debt_advice_locator_organisation_standards", force: true do |t|
     t.string "name"

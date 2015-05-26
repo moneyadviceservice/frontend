@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/corporate-home.json
+    uri: http://localhost:3000/en/corporate/sample-tool-syndication.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (DavidKewal000769.local; dkewal; 11690) ruby/2.1.2 (95;
+      - Mas-Responsive/1.0 (DavidKewal000769.local; dkewal; 12258) ruby/2.1.2 (95;
         x86_64-darwin13.0)
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -16,8 +16,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: 'OK '
+      code: 404
+      message: 'Not Found '
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -27,25 +27,23 @@ http_interactions:
       - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - '"44cf1a0cac40880587815deaf630d47a"'
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - e1a7411e-a05e-48eb-89e7-b6b528e8c0ff
+      - 51347296-4195-4fd4-b165-f79b67167692
       X-Runtime:
-      - '0.032165'
+      - '0.028376'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Tue, 26 May 2015 13:35:15 GMT
+      - Tue, 26 May 2015 13:36:51 GMT
       Content-Length:
-      - '165'
+      - '28'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"id":"corporate-home","type":"category","title":"Corporate home","description":null,"parent_id":"corporate-categories","third_level_navigation":false,"contents":[]}'
+      string: '{"message":"Page not found"}'
     http_version: 
-  recorded_at: Tue, 26 May 2015 13:35:15 GMT
+  recorded_at: Tue, 26 May 2015 13:36:51 GMT
 recorded_with: VCR 2.9.2

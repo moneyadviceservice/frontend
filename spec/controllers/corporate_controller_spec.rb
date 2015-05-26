@@ -1,4 +1,4 @@
-RSpec.describe CorporateController, type: :controller, features: [:corporate] do
+RSpec.describe CorporateController, type: :controller, features: [:corporate_tool_directory] do
   let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
   let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
   let(:category_tree) { double.as_null_object }
@@ -66,8 +66,8 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
   end
 
   describe 'POST create' do
-    let(:tool) { instance_double(Core::Article, id: "#{valid_partner[:tool_name].downcase.strip.gsub(' ', '-')}-syndication", categories: [syndication_category]) }
-    let(:valid_partner)   { FactoryGirl.attributes_for(:corporate_partner) }
+    let(:tool) { instance_double(Core::Article, id: "#{valid_partner[:tool_name]}", categories: [syndication_category]) }
+    let(:valid_partner)   { FactoryGirl.attributes_for(:corporate_partner, tool_name: 'budget-planner-syndication') }
     let(:invalid_partner) { { name: 2323, width: 'sasd' } }
 
     context 'with valid attributes' do
@@ -83,11 +83,7 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
     end
 
     context 'with invalid attributes' do
-      before do
-        allow(Core::CorporateReader).to receive(:new).with(tool.id) do
-          instance_double(Core::CorporateReader, call: tool)
-        end
-      end
+
 
       it 'does not save the new partner' do
         expect do

@@ -72,14 +72,15 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
 
     context 'with valid attributes' do
       it 'creates a new partner' do
-        expect{
+        expect do
           post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
-        }.to change(CorporatePartner, :count).by(1)
+        end.to change(CorporatePartner, :count).by(1)
       end
 
       it 'responds successfuly' do
         expect(response).to be_ok
       end
+    end
 
     context 'with invalid attributes' do
       before do
@@ -89,15 +90,14 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate] do
       end
 
       it 'does not save the new partner' do
-        expect{
+        expect do
           post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
-        }.to_not change(CorporatePartner,:count)
+        end.to_not change(CorporatePartner,:count)
       end
 
       it 're-renders the corporate tool page' do
         post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
         expect(response).to render_template('corporate/show')
-      end
       end
     end
   end

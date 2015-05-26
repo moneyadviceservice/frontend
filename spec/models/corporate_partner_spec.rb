@@ -1,7 +1,5 @@
 RSpec.describe CorporatePartner, type: :model do
-  before { @partner = create(:corporate_partner) }
-
-  subject { @partner }
+  subject { create(:corporate_partner) }
 
   it { is_expected.to respond_to(:name) }
   it { is_expected.to respond_to(:email) }

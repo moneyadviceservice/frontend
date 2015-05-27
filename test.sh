@@ -15,7 +15,7 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 bundle install --jobs $BUNDLE_JOBS
 bower cache clean
 rm -rf vendor/assets/bower_components
-bowndler install --production --config.interactive=false
+bowndler update --production --config.interactive=false
 
 RAILS_ENV=development rake karma:install karma:run_once
 bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt

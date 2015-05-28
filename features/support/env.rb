@@ -90,5 +90,9 @@ Before do
   Core::Registry::Repository[:customer].clear
 end
 
+Before('@export-corporate-partners') do
+  create(:corporate_partner)
+end
+
 Capybara.javascript_driver = :poltergeist
 Capybara.default_wait_time = 20

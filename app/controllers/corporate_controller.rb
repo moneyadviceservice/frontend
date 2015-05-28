@@ -40,7 +40,7 @@ class CorporateController < ArticlesController
     send_data csv,
               type: 'text/csv; charset=iso-8859-1; header=present',
               disposition: 'attachment',
-              filename: "corporate_partners-#{Date.today}.csv"
+              filename: "corporate_partners-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
   end
 
   private

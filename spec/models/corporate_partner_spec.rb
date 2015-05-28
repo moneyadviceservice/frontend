@@ -56,23 +56,38 @@ RSpec.describe CorporatePartner, type: :model do
 
     it { is_expected.to be_valid }
 
-    describe '#tool_id' do
-      it 'should return a hyphanated version of the tool name' do
-        expect(subject.tool_id).to eq('sample-tool')
-      end
+  end
+
+  describe '#tool_id' do
+    it 'should return a hyphanated version of the tool name' do
+      expect(subject.tool_id).to eq('sample-tool')
+    end
+  end
+
+  describe '#tool_slug' do
+    it 'should return a slug of the tool' do
+      expect(subject.tool_slug).to eq('sample-tool-syndication')
+    end
+  end
+
+  describe '#total_tool_width' do
+    it 'should the full width with units' do
+      expect(subject.total_tool_width).to eq('500px')
+    end
+  end
+
+  describe '.to_csv' do
+    before do
+      create(:corporate_partner)
+      @csv = CSV.parse(CorporatePartner.all.to_csv)
     end
 
-    describe '#tool_slug' do
-      it 'should return a slug of the tool' do
-        expect(subject.tool_slug).to eq('sample-tool-syndication')
-      end
+    it 'sets the correct csv headers' do
+      expect(@csv.first).to eq(['id', 'name', 'email', 'tool_name', 'tool_language', 'tool_width_unit', 'tool_width'])
     end
 
-    describe '#total_tool_width' do
-      it 'should the full width with units' do
-        expect(subject.total_tool_width).to eq('500px')
-      end
+    it 'exports all corporate partners' do
+      expect(@csv.length).to eq(2)
     end
-
   end
 end

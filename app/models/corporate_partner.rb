@@ -16,4 +16,16 @@ class CorporatePartner < ActiveRecord::Base
   def total_tool_width
     tool_width.to_s + tool_width_unit
   end
+
+  def self.to_csv
+    attributes = %w(id name email tool_name tool_language tool_width_unit tool_width)
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |corporate_partner|
+        csv << attributes.map { |attr| corporate_partner.send(attr) }
+      end
+    end
+  end
 end

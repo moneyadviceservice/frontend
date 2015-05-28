@@ -34,6 +34,15 @@ class CorporateController < ArticlesController
     end
   end
 
+  def export_partners
+    @corporate_partners = CorporatePartner.all
+    csv = @corporate_partners.to_csv
+    send_data csv,
+              type: 'text/csv; charset=iso-8859-1; header=present',
+              disposition: 'attachment',
+              filename: "corporate_partners-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
+  end
+
   private
 
   def retrieve_corporate_category

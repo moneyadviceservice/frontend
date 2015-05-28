@@ -1,5 +1,6 @@
 require_relative 'boot'
 
+require 'csv'
 require 'action_mailer/railtie'
 require 'action_controller/railtie'
 require 'action_view/railtie'

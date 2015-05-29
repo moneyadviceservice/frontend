@@ -80,7 +80,7 @@
   }
 
   @include respond-to($mq-m) {
-    @include body(42, 56);
+    @include body(42, 48);
 
     .theme-cy & {
       max-width: 600px;

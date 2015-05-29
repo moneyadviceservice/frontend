@@ -202,9 +202,8 @@
   display: none;
 
   @include respond-to($mq-m) {
-    @include paragraph(16, 24);
+    @include paragraph(14, 24);
     border-left: 1px solid rgb(255,255,255);
-    border-left: 1px solid rgba(255,255,255,.3);
     color: $color-white;
     font-weight: 500;
     display: inline-block;
@@ -212,7 +211,7 @@
     margin-top: $baseline-unit*4;
     padding-left: $baseline-unit*3;
     position: absolute;
-    bottom: 12px;
+    bottom: 14px;
 
     .theme-cy & {
       padding-left: $baseline-unit;

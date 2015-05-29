@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522102637) do
+ActiveRecord::Schema.define(version: 20150528155455) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -264,7 +264,8 @@ ActiveRecord::Schema.define(version: 20150522102637) do
   end
 
   create_table "debt_advice_locator_organisation_standards", force: true do |t|
-    t.string "name"
+    t.string  "name"
+    t.boolean "free", default: true
   end
 
   create_table "debt_advice_locator_organisations", force: true do |t|
@@ -293,6 +294,7 @@ ActiveRecord::Schema.define(version: 20150522102637) do
     t.string   "website_address_text"
     t.string   "notes_cy"
     t.integer  "debt_advice_locator_organisation_standard_id"
+    t.boolean  "display_in_accredited_list",                              default: false
   end
 
   add_index "debt_advice_locator_organisations", ["lat", "lng"], name: "dal_organisations_lat_lng", using: :btree

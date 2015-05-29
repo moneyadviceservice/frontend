@@ -7,14 +7,12 @@
   background-size: 100%;
   padding-bottom: 50%;
   position: relative;
-
   @if $responsive {
     background-image: image-url("retirement_shop_en.png");
   }
 
   .theme-cy & {
     background-image: image-url("retirement_shop_small_cy.png");
-
     @if $responsive {
       background-image: image-url("retirement_shop_cy.png");
     }
@@ -29,7 +27,6 @@
   @include respond-to($mq-l) {
     background-position: 150% 100%;
     background-size: 54%;
-
     @if $responsive {
       background-position: 107% 100%;
     }
@@ -47,10 +44,10 @@
 
 .home-top-trust {
   position: relative;
+  margin-top: $baseline-unit*7;
+  margin-bottom:  $baseline-unit*7;
 
   @include respond-to($mq-xl) {
-    position: absolute;
-    top: 0;
     width: 1000px;
   }
 }
@@ -58,10 +55,10 @@
 .home-top__image {
   @include respond-to($mq-xl) {
     background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
-    background-size: 49%;
-    height: 309px;
+    background-size: 46%;
+    height: 345px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     width: 1350px;
 
     .theme-cy & {
@@ -74,17 +71,16 @@
   @extend %font-heading-heavy;
   @include body(36, 42);
   color: $color-heading-extra-small;
-  letter-spacing: -1.5px;
   margin: 0;
-  padding-bottom: $baseline-unit*5;
-  padding-top: $baseline-unit*5;
+  padding-bottom: $baseline-unit*7;
+  padding-top: 0;
 
   @include respond-to($mq-small-tablet, $mq-small-tablet-end) {
     max-width: 500px;
   }
 
   @include respond-to($mq-m) {
-    @include body(48, 54);
+    @include body(42, 48);
 
     .theme-cy & {
       max-width: 600px;
@@ -100,7 +96,7 @@
   }
 
   @include respond-to($mq-xl) {
-    max-width: 700px;
+    max-width: 620px;
 
     .theme-cy & {
       max-width: 750px;
@@ -159,7 +155,7 @@
 .home-top-promo__text {
   @extend %font-heading-heavy;
   @include body(22, 30);
-  background: $color-true-black;
+  background: rgba(0,0,0,0.8);
   border-radius: 6px;
   margin: 0 $baseline-unit*3;
   max-width: 400px;

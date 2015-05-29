@@ -11,15 +11,16 @@
     @include column(4);
     margin-bottom: $baseline-unit*3;
     margin-top: $baseline-unit*3;
+    position: relative;
 
     @include respond-to($mq-small-tablet) {
-      @include column(10);
       margin-bottom: $baseline-unit*3;
-      margin-top: 0;
-      vertical-align: top;
     }
 
     @include respond-to($mq-m) {
+      @include column(10);
+      vertical-align: top;
+      margin-top: 12px;
       margin-bottom: $baseline-unit*2;
     }
 
@@ -200,15 +201,17 @@
 .l-header__strapline {
   display: none;
 
-  @include respond-to($mq-small-tablet) {
-    @include paragraph(16, 24);
+  @include respond-to($mq-m) {
+    @include paragraph(14, 24);
     border-left: 1px solid rgb(255,255,255);
-    border-left: 1px solid rgba(255,255,255,.3);
     color: $color-white;
+    font-weight: 500;
     display: inline-block;
     margin-bottom: 0;
     margin-top: $baseline-unit*4;
     padding-left: $baseline-unit*3;
+    position: absolute;
+    bottom: 14px;
 
     .theme-cy & {
       padding-left: $baseline-unit;

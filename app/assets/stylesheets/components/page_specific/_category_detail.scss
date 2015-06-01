@@ -1,7 +1,8 @@
 .category-detail {
   border-bottom: $default-border-thin;
   margin-bottom: $baseline-unit*6;
-  padding-bottom: $baseline-unit*4;
+  padding-bottom: $baseline-unit*8;
+  position: relative;
 
   &:last-child {
     @include respond-to(0, $mq-m) {
@@ -15,6 +16,53 @@
   padding: 0;
   margin-top: $baseline-unit*4;
   margin-bottom: 0;
+}
+
+.editorial .category-detail__list--extended.collapsible-section {
+  padding: 0;
+  border: 0;
+}
+
+.category-detail__view-more {
+  display: none;
+
+  .js & {
+    @include body(18, 24);
+    display: inline-block;
+    background: $color-grey-very-light;
+    color: $color-link-default;
+    padding: 8px 18px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: $baseline-unit*7;
+    user-select: none;
+
+    & .collapsable__trigger-icon {
+      @extend .icon--plus--blue;
+      position: absolute;
+      top: 10px;
+      left: 12px;
+    }
+
+    & .is-active .collapsable__trigger-icon {
+      @extend .icon--minus--blue;
+    }
+  }
+}
+
+.category-detail__view-more__label-more {
+  .is-active & {
+    display: none;
+  }  
+}
+
+.category-detail__view-more__label-less {
+  display: none;
+
+  .is-active & {
+    display: inline;
+  }
 }
 
 .category-detail__list-item {
@@ -31,36 +79,38 @@
 
 .category-detail__view-all {
   display: none;
-  color: $color-link-default;
-  cursor: pointer;
-
+  
   .js & {
-    display: block;
+    @include body(18, 24);
+    color: $color-link-default;
+    display: inline;
   }
 
   &:hover,
   &:focus {
     outline: none;
-    color: $color-link-default;
     text-decoration: underline;
   }
 
-  &.is-off{
+  &.is-on{
     display: none;
   }
 }
 
-.category-detail__heading {
-  @extend %collapsable-trigger;
-}
-
 .category-detail__list-container {
-  @extend %collapsable-target;
+  .js & {
+    display: none;
+  }
+
+  &.is-active {
+    display: block;
+  }
 }
 
 .js .category-detail__heading {
   position: relative;
   padding-left: $category-inset;
+  user-select: none;
 
   button {
     margin-left: -$category-inset;
@@ -74,16 +124,16 @@
     }
   }
 
-  & .icon--toggle {
+  & .collapsable__trigger-icon {
     @extend .icon--plus;
     position: absolute;
     top: 6px;
     left: 0;
   }
 
-  &.is-on .icon--toggle {
+  & .is-active .collapsable__trigger-icon {
     @extend .icon--minus;
-  }
+  }  
 }
 
 .js .category-detail__intro,

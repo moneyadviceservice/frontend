@@ -1,0 +1,57 @@
+// Category level pages
+
+.l-category__top {
+  border-bottom: 1px solid $color-grey-very-light;
+  color: $color-true-black;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.l-category--image {
+  background-position: right 10px;
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  padding-bottom: 60px;
+
+  @include respond-to($mq-s) {
+    background-position: right 70px;
+  }  
+}
+
+p.l-category__top__intro {
+  @extend %type-large;
+}
+
+.l-category__top__intro {
+  display: none;
+
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}
+
+.l-category__top__link-list-heading {
+  @extend %heading-smaller;
+}
+
+.l-category--image .l-category__top__content {
+  width: 60%;
+}
+
+.l-category--image .l-category__top {
+  @include respond-to($mq-s) {
+    min-height: 300px;
+  }  
+
+  @include respond-to($mq-l) {
+    min-height: 400px;
+  }  
+}
+
+// Icons
+
+.svg-icon--plus--blue {
+  width: 16px; 
+  height: 16px; 
+  fill: $color-yellow-dark;
+}

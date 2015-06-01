@@ -20,10 +20,22 @@ class CategoryDecorator < Draper::Decorator
     partial = if object.parent?
                 'child_categories'
               elsif object.child?
-                'content_items'
+                'content_items_all'
               end
 
     h.render partial, contents: contents
+  end
+
+  def large_image?
+    object.images.present? && object.images['large'].present?
+  end
+
+  def small_image?
+    object.images.present? && object.images['small'].present?
+  end
+
+  def images?
+    large_image? && small_image?
   end
 
   def related_links_title

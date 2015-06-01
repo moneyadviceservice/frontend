@@ -261,11 +261,6 @@
   @include row(12);
   overflow: hidden;
   position: relative;
-  margin-top: $baseline-unit*6;
-
-  @include respond-to($mq-l) {
-    margin-top: $baseline-unit*7;
-  }
 
   .flexbox & {
     display: flex;

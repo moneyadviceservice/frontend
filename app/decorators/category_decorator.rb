@@ -26,6 +26,18 @@ class CategoryDecorator < Draper::Decorator
     h.render partial, contents: contents
   end
 
+  def large_image?
+    object.images.present? && object.images['large'].present?
+  end
+
+  def small_image?
+    object.images.present? && object.images['small'].present?
+  end
+
+  def images?
+    large_image? && small_image?
+  end
+
   def related_links_title
     return if object.contents.blank?
 

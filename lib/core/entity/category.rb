@@ -34,11 +34,8 @@ module Core
         title: title,
         description: description,
         contents: contents,
-<<<<<<< HEAD
-        links: links
-=======
+        links: links,
         images: images
->>>>>>> 8f169cc... use category images from cms
       }
     end
   end

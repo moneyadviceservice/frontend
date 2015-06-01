@@ -37,6 +37,7 @@ require.config({
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 
+    utilities: 'vendor/assets/bower_components/dough/assets/js/lib/utilities',
     componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',
     RangeInput: 'vendor/assets/bower_components/dough/assets/js/components/RangeInput',
     TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector'

@@ -57,8 +57,10 @@
     background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
     background-size: 46%;
     height: 345px;
-    margin: 0 auto;
+    left: 50%;
+    margin-left: -675px;
     position: absolute;
+    top: 0;
     width: 1350px;
 
     .theme-cy & {

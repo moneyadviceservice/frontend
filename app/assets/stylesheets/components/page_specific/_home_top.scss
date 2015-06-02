@@ -54,14 +54,10 @@
 
 .home-top__image {
   @include respond-to($mq-xl) {
+    @include absolutely-centre-horizontally(1350px);
     background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
     background-size: 46%;
     height: 345px;
-    left: 50%;
-    margin-left: -675px;
-    position: absolute;
-    top: 0;
-    width: 1350px;
 
     .theme-cy & {
       background-image: image-url("retirement_shop_cy.png");

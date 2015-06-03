@@ -8,7 +8,7 @@ class TechnicalFeedbackController < ApplicationController
       render :new and return
     end
 
-    redirect_to session.delete(:return_to), success: t('.flash_notice')
+    redirect_to session.delete(:return_to) || root_path, success: t('.flash_notice')
   end
 
   private

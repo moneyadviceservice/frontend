@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/' => redirect('/en')
 
+  get '/robots', to: 'sitemap#robots'
+
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 

@@ -3,7 +3,7 @@ RSpec.describe SitemapController, type: :controller do
     it 'renders robot text file' do
       get :robots
 
-      expect(response).to be_success
+      expect(response).to render_template 'sitemap/robots.text.erb'
     end
   end
 

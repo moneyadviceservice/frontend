@@ -63,6 +63,18 @@ RSpec.describe TechnicalFeedbackController, type: :controller do
       end
     end
 
+    context 'with no return_path' do
+      before do
+        session[:return_to] = nil
+      end
+
+      it 'redirects to root' do
+        post :create, locale: I18n.locale
+
+        expect(response).to redirect_to(root_path(locale: I18n.locale))
+      end
+    end
+
     context 'when the writer call is not successful' do
       before { allow(feedback_writer).to receive(:call).and_yield }
 

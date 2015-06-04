@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/' => redirect('/en')
 
-  match '/robots', to: 'sitemap#robots', via: :get
+  get '/robots', to: 'sitemap#robots'
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'

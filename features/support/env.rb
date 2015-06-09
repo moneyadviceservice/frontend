@@ -2,6 +2,7 @@ ENV['RAILS_ENV']  = 'test'
 ENV['RAILS_ROOT'] = File.expand_path('../../../', __FILE__)
 
 require 'cucumber/rails'
+require 'cucumber/rspec/doubles'
 require 'capybara'
 require 'capybara/poltergeist'
 require 'site_prism'
@@ -92,6 +93,12 @@ end
 
 Before('@export-corporate-partners') do
   create(:corporate_partner)
+end
+
+Before('@auth-required') do
+  allow(Authenticable).to receive(:username)  { ENV['AUTH_USERNAME'] }
+  allow(Authenticable).to receive(:password)  { ENV['AUTH_PASSWORD'] }
+  allow(Authenticable).to receive(:required?) { true }
 end
 
 Capybara.javascript_driver = :poltergeist

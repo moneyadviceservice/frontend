@@ -1,3 +1,9 @@
+<h2 id="get-this-tool" role="heading" aria-level="2">
+  <%= t('tool_page.form.heading') %>
+</h2>
+<p>
+  <%= t('tool_page.form.subheading') %> <%= link_to t('tool_page.form.subheading_terms_link_url') do %><%= t('tool_page.form.subheading_terms_link_content') %><% end %>.
+</p>
 <%= form_for(@partner, class: 'form t-embed-form',
                           data: { dough_component: 'EmbedCodeGenerator Validation' },
                           html: { id: 'embed_code', novalidate: 'noValidate', },
@@ -67,6 +73,10 @@
   </div>
 
   <% if flash[:partner] %>
+    <h2 id="your-embed-code" role="heading" aria-level="2">
+      <%= t('tool_page.embed_code.heading') %>
+    </h2>
+    <p><%= t('tool_page.embed_code.subheading') %></p>
     <div class="form__row" data-dough-embedcodegenerator-target-container>
       <pre class="code"><code class="code__content code__content--wrapped t-embed-code" data-dough-embedcodegenerator-target aria-live="polite"><%= render(partial: 'tools/embed_code', locals: { partner: flash[:partner] }).to_str %></code></pre>
     </div>

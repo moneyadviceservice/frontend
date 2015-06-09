@@ -23,7 +23,7 @@ class CorporateController < ArticlesController
     if @partner.save
       flash[:success] = t('tool_page.form.success_flash')
       flash[:partner] = @partner
-      redirect_to corporate_path(@partner.tool_slug)
+      redirect_to corporate_path(@partner.tool_slug, anchor: 'your-embed-code')
     else
       @article = interactor.call
       retrieve_corporate_category

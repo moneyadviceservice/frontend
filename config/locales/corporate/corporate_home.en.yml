@@ -24,15 +24,22 @@ en:
       heading: Our popular tools
       tool_one_heading: Pension Calculator
       tool_one_content: This tool helps users work out what income they may have when they reach retirement.
+      tool_one_url: /en/corporate/pensions-calculator-syndication
       tool_two_heading: Budget Planner
       tool_two_content: The Budget Planner helps users track their income and outgoings. It also helps them plan for unexpected bills.
+      tool_two_url: /en/corporate/budget-planner-syndication
       tool_three_heading: Mortgage Affordability Calculator
       tool_three_content: Tells users how much they can afford to borrow to buy a home.
+      tool_three_url: /en/corporate/mortgage-affordability-calculator-syndication
     all_tools:
       heading: All tools
       description: Some of our tools are available in english and welsh.
   tool_page:
     form:
+      heading: Get this tool
+      subheading: By using our embed code, you agree to our
+      subheading_terms_link_content: terms & conditions
+      subheading_terms_link_url: /en/corporate/syndication-terms
       name_label: Organisation
       name_empty_validation: You must enter an organisation
       email_label: Email address
@@ -48,3 +55,6 @@ en:
       width_validation_empty: You must enter a number
       width_validation_invalid: You must enter a valid number, e.g. 75
       success_flash: Thanks for partnering with us!
+    embed_code:
+      heading: Your embed code
+      subheading: Thanks for partnering with us! Please copy the embed code below.

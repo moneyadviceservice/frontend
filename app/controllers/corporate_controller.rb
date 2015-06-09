@@ -1,4 +1,5 @@
 class CorporateController < ArticlesController
+  before_action :authenticate, if: -> { Authenticable.required? }, only: :export_partners
   decorates_assigned :article, with: CorporateDecorator
   decorates_assigned :category, with: CorporateCategoryDecorator
 
@@ -71,5 +72,11 @@ class CorporateController < ArticlesController
 
   def tool_friendly_name
     params[:id].split('-').take(2).join(' ').humanize
+  end
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      Authenticable.authenticate(username, password)
+    end
   end
 end

@@ -96,8 +96,10 @@ Before('@export-corporate-partners') do
 end
 
 Before('@auth-required') do
-  allow(Authenticable).to receive(:username)  { ENV['AUTH_USERNAME'] }
-  allow(Authenticable).to receive(:password)  { ENV['AUTH_PASSWORD'] }
+  @username = 'admin'
+  @password = 'password'
+  allow(Authenticable).to receive(:username)  { @username }
+  allow(Authenticable).to receive(:password)  { @password }
   allow(Authenticable).to receive(:required?) { true }
 end
 

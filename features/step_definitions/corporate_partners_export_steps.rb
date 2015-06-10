@@ -1,9 +1,9 @@
 When(/^I authenticate with valid credentials$/) do
-  page.driver.browser.basic_authorize(ENV['AUTH_USERNAME'], ENV['AUTH_PASSWORD'])
+  page.driver.browser.basic_authorize(@username, @password)
 end
 
 When(/^I authenticate with invalid credentials$/) do
-  page.driver.browser.basic_authorize(ENV['AUTH_USERNAME'], ENV['AUTH_PASSWORD'].reverse)
+  page.driver.browser.basic_authorize(@username, @password.reverse)
 end
 
 When(/^I visit the export corporate partners url$/) do

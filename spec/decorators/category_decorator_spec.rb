@@ -13,6 +13,7 @@ RSpec.describe CategoryDecorator do
   it { is_expected.to respond_to(:contents) }
   it { is_expected.to respond_to(:canonical_url) }
   it { is_expected.to respond_to(:alternate_options) }
+  it { is_expected.to respond_to(:images) }
 
   describe '#alternate_options' do
     let(:locale) { double }

@@ -7,11 +7,12 @@ module Core
         title:       double,
         parent_id:   double,
         description: double,
-        contents:    double
+        contents:    double,
+        links:       double
       }
     end
 
-    it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents) }
+    it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents, :links) }
     it { is_expected.to validate_presence_of(:title) }
 
     specify { expect(subject).to_not be_home }

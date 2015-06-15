@@ -12,6 +12,13 @@
     <main class="l-main__cell-single" role="main">
       <%= heading_tag category.title %>
       <p class="intro"><%= category.description %></p>
+
+      <% category.category_promos.each do |promo| %>
+        <p><%= promo['promo_type'].humanize %></p>
+        <p><%= link_to promo['title'], promo['url'] %></p>
+        <p><%= promo['description'] %></p>
+      <% end %>
+
       <%= category.render_contents %>
     </main>
   </div>

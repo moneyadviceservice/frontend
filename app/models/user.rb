@@ -58,12 +58,6 @@ class User < ActiveRecord::Base
     invited_by_id.present?
   end
 
-  def update_goal!(statement, deadline)
-    self[:goal_statement] = statement
-    self[:goal_deadline] = deadline
-    save!
-  end
-
   def send_devise_notification(notification, *args)
     devise_mailer.delay(queue: 'frontend_email').send(notification, self, *args)
   end

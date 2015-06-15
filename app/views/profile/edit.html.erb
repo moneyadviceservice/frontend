@@ -9,25 +9,6 @@
       <% end %>
     </ul>
   </div>
-  <div class="l-profile__your-goal">
-    <h2><%= t('.goal.heading') %></h2>
-    <p><%= t('.goal.introduction') %></p>
-    <%= form_for current_user, html: {id: 'goal_form', class: 'form l-profile__your-goal__form'}, url: profile_path, method: :put do |f| %>
-      <fieldset class="form__group">
-        <div class="form__row">
-          <label class="form__label-heading" for="goal_statement" ><%= t('.goal.statement_field_label') %></label>
-          <input id="goal_statement" type="text" name="goal_statement" value="<%= current_user.goal_statement %>">
-        </div>
-        <div class="form__row">
-          <label class="form__label-heading" for="goal_deadline"><%= t('.goal.deadline_field_label') %></label>
-          <input id="goal_deadline" type="text" name="goal_deadline" value="<%= current_user.goal_deadline%>">
-        </div>
-      </fieldset>
-      <div class="form__group form__group--last">
-        <input class="button button--primary" type="submit" value="<%= t('.goal.save_button_text') %>">
-      </div>
-    <% end %>
-  </div>
   <div class="l-profile__your-tools">
     <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('saved_tools.heading') %>
     </h2>

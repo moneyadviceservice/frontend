@@ -1,6 +1,6 @@
 module Core
   class Category < Entity
-    attr_accessor :type, :parent_id, :title, :description, :contents, :third_level_navigation, :images, :links
+    attr_accessor :type, :parent_id, :title, :description, :contents, :third_level_navigation, :images, :links, :category_promos
     validates_presence_of :title
 
     def third_level_navigation?

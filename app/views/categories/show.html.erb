@@ -15,6 +15,11 @@
       <% category.links.each do |link| %>
         <%= link_to link['text'], link['url'] %>
       <% end %>
+      <% category.category_promos.each do |promo| %>
+        <p><%= promo['promo_type'].humanize %></p>
+        <p><%= link_to promo['title'], promo['url'] %></p>
+        <p><%= promo['description'] %></p>
+      <% end %>
       <%= category.render_contents %>
     </main>
   </div>

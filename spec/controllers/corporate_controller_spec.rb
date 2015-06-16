@@ -83,8 +83,6 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
     end
 
     context 'with invalid attributes' do
-
-
       it 'does not save the new partner' do
         expect do
           post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
@@ -95,6 +93,17 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
         post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
         expect(response).to render_template('corporate/show')
       end
+    end
+  end
+
+  describe 'tool friendly name' do
+    it 'formats the slug correctly' do
+      allow(subject).to receive(:params) do
+        { id: 'my-long-tool-name-syndication' }
+      end
+
+      result = subject.send(:tool_friendly_name);
+      expect(result).to eq('My long tool name')
     end
   end
 end

@@ -71,7 +71,7 @@ class CorporateController < ArticlesController
   end
 
   def tool_friendly_name
-    params[:id].split('-').take(2).join(' ').humanize
+    params[:id].chomp('-syndication').gsub('-', ' ').humanize
   end
 
   def authenticate

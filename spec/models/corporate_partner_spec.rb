@@ -59,14 +59,14 @@ RSpec.describe CorporatePartner, type: :model do
   end
 
   describe '#tool_id' do
-    it 'should return a hyphenated version of the tool name' do
-      expect(subject.tool_id).to eq('sample-tool')
+    it 'should return an underscored version of the tool name' do
+      expect(subject.tool_id).to eq('sample_tool')
     end
   end
 
   describe '#tool_slug' do
-    it 'should return a slug of the tool' do
-      expect(subject.tool_slug).to eq('sample-tool-syndication')
+    it 'should return a hyphenated version of the tool name' do
+      expect(subject.tool_slug).to eq('sample-tool')
     end
   end
 

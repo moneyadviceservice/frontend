@@ -6,11 +6,11 @@ class CorporatePartner < ActiveRecord::Base
   validates :tool_width, numericality: { only_integer: true, greater_than: 0 }
 
   def tool_id
-    tool_name.downcase.gsub(' ', '-')
+    tool_name.downcase.gsub(' ', '_')
   end
 
   def tool_slug
-    tool_id + '-syndication'
+    tool_name.downcase.gsub(' ', '-')
   end
 
   def total_tool_width

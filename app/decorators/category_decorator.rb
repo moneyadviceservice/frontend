@@ -1,6 +1,6 @@
 class CategoryDecorator < Draper::Decorator
   decorates_association :contents, with: CategoryContentDecorator
-  delegate :title, :description, :id, :parent_id, :links, :images
+  delegate :title, :description, :id, :parent_id, :links, :images, :category_promos
 
   def path
     h.category_path(object.id)

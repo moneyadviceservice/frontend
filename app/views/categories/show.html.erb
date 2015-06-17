@@ -38,6 +38,13 @@
         </div>
         <%= render 'top_links', category: category unless category.links.empty? %>
       </div>
+
+      <% category.category_promos.each do |promo| %>
+        <p><%= promo['promo_type'].humanize %></p>
+        <p><%= link_to promo['title'], promo['url'] %></p>
+        <p><%= promo['description'] %></p>
+      <% end %>
+
       <%= category.render_contents %>
     </main>
   </div>

@@ -9,11 +9,12 @@ module Core
         description: double,
         contents:    double,
         links:       double,
-        images:      double
+        images:      double,
+        category_promos: double
       }
     end
 
-    it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents, :links, :images) }
+    it { is_expected.to have_attributes(:type, :parent_id, :title, :description, :contents, :links, :images, :category_promos) }
     it { is_expected.to validate_presence_of(:title) }
 
     specify { expect(subject).to_not be_home }

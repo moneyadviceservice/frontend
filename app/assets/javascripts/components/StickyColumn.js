@@ -31,6 +31,8 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   */
   DoughBaseComponent.extend(StickyColumn);
 
+  StickyColumn.componentName = 'StickyColumn';
+
   /**
    * Initialize the component
    * @param {Promise} initialised

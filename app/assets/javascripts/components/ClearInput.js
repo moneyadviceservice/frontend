@@ -24,6 +24,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   */
   DoughBaseComponent.extend(ClearInput);
 
+  ClearInput.componentName = 'ClearInput';
+
   /**
   * Set up and populate the model from the form inputs
   * @param {Promise} initialised

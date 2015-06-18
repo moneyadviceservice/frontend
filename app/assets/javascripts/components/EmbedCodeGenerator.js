@@ -21,6 +21,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   DoughBaseComponent.extend(EmbedCodeGenerator);
 
+  EmbedCodeGenerator.componentName = 'EmbedCodeGenerator';
+
   EmbedCodeGeneratorProto = EmbedCodeGenerator.prototype;
 
   EmbedCodeGeneratorProto.init = function(initialised) {

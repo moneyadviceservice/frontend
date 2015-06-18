@@ -1,0 +1,42 @@
+/*
+  Link list component
+  Used on category pages to list out yellow underlined links
+*/
+.link-list {
+  @include body(22, 40);
+  font-weight: bold;
+
+  &.l-category--image {
+    @include respond-to($mq-m) {
+      width: 60%;
+    }
+  }
+}
+
+.link-list__item {
+  display: inline;
+}
+
+.link-list__item:before {
+  content: none !important;
+}
+
+.link-list__item:after {
+  content: ", ";
+}
+ 
+.link-list__item:last-child:after {
+  content: "";
+}
+
+.link-list__item__link {
+  color: $color-true-black !important;
+  border-bottom: 3px solid $color-dark-yellow;
+  padding-bottom: 5px;
+}
+
+.link-list__item__link:hover {
+  border-bottom: 3px solid $color-true-black;
+  text-decoration: none;
+  color: $color-true-black;
+}

@@ -3,7 +3,7 @@
     <%= heading_tag child_category.title,
                     level: 2,
                     id:    child_category.id,
-                    class: 'trigger category-detail__heading'
+                    class: 'category-detail__heading'
                     #   ,
                     # data: { 
                     #   dough_component: 'Collapsable', 
@@ -13,21 +13,10 @@
 
     <p class="category-detail__intro"><%= child_category.description %></p>
 
-    <ul class="featured-links">
-      <li class="featured-links__item">
-        <h3 class="featured-links__tag featured-links__tag--popular">Popular</h3>
-        <h4 class="featured-links__title"><a href="#">Do you need to borrow money?</a></h4>
-        <p class="featured-links__description">Haven't heard of them Bushwick, twee letterpress lomo locavore +1 ethical ugh blog. XOXO Intelligentsia Echo Park, hoodie viral gentrify.</p>
-      </li>
-      <li class="featured-links__item">
-        <h3 class="featured-links__tag featured-links__tag--blog">Blog</h3>
-        <h4 class="featured-links__title"><a href="#">How to work out the true cost of borrowing?</a></h4>
-        <p class="featured-links__description">Probably haven't heard of them Bushwick, twee letterpress lomo locavore +1 ethical ugh blog. XOXO Intelligentsia Echo Park, hoodie viral gentrify...</p>
-      </li>
-    </ul>
+    <%= render 'category_promos', promos: child_category.category_promos unless child_category.category_promos.empty? %>
 
     <% if child_category.contents.present? %>
-      <div class="target category-detail__list-container" data-dough-collapsable-target="<%= child_category.id %>">
+      <div class="category-detail__list-container">
         <%= render 'content_items', contents: child_category.contents %>
         <p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>
       </div>

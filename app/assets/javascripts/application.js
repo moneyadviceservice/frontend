@@ -67,7 +67,7 @@ require(['common', 'jquery'], function(MAS, $) {
         name: 'categoryCollapsables',
         showIcon: true,
         useButton: true,
-        triggerEl: '.category-detail__heading', // .view-more-wrapper // Todo: add trigger 2
+        triggerEl: '.category-detail__heading', 
         targetEl: '.category-detail__list-container',
         targetItems: '.category-detail__list-item',
         viewAllButton: '.js-category-detail__view-all',

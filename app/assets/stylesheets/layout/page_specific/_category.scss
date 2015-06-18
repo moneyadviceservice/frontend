@@ -1,6 +1,4 @@
 // Category level pages
-//
-// Styleguide Category Page
 
 .l-category__heading {
   margin-top: 3.75rem;
@@ -18,37 +16,12 @@
   background-repeat: no-repeat;
   background-size: 40% auto;
   padding-bottom: 60px;
-  // background: none !important; // Todo: remove this
 
   @include respond-to($mq-s) {
     background-position: right 70px;
-    // min-height: 430px;
-  }  
-  @include respond-to($mq-l) {
   }  
 }
-/*
-.l-category__top__background {
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-  background-size: contain;
-  margin-bottom: $baseline-unit*5;
 
-  @include respond-to($mq-s) {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right:0;
-    min-height: 500px;
-    z-index: -1;
-    width: 100%;
-    background-position: right 10px;
-    background-repeat: no-repeat;
-    background-size: 40% auto;
-  }    
-}
-*/
 p.l-category__top__intro {
   @extend %type-large;
 }
@@ -77,107 +50,4 @@ p.l-category__top__intro {
   @include respond-to($mq-l) {
     min-height: 400px;
   }  
-}
-
-// Link list component
-
-.link-list {
-  @include body(22, 40);
-  font-weight: bold;
-
-  &.l-category--image {
-    @include respond-to($mq-m) {
-      width: 60%;
-    }
-  }
-}
-
-.link-list__item {
-  display: inline;
-}
-
-.link-list__item:before {
-  content: none !important;
-}
-
-.link-list__item:after {
-  content: ", ";
-}
- 
-.link-list__item:last-child:after {
-  content: "";
-}
-
-.link-list__item__link {
-  color: $color-true-black !important;
-  border-bottom: 3px solid #e8b940;
-  padding-bottom: 5px;
-}
-
-.link-list__item__link:hover {
-  border-bottom: 3px solid $color-true-black;
-  text-decoration: none;
-  color: $color-true-black;
-}
-
-
-// Featured links component
-
-.featured-links {
-  @extend .unstyled-list;
-  margin: $baseline-unit*5 0 $baseline-unit*4 0;
-  padding-left: 36px;
-  overflow: hidden;
-}
-
-.featured-links__item {
-  float: right;
-  width: 48%;
-
-  &:before {
-    content: none !important;
-  }
-
-  &:first-child {
-    float: left;
-  }
-}
-
-.featured-links__tag {
-  @include heading(15, 22);
-  background: $color-green-dark;
-  padding: 3px 18px;
-  border-radius: 3px;
-  color: $color-white;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.featured-links__tag {
-  margin: 0;
-}
-
-.featured-links__tag--blog {
-  background: $color-blue-cerulean;
-}
-
-.featured-links__tag--popular {
-  background: $color-teal-dark;
-}
-
-.featured-links__tag--recommended {
-  background: $color-green-dark;
-}
-
-.featured-links__title {
-  @include body(18, 24);
-  margin: $baseline-unit 0;
-}
-
-.featured-links__description {
-  display: none;
-
-  @include respond-to($mq-s) {
-    display: block;
-  }
 }

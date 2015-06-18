@@ -1,28 +1,19 @@
 <% contents.select(&:category?).each_with_index do |child_category, i| %>
-  <section class="category-detail">
+  <section class="category-detail" data-dough-component="Collapsable">
     <%= heading_tag child_category.title,
                     level: 2,
                     id:    child_category.id,
-                    class: 'category-detail__heading'
-                    #   ,
-                    # data: { 
-                    #   dough_component: 'Collapsable', 
-                    #   dough_collapsable_trigger: child_category.id
-                    # }
+                    class: 'category-detail__heading',
+                    data: { dough_collapsable_trigger: child_category.id }
     %>
-
     <p class="category-detail__intro"><%= child_category.description %></p>
-
     <%= render 'category_promos', promos: child_category.category_promos unless child_category.category_promos.empty? %>
-
     <% if child_category.contents.present? %>
-      <div class="category-detail__list-container">
+      <div class="category-detail__list-container" data-dough-collapsable-target="<%= child_category.id %>">
         <%= render 'content_items', contents: child_category.contents %>
         <p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>
       </div>
     <% end %>
-    <div class="view-more-wrapper">
-      <a class="category-detail__view-more" href="#">View more</a>
-    </div>
+    <span class="category-detail__view-more" data-dough-collapsable-trigger="<%= child_category.id %>"><%= t('categories.show.view_more') %></span>
   </section>
 <% end %>

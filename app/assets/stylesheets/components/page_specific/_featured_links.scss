@@ -6,8 +6,12 @@
 .featured-links {
   @extend .unstyled-list;
   margin: $baseline-unit*5 0 $baseline-unit*4 0;
-  padding-left: 36px;
+  padding-left: $baseline-unit*6;
   overflow: hidden;
+
+  .no-js & {
+    padding-left: 0;
+  }
 }
 
 .featured-links__item {

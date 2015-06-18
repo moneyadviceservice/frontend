@@ -19,11 +19,17 @@
 }
 
 .category-detail__view-more {
-  background: #ecf0ef;
-  padding: 6px 16px;
+  @include body(18, 24);
+  background: $color-grey-very-light;
+  color: $color-link-default;
+  padding: 8px 18px;
   position: absolute;
   bottom: 0;
   right: 0;
+
+  .no-js & {
+    display: none;
+  }
 }
 
 .category-detail__list-item {
@@ -59,17 +65,20 @@
   }
 }
 
-.category-detail__heading {
-  @extend %collapsable-trigger;
-}
-
 .category-detail__list-container {
-  @extend %collapsable-target;
+  .js & {
+    display: none;
+  }
+
+  &.is-active {
+    display: block;
+  }
 }
 
 .js .category-detail__heading {
   position: relative;
   padding-left: $category-inset;
+  user-select: none;
 
   button {
     margin-left: -$category-inset;
@@ -83,19 +92,44 @@
     }
   }
 
-  & .icon--toggle {
+  & .collapsable__trigger-icon {
     @extend .icon--plus;
     position: absolute;
     top: 6px;
     left: 0;
   }
 
-  &.is-on .icon--toggle {
+  & .is-active .collapsable__trigger-icon {
     @extend .icon--minus;
-  }
+  }  
 }
+
 
 .js .category-detail__intro,
 .js .category-detail__list-container {
   padding-left: $category-inset;
+}
+
+.js .category-detail__view-more {
+  padding-left: $baseline-unit*7;
+  user-select: none;
+
+  button {
+    &:focus,
+    &:hover {
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+
+  & .collapsable__trigger-icon {
+    @extend .icon--plus--blue;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+  }
+
+  & .is-active .collapsable__trigger-icon {
+    @extend .icon--minus--blue;
+  }  
 }

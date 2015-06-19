@@ -36,7 +36,7 @@
           <span class="l-category__top__background"></span>
           <p class="l-category__top__intro"><%= category.description %></p>
         </div>
-        <%= render 'top_links', category: category unless category.links.empty? %>
+        <%= render 'top_links', category: category unless !category.links || category.links.empty? %>
       </div>
       <%= category.render_contents %>
     </main>

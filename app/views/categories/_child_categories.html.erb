@@ -4,16 +4,18 @@
                     level: 2,
                     id:    child_category.id,
                     class: 'category-detail__heading',
-                    data: { dough_collapsable_trigger: child_category.id }
+                    data: { dough_collapsable_trigger: 'category_' + child_category.id }
     %>
     <p class="category-detail__intro"><%= child_category.description %></p>
-    <%= render 'category_promos', promos: child_category.category_promos unless child_category.category_promos.empty? %>
+    <%= render 'category_promos', promos: child_category.category_promos unless !child_category.category_promos || child_category.category_promos.empty? %>
     <% if child_category.contents.present? %>
-      <div class="category-detail__list-container" data-dough-collapsable-target="<%= child_category.id %>">
-        <%= render 'content_items', contents: child_category.contents %>
-        <p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>
+      <div class="category-detail__list-container" data-dough-collapsable-target="category_<%= child_category.id %>">
+        <%= render 'content_items', contents: child_category.contents, child_category_id: child_category.id %>
       </div>
     <% end %>
-    <span class="category-detail__view-more" data-dough-collapsable-trigger="<%= child_category.id %>"><%= t('categories.show.view_more') %></span>
+    <span class="category-detail__view-more" data-dough-collapsable-trigger="category_<%= child_category.id %>">
+      <span class="category-detail__view-more__label-more"><%= t('categories.show.view_more') %></span>
+      <span class="category-detail__view-more__label-less"><%= t('categories.show.view_less') %></span>
+    </span>
   </section>
 <% end %>

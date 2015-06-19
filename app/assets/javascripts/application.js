@@ -62,6 +62,13 @@ require(['common', 'jquery'], function(MAS, $) {
         useButton: true
       });
 
+      // Category Collapsables
+      new Collapsable({
+        name: 'categoryCollapsables',
+        triggerEl: '.js-category-detail__view-all',
+        targetEl: '.js-category-detail__list--extended'
+      });
+
       // Debt Campaign Companies affected
       new Collapsable({
         name: 'companiesAffected',

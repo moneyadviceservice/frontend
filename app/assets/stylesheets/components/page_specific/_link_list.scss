@@ -6,7 +6,7 @@
   @include body(22, 40);
   font-weight: bold;
 
-  &.l-category--image {
+  .l-category--image & {
     @include respond-to($mq-m) {
       width: 60%;
     }
@@ -36,7 +36,7 @@
 }
 
 .link-list__item__link:hover {
-  border-bottom: 3px solid $color-true-black;
+  border-bottom: 3px solid $color-green-dark;
   text-decoration: none;
   color: $color-true-black;
 }

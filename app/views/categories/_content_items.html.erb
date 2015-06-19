@@ -1,7 +1,15 @@
 <ol class="category-detail__list">
-  <% contents.each do |item| %>
+  <% contents.take(6).each do |item| %>
     <li class="category-detail__list-item">
       <%= link_to item.title, item.path %>
     </li>
   <% end %>
 </ol>
+<ol class="collapsible-section category-detail__list category-detail__list--extended js-category-detail__list--extended">
+  <% (contents[6..-1] || []).each do |item| %>
+    <li class="category-detail__list-item">
+      <%= link_to item.title, item.path %>
+    </li>
+  <% end %>
+</ol>
+<p class="category-detail__view-all js-category-detail__view-all"><%= t('categories.show.view_all') %></p>

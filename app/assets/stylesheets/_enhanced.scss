@@ -1,20 +1,37 @@
-@import "settings";
+@import 'settings';
 
 @import 'dough/assets/stylesheets/lib';
 @import 'yeast/assets/lib/all';
 
-@import 'helpers/*';
-@import 'base/*';
+// Helpers
+@import 'helpers/form-input';
+@import 'helpers/form-input-focus';
+@import 'helpers/layout';
+@import 'helpers/rails_reset';
+@import 'helpers/video_wrapper';
 
+// Base
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/headings';
+@import 'base/images';
+@import 'base/links';
+@import 'base/lists';
+@import 'base/paragraphs';
+@import 'base/reset';
+@import 'base/type';
 
+// Dough
 @import 'dough/assets/stylesheets/common';
 @import 'dough/assets/stylesheets/optional';
 
+// Layout
 @import 'layout/variables';
-
 @import 'layout/common/all';
 @import 'layout/page_specific/all';
 
+// Components
 @import 'components/common/all';
 @import 'components/page_specific/all';
 @import 'components/dough_theme/variables';

@@ -28,6 +28,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   DoughBaseComponent.extend(InputFilters);
 
+  InputFilters.componentName = 'InputFilters';
+
   InputFilters.prototype.init = function() {
     this.$el.on('change', this.config.trigger, $.proxy(this._onChange, this));
 

@@ -24,7 +24,7 @@ class CorporateController < ArticlesController
     if @partner.save
       flash[:success] = t('tool_page.form.success_flash')
       flash[:partner] = @partner
-      redirect_to corporate_path(@partner.tool_slug, anchor: 'your-embed-code')
+      redirect_to corporate_path(params[:id], anchor: 'your-embed-code')
     else
       @article = interactor.call
       retrieve_corporate_category
@@ -71,7 +71,7 @@ class CorporateController < ArticlesController
   end
 
   def tool_friendly_name
-    params[:id].split('-').take(2).join(' ').humanize
+    params[:id].chomp('-syndication').gsub('-', ' ').humanize
   end
 
   def authenticate

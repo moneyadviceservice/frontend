@@ -14,6 +14,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   */
   DoughBaseComponent.extend(Newsletter);
 
+  Newsletter.componentName = 'Newsletter';
+
   /**
   * @param {Promise} initialised
   */

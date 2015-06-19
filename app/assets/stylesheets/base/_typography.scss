@@ -1,0 +1,35 @@
+// Override Yeast typography
+
+%heading-large,
+.heading-large {
+  @include heading(36, 42);
+  color: $color-heading-default;
+  font-weight: 500;
+
+  @include respond-to($mq-s) {
+    @include heading(48, 50);
+  }
+}
+
+%heading-medium,
+.heading-medium {
+  @include heading(28, 30);
+  color: $color-heading-default;
+
+  @include respond-to($mq-l) {
+    @include heading(30, 36);
+  }
+}
+
+// New rules
+
+%heading-smaller,
+.heading-smaller {
+  @extend %font-heading-heavy;
+  @include heading(18, 24);
+  color: $color-heading-default;
+}
+
+%type-large {
+  @include body(22, 28);
+}

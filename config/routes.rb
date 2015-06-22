@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 
     if Feature.active?(:profile)
       scope '/users' do
-        resource :profile, only: [:edit, :update], controller: :profile
+        resource :profile, only: [:edit], controller: :profile
       end
     end
 

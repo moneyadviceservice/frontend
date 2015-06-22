@@ -47,11 +47,6 @@
 .l-profile__your-tools {
   @include column(12);
   margin-top: $baseline-unit*4;
-
-  @include respond-to($mq-l) {
-    @include column(4);
-    margin-top: 0;
-  }
 }
 
 .l-profile__your-tools__heading {

@@ -168,20 +168,28 @@
 
 .l-recommended-tools .recommended-tool__header {
   @include respond-to($mq-m) {
-    min-height: $baseline-unit*26;
+    min-height: $baseline-unit*37;
   }
 
   @include respond-to($mq-l) {
-    min-height: $baseline-unit*20;
+    min-height: $baseline-unit*45;
   }
 
   @include respond-to($mq-xl) {
-    min-height: $baseline-unit*31;
+    min-height: $baseline-unit*40;
   }
 
   .theme-cy & {
+    @include respond-to($mq-m) {
+      min-height: $baseline-unit*53;
+    }
+
+    @include respond-to($mq-l) {
+      min-height: $baseline-unit*60;
+    }
+
     @include respond-to($mq-xl) {
-      min-height: $baseline-unit*34;
+      min-height: $baseline-unit*47;
     }
   }
 }

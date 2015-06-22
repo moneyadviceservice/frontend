@@ -63,6 +63,7 @@
                   <%= tool.time_to_complete %>
                 </p>
               </div>
+              <% if tool.quote.present? %>
                 <div class="recommended-tool__footer">
                   <blockquote class="recommended-tool__footer__quote">
                     &ldquo;<%= tool.quote %>&rdquo;
@@ -71,6 +72,7 @@
                     <%= tool.quotee_name %>, <%= tool.quotee_location %>
                   </p>
                 </div>
+              <% end %>
             </div>
           </div>
         <% end %>

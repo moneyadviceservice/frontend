@@ -9,43 +9,45 @@ module Core
         end
 
         def title
-          I18n.t("recommended_tools.tools.#{identifier}.title")
+          translate('title')
         end
 
         def subtitle
-          I18n.t("recommended_tools.tools.#{identifier}.subtitle")
+          translate('subtitle')
         end
 
         def link_copy
-          I18n.t("recommended_tools.tools.#{identifier}.link_copy")
+          translate('link_copy')
         end
 
         def link_url
-          I18n.t("recommended_tools.tools.#{identifier}.link_url")
+          translate('link_url')
         end
 
         def description
-          I18n.t("recommended_tools.tools.#{identifier}.description")
-        end
-
-        def completion_copy
-          I18n.t("recommended_tools.tools.#{identifier}.completion_copy")
+          translate('description')
         end
 
         def time_to_complete
-          I18n.t("recommended_tools.tools.#{identifier}.time_to_complete")
+          translate('time_to_complete')
         end
 
         def quotee_name
-          I18n.t("recommended_tools.tools.#{identifier}.quotee_name")
+          translate('quotee_name')
         end
 
         def quotee_location
-          I18n.t("recommended_tools.tools.#{identifier}.quotee_location")
+          translate('quotee_location')
         end
 
         def quote
-          I18n.t("recommended_tools.tools.#{identifier}.quote")
+          translate('quote')
+        end
+
+        private
+
+        def translate(translation)
+          I18n.t("recommended_tools.tools.#{identifier}.#{translation}", default: '')
         end
       end
     end

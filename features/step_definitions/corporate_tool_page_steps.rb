@@ -1,3 +1,15 @@
+Given(/^I have received an embed code$/) do
+  step 'I visit a corporate tool page'
+  step 'I fill out my organisation name'
+  step 'I fill out my organisation email'
+  step 'I specify the language I want the tool in'
+  step 'I specify the width of the tool'
+  step 'I request for the embded code'
+  step 'I should be presented with the embed code'
+  step 'I should see a successful confirmation of my details submitted'
+  step 'I should be on the corporate tool page'
+end
+
 When(/^I visit a corporate tool page$/) do
   corporate_tool_page.load(locale: 'en')
 end

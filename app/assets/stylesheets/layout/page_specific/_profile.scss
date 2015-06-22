@@ -1,7 +1,6 @@
 .l-profile {
   @include clearfix();
   padding-bottom: $baseline-unit*7;
-  border-bottom: 1px solid $color-horizontal-rule;
 }
 
 .l-profile__intro {
@@ -21,11 +20,21 @@
   }
 }
 
+.l-profile__tools {
+  @include column(12);
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-l) {
+    @include column(8);
+    margin-top: 0;
+  }
+}
+
 .l-profile__your-goal {
   @include column(12);
 
   @include respond-to($mq-l) {
-    @include column(8);
+    @include column(4);
   }
 }
 
@@ -42,16 +51,6 @@
 
 .l-profile__your-goal__form .form__row {
   margin-bottom: $baseline-unit*2;
-}
-
-.l-profile__your-tools {
-  @include column(12);
-  margin-top: $baseline-unit*4;
-
-  @include respond-to($mq-l) {
-    @include column(4);
-    margin-top: 0;
-  }
 }
 
 .l-profile__your-tools__heading {
@@ -108,8 +107,6 @@
 }
 
 .l-recommended-tools__heading {
-  @include column(12);
-
   padding-right: 25px;
   position: relative;
 
@@ -154,10 +151,6 @@
 
   @include respond-to($mq-m) {
     @include column(6);
-  }
-
-  @include respond-to($mq-xl) {
-    @include column(4);
   }
 }
 

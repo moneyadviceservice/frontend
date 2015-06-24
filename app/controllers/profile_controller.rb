@@ -1,6 +1,8 @@
 class ProfileController < ArticlesController
   before_action :authenticate_user!
 
+  include SuppressMenuButton
+
   def edit
   end
 

@@ -11,11 +11,17 @@
   </div>
   <div class="l-profile__tools">
     <div class="l-profile__your-tools">
-      <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('saved_tools.heading') %>
+      <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'>
+        <% if saved_tools.any? %>
+          <%= t('saved_tools.heading_saved') %>
+        <% else %>
+          <%= t('saved_tools.heading') %>
+        <% end %>
       </h2>
 
       <div class="l-profile__your-tools__content is-active" data-dough-collapsable-target="your-tools">
         <% if saved_tools.any? %>
+          <p class="l-profile__your-tools__content__text"><%= t('saved_tools.message_saved') %></p>
           <ul class="list l-profile__your-tools__content__list">
           <% saved_tools.each do |tool| %>
             <li><%= link_to tool.link_copy, tool.link_url, class: "gtm-your-tool-link" %></li>
@@ -38,9 +44,7 @@
           <%= t('recommended_tools.description') %>
         </p>
 
-        <% I18n.t("recommended_tools.tools").keys.each_with_index do |tool_name, index| %>
-          <% tool = Core::Registry::Repository[:recommended_tool_class].new(tool_name) %>
-
+        <% recommended_tools.each_with_index do |tool, index| %>
           <div class="l-recommended-tools__tool l-recommended-tools__tool--<%= index %>">
             <div class="recommended-tool">
               <div class="recommended-tool__header">

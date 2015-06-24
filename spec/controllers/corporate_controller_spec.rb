@@ -82,6 +82,21 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
       end
     end
 
+    context 'with valid attributes and a partner record already exists' do
+
+      before do
+        post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
+      end
+
+      it 'updates existing partner record' do
+        expect do
+          post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
+        end.to_not change(CorporatePartner, :count)
+        expect(CorporatePartner.count).to eq(1)
+      end
+
+    end
+
     context 'with invalid attributes' do
       it 'does not save the new partner' do
         expect do

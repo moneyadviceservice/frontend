@@ -34,7 +34,6 @@ RSpec.describe CorporatePartner, type: :model do
     it { is_expected.not_to allow_value('').for(:name) }
 
     it { is_expected.to allow_value('example@domain.com').for(:email) }
-    it { is_expected.to validate_uniqueness_of(:email) }
     it { is_expected.not_to allow_value('inv@lid@dress.com').for(:email) }
 
     it { is_expected.to allow_value('Sample Tool').for(:tool_name) }

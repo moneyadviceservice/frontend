@@ -2,6 +2,8 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :store_location
   before_action :configure_permitted_parameters
 
+  include SuppressMenuButton
+
   protected
 
   def build_resource(hash = nil)

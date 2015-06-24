@@ -2,6 +2,8 @@ class SessionsController < Devise::SessionsController
   skip_before_action :store_location
   before_action :xhr_not_implemented, only: [:new]
 
+  include SuppressMenuButton
+
   def new
     # This method is mostly copied devise code
     # With one tweak to add the error to resource from the flash hash

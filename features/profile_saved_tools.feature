@@ -15,11 +15,4 @@ Feature:
     Given I am signed in with warden
     And I have saved data for the "budget_planner" tool
     When I view my profile page
-    Then I see the "Budget Planner" tool listed under saved tools
-
-  @enable-profile
-  Scenario: Saved data for health check
-    Given I am signed in with warden
-    And I have saved data for the "health_check" tool
-    When I view my profile page
-    Then I see the "Health Check" tool listed under saved tools
+    Then I see the "Review and edit your saved budget now" link listed under saved tools

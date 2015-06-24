@@ -18,7 +18,8 @@ class CorporateController < ArticlesController
   end
 
   def create
-    @partner = CorporatePartner.new(partner_params)
+    @partner = CorporatePartner.find_or_initialize_by(params[:email])
+    @partner.assign_attributes(partner_params)
     @partner.tool_name = tool_friendly_name
 
     if @partner.save

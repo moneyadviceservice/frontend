@@ -11,11 +11,17 @@
   </div>
   <div class="l-profile__tools">
     <div class="l-profile__your-tools">
-      <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('saved_tools.heading') %>
+      <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'>
+        <% if saved_tools.any? %>
+          <%= t('saved_tools.heading_saved') %>
+        <% else %>
+          <%= t('saved_tools.heading') %>
+        <% end %>
       </h2>
 
       <div class="l-profile__your-tools__content is-active" data-dough-collapsable-target="your-tools">
         <% if saved_tools.any? %>
+          <p class="l-profile__your-tools__content__text"><%= t('saved_tools.message_saved') %></p>
           <ul class="list l-profile__your-tools__content__list">
           <% saved_tools.each do |tool| %>
             <li><%= link_to tool.link_copy, tool.link_url, class: "gtm-your-tool-link" %></li>
@@ -38,43 +44,47 @@
           <%= t('recommended_tools.description') %>
         </p>
 
-        <% I18n.t("recommended_tools.tools").keys.each_with_index do |tool_name, index| %>
+        <% index = 0 %>
+        <% I18n.t("recommended_tools.tools").keys.each do |tool_name| %>
           <% tool = Core::Registry::Repository[:recommended_tool_class].new(tool_name) %>
 
-          <div class="l-recommended-tools__tool l-recommended-tools__tool--<%= index %>">
-            <div class="recommended-tool">
-              <div class="recommended-tool__header">
-                <h3 class="recommended-tool__header__title">
-                  <span class="recommended-tool__header__title__border"><%= tool.title %></span>
-                </h3>
-                <p class="recommended-tool__header__subtitle">
-                  <%= tool.subtitle %>
-                </p>
-              </div>
-              <div class="recommended-tool__body">
-                <%= link_to tool.link_copy, tool.link_url, class: "button button--primary button--fill-width button--wrap-text gtm-recommended-tool-link" %>
-                <h4 class="recommended-tool__body__summary-title">
-                  <%= t('recommended_tools.summary_title') %>
-                </h4>
-                <p class="recommended-tool__body__description">
-                  <%= tool.description %>
-                </p>
-                <p class="recommended-tool__body__time">
-                  <%= tool.time_to_complete %>
-                </p>
-              </div>
-              <% if tool.quote.present? %>
-                <div class="recommended-tool__footer">
-                  <blockquote class="recommended-tool__footer__quote">
-                    &ldquo;<%= tool.quote %>&rdquo;
-                  </blockquote>
-                  <p class="recommended-tool__footer__quotee">
-                    <%= tool.quotee_name %>, <%= tool.quotee_location %>
+          <% unless saved_tools.map{|tool|tool.link_url}.include? tool.link_url %>
+            <div class="l-recommended-tools__tool l-recommended-tools__tool--<%= index %>">
+              <div class="recommended-tool">
+                <div class="recommended-tool__header">
+                  <h3 class="recommended-tool__header__title">
+                    <span class="recommended-tool__header__title__border"><%= tool.title %></span>
+                  </h3>
+                  <p class="recommended-tool__header__subtitle">
+                    <%= tool.subtitle %>
                   </p>
                 </div>
-              <% end %>
+                <div class="recommended-tool__body">
+                  <%= link_to tool.link_copy, tool.link_url, class: "button button--primary button--fill-width button--wrap-text gtm-recommended-tool-link" %>
+                  <h4 class="recommended-tool__body__summary-title">
+                    <%= t('recommended_tools.summary_title') %>
+                  </h4>
+                  <p class="recommended-tool__body__description">
+                    <%= tool.description %>
+                  </p>
+                  <p class="recommended-tool__body__time">
+                    <%= tool.time_to_complete %>
+                  </p>
+                </div>
+                <% if tool.quote.present? %>
+                  <div class="recommended-tool__footer">
+                    <blockquote class="recommended-tool__footer__quote">
+                      &ldquo;<%= tool.quote %>&rdquo;
+                    </blockquote>
+                    <p class="recommended-tool__footer__quotee">
+                      <%= tool.quotee_name %>, <%= tool.quotee_location %>
+                    </p>
+                  </div>
+                <% end %>
+              </div>
             </div>
-          </div>
+            <% index += 1 %>
+          <% end %>
         <% end %>
       </div>
     </div>

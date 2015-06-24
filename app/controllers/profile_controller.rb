@@ -19,4 +19,15 @@ class ProfileController < ArticlesController
     end.compact
   end
   helper_method :saved_tools
+
+  def recommended_tools
+    recommended_tool_names = I18n.t('recommended_tools.tools').keys.reject do |tool_name|
+      current_user.data_for?(tool_name)
+    end
+
+    recommended_tool_names.map do |tool_name|
+      Core::Registry::Repository[:recommended_tool_class].new(tool_name)
+    end
+  end
+  helper_method :recommended_tools
 end

@@ -1,9 +1,7 @@
 class DebtManagementController < ApplicationController
   layout '_unconstrained'
 
-  def display_menu_button_in_header?
-    false
-  end
+  include SuppressMenuButton
 
   def hide_contact_panels?
     true

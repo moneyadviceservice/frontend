@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
-  def show
-  end
+  include SuppressMenuButton
 
-  def display_menu_button_in_header?
-    false
+  def show
   end
 
   def display_skip_to_main_navigation?

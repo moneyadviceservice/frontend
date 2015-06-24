@@ -1,12 +1,9 @@
 class ErrorsController < ApplicationController
   include Gaffe::Errors
+  include SuppressMenuButton
 
   def show
     render :show, status: @status_code
-  end
-
-  def display_menu_button_in_header?
-    false
   end
 
   def display_skip_to_main_navigation?

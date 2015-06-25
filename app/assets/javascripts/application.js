@@ -67,7 +67,6 @@ require(['common', 'jquery'], function(MAS, $) {
         name: 'categoryCollapsables',
         triggerEl: '.js-category-detail__view-all',
         targetEl: '.js-category-detail__list--extended'
-        // useButton: true
       });
 
       // Debt Campaign Companies affected

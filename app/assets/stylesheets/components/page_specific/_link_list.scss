@@ -32,13 +32,18 @@
 }
 
 .link-list__item__link {
-  color: $color-true-black !important;
   border-bottom: 3px solid $color-yellow-dark;
   padding-bottom: 5px;
-}
 
-.link-list__item__link:hover {
-  border-bottom: 3px solid $color-yellow-link-active;
-  text-decoration: none;
-  color: $color-true-black;
+  &:link,
+  &:focus,
+  &:visited {
+    color: $color-true-black;
+  }
+
+  &:hover {
+    border-bottom: 3px solid $color-true-black;
+    text-decoration: none;
+    color: $color-true-black;
+  }
 }

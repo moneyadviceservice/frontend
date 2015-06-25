@@ -18,8 +18,8 @@
   }  
 }
 
-p.l-category__top__intro {
-  @extend %type-large;
+.editorial .l-category__top__intro {
+  @include body(22, 28);
 }
 
 .l-category__top__intro {
@@ -46,12 +46,4 @@ p.l-category__top__intro {
   @include respond-to($mq-l) {
     min-height: 400px;
   }  
-}
-
-// Icons
-
-.svg-icon--plus--blue {
-  width: 16px; 
-  height: 16px; 
-  fill: $color-yellow-dark;
 }

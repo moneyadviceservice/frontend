@@ -7,41 +7,18 @@
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
 <% end %>
 
+<%= render 'shared/svg/icons/plus' %>
+<%= render 'shared/svg/icons/minus' %>
+
 <div class="l-main editorial">
   <div class="l-main__row">
     <% if category.images? %>
-      <style>
-        .l-category--image {
-          background-image: url(<%= category.images['small'] %>);
-        }
-
-        @media only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min--moz-device-pixel-ratio: 2),
-        only screen and (-o-min-device-pixel-ratio: #{(2*10)}/10),
-        only screen and (min-device-pixel-ratio: 2),
-        only screen and (min-resolution: #{(2*96)}dpi),
-        only screen and (min-resolution: #{2}dppx) {
-          .l-category--image {
-            background-image: url(<%= category.images['large'] %>);
-          }
-        }
-      </style>
+      <%= render 'categories/category_image', small_url: category.images['small'], large_url: category.images['large'] %>
       <main class="l-main__cell-full l-category l-category--image" role="main" data-parent="<%= category.parent_id %>">
     <% else %>
       <main class="l-main__cell-full l-category" role="main" data-parent="<%= @category.parent_id %>">
     <% end %>
       <div class="l-category__top">
-<!--
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-          <symbol id="icon-plus" viewBox="0 0 22.354 22.354">
-            <polygon points="8.61,22.354 13.744,22.354 13.744,13.744 22.354,13.744 22.354,8.611 13.744,8.611 13.744,0 8.61,0 8.61,8.611 0,8.611 0,13.744 8.61,13.744"/>
-          </symbol>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon--plus--blue">
-          <use xlink:href="#icon-plus"></use>
-        </svg>
--->
         <div class="l-category__top__content">
           <%= heading_tag category.title, class: 'l-category__heading' %>
           <span class="l-category__top__background"></span>

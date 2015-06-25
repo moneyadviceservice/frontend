@@ -38,15 +38,18 @@
     padding-left: $baseline-unit*7;
     user-select: none;
 
-    & .collapsable__trigger-icon {
-      @extend .icon--plus--blue;
+    .svg-icon {
       position: absolute;
-      top: 10px;
+      top: 12px;
       left: 12px;
     }
 
-    & .is-active .collapsable__trigger-icon {
-      @extend .icon--minus--blue;
+    .is-active .svg-icon--plus {
+      display: none;
+    }    
+
+    .collapsable__trigger-icon {
+      display: none;
     }
   }
 }
@@ -107,33 +110,43 @@
   }
 }
 
-.js .category-detail__heading {
-  position: relative;
-  padding-left: $category-inset;
-  user-select: none;
+.category-detail__heading {
+  .svg-icon {
+    display: none;
+  }
 
-  button {
-    margin-left: -$category-inset;
+  .js & {
+    position: relative;
     padding-left: $category-inset;
-    text-align: left;
+    user-select: none;
 
-    &:focus,
-    &:hover {
-      outline: none;
-      text-decoration: underline;
+    button {
+      margin-left: -$category-inset;
+      padding-left: $category-inset;
+      text-align: left;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+    
+    .collapsable__trigger-icon {
+      display: none;
+    }
+    
+    .svg-icon {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      display: block;
+    }
+
+    .is-active .svg-icon--plus {
+      display: none;
     }
   }
-
-  & .collapsable__trigger-icon {
-    @extend .icon--plus;
-    position: absolute;
-    top: 6px;
-    left: 0;
-  }
-
-  & .is-active .collapsable__trigger-icon {
-    @extend .icon--minus;
-  }  
 }
 
 .js .category-detail__intro,

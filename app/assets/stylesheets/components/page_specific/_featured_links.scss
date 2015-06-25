@@ -5,8 +5,9 @@
 
 .featured-links {
   @extend .unstyled-list;
-  margin: $baseline-unit*5 0 $baseline-unit*4 0;
+  margin: $baseline-unit*5 0 0 0;
   overflow: hidden;
+  @include row(12);
 
   .js & {
     padding-left: $baseline-unit*6;
@@ -14,22 +15,17 @@
 }
 
 .featured-links__item {
-  float: right;
-  width: 48%;
+  @include column(6);
 
   &:before {
     // This is to override the highly specific .editorial list styling
     content: none !important;
   }
-
-  &:first-child {
-    float: left;
-  }
 }
 
 .featured-links__tag {
   @include heading(15, 22);
-  background: $color-green-dark;
+  background: $color-blue-cerulean;
   padding: 3px 18px;
   border-radius: 3px;
   color: $color-white;
@@ -39,18 +35,6 @@
 
 .featured-links__tag {
   margin: 0;
-}
-
-.featured-links__tag--blog {
-  background: $color-blue-cerulean;
-}
-
-.featured-links__tag--popular {
-  background: $color-teal-dark;
-}
-
-.featured-links__tag--recommended {
-  background: $color-green-dark;
 }
 
 .featured-links__title {

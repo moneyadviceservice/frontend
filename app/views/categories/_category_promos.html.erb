@@ -1,0 +1,11 @@
+<ul class="featured-links">
+  <% promos.take(2).each do |promo| %>
+    <li class="featured-links__item">
+      <%= heading_tag promo['promo_type'].humanize, level: 3, class: "featured-links__tag featured-links__tag--#{promo['promo_type']}" %>
+      <%= heading_tag(level: 4, class: 'featured-links__title') do %>
+        <%= link_to promo['title'], promo['url'] %>
+      <% end %>
+      <p class="featured-links__description"><%= promo['description'] %></p>
+    </li>
+  <% end %>
+</ul>

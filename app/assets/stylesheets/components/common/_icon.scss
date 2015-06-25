@@ -242,15 +242,25 @@
 }
 
 .icon--plus {
-  background-position: -685px -73px;
+  background-position: -156px -426px;
   width: 16px;
   height: 20px;
 }
 
 .icon--minus {
-  background-position: -742px -73px;
+  background-position: -206px -426px;
   width: 16px;
   height: 16px;
+}
+
+.icon--plus--blue {
+  @extend .icon--plus;
+  background-position: -322px -426px;
+}
+
+.icon--minus--blue {
+  @extend .icon--minus;
+  background-position: -372px -426px;
 }
 
 .icon--home {

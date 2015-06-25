@@ -119,15 +119,25 @@
   }
 
   .icon--plus {
-    background-position: -339px -55px;
+    background-position: -74px -224px;
     width: 16px;
     height: 20px;
   }
 
   .icon--minus {
-    background-position: -367px -55px;
+    background-position: -99px -224px;
     width: 16px;
     height: 16px;
+  }
+
+  .icon--plus--blue {
+    @extend .icon--plus;
+    background-position: -157px -224px;
+  }
+
+  .icon--minus--blue {
+    @extend .icon--minus;
+    background-position: -182px -224px;
   }
 
   .icon--home {

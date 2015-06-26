@@ -5,7 +5,7 @@ module UI::Pages
   class Category < UI::Page
     set_url '{/locale}/categories{/id}'
 
-    element :description, '.intro'
+    element :description, '.l-category__top__intro'
 
     elements :filterable_items, '.category-filter li a'
 

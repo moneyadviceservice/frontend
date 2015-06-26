@@ -26,14 +26,6 @@ class CategoryDecorator < Draper::Decorator
     h.render partial, contents: contents
   end
 
-  def large_image?
-    object.images.present? && object.images['large'].present?
-  end
-
-  def small_image?
-    object.images.present? && object.images['small'].present?
-  end
-
   def images?
     large_image? && small_image?
   end
@@ -44,5 +36,15 @@ class CategoryDecorator < Draper::Decorator
     h.heading_tag(level: 2, class: 'more-in__heading') do
       I18n.t('articles.show.more_in.title_prefix', category: object.title)
     end
+  end
+
+  private
+
+  def large_image?
+    object.images.present? && object.images['large'].present?
+  end
+
+  def small_image?
+    object.images.present? && object.images['small'].present?
   end
 end

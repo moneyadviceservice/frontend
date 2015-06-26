@@ -13,7 +13,9 @@
     <%= render 'category_promos', promos: child_category.category_promos unless !child_category.category_promos || child_category.category_promos.empty? %>
     <% if child_category.contents.present? %>
       <div class="category-detail__list-container" data-dough-collapsable-target="category_<%= child_category.id %>">
-        <%= render 'content_items', contents: child_category.contents, child_category_id: child_category.id %>
+        <%= render 'content_items', initial_contents: child_category.initial_contents,
+                                    extended_contents: child_category.extended_contents,
+                                    child_category_id: child_category.id %>
       </div>
       <span class="category-detail__view-more" data-dough-collapsable-trigger="category_<%= child_category.id %>">
         <%= render 'shared/svg/use_icon', icon: 'plus', variant: 'blue' %>

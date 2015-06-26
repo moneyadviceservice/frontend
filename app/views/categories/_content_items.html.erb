@@ -1,12 +1,12 @@
 <ol class="category-detail__list">
-  <% contents.take(6).each do |item| %>
+  <% initial_contents.each do |item| %>
     <li class="category-detail__list-item">
       <%= link_to item.title, item.path %>
     </li>
   <% end %>
 </ol>
 <ol class="collapsible-section category-detail__list category-detail__list--extended js-category-detail__list--extended">
-  <% (contents[6..-1] || []).each do |item| %>
+  <% extended_contents.each do |item| %>
     <li class="category-detail__list-item">
       <%= link_to item.title, item.path %>
     </li>

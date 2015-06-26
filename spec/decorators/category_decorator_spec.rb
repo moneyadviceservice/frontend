@@ -13,6 +13,7 @@ RSpec.describe CategoryDecorator do
   it { is_expected.to respond_to(:contents) }
   it { is_expected.to respond_to(:canonical_url) }
   it { is_expected.to respond_to(:alternate_options) }
+  it { is_expected.to respond_to(:images) }
 
   describe '#alternate_options' do
     let(:locale) { double }
@@ -60,6 +61,29 @@ RSpec.describe CategoryDecorator do
       let(:category) { double(contents: []) }
 
       it { is_expected.to be_nil }
+    end
+  end
+
+  describe '#images?' do
+    context 'when there is only a small image' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'small' => '/small/image' })
+      end
+
+      it 'returns false' do
+        expect(subject.images?).to be_falsey
+      end
+    end
+
+    context 'when there are small and large images' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'small' => '/small/image',
+                                                  'large' => '/large/image' })
+      end
+
+      it 'returns true' do
+        expect(subject.images?).to be_truthy
+      end
     end
   end
 end

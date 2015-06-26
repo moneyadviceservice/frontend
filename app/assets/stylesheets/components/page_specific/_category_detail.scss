@@ -1,7 +1,8 @@
 .category-detail {
   border-bottom: $default-border-thin;
   margin-bottom: $baseline-unit*6;
-  padding-bottom: $baseline-unit*4;
+  padding-bottom: $baseline-unit*8;
+  position: relative;
 
   &:last-child {
     @include respond-to(0, $mq-m) {
@@ -15,6 +16,56 @@
   padding: 0;
   margin-top: $baseline-unit*4;
   margin-bottom: 0;
+}
+
+.editorial .category-detail__list--extended.collapsible-section {
+  padding: 0;
+  border: 0;
+}
+
+.category-detail__view-more {
+  display: none;
+
+  .js & {
+    @include body(18, 24);
+    display: inline-block;
+    background: $color-grey-very-light;
+    color: $color-link-default;
+    padding: 8px 18px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: $baseline-unit*7;
+    user-select: none;
+
+    .svg-icon {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    .is-active .svg-icon--plus {
+      display: none;
+    }    
+
+    .collapsable__trigger-icon {
+      display: none;
+    }
+  }
+}
+
+.category-detail__view-more__label-more {
+  .is-active & {
+    display: none;
+  }  
+}
+
+.category-detail__view-more__label-less {
+  display: none;
+
+  .is-active & {
+    display: inline;
+  }
 }
 
 .category-detail__list-item {
@@ -31,58 +82,70 @@
 
 .category-detail__view-all {
   display: none;
-  color: $color-link-default;
-  cursor: pointer;
-
+  
   .js & {
-    display: block;
+    @include body(18, 24);
+    color: $color-link-default;
+    display: inline;
   }
 
   &:hover,
   &:focus {
     outline: none;
-    color: $color-link-default;
     text-decoration: underline;
   }
 
-  &.is-off{
+  &.is-on{
     display: none;
   }
 }
 
-.category-detail__heading {
-  @extend %collapsable-trigger;
-}
-
 .category-detail__list-container {
-  @extend %collapsable-target;
+  .js & {
+    display: none;
+  }
+
+  &.is-active {
+    display: block;
+  }
 }
 
-.js .category-detail__heading {
-  position: relative;
-  padding-left: $category-inset;
+.category-detail__heading {
+  .svg-icon {
+    display: none;
+  }
 
-  button {
-    margin-left: -$category-inset;
+  .js & {
+    position: relative;
     padding-left: $category-inset;
-    text-align: left;
+    user-select: none;
 
-    &:focus,
-    &:hover {
-      outline: none;
-      text-decoration: underline;
+    button {
+      margin-left: -$category-inset;
+      padding-left: $category-inset;
+      text-align: left;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        text-decoration: underline;
+      }
     }
-  }
+    
+    .collapsable__trigger-icon {
+      display: none;
+    }
+    
+    .svg-icon {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      display: block;
+    }
 
-  & .icon--toggle {
-    @extend .icon--plus;
-    position: absolute;
-    top: 6px;
-    left: 0;
-  }
-
-  &.is-on .icon--toggle {
-    @extend .icon--minus;
+    .is-active .svg-icon--plus {
+      display: none;
+    }
   }
 }
 

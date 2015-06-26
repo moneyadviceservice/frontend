@@ -1,0 +1,16 @@
+<style>
+  .l-category--image {
+    background-image: url(<%= small_url %>);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: #{(2*10)}/10),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: #{(2*96)}dpi),
+  only screen and (min-resolution: #{2}dppx) {
+    .l-category--image {
+      background-image: url(<%= large_url %>);
+    }
+  }
+</style>

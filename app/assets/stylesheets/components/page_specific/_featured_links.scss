@@ -1,0 +1,51 @@
+/*
+  Featured links component
+  Used on category pages to promote links with tags for subcategories
+*/
+
+.featured-links {
+  @extend .unstyled-list;
+  margin: $baseline-unit*5 0 0 0;
+  overflow: hidden;
+  @include row(12);
+
+  .js & {
+    padding-left: $baseline-unit*6;
+  }
+}
+
+.featured-links__item {
+  @include column(6);
+
+  &:before {
+    // This is to override the highly specific .editorial list styling
+    content: none !important;
+  }
+}
+
+.featured-links__tag {
+  @include heading(15, 22);
+  background: $color-blue-cerulean;
+  padding: 3px 18px;
+  border-radius: 3px;
+  color: $color-white;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.featured-links__tag {
+  margin: 0;
+}
+
+.featured-links__title {
+  @include body(18, 24);
+  margin: $baseline-unit 0;
+}
+
+.featured-links__description {
+  display: none;
+
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}

@@ -16,6 +16,50 @@ RSpec.describe CategoryContentDecorator do
   it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:icon_class) }
 
+  describe '#initial_contents' do
+    context 'when 3 items' do
+      before :each do
+        allow(subject).to receive(:contents) { [1, 2, 3] }
+      end
+
+      it 'returns 3 items' do
+        expect(subject.initial_contents.size).to eql(3)
+      end
+    end
+
+    context 'when 10 items' do
+      before :each do
+        allow(subject).to receive(:contents) { (1..10).to_a }
+      end
+
+      it 'returns 6 items' do
+        expect(subject.initial_contents.size).to eql(6)
+      end
+    end
+  end
+
+  describe '#extended_contents' do
+    context 'when 3 items' do
+      before :each do
+        allow(subject).to receive(:contents) { [1, 2, 3] }
+      end
+
+      it 'returns 0 items' do
+        expect(subject.extended_contents).to be_empty
+      end
+    end
+
+    context 'when 10 items' do
+      before :each do
+        allow(subject).to receive(:contents) { (1..10).to_a }
+      end
+
+      it 'returns 4 items' do
+        expect(subject.extended_contents.size).to eql(4)
+      end
+    end
+  end
+
   describe '#label' do
     let(:item) { double(type: 'foo_bar-baz') }
 

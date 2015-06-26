@@ -1,7 +1,15 @@
 class CategoryContentDecorator < Draper::Decorator
   decorates_association :contents, with: CategoryContentDecorator
 
-  delegate :id, :title, :description
+  delegate :id, :title, :description, :category_promos
+
+  def initial_contents
+    contents.take(6)
+  end
+
+  def extended_contents
+    contents[6..-1] || []
+  end
 
   def label
     "#{object.type.titleize} - "

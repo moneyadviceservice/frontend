@@ -1,0 +1,31 @@
+// Styling for SVG icons, to be used instead of PNG sprite icons
+
+%small-svg-icon {
+  width: 16px; 
+  height: 16px;     
+}
+
+// Plus
+
+.svg-icon--plus--yellow {
+  @extend %small-svg-icon;
+  fill: $color-yellow-dark;
+}
+
+.svg-icon--plus--blue {
+  @extend %small-svg-icon;
+  fill: $color-blue-cerulean;
+}
+
+
+// Minus
+
+.svg-icon--minus--yellow {
+  @extend %small-svg-icon;
+  fill: $color-yellow-dark;
+}
+
+.svg-icon--minus--blue {
+  @extend %small-svg-icon;
+  fill: $color-blue-cerulean;
+}

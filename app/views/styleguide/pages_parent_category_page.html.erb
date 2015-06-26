@@ -1,16 +1,39 @@
-<div class="l-main">
+<%= render 'shared/svg/icons/plus' %>
+<%= render 'shared/svg/icons/minus' %>
+
+<div class="l-main editorial">
   <div class="l-main__row">
-    <main class="l-main__cell-single" role="main">
-      <h1>Leaving school or college</h1>
-
-      <p class="intro">Help and advice on staying on in education, moving into work and paying your own
-        way as a young adult</p>
-
+    <%= render 'categories/category_image', small_url: image_url('atm_en.png'), large_url: image_url('atm_en.png') %>
+    <main class="l-main__cell-full l-category l-category--image" role="main" data-parent="">
+      <div class="l-category__top">
+        <div class="l-category__top__content">
+          <h1 aria-level="1" class="l-category__heading" role="heading">Debt and borrowing</h1>
+          <span class="l-category__top__background"></span>
+          <p class="l-category__top__intro">Before you sign up for a credit card, bank loan or store card, or add to an existing card or loan it makes sense to think about whether you really need to borrow money.</p>
+        </div>
+        <h2 aria-level="2" class="l-category__top__link-list-heading" role="heading">How can we help?</h2>
+        <ul class="link-list">
+          <li class="link-list__item">
+            <a class="link-list__item__link" href="/en/">Before you borrow</a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__item__link" href="/en/">Taking control of debt</a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__item__link" href="/en/">Mortgage and rent problems</a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__item__link" href="/en/">Help with loans</a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__item__link" href="/en/">Credit cards and credit ratings</a>
+          </li>
+        </ul>
+      </div>
       <%= render 'styleguide/shared/category_detail' %>
     </main>
   </div>
 </div>
-
 <div class="l-nav">
   <%= render 'shared/nav', categories: category_navigation %>
 </div>

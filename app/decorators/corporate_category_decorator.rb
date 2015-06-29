@@ -11,9 +11,9 @@ class CorporateCategoryDecorator < CategoryDecorator
 
   def partial_path
     if third_level_navigation?
-      'content_items'
+      'corporate_categories/content_items'
     else
-      'categories/content_items'
+      'corporate_categories/content_items'
     end
   end
 end

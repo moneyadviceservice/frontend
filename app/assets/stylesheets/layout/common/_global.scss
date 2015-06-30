@@ -11,7 +11,11 @@
 }
 
 .l-main__row {
-  @include row(9);
+  @include row(12);
+
+  @include respond-to($mq-m) {
+    @include row(9);
+  }
 }
 
 // Main content container with only one full-width column

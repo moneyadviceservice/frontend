@@ -149,7 +149,15 @@
   }
 }
 
-.js .category-detail__intro,
+.js .category-detail__intro {
+  display: none;
+
+  @include respond-to($mq-s) {
+    padding-left: $category-inset;
+    display: block;
+  }
+}
+
 .js .category-detail__list-container {
   padding-left: $category-inset;
 }

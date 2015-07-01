@@ -38,12 +38,12 @@
 }
 
 .error-page__text {
-  font-size: 20px;
+  @include body(20, 26);
   font-weight: 700;
   color: $color-black;
 
   @include respond-to($mq-m) {
-    font-size: 32px;
+    @include body(32, 36);
     margin: $baseline-unit*4 0;
   }
 
@@ -67,16 +67,13 @@
 
 .error-page__search-text {
   text-align: center;
-  margin-top: $baseline-unit*40;
-  margin-bottom: $baseline-unit*4;
+  margin: $baseline-unit*40 auto $baseline-unit*4 auto;
   max-width: 546px;
-  margin-left: auto;
-  margin-right: auto;
 
   @include respond-to($mq-m) {
     margin-top: $baseline-unit*9;
     margin-bottom: $baseline-unit*5;
-    @include body(22,26);
+    @include body(22, 26);
   }
 }
 

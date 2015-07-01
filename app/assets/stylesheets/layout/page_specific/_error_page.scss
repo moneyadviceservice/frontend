@@ -49,6 +49,7 @@
 
   @include respond-to($mq-m) {
     min-height: 0;
+    margin-bottom: $baseline-unit*10;
   }
 }
 

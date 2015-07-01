@@ -1,8 +1,8 @@
 <div class="l-inpage-nav">
   <ol class="link-list-tertiary">
     <% contents.each do |item| %>
-      <li class="link-list-tertiary__item <% if @article.id == item.id %>is-selected<% end %>">
-        <%= link_to item.title, item.path, class: 'link-list-tertiary__text'   %>
+      <li class="link-list-tertiary__item <% if @article.try(:id) == item.id %>is-selected<% end %>">
+        <%= link_to item.title, item.path, class: 'link-list-tertiary__text' %>
       </li>
     <% end %>
   </ol>

@@ -1,25 +1,92 @@
-.l-error-page {
-  min-height: 600px;
-}
-
 .l-error-page-message {
   @include column(12);
   text-align: center;
-  margin-top: $baseline-unit*10;
   margin-bottom: px(12);
+  background: image-url('error/sorry_261_en.png') center 60px no-repeat;
+  background-size: 261px 189px;
+
+  .theme-cy & {
+    background-image: image-url('error/sorry_261_cy.png');
+  }
 
   & + .directory {
     background-color: transparent;
   }
+
+  @include respond-to($mq-m) {
+    background: image-url('error/sorry_1400_en.jpg') 0 -86px no-repeat;
+    background-size: 100%;
+    padding-top: 42%;
+
+    .theme-cy & {
+      background-image: image-url('error/sorry_1400_cy.jpg');
+      background-position: 0 -60px;
+
+      @if $responsive == false {
+        background-position: center top;
+      }
+    }
+
+    @if $responsive == false {
+      background-position: center top;
+    }
+  }
+}
+
+.error-page__headline {
+  @extend .visually-hidden;
 }
 
 .error-page__text {
-  @extend .intro;
+  @include body(20, 26);
+  font-weight: 700;
+  color: $color-black;
+
+  @include respond-to($mq-m) {
+    @include body(32, 36);
+    margin: $baseline-unit*4 0;
+  }
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*10;
+
+    @if $responsive == false {
+      margin-top: $baseline-unit*45;
+    }
+  }
 }
 
-.error-page__directory-text {
-  text-align: left;
-  margin-top: $baseline-unit*20;
-  margin-bottom: $baseline-unit*6;
+.error-page__text--only {
+  min-height: $baseline-unit*40;
 
+  @include respond-to($mq-m) {
+    min-height: 0;
+    margin-bottom: $baseline-unit*10;
+  }
+}
+
+.error-page__search-text {
+  text-align: center;
+  margin: $baseline-unit*40 auto $baseline-unit*4 auto;
+  max-width: 546px;
+
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*9;
+    margin-bottom: $baseline-unit*5;
+    @include body(22, 26);
+  }
+}
+
+.error-page__search {
+  margin: 0 auto $baseline-unit*6 auto;
+  max-width: 370px;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*10;
+  }
+}
+
+.error-page__directory {
+  background: $color-directory-emphasized-bg;
+  clear: both;
 }

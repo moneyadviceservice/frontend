@@ -2,15 +2,18 @@
 
   <%= render 'shared/header' %>
 
-  <div class="l-constrained l-error-page">
+  <div class="l-error-page">
     <main class="l-main__primary" role="main">
-      <div class="l-error-page-message">
-
-        <%= yield %>
-
+      <div class="l-constrained">
+        <div class="l-error-page-message">
+          <%= yield %>
+        </div>
       </div>
-
-      <%= yield(:directory) %>
+      <div class="error-page__directory">
+        <div class="l-constrained">
+          <%= yield(:directory) %>
+        </div>
+      </div>
     </main>
   </div>
 

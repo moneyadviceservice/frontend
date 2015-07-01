@@ -98,7 +98,7 @@ class StyleguideController < ApplicationController
   end
 
   def pages_error
-    render layout: 'styleguide/page'
+    render layout: 'styleguide/page_unconstrained'
   end
 
   def pages_news_index

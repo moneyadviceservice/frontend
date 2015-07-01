@@ -21,6 +21,14 @@
     .theme-cy & {
       background-image: image-url('error/sorry_1400_cy.jpg');
       background-position: 0 -60px;
+
+      @if $responsive == false {
+        background-position: center top;
+      }
+    }
+
+    @if $responsive == false {
+      background-position: center top;
     }
   }
 }
@@ -41,6 +49,10 @@
 
   @include respond-to($mq-l) {
     margin-top: $baseline-unit*10;
+
+    @if $responsive == false {
+      margin-top: $baseline-unit*45;
+    }
   }
 }
 

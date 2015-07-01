@@ -30,12 +30,17 @@
 }
 
 .error-page__text {
-  font-family: 'museo_slab';
   font-size: 20px;
+  font-weight: 700;
   color: $color-black;
 
   @include respond-to($mq-m) {
     font-size: 32px;
+    margin: $baseline-unit*4 0;
+  }
+
+  @include respond-to($mq-l) {
+    margin-top: $baseline-unit*10;
   }
 }
 
@@ -50,24 +55,24 @@
 .error-page__search-text {
   text-align: center;
   margin-top: $baseline-unit*40;
-  margin-bottom: $baseline-unit*6;
+  margin-bottom: $baseline-unit*4;
   max-width: 546px;
   margin-left: auto;
   margin-right: auto;
 
   @include respond-to($mq-m) {
     margin-top: $baseline-unit*9;
-    margin-bottom: $baseline-unit*12;
+    margin-bottom: $baseline-unit*5;
     @include body(22,26);
   }
 }
 
 .error-page__search {
-  margin: 0 auto $baseline-unit*4 auto;
+  margin: 0 auto $baseline-unit*6 auto;
   max-width: 370px;
 
   @include respond-to($mq-m) {
-    margin-bottom: $baseline-unit*12;
+    margin-bottom: $baseline-unit*10;
   }
 }
 

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/cy/categories/using-your-pension-pot.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; _sophos; 5997) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 46bd9ec8-ed1e-4b75-b882-03dff6ba2c9d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"7321c42a24b2278bf40c68c21a3716f7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 46bd9ec8-ed1e-4b75-b882-03dff6ba2c9d
+      X-Runtime:
+      - '0.029593'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 02 Jul 2015 12:04:14 GMT
+      Content-Length:
+      - '1024'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"using-your-pension-pot","type":"category","title":"using-your-pension-pot","description":"using-your-pension-pot","parent_id":"work-pensions-and-retirement","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[{"id":"y-deyrnas-unedig-yn-datblygu-arferion-ariannol-positif-er-gwaethaf-anawsterau-gyda-biliau","type":"news","title":"Y
+        Deyrnas Unedig yn datblygu arferion ariannol positif er gwaethaf anawsterau
+        gyda biliau","description":"Canfyddiadau o astudiaeth newydd fawr a gyhoeddir
+        heddiw gan y Gwasanaeth Cynghori Ariannol."},{"id":"habit-formation-and-learning-in-young-children","type":"corporate","title":"Habit
+        Formation and Learning in Young Children","description":null},{"id":"money-lives","type":"corporate","title":"Money
+        Lives: Research for the Money Advice Service","description":null},{"id":"indebted-lives-the-complexities-of-life-in-debt","type":"corporate","title":"Indebted
+        lives: the complexities of life in debt","description":null}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Thu, 02 Jul 2015 12:04:14 GMT
+recorded_with: VCR 2.9.2

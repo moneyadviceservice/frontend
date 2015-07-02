@@ -14,7 +14,7 @@ class RioController < MountController
   private
 
   def category
-    @category ||= Core::CategoryReader.new('work-pensions-and-retirement').call
+    @category ||= Core::CategoryReader.new(category_id).call
   end
 
   def categories

@@ -4,7 +4,7 @@ class RioController < MountController
   end
 
   def category_id
-    'work-pensions-and-retirement'
+    'using-your-pension-pot'
   end
 
   def breadcrumbs

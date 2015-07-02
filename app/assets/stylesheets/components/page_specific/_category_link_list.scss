@@ -2,7 +2,8 @@
   Link list component
   Currently used on category pages to list out yellow underlined links
 */
-.link-list {
+.category-link-list {
+  @extend .unstyled-list;
   @include body(22, 40);
   font-weight: bold;
 
@@ -13,25 +14,25 @@
   }
 }
 
-.link-list__item {
+.category-link-list__item {
   display: inline;
   margin-right: $baseline_unit;
 
   &:before {
     // This is to override the highly specific .editorial list styling
     content: none !important;
-  }  
+  }
 }
 
-.link-list__item:after {
+.category-link-list__item:after {
   content: ", ";
 }
- 
-.link-list__item:last-child:after {
+
+.category-link-list__item:last-child:after {
   content: none;
 }
 
-.link-list__item__link {
+.category-link-list__item__link {
   border-bottom: 3px solid $color-yellow-dark;
   padding-bottom: 5px;
 

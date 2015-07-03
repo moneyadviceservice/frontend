@@ -52,6 +52,10 @@
 
 .newsletter-signup__button--third-party {
   margin-top: $baseline-unit*7;
+
+  .theme-cy & {
+    white-space: normal;
+  }
 }
 
 .newsletter-signup__benefits-list {

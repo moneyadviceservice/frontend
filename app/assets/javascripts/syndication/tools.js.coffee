@@ -198,7 +198,7 @@
         path: "en/payday-loans"
       cy:
         path: "cy/benthyciadau-diwrnod-cyflog"
-      height: "1500px"
+      height: "2000px"
       width: "100%"
       include_ga: false
       omit_logo: true

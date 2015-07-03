@@ -159,6 +159,26 @@ The application uses [Bower] to manage front-end packages. Dependencies should
 be defined in the [bower.json] configuration file. Once installed they will be
 automatically available to the asset pipeline.
 
+### Consuming the front-end without having to manually import dependencies
+
+We have a couple of projects that live outside of this website, but benefit from
+having the generated HTML and CSS. I.e. they don't need to manually import
+[Dough](https://github.com/moneyadviceservice/dough), [Yeast](https://github.com/moneyadviceservice/yeast), and [MAS Dough Theme](https://github.com/moneyadviceservice/mas_dough_theme), etc.
+
+Useful if you're an agency and want to get up and running quickly, we render both
+[English](https://www.moneyadviceservice.org.uk/en/empty) and [Welsh](https://www.moneyadviceservice.org.uk/cy/empty) versions of our 'empty' template. This can then be pulled in via
+`curl` or good old view-source and copying & pasting.
+
+There are minor differences to the header and footer in the empty template, to enable
+the HTML to run in a static fashion. For example, we [remove the authentication links](https://github.com/moneyadviceservice/frontend/blob/master/app/views/shared/_authentication.html.erb#L7)
+in the header as they require knowledge about the user's sessions – which
+can't easily be shared across multiple sites, domains, etc.
+
+This is done via a [`hide_elements_irrelevant_for_third_parties?`](https://github.com/moneyadviceservice/frontend/blob/master/app/controllers/empty_controller.rb#L7-L9) flag in the views.
+
+Projects such as RAD keep this [stored in their repo](https://github.com/moneyadviceservice/rad/blob/master/app/views/layouts/_mas_head.html.erb), and have a simple CSS file
+that overrides or adds the bits they want.
+
 ### Patterns
 
 #### Decorators

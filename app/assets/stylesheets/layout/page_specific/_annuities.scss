@@ -42,7 +42,10 @@
 
 .l-annuities__image {
   margin-top: $baseline-unit*4;
-  margin-left: $baseline-unit*4;
+
+  @include respond-to($mq-l) {
+    margin-left: $baseline-unit*4;
+  }
 }
 
 .l-annuities__heading {

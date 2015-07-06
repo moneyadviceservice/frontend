@@ -6,7 +6,7 @@
   position: relative;
 
   .search__input {
-    @include body(14,14);
+    @include body(16,16);
     font-weight: 500;
     height: $baseline-unit*8;
     padding: 0 46px 0 $baseline-unit*2;

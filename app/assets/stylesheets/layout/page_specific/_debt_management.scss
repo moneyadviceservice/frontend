@@ -10,12 +10,6 @@
   }
 }
 
-.l-debtmanagement--filters {
-  background: $color-grey-pale;
-  padding-top: $baseline-unit*2;
-  padding-bottom: $baseline-unit*2;
-}
-
 .l-debtmanagement--options {
   margin-top: $baseline-unit*-4;
 }
@@ -66,24 +60,13 @@
   }
 }
 
-.l-debtmanagement__radio-item {
-  display: block;
-  position: relative;
-  margin: $baseline-unit;
-  @include column(6);
-
-  @include respond-to($mq-m) {
-    @include column(3);
-  }
-}
-
 .l-debtmanagement__advisor {
   margin-top: $baseline-unit*4;
   margin-bottom: $baseline-unit*6;
   @include column(12);
 
   @include respond-to($mq-l) {
-    @include column(4);
+    @include column(6);
   }
 }
 
@@ -125,10 +108,6 @@
       left: -6%;
     }
   }
-}
-
-.l-debtmanagement__country-heading {
-  clear: both;
 }
 
 .l-debtmanagement__companies-heading {
@@ -180,21 +159,4 @@
 .l-tool-advert__heading {
   @include body(24, 24);
   color: black;
-}
-
-.no-js .l-debtmanagement--filters,
-.js .l-debtmanagement--options,
-.js .js-debtmanagement-country,
-.js .js-tool-advert {
-  display: none;
-}
-
-.js .l-debtmanagement--options.is-visible,
-.js .js-debtmanagement-country.is-visible,
-.js .js-tool-advert.is-visible {
-  display: block;
-}
-
-.js .js-debtmanagement-country h4 {
-  display: none;
 }

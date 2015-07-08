@@ -1,0 +1,32 @@
+<% content_for :alternate_link do %>
+  <span></span?
+<% end %>
+
+<% set_meta_tags(title: t("errors.show.#{@rescue_response}.title")) %>
+<%= heading_tag t("errors.show.#{@rescue_response}.heading", default: t('errors.show.heading')), class: "error-page__headline" %>
+
+<p class="error-page__text"><%= t("errors.show.#{@rescue_response}.intro", default: t("errors.show.#{@rescue_response}.title")) %></p>
+
+<p class="error-page__search-text"><%= t('errors.show.not_found.message') %></p>
+
+<form data-dough-component="ClearInput" action="/en/search" method="get" role="search" class="error-page__search search">
+  <label class="visually-hidden" for="search"><%= t('search_box.label') %></label>
+  <input data-dough-clear-input class="search__input" id="search" required type="search" name="query" autocomplete="off" placeholder="<%= t('errors.show.not_found.search_placeholder') %>" />
+
+  <button data-dough-clear-input-button type="reset" class="search__clear">
+    <span class="icon icon--clear"></span>
+    <span class="visually-hidden"><%= t('search_box.clear_hidden_text') %></span>
+  </button>
+
+  <button class="search__submit" type="submit">
+    <span class="icon icon--search"></span>
+    <span class="visually-hidden"><%= t('search_box.button_text') %></span>
+  </button>
+</form>
+
+<%= content_for(:directory) do %>
+  <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+    <%= t('home.show.directory_heading_two') %>
+  <% end %>
+  <%= render 'shared/directory', items: category_navigation %>
+<% end %>

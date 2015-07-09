@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
-    get '/sitemap', to: "sitemap#index"
+    get '/sitemap', to: 'sitemap#index'
 
     if Feature.active?(:improvements)
       mount Feedback::Engine => '/improvements'
@@ -76,6 +76,11 @@ Rails.application.routes.draw do
             constraints: ToolMountPoint.for(:cutback_calculator)
     end
 
+    Feature.with(:debt_and_mental_health) do
+      mount DebtAndMentalHealth::Engine => '/:tool_id',
+            constraints: ToolMountPoint.for(:debt_and_mental_health)
+    end
+
     Feature.with(:debt_free_day_calculator) do
       mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
             constraints: ToolMountPoint.for(:debt_free_day_calculator)
@@ -106,7 +111,7 @@ Rails.application.routes.draw do
 
     Feature.with(:payday_loans) do
       mount PaydayLoansIntervention::Engine => '/:tool_id',
-        constraints: ToolMountPoint.for(:payday_loans)
+            constraints: ToolMountPoint.for(:payday_loans)
     end
 
     mount PensionsCalculator::Engine => '/tools/:tool_id',
@@ -158,12 +163,15 @@ Rails.application.routes.draw do
               constraints: ValidResource.new(:category)
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
-    resource  :advice, only: :show
+    resource :advice, only: :show
     resources :videos, only: :show
 
     unless Feature.active?(:corporate_tool_directory)
       match '/corporate/syndication', to: not_implemented, via: 'get'
-      match '/corporate/:tool_name', to: not_implemented, via: 'get', constraints: { tool_name: /([a-zA-Z]+)-([a-zA-Z]+)-syndication/ }
+      match '/corporate/:tool_name',
+            to: not_implemented,
+            via: 'get',
+            constraints: { tool_name: /([a-zA-Z]+)-([a-zA-Z]+)-syndication/ }
     end
 
     get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'

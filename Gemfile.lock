@@ -187,7 +187,7 @@ GEM
       rails (~> 4.1.8)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
-    cream (0.0.4)
+    cream (0.1.0)
       faraday (~> 0.8.7)
       faraday_middleware (~> 0.9.0)
       mechanize (= 2.5.1)
@@ -672,7 +672,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails
   contribution_calculator (~> 0.0.1)
-  cream
+  cream (~> 0.1.0)
   csslint_ruby
   cucumber-rails
   cutback_calculator (~> 0.10)

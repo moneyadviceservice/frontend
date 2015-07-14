@@ -17,7 +17,7 @@
                                     extended_contents: child_category.extended_contents,
                                     child_category_id: child_category.id %>
       </div>
-      <span class="category-detail__view-more" data-dough-collapsable-trigger="category_<%= child_category.id %>">
+      <span class="js-category-detail__view-more category-detail__view-more" data-dough-component="ScrollTo" data-anchor="<%= child_category.id %>" data-dough-collapsable-trigger="category_<%= child_category.id %>">
         <%= render 'shared/svg/use_icon', icon: 'plus', variant: 'blue' %>
         <%= render 'shared/svg/use_icon', icon: 'minus', variant: 'blue' %>
         <span class="category-detail__view-more__label-more"><%= t('categories.show.view_more') %></span>

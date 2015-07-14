@@ -1,4 +1,4 @@
-<div class="news-signup-test" data-dough-component="Newsletter">
+<div class="news-signup-test <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article <% end %>" <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"<% end %>>
   <div class="news-signup-test__image"></div>
   <div class="news-signup-test__container">
   <div class="news-signup-test__container__image"></div>

@@ -1,7 +1,9 @@
 class NewsletterSubscriptionsController < ApplicationController
   def create
-    @success = Core::NewsletterSubscriptionCreator.new(subscription_params).call
+    @success = Core::NewsletterSubscriptionCreator.new(subscription_params[:email]).call
+
     if @success
+      session[:newsletter_subscribed] = true
       flash[:success] = I18n.t('newsletter_subscriptions.success')
     else
       flash[:error] = I18n.t('newsletter_subscriptions.error')

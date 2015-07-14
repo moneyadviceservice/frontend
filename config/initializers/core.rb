@@ -47,8 +47,13 @@ Core::Registry::Repository[:news] =
 Core::Registry::Repository[:news_article] =
   Core::Repository::News::CMS.new
 
-Core::Registry::Repository[:newsletter_subscription] =
-  Core::Repository::NewsletterSubscriptions::PublicWebsite.new
+if Rails.env.development? || Rails.env.test?
+  Core::Registry::Repository[:newsletter_subscription] =
+    Core::Repository::NewsletterSubscriptions::Fake.new
+else
+  Core::Registry::Repository[:newsletter_subscription] =
+    Core::Repository::NewsletterSubscriptions::Cream.new
+end
 
 if Rails.env.development?
   Core::Registry::Repository[:customer] =

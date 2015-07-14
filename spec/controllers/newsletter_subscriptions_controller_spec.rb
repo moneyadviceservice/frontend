@@ -1,5 +1,5 @@
 RSpec.describe NewsletterSubscriptionsController, type: :controller do
-  let(:subscriber) { instance_double(Core::NewsletterSubscriptionCreator, email: email) }
+  let(:subscriber) { instance_double(Core::NewsletterSubscriptionCreator, email) }
 
   before do
     allow_any_instance_of(Core::NewsletterSubscriptionCreator).to receive(:call) { result }
@@ -12,7 +12,7 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
       let(:result) { true }
 
       it 'instantiates a subscriber' do
-        expect(Core::NewsletterSubscriptionCreator).to receive(:new).with(email) { subscriber }
+        expect(Core::NewsletterSubscriptionCreator).to receive(:new).with(email[:email]) { subscriber }
 
         xhr :post, :create, locale: I18n.locale, subscription: email
       end
@@ -34,6 +34,12 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
 
         expect(response).to render_template('show')
       end
+
+      it 'sets session variable' do
+        xhr :post, :create, locale: I18n.locale, subscription: email
+
+        expect(session[:newsletter_subscribed]).to be_truthy
+      end
     end
   end
 
@@ -48,6 +54,12 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
         post :create, locale: I18n.locale, subscription: email
 
         expect(request.flash[:success]).to include I18n.t('newsletter_subscriptions.success')
+      end
+
+      it 'sets session variable' do
+        post :create, locale: I18n.locale, subscription: email
+
+        expect(session[:newsletter_subscribed]).to be_truthy
       end
 
       it 'redirects back' do
@@ -65,6 +77,12 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
         post :create, locale: I18n.locale, subscription: email
 
         expect(request.flash[:error]).to include I18n.t('newsletter_subscriptions.error')
+      end
+
+      it 'does not set session variable' do
+        post :create, locale: I18n.locale, subscription: email
+
+        expect(session[:newsletter_subscribed]).to be_falsey
       end
 
       it 'redirects back' do

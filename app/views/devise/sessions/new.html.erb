@@ -58,5 +58,5 @@
   <% end %>
 
   <h2><%= t("authentication.sign_in_page.links.register_title") %></h2>
-  <p><%= t("authentication.sign_in_page.links.register_html", url: new_registration_path(resource_name)) %></p>
+  <p><%= raw authentication_sign_in_description new_registration_path(resource_name) %></p>
 </main>

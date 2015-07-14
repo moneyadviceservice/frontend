@@ -13,7 +13,7 @@
   background-size: 40% auto;
   padding-bottom: 60px;
 
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     background-position: right 70px;
   }  
 }
@@ -36,14 +36,14 @@
 
 .l-category--image .l-category__top__content {
   width: 60%;
+  
+  @include respond-to($mq-s) {
+    min-height: 170px;
+  }
 }
 
 .l-category--image .l-category__top {
   @include respond-to($mq-s) {
     min-height: 300px;
-  }  
-
-  @include respond-to($mq-l) {
-    min-height: 400px;
   }  
 }

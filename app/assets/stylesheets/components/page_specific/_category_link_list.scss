@@ -14,6 +14,12 @@
   }
 }
 
+.category-link-list__heading {
+  @include body(18, 30);
+  color: $color-true-black;
+  margin-top: $baseline_unit*6;
+}
+
 .category-link-list__item {
   display: inline;
   margin-right: $baseline_unit;

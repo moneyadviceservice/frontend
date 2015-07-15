@@ -277,7 +277,4 @@ Rails.application.routes.draw do
       end
     end
   end
-
-  match '*path', via: :all, to: not_implemented
-
 end

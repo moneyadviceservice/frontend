@@ -31,9 +31,3 @@ Feature: Registration
     Then My MAS account should have already been created
     Then I should remain signed out
     And  I should receive an already registered email address validation error
-
-  Scenario: Edit account details
-    Given I register
-    When I attempt to edit my account
-    Then I am told that the functionality is not implemented
-

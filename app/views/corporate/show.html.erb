@@ -6,41 +6,27 @@
   <% end %>
 <% end %>
 
-<div class="l-article-3col-main">
-  <div class="l-main__row">
-    <main class="l-main__cell-full editorial" role="main">
-      <%= heading_tag article.title %>
+<main class="l-main" role="main">
+  <%= heading_tag article.title %>
 
-      <% if category && category.third_level_navigation? %>
-        <%= category.render_contents %>
-      <% end %>
+  <% if category && category.third_level_navigation? %>
+    <%= category.render_contents %>
+  <% end %>
 
-      <div class="editorial">
-        <%= article.content %>
-      </div>
-
-      <%= render article.extra_content_partial if article.extra_content? %>
-
-      <%= render 'previous_and_next' %>
-
-      <div class='related-links--mobile'>
-        <%= render 'articles/related_articles', type: 'mobile' %>
-      </div>
-
-      <%= render 'shared/more_in', article: @article, categories: related_content %>
-
-      <%= render 'shared/feedback', article: article %>
-    </main>
+  <div class="editorial">
+    <%= article.content %>
   </div>
-</div>
 
-<div class="l-nav l-article-3col-right">
-  <div class='related-links--desktop' data-dough-component="StickyColumn">
-    <%= render 'articles/related_articles', type: 'desktop' %>
-  </div>
-</div>
+  <%= render article.extra_content_partial if article.extra_content? %>
 
-<div class="l-article-3col-left">
+  <%= render 'previous_and_next' %>
+
+  <%= render 'shared/more_in', article: @article, categories: related_content %>
+
+  <%= render 'shared/feedback', article: article %>
+</main>
+
+<div class="l-nav">
   <%= render 'shared/mas_sections_link' %>
   <%= render 'shared/nav',
              categories:        corporate_category_navigation,

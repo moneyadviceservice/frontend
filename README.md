@@ -231,3 +231,18 @@ Run the following in the command line.
 ```
 RAILS_ENV=development bundle exec rake karma:install karma:run_once
 ```
+
+## Deploy to staging and production
+
+Today the current process occurs in GO. You need to change the build number
+here:
+https://github.com/moneyadviceservice/scripts/blob/master/puppet/extdata/common.yaml#L249
+
+Make sure before you changed and open a PR to run the follow script and **paste on the PR description**:
+
+```
+./bin/mas-version-diff 1869 1870
+```
+
+Obs.: 1869 and 1870 is just an example of versions to be shown. Use the GO build
+number in ascending order.

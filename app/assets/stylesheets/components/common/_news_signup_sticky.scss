@@ -1,0 +1,61 @@
+// Newsletter signup sticky footer component
+//
+// Styleguide Newsletter Signup Sticky
+
+.news-signup-sticky {
+  @extend %stripe-bg;
+  @include clearfix;
+  background-color: $color-off-white;
+  padding: $baseline-unit*2 0 0 0;
+  margin: $baseline-unit*2 0 0 0;
+  position: relative;
+  text-align: center;
+
+  @include respond-to($mq-m) {
+    &:after {
+      content: " ";
+      width: 140px;
+      height: 132px;
+      background: image-url('newsletter_signup_image.png') no-repeat;
+      background-size: 140px 132px;
+      position: absolute;
+      top: -16px;
+      left: 0;
+    }
+  }
+}
+
+.news-signup-sticky__email-label {
+  @include visually-hidden;
+}
+
+input[type="email"].news-signup-sticky__email-input {
+  border-color: $color-newsletter;
+  border-radius: 4px;
+  margin: $baseline-unit;
+  max-width: 188px;
+  margin: 0 auto $baseline-unit*1.5 auto;
+  display: block;
+  padding: $baseline-unit*3 $baseline-unit;
+
+  &:focus {
+    outline: 2px solid $color-newsletter-active;
+  }
+}
+
+.news-signup-sticky__disclaimer {
+  @include body(12,14);
+  font-weight: 500;
+  color: $color-true-black;
+  font-style: italic;
+  text-align: center;
+  margin: $baseline-unit*3 $baseline-unit;
+}
+
+.news-signup-sticky__close {
+  @include body(40,25);
+  position: absolute;
+  right: 0;
+  top: -$baseline-unit*5;
+  color: $color-grey-light;
+}

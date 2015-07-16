@@ -50,6 +50,7 @@ module Core
               gender:                  gender(customer_details['GenderCode']['Value']),
               topics:                  customer_details['mas_FinancialInterest1'],
               newsletter_subscription: !customer_details['DoNotBulkEMail'],
+              opt_in:                  customer_details['mas_AllowtobecontactedforSurvey'],
               date_of_birth:           date_of_birth(customer_details),
               status_code:             customer_details['StatusCode']['Value']
             }

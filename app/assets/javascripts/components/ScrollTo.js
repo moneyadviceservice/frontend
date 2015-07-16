@@ -1,12 +1,41 @@
 define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
+  var ScrollToProto,
+    defaultConfig = {
+      selectors: {
+        activeClass: 'is-active',
+        anchorDataAttribute: 'anchor'
+      }
+    };
+
   var ScrollTo = function($el, config) {
-    ScrollTo.baseConstructor.call(this, $el, config);
+    ScrollTo.baseConstructor.call(this, $el, config, defaultConfig);
+  };
+
+  /**
+   * Inherit from base module, for shared methods and interface
+   */
+  DoughBaseComponent.extend(ScrollTo);
+
+  ScrollTo.componentName = 'ScrollTo';
+
+  ScrollToProto = ScrollTo.prototype;
+
+  /**
+   * Set up and populate the model from the form inputs
+   * @param {Promise} initialised
+   */
+  ScrollToProto.init = function(initialised) {
+    this._addListeners();
+    this._initialisedSuccess(initialised);
+  };
+
+  ScrollToProto._addListeners = function() {
     var self = this;
 
-    $el.on('click', 'button:not(.is-active)', function() {
-      self.anchor = $el.data('anchor');
+    this.$el.on('click', 'button:not(.' + this.config.selectors.activeClass + ')', function() {
+      self.anchor = self.$el.data(self.config.selectors.anchorDataAttribute);
 
       if(typeof self.anchor !== 'undefined') {
         $('html, body').animate({
@@ -18,19 +47,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         });          
       }
     });
-  };
-
-  /**
-   * Inherit from base module, for shared methods and interface
-   */
-  DoughBaseComponent.extend(ScrollTo);
-
-  /**
-   * Set up and populate the model from the form inputs
-   * @param {Promise} initialised
-   */
-  ScrollTo.prototype.init = function(initialised) {
-    this._initialisedSuccess(initialised);
   };
 
   return ScrollTo;

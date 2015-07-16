@@ -10,4 +10,10 @@ RSpec.describe 'Page Not Found', type: :routing do
       expect(get: '/en/non-existent').to_not be_routable
     end
   end
+
+  context 'incorrect tool name' do
+    it 'shows page is not routable' do
+      expect(get: '/en/tool/quick-cash-finde').to_not be_routable
+    end
+  end
 end

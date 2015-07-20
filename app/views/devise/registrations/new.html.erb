@@ -3,7 +3,7 @@
   <p class="intro"><%= t("authentication.registration.intro_html", url: new_session_path(resource_name)) %></p>
 
   <% unless authentication_session_set? %>
-    <h2><%= t("authentication.registration.subtitle") %></h2>
+    <h2 class="t-registration-subtitle"><%= t("authentication.registration.subtitle") %></h2>
     <ul class="list">
       <% t('authentication.registration.bullets').each do |bullet| %>
         <li><%= bullet %></li>

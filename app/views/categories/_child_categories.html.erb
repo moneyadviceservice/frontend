@@ -22,6 +22,7 @@
         <%= render 'shared/svg/use_icon', icon: 'minus', variant: 'blue' %>
         <span class="category-detail__view-more__label-more"><%= t('categories.show.view_more') %></span>
         <span class="category-detail__view-more__label-less"><%= t('categories.show.view_less') %></span>
+        <span class="visually-hidden"> <%= child_category.title %></span>
       </span>
     <% end %>
   </section>

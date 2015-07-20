@@ -91,3 +91,19 @@ end
 When(/^I attempt to edit my account$/) do
   account_page.load(locale: 'en')
 end
+
+When(/^I visit the registration page$/) do
+  sign_up_page.load(locale: 'en')
+end
+
+Then(/^I should see the registration benefits$/) do
+  expect(sign_up_page).to have_benefits
+end
+
+Given(/^I have a registration title set in the session$/) do
+  Warden.on_next_request { |proxy| proxy.raw_session['authentication_registration_title'] = 'test.title' }
+end
+
+Then(/^I should not see the registration benefits$/) do
+  expect(sign_up_page).to_not have_benefits
+end

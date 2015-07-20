@@ -1,3 +1,19 @@
+// Buttons
+//
+// :hover      - green
+// :focus      - green
+// :active     - green
+// .is-disabled - green
+// .button--primary            - yellow
+// .button--primary:hover      - yellow
+// .button--primary:focus      - yellow
+// .button--primary:active     - yellow
+// .button--primary.is-disabled - yellow
+// .button--newsletter          - orange
+// .button--newsletter.button--newsletter-small    - orange
+//
+// Styleguide buttons
+
 .button {
   @extend %type-button;
   padding: $button-padding-vertical $button-padding-horizontal;
@@ -104,3 +120,37 @@
   @extend %type-button-small;
   padding: 14px 16px;
 }
+
+// Lives in newsletter signup module
+//
+// .button--newsletter
+//
+// Styleguide Newsletter signup buttons
+
+.button--newsletter {
+  background: $color-newsletter;
+  border-bottom: 0;
+  color: $color-white;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-white;
+    background: $color-newsletter-active;
+    outline: none;
+  }
+}
+
+.button--newsletter-small {
+  @include body(12,14);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: $color-newsletter-active;
+    outline: none;
+  }
+}
+

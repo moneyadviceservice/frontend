@@ -13,12 +13,12 @@
     <p><%= t("authentication.mandatory_warning") %></p>
     <%= f.validation_summary %>
 
-    <div class="registration__row">
-      <div class="registration__field">
+    <div class='registration__row'>
+      <div class='registration__field', id='first_name'>
         <%= f.form_row :first_name do %>
           <%= f.errors_for :first_name %>
-          <%= f.label :first_name, class: "form__label-heading" %>
-          <%= f.text_field :first_name, autofocus: true, "aria-describedby" => "tooltip_first_name" %>
+          <%= f.label :first_name, class: 'form__label-heading' %>
+          <%= f.text_field :first_name, autofocus: true, 'aria-describedby' => 'tooltip_first_name' %>
         <% end %>
       </div>
 

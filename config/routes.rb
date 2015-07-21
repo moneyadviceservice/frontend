@@ -147,6 +147,7 @@ Rails.application.routes.draw do
       mount Agreements::Engine => '/agreements'
     end
 
+    match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
     match '/corporate_categories/corporate-home', to: not_implemented, via: 'get'
 
     resources :action_plans, only: 'show'

@@ -3,7 +3,7 @@ class ErrorsController < ApplicationController
   include SuppressMenuButton
 
   def show
-    render "#{@rescue_response}", status: @status_code
+    render :show, status: @status_code
   end
 
   def display_skip_to_main_navigation?

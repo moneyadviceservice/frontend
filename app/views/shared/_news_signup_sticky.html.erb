@@ -1,12 +1,17 @@
-<div class="news-signup-sticky">
+<div class="news-signup-sticky<% if local_assigns.has_key?(:fixed_position) %> news-signup-sticky--positioned<% end %>">
+  <p class="news-signup-sticky__intro">200,000 people are taking care of their money with our FREE money advice newsletter.</p>
+  <p class="news-signup-sticky__intro news-signup-sticky__intro--second">Are you? Sign up today.</p>
+
+  <div class="news-signup-sticky__inner">
     <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
-        <%= label_tag('subscription[email]', 'Email address', for: 'news-signup-email', class: 'news-signup-sticky__email-label') %>
-        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-sticky__email-input js-news-signup-test-input', placeholder: 'What\'s your email?') %>
-        <%= button_tag('Send me money advice', type: 'submit', class: 'button button--newsletter button--newsletter-small') %>
-        <p class="news-signup-sticky__disclaimer">We won't share your details. See our <a href="#">privacy policy</a></p>
-        <button class="news-signup-sticky__close unstyled-button" title="Don't ask me again">
-            &times;
-        </button>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
+      <%= label_tag('subscription[email]', 'Email address', for: 'news-signup-email', class: 'news-signup-sticky__email-label') %>
+      <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-sticky__email-input js-news-signup-test-input', placeholder: 'What\'s your email?') %>
+      <%= button_tag('Send me money advice', type: 'submit', class: 'button button--newsletter button--newsletter-small') %>
+      <p class="news-signup-sticky__disclaimer">We won't share your details. See our <a href="#">privacy policy</a></p>
+      <button class="news-signup-sticky__close unstyled-button" title="Don't ask me again">
+          &times;
+      </button>
     <% end %>
+  </div>
 </div>

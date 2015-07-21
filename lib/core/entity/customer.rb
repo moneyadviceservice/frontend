@@ -19,6 +19,7 @@ module Core
         state: state,
         topics: topics,
         newsletter_subscription: newsletter_subscription,
+        opt_in: opt_in,
         date_of_birth: date_of_birth,
         status_code: status_code
       }

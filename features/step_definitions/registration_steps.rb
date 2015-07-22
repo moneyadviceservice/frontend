@@ -91,3 +91,11 @@ end
 When(/^I attempt to edit my account$/) do
   account_page.load(locale: 'en')
 end
+
+When(/^I visit the registration page$/) do
+  sign_up_page.load(locale: 'en')
+end
+
+Then(/^I should have the option to opt\-in or opt\-out of participating in research$/) do
+  expect(response).to have_content sign_up_page.opt_in
+end

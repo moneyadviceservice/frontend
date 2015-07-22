@@ -9,6 +9,7 @@ When(/^I register$/) do
   sign_up_page.password.set 'password'
   sign_up_page.post_code.set 'NE1 6EE'
   sign_up_page.newsletter_subscription.set true
+  sign_up_page.opt_in.set true
   sign_up_page.submit.click
 end
 

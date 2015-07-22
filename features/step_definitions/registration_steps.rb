@@ -97,5 +97,5 @@ When(/^I visit the registration page$/) do
 end
 
 Then(/^I should have the option to opt\-in or opt\-out of participating in research$/) do
-  expect(response).to have_content sign_up_page.opt_in
+  expect(sign_up_page.has_opt_in?).to be true
 end

@@ -35,3 +35,12 @@ Feature: Registration
     Then My MAS account should have already been created
     Then I should remain signed out
     And  I should receive an already registered email address validation error
+
+  Scenario: Displaying sign up benefits when no session is set
+    When I visit the registration page
+    Then I should see the registration benefits
+
+  Scenario: Displaying sign up benefits when session is set
+    Given I have a registration title set in the session
+    When I visit the registration page
+    Then I should not see the registration benefits

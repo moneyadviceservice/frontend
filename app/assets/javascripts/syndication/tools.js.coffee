@@ -262,6 +262,13 @@
         path: "cy/tools/cyfrifiannell-benthyciadau/loan"
       title: "Loan calculator"
 
+    debt_and_mental_health:
+      en:
+        path: "en/debt-and-mental-health/preview"
+      title: "Debt and mental health"
+      width: "100%"
+      height: "800px"
+
     debt_advice_locator:
       en:
         path: "en/tools/debt-advice-locator"

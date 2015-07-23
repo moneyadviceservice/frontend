@@ -143,7 +143,12 @@
       &:focus,
       &:hover {
         outline: none;
-        text-decoration: underline;
+        border-bottom: 2px solid $color-green-dark;
+        margin-bottom: -2px;
+
+        svg {
+          fill: $color-green-dark;
+        }
       }
     }
 

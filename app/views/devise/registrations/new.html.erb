@@ -1,9 +1,16 @@
 <main role="main" class="l-registration">
   <h1><%= authentication_registration_title %></h1>
-  <p class="intro"><%= t("authentication.registration.intro") %></p>
-  <p class="intro"><%= t("authentication.registration.secondary_intro_html", url: t('footer.privacy_statement_link')) %></p>
+  <p class="intro"><%= t("authentication.registration.intro_html", url: new_session_path(resource_name)) %></p>
 
-  <%= render "devise/shared/links" %>
+  <% unless authentication_session_set? %>
+    <h2 class="t-registration-subtitle"><%= t("authentication.registration.subtitle") %></h2>
+    <ul class="list">
+      <% t('authentication.registration.bullets').each do |bullet| %>
+        <li><%= bullet %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
 
   <%= form_for(resource, as: resource_name,
                          url: registration_path(resource_name),
@@ -88,25 +95,16 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :newsletter_subscription do %>
+        <%= f.errors_for :newsletter_subscription %>
 
-          <h3><%= t("authentication.registration.newsletter.title") %></h3>
-          <p><%= t("authentication.registration.newsletter.intro") %></p>
-          <ul class="list">
-            <% t("authentication.registration.newsletter.benefits").each do |benefit| %>
-              <li><%= benefit %></li>
+        <fieldset class="form__group">
+          <div class="form__group-item">
+            <%= f.label :newsletter_subscription, class: "form__label-heading" do %>
+              <%= f.check_box :newsletter_subscription, class: "form__group-input" %>
+              <%= t("activerecord.attributes.user.newsletter") %>
             <% end %>
-          </ul>
-
-          <%= f.errors_for :newsletter_subscription %>
-
-          <fieldset class="form__group">
-            <div class="form__group-item">
-              <%= f.label :newsletter_subscription, class: "form__label-heading" do %>
-                <%= f.check_box :newsletter_subscription, class: "form__group-input" %>
-                <%= t("activerecord.attributes.user.newsletter") %>
-              <% end %>
-            </div>
-          </fieldset>
+          </div>
+        </fieldset>
 
           <fieldset class="form__group">
             <div class="form__group-item">
@@ -124,7 +122,7 @@
       <div class="registration__field">
         <div class="form__row">
           <p><%= t("authentication.registration.terms_html", url: t("footer.terms_and_conditions_link")) %></p>
-          <%= f.submit t("authentication.registration.label"), class: "button button--primary" %>
+          <%= f.submit t("authentication.registration.label"), class: "button button--newsletter" %>
         </div>
       </div>
     </div>

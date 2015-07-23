@@ -14,4 +14,8 @@ module SessionsHelper
     I18n.t(session['authentication_registration_title'],
            default: I18n.t('authentication.registration.title'))
   end
+
+  def authentication_session_set?
+    session.has_key? 'authentication_registration_title'
+  end
 end

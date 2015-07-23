@@ -12,5 +12,6 @@ module UI::Pages
     element :newsletter_subscription, "input[name='user[newsletter_subscription]'][type='checkbox']"
     element :opt_in_for_research, "input[name='user[opt_in_for_research]'][type='checkbox']"
     element :submit, "#new_user input[type='submit']"
+    element :benefits, ".t-registration-subtitle"
   end
 end

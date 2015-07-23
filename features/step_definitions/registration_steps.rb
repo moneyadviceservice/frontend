@@ -100,3 +100,15 @@ end
 Then(/^I should have the option to opt\-in or opt\-out of participating in research$/) do
   expect(sign_up_page.has_opt_in_for_research?).to be true
 end
+
+Then(/^I should see the registration benefits$/) do
+  expect(sign_up_page).to have_benefits
+end
+
+Given(/^I have a registration title set in the session$/) do
+  Warden.on_next_request { |proxy| proxy.raw_session['authentication_registration_title'] = 'test.title' }
+end
+
+Then(/^I should not see the registration benefits$/) do
+  expect(sign_up_page).to_not have_benefits
+end

@@ -17,6 +17,10 @@
       @include row(12);
       @include column(4, 12);
     }
+
+    .theme-cy & .button {
+      white-space: normal;
+    }
   }
 
   .registration__helper {

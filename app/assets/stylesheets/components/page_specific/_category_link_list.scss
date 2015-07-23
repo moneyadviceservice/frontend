@@ -42,15 +42,17 @@
   border-bottom: 3px solid $color-yellow-dark;
   padding-bottom: 5px;
 
-  &:link,
   &:focus,
-  &:visited {
-    color: $color-true-black;
-  }
-
   &:hover {
     border-bottom: 3px solid $color-true-black;
     text-decoration: none;
+  }
+
+  &:focus,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
     color: $color-true-black;
   }
 }

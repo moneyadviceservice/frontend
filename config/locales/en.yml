@@ -91,10 +91,10 @@ en:
     attributes:
       user:
         first_name: First name
-        email: Email address
+        email: Email
         password: Password
         post_code: Postcode
-        newsletter: Give me free, occasional advice by email
+        newsletter: Send me free advice by email
         register_button: Register
         opt_in_for_research: Tick if you’d like to be contacted to help us with our research
 
@@ -303,8 +303,8 @@ en:
       how_can_we_help: How can we help?
     show:
       view_all: View all ...
-      view_more: View more
-      view_less: View less
+      view_more: Expand
+      view_less: Contract
 
   article_feedbacks:
     new:
@@ -372,15 +372,20 @@ en:
     sign_out: Sign out
     register: Register
     my_account: My Account
-    mandatory_warning: "All fields are required"
+    mandatory_warning: "Please fill in these fields"
     links:
       sign_in_html: "Already registered? <a href=\"%{url}\">Sign in</a>."
     registration:
-      title: Register to get more from your money
-      intro: Registering allows you to save your data when you use our tools and calculators and receive our free fortnightly newsletter packed with money-saving tips and advice.
-      secondary_intro_html: "The Money Advice Service is set up by government to provide free and impartial advice on how to manage your money. <a href=\"%{url}\">Privacy promise</a> - we will never sell your data or spam you."
-      terms_html: "By clicking 'Register', you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
-      label: Register
+      title: Get more from your money in 30 seconds
+      intro_html: "Already registered? Time is money, so <a href=\"%{url}\">sign in now</a>."
+      subtitle: What you'll get
+      bullets:
+        - "Save your Budget Planner and keep your spending breakdown handy"
+        - "Free money advice straight to your inbox"
+        - "Help with your money goals, like buying a house or car"
+      description_html: default description
+      terms_html: "By clicking the button you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
+      label: Get free money advice
       field_help_texts:
         first_name: "Please enter your first name"
         email: "We need your email for you to register"

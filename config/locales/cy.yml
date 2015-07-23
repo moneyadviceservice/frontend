@@ -93,10 +93,10 @@ cy:
     attributes:
       user:
         first_name: "Enw Cyntaf"
-        email: "Cyfeiriad E-bost"
+        email: "E-bost"
         password: "Cyfrinair"
         post_code: "Cod post"
-        newsletter: "Cofrestrwch i gael y cylchlythyr"
+        newsletter: "Anfonwch gyngor am ddim i mi drwy e-bost"
         register_button: "Cofrestru"
 
   skip_links:
@@ -303,8 +303,8 @@ cy:
       how_can_we_help: Sut allwn ni helpu?
     show:
       view_all: Gweld yr holl ...
-      view_more: View more
-      view_less: View less
+      view_more: Expand
+      view_less: Contract
 
   article_feedbacks:
     new:
@@ -372,15 +372,19 @@ cy:
     sign_out: Cofnodi Allan
     register: Cofrestru
     my_account: Fy nghyfrif
-    mandatory_warning: Mae pob maes yn ofynnol
+    mandatory_warning: Cwblhewch y meysydd hyn
     links:
       sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
     registration:
-      title: Cofrestrwch i wneud y mwyaf o'ch arian
-      intro: Wrth gofrestru gallwch gadw eich data pan ddefnyddiwch ein hofferynnau a'n cyfrifianellau a chewch gylchlythyr am ddim bob pythefnos sydd yn llawn awgrymiadau da a chyngor ar sut i arbed arian.
-      secondary_intro_html: "Sefydlwyd y Gwasanaeth Cynghori Ariannol gan y llywodraeth i ddarparu cyngor am ddim a diduedd ar sut i reoli eich arian. <a href=\"%{url}\">Addewid preifatrwydd</a> - ni fyddwn fyth yn gwerthu'ch data nac yn anfon sbam atoch."
-      terms_html: "Wrth glicio ar 'Cofrestru', byddwch yn cytuno a'n <a href=\"%{url}\">Hamodau a Thelerau</a>."
-      label: Cofrestru
+      title: Ceisiwch fwy am eich arian mewn 30 eiliad
+      intro_html: "Eisoes wedi cofrestru? Mae amser, ac arian, yn brin, felly <a href=\"%{url}\">cofrestrwch yn awr</a>."
+      subtitle: Yr hyn y byddwch yn ei dderbyn
+      bullets:
+        - "Cadwch eich Cynllunydd Cyllideb a chadwch eich crynodeb o’ch gwariant wrth law"
+        - "Cyngor ariannol am ddim yn syth i’ch mewnflwch"
+        - "Cymorth gyda’ch nodau ariannol, fel prynu tŷ neu gar"
+      terms_html: "Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href=\"%{url}\">Hamodau a Thelerau</a>."
+      label: Ceisiwch gyngor ariannol rhad ac am ddim
       field_help_texts:
         first_name: Rhowch eich enw cyntaf
         email: "Rydym angen eich cyfeiriad e-bost er mwyn i chi gofrestru"

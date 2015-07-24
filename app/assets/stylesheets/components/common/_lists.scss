@@ -95,6 +95,15 @@
   @extend .list;
 }
 
+// Dough sets th, td to 14px. We want contained lists to match within editorial content.
+.editorial {
+  th, td {
+    ul, ol {
+      @include body(14, 24);
+    }
+  }
+}
+
 // Yes/No list style for editorial content
 .editorial .yes-no {
   padding-left: 0;

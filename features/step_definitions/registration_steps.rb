@@ -9,7 +9,6 @@ When(/^I register$/) do
   sign_up_page.password.set 'password'
   sign_up_page.post_code.set 'NE1 6EE'
   sign_up_page.newsletter_subscription.set true
-  sign_up_page.opt_in_for_research.set true
   sign_up_page.submit.click
 end
 
@@ -95,10 +94,6 @@ end
 
 When(/^I visit the registration page$/) do
   sign_up_page.load(locale: 'en')
-end
-
-Then(/^I should have the option to opt\-in or opt\-out of participating in research$/) do
-  expect(sign_up_page.has_opt_in_for_research?).to be true
 end
 
 Then(/^I should see the registration benefits$/) do

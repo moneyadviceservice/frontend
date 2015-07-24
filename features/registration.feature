@@ -15,10 +15,6 @@ Feature: Registration
     When I register from a direct link
     Then I should be at the home page
 
-  Scenario: Register to participate in research
-    When I visit the registration page
-    Then I should have the option to opt-in or opt-out of participating in research
-
   Scenario Outline: Attempt to register with bad details
     When I attempt to register with <Problem>
     Then My MAS account should not be created

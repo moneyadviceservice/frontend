@@ -41,6 +41,10 @@ module Core
       navigation_link 'next_link'
     end
 
+    def redirect?
+      false
+    end
+
     private
 
     def build_article_links(key)

@@ -7,9 +7,11 @@ module Core
     let(:id) { 'the-article' }
 
     describe '.call' do
+      let(:repository_double) { double(find: data) }
+
       before do
         allow(Registry::Repository).to receive(:[]).with(:article) do
-          double(find: data)
+          repository_double
         end
       end
 
@@ -75,6 +77,58 @@ module Core
 
           it 'returns the category reader results' do
             expect(subject.call.categories).to eql [category_entity]
+          end
+        end
+      end
+
+      context 'when find raises Core::Repository::CMS::Resource301Error' do
+        let(:repository_double) do
+          repo = double
+          allow(repo).to receive(:find).and_raise(Core::Repository::CMS::Resource301Error.new('https://example.com'))
+          repo
+        end
+
+        it 'returns an object with status 301' do
+          subject.call do |article|
+            expect(article.status).to eql(301)
+          end
+        end
+
+        it 'returns an object with the redirect location' do
+          subject.call do |article|
+            expect(article.location).to eql('https://example.com')
+          end
+        end
+
+        it 'returns an object with redirect? is true' do
+          subject.call do |article|
+            expect(article.redirect?).to be_truthy
+          end
+        end
+      end
+
+      context 'when find raises Core::Repository::CMS::Resource302Error' do
+        let(:repository_double) do
+          repo = double
+          allow(repo).to receive(:find).and_raise(Core::Repository::CMS::Resource302Error.new('https://example.com'))
+          repo
+        end
+
+        it 'returns an object with status 302' do
+          subject.call do |article|
+            expect(article.status).to eql(302)
+          end
+        end
+
+        it 'returns an object with the redirect location' do
+          subject.call do |article|
+            expect(article.location).to eql('https://example.com')
+          end
+        end
+
+        it 'returns an object with redirect? is true' do
+          subject.call do |article|
+            expect(article.redirect?).to be_truthy
           end
         end
       end

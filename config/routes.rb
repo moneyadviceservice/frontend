@@ -158,9 +158,7 @@ Rails.application.routes.draw do
     get '/:page_type/:id/preview' => 'articles_preview#show',
         page_type: /articles|action_plans|news|videos|corporate|tools/
 
-    resources :categories,
-              only: 'show',
-              constraints: ValidResource.new(:category)
+    resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
     resource :advice, only: :show
@@ -278,6 +276,9 @@ Rails.application.routes.draw do
     end
   end
 
-  match '*path', via: :all, to: not_implemented
-
+  if Feature.active?(:redirects)
+    match '*path', via: :all, to: 'catchall#not_implemented'
+  else
+    match '*path', via: :all, to: not_implemented
+  end
 end

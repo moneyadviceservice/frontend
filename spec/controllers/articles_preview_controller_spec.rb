@@ -13,7 +13,7 @@ RSpec.describe ArticlesPreviewController, type: :controller do
     end
 
     context 'when preview does not exist for an article' do
-      before { allow_any_instance_of(Core::ArticlePreviewer).to receive(:call).and_yield }
+      before { allow_any_instance_of(Core::ArticlePreviewer).to receive(:call).and_yield(Core::Article.new('no-exist')) }
 
       it_should_behave_like 'an unsuccessful get article request'
     end

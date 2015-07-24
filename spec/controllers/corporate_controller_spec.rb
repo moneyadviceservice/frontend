@@ -58,7 +58,7 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
 
     context 'when corporate page does not exist' do
       it 'raises an ActionController RoutingError' do
-        allow(Core::CorporateReader).to receive(:new) { ->(&block) { block.call } }
+        allow(Core::CorporateReader).to receive(:new) { ->(&block) { block.call(Core::Article.new('no-exist')) } }
 
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end

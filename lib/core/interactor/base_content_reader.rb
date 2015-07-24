@@ -15,8 +15,11 @@ module Core
           a.categories = build_categories(a.categories)
         end
       elsif block_given?
-        yield
+        yield entity
       end
+    rescue Core::Repository::CMS::Resource301Error,
+           Core::Repository::CMS::Resource302Error => e
+      yield OpenStruct.new(status: e.status, location: e.location, redirect?: true)
     end
 
     private

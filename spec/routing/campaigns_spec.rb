@@ -22,8 +22,4 @@ RSpec.describe 'Campaigns routing', type: :routing do
         )
     end
   end
-
-  context 'when the id is not whitelisted' do
-    specify { expect(get('/cy/campaigns/ramdom-id')).to_not be_routable }
-  end
 end

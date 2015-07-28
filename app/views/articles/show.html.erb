@@ -16,6 +16,8 @@
     <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
       <%= heading_tag article.title %>
 
+      <%= render 'shared/svg/icons/social_sharing_sprite' %>
+
       <% unless @newsletter_excluded %>
         <%= render 'shared/news_signup_test' %>
       <% end %>
@@ -27,6 +29,8 @@
           <%= render 'callback_requester'  %>
         <% end %>
       <% end %>
+
+      <%= render 'shared/social_sharing' %>
 
       <%= render 'previous_and_next' %>
 

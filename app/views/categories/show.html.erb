@@ -18,6 +18,8 @@
     <% else %>
       <main class="l-main__cell-full l-category" role="main" data-parent="<%= @category.parent_id %>">
     <% end %>
+      <%= render 'shared/svg/icons/social_sharing_sprite' %>
+
       <div class="l-category__top">
         <div class="l-category__top__content">
           <%= heading_tag category.title, class: 'l-category__heading' %>
@@ -27,6 +29,8 @@
         <%= render 'top_links', category: category unless !category.links || category.links.empty? %>
       </div>
       <%= category.render_contents %>
+
+      <%= render 'shared/social_sharing' %>
     </main>
   </div>
 </div>

@@ -8,7 +8,7 @@
         target="_blank"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="social-sharing__icon">
-          <use xlink:href="#icon-facebook"></use>
+          <use xlink:href="#svg-icon--facebook"></use>
         </svg>
         <span class="visually-hidden"><%= t('social_sharing.label_facebook') %></span>
       </a>
@@ -18,7 +18,7 @@
         target="_blank"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="social-sharing__icon">
-          <use xlink:href="#icon-twitter"></use>
+          <use xlink:href="#svg-icon--twitter"></use>
         </svg>
         <span class="visually-hidden"><%= t('social_sharing.label_twitter') %></span>
       </a>
@@ -27,7 +27,7 @@
         href="mailto:?subject=<%= @article ? u(@article.title) : '' %>&amp;body=<%= u request.original_url %>"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="social-sharing__icon">
-          <use xlink:href="#icon-email"></use>
+          <use xlink:href="#svg-icon--email"></use>
         </svg>
         <span class="visually-hidden"><%= t('social_sharing.label_email') %></span>
       </a>

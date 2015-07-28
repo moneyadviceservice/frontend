@@ -7,8 +7,7 @@
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
 <% end %>
 
-<%= render 'shared/svg/icons/plus' %>
-<%= render 'shared/svg/icons/minus' %>
+<%= render 'shared/svg/icon_sprite' %>
 
 <div class="l-main editorial">
   <div class="l-main__row">
@@ -18,8 +17,6 @@
     <% else %>
       <main class="l-main__cell-full l-category" role="main" data-parent="<%= @category.parent_id %>">
     <% end %>
-      <%= render 'shared/svg/icons/social_sharing_sprite' %>
-
       <div class="l-category__top">
         <div class="l-category__top__content">
           <%= heading_tag category.title, class: 'l-category__heading' %>

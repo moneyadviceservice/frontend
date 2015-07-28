@@ -33,6 +33,7 @@ module Core
     autoload :Technical, 'core/entity/feedback/technical'
   end
 
+  autoload :BaseContentReader, 'core/interactor/base_content_reader'
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'

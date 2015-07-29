@@ -25,6 +25,12 @@
 // MAS site base element styles
 @import "base/*";
 
+// Dough default components
+@import "dough/assets/stylesheets/common";
+
+// Dough optional components
+@import "dough/assets/stylesheets/optional";
+
 // MAS Dough component theme variables
 // Overrides default global Dough component variables
 @import "components/mas_dough_theme/variables";
@@ -32,11 +38,6 @@
 // Overrides default individual Dough component settings
 @import "components/mas_dough_theme/*/_settings.scss";
 
-// Dough default components
-@import "dough/assets/stylesheets/common";
-
-// Dough optional components
-@import "dough/assets/stylesheets/optional";
 
 // MAS site layout
 // Use .l- prefix when creating new layout selectors

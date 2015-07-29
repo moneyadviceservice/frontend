@@ -9,8 +9,10 @@
 // .button--primary:focus      - yellow
 // .button--primary:active     - yellow
 // .button--primary.is-disabled - yellow
-// .button--newsletter          - orange
-// .button--newsletter.button--newsletter-small    - orange
+// .button--newsletter          - green
+// .button--newsletter:hover    - green
+// .button--newsletter:focus    - green
+// .button--newsletter:active   - green
 //
 // Styleguide buttons
 
@@ -128,28 +130,24 @@
 // Styleguide Newsletter signup buttons
 
 .button--newsletter {
+  @include body(12,14);
   background: $color-newsletter;
   border-bottom: 0;
   color: $color-white;
-
-  &:focus,
-  &:hover,
-  &:active {
-    color: $color-white;
-    background: $color-newsletter-active;
-    outline: none;
-  }
-}
-
-.button--newsletter-small {
-  @include body(12,14);
   font-weight: 500;
   text-transform: uppercase;
 
+  &:visited {
+    color: $color-white;
+  }
+
   &:focus,
   &:hover,
   &:active {
+    color: $color-true-black;
     background: $color-newsletter-active;
     outline: none;
+    border-top: 0;
+    padding-top: $button-padding-vertical;
   }
 }

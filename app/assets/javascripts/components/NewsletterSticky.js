@@ -27,13 +27,20 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], func
    */
   NewsletterSticky.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
-    this.closeButton = this.$el.find(this.config.closeClassSelector);
-    this.window = $(window);
+    this._setVars();
 
     this._setListeners(true);
     this._handleScroll();
 
     return this;
+  };
+
+  /**
+   * Sets up local variables for the sticky newsletter component
+   */
+  NewsletterSticky.prototype._setVars = function() {
+    this.closeButton = this.$el.find(this.config.closeClassSelector);
+    this.window = $(window);
   };
 
   /**
@@ -76,10 +83,9 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], func
 
   /**
    * Works out whether the window has scrolled further than a given percentage
-   * @param  {Number}  percentage Number in percentage terms
    * @return {Boolean}
    */
-  NewsletterSticky.prototype._hasScrolledOverPercentage = function(percentage) {
+  NewsletterSticky.prototype._hasScrolledOverPercentage = function() {
     return this._windowScrollTop() > this._scrollThreshold() ? true : false;
   };
 

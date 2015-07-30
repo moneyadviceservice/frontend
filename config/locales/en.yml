@@ -88,6 +88,12 @@ en:
               occurred: Please give further details
 
   activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            contact_number:
+              invalid: please enter a valid UK number
     attributes:
       user:
         first_name: First name
@@ -95,6 +101,7 @@ en:
         password: Password
         post_code: Postcode
         newsletter: Send me free advice by email
+        contact_number: Contact number
         register_button: Register
 
   skip_links:
@@ -390,6 +397,7 @@ en:
         email: "We need your email for you to register"
         password: Please enter a password to keep your information private
         postcode: Please enter a valid UK postcode
+        contact_number: Please enter a valid UK phone number
       newsletter:
         title: "Money advice for you"
         intro: "We can help with..."

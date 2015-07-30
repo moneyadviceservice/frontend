@@ -54,72 +54,12 @@
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;
   @include inline-block;
-
-  .social-sharing & {
-    background-image: none;
-    display: none;
-  }
 }
 
 .icon {
   background-image: image_url('icon-sprite.png');
   background-repeat: no-repeat;
   @include inline-block;
-
-  .social-sharing & {
-    background-image: none;
-    display: none;
-  }
-}
-
-.social-sharing__item {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  border-radius: 3px;
-  overflow: hidden;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  a {
-    display: block;
-    line-height: 0;
-  }
-}
-
-.social-sharing__icon {
-  height: 33px;
-  width: 55px;
-
-  @include respond-to($mq-s) {
-    height: 40px;
-    width: 68px;
-  }
-}
-
-.social-sharing__item--facebook {
-  background: #3C5A99;
-
-  a:hover {
-    background: #214782;
-  }
-}
-
-.social-sharing__item--twitter {
-  background: #2BA9E1;
-
-  a:hover {
-    background: #1991b8;
-  }
-}
-
-.social-sharing__item--email {
-  background: #E7B84B;
-
-  a:hover {
-    background: red; /* this is not correct! */
-  }
 }
 
 .icon--logo {

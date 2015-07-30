@@ -5,7 +5,7 @@
 .news-signup-sticky {
   @extend %stripe-bg;
   @include clearfix;
-  background-color: $color-off-white;
+  background-color: $color-yellow-light;
   margin: $baseline-unit*2 0 0 0;
   text-align: center;
   position: relative;
@@ -30,14 +30,13 @@
   visibility: visible;
   max-height: 1000px;
   transition: max-height 2s;
-  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.2);
 }
 
 .news-signup-sticky__intro {
-  @include body(16,18);
-  color: $color-black;
-  font-weight: 700;
-  margin: $baseline-unit*4 auto $baseline-unit*3 auto;
+  @include body(16,20);
+  color: $color-true-black;
+  font-weight: 500;
+  margin: $baseline-unit*3 auto $baseline-unit*3 auto;
   max-width: 240px;
   position: relative;
 
@@ -48,10 +47,7 @@
 }
 
 .news-signup-sticky__intro--second {
-  @include body(15,17);
   font-weight: 700;
-  color: $color-true-black;
-
   @include respond-to($mq-m) {
     @include body(16,18);
   }
@@ -89,6 +85,7 @@
 }
 
 input[type="email"].news-signup-sticky__email-input {
+  @include body(14, 14);
   border-color: $color-newsletter;
   border-radius: 4px;
   margin: $baseline-unit;
@@ -103,7 +100,7 @@ input[type="email"].news-signup-sticky__email-input {
 
   @include respond-to($mq-m) {
     display: inline-block;
-    margin-right: $baseline-unit*2;
+    margin: 0 $baseline-unit*2;
     position: relative;
     top: 1px;
   }
@@ -116,11 +113,13 @@ input[type="email"].news-signup-sticky__email-input {
 .news-signup-sticky__disclaimer {
   @include body(12,14);
   @include clearfix;
+  background: $color-white;
   font-weight: 500;
   color: $color-true-black;
   font-style: italic;
   text-align: center;
-  margin: $baseline-unit*3 $baseline-unit 0 $baseline-unit;
+  margin: $baseline-unit*3 0 0 0;
+  padding: $baseline-unit*2 0 0 0;
   border-bottom: $baseline-unit*2 solid transparent;
 }
 
@@ -128,8 +127,7 @@ input[type="email"].news-signup-sticky__email-input {
   transition: opacity .5s;
   @include body(40,25);
   @extend %stripe-bg;
-  background: $color-off-white;
-  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.2);
+  background: $color-yellow-light;
   position: absolute;
   right: 0;
   padding: $baseline-unit*2;
@@ -137,16 +135,19 @@ input[type="email"].news-signup-sticky__email-input {
   color: $color-black;
 
   @include respond-to($mq-m) {
-    @include body(25,25);
+    @include body(24,20);
     background-image: none !important;
     background: $color-white;
     border-radius: 100%;
-    box-shadow: none;
     display: block;
     font-weight: 700;
-    padding: $baseline-unit $baseline-unit*1.8;
+    padding: $baseline-unit*0.7 $baseline-unit*1.4 $baseline-unit*1.3 $baseline-unit*1.4;
     right: $baseline-unit*2;
     top: $baseline-unit*2;
+  }
+
+  &:hover, &:active {
+    color: $color-grey-medium-dark;
   }
 }
 

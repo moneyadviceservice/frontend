@@ -76,6 +76,24 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :contact_number do %>
+          <%= f.errors_for :contact_number %>
+          <%= f.label :contact_number, class: "form__label-heading" %>
+          <%= f.text_field :contact_number, "aria-describedby" => "tooltip_contact_number" %>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_contact_number" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.registration.field_help_texts.contact_number") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <%= f.form_row :post_code do %>
           <%= f.errors_for :post_code %>
           <%= f.label :post_code, class: "form__label-heading" %>

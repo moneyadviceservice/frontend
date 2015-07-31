@@ -90,6 +90,12 @@ cy:
               occurred: Os gwelwch yn dda rhowch rhagor o fanylion
 
   activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            contact_number:
+              invalid: rhowch rif ffôn dilys y Deyrnas Unedig
     attributes:
       user:
         first_name: "Enw Cyntaf"
@@ -97,6 +103,7 @@ cy:
         password: "Cyfrinair"
         post_code: "Cod post"
         newsletter: "Anfonwch gyngor am ddim i mi drwy e-bost"
+        contact_number: Rhif cyswllt
         register_button: "Cofrestru"
 
   skip_links:
@@ -389,6 +396,7 @@ cy:
         first_name: Rhowch eich enw cyntaf
         email: "Rydym angen eich cyfeiriad e-bost er mwyn i chi gofrestru"
         password: "Rhowch gyfrinair er mwyn cadw'ch gwybodaeth yn breifat"
+        contact_number: Rhowch rif ffôn dilys y Deyrnas Unedig
         postcode: "Rhowch god post dilys o'r DU"
       newsletter:
         title: Cyngor ariannol i chi

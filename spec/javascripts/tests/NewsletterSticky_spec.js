@@ -181,7 +181,7 @@ describe('NewsletterSticky', function() {
 
   describe('_scrollThreshold', function() {
     it('returns the correct value', function() {
-      expect(this.obj._scrollThreshold()).to.be.equal($(document).height() * 0.5);
+      expect(this.obj._scrollThreshold()).to.be.equal($(document).height() * 0.4);
     });
   });
 

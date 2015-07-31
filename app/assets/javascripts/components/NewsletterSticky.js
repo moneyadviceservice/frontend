@@ -3,7 +3,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], func
 
   var NewsletterSticky,
       defaultConfig = {
-        appearsAfterPercentage: 50,
+        appearsAfterPercentage: 40,
         visibleClassName: 'news-signup-sticky--visible',
         closeClassSelector: '.news-signup-sticky__close',
         closedClassName: 'news-signup-sticky__close--closed'

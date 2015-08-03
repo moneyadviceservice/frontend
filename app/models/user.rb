@@ -33,7 +33,6 @@ class User < ActiveRecord::Base
                         length: { maximum: 24 }
   validates :gender, inclusion: { in: %w(female male) }, allow_nil: true
   validates :age_range, inclusion: { in: VALID_AGE_RANGES }, allow_nil: true
-  validates :contact_number, format: { with: /\A0[12379]\d{9}\z/, if: 'contact_number.present?'}, allow_blank: true
 
   before_save :fake_send_confirmation_email
   before_create :create_to_crm

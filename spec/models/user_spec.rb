@@ -81,15 +81,6 @@ RSpec.describe User, type: :model do
     it { is_expected.to allow_value('31/12/1970').for(:date_of_birth) }
     it { is_expected.not_to allow_value('31/02/1970').for(:date_of_birth) }
 
-    it { is_expected.to allow_value(nil).for(:contact_number) }
-    it { is_expected.to allow_value('01005005000').for(:contact_number) }
-    it { is_expected.to allow_value('02005005000').for(:contact_number) }
-    it { is_expected.to allow_value('03005005000').for(:contact_number) }
-    it { is_expected.to allow_value('07005005000').for(:contact_number) }
-    it { is_expected.to allow_value('09005005000').for(:contact_number) }
-    it { is_expected.not_to allow_value('5000').for(:contact_number) }
-    it { is_expected.not_to allow_value('0900500500090').for(:contact_number) }
-
     it 'allows update with blank password' do
       user = FactoryGirl.create(:user)
       user = User.first

@@ -50,6 +50,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], func
   NewsletterSticky.prototype._setListeners = function(isActive) {
     this._setScrollListener(isActive);
     this.closeButton[isActive ? 'on' : 'off']('click', $.proxy(this._handleCloseClick, this));
+    this.$el[isActive ? 'on' : 'off']('click', '.button--done', $.proxy(this._handleCloseClick, this));
   };
 
   /**

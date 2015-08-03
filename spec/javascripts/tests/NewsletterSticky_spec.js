@@ -66,6 +66,18 @@ describe('NewsletterSticky', function() {
       expect(handleCloseClickStub.callCount).to.be.equal(1);
     });
 
+    it('sets an event handle on the done button when true is passed in', function() {
+      var handleCloseClickStub = sinon.stub(this.obj, "_handleCloseClick");
+
+      this.obj._setListeners(true);
+
+      $('<button class="button--done"></button>').appendTo($('.news-signup-sticky'));
+
+      $('.button--done').trigger('click');
+
+      expect(handleCloseClickStub.callCount).to.be.equal(1);
+    });
+
     it('unsets an event handle on the close button when false is passed in', function() {
       var handleCloseClickStub = sinon.stub(this.obj, "_handleCloseClick");
 

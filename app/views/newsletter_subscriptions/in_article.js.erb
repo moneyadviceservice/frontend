@@ -1,0 +1,25 @@
+(function() {
+  var $newsletterForm = $('.js-news-signup-test-form'),
+      $newsletterInput = $('.js-news-signup-test-input'),
+      errorClassName = 'is-errored',
+      newsletterErrorId = 'newsletter_error';
+
+  <%= render 'common', success: @success %>
+
+  <% if @success %>
+    $newsletterForm.attr({
+      'role' : 'alert',
+      'aria-live' : 'polite'
+    })
+    .removeClass(errorClassName)
+    .html('<%= flash[:success] %>');
+
+    $newsletterInput.attr({'aria-invalid' : false });
+  <% else %>
+    $newsletterForm.addClass(errorClassName);
+    $newsletterForm.find('label').attr('id', newsletterErrorId).text('<%= flash[:error] %>');
+
+    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : newsletterErrorId });
+  <% end %>
+})();
+

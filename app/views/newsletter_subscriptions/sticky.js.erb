@@ -1,0 +1,43 @@
+(function() {
+  var $newsletterForm = $('.js-news-signup-sticky-form'),
+      $newsletterInput = $('.js-news-signup-sticky-input'),
+      newsletterErrorId = 'newsletter_error',
+      textClass = '.news-signup-sticky__text',
+      textClassDisplayName = 'news-signup-sticky__text--display',
+      errorClassName = 'is-errored',
+      errorTextClass = '.news-signup-sticky__error',
+      errorTextClassDisplayName = 'news-signup-sticky__error--display';
+
+  <%= render 'common', success: @success %>
+
+  <% if @success %>
+    $newsletterForm
+    .find(errorTextClass)
+    .removeClass(errorClassName + ' ' + errorTextClassDisplayName);
+
+    $newsletterForm
+    .find(textClass)
+    .addClass(textClassDisplayName)
+    .attr({
+      'role' : 'alert',
+      'aria-live' : 'polite'
+    })
+    .html('<p class="news-signup-sticky__intro news-signup-sticky__intro--emphasize news-signup-sticky__intro--success"><%= flash[:success] %></p>');
+
+    $('.news-signup-sticky__submitform').html('<button class="button button--newsletter button--done">Done</button>');
+  <% else %>
+    $newsletterForm
+    .find(errorTextClass)
+    .addClass(errorClassName)
+    .addClass(errorTextClassDisplayName)
+    .attr('id', newsletterErrorId)
+    .find('p')
+    .html('<%= flash[:error] %>');
+
+    $newsletterForm
+    .find(textClass)
+    .removeClass(textClassDisplayName);
+
+    $newsletterInput.attr({'aria-invalid' : true, 'aria-describedby' : newsletterErrorId });
+  <% end %>
+})();

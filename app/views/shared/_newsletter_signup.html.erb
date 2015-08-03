@@ -1,6 +1,5 @@
 <%= form_tag(main_app.newsletter_subscription_path, class: 'newsletter-signup t-newsletter', remote: true) do %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-
   <%= heading_tag t('newsletter_subscriptions.title'), level: 2, class: 'newsletter-signup__heading' %>
 
   <ul class="newsletter-signup__benefits-list list-benefits">
@@ -17,6 +16,8 @@
       <%= label_tag('subscription[email]', t('newsletter_subscriptions.label'), class: 'newsletter-signup__label') %>
       <%= text_field_tag('subscription[email]', nil, class: 't-newsletter-email js-newsletter-input newsletter-signup__input') %>
       <%= button_tag(t('newsletter_subscriptions.button'), type: 'submit', class: 't-newsletter-button button newsletter-signup__button') %>
+      <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp' -%>
+      <%= hidden_field_tag 'subscription[category]', 'footer' -%>
     <% end %>
   </fieldset>
 <% end %>

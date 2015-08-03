@@ -17,9 +17,7 @@
         <p class="promo__content">
           <%= item[:text] %>
         </p>
-        <svg xmlns="http://www.w3.org/2000/svg" class="promo__arrow">
-          <use xlink:href="#icon-arrow-right"></use>
-        </svg>
+        <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'promo__arrow' %>
       <% end %>
     <% end %>
   </section>

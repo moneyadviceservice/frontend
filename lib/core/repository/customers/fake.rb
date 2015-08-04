@@ -34,6 +34,7 @@ module Core
           c[:email] = customer.email
           c[:post_code] = customer.post_code
           c[:newsletter_subscription] = customer.newsletter_subscription
+          c[:opt_in_for_research] = customer.opt_in_for_research
         end
 
         def clear

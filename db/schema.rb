@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150528155455) do
+ActiveRecord::Schema.define(version: 20150730093802) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -881,6 +881,7 @@ ActiveRecord::Schema.define(version: 20150528155455) do
     t.string   "temporary_authentication_token"
     t.string   "goal_statement"
     t.string   "goal_deadline"
+    t.string   "contact_number"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -137,10 +137,6 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  &:visited {
-    color: $color-white;
-  }
-
   &:focus,
   &:hover,
   &:active {
@@ -149,5 +145,11 @@
     outline: none;
     border-top: 0;
     padding-top: $button-padding-vertical;
+  }
+
+  &:visited,
+  &:active {
+    background: $color-newsletter;
+    color: $color-white;
   }
 }

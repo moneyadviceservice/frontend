@@ -13,6 +13,7 @@
   .button--newsletter {
     vertical-align: top;
     min-width: 188px;
+    margin-top: 1px;
   }
 }
 
@@ -37,18 +38,18 @@
   @include body(16,20);
   color: $color-true-black;
   font-weight: 500;
-  margin: 0 auto $baseline-unit*3 auto;
+  margin: 0 auto $baseline-unit*2.6 auto;
   padding-top: $baseline-unit*3;
   max-width: 240px;
   position: relative;
 
   @include respond-to($mq-m) {
-    @include body(17,19);
+    @include body(17,21);
     max-width: 400px;
   }
 
   &:nth-of-type(2) {
-    margin-top: $baseline-unit*3;
+    margin-bottom: $baseline-unit*3;
     padding-top: 0;
 
     @include respond-to($mq-m) {
@@ -67,7 +68,7 @@
 }
 
 .news-signup-sticky__intro--success {
-  margin: $baseline-unit*5 auto $baseline-unit*3 auto;
+  margin: $baseline-unit*5 auto;
 }
 
 .news-signup-sticky__error {
@@ -75,6 +76,12 @@
 
   &.news-signup-sticky__error--display {
     display: block;
+
+    & + .news-signup-sticky__inner {
+      .news-signup-sticky__email-input {
+        border-color: $color-validation-border;
+      }
+    }
   }
 
   @include respond-to($mq-m) {
@@ -132,7 +139,7 @@
 
 input[type="email"].news-signup-sticky__email-input {
   @include body(14, 14);
-  border-color: $color-newsletter;
+  border-color: $color-white;
   border-radius: 4px;
   margin: $baseline-unit;
   max-width: 188px;
@@ -141,7 +148,8 @@ input[type="email"].news-signup-sticky__email-input {
   padding: $baseline-unit*3 $baseline-unit;
 
   &:focus {
-    outline: 2px solid $color-newsletter-active;
+    outline: none;
+    border-color: $color-newsletter-active;
   }
 
   @include respond-to($mq-m) {
@@ -153,6 +161,7 @@ input[type="email"].news-signup-sticky__email-input {
 
   &::placeholder {
     font-style: italic;
+    color: $color-grey-medium-dark;
   }
 }
 
@@ -164,9 +173,15 @@ input[type="email"].news-signup-sticky__email-input {
   color: $color-true-black;
   font-style: italic;
   text-align: center;
+
   margin: $baseline-unit*3 0 0 0;
-  padding: $baseline-unit*2 0 0 0;
-  border-bottom: $baseline-unit*2 solid transparent;
+  border-bottom: $baseline-unit solid transparent;
+  padding: $baseline-unit 0 0 0;
+
+  @include respond-to($mq-m) {
+    padding: $baseline-unit*2 0 0 0;
+    border-bottom-width: $baseline-unit*2;
+  }
 }
 
 .news-signup-sticky__close {
@@ -178,7 +193,7 @@ input[type="email"].news-signup-sticky__email-input {
   right: 0;
   padding: $baseline-unit*2;
   top: -48px;
-  color: $color-black;
+  color: darken($color-grey-nine, 43%);
 
   @include respond-to($mq-m) {
     @include body(24,20);
@@ -193,7 +208,7 @@ input[type="email"].news-signup-sticky__email-input {
   }
 
   &:hover, &:active {
-    color: $color-grey-medium-dark;
+    color: darken($color-grey-nine, 30%);
   }
 }
 

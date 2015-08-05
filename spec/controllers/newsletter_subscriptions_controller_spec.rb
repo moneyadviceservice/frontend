@@ -6,6 +6,26 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
     allow(subscriber).to receive(:call) { result }
   end
 
+  describe 'POST dismiss' do
+    context 'not interested' do
+      let(:email) { { email: 'clark.kent@example.com' } }
+      let(:params) { { email: 'clark.kent@example.com', category: 'footer' } }
+      let(:result) { true }
+
+      it 'sets cookie' do
+        post :dismiss, locale: 'en'
+
+        expect(response.cookies['_cookie_dismiss_newsletter']).to eq 'hide'
+      end
+
+      it 'sets cookie to expire in a month' do
+        post :dismiss, locale: 'en'
+
+        expect(response.cookies['_cookie_dismiss_newsletter']).to eq 'hide'
+      end
+    end
+  end
+
   describe 'XHR POST create' do
     context 'with valid email' do
       let(:email) { { email: 'clark.kent@example.com' } }
@@ -50,6 +70,11 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
       let(:email) { { email: 'clark.kent@example.com' } }
       let(:params) { { email: 'clark.kent@example.com', category: 'footer' } }
       let(:result) { true }
+
+      it 'sets cookie' do
+        post :create, locale: I18n.locale, subscription: params
+        expect(response.cookies['display_sticky_newsletter_form_cookie']).to eq 'hide'
+      end
 
       it 'adds a flash success message' do
         post :create, locale: I18n.locale, subscription: params

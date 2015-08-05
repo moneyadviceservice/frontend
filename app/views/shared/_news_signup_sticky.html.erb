@@ -1,10 +1,14 @@
 <div class="news-signup-sticky<% if local_assigns.has_key?(:fixed_position) %> news-signup-sticky--positioned<% end %> js-news-signup-sticky-form" data-dough-component="NewsletterSticky">
   <div class="news-signup-sticky__text news-signup-sticky__text--display">
-    <p class="news-signup-sticky__intro">200,000 people are taking care of their money with our FREE money advice newsletter.</p>
-    <p class="news-signup-sticky__intro news-signup-sticky__intro--emphasize">Are you? Sign up today.</p>
+    <p class="news-signup-sticky__intro"><%= t('newsletter_subscriptions.sticky.intro') %></p>
+    <p class="news-signup-sticky__intro">
+      <span class="news-signup-sticky__intro--emphasize"><%= t('newsletter_subscriptions.sticky.are_you') %></span> <%= t('newsletter_subscriptions.sticky.sign_up_today') %>
+    </p>
   </div>
   <div class="news-signup-sticky__error">
-    <p class="news-signup-sticky__intro news-signup-sticky__intro--emphasize">Sorry, we can't do that right now. Please try again later.</p>
+    <p class="news-signup-sticky__intro news-signup-sticky__intro--emphasize">
+      <%= t('newsletter_subscriptions.sticky.sorry') %>
+    </p>
   </div>
 
   <div class="news-signup-sticky__inner">
@@ -13,10 +17,10 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'sticky_authenticity_token' -%>
         <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Sticky' -%>
         <%= hidden_field_tag 'subscription[category]', 'sticky' -%>
-        <%= label_tag('subscription[email]', 'Email address', for: 'news-signup-email', class: 'news-signup-sticky__email-label') %>
-        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-sticky__email-input js-news-signup-sticky-input', placeholder: 'What\'s your email?', required: true) %>
-        <%= button_tag('Send me money advice', type: 'submit', class: 'button button--newsletter') %>
-        <p class="news-signup-sticky__disclaimer">We won't share your details. See our <a href="#">privacy policy</a></p>
+        <%= label_tag('subscription[email]', t('newsletter_subscriptions.label'), for: 'news-signup-email', class: 'news-signup-sticky__email-label') %>
+        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-sticky__email-input js-news-signup-sticky-input', placeholder: t('newsletter_subscriptions.sticky.placeholder_text'), required: true) %>
+        <%= button_tag(t('newsletter_subscriptions.sticky.send_me_money_advice'), type: 'submit', class: 'button button--newsletter') %>
+        <p class="news-signup-sticky__disclaimer"><%= t('newsletter_subscriptions.sticky.privacy_policy_html') %></p>
       </div>
       <button class="news-signup-sticky__close unstyled-button" title="Don't ask me again">
           &times;

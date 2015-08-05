@@ -4,20 +4,21 @@ Feature: Display sticky newsletter
   Background:
     Given I am on the home page
 
+  Scenario: user subscribes to sticky newsletter
+    Given an unregistered user visits the MAS site
+    When user subscribes to receive newsletters
+    Then the user should no longer see the newsletter form
+
+  @javascript
+  Scenario: dismiss newsletter
+    When I dismiss the newsletter
+    Then I should not see it again for another month
+
   @javascript
   Scenario: scroll beyond 50% of the page
     Given I am on the home page
     When I scroll to the bottom of the page
     Then I should see a sticky newsletter sign up form
-
-  Scenario: dismiss newsletter
-    When I dismiss the newsletter
-    Then I should not see it again when I re-visit the site
-
-  #Scenario: user signs up for newsletter
-  #  Given an unregistered user visits the MAS site
-  #  When user subscribes to receive newsletters
-  #  Then the user should no longer see the newsletter form
 
   #Scenario: customer dismisses newsletter sign-up form
   #  Given an unregistered user visits the MAS site

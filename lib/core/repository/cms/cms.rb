@@ -6,8 +6,7 @@ module Core::Repository
       end
 
       def find(id)
-        resource_url = '%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
-        response = connection.get(resource_url)
+        response = connection.get(resource_url(id))
         AttributeBuilder.build(response)
       rescue Core::Connection::Http::ResourceNotFound
         nil
@@ -20,6 +19,10 @@ module Core::Repository
       end
 
       private
+
+      def resource_url(id)
+        '%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
+      end
 
       attr_accessor :connection
     end

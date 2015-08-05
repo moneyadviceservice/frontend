@@ -14,9 +14,7 @@
         <p class="home-top-promo__text">
           <a href="<%= t('home.show.promo_link_url') %>" class="home-top-promo-link">
             <%= t('home.show.promo_link_text') %>
-            <svg xmlns="http://www.w3.org/2000/svg" class="home-top-promo-link__arrow">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
+            <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'home-top-promo-link__arrow' %>
           </a>
         </p>
       </div>

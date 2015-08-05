@@ -1,7 +1,7 @@
 module Core
   class Customer < Entity
     attr_accessor :first_name, :last_name, :email, :post_code, :age_range,
-                  :gender, :state, :topics, :newsletter_subscription,
+                  :gender, :state, :topics, :newsletter_subscription, :contact_number,
                   :date_of_birth, :status_code
 
     def active?
@@ -19,6 +19,7 @@ module Core
         state: state,
         topics: topics,
         newsletter_subscription: newsletter_subscription,
+        contact_number: contact_number,
         date_of_birth: date_of_birth,
         status_code: status_code
       }
@@ -33,7 +34,8 @@ module Core
         GenderCode: { Value: GENDER_MAP[gender] },
         mas_AgeRange: { Value: AGE_RANGES_MAP[age_range] },
         BirthDate: iso8601_date_of_birth,
-        DoNotBulkEMail: !newsletter_subscription
+        DoNotBulkEMail: !newsletter_subscription,
+        Telephone2: contact_number
       }
     end
 

@@ -15,6 +15,7 @@ module Core
         state: 0,
         topics: [1, 2, 3],
         newsletter_subscription: true,
+        contact_number: '03005005000',
         date_of_birth: date_of_birth,
         status_code: '123'
       }
@@ -30,6 +31,7 @@ module Core
     it { expect(subject.state).to eql(0) }
     it { expect(subject.topics).to eql([1, 2, 3]) }
     it { expect(subject.newsletter_subscription).to eql(true) }
+    it { expect(subject.contact_number).to eql('03005005000') }
     it { expect(subject.date_of_birth).to eql(Time.new(1988, 1, 1)) }
     it { expect(subject.status_code).to eql('123') }
 
@@ -52,7 +54,8 @@ module Core
           GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
           mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
           BirthDate: attributes[:date_of_birth].to_time.utc.iso8601,
-          DoNotBulkEMail: !attributes[:newsletter_subscription]
+          DoNotBulkEMail: !attributes[:newsletter_subscription],
+          Telephone2: attributes[:contact_number]
         }
 
         expect(subject.to_crm_hash).to eql(expected)
@@ -70,7 +73,8 @@ module Core
             GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
             mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
             BirthDate: nil,
-            DoNotBulkEMail: !attributes[:newsletter_subscription]
+            DoNotBulkEMail: !attributes[:newsletter_subscription],
+            Telephone2: attributes[:contact_number]
           }
 
           expect(subject.to_crm_hash).to eql(expected)

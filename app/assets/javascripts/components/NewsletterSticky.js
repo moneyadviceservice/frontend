@@ -1,4 +1,16 @@
-define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], function($, DoughBaseComponent, eventsWithPromises, utilities) {
+define([
+  'jquery',
+  'DoughBaseComponent',
+  'eventsWithPromises',
+  'utilities',
+  'common'
+], function(
+  $,
+  DoughBaseComponent,
+  eventsWithPromises,
+  utilities,
+  MAS
+) {
   'use strict';
 
   var NewsletterSticky,
@@ -113,6 +125,20 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises', 'utilities'], func
    */
   NewsletterSticky.prototype._handleCloseClick = function(e) {
     e.preventDefault();
+    this._close();
+
+    MAS.publish('analytics:trigger', {
+      event: 'gaEvent',
+      gaEventCat: 'Newsletter SignUp Sticky',
+      gaEventAct: 'Click',
+      gaEventLab: 'Close button'
+    });
+  };
+
+  /**
+   * Closing the panel and no longer listening for events
+   */
+  NewsletterSticky.prototype._close = function() {
     this.$el.removeClass(this.config.visibleClassName);
     this.closeButton.addClass(this.config.closedClassName);
     this._setListeners(false);

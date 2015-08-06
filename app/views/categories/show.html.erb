@@ -7,8 +7,6 @@
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
 <% end %>
 
-<%= render 'shared/svg/icon_sprite' %>
-
 <div class="l-main editorial">
   <div class="l-main__row">
     <% if category.images? %>
@@ -27,7 +25,7 @@
       </div>
       <%= category.render_contents %>
 
-      <%= render 'shared/social_sharing' %>
+      <%= social_sharing_icons title: I18n.t("categories.social_sharing.title"), text: category.title, url: request.original_url, label_facebook: I18n.t("categories.social_sharing.label_facebook"), label_twitter: I18n.t("categories.social_sharing.label_twitter"), label_email: I18n.t("categories.social_sharing.label_email") %>
     </main>
   </div>
 </div>

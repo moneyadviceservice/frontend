@@ -9,8 +9,8 @@
     <div class="news-signup-test__container__form">
       <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
-        <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Test' -%>
-        <%= hidden_field_tag 'subscription[category]', 'in_article' -%>
+        <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Test', id: 'subscription[test_ga_categoryid]' -%>
+        <%= hidden_field_tag 'subscription[category]', 'in_article', id: 'subscription[test_category]' -%>
         <%= label_tag('subscription[email]', 'Enter your email address', for: 'news-signup-email', class: 'newsletter-signup__container__form__label') %>
         <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-test__container__form__email js-news-signup-test-input') %>
         <%= button_tag('Sign up now', type: 'submit', class: 'button button--primary') %>

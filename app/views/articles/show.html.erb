@@ -11,8 +11,6 @@
   <% end %>
 <% end %>
 
-<%= render 'shared/svg/icon_sprite' %>
-
 <div class="l-article-3col-main editorial">
   <div class="l-main__row">
     <main class="l-main__cell-full" role="main" data-dough-newsletter-article="true">
@@ -30,7 +28,7 @@
         <% end %>
       <% end %>
 
-      <%= render 'shared/social_sharing' %>
+      <%= social_sharing_icons title: I18n.t("social_sharing.title"), text: article.title, url: request.original_url %>
 
       <%= render 'previous_and_next' %>
 

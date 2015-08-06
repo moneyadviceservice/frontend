@@ -22,7 +22,7 @@
         <%= button_tag(t('newsletter_subscriptions.sticky.send_me_money_advice'), type: 'submit', class: 'button button--newsletter') %>
         <p class="news-signup-sticky__disclaimer"><%= t('newsletter_subscriptions.sticky.privacy_policy_html') %></p>
       </div>
-      <button class="news-signup-sticky__close unstyled-button" title="Don't ask me again">
+      <button class="news-signup-sticky__close unstyled-button" title="<%= t('newsletter_subscriptions.sticky.dont_ask_me_again') %>">
           &times;
       </button>
     <% end %>

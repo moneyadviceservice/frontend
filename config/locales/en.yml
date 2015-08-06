@@ -281,7 +281,7 @@ en:
   articles:
     show:
       more_in:
-        title_prefix: More in '%{category}'
+        title_prefix: "More in '%{category}'"
         link_html: View all &hellip;
         hidden_link: articles in %{category}
       related_categories:
@@ -297,6 +297,12 @@ en:
       popular_links_title: Most read
       related_links_title: Related guides
 
+    social_sharing:
+      title: Share this article
+      label_facebook: Share this article on Facebook
+      label_twitter: Share this article on Twitter
+      label_email: Share this article by Email
+
   categories:
     top_links:
       how_can_we_help: How can we help?
@@ -304,6 +310,12 @@ en:
       view_all: View all ...
       view_more: Expand
       view_less: Contract
+
+    social_sharing:
+      title: Share these articles
+      label_facebook: Share these articles on Facebook
+      label_twitter: Share these articles on Twitter
+      label_email: Share these articles by Email
 
   article_feedbacks:
     new:
@@ -536,10 +548,4 @@ en:
         english: English
         welsh: Welsh
         submit: Get embed code
-
-  social_sharing:
-    title: Share this article
-    label_facebook: Share this article on Facebook
-    label_twitter: Share this article on Twitter
-    label_email: Share this article by Email
 

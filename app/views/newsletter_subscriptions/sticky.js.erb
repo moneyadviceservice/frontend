@@ -6,7 +6,8 @@
       textClassDisplayName = 'news-signup-sticky__text--display',
       errorClassName = 'is-errored',
       errorTextClass = '.news-signup-sticky__error',
-      errorTextClassDisplayName = 'news-signup-sticky__error--display';
+      errorTextClassDisplayName = 'news-signup-sticky__error--display',
+      newsletterSubmitFormClass = '.news-signup-sticky__submitform';
 
   <%= render 'common', success: @success %>
 
@@ -24,7 +25,8 @@
     })
     .html('<p class="news-signup-sticky__intro news-signup-sticky__intro--emphasize news-signup-sticky__intro--success"><%= flash[:success] %></p>');
 
-    $('.news-signup-sticky__submitform').html('<button class="button button--newsletter button--done">Done</button>');
+    $(newsletterSubmitFormClass)
+    .html('<button class="button button--newsletter button--done">' + $('.news-signup-sticky').data('done') + '</button>');
   <% else %>
     $newsletterForm
     .find(errorTextClass)

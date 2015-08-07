@@ -141,11 +141,10 @@ input[type="email"].news-signup-sticky__email-input {
   @include body(14, 14);
   border-color: $color-white;
   border-radius: 4px;
-  margin: $baseline-unit;
   max-width: 188px;
   margin: 0 auto $baseline-unit*1.5 auto;
   display: block;
-  padding: $baseline-unit*3 $baseline-unit;
+  height: 38px;
 
   &:focus {
     outline: none;

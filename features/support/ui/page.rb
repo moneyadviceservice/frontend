@@ -21,6 +21,7 @@ module UI
     element :contact_introduction, '.t-contact-introduction'
     element :contact_number, '.t-contact-number'
     section :newsletter, UI::Sections::Newsletter, '.t-newsletter'
+    section :sticky_newsletter, UI::Sections::Newsletter, '.news-signup-sticky'
     section :footer_cookie_message, UI::Sections::FooterCookieMessage, '.cookie-message'
     section :footer_primary, UI::Sections::FooterPrimary, '.t-footer-primary'
     section :footer_secondary, UI::Sections::FooterSecondary, '.t-footer-secondary'

@@ -15,7 +15,9 @@ RSpec.describe 'Static page routing', type: :routing  do
 
     context 'when the feature flag is disabled' do
       it 'does not route' do
-        expect(get('/en/tools/annuities')).to_not be_routable
+        Feature.without(:annuities_landing_page) do
+          expect(get('/en/tools/annuities')).to_not be_routable
+        end
       end
     end
   end

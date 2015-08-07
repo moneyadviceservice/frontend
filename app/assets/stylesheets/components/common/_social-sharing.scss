@@ -1,17 +1,4 @@
-.list {
-  > li.social-sharing__item:before {
-    content: none;
-  }
-}
-
 %icon {
-  .social-sharing & {
-    background-image: none;
-    display: none;
-  }
-}
-
-.icon {
   .social-sharing & {
     background-image: none;
     display: none;
@@ -22,7 +9,7 @@
   h2 {
     @include body(24, 30);
     color: $color-heading-extra-small;
-    margin-bottom: 0.5rem;
+    margin-bottom: $baseline-unit;
   }
 }
 

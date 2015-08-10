@@ -1,16 +1,14 @@
-%icon {
-  .social-sharing & {
-    background-image: none;
-    display: none;
-  }
-}
-
 .social-sharing {
   h2 {
     @include body(24, 30);
     color: $color-heading-extra-small;
     margin-bottom: $baseline-unit;
   }
+}
+
+.social-sharing .social-sharing__item__icon[href*="facebook"]:after,
+.social-sharing .social-sharing__item__icon[href*="twitter"]:after {
+  display: none;
 }
 
 .social-sharing__icon {

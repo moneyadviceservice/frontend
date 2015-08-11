@@ -24,6 +24,7 @@ module Frontend
     config.i18n.load_path    += Dir[Rails.root.join('config', 'locales', '**/*', '*.yml').to_s]
 
     config.crazy_egg_url         = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
+    config.google_plus_mas_url   = '//plus.google.com/+MoneyadviceserviceOrgUkYourMoneyAdvice/'
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
     config.time_zone = 'Europe/London'

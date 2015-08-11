@@ -39,6 +39,7 @@ gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
+gem 'postcode_anywhere-email_validation'
 
 gem 'action_plans', '~> 4.0.1'
 gem 'advice_plans', '~> 3.1.0'

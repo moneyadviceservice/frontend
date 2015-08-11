@@ -28,6 +28,8 @@
         <% end %>
       <% end %>
 
+      <%= social_sharing_icons title: I18n.t("articles.social_sharing.title"), text: article.title, url: request.original_url, label_facebook: I18n.t("articles.social_sharing.label_facebook"), label_twitter: I18n.t("articles.social_sharing.label_twitter"), label_email: I18n.t("articles.social_sharing.label_email") %>
+
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>

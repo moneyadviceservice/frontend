@@ -26,6 +26,8 @@
         <%= render 'top_links', category: category unless !category.links || category.links.empty? %>
       </div>
       <%= category.render_contents %>
+
+      <%= social_sharing_icons title: I18n.t("categories.social_sharing.title"), text: category.title, url: request.original_url, label_facebook: I18n.t("categories.social_sharing.label_facebook"), label_twitter: I18n.t("categories.social_sharing.label_twitter"), label_email: I18n.t("categories.social_sharing.label_email") %>
     </main>
   </div>
 </div>

@@ -1,0 +1,19 @@
+.social-sharing {
+  .social-sharing__item__icon[href*="facebook"]:after,
+  .social-sharing__item__icon[href*="twitter"]:after {
+    display: none;
+  }
+}
+
+.social-sharing__title {
+  @include body(24, 30);
+  color: $color-heading-extra-small;
+  margin-bottom: $baseline-unit;
+}
+
+.social-sharing__icon {
+  @include respond-to($mq-s) {
+    height: 40px;
+    width: 68px;
+  }
+}

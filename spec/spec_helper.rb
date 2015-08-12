@@ -33,7 +33,7 @@ FactoryGirl.find_definitions
 I18n.available_locales = [:en, :cy]
 
 PageValidations::HTMLValidation.ignored_attribute_errors = %w(tabindex itemscope itemtype itemprop)
-PageValidations::HTMLValidation.ignored_tag_errors       = %w(main svg symbol polygon use rect)
+PageValidations::HTMLValidation.ignored_tag_errors       = %w(main svg symbol path polygon use rect)
 PageValidations::HTMLValidation.ignored_errors           = ['letter not allowed here']
 
 VCR.configure do |c|

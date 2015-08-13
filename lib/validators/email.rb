@@ -7,6 +7,10 @@ module Validators
         record.errors.add(attribute, :blank, value: value)
       elsif invalid_format?(value)
         record.errors.add(attribute, :invalid, value: value)
+      elsif dns_validation_enabled?
+        unless valid_dns?(value)
+          record.errors.add(attribute, :invalid, value: value)
+        end
       end
     end
 
@@ -18,6 +22,16 @@ module Validators
 
     def valid_regex
       VALID_REGEX
+    end
+
+    def dns_validation_enabled?
+      options[:dns_validation?]
+    end
+
+    def valid_dns?(value)
+      return true if Rails.env.development?
+
+      PostcodeAnywhere::EmailValidation.valid?(value)
     end
   end
 end

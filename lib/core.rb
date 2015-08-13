@@ -20,6 +20,7 @@ module Core
   autoload :Entity, 'core/entity'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
+  autoload :NewsletterSubscription, 'core/entity/newsletter_subscription'
   autoload :Other, 'core/entity/other'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'

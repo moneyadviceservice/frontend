@@ -1,5 +1,5 @@
 RSpec.describe NewsletterSubscriptionsController, type: :controller do
-  let(:subscriber) { instance_double(Core::NewsletterSubscriptionCreator, email) }
+  let(:subscriber) { instance_double(Core::NewsletterSubscriptionCreator) }
 
   before do
     allow_any_instance_of(Core::NewsletterSubscriptionCreator).to receive(:call) { result }

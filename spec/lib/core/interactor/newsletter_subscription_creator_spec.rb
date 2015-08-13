@@ -1,23 +1,14 @@
 module Core
   RSpec.describe NewsletterSubscriptionCreator do
-    let(:email) { 'clark.kent@example.com' }
-
     subject(:subscriber) { described_class.new(email) }
+
+    let(:email) { 'clark.kent@example.com' }
 
     describe '#call' do
       before do
         allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
           double(register: result)
         end
-
-        allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { true }
-      end
-
-      context 'when email is blank' do
-        let(:result) { true }
-        let(:email) { '' }
-
-        specify { expect(subject.call).to be_falsey }
       end
 
       context 'when the repository result is true' do

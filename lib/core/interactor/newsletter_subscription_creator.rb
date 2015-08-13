@@ -1,15 +1,14 @@
 module Core
   class NewsletterSubscriptionCreator
-    attr_reader :subscription
+    attr_accessor :email
+    private :email=
 
     def initialize(email)
-      @subscription = NewsletterSubscription.new(email: email)
+      self.email = email
     end
 
     def call
-      return false unless subscription.valid?
-
-      result = Core::Registry::Repository[:newsletter_subscription].register(subscription.email)
+      result = Core::Registry::Repository[:newsletter_subscription].register(email)
 
       if result
         result

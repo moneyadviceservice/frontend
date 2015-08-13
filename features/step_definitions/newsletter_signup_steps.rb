@@ -3,8 +3,6 @@ Then(/^I should see a newsletter sign up form$/) do
 end
 
 When(/^I sign up to the newsletter with a valid email address$/) do
-  allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { true }
-
   current_page.newsletter.email.set 'clark.kent@gmail.com'
   current_page.newsletter.signup.click
 end

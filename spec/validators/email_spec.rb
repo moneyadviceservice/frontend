@@ -7,15 +7,6 @@ module Validators
     validates_with Validators::Email, attributes: [:email]
   end
 
-  class TestEmailWithDnsValidatorModel
-    include ActiveModel::Model
-
-    attr_accessor :email
-
-    validates_with Validators::Email, attributes: [:email],
-                                      dns_validation?: true
-  end
-
   RSpec.describe Email do
     subject { TestEmailValidatorModel.new }
 
@@ -23,35 +14,21 @@ module Validators
       it { is_expected.not_to be_valid }
     end
 
-    context 'when format is invalid' do
-      before :each do
-        subject.email = 'notanemail.com'
-      end
-
-      it { is_expected.not_to be_valid }
-    end
-
-    context 'when format is valid' do
-      subject { TestEmailWithDnsValidatorModel.new }
-
-      before :each do
-        subject.email = 'me@example.com'
-      end
-
-      context 'when dns lookup is valid' do
+    context 'when email is present' do
+      context 'when format is valid' do
         before :each do
-          allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { true }
+          subject.email = 'me@example.com'
         end
 
         it { is_expected.to be_valid }
       end
 
-      context 'when dns lookup is invalid' do
+      context 'when format is invalid' do
         before :each do
-          allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { false }
+          subject.email = 'notanemail.com'
         end
 
-        it { is_expected.to_not be_valid }
+        it { is_expected.not_to be_valid }
       end
     end
   end

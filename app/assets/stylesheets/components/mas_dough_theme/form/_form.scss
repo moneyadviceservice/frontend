@@ -86,7 +86,7 @@
 }
 
 .form__input-container .form__input:focus ~ .form__input-outline {
-  @extend %form-input-focus-container
+  border-color: $color-input-focus-border-color;
 }
 
 .form__input--small {

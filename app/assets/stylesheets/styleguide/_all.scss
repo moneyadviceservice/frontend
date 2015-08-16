@@ -1,11 +1,17 @@
-@import 'dough/assets/stylesheets/lib';
-@import 'yeast/assets/lib/all';
-@import 'dough/assets/stylesheets/helpers/clearfix';
-@import 'dough/assets/stylesheets/helpers/inline_block';
+// Import yeast and mas_dough_themes and Dough core
+@import "dough/assets/stylesheets/lib";
+@import "yeast/assets/lib/all";
+@import "helpers/all";
+@import "dough/assets/stylesheets/common";
+@import "dough/assets/stylesheets/optional";
+@import "layout/variables";
+@import "../components/mas_dough_theme/variables";
+@import "../components/mas_dough_theme/*/_all.scss";
 
-@import 'variables';
-@import 'syntax';
-@import 'base';
-@import 'navigation';
-@import 'layout';
-@import 'example';
+// Stylesheet styling
+@import "variables";
+@import "syntax";
+@import "base";
+@import "navigation";
+@import "layout";
+@import "example";

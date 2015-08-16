@@ -3,6 +3,7 @@
 // Styleguide headings
 
 h1 {
+  color: $color-heading-default;
   @extend %heading-large;
 }
 

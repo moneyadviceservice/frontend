@@ -11,7 +11,7 @@ define([
   utilities,
   MAS
 ) {
-  'use strict';
+  'x use strict';
 
   var NewsletterSticky,
       defaultConfig = {
@@ -71,7 +71,7 @@ define([
    */
   NewsletterSticky.prototype._setScrollListener = function(isActive) {
     $(window)[isActive ? 'on' : 'off']('scroll.newsletter', this._scrollDebounceMethod(isActive));
-  }
+  };
 
   /**
    * Limit the amount of times the _handleScroll method is called
@@ -79,19 +79,22 @@ define([
    * @returns {Function|null}
    */
   NewsletterSticky.prototype._scrollDebounceMethod = function(isActive) {
-    return isActive ? utilities.debounce($.proxy(this._handleScroll, this), 100) : null
+    return isActive ? utilities.debounce($.proxy(this._handleScroll, this), 100) : null;
   };
 
   /**
    * Make the newsletter module display if scroll is over a certain percentage
    */
-  NewsletterSticky.prototype._handleScroll = function() {
-    if (!this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
-      return;
-    }
+  NewsletterSticky.prototype._handleScroll = function () {
+      if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
+          this.$el.addClass(this.config.visibleClassName);
+          this._setScrollListener(false);
 
-    this.$el.addClass(this.config.visibleClassName);
-    this._setScrollListener(false);
+      }
+      else {
+          return;
+      }
+
   };
 
   /**
@@ -99,7 +102,10 @@ define([
    * @return {Boolean}
    */
   NewsletterSticky.prototype._hasScrolledOverPercentage = function() {
-    return this._windowScrollTop() > this._scrollThreshold() ? true : false;
+      var percentScrolled;
+      percentScrolled = this._pageScrolledTo().percentage;
+
+      return (percentScrolled >= this.config.appearsAfterPercentage);
   };
 
   /**
@@ -114,10 +120,29 @@ define([
    * Works out the amount of pixels that is needed to be scrolled to before the
    * newsletter displays
    * @return {Number}
+   * @deprecated This is no longer used internally, will leave this until production release.
    */
-  NewsletterSticky.prototype._scrollThreshold = function() {
+  NewsletterSticky.prototype._scrollThreshold = function () {
     return $(document).height() * (this.config.appearsAfterPercentage / 100);
-  }
+  };
+
+  /**
+   * Returns an Object holding the pixels and percentage of the page that has been scrolled.
+   * e.g. return {pixels : x, percentage: n% }
+   * @return {Object}
+   */
+  NewsletterSticky.prototype._pageScrolledTo = function () {
+    var scrollData = {},
+      scrollTop = $(window).scrollTop(),
+      pageHeight = $(document).height(),
+      viewPortHeight = $(window).height(),
+      scrollPercent = (scrollTop / (pageHeight - viewPortHeight)) * 100;
+
+    scrollData.pixels = scrollTop;
+    scrollData.percentage = scrollPercent;
+
+    return scrollData;
+  };
 
   /**
    * Handles what happens when the close button is pressed

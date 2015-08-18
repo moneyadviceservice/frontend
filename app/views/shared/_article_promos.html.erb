@@ -7,12 +7,12 @@
     <% items_with_image.each do |item| %>
       <div class="l-promo-articles__item">
         <div class="t-article-promos">
-          <%= link_to item[:url], class: 'promo__link' do %>
-            <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
-            <%= heading_tag(level: 2, class: "promo__heading #{item[:blog] ? 'promo__heading--blog' : ''}") do %>
-              <%= item[:text] %>
+          <%= link_to item['url'], class: 'promo__link' do %>
+            <%= image_tag(item['image'], alt: '', class: 'promo__img') %>
+            <%= heading_tag(level: 2, class: "promo__heading promo__heading--#{item['label']}") do %>
+              <%= item['heading'] %>
             <% end %>
-            <p class="promo__content"><%= item[:content] %></p>
+            <p class="promo__content"><%= item['content'] %></p>
           <% end %>
         </div>
       </div>
@@ -22,11 +22,11 @@
       <% items_without_image.each do |item| %>
         <div class="l-promo-articles__item l-promo-articles__item--no-image">
           <div class="t-article-promos-no-image">
-            <%= link_to item[:url], class: 'promo__link' do %>
+            <%= link_to item['url'], class: 'promo__link' do %>
               <%= heading_tag(level: 2, class: 'promo__heading') do %>
-                <%= item[:text] %>
+                <%= item['heading'] %>
               <% end %>
-              <p class="promo__content"><%= item[:content] %></p>
+              <p class="promo__content"><%= item['content'] %></p>
             <% end %>
           </div>
         </div>

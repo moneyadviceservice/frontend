@@ -10,6 +10,15 @@ module Core::Repository::CMS
         expect(subject['title']).to eq('Beginner’s guide to managing your money')
       end
 
+      it 'returns description' do
+        expect(subject['description']).to eq("How to set up a budget, keep on top of your debts and start to save regularly")
+      end
+
+      it 'returns categories' do
+        expected = ["managing-money", "taking-control-of-debt"]
+        expect(subject['categories']).to eq(expected)
+      end
+
       it 'returns alternates' do
         expect(subject['alternates']).to eq([
           {
@@ -42,6 +51,19 @@ module Core::Repository::CMS
 
       it 'body is html' do
         expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
+      end
+
+      context 'home page' do
+        let(:body) { File.read('spec/fixtures/cms/modifiable-home-page.json') }
+
+        it 'makes raw attributes acessible' do
+          expect(AttributeBuilder.build(response)['heading']).to eql('head 1')
+        end
+
+        it 'groups numbered a attributes' do
+          expect(AttributeBuilder.build(response)['tools'][0]['heading']).to eql('head 1')
+          expect(AttributeBuilder.build(response)['tools'][0]['link']).to eql('https://example.com')
+        end
       end
     end
   end

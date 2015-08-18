@@ -6,9 +6,11 @@ class StyleguideController < ApplicationController
   end
 
   def components_website
+    @resource = Core::HomePage.new('Home')
   end
 
   def pages_home
+    @resource = Core::HomePage.new('Home')
     @categories_for_directory_cy = [
       {
         title:       'Dyled a benthyca',

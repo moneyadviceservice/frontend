@@ -1,7 +1,6 @@
 .category-detail {
   border-bottom: $default-border-thin;
   margin-bottom: $baseline-unit*6;
-  padding-bottom: $baseline-unit*8;
   position: relative;
 
   &:last-child {
@@ -25,6 +24,9 @@
 
 .category-detail__view-more {
   padding-left: $baseline-unit*7;
+  min-height: $baseline-unit*7;
+  display: block;
+  position: relative;
 
   .category-detail__view-more__label-more,
   .category-detail__view-more__label-less,

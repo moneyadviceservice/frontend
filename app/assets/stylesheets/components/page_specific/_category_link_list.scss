@@ -30,14 +30,6 @@
   }
 }
 
-.category-link-list__item:after {
-  content: ", ";
-}
-
-.category-link-list__item:last-child:after {
-  content: none;
-}
-
 .category-link-list__item__link {
   border-bottom: 3px solid $color-yellow-dark;
   padding-bottom: 5px;

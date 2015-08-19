@@ -2,7 +2,7 @@
 <ul class="category-link-list">
   <% category.links.each do |link| %>
     <li class="category-link-list__item">
-      <a class="category-link-list__item__link" href="<%= link['url'] %>"><%= link['text'] %></a>
+      <a class="category-link-list__item__link" href="<%= link['url'] %>"><%= link['text'] %><%= ',' unless link.equal? category.links.last %></a>
     </li>
   <% end %>
 </ul>

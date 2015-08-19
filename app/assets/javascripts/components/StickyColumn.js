@@ -226,8 +226,19 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   StickyColumn.prototype._handleSectionToggle = function(e) {
     if (e.emitter.$el.parents(this.$el).length > 0) {
       this._handleResize();
+
+      if (this._getWindowScroll() > this.bottom) {
+        this._scrollToView();
+      }
     }
   };
+
+  /**
+   * Scrolls the page to the top of the .related-links element
+   */
+  StickyColumn.prototype._scrollToView = function() {
+    window.scrollTo(0, this.bottom - parseInt(this.$el.css('paddingTop')));
+  }
 
   return StickyColumn;
 });

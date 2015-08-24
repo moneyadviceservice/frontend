@@ -37,8 +37,3 @@ Feature: Settings
     And   I am on the settings page
     And   I opt out of MAS newsletters
     Then  I should see a successful update notification
-
-  Scenario: User can't update their details when the feature is disabled
-    Given I am signed in
-    And   I try to view the settings page
-    Then  I am told that the functionality is not implemented

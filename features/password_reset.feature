@@ -22,8 +22,3 @@ Feature: Reset password
       Then  I should see "Change my password" in the email body
       When  I follow "Change my password" in the email
       Then  I should be able to change my password
-
-  Scenario: User can't reset their password when the feature is disabled
-    When I attempt to sign in
-    And  I click on 'Forgot your password?'
-    Then I am told that the functionality is not implemented

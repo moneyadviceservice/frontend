@@ -1,5 +1,14 @@
-Rails.application.routes.draw do
+class CorporateCategoriesConstraint
+  def initialize
+    @ids = ['corporate-home']
+  end
 
+  def matches?(request)
+    !@ids.include?(request.params[:id])
+  end
+end
+
+Rails.application.routes.draw do
   def not_implemented
     -> (_) { [501, {}, []] }
   end
@@ -15,18 +24,6 @@ Rails.application.routes.draw do
 
     if Feature.active?(:improvements)
       mount Feedback::Engine => '/improvements'
-    end
-
-    unless Feature.active?(:reset_passwords)
-      scope '/users' do
-        match '/password/new', to: not_implemented, via: 'get'
-      end
-    end
-
-    unless Feature.active?(:settings)
-      scope '/users' do
-        match '/edit', to: not_implemented, via: 'get'
-      end
     end
 
     devise_for :users,
@@ -147,9 +144,6 @@ Rails.application.routes.draw do
       mount Agreements::Engine => '/agreements'
     end
 
-    match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
-    match '/corporate_categories/corporate-home', to: not_implemented, via: 'get'
-
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
       resource :feedback, only: [:new, :create], controller: :article_feedbacks
@@ -164,17 +158,9 @@ Rails.application.routes.draw do
     resource :advice, only: :show
     resources :videos, only: :show
 
-    unless Feature.active?(:corporate_tool_directory)
-      match '/corporate/syndication', to: not_implemented, via: 'get'
-      match '/corporate/:tool_name',
-            to: not_implemented,
-            via: 'get',
-            constraints: { tool_name: /([a-zA-Z]+)-([a-zA-Z]+)-syndication/ }
-    end
-
     get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
     get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
-    resources :corporate_categories, only: [:show]
+    resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
     resources :corporate, only: [:index, :show, :create] do
       get 'export-partners', on: :collection
     end
@@ -275,6 +261,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
 
   if Feature.active?(:redirects)
     match '*path', via: :all, to: 'catchall#not_implemented'

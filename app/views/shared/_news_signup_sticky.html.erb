@@ -23,7 +23,12 @@
         <p class="news-signup-sticky__disclaimer"><%= t('newsletter_subscriptions.sticky.privacy_policy_html') %></p>
       </div>
       <button class="news-signup-sticky__close unstyled-button" title="<%= t('newsletter_subscriptions.sticky.dont_ask_me_again') %>">
-          &times;
+        <%= render 'shared/svg/use_icon',
+                   icon: 'desktop-close-box',
+                   title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
+                   accessibility_description: 'Close this popup',
+                   use_no_svg: true
+        %>
       </button>
     <% end %>
   </div>

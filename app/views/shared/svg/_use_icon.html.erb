@@ -1,3 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--<%= local_assigns[:icon] %><%= " svg-icon--#{local_assigns[:icon]}--#{local_assigns[:variant]}" unless local_assigns[:variant].nil? %><%= " #{local_assigns[:class_name]}" unless local_assigns[:class_name].nil? %>">
+<% title = local_assigns[:title].nil? ? '' : "title=\"#{local_assigns[:title]}\"".html_safe %>
+<% accessibility_description = local_assigns[:accessibility_description].nil? ? '' : local_assigns[:accessibility_description] %>
+<% use_no_svg = local_assigns[:use_no_svg].nil? ? false : true %>
+<% no_svg_icon_class = local_assigns[:no_svg_icon_class].nil? ? 'default' : local_assigns[:no_svg_icon_class] %>
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--<%= local_assigns[:icon] %><%= " svg-icon--#{local_assigns[:icon]}--#{local_assigns[:variant]}" unless local_assigns[:variant].nil? %><%= " #{local_assigns[:class_name]}" unless local_assigns[:class_name].nil? %>"
+     <%= title %>>
   <use xlink:href="#svg-icon--<%= local_assigns[:icon] %>"></use>
 </svg>
+<% if use_no_svg %>
+<div class="no-svg-icon no-svg-icon--<%= no_svg_icon_class %>">
+<% end %>
+<% if accessibility_description.length > 0 %>
+<span class="visually-hidden"><%= accessibility_description %></span>
+<% end %>
+<% if use_no_svg %>
+</div>
+<% end %>

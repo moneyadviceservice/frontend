@@ -15,6 +15,12 @@
     min-width: 188px;
     margin-top: 1px;
   }
+
+  .svg-icon--desktop-close-box {
+    width: 12px;
+    height: 12px;
+  }
+
 }
 
 .news-signup-sticky--positioned {
@@ -35,7 +41,7 @@
 }
 
 .news-signup-sticky__intro {
-  @include body(16,20);
+  @include body(16, 20);
   color: $color-true-black;
   font-weight: 500;
   margin: 0 auto $baseline-unit*2.6 auto;
@@ -44,7 +50,7 @@
   position: relative;
 
   @include respond-to($mq-m) {
-    @include body(17,21);
+    @include body(17, 21);
     max-width: 400px;
   }
 
@@ -53,7 +59,7 @@
     padding-top: 0;
 
     @include respond-to($mq-m) {
-      @include body(16,18);
+      @include body(16, 18);
     }
 
     .is-errored & {
@@ -165,7 +171,7 @@ input[type="email"].news-signup-sticky__email-input {
 }
 
 .news-signup-sticky__disclaimer {
-  @include body(12,14);
+  @include body(12, 14);
   @include clearfix;
   background: $color-white;
   font-weight: 500;
@@ -185,7 +191,7 @@ input[type="email"].news-signup-sticky__email-input {
 
 .news-signup-sticky__close {
   transition: opacity .5s;
-  @include body(40,25);
+  @include body(40, 25);
   @extend %stripe-bg;
   background: $color-yellow-light;
   position: absolute;
@@ -195,7 +201,7 @@ input[type="email"].news-signup-sticky__email-input {
   color: darken($color-grey-nine, 43%);
 
   @include respond-to($mq-m) {
-    @include body(24,20);
+    @include body(24, 20);
     background-image: none !important;
     background: $color-white;
     border-radius: 100%;

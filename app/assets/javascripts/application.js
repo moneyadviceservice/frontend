@@ -99,14 +99,6 @@ require(['common', 'jquery'], function(MAS, $) {
         $('.cookie-message').hide();
         $('.footer-site-links__cookie-link').removeClass('is-on');
       });
-
-      $('.news-signup-sticky form').bind('ajax:error', function(e) {
-        $('.news-signup-sticky__error')
-        .addClass('is-errored news-signup-sticky__error--display');
-
-        $('.news-signup-sticky__text')
-        .removeClass('news-signup-sticky__text--display');
-      });
     });
   });
 

@@ -4,30 +4,25 @@ define([
   'eventsWithPromises',
   'utilities',
   'common'
-], function(
-  $,
-  DoughBaseComponent,
-  eventsWithPromises,
-  utilities,
-  MAS
-) {
-  'x use strict';
+], function($, DoughBaseComponent, eventsWithPromises, utilities, MAS) {
+  'use strict';
 
   var NewsletterSticky,
-      defaultConfig = {
-        appearsAfterPercentage: 40,
-        visibleClassName: 'news-signup-sticky--visible',
-        closeClassSelector: '.news-signup-sticky__close',
-        closedClassName: 'news-signup-sticky__close--closed'
-      };
+    defaultConfig = {
+      appearsAfterPercentage: 40,
+      visibleClassName: 'news-signup-sticky--visible',
+      closeClassSelector: '.news-signup-sticky__close',
+      closedClassName: 'news-signup-sticky__close--closed'
+    },
+    $newsletterStickForm;
 
   NewsletterSticky = function($el, config) {
     NewsletterSticky.baseConstructor.call(this, $el, config, defaultConfig);
   };
 
   /**
-  * Inherit from base module, for shared methods and interface
-  */
+   * Inherit from base module, for shared methods and interface
+   */
   DoughBaseComponent.extend(NewsletterSticky);
 
   NewsletterSticky.componentName = 'NewsletterSticky';
@@ -53,6 +48,8 @@ define([
   NewsletterSticky.prototype._setVars = function() {
     this.closeButton = this.$el.find(this.config.closeClassSelector);
     this.window = $(window);
+
+    $newsletterStickForm = this.$el.find('form');
   };
 
   /**
@@ -61,8 +58,17 @@ define([
    */
   NewsletterSticky.prototype._setListeners = function(isActive) {
     this._setScrollListener(isActive);
-    this.closeButton[isActive ? 'on' : 'off']('click', $.proxy(this._handleCloseClick, this));
-    this.$el[isActive ? 'on' : 'off']('click', '.button--done', $.proxy(this._handleCloseClick, this));
+
+    if (isActive) {
+      this.closeButton.on('click', $.proxy(this._handleCloseClick, this));
+      this.$el.on('click', '.button--done', $.proxy(this._handleCloseClick, this));
+      $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
+    }
+    else {
+      this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
+      this.$el.off('click', '.button--done', $.proxy(this._handleCloseClick, this));
+      $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
+    }
   };
 
   /**
@@ -82,18 +88,27 @@ define([
     return isActive ? utilities.debounce($.proxy(this._handleScroll, this), 100) : null;
   };
 
+  NewsletterSticky.prototype._formAjaxErrorHandler = function() {
+
+    $('.news-signup-sticky__error')
+      .addClass('is-errored news-signup-sticky__error--display');
+
+    $('.news-signup-sticky__text')
+      .removeClass('news-signup-sticky__text--display');
+
+  };
+
   /**
    * Make the newsletter module display if scroll is over a certain percentage
    */
-  NewsletterSticky.prototype._handleScroll = function () {
-      if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
-          this.$el.addClass(this.config.visibleClassName);
-          this._setScrollListener(false);
-
-      }
-      else {
-          return;
-      }
+  NewsletterSticky.prototype._handleScroll = function() {
+    if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
+      this.$el.addClass(this.config.visibleClassName);
+      this._setScrollListener(false);
+    }
+    else {
+      return;
+    }
 
   };
 
@@ -102,10 +117,10 @@ define([
    * @return {Boolean}
    */
   NewsletterSticky.prototype._hasScrolledOverPercentage = function() {
-      var percentScrolled;
-      percentScrolled = this._pageScrolledTo().percentage;
+    var percentScrolled;
+    percentScrolled = this._pageScrolledTo().percentage;
 
-      return (percentScrolled >= this.config.appearsAfterPercentage);
+    return (percentScrolled >= this.config.appearsAfterPercentage);
   };
 
   /**
@@ -122,7 +137,7 @@ define([
    * @return {Number}
    * @deprecated This is no longer used internally, will leave this until production release.
    */
-  NewsletterSticky.prototype._scrollThreshold = function () {
+  NewsletterSticky.prototype._scrollThreshold = function() {
     return $(document).height() * (this.config.appearsAfterPercentage / 100);
   };
 
@@ -131,7 +146,7 @@ define([
    * e.g. return {pixels : x, percentage: n% }
    * @return {Object}
    */
-  NewsletterSticky.prototype._pageScrolledTo = function () {
+  NewsletterSticky.prototype._pageScrolledTo = function() {
     var scrollData = {},
       scrollTop = $(window).scrollTop(),
       pageHeight = $(document).height(),
@@ -150,14 +165,19 @@ define([
    */
   NewsletterSticky.prototype._handleCloseClick = function(e) {
     e.preventDefault();
+
+    if (!$newsletterStickForm.hasClass('news-signup-sticky-form--success')) {
+      MAS.publish('analytics:trigger', {
+        event: 'gaEvent',
+        gaEventCat: 'Newsletter SignUp Sticky',
+        gaEventAct: 'Click',
+        gaEventLab: 'Close button'
+      });
+
+    }
+
     this._close();
 
-    MAS.publish('analytics:trigger', {
-      event: 'gaEvent',
-      gaEventCat: 'Newsletter SignUp Sticky',
-      gaEventAct: 'Click',
-      gaEventLab: 'Close button'
-    });
   };
 
   /**

@@ -14,7 +14,10 @@
   <% if @success %>
     $newsletterForm
     .find(errorTextClass)
-    .removeClass(errorClassName + ' ' + errorTextClassDisplayName);
+    .removeClass(errorClassName + ' ' + errorTextClassDisplayName)
+            .end()
+            .find('form')
+            .addClass('news-signup-sticky-form--success');
 
     $newsletterForm
     .find(textClass)

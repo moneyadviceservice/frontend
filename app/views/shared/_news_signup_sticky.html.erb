@@ -13,8 +13,7 @@
 
   <p><%= main_app.newsletter_subscription_path %></p>
 
-  <div class="news-signup-sticky__inner">
-    <%= form_tag(main_app.newsletter_subscription_path, remote: true) do %>
+  <div class="news-signup-sticky__inner">    <%= form_tag(main_app.newsletter_subscription_path, remote: true) do %>
       <div class="news-signup-sticky__submitform">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'sticky_authenticity_token' -%>
         <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Sticky', { :id => "subscription[sticky_ga_categoryid]" } -%>
@@ -31,6 +30,10 @@
                    title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
                    accessibility_description: 'Close this popup',
                    use_no_svg: true
+        %>
+        <%= render 'shared/svg/use_icon',
+                   icon: 'mobile-close-box',
+                   title: t('newsletter_subscriptions.sticky.dont_ask_me_again')
         %>
       </button>
     <% end %>

@@ -90,6 +90,9 @@ define([
     return isActive ? utilities.debounce($.proxy(this._handleScroll, this), 100) : null;
   };
 
+  /**
+   * TODO - write comment
+   */
   NewsletterSticky.prototype._formAjaxErrorHandler = function() {
 
     $('.news-signup-sticky__error')

@@ -68,22 +68,72 @@
   height: 26px;
 }
 
-.icon--youtube {
-  background-position: -4px -70px;
-  width: 30px;
-  height: 30px;
+.icon--twitter,
+.svg-icon--twitter {
+  width: 22.149px;
+  height: 18px;
 }
 
-.icon--facebook {
-  background-position: -36px -70px;
-  width: 24px;
-  height: 24px;
+.icon--facebook,
+.svg-icon--facebook {
+  width: 11.424px;
+  height: 22px;
+}
+
+.icon--youtube,
+.svg-icon--youtube {
+  width: 25.59168px;
+  height: 18px;
 }
 
 .icon--twitter {
-  background-position: -69px -70px;
-  width: 26px;
-  height: 25px;
+  display: block;
+  background-position: -484px -445px;
+}
+
+.icon--facebook {
+  display: block;
+  background-position: -456px -441px;
+}
+
+.icon--youtube {
+  display: block;
+  background-position: -417px -443px;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube {
+  display: none;
+}
+
+.svg-icon--twitter {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg-icon--facebook {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg-icon--youtube {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg {
+  .icon--twitter,
+  .icon--facebook,
+  .icon--youtube {
+    display: none;
+  }
+
+  .svg-icon--twitter,
+  .svg-icon--facebook,
+  .svg-icon--youtube {
+    display: block;
+  }
 }
 
 .icon--globe {
@@ -290,9 +340,10 @@
   height: 70px;
 }
 
-.icon--sharing {
-  background-position: -922px -50px;
-  width: 60px;
+.icon--newsletter {
+  background-image: none;
+  background-color: $color-green-primary;
+  width: 70px;
   height: 70px;
 }
 

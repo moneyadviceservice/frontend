@@ -14,7 +14,8 @@ define([
       closeClassSelector: '.news-signup-sticky__close',
       closedClassName: 'news-signup-sticky__close--closed'
     },
-    $newsletterStickForm;
+    $newsletterStickForm,
+    newsletterCloseBoxCookieURL;
 
   NewsletterSticky = function($el, config) {
     NewsletterSticky.baseConstructor.call(this, $el, config, defaultConfig);
@@ -50,6 +51,7 @@ define([
     this.window = $(window);
 
     $newsletterStickForm = this.$el.find('form');
+    newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
   };
 
   /**
@@ -175,6 +177,8 @@ define([
       });
 
     }
+
+    $.post(newsletterCloseBoxCookieURL,'hello');
 
     this._close();
 

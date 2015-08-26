@@ -5,14 +5,6 @@ end
 When(/^I sign up to the newsletter with a valid email address$/) do
   allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { true }
 
-  # For an unknown reason the original Core::Registry::Repository[:newsletter_subscription]
-  # instance object seems to struggle to serialize. I can only guess the magic
-  # .delay method is not working as expected
-  allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
-    Core::Repository::NewsletterSubscriptions::Fake.new
-  end
-  allow(Core::Registry::Repository).to receive(:[]).with(:category).and_call_original
-
   current_page.newsletter.email.set 'clark.kent@gmail.com'
   current_page.newsletter.signup.click
 end

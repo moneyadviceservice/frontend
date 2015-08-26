@@ -6,6 +6,10 @@ module Core
 
     describe '#call' do
       before do
+        allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
+          double(register: result)
+        end
+
         allow(PostcodeAnywhere::EmailValidation).to receive(:valid?) { true }
       end
 
@@ -17,32 +21,18 @@ module Core
       end
 
       context 'when the repository result is true' do
-        specify { expect(subject.call).to be_truthy }
+        let(:result) { true }
 
-        it 'adds delayed job' do
-          expect { subject.call }.to change(Delayed::Job, :count).by(1)
-        end
+        specify { expect(subject.call).to be_truthy }
       end
 
       context 'when the repository result is false' do
-        before :each do
-          allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
-            double(delay: double(register: result))
-          end
-        end
-
         let(:result) { false }
 
         specify { expect(subject.call).to be_falsey }
       end
 
       context 'when a failure block is given' do
-        before :each do
-          allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
-            double(delay: double(register: result))
-          end
-        end
-
         let(:result) { nil }
 
         it 'calls the block' do

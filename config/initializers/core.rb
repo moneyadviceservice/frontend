@@ -25,6 +25,9 @@ Core::Registry::Repository[:action_plan] =
 Core::Registry::Repository[:article] =
   Core::Repository::Articles::CMS.new
 
+Core::Registry::Repository[:cms_api] =
+  Core::Repository::CMS::CmsApi.new
+
 Core::Registry::Repository[:video] =
   Core::Repository::Videos::CMS.new
 

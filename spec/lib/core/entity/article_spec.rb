@@ -340,5 +340,11 @@ module Core
         end
       end
     end
+
+    describe '#redirect?' do
+      it 'is falsey' do
+        expect(subject.redirect?).to be_falsey
+      end
+    end
   end
 end

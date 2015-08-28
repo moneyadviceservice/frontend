@@ -9,9 +9,3 @@ Feature: My Account
     And   I am on the home page
     When  I click on "My Account"
     Then  I see my account page
-
-  Scenario: Feature disabled
-    Given I am signed in
-    And   I am on the home page
-    When  I click on "My Account"
-    Then  I don't see my account page

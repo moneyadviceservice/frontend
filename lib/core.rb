@@ -49,6 +49,7 @@ module Core
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'
+  autoload :RedirectReader, 'core/interactor/redirect_reader'
 
   module Interactors
     module Customer
@@ -111,6 +112,7 @@ module Core
 
     module CMS
       autoload :CMS, 'core/repository/cms/cms'
+      autoload :CmsApi, 'core/repository/cms/cms_api'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
       autoload :Preview, 'core/repository/cms/preview'
       autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'

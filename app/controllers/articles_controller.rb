@@ -5,8 +5,12 @@ class ArticlesController < ApplicationController
   include Navigation
 
   def show
-    @article = interactor.call do
-      not_found
+    @article = interactor.call do |error|
+      if error.redirect?
+        return redirect_to error.location, status: error.status
+      else
+        not_found
+      end
     end
 
     set_breadcrumbs

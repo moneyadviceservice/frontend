@@ -30,7 +30,3 @@ Feature: Corporate Tool Page
     And   I request for the embded code
     Then  I should be presented with the embed code
     And   I should see a successful confirmation of my details submitted
-
-  Scenario: A corporate tool page is not accessible when feature is disabled
-    When I visit a corporate tool page
-    Then I am told that the functionality is not implemented

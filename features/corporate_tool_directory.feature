@@ -17,7 +17,3 @@ Feature: Corporate Tool Directory
   Scenario: All tools
     When I visit the corporate tool directory page
     Then I should be presented with a list of all tools available
-
-  Scenario: Corporate tool directory page is not accessible when feature is disabled
-    When I visit the corporate tool directory page
-    Then I am told that the functionality is not implemented

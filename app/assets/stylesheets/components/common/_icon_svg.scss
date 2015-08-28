@@ -1,5 +1,11 @@
 // Styling for SVG icons, to be used instead of PNG sprite icons
 
+.svg-icon{
+  html.no-svg &{
+    display: none;
+  }
+}
+
 %small-svg-icon {
   width: 16px;
   height: 16px;

@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (phlee.local; plee; 7523) ruby/2.1.2 (95; x86_64-darwin14.0)
+      - Mas-Responsive/1.0 (phlee.local; _spotlight; 3829) ruby/2.1.2 (95; x86_64-darwin14.0)
       X-Request-Id:
-      - 19070371-c04a-4c52-90d2-acb9a649d5d4
+      - d25a998a-cabf-4f71-b867-f0189d904a8b
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,13 +31,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 19070371-c04a-4c52-90d2-acb9a649d5d4
+      - d25a998a-cabf-4f71-b867-f0189d904a8b
       X-Runtime:
-      - '0.008043'
+      - '0.009015'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Wed, 05 Aug 2015 11:18:07 GMT
+      - Tue, 01 Sep 2015 14:36:57 GMT
       Content-Length:
       - '36'
       Connection:
@@ -46,5 +46,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"Site \"api\" not found"}'
     http_version: 
-  recorded_at: Wed, 05 Aug 2015 11:18:07 GMT
+  recorded_at: Tue, 01 Sep 2015 14:36:57 GMT
 recorded_with: VCR 2.9.2

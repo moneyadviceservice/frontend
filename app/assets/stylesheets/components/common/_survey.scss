@@ -114,3 +114,178 @@
   }
 
 */
+
+
+/**
+ * BEGIN GFK pop-up styles --
+**/
+
+/* desktop pop up styles */
+
+/*
+@font-face {
+    font-family: 'MuseoSans';
+  src: url('MuseoSans_300.eot');
+  src: url('MuseoSans_300.ttf') format('truetype');
+  font-weight: normal;
+    font-style: normal
+}
+*/
+
+#gfk_popDiv {
+  position : absolute;
+  background :  #66A600;
+  /*background : -moz-linear-gradient(top,#ffffff 50 %, #dadada 100% );
+  background : -webkit-gradient(linear, left top, left bottom, color - stop(50%, #ffffff), color - stop(100%,  #dadada));
+  background : -webkit-linear-gradient(top, #ffffff 50%, #dadada 100% );
+  background : -o - linear - gradient(top, #ffffff 50% , #dadada 100% );
+  background : -ms - linear - gradient(top, #ffffff 50% , #dadada 100% );
+  background : linear - gradient(to bottom, #ffffff 50% , #dadada 100% );
+  filter : progid : DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#dadada', GradientType = 0);*/
+  -moz-border-top-left-radius : 0.5rem;
+  -webkit-border-top-left-radius : 0.5rem;
+  border-top-left-radius : 0.5rem;
+  -moz-border-top-right-radius : 0.5rem;
+  -webkit-border-top-right-radius : 0.5rem;
+  border-top-right-radius : 0.5rem;
+  /*-moz-box-shadow : 0 0 2em 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow : 0 0 2em 0 rgba(0, 0, 0, 0.75);
+  box-shadow : 0 0 2em 0 rgba(0, 0, 0, 0.75);*/
+  font-family : MuseoSans;
+  font-size : smaller;
+  text-align : left;
+  z-index : 25000;
+  color: #ffffff;
+  position : absolute;
+  width : 280px;
+  /*height : 400px;*/
+  /*max-width : 310px;*/
+  /*top : 10%;*/
+  /*background-color : #fff;*/
+  /*border : solid #333 2px;*/
+  /*padding : 10px;*/
+}
+
+#gfk_popWrapper {
+  position: relative;
+  top: 10px;
+  /*left: 10px;*/
+  margin: 0px auto;
+    width: 260px;
+    height: 390px;
+    background: #478500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  /*padding: 10px;*/
+}
+
+#gfk_maxmin
+{
+    height: 20px;
+    width: 280px;
+    background: red;
+    cursor: pointer;
+
+}
+
+#gfk_popDiv p {
+  /*font-size:smaller;*/
+  /*font-family:sans-serif;*/
+}
+
+#gfk_mobileLink {
+  font-size:15px;
+  font-family:Arial;
+}
+
+/* mobile pop up styles */
+
+#gfk_mobilePopDiv {
+  height : auto;
+  /*background-color : #fff;*/
+  left : 12px;
+  margin-right : 12px;
+  margin-left : 12px;
+  top : 12px;
+  margin-bottom : 10px;
+}
+
+/* pop up text styles */
+
+#gfk_cmdYes {
+  background :  #EBD520;
+  border-bottom: 3px solid #E6BF49;
+  border-radius : 2.625px;
+  color :  #000000;
+  width : 100px;
+  padding : 5px;
+  font-size : 12px;
+  text-align : center;
+  cursor : pointer;
+  font-weight : bold;
+  height: 25px;
+}
+
+#gfk_cmdYes:hover {
+  background :  #EFDE4F;
+  /*color :  #fff;*/
+}
+
+#gfk_cmdNo {
+  border-radius : 2.625px;
+  background :  #EBD520;
+  border-bottom: 3px solid #E6BF49;
+  color :  #000000;
+  width : 100px;
+  padding : 5px;
+  font-size : 12px;
+  text-align : center;
+  cursor : pointer;
+  font-weight : bold;
+  height: 25px;
+}
+
+#gfk_cmdNo:hover {
+  background : #EFDE4F;
+  /*color :  #fff;*/
+}
+
+.gfk_header {
+  font-weight : bold;
+  font-size:22px
+}
+
+/* mobile survey start style */
+
+.gfk-survey-btn {
+  position:fixed;
+  bottom:15px;
+  right:10px;
+  display:none;
+  padding: 4px;
+  min-height: 30px;
+  max-height: 50px;
+  width:100px;
+  font-family:MuseoSans;
+  font-size:13px;
+  background:#ED1C24;
+  color:#fff;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+  text-align: center
+}
+
+.gfk-survey-btn:hover{
+  background:#ED1C24;
+  color:#000;
+}
+
+#gfkSurvey
+{
+    background:url(loading.gif) center center no-repeat;
+}
+
+/**
+ * -- END GFK pop-up styles
+**/

@@ -7,6 +7,8 @@ class CatchallController < ApplicationController
     end
 
     raise ActionController::RoutingError.new('Not Found')
+  rescue Core::Repository::Base::RequestError => e
+    raise ActionController::RoutingError.new('Not Found')
   end
 
   private

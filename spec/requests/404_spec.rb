@@ -16,6 +16,14 @@ RSpec.describe '404 catachall', type: :request, features: [:redirects] do
     end
   end
 
+  context 'when nested page does not exist' do
+    it 'renders the 404 page' do
+      VCR.use_cassette('core/repository/cms/cms_api/find/idonotexist_nested') do
+        expect { get '/en/idonotexist/other' }.to raise_error(ActionController::RoutingError, 'Not Found')
+      end
+    end
+  end
+
   context 'when redirect in cms exists' do
     it 'redirects' do
       VCR.use_cassette('core/repository/cms/cms_api/find/iamredirect') do

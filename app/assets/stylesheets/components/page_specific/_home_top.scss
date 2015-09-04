@@ -3,10 +3,20 @@
 // Styleguide Home Top
 
 .home-top {
-  background: image-url("campaign/abi-promo-protecting-your-world.jpg") 0 100% no-repeat;
+  background: image-url("retirement_shop_small_en.png") 0 100% no-repeat;
   background-size: 100%;
   padding-bottom: 50%;
   position: relative;
+  @if $responsive {
+    background-image: image-url("retirement_shop_en.png");
+  }
+
+  .theme-cy & {
+    background-image: image-url("retirement_shop_small_cy.png");
+    @if $responsive {
+      background-image: image-url("retirement_shop_cy.png");
+    }
+  }
 
   @include respond-to($mq-m) {
     background-position: 113% 108%;
@@ -17,7 +27,6 @@
   @include respond-to($mq-l) {
     background-position: 150% 100%;
     background-size: 54%;
-
     @if $responsive {
       background-position: 107% 100%;
     }
@@ -46,9 +55,13 @@
 .home-top__image {
   @include respond-to($mq-xl) {
     @include absolutely-centre-horizontally(1350px);
-    background: image-url("campaign/abi-promo-protecting-your-world.jpg") 100% 52% no-repeat;
+    background: image-url("retirement_shop_en.png") 100% 52% no-repeat;
     background-size: 46%;
     height: 345px;
+
+    .theme-cy & {
+      background-image: image-url("retirement_shop_cy.png");
+    }
   }
 }
 

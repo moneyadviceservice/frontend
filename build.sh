@@ -24,11 +24,11 @@ rm -rf public/assets vendor/cache coverage log/* tmp/*
 
 echo "Running Bundle package"
 echo "----"
-bundle package --all
+time bundle package --all
 
 echo "Running Bower cache clean"
 echo "----"
-bower cache clean
+time bower cache clean
 
 echo "Purging bower components"
 echo "----"
@@ -36,20 +36,20 @@ echo "----"
 
 echo "Running Bower update (via bowndler)"
 echo "----"
-bowndler update --production --config.interactive=false
+time bowndler update --production --config.interactive=false
 
 echo "Precompiling assets"
 echo "----"
-RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile
+time RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile
 
 echo "Uploading assets"
 echo "----"
-/usr/local/bin/upload-responsive-assets.sh $(pwd)/public
+time /usr/local/bin/upload-responsive-assets.sh $(pwd)/public
 
 echo "Creating RPM"
 echo "----"
 cd ..
-/usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version
+time /usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version
 
 #prune packaged gems
 rm -rf vendor/cache

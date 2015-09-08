@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.json
+    uri: http://localhost:3000/api/cy/news/beth-maech-adroddiad-credyd-yn-ei-ddatgelu-amdanoch.json
     body:
       encoding: US-ASCII
       string: ''

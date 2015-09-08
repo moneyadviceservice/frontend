@@ -13,7 +13,7 @@ module Core::Repository::StaticPages
           Core::ConnectionFactory::Http.build(url)
         end
 
-        stub_request(:get, "https://example.com/en/corporate/#{id}.json")
+        stub_request(:get, "https://example.com/api/en/corporate/#{id}.json")
           .to_return(status: status, body: body, headers: headers)
       end
 

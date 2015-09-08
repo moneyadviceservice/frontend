@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/news/what-your-credit-report-reveals-about-you.json
+    uri: http://localhost:3000/api/en/news/what-your-credit-report-reveals-about-you.json
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/articles/managing-your-money-if-your-job-is-at-risk.json
+    uri: http://localhost:3000/api/en/articles/managing-your-money-if-your-job-is-at-risk.json
     body:
       encoding: US-ASCII
       string: ''

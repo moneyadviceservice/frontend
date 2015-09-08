@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd.json
+    uri: http://localhost:3000/api/cy/articles/pam-bod-cynilon-rheolaidd-yn-talu-ffordd.json
     body:
       encoding: US-ASCII
       string: ''

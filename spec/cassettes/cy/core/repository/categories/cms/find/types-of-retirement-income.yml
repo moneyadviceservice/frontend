@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/categories/types-of-retirement-income.json
+    uri: http://localhost:3000/api/cy/categories/types-of-retirement-income.json
     body:
       encoding: US-ASCII
       string: ''

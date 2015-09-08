@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/news/interest-rate-rises-why-they-matter.json
+    uri: http://localhost:3000/api/en/news/interest-rate-rises-why-they-matter.json
     body:
       encoding: US-ASCII
       string: ''

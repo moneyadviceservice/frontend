@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/work-pensions-and-retirement.json
+    uri: http://localhost:3000/api/en/categories/work-pensions-and-retirement.json
     body:
       encoding: US-ASCII
       string: ''

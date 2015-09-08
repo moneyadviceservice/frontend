@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/buying-a-home.json
+    uri: http://localhost:3000/api/en/categories/buying-a-home.json
     body:
       encoding: US-ASCII
       string: ''

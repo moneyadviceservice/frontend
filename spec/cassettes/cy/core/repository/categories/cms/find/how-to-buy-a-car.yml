@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/categories/how-to-buy-a-car.json
+    uri: http://localhost:3000/api/cy/categories/how-to-buy-a-car.json
     body:
       encoding: US-ASCII
       string: ''

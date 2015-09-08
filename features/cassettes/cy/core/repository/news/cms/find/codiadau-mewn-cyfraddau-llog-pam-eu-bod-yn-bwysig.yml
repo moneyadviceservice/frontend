@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/news/codiadau-mewn-cyfraddau-llog-pam-eu-bod-yn-bwysig.json
+    uri: http://localhost:3000/api/cy/news/codiadau-mewn-cyfraddau-llog-pam-eu-bod-yn-bwysig.json
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/research-and-toolkits-on-young-people-and-money.json
+    uri: http://localhost:3000/api/en/categories/research-and-toolkits-on-young-people-and-money.json
     body:
       encoding: US-ASCII
       string: ''

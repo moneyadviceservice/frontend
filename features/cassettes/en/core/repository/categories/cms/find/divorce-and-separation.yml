@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/divorce-and-separation.json
+    uri: http://localhost:3000/api/en/categories/divorce-and-separation.json
     body:
       encoding: US-ASCII
       string: ''

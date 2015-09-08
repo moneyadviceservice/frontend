@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/car-insurance.json
+    uri: http://localhost:3000/api/en/categories/car-insurance.json
     body:
       encoding: US-ASCII
       string: ''

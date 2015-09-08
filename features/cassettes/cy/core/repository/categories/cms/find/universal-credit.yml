@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/categories/universal-credit.json
+    uri: http://localhost:3000/api/cy/categories/universal-credit.json
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/articles/why-it-pays-to-save-regularly.json
+    uri: http://localhost:3000/api/en/articles/why-it-pays-to-save-regularly.json
     body:
       encoding: US-ASCII
       string: ''

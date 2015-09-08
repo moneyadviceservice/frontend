@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/action_plans/sut-i-agor-cyfrif-banc.json
+    uri: http://localhost:3000/api/cy/action_plans/sut-i-agor-cyfrif-banc.json
     body:
       encoding: US-ASCII
       string: ''

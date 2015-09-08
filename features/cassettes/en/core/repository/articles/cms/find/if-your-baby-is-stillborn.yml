@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/articles/if-your-baby-is-stillborn.json
+    uri: http://localhost:3000/api/en/articles/if-your-baby-is-stillborn.json
     body:
       encoding: US-ASCII
       string: ''

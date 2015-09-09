@@ -124,7 +124,6 @@ module Core
     end
 
     module NewsletterSubscriptions
-      autoload :PublicWebsite, 'core/repository/newsletter_subscriptions/public_website'
       autoload :Cream, 'core/repository/newsletter_subscriptions/cream'
       autoload :Fake, 'core/repository/newsletter_subscriptions/fake'
     end

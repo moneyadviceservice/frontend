@@ -56,7 +56,7 @@ module Core::Repository::StaticPages
         let(:status) { 407 }
 
         it 'raises an API::RequestError' do
-          expect { repository.find(id) }.to raise_error(PublicWebsite::RequestError)
+          expect { repository.find(id) }.to raise_error(::Core::Repository::Base::RequestError)
         end
       end
 
@@ -65,7 +65,7 @@ module Core::Repository::StaticPages
         let(:status) { 500 }
 
         it 'raises an API::RequestError' do
-          expect { repository.find(id) }.to raise_error(PublicWebsite::RequestError)
+          expect { repository.find(id) }.to raise_error(::Core::Repository::Base::RequestError)
         end
       end
     end

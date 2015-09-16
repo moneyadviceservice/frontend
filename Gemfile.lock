@@ -666,7 +666,7 @@ GEM
     unicorn-rails (2.1.1)
       rack
       unicorn
-    validate_url (1.0.2)
+    validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
     vcr (2.9.2)
@@ -776,5 +776,6 @@ DEPENDENCIES
   timelines (>= 1.2.0)!
   uglifier (>= 1.3.0)
   unicorn-rails
+  validate_url (= 1.0.0)
   vcr
   webmock

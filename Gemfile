@@ -63,6 +63,9 @@ gem 'savings_calculator', '~> 1.1.0'
 
 gem 'timelines', '>= 1.2.0', git: 'git@github.com:moneyadviceservice/timelines.git'
 
+# 1.0.2 has breaking changes as it adds japanese and turkish locales
+gem 'validate_url', '1.0.0'
+
 group :assets do
   gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 4.0.0'

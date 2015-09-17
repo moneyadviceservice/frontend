@@ -178,7 +178,6 @@ Rails.application.routes.draw do
                       free-debt-advice|
                       friends-life-lander|
                       get-set-for-summer|
-                      have-a-savvy-christmas|
                       how-to-look-ahead-when-buying-a-car|
                       interest-only-mortgages|
                       interest-rates-rise|

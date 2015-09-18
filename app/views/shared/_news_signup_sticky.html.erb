@@ -11,8 +11,6 @@
     </p>
   </div>
 
-  <p><%= main_app.newsletter_subscription_path %></p>
-
   <div class="news-signup-sticky__inner">    <%= form_tag(main_app.newsletter_subscription_path, remote: true) do %>
       <div class="news-signup-sticky__submitform">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'sticky_authenticity_token' -%>
@@ -27,13 +25,15 @@
       <button class="news-signup-sticky__close unstyled-button" title="<%= t('newsletter_subscriptions.sticky.dont_ask_me_again') %>">
         <%= render 'shared/svg/use_icon',
                    icon: 'desktop-close-box',
-                   title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
+                   accessibility_title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
                    accessibility_description: 'Close this popup',
-                   use_no_svg: true
+                   svg_fallback_support: true
         %>
         <%= render 'shared/svg/use_icon',
                    icon: 'mobile-close-box',
-                   title: t('newsletter_subscriptions.sticky.dont_ask_me_again')
+                   accessibility_title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
+                   accessibility_description: 'Close this popup',
+                   svg_fallback_support: true
         %>
       </button>
     <% end %>

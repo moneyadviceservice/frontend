@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/saving-and-investing.json
+    uri: http://localhost:3000/api/en/categories/saving-and-investing.json
     body:
       encoding: US-ASCII
       string: ''

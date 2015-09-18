@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/action_plans/claim-child-maintenance-from-your-ex.json
+    uri: http://localhost:3000/api/en/action_plans/claim-child-maintenance-from-your-ex.json
     body:
       encoding: US-ASCII
       string: ''

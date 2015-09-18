@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/corporate/sample-tool-syndication.json
+    uri: http://localhost:3000/api/en/corporate/sample-tool-syndication.json
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/cy/categories/having-a-baby.json
+    uri: http://localhost:3000/api/cy/categories/having-a-baby.json
     body:
       encoding: US-ASCII
       string: ''

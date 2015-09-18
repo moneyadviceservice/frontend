@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/debt-advice-evaluation-toolkit.json
+    uri: http://localhost:3000/api/en/categories/debt-advice-evaluation-toolkit.json
     body:
       encoding: US-ASCII
       string: ''

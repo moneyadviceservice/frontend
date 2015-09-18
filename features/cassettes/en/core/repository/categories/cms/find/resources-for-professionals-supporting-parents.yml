@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/resources-for-professionals-supporting-parents.json
+    uri: http://localhost:3000/api/en/categories/resources-for-professionals-supporting-parents.json
     body:
       encoding: US-ASCII
       string: ''

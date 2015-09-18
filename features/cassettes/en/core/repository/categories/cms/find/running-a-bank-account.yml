@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/running-a-bank-account.json
+    uri: http://localhost:3000/api/en/categories/running-a-bank-account.json
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/en/categories/resources-for-professionals-welfare-reform-information-for-landlords.json
+    uri: http://localhost:3000/api/en/categories/resources-for-professionals-welfare-reform-information-for-landlords.json
     body:
       encoding: US-ASCII
       string: ''

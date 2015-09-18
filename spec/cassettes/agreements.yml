@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/preview/en/agreements-partners-intro.json
+    uri: http://localhost:3000/api/preview/en/agreements-partners-intro.json
     body:
       encoding: US-ASCII
       string: ''
@@ -62,7 +62,7 @@ http_interactions:
   recorded_at: Wed, 20 May 2015 10:24:18 GMT
 - request:
     method: get
-    uri: http://localhost:3000/preview/en/agreements-debt-evaluation-toolkit-intro.json
+    uri: http://localhost:3000/api/preview/en/agreements-debt-evaluation-toolkit-intro.json
     body:
       encoding: US-ASCII
       string: ''
@@ -234,7 +234,7 @@ http_interactions:
   recorded_at: Wed, 20 May 2015 10:24:33 GMT
 - request:
     method: get
-    uri: http://localhost:3000/preview/en/agreements-indebted-lives-report-intro.json
+    uri: http://localhost:3000/api/preview/en/agreements-indebted-lives-report-intro.json
     body:
       encoding: US-ASCII
       string: ''
@@ -318,7 +318,7 @@ http_interactions:
   recorded_at: Wed, 20 May 2015 10:24:34 GMT
 - request:
     method: get
-    uri: http://localhost:3000/preview/cy/agreements-debt-evaluation-toolkit-intro.json
+    uri: http://localhost:3000/api/preview/cy/agreements-debt-evaluation-toolkit-intro.json
     body:
       encoding: US-ASCII
       string: ''

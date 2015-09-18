@@ -14,7 +14,7 @@ RSpec.shared_examples_for 'a cms resource' do
 
       stub_request(
         :get,
-        "https://example.com/#{I18n.locale}/#{resource_name}/#{id}.json"
+        "https://example.com/api/#{I18n.locale}/#{resource_name}/#{id}.json"
       ).to_return(status: status, body: body, headers: headers)
     end
 

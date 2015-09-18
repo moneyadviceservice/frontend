@@ -70,7 +70,7 @@ module Core::Repository
       end
 
       def resource_url(id)
-        '%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
+        '/api/%{locale}/%{page_type}/%{id}.json' % { locale: I18n.locale, page_type: resource_name, id: id }
       end
 
       attr_accessor :connection

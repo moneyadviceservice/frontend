@@ -1,17 +1,38 @@
-<% title = local_assigns[:title].nil? ? '' : "title=\"#{local_assigns[:title]}\"".html_safe %>
+<% accessibility_title = local_assigns[:accessibility_title].nil? ? '' : "title=\"#{local_assigns[:accessibility_title]}\"".html_safe %>
 <% accessibility_description = local_assigns[:accessibility_description].nil? ? '' : local_assigns[:accessibility_description] %>
-<% use_no_svg = local_assigns[:use_no_svg].nil? ? false : true %>
-<% no_svg_icon_class = local_assigns[:no_svg_icon_class].nil? ? 'default' : local_assigns[:no_svg_icon_class] %>
-<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--<%= local_assigns[:icon] %><%= " svg-icon--#{local_assigns[:icon]}--#{local_assigns[:variant]}" unless local_assigns[:variant].nil? %><%= " #{local_assigns[:class_name]}" unless local_assigns[:class_name].nil? %>"
-     <%= title %>>
+<% svg_fallback_support = local_assigns[:svg_fallback_support].nil? ? false : true %>
+
+<%
+   icon_class = ''
+
+   if !local_assigns[:icon].nil? then
+     icon_class = icon_class + local_assigns[:icon]
+   end
+   if !local_assigns[:variant].nil? then
+     icon_class = icon_class + '--' + local_assigns[:variant]
+   end
+   svg_icon_class = 'svg-icon svg-icon--' + icon_class
+
+   if !local_assigns[:class_name].nil? then
+     svg_icon_class = svg_icon_class + ' ' + local_assigns[:class_name]
+   end
+
+   if svg_fallback_support === true then
+     no_svg_icon_class = 'no-svg-icon no-svg-icon--' + icon_class
+   else
+     no_svg_icon_class = 'no-svg-icon no-svg-icon--default'
+   end
+%>
+
+<% if svg_fallback_support %>
+<span class="<%= no_svg_icon_class %>">
+<% end %>
+<svg xmlns="http://www.w3.org/2000/svg" class="<%= svg_icon_class %>" <%= accessibility_title %>>
   <use xlink:href="#svg-icon--<%= local_assigns[:icon] %>"></use>
 </svg>
-<% if use_no_svg %>
-<div class="no-svg-icon no-svg-icon--<%= no_svg_icon_class %>">
-<% end %>
 <% if accessibility_description.length > 0 %>
 <span class="visually-hidden"><%= accessibility_description %></span>
 <% end %>
-<% if use_no_svg %>
-</div>
+<% if svg_fallback_support %>
+</span>
 <% end %>

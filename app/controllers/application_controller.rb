@@ -39,6 +39,18 @@ class ApplicationController < ActionController::Base
 
   helper_method :cookies_not_accepted?
 
+  def display_sticky_newsletter_form_cookie?
+    cookie_jar = []
+    cookie_jar << cookies.permanent['display_sticky_newsletter_form_cookie']
+    cookie_jar << cookies['_cookie_dismiss_newsletter']
+
+    !cookie_jar.include?('hide')
+
+    #cookies.permanent['display_sticky_newsletter_form_cookie'] == 'hide' ? false : true
+    #cookies['_cookie_dismiss_newsletter'] == 'hide' ? false : true
+  end
+  helper_method :display_sticky_newsletter_form_cookie?
+
   def display_search_box_in_header?
     true
   end

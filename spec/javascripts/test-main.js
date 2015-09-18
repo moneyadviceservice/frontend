@@ -32,6 +32,7 @@ require.config({
     // Dough components
     ClearInput: 'app/assets/javascripts/components/ClearInput',
     Newsletter: 'app/assets/javascripts/components/Newsletter',
+    NewsletterSticky: 'app/assets/javascripts/components/NewsletterSticky',
     StickyColumn: 'app/assets/javascripts/components/StickyColumn',
     EmbedCodeGenerator: 'app/assets/javascripts/components/EmbedCodeGenerator',
 

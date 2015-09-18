@@ -1,7 +1,5 @@
 <h1>Website-specific Components</h1>
 
-<%= render 'shared/svg/icon_sprite' %>
-
 <!-- Molecules -->
 <%= styleguide_section sections['Mobile navigation'] do %>
   <%= render 'shared/mobile_nav' %>
@@ -41,6 +39,10 @@
 
 <%= styleguide_section sections['Newsletter Signup'] do %>
   <%= render 'shared/newsletter_signup' %>
+<% end %>
+
+<%= styleguide_section sections['Newsletter Signup Sticky'] do %>
+  <%= render 'shared/news_signup_sticky' %>
 <% end %>
 
 <%= styleguide_section sections['Contact Panel'] do %>

@@ -12,7 +12,9 @@ define([
       appearsAfterPercentage: 40,
       visibleClassName: 'news-signup-sticky--visible',
       closeClassSelector: '.news-signup-sticky__close',
-      closedClassName: 'news-signup-sticky__close--closed'
+      closedClassName: 'news-signup-sticky__close--closed',
+      windowScrollEventName: 'scroll.newsletter',
+      buttonDoneClass: '.button--done'
     },
     $newsletterStickForm,
     newsletterCloseBoxCookieURL;
@@ -48,7 +50,7 @@ define([
    */
   NewsletterSticky.prototype._setVars = function() {
     this.closeButton = this.$el.find(this.config.closeClassSelector);
-    this.window = $(window);
+    this.$window = $(window);
 
     $newsletterStickForm = this.$el.find('form');
     newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
@@ -63,12 +65,12 @@ define([
 
     if (isActive) {
       this.closeButton.on('click', $.proxy(this._handleCloseClick, this));
-      this.$el.on('click', '.button--done', $.proxy(this._handleCloseClick, this));
+      this.$el.on('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
     }
     else {
       this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
-      this.$el.off('click', '.button--done', $.proxy(this._handleCloseClick, this));
+      this.$el.off('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
     }
   };
@@ -78,7 +80,7 @@ define([
    * @param {Boolean} isActive true=on false=off
    */
   NewsletterSticky.prototype._setScrollListener = function(isActive) {
-    $(window)[isActive ? 'on' : 'off']('scroll.newsletter', this._scrollDebounceMethod(isActive));
+    this.$window[isActive ? 'on' : 'off'](this.config.windowScrollEventName, this._scrollDebounceMethod(isActive));
   };
 
   /**
@@ -111,9 +113,6 @@ define([
       this.$el.addClass(this.config.visibleClassName);
       this._setScrollListener(false);
     }
-    else {
-      return;
-    }
 
   };
 
@@ -133,7 +132,7 @@ define([
    * @return {Number}
    */
   NewsletterSticky.prototype._windowScrollTop = function() {
-    return $(window).scrollTop();
+    return this.$window.scrollTop();
   };
 
   /**
@@ -153,9 +152,9 @@ define([
    */
   NewsletterSticky.prototype._pageScrolledTo = function() {
     var scrollData = {},
-      scrollTop = $(window).scrollTop(),
+      scrollTop = this.$window.scrollTop(),
       pageHeight = $(document).height(),
-      viewPortHeight = $(window).height(),
+      viewPortHeight = this.$window.height(),
       scrollPercent = (scrollTop / (pageHeight - viewPortHeight)) * 100;
 
     scrollData.pixels = scrollTop;
@@ -181,7 +180,7 @@ define([
 
     }
 
-    $.post(newsletterCloseBoxCookieURL,'hello');
+    $.post(newsletterCloseBoxCookieURL, 'set-close-box-cookie');
 
     this._close();
 

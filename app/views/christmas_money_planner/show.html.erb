@@ -4,7 +4,14 @@
                  alternate:   t('christmas_money_planner.meta.alternate')) %>
 
 <% content_for(:context_bar) do %>
-  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<% end %>
+
+<% content_for(:alternate_link) do %>
+  <%= link_to(alternate_url, lang: alternate_locale, class: "t-#{alternate_locale}-link") do %>
+    <span class="icon icon--globe"></span>
+    <%= t("locales.#{alternate_locale}") %>
+  <% end %>
 <% end %>
 
 <div class="l-constrained">

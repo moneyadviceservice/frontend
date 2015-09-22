@@ -112,6 +112,14 @@ define([
     if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
       this.$el.addClass(this.config.visibleClassName);
       this._setScrollListener(false);
+
+      MAS.publish('analytics:trigger', {
+        event: 'gaEvent',
+        gaEventCat: 'Newsletter SignUp Sticky',
+        gaEventAct: 'Visible',
+        gaEventLab: 'Component'
+      });
+
     }
 
   };

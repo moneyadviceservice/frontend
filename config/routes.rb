@@ -40,6 +40,11 @@ Rails.application.routes.draw do
       end
     end
 
+    Feature.with(:cost_calculator_builder) do
+      mount CostCalculatorBuilder::Engine => '/:engine_id',
+            constraints: EngineMountPoint.for(:cost_calculator_builder)
+    end
+
     Feature.with(:budget_planner) do
       bpmp = ToolMountPoint.for(:budget_planner)
       budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/

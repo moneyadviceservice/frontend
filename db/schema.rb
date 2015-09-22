@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827092935) do
+ActiveRecord::Schema.define(version: 20150904094809) do
 
   create_table "action_items", force: true do |t|
     t.string   "article_id"
@@ -236,6 +236,79 @@ ActiveRecord::Schema.define(version: 20150827092935) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "cost_calculator_builder_calculators", force: true do |t|
+    t.string   "name"
+    t.string   "display_name"
+    t.date     "target_date"
+    t.integer  "duration_in_days"
+    t.string   "duration_type"
+    t.string   "duration_label"
+    t.string   "summary_name"
+    t.text     "summary_description"
+    t.text     "summary_callout_note"
+    t.text     "final_balance_text"
+    t.text     "good_balance_summary"
+    t.text     "bad_balance_summary"
+    t.integer  "balance_threshold",                 default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.boolean  "invert_threshold_value",            default: false
+    t.text     "good_balance_summary_after_amount"
+    t.text     "bad_balance_summary_after_amount"
+    t.string   "countdown_precision"
+  end
+
+  add_index "cost_calculator_builder_calculators", ["slug"], name: "index_cost_calculator_builder_calculators_on_slug", unique: true, using: :btree
+
+  create_table "cost_calculator_builder_call_to_actions", force: true do |t|
+    t.string   "name"
+    t.text     "text"
+    t.string   "url"
+    t.integer  "calculator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "value",         default: "positive", null: false
+    t.boolean  "nofollow",      default: true
+  end
+
+  add_index "cost_calculator_builder_call_to_actions", ["calculator_id"], name: "index_cost_calculator_builder_call_to_actions_on_calculator_id", using: :btree
+
+  create_table "cost_calculator_builder_expense_pages", force: true do |t|
+    t.string   "name"
+    t.string   "page_type"
+    t.text     "description"
+    t.text     "callout_note"
+    t.text     "total_note"
+    t.boolean  "user_submitted_date"
+    t.integer  "calculator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "index"
+    t.boolean  "allow_user_duration"
+  end
+
+  add_index "cost_calculator_builder_expense_pages", ["calculator_id"], name: "index_cost_calculator_builder_expense_pages_on_calculator_id", using: :btree
+
+  create_table "cost_calculator_builder_expenses", force: true do |t|
+    t.string   "name"
+    t.string   "expense_type"
+    t.text     "help_text"
+    t.text     "instructive_text"
+    t.integer  "min_value",                                 default: 0
+    t.integer  "max_value"
+    t.integer  "default_value",                             default: 0
+    t.string   "multiplier_text"
+    t.decimal  "multiplier_value", precision: 10, scale: 0
+    t.integer  "expense_page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "custom_duration",                           default: 0, null: false
+    t.boolean  "enable_more"
+  end
+
+  add_index "cost_calculator_builder_expenses", ["expense_page_id"], name: "index_cost_calculator_builder_expenses_on_expense_page_id", using: :btree
 
   create_table "csr_users", force: true do |t|
     t.string   "email",                  default: "", null: false

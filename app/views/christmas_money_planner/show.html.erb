@@ -1,0 +1,16 @@
+<% set_meta_tags(title:       t('christmas_money_planner.meta.title'),
+                 description: t('christmas_money_planner.meta.description'),
+                 canonical:   t('christmas_money_planner.meta.canonical'),
+                 alternate:   t('christmas_money_planner.meta.alternate')) %>
+
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+<% end %>
+
+<div class="l-constrained">
+  <div class="l-container-tool">
+    <h1><%= t('christmas_money_planner.page_heading') %></h1>
+    <p><%= t('christmas_money_planner.section_one.content') %></p>
+    <p>Tool</p>
+  </div>
+</div>

@@ -198,6 +198,9 @@ Rails.application.routes.draw do
                     }x
               }
 
+    get '/tools/christmas-money-planner', to: 'christmas_money_planner#show', constraints: lambda { |request| request.params['locale'] == 'en' }
+    get '/tools/cynllunydd-ariannol-y-nadolig', to: 'christmas_money_planner#show', constraints: lambda { |request| request.params['locale'] == 'cy' }
+
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
     get '/campaigns/debt-management/companies', to: 'debt_management#companies'

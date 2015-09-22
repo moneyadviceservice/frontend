@@ -50,6 +50,3 @@ echo "Creating RPM"
 echo "----"
 cd ..
 time /usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version
-
-#prune packaged gems
-rm -rf vendor/cache

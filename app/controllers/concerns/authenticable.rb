@@ -1,6 +1,7 @@
 module Authenticable
   class << self
     def required?
+      return if development? || qa? || staging?
       Rails.env.production?
     end
 
@@ -10,6 +11,18 @@ module Authenticable
 
     def password
       ENV['AUTH_PASSWORD']
+    end
+
+    def development?
+      Rails.env.development?
+    end
+
+    def qa?
+      ENV['MAS_ENVIRONMENT'] == 'qa'
+    end
+
+    def staging?
+      ENV['MAS_ENVIRONMENT'] == 'staging'
     end
 
     def authenticate(username, password)

@@ -1,9 +1,4 @@
 class NewsletterSubscriptionsController < ApplicationController
-  #def dismiss
-  #  cookies['_cookie_dismiss_newsletter'] = { value: 'hide', expires: 1.month.from_now }
-  #  render :nothing => true
-  #end
-
   def create
     if !categories.include? subscription_params[:category]
       return
@@ -37,6 +32,6 @@ class NewsletterSubscriptionsController < ApplicationController
   end
 
   def set_cookie
-    cookies.permanent['display_sticky_newsletter_form_cookie'] = 'hide'
+    cookies.permanent[COOKIE_SUBMIT_NEWSLETTER_NAME] = COOKIE_HIDE_NEWSLETTER_VALUE
   end
 end

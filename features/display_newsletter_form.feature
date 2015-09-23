@@ -19,8 +19,3 @@ Feature: Display sticky newsletter
     Given I am on the home page
     When I scroll to the bottom of the page
     Then I should see a sticky newsletter sign up form
-
-  #Scenario: customer dismisses newsletter sign-up form
-  #  Given an unregistered user visits the MAS site
-  #  When the user dismisses the newsletter sign up form
-  #  Then the user should no longer see the newsletter form

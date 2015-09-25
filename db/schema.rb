@@ -932,35 +932,33 @@ ActiveRecord::Schema.define(version: 20150904094809) do
     t.string   "post_code"
     t.string   "age_range"
     t.string   "gender"
-    t.boolean  "newsletter_subscription",                   default: false
+    t.boolean  "newsletter_subscription",            default: false
     t.string   "customer_id"
     t.text     "health_check_result"
-    t.boolean  "active",                                    default: true
+    t.boolean  "active",                             default: true
     t.date     "date_of_birth"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "csr_id"
-    t.string   "invitation_token",               limit: 60
+    t.string   "invitation_token",        limit: 60
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "failed_attempts",                           default: 0
+    t.integer  "failed_attempts",                    default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
-    t.string   "temporary_authentication_token"
     t.string   "goal_statement"
     t.string   "goal_deadline"
     t.string   "contact_number"
-    t.boolean  "opt_in_for_research",                       default: true
+    t.boolean  "opt_in_for_research",                default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["temporary_authentication_token"], name: "index_users_on_temporary_authentication_token", unique: true, using: :btree
 
 end

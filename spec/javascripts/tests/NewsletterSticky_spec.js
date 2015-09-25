@@ -164,10 +164,13 @@ describe('NewsletterSticky', function() {
   describe('_hasScrolledOverPercentage', function() {
     it('returns true if the window has scrolled beyond the threshold', function() {
       var windowScrollTopStub = sinon.stub(this.obj, '_windowScrollTop', function() {
-        return 300;
+        return 250;
       }),
-      scrollThresholdStub = sinon.stub(this.obj, '_scrollThreshold', function() {
-        return 100;
+      pageHeightStub = sinon.stub(this.obj, '_pageHeight', function() {
+        return 1000;
+      }),
+      viewPortHeightStub = sinon.stub(this.obj, '_viewPortHeight', function() {
+        return 500;
       });
 
       expect(this.obj._hasScrolledOverPercentage()).to.be.equal(true);
@@ -175,11 +178,14 @@ describe('NewsletterSticky', function() {
 
     it('returns false if the window has not scrolled beyond the threshold', function() {
       var windowScrollTopStub = sinon.stub(this.obj, '_windowScrollTop', function() {
-        return 100;
-      }),
-      scrollThresholdStub = sinon.stub(this.obj, '_scrollThreshold', function() {
-        return 300;
-      });
+          return 100;
+        }),
+        pageHeightStub = sinon.stub(this.obj, '_pageHeight', function() {
+          return 1000;
+        }),
+        viewPortHeightStub = sinon.stub(this.obj, '_viewPortHeight', function() {
+          return 500;
+        });
 
       expect(this.obj._hasScrolledOverPercentage()).to.be.equal(false);
     });

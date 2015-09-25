@@ -17,7 +17,8 @@ define([
       buttonDoneClass: '.button--done'
     },
     $newsletterStickForm,
-    newsletterCloseBoxCookieURL;
+    newsletterCloseBoxCookieURL,
+    $window;
 
   NewsletterSticky = function($el, config) {
     NewsletterSticky.baseConstructor.call(this, $el, config, defaultConfig);
@@ -50,7 +51,7 @@ define([
    */
   NewsletterSticky.prototype._setVars = function() {
     this.closeButton = this.$el.find(this.config.closeClassSelector);
-    this.$window = $(window);
+    $window = $(window);
 
     $newsletterStickForm = this.$el.find('form');
     newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
@@ -80,7 +81,7 @@ define([
    * @param {Boolean} isActive true=on false=off
    */
   NewsletterSticky.prototype._setScrollListener = function(isActive) {
-    this.$window[isActive ? 'on' : 'off'](this.config.windowScrollEventName, this._scrollDebounceMethod(isActive));
+    $window[isActive ? 'on' : 'off'](this.config.windowScrollEventName, this._scrollDebounceMethod(isActive));
   };
 
   /**
@@ -140,7 +141,23 @@ define([
    * @return {Number}
    */
   NewsletterSticky.prototype._windowScrollTop = function() {
-    return this.$window.scrollTop();
+    return $window.scrollTop();
+  };
+
+  /**
+   * Returns the height of the document page
+   * @return {Number}
+   */
+  NewsletterSticky.prototype._pageHeight = function() {
+    return $(document).height();
+  };
+
+  /**
+   * Returns the height of the visible viewPort/ the browser height
+   * @return {Number}
+   */
+  NewsletterSticky.prototype._viewPortHeight = function() {
+    return $window.height();
   };
 
   /**
@@ -160,9 +177,9 @@ define([
    */
   NewsletterSticky.prototype._pageScrolledTo = function() {
     var scrollData = {},
-      scrollTop = this.$window.scrollTop(),
-      pageHeight = $(document).height(),
-      viewPortHeight = this.$window.height(),
+      scrollTop = this._windowScrollTop(),
+      pageHeight = this._pageHeight(),
+      viewPortHeight = this._viewPortHeight(),
       scrollPercent = (scrollTop / (pageHeight - viewPortHeight)) * 100;
 
     scrollData.pixels = scrollTop;

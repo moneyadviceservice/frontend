@@ -9,9 +9,7 @@ module Core
     def call
       return false unless subscription.valid?
 
-      result = Core::Registry::Repository[:newsletter_subscription]
-.delay(queue: 'newsletter_crm')
-.register(subscription.email)
+      result = Core::Registry::Repository[:newsletter_subscription].delay(queue: 'newsletter_crm').register(subscription.email)
 
       if result
         result

@@ -15,7 +15,7 @@
   <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top?, contact_panels_homepage: contact_panels_homepage? %>
   <%= render 'shared/footer' %>
 
-  <% if display_sticky_newsletter_form_cookie? %>
+  <% if Feature.active?(:newsletter_sticky_footer) && display_sticky_newsletter_form_cookie? %>
     <%= render 'shared/news_signup_sticky', fixed_position: true %>
   <% end %>
 <% end %>

@@ -5,8 +5,12 @@ class VideosController < ApplicationController
   include Navigation
 
   def show
-    @video = interactor.call do
-      not_found
+    @video = interactor.call do |error|
+      if error.redirect?
+        return redirect_to error.location, status: error.status
+      else
+        not_found
+      end
     end
 
     set_related_content

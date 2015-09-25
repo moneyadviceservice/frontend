@@ -133,7 +133,7 @@
         <fieldset class="form__group">
           <div class="form__group-item">
             <%= f.label :opt_in_for_research, class: "form__label-heading" do %>
-              <%= f.check_box :opt_in_for_research, class: "form__group-input" %>
+              <%= f.check_box :opt_in_for_research, {checked: true}, class: "form__group-input" %>
               <%= t("activerecord.attributes.user.opt_in_for_research") %>
             <% end %>
           </div>

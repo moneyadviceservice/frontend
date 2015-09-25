@@ -1,0 +1,275 @@
+// Newsletter signup sticky footer component
+//
+// Styleguide Newsletter Signup Sticky
+
+.news-signup-sticky {
+  @extend %stripe-bg;
+  @include clearfix;
+  background-color: $color-yellow-light;
+  margin: $baseline-unit*2 0 0 0;
+  text-align: center;
+  position: relative;
+
+  .button--newsletter {
+    vertical-align: top;
+    min-width: 188px;
+    margin-top: 1px;
+  }
+
+  .no-svg-icon--desktop-close-box {
+    html & {
+      display: none;
+      @include respond-to($mq-m) {
+        display: inline-block;
+      }
+    }
+
+    html.no-svg & {
+      @extend .icon--close;
+      position: relative;
+      left: -3px;
+      top: -2px;
+
+    }
+
+    & .svg-icon {
+      html.svg & {
+        position: relative;
+        top: -4px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+  }
+
+  .no-svg-icon--mobile-close-box {
+    html.no-svg & {
+      @extend .icon--close;
+      margin-top: 3px;
+      margin-left: 1px;
+
+      @include respond-to($mq-m) {
+        display: none;
+      }
+    }
+
+    & .svg-icon {
+      html.svg & {
+        width: 16px;
+        height: 16px;
+
+        @include respond-to($mq-m) {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+.news-signup-sticky--positioned {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  max-height: 0;
+  transition: 2s cubic-bezier(0, 1.05, 0, 1);
+}
+
+.news-signup-sticky--visible {
+  visibility: visible;
+  max-height: 1000px;
+  transition: max-height 2s;
+}
+
+.news-signup-sticky__intro {
+  @include body(16, 20);
+  color: $color-true-black;
+  font-weight: 500;
+  margin: 0 auto $baseline-unit*2.6 auto;
+  padding-top: $baseline-unit*3;
+  max-width: 210px;
+  position: relative;
+
+  @include respond-to($mq-s) {
+    max-width: 240px;
+  }
+
+  @include respond-to($mq-m) {
+    @include body(17, 21);
+    max-width: 400px;
+  }
+
+  &:nth-of-type(2) {
+    margin-bottom: $baseline-unit*3;
+    padding-top: 0;
+
+    @include respond-to($mq-m) {
+      @include body(16, 18);
+    }
+
+    .is-errored & {
+      margin-top: 0;
+      padding-top: $baseline-unit*3;
+    }
+  }
+}
+
+.news-signup-sticky__intro--emphasize {
+  font-weight: 700;
+}
+
+.news-signup-sticky__intro--success {
+  margin: $baseline-unit*5 auto;
+}
+
+.news-signup-sticky__error {
+  display: none;
+
+  &.news-signup-sticky__error--display {
+    display: block;
+
+    & + .news-signup-sticky__inner {
+      .news-signup-sticky__email-input {
+        border-color: $color-validation-border;
+      }
+    }
+  }
+
+  @include respond-to($mq-m) {
+    margin: $baseline-unit*3 auto $baseline-unit*2 auto;
+    padding: 0 0 $baseline-unit 0;
+    max-width: 400px;
+  }
+}
+
+.news-signup-sticky__text {
+  display: none;
+
+  &.news-signup-sticky__text--display {
+    display: block;
+  }
+}
+
+.news-signup-sticky__submitform {
+  .button--done {
+    margin: $baseline-unit*3 0 $baseline-unit*5 0;
+    min-width: 200px;
+  }
+}
+
+.news-signup-sticky__inner {
+  @include respond-to($mq-m) {
+    &:after {
+      background: image-url('newsletter_signup_image.png') no-repeat top right;
+      background-size: 140px 132px;
+      content: " ";
+      height: 132px;
+      left: 0;
+      position: absolute;
+      top: -5px;
+      width: 20%;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    &:after {
+      width: 25%;
+    }
+  }
+
+  @include respond-to($mq-xl) {
+    &:after {
+      width: 32%;
+    }
+  }
+}
+
+.news-signup-sticky__email-label {
+  @include visually-hidden;
+}
+
+input[type="email"].news-signup-sticky__email-input {
+  @include body(14, 14);
+  border-color: $color-white;
+  border-radius: 4px;
+  max-width: 188px;
+  margin: 0 auto $baseline-unit*1.5 auto;
+  display: block;
+  height: 38px;
+
+  &:focus {
+    outline: none;
+    border-color: $color-newsletter-active;
+  }
+
+  @include respond-to($mq-m) {
+    display: inline-block;
+    margin: 0 $baseline-unit*2;
+    position: relative;
+    top: 1px;
+  }
+
+  &::placeholder {
+    font-style: italic;
+    color: $color-grey-medium-dark;
+  }
+}
+
+.news-signup-sticky__disclaimer {
+  @include body(12, 14);
+  @include clearfix;
+  background: $color-white;
+  font-weight: 500;
+  color: $color-true-black;
+  font-style: italic;
+  text-align: center;
+
+  margin: $baseline-unit*3 0 0 0;
+  border-bottom: $baseline-unit solid transparent;
+  padding: $baseline-unit 0 0 0;
+
+  @include respond-to($mq-m) {
+    padding: $baseline-unit*2 0 0 0;
+    border-bottom-width: $baseline-unit*2;
+  }
+}
+
+.news-signup-sticky__close {
+  transition: opacity .5s;
+  position: absolute;
+  @include body(24, 20);
+  background: $color-white;
+  border-radius: 10%;
+  display: block;
+  padding: $baseline-unit*1.6 $baseline-unit*1.4 $baseline-unit*1.4 $baseline-unit*1.4;
+  right: $baseline-unit;
+  top: $baseline-unit;
+  width: 42px;
+  height: 42px;
+
+  @include respond-to($mq-m) {
+    border-radius: 100%;
+    padding: $baseline-unit*1.3 $baseline-unit*1.4 $baseline-unit*1.3 $baseline-unit*1.4;
+    right: $baseline-unit*2;
+    top: $baseline-unit*2;
+    width: 28px;
+    height: 28px;
+    zoom: 1;
+    &:after {
+      content: ' '
+    }
+  }
+
+  &:hover, &:active {
+    color: darken($color-grey-nine, 30%);
+  }
+}
+
+.news-signup-sticky__close--closed {
+  opacity: 0;
+}

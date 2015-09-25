@@ -20,6 +20,8 @@ Then(/^I should not see it again for another month$/) do
 end
 
 When(/^user subscribes to receive newsletters$/) do
+  Core::NewsletterSubscriptionCreator.any_instance.stub(:call) { true }
+
   home_page.load(locale: 'en')
   home_page.sticky_newsletter.subscription_email.set 'test@example.com'
   home_page.sticky_newsletter.send_me_money_advice.click

@@ -1,8 +1,14 @@
 // Styling for SVG icons, to be used instead of PNG sprite icons
 
+.svg-icon {
+  html.no-svg & {
+    display: none;
+  }
+}
+
 %small-svg-icon {
-  width: 16px; 
-  height: 16px;     
+  width: 16px;
+  height: 16px;
 }
 
 // Plus
@@ -17,7 +23,6 @@
   fill: $color-blue-cerulean;
 }
 
-
 // Minus
 
 .svg-icon--minus--yellow {
@@ -28,4 +33,19 @@
 .svg-icon--minus--blue {
   @extend %small-svg-icon;
   fill: $color-blue-cerulean;
+}
+
+html.no-svg {
+
+  .no-svg-icon {
+    @extend .icon;
+  }
+
+  .no-svg-icon--default {
+    @extend %small-svg-icon;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid black;
+  }
+
 }

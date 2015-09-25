@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
+  COOKIE_DISMISS_NEWSLETTER_NAME  = '_cookie_dismiss_newsletter'
+  COOKIE_SUBMIT_NEWSLETTER_NAME   = '_cookie_submit_newsletter'
+  COOKIE_HIDE_NEWSLETTER_VALUE    = 'hide'
+
   def syndicated_tool_request?
     !!request.headers['X-Syndicated-Tool']
   end
@@ -38,6 +42,16 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :cookies_not_accepted?
+
+  def display_sticky_newsletter_form_cookie?
+    cookie_jar = []
+    cookie_jar << cookies.permanent[COOKIE_DISMISS_NEWSLETTER_NAME]
+    cookie_jar << cookies[COOKIE_SUBMIT_NEWSLETTER_NAME]
+
+    !cookie_jar.include?(COOKIE_HIDE_NEWSLETTER_VALUE)
+  end
+
+  helper_method :display_sticky_newsletter_form_cookie?
 
   def display_search_box_in_header?
     true

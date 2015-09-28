@@ -11,93 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904094809) do
-
-  create_table "action_items", force: true do |t|
-    t.string   "article_id"
-    t.integer  "user_id"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.integer  "external_action_id"
-    t.datetime "due_date",                           null: false
-    t.string   "article_type"
-    t.string   "type"
-    t.boolean  "completed",          default: false
-  end
-
-  add_index "action_items", ["article_id", "article_type"], name: "action_by_article", using: :btree
-  add_index "action_items", ["external_action_id"], name: "action_items_external_action_id_fk", using: :btree
-  add_index "action_items", ["user_id"], name: "index_action_items_on_user_id", using: :btree
-
-  create_table "action_plans_expense_items", force: true do |t|
-    t.string  "kind",       limit: 256,             null: false
-    t.integer "value",                  default: 0, null: false
-    t.integer "frequency",                          null: false
-    t.integer "expense_id",                         null: false
-  end
-
-  create_table "action_plans_expenses", force: true do |t|
-    t.string  "category", limit: 256,             null: false
-    t.integer "total",                default: 0, null: false
-    t.integer "plan_id",                          null: false
-  end
-
-  create_table "action_plans_redundancy_plans", force: true do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "current_task_id"
-  end
-
-  create_table "action_plans_redundancy_stories", force: true do |t|
-    t.integer  "plan_id",                 null: false
-    t.date     "redundant_at"
-    t.date     "started_at"
-    t.date     "date_of_birth"
-    t.integer  "salary"
-    t.string   "salary_period"
-    t.boolean  "know_redundancy_package"
-    t.string   "company_status"
-    t.string   "redundant_employees"
-    t.string   "state"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "package_amount"
-    t.integer  "package_salary_units"
-    t.string   "package_salary_period"
-    t.integer  "package_duration_units"
-    t.string   "package_duration_period"
-    t.boolean  "northern_ireland"
-  end
-
-  create_table "action_plans_redundancy_tasks", force: true do |t|
-    t.string   "code",       limit: 256,                 null: false
-    t.boolean  "completed",              default: false, null: false
-    t.integer  "plan_id",                                null: false
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-  end
-
-  create_table "advice_plans_advice_plans", force: true do |t|
-    t.string   "code",                         null: false
-    t.boolean  "current",      default: false, null: false
-    t.datetime "started_at"
-    t.datetime "completed_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "advice_plans_advice_plans_tasks", id: false, force: true do |t|
-    t.integer "advice_plan_id", null: false
-    t.integer "task_id",        null: false
-  end
+ActiveRecord::Schema.define(version: 20150925110305) do
 
   create_table "advice_plans_plans", force: true do |t|
     t.string   "code",                             null: false
     t.boolean  "current",      default: false,     null: false
     t.datetime "started_at"
     t.datetime "completed_at"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "owner_id"
     t.string   "owner_type"
     t.boolean  "crisis",       default: false
@@ -932,25 +854,26 @@ ActiveRecord::Schema.define(version: 20150904094809) do
     t.string   "post_code"
     t.string   "age_range"
     t.string   "gender"
-    t.boolean  "newsletter_subscription",            default: false
+    t.boolean  "newsletter_subscription",                   default: false
     t.string   "customer_id"
     t.text     "health_check_result"
-    t.boolean  "active",                             default: true
+    t.boolean  "active",                                    default: true
     t.date     "date_of_birth"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "csr_id"
-    t.string   "invitation_token",        limit: 60
+    t.string   "invitation_token",               limit: 60
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "failed_attempts",                    default: 0
+    t.integer  "failed_attempts",                           default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
+    t.string   "temporary_authentication_token"
     t.string   "goal_statement"
     t.string   "goal_deadline"
     t.string   "contact_number"
@@ -960,5 +883,6 @@ ActiveRecord::Schema.define(version: 20150904094809) do
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["temporary_authentication_token"], name: "index_users_on_temporary_authentication_token", unique: true, using: :btree
 
 end

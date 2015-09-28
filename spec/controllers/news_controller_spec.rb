@@ -30,13 +30,40 @@ RSpec.describe NewsController, type: :controller do
 
       expect(assigns(:news_article)).to eq(news_article)
     end
+  end
 
+  describe 'GET #show' do
     context 'when a news article does not exist' do
+      let(:article) do
+        Core::NewsArticle.new('do-not-exist')
+      end
+
+      before do
+        allow_any_instance_of(Core::NewsArticleReader).to receive(:call).and_yield(article)
+      end
 
       it 'raises an ActionController RoutingError' do
-        allow(Core::NewsArticleReader).to receive(:new) { ->(&block) { block.call } }
-
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
+      end
+    end
+
+    context 'when news article is redirected' do
+      let(:redirect) do
+        OpenStruct.new(status: 301, location: 'https://example.com', redirect?: true)
+      end
+
+      before do
+        allow_any_instance_of(Core::NewsArticleReader).to receive(:call).and_yield(redirect)
+      end
+
+      it 'redirects to specified location' do
+        get :show, id: 'redirect', locale: I18n.locale
+        expect(response).to redirect_to('https://example.com')
+      end
+
+      it 'redirects with specified status code' do
+        get :show, id: 'redirect', locale: I18n.locale
+        expect(response.status).to eql(301)
       end
     end
   end

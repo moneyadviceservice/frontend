@@ -7,9 +7,11 @@ module Core
     let(:id) { 'the-news-article' }
 
     describe '.call' do
+      let(:repository_double) { double(find: data) }
+
       before do
         allow(Registry::Repository).to receive(:[]).with(:news_article) do
-          double(find: data)
+          repository_double
         end
       end
 
@@ -50,6 +52,40 @@ module Core
           end
 
           it_has_behavior 'optional failure block'
+        end
+      end
+
+      context 'when news article is a redirect' do
+        let(:exception) do
+          Core::Repository::CMS::Resource302Error.new('https://example.com')
+        end
+
+        let(:repository_double) do
+          repo = double
+          allow(repo).to receive(:find).and_raise(exception)
+          repo
+        end
+
+        it 'raies an error' do
+          expect { subject.call }.to raise_error
+        end
+
+        it 'errors with status' do
+          subject.call do |error|
+            expect(error.status).to eql(302)
+          end
+        end
+
+        it 'errors with location' do
+          subject.call do |error|
+            expect(error.location).to eql('https://example.com')
+          end
+        end
+
+        it 'errors as a redirect?' do
+          subject.call do |error|
+            expect(error.redirect?).to be_truthy
+          end
         end
       end
     end

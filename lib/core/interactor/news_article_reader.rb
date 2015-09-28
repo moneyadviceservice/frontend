@@ -14,8 +14,11 @@ module Core
       if news_article.valid?
         news_article
       elsif block_given?
-        yield
+        yield news_article
       end
+    rescue Core::Repository::CMS::Resource301Error,
+           Core::Repository::CMS::Resource302Error => e
+      yield OpenStruct.new(status: e.status, location: e.location, redirect?: true)
     end
   end
 end

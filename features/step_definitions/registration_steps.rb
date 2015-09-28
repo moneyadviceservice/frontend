@@ -113,3 +113,8 @@ end
 Then(/^I should not see the registration benefits$/) do
   expect(sign_up_page).to_not have_benefits
 end
+
+Then(/^the option to participate in marketing research should be checked$/) do
+  step 'I should have the option to opt-in or opt-out of participating in research'
+  expect(sign_up_page.opt_in_for_research.checked?).to be_truthy
+end

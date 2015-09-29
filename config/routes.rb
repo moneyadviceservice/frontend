@@ -209,7 +209,8 @@ Rails.application.routes.draw do
 
     resources :static_pages,
               path:        'static',
-              only:        'show'
+              only:        'show',
+              constraints: { id: %r{contact-us|cysylltu-a-ni} }
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

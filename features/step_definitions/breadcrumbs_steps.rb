@@ -11,7 +11,7 @@ Given(/^I read an action plan belonging to multiple categories$/) do
 end
 
 Given(/^I read a static page$/) do
-  static_page.load(locale: 'en', id: 'privacy')
+  static_page.load(locale: 'en', id: 'contact-us')
 end
 
 Given(/^I read a news article$/) do

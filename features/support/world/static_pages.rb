@@ -3,9 +3,9 @@ module World
     def static_page_id_for_locale(locale)
       case locale
       when 'en'
-        'privacy'
+        'contact-us'
       when 'cy'
-        'polisipreifatrwydd'
+        'cysylltu-a-ni'
       end
     end
 

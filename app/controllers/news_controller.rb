@@ -12,8 +12,12 @@ class NewsController < ApplicationController
   end
 
   def show
-    @news_article = Core::NewsArticleReader.new(params[:id]).call do
-      not_found
+    @news_article = Core::NewsArticleReader.new(params[:id]).call do |error|
+      if error.redirect?
+        return redirect_to error.location, status: error.status
+      else
+        not_found
+      end
     end
 
     @breadcrumbs = BreadcrumbTrail.build(@news_article, category_tree)

@@ -38,7 +38,14 @@ RSpec.describe Core::Repository::Categories::CMS do
     end
 
     context 'when the category is redirected', features: [:redirects] do
-      it 'returns a redirect'
+      it 'returns a redirect' do
+        VCR.use_cassette('/en/core/repository/categories/cms/find/redirected') do
+          expect { subject.find('redirected') }.to raise_error do |error|
+            expect(error.status).to eql(302)
+            expect(error.location).to eql('http://localhost:5000/en')
+          end
+        end
+      end
     end
   end
 end

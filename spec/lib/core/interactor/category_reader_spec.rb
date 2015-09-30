@@ -5,10 +5,11 @@ module Core
     subject { described_class.new(id) }
 
     let(:id) { 'the-category' }
+    let(:repository_double) { double(find: data) }
 
     before do
       allow(Registry::Repository).to receive(:[]).with(:category) do
-        double(find: data)
+        repository_double
       end
     end
 
@@ -85,6 +86,22 @@ module Core
 
         specify { expect(category).to be_a(Category) }
         specify { expect(category.contents).to be_empty }
+      end
+    end
+
+    context 'when category is redirected' do
+      let(:repository_double) do
+        repo = double
+        allow(repo).to receive(:find).and_raise(Core::Repository::CMS::Resource301Error.new('https://example.com'))
+        repo
+      end
+
+      it 'returns a redirect' do
+        subject.call do |redirect|
+          expect(redirect.redirect?).to be_truthy
+          expect(redirect.status).to eql(301)
+          expect(redirect.location).to eql('https://example.com')
+        end
       end
     end
   end

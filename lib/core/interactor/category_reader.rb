@@ -18,6 +18,9 @@ module Core
       elsif block_given?
         yield
       end
+    rescue Core::Repository::CMS::Resource301Error,
+           Core::Repository::CMS::Resource302Error => e
+      yield OpenStruct.new(status: e.status, location: e.location, redirect?: true)
     end
 
     def build_contents(contents)

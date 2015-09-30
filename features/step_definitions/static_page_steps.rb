@@ -18,7 +18,7 @@ Then(/^I should see the static page in (.*)$/) do |language|
 
   expect(static_page.title).to eq("#{current_static_page.title} - #{I18n.t('layouts.base.title')}")
   expect(static_page.description[:content]).to include(current_static_page.description)
-  expect(static_page.heading).to have_content(current_static_page.title)
+  expect(static_page.heading).to have_content(%r{#{current_static_page.title}}i)
 end
 
 When(/^I view a static page with an intro$/) do

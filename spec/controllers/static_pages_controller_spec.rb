@@ -2,7 +2,7 @@ RSpec.describe StaticPagesController, type: :controller do
   describe 'GET show' do
     let(:categories) { [] }
     let(:parents) { [] }
-    let(:static_page_id) { 'test' }
+    let(:static_page_id) { 'contact-us' }
     let(:static_page) { Core::StaticPage.new(static_page_id, categories: categories) }
     let(:static_page_reader) { double(Core::StaticPageReader, call: static_page) }
     let(:category_tree) { double }
@@ -16,7 +16,7 @@ RSpec.describe StaticPagesController, type: :controller do
       end
 
       it 'is successful' do
-        get :show, id: 'foo', locale: I18n.locale
+        get :show, id: static_page_id, locale: I18n.locale
 
         expect(response).to be_ok
       end
@@ -43,14 +43,6 @@ RSpec.describe StaticPagesController, type: :controller do
           expect(subject).to render_template("static_pages/#{static_page_id.underscore}")
         end
       end
-
-      context 'if there is no custom template' do
-        subject { get :show, locale: I18n.locale, id: static_page.id }
-
-        it 'renders the default template' do
-          expect(subject).to render_template('static_pages/show')
-        end
-      end
     end
 
     context 'when an static_page does not exist' do
@@ -58,26 +50,6 @@ RSpec.describe StaticPagesController, type: :controller do
         allow_any_instance_of(Core::StaticPageReader).to receive(:call).and_yield
 
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
-      end
-    end
-
-    context 'when an auth related page' do
-      context 'when privacy policy' do
-        it 'does not store location' do
-          VCR.use_cassette :privacy do
-            get :show, id: 'privacy', locale: I18n.locale
-          end
-          expect(session['user_return_to']).to be_nil
-        end
-      end
-
-      context 'when terms and conditions' do
-        it 'does not store location' do
-          VCR.use_cassette :terms do
-            get :show, id: 'terms-and-conditions', locale: I18n.locale
-          end
-          expect(session['user_return_to']).to be_nil
-        end
       end
     end
   end

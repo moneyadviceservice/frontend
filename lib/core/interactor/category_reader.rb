@@ -16,7 +16,7 @@ module Core
           cat.contents = build_contents(cat.contents)
         end
       elsif block_given?
-        yield
+        yield category
       end
     rescue Core::Repository::CMS::Resource301Error,
            Core::Repository::CMS::Resource302Error => e

@@ -9,7 +9,19 @@ class CorporateController < ArticlesController
   end
 
   def show
-    super
+    @article = interactor.call do |error|
+      if error.redirect?
+        return redirect_to error.location, status: error.status
+      else
+        not_found
+      end
+    end
+
+    set_breadcrumbs
+    set_related_content
+    set_categories
+    set_show_newsletter_signup
+
     retrieve_syndication_tools
     retrieve_corporate_category
     set_corporate_category

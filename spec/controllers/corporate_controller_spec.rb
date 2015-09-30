@@ -63,6 +63,15 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
         expect { get :show, id: 'foo', locale: I18n.locale }.to raise_error(ActionController::RoutingError)
       end
     end
+
+    context 'when corporate page is redirected', features: [:redirects] do
+      it 'is redirected to specified location' do
+        VCR.use_cassette("redirected") do
+          get :show, id: 'redirected', locale: I18n.locale
+          expect(response).to redirect_to('http://localhost:5000/en')
+        end
+      end
+    end
   end
 
   describe 'POST create' do

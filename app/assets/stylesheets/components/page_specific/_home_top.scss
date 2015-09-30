@@ -46,7 +46,7 @@
 .home-top__image {
   @include respond-to($mq-xl) {
     @include absolutely-centre-horizontally(1350px);
-    background: image-url("ampaign/cut-the-costs-of-a-merry-christmas.jpg") 100% 52% no-repeat;
+    background: image-url("campaign/cut-the-costs-of-a-merry-christmas.jpg") 100% 52% no-repeat;
     background-size: 46%;
     height: 345px;
   }

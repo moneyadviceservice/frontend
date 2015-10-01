@@ -1,3 +1,7 @@
+<% set_meta_tags(title:       video.title,
+                 description: video.description,
+                 canonical:   video.canonical_url) %>
+
 <% content_for(:context_bar) do %>
   <% if @video.categories.present? %>
     <%= render 'shared/related_categories', categories: video.categories %>

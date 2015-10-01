@@ -178,6 +178,8 @@ Rails.application.routes.draw do
       get 'export-partners', on: :collection
     end
 
+    resources :corporate, only: [:show], as: 'corporate_articles'
+
     resources :campaigns,
               only: 'show',
               path: 'campaigns',

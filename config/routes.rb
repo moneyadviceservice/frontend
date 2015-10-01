@@ -269,8 +269,6 @@ Rails.application.routes.draw do
     end
   end
 
-  match '/tools/:id', to: not_implemented, via: 'get', as: 'tool'
-
   if Feature.active?(:redirects)
     match '*path', via: :all, to: 'catchall#not_implemented'
   else

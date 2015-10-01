@@ -27,6 +27,10 @@ module Core
       false
     end
 
+    def redirect?
+      false
+    end
+
     def attributes
       {
         type: type,

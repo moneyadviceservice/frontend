@@ -37,12 +37,29 @@ RSpec.describe CategoriesController, type: :controller do
       end
     end
 
-    context 'when the category does not exists' do
-      before { allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield }
+    context 'when the category does not exist' do
+      before { allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield(category) }
 
       it 'raises an ActionController RoutingError' do
         expect { get :show, id: category.id, locale: I18n.locale }
           .to raise_error(ActionController::RoutingError)
+      end
+    end
+
+    context 'when category is redirected' do
+      let(:redirect) do
+        OpenStruct.new(redirect?: true, location: 'https://example.com', status: 301)
+      end
+
+      before do
+        allow_any_instance_of(Core::CategoryReader).to receive(:call)
+          .and_yield(redirect)
+      end
+
+      it 'is redirected to specified location' do
+        get :show, id: 'redirected', locale: 'en'
+        expect(response.status).to eql(301)
+        expect(response).to redirect_to('https://example.com')
       end
     end
   end

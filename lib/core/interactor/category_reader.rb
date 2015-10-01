@@ -16,8 +16,11 @@ module Core
           cat.contents = build_contents(cat.contents)
         end
       elsif block_given?
-        yield
+        yield category
       end
+    rescue Core::Repository::CMS::Resource301Error,
+           Core::Repository::CMS::Resource302Error => e
+      yield OpenStruct.new(status: e.status, location: e.location, redirect?: true)
     end
 
     def build_contents(contents)

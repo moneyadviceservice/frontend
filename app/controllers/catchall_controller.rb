@@ -14,6 +14,14 @@ class CatchallController < ApplicationController
   private
 
   def interactor
-    Core::RedirectReader.new(params[:path])
+    Core::RedirectReader.new(path)
+  end
+
+  def path
+    if params[:format]
+      params[:path] + "." + params[:format]
+    else
+      params[:path]
+    end
   end
 end

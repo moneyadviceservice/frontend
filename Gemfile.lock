@@ -28,16 +28,22 @@ GIT
       pensions_calculator-calculations
       rails (~> 4.1)
 
-GIT
-  remote: git@github.com:moneyadviceservice/timelines.git
-  revision: 4c2c73bf8319d051105cc73934676f917c44b23c
+PATH
+  remote: ../baby_cost_calculator
   specs:
-    timelines (1.2.1)
+    baby_cost_calculator (0.2.4)
+      rails (~> 4.1.8)
+
+PATH
+  remote: ../timelines
+  specs:
+    timelines (1.2.2)
       bowndler
       icalendar
       jquery-rails (>= 3.1.2)
       mas-feedback
       mas-templating
+      rails (= 4.1.8)
 
 GEM
   remote: https://rubygems.org/
@@ -116,8 +122,6 @@ GEM
     autoprefixer-rails (5.2.0)
       execjs
       json
-    baby_cost_calculator (0.2.4)
-      rails (~> 4.1.8)
     bcrypt (3.1.10)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -384,7 +388,7 @@ GEM
     i18n (0.7.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.2.2)
+    icalendar (2.3.0)
     interception (0.5)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -695,7 +699,7 @@ DEPENDENCIES
   aes
   agreements (~> 2.0.1)
   autoprefixer-rails
-  baby_cost_calculator
+  baby_cost_calculator!
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
@@ -779,12 +783,9 @@ DEPENDENCIES
   syslog-logger
   tidy-html5!
   timecop
-  timelines (>= 1.2.0)!
+  timelines!
   uglifier (>= 1.3.0)
   unicorn-rails
   validate_url (= 1.0.0)
   vcr
   webmock
-
-BUNDLED WITH
-   1.10.5

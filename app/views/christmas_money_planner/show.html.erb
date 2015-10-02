@@ -1,0 +1,21 @@
+<% set_meta_tags(title:       t('christmas_money_planner.meta.title'),
+                 description: t('christmas_money_planner.meta.description'),
+                 canonical:   t('christmas_money_planner.meta.canonical'),
+                 alternate:   t('christmas_money_planner.meta.alternate')) %>
+
+<% content_for(:context_bar) do %>
+  <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
+<% end %>
+
+<% content_for(:alternate_link) do %>
+  <%= link_to(alternate_url, lang: alternate_locale, class: "t-#{alternate_locale}-link") do %>
+    <span class="icon icon--globe"></span>
+    <%= t("locales.#{alternate_locale}") %>
+  <% end %>
+<% end %>
+
+<div class="l-constrained">
+  <div class="l-container-tool">
+    <iframe width="100%" id="calculator_embed" class="calculator-preview__iframe" frameBorder="0" src="<%= t('christmas_money_planner.section_one.iframe_src') %>"></iframe><script src="https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/cost_calculator_builder/embed-860b33816096fde0913541ec3439a4d4.js"></script>
+  </div>
+</div>

@@ -4,9 +4,7 @@ class ChristmasMoneyPlannerController < EmbeddedToolsController
 
   protected
 
-  def breadcrumbs
-    BreadcrumbTrail.home
-  end
+
 
   def alternate_url
     alternate_locale = mount_point.alternate_locale(I18n.locale.to_s)

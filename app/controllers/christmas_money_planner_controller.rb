@@ -4,8 +4,6 @@ class ChristmasMoneyPlannerController < EmbeddedToolsController
 
   protected
 
-
-
   def alternate_url
     alternate_locale = mount_point.alternate_locale(I18n.locale.to_s)
     alternate_tool_id = mount_point.public_send("#{alternate_locale}_id")

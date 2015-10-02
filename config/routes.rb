@@ -163,8 +163,16 @@ Rails.application.routes.draw do
     resource :advice, only: :show
     resources :videos, only: :show
 
-    get '/corporate/contact-us', controller: 'static_pages', action: 'show', id: 'contact-us'
-    get '/corporate/cysylltu-a-ni', controller: 'static_pages', action: 'show', id: 'cysylltu-a-ni'
+    get '/corporate/contact-us', controller: 'static_pages',
+                                 action: 'show',
+                                 id: 'contact-us',
+                                 constraints: { locale: 'en' }
+
+    get '/corporate/cysylltu-a-ni', controller: 'static_pages',
+                                    action: 'show',
+                                    id: 'cysylltu-a-ni',
+                                    constraints: { locale: 'cy' }
+
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
     resources :corporate, only: [:index, :show, :create] do
       get 'export-partners', on: :collection

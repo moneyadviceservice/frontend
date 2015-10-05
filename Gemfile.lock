@@ -28,9 +28,14 @@ GIT
       pensions_calculator-calculations
       rails (~> 4.1)
 
-GIT
-  remote: git@github.com:moneyadviceservice/timelines.git
-  revision: 22109e7c291a193b381eb8574e020e5261b2bd1c
+PATH
+  remote: ../baby_cost_calculator
+  specs:
+    baby_cost_calculator (0.2.4)
+      rails (~> 4.1.8)
+
+PATH
+  remote: ../timelines
   specs:
     timelines (1.2.2)
       bowndler
@@ -39,23 +44,6 @@ GIT
       mas-feedback
       mas-templating
       rails (= 4.1.8)
-
-PATH
-  remote: ../decision_trees
-  specs:
-    decision_trees (2.0.4)
-      coffee-rails (~> 4.0.1)
-      dough-ruby (~> 5.0)
-      handlebars_assets (~> 0.13.0)
-      htmlentities (~> 4)
-      i18n-js
-      jquery-rails
-      meta-tags
-      nokogiri
-      rails (~> 4.1)
-      sass-rails (~> 4.0.3)
-      syslog-logger
-      uglifier (>= 1.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -134,8 +122,6 @@ GEM
     autoprefixer-rails (5.2.0)
       execjs
       json
-    baby_cost_calculator (0.2.4)
-      rails (~> 4.1.8)
     bcrypt (3.1.10)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -285,6 +271,19 @@ GEM
       uglifier (>= 1.0.3)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    decision_trees (2.0.3.109)
+      coffee-rails (~> 4.0.1)
+      dough-ruby (~> 5.0)
+      handlebars_assets (~> 0.13.0)
+      htmlentities (~> 4)
+      i18n-js
+      jquery-rails
+      meta-tags
+      nokogiri
+      rails (~> 4.1)
+      sass-rails (~> 4.0.3)
+      syslog-logger
+      uglifier (>= 1.0.3)
     delayed_job (4.0.6)
       activesupport (>= 3.0, < 5.0)
     delayed_job_active_record (4.0.3)
@@ -700,7 +699,7 @@ DEPENDENCIES
   aes
   agreements (~> 2.0.1)
   autoprefixer-rails
-  baby_cost_calculator
+  baby_cost_calculator!
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
@@ -724,7 +723,7 @@ DEPENDENCIES
   debt_and_mental_health (~> 1.0.1)
   debt_free_day_calculator (~> 2.1.0)
   debt_test
-  decision_trees!
+  decision_trees (~> 2.0.0)
   delayed_job_active_record
   devise
   devise-encryptable
@@ -784,7 +783,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5!
   timecop
-  timelines (>= 1.2.0)!
+  timelines!
   uglifier (>= 1.3.0)
   unicorn-rails
   validate_url (= 1.0.0)

@@ -394,6 +394,8 @@ cy:
     links:
       sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
     registration:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_up
       title: Ceisiwch fwy am eich arian mewn 30 eiliad
       intro_html: "Eisoes wedi cofrestru? Mae amser, ac arian, yn brin, felly <a href=\"%{url}\">cofrestrwch yn awr</a>."
       subtitle: Yr hyn y byddwch yn ei dderbyn
@@ -418,6 +420,8 @@ cy:
           - Y gwir gost o redeg car
           - Sut i fforddio prynu cartref
     sign_in_page:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_in
       title: Mewngofnodi
       label: Mewngofnodi
       links:
@@ -428,6 +432,8 @@ cy:
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
       forgot_password: "Wedi anghofio cyfrinair?"
     reset_password_page:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/cy/users/password/new
       title: Ydych chi wedi anghofio'ch cyfrinair?
       intro: Dim problem!
       instructions: Teipiwch eich cyfeiriad e-bost isod ac fe anfonwn e-bost atoch yn cynnwys yr holl wybodaeth fydd ei hangen arnoch i ailosod eich cyfrinair.
@@ -472,6 +478,7 @@ cy:
   technical_feedback:
     new:
       title: Adrodd ar anhawster technegol
+      canonical: https://www.moneyadviceservice.org.uk/cy/feedback/new
       instructions_html: |
         Defnyddiwch y ffurflen hon i ddweud wrthym a gafwyd anhawster technegol gyda'r dudalen hon ar y we wrth i chi ei darllen. Ar gyfer pob ymholiad arall gweler ein <a href="/cy/corporate/cysylltu-a-ni">tudalen gyswllt</a>.
       mandatory_warning: Mae pob maes yn angenrheidiol
@@ -552,3 +559,8 @@ cy:
         english: English
         welsh: Welsh
         submit: Get embed code
+
+  site_map:
+    meta:
+      title: Sitemap
+      canonical: https://www.moneyadviceservice.org.uk/cy/sitemap

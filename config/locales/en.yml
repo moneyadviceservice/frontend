@@ -393,6 +393,8 @@ en:
     links:
       sign_in_html: "Already registered? <a href=\"%{url}\">Sign in</a>."
     registration:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/en/users/sign_up
       title: Get more from your money in 30 seconds
       intro_html: "Already registered? Time is money, so <a href=\"%{url}\">sign in now</a>."
       subtitle: What you'll get
@@ -418,6 +420,8 @@ en:
           - The true cost of running a car
           - How to afford to buy a home
     sign_in_page:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/en/users/sign_in
       title: Sign in
       label: Sign in
       links:
@@ -428,6 +432,8 @@ en:
         password: "Enter your password used on registration"
       forgot_password: "Forgot your password?"
     reset_password_page:
+      meta:
+        canonical: https://www.moneyadviceservice.org.uk/en/users/password/new
       title: Forgotten your password?
       intro: No problem!
       instructions: Enter your email address below and we'll send you an email containing all the information you need to reset your password.
@@ -472,6 +478,7 @@ en:
   technical_feedback:
     new:
       title: Report a technical issue
+      canonical: https://www.moneyadviceservice.org.uk/en/feedback/new
       instructions_html: |
         Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/en/corporate/contact-us">contact us</a> page.
       mandatory_warning: All fields are required
@@ -555,3 +562,8 @@ en:
         english: English
         welsh: Welsh
         submit: Get embed code
+
+  site_map:
+    meta:
+      title: Sitemap
+      canonical: https://www.moneyadviceservice.org.uk/en/sitemap

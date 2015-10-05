@@ -1,3 +1,7 @@
+<% set_meta_tags(title:       t('retirements.meta.title'),
+                 description: t('retirements.meta.description'),
+                 canonical:   t('retirements.meta.canonical')) %>
+
 <% content_for(:alternate_link) do %>
   <% locale_options.each do |locale, url| %>
     <%= link_to(url, lang: locale, class: "t-#{locale}-link") do %>

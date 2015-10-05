@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <link href="<%= t('.canonical') %>" rel="canonical" />
+<% end %>
+
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: breadcrumbs %>
 <% end %>

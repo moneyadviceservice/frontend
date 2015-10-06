@@ -10,6 +10,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <%= optimizely_include_tag if Rails.env.production? && Feature.active?(:optimizely) %>
 
+  <% if hide_elements_irrelevant_for_third_parties? %>
+    <%# This is the new embed code for Optimizely training session and is temporary %>
+    <%# It will only be displayed on the /en/empty and /cy/empty/ pages %>
+    <script src="//cdn.optimizely.com/js/3564241282.js"></script>
+  <% end %>
+
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>
 

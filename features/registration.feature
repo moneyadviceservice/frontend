@@ -21,7 +21,7 @@ Feature: Registration
 
   Scenario: Default value for market research field
     When I visit the registration page
-    Then the option to participate in marketing research should be checked
+    Then the option to participate in marketing research should not be checked
 
   Scenario Outline: Attempt to register with bad details
     When I attempt to register with <Problem>

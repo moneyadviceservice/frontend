@@ -149,6 +149,11 @@ Rails.application.routes.draw do
       mount Agreements::Engine => '/agreements'
     end
 
+    Feature.with(:quiz) do
+      mount Quiz::Engine => '/tools/:tool_id',
+        constraints: ToolMountPoint.for(:quiz)
+    end
+
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
       resource :feedback, only: [:new, :create], controller: :article_feedbacks

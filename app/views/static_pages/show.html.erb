@@ -1,8 +1,3 @@
-<% set_meta_tags(title:       static_page.title,
-                 description: static_page.description,
-                 canonical:   static_page.canonical_url,
-                 alternate:   static_page.alternate_options) %>
-
 <% content_for(:context_bar) do %>
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
 <% end %>

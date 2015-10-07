@@ -19,8 +19,18 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/mas-assets
+  revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
+  specs:
+    mas-assets (1.2.0)
+      compass-rails
+      google-analytics-rails
+      sass
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/quiz.git
-  revision: d1db8a811831a522ab2623b6542c3acda0226d79
+  revision: 08a346e5b4f0b839a8b6e67418108d3d1f54841b
   specs:
     quiz (1.0.0)
       cocoon (~> 1.2.5)
@@ -369,6 +379,7 @@ GEM
       rails (>= 3.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    google-analytics-rails (0.0.6)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -768,6 +779,7 @@ DEPENDENCIES
   listen (~> 2.0)
   mail
   mailjet
+  mas-assets!
   mastalk
   meta-tags!
   mortgage_calculator (~> 1.3.5)

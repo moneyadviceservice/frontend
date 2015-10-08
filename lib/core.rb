@@ -49,6 +49,7 @@ module Core
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'
+  autoload :VideoPreviewer, 'core/interactor/video_previewer'
   autoload :RedirectReader, 'core/interactor/redirect_reader'
 
   module Interactors

@@ -1,3 +1,8 @@
+<% set_meta_tags(title:       article.title,
+                 description: article.description,
+                 canonical:   article.canonical_url,
+                 alternate:   article.alternate_options) %>
+
 <% content_for(:context_bar) do %>
   <% if @breadcrumbs.present? %>
     <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>

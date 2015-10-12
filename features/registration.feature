@@ -19,6 +19,10 @@ Feature: Registration
     When I visit the registration page
     Then I should have the option to opt-in or opt-out of participating in research
 
+  Scenario: Default value for market research field
+    When I visit the registration page
+    Then the option to participate in marketing research should not be checked
+
   Scenario Outline: Attempt to register with bad details
     When I attempt to register with <Problem>
     Then My MAS account should not be created

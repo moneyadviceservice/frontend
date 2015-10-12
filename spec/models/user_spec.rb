@@ -9,6 +9,15 @@ RSpec.describe User, type: :model do
 
   subject { described_class.new(attributes) }
 
+  describe 'default values' do
+    context 'create a new user record' do
+      it 'opt_in_for_research should be false' do
+        expect(subject.opt_in_for_research).to be_falsey
+      end
+    end
+  end
+
+
   describe '#fake_send_confirmation_email' do
     it 'sends a fake confirmation email when user is saved' do
       subject.save!

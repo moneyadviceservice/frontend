@@ -955,7 +955,7 @@ ActiveRecord::Schema.define(version: 20150904094809) do
     t.string   "goal_statement"
     t.string   "goal_deadline"
     t.string   "contact_number"
-    t.boolean  "opt_in_for_research",                       default: true
+    t.boolean  "opt_in_for_research",                default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

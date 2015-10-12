@@ -6,25 +6,26 @@ module World
 
     pages = %w(
       account
+      action_plan
       article
       article_feedback
-      home
-      action_plan
       category
       corporate
-      corporate_tool_directory
       corporate_tool
+      corporate_tool_directory
+      forgot_password
+      home
+      news
+      news_article
       partners
+      profile
+      quiz_admin
       search_results
+      settings
+      sign_in
+      sign_up
       static
       technical_feedback
-      news_article
-      news
-      sign_up
-      sign_in
-      profile
-      forgot_password
-      settings
     )
 
     pages.each do |page|

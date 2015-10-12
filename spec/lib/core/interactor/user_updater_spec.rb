@@ -7,13 +7,23 @@ module Core
       subject { described_class.new user }
 
       describe '#call' do
-        it 'updates the user' do
-          customer = Core::Registry::Repository[:customer].customers.first
-          customer[:first_name] = 'Philip'
+        context 'when customer id is present' do
+          it 'updates the user' do
+            customer = Core::Registry::Repository[:customer].customers.first
+            customer[:first_name] = 'Philip'
 
-          subject.call
+            subject.call
 
-          expect(user.reload.first_name).to eql('Philip')
+            expect(user.reload.first_name).to eql('Philip')
+          end
+        end
+
+        context 'when customer id is blank' do
+          let(:user) { double(customer_id: nil) }
+
+          it 'returns nil' do
+            expect(subject.call).to be_nil
+          end
         end
       end
     end

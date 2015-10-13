@@ -1,0 +1,70 @@
+<div class="news-signup-test
+  <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article
+  <% end %>"
+     <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"
+     <% end %>>
+  <div style="display: none" class="news-signup-test__image"></div>
+  <div style="display: none" class="news-signup-test__container">
+    <div class="news-signup-test__container__image"></div>
+    <div class="news-signup-test__container__intro">
+      <h3>Get money saving tips straight to your inbox</h3>
+
+      <p>Join 100,000+ subscribers to get our free newsletter packed with tips and advice.</p>
+    </div>
+    <div class="news-signup-test__container__form">
+      <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
+        <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Test', id: 'subscription[test_ga_categoryid]' -%>
+        <%= hidden_field_tag 'subscription[category]', 'in_article', id: 'subscription[test_category]' -%>
+        <%= label_tag('subscription[email]', 'Enter your email address', for: 'news-signup-email', class: 'newsletter-signup__container__form__label') %>
+        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'news-signup-test__container__form__email js-news-signup-test-input') %>
+        <%= button_tag('Sign up now', type: 'submit', class: 'button button--primary') %>
+      <% end %>
+      <p class="news-signup-test__container__form__privacy">Privacy promise: We will never share your data or spam
+        you.</p>
+    </div>
+  </div>
+
+
+  <div class="js-mediaquery-test news-signup-inpage">
+    <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
+
+      <div class="news-signup-inpage__header">
+
+        <div class="news-signup-inpage__image"></div>
+        <div class="news-signup-inpage__text-container">
+
+          <h3 class="news-signup-inpage__title">
+            <span><%= t('newsletter_subscriptions.signup_inpage.title') %></span>
+          </h3>
+
+          <p class="news-signup-inpage__supplementary-text">
+            <%= t('newsletter_subscriptions.signup_inpage.supplementary_text') %>
+          </p>
+          <%= label_tag('subscription[email]', t('newsletter_subscriptions.signup_inpage.controls.email.label'), for: 'news-signup-email', class: 'news-signup-inpage__email-label') %>
+        </div>
+
+      </div>
+
+      <div class="js-news-signup-inpage__form-container news-signup-inpage__form-container">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
+        <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Test', id: 'subscription[test_ga_categoryid]' -%>
+        <%= hidden_field_tag 'subscription[category]', 'in_article', id: 'subscription[test_category]' -%>
+
+        <%= email_field_tag('subscription[email]', nil, id: 'news-signup-email', class: 'js-news-signup-test-input', placeholder: t('newsletter_subscriptions.signup_inpage.controls.email.placeholder')) %>
+        <%= button_tag(t('newsletter_subscriptions.signup_inpage.controls.button.text'), type: 'submit', class: 'button button--newsletter') %>
+      </div>
+    <% end %>
+
+    <div class="js-news-signup-inpage__footer news-signup-inpage__footer">
+      <p class="news-signup-inpage__privacy-text">
+        <span><%= t('newsletter_subscriptions.signup_inpage.privacy_text') %></span>
+        <span><%= t('newsletter_subscriptions.signup_inpage.privacy_text_2') %>
+          <a target="_blank" href="https://www.moneyadviceservice.org.uk/en/corporate/privacy"><%= t('newsletter_subscriptions.signup_inpage.privacy_link_text') %></a></span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -2,8 +2,6 @@ RSpec.describe ToolMountPoint::DecisionTrees, type: :request, features: [:health
   %W(
     /en/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::EN_ID}
     /cy/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::CY_ID}
-    /en/tools/#{ToolMountPoint::DecisionTrees::WorkplacePensionAdviceTool::EN_ID}
-    /cy/tools/#{ToolMountPoint::DecisionTrees::WorkplacePensionAdviceTool::CY_ID}
   ).each do |path|
     describe path do
       before do
@@ -20,11 +18,6 @@ RSpec.describe ToolMountPoint::DecisionTrees, type: :request, features: [:health
         alternate_id = subject.alternate_tool_id('health-check-questions')
         expect(alternate_id).to eq('health-check-questions')
       end
-
-      it 'retains english id for workplace pension advice tool' do
-        alternate_id = subject.alternate_tool_id('workplace-pension-advice-tool')
-        expect(alternate_id).to eq('workplace-pension-advice-tool')
-      end
     end
   end
 
@@ -34,6 +27,5 @@ RSpec.describe ToolMountPoint::DecisionTrees, type: :request, features: [:health
 
       expect(path).to eql('/en/tools/health-check/plans/configure?codes[]=ap_1_1&codes[]=ap_1_2')
     end
-
   end
 end

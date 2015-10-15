@@ -49,6 +49,13 @@
       include_ga: false
       title: "Help to buy quiz"
 
+    quiz:
+      en:
+        path: "en/tools/quiz"
+      cy:
+        path: "cy/tools/quiz"
+      title: "Quiz"
+
     christmas_planner:
       en:
         path: "en/cost_planner/plans/christmas-syndicated/start"

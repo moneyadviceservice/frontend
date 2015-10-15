@@ -4,5 +4,9 @@ class QuizController < EmbeddedToolsController
     ''
   end
 
+  def syndicated_tool_request?
+    true
+  end
+
   helper_method :category_id
 end

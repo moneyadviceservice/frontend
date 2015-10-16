@@ -153,6 +153,17 @@ write Ruby code. As a contributor you should update the styleguide as you update
 the application. The CSS styleguide is powered by [KSS], a documenting syntax
 for CSS.
 
+### Writing front-end code
+
+There are a number of documents to help everyone write maintainble, performant and readible HTML, CSS and Javascript.
+
+We recommend having a flick through these when working on new features:
+
+* [Front-end Code Standards](https://github.com/moneyadviceservice/frontend-code-standards) – an in-depth guide to the standards we follow
+* [Javascript styleguide](https://github.com/moneyadviceservice/javascript) – further detail on writing Javascript to the standards we follow
+* [Common front-end gotchas](https://github.com/moneyadviceservice/frontend-code-standards/blob/master/gotchas.md) – quick reference for some common gotchas that may be picked up in PR reviews
+* [Working with Dough](https://github.com/moneyadviceservice/made_with_dough/blob/master/README.md) – some information on how Dough works
+
 ### Front-end Package Management
 
 The application uses [Bower] to manage front-end packages. Dependencies should

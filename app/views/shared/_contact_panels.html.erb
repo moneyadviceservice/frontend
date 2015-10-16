@@ -64,34 +64,10 @@
     <div class="contact-panel__border"></div>
 
     <div class="l-contact-panel">
-      <div class="contact-panel contact-panel--last t-footer-social-links">
-        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <span class="icon icon--sharing"></span><%= t('contact_panels.sharing.title') %>
-        <% end %>
-
-        <p><%= t('contact_panels.sharing.description') %></p>
-
-        <div class="contact-panel__button-container">
-          <a class="button contact-panel__button contact-panel__button--sharing t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice">
-            <span class="icon icon--twitter"></span>
-            <span class="visually-hidden">Twitter</span>
-          </a>
-
-          <a class="button contact-panel__button contact-panel__button--sharing t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas">
-            <span class="icon icon--facebook"></span>
-            <span class="visually-hidden">Facebook</span>
-          </a>
-
-          <a class="button contact-panel__button contact-panel__button--sharing t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService">
-            <span class="icon icon--youtube"></span>
-            <span class="visually-hidden">YouTube</span>
-          </a>
-        </div>
-
-        <p class="contact-panel__additional-info"><%= t('contact_panels.sharing.more_info_html') %></p>
+      <div class="contact-panel contact-panel--last">
+        <%= render 'shared/newsletter_signup' %>
       </div>
     </div>
-
   </div>
 </div>
 <% end %>

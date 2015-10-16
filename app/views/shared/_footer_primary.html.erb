@@ -2,7 +2,55 @@
 <div class="l-footer-primary t-footer-primary">
   <div class="l-constrained">
     <div class="l-footer-primary__left">
-      <%= render 'shared/newsletter_signup' %>
+      <ul class="l-footer-primary__social-sharing">
+        <li class="l-footer-primary__list--left">
+          <div class="footer-primary__list-item">
+            <a class="button facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--facebook">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--facebook"></use>
+              </svg>
+              <span class="icon icon--facebook"></span>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+            <p class="social-sharing__counter">
+              <span class="social-sharing__counter__total">52k</span>
+              <span class="social-sharing__counter__label">Likes</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="l-footer-primary__list--centre">
+          <div class="footer-primary__list-item">
+            <a class="button twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--twitter">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--twitter"></use>
+              </svg>
+              <span class="icon icon--twitter"></span>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+            <p class="social-sharing__counter">
+              <span class="social-sharing__counter__total">38.2k</span>
+              <span class="social-sharing__counter__label">Followers</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="l-footer-primary__list--right">
+          <div class="footer-primary__list-item">
+            <a class="button youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--youtube">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--youtube"></use>
+              </svg>
+              <span class="icon icon--youtube"></span>
+              <span class="visually-hidden">YouTube</span>
+            </a>
+            <p class="social-sharing__counter">
+              <span class="social-sharing__counter__total">4.4m</span>
+              <span class="social-sharing__counter__label">Views</span>
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="l-footer-primary__right">
@@ -19,13 +67,9 @@
           <li class="footer-primary__list-item t-partners-link">
             <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
           </li>
-
-          <li class="footer-primary__list-item">
-            <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
-          </li>
         </ul>
 
-        <ul class="l-footer-primary__list l-footer-primary__list--right">
+        <ul class="l-footer-primary__list l-footer-primary__list--centre">
           <li class="footer-primary__list-item">
             <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
           </li>
@@ -35,7 +79,13 @@
           </li>
 
           <li class="footer-primary__list-item">
-            <a href="<%= t('footer.blog_link') %>"><%= t('footer.blog') %></a>
+            <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
+          </li>
+        </ul>
+
+        <ul class="l-footer-primary__list l-footer-primary__list--right">
+          <li class="footer-primary__list-item">
+            <a class="button footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
           </li>
         </ul>
       </nav>

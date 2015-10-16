@@ -42,8 +42,17 @@
     margin-left: -25px;
   }
 
-  .icon--sharing {
-    margin-left: -30px;
+  .icon--newsletter {
+    margin-left: -35px;
+    border-radius: 50%;
+
+    .svg-icon--email {
+      width: 36.396px; // 248.152px / (150 / 22);
+      height: 22px; // 150px / (150 / 22);
+      position: relative;
+      top: 24px; // (70px - (150px / (150 / 22))) / 2;
+      fill: #fff;
+    }
   }
 }
 

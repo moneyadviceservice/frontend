@@ -16,7 +16,7 @@
 .l-contact-panel {
   @include column(12);
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     @include column(4);
   }
 }

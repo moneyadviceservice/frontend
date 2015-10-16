@@ -51,9 +51,11 @@
 
     quiz:
       en:
-        path: "en/tools/quiz"
+        path: "en/tools/quiz/widgets/22/start"
       cy:
-        path: "cy/tools/quiz"
+        path: "cy/tools/quiz/widgets/22/start"
+      width: "100%"
+      height: "2000px"
       title: "Quiz"
 
     christmas_planner:

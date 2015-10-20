@@ -49,4 +49,4 @@ time /usr/local/bin/upload-responsive-assets.sh $(pwd)/public
 echo "Creating RPM"
 echo "----"
 cd ..
-time /usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version
+time /usr/local/rpm_builder/create-rails-rpm $artifact_name $artifact_name $version_number

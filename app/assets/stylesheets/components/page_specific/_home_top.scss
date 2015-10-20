@@ -8,6 +8,10 @@
   padding-bottom: 50%;
   position: relative;
 
+  .ie8 & {
+    background:image-url("campaign/cut-the-costs-of-a-merry-christmas-ie8.jpg") no-repeat right bottom;
+  }
+
   @include respond-to($mq-m) {
     background-position: 113% 108%;
     background-size: 60%;
@@ -140,6 +144,7 @@
 .home-top-promo__text {
   @extend %font-heading-heavy;
   @include body(22, 30);
+  background-color:$color-black;
   background: rgba(0,0,0,0.8);
   border-radius: 6px;
   margin: 0 $baseline-unit*3;

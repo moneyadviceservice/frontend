@@ -176,8 +176,6 @@
 </head>
 <body class="<%= locale_class %> l-body">
 
-<%= render 'shared/svg/icon_sprite' %>
-
 <%# START Google Tag Manager embed code %>
 <% if Rails.env.production? %>
   <noscript>
@@ -222,5 +220,6 @@
 
 <%= yield :javascripts %>
 
+<%= render 'shared/svg/icon_sprite' %>
 </body>
 </html>

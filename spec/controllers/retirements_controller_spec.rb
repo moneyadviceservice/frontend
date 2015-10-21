@@ -32,5 +32,17 @@ RSpec.describe RetirementsController, type: :controller do
         it { is_expected.to eq(en: '/en/pensions-and-retirement/budgeting') }
       end
     end
+
+    context 'retirement_concepts action' do
+      context 'in English site' do
+        before { get :retirement_concepts, locale: :en }
+        it { is_expected.to eq(cy: '/cy/retirement-concepts-in-welsh') }
+      end
+
+      context 'in Welsh site' do
+        before { get :retirement_concepts, locale: :cy }
+        it { is_expected.to eq(en: '/en/retirement-concepts') }
+      end
+    end
   end
 end

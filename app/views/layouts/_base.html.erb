@@ -175,6 +175,9 @@
 
 </head>
 <body class="<%= locale_class %> l-body">
+<!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+<%= render 'shared/svg/icon_sprite' %>
+<!--<![endif]-->
 
 <%# START Google Tag Manager embed code %>
 <% if Rails.env.production? %>
@@ -220,6 +223,5 @@
 
 <%= yield :javascripts %>
 
-<%= render 'shared/svg/icon_sprite' %>
 </body>
 </html>

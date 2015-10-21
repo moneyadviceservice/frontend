@@ -8,10 +8,6 @@
   padding-bottom: 50%;
   position: relative;
 
-  .ie8 & {
-    background:image-url("campaign/cut-the-costs-of-a-merry-christmas-ie8.jpg") no-repeat right bottom;
-  }
-
   @include respond-to($mq-m) {
     background-position: 113% 108%;
     background-size: 60%;
@@ -34,6 +30,10 @@
     .theme-cy & {
       background: none;
     }
+  }
+
+  @if $responsive == false {
+    background:image-url("campaign/cut-the-costs-of-a-merry-christmas-ie8.jpg") no-repeat right bottom;
   }
 }
 

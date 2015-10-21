@@ -129,6 +129,8 @@ Rails.application.routes.draw do
       get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
       get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'
       get LandingPagePaths.path(:retirements, :budgeting, :cy), to: 'retirements#budgeting'
+      get LandingPagePaths.path(:retirements, :retirement_concepts, :en), to: 'retirements#retirement_concepts'
+      get LandingPagePaths.path(:retirements, :retirement_concepts, :cy), to: 'retirements#retirement_concepts'
     end
 
     Feature.with(:savings_calculator) do

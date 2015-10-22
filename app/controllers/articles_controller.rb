@@ -48,6 +48,6 @@ class ArticlesController < ApplicationController
       slug != params[:id]
     end
 
-    @newsletter_excluded = exclusions.count > 0 || I18n.locale == :cy ? true : false
+    @newsletter_excluded = !display_sticky_newsletter_form_cookie? || exclusions.count > 0 || (I18n.locale == :cy ? true : false)
   end
 end

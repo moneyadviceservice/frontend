@@ -4,19 +4,26 @@
       errorClassName = 'is-errored',
       newsletterErrorId = 'newsletter_error',
       successClassName = 'form-success',
-      $formUIContainer = $('.js-news-signup-inpage__form-container');
+      $formUIContainer = $('.js-news-signup-inpage__form-container'),
+      inPageArticle = ($newsletterForm.parents('.news-signup-inpage').length === 1);
 
   <%= render 'common', success: @success %>
 
   <% if @success %>
-  $newsletterForm.attr({
-    'role': 'alert',
-    'aria-live': 'polite'
-  })
+  $newsletterForm
+      .attr({
+        'role': 'alert',
+        'aria-live': 'polite'
+      })
       .removeClass(errorClassName)
       .addClass(successClassName);
 
-  $formUIContainer.after('<div class="news-signup-inpage__form-success-message"><%= flash[:success] %></div>');
+  if ($formUIContainer.length) {
+    $formUIContainer.after('<div class="news-signup-inpage__form-success-message"><%= flash[:success] %></div>');
+  }
+  else {
+    $newsletterForm.html('<%= flash[:success] %>');
+  }
 
 
   $newsletterInput.attr({'aria-invalid': false });

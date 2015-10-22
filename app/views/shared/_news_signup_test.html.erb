@@ -1,4 +1,11 @@
-<div class="news-signup-test <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article <% end %>" <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"<% end %>>
+<%
+   ab_test_render = local_assigns[:ab_test_render].nil? ? false : local_assigns[:ab_test_render]
+   component_class = ''
+   unless ab_test_render then
+     component_class = component_class + ' news-signup-inpage--delete'
+   end
+%>
+<div class="news-signup-test <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article "<% end %> <%= component_class %>" <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"<% end %>>
   <div class="news-signup-test__image"></div>
   <div class="news-signup-test__container">
   <div class="news-signup-test__container__image"></div>

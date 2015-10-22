@@ -1,0 +1,43 @@
+.line-marker {
+  position: relative;
+  z-index: 2;
+  left: 10px;
+  @include respond-to($mq-m) {
+    left: 50%;
+  }
+
+}
+
+.line-marker--waypoint{
+  width: 12px;
+  height: 12px;
+  top: 27px;
+  margin-left: -6px;
+  @include respond-to($mq-m) {
+    margin-left: -6px;
+  }
+}
+
+.line-marker--section {
+  width: 32px;
+  height: 32px;
+  top: 38px;
+  margin-left: -16px;
+}
+
+.line-marker__inline-dot {
+  width: 32px !important;
+  height: 139px !important;
+  margin: 0 auto;
+  background-image: url(image-path("retirement_concepts/inline-green-dot.png"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.line-marker__small-outline-dot{
+  width: 14px !important;
+  height: 14px !important;
+  background-image: url(image-path('retirement_concepts/small-outline-dot.png'));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

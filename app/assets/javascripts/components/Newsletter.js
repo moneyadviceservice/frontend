@@ -22,6 +22,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   Newsletter.prototype.init = function(initialised) {
     var $component;
 
+    this._switchComponentsForTesting(); // TODO - Remove before deploy to QA
+
     this.initProps();
     $component = this._returnComponentJqueryDOM();
 
@@ -79,6 +81,17 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     }
 
     return $component;
+
+  };
+
+  Newsletter.prototype._switchComponentsForTesting = function() {
+    // TODO - This will be removed before deployment.
+    // It's purely so Shankar can test both versions.
+
+    if (document.location.search.indexOf('new-inpage-article') > 0) {
+      $('.news-signup-test').addClass('news-signup-inpage--delete');
+      $('.news-signup-inpage').removeClass('news-signup-inpage--delete');
+    }
 
   };
 

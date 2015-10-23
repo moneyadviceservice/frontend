@@ -67,7 +67,7 @@
   z-index: 3;
   width: 18px !important;
   height: 18px !important;
-  margin: 30px 0 0 0; //Covert to baseline-unit
+  margin: $baseline-unit * 10 0 0 0; //Covert to baseline-unit
   background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
   background-size: 100% 100%;
   background-repeat: no-repeat;

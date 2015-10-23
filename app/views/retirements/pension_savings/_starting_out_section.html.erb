@@ -3,12 +3,14 @@
     <div class="l-1col">
       <div class="graphic-info-box">
         <div class="graphic-info-box__top-dot"></div>
-        <h2 class="graphic-info-box__heading">Starting Out</h2>
+        <h2 class="graphic-info-box__heading">
+          <%= t('pension_savings_timeline.starting_out_section.title') %>
+        </h2>
         <div class="graphic-info-box__illustration">
-          <%= image_tag "retirement_concepts/starting-out-illustration.png"  %>
+          <%= image_tag "retirement_concepts/starting-out-illustration.png", alt: t('pension_savings_timeline.starting_out_section.image_alt') %>
         </div>
         <p class="graphic-info-box__copy">
-        Pensions offer a way to save tax-free and get tax back to help build up a pot of money for you to live off later in life. The sooner you start a pension the more tax you’ll save and get back and the bigger your pension pot when you finally stop work.
+          <%= t('pension_savings_timeline.starting_out_section.intro_text') %>
         </p>
         <div class="graphic-info-box__line-fade-in"></div>
       </div>
@@ -17,13 +19,15 @@
           <div class="line-marker__small-outline-dot"></div>
         </div>
         <div class="speech-bubble speech-bubble--right">
-          <h3>Starting a pension</h3>
+          <h3>
+          <%= t('pension_savings_timeline.starting_out_section.starting_a_pension.title') %>
+          </h3>
           <p>
-          If your employer offers a workplace pension this is the easiest way to start. If they don’t or you’re self-employed, you can start a personal pension.
+          <%= t('pension_savings_timeline.starting_out_section.starting_a_pension.text') %>
           </p>
           <p>
           <a href="">
-            Find out more about workplace and personal pensions
+            <%= t('pension_savings_timeline.starting_out_section.starting_a_pension.link') %>
           </a>
           </p>
         </div>
@@ -33,13 +37,15 @@
           <div class="line-marker__small-outline-dot"></div>
         </div>
         <div class="speech-bubble speech-bubble--left">
-          <h3>Deciding how much to save</h3>
+          <h3>
+            <%= t('pension_savings_timeline.starting_out_section.deciding_how_much_to_save.title') %>
+          </h3>
           <p>
-          For every £80 you pay into a pension the government tops it up with £20 basic rate tax relief (within limits) and higher rate taxpayers can claim back the extra – so it pays to save more.
+            <%= t('pension_savings_timeline.starting_out_section.deciding_how_much_to_save.text') %>
           </p>
           <p>
           <a href="">
-            Use our workplace pensions calculator to see how much you can afford to save
+            <%= t('pension_savings_timeline.starting_out_section.deciding_how_much_to_save.link') %>
           </a>
           </p>
         </div>

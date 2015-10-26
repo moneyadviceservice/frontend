@@ -40,18 +40,8 @@ module Core::Repository::CMS
         expect(AttributeBuilder.build(response)['related_content']['next_link']).to be_present
       end
 
-      context 'when content type is markdown' do
-        it 'body is html' do
-          expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
-        end
-      end
-
-      context 'when content type is html' do
-        let(:body) { File.read('spec/fixtures/cms/beginners-guide-to-managing-your-money.html.json') }
-
-        it 'body is html' do
-          expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
-        end
+      it 'body is html' do
+        expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
       end
     end
   end

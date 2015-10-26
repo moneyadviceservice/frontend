@@ -4,7 +4,7 @@ module Core::Repository::CMS
     subject(:composer) { described_class.new(blocks, id) }
 
     let(:content_block) do
-      { 'identifier' => 'content', 'content' => 'Content Block' }
+      { 'identifier' => 'content', 'content' => "<p>Content Block</p>\n" }
     end
 
     describe '#initialize' do
@@ -47,7 +47,7 @@ module Core::Repository::CMS
         let(:blocks) { [] }
 
         it 'is an empty string' do
-          expect(composer.to_html).to eql("\n")
+          expect(composer.to_html).to eql("")
         end
       end
 
@@ -59,7 +59,7 @@ module Core::Repository::CMS
         let(:blocks) { [non_content_block] }
 
         it 'returns a composed html string' do
-          expect(composer.to_html).to eql("\n")
+          expect(composer.to_html).to eql("")
         end
       end
 

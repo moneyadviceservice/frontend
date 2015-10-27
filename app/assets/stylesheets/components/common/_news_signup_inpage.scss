@@ -38,6 +38,14 @@ $component-input-error-border-colour: $color-red-medium;
       min-height: 130px;
     }
 
+    .ie8 & {
+      text-align: center;
+    }
+
+    .ie7 & {
+      text-align: center;
+    }
+
   }
 
   .news-signup-inpage__title {
@@ -94,6 +102,18 @@ $component-input-error-border-colour: $color-red-medium;
     @include respond-to($mq-xl) {
       @include body(22, 26);
       min-width: 300px;
+    }
+
+    .ie8 & {
+      position: relative;
+      top: $baseline-unit * 5;
+      left: 0;
+    }
+
+    .ie7 & {
+      position: relative;
+      top: $baseline-unit * 5;
+      left: 0;
     }
 
   }
@@ -161,6 +181,22 @@ $component-input-error-border-colour: $color-red-medium;
     @include respond-to($mq-l) {
       margin-left: 60px;
       min-width: 260px;
+    }
+
+    .ie8 & {
+      position: relative;
+      top: $baseline-unit * 11.5;
+      left: 0;
+      margin-left: 160px;
+      max-width: 260px;
+    }
+
+    .ie7 & {
+      position: relative;
+      top: $baseline-unit * 11.5;
+      left: 0;
+      margin-left: 160px;
+      max-width: 260px;
     }
 
   }

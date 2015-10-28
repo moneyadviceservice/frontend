@@ -51,6 +51,10 @@ module ApplicationHelper
     false
   end
 
+  def is_environment_on_qa?
+    ENV['MAS_ENVIRONMENT'] == 'qa'
+  end
+
   private
 
   def strip_leading_indentation_from_source(source)

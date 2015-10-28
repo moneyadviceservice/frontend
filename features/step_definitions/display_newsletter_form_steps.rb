@@ -26,7 +26,7 @@ When(/^user subscribes to receive newsletters$/) do
   home_page.sticky_newsletter.subscription_email.set 'test@example.com'
   home_page.sticky_newsletter.send_me_money_advice.click
   page.driver.browser.set_cookie('_cookie_submit_newsletter = hide')
-  expect(page).to have_content 'Thank you for signing up'
+  expect(page).to have_content I18n.t('newsletter_subscriptions.success')
 end
 
 Then(/^the user should no longer see the newsletter form$/) do

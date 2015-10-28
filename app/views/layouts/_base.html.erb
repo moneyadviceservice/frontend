@@ -8,7 +8,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <%= optimizely_include_tag if Rails.env.production? && Feature.active?(:optimizely) %>
+  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_qa?) && Feature.active?(:optimizely) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>
     <%# This is the new embed code for Optimizely training session and is temporary %>

@@ -9,12 +9,9 @@
      component_dough = ''
    end
 
-   unless ab_test_render then
-     if !dev_visible then
-       component_class = component_class + ' news-signup-inpage--delete'
-     end
+   if !ab_test_render && !dev_visible then
+     component_class = component_class + ' news-signup-inpage--delete'
    end
-
 %>
 
 <div class="l-news-signup-inpage">

@@ -1,14 +1,24 @@
 <%
+   dev_visible = local_assigns[:visible].nil? ? false : local_assigns[:visible]
    ab_test_render = local_assigns[:ab_test_render].nil? ? false : local_assigns[:ab_test_render]
+
    component_class = ''
+   component_dough = ' data-dough-component="Newsletter"'.html_safe
+   if dev_visible then
+     component_class = 'news-signup-test--with-image news-signup-test--in-article'
+     component_dough = ''
+   end
+
    unless ab_test_render then
-     component_class = component_class + ' news-signup-inpage--delete'
+     if !dev_visible then
+       component_class = component_class + ' news-signup-inpage--delete'
+     end
    end
 %>
-<div class="news-signup-test <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article "<% end %> <%= component_class %>" <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"<% end %>>
+<div class="news-signup-test <%= component_class %>" <%= component_dough %>>
   <div class="news-signup-test__image"></div>
   <div class="news-signup-test__container">
-  <div class="news-signup-test__container__image"></div>
+    <div class="news-signup-test__container__image"></div>
     <div class="news-signup-test__container__intro">
       <h3>Get money saving tips straight to your inbox</h3>
       <p>Join 100,000+ subscribers to get our free newsletter packed with tips and advice.</p>

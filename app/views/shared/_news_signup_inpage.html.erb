@@ -10,7 +10,9 @@
    end
 
    unless ab_test_render then
-     component_class = component_class + ' news-signup-inpage--delete'
+     if !dev_visible then
+       component_class = component_class + ' news-signup-inpage--delete'
+     end
    end
 
 %>

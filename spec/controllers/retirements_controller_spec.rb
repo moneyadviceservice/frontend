@@ -36,7 +36,7 @@ RSpec.describe RetirementsController, type: :controller, features: [:pensions_an
     context 'pension_savings_timeline action' do
       context 'in English site' do
         before { get :pension_savings_timeline, locale: :en }
-        it { is_expected.to eq(cy: '/cy/pensions-and-retirement/pension-savings-timeline-in-welsh') }
+        it { is_expected.to eq(cy: '/cy/pensiynau-ac-ymddeoliad/llinell-amser-cynilion-pensiwn') }
       end
 
       context 'in Welsh site' do

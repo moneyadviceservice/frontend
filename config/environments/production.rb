@@ -60,7 +60,7 @@ Rails.application.configure do
   config.cache_store = :memory_store, { expires_in: 1.hour }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com'
+  config.action_controller.asset_host = ENV['RESPONSIVE_ASSET_HOST_URL']
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder

@@ -341,10 +341,9 @@
 }
 
 .icon--newsletter {
-  background-image: none;
-  background-color: $color-green-primary;
-  width: 70px;
-  height: 70px;
+  background-position: -588px -430px;
+  width: 56px;
+  height: 56px;
 }
 
 .icon--calculator {
@@ -352,8 +351,25 @@
   height: 51px;
   width: 51px;
 }
+
 .icon--info {
   background-position: -70px -260px;
   height: 25px;
   width: 20px;
+}
+
+.svg {
+  .icon--stripe-banner-arrow {
+    display: none;
+  }
+
+  .svg-icon--stripe-banner-arrow {
+    display: block;
+  }
+}
+
+.icon--stripe-banner-arrow {
+  background-position: -517px -426px;
+  width:68px;
+  height:68px;
 }

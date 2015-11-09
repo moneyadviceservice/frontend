@@ -110,8 +110,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    advice_plans (3.1.1.348)
-      devise (~> 3.2.4)
+    advice_plans (3.1.1.362)
+      devise (~> 3.2)
       dough-ruby (~> 5.0)
       friendly_id (~> 5.0.0)
       hashie
@@ -120,8 +120,7 @@ GEM
       kaminari (~> 0.16.1)
       mas-mailer (~> 0.3)
       meta-tags
-      mysql2
-      rails (~> 4.1.5)
+      rails (~> 4.1.8)
       redcarpet (~> 3.2.0)
       sass-rails (~> 4.0.3)
       transitions (~> 0.1.11)
@@ -325,7 +324,7 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (5.9.0.259)
+    dough-ruby (5.9.0.265)
       activesupport
       rails (>= 3.2)
       sass-rails (~> 4.0.0)
@@ -426,7 +425,7 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-rails-cdn (1.0.3)
+    jquery-rails-cdn (1.1.2)
       jquery-rails
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
@@ -479,7 +478,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     modernizr-rails (2.6.3)
     mortgage_calculator (1.3.8.626)
       angularjs-rails (~> 1.2.18)
@@ -493,7 +492,7 @@ GEM
     multi_json (1.11.2)
     multi_test (0.1.1)
     multipart-post (1.2.0)
-    mysql2 (0.3.17)
+    mysql2 (0.3.20)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.10.3)
@@ -751,7 +750,7 @@ DEPENDENCIES
   debt_test
   decision_trees (~> 2.0.0)
   delayed_job_active_record
-  devise
+  devise (= 3.2.4)
   devise-encryptable
   dotenv-rails
   dough-ruby (~> 5.0)
@@ -779,7 +778,7 @@ DEPENDENCIES
   mas-assets!
   meta-tags!
   mortgage_calculator (~> 1.3.5)
-  mysql2
+  mysql2 (= 0.3.20)
   newrelic_rpm
   nokogiri
   nunes

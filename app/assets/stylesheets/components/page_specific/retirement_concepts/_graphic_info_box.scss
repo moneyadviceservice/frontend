@@ -5,7 +5,7 @@
   position:relative;
   overflow: hidden;
   @include respond-to($mq-m) {
-    width: 40%;
+    width: 60%;
     text-align: center;
   }
 }
@@ -26,11 +26,13 @@
 
 .graphic-info-box__heading {
   margin-top: $baseline-unit * 9;
+  margin-bottom: $baseline-unit * 9;
   float: right;
   width: 92%;
   @include respond-to($mq-m) {
     float: none;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: $baseline-unit * 9;
     width: 100%;
   }
 }

@@ -12,6 +12,7 @@ gem 'rails', '4.1.8'
 
 gem 'activerecord-session_store'
 gem 'aes'
+gem 'bugsnag'
 gem 'cream', '~> 0.1.0'
 gem 'delayed_job_active_record'
 gem 'devise', '3.2.4'

@@ -462,8 +462,6 @@ GEM
       sass-rails
     mas-fonts (0.0.2.5)
       rails
-    mas-frontend-helpers (0.0.1.9)
-      actionpack
     mas-mailer (0.3.2.10)
       delayed_job_active_record
       hashie
@@ -640,12 +638,11 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.1.2.137)
+    savings_calculator (1.2.0.138)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       jquery-rails
       mas-fonts
-      mas-frontend-helpers
       meta-tags
       rails (~> 4.1)
       sass-rails (~> 4.0.3)
@@ -801,7 +798,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails (~> 4.0.0)
-  savings_calculator (~> 1.1.0)
+  savings_calculator (~> 1.2.0)
   sdoc
   shoulda-matchers
   site_prism

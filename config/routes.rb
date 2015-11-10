@@ -146,7 +146,8 @@ Rails.application.routes.draw do
     end
 
     if Feature.active?(:agreements)
-      mount Agreements::Engine => '/agreements'
+      mount Agreements::Engine => '/:tool_id',
+            constraints: ToolMountPoint.for(:agreements)
     end
 
     Feature.with(:quiz) do

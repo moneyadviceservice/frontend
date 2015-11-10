@@ -1,8 +1,7 @@
 RSpec.describe '404 catachall', type: :request do
   context 'when page does not exist' do
-    it 'returns 501 not implemented' do
-      get '/idonotexist'
-      expect(response.status).to eql(501)
+    it 'raises routing error not found' do
+      expect { get '/idonotexist' }.to raise_error(ActionController::RoutingError, 'Not Found')
     end
   end
 end

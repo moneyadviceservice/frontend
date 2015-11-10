@@ -43,5 +43,7 @@ module Frontend
     config.to_prepare do
       Devise::Mailer.layout 'email'
     end
+
+    config.exceptions_app = self.routes
   end
 end

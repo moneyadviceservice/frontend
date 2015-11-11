@@ -4,7 +4,7 @@ class ErrorsController < ApplicationController
   before_filter :fetch_exception
 
   def show
-    render :show, status: @status_code
+    render :show, status: @status_code, formats: [:html]
   end
 
   def display_skip_to_main_navigation?

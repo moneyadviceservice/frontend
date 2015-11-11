@@ -60,6 +60,7 @@
     <% t('retirements.section3').each do |panel| %>
       <div class="l-3col-even">
         <h2><%= panel[:title] %></h2>
+        <p><%= panel[:body] %></p>
         <ul class="link-list">
           <% panel[:links].each do |link| %>
             <li><%= link_to link[:text], link[:url] %></li>

@@ -1,0 +1,18 @@
+.retirements__intro {
+  font-weight: bold;
+  color: $color-grey-dark;
+}
+
+.retirements__bullet-heading {
+  @include body(16, 20);
+  color: $color-black;
+}
+
+.retirements__list {
+  @include body(16, 20);
+
+  li:before {
+    // override the default bullet point size
+    font-size: 26px;
+  }
+}

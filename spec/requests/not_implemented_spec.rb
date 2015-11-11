@@ -1,8 +1,6 @@
 RSpec.describe 'Request we have no implementation for', type: :request do
-  it 'returns a 501 response' do
-    get('/unsupported')
-
-    expect(response.status).to eq(501)
+  it 'raises routing error' do
+    expect { get('/unsupported') }.to raise_error(ActionController::RoutingError, 'Not Found')
   end
 end
 

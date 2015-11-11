@@ -146,7 +146,8 @@ Rails.application.routes.draw do
     end
 
     if Feature.active?(:agreements)
-      mount Agreements::Engine => '/agreements'
+      mount Agreements::Engine => '/:tool_id',
+            constraints: ToolMountPoint.for(:agreements)
     end
 
     Feature.with(:quiz) do
@@ -288,6 +289,10 @@ Rails.application.routes.draw do
 
       end
     end
+  end
+
+  %w(404 422 500 ).each do |status_code|
+    get status_code, to: 'errors#show', status_code: status_code
   end
 
   if Feature.active?(:redirects)

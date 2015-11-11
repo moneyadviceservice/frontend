@@ -92,8 +92,20 @@
         </div>
       <% end %>
     </div>
-    <div class="l-row retirements-panels retirements-panels--last">
+    <div class="l-row retirements-panels retirements-panels">
       <% t('retirements.section4.panels2').each do |panel| %>
+        <div class="l-3col-even retirements-panels__panel">
+          <h3><%= panel[:title] %></h3>
+          <ul class="link-list">
+            <% panel[:links].each do |link| %>
+              <li><%= link_to link[:text], link[:url] %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="l-row retirements-panels retirements-panels--last">
+      <% t('retirements.section4.panels3').each do |panel| %>
         <div class="l-3col-even retirements-panels__panel">
           <h3><%= panel[:title] %></h3>
           <ul class="link-list">

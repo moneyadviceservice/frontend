@@ -295,9 +295,5 @@ Rails.application.routes.draw do
     get status_code, to: 'errors#show', status_code: status_code
   end
 
-  if Feature.active?(:redirects)
-    match '*path', via: :all, to: 'catchall#not_implemented'
-  else
-    match '*path', via: :all, to: not_implemented
-  end
+  match '*path', via: :all, to: 'catchall#not_implemented'
 end

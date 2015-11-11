@@ -57,14 +57,22 @@
 
 <div class="l-section l-section--odd">
   <div class="l-constrained">
-    <% t('retirements.section3').each do |panel| %>
+    <% t('retirements.section3.panels').each do |panel| %>
       <div class="l-3col-even">
         <h2><%= panel[:title] %></h2>
+        <p><%= panel[:body] %></p>
         <ul class="link-list">
           <% panel[:links].each do |link| %>
             <li><%= link_to link[:text], link[:url] %></li>
           <% end %>
         </ul>
+
+        <% if panel == t('retirements.section3.panels')[-1] # last panel %>
+          <div class="retirements-panel-callout">
+            <%= image_tag 'retirements/pension-wise.png', alt: '', 'aria-hidden' => true, class: 'retirements-panel-callout__image' %>
+            <%= link_to t('retirements.section3.pensionwise.text'), t('retirements.section3.pensionwise.url'), class: 'retirements-panel-callout__link' %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

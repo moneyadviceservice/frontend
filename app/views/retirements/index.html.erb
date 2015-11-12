@@ -21,9 +21,9 @@
         <p><%= raw t('retirements.section1.video_caption_html') %></p>
       </div>
       <div class="l-2col-even">
-        <p class="intro"><%= t('retirements.section1.intro') %></p>
-        <%= t('retirements.section1.bullet_heading') %>
-        <ul class="list">
+        <p class="intro retirements__intro"><%= t('retirements.section1.intro') %></p>
+        <h2 class="retirements__bullet-heading"><%= t('retirements.section1.bullet_heading') %></h2>
+        <ul class="list retirements__list">
           <% t('retirements.section1.bullets').each do |text| %>
             <li><%= text %></li>
           <% end %>

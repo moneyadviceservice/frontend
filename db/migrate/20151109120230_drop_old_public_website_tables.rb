@@ -23,8 +23,9 @@ class DropOldPublicWebsiteTables < ActiveRecord::Migration
         student_money_tips_tools
         student_money_tips_widget_hosts
         survey_responses
+        topics_users
         topics
-        topics_users)
+    )
 
     old_tables.each do |table_name|
       drop_table table_name if ActiveRecord::Base.connection.table_exists? table_name

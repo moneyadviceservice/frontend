@@ -27,35 +27,39 @@ en:
         image: retirements/rad-map.png
         body: Find a financial adviser to help with your retirement planning if you’re thinking about retiring or have already retired.
     section3:
-      - title: "What you'll need"
-        body: 'Find out why & when to save into a pension and how to work out what your pension pot might be.'
-        links:
-          - text: "Checklist - preparing for retirement"
-            url: /en/articles/checklist-things-to-do-as-retirement-approaches
-          - text: "When can I retire?"
-            url: /en/articles/when-can-i-afford-to-retire
-          - text: "Budgeting in retirement"
-            url: /en/pensions-and-retirement/budgeting
-          - text: Pension calculator
-            url: /en/tools/pension-calculator
-      - title: "What you've got"
-        body: 'Find out all the facts you need about making your transition into retirement.'
-        links:
-          - text: "Pension information: guide to the basic facts"
-            url: /en/articles/pension-information-guide-to-the-basic-facts
-          - text: "The State Pension: everything you need to know"
-            url: /en/articles/state-pensions
-          - text: "Work out your likely retirement income"
-            url: /en/articles/estimate-your-retirement-income
-      - title: "Your options"
-        body: "After you've transitioned into retirement, it's a good idea to regularly review your options."
-        links:
-          - text: "Retirement income options tool"
-            url: /en/retirement-income-options
-          - text: Options for using your pension pot
-            url: "/en/articles/options-for-using-your-pension-pot"
-          - text: "Understand and compare annuities tool"
-            url: /en/tools/annuities
+      panels:
+        - title: "What you'll need"
+          body: 'Find out why & when to save into a pension and how to work out what your pension pot might be.'
+          links:
+            - text: "Checklist - preparing for retirement"
+              url: /en/articles/checklist-things-to-do-as-retirement-approaches
+            - text: "When can I retire?"
+              url: /en/articles/when-can-i-afford-to-retire
+            - text: "Budgeting in retirement"
+              url: /en/pensions-and-retirement/budgeting
+            - text: Pension calculator
+              url: /en/tools/pension-calculator
+        - title: "What you've got"
+          body: 'Find out all the facts you need about making your transition into retirement.'
+          links:
+            - text: "Pension information: guide to the basic facts"
+              url: /en/articles/pension-information-guide-to-the-basic-facts
+            - text: "The State Pension: everything you need to know"
+              url: /en/articles/state-pensions
+            - text: "Work out your likely retirement income"
+              url: /en/articles/estimate-your-retirement-income
+        - title: "Your options"
+          body: "After you've transitioned into retirement, it's a good idea to regularly review your options."
+          links:
+            - text: "Retirement income options tool"
+              url: /en/retirement-income-options
+            - text: Options for using your pension pot
+              url: "/en/articles/options-for-using-your-pension-pot"
+            - text: "Understand and compare annuities tool"
+              url: /en/tools/annuities
+      pensionwise:
+        text: Book your free Pension Wise guidance session
+        url: https://www.pensionwise.gov.uk
     section4:
       panels1:
         - title: Types of pension

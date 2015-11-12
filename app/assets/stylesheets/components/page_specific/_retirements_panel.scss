@@ -25,3 +25,21 @@
   height: 0;
   padding-bottom: 48.5%;
 }
+
+.retirements-panel-callout {
+  @include clearfix();
+  background-color: $color-white;
+  border: 1px solid $color-grey-light;
+  padding: $baseline_unit;
+  position: relative;
+};
+
+.retirements-panel-callout__image {
+  float: left
+};
+
+.retirements-panel-callout__link {
+  @include body(16, 20);
+  display: block;
+  margin-left: 115px;
+};

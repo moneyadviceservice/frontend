@@ -27,35 +27,39 @@ cy:
         image: retirements/rad-map.png
         body: -X-
     section3:
-      - title: Beth fydd ei angen arnoch
-        body: -X-
-        links:
-          - text: Rhestr wirio - paratoi ar gyfer ymddeoliad
-            url: /cy/articles/rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau
-          - text: -X-
-            url: /cy/articles/pa-bryd-alla-i-fforddio-i-ymddeol
-          - text: Cynllunydd cyllideb
-            url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
-          - text: Cyfrifiannell bensiwn
-            url: /cy/tools/cyfrifiannell-pensiwn
-      - title: Faint sydd gennych chi
-        body: -X-
-        links:
-          - text: "Gwybodaeth ar bensiwn: canllaw i’r ffeithiau sylfaenol"
-            url: /cy/articles/canllaw-pensiwn-ffeithiau-allweddol-a-mathau-o-gynlluniau-pensiwn
-          - text: "Pensiwn y Wladwriaeth: popeth sydd angen i chi ei wybod"
-            url: /cy/articles/pensiynauar-wladwriaeth
-          - text: Cyfrifwch eich incwm ymddeol tebygol
-            url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
-      - title: Eich opsiynau
-        body: -X-
-        links:
-          - text: Offeryn Dewisiadau incwm ymddeol
-            url: /cy/opsiynau-incwm-ymddeoliad
-          - text: Opsiynau ar gyfer defnyddio’ch cronfa bensiwn
-            url: "/cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn"
-          - text: Offeryn deall a chymharu blwydd-daliadau
-            url: /cy/tools/annuities
+      panels:
+        - title: Beth fydd ei angen arnoch
+          body: -X-
+          links:
+            - text: Rhestr wirio - paratoi ar gyfer ymddeoliad
+              url: /cy/articles/rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau
+            - text: -X-
+              url: /cy/articles/pa-bryd-alla-i-fforddio-i-ymddeol
+            - text: Cynllunydd cyllideb
+              url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
+            - text: Cyfrifiannell bensiwn
+              url: /cy/tools/cyfrifiannell-pensiwn
+        - title: Faint sydd gennych chi
+          body: -X-
+          links:
+            - text: "Gwybodaeth ar bensiwn: canllaw i’r ffeithiau sylfaenol"
+              url: /cy/articles/canllaw-pensiwn-ffeithiau-allweddol-a-mathau-o-gynlluniau-pensiwn
+            - text: "Pensiwn y Wladwriaeth: popeth sydd angen i chi ei wybod"
+              url: /cy/articles/pensiynauar-wladwriaeth
+            - text: Cyfrifwch eich incwm ymddeol tebygol
+              url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
+        - title: Eich opsiynau
+          body: -X-
+          links:
+            - text: Offeryn Dewisiadau incwm ymddeol
+              url: /cy/opsiynau-incwm-ymddeoliad
+            - text: Opsiynau ar gyfer defnyddio’ch cronfa bensiwn
+              url: "/cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn"
+            - text: Offeryn deall a chymharu blwydd-daliadau
+              url: /cy/tools/annuities
+      pensionwise:
+        text: -X-
+        url: https://www.pensionwise.gov.uk
     section4:
       panels1:
         - title: -X-

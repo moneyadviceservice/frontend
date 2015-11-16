@@ -3,12 +3,8 @@ RSpec.describe 'Static page routing', type: :request  do
     context 'when the feature flag is enabled' do
       it 'routes correctly' do
         Feature.with(:annuities_landing_page) do
-          expect(get('/en/tools/annuities')).to route_to(
-            controller: 'landing_pages',
-            action:     'show',
-            locale:     'en',
-            id:         'annuities'
-          )
+          get('/en/tools/annuities')
+          expect(response).to be_success
         end
       end
     end

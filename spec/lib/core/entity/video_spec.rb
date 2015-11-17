@@ -4,7 +4,8 @@ RSpec.describe Core::Video do
       title: 'awesome-title',
       description: 'awesome-description',
       body: 'awesome-body',
-      categories: [:foo, :bar] }
+      categories: [:foo, :bar],
+      alternates: [:cy]}
   end
 
   subject do
@@ -13,7 +14,7 @@ RSpec.describe Core::Video do
 
   describe 'attributes' do
     it 'are set' do
-      %i{ type title description body categories }.each do |attr|
+      %i{ type title description body categories alternates }.each do |attr|
         expect(subject.public_send(attr)).to eql(params[attr])
       end
     end

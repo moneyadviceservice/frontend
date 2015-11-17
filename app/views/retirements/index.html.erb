@@ -82,37 +82,43 @@
   <div class="l-constrained">
     <div class="l-row retirements-panels retirements-panels--first">
       <% t('retirements.section4.panels1').each do |panel| %>
-        <div class="l-3col-even retirements-panels__panel">
+        <div class="l-3col-even retirements-panels__panel" data-dough-component="ViewAll">
           <h3><%= panel[:title] %></h3>
           <ul class="link-list">
             <% panel[:links].each do |link| %>
-              <li><%= link_to link[:text], link[:url] %></li>
+              <li data-dough-view-all-item><%= link_to link[:text], link[:url] %></li>
             <% end %>
           </ul>
+
+          <a data-dough-view-all-trigger class="view-all__trigger--hidden" href="#"><%= t('retirements.section4.view_all') %></a>
         </div>
       <% end %>
     </div>
     <div class="l-row retirements-panels retirements-panels">
       <% t('retirements.section4.panels2').each do |panel| %>
-        <div class="l-3col-even retirements-panels__panel">
+        <div class="l-3col-even retirements-panels__panel" data-dough-component="ViewAll">
           <h3><%= panel[:title] %></h3>
           <ul class="link-list">
             <% panel[:links].each do |link| %>
-              <li><%= link_to link[:text], link[:url] %></li>
+              <li data-dough-view-all-item><%= link_to link[:text], link[:url] %></li>
             <% end %>
           </ul>
+
+          <a data-dough-view-all-trigger class="view-all__trigger--hidden" href="#"><%= t('retirements.section4.view_all') %></a>
         </div>
       <% end %>
     </div>
     <div class="l-row retirements-panels retirements-panels--last">
       <% t('retirements.section4.panels3').each do |panel| %>
-        <div class="l-3col-even retirements-panels__panel">
+        <div class="l-3col-even retirements-panels__panel" data-dough-component="ViewAll">
           <h3><%= panel[:title] %></h3>
           <ul class="link-list">
             <% panel[:links].each do |link| %>
-              <li><%= link_to link[:text], link[:url] %></li>
+              <li data-dough-view-all-item><%= link_to link[:text], link[:url] %></li>
             <% end %>
           </ul>
+
+          <a data-dough-view-all-trigger class="view-all__trigger--hidden" href="#"><%= t('retirements.section4.view_all') %></a>
         </div>
       <% end %>
     </div>

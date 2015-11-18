@@ -41,12 +41,10 @@ module Core::Repository
       def find(id)
         response = connection.get(resource_url(id))
 
-        if Feature.active?(:redirects)
-          if response.status == 301
-            raise Core::Repository::CMS::Resource301Error.new(response.headers['Location'])
-          elsif response.status == 302
-            raise Core::Repository::CMS::Resource302Error.new(response.headers['Location'])
-          end
+        if response.status == 301
+          raise Core::Repository::CMS::Resource301Error.new(response.headers['Location'])
+        elsif response.status == 302
+          raise Core::Repository::CMS::Resource302Error.new(response.headers['Location'])
         end
 
         process_response(response)

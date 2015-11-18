@@ -15,7 +15,7 @@ module Core::Repository::CMS
     end
   end
 
-  RSpec.describe CMS, features: [:redirects] do
+  RSpec.describe CMS do
     subject do
       Class.new(CMS) do
         def resource_name

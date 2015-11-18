@@ -2,16 +2,9 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
     <%= render 'shared/svg/use_icon',
-               icon: 'icon--newsletter',
-               accessibility_title: t('newsletter_subscriptions.sticky.dont_ask_me_again'),
-               accessibility_description: 'Close this popup',
+               icon: 'email',
                svg_fallback_support: true
     %>
-    <span class="icon icon--newsletter">
-      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--email">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--email"></use>
-      </svg>
-    </span>
     <%= t('newsletter_subscriptions.title') %>
   <% end %>
 

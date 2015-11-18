@@ -42,22 +42,29 @@
     margin-left: -25px;
   }
 
-  .no-svg-icon--icon--newsletter{
-    html.no-svg & {
-      @extend .icon--close;
-    }
-  }
-
-  .icon--newsletter {
+  .no-svg-icon--email {
+    position: absolute;
+    top: -90px;
+    left: 50%;
     margin-left: -35px;
     border-radius: 50%;
+    background-color: $color-green-primary;
+    width: 70px;
+    height: 70px;
 
-    .svg-icon--email {
-      width: 36.396px; // 248.152px / (150 / 22);
-      height: 22px; // 150px / (150 / 22);
-      position: relative;
-      top: 24px; // (70px - (150px / (150 / 22))) / 2;
-      fill: #fff;
+    html.no-svg & {
+      @extend .icon--email;
+      margin-left: -28px;
+    }
+
+    & .svg-icon {
+      html.svg & {
+        width: 36px; // 248.152px / (150 / 22);
+        height: 22px; // 150px / (150 / 22);
+        position: relative;
+        top: 24px; // (70px - (150px / (150 / 22))) / 2;
+        fill: #fff;
+      }
     }
   }
 }

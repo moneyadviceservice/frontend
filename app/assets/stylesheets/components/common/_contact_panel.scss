@@ -42,6 +42,12 @@
     margin-left: -25px;
   }
 
+  .no-svg-icon--icon--newsletter{
+    html.no-svg & {
+      @extend .icon--close;
+    }
+  }
+
   .icon--newsletter {
     margin-left: -35px;
     border-radius: 50%;

@@ -112,40 +112,6 @@ RSpec.describe User, type: :model do
     expect(user.post_code).to eq('N7 0HS')
   end
 
-  describe 'callbacks' do
-    describe 'before create' do
-      it 'creates the CRM customer' do
-        expect { subject.save }.to change { Core::Registry::Repository[:customer].customers.size }.by(1)
-      end
-    end
-  end
-
-  describe '#valid_for_authentication?' do
-    context 'when user does not exist in crm' do
-      it 'returns false' do
-        subject.active = 1
-        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { false }
-        expect(subject.valid_for_authentication?).to be_falsey
-      end
-    end
-
-    context 'when user is not active' do
-      it 'returns false' do
-        subject.active = 0
-        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { true }
-        expect(subject.valid_for_authentication?).to be_falsey
-      end
-    end
-
-    context 'when user is in crm and active' do
-      it 'returns true' do
-        allow_any_instance_of(Core::Repository::Customers::Fake).to receive(:valid_for_authentication?) { true }
-        subject.active = 1
-        expect(subject.valid_for_authentication?).to be_truthy
-      end
-    end
-  end
-
   describe '#registered?' do
     context 'when user has accepted TCs' do
       it 'returns true' do
@@ -192,18 +158,12 @@ RSpec.describe User, type: :model do
   end
 
   describe '#send_devise_notification' do
-    it 'should invoke the devise mailer via delayed_job' do
-      expect do
-        subject.save!
-        subject.send_reset_password_instructions
-      end.to change { Delayed::Job.count }.by(1)
-    end
-
     it 'adds the job to the mailjet queue' do
       subject.save!
-      subject.send_reset_password_instructions
 
-      expect(Delayed::Job.last.queue).to eql('frontend_email')
+      expect do
+        subject.send_reset_password_instructions
+      end.to change { Delayed::Job.where(queue: 'frontend_email').count }.by(1)
     end
 
     context 'when the job runs', features: [:sign_in, :reset_passwords] do

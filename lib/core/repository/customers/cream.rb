@@ -20,10 +20,6 @@ module Core
           ::Cream::Client.instance.update_customer(customer.id, customer.to_crm_hash)
         end
 
-        def valid_for_authentication?(id)
-          find(id: id)
-        end
-
         private
 
         def find_options(options)

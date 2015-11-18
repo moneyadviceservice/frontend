@@ -18,7 +18,7 @@ module Core
 
           context 'when customer already exists' do
             before :each do
-              user
+              Interactors::Customer::Creator.new(user).call
               user.update_column(:customer_id, nil)
             end
 

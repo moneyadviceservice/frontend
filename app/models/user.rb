@@ -73,11 +73,13 @@ class User < ActiveRecord::Base
   private
 
   def create_to_crm
-    Delayed::Job.enqueue ::Jobs::CreateCustomer.new(self.id)
+    Delayed::Job.enqueue(Jobs::CreateCustomer.new(self.id),
+                         queue: 'frontend_crm')
   end
 
   def update_to_crm
-    Delayed::Job.enqueue ::Jobs::UpdateFromCustomer.new(self.id)
+    Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(self.id),
+                         queue: 'frontend_crm')
   end
 
   def uppercase_post_code

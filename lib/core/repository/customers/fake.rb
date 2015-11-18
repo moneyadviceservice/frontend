@@ -40,10 +40,6 @@ module Core
         def clear
           customers.clear
         end
-
-        def valid_for_authentication?(id)
-          true
-        end
       end
     end
   end

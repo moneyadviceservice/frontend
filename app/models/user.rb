@@ -36,12 +36,8 @@ class User < ActiveRecord::Base
   validates :contact_number, format: { with: /\A0[1237]\d{9}\z/, if: 'contact_number.present?'}, allow_blank: true
 
   before_save :fake_send_confirmation_email
-  before_create :create_to_crm
+  after_create :create_to_crm
   after_update :update_to_crm
-
-  def valid_for_authentication?
-    super && active? && Core::Registry::Repository[:customer].valid_for_authentication?(customer_id)
-  end
 
   def to_customer
     Converters::UserToCustomer.new(self).call
@@ -77,11 +73,11 @@ class User < ActiveRecord::Base
   private
 
   def create_to_crm
-    Core::Interactors::Customer::Creator.new(self).call
+    Delayed::Job.enqueue ::Jobs::CreateCustomer.new(self.id)
   end
 
   def update_to_crm
-    Core::Interactors::Customer::Updater.new(self).call
+    Delayed::Job.enqueue ::Jobs::UpdateFromCustomer.new(self.id)
   end
 
   def uppercase_post_code

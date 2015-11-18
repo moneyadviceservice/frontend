@@ -24,8 +24,8 @@ module Core::Repository::NewsletterSubscriptions
           allow(::Cream::ClientV2).to receive(:new) { fake_client }
         end
 
-        it 'returns false' do
-          expect(subject.register(email)).to be_falsey
+        it 'raises an error' do
+          expect { subject.register(email) }.to raise_error
         end
       end
     end

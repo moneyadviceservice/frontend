@@ -6,6 +6,7 @@ RSpec.describe SessionsController, type: :controller, features: [:reset_password
       let(:new_first_name) { 'Philip' }
 
       before :each do
+        Core::Interactors::Customer::Creator.new(user).call
         customer[:first_name] = new_first_name
       end
 

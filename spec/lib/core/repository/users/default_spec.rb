@@ -26,7 +26,7 @@ module Core
         subject { described_class.new }
 
         before :each do
-          user
+          Interactors::Customer::Creator.new(user).call
           customer = Registry::Repository[:customer].customers.first
           customer[:first_name] = 'Newfirstname'
           customer[:last_name] = 'Newlastname'

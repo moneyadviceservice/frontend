@@ -10,11 +10,12 @@ RSpec.describe SessionsController, type: :controller, features: [:reset_password
         customer[:first_name] = new_first_name
       end
 
-      it 'persists this to the database' do
+      it 'adds job to persist this to the database' do
         @request.env['devise.mapping'] = Devise.mappings[:user]
-        post :create, user: { email: user.email, password: user.password }, locale: 'en'
 
-        expect(User.first.reload.first_name).to eql(new_first_name)
+        expect do
+          post :create, user: { email: user.email, password: user.password }, locale: 'en'
+        end.to change { Delayed::Job.where("handler like '%UpdateUser%'").count }.by(1)
       end
 
       it 'removes custom session messages' do

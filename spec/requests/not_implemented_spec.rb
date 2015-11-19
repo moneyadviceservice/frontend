@@ -4,7 +4,7 @@ RSpec.describe 'Request we have no implementation for', type: :request do
   end
 end
 
-RSpec.describe 'Request that is redirected', type: :request, features: [:redirects] do
+RSpec.describe 'Request that is redirected', type: :request do
   it 'redirects to specified location' do
     VCR.use_cassette('/en/core/repository/categories/cms/find/redirected') do
       get('/en/categories/redirected')
@@ -14,7 +14,7 @@ RSpec.describe 'Request that is redirected', type: :request, features: [:redirec
   end
 end
 
-RSpec.describe 'Request that is redirected with extension', type: :request, features: [:redirects] do
+RSpec.describe 'Request that is redirected with extension', type: :request do
   it 'redirects to specified location' do
     VCR.use_cassette('/en/core/cms/cms_api/find/redirected') do
       get('/default.aspx')

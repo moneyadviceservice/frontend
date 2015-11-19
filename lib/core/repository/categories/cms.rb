@@ -21,12 +21,10 @@ module Core::Repository
         response = connection.get('/api/%{locale}/categories/%{id}.json' %
                                     { locale: I18n.locale, id: id })
 
-        if Feature.active?(:redirects)
-          if response.status == 301
-            raise Core::Repository::CMS::Resource301Error.new(response.headers['Location'])
-          elsif response.status == 302
-            raise Core::Repository::CMS::Resource302Error.new(response.headers['Location'])
-          end
+        if response.status == 301
+          raise Core::Repository::CMS::Resource301Error.new(response.headers['Location'])
+        elsif response.status == 302
+          raise Core::Repository::CMS::Resource302Error.new(response.headers['Location'])
         end
 
         response.body

@@ -6,7 +6,7 @@ RSpec.describe '404 catachall', type: :request do
   end
 end
 
-RSpec.describe '404 catachall', type: :request, features: [:redirects] do
+RSpec.describe '404 catachall', type: :request do
   context 'when page does not exist' do
     it 'renders the 404 page' do
       VCR.use_cassette('core/repository/cms/cms_api/find/idonotexist') do

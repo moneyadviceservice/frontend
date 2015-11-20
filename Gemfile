@@ -108,6 +108,7 @@ end
 group :production do
   gem 'syslog-logger'
   gem 'unicorn-rails'
+  gem 'rack-cors'
 end
 
 group :build, :test, :development do

@@ -7,6 +7,7 @@ require 'action_view/railtie'
 require 'active_model/railtie'
 require 'active_record/railtie'
 require 'sprockets/railtie'
+require 'rack/cors'
 
 require_relative '../lib/core_ext'
 require_relative '../lib/tool_mount_point'
@@ -37,6 +38,12 @@ module Frontend
     config.middleware.use 'OverrideHead' # convert HEAD requests to GET and return an empty body
     config.middleware.use 'RouteProbe' # respond to requests probing for a implemented route
     config.middleware.use 'VersionHeader' # add version of the running app to each response
+	config.middleware.use Rack::Cors do
+               allow do
+                   origins 'https;//azure.moneyadviceservice.org.uk'
+                   resource %r{/users/\d+.json},
+                       :headers => ['Origin', 'Accept', 'Content-Type'],
+                       :methods => [:post, :get]
 
     config.assets.initialize_on_precompile = true
 

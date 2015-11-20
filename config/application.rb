@@ -40,7 +40,7 @@ module Frontend
     config.middleware.use 'VersionHeader' # add version of the running app to each response
 	config.middleware.use Rack::Cors do
                allow do
-                   origins 'https;//azure.moneyadviceservice.org.uk'
+                   origins 'https://azure.moneyadviceservice.org.uk'
                    resource %r{/users/\d+.json},
                        :headers => ['Origin', 'Accept', 'Content-Type'],
                        :methods => [:post, :get]

@@ -47,6 +47,24 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :contact_number do %>
+          <%= f.errors_for :contact_number %>
+          <%= f.label :contact_number, class: "form__label-heading" %>
+          <%= f.text_field :contact_number, autofocus: true, "aria-describedby" => "tooltip_contact_number" %>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_contact_number" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.contact_number") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <%= f.form_row :password do %>
           <%= f.errors_for :password %>
           <%= f.label :password, class: "form__label-heading" %>
@@ -75,24 +93,6 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.form_row :current_password do %>
-          <%= f.errors_for :current_password %>
-          <%= f.label :current_password, class: "form__label-heading" %>
-          <%= f.password_field :current_password, autocomplete: "off", "aria-describedby" => "tooltip_current_password" %>
-        <% end %>
-      </div>
-
-      <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_current_password" data-dough-component="FieldHelpText">
-          <div class="tooltip__content-container">
-            <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.current_password") %></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="registration__row">
-      <div class="registration__field">
         <%= f.form_row :post_code do %>
           <%= f.errors_for :post_code %>
           <%= f.label :post_code, class: "form__label-heading" %>
@@ -109,11 +109,29 @@
       </div>
     </div>
 
+    <h3><%= t("authentication.settings.newsletter.title") %></h3>
+
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :opt_in_for_research do %>
+
+          <%= f.errors_for :opt_in_for_research %>
+
+          <fieldset class="form__group">
+            <div class="form__group-item">
+              <%= f.label :opt_in_for_research, class: "form__label-heading" do %>
+                <%= f.check_box :opt_in_for_research, class: "form__group-input" %>
+                <%= t("authentication.settings.opt_in_for_research.title") %>
+              <% end %>
+            </div>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :newsletter_subscription do %>
-
-          <h3><%= t("authentication.settings.newsletter.title") %></h3>
 
           <%= f.errors_for :newsletter_subscription %>
 
@@ -133,6 +151,24 @@
           </ul>
 
         <% end %>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :current_password do %>
+          <%= f.errors_for :current_password %>
+          <%= f.label :current_password, t('authentication.settings.current_password'), class: "form__label-heading" %>
+          <%= f.password_field :current_password, autocomplete: "off", "aria-describedby" => "tooltip_current_password" %>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_current_password" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.current_password") %></p>
+          </div>
+        </div>
       </div>
     </div>
 

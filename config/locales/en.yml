@@ -482,8 +482,16 @@ en:
         password_confirmation: Leave blank if you don't want to change your password
         postcode: Please enter a valid UK postcode if would like to update your current one
         current_password: We need your current password to confirm your changes
+        contact_number: Please enter a valid UK phone number
+      contact_number:
+        label: Contact number (optional)
+      current_password: Contact details (required to update settings)
+      opt_in_for_research:
+        title: I accept to be contacted for research purposes
+      password:
+        title: Change my password (Optional)
       newsletter:
-        title: Manage advice email preferences
+        title: Manage my preferences
         intro: "Stay subscribed to get..."
 
   technical_feedback:

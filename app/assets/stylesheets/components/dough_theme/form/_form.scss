@@ -92,3 +92,7 @@
 .form__input--small {
   max-width: 80px;
 }
+
+.form__list {
+  @include body(16, 24);
+}

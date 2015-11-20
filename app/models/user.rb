@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   VALID_AGE_RANGES = ['0-15', '16-17', '18-20', '21-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75+']
+  CRM_FIELDS = %w{ email first_name post_code newsletter_subscription  }
 
   def field_order
     [:first_name, :email, :password, :post_code]
@@ -78,8 +79,10 @@ class User < ActiveRecord::Base
   end
 
   def update_to_crm
-    Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(self.id),
-                         queue: 'frontend_crm')
+    if (changed & CRM_FIELDS).size > 0
+      Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(self.id),
+                           queue: 'frontend_crm')
+    end
   end
 
   def uppercase_post_code

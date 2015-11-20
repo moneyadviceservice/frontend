@@ -65,6 +65,24 @@
 
     <div class="registration__row">
       <div class="registration__field">
+        <%= f.form_row :post_code do %>
+          <%= f.errors_for :post_code %>
+          <%= f.label :post_code, class: "form__label-heading" %>
+          <%= f.text_field :post_code, "aria-describedby" => "tooltip_postcode" %>
+        <% end %>
+      </div>
+
+      <div class="registration__helper">
+        <div class="field-help-text field-help-text--jshide" id="tooltip_postcode" data-dough-component="FieldHelpText">
+          <div class="tooltip__content-container">
+            <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.postcode") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration__row">
+      <div class="registration__field">
         <%= f.form_row :password do %>
           <%= f.errors_for :password %>
           <%= f.label :password, class: "form__label-heading" %>
@@ -88,24 +106,6 @@
           <%= f.label :password_confirmation, class: "form__label-heading" %>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         <% end %>
-      </div>
-    </div>
-
-    <div class="registration__row">
-      <div class="registration__field">
-        <%= f.form_row :post_code do %>
-          <%= f.errors_for :post_code %>
-          <%= f.label :post_code, class: "form__label-heading" %>
-          <%= f.text_field :post_code, "aria-describedby" => "tooltip_postcode" %>
-        <% end %>
-      </div>
-
-      <div class="registration__helper">
-        <div class="field-help-text field-help-text--jshide" id="tooltip_postcode" data-dough-component="FieldHelpText">
-          <div class="tooltip__content-container">
-            <p class="tooltip__text"><%= t("authentication.settings.field_help_texts.postcode") %></p>
-          </div>
-        </div>
       </div>
     </div>
 

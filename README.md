@@ -163,6 +163,7 @@ We recommend having a flick through these when working on new features:
 * [Javascript styleguide](https://github.com/moneyadviceservice/javascript) – further detail on writing Javascript to the standards we follow
 * [Common front-end gotchas](https://github.com/moneyadviceservice/frontend-code-standards/blob/master/gotchas.md) – quick reference for some common gotchas that may be picked up in PR reviews
 * [Working with Dough](https://github.com/moneyadviceservice/made_with_dough/blob/master/README.md) – some information on how Dough works
+* [Adding Dough to a fresh Rails app](https://github.com/moneyadviceservice/frontend/wiki/Adding-Dough-to-a-fresh-Rails-app)
 
 ### Front-end Package Management
 

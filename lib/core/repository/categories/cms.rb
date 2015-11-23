@@ -6,10 +6,15 @@ module Core::Repository
       end
 
       def all
-        response = connection.get('/api/%{locale}/categories.json' % { locale: I18n.locale })
+        categories_url = '/api/%{locale}/categories.json' % { locale: I18n.locale }
+        response = connection.get(categories_url)
         response.body
-      rescue
-        raise RequestError, 'Unable to fetch Category JSON from Contento'
+      rescue => e
+        raise RequestError,
+              'Unable to fetch Category JSON from Contento' +
+              " url: [#{categories_url}]" +
+              " error: [#{e.inspect}]" +
+              " url_prefix: [#{connection.try(:url_prefix).inspect}]"
       end
 
       def find(id)

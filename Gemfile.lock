@@ -165,6 +165,8 @@ GEM
       spreadsheet
       syslog-logger
       uglifier (>= 1.0.3)
+    bugsnag (2.8.12)
+      json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
     byebug (2.7.0)
       columnize (~> 0.3)
@@ -372,8 +374,6 @@ GEM
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
     fssm (0.2.10)
-    gaffe (1.0.1)
-      rails (>= 3.2.0)
     geokit (1.10.0)
     geokit-rails (2.1.0)
       geokit (~> 1.5)
@@ -462,8 +462,6 @@ GEM
       sass-rails
     mas-fonts (0.0.2.5)
       rails
-    mas-frontend-helpers (0.0.1.9)
-      actionpack
     mas-mailer (0.3.2.10)
       delayed_job_active_record
       hashie
@@ -640,12 +638,11 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.1.2.137)
+    savings_calculator (1.2.0.138)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       jquery-rails
       mas-fonts
-      mas-frontend-helpers
       meta-tags
       rails (~> 4.1)
       sass-rails (~> 4.0.3)
@@ -730,6 +727,7 @@ DEPENDENCIES
   binding_of_caller
   bowndler (~> 1.0)
   budget_planner (~> 4.0.2)
+  bugsnag
   byebug
   capybara
   car_cost_tool (~> 1.0.4)
@@ -765,7 +763,6 @@ DEPENDENCIES
   feature!
   feedback (~> 0.3.1)
   foreman
-  gaffe
   guard-rubocop
   html_validation
   jquery-rails
@@ -801,7 +798,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails (~> 4.0.0)
-  savings_calculator (~> 1.1.0)
+  savings_calculator (~> 1.2.0)
   sdoc
   shoulda-matchers
   site_prism

@@ -11,10 +11,8 @@ module Core
         def call
           customer = Registry::Repository[:customer].find(email: user.email)
           user.customer_id = customer ? customer.id : Registry::Repository[:customer].create(user)
-
+          user.save!
           user
-        rescue
-          yield if block_given?
         end
       end
     end

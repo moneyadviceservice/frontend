@@ -101,14 +101,5 @@ module Core
         end
       end
     end
-
-    describe '#valid_for_authentication?' do
-      let(:user) { User.new(first_name: 'Phil') }
-      let(:customer_id) { subject.create(user) }
-
-      it 'returns true' do
-        expect(subject.valid_for_authentication?(customer_id)).to be_truthy
-      end
-    end
   end
 end

@@ -45,9 +45,12 @@ define(['jquery', 'DoughBaseComponent'],
    * @returns {MultiTableFilter}
    */
   ViewAllProto.init = function(initialised) {
+    this.$items = this.$el.find(this.config.itemSelector);
+    this.$trigger = this.$el.find(this.config.triggerSelector);
+
     this._hideAdditionalItems();
     this._displayTrigger();
-    this._bindTriggerEvent();
+    this._bindEvents();
     this._initialisedSuccess(initialised);
     return this;
   };
@@ -63,7 +66,7 @@ define(['jquery', 'DoughBaseComponent'],
   ViewAllProto._hideAdditionalItems = function() {
     var count = this.config.initialNumberOfItemsToDisplay - 1;
     var selector = this.config.itemSelector + ':gt('+ count +')';
-    this.$find(selector).addClass('view-all__item--hidden');
+    this.$el.find(selector).addClass('view-all__item--hidden');
   };
 
   /**
@@ -76,61 +79,35 @@ define(['jquery', 'DoughBaseComponent'],
    */
   ViewAllProto._displayTrigger = function() {
     if(this._moreItemsToDisplay()) {
-      this.$trigger().removeClass('view-all__trigger--hidden');
+      this.$trigger.removeClass('view-all__trigger--hidden');
     }
   }
 
   /**
-   * _bindTriggerEvent
+   * _bindEvents
    *
-   * Attaches a click event to each trigger to display the
+   * Binds DOM events
+   *
+   * @private
+   */
+  ViewAllProto._bindEvents = function() {
+    this.$trigger.on('click', $.proxy( this._triggerClickHandler, this ) );
+  }
+
+  /**
+   * _triggerClickHandler
+   *
+   * Click event handler to display the
    * remaining additional items.
    *
    * @private
    */
-  ViewAllProto._bindTriggerEvent = function() {
-    var self = this;
-    this.$trigger().on('click', function(e) {
-      e.preventDefault();
+  ViewAllProto._triggerClickHandler = function(event) {
+    event.preventDefault();
 
-      self.$items().removeClass('view-all__item--hidden');
-      self.$trigger().addClass('view-all__trigger--hidden');
-    });
+    this.$items.removeClass('view-all__item--hidden');
+    this.$trigger.addClass('view-all__trigger--hidden');
   }
-
-  /**
-   * $items
-   *
-   * Finds all of the items for the current component
-   *
-   * @returns {jQueryElements}
-   */
-  ViewAllProto.$items = function() {
-    return this.$find(this.config.itemSelector);
-  };
-
-  /**
-   * $trigger
-   *
-   * Finds the trigger element for the component
-   *
-   * @returns {jQueryElement}
-   */
-  ViewAllProto.$trigger = function() {
-    return this.$find(this.config.triggerSelector);
-  };
-
-  /**
-   * $find
-   *
-   * Sets up the page to only display the first set of visible items
-   *
-   * @param {String} Element selector
-   * @returns {HTMLElement} DOM element scoped to the component's parent element
-   */
-  ViewAllProto.$find = function(selector) {
-    return this.$el.find(selector);
-  };
 
   /**
    * _moreItemsToDisplay
@@ -141,7 +118,7 @@ define(['jquery', 'DoughBaseComponent'],
    * @private
    */
   ViewAllProto._moreItemsToDisplay = function() {
-    return this.$items().length > this.config.initialNumberOfItemsToDisplay
+    return this.$items.length > this.config.initialNumberOfItemsToDisplay
   }
 
   return ViewAll;

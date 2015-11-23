@@ -114,7 +114,7 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.form_row :opt_in_for_research do %>
+        <%= f.form_row :opt_in_for_research, html_options: {classes: "form__row--collapse"} do %>
 
           <%= f.errors_for :opt_in_for_research %>
 

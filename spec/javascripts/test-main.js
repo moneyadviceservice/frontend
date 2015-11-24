@@ -35,6 +35,7 @@ require.config({
     NewsletterSticky: 'app/assets/javascripts/components/NewsletterSticky',
     StickyColumn: 'app/assets/javascripts/components/StickyColumn',
     EmbedCodeGenerator: 'app/assets/javascripts/components/EmbedCodeGenerator',
+    ViewAll: 'app/assets/javascripts/components/ViewAll',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 

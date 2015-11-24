@@ -60,8 +60,8 @@ gem 'mortgage_calculator', '~> 1.3.5'
 gem 'payday_loans_intervention', '~> 1.4'
 gem 'pensions_calculator', '~> 1.0.0'
 gem 'quiz', git: 'git@github.com:moneyadviceservice/quiz.git'
-gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git'
 gem 'savings_calculator', '~> 1.2.0'
+gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'income-drawdown'
 gem 'timelines', '>= 1.2.0', git: 'git@github.com:moneyadviceservice/timelines.git'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales

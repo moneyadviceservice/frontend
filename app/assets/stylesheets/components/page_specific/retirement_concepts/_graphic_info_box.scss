@@ -1,0 +1,119 @@
+.graphic-info-box {
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  position:relative;
+  overflow: hidden;
+  @include respond-to($mq-m) {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+.graphic-info-box:after {
+  content:"";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid $color-line-gray;
+  left: 10px;
+  @include respond-to($mq-m) {
+    border-left: none;
+    left: 50%;
+  }
+}
+
+.graphic-info-box__heading {
+  margin-top: $baseline-unit * 9;
+  margin-bottom: $baseline-unit * 9;
+  float: right;
+  width: 92%;
+  @include respond-to($mq-m) {
+    float: none;
+    margin-top: 0;
+    margin-bottom: $baseline-unit * 9;
+    width: 100%;
+  }
+}
+
+.graphic-info-box__copy {
+  text-align: left;
+  width: 92%;
+  margin: 0 0 0 8%;
+  @include respond-to($mq-m) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.graphic-info-box__illustration {
+  width: 92%;
+  margin: 0 0 0 8%;
+  @include respond-to($mq-m) {
+    margin: 0;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+}
+
+.graphic-info-box__top-dot {
+  /* WIP */
+  float: left;
+  position: relative;
+  z-index: 3;
+  width: 18px !important;
+  height: 18px !important;
+  margin: $baseline-unit * 10 0 0 0; //Covert to baseline-unit
+  background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  @include respond-to($mq-m) {
+    float: none;
+    width: 32px !important;
+    height: 71px !important;
+    margin: 1em auto 0 auto;
+    background-image: url(image-path("retirement_concepts/top-green-dot.png"));
+  }
+}
+
+.graphic-info-box__line-fade-in {
+  @include respond-to($mq-m) {
+    width: 4px !important;
+    height: 64px !important;
+    background-image: url(image-path("retirement_concepts/line-fade-in.png"));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto -8px;
+    text-align: center;
+  }
+}
+
+.graphic-info-box__inline-dot {
+  /* WIP */
+  float: left;
+  position: relative;
+  z-index: 3;
+  width: 18px !important;
+  height: 18px !important;
+  margin: $baseline-unit*10 0 0 $baseline-unit/2; //Covert to baseline-unit
+  background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  @include respond-to($mq-m) {
+    float: none;
+    width: 32px !important;
+    height: 139px !important;
+    margin: 0 auto;
+    background-image: url(image-path("retirement_concepts/inline-green-dot.png"));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}

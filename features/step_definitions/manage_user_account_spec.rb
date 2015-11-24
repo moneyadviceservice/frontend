@@ -3,27 +3,24 @@ Given(/^a registered MAS user$/) do
 end
 
 Given(/^that I am on the user account edit settings page in "(.*?)"$/) do |language|
-  visit "/#{language_to_locale(language)}/users/edit"
+  settings_page.load(locale: 'en')
 
   expect(page).to have_content(I18n.t('authentication.settings.title'))
 end
 
 When(/^I fill in the contact number$/) do
-  within('.l-registration') do
-    fill_in 'user_contact_number', with: '03005000789'
-    fill_in 'user_current_password', with: 'password'
-  end
+  settings_page.contact_number.set '03005005000'
+  settings_page.current_password.set 'password'
 
-  click_on I18n.t('authentication.settings.label')
+  settings_page.submit.click
+  #click_on I18n.t('authentication.settings.label')
 end
 
 When(/^I check the research preference box$/) do
-  within('.l-registration') do
-    check 'user_opt_in_for_research'
-    fill_in 'user_current_password', with: 'password'
-  end
+  settings_page.opt_in_for_research.set true
+  settings_page.current_password.set 'password'
 
-  click_on I18n.t('authentication.settings.label')
+  settings_page.submit.click
 end
 
 Then(/^I should be able to update my user account$/) do

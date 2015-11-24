@@ -27,7 +27,7 @@ define(['jquery', 'DoughBaseComponent'],
    */
   function ViewAll($el, config) {
     ViewAll.baseConstructor.call(this, $el, config, defaultConfig);
-  }
+  };
 
   /**
    * Inherit from base module, for shared methods and interface
@@ -80,8 +80,8 @@ define(['jquery', 'DoughBaseComponent'],
   ViewAllProto._displayTrigger = function() {
     if(this._moreItemsToDisplay()) {
       this.$trigger.removeClass('view-all__trigger--hidden');
-    }
-  }
+    };
+  };
 
   /**
    * _bindEvents
@@ -92,7 +92,7 @@ define(['jquery', 'DoughBaseComponent'],
    */
   ViewAllProto._bindEvents = function() {
     this.$trigger.on('click', $.proxy( this._triggerClickHandler, this ) );
-  }
+  };
 
   /**
    * _triggerClickHandler
@@ -107,7 +107,7 @@ define(['jquery', 'DoughBaseComponent'],
 
     this.$items.removeClass('view-all__item--hidden');
     this.$trigger.addClass('view-all__trigger--hidden');
-  }
+  };
 
   /**
    * _moreItemsToDisplay
@@ -118,8 +118,8 @@ define(['jquery', 'DoughBaseComponent'],
    * @private
    */
   ViewAllProto._moreItemsToDisplay = function() {
-    return this.$items.length > this.config.initialNumberOfItemsToDisplay
-  }
+    return this.$items.length > this.config.initialNumberOfItemsToDisplay;
+  };
 
   return ViewAll;
 });

@@ -49,7 +49,7 @@
       <div class="registration__field">
         <%= f.form_row :contact_number do %>
           <%= f.errors_for :contact_number %>
-          <%= f.label :contact_number, t('authentication.settings.contact_number.label'), class: "form__label-heading" %>
+          <%= f.label :contact_number, class: "form__label-heading" %>
           <%= f.text_field :contact_number, autofocus: true, "aria-describedby" => "tooltip_contact_number" %>
         <% end %>
       </div>

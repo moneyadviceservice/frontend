@@ -1,4 +1,4 @@
-RSpec.describe 'Timelines', type: :request, features: [:timelines] do
+RSpec.describe 'Timelines', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::Timelines::EN_ID}
     /cy/tools/#{ToolMountPoint::Timelines::CY_ID}

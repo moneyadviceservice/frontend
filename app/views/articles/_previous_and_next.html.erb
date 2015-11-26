@@ -1,27 +1,25 @@
-<% if Feature.active?(:previous_and_next_links) %>
-  <div class="previous-and-next">
-    <% if @article.previous_link.present? %>
-      <div class="previous-and-next__previous">
-          <%= link_to @article.previous_link.path do %>
-            <div class="previous-and-next__chevron--left">
-              <span class='icon icon--left-chevron'></span>
-            </div>
-            <strong><%= t('.previous') %></strong>
-            <p><%= @article.previous_link.title %></p>
-          <% end %>
-      </div>
-    <% end %>
+<div class="previous-and-next">
+  <% if @article.previous_link.present? %>
+    <div class="previous-and-next__previous">
+        <%= link_to @article.previous_link.path do %>
+          <div class="previous-and-next__chevron--left">
+            <span class='icon icon--left-chevron'></span>
+          </div>
+          <strong><%= t('.previous') %></strong>
+          <p><%= @article.previous_link.title %></p>
+        <% end %>
+    </div>
+  <% end %>
 
-    <% if @article.next_link.present? %>
-      <div class="previous-and-next__next">
-          <%= link_to @article.next_link.path do %>
-            <strong><%= t('.next') %></strong>
-            <div class="previous-and-next__chevron--right">
-              <span class='icon icon--right-chevron'></span>
-            </div>
-            <p><%= @article.next_link.title %></p>
-          <% end %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+  <% if @article.next_link.present? %>
+    <div class="previous-and-next__next">
+        <%= link_to @article.next_link.path do %>
+          <strong><%= t('.next') %></strong>
+          <div class="previous-and-next__chevron--right">
+            <span class='icon icon--right-chevron'></span>
+          </div>
+          <p><%= @article.next_link.title %></p>
+        <% end %>
+    </div>
+  <% end %>
+</div>

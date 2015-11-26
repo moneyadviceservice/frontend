@@ -8,13 +8,10 @@ Feature: Callback requester
     Given I am viewing an article with callback enabled
     Then  I should not see the callback requester panel
 
-  @enable-callback-requester
   Scenario: When viewing callback disabled article
     Given I am viewing an article with callback disabled
     Then  I should not see the callback requester panel
 
-  @enable-callback-requester
   Scenario: When viewing callback enabled article
     Given I am viewing an article with callback enabled
     Then  I should see the callback requester panel
-

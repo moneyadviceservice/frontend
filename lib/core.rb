@@ -97,10 +97,6 @@ module Core
       autoload :CMS, 'core/repository/categories/cms'
     end
 
-    module CallbackRequestable
-      autoload :Static, 'core/repository/callback_requestable/static'
-    end
-
     module Feedback
       autoload :Email, 'core/repository/feedback/email'
     end

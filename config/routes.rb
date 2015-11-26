@@ -22,10 +22,6 @@ Rails.application.routes.draw do
 
     get '/sitemap', to: 'sitemap#index'
 
-    if Feature.active?(:improvements)
-      mount Feedback::Engine => '/improvements'
-    end
-
     devise_for :users,
                only: [:registrations, :sessions, :passwords],
                controllers: {
@@ -34,126 +30,84 @@ Rails.application.routes.draw do
                  passwords: 'passwords'
                }
 
-    if Feature.active?(:profile)
-      scope '/users' do
-        resource :profile, only: [:edit, :update], controller: :profile
-      end
+    scope '/users' do
+      resource :profile, only: [:edit, :update], controller: :profile
     end
 
-    Feature.with(:cost_calculator_builder) do
-      mount CostCalculatorBuilder::Engine => '/:engine_id',
-            constraints: EngineMountPoint.for(:cost_calculator_builder)
-    end
+    mount Agreements::Engine => '/:tool_id',
+          constraints: ToolMountPoint.for(:agreements)
 
-    Feature.with(:budget_planner) do
-      bpmp = ToolMountPoint.for(:budget_planner)
-      budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
+    mount AdvicePlans::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:advice_plans)
 
-      mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
-            constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
-    end
+    mount ActionPlans::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:action_plans)
 
-    Feature.with(:baby_cost_calculator) do
-      mount BabyCostCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:baby_cost_calculator)
-    end
+    mount CostCalculatorBuilder::Engine => '/:engine_id',
+          constraints: EngineMountPoint.for(:cost_calculator_builder)
 
-    Feature.with(:car_cost_tool) do
-      mount CarCostTool::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:car_cost_tool)
-    end
+    bpmp = ToolMountPoint.for(:budget_planner)
+    budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
+    mount BudgetPlanner::Engine => '/tools/:tool_id(/:incognito)',
+          constraints: { tool_id: budget_planner_url_constraint, incognito: /incognito/ }
 
-    Feature.with(:action_plans) do
-      mount ActionPlans::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:action_plans)
-    end
+    mount BabyCostCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:baby_cost_calculator)
 
-    Feature.with(:contribution_calculator) do
-      mount ContributionCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:contribution_calculator)
-    end
+    mount CarCostTool::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:car_cost_tool)
 
-    Feature.with(:cutback_calculator) do
-      mount CutbackCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:cutback_calculator)
-    end
+    mount ContributionCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:contribution_calculator)
 
-    Feature.with(:debt_and_mental_health) do
-      mount DebtAndMentalHealth::Engine => '/:tool_id',
-            constraints: ToolMountPoint.for(:debt_and_mental_health)
-    end
+    mount CutbackCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:cutback_calculator)
 
-    Feature.with(:debt_free_day_calculator) do
-      mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:debt_free_day_calculator)
-    end
+    mount DebtAndMentalHealth::Engine => '/:tool_id',
+          constraints: ToolMountPoint.for(:debt_and_mental_health)
 
-    Feature.with(:debt_advice_locator) do
-      mount DebtAdviceLocator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:debt_advice_locator)
-    end
+    mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:debt_free_day_calculator)
 
-    Feature.with(:debt_test) do
-      mount DebtTest::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:debt_test)
-    end
+    mount DebtAdviceLocator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:debt_advice_locator)
 
-    Feature.with(:health_check) do
-      mount AdvicePlans::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:advice_plans)
+    mount DebtTest::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:debt_test)
 
-      mount DecisionTrees::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:decision_trees)
-    end
+    mount DecisionTrees::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:decision_trees)
 
-    Feature.with(:mortgage_calculator) do
-      mount MortgageCalculator::Engine => '/tools/:tool_id',
-            constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
-    end
+    mount Feedback::Engine => '/improvements'
 
-    Feature.with(:payday_loans) do
-      mount PaydayLoansIntervention::Engine => '/:tool_id',
-            constraints: ToolMountPoint.for(:payday_loans)
-    end
+    mount MortgageCalculator::Engine => '/tools/:tool_id',
+          constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
+
+    mount PaydayLoansIntervention::Engine => '/:tool_id',
+          constraints: ToolMountPoint.for(:payday_loans)
 
     mount PensionsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pensions_calculator)
 
-    Feature.with(:rio) do
-      mount Rio::Engine => '/:engine_id',
-            constraints: EngineMountPoint.for(:rio)
-    end
+    mount Quiz::Engine => '/tools/:tool_id',
+      constraints: ToolMountPoint.for(:quiz)
 
-    Feature.with(:pensions_and_retirement) do
-      get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
-      get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
-      get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'
-      get LandingPagePaths.path(:retirements, :budgeting, :cy), to: 'retirements#budgeting'
-    end
+    mount Rio::Engine => '/:engine_id',
+          constraints: EngineMountPoint.for(:rio)
 
-    Feature.with(:savings_calculator) do
-      mount SavingsCalculator::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:savings_calculator)
-    end
+    mount SavingsCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:savings_calculator)
 
-    Feature.with(:annuities_landing_page) do
-      get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
-    end
+    mount Timelines::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:timelines)
 
-    Feature.with(:timelines) do
-      mount Timelines::Engine => '/tools/:tool_id',
-            constraints: ToolMountPoint.for(:timelines)
-    end
 
-    if Feature.active?(:agreements)
-      mount Agreements::Engine => '/:tool_id',
-            constraints: ToolMountPoint.for(:agreements)
-    end
+    get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
+    get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
+    get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'
+    get LandingPagePaths.path(:retirements, :budgeting, :cy), to: 'retirements#budgeting'
 
-    Feature.with(:quiz) do
-      mount Quiz::Engine => '/tools/:tool_id',
-        constraints: ToolMountPoint.for(:quiz)
-    end
+    get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do

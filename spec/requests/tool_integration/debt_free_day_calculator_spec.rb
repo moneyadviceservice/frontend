@@ -1,4 +1,4 @@
-RSpec.describe 'Debt Free Day Calculator', features: [:debt_free_day_calculator], type: :request do
+RSpec.describe 'Debt Free Day Calculator', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::DebtFreeDayCalculator::LoanCalculator::EN_ID}
     /cy/tools/#{ToolMountPoint::DebtFreeDayCalculator::LoanCalculator::CY_ID}

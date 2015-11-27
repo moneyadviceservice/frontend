@@ -1,4 +1,4 @@
-RSpec.describe 'Mortgage Calculator', features: [:mortgage_calculator], type: :request do
+RSpec.describe 'Mortgage Calculator', type: :request do
   %w(
     /en/tools/mortgage-calculator
     /cy/tools/cyfrifiannell-morgais

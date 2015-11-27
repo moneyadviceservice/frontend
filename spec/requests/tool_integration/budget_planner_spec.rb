@@ -1,4 +1,4 @@
-RSpec.describe 'Budget Planner', type: :request, features: [:budget_planner, :registration] do
+RSpec.describe 'Budget Planner', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::BudgetPlanner::EN_ID}
     /cy/tools/#{ToolMountPoint::BudgetPlanner::CY_ID}

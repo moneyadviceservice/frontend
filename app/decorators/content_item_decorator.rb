@@ -3,7 +3,7 @@ require 'html_processor'
 class ContentItemDecorator < Draper::Decorator
   decorates_association :categories, with: CategoryDecorator
 
-  delegate :title, :type, :slug, :description, :callback_requestable?, :id
+  delegate :title, :type, :slug, :description, :id
 
   def initialize(object, options = {})
     super

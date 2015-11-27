@@ -3,14 +3,12 @@ Feature: Reset password
   I want to be able to reset my password
   so that I can access my account.
 
-  @enable-reset-passwords
   Scenario: Forgotten password
     Given I have an account
     And   I attempt to sign in
     When  I click on 'Forgot your password?'
     Then  I should be on a page instructing me of the next steps
 
-  @enable-reset-passwords
   Scenario: Resetting password
       Given I have an account
       And   I attempt to sign in

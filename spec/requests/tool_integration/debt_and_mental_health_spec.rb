@@ -1,4 +1,4 @@
-RSpec.describe 'Debt Mental Health', type: :request, features: [:debt_and_mental_health] do
+RSpec.describe 'Debt Mental Health', type: :request do
   %W(
     /en/#{ToolMountPoint::DebtAndMentalHealth::EN_ID}/preview
   ).each do |path|

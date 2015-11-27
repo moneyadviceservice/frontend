@@ -1,4 +1,4 @@
-RSpec.describe 'Savings Calculator', features: [:savings_calculator], type: :request do
+RSpec.describe 'Savings Calculator', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::SavingsCalculator::EN_ID}
     /cy/tools/#{ToolMountPoint::SavingsCalculator::CY_ID}

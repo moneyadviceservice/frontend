@@ -1,4 +1,4 @@
-RSpec.describe ToolMountPoint::DecisionTrees, type: :request, features: [:health_check, :registration] do
+RSpec.describe ToolMountPoint::DecisionTrees, type: :request do
   %W(
     /en/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::EN_ID}
     /cy/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::CY_ID}

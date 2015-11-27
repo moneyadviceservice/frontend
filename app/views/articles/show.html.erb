@@ -23,12 +23,6 @@
 
       <%= article.content %>
 
-      <% if Feature.active?(:callback_requester) %>
-        <% if article.callback_requestable? %>
-          <%= render 'callback_requester'  %>
-        <% end %>
-      <% end %>
-
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>

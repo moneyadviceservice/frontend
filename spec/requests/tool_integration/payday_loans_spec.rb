@@ -1,4 +1,4 @@
-RSpec.describe 'Payday Loans', type: :request, features: [:payday_loans] do
+RSpec.describe 'Payday Loans', type: :request do
   %W(
     /en/#{ToolMountPoint::PaydayLoans::EN_ID}
     /cy/#{ToolMountPoint::PaydayLoans::CY_ID}

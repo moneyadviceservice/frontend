@@ -64,22 +64,6 @@ Around do |scenario, block|
   end
 end
 
-['@enable-sign-in', '@enable-registration', '@enable-reset-passwords'].each do |tag|
-  Around(tag) do |scenario, block|
-    Feature.run_with_activated(:sign_in) do
-      Devise.regenerate_helpers!
-      Devise.class_variable_set(:@@warden_configured, false)
-      Devise.configure_warden!
-
-      block.call
-    end
-
-    Devise.regenerate_helpers!
-    Devise.class_variable_set(:@@warden_configured, false)
-    Devise.configure_warden!
-  end
-end
-
 AfterConfiguration do
   DatabaseCleaner.clean
   ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])

@@ -1,4 +1,4 @@
-RSpec.describe 'Feedback', type: :request, features: [:improvements] do
+RSpec.describe 'Feedback', type: :request do
   %w(
     /en/improvements
     /cy/improvements

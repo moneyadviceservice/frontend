@@ -1,4 +1,3 @@
-@enable-quiz
 Feature: Quiz Authentication
   In order to ensure that users of the Quiz app can sign in to the mounted quiz without any problems.
 

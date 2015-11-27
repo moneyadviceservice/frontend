@@ -1,4 +1,4 @@
-RSpec.describe 'Feedback', type: :request, features: [:agreements] do
+RSpec.describe 'Feedback', type: :request do
   %w(
     /en/agreements/debt_evaluation_toolkit/new
     /en/agreements/partners/new

@@ -1,4 +1,4 @@
-RSpec.describe SessionsController, type: :controller, features: [:reset_passwords] do
+RSpec.describe SessionsController, type: :controller do
   describe '#create' do
     context 'when user has been updated in CRM' do
       let!(:user) { FactoryGirl.create(:user) }

@@ -1,4 +1,4 @@
-RSpec.describe 'Advice Plans', type: :request, features: [:health_check, :registration] do
+RSpec.describe 'Advice Plans', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::AdvicePlans::EN_ID}
     /cy/tools/#{ToolMountPoint::AdvicePlans::CY_ID}

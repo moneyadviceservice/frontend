@@ -3,7 +3,6 @@ Feature: My Account
   I want to view my Account
   So I can receive personalised information
 
-  @enable-profile
   Scenario: Feature enabled
     Given I am signed in
     And   I am on the home page

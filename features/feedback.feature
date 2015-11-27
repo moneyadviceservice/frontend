@@ -1,4 +1,3 @@
-@enable-feedback
 Feature: Giving feedback on an article
   As a visitor to the website
   When I have feedback to give about an article

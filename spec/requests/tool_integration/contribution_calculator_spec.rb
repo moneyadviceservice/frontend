@@ -1,10 +1,10 @@
-RSpec.describe ToolMountPoint::ContributionCalculator, type: :request, features: [:contribution_calculator] do
+RSpec.describe ToolMountPoint::ContributionCalculator, type: :request do
   %W(
     /en/tools/#{ToolMountPoint::ContributionCalculator::EN_ID}
     /cy/tools/#{ToolMountPoint::ContributionCalculator::CY_ID}
   ).each do |path|
-    describe path do 
-      before do 
+    describe path do
+      before do
         get path
       end
 

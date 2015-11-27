@@ -166,7 +166,7 @@ RSpec.describe User, type: :model do
       end.to change { Delayed::Job.where(queue: 'frontend_email').count }.by(1)
     end
 
-    context 'when the job runs', features: [:sign_in, :reset_passwords] do
+    context 'when the job runs' do
       it 'sends an email' do
         subject.save!
         subject.send_reset_password_instructions

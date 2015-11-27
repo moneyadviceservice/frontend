@@ -1,4 +1,4 @@
-RSpec.describe 'Redundancy pay calculator', type: :request, features: [:action_plans] do
+RSpec.describe 'Redundancy pay calculator', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::ActionPlans::EN_ID}
     /cy/tools/#{ToolMountPoint::ActionPlans::CY_ID}

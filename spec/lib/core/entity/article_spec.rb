@@ -325,22 +325,6 @@ module Core
       end
     end
 
-    describe '#callback_requestable?' do
-      context 'when it is not requestable' do
-        it 'returns false' do
-          expect(subject.callback_requestable?).to be_falsey
-        end
-      end
-
-      context 'when it is requestable' do
-        subject { described_class.new('managing-your-money-if-your-job-is-at-risk', attributes) }
-
-        it 'returns true' do
-          expect(subject.callback_requestable?).to be_truthy
-        end
-      end
-    end
-
     describe '#redirect?' do
       it 'is falsey' do
         expect(subject.redirect?).to be_falsey

@@ -9,7 +9,7 @@
   margin-bottom: $baseline-unit*2;
   border-bottom: 1px solid $color-newsletter-input-border;
 
-  @include respond-to($mq-m) {
+  @include respond-to($mq-l) {
     border-bottom: 0;
   }
 
@@ -104,17 +104,6 @@
   @include respond-to($mq-l) {
     @include body(30, 48);
     margin: $baseline-unit*2 0 $baseline-unit 0;
-  }
-}
-
-.contact-panel__border {
-  border-right: 1px solid $color-newsletter-input-border;
-  height: 0;
-  float: left;
-  margin-left: -1px;
-
-  @include respond-to($mq-m) {
-    height: 400px;
   }
 }
 

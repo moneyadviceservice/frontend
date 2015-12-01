@@ -35,6 +35,12 @@ a[href^="https://accessin.org/"]:after {
   display: none;
 }
 
+// override for social sharing links that do not contain moneyadviceservice but do not require external link icon
+.social-sharing__item__icon[href*="facebook"]:after,
+.social-sharing__item__icon[href*="twitter"]:after {
+  display: none;
+}
+
 a[href^="mailto:"] {
   word-break: break-all;
 }

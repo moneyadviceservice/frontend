@@ -11,6 +11,7 @@ When(/^I sign up to the newsletter with a valid email address$/) do
   allow(Core::Registry::Repository).to receive(:[]).with(:newsletter_subscription) do
     Core::Repository::NewsletterSubscriptions::Fake.new
   end
+  allow(Core::Registry::Repository).to receive(:[]).with(:home_page).and_call_original
   allow(Core::Registry::Repository).to receive(:[]).with(:category).and_call_original
 
   current_page.newsletter.email.set 'clark.kent@gmail.com'

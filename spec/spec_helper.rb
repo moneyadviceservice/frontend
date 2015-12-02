@@ -66,12 +66,16 @@ RSpec.configure do |c|
     category_repository    = Core::Registry::Repository[:category]
     corporate_repository   = Core::Registry::Repository[:corporate]
     search_repository      = Core::Registry::Repository[:search]
+    home_page_repository   = Core::Registry::Repository[:home_page]
+    preview_repository     = Core::Registry::Repository[:preview]
 
     Core::Registry::Repository[:action_plan] = Core::Repository::VCR.new(action_plan_repository)
     Core::Registry::Repository[:article]     = Core::Repository::VCR.new(article_repository)
     Core::Registry::Repository[:category]    = Core::Repository::VCR.new(category_repository)
     Core::Registry::Repository[:corporate]   = Core::Repository::VCR.new(corporate_repository)
     Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
+    Core::Registry::Repository[:home_page]   = Core::Repository::VCR.new(home_page_repository)
+    Core::Registry::Repository[:preview]     = Core::Repository::VCR.new(preview_repository)
 
     if example.metadata[:features]
       Feature.run_with_activated(*example.metadata[:features]) do
@@ -96,6 +100,8 @@ RSpec.configure do |c|
     Core::Registry::Repository[:category]    = category_repository
     Core::Registry::Repository[:corporate]   = corporate_repository
     Core::Registry::Repository[:search]      = search_repository
+    Core::Registry::Repository[:home_page]   = home_page_repository
+    Core::Registry::Repository[:preview]     = preview_repository
   end
 
   c.before(:suite) do

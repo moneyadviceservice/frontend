@@ -2,6 +2,11 @@ Given(/^I (?:am on|visit) the home page$/) do
   home_page.load
 end
 
+Given(/^cms home page enabled$/) do
+  Core::Registry::Repository[:home_page] =
+    Core::Repository::VCR.new(Core::Repository::HomePages::CMS.new)
+end
+
 Given(/^I view the home page in (.*)$/) do |language|
   locale = language_to_locale(language)
 
@@ -20,8 +25,11 @@ Then(/^I should see the Money Advice Service brand identity$/) do
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
+  expected_en = "head 1"
+  expected_cy = "wufhwehfu"
+
   expect(home_page.trust_banner.heading)
-    .to have_content(I18n.t('home.show.strapline'))
+    .to have_content(eval("expected_#{I18n.locale}"))
 end
 
 Then(/^I should see directory items$/) do
@@ -29,12 +37,12 @@ Then(/^I should see directory items$/) do
 end
 
 Then(/^I should see promoted content$/) do
-  expected_text = I18n.t('home.show.promoted').map { |item| item[:text] }
+  expected_text = ["head 1", "neck 2", "break 3", "fail 4"]
   actual_text   = home_page.promos.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)
 
-  expected_text = I18n.t('home.show.promoted_no_image').map { |item| item[:text] }
+  expected_text = ["head 1", "neck 2"]
   actual_text = home_page.promos_no_image.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)

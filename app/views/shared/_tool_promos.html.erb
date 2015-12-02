@@ -10,12 +10,12 @@
       </div>
     <% end %>
     <% items.each do |item| %>
-      <%= link_to item[:url], class: 'l-tool-promos__item promo__link' do %>
+      <%= link_to item['url'], class: 'l-tool-promos__item promo__link' do %>
         <%= heading_tag(level: 3, class: 'promo__heading') do %>
-          <%= item[:heading] %>
+          <%= item['heading'] %>
         <% end %>
         <p class="promo__content">
-          <%= item[:text] %>
+          <%= item['text'] %>
         </p>
         <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'promo__arrow' %>
       <% end %>

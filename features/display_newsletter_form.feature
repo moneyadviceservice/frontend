@@ -13,9 +13,3 @@ Feature: Display sticky newsletter
   Scenario: dismiss newsletter
     When I dismiss the newsletter
     Then I should not see it again for another month
-
-  @javascript
-  Scenario: scroll beyond 50% of the page
-    Given I am on the home page
-    When I scroll to the bottom of the page
-    Then I should see a sticky newsletter sign up form

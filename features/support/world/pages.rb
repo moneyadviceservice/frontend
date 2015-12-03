@@ -11,6 +11,7 @@ module World
       article_feedback
       category
       corporate
+      corporate_categories
       corporate_tool
       corporate_tool_directory
       forgot_password
@@ -21,11 +22,13 @@ module World
       profile
       quiz_admin
       search_results
+      sitemap
       settings
       sign_in
       sign_up
       static
       technical_feedback
+      tools
     )
 
     pages.each do |page|

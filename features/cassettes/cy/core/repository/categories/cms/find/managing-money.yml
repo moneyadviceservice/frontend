@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/cy/categories/managing-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jones-Agyemang-00073.local; jonesagyemang; 11075) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - da9fe4cf-5cc2-4883-9a3e-b3e10958ef18
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0fe845f4f89e34d5cc5453011fca7018"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - da9fe4cf-5cc2-4883-9a3e-b3e10958ef18
+      X-Runtime:
+      - '0.016581'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Mon, 07 Dec 2015 15:13:37 GMT
+      Content-Length:
+      - '242'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"managing-money","type":"category","title":"Managing money","description":null,"parent_id":"budgeting-and-managing-money","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 15:13:37 GMT
+recorded_with: VCR 2.9.2

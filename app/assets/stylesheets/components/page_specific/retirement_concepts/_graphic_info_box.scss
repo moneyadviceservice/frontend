@@ -63,30 +63,34 @@
 }
 
 .graphic-info-box__top-dot {
-  /* WIP */
   float: left;
   position: relative;
   z-index: 3;
-  width: 18px !important;
-  height: 18px !important;
-  margin: $baseline-unit * 10 0 0 0; //Covert to baseline-unit
+  width: 18px;
+  height: 18px;
+  margin: $baseline-unit * 10 0 0 0;
   background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
   @include respond-to($mq-m) {
     float: none;
-    width: 32px !important;
-    height: 71px !important;
+    width: 32px;
+    height: 71px;
     margin: 1em auto 0 auto;
     background-image: url(image-path("retirement_concepts/top-green-dot.png"));
   }
 }
 
+.ie8 .graphic-info-box__top-dot {
+  background-image: url(image-path("retirement_concepts/top-green-dot-x1.png"));
+}
+
+
 .graphic-info-box__line-fade-in {
   @include respond-to($mq-m) {
-    width: 4px !important;
-    height: 64px !important;
+    width: 4px;
+    height: 64px;
     background-image: url(image-path("retirement_concepts/line-fade-in.png"));
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -96,13 +100,12 @@
 }
 
 .graphic-info-box__inline-dot {
-  /* WIP */
   float: left;
   position: relative;
   z-index: 3;
   width: 18px !important;
   height: 18px !important;
-  margin: $baseline-unit*10 0 0 $baseline-unit/2; //Covert to baseline-unit
+  margin: $baseline-unit*10 0 0 $baseline-unit/2;
   background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -116,4 +119,8 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+}
+
+.ie8 .graphic-info-box__inline-dot {
+  background-image: url(image-path("retirement_concepts/inline-green-dot-x1.png"));
 }

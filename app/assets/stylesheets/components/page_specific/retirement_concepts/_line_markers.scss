@@ -5,7 +5,6 @@
   @include respond-to($mq-m) {
     left: 50%;
   }
-
 }
 
 .line-marker--waypoint{
@@ -25,19 +24,14 @@
   margin-left: -16px;
 }
 
-.line-marker__inline-dot {
-  width: 32px !important;
-  height: 139px !important;
-  margin: 0 auto;
-  background-image: url(image-path("retirement_concepts/inline-green-dot.png"));
+.line-marker__small-outline-dot{
+  width: 14px;
+  height: 14px;
+  background-image: url(image-path('retirement_concepts/small-outline-dot.png'));
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.line-marker__small-outline-dot{
-  width: 14px !important;
-  height: 14px !important;
-  background-image: url(image-path('retirement_concepts/small-outline-dot.png'));
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+.ie8 .line-marker__small-outline-dot{
+  background-image: url(image-path('retirement_concepts/small-outline-dot-x1.png'));
 }

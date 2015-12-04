@@ -145,14 +145,18 @@ cy:
       smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
       bank_holiday_html: |
         Dydd Sul a Gwyliau Banc, ar gau
+      opening_times_html: |
+        <ul class="contact-panel__list">
+          <li class="contact-panel__additional-info">Bydd y Gwasanaeth Cynghori Ariannol yn rhedeg gwasanaeth cyfyngedig dros gyfnod y Nadolig.</li>
+          <li class="contact-panel__additional-info">I weld ein horiau agor dros y Nadolig, ewch i’n tudalen <a href="/cy/corporate/cysylltu-a-ni">Cysylltu â ni</a>.</li>
+        </ul>
     call_us:
       title: Ffoniwch ni
       description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
       opening_times_html: |
         <ul class="contact-panel__list">
-          <li class="contact-panel__additional-info">Llun i Wener, 8am i 8pm</li>
-          <li class="contact-panel__additional-info">Dydd Sadwrn, 9am i 1pm</li>
-          <li class="contact-panel__additional-info">Dydd Sul a Gwyliau Banc, ar gau</li>
+          <li class="contact-panel__additional-info">Bydd y Gwasanaeth Cynghori Ariannol yn rhedeg gwasanaeth cyfyngedig dros gyfnod y Nadolig.</li>
+          <li class="contact-panel__additional-info">I weld ein horiau agor dros y Nadolig, ewch i’n tudalen <a href="/cy/corporate/cysylltu-a-ni">Cysylltu â ni</a>.</li>
         </ul>
       smallprint: "Mae galwadau yn costio’r un faint â galw rhif 01 neu 02. Os oes gennych becyn galw “munudau am ddim”, gwiriwch gyda’ch darparwr bod rhifau 03 yn cael eu cynnwys."
     sharing:

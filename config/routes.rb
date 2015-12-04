@@ -120,6 +120,9 @@ Rails.application.routes.draw do
     get '/:page_type/:id/preview' => 'videos_preview#show',
         page_type: /videos/
 
+    get '/:page_type/:id/preview' => 'home_pages_preview#show',
+        page_type: /home_pages/
+
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]

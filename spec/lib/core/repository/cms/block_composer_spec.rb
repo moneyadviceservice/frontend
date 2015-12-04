@@ -32,6 +32,15 @@ module Core::Repository::CMS
           expect(composer.to_s).to eql('meta description')
         end
       end
+
+      context 'with multiple blocks' do
+        let(:blocks) { [{ 'identifier' => 'description', 'content' => 'meta description' }] }
+        let(:id) { 'description' }
+
+        it 'returns the meta description string' do
+          expect(composer.to_s).to eql('meta description')
+        end
+      end
     end
 
     describe '#to_html' do
@@ -62,7 +71,6 @@ module Core::Repository::CMS
           expect(composer.to_html).to eql("")
         end
       end
-
     end
   end
 end

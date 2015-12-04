@@ -14,7 +14,7 @@ Feature: Display sticky newsletter
     When I dismiss the newsletter
     Then I should not see it again for another month
 
-  @javascript
+  @wip @javascript
   Scenario: scroll beyond 50% of the page
     Given I am on the home page
     When I scroll to the bottom of the page

@@ -3,6 +3,8 @@ require 'core'
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
 
+require Rails.root.join('config/initializers/feature')
+
 google_api_connection     = Core::ConnectionFactory::Http.build('https://www.googleapis.com/')
 public_website_connection = Core::ConnectionFactory::Http.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
 internal_email_connection = Core::ConnectionFactory::Smtp.build(from_address: 'development.team@moneyadviceservice.org.uk')
@@ -27,6 +29,14 @@ Core::Registry::Repository[:article] =
 
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
+
+if Feature.active?(:cms_home_page)
+  Core::Registry::Repository[:home_page] =
+    Core::Repository::HomePages::CMS.new
+else
+  Core::Registry::Repository[:home_page] =
+    Core::Repository::HomePages::Static.new
+end
 
 Core::Registry::Repository[:video] =
   Core::Repository::Videos::CMS.new

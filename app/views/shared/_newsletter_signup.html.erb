@@ -1,11 +1,10 @@
 <%= form_tag(main_app.newsletter_subscription_path, class: 'newsletter-signup t-newsletter', remote: true) do %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-    <span class="icon icon--newsletter">
-      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--email">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--email"></use>
-      </svg>
-    </span>
+    <%= render 'shared/svg/use_icon',
+               icon: 'email',
+               svg_fallback_support: true
+    %>
     <%= t('newsletter_subscriptions.title') %>
   <% end %>
 

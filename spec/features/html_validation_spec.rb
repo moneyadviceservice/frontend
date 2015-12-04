@@ -1,15 +1,21 @@
 RSpec.describe 'HTML validation', type: :feature do
   describe 'home page' do
-    before { visit root_path(locale: locale) }
-
     context 'in English' do
       let(:locale) { 'en' }
+
+      before do
+        visit root_path(locale: locale)
+      end
 
       specify { expect(page).to have_valid_html }
     end
 
     context 'in Welsh' do
       let(:locale) { 'cy' }
+
+      before do
+        visit root_path(locale: locale)
+      end
 
       specify { expect(page).to have_valid_html }
     end

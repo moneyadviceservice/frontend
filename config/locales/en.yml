@@ -101,9 +101,11 @@ en:
         password: Password
         post_code: Postcode
         newsletter: Send me free advice by email
-        contact_number: Contact number
+        contact_number: Contact number (optional)
         opt_in_for_research: Tick if you’d like to be contacted to help us with our research
         register_button: Register
+        edit:
+          password: New password
 
   skip_links:
     to_main_content: Skip to main content
@@ -482,12 +484,21 @@ en:
       label: Update
       field_help_texts:
         email: Please enter a valid email address if you would like to change your current one
+        contact_number: Please enter a valid UK phone number
         password: At least 8 characters. Leave blank if you don't want to change your password.
         password_confirmation: Leave blank if you don't want to change your password
         postcode: Please enter a valid UK postcode if would like to update your current one
         current_password: We need your current password to confirm your changes
+        contact_number: Please enter a valid UK phone number
+      current_password: Current password  (required to update settings)
+      opt_in_for_research:
+        title: I accept to be contacted for research purposes
+      password:
+        title: Change my password (Optional)
+        label: New password
+      password_confirmation: New Password confirmation
       newsletter:
-        title: Manage advice email preferences
+        title: Manage my preferences
         intro: "Stay subscribed to get..."
 
   technical_feedback:

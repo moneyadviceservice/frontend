@@ -64,6 +64,70 @@ RSpec.describe CategoryDecorator do
     end
   end
 
+  describe '#large_image' do
+    context 'when has large image' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'large' => '/large/image' })
+      end
+
+      it 'returns large image' do
+        expect(subject.large_image).to eq('/large/image')
+      end
+    end
+
+    context 'when does not have large image' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'large' => nil })
+      end
+
+      it 'returns nil' do
+        expect(subject.large_image).to be_nil
+      end
+    end
+
+    context 'when does not have images' do
+      let(:category) do
+        instance_double(Core::Category, images: nil)
+      end
+
+      it 'returns nil' do
+        expect(subject.large_image).to be_nil
+      end
+    end
+  end
+
+  describe '#small_image' do
+    context 'when has small image' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'small' => '/small/image' })
+      end
+
+      it 'returns large image' do
+        expect(subject.small_image).to eq('/small/image')
+      end
+    end
+
+    context 'when does not have small image' do
+      let(:category) do
+        instance_double(Core::Category, images: { 'small' => nil })
+      end
+
+      it 'returns nil' do
+        expect(subject.small_image).to be_nil
+      end
+    end
+
+    context 'when does not have images' do
+      let(:category) do
+        instance_double(Core::Category, images: nil)
+      end
+
+      it 'returns nil' do
+        expect(subject.small_image).to be_nil
+      end
+    end
+  end
+
   describe '#images?' do
     context 'when there is only a small image' do
       let(:category) do

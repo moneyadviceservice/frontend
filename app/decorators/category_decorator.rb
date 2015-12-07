@@ -26,6 +26,14 @@ class CategoryDecorator < Draper::Decorator
     h.render partial, contents: contents
   end
 
+  def large_image
+    images['large'] if images.present?
+  end
+
+  def small_image
+    images['small'] if images.present?
+  end
+
   def images?
     large_image? && small_image?
   end

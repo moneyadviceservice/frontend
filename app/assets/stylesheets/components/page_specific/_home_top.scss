@@ -5,6 +5,7 @@
 .home-top {
   padding-bottom: 50%;
   position: relative;
+  overflow: hidden;
 
   @include respond-to($mq-m) {
     padding-bottom: 0;

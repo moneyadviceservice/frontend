@@ -3,44 +3,25 @@
 // Styleguide Home Top
 
 .home-top {
-  background: image-url("campaign/cut-the-costs-of-a-merry-christmas.jpg") 0 100% no-repeat;
-  background-size: 100%;
   padding-bottom: 50%;
   position: relative;
 
   @include respond-to($mq-m) {
-    background-position: 113% 108%;
-    background-size: 60%;
     padding-bottom: 0;
   }
 
-  @include respond-to($mq-l) {
-    background-position: 150% 100%;
-    background-size: 54%;
-
-    @if $responsive {
-      background-position: 107% 100%;
-    }
-  }
-
   @include respond-to($mq-xl) {
-    background: none;
-    overflow: hidden;
-
     .theme-cy & {
       background: none;
     }
   }
 
-  @if $responsive == false {
-    background:image-url("campaign/cut-the-costs-of-a-merry-christmas-ie8.jpg") no-repeat right bottom;
-  }
 }
 
 .home-top-trust {
   position: relative;
   margin-top: $baseline-unit*7;
-  margin-bottom:  $baseline-unit*7;
+  margin-bottom: $baseline-unit*7;
 
   @include respond-to($mq-xl) {
     width: 1000px;
@@ -48,12 +29,34 @@
 }
 
 .home-top__image {
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  padding-top: 55.64%;
+  position: absolute;
+  width: 100%;
+
+  @include respond-to($mq-m) {
+    padding-top: 33%;
+    right: 0;
+    width: 60%;
+  }
+
+  @include respond-to($mq-l) {
+    background-position: right;
+    padding-top: 28%;
+    width: 55%;
+  }
+
   @include respond-to($mq-xl) {
     @include absolutely-centre-horizontally(1350px);
-    background: image-url("campaign/cut-the-costs-of-a-merry-christmas.jpg") 100% 52% no-repeat;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
     background-size: 46%;
     height: 345px;
   }
+
 }
 
 .home-top-trust__heading {

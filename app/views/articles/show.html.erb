@@ -7,12 +7,11 @@
                     url:         article.canonical_url,
                     description: article.description,
                     type:        'article',
-                    image:       request.base_url + '/assets/MAS-logo_social-sharing_facebook.png'
+                    image:       article.social_share_image
                   },
                   twitter: {
                     card: "summary_large_image",
-                    site: "@YourMoneyAdvice",
-                    image: request.base_url + '/assets/MAS-logo_social-sharing_twitter.png'
+                    site: "@YourMoneyAdvice"
                   }
                 ) %>
 

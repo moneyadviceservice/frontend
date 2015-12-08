@@ -27,11 +27,17 @@
 .line-marker__small-outline-dot{
   width: 14px;
   height: 14px;
-  background-image: url(image-path('retirement_concepts/small-outline-dot.png'));
-  background-size: 100% 100%;
+  background-position: -37px 0;
+  background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+  background-size: 90px 139px;
   background-repeat: no-repeat;
+
+  @include device-pixel-ratio() {
+    background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+  }
 }
 
 .ie8 .line-marker__small-outline-dot{
+  background-position: 0 0;
   background-image: url(image-path('retirement_concepts/small-outline-dot-x1.png'));
 }

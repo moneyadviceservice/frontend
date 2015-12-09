@@ -2,9 +2,6 @@
 // The sprite contains at two sizes, original and double, to support high density screens.
 //
 // .icon--logo - mas logo (small)
-// .icon--youtube - youtube logo
-// .icon--facebook - facebook icon
-// .icon--twitter - twitter icon
 // .icon--globe - globe icon to symbolise language change
 // .icon--up-arrow - up arrow icon
 // .icon--desktop - desktop computer icon
@@ -66,74 +63,6 @@
   background-position: -233px -266px;
   width: 56px;
   height: 26px;
-}
-
-.icon--twitter,
-.svg-icon--twitter {
-  width: 22.149px;
-  height: 18px;
-}
-
-.icon--facebook,
-.svg-icon--facebook {
-  width: 11.424px;
-  height: 22px;
-}
-
-.icon--youtube,
-.svg-icon--youtube {
-  width: 25.59168px;
-  height: 18px;
-}
-
-.icon--twitter {
-  display: block;
-  background-position: -484px -445px;
-}
-
-.icon--facebook {
-  display: block;
-  background-position: -456px -441px;
-}
-
-.icon--youtube {
-  display: block;
-  background-position: -417px -443px;
-}
-
-.svg-icon--twitter,
-.svg-icon--facebook,
-.svg-icon--youtube {
-  display: none;
-}
-
-.svg-icon--twitter {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg-icon--facebook {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg-icon--youtube {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg {
-  .icon--twitter,
-  .icon--facebook,
-  .icon--youtube {
-    display: none;
-  }
-
-  .svg-icon--twitter,
-  .svg-icon--facebook,
-  .svg-icon--youtube {
-    display: block;
-  }
 }
 
 .icon--globe {

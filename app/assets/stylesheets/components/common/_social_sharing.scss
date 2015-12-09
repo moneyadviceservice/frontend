@@ -1,0 +1,124 @@
+// styles common to all social sharing icons
+$facebook-icon-height: 22px;
+$facebook-icon-width: 11.424px;
+$twitter-icon-height: 18px;
+$twitter-icon-width: 22.149px;
+$youtube-icon-height: 18px;
+$youtube-icon-width: 25.59168px;
+$email-icon-height: 18px;
+$email-icon-width: 29.778px;
+
+.icon--facebook,
+.svg-icon--facebook {
+  width: $facebook-icon-width;
+  height: $facebook-icon-height;
+}
+
+.icon--twitter,
+.svg-icon--twitter {
+  width: $twitter-icon-width;
+  height: $twitter-icon-height;
+}
+
+.icon--youtube,
+.svg-icon--youtube {
+  width: $youtube-icon-width;
+  height: $youtube-icon-height;
+}
+
+.icon--email,
+.svg-icon--email {
+  width: $email-icon-width;
+  height: $email-icon-height;
+}
+
+.icon--twitter {
+  display: block;
+  background-position: -484px -445px;
+}
+
+.icon--facebook {
+  display: block;
+  background-position: -456px -441px;
+}
+
+.icon--youtube {
+  display: block;
+  background-position: -417px -443px;
+}
+
+.icon--email {
+  display: block;
+  background-position: -663px -450px;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  display: none;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg {
+  .icon--twitter,
+  .icon--facebook,
+  .icon--youtube,
+  .icon--email {
+    display: none;
+  }
+
+  .svg-icon--twitter,
+  .svg-icon--facebook,
+  .svg-icon--youtube,
+  .svg-icon--email {
+    display: block;
+  }
+}
+
+// styles specific to the 'share this ...' section
+$social-sharing-icon-height: 33px;
+$social-sharing-icon-width: 55px;
+
+.social-sharing__item {
+  margin: 0 10px 0 0;
+  border-radius: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-sharing__item--facebook {
+  padding: ($social-sharing-icon-height - $facebook-icon-height) / 2 ($social-sharing-icon-width - $facebook-icon-width) / 2;
+  background: $color-facebook;
+
+  &:hover {
+    background: $color-facebook-hover;
+  }
+}
+
+.social-sharing__item--twitter {
+  padding: ($social-sharing-icon-height - $twitter-icon-height) / 2 ($social-sharing-icon-width - $twitter-icon-width) / 2;
+  background: $color-twitter;
+
+  &:hover {
+    background: $color-twitter-hover;
+  }
+}
+
+.social-sharing__item--email {
+  padding: ($social-sharing-icon-height - $email-icon-height) / 2 ($social-sharing-icon-width - $email-icon-width) / 2;
+  background: $color-email;
+
+  &:hover {
+    background: $color-email-hover;
+  }
+}

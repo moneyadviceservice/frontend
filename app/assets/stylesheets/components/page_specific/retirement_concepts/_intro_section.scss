@@ -1,0 +1,10 @@
+.intro-section {
+  background: white;
+}
+
+.concepts-intro {
+  width: 96%;
+  @include respond-to($mq-m) {
+    width: 55%;
+  }
+}

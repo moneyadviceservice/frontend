@@ -32,5 +32,17 @@ RSpec.describe RetirementsController, type: :controller do
         it { is_expected.to eq(en: '/en/pensions-and-retirement/budgeting') }
       end
     end
+
+    context 'pension_savings_timeline action' do
+      context 'in English site' do
+        before { get :pension_savings_timeline, locale: :en }
+        it { is_expected.to eq(cy: '/cy/pensiynau-ac-ymddeoliad/llinell-amser-cynilion-pensiwn') }
+      end
+
+      context 'in Welsh site' do
+        before { get :pension_savings_timeline, locale: :cy }
+        it { is_expected.to eq(en: '/en/pensions-and-retirement/pension-savings-timeline') }
+      end
+    end
   end
 end

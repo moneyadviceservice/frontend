@@ -106,6 +106,8 @@ Rails.application.routes.draw do
     get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'
     get LandingPagePaths.path(:retirements, :budgeting, :cy), to: 'retirements#budgeting'
+    get LandingPagePaths.path(:retirements, :pension_savings_timeline, :en), to: 'retirements#pension_savings_timeline'
+    get LandingPagePaths.path(:retirements, :pension_savings_timeline, :cy), to: 'retirements#pension_savings_timeline'
 
     get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
 

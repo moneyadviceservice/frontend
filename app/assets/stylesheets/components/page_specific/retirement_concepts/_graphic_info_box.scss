@@ -89,12 +89,6 @@
   }
 }
 
-.ie8 .graphic-info-box__top-dot {
-  background-position: 0 0;
-  background-image: url(image-path("retirement_concepts/top-green-dot-x1.png"));
-}
-
-
 .graphic-info-box__line-fade-in {
   @include respond-to($mq-m) {
     width: 4px;
@@ -137,9 +131,4 @@
       background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
     }
   }
-}
-
-.ie8 .graphic-info-box__inline-dot {
-  background-position: 0 0;
-  background-image: url(image-path("retirement_concepts/inline-green-dot-x1.png"));
 }

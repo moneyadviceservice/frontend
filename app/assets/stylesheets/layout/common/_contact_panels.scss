@@ -1,5 +1,7 @@
 .l-contact-panels {
+  overflow: hidden;
   position: relative;
+  height: auto;
   margin-top: 40px;
   border-top: $default-border-thin;
 
@@ -7,10 +9,12 @@
     &:before, &:after {
       content: "";
       position: absolute;
-      border-right: 1px solid $color-newsletter-input-border;
-      min-height: 400px;
-      width: 1px;
+      top: 0;
+      bottom: $baseline-unit*4;
       left: 33.3333%;
+      border-right: 1px solid $color-newsletter-input-border;
+      width: 1px;
+      min-height: 400px;
     }
 
     &:after {

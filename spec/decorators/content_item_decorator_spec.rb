@@ -42,7 +42,7 @@ RSpec.describe ContentItemDecorator do
       let(:category) { double(large_image: large_image) }
 
       before do
-        expect(decorator).to receive(:root_category).and_return(category)
+        expect(helpers).to receive(:root_category).and_return(category)
       end
 
       it 'returns parent category large image' do
@@ -54,21 +54,21 @@ RSpec.describe ContentItemDecorator do
       let(:category) { double(large_image: nil) }
 
       before do
-        expect(decorator).to receive(:root_category).and_return(category)
+        expect(helpers).to receive(:root_category).and_return(category)
       end
 
       it 'returns mas logo' do
-        expect(decorator.social_share_image).to include('images/MAS-logo_social-sharing.png')
+        expect(decorator.social_share_image).to include('MAS-logo_social-sharing.png')
       end
     end
 
     context 'when does not have parent category' do
       before do
-        expect(decorator).to receive(:root_category).and_return(nil)
+        expect(helpers).to receive(:root_category).and_return(nil)
       end
 
       it 'returns mas logo' do
-        expect(decorator.social_share_image).to include('images/MAS-logo_social-sharing.png')
+        expect(decorator.social_share_image).to include('MAS-logo_social-sharing.png')
       end
     end
   end

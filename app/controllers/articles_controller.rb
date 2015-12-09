@@ -41,6 +41,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def root_category
+    categories = RootToNodePath.build(@article.categories.first, category_tree)
+    parent_category = categories.reject do |category|
+      category.home? || category.parent_id.present?
+    end
+
+    CategoryDecorator.new(parent_category.first, context: view_context)
+  end
+  helper_method :root_category
+
   def set_show_newsletter_signup
     exclusions = ::NewsletterExclusions::slugs
 

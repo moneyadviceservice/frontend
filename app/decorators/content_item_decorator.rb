@@ -29,14 +29,10 @@ class ContentItemDecorator < Draper::Decorator
   end
 
   def social_share_image
-    root_category.try(:large_image) || h.image_tag('MAS-logo_social-sharing.png')
+    h.root_category.try(:large_image) || h.image_url('MAS-logo_social-sharing.png')
   end
 
   private
-
-  def root_category
-    categories.reject { |category| category.object.parent? }.first
-  end
 
   attr_accessor :processors
 

@@ -122,34 +122,3 @@
   @extend %type-button-small;
   padding: 14px 16px;
 }
-
-// Lives in newsletter signup module
-//
-// .button--newsletter
-//
-// Styleguide Newsletter signup buttons
-
-.button--newsletter {
-  @include body(12,14);
-  background: $color-newsletter;
-  border-bottom: 0;
-  color: $color-white;
-  font-weight: 500;
-  text-transform: uppercase;
-
-  &:focus,
-  &:hover,
-  &:active {
-    color: $color-true-black;
-    background: $color-newsletter-active;
-    outline: none;
-    border-top: 0;
-    padding-top: $button-padding-vertical;
-  }
-
-  &:visited,
-  &:active {
-    background: $color-newsletter;
-    color: $color-white;
-  }
-}

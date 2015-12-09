@@ -1,134 +1,252 @@
 en:
   retirements:
     meta:
-      title: Pensions and retirement
+      title: Pensions & retirement
       description: ''
       canonical: https://www.moneyadviceservice.org.uk/en/pensions-and-retirement
     section1:
-      title: "Pensions and retirement"
-      intro: "When you retire you’ll have decisions to make about the money you’ve saved and what you’ll live on. This section will help you:"
+      title: Pensions & retirement
+      intro: "Whether you're thinking about saving into a pension for the first time or making decisions for your retirement, this section provides useful information and tools to help you make the most of your money."
+      bullet_heading: 'This section will help you:'
       bullets:
-        - Learn about the options you have
-        - Understand how having a budget can help
-        - Find out what help is available
-      video_caption_html: Financial journalist Paul Lewis explains how to make the most of  planning for retirement. <a href="https://fedb5feb4c074be48b1a-7d2b925ab3869b76f1d9fad9b2ecd2bb.ssl.cf3.rackcdn.com/retirement-video-transcript.en.pdf">Download the video transcript</a>
+        - Discover the benefits of saving for retirement
+        - Understand different types of pensions
+        - Learn about your choices for retirement
+        - Get help with later life matters
+        - Find out what support and advice is available
+      video_caption_html: Financial journalist Paul Lewis explains how to make the most of planning for retirement <a href="https://fedb5feb4c074be48b1a-7d2b925ab3869b76f1d9fad9b2ecd2bb.ssl.cf3.rackcdn.com/retirement-video-transcript.en.pdf">(download the transcript)</a>
     section2:
+      - text: Pension savings timeline
+        url: /en/pensions-and-retirement/pension-savings-timeline
+        image: retirements/savings-timeline.png
+        body: This timeline will help you understand the benefits of long-term pension saving and of actively managing your money.
       - text: Retirement income options tool
         url: /en/retirement-income-options
         image: retirements/en/options.png
         body: Explore the key considerations as you approach retirement, compare options, and get guidance on the next steps.
-      - text: Retirement adviser directory
+      - text: Find a retirement adviser
         url: "https://directory.moneyadviceservice.org.uk"
         image: retirements/rad-map.png
-        body: Find a financial adviser to help with your retirement planning whether you’re thinking about retiring or have already retired.
-      - text: Go to the Pension Wise service
-        url: https://www.pensionwise.gov.uk/
-        image: retirements/pensionwise.png
-        body: Pension Wise is a free and impartial government service that helps you understand your new pension options.
+        body: Find a financial adviser to help with your retirement planning if you’re thinking about retiring or have already retired.
     section3:
-      - title: "What you'll need"
-        links:
-          - text: "Checklist - preparing for retirement"
-            url: /en/articles/checklist-things-to-do-as-retirement-approaches
-          - text: "When can I afford to retire?"
-            url: /en/articles/when-can-i-afford-to-retire
-          - text: "Budgeting in retirement"
-            url: /en/pensions-and-retirement/budgeting
-          - text: Pension calculator
-            url: /en/tools/pension-calculator
-      - title: "What you've got"
-        links:
-          - text: "Pension information: guide to the basic facts"
-            url: /en/articles/pension-information-guide-to-the-basic-facts
-          - text: "The State Pension: everything you need to know"
-            url: /en/articles/state-pensions
-          - text: "Work out your likely retirement income"
-            url: /en/articles/estimate-your-retirement-income
-      - title: "Your options"
-        links:
-          - text: "Retirement income options tool"
-            url: /en/retirement-income-options
-          - text: Options for using your pension pot
-            url: "/en/articles/options-for-using-your-pension-pot"
-          - text: "Understand and compare annuities tool"
-            url: /en/tools/annuities
-    section4:
-      panels1:
-        - title: Pensions
+      panels:
+        - title: "What you'll need"
+          body: 'Find out why & when to save into a pension and how to work out what your pension pot might be.'
+          links:
+            - text: "Checklist - preparing for retirement"
+              url: /en/articles/checklist-things-to-do-as-retirement-approaches
+            - text: "When can I retire?"
+              url: /en/articles/when-can-i-afford-to-retire
+            - text: "Budgeting in retirement"
+              url: /en/pensions-and-retirement/budgeting
+            - text: Pension calculator
+              url: /en/tools/pension-calculator
+        - title: "What you've got"
+          body: 'Find out all the facts you need about making your transition into retirement.'
           links:
             - text: "Pension information: guide to the basic facts"
               url: /en/articles/pension-information-guide-to-the-basic-facts
-            - text: "Pension calculator"
-              url: /en/tools/pension-calculator
-            - text: "How to spot a pension scam"
-              url: /en/articles/how-to-spot-a-pension-scam
-            - text: "Trace lost pensions and request pension forecasts"
-              url: /en/articles/trace-lost-pensions-and-request-pension-forecasts
-            - text: "Dealing with pension problems and making a complaint"
-              url: /en/articles/your-options-if-things-go-wrong-with-your-pension
-            - text: "Ways to boost your pension in the run-up to retirement"
-              url: /en/articles/ways-to-boost-your-pension-in-the-run-up-to-retirement
-        - title: Retirement products
-          links:
-            - text: Delaying taking your pension pot
-              url: "/en/articles/delaying-taking-your-pension-pot"
-            - text: "What is an annuity?"
-              url: /en/articles/what--is-an-annuity
-            - text: Using your pension pot to buy a lifetime annuity
-              url: "/en/articles/using-your-pension-pot-to-buy-a-lifetime-annuity"
-            - text: "What is income drawdown?"
-              url: /en/articles/income-drawdown
-            - text: Flexi-access drawdown
-              url: "/en/articles/flexi-access-drawdown"
-            - text: "Taking small cash sums from your pension pot"
-              url: /en/articles/taking-small-cash-sums-from-your-pension-pot
-            - text: "Taking your whole pension pot as cash"
-              url: /en/articles/taking-your-whole-pension-pot-as-cash
-        - title: "State pension & benefits"
-          links:
-            - text: "State Pension: everything you need to know"
+            - text: "The State Pension: everything you need to know"
               url: /en/articles/state-pensions
-            - text: "The new State Pension - rules and changes explained"
-              url: "/en/articles/the-new-state-pension-rules-and-changes-explained"
-            - text: "Pension Credit"
-              url: /en/articles/pension-credit
-            - text: Benefits in retirement
-              url: "/en/articles/benefits-in-retirement"
+            - text: "Work out your likely retirement income"
+              url: /en/articles/estimate-your-retirement-income
+        - title: "Your options"
+          body: "After you've transitioned into retirement, it's a good idea to regularly review your options."
+          links:
+            - text: "Retirement income options tool"
+              url: /en/retirement-income-options
+            - text: Options for using your pension pot
+              url: "/en/articles/options-for-using-your-pension-pot"
+            - text: "Understand and compare annuities tool"
+              url: /en/tools/annuities
+      pensionwise:
+        text: Book your free Pension Wise guidance session
+        url: https://www.pensionwise.gov.uk
+    section4:
+      view_all: View all…
+      panels1:
+        - title: Types of pension
+          links:
+            - text: Defined contribution pension schemes
+              url: /en/articles/defined-contribution-pension-schemes
+            - text: Defined benefit pension schemes explained
+              url: /en/articles/defined-benefit-schemes
+            - text: Pensions for the self-employed
+              url: /en/articles/pensions-for-the-self-employed
+            - text: Self-invested personal pensions (SIPPs)
+              url: /en/articles/self-invested-personal-pensions
+            - text: Personal pensions
+              url: /en/articles/personal-pensions
+            - text: What is a group personal pension?
+              url: /en/articles/group-personal-pensions
+            - text: Stakeholder pensions
+              url: /en/articles/stakeholder-pensions
+            - text: Your first pension - the options
+              url: /en/articles/your-first-pension-the-options
+            - text: Multi-employer pension schemes
+              url: /en/articles/multi-employer-pension-schemes
+            - text: NEST pensions
+              url: /en/articles/nest-pensions
+        - title: Workplace pensions
+          links:
+            - text: Automatic enrolment - an introduction
+              url: /en/articles/automatic-enrolment-into-a-workplace-pension
+            - text: Workplace pension changes - the basics
+              url: /en/videos/workplace-pension-changes-the-basics
+            - text: The benefits of automatic enrolment
+              url: /en/articles/the-benefits-of-automatic-enrolment
+            - text: Workplace pension contribution calculator
+              url: /en/tools/workplace-pension-contribution-calculator
+            - text: Automatic enrolment - what to expect from your employer
+              url: /en/articles/automatic-enrolment-what-to-expect-from-your-employer
+            - text: 'Automatic enrolment if you earn up to £10,000'
+              url: /en/articles/automatic-enrolment-if-you-earn-up-to-gbp9440
+            - text: Automatic enrolment if you have debts
+              url: /en/articles/automatic-enrolment-if-you-have-debts
+            - text: Automatic enrolment if you’re 21 or under
+              url: /en/articles/automatic-enrolment-if-youre-21-or-under
+            - text: Automatic enrolment if you’re close to retirement
+              url: /en/articles/automatic-enrolment-if-youre-close-to-retirement
+            - text: Automatic enrolment if you’re above the State Pension age
+              url: /en/articles/automatic-enrolment-if-youre-above-state-pension-age
+        - title: 'Saving for retirement'
+          links:
+            - text: 'Pension information: guide to the basic facts'
+              url: /en/articles/pension-information-guide-to-the-basic-facts
+            - text: Why save into a pension?
+              url: /en/articles/why-save-into-a-pension
+            - text: Pension calculator
+              url: /en/tools/pension-calculator
+            - text: Trace lost pensions and request pension forecasts
+              url: /en/articles/trace-lost-pensions-and-request-pension-forecasts
+            - text: Ways to boost your pension in the run-up to retirement
+              url: /en/articles/ways-to-boost-your-pension-in-the-run-up-to-retirement
+            - text: Pension savings timeline
+              url: /en/pensions-and-retirement/pension-savings-timeline
+            - text: Tax relief on pension contributions
+              url: /en/articles/tax-relief-on-pension-contributions
+            - text: Lifetime allowance for pension savings
+              url: /en/articles/the-lifetime-allowance-for-pension-savings
+            - text: Transferring defined contribution pensions
+              url: /en/articles/transferring-defined-contribution-pensions
+            - text: Transferring out of a defined benefit pension scheme
+              url: /en/articles/transferring-out-of-a-defined-benefit-pension-scheme
+            - text: Check the progress of your pension and retirement savings
+              url: /en/articles/check-the-progress-of-your-pension-and-retirement-savings
+            - text: How to deal with a gap in your pension savings
+              url: /en/articles/how-to-deal-with-a-gap-in-your-pension-savings
+            - text: Pension investment options - an overview
+              url: /en/articles/pension-investment-options-an-overview
+            - text: Dealing with pension problems and making a complaint
+              url: /en/articles/your-options-if-things-go-wrong-with-your-pension
       panels2:
         - title: Managing money
           links:
-            - text: "Budgeting in retirement"
-              url: /en/pensions-and-retirement/budgeting
-            - text: "A guide to tax in retirement"
+            - text: When can I afford to retire?
+              url: /en/articles/when-can-i-afford-to-retire
+            - text: Checklist - preparing for retirement
+              url: /en/articles/checklist-things-to-do-as-retirement-approaches
+            - text: A guide to tax in retirement
               url: /en/articles/tax-and-benefits-when-youre-retired
-            - text: "Manage your money in retirement"
-              url: /en/articles/manage-your-money-in-retirement
-            - text: "Work out your likely retirement income"
-              url: /en/articles/estimate-your-retirement-income
-            - text: "How long will your money last in retirement?"
+            - text: How long will your money last in retirement?
               url: /en/articles/how-long-will-your-money-last-in-retirement
-        - title: Financial advice
+            - text: Budgeting in retirement
+              url: /en/pensions-and-retirement/budgeting
+            - text: Manage your money in retirement
+              url: /en/articles/manage-your-money-in-retirement
+            - text: Work out your likely retirement income
+              url: /en/articles/estimate-your-retirement-income
+            - text: Looking after your dependents in retirement
+              url: /en/articles/looking-after-your-dependants-in-retirement
+        - title: Retirement income choices
           links:
-            - text: "Retirement - why should I get advice?"
+            - text: Options for using your pension pot
+              url: /en/articles/options-for-using-your-pension-pot
+            - text: Delaying taking your pension pot
+              url: /en/articles/delaying-taking-your-pension-pot
+            - text: Using your pension pot to buy a lifetime annuity
+              url: /en/articles/using-your-pension-pot-to-buy-a-lifetime-annuity
+            - text: Flexi-access drawdown using your pension pot for a flexible retirement income
+              url: /en/articles/flexi-access-drawdown
+            - text: Taking small cash sums from your pension pot
+              url: /en/articles/taking-small-cash-sums-from-your-pension-pot
+            - text: Taking your whole pension pot as cash
+              url: /en/articles/taking-your-whole-pension-pot-as-cash
+            - text: What is an annuity?
+              url: /en/articles/what--is-an-annuity
+            - text: How to shop around for an annuity
+              url: /en/articles/how-to-shop-around-for-an-annuity
+            - text: Annuities comparison table
+              url: /en/tools/annuities
+            - text: Single or joint annuities
+              url: /en/articles/individual-or-joint-annuities
+            - text: Fixed or increasing annuities
+              url: /en/articles/fixed-or-increasing-annuities
+            - text: Protecting your retirement income
+              url: /en/articles/protecting-your-retirement-income
+            - text: Higher retirement income for people with poor health
+              url: /en/articles/higher-pension-income-for-people-with-poor-health
+            - text: Investment-linked annuities
+              url: /en/articles/investment-linked-annuities
+            - text: Fixed-term annuities
+              url: /en/articles/fixed-term-annuities
+            - text: What is income drawdown?
+              url: /en/articles/income-drawdown
+            # - text: Income drawdown comparison tool
+            #   url: '/en/retirement-income-options/retirement-options#drawdown'
+            - text: Capped drawdown
+              url: /en/articles/capped-drawdown
+        - title: 'State Pension & benefits'
+          links:
+            - text: The State Pension
+              url: /en/articles/state-pensions
+            - text: 'The new State Pension - rules & changes explained'
+              url: /en/articles/the-new-state-pension-rules-and-changes-explained
+            - text: Pension credit
+              url: /en/articles/pension-credit
+            - text: Benefits in retirement
+              url: /en/articles/benefits-in-retirement
+      panels3:
+        - title: Financial Advice
+          links:
+            - text: Retirement adviser directory
+              url: https://directory.moneyadviceservice.org.uk/en
+            - text: Retirement - why should I get advice?
               url: /en/articles/when-and-where-to-get-pensions-help-and-advice
-            - text: "Choosing a financial adviser"
+            - text: Choosing a financial adviser
               url: /en/articles/choosing-a-financial-adviser
-            - text: "Key questions to ask your financial adviser"
+            - text: Key questions to ask your financial adviser
               url: /en/articles/key-questions-to-ask-your-financial-adviser
-            - text: "Guide to financial adviser fees"
+            - text: Guide to financial fees
               url: /en/articles/guide-to-financial-adviser-fees
-        - title: More retirement advice
+        - title: Help in later life
           links:
-            - text: "What is equity release?"
-              url: /en/articles/equity-release
-            - text: "Equity release help"
-              url: /en/articles/equity-release-help
-            - text: Planning and funding your long-term care
-              url: "/en/articles/planning-and-funding-your-long-term-care"
-            - text: "What to do about someone's pension when they've died?"
-              url: "/en/articles/what-to-do-about-someones-pension-when-theyve-died"
-            - text: "Pensioner bonds: a guide to the fixed-rate savings bonds for over-65s"
+            - text: Retiring abroad
+              url: /en/articles/retiring-abroad
+            - text: 'Pensioner bonds: a guide to the fixed-rate savings bond for over-65s'
               url: /en/articles/pensioner-bonds-a-guide-to-the-fixed-rate-savings-bonds-for-over-65s
+            - text: Planning and funding long-term care
+              url: /en/articles/planning-and-funding-your-long-term-care
+            - text: What is equity release?
+              url: /en/articles/equity-release
+            - text: Equity release help
+              url: /en/articles/equity-release-help
+            - text: Home reversion
+              url: /en/articles/home-reversion
+            - text: Lifetime mortgage
+              url: /en/articles/lifetime-mortgage
+        - title: More help with pensions
+          links:
+            - text: 'Pensions & retirement jargon buster'
+              url: /en/articles/pensions-and-retirement-jargon-buster
+            - text: How to spot a pension scam
+              url: /en/articles/how-to-spot-a-pension-scam
+            - text: Understand what Pension Wise is and how to use it
+              url: /en/articles/pension-wise
+            - text: 'How could getting divorced affect my pension & retirement income?'
+              url: /en/articles/how-could-getting-divorced-affect-my-pension-and-retirement-income
+            - text: What to do about someone’s pension when they’ve died
+              url: /en/articles/what-to-do-about-someones-pension-when-theyve-died
 
   budgeting:
     meta:

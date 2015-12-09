@@ -35,7 +35,10 @@
 };
 
 .retirements-panel-callout__image {
-  float: left
+  float: left;
+  width: 140px;
+  max-width: 140px;
+  margin-right: 20px;
 };
 
 .retirements-panel-callout__link {

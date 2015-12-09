@@ -69,9 +69,14 @@
   width: 18px;
   height: 18px;
   margin: $baseline-unit * 10 0 0 0;
-  background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
-  background-size: 100% 100%;
+  background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+  background-position: -58px -81px;
+  background-size: 90px 139px;
   background-repeat: no-repeat;
+
+  @include device-pixel-ratio() {
+    background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+  }
 
   @include respond-to($mq-m) {
     float: none;
@@ -113,9 +118,15 @@
   width: 18px;
   height: 18px;
   margin: $baseline-unit*10 0 0 $baseline-unit/2;
-  background-size: 100% 100%;
-  background-image: url(image-path("retirement_concepts/mobile-green-dot.png"));
+  margin: $baseline-unit * 10 0 0 0;
+  background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+  background-position: -58px -81px;
+  background-size: 90px 139px;
   background-repeat: no-repeat;
+
+  @include device-pixel-ratio() {
+    background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+  }
 
   @include respond-to($mq-m) {
     float: none;

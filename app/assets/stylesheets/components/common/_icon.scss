@@ -27,6 +27,10 @@
 // .icon--account - green person icon
 // .icon--calculator - calculator icon
 // .icon--info - info icon
+// .icon--twitter - twitter icon
+// .icon--facebook - twitter facebook
+// .icon--youtube - twitter youtube
+// .icon--email - twitter email
 //
 // Styleguide icons
 
@@ -307,4 +311,80 @@
   background-position: -517px -426px;
   width:68px;
   height:68px;
+}
+
+// styles common to all social sharing icons
+.icon--facebook,
+.svg-icon--facebook {
+  width: 11.424px;
+  height: 22px;
+}
+
+.icon--twitter,
+.svg-icon--twitter {
+  width: 22.149px;
+  height: 18px;
+}
+
+.icon--youtube,
+.svg-icon--youtube {
+  width: 25.59168px;
+  height: 18px;
+}
+
+.icon--email,
+.svg-icon--email {
+  width: 29.778px;
+  height: 18px;
+}
+
+.icon--twitter {
+  display: block;
+  background-position: -484px -445px;
+}
+
+.icon--facebook {
+  display: block;
+  background-position: -456px -441px;
+}
+
+.icon--youtube {
+  display: block;
+  background-position: -417px -443px;
+}
+
+.icon--email {
+  display: block;
+  background-position: -663px -450px;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  display: none;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg {
+  .icon--twitter,
+  .icon--facebook,
+  .icon--youtube,
+  .icon--email {
+    display: none;
+  }
+
+  .svg-icon--twitter,
+  .svg-icon--facebook,
+  .svg-icon--youtube,
+  .svg-icon--email {
+    display: block;
+  }
 }

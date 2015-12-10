@@ -59,11 +59,12 @@
 
     & .svg-icon {
       html.svg & {
-        width: 36px; // 248.152px / (150 / 22);
-        height: 22px; // 150px / (150 / 22);
+        width: 36px;
+        height: 22px;
         position: relative;
-        top: 24px; // (70px - (150px / (150 / 22))) / 2;
+        top: 24px;
         fill: #fff;
+        margin: 0 auto;
       }
     }
   }

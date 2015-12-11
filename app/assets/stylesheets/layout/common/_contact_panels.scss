@@ -1,7 +1,26 @@
 .l-contact-panels {
+  overflow: hidden;
   position: relative;
+  height: auto;
   margin-top: 40px;
   border-top: $default-border-thin;
+
+  @include respond-to($mq-l) {
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: $baseline-unit*4;
+      left: 33.3333%;
+      border-right: 1px solid $color-newsletter-input-border;
+      width: 1px;
+      min-height: 400px;
+    }
+
+    &:after {
+      left: 66.6666%;
+    }
+  }
 }
 
 .l-contact-panels--no-border-top {
@@ -12,20 +31,6 @@
 .l-contact-panels--homepage {
   border-top: 0;
   margin-top: 0;
-
-  @include respond-to($mq-l) {
-    &:before, &:after {
-      content: "";
-      position: absolute;
-      border-right: 1px solid $color-newsletter-input-border;
-      height: 400px;
-      left: 33.3333%;
-    }
-
-    &:after {
-      right: 33.3333%;
-    }
-  }
 }
 
 .l-contact-panel {

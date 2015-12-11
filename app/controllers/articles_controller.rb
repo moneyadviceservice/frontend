@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator
+  decorates_assigned :parent_category, with: CategoryDecorator
 
   include Navigation
 
@@ -17,6 +18,7 @@ class ArticlesController < ApplicationController
     set_related_content
     set_categories
     set_show_newsletter_signup
+    set_parent_category
   end
 
   private
@@ -39,6 +41,10 @@ class ArticlesController < ApplicationController
       active_category category.id
       active_category category.parent_id if category.child?
     end
+  end
+
+  def set_parent_category
+    @parent_category ||= ParentCategory.find(@article, category_tree)
   end
 
   def set_show_newsletter_signup

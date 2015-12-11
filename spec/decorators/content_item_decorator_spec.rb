@@ -35,6 +35,44 @@ RSpec.describe ContentItemDecorator do
     end
   end
 
+  describe '#social_share_image' do
+    let(:large_image) { 'http://comfy.mas/assets/debt-and-borrowing.png' }
+
+    context 'when parent category has large image' do
+      let(:category) { double(large_image: large_image) }
+
+      before do
+        expect(helpers).to receive(:parent_category).and_return(category)
+      end
+
+      it 'returns parent category large image' do
+        expect(decorator.social_share_image).to eq(large_image)
+      end
+    end
+
+    context 'when parent category does not have large image' do
+      let(:category) { double(large_image: nil) }
+
+      before do
+        expect(helpers).to receive(:parent_category).and_return(category)
+      end
+
+      it 'returns mas logo' do
+        expect(decorator.social_share_image).to include('MAS-logo_social-sharing.png')
+      end
+    end
+
+    context 'when does not have parent category' do
+      before do
+        expect(helpers).to receive(:parent_category).and_return(nil)
+      end
+
+      it 'returns mas logo' do
+        expect(decorator.social_share_image).to include('MAS-logo_social-sharing.png')
+      end
+    end
+  end
+
   describe '#canonical_url' do
     before do
       allow(content_item.class).to receive_messages(to_s: 'core/content_item')

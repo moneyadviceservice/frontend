@@ -1,7 +1,20 @@
-<% set_meta_tags(title:       article.title,
-                 description: article.description,
-                 canonical:   article.canonical_url,
-                 alternate:   article.alternate_options) %>
+<% set_meta_tags( title:       article.title,
+                  description: article.description,
+                  canonical:   article.canonical_url,
+                  alternate:   article.alternate_options,
+                  og: {
+                    title:       article.title,
+                    url:         article.canonical_url,
+                    description: article.description,
+                    type:        'article',
+                    image:       article.social_share_image
+                  },
+                  twitter: {
+                    card: "summary_large_image",
+                    site: "@YourMoneyAdvice",
+                    image: article.social_share_image
+                  }
+                ) %>
 
 <% content_for(:context_bar) do %>
   <% if @breadcrumbs.present? %>
@@ -22,6 +35,13 @@
       <% end %>
 
       <%= article.content %>
+
+      <%= social_sharing_icons url:            article.canonical_url,
+                               title:          I18n.t("articles.sharing.title"),
+                               label_facebook: I18n.t("articles.sharing.label_facebook"),
+                               label_twitter:  I18n.t("articles.sharing.label_twitter"),
+                               label_email:    I18n.t("articles.sharing.label_email"),
+                               text:           article.title %>
 
       <%= render 'previous_and_next' %>
 

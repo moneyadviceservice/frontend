@@ -28,6 +28,10 @@ class ContentItemDecorator < Draper::Decorator
     processed_body.html_safe
   end
 
+  def social_share_image
+    @social_share_image ||= h.parent_category.try(:large_image) || h.image_url('MAS-logo_social-sharing.png')
+  end
+
   private
 
   attr_accessor :processors

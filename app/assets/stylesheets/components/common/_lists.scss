@@ -93,6 +93,11 @@
 // Default list style for editorial content
 .editorial ul {
   @extend .list;
+
+  // Override for editorial unstyled lists
+  &.unstyled-list:before {
+    content: none;
+  }
 }
 
 // Dough sets th, td to 14px. We want contained lists to match within editorial content.

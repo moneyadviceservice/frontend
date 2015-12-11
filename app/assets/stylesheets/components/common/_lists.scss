@@ -100,20 +100,6 @@
   }
 }
 
-/*
-.editorial .unstyled-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-
-  > li {
-    &:before {
-      content: none;
-    }
-  }
-}
-*/
-
 // Dough sets th, td to 14px. We want contained lists to match within editorial content.
 .editorial {
   th, td {

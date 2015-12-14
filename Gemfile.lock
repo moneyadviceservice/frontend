@@ -36,7 +36,9 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
-  revision: 22ce2aa4d45365f8d8eb91b6b87fe774c55d1869
+  revision: db095b790e22ee7e1cdc9c30c11151ad7199dd17
+  ref: db095b790e22ee7e1cdc9c30c11151ad7199dd17
+  branch: income-drawdown
   specs:
     rio (0.0.3)
       bowndler
@@ -806,3 +808,6 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
+
+BUNDLED WITH
+   1.10.6

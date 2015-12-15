@@ -4,10 +4,20 @@ RSpec.describe StickyNewsletterVisibility, type: :helper do
 
   describe '#display_sticky_newsletter?' do
     context 'articles page' do
-      let(:url) { 'http://example.com/en/articles/saving-money' }
+      context 'when blacklisted article' do
+        let(:url) { 'http://example.com/en/articles/choosing-your-executor' }
 
-      it 'displays sticky newsletter' do
-        expect(display_sticky_newsletter?).to be true
+        it 'does not show sticky newsletter' do
+          expect(display_sticky_newsletter?).to be(false)
+        end
+      end
+
+      context 'when is not a blacklisted article' do
+        let(:url) { 'http://example.com/en/articles/saving-money' }
+
+        it 'displays sticky newsletter' do
+          expect(display_sticky_newsletter?).to be(true)
+        end
       end
     end
 

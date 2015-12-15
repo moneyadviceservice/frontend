@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109120230) do
+ActiveRecord::Schema.define(version: 20151214114408) do
 
   create_table "action_plans_expense_items", force: true do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -349,7 +349,7 @@ ActiveRecord::Schema.define(version: 20151109120230) do
     t.boolean  "region_scotland",                                         default: false, null: false
     t.boolean  "region_wales",                                            default: false, null: false
     t.string   "website_address_text"
-    t.string   "notes_cy"
+    t.text     "notes_cy"
     t.integer  "debt_advice_locator_organisation_standard_id"
     t.boolean  "display_in_accredited_list",                              default: false
   end

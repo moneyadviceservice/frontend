@@ -60,7 +60,7 @@ gem 'mortgage_calculator', '~> 1.3.5'
 gem 'payday_loans_intervention', '~> 1.4'
 gem 'pensions_calculator', '~> 1.0.0'
 gem 'quiz', git: 'git@github.com:moneyadviceservice/quiz.git'
-gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: "income-drawdown", ref: "db095b790e22ee7e1cdc9c30c11151ad7199dd17"
+gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: "income-drawdown", ref: "602a13d0d3e2a5615732b51ac3f43d607900fa6d"
 gem 'savings_calculator', '~> 1.2.0'
 gem 'timelines', '>= 1.2.0', git: 'git@github.com:moneyadviceservice/timelines.git'
 

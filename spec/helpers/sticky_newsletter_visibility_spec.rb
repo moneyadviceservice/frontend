@@ -4,21 +4,21 @@ RSpec.describe StickyNewsletterVisibility, type: :helper do
   let(:request) { double('request', url: url, base_url: base_url) }
   let(:base_url) { 'http://example.com'  }
 
-  describe '#display_sticky_newsletter?' do
-    context 'articles page' do
-      context 'when blacklisted article' do
-        let(:url) { 'http://example.com/en/articles/choosing-your-executor' }
+  describe 'whitelisted' do
+    context 'article' do
+      let(:url) { 'http://example.com/en/articles/saving-money' }
 
-        it_behaves_like 'shuns_sticky_newsletter'
+      it 'displays sticky newsletter' do
+        expect(display_sticky_newsletter?).to be(true)
       end
+    end
+  end
 
-      context 'when is not a blacklisted article' do
-        let(:url) { 'http://example.com/en/articles/saving-money' }
+  describe '#black_listed?' do
+    context 'sensitive article' do
+      let(:url) { 'http://example.com/en/articles/choosing-your-executor' }
 
-        it 'displays sticky newsletter' do
-          expect(display_sticky_newsletter?).to be(true)
-        end
-      end
+      it_behaves_like 'shuns_sticky_newsletter'
     end
 
     %w(en cy).each do |locale|

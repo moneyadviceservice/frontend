@@ -1,3 +1,5 @@
+require_relative './shared_examples/display_sticky_newsletter_spec'
+
 RSpec.describe StickyNewsletterVisibility, type: :helper do
   let(:request) { double('request', url: url, base_url: base_url) }
   let(:base_url) { 'http://example.com'  }
@@ -7,9 +9,7 @@ RSpec.describe StickyNewsletterVisibility, type: :helper do
       context 'when blacklisted article' do
         let(:url) { 'http://example.com/en/articles/choosing-your-executor' }
 
-        it 'does not show sticky newsletter' do
-          expect(display_sticky_newsletter?).to be(false)
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'when is not a blacklisted article' do
@@ -25,65 +25,49 @@ RSpec.describe StickyNewsletterVisibility, type: :helper do
       context 'home page' do
         let(:url) { "http://example.com/#{locale}" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'category slugs' do
         let(:url) { "http://example.com/#{locale}/categories/insurance" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'corporate slugs' do
         let(:url) { "http://example.com/#{locale}/corporate/" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'tools slugs' do
         let(:url) { "http://example.com/#{locale}/tools/" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'videos slugs' do
         let(:url) { "http://example.com/#{locale}/videos/" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'corporate_categories slugs' do
         let(:url) { "http://example.com/#{locale}/corporate_categories/" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'sitemap slugs' do
         let(:url) { "http://example.com/#{locale}/sitemap" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
 
       context 'users slugs' do
         let(:url) { "http://example.com/#{locale}/users" }
 
-        it 'excludes in any language' do
-          expect(display_sticky_newsletter?).to be false
-        end
+        it_behaves_like 'shuns_sticky_newsletter'
       end
     end
   end

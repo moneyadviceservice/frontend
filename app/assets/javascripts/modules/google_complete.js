@@ -3,7 +3,8 @@ define(['jquery', 'typeahead', 'globals'], function($, typeahead, globals) {
 
   var GoogleComplete = function(options) {
     options.input.typeahead({
-      minLength: 2
+      minLength: 2,
+      hint: false
     }, {
       source: this.completions
     }).on('typeahead:selected', function() {

@@ -77,14 +77,3 @@
     }
   }
 }
-
-.newsletter-button {
-  min-width: 268px;
-
-  @include respond-to($mq-m) {
-    .theme-cy & {
-      white-space: normal;
-    }
-  }
-}
-

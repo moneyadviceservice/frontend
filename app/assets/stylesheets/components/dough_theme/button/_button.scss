@@ -129,13 +129,15 @@
 //
 // Styleguide Newsletter signup buttons
 
-.button--newsletter {
+.newsletter-button {
+  @extend .button;
   @include body(12,14);
   background: $color-newsletter;
   border-bottom: 0;
   color: $color-white;
   font-weight: 500;
   text-transform: uppercase;
+  min-width: 268px;
 
   &:focus,
   &:hover,
@@ -152,4 +154,11 @@
     background: $color-newsletter;
     color: $color-white;
   }
+
+  @include respond-to($mq-m) {
+    .theme-cy & {
+      white-space: normal;
+    }
+  }
+
 }

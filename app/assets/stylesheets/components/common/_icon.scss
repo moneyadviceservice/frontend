@@ -322,8 +322,8 @@
 
 .icon--twitter,
 .svg-icon--twitter {
-  width: 22.149px;
-  height: 18px;
+  width: 20.918px; // 184.575 x (17 / 150)
+  height: 17px;
 }
 
 .icon--youtube,
@@ -334,8 +334,8 @@
 
 .icon--email,
 .svg-icon--email {
-  width: 29.778px;
-  height: 18px;
+  width:  26.47px; // 31.249 x (16 / 18.8889)
+  height: 16px;
 }
 
 .icon--twitter {
@@ -355,7 +355,7 @@
 
 .icon--email {
   display: block;
-  background-position: -663px -450px;
+  background-position: -664px -452px;
 }
 
 .svg-icon--twitter,

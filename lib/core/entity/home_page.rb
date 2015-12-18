@@ -8,7 +8,8 @@ module Core
                   :heading, :hero_image,
                   :bullet_1, :bullet_2, :bullet_3,
                   :cta_text, :cta_link,
-                  :tiles, :tools, :text_tiles
+                  :tiles, :tools, :text_tiles,
+                  :promo_banner_url, :promo_banner_content
 
     attr_reader :alternates
 

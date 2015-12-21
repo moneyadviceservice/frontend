@@ -74,3 +74,34 @@
 .l-campaign-directory {
   margin-top: $baseline-unit*6;
 }
+
+.l-campaign__2col-heading {
+  @include column(12);
+}
+
+.l-campaign__2col-left {
+  @include respond-to($mq-xs) {
+    @include column(6);
+    margin: 0 auto;
+    display: block;
+    float: none;
+  }
+
+  @include respond-to($mq-m) {
+    @include column(3);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.l-campaign__2col-main {
+  @include respond-to($mq-m) {
+    @include column(9);
+  }
+
+  @include respond-to($mq-l) {
+    @include column(6);
+  }
+}

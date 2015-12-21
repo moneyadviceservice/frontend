@@ -30,7 +30,8 @@
       <%= heading_tag article.title %>
 
       <% unless @newsletter_excluded %>
-        <%= render 'shared/news_signup_test', ab_test_render: true %>
+        <%= render 'shared/news_signup_test',
+                   ab_test_render: true %>
         <%= render 'shared/news_signup_inpage', ab_test_render: false %>
       <% end %>
 
@@ -46,6 +47,9 @@
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>
+        <% unless @campaign_promo_excluded %>
+          <%= render 'articles/survive_january_promo' %>
+        <% end %>
         <%= render 'articles/related_articles', type: 'mobile' %>
       </div>
 
@@ -58,8 +62,12 @@
 
 <div class="l-nav l-article-3col-right">
   <%= render 'shared/want_to_talk' %>
-
   <div class='related-links--desktop' data-dough-component="StickyColumn">
+
+    <% unless @campaign_promo_excluded %>
+      <%= render 'articles/survive_january_promo' %>
+    <% end %>
+
     <%= render 'articles/related_articles', type: 'desktop' %>
   </div>
 </div>

@@ -53,6 +53,10 @@ define([
     this.closeButton = this.$el.find(this.config.closeClassSelector);
     $window = $(window);
 
+    var focusable = this.$el.find('a[href], area[href], input:not([disabled], [type=hidden]), select:not([disabled], [hidden]), textarea:not([disabled], [hidden]), button:not([disabled], [hidden]), iframe, object, embed, *[tabindex], *[contenteditable]');
+    this.firstFocusElement = focusable.first();
+    this.lastFocusElement = focusable.last();
+
     $newsletterStickForm = this.$el.find('form');
     newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
   };
@@ -66,10 +70,11 @@ define([
 
     if (isActive) {
       this.closeButton.on('click', $.proxy(this._handleCloseClick, this));
+      this.firstFocusElement.on('keydown', $.proxy(this._handleFirstElementTab, this));
+      this.lastFocusElement.on('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.on('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
-    }
-    else {
+    } else {
       this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
       this.$el.off('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
@@ -112,6 +117,9 @@ define([
   NewsletterSticky.prototype._handleScroll = function() {
     if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
       this.$el.addClass(this.config.visibleClassName);
+
+      this.previousFocusElement = $(':focus');
+      this.firstFocusElement.focus();
       this._setScrollListener(false);
 
       MAS.publish('analytics:trigger', {
@@ -218,7 +226,25 @@ define([
     this.$el.removeClass(this.config.visibleClassName);
     this.closeButton.addClass(this.config.closedClassName);
     this._setListeners(false);
+    this.previousFocusElement.focus();
   };
+
+  /*
+  * Handle the tab event on the last and first focusable element
+  * A tab loop is created until the user dismisses the dialog (accessibility recommendation)
+   */
+  NewsletterSticky.prototype._handleLastElementTab = function(e) {
+    if (e.which === 9 && !e.shiftKey) {
+      e.preventDefault();
+      this.firstFocusElement.focus();
+    }
+  }
+  NewsletterSticky.prototype._handleFirstElementTab = function(e) {
+    if (e.which === 9 && e.shiftKey) {
+      e.preventDefault();
+      this.lastFocusElement.focus();
+    }
+  }
 
   return NewsletterSticky;
 });

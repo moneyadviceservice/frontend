@@ -1,0 +1,34 @@
+(function() {
+  var $newsletterForm = $('.js-newsletter-form'),
+      $newsletterInput = $('.js-newsletter-input'),
+      errorClassName = 'is-errored',
+      newsletterErrorId = 'newsletter_error',
+      $error;
+
+  <%= render 'common', success: @success %>
+
+  <% if @success %>
+    $newsletterForm.attr({
+      'role' : 'alert',
+      'aria-live' : 'polite'
+    })
+    .removeClass(errorClassName)
+    .html('<%= flash[:success] %>');
+
+    $newsletterInput.attr({'aria-invalid' : false });
+  <% else %>
+    $('p.js-newsletter-error-msg').remove();
+
+    $error = $('<p />')
+    .addClass('newsletter__text js-newsletter-error-msg')
+    .text('<%= flash[:error] %>')
+    .attr('id', newsletterErrorId);
+
+    $newsletterForm.addClass(errorClassName).prepend($error);
+
+    $newsletterInput.attr({ 'aria-invalid' : true, 'aria-describedby' : newsletterErrorId }).focus();
+  <% end %>
+})();
+
+
+

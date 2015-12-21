@@ -199,6 +199,7 @@ Rails.application.routes.draw do
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 
     resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
+    resource :survive_january_subscription, only: :create, path: 'survive-january-subscription'
 
     resource :cookie_dismissal, only: :create, controller: 'cookie_dismissal'
 

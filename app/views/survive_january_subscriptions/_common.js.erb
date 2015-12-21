@@ -1,0 +1,8 @@
+require(['common'], function (MAS) {
+  MAS.publish('analytics:trigger', {
+    gaEventCat: '<%= params[:subscription][:ga_categoryid] %>',
+    gaEventAct: 'Click',
+    gaEventLab: '<%= @success ? 'Successful' : 'Not successful' %>',
+    event: 'gaEvent'
+  });
+});

@@ -171,6 +171,7 @@ Rails.application.routes.draw do
                       saving-for-a-holiday|
                       start-living-your-life-free-of-debt|
                       student-budgeting|
+                      survive-january|
                       sw-saving-and-debt|
                       the-cost-of-caring|
                       the-true-cost-of-affording-a-home|

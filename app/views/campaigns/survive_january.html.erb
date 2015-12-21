@@ -1,0 +1,101 @@
+<%= render 'shared/campaign_canonical' %>
+
+<div class="l-constrained">
+  <article>
+    <div class="l-campaign__content--padded-top">
+
+      <div class="l-campaign__2col-heading">
+        <%= heading_tag 'How to #survivejanuary', class: 'l-campaign__heading', level: 1 %>
+        <p class="l-campaign__tagline">Easy ways to help if money’s tight after Christmas</p>
+      </div>
+
+      <div class="l-campaign__2col-left">
+        <%= image_tag('campaign/survive-january.png', alt: '', class: 'l-campaign-image') %>
+      </div>
+
+      <div class="l-campaign__2col-main l-campaign__content" data-dough-newsletter-article="true">
+
+        <p>January can be a tough month, and it can seem long, but our Survive January campaign will help with some really simple ways to put pennies back in your pocket and change your money habits. What do you have to lose?</p>
+
+        <%= render 'shared/news_signup_test',
+                   visible: true,
+                   ab_test_render: true,
+                   component_image_class: 'news-signup-test__image news-signup-test__image--survive-january-2016',
+                   component_title_text: 'Your Survive January kit',
+                   component_info_text: 'Sign up to get money saving tips and advice direct to your inbox' %>
+
+        <p>Our handy kit is filled with tips from our experts and those who have made frugal habits part of their lives. Want to know how to stop wasting hundreds on food? Or simple ways to save energy? We’ve got you covered. On our Blog our online super-sellers reveal all about how to make extra cash from your unwanted items and put a bit of money back in your wallet.</p>
+
+        <p>Join our group of savers and turn the January gloom into money satisfaction. You can sign up to receive your free kit now, or check out some of our #survivejanuary Blog posts to get you started...</p>
+
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="l-constrained">
+
+  <div class="l-3col-even">
+    <h2>Your food</h2>
+    <div class="t-article-promos">
+      <%= image_tag('campaign/survive-january-your-food.png', alt: '', class: 'promo__img') %>
+    </div>
+    <ul>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/download-your-recipe-for-smarter-shopping">Spend less on food</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/how-to-reduce-food-waste-at-home-and-save-money">Food waste cutdown</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/be-loyal-to-your-pocket-not-supermarket-and-save">Shopping savings</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/video-inside-thrifty-lesley-s-waste-free-kitchen">Waste-free kitchen</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="l-3col-even">
+    <h2>Your home</h2>
+    <div class="t-article-promos">
+      <%= image_tag('campaign/survive-january-your-home.png', alt: '', class: 'promo__img') %>
+    </div>
+    <ul>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/how-to-sell-stuff-and-turn-your-trash-into-cash">What could you sell?</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/how-to-sell-online-a-seasoned-seller-reveals-all">How to sell online</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/selling-online-for-the-first-time-here-s-how">Selling online for the first time</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/easy-tweaks-to-save-money-on-energy-bills">Easy energy tips</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="l-3col-even">
+    <h2>You</h2>
+    <div class="t-article-promos">
+      <%= image_tag('campaign/survive-january-you.png', alt: '', class: 'promo__img') %>
+    </div>
+    <ul>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/survive-january-how-to-look-good-for-less">Look good for less</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/revealed-the-hidden-habits-that-cost-you-money">What are you buying?</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/survive-january-how-to-have-fun-for-less">Budgeting for a night out</a>
+      </li>
+      <li>
+        <a href="https://blog.moneyadviceservice.org.uk/when-did-you-last-check-your-bank-balance">How you can switch accounts</a>
+      </li>
+    </ul>
+  </div>
+
+</div>

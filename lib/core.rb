@@ -49,6 +49,7 @@ module Core
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
+  autoload :SurviveJanuarySubscriptionCreator, 'core/interactor/survive_january_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'
@@ -130,6 +131,10 @@ module Core
     module NewsletterSubscriptions
       autoload :Cream, 'core/repository/newsletter_subscriptions/cream'
       autoload :Fake, 'core/repository/newsletter_subscriptions/fake'
+    end
+
+    module SurviveJanuarySubscriptions
+      autoload :Cream, 'core/repository/survive_january_subscriptions/cream'
     end
 
     module RecommendedTools

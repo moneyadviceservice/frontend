@@ -17,7 +17,8 @@ module Core
         newsletter_subscription: true,
         contact_number: '03005005000',
         date_of_birth: date_of_birth,
-        status_code: '123'
+        status_code: '123',
+        survive_january: false
       }
     end
 
@@ -34,6 +35,7 @@ module Core
     it { expect(subject.contact_number).to eql('03005005000') }
     it { expect(subject.date_of_birth).to eql(Time.new(1988, 1, 1)) }
     it { expect(subject.status_code).to eql('123') }
+    it { expect(subject.survive_january).to be_falsey }
 
     describe '#active?' do
       context 'when state is 0' do
@@ -55,7 +57,8 @@ module Core
           mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
           BirthDate: attributes[:date_of_birth].to_time.utc.iso8601,
           DoNotBulkEMail: !attributes[:newsletter_subscription],
-          Telephone2: attributes[:contact_number]
+          Telephone2: attributes[:contact_number],
+          mas_SurviveJanuary: attributes[:survive_january]
         }
 
         expect(subject.to_crm_hash).to eql(expected)
@@ -64,20 +67,8 @@ module Core
       context 'when date of birth not present' do
         let(:date_of_birth) { nil }
 
-        it 'returns hash with correct attributes' do
-          expected = {
-            FirstName: attributes[:first_name],
-            LastName: attributes[:last_name],
-            mas_ContactEmail: attributes[:email],
-            Address1_PostalCode: attributes[:post_code],
-            GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
-            mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
-            BirthDate: nil,
-            DoNotBulkEMail: !attributes[:newsletter_subscription],
-            Telephone2: attributes[:contact_number]
-          }
-
-          expect(subject.to_crm_hash).to eql(expected)
+        it 'returns nil for birth date' do
+          expect(subject.to_crm_hash[:BirthDate]).to be_nil
         end
       end
     end

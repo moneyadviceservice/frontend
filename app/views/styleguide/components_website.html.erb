@@ -106,7 +106,7 @@
 <% end %>
 
 <%= styleguide_section sections['Stripe banner'] do %>
-  <%= render 'shared/stripe_banner' %>
+  <%= render 'shared/stripe_banner', item: OpenStruct.new(promo_banner_content: 'Promo banner', promo_banner_url: 'https://example.com') %>
 <% end %>
 
 <%= styleguide_section sections['Main navigation'] do %>

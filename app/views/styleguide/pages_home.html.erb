@@ -6,7 +6,9 @@
     'bullet_2' => 'Bullet 2',
     'bullet_3' => 'Bullet 3',
     'cta_link' => 'https://example.com',
-    'cta_text' => 'Some text'
+    'cta_text' => 'Some text',
+    'promo_banner_content' => 'Promo banner',
+    'promo_banner_url' => 'https://example.com'
   })
 %>
 
@@ -64,4 +66,4 @@
 
 <%= render 'shared/article_promos', items_with_image: items_with_image, items_without_image: items_without_image %>
 
-<%= render 'shared/stripe_banner', item: t('home.show.stripe_banner') %>
+<%= render 'shared/stripe_banner', item: item %>

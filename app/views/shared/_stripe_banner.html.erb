@@ -1,7 +1,7 @@
 <div class="stripe-banner">
   <div class="l-constrained">
-    <a href="<%= t('home.show.stripe_banner.url') %>" class="stripe-banner__link">
-      <b class="stripe-banner__bold"><%= t('home.show.stripe_banner.worried_about_debt') %></b> <%= t('home.show.stripe_banner.find_out_where') %>
+    <a href="<%= item.promo_banner_url %>" class="stripe-banner__link">
+      <%= item.promo_banner_content.html_safe %>
       <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--stripe-banner-arrow">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
       </svg>

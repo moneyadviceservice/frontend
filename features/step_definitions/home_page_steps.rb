@@ -1,3 +1,5 @@
+include ActionView::Helpers::SanitizeHelper
+
 Given(/^I (?:am on|visit) the home page$/) do
   home_page.load
 end
@@ -49,11 +51,11 @@ Then(/^I should see promoted content$/) do
 end
 
 Then(/^I should see stripe banner$/) do
-  expected_url = I18n.t('home.show.stripe_banner')[:url]
+  expected_url = I18n.t('home.show.stripe_banner')[:promo_banner_url]
   actual_url  = home_page.stripe_banner.link[:href]
   expect(actual_url).to eq(expected_url)
 
-  expected_text = I18n.t('home.show.stripe_banner')[:worried_about_debt] + " " + I18n.t('home.show.stripe_banner')[:find_out_where]
+  expected_text = strip_tags I18n.t('home.show.stripe_banner.promo_banner_content')
   actual_text  = home_page.stripe_banner.link.text
   expect(actual_text).to eq(expected_text)
 end

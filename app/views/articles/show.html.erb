@@ -47,8 +47,10 @@
       <%= render 'previous_and_next' %>
 
       <div class='related-links--mobile'>
-        <% unless @campaign_promo_excluded %>
-          <%= render 'articles/survive_january_promo' %>
+        <% if display_campaign_promo? %>
+          <% unless @campaign_promo_excluded %>
+            <%= render 'articles/survive_january_promo' %>
+          <% end %>
         <% end %>
         <%= render 'articles/related_articles', type: 'mobile' %>
       </div>
@@ -63,9 +65,10 @@
 <div class="l-nav l-article-3col-right">
   <%= render 'shared/want_to_talk' %>
   <div class='related-links--desktop' data-dough-component="StickyColumn">
-
-    <% unless @campaign_promo_excluded %>
-      <%= render 'articles/survive_january_promo' %>
+    <% if display_campaign_promo? %>
+      <% unless @campaign_promo_excluded %>
+        <%= render 'articles/survive_january_promo' %>
+      <% end %>
     <% end %>
 
     <%= render 'articles/related_articles', type: 'desktop' %>

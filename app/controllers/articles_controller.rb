@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   decorates_assigned :parent_category, with: CategoryDecorator
 
   include Navigation
+  helper SurviveJanuary
 
   def show
     @article = interactor.call do |error|

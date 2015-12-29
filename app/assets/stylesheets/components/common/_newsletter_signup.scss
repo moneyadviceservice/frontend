@@ -34,17 +34,6 @@
   border-radius: 4px;
 }
 
-.newsletter-signup__button {
-  @extend %footer-secondary-text-size;
-  height: auto;
-  padding: 10px 12px;
-  width: 208px;
-
-  &:hover {
-    background-color: $color-newsletter-button-on-hover;
-  }
-}
-
 .newsletter-signup__button--third-party {
   margin-top: $baseline-unit*7;
 
@@ -78,8 +67,31 @@
   }
 }
 
-.newsletter-button {
+.newsletter-signup__button {
+  @include body(12,14);
+  @extend %footer-secondary-text-size;
+  background: $color-newsletter;
+  border: 0;
+  color: $color-white;
+  padding: 10px 12px;
+  font-weight: 500;
+  text-transform: uppercase;
   min-width: 268px;
+  border-radius: 4px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-true-black;
+    background: $color-newsletter-active;
+    outline: none;
+  }
+
+  &:visited,
+  &:active {
+    background: $color-newsletter;
+    color: $color-white;
+  }
 
   @include respond-to($mq-m) {
     .theme-cy & {
@@ -87,4 +99,3 @@
     }
   }
 }
-

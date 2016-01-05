@@ -53,7 +53,9 @@ define([
     this.closeButton = this.$el.find(this.config.closeClassSelector);
     $window = $(window);
 
-    var focusable = this.$el.find('a[href], area[href], input:not([disabled], [type=hidden]), select:not([disabled], [hidden]), textarea:not([disabled], [hidden]), button:not([disabled], [hidden]), iframe, object, embed, *[tabindex], *[contenteditable]');
+    var focusable = this.$el.find('a[href], area[href], input:not([disabled], [type=hidden]), ' +
+      'select:not([disabled], [hidden]), textarea:not([disabled], [hidden]), ' +
+      'button:not([disabled], [hidden]), iframe, object, embed, *[tabindex], *[contenteditable]');
     this.firstFocusElement = focusable.first();
     this.lastFocusElement = focusable.last();
 
@@ -230,8 +232,9 @@ define([
   };
 
   /*
-  * Handle the tab event on the last and first focusable element
-  * A tab loop is created until the user dismisses the dialog (accessibility recommendation)
+  * Handle the tab event on the last and first focusable element -
+  * a tab loop is created until the user dismisses the dialog (accessibility recommendation).
+  * The keycode for the tab key is 9.
    */
   NewsletterSticky.prototype._handleLastElementTab = function(e) {
     if (e.which === 9 && !e.shiftKey) {

@@ -34,25 +34,6 @@
   border-radius: 4px;
 }
 
-.newsletter-signup__button {
-  @extend %footer-secondary-text-size;
-  height: auto;
-  padding: 10px 12px;
-  width: 208px;
-
-  &:hover {
-    background-color: $color-newsletter-button-on-hover;
-  }
-}
-
-.newsletter-signup__button--third-party {
-  margin-top: $baseline-unit*7;
-
-  .theme-cy & {
-    white-space: normal;
-  }
-}
-
 .newsletter-signup__benefits-list {
   @extend %footer-secondary-text-size;
   margin-top: $baseline-unit*4;
@@ -77,14 +58,3 @@
     }
   }
 }
-
-.newsletter-button {
-  min-width: 268px;
-
-  @include respond-to($mq-m) {
-    .theme-cy & {
-      white-space: normal;
-    }
-  }
-}
-

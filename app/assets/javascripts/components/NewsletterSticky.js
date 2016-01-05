@@ -18,7 +18,8 @@ define([
     },
     $newsletterStickForm,
     newsletterCloseBoxCookieURL,
-    $window;
+    $window,
+    TAB_KEY = 9;
 
   NewsletterSticky = function($el, config) {
     NewsletterSticky.baseConstructor.call(this, $el, config, defaultConfig);
@@ -50,14 +51,15 @@ define([
    * Sets up local variables for the sticky newsletter component
    */
   NewsletterSticky.prototype._setVars = function() {
-    this.closeButton = this.$el.find(this.config.closeClassSelector);
-    $window = $(window);
-
     var focusable = this.$el.find('a[href], area[href], input:not([disabled], [type=hidden]), ' +
       'select:not([disabled], [hidden]), textarea:not([disabled], [hidden]), ' +
       'button:not([disabled], [hidden]), iframe, object, embed, *[tabindex], *[contenteditable]');
-    this.firstFocusElement = focusable.first();
-    this.lastFocusElement = focusable.last();
+
+    this.closeButton = this.$el.find(this.config.closeClassSelector);
+    $window = $(window);
+    
+    this._firstFocusElement = focusable.first();
+    this._lastFocusElement = focusable.last();
 
     $newsletterStickForm = this.$el.find('form');
     newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
@@ -72,8 +74,8 @@ define([
 
     if (isActive) {
       this.closeButton.on('click', $.proxy(this._handleCloseClick, this));
-      this.firstFocusElement.on('keydown', $.proxy(this._handleFirstElementTab, this));
-      this.lastFocusElement.on('keydown', $.proxy(this._handleLastElementTab, this));
+      this._firstFocusElement.on('keydown', $.proxy(this._handleFirstElementTab, this));
+      this._lastFocusElement.on('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.on('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
     } else {
@@ -120,8 +122,8 @@ define([
     if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
       this.$el.addClass(this.config.visibleClassName);
 
-      this.previousFocusElement = $(':focus');
-      this.firstFocusElement.focus();
+      this._previousFocusElement = document.activeElement;
+      this._firstFocusElement.focus();
       this._setScrollListener(false);
 
       MAS.publish('analytics:trigger', {
@@ -228,24 +230,23 @@ define([
     this.$el.removeClass(this.config.visibleClassName);
     this.closeButton.addClass(this.config.closedClassName);
     this._setListeners(false);
-    this.previousFocusElement.focus();
+    this._previousFocusElement.focus();
   };
 
   /*
   * Handle the tab event on the last and first focusable element -
   * a tab loop is created until the user dismisses the dialog (accessibility recommendation).
-  * The keycode for the tab key is 9.
    */
   NewsletterSticky.prototype._handleLastElementTab = function(e) {
-    if (e.which === 9 && !e.shiftKey) {
+    if (e.which === TAB_KEY && !e.shiftKey) {
       e.preventDefault();
-      this.firstFocusElement.focus();
+      this._firstFocusElement.focus();
     }
   }
   NewsletterSticky.prototype._handleFirstElementTab = function(e) {
-    if (e.which === 9 && e.shiftKey) {
+    if (e.which === TAB_KEY && e.shiftKey) {
       e.preventDefault();
-      this.lastFocusElement.focus();
+      this._lastFocusElement.focus();
     }
   }
 

@@ -2,6 +2,12 @@
 //
 // Styleguide Newsletter Signup
 
+.newsletter-signup {
+  .mas-button {
+    min-width: 268px;
+  }
+}
+
 %footer-secondary-text-size {
   @include body(16, 22);
 }

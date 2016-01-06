@@ -30,11 +30,13 @@
 @import 'layout/common/all';
 @import 'layout/page_specific/all';
 
-// Components
-@import 'components/common/all';
-@import 'components/page_specific/all';
+// Dough Theme Components
 @import 'components/dough_theme/variables';
 @import 'components/dough_theme/*/_all.scss';
+
+// Local Components
+@import 'components/common/all';
+@import 'components/page_specific/all';
 
 .editorial {
   @import 'components/cms/all';

@@ -1,4 +1,10 @@
 // styles specific to the 'share this ...' section
+.social-sharing__title {
+  font-size: 1.3125rem;
+  margin-bottom: $baseline-unit/2;
+  color: $color-social-sharing-heading;
+}
+
 .social-sharing__item {
   height: 33px;
   width: 55px;
@@ -46,6 +52,6 @@
 
   .svg-icon--email,
   .icon--email {
-    margin: 7.5px auto;
+    margin: 8.5px auto;
   }
 }

@@ -114,7 +114,7 @@
   .twitter-link:active,
   .twitter-link:focus {
     background: $color-twitter;
-    padding: 18.5px 16.426px; // (55px - 18px) / 2 - (55px - (184.573px * (18 / 150))) / 2
+    padding: 19px 17.041px; // (55px - 17px) / 2 || (55px - (184.573px * (17 / 150))) / 2
 
     &:hover {
       background: $color-twitter-hover;
@@ -125,7 +125,7 @@
   .facebook-link:active,
   .facebook-link:focus {
     background: $color-facebook;
-    padding: 16.5px 21.788px; // (55px - 22px) / 2 - (55px - (77.8924px * (22 / 150))) / 2
+    padding: 16.5px 21.788px; // (55px - 22px) / 2 || (55px - (77.8924px * (22 / 150))) / 2
 
     &:hover {
       background: $color-facebook-hover;
@@ -136,7 +136,7 @@
   .youtube-link:active,
   .youtube-link:focus {
     background: $color-youtube;
-    padding: 18.5px 14.704px; // (55px - 18px) / 2 - (55px - (213.264px * (18 / 150))) / 2
+    padding: 18.5px 14.704px; // (55px - 18px) / 2 || (55px - (213.264px * (18 / 150))) / 2
 
     &:hover {
       background: $color-youtube-hover;

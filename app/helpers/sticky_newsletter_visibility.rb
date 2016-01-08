@@ -99,6 +99,8 @@ module StickyNewsletterVisibility
       putting-your-affairs-in-order
       preparing-for-illness-old-age-and-death
       choosing-your-executor
+      if-you-have-had-a-late-miscarriage
+      if-your-baby-has-died-shortly-after-birth
     )
 
     def initialize(slug)

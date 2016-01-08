@@ -2,7 +2,7 @@
   <% if local_assigns.has_key?(:fixed_position) %> news-signup-sticky--positioned
   <% end %> js-news-signup-sticky-form" role="dialog" aria-labelledby="news-signup__header" aria-describedby="news-signup-sticky__description1 news-signup-sticky__description2" data-dough-component="NewsletterSticky" data-done="<%= t('newsletter_subscriptions.sticky.done') %>">
   <div class="news-signup-sticky__text news-signup-sticky__text--display">
-    <h2 id="news-signup__header" class="visually-hidden"><%= t('newsletter') %></h2>
+    <h2 id="news-signup__header" class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></h2>
     <p class="news-signup-sticky__intro" id="news-signup-sticky__description1"><%= t('newsletter_subscriptions.sticky.intro') %></p>
 
     <p class="news-signup-sticky__intro" id="news-signup-sticky__description2">

@@ -124,6 +124,7 @@ define([
 
       this._previousFocusElement = document.activeElement;
       this._firstFocusElement.focus();
+      
       this._setScrollListener(false);
 
       MAS.publish('analytics:trigger', {
@@ -230,7 +231,9 @@ define([
     this.$el.removeClass(this.config.visibleClassName);
     this.closeButton.addClass(this.config.closedClassName);
     this._setListeners(false);
-    this._previousFocusElement.focus();
+    if (this._previousFocusElement) {
+      this._previousFocusElement.focus();  
+    }
   };
 
   /*

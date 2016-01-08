@@ -138,6 +138,8 @@ describe('NewsletterSticky', function() {
       hasScrolledOverPercentageStub = sinon.stub(this.obj, '_hasScrolledOverPercentage', function() {
         return true;
       });
+      
+      this.obj._setVars();    
     });
 
     it('calls _hasScrolledOverPercentage', function() {
@@ -150,6 +152,13 @@ describe('NewsletterSticky', function() {
       this.obj._handleScroll();
 
       expect(this.obj.$el.hasClass('news-signup-sticky--visible')).to.be.equal(true);
+    });
+
+    it('sets focus to the first element in the module', function() {
+      this.obj._handleScroll();
+
+      expect(this.obj._firstFocusElement[0])
+        .to.equal(document.activeElement);
     });
 
     it('calls _setScrollListener, passing it false', function() {
@@ -200,6 +209,37 @@ describe('NewsletterSticky', function() {
   describe('_scrollThreshold', function() {
     it('returns the correct value', function() {
       expect(this.obj._scrollThreshold()).to.be.equal($(document).height() * 0.4);
+    });
+  });
+
+  describe('_handleLastElementTab', function(){
+    beforeEach(function() {
+      this.obj._setVars();
+    });
+
+    it('returns focus to the first element on sticky newsletter', function(){
+      var e = $.Event('keydown');
+      e.which = 9; // Tab Key      
+      this.obj._handleLastElementTab(e);
+      
+      expect (this.obj._firstFocusElement[0])
+        .to.equal(document.activeElement);
+    });
+  });
+
+  describe('_handleFirstElementTab', function(){
+    beforeEach(function() {
+      this.obj._setVars();
+    });
+
+    it('moves focus to the last element on sticky newsletter on shift-tab', function(){
+      var e = $.Event('keydown');
+      e.which = 9; // Tab Key
+      e.shiftKey = true;
+      this.obj._handleFirstElementTab(e);
+      
+      expect (this.obj._lastFocusElement[0])
+        .to.equal(document.activeElement);
     });
   });
 

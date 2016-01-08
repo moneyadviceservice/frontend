@@ -13,7 +13,7 @@
 
   <fieldset class="newsletter-signup__form js-newsletter-form" id="newsletter_signup">
     <% if hide_elements_irrelevant_for_third_parties? %>
-      <a href="https://www.moneyadviceservice.org.uk<%= t('footer.contact_us_link') %>#newsletter_signup" class="t-newsletter-button button newsletter-signup__button newsletter-signup__button--third-party"><%= t('newsletter_subscriptions.hidden_title') %></a>
+      <a href="https://www.moneyadviceservice.org.uk<%= t('footer.contact_us_link') %>#newsletter_signup" class="mas-button mas-button--newsletter t-newsletter-button"><%= t('newsletter_subscriptions.hidden_title') %></a>
     <% else %>
       <legend class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></legend>
       <%= label_tag('subscription[email]', t('newsletter_subscriptions.label'), class: 'newsletter-signup__label visually-hidden') %>
@@ -25,7 +25,7 @@
       ) %>
       <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp' -%>
       <%= hidden_field_tag 'subscription[category]', 'footer' -%>
-      <%= button_tag(t('newsletter_subscriptions.button'), type: 'submit', class: 'newsletter-button button button--newsletter t-newsletter-button') %>
+      <%= button_tag(t('newsletter_subscriptions.button'), type: 'submit', class: 'mas-button mas-button--newsletter t-newsletter-button') %>
     <% end %>
   </fieldset>
 

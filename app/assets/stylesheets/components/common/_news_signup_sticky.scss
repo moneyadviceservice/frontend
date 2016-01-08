@@ -10,12 +10,6 @@
   text-align: center;
   position: relative;
 
-  .button--newsletter {
-    vertical-align: top;
-    min-width: 188px;
-    margin-top: 1px;
-  }
-
   .no-svg-icon--desktop-close-box {
     html & {
       display: none;
@@ -29,7 +23,6 @@
       position: relative;
       left: -3px;
       top: -2px;
-
     }
 
     & .svg-icon {
@@ -40,7 +33,6 @@
         height: 12px;
       }
     }
-
   }
 
   .no-svg-icon--mobile-close-box {
@@ -64,9 +56,13 @@
         }
       }
     }
-
   }
 
+  .mas-button {
+    vertical-align: top;
+    min-width: 188px;
+    margin-top: 1px;
+  }
 }
 
 .news-signup-sticky--positioned {

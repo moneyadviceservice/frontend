@@ -9,6 +9,8 @@
   overflow: hidden;
   vertical-align: middle;
   width: 200px;
+  font-size: 0;
+  line-height: 1;
 
   @include respond-to($mq-m) {
     width: 285px;

@@ -1,7 +1,7 @@
 .l-header {
-  background: $color-green-primary;
-  min-height: $baseline-unit*11;
-  position: relative;
+  width: 100%;
+  z-index: 200;
+  min-height: 55px;
 
   .mobile-nav {
     display: none;
@@ -9,13 +9,9 @@
 
   .mas-logo {
     @include column(4);
-    margin-bottom: $baseline-unit*3;
-    margin-top: $baseline-unit*3;
+    margin-bottom: $baseline-unit*2;
+    margin-top: $baseline-unit*2;
     position: relative;
-
-    @include respond-to($mq-small-tablet) {
-      margin-bottom: $baseline-unit*3;
-    }
 
     @include respond-to($mq-m) {
       @include column(10);
@@ -135,8 +131,12 @@
   .mobile-nav {
     display: block;
     position: absolute;
-    top: 3px;
+    top: 0;
     right: 0;
+
+    @include respond-to($mq-m) {
+      top: 3px;
+    }
 
     @include respond-to($mq-l) {
       display: none;
@@ -178,6 +178,24 @@
       display: block;
     }
   }
+}
+
+.l-header__content {
+  position: fixed;
+  background: $color-green-primary;
+  z-index: 150;
+  max-height: 100%;
+  overflow-y: auto;
+
+  @include respond-to($mq-m) {
+    position: relative;
+    overflow-y: hidden;
+  }
+}
+
+.l-header__content--non-sticky {
+  position: relative;
+  overflow-y: hidden;
 }
 
 .l-menu-nav {

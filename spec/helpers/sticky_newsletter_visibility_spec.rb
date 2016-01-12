@@ -21,6 +21,12 @@ RSpec.describe StickyNewsletterVisibility, type: :helper do
       it_behaves_like 'shuns_sticky_newsletter'
     end
 
+    context 'cross-domain blog page' do
+      let(:url) { 'http://example.com/blog' }
+
+      it_behaves_like 'shuns_sticky_newsletter'
+    end
+
     %w(en cy).each do |locale|
       context 'home page' do
         let(:url) { "http://example.com/#{locale}" }

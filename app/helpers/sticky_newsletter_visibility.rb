@@ -116,7 +116,9 @@ module StickyNewsletterVisibility
     def blacklist_filter_results
       BLACKLIST_FILTERED.map do |pattern|
         if pattern.empty?
-          '/en' == @slug || '/cy' == @slug
+          '/en'   == @slug ||
+          '/cy'   == @slug ||
+          '/blog' == @slug
         else
           /\/(en|cy)\/#{pattern}/i.match(@slug)
         end

@@ -78,12 +78,14 @@ define([
       this._lastFocusElement.on('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.on('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
+      $newsletterStickForm.on('ajax:success', $.proxy(this._formAjaxSuccessHandler, this));
     } else {
       this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
       this._firstFocusElement.off('keydown', $.proxy(this._handleFirstElementTab, this));
       this._lastFocusElement.off('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.off('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
+      $newsletterStickForm.off('ajax:success', $.proxy(this._formAjaxSuccessHandler, this));
     }
   };
 
@@ -116,6 +118,15 @@ define([
       .removeClass('news-signup-sticky__text--display');
 
   };
+
+  /**
+  * Return focus to the new button after the AJAX success event
+  * Reset the variables as a new view is presented
+  */
+  NewsletterSticky.prototype._formAjaxSuccessHandler = function() {
+    this._setVars();
+    this._firstFocusElement.focus();
+  }
 
   /**
    * Make the newsletter module display if scroll is over a certain percentage

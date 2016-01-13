@@ -80,6 +80,8 @@ define([
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
     } else {
       this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
+      this._firstFocusElement.off('keydown', $.proxy(this._handleFirstElementTab, this));
+      this._lastFocusElement.off('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.off('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
     }

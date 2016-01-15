@@ -88,7 +88,9 @@ module NewsletterExclusions
       'putting-your-affairs-in-order',
       'preparing-for-illness-old-age-and-death',
       'choosing-your-executor',
-      'raising-standards'
+      'raising-standards',
+      'if-you-have-had-a-late-miscarriage',
+      'if-your-baby-has-died-shortly-after-birth'
     ]
   end
 end

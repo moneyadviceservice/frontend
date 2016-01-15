@@ -194,7 +194,7 @@ function woAfterLoad() {
   document.body.appendChild(tmpDiv);
   function getImg() {
     var rTimer = 6000;
-    var pUrl = iWOGateway + "/poll.gif?d=www.moneyadviceservice.org.uk&stamp=" + (new Date()).getTime();
+    var pUrl = iWOGateway + "/poll.gif?d=" + sWODomain + "&stamp=" + (new Date()).getTime();
     if (iWOSession != "") {
       pUrl += "&u=" + iWOSession
     }
@@ -341,7 +341,7 @@ function inviteSound() {
     t.loop = 0
   }
   if (t != null) {
-    t.src = iWOGateway + "/" + playSound + "?domain=www.moneyadviceservice.org.uk";
+    t.src = iWOGateway + "/" + playSound + "?domain=" + sWODomain;
     document.body.appendChild(t)
   }
 }
@@ -368,7 +368,7 @@ function startInvite() {
     hldX = 2
   }
   var ofsY;
-  var iUrl = iWOGateway + "/invite.gif?d=www.moneyadviceservice.org.uk&stamp=" + (new Date()).getTime();
+  var iUrl = iWOGateway + "/invite.gif?d=" + sWODomain + "&stamp=" + (new Date()).getTime();
   if (iWOSession != "")iUrl += "&u=" + iWOSession;
   if (document.documentElement && document.documentElement.scrollTop) {
     ofsY = document.documentElement.scrollTop
@@ -433,7 +433,7 @@ function stopInvite() {
 
 function startChat(event) {
   if (event.clientX < locX + imgW - closeX || event.clientY > locY + closeY) {
-    this.chatWindow = window.open("https://webchat.moneyadviceservice.org.uk/chat/chatstart.htm?domain=www.moneyadviceservice.org.uk", "Chat", "width=484,height=361");
+    this.chatWindow = window.open("https://webchat.moneyadviceservice.org.uk/chat/chatstart.htm?domain=" + sWODomain, "Chat", "width=484,height=361");
     this.chatWindow.focus();
     this.chatWindow.opener = window
   }
@@ -456,7 +456,7 @@ function getParams() {
   var ifme = document.createElement("script");
   ifme.type = "text/javascript";
   ifme.language = "Javascript";
-  ifme.src = iWOGateway + "/params.js?d=www.moneyadviceservice.org.uk&stamp=" + (new Date()).getTime() + ((iWOSession != "") ? "&u=" + iWOSession : "");
+  ifme.src = iWOGateway + "/params.js?d=" + sWODomain + "&stamp=" + (new Date()).getTime() + ((iWOSession != "") ? "&u=" + iWOSession : "");
   document.body.appendChild(ifme)
 }
 

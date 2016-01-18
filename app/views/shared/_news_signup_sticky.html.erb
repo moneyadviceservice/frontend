@@ -1,10 +1,11 @@
 <div class="news-signup-sticky
   <% if local_assigns.has_key?(:fixed_position) %> news-signup-sticky--positioned
-  <% end %> js-news-signup-sticky-form" data-dough-component="NewsletterSticky" data-done="<%= t('newsletter_subscriptions.sticky.done') %>">
+  <% end %> js-news-signup-sticky-form" role="dialog" aria-labelledby="news-signup__header" aria-describedby="news-signup-sticky__description1 news-signup-sticky__description2" data-dough-component="NewsletterSticky" data-done="<%= t('newsletter_subscriptions.sticky.done') %>">
   <div class="news-signup-sticky__text news-signup-sticky__text--display">
-    <p class="news-signup-sticky__intro"><%= t('newsletter_subscriptions.sticky.intro') %></p>
+    <h2 id="news-signup__header" class="visually-hidden"><%= t('newsletter_subscriptions.hidden_title') %></h2>
+    <p class="news-signup-sticky__intro" id="news-signup-sticky__description1"><%= t('newsletter_subscriptions.sticky.intro') %></p>
 
-    <p class="news-signup-sticky__intro">
+    <p class="news-signup-sticky__intro" id="news-signup-sticky__description2">
       <span class="news-signup-sticky__intro--emphasize"><%= t('newsletter_subscriptions.sticky.are_you') %></span> <%= t('newsletter_subscriptions.sticky.sign_up_today') %>
     </p>
   </div>

@@ -18,7 +18,8 @@ define([
     },
     $newsletterStickForm,
     newsletterCloseBoxCookieURL,
-    $window;
+    $window,
+    TAB_KEY = 9;
 
   NewsletterSticky = function($el, config) {
     NewsletterSticky.baseConstructor.call(this, $el, config, defaultConfig);
@@ -50,8 +51,15 @@ define([
    * Sets up local variables for the sticky newsletter component
    */
   NewsletterSticky.prototype._setVars = function() {
+    var focusable = this.$el.find('a[href], area[href], input:not([disabled], [type=hidden]), ' +
+      'select:not([disabled], [hidden]), textarea:not([disabled], [hidden]), ' +
+      'button:not([disabled], [hidden]), iframe, object, embed, *[tabindex], *[contenteditable]');
+
     this.closeButton = this.$el.find(this.config.closeClassSelector);
     $window = $(window);
+    
+    this._firstFocusElement = focusable.first();
+    this._lastFocusElement = focusable.last();
 
     $newsletterStickForm = this.$el.find('form');
     newsletterCloseBoxCookieURL = $newsletterStickForm.find('#close-box-cookie-url').val();
@@ -66,13 +74,18 @@ define([
 
     if (isActive) {
       this.closeButton.on('click', $.proxy(this._handleCloseClick, this));
+      this._firstFocusElement.on('keydown', $.proxy(this._handleFirstElementTab, this));
+      this._lastFocusElement.on('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.on('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.on('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
-    }
-    else {
+      $newsletterStickForm.on('ajax:success', $.proxy(this._formAjaxSuccessHandler, this));
+    } else {
       this.closeButton.off('click', $.proxy(this._handleCloseClick, this));
+      this._firstFocusElement.off('keydown', $.proxy(this._handleFirstElementTab, this));
+      this._lastFocusElement.off('keydown', $.proxy(this._handleLastElementTab, this));
       this.$el.off('click', this.config.buttonDoneClass, $.proxy(this._handleCloseClick, this));
       $newsletterStickForm.off('ajax:error', $.proxy(this._formAjaxErrorHandler, this));
+      $newsletterStickForm.off('ajax:success', $.proxy(this._formAjaxSuccessHandler, this));
     }
   };
 
@@ -107,11 +120,24 @@ define([
   };
 
   /**
+  * Return focus to the new button after the AJAX success event
+  * Reset the variables as a new view is presented
+  */
+  NewsletterSticky.prototype._formAjaxSuccessHandler = function() {
+    this._setVars();
+    this._firstFocusElement.focus();
+  }
+
+  /**
    * Make the newsletter module display if scroll is over a certain percentage
    */
   NewsletterSticky.prototype._handleScroll = function() {
     if (this._hasScrolledOverPercentage(this.config.appearsAfterPercentage)) {
       this.$el.addClass(this.config.visibleClassName);
+
+      this._previousFocusElement = document.activeElement;
+      this._firstFocusElement.focus();
+      
       this._setScrollListener(false);
 
       MAS.publish('analytics:trigger', {
@@ -218,7 +244,27 @@ define([
     this.$el.removeClass(this.config.visibleClassName);
     this.closeButton.addClass(this.config.closedClassName);
     this._setListeners(false);
+    if (this._previousFocusElement) {
+      this._previousFocusElement.focus();  
+    }
   };
+
+  /*
+  * Handle the tab event on the last and first focusable element -
+  * a tab loop is created until the user dismisses the dialog (accessibility recommendation).
+   */
+  NewsletterSticky.prototype._handleLastElementTab = function(e) {
+    if (e.which === TAB_KEY && !e.shiftKey) {
+      e.preventDefault();
+      this._firstFocusElement.focus();
+    }
+  }
+  NewsletterSticky.prototype._handleFirstElementTab = function(e) {
+    if (e.which === TAB_KEY && e.shiftKey) {
+      e.preventDefault();
+      this._lastFocusElement.focus();
+    }
+  }
 
   return NewsletterSticky;
 });

@@ -76,9 +76,6 @@ else
     Core::Repository::Customers::Cream.new
 end
 
-Core::Registry::Repository[:survive_january_subscription] =
-  Core::Repository::SurviveJanuarySubscriptions::Cream.new
-
 Core::Registry::Repository[:user] =
   Core::Repository::Users::Default.new
 

@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
   decorates_assigned :parent_category, with: CategoryDecorator
 
   include Navigation
-  helper SurviveJanuary
 
   def show
     @article = interactor.call do |error|
@@ -20,7 +19,6 @@ class ArticlesController < ApplicationController
     set_categories
     set_show_newsletter_signup
     set_parent_category
-    set_show_campaign_promo
   end
 
   private
@@ -57,10 +55,6 @@ class ArticlesController < ApplicationController
     end
 
     @newsletter_excluded = newsletter_submitted_cookie_set? || exclusions.count > 0 || (I18n.locale == :cy ? true : false)
-  end
-
-  def set_show_campaign_promo
-    @campaign_promo_excluded = I18n.locale == :cy ? true : false
   end
 
 end

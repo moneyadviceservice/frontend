@@ -7,8 +7,7 @@ module StickyNewsletterVisibility
                           'videos',
                           'corporate_categories',
                           'sitemap',
-                          'users',
-                          'campaigns/survive-january'
+                          'users'
                          ]
 
     BLACKLIST_ARTICLES = %w(

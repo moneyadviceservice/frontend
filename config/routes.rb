@@ -171,7 +171,6 @@ Rails.application.routes.draw do
                       saving-for-a-holiday|
                       start-living-your-life-free-of-debt|
                       student-budgeting|
-                      survive-january|
                       sw-saving-and-debt|
                       the-cost-of-caring|
                       the-true-cost-of-affording-a-home|
@@ -199,7 +198,6 @@ Rails.application.routes.draw do
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
 
     resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
-    resource :survive_january_subscription, only: :create, path: 'survive-january-subscription'
 
     resource :cookie_dismissal, only: :create, controller: 'cookie_dismissal'
 

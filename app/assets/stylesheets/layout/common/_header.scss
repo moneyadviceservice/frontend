@@ -1,7 +1,13 @@
 .l-header {
   width: 100%;
   z-index: 200;
-  min-height: 55px;
+  min-height: $baseline-unit*9;
+  background-color: transparent;
+
+  @include respond-to($mq-m) {
+    background: $color-green-primary;
+    min-height: $baseline-unit*11;
+  }
 
   .mobile-nav {
     display: none;
@@ -182,7 +188,7 @@
 
 .l-header__content {
   position: fixed;
-  background: $color-green-primary;
+  background-color: $color-green-primary;
   z-index: 150;
   max-height: 100%;
   overflow-y: auto;
@@ -190,6 +196,7 @@
   @include respond-to($mq-m) {
     position: relative;
     overflow-y: hidden;
+    background-color: transparent;
   }
 }
 

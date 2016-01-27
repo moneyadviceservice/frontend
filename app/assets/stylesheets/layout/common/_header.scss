@@ -233,10 +233,10 @@
     font-weight: 500;
     display: inline-block;
     margin-bottom: 0;
-    margin-top: $baseline-unit*4;
     padding-left: $baseline-unit*3;
     position: absolute;
-    bottom: 14px;
+    top: 50%;
+    margin-top: -$baseline-unit*1.5;
 
     .theme-cy & {
       padding-left: $baseline-unit;

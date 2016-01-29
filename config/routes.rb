@@ -232,6 +232,8 @@ Rails.application.routes.draw do
 
       end
     end
+
+    get '/content-hub' => 'content_hub#show'
   end
 
   %w(404 422 500 ).each do |status_code|

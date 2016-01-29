@@ -1,0 +1,333 @@
+// Content Hub Variables
+$content-hub-title-color: $color-black;
+$content-hub-bgcolor: $color-grey-concrete;
+$content-hub-module-bgcolor: $color-white;
+$content-hub-module-reversecolor: $color-white;
+$content-hub-module-reverseBGcolor: $color-black;
+$content-hub-modules-gutter-width: 0.5%;
+
+#main {
+  // NB this needs to be set on this element conditional upon this being the specific page that is being served ...
+  background: $content-hub-bgcolor;
+}
+
+.l-content-hub__title {
+  color: $content-hub-title-color;
+
+  @include column(12);
+  @include respond-to(0, $mq-l) {
+    margin-top: $baseline-unit*3;
+    margin-bottom: $baseline-unit*3;
+  }
+}
+
+.l-content-hub__hero {
+  clear: left;
+  background: $content-hub-module-bgcolor;
+  margin-bottom: $baseline-unit;
+
+  @include clearfix();
+  @include respond-to($mq-l) {
+    background: transparent;
+  }
+}
+
+.l-content-hub__hero__inner {
+  position: relative;
+  padding-top: $baseline-unit*3;
+  padding-bottom: $baseline-unit*3;
+
+  @include column(12);
+  @include respond-to($mq-l) {
+    background: $content-hub-module-bgcolor;
+    padding-top: $baseline-unit*5;
+    padding-bottom: $baseline-unit*5;
+  }
+}
+
+.l-content-hub__hero__title {
+  color: $content-hub-title-color;
+  margin-top: 0;
+}
+
+.l-content-hub__hero__image {
+  padding-bottom: 100%; // depends on aspect ratio of image (but must be constant!)
+  background-image: url(/assets/budget_planner/start_square.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  @include respond-to($mq-l) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 0;
+    background-image: url(/assets/budget_planner/start_landscape.jpg);
+
+    @include column(6);
+  }
+}
+
+.l-content-hub__hero__content {
+  @include respond-to($mq-l) {
+    @include column(6);
+
+    float: right;
+  }
+}
+
+.l-content-hub__hero__content {
+  @include respond-to($mq-l) {
+    @include body(20, 27);
+  }
+}
+
+.l-content-hub__modules {
+  @include clearfix();
+
+  @include respond-to($mq-l) {
+    padding-bottom: $baseline-unit*10;
+
+    @include column(12);
+  }
+}
+
+.l-content-hub__modules__inner {
+  @include respond-to($mq-l) {
+    // @include column(12);
+  }
+}
+
+.l-content-hub__modules__content {
+  /* N.B. progressive enhancement -- */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: stretch;
+  /* -- N.B. progressive enhancement */
+
+  @include respond-to($mq-l) {
+    /* N.B. progressive enhancement -- */
+    flex-flow: row wrap;
+    /* -- N.B. progressive enhancement */
+
+    margin-left: -$content-hub-modules-gutter-width / 2;
+    margin-right: -$content-hub-modules-gutter-width / 2;
+  }
+}
+
+.l-content-hub__module {
+  @include clearfix();
+
+  position: relative;
+  background: $color-white;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-l) {
+    $content-hub-modules-row: 3;
+
+    width: ((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row);
+    margin-left: $content-hub-modules-gutter-width / 2;
+    margin-right: $content-hub-modules-gutter-width / 2;
+    float: left;
+  }
+}
+
+.l-content-hub__module__inner {
+  @include column(12);
+
+  padding-top: $baseline-unit * 3;
+  padding-bottom: $baseline-unit * 3;
+
+  @include respond-to($mq-l) {
+    $content-hub-modules-row: 3;
+    $margin: $default-gutter * $content-hub-modules-row;
+
+    margin-left: $margin; // 1.125rem; // express in % (calculated from parent's default gutter ...)
+    margin-right: $margin; // 1.125rem; // express in % (calculated from parent's default gutter ...)
+    // also double width module needs different margin ...
+    width: (100% - ($margin * 2));
+
+    // fairly random value, based upon making each module roughly square (given a particular viewport size)
+    // might be a better way to do this: via vertical padding or flex box ...
+    min-height: 382.75px;
+    // height: 370px; // don't use in flexbox mode but is needed otherwise
+  }
+}
+
+.l-content-hub__module__title {
+  color: $content-hub-title-color;
+  margin-top: 0;
+}
+
+.l-content-hub__module__image {
+  padding-bottom: 508 / 920 * 100%; // depends on aspect ratio of image (but must be constant!)
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.content-hub__module__links {
+  @include body(18, 24);
+  margin-top: $baseline-unit;
+}
+
+.content-hub__module__cta {
+  display: block;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 40px;
+  text-align: right;
+}
+
+.content-hub__module__cta-icon {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+// module-specific variations
+// double width --
+.content-hub__module--hdr-con-lnk-img {
+  .l-content-hub__module__image {
+    width: 100%;
+    padding-bottom: 100%;
+
+    @include respond-to($mq-l) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: (50% - ($content-hub-modules-gutter-width / 2)); // needs to be a little more accurately calculated
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      padding-bottom: 0;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    $content-hub-modules-row: 3;
+
+    width: ((((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row) * 2) + $content-hub-modules-gutter-width);
+
+    .l-content-hub__module__inner {
+      margin: 0 ($default-gutter * $content-hub-modules-row) / 2; // not *exactly* right ...
+    }
+
+    .l-content-hub__module__content {
+      width: 50% - ($content-hub-modules-gutter-width / 2); // needs to be a little more accurately calculated
+    }
+  }
+}
+// -- double width
+
+// image only --
+.content-hub__module--img {
+  .l-content-hub__module__inner {
+    @include respond-to($mq-l) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .l-content-hub__module__image {
+    padding-bottom: 100%;
+  }
+}
+// -- image only
+
+// tool --
+.content-hub__module--tool {
+  text-align: center;
+  background-color: #f96d49; // find this in the colour pallet
+  padding-top: 80%;
+
+  @include respond-to($mq-l) {
+    padding-top: 0;
+  }
+
+  .l-content-hub__module__content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .l-content-hub__module__title {
+    font-size: 2rem;
+  }
+
+  .l-content-hub__module__description {
+    color: $content-hub-module-reversecolor;
+    background-color: $content-hub-module-reverseBGcolor;
+    padding: .75rem 0;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+
+  .l-content-hub__module__inner:before {
+    content: 'Tools';
+    position: absolute;
+    top: $baseline-unit * 3;
+    right: 1.25rem; // match standard padding when set
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .l-content-hub__module__inner:after {
+    content: '';
+    display: block;
+    width: 51px;
+    height: 51px;
+    background-image: url(/assets/icon-sprite.png);
+    background-position: -1000px -217px;
+    margin: 0 auto;
+  }
+}
+// -- tool
+
+// blog --
+.content-hub__module--blog {
+  background-color: #1076ab; // find this in the colour pallet
+  padding-top: 80%;
+
+  @include respond-to($mq-l) {
+    padding-top: 0;
+  }
+
+  .l-content-hub__module__title {
+    font-size: 2rem;
+    color: $content-hub-module-reversecolor;
+  }
+
+  .l-content-hub__module__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .l-content-hub__module__description {
+    font-size: 1.25rem;
+    color: $content-hub-module-reversecolor;
+    margin-bottom: 0;
+  }
+
+  .l-content-hub__module__inner:before {
+    position: relative;
+  }
+
+  .l-content-hub__module__inner:before {
+    content: 'Blog';
+    position: absolute;
+    top: $baseline-unit * 3;
+    right: 1.25rem; // match standard padding when set
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $content-hub-module-reversecolor;
+  }
+}
+// -- blog

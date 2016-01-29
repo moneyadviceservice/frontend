@@ -248,6 +248,8 @@ Rails.application.routes.draw do
 
       end
     end
+
+    get '/content-hub' => 'static_pages#content_hub'
   end
 
   %w(404 422 500 ).each do |status_code|

@@ -1,5 +1,5 @@
 <header class="l-header" role="banner">
-  <div class="l-constrained">
+  <div class="l-constrained l-header__content<%= ' l-header__content--non-sticky' if hide_sticky_header? %>">
     <div class="mas-logo">
       <%= link_to main_app.root_path, class: 'mas-logo__link' do %>
         <%= image_tag("logo-sprite-#{I18n.locale}.png", alt: t('layouts.base.title'), class: 'mas-logo__img') %>

@@ -28,9 +28,17 @@
         </div>
 
         <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <% chat_opening_hours.open_periods.each do |period| %>
-            <li class="contact-panel__additional-info"><%= period.html_safe %></li>
+
+          <% unless alternate_hours_active? %>
+            <% chat_opening_hours.open_periods.each do |period| %>
+              <li class="contact-panel__additional-info"><%= period.html_safe %></li>
+            <% end %>
           <% end %>
+
+          <% if display_chat_migration_message? %>
+            <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+          <% end %>
+
           <li class="contact-panel__additional-info"><%= t('contact_panels.chat.bank_holiday_html') %></li>
         </ul>
 

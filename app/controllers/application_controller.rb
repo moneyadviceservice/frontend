@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   include Localisation
 
   helper  StickyNewsletterVisibility
+  helper  ChatMigrationMessage
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'

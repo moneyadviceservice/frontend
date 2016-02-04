@@ -14,6 +14,8 @@ module World
       corporate_categories
       corporate_tool
       corporate_tool_directory
+      debt_management
+      debt_management_companies
       forgot_password
       home
       news

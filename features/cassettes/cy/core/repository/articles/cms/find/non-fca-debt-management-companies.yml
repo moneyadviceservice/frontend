@@ -1,0 +1,156 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/cy/articles/non-fca-debt-management-companies.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith.local; jongilbraith; 37802) ruby/2.1.2 (95;
+        x86_64-darwin14.0)
+      X-Request-Id:
+      - 2db8aab3-11c7-44df-883f-84a1981e4bb8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1d213ada8d9f823414e556b41394a272"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2db8aab3-11c7-44df-883f-84a1981e4bb8
+      X-Runtime:
+      - '0.054541'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 04 Feb 2016 12:16:56 GMT
+      Content-Length:
+      - '4630'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6Ikxpc3Qgb2YgZmlybXMgbm8gbG9uZ2VyIG9mZmVyaW5nIGRl
+        YnQgbWFuYWdlbWVudCBwbGFucyIsInNsdWciOiJub24tZmNhLWRlYnQtbWFu
+        YWdlbWVudC1jb21wYW5pZXMiLCJmdWxsX3BhdGgiOiIvY3kvYXJ0aWNsZXMv
+        bm9uLWZjYS1kZWJ0LW1hbmFnZW1lbnQtY29tcGFuaWVzIiwibWV0YV9kZXNj
+        cmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6
+        W10sImxheW91dF9pZGVudGlmaWVyIjoiYXJ0aWNsZSIsInJlbGF0ZWRfY29u
+        dGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbeyJ0aXRsZSI6IkRp
+        Z2dpbmcgaW50byBkZWJ0IOKAkyB0aGUgdHJ1dGggcmV2ZWFsZWQiLCJwYXRo
+        IjoiaHR0cDovL2Jsb2cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9kaWdn
+        aW5nLWludG8tZGVidC10aGUtdHJ1dGgtcmV2ZWFsZWQifSx7InRpdGxlIjoi
+        Rm91ciB3YXlzIHRvIHNhdmUgdGhpcyBoYWxmLXRlcm0iLCJwYXRoIjoiaHR0
+        cDovL2Jsb2cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9mb3VyLXdheXMt
+        dG8tc2F2ZS10aGlzLWhhbGYtdGVybSJ9LHsidGl0bGUiOiJIYXMgeW91ciBj
+        cmVkaXQgc2NvcmUgYmVlbiBoaXQgYnkgdm90ZSBydWxlIGNoYW5nZT8iLCJw
+        YXRoIjoiaHR0cDovL2Jsb2cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9o
+        YXMteW91ci1jcmVkaXQtc2NvcmUtYmVlbi1oaXQtYnktdm90ZS1ydWxlLWNo
+        YW5nZSJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3MiOltd
+        LCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hl
+        ZF9hdCI6IjIwMTYtMDItMDNUMTU6NTc6MjkuMDAwWiIsImJsb2NrcyI6W3si
+        aWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjdWxcdTAw
+        M2VcbiAgXHUwMDNjbGlcdTAwM2VBY3IgRmluYW5jZVx1MDAzYy9saVx1MDAz
+        ZVxuICBcdTAwM2NsaVx1MDAzZUJha2VyIEV2YW5zIExpbWl0ZWRcdTAwM2Mv
+        bGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VCYXJyaW5ndG9uIExld2lzIExp
+        bWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VCaWcgVCBN
+        ZWRpYSBMaW1pdGVkIHRyYWRpbmcgYXMgTmV3IFN0YXJ0IERlYnQgU29sdXRp
+        b25zXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlQnJpZGdld29v
+        ZCBGaW5hbmNpYWwgU29sdXRpb25zIExpbWl0ZWRcdTAwM2MvbGlcdTAwM2Vc
+        biAgXHUwMDNjbGlcdTAwM2VDbGFyayBMaW5kc2F5IExscFx1MDAzYy9saVx1
+        MDAzZVxuICBcdTAwM2NsaVx1MDAzZUNsZWFyIEZpbmFuY2lhbCBTb2x1dGlv
+        bnMgKFVLKSBMdGRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VD
+        bGVhciBMYXcgTGxwXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNl
+        Q2xlYXIgVGhlIFJlZCBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAz
+        Y2xpXHUwMDNlQ2xlYXIgVmlldyBGaW5hbmNlIExpbWl0ZWRcdTAwM2MvbGlc
+        dTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VDb25zb2xpZGF0ZWQgQ3JlZGl0IFNv
+        bHV0aW9ucyBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUw
+        MDNlRGVidCBIZWxwIEdyb3VwIExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAg
+        XHUwMDNjbGlcdTAwM2VEZWJ0IEluIENvbnRyb2wgTGltaXRlZFx1MDAzYy9s
+        aVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZURlYnQgU29sdXRpb24gQ2VudHJl
+        IExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VEZWJ0
+        LVNpbXBsZSBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUw
+        MDNlRWxpemFiZXRoIFRzZWxlcGlzIEJlZXNsZXlcdTAwM2MvbGlcdTAwM2Vc
+        biAgXHUwMDNjbGlcdTAwM2VGUlAgQWR2aXNvcnkgTExQXHUwMDNjL2xpXHUw
+        MDNlXG4gIFx1MDAzY2xpXHUwMDNlRnJlc2ggU3RhcnQgRmluYW5jaWFsIE1h
+        bmFnZW1lbnQgTHRkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNl
+        Ry5LLiBJbnNvbHZlbmN5IFNlcnZpY2VzIEx0ZFx1MDAzYy9saVx1MDAzZVxu
+        ICBcdTAwM2NsaVx1MDAzZUhhbGwgXHUwMDI2YW1wOyBDbyBGaW5hbmNpYWwg
+        U29sdXRpb25zIExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlc
+        dTAwM2VIYW1pbHRvbiBSZWVzZSBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4g
+        IFx1MDAzY2xpXHUwMDNlSGF5ZG9uIEFzc29jaWF0ZXMgRGVidCBNYW5hZ2Vt
+        ZW50IENvbnN1bHRhbnRzIExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAgXHUw
+        MDNjbGlcdTAwM2VIb2JhcnQgUmV2ZW51ZSBNYW5hZ2VtZW50IExpbWl0ZWRc
+        dTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VJYW4gRWRtdW5kIEhh
+        bGxcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VJZGVidHBsYW4g
+        TGltaXRlZFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUluZGVw
+        ZW5kZW50IERlYnQgTWFuYWdlbWVudCAoSURNKSBMaW1pdGVkXHUwMDNjL2xp
+        XHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlSW50ZWxsaWdlbnQgRGVidCBNYW5h
+        Z2VtZW50IExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAw
+        M2VKQkEgRmluYW5jZSBMdGRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlc
+        dTAwM2VKYWNrc29uIFBhcnRuZXJzIEx0ZFx1MDAzYy9saVx1MDAzZVxuICBc
+        dTAwM2NsaVx1MDAzZUtldmluIE1pY2hhZWwgRmllbGRlclx1MDAzYy9saVx1
+        MDAzZVxuICBcdTAwM2NsaVx1MDAzZUxlYWQgU291cmNlIExpbWl0ZWRcdTAw
+        M2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VMaW5kYSBDYXJvbGUgU3R1
+        YXJ0IHRyYWRpbmcgYXMgUm9zZW1vdW50IEZpbmFuY2lhbCBFbnRlcnByaXNl
+        c1x1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZU1SQSBEZWJ0IEhl
+        bHAgTHRkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTWFydGlu
+        IEpvaG4gU2hpbGxpbmdmb3JkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xp
+        XHUwMDNlTWFzb24gQ2hhbWJlcnMgRmluYW5jaWFsIE1hbmFnZW1lbnQgTHRk
+        XHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTWNDYW1icmlkZ2Ug
+        RHVmZnkgTExQXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTW9u
+        ZXkgRGVidCBBbmQgQ3JlZGl0IExpbWl0ZWRcdTAwM2MvbGlcdTAwM2VcbiAg
+        XHUwMDNjbGlcdTAwM2VNb25leWZvY3VzIEZpbmFuY2lhbCBTb2x1dGlvbnMg
+        TGltaXRlZFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZU1vbmV5
+        cGxhbiBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNl
+        TW9ubW91dGhzaGlyZSBGaW5hbmNpYWwgTWFuYWdlbWVudCBMaW1pdGVkXHUw
+        MDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTW9udGlidXMgTGltaXRl
+        ZFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZU5vYmxlIEZpbmFu
+        Y2lhbCBTb2x1dGlvbnMgTHRkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xp
+        XHUwMDNlT25lIEFkdmljZSBMaW1pdGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1
+        MDAzY2xpXHUwMDNlUEpHIFJlY292ZXJ5IChTY290bGFuZCkgTGltaXRlZFx1
+        MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVBvc3QgTmV0IEx0ZFx1
+        MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVF1aW5uIFx1MDAyNmFt
+        cDsgQ28gRGVidCBNYW5hZ2VtZW50IExpbWl0ZWRcdTAwM2MvbGlcdTAwM2Vc
+        biAgXHUwMDNjbGlcdTAwM2VSZS1QbGFuIFNvbHV0aW9ucyBMaW1pdGVkXHUw
+        MDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlUmVwYXltZW50IE1hbmFn
+        ZW1lbnQgU2VydmljZXMgKFRoaXMgZmlybSBoYXMgbmV2ZXIgYmVlbiBhdXRo
+        b3Jpc2VkIGJ5IHRoZSBGQ0EsIHRoZXJlZm9yZSBjdXN0b21lcnMgd2lsbCBu
+        b3QgYmUgYWJsZSB0byBtYWtlIGNvbXBsYWludHMgdG8gdGhlIEZpbmFuY2lh
+        bCBPbWJ1ZHNtYW4gU2VydmljZSlcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNj
+        bGlcdTAwM2VTZWN1cmUgRmluYW5jaWFsIFNvbHV0aW9ucyAoVUspIEx0ZFx1
+        MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVN0YW5ob3BlIEZpbmFu
+        Y2lhbCBTb2x1dGlvbnMgTHRkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xp
+        XHUwMDNlU3RlcGhlbiBEYXZpZCBZYXRlc1x1MDAzYy9saVx1MDAzZVxuICBc
+        dTAwM2NsaVx1MDAzZVN0ZXJsaW5nIEZpbmFuY2lhbCBTZWN1cml0eSBMdGRc
+        dTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VUYW1hciBGaW5hbmNl
+        IEx0ZFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVRvdGFsIENh
+        cmUgRGVidCBTb2x1dGlvbnMgTGltaXRlZFx1MDAzYy9saVx1MDAzZVxuICBc
+        dTAwM2NsaVx1MDAzZVVLIENsYWltIENlbnRyZSBMaW1pdGVkXHUwMDNjL2xp
+        XHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE2
+        LTAyLTAzVDEyOjE0OjI0LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNi0wMi0w
+        M1QxNDoxMzo1My4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOlt7ImxhYmVsIjoi
+        TGlzdCBvZiBmaXJtcyBubyBsb25nZXIgb2ZmZXJpbmcgZGVidCBtYW5hZ2Vt
+        ZW50IHBsYW5zIiwibGluayI6Ii9lbi9hcnRpY2xlcy9ub24tZmNhLWRlYnQt
+        bWFuYWdlbWVudC1jb21wYW5pZXMiLCJsYW5ndWFnZSI6ImVuIn1dfQ==
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 12:16:56 GMT
+recorded_with: VCR 2.9.2

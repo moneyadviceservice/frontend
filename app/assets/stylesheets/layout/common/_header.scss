@@ -195,7 +195,7 @@
 
   @include respond-to($mq-m) {
     position: relative;
-    overflow-y: hidden;
+    overflow-y: visible;
     background-color: transparent;
   }
 }

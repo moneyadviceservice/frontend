@@ -202,7 +202,11 @@
 
 .l-header__content--non-sticky {
   position: relative;
-  overflow-y: hidden;
+  overflow-y: auto;
+
+  @include respond-to($mq-m) {
+    overflow-y: visible;
+  }
 }
 
 .l-menu-nav {

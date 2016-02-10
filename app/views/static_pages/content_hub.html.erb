@@ -4,7 +4,9 @@
 <%# render layout: 'layouts/unconstrained' do %>
   <div class="l-content-hub__inner">
     <div class="l-constrained">
-      <%= heading_tag 'Budgeting and managing money', class: 'l-content-hub__title heading-medium', level: 1 %>
+      <section class="l-content-hub__title">
+        <%= heading_tag 'Budgeting and managing money', class: 'heading-medium', level: 1 %>
+      </section>
 
       <section class="l-content-hub__hero">
         <div class="l-content-hub__hero__inner">
@@ -30,7 +32,7 @@
               </div>
             </div>
 
-            <div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
+            <div class="l-content-hub__module content-hub__module--hdr-lnks">
               <div class="l-content-hub__module__inner">
                 <%= heading_tag 'Most read articles', class: 'l-content-hub__module__title heading-small', level: 2 %>
                 <ul class="content-hub__module__links unstyled-list">
@@ -47,17 +49,6 @@
                 <div class="l-content-hub__module__content">
                   <p class="l-content-hub__module__description">Need extra money? Our Quick cash finder can help you cut your spending.</p>
                   <button class="button button--primary">Get saving</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-con-lnk-img">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__image" style="background-image:url(/assets/prototype_to-be-deleted/content-hub_price-comp-img-tmp.png)"></div>
-                <div class="l-content-hub__module__content">
-                  <%= heading_tag 'How to use price comparison websites', class: 'l-content-hub__module__title heading-small', level: 2 %>
-                  <p class="l-content-hub__module__description">How to compare mortgages, gas and electricity deals and bank accounts. Includes links to comparison websites.</p>
-                  <button class="button button--primary">Read more</button>
                 </div>
               </div>
             </div>
@@ -110,6 +101,17 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
                   </svg>
                 </a>
+              </div>
+            </div>
+
+            <div class="l-content-hub__module content-hub__module--hdr-con-lnk-img">
+              <div class="l-content-hub__module__inner">
+                <div class="l-content-hub__module__image" style="background-image:url(/assets/prototype_to-be-deleted/content-hub_price-comp-img-tmp.png)"></div>
+                <div class="l-content-hub__module__content">
+                  <%= heading_tag 'How to use price comparison websites', class: 'l-content-hub__module__title heading-small', level: 2 %>
+                  <p class="l-content-hub__module__description">How to compare mortgages, gas and electricity deals and bank accounts. Includes links to comparison websites.</p>
+                  <button class="button button--primary">Read more</button>
+                </div>
               </div>
             </div>
 

@@ -5,6 +5,12 @@ $content-hub-module-bgcolor: $color-white;
 $content-hub-module-reversecolor: $color-white;
 $content-hub-module-reverseBGcolor: $color-black;
 $content-hub-modules-gutter-width: 0.5%;
+// "natural" width of module on desktop
+$content-hub-max-module-width: $mq-xl * ((100% - ($default-gutter * 2) - ($content-hub-modules-gutter-width * 2)) / 3%) / 100;
+// breakpoint: 1 column to 2 columns (when viewport width > 1.5 columns)
+$content-hub-one-col-breakpoint: $content-hub-max-module-width * 1.5;
+// breakpoint: 2 columns to 3 columns (when viewport width > 2.5 columns + gutter)
+$content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($content-hub-modules-gutter-width / 100%) * $mq-xl);
 
 #main {
   // NB this needs to be set on this element conditional upon this being the specific page that is being served ...
@@ -12,23 +18,51 @@ $content-hub-modules-gutter-width: 0.5%;
 }
 
 .l-content-hub__title {
-  color: $content-hub-title-color;
-
   @include column(12);
-  @include respond-to(0, $mq-l) {
+  max-width: $content-hub-max-module-width;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: none;
+  @include respond-to(0, $content-hub-one-col-breakpoint) {
     margin-top: $baseline-unit*3;
     margin-bottom: $baseline-unit*3;
+  }
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    max-width: $content-hub-max-module-width * 2; // + gutter
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    @include column(12);
+    max-width: 100%;
+  }
+
+  .heading-medium {
+    color: $content-hub-title-color;
+    @include respond-to(0, $content-hub-one-col-breakpoint) {
+      margin: 0;
+    }
   }
 }
 
 .l-content-hub__hero {
   clear: left;
   background: $content-hub-module-bgcolor;
+  max-width: $content-hub-max-module-width; // c.400px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: $baseline-unit;
-
   @include clearfix();
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     background: transparent;
+    max-width: $content-hub-max-module-width * 2; // + gutter
+  }
+  @include respond-to($content-hub-two-col-breakpoint) {
+    @include column(12);
+    max-width: 100%;
   }
 }
 
@@ -36,12 +70,14 @@ $content-hub-modules-gutter-width: 0.5%;
   position: relative;
   padding-top: $baseline-unit*3;
   padding-bottom: $baseline-unit*3;
-
   @include column(12);
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     background: $content-hub-module-bgcolor;
     padding-top: $baseline-unit*5;
     padding-bottom: $baseline-unit*5;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -57,44 +93,46 @@ $content-hub-modules-gutter-width: 0.5%;
   background-position: 50% 50%;
   background-size: contain;
 
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     position: absolute;
     top: 0;
     bottom: 0;
     padding-bottom: 0;
-    background-image: url(/assets/budget_planner/start_landscape.jpg);
-
     @include column(6);
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    background-image: url(/assets/budget_planner/start_landscape.jpg);
   }
 }
 
 .l-content-hub__hero__content {
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     @include column(6);
-
     float: right;
   }
 }
 
 .l-content-hub__hero__content {
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     @include body(20, 27);
   }
 }
 
 .l-content-hub__modules {
   @include clearfix();
-
-  @include respond-to($mq-l) {
+  max-width: $content-hub-max-module-width; // c.400px;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-to($content-hub-one-col-breakpoint) {
     padding-bottom: $baseline-unit*10;
-
-    @include column(12);
+    max-width: $content-hub-max-module-width * 2; // + gutter
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-.l-content-hub__modules__inner {
-  @include respond-to($mq-l) {
-    // @include column(12);
+  @include respond-to($content-hub-two-col-breakpoint) {
+    @include column(12);
+    max-width: 100%;
   }
 }
 
@@ -107,7 +145,8 @@ $content-hub-modules-gutter-width: 0.5%;
   align-items: stretch;
   /* -- N.B. progressive enhancement */
 
-  @include respond-to($mq-l) {
+  // @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     /* N.B. progressive enhancement -- */
     flex-flow: row wrap;
     /* -- N.B. progressive enhancement */
@@ -118,13 +157,20 @@ $content-hub-modules-gutter-width: 0.5%;
 }
 
 .l-content-hub__module {
-  @include clearfix();
-
   position: relative;
   background: $color-white;
   margin-bottom: $baseline-unit;
+  @include clearfix();
+  @include respond-to($content-hub-one-col-breakpoint) {
+    $content-hub-modules-row: 2;
 
-  @include respond-to($mq-l) {
+    width: ((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row);
+    margin-left: $content-hub-modules-gutter-width / 2;
+    margin-right: $content-hub-modules-gutter-width / 2;
+    float: left;
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
     $content-hub-modules-row: 3;
 
     width: ((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row);
@@ -135,24 +181,39 @@ $content-hub-modules-gutter-width: 0.5%;
 }
 
 .l-content-hub__module__inner {
+  $padding: $baseline-unit * 3;
+
   @include column(12);
 
-  padding-top: $baseline-unit * 3;
-  padding-bottom: $baseline-unit * 3;
+  padding-top: $padding; // $baseline-unit * 3;
+  padding-bottom: $padding; // $baseline-unit * 3;
 
-  @include respond-to($mq-l) {
-    $content-hub-modules-row: 3;
+  @include respond-to($content-hub-one-col-breakpoint) {
+    $content-hub-modules-row: 2;
     $margin: $default-gutter * $content-hub-modules-row;
 
-    margin-left: $margin; // 1.125rem; // express in % (calculated from parent's default gutter ...)
-    margin-right: $margin; // 1.125rem; // express in % (calculated from parent's default gutter ...)
+    margin-left: $margin;
+    margin-right: $margin;
     // also double width module needs different margin ...
-    width: (100% - ($margin * 2));
+    width: 100% - ($margin * 2);
 
-    // fairly random value, based upon making each module roughly square (given a particular viewport size)
-    // might be a better way to do this: via vertical padding or flex box ...
-    min-height: 382.75px;
-    // height: 370px; // don't use in flexbox mode but is needed otherwise
+    // based on default width to make each module roughly square (given a particular viewport size)
+    min-height: calc(#{$content-hub-max-module-width} - 2.25em);
+    // height: 382.75px;
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    $content-hub-modules-row: 2;
+    $margin: $default-gutter * $content-hub-modules-row;
+
+    margin-left: $margin;
+    margin-right: $margin;
+    // also double width module needs different margin ...
+    width: 100% - ($margin * 2);
+
+    // based on default width to make each module roughly square (given a particular viewport size)
+    min-height: calc(#{$content-hub-max-module-width} - 2.25em);
+    // height: 382.75px;
   }
 }
 
@@ -173,33 +234,62 @@ $content-hub-modules-gutter-width: 0.5%;
   margin-top: $baseline-unit;
 }
 
-.content-hub__module__cta {
-  display: block;
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 40px;
-  text-align: right;
-}
-
-.content-hub__module__cta-icon {
-  float: right;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-}
-
 // module-specific variations
+// hdr-lnks-cta --
+.content-hub__module--hdr-lnks-cta {
+  .l-content-hub__module__inner {
+    position: relative;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: static;
+    }
+  }
+
+  .content-hub__module__links {
+    padding-bottom: 40px;
+  }
+
+  .content-hub__module__cta {
+    display: block;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 40px;
+    position: absolute;
+    bottom: $baseline-unit * 3;
+    right: 0;
+    // text-align: right;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      $content-hub-modules-row: 2;
+      right: $default-gutter * $content-hub-modules-row;
+    }
+
+    @include respond-to($content-hub-two-col-breakpoint) {
+      $content-hub-modules-row: 3;
+      right: $default-gutter * $content-hub-modules-row;
+    }
+  }
+
+  .content-hub__module__cta-icon {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
+// -- hdr-lnks-cta
+
 // double width --
 .content-hub__module--hdr-con-lnk-img {
   .l-content-hub__module__image {
     width: 100%;
     padding-bottom: 100%;
 
-    @include respond-to($mq-l) {
+    @include respond-to($content-hub-one-col-breakpoint) {
       position: absolute;
       top: 0;
       right: 0;
-      width: (50% - ($content-hub-modules-gutter-width / 2)); // needs to be a little more accurately calculated
+      width: 50% - ($content-hub-modules-gutter-width / 2); // needs to be a little more accurately calculated
       height: 100%;
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -208,7 +298,21 @@ $content-hub-modules-gutter-width: 0.5%;
     }
   }
 
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
+    $content-hub-modules-row: 2;
+
+    width: (((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row) * 2) + $content-hub-modules-gutter-width;
+
+    .l-content-hub__module__inner {
+      margin: 0 ($default-gutter * $content-hub-modules-row) / 2; // not *exactly* right ...
+    }
+
+    .l-content-hub__module__content {
+      width: 50% - ($content-hub-modules-gutter-width / 2); // needs to be a little more accurately calculated
+    }
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
     $content-hub-modules-row: 3;
 
     width: ((((100% - ($content-hub-modules-gutter-width * $content-hub-modules-row)) / $content-hub-modules-row) * 2) + $content-hub-modules-gutter-width);
@@ -227,7 +331,7 @@ $content-hub-modules-gutter-width: 0.5%;
 // image only --
 .content-hub__module--img {
   .l-content-hub__module__inner {
-    @include respond-to($mq-l) {
+    @include respond-to($content-hub-one-col-breakpoint) {
       width: 100%;
       margin: 0;
       padding: 0;
@@ -246,7 +350,7 @@ $content-hub-modules-gutter-width: 0.5%;
   background-color: #f96d49; // find this in the colour pallet
   padding-top: 80%;
 
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     padding-top: 0;
   }
 
@@ -273,11 +377,22 @@ $content-hub-modules-gutter-width: 0.5%;
     content: 'Tools';
     position: absolute;
     top: $baseline-unit * 3;
-    right: 1.25rem; // match standard padding when set
+    right: $default-gutter;
     text-transform: uppercase;
     font-weight: bold;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      $content-hub-modules-row: 2;
+      right: $default-gutter * $content-hub-modules-row;
+    }
+
+    @include respond-to($content-hub-two-col-breakpoint) {
+      $content-hub-modules-row: 3;
+      right: $default-gutter * $content-hub-modules-row;
+    }
   }
 
+  /*
   .l-content-hub__module__inner:after {
     content: '';
     display: block;
@@ -287,6 +402,7 @@ $content-hub-modules-gutter-width: 0.5%;
     background-position: -1000px -217px;
     margin: 0 auto;
   }
+  */
 }
 // -- tool
 
@@ -295,7 +411,7 @@ $content-hub-modules-gutter-width: 0.5%;
   background-color: #1076ab; // find this in the colour pallet
   padding-top: 80%;
 
-  @include respond-to($mq-l) {
+  @include respond-to($content-hub-one-col-breakpoint) {
     padding-top: 0;
   }
 
@@ -324,10 +440,20 @@ $content-hub-modules-gutter-width: 0.5%;
     content: 'Blog';
     position: absolute;
     top: $baseline-unit * 3;
-    right: 1.25rem; // match standard padding when set
+    right: $default-gutter;
     text-transform: uppercase;
     font-weight: bold;
     color: $content-hub-module-reversecolor;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      $content-hub-modules-row: 2;
+      right: $default-gutter * $content-hub-modules-row;
+    }
+
+    @include respond-to($content-hub-two-col-breakpoint) {
+      $content-hub-modules-row: 3;
+      right: $default-gutter * $content-hub-modules-row;
+    }
   }
 }
 // -- blog

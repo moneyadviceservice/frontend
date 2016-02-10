@@ -58,6 +58,9 @@
     height: 345px;
   }
 
+  @if $responsive == false {
+    display: none;
+  }
 }
 
 .home-top-trust__heading {
@@ -94,6 +97,10 @@
     .theme-cy & {
       max-width: 750px;
     }
+  }
+
+  @if $responsive == false {
+    max-width: 700px;
   }
 }
 

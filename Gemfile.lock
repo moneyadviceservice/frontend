@@ -595,6 +595,9 @@ GEM
     rspec-expectations (3.0.4)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.0.0)
+    rspec-html-matchers (0.7.0)
+      nokogiri (~> 1)
+      rspec (~> 3)
     rspec-mocks (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-rails (3.0.2)
@@ -784,8 +787,10 @@ DEPENDENCIES
   quiz!
   rack-livereload
   rails (= 4.1.8)
+  redcarpet
   rio!
   rouge
+  rspec-html-matchers
   rspec-rails (~> 3.0)
   rspec_junit_formatter
   rubocop
@@ -806,3 +811,6 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
+
+BUNDLED WITH
+   1.11.2

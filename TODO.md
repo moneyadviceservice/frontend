@@ -1,11 +1,5 @@
 # TODO on Content Hub Design page
 
-- sort out routing so it doesn't take over the contact us page
-	- maybe it doesn't really want to be a static page
-
-- sort out setting styles on #main conditionally on this page being viewed.
-	- do via the unconstrained layout
-
 - how are the background images going to be implemented via CMS?
 	- I guess like the home page is: adds it inline to the containing div
 	- this means some restraints apply to the use of images:

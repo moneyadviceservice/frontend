@@ -6,14 +6,13 @@ $content-hub-module-reversecolor: $color-white;
 $content-hub-module-reverseBGcolor: $color-black;
 $content-hub-modules-gutter-width: 0.5%;
 // "natural" width of module on desktop
-$content-hub-max-module-width: $mq-xl * ((100% - ($default-gutter * 2) - ($content-hub-modules-gutter-width * 2)) / 3%) / 100;
+$content-hub-max-module-width: $mq-xl * (((100% - ($default-gutter * 2) - ($content-hub-modules-gutter-width * 2)) / 3%) / 100);
 // breakpoint: 1 column to 2 columns (when viewport width > 1.5 columns)
 $content-hub-one-col-breakpoint: $content-hub-max-module-width * 1.5;
 // breakpoint: 2 columns to 3 columns (when viewport width > 2.5 columns + gutter)
 $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($content-hub-modules-gutter-width / 100%) * $mq-xl);
 
-#main {
-  // NB this needs to be set on this element conditional upon this being the specific page that is being served ...
+.l-content-hub__main {
   background: $content-hub-bgcolor;
 }
 
@@ -51,7 +50,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 .l-content-hub__hero {
   clear: left;
   background: $content-hub-module-bgcolor;
-  max-width: $content-hub-max-module-width; // c.400px;
+  max-width: $content-hub-max-module-width;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $baseline-unit;

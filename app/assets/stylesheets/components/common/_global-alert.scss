@@ -8,6 +8,14 @@
 .global-alert {
   background: $color-global-alert-message-bg;
   @include clearfix();
+
+  // position below header when viewport < breakpoint
+  position: relative;
+  top: $header-height;
+
+  @include respond-to($mq-m) {
+    top: 0;
+  }
 }
 
 .global-alert__content-container {

@@ -51,6 +51,7 @@ RSpec.configure do |c|
   c.include Devise::TestHelpers, type: :controller
   c.include PageValidations
   c.include Rails.application.routes.url_helpers
+  c.include RSpecHtmlMatchers
 
   c.infer_base_class_for_anonymous_controllers = false
   c.alias_it_should_behave_like_to :it_has_behavior, 'exhibits behaviour of an'

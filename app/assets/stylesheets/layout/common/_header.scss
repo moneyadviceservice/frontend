@@ -1,7 +1,10 @@
+// header variables
+$header-height: $baseline-unit*9;
+
 .l-header {
   width: 100%;
   z-index: 200;
-  min-height: $baseline-unit*9;
+  min-height: $header-height;
   background-color: transparent;
 
   @include respond-to($mq-m) {
@@ -188,6 +191,7 @@
 
 .l-header__content {
   position: fixed;
+  top: 0;
   background-color: $color-green-primary;
   z-index: 150;
   max-height: 100%;

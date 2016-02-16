@@ -1,4 +1,4 @@
-RSpec.describe 'Car Cost Tool', type: :request, features: [:car_cost_tool] do
+RSpec.describe 'Car Cost Tool', type: :request do
   %W(
     /en/tools/#{ToolMountPoint::CarCostTool::EN_ID}
     /cy/tools/#{ToolMountPoint::CarCostTool::CY_ID}

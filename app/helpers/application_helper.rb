@@ -51,6 +51,14 @@ module ApplicationHelper
     false
   end
 
+  def hide_sticky_header?
+    (request.fullpath =~ /^\/(cy|en)\/(tools|retirement-income-options)/).present?
+  end
+
+  def is_environment_on_qa?
+    ENV['MAS_ENVIRONMENT'] == 'qa'
+  end
+
   private
 
   def strip_leading_indentation_from_source(source)

@@ -3,12 +3,10 @@ Feature: Corporate Tool Page
   I fill in the name of my organisation and email address before getting the code
   So the MAS partnership team knows who took the code.
 
-  @enable-corporate-tool-directory
   Scenario: Accessing an individual corporate tool page
     When I visit a corporate tool page
     Then I should be on the corporate tool page
 
-  @enable-corporate-tool-directory
   Scenario: Requesting tool embed code
     When I visit a corporate tool page
     And  I fill out my organisation name
@@ -19,7 +17,6 @@ Feature: Corporate Tool Page
     Then I should be presented with the embed code
     And  I should see a successful confirmation of my details submitted
 
-  @enable-corporate-tool-directory
   Scenario: Re-requesting tool embed code
     Given I have received an embed code
     When  I visit a corporate tool page

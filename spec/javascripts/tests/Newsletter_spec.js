@@ -26,8 +26,8 @@ describe('Newsletter', function () {
     it('adds classes to the newsletter panel', function() {
       var panel = this.$html.find('[data-dough-component="Newsletter"]');
 
-      expect(panel).to.have.class('news-signup-test--with-image');
-      expect(panel).to.have.class('news-signup-test--in-article');
+      expect(panel).to.have.class('--with-image');
+      expect(panel).to.have.class('--in-article');
     });
 
     it('moves the panel into position', function() {

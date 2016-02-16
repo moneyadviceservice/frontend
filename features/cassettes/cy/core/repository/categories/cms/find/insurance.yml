@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/cy/categories/insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jones-Agyemang-00073.local; jonesagyemang; 33339) ruby/2.1.2
+        (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - 3a1ccd11-d749-4e4c-a095-91a86af990af
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a07f9bd6df26de4ed5b2587f4f6ec1b9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3a1ccd11-d749-4e4c-a095-91a86af990af
+      X-Runtime:
+      - '0.038544'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Fri, 04 Dec 2015 11:18:00 GMT
+      Content-Length:
+      - '1587'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"insurance","type":"category","title":"Insurance","description":null,"parent_id":"","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[{"id":"home-insurance","type":"category","title":"Home
+        insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]},{"id":"car-insurance","type":"category","title":"Car
+        insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]},{"id":"travel-insurance","type":"category","title":"Travel
+        insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]},{"id":"pet-insurance","type":"category","title":"Pet
+        insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]},{"id":"help-with-insurance","type":"category","title":"Help
+        with insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]},{"id":"life-and-protection-insurance","type":"category","title":"Life
+        and protection insurance","description":null,"parent_id":"insurance","third_level_navigation":false,"images":{"small":null,"large":null},"contents":[],"category_promos":[],"links":[]}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Fri, 04 Dec 2015 11:18:00 GMT
+recorded_with: VCR 2.9.2

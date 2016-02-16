@@ -167,6 +167,10 @@
     height: 70px;
   }
 
+  .icon--email {
+    background-size: auto; // hack because we don't have a double-density version
+  }
+
   .icon--clear {
     background-position: 0px -209px;
   }

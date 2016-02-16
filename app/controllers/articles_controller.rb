@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator
+  decorates_assigned :parent_category, with: CategoryDecorator
 
   include Navigation
 
@@ -17,6 +18,7 @@ class ArticlesController < ApplicationController
     set_related_content
     set_categories
     set_show_newsletter_signup
+    set_parent_category
   end
 
   private
@@ -41,6 +43,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def set_parent_category
+    @parent_category ||= ParentCategory.find(@article, category_tree)
+  end
+
   def set_show_newsletter_signup
     exclusions = ::NewsletterExclusions::slugs
 
@@ -48,6 +54,7 @@ class ArticlesController < ApplicationController
       slug != params[:id]
     end
 
-    @newsletter_excluded = exclusions.count > 0 || I18n.locale == :cy ? true : false
+    @newsletter_excluded = newsletter_submitted_cookie_set? || exclusions.count > 0 || (I18n.locale == :cy ? true : false)
   end
+
 end

@@ -22,7 +22,7 @@ Then(/^I should see the static page in (.*)$/) do |language|
 end
 
 When(/^I view a static page with an intro$/) do
-  static_page.load(locale: 'en', id: 'about-us')
+  static_page.load(locale: 'en', id: 'contact-us')
 end
 
 When(/^I view the contact page in (.*)$/) do |language|

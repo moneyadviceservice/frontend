@@ -1,0 +1,57 @@
+// styles specific to the 'share this ...' section
+.social-sharing__title {
+  font-size: 1.3125rem;
+  margin-bottom: $baseline-unit/2;
+  color: $color-social-sharing-heading;
+}
+
+.social-sharing__item {
+  height: 33px;
+  width: 55px;
+  margin: 0 10px 0 0;
+  border-radius: 3px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-sharing__item--facebook {
+  background: $color-facebook;
+
+  &:hover {
+    background: $color-facebook-hover;
+  }
+
+  .svg-icon--facebook,
+  .icon--facebook {
+    margin: 5.5px auto;
+  }
+}
+
+.social-sharing__item--twitter {
+  background: $color-twitter;
+
+  &:hover {
+    background: $color-twitter-hover;
+  }
+
+  .svg-icon--twitter,
+  .icon--twitter {
+    margin: 7.5px auto;
+  }
+}
+
+.social-sharing__item--email {
+  background: $color-email;
+
+  &:hover {
+    background: $color-email-hover;
+  }
+
+  .svg-icon--email,
+  .icon--email {
+    margin: 8.5px auto;
+  }
+}

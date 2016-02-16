@@ -1,114 +1,220 @@
 cy:
   retirements:
     meta:
-      title: Pensions and retirement
+      title: Pensiynau ac ymddeoliad
       description: ''
       canonical: https://www.moneyadviceservice.org.uk/cy/pensiynau-ac-ymddeoliad
     section1:
       title: Pensiynau ac ymddeoliad
-      intro: "Pan fyddwch yn ymddeol bydd rhaid i chi wneud penderfyniadau ynglŷn â’r arian rydych wedi ei gynilo ac ar beth i fyw. Bydd yr adran hon yn eich helpu i:"
+      intro: "Pa un ai’ch bod yn ystyried cynilo i mewn i bensiwn am y tro cyntaf neu’n gwneud penderfyniadau ar gyfer eich ymddeoliad, mae’r adran hon yn cynnig gwybodaeth ac offer defnyddiol i’ch cynorthwyo i wneud y mwyaf o’ch arian."
+      bullet_heading: 'Bydd yr adran hon yn eich helpu i:'
       bullets:
-        - Ddysgu am y dewisiadau ar gael i chi
-        - Ddeall sut y gall cyllideb helpu
-        - Chwilio i weld pa gymorth sydd ar gael
-      video_caption_html: 'Y newyddiadurwr ariannol Paul Lewis yn esbonio sut i wneud y gorau o gynllunio ar gyfer ymddeol. <a href="https://fedb5feb4c074be48b1a-7d2b925ab3869b76f1d9fad9b2ecd2bb.ssl.cf3.rackcdn.com/retirement-video-transcript.cy.pdf">Lawrlwythwch sgript y fideo</a>'
+        - Canfyddwch y manteision o gynilo ar gyfer ymddeoliad
+        - Deallwch y gwahanol fathau o bensiwn
+        - Dysgwch am eich dewisiadau ar gyfer ymddeol
+        - Ceisiwch help gyda materion blynyddoedd hŷn
+        - Darganfyddwch pa gymorth a chyngor sydd ar gael
+      video_caption_html: 'Y newyddiadurwr ariannol Paul Lewis yn esbonio sut i wneud y gorau o gynllunio ar gyfer ymddeol <a href="https://fedb5feb4c074be48b1a-7d2b925ab3869b76f1d9fad9b2ecd2bb.ssl.cf3.rackcdn.com/retirement-video-transcript.cy.pdf">(lawrlwythwch y trawsgrifiad)</a>'
     section2:
+      - text: Llinell amser cynilion pensiwn
+        url: /cy/pensions-and-retirement/pension-savings-timeline
+        image: retirements/savings-timeline.png
+        body: Bydd y llinell amser hon yn eich helpu i ddeall buddion cynilo pensiwn hirdymor ac ymroi i reoli'ch arian.
       - text: Offeryn Dewisiadau incwm ymddeol
         url: /cy/opsiynau-incwm-ymddeoliad
         image: retirements/cy/options.png
         body: Archwiliwch yr ystyriaethau allweddol wrth i chi nesáu at ymddeoliad, a chymharu opsiynau a chael arweiniad ar y camau nesaf.
-      - text: Cyfeirlyfr cynghorwyr ymddeoliad
+      - text: Dod o hyd i gynghorydd ymddeoliad
         url: "https://directory.moneyadviceservice.org.uk"
         image: retirements/rad-map.png
-        body: Dewch o hyd i gynghorydd ariannol i roi cymorth i chi wrth gynllunio’ch ymddeoliad, pa un a ydych yn ystyried ymddeol neu wedi gwneud hynny’n barod.
-      - text: Ewch i’r gwasanaeth Pension Wise
-        url: "https://www.pensionwise.gov.uk/"
-        image: retirements/pensionwise.png
-        body: Gwasanaeth diduedd ac am ddim gan y llywodraeth yw Pension Wise sy’n rhoi cymorth i chi ddeall eich opsiynau pensiwn newydd.
+        body: Dewch o hyd i gynghorydd ariannol i roi cymorth i chi wrth gynllunio’ch ymddeoliad os ydych yn ystyried ymddeol neu wedi gwneud hynny’n barod.
     section3:
-      - title: Beth fydd ei angen arnoch
-        links:
-          - text: Rhestr wirio - paratoi ar gyfer ymddeoliad
-            url: /cy/articles/rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau
-          - text: Pa bryd alla i ymddeol?
-            url: /cy/articles/pa-bryd-alla-i-fforddio-i-ymddeol
-          - text: Cynllunydd cyllideb
-            url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
-          - text: Cyfrifiannell bensiwn
-            url: /cy/tools/cyfrifiannell-pensiwn
-      - title: Faint sydd gennych chi
-        links:
-          - text: "Gwybodaeth ar bensiwn: canllaw i’r ffeithiau sylfaenol"
-            url: /cy/articles/canllaw-pensiwn-ffeithiau-allweddol-a-mathau-o-gynlluniau-pensiwn
-          - text: "Pensiwn y Wladwriaeth: popeth sydd angen i chi ei wybod"
-            url: /cy/articles/pensiynauar-wladwriaeth
-          - text: Cyfrifwch eich incwm ymddeol tebygol
-            url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
-      - title: Eich opsiynau
-        links:
-          - text: Offeryn Dewisiadau incwm ymddeol
-            url: /cy/opsiynau-incwm-ymddeoliad
-          - text: Opsiynau ar gyfer defnyddio’ch cronfa bensiwn
-            url: "/cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn"
-          - text: Offeryn deall a chymharu blwydd-daliadau
-            url: /cy/tools/annuities
-    section4:
-      panels1:
-        - title: Pensiynau
+      panels:
+        - title: Beth fydd ei angen arnoch
+          body: Dysgwch pam a phryd i gynilo i bensiwn a sut i gyfrifo faint fydd eich cronfa bensiwn
+          links:
+            - text: Rhestr wirio - paratoi ar gyfer ymddeoliad
+              url: /cy/articles/rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau
+            - text: Pa bryd alla i ymddeol?
+              url: /cy/articles/pa-bryd-alla-i-fforddio-i-ymddeol
+            - text: Cynllunydd cyllideb
+              url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
+            - text: Cyfrifiannell bensiwn
+              url: /cy/tools/cyfrifiannell-pensiwn
+        - title: Faint sydd gennych chi
+          body: Dysgwch yr holl ffeithiau angenrheidiol ynglŷn â symud tuag at ymddeoliad
           links:
             - text: "Gwybodaeth ar bensiwn: canllaw i’r ffeithiau sylfaenol"
               url: /cy/articles/canllaw-pensiwn-ffeithiau-allweddol-a-mathau-o-gynlluniau-pensiwn
-            - text: Cyfrifiannell bensiwn
+            - text: "Pensiwn y Wladwriaeth: popeth sydd angen i chi ei wybod"
+              url: /cy/articles/pensiynauar-wladwriaeth
+            - text: Cyfrifwch eich incwm ymddeol tebygol
+              url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
+        - title: Eich opsiynau
+          body: Wedi i chi ymddeol, mae’n syniad da adolygu’ch dewisiadau’n rheolaidd.
+          links:
+            - text: Offeryn Dewisiadau incwm ymddeol
+              url: /cy/opsiynau-incwm-ymddeoliad
+            - text: Opsiynau ar gyfer defnyddio’ch cronfa bensiwn
+              url: "/cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn"
+            - text: Offeryn deall a chymharu blwydd-daliadau
+              url: /cy/tools/annuities
+            - text: Offeryn deall a chymharu tynnu incwm i lawr
+              url: /cy/opsiynau-incwm-ymddeoliad/income-drawdown
+      pensionwise:
+        text: Trefnwch eich sesiwn ganllaw Pension Wise rhad ac am ddim
+        url: https://www.pensionwise.gov.uk
+    section4:
+      view_all: Gweld yr holl…
+      panels1:
+        - title: Mathau o bensiwn
+          links:
+            - text: Cynlluniau ymddeol cyfraniadau wedi’u diffinio
+              url: /cy/articles/cynlluniau-pensiwn-cyfraniadau-wediu-diffinio
+            - text: Esbonio cynlluniau pensiwn buddion diffiniedig
+              url: /cy/articles/cynlluniau-buddion-wediu-diffinio
+            - text: Pensiynau i’r hunangyflogedig
+              url: /cy/articles/pensiynau-ir-hunangyflogedig
+            - text: Pensiynau buddsoddi personol (SIPPau)
+              url: /cy/articles/pensiynau-buddsoddi-personol-sippau
+            - text: Pensiynau personol
+              url: /cy/articles/pensiynau-personol
+            - text: Pensiynau personol grŵp
+              url: /cy/articles/pensiynau-personol-grwp
+            - text: Pensiynau cyfranddeiliaid
+              url: /cy/articles/pensiynau-cyfranddeiliaid
+            - text: Eich pensiwn cyntaf – y dewisiadau
+              url: /cy/articles/eich-pensiwn-cyntaf-y-dewisiadau
+            - text: Cynlluniau pensiwn amlgyflogwr
+              url: /cy/articles/cynlluniau-pensiwn-amlgyflogwr
+            - text: Pensiynau NEST
+              url: /cy/articles/pensiynaur-ymddiriedolaeth-cynilion-cyflogaeth-genedlaethol-nest
+        - title: Pensiynau gweithle
+          links:
+            - text: Cofrestru awtomatig – cyflwyniad
+              url: /cy/articles/cofrestriad-awtomatig-ar-bensiwn-man-gwaith
+            - text: Newidiadau i bensiwn gweithle - y ffeithiau sylfaenol
+              url: /en/videos/workplace-pension-changes-the-basics
+            - text: Manteision cofrestru awtomatig
+              url: /cy/articles/manteision-cofrestru-awtomatig
+            - text: cyfrifiannell cyfraniadau pensiwn gweithle
+              url: /cy/tools/cyfrifiannell-cyfraniadau-pensiwn-gweithle
+            - text: Cofrestru awtomatig – beth i’w ddisgwyl gan eich cyflogwr
+              url: /cy/articles/cofrestru-awtomatig-beth-iw-ddisgwyl-gan-eich-cyflogwr
+            - text: 'Gall cofrestru awtomatig ennill hyd at £10,000 i chi'
+              url: /cy/articles/gall-cofrestru-awtomatig-ennill-hyd-at-agbp9440-i-chi
+            - text: Cofrestru awtomatig os oes gennych ddyledion
+              url: /cy/articles/cofrestru-awtomatig-os-oes-gennych-ddyledion
+            - text: Cofrestru awtomatig os ydych yn 21 oed neu’n iau
+              url: /cy/articles/cofrestru-awtomatig-os-ydych-yn-21-oed-neun-iau
+            - text: Cofrestru awtomatig os ydych chi'n agos at ymddeol
+              url: /cy/articles/cofrestru-awtomatig-os-ydych-chin-agos-at-ymddeol
+            - text: Cofrestru awtomatig os ydych chi dros oedran Pensiwn y Wladwriaeth
+              url: /cy/articles/cofrestru-awtomatig-os-ydych-chi-dros-oedran-pensiwn-y-wladwriaeth
+        - title: Cynilo ar gyfer ymddeoliad
+          links:
+            - text: 'Canllaw pensiwn: ffeithiau allweddol a mathau o gynlluniau pensiwn'
+              url: /cy/articles/canllaw-pensiwn-ffeithiau-allweddol-a-mathau-o-gynlluniau-pensiwn
+            - text: Pam cynilo mewn pensiwn?
+              url: /cy/articles/pam-cynilo-mewn-pensiwn
+            - text: Cyfrifiannell pensiwn
               url: /cy/tools/cyfrifiannell-pensiwn
-            - text: Sut i adnabod twyll pensiwn
-              url: /cy/articles/sut-i-adnabod-twyll-pensiwn
             - text: Olrhain pensiynau coll a gwneud cais am ragolygon pensiwn
               url: /cy/articles/olrhain-pensiynau-coll-a-gwneud-cais-am-ragolygon-pensiwn
-            - text: "Problemau pensiwn: eich opsiynau os fydd rhywbeth yn mynd o chwith"
-              url: /cy/articles/eich-opsiynau-os-bydd-pethaun-mynd-o-le-gydach-pensiwn
-            - text: Ffyrdd o roi hwb i’ch pensiwn cyn i chi ymddeol
+            - text: Ffyrdd o gynyddu eich pensiwn wrth i’ch ymddeoliad agosáu
               url: /cy/articles/ffyrdd-o-gynyddu-eich-pensiwn-wrth-ich-ymddeoliad-agosau
-        - title: Cynnyrch ymddeol
+            - text: Llinell amser cynilion pensiwn
+              url: /cy/pensions-and-retirement/pension-savings-timeline
+            - text: Gostyngiadau treth ar gyfraniadau pensiwn
+              url: /cy/articles/gostyngiad-treth-ar-gyfraniadau-pensiwn
+            - text: Lwfans oes ar gyfer cynilion pensiwn
+              url: /cy/articles/y-lwfans-oes-ar-gyfer-cynilion-pensiwn
+            - text: Trosglwyddo pensiynau cyfraniadau wedi’u diffinio
+              url: /cy/articles/trosglwyddo-pensiynau-cyfraniadau-wediu-diffinio
+            - text: Trosglwyddo allan o gynllun pensiwn buddion wedi’u diffinio
+              url: /cy/articles/trosglwyddo-allan-o-gynllun-pensiwn-buddion-wediu-diffinio
+            - text: Dilyn hynt eich pensiwn a chynilion ymddeoliad eraill
+              url: /cy/articles/dilyn-hynt-eich-pensiwn-a-chynilion-ymddeoliad-eraill
+            - text: Sut i ymdrin â bwlch yn eich cynilion pensiwn
+              url: /cy/articles/sut-i-ymdrin-a-bwlch-yn-eich-cynilion-pensiwn
+            - text: 'Dewisiadau buddsoddi pensiwn – trosolwg'
+              url: /cy/articles/dewisiadau-buddsoddi-pensiwn-trosolwg
+            - text: Delio â phroblemau pensiwn a gwneud cwyn
+              url: /cy/articles/eich-opsiynau-os-bydd-pethaun-mynd-o-le-gydach-pensiwn
+      panels2:
+        - title: Rheoli arian
           links:
+            - text: Pa bryd alla i fforddio i ymddeol?
+              url: /cy/articles/pa-bryd-alla-i-fforddio-i-ymddeol
+            - text: Rhestr wirio – paratoi ar gyfer ymddeoliad
+              url: /cy/articles/rhestr-wirio-pethau-iw-gwneud-wrth-ich-ymddeoliad-agosau
+            - text: Canllaw ar dreth ar ôl ymddeol
+              url: /cy/articles/treth-a-budd-daliadau-ar-ol-i-chi-ymddeol
+            - text: Am ba hyd fydd eich arian yn para yn eich ymddeoliad?
+              url: /cy/articles/am-ba-hyd-fydd-eich-arian-yn-para-yn-eich-ymddeoliad
+            - text: Cynllunydd cyllideb
+              url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
+            - text: Rheolwch eich arian ar ôl ymddeol
+              url: /cy/articles/rheolwch-eich-arian-ar-ol-ymddeol
+            - text: Cyfrifwch eich incwm ymddeol tebygol
+              url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
+            - text: Gofalu am eich disgynyddion wedi ymddeol
+              url: /cy/articles/looking-after-your-dependants-in-retirement
+        - title: Dewisiadau incwm ymddeol
+          links:
+            - text: Yr opsiynau ar gyfer defnyddio’ch cronfa bensiwn
+              url: /cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn
             - text: Oedi cymryd eich cronfa bensiwn
-              url: "/cy/articles/oedi-cymryd-eich-cronfa-bensiwn"
-            - text: Beth yw blwydd-dal?
-              url: /cy/articles/beth-yw-blwydd-dal
-            - text: Defnyddio’ch cronfa bensiwn i brynu blwydd-dal oes
-              url: "/cy/articles/sut-i-ddefnyddioch-cronfa-bensiwn-i-brynu-blwydd-dal-oes"
-            - text: Beth yw tynnu incwm i lawr?
-              url: /cy/articles/tynnu-incwm-i-lawr
-            - text: Tynnu arian i lawr yn hyblyg
-              url: "/cy/articles/tynnu-arian-i-lawr-yn-hyblyg"
+              url: /cy/articles/oedi-cymryd-eich-cronfa-bensiwn
+            - text: Offeryn deall a chymharu tynnu incwm i lawr
+              url: /cy/opsiynau-incwm-ymddeoliad/income-drawdown
+            - text: Sut i ddefnyddio’ch cronfa bensiwn i brynu blwydd-dal oes
+              url: /cy/articles/sut-i-ddefnyddioch-cronfa-bensiwn-i-brynu-blwydd-dal-oes
             - text: Cymryd symiau bach o arian allan o’ch cronfa bensiwn
               url: /cy/articles/cymryd-symiau-bach-o-arian-allan-och-cronfa-bensiwn
             - text: Cymryd eich cronfa bensiwn gyfan fel arian
               url: /cy/articles/cymryd-eich-cronfa-bensiwn-gyfan-fel-arian
-        - title: Pensiwn y wladwriaeth a budd-daliadau
+            - text: 'Tynnu arian i lawr yn hyblyg: Defnyddio’ch cronfa bensiwn i ddarparu incwm ymddeoliad hyblyg'
+              url: /cy/articles/tynnu-arian-i-lawr-yn-hyblyg
+            - text: Beth yw blwydd-dal?
+              url: /cy/articles/beth-yw-blwydd-dal
+            - text: Sut i geisio’r fargen orau am flwydd-dal
+              url: /cy/articles/sut-i-siopa-o-gwmpas-am-flwydd-dal
+            - text: Tabl cymharu blwydd-daliadau
+              url: /cy/tools/annuities
+            - text: Blwydd-daliadau sengl neu ar y cyd
+              url: /cy/articles/blwydd-daliadau-unigol-neu-ar-y-cyd
+            - text: Blwydd-daliadau sefydlog neu gynyddol
+              url: /cy/articles/blwydd-daliadau-sefydlog-neu-gynyddol
+            - text: Diogelu eich incwm ar ôl ymddeol
+              url: /cy/articles/diogelu-eich-incwm-ar-ol-ymddeol
+            - text: Incwm blwydd-dal ymddeoliad uwch i bobl ag iechyd gwael
+              url: /cy/articles/incwm-pensiwn-uwch-i-bobl-syn-sal
+            - text: Blwydd-daliadau cysylltiedig â buddsoddi
+              url: /cy/articles/blwydd-daliadau-syn-gysylltiedig-a-buddsoddiadau
+            - text: Blwydd-daliadau cyfnod sefydlog
+              url: /cy/articles/blwydd-daliadau-tymor-penodol
+            - text: Beth yw tynnu incwm i lawr?
+              url: /cy/articles/tynnu-incwm-i-lawr
+            - text: Offeryn cymharu tynnu incwm i lawr
+              url: '/cy/opsiynau-incwm-ymddeoliad/income-drawdown'
+            - text: Tynnu i lawr wedi’i gapio
+              url: /cy/articles/capped-drawdown
+        - title: Pensiwn y Wladwriaeth a budd-daliadau
           links:
-            - text: "Pensiwn y Wladwriaeth: popeth sydd angen i chi wybod"
+            - text: Pensiwn y Wladwriaeth - Popeth sydd angen i chi wybod
               url: /cy/articles/pensiynauar-wladwriaeth
-            - text: Pensiwn y Wladwriaeth newydd - esboniad o’r rheolau a newidiadau
-              url: "/cy/articles/pensiwn-y-wladwriaeth-newydd-esboniad-or-rheolau-a-newidiadau"
+            - text: Pensiwn y Wladwriaeth newydd – esboniad o’r rheolau a newidiadau
+              url: /cy/articles/pensiwn-y-wladwriaeth-newydd-esboniad-or-rheolau-a-newidiadau
             - text: Credyd Pensiwn
               url: /cy/articles/credyd-pensiwn
             - text: Budd-daliadau mewn ymddeoliad
-              url: "/cy/articles/budd-daliadau-ymddeoliad-eraill"
-      panels2:
-        - title: Rheoli arian
-          links:
-            - text: Cynllunydd cyllideb
-              url: /cy/pensiynau-ac-ymddeoliad/cyllidebu
-            - text: Canllaw ar dreth ar ôl ymddeol
-              url: /cy/articles/treth-a-budd-daliadau-ar-ol-i-chi-ymddeol
-            - text: Rheoli'ch arian ar ôl ymddeol
-              url: /cy/articles/rheolwch-eich-arian-ar-ol-ymddeol
-            - text: Cyfrifwch eich incwm ymddeol tebygol
-              url: /cy/articles/cyfrifwch-eich-incwm-ymddeol-tebygol
-            - text: Am ba hyd fydd eich arian yn para?
-              url: /cy/articles/am-ba-hyd-fydd-eich-arian-yn-para-yn-eich-ymddeoliad
+              url: /cy/articles/budd-daliadau-ymddeoliad-eraill
+      panels3:
         - title: Cyngor ariannol
           links:
+            - text: Cyfeirlyfr cynghorydd ymddeoliad
+              url: https://directory.moneyadviceservice.org.uk/cy
             - text: Ymddeoliad – pam ddylech chi gael cyngor?
               url: /cy/articles/pryd-a-ble-i-gael-cymorth-a-chyngor-ar-bensiynau
             - text: Dewis cynghorydd ariannol
@@ -117,18 +223,35 @@ cy:
               url: /cy/articles/cwestiynau-allweddol-iw-gofyn-ich-cynghorydd-ariannol
             - text: Canllaw i ffioedd cynghorwyr ariannol
               url: /cy/articles/canllaw-i-ffioedd-cynghorwyr-ariannol
-        - title: Rhagor o gyngor ar ymddeol
+        - title: Cymorth yn y blynyddoedd hŷn
           links:
+            - text: Ymddeol dramor
+              url: /cy/articles/retiring-abroad
+            - text: 'Bondiau pensiynwyr: canllaw i’r bondiau cynilo cyfradd sefydlog i’r rhai dros 65 oed'
+              url: /cy/articles/bondiau-pensiynwyr-canllaw-ir-bondiau-cynilo-cyfradd-sefydlog-ir-rhai-dros-65-oed
+            - text: Cynllunio ac ariannu eich gofal hirdymor
+              url: /cy/articles/cynllunio-ac-ariannu-eich-gofal-hirdymor
             - text: Beth yw rhyddhau ecwiti?
               url: /cy/articles/rhyddhau-ecwiti
-            - text: Cymorth gyda rhyddhau ecwiti
+            - text: Gwybodaeth am gynlluniau rhyddhau ecwiti
               url: /cy/articles/gwybodaeth-am-gynlluniau-rhyddhau-ecwiti
-            - text: Cynllunio ac ariannu eich gofal hirdymor
-              url: "/cy/articles/cynllunio-ac-ariannu-eich-gofal-hirdymor"
-            - text: Beth i’w wneud am bensiwn rhywun pan fydd wedi marw?
-              url: "/cy/articles/beth-iw-wneud-am-bensiwn-rhywun-pan-fyddant-wedi-marw"
-            - text: Bondiau pensiynwyr
-              url: /cy/articles/bondiau-pensiynwyr-canllaw-ir-bondiau-cynilo-cyfradd-sefydlog-ir-rhai-dros-65-oed
+            - text: Dychweliad Cartref
+              url: /cy/articles/dychweliad-cartref
+            - text: Morgais gydol oes
+              url: /cy/articles/morgais-gydol-oes
+        - title: Rhagor o gymorth gyda phensiynau
+          links:
+            - text: Egluro jargon pensiynau ac ymddeoliad
+              url: /cy/articles/pensions-and-retirement-jargon-buster
+            - text: Sut i adnabod twyll pensiwn
+              url: /cy/articles/sut-i-adnabod-twyll-pensiwn
+            - text: Deall beth yw Pension Wise a sut i’w ddefnyddio
+              url: /cy/articles/pension-wise
+            - text: Sut y gall cael ysgariad effeithio ar fy mhensiwn a’m hincwm ymddeoliad?
+              url: /cy/articles/how-could-getting-divorced-affect-my-pension-and-retirement-income
+            - text: Beth i’w wneud am bensiwn rhywun pan fyddant wedi marw?
+              url: /cy/articles/beth-iw-wneud-am-bensiwn-rhywun-pan-fyddant-wedi-marw
+
   budgeting:
     meta:
       title: Cynllunio cyllideb ar gyfer ymddeoliad

@@ -30,6 +30,22 @@
 
     margin-bottom: 42px;
   }
+
+  h2[id]:before,
+  h3[id]:before {
+    $sticky-offset: $baseline-unit*9;
+
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: $sticky-offset;
+    margin-top: -$sticky-offset;
+    visibility: hidden;
+
+    @include respond-to($mq-m) {
+      content: none;
+    }
+  }
 }
 
 %l-3col-side {

@@ -1,0 +1,94 @@
+.speech-bubble {
+  text-align: left;
+  clear: both;
+  position: relative;
+  padding: 0 $baseline-unit*4 $baseline-unit*4;
+  background: white;
+  border-color: #EDF0F0;
+  border-bottom-color: $color-line-gray;
+  border-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px; 
+  border-left-width: 1px;
+  border-radius: 3px;
+  width: 92%;
+  @include respond-to($mq-m) {
+    width: 48%;
+  }
+}
+
+.speech-bubble--right {
+  float: right;
+  @include respond-to($mq-m) {
+    float: left;
+  }
+}
+.speech-bubble--left {
+  float: right;
+}
+
+.speech-bubble:after,
+.speech-bubble:before {
+  top: 20px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.speech-bubble:after {
+  border-color: transparent;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.speech-bubble:before {
+  border-color: transparent;
+  border-width: 8px;
+  margin-top: -7px;
+}
+
+.speech-bubble--right:after,
+.speech-bubble--right:before {
+  right: 100%;
+  @include respond-to($mq-m) {
+    left: 100%;
+  }
+}
+
+.speech-bubble--right:after {
+  border-right-color: white;
+  @include respond-to($mq-m) {
+    border-left-color: white;
+    border-right-color: transparent;
+  }
+}
+
+.speech-bubble--right:before {
+  border-right-color: $color-line-gray;
+  @include respond-to($mq-m) {
+    border-left-color: $color-line-gray;
+    border-right-color: transparent;
+  }
+}
+
+.speech-bubble--left:after,
+.speech-bubble--left:before {
+  right: 100%;
+}
+
+.speech-bubble--left:after {
+  border-right-color: white;
+}
+.speech-bubble--left:before {
+  border-right-color: $color-line-gray;
+}
+
+section .linear:last-child {
+  .speech-bubble {
+    margin-bottom: 1.5em;
+  }
+}

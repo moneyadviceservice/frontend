@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   include Chat
   include Localisation
 
+  helper  StickyNewsletterVisibility
+  helper  ChatMigrationMessage
+
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
@@ -52,6 +55,15 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :display_sticky_newsletter_form_cookie?
+
+  def newsletter_submitted_cookie_set?
+    cookie_jar = []
+    cookie_jar << cookies[COOKIE_SUBMIT_NEWSLETTER_NAME]
+
+    cookie_jar.include?(COOKIE_HIDE_NEWSLETTER_VALUE)
+  end
+
+  helper_method :newsletter_submitted_cookie_set?
 
   def display_search_box_in_header?
     true

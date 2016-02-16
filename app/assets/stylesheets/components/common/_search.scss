@@ -39,7 +39,7 @@
 .search__submit {
   @extend .unstyled-button;
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   width: $baseline-unit*8;
   height: $baseline-unit*8;
@@ -67,7 +67,7 @@
 .search__clear {
   @extend .unstyled-button;
   position: absolute;
-  bottom: 2px;
+  top: 2px;
   right: 50px;
   width: $baseline-unit*8;
   height: 44px;
@@ -109,6 +109,11 @@
   border-left: $default-border-thin;
   border-right: $default-border-thin;
   border-bottom: $default-border-thin;
+  position: static !important;
+
+  @include respond-to($mq-m) {
+    position: absolute !important;
+  }
 }
 
 .tt-suggestion {

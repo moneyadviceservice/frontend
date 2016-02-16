@@ -1,4 +1,4 @@
-RSpec.describe ToolMountPoint::Quiz, type: :request, features: [:quiz] do
+RSpec.describe ToolMountPoint::Quiz, type: :request do
   %W(
     /en/tools/#{ToolMountPoint::Quiz::EN_ID}/users/sign_in
     /cy/tools/#{ToolMountPoint::Quiz::CY_ID}/users/sign_in

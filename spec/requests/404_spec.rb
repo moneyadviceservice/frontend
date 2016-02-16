@@ -1,13 +1,12 @@
 RSpec.describe '404 catachall', type: :request do
   context 'when page does not exist' do
-    it 'returns 501 not implemented' do
-      get '/idonotexist'
-      expect(response.status).to eql(501)
+    it 'raises routing error not found' do
+      expect { get '/idonotexist' }.to raise_error(ActionController::RoutingError, 'Not Found')
     end
   end
 end
 
-RSpec.describe '404 catachall', type: :request, features: [:redirects] do
+RSpec.describe '404 catachall', type: :request do
   context 'when page does not exist' do
     it 'renders the 404 page' do
       VCR.use_cassette('core/repository/cms/cms_api/find/idonotexist') do

@@ -101,9 +101,26 @@
   display: none;
 
   .js & {
-    @include body(18, 24);
-    color: $color-link-default;
+    @include body(16, 26);
+    color: $color-black;
+    font-weight: 700;
     display: inline;
+    padding-left: 34px;
+  }
+
+  &:before {
+    @extend .icon;
+    content: '';
+    background-size: 550px;
+    background-position: -412px -215px;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    left: 36px;
+
+    @if $responsive == false {
+      background-position: -781px -443px;
+    }
   }
 
   &:hover,

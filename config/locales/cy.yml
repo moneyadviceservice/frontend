@@ -104,7 +104,7 @@ cy:
         post_code: "Cod post"
         newsletter: "Anfonwch gyngor am ddim i mi drwy e-bost"
         opt_in_for_research: Ticiwch os hoffech i ni gysylltu â chi i’n helpu gyda’n hymchwil
-        contact_number: Rhif cyswllt
+        contact_number: Rhif cyswllt (dewisol)
         register_button: "Cofrestru"
 
   skip_links:
@@ -145,6 +145,7 @@ cy:
       smallprint: Dim ond yn Saesneg mae gwe-sgwrsio ar gael.
       bank_holiday_html: |
         Dydd Sul a Gwyliau Banc, ar gau
+      offline_migration_html: Dydd Llun i Dydd Gwener, 8am i 8pm<br />Ar ddydd Sadwrn 06/02/2016 bydd gwaith cynnal a chadw’n golygu na fydd y We-sgwrs ar gael
     call_us:
       title: Ffoniwch ni
       description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
@@ -194,35 +195,34 @@ cy:
       view_all_link_expanded: o'n offer a chyfrifianellau poblogaidd
       promoted_heading: Beth sy'n newydd
       promoted:
-        - url: https://blog.moneyadviceservice.org.uk/are-you-ready-for-an-unexpected-financial-shock
-          text: A ydych chi’n barod am fraw ariannol annisgwyl?
-          image: unexpected-money-shock.jpg
-          content: Sut i ddiogelu’ch hun a’ch teulu rhag ergydion ariannol
+        - url: https://blog.moneyadviceservice.org.uk/autumn-statement-2015-what-you-need-to-know
+          heading: Cyllideb yr Hydref 2015 – yr hyn sydd angen i chi ei wybod
+          image: autumn-statement-2015.jpg
+          content: Credydau Treth, Pensiwn y Wladwriaeth a mwy
           blog: true
         - url: /cy/pensiynau-ac-ymddeoliad
-          text: Archwiliwch eich opsiynau ymddeol
+          heading: Archwiliwch eich opsiynau ymddeol
           image: explore-your-retirement-options.jpg
           content: Ceisiwch gymorth gyda’ch penderfyniadau
         - url: https://blog.moneyadviceservice.org.uk/how-to-get-out-of-debt-by-someone-who-s-done-it
-          text: Sut i ddod allan o ddyled
+          heading: Sut i ddod allan o ddyled
           image: how-to-get-out-of-debt.jpg
           content: Stori bersonol gan rywun a lwyddodd
           blog: true
         - url: /cy/static/cysylltu-a-ni
-          text: Ydych chi wedi cael galwad diwahoddiad am gyngor ariannol?
+          heading: Ydych chi wedi cael galwad diwahoddiad am gyngor ariannol?
           image: cold-call.jpg
           content: Fyddwn ni byth yn eich ffonio yn annisgwyl
       promoted_no_image:
         - url: /cy/payday-loans
-          text: "Payday loans: Gall ad-daliad hwyr achosi problemau difrifol i chi"
+          heading: "Payday loans: Gall ad-daliad hwyr achosi problemau difrifol i chi"
           content: Cyn ichi gymryd un, defnyddiwch yr offeryn hwn i gael cyngor
         - url: /cy/tools/cynllunydd-cyllideb
-          text: Defnyddiwch ein Cynllunydd cyllideb i gadw trefn ar eich gwariant
+          heading: Defnyddiwch ein Cynllunydd cyllideb i gadw trefn ar eich gwariant
           content: Cymrwch bum munud i ddefnyddio ein hofferyn i weld faint sydd gennych dros ben wedi talu am y biliau pwysicaf
       stripe_banner:
-        url: /cy/tools/canfyddwr-cyngor-ar-ddyledion
-        worried_about_debt: Ydych chi’n pryderu am ddyledion?
-        find_out_where: Dysgwch lle i gael cymorth cyfrinachol yn rhad ac am ddim yn awr
+        promo_banner_url: /cy/tools/canfyddwr-cyngor-ar-ddyledion
+        promo_banner_content: '<b class="stripe-banner__bold">Ydych chi’n pryderu am ddyledion?</b> Dysgwch lle i gael cymorth cyfrinachol yn rhad ac am ddim yn awr'
       blog_title: Eich blog Cyngor Ariannol
       blog_description: Awgrymiadau, newyddion a safbwyntiau ar bopeth sydd ynghlwm ag arian, o forgeisi a chynilion i gyllido a budd-daliadau.
 
@@ -306,11 +306,17 @@ cy:
       popular_links_title: Mwyaf poblogaidd
       related_links_title: Erthyglau cysylltiedig
 
+    sharing:
+      title: Rhannwch yr erthygl hon
+      label_facebook: Rhannwch yr erthygl hon ar Facebook
+      label_twitter: Rhannwch yr erthygl hon ar Twitter
+      label_email: Rhannwch yr erthygl hon trwy E-bost
+
   categories:
     top_links:
-      how_can_we_help: Sut allwn ni helpu?
+      how_can_we_help: Cynnwys a ddewiswyd ar eich cyfer chi...
     show:
-      view_all: Gweld yr holl ...
+      view_all: gweld yr holl
       view_more: Helaethu
       view_less: Lleihau
 
@@ -383,6 +389,17 @@ cy:
       send_me_money_advice: Cofrestrwch
       dont_ask_me_again: Peidiwch â gofyn i mi eto
       done: Cwblhau
+    signup_inpage:
+      title: "200,00 o bobl eisoes yn cael ein cylchlythyr am ddim yn llawn awgrymiadau a chyngor."
+      supplementary_text: "A ydych chi yn?"
+      controls:
+        email:
+          placeholder: "Rhowch eich cyfeiriad e-bost"
+        button:
+          text: "Ceisiwch gyngor ariannol rhad ac am ddim"
+      privacy_text: "Peidiwch â phoeni, ni fyddwn yn rhannu’ch data gydag unrhyw un."
+      privacy_text_2: "Gweler ein"
+      privacy_link_text: "polisi preifatrwydd."
 
   authentication:
     sign_in: Mewngofnodi
@@ -470,8 +487,18 @@ cy:
         password_confirmation: Gadewch yn wag os nad ydych yn dymuno newid eich cyfrinair
         postcode: Rhowch god post dilys o’r DU os hoffech chi ddiweddaru’r un gyfredol
         current_password: Rydym angen eich cyfrinair cyfredol i gadarnhau eich newidiadau
+        contact_number: Rhowch rif ffôn dilys y Deyrnas Unedig
+      contact_number:
+        label: Rhif cyswllt (dewisol)
+      current_password: Cyfrinair Presennol (angenrheidiol i ddiweddary'r gosodiadau)
+      opt_in_for_research:
+        title: Rwy’n fodlon i rywun gysylltu â mi er dibenion ymchwil
+      password:
+        title: Newid fy nghyfrinair (Dewisol)
+        label: Cyfrinair Newydd
+      password_confirmation: Cadarnhau Cyfrinair Newydd
       newsletter:
-        title: Rheoli cyngor ar ddewisiadau e-bost
+        title: Rheoli fy Newisiadau
         intro: "Parhewch i danysgrifio er mwyn cael…"
 
   technical_feedback:

@@ -17,18 +17,16 @@
   <% end %>
 <% end %>
 
-<% if Feature.active?(:corporate) %>
-  <% corporate_category_navigation.each do |first_nav| %>
-    <h2><%= first_nav.title %></h2>
+<% corporate_category_navigation.each do |first_nav| %>
+  <h2><%= first_nav.title %></h2>
 
-    <% if first_nav.object.has_children? %>
-      <ul>
-        <% first_nav.object.children.each do |second_nav| %>
-          <li>
-            <%= link_to second_nav.content.title, second_nav.content.path  %>
-          </li>
-        <% end %>
-      </ul>
-    <% end %>
+  <% if first_nav.object.has_children? %>
+    <ul>
+      <% first_nav.object.children.each do |second_nav| %>
+        <li>
+          <%= link_to second_nav.content.title, second_nav.content.path  %>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
 <% end %>

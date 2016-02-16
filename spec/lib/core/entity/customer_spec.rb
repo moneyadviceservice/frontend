@@ -64,20 +64,8 @@ module Core
       context 'when date of birth not present' do
         let(:date_of_birth) { nil }
 
-        it 'returns hash with correct attributes' do
-          expected = {
-            FirstName: attributes[:first_name],
-            LastName: attributes[:last_name],
-            mas_ContactEmail: attributes[:email],
-            Address1_PostalCode: attributes[:post_code],
-            GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
-            mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
-            BirthDate: nil,
-            DoNotBulkEMail: !attributes[:newsletter_subscription],
-            Telephone2: attributes[:contact_number]
-          }
-
-          expect(subject.to_crm_hash).to eql(expected)
+        it 'returns nil for birth date' do
+          expect(subject.to_crm_hash[:BirthDate]).to be_nil
         end
       end
     end

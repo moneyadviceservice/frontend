@@ -1,13 +1,32 @@
-<div class="news-signup-test <% if local_assigns.has_key?(:visible) %>news-signup-test--with-image news-signup-test--in-article <% end %>" <% unless local_assigns.has_key?(:visible) %>data-dough-component="Newsletter"<% end %>>
-  <div class="news-signup-test__image"></div>
+<%
+   dev_visible = local_assigns[:visible].nil? ? false : local_assigns[:visible]
+   ab_test_render = local_assigns[:ab_test_render].nil? ? false : local_assigns[:ab_test_render]
+   component_image_class = local_assigns[:component_image_class].nil? ? 'news-signup-test__image' : local_assigns[:component_image_class]
+   component_title_text = local_assigns[:component_title_text].nil? ? 'Get money saving tips straight to your inbox' : local_assigns[:component_title_text]
+   component_info_text = local_assigns[:component_info_text].nil? ? 'Join 100,000+ subscribers to get our free newsletter packed with tips and advice.' : local_assigns[:component_info_text]
+   component_form_endpoint = local_assigns[:component_form_endpoint].nil? ? main_app.newsletter_subscription_path : local_assigns[:component_form_endpoint]
+
+   component_class = ''
+   component_dough = ' data-dough-component="Newsletter"'.html_safe
+   if dev_visible then
+     component_class = 'news-signup-test--with-image news-signup-test--in-article'
+     component_dough = ''
+   end
+
+   if !ab_test_render && !dev_visible then
+     component_class = component_class + ' news-signup-inpage--delete'
+   end
+%>
+<div class="news-signup-test <%= component_class %>" <%= component_dough %>>
+  <div class="<%= component_image_class %>"></div>
   <div class="news-signup-test__container">
-  <div class="news-signup-test__container__image"></div>
+    <div class="news-signup-test__container__image"></div>
     <div class="news-signup-test__container__intro">
-      <h3>Get money saving tips straight to your inbox</h3>
-      <p>Join 100,000+ subscribers to get our free newsletter packed with tips and advice.</p>
+      <h3><%= component_title_text %></h3>
+      <p><%= component_info_text %></p>
     </div>
     <div class="news-signup-test__container__form">
-      <%= form_tag(main_app.newsletter_subscription_path, class: 'js-news-signup-test-form', remote: true) do %>
+      <%= form_tag(component_form_endpoint, class: 'js-news-signup-test-form', remote: true) do %>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token, id: 'test_authenticity_token' -%>
         <%= hidden_field_tag 'subscription[ga_categoryid]', 'Newsletter SignUp Test', id: 'subscription[test_ga_categoryid]' -%>
         <%= hidden_field_tag 'subscription[category]', 'in_article', id: 'subscription[test_category]' -%>

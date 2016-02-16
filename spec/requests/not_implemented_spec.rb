@@ -1,12 +1,10 @@
 RSpec.describe 'Request we have no implementation for', type: :request do
-  it 'returns a 501 response' do
-    get('/unsupported')
-
-    expect(response.status).to eq(501)
+  it 'raises routing error' do
+    expect { get('/unsupported') }.to raise_error(ActionController::RoutingError, 'Not Found')
   end
 end
 
-RSpec.describe 'Request that is redirected', type: :request, features: [:redirects] do
+RSpec.describe 'Request that is redirected', type: :request do
   it 'redirects to specified location' do
     VCR.use_cassette('/en/core/repository/categories/cms/find/redirected') do
       get('/en/categories/redirected')
@@ -16,7 +14,7 @@ RSpec.describe 'Request that is redirected', type: :request, features: [:redirec
   end
 end
 
-RSpec.describe 'Request that is redirected with extension', type: :request, features: [:redirects] do
+RSpec.describe 'Request that is redirected with extension', type: :request do
   it 'redirects to specified location' do
     VCR.use_cassette('/en/core/cms/cms_api/find/redirected') do
       get('/default.aspx')

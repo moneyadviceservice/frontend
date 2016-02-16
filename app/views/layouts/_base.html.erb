@@ -8,7 +8,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <%= optimizely_include_tag if Rails.env.production? && Feature.active?(:optimizely) %>
+  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_qa?) && Feature.active?(:optimizely) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>
     <%# This is the new embed code for Optimizely training session and is temporary %>
@@ -175,6 +175,9 @@
 
 </head>
 <body class="<%= locale_class %> l-body">
+<!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+<%= render 'shared/svg/icon_sprite' %>
+<!--<![endif]-->
 
 <%# START Google Tag Manager embed code %>
 <% if Rails.env.production? %>
@@ -220,6 +223,5 @@
 
 <%= yield :javascripts %>
 
-<%= render 'shared/svg/icon_sprite' %>
 </body>
 </html>

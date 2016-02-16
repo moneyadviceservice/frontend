@@ -11,6 +11,11 @@ module Converters
         user.save
         user
       end
+
+      before :each do
+        Core::Interactors::Customer::Creator.new(user).call
+      end
+
       subject { described_class.new(customer) }
 
       it 'finds the user' do

@@ -1,4 +1,18 @@
-<%= render 'shared/home_top' %>
+<%
+  item = OpenStruct.new({
+    'hero_image' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=842%C3%97465&w=842&h=465',
+    'heading' => 'Some heading',
+    'bullet_1' => 'Bullet 1',
+    'bullet_2' => 'Bullet 2',
+    'bullet_3' => 'Bullet 3',
+    'cta_link' => 'https://example.com',
+    'cta_text' => 'Some text',
+    'promo_banner_content' => 'Promo banner',
+    'promo_banner_url' => 'https://example.com'
+  })
+%>
+
+<%= render 'shared/home_top', item: item %>
 
 <div class="l-home-directory">
   <div class="l-constrained">
@@ -12,12 +26,44 @@
   </div>
 </div>
 
-<%= render 'shared/tool_promos', items: t('home.show.tools') %>
+<%
+  items = [
+    {
+      'url' => 'https://example.com',
+      'heading' => 'Some heading',
+      'text' => 'Some text'
+    }
+  ] * 3
+%>
+
+<%= render 'shared/tool_promos', items: items %>
 
 <div class="l-constrained">
   <hr class="hr hr--inset">
 </div>
 
-<%= render 'shared/article_promos', items_with_image: t('home.show.promoted'), items_without_image: t('home.show.promoted_no_image') %>
+<%
 
-<%= render 'shared/stripe_banner', item: t('home.show.stripe_banner') %>
+  items_with_image = [
+    {
+      'url' => 'https://example.com',
+      'image' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=259%C3%97162&w=259&h=162',
+      'label' => 'blog',
+      'heading' => 'Some heading',
+      'content' => 'Some content',
+    }
+  ] * 4
+
+  items_without_image = [
+    {
+      'url' => 'https://example.com',
+      'heading' => 'Some heading',
+      'content' => 'Some content',
+    }
+  ] * 2
+
+%>
+
+<%= render 'shared/article_promos', items_with_image: items_with_image, items_without_image: items_without_image %>
+
+<%= render 'shared/stripe_banner', item: item %>

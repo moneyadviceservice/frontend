@@ -4,7 +4,7 @@ module Core::Repository::CMS
     subject(:composer) { described_class.new(blocks, id) }
 
     let(:content_block) do
-      { 'identifier' => 'content', 'content' => 'Content Block' }
+      { 'identifier' => 'content', 'content' => "<p>Content Block</p>\n" }
     end
 
     describe '#initialize' do
@@ -32,6 +32,15 @@ module Core::Repository::CMS
           expect(composer.to_s).to eql('meta description')
         end
       end
+
+      context 'with multiple blocks' do
+        let(:blocks) { [{ 'identifier' => 'description', 'content' => 'meta description' }] }
+        let(:id) { 'description' }
+
+        it 'returns the meta description string' do
+          expect(composer.to_s).to eql('meta description')
+        end
+      end
     end
 
     describe '#to_html' do
@@ -47,7 +56,7 @@ module Core::Repository::CMS
         let(:blocks) { [] }
 
         it 'is an empty string' do
-          expect(composer.to_html).to eql("\n")
+          expect(composer.to_html).to eql("")
         end
       end
 
@@ -59,10 +68,9 @@ module Core::Repository::CMS
         let(:blocks) { [non_content_block] }
 
         it 'returns a composed html string' do
-          expect(composer.to_html).to eql("\n")
+          expect(composer.to_html).to eql("")
         end
       end
-
     end
   end
 end

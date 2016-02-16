@@ -1,4 +1,4 @@
-RSpec.describe 'Cost Calculator Builder', type: :request, features: [:cost_calculator_builder] do
+RSpec.describe 'Cost Calculator Builder', type: :request do
   %W(
     /en/#{EngineMountPoint::CostCalculatorBuilder::EN_ID}/admin/calculators
   ).each do |path|

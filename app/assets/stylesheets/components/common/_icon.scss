@@ -2,9 +2,6 @@
 // The sprite contains at two sizes, original and double, to support high density screens.
 //
 // .icon--logo - mas logo (small)
-// .icon--youtube - youtube logo
-// .icon--facebook - facebook icon
-// .icon--twitter - twitter icon
 // .icon--globe - globe icon to symbolise language change
 // .icon--up-arrow - up arrow icon
 // .icon--desktop - desktop computer icon
@@ -30,6 +27,10 @@
 // .icon--account - green person icon
 // .icon--calculator - calculator icon
 // .icon--info - info icon
+// .icon--twitter - twitter icon
+// .icon--facebook - twitter facebook
+// .icon--youtube - twitter youtube
+// .icon--email - twitter email
 //
 // Styleguide icons
 
@@ -66,74 +67,6 @@
   background-position: -233px -266px;
   width: 56px;
   height: 26px;
-}
-
-.icon--twitter,
-.svg-icon--twitter {
-  width: 22.149px;
-  height: 18px;
-}
-
-.icon--facebook,
-.svg-icon--facebook {
-  width: 11.424px;
-  height: 22px;
-}
-
-.icon--youtube,
-.svg-icon--youtube {
-  width: 25.59168px;
-  height: 18px;
-}
-
-.icon--twitter {
-  display: block;
-  background-position: -484px -445px;
-}
-
-.icon--facebook {
-  display: block;
-  background-position: -456px -441px;
-}
-
-.icon--youtube {
-  display: block;
-  background-position: -417px -443px;
-}
-
-.svg-icon--twitter,
-.svg-icon--facebook,
-.svg-icon--youtube {
-  display: none;
-}
-
-.svg-icon--twitter {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg-icon--facebook {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg-icon--youtube {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg {
-  .icon--twitter,
-  .icon--facebook,
-  .icon--youtube {
-    display: none;
-  }
-
-  .svg-icon--twitter,
-  .svg-icon--facebook,
-  .svg-icon--youtube {
-    display: block;
-  }
 }
 
 .icon--globe {
@@ -341,10 +274,15 @@
 }
 
 .icon--newsletter {
-  background-image: none;
-  background-color: $color-green-primary;
-  width: 70px;
-  height: 70px;
+  background-position: -588px -430px;
+  width: 56px;
+  height: 56px;
+}
+
+.icon--email {
+  background-position: -588px -430px;
+  width: 56px;
+  height: 56px;
 }
 
 .icon--calculator {
@@ -352,8 +290,101 @@
   height: 51px;
   width: 51px;
 }
+
 .icon--info {
   background-position: -70px -260px;
   height: 25px;
   width: 20px;
+}
+
+.svg {
+  .icon--stripe-banner-arrow {
+    display: none;
+  }
+
+  .svg-icon--stripe-banner-arrow {
+    display: block;
+  }
+}
+
+.icon--stripe-banner-arrow {
+  background-position: -517px -426px;
+  width:68px;
+  height:68px;
+}
+
+// styles common to all social sharing icons
+.icon--facebook,
+.svg-icon--facebook {
+  width: 11.424px;
+  height: 22px;
+}
+
+.icon--twitter,
+.svg-icon--twitter {
+  width: 20.918px; // 184.575 x (17 / 150)
+  height: 17px;
+}
+
+.icon--youtube,
+.svg-icon--youtube {
+  width: 25.59168px;
+  height: 18px;
+}
+
+.icon--email,
+.svg-icon--email {
+  width:  26.47px; // 31.249 x (16 / 18.8889)
+  height: 16px;
+}
+
+.icon--twitter {
+  display: block;
+  background-position: -484px -445px;
+}
+
+.icon--facebook {
+  display: block;
+  background-position: -456px -441px;
+}
+
+.icon--youtube {
+  display: block;
+  background-position: -417px -443px;
+}
+
+.icon--email {
+  display: block;
+  background-position: -664px -452px;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  display: none;
+}
+
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.svg {
+  .icon--twitter,
+  .icon--facebook,
+  .icon--youtube,
+  .icon--email {
+    display: none;
+  }
+
+  .svg-icon--twitter,
+  .svg-icon--facebook,
+  .svg-icon--youtube,
+  .svg-icon--email {
+    display: block;
+  }
 }

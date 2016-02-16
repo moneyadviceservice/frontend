@@ -1,0 +1,145 @@
+.graphic-info-box {
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  position:relative;
+  overflow: hidden;
+  @include respond-to($mq-m) {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+.graphic-info-box:after {
+  content:"";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid $color-line-gray;
+  left: 10px;
+  @include respond-to($mq-m) {
+    border-left: none;
+    left: 50%;
+  }
+}
+
+.graphic-info-box__heading {
+  margin-top: $baseline-unit * 9;
+  margin-bottom: $baseline-unit * 9;
+  float: right;
+  width: 92%;
+  @include respond-to($mq-m) {
+    float: none;
+    margin-top: 0;
+    margin-bottom: $baseline-unit * 9;
+    width: 100%;
+  }
+}
+
+.graphic-info-box__copy {
+  text-align: left;
+  width: 92%;
+  margin: 0 0 0 8%;
+  @include respond-to($mq-m) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.graphic-info-box__illustration {
+  width: 92%;
+  margin: 0 0 0 8%;
+  @include respond-to($mq-m) {
+    margin: 0;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+}
+
+.graphic-info-box__top-dot {
+  float: left;
+  position: relative;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  margin: $baseline-unit * 10 0 0 0;
+  background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+  background-position: -58px -81px;
+  background-size: 90px 139px;
+  background-repeat: no-repeat;
+
+  @include device-pixel-ratio() {
+    background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+  }
+
+  @include respond-to($mq-m) {
+    float: none;
+    width: 32px;
+    height: 71px;
+    margin: 1em auto 0 auto;
+    background-size: 90px 139px;
+    background-repeat: no-repeat;
+    background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+    background-position: -58px 0;
+
+    @include device-pixel-ratio() {
+      background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+    }
+  }
+}
+
+.graphic-info-box__line-fade-in {
+  @include respond-to($mq-m) {
+    width: 4px;
+    height: 64px;
+    margin: 0 auto -8px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 90px 139px;
+    background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+    background-position: -38px -74px;
+
+    @include device-pixel-ratio() {
+      background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+    }
+  }
+}
+
+.graphic-info-box__inline-dot {
+  float: left;
+  position: relative;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  margin: $baseline-unit*10 0 0 $baseline-unit/2;
+  margin: $baseline-unit * 10 0 0 0;
+  background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+  background-position: -58px -81px;
+  background-size: 90px 139px;
+  background-repeat: no-repeat;
+
+  @include device-pixel-ratio() {
+    background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+  }
+
+  @include respond-to($mq-m) {
+    float: none;
+    width: 32px;
+    height: 139px;
+    margin: 0 auto;
+    background-position: 0 0;
+    background-image: url(image-path("retirement_concepts/dot-sprite@1x.png")); 
+    background-size: 90px 139px;
+    background-repeat: no-repeat;
+
+    @include device-pixel-ratio() {
+      background-image: url(image-path("retirement_concepts/dot-sprite@2x.png")); 
+    }
+  }
+}

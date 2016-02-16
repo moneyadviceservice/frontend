@@ -18,10 +18,9 @@
                  title:       t('.title'),
                  description: t('.description').strip) %>
 
-
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
-<%= render 'shared/home_top' %>
+<%= render 'shared/home_top', item: @resource %>
 
 <div class="l-home-directory">
   <div class="l-constrained">
@@ -32,7 +31,12 @@
   </div>
 </div>
 
-<%= render 'shared/tool_promos', items: t('.tools') %>
-<%= render 'shared/article_promos', items_with_image: t('.promoted'), items_without_image: t('.promoted_no_image') %>
+<%= render 'shared/tool_promos', items: @resource.tools %>
 
-<%= render 'shared/stripe_banner', item: t('.stripe_banner') %>
+<%= render 'shared/article_promos', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
+
+<% if Feature.active?(:cms_home_page_promo_banner) %>
+  <%= render 'shared/stripe_banner', item: @resource %>
+<% else %>
+  <%= render 'shared/stripe_banner', item: OpenStruct.new(t('.stripe_banner')) %>
+<% end %>

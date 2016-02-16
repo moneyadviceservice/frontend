@@ -3,7 +3,7 @@ require 'html_processor'
 class ContentItemDecorator < Draper::Decorator
   decorates_association :categories, with: CategoryDecorator
 
-  delegate :title, :type, :slug, :description, :callback_requestable?, :id
+  delegate :title, :type, :slug, :description, :id
 
   def initialize(object, options = {})
     super
@@ -26,6 +26,10 @@ class ContentItemDecorator < Draper::Decorator
 
   def content
     processed_body.html_safe
+  end
+
+  def social_share_image
+    @social_share_image ||= h.parent_category.try(:large_image) || h.image_url('MAS-logo_social-sharing.png')
   end
 
   private

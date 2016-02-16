@@ -13,6 +13,7 @@ module Core
 
   autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'
+  autoload :HomePage, 'core/entity/home_page'
   autoload :CorporateArticle, 'core/entity/corporate_article'
   autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'
@@ -35,6 +36,8 @@ module Core
   end
 
   autoload :BaseContentReader, 'core/interactor/base_content_reader'
+  autoload :HomePageReader, 'core/interactor/home_page_reader'
+  autoload :HomePagePreviewer, 'core/interactor/home_page_previewer'
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'
@@ -83,6 +86,11 @@ module Core
       autoload :CMS, 'core/repository/articles/cms'
     end
 
+    module HomePages
+      autoload :CMS, 'core/repository/home_pages/cms'
+      autoload :Static, 'core/repository/home_pages/static'
+    end
+
     module Corporate
       autoload :CMS, 'core/repository/corporate/cms'
     end
@@ -95,10 +103,6 @@ module Core
     module Categories
       autoload :Fake, 'core/repository/categories/fake'
       autoload :CMS, 'core/repository/categories/cms'
-    end
-
-    module CallbackRequestable
-      autoload :Static, 'core/repository/callback_requestable/static'
     end
 
     module Feedback

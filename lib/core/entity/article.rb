@@ -17,10 +17,6 @@ module Core
       categories.compact.one?
     end
 
-    def callback_requestable?
-      Repository::CallbackRequestable::Static.new(self).call
-    end
-
     def latest_blog_post_links
       build_article_links 'latest_blog_post_links'
     end

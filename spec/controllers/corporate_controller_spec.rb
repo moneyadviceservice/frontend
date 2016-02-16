@@ -1,4 +1,4 @@
-RSpec.describe CorporateController, type: :controller, features: [:corporate_tool_directory] do
+RSpec.describe CorporateController, type: :controller do
   let(:corporate) { instance_double(Core::Article, id: 'test', categories: []) }
   let(:corporate_reader) { instance_double(Core::CorporateReader, call: corporate) }
   let(:category_tree) { double.as_null_object }
@@ -64,7 +64,7 @@ RSpec.describe CorporateController, type: :controller, features: [:corporate_too
       end
     end
 
-    context 'when corporate page is redirected', features: [:redirects] do
+    context 'when corporate page is redirected' do
       it 'is redirected to specified location' do
         VCR.use_cassette("redirected") do
           get :show, id: 'redirected', locale: I18n.locale

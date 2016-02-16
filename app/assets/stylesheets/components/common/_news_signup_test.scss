@@ -14,7 +14,7 @@ $mq-news-signup-test-article: px(550);
   position: relative;
 }
 
-.news-signup-test--in-article.news-signup-test--with-image  .news-signup-test__image {
+.news-signup-test--in-article.news-signup-test--with-image .news-signup-test__image {
   display: block;
   background: transparent 50% 30% image_url('news_signup_test/bg.jpg') no-repeat;
   background-size: cover;
@@ -25,7 +25,7 @@ $mq-news-signup-test-article: px(550);
   }
 }
 
-.news-signup-test--in-article.news-signup-test--with-image  .news-signup-test__image {
+.news-signup-test--in-article.news-signup-test--with-image .news-signup-test__image {
   @include respond-to($mq-news-signup-test-article) {
     height: auto;
     position: absolute;

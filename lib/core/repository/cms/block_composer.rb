@@ -1,30 +1,29 @@
 module Core::Repository
   module CMS
-    # Recombines CMS blocks to emulate current public website repo.
-    # TODO: replace with native support for displaying blocks outside of frontend core
     class BlockComposer
       class Block < OpenStruct
         delegate :to_s, to: :content
       end
 
-      attr_reader :blocks, :id, :parser
+      attr_reader :blocks, :id
 
-      def initialize(blocks = [], id = 'content', parser = Mastalk::Document)
+      def initialize(blocks = [], id = 'content')
         @blocks = Array(blocks)
-        @parser = parser
         @id = id
       end
 
-      def find(id)
-        Block.new(blocks.find { |block| block['identifier'] == id })
-      end
-
       def to_html
-        parser.new(to_s).to_html
+        to_s
       end
 
       def to_s
         find(id).to_s
+      end
+
+      private
+
+      def find(id)
+        Block.new(blocks.find { |block| block['identifier'] == id })
       end
     end
   end

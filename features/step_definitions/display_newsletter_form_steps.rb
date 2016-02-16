@@ -1,5 +1,5 @@
-Given(/^an unregistered user visits the MAS site$/) do
-  home_page.load(locale: 'en')
+Given(/^I am on an article page$/) do
+  step 'I view an article in English'
 end
 
 When(/^I scroll to the bottom of the page$/) do
@@ -21,12 +21,10 @@ end
 
 When(/^user subscribes to receive newsletters$/) do
   allow_any_instance_of(Core::NewsletterSubscriptionCreator).to receive(:call).and_return( true )
-
-  home_page.load(locale: 'en')
-  home_page.sticky_newsletter.subscription_email.set 'test@example.com'
-  home_page.sticky_newsletter.send_me_money_advice.click
+  article_page.sticky_newsletter.subscription_email.set 'test@example.com'
+  article_page.sticky_newsletter.send_me_money_advice.click
   page.driver.browser.set_cookie('_cookie_submit_newsletter = hide')
-  expect(page).to have_content 'Thank you for signing up'
+  expect(page).to have_content I18n.t('newsletter_subscriptions.success')
 end
 
 Then(/^the user should no longer see the newsletter form$/) do

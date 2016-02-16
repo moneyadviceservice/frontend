@@ -15,6 +15,10 @@ module Core
           subject { described_class.new(user) }
 
           context 'when customer exists' do
+            before :each do
+              Interactors::Customer::Creator.new(user).call
+            end
+
             let(:first_name) { 'Philip' }
 
             it 'updates attributes' do

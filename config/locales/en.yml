@@ -101,9 +101,11 @@ en:
         password: Password
         post_code: Postcode
         newsletter: Send me free advice by email
-        contact_number: Contact number
+        contact_number: Contact number (optional)
         opt_in_for_research: Tick if you’d like to be contacted to help us with our research
         register_button: Register
+        edit:
+          password: New password
 
   skip_links:
     to_main_content: Skip to main content
@@ -142,6 +144,7 @@ en:
         description: Web chat is available from %{hours}.
       bank_holiday_html: |
         Sunday and Bank Holidays, closed
+      offline_migration_html: Monday to Friday, 8am to 8pm<br />On Saturday 06/02/2016 Web chat will be unavailable due to maintenance
     call_us:
       title: Call us
       description: Give us a call for free and impartial money advice.
@@ -192,35 +195,34 @@ en:
       view_all_link_expanded: of our popular tools and calculators
       promoted_heading: What's new
       promoted:
-        - url: https://blog.moneyadviceservice.org.uk/are-you-ready-for-an-unexpected-financial-shock
-          text: Are you ready for an unexpected money shock?
-          image: unexpected-money-shock.jpg
-          content: How to protect you and your family from financial blows
+        - url: https://blog.moneyadviceservice.org.uk/autumn-statement-2015-what-you-need-to-know
+          heading: Autumn Statement 2015 – what you need to know
+          image: autumn-statement-2015.jpg
+          content: Tax Credits, State Pension and more
           blog: true
         - url: /en/pensions-and-retirement
-          text: Explore your retirement options
+          heading: Explore your retirement options
           image: explore-your-retirement-options.jpg
           content: Get some help with your decisions
         - url: https://blog.moneyadviceservice.org.uk/how-to-get-out-of-debt-by-someone-who-s-done-it
-          text: How to get out of debt
+          heading: How to get out of debt
           image: how-to-get-out-of-debt.jpg
           content: The inside story from someone who’s done it
           blog: true
         - url: /en/corporate/contact-us
-          text: Have you had a cold call about money advice?
+          heading: Have you had a cold call about money advice?
           image: cold-call.jpg
           content: We won’t ever call you out of the blue
       promoted_no_image:
         - url: /en/payday-loans
-          text: "Payday loans: Late repayment can cause you serious problems"
+          heading: "Payday loans: Late repayment can cause you serious problems"
           content: Before you take one out, use this tool to get advice
         - url: /en/tools/budget-planner
-          text: Use our Budget planner to keep on top of your spending
+          heading: Use our Budget planner to keep on top of your spending
           content: Take five minutes and use our tool to work out what you have left after paying your most important bills
       stripe_banner:
-        url: /en/tools/debt-advice-locator
-        worried_about_debt: Worried about debt?
-        find_out_where: Find out where to get free, confidential help now
+        promo_banner_url: /en/tools/debt-advice-locator
+        promo_banner_content: '<b class="stripe-banner__bold">Worried about debt?</b> Find out where to get free, confidential help now'
       blog_title: Your Money Advice blog
       blog_description: Tips, news and views on all things money from mortgages and savings to budgeting and benefits
 
@@ -305,11 +307,17 @@ en:
       popular_links_title: Most read
       related_links_title: Related guides
 
+    sharing:
+      title: Share this article
+      label_facebook: Share this article on Facebook
+      label_twitter: Share this article on Twitter
+      label_email: Share this article by Email
+
   categories:
     top_links:
-      how_can_we_help: How can we help?
+      how_can_we_help: Handpicked content for you...
     show:
-      view_all: View all ...
+      view_all: view all
       view_more: Expand
       view_less: Contract
 
@@ -369,7 +377,7 @@ en:
     strap: Sign up today!
     label: What's your email?
     button: Send me money advice
-    success: Thank you for signing up
+    success: Look out for money advice in your inbox soon!
     error: Please provide a valid email address
     privacy_html: We will never share your data or spam you. See our <a href="/en/corporate/privacy" target="_blank">Privacy Policy</a>
     sticky:
@@ -382,6 +390,18 @@ en:
       send_me_money_advice: Send me money advice
       dont_ask_me_again: Don’t ask me again
       done: Done
+    signup_inpage:
+      title: "200,000 people are taking care of their money with our FREE money advice newsletter."
+      supplementary_text: "Sign up today!"
+      controls:
+        email:
+          label: "Enter your email"
+          placeholder: "Enter your email"
+        button:
+          text: "Send me money advice"
+      privacy_text: "Don't worry, we won't share your details."
+      privacy_text_2: "See our"
+      privacy_link_text: "privacy policy."
 
   authentication:
     sign_in: Sign in
@@ -466,12 +486,21 @@ en:
       label: Update
       field_help_texts:
         email: Please enter a valid email address if you would like to change your current one
+        contact_number: Please enter a valid UK phone number
         password: At least 8 characters. Leave blank if you don't want to change your password.
         password_confirmation: Leave blank if you don't want to change your password
         postcode: Please enter a valid UK postcode if would like to update your current one
         current_password: We need your current password to confirm your changes
+        contact_number: Please enter a valid UK phone number
+      current_password: Current password  (required to update settings)
+      opt_in_for_research:
+        title: I accept to be contacted for research purposes
+      password:
+        title: Change my password (Optional)
+        label: New password
+      password_confirmation: New Password confirmation
       newsletter:
-        title: Manage advice email preferences
+        title: Manage my preferences
         intro: "Stay subscribed to get..."
 
   technical_feedback:
@@ -503,13 +532,6 @@ en:
 
   inline_feedback:
     technical_feedback_link: Report a technical issue with this page
-
-  callback_requester:
-    title: Need more help?
-    button: Request a callback
-    when_someone_dies_message: "When dealing with money issues after a death it can be tough to know where to start. Our expert advisers can help you take control."
-    divorce_and_separation_message: "Dealing with money issues after a divorce or separation can be stressful. Our expert advisers can help you make sense of the situation."
-    redundancy_message: "When dealing with money issues after redundancy it can be tough to know where you stand. Our expert advisers can help you take control."
 
   profile:
     edit:

@@ -3,11 +3,7 @@
     <h1><%= t('companies.standalone_title') %></h1>
     <p><%= t('companies.standalone_intro') %></p>
 
-    <ul>
-      <% companies_list.each do |item| %>
-        <li><%= item %></li>
-      <% end %>
-    </ul>
+    <%= company_list.content %>
 
     <p>
       <%= t('companies.back_to_faq_html') %>

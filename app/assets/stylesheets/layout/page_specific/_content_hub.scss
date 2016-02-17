@@ -87,7 +87,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 
 .l-content-hub__hero__image {
   padding-bottom: 100%; // depends on aspect ratio of image (but must be constant!)
-  background-image: url(/assets/budget_planner/start_square.jpg);
+  background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_square-a6f6f25554c9931e379ea608e53aa4fe.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -101,7 +101,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   }
 
   @include respond-to($content-hub-two-col-breakpoint) {
-    background-image: url(/assets/budget_planner/start_landscape.jpg);
+    background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_landscape-3cfd77f38825bd8842f81fb82d7d5ad0.jpg);
   }
 }
 
@@ -184,8 +184,8 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 
   @include column(12);
 
-  padding-top: $padding; // $baseline-unit * 3;
-  padding-bottom: $padding; // $baseline-unit * 3;
+  padding-top: $padding;
+  padding-bottom: $padding;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     $content-hub-modules-row: 2;
@@ -198,7 +198,6 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 
     // based on default width to make each module roughly square (given a particular viewport size)
     min-height: calc(#{$content-hub-max-module-width} - 2.25em);
-    // height: 382.75px;
   }
 
   @include respond-to($content-hub-two-col-breakpoint) {
@@ -212,7 +211,6 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 
     // based on default width to make each module roughly square (given a particular viewport size)
     min-height: calc(#{$content-hub-max-module-width} - 2.25em);
-    // height: 382.75px;
   }
 }
 
@@ -256,7 +254,6 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
     position: absolute;
     bottom: $baseline-unit * 3;
     right: 0;
-    // text-align: right;
 
     @include respond-to($content-hub-one-col-breakpoint) {
       $content-hub-modules-row: 2;
@@ -283,6 +280,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   .l-content-hub__module__image {
     width: 100%;
     padding-bottom: 100%;
+    background-size: cover;
 
     @include respond-to($content-hub-one-col-breakpoint) {
       position: absolute;
@@ -292,7 +290,6 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
       height: 100%;
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-size: cover;
       padding-bottom: 0;
     }
   }
@@ -331,14 +328,22 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 .content-hub__module--img {
   .l-content-hub__module__inner {
     @include respond-to($content-hub-one-col-breakpoint) {
+      position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
     }
+
+    padding-bottom: 100%;
   }
 
   .l-content-hub__module__image {
-    padding-bottom: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
   }
 }
 // -- image only
@@ -390,18 +395,6 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
       right: $default-gutter * $content-hub-modules-row;
     }
   }
-
-  /*
-  .l-content-hub__module__inner:after {
-    content: '';
-    display: block;
-    width: 51px;
-    height: 51px;
-    background-image: url(/assets/icon-sprite.png);
-    background-position: -1000px -217px;
-    margin: 0 auto;
-  }
-  */
 }
 // -- tool
 

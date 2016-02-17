@@ -48,7 +48,7 @@
       <li>Links can be understood out of context for screen reader users.</li>
       <li>Links are highlighted on keyboard focus.</li>
       <li>Our logo links directly to the home page.</li>
-      <li>You can skip to the main content, main navigation and the accessibility page by pressing the tab key after the page loads.</li>
+      <li>You can skip to the main content, main navigation (when the page contains it) and the accessibility page by pressing the tab key after the page loads.</li>
       <li>Site-wide search facilities have been implemented.</li>
     </ul>
 
@@ -76,9 +76,15 @@
     <p>However, text resizing will not work in Internet Explorer 8. Instead, horizontal scrolling will be provided so that it is possible to use the keyboard to navigate from side to side. Up-to-date instructions to override the website <a href="http://windows.microsoft.com/en-gb/windows/change-webpage-colors-fonts#1TC=windows-7" target="_blank">font and colour settings in Internet Explorer 9 (and above)</a> can be found on Microsoft's website.</p>
 
     <%= heading_tag 'Audio and video players', id: 'audio_and_video', class: 'l-editorial-heading', level: 3 %>
-    <p>Audio and video has been set not to play automatically. We currently use the YouTube video player but we are developing an alternate accessible video player that includes closed captions.</p>
+    <p>We currently use the YouTube video player which will default to the  HTML5 mode if the user's browser supports this.</p>
 
-    <p>See instructions on operating the keyboard on <a href="https://support.google.com/youtube/answer/189278?hl=en-GB" target="_blank">YouTube's keyboard controls webpage.</a></p>
+    <p>The HTML5 YouTube video player has keyboard-accessible controls with clear focus styles and contains properly-labeled form elements.</p>
+
+    <p>If an older browser is used (Internet Explorer 10 or earlier, or older versions of other browsers) then the Youtube video player will load in Flash mode, which contains several accessibility issues.</p>
+
+    <p>All video content on our site has subtitles and /or closed captions.</p>
+
+    <p>Audio and video has been set not to play automatically.
 
     <%= heading_tag 'Links, new windows and layers', id: 'links', class: 'l-editorial-heading', level: 3 %>
     <p>Links to pages on the same website will open in the same window. Links to pages on external websites will open in a new window. These external links are indicated by a small icon next to the link:</p>
@@ -115,7 +121,6 @@
     <ul>
       <li>Adobe PDF downloadable documents</li>
       <li>Microsoft Word and Excel downloadable documents</li>
-      <li>Flash based applications</li>
       <li>Links styled as buttons</li>
     </ul>
 
@@ -126,15 +131,15 @@
     <p>Functionality that is provided by third parties and is not accessible, or is partially accessible include:</p>
 
     <ul>
-      <li>the web engage survey tool;</li>
-      <li>flash-based tools;</li>
+      <li>the pop-up survey tool;</li>
       <li>web chat; and</li>
       <li>the YouTube video player.</li>
     </ul>
 
-    <p>We use a third-party survey tool by Web engage, which is partially accessible. This survey can interrupt a user who is using Voiceover (or similar screen reader) to navigate the page.</p>
+    <p>We use a third-party survey tool, which contains several accessibility issues. This has been given the 'aria-hidden' attribute to hide it from users of screen readers to minimise disruption. We are planning to develop an accessible survey tool in the near future.</p>
 
-    <p>Flash-based tools such as the divorce and separation tool are inaccessible. They are in the process of being re-built using accessible HTML and CSS.</p>
+    <p>The Workplace Pension Contribution Calculator is loaded in an iframe with several accessibilty issues, and is in the process of being rebuilt using accessible HTML and CSS.</p>
+    
     <p>Various links are styled to look like buttons. Users of voice recognition software should be aware of this when looking to identify and mark links and buttons on a page.</p>
     <p>We are working on developing a fully accessible video player in 2015.</p>
 
@@ -190,9 +195,9 @@
 
 
     <%= heading_tag 'Conformance date', id: 'conformance_date', class: 'l-editorial-heading', level: 2 %>
-    <p>This accessibility statement was issued on 21/08/2014 and last updated on 21/08/2014.</p>
+    <p>This accessibility statement was issued on 21/08/2014 and last updated on 18/02/2016.</p>
 
-    <p>We plan to review our accessibility statement on 21/08/2015, however we will update the accessibility statement when a major new feature is added.</p>
+    <p>We plan to review our accessibility statement on 01/02/2017, however we will update the accessibility statement when a major new feature is added.</p>
   </main>
   <% end %>
 

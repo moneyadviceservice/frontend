@@ -29,6 +29,9 @@ module Core
   autoload :Customer, 'core/entity/customer'
   autoload :Video, 'core/entity/video'
 
+  autoload :Footer, 'core/entity/footer'
+  autoload :WebChat, 'core/entity/web_chat'
+
   module Feedback
     autoload :Base, 'core/entity/feedback/base'
     autoload :Article, 'core/entity/feedback/article'

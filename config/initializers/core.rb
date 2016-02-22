@@ -30,6 +30,9 @@ Core::Registry::Repository[:article] =
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 
+Core::Registry::Repository[:footer] =
+  Core::Repository::Footer::CMS.new
+
 if Feature.active?(:cms_home_page)
   Core::Registry::Repository[:home_page] =
     Core::Repository::HomePages::CMS.new

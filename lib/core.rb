@@ -14,6 +14,7 @@ module Core
   autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'
   autoload :HomePage, 'core/entity/home_page'
+  autoload :Contact, 'core/entity/contact'
   autoload :CorporateArticle, 'core/entity/corporate_article'
   autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'

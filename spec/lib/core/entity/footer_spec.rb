@@ -3,7 +3,22 @@ RSpec.describe Core::Footer do
     {
       label: 'Footer',
       blocks: [
-        { identifier: "web_chat_times", content: "8-5pm" }
+        { 'identifier' => 'raw_web_chat_heading', 'content'=>'Web Chat' },
+        { 'identifier' => 'raw_web_chat_description', 'content' => 'Got a question?' },
+        { 'identifier' => 'raw_web_chat_additional_one', 'content' => 'Monday to Friday, 8am to 8pm' },
+        { 'identifier' => 'raw_web_chat_additional_two', 'content' => 'Saturday, 9am to 1pm' },
+        { 'identifier' => 'raw_web_chat_additional_three', 'content' => 'Sunday and Bank Holidays, closed' },
+        { 'identifier' => 'raw_web_chat_small_print', 'content' => 'some small print' },
+        { 'identifier' => 'raw_contact_heading', 'content' => 'Call Us' },
+        { 'identifier' => 'raw_contact_introduction', 'content' => 'Give us a call for free advice' },
+        { 'identifier' => 'raw_contact_phone_number', 'content' => '555 555 5555 *' },
+        { 'identifier' => 'raw_contact_additional_one', 'content' => 'Monday to Friday, 8am to 8pm' },
+        { 'identifier' => 'raw_contact_additional_two', 'content' => 'Saturday, 9am to 1pm' },
+        { 'identifier' => 'raw_contact_additional_three', 'content' => 'Sunday and Bank Holidays, closed' },
+        { 'identifier' => 'raw_contact_small_print', 'content' => '* Calls are free.' },
+        { 'identifier' => 'raw_newsletter_heading', 'content' => 'Newsletter' },
+        { 'identifier' => 'raw_newsletter_introduction', 'content' => 'FREE money advice newsletter.' },
+        { 'identifier' => 'raw_newsletter_small_print', 'content' => 'We will never share your data or spam you.' }
       ]
     }
   end
@@ -15,8 +30,11 @@ RSpec.describe Core::Footer do
       expect(subject.web_chat).to be_a(Core::WebChat)
     end
 
-    it 'includes the web chat times' do
-      expect(subject.web_chat.times).to eq('8-5pm')
-    end
+    it { expect(subject.web_chat.heading).to eq('Web Chat') }
+    it { expect(subject.web_chat.description).to eq('Got a question?') }
+    it { expect(subject.web_chat.additional_one).to eq('Monday to Friday, 8am to 8pm') }
+    it { expect(subject.web_chat.additional_two).to eq('Saturday, 9am to 1pm') }
+    it { expect(subject.web_chat.additional_three).to eq('Sunday and Bank Holidays, closed') }
+    it { expect(subject.web_chat.small_print).to eq('some small print') }
   end
 end

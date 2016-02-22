@@ -20,6 +20,7 @@ module Core
   autoload :Category, 'core/entity/category'
   autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
+  autoload :Footer, 'core/entity/footer'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :NewsletterSubscription, 'core/entity/newsletter_subscription'
@@ -29,8 +30,6 @@ module Core
   autoload :StaticPage, 'core/entity/static_page'
   autoload :Customer, 'core/entity/customer'
   autoload :Video, 'core/entity/video'
-
-  autoload :Footer, 'core/entity/footer'
   autoload :WebChat, 'core/entity/web_chat'
 
   module Feedback
@@ -50,6 +49,7 @@ module Core
   autoload :CategoryTreeReaderWithDecorator, 'core/interactor/category_tree_reader_with_decorator'
   autoload :CorporateReader, 'core/interactor/corporate_reader'
   autoload :FeedbackWriter, 'core/interactor/feedback_writer'
+  autoload :FooterReader, 'core/interactor/footer_reader'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
   autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
@@ -93,6 +93,10 @@ module Core
     module HomePages
       autoload :CMS, 'core/repository/home_pages/cms'
       autoload :Static, 'core/repository/home_pages/static'
+    end
+
+    module Footer
+      autoload :CMS, 'core/repository/footer/cms'
     end
 
     module Corporate

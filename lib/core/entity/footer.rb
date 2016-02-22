@@ -2,6 +2,10 @@ module Core
   class Footer < Entity
     attr_writer :blocks
 
+    def contact
+      Core::Contact.new(contact_options)
+    end
+
     def web_chat
       Core::WebChat.new(web_chat_options)
     end
@@ -22,6 +26,18 @@ module Core
       block['content']
     end
 
+    def contact_options
+      {
+        heading: find_block_value('raw_contact_heading'),
+        introduction: find_block_value('raw_contact_introduction'),
+        phone_number: find_block_value('raw_contact_phone_number'),
+        additional_one: find_block_value('raw_contact_additional_one'),
+        additional_two: find_block_value('raw_contact_additional_two'),
+        additional_three: find_block_value('raw_contact_additional_three'),
+        small_print: find_block_value('raw_contact_small_print')
+      }
+    end
+
     def web_chat_options
       {
         heading: find_block_value('raw_web_chat_heading'),
@@ -29,7 +45,7 @@ module Core
         additional_one: find_block_value('raw_web_chat_additional_one'),
         additional_two: find_block_value('raw_web_chat_additional_two'),
         additional_three: find_block_value('raw_web_chat_additional_three'),
-        small_print: find_block_value('raw_web_chat_small_print'),
+        small_print: find_block_value('raw_web_chat_small_print')
       }
     end
   end

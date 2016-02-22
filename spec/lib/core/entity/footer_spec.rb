@@ -37,4 +37,17 @@ RSpec.describe Core::Footer do
     it { expect(subject.web_chat.additional_three).to eq('Sunday and Bank Holidays, closed') }
     it { expect(subject.web_chat.small_print).to eq('some small print') }
   end
+
+  describe '#contact' do
+    it 'returns a Contact object' do
+      expect(subject.contact).to be_a(Core::Contact)
+    end
+
+    it { expect(subject.contact.heading).to eq('Call Us') }
+    it { expect(subject.contact.introduction).to eq('Give us a call for free advice') }
+    it { expect(subject.contact.phone_number).to eq('555 555 5555 *') }
+    it { expect(subject.contact.additional_one).to eq('Monday to Friday, 8am to 8pm') }
+    it { expect(subject.contact.additional_two).to eq('Saturday, 9am to 1pm') }
+    it { expect(subject.contact.additional_three).to eq('Sunday and Bank Holidays, closed') }
+  end
 end

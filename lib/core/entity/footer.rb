@@ -52,7 +52,6 @@ module Core
     def web_chat_options
       {
         heading: find_block_value('raw_web_chat_heading'),
-        description: find_block_value('raw_web_chat_description'),
         additional_one: find_block_value('raw_web_chat_additional_one'),
         additional_two: find_block_value('raw_web_chat_additional_two'),
         additional_three: find_block_value('raw_web_chat_additional_three'),

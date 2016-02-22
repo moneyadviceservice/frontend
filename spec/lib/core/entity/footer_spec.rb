@@ -4,7 +4,6 @@ RSpec.describe Core::Footer do
       label: 'Footer',
       blocks: [
         { 'identifier' => 'raw_web_chat_heading', 'content'=>'Web Chat' },
-        { 'identifier' => 'raw_web_chat_description', 'content' => 'Got a question?' },
         { 'identifier' => 'raw_web_chat_additional_one', 'content' => 'Monday to Friday, 8am to 8pm' },
         { 'identifier' => 'raw_web_chat_additional_two', 'content' => 'Saturday, 9am to 1pm' },
         { 'identifier' => 'raw_web_chat_additional_three', 'content' => 'Sunday and Bank Holidays, closed' },
@@ -30,7 +29,6 @@ RSpec.describe Core::Footer do
     end
 
     it { expect(subject.web_chat.heading).to eq('Web Chat') }
-    it { expect(subject.web_chat.description).to eq('Got a question?') }
     it { expect(subject.web_chat.additional_one).to eq('Monday to Friday, 8am to 8pm') }
     it { expect(subject.web_chat.additional_two).to eq('Saturday, 9am to 1pm') }
     it { expect(subject.web_chat.additional_three).to eq('Sunday and Bank Holidays, closed') }

@@ -28,6 +28,12 @@ RSpec.describe Core::Footer do
       expect(subject.web_chat).to be_a(Core::WebChat)
     end
 
+    it "doesn't make multiple instances of web_chat if called multiple times" do
+      allow(Core::WebChat).to receive(:new).and_call_original
+      3.times { subject.web_chat }
+      expect(Core::WebChat).to have_received(:new).once
+    end
+
     it { expect(subject.web_chat.heading).to eq('Web Chat') }
     it { expect(subject.web_chat.additional_one).to eq('Monday to Friday, 8am to 8pm') }
     it { expect(subject.web_chat.additional_two).to eq('Saturday, 9am to 1pm') }
@@ -38,6 +44,12 @@ RSpec.describe Core::Footer do
   describe '#contact' do
     it 'returns a Contact object' do
       expect(subject.contact).to be_a(Core::Contact)
+    end
+
+    it "doesn't make multiple instances of contact if called multiple times" do
+      allow(Core::Contact).to receive(:new).and_call_original
+      3.times { subject.contact }
+      expect(Core::Contact).to have_received(:new).once
     end
 
     it { expect(subject.contact.heading).to eq('Call Us') }
@@ -52,6 +64,13 @@ RSpec.describe Core::Footer do
     it 'returns a Newsletter object' do
       expect(subject.newsletter).to be_a(Core::Newsletter)
     end
+
+    it "doesn't make multiple instances of contact if called multiple times" do
+      allow(Core::Newsletter).to receive(:new).and_call_original
+      3.times { subject.newsletter }
+      expect(Core::Newsletter).to have_received(:new).once
+    end
+
 
     it { expect(subject.newsletter.heading).to eq('Newsletter') }
     it { expect(subject.newsletter.introduction).to eq('FREE money advice newsletter.') }

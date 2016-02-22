@@ -3,15 +3,15 @@ module Core
     attr_writer :blocks
 
     def contact
-      Core::Contact.new(contact_options)
+      @contact ||= Core::Contact.new(contact_options)
     end
 
     def newsletter
-      Core::Newsletter.new(newsletter_options)
+      @newsletter ||= Core::Newsletter.new(newsletter_options)
     end
 
     def web_chat
-      Core::WebChat.new(web_chat_options)
+      @web_chat ||= Core::WebChat.new(web_chat_options)
     end
 
     # BaseContentReader attempts to 'build categories', our entity

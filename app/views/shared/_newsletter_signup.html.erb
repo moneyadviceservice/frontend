@@ -5,10 +5,10 @@
                icon: 'email',
                svg_fallback_support: true
     %>
-    <%= t('newsletter_subscriptions.title') %>
+    <%= @footer.newsletter.heading %>
   <% end %>
 
-  <p class="t-newsletter-introduction"><%= t('newsletter_subscriptions.introduction') %></p>
+  <p class="t-newsletter-introduction"><%= @footer.newsletter.introduction %></p>
   <p class="newsletter-strap"><%= t('newsletter_subscriptions.strap') %></p>
 
   <fieldset class="newsletter-signup__form js-newsletter-form" id="newsletter_signup">

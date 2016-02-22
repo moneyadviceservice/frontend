@@ -6,6 +6,10 @@ module Core
       Core::Contact.new(contact_options)
     end
 
+    def newsletter
+      Core::Newsletter.new(newsletter_options)
+    end
+
     def web_chat
       Core::WebChat.new(web_chat_options)
     end
@@ -35,6 +39,13 @@ module Core
         additional_two: find_block_value('raw_contact_additional_two'),
         additional_three: find_block_value('raw_contact_additional_three'),
         small_print: find_block_value('raw_contact_small_print')
+      }
+    end
+
+    def newsletter_options
+      {
+        heading: find_block_value('raw_newsletter_heading'),
+        introduction: find_block_value('raw_newsletter_introduction'),
       }
     end
 

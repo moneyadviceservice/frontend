@@ -21,6 +21,7 @@ module Core
   autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
   autoload :Footer, 'core/entity/footer'
+  autoload :Newsletter, 'core/entity/newsletter'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :NewsletterSubscription, 'core/entity/newsletter_subscription'

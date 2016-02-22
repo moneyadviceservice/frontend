@@ -18,7 +18,6 @@ RSpec.describe Core::Footer do
         { 'identifier' => 'raw_contact_small_print', 'content' => '* Calls are free.' },
         { 'identifier' => 'raw_newsletter_heading', 'content' => 'Newsletter' },
         { 'identifier' => 'raw_newsletter_introduction', 'content' => 'FREE money advice newsletter.' },
-        { 'identifier' => 'raw_newsletter_small_print', 'content' => 'We will never share your data or spam you.' }
       ]
     }
   end
@@ -49,5 +48,14 @@ RSpec.describe Core::Footer do
     it { expect(subject.contact.additional_one).to eq('Monday to Friday, 8am to 8pm') }
     it { expect(subject.contact.additional_two).to eq('Saturday, 9am to 1pm') }
     it { expect(subject.contact.additional_three).to eq('Sunday and Bank Holidays, closed') }
+  end
+
+  describe '#newsletter' do
+    it 'returns a Newsletter object' do
+      expect(subject.newsletter).to be_a(Core::Newsletter)
+    end
+
+    it { expect(subject.newsletter.heading).to eq('Newsletter') }
+    it { expect(subject.newsletter.introduction).to eq('FREE money advice newsletter.') }
   end
 end

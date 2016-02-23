@@ -1,21 +1,29 @@
 .mas-logo__img {
-  margin-left: -100%;
+  margin-left: -200px;
   max-width: none;
-  width: 200%;
+  width: 400px;
   display: block;
+
+  @include respond-to($mq-m) {
+    margin-left: -285px;
+    width: 570px;
+  }
 }
 
 .mas-logo__link {
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
-  width: 200px;
+  width: 173px;
 
   @include respond-to($mq-m) {
-    width: 285px;
+    width: 245px;
+    margin-right: 40px;
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     border-bottom: 1px solid $color-primary-nav;
+    background: transparent;
   }
 }

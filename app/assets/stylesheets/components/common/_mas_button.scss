@@ -19,8 +19,12 @@
   &:active {
     color: $color-true-black;
     background: $color-newsletter-active;
-    outline: none;
     border-top: 0;
+  }
+
+  &:hover,
+  &:active {
+    outline: none;
   }
 
   &:visited,

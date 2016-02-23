@@ -55,12 +55,15 @@
 
   &:hover,
   &:focus {
-    outline: 0;
     background-color: $color-header-buttons;
 
     .icon--search {
       @include search-icon-colour(white);
     }
+  }
+
+  &:hover {
+    outline: 0;
   }
 }
 

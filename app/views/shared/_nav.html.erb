@@ -20,10 +20,8 @@
 
             <ul class="link-list-secondary">
               <% category.contents.each do |sub_category| %>
-                <li class="link-list-secondary__item">
-                  <%= link_to sub_category.title, sub_category.path,
-                    class: "link-list-secondary__text #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
-                  %>
+                <li class="link-list-secondary__item<%= ' is-selected' if active_categories.member?(sub_category.id) %>">
+                  <%= link_to sub_category.title, sub_category.path, class: "link-list-secondary__text" %>
                 </li>
               <% end %>
             </ul>

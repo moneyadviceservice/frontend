@@ -161,13 +161,20 @@
 
       &:focus,
       &:hover {
-        outline: none;
         border-bottom: 2px solid $color-green-dark;
         margin-bottom: -2px;
 
         svg {
           fill: $color-green-dark;
         }
+      }
+
+      &:hover {
+        outline: none;
+      }
+
+      &:focus {
+        background: $color-link-focus-background-color;
       }
     }
 

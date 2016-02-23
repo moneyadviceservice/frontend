@@ -98,6 +98,7 @@ module Core
 
     module Footer
       autoload :CMS, 'core/repository/footer/cms'
+      autoload :Fake, 'core/repository/footer/fake'
     end
 
     module Corporate

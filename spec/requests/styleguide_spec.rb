@@ -1,5 +1,6 @@
 RSpec.describe 'Styleguide', type: :request do
-  let(:repository) { Core::Repository::Categories::Fake.new }
+  let(:footer_repository) { Core::Repository::Footer::Fake.new }
+  let(:category_repository) { Core::Repository::Categories::Fake.new }
 
   routes = Rails.application.routes.routes.map do |route|
     path = route.path.spec.to_s
@@ -7,7 +8,8 @@ RSpec.describe 'Styleguide', type: :request do
   end.compact
 
   before do
-    allow(Core::Registry::Repository).to receive(:[]).with(:category).and_return(repository)
+    allow(Core::Registry::Repository).to receive(:[]).with(:footer).and_return(footer_repository)
+    allow(Core::Registry::Repository).to receive(:[]).with(:category).and_return(category_repository)
   end
 
   describe 'styleguide pages' do

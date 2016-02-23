@@ -105,4 +105,8 @@
       border-bottom: 1px solid $color-grey-pale;
     }
   }
+
+  > a {
+    padding: $baseline-unit / 2 0;
+  }
 }

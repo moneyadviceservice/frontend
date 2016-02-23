@@ -30,8 +30,12 @@
 
   &:hover,
   &:focus {
-    outline: none;
     text-decoration: underline;
+  }
+
+  &:focus {
+    color: $color-focus-fg;
+    background: $color-focus-bg;
   }
 }
 

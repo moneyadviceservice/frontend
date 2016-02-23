@@ -183,10 +183,13 @@
   display: block;
 
   &:link,
-  &:focus,
   &:visited,
   &:hover {
     color: $color-white;
+  }
+
+  &:focus {
+    color: $color-black;
   }
 }
 

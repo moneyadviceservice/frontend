@@ -6,52 +6,68 @@
 }
 
 .social-sharing__item {
-  height: 33px;
-  width: 55px;
   margin: 0 10px 0 0;
   border-radius: 3px;
   position: relative;
+  overflow: visible;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
+.social-sharing__item:before {
+  visibility: hidden;
+}
+
+.social-sharing__item__icon {
+  width: 55px;
+}
+
 .social-sharing__item--facebook {
   background: $color-facebook;
 
-  &:hover {
+  & > .social-sharing__item__icon:hover,
+  & > .social-sharing__item__icon:focus {
     background: $color-facebook-hover;
   }
 
   .svg-icon--facebook,
   .icon--facebook {
-    margin: 5.5px auto;
+    height: 33px;
+    margin: 0 auto;
+    padding: 5.5px 0;
   }
 }
 
 .social-sharing__item--twitter {
   background: $color-twitter;
 
-  &:hover {
+  & > .social-sharing__item__icon:hover,
+  & > .social-sharing__item__icon:focus {
     background: $color-twitter-hover;
   }
 
   .svg-icon--twitter,
   .icon--twitter {
-    margin: 7.5px auto;
+    height: 33px;
+    margin: 0 auto;
+    padding: 7.5px 0;
   }
 }
 
 .social-sharing__item--email {
   background: $color-email;
 
-  &:hover {
+  & > .social-sharing__item__icon:hover,
+  & > .social-sharing__item__icon:focus {
     background: $color-email-hover;
   }
 
   .svg-icon--email,
   .icon--email {
-    margin: 8.5px auto;
+    height: 33px;
+    margin: 0 auto;
+    padding: 8.5px 0;
   }
 }

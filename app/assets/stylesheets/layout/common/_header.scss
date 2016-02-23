@@ -80,10 +80,6 @@ $header-height: $baseline-unit*9;
   .authentication__item > a {
     @extend %font-heading-medium;
     color: $color-white;
-
-    &:visited {
-      color: $color-white;
-    }
   }
 
   .l-authentication {

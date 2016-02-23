@@ -16,9 +16,18 @@ a {
 
   &:hover,
   &:focus {
-    outline: none;
     color: $color-link-default;
     text-decoration: underline;
+  }
+
+  &:hover {
+    outline: none;
+  }
+
+  &:focus {
+    outline: solid $baseline-unit/2 $color-focus;
+    background: $color-focus;
+    color: $color-black;
   }
 
   // Removes active link colour that is applied in Mobile Safari and adds kerning

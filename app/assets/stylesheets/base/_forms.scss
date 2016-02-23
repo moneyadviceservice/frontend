@@ -40,13 +40,16 @@ input[type="search"] {
   }
 }
 
-input[type="reset"],
 input[type="submit"],
 button,
 select {
   &:focus {
     @include form-input-focus-outline;
   }
+}
+
+button.search__clear:focus {
+  outline: none;
 }
 
 textarea {

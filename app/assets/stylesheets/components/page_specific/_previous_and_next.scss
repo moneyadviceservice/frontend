@@ -3,6 +3,14 @@
   @extend %paragraph;
   overflow: auto;
   margin: 30px 0;
+
+  a:focus {
+    outline: 0;
+
+    strong {
+      @include focus-outline;
+    }
+  }
 }
 
 %previous-and-next__item {

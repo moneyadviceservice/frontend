@@ -1,11 +1,6 @@
 module Core
   class Newsletter
+    include ActiveModel::Model
     attr_accessor :heading, :introduction
-
-    def initialize(options = {})
-      options.each do |key, value|
-        send("#{key}=", value) if respond_to?("#{key}=")
-      end
-    end
   end
 end

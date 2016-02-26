@@ -1,10 +1,11 @@
 // Content Hub Variables
 $content-hub-title-color: $color-black;
-$content-hub-bgcolor: $color-grey-concrete;
+$content-hub-bgcolor: #edf0f0; // take from pallet - also used on breadcrumbs // $color-grey-concrete;
 $content-hub-module-bgcolor: $color-white;
 $content-hub-module-reversecolor: $color-white;
 $content-hub-module-reverseBGcolor: $color-black;
 $content-hub-modules-gutter-width: 0.5%;
+$content-hub-module-gutter-width: 20; // px
 // "natural" width of module on desktop
 $content-hub-max-module-width: $mq-xl * (((100% - ($default-gutter * 2) - ($content-hub-modules-gutter-width * 2)) / 3%) / 100);
 // breakpoint: 1 column to 2 columns (when viewport width > 1.5 columns)
@@ -17,16 +18,13 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 }
 
 .l-content-hub__title {
-  @include column(12);
   max-width: $content-hub-max-module-width;
   margin-left: auto;
   margin-right: auto;
   display: block;
   float: none;
-  @include respond-to(0, $content-hub-one-col-breakpoint) {
-    margin-top: $baseline-unit*3;
-    margin-bottom: $baseline-unit*3;
-  }
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     max-width: $content-hub-max-module-width * 2; // + gutter
@@ -36,14 +34,30 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 
   @include respond-to($content-hub-two-col-breakpoint) {
     @include column(12);
+
     max-width: 100%;
   }
 
   .heading-medium {
     color: $content-hub-title-color;
+
     @include respond-to(0, $content-hub-one-col-breakpoint) {
       margin: 0;
     }
+  }
+}
+
+.content-hub__heading {
+  color: $color-black;
+
+  // base horizontal sizing on a 20px margin at "natural" width
+  margin: 0 (100% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
+  width: 100% - (200% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 (100% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
+    width: 100% - (200% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
   }
 }
 
@@ -54,7 +68,9 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $baseline-unit;
+
   @include clearfix();
+
   @include respond-to($content-hub-one-col-breakpoint) {
     background: transparent;
     max-width: $content-hub-max-module-width * 2; // + gutter
@@ -69,23 +85,24 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   position: relative;
   padding-top: $baseline-unit*3;
   padding-bottom: $baseline-unit*3;
-  @include column(12);
+
   @include respond-to($content-hub-one-col-breakpoint) {
     background: $content-hub-module-bgcolor;
     padding-top: $baseline-unit*5;
     padding-bottom: $baseline-unit*5;
     width: 100%;
+    min-height: calc(#{$content-hub-max-module-width} - 2.25em);
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.l-content-hub__hero__title {
+.content-hub__hero__title {
   color: $content-hub-title-color;
   margin-top: 0;
 }
 
-.l-content-hub__hero__image {
+.content-hub__hero__image {
   padding-bottom: 100%; // depends on aspect ratio of image (but must be constant!)
   background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_square-a6f6f25554c9931e379ea608e53aa4fe.jpg);
   background-repeat: no-repeat;
@@ -97,24 +114,56 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
     top: 0;
     bottom: 0;
     padding-bottom: 0;
-    @include column(6);
+
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 (100% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
+    width: 50% - (200% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
   }
 
   @include respond-to($content-hub-two-col-breakpoint) {
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 #{$content-hub-module-gutter-width}px;
+    width: calc(50% - ((#{$content-hub-module-gutter-width}px) * 2));
+
     background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_landscape-3cfd77f38825bd8842f81fb82d7d5ad0.jpg);
   }
 }
 
 .l-content-hub__hero__content {
+  // base horizontal sizing on a 20px margin at "natural" width
+  margin: 0 (100% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
+  width: 100% - (200% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
+
   @include respond-to($content-hub-one-col-breakpoint) {
-    @include column(6);
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 (100% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
+    width: 50% - (200% * (px($content-hub-module-gutter-width / 2) / $content-hub-max-module-width));
+
     float: right;
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 #{$content-hub-module-gutter-width}px;
+    width: calc(50% - (#{$content-hub-module-gutter-width}px * 2));
   }
 }
 
 .l-content-hub__hero__content {
   @include respond-to($content-hub-one-col-breakpoint) {
     @include body(20, 27);
+  }
+}
+
+.content-hub__hero__description {
+  @extend %paragraph-intro
+}
+
+.content-hub__hero__button {
+  width: 100%;
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    width: 50%;
   }
 }
 
@@ -159,7 +208,9 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   position: relative;
   background: $color-white;
   margin-bottom: $baseline-unit;
+
   @include clearfix();
+
   @include respond-to($content-hub-one-col-breakpoint) {
     $content-hub-modules-row: 2;
 
@@ -182,41 +233,24 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
 .l-content-hub__module__inner {
   $padding: $baseline-unit * 3;
 
-  @include column(12);
+  // base horizontal sizing on a 20px margin at "natural" width
+  margin: 0 (100% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
 
   padding-top: $padding;
   padding-bottom: $padding;
 
   @include respond-to($content-hub-one-col-breakpoint) {
-    $content-hub-modules-row: 2;
-    $margin: $default-gutter * $content-hub-modules-row;
-
-    margin-left: $margin;
-    margin-right: $margin;
-    // also double width module needs different margin ...
-    width: 100% - ($margin * 2);
-
-    // based on default width to make each module roughly square (given a particular viewport size)
-    min-height: calc(#{$content-hub-max-module-width} - 2.25em);
-  }
-
-  @include respond-to($content-hub-two-col-breakpoint) {
-    $content-hub-modules-row: 2;
-    $margin: $default-gutter * $content-hub-modules-row;
-
-    margin-left: $margin;
-    margin-right: $margin;
-    // also double width module needs different margin ...
-    width: 100% - ($margin * 2);
+    // base horizontal sizing on a 20px margin at "natural" width
+    margin: 0 (100% * (px($content-hub-module-gutter-width) / $content-hub-max-module-width));
 
     // based on default width to make each module roughly square (given a particular viewport size)
     min-height: calc(#{$content-hub-max-module-width} - 2.25em);
   }
 }
 
-.l-content-hub__module__title {
-  color: $content-hub-title-color;
+.content-hub__module__title {
   margin-top: 0;
+  color: $content-hub-title-color;
 }
 
 .l-content-hub__module__image {
@@ -226,9 +260,32 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
   background-position: 50% 50%;
 }
 
+.content-hub__module__description {
+  @include body(20, 24);
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    @include body(21, 24);
+  }
+}
+
 .content-hub__module__links {
-  @include body(18, 24);
+  @extend %paragraph-intro;
+
   margin-top: $baseline-unit;
+
+  & li {
+    margin-top: $baseline-unit * 4;
+  }
+}
+
+.content-hub__module__button {
+  width: 100%;
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 // module-specific variations
@@ -254,6 +311,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
     position: absolute;
     bottom: $baseline-unit * 3;
     right: 0;
+    color: $content-hub-title-color;
 
     @include respond-to($content-hub-one-col-breakpoint) {
       $content-hub-modules-row: 2;
@@ -365,11 +423,11 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
     width: 100%;
   }
 
-  .l-content-hub__module__title {
+  .content-hub__module__title {
     font-size: 2rem;
   }
 
-  .l-content-hub__module__description {
+  .content-hub__module__description {
     color: $content-hub-module-reversecolor;
     background-color: $content-hub-module-reverseBGcolor;
     padding: .75rem 0;
@@ -407,7 +465,7 @@ $content-hub-two-col-breakpoint: ($content-hub-max-module-width * 2.5) + (($cont
     padding-top: 0;
   }
 
-  .l-content-hub__module__title {
+  .content-hub__module__title {
     font-size: 2rem;
     color: $content-hub-module-reversecolor;
   }

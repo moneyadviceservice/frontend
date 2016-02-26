@@ -13,6 +13,7 @@ When(/^I sign up to the newsletter with a valid email address$/) do
   end
   allow(Core::Registry::Repository).to receive(:[]).with(:home_page).and_call_original
   allow(Core::Registry::Repository).to receive(:[]).with(:category).and_call_original
+  allow(Core::Registry::Repository).to receive(:[]).with(:footer).and_call_original
 
   current_page.newsletter.email.set 'clark.kent@gmail.com'
   current_page.newsletter.signup.click

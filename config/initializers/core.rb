@@ -32,7 +32,7 @@ Core::Registry::Repository[:cms_api] =
 
 if Feature.active?(:cms_footer)
   Core::Registry::Repository[:footer] =
-    Core::Repository::Footer::CMS.new
+    Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
 else
   Core::Registry::Repository[:footer] =
     Core::Repository::Footer::Static.new

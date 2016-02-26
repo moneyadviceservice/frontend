@@ -5,7 +5,7 @@
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <span class="icon icon--web-chat"></span><%= t('contact_panels.chat.title') %>
+          <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
         <% end %>
 
         <p class="contact-panel__chat-javascript t-chat-javascript">
@@ -28,48 +28,47 @@
         </div>
 
         <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-
           <% unless alternate_hours_active? %>
-            <% chat_opening_hours.open_periods.each do |period| %>
-              <li class="contact-panel__additional-info"><%= period.html_safe %></li>
-            <% end %>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
           <% end %>
 
           <% if display_chat_migration_message? %>
             <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
           <% end %>
-
-          <li class="contact-panel__additional-info"><%= t('contact_panels.chat.bank_holiday_html') %></li>
         </ul>
 
-        <% if translation?('contact_panels.chat.smallprint') %>
-          <p class="smallprint t-welsh-smallprint">* <%= t('contact_panels.chat.smallprint') %></p>
-        <% end %>
+        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
     </div>
 
     <div class="l-contact-panel">
       <div class="contact-panel">
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
-          <span class="icon icon--call-us"></span><%= t('contact_panels.call_us.title') %>
+          <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
         <% end %>
 
-        <p class="t-contact-introduction"><%= t('contact_panels.call_us.description') %></p>
+        <p class="t-contact-introduction"><%= @footer.contact.introduction %></p>
 
         <p>
           <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
-            <%= t('contact.telephone_number') %></a>
+            <%= @footer.contact.phone_number %></a>
         </p>
 
-        <%= t('contact_panels.call_us.opening_times_html') %>
+        <ul class="contact-panel__list">
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
+        </ul>
 
-        <p class="smallprint">* <%= t('contact_panels.call_us.smallprint') %></p>
+        <p class="smallprint"><%= @footer.contact.small_print %></p>
       </div>
     </div>
 
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel--last">
-        <%= render 'shared/newsletter_signup' %>
+        <%= render 'shared/newsletter_signup', footer: @footer %>
       </div>
     </div>
   </div>

@@ -8,9 +8,11 @@
   <% end %>
 
   <div id="main" tabindex="-1">
-    <div class="l-constrained">
-      <%=  render 'shared/banner_alert' %>
-    </div>
+    <% if display_banner_warning? && whitelisted? %>
+      <div class="l-constrained">
+        <%=  render 'shared/banner_alert' %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>
 <% end %>

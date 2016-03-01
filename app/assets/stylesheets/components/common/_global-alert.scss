@@ -19,8 +19,10 @@
 }
 
 .global-alert--in-page {
-  background: $color-grey-pale;
+  background: $color-global-alert-message-bg;
   margin-top: $baseline-unit*2;
+  
+  @include column(12);
 }
 
 .global-alert__content-container {

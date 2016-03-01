@@ -1,4 +1,4 @@
-// Global alerts display important information at the top of the viewport
+// Global alerts display important information, usually at the top of the viewport
 //
 // .global-alert--error - Error alert
 // .global-alert--warning - Warning alert
@@ -16,6 +16,11 @@
   @include respond-to($mq-m) {
     top: 0;
   }
+}
+
+.global-alert--in-page {
+  background: $color-grey-pale;
+  margin-top: $baseline-unit*2;
 }
 
 .global-alert__content-container {

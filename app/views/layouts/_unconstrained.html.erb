@@ -8,6 +8,11 @@
   <% end %>
 
   <div id="main" tabindex="-1">
+    <!-- @MS Needs a conditional logic -->
+    <div class="l-constrained">
+      <%=  render 'shared/tool_alert' %>
+    </div>
+    <!-- @MS End of conditional logic -->
     <%= yield %>
   </div>
 <% end %>

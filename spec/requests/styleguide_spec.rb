@@ -1,5 +1,5 @@
 RSpec.describe 'Styleguide', type: :request do
-  let(:footer_repository) { Core::Repository::Footer::Static.new }
+  let(:footer_repository) { FakeFooterRepositoryDefinedInSpecHelper.new }
   let(:category_repository) { Core::Repository::Categories::Fake.new }
 
   routes = Rails.application.routes.routes.map do |route|

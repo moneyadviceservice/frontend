@@ -46,6 +46,19 @@ WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
+class FakeFooterRepositoryDefinedInSpecHelper
+  def find(_)
+    blocks =  ['raw_web_chat_heading', 'raw_web_chat_additional_one', 'raw_web_chat_additional_two',
+               'raw_web_chat_additional_three', 'raw_web_chat_small_print', 'raw_contact_heading',
+               'raw_contact_introduction', 'raw_contact_phone_number', 'raw_contact_additional_one',
+               'raw_contact_additional_two', 'raw_contact_additional_three', 'raw_contact_small_print',
+               'raw_newsletter_heading', 'raw_newsletter_introduction'].map do | identifier |
+      { 'identifier' => identifier, 'content' => 'I am some content in a footer' }
+    end
+    { blocks: blocks }
+  end
+end
+
 RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
   c.include Devise::TestHelpers, type: :controller

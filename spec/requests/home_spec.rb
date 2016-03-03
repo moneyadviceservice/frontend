@@ -1,6 +1,6 @@
 RSpec.describe 'HomePage', type: :request do
   let(:category_repository)  { Core::Repository::Categories::Fake.new }
-  let(:footer_repository)    { Core::Repository::Footer::Static.new }
+  let(:footer_repository)    { FakeFooterRepositoryDefinedInSpecHelper.new }
   let(:home_page_repository) { Core::Repository::HomePages::Static.new }
 
   before do
@@ -16,11 +16,6 @@ RSpec.describe 'HomePage', type: :request do
 
   it 'displays footer content' do
     get '/en'
-    expect(response.body).to include('Give us a call for free and impartial money advice.')
-  end
-
-  it 'correctly displays content in welsh too' do
-    get '/cy'
-    expect(response.body).to include('Ffoniwch ni am gyngor ariannol am ddim a diduedd.')
+    expect(response.body).to include('I am some content in a footer')
   end
 end

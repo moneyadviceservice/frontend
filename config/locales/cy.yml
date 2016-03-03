@@ -116,8 +116,12 @@ cy:
     heading: Methu canfod beth sydd ei angen arnoch chi?
     introduction: Mae ein staff hyfforddedig wrth law i helpu
     call_us: Cysylltu â ni
-    telephone_number: 0300 500 5555 *
-    telephone_number_href: tel:+443005005555
+    telephone_number: 0800 138 0555 *
+    telephone_number_href: tel:+448001380555
+    opening_times:
+      weekdays: Dydd Llun i Dydd Gwener, 8am i 8pm
+      saturday: Dydd Sadwrn, 9am i 1pm
+      sunday: Dydd Sul a Gwyliau Banc, ar gau
     opening_hours_heading: Oriau agor
     opening_hours_html: |
       Llun i Wener, <strong>8am i 8pm</strong><br />Dydd Sadwrn, <strong>9am i 1pm</strong>
@@ -149,13 +153,17 @@ cy:
     call_us:
       title: Ffoniwch ni
       description: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
+      opening_times:
+        weekdays: Llun i Wener, 8am i 8pm
+        saturday: Dydd Sadwrn, 9am i 1pm
+        sunday: Dydd Sul a Gwyliau Banc, ar gau
       opening_times_html: |
         <ul class="contact-panel__list">
           <li class="contact-panel__additional-info">Llun i Wener, 8am i 8pm</li>
           <li class="contact-panel__additional-info">Dydd Sadwrn, 9am i 1pm</li>
           <li class="contact-panel__additional-info">Dydd Sul a Gwyliau Banc, ar gau</li>
         </ul>
-      smallprint: "Mae galwadau yn costio’r un faint â galw rhif 01 neu 02. Os oes gennych becyn galw “munudau am ddim”, gwiriwch gyda’ch darparwr bod rhifau 03 yn cael eu cynnwys."
+      smallprint: "Mae galwadau am ddim."
     sharing:
       title: Dilynwch ni
       description: Ceisiwch y wybodaeth ddiweddaraf o Twitter, Facebook a YouTube.

@@ -30,6 +30,14 @@ Core::Registry::Repository[:article] =
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 
+if Feature.active?(:cms_footer)
+  Core::Registry::Repository[:footer] =
+    Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
+else
+  Core::Registry::Repository[:footer] =
+    Core::Repository::Footer::Static.new
+end
+
 if Feature.active?(:cms_home_page)
   Core::Registry::Repository[:home_page] =
     Core::Repository::HomePages::CMS.new

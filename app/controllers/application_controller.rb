@@ -10,6 +10,12 @@ class ApplicationController < ActionController::Base
   include Chat
   include Localisation
 
+  before_action :fetch_footer_content
+  def fetch_footer_content
+    interactor = Core::FooterReader.new('footer')
+    @footer = interactor.call
+  end
+
   helper  StickyNewsletterVisibility
   helper  ChatMigrationMessage
 

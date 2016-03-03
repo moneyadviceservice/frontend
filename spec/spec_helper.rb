@@ -51,6 +51,7 @@ RSpec.configure do |c|
   c.include Devise::TestHelpers, type: :controller
   c.include PageValidations
   c.include Rails.application.routes.url_helpers
+  c.include RSpecHtmlMatchers
 
   c.infer_base_class_for_anonymous_controllers = false
   c.alias_it_should_behave_like_to :it_has_behavior, 'exhibits behaviour of an'
@@ -68,6 +69,7 @@ RSpec.configure do |c|
     search_repository      = Core::Registry::Repository[:search]
     home_page_repository   = Core::Registry::Repository[:home_page]
     preview_repository     = Core::Registry::Repository[:preview]
+    footer_repository     = Core::Registry::Repository[:footer]
 
     Core::Registry::Repository[:action_plan] = Core::Repository::VCR.new(action_plan_repository)
     Core::Registry::Repository[:article]     = Core::Repository::VCR.new(article_repository)
@@ -76,6 +78,7 @@ RSpec.configure do |c|
     Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
     Core::Registry::Repository[:home_page]   = Core::Repository::VCR.new(home_page_repository)
     Core::Registry::Repository[:preview]     = Core::Repository::VCR.new(preview_repository)
+    Core::Registry::Repository[:footer]      = Core::Repository::VCR.new(footer_repository)
 
     if example.metadata[:features]
       Feature.run_with_activated(*example.metadata[:features]) do
@@ -102,6 +105,7 @@ RSpec.configure do |c|
     Core::Registry::Repository[:search]      = search_repository
     Core::Registry::Repository[:home_page]   = home_page_repository
     Core::Registry::Repository[:preview]     = preview_repository
+    Core::Registry::Repository[:footer]      = footer_repository
   end
 
   c.before(:suite) do

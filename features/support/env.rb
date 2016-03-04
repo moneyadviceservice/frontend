@@ -29,6 +29,7 @@ news_repository                    = Core::Registry::Repository[:news]
 news_article_repository            = Core::Registry::Repository[:news_article]
 newsletter_subscription_repository = Core::Registry::Repository[:newsletter_subscription]
 home_page_repository               = Core::Registry::Repository[:home_page]
+footer_repository                  = Core::Registry::Repository[:footer]
 
 Core::Registry::Repository[:action_plan]             = Core::Repository::VCR.new(action_plan_repository)
 Core::Registry::Repository[:article]                 = Core::Repository::VCR.new(article_repository)
@@ -41,6 +42,7 @@ Core::Registry::Repository[:news]                    = Core::Repository::VCR.new
 Core::Registry::Repository[:news_article]            = Core::Repository::VCR.new(news_article_repository)
 Core::Registry::Repository[:newsletter_subscription] = Core::Repository::VCR.new(newsletter_subscription_repository)
 Core::Registry::Repository[:home_page]               = Core::Repository::VCR.new(home_page_repository)
+Core::Registry::Repository[:footer]                  = Core::Repository::VCR.new(footer_repository)
 
 Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
 

@@ -84,4 +84,8 @@ class EmbeddedToolsController < ApplicationController
   def base_alternate_url
     "/#{alternate_locale}/tools/#{alternate_tool_id}"
   end
+
+  def display_skip_to_main_navigation?
+    false
+  end
 end

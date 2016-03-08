@@ -100,6 +100,11 @@ module StickyNewsletterVisibility
       choosing-your-executor
       if-you-have-had-a-late-miscarriage
       if-your-baby-has-died-shortly-after-birth
+      a-new-start-without-debt
+      feel-better-without-debt
+      no-more-debt-stress
+      get-debt-under-control
+      no-more-debt
     )
 
     def initialize(slug)

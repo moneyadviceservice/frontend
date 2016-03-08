@@ -90,7 +90,12 @@ module NewsletterExclusions
       'choosing-your-executor',
       'raising-standards',
       'if-you-have-had-a-late-miscarriage',
-      'if-your-baby-has-died-shortly-after-birth'
+      'if-your-baby-has-died-shortly-after-birth',
+      'a-new-start-without-debt',
+      'feel-better-without-debt',
+      'no-more-debt-stress',
+      'get-debt-under-control',
+      'no-more-debt'
     ]
   end
 end

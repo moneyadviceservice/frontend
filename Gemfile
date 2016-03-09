@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'http://gems.test.mas'
+source 'http://gems.dev.mas.local'
 
 # RULES OF THE GEMFILE
 #

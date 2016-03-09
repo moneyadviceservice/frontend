@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
 
   helper  StickyNewsletterVisibility
   helper  ChatMigrationMessage
+  helper  BudgetWarning
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'

@@ -3,6 +3,36 @@
 @import 'dough/assets/stylesheets/lib';
 @import 'yeast/assets/lib/all';
 
+// styles from dough and yeast temporarily added here for test purposes
+// DELETE AFTER USE!
+// --------->
+$color-input-focus-border-color: $color-yellow-dark !important;
+$color-link-focus-background-color: $color-yellow-dark !important;
+
+%link-nav-secondary {
+  color: $color-link-nav;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-link-nav-visited;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    outline: none;
+    color: $color-link-nav;
+  }
+
+  &:focus {
+    color: $color-black;
+  }
+}
+// <---------
+
 // Helpers
 @import 'helpers/form-input';
 @import 'helpers/form-input-focus';

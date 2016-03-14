@@ -7,11 +7,11 @@
 <% if categories.present? %>
   <nav class="nav" role="navigation" aria-label="main" id="primary-nav" tabindex="-1">
     <span class="nav__strapline"><%= t('layouts.base.strapline') %></span>
+
     <ul class="link-list-primary">
       <% categories.each do |category| %>
         <% if active_categories.member?(category.id) %>
           <li class="link-list-primary__item link-list-primary__item--selected">
-
             <% if child_selected = category.contents && category.contents.any? { |c| active_categories.include?(c.id) } %>
               <%= link_to category.title, category.path, class: "link-list-primary__text" %>
             <% else %>
@@ -20,12 +20,13 @@
 
             <ul class="link-list-secondary">
               <% category.contents.each do |sub_category| %>
-                <li class="link-list-secondary__item<%= ' is-selected' if active_categories.member?(sub_category.id) %>">
-                  <%= link_to sub_category.title, sub_category.path, class: "link-list-secondary__text" %>
+                <li class="link-list-secondary__item">
+                  <%= link_to sub_category.title, sub_category.path,
+                    class: "link-list-secondary__text #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
+                  %>
                 </li>
               <% end %>
             </ul>
-
           </li>
         <% else %>
           <li class="link-list-primary__item">

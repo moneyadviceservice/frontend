@@ -1,3 +1,10 @@
+When(/^I visit a retirement tool "(.*?)" in "(.*?)"$/) do |tool_name, language|
+  locale = language_to_locale(language)
+
+  return engine_page.load(id: tool_name) if tool_name == 'retirement-income-options'
+  tools_page.load(locale: locale, id: tool_name)
+end
+
 When(/^I visit the Redundancy Advice Tool in "(.*?)"$/) do |language|
   locale = language_to_locale(language)
 

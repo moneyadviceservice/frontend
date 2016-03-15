@@ -4,13 +4,21 @@ Feature: Warning About Budget Changes
 
   Scenario Outline: before the budget announcement
     Given Today's date is "3rd March 2016"
-    When I visit the Redundancy Advice Tool in "<language>"
+    When I visit a retirement tool "<retirement tool id>" in "<language>"
     Then I should not see the warning about the impending changes in "<language>"
 
     Examples:
-      | language |
-      | english  |
-      | welsh    |
+      | retirement tool id                    | language |
+      | redundancy-pay-calculator             | english  |
+      | cyfrifiannell-tal-diswyddo            | welsh    |
+      | workplace-pension-contribution-calculator             | english  |
+      | cyfrifiannell-cyfraniadau-pensiwn-gweithle            | welsh    |
+      | pension-calculator             | english  |
+      | cyfrifiannell-pensiwn            | welsh    |
+      | retirement-income-options             | english  |
+      | opsiynau-incwm-ymddeoliad             | welsh  |
+      | income-drawdown             | english  |
+      | opsiynau-incwm-ymddeoliad             | welsh  |
 
   Scenario Outline: on the day of the budget announcement
     Given Today's date is "16th March 2016"

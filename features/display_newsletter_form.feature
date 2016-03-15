@@ -4,16 +4,16 @@ Feature: Display sticky newsletter
   Background:
     Given I am on an article page
 
-  Scenario: user subscribes to sticky newsletter
+  Scenario: user subscribes to newsletter via the sticky footer
     When user subscribes to receive newsletters
-    Then the user should no longer see the newsletter form
+    Then I should not see the newsletter form
 
   @javascript
-  Scenario: dismiss newsletter
-    When I dismiss the newsletter
-    Then I should not see it again for another month
+  Scenario: should not see the sticky newsletter footer without scrolling
+    Then I should not see the newsletter form
 
-  @wip @javascript
-  Scenario: scroll beyond 50% of the page
+  @javascript
+  Scenario: should see the sticky newsletter footer after scrolling down
     When I scroll to the bottom of the page
-    Then I should see a sticky newsletter sign up form
+    And I dismiss the newsletter
+    Then I should see the newsletter form

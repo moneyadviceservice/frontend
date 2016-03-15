@@ -1,5 +1,5 @@
 And(/^the want to talk feature is enabled$/) do
-  Timeout.timeout(Capybara.default_wait_time) do
+  Timeout.timeout(Capybara.default_max_wait_time) do
     loop do
       begin
         page.evaluate_script('window.masInitWantToTalk()')

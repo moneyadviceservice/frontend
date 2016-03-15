@@ -92,4 +92,4 @@ Before('@auth-required') do
 end
 
 Capybara.javascript_driver = :poltergeist
-Capybara.default_wait_time = 20
+Capybara.default_max_wait_time = 20

@@ -25,8 +25,8 @@ a {
   }
 
   &:focus {
-    outline: solid $baseline-unit/2 $color-input-focus-border-color;
-    background: $color-link-focus-background-color;
+    outline: solid $baseline-unit/2 $color-focus-border;
+    background: $color-focus-background;
     color: $color-black;
   }
 

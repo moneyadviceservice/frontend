@@ -26,8 +26,8 @@
     color: $color-true-black;
   }
   &:focus {
-    background: transparent !important; // N.B. remove !important after testing
-    outline: none !important; // N.B. remove !important after testing
+    background: transparent;
+    outline: none;
 
     & .stripe-banner__content {
       outline: solid $baseline-unit/2 $color-focus-border;

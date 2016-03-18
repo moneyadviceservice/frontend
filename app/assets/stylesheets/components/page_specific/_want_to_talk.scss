@@ -143,10 +143,10 @@
 
   &:focus {
     outline: none;
-    border-color: $color-focus-border;
+    border-color: $color-focus;
 
     &:before {
-      border-color: $color-focus-border;
+      border-color: $color-focus;
     }
   }
 

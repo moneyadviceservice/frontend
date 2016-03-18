@@ -23,8 +23,8 @@
   }
 
   .promo__link:focus & {
-    outline: solid $baseline-unit/2 $color-focus-border;
-    background: $color-focus-background;
+    outline: solid $baseline-unit/2 $color-focus;
+    background: $color-focus;
   }
 }
 

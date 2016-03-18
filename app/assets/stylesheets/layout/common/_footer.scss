@@ -119,12 +119,6 @@
     &:hover {
       background: $color-twitter-hover;
     }
-
-    // N.B. remove after testing -->
-    &:focus {
-      background: $color-twitter-hover !important;
-    }
-    // <-- N.B. remove after testing
   }
 
   .facebook-link,
@@ -136,12 +130,6 @@
     &:hover {
       background: $color-facebook-hover;
     }
-
-    // N.B. remove after testing -->
-    &:focus {
-      background: $color-facebook-hover !important;
-    }
-    // <-- N.B. remove after testing
   }
 
   .youtube-link,
@@ -153,12 +141,6 @@
     &:hover {
       background: $color-youtube-hover;
     }
-
-    // N.B. remove after testing -->
-    &:focus {
-      background: $color-youtube-hover !important;
-    }
-    // <-- N.B. remove after testing
   }
 }
 
@@ -213,7 +195,7 @@
     .footer-primary__blog-link:visited,
     .footer-primary__blog-link:focus,
     .footer-primary__blog-link:active {
-      background: $color-mas-blog-blue !important; // N.B. remove !important after testing
+      background: $color-mas-blog-blue;
       border-radius: 5px;
       border-bottom: none;
       color: $color-mas-blog-button;

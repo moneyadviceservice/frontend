@@ -94,12 +94,6 @@
   &.is-disabled {
     visibility: hidden;
   }
-
-  // N.B. remove after testing -->
-  &:focus {
-    background: #dce0e0 !important;
-  }
-  // <-- N.B. remove after testing
 }
 
 .contact-panel__button--sharing {

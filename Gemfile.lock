@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/moneyadviceservice/dough.git
+  revision: 230d4b05d4c8a07c3f2b92f97b92e4598d96fb65
+  branch: 7031_A11Y_Improve-Focus-Style-Links
+  specs:
+    dough-ruby (5.12.0)
+      activesupport
+      rails (>= 3.2)
+      sass-rails (~> 4.0.0)
+
+GIT
   remote: git://github.com/moneyadviceservice/meta-tags.git
   revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
   specs:
@@ -320,10 +330,6 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (5.12.0.267)
-      activesupport
-      rails (>= 3.2)
-      sass-rails (~> 4.0.0)
     dragonfly (1.0.12)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -751,7 +757,7 @@ DEPENDENCIES
   devise (= 3.2.4)
   devise-encryptable
   dotenv-rails
-  dough-ruby (~> 5.0)
+  dough-ruby!
   draper (~> 1.3.0)
   ejs
   email_spec
@@ -814,6 +820,3 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-
-BUNDLED WITH
-   1.11.2

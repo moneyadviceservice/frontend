@@ -1,1 +1,1 @@
-DebtFreeDayCalculator.parent_controller = '::EmbeddedToolsController'
+# DebtFreeDayCalculator.parent_controller = '::EmbeddedToolsController'

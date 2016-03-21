@@ -1,1 +1,1 @@
-DebtAdviceLocator.parent_controller = '::EmbeddedToolsController'
+# DebtAdviceLocator.parent_controller = '::EmbeddedToolsController'

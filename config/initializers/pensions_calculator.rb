@@ -1,1 +1,1 @@
-PensionsCalculator.parent_controller = '::EmbeddedToolsController'
+# PensionsCalculator.parent_controller = '::EmbeddedToolsController'

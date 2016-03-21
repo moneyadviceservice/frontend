@@ -1,1 +1,1 @@
-CostCalculatorBuilder.parent_controller = '::CostCalculatorBuilderController'
+# CostCalculatorBuilder.parent_controller = '::CostCalculatorBuilderController'

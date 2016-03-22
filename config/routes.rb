@@ -37,14 +37,14 @@ Rails.application.routes.draw do
     mount Agreements::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:agreements)
 
-#    mount AdvicePlans::Engine => '/tools/:tool_id',
-#          constraints: ToolMountPoint.for(:advice_plans)
+    mount AdvicePlans::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:advice_plans)
 
     mount ActionPlans::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:action_plans)
 
-#    mount CostCalculatorBuilder::Engine => '/:engine_id',
-#          constraints: EngineMountPoint.for(:cost_calculator_builder)
+    mount CostCalculatorBuilder::Engine => '/:engine_id',
+          constraints: EngineMountPoint.for(:cost_calculator_builder)
 
     bpmp = ToolMountPoint.for(:budget_planner)
     budget_planner_url_constraint = /#{bpmp.en_id}|#{bpmp.cy_id}/
@@ -54,8 +54,8 @@ Rails.application.routes.draw do
     mount BabyCostCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:baby_cost_calculator)
 
-#    mount CarCostTool::Engine => '/tools/:tool_id',
-#          constraints: ToolMountPoint.for(:car_cost_tool)
+    mount CarCostTool::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:car_cost_tool)
 
     mount ContributionCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:contribution_calculator)
@@ -66,11 +66,11 @@ Rails.application.routes.draw do
     mount DebtAndMentalHealth::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:debt_and_mental_health)
 
-#    mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
-#          constraints: ToolMountPoint.for(:debt_free_day_calculator)
+    mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:debt_free_day_calculator)
 
-#    mount DebtAdviceLocator::Engine => '/tools/:tool_id',
-#          constraints: ToolMountPoint.for(:debt_advice_locator)
+    mount DebtAdviceLocator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:debt_advice_locator)
 
     mount DebtTest::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:debt_test)
@@ -80,14 +80,14 @@ Rails.application.routes.draw do
 
     mount Feedback::Engine => '/improvements'
 
-#    mount MortgageCalculator::Engine => '/tools/:tool_id',
-#          constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
+    mount MortgageCalculator::Engine => '/tools/:tool_id',
+          constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
 
     mount PaydayLoansIntervention::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:payday_loans)
 
-#    mount PensionsCalculator::Engine => '/tools/:tool_id',
-#          constraints: ToolMountPoint.for(:pensions_calculator)
+    mount PensionsCalculator::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:pensions_calculator)
 
     mount Quiz::Engine => '/tools/:tool_id',
       constraints: ToolMountPoint.for(:quiz)

@@ -3,16 +3,9 @@
 @import 'dough/assets/stylesheets/lib';
 @import 'yeast/assets/lib/all';
 
-// temporary to override Dough
-.button {
-  &:focus {
-    outline: 2px solid $color-focus;
-  }
-}
-
-$color-input-focus-border-color: $color-yellow-dark !important;
-
 // temporary to override Yeast
+$color-focus: $color-yellow-dark !default;
+
 %link-nav-secondary {
   &:hover,
   &:focus {
@@ -28,6 +21,15 @@ $color-input-focus-border-color: $color-yellow-dark !important;
     color: $color-black;
   }
 }
+
+// temporary to override Dough
+.button {
+  &:focus {
+    outline: 2px solid $color-focus;
+  }
+}
+
+$color-input-focus-border-color: $color-yellow-dark !important;
 
 // Helpers
 @import 'helpers/form-input';

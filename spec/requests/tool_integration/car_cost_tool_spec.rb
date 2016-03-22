@@ -10,7 +10,7 @@ RSpec.describe 'Car Cost Tool', type: :request do
         end
       end
 
-      # specify { expect(response).to be_ok }
+      specify { expect(response).to be_ok }
     end
   end
 end

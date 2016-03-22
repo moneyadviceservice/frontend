@@ -8,7 +8,7 @@ RSpec.describe 'Pensions calculator', type: :request do
         get path
       end
 
-      # specify { expect(response).to be_ok }
+      specify { expect(response).to be_ok }
     end
   end
 end

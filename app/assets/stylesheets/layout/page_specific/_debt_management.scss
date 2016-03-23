@@ -8,6 +8,14 @@
   h1, h2, h3 {
     margin-top: 0;
   }
+
+  a:not([href*="moneyadviceservice.org.uk"]):after {
+    @extend %icon; // has to be a placeholder so IE8 shows other icons based on .icon - IE8 does not support :not CSS3 selector
+    @extend .icon--external-link;
+    content: '';
+    margin-left: 6px;
+    display: inline-block;
+  }
 }
 
 .l-debtmanagement--options {

@@ -5,7 +5,7 @@ RSpec::Matchers.define(:become) do |expected|
 
   match do |block|
     begin
-      Timeout.timeout(Capybara.default_wait_time) do
+      Timeout.timeout(Capybara.default_max_wait_time) do
         sleep(0.1) until expected == block.call
         true
       end

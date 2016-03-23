@@ -11,12 +11,3 @@ Feature: Viewing the Debt Management Campaign
     | language |
     | English  |
     | Welsh    |
-
-  Scenario Outline: Visit the debt management non fca firms list
-    When I view the debt management non fca firms list in <language>
-    Then I should see the debt management non fca firms list in <language>
-
-  Examples:
-    | language |
-    | English  |
-    | Welsh    |

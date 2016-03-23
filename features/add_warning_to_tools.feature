@@ -39,7 +39,7 @@ Feature: Warning About Budget Changes
       | income-drawdown                                       | welsh    |
 
 
-  Scenario Outline: on the day of the budget announcement
+  Scenario Outline: after the date of the budget announcement
     Given Today's date is "24th March 2016"
     When I visit a retirement tool "<retirement tool>" in "<language>"
     Then I should see the warning about the impending changes in "<language>"

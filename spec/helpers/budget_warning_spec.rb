@@ -21,26 +21,83 @@ RSpec.describe BudgetWarning, type: :helper do
     end
   end
 
-  describe '#whitelisted page' do
-    context 'english pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/en/tools/redundancy-pay-calculator/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
+  describe '#whitelisted pages' do
+    context 'english pages for tools' do
+      ['redundancy-pay-calculator',
+       'workplace-pension-contribution-calculator',
+       'pension-calculator'].each do |tool_name|
+        describe tool_name do
+          it "displays warning banner for #{tool_name}" do
+            request = double('request', url: "www.example.com/en/tools/#{tool_name}/",
+                                     base_url: 'www.example.com')
+            allow(BudgetWarning).to receive(:request).and_return(request)
 
-        expect(described_class.whitelisted?).to be(true)
+            expect(described_class.whitelisted?).to be(true)
+          end
+        end
       end
     end
-    context 'welsh pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/cy/tools/cyfrifiannell-tal-diswyddo/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
 
-        expect(described_class.whitelisted?).to be(true)
-      end
+    context 'english pages non-tools' do
+       it 'displays warning banner for retirement-income-options' do
+         request = double('request', url: "www.example.com/en/retirement-income-options/",
+                                  base_url: 'www.example.com')
+         allow(BudgetWarning).to receive(:request).and_return(request)
+
+         expect(described_class.whitelisted?).to be(true)
+       end
+
+       it "displays warning banner for income-drawdown" do
+          request = double('request', url: "www.example.com/en/retirement-income-options/income-drawdown",
+                                   base_url: 'www.example.com')
+          allow(BudgetWarning).to receive(:request).and_return(request)
+
+          expect(described_class.whitelisted?).to be(true)
+       end
     end
+
+    context 'welsh pages for tools' do
+       ['cyfrifiannell-tal-diswyddo',
+        'cyfrifiannell-cyfraniadau-pensiwn-gweithle',
+        'cyfrifiannell-pensiwn'].each do |tool_name|
+         describe tool_name do
+           it "displays warning banner for #{tool_name}" do
+             request = double('request', url: "www.example.com/cy/tools/#{tool_name}/",
+                                      base_url: 'www.example.com')
+             allow(BudgetWarning).to receive(:request).and_return(request)
+
+             expect(described_class.whitelisted?).to be(true)
+           end
+         end
+       end
+    end
+
+    context 'welsh pages for non-tools' do
+        # Retirement Income Options
+        ['opsiynau-incwm-ymddeoliad'].each do |tool_name|
+          describe tool_name do
+            it "displays warning banner for #{tool_name}" do
+              request = double('request', url: "www.example.com/cy/#{tool_name}/",
+                                       base_url: 'www.example.com')
+              allow(BudgetWarning).to receive(:request).and_return(request)
+
+              expect(described_class.whitelisted?).to be(true)
+            end
+          end
+        end
+
+        # Income Drawdown
+        ['income-drawdown'].each do |tool_name|
+         describe tool_name do
+           it "displays warning banner for #{tool_name}" do
+             request = double('request', url: "www.example.com/cy/opsiynau-incwm-ymddeoliad/#{tool_name}",
+                                      base_url: 'www.example.com')
+             allow(BudgetWarning).to receive(:request).and_return(request)
+
+             expect(described_class.whitelisted?).to be(true)
+           end
+         end
+        end
+     end
   end
 end
-
-

@@ -427,4 +427,37 @@ http_interactions:
         IF0KfQo=
     http_version: 
   recorded_at: Sat, 06 Jun 2015 22:00:51 GMT
+- request:
+    method: post
+    uri: https://collector.newrelic.com/agent_listener/12//get_redirect_host?marshal_format=json
+    body:
+      encoding: UTF-8
+      string: "[]"
+    headers:
+      Content-Encoding:
+      - identity
+      Host:
+      - collector.newrelic.com
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - NewRelic-RubyAgent/3.9.5.251 (ruby 2.1.2 x86_64-darwin14.0) zlib/1.2.5
+      Content-Type:
+      - application/octet-stream
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '133'
+    body:
+      encoding: UTF-8
+      string: '{"exception":{"message":"Invalid license key, please contact support@newrelic.com","error_type":"NewRelic::Agent::LicenseException"}}'
+    http_version: 
+  recorded_at: Sat, 16 Apr 2016 22:00:39 GMT
 recorded_with: VCR 2.9.2

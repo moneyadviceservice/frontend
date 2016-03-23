@@ -1,18 +1,19 @@
-When(/^I visit a retirement tool "(.*?)" in "(.*?)"$/) do |tool_name, language|
+When(/^I visit a retirement tool "(.*?)" in "(.*?)"$/) do |tool, language|
   locale = language_to_locale(language)
 
-  return engine_page.load(id: tool_name) if tool_name == 'retirement-income-options'
-  tools_page.load(locale: locale, id: tool_name)
-end
-
-When(/^I visit the Redundancy Advice Tool in "(.*?)"$/) do |language|
-  locale = language_to_locale(language)
-
-  case language
-  when 'english'
-    tools_page.load(locale: locale, id: 'redundancy-pay-calculator')
-  when 'welsh'
-    tools_page.load(locale: locale, id: 'cyfrifiannell-tal-diswyddo')
+  case tool
+  when 'retirement-income-options'
+    rio_page.load(locale: locale, tool_name: tool, id: '')
+  when 'opsiynau-incwm-ymddeoliad'
+    rio_page.load(locale: locale, tool_name: tool, id: '')
+  when 'income-drawdown'
+    if locale == 'en'
+      rio_page.load(locale: locale, tool_name: 'retirement-income-options', id: tool)
+    else
+      rio_page.load(locale: locale, tool_name: 'opsiynau-incwm-ymddeoliad', id: tool)
+    end
+  else
+    tools_page.load(locale: locale, id: tool)
   end
 end
 

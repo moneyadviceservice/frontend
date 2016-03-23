@@ -16,4 +16,11 @@ class CategoriesController < ApplicationController
 
     assign_active_categories(@category)
   end
+
+  private
+
+  def default_main_content_location?
+    false
+  end
+
 end

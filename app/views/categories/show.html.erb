@@ -11,9 +11,9 @@
   <div class="l-main__row">
     <% if category.images? %>
       <%= render 'categories/category_image', small_url: category.small_image, large_url: category.large_image %>
-      <main class="l-main__cell-full l-category l-category--image" role="main" data-parent="<%= category.parent_id %>">
+      <main class="l-main__cell-full l-category l-category--image" role="main" data-parent="<%= category.parent_id %>" id="<%= 'main' if !default_main_content_location? %>" tabindex="-1">
     <% else %>
-      <main class="l-main__cell-full l-category" role="main" data-parent="<%= @category.parent_id %>">
+      <main class="l-main__cell-full l-category" role="main" data-parent="<%= @category.parent_id %>" id="<%= 'main' if !default_main_content_location? %>" tabindex="-1">
     <% end %>
       <div class="l-category__top">
         <div class="l-category__top__content">

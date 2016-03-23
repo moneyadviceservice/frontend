@@ -16,4 +16,4 @@ Feature: Display sticky newsletter
   Scenario: should see the sticky newsletter footer after scrolling down
     When I scroll to the bottom of the page
     And I dismiss the newsletter
-    Then I should see the newsletter form
+    Then I should not see the newsletter form

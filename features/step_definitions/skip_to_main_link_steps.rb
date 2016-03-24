@@ -11,13 +11,19 @@ When(/^I visit a category page$/) do
 end
 
 Then(/^I should be able to skip to the main content$/) do
-  expect(page).to have_selector('div#main')
+  expected_element = page.find('.t-default-main-content')
+  main_element = page.find('div#main')
+  expect(main_element).to eq expected_element
 end
 
 Then(/^I should be able to skip to the main article content$/) do
-  expect(page).to have_selector('main#main')
+  expected_element = page.find('.t-article-main-content')
+  main_element = page.find('main#main')
+  expect(main_element).to eq expected_element
 end
 
 Then(/^I should be able to skip to the categories list$/) do
-  expect(page).to have_selector('main#main')
+  expected_element = page.find('.t-category-main-content')
+  main_element = page.find('main#main')
+  expect(main_element).to eq expected_element
 end

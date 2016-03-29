@@ -102,6 +102,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_skip_to_main_navigation?
 
+  def default_main_content_location?
+    true
+  end
+
+  helper_method :default_main_content_location?
+
   def alerts?
     flash.keys.any?
   end

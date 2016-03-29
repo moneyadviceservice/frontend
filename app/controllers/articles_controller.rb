@@ -57,4 +57,8 @@ class ArticlesController < ApplicationController
     @newsletter_excluded = newsletter_submitted_cookie_set? || exclusions.count > 0 || (I18n.locale == :cy ? true : false)
   end
 
+  def default_main_content_location?
+    false
+  end
+
 end

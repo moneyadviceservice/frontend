@@ -23,6 +23,7 @@ module World
       partners
       profile
       quiz_admin
+      rio
       search_results
       sitemap
       settings

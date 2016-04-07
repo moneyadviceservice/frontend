@@ -174,12 +174,12 @@
       }
 
       &:focus {
-        color: $color-black;
-        border-bottom: 2px solid $color-black;
-        background: $color-focus;
+        color: $color-focus-FG;
+        border-bottom: 2px solid $color-focus-FG;
+        background: $color-focus-BG;
 
         svg {
-          fill: $color-black;
+          fill: $color-focus-FG;
         }
       }
     }

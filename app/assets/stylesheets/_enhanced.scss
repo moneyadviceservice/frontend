@@ -3,7 +3,21 @@
 @import 'dough/assets/stylesheets/lib';
 @import 'yeast/assets/lib/all';
 
-// temporary to override Yeast
+// temporary to override Dough -->
+// N.B. There have been some changes made here which must be trasferred to Dough.
+$color-focus-BG: $color-yellow-dark !default;
+$color-focus-FG: $color-true-black !default;
+$color-input-focus-border-color: $color-yellow-dark !important;
+
+.button {
+  &:focus {
+    outline: 2px solid $color-focus-BG;
+  }
+}
+// <-- temporary to override Dough
+
+// temporary to override Yeast -->
+// N.B. There have been some changes made here which must be trasferred to Dough.
 %link-nav-secondary {
   &:hover,
   &:focus {
@@ -16,19 +30,10 @@
   }
 
   &:focus {
-    color: $color-black;
+    color: $color-focus-FG;
   }
 }
-
-// temporary to override Dough
-$color-focus: $color-yellow-dark !default;
-$color-input-focus-border-color: $color-yellow-dark !important;
-
-.button {
-  &:focus {
-    outline: 2px solid $color-focus;
-  }
-}
+// <-- temporary to override Yeast
 
 // Helpers
 @import 'helpers/form-input';

@@ -23,8 +23,8 @@
   }
 
   .promo__link:focus & {
-    outline: solid $baseline-unit/2 $color-focus;
-    background: $color-focus;
+    outline: solid $baseline-unit/2 $color-focus-BG;
+    background: $color-focus-BG;
   }
 }
 
@@ -59,7 +59,7 @@
   }
 
   &:focus .promo__heading {
-    color: $color-black;
+    color: $color-focus-FG;
   }
 
   .l-promo-articles__item--no-image & {

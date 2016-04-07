@@ -35,16 +35,6 @@ GIT
       rails (~> 4.1)
 
 GIT
-  remote: git@github.com:moneyadviceservice/rio.git
-  revision: 81909aa3c3d6a7962c83e2c07d5456a905eeee34
-  specs:
-    rio (0.0.3)
-      bowndler
-      dough-ruby
-      pensions_calculator-calculations
-      rails (~> 4.1)
-
-GIT
   remote: git@github.com:moneyadviceservice/timelines.git
   revision: 7146855cc241276bcb6131ef28d18fa72d5df122
   specs:
@@ -573,6 +563,11 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rio (1.1.0)
+      bowndler
+      dough-ruby
+      pensions_calculator-calculations
+      rails (~> 4.1)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -789,7 +784,7 @@ DEPENDENCIES
   rack-livereload
   rails (= 4.1.8)
   redcarpet
-  rio!
+  rio (~> 1.1.0)
   rouge
   rspec-html-matchers
   rspec-rails (~> 3.0)

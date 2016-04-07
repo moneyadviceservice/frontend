@@ -22,7 +22,7 @@
   border-bottom: $button-border-width solid $color-button-default-border;
 
   &:focus {
-    @include form-input-focus-outline;
+    @include focus-outline;
   }
 
   &:focus,

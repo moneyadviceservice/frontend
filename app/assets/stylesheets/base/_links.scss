@@ -25,9 +25,9 @@ a {
   }
 
   &:focus {
-    outline: solid $baseline-unit/2 $color-focus;
-    background: $color-focus;
-    color: $color-black;
+    @include focus-outline;
+    background: $color-focus-BG;
+    color: $color-focus-FG;
   }
 
   // Removes active link colour that is applied in Mobile Safari and adds kerning

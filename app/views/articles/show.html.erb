@@ -37,6 +37,14 @@
 
       <%= article.content %>
 
+      <% unless @newsletter_excluded %>
+        <%= render 'inline_newsletter_sign_up_message',
+                   message1: I18n.t("articles.inline_sign_up.message1"),
+                   link_text: I18n.t("articles.inline_sign_up.link_text"),
+                   link_href: I18n.t("articles.inline_sign_up.link_href"),
+                   message2: I18n.t("articles.inline_sign_up.message2") %>
+      <% end %>
+
       <%= social_sharing_icons url:            article.canonical_url,
                                title:          I18n.t("articles.sharing.title"),
                                label_facebook: I18n.t("articles.sharing.label_facebook"),

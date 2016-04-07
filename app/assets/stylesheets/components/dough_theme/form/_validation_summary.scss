@@ -32,8 +32,14 @@
   a {
      color:$color-validation-text;
      text-decoration:none;
-     &:hover, &:focus {
+
+     &:hover,
+     &:focus {
       text-decoration:underline;
+     }
+
+     &:focus {
+      color: $color-focus-FG;
      }
   }
 }

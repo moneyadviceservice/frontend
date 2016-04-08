@@ -25,12 +25,13 @@ $color-input-focus-border-color: $color-yellow-dark !important;
   }
 
   &:hover {
-    outline: none;
+    outline: 0;
     color: $color-link-nav;
   }
 
   &:focus {
     color: $color-focus-FG;
+    outline: solid $baseline-unit/2 $color-focus-BG; // not needed in Yeast (only over-ride)
   }
 }
 // <-- temporary to override Yeast

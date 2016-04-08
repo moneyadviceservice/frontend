@@ -49,7 +49,7 @@
   }
 
   .promo__link:focus & {
-    outline: solid $baseline-unit/2 $color-focus-BG;
+    @include focus-outline;
     background: $color-focus-BG;
     color: $color-focus-FG;
   }

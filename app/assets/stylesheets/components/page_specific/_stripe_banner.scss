@@ -30,7 +30,7 @@
     outline: none;
 
     & .stripe-banner__content {
-      outline: solid $baseline-unit/2 $color-focus-BG;
+      @include focus-outline;
       background: $color-focus-BG;
     }
   }

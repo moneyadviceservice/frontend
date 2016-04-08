@@ -27,7 +27,7 @@
   @extend %link-nav-primary;
 
   &:focus {
-    outline: solid $baseline-unit/2 $color-focus-BG;
+    @include focus-outline;
   }
 
   line-height: 2.2;

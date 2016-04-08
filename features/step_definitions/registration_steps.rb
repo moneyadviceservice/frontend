@@ -118,3 +118,7 @@ Then(/^the option to participate in marketing research should not be checked$/) 
   step 'I should have the option to opt-in or opt-out of participating in research'
   expect(sign_up_page.opt_in_for_research.checked?).to be_falsey
 end
+
+Then(/^I should see the newsletter signup opt\-in unchecked$/) do
+  expect(sign_up_page.newsletter_subscription.checked?).to be_falsey
+end

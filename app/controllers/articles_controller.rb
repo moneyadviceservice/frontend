@@ -48,13 +48,10 @@ class ArticlesController < ApplicationController
   end
 
   def set_show_newsletter_signup
-    exclusions = ::NewsletterExclusions::slugs
+    exclude = ::NewsletterExclusions::slugs.include?(params[:id])
+    welsh = I18n.locale == :cy
 
-    exclusions.reject! do |slug|
-      slug != params[:id]
-    end
-
-    @newsletter_excluded = newsletter_submitted_cookie_set? || exclusions.count > 0 || (I18n.locale == :cy ? true : false)
+    @newsletter_excluded = newsletter_submitted_cookie_set? || exclude || welsh
   end
 
   def default_main_content_location?

@@ -46,3 +46,19 @@ Then(/^the article page should have alternate tags for the supported locales$/) 
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
 end
+
+Then(/^I should( not)? see an inline form to signup$/) do |not_see|
+  if not_see
+    expect(article_page).to_not have_inline_signup
+  else
+    expect(article_page).to have_inline_signup
+  end
+end
+
+Then(/^I should( not)? see the end of article signup text$/) do |not_see|
+  if not_see
+    expect(article_page).to_not have_end_of_article_signup
+  else
+    expect(article_page).to have_end_of_article_signup
+  end
+end

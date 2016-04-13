@@ -35,7 +35,6 @@ Feature: View an article
     When I view a sensitive article
     Then I should not see an inline form to signup
 
-
   Scenario Outline: View article showing end of article signup text
     When I view an article in <language>
     Then I should <option> the end of article signup text
@@ -44,3 +43,7 @@ Feature: View an article
     | language | option  |
     | English  | see     |
     | Welsh    | not see |
+
+  Scenario: View sensitive article without end of article signup text
+    When I view a sensitive article
+    Then I should not see the end of article signup text

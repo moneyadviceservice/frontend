@@ -21,3 +21,26 @@ Feature: View an article
     | original_language | translated_language |
     | English           | Welsh               |
     | Welsh             | English             |
+
+  Scenario Outline: View article with inline signup
+    When I view an article in <language>
+    Then I should <option> an inline form to signup
+
+  Examples:
+    | language | option  |
+    | English  | see     |
+    | Welsh    | not see |
+
+  Scenario: View sensitive article without inline signup
+    When I view a sensitive article
+    Then I should not see an inline form to signup
+
+
+  Scenario Outline: View article showing end of article signup text
+    When I view an article in <language>
+    Then I should <option> the end of article signup text
+
+  Examples:
+    | language | option  |
+    | English  | see     |
+    | Welsh    | not see |

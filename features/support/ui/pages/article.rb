@@ -3,6 +3,7 @@ require_relative '../sections/category_nav'
 require_relative '../sections/feedback_panel'
 require_relative '../sections/want_to_talk_panel'
 require_relative '../sections/sticky_newsletter'
+require_relative '../sections/inline_signup'
 
 module UI::Pages
   class Article < UI::Page
@@ -11,6 +12,7 @@ module UI::Pages
     element :content, '.l-article-3col-main'
     element :related_categories, '.related-categories'
     element :breadcrumbs, '.l-context-bar'
+    element :end_of_article_signup, '.js-end-of-article-signup'
 
     section :category_nav, UI::Sections::CategoryNav, 'nav .link-list-primary'
     section :feedback_panel, UI::Sections::FeedbackPanel, '.feedback-panel'
@@ -18,5 +20,7 @@ module UI::Pages
     section :want_to_talk_side_panel, UI::Sections::WantToTalkPanel, '.want-to-talk--sidebar'
     section :want_to_talk_inline_panel, UI::Sections::WantToTalkPanel, '.want-to-talk--inline'
     section :sticky_newsletter, UI::Sections::StickyNewsletter, '.news-signup-sticky'
+
+    section :inline_signup, UI::Sections::InlineSignup, '.news-signup-test'
   end
 end

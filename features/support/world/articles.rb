@@ -47,6 +47,17 @@ module World
       end
     end
 
+    def sensitive_article(locale = 'en')
+      case locale.to_s
+        when 'en', 'english', 'English'
+          fixture 'articles/if-your-baby-is-stillborn.yml'
+        when 'cy', 'welsh', 'Welsh'
+          fixture 'articles/os-ywch-babi-yn-farw-anedig.yml'
+        else
+          fail ArgumentError, "invalid article locale `#{locale}'"
+      end
+    end
+
   end
 end
 

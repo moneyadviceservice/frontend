@@ -2,6 +2,10 @@ When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   browse_to_article article(language)
 end
 
+When(/^I view a sensitive article$/) do
+  browse_to_article sensitive_article
+end
+
 When(/^I translate an article into (.*)$/) do |language|
   locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)

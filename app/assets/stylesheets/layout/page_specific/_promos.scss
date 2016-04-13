@@ -39,6 +39,7 @@
   margin-top: 0;
   margin-bottom: $baseline-unit*2;
   padding-right: $baseline-unit*9;
+  margin-right: $baseline-unit*12;
 
   @include respond-to($mq-l) {
     max-width: 200px;
@@ -50,8 +51,8 @@
 
   .promo__link:focus & {
     @include focus-outline;
-    background: $color-focus-BG;
-    color: $color-focus-FG;
+    background: $color-focus-bg;
+    color: $color-focus-fg;
   }
 }
 

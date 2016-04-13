@@ -22,9 +22,13 @@
     @include body(20, 24);
   }
 
+  .l-tool-promos__item & {
+    margin-right: $baseline-unit*6;
+  }
+
   .promo__link:focus & {
     @include focus-outline;
-    background: $color-focus-BG;
+    background: $color-focus-bg;
   }
 }
 
@@ -59,7 +63,7 @@
   }
 
   &:focus .promo__heading {
-    color: $color-focus-FG;
+    color: $color-focus-fg;
   }
 
   .l-promo-articles__item--no-image & {

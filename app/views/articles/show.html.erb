@@ -30,12 +30,15 @@
       <%= heading_tag article.title %>
 
       <% unless @newsletter_excluded %>
-        <%= render 'shared/news_signup_test',
-                   ab_test_render: true %>
+        <%= render 'shared/news_signup_test', ab_test_render: true %>
         <%= render 'shared/news_signup_inpage', ab_test_render: false %>
       <% end %>
 
       <%= article.content %>
+
+      <% unless @newsletter_excluded %>
+        <%= render 'inline_newsletter_sign_up' %>
+      <% end %>
 
       <%= social_sharing_icons url:            article.canonical_url,
                                title:          I18n.t("articles.sharing.title"),

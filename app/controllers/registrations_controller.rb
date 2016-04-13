@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
   def build_resource(hash = nil)
     if hash
       hash[:accept_terms_conditions] = true
-      hash[:newsletter_subscription] = true unless request.post?
+      hash[:newsletter_subscription] = false unless request.post?
     end
     super
   end

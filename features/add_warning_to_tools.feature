@@ -19,6 +19,8 @@ Feature: Warning About Budget Changes
       | opsiynau-incwm-ymddeoliad                             | welsh    |
       | income-drawdown                                       | english  |
       | income-drawdown                                       | welsh    |
+      | retirement-options                                    | english  |
+      | retirement-options                                    | welsh    |
 
   Scenario Outline: on the day of the budget announcement
     Given Today's date is "16th March 2016"
@@ -37,6 +39,8 @@ Feature: Warning About Budget Changes
       | opsiynau-incwm-ymddeoliad                             | welsh    |
       | income-drawdown                                       | english  |
       | income-drawdown                                       | welsh    |
+      | retirement-options                                    | english  |
+      | retirement-options                                    | welsh    |
 
 
   Scenario Outline: after the date of the budget announcement
@@ -56,6 +60,8 @@ Feature: Warning About Budget Changes
       | opsiynau-incwm-ymddeoliad                             | welsh    |
       | income-drawdown                                       | english  |
       | income-drawdown                                       | welsh    |
+      | retirement-options                                    | english  |
+      | retirement-options                                    | welsh    |
 
    Scenario Outline: banner visibility on non-affected tools
     """

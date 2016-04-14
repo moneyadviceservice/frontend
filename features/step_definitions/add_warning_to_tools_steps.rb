@@ -43,7 +43,7 @@ private
 def retirement_option_pages(locale, tool)
   if locale == 'en'
     rio_page.load(locale: 'en', tool_name: 'retirement-income-options', id: tool)
-  else
-    rio_page.load(locale: locale, tool_name: 'opsiynau-incwm-ymddeoliad', id: tool)
+  elsif locale == 'cy'
+    rio_page.load(locale: 'cy', tool_name: 'opsiynau-incwm-ymddeoliad', id: tool)
   end
 end

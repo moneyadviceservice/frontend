@@ -12,13 +12,23 @@
   color: $color-blue-medium;
   margin: 0 0 $baseline-unit;
   position: relative;
+  display: inline-block;
+
+  &.promo__heading--blog {
+    display: block;
+  }
 
   @include respond-to($mq-m) {
     @include body(20, 24);
   }
 
   .l-tool-promos__item & {
-    padding-right: $baseline-unit*3;
+    margin-right: $baseline-unit*6;
+  }
+
+  .promo__link:focus & {
+    @include focus-outline;
+    background: $color-focus-bg;
   }
 }
 
@@ -44,10 +54,16 @@
   &:hover,
   &:focus {
     text-decoration: none;
+    outline: none !important;
+    background: transparent !important;
 
     .promo__heading {
       text-decoration: underline;
     }
+  }
+
+  &:focus .promo__heading {
+    color: $color-focus-fg;
   }
 
   .l-promo-articles__item--no-image & {

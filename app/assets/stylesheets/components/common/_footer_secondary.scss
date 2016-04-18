@@ -25,6 +25,11 @@
   @extend %font-body;
   @include body(14, 18);
   @extend %link-nav-primary;
+
+  &:focus {
+    @include focus-outline;
+  }
+
   line-height: 2.2;
 
   .cy-theme & {
@@ -36,6 +41,10 @@
     top: 4px;
     margin-right: 4px;
   }
+}
+
+.footer-secondary__list-item > a:focus {
+  color: $color-focus-fg;
 }
 
 .footer-secondary__opt-out {

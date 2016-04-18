@@ -25,6 +25,15 @@
   &:hover {
     color: $color-true-black;
   }
+  &:focus {
+    background: transparent;
+    outline: none;
+
+    & .stripe-banner__content {
+      @include focus-outline;
+      background: $color-focus-bg;
+    }
+  }
 
   @include respond-to($mq-s) {
     padding-right: 20%;

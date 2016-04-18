@@ -2,6 +2,10 @@ When(/^I view (?:a|an|the) article in (.*)$/) do |language|
   browse_to_article article(language)
 end
 
+When(/^I view a sensitive article$/) do
+  browse_to_article sensitive_article
+end
+
 When(/^I translate an article into (.*)$/) do |language|
   locale           = language_to_locale(language)
   current_language = locale_to_language(I18n.locale)
@@ -44,5 +48,21 @@ Then(/^the article page should have alternate tags for the supported locales$/) 
   article_page.alternate_tags.each do |alternate_tag|
     expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
+  end
+end
+
+Then(/^I should( not)? see an inline form to signup$/) do |not_see|
+  if not_see
+    expect(article_page).to_not have_inline_signup
+  else
+    expect(article_page).to have_inline_signup
+  end
+end
+
+Then(/^I should( not)? see the end of article signup text$/) do |not_see|
+  if not_see
+    expect(article_page).to_not have_end_of_article_signup
+  else
+    expect(article_page).to have_end_of_article_signup
   end
 end

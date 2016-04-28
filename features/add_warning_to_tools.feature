@@ -33,8 +33,6 @@ Feature: Warning About Budget Changes
       | cyfrifiannell-tal-diswyddo                            | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
-      | income-drawdown                                       | english  |
-      | income-drawdown                                       | welsh    |
       | retirement-options                                    | english  |
       | retirement-options                                    | welsh    |
 
@@ -50,8 +48,6 @@ Feature: Warning About Budget Changes
       | cyfrifiannell-tal-diswyddo                            | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
-      | income-drawdown                                       | english  |
-      | income-drawdown                                       | welsh    |
       | retirement-options                                    | english  |
       | retirement-options                                    | welsh    |
 

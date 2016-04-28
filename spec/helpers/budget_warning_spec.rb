@@ -39,10 +39,6 @@ RSpec.describe BudgetWarning, type: :helper do
       end
 
       it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
-         let(:url) { "www.example.com/en/retirement-income-options/income-drawdown" }
-      end
-
-      it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
          let(:url) { "www.example.com/en/retirement-income-options/retirement-options" }
       end
     end
@@ -61,11 +57,6 @@ RSpec.describe BudgetWarning, type: :helper do
       # RIO - Retirement Income Options
       it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_nontools' do
         let(:url) { 'www.example.com/cy/opsiynau-incwm-ymddeoliad/' }
-      end
-
-      # RIO page(s) - Income Drawdown
-      it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_nontools' do
-        let(:url) { 'www.example.com/cy/opsiynau-incwm-ymddeoliad/income-drawdown' }
       end
 
       # RIO page(s) - Retirement Options

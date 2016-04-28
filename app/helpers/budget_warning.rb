@@ -25,11 +25,9 @@ module BudgetWarning
   def whitelisted?
     whitelist = ['/en/tools/redundancy-pay-calculator/',
                  '/en/retirement-income-options/',
-                 '/en/retirement-income-options/income-drawdown',
                  '/en/retirement-income-options/retirement-options',
                  '/cy/tools/cyfrifiannell-tal-diswyddo/',
                  '/cy/opsiynau-incwm-ymddeoliad/',
-                 '/cy/opsiynau-incwm-ymddeoliad/income-drawdown',
                  '/cy/opsiynau-incwm-ymddeoliad/retirement-options']
 
     whitelist.include? request.url.gsub(request.base_url, '')

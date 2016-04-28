@@ -33,8 +33,6 @@ Feature: Warning About Budget Changes
       | cyfrifiannell-tal-diswyddo                            | welsh    |
       | workplace-pension-contribution-calculator             | english  |
       | cyfrifiannell-cyfraniadau-pensiwn-gweithle            | welsh    |
-      | pension-calculator                                    | english  |
-      | cyfrifiannell-pensiwn                                 | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
       | income-drawdown                                       | english  |
@@ -54,8 +52,6 @@ Feature: Warning About Budget Changes
       | cyfrifiannell-tal-diswyddo                            | welsh    |
       | workplace-pension-contribution-calculator             | english  |
       | cyfrifiannell-cyfraniadau-pensiwn-gweithle            | welsh    |
-      | pension-calculator                                    | english  |
-      | cyfrifiannell-pensiwn                                 | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
       | income-drawdown                                       | english  |

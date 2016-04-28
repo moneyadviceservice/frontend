@@ -24,12 +24,10 @@ module BudgetWarning
 
   def whitelisted?
     whitelist = ['/en/tools/redundancy-pay-calculator/',
-                 '/en/tools/workplace-pension-contribution-calculator/',
                  '/en/retirement-income-options/',
                  '/en/retirement-income-options/income-drawdown',
                  '/en/retirement-income-options/retirement-options',
                  '/cy/tools/cyfrifiannell-tal-diswyddo/',
-                 '/cy/tools/cyfrifiannell-cyfraniadau-pensiwn-gweithle/',
                  '/cy/opsiynau-incwm-ymddeoliad/',
                  '/cy/opsiynau-incwm-ymddeoliad/income-drawdown',
                  '/cy/opsiynau-incwm-ymddeoliad/retirement-options']

@@ -21,17 +21,6 @@ RSpec.describe BudgetWarning, type: :helper do
     end
   end
 
-
-  describe '#whitelisted pages' do
-    context 'english page for tools' do
-      ['redundancy-pay-calculator'].each do |tool_name|
-        it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
-          let(:url) { "www.example.com/en/tools/#{tool_name}/" }
-        end
-      end
-    end
-  end
-
   describe '#whitelisted pages' do
     context 'english pages non-tools' do
       it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
@@ -39,33 +28,26 @@ RSpec.describe BudgetWarning, type: :helper do
       end
 
       it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
-         let(:url) { "www.example.com/en/retirement-income-options/income-drawdown" }
-      end
-
-      it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
          let(:url) { "www.example.com/en/retirement-income-options/retirement-options" }
       end
     end
 
-    context 'welsh pages for tools' do
-       ['cyfrifiannell-tal-diswyddo'].each do |tool_name|
-         describe tool_name do
-           it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_tools' do
-             let(:url)      { "www.example.com/cy/tools/#{tool_name}/" }
-           end
-         end
-       end
+    context 'english tools' do
+      it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
+        let(:url) { 'www.example.com/en/tools/redundancy-pay-calculator/' }
+      end
+    end
+
+    context 'welsh tools' do
+      it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_tools' do
+        let(:url) { 'www.example.com/cy/tools/cyfrifiannell-tal-diswyddo/' }
+      end
     end
 
     context 'welsh pages for non-tools' do
       # RIO - Retirement Income Options
       it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_nontools' do
         let(:url) { 'www.example.com/cy/opsiynau-incwm-ymddeoliad/' }
-      end
-
-      # RIO page(s) - Income Drawdown
-      it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_nontools' do
-        let(:url) { 'www.example.com/cy/opsiynau-incwm-ymddeoliad/income-drawdown' }
       end
 
       # RIO page(s) - Retirement Options

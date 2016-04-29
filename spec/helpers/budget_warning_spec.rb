@@ -21,15 +21,8 @@ RSpec.describe BudgetWarning, type: :helper do
     end
   end
 
-
-  describe '#whitelisted pages' do
-    context 'english page for tools' do
-      ['redundancy-pay-calculator'].each do |tool_name|
-        it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
-          let(:url) { "www.example.com/en/tools/#{tool_name}/" }
-        end
-      end
-    end
+  it_behaves_like 'displays_banner_warning_for_whitelisted_tools' do
+    let(:url) { 'www.example.com/en/tools/redundancy-pay-calculator/' }
   end
 
   describe '#whitelisted pages' do
@@ -43,14 +36,8 @@ RSpec.describe BudgetWarning, type: :helper do
       end
     end
 
-    context 'welsh pages for tools' do
-       ['cyfrifiannell-tal-diswyddo'].each do |tool_name|
-         describe tool_name do
-           it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_tools' do
-             let(:url)      { "www.example.com/cy/tools/#{tool_name}/" }
-           end
-         end
-       end
+    it_behaves_like 'displays_banner_warning_for_whitelisted_welsh_tools' do
+      let(:url) { 'www.example.com/cy/tools/cyfrifiannell-tal-diswyddo/' }
     end
 
     context 'welsh pages for non-tools' do

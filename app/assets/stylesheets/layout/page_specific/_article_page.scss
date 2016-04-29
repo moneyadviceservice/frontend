@@ -110,10 +110,13 @@
   }
 }
 
+// BackToTop link
+$btt-link-height: 42px;
+
 .article-3col-main__btt-link {
   position: fixed;
   top: auto;
-  bottom: -50px;
+  bottom: 0 - ($btt-link-height + 6px);
   right: 0;
   margin: 0;
   padding: $baseline-unit*1.5 10px $baseline-unit*1.5 40px;
@@ -124,7 +127,7 @@
   text-decoration: none;
   background-color: $color-green-secondary;
   z-index: 1;
-  height: 50px;
+  height: $btt-link-height;
   transition: bottom, 0.4s;
 
   &:focus {
@@ -155,4 +158,16 @@
 .article-3col-main__btt-link:hover,
 .article-3col-main__btt-link:focus {
   text-decoration: underline;
+}
+
+.footer--btt_link {
+  .l-footer-secondary {
+    padding-bottom: $btt-link-height - 12px;
+  }
+
+  @include respond-to($mq-m) {
+    .l-footer-secondary {
+      padding-bottom: 0;
+    }
+  }
 }

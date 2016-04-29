@@ -20,15 +20,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
    * @param {Promise} initialised
    */
   Newsletter.prototype.init = function(initialised) {
-    var $component;
-
     this.initProps();
-    $component = this._returnComponentJqueryDOM();
-
-    if (this.$el.hasClass('news-signup-inpage--delete')) {
-      $component.remove();
-      throw new Error('Removed from DOM during initialise');
-    }
 
     this._initialisedSuccess(initialised);
     this.showInArticle();
@@ -36,8 +28,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   Newsletter.prototype.initProps = function() {
-    this.$form = this.$el.find('form');
-    this.isInPageArticle = (this.$form.parents('.news-signup-inpage').length === 1);
     this.mainClassName = this.$el[0].className.split(/\s+/)[0];
   };
 
@@ -50,7 +40,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var $article = $('[data-dough-newsletter-article]'),
       placed = false,
       minimumPosition = $article[0].offsetHeight / 4,
-      $component = this._returnComponentJqueryDOM();
+      $component = this.$el;
 
     this.$el.css('clear', 'both');
 
@@ -65,21 +55,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     if (!placed) {
       $component.insertAfter($article.children().last());
     }
-  };
-
-  Newsletter.prototype._returnComponentJqueryDOM = function() {
-    var $component;
-
-    if (this.isInPageArticle) {
-      // If this is the newer in-page article, then grab it's parent layout container
-      $component = this.$el.parent('.l-news-signup-inpage');
-    }
-    else {
-      $component = this.$el;
-    }
-
-    return $component;
-
   };
 
   return Newsletter;

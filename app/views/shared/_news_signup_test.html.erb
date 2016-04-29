@@ -1,6 +1,5 @@
 <%
    dev_visible = local_assigns[:visible].nil? ? false : local_assigns[:visible]
-   ab_test_render = local_assigns[:ab_test_render].nil? ? false : local_assigns[:ab_test_render]
    component_image_class = local_assigns[:component_image_class].nil? ? 'news-signup-test__image' : local_assigns[:component_image_class]
    component_title_text = local_assigns[:component_title_text].nil? ? 'Get money saving tips straight to your inbox' : local_assigns[:component_title_text]
    component_info_text = local_assigns[:component_info_text].nil? ? 'Join 100,000+ subscribers to get our free newsletter packed with tips and advice.' : local_assigns[:component_info_text]
@@ -13,7 +12,7 @@
      component_dough = ''
    end
 
-   if !ab_test_render && !dev_visible then
+   if !dev_visible then
      component_class = component_class + ' news-signup-inpage--delete'
    end
 %>

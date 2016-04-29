@@ -186,7 +186,6 @@ Rails.application.routes.draw do
 
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
-    get '/campaigns/debt-management/companies', to: 'debt_management#companies'
 
     resources :static_pages,
               path:        'static',

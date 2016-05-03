@@ -31,14 +31,8 @@ Feature: Warning About Budget Changes
       | retirement tool                                       | language |
       | redundancy-pay-calculator                             | english  |
       | cyfrifiannell-tal-diswyddo                            | welsh    |
-      | workplace-pension-contribution-calculator             | english  |
-      | cyfrifiannell-cyfraniadau-pensiwn-gweithle            | welsh    |
-      | pension-calculator                                    | english  |
-      | cyfrifiannell-pensiwn                                 | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
-      | income-drawdown                                       | english  |
-      | income-drawdown                                       | welsh    |
       | retirement-options                                    | english  |
       | retirement-options                                    | welsh    |
 
@@ -52,14 +46,8 @@ Feature: Warning About Budget Changes
       | retirement tool                                       | language |
       | redundancy-pay-calculator                             | english  |
       | cyfrifiannell-tal-diswyddo                            | welsh    |
-      | workplace-pension-contribution-calculator             | english  |
-      | cyfrifiannell-cyfraniadau-pensiwn-gweithle            | welsh    |
-      | pension-calculator                                    | english  |
-      | cyfrifiannell-pensiwn                                 | welsh    |
       | retirement-income-options                             | english  |
       | opsiynau-incwm-ymddeoliad                             | welsh    |
-      | income-drawdown                                       | english  |
-      | income-drawdown                                       | welsh    |
       | retirement-options                                    | english  |
       | retirement-options                                    | welsh    |
 

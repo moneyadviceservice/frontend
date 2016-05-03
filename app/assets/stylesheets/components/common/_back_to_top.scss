@@ -1,0 +1,56 @@
+$btt-link-height: 42px;
+
+.footer--btt_link {
+  .l-footer-secondary {
+    padding-bottom: $btt-link-height - 12px;
+  }
+
+  @include respond-to($mq-m) {
+    .l-footer-secondary {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.btt-link {
+  bottom: 0 - ($btt-link-height + 6px);
+  right: 0;
+  margin: 0;
+  padding: 0 10px 0 40px;
+  border-radius: $baseline-unit*1.5 0 0 0;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: $color-green-secondary;
+  z-index: 1;
+  line-height: $btt-link-height;
+  height: $btt-link-height;
+  transition: bottom, 0.4s;
+
+  &:focus {
+    background-color: $color-green-secondary;
+  }
+
+  &:visited {
+    color: $color-white;
+  }
+}
+
+.btt-link--shown {
+  bottom: 0;
+}
+
+.btt-link__arrow {
+  width: 20px;
+  height: 12.1572px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $color-white;
+  margin: 0;
+}
+
+.btt-link:hover,
+.btt-link:focus {
+  text-decoration: underline;
+}

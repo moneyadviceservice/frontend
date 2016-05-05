@@ -1,6 +1,10 @@
 .cookie-message {
   @extend %clearfix;
 
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+
   .l-constrained {
     position: relative;
   }

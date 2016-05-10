@@ -462,7 +462,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     modernizr-rails (2.6.3)
-    mortgage_calculator (1.3.8.640)
+    mortgage_calculator (1.3.9.642)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
@@ -677,7 +677,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    underscore-rails (1.8.2)
+    underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -767,7 +767,7 @@ DEPENDENCIES
   mailjet
   mas-assets!
   meta-tags!
-  mortgage_calculator (~> 1.3.5)
+  mortgage_calculator (~> 1.3.9)
   mysql2 (= 0.3.20)
   newrelic_rpm
   nokogiri
@@ -809,4 +809,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.11.2
+   1.12.3

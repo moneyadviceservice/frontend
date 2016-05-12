@@ -24,14 +24,17 @@
   <% end %>
 <% end %>
 
-<div class="l-article-3col-main editorial">
+<div
+  class="l-article-3col-main editorial"
+  data-dough-component="BackToTop"
+  data-dough-back-to-top-config='{"i18nStrings": {"title":"<%= t('articles.nav.back_to_top') %>"}}'
+>
   <div class="l-main__row">
     <main class="l-main__cell-full t-article-main-content" role="main" data-dough-newsletter-article="true" id="<%= 'main' if !default_main_content_location? %>" tabindex="-1">
       <%= heading_tag article.title %>
 
       <% unless @newsletter_excluded %>
-        <%= render 'shared/news_signup_test', ab_test_render: true %>
-        <%= render 'shared/news_signup_inpage', ab_test_render: false %>
+        <%= render 'shared/news_signup_test' %>
       <% end %>
 
       <%= article.content %>

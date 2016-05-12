@@ -12,6 +12,26 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/budget-planner
+  revision: f850b97ca292b4c192ca3c4f7b83c43431295947
+  branch: budget-planner-redesign-master
+  specs:
+    budget_planner (4.0.4)
+      coffee-rails
+      i18n-js (= 3.0.0.mas)
+      jquery-rails
+      jquery-ui-rails (~> 4.0)
+      js-routes (= 1.1.2)
+      mas-feedback
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (~> 4.1)
+      sass-rails (~> 4.0)
+      spreadsheet
+      syslog-logger
+      uglifier (>= 1.0.3)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -143,20 +163,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
       thor
-    budget_planner (4.0.3.729)
-      coffee-rails
-      i18n-js (= 3.0.0.mas)
-      jquery-rails
-      jquery-ui-rails (~> 4.0)
-      js-routes (= 1.1.2)
-      mas-feedback
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (~> 4.1)
-      sass-rails (~> 4.0)
-      spreadsheet
-      syslog-logger
-      uglifier (>= 1.0.3)
     bugsnag (2.8.12)
       json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
@@ -724,7 +730,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner (~> 4.0.3)
+  budget_planner!
   bugsnag
   byebug
   capybara

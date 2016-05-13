@@ -63,7 +63,7 @@ gem 'pensions_calculator', '~> 1.1.1'
 gem 'quiz', git: 'git@github.com:moneyadviceservice/quiz.git'
 gem 'rio', '= 1.3.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.2.0'
-gem 'timelines', '>= 1.2.0', git: 'git@github.com:moneyadviceservice/timelines.git'
+gem 'timelines', '>= 1.2.3', git: 'git@github.com:moneyadviceservice/timelines.git'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

@@ -36,9 +36,9 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
-  revision: 7146855cc241276bcb6131ef28d18fa72d5df122
+  revision: 81a762a756ad8135263e828b02b88741b67b9795
   specs:
-    timelines (1.2.2)
+    timelines (1.2.3)
       bowndler
       icalendar
       jquery-rails (>= 3.1.2)
@@ -801,7 +801,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5!
   timecop
-  timelines (>= 1.2.0)!
+  timelines (>= 1.2.3)!
   uglifier (>= 1.3.0)
   unicorn-rails
   validate_url (= 1.0.0)

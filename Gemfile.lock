@@ -56,7 +56,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/rio.git
-  revision: 17c24f765ff28cec2d8fc2500c0e27aaed0f1517
+  revision: 6d6d5c692fa9e6bc9cc468253e622a5894307c67
+  ref: 6d6d5c6
   branch: 7236_budget_2016_update
   specs:
     rio (1.2.0.pre.uat)
@@ -326,7 +327,7 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (5.16.1.276)
+    dough-ruby (5.16.2.277)
       activesupport
       rails (>= 3.2)
       sass-rails (~> 4.0.0)

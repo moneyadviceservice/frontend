@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/budget-planner
-  revision: bb147eb0e8891af131ea34c2e7771e313df71b77
+  revision: 42477a594870b7569ef03dd90c549fb347a153c1
   branch: budget-planner-redesign-master
   specs:
     budget_planner (4.0.4)
@@ -750,7 +750,7 @@ DEPENDENCIES
   devise (= 3.2.4)
   devise-encryptable
   dotenv-rails
-  dough-ruby (~> 5.16.0)
+  dough-ruby (~> 5.16.2)
   draper (~> 1.3.0)
   ejs
   email_spec

@@ -6,19 +6,15 @@
   border-top: $default-border-thin;
 
   @include respond-to($mq-l) {
-    &:before, &:after {
+    &:after {
       content: "";
       position: absolute;
       top: 0;
       bottom: $baseline-unit*4;
-      left: 33.3333%;
+      left: 50%;
       border-right: 1px solid $color-newsletter-input-border;
       width: 1px;
       min-height: 400px;
-    }
-
-    &:after {
-      left: 66.6666%;
     }
   }
 }
@@ -37,6 +33,6 @@
   @include column(12);
 
   @include respond-to($mq-l) {
-    @include column(4);
+    @include column(6);
   }
 }

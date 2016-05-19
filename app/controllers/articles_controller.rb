@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
     set_breadcrumbs
     set_related_content
     set_categories
-    set_show_newsletter_signup
     set_parent_category
   end
 

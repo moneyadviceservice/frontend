@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
     exclude = ::NewsletterExclusions::slugs.include?(params[:id])
     welsh = I18n.locale == :cy
 
-    @newsletter_excluded = newsletter_submitted_cookie_set? || exclude || welsh
+    @newsletter_excluded = exclude || welsh
   end
 
   def default_main_content_location?

@@ -8,7 +8,6 @@ class NewsletterSubscriptionsController < ApplicationController
     @success = Core::NewsletterSubscriptionCreator.new(subscription_params[:email]).call
 
     if @success
-      set_cookie
       session[:newsletter_subscribed] = true
       flash[:success] = I18n.t('newsletter_subscriptions.success')
     else
@@ -28,10 +27,6 @@ class NewsletterSubscriptionsController < ApplicationController
   end
 
   def categories
-    ['footer', 'sticky', 'in_article']
-  end
-
-  def set_cookie
-    cookies.permanent[COOKIE_SUBMIT_NEWSLETTER_NAME] = COOKIE_HIDE_NEWSLETTER_VALUE
+    ['footer', 'in_article']
   end
 end

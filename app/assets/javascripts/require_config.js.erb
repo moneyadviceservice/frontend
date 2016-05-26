@@ -17,14 +17,13 @@
 //= depend_on_asset modules/google_complete
 
 //= depend_on_asset components/ClearInput
-//= depend_on_asset components/Newsletter
 //= depend_on_asset components/WantToTalk
 //= depend_on_asset components/StickyColumn
-//= depend_on_asset components/NewsletterSticky
 //= depend_on_asset components/ViewAll
 
 //= depend_on_asset dough/assets/js/lib/featureDetect
 //= depend_on_asset dough/assets/js/lib/componentLoader
+//= depend_on_asset dough/assets/js/components/BackToTop
 //= depend_on_asset dough/assets/js/components/DoughBaseComponent
 //= depend_on_asset dough/assets/js/components/RangeInput
 //= depend_on_asset dough/assets/js/components/TabSelector
@@ -73,9 +72,7 @@
 
       # Non Dough Component
       WantToTalk: requirejs_path('components/WantToTalk'),
-      Newsletter: requirejs_path('components/Newsletter'),
       StickyColumn: requirejs_path('components/StickyColumn'),
-      NewsletterSticky: requirejs_path('components/NewsletterSticky'),
 
       # Engines
       carCostToolConfig: requirejs_path('car_cost_tool/require_config'),
@@ -97,6 +94,7 @@
   requirejs_config[:paths].merge!({
     utilities: requirejs_path('dough/assets/js/lib/utilities'),
 
+    BackToTop: requirejs_path('dough/assets/js/components/BackToTop'),
     Collapsable: requirejs_path('dough/assets/js/components/Collapsable'),
     CollapsableMobile: requirejs_path('dough/assets/js/components/CollapsableMobile'),
     DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
@@ -106,7 +104,7 @@
     Validation: requirejs_path('dough/assets/js/components/Validation'),
     componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
     featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
-    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries'),
+    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries')
   })
 %>
 

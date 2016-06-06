@@ -4,11 +4,11 @@
 @import 'yeast/assets/lib/all';
 
 // Helpers
-@import 'helpers/form-input';
-@import 'helpers/form-input-focus';
-@import 'helpers/layout';
-@import 'helpers/rails_reset';
-@import 'helpers/video_wrapper';
+@import 'yeast/helpers/form-input';
+@import 'yeast/form-input-focus';
+@import 'yeast/layout';
+@import 'yeast/rails_reset';
+@import 'yeast/video_wrapper';
 
 // Base
 @import 'base/variables';

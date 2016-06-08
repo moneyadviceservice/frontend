@@ -9,7 +9,6 @@ module UI::Pages
     element :password, "input[name='user[password]']"
     element :password_confirmation, "input[name='user[password_confirmation]']"
     element :post_code, "input[name='user[post_code]']"
-    element :newsletter_subscription, "input[name='user[newsletter_subscription]'][type='checkbox']"
     element :opt_in_for_research, "input[name='user[opt_in_for_research]'][type='checkbox']"
     element :contact_number, "input[name='user[contact_number]']"
     element :submit, "#new_user input[type='submit']"

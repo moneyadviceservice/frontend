@@ -8,7 +8,6 @@ When(/^I register$/) do
   sign_up_page.email.set 'phil@example.com'
   sign_up_page.password.set 'password'
   sign_up_page.post_code.set 'NE1 6EE'
-  sign_up_page.newsletter_subscription.set true
   sign_up_page.opt_in_for_research.set true
   sign_up_page.contact_number '03005005000'
   sign_up_page.submit.click
@@ -25,7 +24,7 @@ Then(/^My MAS account should (not )?be created$/) do |negated|
     expect(User.where(email: 'phil@example.com')
                 .where(first_name: 'phil')
                 .where(post_code: 'NE1 6EE')
-                .where(newsletter_subscription: true)
+                .where(newsletter_subscription: false)
                 .count).to eql(1)
   end
 end
@@ -82,7 +81,7 @@ Then(/^My MAS account should have already been created$/) do
   expect(User.where(email: 'phil@example.com')
               .where(first_name: 'phil')
               .where(post_code: 'NE1 6EE')
-              .where(newsletter_subscription: true)
+              .where(newsletter_subscription: false)
               .count).to eql(1)
 end
 
@@ -117,8 +116,4 @@ end
 Then(/^the option to participate in marketing research should not be checked$/) do
   step 'I should have the option to opt-in or opt-out of participating in research'
   expect(sign_up_page.opt_in_for_research.checked?).to be_falsey
-end
-
-Then(/^I should see the newsletter signup opt\-in unchecked$/) do
-  expect(sign_up_page.newsletter_subscription.checked?).to be_falsey
 end

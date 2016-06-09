@@ -12,6 +12,26 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/budget_planner.git
+  revision: 126acb64298284a29a036b1ced2fce52ca469023
+  branch: budget-planner-redesign-master
+  specs:
+    budget_planner (4.0.4)
+      coffee-rails
+      i18n-js (= 3.0.0.mas)
+      jquery-rails
+      jquery-ui-rails (~> 4.0)
+      js-routes (= 1.1.2)
+      mas-feedback
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (~> 4.1)
+      sass-rails (~> 4.0)
+      spreadsheet
+      syslog-logger
+      uglifier (>= 1.0.3)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -132,20 +152,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
       thor
-    budget_planner (4.0.3.729)
-      coffee-rails
-      i18n-js (= 3.0.0.mas)
-      jquery-rails
-      jquery-ui-rails (~> 4.0)
-      js-routes (= 1.1.2)
-      mas-feedback
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (~> 4.1)
-      sass-rails (~> 4.0)
-      spreadsheet
-      syslog-logger
-      uglifier (>= 1.0.3)
     bugsnag (2.8.12)
       json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
@@ -309,7 +315,7 @@ GEM
     dotenv (0.10.0)
     dotenv-rails (0.10.0)
       dotenv (= 0.10.0)
-    dough-ruby (5.16.0.275)
+    dough-ruby (5.16.2.277)
       activesupport
       rails (>= 3.2)
       sass-rails (~> 4.0.0)
@@ -460,7 +466,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     modernizr-rails (2.6.3)
     mortgage_calculator (1.4.9.645)
       angularjs-rails (~> 1.2.18)
@@ -471,7 +477,7 @@ GEM
       rails (~> 4.1)
       sass-rails (~> 4.0.3)
       underscore-rails
-    multi_json (1.11.2)
+    multi_json (1.12.1)
     multi_test (0.1.1)
     multipart-post (1.2.0)
     mysql2 (0.3.20)
@@ -718,7 +724,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner (~> 4.0.3)
+  budget_planner!
   bugsnag
   byebug
   capybara

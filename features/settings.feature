@@ -26,9 +26,3 @@ Feature: Settings
     And   I am on the settings page
     And   I update post code to "NW1 8TY"
     Then  I should see a successful update notification
-
-  Scenario: Updating newsletter opt-in
-    Given I am signed in
-    And   I am on the settings page
-    And   I opt out of MAS newsletters
-    Then  I should see a successful update notification

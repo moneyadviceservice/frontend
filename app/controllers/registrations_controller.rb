@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
   def build_resource(hash = nil)
     if hash
       hash[:accept_terms_conditions] = true
-      hash[:newsletter_subscription] = false unless request.post?
+      hash[:newsletter_subscription] = false
     end
     super
   end
@@ -27,7 +27,6 @@ class RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:sign_up) << :contact_number
     devise_parameter_sanitizer.for(:account_update) << :first_name
     devise_parameter_sanitizer.for(:account_update) << :post_code
-    devise_parameter_sanitizer.for(:account_update) << :newsletter_subscription
     devise_parameter_sanitizer.for(:account_update) << :opt_in_for_research
     devise_parameter_sanitizer.for(:account_update) << :contact_number
   end

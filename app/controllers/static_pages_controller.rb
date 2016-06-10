@@ -8,10 +8,6 @@ class StaticPagesController < ApplicationController
 
     @breadcrumbs = BreadcrumbTrail.home
 
-    if template_exists?("/static_pages/#{params[:id].underscore}")
-      render template: "/static_pages/#{params[:id].underscore}"
-    else
-      render :show
-    end
+    render :show
   end
 end

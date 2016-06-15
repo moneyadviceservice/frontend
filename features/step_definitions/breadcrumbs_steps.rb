@@ -10,10 +10,6 @@ Given(/^I read an action plan belonging to multiple categories$/) do
   browse_to_action_plan action_plan_in_multiple_categories
 end
 
-Given(/^I read a static page$/) do
-  static_page.load(locale: 'en', id: 'contact-us')
-end
-
 Given(/^I read a news article$/) do
   browse_to_news_article news_article
 end

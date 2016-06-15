@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/en/articles/non-fca-debt-management-companies.json
+    uri: http://localhost:3000/api/cy/articles/debt-management-companies.json
     body:
       encoding: US-ASCII
       string: ''
@@ -11,7 +11,7 @@ http_interactions:
       - Mas-Responsive/1.0 (Jon-Gilbraith.local; jongilbraith; 37802) ruby/2.1.2 (95;
         x86_64-darwin14.0)
       X-Request-Id:
-      - 50f96fec-9ab0-42d9-9a71-fbee0fffa930
+      - 2db8aab3-11c7-44df-883f-84a1981e4bb8
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -30,13 +30,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"88e45eb53f5cf3d292710d010c8136aa"'
+      - '"1d213ada8d9f823414e556b41394a272"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 50f96fec-9ab0-42d9-9a71-fbee0fffa930
+      - 2db8aab3-11c7-44df-883f-84a1981e4bb8
       X-Runtime:
-      - '0.959030'
+      - '0.054541'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
@@ -50,7 +50,7 @@ http_interactions:
       string: !binary |-
         eyJsYWJlbCI6Ikxpc3Qgb2YgZmlybXMgbm8gbG9uZ2VyIG9mZmVyaW5nIGRl
         YnQgbWFuYWdlbWVudCBwbGFucyIsInNsdWciOiJub24tZmNhLWRlYnQtbWFu
-        YWdlbWVudC1jb21wYW5pZXMiLCJmdWxsX3BhdGgiOiIvZW4vYXJ0aWNsZXMv
+        YWdlbWVudC1jb21wYW5pZXMiLCJmdWxsX3BhdGgiOiIvY3kvYXJ0aWNsZXMv
         bm9uLWZjYS1kZWJ0LW1hbmFnZW1lbnQtY29tcGFuaWVzIiwibWV0YV9kZXNj
         cmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6
         W10sImxheW91dF9pZGVudGlmaWVyIjoiYXJ0aWNsZSIsInJlbGF0ZWRfY29u
@@ -66,7 +66,7 @@ http_interactions:
         YXMteW91ci1jcmVkaXQtc2NvcmUtYmVlbi1oaXQtYnktdm90ZS1ydWxlLWNo
         YW5nZSJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3MiOltd
         LCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hl
-        ZF9hdCI6IjIwMTYtMDItMDNUMTM6NTg6MTUuMDAwWiIsImJsb2NrcyI6W3si
+        ZF9hdCI6IjIwMTYtMDItMDNUMTU6NTc6MjkuMDAwWiIsImJsb2NrcyI6W3si
         aWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjdWxcdTAw
         M2VcbiAgXHUwMDNjbGlcdTAwM2VBY3IgRmluYW5jZVx1MDAzYy9saVx1MDAz
         ZVxuICBcdTAwM2NsaVx1MDAzZUJha2VyIEV2YW5zIExpbWl0ZWRcdTAwM2Mv
@@ -146,11 +146,11 @@ http_interactions:
         cmUgRGVidCBTb2x1dGlvbnMgTGltaXRlZFx1MDAzYy9saVx1MDAzZVxuICBc
         dTAwM2NsaVx1MDAzZVVLIENsYWltIENlbnRyZSBMaW1pdGVkXHUwMDNjL2xp
         XHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE2
-        LTAyLTAzVDEyOjE1OjMzLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNi0wMi0w
-        M1QxMzo1ODoxNS4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOlt7ImxhYmVsIjoi
+        LTAyLTAzVDEyOjE0OjI0LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNi0wMi0w
+        M1QxNDoxMzo1My4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOlt7ImxhYmVsIjoi
         TGlzdCBvZiBmaXJtcyBubyBsb25nZXIgb2ZmZXJpbmcgZGVidCBtYW5hZ2Vt
-        ZW50IHBsYW5zIiwibGluayI6Ii9jeS9hcnRpY2xlcy9ub24tZmNhLWRlYnQt
-        bWFuYWdlbWVudC1jb21wYW5pZXMiLCJsYW5ndWFnZSI6ImN5In1dfQ==
-    http_version: 
+        ZW50IHBsYW5zIiwibGluayI6Ii9lbi9hcnRpY2xlcy9ub24tZmNhLWRlYnQt
+        bWFuYWdlbWVudC1jb21wYW5pZXMiLCJsYW5ndWFnZSI6ImVuIn1dfQ==
+    http_version:
   recorded_at: Thu, 04 Feb 2016 12:16:56 GMT
 recorded_with: VCR 2.9.2

@@ -102,7 +102,6 @@ cy:
         email: "E-bost"
         password: "Cyfrinair"
         post_code: "Cod post"
-        newsletter: "Anfonwch gyngor am ddim i mi drwy e-bost"
         opt_in_for_research: Ticiwch os hoffech i ni gysylltu â chi i’n helpu gyda’n hymchwil
         contact_number: Rhif cyswllt (dewisol)
         register_button: "Cofrestru"
@@ -279,7 +278,7 @@ cy:
     news: Newyddion ac erthyglau
     news_link: /cy/news
     blog: Blog
-    blog_link: https://blog.moneyadviceservice.org.uk
+    blog_link: https://www.moneyadviceservice.org.uk/blog
     tools_and_resources: Offer a chyfrifianellau
     tools_and_resources_link: /cy/categories/tools-and-calculators
     site_map: Map safle
@@ -294,6 +293,9 @@ cy:
         Drwy barhau i ddefnyddio ein gwefan rydych yn cytuno â'r defnydd a wneir ohoni.
         <a class="cookie-message__link" href="%{url}">Canfyddwch fwy am cwcis.</a>
       close_button: Cau
+    facebook-likes: Wedi hoffi
+    twitter-followers: Dilynwyr
+    youtube-views: Gwelwyd
 
   articles:
     show:
@@ -319,6 +321,9 @@ cy:
       label_facebook: Rhannwch yr erthygl hon ar Facebook
       label_twitter: Rhannwch yr erthygl hon ar Twitter
       label_email: Rhannwch yr erthygl hon trwy E-bost
+
+    nav:
+      back_to_top: Yn ôl i’r top
 
   categories:
     top_links:
@@ -387,16 +392,6 @@ cy:
     success: Y cyfan am ddim ac yn ddiduedd
     error: Rhiowch gyfeiriad e-bost dilys
     privacy_html: Ni fyddwn fyth yn rhannu’ch data nac yn anfon sbam atoch. Gweler ein <a href="/en/corporate/privacy" target="_blank">Polisi Preifatrwydd</a>
-    sticky:
-      intro: 200,00 o bobl eisoes yn cael ein cylchlythyr am ddim yn llawn awgrymiadau a chyngor.
-      are_you: A ydych chi yn?
-      sign_up_today: " "
-      sorry: Ymddiheuriadau, ni allwn wneud hynny ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen.
-      privacy_policy_html: "Peidiwch â phoeni, ni fyddwn yn rhannu’ch data gydag unrhyw un. Gweler ein <a href=\"/cy/corporate/polisipreifatrwydd\">polisi preifatrwydd</a>."
-      placeholder_text: Rhowch eich cyfeiriad e-bost
-      send_me_money_advice: Cofrestrwch
-      dont_ask_me_again: Peidiwch â gofyn i mi eto
-      done: Cwblhau
     signup_inpage:
       title: "200,00 o bobl eisoes yn cael ein cylchlythyr am ddim yn llawn awgrymiadau a chyngor."
       supplementary_text: "A ydych chi yn?"
@@ -425,24 +420,15 @@ cy:
       subtitle: Yr hyn y byddwch yn ei dderbyn
       bullets:
         - "Cadwch eich Cynllunydd Cyllideb a chadwch eich crynodeb o’ch gwariant wrth law"
-        - "Cyngor ariannol am ddim yn syth i’ch mewnflwch"
         - "Cymorth gyda’ch nodau ariannol, fel prynu tŷ neu gar"
       terms_html: "Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href=\"%{url}\">Hamodau a Thelerau</a>."
-      label: Ceisiwch gyngor ariannol rhad ac am ddim
+      label: Arwyddwch fi
       field_help_texts:
         first_name: Rhowch eich enw cyntaf
         email: "Rydym angen eich cyfeiriad e-bost er mwyn i chi gofrestru"
         password: "Rhowch gyfrinair er mwyn cadw'ch gwybodaeth yn breifat"
         contact_number: Rhowch rif ffôn dilys y Deyrnas Unedig
         postcode: "Rhowch god post dilys o'r DU"
-      newsletter:
-        title: Cyngor ariannol i chi
-        intro: "Gallwn roi cymorth gyda..."
-        benefits:
-          - Cyllidebu ar incwm isel
-          - Gosod eich nodau ariannol personol eich hun
-          - Y gwir gost o redeg car
-          - Sut i fforddio prynu cartref
     sign_in_page:
       meta:
         canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_in
@@ -507,7 +493,6 @@ cy:
       password_confirmation: Cadarnhau Cyfrinair Newydd
       newsletter:
         title: Rheoli fy Newisiadau
-        intro: "Parhewch i danysgrifio er mwyn cael…"
 
   technical_feedback:
     new:

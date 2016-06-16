@@ -4,35 +4,35 @@
 @import 'yeast/assets/lib/all';
 
 // Helpers
-@import 'helpers/form-input';
-@import 'helpers/form-input-focus';
-@import 'helpers/layout';
-@import 'helpers/rails_reset';
-@import 'helpers/video_wrapper';
+@import 'yeast/assets/helpers/form-input';
+@import 'yeast/assets/helpers/form-input-focus';
+@import 'yeast/assets/helpers/layout';
+@import 'yeast/assets/helpers/rails_reset';
+@import 'yeast/assets/helpers/video_wrapper';
 
 // Base
-@import 'base/variables';
-@import 'base/forms';
-@import 'base/headings';
-@import 'base/images';
-@import 'base/links';
-@import 'base/lists';
-@import 'base/paragraphs';
-@import 'base/reset';
-@import 'base/type';
+@import 'yeast/assets/base/variables';
+@import 'yeast/assets/base/forms';
+@import 'yeast/assets/base/headings';
+@import 'yeast/assets/base/images';
+@import 'yeast/assets/base/links';
+@import 'yeast/assets/base/lists';
+@import 'yeast/assets/base/paragraphs';
+@import 'yeast/assets/base/reset';
+@import 'yeast/assets/base/type';
 
 // Dough
 @import 'dough/assets/stylesheets/common';
 @import 'dough/assets/stylesheets/optional';
 
 // Layout
-@import 'layout/variables';
-@import 'layout/common/all';
+@import 'yeast/assets/layout/variables';
+@import 'yeast/assets/layout/common/all';
 @import 'layout/page_specific/all';
 
 // Dough Theme Components
-@import 'components/dough_theme/variables';
-@import 'components/dough_theme/*/_all.scss';
+@import 'yeast/assets/components/dough_theme/variables';
+@import 'yeast/assets/components/dough_theme/_all.scss';
 
 // Local Components
 @import 'components/common/all';

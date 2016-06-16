@@ -35,7 +35,7 @@ module Core
           customer[:gender] = 'female'
           customer[:age_range] = '0-15'
           customer[:date_of_birth] = '1988-01-01'
-          customer[:newsletter_subscription] = 'true'
+          customer[:newsletter_subscription] = 'false'
           customer[:active] = 'true'
           # topics to be implemented
 
@@ -51,7 +51,7 @@ module Core
           expect(user.gender).to eql('female')
           expect(user.age_range).to eql('0-15')
           expect(user.date_of_birth).to eql(DateTime.new(1988, 01, 01))
-          expect(user.newsletter_subscription).to eql(true)
+          expect(user.newsletter_subscription).to eql(false)
           expect(user.active).to eql(true)
         end
       end

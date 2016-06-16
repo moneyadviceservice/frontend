@@ -48,7 +48,3 @@ Feature: Registration
     Given I have a registration title set in the session
     When I visit the registration page
     Then I should not see the registration benefits
-
-  Scenario: Newsletter sign-up unchecked on user registration
-     When I visit the registration page
-     Then I should see the newsletter signup opt-in unchecked

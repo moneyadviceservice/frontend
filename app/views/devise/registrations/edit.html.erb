@@ -114,7 +114,7 @@
 
     <div class="registration__row">
       <div class="registration__field">
-        <%= f.form_row :opt_in_for_research, html_options: {classes: "form__row--collapse"} do %>
+        <%= f.form_row :opt_in_for_research do %>
 
           <%= f.errors_for :opt_in_for_research %>
 
@@ -126,31 +126,6 @@
               <% end %>
             </div>
           </fieldset>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="registration__row">
-      <div class="registration__field">
-        <%= f.form_row :newsletter_subscription do %>
-
-          <%= f.errors_for :newsletter_subscription %>
-
-          <fieldset class="form__group">
-            <div class="form__group-item">
-              <%= f.label :newsletter_subscription, class: "form__label-heading" do %>
-                <%= f.check_box :newsletter_subscription, class: "form__group-input" %>
-                <%= t("activerecord.attributes.user.newsletter") %>
-              <% end %>
-            </div>
-          </fieldset>
-          <strong><p><%= t("authentication.settings.newsletter.intro") %></p></strong>
-          <ul class="list form__list">
-            <% t('authentication.registration.newsletter.benefits').each do |benefit| %>
-              <li><%= benefit %></li>
-            <% end %>
-          </ul>
-
         <% end %>
       </div>
     </div>

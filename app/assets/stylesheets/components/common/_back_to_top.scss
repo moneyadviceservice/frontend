@@ -1,0 +1,56 @@
+$back_to_top_link-height: 42px;
+
+.back_to_top__link {
+  bottom: 0 - ($back_to_top_link-height + 6px);
+  right: 0;
+  margin: 0;
+  padding: 0 10px 0 40px;
+  border-radius: $baseline-unit*1.5 0 0 0;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: $color-green-primary;
+  z-index: 1;
+  line-height: $back_to_top_link-height;
+  height: $back_to_top_link-height;
+  transition: bottom, 0.4s;
+  border-left: solid 1px $color-green-six;
+  border-top: solid 1px $color-green-six;
+  color: $color-white;
+
+  &:focus {
+    background-color: $color-green-primary;
+  }
+
+  &:visited,
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.back_to_top__link--shown {
+  bottom: 0;
+}
+
+.back_to_top__link__arrow {
+  width: 20px;
+  height: 12.1572px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $color-white;
+  margin: 0;
+}
+
+.back_to_top__link:hover,
+.back_to_top__link:focus {
+  text-decoration: underline;
+}
+
+.back_to_top__spacer {
+  padding-bottom: $back_to_top_link-height - 12px;
+
+  @include respond-to($mq-m) {
+    padding-bottom: 0;
+  }
+}

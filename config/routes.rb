@@ -131,16 +131,6 @@ Rails.application.routes.draw do
     resource :advice, only: :show
     resources :videos, only: :show
 
-    get '/corporate/contact-us', controller: 'static_pages',
-                                 action: 'show',
-                                 id: 'contact-us',
-                                 constraints: { locale: 'en' }
-
-    get '/corporate/cysylltu-a-ni', controller: 'static_pages',
-                                    action: 'show',
-                                    id: 'cysylltu-a-ni',
-                                    constraints: { locale: 'cy' }
-
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
     resources :corporate, only: [:index, :show, :create] do
       get 'export-partners', on: :collection
@@ -186,11 +176,6 @@ Rails.application.routes.draw do
 
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
-
-    resources :static_pages,
-              path:        'static',
-              only:        'show',
-              constraints: { id: %r{contact-us|cysylltu-a-ni} }
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

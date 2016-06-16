@@ -12,7 +12,6 @@ module UI::Pages
     element :current_password, "input[name='user[current_password]']"
     element :post_code, "input[name='user[post_code]']"
     element :contact_number, "input[name='user[contact_number]']"
-    element :newsletter_subscription, "#user_newsletter_subscription"
     element :opt_in_for_research, "input[name='user[opt_in_for_research]'][type='checkbox']"
 
     element :submit, "input[value='Update']"

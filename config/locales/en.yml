@@ -100,7 +100,6 @@ en:
         email: Email
         password: Password
         post_code: Postcode
-        newsletter: Send me free advice by email
         contact_number: Contact number (optional)
         opt_in_for_research: Tick if you’d like to be contacted to help us with our research
         register_button: Register
@@ -280,7 +279,7 @@ en:
     news_link: /en/news
     partners_link: /en/corporate_categories/partners
     blog: Blog
-    blog_link: https://blog.moneyadviceservice.org.uk
+    blog_link: https://www.moneyadviceservice.org.uk/blog
     tools_and_resources: Tools & calculators
     tools_and_resources_link: /en/categories/tools-and-calculators
     site_map: Sitemap
@@ -295,6 +294,9 @@ en:
         By continuing to use our website you are agreeing to their use.
         <a class="cookie-message__link" href="%{url}">Find out more about cookies.</a>
       close_button: Close cookie message
+    facebook-likes: Likes
+    twitter-followers: Followers
+    youtube-views: Views
 
   articles:
     show:
@@ -315,16 +317,14 @@ en:
       popular_links_title: Most read
       related_links_title: Related guides
 
-    inline_sign_up:
-       message: "Don’t miss out on the latest news and tips on managing your money. %{signup_link}. \
-                We will never share your data or spam you."
-       link: Sign up to our free fortnightly newsletter
-
     sharing:
       title: Share this article
       label_facebook: Share this article on Facebook
       label_twitter: Share this article on Twitter
       label_email: Share this article by Email
+
+    nav:
+      back_to_top: Back to top
 
   categories:
     top_links:
@@ -393,16 +393,6 @@ en:
     success: Look out for money advice in your inbox soon!
     error: Please provide a valid email address
     privacy_html: We will never share your data or spam you. See our <a href="/en/corporate/privacy" target="_blank">Privacy Policy</a>
-    sticky:
-      intro: 200,000 people are taking care of their money with our FREE money advice newsletter.
-      are_you: Are you?
-      sign_up_today: Sign up today.
-      sorry: "Sorry, we can't do that right now. Please try again later."
-      privacy_policy_html: "We won't share your details. See our <a href=\"/en/corporate/privacy\" target=\"_blank\">privacy policy.</a>"
-      placeholder_text: What's your email?
-      send_me_money_advice: Send me money advice
-      dont_ask_me_again: Don’t ask me again
-      done: Done
     signup_inpage:
       title: "200,000 people are taking care of their money with our FREE money advice newsletter."
       supplementary_text: "Sign up today!"
@@ -432,25 +422,16 @@ en:
       subtitle: What you'll get
       bullets:
         - "Save your Budget Planner and keep your spending breakdown handy"
-        - "Free money advice straight to your inbox"
         - "Help with your money goals, like buying a house or car"
       description_html: default description
       terms_html: "By clicking the button you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
-      label: Get free money advice
+      label: Sign me up
       field_help_texts:
         first_name: "Please enter your first name"
         email: "We need your email for you to register"
         password: Please enter a password to keep your information private
         postcode: Please enter a valid UK postcode
         contact_number: Please enter a valid UK phone number
-      newsletter:
-        title: "Money advice for you"
-        intro: "We can help with..."
-        benefits:
-          - Budgeting on a low income
-          - Setting your own personal money goals
-          - The true cost of running a car
-          - How to afford to buy a home
     sign_in_page:
       meta:
         canonical: https://www.moneyadviceservice.org.uk/en/users/sign_in
@@ -514,7 +495,6 @@ en:
       password_confirmation: New Password confirmation
       newsletter:
         title: Manage my preferences
-        intro: "Stay subscribed to get..."
 
   technical_feedback:
     new:

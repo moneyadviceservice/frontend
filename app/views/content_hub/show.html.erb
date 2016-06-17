@@ -21,8 +21,6 @@
       <section class="l-content-hub__modules">
         <div class="l-content-hub__modules__inner">
           <div class="l-content-hub__modules__content">
-
-            <%# loop this section -- %>
             <% t('content_hub_modules.modules').each do |block| %>
               <div class="l-content-hub__module content-hub__module--<%= block[:type] %>">
                 <div class="l-content-hub__module__inner">
@@ -32,14 +30,14 @@
                   <% if (block.has_key?(:image)) then %>
                     <div class="l-content-hub__module__image" style="background-image:url(<%= block[:image] %>)"></div>
                   <% end %>
-                  <% if (block.has_key?(:description)) then %>
-                    <div class="l-content-hub__module__content">
-                      <p class="content-hub__module__description"><%= block[:description] %></p>
-                    </div>
-                  <% end %>
-                  <% if (block.has_key?(:cta)) then %>
-                    <button class="button button--primary content-hub__module__button"><%= block[:cta] %></button>
-                  <% end %>
+                  <div class="l-content-hub__module__content">
+                    <% if (block.has_key?(:description)) then %>
+                        <p class="content-hub__module__description"><%= block[:description] %></p>
+                    <% end %>
+                    <% if (block.has_key?(:link)) then %>
+                      <button class="button button--primary content-hub__module__button"><%= block[:link] %></button>
+                    <% end %>
+                  </div>
                   <% if (block.has_key?(:links)) then %>
                     <ul class="content-hub__module__links unstyled-list">
                       <% block[:links].each do |link| %>
@@ -47,123 +45,17 @@
                       <% end %>
                     </ul>
                   <% end %>
+                  <% if (block.has_key?(:cta)) then %>
+                    <a href="#" class="content-hub__module__cta">
+                      <%= block[:cta] %>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
+                      </svg>
+                    </a>
+                  <% end %>
                 </div>
               </div>
             <% end %>
-            <%# -- loop this section %>
-
-            <div class="l-content-hub__module content-hub__module--img-con-lnk">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__image" style="background-image:url(http://comfy.moneyadviceservice.org.uk/system/comfy/cms/files/files/000/000/180/original/budgeting_managing_money_small.png)"></div>
-                <div class="l-content-hub__module__content">
-                  <p class="content-hub__module__description">Need extra money? Our Quick cash finder can help you cut your spending.</p>
-                  <button class="button button--primary content-hub__module__button">Get saving</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
-              <div class="l-content-hub__module__inner">
-                <%= heading_tag 'Running a bank account', class: 'content-hub__module__title heading-medium', level: 1 %>
-                <ul class="content-hub__module__links unstyled-list">
-                  <li><a href="#">Running your bank account</a></li>
-                  <li><a href="#">Current accounts</a></li>
-                  <li><a href="#">How to reclaim unfair bank charges</a></li>
-                </ul>
-                <a href="#" class="content-hub__module__cta">
-                  view all
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
-              <div class="l-content-hub__module__inner">
-                <%= heading_tag 'Managing money', class: 'content-hub__module__title heading-medium', level: 1 %>
-                <ul class="content-hub__module__links unstyled-list">
-                  <li><a href="#">How to budget on a low income</a></li>
-                  <li><a href="#">Money Health Check</a></li>
-                  <li><a href="#">How to avoid debt using a bank account and a prepaid card</a></li>
-                </ul>
-                <a href="#" class="content-hub__module__cta">
-                  view all
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
-              <div class="l-content-hub__module__inner">
-                <%= heading_tag 'Student and graduate money', class: 'content-hub__module__title heading-medium', level: 1 %>
-                <ul class="content-hub__module__links unstyled-list">
-                  <li><a href="#">Preparing your son or daughter for student life</a></li>
-                  <li><a href="#">A guide to student and graduate bank accounts</a></li>
-                  <li><a href="#">Budgeting for college or university</a></li>
-                </ul>
-                <a href="#" class="content-hub__module__cta">
-                  view all
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-con-lnk-img">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__image" style="background-image:url(https://7069a4cd501a043ace07-df56fe22442d54931c3d0a668e14458b.ssl.cf3.rackcdn.com/files/article/638/hero/resized_couple_at_laptop_cropped.jpg)"></div>
-                <div class="l-content-hub__module__content">
-                  <%= heading_tag 'How to use price comparison websites', class: 'content-hub__module__title heading-small', level: 1 %>
-                  <p class="content-hub__module__description">How to compare mortgages, gas and electricity deals and bank accounts. Includes links to comparison websites.</p>
-                  <button class="button button--primary content-hub__module__button">Read more</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
-              <div class="l-content-hub__module__inner">
-                <%= heading_tag 'Cutting costs', class: 'content-hub__module__title heading-medium', level: 1 %>
-                <ul class="content-hub__module__links unstyled-list">
-                  <li><a href="#">Save money on your home phone and broadband</a></li>
-                  <li><a href="#">Paying for and protecting your phone</a></li>
-                  <li><a href="#">Council Tax: what it is, how much it costs and how to save money</a></li>
-                </ul>
-                <a href="#" class="content-hub__module__cta">
-                  view all
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--img">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__image" style="background-image:url(https://7069a4cd501a043ace07-df56fe22442d54931c3d0a668e14458b.ssl.cf3.rackcdn.com/files/article/661/hero/resized_putting_money_in_a_piggybank.jpg)"></div>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--tool">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__content">
-                  <%= heading_tag 'Mortgage Calculator', class: 'content-hub__module__title heading-medium', level: 1 %>
-                  <p class="content-hub__module__description">Find out your monthly mortgage payments.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--blog">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__content">
-                  <%= heading_tag 'Paws for thought &#8211; the hidden &#163;5,000 cost of a dog', class: 'content-hub__module__title heading-medium', level: 1 %>
-                  <p class="content-hub__module__description">26th August</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

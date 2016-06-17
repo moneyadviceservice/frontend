@@ -4,16 +4,16 @@
   <div class="l-content-hub__inner">
     <div class="l-constrained">
       <section class="l-content-hub__title">
-        <%= heading_tag 'Budgeting and managing money', class: 'heading-extra-large content-hub__heading', level: 1 %>
+        <%= heading_tag t('content_hub_modules.pagetitle'), class: 'heading-extra-large content-hub__heading', level: 1 %>
       </section>
 
       <section class="l-content-hub__hero">
         <div class="l-content-hub__hero__inner">
           <div class="content-hub__hero__image"></div>
           <div class="l-content-hub__hero__content">
-            <%= heading_tag 'Budget Planner', class: 'content-hub__hero__title heading-large', level: 1 %>
-            <p class="content-hub__hero__description">Use our Budget planner to work out how much you have coming in and out each month. We’ll analyse your results and help you cut costs.</p>
-            <button class="button button--primary content-hub__hero__button">Start budgeting</button>
+            <%= heading_tag t('content_hub_modules.hero.title'), class: 'content-hub__hero__title heading-large', level: 1 %>
+            <p class="content-hub__hero__description"><%= t('content_hub_modules.hero.description') %></p>
+            <button class="button button--primary content-hub__hero__button"><%= t('content_hub_modules.hero.button') %></button>
           </div>
         </div>
       </section>
@@ -21,26 +21,36 @@
       <section class="l-content-hub__modules">
         <div class="l-content-hub__modules__inner">
           <div class="l-content-hub__modules__content">
-            <div class="l-content-hub__module content-hub__module--img-con-lnk">
-              <div class="l-content-hub__module__inner">
-                <div class="l-content-hub__module__image" style="background-image:url(http://comfy.moneyadviceservice.org.uk/system/comfy/cms/files/files/000/000/191/original/pensions_retirement_2x.png)"></div>
-                <div class="l-content-hub__module__content">
-                  <p class="content-hub__module__description">Work out your festive budget and keep your Christmas merry with our Christmas Money Planner.</p>
-                  <button class="button button--primary content-hub__module__button">Get started</button>
+
+            <%# loop this section -- %>
+            <% t('content_hub_modules.modules').each do |block| %>
+              <div class="l-content-hub__module content-hub__module--<%= block[:type] %>">
+                <div class="l-content-hub__module__inner">
+                  <% if (block.has_key?(:header)) then %>
+                    <%= heading_tag block[:header], class: 'content-hub__module__title heading-medium', level: 1 %>
+                  <% end %>
+                  <% if (block.has_key?(:image)) then %>
+                    <div class="l-content-hub__module__image" style="background-image:url(<%= block[:image] %>)"></div>
+                  <% end %>
+                  <% if (block.has_key?(:description)) then %>
+                    <div class="l-content-hub__module__content">
+                      <p class="content-hub__module__description"><%= block[:description] %></p>
+                    </div>
+                  <% end %>
+                  <% if (block.has_key?(:cta)) then %>
+                    <button class="button button--primary content-hub__module__button"><%= block[:cta] %></button>
+                  <% end %>
+                  <% if (block.has_key?(:links)) then %>
+                    <ul class="content-hub__module__links unstyled-list">
+                      <% block[:links].each do |link| %>
+                        <li><a href="<%= link[:url] %>"><%= link[:text] %></a></li>
+                      <% end %>
+                    </ul>
+                  <% end %>
                 </div>
               </div>
-            </div>
-
-            <div class="l-content-hub__module content-hub__module--hdr-lnks">
-              <div class="l-content-hub__module__inner">
-                <%= heading_tag 'Most read articles', class: 'content-hub__module__title heading-medium', level: 1 %>
-                <ul class="content-hub__module__links unstyled-list">
-                  <li><a href="#">Beginner’s guide to managing your money</a></li>
-                  <li><a href="#">How to choose the right bank account</a></li>
-                  <li><a href="#">Should you manage your money jointly or separately?</a></li>
-                </ul>
-              </div>
-            </div>
+            <% end %>
+            <%# -- loop this section %>
 
             <div class="l-content-hub__module content-hub__module--img-con-lnk">
               <div class="l-content-hub__module__inner">

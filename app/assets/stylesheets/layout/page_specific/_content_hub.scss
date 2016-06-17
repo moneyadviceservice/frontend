@@ -285,7 +285,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 }
 // -- hdr-lnks-cta
 
-// double width --
+// hdr-con-lnk-img --
 .content-hub__module--hdr-con-lnk-img {
   @include respond-to($content-hub-one-col-breakpoint) {
     width: $content-hub_width_two-module;
@@ -320,115 +320,4 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     }
   }
 }
-// -- double width
-
-// image only --
-.content-hub__module--img {
-  padding-top: 100%;
-  height: 0;
-
-  @include respond-to($content-hub-width-one-module) {
-    padding-top: 0;
-    height: $content-hub-width-one-module;
-  }
-
-  .l-content-hub__module__image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-size: cover;
-  }
-}
-// -- image only
-
-// tool --
-.content-hub__module--tool {
-  text-align: center;
-  background-color: #f96d49; // not in colour pallet!
-  padding-top: 100%;
-  height: 0;
-
-  @include respond-to($content-hub-width-one-module) {
-    padding-top: 0;
-    height: $content-hub-width-one-module;
-  }
-
-  .l-content-hub__module__content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .l-content-hub__module__content > * {
-    padding-left: $content-hub-module-margin-width;
-    padding-right: $content-hub-module-margin-width;
-  }
-
-  .content-hub__module__title {
-    font-size: 2rem;
-  }
-
-  .content-hub__module__description {
-    color: $content-hub-module-reversecolor;
-    background-color: $content-hub-module-reverseBGcolor;
-    padding-top: $baseline-unit * 2;
-    padding-bottom: $baseline-unit * 2;
-    margin-bottom: 0;
-    font-size: 1.25rem;
-  }
-
-  .l-content-hub__module__inner:before {
-    content: 'Tools';
-    position: absolute;
-    top: $baseline-unit * 3;
-    right: $content-hub-module-margin-width;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-}
-// -- tool
-
-// blog --
-.content-hub__module--blog {
-  background-color: #1076ab; // not in colour pallet!
-  padding-top: 100%;
-  height: 0;
-
-  @include respond-to($content-hub-width-one-module) {
-    padding-top: 0;
-    height: $content-hub-width-one-module;
-  }
-
-  .l-content-hub__module__inner:before {
-    content: 'Blog';
-    position: absolute;
-    top: $baseline-unit * 3;
-    right: $content-hub-module-margin-width;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $content-hub-module-reversecolor;
-  }
-
-  .content-hub__module__title {
-    font-size: 2rem;
-    color: $content-hub-module-reversecolor;
-  }
-
-  .l-content-hub__module__content {
-    position: absolute;
-    top: 50%;
-    left: $content-hub-module-margin-width;
-    right: $content-hub-module-margin-width;
-    transform: translateY(-50%);
-  }
-
-  .l-content-hub__module__description {
-    font-size: 1.25rem;
-    color: $content-hub-module-reversecolor;
-    margin-bottom: 0;
-  }
-}
-// -- blog
+// -- hdr-con-lnk-img

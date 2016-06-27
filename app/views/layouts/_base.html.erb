@@ -8,6 +8,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- optimizely script -->
   <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_qa?) && Feature.active?(:optimizely) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>

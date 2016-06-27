@@ -12,19 +12,6 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
-  remote: git@github.com:moneyadviceservice/action_plans
-  revision: 544dbd7cbc66fba7339094fe17bc31025c0eda01
-  branch: 7305_add_two_year_minimum
-  specs:
-    action_plans (4.0.8)
-      autoprefixer-rails
-      dough-ruby
-      draper
-      hashie
-      jquery-rails-cdn
-      rails (~> 4.1.8)
-
-GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -63,7 +50,7 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.1.0.324)
+    action_plans (4.1.1.325)
       autoprefixer-rails
       dough-ruby
       draper
@@ -721,7 +708,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.1.0)
+  action_plans (~> 4.1.1)
   activerecord-session_store
   advice_plans (~> 3.1.0)
   aes

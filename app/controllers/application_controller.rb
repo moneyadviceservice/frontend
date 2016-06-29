@@ -16,8 +16,7 @@ class ApplicationController < ActionController::Base
     @footer = interactor.call
   end
 
-  helper  ChatMigrationMessage
-  helper  BudgetWarning
+  helper ChatMigrationMessage
 
   COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'

@@ -153,7 +153,6 @@ Rails.application.routes.draw do
                       get-set-for-summer|
                       how-to-look-ahead-when-buying-a-car|
                       interest-only-mortgages|
-                      interest-rates-rise|
                       life-and-critical-illness|
                       paying-too-much-tax-on-savings|
                       revealed-the-true-cost-of-buying-a-car|

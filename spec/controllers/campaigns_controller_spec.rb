@@ -22,7 +22,7 @@ RSpec.describe CampaignsController, type: :controller do
     end
 
     context 'if there are a custom template' do
-      let(:campaign_page_id) { 'interest-rates-rise' }
+      let(:campaign_page_id) { 'life-and-critical-illness' }
       subject { get :show, locale: I18n.locale, id: campaign_page_id }
 
       it 'renders the custom template' do

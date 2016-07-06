@@ -8,11 +8,6 @@
   <% end %>
 
   <div class="t-default-main-content" id="<%= 'main' if default_main_content_location? %>" tabindex="-1">
-    <% if display_banner_warning? && whitelisted? %>
-      <div class="l-constrained">
-        <%=  render 'shared/banner_alert' %>
-      </div>
-    <% end %>
     <%= yield %>
   </div>
 <% end %>

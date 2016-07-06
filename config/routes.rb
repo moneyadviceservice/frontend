@@ -153,7 +153,6 @@ Rails.application.routes.draw do
                       get-set-for-summer|
                       how-to-look-ahead-when-buying-a-car|
                       interest-only-mortgages|
-                      interest-rates-rise|
                       life-and-critical-illness|
                       paying-too-much-tax-on-savings|
                       revealed-the-true-cost-of-buying-a-car|
@@ -180,8 +179,6 @@ Rails.application.routes.draw do
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'
-
-    resource :newsletter_subscription, only: :create, path: 'newsletter-subscription'
 
     resource :cookie_dismissal, only: :create, controller: 'cookie_dismissal'
 

@@ -46,13 +46,6 @@ class ArticlesController < ApplicationController
     @parent_category ||= ParentCategory.find(@article, category_tree)
   end
 
-  def set_show_newsletter_signup
-    exclude = ::NewsletterExclusions::slugs.include?(params[:id])
-    welsh = I18n.locale == :cy
-
-    @newsletter_excluded = exclude || welsh
-  end
-
   def default_main_content_location?
     false
   end

@@ -20,7 +20,6 @@ class CorporateController < ArticlesController
     set_breadcrumbs
     set_related_content
     set_categories
-    set_show_newsletter_signup
 
     retrieve_syndication_tools
     retrieve_corporate_category

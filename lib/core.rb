@@ -21,10 +21,8 @@ module Core
   autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
   autoload :Footer, 'core/entity/footer'
-  autoload :Newsletter, 'core/entity/newsletter'
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
-  autoload :NewsletterSubscription, 'core/entity/newsletter_subscription'
   autoload :Other, 'core/entity/other'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
@@ -53,7 +51,6 @@ module Core
   autoload :FooterReader, 'core/interactor/footer_reader'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
-  autoload :NewsletterSubscriptionCreator, 'core/interactor/newsletter_subscription_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'
@@ -135,11 +132,6 @@ module Core
     module News
       autoload :PublicWebsite, 'core/repository/news/public_website'
       autoload :CMS, 'core/repository/news/cms'
-    end
-
-    module NewsletterSubscriptions
-      autoload :Cream, 'core/repository/newsletter_subscriptions/cream'
-      autoload :Fake, 'core/repository/newsletter_subscriptions/fake'
     end
 
     module RecommendedTools

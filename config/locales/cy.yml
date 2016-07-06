@@ -381,29 +381,6 @@ cy:
       title: Newyddion a straeon diweddaraf
       link_html: Gweld yr holl &hellip;
 
-  newsletter_subscriptions:
-    title: Newyddlen
-    hidden_title: Tanysgrifiwch i'n newyddlen rhad ac am ddim
-    heading: Negeseuon e-bost yn rhoi cyngor am ddim ar arian (Saesneg) # required for the newsletter component
-    introduction: "Mae 200,000 o bobl yn gofalu am eu harian gyda’n newyddlen cyngor ariannol RHAD AC AM DDIM."
-    strap: Tanysgrifiwch heddiw!
-    label: Beth yw eich cyfeiriad e-bost?
-    button: Anfonwch gyngor ariannol ataf i
-    success: Y cyfan am ddim ac yn ddiduedd
-    error: Rhiowch gyfeiriad e-bost dilys
-    privacy_html: Ni fyddwn fyth yn rhannu’ch data nac yn anfon sbam atoch. Gweler ein <a href="/en/corporate/privacy" target="_blank">Polisi Preifatrwydd</a>
-    signup_inpage:
-      title: "200,00 o bobl eisoes yn cael ein cylchlythyr am ddim yn llawn awgrymiadau a chyngor."
-      supplementary_text: "A ydych chi yn?"
-      controls:
-        email:
-          placeholder: "Rhowch eich cyfeiriad e-bost"
-        button:
-          text: "Ceisiwch gyngor ariannol rhad ac am ddim"
-      privacy_text: "Peidiwch â phoeni, ni fyddwn yn rhannu’ch data gydag unrhyw un."
-      privacy_text_2: "Gweler ein"
-      privacy_link_text: "polisi preifatrwydd."
-
   authentication:
     sign_in: Mewngofnodi
     sign_out: Cofnodi Allan
@@ -491,7 +468,7 @@ cy:
         title: Newid fy nghyfrinair (Dewisol)
         label: Cyfrinair Newydd
       password_confirmation: Cadarnhau Cyfrinair Newydd
-      newsletter:
+      opt_in:
         title: Rheoli fy Newisiadau
 
   technical_feedback:

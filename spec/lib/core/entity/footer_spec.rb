@@ -14,9 +14,7 @@ RSpec.describe Core::Footer do
         { 'identifier' => 'raw_contact_additional_one', 'content' => 'Monday to Friday, 8am to 8pm' },
         { 'identifier' => 'raw_contact_additional_two', 'content' => 'Saturday, 9am to 1pm' },
         { 'identifier' => 'raw_contact_additional_three', 'content' => 'Sunday and Bank Holidays, closed' },
-        { 'identifier' => 'raw_contact_small_print', 'content' => '* Calls are free.' },
-        { 'identifier' => 'raw_newsletter_heading', 'content' => 'Newsletter' },
-        { 'identifier' => 'raw_newsletter_introduction', 'content' => 'FREE money advice newsletter.' },
+        { 'identifier' => 'raw_contact_small_print', 'content' => '* Calls are free.' }
       ]
     }
   end
@@ -58,21 +56,5 @@ RSpec.describe Core::Footer do
     it { expect(subject.contact.additional_one).to eq('Monday to Friday, 8am to 8pm') }
     it { expect(subject.contact.additional_two).to eq('Saturday, 9am to 1pm') }
     it { expect(subject.contact.additional_three).to eq('Sunday and Bank Holidays, closed') }
-  end
-
-  describe '#newsletter' do
-    it 'returns a Newsletter object' do
-      expect(subject.newsletter).to be_a(Core::Newsletter)
-    end
-
-    it "doesn't make multiple instances of contact if called multiple times" do
-      allow(Core::Newsletter).to receive(:new).and_call_original
-      3.times { subject.newsletter }
-      expect(Core::Newsletter).to have_received(:new).once
-    end
-
-
-    it { expect(subject.newsletter.heading).to eq('Newsletter') }
-    it { expect(subject.newsletter.introduction).to eq('FREE money advice newsletter.') }
   end
 end

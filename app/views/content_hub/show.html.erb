@@ -13,7 +13,9 @@
           <div class="l-content-hub__hero__content">
             <%= heading_tag t('content_hub_blocks.hero.title'), class: 'content-hub__hero__title heading-large', level: 1 %>
             <p class="content-hub__hero__description"><%= t('content_hub_blocks.hero.description') %></p>
-            <button class="button button--primary content-hub__hero__button"><%= t('content_hub_blocks.hero.button') %></button>
+            <%= form_tag t('content_hub_blocks.hero.button.url'), method: :get do %>
+              <button class="button button--primary content-hub__hero__button"><%= t('content_hub_blocks.hero.button.text') %></button>
+            <% end %>
           </div>
         </div>
       </section>

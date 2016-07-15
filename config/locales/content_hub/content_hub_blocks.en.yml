@@ -4,13 +4,17 @@ en:
     hero:
       title: Budget Planner
       description: Use our Budget planner to work out how much you have coming in and out each month. We’ll analyse your results and help you cut costs.
-      button: Start budgeting
+      button:
+        text: Start budgeting
+        url: /
 
     blocks:
       - type: image
         image: pensions_retirement_2x.png
         description: Work out your festive budget and keep your Christmas merry with our Christmas Money Planner.
-        link: Get started
+        button:
+          text: Get started
+          url: /
 
       - type: list
         header: Most read articles
@@ -25,7 +29,9 @@ en:
       - type: image
         image: budgeting_managing_money_small.png
         description: Need extra money? Our Quick cash finder can help you cut your spending.
-        link: Get saving
+        button:
+          text: Get saving
+          url: /
 
       - type: list_with_cta
         header: Running a bank account
@@ -63,7 +69,9 @@ en:
       - type: wide
         header: How to use price comparison websites
         description: How to compare mortgages, gas and electricity deals and bank accounts. Includes links to comparison websites.
-        link: Read more
+        button:
+          text: Read more
+          url: /
         image: resized_couple_at_laptop_cropped.jpg
 
       - type: list_with_cta

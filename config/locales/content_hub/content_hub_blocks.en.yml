@@ -1,98 +1,94 @@
 en:
   content_hub_blocks:
-    page_title: Budgeting and managing money
+    page_title: Page title TBC
     hero:
-      title: Budget Planner
+      title: What are fee-free basic bank accounts?
       description_html: |
         <p>
-          Use our Budget planner to work out how much you have coming in and out each month.
-          We’ll analyse your results and help you cut costs.
+          Getting a fee-free basic bank account is a good option for anyone having trouble using a standard account.
+          They have a number of advantages including:
         </p>
+        <ul>
+          <li>No fees for missed payments</li>
+          <li>The opportunity to build up a credit history</li>
+          <li>Many of the same services as regular current accounts</li>
+        </ul>
       button:
-        text: Start budgeting
-        url: /
+        text: Read more
+        url: /en/articles/basic-bank-accounts#fee-free-basic-bank-accounts
 
     blocks:
       - type: image
         image: pensions_retirement_2x.png
         description_html: |
           <p>
-            Work out your festive budget and keep your Christmas merry with our Christmas Money Planner.
+            Take a few minutes to see how much money you have coming in and out each month.
           </p>
         button:
-          text: Get started
-          url: /
+          text: Start budgeting
+          url: /en/tools/budget-planner
 
       - type: list
-        header: Most read articles
+        header: Fee-free Basic bank accounts explained
         links:
-        - text: Beginner’s guide to managing your money
-          url: #
-        - text: How to choose the right bank account
-          url: #
-        - text: Should you manage your money jointly or separately?
-          url: #
+        - text: Who can get one?
+          url: /en/articles/basic-bank-accounts#who-can-get-a-basic-bank-account
+        - text: Which banks offer them?
+          url: /en/articles/basic-bank-accounts#who-offers-fee-free-bank-accounts
+        - text: How much does a basic account cost?
+          url: /en/articles/basic-bank-accounts#how-much-does-a-basic-bank-account-cost
 
       - type: image
         image: budgeting_managing_money_small.png
-        description_html: |
-          <p>Need extra money? Our Quick cash finder can help you cut your spending.</p>
+        description_html:
         button:
-          text: Get saving
-          url: /
-
-      - type: list_with_cta
-        header: Running a bank account
-        links:
-        - text: Running your bank account
-          url: #
-        - text: Current accounts
-          url: #
-        - text: How to reclaim unfair bank charges
-          url: #
-        cta: view all
-
-      - type: list_with_cta
-        header: Managing money
-        links:
-        - text: How to budget on a low income
-          url: #
-        - text: Money Health Check
-          url: #
-        - text: How to avoid debt using a bank account and a prepaid card
-          url: #
-        cta: view all
-
-      - type: list_with_cta
-        header: Student and graduate money
-        links:
-        - text: Preparing your son or daughter for student life
-          url: #
-        - text: A guide to student and graduate bank accounts
-          url: #
-        - text: Budgeting for college or university
-          url: #
-        cta: view all
+          text: How to use a bank account to make budgeting easier
+          url: https://www.youtube.com/watch?v=vkCDpXg3rt4
 
       - type: wide
-        header: How to use price comparison websites
-        description_html: |
-          <p>
-            How to compare mortgages, gas and electricity deals and bank accounts.
-            Includes links to comparison websites.
-          </p>
+        header: Download or print our handy guide to fee-free basic bank accounts
+        description_html:
         button:
-          text: Read more
-          url: /
+          text: PDF download
+          url: /en/articles/free-printed-guides#fee-free-basic-bank-accounts
         image: resized_couple_at_laptop_cropped.jpg
 
-      - type: list_with_cta
-        header: Cutting costs
+      - type: list
+        header: How to run a bank account
         links:
-        - text: Save money on your home phone and broadband
-          url: #
-        - text: Paying for and protecting your phone
-          url: #
-        - text: 'Council Tax: what it is, how much it costs and how to save money'
-          url: #
-        cta: view all
+        - text: Running your bank account
+          url: /en/articles/running-your-bank-account
+        - text: Managing money
+          url: /en/articles/beginners-guide-to-managing-your-money
+        - text: Choosing the right bank account
+          url: /en/articles/how-to-choose-the-right-bank-account
+
+      - type: list
+        header: Sticking to your budget
+        links:
+        - text: How to live on a budget
+          url: /en/articles/living-on-a-low-income-tips
+        - text: Save on household bills
+          url: /en/articles/how-to-save-money-on-household-bills
+        - text: How to prioritise your debts
+          url: /en/articles/how-to-prioritise-your-debts
+
+      - type: list
+        header: Your credit score
+        links:
+        - text: Improve your credit score
+          url: /en/articles/how-to-improve-your-credit-rating
+        - text: How to check your credit report
+          url: /en/articles/how-to-check-your-credit-report
+        - text: How to get credit for the first time
+          url: /en/articles/getting-credit-for-the-first-time
+
+      - type: list
+        header: Compare fee-free basic bank accounts
+        links:
+        - text: Go Compare
+          url: https://money.gocompare.com/currentaccounts#/?standard=false&packaged=false
+        - text: Moneyfacts
+          url: http://moneyfacts.co.uk/bank-accounts/best-bank-accounts/
+        - text: Money Saving Expert
+          url: http://www.moneysavingexpert.com/banking/basic-bank-accounts

@@ -3,7 +3,11 @@ en:
     page_title: Budgeting and managing money
     hero:
       title: Budget Planner
-      description: Use our Budget planner to work out how much you have coming in and out each month. We’ll analyse your results and help you cut costs.
+      description_html: |
+        <p>
+          Use our Budget planner to work out how much you have coming in and out each month.
+          We’ll analyse your results and help you cut costs.
+        </p>
       button:
         text: Start budgeting
         url: /
@@ -11,7 +15,10 @@ en:
     blocks:
       - type: image
         image: pensions_retirement_2x.png
-        description: Work out your festive budget and keep your Christmas merry with our Christmas Money Planner.
+        description_html: |
+          <p>
+            Work out your festive budget and keep your Christmas merry with our Christmas Money Planner.
+          </p>
         button:
           text: Get started
           url: /
@@ -28,7 +35,8 @@ en:
 
       - type: image
         image: budgeting_managing_money_small.png
-        description: Need extra money? Our Quick cash finder can help you cut your spending.
+        description_html: |
+          <p>Need extra money? Our Quick cash finder can help you cut your spending.</p>
         button:
           text: Get saving
           url: /
@@ -68,7 +76,11 @@ en:
 
       - type: wide
         header: How to use price comparison websites
-        description: How to compare mortgages, gas and electricity deals and bank accounts. Includes links to comparison websites.
+        description_html: |
+          <p>
+            How to compare mortgages, gas and electricity deals and bank accounts.
+            Includes links to comparison websites.
+          </p>
         button:
           text: Read more
           url: /

@@ -2,7 +2,9 @@
   <div class="l-content-hub__module__inner">
     <div class="l-content-hub__module__image" style="background-image:url(<%= asset_path("content_hub/#{block[:image]}") %>)"></div>
     <div class="l-content-hub__module__content">
-      <p class="content-hub__module__description"><%= block[:description] %></p>
+      <div class="content-hub__module__description">
+        <%=raw block[:description_html] %>
+      </div>
       <%= form_tag block[:button][:url], method: :get do %>
         <button class="button button--primary content-hub__module__button">
           <%= block[:button][:text] %>

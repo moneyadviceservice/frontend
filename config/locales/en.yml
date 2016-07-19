@@ -382,30 +382,6 @@ en:
       title: Latest news and features
       link_html: View all &hellip;
 
-  newsletter_subscriptions:
-    title: Newsletter
-    hidden_title: Sign up to our free newsletter
-    heading: Free money advice emails # required for the newsletter component
-    introduction: 200,000 people are taking care of their money with our FREE money advice newsletter.
-    strap: Sign up today!
-    label: What's your email?
-    button: Send me money advice
-    success: Look out for money advice in your inbox soon!
-    error: Please provide a valid email address
-    privacy_html: We will never share your data or spam you. See our <a href="/en/corporate/privacy" target="_blank">Privacy Policy</a>
-    signup_inpage:
-      title: "200,000 people are taking care of their money with our FREE money advice newsletter."
-      supplementary_text: "Sign up today!"
-      controls:
-        email:
-          label: "Enter your email"
-          placeholder: "Enter your email"
-        button:
-          text: "Send me money advice"
-      privacy_text: "Don't worry, we won't share your details."
-      privacy_text_2: "See our"
-      privacy_link_text: "privacy policy."
-
   authentication:
     sign_in: Sign in
     sign_out: Sign out
@@ -493,7 +469,7 @@ en:
         title: Change my password (Optional)
         label: New password
       password_confirmation: New Password confirmation
-      newsletter:
+      opt_in:
         title: Manage my preferences
 
   technical_feedback:
@@ -581,7 +557,3 @@ en:
     meta:
       title: Sitemap
       canonical: https://www.moneyadviceservice.org.uk/en/sitemap
-
-  tools_budget_warning:
-    title: Please note
-    description: "This tool is currently being updated for the new tax year. You can still use it to get an idea of your financial situation, but some figures might change. Please check back soon to use our updated tool. We apologise for the inconvenience."

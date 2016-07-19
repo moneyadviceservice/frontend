@@ -1,0 +1,16 @@
+<div class="l-content-hub__module content-hub__module--hdr-lnks-cta">
+  <div class="l-content-hub__module__inner">
+    <%= heading_tag block[:header], class: 'content-hub__module__title heading-medium', level: 1 %>
+    <ul class="content-hub__module__links unstyled-list">
+      <% block[:links].each do |link| %>
+        <li><a href="<%= link[:url] %>"><%= link[:text] %></a></li>
+      <% end %>
+    </ul>
+    <a href="#" class="content-hub__module__cta">
+      <%= block[:cta] %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon content-hub__module__cta-icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--stripe-banner-arrow"></use>
+      </svg>
+    </a>
+  </div>
+</div>

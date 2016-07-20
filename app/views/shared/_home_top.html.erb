@@ -1,23 +1,30 @@
 <div class="l-home-top">
   <div class="home-top">
-    <div style="background-image: url(<%= item.hero_image %>);" class="home-top__image"></div>
     <div class="l-constrained">
-      <div class="home-top-trust">
-        <p class="home-top-trust__heading"><%= item.heading %></p>
-        <ul class="home-top-trust-content">
-          <li class="home-top-trust-content__item"><%= item.bullet_1 %></li>
-          <li class="home-top-trust-content__item"><%= item.bullet_2 %></li>
-          <li class="home-top-trust-content__item"><%= item.bullet_3 %></li>
-        </ul>
+      
+      <div class="home-top-left">
+        <div class="home-top-trust">
+          <p class="home-top-trust__heading"><%= item.heading %></p>
+          <ul class="home-top-trust-content">
+            <li class="home-top-trust-content__item"><%= item.bullet_1 %></li>
+            <li class="home-top-trust-content__item"><%= item.bullet_2 %></li>
+            <li class="home-top-trust-content__item"><%= item.bullet_3 %></li>
+          </ul>
+        </div>
       </div>
-      <div class="home-top-promo">
-        <p class="home-top-promo__text">
-          <a href="<%= item.cta_link %>" class="home-top-promo-link">
-            <%= item.cta_text %>
-            <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'home-top-promo-link__arrow' %>
-          </a>
-        </p>
+      
+      <div class="home-top-right">
+        <div style="background-image: url(<%= item.hero_image %>);" class="home-top__image"></div>
+        <div class="home-top-promo">
+          <p class="home-top-promo__text">
+            <a href="<%= item.cta_link %>" class="home-top-promo-link">
+              <%= item.cta_text %>
+              <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'home-top-promo-link__arrow' %>
+            </a>
+          </p>
+        </div>
       </div>
+      
     </div>
   </div>
 </div>

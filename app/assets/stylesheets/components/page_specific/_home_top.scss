@@ -19,6 +19,15 @@
 
 }
 
+.home-top-left,
+.home-top-right {
+  @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(6);
+  }
+}
+
 .home-top-trust {
   position: relative;
   margin-top: $baseline-unit*7;
@@ -30,7 +39,6 @@
 }
 
 .home-top__image {
-
   background-repeat: no-repeat;
   background-size: contain;
   bottom: 0;
@@ -41,21 +49,14 @@
   @include respond-to($mq-m) {
     padding-top: 33%;
     right: 0;
-    width: 60%;
+    width: 50%;
+    position: relative;
   }
 
   @include respond-to($mq-l) {
     background-position: right;
     padding-top: 28%;
-    width: 55%;
-  }
-
-  @include respond-to($mq-xl) {
-    @include absolutely-centre-horizontally(1350px);
-    background-position: 100% 0%;
-    background-repeat: no-repeat;
-    background-size: 46%;
-    height: 345px;
+    position: absolute;
   }
 
   @if $responsive == false {
@@ -115,10 +116,6 @@
   @include body(16, 24);
   margin-bottom: $baseline-unit;
 
-  @include respond-to($mq-m) {
-    max-width: 45%;
-  }
-
   @include respond-to($mq-l) {
     max-width: none;
 
@@ -135,21 +132,11 @@
 }
 
 .home-top-promo {
-  clear: both;
-
-  @include respond-to($mq-small-tablet, $mq-small-tablet-end) {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-
-  @include respond-to($mq-l) {
-    bottom: 0;
-    clear: none;
-    margin: 0;
-    position: absolute;
-    right: 3%;
-  }
+  bottom: 0;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  right: 0;
 }
 
 .home-top-promo__text {
@@ -157,21 +144,16 @@
   @include body(22, 30);
   background-color:$color-black;
   background: rgba(0,0,0,0.8);
-  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   margin: 0 $baseline-unit*3;
   max-width: 400px;
-  padding: $baseline-unit*4 $baseline-unit*7 $baseline-unit*4 $baseline-unit*4;
+  padding: $baseline-unit $baseline-unit*7 $baseline-unit $baseline-unit*4;
   position: relative;
-
-  @include respond-to($mq-small-tablet) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
 
   @include respond-to($mq-m) {
     margin: $baseline-unit*2 0 0;
     padding: $baseline-unit*2 $baseline-unit*8 $baseline-unit*2 $baseline-unit*4;
-    width: 55%;
   }
 
   @include respond-to($mq-l) {

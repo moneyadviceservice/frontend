@@ -8,23 +8,26 @@
       </section>
 
       <section class="l-content-hub__hero">
-        <div class="l-content-hub__hero__inner">
-          <div class="content-hub__hero__image"></div>
-          <div class="l-content-hub__hero__content">
-            <%= heading_tag t("#{translation_prefix}.hero.title"), class: 'content-hub__hero__title heading-large', level: 1 %>
-            <div class="content-hub__hero__description">
+        <div class="l-content-hub__hero-inner">
+          <div
+            class="content-hub__hero-image"
+            style="background-image:url(<%= asset_path("content_hub/#{t("#{translation_prefix}.hero.image")}") %>"
+          ></div>
+          <div class="l-content-hub__hero-content">
+            <%= heading_tag t("#{translation_prefix}.hero.title"), class: 'content-hub__hero-title heading-large', level: 1 %>
+            <div class="content-hub__hero-description">
               <%= t("#{translation_prefix}.hero.description_html") %>
             </div>
             <%= form_tag t("#{translation_prefix}.hero.button.url"), method: :get do %>
-              <button class="button button--primary content-hub__hero__button"><%= t("#{translation_prefix}.hero.button.text") %></button>
+              <button class="button button--primary content-hub__hero-button"><%= t("#{translation_prefix}.hero.button.text") %></button>
             <% end %>
           </div>
         </div>
       </section>
 
       <section class="l-content-hub__modules">
-        <div class="l-content-hub__modules__inner">
-          <div class="l-content-hub__modules__content">
+        <div class="l-content-hub__modules-inner">
+          <div class="l-content-hub__modules-content">
             <% t("#{translation_prefix}.blocks").each do |block| %>
               <%= render partial: "/content_hub/blocks/#{block[:type]}", locals: { block: block } %>
             <% end %>

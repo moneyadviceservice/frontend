@@ -1,9 +1,11 @@
+.content-hub {}
+
 .content-hub__heading {
   color: $color-black;
   font-size: 2rem;
   width: auto;
-  margin-left: $content-hub-horizontal-space; // $content-hub-module-margin-width;
-  margin-right: $content-hub-horizontal-space; // $content-hub-module-margin-width;
+  margin-left: $content-hub-horizontal-space;
+  margin-right: $content-hub-horizontal-space;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     margin-left: $content-hub-horizontal-space;
@@ -12,34 +14,32 @@
   }
 }
 
-.content-hub__hero__title {
+.content-hub__hero-title {
   color: $content-hub-title-color;
   margin-top: 0;
 }
 
-.content-hub__hero__image {
+.content-hub__hero-image {
   padding-bottom: 100%;
-  background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_square-a6f6f25554c9931e379ea608e53aa4fe.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
+  background-size: cover; // contain;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     position: absolute;
     top: 0;
     bottom: 0;
     padding-bottom: 0;
-    background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_landscape-3cfd77f38825bd8842f81fb82d7d5ad0.jpg);
     width: 50%;
     padding: 0 $content-hub-horizontal-space;
   }
 }
 
-.content-hub__hero__description {
+.content-hub__hero-description {
   @extend %paragraph-intro
 }
 
-.content-hub__hero__button {
+.content-hub__hero-button {
   width: 100%;
 
   @include respond-to($content-hub-one-col-breakpoint) {
@@ -51,12 +51,12 @@
   }
 }
 
-.content-hub__module__title {
+.content-hub__module-title {
   margin-top: 0;
   color: $content-hub-title-color;
 }
 
-.content-hub__module__description {
+.content-hub__module-description {
   @include body(20, 24);
 
   @include respond-to($content-hub-one-col-breakpoint) {
@@ -64,7 +64,7 @@
   }
 }
 
-.content-hub__module__links {
+.content-hub__module-links {
   @extend %paragraph-intro;
 
   margin-top: $baseline-unit;
@@ -74,7 +74,7 @@
   }
 }
 
-.content-hub__module__button {
+.content-hub__module-button {
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -84,32 +84,9 @@
   }
 }
 
-// hdr-lnks-cta --
-.content-hub__module--hdr-lnks-cta {
-  .content-hub__module__links {
-    padding-bottom: 40px;
-  }
-
-  .content-hub__module__cta {
-    display: block;
-    font-weight: bold;
-    font-size: 1.125rem;
-    line-height: 40px;
-    position: absolute;
-    bottom: $baseline-unit * 3;
-    right: 0;
-    color: $content-hub-title-color;
-
-    @include respond-to($content-hub-one-col-breakpoint) {
-      right: $content-hub-module-margin-width;
-    }
-  }
-
-  .content-hub__module__cta-icon {
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-  }
+.content-hub__module-image {
+  padding-bottom: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-// -- hdr-lnks-cta

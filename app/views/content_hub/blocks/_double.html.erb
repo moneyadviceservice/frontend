@@ -1,5 +1,6 @@
-<div class="l-content-hub__module l-content-hub__module--img-con-lnk">
+<div class="l-content-hub__module l-content-hub__module--hdr-con-lnk-img">
   <div class="l-content-hub__module-inner">
+    <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 2 %>
     <div class="content-hub__module-image" style="background-image:url(<%= asset_path("content_hub/#{block[:image]}") %>)"></div>
     <div class="content-hub__module-content">
       <div class="content-hub__module-description">

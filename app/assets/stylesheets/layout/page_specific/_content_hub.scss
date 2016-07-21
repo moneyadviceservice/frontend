@@ -67,11 +67,12 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 
 .l-content-hub__hero__inner {
   position: relative;
-  padding-top: $baseline-unit*3;
   padding-bottom: $baseline-unit*3;
 
   @include respond-to($content-hub-one-col-breakpoint) {
-    height: $content-hub-width-one-module;
+    @include clearfix();
+    min-height: $content-hub-width-one-module;
+    padding-top: $baseline-unit*3;
   }
 }
 
@@ -148,62 +149,3 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-
-// module-specific variations
-// img-con-lnk --
-.content-hub__module--img-con-lnk {
-  .l-content-hub__module__content {
-    @include respond-to($content-hub-one-col-breakpoint) {
-      position: absolute;
-      bottom: $baseline-unit * 3;
-    }
-  }
-}
-// -- img-con-lnk
-
-.content-hub__module--hdr-lnks-cta {
-  .l-content-hub__module__inner {
-    position: relative;
-
-    @include respond-to($content-hub-one-col-breakpoint) {
-      position: static;
-    }
-  }
-}
-
-// hdr-con-lnk-img --
-.content-hub__module--hdr-con-lnk-img {
-  @include respond-to($content-hub-one-col-breakpoint) {
-    width: $content-hub_width_two-module;
-  }
-
-  .l-content-hub__module__inner {
-    @include respond-to($content-hub-one-col-breakpoint) {
-      margin: 0 ($content-hub-module-margin-width / 2);
-    }
-  }
-
-  .l-content-hub__module__content {
-    @include respond-to($content-hub-one-col-breakpoint) {
-      width: 50% - ($content-hub-module-margin-width / 2);
-    }
-  }
-
-  .l-content-hub__module__image {
-    width: 100%;
-    padding-bottom: 100%;
-    background-size: cover;
-
-    @include respond-to($content-hub-one-col-breakpoint) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: $content-hub-width-one-module;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      padding-bottom: 0;
-    }
-  }
-}
-// -- hdr-con-lnk-img

@@ -2,8 +2,8 @@
   color: $color-black;
   font-size: 2rem;
   width: auto;
-  margin-left: $content-hub-horizontal-space; // $content-hub-module-margin-width;
-  margin-right: $content-hub-horizontal-space; // $content-hub-module-margin-width;
+  margin-left: $content-hub-horizontal-space;
+  margin-right: $content-hub-horizontal-space;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     margin-left: $content-hub-horizontal-space;
@@ -19,17 +19,15 @@
 
 .content-hub__hero__image {
   padding-bottom: 100%;
-  background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_square-a6f6f25554c9931e379ea608e53aa4fe.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
+  background-size: cover; // contain;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     position: absolute;
     top: 0;
     bottom: 0;
     padding-bottom: 0;
-    background-image: url(https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/budget_planner/start_landscape-3cfd77f38825bd8842f81fb82d7d5ad0.jpg);
     width: 50%;
     padding: 0 $content-hub-horizontal-space;
   }
@@ -84,8 +82,28 @@
   }
 }
 
+// module-specific variations
+// img-con-lnk --
+.content-hub__module--img-con-lnk {
+  .l-content-hub__module__content {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: absolute;
+      bottom: $baseline-unit * 3;
+    }
+  }
+}
+// -- img-con-lnk
+
 // hdr-lnks-cta --
 .content-hub__module--hdr-lnks-cta {
+  .l-content-hub__module__inner {
+    position: relative;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: static;
+    }
+  }
+
   .content-hub__module__links {
     padding-bottom: 40px;
   }
@@ -113,3 +131,40 @@
   }
 }
 // -- hdr-lnks-cta
+
+// hdr-con-lnk-img --
+.content-hub__module--hdr-con-lnk-img {
+  @include respond-to($content-hub-one-col-breakpoint) {
+    width: $content-hub_width_two-module;
+  }
+
+  .l-content-hub__module__inner {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      margin: 0 ($content-hub-module-margin-width / 2);
+    }
+  }
+
+  .l-content-hub__module__content {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      width: 50% - ($content-hub-module-margin-width / 2);
+    }
+  }
+
+  .l-content-hub__module__image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $content-hub-width-one-module;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      padding-bottom: 0;
+    }
+  }
+}
+// -- hdr-con-lnk-img

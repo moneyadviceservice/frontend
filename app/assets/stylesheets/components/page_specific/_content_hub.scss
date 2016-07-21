@@ -144,7 +144,8 @@
     }
   }
 
-  .l-content-hub__module__content {
+  .l-content-hub__module__content,
+  .content-hub__module__title {
     @include respond-to($content-hub-one-col-breakpoint) {
       width: 50% - ($content-hub-module-margin-width / 2);
     }

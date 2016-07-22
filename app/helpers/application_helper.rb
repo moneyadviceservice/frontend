@@ -55,8 +55,8 @@ module ApplicationHelper
     (request.fullpath =~ /^\/(cy|en)\/(tools|retirement-income-options)/).present?
   end
 
-  def is_environment_on_qa?
-    ENV['MAS_ENVIRONMENT'] == 'qa'
+  def is_environment_on_uat?
+    ENV['MAS_ENVIRONMENT'] == 'uat'
   end
 
   private

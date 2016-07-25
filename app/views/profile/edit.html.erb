@@ -86,6 +86,7 @@
     <p><%= t('.goal.introduction') %></p>
     <%= form_for current_user, html: {id: 'goal_form', class: 'form l-profile__your-goal__form'}, url: profile_path, method: :put do |f| %>
       <fieldset class="form__group">
+        <legend class="l-profile__your-goal__form-legend"><%= t('.goal.fieldset_legend') %></legend>
         <div class="form__row">
           <label class="form__label-heading" for="goal_statement" ><%= t('.goal.statement_field_label') %></label>
           <input id="goal_statement" type="text" name="goal_statement" value="<%= current_user.goal_statement %>">

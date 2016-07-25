@@ -53,6 +53,12 @@
   margin-bottom: $baseline-unit*2;
 }
 
+.l-profile__your-goal__form-legend {
+  @include body(20, 24);
+  font-weight: 700;
+  color: $color-green-dark;
+}
+
 .l-profile__your-tools__heading {
   padding-right: 25px;
   position: relative;

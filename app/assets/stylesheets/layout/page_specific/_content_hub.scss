@@ -149,3 +149,93 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+// module-specific variations
+// img-con-lnk --
+.content-hub__module--img-con-lnk {
+  .l-content-hub__module__content {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: absolute;
+      bottom: $baseline-unit * 3;
+      left: $content-hub-module-margin-width;
+      right: $content-hub-module-margin-width;
+    }
+  }
+}
+// -- img-con-lnk
+
+// hdr-lnks-cta --
+.content-hub__module--hdr-lnks-cta {
+  .l-content-hub__module__inner {
+    position: relative;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: static;
+    }
+  }
+
+  .content-hub__module__links {
+    padding-bottom: 40px;
+  }
+
+  .content-hub__module__cta {
+    display: block;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 40px;
+    position: absolute;
+    bottom: $baseline-unit * 3;
+    right: 0;
+    color: $content-hub-title-color;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      right: $content-hub-module-margin-width;
+    }
+  }
+
+  .content-hub__module__cta-icon {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
+// -- hdr-lnks-cta
+
+// hdr-con-lnk-img --
+.content-hub__module--hdr-con-lnk-img {
+  @include respond-to($content-hub-one-col-breakpoint) {
+    width: $content-hub_width_two-module;
+  }
+
+  .l-content-hub__module__inner {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      margin: 0 ($content-hub-module-margin-width / 2);
+    }
+  }
+
+  .l-content-hub__module__content,
+  .content-hub__module__title {
+    @include respond-to($content-hub-one-col-breakpoint) {
+      width: 50% - ($content-hub-module-margin-width / 2);
+    }
+  }
+
+  .l-content-hub__module__image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+
+    @include respond-to($content-hub-one-col-breakpoint) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $content-hub-width-one-module;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      padding-bottom: 0;
+    }
+  }
+}
+// -- hdr-con-lnk-img

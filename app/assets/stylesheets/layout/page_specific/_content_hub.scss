@@ -145,7 +145,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 
 .l-content-hub__module__image {
   padding-bottom: 50%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

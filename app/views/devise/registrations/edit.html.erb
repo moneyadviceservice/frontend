@@ -115,17 +115,13 @@
     <div class="registration__row">
       <div class="registration__field">
         <%= f.form_row :opt_in_for_research do %>
-
           <%= f.errors_for :opt_in_for_research %>
-
-          <fieldset class="form__group">
-            <div class="form__group-item">
-              <%= f.label :opt_in_for_research, class: "form__label-heading" do %>
-                <%= f.check_box :opt_in_for_research, class: "form__group-input" %>
-                <%= t("authentication.settings.opt_in_for_research.title") %>
-              <% end %>
-            </div>
-          </fieldset>
+          <div class="form__group-item">
+            <%= f.label :opt_in_for_research, class: "form__label-heading" do %>
+              <%= f.check_box :opt_in_for_research, class: "form__group-input" %>
+              <%= t("authentication.settings.opt_in_for_research.title") %>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>

@@ -145,7 +145,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 
 // module-specific variations
 // img-con-lnk --
-.content-hub__module--img-con-lnk {
+.l-content-hub__module--img-con-lnk {
   .content-hub__module-content {
     @include respond-to($content-hub-one-col-breakpoint) {
       position: absolute;
@@ -158,7 +158,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 // -- img-con-lnk
 
 // hdr-lnks-cta --
-.content-hub__module--hdr-lnks-cta {
+.l-content-hub__module--hdr-lnks-cta {
   .l-content-hub__module-inner {
     position: relative;
 
@@ -196,7 +196,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 // -- hdr-lnks-cta
 
 // hdr-con-lnk-img --
-.content-hub__module--hdr-con-lnk-img {
+.l-content-hub__module--hdr-con-lnk-img {
   @include respond-to($content-hub-one-col-breakpoint) {
     width: $content-hub_width_two-module;
   }

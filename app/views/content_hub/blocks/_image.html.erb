@@ -3,7 +3,7 @@
     <div class="content-hub__module-image" style="background-image:url(<%= asset_path("content_hub/#{block[:image]}") %>)"></div>
     <div class="content-hub__module-content">
       <div class="content-hub__module-description">
-        <%=raw block[:description_html] %>
+        <p><%= block[:description] %></p>
       </div>
       <%= form_tag block[:button][:url], method: :get do %>
         <button class="button button--primary content-hub__module-button">

@@ -1,0 +1,93 @@
+.content-hub {}
+
+.content-hub__heading {
+  color: $color-black;
+  font-size: 2rem;
+  width: auto;
+  margin-left: $content-hub-horizontal-space;
+  margin-right: $content-hub-horizontal-space;
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    margin-left: $content-hub-horizontal-space;
+    margin-right: $content-hub-horizontal-space;
+    font-size: 2.5rem;
+  }
+}
+
+.content-hub__hero-title {
+  color: $content-hub-title-color;
+  margin-top: 0;
+}
+
+.content-hub__hero-image {
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; // contain;
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 0;
+    width: 50%;
+    padding: 0 $content-hub-horizontal-space;
+  }
+}
+
+.content-hub__hero-description {
+  @extend %paragraph-intro
+}
+
+.content-hub__hero-button {
+  width: 100%;
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    width: 75%;
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    width: 50%;
+  }
+}
+
+.content-hub__module-title {
+  margin-top: 0;
+  color: $content-hub-title-color;
+}
+
+.content-hub__module-description {
+  @include body(20, 24);
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    @include body(21, 24);
+  }
+}
+
+.content-hub__module-links {
+  @extend %paragraph-intro;
+
+  margin-top: $baseline-unit;
+
+  & li {
+    margin-top: $baseline-unit * 4;
+  }
+}
+
+.content-hub__module-button {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    width: 75%;
+  }
+}
+
+
+.content-hub__module-image {
+  padding-bottom: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

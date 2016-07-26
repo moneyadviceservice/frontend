@@ -65,7 +65,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__hero__inner {
+.l-content-hub__hero-inner {
   position: relative;
   padding-bottom: $baseline-unit*3;
 
@@ -76,7 +76,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__hero__content {
+.l-content-hub__hero-content {
   padding: 0 $content-hub-horizontal-space;
 
   @include respond-to($content-hub-one-col-breakpoint) {
@@ -85,7 +85,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__hero__content {
+.l-content-hub__hero-content {
   @include respond-to($content-hub-one-col-breakpoint) {
     @include body(20, 27);
   }
@@ -109,7 +109,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__modules__content {
+.l-content-hub__modules-content {
   @include respond-to($content-hub-one-col-breakpoint) {
     margin: 0 (0 - ($content-hub-modules-gutter / 2));
   }
@@ -130,7 +130,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__module__inner {
+.l-content-hub__module-inner {
   $padding: $baseline-unit * 3;
 
   margin-left: $content-hub-module-margin-width;
@@ -143,17 +143,10 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 
-.l-content-hub__module__image {
-  padding-bottom: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 // module-specific variations
 // img-con-lnk --
 .content-hub__module--img-con-lnk {
-  .l-content-hub__module__content {
+  .content-hub__module-content {
     @include respond-to($content-hub-one-col-breakpoint) {
       position: absolute;
       bottom: $baseline-unit * 3;
@@ -166,7 +159,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 
 // hdr-lnks-cta --
 .content-hub__module--hdr-lnks-cta {
-  .l-content-hub__module__inner {
+  .l-content-hub__module-inner {
     position: relative;
 
     @include respond-to($content-hub-one-col-breakpoint) {
@@ -174,11 +167,11 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     }
   }
 
-  .content-hub__module__links {
+  .content-hub__module-links {
     padding-bottom: 40px;
   }
 
-  .content-hub__module__cta {
+  .content-hub__module-cta {
     display: block;
     font-weight: bold;
     font-size: 1.125rem;
@@ -193,7 +186,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     }
   }
 
-  .content-hub__module__cta-icon {
+  .content-hub__module-cta-icon {
     float: right;
     width: 40px;
     height: 40px;
@@ -208,20 +201,20 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     width: $content-hub_width_two-module;
   }
 
-  .l-content-hub__module__inner {
+  .l-content-hub__module-inner {
     @include respond-to($content-hub-one-col-breakpoint) {
       margin: 0 ($content-hub-module-margin-width / 2);
     }
   }
 
-  .l-content-hub__module__content,
-  .content-hub__module__title {
+  .content-hub__module-content,
+  .content-hub__module-title {
     @include respond-to($content-hub-one-col-breakpoint) {
       width: 50% - ($content-hub-module-margin-width / 2);
     }
   }
 
-  .l-content-hub__module__image {
+  .content-hub__module-image {
     width: 100%;
     padding-bottom: 100%;
     background-size: cover;

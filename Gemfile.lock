@@ -50,7 +50,7 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.1.1.325)
+    action_plans (4.2.8.334)
       autoprefixer-rails
       dough-ruby
       draper
@@ -119,7 +119,7 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
-    autoprefixer-rails (6.3.6.2)
+    autoprefixer-rails (6.3.7)
       execjs
     baby_cost_calculator (0.2.4)
       rails (~> 4.1.8)
@@ -708,7 +708,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.1.1)
+  action_plans (~> 4.2.8)
   activerecord-session_store
   advice_plans (~> 3.1.0)
   aes

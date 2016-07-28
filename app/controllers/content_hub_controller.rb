@@ -12,5 +12,4 @@ class ContentHubController < ApplicationController
   end
 
   helper_method :translation_prefix
-
 end

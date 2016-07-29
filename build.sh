@@ -44,7 +44,7 @@ time RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile
 
 echo "Uploading assets"
 echo "----"
-time /usr/local/bin/upload-responsive-assets.sh $(pwd)/public
+time /usr/local/bin/upload-responsive-assets.sh $(pwd)/public ${ASSET_CONTAINER}
 
 echo "Creating RPM"
 echo "----"

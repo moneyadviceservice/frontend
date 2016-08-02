@@ -26,6 +26,8 @@
   <meta http-equiv="cleartype" content="on"><![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="HandheldFriendly" content="True">
+
+  <%= tag 'link', rel: 'manifest', href: '/manifest.json' %>
   <%= tag 'link', rel: 'publisher', href: Rails.application.config.google_plus_mas_url %>
   <%# Basic styles for all devices, doesn't contain anything that could cause rendering issues
       such as positional info %>

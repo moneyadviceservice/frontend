@@ -20,7 +20,7 @@
 
 .svg-icon--plus--blue {
   @extend %small-svg-icon;
-  fill: $color-blue-cerulean;
+  fill: $color-blue-medium;
 }
 
 // Minus
@@ -32,7 +32,7 @@
 
 .svg-icon--minus--blue {
   @extend %small-svg-icon;
-  fill: $color-blue-cerulean;
+  fill: $color-blue-medium;
 }
 
 html.no-svg {

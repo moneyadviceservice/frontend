@@ -8,6 +8,10 @@
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
+
+  a {
+    @extend %in-body-link;
+  }
 }
 
 .table-wrapper > .table > thead > tr > th,

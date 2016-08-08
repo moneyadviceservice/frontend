@@ -9,7 +9,7 @@
 .promo__heading {
   @extend %font-heading-medium;
   @include body(18, 24);
-  color: $color-blue-medium;
+  color: $color-link-default;
   margin: 0 0 $baseline-unit;
   position: relative;
   display: inline-block;

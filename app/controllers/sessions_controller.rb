@@ -4,6 +4,10 @@ class SessionsController < Devise::SessionsController
 
   include SuppressMenuButton
 
+  def display_skip_to_main_navigation?
+    false
+  end
+
   def new
     # This method is mostly copied devise code
     # With one tweak to add the error to resource from the flash hash

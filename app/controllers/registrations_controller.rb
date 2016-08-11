@@ -4,6 +4,10 @@ class RegistrationsController < Devise::RegistrationsController
 
   include SuppressMenuButton
 
+  def display_skip_to_main_navigation?
+    false
+  end
+
   protected
 
   def build_resource(hash = nil)

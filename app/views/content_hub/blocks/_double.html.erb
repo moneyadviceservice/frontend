@@ -1,16 +1,14 @@
 <div class="l-content-hub__module l-content-hub__module--hdr-con-lnk-img">
   <div class="l-content-hub__module-inner">
-    <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 1 %>
+    <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 2 %>
     <div class="content-hub__module-image" style="background-image:url(<%= asset_path("content_hub/#{block[:image]}") %>)"></div>
     <div class="content-hub__module-content">
       <div class="content-hub__module-description">
         <p><%= block[:description] %></p>
       </div>
-      <%= form_tag block[:button][:url], method: :get do %>
-        <button class="button button--primary content-hub__module-button">
-          <%= block[:button][:text] %>
-        </button>
-      <% end %>
+      <a href="<%= block[:button][:url] %>" class="button button--primary content-hub__module-button">
+        <%= block[:button][:text] %>
+      </a>
     </div>
   </div>
 </div>

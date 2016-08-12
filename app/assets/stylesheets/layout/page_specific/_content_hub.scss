@@ -1,7 +1,7 @@
 // Content Hub Variables --
 // Colours
 $content-hub-title-color: $color-black;
-$content-hub-bgcolor: $color-grey-eight;
+$content-hub-bgcolor: $color-grey-pale;
 $content-hub-module-bgcolor: $color-white;
 $content-hub-module-reversecolor: $color-white;
 $content-hub-module-reverseBGcolor: $color-black;
@@ -193,7 +193,6 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     margin-left: 10px;
   }
 }
-// -- hdr-lnks-cta
 
 // hdr-con-lnk-img --
 .l-content-hub__module--hdr-con-lnk-img {

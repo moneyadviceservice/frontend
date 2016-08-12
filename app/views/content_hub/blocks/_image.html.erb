@@ -5,11 +5,9 @@
       <div class="content-hub__module-description">
         <p><%= block[:description] %></p>
       </div>
-      <%= form_tag block[:button][:url], method: :get do %>
-        <button class="button button--primary content-hub__module-button">
-          <%= block[:button][:text] %>
-        </button>
-      <% end %>
+      <a href="<%= block[:button][:url] %>" class="button button--primary content-hub__module-button">
+        <%= block[:button][:text] %>
+      </a>
     </div>
   </div>
 </div>

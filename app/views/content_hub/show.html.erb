@@ -18,9 +18,9 @@
             <div class="content-hub__hero-description">
               <%= t("#{translation_prefix}.hero.description_html") %>
             </div>
-            <%= form_tag t("#{translation_prefix}.hero.button.url"), method: :get do %>
-              <button class="button button--primary content-hub__hero-button"><%= t("#{translation_prefix}.hero.button.text") %></button>
-            <% end %>
+            <a href="<%= t("#{translation_prefix}.hero.button.url") %>" class="button button--primary content-hub__hero-button">
+              <%= t("#{translation_prefix}.hero.button.text") %>
+            </a>
           </div>
         </div>
       </section>

@@ -43,16 +43,17 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/quiz.git
-  revision: 83f53052950e6b95a3edee5b08c1d7ace37746d1
+  revision: 424bf2c4383927dcfd7d40877593d77e7a47dd3c
+  branch: 7507-rails-upgrade
   specs:
-    quiz (1.0.1)
-      cocoon (~> 1.2.5)
+    quiz (1.1.0)
+      cocoon
       devise
-      dragonfly (~> 1.0.3)
-      formtastic-bootstrap (~> 2.1.3)
-      friendly_id (>= 4.0)
+      dragonfly (>= 1.0.0)
+      formtastic-bootstrap (>= 2.1, < 3)
+      friendly_id (>= 5.0)
       jquery-rails
-      rails (~> 4.1)
+      rails (>= 4, < 5)
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
@@ -180,7 +181,7 @@ GEM
     chronic (0.10.2)
     chunky_png (1.3.3)
     cliver (0.3.2)
-    cocoon (1.2.6)
+    cocoon (1.2.9)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
@@ -698,7 +699,7 @@ GEM
       activemodel (>= 3.0.0)
       addressable
     vcr (2.9.2)
-    warden (1.2.3)
+    warden (1.2.6)
       rack (>= 1.0)
     webmock (1.18.0)
       addressable (>= 2.3.6)
@@ -786,7 +787,7 @@ DEPENDENCIES
   pry-rails
   pry-rescue
   psych (>= 2.0.5)
-  quiz!
+  quiz (~> 1.1.0)!
   rack-livereload
   rails (= 4.1.8)
   redcarpet

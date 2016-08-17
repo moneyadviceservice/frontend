@@ -11,6 +11,10 @@ class RioController < MountController
     categories.map(&Breadcrumb.public_method(:new))
   end
 
+  def display_skip_to_main_navigation?
+    false
+  end
+
   private
 
   def category

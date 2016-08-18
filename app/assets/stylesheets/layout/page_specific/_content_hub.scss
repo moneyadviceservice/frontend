@@ -200,16 +200,26 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
     width: $content-hub_width_two-module;
   }
 
-  .l-content-hub__module-inner {
-    @include respond-to($content-hub-one-col-breakpoint) {
-      margin: 0 ($content-hub-module-margin-width / 2);
-    }
-  }
-
   .content-hub__module-content,
   .content-hub__module-title {
     @include respond-to($content-hub-one-col-breakpoint) {
       width: 50% - ($content-hub-module-margin-width / 2);
+    }
+  }
+
+  @include respond-to($content-hub-one-col-breakpoint) {
+    .l-content-hub__module-inner {
+      margin: 0 ($content-hub-module-margin-width / 2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .content-hub__module-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
@@ -231,3 +241,19 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 // -- hdr-con-lnk-img
+
+// hdr-con-lnk --
+.l-content-hub__module--hdr-con-lnk {
+  @include respond-to($content-hub-one-col-breakpoint) {
+    .l-content-hub__module-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .content-hub__module-description {
+      flex: 1;
+    }
+  }
+}
+// -- hdr-con-lnk

@@ -1,0 +1,11 @@
+<div class="l-content-hub__module l-content-hub__module--hdr-con-lnk">
+  <div class="l-content-hub__module-inner">
+    <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 2 %>
+    <div class="content-hub__module-description">
+      <p><%= block[:description] %></p>
+    </div>
+    <a href="<%= block[:button][:url] %>" class="button button--primary content-hub__module-button">
+      <%= block[:button][:text] %>
+    </a>
+  </div>
+</div>

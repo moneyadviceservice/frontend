@@ -22,6 +22,29 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator-calculations.git
+  revision: 0046c8a17533c3284d785dd679d30a2b68a17463
+  branch: 7546-upgrade-rio-to-rails-4.2
+  specs:
+    pensions_calculator-calculations (1.4.0)
+      activesupport
+
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator.git
+  revision: b0c785b070ef8ca7167569aa4000d884af942973
+  branch: 7545-upgrade-rails-dependency
+  specs:
+    pensions_calculator (1.2.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      pensions_calculator-calculations (~> 1.4.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+GIT
   remote: git@github.com:moneyadviceservice/quiz.git
   revision: 321e2a6310a9922e9c262472a970d7ee12a820aa
   specs:
@@ -32,6 +55,17 @@ GIT
       formtastic-bootstrap (>= 2.1, < 3)
       friendly_id (>= 5.0)
       jquery-rails
+      rails (>= 4, < 5)
+
+GIT
+  remote: git@github.com:moneyadviceservice/rio.git
+  revision: 35095c3eeb4aa6ad5b5d7f6137080dad3a8d0734
+  branch: 7546-upgrade-rio-to-rails-4.2
+  specs:
+    rio (1.6.0)
+      bowndler
+      dough-ruby
+      pensions_calculator-calculations
       rails (>= 4, < 5)
 
 GIT
@@ -495,17 +529,6 @@ GEM
       rails (~> 4.1)
       sass-rails
       uglifier (>= 1.0.3)
-    pensions_calculator (1.1.1.545)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      pensions_calculator-calculations (~> 1.3.0)
-      rails (~> 4.1)
-      responders
-      sass-rails (~> 4.0.3)
-      uglifier
-    pensions_calculator-calculations (1.3.0.11)
-      activesupport (~> 4.1)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -563,11 +586,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.5.0)
-      bowndler
-      dough-ruby
-      pensions_calculator-calculations
-      rails (~> 4.1)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -774,7 +792,8 @@ DEPENDENCIES
   nunes
   opening_hours
   payday_loans_intervention (~> 1.4)
-  pensions_calculator (~> 1.1.1)
+  pensions_calculator (= 1.2.0)!
+  pensions_calculator-calculations!
   poltergeist
   postcode_anywhere-email_validation
   pry-rails
@@ -784,7 +803,7 @@ DEPENDENCIES
   rack-livereload
   rails (= 4.1.8)
   redcarpet
-  rio (= 1.5.0)!
+  rio (= 1.6.0)!
   rouge
   rspec-html-matchers
   rspec-rails (~> 3.0)

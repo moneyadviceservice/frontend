@@ -45,7 +45,7 @@ gem 'postcode_anywhere-email_validation'
 gem 'pensions_calculator-calculations', git: 'git@github.com:moneyadviceservice/pensions_calculator-calculations.git', branch: '7546-upgrade-rio-to-rails-4.2'
 
 gem 'action_plans', '~> 4.2.8'
-gem 'advice_plans', '~> 3.1.0'
+gem 'advice_plans', '~> 3.2.0', git: 'git@github.com:moneyadviceservice/advice_plans.git', branch: '7537-upgrade-rails'
 gem 'agreements', '~> 2.0.1'
 gem 'baby_cost_calculator'
 gem 'budget_planner', '~> 4.0.4'

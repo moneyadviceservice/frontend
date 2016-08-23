@@ -93,19 +93,18 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    advice_plans (3.1.1.364)
+    advice_plans (3.2.0.366)
       devise (~> 3.2)
       dough-ruby (~> 5.0)
-      friendly_id (~> 5.0.0)
+      friendly_id (>= 5.1.0)
       hashie
       i18n-js (= 3.0.0.mas)
       jquery-rails-cdn
       kaminari (~> 0.16.1)
-      mas-mailer (~> 0.3)
       meta-tags
-      rails (~> 4.1.8)
+      rails (>= 4, < 5)
       redcarpet (~> 3.2.0)
-      sass-rails (~> 4.0.3)
+      sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
     agreements (2.0.1.74)
@@ -354,7 +353,7 @@ GEM
       actionpack (>= 3.0)
     formtastic-bootstrap (2.1.3)
       formtastic (~> 2.2)
-    friendly_id (5.0.5)
+    friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     fssm (0.2.10)
     geokit (1.10.0)
@@ -710,7 +709,7 @@ PLATFORMS
 DEPENDENCIES
   action_plans (~> 4.2.8)
   activerecord-session_store
-  advice_plans (~> 3.1.0)
+  advice_plans (~> 3.2.0)
   aes
   agreements (~> 2.0.1)
   autoprefixer-rails

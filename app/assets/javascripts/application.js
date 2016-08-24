@@ -3,6 +3,17 @@
 require(['common', 'jquery'], function(MAS, $) {
   'use strict';
 
+  // Register Service Worker
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(function() {
+      console.log('Registration Worked!');
+    }).catch(function() {
+      console.log('Registration Failed!');
+    });
+  } else {
+    console.log('Service Worker not available on this device!');
+  }
+
   if (MAS.fonts.loadWithJS && MAS.fonts.url && !MAS.fonts.localstorage) {
     require(['jquery', 'common'], function($, MAS) {
 

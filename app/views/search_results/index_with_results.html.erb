@@ -6,7 +6,7 @@
     <main class="l-main__cell-single" role="main">
       <%= heading_tag t('.page_title_html', query: params[:query]) %>
 
-      <div class="l-search-results">
+      <div class="l-search-results" data-dough-component="SearchFocus">
         <%= render 'shared/search', search_in_page_header: false %>
         <%= search_results.spelling_suggestion %>
         <%= search_results.corrected_query %>

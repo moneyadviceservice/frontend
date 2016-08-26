@@ -13,7 +13,7 @@ The Money Advice Service's responsive website.
 * [Node.js][Node]
 * [Bundler]
 * [Bower]
-* [MySQL](http://www.mysql.com/)
+* [MySQL 5.5](http://www.mysql.com/)
 
 
 ## Installation
@@ -35,7 +35,18 @@ $ bundle install
 $ bowndler install
 ```
 
+Install Mysql 5.5
+
+```sh
+$ brew tap homebrew/versions
+$ brew install mysql55
+```
+
 Make sure MySQL is running.
+
+```sh
+$ brew services start mysql55
+```
 
 Setup the database:
 

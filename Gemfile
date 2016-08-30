@@ -44,7 +44,7 @@ gem 'postcode_anywhere-email_validation'
 
 gem 'action_plans', '~> 4.2.8'
 gem 'advice_plans', '~> 3.2.0'
-gem 'agreements', '~> 2.0.1'
+gem 'agreements', '~> 2.1.0', git: 'git@github.com:moneyadviceservice/agreements.git', branch: '7538-rails-4.2-upgrade'
 gem 'baby_cost_calculator'
 gem 'budget_planner', '~> 4.1.0'
 gem 'car_cost_tool', '~> 1.0.4'

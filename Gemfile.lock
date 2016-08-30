@@ -12,6 +12,18 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/agreements.git
+  revision: 78e98597ba26cf57957dbde093804d01d0e73196
+  branch: 7538-rails-4.2-upgrade
+  specs:
+    agreements (2.1.0)
+      dough-ruby (~> 5.0)
+      hashie (~> 2.0.5)
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -107,12 +119,6 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.0.1.74)
-      dough-ruby (~> 5.0)
-      hashie (~> 2.0.5)
-      meta-tags
-      rails (~> 4.1)
-      sass
     angularjs-rails (1.2.26)
     arel (5.0.1.20140414130214)
     ast (2.0.0)
@@ -711,7 +717,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.2.0)
   aes
-  agreements (~> 2.0.1)
+  agreements (~> 2.1.0)!
   autoprefixer-rails
   baby_cost_calculator
   better_errors

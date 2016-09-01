@@ -4,7 +4,6 @@ require 'asset_pipeline/processors/css_lint'
 Rails.application.configure do
 
   config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
-  config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts')
 
   config.assets.register_postprocessor('application/javascript', AssetPipeline::Processors::JsHint)
   config.assets.register_postprocessor('text/css', AssetPipeline::Processors::CssLint)
@@ -51,7 +50,7 @@ Rails.application.configure do
                                    eventsWithPromises/src/eventsWithPromises.js
                                    rsvp/rsvp.amd.js
                                    requirejs/require.js
-                                   typeahead.js/dist/typeahead.jquery.js
+                                   typeahead.jquery.js
                                    modernizer-flexbox-cssclasses.js
                                    webchat.js)
 end

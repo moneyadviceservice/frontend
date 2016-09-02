@@ -73,8 +73,8 @@ GEM
     active_attr (0.9.0)
       activemodel (>= 3.0.2, < 5.1)
       activesupport (>= 3.0.2, < 5.1)
-    active_model_serializers (0.8.2)
-      activemodel (>= 3.0)
+    active_model_serializers (0.9.5)
+      activemodel (>= 3.2)
     activemodel (4.1.8)
       activesupport (= 4.1.8)
       builder (~> 3.1)
@@ -226,20 +226,20 @@ GEM
       sass-rails (~> 4.0.0)
       uglifier
     database_cleaner (1.3.0)
-    debt_advice_locator (2.2.0.102)
-      active_attr (~> 0.8)
-      active_model_serializers (= 0.8.2)
+    debt_advice_locator (2.3.0.103)
+      active_attr
+      active_model_serializers (< 0.10.0)
       addressable
       bcrypt
       coffee-rails
       dough-ruby (~> 5.0)
-      draper
-      geokit-rails (= 2.1.0)
+      draper (< 3)
+      geokit-rails
       kaminari
       mas-templating (~> 1.0.0)
-      rails (~> 4.1)
+      rails (>= 4, < 5)
       redcarpet
-      sass (~> 3.2)
+      sass-rails
       validate_url
     debt_and_mental_health (1.0.1.27)
       bcrypt
@@ -354,7 +354,7 @@ GEM
       activerecord (>= 4.0.0)
     fssm (0.2.10)
     geokit (1.10.0)
-    geokit-rails (2.1.0)
+    geokit-rails (2.2.0)
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (2.12.2)
@@ -730,7 +730,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.10)
   database_cleaner
-  debt_advice_locator (~> 2.2)
+  debt_advice_locator (~> 2.3.0)
   debt_and_mental_health (~> 1.0.1)
   debt_free_day_calculator (~> 2.2.0)
   debt_test

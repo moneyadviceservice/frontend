@@ -455,14 +455,14 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     modernizr-rails (2.6.3)
-    mortgage_calculator (1.4.10.649)
+    mortgage_calculator (1.5.0.650)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
       mas-fonts
       modernizr-rails
-      rails (~> 4.1)
-      sass-rails (~> 4.0.3)
+      rails (>= 4, < 5)
+      sass-rails
       underscore-rails
     multi_json (1.12.1)
     multi_test (0.1.1)
@@ -762,7 +762,7 @@ DEPENDENCIES
   mailjet
   mas-assets!
   meta-tags!
-  mortgage_calculator (~> 1.4.10)
+  mortgage_calculator (~> 1.5.0)
   mysql2 (= 0.3.20)
   newrelic_rpm
   nokogiri

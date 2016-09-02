@@ -5,6 +5,3 @@ BudgetPlanner.enable_short_form = true
 BudgetPlanner.enable_new_start_page = true
 BudgetPlanner.enable_long_form_in_place_validation = true
 BudgetPlanner.enable_bp3_spreadsheet = true
-
-BudgetPlanner.feedback = {}
-BudgetPlanner.enable_feedback = false

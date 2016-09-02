@@ -313,11 +313,11 @@ GEM
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3.0)
-    draper (1.3.1)
+    draper (2.1.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
-      request_store (~> 1.0.3)
+      request_store (~> 1.0)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -551,7 +551,7 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     redcarpet (3.2.3)
-    request_store (1.0.8)
+    request_store (1.3.1)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rest-client (1.8.0)
@@ -740,7 +740,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv-rails
   dough-ruby (~> 5.18.0)
-  draper (~> 1.3.0)
+  draper (< 3)
   ejs
   email_spec
   factory_girl

@@ -16,7 +16,8 @@ module.exports = function(config) {
       'spec/javascripts/fixtures/*.html',
       'spec/javascripts/**/*_spec.js',
       {pattern: 'app/assets/javascripts/**/*.js', included: false},
-      {pattern: 'vendor/assets/bower_components/**/*.js', included: false}
+      {pattern: 'vendor/assets/bower_components/**/*.js', included: false},
+      {pattern: 'vendor/assets/javascripts/*.js', included: false}
     ],
 
     client: {

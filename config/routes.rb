@@ -230,7 +230,7 @@ Rails.application.routes.draw do
       end
     end
 
-    get '/hub/:slug' => 'content_hub#show'
+    get '/hub/:slug' => 'content_hub#show', as: :content_hub
   end
 
   %w(404 422 500 ).each do |status_code|

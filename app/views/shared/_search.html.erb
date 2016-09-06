@@ -1,7 +1,7 @@
 <form data-dough-component="ClearInput" action="<% if hide_elements_irrelevant_for_third_parties? %>https://www.moneyadviceservice.org.uk<% end %><%= main_app.search_results_path %>" method="get" role="search" class="search">
   <label class="visually-hidden" for="search"><%= t('search_box.label') %></label>
   <input data-dough-clear-input class="search__input" id="search" required type="search" name="query" value="<%= params[:query] %>" autocomplete="off"
-    placeholder="<%= t('search_box.placeholder') %>" />
+    placeholder="<%= t('search_box.placeholder') %>" data-dough-search-input/>
 
   <button data-dough-clear-input-button type="reset" class="search__clear">
     <span class="icon icon--clear"></span>

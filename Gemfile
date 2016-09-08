@@ -60,10 +60,10 @@ gem 'feedback', '~> 0.3.1'
 gem 'mortgage_calculator', '~> 1.5.0'
 gem 'payday_loans_intervention', '~> 1.4'
 gem 'pensions_calculator', '~> 1.2.0'
-gem 'quiz', '~> 1.1.0', git: 'git@github.com:moneyadviceservice/quiz.git'
+gem 'quiz', '~> 1.1.0'
 gem 'rio', '1.6.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.2.0'
-gem 'timelines', '~> 1.3.0', git: 'git@github.com:moneyadviceservice/timelines.git'
+gem 'timelines', '~> 1.3.0'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

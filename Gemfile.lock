@@ -21,31 +21,6 @@ GIT
       sass
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/quiz.git
-  revision: 321e2a6310a9922e9c262472a970d7ee12a820aa
-  specs:
-    quiz (1.1.0)
-      cocoon
-      devise
-      dragonfly (>= 1.0.0)
-      formtastic-bootstrap (>= 2.1, < 3)
-      friendly_id (>= 5.0)
-      jquery-rails
-      rails (>= 4, < 5)
-
-GIT
-  remote: git@github.com:moneyadviceservice/timelines.git
-  revision: 74c9bd099b25aee3c36cd08d689ce915fdfa7ac0
-  specs:
-    timelines (1.3.0)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -520,6 +495,14 @@ GEM
       interception (>= 0.5)
       pry
     psych (2.0.5)
+    quiz (1.1.0.109)
+      cocoon
+      devise
+      dragonfly (>= 1.0.0)
+      formtastic-bootstrap (>= 2.1, < 3)
+      friendly_id (>= 5.0)
+      jquery-rails
+      rails (>= 4, < 5)
     rack (1.5.5)
     rack-livereload (0.3.15)
       rack
@@ -666,6 +649,13 @@ GEM
     thread_safe (0.3.5)
     tilt (1.4.1)
     timecop (0.7.1)
+    timelines (1.3.0.304)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
     timers (1.1.0)
     transitions (0.1.13)
     tzinfo (1.2.2)
@@ -775,7 +765,7 @@ DEPENDENCIES
   pry-rails
   pry-rescue
   psych (>= 2.0.5)
-  quiz (~> 1.1.0)!
+  quiz (~> 1.1.0)
   rack-livereload
   rails (= 4.1.8)
   redcarpet
@@ -796,7 +786,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5!
   timecop
-  timelines (~> 1.3.0)!
+  timelines (~> 1.3.0)
   uglifier (>= 1.3.0)
   unicorn-rails
   validate_url (= 1.0.0)

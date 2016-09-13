@@ -165,11 +165,11 @@ GEM
       compass (>= 0.12.2)
     contribution_calculator (0.0.6)
       rails (~> 4.1.8)
-    cost_calculator_builder (0.1.12)
+    cost_calculator_builder (0.2.0)
       bowndler
-      dough-ruby
-      friendly_id
-      rails (~> 4.1.8)
+      dough-ruby (~> 5.0)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     cream (0.3.0)
@@ -715,7 +715,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails
   contribution_calculator (~> 0.0.1)
-  cost_calculator_builder (~> 0.1.12)
+  cost_calculator_builder (~> 0.2.0)
   cream (~> 0.3.0)
   csslint_ruby
   cucumber-rails

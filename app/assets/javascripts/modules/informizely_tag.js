@@ -7,10 +7,10 @@ define(['globals'], function(globals) {
       var ca = document.cookie.split(';');
       for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == ' ') {
+        while (c.charAt(0) === ' ') {
           c = c.substring(1);
         }
-        if (c.indexOf(name) == 0) {
+        if (c.indexOf(name) === 0) {
           return c.substring(name.length, c.length);
         }
       }
@@ -34,14 +34,20 @@ define(['globals'], function(globals) {
       }
       return parseInt(timesShown);
     }
-  }
+  };
 
   var informizelyTag = {
     handleIzEvent: function(event, surveyId, surveyName, data, api) {
       if (event === 'SurveyStart') {
         izHelpers.incrementCountCookie();
       } else if (event === 'SurveyDone') {
-        izHelpers.setShowCookie(90);
+        if (data.closeAction === 2 || api.getResults().length === 0) {
+          // The survey has been closed prematurely
+          izHelpers.setShowCookie(14);
+        } else {
+          // The survey has been completed
+          izHelpers.setShowCookie(90);
+        }
       }
     },
     init: function() {
@@ -51,13 +57,14 @@ define(['globals'], function(globals) {
       }
       // Informizely snippet from informizely.com
       window.IzWidget = window.IzWidget || {};
-      window.IzWidget['tracker'] = this.handleIzEvent;
+      window.IzWidget.tracker = this.handleIzEvent;
 
       (function(d) {
         var scriptElement = d.createElement('script');
         scriptElement.type = 'text/javascript';
         scriptElement.async = true;
-        scriptElement.src = 'https://insitez.blob.core.windows.net/site/' + globals.bootstrap.informizelyKey + '.js';
+        scriptElement.src = 'https://insitez.blob.core.windows.net/site/' +
+        globals.bootstrap.informizelyKey + '.js';
         d.body.appendChild(scriptElement);
       })(document);
     }

@@ -248,19 +248,16 @@ GEM
       sass-rails
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
-    decision_trees (2.0.4.113)
-      coffee-rails (~> 4.0.1)
+    decision_trees (2.1.0.116)
       dough-ruby (~> 5.0)
       handlebars_assets (~> 0.13.0)
-      htmlentities (~> 4)
+      htmlentities
       i18n-js
       jquery-rails
       meta-tags
       nokogiri
-      rails (~> 4.1)
-      sass-rails (~> 4.0.3)
-      syslog-logger
-      uglifier (>= 1.0.3)
+      rails (>= 4, < 5)
+      sass-rails
     delayed_job (4.1.1)
       activesupport (>= 3.0, < 5.0)
     delayed_job_active_record (4.1.0)
@@ -725,7 +722,7 @@ DEPENDENCIES
   debt_and_mental_health (~> 1.1.0)
   debt_free_day_calculator (~> 2.2.0)
   debt_test (~> 1.5.0)
-  decision_trees (~> 2.0.0)
+  decision_trees (~> 2.1.0)
   delayed_job_active_record
   devise (= 3.2.4)
   devise-encryptable

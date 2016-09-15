@@ -28,6 +28,7 @@ Rails.application.configure do
                                    modules/globals.js
                                    modules/google_complete.js
                                    modules/i18n.js
+                                   modules/informizely_tag.js
                                    modules/log.js
                                    modules/mas_collapsable.js
                                    modules/mas_pubsub.js

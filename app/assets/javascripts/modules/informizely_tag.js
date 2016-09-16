@@ -20,12 +20,12 @@ define(['globals'], function(globals) {
       var date = new Date();
       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
       var expires = '; expires=' + date.toUTCString();
-      document.cookie = 'izHideSurvey=true;' + expires;
-      document.cookie = 'izCount=0; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      document.cookie = 'izHideSurvey=true' + expires + '; path=/';
+      document.cookie = 'izCount=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
     },
     incrementCountCookie: function() {
       var count = this.getCountCookie() + 1;
-      document.cookie = 'izCount=' + count + ';';
+      document.cookie = 'izCount=' + count + '; path=/';
     },
     getCountCookie: function() {
       var timesShown = this.getCookie('izCount');

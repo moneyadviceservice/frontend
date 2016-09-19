@@ -123,9 +123,4 @@ require(['common', 'jquery'], function(MAS, $) {
       });
     });
   });
-
-  require(['informizelyTag'], function(informizelyTag) {
-    informizelyTag.init();
-  }) ;
-
 });

@@ -105,6 +105,7 @@ define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, Dough
   StickyColumn.prototype._showInSidebar = function() {
     this.$parent.css('height', this.contentHeight - this.topMargin);
     this.$el.css('width', this.$parent.width());
+    this.$el.css('left', this.$parent.offset().left);
   };
 
   /**

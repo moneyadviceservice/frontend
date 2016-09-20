@@ -21,7 +21,7 @@
           <form target="_blank" class="accessin" id="AccessIN_form" action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
               <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
               <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
-             <button type="submit" class="accessin__submit"><span class="icon icon--accessibility"></span>Report an accessibility problem</button>
+             <button type="submit" class="accessin__submit"><span class="icon icon--accessibility"></span><%= t('footer_secondary.title') %></button>
           </form>
 
           <% content_for(:javascripts) do %>

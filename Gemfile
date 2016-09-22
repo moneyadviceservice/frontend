@@ -42,7 +42,7 @@ gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'postcode_anywhere-email_validation'
 
-gem 'action_plans', '~> 4.2.8'
+gem 'action_plans', '~> 4.3.0'
 gem 'advice_plans', '~> 3.2.0'
 gem 'agreements', '~> 2.1.0'
 gem 'baby_cost_calculator', '~> 0.3.0'

@@ -25,13 +25,13 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.2.10.337)
+    action_plans (4.3.0.338)
       autoprefixer-rails
-      dough-ruby
+      dough-ruby (~> 5.0)
       draper
       hashie
-      jquery-rails-cdn
-      rails (~> 4.1.8)
+      rails (>= 4, < 5)
+      sass-rails
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
       actionview (= 4.1.8)
@@ -691,7 +691,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.2.8)
+  action_plans (~> 4.3.0)
   activerecord-session_store
   advice_plans (~> 3.2.0)
   aes

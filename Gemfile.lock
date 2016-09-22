@@ -12,6 +12,27 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: 074125af3a0d6a4501d7eec0e21abf50acbfd6b2
+  branch: 7607-rails-upgrade
+  specs:
+    action_plans (4.3.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
+  remote: git@github.com:moneyadviceservice/contribution_calculator.git
+  revision: 37144dfbaf189c8d2f705c627b5dad724461f450
+  branch: 7550-rails-upgrade
+  specs:
+    contribution_calculator (0.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -21,17 +42,23 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/payday_loans_intervention.git
+  revision: d320fec5e69900ecdc57c1d3448280c837d7656d
+  branch: 7553-rails-upgrade
+  specs:
+    payday_loans_intervention (1.5.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      historyjs-rails
+      jquery-rails
+      rails (>= 4, < 5)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.2.10.337)
-      autoprefixer-rails
-      dough-ruby
-      draper
-      hashie
-      jquery-rails-cdn
-      rails (~> 4.1.8)
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
       actionview (= 4.1.8)
@@ -163,8 +190,6 @@ GEM
       sass (~> 3.2.19)
     compass-rails (2.0.0)
       compass (>= 0.12.2)
-    contribution_calculator (0.0.6)
-      rails (~> 4.1.8)
     cost_calculator_builder (0.2.0)
       bowndler
       dough-ruby (~> 5.0)
@@ -456,12 +481,6 @@ GEM
     parser (2.2.0.pre.5)
       ast (>= 1.1, < 3.0)
       slop (~> 3.4, >= 3.4.5)
-    payday_loans_intervention (1.4.7.253)
-      historyjs-rails (>= 1.0.1)
-      jquery-rails (= 3.1.2)
-      rails (~> 4.1)
-      sass-rails
-      uglifier (>= 1.0.3)
     pensions_calculator (1.2.1.547)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -691,7 +710,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.2.8)
+  action_plans (~> 4.3.0)!
   activerecord-session_store
   advice_plans (~> 3.2.0)
   aes
@@ -711,7 +730,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   compass-rails
-  contribution_calculator (~> 0.0.1)
+  contribution_calculator (~> 0.1.0)!
   cost_calculator_builder (~> 0.2.0)
   cream (~> 0.3.0)
   csslint_ruby
@@ -756,7 +775,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
-  payday_loans_intervention (~> 1.4)
+  payday_loans_intervention (~> 1.5.0)!
   pensions_calculator (~> 1.2.0)
   poltergeist
   postcode_anywhere-email_validation

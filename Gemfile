@@ -38,7 +38,6 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'rubytree'
 gem 'statsd-ruby'
-gem 'uglifier', '>= 1.3.0'
 gem 'postcode_anywhere-email_validation'
 
 gem 'action_plans', '~> 4.3.0'
@@ -75,6 +74,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'jshint_ruby'
   gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
 end
 
 group :development do

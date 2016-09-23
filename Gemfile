@@ -22,7 +22,6 @@ gem 'draper', '< 3'
 gem 'faraday-conductivity'
 gem 'faraday_middleware'
 gem 'feature'
-gem 'foreman'
 gem 'kss'
 gem 'link_header'
 gem 'mail'
@@ -81,6 +80,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'foreman'
   gem 'letter_opener'
   gem 'listen', '~> 2.0'
 end

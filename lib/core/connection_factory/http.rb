@@ -6,11 +6,11 @@ module Core
   module ConnectionFactory
     class Http
       def self.build(url, timeout: 5, open_timeout: 5, retries: 2)
-        options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout, retries: retries } }
+        options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
         connection = Faraday.new(options) do |faraday|
           faraday.request :json
           faraday.request :request_id
-          faraday.request :retry, retries
+          faraday.request :retry, max: retries
           faraday.request :user_agent, app: 'Mas-Responsive', version: 1.0
 
           faraday.response :raise_error

@@ -260,10 +260,10 @@ GEM
       nokogiri
       rails (>= 4, < 5)
       sass-rails
-    delayed_job (4.1.1)
-      activesupport (>= 3.0, < 5.0)
-    delayed_job_active_record (4.1.0)
-      activerecord (>= 3.0, < 5)
+    delayed_job (4.1.2)
+      activesupport (>= 3.0, < 5.1)
+    delayed_job_active_record (4.1.1)
+      activerecord (>= 3.0, < 5.1)
       delayed_job (>= 3.0, < 5)
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -428,7 +428,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     modernizr-rails (2.6.3)
     mortgage_calculator (1.5.0.650)
       angularjs-rails (~> 1.2.18)

@@ -62,7 +62,7 @@ end
 
 RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
-  c.include Devise::TestHelpers, type: :controller
+  c.include Devise::Test::ControllerHelpers, type: :controller
   c.include PageValidations
   c.include Rails.application.routes.url_helpers
   c.include RSpecHtmlMatchers

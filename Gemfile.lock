@@ -70,8 +70,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    advice_plans (3.2.0.366)
-      devise (~> 3.2)
+    advice_plans (3.3.0.367)
       dough-ruby (~> 5.0)
       friendly_id (>= 5.1.0)
       hashie
@@ -265,11 +264,11 @@ GEM
     delayed_job_active_record (4.1.1)
       activerecord (>= 3.0, < 5.1)
       delayed_job (>= 3.0, < 5)
-    devise (3.2.4)
+    devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      thread_safe (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
@@ -696,7 +695,7 @@ PLATFORMS
 DEPENDENCIES
   action_plans (~> 4.3.0)
   activerecord-session_store
-  advice_plans (~> 3.2.0)
+  advice_plans (~> 3.3.0)
   aes
   agreements (~> 2.1.0)
   autoprefixer-rails
@@ -727,7 +726,7 @@ DEPENDENCIES
   debt_test (~> 1.5.0)
   decision_trees (~> 2.1.0)
   delayed_job_active_record
-  devise (= 3.2.4)
+  devise (~> 4.2.0)
   devise-encryptable
   dotenv-rails
   dough-ruby (~> 5.19.0)

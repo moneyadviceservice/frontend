@@ -12,6 +12,24 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/advice_plans.git
+  revision: 920f2c956531f6ef3c08cffc5e50abd1f788b115
+  branch: 7240-rails-upgrade
+  specs:
+    advice_plans (3.3.0)
+      dough-ruby (~> 5.0)
+      friendly_id (>= 5.1.0)
+      hashie
+      i18n-js (= 3.0.0.mas)
+      jquery-rails-cdn
+      kaminari (~> 0.16.1)
+      meta-tags
+      rails (>= 4, < 5)
+      redcarpet (~> 3.2.0)
+      sass-rails
+      transitions (~> 0.1.11)
+
+GIT
   remote: git@github.com:moneyadviceservice/cream.git
   revision: 3a63b72670aa0b8c014a6510ced79a3dea022510
   branch: 7240-rails-upgrade
@@ -80,19 +98,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    advice_plans (3.2.0.366)
-      devise (~> 3.2)
-      dough-ruby (~> 5.0)
-      friendly_id (>= 5.1.0)
-      hashie
-      i18n-js (= 3.0.0.mas)
-      jquery-rails-cdn
-      kaminari (~> 0.16.1)
-      meta-tags
-      rails (>= 4, < 5)
-      redcarpet (~> 3.2.0)
-      sass-rails
-      transitions (~> 0.1.11)
     aes (0.5.0)
     agreements (2.1.0.74)
       dough-ruby (~> 5.0)
@@ -271,11 +276,11 @@ GEM
     delayed_job_active_record (4.1.1)
       activerecord (>= 3.0, < 5.1)
       delayed_job (>= 3.0, < 5)
-    devise (3.2.4)
+    devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      thread_safe (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
@@ -702,7 +707,7 @@ PLATFORMS
 DEPENDENCIES
   action_plans (~> 4.3.0)
   activerecord-session_store
-  advice_plans (~> 3.2.0)
+  advice_plans (~> 3.3.0)!
   aes
   agreements (~> 2.1.0)
   autoprefixer-rails
@@ -733,7 +738,7 @@ DEPENDENCIES
   debt_test (~> 1.5.0)
   decision_trees (~> 2.1.0)
   delayed_job_active_record
-  devise (= 3.2.4)
+  devise (~> 4.2.0)
   devise-encryptable
   dotenv-rails
   dough-ruby (~> 5.19.0)

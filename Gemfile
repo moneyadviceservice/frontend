@@ -68,7 +68,6 @@ gem 'validate_url', '1.0.0'
 
 group :assets do
   gem 'autoprefixer-rails'
-  gem 'compass-rails'
   gem 'csslint_ruby'
   gem 'jquery-rails'
   gem 'jshint_ruby'

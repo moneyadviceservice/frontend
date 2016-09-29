@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe SearchResultCollection do
+  RSpec.describe SearchResultCollection, type: :model do
     let(:items) { [] }
     let(:attributes) { { items: items } }
     subject(:result_collection) { described_class.new(attributes) }

@@ -134,3 +134,10 @@ RSpec.configure do |c|
     Core::Registry::Repository[:customer].clear
   end
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end

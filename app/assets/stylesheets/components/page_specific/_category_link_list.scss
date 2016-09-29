@@ -27,6 +27,10 @@
     // This is to override the highly specific .editorial list styling
     content: none !important;
   }
+
+  > .category-link-list__item__link {
+    text-decoration: none;
+  }
 }
 
 .category-link-list__item__link {
@@ -36,7 +40,6 @@
   &:focus,
   &:hover {
     border-bottom: 3px solid $color-true-black;
-    text-decoration: none;
   }
 
   &:focus,

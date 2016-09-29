@@ -1,11 +1,20 @@
 module Core
-  RSpec.describe Entity do
+  RSpec.describe Entity, type: :model do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { Hash.new }
 
     it { is_expected.to have_read_only_attributes(:id) }
-    it { is_expected.to validate_presence_of(:id) }
+
+    # Shoulda's validation matcher doesn't like this due to the private setter
+    context 'when id is nil' do
+      before { subject.send(:id=, nil) }
+
+      it 'adds a validation error' do
+        subject.valid?
+        expect(subject.errors[:id]).to include("can't be blank")
+      end
+    end
 
     context 'when passed unexpected data' do
       let(:attributes) { { foo: :bar } }

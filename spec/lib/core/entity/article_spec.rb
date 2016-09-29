@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe Article do
+  RSpec.describe Article, type: :model do
     subject { described_class.new(double, attributes) }
 
     let(:categories) { [] }

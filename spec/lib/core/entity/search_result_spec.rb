@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe SearchResult do
+  RSpec.describe SearchResult, type: :model do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { { title: double } }

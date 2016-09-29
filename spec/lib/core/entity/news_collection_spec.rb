@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe NewsCollection do
+  RSpec.describe NewsCollection, type: :model do
     subject(:news_collection) { described_class.new }
 
     it { is_expected.to have_read_only_attributes(:items, :page) }

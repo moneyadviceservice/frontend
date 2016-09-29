@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe Other do
+  RSpec.describe Other, type: :model do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) do

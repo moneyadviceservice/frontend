@@ -1,4 +1,4 @@
-RSpec.describe Core::Video do
+RSpec.describe Core::Video, type: :model do
   let(:params) do
     { type: 'no-idea-about-type',
       title: 'awesome-title',

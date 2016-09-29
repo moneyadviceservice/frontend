@@ -20,10 +20,11 @@
 
   a {
     border-bottom: 0;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }

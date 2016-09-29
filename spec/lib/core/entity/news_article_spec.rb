@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe NewsArticle do
+  RSpec.describe NewsArticle, type: :model do
     subject { described_class.new('news_article_id', attributes) }
 
     let(:date) { '2014-03-17T09:42:11+00:00' }

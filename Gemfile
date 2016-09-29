@@ -89,7 +89,7 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'email_spec'
+  gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
   gem 'factory_girl'
   gem 'faker'
   gem 'html_validation'
@@ -123,7 +123,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rack-livereload'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'rubocop'
 end
 

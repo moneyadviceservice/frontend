@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe Customer do
+  RSpec.describe Customer, type: :model do
     subject { described_class.new(customer_id, attributes) }
 
     let(:customer_id) { 'customer_123' }

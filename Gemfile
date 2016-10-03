@@ -8,7 +8,7 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.7.1'
 
 gem 'activerecord-session_store'
 gem 'aes'

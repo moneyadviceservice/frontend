@@ -8,7 +8,7 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.7.1'
 
 gem 'activerecord-session_store'
 gem 'aes'
@@ -28,10 +28,10 @@ gem 'mail'
 gem 'mailjet'
 gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'meta-tags', github: 'moneyadviceservice/meta-tags'
-gem 'mysql2', '0.3.20'
+gem 'mysql2'
 gem 'newrelic_rpm'
 gem 'nokogiri'
-gem 'nunes', '< 0.4.0' # Docs say nunes 0.4.0 is 4.2.x only, however this isn't enforced by the gemspec
+gem 'nunes'
 gem 'opening_hours'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'redcarpet'

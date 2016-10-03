@@ -31,7 +31,7 @@ gem 'meta-tags', github: 'moneyadviceservice/meta-tags'
 gem 'mysql2', '0.3.20'
 gem 'newrelic_rpm'
 gem 'nokogiri'
-gem 'nunes', '< 0.4.0' # Docs say nunes 0.4.0 is 4.2.x only, however this isn't enforced by the gemspec
+gem 'nunes'
 gem 'opening_hours'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'redcarpet'

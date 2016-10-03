@@ -80,7 +80,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'foreman'
   gem 'letter_opener'
-  gem 'listen', '~> 2.0'
 end
 
 group :test do
@@ -119,7 +118,6 @@ group :test, :development do
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'
   gem 'ejs'
-  gem 'guard-rubocop'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rack-livereload'

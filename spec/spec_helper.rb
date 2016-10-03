@@ -124,7 +124,7 @@ RSpec.configure do |c|
 
   c.before(:suite) do
     DatabaseCleaner.clean
-    ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
+    ActiveRecord::Tasks::DatabaseTasks.load_schema_current(:ruby, ENV['SCHEMA'])
 
     Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
   end

@@ -1,15 +1,26 @@
 <form data-dough-component="ClearInput" action="<% if hide_elements_irrelevant_for_third_parties? %>https://www.moneyadviceservice.org.uk<% end %><%= main_app.search_results_path %>" method="get" role="search" class="search">
   <label class="visually-hidden" for="search"><%= t('search_box.label') %></label>
-  <input data-dough-clear-input class="search__input" id="search" required type="search" name="query" value="<%= params[:query] %>" autocomplete="off"
+  
+  <% if search_in_page_header %>
+    <input data-dough-clear-input class="search__input" id="search" required type="search" name="query" value="<%= params[:query] %>" autocomplete="off"
     placeholder="<%= t('search_box.placeholder') %>" data-dough-search-input/>
+    <button data-dough-clear-input-button type="reset" class="search__clear">
+      <span class="icon icon--clear"></span>
+      <span class="visually-hidden"><%= t('search_box.clear_hidden_text') %></span>
+    </button>
+    <button class="search__submit search__submit--white" type="submit">
+      <span class="icon icon--search"></span>
+      <span class="visually-hidden"><%= t('search_box.button_text') %></span>
+    </button>
+  <% else %>
+    <input data-dough-clear-input class="search__input search__input--inpage" id="search" required type="search" name="query" value="<%= params[:query] %>" autocomplete="off" data-dough-search-input />
+    <button data-dough-clear-input-button type="reset" class="search__clear search__clear--inpage">
+      <span class="icon icon--clear"></span>
+      <span class="visually-hidden"><%= t('search_box.clear_hidden_text') %></span>
+    </button>
+    <button class="search__submit search__submit--inpage button button--primary" type="submit">
+      <%= t('search_box.button_text') %>
+    </button>
+  <% end %>
 
-  <button data-dough-clear-input-button type="reset" class="search__clear">
-    <span class="icon icon--clear"></span>
-    <span class="visually-hidden"><%= t('search_box.clear_hidden_text') %></span>
-  </button>
-
-  <button class="search__submit <%= 'search__submit--green' if search_in_page_header %>" type="submit">
-    <span class="icon icon--search"></span>
-    <span class="visually-hidden"><%= t('search_box.button_text') %></span>
-  </button>
 </form>

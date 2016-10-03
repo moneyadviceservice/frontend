@@ -43,7 +43,7 @@ module Core
           customer_id = subject.create(user)
           user.customer_id = customer_id
 
-          expect { subject.create(user) }.to raise_error
+          expect { subject.create(user) }.to raise_error 'Already exists'
         end
       end
     end

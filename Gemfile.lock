@@ -449,7 +449,7 @@ GEM
     multi_json (1.12.1)
     multi_test (0.1.2)
     multipart-post (2.0.0)
-    mysql2 (0.3.20)
+    mysql2 (0.4.4)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
@@ -760,7 +760,7 @@ DEPENDENCIES
   mas-assets!
   meta-tags!
   mortgage_calculator (~> 1.5.0)
-  mysql2 (= 0.3.20)
+  mysql2
   newrelic_rpm
   nokogiri
   nunes

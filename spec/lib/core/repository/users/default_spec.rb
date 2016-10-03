@@ -3,7 +3,7 @@ module Core
     describe '#update_from_crm' do
       context 'when customer_id is blank' do
         it 'raises an exception' do
-          expect { subject.update_from_crm(User.new) }.to raise_error
+          expect { subject.update_from_crm(User.new) }.to raise_error 'customer_id is blank'
         end
       end
 
@@ -17,7 +17,7 @@ module Core
         end
 
         it 'raises an exception' do
-          expect { subject.update_from_crm(user) }.to raise_error
+          expect { subject.update_from_crm(user) }.to raise_error 'customer_id is blank'
         end
       end
 

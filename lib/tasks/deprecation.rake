@@ -1,6 +1,6 @@
 namespace :deprecation do
   desc 'Sends a deprecation email to users of short form budget planner. Pass params "prod" to actually send the email'
-  task :bp3, [:confirm] => :environment do |t, opts|
+  task :short_forms, [:confirm] => :environment do |t, opts|
     BudgetPlanner::Budget
       .preload(:user)
       .find_each(batch_size: 50)

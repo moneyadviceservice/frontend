@@ -1,4 +1,4 @@
 <div class="styleguide-element">
   <span class="styleguide-modifier-name"><%= element.name %></span>
-  <%= source.gsub('$modifier_class', element.class_name).html_safe %>
+  <%= source.gsub('$modifier_class', html_escape(element.class_name)).html_safe %>
 </div>

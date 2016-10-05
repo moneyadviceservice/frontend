@@ -617,6 +617,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
     sexp_processor (4.7.0)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
@@ -778,6 +781,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   savings_calculator (~> 1.6.0)
   sdoc
+  seed_dump
   shoulda-matchers
   site_prism
   sqlite3

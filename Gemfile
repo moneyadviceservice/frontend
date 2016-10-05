@@ -38,6 +38,7 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'redcarpet'
 gem 'rouge'
 gem 'rubytree'
+gem 'seed_dump'
 gem 'statsd-ruby'
 gem 'uglifier', '>= 1.3.0'
 gem 'postcode_anywhere-email_validation'

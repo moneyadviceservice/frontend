@@ -12,22 +12,6 @@ GIT
     tidy-html5 (0.1.1)
 
 GIT
-  remote: git@github.com:moneyadviceservice/budget_planner
-  revision: fb2f37ef0999dd9c7e6e6ca1506ce56c94494161
-  branch: 7476-fixing-file-loading
-  specs:
-    budget_planner (4.2.0)
-      i18n-js (= 3.0.0.mas)
-      jquery-rails
-      jquery-ui-rails (~> 4.0)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
-
-GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -122,6 +106,16 @@ GEM
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
       thor
+    budget_planner (4.3.0.735)
+      i18n-js (= 3.0.0.mas)
+      jquery-rails
+      jquery-ui-rails (~> 4.0)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
     bugsnag (2.8.12)
       json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
@@ -708,7 +702,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner!
+  budget_planner (~> 4.3.0)
   bugsnag
   byebug
   capybara

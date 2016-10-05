@@ -1,7 +1,8 @@
 class Faraday::Request::HostHeader < Faraday::Middleware
   def call(env)
-    host_header = ENV['FARADAY_HOST']
-    env[:request_headers]['Host'] = host_header if host_header
+    if ENV['FARADAY_HOST']
+      env[:request_headers]['Host'] = ENV['FARADAY_HOST']
+    end
 
     @app.call(env)
   end

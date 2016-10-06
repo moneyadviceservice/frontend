@@ -12,7 +12,7 @@ module Core::Repository::News
 
       let(:id) { 'tell-ma-were-listening' }
       let(:headers) { {} }
-      let(:body) { {} }
+      let(:body) { {}.to_json }
       let(:status) { 200 }
 
       before do
@@ -22,13 +22,12 @@ module Core::Repository::News
 
       context 'when id contains special characters' do
         let(:id) { 'jobs-for-students-–-the-taxing-questions' }
-        let(:encoded_url) { '/en/news/jobs-for-students-%E2%80%93-the-taxing-questions.json' }
+        let(:encoded_url) { 'https://example.com/en/news/jobs-for-students-%E2%80%93-the-taxing-questions.json' }
         let(:response) { double(body: body, headers: headers) }
 
         it 'encodes url' do
-          expect(connection).to receive(:get).with(encoded_url).and_return(response)
-
           repository.find(id)
+          expect(connection).to have_requested(:get, encoded_url)
         end
       end
 
@@ -120,10 +119,8 @@ module Core::Repository::News
         let(:options) { { page: page, limit: limit } }
 
         it 'calls the end point with the given parameters' do
-          expect(connection).to receive(:get).with("/en/news.json?page_number=#{page}&limit=#{limit}")
-            .and_return(double(body: []))
-
           subject.all(options)
+          expect(connection).to have_requested(:get, "https://example.com/en/news.json?page_number=#{page}&limit=#{limit}")
         end
       end
     end

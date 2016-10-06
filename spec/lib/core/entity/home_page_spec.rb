@@ -1,5 +1,5 @@
 module Core
-  RSpec.describe HomePage do
+  RSpec.describe HomePage, type: :model do
     subject { described_class.new(double, attributes) }
 
     let(:attributes) { Hash.new }

@@ -1,4 +1,4 @@
-RSpec.describe Core::Footer do
+RSpec.describe Core::Footer, type: :model do
   let(:params) do
     {
       label: 'Footer',

@@ -20,7 +20,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Serve static assets
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -54,6 +54,7 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+  Logger::Syslog.send :include, ActiveRecord::SessionStore::Extension::LoggerSilencer
   config.logger = ActiveSupport::TaggedLogging.new(Logger::Syslog.new("frontend", Syslog::LOG_LOCAL6).tap {|log| log.level = Logger::INFO})
 
   # Use a different cache store in production.

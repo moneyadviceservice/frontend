@@ -53,7 +53,7 @@ module Converters
       subject { described_class.new(customer) }
 
       it 'raise en exception' do
-        expect { subject.call }.to raise_error
+        expect { subject.call }.to raise_error 'customer is not persisted'
       end
     end
   end

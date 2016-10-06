@@ -53,14 +53,14 @@ module Core::Repository::CMS
         end
 
         it 'raises a request error' do
-          expect { subject.find('server-down') }.to raise_error
+          expect { subject.find('server-down') }.to raise_error Core::Repository::Base::RequestError
         end
       end
 
       context 'when article is a 301 redirect' do
         it 'raises Resource301Error' do
           VCR.use_cassette('en/core/repository/articles/cms/find/permanent-redirect') do
-            expect { subject.find('permanent-redirect') }.to raise_error
+            expect { subject.find('permanent-redirect') }.to raise_error Core::Repository::CMS::Resource301Error
           end
         end
 
@@ -84,7 +84,7 @@ module Core::Repository::CMS
       context 'when article is a 302 redirect' do
         it 'raises Resource302Error' do
           VCR.use_cassette('en/core/repository/articles/cms/find/temporary-redirect') do
-            expect { subject.find('temporary-redirect') }.to raise_error
+            expect { subject.find('temporary-redirect') }.to raise_error Core::Repository::CMS::Resource302Error
           end
         end
 

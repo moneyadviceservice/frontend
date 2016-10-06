@@ -66,8 +66,8 @@ module Core
           repo
         end
 
-        it 'raies an error' do
-          expect { subject.call }.to raise_error
+        it 'raises an error' do
+          expect { subject.call }.to raise_error LocalJumpError
         end
 
         it 'errors with status' do

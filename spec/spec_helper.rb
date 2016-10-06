@@ -62,7 +62,7 @@ end
 
 RSpec.configure do |c|
   c.include FactoryGirl::Syntax::Methods
-  c.include Devise::TestHelpers, type: :controller
+  c.include Devise::Test::ControllerHelpers, type: :controller
   c.include PageValidations
   c.include Rails.application.routes.url_helpers
   c.include RSpecHtmlMatchers
@@ -124,7 +124,7 @@ RSpec.configure do |c|
 
   c.before(:suite) do
     DatabaseCleaner.clean
-    ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
+    ActiveRecord::Tasks::DatabaseTasks.load_schema_current(:ruby, ENV['SCHEMA'])
 
     Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
   end
@@ -132,5 +132,12 @@ RSpec.configure do |c|
   c.before :each do
     I18n.locale = :en
     Core::Registry::Repository[:customer].clear
+  end
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
   end
 end

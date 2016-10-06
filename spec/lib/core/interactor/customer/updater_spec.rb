@@ -35,7 +35,7 @@ module Core
           context 'when customer does not exist' do
             let(:user) { User.new(customer_id: 'customer_123') }
             it 'raises an exception' do
-              expect { subject.call }.to raise_error
+              expect { subject.call }.to raise_error 'does not exist'
             end
           end
         end

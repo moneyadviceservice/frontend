@@ -8,28 +8,27 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.7.1'
 
 gem 'activerecord-session_store'
 gem 'aes'
 gem 'bugsnag'
-gem 'cream', '~> 0.3.0'
+gem 'cream', '~> 1.0.0'
 gem 'delayed_job_active_record'
-gem 'devise', '3.2.4'
+gem 'devise', '~> 4.2.0'
 gem 'devise-encryptable'
 gem 'dough-ruby', '~> 5.19.0'
 gem 'draper', '< 3'
 gem 'faraday-conductivity'
 gem 'faraday_middleware'
 gem 'feature'
-gem 'foreman'
 gem 'kss'
 gem 'link_header'
 gem 'mail'
 gem 'mailjet'
 gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'meta-tags', github: 'moneyadviceservice/meta-tags'
-gem 'mysql2', '0.3.20'
+gem 'mysql2'
 gem 'newrelic_rpm'
 gem 'nokogiri'
 gem 'nunes'
@@ -38,12 +37,12 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'redcarpet'
 gem 'rouge'
 gem 'rubytree'
+gem 'sass-rails'
 gem 'statsd-ruby'
-gem 'uglifier', '>= 1.3.0'
 gem 'postcode_anywhere-email_validation'
 
 gem 'action_plans', '~> 4.3.0'
-gem 'advice_plans', '~> 3.2.0'
+gem 'advice_plans', '~> 3.3.0'
 gem 'agreements', '~> 2.1.0'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 4.3.0'
@@ -70,19 +69,16 @@ gem 'validate_url', '1.0.0'
 
 group :assets do
   gem 'autoprefixer-rails'
-  gem 'coffee-rails', '~> 4.0.0'
-  gem 'compass-rails'
   gem 'csslint_ruby'
-  gem 'jquery-rails'
   gem 'jshint_ruby'
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier'
 end
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'foreman'
   gem 'letter_opener'
-  gem 'listen', '~> 2.0'
 end
 
 group :test do
@@ -91,7 +87,7 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'email_spec'
+  gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
   gem 'factory_girl'
   gem 'faker'
   gem 'html_validation'
@@ -121,11 +117,10 @@ group :test, :development do
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'
   gem 'ejs'
-  gem 'guard-rubocop'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rack-livereload'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'rubocop'
 end
 

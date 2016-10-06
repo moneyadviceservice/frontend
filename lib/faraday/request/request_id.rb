@@ -1,14 +1,13 @@
 require 'current_request_id'
 
-module Faraday
-  class Request::RequestId < Faraday::Middleware
-    def call(env)
-      request_id = CurrentRequestId.get
-      env[:request_headers]['X-Request-Id'] = request_id if request_id
-
-      @app.call(env)
+class Faraday::Request::RequestId < Faraday::Middleware
+  def call(env)
+    if CurrentRequestId.get.present?
+      env[:request_headers]['X-Request-Id'] = CurrentRequestId.get
     end
-  end
 
-  register_middleware :request, request_id: Faraday::Request::RequestId
+    @app.call(env)
+  end
 end
+
+Faraday::Request.register_middleware request_id: Faraday::Request::RequestId

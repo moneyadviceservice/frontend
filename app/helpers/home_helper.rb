@@ -6,6 +6,7 @@ module HomeHelper
   end
 
   def markdown(text)
+    return unless text
     renderer = Redcarpet::Render::HTML.new
     document = Redcarpet::Markdown.new(renderer).render(text)
     remove_p_tags_from(document).html_safe

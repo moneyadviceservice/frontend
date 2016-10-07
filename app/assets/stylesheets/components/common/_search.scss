@@ -46,6 +46,10 @@
   }
 }
 
+.search--inpage {
+  min-height: $baseline-unit*9;
+}
+
 .search__submit {
   @extend .unstyled-button;
   position: absolute;
@@ -112,6 +116,7 @@
   position: relative;
   width: 100%;
   margin-top: $baseline-unit;
+  background-color: $color-button-primary;
 
   @include respond-to($mq-s) {
     @include column(3);

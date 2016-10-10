@@ -97,7 +97,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'site_prism'
   gem 'sqlite3'
-  gem 'tidy-html5', github: 'moneyadviceservice/tidy-html5-gem'
+  gem 'tidy-html5'
   gem 'timecop'
   gem 'vcr'
   gem 'webmock'

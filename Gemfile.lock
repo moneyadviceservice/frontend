@@ -535,7 +535,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.7.1)
+    rio (1.8.1)
       bowndler
       dough-ruby
       pensions_calculator-calculations (~> 1.4.0)
@@ -759,7 +759,7 @@ DEPENDENCIES
   rack-livereload
   rails (= 4.2.7.1)
   redcarpet
-  rio (= 1.7.1)!
+  rio (= 1.8.1)!
   rouge
   rspec-html-matchers
   rspec-rails

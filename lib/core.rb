@@ -122,11 +122,12 @@ module Core
     end
 
     module CMS
+      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
       autoload :CMS, 'core/repository/cms/cms'
       autoload :CmsApi, 'core/repository/cms/cms_api'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
+      autoload :PageFeedback, 'core/repository/cms/page_feedback'
       autoload :Preview, 'core/repository/cms/preview'
-      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
     end
 
     module News

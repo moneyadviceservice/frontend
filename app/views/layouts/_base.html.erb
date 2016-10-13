@@ -7,6 +7,7 @@
 <html lang="<%= I18n.locale %>" class="no-js"><!--<![endif]-->
 
 <head>
+  <meta property="fb:pages" content="160564360681471" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) && Feature.active?(:optimizely) %>
 

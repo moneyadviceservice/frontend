@@ -1,0 +1,11 @@
+// For links that contain download attribute
+
+a[download] {
+  &:after {
+    @extend %icon;
+    @extend .icon--pdf;
+    content: '';
+    margin-left: 6px;
+    display: inline-block;
+  }
+}

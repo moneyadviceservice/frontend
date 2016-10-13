@@ -7,12 +7,13 @@ class CampaignsController < ApplicationController
     false
   end
 
+  ::CampaignPage::Campaign::WHITELIST.each do |campaign_page|
+    method_name = campaign_page.underscore
+    class_eval "def #{method_name}; end"
+  end
+
   def show
-    if template_exists?("/campaigns/#{params[:id].underscore}")
-      render template: "/campaigns/#{params[:id].underscore}", layout: '_unconstrained'
-    else
-      @campaign = Template.new.build_campaign(params[:id])
-      render :show
-    end
+    @campaign = Template.new.build_campaign(params[:id])
+    render :show
   end
 end

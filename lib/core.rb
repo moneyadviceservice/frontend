@@ -24,6 +24,7 @@ module Core
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :Other, 'core/entity/other'
+  autoload :PageFeedback, 'core/entity/page_feedback'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
@@ -51,6 +52,7 @@ module Core
   autoload :FooterReader, 'core/interactor/footer_reader'
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
+  autoload :PageFeedbackCreator, 'core/interactor/page_feedback_creator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'
@@ -122,11 +124,12 @@ module Core
     end
 
     module CMS
+      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
       autoload :CMS, 'core/repository/cms/cms'
       autoload :CmsApi, 'core/repository/cms/cms_api'
       autoload :BlockComposer, 'core/repository/cms/block_composer'
+      autoload :PageFeedback, 'core/repository/cms/page_feedback'
       autoload :Preview, 'core/repository/cms/preview'
-      autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
     end
 
     module News

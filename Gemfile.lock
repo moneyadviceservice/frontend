@@ -6,6 +6,17 @@ GIT
       actionpack (>= 3.0.0)
 
 GIT
+  remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
+  revision: fa4962a4a8e28bd7cc5f961ad4b1a1d483221990
+  branch: 7573-change-layout-lookup
+  specs:
+    cost_calculator_builder (0.3.0)
+      bowndler
+      dough-ruby (~> 5.0)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -161,11 +172,6 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     contribution_calculator (0.1.0)
-      rails (>= 4, < 5)
-    cost_calculator_builder (0.2.0)
-      bowndler
-      dough-ruby (~> 5.0)
-      friendly_id (>= 5.1.0)
       rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -707,7 +713,7 @@ DEPENDENCIES
   chronic
   codeclimate-test-reporter
   contribution_calculator (~> 0.1.0)
-  cost_calculator_builder (~> 0.2.0)
+  cost_calculator_builder (~> 0.3.0)!
   cream (~> 1.0.0)
   csslint_ruby
   cucumber-rails

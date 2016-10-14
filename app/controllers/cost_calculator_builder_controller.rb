@@ -6,7 +6,11 @@ class CostCalculatorBuilderController < MountController
   end
 
   def parent_template
-    'layouts/engine_unconstrained'
+    if syndicated_tool_request?
+      'layouts/engine_syndicated'
+    else
+      'layouts/engine_unconstrained'
+    end
   end
 
   def contact_panels_border_top?

@@ -382,3 +382,61 @@
     display: block;
   }
 }
+
+// In page feedback icons
+.svg-icon--thumb-icon-up,
+.svg-icon--thumb-icon-down,
+.svg-icon--thumb-button-up,
+.svg-icon--thumb-button-down {
+  display: none;
+}
+
+.svg-icon--thumb-icon-up,
+.svg-icon--thumb-icon-down,
+.icon--thumb-icon-up,
+.icon--thumb-icon-down {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icon--thumb-button-up,
+.svg-icon--thumb-button-down,
+.icon--thumb-button-up,
+.icon--thumb-button-down {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+
+.icon--thumb-icon-up {
+  background-position: -889px -433px;
+}
+
+.icon--thumb-icon-down {
+  background-position: -933px -438px;
+}
+
+.icon--thumb-button-up {
+  background-position: -979px -429px;
+}
+
+.icon--thumb-button-down {
+  background-position: -1039px -429px;
+}
+
+.svg {
+  .icon--thumb-icon-up,
+  .icon--thumb-icon-down,
+  .icon--thumb-button-up,
+  .icon--thumb-button-down {
+    display: none;
+  }
+
+  .svg-icon--thumb-icon-up,
+  .svg-icon--thumb-icon-down,
+  .svg-icon--thumb-button-up,
+  .svg-icon--thumb-button-down {
+    display: block;
+  }
+}

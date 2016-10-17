@@ -5,17 +5,20 @@ RSpec.describe PageFeedbacksController, type: :controller do
         Core::PageFeedback.new(liked: true)
       end
 
+      let(:params) do
+        {
+          locale: I18n.locale,
+          article_id: 'contact-us',
+          liked: true
+        }
+      end
+
       before do
         expect_any_instance_of(Core::PageFeedbackCreator)
-          .to receive(:call).and_return(page_feedback)
-        post :create, {
-            locale: I18n.locale,
-            article_id: 'contact-us',
-            liked: true
-          },
-          {
-            id: '53c70fc632fb7382f93da5012d8083e1'
-          }
+          .to receive(:call)
+          .with(params.merge(session_id: session.id))
+          .and_return(page_feedback)
+        post :create, params
       end
 
       it 'returns 201 create resource status' do

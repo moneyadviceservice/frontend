@@ -1,8 +1,18 @@
 module Core
   class PageFeedbackCreator
     def call(params)
-      data = Core::Registry::Repository[:page_feedback].create(params)
-      Core::PageFeedback.new(data['id'], data) if data.present?
+      data = repository.create(params)
+      return false if data.blank?
+
+      entity.new(data['id'], data)
+    end
+
+    def repository
+      Core::Registry::Repository[:page_feedback]
+    end
+
+    def entity
+      Core::PageFeedback
     end
   end
 end

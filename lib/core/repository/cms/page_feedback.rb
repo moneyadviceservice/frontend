@@ -10,7 +10,10 @@ module Core
         end
 
         def resource_url(params)
-          '/api/%{slug}/page_feedbacks' % { slug: params[:article_id] }
+          '/api/%{locale}/%{slug}/page_feedbacks' % {
+            locale: params[:locale],
+            slug: params[:article_id]
+          }
         end
       end
     end

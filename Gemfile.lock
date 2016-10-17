@@ -162,7 +162,7 @@ GEM
       compass (>= 0.12.2)
     contribution_calculator (0.1.0)
       rails (>= 4, < 5)
-    cost_calculator_builder (0.2.0)
+    cost_calculator_builder (0.3.0)
       bowndler
       dough-ruby (~> 5.0)
       friendly_id (>= 5.1.0)
@@ -707,7 +707,7 @@ DEPENDENCIES
   chronic
   codeclimate-test-reporter
   contribution_calculator (~> 0.1.0)
-  cost_calculator_builder (~> 0.2.0)
+  cost_calculator_builder (~> 0.3.0)
   cream (~> 1.0.0)
   csslint_ruby
   cucumber-rails

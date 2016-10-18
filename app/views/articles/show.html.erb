@@ -46,6 +46,8 @@
 
       <div class='related-links--mobile'>
         <%= render 'articles/related_articles', type: 'mobile' %>
+
+        <%= render 'articles/mail_to_section' %>
       </div>
 
       <%= render 'shared/more_in', article: @article, categories: related_content %>
@@ -56,8 +58,12 @@
 </div>
 
 <div class="l-nav l-article-3col-right">
-  <div class='related-links--desktop' data-dough-component="StickyColumn">
-    <%= render 'articles/related_articles', type: 'desktop' %>
+  <div data-dough-component="StickyColumn">
+    <div class="related-links--desktop">
+      <%= render 'articles/related_articles', type: 'desktop' %>
+    </div>
+
+    <%= render 'articles/mail_to_section' %>
   </div>
 </div>
 

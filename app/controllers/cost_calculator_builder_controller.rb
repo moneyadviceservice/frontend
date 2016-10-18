@@ -5,6 +5,10 @@ class CostCalculatorBuilderController < MountController
     'cost-calculator-builder'
   end
 
+  # Note: syndicated_tool_request? is overridden in the engine.
+  #       This tool isn't served on the partner-tools subdomain,
+  #       so syndicated requests can't be detected using the usual
+  #       process of looking for the 'X-Syndicated-Tool' header.
   def parent_template
     if syndicated_tool_request?
       'layouts/engine_syndicated'

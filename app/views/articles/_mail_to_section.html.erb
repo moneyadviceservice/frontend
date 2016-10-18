@@ -1,0 +1,32 @@
+<div class="mail-to-section"><!-- data-subject="<%= article.title %>" data-url="<%= article.canonical_url %>" -->
+  <h2 class="mail-to-section__heading"></h2>
+  <p class="mail-to-section__body"></p>
+  <input type="text" placeholder="E-mail address" class="mail-to-section__input"/>
+  <a href="mailto:email?subject=title&amp;body=url" class="button button--primary mail-to-section__link">Send</a>
+</div>
+
+<!-- styles added here for test - would be added to app/assets/stylesheets/layout/page_specific/_article_page.scss if deployed
+<style>
+  .mail-to-section {
+    margin-top: 3rem;
+  }
+
+  .mail-to-section:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .mail-to-section__heading {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  .mail-to-section__link {
+    float: right;
+    margin-top: 0.875rem;
+  }
+</style>
+-->

@@ -124,3 +124,21 @@ require(['common', 'jquery'], function(MAS, $) {
     });
   });
 });
+
+/**
+ * Added here to test
+ * Will be a separate module if deployed
+require(['jquery'], function($) {
+  var link = $('.mail-to-section__link');
+  var subject = $('h1').html(); // $('.mail-to-section').attr('data-subject');
+  var url = window.location; // $('.mail-to-section').attr('data-url');
+
+  $(link).attr('href', $(link).attr('href').replace('title', subject).replace('url', url));
+
+  $('.mail-to-section__link').click(
+    function() {
+      $(link).attr('href', $(link).attr('href').replace('email', $(this).siblings('.mail-to-section__input').val()));
+    }
+  );
+});
+ */

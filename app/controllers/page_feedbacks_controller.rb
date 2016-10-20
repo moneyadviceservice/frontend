@@ -1,6 +1,6 @@
 class PageFeedbacksController < ApplicationController
   def create
-    page_feedback = interactor.call(page_feedback_params)
+    page_feedback = Core::PageFeedbackCreator.new.call(page_feedback_params)
 
     if page_feedback
       render json: { id: page_feedback.id }, status: 201
@@ -9,11 +9,17 @@ class PageFeedbacksController < ApplicationController
     end
   end
 
-  private
+  def update
+    page_feedback = Core::PageFeedbackUpdator.new.call(page_feedback_params)
 
-  def interactor
-    Core::PageFeedbackCreator.new
+    if page_feedback
+      render json: { id: page_feedback.id }, status: 200
+    else
+      render json: {}, status: 422
+    end
   end
+
+  private
 
   def page_feedback_params
     params.permit(:liked, :article_id).merge(

@@ -9,6 +9,13 @@ module Core
           false
         end
 
+        def create(params)
+          response = connection.patch(resource_url(params), params)
+          response.body
+        rescue Core::Connection::Http::ClientError
+          false
+        end
+
         def resource_url(params)
           '/api/%{locale}/%{slug}/page_feedbacks' % {
             locale: params[:locale],

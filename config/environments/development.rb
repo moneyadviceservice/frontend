@@ -16,6 +16,9 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  # Use a different cache store in production.
+  config.cache_store = :memory_store, { expires_in: 1.hour }
+
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 

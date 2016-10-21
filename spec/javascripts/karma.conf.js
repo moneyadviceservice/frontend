@@ -12,6 +12,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'spec/javascripts/test-main.js',
+      'vendor/assets/bower_components/bind-polyfill/index.js',
       'spec/javascripts/templates/*.html',
       'spec/javascripts/fixtures/*.html',
       'spec/javascripts/**/*_spec.js',

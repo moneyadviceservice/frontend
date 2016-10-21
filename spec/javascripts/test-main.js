@@ -33,6 +33,7 @@ require.config({
     ClearInput: 'app/assets/javascripts/components/ClearInput',
     StickyColumn: 'app/assets/javascripts/components/StickyColumn',
     EmbedCodeGenerator: 'app/assets/javascripts/components/EmbedCodeGenerator',
+    OnPageFeedback: 'app/assets/javascripts/components/OnPageFeedback',
     ViewAll: 'app/assets/javascripts/components/ViewAll',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',

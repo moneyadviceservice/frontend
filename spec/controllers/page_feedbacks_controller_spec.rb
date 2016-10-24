@@ -44,7 +44,8 @@ RSpec.describe PageFeedbacksController, type: :controller do
       {
         'shared_on'  => 'Twitter',
         'locale'     => :en,
-        'article_id' => 'example-article'
+        'article_id' => 'example-article',
+        'comment'    => 'Feedback comment'
       }
     end
 

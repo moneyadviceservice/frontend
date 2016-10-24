@@ -34,11 +34,37 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   OnPageFeedback.prototype._share = function() {
     // TODO: Do we need to track 'shares'? I can't remember.
+
+    var submitShare = $.ajax({
+      url: this.ajaxUrl,
+      type: 'PATCH',
+      data: {'shared_on': 'Twitter'}
+    });
+
+    submitShare.fail(function(status){
+      console.log('Failed to send share');
+    });
+
     this._showPage('results');
   };
 
   OnPageFeedback.prototype._submitComment = function() {
     // TODO: another AJAX call here with the comment
+
+    var userComment = $('[data-dough-feedback-comment]').val();
+
+    var submitFeedback = $.ajax({
+      url: this.ajaxUrl,
+      type: 'PATCH',
+      data: {'comment': userComment}
+    });
+
+    console.log(this.ajaxUrl);
+
+    submitFeedback.fail(function(status){
+      console.log('Failed to send feedback: "' + userComment + '"');
+    });
+
     this._showPage('results');
   };
 
@@ -54,7 +80,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       self._submitInteraction($(this).attr('data-dough-feedback'));
     });
     this.shareBtns.on('click', $.proxy(this._share, this));
-    this.submitBtn.on('click', $.proxy(this._submitComment));
+    this.submitBtn.on('click', $.proxy(this._submitComment, this));
   };
 
   OnPageFeedback.prototype.init = function(initialised) {

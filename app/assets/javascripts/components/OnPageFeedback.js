@@ -32,14 +32,21 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   };
 
-  OnPageFeedback.prototype._share = function() {
+  OnPageFeedback.prototype._share = function(share) {
     // TODO: Do we need to track 'shares'? I can't remember.
+    // Get the text within the title tag of the clicked share button (eg. Share this on Twitter)
+    var shareSource = $(share.target).find('title').text(),
+
+    // Split this to get the last word (Facebook, Twitter, Email)
+    shareValue = shareSource.split(" ").pop();
 
     var submitShare = $.ajax({
       url: this.ajaxUrl,
       type: 'PATCH',
-      data: {'shared_on': 'Twitter'}
+      data: {'shared_on': shareValue}
     });
+
+    console.log(shareSource);
 
     submitShare.fail(function(status){
       console.log('Failed to send share');

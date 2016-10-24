@@ -113,7 +113,8 @@ Rails.application.routes.draw do
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
       resource :feedback, only: [:new, :create], controller: :article_feedbacks
-      resources :page_feedbacks, only: [:create, :update]
+      resources :page_feedbacks, only: [:create]
+      patch 'page_feedbacks' => 'page_feedbacks#update'
     end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',

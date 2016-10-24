@@ -3,16 +3,17 @@ module Core
     module CMS
       class PageFeedback < ::Core::Repository::CMS::CMS
         def create(params)
-          response = connection.post(resource_url(params), params)
-          response.body
-        rescue Core::Connection::Http::ClientError
-          false
+          request(:post, params)
         end
 
         def update(params)
-          response = connection.patch(resource_url(params), params)
+          request(:patch, params)
+        end
+
+        def request(verb, params)
+          response = connection.send(verb, resource_url(params), params)
           response.body
-        rescue Core::Connection::Http::ClientError
+        rescue
           false
         end
 

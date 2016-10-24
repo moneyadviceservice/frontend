@@ -1,10 +1,10 @@
 RSpec.describe PageFeedbacksController, type: :controller do
+  let(:page_feedback) do
+    Core::PageFeedback.new(liked: true)
+  end
+
   describe 'POST /page_feedbacks' do
     describe 'when valid' do
-      let(:page_feedback) do
-        Core::PageFeedback.new(liked: true)
-      end
-
       let(:params) do
         {
           locale: I18n.locale,
@@ -34,6 +34,42 @@ RSpec.describe PageFeedbacksController, type: :controller do
       end
 
       it 'returns unprocessable entity' do
+        expect(response.status).to be(422)
+      end
+    end
+  end
+
+  describe 'PATCH /en/articles/example-article/page_feedbacks' do
+    let(:params) do
+      {
+        'shared_on'  => 'Twitter',
+        'locale'     => :en,
+        'article_id' => 'example-article'
+      }
+    end
+
+    context 'when valid' do
+      before do
+        expect_any_instance_of(Core::PageFeedbackUpdator)
+          .to receive(:call)
+          .with(params.merge(session_id: session.id))
+          .and_return(page_feedback)
+        patch :update, params
+      end
+
+      it 'returns success response' do
+        expect(response.status).to be(200)
+      end
+    end
+
+    context 'when invalid' do
+      before do
+        expect_any_instance_of(Core::PageFeedbackUpdator)
+          .to receive(:call).and_return(false)
+        patch :update, params
+      end
+
+      it 'returns success response' do
         expect(response.status).to be(422)
       end
     end

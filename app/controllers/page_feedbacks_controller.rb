@@ -3,7 +3,7 @@ class PageFeedbacksController < ApplicationController
     page_feedback = Core::PageFeedbackCreator.new.call(page_feedback_params)
 
     if page_feedback
-      render json: { id: page_feedback.id }, status: 201
+      render json: page_feedback, status: 201
     else
       render json: {}, status: 422
     end
@@ -13,7 +13,7 @@ class PageFeedbacksController < ApplicationController
     page_feedback = Core::PageFeedbackUpdator.new.call(page_feedback_params)
 
     if page_feedback
-      render json: { id: page_feedback.id }, status: 200
+      render json: page_feedback, status: 200
     else
       render json: {}, status: 422
     end

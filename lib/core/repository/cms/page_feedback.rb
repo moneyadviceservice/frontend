@@ -9,7 +9,7 @@ module Core
           false
         end
 
-        def create(params)
+        def update(params)
           response = connection.patch(resource_url(params), params)
           response.body
         rescue Core::Connection::Http::ClientError

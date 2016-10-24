@@ -53,6 +53,7 @@ module Core
   autoload :NewsArticleReader, 'core/interactor/news_article_reader'
   autoload :NewsReader, 'core/interactor/news_reader'
   autoload :PageFeedbackCreator, 'core/interactor/page_feedback_creator'
+  autoload :PageFeedbackUpdator, 'core/interactor/page_feedback_updator'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :VideoReader, 'core/interactor/video_reader'

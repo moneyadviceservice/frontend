@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/page_feedbacks
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Tomas-Destefi-00119.local; tomasdestefi; 20661) ruby/2.2.5
+        (319; x86_64-darwin15)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: 'Unprocessable Entity '
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Request-Id:
+      - 00e816d8-2215-4526-9e08-9ff11cc89553
+      X-Runtime:
+      - '0.039447'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.5/2016-04-26)
+      Date:
+      - Mon, 24 Oct 2016 14:48:53 GMT
+      Content-Length:
+      - '10992'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: "ActionController::InvalidAuthenticityToken at /api/page_feedbacks\n=================================================================\n\n>
+        ActionController::InvalidAuthenticityToken\n\napp/middleware/version_header.rb,
+        line 13\n-----------------------------------------\n\n``` ruby\n    8       json
+        = File.read(version_file)\n    9       @version = JSON.parse(json)['version']\n
+        \  10     end\n   11   \n   12     def call(env)\n>  13       status, headers,
+        body = @app.call(env)\n   14   \n   15       headers.merge!('X-Mas-Version'
+        => @version) if @version\n   16   \n   17       [status, headers, body]\n
+        \  18     end\n```\n\nApp backtrace\n-------------\n\n - app/middleware/version_header.rb:13:in
+        `call'\n - app/middleware/route_probe.rb:19:in `call'\n - app/middleware/override_head.rb:13:in
+        `call'\n - app/middleware/capture_request_id.rb:11:in `call'\n\nFull backtrace\n--------------\n\n
+        - actionpack (4.2.7.1) lib/action_controller/metal/request_forgery_protection.rb:181:in
+        `handle_unverified_request'\n - actionpack (4.2.7.1) lib/action_controller/metal/request_forgery_protection.rb:209:in
+        `handle_unverified_request'\n - devise (4.2.0) lib/devise/controllers/helpers.rb:253:in
+        `handle_unverified_request'\n - actionpack (4.2.7.1) lib/action_controller/metal/request_forgery_protection.rb:204:in
+        `verify_authenticity_token'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:432:in
+        `block in make_lambda'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:164:in
+        `block in halting'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:504:in
+        `block in call'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:504:in
+        `call'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'\n
+        - activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'\n
+        - activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'\n
+        - actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'\n
+        - actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'\n
+        - actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in
+        `block in process_action'\n - activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in
+        `block in instrument'\n - activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in
+        `instrument'\n - activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in
+        `instrument'\n - actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in
+        `process_action'\n - actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in
+        `process_action'\n - activerecord (4.2.7.1) lib/active_record/railties/controller_runtime.rb:18:in
+        `process_action'\n - actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in
+        `process'\n - actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'\n
+        - actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'\n
+        - actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in
+        `dispatch'\n - actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in
+        `block in action'\n - actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in
+        `dispatch'\n - actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in
+        `serve'\n - actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in
+        `block in serve'\n - actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in
+        `serve'\n - actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - i18n-js (3.0.0.mas) lib/i18n-js/middleware.rb:11:in `call'\n -
+        newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/rack/agent_hooks.rb:30:in
+        `traced_call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/rack/browser_monitoring.rb:32:in
+        `traced_call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - app/middleware/version_header.rb:13:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - app/middleware/route_probe.rb:19:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        app/middleware/override_head.rb:13:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        app/middleware/capture_request_id.rb:11:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        warden (1.2.6) lib/warden/manager.rb:35:in `block in call'\n - warden (1.2.6)
+        lib/warden/manager.rb:34:in `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/etag.rb:24:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        rack (1.6.4) lib/rack/head.rb:13:in `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/flash.rb:260:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'\n
+        - rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - activerecord (4.2.7.1) lib/active_record/query_cache.rb:36:in `call'\n
+        - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - activerecord (4.2.7.1) lib/active_record/migration.rb:377:in `call'\n
+        - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in
+        `block in call'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in
+        `__run_callbacks__'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in
+        `_run_call_callbacks'\n - activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in
+        `run_callbacks'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - bugsnag (5.0.1) lib/bugsnag/rack.rb:33:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'\n
+        - better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'\n
+        - better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'\n
+        - railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'\n - activesupport
+        (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'\n -
+        activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'\n
+        - activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'\n
+        - railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'\n
+        - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in
+        `call'\n - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/runtime.rb:18:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - dragonfly (1.0.12) lib/dragonfly/cookie_monster.rb:9:in `call'\n
+        - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/lock.rb:17:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'\n
+        - newrelic_rpm (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - rack (1.6.4) lib/rack/sendfile.rb:113:in `call'\n - newrelic_rpm
+        (3.16.3.323) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in
+        `call'\n - railties (4.2.7.1) lib/rails/engine.rb:518:in `call'\n - railties
+        (4.2.7.1) lib/rails/application.rb:165:in `call'\n - newrelic_rpm (3.16.3.323)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'\n -
+        rack (1.6.4) lib/rack/lock.rb:17:in `call'\n - rack (1.6.4) lib/rack/content_length.rb:15:in
+        `call'\n - rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'\n - /Users/tomasdestefi/.rvm/rubies/ruby-2.2.5/lib/ruby/2.2.0/webrick/httpserver.rb:138:in
+        `service'\n - /Users/tomasdestefi/.rvm/rubies/ruby-2.2.5/lib/ruby/2.2.0/webrick/httpserver.rb:94:in
+        `run'\n - /Users/tomasdestefi/.rvm/rubies/ruby-2.2.5/lib/ruby/2.2.0/webrick/server.rb:294:in
+        `block in start_thread'\n\n"
+    http_version: 
+  recorded_at: Mon, 24 Oct 2016 14:48:53 GMT
+recorded_with: VCR 3.0.3

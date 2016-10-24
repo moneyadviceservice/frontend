@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/en/example-article/page_feedbacks
+    body:
+      encoding: UTF-8
+      string: '{"liked":true,"article_id":"example-article","session_id":"ae2fcba004e16dffa54f91a46d274238","locale":"en","slug":"example-article"}'
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Tomas-Destefi-00119.local; tomasdestefi; 20858) ruby/2.2.5
+        (319; x86_64-darwin15)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 24 Oct 2016 14:53:24 GMT
+      Status:
+      - 201 Created
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"cfea846ce230cfdd6ef5ec0253881c57"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c49aaa07-e92f-449f-a826-30958d085a94
+      X-Runtime:
+      - '0.312014'
+    body:
+      encoding: UTF-8
+      string: '{"id":17,"page_id":1,"liked":true,"session_id":"ae2fcba004e16dffa54f91a46d274238","comment":null,"shared_on":null,"likes_count":14,"dislikes_count":3}'
+    http_version: 
+  recorded_at: Mon, 24 Oct 2016 14:53:24 GMT
+recorded_with: VCR 3.0.3

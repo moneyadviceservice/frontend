@@ -22,7 +22,7 @@ class PageFeedbacksController < ApplicationController
   private
 
   def page_feedback_params
-    params.permit(:liked, :shared_on, :article_id).merge(
+    params.permit(:liked, :shared_on, :comment, :article_id).merge(
       session_id: session.id,
       locale: I18n.locale
     )

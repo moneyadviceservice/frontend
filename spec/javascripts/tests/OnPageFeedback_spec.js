@@ -1,4 +1,4 @@
-describe.only('OnPageFeedback', function() {
+describe('OnPageFeedback', function() {
 
   'use strict';
   var server;
@@ -14,13 +14,14 @@ describe.only('OnPageFeedback', function() {
         self.pages = self.$html.find('[data-dough-feedback-page]');
         self.shareBtns = self.$html.find('[data-dough-feedback-share] .social-sharing__item__icon');
         self.submitBtn = self.$html.find('[data-dough-feedback-submit]');
+        self.likesCount = self.$html.find('[data-dough-feedback-like-count]');
 
         self.OnPageFeedback = new OnPageFeedback(self.$html).init();
 
         server = sinon.fakeServer.create();
         server.respondWith('POST', 'initial-feedback-endpoint', 
           [201, { 'Content-Type': 'application/json' },
-          '[{id":5}]']);
+          '[{"id":13,"page_id":1,"liked":true,"likes_count":12,"dislikes_count":5}]']);
 
         done();
       }, done);
@@ -54,6 +55,17 @@ describe.only('OnPageFeedback', function() {
     }); 
 
   });
+
+  // describe('Updating the like / dislike count', function(){
+  //   it('Shows total likes', function(){
+  //     this.interactionBtn.filter('[data-dough-feedback=positive]').trigger('click');
+  //     server.respond();
+  //     console.log(this.likesCount.html());
+  //     expect(this.likesCount.html().to.equal(12))
+  //     expect(this.dislikesCount.html().to.equal(5))
+  //   });
+
+  // });
 
 
   afterEach(function () {

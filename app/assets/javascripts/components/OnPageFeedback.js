@@ -20,33 +20,32 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var isLiked = (interaction === 'positive') ? true : false;
     
     var postObject = {
-        liked: isLiked
-      };
-      
-      $.post(this.ajaxUrl, postObject, function(data){
-        this._showPage(interaction);
-      }.bind(this))
-      .fail(function() {
-        console.log('SOMETHING WENT WRONG');
-      }.bind(this));
+      liked: isLiked
+    };
+
+    $.post(this.ajaxUrl, postObject, function(data){
+      this._showPage(interaction);
+    }.bind(this))
+    .fail(function() {
+      console.log('SOMETHING WENT WRONG');
+    }.bind(this));
 
   };
 
   OnPageFeedback.prototype._share = function(share) {
-    // TODO: Do we need to track 'shares'? I can't remember.
-    // Get the text within the title tag of the clicked share button (eg. Share this on Twitter)
+
+    // Get the title text from the clicked share element
     var shareSource = $(share.target).find('title').text(),
 
     // Split this to get the last word (Facebook, Twitter, Email)
     shareValue = shareSource.split(" ").pop();
-
+    
     var submitShare = $.ajax({
       url: this.ajaxUrl,
       type: 'PATCH',
-      data: {'shared_on': shareValue}
+      data: {'shared_on': shareValue},
+      success: $.proxy(this._updateCount)    
     });
-
-    console.log(shareSource);
 
     submitShare.fail(function(status){
       console.log('Failed to send share');
@@ -56,23 +55,28 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   OnPageFeedback.prototype._submitComment = function() {
-    // TODO: another AJAX call here with the comment
-
-    var userComment = $('[data-dough-feedback-comment]').val();
-
-    var submitFeedback = $.ajax({
-      url: this.ajaxUrl,
-      type: 'PATCH',
-      data: {'comment': userComment}
-    });
-
-    console.log(this.ajaxUrl);
+    var userComment = $('[data-dough-feedback-comment]').val(),
+        submitFeedback = $.ajax({
+          url: this.ajaxUrl,
+          type: 'PATCH',
+          data: {'comment': userComment},
+          success: $.proxy(this._updateCount)
+        });
 
     submitFeedback.fail(function(status){
       console.log('Failed to send feedback: "' + userComment + '"');
     });
 
     this._showPage('results');
+  };
+
+  OnPageFeedback.prototype._updateCount = function(data) {
+    var likeCount     = $('[data-dough-feedback-like-count]'),
+        dislikeCount  = $('[data-dough-feedback-dislike-count]'),
+        countResponse = data;
+
+    likeCount.text(countResponse.likes_count);
+    dislikeCount.text(countResponse.dislikes_count);
   };
 
   OnPageFeedback.prototype._showPage = function(pageName) {

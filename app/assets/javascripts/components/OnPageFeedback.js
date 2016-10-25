@@ -11,6 +11,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.shareBtns = $el.find('[data-dough-feedback-share] .social-sharing__item__icon');
     this.submitBtn = $el.find('[data-dough-feedback-submit]');
     this.ajaxUrl = $el.attr('data-dough-on-page-feedback-post');
+    this.likeCount = $el.find('[data-dough-feedback-like-count]');
+    this.dislikeCount = $el.find('[data-dough-feedback-dislike-count]');
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
@@ -25,6 +27,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     $.post(this.ajaxUrl, postObject, function(data){
       this._showPage(interaction);
+      this._updateCount(data);
     }.bind(this))
     .fail(function() {
       console.log('SOMETHING WENT WRONG');
@@ -33,18 +36,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   OnPageFeedback.prototype._share = function(share) {
-
-    // Get the title text from the clicked share element
-    var shareSource = $(share.target).find('title').text(),
-
-    // Split this to get the last word (Facebook, Twitter, Email)
-    shareValue = shareSource.split(" ").pop();
-    
     var submitShare = $.ajax({
       url: this.ajaxUrl,
       type: 'PATCH',
-      data: {'shared_on': shareValue},
-      success: $.proxy(this._updateCount)    
+      data: {'shared_on': share}    
     });
 
     submitShare.fail(function(status){
@@ -59,8 +54,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         submitFeedback = $.ajax({
           url: this.ajaxUrl,
           type: 'PATCH',
-          data: {'comment': userComment},
-          success: $.proxy(this._updateCount)
+          data: {'comment': userComment}
         });
 
     submitFeedback.fail(function(status){
@@ -71,12 +65,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   OnPageFeedback.prototype._updateCount = function(data) {
-    var likeCount     = $('[data-dough-feedback-like-count]'),
-        dislikeCount  = $('[data-dough-feedback-dislike-count]'),
-        countResponse = data;
-
-    likeCount.text(countResponse.likes_count);
-    dislikeCount.text(countResponse.dislikes_count);
+    var countResponse = data;
+    
+    this.likeCount.text(countResponse.likes_count);
+    this.dislikeCount.text(countResponse.dislikes_count);
   };
 
   OnPageFeedback.prototype._showPage = function(pageName) {
@@ -90,7 +82,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       e.preventDefault();
       self._submitInteraction($(this).attr('data-dough-feedback'));
     });
-    this.shareBtns.on('click', $.proxy(this._share, this));
+    // this.shareBtns.on('click', $.proxy(this._share, this));
+    this.shareBtns.on('click', function(e) {
+      e.preventDefault();
+      self._share($(this).attr('data-dough-shared-on'));
+    });
     this.submitBtn.on('click', $.proxy(this._submitComment, this));
   };
 

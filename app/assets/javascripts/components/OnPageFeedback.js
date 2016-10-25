@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponent, MAS) {
   'use strict';
 
   var OnPageFeedback;
@@ -25,14 +25,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       liked: isLiked
     };
 
-    $.post(this.ajaxUrl, postObject, function(data){
+    var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
       this._showPage(interaction);
       this._updateCount(data);
     }.bind(this))
     .fail(function() {
-      console.log('SOMETHING WENT WRONG');
+      MAS.warn('failed to submit like / dislike');
     }.bind(this));
-
   };
 
   OnPageFeedback.prototype._share = function(share) {
@@ -41,9 +40,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       type: 'PATCH',
       data: {'shared_on': share}    
     });
-
     submitShare.fail(function(status){
-      console.log('Failed to send share');
+      MAS.warn('failed to submit share');
     });
 
     this._showPage('results');
@@ -58,15 +56,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         });
 
     submitFeedback.fail(function(status){
-      console.log('Failed to send feedback: "' + userComment + '"');
+      MAS.warn('failed to submit comment');
     });
-
     this._showPage('results');
   };
 
   OnPageFeedback.prototype._updateCount = function(data) {
     var countResponse = data;
-    
+
     this.likeCount.text(countResponse.likes_count);
     this.dislikeCount.text(countResponse.dislikes_count);
   };
@@ -78,13 +75,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   OnPageFeedback.prototype._bindHandlers = function() {
     var self = this;
+
     this.interactionBtn.on('click', function(e) {
       e.preventDefault();
       self._submitInteraction($(this).attr('data-dough-feedback'));
     });
-    // this.shareBtns.on('click', $.proxy(this._share, this));
-    this.shareBtns.on('click', function(e) {
-      e.preventDefault();
+    this.shareBtns.on('click', function() {
       self._share($(this).attr('data-dough-shared-on'));
     });
     this.submitBtn.on('click', $.proxy(this._submitComment, this));

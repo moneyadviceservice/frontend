@@ -318,11 +318,16 @@ cy:
       related_links_title: Erthyglau cysylltiedig
 
     on_page_feedback:
-      prompt: A wnaethoch chi ddod o hyd y canllaw hwn yn ddefnyddiol?
-      social_share_heading: Gofal i rannu?
-      user_feedback_heading: Dywedwch wrthym pam nad yw eich ymweliad yn ddefnyddiol
-      thankyou_heading: Diolch i chi am eich adborth
+      positive: 'Do'
+      negative: 'Naddo'
+      prompt: A oedd y canllaw hwn o ddefnydd i chi?
+      social_share_heading: Wnewch chi rannu’ch sylwadau?
+      user_feedback_heading: Dywedwch wrthym os gwelwch yn dda pam nad oedd y canllaw hwn o gymorth
+      thankyou_heading: Diolch am eich adborth
       user_feedback_submit: Cyflwyno
+      feedback_placeholder: Teipiwch yma...
+      total_likes: Nifer wedi hoffi
+      total_dislikes: Nifer ddim wedi hoffi
 
     sharing:
       title: Rhannwch yr erthygl hon

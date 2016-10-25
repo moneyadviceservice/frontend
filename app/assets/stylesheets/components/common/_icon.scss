@@ -401,7 +401,11 @@
 }
 
 .svg-icon--thumb-button-up,
-.svg-icon--thumb-button-down,
+.svg-icon--thumb-button-down {
+  width: 35px;
+  height: 35px;
+}
+
 .icon--thumb-button-up,
 .icon--thumb-button-down {
   margin: 0 auto;
@@ -410,11 +414,11 @@
 }
 
 .icon--thumb-icon-up {
-  background-position: -889px -433px;
+  background-position: -889px -440px;
 }
 
 .icon--thumb-icon-down {
-  background-position: -933px -438px;
+  background-position: -935px -436px;
 }
 
 .icon--thumb-button-up {

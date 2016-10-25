@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponent, MAS) {
   'use strict';
 
   var OnPageFeedback;
@@ -25,14 +25,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       liked: isLiked
     };
 
-    $.post(this.ajaxUrl, postObject, function(data){
+    var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
       this._showPage(interaction);
       this._updateCount(data);
     }.bind(this))
     .fail(function() {
-      console.log('SOMETHING WENT WRONG');
+      MAS.warn('failed to submit like / dislike');
     }.bind(this));
-
   };
 
   OnPageFeedback.prototype._share = function(share) {
@@ -41,32 +40,54 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       type: 'PATCH',
       data: {'shared_on': share}    
     });
-
     submitShare.fail(function(status){
-      console.log('Failed to send share');
+      MAS.warn('failed to submit share');
     });
 
     this._showPage('results');
+    this._animateResult('like');
   };
 
   OnPageFeedback.prototype._submitComment = function() {
     var userComment = $('[data-dough-feedback-comment]').val(),
-        submitFeedback = $.ajax({
-          url: this.ajaxUrl,
-          type: 'PATCH',
-          data: {'comment': userComment}
-        });
-
-    submitFeedback.fail(function(status){
-      console.log('Failed to send feedback: "' + userComment + '"');
+    submitFeedback = $.ajax({
+      url: this.ajaxUrl,
+      type: 'PATCH',
+      data: {'comment': userComment}
     });
 
+    submitFeedback.fail(function(status){
+      MAS.warn('failed to submit comment');
+    });
     this._showPage('results');
+    this._animateResult('dislike');
   };
+
+  OnPageFeedback.prototype._animateResult = function(interaction) {
+    var el,
+    total;
+
+    if (interaction === 'like') {
+      el = this.likeCount;
+    } else {
+      el = this.dislikeCount;
+    };
+
+    total = parseInt(el.text());
+    el.text(total - 1);
+
+    window.setTimeout(function(){
+      el.closest('.on-page-feedback__results-item').addClass('is-animating');
+    }.bind(this), 300);
+    window.setTimeout(function(){
+      el.text(total);
+    }.bind(this), 700);
+  };
+
 
   OnPageFeedback.prototype._updateCount = function(data) {
     var countResponse = data;
-    
+
     this.likeCount.text(countResponse.likes_count);
     this.dislikeCount.text(countResponse.dislikes_count);
   };
@@ -78,13 +99,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   OnPageFeedback.prototype._bindHandlers = function() {
     var self = this;
+
     this.interactionBtn.on('click', function(e) {
       e.preventDefault();
       self._submitInteraction($(this).attr('data-dough-feedback'));
     });
-    // this.shareBtns.on('click', $.proxy(this._share, this));
-    this.shareBtns.on('click', function(e) {
-      e.preventDefault();
+    this.shareBtns.on('click', function() {
       self._share($(this).attr('data-dough-shared-on'));
     });
     this.submitBtn.on('click', $.proxy(this._submitComment, this));

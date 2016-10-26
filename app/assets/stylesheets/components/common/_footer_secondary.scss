@@ -30,7 +30,7 @@
     @include focus-outline;
   }
 
-  line-height: 2.2;
+  line-height: 1;
 
   .cy-theme & {
     @include body(13, 18);
@@ -45,6 +45,48 @@
 
 .footer-secondary__list-item > a:focus {
   color: $color-focus-fg;
+}
+
+.footer-secondary__link-items {
+  @include clearfix();
+  @include respond-to($mq-l) {
+    float: right;
+  }
+}
+
+.footer-secondary__link-item {
+  padding-right: $baseline-unit;
+  margin-right: $baseline-unit;
+  border-right: solid 1px;
+  float: left;
+  line-height: 1rem;
+  margin-top: $baseline-unit;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-s) {
+    padding-right: $baseline-unit*3;
+    margin-right: $baseline-unit*3;
+
+    &:nth-child(n+2) {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}
+
+.footer-secondary__link-item:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.footer-secondary__sign-out,
+.footer-secondary__my-account,
+.footer-secondary__sign-in,
+.footer-secondary__register {
+  @include respond-to($mq-xl) {
+    display: none;
+  }
 }
 
 .footer-secondary__opt-out {

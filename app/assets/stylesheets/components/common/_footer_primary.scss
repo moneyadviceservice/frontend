@@ -1,3 +1,12 @@
 .footer-primary__list-item {
-  @include body(16, 22);
+  @include body(14, 18);
+
+  line-height: 1;
+  margin-bottom: $baseline-unit*2;
+
+  @include respond-to($mq-s) {
+    @include body(16, 22);
+
+    margin-bottom: $baseline-unit*2;
+  }
 }

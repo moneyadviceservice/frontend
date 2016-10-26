@@ -20,24 +20,26 @@
             <%= '*' if translation?('contact_panels.chat.smallprint') %>
           </p>
 
+          <h3 class="contact-panel__opening-times-heading">Open:</h3>
+
+          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+            <% unless alternate_hours_active? %>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+            <% end %>
+
+            <% if display_chat_migration_message? %>
+              <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+            <% end %>
+          </ul>
+
           <div class="contact-panel__button-container" id="js-chat-cta">
             <div class="contact-panel__button button is-disabled t-chat-button">
               <%= chat_opening_hours.call_to_action %>
             </div>
           </div>
         </div>
-
-        <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <% unless alternate_hours_active? %>
-            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-          <% end %>
-
-          <% if display_chat_migration_message? %>
-            <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-          <% end %>
-        </ul>
 
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
@@ -49,12 +51,14 @@
           <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
         <% end %>
 
-        <p class="t-contact-introduction"><%= @footer.contact.introduction %></p>
+        <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
 
-        <p>
+        <p class="contact-panel__contact-number">
           <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
             <%= @footer.contact.phone_number %></a>
         </p>
+
+        <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
         <ul class="contact-panel__list">
           <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>

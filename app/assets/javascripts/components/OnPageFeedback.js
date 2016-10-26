@@ -45,22 +45,45 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     });
 
     this._showPage('results');
-    this.likeCount.closest('.on-page-feedback__results-item').addClass('animating');
+    this._animateResult('like');
   };
 
   OnPageFeedback.prototype._submitComment = function() {
     var userComment = $('[data-dough-feedback-comment]').val(),
-        submitFeedback = $.ajax({
-          url: this.ajaxUrl,
-          type: 'PATCH',
-          data: {'comment': userComment}
-        });
+    submitFeedback = $.ajax({
+      url: this.ajaxUrl,
+      type: 'PATCH',
+      data: {'comment': userComment}
+    });
 
     submitFeedback.fail(function(status){
       MAS.warn('failed to submit comment');
     });
     this._showPage('results');
+    this._animateResult('dislike');
   };
+
+  OnPageFeedback.prototype._animateResult = function(interaction) {
+    var el,
+    total;
+
+    if (interaction === 'like') {
+      el = this.likeCount;
+    } else {
+      el = this.dislikeCount;
+    };
+
+    total = parseInt(el.text());
+    el.text(total - 1);
+
+    window.setTimeout(function(){
+      el.closest('.on-page-feedback__results-item').addClass('is-animating');
+    }.bind(this), 300);
+    window.setTimeout(function(){
+      el.text(total);
+    }.bind(this), 700);
+  };
+
 
   OnPageFeedback.prototype._updateCount = function(data) {
     var countResponse = data;

@@ -1,11 +1,8 @@
 <div class="on-page-feedback" aria-live="polite" data-dough-component="OnPageFeedback" data-dough-on-page-feedback-post="<%= article_page_feedbacks_path(article.id) %>">
-
-  <!-- In article feedback step 1 - Thumbs -->
-  <div class="on-page-feedback__one" data-dough-feedback-page="start">
-    <h2 class="on-page-feedback__one-title"><%= t('articles.on_page_feedback.prompt') %></h2>
-
-    <button class="on-page-feedback__one-thumb-button-up" data-dough-feedback="positive">
-      <span class="visually-hidden">Yes</span>
+  <div data-dough-feedback-page="start">
+    <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.prompt') %></h2>
+    <button class="on-page-feedback__thumb-button-up" data-dough-feedback="positive">
+      <span class="visually-hidden"><%= t('articles.on_page_feedback.positive') %></span>
       <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-button-up"
            focusable="false">
@@ -13,9 +10,8 @@
       </svg>
       <span class="icon icon--thumb-icon-up"></span>
     </button>
-
-    <button class="on-page-feedback__one-thumb-button-down" data-dough-feedback="negative">
-      <span class="visually-hidden">No</span>
+    <button class="on-page-feedback__thumb-button-down" data-dough-feedback="negative">
+      <span class="visually-hidden"><%= t('articles.on_page_feedback.negative') %></span>
       <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-button-down"
            focusable="false">
@@ -23,19 +19,14 @@
       </svg>
       <span class="icon icon--thumb-icon-down"></span>
     </button>
-
   </div>
-
-  <!-- In article feedback step 2 - User feedback -->
-  <div class="on-page-feedback__two is-hidden" data-dough-feedback-page="negative">
-    <h2 class="on-page-feedback__two-title"><%= t('articles.on_page_feedback.user_feedback_heading') %></h2>
-    <div class="on-page-feedback__two-form">
-      <input type="text" class="on-page-feedback__two-form-input" placeholder="Type here.." data-dough-feedback-comment />
-      <button class="on-page-feedback__two-form-submit button button--primary" data-dough-feedback-submit><%= t('articles.on_page_feedback.user_feedback_submit') %></button>
+  <div class="is-hidden" data-dough-feedback-page="negative">
+    <label for="on-page-user-feedback" class="on-page-feedback__label"><%= t('articles.on_page_feedback.user_feedback_heading') %></label>
+    <div class="on-page-feedback__form">
+      <textarea id="on-page-user-feedback" type="text" placeholder="<%= t('articles.on_page_feedback.feedback_placeholder') %>" required data-dough-feedback-comment></textarea>
+      <button class="on-page-feedback__form-submit button button--primary" data-dough-feedback-submit><%= t('articles.on_page_feedback.user_feedback_submit') %></button>
     </div>
   </div>
-
-  <!-- In article feedback step 3 - Social Share -->
   <div class="on-page-feedback__three is-hidden" data-dough-feedback-page="positive" data-dough-feedback-share>
     <%= social_sharing_icons url:            article.canonical_url,
                                title:          I18n.t("articles.on_page_feedback.social_share_heading"),
@@ -44,32 +35,33 @@
                                label_email:    I18n.t("articles.sharing.label_email"),
                                text:           article.title %>
   </div>
-
-  <!-- In article feedback step 4 - Thankyou & results -->
-
   <div class="on-page-feedback__results is-hidden" data-dough-feedback-page="results">
-    <h2 class="on-page-feedback__results-title"><%= t('articles.on_page_feedback.thankyou_heading') %></h2>
-
+    <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.thankyou_heading') %></h2>
     <div class="on-page-feedback__results-item">
-      <svg xmlns="http://www.w3.org/2000/svg"
+      <div class="on-page-feedback__results-item-front">
+        <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-icon-up"
            focusable="false">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
       </svg>
       <span class="icon icon--thumb-icon-up"></span>
+      <span class="visually-hidden"><%= t('articles.on_page_feedback.total_likes') %></span>
       <div class="on-page-feedback__results-item-number" data-dough-feedback-like-count></div>
+      </div>
+      <div class="on-page-feedback__results-item-back"></div>
     </div>
-
     <div class="on-page-feedback__results-item">
+      <div class="on-page-feedback__results-item-front">
       <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-icon-down"
            focusable="false">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
       </svg>
       <span class="icon icon--thumb-icon-down"></span>
-      <div class="on-page-feedback__results-item-number"  data-dough-feedback-dislike-count></div>
+      <span class="visually-hidden"><%= t('articles.on_page_feedback.total_dislikes') %></span>
+      <div class="on-page-feedback__results-item-number" data-dough-feedback-dislike-count></div>
+      </div>
+      <div class="on-page-feedback__results-item-back"></div>
     </div>
-
   </div>
-
 </div>

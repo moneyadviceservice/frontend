@@ -1,7 +1,9 @@
 .on-page-feedback {
   @extend %clearfix;
+
   background: $color-grey-pale;
   padding: $baseline-unit*2;
+  padding-bottom: $baseline-unit*4;
   text-align: center;
 
   .social-sharing__title {
@@ -14,16 +16,14 @@
     display: none;
   }
 
-  // Don't show until it's initialised - needs JS
   display: none;
   &[data-dough-on-page-feedback-initialised="yes"] {
     display: block;
   }
 }
 
-// Step 1 thumb buttons
-.on-page-feedback__one-thumb-button-up,
-.on-page-feedback__one-thumb-button-down {
+.on-page-feedback__thumb-button-up,
+.on-page-feedback__thumb-button-down {
   border: none;
   border-radius: 50%;
   background-color: $color-yellow-light;
@@ -33,52 +33,44 @@
   height: 60px;
 }
 
-.on-page-feedback__one-thumb-button-up {
+.on-page-feedback__thumb-button-up {
   margin-right: $baseline-unit*2;
 }
 
-.on-page-feedback__one-thumb-button-down {
+.on-page-feedback__thumb-button-down {
   margin-left: $baseline-unit*2;
 }
 
-// Override for default H2 style
-.on-page-feedback__one-title,
-.on-page-feedback__two-title,
-.on-page-feedback__results-title {
+.on-page-feedback__title {
   font-size: 1.3125rem;
   margin-top: 0;
 }
 
-// User input form
-.on-page-feedback__two-form {
+.on-page-feedback__label {
+  display: block;
+  font-size: 1.3125rem;
+  font-weight: bold;
+  color: $color-green-dark;
+  padding-bottom: $baseline-unit*2;
+}
+
+.on-page-feedback__form {
   padding: 0 $baseline-unit*4;
 }
 
-.on-page-feedback__two-form-input {
-  margin-bottom: $baseline-unit;
-}
-
-.on-page-feedback__two-form-submit {
+.on-page-feedback__form-submit {
   float: right;
 }
 
-// Social media share
-.on-page-feedback__three {
-  .social-sharing {
-    padding-bottom: $baseline-unit*3;
-  }
-}
-
-// Results
 .on-page-feedback__results-item {
   display: inline-block;
-  background-color: $color-white;
+  position: relative;
   padding: $baseline-unit*1.5;
   border-radius: 50%;
-  border: 2px solid $color-green-primary;
   width: 80px;
   margin-right: $baseline-unit*2;
   height: 80px;
+  overflow: hidden;
 
   &:last-of-type {
     margin-right: 0;
@@ -86,15 +78,37 @@
   }
 }
 
+.on-page-feedback__results-item-front, .on-page-feedback__results-item-back {
+  border: 2px solid $color-green-primary;
+  padding-top: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  background-color: #fff;
+  transition: transform 800ms ease-out;
+}
+
+.on-page-feedback__results-item-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.on-page-feedback__results-item-back {
+  transform: rotateY(-180deg);
+}
+
+.is-animating {
+  .on-page-feedback__results-item-front {
+    transform: rotateY(360deg);
+  }
+  .on-page-feedback__results-item-back {
+    transform: rotateY(180deg);
+  }
+}
+
 .on-page-feedback__results-item-number {
   font-weight: bold;
-}
-
-.animating {
-  animation: spin 1s ease-in-out;
-}
-
-@keyframes spin {
-  0%: {transform: rotateY(0deg);}
-  100%: {transform: rotateY(360deg);}
 }

@@ -1,5 +1,5 @@
 class AmpArticlesController < ActionController::Base
-  decorates_assigned :article, with: ContentItemDecorator
+  decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 
   private

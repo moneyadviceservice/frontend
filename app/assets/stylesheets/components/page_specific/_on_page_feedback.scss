@@ -1,5 +1,6 @@
 .on-page-feedback {
   @extend %clearfix;
+
   background: $color-grey-pale;
   padding: $baseline-unit*2;
   text-align: center;
@@ -72,13 +73,44 @@
 // Results
 .on-page-feedback__results-item {
   display: inline-block;
-  background-color: $color-white;
+  position: relative;
   padding: $baseline-unit*1.5;
   border-radius: 50%;
-  border: 2px solid $color-green-primary;
   width: 80px;
   margin-right: $baseline-unit*2;
   height: 80px;
+  overflow: hidden;
+
+  .front, .back {
+    border: 2px solid $color-green-primary;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-color: #fff;
+    transition: transform 1s ease-in-out;
+  }
+
+  .front {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
+
+  &.is-animating {
+    .front {
+      transform: rotateY(360deg);
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -88,13 +120,4 @@
 
 .on-page-feedback__results-item-number {
   font-weight: bold;
-}
-
-.animating {
-  animation: spin 1s ease-in-out;
-}
-
-@keyframes spin {
-  0%: {transform: rotateY(0deg);}
-  100%: {transform: rotateY(360deg);}
 }

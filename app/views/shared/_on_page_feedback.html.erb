@@ -51,16 +51,20 @@
     <h2 class="on-page-feedback__results-title"><%= t('articles.on_page_feedback.thankyou_heading') %></h2>
 
     <div class="on-page-feedback__results-item">
-      <svg xmlns="http://www.w3.org/2000/svg"
+      <div class="front">
+        <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-icon-up"
            focusable="false">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
       </svg>
       <span class="icon icon--thumb-icon-up"></span>
       <div class="on-page-feedback__results-item-number" data-dough-feedback-like-count></div>
+      </div>
+      <div class="back"></div>
     </div>
 
     <div class="on-page-feedback__results-item">
+      <div class="front">
       <svg xmlns="http://www.w3.org/2000/svg"
            class="svg-icon svg-icon--thumb-icon-down"
            focusable="false">
@@ -68,6 +72,8 @@
       </svg>
       <span class="icon icon--thumb-icon-down"></span>
       <div class="on-page-feedback__results-item-number"  data-dough-feedback-dislike-count></div>
+      </div>
+      <div class="back"></div>
     </div>
 
   </div>

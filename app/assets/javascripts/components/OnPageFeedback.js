@@ -45,7 +45,15 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     });
 
     this._showPage('results');
-    this.likeCount.closest('.on-page-feedback__results-item').addClass('animating');
+
+    var total = parseInt(this.likeCount.text());
+    window.setTimeout(function(){
+      this.likeCount.closest('.on-page-feedback__results-item').addClass('is-animating');
+    }.bind(this), 200);
+    window.setTimeout(function(){
+      this.likeCount.text(total + 1);
+    }.bind(this), 700);
+    
   };
 
   OnPageFeedback.prototype._submitComment = function() {
@@ -60,6 +68,14 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
       MAS.warn('failed to submit comment');
     });
     this._showPage('results');
+
+    var total = parseInt(this.dislikeCount.text());
+    window.setTimeout(function(){
+      this.dislikeCount.closest('.on-page-feedback__results-item').addClass('is-animating');
+    }.bind(this), 200);
+    window.setTimeout(function(){
+      this.dislikeCount.text(total + 1);
+    }.bind(this), 700);
   };
 
   OnPageFeedback.prototype._updateCount = function(data) {

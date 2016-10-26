@@ -14,7 +14,7 @@
     display: none;
   }
 
-  // Don't show until it's going to work
+  // Don't show until it's initialised - needs JS
   display: none;
   &[data-dough-on-page-feedback-initialised="yes"] {
     display: block;
@@ -36,13 +36,6 @@
   font-size: 1.3125rem;
   margin-top: 0;
 }
-
-// Hide steps
-// .on-page-feedback__two,
-// .on-page-feedback__three,
-// .on-page-feedback__results {
-//   display: none;
-// }
 
 // User input form
 .on-page-feedback__two-form {
@@ -71,4 +64,14 @@
 
 .on-page-feedback__results-item-number {
   margin-top: $baseline-unit;
+}
+
+.animating {
+  animation: spin 1s ease-in-out;
+  transform: rotateY(20deg);
+}
+
+@keyframes spin {
+  0%: {transform: rotateY(0deg);}
+  100%: {transform: rotateY(360deg);}
 }

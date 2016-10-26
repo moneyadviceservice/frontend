@@ -45,6 +45,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     });
 
     this._showPage('results');
+    this.likeCount.closest('.on-page-feedback__results-item').addClass('animating');
   };
 
   OnPageFeedback.prototype._submitComment = function() {

@@ -35,6 +35,8 @@
 // Styleguide icons
 
 //= depend_on_asset icon-sprite.png
+$icon-scale: 0.625;
+$icon-sprite-bg-size: $icon-scale * $sprite-background-size * 2;
 
 @mixin search-icon-colour($search-icon-colour) {
   @if ($search-icon-colour == black) {
@@ -262,15 +264,35 @@
 }
 
 .icon--web-chat {
-  background-position: -909px -204px;
-  width: 80px;
-  height: 70px;
+  display: inline-block;
+  background-position: -912px -268px;
+  width: 45px;
+  height: 37px;
+  margin-right: $baseline-unit;
+  vertical-align: middle;
+
+  @include respond-to($mq-s) {
+    background-position: -912px -202px;
+    width: 72px;
+    height: 59px;
+    margin-right: 0;
+  }
 }
 
 .icon--call-us {
-  background-position: -688px -200px;
-  width: 50px;
-  height: 70px;
+  display: inline-block;
+  background-position: -660px -310px;
+  width: 28px;
+  height: 41px;
+  margin-right: $baseline-unit;
+  vertical-align: middle;
+
+  @include respond-to($mq-s) {
+    background-position: -692px -260px;
+    width: 44px;
+    height: 65px;
+    margin-right: 0;
+  }
 }
 
 .icon--email {

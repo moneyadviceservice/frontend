@@ -113,6 +113,7 @@ Rails.application.routes.draw do
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
+      resource :amp, only: [:show], controller: :amp_articles
       resource :feedback, only: [:new, :create], controller: :article_feedbacks
     end
 

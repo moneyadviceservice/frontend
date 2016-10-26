@@ -112,6 +112,7 @@ Rails.application.routes.draw do
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
+      resource :amp, only: [:show], controller: :amp_articles
       resources :page_feedbacks, only: [:create]
       patch 'page_feedbacks' => 'page_feedbacks#update'
     end

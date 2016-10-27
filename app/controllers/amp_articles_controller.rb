@@ -1,12 +1,10 @@
 class AmpArticlesController < ActionController::Base
+  include NotFound
+
   decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 
   private
-  # This has come from Application controller.  We need to split this stuff out into a separate mixin
-  def not_found
-    fail ActionController::RoutingError.new('Not Found')
-  end
 
   def retrieve_article
     @article ||= Core::ArticleReader.new(params[:article_id]).call do |error|

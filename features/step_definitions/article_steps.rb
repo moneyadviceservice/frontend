@@ -29,7 +29,7 @@ Then(/^I should see an article in (.*)$/) do |language|
 end
 
 Then(/^the article should have a canonical tag for that language version$/) do
-  expected_href = article_url(id: current_article.id, locale: current_article.locale)
+  expected_href = article_amp_url(article_id: current_article.id, locale: current_article.locale)
 
   expect { article_page.canonical_tag[:href] }.to become(expected_href)
 end
@@ -37,10 +37,11 @@ end
 Then(/^the article page should have alternate tags for the supported locales$/) do
   expected_hreflangs = %w(en-GB cy-GB)
   expected_hrefs     = I18n.available_locales.map do |locale|
-    article_url(id:       article(locale).id,
-                locale:   locale,
-                protocol: 'https',
-                host:     'www.moneyadviceservice.org.uk')
+    article_amp_url(
+                article_id: article(locale).id,
+                locale:     locale,
+                protocol:   'https',
+                host:       'www.moneyadviceservice.org.uk')
   end
 
   expect(article_page.alternate_tags.size).to eq(expected_hreflangs.size)

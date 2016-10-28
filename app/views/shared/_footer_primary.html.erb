@@ -58,39 +58,35 @@
 
     <div class="l-footer-primary__right">
       <nav role="navigation" aria-label="footer">
-        <ul class="l-footer-primary__list l-footer-primary__list--left">
-          <li class="footer-primary__list-item">
+        <ul class="l-footer-primary__list">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.about_us_link') %>"><%= t('footer.about_us') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.media_centre_link') %>"><%= t('footer.media_centre') %></a>
           </li>
 
-          <li class="footer-primary__list-item t-partners-link">
+          <li class="footer-primary__list-item footer-primary__corporate-link t-partners-link">
             <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
           </li>
-        </ul>
 
-        <ul class="l-footer-primary__list l-footer-primary__list--centre">
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
           </li>
         </ul>
 
-        <ul class="l-footer-primary__list l-footer-primary__list--right">
-          <li class="footer-primary__list-item">
-            <a class="button footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
-          </li>
-        </ul>
+        <div class="footer-primary__blog">
+          <a class="footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
+        </div>
       </nav>
     </div>
   </div>

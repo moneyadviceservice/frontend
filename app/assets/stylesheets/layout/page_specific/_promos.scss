@@ -1,5 +1,5 @@
 .l-tool-promos {
-  @extend .clearfix;
+  @extend %clearfix;
   overflow: hidden;
   position: relative;
   margin-top: $baseline-unit*6;
@@ -135,7 +135,7 @@
 }
 
 .l-promo-articles {
-  @extend .clearfix;
+  @extend %clearfix;
   overflow: hidden;
   position: relative;
   margin-top: $baseline-unit*6;
@@ -218,7 +218,7 @@
 
 .l-promo-corporate {
   @include row(12);
-  @extend .clearfix;
+  @extend %clearfix;
   overflow: hidden;
   position: relative;
   margin-top: $baseline-unit*3;
@@ -264,7 +264,7 @@
 // Promo partnerships
 
 .l-promo-partnerships {
-  @extend .clearfix;
+  @extend %clearfix;
   @include row(12);
   overflow: hidden;
   position: relative;

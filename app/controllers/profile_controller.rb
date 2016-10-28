@@ -13,6 +13,14 @@ class ProfileController < ArticlesController
     render :edit
   end
 
+  def display_skip_to_main_navigation?
+    false
+  end
+
+  def default_main_content_location?
+    true
+  end
+
   private
 
   def saved_tools

@@ -3,7 +3,7 @@
 // Styleguide Directory
 
 .directory {
-  @extend .clearfix;
+  @extend %clearfix;
   width:100%;
 
   @include respond-to($mq-m) {

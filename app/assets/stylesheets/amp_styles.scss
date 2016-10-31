@@ -3,13 +3,13 @@ $responsive: true;
 
 @font-face {
   font-family: Museo Sans;
-  src: font-url('mas-fonts/app/assets/fonts/mas/fonts/MuseoSans_300.woff');
+  src: asset-data-url('mas-fonts/app/assets/fonts/mas/fonts/MuseoSans_300.woff');
   font-weight: 300;
 }
 
 @font-face {
   font-family: Museo Sans;
-  src: font-url('mas-fonts/app/assets/fonts/mas/fonts/MuseoSans_700.woff');
+  src: asset-data-url('mas-fonts/app/assets/fonts/mas/fonts/MuseoSans_700.woff');
   font-weight: 700;
 }
 
@@ -35,7 +35,7 @@ $responsive: true;
 .amp-article__mas-logo {
   width: 12rem;
   display: block;
-  background-image: url(/assets/logo-en-white.png);
+  background-image: image-url("logo-en-white.png");
   height: 30px;
   background-size: cover;
 }

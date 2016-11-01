@@ -1,4 +1,5 @@
 <div class="on-page-feedback" aria-live="polite" data-dough-component="OnPageFeedback" data-dough-on-page-feedback-post="<%= article_page_feedbacks_path(article.id) %>">
+
   <div data-dough-feedback-page="start">
     <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.prompt') %></h2>
     <button class="on-page-feedback__thumb-button-up" data-dough-feedback="positive">
@@ -21,11 +22,18 @@
     </button>
   </div>
   <div class="is-hidden" data-dough-feedback-page="negative">
-    <label for="on-page-user-feedback" class="on-page-feedback__label"><%= t('articles.on_page_feedback.user_feedback_heading') %></label>
-    <div class="on-page-feedback__form">
-      <textarea id="on-page-user-feedback" type="text" placeholder="<%= t('articles.on_page_feedback.feedback_placeholder') %>" required data-dough-feedback-comment></textarea>
-      <button class="on-page-feedback__form-submit button button--primary" data-dough-feedback-submit><%= t('articles.on_page_feedback.user_feedback_submit') %></button>
-    </div>
+    <form class="on-page-feedback__form" data-dough-component="Validation" data-dough-validation-config='{"showValidationSummary":false}' data-dough-feedback-form novalidate>
+      <label for="on-page-user-feedback" class="on-page-feedback__label"><%= t('articles.on_page_feedback.user_feedback_heading') %></label>
+      <div class="form__row">
+        <textarea id="on-page-user-feedback"
+        name="on-page-user-feedback"
+        placeholder="<%= t('articles.on_page_feedback.feedback_placeholder') %>" 
+        data-dough-validation-empty="Please leave a comment"
+        aria-required
+        required></textarea>
+      </div>
+        <input class="on-page-feedback__form-submit button button--primary" type="submit" data-dough-feedback-submit value="<%= t('articles.on_page_feedback.user_feedback_submit') %>"/>
+    </form>
   </div>
   <div class="on-page-feedback__three is-hidden" data-dough-feedback-page="positive" data-dough-feedback-share>
     <%= social_sharing_icons url:            article.canonical_url,
@@ -38,30 +46,34 @@
   <div class="on-page-feedback__results is-hidden" data-dough-feedback-page="results">
     <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.thankyou_heading') %></h2>
     <div class="on-page-feedback__results-item">
-      <div class="on-page-feedback__results-item-front">
-        <svg xmlns="http://www.w3.org/2000/svg"
-           class="svg-icon svg-icon--thumb-icon-up"
-           focusable="false">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
-      </svg>
-      <span class="icon icon--thumb-icon-up"></span>
-      <span class="visually-hidden"><%= t('articles.on_page_feedback.total_likes') %></span>
-      <div class="on-page-feedback__results-item-number" data-dough-feedback-like-count></div>
+      <div class="on-page-feedback__results-item-card">
+        <div class="on-page-feedback__results-item-front">
+          <svg xmlns="http://www.w3.org/2000/svg"
+             class="svg-icon svg-icon--thumb-icon-up"
+             focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
+        </svg>
+        <span class="icon icon--thumb-icon-up"></span>
+        <span class="visually-hidden"><%= t('articles.on_page_feedback.total_likes') %></span>
+        <div class="on-page-feedback__results-item-number" data-dough-feedback-like-count></div>
+        </div>
+        <div class="on-page-feedback__results-item-back"></div>
       </div>
-      <div class="on-page-feedback__results-item-back"></div>
     </div>
     <div class="on-page-feedback__results-item">
-      <div class="on-page-feedback__results-item-front">
-      <svg xmlns="http://www.w3.org/2000/svg"
-           class="svg-icon svg-icon--thumb-icon-down"
-           focusable="false">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
-      </svg>
-      <span class="icon icon--thumb-icon-down"></span>
-      <span class="visually-hidden"><%= t('articles.on_page_feedback.total_dislikes') %></span>
-      <div class="on-page-feedback__results-item-number" data-dough-feedback-dislike-count></div>
+      <div class="on-page-feedback__results-item-card">
+        <div class="on-page-feedback__results-item-front">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="svg-icon svg-icon--thumb-icon-down"
+             focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
+        </svg>
+        <span class="icon icon--thumb-icon-down"></span>
+        <span class="visually-hidden"><%= t('articles.on_page_feedback.total_dislikes') %></span>
+        <div class="on-page-feedback__results-item-number" data-dough-feedback-dislike-count></div>
+        </div>
+        <div class="on-page-feedback__results-item-back"></div>
       </div>
-      <div class="on-page-feedback__results-item-back"></div>
     </div>
   </div>
 </div>

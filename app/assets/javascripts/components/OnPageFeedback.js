@@ -10,6 +10,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     this.pages = $el.find('[data-dough-feedback-page]');
     this.shareBtns = $el.find('[data-dough-feedback-share] .social-sharing__item__icon');
     this.submitBtn = $el.find('[data-dough-feedback-submit]');
+    this.submitForm = $el.find('[data-dough-feedback-form]');
     this.ajaxUrl = $el.attr('data-dough-on-page-feedback-post');
     this.likeCount = $el.find('[data-dough-feedback-like-count]');
     this.dislikeCount = $el.find('[data-dough-feedback-dislike-count]');
@@ -81,7 +82,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     }.bind(this), 300);
     window.setTimeout(function(){
       el.text(total);
-    }.bind(this), 700);
+    }.bind(this), 600);
   };
 
 
@@ -107,7 +108,14 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     this.shareBtns.on('click', function() {
       self._share($(this).attr('data-dough-shared-on'));
     });
-    this.submitBtn.on('click', $.proxy(this._submitComment, this));
+    this.submitForm.on('submit', $.proxy(function(e){
+      e.preventDefault;
+      // Only submit the form if there are no validation errors
+      if (this.submitForm.find('.is-errored').length === 0) {
+        this._submitComment();
+      };
+      return false;
+    }, this));
   };
 
   OnPageFeedback.prototype.init = function(initialised) {

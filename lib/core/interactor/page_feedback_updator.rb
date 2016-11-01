@@ -1,18 +1,7 @@
 module Core
-  class PageFeedbackUpdator
+  class PageFeedbackUpdator < PageFeedbackAction
     def call(params)
-      data = repository.update(params)
-      return false if data.blank?
-
-      entity.new(data['id'], data)
-    end
-
-    def repository
-      Core::Registry::Repository[:page_feedback]
-    end
-
-    def entity
-      Core::PageFeedback
+      action(:update, params)
     end
   end
 end

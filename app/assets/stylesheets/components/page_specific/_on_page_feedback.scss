@@ -16,6 +16,10 @@
     display: none;
   }
 
+  .form__row {
+    margin-bottom: 1em;
+  }
+
   display: none;
   &[data-dough-on-page-feedback-initialised="yes"] {
     display: block;
@@ -51,6 +55,7 @@
   font-size: 1.3125rem;
   font-weight: bold;
   color: $color-green-dark;
+  margin-top: $baseline-unit;
   padding-bottom: $baseline-unit*2;
 }
 
@@ -62,15 +67,25 @@
   float: right;
 }
 
+// Animation
+
 .on-page-feedback__results-item {
+  perspective: 300px;
   display: inline-block;
+}
+
+.on-page-feedback__results-item-card {
+  float: left;
   position: relative;
+  background-color: $color-yellow-light;
+  border: 2px solid $color-yellow-dark;
+  margin-right: $baseline-unit*2;
   padding: $baseline-unit*1.5;
   border-radius: 50%;
-  width: 80px;
-  margin-right: $baseline-unit*2;
-  height: 80px;
-  overflow: hidden;
+  width: 84px;
+  height: 84px;
+  transition: transform 0.6s ease-out;
+  transform-style: preserve-3d;
 
   &:last-of-type {
     margin-right: 0;
@@ -78,18 +93,18 @@
   }
 }
 
+.on-page-feedback__results-item.is-animating .on-page-feedback__results-item-card {
+  transform: rotateY(360deg);
+}
+
 .on-page-feedback__results-item-front, .on-page-feedback__results-item-back {
-  border: 2px solid $color-green-primary;
-  padding-top: 8px;
+  backface-visibility: hidden;
+  padding-top: 10px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  backface-visibility: hidden;
-  background-color: #fff;
-  transition: transform 800ms ease-out;
+  width: 80px; 
+  height: 80px;
 }
 
 .on-page-feedback__results-item-front {
@@ -97,5 +112,10 @@
   z-index: 2;
 }
 .on-page-feedback__results-item-back {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
+}
+
+.on-page-feedback__results-item-number {
+  font-weight: bold;
+  color: #000;
 }

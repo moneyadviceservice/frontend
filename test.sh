@@ -15,6 +15,8 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 # remove prior dirty packaged gems e.g. build.sh
 rm -rf vendor/cache .bundle/config
 
+cp config/features.yml.sample config/features.yml
+
 bundle install --jobs $BUNDLE_JOBS
 bower cache clean
 rm -rf vendor/assets/bower_components

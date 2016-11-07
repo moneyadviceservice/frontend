@@ -153,11 +153,19 @@
   }
 
   .icon--web-chat {
-    background-position: -376px -85px;
+    background-position: -381px -145px;
+
+    @include respond-to($mq-s) {
+      background-position: -380px -85px;
+    }
   }
 
   .icon--call-us {
-    background-position: -296px -79px;
+    background-position: -346.5px -84.5px;
+
+    @include respond-to($mq-s) {
+      background-position: -299px -84.5px;
+    }
   }
 
   .icon--email {

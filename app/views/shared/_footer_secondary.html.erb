@@ -1,6 +1,5 @@
 <div class="l-footer-secondary t-footer-secondary">
-  <div class="l-constrained">
-
+  <div class="l-footer-secondary--inner">
     <div class="l-footer-secondary__list--left">
       <ul class="footer-secondary__list">
 
@@ -33,46 +32,48 @@
     </div>
 
     <div class="l-footer-secondary__list--right">
-      <ul class="footer-secondary__list">
-
+      <ul class="footer-secondary__list footer-secondary__link-items">
         <% unless hide_elements_irrelevant_for_third_parties? %>
-          <li class="footer-secondary__list-item l-footer-authentication-link">
-            <% if user_signed_in? %>
+          <% if user_signed_in? %>
+            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__sign-out">
               <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
-              <span class="footer-site-links__pipe">|</span>
+            </li>
+            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__my-account">
               <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link footer-secondary__link gtm-my-account-link' %>
-            <% else %>
+            </li>
+          <% else %>
+            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__sign-in">
               <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>
-              <span class="authentication__item-divider">|</span>
+            </li>
+            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__register">
               <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link footer-secondary__link' %>
-            <% end %>
-          </li>
+            </li>
+          <% end %>
         <% end %>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
         </li>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
         </li>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a class="footer-secondary__link" href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
         </li>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a class="footer-secondary__link" href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
         </li>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a class="footer-secondary__link" href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
         </li>
 
-        <li class="footer-secondary__list-item">
+        <li class="footer-secondary__list-item footer-secondary__link-item">
           <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
         </li>
-
       </ul>
     </div>
   </div>

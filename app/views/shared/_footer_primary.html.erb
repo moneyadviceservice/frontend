@@ -6,7 +6,7 @@
         <li class="l-footer-primary__list--left">
           <div class="footer-primary__list-item">
             <a class="button facebook-link t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--facebook" aria-labelledby="facebook-label">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--facebook" aria-labelledby="facebook-label" focusable="false">
                 <title id="facebook-label">Money Advice Service Facebook page</title>
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--facebook"></use>
               </svg>
@@ -23,7 +23,7 @@
         <li class="l-footer-primary__list--centre">
           <div class="footer-primary__list-item">
             <a class="button twitter-link t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--twitter" aria-labelledby="twitter-label">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--twitter" aria-labelledby="twitter-label" focusable="false">
                 <title id="twitter-label">Money Advice Service Twitter page</title>
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--twitter"></use>
               </svg>
@@ -40,7 +40,7 @@
         <li class="l-footer-primary__list--right">
           <div class="footer-primary__list-item">
             <a class="button youtube-link t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--youtube" aria-labelledby="youtube-label">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--youtube" aria-labelledby="youtube-label" focusable="false">
                 <title id="youtube-label">Money Advice Service Youtube channel</title>
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--youtube"></use>
               </svg>
@@ -58,39 +58,35 @@
 
     <div class="l-footer-primary__right">
       <nav role="navigation" aria-label="footer">
-        <ul class="l-footer-primary__list l-footer-primary__list--left">
-          <li class="footer-primary__list-item">
+        <ul class="l-footer-primary__list">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.about_us_link') %>"><%= t('footer.about_us') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.media_centre_link') %>"><%= t('footer.media_centre') %></a>
           </li>
 
-          <li class="footer-primary__list-item t-partners-link">
+          <li class="footer-primary__list-item footer-primary__corporate-link t-partners-link">
             <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
           </li>
-        </ul>
 
-        <ul class="l-footer-primary__list l-footer-primary__list--centre">
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
           </li>
 
-          <li class="footer-primary__list-item">
+          <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
           </li>
         </ul>
 
-        <ul class="l-footer-primary__list l-footer-primary__list--right">
-          <li class="footer-primary__list-item">
-            <a class="button footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
-          </li>
-        </ul>
+        <div class="footer-primary__blog">
+          <a class="footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
+        </div>
       </nav>
     </div>
   </div>

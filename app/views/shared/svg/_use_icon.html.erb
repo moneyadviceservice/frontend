@@ -27,7 +27,7 @@
 <% if svg_fallback_support %>
 <span class="<%= no_svg_icon_class %>">
 <% end %>
-<svg xmlns="http://www.w3.org/2000/svg" class="<%= svg_icon_class %>" <%= accessibility_title %>>
+<svg xmlns="http://www.w3.org/2000/svg" class="<%= svg_icon_class %>" focusable="false" <%= accessibility_title %>>
   <use xlink:href="#svg-icon--<%= local_assigns[:icon] %>"></use>
 </svg>
 <% if accessibility_description.length > 0 %>

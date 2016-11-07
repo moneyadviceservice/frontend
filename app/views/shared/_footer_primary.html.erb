@@ -78,7 +78,10 @@
           </li>
 
           <li class="footer-primary__list-item">
-            <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
+            <a href="<%= t('footer.fincap_link') %>" target="_blank">
+              <%= t('footer.fincap') %>
+              <span class="visually-hidden">(<%= t('footer.new-window-label') %>)</span>
+            </a>
           </li>
 
           <li class="footer-primary__list-item">
@@ -89,6 +92,9 @@
         <ul class="l-footer-primary__list l-footer-primary__list--right">
           <li class="footer-primary__list-item">
             <a class="button footer-primary__blog-link" href="<%= t('footer.blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
+          </li>
+          <li class="footer-primary__list-item">
+            <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
           </li>
         </ul>
       </nav>

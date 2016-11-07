@@ -101,7 +101,6 @@ Rails.application.routes.draw do
     mount Timelines::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:timelines)
 
-
     get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :budgeting, :en), to: 'retirements#budgeting'
@@ -114,6 +113,10 @@ Rails.application.routes.draw do
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
       resource :feedback, only: [:new, :create], controller: :article_feedbacks
+      if Feature.active?(:page_feedback)
+        resources :page_feedbacks, only: [:create]
+        patch 'page_feedbacks' => 'page_feedbacks#update'
+      end
     end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',

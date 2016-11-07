@@ -35,6 +35,10 @@
 
       <%= article.content %>
 
+      <% if Feature.active?(:page_feedback) %>
+        <%= render 'shared/on_page_feedback' %>
+      <% end %>
+
       <%= social_sharing_icons url:            article.canonical_url,
                                title:          I18n.t("articles.sharing.title"),
                                label_facebook: I18n.t("articles.sharing.label_facebook"),

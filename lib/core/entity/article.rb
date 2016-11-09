@@ -41,6 +41,16 @@ module Core
       false
     end
 
+    EXCLUDED_FROM_FEEDBACK = [
+      'baby-costs-calculator',
+      'cyfrifiannell-costau-babi',
+      'debt-management-companies'
+    ]
+
+    def accepts_feedback?
+      !EXCLUDED_FROM_FEEDBACK.include?(slug)
+    end
+
     private
 
     def build_article_links(key)

@@ -1,45 +1,77 @@
 RSpec.describe PageFeedbacksController, type: :controller do
-  let(:page_feedback) do
-    Core::PageFeedback.new(liked: true)
+  let(:page_feedback) { Core::PageFeedback.new(liked: true) }
+  let(:article) { double }
+
+  before do
+    allow(Core::Article).to receive(:new) { article }
   end
 
   describe 'POST /page_feedbacks' do
-    describe 'when valid' do
-      let(:params) do
-        {
-          locale: I18n.locale,
-          article_id: 'contact-us',
-          liked: true
-        }
-      end
+    let(:creator) { double }
+    let(:params) do
+      {
+        locale: I18n.locale,
+        article_id: 'contact-us',
+        liked: true
+      }
+    end
 
+    before do
+      allow(Core::PageFeedbackCreator).to receive(:new) { creator }
+    end
+
+    describe 'when the article accepts feedback' do
       before do
-        expect_any_instance_of(Core::PageFeedbackCreator)
-          .to receive(:call)
-          .with(params.merge(session_id: session.id))
-          .and_return(page_feedback)
-        post :create, params
+        allow(article).to receive(:accepts_feedback?) { true }
       end
 
-      it 'returns 201 create resource status' do
-        expect(response.status).to be(201)
+      describe 'and the feedback is valid' do
+        before do
+          allow(creator).to receive(:call) { page_feedback }
+        end
+
+        it 'calls the creator' do
+          expect(creator).to receive(:call)
+          post :create, params
+        end
+
+        it 'returns 201 create resource status' do
+          post :create, params
+          expect(response.status).to be(201)
+        end
+      end
+
+      describe 'but the feedback is not valid' do
+        before do
+          allow(creator).to receive(:call) { false }
+        end
+
+        it 'calls the creator' do
+          expect(creator).to receive(:call)
+          post :create, params
+        end
+
+        it 'returns 422 unprocessable entity' do
+          post :create, params
+          expect(response.status).to be(422)
+        end
       end
     end
 
-    describe 'when invalid' do
+    describe 'but the article does not accept feedback' do
       before do
-        expect_any_instance_of(Core::PageFeedbackCreator)
-          .to receive(:call).and_return(false)
-        post :create, { locale: I18n.locale, article_id: 'contact-us' }
+        allow(article).to receive(:accepts_feedback?) { false }
       end
 
-      it 'returns unprocessable entity' do
-        expect(response.status).to be(422)
+      it 'returns 403 not allowed' do
+        post :create, params
+        expect(response.status).to be(403)
       end
     end
   end
 
   describe 'PATCH /en/articles/example-article/page_feedbacks' do
+    let(:updator) { double }
     let(:params) do
       {
         'shared_on'  => 'Twitter',
@@ -49,29 +81,56 @@ RSpec.describe PageFeedbacksController, type: :controller do
       }
     end
 
-    context 'when valid' do
+    before do
+      allow(Core::PageFeedbackUpdator).to receive(:new) { updator }
+    end
+
+    describe 'when the article accepts feedback' do
       before do
-        expect_any_instance_of(Core::PageFeedbackUpdator)
-          .to receive(:call)
-          .with(params.merge(session_id: session.id))
-          .and_return(page_feedback)
-        patch :update, params
+        allow(article).to receive(:accepts_feedback?) { true }
       end
 
-      it 'returns success response' do
-        expect(response.status).to be(200)
+      context 'and the feedback is valid' do
+        before do
+          allow(updator).to receive(:call) { page_feedback }
+        end
+
+        it 'calls the updator' do
+          expect(updator).to receive(:call)
+          patch :update, params
+        end
+
+        it 'returns 200 success response' do
+          patch :update, params
+          expect(response.status).to be(200)
+        end
+      end
+
+      context 'but the feedback is not valid' do
+        before do
+          allow(updator).to receive(:call) { false }
+        end
+
+        it 'calls the updator' do
+          expect(updator).to receive(:call)
+          patch :update, params
+        end
+
+        it 'returns 422 unprocessable entity' do
+          patch :update, params
+          expect(response.status).to be(422)
+        end
       end
     end
 
-    context 'when invalid' do
+    describe 'but the article does not accept feedback' do
       before do
-        expect_any_instance_of(Core::PageFeedbackUpdator)
-          .to receive(:call).and_return(false)
-        patch :update, params
+        allow(article).to receive(:accepts_feedback?) { false }
       end
 
-      it 'returns success response' do
-        expect(response.status).to be(422)
+      it 'returns 403 not allowed' do
+        patch :update, params
+        expect(response.status).to be(403)
       end
     end
   end

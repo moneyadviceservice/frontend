@@ -6,8 +6,8 @@ Good starting point though
 // When the SW is installed, cache the assets required to display the offlinePage content
 this.addEventListener('install', function(event) {
   var urlsToCache = [
-        '/en/offlinePage',
-        '/cy/offlinePage'
+        'en/offlinePage',
+        'cy/offlinePage'
       ];
 
   event.waitUntil(
@@ -26,7 +26,11 @@ this.addEventListener('fetch', function(event) {
       return response;
     }).catch(function() {
       // send response from the cache
-      return caches.match('/en/offlinePage')
+      if (event.request.url.indexOf('/en') != -1) {
+        return caches.match('en/offlinePage')
+      } else {
+        return caches.match('cy/offlinePage')
+      }
     })
   );
 });

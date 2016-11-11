@@ -3,10 +3,11 @@ This basically works but with some issues.
 Good starting point though
 **/
 
-// When the SW is installed, cache the assets required to display the offline content
+// When the SW is installed, cache the assets required to display the offlinePage content
 this.addEventListener('install', function(event) {
   var urlsToCache = [
-        '/offline.html'
+        '/en/offlinePage',
+        '/cy/offlinePage'
       ];
 
   event.waitUntil(
@@ -18,14 +19,14 @@ this.addEventListener('install', function(event) {
   );
 });
 
-// Test for network and use response if available, otherwise use offline content
+// Test for network and use response if available, otherwise use offlinePage content
 this.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response) {
       return response;
     }).catch(function() {
       // send response from the cache
-      return caches.match('/offline.html')
+      return caches.match('/en/offlinePage')
     })
   );
 });

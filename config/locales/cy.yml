@@ -564,7 +564,16 @@ cy:
         submit: Get embed code
 
   offline:
-    heading: Your device seems to be offline. Check your connection. (in Welsh)
+    heading: Your device seems to be offline. Check your connection.
+    subheading: Neu, Ffoniwch ni
+    text: Ffoniwch ni am gyngor ariannol am ddim a diduedd.
+    phone: 0800 138 7777 *
+    dates_html: |
+      <li>Llun i Wener, 8am i 8pm</li>
+      <li>Dydd Sadwrn, 9am i 1pm</li>
+      <li>Dydd Sul a Gwyliau Banc, ar gau</li>
+    note_html: |
+      * Mae galwadau am ddim.
 
   site_map:
     meta:

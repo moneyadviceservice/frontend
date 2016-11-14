@@ -5,14 +5,18 @@ Good starting point though
 
 // When the SW is installed, cache the assets required to display the offlinePage content
 this.addEventListener('install', function(event) {
+  console.log('install!')
+
   var urlsToCache = [
-        'en/offlinePage',
-        'cy/offlinePage'
+        'en/offline_page',
+        'cy/offline_page'
       ];
 
   event.waitUntil(
     // open a cache named 'mas-offline-page'
     caches.open('mas-offline-page').then(function(cache) {
+      console.log('waitUntil!')
+
       // add the urls in urlsToCache to opened cache
       return cache.addAll(urlsToCache);
     })
@@ -27,9 +31,9 @@ this.addEventListener('fetch', function(event) {
     }).catch(function() {
       // send response from the cache
       if (event.request.url.indexOf('/en') != -1) {
-        return caches.match('en/offlinePage')
+        return caches.match('en/offline_page')
       } else {
-        return caches.match('cy/offlinePage')
+        return caches.match('cy/offline_page')
       }
     })
   );

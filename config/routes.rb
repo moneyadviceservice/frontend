@@ -234,7 +234,7 @@ Rails.application.routes.draw do
     end
 
     get '/hub/:slug' => 'content_hub#show', as: :content_hub
-    get '/offlinePage' => 'offline#show', as: :offline
+    get '/offline_page' => 'offline#show', as: :offline
   end
 
   %w(404 422 500 ).each do |status_code|

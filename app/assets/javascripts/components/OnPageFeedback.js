@@ -14,6 +14,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     this.ajaxUrl = $el.attr('data-dough-on-page-feedback-post');
     this.likeCount = $el.find('[data-dough-feedback-like-count]');
     this.dislikeCount = $el.find('[data-dough-feedback-dislike-count]');
+    this.pageId = window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
@@ -27,6 +28,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     };
 
     var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
+      this._storeLastInteraction(interaction);
       this._showPage(interaction);
       this._updateCount(data);
     }.bind(this))
@@ -45,6 +47,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
       MAS.warn('failed to submit share');
     });
 
+    this._storeLastInteraction('share');
     this._showPage('results');
     this._animateResult('like');
   };
@@ -60,6 +63,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     submitFeedback.fail(function(status){
       MAS.warn('failed to submit comment');
     });
+    this._storeLastInteraction('comment');
     this._showPage('results');
     this._animateResult('dislike');
   };
@@ -98,6 +102,27 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
     this.pages.filter('[data-dough-feedback-page=' + pageName + ']').removeClass('is-hidden');
   };
 
+  OnPageFeedback.prototype._storeLastInteraction = function(interaction) {
+    localStorage.setItem('MAS.onPageFeedback.' + this.pageId, interaction);
+  };
+
+  OnPageFeedback.prototype._checkForStoredState = function() {
+    var lastInteraction = localStorage['MAS.onPageFeedback.' + this.pageId];
+
+    if (typeof lastInteraction != 'undefined') {
+      switch (lastInteraction) {
+        case 'positive':
+        case 'negative':
+          this._showPage(lastInteraction);
+          break;
+        case 'share':
+        case 'comment':
+          this._showPage('results');
+          break;
+      }
+    }
+  };
+
   OnPageFeedback.prototype._bindHandlers = function() {
     var self = this;
 
@@ -120,6 +145,7 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
 
   OnPageFeedback.prototype.init = function(initialised) {
     this._bindHandlers();
+    this._checkForStoredState();
     this._initialisedSuccess(initialised);
   };
 

@@ -12,15 +12,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     $.getJSON('/glossary.json', function(data){
       var glossaryTerms = data.glossary.map(function (item) {
+        // If the article content contains any of the keywords in the JSON
         if(articleContent.indexOf(item.term) >= 1){
-
-          // var updatedContent = $(article).html().replace(RegExp("\\b" + item.term + "\\b","gi"), "<button class='unstyled-button glossary__term' aria-label='" + item.term + " click for description'>" + item.term + "</button><span class='glossary__description'>" + item.description + "</span>");
-          
-          var updatedContent = $(article).html().replace(RegExp("\\b" + item.term + "\\b","gi"), "<button class='unstyled-button glossary__term'>" + item.term + "</button><span class='glossary__description'>" + item.description + "</span>");
+          var updatedContent = $(article).html().replace(RegExp("\\b" + item.term + "\\b","gi"), "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</span>" + item.description + "<button class='glossary__description-close'>close</button></span>");
           $(article).html(updatedContent);
-
-          console.log(updatedContent);
         } else {
+          // For dev purposes
           console.log(item.term + ' has not been found in this article')
         };
       });
@@ -28,6 +25,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       // Show descriptions
       $('.glossary__term').on('click', function(){
         $(this).next('.glossary__description').toggle().focus();
+      });
+
+      // Close descriptions
+      $('.glossary__description-close').on('click', function(){
+        $(this).parents('.glossary__description').hide();
       });
 
     });

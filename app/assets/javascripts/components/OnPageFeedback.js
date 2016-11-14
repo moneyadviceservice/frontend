@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponent, MAS) {
+define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, FeatureDetect, DoughBaseComponent, MAS) {
   'use strict';
 
   var OnPageFeedback;
@@ -144,6 +144,8 @@ define(['jquery', 'DoughBaseComponent', 'common'], function($, DoughBaseComponen
   };
 
   OnPageFeedback.prototype.init = function(initialised) {
+    if (!FeatureDetect.localstorage) return
+
     this._bindHandlers();
     this._checkForStoredState();
     this._initialisedSuccess(initialised);

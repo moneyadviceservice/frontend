@@ -117,14 +117,18 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     if (typeof(data) != 'undefined') {
       var json = JSON.parse(data)
 
-      this.likeElement.text(json.likes_count);
-      this.dislikeElement.text(json.dislikes_count);
-      this.currentState = json.last_state;
+      // Ignore stored data if more than 30 days old
+      if (json.time > (Date.now() - (30*24*60*60*1000))) {
+        this.likeElement.text(json.likes_count);
+        this.dislikeElement.text(json.dislikes_count);
+        this.currentState = json.last_state;
+      }
     }
   };
 
   OnPageFeedback.prototype._storeState = function() {
     var data = {
+      time: Date.now(),
       likes_count: this.likeElement.text(),
       dislikes_count: this.dislikeElement.text(),
       last_state: this.currentState

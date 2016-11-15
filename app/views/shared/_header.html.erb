@@ -7,9 +7,13 @@
       <div class="l-header__strapline"><%= t('layouts.base.strapline') %></div>
     </div>
 
-    <%= render 'shared/mobile_nav' %>
+    <% if mobile_nav_in_header? %>
+      <%= render 'shared/mobile_nav' %>
+    <% end %>
 
-    <%= render 'shared/authentication' %>
+    <% if authentication? %>
+      <%= render 'shared/authentication' %>
+    <% end %>
 
     <% if display_search_box_in_header? %>
       <div class="l-search" id="search-bar">

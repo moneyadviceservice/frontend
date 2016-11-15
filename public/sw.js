@@ -4,30 +4,22 @@ Good starting point though
 **/
 
 // When the SW is installed, cache the assets required to display the offlinePage content
-this.addEventListener('install', function(event) {
-  console.log('install!')
-
-  var urlsToCache = [
-        'en/offline_page',
-        'cy/offline_page'
-      ];
-
+self.addEventListener('install', function(event) {
   event.waitUntil(
-    // open a cache named 'mas-offline-page'
-    caches.open('mas-offline-page').then(function(cache) {
-      console.log('waitUntil!')
-
-      // add the urls in urlsToCache to opened cache
-      return cache.addAll(urlsToCache);
-    })
+    cacheAssets()
   );
 });
 
-// Test for network and use response if available, otherwise use offlinePage content
-this.addEventListener('fetch', function(event) {
+// Test for network and use response if available plus cache assets, otherwise use offlinePage content
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response) {
-      return response;
+      // cache all the required assets each time
+      // this works but does it affect performance?
+      if (response.ok) {
+        cacheAssets()
+      }
+      return response
     }).catch(function() {
       // send response from the cache
       if (event.request.url.indexOf('/en') != -1) {
@@ -38,3 +30,16 @@ this.addEventListener('fetch', function(event) {
     })
   );
 });
+
+function cacheAssets() {
+  var urlsToCache = [
+    'en/offline_page',
+    'cy/offline_page'
+  ];
+
+  // open a cache named 'mas-offline-page'
+  caches.open('mas-offline-page').then(function(cache) {
+    // add the urls in urlsToCache to opened cache
+    return cache.addAll(urlsToCache)
+  })
+}

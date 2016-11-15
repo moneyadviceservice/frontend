@@ -17,7 +17,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.likeElement = $el.find('[data-dough-feedback-like-count]');
     this.dislikeElement = $el.find('[data-dough-feedback-dislike-count]');
     this.pageId = window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
-    this.currentState = '';
+    this.state = '';
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
@@ -31,7 +31,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     };
 
     var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
-      this.currentState = interaction;
+      this.state = 'voted-' + interaction;
 
       this._showPage(interaction);
       this._updateCount(data);
@@ -52,7 +52,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       MAS.warn('failed to submit share');
     });
 
-    this.currentState = 'share';
+    this.state = 'shared';
     this._storeState();
 
     this._showPage('results');
@@ -70,7 +70,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     submitFeedback.fail(function(status){
       MAS.warn('failed to submit comment');
     });
-    this.currentState = 'comment';
+    this.state = 'commented';
     this._storeState();
 
     this._showPage('results');
@@ -121,7 +121,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       if (json.time > (Date.now() - (30*24*60*60*1000))) {
         this.likeElement.text(json.likes_count);
         this.dislikeElement.text(json.dislikes_count);
-        this.currentState = json.last_state;
+        this.state = json.last_state;
       }
     }
   };
@@ -131,20 +131,22 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       time: Date.now(),
       likes_count: this.likeElement.text(),
       dislikes_count: this.dislikeElement.text(),
-      last_state: this.currentState
+      last_state: this.state
     }
 
     localStorage['MAS.onPageFeedback.' + this.pageId] = JSON.stringify(data);
   };
 
   OnPageFeedback.prototype._applyState = function() {
-    switch (this.currentState) {
-      case 'positive':
-      case 'negative':
-        this._showPage(this.currentState);
+    switch (this.state) {
+      case 'voted-positive':
+        this._showPage('positive');
         break;
-      case 'share':
-      case 'comment':
+      case 'voted-negative':
+        this._showPage('negative');
+        break;
+      case 'shared':
+      case 'commented':
         this._showPage('results');
         break;
     }

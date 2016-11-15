@@ -17,6 +17,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.likeElement = $el.find('[data-dough-feedback-like-count]');
     this.dislikeElement = $el.find('[data-dough-feedback-dislike-count]');
     this.pageId = window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
+    this.currentState = '';
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
@@ -30,9 +31,11 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     };
 
     var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
-      this._storeLastInteraction(interaction);
+      this.currentState = interaction;
+
       this._showPage(interaction);
       this._updateCount(data);
+      this._storeState();
     }.bind(this))
     .fail(function() {
       MAS.warn('failed to submit like / dislike');
@@ -49,7 +52,9 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       MAS.warn('failed to submit share');
     });
 
-    this._storeLastInteraction('share');
+    this.currentState = 'share';
+    this._storeState();
+
     this._showPage('results');
     this._animateResult('like');
   };
@@ -65,7 +70,9 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     submitFeedback.fail(function(status){
       MAS.warn('failed to submit comment');
     });
-    this._storeLastInteraction('comment');
+    this.currentState = 'comment';
+    this._storeState();
+
     this._showPage('results');
     this._animateResult('dislike');
   };
@@ -104,24 +111,38 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.pages.filter('[data-dough-feedback-page=' + pageName + ']').removeClass('is-hidden');
   };
 
-  OnPageFeedback.prototype._storeLastInteraction = function(interaction) {
-    localStorage.setItem('MAS.onPageFeedback.' + this.pageId, interaction);
+  OnPageFeedback.prototype._restoreState = function() {
+    var data = localStorage['MAS.onPageFeedback.' + this.pageId];
+
+    if (typeof(data) != 'undefined') {
+      var json = JSON.parse(data)
+
+      this.likeElement.text(json.likes_count);
+      this.dislikeElement.text(json.dislikes_count);
+      this.currentState = json.last_state;
+    }
   };
 
-  OnPageFeedback.prototype._checkForStoredState = function() {
-    var lastInteraction = localStorage['MAS.onPageFeedback.' + this.pageId];
+  OnPageFeedback.prototype._storeState = function() {
+    var data = {
+      likes_count: this.likeElement.text(),
+      dislikes_count: this.dislikeElement.text(),
+      last_state: this.currentState
+    }
 
-    if (typeof lastInteraction != 'undefined') {
-      switch (lastInteraction) {
-        case 'positive':
-        case 'negative':
-          this._showPage(lastInteraction);
-          break;
-        case 'share':
-        case 'comment':
-          this._showPage('results');
-          break;
-      }
+    localStorage['MAS.onPageFeedback.' + this.pageId] = JSON.stringify(data);
+  };
+
+  OnPageFeedback.prototype._applyState = function() {
+    switch (this.currentState) {
+      case 'positive':
+      case 'negative':
+        this._showPage(this.currentState);
+        break;
+      case 'share':
+      case 'comment':
+        this._showPage('results');
+        break;
     }
   };
 
@@ -149,7 +170,8 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     if (!FeatureDetect.localstorage) return
 
     this._bindHandlers();
-    this._checkForStoredState();
+    this._restoreState();
+    this._applyState();
     this._initialisedSuccess(initialised);
   };
 

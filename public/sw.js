@@ -1,8 +1,3 @@
-/*
-This basically works but with some issues.
-Good starting point though
-**/
-
 // When the SW is installed, cache the assets required to display the offlinePage content
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -33,6 +28,10 @@ self.addEventListener('fetch', function(event) {
 
 function cacheAssets() {
   var urlsToCache = [
+    '/assets/logo-sprite-en.png',
+    '/assets/logo-sprite-cy.png',
+    '/assets/dough/assets/stylesheets/basic.css',
+    '/assets/enhanced_responsive.css',
     'en/offline_page',
     'cy/offline_page'
   ];

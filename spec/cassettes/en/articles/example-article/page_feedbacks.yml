@@ -8,8 +8,10 @@ http_interactions:
       string: '{"liked":true,"article_id":"example-article","session_id":"ae2fcba004e16dffa54f91a46d274238","locale":"en","slug":"example-article"}'
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Tomas-Destefi-00119.local; tomasdestefi; 20858) ruby/2.2.5
+      - Mas-Responsive/1.0 (Tomas-Destefi-00119.local; tomasdestefi; 13608) ruby/2.2.5
         (319; x86_64-darwin15)
+      Authorization:
+      - Token token="mytoken"
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -22,7 +24,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Mon, 24 Oct 2016 14:53:24 GMT
+      - Tue, 15 Nov 2016 16:57:06 GMT
       Status:
       - 201 Created
       Connection:
@@ -36,16 +38,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"cfea846ce230cfdd6ef5ec0253881c57"'
+      - '"599f8cb1a5f382bd62079c3e99869809"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c49aaa07-e92f-449f-a826-30958d085a94
+      - 4ec01f8e-42f9-4220-aad5-cb73946402e1
       X-Runtime:
-      - '0.312014'
+      - '0.057154'
     body:
       encoding: UTF-8
-      string: '{"id":17,"page_id":1,"liked":true,"session_id":"ae2fcba004e16dffa54f91a46d274238","comment":null,"shared_on":null,"likes_count":14,"dislikes_count":3}'
+      string: '{"id":21,"page_id":1,"liked":true,"session_id":"ae2fcba004e16dffa54f91a46d274238","comment":null,"shared_on":null,"likes_count":18,"dislikes_count":3}'
     http_version: 
-  recorded_at: Mon, 24 Oct 2016 14:53:24 GMT
+  recorded_at: Tue, 15 Nov 2016 16:57:06 GMT
 recorded_with: VCR 3.0.3

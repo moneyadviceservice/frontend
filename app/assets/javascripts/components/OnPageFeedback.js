@@ -17,7 +17,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.likeElement = $el.find('[data-dough-feedback-like-count]');
     this.dislikeElement = $el.find('[data-dough-feedback-dislike-count]');
     this.pageId = window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
-    this.currentState = '';
+    this.currentPage = 'start';
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
@@ -31,8 +31,6 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     };
 
     var submitInteraction = $.post(this.ajaxUrl, postObject, function(data){
-      this.currentState = interaction;
-
       this._showPage(interaction);
       this._updateCount(data);
       this._storeState();
@@ -52,11 +50,9 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       MAS.warn('failed to submit share');
     });
 
-    this.currentState = 'share';
-    this._storeState();
-
     this._showPage('results');
     this._animateResult('like');
+    this._storeState();
   };
 
   OnPageFeedback.prototype._submitComment = function() {
@@ -70,11 +66,10 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     submitFeedback.fail(function(status){
       MAS.warn('failed to submit comment');
     });
-    this.currentState = 'comment';
-    this._storeState();
 
     this._showPage('results');
     this._animateResult('dislike');
+    this._storeState();
   };
 
   OnPageFeedback.prototype._animateResult = function(interaction) {
@@ -109,6 +104,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
   OnPageFeedback.prototype._showPage = function(pageName) {
     this.pages.addClass('is-hidden');
     this.pages.filter('[data-dough-feedback-page=' + pageName + ']').removeClass('is-hidden');
+    this.currentPage = pageName;
   };
 
   OnPageFeedback.prototype._restoreState = function() {
@@ -121,7 +117,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       if (json.time > (Date.now() - (30*24*60*60*1000))) {
         this.likeElement.text(json.likes_count);
         this.dislikeElement.text(json.dislikes_count);
-        this.currentState = json.last_state;
+        this.currentPage = json.current_page;
       }
     }
   };
@@ -131,23 +127,10 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
       time: Date.now(),
       likes_count: this.likeElement.text(),
       dislikes_count: this.dislikeElement.text(),
-      last_state: this.currentState
+      current_page: this.currentPage
     }
 
     localStorage['MAS.onPageFeedback.' + this.pageId] = JSON.stringify(data);
-  };
-
-  OnPageFeedback.prototype._applyState = function() {
-    switch (this.currentState) {
-      case 'positive':
-      case 'negative':
-        this._showPage(this.currentState);
-        break;
-      case 'share':
-      case 'comment':
-        this._showPage('results');
-        break;
-    }
   };
 
   OnPageFeedback.prototype._bindHandlers = function() {
@@ -175,7 +158,11 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
 
     this._bindHandlers();
     this._restoreState();
-    this._applyState();
+
+    if (this.currentPage != 'start') {
+      this._showPage(this.currentPage);
+    }
+
     this._initialisedSuccess(initialised);
   };
 

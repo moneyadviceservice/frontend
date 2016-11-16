@@ -4,6 +4,10 @@ class AmpArticlesController < ActionController::Base
   decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 
+  def show
+    redirect_to url_for(action: 'show', controller: 'articles', id: @article.id, only_path: false) unless @article.supports_amp
+  end
+
   private
 
   def retrieve_article

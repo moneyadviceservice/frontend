@@ -18,9 +18,19 @@ class ArticlesController < ApplicationController
     set_related_content
     set_categories
     set_parent_category
+    set_article_canonical_url
   end
 
   private
+
+  def set_article_canonical_url
+    if @article.supports_amp
+      @article_canonical_url = url_for(action: 'show', controller: 'amp_articles', article_id: @article.id, only_path: false)
+    else
+      @article_canonical_url = url_for(action: 'show', controller: 'articles', id: @article.id, only_path: false)
+    end
+  end
+
 
   def interactor
     Core::ArticleReader.new(params[:id])

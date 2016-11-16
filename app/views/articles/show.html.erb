@@ -1,6 +1,6 @@
 <% set_meta_tags( title:       article.title,
                   description: article.description,
-                  canonical:   url_for(action: 'show', controller: 'amp_articles', article_id: @article.id, only_path: false),
+                  canonical:   @article_canonical_url,
                   alternate:   article.alternate_options,
                   og: {
                     title:       article.title,

@@ -1,3 +1,8 @@
+/*
+This basically works but with some issues.
+Good starting point though
+**/
+
 // When the SW is installed, cache the assets required to display the offlinePage content
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -19,19 +24,32 @@ self.addEventListener('fetch', function(event) {
       // send response from the cache
       if (event.request.url.indexOf('/en') != -1) {
         return caches.match('en/offline_page')
+        // console.log(event.request);
+        // return caches.match(event.request);
+        /*
+        caches.match('en/offline_page').then(function(cachedResponse) {
+          return cachedResponse;
+        })
+        */
+        /*
+        caches.match('/assets/logo-sprite-en.png').then(function(response) {
+          // console.log(event.request.headers)
+          return response
+        })
+        */
+        // return caches.match('en/offline_page')
+        // return new Response(caches.match('/assets/logo-sprite-en.png'), {headers: {'Content-Type': 'image/png'}});
       } else {
         return caches.match('cy/offline_page')
       }
+    }).catch(function() {
+      // return caches.match('/assets/dough/assets/stylesheets/basic.css')
     })
   );
 });
 
 function cacheAssets() {
   var urlsToCache = [
-    '/assets/logo-sprite-en.png',
-    '/assets/logo-sprite-cy.png',
-    '/assets/dough/assets/stylesheets/basic.css',
-    '/assets/enhanced_responsive.css',
     'en/offline_page',
     'cy/offline_page'
   ];

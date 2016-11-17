@@ -8,19 +8,25 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     Glossary.baseConstructor.call(this, $el, config);
 
     var article = $('[data-dough-glossary-content]'),
-    articleContent = $(article).html();
+        articleContent = $(article).html(),
+        updatedContent;
 
     $.getJSON('/glossary.json', function(data){
-      var glossaryTerms = data.glossary.map(function (item) {
+      data.glossary.map(function (item) {
 
         // If the article content contains any of the keywords in the JSON
         if(articleContent.indexOf(item.term) >= 1){
-          var updatedContent = articleContent.replace(RegExp("(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))","gi"),
-                                                             "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</span>" + item.description + "<button class='glossary__description-close'>close</button></span>");
-          $(article).html(updatedContent);
-          console.log(item.term + ' found in this article')
-        };
 
+          console.log('The term ' + item.term + ' has been found in this article')
+
+          $(item).each(function(){
+            var updatedContent = articleContent.replace(RegExp("(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))","i"),
+                                                               "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</span>" + item.description + "<button class='glossary__description-close'>close</button></span>");
+            articleContent = updatedContent;
+            $(article).html(updatedContent);
+          });
+          
+        };
       });
 
       // Show descriptions

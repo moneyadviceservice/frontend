@@ -14,8 +14,11 @@ describe('OnPageFeedback', function() {
         self.pages = self.$html.find('[data-dough-feedback-page]');
         self.shareBtns = self.$html.find('[data-dough-feedback-share] .social-sharing__item__icon');
         self.submitBtn = self.$html.find('[data-dough-feedback-submit]');
-        self.likesCount = self.$html.find('[data-dough-feedback-like-count]');
-        self.dislikesCount = self.$html.find('[data-dough-feedback-dislike-count]');
+        self.likesElement = self.$html.find('[data-dough-feedback-like-count]');
+        self.dislikesElement = self.$html.find('[data-dough-feedback-dislike-count]');
+
+        // Override _getPageId, since we don't have a DOM for it to access
+        OnPageFeedback.prototype._getPageId = function() { return '' };
 
         self.OnPageFeedback = new OnPageFeedback(self.$html).init();
 
@@ -64,8 +67,8 @@ describe('OnPageFeedback', function() {
     it('Shows total likes', function(){
       this.interactionBtn.filter('[data-dough-feedback=positive]').trigger('click');
       server.respond();
-      expect(this.likesCount.html()).to.equal('12');
-      expect(this.dislikesCount.html()).to.equal('5');
+      expect(this.likesElement.html()).to.equal('12');
+      expect(this.dislikesElement.html()).to.equal('5');
     });
   });
 

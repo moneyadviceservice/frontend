@@ -41,11 +41,17 @@ require.config({
     utilities: 'vendor/assets/bower_components/dough/assets/js/lib/utilities',
     componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',
     RangeInput: 'vendor/assets/bower_components/dough/assets/js/components/RangeInput',
-    TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector'
+    TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector',
+
+    // Just for tests, since in practice we inject this directly into the dom
+    modernizr: 'spec/javascripts/lib/modernizr'
   },
   shim: {
     'ujs': ['jquery'],
-    'typeahead': ['jquery']
+    'typeahead': ['jquery'],
+    'modernizr': {
+      'exports': 'Modernizr'
+    }
   },
   config: {
     globals: (function() {

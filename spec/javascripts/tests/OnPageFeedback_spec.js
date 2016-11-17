@@ -18,8 +18,9 @@ describe('OnPageFeedback', function() {
         self.dislikesElement = self.$html.find('[data-dough-feedback-dislike-count]');
 
         // Override _getPageId, since we don't have a DOM for it to access
-        OnPageFeedback.prototype._getPageId = function() { return '' };
+        OnPageFeedback.prototype._getPageId = function() { return '1' };
 
+        localStorage.clear();
         self.OnPageFeedback = new OnPageFeedback(self.$html).init();
 
         server = sinon.fakeServer.create();

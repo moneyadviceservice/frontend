@@ -22,28 +22,11 @@ self.addEventListener('fetch', function(event) {
       return response
     }).catch(function() {
       // send response from the cache
-      if (event.request.url.indexOf('/en') != -1) {
+      if (event.request.url.match('\/en\/') || event.request.url.match('\/en$')) {
         return caches.match('en/offline_page')
-        // console.log(event.request);
-        // return caches.match(event.request);
-        /*
-        caches.match('en/offline_page').then(function(cachedResponse) {
-          return cachedResponse;
-        })
-        */
-        /*
-        caches.match('/assets/logo-sprite-en.png').then(function(response) {
-          // console.log(event.request.headers)
-          return response
-        })
-        */
-        // return caches.match('en/offline_page')
-        // return new Response(caches.match('/assets/logo-sprite-en.png'), {headers: {'Content-Type': 'image/png'}});
       } else {
         return caches.match('cy/offline_page')
       }
-    }).catch(function() {
-      // return caches.match('/assets/dough/assets/stylesheets/basic.css')
     })
   );
 });

@@ -15,7 +15,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
         // If the article content contains any of the keywords in the JSON
         if(articleContent.indexOf(item.term) >= 1){
-          var updatedContent = articleContent.replace(RegExp('(?!<.*?)\\b(' + item.term + ')\\b(?![^<>]*?(<\/a>|>))(?![^<>]*?(<\/h2>|>))(?![^<>]*?(<\/h3>|>))',"gi"), "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</span>" + item.description + "<button class='glossary__description-close'>close</button></span>");
+          var updatedContent = articleContent.replace(RegExp('(?!<.*?)\\b(' + item.term + ')\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))',"gi"), "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</span>" + item.description + "<button class='glossary__description-close'>close</button></span>");
           $(article).html(updatedContent);
           console.log(item.term + ' found in this article')
         } else {

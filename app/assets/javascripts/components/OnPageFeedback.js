@@ -16,12 +16,16 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.dislikeCount = $el.find('[data-dough-feedback-dislike-count]');
     this.likeElement = $el.find('[data-dough-feedback-like-count]');
     this.dislikeElement = $el.find('[data-dough-feedback-dislike-count]');
-    this.pageId = window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
+    this.pageId = this._getPageId();
     this.currentPage = 'start';
   };
 
   DoughBaseComponent.extend(OnPageFeedback);
   OnPageFeedback.componentName = 'OnPageFeedback';
+
+  OnPageFeedback.prototype._getPageId = function() {
+    return window.location.pathname.match(/^.*\/([a-zA-Z0-9-_]+)$/)[1];
+  }
 
   OnPageFeedback.prototype._submitInteraction = function(interaction) {
     var isLiked = (interaction === 'positive') ? true : false;

@@ -1,7 +1,15 @@
 <%= render 'shared/header', item: @resource %>
-<h1><%= t('offline.heading') %></h1>
-<h2><%= t('offline.subheading') %></h2>
-<p><%= t('offline.text') %></p>
-<p><%= t('offline.phone') %></p>
-<ul><%= t('offline.dates_html') %></ul>
-<p><%= t('offline.note_html') %></p>
+<div class="l-constrained">
+  <h1 class="l-offline__heading"><%= t('offline.heading') %></h1>
+  <div class="l-offline__body">
+    <h2><%= t('offline.subheading') %></h2>
+    <p><%= t('offline.text') %></p>
+    <p>
+        <a href="tel:<%= t('offline.phone') %>" class="l-offline__phone"><%= t('offline.phone') %> *</a>
+    </p>
+    <ul class="l-offline__dates">
+        <%= t('offline.dates_html') %>
+    </ul>
+    <p class="smallprint"><%= t('offline.note_html') %></p>
+  </div>
+</div>

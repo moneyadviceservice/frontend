@@ -1,8 +1,3 @@
-/*
-This basically works but with some issues.
-Good starting point though
-**/
-
 // When the SW is installed, cache the assets required to display the offlinePage content
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -14,18 +9,21 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response) {
-      // cache all the required assets each time
-      // this works but does it affect performance?
-      if (response.ok) {
-        cacheAssets()
-      }
+      caches.open('mas-offline-page').then(function(cache) {
+        return caches.match(event.request);
+      })
+
       return response
     }).catch(function() {
       // send response from the cache
-      if (event.request.url.match('\/en\/') || event.request.url.match('\/en$')) {
-        return caches.match('en/offline_page')
-      } else {
-        return caches.match('cy/offline_page')
+      if (event.request.url.match(/\/en$/) || event.request.url.match(/\/en\//)) {
+        return caches.match('/en/offline_page');
+      } else if (event.request.url.match(/\/assets\/logo-sprite-en.png/)) {
+        return caches.match('/assets/logo-sprite-en.png');
+      } else if (event.request.url.match(/\/cy$/) || event.request.url.match(/\/cy\//)) {
+        return caches.match('/cy/offline_page');
+      } else if (event.request.url.match(/\/assets\/logo-sprite-cy.png/)) {
+        return caches.match('/assets/logo-sprite-cy.png');
       }
     })
   );
@@ -33,6 +31,10 @@ self.addEventListener('fetch', function(event) {
 
 function cacheAssets() {
   var urlsToCache = [
+    '/assets/logo-sprite-en.png',
+    '/assets/logo-sprite-cy.png',
+    '/assets/dough/assets/stylesheets/basic.css',
+    '/assets/enhanced_responsive.css',
     'en/offline_page',
     'cy/offline_page'
   ];

@@ -24,6 +24,10 @@ self.addEventListener('fetch', function(event) {
         return caches.match('/cy/offline_page');
       } else if (event.request.url.match(/\/assets\/logo-sprite-cy.png/)) {
         return caches.match('/assets/logo-sprite-cy.png');
+      } else if (event.request.url.match(/\/assets\/dough\/assets\/stylesheets\/basic.css/)) {
+        return caches.match('/assets/dough/assets/stylesheets/basic.css');
+      } else if (event.request.url.match(/\/assets\/enhanced_responsive.css/)) {
+        return caches.match('/assets/enhanced_responsive.css');
       }
     })
   );

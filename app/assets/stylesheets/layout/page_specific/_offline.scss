@@ -1,0 +1,14 @@
+.l-offline__heading,
+.l-offline__body {
+  @include column(12);
+}
+
+.l-offline__phone {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.l-offline__dates {
+  list-style: none;
+  padding-left: 0;
+}

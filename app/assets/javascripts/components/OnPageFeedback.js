@@ -12,8 +12,6 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     this.submitBtn = $el.find('[data-dough-feedback-submit]');
     this.submitForm = $el.find('[data-dough-feedback-form]');
     this.ajaxUrl = $el.attr('data-dough-on-page-feedback-post');
-    this.likeCount = $el.find('[data-dough-feedback-like-count]');
-    this.dislikeCount = $el.find('[data-dough-feedback-dislike-count]');
     this.likeElement = $el.find('[data-dough-feedback-like-count]');
     this.dislikeElement = $el.find('[data-dough-feedback-dislike-count]');
     this.pageId = this._getPageId();
@@ -97,12 +95,12 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
     }.bind(this), 600);
   };
 
-
   OnPageFeedback.prototype._updateCount = function(data) {
-    var countResponse = data;
+    this.likesCount = data.likes_count;
+    this.dislikesCount = data.dislikes_count;
 
-    this.likeElement.text(countResponse.likes_count);
-    this.dislikeElement.text(countResponse.dislikes_count);
+    this.likeElement.text(this.likesCount);
+    this.dislikeElement.text(this.dislikesCount);
   };
 
   OnPageFeedback.prototype._showPage = function(pageName) {
@@ -119,8 +117,7 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
 
       // Ignore stored data if more than 30 days old
       if (json.time > (Date.now() - (30*24*60*60*1000))) {
-        this.likeElement.text(json.likes_count);
-        this.dislikeElement.text(json.dislikes_count);
+        this._updateCount(json);
         this.currentPage = json.current_page;
       }
     }
@@ -129,8 +126,8 @@ define(['jquery', 'featureDetect', 'DoughBaseComponent', 'common'], function($, 
   OnPageFeedback.prototype._storeState = function() {
     var data = {
       time: Date.now(),
-      likes_count: this.likeElement.text(),
-      dislikes_count: this.dislikeElement.text(),
+      likes_count: this.likesCount,
+      dislikes_count: this.dislikesCount,
       current_page: this.currentPage
     }
 

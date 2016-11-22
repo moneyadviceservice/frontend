@@ -1,34 +1,47 @@
+/*
 var urlsToCache = [
   '/en/offline_page',
   '/cy/offline_page'
 ];
+*/
 
-// When the SW is installed, cache the assets required to display the offlinePage content
+/* When the SW is installed, cache the assets required to display the offlinePage content
 self.addEventListener('install', function(event) {
   event.waitUntil(
     cacheAssets()
   );
 });
+*/
 
 // Test for network and use response if available plus cache assets, otherwise use offlinePage content
 self.addEventListener('fetch', function(event) {
-  if (event.request.url.indexOf('logo-sprite-en') != -1) {
-    urlsToCache.push(event.request.url);
+  var root = event.request.url.split('/')[0];
+
+  if (event.request.url.match(/\/cy$/) || event.request.url.match(/\/cy\//)) {
+    caches.open('mas-offline-page').then(function(cache) {
+      cache.add(root + '/cy/offline_page');
+    })
+  } else if (event.request.url.match(/\/en$/) || event.request.url.match(/\/en\//)) {
+    caches.open('mas-offline-page').then(function(cache) {
+      cache.add(root + '/en/offline_page');
+    })
+  } else if (event.request.url.indexOf('logo-sprite-en') != -1) {
+    // urlsToCache.push(event.request.url);
     caches.open('mas-offline-page').then(function(cache) {
       cache.add(event.request.url);
     })
   } else if (event.request.url.indexOf('logo-sprite-cy') != -1) {
-    urlsToCache.push(event.request.url);
+    // urlsToCache.push(event.request.url);
     caches.open('mas-offline-page').then(function(cache) {
       cache.add(event.request.url);
     })
   } else if (event.request.url.indexOf('basic') != -1) {
-    urlsToCache.push(event.request.url);
+    // urlsToCache.push(event.request.url);
     caches.open('mas-offline-page').then(function(cache) {
       cache.add(event.request.url);
     })
   } else if (event.request.url.indexOf('enhanced_responsive') != -1) {
-    urlsToCache.push(event.request.url);
+    // urlsToCache.push(event.request.url);
     caches.open('mas-offline-page').then(function(cache) {
       cache.add(event.request.url);
     })
@@ -56,6 +69,7 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
+/*
 function cacheAssets() {
   // open a cache named 'mas-offline-page'
   caches.open('mas-offline-page').then(function(cache) {
@@ -63,3 +77,4 @@ function cacheAssets() {
     return cache.addAll(urlsToCache)
   })
 }
+*/

@@ -123,10 +123,6 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_feedback_advice
-    render layout: 'styleguide/page'
-  end
-
   def pages_annuities_landing_page
     render layout: 'styleguide/page_unconstrained'
   end

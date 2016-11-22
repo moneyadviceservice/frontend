@@ -131,7 +131,6 @@ Rails.application.routes.draw do
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
     resources :news, only: [:show, :index]
-    resource :advice, only: :show
     resources :videos, only: :show
 
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
@@ -209,7 +208,6 @@ Rails.application.routes.draw do
           get 'pages_campaign', path: '/campaign'
           get 'pages_feedback_information', path: '/feedback_information'
           get 'pages_feedback_technical', path: '/feedback_technical'
-          get 'pages_feedback_advice', path: '/feedback_advice'
           get 'pages_error', path: '/error'
           get 'pages_news_article', path: '/news_article'
           get 'pages_action_plan', path: '/action_plan'

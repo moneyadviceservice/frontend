@@ -112,7 +112,6 @@ Rails.application.routes.draw do
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
-      resource :feedback, only: [:new, :create], controller: :article_feedbacks
       if Feature.active?(:page_feedback)
         resources :page_feedbacks, only: [:create]
         patch 'page_feedbacks' => 'page_feedbacks#update'
@@ -206,7 +205,6 @@ Rails.application.routes.draw do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
           get 'pages_campaign', path: '/campaign'
-          get 'pages_feedback_information', path: '/feedback_information'
           get 'pages_feedback_technical', path: '/feedback_technical'
           get 'pages_error', path: '/error'
           get 'pages_news_article', path: '/news_article'

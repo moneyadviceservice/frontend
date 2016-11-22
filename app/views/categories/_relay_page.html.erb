@@ -1,0 +1,29 @@
+<% contents.select(&:category?).each_with_index do |child_category, i| %>
+  <section class="category-detail" data-dough-component="Collapsable">
+    <%= heading_tag level: 2,
+                    id:    child_category.id,
+                    class: 'category-detail__heading',
+                    data: { dough_collapsable_trigger: 'category_' + child_category.id } do
+    %>
+      <%= render 'shared/svg/use_icon', icon: 'plus', variant: 'yellow' %>
+      <%= render 'shared/svg/use_icon', icon: 'minus', variant: 'yellow' %>
+      <%= child_category.title %>
+    <% end %>
+    <p class="category-detail__intro"><%= child_category.description %></p>
+    <%= render 'category_promos', promos: child_category.category_promos unless !child_category.category_promos || child_category.category_promos.empty? %>
+    <% if child_category.contents.present? %>
+      <div class="category-detail__list-container" data-dough-collapsable-target="category_<%= child_category.id %>">
+        <%= render 'content_items', initial_contents: child_category.initial_contents,
+                                    extended_contents: child_category.extended_contents,
+                                    child_category_id: child_category.id %>
+      </div>
+      <span class="js-category-detail__view-more category-detail__view-more" data-dough-component="ScrollTo" data-anchor="<%= child_category.id %>" data-dough-collapsable-trigger="category_<%= child_category.id %>">
+        <%= render 'shared/svg/use_icon', icon: 'plus', variant: 'blue' %>
+        <%= render 'shared/svg/use_icon', icon: 'minus', variant: 'blue' %>
+        <span class="category-detail__view-more__label-more"><%= t('categories.show.view_more') %></span>
+        <span class="category-detail__view-more__label-less"><%= t('categories.show.view_less') %></span>
+        <span class="visually-hidden"> <%= child_category.title %></span>
+      </span>
+    <% end %>
+  </section>
+<% end %>

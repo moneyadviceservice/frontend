@@ -1,6 +1,6 @@
 var urlsToCache = [
-  'en/offline_page',
-  'cy/offline_page'
+  '/en/offline_page',
+  '/cy/offline_page'
 ];
 
 // When the SW is installed, cache the assets required to display the offlinePage content

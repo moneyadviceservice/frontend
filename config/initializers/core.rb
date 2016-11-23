@@ -36,13 +36,8 @@ Core::Registry::Repository[:page_feedback] =
 Core::Registry::Repository[:footer] =
   Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
 
-if Feature.active?(:cms_home_page)
-  Core::Registry::Repository[:home_page] =
-    Core::Repository::HomePages::CMS.new
-else
-  Core::Registry::Repository[:home_page] =
-    Core::Repository::HomePages::Static.new
-end
+Core::Registry::Repository[:home_page] =
+  Core::Repository::HomePages::CMS.new
 
 Core::Registry::Repository[:video] =
   Core::Repository::Videos::CMS.new

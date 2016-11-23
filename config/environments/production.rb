@@ -92,6 +92,5 @@ Rails.application.configure do
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :sendmail
   config.raise_feedback_delivery_errors = true
-  config.article_feedback_email   = 'content.feedback@moneyadviceservice.org.uk'
   config.technical_feedback_email = 'bugs@moneyadviceservice.org.uk'
 end

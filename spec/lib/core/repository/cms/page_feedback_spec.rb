@@ -15,10 +15,10 @@ module Core::Repository::CMS
           }
         end
 
-        it 'returns ' do
+        it 'returns page feedback' do
           VCR.use_cassette('/en/articles/example-article/page_feedbacks') do
             expect(subject).to include(
-              'id'         => 17,
+              'id'         => 21,
               'liked'      => true,
               'session_id' => 'ae2fcba004e16dffa54f91a46d274238')
           end
@@ -26,7 +26,12 @@ module Core::Repository::CMS
       end
 
       context 'when invalid' do
-        let(:params) { {} }
+        let(:params) do
+          {
+            locale: 'en',
+            article_id: 'example-article'
+          }
+        end
 
         it 'returns false' do
           VCR.use_cassette('/en/articles/example/page_feedbacks-invalid') do

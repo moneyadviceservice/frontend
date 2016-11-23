@@ -27,10 +27,11 @@
       <div class="form__row">
         <textarea id="on-page-user-feedback"
         name="on-page-user-feedback"
-        placeholder="<%= t('articles.on_page_feedback.feedback_placeholder') %>" 
+        placeholder="<%= t('articles.on_page_feedback.feedback_placeholder') %>"
         data-dough-validation-empty="Please leave a comment"
         aria-required
-        required></textarea>
+        required
+        data-dough-feedback-comment></textarea>
       </div>
         <input class="on-page-feedback__form-submit button button--primary" type="submit" data-dough-feedback-submit value="<%= t('articles.on_page_feedback.user_feedback_submit') %>"/>
     </form>

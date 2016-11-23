@@ -2,6 +2,8 @@ module Core
   module Repository
     module CMS
       class PageFeedback < ::Core::Repository::CMS::CMS
+        MAS_CMS_API_TOKEN = ENV.fetch('MAS_CMS_API_TOKEN')
+
         def create(params)
           request(:post, params)
         end
@@ -11,6 +13,7 @@ module Core
         end
 
         def request(verb, params)
+          connection.token_auth(MAS_CMS_API_TOKEN)
           response = connection.send(verb, resource_url(params), params)
           response.body
         rescue

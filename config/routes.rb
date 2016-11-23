@@ -205,7 +205,7 @@ Rails.application.routes.draw do
           get 'pages', path: '/'
           get 'pages_guide', path: '/guide'
           get 'pages_campaign', path: '/campaign'
-          get 'pages_feedback_technical', path: '/feedback_technical'
+          get 'pages_technical_feedback', path: '/technical_feedback'
           get 'pages_error', path: '/error'
           get 'pages_news_article', path: '/news_article'
           get 'pages_action_plan', path: '/action_plan'

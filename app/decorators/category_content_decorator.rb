@@ -4,11 +4,11 @@ class CategoryContentDecorator < Draper::Decorator
   delegate :id, :title, :description, :category_promos
 
   def initial_contents
-    contents.take(6)
+    contents.take(3)
   end
 
   def extended_contents
-    contents[6..-1] || []
+    contents[3..-1] || []
   end
 
   def label

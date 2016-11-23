@@ -8,10 +8,6 @@
   margin: $baseline-unit*5 0 0 0;
   overflow: hidden;
   @include row(12);
-
-  .js & {
-    padding-left: $baseline-unit*6;
-  }
 }
 
 .featured-links__item {

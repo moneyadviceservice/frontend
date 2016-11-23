@@ -7,7 +7,7 @@ RSpec.describe CategoryContentDecorator do
   before { allow(I18n).to receive(:locale) { locale } }
 
   subject(:decorator) { described_class.decorate(item) }
-
+ 
   it { is_expected.to respond_to(:id) }
   it { is_expected.to respond_to(:path) }
   it { is_expected.to respond_to(:label) }
@@ -32,8 +32,8 @@ RSpec.describe CategoryContentDecorator do
         allow(subject).to receive(:contents) { (1..10).to_a }
       end
 
-      it 'returns 6 items' do
-        expect(subject.initial_contents.size).to eql(6)
+      it 'returns 3 items' do
+        expect(subject.initial_contents.size).to eql(3)
       end
     end
   end
@@ -54,8 +54,8 @@ RSpec.describe CategoryContentDecorator do
         allow(subject).to receive(:contents) { (1..10).to_a }
       end
 
-      it 'returns 4 items' do
-        expect(subject.extended_contents.size).to eql(4)
+      it 'returns 7 items' do
+        expect(subject.extended_contents.size).to eql(7)
       end
     end
   end

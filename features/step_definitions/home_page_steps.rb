@@ -51,11 +51,11 @@ Then(/^I should see promoted content$/) do
 end
 
 Then(/^I should see stripe banner$/) do
-  expected_url = I18n.t('home.show.stripe_banner')[:promo_banner_url]
+  expected_url = 'https://www.moneyadviceservice.org.uk/en/tools/debt-advice-locator'
   actual_url  = home_page.stripe_banner.link[:href]
   expect(actual_url).to eq(expected_url)
 
-  expected_text = strip_tags I18n.t('home.show.stripe_banner.promo_banner_content')
+  expected_text = 'Worried about debt? Find out where to get free, confidential help now'
   actual_text  = home_page.stripe_banner.link.text
   expect(actual_text).to eq(expected_text)
 end

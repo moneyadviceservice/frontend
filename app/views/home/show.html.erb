@@ -35,8 +35,4 @@
 
 <%= render 'shared/article_promos', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
 
-<% if Feature.active?(:cms_home_page_promo_banner) %>
-  <%= render 'shared/stripe_banner', item: @resource %>
-<% else %>
-  <%= render 'shared/stripe_banner', item: OpenStruct.new(t('.stripe_banner')) %>
-<% end %>
+<%= render 'shared/stripe_banner', item: @resource %>

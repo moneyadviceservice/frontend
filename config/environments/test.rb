@@ -42,7 +42,6 @@ Rails.application.configure do
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :test
   config.raise_feedback_delivery_errors = false
-  config.article_feedback_email   = 'content.feedback@moneyadviceservice.org.uk'
   config.technical_feedback_email = 'matt.lucht@moneyadviceservice.org.uk'
 
   # Missing translations should raise exceptions

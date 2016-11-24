@@ -9,7 +9,7 @@ self.addEventListener('install', function(event) {
     // open a cache named 'mas-offline-page'
     caches.open('mas-offline-page').then(function(cache) {
       // add the urls in urlsToCache to opened cache
-      return cache.addAll(initialAssetsToCache)
+      return cache.addAll(initialAssetsToCache, {credentials: 'same-origin'})
     })
   );
 });

@@ -27,7 +27,7 @@ Then(/^I should see the Money Advice Service brand identity$/) do
 end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
-  expected_en = "head 1"
+  expected_en = "Free and impartial money advice, set up by government"
   expected_cy = "wufhwehfu"
 
   expect(home_page.trust_banner.heading)
@@ -39,12 +39,12 @@ Then(/^I should see directory items$/) do
 end
 
 Then(/^I should see promoted content$/) do
-  expected_text = ["head 1", "neck 2", "break 3", "fail 4"]
+  expected_text = ["Countdown to Christmas starts now!", "Can you guess the cost of emergencies?", "Give yourself a financial workout", "Prepare for the new arrival"]
   actual_text   = home_page.promos.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)
 
-  expected_text = ["head 1", "neck 2"]
+  expected_text = ["Estimate the cost of buying a house and moving", "Universal Credit explained"]
   actual_text = home_page.promos_no_image.map { |item| item.heading.text }
 
   expect(actual_text).to eq(expected_text)

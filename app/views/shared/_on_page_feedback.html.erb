@@ -46,7 +46,7 @@
   </div>
   <div class="on-page-feedback__results is-hidden" data-dough-feedback-page="results">
     <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.thankyou_heading') %></h2>
-    <div class="on-page-feedback__results-item">
+    <div class="on-page-feedback__results-item" data-dough-feedback-like-container>
       <div class="on-page-feedback__results-item-card">
         <div class="on-page-feedback__results-item-front">
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -55,13 +55,11 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
         </svg>
         <span class="icon icon--thumb-icon-up"></span>
-        <span class="visually-hidden"><%= t('articles.on_page_feedback.total_likes') %></span>
-        <div class="on-page-feedback__results-item-number" data-dough-feedback-like-count></div>
         </div>
         <div class="on-page-feedback__results-item-back"></div>
       </div>
     </div>
-    <div class="on-page-feedback__results-item">
+    <div class="on-page-feedback__results-item"  data-dough-feedback-dislike-container>
       <div class="on-page-feedback__results-item-card">
         <div class="on-page-feedback__results-item-front">
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +68,6 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
         </svg>
         <span class="icon icon--thumb-icon-down"></span>
-        <span class="visually-hidden"><%= t('articles.on_page_feedback.total_dislikes') %></span>
-        <div class="on-page-feedback__results-item-number" data-dough-feedback-dislike-count></div>
         </div>
         <div class="on-page-feedback__results-item-back"></div>
       </div>

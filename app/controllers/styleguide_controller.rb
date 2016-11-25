@@ -115,15 +115,7 @@ class StyleguideController < ApplicationController
     render layout: 'styleguide/page'
   end
 
-  def pages_feedback_information
-    render layout: 'styleguide/page'
-  end
-
   def pages_feedback_technical
-    render layout: 'styleguide/page'
-  end
-
-  def pages_feedback_advice
     render layout: 'styleguide/page'
   end
 

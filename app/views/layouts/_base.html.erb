@@ -9,7 +9,7 @@
 <head>
   <meta property="fb:pages" content="160564360681471" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) && Feature.active?(:optimizely) %>
+  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>
     <%# This is the new embed code for Optimizely training session and is temporary %>

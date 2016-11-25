@@ -35,7 +35,7 @@
 
       <%= article.content %>
 
-      <% if article.accepts_feedback? && Feature.active?(:page_feedback) %>
+      <% if article.accepts_feedback? %>
         <%= render 'shared/on_page_feedback' %>
       <% end %>
 

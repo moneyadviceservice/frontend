@@ -172,7 +172,6 @@ cy:
   home:
     show:
       title: Cyngor ariannol am ddim a diduedd, sefydlwyd gan y llywodraeth
-      heading: Cyngor ariannol am ddim a diduedd, sefydlwyd gan y llywodraeth
       strapline: Cyngor ariannol am ddim a diduedd, sefydlwyd gan y llywodraeth
       trust_banner_list:
         - text: Cyngor a chanllawiau i roi cymorth i chi wella'ch materion ariannol
@@ -187,16 +186,6 @@ cy:
         ein hofferyn Gwiriad Iechyd, cyfrifianellau a thablau cymharu i wneud y mwyaf o'ch materion ariannol.
       tools_heading: Offer a chyfrifianellau poblogaidd
       tools_view_all: /cy/categories/tools-and-calculators
-      tools:
-        - url: /cy/opsiynau-incwm-ymddeoliad
-          heading: Offeryn incwm ymddeoliad
-          text: Dysgwch beth yw'ch opsiynau
-        - url: /cy/tools/annuities
-          heading: Chymharu blwydd-daliadau
-          text: Dysgwch sut i gael y fargen orau
-        - url:  /cy/tools/cyfrifiannell-morgais
-          heading: Cyfrifiannell morgais
-          text: Faint allwch chi ei fenthyca?
       view_all_link_html: |
         Gweld pob&hellip;
       view_all_link_expanded: o'n offer a chyfrifianellau poblogaidd
@@ -227,9 +216,6 @@ cy:
         - url: /cy/tools/cynllunydd-cyllideb
           heading: Defnyddiwch ein Cynllunydd cyllideb i gadw trefn ar eich gwariant
           content: Cymrwch bum munud i ddefnyddio ein hofferyn i weld faint sydd gennych dros ben wedi talu am y biliau pwysicaf
-      stripe_banner:
-        promo_banner_url: /cy/tools/canfyddwr-cyngor-ar-ddyledion
-        promo_banner_content: '<b class="stripe-banner__bold">Ydych chi’n pryderu am ddyledion?</b> Dysgwch lle i gael cymorth cyfrinachol yn rhad ac am ddim yn awr'
       blog_title: Eich blog Cyngor Ariannol
       blog_description: Awgrymiadau, newyddion a safbwyntiau ar bopeth sydd ynghlwm ag arian, o forgeisi a chynilion i gyllido a budd-daliadau.
 
@@ -499,22 +485,6 @@ cy:
       what_went_wrong_html: Beth aeth o'i le? <span class="visually-hidden">angen</span>
     create:
       flash_notice: Diolch am eich adborth
-
-  advices:
-    show:
-      title: Cymorth a chyngor ariannol
-      greeting: "Am gymorth a chyngor ariannol, cysylltwch â ni."
-      subtitle: Ffoniwch ni
-      monday_friday_times_html: "Dydd Llun–Dydd Gwener: <strong>8am–8pm</strong>"
-      saturday_times_html: "dydd Sadwrn: <strong>9am–1pm</strong>"
-      about_call_charges: Dysgwch am gostau galwadau
-
-  feedback_panel:
-    title: Rhowch eich adborth i ni
-    greeting: Beth yw natur eich adborth?
-    article_feedback_link_text: Y wybodaeth ar y dudalen hon
-    technical_feedback_link_text: Roedd gennyf fater technegol
-    advice_link_text: Mae arnaf angen cymorth ariannol
 
   inline_feedback:
     technical_feedback_link: Adrodd ar anhawster technegol gyda'r dudalen hon

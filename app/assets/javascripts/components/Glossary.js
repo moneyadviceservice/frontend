@@ -31,8 +31,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
       // Show descriptions
       $('.glossary__term').on('click', function(){
-        event.stopPropagation();
         $(this).next('.glossary__description').addClass('glossary__description--active');
+        return false;
       });
 
       // Close descriptions using button

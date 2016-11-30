@@ -150,4 +150,27 @@ RSpec.describe CategoryDecorator do
       end
     end
   end
+
+  describe '#rendering_args' do
+    context 'when object contains legacy contents' do
+      let(:category) { Core::Category.new(nil, legacy_contents: [:foo]) }
+
+      specify { expect(subject.rendering_args.first).to eq 'relay_page' }
+      specify { expect(subject.rendering_args.last).to include(:contents) }
+    end
+
+    context 'when object is a parent' do
+      let(:category) { Core::Category.new(nil, contents: [double(:child? => true)], legacy_contents: []) }
+
+      specify { expect(subject.rendering_args.first).to eq 'child_categories' }
+      specify { expect(subject.rendering_args.last).to include(:contents) }
+    end
+
+    context 'when object is a child' do
+      let(:category) { Core::Category.new(nil, contents: [], legacy_contents: []) }
+
+      specify { expect(subject.rendering_args.first).to eq 'content_items_all' }
+      specify { expect(subject.rendering_args.last).to include(:contents) }
+    end
+  end
 end

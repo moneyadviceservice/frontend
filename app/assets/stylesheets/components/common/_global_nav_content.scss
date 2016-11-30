@@ -1,0 +1,223 @@
+// Global Navigation
+//
+// Styleguide Global Navigation
+
+$max-cols: 6;
+$gutter: $default-gutter / 2;
+
+.global-nav__content {
+  transition-property: transform;
+  transition-duration: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(200%);
+  background: $color-white;
+
+  @include respond-to($mq-m) {
+    transition: none;
+    top: 100%;
+    transform: none;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    display: none;
+
+    &:after {
+      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: -1
+    }
+
+    &:hover {
+      display: block;
+    }
+  }
+}
+
+.global-nav__content__heading {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
+  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.375);
+  position: relative;
+  display: block;
+  padding: $baseline-unit 0;
+  line-height: 25px; // #{$clump-height}px;
+  padding: $baseline-unit*2 0;
+  border-top: none;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.global-nav__arrow {
+  position: absolute;
+  left: $default-gutter;
+  width: 18px / 34 * 25;
+  height: 25px;
+  float: left;
+  transform: rotate(180deg);
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.global-nav__content__heading__text {
+  float: none;
+  padding: 0 0 0 40px;
+}
+
+.global-nav__categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @include respond-to($mq-m) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: $baseline-unit*2;
+  }
+}
+
+.global-nav__category {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
+  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.375);
+  padding: $baseline-unit 0 $baseline-unit 40px;
+  margin-bottom: 0;
+
+  @include respond-to($mq-m) {
+    border-bottom: none;
+    box-shadow: none;
+    position: relative;
+    max-width: 100% / ($max-cols - 2);
+    min-width: 100% / $max-cols;
+    margin: 0;
+    padding: 0 $gutter;
+    border-top: none;
+    border-bottom: none;
+    flex-grow: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -0.5px;
+      border-left: 1px solid $color-grey-light;
+      width: 1px;
+    }
+
+    &:first-child {
+      padding-left: $gutter * 2;
+
+      &:before {
+        border-left: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: $gutter * 2;
+    }
+  }
+}
+
+.global-nav__category--double {
+  @include respond-to($mq-m) {
+    flex-grow: 3;
+    max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+
+    .global-nav__subcategories {
+      column-count: 2;
+      column-fill: balance;
+    }
+  }
+}
+
+.global-nav__tool-category {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+    flex-grow: 2;
+  }
+}
+
+.global-nav__category:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.global-nav__category__heading {
+  display: inline-block;
+  float: none;
+  padding: 0 0 $baseline-unit;
+  font-weight: bold;
+  white-space: normal;
+
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.global-nav__subcategories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-to($mq-m) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+.global-nav__subcategory,
+.global-nav__tool {
+  margin: 0;
+}
+
+.global-nav__tool {
+  position: relative;
+  border: 2px solid $color-callout-tool;
+  border-left-width: $callout-border-top-height;
+  margin-bottom: $baseline-unit*2;
+}
+
+.global-nav__tool:last-child {
+  margin-bottom: 0;
+}
+
+.global-nav__subcategory__link,
+.global-nav__tool__link {
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+  white-space: normal;
+}
+
+.global-nav__tool__link {
+  margin: $baseline-unit*2;
+  padding: 0;
+}
+
+.global-nav__tools__icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: -37px;
+  top: 5px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+}
+
+.global-nav__tool-icon {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 0;
+  bottom: 0;
+}

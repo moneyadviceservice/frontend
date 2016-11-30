@@ -1,0 +1,131 @@
+// Global Navigation
+//
+// Styleguide Global Navigation
+
+$background-colour: yellow;
+
+@mixin transition {
+  transition-property: left;
+  transition-duration: 1s;
+}
+
+.global-nav {
+  @include transition;
+
+  position: fixed;
+  left: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.global-nav--active {
+  left: 0%;
+}
+
+.global-nav__clumps {
+  @include transition;
+
+  position: absolute;
+  left: 0%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: $background-colour;
+}
+
+.global-nav__clumps--active {
+  left: -100%;
+}
+
+.global-nav__clump {
+  position: static;
+  margin: 0;
+  padding: $baseline-unit 0;
+  border-bottom: solid 1px;
+}
+
+.global-nav__clump:last-child {
+  border-bottom: none;
+}
+
+.global-nav__clump__heading {
+  @include column(12);
+
+  float: none;
+}
+
+.global-nav__clump__description {
+  display: none;
+}
+
+.global-nav__clump__content {
+  @include transition;
+
+  position: absolute;
+  top: 0;
+  left: 200%;
+  background: $background-colour;
+}
+
+.global-nav__clump__content--active {
+  left: 100%;
+}
+
+.global-nav__clump__content__heading {
+  display: block;
+  padding: $baseline-unit 0;
+  border-bottom: solid 1px;
+}
+
+.global-nav__clump__content__heading__text {
+  @include column(12);
+
+  float: none;
+  padding: 0 0 0 40px;
+}
+
+.global-nav__categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.global-nav__category {
+  margin: 0 0 0 40px;
+  border-bottom: solid 1px;
+}
+
+.global-nav__category:last-child {
+  border-bottom: none;
+}
+
+.global-nav__category__heading {
+  @include column(12);
+
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+  font-weight: bold;
+}
+
+.global-nav__subcategories,
+.global-nav__tools {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.global-nav__subcategory,
+.global-nav__tool {
+  margin: 0;
+}
+
+.global-nav__subcategory__link,
+.global-nav__tool__link {
+  @include column(12);
+
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+}

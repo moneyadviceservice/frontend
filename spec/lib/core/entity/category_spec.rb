@@ -25,7 +25,7 @@ module Core
       let(:category_with_nil_contents) { build :category, contents: nil }
       let(:child_category) { build :category, contents: [build(:article), build(:action_plan)] }
       let(:parent_category) { build :category, contents: [child_category] }
-      let(:category_with_legacy_contents) { build :category, legacy_contents: [build(:article)] }
+      let(:category_with_legacy_contents) { build :category, legacy_contents: [build(:article)], legacy: true }
 
       specify { expect(category_with_nil_contents).to be_child }
 

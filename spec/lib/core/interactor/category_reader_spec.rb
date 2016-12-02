@@ -99,7 +99,9 @@ module Core
         end
 
         [Article, ActionPlan].each_with_index do |klass, i|
-          specify { expect(category.legacy_contents[i]).to be_a(klass) }
+          it "loads class #{klass}" do
+            expect(category.legacy_contents[i]).to be_a(klass)
+          end
         end
       end
     end

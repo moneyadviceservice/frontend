@@ -1,29 +1,49 @@
 // Global Navigation
 //
 // Styleguide Global Navigation
+//
+// TODO:
+// Use flexbox to better space out the clumps on desktop
 
-$background-colour: yellow;
+$primary-background-colour: yellow;
+$secondary-background-colour: white;
 
-@mixin transition {
+@mixin transition_mobile {
   transition-property: left;
   transition-duration: 1s;
 }
 
+@mixin transition_desktop {
+  transition: none;
+}
+
 .global-nav {
-  @include transition;
+  @include transition_mobile;
 
   position: fixed;
-  left: 100%;
-  width: 100%;
   z-index: 5;
+  width: 100%;
+  left: 100%;
+
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+
+    position: relative;
+    left: 0;
+    background: $primary-background-colour;
+  }
 }
 
 .global-nav--active {
   left: 0%;
 }
 
+.global-nav__container {
+  position: relative;
+}
+
 .global-nav__clumps {
-  @include transition;
+  @include transition_mobile;
 
   position: absolute;
   left: 0%;
@@ -31,7 +51,15 @@ $background-colour: yellow;
   margin: 0;
   padding: 0;
   width: 100%;
-  background: $background-colour;
+  background: $primary-background-colour;
+
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+    @include column(12);
+
+    position: static;
+    background: transparent;
+  }
 }
 
 .global-nav__clumps--active {
@@ -41,41 +69,98 @@ $background-colour: yellow;
 .global-nav__clump {
   position: static;
   margin: 0;
-  padding: $baseline-unit 0;
   border-bottom: solid 1px;
+  line-height: 1;
+  white-space: nowrap;
+
+  @include respond-to($mq-xl) {
+    float: left;
+    border-bottom: none;
+  }
+}
+
+.global-nav__clump--active {
+  @include respond-to($mq-xl) {
+    background: $secondary-background-colour;
+  }
+
+  .global-nav__clump__content {
+    left: 100%;
+
+    @include respond-to($mq-xl) {
+      display: block;
+      left: 0;
+      background: $secondary-background-colour;
+    }
+  }
 }
 
 .global-nav__clump:last-child {
   border-bottom: none;
+
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-right: none;
+    }
+  }
 }
 
 .global-nav__clump__heading {
   @include column(12);
 
   float: none;
+
+  @include respond-to($mq-xl) {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: $baseline-unit 0;
+  }
+}
+
+.global-nav__clump__heading__text {
+  @include respond-to($mq-xl) {
+    padding: 0 10px;
+    border-right: solid 1px;
+  }
 }
 
 .global-nav__clump__description {
   display: none;
+
+  @include respond-to($mq-xl) {
+    @include column(12);
+    display: block;
+    text-align: center;
+  }
 }
 
 .global-nav__clump__content {
-  @include transition;
+  @include transition_mobile;
 
   position: absolute;
   top: 0;
   left: 200%;
-  background: $background-colour;
-}
+  background: $primary-background-colour;
 
-.global-nav__clump__content--active {
-  left: 100%;
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+    @include column(12);
+
+    top: 100%;
+    left: 0;
+    display: none;
+  }
 }
 
 .global-nav__clump__content__heading {
   display: block;
   padding: $baseline-unit 0;
   border-bottom: solid 1px;
+
+  @include respond-to($mq-xl) {
+    display: none;
+  }
 }
 
 .global-nav__clump__content__heading__text {
@@ -94,6 +179,13 @@ $background-colour: yellow;
 .global-nav__category {
   margin: 0 0 0 40px;
   border-bottom: solid 1px;
+
+  @include respond-to($mq-xl) {
+    margin-left: 0;
+    border-bottom: none;
+
+    @include column(2);
+  }
 }
 
 .global-nav__category:last-child {
@@ -107,6 +199,12 @@ $background-colour: yellow;
   float: none;
   padding: $baseline-unit 0;
   font-weight: bold;
+  white-space: normal;
+
+  @include respond-to($mq-xl) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .global-nav__subcategories,
@@ -128,4 +226,11 @@ $background-colour: yellow;
   display: inline-block;
   float: none;
   padding: $baseline-unit 0;
+  white-space: normal;
+
+  @include respond-to($mq-xl) {
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
 }

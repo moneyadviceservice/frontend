@@ -11,14 +11,16 @@
       <% end %>
     </div>
 
-    <%= image_tag('campaign/debt-management-side1.jpg', alt: '', class: 'l-debtmanagement__image-small') %>
+    <div class="l-debtmanagement__image-small">
+      <%= image_tag('campaign/debt-management-side1.jpg', alt: '') %>
 
-    <div class="l-debtmanagement__button">
-      <a class=" button button--primary button--fill-width" href="#get-debt-help-now"><%= t('primary_button') %></a>
+      <div class="l-debtmanagement__button">
+        <a class=" button button--primary button--fill-width" href="#get-debt-help-now"><%= t('primary_button') %></a>
+      </div>
     </div>
   </section>
 
-  <section class="l-debtmanagement">
+  <section class="l-debtmanagement l-debtmanagement--image-first">
     <%= image_tag('campaign/debt-management-side2.jpg', alt: '', class: 'l-debtmanagement__image-small l-debtmanagement__image-small--left') %>
     <div class="l-debtmanagement__inner l-debtmanagement__inner--with-image">
       <h2><%= t('section_two.heading') %></h2>

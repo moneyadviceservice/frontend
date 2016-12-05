@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/moneyadviceservice/meta-tags.git
+  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
+  specs:
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -7,13 +14,6 @@ GIT
       google-analytics-rails
       sass
       sass-rails
-
-GIT
-  remote: https://github.com/moneyadviceservice/meta-tags.git
-  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
-  specs:
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -537,7 +537,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.12.0)
+    rio (1.13.0)
       bowndler
       dough-ruby
       pensions_calculator-calculations (~> 1.4.0)
@@ -766,7 +766,7 @@ DEPENDENCIES
   rack-livereload
   rails (= 4.2.7.1)
   redcarpet
-  rio (= 1.12.0)!
+  rio (= 1.13.0)!
   rouge
   rspec-html-matchers
   rspec-rails

@@ -9,6 +9,7 @@
     <span class="nav__strapline"><%= t('layouts.base.strapline') %></span>
 
     <ul class="link-list-primary">
+
       <% categories.each do |category| %>
         <% if active_categories.member?(category.id) %>
           <li class="link-list-primary__item link-list-primary__item--selected">
@@ -21,12 +22,18 @@
             <ul class="link-list-secondary">
               <% category.contents.each do |sub_category| %>
                 <li class="link-list-secondary__item">
-                  <%= link_to sub_category.title, sub_category.path,
-                    class: "link-list-secondary__text #{active_categories.member?(sub_category.id) ? 'is-selected' : ''}"
-                  %>
+                  <h6><%= sub_category.title %></h6>
+                  <ul>
+                    <% sub_category.left_nav_items.each do |item| %>
+                    <li>
+                      <%= link_to item.title, item.path, class: "link-list-tertiary__text" %>
+                    </li>
+                    <% end %>
+                  </ul>
                 </li>
               <% end %>
             </ul>
+
           </li>
         <% else %>
           <li class="link-list-primary__item">

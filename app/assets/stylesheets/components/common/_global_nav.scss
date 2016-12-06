@@ -1,20 +1,23 @@
 // Global Navigation
 //
 // Styleguide Global Navigation
-//
-// TODO:
-// Use flexbox to better space out the clumps on desktop
 
-$primary-background-colour: yellow;
-$secondary-background-colour: white;
+$primary-background-colour: #fd5; // yellow;
+$secondary-background-colour: #fff; // white;
+$clump-height: 40;
 
 @mixin transition_mobile {
-  transition-property: left;
+  transition-property: transform;
   transition-duration: 1s;
 }
 
 @mixin transition_desktop {
   transition: none;
+}
+
+@mixin horizontal-separator {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
+  border-top: solid 1px rgba(0, 0, 0, 0.125);
 }
 
 .global-nav {
@@ -23,35 +26,33 @@ $secondary-background-colour: white;
   position: fixed;
   z-index: 5;
   width: 100%;
-  left: 100%;
+  transform: translateX(100%);
 
   @include respond-to($mq-xl) {
     @include transition_desktop;
 
     position: relative;
-    left: 0;
+    transform: translateX(0%);
     background: $primary-background-colour;
   }
 }
 
 .global-nav--active {
-  left: 0%;
-}
-
-.global-nav__container {
-  position: relative;
+  transform: translateX(0%);
 }
 
 .global-nav__clumps {
   @include transition_mobile;
 
   position: absolute;
-  left: 0%;
+  left: 0;
+  transform: translateX(0%);
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
   background: $primary-background-colour;
+  font-size: 1rem;
 
   @include respond-to($mq-xl) {
     @include transition_desktop;
@@ -59,48 +60,76 @@ $secondary-background-colour: white;
 
     position: static;
     background: transparent;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
 .global-nav__clumps--active {
-  left: -100%;
+  transform: translateX(-100%);
+
+  @include respond-to($mq-xl) {
+    transform: translateX(0%);
+  }
 }
 
 .global-nav__clump {
+  @include horizontal-separator;
+
   position: static;
   margin: 0;
-  border-bottom: solid 1px;
   line-height: 1;
-  white-space: nowrap;
 
   @include respond-to($mq-xl) {
     float: left;
     border-bottom: none;
+    border-top: none;
   }
 }
 
 .global-nav__clump--active {
-  @include respond-to($mq-xl) {
-    background: $secondary-background-colour;
-  }
-
   .global-nav__clump__content {
-    left: 100%;
+    transform: translateX(100%);
 
     @include respond-to($mq-xl) {
       display: block;
       left: 0;
       background: $secondary-background-colour;
+      transform: translateX(0);
+    }
+  }
+
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-left: none;
+    }
+  }
+
+  @include respond-to($mq-xl) {
+    background: $secondary-background-colour;
+  }
+}
+
+.global-nav__clump--active + .global-nav__clump {
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-left: none;
     }
   }
 }
 
 .global-nav__clump:last-child {
   border-bottom: none;
+}
+
+.global-nav__clump:first-child {
+  border-top: none;
 
   .global-nav__clump__heading__text {
     @include respond-to($mq-xl) {
-      border-right: none;
+      border-left: none;
     }
   }
 }
@@ -108,20 +137,31 @@ $secondary-background-colour: white;
 .global-nav__clump__heading {
   @include column(12);
 
+  display: inline-block;
   float: none;
+  line-height: #{$clump-height}px;
+  padding: $baseline-unit*2 0;
 
   @include respond-to($mq-xl) {
-    display: inline-block;
     width: 100%;
     margin: 0;
-    padding: $baseline-unit 0;
   }
 }
 
 .global-nav__clump__heading__text {
   @include respond-to($mq-xl) {
-    padding: 0 10px;
-    border-right: solid 1px;
+    padding: 0 $baseline-unit*3;
+    border-left: solid 1px;
+  }
+}
+
+.global-nav__clump__heading__arrow {
+  width: 97.06px * ($clump-height/150);
+  height: #{$clump-height}px;
+  float: right;
+
+  @include respond-to($mq-xl) {
+    display: none;
   }
 }
 
@@ -140,23 +180,46 @@ $secondary-background-colour: white;
 
   position: absolute;
   top: 0;
-  left: 200%;
-  background: $primary-background-colour;
+  left: 0;
+  transform: translateX(200%);
+  background: $secondary-background-colour;
 
   @include respond-to($mq-xl) {
     @include transition_desktop;
-    @include column(12);
 
     top: 100%;
     left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    margin: 0;
+    max-width: none;
     display: none;
   }
 }
 
 .global-nav__clump__content__heading {
+  @include column(12);
+  @include horizontal-separator;
+
+  position: relative;
   display: block;
   padding: $baseline-unit 0;
   border-bottom: solid 1px;
+  line-height: #{$clump-height}px;
+  padding: $baseline-unit*2 0;
+  border-top: none;
+
+  @include respond-to($mq-xl) {
+    display: none;
+  }
+}
+
+.global-nav__clump__content__heading__arrow {
+  position: absolute;
+  left: 0;
+  width: 97.06px * ($clump-height/150);
+  height: #{$clump-height}px;
+  float: left;
 
   @include respond-to($mq-xl) {
     display: none;
@@ -164,8 +227,6 @@ $secondary-background-colour: white;
 }
 
 .global-nav__clump__content__heading__text {
-  @include column(12);
-
   float: none;
   padding: 0 0 0 40px;
 }
@@ -176,25 +237,34 @@ $secondary-background-colour: white;
   padding: 0;
 }
 
-.global-nav__category {
-  margin: 0 0 0 40px;
-  border-bottom: solid 1px;
+.global-nav__category,
+.global-nav__tool-category {
+  @include column(12);
+  @include horizontal-separator;
+
+  padding: $baseline-unit 0 $baseline-unit 40px;
+  // border-top: solid 1px;
+  margin-bottom: 0;
 
   @include respond-to($mq-xl) {
-    margin-left: 0;
-    border-bottom: none;
-
     @include column(2);
+
+    padding-left: 0;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: none;
   }
 }
 
-.global-nav__category:last-child {
-  border-bottom: none;
+.global-nav__tool-category {
+  display: none;
+
+  @include respond-to($mq-xl) {
+    display: block;
+  }
 }
 
 .global-nav__category__heading {
-  @include column(12);
-
   display: inline-block;
   float: none;
   padding: $baseline-unit 0;
@@ -204,6 +274,7 @@ $secondary-background-colour: white;
   @include respond-to($mq-xl) {
     width: 100%;
     margin: 0;
+    font-size: 1rem;
   }
 }
 
@@ -212,6 +283,10 @@ $secondary-background-colour: white;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include respond-to($mq-xl) {
+    font-size: 1rem;
+  }
 }
 
 .global-nav__subcategory,
@@ -219,18 +294,41 @@ $secondary-background-colour: white;
   margin: 0;
 }
 
+.global-nav__tool {
+  position: relative;
+  border: 2px solid $color-callout-tool;
+  border-left-width: $callout-border-top-height;
+  margin-bottom: $baseline-unit*2;
+}
+
 .global-nav__subcategory__link,
 .global-nav__tool__link {
-  @include column(12);
-
   display: inline-block;
   float: none;
   padding: $baseline-unit 0;
   white-space: normal;
+}
 
-  @include respond-to($mq-xl) {
-    float: left;
-    width: 100%;
-    margin: 0;
-  }
+.global-nav__tool__link {
+  margin: $baseline-unit*2;
+  padding: 0;
+}
+
+.global-nav__tools__icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: -37px;
+  top: 5px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+}
+
+.global-nav__tool-icon {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 0;
+  bottom: 0;
 }

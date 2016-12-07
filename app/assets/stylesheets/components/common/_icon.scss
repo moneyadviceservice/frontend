@@ -404,15 +404,12 @@
 }
 
 // In page feedback icons
-.svg-icon--thumb-icon-up,
-.svg-icon--thumb-icon-down,
-.svg-icon--thumb-button-up,
-.svg-icon--thumb-button-down {
+.svg-icon--thumb-icon,
+.svg-icon--thumb-button {
   display: none;
 }
 
-.svg-icon--thumb-icon-up,
-.svg-icon--thumb-icon-down,
+.svg-icon--thumb-icon,
 .icon--thumb-icon-up,
 .icon--thumb-icon-down {
   margin: 0 auto;
@@ -420,14 +417,12 @@
   height: 40px;
 }
 
-.svg-icon--thumb-button-up,
-.svg-icon--thumb-button-down {
+.svg-icon--thumb-button {
   width: 35px;
   height: 35px;
 }
 
-.icon--thumb-button-up,
-.icon--thumb-button-down {
+.icon--thumb-button {
   margin: 0 auto;
   width: 60px;
   height: 60px;
@@ -441,26 +436,15 @@
   background-position: -935px -436px;
 }
 
-.icon--thumb-button-up {
-  background-position: -979px -429px;
-}
-
-.icon--thumb-button-down {
-  background-position: -1039px -429px;
-}
-
 .svg {
   .icon--thumb-icon-up,
   .icon--thumb-icon-down,
-  .icon--thumb-button-up,
-  .icon--thumb-button-down {
+  .icon--thumb-button {
     display: none;
   }
 
-  .svg-icon--thumb-icon-up,
-  .svg-icon--thumb-icon-down,
-  .svg-icon--thumb-button-up,
-  .svg-icon--thumb-button-down {
+  .svg-icon--thumb-icon,
+  .svg-icon--thumb-button {
     display: block;
   }
 }

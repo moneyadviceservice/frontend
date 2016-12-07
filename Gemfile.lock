@@ -1,9 +1,10 @@
 GIT
-  remote: git://github.com/moneyadviceservice/meta-tags.git
-  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
+  remote: git://github.com/kpumuk/meta-tags.git
+  revision: 382aef3b1ee6085f11410678710489394c06a32a
+  branch: master
   specs:
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
+    meta-tags (2.3.1)
+      actionpack (>= 3.2.0, <= 5.1.0)
 
 GIT
   remote: git@github.com:moneyadviceservice/mas-assets

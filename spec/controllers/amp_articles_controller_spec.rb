@@ -1,5 +1,6 @@
 RSpec.describe AmpArticlesController, type: :controller do
-  let(:article) { build(:article) }
+  let(:supports_amp) { false }
+  let(:article) { build(:article, supports_amp: supports_amp) }
   let(:request) { get :show, article_id: article.id, locale: I18n.locale }
   describe 'GET amp' do
     context 'article exists' do
@@ -10,14 +11,25 @@ RSpec.describe AmpArticlesController, type: :controller do
         request
       end
 
-      it 'returns a 200' do
-        expect(response.status).to eql(200)
+      context 'article does not supports amp' do
+        let(:supports_amp) { false }
+        it 'returns a 302' do
+          expect(response.status).to eql(302)
+        end
       end
 
-      it 'assigns the result of article reader to @article' do
-        expect(assigns(:article)).to eq(article)
+      context 'article supports amp' do
+        let(:supports_amp) { true }
+        it 'returns a 200' do
+          expect(response.status).to eql(200)
+        end
+
+        it 'assigns the result of article reader to @article' do
+          expect(assigns(:article)).to eq(article)
+        end
+
       end
-    end
+     end
 
     context 'article does not exist' do
       before(:each) do

@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/moneyadviceservice/meta-tags.git
+  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
+  specs:
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -7,13 +14,6 @@ GIT
       google-analytics-rails
       sass
       sass-rails
-
-GIT
-  remote: https://github.com/moneyadviceservice/meta-tags.git
-  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
-  specs:
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -419,7 +419,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.1)
     modernizr-rails (2.6.3)
-    mortgage_calculator (1.5.3.665)
+    mortgage_calculator (1.5.4.667)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
@@ -749,7 +749,7 @@ DEPENDENCIES
   mailjet
   mas-assets!
   meta-tags!
-  mortgage_calculator (~> 1.5.3)
+  mortgage_calculator (~> 1.5.4)
   mysql2
   newrelic_rpm
   nokogiri

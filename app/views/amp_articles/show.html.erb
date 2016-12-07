@@ -6,6 +6,7 @@
   <!-- AMP JS libs -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
@@ -23,6 +24,9 @@
   <title><%= @article.title %> - Money Advice Service</title>
 </head>
 <body>
+  <!-- Google Tag Manager -->
+  <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-P66RC5D&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
   <div class="amp-body">
     <header class="amp-article__header">
       <a href="http://moneyadviceservice.org.uk">

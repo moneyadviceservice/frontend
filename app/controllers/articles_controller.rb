@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 
   private
 
+    @article_amp_url = article_amp_url(@article.id) if @article.supports_amp
   def interactor
     Core::ArticleReader.new(params[:id])
   end

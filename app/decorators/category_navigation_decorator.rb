@@ -18,10 +18,10 @@ class CategoryNavigationDecorator < Draper::Decorator
   end
 
   def left_nav_items
-     data = object.content.contents.try(:object) || object.content.legacy_contents
-     Core::CategoryReader.new(1).build_contents(data.object).map! do |item|
-       CategoryContentDecorator.new(item)
-     end
+    data = category.contents || category.legacy_contents
+    Core::CategoryReader.new(1).build_contents(data.object).map! do |item|
+      CategoryContentDecorator.new(item)
+    end
   end
 
   private

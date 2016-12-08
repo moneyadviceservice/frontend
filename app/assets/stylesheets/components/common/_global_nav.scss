@@ -145,6 +145,12 @@ $clump-height: 40;
   @include respond-to($mq-xl) {
     width: 100%;
     margin: 0;
+
+    &:hover {
+      & + .global-nav__clump__content {
+        display: block;
+      }
+    }
   }
 }
 
@@ -194,6 +200,10 @@ $clump-height: 40;
     margin: 0;
     max-width: none;
     display: none;
+
+    &:hover {
+      display: block;
+    }
   }
 }
 

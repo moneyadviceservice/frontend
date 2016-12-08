@@ -27,3 +27,10 @@
 .link-list-primary__item--selected {
   background: $color-link-list-selected-background;
 }
+
+.js .link-list__sub-list {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}

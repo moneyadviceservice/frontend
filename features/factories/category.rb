@@ -4,6 +4,8 @@ FactoryGirl.define do
     title { id.capitalize.sub(/-/, ' ') }
     description { Faker::Lorem.paragraph(1) }
     contents []
+    legacy_contents []
+    legacy false
 
     initialize_with { new(id) }
 

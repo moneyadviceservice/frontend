@@ -22,8 +22,10 @@
             <ul class="link-list-secondary">
               <% category.contents.each do |sub_category| %>
                 <li class="link-list-secondary__item">
-                  <h6><%= sub_category.title %></h6>
-                  <ul>
+                  <p class="link-list-secondary__toggle" data-dough-component="Collapsable"
+                  data-dough-collapsable-trigger="<%= sub_category.slug %>">
+                    <%= sub_category.title %></p>
+                  <ul class="link-list__sub-list" data-dough-collapsable-target="<%= sub_category.slug %>">
                     <% sub_category.left_nav_items.each do |item| %>
                     <li>
                       <%= link_to item.title, item.path, class: "link-list-tertiary__text" %>

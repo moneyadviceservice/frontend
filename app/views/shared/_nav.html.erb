@@ -6,41 +6,30 @@
 
 <% if categories.present? %>
   <nav class="nav" role="navigation" aria-label="main" id="primary-nav" tabindex="-1">
-    <span class="nav__strapline"><%= t('layouts.base.strapline') %></span>
-
-    <ul class="link-list-primary">
 
       <% categories.each do |category| %>
+      
         <% if active_categories.member?(category.id) %>
-          <li class="link-list-primary__item link-list-primary__item--selected">
-            <% if child_selected = category.contents && category.contents.any? { |c| active_categories.include?(c.id) } %>
-              <%= link_to category.title, category.path, class: "link-list-primary__text" %>
-            <% else %>
-              <span class="link-list-primary__text is-selected"><%= category.title %></span>
-            <% end %>
 
-            <ul class="link-list-secondary">
+            <h2 class="sidenav__title"><%= category.title %></h2>
+            <ul class="sidenav">
               <% category.contents.each do |sub_category| %>
-                <li class="link-list-secondary__item">
-                  <h6><%= sub_category.title %></h6>
-                  <ul>
+                <li class="sidenav__item <%= active_categories.member?(sub_category.id) ? 'is-selected' : '' %>">
+                  <div class="sidenav__toggle" data-dough-component="Collapsable"
+                  data-dough-collapsable-config='{"iconPosition":"right","oneGroupOpenOnly":"true","focusTarget":false<%= active_categories.member?(sub_category.id) ? ",\"forceTo\":\"show\"" : "" %>}'
+                  data-dough-collapsable-trigger="<%= sub_category.slug %>">
+                    <%= sub_category.title %></div>
+                  <ul class="sidenav--secondary" data-dough-collapsable-target="<%= sub_category.slug %>">
                     <% sub_category.left_nav_items.each do |item| %>
-                    <li>
-                      <%= link_to item.title, item.path, class: "link-list-tertiary__text" %>
+                    <li class="sidenav--secondary__item">
+                      <%= link_to item.title, item.path, class: "sidenav--XXXX" %>
                     </li>
                     <% end %>
                   </ul>
                 </li>
               <% end %>
             </ul>
-
-          </li>
-        <% else %>
-          <li class="link-list-primary__item">
-            <%= link_to category.title, category.path, class: 'link-list-primary__text' %>
-          </li>
         <% end %>
       <% end %>
-    </ul>
   </nav>
 <% end %>

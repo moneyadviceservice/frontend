@@ -24,6 +24,10 @@ class CategoryNavigationDecorator < Draper::Decorator
     end
   end
 
+  def slug
+    title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  end
+
   private
 
   def category

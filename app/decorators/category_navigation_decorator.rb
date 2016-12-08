@@ -19,13 +19,9 @@ class CategoryNavigationDecorator < Draper::Decorator
 
   def left_nav_items
     data = category.contents || category.legacy_contents
-    Core::CategoryReader.new(1).build_contents(data.object).map! do |item|
+    Core::CategoryReader.new(1).build_contents(data.try(:object)).map! do |item|
       CategoryContentDecorator.new(item)
     end
-  end
-
-  def slug
-    title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   end
 
   private

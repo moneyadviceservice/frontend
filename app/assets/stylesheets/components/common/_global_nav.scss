@@ -237,13 +237,11 @@ $clump-height: 40;
   padding: 0;
 }
 
-.global-nav__category,
-.global-nav__tool-category {
+.global-nav__category {
   @include column(12);
   @include horizontal-separator;
 
   padding: $baseline-unit 0 $baseline-unit 40px;
-  // border-top: solid 1px;
   margin-bottom: 0;
 
   @include respond-to($mq-xl) {
@@ -264,6 +262,10 @@ $clump-height: 40;
   }
 }
 
+.global-nav__category:nth-last-child(2) {
+  border-bottom: none;
+}
+
 .global-nav__category__heading {
   display: inline-block;
   float: none;
@@ -278,8 +280,7 @@ $clump-height: 40;
   }
 }
 
-.global-nav__subcategories,
-.global-nav__tools {
+.global-nav__subcategories {
   list-style: none;
   margin: 0;
   padding: 0;

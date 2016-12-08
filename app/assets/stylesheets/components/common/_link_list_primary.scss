@@ -1,36 +1,98 @@
 // A styled list of links - used for the parent categories
 //
-// Styleguide link-list-primary
+// Styleguide link-list
 
-.link-list-primary {
-  @extend .unstyled-list;
-}
-
-.link-list-primary__item {
-  @extend .unstyled-list;
-  @include body(16, 22);
-  border-bottom: 1px solid $color-link-list-primary-border-color;
-  color: $color-link-list-text;
-  padding: $baseline-unit*2 10px 0;
-}
-
-.link-list-primary--no-border .link-list-primary__item {
+.link-list {
+  border: 1px solid $color-grey-light;
   border-bottom: none;
 }
 
-.link-list-primary__text {
-  margin-bottom: $baseline-unit*2;
-  display: inline-block;
+.link-list, .link-list--secondary {
+  list-style: none;
 }
 
-// ----------- state --------------
-.link-list-primary__item--selected {
-  background: $color-link-list-selected-background;
+.link-list--secondary {
+  padding-left: $baseline-unit;
 }
 
-.js .link-list__sub-list {
+.link-list__item {
+  @include body(16, 22);
+  padding: 0;
+  border-bottom: 1px solid $color-grey-light;
+  color: $color-link-list-text;
+  margin: 0;
+
+  &.is-selected {
+    padding-bottom: 0;
+  }
+}
+
+.link-list__title, .link-list__title-link {
+  @include body(24, 30);
+  margin-top: 0;
+}
+
+.link-list__title-link {
+  text-decoration: none;
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-list__toggle {
+  color: black;
+  background: $color-grey-paler;
+  padding: $baseline-unit*2 $baseline-unit;
+  padding-right: $baseline-unit*3;
+
+  .collapsable-button {
+    text-align: left;
+  }
+
+  .collapsable__trigger-icon {
+    right: -3px;
+    top: 15px;
+  }
+}
+
+.js .link-list--secondary {
   display: none;
+  margin: 0;
+  padding: $baseline-unit;
+  // background: $color-grey-paler;
+  // border-bottom: 1px solid $color-grey-pale;
   &.is-active {
     display: block;
   }
+  &:focus {
+    outline: none;
+  }
 }
+
+.link-list--secondary__item {
+  @include body(16, 22);
+  padding: $baseline-unit 0;
+  margin: 0;
+  border-bottom: 1px solid $color-grey-paler;
+}
+
+// .link-list-primary__item {
+//   @extend .unstyled-list;
+
+// }
+
+// .link-list-primary--no-border .link-list-primary__item {
+//   border-bottom: none;
+// }
+
+// .link-list-primary__text {
+//   margin-bottom: $baseline-unit*2;
+//   display: inline-block;
+// }
+
+// // ----------- state --------------
+// .link-list-primary__item--selected {
+//   background: $color-link-list-selected-background;
+// }
+
+

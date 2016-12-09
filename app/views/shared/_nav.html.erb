@@ -19,7 +19,7 @@
                   data-dough-collapsable-config='{"iconPosition":"right","oneGroupOpenOnly":"true","focusTarget":false<%= active_categories.member?(sub_category.id) ? ",\"forceTo\":\"show\"" : "" %>}'
                   data-dough-collapsable-trigger="<%= sub_category.slug %>">
                     <%= sub_category.title %></div>
-                  <ul class="sidenav--secondary" data-dough-collapsable-target="<%= sub_category.slug %>">
+                  <ul class="sidenav--secondary" data-dough-collapsable-target="<%= sub_category.slug %>" aria-live="polite">
                     <% sub_category.left_nav_items.each do |item| %>
                     <li class="sidenav--secondary__item">
                       <%= link_to item.title, item.path, class: "sidenav--XXXX" %>

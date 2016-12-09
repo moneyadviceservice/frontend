@@ -45,4 +45,14 @@ RSpec.describe CategoryNavigationDecorator do
       expect(subject.left_nav_items[0]).to be_a CategoryContentDecorator
     end
   end
+
+  describe '#slug' do 
+    let(:category) { build(:category, id: 'foo', title: 'Do you need to borrow money?') }
+    let(:decorated_category) { CategoryDecorator.new(category) }
+    let(:item) { double(id: 'foo', content: decorated_category) }
+
+    it 'returns the lower case, hyphenated, no-whitespace a-z chars' do
+      expect(subject.slug).to eq 'do-you-need-to-borrow-money'
+    end
+  end
 end

@@ -7,7 +7,7 @@
   <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs unless @breadcrumbs.empty? %>
 <% end %>
 
-<div class="l-main editorial">
+<div class="l-2col-main editorial">
   <div class="l-main__row">
     <% if category.images? %>
       <%= render 'categories/category_image', small_url: category.small_image, large_url: category.large_image %>
@@ -30,7 +30,4 @@
 
 <div class="l-nav">
   <%= render 'shared/mas_sections_link' if category_within_corporate_section?(category) %>
-  <%= render 'shared/nav',
-             categories:        category_navigation(corporate_category?(category.object.id)),
-             active_categories: active_categories %>
 </div>

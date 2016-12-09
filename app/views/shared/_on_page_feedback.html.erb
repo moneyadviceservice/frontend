@@ -1,22 +1,21 @@
 <div class="on-page-feedback" aria-live="polite" data-dough-component="OnPageFeedback" data-dough-on-page-feedback-post="<%= article_page_feedbacks_path(article.id) %>">
-
   <div data-dough-feedback-page="start">
     <h2 class="on-page-feedback__title"><%= t('articles.on_page_feedback.prompt') %></h2>
     <button class="on-page-feedback__thumb-button-up" data-dough-feedback="positive">
       <span class="visually-hidden"><%= t('articles.on_page_feedback.positive') %></span>
       <svg xmlns="http://www.w3.org/2000/svg"
-           class="svg-icon svg-icon--thumb-button-up"
+           class="svg-icon svg-icon--thumb-button"
            focusable="false">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon"></use>
       </svg>
       <span class="icon icon--thumb-icon-up"></span>
     </button>
     <button class="on-page-feedback__thumb-button-down" data-dough-feedback="negative">
       <span class="visually-hidden"><%= t('articles.on_page_feedback.negative') %></span>
       <svg xmlns="http://www.w3.org/2000/svg"
-           class="svg-icon svg-icon--thumb-button-down"
+           class="svg-icon svg-icon--thumb-button"
            focusable="false">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon" transform="rotate(180) translate(-35 -37)"></use>
       </svg>
       <span class="icon icon--thumb-icon-down"></span>
     </button>
@@ -50,9 +49,9 @@
       <div class="on-page-feedback__results-item-card">
         <div class="on-page-feedback__results-item-front">
           <svg xmlns="http://www.w3.org/2000/svg"
-             class="svg-icon svg-icon--thumb-icon-up"
+             class="svg-icon svg-icon--thumb-icon"
              focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-up"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon"></use>
         </svg>
         <span class="icon icon--thumb-icon-up"></span>
         </div>
@@ -63,9 +62,9 @@
       <div class="on-page-feedback__results-item-card">
         <div class="on-page-feedback__results-item-front">
         <svg xmlns="http://www.w3.org/2000/svg"
-             class="svg-icon svg-icon--thumb-icon-down"
+             class="svg-icon svg-icon--thumb-icon"
              focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon-down"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--thumb-icon" transform="rotate(180) translate(-40 -42)"></use>
         </svg>
         <span class="icon icon--thumb-icon-down"></span>
         </div>

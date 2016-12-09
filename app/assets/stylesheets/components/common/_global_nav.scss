@@ -1,0 +1,352 @@
+// Global Navigation
+//
+// Styleguide Global Navigation
+
+$primary-background-colour: #fd5; // yellow;
+$secondary-background-colour: #fff; // white;
+$clump-height: 40;
+
+@mixin transition_mobile {
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+@mixin transition_desktop {
+  transition: none;
+}
+
+@mixin horizontal-separator {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
+  border-top: solid 1px rgba(0, 0, 0, 0.125);
+}
+
+.global-nav {
+  @include transition_mobile;
+
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  transform: translateX(100%);
+
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+
+    position: relative;
+    transform: translateX(0%);
+    background: $primary-background-colour;
+  }
+}
+
+.global-nav--active {
+  transform: translateX(0%);
+}
+
+.global-nav__clumps {
+  @include transition_mobile;
+
+  position: absolute;
+  left: 0;
+  transform: translateX(0%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: $primary-background-colour;
+  font-size: 1rem;
+
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+    @include column(12);
+
+    position: static;
+    background: transparent;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.global-nav__clumps--active {
+  transform: translateX(-100%);
+
+  @include respond-to($mq-xl) {
+    transform: translateX(0%);
+  }
+}
+
+.global-nav__clump {
+  @include horizontal-separator;
+
+  position: static;
+  margin: 0;
+  line-height: 1;
+
+  @include respond-to($mq-xl) {
+    float: left;
+    border-bottom: none;
+    border-top: none;
+  }
+}
+
+.global-nav__clump--active {
+  .global-nav__clump__content {
+    transform: translateX(100%);
+
+    @include respond-to($mq-xl) {
+      display: block;
+      left: 0;
+      background: $secondary-background-colour;
+      transform: translateX(0);
+    }
+  }
+
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-left: none;
+    }
+  }
+
+  @include respond-to($mq-xl) {
+    background: $secondary-background-colour;
+  }
+}
+
+.global-nav__clump--active + .global-nav__clump {
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-left: none;
+    }
+  }
+}
+
+.global-nav__clump:last-child {
+  border-bottom: none;
+}
+
+.global-nav__clump:first-child {
+  border-top: none;
+
+  .global-nav__clump__heading__text {
+    @include respond-to($mq-xl) {
+      border-left: none;
+    }
+  }
+}
+
+.global-nav__clump__heading {
+  @include column(12);
+
+  display: inline-block;
+  float: none;
+  line-height: #{$clump-height}px;
+  padding: $baseline-unit*2 0;
+
+  @include respond-to($mq-xl) {
+    width: 100%;
+    margin: 0;
+
+    &:hover {
+      & + .global-nav__clump__content {
+        display: block;
+      }
+    }
+  }
+}
+
+.global-nav__clump__heading__text {
+  @include respond-to($mq-xl) {
+    padding: 0 $baseline-unit*3;
+    border-left: solid 1px;
+  }
+}
+
+.global-nav__clump__heading__arrow {
+  width: 97.06px * ($clump-height/150);
+  height: #{$clump-height}px;
+  float: right;
+
+  @include respond-to($mq-xl) {
+    display: none;
+  }
+}
+
+.global-nav__clump__description {
+  display: none;
+
+  @include respond-to($mq-xl) {
+    @include column(12);
+    display: block;
+    text-align: center;
+  }
+}
+
+.global-nav__clump__content {
+  @include transition_mobile;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(200%);
+  background: $secondary-background-colour;
+
+  @include respond-to($mq-xl) {
+    @include transition_desktop;
+
+    top: 100%;
+    left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    display: none;
+
+    &:hover {
+      display: block;
+    }
+  }
+}
+
+.global-nav__clump__content__heading {
+  @include column(12);
+  @include horizontal-separator;
+
+  position: relative;
+  display: block;
+  padding: $baseline-unit 0;
+  border-bottom: solid 1px;
+  line-height: #{$clump-height}px;
+  padding: $baseline-unit*2 0;
+  border-top: none;
+
+  @include respond-to($mq-xl) {
+    display: none;
+  }
+}
+
+.global-nav__clump__content__heading__arrow {
+  position: absolute;
+  left: 0;
+  width: 97.06px * ($clump-height/150);
+  height: #{$clump-height}px;
+  float: left;
+
+  @include respond-to($mq-xl) {
+    display: none;
+  }
+}
+
+.global-nav__clump__content__heading__text {
+  float: none;
+  padding: 0 0 0 40px;
+}
+
+.global-nav__categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @include respond-to($mq-xl) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.global-nav__category {
+  @include column(12);
+  @include horizontal-separator;
+
+  padding: $baseline-unit 0 $baseline-unit 40px;
+  margin-bottom: 0;
+
+  @include respond-to($mq-xl) {
+    @include column(2);
+
+    padding-left: 0;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.global-nav__tool-category {
+  display: none;
+
+  @include respond-to($mq-xl) {
+    display: block;
+  }
+}
+
+.global-nav__category:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.global-nav__category__heading {
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+  font-weight: bold;
+  white-space: normal;
+
+  @include respond-to($mq-xl) {
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.global-nav__subcategories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-to($mq-xl) {
+    font-size: 1rem;
+  }
+}
+
+.global-nav__subcategory,
+.global-nav__tool {
+  margin: 0;
+}
+
+.global-nav__tool {
+  position: relative;
+  border: 2px solid $color-callout-tool;
+  border-left-width: $callout-border-top-height;
+  margin-bottom: $baseline-unit*2;
+}
+
+.global-nav__subcategory__link,
+.global-nav__tool__link {
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+  white-space: normal;
+}
+
+.global-nav__tool__link {
+  margin: $baseline-unit*2;
+  padding: 0;
+}
+
+.global-nav__tools__icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: -37px;
+  top: 5px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+}
+
+.global-nav__tool-icon {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 0;
+  bottom: 0;
+}

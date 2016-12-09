@@ -8,7 +8,7 @@
   });
 </script>
 
-<div class="l-main">
+<div class="l-2col-main">
   <div class="l-main__row">
     <main class="l-main__cell-single" role="main">
       <%= heading_tag t('.page_title_html', query: params[:query]) %>
@@ -19,8 +19,4 @@
       </div>
     </main>
   </div>
-</div>
-
-<div class="l-nav">
-  <%= render 'shared/nav', categories: category_navigation %>
 </div>

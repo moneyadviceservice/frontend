@@ -43,17 +43,7 @@ require(['common', 'jquery'], function(MAS, $) {
         .wrap('<div class="l-menu-nav"></div>');
 
       $('.mobile-nav__link--menu').attr('href', '#js-primary-nav');
-
-      // Mobile Nav
-      new Collapsable({
-        name: 'mobileNav',
-        closeOffFocus: false,
-        accordion: true,
-        triggerEl: '.mobile-nav a',
-        targetType: 'href',
-        parentWrapper: '#js-primary-nav'
-      });
-
+      
       // Article Collapsables
       new Collapsable({
         name: 'articleCollapsables',

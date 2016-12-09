@@ -110,6 +110,12 @@ $clump-height: 40;
 
   @include respond-to($mq-l) {
     background: $secondary-background-colour;
+
+    &:first-child {
+      .global-nav__clump__heading {
+        border-left: solid 1px $color-grey-normal;
+      }
+    }
   }
 }
 
@@ -207,6 +213,8 @@ $clump-height: 40;
     margin: 0;
     max-width: none;
     display: none;
+    border: solid 1px $color-grey-normal;
+    border-top: none;
 
     &:hover {
       display: block;

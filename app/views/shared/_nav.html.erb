@@ -11,18 +11,18 @@
       
         <% if active_categories.member?(category.id) %>
 
-            <h2 class="link-list__title"><%= category.title %></h2>
-            <ul class="link-list">
+            <h2 class="sidenav__title"><%= category.title %></h2>
+            <ul class="sidenav">
               <% category.contents.each do |sub_category| %>
-                <li class="link-list__item <%= active_categories.member?(sub_category.id) ? 'is-selected' : '' %>">
-                  <div class="link-list__toggle" data-dough-component="Collapsable"
-                  data-dough-collapsable-config='{"iconPosition":"right","oneGroupOpenOnly":"true"<%= active_categories.member?(sub_category.id) ? ",\"forceTo\":\"show\"" : "" %>}'
+                <li class="sidenav__item <%= active_categories.member?(sub_category.id) ? 'is-selected' : '' %>">
+                  <div class="sidenav__toggle" data-dough-component="Collapsable"
+                  data-dough-collapsable-config='{"iconPosition":"right","oneGroupOpenOnly":"true","focusTarget":false<%= active_categories.member?(sub_category.id) ? ",\"forceTo\":\"show\"" : "" %>}'
                   data-dough-collapsable-trigger="<%= sub_category.slug %>">
                     <%= sub_category.title %></div>
-                  <ul class="link-list--secondary" data-dough-collapsable-target="<%= sub_category.slug %>">
+                  <ul class="sidenav--secondary" data-dough-collapsable-target="<%= sub_category.slug %>">
                     <% sub_category.left_nav_items.each do |item| %>
-                    <li class="link-list--secondary__item">
-                      <%= link_to item.title, item.path, class: "link-list--XXXX" %>
+                    <li class="sidenav--secondary__item">
+                      <%= link_to item.title, item.path, class: "sidenav--XXXX" %>
                     </li>
                     <% end %>
                   </ul>

@@ -5,16 +5,17 @@
       <p><%= section.intro %></p>
     </div>
 
-    <div class="l-car-campaign__section-media"></div>
-
     <div class="l-car-campaign__section-text">
       <ul class="unstyled-list">
         <%= render partial: 'article', collection: section %>
       </ul>
     </div>
+
   </div>
 </div>
 
 <% if section.separator? %>
-  <div class="l-car-campaign__section-separator"></div>
+  <div class="l-car-campaign__section-separator">
+    <%= image_tag 'car_campaign/separator.png' %>
+  </div>
 <% end %>

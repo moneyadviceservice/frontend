@@ -8,7 +8,7 @@
 <div class="l-car-campaign editorial">
   <div class="l-car-campaign__banner"></div>
 
-  <div class="l-car-campaign__section l-car-campaign__section--intro">
+  <div class="l-car-campaign__section">
     <div class="l-car-campaign__section-text">
       <header>
         <%= heading_tag campaign.title %>
@@ -26,7 +26,7 @@
       <div class="logo logo--green">
         <span class="visually-hidden"><%= campaign.hidden_logo_message %> </span>
       </div>
-      <%= heading_tag campaign.trust_title, level: 2 %>
+      <%= heading_tag campaign.trust_title, level: 2, class: 'l-car-campaign__trust-message-title' %>
       <%= campaign.trust_content %>
     </div>
   <% end %>

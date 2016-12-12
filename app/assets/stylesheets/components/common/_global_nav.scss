@@ -28,7 +28,7 @@ $clump-height: 40;
   width: 100%;
   transform: translateX(100%);
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include transition_desktop;
 
     position: relative;
@@ -54,7 +54,7 @@ $clump-height: 40;
   background: $primary-background-colour;
   font-size: 1rem;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include transition_desktop;
     @include column(12);
 
@@ -70,7 +70,7 @@ $clump-height: 40;
 .global-nav__clumps--active {
   transform: translateX(-100%);
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     transform: translateX(0%);
   }
 }
@@ -82,10 +82,11 @@ $clump-height: 40;
   margin: 0;
   line-height: 1;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     float: left;
     border-bottom: none;
     border-top: none;
+    flex-grow: 1;
   }
 }
 
@@ -93,7 +94,7 @@ $clump-height: 40;
   .global-nav__clump__content {
     transform: translateX(100%);
 
-    @include respond-to($mq-xl) {
+    @include respond-to($mq-l) {
       display: block;
       left: 0;
       background: $secondary-background-colour;
@@ -102,19 +103,25 @@ $clump-height: 40;
   }
 
   .global-nav__clump__heading__text {
-    @include respond-to($mq-xl) {
+    @include respond-to($mq-l) {
       border-left: none;
     }
   }
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     background: $secondary-background-colour;
+
+    &:first-child {
+      .global-nav__clump__heading {
+        border-left: solid 1px $color-grey-normal;
+      }
+    }
   }
 }
 
 .global-nav__clump--active + .global-nav__clump {
   .global-nav__clump__heading__text {
-    @include respond-to($mq-xl) {
+    @include respond-to($mq-l) {
       border-left: none;
     }
   }
@@ -128,7 +135,7 @@ $clump-height: 40;
   border-top: none;
 
   .global-nav__clump__heading__text {
-    @include respond-to($mq-xl) {
+    @include respond-to($mq-l) {
       border-left: none;
     }
   }
@@ -142,11 +149,16 @@ $clump-height: 40;
   line-height: #{$clump-height}px;
   padding: $baseline-unit*2 0;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
+    display: flex;
     width: 100%;
     margin: 0;
+    line-height: 1;
+    text-align: center;
 
     &:hover {
+      background: $secondary-background-colour;
+
       & + .global-nav__clump__content {
         display: block;
       }
@@ -155,9 +167,10 @@ $clump-height: 40;
 }
 
 .global-nav__clump__heading__text {
-  @include respond-to($mq-xl) {
-    padding: 0 $baseline-unit*3;
+  @include respond-to($mq-l) {
+    padding: 0 $baseline-unit*1.5;
     border-left: solid 1px;
+    flex-grow: 1;
   }
 }
 
@@ -166,7 +179,7 @@ $clump-height: 40;
   height: #{$clump-height}px;
   float: right;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     display: none;
   }
 }
@@ -174,7 +187,7 @@ $clump-height: 40;
 .global-nav__clump__description {
   display: none;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include column(12);
     display: block;
     text-align: center;
@@ -190,7 +203,7 @@ $clump-height: 40;
   transform: translateX(200%);
   background: $secondary-background-colour;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include transition_desktop;
 
     top: 100%;
@@ -200,6 +213,8 @@ $clump-height: 40;
     margin: 0;
     max-width: none;
     display: none;
+    border: solid 1px $color-grey-normal;
+    border-top: none;
 
     &:hover {
       display: block;
@@ -219,7 +234,7 @@ $clump-height: 40;
   padding: $baseline-unit*2 0;
   border-top: none;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     display: none;
   }
 }
@@ -231,7 +246,7 @@ $clump-height: 40;
   height: #{$clump-height}px;
   float: left;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     display: none;
   }
 }
@@ -261,7 +276,7 @@ $clump-height: 40;
   padding: $baseline-unit 0 $baseline-unit 40px;
   margin-bottom: 0;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     @include column(2);
 
     padding-left: 0;
@@ -274,7 +289,7 @@ $clump-height: 40;
 .global-nav__tool-category {
   display: none;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     display: block;
   }
 }
@@ -290,7 +305,7 @@ $clump-height: 40;
   font-weight: bold;
   white-space: normal;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     width: 100%;
     margin: 0;
     font-size: 1rem;
@@ -302,7 +317,7 @@ $clump-height: 40;
   margin: 0;
   padding: 0;
 
-  @include respond-to($mq-xl) {
+  @include respond-to($mq-l) {
     font-size: 1rem;
   }
 }

@@ -36,6 +36,8 @@ require(['common', 'jquery'], function(MAS, $) {
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
 
+      // Temporary change to test Global Nav styling --
+      /*
       $('#primary-nav')
         .clone()
         .attr('id', 'js-primary-nav')
@@ -53,6 +55,28 @@ require(['common', 'jquery'], function(MAS, $) {
         targetType: 'href',
         parentWrapper: '#js-primary-nav'
       });
+      */
+
+      $('.mobile-nav__link--menu').click(function() {
+        if ($('.global-nav').hasClass('global-nav--active')) {
+          $('.global-nav').removeClass('global-nav--active');
+        } else {
+          $('.global-nav').addClass('global-nav--active');
+        }
+      });
+
+      $('.global-nav__clump__heading').click(function() {
+        $(this)
+          .parents('.global-nav__clump').addClass('global-nav__clump--active')
+          .parents('.global-nav__clumps').addClass('global-nav__clumps--active');
+      });
+
+      $('.global-nav__clump__content__heading').click(function() {
+        $(this)
+          .parents('.global-nav__clump').removeClass('global-nav__clump--active')
+          .parents('.global-nav__clumps').removeClass('global-nav__clumps--active');
+      })
+      // -- Temporary change to test Global Nav styling
 
       // Article Collapsables
       new Collapsable({

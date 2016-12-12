@@ -96,8 +96,6 @@ $clump-height: 40;
 
     @include respond-to($mq-l) {
       display: block;
-      left: 0;
-      background: $secondary-background-colour;
       transform: translateX(0);
     }
   }
@@ -175,7 +173,7 @@ $clump-height: 40;
 }
 
 .global-nav__clump__heading__arrow {
-  width: 97.06px * ($clump-height/150);
+  width: #{18 / 34 * $clump-height}px;
   height: #{$clump-height}px;
   float: right;
 
@@ -207,7 +205,6 @@ $clump-height: 40;
     @include transition_desktop;
 
     top: 100%;
-    left: 0;
     transform: translateX(0%);
     width: 100%;
     margin: 0;
@@ -242,9 +239,10 @@ $clump-height: 40;
 .global-nav__clump__content__heading__arrow {
   position: absolute;
   left: 0;
-  width: 97.06px * ($clump-height/150);
+  width: #{18 / 34 * $clump-height}px;
   height: #{$clump-height}px;
   float: left;
+  transform: rotate(180deg);
 
   @include respond-to($mq-l) {
     display: none;

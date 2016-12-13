@@ -14,7 +14,6 @@ Rails.application.configure do
   # Application Stylesheets
   config.assets.precompile += %w(enhanced_fixed.css
                                   enhanced_responsive.css
-                                  amp_styles.css
                                   dough/assets/stylesheets/basic.css
                                   dough/assets/stylesheets/font_files.css
                                   dough/assets/stylesheets/font_base64.css

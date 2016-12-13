@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   include Authentication
   include Chat
   include Localisation
-  include NotFound
 
   before_action :fetch_footer_content
   def fetch_footer_content
@@ -37,6 +36,10 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :parent_template
+
+  def not_found
+    fail ActionController::RoutingError.new('Not Found')
+  end
 
   def cookies_not_accepted?
     cookies.permanent[COOKIE_MESSAGE_COOKIE_NAME] != COOKIE_MESSAGE_COOKIE_VALUE

@@ -4,7 +4,6 @@ require 'html_processor/node_remover'
 require 'html_processor/node_replacer'
 require 'html_processor/table_wrapper'
 require 'html_processor/video_wrapper'
-require 'html_processor/amp_video'
 require 'html_processor/heading_attributes'
 
 module HTMLProcessor

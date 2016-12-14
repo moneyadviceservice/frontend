@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
     set_related_content
     set_categories
     set_parent_category
+    set_article_canonical_url
   end
 
   private
@@ -44,6 +45,10 @@ class ArticlesController < ApplicationController
 
   def set_parent_category
     @parent_category ||= ParentCategory.find(@article, category_tree)
+  end
+
+  def set_article_canonical_url
+    @article_amp_url = article_amp_url(@article.id) if @article.supports_amp
   end
 
   def default_main_content_location?

@@ -18,6 +18,9 @@
     <%= Rails.application.assets["amp_styles.css"] %>
   </style>
 
+  <!-- Link to main article page -->
+  <link rel="canonical" href="<%= url_for(action: 'show', controller: 'articles', id: @article.id, only_path: false) %>" />
+
   <title><%= @article.title %> - Money Advice Service</title>
 </head>
 <body>

@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/moneyadviceservice/meta-tags.git
-  revision: f1e5b0988030d482da45d5bdf220bd1de4e90f40
-  specs:
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
-
-GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 2e3ec1c60637f1ab30df999ace0d2795ebd4e216
   specs:
@@ -414,6 +407,8 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
+    meta-tags (2.4.0)
+      actionpack (>= 3.2.0, <= 5.1.0)
     method_source (0.8.2)
     mime-types (2.99.3)
     mini_portile2 (2.1.0)
@@ -748,7 +743,7 @@ DEPENDENCIES
   mail
   mailjet
   mas-assets!
-  meta-tags!
+  meta-tags (~> 2.4)
   mortgage_calculator (~> 1.5.4)
   mysql2
   newrelic_rpm

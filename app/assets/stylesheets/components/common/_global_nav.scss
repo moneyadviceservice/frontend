@@ -33,7 +33,7 @@ $clump-height: 25;
   width: 100%;
   transform: translateX(100%);
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include transition_desktop;
 
     position: relative;
@@ -59,7 +59,7 @@ $clump-height: 25;
   background: $primary-background-colour;
   font-size: 1rem;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include transition_desktop;
     @include column(12);
 
@@ -77,7 +77,7 @@ $clump-height: 25;
 .global-nav__clumps--active {
   transform: translateX(-100%);
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     transform: none;
   }
 }
@@ -89,7 +89,7 @@ $clump-height: 25;
   margin: 0;
   line-height: 1;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include clump-separator-desktop;
 
     display: flex;
@@ -102,13 +102,13 @@ $clump-height: 25;
   .global-nav__clump__content {
     transform: translateX(100%);
 
-    @include respond-to($mq-l) {
+    @include respond-to($mq-m) {
       display: block;
       transform: none;
     }
   }
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     background: $secondary-background-colour;
   }
 }
@@ -120,7 +120,7 @@ $clump-height: 25;
 .global-nav__clump:first-child {
   border-top: none;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     .global-nav__clump__heading__text:before {
       border-left: none;
     }
@@ -138,7 +138,7 @@ $clump-height: 25;
   background: transparent;
   text-align: left;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     position: relative;
     display: flex;
     width: 100%;
@@ -172,7 +172,7 @@ $clump-height: 25;
     display: none;
   }
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     margin-left: $baseline-unit;
     margin-right: $baseline-unit;
 
@@ -183,7 +183,7 @@ $clump-height: 25;
 }
 
 .global-nav__clump__heading__text {
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     padding: 0 $baseline-unit;
     flex-grow: 1;
 
@@ -213,7 +213,7 @@ $clump-height: 25;
   height: #{$clump-height}px;
   float: right;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: none;
   }
 }
@@ -221,7 +221,7 @@ $clump-height: 25;
 .global-nav__clump__description {
   display: none;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include column(12);
     display: block;
     text-align: center;
@@ -237,7 +237,7 @@ $clump-height: 25;
   transform: translateX(200%);
   background: $secondary-background-colour;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include transition_desktop;
 
     top: 100%;
@@ -269,7 +269,7 @@ $clump-height: 25;
   padding: $baseline-unit*2 0;
   border-top: none;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: none;
   }
 }
@@ -282,7 +282,7 @@ $clump-height: 25;
   float: left;
   transform: rotate(180deg);
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: none;
   }
 }
@@ -298,7 +298,7 @@ $clump-height: 25;
   padding: 0;
   width: 100%;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -315,7 +315,7 @@ $gutter: $default-gutter / 2;
   padding: $baseline-unit 0 $baseline-unit 40px;
   margin-bottom: 0;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     @include clump-separator-desktop;
 
     position: relative;
@@ -352,7 +352,7 @@ $gutter: $default-gutter / 2;
 }
 
 .global-nav__category--double {
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     flex-grow: 3;
     max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
 
@@ -366,7 +366,7 @@ $gutter: $default-gutter / 2;
 .global-nav__tool-category {
   display: none;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     display: block;
     flex-grow: 2;
   }
@@ -383,7 +383,7 @@ $gutter: $default-gutter / 2;
   font-weight: bold;
   white-space: normal;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     width: 100%;
     margin: 0;
     font-size: 1rem;
@@ -395,7 +395,7 @@ $gutter: $default-gutter / 2;
   margin: 0;
   padding: 0;
 
-  @include respond-to($mq-l) {
+  @include respond-to($mq-m) {
     font-size: 1rem;
     line-height: 1.2;
   }

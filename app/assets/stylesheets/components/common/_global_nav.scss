@@ -306,6 +306,9 @@ $clump-height: 25;
   }
 }
 
+$max-cols: 6;
+$gutter: $default-gutter / 2;
+
 .global-nav__category {
   @include clump-separator-mobile;
 
@@ -315,11 +318,9 @@ $clump-height: 25;
   @include respond-to($mq-l) {
     @include clump-separator-desktop;
 
-    $max-cols: 6;
-    $gutter: $default-gutter / 2;
-
     position: relative;
     max-width: 100% / ($max-cols - 2);
+    min-width: 100% / $max-cols;
     margin: 0;
     padding: 0 $gutter;
     border-top: none;
@@ -350,11 +351,24 @@ $clump-height: 25;
   }
 }
 
+.global-nav__category--double {
+  @include respond-to($mq-l) {
+    flex-grow: 3;
+    max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+
+    .global-nav__subcategories {
+      column-count: 2;
+      column-fill: balance;
+    }
+  }
+}
+
 .global-nav__tool-category {
   display: none;
 
   @include respond-to($mq-l) {
     display: block;
+    flex-grow: 2;
   }
 }
 
@@ -383,6 +397,7 @@ $clump-height: 25;
 
   @include respond-to($mq-l) {
     font-size: 1rem;
+    line-height: 1.2;
   }
 }
 

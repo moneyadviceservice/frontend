@@ -34,4 +34,36 @@ RSpec.describe ArticlesController, type: :controller do
       end
     end
   end
+
+  describe '#set_article_canonical_url', focus: true do
+    let(:article) { Core::Article.new('test', categories: []) }
+
+    before do
+      expect(Core::ArticleReader).to receive(:new) do
+        double(Core::ArticleReader, call: article)
+      end
+    end
+
+    context 'article supports_amp is true' do
+      before do
+        allow(article).to receive(:supports_amp).and_return(true)
+        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
+      end
+
+      it 'sets article_canonical_url to the amp url' do
+        expect(assigns(:article_amp_url)).to eq('http://test.host/en/articles/test/amp')
+      end
+    end
+
+    context 'article supports_amp is false' do
+      before do
+        allow(article).to receive(:supports_amp).and_return(false)
+        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
+      end
+
+      it 'sets article_canonical_url to the amp url' do
+        expect(assigns(:article_amp_url)).to eq(nil)
+      end
+    end
+  end
 end

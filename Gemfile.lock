@@ -109,7 +109,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
       thor
-    budget_planner (4.5.4.752)
+    budget_planner (4.5.5.754)
       i18n-js (= 3.0.0.mas)
       jquery-rails
       jquery-ui-rails (~> 4.0)
@@ -419,7 +419,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.1)
     modernizr-rails (2.6.3)
-    mortgage_calculator (1.5.1.651)
+    mortgage_calculator (1.5.4.667)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
@@ -537,7 +537,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.12.0)
+    rio (1.13.0)
       bowndler
       dough-ruby
       pensions_calculator-calculations (~> 1.4.0)
@@ -705,7 +705,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner (~> 4.5.4)
+  budget_planner (~> 4.5.5)
   bugsnag
   byebug
   capybara
@@ -749,7 +749,7 @@ DEPENDENCIES
   mailjet
   mas-assets!
   meta-tags!
-  mortgage_calculator (~> 1.5.1)
+  mortgage_calculator (~> 1.5.4)
   mysql2
   newrelic_rpm
   nokogiri
@@ -766,7 +766,7 @@ DEPENDENCIES
   rack-livereload
   rails (= 4.2.7.1)
   redcarpet
-  rio (= 1.12.0)!
+  rio (= 1.13.0)!
   rouge
   rspec-html-matchers
   rspec-rails

@@ -112,6 +112,7 @@ Rails.application.routes.draw do
 
     resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
+      resource :amp, only: [:show], controller: :amp_articles
       resources :page_feedbacks, only: [:create]
       patch 'page_feedbacks' => 'page_feedbacks#update'
     end
@@ -142,30 +143,10 @@ Rails.application.routes.draw do
               path: 'campaigns',
               constraints: {
                 id: %r{
-                      borrowing-get-the-facts|
-                      budgeting-to-get-through-january|
-                      cmo|
                       coping-with-unexpected-bills|
-                      csa|
-                      free-debt-advice|
-                      friends-life-lander|
-                      get-set-for-summer|
                       how-to-look-ahead-when-buying-a-car|
-                      interest-only-mortgages|
-                      life-and-critical-illness|
-                      paying-too-much-tax-on-savings|
                       revealed-the-true-cost-of-buying-a-car|
-                      save-gbp3-a-day-for-emergencies|
-                      saving-for-a-holiday|
-                      start-living-your-life-free-of-debt|
-                      student-budgeting|
-                      sw-saving-and-debt|
-                      the-cost-of-caring|
-                      the-true-cost-of-affording-a-home|
-                      the-true-cost-of-borrowing|
-                      uk-money-habits-study|
-                      what-does-ma-think|
-                      young-peoples-money-regrets
+                      the-cost-of-caring
                     }x
               }
 

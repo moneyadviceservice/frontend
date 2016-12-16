@@ -118,6 +118,10 @@ module Core
       autoload :CMS, 'core/repository/categories/cms'
     end
 
+    module Clumps
+      autoload :CMS, 'core/repository/clumps/cms'
+    end
+
     module Feedback
       autoload :Email, 'core/repository/feedback/email'
     end

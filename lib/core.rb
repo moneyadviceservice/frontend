@@ -18,6 +18,7 @@ module Core
   autoload :CorporateArticle, 'core/entity/corporate_article'
   autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'
+  autoload :Clump, 'core/entity/clump'
   autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
   autoload :Footer, 'core/entity/footer'

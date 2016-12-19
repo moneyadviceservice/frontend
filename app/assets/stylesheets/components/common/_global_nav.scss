@@ -15,6 +15,11 @@
     position: relative;
     transform: none;
     background: $color-yellow-light;
+
+    /* non-FlexBox compliant -- */
+    display: table;
+    height: 100%;
+    /* -- non-FlexBox compliant */
   }
 
   &.is-active {
@@ -35,7 +40,6 @@
 .global-nav__clumps {
   transition-property: transform;
   transition-duration: 1s;
-
   position: absolute;
   left: 0;
   transform: translateX(0%);
@@ -54,10 +58,10 @@
     position: static;
     background: transparent;
     display: inline-block;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+
+    /* non-FlexBox compliant -- */
+    display: table-row;
+    /* -- non-FlexBox compliant */
   }
 
   &.is-active {
@@ -83,9 +87,12 @@
   @include respond-to($mq-m) {
     border-bottom: none;
     box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    width: (100% / 8);
+    vertical-align: bottom;
+    /* -- non-FlexBox compliant */
 
     .global-nav__arrow {
       display: none;
@@ -94,7 +101,8 @@
 
   &.is-active {
     .global-subnav {
-      transform: translateX(100%);
+      visibility: visible;
+      transition-delay: 0s;
 
       @include respond-to($mq-m) {
         display: block;
@@ -104,6 +112,11 @@
 
     @include respond-to($mq-m) {
       background: $color-white;
+
+      .global-nav__clump__heading__text:before,
+      & + .global-nav__clump .global-nav__clump__heading__text:before {
+        border-left: none;
+      }
     }
   }
 }
@@ -135,21 +148,17 @@
 
   @include respond-to($mq-m) {
     position: relative;
-    display: flex;
     width: 100%;
+    height: 100%;
     margin: 0;
     line-height: 1;
     text-align: center;
-    flex-grow: 1;
-
-    &:hover {
-      background: $color-white;
-
-      & + .global-subnav {
-        display: block;
-      }
-    }
+    padding: 0;
   }
+}
+
+.global-nav__clump--blog {
+  vertical-align: middle;
 }
 
 .global-nav__clump__blog-link {
@@ -157,46 +166,34 @@
   border-radius: 4px;
   color: $color-white;
   font-weight: 700;
-  padding: 0 $baseline-unit*2;
+  padding: 0;
   text-transform: uppercase;
   width: auto;
   margin-top: $baseline-unit;
   margin-bottom: $baseline-unit;
+  margin-left: $baseline-unit;
+  height: auto;
 
   .global-nav__arrow {
     display: none;
-  }
-
-  @include respond-to($mq-m) {
-    margin-left: $baseline-unit;
-    margin-right: $baseline-unit;
-
-    &:hover {
-      background: $color-mas-blog-blue-hover;
-    }
   }
 }
 
 .global-nav__clump__heading__text {
   @include respond-to($mq-m) {
-    padding: 0 $baseline-unit;
-    flex-grow: 1;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: $baseline-unit;
-      bottom: $baseline-unit;
-      left: -0.5px;
-      border-left: 1px solid;
-      width: 1px;
-    }
+    display: block;
+    padding: $baseline-unit*2 0;
   }
 }
 
+/* non-FlexBox compliant -- */
+.global-nav__clump__blog-link {
+  float: right;
+}
+/* -- non-FlexBox compliant */
+
 .global-nav__clump__blog-link__text {
-  padding: 0;
-  border-left: none;
+  padding: $baseline-unit 10px;
 
   &:before {
     border-left: none;
@@ -212,3 +209,72 @@
     text-align: center;
   }
 }
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-nav {
+      display: block;
+      height: auto;
+    }
+
+    .global-nav__clumps {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .global-nav__clump {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .global-nav__clump__heading {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .global-nav__clump__heading__text {
+      width: auto;
+      flex-grow: 1;
+      padding-left: $baseline-unit;
+      padding-right: $baseline-unit;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $baseline-unit * 2;
+        bottom: $baseline-unit * 2;
+        left: -0.5px;
+        border-left: 1px solid;
+        width: 1px;
+      }
+    }
+
+    .global-nav__clump__blog-link {
+      float: none;
+    }
+
+    .global-nav__clump__blog-link__text:before {
+      border-left: none;
+    }
+  }
+
+  @include respond-to(49em, 56em) {
+    .global-nav__clump__heading__text {
+      padding-left: $baseline-unit * 2;
+      padding-right: $baseline-unit * 2;
+    }
+  }
+
+  @include respond-to(56em, 66em) {
+    .global-nav__clump__heading__text {
+      padding-left: $baseline-unit * 3;
+      padding-right: $baseline-unit * 3;
+    }
+  }
+}
+/* -- FlexBox compliant */

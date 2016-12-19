@@ -2,16 +2,17 @@
 //
 // Styleguide Global Subnavigation Content
 
-$max-cols: 6;
-$gutter: $default-gutter / 2;
+$max-cols: 6; // the maximum number of categories in the subnav
+$gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav {
-  transition-property: transform;
-  transition-duration: 1s;
+  transition-property: visibility;
+  transition-delay: 1s;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(200%);
+  transform: translateX(100%);
   background: $color-white;
 
   @include respond-to($mq-m) {
@@ -21,7 +22,10 @@ $gutter: $default-gutter / 2;
     width: 100%;
     margin: 0;
     max-width: none;
-    display: none;
+
+    /* non-FlexBox compliant -- */
+    display: table-row;
+    /* -- non-FlexBox compliant */
 
     &:after {
       box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6);
@@ -29,11 +33,39 @@ $gutter: $default-gutter / 2;
       z-index: -1
     }
 
-    &:hover {
-      display: block;
+    &.is-active {
+      visibility: visible;
     }
   }
 }
+
+// this needs to be re-introduced as a no-js fallback
+// part of the behaviour changes --
+// included here as a rough approximation of behaviour for testing visual aspects
+// .no-js {
+  @include respond-to($mq-m) {
+    .global-nav__clump__heading {
+      &:hover {
+        background: $color-white;
+
+        & + .global-subnav {
+          visibility: visible;
+          transform: none;
+        }
+      }
+
+      &.global-nav__clump__blog-link:hover {
+        background: $color-mas-blog-blue-hover;
+      }
+    }
+
+    .global-subnav:hover {
+      visibility: visible;
+      transform: none;
+    }
+  }
+// }
+// -- this needs to be re-introduced as a no-js fallback
 
 .global-subnav__heading {
   border-bottom: solid 1px rgba(0, 0, 0, 0.375);
@@ -67,9 +99,6 @@ $gutter: $default-gutter / 2;
   width: 100%;
 
   @include respond-to($mq-m) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-bottom: $baseline-unit*2;
   }
 }
@@ -84,13 +113,16 @@ $gutter: $default-gutter / 2;
     border-bottom: none;
     box-shadow: none;
     position: relative;
-    max-width: 100% / ($max-cols - 2);
-    min-width: 100% / $max-cols;
     margin: 0;
     padding: 0 $gutter;
     border-top: none;
     border-bottom: none;
-    flex-grow: 1;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    vertical-align: top;
+    width: 100% / $max-cols;
+    /* -- non-FlexBox compliant */
 
     &:before {
       content: "";
@@ -118,8 +150,9 @@ $gutter: $default-gutter / 2;
 
 .global-subnav__category--double {
   @include respond-to($mq-m) {
-    flex-grow: 3;
-    max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+    /* non-FlexBox compliant -- */
+    width: ((100% / $max-cols) * 2) + $gutter;
+    /* -- non-FlexBox compliant */
 
     .global-subnav__subcategories {
       column-count: 2;
@@ -132,8 +165,21 @@ $gutter: $default-gutter / 2;
   display: none;
 
   @include respond-to($mq-m) {
-    display: block;
-    flex-grow: 2;
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    vertical-align: top;
+    /* -- non-FlexBox compliant */
+  }
+}
+
+// exclude the tools column where:
+// - the viewport width < 66em and
+// - there are the maximum number of category columns
+.global-subnav__category:nth-child(#{$max-cols}) {
+  &.global-subnav__tool-category {
+    @include respond-to($mq-m, 66em) {
+      display: none;
+    }
   }
 }
 
@@ -213,3 +259,37 @@ $gutter: $default-gutter / 2;
   left: 0;
   bottom: 0;
 }
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-subnav {
+      display: block;
+    }
+
+    .global-subnav__categories {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .global-subnav__category {
+      display: block;
+      flex-grow: 1;
+      max-width: 100% / ($max-cols - 2);
+      min-width: 100% / $max-cols;
+    }
+
+    .global-subnav__category--double {
+        width: auto;
+        max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+        flex-grow: 3;
+    }
+
+    .global-subnav__tool-category {
+      display: block;
+      flex-grow: 2;
+    }
+  }
+}
+/* -- FlexBox compliant */

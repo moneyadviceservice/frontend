@@ -47,7 +47,7 @@ Core::Registry::Repository[:corporate] =
 
 Core::Registry::Repository[:category] = Core::Repository::Cache.new(Core::Repository::Categories::CMS.new, Rails.cache)
 
-Core::Registry::Repository[:clump] = Core::Repository::Clumps::CMS.new
+Core::Registry::Repository[:clump] = Core::Repository::Cache.new(Core::Repository::Clumps::CMS.new, Rails.cache)
 
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 

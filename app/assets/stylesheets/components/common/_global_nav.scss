@@ -94,7 +94,8 @@
 
   &.is-active {
     .global-subnav {
-      transform: translateX(100%);
+      visibility: visible;
+      transition-delay: 0s;
 
       @include respond-to($mq-m) {
         display: block;
@@ -104,6 +105,11 @@
 
     @include respond-to($mq-m) {
       background: $color-white;
+
+      .global-nav__clump__heading__text:before,
+      & + .global-nav__clump .global-nav__clump__heading__text:before {
+        border-left: none;
+      }
     }
   }
 }
@@ -142,13 +148,22 @@
     text-align: center;
     flex-grow: 1;
 
-    &:hover {
+    /*
+    // &:hover,
+    &.is-active {
       background: $color-white;
 
-      & + .global-subnav {
-        display: block;
+      .global-nav__clump__heading__text:before {
+        border-left: none;
+      }
+
+      & + .global-nav__clump__heading {
+        .global-nav__clump__heading__text:before {
+          border-left: none;
+        }
       }
     }
+    */
   }
 }
 
@@ -185,8 +200,8 @@
     &:before {
       content: "";
       position: absolute;
-      top: $baseline-unit;
-      bottom: $baseline-unit;
+      top: $baseline-unit * 2;
+      bottom: $baseline-unit * 2;
       left: -0.5px;
       border-left: 1px solid;
       width: 1px;

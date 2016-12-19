@@ -6,16 +6,18 @@ $max-cols: 6;
 $gutter: $default-gutter / 2;
 
 .global-subnav {
-  transition-property: transform;
-  transition-duration: 1s;
+  transition-property: visibility;
+  transition-delay: 1s;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(200%);
+  transform: translateX(100%);
   background: $color-white;
 
   @include respond-to($mq-m) {
     transition: none;
+    visibility: visible;
     top: 100%;
     transform: none;
     width: 100%;
@@ -29,7 +31,8 @@ $gutter: $default-gutter / 2;
       z-index: -1
     }
 
-    &:hover {
+    // &:hover,
+    &.is-active {
       display: block;
     }
   }

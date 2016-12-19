@@ -49,6 +49,7 @@ module Core
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :CategoryTreeReaderWithDecorator, 'core/interactor/category_tree_reader_with_decorator'
+  autoload :ClumpsReader, 'core/interactor/clumps_reader'
   autoload :CorporateReader, 'core/interactor/corporate_reader'
   autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :FooterReader, 'core/interactor/footer_reader'

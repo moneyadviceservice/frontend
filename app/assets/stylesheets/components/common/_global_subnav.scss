@@ -17,6 +17,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     transition: none;
+    visibility: visible;
     top: 100%;
     transform: none;
     width: 100%;

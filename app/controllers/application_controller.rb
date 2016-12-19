@@ -104,6 +104,11 @@ class ApplicationController < ActionController::Base
     'syndicated' if syndicated_tool_request?
   end
 
+  def clumps
+    Core::ClumpsReader.new.call
+  end
+  helper_method :clumps
+
   def category_tree(categories = Core::Registry::Repository[:category].all)
     Core::CategoryTreeReader.new.call(categories)
   end

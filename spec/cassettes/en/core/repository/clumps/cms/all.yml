@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/en/clumps.json
+    uri: http://localhost:3000/en/clumps.json
     body:
       encoding: US-ASCII
       string: ''

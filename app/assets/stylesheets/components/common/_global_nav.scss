@@ -10,6 +10,10 @@
   width: 100%;
   transform: translateX(100%);
 
+  &.no-transition {
+    transition: none;
+  }
+
   @include respond-to($mq-m) {
     transition: none;
     position: relative;
@@ -146,7 +150,15 @@
   background: transparent;
   text-align: left;
 
+  &.global-nav__clump__blog-link:hover {
+    background: $color-mas-blog-blue-hover;
+  }
+
   @include respond-to($mq-m) {
+    &:hover {
+      background: $color-white;
+    }
+
     position: relative;
     width: 100%;
     height: 100%;
@@ -188,7 +200,9 @@
 
 /* non-FlexBox compliant -- */
 .global-nav__clump__blog-link {
-  float: right;
+  @include respond-to($mq-m) {
+    float: right;
+  }
 }
 /* -- non-FlexBox compliant */
 

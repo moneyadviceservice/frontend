@@ -1,9 +1,9 @@
-<nav class="global-nav" role="navigation" aria-label="main" id="global-nav" tabindex="-1">
+<nav class="global-nav" role="navigation" aria-label="main" id="global-nav" tabindex="-1" data-dough-component="GlobalNav">
   <div class="l-constrained">
-    <ul class="global-nav__clumps">
+    <ul data-dough-nav-clumps class="global-nav__clumps">
       <% clumps.each do |clump| %>
-        <li class="global-nav__clump">
-          <button href="#" class="global-nav__clump__heading" aria-haspopup="true">
+        <li data-dough-nav-clump class="global-nav__clump">
+          <button data-dough-nav-clump-heading href="#" class="global-nav__clump__heading" aria-haspopup="true">
             <span class="global-nav__clump__heading__text"><%= clump.name %></span>
 
             <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon global-nav__arrow" focusable="false">
@@ -11,11 +11,11 @@
             </svg>
           </button>
 
-          <div class="l-constrained global-subnav" aria-hidden="true" aria-label="submenu">
+          <div data-dough-subnav class="l-constrained global-subnav" aria-hidden="true" aria-label="submenu">
             <div class="l-constrained">
               <p class="global-nav__clump__description"><%= clump.description %></p>
 
-              <a href="#" class="global-subnav__heading">
+              <a data-dough-subnav-heading href="#" class="global-subnav__heading">
                 <span class="global-subnav__heading__text"><%= clump.name %></span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow global-nav__arrow" focusable="false">
@@ -60,7 +60,7 @@
       <% end %>
 
       <li class="global-nav__clump">
-        <button href="#" class="global-nav__clump__heading global-nav__clump__blog-link" aria-haspopup="true">
+        <button data-dough-nav-clump-heading href="#" class="global-nav__clump__heading global-nav__clump__blog-link" aria-haspopup="true">
           <span class="global-nav__clump__heading__text global-nav__clump__blog-link__text">Blog</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon global-nav__arrow" focusable="false">

@@ -6,20 +6,16 @@ end
 
 RSpec.describe 'Request that is redirected', type: :request do
   it 'redirects to specified location' do
-    VCR.use_cassette('/en/core/repository/categories/cms/find/redirected') do
-      get('/en/categories/redirected')
+    get('/en/categories/types-of-retirement-income')
 
-      expect(response).to redirect_to('http://localhost:5000/en')
-    end
+    expect(response).to redirect_to('http://localhost:5000/en/categories/using-your-pension-pot')
   end
 end
 
 RSpec.describe 'Request that is redirected with extension', type: :request do
   it 'redirects to specified location' do
-    VCR.use_cassette('/en/core/cms/cms_api/find/redirected') do
-      get('/default.aspx')
+    get('/contact.aspx')
 
-      expect(response).to redirect_to('http://localhost:5000/en')
-    end
+    expect(response).to redirect_to('http://localhost:5000/en/corporate/contact-us')
   end
 end

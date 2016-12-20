@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/partners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:28 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"54fa1fdc3c7c3c5ae17af05c3372f81a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      X-Runtime:
+      - '0.040263'
+    body:
+      encoding: UTF-8
+      string: '{"id":"partners","type":"category","title":"Partners","description":"The
+        Partnerships team at the Money Advice Service are here to facilitate the syndication
+        of our guides, news, tools and video onto your own website - free of charge
+        - to provide your users with independent and unbiased advice on how to manage
+        their money.","parent_id":"corporate-home","third_level_navigation":false,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"partners-overview-parhub","type":"corporate","title":"Partnerships
+        Overview","description":"An overview of how to syndicate Money Advice Service
+        guides, tools, videos"},{"id":"linking-parhub","type":"corporate","title":"Linking
+        to us","description":"A short guide on how to link to the Money Advice Service"},{"id":"licence-agreement-parhub","type":"corporate","title":"Syndication
+        Licence Agreement","description":"Terms and Conditions. Licence Agreement
+        for Money Advice Service syndication"},{"id":"syndication","type":"corporate","title":"Syndication","description":"Directory
+        of all the available Money Advice Service tools and calculators available
+        for you to place on your own website, free of charge"}],"legacy_contents":[{"id":"partners-overview-parhub","type":"corporate","title":"Partnerships
+        Overview","description":"An overview of how to syndicate Money Advice Service
+        guides, tools, videos"},{"id":"linking-parhub","type":"corporate","title":"Linking
+        to us","description":"A short guide on how to link to the Money Advice Service"},{"id":"licence-agreement-parhub","type":"corporate","title":"Syndication
+        Licence Agreement","description":"Terms and Conditions. Licence Agreement
+        for Money Advice Service syndication"},{"id":"syndication","type":"corporate","title":"Syndication","description":"Directory
+        of all the available Money Advice Service tools and calculators available
+        for you to place on your own website, free of charge"}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:28 GMT
+recorded_with: VCR 3.0.3

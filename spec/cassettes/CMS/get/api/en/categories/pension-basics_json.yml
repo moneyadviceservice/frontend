@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/pension-basics.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - c40ac573-dba5-4238-932a-6f796e434b30
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:54 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"ca0ebf8c60e56d348bcfbb9b6febfa57"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c40ac573-dba5-4238-932a-6f796e434b30
+      X-Runtime:
+      - '0.048360'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InBlbnNpb24tYmFzaWNzIiwidHlwZSI6ImNhdGVnb3J5IiwidGl0bGUiOiJQZW5zaW9uIGJhc2ljcyIsImRlc2NyaXB0aW9uIjoiRmluZCBvdXQgd2h5IGFuZCB3aGVuIHRvIHNhdmUgaW50byBhIHBlbnNpb24gYW5kIGhvdyB0byB3b3JrIG91dCB3aGF0IHlvdXIgcGVuc2lvbiBwb3QgbWlnaHQgYmUuIiwicGFyZW50X2lkIjoicGVuc2lvbnMtYW5kLXJldGlyZW1lbnQiLCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiaW1hZ2VzIjp7InNtYWxsIjpudWxsLCJsYXJnZSI6bnVsbH0sImxlZ2FjeSI6ZmFsc2UsImNvbnRlbnRzIjpbeyJpZCI6InBlbnNpb24taW5mb3JtYXRpb24tZ3VpZGUtdG8tdGhlLWJhc2ljLWZhY3RzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5zaW9uIGluZm9ybWF0aW9uOiBndWlkZSB0byB0aGUgYmFzaWMgZmFjdHMiLCJkZXNjcmlwdGlvbiI6IllvdSBtYXkgaGF2ZSBvbmUgb3IgbW9yZSBkaWZmZXJlbnQgdHlwZXMgb2YgcGVuc2lvbi4gVW5kZXJzdGFuZGluZyB3aGljaCB5b3UgaGF2ZSBpcyBpbXBvcnRhbnQgYmVjYXVzZSBpdCBhZmZlY3RzIHRoZSBkZWNpc2lvbnMgeW91IG5lZWQgdG8gbWFrZSBhcyB5b3UgYXBwcm9hY2ggcmV0aXJlbWVudC4ifSx7ImlkIjoicGVuc2lvbi1jYWxjdWxhdG9yIiwidHlwZSI6InRvb2wiLCJ0aXRsZSI6IlBlbnNpb24gY2FsY3VsYXRvciIsImRlc2NyaXB0aW9uIjoiVXNlIG91ciBQZW5zaW9uIGNhbGN1bGF0b3IgdG8gd29yayBvdXQgeW91ciBTdGF0ZSBQZW5zaW9uLCBwcml2YXRlIHBlbnNpb24gYW5kIHlvdXIgcmV0aXJlbWVudCBhZ2UuIE91ciBwZW5zaW9uIHNlcnZpY2UgaXMgZnJlZSBhbmQgc2V0IHVwIGJ5IGdvdmVybm1lbnQuIn0seyJpZCI6InRyYWNlLWxvc3QtcGVuc2lvbnMtYW5kLXJlcXVlc3QtcGVuc2lvbi1mb3JlY2FzdHMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlRyYWNlIGxvc3QgcGVuc2lvbnMgYW5kIHJlcXVlc3QgcGVuc2lvbiBmb3JlY2FzdHMiLCJkZXNjcmlwdGlvbiI6IkEgc3RlcC1ieS1zdGVwIGd1aWRlIHRvIHRyYWNraW5nIGRvd24geW91ciBwZW5zaW9ucyBhbmQgZmluZGluZyBvdXQgaG93IG11Y2ggeW914oCZcmUgbGlrZWx5IHRvIHJlY2VpdmUgZnJvbSB0aGVtIn0seyJpZCI6InBlbnNpb24tcmVsZWFzZS1vci1wZW5zaW9uLXVubG9ja2luZyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiUGVuc2lvbiByZWxlYXNlIG9yIHBlbnNpb24gdW5sb2NraW5nIiwiZGVzY3JpcHRpb24iOiJFdmVyeXRoaW5nIHlvdSBuZWVkIHRvIGtub3cgYWJvdXQgcGVuc2lvbiByZWxlYXNlIChwZW5zaW9uIHVubG9ja2luZyksIGluY2x1ZGluZyB3aGVuIGFuZCBob3cgeW91IGNhbiBjYXNoIGluIHlvdXIgcGVuc2lvbi4ifV0sImxlZ2FjeV9jb250ZW50cyI6W3siaWQiOiJwZW5zaW9uLWluZm9ybWF0aW9uLWd1aWRlLXRvLXRoZS1iYXNpYy1mYWN0cyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiUGVuc2lvbiBpbmZvcm1hdGlvbjogZ3VpZGUgdG8gdGhlIGJhc2ljIGZhY3RzIiwiZGVzY3JpcHRpb24iOiJZb3UgbWF5IGhhdmUgb25lIG9yIG1vcmUgZGlmZmVyZW50IHR5cGVzIG9mIHBlbnNpb24uIFVuZGVyc3RhbmRpbmcgd2hpY2ggeW91IGhhdmUgaXMgaW1wb3J0YW50IGJlY2F1c2UgaXQgYWZmZWN0cyB0aGUgZGVjaXNpb25zIHlvdSBuZWVkIHRvIG1ha2UgYXMgeW91IGFwcHJvYWNoIHJldGlyZW1lbnQuIn0seyJpZCI6InBlbnNpb24tY2FsY3VsYXRvciIsInR5cGUiOiJ0b29sIiwidGl0bGUiOiJQZW5zaW9uIGNhbGN1bGF0b3IiLCJkZXNjcmlwdGlvbiI6IlVzZSBvdXIgUGVuc2lvbiBjYWxjdWxhdG9yIHRvIHdvcmsgb3V0IHlvdXIgU3RhdGUgUGVuc2lvbiwgcHJpdmF0ZSBwZW5zaW9uIGFuZCB5b3VyIHJldGlyZW1lbnQgYWdlLiBPdXIgcGVuc2lvbiBzZXJ2aWNlIGlzIGZyZWUgYW5kIHNldCB1cCBieSBnb3Zlcm5tZW50LiJ9LHsiaWQiOiJ0cmFjZS1sb3N0LXBlbnNpb25zLWFuZC1yZXF1ZXN0LXBlbnNpb24tZm9yZWNhc3RzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUcmFjZSBsb3N0IHBlbnNpb25zIGFuZCByZXF1ZXN0IHBlbnNpb24gZm9yZWNhc3RzIiwiZGVzY3JpcHRpb24iOiJBIHN0ZXAtYnktc3RlcCBndWlkZSB0byB0cmFja2luZyBkb3duIHlvdXIgcGVuc2lvbnMgYW5kIGZpbmRpbmcgb3V0IGhvdyBtdWNoIHlvdeKAmXJlIGxpa2VseSB0byByZWNlaXZlIGZyb20gdGhlbSJ9LHsiaWQiOiJwZW5zaW9uLXJlbGVhc2Utb3ItcGVuc2lvbi11bmxvY2tpbmciLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlBlbnNpb24gcmVsZWFzZSBvciBwZW5zaW9uIHVubG9ja2luZyIsImRlc2NyaXB0aW9uIjoiRXZlcnl0aGluZyB5b3UgbmVlZCB0byBrbm93IGFib3V0IHBlbnNpb24gcmVsZWFzZSAocGVuc2lvbiB1bmxvY2tpbmcpLCBpbmNsdWRpbmcgd2hlbiBhbmQgaG93IHlvdSBjYW4gY2FzaCBpbiB5b3VyIHBlbnNpb24uIn1dLCJjYXRlZ29yeV9wcm9tb3MiOltdLCJsaW5rcyI6W119
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:54 GMT
+recorded_with: VCR 3.0.3

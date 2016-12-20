@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/about-us.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:28 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"277f9eb476f28fbf9d181db24ea8ad3d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      X-Runtime:
+      - '0.043160'
+    body:
+      encoding: UTF-8
+      string: '{"id":"about-us","type":"category","title":"About us","description":"About
+        us","parent_id":"corporate-home","third_level_navigation":true,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"about-us","type":"corporate","title":"About
+        us","description":""},{"id":"debt-advice","type":"corporate","title":"Debt
+        advice","description":""},{"id":"background","type":"corporate","title":"Background","description":""},{"id":"accountability-and-funding","type":"corporate","title":"Oversight,
+        accountability and funding","description":""},{"id":"our-board","type":"corporate","title":"Our
+        board","description":"Money Advice Service, Money Advice Service Board, Andy
+        Briscoe, Caroline Rookes, Jonathan Douglas,  Laurie Edmans, Richard Hughes,
+        Stephen Locke, Lesley Robinson, Robert Skinner, Nicola Bruce, Caroline Fawcett,
+        Mike Dailly "}],"legacy_contents":[{"id":"about-us","type":"corporate","title":"About
+        us","description":""},{"id":"debt-advice","type":"corporate","title":"Debt
+        advice","description":""},{"id":"background","type":"corporate","title":"Background","description":""},{"id":"accountability-and-funding","type":"corporate","title":"Oversight,
+        accountability and funding","description":""},{"id":"our-board","type":"corporate","title":"Our
+        board","description":"Money Advice Service, Money Advice Service Board, Andy
+        Briscoe, Caroline Rookes, Jonathan Douglas,  Laurie Edmans, Richard Hughes,
+        Stephen Locke, Lesley Robinson, Robert Skinner, Nicola Bruce, Caroline Fawcett,
+        Mike Dailly "}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:28 GMT
+recorded_with: VCR 3.0.3

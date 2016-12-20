@@ -4,11 +4,6 @@ Given(/^I (?:am on|visit) the home page$/) do
   home_page.load
 end
 
-Given(/^cms home page enabled$/) do
-  Core::Registry::Repository[:home_page] =
-    Core::Repository::VCR.new(Core::Repository::HomePages::CMS.new)
-end
-
 Given(/^I view the home page in (.*)$/) do |language|
   locale = language_to_locale(language)
 

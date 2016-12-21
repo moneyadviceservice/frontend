@@ -7,7 +7,7 @@ VCR.configure do |c|
   c.ignore_request do |req|
     # Don't mock the call that Poltergeist polls while waiting for
     # Phantomjs to load (http://localhost:<random port>/__identify__)
-    req.uri =~ /\/__identify__$/
+    req.uri =~ /\/__identify__$|newrelic/
   end
   c.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
   c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }

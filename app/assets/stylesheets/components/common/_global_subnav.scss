@@ -31,9 +31,28 @@ $gutter: $default-gutter / 2;
       z-index: -1
     }
 
-    // &:hover,
     &.is-active {
       display: block;
+    }
+  }
+}
+
+.no-js {
+  @include respond-to($mq-m) {
+    .global-nav__clump__heading {
+      &:hover {
+        background: $color-white;
+
+        & + .global-subnav {
+          display: block;
+          transform: none;
+        }
+      }
+    }
+
+    .global-subnav:hover {
+      display: block;
+      transform: none;
     }
   }
 }

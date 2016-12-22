@@ -165,13 +165,8 @@
     display: none;
   }
 
-  @include respond-to($mq-m) {
-    margin-left: $baseline-unit;
-    margin-right: $baseline-unit;
-
-    &:hover {
-      background: $color-mas-blog-blue-hover;
-    }
+  &:hover {
+    background: $color-mas-blog-blue-hover;
   }
 }
 

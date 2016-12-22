@@ -25,7 +25,7 @@
 
               <ul class="global-subnav__categories">
                 <% clump.categories.each do |category| %>
-                  <li class="global-subnav__category">
+                  <li class="global-subnav__category <%= 'global-subnav__category--double' if category.contents.count > 5 %>">
                     <%= link_to category.title, category_path(category.id), class: 'global-subnav__category__heading' %>
 
                     <ul class="global-subnav__subcategories">

@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/letter-templates.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 94471) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 1f30a498-f546-4784-8880-44370641a5ea
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 15:53:14 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"12d7cad8c8a5573f18a168d79ce4c4f8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f30a498-f546-4784-8880-44370641a5ea
+      X-Runtime:
+      - '0.033794'
+    body:
+      encoding: UTF-8
+      string: '{"id":"letter-templates","type":"category","title":"Letter templates","description":"Our
+        easy-to-use letter templates are here to help you if you need to set up, cancel
+        or complain about something","parent_id":"tools-and-calculators","third_level_navigation":false,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"letter-templates","type":"guide","title":"Letter
+        templates","description":"Here are some helpful letter templates for you to
+        use if you need to set up, cancel or complain about something"}],"legacy_contents":[{"id":"letter-templates","type":"guide","title":"Letter
+        templates","description":"Here are some helpful letter templates for you to
+        use if you need to set up, cancel or complain about something"}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 15:53:14 GMT
+recorded_with: VCR 3.0.3

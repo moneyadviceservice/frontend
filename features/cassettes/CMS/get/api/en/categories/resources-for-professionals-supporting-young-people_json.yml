@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/resources-for-professionals-supporting-young-people.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:25 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"17fbb94e00d444b66a4c830bb0dd04c2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      X-Runtime:
+      - '0.035818'
+    body:
+      encoding: UTF-8
+      string: '{"id":"resources-for-professionals-supporting-young-people","type":"category","title":"Resources
+        for professionals supporting young people","description":"Multi-media resources
+        to support young people making their first financial decisions, whether they''re
+        in education or moving into work","parent_id":"resources-for-professionals","third_level_navigation":false,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"teenagers-talking-money-yphub","type":"corporate","title":"Teenagers
+        talking money","description":"These videos are a great way to stimulate conversation
+        with young people who are about to start making their own financial decisions"},{"id":"wishfund-app-yphub","type":"corporate","title":"The
+        Wishfund savings app","description":"Introducing the Wishfund savings app
+        created for young people by people"}],"legacy_contents":[{"id":"teenagers-talking-money-yphub","type":"corporate","title":"Teenagers
+        talking money","description":"These videos are a great way to stimulate conversation
+        with young people who are about to start making their own financial decisions"},{"id":"wishfund-app-yphub","type":"corporate","title":"The
+        Wishfund savings app","description":"Introducing the Wishfund savings app
+        created for young people by people"}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Sat, 21 Jan 2017 23:00:02 GMT
+recorded_with: VCR 3.0.3

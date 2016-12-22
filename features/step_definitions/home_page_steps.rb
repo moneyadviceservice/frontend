@@ -28,7 +28,7 @@ end
 
 Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
   expected_en = "Free and impartial money advice, set up by government"
-  expected_cy = "wufhwehfu"
+  expected_cy = "Cyngor ariannol am ddim a diduedd, a sefydlwyd gan y llywodraeth"
 
   expect(home_page.trust_banner.heading)
     .to have_content(eval("expected_#{I18n.locale}"))

@@ -26,12 +26,12 @@
               <ul class="global-subnav__categories">
                 <% clump.categories.each do |category| %>
                   <li class="global-subnav__category <%= 'global-subnav__category--double' if category.contents.count > 5 %>">
-                    <%= link_to category.title, category_path(category.id), class: 'global-subnav__category__heading' %>
+                    <%= link_to category.title, main_app.category_path(category.id), class: 'global-subnav__category__heading' %>
 
                     <ul class="global-subnav__subcategories">
                       <% category.contents.each do |subcategory| %>
                         <li class="global-subnav__subcategory">
-                          <%= link_to subcategory.title, category_path(subcategory.id), class: 'global-subnav__subcategory__link' %>
+                          <%= link_to subcategory.title, main_app.category_path(subcategory.id), class: 'global-subnav__subcategory__link' %>
                         </li>
                       <% end %>
                     </ul>

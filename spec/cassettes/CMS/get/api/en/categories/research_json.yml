@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/research.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:29 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"bd97376f2bcd1ff481ecdb547c232b6e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      X-Runtime:
+      - '0.034307'
+    body:
+      encoding: UTF-8
+      string: '{"id":"research","type":"category","title":"Research","description":"Research","parent_id":"corporate-home","third_level_navigation":true,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"research","type":"corporate","title":"Research","description":""}],"legacy_contents":[{"id":"research","type":"corporate","title":"Research","description":""}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:29 GMT
+recorded_with: VCR 3.0.3

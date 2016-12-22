@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/articles/understanding-your-first-payslip.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 37754c83-2d4a-4a09-b108-cc6e95426170
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:19 GMT
+      Status:
+      - 301 Moved Permanently
+      Connection:
+      - close
+      Location:
+      - http://localhost:5000/en/articles/understanding-your-payslip
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 37754c83-2d4a-4a09-b108-cc6e95426170
+      X-Runtime:
+      - '0.018889'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:19 GMT
+recorded_with: VCR 3.0.3

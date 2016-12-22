@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/media-centre.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:25 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"5e38f79360786e79811bcc895030ea83"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      X-Runtime:
+      - '0.043071'
+    body:
+      encoding: UTF-8
+      string: '{"id":"media-centre","type":"category","title":"Media centre ","description":"Media
+        centre","parent_id":"corporate-home","third_level_navigation":true,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"media-centre","type":"corporate","title":"Media
+        centre","description":""},{"id":"corporate-news","type":"corporate","title":"Corporate
+        news","description":""},{"id":"publications","type":"corporate","title":"Publications","description":""},{"id":"consultations-and-responses","type":"corporate","title":"Consultations
+        and responses","description":""}],"legacy_contents":[{"id":"media-centre","type":"corporate","title":"Media
+        centre","description":""},{"id":"corporate-news","type":"corporate","title":"Corporate
+        news","description":""},{"id":"publications","type":"corporate","title":"Publications","description":""},{"id":"consultations-and-responses","type":"corporate","title":"Consultations
+        and responses","description":""}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Sat, 21 Jan 2017 23:00:02 GMT
+recorded_with: VCR 3.0.3

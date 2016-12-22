@@ -47,5 +47,5 @@ Feature: Searching
 
   Scenario: Manually browsing past the last page of results
     When I am on the home page
-    And I go to the fourth page of a query that returns three pages of results
-    Then I should be on page 2 of 2 of the search results
+    And I go to the sixth page of a query that returns five pages of results
+    Then I should be on page 5 of 5 of the search results

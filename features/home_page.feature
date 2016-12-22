@@ -3,9 +3,6 @@ Feature: Home page
   I want to understand who the Money Advice Service are
   So that I easily decide whether to engage further
 
-  Background:
-    Given cms home page enabled
-
   Scenario: User sees familiar Money Advice Service brand identity
     When I visit the home page
     Then I should see the Money Advice Service brand identity

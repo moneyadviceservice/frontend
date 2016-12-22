@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_API_CX_EN>&key=<GOOGLE_API_KEY>&num=10&q=mouney&start=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 32271) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 678216b6-0657-4a29-b46b-77f0c5a7d056
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 22 Dec 2016 14:18:41 GMT
+      Date:
+      - Thu, 22 Dec 2016 14:18:41 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"Km-rZ3xLOWf3nUikI4cgnYOU2vc/L7dMFbc5iaIVKoSm0Y-RLpLgv-w"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1376'
+      Server:
+      - GSE
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "customsearch#search",
+         "url": {
+          "type": "application/json",
+          "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+         },
+         "queries": {
+          "request": [
+           {
+            "title": "Google Custom Search - mouney",
+            "totalResults": "0",
+            "searchTerms": "mouney",
+            "count": 10,
+            "startIndex": 1,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "<GOOGLE_API_CX_EN>"
+           }
+          ]
+         },
+         "searchInformation": {
+          "searchTime": 0.431182,
+          "formattedSearchTime": "0.43",
+          "totalResults": "0",
+          "formattedTotalResults": "0"
+         },
+         "spelling": {
+          "correctedQuery": "money",
+          "htmlCorrectedQuery": "\u003cb\u003e\u003ci\u003emoney\u003c/i\u003e\u003c/b\u003e"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 22 Dec 2016 14:18:41 GMT
+recorded_with: VCR 3.0.3

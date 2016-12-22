@@ -8,20 +8,19 @@ module Core::Repository::CMS
 
           {
             liked: true,
-            article_id: 'example-article',
+            article_id: 'press-release-money-advice-service-appoints-new-debt-director',
             session_id: 'ae2fcba004e16dffa54f91a46d274238',
             locale: 'en',
-            slug: 'example-article'
+            slug: 'press-release-money-advice-service-appoints-new-debt-director'
           }
         end
 
         it 'returns page feedback' do
-          VCR.use_cassette('/en/articles/example-article/page_feedbacks') do
-            expect(subject).to include(
-              'id'         => 21,
-              'liked'      => true,
-              'session_id' => 'ae2fcba004e16dffa54f91a46d274238')
-          end
+          expect(subject).to include(
+            'id'             => 1,
+            'likes_count'    => 1,
+            'dislikes_count' => 0,
+            'session_id'     => 'ae2fcba004e16dffa54f91a46d274238')
         end
       end
 
@@ -29,14 +28,12 @@ module Core::Repository::CMS
         let(:params) do
           {
             locale: 'en',
-            article_id: 'example-article'
+            article_id: 'a-guide-to-lifetime-isas'
           }
         end
 
         it 'returns false' do
-          VCR.use_cassette('/en/articles/example/page_feedbacks-invalid') do
-            expect(subject).to be(false)
-          end
+          expect(subject).to be(false)
         end
       end
     end

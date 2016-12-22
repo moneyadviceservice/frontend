@@ -24,7 +24,7 @@ When(/^I search for an incorrectly spelt term with results$/) do
 end
 
 When(/^I search for an incorrectly spelt term with no results$/) do
-  home_page.search_box.input.set('monuy')
+  home_page.search_box.input.set('mouney')
   home_page.search_box.submit.click
 end
 
@@ -106,8 +106,8 @@ When(/^I go to the next page of results$/) do
   search_results_page.pagination.next_button.click
 end
 
-When(/^I go to the fourth page of a query that returns three pages of results$/) do
-  visit(search_results_path(locale: I18n.locale, query: '"Health+insurance"', page: 4))
+When(/^I go to the sixth page of a query that returns five pages of results$/) do
+  visit(search_results_path(locale: I18n.locale, query: 'Health insurance', page: 6))
 end
 
 Then(/^I should be on page (\d+) of (\d+) of the search results$/) do |page, number_of_pages|

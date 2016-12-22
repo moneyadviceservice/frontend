@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/types-of-retirement-income.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - c70f32f0-2d4c-48cd-84f1-5c6c8828e2cd
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:13 GMT
+      Status:
+      - 301 Moved Permanently
+      Connection:
+      - close
+      Location:
+      - http://localhost:5000/en/categories/using-your-pension-pot
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c70f32f0-2d4c-48cd-84f1-5c6c8828e2cd
+      X-Runtime:
+      - '0.018890'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:13 GMT
+recorded_with: VCR 3.0.3

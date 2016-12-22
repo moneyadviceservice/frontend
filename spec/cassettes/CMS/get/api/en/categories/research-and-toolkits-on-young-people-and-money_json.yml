@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/research-and-toolkits-on-young-people-and-money.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:28 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"616d87c1a3c96c7b57fcc99c82a31e53"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28ed921d-93d6-4668-8228-3c8d48433782
+      X-Runtime:
+      - '0.037465'
+    body:
+      encoding: UTF-8
+      string: '{"id":"research-and-toolkits-on-young-people-and-money","type":"category","title":"Research
+        and toolkits on young people and money","description":"Innovative research
+        and toolkits to help you develop your support for young people in the areas
+        of financial capability and parenting skills","parent_id":"resources-for-professionals","third_level_navigation":false,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"young-people-and-money-toolkit-yphub","type":"corporate","title":"Young
+        people \u0026 money toolkit","description":"A toolkit of activities and guidance
+        for professionals promoting financial capability in young people"},{"id":"the-financial-capability-of-15-17-year-olds","type":"corporate","title":"The
+        Financial Capability of 15-17 year olds","description":""},{"id":"habit-forming-and-learning-in-young-children","type":"corporate","title":"Habit
+        forming and learning in young children","description":""}],"legacy_contents":[{"id":"young-people-and-money-toolkit-yphub","type":"corporate","title":"Young
+        people \u0026 money toolkit","description":"A toolkit of activities and guidance
+        for professionals promoting financial capability in young people"},{"id":"the-financial-capability-of-15-17-year-olds","type":"corporate","title":"The
+        Financial Capability of 15-17 year olds","description":""},{"id":"habit-forming-and-learning-in-young-children","type":"corporate","title":"Habit
+        forming and learning in young children","description":""}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:28 GMT
+recorded_with: VCR 3.0.3

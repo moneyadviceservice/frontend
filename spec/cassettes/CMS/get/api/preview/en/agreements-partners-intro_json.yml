@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/preview/en/agreements-partners-intro.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 5e923baa-eb68-4fbb-8e45-e7c575d17179
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:21 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"ddb349bd87d8d69bea3bc06e45d38519"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e923baa-eb68-4fbb-8e45-e7c575d17179
+      X-Runtime:
+      - '0.060991'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlN5bmRpY2F0aW9uIExpY2VuY2UgQWdyZWVtZW50Iiwic2x1ZyI6ImFncmVlbWVudHMtcGFydG5lcnMtaW50cm8iLCJmdWxsX3BhdGgiOiIvZW4vYXJ0aWNsZXMvYWdyZWVtZW50cy1wYXJ0bmVycy1pbnRybyIsIm1ldGFfZGVzY3JpcHRpb24iOiIiLCJtZXRhX3RpdGxlIjoiU3luZGljYXRpb24gTGljZW5jZSBBZ3JlZW1lbnQiLCJjYXRlZ29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoiYXJ0aWNsZSIsInJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbeyJ0aXRsZSI6IlRoZSBsYXN0IG1pbnV0ZSB3YXlzIHRvIHNhdmUgb24gQ2hyaXN0bWFzIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy90aGUtbGFzdC1taW51dGUtd2F5cy10by1zYXZlLW9uLWNocmlzdG1hcyJ9LHsidGl0bGUiOiJJbiB0aGUgbmV3cyAtIFRoaXMgd2Vla+KAmXMgdG9wIG1vbmV5IG5ld3MiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2luLXRoZS1uZXdzLXRoaXMtd2Vlay1zLXRvcC1tb25leS1uZXdzLTE2MTIxNiJ9LHsidGl0bGUiOiJJcyBDaHJpc3RtYXMgZGlubmVyIGdldHRpbmcgbW9yZSBleHBlbnNpdmU/IEhlcmXigJlzIGhvdyB0byBzYXZlIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9pcy1jaHJpc3RtYXMtZGlubmVyLWdldHRpbmctbW9yZS1leHBlbnNpdmUifV0sInBvcHVsYXJfbGlua3MiOlt7InRpdGxlIjoiSG93IHRvIHNhdmUgbW9uZXkgb24gaG91c2Vob2xkIGJpbGxzIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9ob3ctdG8tc2F2ZS1tb25leS1vbi1ob3VzZWhvbGQtYmlsbHMifSx7InRpdGxlIjoiQmVuZWZpdHMgeW91IGNhbiBjbGFpbSB3aGVuIHlvdSdyZSBwcmVnbmFudCBvciBoYXZlIGEgYmFieSIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvYmVuZWZpdHMtYW5kLWVudGl0bGVtZW50cy10by1jbGFpbS13aGVuLXlvdS1oYXZlLWEtYmFieSJ9LHsidGl0bGUiOiJUYXggYW5kIE5hdGlvbmFsIEluc3VyYW5jZSBkZWR1Y3Rpb25zIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy90YXgtYW5kLW5hdGlvbmFsLWluc3VyYW5jZS1kZWR1Y3Rpb25zIn1dLCJyZWxhdGVkX2xpbmtzIjpbeyJ0aXRsZSI6IkRlYnQgYWR2aWNlIGV2YWx1YXRpb24gdG9vbGtpdCIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvYWdyZWVtZW50cy1kZWJ0LWV2YWx1YXRpb24tdG9vbGtpdC1pbnRybyJ9LHsidGl0bGUiOiJURVJNUyBBTkQgQ09ORElUSU9OUyBPRiBVU0UiLCJwYXRoIjoiL2VuL2FydGljbGVzL2FncmVlbWVudHMtZGVidC1ldmFsdWF0aW9uLXRvb2xraXQtdGVybXMifSx7InRpdGxlIjoiVEVSTVMgQU5EIENPTkRJVElPTlMgT0YgVVNFIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9hZ3JlZW1lbnRzLXBhcnRuZXJzLXRlcm1zIn1dLCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hlZF9hdCI6bnVsbCwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlXHUwMDNjc3Ryb25nXHUwMDNlQWdyZWUgdG8gb3VyIExpY2VuY2UgQWdyZWVtZW50IGJlbG93IHRvIGFsbG93IHlvdSB0byBzeW5kaWNhdGUgTW9uZXkgQWR2aWNlIFNlcnZpY2Ugd3JpdHRlbiBjb250ZW50IGFuZCB0b29scy4gQWdyZWVpbmcgdG8gdGhlc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMgd2lsbCB0cmlnZ2VyIGEgZG93bmxvYWQgb2YgdGhlIGVtYmVkIGNvZGVzIHdoaWNoIHdpbGwgYWxsb3cgeW91IHRvIHN5bmRpY2F0ZSBNb25leSBBZHZpY2UgU2VydmljZSB0b29scy5cdTAwM2Mvc3Ryb25nXHUwMDNlXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE1LTA1LTE5VDEzOjIwOjE0LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0wNy0yMlQxNDo1MDoxNi4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOlt7ImxhYmVsIjoiRG93bmxvYWQgdG9vbCBlbWJlZCBjb2RlcyIsImxpbmsiOiIvY3kvYXJ0aWNsZXMvYWdyZWVtZW50cy1wYXJ0bmVycy1pbnRybyIsImxhbmd1YWdlIjoiY3kifV19
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:21 GMT
+recorded_with: VCR 3.0.3

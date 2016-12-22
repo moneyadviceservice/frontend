@@ -1,0 +1,789 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.moneyadviceservice.org.uk/cy/news.json?limit=10&page_number=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - fdd30223-5202-4d5c-a16c-87c5410660c2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 06 May 2015 13:53:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - ebddb32c55da2e94941ff48f8317c833
+      Set-Cookie:
+      - _cookie_notice=y; path=/; expires=Fri, 06-May-2016 13:53:29 GMT; secure
+      - _session_id=ebddb32c55da2e94941ff48f8317c833; path=/; secure; HttpOnly
+      - _web_tracking=9b3950366ceea8f200c0e4d2ecee61a5; path=/; expires=Fri, 06-May-2016
+        13:53:29 GMT; secure
+      X-Request-Id:
+      - fdd30223-5202-4d5c-a16c-87c5410660c2
+      X-Runtime:
+      - '0.060243'
+      X-Rack-Cache:
+      - miss
+      P3p:
+      - CP="CAO PSA OUR"
+      Strict-Transport-Security:
+      - max-age=16070400
+    body:
+      encoding: UTF-8
+      string: '[{"id":"a-oes-gennych-chi-adduned-ariannol","title":"A oes gennych
+        chi adduned ariannol? Gwnewch 2015 yn flwyddyn o reoli\u2019ch arian gyda\u2019n
+        pum awgrym da","description":"Beth hoffech chi fedru ei fforddio\u2019 flwyddyn
+        nesaf? A yw gwyliau teuluol neu gar newydd dan ystyriaeth? Neu efallai yr
+        hoffech chi wybod sut i wneud i\u2019ch cynilion bara\u2019n hirach?","body":"<p
+        class=\"intro\">Beth hoffech chi fedru ei fforddio\u2019 flwyddyn nesaf? A
+        yw gwyliau teuluol neu gar newydd dan ystyriaeth? Neu efallai yr hoffech chi
+        wybod sut i wneud i\u2019ch cynilion bara\u2019n hirach? </p><p>O\u2019r tri
+        o bob pump o bobl a wnaeth adduned ar gyfer 2014, dywedodd tri chwarter ohonynt
+        iddynt benderfynu canolbwyntio ar dargedau ariannol. </p><p>Beth bynnag fydd
+        eich adduned, gall ein hawgrymiadau roi cymorth i chi sicrhau y bydd 2015
+        yn flwyddyn lle bydd eich arian yn cychwyn gweithio er eich budd chi. </p><h2>1.
+        Lluniwch gyllideb effeithiol </h2><p>I ddeall ym mha ffordd y gallwch chi
+        gynilo, rhaid i chi ddeall eich patrwm gwariant, felly cyllidebu yw un o\u2019r
+        pethau pwysicaf y gallwch ei wneud i roi hwb i\u2019ch cynlluniau ariannol
+        ar gyfer y Flwyddyn Newydd. </p><p>Wrth edrych ar eich sefyllfa ariannol a
+        dod o hyd i danysgrifiadau y gallwch eu canslo, neu chwilio am fargen well
+        gydag yswiriant, gallwch arbed llawer iawn o arian. Edrychwch ar ein <a title=\"Cynllunydd
+        Cyllideb\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb/start\">Cynllunydd
+        Cyllideb</a> i ddysgu sut y gallwch gymryd y cam cyntaf tuag at reolaeth well
+        o\u2019ch arian. </p><h2>2. Dechreuwch gynilo </h2><p>Pan ofynnom i bobl yn
+        y gymuned, gwelwyd fod cynilo arian yn nod allweddol ar gyfer 2015, gyda phobl
+        yn dymuno cynilo ar gyfer diwrnod glawog, gwyliau, cartref newydd neu hyd
+        yn oed Nadolig y flwyddyn nesaf.\u00a0 </p><p>Gall hyn ymddangos yn dipyn
+        o her, ond a wyddoch chi fod neilltuo \u00a33 bob diwrnod yn creu swm o \u00a31,095
+        dros flwyddyn? Rhowch yr arian mewn potyn a\u2019i wylio\u2019n cynyddu\u2019n
+        ddyddiol \u2013 neu\u2019n well fyth, dod o hyd i gyfrif cynilo a fydd yn
+        rhoi <a title=\"Cyfrifon cynilo\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/regular-savings-accounts\">cymorth
+        i chi gynyddu\u2019ch arian</a>. </p><p>Ansicr sut i ddod i hyd i\u2019r \u00a33?
+        Wel, a allech chi gael paned allan o fflasg yn hytrach na\u2019i phrynu, neu
+        beth am gerdded i\u2019r gwaith yn hytrach na theithio ar y bws? Edrychwch
+        ar ein <a title=\"Cyfrifiannell Torri''n \u00f4l\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-torrin-ol
+        \">Cyfrifiannell Torri''n \u00d4l</a> i ganfod ym mha ffyrdd eraill y gallech
+        chi dorri\u2019n \u00f4l. Pum munud yn unig mae\u2019r offeryn yn ei gymryd
+        i\u2019w gwblhau, ond gall y wobr o wneud hynny fod yn fawr ar gyfer eich
+        cynilion. </p><h2>3. Manteisiwch ar y cynnydd yn lwfans ISAs Arian Parod </h2><p>Ar
+        1 Gorffennaf 2014, cafodd ISAs arian parod (Cyfrifon Cynilo Unigol) ac ISAs
+        Stociau a Chyfranddaliadau eu cyfuno a\u2019u henwi\u2019n ISAs Newydd \u2013
+        neu NISAs, gyda lwfans llawer uwch o \u00a315,000 y flwyddyn. Os nad ydych
+        wedi manteisio\u2019n barod ar eich lwfans llawn mae gennych hyd at 5 Ebrill
+        2015 i un ai agor ISA newydd neu roi arian i mewn i un presennol a manteisio
+        ar unrhyw log di-dreth ar eich cynilion. </p><p>Mae lwfans y flwyddyn nesaf
+        yn codi i \u00a315,240 o 6 Ebrill. Serch hynny, byddwch yn wyliadwrus o gyfraddau
+        uwch a fydd yn eich temtio ond a fydd yn gostwng ar \u00f4l y cyfnod cychwynnol
+        a chofiwch chwilio am y bargeinion gorau o ran cyfraddau. </p><p>Mae bob amser
+        yn syniad da gosod nodyn atgoffa i\u2019ch hysbysu pan fydd unrhyw gyfradd
+        fonws yn dod i ben er mwyn i chi wneud y mwyaf o\u2019ch buddsoddiadau. </p><h2>4.
+        Gwiriwch eich adroddiad credyd </h2><p>Yn cael anhawster wrth geisio cael
+        credyd gan eich banc neu gan ddarparwr benthyciadau? Efallai y bydd hyn yn
+        gysylltiedig \u00e2\u2019ch adroddiad credyd. Mae adroddiad credyd yn manylu
+        ar eich hanes credyd, yn cynnwys rhestr o\u2019ch holl gyfrifon, ac yn rhoi
+        cymorth i gwmni asesu faint o risg fyddai benthyca arian i chi. </p><p>Dengys
+        ein hymchwil nad yw dau o bob tri o oedolion yn y DU erioed wedi gwirio eu
+        hadroddiad credyd. </p><p>Bu i ni ofyn i Gymuned Tell MA am eu profiadau gydag
+        adroddiadau credyd. Nid yw nifer o bobl yn sylweddoli y gall statws credyd
+        effeithio ar gyfrifon banc, cyfraddau llog, ceisiadau i ddarparwyr cyfleustodau
+        a chytundebau ff\u00f4n symudol hefyd. Dywedodd un unigolyn <em>\u2018Mae
+        credyd a statws credyd yn dipyn o ddirgelwch i mi. Mae\u2019n rhywbeth y mae
+        pobl eraill yn pryderu amdano.\u2019</em></p><p>Dysgwch sut i <a title=\"Sut
+        i wirio eich adroddiad credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/how-to-check-your-credit-report\">wirio\u2019ch
+        adroddiad credyd am ddim</a>, megis drwy ddefnyddio Noddle, a <a title=\"Sut
+        i wella''ch statws credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/how-to-improve-your-credit-rating\">sut
+        i wella\u2019ch statws credyd</a>. </p><h2>5. Rhowch y gorau i ysmygu </h2><p>Os
+        bu i chi ymdrechu \u2013 a methu \u2013 i roi\u2019r gorau iddi o\u2019r blaen,
+        efallai y bydd arian yn ysgogiad perffaith? Yn \u00f4l Ash.org bydd ysmygwr
+        sy\u2019n smocio 20 o\u2019r prif frandiau o sigarennau bob diwrnod yn gwario
+        tua \u00a32,900 y flwyddyn ar sigarennau. </p><p>Os bydd sigarennau yn llosgi
+        twll yn eich cyllideb, ewch ati i osod nod cynilo i anelu ato. Os neilltuwch
+        yr arian a wariwch ar sigarennau i un ochr, byddwch yn llawer mwy tebygol
+        o gyrraedd eich nod yn gyflym. Gweler ein <a title=\"Canllaw gosod nod cynilo\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-i-osod-nod-cynilo-arian\">canllaw
+        ar gychwyn nod cynilo</a>. </p><p>Byddwch yn synnu faint mae costau dyddiol
+        yn cynyddu dros gyfnod o amser. A gallai\u2019r arian ychwanegol hwnnw weithio\u2019n
+        galed ar eich rhan mewn cyfrif cynilo neu gronfa bensiwn yn hytrach na diflannu
+        yn y mwg. </p><p>Gall rhoi\u2019r gorau i ysmygu fod yn anodd. Am awgrymiadau
+        ar sut i roi\u2019r gorau iddi, ewch i <a title=\"GIG Di-fwg\" href=\"http://www.nhs.uk/smokefree\">GIG
+        Di-fwg</a>. </p>","date":"2014-12-29T16:29:44+00:00"},{"id":"codiadau-mewn-cyfraddau-llog-pam-eu-bod-yn-bwysig","title":"Codiadau
+        mewn Cyfraddau Llog: Pam eu bod yn bwysig","description":"Mae llog yn d\u00e2l
+        ar fenthyg arian a\u2019r gyfradd llog yw maint y t\u00e2l hwn","body":"<p
+        class=\"intro\"> Mae llog yn d\u00e2l ar fenthyg arian a\u2019r gyfradd llog
+        yw maint y t\u00e2l hwn. Mae hyn yn golygu pan fydd cyfraddau llog yn codi,
+        felly hefyd y bydd cost benthyca. Mae\u2019n bwysig ystyried hyn a deall sut
+        fydd cynnydd yn effeithio ar gost posibl eich cartref (morgais neu rent),
+        benthyciadau banc, cardiau credyd a benthyciadau eraill. <a title=\"Cyfraddau-llog-beth
+        all perchnogion cartrefi ei wneud nawr i drechuar codiad\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/news/cyfraddau-llog-beth-all-perchnogion-cartrefi-ei-wneud-nawr-i-drechuar-codiad\">Darllenwch
+        ein canllaw</a> i ddysgu mwy am effaith codiad mewn cyfraddau llog ar eich
+        cyllideb a sut allwch chi weithredu nawr i atal problemau yn y dyfodol. </p><h2>Dechreuwch
+        baratoi nawr ar gyfer codiad mewn cyfraddau llog </h2><p>Bydd codiadau mewn
+        cyfraddau llog yn effeithio ar bawb, ond bydd maint yr effaith yn dibynnu
+        ar eich amgylchiadau unigol chi a\u2019ch cartref. Bydd yr effaith yn fwy
+        uniongyrchol ar unrhyw un sydd eisoes yn cael trafferth cadw rheolaeth dros
+        ei ddyledion. </p><p>Mae codiadau yn fwy tebygol o fod yn raddol dros gyfnod
+        o dair blynedd, felly mae\u2019n syniad da i lunio cynllun ariannol, gan feddwl
+        am y tymor hir ac ystyried unrhyw newidiadau posibl yn eich amgylchiadau.
+        Efallai na fyddwch yn sylwi ar newi d mawr nawr \u2013 efallai bod gennych
+        forgais sefydlog neu fenthyciadau eraill \u2013 ond beth fydd yn digwydd pan
+        fydd y telerau hynny yn dod i ben? Mae\u2019n well edrych ar senario \u2018achos
+        gwaethaf\u2019 i weld sut fyddech chi\u2019n ymdopi\u2019n ariannol. </p><p>Defnyddiwch
+        ein hoffer a darllenwch ein canllawiau i gael syniad o\u2019ch cyllideb bresennol
+        ac i ddeall yr effaith y bydd unrhyw gynnydd mewn cyfraddau llog yn ei olygu
+        i chi: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Cynllunydd cyllideb\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">Cynllunydd
+        cyllideb</a> \u2013 deallwch eich incwm a chostau dros flwyddyn a meddwl faint
+        fydd codiad o 3% mewn cyfraddau llog yn effeithio ar eich cyllideb </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Gwiriad iechyd\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/gwiriad-iechyd\">Gwiriad
+        iechyd ariannol </a>\u2013 a yw\u2019ch sefyllfa ariannol mewn cyflwr digon
+        da i ddelio \u00e2 chodiad mewn cyfraddau llog? </p><p>Yna meddyliwch ble
+        allwch chi ddechrau gwneud newidiadau i\u2019ch gwariant. \u2013 Defnyddiwch
+        ein <a title=\"Cyfrifiannell torrin ol\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-torrin-ol\">Cyfrifiannell
+        torri\u2019n \u00f4l</a> i weld faint allech chi arbed trwy dorri\u2019n \u00f4l
+        ar rai o\u2019r pethau a brynwch yn rheolaidd. </p><h2>Cartrefi </h2><p><strong>Morgeisi:</strong>
+        Telir y llog ar forgais yn \u00f4l naill ai ar gyfradd sefydlog neu ar gyfradd
+        amrywiol. Os nad ydych ar gynnig sefydlog, bydd cynnydd mewn cyfraddau llog
+        yn cynyddu eich ad-daliadau morgais misol. Mae\u2019n bwysig neilltuo rhywfaint
+        o arian rhag ofn bydd cyfraddau llog yn codi. </p><p>Er enghraifft, os ydych
+        chi\u2019n ad-dalu morgais ar APR o 3% amrywiol, a fyddech chi\u2019n dal
+        i allu talu\u2019r ad-daliadau os bydd eich benthyciwr yn newid y gyfradd
+        amrywiol i 6% APR? </p><p>Os ydych chi ar gyfradd sefydlog, yna ni fydd eich
+        taliadau misol yn newid tan ddiwedd eich cynnig. Ond fel arfer dim ond am
+        ddwy i bum mlynedd fydd y cynigion hyn yn parhau. Meddyliwch sut fyddai codiad
+        o 3% yn effeithio ar eich taliadau presennol, a bydd hyn yn eich helpu i gynllunio
+        ar gyfer pan fydd eich cynnig yn dod i ben. </p><h2>Defnyddiwch yr offer isod
+        i\u2019ch helpu chi </h2><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Cyfrifiannell
+        fforddiadwyedd morgais\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais\">Cyfrifiannell
+        fforddiadwyedd morgais</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Cyfrifiannell
+        morgais\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais\">Cyfrifiannell
+        morgais</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Morgeisi\" href=\"https://compare.moneyadviceservice.org.uk/mortgages/Step1?language=cy\">Cymharu
+        morgeisi</a></p><h2>Darllenwch fwy yma </h2><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Ail forgeisio er mwyn lleihau costau\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/ail-forgeisio-er-mwyn-lleihau-costau\">Ail-forgeisio</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"cyfraddau llogau morgeisi y mathau gwahanol\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol\">Cyfraddau
+        llog morgeisi \u2013 y mathau gwahanol</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Ol ddyledion morgais neu broblemau wrth daluch morgais\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/ol-ddyledion-morgais-neu-broblemau-wrth-daluch-morgais\">Problemau
+        \u00f4l-ddyledion morgais</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Cael
+        trafferth i dalu eich rhent\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cael-trafferth-i-dalu-eich-rhent\">Problemau
+        \u00f4l-ddyledion rhent </a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Cymorth
+        gan y llywodraeth os na allwch daluch morgais\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cymorth-gan-y-llywodraeth-os-na-allwch-daluch-morgais\">Help
+        gan y llywodraeth os na allwch chi dalu''ch morgais</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Beth iw wneud os cewch eich bygwth ag adfeddiannu\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/beth-iw-wneud-os-cewch-eich-bygwth-ag-adfeddiannu\">Beth
+        i''w wneud os ydych chi wedi cael eich bygwth ag adfeddiannu</a>\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"adeiladu cronfa cynilion argyfwng\" href=\"https://www.moneyadviceservice.org.uk/cy/action_plans/adeiladu-cronfa-cynilion-argyfwng\">Cynllun
+        gweithredu \u2013 Adeiladu cronfa cynilion argyfwng</a>\u00a0 </p><p><strong>Rhentu:</strong>\u00a0
+        Felly hefyd, pe byddai eich landlord yn cynyddu cost eich rhent o ganlyniad
+        i gynnydd mewn cyfraddau llog, a fyddech chi\u2019n gallu fforddio hyn, ac
+        os na, a fyddai symud i rywle arall yn dal yn opsiwn da i chi a\u2019ch teulu?
+        </p><p>Gallwch gael mwy o help yn ein canllaw <a title=\"faint o rent y gallwch
+        chi ei fforddio\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/faint-o-rent-y-gallwch-chi-ei-fforddio\">Faint
+        o rent allwch chi fforddio</a>? </p><h2>Benthyciadau </h2><p>Efallai bod gennych
+        fenthyciad banc, benthyciad car, cegin newydd i dalu amdani, neu eich bod
+        wedi benthyg arian i dalu am oergell neu beiriant golchi newydd. </p><p>Mae
+        gan y rhan fwyaf o fenthyciadau gynnig cyfradd sefydlog ble byddwch yn talu
+        swm misol sefydlog dros nifer o fisoedd neu flynyddoedd.\u00a0 </p><p>Ond
+        os yw\u2019ch benthyciad ar gyfradd amrywiol, bydd yn costio mwy i chi os
+        bydd cynnydd yng nghyfradd y banc. </p><p>Mae yna fenthyciadau eraill i chi
+        eu hystyried, sydd \u00e2 chyfradd llog llawer uwch, fel benthyciadau diwrnod
+        cyflog, cardiau siop neu gatalogau, a threfniadau prydlesu. Gyda chynnydd
+        bychan mewn cyfraddau llog, efallai na fyddwch yn sylwi ar y gwahaniaeth yn
+        eich taliadau i ddechrau, ond bydd cael y benthyciadau hyn yn ei gwneud yn
+        anoddach i reoli eich cyllideb ddyddiol os bydd cyfraddau yn codi a gallech
+        gynyddu eich risg o fynd i ddyled. </p><p>Mae hefyd yn werth ystyried sut
+        allai cynnydd mewn cyfraddau llog effeithio ar fenthyciadau megis unrhyw orddrafft
+        neu fenthyciadau myfyriwr sydd gennych. </p><p>Defnyddiwch ein <a title=\"cyfrifiannell
+        benthyciadau\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-benthyciadau\">Cyfrifiannell
+        benthyciadau</a>\u00a0i helpu cyfrifo cyfanswm cost eich benthyciadau. </p><p>Os
+        oes gennych fenthyciad diwrnod cyflog \u2013 defnyddiwch ein <a title=\"Benthyciadau
+        diwrnod cyflog\" href=\"https://www.moneyadviceservice.org.uk/cy/benthyciadau-diwrnod-cyflog\">Hofferyn
+        cyngor benthyciadau diwrnod cyflog ar-lein </a>i gyfrifo\u2019r gost. </p><p>Darllenwch
+        fwy am fenthyciadau ac ystyriwch sut allwch chi eu lleihau: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"benthyciadau personol\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/benthyciadau-personol\">Benthyciadau
+        personol</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"benthyciadau
+        cyfuno dyledion\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/benthyciadau-cyfuno-dyledion\">Benthyciadau
+        cyfuno dyledion</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"Oes-angen
+        ichi gael benthyg arian\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/oes-angen-ichi-gael-benthyg-arian\">Oes
+        angen ichi gael benthyg arian?</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0<a
+        title=\"hanfodion benthyca a chredyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/hanfodion-benthyca-a-chredyd\">\u00a0Hanfodion
+        benthyca a chredyd</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Sut i leihau cost eich benthyciadau personol\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-i-leihau-cost-eich-benthyciadau-personol\">Sut
+        i leihau cost eich benthyciadau personol</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"cyngor ariannol am ddim eich opsiynau\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cyngor-ariannol-am-ddim-eich-opsiynau\">Cael
+        cymorth ariannol am ddim</a>\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0<a title=\"eich
+        awgrymau ar gyfer benthyg arian ai dalu yn ol\" href=\"https://www.moneyadviceservice.org.uk/cy/videos/eich-awgrymau-ar-gyfer-benthyg-arian-ai-dalu-yn-ol\">\u00a0Awgrymau
+        ar gyfer benthyg arian a\u2019i dalu yn \u00f4l\u00a0</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"gweithredwch i leihau eich dyledion\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/gweithredwch-i-leihau-eich-dyledion\">Gweithredwch
+        i leihau eich dyledion</a></p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"sut
+        mae gweld eich adroddiad credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gweld-eich-adroddiad-credyd\">Sut
+        i wirio eich adroddiad credyd</a>\u00a0 </p><h2>Cardiau credyd: </h2><p>Os
+        ydych chi\u2019n llwyddo clirio balans eich cerdyn credyd yn rheolaidd cyn
+        diwedd y mis, yna mae\u2019n annhebygol y bydd codiad yng nghyfradd llog Banc
+        Lloegr yn effeithio arnoch chi. Fodd bynnag, os ydych chi\u2019n talu\u2019r
+        llog yn rheolaidd, mae\u2019n bosibl y gwelwch rywfaint o gynnydd yn APR (Cyfradd
+        Ganrannol Flynyddol) eich cerdyn credyd. Defnyddiwch ein <a title=\"Cyfrifiannell
+        cerdyn credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-cerdyn-credyd\">Cyfrifiannell
+        cerdyn credyd</a>\u00a0i\u2019ch helpu i gyfrifo faint o amser fydd yn cymryd
+        ichi dalu eich dyled, ac i gael cymorth gyda <a title=\"Talu eich cardiau
+        credyd ach cardiau siop\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/talu-eich-cardiau-credyd-ach-cardiau-siop\">Talu
+        eich bil cerdyn credyd</a>. </p><p>Darllenwch fwy yma: </p><p>\u2022\u00a0\u00a0\u00a0<a
+        title=\"cardiau credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/cardiau-credyd\">Canllaw
+        i gardiau credyd</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0<a title=\"dewis
+        a gwneud cais am gerdyn-credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/dewis-a-gwneud-cais-am-gerdyn-credyd\">Dewis
+        cerdyn credyd</a>\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"rheoli
+        cyfrif eich cerdyn credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/rheoli-cyfrif-eich-cerdyn-credyd\">Rheoli
+        eich cyfrif cerdyn credyd</a>\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"a ddylech drosglwyddo balans eich cerdyn credyd\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/a-ddylech-drosglwyddo-balans-eich-cerdyn-credyd\">A
+        ddylech drosglwyddo balans eich cerdyn credyd?</a></p><h2>Wedi gorymestyn
+        yn barod </h2><p>Beth bynnag fydd y newidiadau i gyfradd banc y Deyrnas Unedig,
+        dylech edrych ar eich dyledion i gyd a gweld sut allwch chi ddechrau cymryd
+        rheolaeth o\u2019ch cyllid. Defnyddiwch ein canllaw <a title=\"sut i flaenoriaethuch
+        dyledion\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-i-flaenoriaethuch-dyledion\">Sut
+        i flaenoriaethu eich dyled</a>\u00a0am ragor o gyngor. </p><p>Os ydych chi\u2019n
+        pryderu am eich sefyllfa ariannol ar hyn o bryd neu\u2019n poeni y gallai
+        cynnydd mewn cyfraddau llog wneud eich sefyllfa\u2019n waeth, defnyddiwch
+        ein canllawiau i weld <a title=\"Canfyddwr cyngor ar ddyledion\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/canfyddwr-cyngor-ar-ddyledion\">Ble
+        i gael cyngor am ddim ar ddyledion</a>\u00a0a <a title=\"gweithredwch i leihau
+        eich dyledion\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/gweithredwch-i-leihau-eich-dyledion\">Gweithredu
+        i leihau eich dyled</a>.\u00a0 </p><p>Dechreuwch gyfrifo beth sydd angen ei
+        dalu gyntaf i weld a allwch chi greu cynllun i\u2019ch helpu i gymryd mwy
+        o reolaeth. Defnyddiwch ein canllaw <a title=\"sut i flaenoriaethuch dyledion\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-i-flaenoriaethuch-dyledion\">Sut
+        i flaenoriaethu eich dyled</a>\u00a0am ragor o gyngor. </p><p><strong>Cynilion:</strong></p><p>Nid
+        yw cynnydd mewn cyfraddau llog yn ddrwg i gyd, gan y bydd cyfraddau cynilo
+        yn debygol o gynyddu a rhoi gwell elw i chi ar unrhyw arian a roddoch mewn
+        ISA neu gyfrif cynilo. Os oes gennych gyfrif cynilo cyfradd sefydlog, yna\u2019n
+        amlwg ni fydd cynnydd mewn cyfradd banc yn gwneud gwahaniaeth nes bydd eich
+        cynnig yn dod i ben. </p><p>Darllenwch fwy yma: </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a
+        title=\"Cyfrifiannell cynilo\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-cynilo\">Cyfrifiannell
+        cynilo</a>\u00a0\u00a0 </p><p>\u2022\u00a0\u00a0\u00a0<a title=\"/how-to-save-money\"
+        href=\"https://www.moneyadviceservice.org.uk/cy/categories/how-to-save-money\">\u00a0Sut
+        i gynilo arian</a> \u00a0 </p><p>\u2022\u00a0\u00a0\u00a0\u00a0<a title=\"how
+        to invest money\" href=\"https://www.moneyadviceservice.org.uk/cy/categories/how-to-invest-money\">Sut
+        i fuddsoddi arian</a> \u00a0 </p>","date":"2014-10-02T10:00:13+00:00"},{"id":"mwy-na-hanner-perchnogion-cartrefiar-deyrnas-unedig-yn-amharod-ar-gyfer-cynnydd-mewn-cyfraddau-llog","title":"Mwy
+        na hanner perchnogion cartrefi\u2019r Deyrnas Unedig yn amharod ar gyfer cynnydd
+        mewn cyfraddau llog","description":"Ychydig iawn o bobl sydd wedi ystyried
+        sut y byddent yn ymdopi ag ad-daliadau uwch","body":"<p class=\"intro\">Dengys
+        ymchwil gan y Gwasanaeth Cynghori Ariannol nad yw tri o bob pedwar perchennog
+        cartref wedi ystyried sut y byddai cynnydd o 3% mewn cyfraddau llog yn effeithio
+        ar eu had-daliadau morgais. </p><p>Mae hyn er gwaethaf Llywodraethwr Banc
+        Lloegr Mark Carney yn amcangyfrif y bydd cyfraddau llog yn codi rhwng 2% i
+        3% dros y tair blynedd nesaf. </p><h2>Efallai y bydd y cynnydd yn raddol </h2><p>Mae\u2019n
+        debygol y bydd unrhyw gynnydd mewn cyfraddau llog yn raddol ac yn lledaenu
+        yn ystod y blynyddoedd nesaf.\u00a0 </p><p>Dengys ein hymchwil y byddai 47%
+        o bobl yn cael anhawster talu am gynnydd o hyd at \u00a3150 yn ychwanegol
+        y mis. </p><p>Dywedodd bron i un o bob pump (19%) y byddent yn ei chael yn
+        wirioneddol anodd talu am unrhyw gynnydd mewn cyfraddau llog yn eu had-daliadau
+        misol </p><h2>Bydd gormod yn ei gadael hi\u2019n rhy hwyr </h2><p>Dywedodd
+        dros hanner y 3,007 o bobl a holwyd y byddai hyn yn newid eu harferion bywyd,
+        megis cwtogi ar wario a theithiau i\u2019r sinema, y dafarn neu fwytai, pan
+        fydd cyfraddau llog yn dechrau codi. Gallai ein <a title=\"Cyfrifiannell torrin
+        ol\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-torrin-ol\">Cyfrifiannell
+        torri\u2019n \u00f4l </a>fod yn ddefnyddiol yma. </p><p>Dywedodd tua un o
+        bob tri y byddent yn troi at eu cynilion neu\u2019n dechrau cyllidebu unwaith
+        y <a title=\"Cynllunydd cyllideb\" href=\"https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb\">cyhoeddir
+        cynnydd </a>mewn cyfraddau llog. </p><p>Mae\u2019n peri gofid bod 5% wedi
+        dweud y byddent yn defnyddio eu cerdyn credyd i dalu am ad-daliadau uwch,
+        tra byddai 2% yn troi at fenthyciad diwrnod cyflog. </p><p>Nid yw defnyddio
+        credyd neu fenthyciadau i dalu am ad-daliadau morgais yn syniad da gan y byddai''r
+        rhain hefyd yn cael eu heffeithio gan godiadau mewn cyfraddau llog. Felly
+        hefyd, gallai penderfynu cyllidebu unwaith y daw\u2019r cyhoeddiad fod yn
+        rhy hwyr. </p><h2>Gweithredwch nawr </h2><p>Ychydig iawn o bobl sy\u2019n
+        barod am godiad mewn cyfraddau llog, gyda 44% yn unig o\u2019r bobl a holwyd
+        yn dweud bod ganddynt gynllun ar y gweill i ysgwyddo\u2019r codiadau.\u00a0
+        Ac eto, mae yna sawl peth y gallwn ei wneud nawr i helpu ysgafnhau\u2019r
+        ergyd o unrhyw gynnydd mewn cyfraddau, fel mae ein canllaw <a title=\"Cyfraddau
+        llog beth all perchnogion cartrefi ei wneud nawr i drechuar codiad\" href=\"https://www.moneyadviceservice.org.uk/cy/news/cyfraddau-llog-beth-all-perchnogion-cartrefi-ei-wneud-nawr-i-drechuar-codiad\">Cyfraddau
+        llog: Beth all perchnogion cartrefi ei wneud nawr i drechu\u2019r cynnydd
+        yn dangos</a>. </p><h2>Peidiwch \u00e2 chael eich maglu gan gostau annisgwyl
+        </h2><p>Meddai Nick Hill, arbenigwr ariannol yn y Gwasanaeth Cynghori Ariannol:
+        \u2018Bydd angen i ddeiliaid morgais fod yn fwy ystyrlon o\u2019r ffaith bod
+        cynnydd mewn cyfraddau llog yn anochel \u2013 hyd yn oed i\u2019r rhai ar
+        gyfradd sefydlog, gan y bydd eu d\u00eal yn dod i ben yn hwyr neu\u2019n hwyrach.
+        Bydd y rhai a brynodd eu heiddo cyntaf yn ystod y pum mlynedd diwethaf ddim
+        ond wedi profi cyfraddau llog hanesyddol isel, ond llai na deng mlynedd yn
+        \u00f4l, roedd y gyfradd llog a osodwyd gan Fanc Lloegr 5% yn uwch nag y mae
+        heddiw. </p><p>\u2018Gall y cynnydd lleiaf mewn ad-daliadau morgais gael effaith
+        arwyddocaol ar gyllideb teulu \u2013 yn arbennig i\u2019r rhai hynny sydd
+        eisoes mewn trafferthion ariannol.\u00a0 Felly mae\u2019n syniad da i adolygu
+        eich cyllid personol, dechrau edrych ar ble gallwch chi gwtogi, a chynllunio
+        ymlaen nawr.\u2019\u00a0 </p><p>I gael gwybod mwy am sut y gallai newidiadau
+        i gyfraddau llog effeithio arnoch chi ac i ddefnyddio ein cyfrifianellau Morgais,
+        <a title=\"Cynnydd Mewn\" href=\"https://www.moneyadviceservice.org.uk/en/campaigns/interest-rate-rise\">ewch
+        i\u2019n tudalen adnoddau cynnydd mewn cyfraddau</a>. </p><p>I gael gwybod
+        sut y gallai cynnydd mewn cyfraddau llog effeithio ar gyllid arall megis benthyciadau
+        a chardiau credyd, trowch at ein canllaw Cynnydd Mewn <a title=\"Cyfraddau:
+        Pam eu bod yn bwysig\" href=\"http://www.moneyadviceservice.org.uk/interest-rate-rises-why-they-matter\">Cyfraddau
+        Llog: Pam eu bod yn bwysig</a>. </p><h2>Gofynom: beth fyddech chi\u2019n ei
+        wneud petai codiad yn y gyfradd llog yn cael ei gyhoeddi? </h2><p><strong>Torri''n
+        \u00f4l</strong>\u00a0\u00a0\u00a0\u00a0Ia, dewis da! </p><p><strong>Dechreuwch
+        gyllidebu\u00a0\u00a0\u00a0\u00a0 </strong>Ia, dewis da! </p><p><strong>Defnyddiwch
+        gynilion</strong>\u00a0\u00a0\u00a0\u00a0Eithaf da! </p><p><strong>Dewch o
+        hyd i swydd arall\u00a0\u00a0\u00a0\u00a0 </strong>Eithaf da! </p><p><strong>Gofynnwch
+        am gymorth gan ffrindiau a theulu</strong>\u00a0\u00a0\u00a0\u00a0mmm datrys
+        dros dro fyddai hynny </p><p><strong>Gallwch leihau cyfraniadau pensiwn\u00a0\u00a0\u00a0\u00a0
+        </strong>mmm datrys dros dro fyddai hynny </p><p><strong>Rhowch y gost ar
+        gerdyn credyd</strong>\u00a0\u00a0\u00a0\u00a0Meddyliwch eto! </p><p><strong>Defnyddiwch
+        fenthyciad diwrnod cyflog\u00a0\u00a0\u00a0\u00a0</strong>Meddyliwch eto!
+        </p>","date":"2014-10-02T08:45:13+00:00"},{"id":"cyfraddau-llog-beth-all-perchnogion-cartrefi-ei-wneud-nawr-i-drechuar-codiad","title":"Cyfraddau
+        llog: Beth all perchnogion cartrefi ei wneud NAWR i drechu\u2019r codiad","description":"Os
+        oes gennych chi forgais, mae\u2019n beth doeth paratoi ar gyfer codiad mewn
+        cyfraddau cyn i hynny ddigwyd","body":"<p class=\"intro\">Mae cyfraddau llog
+        yn debygol o godi un ai yn hwyrach eleni neu\u2019n gynnar yn 2015. Mae\u2019r
+        gyfradd sylfaenol wedi sefyll ar 0.5% ers mwy na phum mlynedd bellach, ond
+        wrth i\u2019r economi wella gallem weld symudiad graddol at yr hyn y mae llywodraethwr
+        Banc Lloegr Mark Carney yn ei alw\u2019n \u201cnormalrwydd newydd\u201d o
+        rhyw 2.5 i 3%. </p><p>Mae\u2019n amhosibl gwybod yn union pa bryd y bydd hyn
+        yn digwydd ac mae\u2019r rhagdybiaethau\u2019n newid o fis i fis. Gall unrhyw
+        godiad fod yn raddol a chyn lleied \u00e2 chwarter neu hanner canran y tro,
+        neu gall y codiadau fod yn ganrannau cyfan. Naill ffordd neu\u2019r llall
+        bydd y newidiadau\u2019n effeithio ar bawb sydd \u00e2 morgais. </p><p>Fodd
+        bynnag, mae ffyrdd o baratoi. </p><p><strong>1. Dysgwch faint fydd codiad
+        yn y gyfradd llog yn ei gostio i chi</strong></p><p>Mae\u2019n werth edrych
+        ar sut fyddai\u2019r newidiadau\u2019n effeithio ar gyfradd eich morgais a\u2019ch
+        taliad misol. </p><p>Gwiriwch gyda\u2019ch darparwr os ydych yn ansicr. Gallwch
+        ddefnyddio ein <a title=\"Cyfrifiannell morgais\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator\">Cyfrifiannell
+        morgais</a> i gyfrifo\u2019r ffigurau hyn. Yn \u2018pris yr eiddo\u2019 rhowch
+        y swm sy\u2019n weddill i\u2019w dalu ar eich morgais, a rhowch sero yn y
+        blwch blaendal. Yna defnyddiwch y llithrwyr i leihau\u2019r cyfnod i gydfynd
+        \u00e2\u2019r nifer o flynyddoedd sydd gennych yn weddill i dalu, a chynyddwch
+        y gyfradd llog. Fe welwch y swm y byddech yn ei dalu bob mis yn newid ar yr
+        ochr chwith ar y brig. </p><p><strong>2. Edrychwch faint allwch chi ei fforddio</strong></p><p>Bydd
+        cyllideb yn dangos pa arian sydd gennych yn dod i mewn, pa arian sy\u2019n
+        mynd allan, ac yn bwysicaf oll, faint sydd gennych yn weddill yn y diwedd.
+        Bydd ein <a title=\"Budget Planner\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/budget-planner\">Hofferyn
+        cynllunydd cyllideb</a> yn eich helpu i wneud hyn i gyd. </p><p>Os bydd cynnydd
+        mewn taliadau morgais yn golygu y byddwch yn cael anhawster i ymdopi yn hytrach
+        na llwyddo i ymdopi, defnyddiwch y gyllideb i chwilio am bethau y gallwch
+        wario llai arnynt. A ydych chi\u2019n gwario\u2019n ddrud ar deithio bob mis?
+        A ydych chi\u2019n credu y gallwch chi wario llai pan fyddwch allan yn siopa?
+        </p><p>Bydd ein <a title=\"Cut back calculator\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/cut-back-calculator\">cyfrifiannell
+        torri\u2019n \u00f4l</a> yn eich helpu i ddod o hyd i bethau y gallwch arbed
+        arian arnynt. </p><p><strong>3. Meddyliwch am ordalu</strong></p><p>Os oes
+        gennych chi gynilion dros ben, mae\u2019n werth gwirio a allwch chi ordalu
+        i mewn i\u2019ch morgais, felly holwch eich darparwr. Gallwch wneud hyn fel
+        cyfandaliad, neu drwy gynyddu\u2019r taliadau misol. </p><p>Bydd gordalu \u00a3100
+        bob mis ar forgais \u00a3120,000 dros 25 mlynedd sy\u2019n codi llog o 4%
+        yn arbed \u00a315,000 i chi mewn taliadau llog. Bydd hyn yn tynnu pum mlynedd
+        oddi ar eich morgais hefyd, a\u2019i glirio mewn 20 mlynedd yn unig. Wrth
+        wneud hyn cyn i gyfraddau godi bydd gennych forgais llai i dalu llog arno,
+        felly byddwch yn ad-dalu llai yn gyfan gwbl. </p><p>Fodd bynnag, mae yna resymau
+        pam nad hyn yw\u2019r dewis gorau bob tro, a gallwch ddarllen am hynny yn
+        ein herthygl <a title=\"Should you pay off your mortgage\" target=\"_blank\"
+        href=\"https://www.moneyadviceservice.org.uk/en/articles/should-you-pay-off-your-mortgage-early\">A
+        ddylech chi ad-dalu''ch morgais yn gynnar</a>. </p><p><strong>4. Chwilio am
+        forgais newydd a gwell</strong></p><p>Mae\u2019n werth chwilio am forgais
+        gwell er mwyn gweld a gewch chi fanteisio ar gyfraddau presennol. I fod yn
+        sicr gallech gloi i mewn i gyfradd sefydlog. Neu gallech aros gyda chyfradd
+        amrywiol os yw hynny\u2019n amlwg yn fwy cost effeithiol. </p><p>Os yw\u2019ch
+        cytundeb rhatach yn dod i ben, gorau po gyntaf i chi baratoi. Siaradwch \u00e2\u2019ch
+        darparwr fel cam cyntaf. Efallai y bydd angen i chi symud at ddarparwr arall
+        i gael y fargen orau, sy\u2019n golygu y gallech chi orfod cael <a title=\"How
+        much can you afford to borrow\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow\">asesiad
+        fforddiadwyedd</a>. </p><p>Os yw gwerth eich eiddo wedi cynyddu, gall olygu
+        fod eich cymhareb benthyciad-i-werth (LTV) wedi cynyddu hefyd. Gallai hyn
+        olygu y gall eich dewis o ddarparwyr fod yn ehangach a\u2019r cyfraddau\u2019n
+        is. Eglurir LTV ac awgrymiadau da ar ailforgeisio yn ein canllaw <a title=\"Remortgaging
+        to cut costs\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/articles/remortgaging-to-cut-costs\">ailforgeisio
+        i dorri costau</a>. </p><p>Llun: PA </p>","date":"2014-09-26T15:17:05+00:00"},{"id":"gall-penderfyniadau-ariannol-gostioan-ddrud-i-bobl-ifanc-ymhen-amser","title":"Gall
+        penderfyniadau ariannol gostio\u2019n ddrud i bobl ifanc ymhen amser","description":"Gall
+        byw heb feddwl am yfory gostio\u2019n ddrud ymhen ychydig o flynyddoedd","body":"<p
+        class=\"intro\"> Yn \u00f4l adroddiad newydd gan y Gwasanaeth Cynghori Ariannol
+        gall cael mynediad at gredyd a rheolaeth wael ar arian arwain at flynyddoedd
+        o drafferthion. </p><p>Mae bod yn annoeth yn 18 oed pan ddaw credyd ar gael
+        ar hap yn rheswm allweddol pam mae pobl ifanc yn mynd i ddyledion mawr a rheswm
+        arall yw bod pobl ifanc o\u2019r farn y bydd popeth yn iawn yn y diwedd. </p><h2>Mae
+        profiad yn newid agwedd pobl at ddyled </h2><p>Gall agweddau at arian olygu
+        bod pobl ifanc 18 i 21 oed mewn trafferthion mawr, fel y dengys yr enghreifftiau
+        gwirioneddol canlynol: </p><p><strong>Pizza benthyciad diwrnod cyflog:</strong>
+        Roedd Michala, 20 oed, yn benderfynol o beidio colli\u2019r hwyl pan benderfynodd
+        ei ffrindiau archebu pizzas tecaw\u00ea, er nad oedd ganddi ddigon o arian
+        i ymuno \u00e2 nhw. Ei hateb hi oedd cymryd benthyciad diwrnod cyflog, ac
+        o ganlyniad roedd ei pizza hi\u2019n un drud iawn. </p><p>Dywedodd Michala:
+        <em>\u2018Mae gen i gywilydd erbyn hyn, ond ar y pryd doedd dim dewis arall
+        o gwbl!\u2019</em></p><p><strong>Roulette cerdyn credyd:</strong> Mae Martyn,
+        21, yn aml yn chwarae roulette cerdyn credyd. Dyma lle mae gr\u0175p o ffrindiau
+        ar noson allan oll yn rhoi eu cardiau credyd mewn twmpath gan dynnu un allan
+        ar hap. Bydd y sawl sydd berchen ar y cerdyn yn gorfod talu\u2019r bil. </p><p>Dywedodd:
+        <em>\u2018Gallaf wario \u00a3100 yn hawdd heb feddwl dim am y peth.\u2019</em></p><p><strong>Nid
+        y gwyliau delfrydol:</strong> Bu i Patrick, sydd yn awr yn 22 oed, ganslo
+        gwyliau gyda\u2019i gariad wedi iddo gael cynnig gwell i fynd i Thailand gyda\u2019i
+        ffrindiau. Gwariodd heb wirio beth allai ei fforddio cyn iddo sylweddoli ei
+        fod wedi gwario ei fenthyciad myfyriwr i gyd ac roedd ganddo orddrafft o \u00a32,000.
+        </p><p>Flynyddoedd yn ddiweddarach mae Patrick yn parhau i dalu ei ddyledion.
+        Ac mae ei gariad wedi ei adael. </p><p><strong>Gwario mawr, camgymeriadau
+        mawr:</strong> Penderfynodd Harry, sydd yn awr yn 25 oed, rentu fflat er ei
+        fod yn byw yn agos at ei rieni yn ystod ei gyfnod yn y brifysgol. Defnyddiodd
+        ei fenthyciad myfyriwr hefyd i brynu car \u2018er mwyn plesio\u2019r merched\u2019,
+        ond ni lwyddodd i ymchwilio pethau\u2019n drylwyr a bu iddo wario miloedd
+        ar broblemau yn ymwneud \u00e2\u2019r car. </p><p>O ganlyniad, gadawodd Harry\u2019r
+        brifysgol gan weithio mewn tair swydd er mwyn talu\u2019i ddyledion. Gwerthodd
+        ei gar hefyd a symud yn \u00f4l i fyw at ei rieni. Dywedodd Harry: <em>\u2018Rwy\u2019n
+        talu am y cyfan yn awr gan na lwyddais i wneud penderfyniadau doeth. Ni allaf
+        gael swydd dda gan nad oes gennyf gymwysterau. Rwy\u2019n gweithio chwe diwrnod
+        yr wythnos er mwyn ad-dalu fy nyled cerdyn credyd a fy menthyciad.\u2019 </em></p><h2>Agweddau
+        a all niweidio eich iechyd ariannol </h2><p>Mae\u2019r canlynol yn farnau
+        sy\u2019n nodweddiadol o\u2019r rhai sydd gan bobl 18 i 21 oed, pobl a fyddai\u2019n
+        elwa mewn gwirionedd drwy weithredu\u2019n hollol groes: </p><p>\u2022 Byw
+        heb feddwl am yfory </p><p>\u2022 Peidio meddwl am y goblygiadau </p><p>\u2022
+        Mae \u2018Na\u2019 yn ddiflas, mae \u2018Ie\u2019 yn hwyl </p><p>\u2022 Mae
+        banc mam a dad ar gael unrhyw adeg </p><p>\u2022 \u2018Arian am ddim\u2019
+        yw credyd </p><p>\u2022 Mae dyled yn beth arferol </p><p>\u2022 Bydd popeth
+        yn iawn yn y dyfodol. </p><h2>Awgrymiadau da gan y rhai a ddysgodd y ffordd
+        anodd </h2><p>Er, nid yw pob unigolyn ifanc yn ymddwyn fel hyn wrth adael
+        ysgol a dechrau gwneud penderfyniadau ariannol annibynnol am y tro cyntaf.
+        Gall y cyfnod o symud oddi wrth bod yn ddibynnol ar \u2018fanc mam a dad\u2019
+        fod yn un anodd, a gall y pwysau i wario\u2019n rhydd a benthyca mewn ffordd
+        anghyfrifol fod yn drwm, ond gall gwrando ar brofiadau pobl ifanc eraill fod
+        yn werthfawr a rhoi cymorth i chi wneud penderfyniadau doeth yn awr. </p><p>Gwyliwch
+        ein fideos sy\u2019n cynnwys pobl ifanc yn rhannu eu profiadau ar <a title=\"Reoli
+        arian\" href=\"https://www.moneyadviceservice.org.uk/en/videos/managing-money\">Reoli
+        arian</a>, <a title=\"Emosiwn arian\" href=\"https://www.moneyadviceservice.org.uk/en/videos/money-emotions\">Emosiwn
+        arian</a> ac <a title=\"Uchafbwyntiau ac isafbwyntiau ariannol\" href=\"https://www.moneyadviceservice.org.uk/en/videos/money-highs-and-lows\">Uchafbwyntiau
+        ac isafbwyntiau ariannol</a>. </p><p>Gallwch gymryd cyngor hefyd gan bobl
+        sydd wedi dysgu ar \u00f4l gwneud camgymeriadau drud pan oeddent yr un oed
+        \u00e2 chi, neu a lwyddodd i osgoi camgymeriadau o\u2019r fath yn y cychwyn.
+        </p><h2>1. Gwrando ar gyngor da </h2><p>Roedd Katie, 28 oed, yn teimlo\u2019n
+        ddig pan wrthododd ei rhieni iddi brynu car drwy fenthyca arian, gan ddweud
+        wrthi y byddai\u2019n rhaid iddi gynilo hyd nes iddi fedru fforddio prynu\u2019r
+        car. Cafodd ei hannog hefyd i gael pensiwn, ac mae\u2019n falch o hynny bellach,
+        oherwydd mae gwell trefn ar ei materion ariannol o\u2019i gymharu \u00e2\u2019i
+        ffrindiau. </p><p>Pwynt gweithredu: Defnyddiwch yr ap cynilo Wishfund <a title=\"Wishfund\"
+        href=\"https://play.google.com/store/apps/details?id=com.stormid.ysmas&amp;hl=en_GB\">Android
+        </a>ac <a title=\"Wishfund\" href=\"https://itunes.apple.com/gb/app/wishfund/id892753725?mt=8\">iOS
+        </a>a gynhyrchwyd gan rai 16-19 oed ar gyfer eu ffrindiau a\u2019u cyfoedion
+        er mwyn iddynt fedru gwella eu materion ariannol. </p><h2>2. Dysgu o gamgymeriadau
+        </h2><p>Cafodd Mina, 24 oed, ei cherdyn credyd cyntaf pan oedd hi\u2019n 18
+        oed. Iddi hi, roedd hyn yn ffordd iddi gael arian am ddim a gwariodd at ei
+        throthwy o \u00a31,500 ymhen ychydig oriau. Wrth i\u2019r llog gynyddu sylweddolodd
+        nad oedd hi\u2019n medru ad-dalu\u2019r taliadau a gofynnodd i\u2019w rhieni
+        am help. Dim ond newydd orffen ad-dalu ei rhieni mae hi, ac yn gresynu na
+        lwyddodd hi i fod yn fwy gofalus wrth reoli ei harian, gan gyllidebu ar gyfer
+        y pethau yr oedd hi\u2019n dymuno eu prynu. </p><p>Pwynt gweithredu: Defnyddiwch
+        Gynlluniwr cyllideb i sicrhau y gallwch fforddio\u2019r hyn a wariwch. </p><h2>3.
+        Cymryd cyfrifoldeb </h2><p>Mae Annie, 29, yn cyfaddef iddi fod yn \u2018ferch
+        wyllt\u2019 yn ei harddegau, gan wario ei holl arian ar ddiodydd a sigar\u00e9ts.
+        Pan nad oedd ganddi arian ar \u00f4l fe ddefnyddiodd gardiau siop a benthyciadau
+        diwrnod cyflog, ac arweiniodd hyn at ddyledion sylweddol. </p><p>Dim ond wedi
+        iddi fynd yn feichiog y sylweddolodd y dylai hi adolygu ei materion ariannol
+        a chymryd cyfrifoldeb am ei bywyd. Cymrodd gyngor ariannol gan elusen ddyledion,
+        penderfyniad a weddnewidiodd ei bywyd. </p><p>Pwynt gweithredu: Dysgwch ymhle
+        i gael cyngor annibynnol am ddim ar ddyledion yn lleol os ydych yn colli rheolaeth
+        ar eich materion ariannol. </p><p>Am ragor o wybodaeth, gallwch <a title=\"ddarllen
+        yr adroddiad yn llawn yma\" href=\"https://www.moneyadviceservice.org.uk/en/categories/research-and-toolkits-on-young-people-and-money\">ddarllen
+        yr adroddiad yn llawn yma</a>. </p><p><em>Llun: PA</em></p>","date":"2014-09-15T09:34:44+00:00"},{"id":"cyflwyno-wishfund","title":"Cyflwyno
+        Wishfund","description":"Ap cynilo arian ar gyfer rhai 16-19 oed","body":"<p
+        class=\"intro\">Nid yw cadw llygad ar yr hyn yr ydych yn cynilo ar ei gyfer
+        a\u2019ch dull o wneud hynny\u2019n hawdd bob amser. Mae Wishfund yma i helpu.
+        </p><p>Mewn cydweithrediad \u00e2 Young Scot, YouthNet a Storm ID, mae\u2019r
+        Gwasanaeth Cynghori Ariannol wedi creu ap nod cynilo ar y cyd \u00e2 rhai
+        16-19 oed, o\u2019r enw Wishfund. </p><p>Rydym yn falch iawn ohono gan fod
+        pobl ifanc wedi rhoi help i ni ei ddylunio. Dywedodd y bobl ifanc wrthym beth
+        yn eu barn nhw fyddai\u2019n ysgogi eu ffrindiau i gychwyn cynilo a meithrin
+        arferion da gyda\u2019u harian. </p><h2>Gallwch: </h2><p>\u2022\u00a0\u00a0\u00a0\u00a0Osod
+        eich nod neu nodau cynilo eich hunan o ddetholiad o ddewisiadau. Neu, os dymuwch,
+        gallwch greu un eich hun. Gall fod yn fach, canolig neu fawr. Felly gallai
+        hynny fod yn unrhyw beth o ddillad i ff\u00f4n newydd i wyliau. </p><p>\u2022\u00a0\u00a0\u00a0\u00a0Chi
+        sy\u2019n rheoli, sy\u2019n golygu mai chi sy\u2019n dewis cyfnod amser eich
+        nod cynilo a pha mor aml y credwch y gallwch gynilo tuag ato. A gallwch newid
+        y drefn wrth i chi fynd yn eich blaen neu os cyfyd anhawster. </p><p>\u2022\u00a0\u00a0\u00a0\u00a0Bydd
+        Wishfinder yn cyfrifo faint byddwch angen ei gynilo er mwyn cyrraedd eich
+        nod, felly nid oes angen i chi boeni am fod yn fathemategydd. </p><p>\u2022\u00a0\u00a0\u00a0\u00a0Uwchlwythwch
+        ddelwedd o\u2019ch cynilion er mwyn eich ysgogi! </p><p>\u2022\u00a0\u00a0\u00a0\u00a0Edrychwch
+        faint yr ydych wedi ei gynilo ar gyfer eich nod drwy draciwr. </p><p>\u2022\u00a0\u00a0\u00a0\u00a0Os
+        ydych yn ansicr a allwch gyrraedd eich nodau cynilo, mae cyngor ar gael hefyd
+        yngl\u0177n a dewisiadau benthyca doeth. </p><p>Mae Wishfund ar gael am ddim
+        ar ffonau <a title=\"iOS\" target=\"_blank\" href=\"https://itunes.apple.com/gb/app/wishfund/id892753725?mt=8\">iOS
+        </a>ac <a title=\"Android\" target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.stormid.ysmas&amp;hl=en_GB\">Android</a>.
+        </p>","date":"2014-09-15T09:34:30+00:00"},{"id":"sut-i-elwa-drwy-fargeinio-wrth-brynu-car-ail-law","title":"Sut
+        i elwa drwy fargeinio wrth brynu car ail-law","description":"Bargeinio i brynu
+        car ail-law? Dywedodd chwech o bob deg perchennog bod eu waledi\u2019n llawnach","body":"<p
+        class=\"intro\"> Efallai nad yw bargeinio dros y pris y disgwylir i chi ei
+        dalu yn ymddangos yn beth Prydeinig iawn i\u2019w wneud. Ond, ymddengys pan
+        mae hi\u2019n amser prynu car ail-law nid yw\u2019r rhan fwyaf ohonom ofn
+        ceisio gostwng y pris i gael y fargen orau. </p><p>Dengys ymchwil newydd gan
+        y Gwasanaeth Cynghori Ariannol ar brynu car ail-law bod wyth allan o bob 10
+        a brynodd gar yn ystod y flwyddyn ddiwethaf wedi ceisio sicrhau gostyngiad
+        wrth brynu. </p><p>A llwyddodd chwech o bob 10 i gael rhywfaint o ostyngiad
+        yn y pris - llwyddodd dynion ychydig yn well na merched, gyda 67% yn hoelio
+        bargen o\u2019i gymharu \u00e2 60% o ferched. </p><p>Os nad ydych wedi bargeinio
+        o\u2019r blaen, nid oes angen i chi bryderu. Defnyddiwch ein cyngor i gael
+        y pris gorau am eich car nesaf. </p><h2>Adnabod eich Saab o\u2019ch Seat </h2><p>Os
+        nad ydych yn gwybod pa gar i\u2019w brynu gwnewch eich gwaith cartref. Dechreuwch
+        edrych ar geir ar y ffyrdd, gyda\u2019ch delwyr ceir lleol, ac mewn cylchgronau
+        ceir a gwefannau moduro. </p><p>Hyd yn oed os yw eich bryd ar fodel neilltuol,
+        gosodwch gyllideb ar gyfer yr hyn y gallwch ei fforddio. Peidiwch ag anghofio
+        ystyried costau rhedeg. </p><p>Edrychwch ar ein <a title=\"Cyfrifiannell costau
+        car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/tools/car-costs-calculator\">Cyfrifiannell
+        costau car</a> i weld beth yw cost bod yn berchen ar gar yr ydych yn ystyried
+        ei brynu. </p><p>Os nad ydych yn si\u0175r pa gar y gallwch ei fforddio, darllenwch
+        ein canllaw ar <a title=\"Sut mae dod o hyd ir car iawn ar gyfer eich cyllideb\"
+        target=\"_blank\" href=\"/cy/articles/sut-mae-dod-o-hyd-ir-car-iawn-ar-gyfer-eich-cyllideb\">Sut
+        mae dod o hyd i''r car iawn ar gyfer eich cyllideb</a>. </p><p>Pan fyddwch
+        wedi dod o hyd i\u2019ch model delfrydol, gwiriwch ar-lein am werthwyr ceir
+        eraill yn eich ardal i weld a oes unrhyw un ohonynt yn cynnig bargen well
+        am yr un car. Gall hyn fod yn ddefnyddiol wrth fargeinio. </p><p>Os ydych
+        yn cyfnewid eich car presennol, gwnewch yn si\u0175r eich bod yn gwybod ei
+        werth er mwyn i chi gael y pris gorau amdano ar gyfer eich pryniant newydd.
+        Mae\u2019n debyg y cewch fwy amdano wrth ei werthu\u2019n breifat ond gall
+        hyn fod yn fwy o ymdrech a chymryd mwy o amser. </p><p>Cyn i chi wneud dim
+        byd arall, canfyddwch beth yw gwerth eich car. Mae gan safleoedd megis <a
+        title=\"Glass\u2019\" target=\"_blank\" href=\"http://www.glass.co.uk/\">Glass\u2019s
+        Guide</a> a <a title=\"Parkers\" target=\"_blank\" href=\"http://www.parkers.co.uk/\">Parkers</a>
+        offer prisio ceir. </p><h3>Awgrymiadau dweud wrth Mam - Cyngor gan aelodau
+        o\u2019n cymuned ar-lein: </h3><p><em>\u201cYr adeg orau i brynu yw diwrnod
+        olaf y mis - neu ddiwrnod olaf y chwarter sydd yn well fyth. Cyn heddiw cerddais
+        allan o siop gwerthu ceir am 3pm ond cefais alwad gan y gwerthwr am 5pm yn
+        cynnig y fargen y gofynnais amdani gan fod angen i\u2019r siop sicrhau ei
+        bonws. Dysgwch sut mae\u2019r diwydiant yn gweithio a sut i gael y fargen
+        orau.\u201d</em></p><h2>Sut i ddelio \u00e2\u2019r garej </h2><p>Os ydych
+        yn negodi gyda\u2019r gwerthwr, byddwch yn gwrtais a chyfeillgar, ond peidiwch
+        \u00e2 gadael i\u2019r gwerthwr wybod beth yw eich uchafswm. </p><p>Os ydych
+        yn talu ag arian parod, peidiwch \u00e2 dweud wrth y gwerthwr yn syth. </p><p>Mae
+        gwerthwyr yn gwneud mwy o elw ar fenthyciadau ariannol, felly gadewch iddynt
+        negodi pris y car ar y sail honno. Gallwch wrthod y fargen ariannu yn nes
+        ymlaen yn y broses. </p><p>Cychwynnwch drwy nodi swm sydd yn is na\u2019r
+        hyn yr ydych yn barod i\u2019w dalu \u2013 felly gallwch chi gynyddu\u2019n
+        raddol os bydd angen. Ceisiwch osgoi codi eich pris fwy na\u2019r swm y mae\u2019r
+        gwerthwr yn dymuno gostwng ei bris. </p><p>Pan fyddwch yn rhoi cynnig, peidiwch
+        \u00e2 siarad eto nes bydd y gwerthwr yn ateb. </p><p>Mae o fantais bod yn
+        gadarnhaol am eich nodau: er enghraifft, peidiwch \u00e2 dweud <em>\u201cga
+        i ostyngiad?\u201d</em>, ond yn hytrach dywedwch<em> \u201cfaint o ostyngiad
+        ga i?\u201d</em></p><p>Os byddwch yn ei chael yn anodd cael gostyngiad ond
+        eich bod yn awyddus iawn i gael y car, cynigiwch brynu\u2019r car yn y fan
+        a\u2019r lle. Gall gwerthiant sydyn fod o gymorth i chi gytuno ar bris. </p><p>A
+        pheidiwch \u00e2 bod ofn cerdded allan os na fydd y gwerthwr yn fodlon negodi
+        \u2013 mae miloedd o geir ail-law ar gael. </p><p>Am ragor o awgrymiadau da
+        ar sut i fargeinio, darllenwch ein canllaw ar <a title=\"Sut i fargeinio wrth
+        brynu car\" target=\"_blank\" href=\"/cy/articles/sut-i-fargeinio-wrth-brynu-car\">Sut
+        i fargeinio wrth brynu car</a>. </p><h3>Awgrymiadau dweud wrth Mam - Cyngor
+        gan aelodau o\u2019n cymuned ar-lein: </h3><p><em>\u201cNi fyddwn fyth yn
+        prynu car gan y gwerthwr ceir cyntaf. Yn hytrach byddwn yn edrych ar sawl
+        model mewn sawl siop ac yna bargeinio un yn erbyn y llall - mae garej A yn
+        fodlon gwneud xxx am \u00a3xx gyda xx o dreth cerbyd am ddim er enghraifft.\u201d</em></p><h2>Mae\u2019n
+        fater preifat </h2><p>Gall prynu car ail-law yn breifat fod yn beryglus oherwydd
+        pe byddai problemau wedyn mae gennych lai o hawliau cyfreithiol nag a fyddai
+        gennych gyda gwerthwr ceir. </p><p>Ond mae gennych fwy o fodd i fargeinio.
+        </p><p>Efallai bod y gwerthwr eisoes wedi prynu ei gar nesaf ac angen cael
+        gwared \u00e2\u2019r hen un. Felly gall fod o werth gofyn rhai cwestiynau
+        gofalus fel ei reswm am fod eisiau gwerthu. Neu, efallai ei fod wedi gweld
+        ei gar perffaith ac angen arian parod ar gyfer hynny. </p><p>Pan fyddwch yn
+        prynu car ail-law bydd angen i chi benderfynu a ydych am fentro na fydd biliau
+        trwsio annisgwyl angen eu talu, er gallwch dalu arbenigwr i archwilio\u2019r
+        car cyn prynu. Mae cwmn\u00efau fel yr AA a\u2019r RAC yn cynnig y math hwn
+        o wasanaeth. Gellid defnyddio unrhyw namau neu farciau neu dolciau ar gorff
+        y car i ostwng y pris. </p><p>Gweler ein canllaw ar <a title=\"Cychwyn y daith
+        yn unig yw\u2019r gost o brynu\u2019r car\" target=\"_blank\" href=\"https://www.moneyadviceservice.org.uk/en/news/dont-get-caught-out-consider-the-costs-before-buying-a-used-car\">ragor
+        o wybodaeth ar y gwir gost o brynu a rhedeg car</a>. </p><p>Os nad ydych yn
+        defnyddio cynilion i dalu am eich car nesaf, mae amryw o ddewisiadau ar gael.
+        Gweler ein canllaw <a title=\"Cyllid car wedi\u2019i esbonio\" target=\"_blank\"
+        href=\"/cy/articles/cyllid-car-wedii-esbonio\">Cyllid car wedi\u2019i esbonio</a>
+        i ddeall y manteision a\u2019r anfanteision. </p><p><img src=\"/images/welsh-haggling650.jpg\"/>\u00a0\u00a0
+        </p>","date":"2014-08-11T09:52:24+00:00"},{"id":"rhybudd-twyll-mae-twyllwyr-yn-smalio-eu-bod-nhwan-galw-ar-ran-y-gwasanaeth-cynghori-ariannol","title":"Rhybudd
+        twyll: mae twyllwyr yn smalio eu bod nhw\u2019n galw ar ran y Gwasanaeth Cynghori
+        Ariannol","description":"Mae twyllwyr yn cysylltu \u00e2\u2019r cyhoedd gan
+        smalio eu bod nhw\u2019n galw ar ran y Gwasanaeth Cynghori Ariannol. Mae\u2019r
+        galwyr hyn fel arfer yn cynnig cyngor ar ddyledion neu bensiynau.","body":"<p
+        class=\"intro\"> Mae twyllwyr wedi bod yn smalio eu bod nhw\u2019n galw ar
+        ran y Gwasanaeth Cynghori Ariannol. Darganfyddwch sut i adnabod y twyllwyr.
+        </p><p>Mae twyllwyr yn cysylltu \u00e2\u2019r cyhoedd gan smalio eu bod nhw\u2019n
+        galw ar ran y Gwasanaeth Cynghori Ariannol. Mae\u2019r galwyr hyn fel arfer
+        yn cynnig cyngor ar ddyledion neu bensiynau.\u00a0 </p><p>Yr unig ddiddordeb
+        sydd ganddynt yw cael gafael ar eich arian \u2013 un ai drwy gael mynediad
+        at eich cyfrif banc neu\u2019ch cynilion pensiwn. Am ragor o wybodaeth, darllenwch
+        ein canllaw <a title=\"Sut i adnabod twyll pensiwn\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/sut-i-adnabod-twyll-pensiwn\">Sut
+        i adnabod twyll pensiwn</a>. </p><p>Ni fyddai\u2019r Gwasanaeth Cynghori Ariannol
+        fyth yn cysylltu \u00e2 chi ar hap. Ni fuasem yn gofyn i chi am eich manylion
+        banc, na rhoi cymorth i drosglwyddo eich cyfrif pensiwn, cerdyn credyd neu
+        fanc. Rydym yn cynnig cyngor a chanllaw ar sut i reoli eich arian yn well,
+        ond nid ei reoli ar eich rhan. </p><p>Os credwch eich bod wedi dioddef twyll
+        ariannol, cysylltwch ag <a title=\"Action Fraud\" href=\"http://www.actionfraud.police.uk/report_fraud\">Action
+        Fraud</a> i ddatgan hyn, yn </p><p>Cofiwch, os bydd rhywun yn cysylltu \u00e2
+        chi yn smalio mai ni sydd ar ben arall y ff\u00f4n, gallwch bob amser ffonio\u2019n
+        \u00f4l a gwirio ar 0300 500 5000 neu ffonio 0300 500 5555 am wasanaeth Cymraeg.
+        </p><h2>Sut i nodi twyll </h2><p>Os cewch alwad ar hap byddwch yn ddrwgdybus
+        a pheidiwch ag ymateb.\u00a0Dyma rai pethau i fod yn wyliadwrus ohonynt: </p><ul><li>Gofynnir
+        i chi dalu am gynnyrch neu wasanaethau ymlaen llaw</li><li>Gofynnir i chi
+        roi manylion personol neu ariannol (fel manylion eich cyfrif banc)</li><li>Fe
+        deimlwch dan bwysau i wneud penderfyniad ar frys</li><li>Prin iawn yw\u2019r
+        manylion cyswllt a gewch, fel cyfeiriad Blwch PO neu rif ff\u00f4n symudol</li><li>Os
+        bydd rhywun yn cysylltu \u00e2 chi drwy e-bost neu bost arferol, bydd geiriad
+        yr ohebiaeth yn esgeulus gyda gwallau sillafu a gramadegol</li><li>Bydd y
+        fargen a gynigir i chi yn ymddangos yn llawer iawn yn rhy hael.</li></ul><p>Am
+        ragor o wybodaeth ar dwyll, darllenwch ein <a title=\"Canllaw dechreuwr i
+        dwyll\" href=\"https://www.moneyadviceservice.org.uk/cy/articles/canllaw-dechreuwr-i-dwyll\">Canllaw
+        i ddechreuwyr ar dwyll</a>. </p><h2>Cyngor ariannol am ddim </h2><p>Mae\u2019r
+        Gwasanaeth Cynghori Ariannol yn cynnig cyngor diduedd ac annibynnol ar ystod
+        eang o faterion ariannol, yn cynnwys cyllidebu a dyledion, pensiynau a buddsoddiadau,
+        cynilion a chardiau credyd. Am ragor o wybodaeth, ewch i\u2019n tudalen <a
+        title=\"cysylltu a ni\" href=\"https://www.moneyadviceservice.org.uk/cy/static/cysylltu-a-ni\">Cysylltu
+        \u00e2 ni</a> ar ein gwefan. </p>","date":"2014-08-07T10:44:40+00:00"},{"id":"daliwch-i-fynd-a-chwe-ffordd-i-arbed-arian-ar-waith-cynnal-car","title":"Daliwch
+        i fynd \u2013 chwe ffordd i arbed arian ar waith cynnal car","description":"Gall
+        talu i gynnal eich car fod yn ddrud. Dysgwch sut i gwtogi ar eich biliau cynnal
+        car.","body":"<p class=\"intro\"> Un o\u2019r ffyrdd gorau o gwtogi ar y gost
+        o redeg car yw gwneud yn si\u0175r mai ychydig o waith atgyweirio sydd ei
+        angen arno. </p><p>Serch hynny, nid oes gan un o bob tri modurwr y wybodaeth
+        sylfaenol i fedru cynnal eu ceir, er i 59% ohonynt gydnabod pwysigrwydd gwaith
+        cynnal o\u2019r fath, yn \u00f4l arolwg ar gyfer Auto Trader. </p><p>Gyda
+        gofal ac ymroddiad, chwilio am fargen a chynllunio, gallwch gwtogi\u2019ch
+        costau. Mewn arolwg yn 2013 gan Trust My Garage, y cynllun garej annibynnol
+        cenedlaethol, gwelwyd y bu angen i 64% o berchnogion ceir wario \u00a3500
+        ar gostau annisgwyl o atgyweirio ceir. Bu\u2019n rhaid i un o bob pump dalu
+        mwy na \u00a3500 , a 10% ohonynt orfod talu dros \u00a31,000. </p><h2>1) Arbed
+        arian ar wasanaeth </h2><p>Gellir arbed cryn dipyn o arian ar wasanaeth blynyddol
+        eich car drwy fynd at garej annibynnol lleol yn hytrach na\u2019r prif werthwyr
+        ceir. Yn \u00f4l y Sefydliad Garej Annibynnol, mae ymweld \u00e2 garej annibynnol
+        yn costio \u00a340 yr awr yn llai ar gyfartaledd na gwerthwr breiniol. </p><p>Os
+        byddwch yn ymweld \u00e2\u2019r garej am y tro cyntaf, gofynnwch am ddyfynbris,
+        a gofynnwch am restr \u00e2 phrisiau a chymharwch brisiau\u2019n lleol. </p><p>Rhowch
+        ystyriaeth hefyd i siopau fel Halfords Autocentre sy\u2019n cynnig gwasanaethau
+        llawn o \u00a3134 ac sy\u2019n honni eu bod 40% yn rhatach na\u2019r prif
+        ddarparwyr os archebir ar-lein. </p><p>Gallwch ddod o hyd i sawl garej a argymhellir
+        yn <a title=\"MotorCodes\" target=\"_blank\" href=\"http://www.motorcodes.co.uk/\">MotorCodes</a>
+        a <a title=\"Trust My Garage\" target=\"_blank\" href=\"http://www.trustmygarage.co.uk/\">Trust
+        My Garage</a></p><h2>2) Peidiwch ag anghofio am wiriadau sylfaenol </h2><ul><li>Gwiriwch
+        y teiars yn rheolaidd. Mae rhoi\u2019r pwysedd cywir yn eich teiars nid yn
+        unig yn arbed tanwydd ond byddant yn para\u2019n hirach hefyd. Bydd teiars
+        sydd \u00e2 gormod o bwysedd neu ddim digon yn gwisgo\u2019n anwastad ac angen
+        eu newid yn amlach. Gwiriwch y tracio\u2019n rheolaidd hefyd gan fod olwynion
+        sydd heb eu gosod yn gywir felly yn gwisgo\u2019n anwastad.</li><li>Ystyriwch
+        archebu\u2019ch teiars ar-lein. Bydd rhai cwmn\u00efau\u2019n eu gosod yn
+        eich cartref, tra mae gan eraill rwydwaith o osodwyr cymwys.</li><li>Ceisiwch
+        osgoi biliau atgyweirio drud drwy wneud yn si\u0175r fod digon o olew, oerydd
+        a hylif breciau yn y car.</li><li>Yn \u00f4l yr AA, batris fflat yw\u2019r
+        prif reswm dros alwadau, gyda rhai\u2019n torri wedi ychydig o flynyddoedd
+        yn unig gan na lwyddwyd i\u2019w trydanu\u2019n llawn. Mae batris modern angen
+        ambell daith hir i\u2019w trydanu\u2019n llawn. Mae\u2019r AA yn amcangyfrif
+        240 milltir o daith heb lwyth neu wyth awr o yrru di-baid. Neu, gall defnyddio
+        trydanwr graddol ar gyfer batri ymestyn oes eich batri car o bosib.</li></ul><h2>3)
+        Cael MOT rhatach </h2><p>Gall cwmn\u00efau ond codi hyd at yr uchafswm swyddogol
+        ar gyfer MOT, sef \u00a354.85 ond drwy chwilio\u2019n sydyn ar-lein cewch
+        hyd i sawl garej sy\u2019n cynnig profi\u2019ch car am hanner y pris hwn.
+        Efallai y gallwch gael gostyngiad drwy ddefnyddio talebau ar-lein a chwblhau
+        eich MOT yr un pryd \u00e2\u2019r gwasanaeth. </p><p>Hefyd gallwch drefnu
+        prawf MOT mewn canolfan brofi eich cyngor lleol. Nid ydynt fel arfer yn gwneud
+        gwaith atgyweirio yn ogystal \u00e2 MOTs sy\u2019n golygu y byddant yn ddiduedd
+        wrth archwilio eich car. </p><p>I weld rhestr o ganolfannau profi MOT gan
+        gyngor lleol nad ydynt yn gwneud gwaith atgyweirio, ewch i <a title=\"Gwefan
+        UKMOT\" target=\"_blank\" href=\"http://www.ukmot.com/MOT%20test/Council%20MOT%20Test%20Centers.asp\">wefan
+        UKMOT</a>. <br/>Dysgwch ragor am <a title=\"Egluro MOT\" target=\"_blank\"
+        href=\"/cy/articles/prawf-mot-wedii-esbonio\">arbedion MOT</a></p><h2>4) Cwtogwch
+        ar gost atgyweirio </h2><p>Cymharwch ddyfynbrisiau gan sawl garej a gofyn
+        iddynt am restr eitemau o ddarnau a llafur. Nawr mae\u2019r holl wybodaeth
+        gennych ar gyfer mynd ar-lein neu i\u2019ch canolfan ailgylchu darnau ceir
+        i weld a allwch chi ddod o hyd i\u2019r darnau yn rhatach eich hun. Serch
+        hynny, cyn prynu unrhyw beth, gwnewch yn si\u0175r y bydd y garej a ddewisoch
+        yn fodlon ffitio\u2019ch darnau. </p><h2>5) Dysgwch sut i wneud y gwaith eich
+        hun. </h2><p>Gofynnwch i ffrindiau neu deulu neu ewch ar gwrs sylfaenol ar
+        gynnal car er mwyn i chi fedru gwirio unrhyw beth yn barhaus a chwblhau ambell
+        i dasg atgyweirio eich hun. Gyda chostau llafur mewn sawl garej yn uwch na
+        \u00a340 yr awr, gallai dysgu sut i newid sychwyr sgrin wynt, bylbiau neu
+        hyd yn oed badiau br\u00eacs, arbed cannoedd o bunnoedd i chi. </p><h2> 6)
+        Byddwch yn barod </h2><p>Pa un ai\u2019ch bod yn prynu car newydd neu\u2019n
+        dymuno gwirio\u2019r un sy\u2019n perthyn i chi eisoes, bydd ein <a title=\"Cyfrifiannell
+        costau car\" target=\"_blank\" href=\"/cy/tools/cyfrifiannell-costau-car\">Cyfrifiannell
+        costau car</a> yn rhoi syniad i chi o\u2019r costau gwasanaethu posibl. </p><p>Unwaith
+        y cewch argraff o\u2019r gost honno, gallwch <a title=\"Sut i bennu nod cynilo\"
+        target=\"_blank\" href=\"sut-i-bennu-nod-cynilo\">osod nod cynilo</a> a fydd
+        yn rhoi cymorth i chi baratoi. </p>","date":"2014-08-05T12:55:10+00:00"},{"id":"byddwch-yn-wyliadwrus-wrth-brynu-car-ail-law","title":"Byddwch
+        yn wyliadwrus wrth brynu car ail-law","description":"Pam y gallai prynu car
+        ail-law arwain at yrwyr yn llithro i anawsterau ariannol neu i ddyled","body":"<p
+        class=\"intro\"> Gallai prynu car ail-law arwain at yrwyr yn llithro i anawsterau
+        ariannol neu i ddyled gydag un o bob pump yn gwario mwy na\u2019r disgwyl.
+        </p><p>Mae un o bob tri yn debygol o fynd i\u2019r coch yn sgil eu pryniant
+        neu wedi cynyddu eu dyled yn sgil hynny hyd yn oed cyn wynebu costau rhedeg.
+        </p><p>Dengys ymchwil newydd gan y Gwasanaeth Cynghori Ariannol y bu i bron
+        i un o bob pump o fodurwyr a brynodd gar ail-law yn ystod y ddwy flynedd ddiwethaf
+        wario eu cyllideb i gyd, gan wario \u00a31,815 yn fwy nag a fwriadwyd. Profodd
+        dros hanner y bobl hyn gostau rhedeg o \u00a3587 yn uwch na\u2019r disgwyl
+        yn y flwyddyn gyntaf. </p><h2>Y gost o brynu car </h2><p>Gwariodd modurwyr
+        \u00a35,736 ar gyfartaledd ar geir ail-law yn ystod y ddwy flynedd ddiwethaf,
+        gyda\u2019r gr\u0175p oedran 65 a h\u0177n yn gwario\u2019r swm uchaf sef
+        \u00a37,649 a\u2019r gr\u0175p 18-24 yn gwario\u2019r swm lleiaf sef \u00a34,197.
+        </p><p>Dengys canfyddiadau\u2019r Gwasanaeth Cynghori Ariannol y bu i bron
+        i un o bob pump gyfaddef gwario mwy nag a ddymunwyd. Canlyniad hyn oedd bod
+        y rhai a wariodd eu cyllideb i gyd wedi gorwario o \u00a31,815 ar gyfartaledd.
+        </p><p>Bu i hanner y rhai a orwariodd wneud hynny gan eu bod \u2018wrth eu
+        boddau \u00e2\u2019r car\u2019, tra sylweddolodd 38% na allent gael eu car
+        delfrydol gyda\u2019u cyllideb wreiddiol. Gorwariodd cyfran debyg o bobl gan
+        eu bod y dymuno cael car gyda nodweddion gwell. </p><p>Gweler ein canllaw
+        <a title=\"Cynilo ar gyfer car\" target=\"_blank\" href=\"/cy/tools/cynilo-ar-gyfer-car\">Cynilo
+        ar gyfer car</a> i gael awgrymiadau ar sut i fforddio\u2019ch car delfrydol.
+        </p><h2>Cynilo i brynu car </h2><p>Gall car fod yn un o\u2019r pethau drutaf
+        a brynwn, sy\u2019n egluro pam fod y rhan fwyaf o yrwyr yn dibynnu ar gynilion
+        i dalu amdano. Llwyddodd ffrindiau a theulu i gyfrannu rhan neu\u2019r cyfan
+        o\u2019r arian mewn 13% o\u2019r achosion (a bydd yn rhaid i lawer ad-dalu\u2019r
+        hyn a gawsant), tra dewisodd 10% fenthyciad ariannol ar gyfer car. Defnyddiodd
+        un o bob saith fenthyciad personol neu dalu am eu car ar gerdyn credyd. </p><p>Os
+        ydych yn ystyried trefnu benthyciad ariannol i brynu car, darllenwch ein canllaw
+        <a title=\"Beth yw\u2019r ffordd orau o ariannu car?\" target=\"_blank\" href=\"/cy/articles/beth-ywr-ffordd-orau-o-brynu-car-drwy-drefniant-ariannol\">Beth
+        yw\u2019r ffordd orau o ariannu car?</a></p><h2>Mae costau rhedeg yn atal
+        benthyciadau personol i nifer o yrwyr </h2><p>Nid y gost o brynu\u2019r car
+        yn unig sy\u2019n debygol o wagio\u2019ch pocedi. Gwaith cynnal ac atgyweirio
+        yw\u2019r costau annisgwyl mwyaf, gyda chwarter y gyrwyr yn gwario \u00a3421
+        ar gyfartaledd yn fwy na\u2019r disgwyl yn ystod y 12 mis cyntaf. </p><p>Bu
+        costau tanwydd yn uchel ers tro byd, ond llwyddodd hyn i fod yn ffactor annisgwyl
+        serch hynny i un o bob pedwar gyrrwr, a wariodd \u00a3295 yn fwy na\u2019r
+        disgwyl. </p><p>Roedd premiymau yswiriant annisgwyl o ddrud yn gur pen i 23%
+        o yrwyr, gyda pholisi\u2019n costio \u00a3293 yn fwy na\u2019r disgwyl ar
+        gyfartaledd. Nid yw\u2019n syndod bod dau o bob deg gyrrwr yn mynd i ddyled
+        o ganlyniad i\u2019w pryniant. </p><h2>Mae pobl yn anghofio am ddibrisiant
+        </h2><p>Tra y bu i\u2019r rhan fwyaf o brynwyr ail-law ystyried y gost o brynu
+        car, yn ogystal \u00e2 thanwydd, yswiriant, atgyweiriadau posib a gwaith cynnal
+        yn ogystal \u00e2 threth cerbyd, ni roddodd un o bob pedwar unrhyw ystyriaeth
+        i MOT neu ddibrisiant. </p><p>Rhaid i bob car sydd yn dair oed neu yn h\u0177n
+        gael prawf MOT blynyddol - ar wah\u00e2n i gost y prawf efallai y bydd angen
+        i chi dalu am newid darnau sydd wedi gwisgo neu atgyweiriadau eraill. </p><p>Bydd
+        pob car yn dibrisio gan fod yn werth llai o arian wrth i\u2019r darnau wisgo
+        yn ogystal \u00e2 ffactorau eraill, ond mae rhai gwneuthuriadau a modelau
+        yn dal eu gwerth yn well nag eraill. </p><p>Mae\u2019n fater pwysig i yrwyr
+        sy\u2019n bwriadu gwerthu eu ceir wedi ychydig o flynyddoedd, ac yn gobeithio
+        ad-ennill rhan sylweddol o\u2019r gwariant gwreiddiol. </p><p>Mae ein <a title=\"Cyfrifiannell
+        costau car\" target=\"_blank\" href=\"/cy/tools/cyfrifiannell-costau-car\">Cyfrifiannell
+        costau car</a> yn eich galluogi i weld effaith dibrisiant ar werth car, yn
+        ogystal \u00e2\u2019r symiau nodweddiadol y disgwylid i chi eu talu am y cerbyd,
+        ei gynhaliaeth a\u2019i yswiriant. </p><h2>Bu i fwy nag un o bob pedwar brofi
+        anawsterau wrth geisio talu am gostau rhedeg car </h2><p>Tra y gall nifer
+        o yrwyr ymdopi \u00e2 biliau uwch na\u2019r disgwyl ynghlwm \u00e2 cherbydau,
+        dywedodd 27% eu bod yn ei chael hi\u2019n anodd cwrdd \u00e2\u2019r costau
+        o gadw eu car ar y ffordd. Bu i rieni gyda phlant yn byw adref a gyrwyr benywaidd
+        yn enwedig ei chael hi\u2019n anodd cwrdd \u00e2\u2019r costau hanfodol. </p><p>Dywedodd
+        tri o bob pump a brofodd anawsterau gyda\u2019r taliadau i gadw eu ceir ar
+        y ffordd eu bod wedi eu gorfodi i dorri\u2019n \u00f4l ar bethau eraill, megis
+        pethau moethus neu ddillad, er mwyn medru talu biliau. Dywedodd bron i un
+        o bob pedwar o\u2019r gyrwyr hyn fod hyn wedi cael effaith fawr ar sefyllfa
+        ariannol y cartref, ond y ffaith sy\u2019n achosi\u2019r pryder mwyaf yw bod
+        un o bob pump wedi mynd i ddyled neu ragor o ddyled er mwyn medru talu costau
+        rhedeg car. </p><h2>Bargeinio? </h2><p>Os ydych eisiau arbed arian wrth brynu
+        car, rhowch gynnig ar fargeinio. Mae ein canllaw yn rhoi rhai <a title=\"Bargeinio\"
+        target=\"_blank\" href=\"/cy/news/sut-i-elwa-drwy-fargeinio-wrth-brynu-car-ail-law\">awgrymiadau
+        da ar sut i gael andros o fargen yn y farchnad geir</a>. </p>","date":"2014-07-10T08:47:03+00:00"}]'
+    http_version:
+  recorded_at: Sat, 06 Jun 2015 22:00:30 GMT
+recorded_with: VCR 2.9.2

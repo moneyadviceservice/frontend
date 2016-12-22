@@ -155,11 +155,12 @@
   border-radius: 4px;
   color: $color-white;
   font-weight: 700;
-  padding: 0 $baseline-unit*2;
+  padding: 0;
   text-transform: uppercase;
   width: auto;
   margin-top: $baseline-unit;
   margin-bottom: $baseline-unit;
+  margin-left: $baseline-unit;
 
   .global-nav__arrow {
     display: none;
@@ -187,8 +188,17 @@
   }
 }
 
+.global-nav__clump__heading__text {
+  @include respond-to(49em, 66em) {
+    padding: 0 $baseline-unit * 2;
+  }
+
+  @include respond-to(56em, 66em) {
+    padding: 0 $baseline-unit * 3;
+  }
+}
+
 .global-nav__clump__blog-link__text {
-  padding: 0;
   border-left: none;
 
   &:before {

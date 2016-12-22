@@ -2,8 +2,8 @@
 //
 // Styleguide Global Subnavigation Content
 
-$max-cols: 6;
-$gutter: $default-gutter / 2;
+$max-cols: 6; // the maximum number of categories in the subnav
+$gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav {
   transition-property: visibility;
@@ -156,6 +156,17 @@ $gutter: $default-gutter / 2;
   @include respond-to($mq-m) {
     display: block;
     flex-grow: 2;
+  }
+}
+
+// exclude the tools column where:
+// - the viewport width < 66em and
+// - there are the maximum number of category columns
+.global-subnav__category:nth-child(#{$max-cols}) {
+  &.global-subnav__tool-category {
+    @include respond-to($mq-m, 66em) {
+      display: none;
+    }
   }
 }
 

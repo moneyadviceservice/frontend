@@ -9,26 +9,20 @@ end
 RSpec.describe '404 catachall', type: :request do
   context 'when page does not exist' do
     it 'renders the 404 page' do
-      VCR.use_cassette('core/repository/cms/cms_api/find/idonotexist') do
-        expect { get '/idonotexist' }.to raise_error(ActionController::RoutingError, 'Not Found')
-      end
+      expect { get '/idonotexist' }.to raise_error(ActionController::RoutingError, 'Not Found')
     end
   end
 
   context 'when nested page does not exist' do
     it 'renders the 404 page' do
-      VCR.use_cassette('core/repository/cms/cms_api/find/idonotexist_nested') do
-        expect { get '/en/idonotexist/other' }.to raise_error(ActionController::RoutingError, 'Not Found')
-      end
+      expect { get '/en/idonotexist/other' }.to raise_error(ActionController::RoutingError, 'Not Found')
     end
   end
 
   context 'when redirect in cms exists' do
     it 'redirects' do
-      VCR.use_cassette('core/repository/cms/cms_api/find/iamredirect') do
-        get '/iamredirect'
-        expect(response).to redirect_to('http://localhost:3000/en/elsewhere')
-      end
+      get '/our-debt-work'
+      expect(response).to redirect_to('http://localhost:5000/en/corporate/about-our-debt-work')
     end
   end
 end

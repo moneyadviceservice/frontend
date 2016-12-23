@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/en/press-release-money-advice-service-appoints-new-debt-director/page_feedbacks
+    body:
+      encoding: UTF-8
+      string: '{"liked":true,"article_id":"press-release-money-advice-service-appoints-new-debt-director","session_id":"ae2fcba004e16dffa54f91a46d274238","locale":"en","slug":"press-release-money-advice-service-appoints-new-debt-director"}'
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      Authorization:
+      - Token token="mytoken"
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - b47d3163-c33e-4a9b-ae75-86a4d8c0745d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:54 GMT
+      Status:
+      - 201 Created
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"5292904c3b403fe16e3f9aceb88af56a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b47d3163-c33e-4a9b-ae75-86a4d8c0745d
+      X-Runtime:
+      - '0.035160'
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"page_id":4364,"liked":true,"session_id":"ae2fcba004e16dffa54f91a46d274238","comment":null,"shared_on":null,"likes_count":1,"dislikes_count":0}'
+    http_version:
+  recorded_at: Tue, 20 Dec 2016 13:31:54 GMT
+recorded_with: VCR 3.0.3

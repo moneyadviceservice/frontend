@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/debt-advice-evaluation-toolkit.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:25 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"c4e9c2c168be6babb5504369a680a8c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a7a9249-cbce-4f59-8e3c-6476a203f812
+      X-Runtime:
+      - '0.044585'
+    body:
+      encoding: UTF-8
+      string: '{"id":"debt-advice-evaluation-toolkit","type":"category","title":"Debt
+        advice evaluation toolkit","description":"Debt advice evaluation toolkit","parent_id":"our-debt-work","third_level_navigation":true,"images":{"small":null,"large":null},"legacy":false,"contents":[{"id":"debt-advice-evaluation-toolkit","type":"corporate","title":"Debt
+        advice evaluation toolkit","description":""},{"id":"debt-advice-evaluation-toolkit-introduction","type":"corporate","title":"Introduction","description":""},{"id":"debt-advice-evaluation-toolkit-methodology","type":"corporate","title":"How
+        do you use the toolkit?","description":""},{"id":"debt-advice-evaluation-toolkit-time-and-sampling","type":"corporate","title":"Time
+        period of research and sampling","description":""},{"id":"debt-advice-evaluation-analysis","type":"corporate","title":"Evaluation
+        Analysis Tools","description":""},{"id":"debt-advice-evaluation-toolkit-feedback","type":"corporate","title":"Debt
+        Advice Evaluation Toolkit Feedback","description":""}],"legacy_contents":[{"id":"debt-advice-evaluation-toolkit","type":"corporate","title":"Debt
+        advice evaluation toolkit","description":""},{"id":"debt-advice-evaluation-toolkit-introduction","type":"corporate","title":"Introduction","description":""},{"id":"debt-advice-evaluation-toolkit-methodology","type":"corporate","title":"How
+        do you use the toolkit?","description":""},{"id":"debt-advice-evaluation-toolkit-time-and-sampling","type":"corporate","title":"Time
+        period of research and sampling","description":""},{"id":"debt-advice-evaluation-analysis","type":"corporate","title":"Evaluation
+        Analysis Tools","description":""},{"id":"debt-advice-evaluation-toolkit-feedback","type":"corporate","title":"Debt
+        Advice Evaluation Toolkit Feedback","description":""}],"category_promos":[],"links":[]}'
+    http_version: 
+  recorded_at: Sat, 21 Jan 2017 23:00:02 GMT
+recorded_with: VCR 3.0.3

@@ -66,10 +66,8 @@ RSpec.describe CorporateController, type: :controller do
 
     context 'when corporate page is redirected' do
       it 'is redirected to specified location' do
-        VCR.use_cassette("redirected") do
-          get :show, id: 'redirected', locale: I18n.locale
-          expect(response).to redirect_to('http://localhost:5000/en')
-        end
+        get :show, id: 'standard-financial-statement-consultation', locale: I18n.locale
+        expect(response).to redirect_to('http://localhost:5000/en/corporate/press-release-standard-financial-statement')
       end
     end
   end

@@ -27,17 +27,13 @@ module Core::Repository::CMS
     describe '#find' do
       context 'when article does not exist' do
         it 'returns nil' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/no-exist') do
-            expect(subject.find('no-exist')).to be_nil
-          end
+          expect(subject.find('no-exist')).to be_nil
         end
       end
 
       context 'when article exist' do
         it 'returns the article' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/why-save-into-a-pension') do
-            expect(subject.find('why-save-into-a-pension')).to_not be_nil
-          end
+          expect(subject.find('why-save-into-a-pension')).to_not be_nil
         end
       end
 
@@ -59,48 +55,36 @@ module Core::Repository::CMS
 
       context 'when article is a 301 redirect' do
         it 'raises Resource301Error' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/permanent-redirect') do
-            expect { subject.find('permanent-redirect') }.to raise_error Core::Repository::CMS::Resource301Error
-          end
+          expect { subject.find('understanding-your-first-payslip') }.to raise_error Core::Repository::CMS::Resource301Error
         end
 
         it 'returns status of 301' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/permanent-redirect') do
-            expect { subject.find('permanent-redirect') }.to raise_error do |error|
-              expect(error.status).to eql(301)
-            end
+          expect { subject.find('understanding-your-first-payslip') }.to raise_error do |error|
+            expect(error.status).to eql(301)
           end
         end
 
         it 'returns location of redirect' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/permanent-redirect') do
-            expect { subject.find('permanent-redirect') }.to raise_error do |error|
-              expect(error.location).to eql('http://localhost:5000/en/articles/another-article')
-            end
+          expect { subject.find('understanding-your-first-payslip') }.to raise_error do |error|
+            expect(error.location).to eql('http://localhost:5000/en/articles/understanding-your-payslip')
           end
         end
       end
 
       context 'when article is a 302 redirect' do
         it 'raises Resource302Error' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/temporary-redirect') do
-            expect { subject.find('temporary-redirect') }.to raise_error Core::Repository::CMS::Resource302Error
-          end
+          expect { subject.find('pensions-for-the-self-employed') }.to raise_error Core::Repository::CMS::Resource302Error
         end
 
         it 'returns status of 302' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/temporary-redirect') do
-            expect { subject.find('temporary-redirect') }.to raise_error do |error|
-              expect(error.status).to eql(302)
-            end
+          expect { subject.find('pensions-for-the-self-employed') }.to raise_error do |error|
+            expect(error.status).to eql(302)
           end
         end
 
         it 'returns location of redirect' do
-          VCR.use_cassette('en/core/repository/articles/cms/find/temporary-redirect') do
-            expect { subject.find('temporary-redirect') }.to raise_error do |error|
-              expect(error.location).to eql('http://localhost:5000/en/articles/other-article')
-            end
+          expect { subject.find('pensions-for-the-self-employed') }.to raise_error do |error|
+            expect(error.location).to eql('http://localhost:5000/en/articles/why-save-into-a-pension')
           end
         end
       end

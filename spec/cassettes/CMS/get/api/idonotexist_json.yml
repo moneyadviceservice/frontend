@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/idonotexist.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 63979387-70e2-42dc-bdeb-3c54eb1bd231
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:19 GMT
+      Status:
+      - 404 Not Found
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 63979387-70e2-42dc-bdeb-3c54eb1bd231
+      X-Runtime:
+      - '0.021638'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Site \"api\" not found"}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:19 GMT
+recorded_with: VCR 3.0.3

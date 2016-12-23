@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/interactive-timelines.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 94471) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 1f30a498-f546-4784-8880-44370641a5ea
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 15:53:14 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"56bf7aa272e8a0dfa5db345bc5fded99"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f30a498-f546-4784-8880-44370641a5ea
+      X-Runtime:
+      - '0.033226'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImludGVyYWN0aXZlLXRpbWVsaW5lcyIsInR5cGUiOiJjYXRlZ29yeSIsInRpdGxlIjoiSW50ZXJhY3RpdmUgdGltZWxpbmVzIiwiZGVzY3JpcHRpb24iOiJFeHBsb3JlIG91ciBtb25leSB0aW1lbGluZXMgc28geW91IGtub3cgdGhlIGFjdGlvbnMgdG8gdGFrZSBhbmQgdGhpbmdzIHRoYXQgY291bGQgYWZmZWN0IHlvdXIgaW5jb21lIiwicGFyZW50X2lkIjoidG9vbHMtYW5kLWNhbGN1bGF0b3JzIiwidGhpcmRfbGV2ZWxfbmF2aWdhdGlvbiI6ZmFsc2UsImltYWdlcyI6eyJzbWFsbCI6bnVsbCwibGFyZ2UiOm51bGx9LCJsZWdhY3kiOmZhbHNlLCJjb250ZW50cyI6W3siaWQiOiJiYWJ5LW1vbmV5LXRpbWVsaW5lIiwidHlwZSI6InRvb2wiLCJ0aXRsZSI6IkhhdmluZyBhIGJhYnkg4oCTIGludGVyYWN0aXZlIG1vbmV5IHRpbWVsaW5lIiwiZGVzY3JpcHRpb24iOiJTY3JvbGwgdGhyb3VnaCBvdXIgaW50ZXJhY3RpdmUgbW9uZXkgdGltZWxpbmUgb2Yga2V5IGRhdGVzIHdoZW4geW914oCZcmUgaGF2aW5nIGEgYmFieSBwbHVzIGxpbmtzIHRvIGZ1cnRoZXIgaW5mb3JtYXRpb24ifV0sImxlZ2FjeV9jb250ZW50cyI6W3siaWQiOiJiYWJ5LW1vbmV5LXRpbWVsaW5lIiwidHlwZSI6InRvb2wiLCJ0aXRsZSI6IkhhdmluZyBhIGJhYnkg4oCTIGludGVyYWN0aXZlIG1vbmV5IHRpbWVsaW5lIiwiZGVzY3JpcHRpb24iOiJTY3JvbGwgdGhyb3VnaCBvdXIgaW50ZXJhY3RpdmUgbW9uZXkgdGltZWxpbmUgb2Yga2V5IGRhdGVzIHdoZW4geW914oCZcmUgaGF2aW5nIGEgYmFieSBwbHVzIGxpbmtzIHRvIGZ1cnRoZXIgaW5mb3JtYXRpb24ifV0sImNhdGVnb3J5X3Byb21vcyI6W10sImxpbmtzIjpbXX0=
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 15:53:14 GMT
+recorded_with: VCR 3.0.3

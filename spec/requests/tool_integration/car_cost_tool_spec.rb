@@ -5,9 +5,7 @@ RSpec.describe 'Car Cost Tool', type: :request do
   ).each do |path|
     describe path do
       before do
-        VCR.use_cassette('car_cost_tool/get_manufacturers') do
-          get path
-        end
+        get path
       end
 
       specify { expect(response).to be_ok }

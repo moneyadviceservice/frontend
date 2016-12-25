@@ -89,10 +89,13 @@ $gutter: $default-gutter / 2; // the space between category columns
   width: 100%;
 
   @include respond-to($mq-m) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-bottom: $baseline-unit*2;
+
+    /* FB compliant -- */
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    /* -- FB compliant */
   }
 }
 
@@ -112,7 +115,11 @@ $gutter: $default-gutter / 2; // the space between category columns
     padding: 0 $gutter;
     border-top: none;
     border-bottom: none;
-    flex-grow: 1;
+
+    /* FB compliant -- */
+    // actually check if this does anything ...
+    // flex-grow: 1;
+    /* FB compliant -- */
 
     &:before {
       content: "";
@@ -140,8 +147,12 @@ $gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav__category--double {
   @include respond-to($mq-m) {
-    flex-grow: 3;
     max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+
+    /* FB compliant -- */
+    // actually check if this does anything ...
+    // flex-grow: 3;
+    /* -- FB compliant */
 
     .global-subnav__subcategories {
       column-count: 2;
@@ -155,7 +166,11 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     display: block;
-    flex-grow: 2;
+
+    /* FB compliant -- */
+    // actually check if this does anything ...
+    // flex-grow: 2;
+    /* -- FB compliant */
   }
 }
 

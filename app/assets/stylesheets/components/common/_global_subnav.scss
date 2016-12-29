@@ -39,25 +39,27 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
-.no-js {
+// this needs to be re-introduced as a no-js fallback --
+// .no-js {
   @include respond-to($mq-m) {
-    .global-nav__clump__heading {
+    .global-nav__clump__heading:not('.global-nav__clump__blog-link') {
       &:hover {
         background: $color-white;
 
         & + .global-subnav {
-          display: block;
+          visibility: visible;
           transform: none;
         }
       }
     }
 
     .global-subnav:hover {
-      display: block;
+      visibility: visible;
       transform: none;
     }
   }
-}
+// }
+// -- this needs to be re-introduced as a no-js fallback
 
 .global-subnav__heading {
   border-bottom: solid 1px rgba(0, 0, 0, 0.375);

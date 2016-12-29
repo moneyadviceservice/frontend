@@ -205,8 +205,7 @@
     /* FB compliant -- */
     // flex-grow: 1;
     // padding: 0 $baseline-unit;
-    /* -- FB compliant */
-
+    /*
     &:before {
       content: "";
       position: absolute;
@@ -216,6 +215,8 @@
       border-left: 1px solid;
       width: 1px;
     }
+    */
+    /* -- FB compliant */
   }
 }
 

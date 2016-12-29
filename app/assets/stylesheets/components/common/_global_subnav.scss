@@ -42,7 +42,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 // this needs to be re-introduced as a no-js fallback --
 // .no-js {
   @include respond-to($mq-m) {
-    .global-nav__clump__heading:not('.global-nav__clump__blog-link') {
+    .global-nav__clump__heading {
       &:hover {
         background: $color-white;
 
@@ -50,6 +50,10 @@ $gutter: $default-gutter / 2; // the space between category columns
           visibility: visible;
           transform: none;
         }
+      }
+
+      &.global-nav__clump__blog-link:hover {
+        background: $color-mas-blog-blue-hover;
       }
     }
 

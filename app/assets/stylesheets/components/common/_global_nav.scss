@@ -100,7 +100,7 @@
     /* needed for non-FB -- */
     display: table-cell;
     width: (100% / 8);
-    vertical-align: middle;
+    vertical-align: bottom;
     /* -- needed for non-FB */
 
     /* FB compliant -- */
@@ -177,6 +177,10 @@
   }
 }
 
+.global-nav__clump--blog {
+  vertical-align: middle;
+}
+
 .global-nav__clump__blog-link {
   background: $color-mas-blog-blue;
   border-radius: 4px;
@@ -188,6 +192,7 @@
   margin-top: $baseline-unit;
   margin-bottom: $baseline-unit;
   margin-left: $baseline-unit;
+  height: auto;
 
   .global-nav__arrow {
     display: none;
@@ -239,6 +244,7 @@
 
 .global-nav__clump__blog-link__text {
   border-left: none;
+  padding: $baseline-unit 10px;
 
   &:before {
     border-left: none;

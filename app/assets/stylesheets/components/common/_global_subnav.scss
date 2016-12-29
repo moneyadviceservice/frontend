@@ -17,13 +17,15 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     transition: none;
-    visibility: visible;
     top: 100%;
     transform: none;
     width: 100%;
     margin: 0;
     max-width: none;
-    display: none;
+
+    /* needed for non-FB -- */
+    display: table-row;
+    /* -- needed for non-FB */
 
     &:after {
       box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6);
@@ -32,7 +34,7 @@ $gutter: $default-gutter / 2; // the space between category columns
     }
 
     &.is-active {
-      display: block;
+      visibility: visible;
     }
   }
 }
@@ -109,16 +111,22 @@ $gutter: $default-gutter / 2; // the space between category columns
     border-bottom: none;
     box-shadow: none;
     position: relative;
-    max-width: 100% / ($max-cols - 2);
-    min-width: 100% / $max-cols;
     margin: 0;
     padding: 0 $gutter;
     border-top: none;
     border-bottom: none;
 
+    /* needed for non-FB -- */
+    display: table-cell;
+    vertical-align: top;
+    width: 100% / $max-cols;
+    /* -- needed for non-FB */
+
     /* FB compliant -- */
     // actually check if this does anything ...
     // flex-grow: 1;
+    // max-width: 100% / ($max-cols - 2);
+    // min-width: 100% / $max-cols;
     /* FB compliant -- */
 
     &:before {
@@ -147,11 +155,14 @@ $gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav__category--double {
   @include respond-to($mq-m) {
-    max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+    /* needed for non-FB -- */
+    width: ((100% / $max-cols) * 2) + $gutter;
+    /* -- needed for non-FB */
 
     /* FB compliant -- */
     // actually check if this does anything ...
     // flex-grow: 3;
+    // max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
     /* -- FB compliant */
 
     .global-subnav__subcategories {
@@ -165,10 +176,14 @@ $gutter: $default-gutter / 2; // the space between category columns
   display: none;
 
   @include respond-to($mq-m) {
-    display: block;
+    /* needed for non-FB -- */
+    display: table-cell;
+    vertical-align: top;
+    /* -- needed for non-FB */
 
     /* FB compliant -- */
     // actually check if this does anything ...
+    // display: block;
     // flex-grow: 2;
     /* -- FB compliant */
   }

@@ -23,9 +23,9 @@ $gutter: $default-gutter / 2; // the space between category columns
     margin: 0;
     max-width: none;
 
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     display: table-row;
-    /* -- needed for non-FB */
+    /* -- non-FlexBox compliant */
 
     &:after {
       box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6);
@@ -39,7 +39,9 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
-// this needs to be re-introduced as a no-js fallback --
+// this needs to be re-introduced as a no-js fallback
+// part of the behaviour changes --
+// included here as a rough approximation of behaviour for testing visual aspects
 // .no-js {
   @include respond-to($mq-m) {
     .global-nav__clump__heading {
@@ -98,12 +100,6 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
-
-    /* FB compliant -- */
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    /* -- FB compliant */
   }
 }
 
@@ -122,18 +118,18 @@ $gutter: $default-gutter / 2; // the space between category columns
     border-top: none;
     border-bottom: none;
 
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     display: table-cell;
     vertical-align: top;
     width: 100% / $max-cols;
-    /* -- needed for non-FB */
+    /* -- non-FlexBox compliant */
 
-    /* FB compliant -- */
+    /* FlexBox compliant -- */
     // actually check if this does anything ...
     // flex-grow: 1;
     // max-width: 100% / ($max-cols - 2);
     // min-width: 100% / $max-cols;
-    /* FB compliant -- */
+    /* FlexBox compliant -- */
 
     &:before {
       content: "";
@@ -161,15 +157,9 @@ $gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav__category--double {
   @include respond-to($mq-m) {
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     width: ((100% / $max-cols) * 2) + $gutter;
-    /* -- needed for non-FB */
-
-    /* FB compliant -- */
-    // actually check if this does anything ...
-    // flex-grow: 3;
-    // max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
-    /* -- FB compliant */
+    /* -- non-FlexBox compliant */
 
     .global-subnav__subcategories {
       column-count: 2;
@@ -178,20 +168,49 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-subnav {
+      display: block;
+    }
+
+    .global-subnav__categories {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .global-subnav__category {
+      display: block;
+      flex-grow: 1;
+      max-width: 100% / ($max-cols - 2);
+      min-width: 100% / $max-cols;
+    }
+
+    .global-subnav__category--double {
+        width: auto;
+        max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+        flex-grow: 3;
+    }
+  }
+}
+/* -- FlexBox compliant */
+
 .global-subnav__tool-category {
   display: none;
 
   @include respond-to($mq-m) {
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     display: table-cell;
     vertical-align: top;
-    /* -- needed for non-FB */
+    /* -- non-FlexBox compliant */
 
-    /* FB compliant -- */
+    /* FlexBox compliant -- */
     // actually check if this does anything ...
     // display: block;
     // flex-grow: 2;
-    /* -- FB compliant */
+    /* -- FlexBox compliant */
   }
 }
 
@@ -282,3 +301,37 @@ $gutter: $default-gutter / 2; // the space between category columns
   left: 0;
   bottom: 0;
 }
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-subnav {
+      display: block;
+    }
+
+    .global-subnav__categories {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .global-subnav__category {
+      display: block;
+      flex-grow: 1;
+      max-width: 100% / ($max-cols - 2);
+      min-width: 100% / $max-cols;
+    }
+
+    .global-subnav__category--double {
+        width: auto;
+        max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+        flex-grow: 3;
+    }
+
+    .global-subnav__tool-category {
+      display: block;
+      flex-grow: 2;
+    }
+  }
+}
+/* -- FlexBox compliant */

@@ -16,12 +16,10 @@
     transform: none;
     background: $color-yellow-light;
 
-    /* needed for non-FB -- */
-    @include respond-to($mq-m) {
-      display: table;
-      height: 100%;
-    }
-    /* -- needed for non-FB */
+    /* non-FlexBox compliant -- */
+    display: table;
+    height: 100%;
+    /* -- non-FlexBox compliant */
   }
 
   &.is-active {
@@ -61,16 +59,9 @@
     background: transparent;
     display: inline-block;
 
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     display: table-row;
-    /* -- needed for non-FB */
-
-    /* FB compliant -- */
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
-    // justify-content: center;
-    /* -- FB compliant */
+    /* -- non-FlexBox compliant */
   }
 
   &.is-active {
@@ -97,17 +88,11 @@
     border-bottom: none;
     box-shadow: none;
 
-    /* needed for non-FB -- */
+    /* non-FlexBox compliant -- */
     display: table-cell;
     width: (100% / 8);
     vertical-align: bottom;
-    /* -- needed for non-FB */
-
-    /* FB compliant -- */
-    // display: flex;
-    // flex-direction: column;
-    // flex-grow: 1;
-    /* -- FB compliant */
+    /* -- non-FlexBox compliant */
 
     .global-nav__arrow {
       display: none;
@@ -169,11 +154,6 @@
     line-height: 1;
     text-align: center;
     padding: 0;
-
-    /* FB compliant -- */
-    // display: flex;
-    // flex-grow: 1;
-    /* -- FB compliant */
   }
 }
 
@@ -203,43 +183,16 @@
   @include respond-to($mq-m) {
     display: block;
     padding: $baseline-unit*2 0;
-
-    /* needed for non-FB -- */
-    width: 100%;
-    /* needed for non-FB -- */
-
-    /* FB compliant -- */
-    // flex-grow: 1;
-    // padding: 0 $baseline-unit;
-    /*
-    &:before {
-      content: "";
-      position: absolute;
-      top: $baseline-unit * 2;
-      bottom: $baseline-unit * 2;
-      left: -0.5px;
-      border-left: 1px solid;
-      width: 1px;
-    }
-    */
-    /* -- FB compliant */
   }
 }
 
-/* FB compliant --
-.global-nav__clump__heading__text {
-  @include respond-to(49em, 66em) {
-    padding: 0 $baseline-unit * 2;
-  }
-
-  @include respond-to(56em, 66em) {
-    padding: 0 $baseline-unit * 3;
-  }
+/* non-FlexBox compliant -- */
+.global-nav__clump__blog-link {
+  float: right;
 }
--- FB compliant */
+/* -- non-FlexBox compliant */
 
 .global-nav__clump__blog-link__text {
-  border-left: none;
   padding: $baseline-unit 10px;
 
   &:before {
@@ -256,3 +209,72 @@
     text-align: center;
   }
 }
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-nav {
+      display: block;
+      height: auto;
+    }
+
+    .global-nav__clumps {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .global-nav__clump {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .global-nav__clump__heading {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .global-nav__clump__heading__text {
+      width: auto;
+      flex-grow: 1;
+      padding-left: $baseline-unit;
+      padding-right: $baseline-unit;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $baseline-unit * 2;
+        bottom: $baseline-unit * 2;
+        left: -0.5px;
+        border-left: 1px solid;
+        width: 1px;
+      }
+    }
+
+    .global-nav__clump__blog-link {
+      float: none;
+    }
+
+    .global-nav__clump__blog-link__text:before {
+      border-left: none;
+    }
+  }
+
+  @include respond-to(49em, 56em) {
+    .global-nav__clump__heading__text {
+      padding-left: $baseline-unit * 2;
+      padding-right: $baseline-unit * 2;
+    }
+  }
+
+  @include respond-to(56em, 66em) {
+    .global-nav__clump__heading__text {
+      padding-left: $baseline-unit * 3;
+      padding-right: $baseline-unit * 3;
+    }
+  }
+}
+/* -- FlexBox compliant */

@@ -124,13 +124,6 @@ $gutter: $default-gutter / 2; // the space between category columns
     width: 100% / $max-cols;
     /* -- non-FlexBox compliant */
 
-    /* FlexBox compliant -- */
-    // actually check if this does anything ...
-    // flex-grow: 1;
-    // max-width: 100% / ($max-cols - 2);
-    // min-width: 100% / $max-cols;
-    /* FlexBox compliant -- */
-
     &:before {
       content: "";
       position: absolute;
@@ -168,35 +161,6 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
-/* FlexBox compliant -- */
-.flexbox {
-  @include respond-to($mq-m) {
-    .global-subnav {
-      display: block;
-    }
-
-    .global-subnav__categories {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .global-subnav__category {
-      display: block;
-      flex-grow: 1;
-      max-width: 100% / ($max-cols - 2);
-      min-width: 100% / $max-cols;
-    }
-
-    .global-subnav__category--double {
-        width: auto;
-        max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
-        flex-grow: 3;
-    }
-  }
-}
-/* -- FlexBox compliant */
-
 .global-subnav__tool-category {
   display: none;
 
@@ -205,12 +169,6 @@ $gutter: $default-gutter / 2; // the space between category columns
     display: table-cell;
     vertical-align: top;
     /* -- non-FlexBox compliant */
-
-    /* FlexBox compliant -- */
-    // actually check if this does anything ...
-    // display: block;
-    // flex-grow: 2;
-    /* -- FlexBox compliant */
   }
 }
 

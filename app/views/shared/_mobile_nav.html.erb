@@ -2,7 +2,7 @@
   <% if display_menu_button_in_header? %>
     <% unless hide_elements_irrelevant_for_third_parties? %>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link mobile-nav__link--menu"><%= t('mobile_nav.menu') %></a><!-- href="#primary-nav" -->
+        <a class="mobile-nav__link mobile-nav__link--menu" href="#" role="button"><%= t('mobile_nav.menu') %></a><!-- href="#primary-nav" -->
       </li>
     <% end %>
   <% end %>

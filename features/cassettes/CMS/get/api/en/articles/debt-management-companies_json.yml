@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/articles/debt-management-companies.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - ddc03b2b-053e-498a-aee7-641429730957
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:30 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"796412ca08b589b3817e38164704e9e8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ddc03b2b-053e-498a-aee7-641429730957
+      X-Runtime:
+      - '0.080277'
+    body:
+      encoding: UTF-8
+      string: '{"label":"Debt Management Companies","slug":"debt-management-companies","full_path":"/en/articles/debt-management-companies","meta_description":"","meta_title":"Firms
+        and individuals no longer able to offer debt management plans","category_names":[],"layout_identifier":"article","related_content":{"latest_blog_post_links":[{"title":"Unwanted
+        gift? Do you know your rights to return?","path":"https://www.moneyadviceservice.org.uk/blog/unwanted-gift-do-you-know-your-rights-to-return"},{"title":"Are
+        your presents covered this Christmas?","path":"https://www.moneyadviceservice.org.uk/blog/are-your-presents-covered-this-christmas"},{"title":"The
+        last minute ways to save on Christmas","path":"https://www.moneyadviceservice.org.uk/blog/the-last-minute-ways-to-save-on-christmas"}],"popular_links":[{"title":"How
+        to save money on household bills","path":"/en/articles/how-to-save-money-on-household-bills"},{"title":"Benefits
+        you can claim when you''re pregnant or have a baby","path":"/en/articles/benefits-and-entitlements-to-claim-when-you-have-a-baby"},{"title":"Tax
+        and National Insurance deductions","path":"/en/articles/tax-and-national-insurance-deductions"}],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2016-10-21T09:02:05.000Z","blocks":[{"identifier":"content","content":"\u003cp\u003eIn
+        light of the FCA authorisations process, the following firms are no longer
+        able to offer debt management plans\u003c/p\u003e\n\n\u003cp\u003eSome firms
+        that were providing Debt Management Plans may have sold their client list
+        to another company. If you want to be sure that the firm you are working with
+        is still authorised by the FCA check the \u003ca href=\"http://fca-consumer-credit-interim.force.com/CS_RegisterSearchPageNew\"\u003eConsumer
+        Credit Register\u003c/a\u003e.\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eAaron
+        Cooper\u003c/li\u003e\n  \u003cli\u003eAbbey Taylor Limited\u003c/li\u003e\n  \u003cli\u003eAequitas
+        Financial LLP\u003c/li\u003e\n  \u003cli\u003eAlexander Barclay\u003c/li\u003e\n  \u003cli\u003eAlpha
+        Debt Management Ltd\u003c/li\u003e\n  \u003cli\u003eAshley Park Financial
+        Solutions\u003c/li\u003e\n  \u003cli\u003eAssured Money Solutions Limited\u003c/li\u003e\n  \u003cli\u003eBarrister
+        Lloyd Debt Solutions Ltd\u003c/li\u003e\n  \u003cli\u003eBelmont Financial
+        Management Consultants Limited\u003c/li\u003e\n  \u003cli\u003eBest 4 Loans\u003c/li\u003e\n  \u003cli\u003eBig
+        t Media Ltd\u003c/li\u003e\n  \u003cli\u003eCarefree Group Limited\u003c/li\u003e\n  \u003cli\u003eChatsworth
+        Woodbine Limited\u003c/li\u003e\n  \u003cli\u003eChristopher Dillon Inspired
+        Solutions\u003c/li\u003e\n  \u003cli\u003eChristopher John Bridgwater\u003c/li\u003e\n  \u003cli\u003eChurchwood
+        Financial Limited\u003c/li\u003e\n  \u003cli\u003eCL Perry\u003c/li\u003e\n  \u003cli\u003eClear
+        the Debt Limited\u003c/li\u003e\n  \u003cli\u003eCollect Services Limited\u003c/li\u003e\n  \u003cli\u003eConclusive
+        Financial Limited\u003c/li\u003e\n  \u003cli\u003eCountrywide Debt Collections
+        LTD\u003c/li\u003e\n  \u003cli\u003eCredit-Hero Ltd\u003c/li\u003e\n  \u003cli\u003eCross
+        Keys Estates\u003c/li\u003e\n  \u003cli\u003eCrystal Clear Finance Ltd\u003c/li\u003e\n  \u003cli\u003eDavid
+        A Williams t/a Debts Maze Solutions\u003c/li\u003e\n  \u003cli\u003eDavid
+        Hodkinson\u003c/li\u003e\n  \u003cli\u003eDebt Care Management Limited\u003c/li\u003e\n  \u003cli\u003eDebt
+        Clever\u003c/li\u003e\n  \u003cli\u003eDebt Clever Limited\u003c/li\u003e\n  \u003cli\u003eDebt
+        Clever Financial Management Limited\u003c/li\u003e\n  \u003cli\u003eDebthelp-Advice.com\u003c/li\u003e\n  \u003cli\u003eDebt
+        Lifeline Limited\u003c/li\u003e\n  \u003cli\u003eDebt Organised Ltd\u003c/li\u003e\n  \u003cli\u003eDebt
+        Resolve\u003c/li\u003e\n  \u003cli\u003eDebt Solutions 4 U UK Ltd\u003c/li\u003e\n  \u003cli\u003eDebt
+        Solutions Direct Ltd\u003c/li\u003e\n  \u003cli\u003eDebt Specialist Centre
+        Limited\u003c/li\u003e\n  \u003cli\u003eDebtaid Limited\u003c/li\u003e\n  \u003cli\u003eDebtFree
+        Haven Limited\u003c/li\u003e\n  \u003cli\u003edebtstream limited\u003c/li\u003e\n  \u003cli\u003eDr
+        Lincoln Advice Centre Ltd\u003c/li\u003e\n  \u003cli\u003eElite Debt Solutions
+        Ltd\u003c/li\u003e\n  \u003cli\u003eEnable Money Solutions\u003c/li\u003e\n  \u003cli\u003eExpress
+        Debt Solutions\u003c/li\u003e\n  \u003cli\u003eFairline Financial Limited\u003c/li\u003e\n  \u003cli\u003eFidelitas
+        Group Limited\u003c/li\u003e\n  \u003cli\u003eFinancial Vision Partnership
+        Limited\u003c/li\u003e\n  \u003cli\u003eFirst Credit Advice Limited\u003c/li\u003e\n  \u003cli\u003eFlairford
+        Securities Ltd\u003c/li\u003e\n  \u003cli\u003eGemstone Financial Management
+        Ltd\u003c/li\u003e\n  \u003cli\u003eGuardian Financial Solutions Ltd\u003c/li\u003e\n  \u003cli\u003eHashim
+        Sharif\u003c/li\u003e\n  \u003cli\u003eHelen Shakespeare\u003c/li\u003e\n  \u003cli\u003eIdeal
+        Money Solutions Ltd\u003c/li\u003e\n  \u003cli\u003eIncentive Financial Ltd\u003c/li\u003e\n  \u003cli\u003eIngleton
+        Chambers Ltd\u003c/li\u003e\n  \u003cli\u003eIronbridge (Money Management)
+        Ltd\u003c/li\u003e\n  \u003cli\u003eIS Business House\u003c/li\u003e\n  \u003cli\u003eI-Sm@art
+        Consumer Services Ltd\u003c/li\u003e\n  \u003cli\u003eJohn Harold Brooks\u003c/li\u003e\n  \u003cli\u003eKensington
+        Financial Management Consultants Limited\u003c/li\u003e\n  \u003cli\u003eLinda
+        Carole Stuart\u003c/li\u003e\n  \u003cli\u003eMohammed Sharif Miah\u003c/li\u003e\n  \u003cli\u003eMoney
+        \u0026amp; Debt Consultancy\u003c/li\u003e\n  \u003cli\u003eMoney \u0026amp;
+        More Limited\u003c/li\u003e\n  \u003cli\u003eMoney Claims UK Limited\u003c/li\u003e\n  \u003cli\u003eMoney
+        Clinic Debt Management Limited\u003c/li\u003e\n  \u003cli\u003eMoney Enterprises
+        Limited t/a Island Debt Management\u003c/li\u003e\n  \u003cli\u003eMoney Junction
+        Limited\u003c/li\u003e\n  \u003cli\u003eMoney Matcher Limited\u003c/li\u003e\n  \u003cli\u003eMoney
+        Matters Action Cic\u003c/li\u003e\n  \u003cli\u003eMoorhead Savage Limited\u003c/li\u003e\n  \u003cli\u003eMunro
+        Hamer and Pursaill Accountants Ltd\u003c/li\u003e\n  \u003cli\u003eMy Debt
+        Lifeline UK Ltd\u003c/li\u003e\n  \u003cli\u003eN and G (South East) Limited\u003c/li\u003e\n  \u003cli\u003eNM
+        Solution Limited\u003c/li\u003e\n  \u003cli\u003eOne Credit Key Lmited\u003c/li\u003e\n  \u003cli\u003eOne-Call
+        Debt Solutions Limited\u003c/li\u003e\n  \u003cli\u003ePaul Christopher Richmond\u003c/li\u003e\n  \u003cli\u003ePaul
+        Fouzi Ayob Johns\u003c/li\u003e\n  \u003cli\u003ePDHL Limited\u003c/li\u003e\n  \u003cli\u003ePhoenix
+        Company Consultants North Ltd\u003c/li\u003e\n  \u003cli\u003ePositive Steps
+        Debt Assistance\u003c/li\u003e\n  \u003cli\u003ePromise Debt solutions Limited\u003c/li\u003e\n  \u003cli\u003ePromise
+        Financial Solutions UK Limited\u003c/li\u003e\n  \u003cli\u003eQuickly Finance
+        Limited\u003c/li\u003e\n  \u003cli\u003eR M R Financial Services t/a Compass
+        Debt Counsellors\u003c/li\u003e\n  \u003cli\u003eRobert Monks\u003c/li\u003e\n  \u003cli\u003eSage
+        Independent Advisers Ltd\u003c/li\u003e\n  \u003cli\u003eSimple Financial\u003c/li\u003e\n  \u003cli\u003eSmart
+        Debt Ltd\u003c/li\u003e\n  \u003cli\u003eSmart UK Solutions Limited\u003c/li\u003e\n  \u003cli\u003eSouthern
+        Tree Limited\u003c/li\u003e\n  \u003cli\u003eSterling Trust UK\u003c/li\u003e\n  \u003cli\u003eSwift
+        Financial Solutions Ltd\u003c/li\u003e\n  \u003cli\u003eTemple Finance Services
+        ltd\u003c/li\u003e\n  \u003cli\u003eThe Insolvency Advisory Service Limited\u003c/li\u003e\n  \u003cli\u003eTotal
+        Money Solutions Limited\u003c/li\u003e\n  \u003cli\u003eTwinpier Publishing
+        Limited\u003c/li\u003e\n  \u003cli\u003eValour Financial Management\u003c/li\u003e\n  \u003cli\u003eVictorstone
+        Limited\u003c/li\u003e\n  \u003cli\u003eWhiteWater Debt Management Limited\u003c/li\u003e\n  \u003cli\u003eWilson
+        Field Limited\u003c/li\u003e\n\u003c/ul\u003e\n","created_at":"2016-06-14T11:23:55.000Z","updated_at":"2016-10-21T09:02:06.000Z"}],"translations":[{"label":"Debt
+        Management Companies","link":"/cy/articles/debt-management-companies","language":"cy"}]}'
+    http_version: 
+  recorded_at: Sat, 21 Jan 2017 23:00:07 GMT
+recorded_with: VCR 3.0.3

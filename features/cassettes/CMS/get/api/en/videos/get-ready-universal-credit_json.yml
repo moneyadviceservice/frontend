@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/videos/get-ready-universal-credit.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (phlee.local; plee; 7501) ruby/2.1.2 (95; x86_64-darwin14.0)
+      X-Request-Id:
+      - e58ee21e-f7fa-4bb2-ba8d-c36a3356ec3c
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"48f062eec50448f0b0fac2843c2ba59a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e58ee21e-f7fa-4bb2-ba8d-c36a3356ec3c
+      X-Runtime:
+      - '0.057352'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 06 May 2015 13:54:03 GMT
+      Content-Length:
+      - '2350'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkdldCByZWFkeSBmb3IgVW5pdmVyc2FsIENyZWRpdCIsInNs
+        dWciOiJnZXQtcmVhZHktdW5pdmVyc2FsLWNyZWRpdCIsImZ1bGxfcGF0aCI6
+        Ii9nZXQtcmVhZHktdW5pdmVyc2FsLWNyZWRpdCIsIm1ldGFfZGVzY3JpcHRp
+        b24iOiJJbiBBcHJpbCAyMDEzLCB0aGUgZ292ZXJubWVudCBzdGFydGVkIGJy
+        aW5naW5nIGluIGEgbmV3IHR5cGUgb2YgZmluYW5jaWFsIHN1cHBvcnQgY2Fs
+        bGVkIFVuaXZlcnNhbCBDcmVkaXQuIiwibWV0YV90aXRsZSI6IiIsImNhdGVn
+        b3J5X25hbWVzIjpbInVuaXZlcnNhbC1jcmVkaXQiLCJ2aWRlb3MiXSwibGF5
+        b3V0X2lkZW50aWZpZXIiOiJ2aWRlbyIsInJlbGF0ZWRfY29udGVudCI6eyJs
+        YXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbXSwicG9wdWxhcl9saW5rcyI6W3si
+        dGl0bGUiOiJFc3RpbWF0ZSB5b3VyIG92ZXJhbGwgY29zdCBvZiBidXlpbmcg
+        YSBob3VzZSBhbmQgbW92aW5nIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9lc3Rp
+        bWF0ZS15b3VyLW92ZXJhbGwtYnV5aW5nLWFuZC1tb3ZpbmctY29zdHMifSx7
+        InRpdGxlIjoiQmVuZWZpdHMgeW91IGFyZSBlbnRpdGxlZCB0byB3aGVuIGhh
+        dmluZyBhIGJhYnkiLCJwYXRoIjoiL2VuL2FydGljbGVzL2JlbmVmaXRzLWFu
+        ZC1lbnRpdGxlbWVudHMtdG8tY2xhaW0td2hlbi15b3UtaGF2ZS1hLWJhYnki
+        fSx7InRpdGxlIjoiRmlyc3QtdGltZSBob21lIGJ1eWVyIGd1aWRlIiwicGF0
+        aCI6Ii9lbi9hcnRpY2xlcy9maXJzdC10aW1lLWJ1eWVyLW1vbmV5LXRpcHMi
+        fV0sInJlbGF0ZWRfbGlua3MiOlt7InRpdGxlIjoiV29ya2luZyBUYXggQ3Jl
+        ZGl0IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy93b3JraW5nLXRheC1jcmVkaXQi
+        fSx7InRpdGxlIjoiV2hvIGlzIGFmZmVjdGVkIGJ5IFVuaXZlcnNhbCBDcmVk
+        aXQiLCJwYXRoIjoiL2VuL2FydGljbGVzL3doby1pcy1hZmZlY3RlZC1ieS11
+        bml2ZXJzYWwtY3JlZGl0In0seyJ0aXRsZSI6IkEgZ3VpZGUgdG8gVW5pdmVy
+        c2FsIENyZWRpdCBmb3IgdGhlIHNlbGYtZW1wbG95ZWQiLCJwYXRoIjoiL2Vu
+        L2FydGljbGVzL3VuaXZlcnNhbC1jcmVkaXQtZm9yLXRoZS1zZWxmLWVtcGxv
+        eWVkIn1dLCJwcmV2aW91c19saW5rIjp7InRpdGxlIjoiQWN0aW9uIHBsYW4g
+        4oCTIEdldCByZWFkeSBmb3IgVW5pdmVyc2FsIENyZWRpdCIsInBhdGgiOiIv
+        ZW4vYXJ0aWNsZXMvZ2V0LXJlYWR5LWZvci11bml2ZXJzYWwtY3JlZGl0In0s
+        Im5leHRfbGluayI6eyJ0aXRsZSI6IkJ1ZGdldCBwbGFubmVyIiwicGF0aCI6
+        Ii9lbi9hcnRpY2xlcy9idWRnZXQtcGxhbm5lciJ9fSwiYmxvY2tzIjpbeyJp
+        ZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNl
+        SW4gQXByaWwgMjAxMywgdGhlIGdvdmVybm1lbnQgc3RhcnRlZCBicmluZ2lu
+        ZyBpbiBhIG5ldyB0eXBlIG9mIGZpbmFuY2lhbCBzdXBwb3J0IGNhbGxlZCBV
+        bml2ZXJzYWwgQ3JlZGl0Llx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAw
+        M2VJdOKAmXMgZm9yIHBlb3BsZSB3aG8gYXJlIGxvb2tpbmcgZm9yIHdvcmsg
+        b3Igb24gYSBsb3cgaW5jb21lIGFuZCBpdCB3aWxsIGV2ZW50dWFsbHkgcmVw
+        bGFjZSBtYW55IG9mIHRoZSBiZW5lZml0cyBhbmQgdGF4IGNyZWRpdHMgdGhl
+        eeKAmXJlIGdldHRpbmcgYXQgdGhlIG1vbWVudC5cdTAwM2MvcFx1MDAzZVxu
+        XG5cdTAwM2NwXHUwMDNlVGhlcmUgYXJlIHRoaW5ncyB5b3UgY2FuIGRvIGJl
+        Zm9yZWhhbmQgdG8gbWFrZSBzdXJlIHlvdeKAmXJlIHJlYWR5IGZvciB0aGUg
+        Y2hhbmdlcyB3aGVuIHRoZXkgaGFwcGVuLlx1MDAzYy9wXHUwMDNlXG5cblx1
+        MDAzY2lmcmFtZSBmcmFtZWJvcmRlcj1cIjBcIiBoZWlnaHQ9XCI0MTNcIiB3
+        aWR0aD1cIjY4MFwiIHNyYz1cImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2Vt
+        YmVkL0h2SlRkUEVLWXpvXCIgdGl0bGU9XCJWaWRlb1wiXHUwMDNlXG5cdTAw
+        M2MvaWZyYW1lXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9
+        XCJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2ZpbGVz
+        L2dldC1yZWFkeS1mb3ItdW5pdmVyc2FsLWNyZWRpdC1kb2MuZG9jXCJcdTAw
+        M2VSZWFkIGEgdHJhbnNjcmlwdCBvZiB0aGlzIHZpZGVvIChET0MgMjVLQilc
+        dTAwM2MvYVx1MDAzZVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0Ijoi
+        MjAxNS0wMi0yM1QxNDowNzozMC4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTUt
+        MDMtMDlUMTE6Mjc6MjIuMDAwWiJ9XSwidHJhbnNsYXRpb25zIjpbeyJsYWJl
+        bCI6IlBhcmF0b3djaCBhdCBHcmVkeWQgVW5pb25neXJjaG9sIiwibGluayI6
+        Ii9jeS92aWRlb3MvcGFyYXRvaS1hci1neWZlci1jcmVkeWQiLCJsYW5ndWFn
+        ZSI6ImN5In1dfQ==
+    http_version:
+  recorded_at: Sat, 06 Jun 2015 22:01:03 GMT
+recorded_with: VCR 2.9.2

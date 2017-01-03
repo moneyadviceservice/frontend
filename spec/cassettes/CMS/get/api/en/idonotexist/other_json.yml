@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/idonotexist/other.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 3ef3158e-02a1-4782-beb0-6b3375fbddda
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:19 GMT
+      Status:
+      - 400 Bad Request
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3ef3158e-02a1-4782-beb0-6b3375fbddda
+      X-Runtime:
+      - '0.021976'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Page type \"idonotexist\" not supported"}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:19 GMT
+recorded_with: VCR 3.0.3

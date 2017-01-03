@@ -40,6 +40,30 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.ignore_hosts 'codeclimate.com'
+
+  c.around_http_request do |request|
+    uri = URI(request.uri)
+
+    if ENV['MAS_CMS_URL'] =~ /#{uri.host}/
+      VCR.use_cassette("/CMS/#{request.method}#{uri.path}#{uri.query}", &request)
+
+    # Sanitize the params when using to build the filename
+    elsif uri.host =~ /googleapis.com/
+      params = CGI.parse(uri.query)
+      params['key'] = ['GOOGLE_API_KEY']
+      params['cx'].first.gsub!(/#{ENV['GOOGLE_API_CX_EN']}/, 'GOOGLE_API_CX_EN')
+      params['cx'].first.gsub!(/#{ENV['GOOGLE_API_CX_CY']}/, 'GOOGLE_API_CX_CY')
+
+      VCR.use_cassette("/GOOGLE_SEARCH/#{request.method}/#{params.to_query}", &request)
+
+    else
+      VCR.use_cassette("/#{uri.host}/#{request.method}#{uri.path}#{uri.query}", &request)
+    end
+  end
+
+  c.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
+  c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }
+  c.filter_sensitive_data('<GOOGLE_API_CX_CY>') { ENV['GOOGLE_API_CX_CY'] }
 end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')
@@ -76,24 +100,6 @@ RSpec.configure do |c|
   c.disable_monkey_patching!
 
   c.around(:example) do |example|
-    action_plan_repository = Core::Registry::Repository[:action_plan]
-    article_repository     = Core::Registry::Repository[:article]
-    category_repository    = Core::Registry::Repository[:category]
-    corporate_repository   = Core::Registry::Repository[:corporate]
-    search_repository      = Core::Registry::Repository[:search]
-    home_page_repository   = Core::Registry::Repository[:home_page]
-    preview_repository     = Core::Registry::Repository[:preview]
-    footer_repository     = Core::Registry::Repository[:footer]
-
-    Core::Registry::Repository[:action_plan] = Core::Repository::VCR.new(action_plan_repository)
-    Core::Registry::Repository[:article]     = Core::Repository::VCR.new(article_repository)
-    Core::Registry::Repository[:category]    = Core::Repository::VCR.new(category_repository)
-    Core::Registry::Repository[:corporate]   = Core::Repository::VCR.new(corporate_repository)
-    Core::Registry::Repository[:search]      = Core::Repository::VCR.new(search_repository)
-    Core::Registry::Repository[:home_page]   = Core::Repository::VCR.new(home_page_repository)
-    Core::Registry::Repository[:preview]     = Core::Repository::VCR.new(preview_repository)
-    Core::Registry::Repository[:footer]      = Core::Repository::VCR.new(footer_repository)
-
     if example.metadata[:features]
       Feature.run_with_activated(*example.metadata[:features]) do
         Rails.application.reload_routes!
@@ -111,15 +117,6 @@ RSpec.configure do |c|
     else
       example.run
     end
-
-    Core::Registry::Repository[:action_plan] = action_plan_repository
-    Core::Registry::Repository[:article]     = article_repository
-    Core::Registry::Repository[:category]    = category_repository
-    Core::Registry::Repository[:corporate]   = corporate_repository
-    Core::Registry::Repository[:search]      = search_repository
-    Core::Registry::Repository[:home_page]   = home_page_repository
-    Core::Registry::Repository[:preview]     = preview_repository
-    Core::Registry::Repository[:footer]      = footer_repository
   end
 
   c.before(:suite) do

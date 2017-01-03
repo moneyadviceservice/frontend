@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/travel-insurance.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 94471) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 1ba03278-22a9-468e-8a01-88cfda99689f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 15:53:16 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"9ac5f398180e0460d8dc974659aec0c4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1ba03278-22a9-468e-8a01-88cfda99689f
+      X-Runtime:
+      - '0.046254'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InRyYXZlbC1pbnN1cmFuY2UiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6IlRyYXZlbCBpbnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6IkxlYXJuIGhvdyB0byBjaG9vc2UgdGhlIHJpZ2h0IGxldmVsIG9mIGNvdmVyLCBnZXQgdGhlIGJlc3QgZGVhbCwgYW5kIGhvdyB0byBtYWtlIGEgdHJhdmVsIGluc3VyYW5jZSBjbGFpbS4iLCJwYXJlbnRfaWQiOiJpbnN1cmFuY2UiLCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiaW1hZ2VzIjp7InNtYWxsIjpudWxsLCJsYXJnZSI6bnVsbH0sImxlZ2FjeSI6ZmFsc2UsImNvbnRlbnRzIjpbeyJpZCI6ImRvLXlvdS1uZWVkLXRyYXZlbC1pbnN1cmFuY2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkRvIHlvdSBuZWVkIHRyYXZlbCBpbnN1cmFuY2U/IiwiZGVzY3JpcHRpb24iOiJJZiB5b3UgYXJlIGdvaW5nIGFicm9hZCBtYWtlIHN1cmUgeW91IGhhdmUgdHJhdmVsIGluc3VyYW5jZSB0byBzdG9wIGEgbWVkaWNhbCBlbWVyZ2VuY3kgdHVybmluZyBpbnRvIGEgZmluYW5jaWFsIGRpc2FzdGVyIGFzIHdlbGwifSx7ImlkIjoidHJhdmVsLWluc3VyYW5jZS1jaG9vc2luZy10aGUtcmlnaHQtcG9saWN5LWFuZC1jb3ZlciIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiVHJhdmVsIGluc3VyYW5jZSDigJMgY2hvb3NlIHRoZSByaWdodCBwb2xpY3kgYW5kIGNvdmVyIiwiZGVzY3JpcHRpb24iOiJCdXlpbmcgYW55IG9sZCB0cmF2ZWwgaW5zdXJhbmNlIHBvbGljeSBtaWdodCBtZWFuIHlvdSdyZSBub3QgcHJvcGVybHkgY292ZXJlZCDigJMgbWFrZSBzdXJlIHlvdSBkb24ndCBnZXQgY2F1Z2h0IG91dCJ9LHsiaWQiOiJhLWdvb2QtdHJhdmVsLWluc3VyYW5jZS1wb2xpY3kiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlRyYXZlbCBpbnN1cmFuY2Ug4oCTIHdoYXQgZG9lcyBhIGdvb2QgcG9saWN5IGxvb2sgbGlrZT8iLCJkZXNjcmlwdGlvbiI6IkZpbmQgb3V0IHdoYXQg4oCYZ29vZOKAmSB0cmF2ZWwgaW5zdXJhbmNlIHBvbGljaWVzIGNvdmVyLCBhbmQgd2hhdCB0byBsb29rIGZvciB3aGVuIGNob29zaW5nIG9uZSB0aGF04oCZcyByaWdodCBmb3IgeW91In0seyJpZCI6InRyYXZlbC1pbnN1cmFuY2UtZm9yLW92ZXItNjVzLWFuZC1tZWRpY2FsLWNvbmRpdGlvbnMiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlRyYXZlbCBpbnN1cmFuY2UgZm9yIG92ZXIgNjVzIGFuZCBtZWRpY2FsIGNvbmRpdGlvbnMiLCJkZXNjcmlwdGlvbiI6IklmIHlvdSdyZSBvdmVyIDY1IG9yIGhhdmUgYSBtZWRpY2FsIGNvbmRpdGlvbiB5b3UgYXJlIGxpa2VseSB0byBuZWVkIHNwZWNpYWxpc3QgdHJhdmVsIGluc3VyYW5jZSJ9LHsiaWQiOiJob3ctdG8tZ2V0LXRoZS1iZXN0LWRlYWwtb24tdHJhdmVsLWluc3VyYW5jZSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiSG93IHRvIGdldCB0aGUgYmVzdCBkZWFsIG9uIHRyYXZlbCBpbnN1cmFuY2UiLCJkZXNjcmlwdGlvbiI6IlRpcHMgb24gc2hvcHBpbmcgYXJvdW5kIHRvIGdldCB0aGUgcmlnaHQgdHJhdmVsIGluc3VyYW5jZSBhdCB0aGUgY2hlYXBlc3QgcHJpY2UifSx7ImlkIjoiYmUtcHJlcGFyZWQtd2hlbi1tYWtpbmctYS10cmF2ZWwtaW5zdXJhbmNlLWNsYWltIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJCZSBwcmVwYXJlZCB3aGVuIG1ha2luZyBhIHRyYXZlbCBpbnN1cmFuY2UgY2xhaW0iLCJkZXNjcmlwdGlvbiI6IkZvcmV3YXJuZWQgaXMgZm9yZWFybWVkIC0gbWFrZSBzdXJlIHlvdSBoYXZlIGV2ZXJ5dGhpbmcgaW4gb3JkZXIgYmVmb3JlIHlvdSBtYWtlIGEgY2xhaW0ifV0sImxlZ2FjeV9jb250ZW50cyI6W3siaWQiOiJkby15b3UtbmVlZC10cmF2ZWwtaW5zdXJhbmNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJEbyB5b3UgbmVlZCB0cmF2ZWwgaW5zdXJhbmNlPyIsImRlc2NyaXB0aW9uIjoiSWYgeW91IGFyZSBnb2luZyBhYnJvYWQgbWFrZSBzdXJlIHlvdSBoYXZlIHRyYXZlbCBpbnN1cmFuY2UgdG8gc3RvcCBhIG1lZGljYWwgZW1lcmdlbmN5IHR1cm5pbmcgaW50byBhIGZpbmFuY2lhbCBkaXNhc3RlciBhcyB3ZWxsIn0seyJpZCI6InRyYXZlbC1pbnN1cmFuY2UtY2hvb3NpbmctdGhlLXJpZ2h0LXBvbGljeS1hbmQtY292ZXIiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlRyYXZlbCBpbnN1cmFuY2Ug4oCTIGNob29zZSB0aGUgcmlnaHQgcG9saWN5IGFuZCBjb3ZlciIsImRlc2NyaXB0aW9uIjoiQnV5aW5nIGFueSBvbGQgdHJhdmVsIGluc3VyYW5jZSBwb2xpY3kgbWlnaHQgbWVhbiB5b3UncmUgbm90IHByb3Blcmx5IGNvdmVyZWQg4oCTIG1ha2Ugc3VyZSB5b3UgZG9uJ3QgZ2V0IGNhdWdodCBvdXQifSx7ImlkIjoiYS1nb29kLXRyYXZlbC1pbnN1cmFuY2UtcG9saWN5IiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUcmF2ZWwgaW5zdXJhbmNlIOKAkyB3aGF0IGRvZXMgYSBnb29kIHBvbGljeSBsb29rIGxpa2U/IiwiZGVzY3JpcHRpb24iOiJGaW5kIG91dCB3aGF0IOKAmGdvb2TigJkgdHJhdmVsIGluc3VyYW5jZSBwb2xpY2llcyBjb3ZlciwgYW5kIHdoYXQgdG8gbG9vayBmb3Igd2hlbiBjaG9vc2luZyBvbmUgdGhhdOKAmXMgcmlnaHQgZm9yIHlvdSJ9LHsiaWQiOiJ0cmF2ZWwtaW5zdXJhbmNlLWZvci1vdmVyLTY1cy1hbmQtbWVkaWNhbC1jb25kaXRpb25zIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJUcmF2ZWwgaW5zdXJhbmNlIGZvciBvdmVyIDY1cyBhbmQgbWVkaWNhbCBjb25kaXRpb25zIiwiZGVzY3JpcHRpb24iOiJJZiB5b3UncmUgb3ZlciA2NSBvciBoYXZlIGEgbWVkaWNhbCBjb25kaXRpb24geW91IGFyZSBsaWtlbHkgdG8gbmVlZCBzcGVjaWFsaXN0IHRyYXZlbCBpbnN1cmFuY2UifSx7ImlkIjoiaG93LXRvLWdldC10aGUtYmVzdC1kZWFsLW9uLXRyYXZlbC1pbnN1cmFuY2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhvdyB0byBnZXQgdGhlIGJlc3QgZGVhbCBvbiB0cmF2ZWwgaW5zdXJhbmNlIiwiZGVzY3JpcHRpb24iOiJUaXBzIG9uIHNob3BwaW5nIGFyb3VuZCB0byBnZXQgdGhlIHJpZ2h0IHRyYXZlbCBpbnN1cmFuY2UgYXQgdGhlIGNoZWFwZXN0IHByaWNlIn0seyJpZCI6ImJlLXByZXBhcmVkLXdoZW4tbWFraW5nLWEtdHJhdmVsLWluc3VyYW5jZS1jbGFpbSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQmUgcHJlcGFyZWQgd2hlbiBtYWtpbmcgYSB0cmF2ZWwgaW5zdXJhbmNlIGNsYWltIiwiZGVzY3JpcHRpb24iOiJGb3Jld2FybmVkIGlzIGZvcmVhcm1lZCAtIG1ha2Ugc3VyZSB5b3UgaGF2ZSBldmVyeXRoaW5nIGluIG9yZGVyIGJlZm9yZSB5b3UgbWFrZSBhIGNsYWltIn1dLCJjYXRlZ29yeV9wcm9tb3MiOltdLCJsaW5rcyI6W119
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 15:53:16 GMT
+recorded_with: VCR 3.0.3

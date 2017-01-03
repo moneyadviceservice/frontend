@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/preview/en/agreements-indebted-lives-report-intro.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 80584) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 3d37376f-435d-4dc3-b5b8-5ddfa8be4a45
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Dec 2016 13:31:21 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"e964c15033947c0a93fa6da1a690426b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3d37376f-435d-4dc3-b5b8-5ddfa8be4a45
+      X-Runtime:
+      - '0.061485'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlNlZ21lbnRpbmcgdGhlIG92ZXItaW5kZWJ0ZWQgcG9wdWxhdGlvbiBvZiB0aGUgVUsgLSBkYXRhIGRvd25sb2FkIiwic2x1ZyI6ImFncmVlbWVudHMtaW5kZWJ0ZWQtbGl2ZXMtcmVwb3J0LWludHJvIiwiZnVsbF9wYXRoIjoiL2VuL2FydGljbGVzL2FncmVlbWVudHMtaW5kZWJ0ZWQtbGl2ZXMtcmVwb3J0LWludHJvIiwibWV0YV9kZXNjcmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiJTZWdtZW50aW5nIHRoZSBvdmVyLWluZGVidGVkIHBvcHVsYXRpb24gb2YgdGhlIFVLIC0gZGF0YSBkb3dubG9hZCIsImNhdGVnb3J5X25hbWVzIjpbXSwibGF5b3V0X2lkZW50aWZpZXIiOiJhcnRpY2xlIiwicmVsYXRlZF9jb250ZW50Ijp7ImxhdGVzdF9ibG9nX3Bvc3RfbGlua3MiOlt7InRpdGxlIjoiVGhlIGxhc3QgbWludXRlIHdheXMgdG8gc2F2ZSBvbiBDaHJpc3RtYXMiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL3RoZS1sYXN0LW1pbnV0ZS13YXlzLXRvLXNhdmUtb24tY2hyaXN0bWFzIn0seyJ0aXRsZSI6IkluIHRoZSBuZXdzIC0gVGhpcyB3ZWVr4oCZcyB0b3AgbW9uZXkgbmV3cyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvaW4tdGhlLW5ld3MtdGhpcy13ZWVrLXMtdG9wLW1vbmV5LW5ld3MtMTYxMjE2In0seyJ0aXRsZSI6IklzIENocmlzdG1hcyBkaW5uZXIgZ2V0dGluZyBtb3JlIGV4cGVuc2l2ZT8gSGVyZeKAmXMgaG93IHRvIHNhdmUiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2lzLWNocmlzdG1hcy1kaW5uZXItZ2V0dGluZy1tb3JlLWV4cGVuc2l2ZSJ9XSwicG9wdWxhcl9saW5rcyI6W3sidGl0bGUiOiJIb3cgdG8gc2F2ZSBtb25leSBvbiBob3VzZWhvbGQgYmlsbHMiLCJwYXRoIjoiL2VuL2FydGljbGVzL2hvdy10by1zYXZlLW1vbmV5LW9uLWhvdXNlaG9sZC1iaWxscyJ9LHsidGl0bGUiOiJCZW5lZml0cyB5b3UgY2FuIGNsYWltIHdoZW4geW91J3JlIHByZWduYW50IG9yIGhhdmUgYSBiYWJ5IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9iZW5lZml0cy1hbmQtZW50aXRsZW1lbnRzLXRvLWNsYWltLXdoZW4teW91LWhhdmUtYS1iYWJ5In0seyJ0aXRsZSI6IlRheCBhbmQgTmF0aW9uYWwgSW5zdXJhbmNlIGRlZHVjdGlvbnMiLCJwYXRoIjoiL2VuL2FydGljbGVzL3RheC1hbmQtbmF0aW9uYWwtaW5zdXJhbmNlLWRlZHVjdGlvbnMifV0sInJlbGF0ZWRfbGlua3MiOlt7InRpdGxlIjoiRGVidCBhZHZpY2UgZXZhbHVhdGlvbiB0b29sa2l0IiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9hZ3JlZW1lbnRzLWRlYnQtZXZhbHVhdGlvbi10b29sa2l0LWludHJvIn0seyJ0aXRsZSI6IlRFUk1TIEFORCBDT05ESVRJT05TIE9GIFVTRSIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvYWdyZWVtZW50cy1kZWJ0LWV2YWx1YXRpb24tdG9vbGtpdC10ZXJtcyJ9LHsidGl0bGUiOiJTeW5kaWNhdGlvbiBMaWNlbmNlIEFncmVlbWVudCIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvYWdyZWVtZW50cy1wYXJ0bmVycy1pbnRybyJ9XSwicHJldmlvdXNfbGluayI6e30sIm5leHRfbGluayI6e319LCJwdWJsaXNoZWRfYXQiOm51bGwsImJsb2NrcyI6W3siaWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVdlbGNvbWUgdG8gdGhlIHJlc291cmNlIGRvd25sb2FkIGNlbnRyZS4gSGVyZSB5b3UgY2FuIGZpbmQgYW5kIGRvd25sb2FkIHJlc291cmNlIG1hdGVyaWFscyB0aGF0IHRoZSBNb25leSBBZHZpY2UgU2VydmljZSBoYXMgY29tbWlzc2lvbmVkIHJlbGF0aW5nIHRvIOKAmFNlZ21lbnRpbmcgdGhlIG92ZXItaW5kZWJ0ZWQgcG9wdWxhdGlvbiBvZiB0aGUgVUvigJkgcmVzZWFyY2guXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVRvIGRvd25sb2FkIHRoZSByZXNvdXJjZXMgcGxlYXNlIHJlYWQgYW5kIGFjY2VwdCB0aGUgbGljZW5zZSBhZ3JlZW1lbnQgYW5kIGVudGVyIHlvdXIgZGV0YWlscyBiZWxvdy5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTUtMDUtMTlUMTM6MjQ6MzguMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTA1LTE5VDEzOjI0OjM4LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3sibGFiZWwiOiJTZWdtZW50aW5nIHRoZSBvdmVyLWluZGVidGVkIHBvcHVsYXRpb24gb2YgdGhlIFVLIC0gZGF0YSBkb3dubG9hZCIsImxpbmsiOiIvY3kvYXJ0aWNsZXMvYWdyZWVtZW50cy1pbmRlYnRlZC1saXZlcy1yZXBvcnQtaW50cm8iLCJsYW5ndWFnZSI6ImN5In1dfQ==
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:31:21 GMT
+recorded_with: VCR 3.0.3

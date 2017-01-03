@@ -7,9 +7,7 @@ RSpec.describe 'Feedback', type: :request do
   ).each do |path|
     describe path do
       before do
-        VCR.use_cassette(:agreements) do
-          get path
-        end
+        get path
       end
 
       specify { expect(response).to be_ok }

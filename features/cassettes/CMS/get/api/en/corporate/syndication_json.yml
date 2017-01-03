@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/corporate/syndication.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - c4570484-55f1-4190-bc59-c1ed208d5336
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:26 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4f44e8b0bdd9f97f797cf7454d03aab9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4570484-55f1-4190-bc59-c1ed208d5336
+      X-Runtime:
+      - '0.063210'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlN5bmRpY2F0aW9uIiwic2x1ZyI6InN5bmRpY2F0aW9uIiwiZnVsbF9wYXRoIjoiL2VuL2NvcnBvcmF0ZS9zeW5kaWNhdGlvbiIsIm1ldGFfZGVzY3JpcHRpb24iOiJEaXJlY3Rvcnkgb2YgYWxsIHRoZSBhdmFpbGFibGUgTW9uZXkgQWR2aWNlIFNlcnZpY2UgdG9vbHMgYW5kIGNhbGN1bGF0b3JzIGF2YWlsYWJsZSBmb3IgeW91IHRvIHBsYWNlIG9uIHlvdXIgb3duIHdlYnNpdGUsIGZyZWUgb2YgY2hhcmdlIiwibWV0YV90aXRsZSI6IlN5bmRpY2F0aW9uIiwiY2F0ZWdvcnlfbmFtZXMiOlsicGFydG5lcnMiXSwibGF5b3V0X2lkZW50aWZpZXIiOiJjb3Jwb3JhdGUiLCJyZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W3sidGl0bGUiOiJVbndhbnRlZCBnaWZ0PyBEbyB5b3Uga25vdyB5b3VyIHJpZ2h0cyB0byByZXR1cm4/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy91bndhbnRlZC1naWZ0LWRvLXlvdS1rbm93LXlvdXItcmlnaHRzLXRvLXJldHVybiJ9LHsidGl0bGUiOiJBcmUgeW91ciBwcmVzZW50cyBjb3ZlcmVkIHRoaXMgQ2hyaXN0bWFzPyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvYXJlLXlvdXItcHJlc2VudHMtY292ZXJlZC10aGlzLWNocmlzdG1hcyJ9LHsidGl0bGUiOiJUaGUgbGFzdCBtaW51dGUgd2F5cyB0byBzYXZlIG9uIENocmlzdG1hcyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvdGhlLWxhc3QtbWludXRlLXdheXMtdG8tc2F2ZS1vbi1jaHJpc3RtYXMifV0sInBvcHVsYXJfbGlua3MiOlt7InRpdGxlIjoiSG93IHRvIHNhdmUgbW9uZXkgb24gaG91c2Vob2xkIGJpbGxzIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy9ob3ctdG8tc2F2ZS1tb25leS1vbi1ob3VzZWhvbGQtYmlsbHMifSx7InRpdGxlIjoiQmVuZWZpdHMgeW91IGNhbiBjbGFpbSB3aGVuIHlvdSdyZSBwcmVnbmFudCBvciBoYXZlIGEgYmFieSIsInBhdGgiOiIvZW4vYXJ0aWNsZXMvYmVuZWZpdHMtYW5kLWVudGl0bGVtZW50cy10by1jbGFpbS13aGVuLXlvdS1oYXZlLWEtYmFieSJ9LHsidGl0bGUiOiJUYXggYW5kIE5hdGlvbmFsIEluc3VyYW5jZSBkZWR1Y3Rpb25zIiwicGF0aCI6Ii9lbi9hcnRpY2xlcy90YXgtYW5kLW5hdGlvbmFsLWluc3VyYW5jZS1kZWR1Y3Rpb25zIn1dLCJyZWxhdGVkX2xpbmtzIjpbXSwicHJldmlvdXNfbGluayI6eyJ0aXRsZSI6IlN5bmRpY2F0aW9uIExpY2VuY2UgQWdyZWVtZW50IiwicGF0aCI6Ii9lbi9jb3Jwb3JhdGUvbGljZW5jZS1hZ3JlZW1lbnQtcGFyaHViIn0sIm5leHRfbGluayI6e319LCJwdWJsaXNoZWRfYXQiOiIyMDE1LTA2LTE1VDEzOjUyOjI4LjAwMFoiLCJibG9ja3MiOlt7ImlkZW50aWZpZXIiOiJjb250ZW50IiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VBbGwgb2YgdGhlIE1vbmV5IEFkdmljZSBTZXJ2aWNl4oCZcyB0b29scyBhbmQgY2FsY3VsYXRvcnMgYXJlIGF2YWlsYWJsZSBmb3IgeW91IHRvIG1ha2UgYXZhaWxhYmxlIHRvIHlvdXIgdXNlcnMsIGZyZWUgb2YgY2hhcmdlLCBvbiB5b3VyIHdlYnNpdGUuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUJlbG93IGlzIGEgbGlzdCBvZiBhbGwgb2YgdGhlIGF2YWlsYWJsZSBNb25leSBBZHZpY2UgU2VydmljZSB0b29scyBhbmQgY2FsY3VsYXRvcnMsIGNsaWNrIHRocm91Z2ggdG8gZmluZCBvdXQgbW9yZSBhYm91dCB0aGUgdG9vbCwgdmlldyBleGFtcGxlcyBvZiB0aGUgdG9vbCBvbiBwYXJ0bmVyc+KAmSBzaXRlcywgYW5kIHRvIGRvd25sb2FkIHRoZSBlbWJlZCBjb2RlIGZvciBhbnkgdG9vbHMgeW91IHdpc2ggdG8gcGxhY2Ugb24geW91ciB3ZWJzaXRlLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VUaGUgZW1iZWQgY29kZSBjYW4gYmUgcGFzdGVkIGRpcmVjdGx5IGludG8gdGhlIGJvZHkgb2YgeW91ciB3ZWJwYWdlIGJ1dCBpZiB5b3UgaGF2ZSBhbnkgcHJvYmxlbXMgcGxlYXNlIGdldCBpbiB0b3VjaCB3aXRoIFx1MDAzY2EgaHJlZj1cIm1haWx0bzpwYXJ0bmVyc0Btb25leWFkdmljZXNlcnZpY2Uub3JnLnVrXCJcdTAwM2V0aGUgcGFydG5lcnNoaXBzIHRlYW1cdTAwM2MvYVx1MDAzZS5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTUtMDYtMTJUMTQ6MjY6MTAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTA2LTE1VDEzOjUyOjI4LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W3sibGFiZWwiOiJTeW5kaWNhdGlvbiIsImxpbmsiOiIvY3kvY29ycG9yYXRlL3N5bmRpY2F0aW9uIiwibGFuZ3VhZ2UiOiJjeSJ9XX0=
+    http_version: 
+  recorded_at: Sat, 21 Jan 2017 23:00:03 GMT
+recorded_with: VCR 3.0.3

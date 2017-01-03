@@ -10,9 +10,7 @@ RSpec.describe 'HomePage', type: :request do
     allow(Core::Registry::Repository).to receive(:[]).with(:category).and_return(category_repository)
     allow(Core::Registry::Repository).to receive(:[]).with(:clump).and_return(clumps_repository)
 
-    VCR.use_cassette('/en/core/repository/home_pages/cms') do
-      get '/en'
-    end
+    get '/en'
   end
 
   it "successfully renders" do

@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/home_pages/the-money-advice-service.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 2646) ruby/2.2.5
+        (319; x86_64-darwin15)
+      X-Request-Id:
+      - 04d013e3-be7c-408f-9563-066803318815
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Dec 2016 11:55:18 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"52aa3555eb109f9f100d65d746c3b885"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 04d013e3-be7c-408f-9563-066803318815
+      X-Runtime:
+      - '1.694007'
+    body:
+      encoding: UTF-8
+      string: '{"label":"The Money Advice Service","slug":"the-money-advice-service","full_path":"/en/home_pages/the-money-advice-service","meta_description":"","meta_title":"The
+        Money Advice Service","category_names":[],"layout_identifier":"home_page","related_content":{"latest_blog_post_links":[{"title":"Unwanted
+        gift? Do you know your rights to return?","path":"https://www.moneyadviceservice.org.uk/blog/unwanted-gift-do-you-know-your-rights-to-return"},{"title":"Are
+        your presents covered this Christmas?","path":"https://www.moneyadviceservice.org.uk/blog/are-your-presents-covered-this-christmas"},{"title":"The
+        last minute ways to save on Christmas","path":"https://www.moneyadviceservice.org.uk/blog/the-last-minute-ways-to-save-on-christmas"}],"popular_links":[{"title":"How
+        to save money on household bills","path":"/en/articles/how-to-save-money-on-household-bills"},{"title":"Benefits
+        you can claim when you''re pregnant or have a baby","path":"/en/articles/benefits-and-entitlements-to-claim-when-you-have-a-baby"},{"title":"Tax
+        and National Insurance deductions","path":"/en/articles/tax-and-national-insurance-deductions"}],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2016-10-27T15:34:47.000Z","blocks":[{"identifier":"content","content":"\n","created_at":"2015-12-15T13:34:16.000Z","updated_at":"2015-12-15T13:34:16.000Z"},{"identifier":"raw_heading","content":"Free
+        and impartial money advice, set up by government","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2015-12-15T13:47:30.000Z"},{"identifier":"raw_bullet_1","content":"
+        Advice and guides to help improve your finances ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2015-12-15T13:47:30.000Z"},{"identifier":"raw_bullet_2","content":"Tools
+        and calculators to help keep track and plan ahead ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T10:57:32.000Z"},{"identifier":"raw_bullet_3","content":"Support
+        in person, over the phone and online","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2015-12-15T13:47:30.000Z"},{"identifier":"raw_hero_image","content":"https://masassets.blob.core.windows.net/cms/files/000/000/556/original/BC3090.jpg","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_cta_text","content":"Easy
+        ways to catch the saving habit","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_cta_link","content":"https://www.moneyadviceservice.org.uk/blog/putting-a-price-on-financial-security","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_tool_1_heading","content":"Savings
+        calculator ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-07-06T15:53:53.000Z"},{"identifier":"raw_tool_1_url","content":"https://www.moneyadviceservice.org.uk/en/tools/savings-calculator","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-07-06T15:53:53.000Z"},{"identifier":"raw_tool_1_text","content":"Reach
+        your savings goal","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T11:03:02.000Z"},{"identifier":"raw_tool_2_heading","content":"Budget
+        planner","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-26T14:17:16.000Z"},{"identifier":"raw_tool_2_url","content":"https://www.moneyadviceservice.org.uk/en/tools/budget-planner","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-26T14:17:16.000Z"},{"identifier":"raw_tool_2_text","content":"Get
+        in control of household spending","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-26T14:17:16.000Z"},{"identifier":"raw_tool_3_heading","content":"Mortgage
+        calculator","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_tool_3_url","content":"https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_tool_3_text","content":"Your
+        first step to buying a new home","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-10-27T15:34:33.000Z"},{"identifier":"raw_tile_1_heading","content":"Countdown
+        to Christmas starts now!","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_1_image","content":"https://masassets.blob.core.windows.net/cms/files/000/000/543/original/TILEChristmas_tree_close_Up.jpg","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:50:25.000Z"},{"identifier":"raw_tile_1_url","content":"https://www.moneyadviceservice.org.uk/blog/countdown-to-christmas-starts-now-are-you-ready","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_1_label","content":"blog","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-02-11T09:48:51.000Z"},{"identifier":"raw_tile_1_content","content":"Come
+        out of the holidays without a financial hangover.","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_2_heading","content":"Can
+        you guess the cost of emergencies?","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_2_image","content":"https://masassets.blob.core.windows.net/cms/files/000/000/542/original/TILEwoman_with_pranged_car_cropped.jpg","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:47:13.000Z"},{"identifier":"raw_tile_2_url","content":"https://www.moneyadviceservice.org.uk/blog/quiz-guess-the-cost-of-emergencies","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_2_label","content":"quiz","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:28.000Z"},{"identifier":"raw_tile_2_content","content":"Unexpected
+        costs can come from anywhere. Could you cope?","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:53:10.000Z"},{"identifier":"raw_tile_3_heading","content":"Give
+        yourself a financial workout","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:29.000Z"},{"identifier":"raw_tile_3_image","content":"https://masassets.blob.core.windows.net/cms/files/000/000/544/original/TILESmarathon_runners.jpg","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:50:25.000Z"},{"identifier":"raw_tile_3_url","content":"https://www.moneyadviceservice.org.uk/blog/ready-to-give-yourself-a-financial-workout","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:29.000Z"},{"identifier":"raw_tile_3_label","content":"blog","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2015-12-15T13:47:30.000Z"},{"identifier":"raw_tile_3_content","content":"Quick
+        burst, high intensity workouts for your wallet. ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-09-29T10:42:29.000Z"},{"identifier":"raw_tile_4_heading","content":"Prepare
+        for the new arrival ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_tile_4_image","content":"https://masassets.blob.core.windows.net/cms/files/000/000/463/original/expecting_mother_with_cot.jpg","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_tile_4_url","content":"https://www.moneyadviceservice.org.uk/en/articles/benefits-and-entitlements-to-claim-when-you-have-a-baby","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_tile_4_label","content":"","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-03-23T15:16:20.000Z"},{"identifier":"raw_tile_4_content","content":"Benefits
+        to claim when having a baby","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_1_heading","content":"Estimate
+        the cost of buying a house and moving","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_1_url","content":"https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_1_content","content":"There
+        is more to it than just mortgage repayments","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_2_heading","content":"Universal
+        Credit explained","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_2_url","content":"https://www.moneyadviceservice.org.uk/en/articles/universal-credit-an-introduction","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_text_tile_2_content","content":"Everything
+        you need to know about the new benefit format ","created_at":"2015-12-15T13:47:30.000Z","updated_at":"2016-08-02T14:34:40.000Z"},{"identifier":"raw_promo_banner_content","content":"**Worried
+        about debt?** Find out where to get free, confidential help now","created_at":"2015-12-23T11:21:01.000Z","updated_at":"2016-02-16T11:40:22.000Z"},{"identifier":"raw_promo_banner_url","content":"https://www.moneyadviceservice.org.uk/en/tools/debt-advice-locator","created_at":"2015-12-23T11:21:01.000Z","updated_at":"2016-02-16T11:40:22.000Z"}],"translations":[{"label":"The
+        Money Advice Service","link":"/cy/home_pages/the-money-advice-service","language":"cy"}]}'
+    http_version: 
+  recorded_at: Tue, 27 Dec 2016 14:00:02 GMT
+recorded_with: VCR 3.0.3

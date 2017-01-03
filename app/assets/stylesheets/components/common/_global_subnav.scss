@@ -17,7 +17,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     transition: none;
-    visibility: visible;
+    // visibility: visible;
     top: 100%;
     transform: none;
     width: 100%;
@@ -40,10 +40,8 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
-// this needs to be re-introduced as a no-js fallback
-// part of the behaviour changes --
-// included here as a rough approximation of behaviour for testing visual aspects
-// .no-js {
+// no-js fallback --
+.no-js {
   @include respond-to($mq-m) {
     .global-nav__clump__heading {
       &:hover {
@@ -65,8 +63,8 @@ $gutter: $default-gutter / 2; // the space between category columns
       transform: none;
     }
   }
-// }
-// -- this needs to be re-introduced as a no-js fallback
+}
+// -- no-js fallback
 
 .global-subnav__heading {
   border-bottom: solid 1px rgba(0, 0, 0, 0.375);

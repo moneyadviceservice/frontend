@@ -122,7 +122,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    car_cost_tool (1.1.1.121)
+    car_cost_tool (1.1.2.122)
       dough-ruby (~> 5.0)
       nokogiri
       rails (>= 4, < 5)
@@ -704,7 +704,7 @@ DEPENDENCIES
   bugsnag
   byebug
   capybara
-  car_cost_tool (~> 1.1.1)
+  car_cost_tool (~> 1.1.2)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter

@@ -16,6 +16,14 @@ define(['jquery'], function($) {
     });
 
     $('.global-nav__clump__heading').click(function() {
+      // Fixes an issue with Keyboard navigation on Desktop, 
+      // if you open a Clump then other Clumps need to be closed
+      if (window.innerWidth > 719) {
+        $('.global-nav__clump').removeClass('is-active');
+        $('.global-nav__clumps').removeClass('is-active');
+      }
+      // End Temporary fix
+      
       $(this)
         .parents('.global-nav__clump').addClass('is-active')
         .parents('.global-nav__clumps').addClass('is-active');

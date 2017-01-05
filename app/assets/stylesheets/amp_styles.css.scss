@@ -1,5 +1,6 @@
 $responsive: true;
 @import 'dough/assets/stylesheets/lib/variables';
+@import 'yeast/assets/lib/variables';
 
 @font-face {
   font-family: Museo Sans;
@@ -123,23 +124,6 @@ strong {
   font-weight: 700;
 }
 
-.callout {
-  padding: 1.25rem 0 0.5rem 0;
-  margin: 1.5rem 0;
-  border-radius: 5px;
-  background-color: $color-green-pale;
-  clear: right;
-}
-
-.callout p {
-  margin: 0 1.125rem 1.125rem 1.125rem;
-}
-
-.callout h3 {
-  margin: 0 1.125rem 0.375rem;
-  text-transform: capitalize;
-}
-
 .add-action {
   position: relative;
   background-color: $color-blue-light;
@@ -161,3 +145,58 @@ strong {
   overflow: hidden;
   position: absolute;
 }
+
+.callout {
+  position: relative;
+  margin: $baseline-unit*2 0;
+  border-radius: 5px;
+  background-color: $color-callout-background;
+
+  h3 {
+    @extend %heading-small;
+    padding: $baseline-unit;
+  }
+
+  p {
+    @extend %type-callout;
+    margin: $baseline-unit*2;
+  }
+}
+
+%callout--editorial {
+  border-radius: 0;
+  background: none;
+
+  h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.callout--tip {
+  @extend %callout--editorial;
+  border: 2px solid $color-turquoise;
+  h3 {
+    background: $color-turquoise;
+  }
+}
+
+.callout--tool {
+  @extend %callout--editorial;
+  border: 2px solid $color-orange-medium;
+  h3 {
+    background: $color-orange-medium;
+  }
+}
+
+.callout__icon,
+.callout__tool-icon {
+  display: none;
+}
+
+.callout--instructional {
+  border: none;
+  background-color: $color-panel-background;
+}
+

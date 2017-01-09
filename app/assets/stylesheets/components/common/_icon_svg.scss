@@ -1,14 +1,64 @@
-// Styling for SVG icons, to be used instead of PNG sprite icons
+// We have an SVG element loaded at the top of each page containing a set of reusable SVG icons, which are referenced with the <use> tag from markup later in the page.
+// These are preferrable over PNG sprite icons. Where necessary there should be a PNG fallback for the same icon.
+// The advantages of using these is that we can alter colour and size with CSS, they offer support for all screen densities, as well as not requiring any extra HTTP requests to load.
+//
+// .svg-icon--plus - Plus icon
+// .svg-icon--minus - Minus icon
+// .svg-icon--arrow-right - Arrow
+// .svg-icon--arrow-left - Arrow left
+// .svg-icon--arrow-right - Arrow right
+// .svg-icon--desktop-close-box - Close box (desktop)
+// .svg-icon--mobile-close-box - Close box (mobile)
+// .svg-icon--facebook - Facebook
+// .svg-icon--twitter - Twitter
+// .svg-icon--youtube - Youtube
+// .svg-icon--email - Email
+// .svg-icon--stripe-banner-arrow - ARROW
+// .svg-icon--thumb-icon - Thumb
+//
+// Styleguide svg-icons
 
 .svg-icon {
+  display: block;
   html.no-svg & {
     display: none;
   }
 }
 
+// Normalise on the styleguide
+.styleguide-element .svg-icon {
+  fill: #000;
+  max-width: 40px;
+  max-height: 40px;
+  position: static;
+  margin: 0;
+}
+
 %small-svg-icon {
   width: 16px;
   height: 16px;
+}
+
+
+html.no-svg {
+
+  .no-svg-icon {
+    @extend .icon;
+  }
+
+  .no-svg-icon--default {
+    @extend %small-svg-icon;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid black;
+  }
+}
+
+html.svg {
+  // When browser supports SVG, hide any .icon siblings (PNG fallbacks) of the .svg-icon
+  .svg-icon + span.icon {
+    display: none;
+  }
 }
 
 // Plus
@@ -35,17 +85,43 @@
   fill: $color-blue-medium;
 }
 
-html.no-svg {
+// Social sharing
 
-  .no-svg-icon {
-    @extend .icon;
-  }
+.svg-icon--twitter,
+.svg-icon--facebook,
+.svg-icon--youtube,
+.svg-icon--email {
+  vertical-align: middle;
+  fill: #fff;
+  display: block;
+}
 
-  .no-svg-icon--default {
-    @extend %small-svg-icon;
-    background-color: #fff;
-    background-image: none;
-    border: 2px solid black;
-  }
 
+// On-page feedback icons
+
+.svg-icon--thumb-icon,
+.icon--thumb-icon-up,
+.icon--thumb-icon-down {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icon--thumb-button {
+  width: 35px;
+  height: 35px;
+}
+
+.icon--thumb-button {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+
+.icon--thumb-icon-up {
+  background-position: -889px -440px;
+}
+
+.icon--thumb-icon-down {
+  background-position: -935px -436px;
 }

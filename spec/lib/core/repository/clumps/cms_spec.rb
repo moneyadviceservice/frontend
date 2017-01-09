@@ -13,10 +13,8 @@ RSpec.describe Core::Repository::Clumps::CMS do
     end
 
     it 'returns the expected clumps' do
-      VCR.use_cassette('/en/core/repository/clumps/cms/all') do
-        result = subject.all
-        expect(result.map { |h| h['name'] }).to eql(expected_clump_names)
-      end
+      result = subject.all
+      expect(result.map { |h| h['name'] }).to eql(expected_clump_names)
     end
   end
 end

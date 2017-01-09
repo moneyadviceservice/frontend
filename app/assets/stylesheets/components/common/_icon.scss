@@ -27,12 +27,8 @@
 // .icon--account - green person icon
 // .icon--calculator - calculator icon
 // .icon--info - info icon
-// .icon--twitter - twitter icon
-// .icon--facebook - twitter facebook
-// .icon--youtube - twitter youtube
-// .icon--email - twitter email
 //
-// Styleguide icons
+// Styleguide png-icons
 
 //= depend_on_asset icon-sprite.png
 
@@ -306,19 +302,9 @@
 }
 
 .icon--info {
-  background-position: -70px -260px;
+  background-position: -73px -102px;
   height: 25px;
   width: 20px;
-}
-
-.svg {
-  .icon--stripe-banner-arrow {
-    display: none;
-  }
-
-  .svg-icon--stripe-banner-arrow {
-    display: block;
-  }
 }
 
 .icon--stripe-banner-arrow {
@@ -353,98 +339,17 @@
 }
 
 .icon--twitter {
-  display: block;
   background-position: -484px -445px;
 }
 
 .icon--facebook {
-  display: block;
   background-position: -456px -441px;
 }
 
 .icon--youtube {
-  display: block;
   background-position: -417px -443px;
 }
 
 .icon--email {
-  display: block;
   background-position: -664px -452px;
-}
-
-.svg-icon--twitter,
-.svg-icon--facebook,
-.svg-icon--youtube,
-.svg-icon--email {
-  display: none;
-}
-
-.svg-icon--twitter,
-.svg-icon--facebook,
-.svg-icon--youtube,
-.svg-icon--email {
-  vertical-align: middle;
-  fill: #fff;
-}
-
-.svg {
-  .icon--twitter,
-  .icon--facebook,
-  .icon--youtube,
-  .icon--email {
-    display: none;
-  }
-
-  .svg-icon--twitter,
-  .svg-icon--facebook,
-  .svg-icon--youtube,
-  .svg-icon--email {
-    display: block;
-  }
-}
-
-// In page feedback icons
-.svg-icon--thumb-icon,
-.svg-icon--thumb-button {
-  display: none;
-}
-
-.svg-icon--thumb-icon,
-.icon--thumb-icon-up,
-.icon--thumb-icon-down {
-  margin: 0 auto;
-  width: 40px;
-  height: 40px;
-}
-
-.svg-icon--thumb-button {
-  width: 35px;
-  height: 35px;
-}
-
-.icon--thumb-button {
-  margin: 0 auto;
-  width: 60px;
-  height: 60px;
-}
-
-.icon--thumb-icon-up {
-  background-position: -889px -440px;
-}
-
-.icon--thumb-icon-down {
-  background-position: -935px -436px;
-}
-
-.svg {
-  .icon--thumb-icon-up,
-  .icon--thumb-icon-down,
-  .icon--thumb-button {
-    display: none;
-  }
-
-  .svg-icon--thumb-icon,
-  .svg-icon--thumb-button {
-    display: block;
-  }
 }

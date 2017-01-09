@@ -1,6 +1,12 @@
 <h1>Common Components</h1>
 
-<%= styleguide_section sections['icons'] do %>
+<%= styleguide_section sections['svg-icons'] do %>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon $modifier_class" focusable="false" data-di-res-id="474a5830-8911ba2c">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#$modifier_class"></use>
+  </svg>
+<% end %>
+
+<%= styleguide_section sections['png-icons'] do %>
   <span class="icon $modifier_class"></span>
   <span class="visually-hidden">hidden text</span>
 <% end %>
@@ -37,8 +43,8 @@
         idea of how much a lender might offer for a mortgage, and if you could
         afford it. Actual amounts and affordability criteria will differ
         across lenders</p>
+      </div>
     </div>
-  </div>
 <% end %>
 
 <%= styleguide_section sections['validation-summary'] do %>

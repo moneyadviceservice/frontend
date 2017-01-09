@@ -28,7 +28,7 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.3.0.338)
+    action_plans (4.4.0.339)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
@@ -128,7 +128,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    car_cost_tool (1.1.1.121)
+    car_cost_tool (1.1.2.122)
       dough-ruby (~> 5.0)
       nokogiri
       rails (>= 4, < 5)
@@ -484,7 +484,8 @@ GEM
       interception (>= 0.5)
       pry
     psych (2.1.1)
-    quiz (1.1.0.109)
+    public_suffix (2.0.5)
+    quiz (1.2.0.112)
       cocoon
       devise
       dragonfly (>= 1.0.0)
@@ -696,7 +697,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.3.0)
+  action_plans (~> 4.4.0)
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
@@ -710,7 +711,7 @@ DEPENDENCIES
   bugsnag
   byebug
   capybara
-  car_cost_tool (~> 1.1.1)
+  car_cost_tool (~> 1.1.2)
   chai-jquery-rails
   chronic
   codeclimate-test-reporter
@@ -763,7 +764,7 @@ DEPENDENCIES
   pry-rails
   pry-rescue
   psych (>= 2.0.5)
-  quiz (~> 1.1.0)!
+  quiz (~> 1.2.0)!
   rack-livereload
   rails (= 4.2.7.1)
   redcarpet

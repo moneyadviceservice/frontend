@@ -10,6 +10,10 @@ define(['jquery'], function($) {
     $('.mobile-nav__link--menu').click(function() {
       if ($('.global-nav').hasClass('is-active')) {
         $('.global-nav').removeClass('is-active');
+
+        if ($('.global-nav__clumps').hasClass('is-active')) {
+          $('.global-nav__clumps').removeClass('is-active');
+        }
       } else {
         $('.global-nav').addClass('is-active');
       }

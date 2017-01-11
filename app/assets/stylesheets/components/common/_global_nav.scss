@@ -146,15 +146,15 @@
   background: transparent;
   text-align: left;
 
-  &:hover {
-    background: $color-white;
-  }
-
   &.global-nav__clump__blog-link:hover {
     background: $color-mas-blog-blue-hover;
   }
 
   @include respond-to($mq-m) {
+    &:hover {
+      background: $color-white;
+    }
+
     position: relative;
     width: 100%;
     height: 100%;

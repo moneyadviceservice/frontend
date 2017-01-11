@@ -45,8 +45,6 @@ $gutter: $default-gutter / 2; // the space between category columns
   @include respond-to($mq-m) {
     .global-nav__clump__heading {
       &:hover {
-        background: $color-white;
-
         & + .global-subnav {
           visibility: visible;
           transform: none;

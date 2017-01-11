@@ -37,22 +37,24 @@ define(['jquery'], function($) {
   }
 
   GlobalNav.prototype._setUpDesktopInteraction = function() {
-    var delay = 1000; // 250; // ms
-    var timeout_in, timeout_out;
+    var delay = 250; // ms
+    var timeout;
 
     // heading behaviour
     $('.global-nav__clump__heading').not('.global-nav__clump__blog-link')
       .mouseenter(function() {
         var self = this;
 
-        window.clearTimeout(timeout_out);
+        window.clearTimeout(timeout);
 
-        timeout_in = window.setTimeout(function() {
-          // clear active subnavs
+        timeout = window.setTimeout(function() {
+          // clear active clumps
           $('.global-subnav').removeClass('is-active');
+          $('.global-nav__clump').removeClass('is-active');
 
           $(self)
-            // .parent('.global-nav__clump').addClass('is-active')
+            // show current heading
+            .parent('.global-nav__clump').addClass('is-active')
             // show current subnav
             .siblings('.global-subnav').addClass('is-active');
         }, delay);
@@ -60,27 +62,45 @@ define(['jquery'], function($) {
       .mouseleave(function() {
         var self = this;
 
-        window.clearTimeout(timeout_in);
+        window.clearTimeout(timeout);
 
-        timeout_out = window.setTimeout(function() {
-          $(self)
-            .parent('.global-nav__clump').removeClass('is-active');
+        timeout = window.setTimeout(function() {
+          // clear current subnav
+          $(self).siblings('.global-subnav').removeClass('is-active');
         }, delay);
       });
 
-    /* subnav behaviour
+    // subnav behaviour
     $('.global-subnav')
       .mouseenter(function() {
-        $(this)
-          .addClass('is-active')
-          .siblings('.global-nav__clump__heading').parent('.global-nav__clump').addClass('is-active');
+        var self = this;
+
+        window.clearTimeout(timeout);
+
+        // clear active clumps
+        $('.global-nav__clump').removeClass('is-active');
+
+        // show current heading
+        $(self).siblings('.global-nav__clump__heading').parent('.global-nav__clump').addClass('is-active');
+
+        timeout = window.setTimeout(function() {
+          // show current clump
+          $(self).addClass('is-active')
+        }, delay);
       })
       .mouseleave(function() {
-        $(this)
-          .removeClass('is-active')
-          .siblings('.global-nav__clump__heading').parent('.global-nav__clump').removeClass('is-active');
+        var self = this;
+
+        window.clearTimeout(timeout);
+
+        timeout = window.setTimeout(function() {
+          $(self)
+            // hide current subnav
+            .removeClass('is-active')
+            // hide current heading
+            .siblings('.global-nav__clump__heading').parent('.global-nav__clump').removeClass('is-active');
+        }, delay);
       });
-    */
   }
 
   return GlobalNav;

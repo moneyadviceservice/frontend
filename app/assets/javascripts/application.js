@@ -33,12 +33,6 @@ require(['common', 'jquery'], function(MAS, $) {
     });
   }
 
-  require(['jquery', 'GlobalNav'], function($, GlobalNav) {
-    $(document).ready(function(){
-      new GlobalNav();
-    })
-  });
-
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
       // Article Collapsables

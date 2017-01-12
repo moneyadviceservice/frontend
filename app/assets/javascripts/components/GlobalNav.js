@@ -1,10 +1,29 @@
-define(['jquery'], function($) {
+define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
-  var GlobalNav = function() {
+  var GlobalNav;
+
+  GlobalNav = function($el, config) {
+    GlobalNav.baseConstructor.call(this, $el, config);
+  };
+
+  /**
+  * Inherit from base module, for shared methods and interface
+  */
+  DoughBaseComponent.extend(GlobalNav);
+  GlobalNav.componentName = 'GlobalNav';
+
+  /**
+  * Initialize the component
+  */
+  GlobalNav.prototype.init = function(initialised) {
+    this._initialisedSuccess(initialised);
+
     this._setUpMobileInteraction();
     this._setUpDesktopInteraction();
-  }
+
+    return this;
+  };
 
   GlobalNav.prototype._setUpMobileInteraction = function() {
     $('.mobile-nav__link--menu').click(function() {

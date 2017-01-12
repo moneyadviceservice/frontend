@@ -9,9 +9,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$globalNav = this.$el;
     this.$mobileNavButton = $(document).find('[data-dough-mobile-nav-button]');
     this.$globalNavClumps = this.$el.find('[data-dough-nav-clumps]');
+    this.$globalNavClump = this.$el.find('[data-dough-nav-clump]');
     this.$globalNavClumpHeading = this.$el.find('[data-dough-nav-clump-heading]');
     this.$globalSubNavHeading = this.$el.find('[data-dough-subnav-heading]');
-
+    this.$globalSubNav = this.$el.find('[data-dough-subnav]');
     this.delay = 250; // ms
   };
 
@@ -110,18 +111,20 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {
+    var self = this;
+
     window.clearTimeout(this.timeout);
 
     this.timeout = window.setTimeout(function() {
       // clear active clumps
-      $('.global-subnav').removeClass('is-active');
-      $('.global-nav__clump').removeClass('is-active');
+      self.$globalSubNav.removeClass('is-active');
+      self.$globalNavClump.removeClass('is-active');
 
       $(index)
         // show current heading
-        .parent('.global-nav__clump').addClass('is-active')
+        .parent('[data-dough-nav-clump]').addClass('is-active')
         // show current subnav
-        .siblings('.global-subnav').addClass('is-active');
+        .siblings('[data-dough-subnav]').addClass('is-active');
     }, this.delay);
   }
 
@@ -133,7 +136,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         // hide current subnav
         .removeClass('is-active')
         // hide current heading
-        .siblings('.global-nav__clump__heading').parent('.global-nav__clump').removeClass('is-active');
+        .siblings('[data-dough-nav-clump-heading]').parent('[data-dough-nav-clump]').removeClass('is-active');
     }, this.delay);
   }
 

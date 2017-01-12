@@ -5,6 +5,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   GlobalNav = function($el, config) {
     GlobalNav.baseConstructor.call(this, $el, config);
+
+    this.$globalNav = this.$el;
+    this.$mobileNavButton = $(document).find('[data-dough-mobile-nav-button]');
+    this.$globalNavClumps = this.$el.find('[data-dough-nav-clumps]');
+    this.$globalNavClumpHeading = this.$el.find('[data-dough-nav-clump-heading]');
+    this.$globalSubNavHeading = this.$el.find('[data-dough-subnav-heading]');
+
+    this.delay = 250; // ms
   };
 
   /**
@@ -25,101 +33,108 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     return this;
   };
 
+  /**
+  * Set up events for mobile nav
+  */
   GlobalNav.prototype._setUpMobileInteraction = function() {
-    $('.mobile-nav__link--menu').click(function() {
-      if ($('.global-nav').hasClass('is-active')) {
-        $('.global-nav').removeClass('is-active');
+    var self = this;
 
-        if ($('.global-nav__clumps').hasClass('is-active')) {
-          $('.global-nav__clumps').removeClass('is-active');
-        }
+    this.$mobileNavButton.click(function() {
+      if (self.$globalNav.hasClass('is-active')) {
+        self._closeMobileNav();
       } else {
-        $('.global-nav').addClass('is-active');
+        self._openMobileNav();
       }
     });
 
-    $('.global-nav__clump__heading').click(function() {
-      // clear active clumps
-      $('.global-nav__clump').removeClass('is-active');
-      $('.global-nav__clumps').removeClass('is-active');
-
-      $(this)
-        .parents('.global-nav__clump').addClass('is-active')
-        .parents('.global-nav__clumps').addClass('is-active');
+    this.$globalNavClumpHeading.click(function() {
+      self._openMobileSubNav(this);
     });
 
-    $('.global-subnav__heading').click(function() {
-      $(this)
-        .parents('.global-nav__clump').removeClass('is-active')
-        .parents('.global-nav__clumps').removeClass('is-active');
+    this.$globalSubNavHeading.click(function() {
+      self._closeMobileSubNav(this);
     })
   }
 
+  /**
+  * Set up events for desktop nav
+  */
   GlobalNav.prototype._setUpDesktopInteraction = function() {
-    var delay = 250; // ms
-    var timeout;
+    var self = this;
 
     // heading behaviour
-    $('.global-nav__clump__heading').not('.global-nav__clump__blog-link')
+    this.$globalNavClumpHeading.not('.global-nav__clump__blog-link')
       .mouseenter(function() {
-        var self = this;
-
-        window.clearTimeout(timeout);
-
-        timeout = window.setTimeout(function() {
-          // clear active clumps
-          $('.global-subnav').removeClass('is-active');
-          $('.global-nav__clump').removeClass('is-active');
-
-          $(self)
-            // show current heading
-            .parent('.global-nav__clump').addClass('is-active')
-            // show current subnav
-            .siblings('.global-subnav').addClass('is-active');
-        }, delay);
+        self._openDesktopSubNav(this);
       })
       .mouseleave(function() {
-        var self = this;
-
-        window.clearTimeout(timeout);
-
-        timeout = window.setTimeout(function() {
-          // clear current subnav
-          $(self).siblings('.global-subnav').removeClass('is-active');
-        }, delay);
+        self._closeDesktopSubNav(this);
       });
 
     // subnav behaviour
     $('.global-subnav')
       .mouseenter(function() {
-        var self = this;
-
-        window.clearTimeout(timeout);
-
-        // clear active clumps
-        $('.global-nav__clump').removeClass('is-active');
-
-        // show current heading
-        $(self).siblings('.global-nav__clump__heading').parent('.global-nav__clump').addClass('is-active');
-
-        timeout = window.setTimeout(function() {
-          // show current clump
-          $(self).addClass('is-active')
-        }, delay);
+        self._openDesktopSubNav(this);
       })
       .mouseleave(function() {
-        var self = this;
-
-        window.clearTimeout(timeout);
-
-        timeout = window.setTimeout(function() {
-          $(self)
-            // hide current subnav
-            .removeClass('is-active')
-            // hide current heading
-            .siblings('.global-nav__clump__heading').parent('.global-nav__clump').removeClass('is-active');
-        }, delay);
+        self._closeDesktopSubNav(this);
       });
+  }
+
+  GlobalNav.prototype._openMobileNav = function() {
+    this.$globalNav.addClass('is-active');
+  }
+
+  GlobalNav.prototype._closeMobileNav = function() {
+    this.$globalNav.removeClass('is-active');
+
+    if (this.$globalNavClumps.hasClass('is-active')) {
+      this.$globalNavClumps.removeClass('is-active');
+    }
+  }
+
+  GlobalNav.prototype._openMobileSubNav = function(index) {
+    // clear active clumps
+    $('.global-nav__clump').removeClass('is-active');
+    this.$globalNavClumps.removeClass('is-active');
+
+    $(index)
+      .parents('[data-dough-nav-clump]').addClass('is-active')
+      .parents('[data-dough-nav-clumps]').addClass('is-active');
+  }
+
+  GlobalNav.prototype._closeMobileSubNav = function(index) {
+    $(index)
+      .parents('[data-dough-nav-clump]').removeClass('is-active')
+      .parents('[data-dough-nav-clumps]').removeClass('is-active');
+  }
+
+  GlobalNav.prototype._openDesktopSubNav = function(index) {
+    window.clearTimeout(this.timeout);
+
+    this.timeout = window.setTimeout(function() {
+      // clear active clumps
+      $('.global-subnav').removeClass('is-active');
+      $('.global-nav__clump').removeClass('is-active');
+
+      $(index)
+        // show current heading
+        .parent('.global-nav__clump').addClass('is-active')
+        // show current subnav
+        .siblings('.global-subnav').addClass('is-active');
+    }, this.delay);
+  }
+
+  GlobalNav.prototype._closeDesktopSubNav = function(index) {
+    window.clearTimeout(this.timeout);
+
+    this.timeout = window.setTimeout(function() {
+      $(index)
+        // hide current subnav
+        .removeClass('is-active')
+        // hide current heading
+        .siblings('.global-nav__clump__heading').parent('.global-nav__clump').removeClass('is-active');
+    }, this.delay);
   }
 
   return GlobalNav;

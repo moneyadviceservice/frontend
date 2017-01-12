@@ -26,7 +26,6 @@ Rails.application.configure do
                                    html_inspector.js
                                    lib/MicroEvent.js
                                    modules/common.js
-                                   modules/global_nav.js
                                    modules/globals.js
                                    modules/google_complete.js
                                    modules/i18n.js

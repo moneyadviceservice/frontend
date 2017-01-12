@@ -33,9 +33,9 @@ require(['common', 'jquery'], function(MAS, $) {
     });
   }
 
-  require(['jquery', 'global_nav'], function($, global_nav) {
+  require(['jquery', 'GlobalNav'], function($, GlobalNav) {
     $(document).ready(function(){
-      new global_nav();
+      new GlobalNav();
     })
   });
 

@@ -96,7 +96,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   GlobalNav.prototype._openMobileSubNav = function(index) {
     // clear active clumps
-    $('.global-nav__clump').removeClass('is-active');
+    this.$globalNavClump.removeClass('is-active');
     this.$globalNavClumps.removeClass('is-active');
 
     $(index)

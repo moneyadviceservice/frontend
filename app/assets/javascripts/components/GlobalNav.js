@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($, DoughBaseComponent, mediaQueries, utilities) {
   'use strict';
 
   var GlobalNav;
@@ -14,6 +14,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$globalSubNavHeading = this.$el.find('[data-dough-subnav-heading]');
     this.$globalSubNav = this.$el.find('[data-dough-subnav]');
     this.delay = 250; // ms
+    this.mobileAnimationDuration = this.$globalNav.css('transition-duration');
   };
 
   /**
@@ -27,12 +28,27 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   */
   GlobalNav.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
-
     this._setUpMobileInteraction();
     this._setUpDesktopInteraction();
+    this._setUpMobileAnimation();
+
+    $(window).on('resize', utilities.debounce($.proxy(this._resize, this), 100));
 
     return this;
   };
+
+  // Ensure mobile nav not activated on resize
+  GlobalNav.prototype._resize = function() {
+    this._setUpMobileAnimation();
+  }
+
+  GlobalNav.prototype._setUpMobileAnimation = function() {
+    if (mediaQueries.atSmallViewport()) {
+      this.$globalNav.css('transition-duration', this.mobileAnimationDuration);
+    } else {
+      this.$globalNav.css('transition-duration', '0s');
+    }
+  }
 
   /**
   * Set up events for mobile nav

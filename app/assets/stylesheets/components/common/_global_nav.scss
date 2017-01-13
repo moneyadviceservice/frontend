@@ -11,7 +11,7 @@
   transform: translateX(100%);
 
   @include respond-to($mq-m) {
-    transition: none;
+    transition-property: none;
     position: relative;
     transform: none;
     background: $color-yellow-light;

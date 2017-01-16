@@ -15,6 +15,10 @@
   }
 
   @include respond-to($mq-m) {
+    transition: none;
+  }
+
+  @include respond-to($mq-m) {
     transition-property: none;
     position: relative;
     transform: none;
@@ -194,6 +198,10 @@
 
   .global-nav__arrow {
     display: none;
+  }
+
+  &:hover {
+    background: $color-mas-blog-blue-hover;
   }
 }
 

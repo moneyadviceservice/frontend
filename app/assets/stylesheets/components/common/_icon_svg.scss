@@ -125,3 +125,12 @@ html.svg {
 .icon--thumb-icon-down {
   background-position: -935px -436px;
 }
+
+.svg {
+  .icon--twitter,
+  .icon--facebook,
+  .icon--youtube,
+  .icon--email {
+    display: none;
+  }
+}

@@ -2,8 +2,6 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :store_location
   before_action :configure_permitted_parameters
 
-  include SuppressMenuButton
-
   def display_skip_to_main_navigation?
     false
   end

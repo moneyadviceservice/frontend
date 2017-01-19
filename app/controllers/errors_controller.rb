@@ -1,5 +1,4 @@
 class ErrorsController < ApplicationController
-  include SuppressMenuButton
   layout 'error'
   before_filter :fetch_exception
 

@@ -1,8 +1,6 @@
 class CampaignsController < ApplicationController
   decorates_assigned :campaign, with: CampaignPage::CampaignDecorator
 
-  include SuppressMenuButton
-
   def display_skip_to_main_navigation?
     false
   end

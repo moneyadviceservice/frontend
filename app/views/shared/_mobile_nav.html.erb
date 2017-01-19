@@ -1,10 +1,8 @@
 <ul class="mobile-nav">
-  <% if display_menu_button_in_header? %>
-    <% unless hide_elements_irrelevant_for_third_parties? %>
-      <li class="mobile-nav__item">
-        <a data-dough-mobile-nav-button class="mobile-nav__link mobile-nav__link--menu" href="#" role="button"><%= t('mobile_nav.menu') %></a>
-      </li>
-    <% end %>
+  <% unless hide_elements_irrelevant_for_third_parties? %>
+    <li class="mobile-nav__item">
+      <a data-dough-mobile-nav-button class="mobile-nav__link mobile-nav__link--menu" href="#" role="button"><%= t('mobile_nav.menu') %></a>
+    </li>
   <% end %>
   <% if display_search_box_in_header? %>
     <li class="mobile-nav__item mobile-nav__item--search">

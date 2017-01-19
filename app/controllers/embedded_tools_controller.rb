@@ -1,8 +1,6 @@
 class EmbeddedToolsController < ApplicationController
   protected
 
-  include SuppressMenuButton
-
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
   end

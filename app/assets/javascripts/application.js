@@ -35,6 +35,15 @@ require(['common', 'jquery'], function(MAS, $) {
 
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
+      // Mobile Search Button
+      new Collapsable({
+        name: 'mobileSearch',
+        closeOffFocus: false,
+        accordion: true,
+        triggerEl: '.mobile-nav__link--search',
+        targetType: 'href',
+      });
+
       // Article Collapsables
       new Collapsable({
         name: 'articleCollapsables',

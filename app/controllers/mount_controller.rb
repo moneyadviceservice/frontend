@@ -1,8 +1,6 @@
 class MountController < ApplicationController
   protected
 
-  include SuppressMenuButton
-
   def breadcrumbs
     BreadcrumbTrail.home
   end

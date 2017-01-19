@@ -3,8 +3,6 @@ class DebtManagementController < ApplicationController
 
   COMPANY_LIST_ARTICLE_ID = 'debt-management-companies'
 
-  include SuppressMenuButton
-
   private
 
   def company_list

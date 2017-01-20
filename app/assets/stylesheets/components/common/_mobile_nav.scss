@@ -41,6 +41,10 @@
   background-color: $color-yellow-light;
 
   @include respond-to($mq-m) {
+    display: none;
+  }
+
+  @include respond-to($mq-l) {
     line-height: inherit;
     padding: 15px 13px 9px 15px;
   }

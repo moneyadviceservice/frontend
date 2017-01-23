@@ -1,0 +1,19 @@
+<% contents.select(&:category?).each_with_index do |child_category, i| %>
+  <section class="category-detail" data-dough-component="Collapsable">
+    <%= heading_tag level: 2,
+                    id:    child_category.id,
+                    class: 'category-detail__heading' do
+    %>
+    <%= child_category.title %>
+    <% end %>
+    <p class="category-detail__intro"><%= child_category.description %></p>
+    <%= render 'category_promos', promos: child_category.category_promos unless !child_category.category_promos || child_category.category_promos.empty? %>
+    <% if child_category.contents.present? %>
+      <div class="category-detail__list-container">
+        <%= render 'content_items', initial_contents: child_category.initial_contents,
+                                    extended_contents: child_category.extended_contents,
+                                    child_category_id: child_category.id %>
+      </div>
+    <% end %>
+  </section>
+<% end %>

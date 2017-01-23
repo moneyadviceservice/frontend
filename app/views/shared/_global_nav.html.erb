@@ -1,0 +1,73 @@
+<nav class="global-nav" role="navigation" aria-label="main" id="global-nav" tabindex="-1">
+  <div class="l-constrained">
+    <ul class="global-nav__clumps">
+      <% clumps.each do |clump| %>
+        <li class="global-nav__clump">
+          <button href="#" class="global-nav__clump__heading">
+            <span class="global-nav__clump__heading__text"><%= clump.name %></span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon global-nav__arrow" focusable="false">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+            </svg>
+          </button>
+
+          <div class="l-constrained global-subnav">
+            <div class="l-constrained">
+              <p class="global-nav__clump__description"><%= clump.description %></p>
+
+              <a href="#" class="global-subnav__heading">
+                <span class="global-subnav__heading__text"><%= clump.name %></span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow global-nav__arrow" focusable="false">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                </svg>
+              </a>
+
+              <ul class="global-subnav__categories">
+                <% clump.categories.each do |category| %>
+                  <li class="global-subnav__category">
+                    <%= link_to category.title, main_app.category_path(category.id), class: 'global-subnav__category__heading' %>
+
+                    <ul class="global-subnav__subcategories">
+                      <% category.contents.each do |subcategory| %>
+                        <li class="global-subnav__subcategory">
+                          <%= link_to subcategory.title, main_app.category_path(subcategory.id), class: 'global-subnav__subcategory__link' %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </li>
+                <% end %>
+
+                <li class="global-subnav__category global-subnav__tool-category">
+                  <ul class="global-subnav__subcategories">
+                    <% clump.links.each do |link| %>
+                      <li class="global-subnav__tool">
+                        <%= link_to link.text, link.url, class: 'global-subnav__tool__link' %>
+
+                        <span class="global-subnav__tools__icon">
+                           <svg class="global-subnav__tool-icon" role="presentation" viewBox="0 0 100 100">
+                             <use xlink:href="#svg-icon--tool"></use>
+                           </svg>
+                        </span>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      <% end %>
+
+      <li class="global-nav__clump">
+        <button href="#" class="global-nav__clump__heading global-nav__clump__blog-link">
+          <span class="global-nav__clump__heading__text global-nav__clump__blog-link__text">Blog</span>
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon global-nav__arrow" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

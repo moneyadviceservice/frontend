@@ -86,6 +86,7 @@
 
   .global-nav__arrow {
     right: $default-gutter;
+    top: $baseline-unit*2;
   }
 
   @include respond-to($mq-m) {
@@ -149,6 +150,7 @@
   border: none;
   background: transparent;
   text-align: left;
+  position: relative;
 
   @include respond-to($mq-m) {
     &:hover {

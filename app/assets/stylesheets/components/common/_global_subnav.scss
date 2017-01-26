@@ -13,7 +13,7 @@ $gutter: $default-gutter / 2; // the space between category columns
   top: 0;
   left: 0;
   transform: translateX(100%);
-  background: $color-white;
+  padding: $baseline-unit;
 
   @include respond-to($mq-m) {
     transition: none;
@@ -23,6 +23,7 @@ $gutter: $default-gutter / 2; // the space between category columns
     width: 100%;
     margin: 0;
     max-width: none;
+    background: $color-white;
 
     /* non-FlexBox compliant -- */
     display: table-row;
@@ -61,17 +62,14 @@ $gutter: $default-gutter / 2; // the space between category columns
 // -- no-js fallback
 
 .global-subnav__heading {
-  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
-  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.375);
   position: relative;
   display: block;
-  padding: $baseline-unit 0;
-  line-height: 25px;
-  padding: $baseline-unit*2 0;
+  line-height: 29px;
+  padding: $baseline-unit $baseline-unit*2;
   border-top: none;
 
   .global-nav__arrow {
-    left: $default-gutter;
+    left: $baseline-unit;
     transform: rotate(180deg);
   }
 
@@ -82,7 +80,8 @@ $gutter: $default-gutter / 2; // the space between category columns
 
 .global-subnav__heading__text {
   float: none;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 15px;
+  color: $color-black;
 }
 
 .global-subnav__categories {
@@ -97,9 +96,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 }
 
 .global-subnav__category {
-  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
-  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.375);
-  padding: $baseline-unit 0 $baseline-unit 40px;
+  padding: $baseline-unit*2;
   margin-bottom: 0;
 
   @include respond-to($mq-m) {
@@ -181,16 +178,19 @@ $gutter: $default-gutter / 2; // the space between category columns
 }
 
 .global-subnav__category__heading {
-  display: inline-block;
+  display: block;
   float: none;
   padding: 0 0 $baseline-unit;
   font-weight: bold;
   white-space: normal;
+  border-bottom: 1px solid $color-yellow-dark;
 
   @include respond-to($mq-m) {
+    display: inline-block;
     width: 100%;
     margin: 0;
     font-size: 1rem;
+    border: 0;
   }
 }
 

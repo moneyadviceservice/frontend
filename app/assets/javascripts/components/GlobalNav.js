@@ -13,6 +13,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     this.$globalNavClumpHeading = this.$el.find('[data-dough-nav-clump-heading]');
     this.$globalSubNavHeading = this.$el.find('[data-dough-subnav-heading]');
     this.$globalSubNav = this.$el.find('[data-dough-subnav]');
+    this.$mobileNavOverlay = $(document).find('[data-dough-mobile-nav-overlay]');
     this.delay = 250; // ms
   };
 
@@ -64,6 +65,10 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     this.$globalSubNavHeading.click(function() {
       self._toggleMobileSubNav(this);
     });
+
+    $('[data-dough-mobile-nav-overlay]').click(function(){
+      self._closeMobileNav();
+    });
   };
 
   /**
@@ -91,10 +96,23 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
 
   GlobalNav.prototype._toggleMobileNav = function() {
     this.$globalNav.toggleClass('is-active');
+    this.$mobileNavOverlay.toggleClass('is-active');
 
     if (this.$globalNavClumps.hasClass('is-active')) {
       this.$globalNavClumps.removeClass('is-active');
     }
+  };
+
+  GlobalNav.prototype._closeMobileNav = function() {
+    if (this.$globalNav.hasClass('is-active')) {
+      this.$globalNav.removeClass('is-active');
+    }
+
+    if (this.$mobileNavOverlay.hasClass('is-active')) {
+      this.$mobileNavOverlay.removeClass('is-active');
+    }
+
+    this.$globalNavClump.removeClass('is-active');
   };
 
   GlobalNav.prototype._toggleMobileSubNav = function(index) {

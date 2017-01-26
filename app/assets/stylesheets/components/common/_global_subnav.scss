@@ -13,7 +13,6 @@ $gutter: $default-gutter / 2; // the space between category columns
   top: 0;
   left: 0;
   transform: translateX(100%);
-  background: $color-grey-paler;
   padding: $baseline-unit;
 
   @include respond-to($mq-m) {
@@ -82,6 +81,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 .global-subnav__heading__text {
   float: none;
   padding: 0 0 0 15px;
+  color: $color-black;
 }
 
 .global-subnav__categories {
@@ -89,7 +89,6 @@ $gutter: $default-gutter / 2; // the space between category columns
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: $color-white;
 
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*2;
@@ -179,16 +178,19 @@ $gutter: $default-gutter / 2; // the space between category columns
 }
 
 .global-subnav__category__heading {
-  display: inline-block;
+  display: block;
   float: none;
   padding: 0 0 $baseline-unit;
   font-weight: bold;
   white-space: normal;
+  border-bottom: 1px solid $color-yellow-dark;
 
   @include respond-to($mq-m) {
+    display: inline-block;
     width: 100%;
     margin: 0;
     font-size: 1rem;
+    border: 0;
   }
 }
 

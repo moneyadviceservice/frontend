@@ -6,9 +6,11 @@
   transition-property: transform;
   transition-duration: 1s;
   position: fixed;
+  overflow-x: hidden;
   z-index: 5;
-  width: 100%;
+  width: 85%;
   transform: translateX(-100%);
+  background: $color-yellow-light;
   height: 100%;
 
   &.no-transition {
@@ -19,7 +21,9 @@
     transition: none;
     position: relative;
     transform: none;
+    width: 100%;
     background: $color-yellow-light;
+    overflow-x: visible;
 
     /* non-FlexBox compliant -- */
     display: table;
@@ -47,13 +51,15 @@
   transition-duration: 1s;
   position: absolute;
   left: 0;
+  bottom: 0;
+  top: 0;
   transform: translateX(0%);
   list-style: none;
   margin: 0;
   padding: $baseline-unit $baseline-unit*2;
   width: 100%;
-  background: $color-yellow-light;
   font-size: 1rem;
+  background: $color-yellow-light;
 
   @include respond-to($mq-m) {
     @include column(12);

@@ -10,8 +10,9 @@
   z-index: 5;
   width: 85%;
   transform: translateX(-100%);
-  background: $color-yellow-light;
+  background: $color-white;
   height: 100%;
+  border-right: 1px solid $color-green-primary;
 
   &.no-transition {
     transition: none;
@@ -24,6 +25,7 @@
     width: 100%;
     background: $color-yellow-light;
     overflow-x: visible;
+    border: 0;
 
     /* non-FlexBox compliant -- */
     display: table;
@@ -59,7 +61,6 @@
   padding: $baseline-unit $baseline-unit*2;
   width: 100%;
   font-size: 1rem;
-  background: $color-yellow-light;
 
   @include respond-to($mq-m) {
     @include column(12);

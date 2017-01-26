@@ -8,7 +8,8 @@
   position: fixed;
   z-index: 5;
   width: 100%;
-  transform: translateX(100%);
+  transform: translateX(-100%);
+  height: 100%;
 
   &.no-transition {
     transition: none;
@@ -33,8 +34,8 @@
 
 .global-nav__arrow {
   position: absolute;
-  width: (18px / 34) * 25;
-  height: 25px;
+  width: (18px / 34) * 15;
+  height: 15px;
 
   @include respond-to($mq-m) {
     display: none;
@@ -49,7 +50,7 @@
   transform: translateX(0%);
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: $baseline-unit $baseline-unit*2;
   width: 100%;
   background: $color-yellow-light;
   font-size: 1rem;
@@ -62,6 +63,7 @@
     position: static;
     background: transparent;
     display: inline-block;
+    padding: 0;
 
     /* non-FlexBox compliant -- */
     display: table-row;
@@ -78,11 +80,10 @@
 }
 
 .global-nav__clump {
-  border-bottom: solid 1px rgba(0, 0, 0, 0.375);
-  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.375);
   position: static;
   margin: 0;
   line-height: 1;
+  border-bottom: 1px solid $color-yellow-dark;
 
   .global-nav__arrow {
     right: $default-gutter;
@@ -90,8 +91,7 @@
   }
 
   @include respond-to($mq-m) {
-    border-bottom: none;
-    box-shadow: none;
+    border-bottom: 0;
 
     /* non-FlexBox compliant -- */
     display: table-cell;
@@ -146,11 +146,20 @@
   display: inline-block;
   float: none;
   line-height: 25px;
-  padding: $baseline-unit*2 0;
+  padding: $baseline-unit $baseline-unit*2;
   border: none;
   background: transparent;
   text-align: left;
   position: relative;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
 
   @include respond-to($mq-m) {
     &:hover {
@@ -177,7 +186,7 @@
   @include respond-to($mq-m) {
     display: block;
     padding: $baseline-unit*2 $baseline-unit;
-    font-weight: 700;
+    
     font-size: 14px;
     font-size: 0.875rem;
     width: auto;
@@ -278,3 +287,31 @@
   }
 }
 /* -- FlexBox compliant */
+
+a.global-nav__close-button {
+  @include body(14, 24);
+  float: right;
+  margin-top: 6px;
+  display: inline;
+  color: $color-black;
+  text-align: right;
+  padding: $baseline-unit $baseline-unit*5 $baseline-unit $baseline-unit;
+  position: relative;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
+}
+
+.global-nav__close-button__icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 30%;
+  fill: $color-yellow-dark;
+}

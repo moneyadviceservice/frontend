@@ -71,7 +71,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
       self._closeMobileNav();
     });
 
-    $('[data-dough-mobile-nav-overlay]').click(function(){
+    this.$mobileNavOverlay.click(function(){
       self._closeMobileNav();
     });
   };

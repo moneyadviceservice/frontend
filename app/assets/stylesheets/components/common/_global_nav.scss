@@ -164,11 +164,15 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:focus {
     outline: 3px solid $color-black;
+  }
+
+  &:visited {
+    color: $color-black;
   }
 
   @include respond-to($mq-m) {
@@ -223,11 +227,16 @@
   font-weight: 700;
   padding: 0;
   text-transform: uppercase;
-  width: auto;
+  width: 4.5rem;
   margin-top: $baseline-unit;
   margin-bottom: $baseline-unit;
   margin-left: $baseline-unit;
   height: auto;
+  text-align: center;
+
+  &:visited {
+    color: $color-white;
+  }
 
   .global-nav__arrow {
     display: none;

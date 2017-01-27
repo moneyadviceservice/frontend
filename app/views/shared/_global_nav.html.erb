@@ -1,19 +1,19 @@
 <nav class="global-nav" role="navigation" aria-label="main" id="global-nav" tabindex="-1" data-dough-component="GlobalNav">
   <div class="l-constrained">
-    <ul data-dough-nav-clumps class="global-nav__clumps">
+    <ul data-dough-nav-clumps class="global-nav__clumps" role="menubar" aria-label="main site navigation">
       <% clumps.each do |clump| %>
-        <li data-dough-nav-clump class="global-nav__clump">
-          <button data-dough-nav-clump-heading href="#" class="global-nav__clump__heading" aria-haspopup="true">
+        <li data-dough-nav-clump class="global-nav__clump" role="none">
+          <a data-dough-nav-clump-heading="true" href="#" class="global-nav__clump__heading" role="menuitem" aria-haspopup="true" aria-expanded="false">
             <span class="global-nav__clump__heading__text"><%= clump.name %></span>
 
             <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon global-nav__arrow" focusable="false">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
             </svg>
-          </button>
+          </a>
 
-          <div data-dough-subnav class="l-constrained global-subnav" aria-hidden="true" aria-label="submenu">
+          <div data-dough-subnav class="l-constrained global-subnav">
             <div class="l-constrained">
-              <p class="global-nav__clump__description"><%= clump.description %></p>
+              <p class="global-nav__clump__description" aria-role="category description"><%= clump.description %></p>
 
               <a data-dough-subnav-heading href="#" class="global-subnav__heading">
                 <span class="global-subnav__heading__text"><%= clump.name %></span>
@@ -23,29 +23,29 @@
                 </svg>
               </a>
 
-              <ul class="global-subnav__categories">
+              <ul data-dough-subcategories class="global-subnav__categories" role="menu" aria-label="<%= clump.name %>">
                 <% clump.categories.each do |category| %>
-                  <li class="global-subnav__category <%= 'global-subnav__category--double' if category.categories.count > 5 %>">
-                    <%= link_to category.title, main_app.category_path(category.id), class: 'global-subnav__category__heading' %>
+                  <li class="global-subnav__category <%= 'global-subnav__category--double' if category.categories.count > 5 %>" role="none">
+                    <%= link_to category.title, main_app.category_path(category.id), class: 'global-subnav__category__heading', role: 'menuitem' %>
 
                     <ul class="global-subnav__subcategories">
                       <% category.categories.each do |subcategory| %>
-                        <li class="global-subnav__subcategory">
-                          <%= link_to subcategory.title, main_app.category_path(subcategory.id), class: 'global-subnav__subcategory__link' %>
+                        <li class="global-subnav__subcategory" role="none">
+                          <%= link_to subcategory.title, main_app.category_path(subcategory.id), class: 'global-subnav__subcategory__link', role: 'menuitem' %>
                         </li>
                       <% end %>
                     </ul>
                   </li>
                 <% end %>
 
-                <li class="global-subnav__category global-subnav__tool-category">
+                <li class="global-subnav__category global-subnav__tool-category" role="none">
                   <ul class="global-subnav__subcategories">
                     <% clump.links.each do |link| %>
-                      <li class="global-subnav__tool">
-                        <%= link_to link.text, link.url, class: 'global-subnav__tool__link' %>
+                      <li class="global-subnav__tool" role="none">
+                        <%= link_to link.text, link.url, class: 'global-subnav__tool__link', role: 'menuitem' %>
 
                         <span class="global-subnav__tools__icon">
-                           <svg class="global-subnav__tool-icon" role="presentation" viewBox="0 0 100 100">
+                           <svg class="global-subnav__tool-icon" role="presentation" viewBox="0 0 100 100" focusable="false">
                              <use xlink:href="#svg-icon--tool"></use>
                            </svg>
                         </span>
@@ -63,10 +63,10 @@
         </li>
       <% end %>
 
-      <li class="global-nav__clump">
-        <button data-dough-nav-clump-heading href="#" class="global-nav__clump__blog-link" aria-haspopup="true">
+      <li class="global-nav__clump" role="none">
+        <a href="#" class="global-nav__clump__blog-link" aria-haspopup="false" role="menuitem">
           <span class="global-nav__clump__blog-link__text">Blog</span>
-        </button>
+        </a>
         <a data-dough-mobile-nav-close class="global-nav__close-button" href="#" role="button">  <%= t('mobile_nav.close') %>
           <%= render 'shared/svg/use_icon', icon: 'mobile-close-box', class_name: 'global-nav__close-button__icon' %>
         </a>

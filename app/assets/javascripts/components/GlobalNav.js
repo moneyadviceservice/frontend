@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($, DoughBaseComponent, mediaQueries, utilities) {
+define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], function($, DoughBaseComponent, mediaQueries, utilities, common) {
   'use strict';
 
   var GlobalNav;
@@ -249,31 +249,21 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         window.clearTimeout(self.timeout);
 
         self.timeout = window.setTimeout(function() {
+          self._sendHoverAnalytics($(e.target).text());
           self._openDesktopSubNav($(e.target).parents('[data-dough-nav-clump-heading]'));
-        }, self.delay);
-      })
-      .mouseleave(function(e) {
-        window.clearTimeout(self.timeout);
-
-        self.timeout = window.setTimeout(function() {
-          self._closeDesktopSubNav(e.target);
         }, self.delay);
       });
 
-    $('.global-subnav')
-      .mouseenter(function(e) {
+    this.$globalNav
+      .mouseleave(function() {
         window.clearTimeout(self.timeout);
 
-        self.timeout = window.setTimeout(function() {
-          self._openDesktopSubNav(e.target);
+        self.closeNavTimeout = window.setTimeout(function() {
+          self._closeDesktopSubNav();
         }, self.delay);
       })
-      .mouseleave(function(e) {
-        window.clearTimeout(this.timeout);
-
-        self.timeout = window.setTimeout(function() {
-          self._closeDesktopSubNav(e.target);
-        }, self.delay);
+      .mouseenter(function() {
+        window.clearTimeout(self.closeNavTimeout);
       });
   };
 
@@ -321,6 +311,15 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         .siblings('[data-dough-nav-clump-heading]')
         .parents('[data-dough-nav-clump]').removeClass('is-active');
     }
+  };
+
+  GlobalNav.prototype._sendHoverAnalytics = function(label) {
+    window.dataLayer.push({
+      'event': 'gaEvent',
+      'gaEventCat': 'Global Navigation',
+      'gaEventAct': 'Hover',
+      'gaEventLab': label
+    });
   };
 
   return GlobalNav;

@@ -166,8 +166,8 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
   GlobalNav.prototype._moveTopLevelFocus = function(el, dir) {
     var thisClump = $(el).parents('[data-dough-nav-clump]');
     var clumps = $(thisClump).siblings('[data-dough-nav-clump]');
-    var firstClump = $(clumps).get()[0];
-    var lastClump = $(clumps).get()[clumps.length - 1];
+    var firstClump = $(clumps).first();
+    var lastClump = $(clumps).last();
 
     if (dir === 'left') {
       if ($(thisClump).prev('[data-dough-nav-clump]').length > 0) {
@@ -287,6 +287,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
       timeoutDelay = 0;
     }
 
+
     if (!this.$globalNav.hasClass('is-active')) {
       var self = this;
 
@@ -312,6 +313,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     } else {
       timeoutDelay = 0;
     }
+
 
     if (!this.$globalNav.hasClass('is-active')) {
       window.clearTimeout(this.timeout);

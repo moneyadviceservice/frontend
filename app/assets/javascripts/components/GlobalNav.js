@@ -47,17 +47,10 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     var self = this;
 
     this.$globalNav.keydown(function(e) {
-      switch (e.which) {
-        // down arrow
-        case 40:
-          e.preventDefault();
-          break;
-        // spacebar
-        case 32:
-          e.preventDefault();
-          break;
+      if (e.which === 32 || e.which === 40) {
+        e.preventDefault();
       }
-    })
+    });
 
     this.$globalNav.keyup(function(e) {
       var level;
@@ -71,13 +64,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
       switch (e.which) {
         // tab
         case 9:
-          if (level == 'top') {
+          if (level === 'top') {
             self._closeBlurredClumps(e.target);
           }
           break;
         // enter
         case 13:
-          if (level == 'top') {
+          if (level === 'top') {
             e.preventDefault();
             self._openDesktopSubNav(e.target, false);
             self._moveFocusToSubNav(e.target);
@@ -85,7 +78,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           break;
         // escape
         case 27:
-          if (level == 'subnav') {
+          if (level === 'subnav') {
             self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
             self._moveTopLevelFocus(e.target);
           }
@@ -94,7 +87,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         case 32:
           e.preventDefault();
 
-          if (level == 'top') {
+          if (level === 'top') {
             self._openDesktopSubNav(e.target, false);
           }
           break;
@@ -102,13 +95,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         case 37:
           self._moveTopLevelFocus(e.target, 'left');
 
-          if (level == 'subnav') {
+          if (level === 'subnav') {
             self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
           }
           break;
         // up arrow
         case 38:
-          if (level == 'subnav') {
+          if (level === 'subnav') {
             self._moveSubNavFocus(e.target, 'up');
           }
           break;
@@ -116,13 +109,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         case 39:
           self._moveTopLevelFocus(e.target, 'right');
 
-          if (level == 'subnav') {
+          if (level === 'subnav') {
             self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
           }
           break;
         // down arrow
         case 40:
-          if (level == 'top') {
+          if (level === 'top') {
             if ($(e.target).parents('[data-dough-nav-clump]').hasClass('is-active')) {
               self._moveFocusToSubNav(e.target);
             } else {
@@ -133,8 +126,8 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           }
           break;
       }
-    })
-  }
+    });
+  };
 
   /**
   * Moves focus to first link of subnav
@@ -143,7 +136,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     var firstLink = $(el).siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a')[0];
 
     $(firstLink).focus();
-  }
+  };
 
   /**
   * Moves focus of subnav up or down
@@ -152,7 +145,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     var subCatArray = $(el).parents('[data-dough-subcategories]').find('a');
     var index = $(subCatArray).index(el);
 
-    if (dir == 'up') {
+    if (dir === 'up') {
       if (index > 0) {
         subCatArray[index - 1].focus();
       } else {
@@ -165,7 +158,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         subCatArray[0].focus();
       }
     }
-  }
+  };
 
   /**
   * Moves focus of top level nav to left or right
@@ -176,14 +169,14 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     var firstClump = $(clumps).get()[0];
     var lastClump = $(clumps).get()[clumps.length - 1];
 
-    if (dir == 'left') {
+    if (dir === 'left') {
       if ($(thisClump).prev('[data-dough-nav-clump]').length > 0) {
         $(thisClump).blur()
           .prev().children('[data-dough-nav-clump-heading]').focus();
       } else {
         $(lastClump).children('[data-dough-nav-clump-heading]').focus();
       }
-    } else if (dir == 'right') {
+    } else if (dir === 'right') {
       if ($(thisClump).next('[data-dough-nav-clump]').length > 0) {
         $(thisClump).blur()
           .next().children('[data-dough-nav-clump-heading]').focus();
@@ -200,7 +193,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
   */
   GlobalNav.prototype._closeBlurredClumps = function(el) {
     this.$globalNavClump.not($(el).parents('[data-dough-nav-clump]')).removeClass('is-active');
-  }
+  };
 
   /**
   * Ensure mobile nav not activated on resize or page load
@@ -309,7 +302,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           .siblings('[data-dough-subnav]').addClass('is-active');
       }, timeoutDelay);
     }
-  }
+  };
 
   GlobalNav.prototype._closeDesktopSubNav = function(index, delay) {
     var timeoutDelay;
@@ -330,7 +323,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
             .parent('[data-dough-nav-clump]').removeClass('is-active');
       }, timeoutDelay);
     }
-  }
+  };
 
   return GlobalNav;
 });

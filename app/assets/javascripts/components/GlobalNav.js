@@ -49,7 +49,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     this.$globalNav.keydown(function(e) {
       if (e.which === 32 || e.which === 40) {
         e.preventDefault();
-      }
+      };
     });
 
     this.$globalNav.keyup(function(e) {

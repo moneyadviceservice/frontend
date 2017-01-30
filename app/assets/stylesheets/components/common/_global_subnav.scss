@@ -30,7 +30,7 @@ $gutter: $default-gutter / 2; // the space between category columns
     /* -- non-FlexBox compliant */
 
     &:after {
-      box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.6);
       position: relative;
       z-index: -1
     }

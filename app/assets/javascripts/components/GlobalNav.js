@@ -212,23 +212,28 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
   GlobalNav.prototype._setUpMobileInteraction = function() {
     var self = this;
 
-    this.$mobileNavButton.click(function() {
+    this.$mobileNavButton.click(function(e) {
+      e.preventDefault();
       self._toggleMobileNav();
     });
 
-    this.$globalNavClumpHeading.click(function() {
+    this.$globalNavClumpHeading.click(function(e) {
+      e.preventDefault();
       self._toggleMobileSubNav(this);
     });
 
-    this.$globalSubNavHeading.click(function() {
+    this.$globalSubNavHeading.click(function(e) {
+      e.preventDefault();
       self._toggleMobileSubNav(this);
     });
 
-    this.$mobileNavClose.click(function(){
+    this.$mobileNavClose.click(function(e){
+      e.preventDefault();
       self._closeMobileNav();
     });
 
-    this.$mobileNavOverlay.click(function(){
+    this.$mobileNavOverlay.click(function(e){
+      e.preventDefault();
       self._closeMobileNav();
     });
   };

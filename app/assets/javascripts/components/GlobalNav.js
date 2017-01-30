@@ -49,7 +49,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     this.$globalNav.keydown(function(e) {
       if (e.which === 32 || e.which === 40) {
         e.preventDefault();
-      };
+      }
     });
 
     this.$globalNav.keyup(function(e) {
@@ -72,14 +72,14 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
         case 13:
           if (level === 'top') {
             e.preventDefault();
-            self._openDesktopSubNav(e.target, false);
+            self._openDesktopSubNav(e.target);
             self._moveFocusToSubNav(e.target);
           }
           break;
         // escape
         case 27:
           if (level === 'subnav') {
-            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
+            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'));
             self._moveTopLevelFocus(e.target);
           }
           break;
@@ -88,7 +88,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           e.preventDefault();
 
           if (level === 'top') {
-            self._openDesktopSubNav(e.target, false);
+            self._openDesktopSubNav(e.target);
           }
           break;
         // left arrow
@@ -96,7 +96,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           self._moveTopLevelFocus(e.target, 'left');
 
           if (level === 'subnav') {
-            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
+            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'));
           }
           break;
         // up arrow
@@ -110,7 +110,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
           self._moveTopLevelFocus(e.target, 'right');
 
           if (level === 'subnav') {
-            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'), false);
+            self._closeDesktopSubNav($(e.target).parents('[data-dough-subnav]'));
           }
           break;
         // down arrow
@@ -119,7 +119,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
             if ($(e.target).parents('[data-dough-nav-clump]').hasClass('is-active')) {
               self._moveFocusToSubNav(e.target);
             } else {
-              self._openDesktopSubNav(e.target, false);
+              self._openDesktopSubNav(e.target);
             }
           } else {
             self._moveSubNavFocus(e.target, 'down');
@@ -240,19 +240,35 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
     var self = this;
 
     this.$globalNavClumpHeading
-      .mouseenter(function() {
-        self._openDesktopSubNav(this, true);
+      .mouseenter(function(e) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._openDesktopSubNav($(e.target).parents('[data-dough-nav-clump-heading]'));
+        }, self.delay);
       })
-      .mouseleave(function() {
-        self._closeDesktopSubNav(this, true);
+      .mouseleave(function(e) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._closeDesktopSubNav(e.target);
+        }, self.delay);
       });
 
     $('.global-subnav')
-      .mouseenter(function() {
-        self._openDesktopSubNav(this, true);
+      .mouseenter(function(e) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._openDesktopSubNav(e.target);
+        }, self.delay);
       })
-      .mouseleave(function() {
-        self._closeDesktopSubNav(this, true);
+      .mouseleave(function(e) {
+        window.clearTimeout(this.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._closeDesktopSubNav(e.target);
+        }, self.delay);
       });
   };
 
@@ -278,52 +294,27 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
   };
 
-  GlobalNav.prototype._openDesktopSubNav = function(index, delay) {
-    var timeoutDelay;
-
-    if (delay) {
-      timeoutDelay = this.delay;
-    } else {
-      timeoutDelay = 0;
-    }
-
-
+  GlobalNav.prototype._openDesktopSubNav = function(index) {
     if (!this.$globalNav.hasClass('is-active')) {
-      var self = this;
+      this.$globalSubNav.removeClass('is-active');
+      this.$globalNavClump.removeClass('is-active');
+      this.$globalNavClumpHeading.attr('aria-expanded', 'false');
 
-      window.clearTimeout(this.timeout);
-
-      this.timeout = window.setTimeout(function() {
-        self.$globalSubNav.removeClass('is-active');
-        self.$globalNavClump.removeClass('is-active');
-
-        $(index)
-          .attr('aria-expanded', 'true')
-          .parent('[data-dough-nav-clump]').addClass('is-active')
-          .siblings('[data-dough-subnav]').addClass('is-active');
-      }, timeoutDelay);
+      $(index)
+        .attr('aria-expanded', 'true')
+        .parent('[data-dough-nav-clump]').addClass('is-active')
+        .siblings('[data-dough-subnav]').addClass('is-active');
     }
   };
 
-  GlobalNav.prototype._closeDesktopSubNav = function(index, delay) {
-    var timeoutDelay;
-
-    if (delay) {
-      timeoutDelay = this.delay;
-    } else {
-      timeoutDelay = 0;
-    }
-
-
+  GlobalNav.prototype._closeDesktopSubNav = function(index) {
     if (!this.$globalNav.hasClass('is-active')) {
-      window.clearTimeout(this.timeout);
+      this.$globalSubNav.removeClass('is-active');
+      this.$globalNavClump.removeClass('is-active');
 
-      this.timeout = window.setTimeout(function() {
-        $(index)
-          .removeClass('is-active')
-          .siblings('[data-dough-nav-clump-heading]').attr('aria-expanded', 'false')
-            .parent('[data-dough-nav-clump]').removeClass('is-active');
-      }, timeoutDelay);
+      $(index)
+        .siblings('[data-dough-nav-clump-heading]')
+        .parents('[data-dough-nav-clump]').removeClass('is-active');
     }
   };
 

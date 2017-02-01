@@ -33,6 +33,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this._setUpDesktopInteraction();
     this._setUpMobileAnimation();
     this._setUpKeyboardEvents();
+    this.$globalNav.removeClass('uninitialised');
 
     $(window).on('resize', utilities.debounce($.proxy(this._setUpMobileAnimation, this), 100));
 

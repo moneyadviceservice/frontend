@@ -313,14 +313,13 @@ a.global-nav__close-button {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: center;
+      justify-content: space-between;
     }
 
     .global-nav__clump {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      display: inline-block;
       width: auto;
+      flex-shrink: 1;
     }
   }
 }

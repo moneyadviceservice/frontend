@@ -42,7 +42,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 }
 
 // no-js fallback --
-.no-js {
+.uninitialised {
   @include respond-to($mq-m) {
     .global-nav__clump__heading {
       &:hover {

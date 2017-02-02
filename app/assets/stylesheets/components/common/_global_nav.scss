@@ -150,6 +150,10 @@
   }
 }
 
+.global-nav__blog {
+  min-width: 5.5rem;
+}
+
 .global-nav__clump__heading {
   @include column(12);
 
@@ -161,18 +165,17 @@
   background: transparent;
   text-align: left;
   position: relative;
+  color: $color-black;
 
+  &:visited,
   &:hover,
   &:focus {
     text-decoration: none;
+    color: $color-black;
   }
 
   &:focus {
     outline: 3px solid $color-black;
-  }
-
-  &:visited {
-    color: $color-black;
   }
 
   @include respond-to($mq-m) {
@@ -313,24 +316,13 @@ a.global-nav__close-button {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: center;
+      justify-content: space-between;
     }
 
     .global-nav__clump {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      display: inline-block;
       width: auto;
+      flex-shrink: 1;
     }
-
-    .global-nav__clump__heading {
-      display: flex;
-      flex-grow: 1;
-    }
-  }
-
-  .global-nav__clump__heading__text {
-      flex-grow: 1;
-  }
 }
 /* -- FlexBox compliant */

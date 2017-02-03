@@ -127,12 +127,11 @@ $global-nav-transition-duration: 300ms;
 
     @include respond-to($mq-m) {
       background: $color-white;
-
-      .global-nav__clump__heading__text:before,
-      & + .global-nav__clump .global-nav__clump__heading__text:before {
-        border-left: none;
-      }
     }
+  }
+
+  &:hover {
+    background: $color-white;
   }
 }
 
@@ -142,11 +141,15 @@ $global-nav-transition-duration: 300ms;
 
 .global-nav__clump:first-child {
   border-top: none;
+}
 
-  @include respond-to($mq-m) {
-    .global-nav__clump__heading__text:before {
-      border-left: none;
-    }
+.global-nav__blog {
+  line-height: 1;
+  margin-bottom: 0;
+  min-width: 5.5em;
+
+  @include respond-to($mq-m, $mq-m-max) {
+    display: none;
   }
 }
 
@@ -157,7 +160,6 @@ $global-nav-transition-duration: 300ms;
   float: none;
   line-height: 25px;
   padding: $baseline-unit $baseline-unit*2;
-  border: none;
   background: transparent;
   text-align: left;
   position: relative;
@@ -172,17 +174,17 @@ $global-nav-transition-duration: 300ms;
     outline: 3px solid $color-black;
   }
 
+  &:hover,
+  &:focus,
   &:visited {
     color: $color-black;
   }
 
   @include respond-to($mq-m) {
-    &:hover {
-      background: $color-white;
-    }
     &:focus {
       background: $color-grey-pale;
     }
+
     .is-active &:focus {
       background: $color-white;
     }
@@ -200,7 +202,7 @@ $global-nav-transition-duration: 300ms;
 .global-nav__clump__heading__text {
   @include respond-to($mq-m) {
     display: block;
-    padding: $baseline-unit*2 $baseline-unit;
+    padding: $baseline-unit*2 10px;
     font-weight: 700;
     font-size: 14px;
     font-size: 0.875rem;
@@ -241,6 +243,7 @@ $global-nav-transition-duration: 300ms;
 
   &:hover {
     background: $color-mas-blog-blue-hover;
+    color: $color-white;
   }
 }
 
@@ -302,23 +305,15 @@ a.global-nav__close-button {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .global-nav__clump {
       display: inline-block;
       width: auto;
-      flex-shrink: 1;
-    }
-
-    .global-nav__clump__heading {
-      display: flex;
       flex-grow: 1;
+      flex-shrink: 1;   // IE10 fix
     }
-  }
-
-  .global-nav__clump__heading__text {
-      flex-grow: 1;
   }
 }
 /* -- FlexBox compliant */

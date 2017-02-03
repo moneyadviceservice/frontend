@@ -219,8 +219,10 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     });
 
     this.$globalNavClumpHeading.click(function(e) {
-      e.preventDefault();
-      self._toggleMobileSubNav(this);
+      if (mediaQueries.atSmallViewport()) {
+        e.preventDefault();
+        self._toggleMobileSubNav(this);
+      }
     });
 
     this.$globalSubNavHeading.click(function(e) {

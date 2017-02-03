@@ -129,6 +129,10 @@ $global-nav-transition-duration: 300ms;
       background: $color-white;
     }
   }
+
+  &:hover {
+    background: $color-white;
+  }
 }
 
 .global-nav__clump:last-child {
@@ -137,12 +141,6 @@ $global-nav-transition-duration: 300ms;
 
 .global-nav__clump:first-child {
   border-top: none;
-
-  @include respond-to($mq-m) {
-    .global-nav__clump__heading__text:before {
-      border-left: none;
-    }
-  }
 }
 
 .global-nav__blog {
@@ -171,15 +169,13 @@ $global-nav-transition-duration: 300ms;
     outline: 3px solid $color-black;
   }
 
+  &:hover,
+  &:focus,
   &:visited {
     color: $color-black;
   }
 
   @include respond-to($mq-m) {
-    &:hover {
-      background: $color-white;
-    }
-
     &:focus {
       background: $color-grey-pale;
     }
@@ -310,7 +306,6 @@ a.global-nav__close-button {
       display: inline-block;
       width: auto;
       flex-grow: 1;
-      overflow: hidden; // IE11 fix
       flex-shrink: 1;   // IE10 fix
     }
   }

@@ -29,10 +29,6 @@ Then(/^I should see a message(?: in my language)? to gain my trust?$/) do
     .to have_content(eval("expected_#{I18n.locale}"))
 end
 
-Then(/^I should see directory items$/) do
-  expect(home_page).to have_directory_items
-end
-
 Then(/^I should see promoted content$/) do
   expected_text = ["Countdown to Christmas starts now!", "Can you guess the cost of emergencies?", "Give yourself a financial workout", "Prepare for the new arrival"]
   actual_text   = home_page.promos.map { |item| item.heading.text }

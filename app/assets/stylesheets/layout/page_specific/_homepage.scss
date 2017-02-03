@@ -27,25 +27,6 @@
   }
 }
 
-.l-home-directory {
-  background-color: $color-directory-emphasized-bg;
-  clear: both;
-}
-
-.l-home-directory__title {
-  @extend %font-heading-medium;
-  @include column(12);
-  @include body(16, 18);
-  color: $color-heading-extra-small;
-}
-
 .l-homepage-divider {
   @include column(12);
-}
-
-.l-home-directory__intro {
-  @extend %font-heading-medium;
-  @include column(12);
-  color: $color-heading-default;
-  margin-top: $baseline-unit*6;
 }

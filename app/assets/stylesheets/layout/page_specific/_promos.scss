@@ -1,35 +1,12 @@
 .l-tool-promos {
   @extend %clearfix;
   overflow: hidden;
+  background: $color-grey-pale;
+  padding-top: $baseline-unit*2;
+}
+
+.l-tool-promos__inner {
   position: relative;
-  margin-top: $baseline-unit*6;
-
-  .flexbox & {
-    display: flex;
-    flex-flow: column;
-
-    @include respond-to($mq-m) {
-      display: block;
-      flex-flow: row nowrap;
-      flex-wrap: nowrap;
-    }
-
-    @include respond-to($mq-l) {
-      display: flex;
-      flex-flow: row;
-      flex-wrap: wrap;
-
-      &:after {
-        @include column(12);
-        content: "";
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid $color-grey-seven;
-        position: relative;
-        top: -1px;
-      }
-    }
-  }
 }
 
 .l-tool-promos__heading {
@@ -105,12 +82,6 @@
     @include column(3);
     border-top: 0;
     margin-bottom: 0;
-  }
-
-  .flexbox & {
-    @include respond-to($mq-l) {
-      flex-basis: 21.55%;
-    }
   }
 
   .l-promos--articles & {

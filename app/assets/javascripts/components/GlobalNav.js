@@ -255,6 +255,9 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
           self._sendHoverAnalytics($(e.target).text());
           self._openDesktopSubNav($(e.target).parents('[data-dough-nav-clump-heading]'));
         }, self.delay);
+      })
+      .mousedown(function(e) {
+        e.preventDefault();
       });
 
     this.$globalNav

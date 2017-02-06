@@ -16,14 +16,6 @@
       margin-bottom: $baseline-unit*9;
     }
   }
-
-  .home-top-promo {
-    @include column(12);
-
-    @include respond-to($mq-m) {
-      @include column(6);
-    }
-  }
 }
 
 .l-homepage-divider {

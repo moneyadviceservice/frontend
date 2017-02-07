@@ -203,7 +203,6 @@ $global-nav-transition-duration: 300ms;
 
     position: relative;
     width: 100%;
-    height: 100%;
     margin: 0;
     line-height: 1;
     text-align: center;
@@ -249,13 +248,18 @@ $global-nav-transition-duration: 300ms;
     color: $color-white;
   }
 
-  .global-nav__arrow {
-    display: none;
+  &:focus {
+    background: $color-mas-blog-blue;
+    text-decoration: none;
   }
 
   &:hover {
     background: $color-mas-blog-blue-hover;
-    color: $color-white;
+    text-decoration: none;
+  }
+
+  .global-nav__arrow {
+    display: none;
   }
 }
 

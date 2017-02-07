@@ -247,6 +247,15 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   GlobalNav.prototype._setUpDesktopInteraction = function() {
     var self = this;
 
+    // touch event outside of global nav triggers close subnav
+    if (!mediaQueries.atSmallViewport()) {
+      $(document).on('touchstart', function(e) {
+        if ($(e.target).parents('[data-dough-component="GlobalNav"]').length == 0) {
+          self.$globalNavClump.removeClass('is-active');
+        }
+      })
+    }
+
     this.$globalNavClumpHeading
       .mouseenter(function(e) {
         window.clearTimeout(self.timeout);
@@ -258,6 +267,19 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
       })
       .mousedown(function(e) {
         e.preventDefault();
+      }).on('touchstart', function(e) {
+        // remove hover event handler if touch event detected
+        $(e.target).parents('[data-dough-nav-clump-heading]').off('mouseenter')
+      }).on('touchend', function(e) {
+        if (!mediaQueries.atSmallViewport()) {
+          var index = $(e.target).parents('[data-dough-nav-clump-heading]');
+          // touch event on clump heading triggers open/close subnav
+          if ($(e.target).parents('[data-dough-nav-clump]').hasClass('is-active')) {
+            self._closeDesktopSubNav(index);
+          } else {
+            self._openDesktopSubNav(index);
+          }
+        }
       });
 
     this.$globalNav

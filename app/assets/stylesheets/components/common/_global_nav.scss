@@ -135,6 +135,18 @@ $global-nav-transition-duration: 300ms;
   }
 }
 
+.touch {
+  .global-nav__clump {
+    &:hover {
+      background: transparent;
+    }
+
+    &.is-active {
+      background: $color-white;
+    }
+  }
+}
+
 .global-nav__clump:last-child {
   border-bottom: none;
 }

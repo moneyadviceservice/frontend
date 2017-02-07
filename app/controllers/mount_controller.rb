@@ -35,12 +35,6 @@ class MountController < ApplicationController
     true
   end
 
-  def display_category_directory?
-    false
-  end
-
-  helper_method :display_category_directory?
-
   private
 
   def alternate_engine_id

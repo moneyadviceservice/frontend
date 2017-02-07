@@ -232,12 +232,12 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
 
     this.$mobileNavClose.click(function(e){
       e.preventDefault();
-      self._closeMobileNav();
+      self._toggleMobileNav();
     });
 
     this.$mobileNavOverlay.click(function(e){
       e.preventDefault();
-      self._closeMobileNav();
+      self._toggleMobileNav();
     });
   };
 
@@ -277,16 +277,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$globalNav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
 
-    if (this.$globalNavClumps.hasClass('is-active')) {
+    // If we just closed the nav, reset all subnavs
+    if (!this.$globalNav.hasClass('is-active')) {
+      this.$globalNav.removeClass('is-active');
+      this.$mobileNavOverlay.removeClass('is-active');
       this.$globalNavClumps.removeClass('is-active');
+      this.$globalNavClump.removeClass('is-active');
     }
-  };
-
-  GlobalNav.prototype._closeMobileNav = function() {
-    this.$globalNav.removeClass('is-active');
-    this.$mobileNavOverlay.removeClass('is-active');
-    this.$globalNavClumps.removeClass('is-active');
-    this.$globalNavClump.removeClass('is-active');
   };
 
   GlobalNav.prototype._toggleMobileSubNav = function(index) {

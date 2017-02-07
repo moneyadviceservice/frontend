@@ -4,10 +4,11 @@
 
 $max-cols: 6; // the maximum number of categories in the subnav
 $gutter: $default-gutter / 2; // the space between category columns
+$global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 
 .global-subnav {
   transition-property: visibility;
-  transition-delay: 1s;
+  transition-delay: $global-nav-transition-duration;
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -17,7 +18,6 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     transition: none;
-    // visibility: visible;
     top: 100%;
     transform: none;
     width: 100%;

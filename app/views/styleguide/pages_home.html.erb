@@ -14,18 +14,6 @@
 
 <%= render 'shared/home_top', item: item %>
 
-<div class="l-home-directory">
-  <div class="l-constrained">
-    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
-      Choose a section to get started…
-    <% end %>
-
-    <div class="temp-dynamic-directory-container">
-      <%= render 'shared/directory', items: category_navigation %>
-    </div>
-  </div>
-</div>
-
 <%
   items = [
     {

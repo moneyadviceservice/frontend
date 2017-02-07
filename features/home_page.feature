@@ -11,10 +11,6 @@ Feature: Home page
     When I visit the home page
     Then I should see a message to gain my trust
 
-  Scenario: User show featured topics
-    When I visit the home page
-    Then I should see directory items
-
   Scenario: User shown information about contacting the call centre
     When I visit the home page
     Then I should see information about contacting the Money Advice Service call centre

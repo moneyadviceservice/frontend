@@ -248,13 +248,18 @@ $global-nav-transition-duration: 300ms;
     color: $color-white;
   }
 
-  .global-nav__arrow {
-    display: none;
+  &:focus {
+    background: $color-mas-blog-blue;
+    text-decoration: none;
   }
 
   &:hover {
     background: $color-mas-blog-blue-hover;
-    color: $color-white;
+    text-decoration: none;
+  }
+
+  .global-nav__arrow {
+    display: none;
   }
 }
 

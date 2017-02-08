@@ -87,6 +87,23 @@ module Core
         specify { expect(category).to be_a(Category) }
         specify { expect(category.contents).to be_empty }
       end
+
+      context 'when `legacy_contents` is provided' do
+        let(:legacy_contents) { %w(article_hash action_plan_hash).map(&method(:build)) }
+        let(:repo_category) { build :category_hash, id: id, legacy_contents: legacy_contents }
+        let(:repository) { Repository::Categories::Fake.new(repo_category) }
+        let(:category) { subject.call }
+
+        before do
+          allow(Registry::Repository).to receive(:[]).with(:category).and_return(repository)
+        end
+
+        [Article, ActionPlan].each_with_index do |klass, i|
+          it "loads class #{klass}" do
+            expect(category.legacy_contents[i]).to be_a(klass)
+          end
+        end
+      end
     end
 
     context 'when category is redirected' do

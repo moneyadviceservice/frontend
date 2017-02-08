@@ -21,18 +21,6 @@
   <%= render 'shared/more_in', article: article, categories: categories %>
 <% end %>
 
-<%= styleguide_section sections['link-list-primary'] do %>
-  <%= render 'styleguide/shared/link_list_primary' %>
-<% end %>
-
-<%= styleguide_section sections['link-list-secondary'] do %>
-  <%= render 'styleguide/shared/link_list_secondary' %>
-<% end %>
-
-<%= styleguide_section sections['link-list-tertiary'] do %>
-  <%= render 'styleguide/shared/link_list_tertiary' %>
-<% end %>
-
 <%= styleguide_section sections['Secondary Footer'] do %>
   <%= render 'shared/footer_secondary', locals: alternate_locales %>
 <% end %>
@@ -57,11 +45,6 @@
 
 <%= styleguide_section sections['Home Top'] do %>
   <%= render 'shared/home_top', item: item %>
-<% end %>
-
-<%= styleguide_section sections['Directory'] do %>
-  <%= render 'shared/directory',
-             items: categories_for_directory_en %>
 <% end %>
 
 <%
@@ -102,7 +85,7 @@
 <% end %>
 
 <%= styleguide_section sections['Main navigation'] do %>
-  <%= render 'shared/nav', categories: @categories_for_directory_en %>
+  <%= render 'shared/nav' %>
 <% end %>
 
 <%= styleguide_section sections['Search'] do %>

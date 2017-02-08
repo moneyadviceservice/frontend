@@ -14,6 +14,7 @@ module Core
       if category.valid?
         category.tap do |cat|
           cat.contents = build_contents(cat.contents)
+          cat.legacy_contents = build_contents(cat.legacy_contents)
         end
       elsif block_given?
         yield category

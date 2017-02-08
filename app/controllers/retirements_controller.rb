@@ -2,8 +2,6 @@ class RetirementsController < ApplicationController
   layout 'layouts/_unconstrained'
   helper_method :locale_options
 
-  include SuppressMenuButton
-
   def display_skip_to_main_navigation?
     false
   end

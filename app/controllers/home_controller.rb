@@ -1,6 +1,4 @@
 class HomeController < ApplicationController
-  include SuppressMenuButton
-
   def show
     @resource = interactor.call
   end

@@ -50,12 +50,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :display_search_box_in_header?
 
-  def display_menu_button_in_header?
-    true
-  end
-
-  helper_method :display_menu_button_in_header?
-
   def contact_panels_border_top?
     false
   end
@@ -103,6 +97,11 @@ class ApplicationController < ActionController::Base
   def check_syndicated_layout
     'syndicated' if syndicated_tool_request?
   end
+
+  def clumps
+    Core::ClumpsReader.new.call
+  end
+  helper_method :clumps
 
   def category_tree(categories = Core::Registry::Repository[:category].all)
     Core::CategoryTreeReader.new.call(categories)

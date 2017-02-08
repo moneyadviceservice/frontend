@@ -1,5 +1,6 @@
 class CategoryDecorator < Draper::Decorator
   decorates_association :contents, with: CategoryContentDecorator
+  decorates_association :legacy_contents, with: CategoryContentDecorator
   delegate :title, :description, :id, :parent_id, :images, :links, :category_promos
 
   def path
@@ -16,14 +17,19 @@ class CategoryDecorator < Draper::Decorator
     end
   end
 
-  def render_contents
-    partial = if object.parent?
-                'child_categories'
-              elsif object.child?
-                'content_items_all'
-              end
+  def rendering_args
+    case
+    when object.legacy?
+      ['relay_page', contents: legacy_contents]
+    when object.parent?
+      ['child_categories', contents: contents]
+    when object.child?
+      ['content_items_all', contents: contents]
+    end
+  end
 
-    h.render partial, contents: contents
+  def render_contents
+    h.render *rendering_args
   end
 
   def large_image

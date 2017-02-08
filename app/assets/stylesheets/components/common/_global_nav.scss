@@ -1,0 +1,335 @@
+// Global Navigation
+//
+// Styleguide Global Navigation
+
+$global-nav-transition-duration: 300ms;
+
+.global-nav {
+  transition: transform $global-nav-transition-duration ease-out;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 5;
+  width: 85%;
+  transform: translateX(-100%);
+  background: $color-white;
+  height: 100%;
+  border-right: 1px solid $color-green-primary;
+
+  &.no-transition {
+    transition: none;
+  }
+
+  @include respond-to($mq-m) {
+    transition: none;
+    position: relative;
+    transform: none;
+    width: 100%;
+    background: $color-yellow-light;
+    overflow-x: visible;
+    border: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table;
+    height: 100%;
+    /* -- non-FlexBox compliant */
+  }
+
+  &.is-active {
+    transform: translateX(0%);
+    -webkit-box-shadow: 2px 0px 17px 0px rgba(0,0,0,0.71);
+    -moz-box-shadow: 2px 0px 17px 0px rgba(0,0,0,0.71);
+    box-shadow: 2px 0px 17px 0px rgba(0,0,0,0.71);
+  }
+}
+
+.global-nav__arrow {
+  position: absolute;
+  width: (18px / 34) * 15;
+  height: 15px;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.global-nav__clumps {
+  transition: transform $global-nav-transition-duration ease-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  transform: translateX(0%);
+  list-style: none;
+  margin: 0;
+  padding: $baseline-unit $baseline-unit*2;
+  width: 100%;
+  font-size: 1rem;
+
+  @include respond-to($mq-m) {
+    @include column(12);
+
+    transition: none;
+    transform: none;
+    position: static;
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table-row;
+    /* -- non-FlexBox compliant */
+  }
+
+  &.is-active {
+    transform: translateX(-100%);
+
+    @include respond-to($mq-m) {
+      transform: none;
+    }
+  }
+}
+
+.global-nav__clump {
+  position: static;
+  margin: 0;
+  line-height: 1;
+  border-bottom: 1px solid $color-yellow-dark;
+
+  .global-nav__arrow {
+    right: $default-gutter;
+    top: $baseline-unit*2;
+  }
+
+  @include respond-to($mq-m) {
+    border-bottom: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    width: (100% / 8);
+    vertical-align: bottom;
+    /* -- non-FlexBox compliant */
+
+    .global-nav__arrow {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    .global-subnav {
+      visibility: visible;
+      transition-delay: 0s;
+
+      @include respond-to($mq-m) {
+        display: block;
+        transform: none;
+      }
+    }
+
+    @include respond-to($mq-m) {
+      background: $color-white;
+    }
+  }
+
+  &:hover {
+    background: $color-white;
+  }
+}
+
+.touch {
+  .global-nav__clump {
+    &:hover {
+      background: transparent;
+    }
+
+    &.is-active {
+      background: $color-white;
+    }
+  }
+}
+
+.global-nav__clump:last-child {
+  border-bottom: none;
+}
+
+.global-nav__clump:first-child {
+  border-top: none;
+}
+
+.global-nav__blog {
+  line-height: 1;
+  margin-bottom: 0;
+  min-width: 5.5em;
+
+  @include respond-to($mq-m, $mq-m-max) {
+    display: none;
+  }
+}
+
+.global-nav__clump__heading {
+  @include column(12);
+
+  display: inline-block;
+  float: none;
+  line-height: 25px;
+  padding: $baseline-unit $baseline-unit*2;
+  background: transparent;
+  text-align: left;
+  position: relative;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
+
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $color-black;
+  }
+
+  @include respond-to($mq-m) {
+    &:focus {
+      background: $color-grey-pale;
+    }
+
+    .is-active &:focus {
+      background: $color-white;
+    }
+
+    position: relative;
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.global-nav__clump__heading__text {
+  @include respond-to($mq-m) {
+    display: block;
+    padding: $baseline-unit*2 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-size: 0.875rem;
+    width: auto;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: static;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $color-grey-primary;
+      margin-left: 4px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.global-nav__clump__blog-link {
+  background: $color-mas-blog-blue;
+  border-radius: 4px;
+  color: $color-white;
+  font-weight: 700;
+  padding: $baseline-unit $baseline-unit*2;
+  margin: $baseline-unit 0 $baseline-unit $baseline-unit;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 4.5rem;
+  text-align: center;
+
+  &:visited {
+    color: $color-white;
+  }
+
+  &:focus {
+    background: $color-mas-blog-blue;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $color-mas-blog-blue-hover;
+    text-decoration: none;
+  }
+
+  .global-nav__arrow {
+    display: none;
+  }
+}
+
+/* non-FlexBox compliant -- */
+.global-nav__clump__blog-link {
+  @include respond-to($mq-m) {
+    float: right;
+  }
+}
+/* -- non-FlexBox compliant */
+
+.global-nav__clump__description {
+  display: none;
+
+  @include respond-to($mq-m) {
+    @include column(12);
+    display: block;
+    text-align: center;
+  }
+}
+
+a.global-nav__close-button {
+  @include body(14, 24);
+  float: right;
+  margin-top: 6px;
+  display: inline;
+  color: $color-black;
+  text-align: right;
+  padding: $baseline-unit $baseline-unit*5 $baseline-unit $baseline-unit;
+  position: relative;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
+}
+
+.global-nav__close-button__icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 30%;
+  fill: $color-yellow-dark;
+}
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .global-nav {
+      display: block;
+      height: auto;
+    }
+
+    .global-nav__clumps {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .global-nav__clump {
+      display: inline-block;
+      width: auto;
+      flex-grow: 1;
+      flex-shrink: 1;   // IE10 fix
+    }
+  }
+}
+/* -- FlexBox compliant */

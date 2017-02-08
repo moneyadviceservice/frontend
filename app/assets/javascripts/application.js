@@ -35,23 +35,13 @@ require(['common', 'jquery'], function(MAS, $) {
 
   require(['jquery', 'collapsable'], function($, Collapsable) {
     $(document).ready(function() {
-
-      $('#primary-nav')
-        .clone()
-        .attr('id', 'js-primary-nav')
-        .insertAfter('.mobile-nav')
-        .wrap('<div class="l-menu-nav"></div>');
-
-      $('.mobile-nav__link--menu').attr('href', '#js-primary-nav');
-
-      // Mobile Nav
+      // Mobile Search Button
       new Collapsable({
-        name: 'mobileNav',
+        name: 'mobileSearch',
         closeOffFocus: false,
         accordion: true,
-        triggerEl: '.mobile-nav a',
+        triggerEl: '.mobile-nav__link--search',
         targetType: 'href',
-        parentWrapper: '#js-primary-nav'
       });
 
       // Article Collapsables

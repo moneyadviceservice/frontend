@@ -1,8 +1,6 @@
 class MountController < ApplicationController
   protected
 
-  include SuppressMenuButton
-
   def breadcrumbs
     BreadcrumbTrail.home
   end
@@ -36,12 +34,6 @@ class MountController < ApplicationController
   def contact_panels_border_top?
     true
   end
-
-  def display_category_directory?
-    false
-  end
-
-  helper_method :display_category_directory?
 
   private
 

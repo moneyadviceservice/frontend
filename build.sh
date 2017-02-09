@@ -38,6 +38,10 @@ echo "Running Bower update (via bowndler)"
 echo "----"
 time bowndler update --production --config.interactive=false
 
+echo "Purging useless bower component assets"
+find -d vendor/assets/bower_components -type d | grep example | xargs rm -rf
+find -d vendor/assets/bower_components -type d | grep docs | xargs rm -rf
+
 echo "Precompiling assets"
 echo "----"
 time RAILS_ENV=production RAILS_GROUPS=assets rake assets:precompile

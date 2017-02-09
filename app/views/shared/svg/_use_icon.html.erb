@@ -3,25 +3,25 @@
 <% svg_fallback_support = local_assigns[:svg_fallback_support].nil? ? false : true %>
 
 <%
-   icon_class = ''
+  variant_class = ''
+  custom_class = ''
+  icon_class = ' svg-icon--' + local_assigns[:icon]
 
-   if !local_assigns[:icon].nil? then
-     icon_class = icon_class + local_assigns[:icon]
-   end
-   if !local_assigns[:variant].nil? then
-     icon_class = icon_class + '--' + local_assigns[:variant]
-   end
-   svg_icon_class = 'svg-icon svg-icon--' + icon_class
+  unless local_assigns[:variant].nil?
+    variant_class = icon_class + '--' + local_assigns[:variant]
+  end
 
-   if !local_assigns[:class_name].nil? then
-     svg_icon_class = svg_icon_class + ' ' + local_assigns[:class_name]
-   end
+  unless local_assigns[:class_name].nil?
+    custom_class = ' ' + local_assigns[:class_name]
+  end
 
-   if svg_fallback_support === true then
-     no_svg_icon_class = 'no-svg-icon no-svg-icon--' + icon_class
-   else
-     no_svg_icon_class = 'no-svg-icon no-svg-icon--default'
-   end
+  svg_icon_class = 'svg-icon' + icon_class + variant_class + custom_class
+
+  if svg_fallback_support
+    no_svg_icon_class = 'no-svg-icon no-svg-icon--' + local_assigns[:icon]
+  else
+    no_svg_icon_class = 'no-svg-icon no-svg-icon--default'
+  end
 %>
 
 <% if svg_fallback_support %>

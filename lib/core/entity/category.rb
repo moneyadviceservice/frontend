@@ -3,6 +3,10 @@ module Core
     attr_accessor :type, :parent_id, :title, :description, :contents, :third_level_navigation, :images, :links, :category_promos, :legacy_contents, :legacy
     validates_presence_of :title
 
+    def categories
+      contents.delete_if { |c| c.type != 'category' }
+    end
+
     def third_level_navigation?
       third_level_navigation
     end

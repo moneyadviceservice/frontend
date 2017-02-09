@@ -47,11 +47,6 @@
   <%= render 'shared/home_top', item: item %>
 <% end %>
 
-<%= styleguide_section sections['Directory'] do %>
-  <%= render 'shared/directory',
-             items: categories_for_directory_en %>
-<% end %>
-
 <%
   items = [
     {
@@ -90,7 +85,7 @@
 <% end %>
 
 <%= styleguide_section sections['Main navigation'] do %>
-  <%= render 'shared/nav', categories: @categories_for_directory_en %>
+  <%= render 'shared/nav' %>
 <% end %>
 
 <%= styleguide_section sections['Search'] do %>

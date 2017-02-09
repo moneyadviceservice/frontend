@@ -2,8 +2,6 @@ class SessionsController < Devise::SessionsController
   skip_before_action :store_location
   before_action :xhr_not_implemented, only: [:new]
 
-  include SuppressMenuButton
-
   def display_skip_to_main_navigation?
     false
   end

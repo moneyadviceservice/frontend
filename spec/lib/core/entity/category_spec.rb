@@ -37,5 +37,17 @@ module Core
 
       specify { expect(category_with_legacy_contents.legacy?).to be true }
     end
+
+    describe "#categories" do
+      let(:category) { double(type: 'category') }
+      let(:another_category) { double(type: 'category') }
+      let(:article) { double(type: 'article') }
+
+      before { attributes[:contents] = [category, article, another_category] }
+
+      it 'only returns the catgories' do
+        expect(subject.categories).to eq [category, another_category]
+      end
+    end
   end
 end

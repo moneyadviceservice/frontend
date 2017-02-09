@@ -1,8 +1,6 @@
 class EmbeddedToolsController < ApplicationController
   protected
 
-  include SuppressMenuButton
-
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
   end
@@ -68,12 +66,6 @@ class EmbeddedToolsController < ApplicationController
   def contact_panels_border_top?
     true
   end
-
-  def display_category_directory?
-    true
-  end
-
-  helper_method :display_category_directory?
 
   def exclude_syndicated_iframe_resizer?
     false

@@ -105,7 +105,6 @@ $global-nav-transition-duration: 300ms;
 
     /* non-FlexBox compliant -- */
     display: table-cell;
-    width: (100% / 8);
     vertical-align: bottom;
     /* -- non-FlexBox compliant */
 
@@ -160,8 +159,18 @@ $global-nav-transition-duration: 300ms;
   margin-bottom: 0;
   min-width: 5.5em;
 
-  @include respond-to($mq-m, $mq-m-max) {
+  @include respond-to($mq-m) {
     display: none;
+
+    /* non-FlexBox compliant -- */
+    vertical-align: middle;
+    /* -- non-FlexBox compliant */
+  }
+
+  @include respond-to($mq-m-max) {
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    /* -- non-FlexBox compliant */
   }
 }
 
@@ -251,11 +260,13 @@ $global-nav-transition-duration: 300ms;
   &:focus {
     background: $color-mas-blog-blue;
     text-decoration: none;
+    color: $color-white;
   }
 
   &:hover {
     background: $color-mas-blog-blue-hover;
     text-decoration: none;
+    color: $color-white;
   }
 
   .global-nav__arrow {
@@ -324,11 +335,20 @@ a.global-nav__close-button {
       justify-content: center;
     }
 
-    .global-nav__clump {
-      display: inline-block;
-      width: auto;
+    .global-nav__clump,
+    .global-nav__blog {
       flex-grow: 1;
       flex-shrink: 1;   // IE10 fix
+    }
+
+    .global-nav__clump {
+      display: inline-block;
+    }
+  }
+
+  @include respond-to($mq-m-max) {
+    .global-nav__blog {
+      display: inline-block;
     }
   }
 }

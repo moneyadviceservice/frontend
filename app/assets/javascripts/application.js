@@ -55,7 +55,7 @@ require(['common', 'jquery'], function(MAS, $) {
       // Category Collapsables
       new Collapsable({
         name: 'categoryCollapsables',
-        triggerEl: '.js-category-detail__view-all',
+        triggerEl: '.js-category-detail__toggle-view',
         targetEl: '.js-category-detail__list--extended'
       });
 

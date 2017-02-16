@@ -5,9 +5,7 @@ module Core
     let(:attributes) { Hash.new }
 
     it 'has correct attributes' do
-      [:promo_banner_url, :promo_banner_url].each do |attr|
-        expect(subject).to respond_to(attr)
-      end
+      expect(subject).to respond_to(:promo_banner_url)
     end
   end
 end

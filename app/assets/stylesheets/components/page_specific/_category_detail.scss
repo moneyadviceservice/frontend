@@ -20,6 +20,7 @@
 .editorial .category-detail__list--extended.collapsible-section {
   padding: 0;
   border: 0;
+  margin: 0;
 }
 
 .category-detail__list-item {
@@ -34,8 +35,9 @@
   }
 }
 
-.category-detail__view-all {
+.category-detail__toggle-view {
   display: none;
+  text-transform: lowercase;
 
   .js & {
     @include body(16, 26);
@@ -51,10 +53,14 @@
     content: '';
     background-size: 550px;
     background-position: -412px -215px;
-    width: 31px;
-    height: 31px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     left: 0;
+  }
+
+  &.is-on:before {
+    transform: rotate(180deg);
   }
 
   &:hover,
@@ -63,9 +69,22 @@
     text-decoration: underline;
   }
 
-  &.is-on{
-    display: none;
+  &.is-on {
+    .category-detail__view_less {
+      display: inline;
+    }
   }
+
+  &.is-off {
+    .category-detail__view_all {
+      display: inline;
+    }
+  }
+}
+
+.category-detail__view_all,
+.category-detail__view_less {
+  display: none;
 }
 
 .js .category-detail__intro {

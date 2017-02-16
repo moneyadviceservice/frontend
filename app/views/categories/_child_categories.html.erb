@@ -1,5 +1,5 @@
 <% contents.select(&:category?).each_with_index do |child_category, i| %>
-  <section class="category-detail" data-dough-component="Collapsable">
+  <section class="category-detail">
     <%= heading_tag level: 2,
                     id:    child_category.id,
                     class: 'category-detail__heading' do

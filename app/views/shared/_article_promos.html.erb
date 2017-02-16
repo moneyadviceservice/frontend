@@ -8,7 +8,12 @@
       <div class="l-promo-articles__item">
         <div class="t-article-promos">
           <%= link_to item['url'], class: 'promo__link' do %>
-            <%= image_tag(item['image'], alt: '', class: 'promo__img') %>
+            <%= image_tag(item['image'],
+              alt: '',
+              sizes: '(max-width: 479px) 100vw, (max-width: 959px) 50vw, 25vw',
+              srcset: item['srcset'],
+              class: 'promo__img'
+            )%>
             <%= heading_tag(level: 2, class: "promo__heading promo__heading--#{item['label']}") do %>
               <%= item['heading'] %>
             <% end %>

@@ -6,11 +6,11 @@ RSpec.describe Core::ConnectionFactory::Http, '.build' do
   end
 
   it 'has a default timeout of 5 seconds' do
-    expect(factory.options[:timeout]).to eq(5)
+    expect(factory.options[:timeout]).to be_within(5).of(12)
   end
 
   it 'has a default open timeout of 5 seconds' do
-    expect(factory.options[:open_timeout]).to eq(5)
+    expect(factory.options[:open_timeout]).to be_within(5).of(12)
   end
 
   it 'defaults to encoding JSON requests' do

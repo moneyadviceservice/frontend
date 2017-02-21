@@ -5,7 +5,9 @@ require 'faraday/conductivity'
 module Core
   module ConnectionFactory
     class Http
-      def self.build(url, timeout: 5, open_timeout: 5, retries: 2)
+      TIMEOUT = ENV.fetch('FRONTEND_HTTP_REQUEST_TIMEOUT').to_i
+
+      def self.build(url, timeout: TIMEOUT, open_timeout: TIMEOUT, retries: 2)
         options    = { url: url, request: { timeout: timeout, open_timeout: open_timeout } }
         connection = Faraday.new(options) do |faraday|
           faraday.request :json

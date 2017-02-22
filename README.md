@@ -60,11 +60,11 @@ Copy the features.yml.sample to the config dir:
 cp config/features.yml.sample config/features.yml
 ```
 
-Make sure to copy the .env.example file:				
+Make sure to copy the .env-example file:				
 ```sh		
-cp .env.example .env
+cp .env-example .env
 
-then set .env variables stored in KeepassX to run tests locally
+then set .env variables (i.e. GOOGLE API KEY) stored in KeepassX to run tests locally
 
 ## Usage
 

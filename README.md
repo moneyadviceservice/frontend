@@ -76,7 +76,7 @@ $ foreman s
 
 ### Change CMS URL Path
 
-In development, frontend will use the local CMS for convenience. You can change the MAS_CMS_URL on [.env] file. Use http://cms.moneyadviceservice.org.uk to point to LIVE content, https://cms.qa.dev.mas.local for testing Or http://localhost:PORT to point to a local running CMS.
+In development, frontend will use the local CMS for convenience. You can change the MAS_CMS_URL on .env file. Use http://cms.moneyadviceservice.org.uk to point to LIVE content, https://cms.qa.dev.mas.local for testing Or http://localhost:PORT to point to a local running CMS.
 
 Don't forget to restart the server after the modification.
 

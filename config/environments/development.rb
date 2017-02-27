@@ -31,4 +31,6 @@ Rails.application.configure do
   config.feedback_delivery_method = :test
   config.raise_feedback_delivery_errors = false
   config.technical_feedback_email = 'development.team@moneyadviceservice.org.uk'
+
+  config.action_view.raise_on_missing_translations = true
 end

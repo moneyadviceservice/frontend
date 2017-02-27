@@ -37,6 +37,7 @@ gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-over
 gem 'redcarpet'
 gem 'rouge'
 gem 'rubytree'
+gem 'ruby_dig' # backport of Hash#dig from 2.3, used by Universal Credit
 gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'postcode_anywhere-email_validation'
@@ -64,6 +65,9 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.13.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.6.0'
 gem 'timelines', '~> 1.4.0'
+gem 'universal_credit', '~> 1.0.0', path: '../work'
+gem 'universal_credit-content', git: 'git@github.com:moneyadviceservice/universal_credit-content.git'
+
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

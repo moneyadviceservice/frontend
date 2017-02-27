@@ -8,6 +8,10 @@ class CorporateCategoriesConstraint
   end
 end
 
+class Claimant < ActiveRecord::Base
+  devise
+end
+
 Rails.application.routes.draw do
   def not_implemented
     -> (_) { [501, {}, []] }
@@ -21,6 +25,8 @@ Rails.application.routes.draw do
     root 'home#show'
 
     get '/sitemap', to: 'sitemap#index'
+
+    devise_for :claimants
 
     devise_for :users,
                only: [:registrations, :sessions, :passwords],
@@ -100,6 +106,9 @@ Rails.application.routes.draw do
 
     mount Timelines::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:timelines)
+
+    mount UniversalCredit::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:universal_credit)
 
     get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'

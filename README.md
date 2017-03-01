@@ -60,6 +60,12 @@ Copy the features.yml.sample to the config dir:
 cp config/features.yml.sample config/features.yml
 ```
 
+Make sure to copy the .env-example file:				
+```sh		
+cp .env-example .env
+
+then set .env variables (i.e. GOOGLE API KEY) stored in KeepassX to run tests locally
+
 ## Usage
 
 To start the application:
@@ -70,7 +76,7 @@ $ foreman s
 
 ### Change CMS URL Path
 
-In development, frontend will use the QA CMS for convenience. You can change the MAS_CMS_URL on [.env](https://github.com/moneyadviceservice/frontend/blob/master/.env#L2) file. Use http://comfy.moneyadviceservice.org.uk to point to LIVE content. Or http://localhost:PORT to point to a local running CMS.
+In development, frontend will use the local CMS for convenience. You can change the MAS_CMS_URL on .env file. Use http://cms.moneyadviceservice.org.uk to point to LIVE content, https://cms.qa.dev.mas.local for testing Or http://localhost:PORT to point to a local running CMS.
 
 Don't forget to restart the server after the modification.
 

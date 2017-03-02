@@ -68,6 +68,9 @@ gem 'timelines', '~> 1.4.0'
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'
 
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '7948-engine'
+gem 'universal_credit-content', git: 'git@github.com:moneyadviceservice/universal_credit-content.git'
+
 group :assets do
   gem 'autoprefixer-rails'
   gem 'csslint_ruby'

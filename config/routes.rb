@@ -95,6 +95,9 @@ Rails.application.routes.draw do
     mount Rio::Engine => '/:engine_id',
           constraints: EngineMountPoint.for(:rio)
 
+    mount UniversalCredit::Engine => '/tools/:tool_id',
+          constraints: ToolMountPoint.for(:universal_credit)
+
     mount SavingsCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:savings_calculator)
 

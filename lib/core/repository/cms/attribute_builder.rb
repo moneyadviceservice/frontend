@@ -12,19 +12,19 @@ module Core::Repository
       end
 
       def attributes
-        hsh = response.body
+        attrs = response.body
 
-        set_title_from_label(hsh)
-        set_body_from_content_block(hsh)
+        set_title_from_label(attrs)
+        set_body_from_content_block(attrs)
 
-        translate_attributes_from_raw_blocks(hsh)
-        group_nested_attributes(hsh)
+        translate_attributes_from_raw_blocks(attrs)
+        group_nested_attributes(attrs)
 
-        set_description(hsh)
-        set_categories(hsh)
-        set_alternates(hsh)
+        set_description(attrs)
+        set_categories(attrs)
+        set_alternates(attrs)
 
-        hsh
+        attrs
       end
 
       def set_title_from_label(attributes)

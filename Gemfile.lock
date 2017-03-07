@@ -97,7 +97,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bigdecimal (1.2.7)
+    bigdecimal (1.3.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
@@ -222,7 +222,7 @@ GEM
       sass-rails
     debt_finance_calculator (1.1.0.8)
       bigdecimal (> 1.2.3)
-    debt_free_day_calculator (2.2.1.161)
+    debt_free_day_calculator (2.3.0.165)
       autoprefixer-rails
       debt_finance_calculator (~> 1.1.0)
       dough-ruby (~> 5.0)
@@ -717,7 +717,7 @@ DEPENDENCIES
   database_cleaner
   debt_advice_locator (~> 2.3.1)
   debt_and_mental_health (~> 1.3.0)
-  debt_free_day_calculator (~> 2.2.1)
+  debt_free_day_calculator (~> 2.3.0)
   debt_test (~> 1.6.0)
   decision_trees (~> 2.1.0)
   delayed_job_active_record

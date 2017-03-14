@@ -34,7 +34,9 @@
     <main class="l-main__cell-full t-article-main-content" role="main" id="<%= 'main' if !default_main_content_location? %>" tabindex="-1">
       <%= heading_tag article.title %>
 
+      <div data-dough-glossary-content>
       <%= article.content %>
+      </div>
 
       <% if article.accepts_feedback? %>
         <%= render 'shared/on_page_feedback' %>

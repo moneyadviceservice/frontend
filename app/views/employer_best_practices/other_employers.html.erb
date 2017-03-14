@@ -1,0 +1,30 @@
+<% set_meta_tags(title: t('employer_best_practices.other_employers.page_title')) %>
+
+<section class="other-employer-section" id="back-to-top">
+  <div class="l-constrained">
+    <div class="l-1col">
+      <div class="other-employers-container">
+        <div class="other-employer other-employer-right">
+          <%= image_tag('employer_best_practices/other-employers/laura-and-george.jpg') %>
+          <p class="laura-and-george"><strong>George and Laura</strong></p>
+        </div>
+        <div class="other-employer other-employer-left">
+          <h1 class="desktop-view-title">
+            <%= t('employer_best_practices.other_employers.heading') %>
+          </h1>
+          <h2><%= t('employer_best_practices.other_employers.sub_heading') %></h2>
+          <p><strong><%= t('employer_best_practices.other_employers.intro_text') %></strong></p>
+          <h2><%= t('employer_best_practices.other_employers.help_heading') %></h2>
+          <%= t('employer_best_practices.other_employers.paragraph_1_html') %>
+          <%= t('employer_best_practices.other_employers.paragraph_2_html') %>
+        </div>
+      </div>
+      <div>
+        <h2><%= t('employer_best_practices.other_employers.guide_heading') %></h2>
+        <%= t('employer_best_practices.other_employers.paragraph_3_html') %>
+        <%= t('employer_best_practices.other_employers.paragraph_4_html') %>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'back_to_top' %>

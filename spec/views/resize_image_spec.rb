@@ -27,6 +27,20 @@ RSpec.describe 'shared/_article_promos', type: :view do
   end
 
   it 'includes the image with srcset attributes' do
-    expect(rendered).to include('<img alt="" sizes="(max-width: 479px) 100vw, (max-width: 959px) 50vw, 25vw" srcset="https://example.com/small/MoneyLeaks.jpg 390w" class="promo__img" src="https://example.com/MoneyLeaks.jpg" />')
+    #img_tag = %{
+    #  <img alt="" sizes="(max-width: 479px) 100vw, (max-width: 959px) 50vw, 25vw" srcset="https://example.com/small/MoneyLeaks.jpg 390w" class="promo__img" src="https://example.com/MoneyLeaks.jpg" />
+    #}.strip
+
+    #expect(rendered).to include(img_tag)
+
+    img_tag = <<-CONTENT
+      <img alt=""|
+					 sizes="(max-width: 479px) 100vw, (max-width: 959px) 50vw, 25vw"|
+					 srcset="https://example.com/small/MoneyLeaks.jpg 390w"|
+					 class="promo__img"|
+					 src="https://example.com/MoneyLeaks.jpg" />
+    CONTENT
+
+    expect(rendered).to include(img_tag.split('|').map(&:strip).join(' '))
   end
 end

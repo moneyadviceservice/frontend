@@ -233,6 +233,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$mobileNavClose.click(function(e){
       e.preventDefault();
       self._toggleMobileNav();
+      $(self.$mobileNavButton).focus();
     });
 
     this.$mobileNavOverlay.click(function(e){

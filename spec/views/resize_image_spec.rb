@@ -7,7 +7,8 @@ RSpec.describe 'shared/_article_promos', type: :view do
           'image' => 'https://example.com/MoneyLeaks.jpg',
           'url' => 'https://example.com/blog',
           'label' => 'blog',
-          'content' => 'Do you know the most common ways you waste money?'
+          'content' => 'Do you know the most common ways you waste money?',
+          'srcset' => 'https://example.com/small/MoneyLeaks.jpg 390w'
         }
       ]
     end
@@ -25,7 +26,7 @@ RSpec.describe 'shared/_article_promos', type: :view do
     render
   end
 
-  context 'srcset size settings' do
-    specify { expect(rendered).to include(t('api.settings.viewport_config')) }
+  it 'includes the image with srcset attributes' do
+    expect(rendered).to include('<img alt="" sizes="(max-width: 479px) 100vw, (max-width: 959px) 50vw, 25vw" srcset="https://example.com/small/MoneyLeaks.jpg 390w" class="promo__img" src="https://example.com/MoneyLeaks.jpg" />')
   end
 end

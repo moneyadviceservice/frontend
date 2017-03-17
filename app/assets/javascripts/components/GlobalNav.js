@@ -131,6 +131,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   };
 
   /**
+  * Moves focus to first link of nav
+  */
+  GlobalNav.prototype._moveFocusToNav = function() {
+    this.$globalNavClumpHeading.get(0).focus();
+  }
+
+  /**
   * Moves focus to first link of subnav
   */
   GlobalNav.prototype._moveFocusToSubNav = function(el) {
@@ -300,15 +307,17 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$globalNav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
 
-    // Reset all subnavs and aria-expanded attribute when the nav is closed
     if (!this.$globalNav.hasClass('is-active')) {
+      // Reset all subnavs and aria-expanded attribute when the nav is closed
       this.$mobileNavButton.attr('aria-expanded', 'false');
       this.$globalNav.removeClass('is-active');
       this.$mobileNavOverlay.removeClass('is-active');
       this.$globalNavClumps.removeClass('is-active');
       this.$globalNavClump.removeClass('is-active');
     } else {
+      // Set aria-expanded attribute and move focus into the nav when opened
       this.$mobileNavButton.attr('aria-expanded', 'true');
+      this._moveFocusToNav();
     }
   };
 

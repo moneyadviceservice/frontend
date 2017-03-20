@@ -57,7 +57,7 @@
   right: 0;
   width: $baseline-unit*8;
   height: $baseline-unit*8;
-  background-color: $color-yellow-light;
+  background-color: $color-button-primary;
   border-top-right-radius: $baseline-unit/2;
   border-bottom-right-radius: $baseline-unit/2;
 
@@ -68,14 +68,12 @@
     left: $baseline-unit*2.5;
   }
 
-  &:hover,
-  &:focus {
-    .icon--search {
-      @include search-icon-colour(white);
-    }
+  &:hover {
+    background-color: $color-button-primary-active;
   }
 
-  &:hover {
+  &:focus {
+    background-color: $color-focus-bg;
     outline: 0;
   }
 }

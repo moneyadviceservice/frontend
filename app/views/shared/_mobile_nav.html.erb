@@ -1,7 +1,12 @@
 <ul class="mobile-nav">
   <% unless hide_elements_irrelevant_for_third_parties? %>
     <li class="mobile-nav__item">
-      <a data-dough-mobile-nav-button class="mobile-nav__link mobile-nav__link--menu" href="#" role="button"><%= t('mobile_nav.menu') %></a>
+      <a
+        data-dough-mobile-nav-button class="mobile-nav__link mobile-nav__link--menu"
+        href="#"
+        role="button"
+        aria-expanded="false"
+      ><%= t('mobile_nav.menu') %></a>
     </li>
   <% end %>
   <% if display_search_box_in_header? %>

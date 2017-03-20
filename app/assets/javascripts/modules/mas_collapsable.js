@@ -17,6 +17,7 @@ define(['jquery', 'common'], function($, MAS) {
     parentWrapper: false,
     accordion: false,
     showOnlyFirst: false,
+    focusTargetEl: false,
 
     // Display options
     showText: true,
@@ -109,6 +110,12 @@ define(['jquery', 'common'], function($, MAS) {
   Collapsible.prototype._modifyButtonHTML = function(i) {
     var icon, txt;
     var trigger = this.sections[i].trigger;
+
+    if (trigger.hasClass(this.activeClass)) {
+      trigger.attr('aria-expanded', 'true')
+    } else {
+      trigger.attr('aria-expanded', 'false')
+    }
 
     if (this.o.showText) {
       txt = this.o.headingText.replace('{{txt}}', this.o.textString.showThisSection);
@@ -266,6 +273,10 @@ define(['jquery', 'common'], function($, MAS) {
   function showElement(element, conf) {
     element.removeClass(conf.o.inactiveClass).addClass(conf.o.activeClass);
     element.attr('aria-hidden', 'false');
+
+    if (conf.o.focusTargetEl) {
+      $(conf.o.targetEl).focus();
+    }
   }
 
   Collapsible.prototype.hide = function(i, userInitiated) {

@@ -131,6 +131,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   };
 
   /**
+  * Moves focus to first link of nav
+  */
+  GlobalNav.prototype._moveFocusToNav = function() {
+    this.$globalNavClumpHeading.get(0).focus();
+  }
+
+  /**
   * Moves focus to first link of subnav
   */
   GlobalNav.prototype._moveFocusToSubNav = function(el) {
@@ -233,6 +240,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$mobileNavClose.click(function(e){
       e.preventDefault();
       self._toggleMobileNav();
+      $(self.$mobileNavButton).focus();
     });
 
     this.$mobileNavOverlay.click(function(e){
@@ -299,12 +307,17 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$globalNav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
 
-    // If we just closed the nav, reset all subnavs
     if (!this.$globalNav.hasClass('is-active')) {
+      // Reset all subnavs and aria-expanded attribute when the nav is closed
+      this.$mobileNavButton.attr('aria-expanded', 'false');
       this.$globalNav.removeClass('is-active');
       this.$mobileNavOverlay.removeClass('is-active');
       this.$globalNavClumps.removeClass('is-active');
       this.$globalNavClump.removeClass('is-active');
+    } else {
+      // Set aria-expanded attribute and move focus into the nav when opened
+      this.$mobileNavButton.attr('aria-expanded', 'true');
+      this._moveFocusToNav();
     }
   };
 
@@ -312,6 +325,12 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     $(index)
       .parents('[data-dough-nav-clump]').toggleClass('is-active')
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
+
+    if ($(index).attr('data-dough-nav-clump-heading')) {
+      $(index).attr('aria-expanded', true);
+    } else {
+      $(index).parents('[data-dough-subnav]').siblings(['data-dough-nav-clump-heading']).attr('aria-expanded', false);
+    }
   };
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {

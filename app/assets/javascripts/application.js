@@ -41,7 +41,9 @@ require(['common', 'jquery'], function(MAS, $) {
         closeOffFocus: false,
         accordion: true,
         triggerEl: '.mobile-nav__link--search',
+        targetEl: '.search__input',
         targetType: 'href',
+        focusTargetEl: true
       });
 
       // Article Collapsables

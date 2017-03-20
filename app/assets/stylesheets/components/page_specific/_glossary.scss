@@ -1,8 +1,7 @@
 .glossary__term {
   cursor: pointer;
-  text-decoration: underline;
+
   color: $color-green-primary;
-  text-decoration:underline;
   border-bottom: 1px solid $color-green-primary;
   line-height: 18px;
   position: relative;
@@ -61,3 +60,8 @@
   }
 
 }
+
+  sub {
+    @include body(14, 16);
+    vertical-align: super;
+  }

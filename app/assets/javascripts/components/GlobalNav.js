@@ -325,6 +325,12 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     $(index)
       .parents('[data-dough-nav-clump]').toggleClass('is-active')
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
+
+    if ($(index).attr('data-dough-nav-clump-heading')) {
+      $(index).attr('aria-expanded', true);
+    } else {
+      $(index).parents('[data-dough-subnav]').siblings(['data-dough-nav-clump-heading']).attr('aria-expanded', false);
+    }
   };
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {

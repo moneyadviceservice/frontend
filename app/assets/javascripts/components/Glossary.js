@@ -21,10 +21,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
           $(item).each(function(){
             var updatedContent = articleContent.replace(RegExp("(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))","gi"),
-                                                               "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "</a></button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</a></span>" + item.description + "<button class='glossary__description-close'><svg xmlns='http://www.w3.org/2000/svg' \
+                                                               "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "<sub>?</sub></a></button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</a></span>" + item.description + "<button class='glossary__description-close'><svg xmlns='http://www.w3.org/2000/svg' \
         class='svg-icon svg-icon--mobile-close-box'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#svg-icon--mobile-close-box'>\
         </use></svg></button></span>");
-
+            
             articleContent = updatedContent;
             $(article).html(updatedContent);
 

@@ -61,7 +61,7 @@ gem 'mortgage_calculator', '~> 1.9.0'
 gem 'payday_loans_intervention', '~> 1.6.0'
 gem 'pensions_calculator', '~> 1.3.2'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
-gem 'rio', '1.13.0', source: 'http://gems.dev.mas.local'
+gem 'rio', '1.14.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.0'
 gem 'timelines', '~> 1.4.0'
 

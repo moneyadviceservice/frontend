@@ -124,9 +124,9 @@
           <div class="employer-best-practices__click-here-to-help">
             <div class="employer-best-practices__outer-circle">
               <div class="employer-best-practices__inner-circle">
-                <a href="" class="employer-best-practices__help-link">
+                <%= link_to t('employer_best_practices.my_business.help_link_url'), class: 'employer-best-practices__help-link' do %>
                   <%= t('employer_best_practices.my_business.help_link_html') %>
-                </a>
+                <% end %>
               </div>
             </div>
           </div>

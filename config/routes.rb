@@ -156,6 +156,14 @@ Rails.application.routes.draw do
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
 
+    # Employer best practice
+    get '/employer-best-practices', to: 'employer_best_practices#show'
+    get '/employer-best-practices/faq', to: 'employer_best_practices#faq'
+    get '/employer-best-practices/help', to: 'employer_best_practices#help'
+    get '/employer-best-practices/money-guide', to: 'employer_best_practices#money_guide'
+    get '/employer-best-practices/my-business', to: 'employer_best_practices#my_business'
+    get '/employer-best-practices/other-employers', to: 'employer_best_practices#other_employers'
+
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 
     resource :cookie_notice_acceptance, only: :create, path: 'cookie-notice'

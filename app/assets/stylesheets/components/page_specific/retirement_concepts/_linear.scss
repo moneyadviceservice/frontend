@@ -19,3 +19,18 @@
     left: 50%;
   }
 }
+
+.linear--left {
+  text-align: left;
+  left: $baseline-unit;
+}
+
+.linear--left:after {
+  @include respond-to($mq-m) {
+    left: $baseline-unit*2;
+  }
+}
+
+.linear--left-content {
+  margin-left: $baseline-unit*5;
+}

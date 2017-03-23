@@ -6,13 +6,7 @@ class ArticlesController < ApplicationController
   include Navigation
 
   def show
-    @article = interactor.call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      else
-        not_found
-      end
-    end
+    @article = Mas::Cms::Article.find(slug: params[:id], locale: I18n.locale)
 
     set_breadcrumbs
     set_related_content

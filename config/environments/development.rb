@@ -4,7 +4,15 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-  config.cache_store = :null_store
+#  config.cache_store = :null_store
+
+  # for testing only :) :memory_store, { expires_in: 1.hour }
+  config.cache_store = ActiveSupport::Cache::MemoryStore.new(:expires_in => 1.hour)
+  config.log_level = :debug
+
+  config.cache_store.logger = Logger.new(Rails.root.join('log', "#{Rails.env}_cache.log"))
+  config.cache_store.logger.level = Logger::DEBUG
+
 
   # Do not eager load code on boot.
   config.eager_load = false

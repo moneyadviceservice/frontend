@@ -5,8 +5,10 @@ class ArticlesController < ApplicationController
 
   include Navigation
 
+  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
+
   def show
-    @article = Mas::Cms::Article.find(slug: params[:id], locale: I18n.locale)
+    @article = Mas::Cms::Article.find(params[:id], locale: I18n.locale, cached: true)
 
     set_breadcrumbs
     set_related_content
@@ -16,6 +18,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def redirect_page(ex)
+    redirect_to ex.location, status: ex.http_response.status
+  end
 
   def interactor
     Core::ArticleReader.new(params[:id])

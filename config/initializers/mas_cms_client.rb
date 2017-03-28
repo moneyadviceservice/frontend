@@ -4,4 +4,6 @@ Mas::Cms::Client.config do |c|
   c.api_token =  ENV['MAS_CMS_API_TOKEN']
   c.host =  ENV['MAS_CMS_URL']
   c.retries = 1
+  c.cache = Rails.cache
+  c.cache_gets = false
 end

@@ -11,9 +11,9 @@ GIT
 PATH
   remote: ../mas-cms-client
   specs:
-    mas-cms-client (0.1.0)
-      activemodel (~> 4.2.7)
-      activesupport (~> 4.2.7)
+    mas-cms-client (1.0.0)
+      activemodel (~> 4.2, >= 4.2.7)
+      activesupport (~> 4.2, >= 4.2.7)
       faraday (~> 0.9.2)
       faraday-conductivity (~> 0.3.1)
       faraday_middleware (~> 0.10.0)

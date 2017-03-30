@@ -1,0 +1,17 @@
+<nav class="no-js-nav" role="navigation" aria-label="main" tabindex="-1">
+  <div class="l-constrained">
+    <ul class="no-js-nav__categories" role="menubar" aria-label="main site navigation">
+      <% clumps.each do |clump| %>
+        <% clump.categories.each do |category| %>
+          <li class="no-js-nav__category" role="none">
+            <%= link_to category.title, main_app.category_path(category.id), role: 'menuitem', class: 'no-js-nav__link' %>
+          </li>
+        <% end %>
+      <% end %>
+
+      <li class="no-js-nav__category" role="none">
+        <a href="<%= t('blog_link') %>" class="no-js-nav__link" role="menuitem">Blog</a>
+      </li>
+    </ul>
+  <div>
+</nav>

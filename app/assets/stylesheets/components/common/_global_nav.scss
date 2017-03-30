@@ -134,6 +134,14 @@ $global-nav-transition-duration: 300ms;
   }
 }
 
+// no-js fallback --
+.no-js {
+  .global-nav {
+    display: none;
+  }
+}
+// -- no-js fallback
+
 .touch {
   .global-nav__clump {
     &:hover {

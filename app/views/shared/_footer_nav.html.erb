@@ -2,6 +2,7 @@
   <h2 id="footer-menu" class="footer-nav__header">Menu</h2>
   <%# <div class="l-constrained"> %>
     <%# <ul role="" aria-label=""> %>
+    <ul class="footer-nav__categories" role="" aria-label="">
       <% clumps.each do |clump| %>
         <%#
         <li data-dough-nav-clump class="global-nav__clump" role="none">
@@ -26,25 +27,28 @@
               </a>
               %>
 
-              <% clump.categories.each do |category| %>
-                <ul class="footer-nav__category" role="" aria-label="">
+                <% clump.categories.each do |category| %>
                   <%# <li> %>
-                    <li>Head: <%= link_to category.title, main_app.category_path(category.id), role: '' %></li>
+                    <li class="footer-nav__category">
+                      <%= link_to category.title, main_app.category_path(category.id), role: '', class: 'footer-nav__link' %>
+                    </li>
 
                     <%# <ul> %>
-                      <% category.categories.each do |subcategory| %>
+                      <%# category.categories.each do |subcategory| %>
+                        <%#
                         <li role="">
-                          <%= link_to subcategory.title, main_app.category_path(subcategory.id), role: '' %>
-                        </li>
-                      <% end %>
+                          %><%# link_to subcategory.title, main_app.category_path(subcategory.id), role: '' %><%#
+                        </li>%>
+                      <%# end %>
                     <%# </ul> %>
                   <%# </li> %>
 
                   <%# <li role="">
                     <ul> %>
-                      <% clump.links.each do |link| %>
+                      <%# clump.links.each do |link| %>
+                        <%#
                         <li role="">
-                          Tool: <%= link_to link.text, link.url, role: '' %>
+                          Tool: %><%# link_to link.text, link.url, role: '' %>
 
                           <%#
                           <span class="global-subnav__tools__icon">
@@ -52,13 +56,12 @@
                                <use xlink:href="#svg-icon--tool"></use>
                              </svg>
                           </span>
-                          %>
                         </li>
-                      <% end %>
+                        %>
+                      <%# end %>
                     <%# </ul>
                   </li> %>
-                </ul>
-              <% end %>
+                <% end %>
 
             <%# </div>
             <a data-dough-mobile-nav-close class="global-nav__close-button" href="#" role="button">
@@ -69,19 +72,20 @@
         </li>
         %>
       <% end %>
+    </ul>
 
+      <%#
       <ul class="footer-nav__category">
         <li role="">
-          <a href="<%= t('blog_link') %>" role="">
+          <a href="%><%# t('blog_link') %><%#{}" role="">
             Blog
           </a>
-          <%#
           <a data-dough-mobile-nav-close class="global-nav__close-button" href="#" role="button"> %><%# t('mobile_nav.close') %><%#
             %><%# render 'shared/svg/use_icon', icon: 'mobile-close-box', class_name: 'global-nav__close-button__icon' %><%#
           </a>
-          %>
         </li>
       </ul>
+      %>
     <%# </ul> %>
   <%# </div> %>
 </nav>

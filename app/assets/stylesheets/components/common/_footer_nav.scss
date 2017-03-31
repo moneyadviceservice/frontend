@@ -21,9 +21,40 @@
   }
 }
 
-.footer-nav__category {
-  float: left;
-  width: (100%) / 17;
+.footer-nav__categories {
+  @include clearfix();
+
   list-style: none;
   padding: 0;
+  margin: $baseline-unit*2 0;
+}
+
+.footer-nav__category {
+  float: left;
+  padding-right: $baseline-unit;
+  margin-right: $baseline-unit;
+  border-right: solid 1px;
+  line-height: 1rem;
+  margin-top: $baseline-unit;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-s) {
+    padding-right: 0;
+    margin-right: $baseline-unit*3;
+    border-right: none;
+  }
+}
+
+.footer-nav__category:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.footer-nav__link {
+  @include body(14, 18);
+
+  &:focus {
+    @include focus-outline;
+  }
 }

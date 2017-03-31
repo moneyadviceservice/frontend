@@ -3,7 +3,13 @@
 // Styleguide Footer Navigation
 
 .footer-nav {
-  @include column(12);
+  display: none;
+
+  .no-js & {
+    @include respond-to($mq-m) {
+      @include column(12);
+    }
+  }
 }
 
 .footer-nav__header[id]:before {

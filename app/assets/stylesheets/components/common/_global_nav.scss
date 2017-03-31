@@ -89,7 +89,8 @@ $global-nav-transition-duration: 300ms;
   }
 }
 
-.global-nav__clump {
+.global-nav__clump,
+.global-nav__footer-menu {
   position: static;
   margin: 0;
   line-height: 1;
@@ -133,6 +134,22 @@ $global-nav-transition-duration: 300ms;
     background: $color-white;
   }
 }
+
+.global-nav__footer-menu {
+  display: none;
+}
+
+// no-js fallback --
+.no-js {
+  .global-nav__clump {
+    display: none;
+  }
+
+  .global-nav__footer-menu {
+    display: table-cell;
+  }
+}
+// -- no-js fallback
 
 .touch {
   .global-nav__clump {

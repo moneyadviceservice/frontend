@@ -1,6 +1,6 @@
 module BudgetWarning
-    ANNOUNCEMENT_DAY   = 16
-    ANNOUNCEMENT_MONTH = 3
+    ANNOUNCEMENT_DAY   = 06
+    ANNOUNCEMENT_MONTH = 4
     ANNOUNCEMENT_YEAR  = 2017
 
   class Announcement

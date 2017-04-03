@@ -9,8 +9,8 @@ Feature: Warning About Budget Changes
 
     Examples:
       | language |
-      | english  |
-      | welsh    |
+      | English  |
+      | Welsh    |
 
   Scenario Outline: on the day of the budget announcement
     Given Today's date is "6th April 2017"
@@ -19,8 +19,8 @@ Feature: Warning About Budget Changes
 
     Examples:
       | language |
-      | english  |
-      | welsh    |
+      | English  |
+      | Welsh    |
 
   Scenario Outline: after the budget announcement
     Given Today's date is "24th April 2017"
@@ -29,8 +29,8 @@ Feature: Warning About Budget Changes
 
     Examples:
       | language |
-      | english  |
-      | welsh    |
+      | English  |
+      | Welsh    |
 
    Scenario Outline: banner visibility on non-affected tools
     """
@@ -42,5 +42,5 @@ Feature: Warning About Budget Changes
 
     Examples:
       | language |
-      | english  |
-      | welsh    |
+      | English  |
+      | Welsh    |

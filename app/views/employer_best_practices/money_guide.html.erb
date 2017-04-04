@@ -2,23 +2,7 @@
 
  <div class="l-constrained">
 
-  <!-- Download -->
-  <section id="back-to-top">
-    <div class="intro-section">
-      <div class="l-constrained">
-        <div class="employer-best-practices__download-pdf">
-          <%= link_to t('employer_best_practices.money_guide.download_url'), class: 'employer-best-practices__download-pdf-link' do %>
-            <%= image_tag('employer_best_practices/money-guide/pdf_icon.png', class: 'employer-best-practices__pdf-icon') %>
-            <%= image_tag('employer_best_practices/money-guide/download_icon.png', class: 'employer-best-practices__download-icon') %>
-            <span class="employer-best-practices__download-pdf-desktop">
-              <%= t('employer_best_practices.money_guide.download_button') %>
-            </span>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="intro-section">
+  <section class="intro-section" id="back-to-top">
     <div class="l-constrained">
       <div class="l-1col">
       <h1><%= t('employer_best_practices.money_guide.heading') %></h1>
@@ -26,6 +10,15 @@
           <%= t('employer_best_practices.money_guide.intro_text') %>
         </p>
       </div>
+    </div>
+    <div class="employer-best-practices__download-pdf">
+      <%= link_to t('employer_best_practices.money_guide.download_url'), class: 'employer-best-practices__download-pdf-link' do %>
+        <%= image_tag('employer_best_practices/money-guide/pdf_icon.png', class: 'employer-best-practices__pdf-icon') %>
+        <%= image_tag('employer_best_practices/money-guide/download_icon.png', class: 'employer-best-practices__download-icon') %>
+        <span class="employer-best-practices__download-pdf-desktop">
+          <%= t('employer_best_practices.money_guide.download_button') %>
+        </span>
+      <% end %>
     </div>
   </section>
   <section>

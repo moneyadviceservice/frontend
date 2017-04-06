@@ -134,3 +134,29 @@ html.svg {
     display: none;
   }
 }
+
+// Clear English Standard
+.icon--clear-english,
+.svg-icon--clear-english {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: none;
+}
+
+.svg-icon--clear-english {
+  .svg & {
+    @include respond-to($mq-s) {
+      display: block;
+    }
+  }
+}
+
+.icon--clear-english {
+  background-image: image_url('CESWebsiteSILVER.png');
+  background-repeat: no-repeat;
+
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}

@@ -1,0 +1,72 @@
+// Footer Navigation
+//
+// Styleguide Footer Navigation
+
+.no-js-nav {
+  display: none;
+  padding-top: $baseline-unit*14;
+
+  .no-js & {
+    display: block;
+  }
+
+  @include respond-to($mq-m) {
+    background: $color-yellow-light;
+    padding-top: 0;
+  }
+}
+
+.no-js-nav__categories {
+  @include column(12);
+
+  list-style: none;
+  padding: 0;
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*2;
+  font-size: 1rem;
+}
+
+.no-js-nav__category {
+  float: left;
+  padding-right: $baseline-unit;
+  margin-right: $baseline-unit;
+  border-right: solid 1px;
+  line-height: 1rem;
+  margin-top: $baseline-unit;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mq-s) {
+    padding-right: $baseline-unit*3;
+    margin-right: $baseline-unit*3;
+  }
+}
+
+.no-js-nav__category:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.no-js-nav__link {
+  font-size: 0.875rem;
+  color: $color-black;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $color-black;
+  }
+
+  &:focus {
+    @include focus-outline;
+  }
+
+  @include respond-to($mq-m) {
+    font-weight: 700;
+
+    &:focus {
+      background: $color-grey-pale;
+      outline-color: $color-grey-pale;
+    }
+  }
+}

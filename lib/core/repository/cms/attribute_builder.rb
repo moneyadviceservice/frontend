@@ -27,8 +27,6 @@ module Core::Repository
         attributes
       end
 
-      private
-
       def set_title_from_label(attributes)
         attributes['title'] = attributes['label']
       end

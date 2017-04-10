@@ -1,0 +1,38 @@
+<% set_meta_tags(title: t('employer_best_practices.landing_page.page_title')) %>
+
+<div class="l-constrained">
+  <div class="l-1col">
+    <h1><%= t('employer_best_practices.landing_page.title') %></h1>
+    <div class="employer-best-practices">
+      <div class="employer-best-practices__linear">
+        <div class="linear linear--left">
+          <div class="line-marker line-marker--left">
+            <div class="line-marker__small-outline-dot"></div>
+          </div>
+          <div class="linear--left-content">
+            <p><%= t('employer_best_practices.landing_page.linear_1_text_html') %></p>
+            <p class="employer-best-practices__linear-source">
+              <%= t('employer_best_practices.landing_page.linear_1_source') %>
+            </p>
+          </div>
+        </div>
+        <div class="linear linear--left">
+          <div class="line-marker line-marker--left">
+            <div class="line-marker__small-outline-dot"></div>
+          </div>
+          <div class="linear--left-content">
+            <p><%= t('employer_best_practices.landing_page.linear_2_text') %></p>
+            <p class="employer-best-practices__linear-source">
+              <%= t('employer_best_practices.landing_page.linear_2_source') %>
+            </p>
+          </div>
+        </div>
+        <p class="employer-best-practices__linear-footnote"><%= t('employer_best_practices.landing_page.linear_closing_text_html') %></p>
+      </div>
+      <div class="employer-best-practices__top-image">
+        <%= image_tag('employer_best_practices/landing-page/employer-best-practices__top-image.png') %>
+      </div>
+      <%= render 'page_navigator' %>
+    </div>
+  </div>
+</div>

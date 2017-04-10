@@ -7,6 +7,11 @@
   }
 }
 
+.line-marker--left {
+  top: 34px;
+  left: $baseline-unit;
+}
+
 .line-marker--waypoint{
   width: 12px;
   height: 12px;

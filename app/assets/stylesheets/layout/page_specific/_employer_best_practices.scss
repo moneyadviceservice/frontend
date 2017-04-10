@@ -1,0 +1,404 @@
+$employer-best-practices-green: $color-green-primary;
+$employer-best-practices-blue:  $color-blue-medium;
+$employer-best-practices-yellow: #fbaf17;
+$employer-best-practices-dark: #787878;
+
+.employer-best-practices {
+  .seperator {
+    border-bottom: 2px solid $employer-best-practices-green;
+  }
+}
+
+.employer-best-practices__linear {
+  @include column(8);
+
+  @include respond-to($mq-m) {
+    @include column(10);
+  }
+
+  .employer-best-practices__linear-highlight {
+    color: $employer-best-practices-green;
+    font-weight: 700;
+    font-size: 1.4em;
+  }
+
+  .employer-best-practices__linear-source {
+    @include body(16, 24);
+    margin: 0 $baseline-unit;
+    float: right;
+    font-style: italic;
+    color: $employer-best-practices-blue;
+    font-weight: bold;
+  }
+
+  .employer-best-practices__linear-footnote-highlight {
+    color: $employer-best-practices-green;
+    font-weight: 700;
+  }
+}
+
+.employer-best-practices__top-image {
+  @include column(4);
+
+  @include respond-to($mq-m) {
+    @include column(2);
+  }
+}
+
+.employer-best-practices__panel-image {
+  max-height: 200px;
+  display: block;
+  margin: $baseline-unit auto;
+}
+
+.employer-best-practices__panel-title {
+  @include body(20, 28);
+  color: $employer-best-practices-blue;
+}
+
+.employer-best-practices__timeline-image {
+  max-width: 300px;
+}
+
+// Download icon
+
+.employer-best-practices__download-pdf {
+  width: auto;
+  height: 65px;
+  bottom: $baseline-unit*4;
+  right: $baseline-unit*4;
+  position: fixed;
+  background-color: $color-yellow-light;
+  border-radius: 7px;
+  z-index: 5;
+}
+
+a.employer-best-practices__download-pdf-link {
+  display: block;
+  margin-top: 13px;
+  margin-right: 30px;
+  width: 100%;
+  color: $color-grey-primary;
+}
+
+.employer-best-practices__download-pdf-desktop {
+  margin-top: -36px;
+  margin-left: 52px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.employer-best-practices__download-icon {
+  display: inline-block;
+  width: 30px;
+  margin-left: 10px;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.employer-best-practices__pdf-icon {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.employer-best-practices__download-pdf-desktop,
+.employer-best-practices__image-desktop {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}
+
+// My business
+
+.employer-best-practices__employees {
+  @extend %clearfix;
+
+  @include respond-to($mq-m) {
+    width:14.2%;
+    float: left;
+
+    .employer-best-practices__employees-1,
+    .employer-best-practices__employees-2,
+    .employer-best-practices__employees-3,
+    .employer-best-practices__employees-4,
+    .employer-best-practices__employees-5,
+    .employer-best-practices__employees-6,
+    .employer-best-practices__employees-7 {
+      padding: 0 5px;
+    }
+
+    .employer-best-practices__employees-1 {
+      margin-top: 115px;
+    }
+    .employer-best-practices__employees-2 {
+      margin-top: 50px;
+    }
+    .employer-best-practices__employees-3 {
+      margin-top: 117px;
+    }
+    .employer-best-practices__employees-4 {
+      margin-top: 0px;
+    }
+    .employer-best-practices__employees-5 {
+      margin-top: 15px;
+    }
+    .employer-best-practices__employees-6 {
+      margin-top: 117px;
+    }
+    .employer-best-practices__employees-7 {
+      margin-top: 85px;
+    }
+  }
+}
+
+.employer-best-practices__employees-info {
+  @include body(48, 38);
+  margin: 0;
+  font-weight: 700;
+
+  .employer-best-practices__employees-1 &,
+  .employer-best-practices__employees-4 &,
+  .employer-best-practices__employees-7 & {
+    color: $employer-best-practices-green; 
+  }
+  .employer-best-practices__employees-2 &,
+  .employer-best-practices__employees-6 & {
+    color: $employer-best-practices-yellow;
+  }
+  .employer-best-practices__employees-3 &,
+  .employer-best-practices__employees-5 & {
+    color: $employer-best-practices-dark; 
+  }
+}
+
+.employer-best-practices__employees-info--reduced {
+  @include body(32, 24);
+}
+
+.employer-best-practices__employees-image-mobile {
+  @include column(5);
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.employer-best-practices__survey{
+  margin-bottom: 20px;
+
+  .survey-info.info_2,
+  .survey-info.info_3,
+  .survey-info.info_4 {
+    margin-left: 90px;
+  }
+
+  .employer-best-practices__survey-percentage {
+
+  }
+
+  .employer-best-practices__survey-percentage-image {
+    width: 30%;
+
+    @include respond-to($mq-m) {
+      width: 80%;
+    }
+  }
+
+  .employer-best-practices__survey-info{
+    width: 70%;
+    margin-top: -50px;
+    margin-left: 117px;
+  }
+
+  @include respond-to($mq-m) {
+    width:20%;
+    float: left;
+  }
+
+}
+
+.employer-best-practices__click-here-to-help {
+  width: 200px;
+
+  .employer-best-practices__outer-circle {
+    width: 80%;
+    height: 158px;
+    border: 1px solid #ead548;
+    border-radius: 85%;
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  .employer-best-practices__inner-circle {
+    width: 90%;
+    height: 140px;
+    background-color: #ead548;
+    border-radius: 85%;
+    margin-left: 8px;
+    margin-top: 8px;
+    border: 1px solid #ead548;
+    text-decoration: none;
+  }
+
+  .employer-best-practices__help-link {
+    display: block;
+    height: 100px;
+    width: 80%;
+    margin-top: 33px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+}
+
+// Back to top
+
+.employer-best-practices__back-to-top {
+  display: block;
+  margin-top: $baseline-unit*2;
+  width: 100%;
+  height: 50px;
+  background-color: #EDF0F0;
+
+  .employer-best-practices__triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #006a00;
+    float: right;
+    padding-top: 18px;
+    margin-right: $baseline-unit*2;
+  }
+
+  .employer-best-practices__back-to-top-link {
+    display: block;
+    float: left;
+    width: 80%;
+    height: 50px;
+    padding: 12px 20px;
+    text-decoration: none;
+  }
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+// FAQ
+
+.employer-best-practices__faq-button-container {
+  width: 225px;
+  margin: 0 auto;
+}
+
+.employer-best-practices__callout {
+  width: 100%;
+
+  &.callout--tip {
+    border-color: $employer-best-practices-green;
+
+    h3 {
+      background: $employer-best-practices-green;
+    }
+  }
+
+  @include respond-to($mq-m) {
+    width: 45%;
+  }
+
+  &.employer-best-practices__callout--employers {
+    width: 100%;
+    margin: 0 auto !important;
+    margin-bottom: $baseline-unit;
+    border-color: #ccc;
+
+    .employers-callout-icon {
+      background-image: image_url('employer_best_practices/faqs/Employers.png');
+      background-size: 100% 100%;
+    }
+
+    @include respond-to($mq-m) {
+      width: 45%;
+    }
+  }
+
+  &.employer-best-practices__callout--experts {
+
+    .experts-callout-icon {
+      background-image: image_url('employer_best_practices/faqs/Experts.png');
+      background-size: 100% 100%;
+    }
+
+    @include respond-to($mq-m) {
+      width: 45%;
+      float: right;
+    }
+  }
+
+  &.employer-best-practices__callout--employees {
+
+    .employees-callout-icon {
+      background-image: image_url('employer_best_practices/faqs/Employees.png');
+      background-size: 100% 100%;
+    }
+
+    @include respond-to($mq-m) {
+      width: 45%;
+    }
+  }
+}
+
+.employer-best-practices__together-guide {
+  width: 300px;
+  height: 300px;
+  margin: $baseline-unit*2 auto;
+}
+
+// Help page
+
+.employer-best-practices__linear--help {
+
+  .speech-bubble {
+    padding-bottom: 0;
+  }
+
+  .speech-bubble--right,
+  .speech-bubble--left {
+    margin-top: $baseline-unit;
+  }
+
+  .line-marker__small-outline-dot {
+    width: 23px;
+    height: 23px;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    margin-left: -4px;
+
+    @include respond-to($mq-m) {
+      width: 30px;
+      height: 30px;
+      margin-left: -8px;
+    }
+  }
+
+  // Apply dot list icons
+  $outline-dot-list: 1 2 3 4 5 6 7 8 9 10 11;
+  @each $current-dot-list in $outline-dot-list {
+    $i: index($outline-dot-list, $current-dot-list);
+    .line-marker__small-outline-dot--#{$i} {
+      background-image: image_url('employer_best_practices/help/'#{$i}'.png');
+    }
+  }
+}
+
+.other-employer-right {
+  @include respond-to($mq-m) {
+    @include column(4);
+    float: right;
+  }
+}

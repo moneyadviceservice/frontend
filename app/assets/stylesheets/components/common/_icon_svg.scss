@@ -93,9 +93,23 @@ html.svg {
 .svg-icon--email {
   vertical-align: middle;
   fill: #fff;
-  display: block;
+  display: none;
+
+  .svg & {
+    display: block;
+  }
 }
 
+.icon--twitter,
+.icon--facebook,
+.icon--youtube,
+.icon--email {
+  display: block;
+
+  .svg & {
+    display: none;
+  }
+}
 
 // On-page feedback icons
 
@@ -124,15 +138,6 @@ html.svg {
 
 .icon--thumb-icon-down {
   background-position: -935px -436px;
-}
-
-.svg {
-  .icon--twitter,
-  .icon--facebook,
-  .icon--youtube,
-  .icon--email {
-    display: none;
-  }
 }
 
 // Clear English Standard

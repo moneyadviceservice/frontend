@@ -1,0 +1,20 @@
+.chat-box__container {
+	background-color: white;
+	position: fixed!important;
+	top:30%;
+	left: 0;
+  	padding: $baseline-unit*4;
+	z-index:9999;
+	border-radius: 3px;
+
+}
+
+.chat-box__heading {
+	font-color:#777;
+	font-size: 2rem;
+	text-decoration:none;
+}
+
+.chat-box__icon {
+	margin-left: -35px;	
+}

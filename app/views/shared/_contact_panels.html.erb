@@ -74,6 +74,11 @@
 </div>
 <% end %>
 
+<a href="#" class="chat-box__container">
+  <div class="chat-box__heading">Web Chat</div>
+  <div class="icon chat-box__icon"></div>
+</a>
+
 <%= content_for :javascripts do %>
   <% unless hide_contact_panels? %>
     <%= javascript_include_tag 'webchat.js' %>

@@ -14,23 +14,6 @@ GIT
   specs:
     universal_credit-content (0.1.0)
 
-GIT
-  remote: git@github.com:moneyadviceservice/universal_credit.git
-  revision: 39d3383397ec1ba52c58087f1e969db6ca50db80
-  branch: 7948-engine
-  specs:
-    universal_credit (1.0.0)
-      autoprefixer-rails
-      devise
-      dough-ruby
-      mysql2
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
-      universal_credit-content (~> 0.1.0)
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -701,6 +684,17 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
+    universal_credit (1.1.1)
+      autoprefixer-rails
+      devise
+      dough-ruby
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+      universal_credit-content (~> 0.1.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -815,7 +809,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit!
+  universal_credit (~> 1.1.1)
   universal_credit-content!
   validate_url (= 1.0.0)
   vcr

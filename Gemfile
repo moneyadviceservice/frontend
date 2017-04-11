@@ -41,7 +41,9 @@ gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'postcode_anywhere-email_validation'
 gem 'turnout'
+gem 'mas-cms-client', '~> 1.1'
 
+# tools
 gem 'action_plans', '~> 4.4.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.1.0'

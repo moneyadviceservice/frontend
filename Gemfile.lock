@@ -7,7 +7,6 @@ GIT
       google-analytics-rails
       sass
       sass-rails
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -678,17 +677,28 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
+<<<<<<< HEAD
     universal_credit (1.1.5)
       autoprefixer-rails
       devise
       dough-ruby
       mas-cms-client (~> 1.1)
+=======
+    universal_credit (1.1.1)
+      autoprefixer-rails
+      devise
+      dough-ruby
+>>>>>>> update universal-credit gem
       mysql2
       preamble
       rails (>= 4, < 5)
       redcarpet
       sass-rails
       uglifier
+<<<<<<< HEAD
+=======
+      universal_credit-content (~> 0.1.0)
+>>>>>>> update universal-credit gem
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -803,7 +813,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 1.1.5)
+  universal_credit (~> 1.1.6)
   validate_url (= 1.0.0)
   vcr
   webmock

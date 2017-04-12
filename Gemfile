@@ -66,12 +66,10 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.4.0'
+gem 'universal_credit', '~> 2.0.0'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'
-
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '7948-engine'
-gem 'universal_credit-content', git: 'git@github.com:moneyadviceservice/universal_credit-content.git'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -684,10 +684,11 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (1.1.1)
+    universal_credit (1.1.2)
       autoprefixer-rails
       devise
       dough-ruby
+      mas-cms-client (~> 1.1)
       mysql2
       preamble
       rails (>= 4, < 5)
@@ -809,7 +810,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 1.1.1)
+  universal_credit (~> 1.1.2)
   universal_credit-content!
   validate_url (= 1.0.0)
   vcr

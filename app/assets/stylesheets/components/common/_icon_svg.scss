@@ -15,6 +15,7 @@
 // .svg-icon--email - Email
 // .svg-icon--stripe-banner-arrow - ARROW
 // .svg-icon--thumb-icon - Thumb
+// .svg-icon--clear-english - Clear English icon
 //
 // Styleguide svg-icons
 
@@ -141,6 +142,37 @@ html.svg {
 }
 
 // Clear English Standard
+#svg-icon--clear-english {
+  .st0 {
+    fill: none;
+  }
+
+  .st1 {
+    fill: #959CA1;
+  }
+
+  .st2 {
+    stroke: #FFFFFF;
+    stroke-width: 1.25;
+  }
+
+  .st3 {
+    fill: #FFFFFF;
+  }
+
+  .st4 {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    stroke-width: 3.4213;
+  }
+
+  .st5 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #004896;
+  }
+}
+
 .icon--clear-english,
 .svg-icon--clear-english {
   width: 100px;

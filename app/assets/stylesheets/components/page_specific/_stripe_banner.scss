@@ -56,7 +56,6 @@
 .icon--stripe-banner-arrow {
   width: 64px;
   height: 64px;
-  display: block;
   margin: $baseline-unit auto 0 auto;
 
   @include respond-to($mq-s) {
@@ -68,6 +67,22 @@
   @include respond-to($mq-l) {
     top: 15%;
     right: 7%;
+  }
+}
+
+.svg-icon--stripe-banner-arrow {
+  display: none;
+
+  .svg & {
+    display: block;
+  }
+}
+
+.icon--stripe-banner-arrow {
+  display: block;
+
+  .svg & {
+    display: none;
   }
 }
 

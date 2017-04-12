@@ -31,7 +31,7 @@
               <span class="visually-hidden">Twitter - <%= t('footer.new-window-label') %></span>
             </a>
             <p class="social-sharing__counter">
-              <span class="social-sharing__counter__total">42k</span>
+              <span class="social-sharing__counter__total">45k</span>
               <span class="social-sharing__counter__label"><%= t('footer.twitter-followers') %></span>
             </p>
           </div>
@@ -48,7 +48,7 @@
               <span class="visually-hidden">Youtube - <%= t('footer.new-window-label') %></span>
             </a>
             <p class="social-sharing__counter">
-              <span class="social-sharing__counter__total">5.5m</span>
+              <span class="social-sharing__counter__total">5.6m</span>
               <span class="social-sharing__counter__label"><%= t('footer.youtube-views') %></span>
             </p>
           </div>
@@ -86,13 +86,34 @@
           <li class="footer-primary__list-item footer-primary__corporate-link">
             <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
           </li>
-
         </ul>
 
         <div class="footer-primary__blog">
           <a class="footer-primary__blog-link" href="<%= t('blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
         </div>
       </nav>
+
+      <div class="footer-primary__clear-english">
+        <a
+          class="footer-primary__clear-english-link"
+          href="http://words-at-work.co.uk/?fname=moneyadviceservice"
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--clear-english" aria-labelledby="clear-english-label" focusable="false">
+            <title id="clear-english-label">Clear English Standard Winning Website Silver Level</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--clear-english"></use>
+          </svg>
+
+          <span class="icon icon--clear-english"></span>
+
+          <span class="footer-primary__clear-english-text">
+            <span>Clear English Standard</span>
+            <span>Winning Website</span>
+            <span>Silver Level</span>
+          </span>
+          <span class="visually-hidden">Clear English Award - <%= t('footer.new-window-label') %></span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

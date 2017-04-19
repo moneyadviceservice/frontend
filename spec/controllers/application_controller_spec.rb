@@ -42,4 +42,10 @@ RSpec.describe ApplicationController, type: :controller do
       expect(subject.headers['X-Frame-Options']).to eql('SAMEORIGIN')
     end
   end
+
+  describe '#show_floating_chat?' do
+    it 'hides from all other pages' do
+      expect(subject.show_floating_chat?).to be(false)
+    end
+  end
 end

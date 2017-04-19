@@ -1,20 +1,42 @@
 .chat-box__container {
-	background-color: white;
-	position: fixed!important;
-	top:30%;
-	left: 0;
-  	padding: $baseline-unit*4;
-	z-index:9999;
-	border-radius: 3px;
+  background-color: $color-white;
+  position: fixed;
+  top:30%;
+  left: 0;
+  padding: $baseline-unit*3;
+  z-index:9999;
+  border-radius: 0 4px 4px 0;
+  border: 2px solid $color-green-primary;
+  border-left-style: none;
+  -webkit-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
+  -moz-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
+  box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
 
+  @include respond-to($mq-xs) {
+    display: none;
+  }
+
+  @include respond-to($mq-l) {
+    display: block;
+  }
+}
+
+.chat-box__container:hover{
+  text-decoration: none;
 }
 
 .chat-box__heading {
-	font-color:#777;
-	font-size: 2rem;
-	text-decoration:none;
+  color: $color-heading-extra-small;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+
 }
 
 .chat-box__icon {
-	margin-left: -35px;	
+  margin-left: -35px;	
+}
+
+.chat-box__container--hidden {
+	display: none;
 }

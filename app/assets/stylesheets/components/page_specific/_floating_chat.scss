@@ -12,6 +12,10 @@
   -moz-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
   box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
 
+  &:hover {
+    text-decoration: none;
+  }
+
   @include respond-to($mq-xs) {
     display: none;
   }
@@ -19,10 +23,6 @@
   @include respond-to($mq-l) {
     display: block;
   }
-}
-
-.chat-box__container:hover{
-  text-decoration: none;
 }
 
 .chat-box__heading {
@@ -37,5 +37,5 @@
 }
 
 .chat-box__container--hidden {
-	display: none;
+  display: none;
 }

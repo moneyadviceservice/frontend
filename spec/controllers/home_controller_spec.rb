@@ -6,4 +6,10 @@ RSpec.describe HomeController, type: :controller do
       expect(response).to be_ok
     end
   end
+  
+  describe '#show_floating_chat?' do
+    it 'shows on homepage' do
+      expect(subject.show_floating_chat?).to be(true)
+    end
+  end
 end

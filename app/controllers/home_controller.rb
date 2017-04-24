@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def show
     @resource = interactor.call
   end
@@ -8,6 +9,10 @@ class HomeController < ApplicationController
   end
 
   def contact_panels_homepage?
+    true
+  end
+
+  def show_floating_chat?
     true
   end
 

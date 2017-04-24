@@ -63,6 +63,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :contact_panels_homepage?
 
+  def show_floating_chat?
+    false
+  end
+
+  helper_method :show_floating_chat?
+
   def display_skip_to_main_navigation?
     true
   end
@@ -134,11 +140,13 @@ class ApplicationController < ActionController::Base
     categories = corporate ? corporate_categories : navigation_categories
     @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(categories).children)
   end
+
   helper_method :category_navigation
 
   def corporate_category_navigation
     @corporate_category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(corporate_categories).children)
   end
+
   helper_method :corporate_category_navigation
 
   def hide_elements_irrelevant_for_third_parties?

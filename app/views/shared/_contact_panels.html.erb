@@ -38,8 +38,8 @@
             <div class="contact-panel__button button is-disabled t-chat-button">
               <%= chat_opening_hours.call_to_action %>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
 
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
@@ -74,6 +74,13 @@
 </div>
 <% end %>
 
+<% if show_floating_chat? %>
+<a href="#" aria-hidden="true" class="chat-box__container chat-box__container--hidden t__floating-web-chat">
+  <div class="chat-box__heading">Web Chat</div>
+    <span class="icon icon--web-chat"></span>
+</a>
+<% end %>
+
 <%= content_for :javascripts do %>
   <% unless hide_contact_panels? %>
     <%= javascript_include_tag 'webchat.js' %>
@@ -86,7 +93,9 @@
 
         var chatCTA = document.getElementById('js-chat-cta'),
             chatDescription = document.getElementById('js-chat-description'),
-            chatContent = document.getElementById('js-chat-content');
+            chatContent = document.getElementById('js-chat-content'),
+            chatPopup = document.getElementsByClassName('chat-box__container')[0];
+
 
         if (sWOImage.width == 1) {
 
@@ -104,6 +113,9 @@
           chatDescription.innerHTML += '&nbsp;*';
           <% end %>
 
+
+          chatPopup.className = "chat-box__container chat-box__container--hidden";
+
           chatContent.className = "contact-panel__dynamic-content is-loaded";
 
         } else {
@@ -113,14 +125,17 @@
           sWOChatElement.className = "contact-panel__button button t-chat-button";
           sWOChatElement.appendChild(sWOChatElementText);
 
+
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
           chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
           chatContent.className = "contact-panel__dynamic-content is-loaded";
 
+
           <% if translation?('contact_panels.chat.smallprint') %>
           chatDescription.innerHTML += '&nbsp;*';
           <% end %>
+
 
           sWOChatElement.onclick = function() {
             window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
@@ -129,6 +144,16 @@
 
           sWOChatElement.href = sWOChatstart;
           sWOChatElement.target = "_blank";
+
+
+          chatPopup.className = "chat-box__container";
+          chatPopup.href = sWOChatstart;
+          chatPopup.target = "_blank";
+
+          chatPopup.onclick = function() {
+            window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+            return false;
+          };
 
         }
 

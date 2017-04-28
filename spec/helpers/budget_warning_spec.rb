@@ -3,7 +3,7 @@ require_relative './shared_examples/displays_banner_warning.rb'
 RSpec.describe BudgetWarning, type: :helper do
   context '#before announcement day' do
     it 'should not display banner warning' do
-      Timecop.freeze(Chronic.parse('3rd March 2016')) do
+      Timecop.freeze(Chronic.parse('3rd March 2017')) do
         expect(described_class.display_banner_warning?).to be(false)
       end
     end
@@ -11,13 +11,13 @@ RSpec.describe BudgetWarning, type: :helper do
 
   context '#on announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '6th April 2017' }
+      let(:date) { '6th April 2018' }
     end
   end
 
   context '#after announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '24th April 2017' }
+      let(:date) { '24th April 2018' }
     end
   end
 

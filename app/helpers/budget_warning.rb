@@ -1,7 +1,7 @@
 module BudgetWarning
     ANNOUNCEMENT_DAY   = 06
     ANNOUNCEMENT_MONTH = 4
-    ANNOUNCEMENT_YEAR  = 2017
+    ANNOUNCEMENT_YEAR  = 2018
 
   class Announcement
     attr_reader :date

@@ -3,8 +3,6 @@ require 'core'
 require 'faraday/request/host_header'
 require 'faraday/request/x_forwarded_proto'
 
-require Rails.root.join('config/initializers/feature')
-
 google_api_connection     = Core::ConnectionFactory::Http.build('https://www.googleapis.com/')
 public_website_connection = Core::ConnectionFactory::Http.build(ENV['MAS_PUBLIC_WEBSITE_URL'])
 internal_email_connection = Core::ConnectionFactory::Smtp.build(from_address: 'development.team@moneyadviceservice.org.uk')

@@ -42,7 +42,7 @@ gem 'statsd-ruby'
 gem 'postcode_anywhere-email_validation'
 gem 'turnout'
 
-gem 'action_plans', '~> 4.4.0'
+gem 'action_plans', '~> 4.5.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.1.0'
 gem 'baby_cost_calculator', '~> 0.3.0'

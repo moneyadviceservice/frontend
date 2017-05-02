@@ -1,8 +1,10 @@
 #!/bin/bash -l
 
-set -e
+set -ex
 
 export PATH=./bin:$PATH
+echo PATH=$PATH
+
 export RAILS_ENV=test
 export BUNDLE_WITHOUT=development
 

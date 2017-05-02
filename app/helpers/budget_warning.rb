@@ -1,7 +1,8 @@
 module BudgetWarning
-    ANNOUNCEMENT_DAY   = 06
-    ANNOUNCEMENT_MONTH = 4
-    ANNOUNCEMENT_YEAR  = 2018
+  ANNOUNCEMENT_DAY   = 6
+  ANNOUNCEMENT_MONTH = 4
+  ANNOUNCEMENT_YEAR  = 2018
+  WHITELIST = YAML.load_file('config/budget_warning_tools.yml')
 
   class Announcement
     attr_reader :date
@@ -13,20 +14,16 @@ module BudgetWarning
     end
 
     def go_live?
-      (Date.today >= date) ? true : false
+      Time.zone.today >= date ? true : false
     end
   end
 
   def display_banner_warning?
-    BudgetWarning::Announcement.new.go_live?
+    BudgetWarning::Announcement.new.go_live? && whitelisted?
   end
   module_function :display_banner_warning?
 
   def whitelisted?
-    whitelist = ['/en/tools/redundancy-pay-calculator/',
-                 '/cy/tools/cyfrifiannell-tal-diswyddo/']
-
-    whitelist.include? request.url.gsub(request.base_url, '')
+    WHITELIST.include? request.url.gsub(request.base_url, '')
   end
-  module_function :whitelisted?
 end

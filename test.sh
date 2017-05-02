@@ -4,6 +4,7 @@ set -ex
 
 export PATH=./bin:$PATH
 echo PATH=$PATH
+exit 1
 
 export RAILS_ENV=test
 export BUNDLE_WITHOUT=development

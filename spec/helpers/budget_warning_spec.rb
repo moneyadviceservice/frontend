@@ -4,7 +4,7 @@ RSpec.describe BudgetWarning, type: :helper do
   context '#before announcement day' do
     it 'should not display banner warning' do
       Timecop.freeze(Chronic.parse('3rd March 2017')) do
-        expect(described_class.display_banner_warning?).to be(false)
+        expect(display_banner_warning?).to be(false)
       end
     end
   end
@@ -21,23 +21,36 @@ RSpec.describe BudgetWarning, type: :helper do
     end
   end
 
-  describe '#whitelisted page' do
-    context 'english pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/en/tools/redundancy-pay-calculator/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
+  describe '#whitelisted?' do
+    let(:request) do
+      double(
+        url: 'example.org/en/tools/redundancy-pay-calculator/',
+        base_url: 'example.org'
+      )
+    end
 
-        expect(described_class.whitelisted?).to be(true)
+    before do
+      expect(YAML).to receive(:load_file).and_return(whitelisted_tools)
+      allow(helper).to receive(:request).and_return(request)
+    end
+
+    context 'when request is whitelisted' do
+      let(:whitelisted_tools) do
+        ['/en/tools/redundancy-pay-calculator/']
+      end
+
+      it 'returns true' do
+        expect(helper).to be_whitelisted
       end
     end
-    context 'welsh pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/cy/tools/cyfrifiannell-tal-diswyddo/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
 
-        expect(described_class.whitelisted?).to be(true)
+    context 'when request is not whitelisted' do
+      let(:whitelisted_tools) do
+        ['/en/tools/budget-planner/']
+      end
+
+      it 'returns false' do
+        expect(helper).to_not be_whitelisted
       end
     end
   end

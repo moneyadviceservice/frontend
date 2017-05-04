@@ -89,53 +89,6 @@ Don't forget to restart the server after the modification.
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
 
-### Feature Toggles
-
-We favor [Feature Toggles] over [Feature Branches]. To define features create a
-configuration file, *config/features.yml* with toggles for various features that
-are pending:
-
-```yml
-features:
-  an_active_feature: true
-  an_inactive_feature: false
-```
-
-At runtime you can use these toggles in order to decide whether or not to show a feature:
-
-```rb
-Feature.active?(:an_active_feature) # => true/false
-
-Feature.inactive?(:an_active_feature) # => true/false
-
-Feature.with(:an_active_feature) do
-  # code
-end
-
-Feature.without(:an_active_feature) do
-  # code
-end
-```
-
-Our feature toggles are designed to be used to hide partly built features, often
-referred to as **release toggles**. A toggle and any conditional behaviour must
-be removed once a feature is complete.
-
-Note that the local configuration file *config/features.yml* is ignored in git so
-make sure to run any acceptance tests with the feature toggled on and off locally.
-
-If you need to enable a feature in any tests you can use tags.
-For example, in feature tests you can use:
-
-```gherkin
-@enable-feature-name
-Scenario: View great new feature
-  When I visit the website
-  Then I should see this great new feature
-```
-
-Where the cucumber tag `@enable-feature-name` will enable the feature `feature_name` for the cucumber scenario.
-
 ### Feature Development
 
 We like to develop features from the outside in. We write our user stories in a

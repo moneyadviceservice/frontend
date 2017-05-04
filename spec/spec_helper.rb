@@ -12,7 +12,6 @@ require_relative '../config/environment'
 
 require 'rspec/rails'
 require 'factory_girl'
-require 'feature/testing'
 require 'html_validation'
 require 'webmock/rspec'
 require 'database_cleaner'
@@ -98,26 +97,6 @@ RSpec.configure do |c|
   c.run_all_when_everything_filtered = true
 
   c.disable_monkey_patching!
-
-  c.around(:example) do |example|
-    if example.metadata[:features]
-      Feature.run_with_activated(*example.metadata[:features]) do
-        Rails.application.reload_routes!
-        Devise.regenerate_helpers!
-        Devise.class_variable_set(:@@warden_configured, false)
-        Devise.configure_warden!
-
-        example.run
-      end
-
-      Rails.application.reload_routes!
-      Devise.regenerate_helpers!
-      Devise.class_variable_set(:@@warden_configured, false)
-      Devise.configure_warden!
-    else
-      example.run
-    end
-  end
 
   c.before(:suite) do
     DatabaseCleaner.clean

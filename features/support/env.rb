@@ -7,7 +7,6 @@ require 'capybara'
 require 'capybara/poltergeist'
 require 'site_prism'
 require 'timecop'
-require 'feature/testing'
 require 'email_spec/cucumber'
 
 I18n.available_locales = [:en, :cy]

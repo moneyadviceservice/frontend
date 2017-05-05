@@ -3,41 +3,54 @@ require_relative './shared_examples/displays_banner_warning.rb'
 RSpec.describe BudgetWarning, type: :helper do
   context '#before announcement day' do
     it 'should not display banner warning' do
-      Timecop.freeze(Chronic.parse('3rd March 2016')) do
-        expect(described_class.display_banner_warning?).to be(false)
+      Timecop.freeze(Chronic.parse('3rd March 2017')) do
+        expect(display_banner_warning?).to be(false)
       end
     end
   end
 
   context '#on announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '6th April 2017' }
+      let(:date) { '6th April 2018' }
     end
   end
 
   context '#after announcement day' do
     it_behaves_like 'displays_warning_banner' do
-      let(:date) { '24th April 2017' }
+      let(:date) { '24th April 2018' }
     end
   end
 
-  describe '#whitelisted page' do
-    context 'english pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/en/tools/redundancy-pay-calculator/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
+  describe '#whitelisted?' do
+    let(:request) do
+      double(
+        url: 'example.org/en/tools/redundancy-pay-calculator/',
+        base_url: 'example.org'
+      )
+    end
 
-        expect(described_class.whitelisted?).to be(true)
+    before do
+      stub_const('BudgetWarning::WHITELIST', whitelisted_tools)
+      allow(helper).to receive(:request).and_return(request)
+    end
+
+    context 'when request is whitelisted' do
+      let(:whitelisted_tools) do
+        ['/en/tools/redundancy-pay-calculator/']
+      end
+
+      it 'returns true' do
+        expect(helper).to be_whitelisted
       end
     end
-    context 'welsh pages' do
-      it 'displays banner for only the Redundancy Calculator' do
-        request = double('request', url: 'www.example.com/cy/tools/cyfrifiannell-tal-diswyddo/',
-                                    base_url: 'www.example.com')
-        allow(BudgetWarning).to receive(:request).and_return(request)
 
-        expect(described_class.whitelisted?).to be(true)
+    context 'when request is not whitelisted' do
+      let(:whitelisted_tools) do
+        ['/en/tools/budget-planner/']
+      end
+
+      it 'returns false' do
+        expect(helper).to_not be_whitelisted
       end
     end
   end

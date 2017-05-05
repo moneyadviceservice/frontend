@@ -62,7 +62,7 @@ gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 1.4.1'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.0', source: 'http://gems.dev.mas.local'
-gem 'savings_calculator', '~> 1.8.0'
+gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.4.0'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales

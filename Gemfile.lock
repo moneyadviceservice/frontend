@@ -8,6 +8,23 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: 882227b544ba4e281d154786c68293bab90cef4d
+  branch: 8174_service_mailer_task
+  specs:
+    universal_credit (1.3.0)
+      autoprefixer-rails
+      devise
+      dough-ruby
+      mas-cms-client (~> 1.1)
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -678,17 +695,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (1.2.0)
-      autoprefixer-rails
-      devise
-      dough-ruby
-      mas-cms-client (~> 1.1)
-      mysql2
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -803,7 +809,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 1.2.0)
+  universal_credit!
   validate_url (= 1.0.0)
   vcr
   webmock

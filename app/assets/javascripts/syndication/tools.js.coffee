@@ -13,6 +13,16 @@
   logoAltText: "Money Advice Service"
 
   toolConfig:
+    employer_best_practices:
+      en:
+        path: 'en/employer-best-practices/money-guide'
+      cy:
+        path: 'cy/employer-best-practices/money-guide'
+      width: '100%'
+      height: '800px'
+      include_ga: false
+      title: 'Making the most of your money'
+
     baby_timeline:
       en:
         path: "en/tools/baby-money-timeline"

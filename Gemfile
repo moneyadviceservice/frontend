@@ -45,7 +45,8 @@ gem 'action_plans', '~> 4.5.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.1.0'
 gem 'baby_cost_calculator', '~> 0.3.0'
-gem 'budget_planner', '~> 4.7.0'
+# gem 'budget_planner', '~> 4.7.0'
+gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: '7858-code-cleanup'
 gem 'car_cost_tool', '~> 1.1.2'
 gem 'contribution_calculator', '~> 0.1.0'
 gem 'cost_calculator_builder', '~> 0.4.2'
@@ -63,7 +64,6 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.4.0'
-
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'
 

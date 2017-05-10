@@ -10,12 +10,16 @@ describe.only('GlobalNav', function() {
           self.$html = $(window.__html__['spec/javascripts/fixtures/GlobalNav.html']).appendTo('body');
           self.component = self.$html.find('[data-dough-component="GlobalNav"]');
           self.globalNav = GlobalNav;
+          self.mainContent = self.$html.find('#main');
           self.mobileNavButton = (self.$html).find('[data-dough-mobile-nav-button]');
+          self.clump = self.component.find('[data-dough-nav-clump]');
           self.clumpHeading = self.component.find('[data-dough-nav-clump-heading]');
+          self.clumpHeadingText = self.clumpHeading.find('.global-nav__clump__heading__text');
           self.subNavHeading = self.component.find('[data-dough-subnav-heading]');
           self.mobileNavCloseButton = self.component.find('[data-dough-mobile-nav-close]');
           self.mobileNavOverlay = self.component.find('[data-dough-mobile-nav-overlay]');
           self.obj = new self.globalNav(self.component, self.component.data('dough-global-nav-config'));
+          self.delay = 250;
 
           done();
         }, done);
@@ -96,6 +100,51 @@ describe.only('GlobalNav', function() {
 
       this.mobileNavOverlay.trigger('click');
       expect(this.component.hasClass('is-active')).to.be.false;
+    });
+  });
+
+  describe('Desktop interaction', function() {
+    var clock;
+
+    beforeEach(function() {
+      clock = sinon.useFakeTimers();
+      this.obj.init();
+    });
+
+    afterEach(function() {
+      clock.restore();
+    });
+
+    it('closes subnav on a touch event outside of global nav', function() {
+      // the subnav needs to be open before test is run
+      this.clump.addClass('is-active');
+      this.mainContent.trigger('touchstart');
+      expect(this.clump.hasClass('is-active')).to.be.false;
+    });
+
+    it('closes subnav when user moves mouse outside of global nav', function() {
+      // the subnav needs to be open before test is run
+      this.clump.addClass('is-active');
+      this.component.trigger('mouseleave');
+      clock.tick(this.delay);
+      expect(this.clump.hasClass('is-active')).to.be.false;
+    });
+
+    it('opens subnav when user hovers on clump heading', function() {
+      this.clumpHeadingText.trigger('mouseenter');
+      clock.tick(this.delay);
+      expect(this.clump.hasClass('is-active')).to.be.true;
+    });
+
+    it('toggles subnav when user touches clump heading', function() {
+      // opens subnav
+      this.clumpHeadingText.trigger('touchend');
+      clock.tick(this.delay);
+      expect(this.clump.hasClass('is-active')).to.be.true;
+
+      // closes subnav
+      this.clumpHeadingText.trigger('touchend');
+      expect(this.clump.hasClass('is-active')).to.be.false;
     });
   });
 });

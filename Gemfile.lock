@@ -395,6 +395,13 @@ GEM
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
       rest-client
+    mas-cms-client (1.1.0)
+      activemodel (~> 4.2, >= 4.2.7)
+      activesupport (~> 4.2, >= 4.2.7)
+      faraday (~> 0.9.2)
+      faraday-conductivity (~> 0.3.1)
+      faraday_middleware (~> 0.10.0)
+      rubytree (~> 0.9.7)
     mas-fonts (0.0.2.6)
       rails
     mas-mailer (0.3.2.15)
@@ -469,6 +476,8 @@ GEM
       activemodel (>= 3.2)
       rest-client (~> 1.6)
     powerpack (0.1.1)
+    preamble (0.0.3)
+      rspec
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -673,6 +682,17 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
+    universal_credit (2.0.1)
+      autoprefixer-rails
+      devise
+      dough-ruby
+      mas-cms-client (~> 1.1)
+      mysql2
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -747,6 +767,7 @@ DEPENDENCIES
   mail
   mailjet
   mas-assets!
+  mas-cms-client (~> 1.1)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 1.9.0)
   mysql2
@@ -786,6 +807,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
+  universal_credit (~> 2.0.1)
   validate_url (= 1.0.0)
   vcr
   webmock

@@ -41,7 +41,9 @@ gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'postcode_anywhere-email_validation'
 gem 'turnout'
+gem 'mas-cms-client', '~> 1.1'
 
+# tools
 gem 'action_plans', '~> 4.5.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.1.0'
@@ -64,6 +66,7 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.4.0'
+gem 'universal_credit', '~> 2.0.1'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

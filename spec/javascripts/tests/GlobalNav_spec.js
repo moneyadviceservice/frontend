@@ -147,4 +147,15 @@ describe.only('GlobalNav', function() {
       expect(this.clump.hasClass('is-active')).to.be.false;
     });
   });
+
+  describe('Mobile animation', function() {
+    beforeEach(function() {
+      this.obj.init();
+    });
+
+    it('toggles the no-transition class when viewport size changes', function() {
+      // can't get this to work at the minute for the same reasons:
+      // unable to reflect the size change via the mediaQueries component
+    });
+  });
 });

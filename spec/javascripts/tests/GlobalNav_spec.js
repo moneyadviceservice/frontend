@@ -322,4 +322,14 @@ describe('GlobalNav', function() {
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
   });
+
+  describe('Bind Events', function() {
+    beforeEach(function() {
+      this.obj.init();
+    });
+
+    it('removes the uninialised class when component is loaded', function() {
+      expect(this.component.hasClass('uninitialised')).to.be.false;
+    });
+  });
 });

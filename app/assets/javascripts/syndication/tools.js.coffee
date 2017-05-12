@@ -19,7 +19,7 @@
       cy:
         path: 'cy/employer-best-practices/money-guide'
       width: '100%'
-      height: '800px'
+      height: '7000px'
       include_ga: false
       title: 'Making the most of your money'
 

@@ -308,6 +308,14 @@
         path: "cy/tools/canfod-arian-parod-yn-gyflym"
       title: "Quick cash finder"
 
+    universal_credit:
+      en:
+        path: 'en/tools/money-manager'
+      cy:
+        path: 'cy/tools/rheolwr-arian'
+      width: "100%"
+      title: 'Money Manager'
+
     default_dimensions:
       width: "680px"
       height: "1000px"

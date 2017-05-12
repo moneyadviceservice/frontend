@@ -304,6 +304,7 @@
         path: 'en/tools/money-manager'
       cy:
         path: 'cy/tools/rheolwr-arian'
+      width: "100%"
       title: 'Money Manager'
 
     default_dimensions:

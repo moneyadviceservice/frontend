@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
   def syndicated_tool_request?
-    !!request.headers['X-Syndicated-Tool']
+    #!!request.headers['X-Syndicated-Tool']
+    true
   end
 
   helper_method :syndicated_tool_request?

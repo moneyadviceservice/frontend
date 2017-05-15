@@ -299,12 +299,15 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     this.$globalNav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
 
-    // If we just closed the nav, reset all subnavs
+    // Reset all subnavs and aria-expanded attribute when the nav is closed
     if (!this.$globalNav.hasClass('is-active')) {
+      this.$mobileNavButton.attr('aria-expanded', 'false');
       this.$globalNav.removeClass('is-active');
       this.$mobileNavOverlay.removeClass('is-active');
       this.$globalNavClumps.removeClass('is-active');
       this.$globalNavClump.removeClass('is-active');
+    } else {
+      this.$mobileNavButton.attr('aria-expanded', 'true');
     }
   };
 

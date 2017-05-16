@@ -12,6 +12,7 @@ describe('GlobalNav', function() {
           self.globalNav = GlobalNav;
           self.mainContent = self.$html.find('#main');
           self.mobileNavButton = (self.$html).find('[data-dough-mobile-nav-button]');
+          self.clumps = self.component.find('[data-dough-nav-clumps]');
           self.clump = self.component.find('[data-dough-nav-clump]');
           self.clumpHeading = self.component.find('[data-dough-nav-clump-heading]');
           self.clumpHeadingText = self.clumpHeading.find('.global-nav__clump__heading__text');
@@ -73,24 +74,24 @@ describe('GlobalNav', function() {
     */
 
     it('toggles subnav visibility when subnav heading is clicked', function() {
-      // the subnav and nav need to be open before the test is run
-      this.subNavHeading.parents('[data-dough-nav-clump]').addClass('is-active');
-      this.subNavHeading.parents('[data-dough-nav-clumps]').addClass('is-active');
+      // open the subnav and nav before the test is run
+      $('#clump-1').addClass('is-active');
+      this.clumps.addClass('is-active');
 
-      this.subNavHeading.trigger('click');
-      expect(this.clumpHeading.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.false;
-      expect(this.clumpHeading.parents('[data-dough-nav-clumps]').hasClass('is-active')).to.be.false;
+      $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');
+      expect($('#clump-1').hasClass('is-active')).to.be.false;
+      expect(this.clumps.hasClass('is-active')).to.be.false;
 
-      this.subNavHeading.trigger('click');
-      expect(this.clumpHeading.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.true;
-      expect(this.clumpHeading.parents('[data-dough-nav-clumps]').hasClass('is-active')).to.be.true;
+      $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');
+      expect($('#clump-1').hasClass('is-active')).to.be.true;
+      expect(this.clumps.hasClass('is-active')).to.be.true;
     });
 
     it('closes nav when close button is clicked', function() {
-      // the nav needs to be open before the test is run
+      // open the nav before the test is run
       this.component.addClass('is-active');
 
-      this.mobileNavCloseButton.trigger('click');
+      $('#clump-1').find('[data-dough-mobile-nav-close]').trigger('click');
       expect(this.component.hasClass('is-active')).to.be.false;
     });
 
@@ -103,7 +104,7 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe('Desktop interaction', function() {
+  describe.only('Desktop interaction', function() {
     var clock;
 
     beforeEach(function() {
@@ -117,34 +118,34 @@ describe('GlobalNav', function() {
 
     it('closes subnav on a touch event outside of global nav', function() {
       // the subnav needs to be open before test is run
-      this.clump.addClass('is-active');
+      $('#clump-1').addClass('is-active');
       this.mainContent.trigger('touchstart');
-      expect(this.clump.hasClass('is-active')).to.be.false;
+      expect($('#clump-1').hasClass('is-active')).to.be.false;
     });
 
     it('closes subnav when user moves mouse outside of global nav', function() {
       // the subnav needs to be open before test is run
-      this.clump.addClass('is-active');
+      $('#clump-1').addClass('is-active');
       this.component.trigger('mouseleave');
       clock.tick(this.delay);
-      expect(this.clump.hasClass('is-active')).to.be.false;
+      expect($('#clump-1').hasClass('is-active')).to.be.false;
     });
 
     it('opens subnav when user hovers on clump heading', function() {
-      this.clumpHeadingText.trigger('mouseenter');
+      $('#clump-1').find('.global-nav__clump__heading__text').trigger('mouseenter');
       clock.tick(this.delay);
-      expect(this.clump.hasClass('is-active')).to.be.true;
+      expect($('#clump-1').hasClass('is-active')).to.be.true;
     });
 
     it('toggles subnav when user touches clump heading', function() {
       // opens subnav
-      this.clumpHeadingText.trigger('touchend');
+      $('#clump-1').find('.global-nav__clump__heading__text').trigger('touchend');
       clock.tick(this.delay);
-      expect(this.clump.hasClass('is-active')).to.be.true;
+      expect($('#clump-1').hasClass('is-active')).to.be.true;
 
       // closes subnav
-      this.clumpHeadingText.trigger('touchend');
-      expect(this.clump.hasClass('is-active')).to.be.false;
+      $('#clump-1').find('.global-nav__clump__heading__text').trigger('touchend');
+      expect($('#clump-1').hasClass('is-active')).to.be.false;
     });
   });
 
@@ -159,7 +160,7 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe.only('Keyboard Events', function() {
+  describe('Keyboard Events', function() {
     var triggerKeyUp = function(element, keyCode) {
       var e = $.Event('keyup');
       e.which = keyCode;

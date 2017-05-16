@@ -160,7 +160,6 @@ describe('GlobalNav', function() {
   });
 
   describe.only('Keyboard Events', function() {
-    // var clock;
     var triggerKeyUp = function(element, keyCode) {
       var e = $.Event('keyup');
       e.which = keyCode;
@@ -168,12 +167,7 @@ describe('GlobalNav', function() {
     };
 
     beforeEach(function() {
-      // clock = sinon.useFakeTimers();
       this.obj.init();
-    });
-
-    afterEach(function() {
-      // clock.restore();
     });
 
     it('when at top level the enter key opens dropdown and moves focus into this', function() {
@@ -184,8 +178,7 @@ describe('GlobalNav', function() {
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.true;
       expect(index.attr('aria-expanded')).to.eq('true');
 
-      // not convinced this is actually doing what is required ...
-      // ... come back to it later ...
+      // check focus is being tested correctly
       expect($(index.siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a')[0]).filter(':focus')).to.exist;
     });
 
@@ -203,8 +196,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 37);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // also haven't done the wrapping yet
@@ -215,8 +207,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 39);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // also haven't done the wrapping yet
@@ -237,8 +228,7 @@ describe('GlobalNav', function() {
 
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.false;
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
 
@@ -247,14 +237,12 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.last(), 38);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect(links.first().filter(':focus')).to.exist;
 
       triggerKeyUp(links.first(), 38);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect(links.last().filter(':focus')).to.exist;
     });
 
@@ -263,14 +251,12 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.first(), 40);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect(links.last().filter(':focus')).to.exist;
 
       triggerKeyUp(links.first(), 40);
 
-      // not convinced this is actually doing what is required either ...
-      // ... also come back to it later ...
+      // check focus is being tested correctly
       expect(links.first().filter(':focus')).to.exist;
     });
 
@@ -285,6 +271,8 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
+
+      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // open dropdown before running test
@@ -295,6 +283,8 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
+
+      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
 
@@ -309,6 +299,8 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
+
+      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // open dropdown before running test
@@ -319,6 +311,8 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
+
+      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
   });

@@ -94,7 +94,7 @@ function sWOTrackPage() {
       sWOChatElement = document.getElementById('whoson_chat_link');
     }
     sWOUrl += "&response=g";
-    sWOChatstart += "?domain=" + sWODomain;
+    -1 == sWOChatstart.indexOf("domain") && (sWOChatstart += "?domain=" + sWODomain)
     if (sWOLanguage.length > 0)sWOChatstart += "&lang=" + sWOLanguage;
     if (sWOBackgroundURL != "")sWOChatstart += "&bg=" + sWOBackgroundURL;
     if (sWODepartment.length > 0)sWOChatstart += "&dept=" + escape(sWODepartment);

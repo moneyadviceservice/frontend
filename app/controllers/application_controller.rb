@@ -24,8 +24,7 @@ class ApplicationController < ActionController::Base
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
   def syndicated_tool_request?
-    #!!request.headers['X-Syndicated-Tool']
-    true
+    !!request.headers['X-Syndicated-Tool']
   end
 
   helper_method :syndicated_tool_request?
@@ -134,31 +133,26 @@ class ApplicationController < ActionController::Base
       corporate_category?(category, corporate.first['contents'], categories.flatten)
     end
   end
-
   helper_method :corporate_category?
 
   def category_navigation(corporate = false)
     categories = corporate ? corporate_categories : navigation_categories
     @category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(categories).children)
   end
-
   helper_method :category_navigation
 
   def corporate_category_navigation
     @corporate_category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(corporate_categories).children)
   end
-
   helper_method :corporate_category_navigation
 
   def hide_elements_irrelevant_for_third_parties?
     false
   end
-
   helper_method :hide_elements_irrelevant_for_third_parties?
 
   def hide_contact_panels?
     false
   end
-
   helper_method :hide_contact_panels?
 end

@@ -10,7 +10,11 @@
   <div id="main" tabindex="-1">
     <div class="l-constrained">
       <div class="l-container-tool">
-        <%= yield :engine_content %>
+        <% if engine_content? %>
+          <%= yield :engine_content %>
+        <% else %>
+          <%= yield %>
+        <% end %>
       </div>
     </div>
   </div>

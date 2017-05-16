@@ -1,6 +1,11 @@
 class EmbeddedToolsController < ApplicationController
   protected
 
+  def engine_content?
+    true
+  end
+  helper_method :engine_content?
+
   def breadcrumbs
     BreadcrumbTrail.build(category, category_tree)
   end

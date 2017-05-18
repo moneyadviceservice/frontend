@@ -1,10 +1,14 @@
 .glossary__term {
   cursor: pointer;
-
   color: $color-green-primary;
   border-bottom: 1px solid $color-green-primary;
   line-height: 18px;
   position: relative;
+
+  sub {
+    @include body(14, 16);
+    vertical-align: super;
+  } 
 }
 
 .glossary__description {
@@ -58,10 +62,4 @@
     width: 16px;
     height: 16px;
   }
-
 }
-
-  sub {
-    @include body(14, 16);
-    vertical-align: super;
-  }

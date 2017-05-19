@@ -14,12 +14,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     $.getJSON('/glossary.json', function(data){
       data.glossary.map(function (item) {
 
-    var keywordInArticleContent = function(article, term) {
-      return articleContent.indexOf(item.term) >= 1;
-    }
+      function keywordInContent(keyword, content){
+        return content.indexOf(keyword)>= 1;
+      }
 
         // If the article content contains any of the keywords in the JSON
-        if(keywordInArticleContent(articleContent, item.term)){
+        if(keywordInContent(item.term, articleContent)){
 
           $(item).each(function(){
             var regex = "(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))",

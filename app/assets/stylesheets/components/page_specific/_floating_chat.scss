@@ -16,6 +16,10 @@
     text-decoration: none;
   }
 
+  &:focus {
+    background-color: $color-white;
+  }
+
   @include respond-to($mq-xs) {
     display: none;
   }

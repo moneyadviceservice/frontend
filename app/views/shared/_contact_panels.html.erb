@@ -93,8 +93,11 @@
 
         var chatCTA = document.getElementById('js-chat-cta'),
             chatDescription = document.getElementById('js-chat-description'),
-            chatContent = document.getElementById('js-chat-content'),
-            chatPopup = document.getElementsByClassName('chat-box__container')[0];
+            chatContent = document.getElementById('js-chat-content');
+
+        <% if show_floating_chat? %>
+          var chatPopup = document.getElementsByClassName('chat-box__container')[0];
+        <% end %>
 
 
         if (sWOImage.width == 1) {
@@ -113,8 +116,9 @@
           chatDescription.innerHTML += '&nbsp;*';
           <% end %>
 
-
-          chatPopup.className = "chat-box__container chat-box__container--hidden";
+          <% if show_floating_chat? %>
+            chatPopup.className = "chat-box__container chat-box__container--hidden";
+          <% end %>
 
           chatContent.className = "contact-panel__dynamic-content is-loaded";
 
@@ -145,15 +149,16 @@
           sWOChatElement.href = sWOChatstart;
           sWOChatElement.target = "_blank";
 
+          <% if show_floating_chat? %>
+            chatPopup.className = "chat-box__container";
+            chatPopup.href = sWOChatstart;
+            chatPopup.target = "_blank";
 
-          chatPopup.className = "chat-box__container";
-          chatPopup.href = sWOChatstart;
-          chatPopup.target = "_blank";
-
-          chatPopup.onclick = function() {
-            window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
-            return false;
-          };
+            chatPopup.onclick = function() {
+              window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+              return false;
+            };
+          <% end %>
 
         }
 

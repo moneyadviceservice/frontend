@@ -14,16 +14,22 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     $.getJSON('/glossary.json', function(data){
       data.glossary.map(function (item) {
 
-        // If the article content contains any of the keywords in the JSON
-        if(articleContent.indexOf(item.term) >= 1){
+    var keywordInArticleContent = function(article, term) {
+      return articleContent.indexOf(item.term) >= 1;
+    }
 
-          console.log('The term ' + item.term + ' has been found in this article')
+        // If the article content contains any of the keywords in the JSON
+        if(keywordInArticleContent(articleContent, item.term)){
 
           $(item).each(function(){
-            var updatedContent = articleContent.replace(RegExp("(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))","gi"),
-                                                               "<button class='unstyled-button glossary__term' aria-label='" + item.term + " (see description)'>" + item.term + "<sub>?</sub></a></button><span class='glossary__description'><span class='glossary__description-title'>" + item.term + "</a></span>" + item.description + "<button class='glossary__description-close'><svg xmlns='http://www.w3.org/2000/svg' \
-        class='svg-icon svg-icon--mobile-close-box'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#svg-icon--mobile-close-box'>\
-        </use></svg></button></span>");
+            var regex = "(?!<.*?)\\b(" + item.term + ")\\b(?![^<>]*?(<\/a>|<\/h2>|<\/h3>|>))",
+                unstyledButton = "<button class='unstyled-button glossary__term' aria-label='",
+                sub = "<sub>?</sub></a></button><span class='glossary__description'><span class='glossary__description-title'>",
+                descriptionButton = "<button class='glossary__description-close'><svg xmlns='http://www.w3.org/2000/svg' \
+                class='svg-icon svg-icon--mobile-close-box'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#svg-icon--mobile-close-box'>\
+                </use></svg></button></span>"; 
+
+            var updatedContent = articleContent.replace(RegExp(regex,"gi"), unstyledButton + item.term + " (see description)'>" + item.term + sub + item.term + "</a></span>" + item.description + descriptionButton);
             
             articleContent = updatedContent;
             $(article).html(updatedContent);
@@ -59,7 +65,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       // Close descriptions using button
       $('.glossary__description-close').on('click', function(){
         $(this).parents('.glossary__description').removeClass('glossary__description--active');
-        console.log('closed');
       });
 
       // Close descriptions by clicking outside description element

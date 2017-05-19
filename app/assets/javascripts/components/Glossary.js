@@ -18,7 +18,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         return content.indexOf(keyword)>= 1;
       }
 
-        // If the article content contains any of the keywords in the JSON
         if(keywordInContent(item.term, articleContent)){
 
           $(item).each(function(){

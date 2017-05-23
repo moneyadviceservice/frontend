@@ -13,9 +13,9 @@ describe('GlobalNav', function() {
           self.mainContent = self.$html.find('#main');
           self.mobileNavButton = (self.$html).find('[data-dough-mobile-nav-button]');
           self.clumps = self.component.find('[data-dough-nav-clumps]');
-          self.clump = self.component.find('[data-dough-nav-clump]');
-          self.clumpHeading = self.component.find('[data-dough-nav-clump-heading]');
-          self.clumpHeadingText = self.clumpHeading.find('.global-nav__clump__heading__text');
+          // self.clump = self.component.find('[data-dough-nav-clump]');
+          // self.clumpHeading = self.component.find('[data-dough-nav-clump-heading]');
+          // self.clumpHeadingText = self.clumpHeading.find('.global-nav__clump__heading__text');
           self.subNavHeading = self.component.find('[data-dough-subnav-heading]');
           self.mobileNavCloseButton = self.component.find('[data-dough-mobile-nav-close]');
           self.mobileNavOverlay = self.component.find('[data-dough-mobile-nav-overlay]');
@@ -48,7 +48,7 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe('Mobile interaction', function() {
+  describe.only('Mobile interaction', function() {
     beforeEach(function() {
       this.obj.init();
     });
@@ -61,17 +61,17 @@ describe('GlobalNav', function() {
       expect(this.component.hasClass('is-active')).to.be.false;
     });
 
-    /*
-     * this test is breaking because GlobalNav.js won't read the width set here
-     * return to it later!
-     *
     it('toggles subnav visibility when clump heading is clicked', function() {
-      this.clumpHeading.click();
+      $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');
 
-      expect(this.clumpHeading.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.true;
-      expect(this.clumpHeading.parents('[data-dough-nav-clumps]').hasClass('is-active')).to.be.true;
+      expect($('#clump-1').hasClass('is-active')).to.be.true;
+      expect(this.clumps.hasClass('is-active')).to.be.true;
+
+      $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');
+
+      expect($('#clump-1').hasClass('is-active')).to.be.false;
+      expect(this.clumps.hasClass('is-active')).to.be.false;
     });
-    */
 
     it('toggles subnav visibility when subnav heading is clicked', function() {
       // open the subnav and nav before the test is run
@@ -104,7 +104,7 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe.only('Desktop interaction', function() {
+  describe('Desktop interaction', function() {
     var clock;
 
     beforeEach(function() {

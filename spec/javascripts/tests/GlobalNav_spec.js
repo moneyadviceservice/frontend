@@ -13,9 +13,6 @@ describe('GlobalNav', function() {
           self.mainContent = self.$html.find('#main');
           self.mobileNavButton = (self.$html).find('[data-dough-mobile-nav-button]');
           self.clumps = self.component.find('[data-dough-nav-clumps]');
-          // self.clump = self.component.find('[data-dough-nav-clump]');
-          // self.clumpHeading = self.component.find('[data-dough-nav-clump-heading]');
-          // self.clumpHeadingText = self.clumpHeading.find('.global-nav__clump__heading__text');
           self.subNavHeading = self.component.find('[data-dough-subnav-heading]');
           self.mobileNavCloseButton = self.component.find('[data-dough-mobile-nav-close]');
           self.mobileNavOverlay = self.component.find('[data-dough-mobile-nav-overlay]');
@@ -48,7 +45,7 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe.only('Mobile interaction', function() {
+  describe('Mobile interaction', function() {
     beforeEach(function() {
       this.obj.init();
     });
@@ -149,16 +146,34 @@ describe('GlobalNav', function() {
     });
   });
 
-  describe('Mobile animation', function() {
+  /*
+  describe.only('Mobile animation', function() {
+    var clock;
+
     beforeEach(function() {
+      clock = sinon.useFakeTimers();
       this.obj.init();
+    });
+
+    afterEach(function() {
+      clock.restore();
     });
 
     it('toggles the no-transition class when viewport size changes', function() {
       // can't get this to work at the minute for the same reasons:
       // unable to reflect the size change via the mediaQueries component
+      this.$html.css('width', 1200);
+      $(window).trigger('resize');
+      clock.tick(200);
+      expect(this.component.hasClass('no-transition')).to.be.true;
+
+      this.$html.css('width', 300);
+      $(window).trigger('resize');
+      clock.tick(200);
+      expect(this.component.hasClass('no-transition')).to.be.false;
     });
   });
+  */
 
   describe('Keyboard Events', function() {
     var triggerKeyUp = function(element, keyCode) {

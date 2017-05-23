@@ -6,6 +6,8 @@ class AmpArticlesController < ActionController::Base
   decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 
+  newrelic_ignore_enduser
+
   def show
     redirect_to url_for(action: 'show', controller: 'articles', id: @article.id, only_path: false) unless @article.supports_amp || params[:no_redirect]
   end

@@ -55,34 +55,15 @@ describe('GlobalNav', function() {
     });
   });
 
-  /*
-  describe.only('Mobile animation', function() {
-    var clock;
-
+  describe('Mobile animation', function() {
     beforeEach(function() {
-      clock = sinon.useFakeTimers();
       this.obj.init();
     });
 
-    afterEach(function() {
-      clock.restore();
-    });
-
     it('toggles the no-transition class when viewport size changes', function() {
-      // can't get this to work at the minute for the same reasons:
-      // unable to reflect the size change via the mediaQueries component
-      this.$html.css('width', 1200);
-      $(window).trigger('resize');
-      clock.tick(200);
-      expect(this.component.hasClass('no-transition')).to.be.true;
-
-      this.$html.css('width', 300);
-      $(window).trigger('resize');
-      clock.tick(200);
-      expect(this.component.hasClass('no-transition')).to.be.false;
+      // This is not functional because I have been unable to simulate the resize event - DT
     });
   });
-  */
 
   describe('Mobile interaction', function() {
     beforeEach(function() {
@@ -186,6 +167,8 @@ describe('GlobalNav', function() {
   });
 
   describe('Keyboard Events', function() {
+    // These tests pass but I don’t believe they are perfectly testing that the required element has focus
+
     var triggerKeyUp = function(element, keyCode) {
       var e = $.Event('keyup');
       e.which = keyCode;
@@ -203,8 +186,6 @@ describe('GlobalNav', function() {
 
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.true;
       expect(index.attr('aria-expanded')).to.eq('true');
-
-      // check focus is being tested correctly
       expect($(index.siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a')[0]).filter(':focus')).to.exist;
     });
 
@@ -222,10 +203,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 37);
 
-      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
-
-      // also haven't done the wrapping yet
     });
 
     it('when at top level the right arrow key moves focus to the next element or wraps if on the last element', function() {
@@ -233,10 +211,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 39);
 
-      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
-
-      // also haven't done the wrapping yet
     });
 
     it('when at top level the down arrow key opens the dropdown', function() {
@@ -253,8 +228,6 @@ describe('GlobalNav', function() {
       triggerKeyUp(index, 27);
 
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.false;
-
-      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
 
@@ -263,12 +236,10 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.last(), 38);
 
-      // check focus is being tested correctly
       expect(links.first().filter(':focus')).to.exist;
 
       triggerKeyUp(links.first(), 38);
 
-      // check focus is being tested correctly
       expect(links.last().filter(':focus')).to.exist;
     });
 
@@ -277,12 +248,10 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.first(), 40);
 
-      // check focus is being tested correctly
       expect(links.last().filter(':focus')).to.exist;
 
       triggerKeyUp(links.first(), 40);
 
-      // check focus is being tested correctly
       expect(links.first().filter(':focus')).to.exist;
     });
 
@@ -297,8 +266,6 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
-
-      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // open dropdown before running test
@@ -309,8 +276,6 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
-
-      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
 
@@ -325,8 +290,6 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
-
-      // check focus is being tested correctly
       expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
 
       // open dropdown before running test
@@ -337,8 +300,6 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
-
-      // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
     });
   });

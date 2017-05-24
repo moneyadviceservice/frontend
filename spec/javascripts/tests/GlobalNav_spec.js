@@ -167,8 +167,6 @@ describe('GlobalNav', function() {
   });
 
   describe('Keyboard Events', function() {
-    // These tests pass but I don’t believe they are perfectly testing that the required element has focus
-
     var triggerKeyUp = function(element, keyCode) {
       var e = $.Event('keyup');
       e.which = keyCode;
@@ -186,7 +184,7 @@ describe('GlobalNav', function() {
 
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.true;
       expect(index.attr('aria-expanded')).to.eq('true');
-      expect($(index.siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a')[0]).filter(':focus')).to.exist;
+      expect($(index).siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a').get(0) === document.activeElement).to.be.true;
     });
 
     it('when at top level the spacebar key opens dropdown', function() {
@@ -203,7 +201,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 37);
 
-      expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-1').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
     });
 
     it('when at top level the right arrow key moves focus to the next element or wraps if on the last element', function() {
@@ -211,7 +209,7 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(index, 39);
 
-      expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-2').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
     });
 
     it('when at top level the down arrow key opens the dropdown', function() {
@@ -228,7 +226,7 @@ describe('GlobalNav', function() {
       triggerKeyUp(index, 27);
 
       expect(index.parents('[data-dough-nav-clump]').hasClass('is-active')).to.be.false;
-      expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-1').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
     });
 
     it('when at secondary level the up arrow key moves focus to previous element or wraps to the last element if on the first', function() {
@@ -236,11 +234,11 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.last(), 38);
 
-      expect(links.first().filter(':focus')).to.exist;
+      expect(links.get(0) === document.activeElement).to.be.true;
 
       triggerKeyUp(links.first(), 38);
 
-      expect(links.last().filter(':focus')).to.exist;
+      expect(links.get(1) === document.activeElement).to.be.true;
     });
 
     it('when at secondary level the down arrow key moves focus to the next element or wraps to the first element if on the last', function() {
@@ -248,11 +246,11 @@ describe('GlobalNav', function() {
 
       triggerKeyUp(links.first(), 40);
 
-      expect(links.last().filter(':focus')).to.exist;
+      expect(links.get(1) === document.activeElement).to.be.true;
 
-      triggerKeyUp(links.first(), 40);
+      triggerKeyUp(links.last(), 40);
 
-      expect(links.first().filter(':focus')).to.exist;
+      expect(links.get(0) === document.activeElement).to.be.true;
     });
 
     it('when at secondary level the left arrow key closes the dropdown and moves focus to the previous top level element or the last element if already on the first', function() {
@@ -266,7 +264,7 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
-      expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-1').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
 
       // open dropdown before running test
       $('#clump-1').addClass('is-active');
@@ -276,7 +274,7 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 37);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
-      expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-2').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
     });
 
     it('when at secondary level the right arrow key closes the dropdown and moves focus to the next top level element or the first element if already on the last', function() {
@@ -290,7 +288,7 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-1').hasClass('is-active')).to.be.false;
-      expect($('#clump-2').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-2').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
 
       // open dropdown before running test
       $('#clump-2').addClass('is-active');
@@ -300,7 +298,7 @@ describe('GlobalNav', function() {
       triggerKeyUp(links.last(), 39);
 
       expect($('#clump-2').hasClass('is-active')).to.be.false;
-      expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
+      expect($('#clump-1').find('[data-dough-nav-clump-heading]').get(0) === document.activeElement).to.be.true;
     });
   });
 });

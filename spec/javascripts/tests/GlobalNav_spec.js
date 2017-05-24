@@ -45,6 +45,45 @@ describe('GlobalNav', function() {
     });
   });
 
+  describe('Bind Events', function() {
+    beforeEach(function() {
+      this.obj.init();
+    });
+
+    it('removes the uninialised class when component is loaded', function() {
+      expect(this.component.hasClass('uninitialised')).to.be.false;
+    });
+  });
+
+  /*
+  describe.only('Mobile animation', function() {
+    var clock;
+
+    beforeEach(function() {
+      clock = sinon.useFakeTimers();
+      this.obj.init();
+    });
+
+    afterEach(function() {
+      clock.restore();
+    });
+
+    it('toggles the no-transition class when viewport size changes', function() {
+      // can't get this to work at the minute for the same reasons:
+      // unable to reflect the size change via the mediaQueries component
+      this.$html.css('width', 1200);
+      $(window).trigger('resize');
+      clock.tick(200);
+      expect(this.component.hasClass('no-transition')).to.be.true;
+
+      this.$html.css('width', 300);
+      $(window).trigger('resize');
+      clock.tick(200);
+      expect(this.component.hasClass('no-transition')).to.be.false;
+    });
+  });
+  */
+
   describe('Mobile interaction', function() {
     beforeEach(function() {
       this.obj.init();
@@ -145,35 +184,6 @@ describe('GlobalNav', function() {
       expect($('#clump-1').hasClass('is-active')).to.be.false;
     });
   });
-
-  /*
-  describe.only('Mobile animation', function() {
-    var clock;
-
-    beforeEach(function() {
-      clock = sinon.useFakeTimers();
-      this.obj.init();
-    });
-
-    afterEach(function() {
-      clock.restore();
-    });
-
-    it('toggles the no-transition class when viewport size changes', function() {
-      // can't get this to work at the minute for the same reasons:
-      // unable to reflect the size change via the mediaQueries component
-      this.$html.css('width', 1200);
-      $(window).trigger('resize');
-      clock.tick(200);
-      expect(this.component.hasClass('no-transition')).to.be.true;
-
-      this.$html.css('width', 300);
-      $(window).trigger('resize');
-      clock.tick(200);
-      expect(this.component.hasClass('no-transition')).to.be.false;
-    });
-  });
-  */
 
   describe('Keyboard Events', function() {
     var triggerKeyUp = function(element, keyCode) {
@@ -330,16 +340,6 @@ describe('GlobalNav', function() {
 
       // check focus is being tested correctly
       expect($('#clump-1').find('[data-dough-nav-clump-heading]').filter(':focus')).to.exist;
-    });
-  });
-
-  describe('Bind Events', function() {
-    beforeEach(function() {
-      this.obj.init();
-    });
-
-    it('removes the uninialised class when component is loaded', function() {
-      expect(this.component.hasClass('uninitialised')).to.be.false;
     });
   });
 });

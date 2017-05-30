@@ -160,4 +160,16 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :hide_contact_panels?
+
+  def mobile_nav_in_header?
+    true
+  end
+
+  helper_method :mobile_nav_in_header?
+
+  def authentication?
+    true
+  end
+
+  helper_method :authentication?
 end

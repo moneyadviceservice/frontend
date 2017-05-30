@@ -26,11 +26,10 @@ Before / after images of any visual / ui updates.
 **QA / Testing**
 Testing notes / guidelines if necessary.
 
-** Checklist **
+**Checklist**
 
 Make sure that when your PR is good to be reviewed you check the below checks:
 
-+ [ ] https://{$QA_OR_PREVIEW_OR_UAT_TEST_LINK_FOR_THIS_PR} /
 + [ ] Tests passed.
 + [ ] Rubocop is passing for this PR (or any other lint like JShint).
 + [ ] Code Climate passed for this PR.

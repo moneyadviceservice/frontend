@@ -1,0 +1,37 @@
+<!--
+** Please read the guidelines below. **
+   The PR title should:
+
+   * Incorporate the Target Process story ID
+   * Avoid technical and non-MAS acronyms
+   * Some MASisms are fine
+   * Write a complete sentence
+   * Write in the present tense
+   * Keep it as short as is practical but no shorter
+
+   The PR description should include clear explanations of what the PR delivers.
+
+-->
+
+**Target Process ticket**
+
+LINK_TO_TICKET
+
+**Summary**
+Brief description of the ticket.
+
+**Examples (optional)**
+Before / after images of any visual / ui updates.
+
+**QA / Testing**
+Testing notes / guidelines if necessary.
+
+** Checklist **
+
+Make sure that when your PR is good to be reviewed you check the below checks:
+
++ [ ] https://{$QA_OR_PREVIEW_OR_UAT_TEST_LINK_FOR_THIS_PR} /
++ [ ] Tests passed.
++ [ ] Rubocop is passing for this PR (or any other lint like JShint).
++ [ ] Code Climate passed for this PR.
++ [ ] Commit history reviewed (clear commit messages).

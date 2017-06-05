@@ -1,0 +1,12 @@
+{
+    "defaults": {
+        "timeout": 10000
+    },
+    "urls": [
+        {
+            "url": "http://www.moneyadviceservice.org.uk/",
+            "timeout": 50000,
+            "verifyPage": "<title>Free and impartial money advice, set up by government - Money Advice Service</title>"
+        }
+    ]
+}

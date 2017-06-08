@@ -1,0 +1,24 @@
+language: ruby
+sudo: false
+cache:
+  bundler: true
+  directories:
+    - node_modules
+rvm:
+  - 2.2.2
+before_install: gem update bundler
+before_script:
+  - cp config/database.example.yml config/database.yml
+  - cp config/cloud_storage.example.yml config/cloud_storage.yml
+  - psql -c "create database db/test.sqlite3;" -U root
+  - bundle exec rake db:migrate
+  - npm install
+  - npm install -g bower karma-cli http-server pa11y pa11y-reporter-ci
+  - bundle exec bowndler update
+script:
+  - bundle exec rspec
+  - bundle exec cucumber
+  - karma start spec/javascripts/karma.conf.js --single-run=true
+  - bundle exec rubocop -DS
+  - nohup http-server -p 8080 >/dev/null 2>&1 &
+  - pa11y localhost:8080/index.html -r ci -s WCAG2AAA

@@ -24,10 +24,6 @@ Clone the repository:
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
 ```
 
-Make sure you've added the following line to your `/etc/hosts` file
-
-`10.50.6.148	gems.test.mas`
-
 Make sure all dependencies are available to the application:
 
 ```sh
@@ -54,15 +50,10 @@ Setup the database:
 bundle exec rake db:create && bundle exec rake db:schema:load
 ```
 
-Copy the features.yml.sample to the config dir:
-
+Make sure to copy the .env-example file:
 ```sh
-cp config/features.yml.sample config/features.yml
-```
-
-Make sure to copy the .env-example file:				
-```sh		
 cp .env-example .env
+```
 
 then set .env variables (i.e. GOOGLE API KEY) stored in KeepassX to run tests locally
 

@@ -86,8 +86,9 @@ The CMS is setup but the database is empty. A solution is to copy the QA CMS dat
 
 Assuming you have run `bowndler install`, you may have issues with previous `bower` installations.
 
-```
+```sh
 rm -rf vendor/assets/bower_components
+rm bower.json
 bowndler install
 ```
 

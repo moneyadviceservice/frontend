@@ -34,7 +34,7 @@ And(/^I have no saved data for any tools$/) do
 end
 
 Then(/^I see a message prompting me to try a tool$/) do
-  expect(profile_page.saved_tools_message.text).to include(I18n.t('saved_tools.no_data_message'))
+  expect(profile_page.saved_tools_section.text).to include(I18n.t('saved_tools.no_data_message'))
 end
 
 And(/^I have saved data for the "([^"]*)" tool$/) do |tool_name|
@@ -44,5 +44,5 @@ And(/^I have saved data for the "([^"]*)" tool$/) do |tool_name|
 end
 
 Then(/^I see the "([^"]*)" link listed under saved tools$/) do |tool_title|
-  expect(profile_page.saved_tools_list.text).to include(tool_title)
+  expect(profile_page.saved_tools_section.text).to include(tool_title)
 end

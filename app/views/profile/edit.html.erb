@@ -9,32 +9,38 @@
   </div>
   <div class="l-profile__tools">
     <div class="l-profile__your-tools">
-      <h2 class="l-profile__your-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="your-tools" data-dough-collapsable-config='{"forceTo": "show"}'>
-        <% if saved_tools.any? %>
-          <%= t('saved_tools.heading_saved') %>
-        <% else %>
-          <%= t('saved_tools.heading') %>
-        <% end %>
-      </h2>
-
-      <div class="l-profile__your-tools__content is-active" data-dough-collapsable-target="your-tools">
-        <% if saved_tools.any? %>
-          <p class="l-profile__your-tools__content__text"><%= t('saved_tools.message_saved') %></p>
-          <ul class="list l-profile__your-tools__content__list">
-          <% saved_tools.each do |tool| %>
-            <li><%= link_to tool.link_copy, tool.link_url, class: "gtm-your-tool-link" %></li>
-          <% end %>
-          </ul>
-        <% else %>
-          <p class="l-profile__your-tools__content__empty">
-            <%= t('saved_tools.no_data_message') %>
+      <% if saved_tools.any? %>
+        <% saved_tools.each do |_, tool| %>
+          <h2 class="l-profile__your-tools__heading"
+              data-dough-component="Collapsable"
+              data-dough-collapsable-trigger="your-tools"
+              data-dough-collapsable-config='{"forceTo": "show"}'>
+            <%= tool[:heading] %>
+          </h2>
+          <p class="l-profile__your-tools__content__text"><%= tool[:message] %></p>
+          <p class="l-profile__your-tools__content__text">
+            <%= link_to tool[:link_copy], tool[:link_url], class: "gtm-your-tool-link" %>
           </p>
         <% end %>
-      </div>
+      <% else %>
+        <h2 class="l-profile__your-tools__heading"
+            data-dough-component="Collapsable"
+            data-dough-collapsable-trigger="your-tools"
+            data-dough-collapsable-config='{"forceTo": "show"}'>
+          <%= t('saved_tools.heading') %>
+        </h2>
+        <p class="l-profile__your-tools__content__empty">
+          <%= t('saved_tools.no_data_message') %>
+        </p>
+      <% end %>
     </div>
 
     <div class="l-recommended-tools">
-      <h2 class="l-recommended-tools__heading" data-dough-component="Collapsable" data-dough-collapsable-trigger="recommended-tools" data-dough-collapsable-config='{"forceTo": "show"}'><%= t('recommended_tools.title') %>
+      <h2 class="l-recommended-tools__heading"
+          data-dough-component="Collapsable"
+          data-dough-collapsable-trigger="recommended-tools"
+          data-dough-collapsable-config='{"forceTo": "show"}'>
+        <%= t('recommended_tools.title') %>
       </h2>
 
       <div class="l-recommended-tools__content is-active" data-dough-collapsable-target="recommended-tools">

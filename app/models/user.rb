@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  VALID_AGE_RANGES = ['0-15', '16-17', '18-20', '21-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75+']
-  CRM_FIELDS = %w{ email first_name post_code newsletter_subscription  }
+  VALID_AGE_RANGES = ['0-15', '16-17', '18-20', '21-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75+'].freeze
+  CRM_FIELDS = %w[email first_name post_code newsletter_subscription].freeze
 
   def field_order
-    [:first_name, :email, :password, :post_code]
+    %i[first_name email password post_code]
   end
 
   has_one :universal_credit_claimant_data,
@@ -36,9 +36,9 @@ class User < ActiveRecord::Base
   validates :last_name, format: { with: /\A[A-Za-z '-\.]+\z/ },
                         allow_blank: true,
                         length: { maximum: 24 }
-  validates :gender, inclusion: { in: %w(female male) }, allow_nil: true
+  validates :gender, inclusion: { in: %w[female male] }, allow_nil: true
   validates :age_range, inclusion: { in: VALID_AGE_RANGES }, allow_nil: true
-  validates :contact_number, format: { with: /\A0[1237]\d{9}\z/, if: 'contact_number.present?'}, allow_blank: true
+  validates :contact_number, format: { with: /\A0[1237]\d{9}\z/, if: 'contact_number.present?' }, allow_blank: true
 
   before_save :fake_send_confirmation_email
   after_create :create_to_crm
@@ -71,7 +71,7 @@ class User < ActiveRecord::Base
   end
 
   def data_for_universal_credit?
-    self.universal_credit_claimant_data.present?
+    universal_credit_claimant_data.present?
   end
 
   def data_for?(tool_name)
@@ -82,13 +82,13 @@ class User < ActiveRecord::Base
   private
 
   def create_to_crm
-    Delayed::Job.enqueue(Jobs::CreateCustomer.new(self.id),
+    Delayed::Job.enqueue(Jobs::CreateCustomer.new(id),
                          queue: 'frontend_crm')
   end
 
   def update_to_crm
-    if (changed & CRM_FIELDS).size > 0
-      Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(self.id),
+    unless (changed & CRM_FIELDS).empty?
+      Delayed::Job.enqueue(Jobs::UpdateFromCustomer.new(id),
                            queue: 'frontend_crm')
     end
   end

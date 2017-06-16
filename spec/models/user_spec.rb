@@ -17,7 +17,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-
   describe '#fake_send_confirmation_email' do
     it 'sends a fake confirmation email when user is saved' do
       subject.save!
@@ -86,7 +85,7 @@ RSpec.describe User, type: :model do
 
     it { is_expected.to allow_value(nil).for(:date_of_birth) }
     it { is_expected.not_to allow_value(Date.today).for(:date_of_birth) }
-    it { is_expected.to allow_value(1.days.ago).for(:date_of_birth) }
+    it { is_expected.to allow_value(1.day.ago).for(:date_of_birth) }
     it { is_expected.to allow_value('31/12/1970').for(:date_of_birth) }
     it { is_expected.not_to allow_value('31/02/1970').for(:date_of_birth) }
 

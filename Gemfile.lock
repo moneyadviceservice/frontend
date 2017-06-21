@@ -450,6 +450,9 @@ GEM
     orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    passenger (5.1.5)
+      rack
+      rake (>= 0.8.1)
     payday_loans_intervention (1.7.0.265)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -775,6 +778,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
+  passenger (>= 5.0.25)
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.4.1)
   poltergeist

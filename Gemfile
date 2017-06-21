@@ -126,6 +126,8 @@ group :test, :development do
   gem 'rack-livereload'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+
 end
 
 group :doc do

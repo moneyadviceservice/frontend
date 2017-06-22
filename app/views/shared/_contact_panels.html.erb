@@ -75,7 +75,7 @@
 <% end %>
 
 <% if show_floating_chat? %>
-<a href="#" aria-hidden="true" class="chat-box__container chat-box__container--hidden t__floating-web-chat">
+<a href="#" aria-hidden="true" id="js-chat-popup" class="chat-box__container chat-box__container--hidden t__floating-web-chat">
   <div class="chat-box__heading">Web Chat</div>
     <span class="icon icon--web-chat"></span>
 </a>
@@ -96,7 +96,7 @@
             chatContent = document.getElementById('js-chat-content');
 
         <% if show_floating_chat? %>
-          var chatPopup = document.getElementsByClassName('chat-box__container')[0];
+          var chatPopup = document.getElementById('js-chat-popup');
         <% end %>
 
 

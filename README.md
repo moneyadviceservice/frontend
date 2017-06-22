@@ -8,8 +8,7 @@ The Money Advice Service's responsive website.
 ## Prerequisites
 
 * [Git]
-* [Ruby 2.1.2][Ruby]
-* [Rubygems 2.2.2][Rubygems]
+* [Ruby][Ruby] - see version specified in [.ruby-version](.ruby-version)
 * [Node.js][Node]
 * [Bundler]
 * [Bower]
@@ -23,10 +22,6 @@ Clone the repository:
 ```sh
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
 ```
-
-Make sure you've added the following line to your `/etc/hosts` file
-
-`10.50.6.148	gems.test.mas`
 
 Make sure all dependencies are available to the application:
 
@@ -54,15 +49,10 @@ Setup the database:
 bundle exec rake db:create && bundle exec rake db:schema:load
 ```
 
-Copy the features.yml.sample to the config dir:
-
+Make sure to copy the .env-example file:
 ```sh
-cp config/features.yml.sample config/features.yml
-```
-
-Make sure to copy the .env-example file:				
-```sh		
 cp .env-example .env
+```
 
 then set .env variables (i.e. GOOGLE API KEY) stored in KeepassX to run tests locally
 
@@ -76,9 +66,43 @@ $ foreman s
 
 ### Change CMS URL Path
 
-In development, frontend will use the local CMS for convenience. You can change the MAS_CMS_URL on .env file. Use http://cms.moneyadviceservice.org.uk to point to LIVE content, https://cms.qa.dev.mas.local for testing Or http://localhost:PORT to point to a local running CMS.
+In development, frontend will use the local CMS for convenience. See [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md) for instructions on setting up a local CMS instance.
+
+You can change the MAS_CMS_URL on .env file. Use https://cms.qa.dev.mas.local for testing, or http://localhost:PORT to point to a local running CMS.
 
 Don't forget to restart the server after the modification.
+
+### Development setup gotchas
+
+#### Contento 404 error
+
+```
+Unable to fetch Footer JSON from Contento error: [#<Core::Connection::Http::ResourceNotFound: the server responded with status 404>] url_prefix: [#<URI::HTTP http://localhost:3000/>]
+```
+
+The CMS is setup but the database is empty. A solution is to copy the QA CMS database into the CMS, as detailed in the [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md).
+
+#### Problems loading Dough or Yeast
+
+Assuming you have run `bowndler install`, you may have issues with previous `bower` installations.
+
+```sh
+rm -rf vendor/assets/bower_components
+rm bower.json
+bowndler install
+```
+
+#### Bundle install issues
+
+```
+Downloading codeclimate-test-reporter-0.6.0 revealed dependencies not in the API or the lockfile (simplecov (< 1.0.0,
+>= 0.7.1)).
+Either installing with `--full-index` or running `bundle update codeclimate-test-reporter` should fix the problem.
+```
+
+(Bundling updating a single gem leads to a loop of having to update the previous gem.)
+
+Ensuring (for now) that the `bundler` gem is `1.14.6` works around this issue for now.
 
 ## Contributing
 

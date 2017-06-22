@@ -14,6 +14,7 @@ require.config({
     ujs: 'vendor/assets/bower_components/jquery-ujs/src/rails',
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',
     typeahead: 'vendor/assets/javascripts/typeahead.jquery',
+    jqueryThrottleDebounce: 'vendor/assets/bower_components/jqueryThrottleDebounce/jquery.ba-throttle-debounce',
 
     // Internal modules
     DoughBaseComponent: 'vendor/assets/bower_components/dough/assets/js/components/DoughBaseComponent',
@@ -35,11 +36,13 @@ require.config({
     EmbedCodeGenerator: 'app/assets/javascripts/components/EmbedCodeGenerator',
     OnPageFeedback: 'app/assets/javascripts/components/OnPageFeedback',
     ViewAll: 'app/assets/javascripts/components/ViewAll',
+    GlobalNav: 'app/assets/javascripts/components/GlobalNav',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 
     utilities: 'vendor/assets/bower_components/dough/assets/js/lib/utilities',
     componentLoader: 'vendor/assets/bower_components/dough/assets/js/lib/componentLoader',
+    mediaQueries: 'vendor/assets/bower_components/dough/assets/js/lib/mediaQueries',
     RangeInput: 'vendor/assets/bower_components/dough/assets/js/components/RangeInput',
     TabSelector: 'vendor/assets/bower_components/dough/assets/js/components/TabSelector',
 

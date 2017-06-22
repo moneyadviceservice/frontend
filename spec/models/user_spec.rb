@@ -198,4 +198,26 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe 'callbacks' do
+    describe 'update_to_crm' do
+      before :each do
+        subject.save!
+      end
+
+      context 'when crm fields are modified' do
+        it 'notifies crm' do
+          subject.email = 'foo@example.com'
+          expect { subject.save! }.to change { Delayed::Job.count }.by(1)
+        end
+      end
+
+      context 'when non crm fields are modified' do
+        it 'does not notify crm' do
+          subject.sign_in_count = 125
+          expect { subject.save! }.to_not change { Delayed::Job.count }
+        end
+      end
+    end
+  end
 end

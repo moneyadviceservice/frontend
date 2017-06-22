@@ -20,7 +20,9 @@
     "mocha": "~1.15.1",
     "phantomjs": ">= 1.9.7-1",
     "sinon": "^1.9.0",
-    "pa11y": "^4.11.0"
+    "pa11y": "^4.11.0",
+    "pa11y-reporter-rainbows": "^2.0.2",
+    "pa11y-reporter-ci": "^0.0.1"
   },
     "scripts": {
     "test": "./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js"

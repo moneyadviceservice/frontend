@@ -1,0 +1,20 @@
+// Set the default Foo header to "bar"
+var test = pa11y({
+    page: {
+        headers: {
+            Foo: 'bar'
+        }
+    }
+});
+
+// Run a test with the Foo header set to "bar"
+test.run('http://localhost:3000/', function(error, results) { /* ... */ });
+
+// Run a test with the Foo header overridden
+test.run('http://localhost:3000/', {
+    page: {
+        headers: {
+            Foo: 'hello'
+        }
+    }
+}, function(error, results) { /* ... */ });

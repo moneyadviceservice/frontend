@@ -1,3 +1,9 @@
+pa11y({
+    allowedStandards: ['WCAG2AA']
+});
+
+var pa11y = require('pa11y');
+
 // Set the default Foo header to "bar"
 var test = pa11y({
     page: {

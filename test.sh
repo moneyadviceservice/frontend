@@ -23,5 +23,4 @@ bowndler update --production --config.interactive=false
 RAILS_ENV=development rake karma:install karma:run_once
 #bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
 #bundle exec cucumber
-npm install pa11y pa11y-reporter-ci pa11y-reporter-rainbows
-bundle exec passenger start -d && pa11y -i "warning;notice" localhost:3000/ -r ci -s WCAG2AA && bundle exec passenger stop
+bundle exec passenger start -d && pa11y -i "warning;notice" localhost:3000/ -r ci -s WCAG2AA; bundle exec passenger stop

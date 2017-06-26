@@ -1,0 +1,26 @@
+<div class="l-profile__your-tools">
+  <% if saved_tools.any? %>
+    <% saved_tools.each do |_, tool| %>
+      <h2 class="l-profile__your-tools__heading"
+          data-dough-component="Collapsable"
+          data-dough-collapsable-trigger="your-tools"
+          data-dough-collapsable-config='{"forceTo": "show"}'>
+        <%= tool[:heading] %>
+      </h2>
+      <p class="l-profile__your-tools__content__text"><%= tool[:message] %></p>
+      <p class="l-profile__your-tools__content__text">
+        <%= link_to tool[:link_copy], tool[:link_url], class: "gtm-your-tool-link" %>
+      </p>
+    <% end %>
+  <% else %>
+    <h2 class="l-profile__your-tools__heading"
+        data-dough-component="Collapsable"
+        data-dough-collapsable-trigger="your-tools"
+        data-dough-collapsable-config='{"forceTo": "show"}'>
+      <%= t('saved_tools.heading') %>
+    </h2>
+    <p class="l-profile__your-tools__content__empty">
+      <%= t('saved_tools.no_data_message') %>
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+<div class="l-profile__your-goal">
+  <h2><%= t('profile.edit.goal.heading') %></h2>
+  <p><%= t('profile.edit.goal.introduction') %></p>
+  <%= form_for current_user, html: {id: 'goal_form', class: 'form l-profile__your-goal__form'}, url: profile_path, method: :put do |f| %>
+    <fieldset class="form__group">
+      <legend class="l-profile__your-goal__form-legend"><%= t('profile.edit.goal.fieldset_legend') %></legend>
+      <div class="form__row">
+        <label class="form__label-heading" for="goal_statement" ><%= t('profile.edit.goal.statement_field_label') %></label>
+        <input id="goal_statement" type="text" name="goal_statement" value="<%= current_user.goal_statement %>">
+      </div>
+      <div class="form__row">
+        <label class="form__label-heading" for="goal_deadline"><%= t('profile.edit.goal.deadline_field_label') %></label>
+        <input id="goal_deadline" type="text" name="goal_deadline" value="<%= current_user.goal_deadline%>">
+      </div>
+    </fieldset>
+    <div class="form__group form__group--last">
+      <input class="button button--primary" type="submit" value="<%= t('profile.edit.goal.save_button_text') %>">
+    </div>
+  <% end %>
+</div>

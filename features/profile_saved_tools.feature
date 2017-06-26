@@ -14,3 +14,9 @@ Feature:
     And I have saved data for the "budget_planner" tool
     When I view my profile page
     Then I see the "Review and edit your saved budget now" link listed under saved tools
+
+  Scenario: Saved data for universal credit
+    Given I am signed in with warden
+    And I have saved data for the "universal_credit" tool
+    When I view my profile page
+    Then I see the "View your personal advice plan or update your circumstances" link listed under saved tools

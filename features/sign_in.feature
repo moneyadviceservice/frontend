@@ -32,3 +32,11 @@ Feature: Sign in
     And   I should be at the page I was on
     And   I should receive a "Signed out successfully." notification
 
+  Scenario: Sign out after using Money Manager
+    Given I am signed in
+    And   I have answered questions on Money Manager
+    And   I am at the To Read page
+    When  I sign out
+    Then  I should be signed out
+    And   I should be at the Money Manager landing page
+    And   I should not see answered questions on Money Manager

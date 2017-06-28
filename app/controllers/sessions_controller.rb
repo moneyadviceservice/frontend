@@ -15,6 +15,11 @@ class SessionsController < Devise::SessionsController
     respond_with(resource, serialize_options(resource))
   end
 
+  def destroy
+    session.delete('claimant_data_id')
+    super
+  end
+
   private
 
   def xhr_not_implemented

@@ -4,7 +4,7 @@ module World
       UI::Page.new
     end
 
-    pages = %w(
+    pages = %w[
       account
       action_plan
       article
@@ -18,6 +18,7 @@ module World
       debt_management_companies
       forgot_password
       home
+      money_manager
       news
       news_article
       partners
@@ -32,7 +33,7 @@ module World
       static
       technical_feedback
       tools
-    )
+    ]
 
     pages.each do |page|
       define_method("#{page}_page") do

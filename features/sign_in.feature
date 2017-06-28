@@ -31,4 +31,3 @@ Feature: Sign in
     Then  I should be signed out
     And   I should be at the page I was on
     And   I should receive a "Signed out successfully." notification
-

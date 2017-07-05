@@ -2,9 +2,15 @@ Given(/^I am on the Money Manager tool$/) do
   money_manager_page.load
 end
 
-Then(/^I complete the series of questions$/) do
+When(/^I complete the series of questions$/) do
   money_manager_page.received_first_payment_true.click
   money_manager_page.single_or_in_couple_single.click
+  money_manager_page.submit.click
+end
+
+When(/^I answer the questions differently$/) do
+  money_manager_page.received_first_payment_false.click
+  money_manager_page.single_or_in_couple_couple.click
   money_manager_page.submit.click
 end
 
@@ -19,4 +25,10 @@ end
 
 Then(/^I should be at the Money Manager landing page$/) do
   expect(page.current_path).to eql(money_manager_page.url)
+end
+
+Then(/^I have the latest answers$/) do
+  money_manager_circumstances_changed_page.load
+  expect(money_manager_circumstances_changed_page.received_first_payment_false).to be_checked
+  expect(money_manager_circumstances_changed_page.single_or_in_couple_couple).to be_checked
 end

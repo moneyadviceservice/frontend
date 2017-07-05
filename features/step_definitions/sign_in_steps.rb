@@ -7,7 +7,7 @@ Then(/^I am told that the functionality is not implemented$/) do
 end
 
 When(/^I (?:sign|am signed) in$/) do
-  @user = create(:user)
+  @user = @user || create(:user)
 
   sign_in_page.load(locale: 'en')
   sign_in_page.email.set @user.email

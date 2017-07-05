@@ -19,6 +19,7 @@ module World
       forgot_password
       home
       money_manager
+      money_manager_circumstances_changed
       news
       news_article
       partners

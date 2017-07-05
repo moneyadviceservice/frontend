@@ -1,8 +1,8 @@
 require_relative '../page'
 
 module UI::Pages
-  class MoneyManager < UI::Page
-    set_url '/en/tools/money-manager/'
+  class MoneyManagerCircumstancesChanged < UI::Page
+    set_url '/en/tools/money-manager/circumstances-changed'
 
     element :received_first_payment_true,
             '#questionnaire_received_first_payment_true'
@@ -12,7 +12,5 @@ module UI::Pages
             '#questionnaire_single_or_in_couple_single'
     element :single_or_in_couple_couple,
             '#questionnaire_single_or_in_couple_couple'
-    element :submit,
-            "form[action='/en/tools/money-manager'] button[type='submit']"
   end
 end

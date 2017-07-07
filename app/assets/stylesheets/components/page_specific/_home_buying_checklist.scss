@@ -161,7 +161,7 @@ input.home-buying-checklist__form-input--green {
 
   @include respond-to($mq-s) {
     @include column(2);
-    dislay: block;
+    display: block;
   }
 }
 
@@ -170,7 +170,7 @@ input.home-buying-checklist__form-input--green {
 
   @include respond-to($mq-s) {
     @include column(6);
-    dislay: block;
+    display: block;
   }
 }
 
@@ -180,7 +180,7 @@ input.home-buying-checklist__form-input--green {
 
   @include respond-to($mq-s) {
     @include column(4);
-    dislay: block;
+    display: block;
   }
 }
 
@@ -212,7 +212,7 @@ input.home-buying-checklist__form-input--green {
 
   @include respond-to($mq-s) {
     @include column(8);
-    dislay: block;
+    display: block;
   }
 }
 
@@ -222,6 +222,6 @@ input.home-buying-checklist__form-input--green {
 
   @include respond-to($mq-s) {
     @include column(4);
-    dislay: block;
+    display: block;
   }  
 }

@@ -162,6 +162,9 @@ Rails.application.routes.draw do
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
 
+    # Home Buying Checklist
+    get '/home-buying-checklist', to: 'home_buying_checklist#show'
+
     # Employer best practice
     get '/employer-best-practices', to: 'employer_best_practices#show'
     get '/employer-best-practices/faq', to: 'employer_best_practices#faq'

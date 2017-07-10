@@ -3,6 +3,8 @@ class AmpArticlesController < ActionController::Base
 
   include NotFound
 
+  newrelic_ignore_enduser
+
   decorates_assigned :article, with: AmpArticleDecorator
   before_action :retrieve_article
 

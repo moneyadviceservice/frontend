@@ -26,6 +26,7 @@
     "pa11y-reporter-ci": "^0.0.1"
   },
     "scripts": {
-    "test": "./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js"
+    "test": "./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js",
+    "test-pa11y": "./node_modules/.bin/pa11y-ci"
   }
 }

@@ -23,4 +23,4 @@ bowndler update --production --config.interactive=false
 RAILS_ENV=development rake karma:install karma:run_once
 #bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
 #bundle exec cucumber
-bundle exec passenger start -d && pa11y -i "warning;notice" localhost:3000/ -r ci -s WCAG2AA; bundle exec passenger stop
+pa11y-ci --sitemap http://www.moneyadviceservice.org.uk/blog/sitemap.xml --sitemap-find moneyadviceservice.org.uk/blog --sitemap-replace localhost

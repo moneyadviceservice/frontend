@@ -2,7 +2,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
   var HomeBuyingChecklist,
-    defaultConfig = {};
+      defaultConfig = {};
+  var localStorageNamespace = "buying_checklist_";
 
   function HomeBuyingChecklist($el, config) {
     HomeBuyingChecklist.baseConstructor.call(this, $el, config, defaultConfig);
@@ -40,21 +41,28 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   HomeBuyingChecklist.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
+    this._setInitialValues();
+    this._addValues();
     this._setUpEvents();
+  };
+
+  HomeBuyingChecklist.prototype._setInitialValues = function() {
+    var inputVal = this.$inputValue;
+    for(var i=0;i<inputVal.length;i++){
+      inputVal[i].value = localStorage.getItem(localStorageNamespace+i);
+    }
   };
 
   HomeBuyingChecklist.prototype._setUpEvents = function() {
     var _this = this;
-
     this.$inputValue.keyup(function() {
       _this._addValues();
-    })
+    });
 
     $(function() {
       _this._showHideMessage();
     });
-
-  } 
+  };
 
   HomeBuyingChecklist.prototype._showHideMessage = function() {
     var _this = this;
@@ -138,8 +146,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var total=0;
 
     for(var i=0;i<inputVal.length;i++){
-      if(parseInt(inputVal[i].value))
+      if(parseInt(inputVal[i].value)){
+        localStorage.setItem(localStorageNamespace+i, inputVal[i].value)
         total += parseInt(inputVal[i].value);
+      }
     }
     resultVal.val(total);
   }

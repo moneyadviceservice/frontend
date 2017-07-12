@@ -223,5 +223,32 @@ input.home-buying-checklist__form-input--green {
   @include respond-to($mq-s) {
     @include column(4);
     display: block;
-  }  
+  }
+}
+
+@media print{
+  input.home-buying-checklist__form-input,
+  input.home-buying-checklist__form-input--green {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    -moz-appearance:textfield;
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .home-buying-checklist__collapsable {
+    display: none;
+  }
+
+  .home-buying-checklist__form-left,
+  .home-buying-checklist__form-right,
+  .home-buying-checklist__form-results-left,
+  .home-buying-checklist__form-results-right {
+    @include column(6);
+  }
 }

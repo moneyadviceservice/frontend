@@ -55,9 +55,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   HomeBuyingChecklist.prototype._setUpEvents = function() {
     var _this = this;
-    this.$inputValue.keyup(function() {
+
+    var addValuesCallback = function() {
       _this._addValues();
-    });
+    };
+
+    this.$inputValue.keyup(addValuesCallback);
+    this.$inputValue.change(addValuesCallback);
 
     $(function() {
       _this._showHideMessage();

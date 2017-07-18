@@ -15,7 +15,8 @@ RSpec.describe SessionsHelper, type: :helper do
 
   describe '#authentication_registration_title' do
     it 'returns the default translation ' do
-      expect(helper.authentication_registration_title).to eql('Get more from your money in 30 seconds')
+      expect(helper.authentication_registration_title)
+        .to eql(I18n.t('authentication.registration.title'))
     end
 
     context 'when overwritten by session' do

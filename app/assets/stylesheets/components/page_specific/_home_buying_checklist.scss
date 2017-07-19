@@ -60,28 +60,6 @@ input.home-buying-checklist__form-input--green {
   }
 }
 
-.home-buying-checklist__collapsable {
-  @include column(12);
-}
-
-.home-buying-checklist__collapsable-trigger {
-  display: inline-block;
-  line-height: 1em;
-  font-style: italic;
-  text-align: left;
-  display: inline-block;
-  position: relative;
-  margin: 0;
-  font-size: 1rem;
-  font-weight:500;
-}
-
-.home-buying-checklist__collapsable-target {
-  display: inline-block;
-  background: $color-green-pale;
-  padding: $baseline-unit * 3;
-}
-
 .home-buying-checklist__form {
   @include column(12);
   @extend %clearfix;
@@ -93,6 +71,7 @@ input.home-buying-checklist__form-input--green {
 .home-buying-checklist__form-description {
   @include column(12);
   @extend %clearfix;
+  position: relative;
 }
 
 .home-buying-checklist__callout-active {

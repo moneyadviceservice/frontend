@@ -392,12 +392,13 @@ cy:
     registration:
       meta:
         canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_up
-      title: Ceisiwch fwy am eich arian mewn 30 eiliad
-      intro_html: "Eisoes wedi cofrestru? Mae amser, ac arian, yn brin, felly <a href=\"%{url}\">cofrestrwch yn awr</a>."
-      subtitle: Yr hyn y byddwch yn ei dderbyn
+      title: Cofrestrwch am gyfrif am ddim nawr
+      intro_html: "Eisoes wedi cofrestru? <a href=\"%{url}\">Mewngofnodwch nawr</a>."
+      subtitle: Yr hyn a gewch
       bullets:
-        - "Cadwch eich Cynllunydd Cyllideb a chadwch eich crynodeb o’ch gwariant wrth law"
-        - "Cymorth gyda’ch nodau ariannol, fel prynu tŷ neu gar"
+        - "Cadwch eich Cynllunydd Cyllideb neu Reolwr arian a chadwch eich crynodeb o’ch gwariant wrth law"
+        - "Help gyda’ch nodau ariannol"
+        - "Mynediad hwylus at amryw o offer a chyfrifianellau"
       terms_html: "Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href=\"%{url}\">Hamodau a Thelerau</a>."
       label: Arwyddwch fi
       field_help_texts:
@@ -413,7 +414,7 @@ cy:
       label: Mewngofnodi
       links:
         register_title: "Does gennych chi ddim cyfrif?"
-        register_html: "Peidiwch â phoeni; gallwch barhau i gael <a href=\"%{url}\">mwy am eich arian serch hynny</a>."
+        register_html: "Peidiwch â phoeni, gallwch <a href=\"%{url}\">gofrestru yma</a> o hyd."
       field_help_texts:
         email: "Rhowch eich e-bost a ddefnyddiwyd wrth gofrestru"
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru

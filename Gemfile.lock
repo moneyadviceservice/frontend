@@ -278,8 +278,8 @@ GEM
       railties (>= 4.0, < 5.1)
     dough-ruby (5.25.1.293)
       activesupport
-      rails (>= 3.2)
-      sass-rails (~> 4.0.0)
+      rails (>= 3.2, < 5)
+      sass-rails
     dragonfly (1.1.1)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -751,7 +751,7 @@ DEPENDENCIES
   devise (~> 4.2.0)
   devise-encryptable
   dotenv-rails
-  dough-ruby (~> 5.25.1)
+  dough-ruby (~> 5.25)
   draper (< 3)
   ejs
   email_spec (< 2)

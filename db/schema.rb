@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613124743) do
+ActiveRecord::Schema.define(version: 20170719110635) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -619,32 +619,38 @@ ActiveRecord::Schema.define(version: 20170613124743) do
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
   create_table "universal_credit_budgets", force: :cascade do |t|
-    t.integer  "universal_credit_payment_income", limit: 4, default: 0
-    t.integer  "rent",                            limit: 4, default: 0
-    t.integer  "rent_duration",                   limit: 4
-    t.integer  "food_and_drink",                  limit: 4, default: 0
-    t.integer  "food_and_drink_duration",         limit: 4
-    t.integer  "loans_credit_or_store",           limit: 4, default: 0
-    t.integer  "loans_credit_or_store_duration",  limit: 4
-    t.integer  "household_utility",               limit: 4, default: 0
-    t.integer  "household_utility_duration",      limit: 4
-    t.integer  "other_income",                    limit: 4, default: 0
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
-    t.integer  "other_income_2",                  limit: 4, default: 0
-    t.integer  "other_income_3",                  limit: 4, default: 0
-    t.integer  "other_income_4",                  limit: 4, default: 0
-    t.integer  "other_income_5",                  limit: 4, default: 0
-    t.integer  "other_outgoing",                  limit: 4, default: 0
-    t.integer  "other_outgoing_duration",         limit: 4
-    t.integer  "other_outgoing_2",                limit: 4, default: 0
-    t.integer  "other_outgoing_2_duration",       limit: 4
-    t.integer  "other_outgoing_3",                limit: 4, default: 0
-    t.integer  "other_outgoing_3_duration",       limit: 4
-    t.integer  "other_outgoing_4",                limit: 4, default: 0
-    t.integer  "other_outgoing_4_duration",       limit: 4
-    t.integer  "other_outgoing_5",                limit: 4, default: 0
-    t.integer  "other_outgoing_5_duration",       limit: 4
+    t.integer  "universal_credit_payment_income",          limit: 4, default: 0
+    t.integer  "rent",                                     limit: 4, default: 0
+    t.integer  "rent_duration",                            limit: 4
+    t.integer  "food_and_drink",                           limit: 4, default: 0
+    t.integer  "food_and_drink_duration",                  limit: 4
+    t.integer  "loans_credit_or_store",                    limit: 4, default: 0
+    t.integer  "loans_credit_or_store_duration",           limit: 4
+    t.integer  "household_utility",                        limit: 4, default: 0
+    t.integer  "household_utility_duration",               limit: 4
+    t.integer  "other_income",                             limit: 4, default: 0
+    t.datetime "created_at",                                                      null: false
+    t.datetime "updated_at",                                                      null: false
+    t.integer  "other_income_2",                           limit: 4, default: 0
+    t.integer  "other_income_3",                           limit: 4, default: 0
+    t.integer  "other_income_4",                           limit: 4, default: 0
+    t.integer  "other_income_5",                           limit: 4, default: 0
+    t.integer  "other_outgoing",                           limit: 4, default: 0
+    t.integer  "other_outgoing_duration",                  limit: 4
+    t.integer  "other_outgoing_2",                         limit: 4, default: 0
+    t.integer  "other_outgoing_2_duration",                limit: 4
+    t.integer  "other_outgoing_3",                         limit: 4, default: 0
+    t.integer  "other_outgoing_3_duration",                limit: 4
+    t.integer  "other_outgoing_4",                         limit: 4, default: 0
+    t.integer  "other_outgoing_4_duration",                limit: 4
+    t.integer  "other_outgoing_5",                         limit: 4, default: 0
+    t.integer  "other_outgoing_5_duration",                limit: 4
+    t.integer  "universal_credit_payment_income_duration", limit: 4, default: 30
+    t.integer  "other_income_duration",                    limit: 4, default: 30
+    t.integer  "other_income_2_duration",                  limit: 4, default: 30
+    t.integer  "other_income_3_duration",                  limit: 4, default: 30
+    t.integer  "other_income_4_duration",                  limit: 4, default: 30
+    t.integer  "other_income_5_duration",                  limit: 4, default: 30
   end
 
   create_table "universal_credit_claimant_data", force: :cascade do |t|

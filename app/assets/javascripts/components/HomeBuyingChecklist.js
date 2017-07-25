@@ -47,7 +47,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       localStorage.setItem(ns+i, value)
     });
 
-    this.$result.val(total);
+    this.$result.text(total);
   };
 
   HomeBuyingChecklist.prototype._setUpEvents = function() {

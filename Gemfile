@@ -126,6 +126,8 @@ group :test, :development do
   gem 'rack-livereload'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'rails-erd'
+  gem 'railroady'
 end
 
 group :doc do

@@ -62,10 +62,10 @@ input.home-buying-checklist__form-input {
 }
 
 .home-buying-checklist__callout-active {
-    display: block;
+  display: block;
 }
 .home-buying-checklist__callout-inactive {
-    display: none;
+  display: none;
 }
 
 .home-buying-checklist__form-header {
@@ -77,8 +77,8 @@ input.home-buying-checklist__form-input {
 }
 
 .home-buying-checklist__form-row {
-	@extend %clearfix;
-	border-bottom: 1px solid $color-bluegrey-light;
+  @extend %clearfix;
+  border-bottom: 1px solid $color-bluegrey-light;
   background-color: white;
 }
 
@@ -90,7 +90,7 @@ input.home-buying-checklist__form-input {
 .home-buying-checklist__form-right,
 .home-buying-checklist__form-results-left,
 .home-buying-checklist__form-results-right {
-	padding: $baseline-unit * 3;
+  padding: $baseline-unit * 3;
 }
 
 .home-buying-checklist__form-header-left {

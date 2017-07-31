@@ -433,7 +433,7 @@ function stopInvite() {
 
 function startChat(event) {
   if (event.clientX < locX + imgW - closeX || event.clientY > locY + closeY) {
-    this.chatWindow = window.open("https://webchat.moneyadviceservice.org.uk/chat/chatstart.htm?domain=" + sWODomain, "Chat", "width=484,height=361");
+    this.chatWindow = window.open("https://webchat.moneyadviceservice.org.uk/newchat/chat.aspx?domain=" + sWODomain, "Chat", "width=484,height=361");
     this.chatWindow.focus();
     this.chatWindow.opener = window
   }

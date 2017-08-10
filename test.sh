@@ -21,5 +21,5 @@ rm -rf vendor/assets/bower_components
 bowndler update --production --config.interactive=false
 
 RAILS_ENV=development rake karma:install karma:run_once
-bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
+bundle exec rspec spec --profile --format progress
 bundle exec cucumber

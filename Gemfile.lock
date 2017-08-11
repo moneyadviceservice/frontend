@@ -321,7 +321,7 @@ GEM
       activerecord (>= 4.0.0)
     fssm (0.2.10)
     geokit (1.11.0)
-    geokit-rails (2.3.0)
+    geokit-rails (2.2.0)
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (4.1.1)
@@ -759,6 +759,7 @@ DEPENDENCIES
   faraday_middleware
   feedback (~> 0.4.0)
   foreman
+  geokit-rails (= 2.2.0)
   html_validation
   jshint_ruby
   kss

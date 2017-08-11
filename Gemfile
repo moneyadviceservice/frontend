@@ -10,6 +10,9 @@ source 'http://gems.dev.mas.local'
 
 gem 'rails', '4.2.7.1'
 
+### TEMPORARY TEST
+gem 'geokit-rails', '2.2.0'
+
 gem 'activerecord-session_store'
 gem 'aes'
 gem 'bugsnag'

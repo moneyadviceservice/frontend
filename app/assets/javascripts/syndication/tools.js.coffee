@@ -285,6 +285,13 @@
         path: "cy/tools/canfyddwr-cyngor-ar-ddyledion"
       title: "Debt advice locator"
 
+    debt_advice_locator_f2f:
+      en:
+        path: "en/tools/debt-advice-locator/f2f"
+      cy:
+        path: "cy/tools/canfyddwr-cyngor-ar-ddyledion/f2f"
+      title: "Debt advice locator - face to face"
+
     car_cost_tool:
       en:
         path: "en/tools/car-costs-calculator"

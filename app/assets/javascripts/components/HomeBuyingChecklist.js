@@ -42,9 +42,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var total = 0;
 
     this.$inputs.each(function( i, input ) {
+
       var value = parseInt(input.value) || 0;
       total += value;
-      localStorage.setItem(ns+i, value)
+      localStorage.setItem(ns+i, value);
+      $(input).siblings('.icon--tick').toggleClass('icon', value > 0);
     });
 
     this.$result.text(total);

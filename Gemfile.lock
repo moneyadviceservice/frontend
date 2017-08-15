@@ -682,11 +682,12 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (2.10.1)
+    universal_credit (2.10.5)
       autoprefixer-rails
       devise
       dough-ruby
       mas-cms-client (~> 1.1)
+      meta-tags
       mysql2 (= 0.4.5)
       preamble
       rails (>= 4, < 5)
@@ -810,7 +811,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 2.10.1)
+  universal_credit (= 2.10.5)
   validate_url (= 1.0.0)
   vcr
   webmock

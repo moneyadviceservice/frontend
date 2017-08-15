@@ -73,7 +73,8 @@ input.home-buying-checklist__form-input {
   font-weight: 500;
   font-size: 1.125rem;
   border-bottom: 1px solid $color-bluegrey-light;
-  background: $color-green-pale;
+  color:white;
+  background: $color-green-primary;
 }
 
 .home-buying-checklist__form-row {
@@ -152,16 +153,12 @@ input.home-buying-checklist__form-input {
   font-weight: 500;
 }
 
-.home-buying-checklist__form-description--link {
-  @include column(12);
-  display: inline;
-  margin: 1rem 0 1rem 0;
-}
-
-.home-buying-checklist__form-row--gray {
+.home-buying-checklist__form-row--footer {
   @include clearfix;
   font-weight: 500;
   font-size: 1.125rem;
+  background: $color-green-primary;
+  color: white;
 }
 
 .home-buying-checklist__form-results-left  {
@@ -169,8 +166,8 @@ input.home-buying-checklist__form-input {
   text-align: left;
   font-size: 1.2rem;
   font-weight: 500;
-  padding-top: 1.5em;
   display: inline;
+  text-align: right;
 
   @include respond-to($mq-s) {
     @include column(8);
@@ -186,6 +183,16 @@ input.home-buying-checklist__form-input {
     @include column(4);
     display: block;
   }
+}
+.home-buying-checklist__buttons {
+  padding: 1.25rem;
+}
+.home-buying-checklist__button-email{
+  margin-right: 1.25rem;
+}
+.home-buying-checklist__button-inline-group {
+  position: relative;
+  float: left;
 }
 
 @media print{

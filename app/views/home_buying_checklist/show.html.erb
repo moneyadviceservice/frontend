@@ -2,12 +2,12 @@
 
   <div class="home-buying-checklist-top">
     <div class="l-1col">
-      <h1>Your home-buying costs checklist</h1>
+      <h1><%= t('home_buying_checklist.title') %></h1>
     </div>
     <div class="home-buying-checklist__top-content">
       <div class="home-buying-checklist__top-content-text">
-        <p>Buying a new home isn’t just about saving for a deposit and securing a mortgage. There are lots of other costs associated with buying a home that you might not have thought of, and they add up to thousands of pounds.</p>
-        <p>This checklist lets you estimate how much it’ll cost you to buy your new home so you can put aside what you need to make your move as smooth as possible.</p>
+        <p><%= t('home_buying_checklist.intro') %></p>
+        <p><%= t('home_buying_checklist.what_is_this') %></p>
       </div>
       <div class="home-buying-checklist__top-content-video">
         <iframe width="100%" height="200px" src="https://www.youtube.com/embed/jfaZQBCzY44" frameborder="0" allowfullscreen title="Video: The total cost of buying a home"></iframe>
@@ -15,17 +15,16 @@
 
       <div class="home-buying-checklist__collapsable">
         <a class="collapsable__trigger" data-dough-component="Collapsable" data-dough-collapsable-trigger="how-it-works">
-          How to use this checklist
+          <%= t('home_buying_checklist.how_it_works.title') %>
         </a>
 
         <div class="home-buying-checklist__collapsable-target collapsable__target" data-dough-collapsable-target="how-it-works">
-          <p>We’ve listed each fee and put an average cost against it, based on a home price of £250,000. This gives you an idea of how much each charge will be.</p>
-          <p>You can type in the costs for your new property, check you’re not paying too much, and then our checklist will add it all together so you know how much you’ll need. You can also download the checklist or email it to yourself to use later or send to a partner or friend.</p>
+          <%= t('home_buying_checklist.how_it_works.body_html') %>
         </div>
       </div>
     </div>
     <div class="l-1col">
-      <h2>Work out your upfront costs before you buy your home</h2>
+      <h2><%= t('home_buying_checklist.form.title') %></h2>
     </div>
   </div>
 
@@ -34,322 +33,76 @@
 
       <div class="home-buying-checklist__form-header">
         <div class="home-buying-checklist__form-header-left">
-          <p>Fees and costs</p>
+          <p><%= t('home_buying_checklist.form.headers.fees_and_costs') %></p>
         </div>
         <div class="home-buying-checklist__form-header-center">
-          <p>Description <br />(average fees and costs below are based on a £250,000 property)</p>
+          <p><%= t('home_buying_checklist.form.headers.description') %></p>
         </div>
         <div class="home-buying-checklist__form-header-right">
-          <p>Calculate your upfront cost (based on the price of your property)</p>
+          <p><%= t('home_buying_checklist.form.headers.calculate') %></p>
         </div>
       </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 1 of 9</span> Deposit
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description" data-dough-component="PopupTip">
-            <p>A down payment to buy your first home. You’ll need at least 5% of the home value, but larger deposits of around 20% will get you better mortgage options. Average deposit: £12,500 - £50,000
-              <button data-dough-popup-trigger type="button" class="popup-tip__button">
-                i
-              </button>
-            </p>
-
-            <div data-dough-popup-container class="popup-tip__container">
-              <p data-dough-popup-content>Average costs based on a property value of £250,000.</p>
-              <button data-dough-popup-close type="button" class="popup-tip__close">
-                <span aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
-                  </svg>
-                </span>
-                <span class="visually-hidden">Close</span>
-              </button>
-            </div>
-          <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more about deposits</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-deposit>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>Your deposit will be 5% - 20% of your property value.</p>
+      <% t('home_buying_checklist.form.items').each_with_index do |item, i| %>
+        <div class="home-buying-checklist__form-row">
+          <div class="home-buying-checklist__form-left">
+            <div class="home-buying-checklist__form-label">
+              <span class="visually-hidden">
+                Cost
+                <%= i + 1 %>
+                of
+                <%=t('home_buying_checklist.form.items').count %>
+              </span>
+              <%= item[:name] %>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 2 of 9</span> Stamp Duty
-          </div>
-        </div>
+          <div class="home-buying-checklist__form-center">
+            <div class="home-buying-checklist__form-description" data-dough-component="PopupTip">
+              <p>
+                <%= item[:description] %>
+                <% if item[:extra_info] %>
+                  <button data-dough-popup-trigger type="button" class="popup-tip__button">
+                    i
+                  </button>
+                <% end %>
+              </p>
 
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description" data-dough-component="PopupTip">
-            <p>A tax paid on homes costing over £125,000. If your home costs more, you’ll pay stamp duty of 2% to 12%, depending on the property’s value. Average stamp duty cost: £2,500
-              <button data-dough-popup-trigger type="button" class="popup-tip__button">i</button>
-            </p>
-
-            <div data-dough-popup-container class="popup-tip__container">
-              <p data-dough-popup-content>Average cost based on a property value of £250,000.</p>
-              <button data-dough-popup-close type="button" class="popup-tip__close">
-                <span aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
-                  </svg>
-                </span>
-                <span class="visually-hidden">Close</span>
-              </button>
+              <% if item[:extra_info] %>
+                <div data-dough-popup-container class="popup-tip__container">
+                  <p data-dough-popup-content>
+                    <%= item[:extra_info] %>
+                  </p>
+                  <button data-dough-popup-close type="button" class="popup-tip__close">
+                    <span aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
+                      </svg>
+                    </span>
+                    <span class="visually-hidden">Close</span>
+                  </button>
+                </div>
+              <% end %>
+              <p>
+                <%= item[:link_html].html_safe %>
+              </p>
             </div>
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">More information about Stamp Duty</a><br />
-              <a href="https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator">Find your cost with our Stamp Duty calculator</a>
-            </p>
           </div>
-        </div>
 
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-stamp>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>Your Stamp Duty cost depends on your house value. You can find the cost with our <a href="https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator">Stamp Duty calculator</a>.</p>
+          <div class="home-buying-checklist__form-right">
+            £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value>
+            <span class="icon--tick"></span>
+            <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
+              <div class="callout">
+                <p><%= item[:callout_html].html_safe %></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 3 of 9</span> Valuation fee
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description" data-dough-component="PopupTip">
-            <p>A fee you pay to your mortgage lender for assessing the value of the property. They use the value to work out how much they’re prepared to lend you. The cost varies according to the property value and the lender you use. Average fee: £150 - £1,500
-              <button data-dough-popup-trigger type="button" class="popup-tip__button">i</button>
-            </p>
-
-            <div data-dough-popup-container class="popup-tip__container">
-              <p data-dough-popup-content>Average cost based on a property value of £250,000. Fees also vary between lenders.</p>
-              <button data-dough-popup-close type="button" class="popup-tip__close">
-                <span aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
-                  </svg>
-                </span>
-                <span class="visually-hidden">Close</span>
-              </button>
-            </div>
-
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Find out more about valuation fees</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-valuation>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The valuation fee is around £150 - £1,500 on average, but varies depending on your property’s value.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 4 of 9</span> Surveyors fee
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description">
-            <p>A payment to a structural surveyor to check for any building issues or structural problems with the property. Fees vary depending on what type of survey you choose. Average fee: £250 - £600</p>
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Surveyors fees further information</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-surveyors>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The average surveyors fee is £250 - £600 but depends on the survey you choose.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 5 of 9</span> Legal fee (Conveyancing fee)
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description" data-dough-component="PopupTip">
-            <p>Fees you pay to a solicitor or conveyancer for carrying out the legal work for your home purchase. Average fee: £850 - £1,500
-              <button data-dough-popup-trigger type="button" class="popup-tip__button">i</button>
-            </p>
-
-            <div data-dough-popup-container class="popup-tip__container">
-              <p data-dough-popup-content>Average cost based on a property value of £250,000.</p>
-              <button data-dough-popup-close type="button" class="popup-tip__close">
-                <span aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
-                  </svg>
-                </span>
-                <span class="visually-hidden">Close</span>
-              </button>
-            </div>
-
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more about legal fees</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-legal>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>Legal fees are £850 - £1,500 on average but depend on your property’s value.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 6 of 9</span> Local searches costs
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description">
-            <p>A charge from your solicitor or conveyancer for carrying out a check to find out if there are any local plans or problems in the area that could affect your property’s value in the future. Average cost: £300</p>
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Find out more</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-local>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The average cost for carrying out local searches is £300.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 7 of 9</span> Electronic transfer fee
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description">
-            <p>A fee to transfer the mortgage money electronically from your lender to the solicitor when you complete your purchase. Average fee: £50</p>
-           <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">More information</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-electronic>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The average electronic transfer fee is £50.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 8 of 9</span> Removal costs
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description">
-            <p>The cost of hiring a removals company to help you move your possessions, or of hiring a van. Average removal costs: £300 - £600</p>
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Further information</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-removal>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The average amount spent on removal costs is £300 - £600.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="home-buying-checklist__form-row">
-        <div class="home-buying-checklist__form-left">
-          <div class="home-buying-checklist__form-label">
-            <span class="visually-hidden">Cost 9 of 9</span> Mortgage fee
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-center">
-          <div class="home-buying-checklist__form-description">
-            <p>A fee you pay to your lender for arranging the mortgage. It can also be called a product fee, booking fee or application fee. Fee sizes vary depending on your mortgage. Average fee: £100 – £2,250</p>
-            <p>
-              <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-buying-checklist__form-right">
-          £ <input type="number" class="home-buying-checklist__form-input" data-dough-input-value data-dough-input-mortgage>
-          <span class="icon--tick"></span>
-          <div class="home-buying-checklist__callout-inactive" data-dough-input-message>
-            <div class="callout">
-              <p>The average mortgage fee is £100 - £2,250 but varies depending on your mortgage.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% end %>
 
       <div class="home-buying-checklist__form-row--footer" aria-live="polite" aria-atomic="true">
         <div class="home-buying-checklist__form-results-left">
-            Your total upfront cost:
+          Your total upfront cost:
         </div>
 
         <div class="home-buying-checklist__form-results-right">

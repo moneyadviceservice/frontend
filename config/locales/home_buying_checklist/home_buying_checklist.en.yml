@@ -1,2 +1,85 @@
 en:
   home_buying_checklist:
+    title: Your home-buying costs checklist
+    intro: Buying a new home isn’t just about saving for a deposit and securing a mortgage. There are lots of other costs associated with buying a home that you might not have thought of, and they add up to thousands of pounds.
+    what_is_this: This checklist lets you estimate how much it’ll cost you to buy your new home so you can put aside what you need to make your move as smooth as possible.
+    how_it_works:
+      title: How to use this checklist
+      body_html: |
+        <p>We’ve listed each fee and put an average cost against it, based on a home price of £250,000. This gives you an idea of how much each charge will be.</p>
+        <p>You can type in the costs for your new property, check you’re not paying too much, and then our checklist will add it all together so you know how much you’ll need. You can also download the checklist or email it to yourself to use later or send to a partner or friend.</p>
+    form:
+      title: Work out your upfront costs before you buy your home
+      headers:
+        fees_and_costs: Fees and costs
+        description: Description (average fees and costs below are based on a £250,000 property)
+        calculate: Calculate your upfront cost (based on the price of your property)
+      items:
+        - name: Deposit
+          description: |
+            A down payment to buy your first home. You’ll need at least 5% of the home value, but larger deposits of around 20% will get you better mortgage options. Average deposit: £12,500 - £50,000
+          extra_info: Average costs based on a property value of £250,000.
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more about deposits</a>
+          callout_html: Your deposit will be 5% - 20% of your property value.
+
+        - name: Stamp Duty
+          description: |
+            A tax paid on homes costing over £125,000. If your home costs more, you’ll pay stamp duty of 2% to 12%, depending on the property’s value. Average stamp duty cost: £2,500
+          extra_info: Average cost based on a property value of £250,000.
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">More information about Stamp Duty</a><br />
+            <a href="https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator">Find your cost with our Stamp Duty calculator</a>
+          callout_html: |
+            Your Stamp Duty cost depends on your house value. You can find the cost with our <a href="https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator">Stamp Duty calculator</a>.
+
+        - name: Valuation fee
+          description: |
+            A fee you pay to your mortgage lender for assessing the value of the property. They use the value to work out how much they’re prepared to lend you. The cost varies according to the property value and the lender you use. Average fee: £150 - £1,500
+          extra_info: Average cost based on a property value of £250,000. Fees also vary between lenders.
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Find out more about valuation fees</a>
+          callout_html: The valuation fee is around £150 - £1,500 on average, but varies depending on your property’s value.
+
+        - name: Surveyors fee
+          description: |
+            A payment to a structural surveyor to check for any building issues or structural problems with the property. Fees vary depending on what type of survey you choose. Average fee: £250 - £600
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Surveyors fees further information</a>
+          callout_html: The average surveyors fee is £250 - £600 but depends on the survey you choose.
+
+        - name: Legal fee (Conveyancing fee)
+          description: |
+            Fees you pay to a solicitor or conveyancer for carrying out the legal work for your home purchase. Average fee: £850 - £1,500
+          extra_info: Average cost based on a property value of £250,000.
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more about legal fees</a>
+          callout_html: Legal fees are £850 - £1,500 on average but depend on your property’s value.
+
+        - name: Local searches costs
+          description: |
+            A charge from your solicitor or conveyancer for carrying out a check to find out if there are any local plans or problems in the area that could affect your property’s value in the future. Average cost: £300
+          link_html: |
+             <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Find out more</a>
+          callout_html: The average cost for carrying out local searches is £300.
+
+        - name: Electronic transfer fee
+          description: |
+            A fee to transfer the mortgage money electronically from your lender to the solicitor when you complete your purchase. Average fee: £50
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">More information</a>
+          callout_html: The average electronic transfer fee is £50.
+
+        - name: Removal costs
+          description: |
+            The cost of hiring a removals company to help you move your possessions, or of hiring a van. Average removal costs: £300 - £600
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Further information</a>
+          callout_html: The average amount spent on removal costs is £300 - £600.
+
+        - name: Mortgage fee
+          description: |
+            A fee you pay to your lender for arranging the mortgage. It can also be called a product fee, booking fee or application fee. Fee sizes vary depending on your mortgage. Average fee: £100 – £2,250
+          link_html: |
+            <a href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Read more</a>
+          callout_html: The average mortgage fee is £100 - £2,250 but varies depending on your mortgage.

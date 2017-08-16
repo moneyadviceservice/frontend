@@ -198,7 +198,7 @@ GEM
       responders
       sass-rails
     database_cleaner (1.5.3)
-    debt_advice_locator (2.4.5.110)
+    debt_advice_locator (2.5.0.111)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -321,7 +321,7 @@ GEM
       activerecord (>= 4.0.0)
     fssm (0.2.10)
     geokit (1.11.0)
-    geokit-rails (2.2.0)
+    geokit-rails (2.3.0)
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (4.1.1)
@@ -742,7 +742,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.12.0)
   database_cleaner
-  debt_advice_locator (~> 2.4.5)
+  debt_advice_locator (~> 2.5.0)
   debt_and_mental_health (~> 1.3.1)
   debt_free_day_calculator (~> 2.3.1)
   debt_test (~> 1.7.3)

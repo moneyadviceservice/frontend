@@ -4,7 +4,7 @@
 }
 
 input.home-buying-checklist__form-input {
-  width: 85%;
+  width: 75%;
   min-width: 3rem;
   border: 1px solid $color-bluegrey-light;
   background-color: $color-table-heading;
@@ -43,6 +43,19 @@ input.home-buying-checklist__form-input {
 
   @include respond-to($mq-s) {
     @include column(4);
+    display: block;
+  }
+}
+
+.home-buying-checklist__top-content--mobile-only {
+  @include respond-to($mq-s) {
+    display: none;
+  }
+}
+
+.home-buying-checklist__top-content--desktop-only {
+  display: none;
+  @include respond-to($mq-s) {
     display: block;
   }
 }
@@ -151,6 +164,7 @@ input.home-buying-checklist__form-input {
   text-align: left;
   font-size: 1.125rem;
   font-weight: 500;
+  position: relative;
 }
 
 .home-buying-checklist__form-row--footer {
@@ -163,14 +177,14 @@ input.home-buying-checklist__form-input {
 
 .home-buying-checklist__form-results-left  {
   @include column(12);
-  text-align: left;
   font-size: 1.2rem;
   font-weight: 500;
   display: inline;
-  text-align: right;
+  text-align: left;
 
   @include respond-to($mq-s) {
     @include column(8);
+    text-align: right;
     display: block;
   }
 }
@@ -188,11 +202,19 @@ input.home-buying-checklist__form-input {
   padding: 1.25rem;
 }
 .home-buying-checklist__button-email{
-  margin-right: 1.25rem;
+  margin: 0 1.25rem 1.25rem 0;
 }
 .home-buying-checklist__button-inline-group {
   position: relative;
   float: left;
+}
+
+.home-buying-checklist__button-mobile {
+  display: inline;
+
+  @include respond-to($mq-s) {
+    display: none !important;
+  }
 }
 
 @media print{

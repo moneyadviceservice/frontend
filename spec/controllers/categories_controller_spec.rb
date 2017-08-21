@@ -38,7 +38,12 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     context 'when the category does not exist' do
-      before { allow_any_instance_of(Core::CategoryReader).to receive(:call).and_yield(category) }
+      before do
+        allow_any_instance_of(Core::CategoryReader).to receive(:call).and_raise(
+          Core::Repository::Base::RequestError,
+          'Unable to fetch Category JSON from Contento'
+        )
+      end
 
       it 'raises an ActionController RoutingError' do
         expect { get :show, id: category.id, locale: I18n.locale }

@@ -16,6 +16,10 @@ When(/^I view a category containing child categories in (.*)$/) do |language|
   browse_to_category(category_containing_child_categories, locale)
 end
 
+When(/^I view a category that does not exist$/) do
+  category_page.load(locale: 'en', id: 'nonexistent-category')
+end
+
 Then(/^I should see the category name and description$/) do
   expect(category_page.heading).to have_content(current_category.title)
   expect(category_page.description).to have_content(current_category.description)
@@ -65,4 +69,8 @@ Then(/^the category page should have alternate tags for the supported locales$/)
     expect(expected_hreflangs).to include(alternate_tag[:hreflang])
     expect(expected_hrefs).to include(alternate_tag[:href])
   end
+end
+
+Then(/^I should see a 404 error$/) do
+  expect(page.status_code).to eq(404)
 end

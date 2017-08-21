@@ -13,3 +13,8 @@ Feature: Categories
     Then I should see the category name and description
     And I should see the child categories
     And I should see the child category content items
+
+  @allow-rescue
+  Scenario: View a nonexistent category
+    When I view a category that does not exist
+    Then I should see a 404 error

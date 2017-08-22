@@ -15,6 +15,8 @@ class CategoriesController < ApplicationController
     @breadcrumbs = BreadcrumbTrail.build(@category, category_tree)
 
     assign_active_categories(@category)
+  rescue Core::Repository::Base::RequestError
+    not_found
   end
 
   private

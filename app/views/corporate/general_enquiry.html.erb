@@ -1,0 +1,35 @@
+<% set_meta_tags(title:       t('.title'),
+                 description: "description",
+                 canonical:   "canonical_url",
+                 alternate:   "alternate_options") %>
+
+<% content_for(:context_bar) do %>
+  <% if @breadcrumbs.present? %>
+    <%= render 'shared/breadcrumbs', breadcrumbs: @breadcrumbs %>
+  <% elsif false %>
+    <%= render 'shared/related_categories', categories: article.categories %>
+  <% end %>
+<% end %>
+
+<main class="l-main" role="main" id="main">
+  <%= heading_tag t('.title') %>
+
+  <% if category && category.third_level_navigation? %>
+    <%= category.render_contents %>
+  <% end %>
+
+  <div class="editorial">
+    <%= t('.body_html') %>
+    <%= render 'general_enquiry_form' %>
+    <%= t('.footer_html') %>
+  </div>
+
+</main>
+
+<div class="l-nav">
+  <%= render 'shared/mas_sections_link' %>
+  <%= render 'shared/nav',
+             categories:        corporate_category_navigation,
+             active_categories: active_categories
+  %>
+</div>

@@ -1,0 +1,60 @@
+en:
+  corporate:
+    general_enquiry:
+      title: General Enquiry form
+      body_html: |
+        <p>If you have a general enquiry and prefer not to telephone or chat you can contact us using the form below.</p>
+        <p>Our contact Centre is open:
+          <ul>
+            <li>Monday to Friday, 8am to 8pm</li>
+            <li>Saturday from 9am to 1pm</li>
+            <li>We are closed on Sunday and Bank Holidays</li>
+          </ul>
+        </p>
+      please_select: Please select one
+      details: Your details
+      email_disclaimer: |
+        We will use this email address to respond to you, it will not be used for marketing purposes.
+      enquiry: Enquiry details
+      message_intro: |
+        To help you quickly and efficiently, could you please provide us with as much detail as possible. It would be beneficial if your enquiry could be at least 20 words. (maximum of 300 words).
+      footer_html: |
+        <p>We normally respond to your enquiry within 48 hours of receipt.<br/>
+        All enquiries will be treated in confidence and in line with the Data Protection Act.</p>
+      titles:
+        mr: Mr
+        mrs: Mrs
+        miss: Miss
+        ms: Ms
+        dr: Dr
+        rev: Rev
+      types:
+        complaint: Complaint
+        feedback: Feedback
+        enquiry: Enquiry
+        invite: Invite
+        technical: Technical issue
+      subjects:
+        debt_and_borrowing: Debt and borrowing
+        budgeting_and_managing_money: Budgeting and managing money
+        saving_and_investing: Saving and investing
+        pensions_and_retirement: Pensions and retirement
+        work_and_redundancy: Work and redundancy
+        benefits: Benefits
+        births_and_deaths: Births, deaths and family
+        insurance: Insurance
+        homes_and_mortgages: Homes and mortgages
+        care_and_disability: Care and disability
+        cars_and_travel: Cars and travel
+        other: Other
+
+  activemodel:
+    attributes:
+      general_enquiry:
+        first_name: First name2
+        surname: Surname2
+        email: Email2
+        type: Please select the nature of your enquiry from the drop down menu
+        subject: Please choose the subject of your enquiry
+        message: Tell us about your enquiry
+

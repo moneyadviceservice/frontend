@@ -140,6 +140,8 @@ Rails.application.routes.draw do
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new
     resources :corporate, only: [:index, :show, :create] do
       get 'export-partners', on: :collection
+      get 'general-enquiry', on: :collection
+      post 'general-enquiry', on: :collection, to: 'corporate#enquiry_submit'
     end
 
     resources :corporate, only: [:show], as: 'corporate_articles'

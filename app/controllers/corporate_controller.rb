@@ -56,6 +56,19 @@ class CorporateController < ArticlesController
               filename: "corporate_partners-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
   end
 
+  def enquiry_submit
+    @enquiry = GeneralEnquiry.new
+    @enquiry.assign_attributes(params.require(:general_enquiry).permit(*GeneralEnquiry::ATTRIBUTES))
+    return redirect_to corporate_path('about-us') if @enquiry.valid?
+    render :general_enquiry
+  end
+
+  def general_enquiry
+    @category = retrieve_corporate_category
+    assign_active_categories(@category)
+    @enquiry = GeneralEnquiry.new
+  end
+
   private
 
   def retrieve_corporate_category

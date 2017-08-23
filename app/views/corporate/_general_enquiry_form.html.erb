@@ -1,0 +1,66 @@
+<%= form_for @enquiry,
+  url: request.url,
+  builder: Dough::Forms::Builders::Validation,
+  html: { class: 'form' } do |f| %>
+  <%= f.validation_summary %>
+  <fieldset>
+    <legend><%=t('corporate.general_enquiry.details') %></legend>
+    <%= f.form_row(:title) do %>
+      <%= f.errors_for :title %>
+      <%= f.label :title %><br/>
+      <%= f.select(:title,
+                   GeneralEnquiry::TITLES.map { |title| [t("corporate.general_enquiry.titles.#{title}"), title] },
+                   { include_blank: t('corporate.general_enquiry.please_select') }) %>
+    <% end %>
+
+    <%= f.form_row(:first_name) do %>
+      <%= f.errors_for :first_name %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    <% end %>
+
+    <%= f.form_row(:surname) do %>
+      <%= f.errors_for :surname %>
+      <%= f.label :surname %>
+      <%= f.text_field :surname %>
+    <% end %>
+
+    <%= f.form_row(:email) do %>
+      <%= f.errors_for :email %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <p>
+        <%=t('corporate.general_enquiry.email_disclaimer') %>
+      </p>
+    <% end %>
+  </fieldset>
+  <fieldset>
+    <legend><%=t('corporate.general_enquiry.enquiry') %></legend>
+
+    <%= f.form_row(:type) do %>
+      <%= f.errors_for :type %>
+      <%= f.label :type %><br/>
+      <%= f.select(:type,
+                   GeneralEnquiry::TYPES.map { |type| [t("corporate.general_enquiry.types.#{type}"), type] },
+                   { include_blank: t('corporate.general_enquiry.please_select') }) %>
+    <% end %>
+
+    <%= f.form_row(:subject) do %>
+      <%= f.errors_for :subject %>
+      <%= f.label :subject %><br/>
+      <%= f.select(:subject,
+                   GeneralEnquiry::SUBJECTS.map { |subject| [t("corporate.general_enquiry.subjects.#{subject}"), subject] },
+                   { include_blank: t('corporate.general_enquiry.please_select') }) %>
+    <% end %>
+
+    <%= f.form_row(:message) do %>
+      <%= f.errors_for :message %>
+      <%= f.label :message %>
+      <p>
+        <%=t('corporate.general_enquiry.message_intro') %>
+      </p>
+      <%= f.text_area :message %>
+    <% end %>
+  </fieldset>
+  <%= button_primary t('corporate.general_enquiry.submit') %>
+<% end %>

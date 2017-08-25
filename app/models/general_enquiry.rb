@@ -33,7 +33,8 @@ class GeneralEnquiry
 
   attr_accessor *ATTRIBUTES
   validates :title, inclusion: { in: TITLES }
-  validates :first_name, :surname, :email, presence: true
+  validates :first_name, :surname, presence: true
+  validates_with Validators::Email, attributes: [:email]
   validates :type, inclusion: { in: TYPES }
   validates :subject, inclusion: { in: SUBJECTS }
   validates :message, length: { within: 20..300 }

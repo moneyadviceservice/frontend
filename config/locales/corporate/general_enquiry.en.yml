@@ -47,13 +47,23 @@ en:
         care_and_disability: Care and disability
         cars_and_travel: Cars and travel
         other: Other
-
   activemodel:
+    errors:
+      models:
+        general_enquiry:
+          attributes:
+            title:
+              inclusion: Please select one
+            type:
+              inclusion: ""
+            subject:
+              inclusion: ""
     attributes:
       general_enquiry:
-        first_name: First name2
-        surname: Surname2
-        email: Email2
+        title: Title
+        first_name: First name
+        surname: Surname
+        email: Email
         type: Please select the nature of your enquiry from the drop down menu
         subject: Please choose the subject of your enquiry
         message: Tell us about your enquiry

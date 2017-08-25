@@ -56,11 +56,13 @@
     <%= f.form_row(:message) do %>
       <%= f.errors_for :message %>
       <%= f.label :message %>
+      <%= f.text_area :message, rows: 10 %>
       <p>
         <%=t('corporate.general_enquiry.message_intro') %>
       </p>
-      <%= f.text_area :message %>
     <% end %>
   </fieldset>
-  <%= button_primary t('corporate.general_enquiry.submit') %>
+  <div class=" form__row">
+    <%= button_primary t('corporate.general_enquiry.submit') %>
+  </div>
 <% end %>

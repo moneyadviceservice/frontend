@@ -57,7 +57,11 @@ class CorporateController < ArticlesController
   def enquiry_submit
     @enquiry = GeneralEnquiry.new
     @enquiry.assign_attributes(params.require(:general_enquiry).permit(*GeneralEnquiry::ATTRIBUTES))
-    return redirect_to(corporate_path('about-us'), flash: { info: 'message sent' }) if @enquiry.valid?
+    if @enquiry.valid?
+      #TODO: send enquiry to CRM
+      #TODO: flash message should be translated
+      return redirect_to(corporate_path('about-us'), flash: { info: 'message sent' })
+    end
     render :general_enquiry
   end
 

@@ -89,7 +89,7 @@ end
 group :test do
   gem 'capybara'
   gem 'chronic'
-  gem 'codeclimate-test-reporter', require: false
+  gem 'codeclimate-test-reporter', '0.6.0', require: false
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0

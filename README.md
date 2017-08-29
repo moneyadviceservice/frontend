@@ -92,18 +92,6 @@ rm bower.json
 bowndler install
 ```
 
-#### Bundle install issues
-
-```
-Downloading codeclimate-test-reporter-0.6.0 revealed dependencies not in the API or the lockfile (simplecov (< 1.0.0,
->= 0.7.1)).
-Either installing with `--full-index` or running `bundle update codeclimate-test-reporter` should fix the problem.
-```
-
-(Bundling updating a single gem leads to a loop of having to update the previous gem.)
-
-Ensuring (for now) that the `bundler` gem is `1.14.6` works around this issue for now.
-
 ## Contributing
 
 1. Fork it

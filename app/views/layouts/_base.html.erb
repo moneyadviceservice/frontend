@@ -215,11 +215,15 @@
           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
       j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
+      f.parentNode.insertBefore(j, f.nextSibling);
     })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
   </script>
 <% end %>
 <%# END Google Tag Manager embed code %>
+
+<script>
+  console.log(document.getElementsByTagName('script')[0]);
+</script>
 
 <a id="top"></a>
 

@@ -9,6 +9,8 @@
 <head>
   <meta property="fb:pages" content="160564360681471" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <%= javascript_include_tag 'jquery/dist/jquery', async: 'async' %>
   <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>
@@ -213,7 +215,7 @@
           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
       j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
+      f.parentNode.insertBefore(j, f.nextSibling);
     })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
   </script>
 <% end %>

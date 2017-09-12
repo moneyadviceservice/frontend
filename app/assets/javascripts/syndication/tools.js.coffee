@@ -291,6 +291,7 @@
       cy:
         path: "cy/tools/canfyddwr-cyngor-ar-ddyledion/f2f"
       title: "Debt advice locator - face to face"
+      width: "100%"
 
     car_cost_tool:
       en:

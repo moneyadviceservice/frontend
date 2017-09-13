@@ -57,9 +57,6 @@ Rails.application.routes.draw do
     mount CarCostTool::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:car_cost_tool)
 
-    mount ContributionCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:contribution_calculator)
-
     mount CutbackCalculator::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:cutback_calculator)
 

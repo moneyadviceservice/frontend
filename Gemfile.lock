@@ -156,8 +156,6 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     concurrent-ruby (1.0.5)
-    contribution_calculator (0.1.0)
-      rails (>= 4, < 5)
     cost_calculator_builder (0.4.2)
       bowndler
       dough-ruby (~> 5.0)
@@ -276,7 +274,7 @@ GEM
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
       railties (>= 4.0, < 5.1)
-    dough-ruby (5.25.2.294)
+    dough-ruby (5.25.3.296)
       activesupport
       rails (>= 3.2, < 5)
       sass-rails
@@ -708,7 +706,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.5.1)
+    wpcc (1.9.2)
       dough-ruby
       rails (>= 4, < 5)
     xpath (2.0.0)
@@ -815,7 +813,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.5.1)
+  wpcc (= 1.9.2)
 
 BUNDLED WITH
    1.15.4

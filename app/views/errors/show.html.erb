@@ -23,7 +23,7 @@
   </form>
 <% end %>
 
-  <% if @rescue_response == :internal_server_error %>
+<% if @rescue_response == :internal_server_error %>
   <p class="error-page__search-text"><%= t('.internal_server_error.message') %></p>
 
   <form data-dough-component="ClearInput" action="/en/search" method="get" role="search" class="error-page__search search">

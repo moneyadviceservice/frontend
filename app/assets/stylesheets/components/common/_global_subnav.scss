@@ -41,6 +41,10 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
   }
 }
 
+.is-hidden {
+  display: none;
+}
+
 // no-js fallback --
 .uninitialised {
   @include respond-to($mq-m) {
@@ -152,11 +156,10 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 }
 
 .global-subnav__tool-category {
-  display: none;
+  display: table-cell;
 
   @include respond-to($mq-m) {
     /* non-FlexBox compliant -- */
-    display: table-cell;
     vertical-align: top;
     /* -- non-FlexBox compliant */
   }

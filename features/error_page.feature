@@ -11,3 +11,12 @@ Feature: Friendly Error Message
       | language | error_message |
       | English  | This page is currently unavailable, please try reloading |
       | Welsh    | Nid yw'r dudalen hon ar gael ar hyn o bryd, ceisiwch ail-lwytho |
+
+  Scenario Outline: Application throws error with HTML 404 Status Code
+    Given that I visit a non-existent page in my "<language>"
+    Then I should see a friendly "<error_message>"
+
+    Examples:
+      | language | error_message |
+      | English  | Please make sure you’ve entered the correct address  |
+      | Welsh    | Gwnewch yn siŵr eich bod wedi rhoi’r cyfeiriad cywir |

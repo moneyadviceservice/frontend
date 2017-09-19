@@ -18,10 +18,12 @@ module World
       debt_management_companies
       forgot_password
       home
+      internal_server_error
       money_manager
       money_manager_circumstances_changed
       news
       news_article
+      page_not_found
       partners
       profile
       quiz_admin

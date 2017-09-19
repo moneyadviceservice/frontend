@@ -317,11 +317,13 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   };
 
   GlobalNav.prototype._toggleMobileSubNav = function(index) {
+    var siblingsNav = $(index).siblings().get(0);
+
     $(index)
       .parents('[data-dough-nav-clump]').toggleClass('is-active')
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
-      this.$globalSubNav.removeClass('is-hidden');
 
+    $(siblingsNav).removeClass('is-hidden');
   };
 
   GlobalNav.prototype._returnMobileNav = function(index) {

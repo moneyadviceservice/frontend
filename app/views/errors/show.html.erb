@@ -22,3 +22,22 @@
     </button>
   </form>
 <% end %>
+
+<% if @rescue_response == :internal_server_error %>
+  <p class="error-page__search-text"><%= t('.internal_server_error.message') %></p>
+
+  <form data-dough-component="ClearInput" action="/en/search" method="get" role="search" class="error-page__search search">
+    <label class="visually-hidden" for="search"><%= t('search_box.label') %></label>
+    <input data-dough-clear-input class="search__input" id="search" required type="search" name="query" autocomplete="off" placeholder="<%= t('.internal_server_error.search_placeholder') %>" />
+
+    <button data-dough-clear-input-button type="reset" class="search__clear">
+      <span class="icon icon--clear"></span>
+      <span class="visually-hidden"><%= t('search_box.clear_hidden_text') %></span>
+    </button>
+
+    <button class="search__submit" type="submit">
+      <span class="icon icon--search"></span>
+      <span class="visually-hidden"><%= t('search_box.button_text') %></span>
+    </button>
+  </form>
+<% end %>

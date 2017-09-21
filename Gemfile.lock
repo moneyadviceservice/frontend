@@ -156,8 +156,6 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     concurrent-ruby (1.0.5)
-    contribution_calculator (0.1.0)
-      rails (>= 4, < 5)
     cost_calculator_builder (0.4.2)
       bowndler
       dough-ruby (~> 5.0)
@@ -276,7 +274,8 @@ GEM
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
       railties (>= 4.0, < 5.1)
-    dough-ruby (5.25.2.294)
+    dough-ruby (5.25.3.296)
+      activemodel
       activesupport
       rails (>= 3.2, < 5)
       sass-rails
@@ -433,7 +432,7 @@ GEM
       rails (>= 4, < 5)
       sass-rails
       underscore-rails
-    multi_json (1.12.1)
+    multi_json (1.12.2)
     multi_test (0.1.2)
     multipart-post (2.0.0)
     mysql2 (0.4.5)
@@ -531,7 +530,7 @@ GEM
     rainbow (2.2.2)
       rake
     raindrops (0.18.0)
-    rake (12.0.0)
+    rake (12.1.0)
     ranked-model (0.4.0)
       activerecord (>= 3.1.12)
     rdoc (4.3.0)
@@ -708,8 +707,9 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.5.1)
+    wpcc (1.10.0)
       dough-ruby
+      meta-tags
       rails (>= 4, < 5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -736,7 +736,6 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  contribution_calculator (~> 0.1.0)
   cost_calculator_builder (~> 0.4.2)
   cream (~> 1.0.0)
   csslint_ruby
@@ -815,7 +814,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.5.1)
+  wpcc (= 1.10.0)
 
 BUNDLED WITH
    1.15.4

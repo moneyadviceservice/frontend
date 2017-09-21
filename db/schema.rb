@@ -132,7 +132,6 @@ ActiveRecord::Schema.define(version: 20170914164504) do
     t.text     "referral_url",       limit: 65535
   end
 
-  add_index "budget_planner_budgets", ["referral_url"], name: "index_budget_planner_budgets_on_referral_url", length: {"referral_url"=>255}, using: :btree
   add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
 
   create_table "budget_planner_spreadsheets", force: :cascade do |t|
@@ -153,7 +152,6 @@ ActiveRecord::Schema.define(version: 20170914164504) do
     t.text     "referral_url",     limit: 65535
   end
 
-  add_index "budget_planner_wip_budgets", ["referral_url"], name: "index_budget_planner_wip_budgets_on_referral_url", length: {"referral_url"=>255}, using: :btree
   add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id", using: :btree
 
   create_table "car_cost_tool_car_adjustments", force: :cascade do |t|

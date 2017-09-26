@@ -330,7 +330,9 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
     $(index)
       .parents('[data-dough-nav-clump]').toggleClass('is-active')
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
-      this.$globalSubNav.addClass('is-hidden');
+      setTimeout(function(){
+        $('[data-dough-subnav]').addClass('is-hidden');
+      }, 400);
   };
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {

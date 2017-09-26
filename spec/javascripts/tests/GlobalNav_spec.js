@@ -85,15 +85,7 @@ describe.only('GlobalNav', function() {
     });
 
     it('When clump heading is clicked remove is-hidden class from subnav', function() {
-      // This test is prevented from being initiated by mediaQueries.atSmallViewport() if statement.
-      // This is called by the $globalNavClumpHeading click function within the GlobalNav.js component. 
-
-      /*
-      $('#clump-1').find('[data-dough-nav-clump-heading]').trigger('click');
-      var siblingsNav = $('#clump-1').find('[data-dough-subnav]').get(0);
-
-      expect($(siblingsNav).hasClass('is-hidden')).to.be.false;
-      */
+      // This test is prevented from being initiated by mediaQueries.atSmallViewport() helper.
     }); 
 
     it('Applys is-hidden class to sub nav and returns to main mobile nav', function() {

@@ -156,10 +156,11 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 }
 
 .global-subnav__tool-category {
-  display: table-cell;
+  display: block;
 
   @include respond-to($mq-m) {
     /* non-FlexBox compliant -- */
+    display: table-cell;
     vertical-align: top;
     /* -- non-FlexBox compliant */
   }

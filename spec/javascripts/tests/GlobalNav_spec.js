@@ -1,4 +1,4 @@
-describe.only('GlobalNav', function() {
+describe('GlobalNav', function() {
   'use strict';
 
   beforeEach(function(done) {

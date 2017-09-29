@@ -14,7 +14,7 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
   top: 0;
   left: 0;
   transform: translateX(100%);
-  padding: $baseline-unit;
+  padding: $baseline-unit $baseline-unit $baseline-unit*10 $baseline-unit;
 
   @include respond-to($mq-m) {
     transition: none;

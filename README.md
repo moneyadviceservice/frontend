@@ -13,7 +13,7 @@ The Money Advice Service's responsive website.
 * [Bundler]
 * [Bower]
 * [MySQL 5.5](http://www.mysql.com/)
-
+* [Redis](https://redis.io/download)
 
 ## Installation
 

@@ -85,7 +85,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Configure active record session store.
-  config.session_store :active_record_store
+  config.session_store :redis_store, servers: [ENV.fetch('REDIS_SESSIONS_URL')]
 
   config.action_mailer.default_url_options = {:host => "#{'qa.test.' if ENV['MAS_ENVIRONMENT'] == 'qa'}moneyadviceservice.org.uk"}
 

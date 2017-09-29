@@ -536,6 +536,22 @@ GEM
     rdoc (4.3.0)
     redcarpet (3.2.3)
     redis (4.0.1)
+    redis-actionpack (5.0.1)
+      actionpack (>= 4.0, < 6)
+      redis-rack (>= 1, < 3)
+      redis-store (>= 1.1.0, < 1.4.0)
+    redis-activesupport (5.0.3)
+      activesupport (>= 3, < 6)
+      redis-store (~> 1.3.0)
+    redis-rack (2.0.2)
+      rack (>= 1.5, < 3)
+      redis-store (>= 1.2, < 1.4)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.3.0)
+      redis (>= 2.2)
     request_store (1.3.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -791,6 +807,7 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   redcarpet
   redis
+  redis-rails
   rio (= 1.18.4)!
   rouge
   rspec-html-matchers

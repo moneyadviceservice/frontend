@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application
-    config.session_store :active_record_store
+    config.session_store :redis_store, servers: [ENV.fetch('REDIS_SESSIONS_URL')]
 
     config.action_mailer.delivery_method = :mailjet
     config.filter_parameters += [:password]

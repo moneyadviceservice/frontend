@@ -154,6 +154,10 @@ $global-nav-transition-duration: 300ms;
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .global-nav__clump:last-child {
   border-bottom: none;
 }

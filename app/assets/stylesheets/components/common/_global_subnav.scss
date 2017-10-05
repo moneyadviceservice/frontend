@@ -24,6 +24,7 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
     margin: 0;
     max-width: none;
     background: $color-white;
+    padding-bottom: $baseline-unit;
 
     /* non-FlexBox compliant -- */
     display: table-row;

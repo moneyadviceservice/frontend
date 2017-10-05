@@ -56,6 +56,10 @@ Before('@export-corporate-partners') do
   create(:corporate_partner)
 end
 
+Before('@allow_rescue') do
+  ActionController::Base.allow_rescue = true
+end
+
 Before('@auth-required') do
   @username = 'admin'
   @password = 'password'

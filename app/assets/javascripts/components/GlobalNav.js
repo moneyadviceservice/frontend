@@ -233,7 +233,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
 
     this.$globalSubNavHeading.click(function(e) {
       e.preventDefault();
-      self._toggleMobileSubNav(this);
+      self._returnMobileNav(this);
     });
 
     this.$mobileNavClose.click(function(e){
@@ -304,6 +304,7 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   GlobalNav.prototype._toggleMobileNav = function() {
     this.$globalNav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
+    $('body').addClass('no-scroll');
 
     // If we just closed the nav, reset all subnavs
     if (!this.$globalNav.hasClass('is-active')) {
@@ -311,13 +312,27 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
       this.$mobileNavOverlay.removeClass('is-active');
       this.$globalNavClumps.removeClass('is-active');
       this.$globalNavClump.removeClass('is-active');
+      $('body').removeClass('no-scroll');
     }
   };
 
   GlobalNav.prototype._toggleMobileSubNav = function(index) {
+    var siblingsNav = $(index).siblings().get(0);
+
     $(index)
       .parents('[data-dough-nav-clump]').toggleClass('is-active')
       .parents('[data-dough-nav-clumps]').toggleClass('is-active');
+
+    $(siblingsNav).removeClass('is-hidden');
+  };
+
+  GlobalNav.prototype._returnMobileNav = function(index) {
+    $(index)
+      .parents('[data-dough-nav-clump]').toggleClass('is-active')
+      .parents('[data-dough-nav-clumps]').toggleClass('is-active');
+      setTimeout(function(){
+        $('[data-dough-subnav]').addClass('is-hidden');
+      }, 400);
   };
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {

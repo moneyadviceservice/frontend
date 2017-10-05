@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719110635) do
+ActiveRecord::Schema.define(version: 20170914164504) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20170719110635) do
     t.integer  "user_id",            limit: 4
     t.string   "commited_from",      limit: 255
     t.string   "last_commited_from", limit: 255
+    t.text     "referral_url",       limit: 65535
   end
 
   add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
@@ -148,6 +149,7 @@ ActiveRecord::Schema.define(version: 20170719110635) do
     t.integer  "source_budget_id", limit: 4
     t.string   "source_website",   limit: 255
     t.datetime "commited_at"
+    t.text     "referral_url",     limit: 65535
   end
 
   add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id", using: :btree

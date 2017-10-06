@@ -315,6 +315,16 @@
       width: "100%"
       title: 'Money Manager'
 
+    wpcc:
+      en:
+        path: 'en/tools/workplace-pension-contribution-calculator'
+      cy:
+        path: 'cy/tools/cyfrifiannell-cyfraniadau-pensiwn-gweithle'
+      width: "100%"
+      height: "1000px"
+      include_ga: false
+      title: 'Workplace Pension Contribution Calculator'
+
     default_dimensions:
       width: "680px"
       height: "1000px"

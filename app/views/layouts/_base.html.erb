@@ -11,7 +11,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <%= javascript_include_tag 'jquery/dist/jquery', async: 'async' %>
-  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) %>
 
   <% if hide_elements_irrelevant_for_third_parties? %>
     <%# This is the new embed code for Optimizely training session and is temporary %>
@@ -77,12 +76,6 @@
     <%# // Inline custom Modernizr %>
     <%= raw Rails.application.assets['modernizr/modernizr'] %>
 
-    <%# // Required for Google Tag Manager %>
-    var dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      'Responsive page': 'Yes',
-      'event': 'Responsive page'
-    });
     <% if content_for?(:tool_tracking_id) %>
     dataLayer.push({'toolTrackingId': '<%= content_for(:tool_tracking_id) %>'});
     <% end %>
@@ -199,27 +192,6 @@
 <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
 <%= render 'shared/svg/icon_sprite' %>
 <!--<![endif]-->
-
-<%# START Google Tag Manager embed code %>
-<% if Rails.env.production? %>
-  <noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=<%= Rails.application.config.google_tag_manager_id %>"
-    height="0" width="0" style="display:none;visibility:hidden"
-    title="Google Tag Manager"></iframe>
-  </noscript>
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-      var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f.nextSibling);
-    })(window, document, 'script', 'dataLayer', '<%= Rails.application.config.google_tag_manager_id %>');
-  </script>
-<% end %>
-<%# END Google Tag Manager embed code %>
 
 <a id="top"></a>
 

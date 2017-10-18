@@ -160,4 +160,9 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :hide_contact_panels?
+
+  def engine_content?
+    true
+  end
+  helper_method :engine_content?
 end

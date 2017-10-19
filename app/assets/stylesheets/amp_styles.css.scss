@@ -28,15 +28,79 @@ $responsive: true;
 }
 
 .amp-article__header {
+  position: relative;
   background-color: $color-green-primary;
   height: 2rem;
   padding: 0.8rem 0 0.5rem 0.4rem;
 }
 
 .amp-article__mas-logo {
+  float: left;
   width: 12rem;
   display: block;
   background-size: cover;
+}
+
+// Navigation
+.amp-sidenav {
+  width: 90%;
+  background-color: $color-white;
+}
+
+.amp-navigation {
+  list-style: none;
+  margin: 0;
+  padding: $baseline-unit*2;
+}
+
+.amp-navigation__item-header {
+  font-family: Museo Sans;
+  border: none;
+  border-bottom: 1px solid $color-yellow-dark;
+  background-color: $color-white;
+  padding: $baseline-unit*2;
+}
+
+// Navigation Submenu
+.amp-navigation__item-submenu {
+  list-style: none;
+  margin: 0;
+  padding: $baseline-unit*2;
+}
+
+.amp-navigation__item-submenu-link {
+  font-family: Museo Sans;
+  display: block;
+  color: $color-blue-medium;
+  text-decoration: none;
+  padding: $baseline-unit 0;
+}
+
+// Navigation buttons
+.amp-article__header-menu {
+  font-family: Museo Sans;
+  font-size: 0.9em;
+  position: absolute;
+  right: $baseline-unit*2;
+  top: $baseline-unit;
+  padding: 0.75rem;
+  display: block;
+  border-radius: 0.1875rem;
+  background-color: $color-header-buttons;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.amp-sidenav__close {
+  font-family: Museo Sans;
+  float: right;
+  margin: $baseline-unit;
+  padding: $baseline-unit;
+  border: none;
+  background-color: $color-white;
+  cursor: pointer;
+  font-size: 0.9em;
 }
 
 // AMP element and class styles (that come from contento)

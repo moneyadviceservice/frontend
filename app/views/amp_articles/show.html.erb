@@ -8,6 +8,8 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
@@ -25,20 +27,44 @@
   <title><%= @article.title %> - Money Advice Service</title>
 </head>
 <body>
+
   <!-- Google Tag Manager -->
   <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-P66RC5D&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+  <amp-sidebar id="sidebar1" layout="nodisplay" side="left" class="amp-sidenav">
+    <ul class="amp-navigation">
+      <% clumps.each do |clump| %>
+        <li class="amp-navigation__item">
+          <amp-accordion disable-session-states>
+            <section>
+              <li class="amp-navigation__item-header"><%= clump.name %></li>
+              <ul class="amp-navigation__item-submenu">
+                <% clump.categories.each do |category| %>
+                  <% category.categories.each do |subcategory| %>
+                    <li><%= link_to subcategory.title, subcategory.id, class: 'amp-navigation__item-submenu-link' %></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </section >
+          </amp-accordion>
+        </li>
+      <% end %>
+    </ul>
+    <button on='tap:sidebar1.close' class="amp-sidenav__close">Close</button>
+  </amp-sidebar>
 
   <div class="amp-body">
     <header class="amp-article__header">
       <a href="http://moneyadviceservice.org.uk">
         <amp-img class="amp-article__mas-logo" src="<%= image_path "logo-en-white.png" %>" alt="Money Advice Service" height="30" width="200"></amp-img>
       </a>
+      <button class="amp-article__header-menu" on='tap:sidebar1.toggle'><%= t('mobile_nav.menu') %></button>
     </header>
-
     <div class="amp-article">
       <h1><%= @article.title %></h1>
       <%= article.content %>
     </div>
   </div>
+  
 </body>
 </html>

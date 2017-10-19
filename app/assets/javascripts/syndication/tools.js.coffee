@@ -321,8 +321,6 @@
       cy:
         path: 'cy/tools/cyfrifiannell-cyfraniadau-pensiwn-gweithle'
       width: "100%"
-      height: "1000px"
-      include_ga: false
       title: 'Workplace Pension Contribution Calculator'
 
     default_dimensions:

@@ -96,7 +96,7 @@ $responsive: true;
 .amp-sidenav__close {
   font-family: Museo Sans;
   float: right;
-  margin: $baseline-unit;
+  margin: $baseline-unit $baseline-unit*2 $baseline-unit;
   padding: $baseline-unit;
   border: none;
   background-color: $color-white;

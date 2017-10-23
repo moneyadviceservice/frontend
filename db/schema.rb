@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914164504) do
+ActiveRecord::Schema.define(version: 20171011163826) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -263,6 +263,7 @@ ActiveRecord::Schema.define(version: 20170914164504) do
     t.datetime "updated_at"
     t.integer  "index",               limit: 4
     t.boolean  "allow_user_duration"
+    t.string   "image_url",           limit: 255
   end
 
   add_index "cost_calculator_builder_expense_pages", ["calculator_id"], name: "index_cost_calculator_builder_expense_pages_on_calculator_id", using: :btree

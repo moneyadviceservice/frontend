@@ -65,8 +65,8 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.4.0'
-gem 'universal_credit', '2.15.1'
-gem 'wpcc', '1.11.8'
+gem 'universal_credit', '2.16.0'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc', branch: 'wpcc-qa'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

@@ -8,6 +8,16 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/wpcc
+  revision: fccfbd97f57e8c8a166de250407baeb272cdf9d8
+  branch: wpcc-qa
+  specs:
+    wpcc (1.11.8)
+      dough-ruby
+      meta-tags
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -681,7 +691,7 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (2.15.1)
+    universal_credit (2.16.0)
       autoprefixer-rails
       devise
       dough-ruby
@@ -707,10 +717,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.11.8)
-      dough-ruby
-      meta-tags
-      rails (>= 4, < 5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -810,11 +816,11 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 2.15.1)
+  universal_credit (= 2.16.0)
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.11.8)
+  wpcc!
 
 BUNDLED WITH
    1.15.4

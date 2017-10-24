@@ -69,6 +69,15 @@ $responsive: true;
   padding: $baseline-unit*2;
 }
 
+.amp-navigation__item-submenu-heading {
+  font-family: Museo Sans;
+  padding: $baseline-unit*2 0;
+  margin: $baseline-unit 0;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid $color-yellow-dark;
+}
+
 .amp-navigation__item-submenu-link {
   font-family: Museo Sans;
   display: block;

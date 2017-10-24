@@ -40,6 +40,9 @@
               <p class="amp-navigation__item-header"><%= clump.name %></p>
               <ul class="amp-navigation__item-submenu">
                 <% clump.categories.each do |category| %>
+                  <li class="amp-navigation__item-submenu-heading">
+                    <%= link_to category.title, category.id, class: 'amp-navigation__item-submenu-heading' %>
+                  </li>
                   <% category.categories.each do |subcategory| %>
                     <li><%= link_to subcategory.title, subcategory.id, class: 'amp-navigation__item-submenu-link' %></li>
                   <% end %>

@@ -1,4 +1,8 @@
 <% unless hide_contact_panels? %>
+
+<!-- If the page is in the retirements category, show the below partial -->
+<%= render 'shared/pas_chat_banner' %>
+
 <div class="l-constrained">
   <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
 

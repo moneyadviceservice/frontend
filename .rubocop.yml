@@ -28,6 +28,9 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/helpers/pension_chat_banner_helper_spec.rb'
 AllCops:
   Exclude:
   - 'app/helpers/application_helper.rb'

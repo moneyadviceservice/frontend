@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/cy/categories/more-information.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.3.0 (Jones-Agyemang-00151.local; jonesagyemang; 28739) ruby/2.2.5
+        (319; x86_64-darwin16)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Nov 2017 16:38:02 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"f0d53a420904d89b5ed82171039b667a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dcc5d6ce-a7ed-49ae-88ec-5452d52d3b3a
+      X-Runtime:
+      - '0.129177'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6Im1vcmUtaW5mb3JtYXRpb24iLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6IlJoYWdvciBvIGd5bW9ydGggZ3lkYSBwaGVuc2l5bmF1IiwiZGVzY3JpcHRpb24iOiJEeXNnd2NoIHJhZ29yIGFtIGR3eWxsIHBlbnNpd24sIHlzZ2FyaWFkIG1ld24geW1kZGVvbGlhZCwgYSBiZXRoIGnigJl3IHduZXVkIHluZ2zFt24gw6IgcGhlbnNpd24gcmh5d3VuIHBhbiBmeWRkIHdlZGkgbWFydy4iLCJwYXJlbnRfaWQiOiJwZW5zaW9ucy1hbmQtcmV0aXJlbWVudCIsInRoaXJkX2xldmVsX25hdmlnYXRpb24iOmZhbHNlLCJpbWFnZXMiOnsic21hbGwiOm51bGwsImxhcmdlIjpudWxsfSwibGVnYWN5IjpmYWxzZSwiY29udGVudHMiOlt7ImlkIjoiaG93LWNvdWxkLWdldHRpbmctZGl2b3JjZWQtYWZmZWN0LW15LXBlbnNpb24tYW5kLXJldGlyZW1lbnQtaW5jb21lIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJTdXQgeSBnYWxsIGNhZWwgeXNnYXJpYWQgZWZmZWl0aGlvIGFyIGZ5IG1oZW5zaXduIGHigJltIGhpbmN3bSB5bWRkZW9saWFkPyIsImRlc2NyaXB0aW9uIjoiT3MgeWR5Y2ggd2VkaSB5c2dhcnUgbmV1IGRkaWRkeW11IGVpY2ggcGFydG5lcmlhZXRoIHNpZmlsLCBuZXUgb3MgeWR5Y2ggeW4geSBicm9zZXMgbyB3bmV1ZCBoeW5ueSwgZWZhbGxhaSB5IGJ5ZGR3Y2ggeW4gZ3dlbGQgYm9kIGdlbm55Y2ggbGFpIGkgeW1kZGVvbCBhcm5vIG5hZyB5ciBvZWRkZWNoIHluIGRpc2d3eWwuIn0seyJpZCI6InBlbnNpb25zLWFuZC1yZXRpcmVtZW50LWphcmdvbi1idXN0ZXIiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkVnbHVybyBqYXJnb24gcGVuc2l5bmF1IGFjIHltZGRlb2xpYWQiLCJkZXNjcmlwdGlvbiI6IiJ9LHsiaWQiOiJzdXQtaS1hZG5hYm9kLXR3eWxsLXBlbnNpd24iLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlN1dCBpIGFkbmFib2QgdHd5bGwgcGVuc2l3biIsImRlc2NyaXB0aW9uIjoiTWFlIHR3eWxsIHBlbnNpd24gZmVsIOKAmGJlbnRoeWNpYWRhdSBwZW5zaXdu4oCZIG5ldSBneW5pZ2lvbiBhcmlhbiBwYXJvZCB5bWxhZW4gbGxhdyB5biBjYWVsIGV1IGRlZm55ZGRpbyBpIGR3eWxsbyBwb2JsIHN54oCZbiBjeW5pbG8gYSBjaG9sbGkgZXUgaGFyaWFuLiJ9LHsiaWQiOiJwZW5zaW9uLXdpc2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkRlYWxsIGJldGggeXcgUGVuc2lvbiBXaXNlIGEgc3V0IGnigJl3IGRkZWZueWRkaW8gIiwiZGVzY3JpcHRpb24iOiJNYWXigJlyIGNhbmxsYXcgaHduIHluIGVzYm9uaW8gc3V0IHkgbWFlIFBlbnNpb24gV2lzZSB5biBnd2VpdGhpbyBhIHN1dCBpIGJhcmF0b2kgYXQgZWljaCBhcHd5bnRpYWQuIn1dLCJsZWdhY3lfY29udGVudHMiOlt7ImlkIjoiaG93LWNvdWxkLWdldHRpbmctZGl2b3JjZWQtYWZmZWN0LW15LXBlbnNpb24tYW5kLXJldGlyZW1lbnQtaW5jb21lIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJTdXQgeSBnYWxsIGNhZWwgeXNnYXJpYWQgZWZmZWl0aGlvIGFyIGZ5IG1oZW5zaXduIGHigJltIGhpbmN3bSB5bWRkZW9saWFkPyIsImRlc2NyaXB0aW9uIjoiT3MgeWR5Y2ggd2VkaSB5c2dhcnUgbmV1IGRkaWRkeW11IGVpY2ggcGFydG5lcmlhZXRoIHNpZmlsLCBuZXUgb3MgeWR5Y2ggeW4geSBicm9zZXMgbyB3bmV1ZCBoeW5ueSwgZWZhbGxhaSB5IGJ5ZGR3Y2ggeW4gZ3dlbGQgYm9kIGdlbm55Y2ggbGFpIGkgeW1kZGVvbCBhcm5vIG5hZyB5ciBvZWRkZWNoIHluIGRpc2d3eWwuIn0seyJpZCI6InBlbnNpb25zLWFuZC1yZXRpcmVtZW50LWphcmdvbi1idXN0ZXIiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkVnbHVybyBqYXJnb24gcGVuc2l5bmF1IGFjIHltZGRlb2xpYWQiLCJkZXNjcmlwdGlvbiI6IiJ9LHsiaWQiOiJzdXQtaS1hZG5hYm9kLXR3eWxsLXBlbnNpd24iLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlN1dCBpIGFkbmFib2QgdHd5bGwgcGVuc2l3biIsImRlc2NyaXB0aW9uIjoiTWFlIHR3eWxsIHBlbnNpd24gZmVsIOKAmGJlbnRoeWNpYWRhdSBwZW5zaXdu4oCZIG5ldSBneW5pZ2lvbiBhcmlhbiBwYXJvZCB5bWxhZW4gbGxhdyB5biBjYWVsIGV1IGRlZm55ZGRpbyBpIGR3eWxsbyBwb2JsIHN54oCZbiBjeW5pbG8gYSBjaG9sbGkgZXUgaGFyaWFuLiJ9LHsiaWQiOiJwZW5zaW9uLXdpc2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkRlYWxsIGJldGggeXcgUGVuc2lvbiBXaXNlIGEgc3V0IGnigJl3IGRkZWZueWRkaW8gIiwiZGVzY3JpcHRpb24iOiJNYWXigJlyIGNhbmxsYXcgaHduIHluIGVzYm9uaW8gc3V0IHkgbWFlIFBlbnNpb24gV2lzZSB5biBnd2VpdGhpbyBhIHN1dCBpIGJhcmF0b2kgYXQgZWljaCBhcHd5bnRpYWQuIn1dLCJjYXRlZ29yeV9wcm9tb3MiOltdLCJsaW5rcyI6W119
+    http_version: 
+  recorded_at: Wed, 08 Nov 2017 16:38:02 GMT
+recorded_with: VCR 3.0.3

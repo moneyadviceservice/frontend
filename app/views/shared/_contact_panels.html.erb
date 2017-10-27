@@ -1,7 +1,6 @@
 <% unless hide_contact_panels? %>
 
-<!-- If the page is in the retirements category, show the below partial -->
-<%= render 'shared/pas_chat_banner' %>
+<%= render 'shared/pas_chat_banner' if display_pension_chat_banner? %>
 
 <div class="l-constrained">
   <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
@@ -42,8 +41,8 @@
             <div class="contact-panel__button button is-disabled t-chat-button">
               <%= chat_opening_hours.call_to_action %>
             </div>
-          </div> 
-        </div> 
+          </div>
+        </div>
 
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>

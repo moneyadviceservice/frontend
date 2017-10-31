@@ -64,8 +64,8 @@ gem 'pensions_calculator', '~> 1.4.3'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
-gem 'timelines', '~> 1.4.0'
-gem 'universal_credit', '2.16.0'
+gem 'timelines', '~> 1.5.0'
+gem 'universal_credit', '2.16.1'
 gem 'wpcc', '1.11.12'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales

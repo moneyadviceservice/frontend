@@ -653,7 +653,7 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.8.1)
-    timelines (1.4.0.306)
+    timelines (1.5.0.310)
       bowndler
       icalendar
       jquery-rails
@@ -681,7 +681,7 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (2.16.0)
+    universal_credit (2.16.1)
       autoprefixer-rails
       devise
       dough-ruby
@@ -806,11 +806,11 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.4.0)
+  timelines (~> 1.5.0)
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 2.16.0)
+  universal_credit (= 2.16.1)
   validate_url (= 1.0.0)
   vcr
   webmock

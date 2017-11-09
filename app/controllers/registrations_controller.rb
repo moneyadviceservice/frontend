@@ -2,6 +2,16 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :store_location
   before_action :configure_permitted_parameters
 
+  def create
+    build_resource(sign_up_params)
+    resource.validate # Look for any other validation errors besides Recaptcha
+    if verify_recaptcha(model: resource, attribute: 'recaptcha')
+      super
+    else
+      respond_with_navigational(resource) { render :new }
+    end
+  end
+
   def display_skip_to_main_navigation?
     false
   end

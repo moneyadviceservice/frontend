@@ -13,7 +13,6 @@
     </ul>
   <% end %>
 
-
   <%= form_for(resource, as: resource_name,
                          url: registration_path(resource_name),
                          html: {class: "form", novalidate: 'novalidate'},
@@ -123,6 +122,14 @@
       </div>
     </div>
 
+    <div class="registration__row">
+      <div class="registration__field">
+        <%= f.form_row :recaptcha do %>
+          <%= f.errors_for :recaptcha %>
+          <%= recaptcha_tags %>
+        <% end %>
+      </div>
+    </div>
 
     <div class="registration__row">
       <div class="registration__field">

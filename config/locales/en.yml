@@ -47,6 +47,10 @@ en:
     cy: Cymraeg
     en: English
 
+  recaptcha:
+    errors:
+      verification_failed: verification failed, please try again.
+      recaptcha_unreachable: Oops, we failed to validate your reCAPTCHA response. Please try again.
   errors:
     show:
       heading: Sorry
@@ -55,7 +59,7 @@ en:
       forbidden:
         title: Forbidden
       internal_server_error:
-        title: Oops!  
+        title: Oops!
         intro: Something has gone wrong on our side
         message: |
           This page is currently unavailable, please try reloading, wait a few minutes and try again, or use the box below to find what you're looking for.

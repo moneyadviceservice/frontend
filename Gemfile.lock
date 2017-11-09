@@ -81,7 +81,7 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.1.0.74)
+    agreements (2.2.0.76)
       dough-ruby (~> 5.0)
       hashie (~> 2.0.5)
       meta-tags
@@ -534,6 +534,8 @@ GEM
     ranked-model (0.4.0)
       activerecord (>= 3.1.12)
     rdoc (4.3.0)
+    recaptcha (4.6.2)
+      json
     redcarpet (3.2.3)
     request_store (1.3.2)
     responders (2.4.0)
@@ -722,7 +724,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
-  agreements (~> 2.1.0)
+  agreements (~> 2.2.0)
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors
@@ -788,6 +790,7 @@ DEPENDENCIES
   quiz (~> 1.2.0)!
   rack-livereload
   rails (= 4.2.7.1)
+  recaptcha
   redcarpet
   rio (= 1.18.4)!
   rouge
@@ -817,4 +820,4 @@ DEPENDENCIES
   wpcc (= 1.11.12)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

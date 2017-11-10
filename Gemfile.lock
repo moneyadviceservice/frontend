@@ -1,4 +1,16 @@
 GIT
+  remote: git@github.com:moneyadviceservice/agreements.git
+  revision: 6089c76d54800b1e7d741b707bb4768341202c37
+  branch: fixing-sql-vulnerability
+  specs:
+    agreements (2.1.0)
+      dough-ruby (~> 5.0)
+      hashie (~> 2.0.5)
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -81,12 +93,6 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.1.0.74)
-      dough-ruby (~> 5.0)
-      hashie (~> 2.0.5)
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.3.0)
@@ -722,7 +728,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
-  agreements (~> 2.1.0)
+  agreements!
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors

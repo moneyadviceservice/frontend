@@ -51,8 +51,8 @@ cy:
 
   recaptcha:
     errors:
-      verification_failed: Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni.
-      recaptcha_unreachable: Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni.
+      verification_failed: '- Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni.'
+      recaptcha_unreachable: '- Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni.'
   errors:
     show:
       heading: Mae'n ddrwg gennym

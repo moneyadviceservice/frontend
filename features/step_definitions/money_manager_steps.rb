@@ -45,6 +45,6 @@ Then(/^I have the latest answers$/) do
   expect(money_manager_circumstances_changed_page.single_or_in_couple_couple).to be_checked
 end
 
-Given(/^I get my results for the different country$/) do
+Then(/^I get my results for the different country$/) do
   expect(page.current_path).to eql('/en/tools/money-manager/to-read')
 end

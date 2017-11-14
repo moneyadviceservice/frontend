@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/universal_credits/managing-your-rent-to-your-landlord-while-on-uc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.3.0 (Jones-Agyemang-00151.local; jonesagyemang; 61923) ruby/2.2.5
+        (319; x86_64-darwin16)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 06 Nov 2017 15:01:00 GMT
+      Status:
+      - 400 Bad Request
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 669c9123-3256-40bb-a113-a11432554c69
+      X-Runtime:
+      - '0.125052'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Page type \"universal_credit\" not supported"}'
+    http_version: 
+  recorded_at: Tue, 26 Apr 2016 13:00:10 GMT
+recorded_with: VCR 3.0.3

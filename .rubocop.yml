@@ -28,6 +28,9 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/**/*'
 AllCops:
   Exclude:
   - 'app/helpers/application_helper.rb'

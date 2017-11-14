@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/getting-advice-about-retirement.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.3.0 (Jones-Agyemang-00151.local; jonesagyemang; 28739) ruby/2.2.5
+        (319; x86_64-darwin16)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Nov 2017 16:37:59 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"65c11d1fb068db83c48e841686c07e4c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - af494354-28d4-4502-9f6d-9023b4cedaab
+      X-Runtime:
+      - '0.131794'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImdldHRpbmctYWR2aWNlLWFib3V0LXJldGlyZW1lbnQiLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6IkZpbmFuY2lhbCBhZHZpY2UiLCJkZXNjcmlwdGlvbiI6IkhlbHAgd2l0aCBjaG9vc2luZyBhIGZpbmFuY2lhbCBhZHZpc2VyLCBxdWVzdGlvbnMgdG8gYXNrIHRoZW0sIGFuZCBhIGd1aWRlIHRvIHRoZWlyIGZlZXMuIiwicGFyZW50X2lkIjoicGVuc2lvbnMtYW5kLXJldGlyZW1lbnQiLCJ0aGlyZF9sZXZlbF9uYXZpZ2F0aW9uIjpmYWxzZSwiaW1hZ2VzIjp7InNtYWxsIjpudWxsLCJsYXJnZSI6bnVsbH0sImxlZ2FjeSI6ZmFsc2UsImNvbnRlbnRzIjpbeyJpZCI6InJldGlyZW1lbnQtYWR2aXNlci1kaXJlY3RvcnkiLCJ0eXBlIjoidG9vbCIsInRpdGxlIjoiUmV0aXJlbWVudCBhZHZpc2VyIGRpcmVjdG9yeSIsImRlc2NyaXB0aW9uIjoiRkNBIHJlZ3VsYXRlZCBmaW5hbmNpYWwgYWR2aXNlcnMgZm9yIGhlbHAgd2l0aCByZXRpcmVtZW50IHBsYW5uaW5nLCBpbmhlcml0YW5jZSB0YXgsIGVxdWl0eSByZWxlYXNlLCB3aWxscyBhbmQgcHJvYmF0ZSwgbG9uZy10ZXJtIGNhcmUgYW5kIHBlbnNpb24gdHJhbnNmZXJzLiJ9LHsiaWQiOiJ3aGVuLWFuZC13aGVyZS10by1nZXQtcGVuc2lvbnMtaGVscC1hbmQtYWR2aWNlIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJSZXRpcmVtZW50IOKAkyB3aHkgc2hvdWxkIEkgZ2V0IGFkdmljZT8iLCJkZXNjcmlwdGlvbiI6IlBlbnNpb25zIGNhbiBiZSBkYXVudGluZy4gQnV0IHRoZXJlIGFyZSBhIG51bWJlciBvZiBwbGFjZXMgd2hlcmUgeW91IGNhbiBnZXQgaGVscCBhbmQgYWR2aWNlIn0seyJpZCI6ImNob29zaW5nLWEtZmluYW5jaWFsLWFkdmlzZXIiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkNob29zaW5nIGEgZmluYW5jaWFsIGFkdmlzZXIiLCJkZXNjcmlwdGlvbiI6IkV2ZXJ5dGhpbmcgeW91IG5lZWQgdG8ga25vdyBhYm91dCBwaWNraW5nIHRoZSByaWdodCBmaW5hbmNpYWwgYWR2aXNlciwgaW5jbHVkaW5nIGhvdyB0byBmaW5kIG9uZS4gT3VyIHNlcnZpY2UgaXMgZnJlZSwgaW5kZXBlbmRlbnQgYW5kIHNldCB1cCBieSBnb3Zlcm5tZW50LiAifSx7ImlkIjoia2V5LXF1ZXN0aW9ucy10by1hc2steW91ci1maW5hbmNpYWwtYWR2aXNlciIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiS2V5IHF1ZXN0aW9ucyB0byBhc2sgeW91ciBmaW5hbmNpYWwgYWR2aXNlciIsImRlc2NyaXB0aW9uIjoiSWYgeW914oCZcmUgYXBwcm9hY2hpbmcgcmV0aXJlbWVudCBhbmQgd2FudCB0byBzZWUgYSBmaW5hbmNpYWwgYWR2aXNlciwgaXTigJlzIGEgZ29vZCBpZGVhIHRvIHNwZWFrIHRvIGEgZmV3IHNvIHlvdSBjYW4gY29tcGFyZSB0aGUgc2VydmljZSB0aGV5IG9mZmVyIGFuZCBmaW5kIG91dCBpZiB0aGV54oCZcmUgcmlnaHQgZm9yIHlvdS4ifSx7ImlkIjoiZ3VpZGUtdG8tZmluYW5jaWFsLWFkdmlzZXItZmVlcyIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiR3VpZGUgdG8gZmluYW5jaWFsIGFkdmlzZXIgZmVlcyIsImRlc2NyaXB0aW9uIjoiSWYgeW91IHdhbnQgdG8gZ2V0IGZpbmFuY2lhbCBhZHZpY2UsIHlvdSB3aWxsIGhhdmUgdG8gcGF5IGZvciBpdC4gQnV0IHRoZXJlIGFyZSBzZXZlcmFsIHdheXMgeW91IGNhbiBiZSBjaGFyZ2VkIGFuZCBmZWVzIHdpbGwgZGVwZW5kIG9uIGJvdGggeW91ciBzcGVjaWZpYyBuZWVkcyBhbmQgYW4gaW5kaXZpZHVhbCBmaXJt4oCZcyBwcmljZXMuIn1dLCJsZWdhY3lfY29udGVudHMiOlt7ImlkIjoicmV0aXJlbWVudC1hZHZpc2VyLWRpcmVjdG9yeSIsInR5cGUiOiJ0b29sIiwidGl0bGUiOiJSZXRpcmVtZW50IGFkdmlzZXIgZGlyZWN0b3J5IiwiZGVzY3JpcHRpb24iOiJGQ0EgcmVndWxhdGVkIGZpbmFuY2lhbCBhZHZpc2VycyBmb3IgaGVscCB3aXRoIHJldGlyZW1lbnQgcGxhbm5pbmcsIGluaGVyaXRhbmNlIHRheCwgZXF1aXR5IHJlbGVhc2UsIHdpbGxzIGFuZCBwcm9iYXRlLCBsb25nLXRlcm0gY2FyZSBhbmQgcGVuc2lvbiB0cmFuc2ZlcnMuIn0seyJpZCI6IndoZW4tYW5kLXdoZXJlLXRvLWdldC1wZW5zaW9ucy1oZWxwLWFuZC1hZHZpY2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlJldGlyZW1lbnQg4oCTIHdoeSBzaG91bGQgSSBnZXQgYWR2aWNlPyIsImRlc2NyaXB0aW9uIjoiUGVuc2lvbnMgY2FuIGJlIGRhdW50aW5nLiBCdXQgdGhlcmUgYXJlIGEgbnVtYmVyIG9mIHBsYWNlcyB3aGVyZSB5b3UgY2FuIGdldCBoZWxwIGFuZCBhZHZpY2UifSx7ImlkIjoiY2hvb3NpbmctYS1maW5hbmNpYWwtYWR2aXNlciIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiQ2hvb3NpbmcgYSBmaW5hbmNpYWwgYWR2aXNlciIsImRlc2NyaXB0aW9uIjoiRXZlcnl0aGluZyB5b3UgbmVlZCB0byBrbm93IGFib3V0IHBpY2tpbmcgdGhlIHJpZ2h0IGZpbmFuY2lhbCBhZHZpc2VyLCBpbmNsdWRpbmcgaG93IHRvIGZpbmQgb25lLiBPdXIgc2VydmljZSBpcyBmcmVlLCBpbmRlcGVuZGVudCBhbmQgc2V0IHVwIGJ5IGdvdmVybm1lbnQuICJ9LHsiaWQiOiJrZXktcXVlc3Rpb25zLXRvLWFzay15b3VyLWZpbmFuY2lhbC1hZHZpc2VyIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJLZXkgcXVlc3Rpb25zIHRvIGFzayB5b3VyIGZpbmFuY2lhbCBhZHZpc2VyIiwiZGVzY3JpcHRpb24iOiJJZiB5b3XigJlyZSBhcHByb2FjaGluZyByZXRpcmVtZW50IGFuZCB3YW50IHRvIHNlZSBhIGZpbmFuY2lhbCBhZHZpc2VyLCBpdOKAmXMgYSBnb29kIGlkZWEgdG8gc3BlYWsgdG8gYSBmZXcgc28geW91IGNhbiBjb21wYXJlIHRoZSBzZXJ2aWNlIHRoZXkgb2ZmZXIgYW5kIGZpbmQgb3V0IGlmIHRoZXnigJlyZSByaWdodCBmb3IgeW91LiJ9LHsiaWQiOiJndWlkZS10by1maW5hbmNpYWwtYWR2aXNlci1mZWVzIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJHdWlkZSB0byBmaW5hbmNpYWwgYWR2aXNlciBmZWVzIiwiZGVzY3JpcHRpb24iOiJJZiB5b3Ugd2FudCB0byBnZXQgZmluYW5jaWFsIGFkdmljZSwgeW91IHdpbGwgaGF2ZSB0byBwYXkgZm9yIGl0LiBCdXQgdGhlcmUgYXJlIHNldmVyYWwgd2F5cyB5b3UgY2FuIGJlIGNoYXJnZWQgYW5kIGZlZXMgd2lsbCBkZXBlbmQgb24gYm90aCB5b3VyIHNwZWNpZmljIG5lZWRzIGFuZCBhbiBpbmRpdmlkdWFsIGZpcm3igJlzIHByaWNlcy4ifV0sImNhdGVnb3J5X3Byb21vcyI6W10sImxpbmtzIjpbXX0=
+    http_version: 
+  recorded_at: Wed, 08 Nov 2017 16:37:59 GMT
+recorded_with: VCR 3.0.3

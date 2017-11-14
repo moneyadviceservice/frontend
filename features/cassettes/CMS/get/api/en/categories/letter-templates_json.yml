@@ -8,10 +8,10 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mas-Responsive/1.0 (Jon-Gilbraith-00224.local; jongilbraith; 94471) ruby/2.2.5
-        (319; x86_64-darwin15)
+      - Mas-Responsive/1.0 (Jones-Agyemang-00151.local; jonesagyemang; 63973) ruby/2.2.5
+        (319; x86_64-darwin16)
       X-Request-Id:
-      - 1f30a498-f546-4784-8880-44370641a5ea
+      - 6b22ab54-1e2e-4d2e-8fb7-d0b213ab1bc1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -22,7 +22,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Dec 2016 15:53:14 GMT
+      - Mon, 06 Nov 2017 15:32:26 GMT
       Status:
       - 200 OK
       Connection:
@@ -40,9 +40,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f30a498-f546-4784-8880-44370641a5ea
+      - 6b22ab54-1e2e-4d2e-8fb7-d0b213ab1bc1
       X-Runtime:
-      - '0.033794'
+      - '0.127764'
     body:
       encoding: UTF-8
       string: '{"id":"letter-templates","type":"category","title":"Letter templates","description":"Our
@@ -53,5 +53,5 @@ http_interactions:
         templates","description":"Here are some helpful letter templates for you to
         use if you need to set up, cancel or complain about something"}],"category_promos":[],"links":[]}'
     http_version: 
-  recorded_at: Tue, 20 Dec 2016 15:53:14 GMT
+  recorded_at: Mon, 06 Nov 2017 15:32:26 GMT
 recorded_with: VCR 3.0.3

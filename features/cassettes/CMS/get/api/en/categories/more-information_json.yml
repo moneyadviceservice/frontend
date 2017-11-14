@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/categories/more-information.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.3.0 (Jones-Agyemang-00151.local; jonesagyemang; 28739) ruby/2.2.5
+        (319; x86_64-darwin16)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Nov 2017 16:38:00 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"5b58a0f6814f16c9d95e187c282857bd"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80b0a75e-52ad-4915-a94c-a50d04ea677c
+      X-Runtime:
+      - '0.130953'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6Im1vcmUtaW5mb3JtYXRpb24iLCJ0eXBlIjoiY2F0ZWdvcnkiLCJ0aXRsZSI6Ik1vcmUgaGVscCB3aXRoIHBlbnNpb25zIiwiZGVzY3JpcHRpb24iOiJGaW5kIG91dCBtb3JlIGFib3V0IHBlbnNpb24gc2NhbXMsIGRpdm9yY2UgaW4gcmV0aXJlbWVudCwgYW5kIHdoYXQgdG8gZG8gYWJvdXQgc29tZW9uZeKAmXMgcGVuc2lvbiB3aGVuIHRoZXnigJl2ZSBkaWVkLiIsInBhcmVudF9pZCI6InBlbnNpb25zLWFuZC1yZXRpcmVtZW50IiwidGhpcmRfbGV2ZWxfbmF2aWdhdGlvbiI6ZmFsc2UsImltYWdlcyI6eyJzbWFsbCI6bnVsbCwibGFyZ2UiOm51bGx9LCJsZWdhY3kiOmZhbHNlLCJjb250ZW50cyI6W3siaWQiOiJwZW5zaW9ucy1hbmQtcmV0aXJlbWVudC1qYXJnb24tYnVzdGVyIiwidHlwZSI6Imd1aWRlIiwidGl0bGUiOiJQZW5zaW9ucyBhbmQgcmV0aXJlbWVudCBqYXJnb24gYnVzdGVyIiwiZGVzY3JpcHRpb24iOiJBbGwgdGhlIGtleSB0ZXJtcyByZWxhdGluZyB0byBwZW5zaW9ucyBhbmQgcmV0aXJlbWVudCBleHBsYWluZWQifSx7ImlkIjoiaG93LXRvLXNwb3QtYS1wZW5zaW9uLXNjYW0iLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhvdyB0byBzcG90IGEgcGVuc2lvbiBzY2FtIiwiZGVzY3JpcHRpb24iOiJQZW5zaW9uIHNjYW1zIHN1Y2ggYXMg4oCYcGVuc2lvbiBsb2Fuc+KAmSBvciB1cGZyb250IGNhc2ggb2ZmZXJzIGFyZSBiZWluZyB1c2VkIHRvIHN3aW5kbGUgc2F2ZXJzIG91dCBvZiB0aGVpciBtb25leS4gUmVhZCBvbiB0byBmaW5kIG91dCBtb3JlLiJ9LHsiaWQiOiJwZW5zaW9uLXdpc2UiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlVuZGVyc3RhbmRpbmcgd2hhdCBQZW5zaW9uIFdpc2UgaXMgYW5kIGhvdyB0byB1c2UgaXQgIiwiZGVzY3JpcHRpb24iOiJUaGlzIGd1aWRlIGV4cGxhaW5zIGhvdyBQZW5zaW9uIFdpc2Ugd29ya3MgYW5kIGhvdyB0byBwcmVwYXJlIGZvciB5b3VyIGFwcG9pbnRtZW50LiJ9LHsiaWQiOiJob3ctY291bGQtZ2V0dGluZy1kaXZvcmNlZC1hZmZlY3QtbXktcGVuc2lvbi1hbmQtcmV0aXJlbWVudC1pbmNvbWUiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IkhvdyBjb3VsZCBnZXR0aW5nIGRpdm9yY2VkIGFmZmVjdCBteSBwZW5zaW9uIGFuZCByZXRpcmVtZW50IGluY29tZT8iLCJkZXNjcmlwdGlvbiI6IiJ9XSwibGVnYWN5X2NvbnRlbnRzIjpbeyJpZCI6InBlbnNpb25zLWFuZC1yZXRpcmVtZW50LWphcmdvbi1idXN0ZXIiLCJ0eXBlIjoiZ3VpZGUiLCJ0aXRsZSI6IlBlbnNpb25zIGFuZCByZXRpcmVtZW50IGphcmdvbiBidXN0ZXIiLCJkZXNjcmlwdGlvbiI6IkFsbCB0aGUga2V5IHRlcm1zIHJlbGF0aW5nIHRvIHBlbnNpb25zIGFuZCByZXRpcmVtZW50IGV4cGxhaW5lZCJ9LHsiaWQiOiJob3ctdG8tc3BvdC1hLXBlbnNpb24tc2NhbSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiSG93IHRvIHNwb3QgYSBwZW5zaW9uIHNjYW0iLCJkZXNjcmlwdGlvbiI6IlBlbnNpb24gc2NhbXMgc3VjaCBhcyDigJhwZW5zaW9uIGxvYW5z4oCZIG9yIHVwZnJvbnQgY2FzaCBvZmZlcnMgYXJlIGJlaW5nIHVzZWQgdG8gc3dpbmRsZSBzYXZlcnMgb3V0IG9mIHRoZWlyIG1vbmV5LiBSZWFkIG9uIHRvIGZpbmQgb3V0IG1vcmUuIn0seyJpZCI6InBlbnNpb24td2lzZSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiVW5kZXJzdGFuZGluZyB3aGF0IFBlbnNpb24gV2lzZSBpcyBhbmQgaG93IHRvIHVzZSBpdCAiLCJkZXNjcmlwdGlvbiI6IlRoaXMgZ3VpZGUgZXhwbGFpbnMgaG93IFBlbnNpb24gV2lzZSB3b3JrcyBhbmQgaG93IHRvIHByZXBhcmUgZm9yIHlvdXIgYXBwb2ludG1lbnQuIn0seyJpZCI6Imhvdy1jb3VsZC1nZXR0aW5nLWRpdm9yY2VkLWFmZmVjdC1teS1wZW5zaW9uLWFuZC1yZXRpcmVtZW50LWluY29tZSIsInR5cGUiOiJndWlkZSIsInRpdGxlIjoiSG93IGNvdWxkIGdldHRpbmcgZGl2b3JjZWQgYWZmZWN0IG15IHBlbnNpb24gYW5kIHJldGlyZW1lbnQgaW5jb21lPyIsImRlc2NyaXB0aW9uIjoiIn1dLCJjYXRlZ29yeV9wcm9tb3MiOltdLCJsaW5rcyI6W119
+    http_version: 
+  recorded_at: Wed, 08 Nov 2017 16:38:00 GMT
+recorded_with: VCR 3.0.3

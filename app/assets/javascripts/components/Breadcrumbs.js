@@ -19,8 +19,6 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
   * Initialize the component
    */
   Breadcrumbs.prototype.init = function(initialised) {
-    console.log('init!');
-
     this._initialisedSuccess(initialised);
     this._bindEvents();
     this._setVisibility();
@@ -40,8 +38,6 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities'], function($
    * Set HTML5 hidden property to be 'hidden' for small screenwidth
    */
   Breadcrumbs.prototype._setVisibility = function() {
-    console.log('_setUpAria!');
-
     if (mediaQueries.atSmallViewport()) {
       this.$breadcrumbs
         .attr('aria-hidden', true)

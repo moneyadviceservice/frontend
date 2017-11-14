@@ -162,7 +162,7 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     concurrent-ruby (1.0.5)
-    cost_calculator_builder (0.4.3)
+    cost_calculator_builder (0.4.4)
       bowndler
       dough-ruby (~> 5.0)
       friendly_id (>= 5.1.0)
@@ -433,7 +433,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     modernizr-rails (2.6.3)
-    mortgage_calculator (1.9.4.682)
+    mortgage_calculator (1.10.1.684)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
@@ -663,7 +663,7 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.8.1)
-    timelines (1.4.0.306)
+    timelines (1.5.0.310)
       bowndler
       icalendar
       jquery-rails
@@ -691,7 +691,7 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (2.16.0)
+    universal_credit (2.16.1)
       autoprefixer-rails
       devise
       dough-ruby
@@ -717,7 +717,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.11.11)
+    wpcc (1.11.12)
       dough-ruby
       meta-tags
       rails (>= 4, < 5)
@@ -746,7 +746,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 0.4.3)
+  cost_calculator_builder (~> 0.4.4)
   cream (~> 1.0.0)
   csslint_ruby
   cucumber-rails
@@ -782,7 +782,7 @@ DEPENDENCIES
   mas-assets!
   mas-cms-client (~> 1.1)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 1.9.4)
+  mortgage_calculator (~> 1.10.1)
   mysql2
   newrelic_rpm
   nokogiri
@@ -816,15 +816,15 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.4.0)
+  timelines (~> 1.5.0)
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 2.16.0)
+  universal_credit (= 2.16.1)
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.11.11)
+  wpcc (= 1.11.12)
 
 BUNDLED WITH
    1.15.4

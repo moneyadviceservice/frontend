@@ -35,6 +35,7 @@ gem 'nunes'
 gem 'opening_hours'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'redcarpet'
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rouge'
 gem 'rubytree'
 gem 'sass-rails'

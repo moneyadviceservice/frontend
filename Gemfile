@@ -17,7 +17,7 @@ gem 'cream', '~> 1.0.0'
 gem 'delayed_job_active_record'
 gem 'devise', '~> 4.2.0'
 gem 'devise-encryptable'
-gem 'dough-ruby', '~> 5.25'
+gem 'dough-ruby', '~> 5.26.1'
 gem 'draper', '< 3'
 gem 'faraday', '0.9.2'
 gem 'faraday-conductivity'
@@ -67,8 +67,7 @@ gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '2.16.1'
-gem 'wpcc', '1.11.14'
-
+gem 'wpcc', '1.12.0'
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'
 

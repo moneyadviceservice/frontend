@@ -275,7 +275,7 @@ GEM
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
       railties (>= 4.0, < 5.1)
-    dough-ruby (5.25.3.296)
+    dough-ruby (5.26.1.300)
       activemodel
       activesupport
       rails (>= 3.2, < 5)
@@ -710,7 +710,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.11.14)
+    wpcc (1.12.0)
       dough-ruby
       meta-tags
       rails (>= 4, < 5)
@@ -754,7 +754,7 @@ DEPENDENCIES
   devise (~> 4.2.0)
   devise-encryptable
   dotenv-rails
-  dough-ruby (~> 5.25)
+  dough-ruby (~> 5.26.1)
   draper (< 3)
   ejs
   email_spec (< 2)
@@ -818,7 +818,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.11.14)
+  wpcc (= 1.12.0)
 
 BUNDLED WITH
    1.16.0

@@ -3,7 +3,9 @@ RSpec.describe ContentItemDecorator do
 
   subject(:decorator) { described_class.decorate(content_item) }
 
-  let(:content_item) { instance_double(Core::Article, id: 'bob') }
+  let(:content_item) do
+    Mas::Cms::Article.new('borrow-money')
+  end
 
   it { is_expected.to respond_to(:alternate_options) }
   it { is_expected.to respond_to(:canonical_url) }
@@ -75,17 +77,11 @@ RSpec.describe ContentItemDecorator do
 
   describe '#canonical_url' do
     before do
-      allow(content_item.class).to receive_messages(to_s: 'core/content_item')
-      allow(helpers).to receive_messages(content_item_url: '/content_items/bob')
+      allow(helpers).to receive(:article_url).with('borrow-money').and_return('/articles/borrow-money')
     end
 
     it 'requests the path from the object with the name derived from the object class' do
-      expect(helpers).to receive(:content_item_url)
-      subject.canonical_url
-    end
-
-    it 'returns the path to the content_item' do
-      expect(subject.canonical_url).to eq('/content_items/bob')
+      expect(subject.canonical_url).to eq('/articles/borrow-money')
     end
   end
 

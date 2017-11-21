@@ -14,10 +14,6 @@ RSpec.shared_examples 'a successful get article request' do
   let(:breadcrumbs) { [] }
   let(:category_tree) { double }
 
-  it 'returns success response' do
-    expect(response).to be_ok
-  end
-
   it 'assigns the result of article reader to @article' do
     expect(assigns(:article)).to eq(article)
   end

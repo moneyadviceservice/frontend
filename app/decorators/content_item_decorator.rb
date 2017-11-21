@@ -21,7 +21,7 @@ class ContentItemDecorator < Draper::Decorator
   end
 
   def canonical_url
-    h.send("#{object.class.to_s.underscore.gsub('core/', '')}_url", object.id)
+    h.send("#{object.class.to_s.demodulize.underscore}_url", object.id)
   end
 
   def content

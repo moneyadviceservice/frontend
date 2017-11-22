@@ -10,8 +10,8 @@ class ArticlesController < ApplicationController
   def show
     begin
       @article = Mas::Cms::Article.find(params[:id], locale: params[:locale])
-    rescue Mas::Cms::Errors::ResourceNotFound => e
-      raise ActionController::RoutingError.new(e)
+    rescue Mas::Cms::Errors::ResourceNotFound
+      not_found
     end
 
     set_breadcrumbs

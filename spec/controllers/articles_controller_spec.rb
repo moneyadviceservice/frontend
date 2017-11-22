@@ -1,5 +1,3 @@
-require_relative './shared_examples/get_article'
-
 RSpec.describe ArticlesController, type: :controller do
   def attributes
     {
@@ -109,10 +107,14 @@ RSpec.describe ArticlesController, type: :controller do
 
   describe '#assigns to @breadcrumb' do
     context 'article exists and has breadcrumbs' do
-      it 'assigns breadcrumbs' do
-        breadcrumb = nil
+      let(:article) { double(id: 'free-printed-guides') }
+      let(:breadcrumbs) { [] }
 
-        expect(assigns(:breadcrumbs)).to match(breadcrumb)
+      it 'assigns breadcrumbs' do
+        allow(BreadcrumbTrail).to receive(:build).and_return(breadcrumbs)
+        get :show, attributes
+
+        expect(assigns(:breadcrumbs)).to match(breadcrumbs)
       end
     end
   end

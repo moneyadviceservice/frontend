@@ -1,5 +1,3 @@
-require_relative './shared_examples/get_article'
-
 RSpec.describe ArticlesController, type: :controller do
   def attributes
     {

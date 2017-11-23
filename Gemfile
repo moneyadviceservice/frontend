@@ -47,7 +47,7 @@ gem 'mas-cms-client', '~> 1.1'
 # tools
 gem 'action_plans', '~> 4.6.0'
 gem 'advice_plans', '~> 3.3.1'
-gem 'agreements', '~> 2.2.0'
+gem 'agreements', git: 'git@github.com:moneyadviceservice/agreements.git', branch: 'add-recaptcha' #'~> 2.2.0'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 5.0.3'
 gem 'car_cost_tool', '~> 1.1.2'

@@ -1,4 +1,17 @@
 GIT
+  remote: git@github.com:moneyadviceservice/agreements.git
+  revision: 759e5b66e248113de2fa1e209f262135845d1d19
+  branch: add-recaptcha
+  specs:
+    agreements (2.2.0)
+      dough-ruby (~> 5.0)
+      hashie (~> 2.0.5)
+      meta-tags
+      rails (>= 4, < 5)
+      recaptcha
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -81,12 +94,6 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.2.0.76)
-      dough-ruby (~> 5.0)
-      hashie (~> 2.0.5)
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.3.0)
@@ -724,7 +731,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
-  agreements (~> 2.2.0)
+  agreements!
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors

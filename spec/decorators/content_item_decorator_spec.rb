@@ -75,13 +75,37 @@ RSpec.describe ContentItemDecorator do
     end
   end
 
-  describe '#canonical_url' do
-    before do
-      allow(helpers).to receive(:article_url).with('borrow-money').and_return('/articles/borrow-money')
+  describe '#anonical_url' do
+    context 'when article' do
+      let(:content_item) do
+        Mas::Cms::Article.new('borrow-money')
+      end
+
+      before do
+        expect(helpers).to receive(:article_url)
+          .with('borrow-money')
+          .and_return('/articles/borrow-money')
+      end
+
+      it 'requests the path from object with name derived from object class' do
+        expect(subject.canonical_url).to eq('/articles/borrow-money')
+      end
     end
 
-    it 'requests the path from the object with the name derived from the object class' do
-      expect(subject.canonical_url).to eq('/articles/borrow-money')
+    context 'when article preview' do
+      let(:content_item) do
+        Mas::Cms::ArticlePreview.new('borrow-money')
+      end
+
+      before do
+        expect(helpers).to receive(:article_url)
+          .with('borrow-money')
+          .and_return('/articles/borrow-money')
+      end
+
+      it 'requests the path from object with name derived from super class' do
+        expect(subject.canonical_url).to eq('/articles/borrow-money')
+      end
     end
   end
 

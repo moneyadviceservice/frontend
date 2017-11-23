@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
+  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
 
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator
@@ -8,11 +9,7 @@ class ArticlesController < ApplicationController
   include Navigation
 
   def show
-    begin
-      @article = Mas::Cms::Article.find(params[:id], locale: params[:locale])
-    rescue Mas::Cms::Errors::ResourceNotFound
-      not_found
-    end
+    @article = resource
 
     set_breadcrumbs
     set_related_content
@@ -22,6 +19,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def resource
+    Mas::Cms::Article.find(params[:id], locale: params[:locale])
+  end
 
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status

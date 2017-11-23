@@ -42,7 +42,7 @@ gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'postcode_anywhere-email_validation'
 gem 'turnout'
-gem 'mas-cms-client', '~> 1.1'
+gem 'mas-cms-client', '1.5.0'
 
 # tools
 gem 'action_plans', '~> 4.6.0'

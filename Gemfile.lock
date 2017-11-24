@@ -81,11 +81,12 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.2.0.76)
+    agreements (2.3.0.78)
       dough-ruby (~> 5.0)
       hashie (~> 2.0.5)
       meta-tags
       rails (>= 4, < 5)
+      recaptcha
       sass-rails
     angularjs-rails (1.2.26)
     arel (6.0.4)
@@ -724,7 +725,7 @@ DEPENDENCIES
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
-  agreements (~> 2.2.0)
+  agreements (~> 2.3.0)
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors

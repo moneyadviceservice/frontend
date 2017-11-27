@@ -7,9 +7,10 @@ class DebtManagementController < ApplicationController
 
   def company_list
     return @company_list if @company_list
-    @company_list = Core::ArticleReader.new(COMPANY_LIST_ARTICLE_ID).call do
-      not_found
-    end
+    @company_list = Mas::Cms::Article.find(
+      COMPANY_LIST_ARTICLE_ID,
+      locale: I18n.locale
+    )
     @company_list = ContentItemDecorator.decorate(@company_list)
   end
   helper_method :company_list
@@ -18,5 +19,4 @@ class DebtManagementController < ApplicationController
     true
   end
   helper_method :hide_contact_panels?
-
 end

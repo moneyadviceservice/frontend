@@ -60,5 +60,4 @@ class ArticlesController < ApplicationController
   def default_main_content_location?
     false
   end
-
 end

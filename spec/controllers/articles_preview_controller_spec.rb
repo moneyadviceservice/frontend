@@ -1,21 +1,30 @@
 require_relative './shared_examples/get_article'
 
 RSpec.describe ArticlesPreviewController, type: :controller do
-  describe 'GET show' do
-    context 'when preview exists for an article' do
-      before do
-        expect(Core::ArticlePreviewer).to receive(:new) do
-          double(Core::ArticlePreviewer, call: article)
-        end
-      end
+  def attributes
+    {
+      id: article.id,
+      locale: I18n.locale,
+      page_type: 'articles'
+    }
+  end
 
-      it_should_behave_like 'a successful get article request'
+  describe 'GET show' do
+    context 'when article exists' do
+      before { get :show, attributes }
+      let(:article) { double(id: 'how-much-rent-can-you-afford') }
+
+      it { is_expected.to respond_with 200 }
     end
 
-    context 'when preview does not exist for an article' do
-      before { allow_any_instance_of(Core::ArticlePreviewer).to receive(:call).and_yield(Core::Article.new('no-exist')) }
+    context 'when article does not exist' do
+      let(:article) { double(id: 'fake-article') }
 
-      it_should_behave_like 'an unsuccessful get article request'
+      it 'returns resource not found error' do
+        expect{
+          get :show, attributes
+        }.to raise_error(ActionController::RoutingError)
+      end
     end
   end
 end

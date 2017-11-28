@@ -1,68 +1,120 @@
-require_relative './shared_examples/get_article'
-
 RSpec.describe ArticlesController, type: :controller do
+  def attributes
+    {
+      id: article.id,
+      locale: I18n.locale,
+      page_type: 'articles'
+    }
+  end
+
   describe 'GET show' do
-    context 'when an article does exist' do
-      before do
-        expect(Core::ArticleReader).to receive(:new) do
-          double(Core::ArticleReader, call: article)
-        end
-      end
+    context 'when article exists' do
+      before { get :show, attributes }
 
-      it_should_behave_like 'a successful get article request'
+      let(:article) { double(id: 'how-much-rent-can-you-afford') }
+
+      it { is_expected.to respond_with 200 }
     end
 
-    context 'when an article does not exist' do
-      before { allow_any_instance_of(Core::ArticleReader).to receive(:call).and_yield(Core::Article.new('some-article')) }
+    context 'when article does not exist' do
+      let(:article) { double(id: 'fake-article') }
 
-      it_should_behave_like 'an unsuccessful get article request'
-    end
-
-    context 'article is a redirect' do
-      before do
-        allow_any_instance_of(Core::ArticleReader).to receive(:call).and_yield(OpenStruct.new(redirect?: true, location: 'https://example.com', status: 301))
-      end
-
-      it 'redirect with 301 status' do
-        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
-        expect(response.status).to eql(301)
-      end
-
-      it 'redirects to given location' do
-        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
-        expect(response.location).to eql('https://example.com')
+      it 'returns resource not found error' do
+        expect{
+          get :show, attributes
+        }.to raise_error(ActionController::RoutingError)
       end
     end
   end
 
-  describe '#set_article_canonical_url', focus: true do
-    let(:article) { Core::Article.new('test', categories: []) }
+  describe '#redirect' do
+    context 'article is a redirect' do
+      before { get :show, attributes }
+
+      let(:article) do
+        double(id: 'building-a-credit-history-as-a-young-consumer')
+      end
+
+      it { is_expected.to respond_with 301 }
+
+      it 'redirects to given location' do
+        expect(response.location).to match(
+          'http://localhost:5000/en/articles/how-to-improve-your-credit-rating'
+        )
+      end
+    end
+  end
+
+  describe '#set_article_canonical_url' do
+    subject(:article_canonical_url) { assigns(:article_amp_url) }
 
     before do
-      expect(Core::ArticleReader).to receive(:new) do
-        double(Core::ArticleReader, call: article)
+      allow(Mas::Cms::Article).to receive(:find).and_return(article)
+
+      get :show, attributes
+    end
+
+    context 'article supports AMP' do
+      let(:article) do
+        double(id: 'free-printed-guides', categories: [], supports_amp: true)
+      end
+
+      it 'sets article_canonical_url to the AMP url' do
+        expect(article_canonical_url).to match(
+          'http://test.host/en/articles/free-printed-guides/amp'
+        )
       end
     end
 
-    context 'article supports_amp is true' do
-      before do
-        allow(article).to receive(:supports_amp).and_return(true)
-        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
+    context 'article does not support AMP' do
+      let(:article) do
+        double(id: 'free-printed-guides', categories: [], supports_amp: false)
       end
 
       it 'sets article_canonical_url to the amp url' do
-        expect(assigns(:article_amp_url)).to eq('http://test.host/en/articles/test/amp')
+        expect(article_canonical_url).to eq(nil)
+      end
+    end
+  end
+
+  describe '#assigns to @article' do
+    context 'article does not exist' do
+      let(:article) do
+        double(id: 'fake-article', categories: [], supports_amp: false)
+      end
+
+      it 'raises a routing error' do
+        expect {
+          get :show, attributes
+        }.to raise_error(ActionController::RoutingError)
       end
     end
 
-    context 'article supports_amp is false' do
+    context 'article exists' do
       before do
-        allow(article).to receive(:supports_amp).and_return(false)
-        get :show, id: 'anything', locale: I18n.locale, page_type: 'articles'
+        get :show, attributes
       end
 
-      it 'sets article_canonical_url to the amp url' do
-        expect(assigns(:article_amp_url)).to eq(nil)
+      let(:article) do
+        double(id: 'free-printed-guides')
+      end
+
+      it 'returns article from MAS CMS API' do
+        expect(assigns(:article)).to be_a(Mas::Cms::Article)
+      end
+    end
+  end
+
+  describe '#assigns to @breadcrumb' do
+    context 'article exists and has breadcrumbs' do
+      let(:article) { double(id: 'free-printed-guides') }
+      let(:breadcrumbs) { [] }
+
+      it 'assigns breadcrumbs' do
+        allow(BreadcrumbTrail).to receive(:build).and_return(breadcrumbs)
+        get :show, attributes
+
+        expect(assigns(:breadcrumbs)).to match(breadcrumbs)
       end
     end
   end

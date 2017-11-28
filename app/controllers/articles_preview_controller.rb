@@ -1,7 +1,7 @@
 class ArticlesPreviewController < ArticlesController
   private
 
-  def interactor
-    Core::ArticlePreviewer.new(params[:id])
+  def resource
+    Mas::Cms::ArticlePreview.find(params[:id], locale: params[:locale])
   end
 end

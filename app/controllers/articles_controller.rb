@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
+  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
+
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator
   decorates_assigned :parent_category, with: CategoryDecorator
@@ -6,13 +9,7 @@ class ArticlesController < ApplicationController
   include Navigation
 
   def show
-    @article = interactor.call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      else
-        not_found
-      end
-    end
+    @article = resource
 
     set_breadcrumbs
     set_related_content
@@ -23,17 +20,26 @@ class ArticlesController < ApplicationController
 
   private
 
-  def interactor
-    Core::ArticleReader.new(params[:id])
+  def resource
+    Mas::Cms::Article.find(params[:id], locale: params[:locale])
+  end
+
+  def redirect_page(e)
+    redirect_to e.location, status: e.http_response.status
   end
 
   def set_breadcrumbs
-    @breadcrumbs = BreadcrumbTrail.build(@article, category_tree(navigation_categories))
+    @breadcrumbs = BreadcrumbTrail.build(
+      @article,
+      category_tree(navigation_categories)
+    )
   end
 
   def set_related_content
-    @related_content = CategoriesWithRestrictedContents.build(@article.categories,
-                                                              RelatedContent.build(@article))
+    @related_content = CategoriesWithRestrictedContents.build(
+      @article.categories,
+      RelatedContent.build(@article)
+    )
   end
 
   def set_categories
@@ -54,5 +60,4 @@ class ArticlesController < ApplicationController
   def default_main_content_location?
     false
   end
-
 end

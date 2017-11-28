@@ -9,7 +9,6 @@ And I want all my details to be cleared when I sign out
     When  I complete the series of questions
     And   I get my results
     And   I sign out
-    And   I should be at the Money Manager landing page
     Then  I should not see any hint of my details when I re-visit the tool
 
   Scenario: Signing in after completing questionnaire saves answers
@@ -18,6 +17,7 @@ And I want all my details to be cleared when I sign out
     And   I sign in
     And   I sign out
     When  I am on the Money Manager tool
+    And   I select a country
     And   I sign in
     Then  I get my results
     

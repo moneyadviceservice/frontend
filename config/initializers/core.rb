@@ -22,9 +22,6 @@ Core::Registry::Connection[:cms]            = cms_connection
 Core::Registry::Repository[:action_plan] =
   Core::Repository::ActionPlans::CMS.new
 
-Core::Registry::Repository[:article] =
-  Core::Repository::Articles::CMS.new
-
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 

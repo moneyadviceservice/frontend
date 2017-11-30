@@ -9,14 +9,10 @@ RSpec.shared_examples 'a successful get article request' do
     get :show, id: article.id, locale: I18n.locale, page_type: 'articles'
   end
 
-  let(:article) { Core::Article.new('test', categories: categories) }
+  let(:article) { Mas::Cms::ArticlePreview.new('test', categories: categories) }
   let(:categories) { [] }
   let(:breadcrumbs) { [] }
   let(:category_tree) { double }
-
-  it 'returns success response' do
-    expect(response).to be_ok
-  end
 
   it 'assigns the result of article reader to @article' do
     expect(assigns(:article)).to eq(article)

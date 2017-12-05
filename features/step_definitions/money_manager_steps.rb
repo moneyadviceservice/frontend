@@ -44,3 +44,7 @@ Then(/^I have the latest answers$/) do
   expect(money_manager_circumstances_changed_page.received_first_payment_false).to be_checked
   expect(money_manager_circumstances_changed_page.single_or_in_couple_couple).to be_checked
 end
+
+Then(/^I get my results for the different country$/) do
+  expect(page).to have_css('p.t-ni')
+end

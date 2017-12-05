@@ -8,6 +8,24 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: 57f981335cda505191c80ce927540b77998e169e
+  branch: 8545_Add-devolved-nation-selection
+  specs:
+    universal_credit (2.17.0)
+      autoprefixer-rails
+      devise
+      dough-ruby
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2 (= 0.4.9)
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -436,7 +454,7 @@ GEM
     multi_json (1.12.2)
     multi_test (0.1.2)
     multipart-post (2.0.0)
-    mysql2 (0.4.5)
+    mysql2 (0.4.9)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
@@ -684,18 +702,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (2.16.1)
-      autoprefixer-rails
-      devise
-      dough-ruby
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2 (= 0.4.5)
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -776,7 +782,7 @@ DEPENDENCIES
   mas-cms-client (~> 1.1)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 1.10.2)
-  mysql2
+  mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri
   nunes
@@ -814,7 +820,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 2.16.1)
+  universal_credit!
   validate_url (= 1.0.0)
   vcr
   webmock

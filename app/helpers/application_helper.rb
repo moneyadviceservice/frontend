@@ -55,10 +55,6 @@ module ApplicationHelper
     (request.fullpath =~ /^\/(cy|en)\/(tools|retirement-income-options)/).present?
   end
 
-  def is_environment_on_uat?
-    ENV['MAS_ENVIRONMENT'] == 'uat'
-  end
-
   private
 
   def strip_leading_indentation_from_source(source)

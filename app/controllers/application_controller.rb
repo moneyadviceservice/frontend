@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   include Chat
   include Localisation
   include NotFound
+  include AssetsHelper
 
   before_action :fetch_footer_content
   def fetch_footer_content
@@ -90,7 +91,19 @@ class ApplicationController < ActionController::Base
   def set_tool_instance
   end
 
+  def mas_optimizely_tag
+    return if syndicated_tool_request?
+
+    optimizely_include_tag if Rails.env.production? || is_environment_on_uat?
+  end
+
+  helper_method :mas_optimizely_tag
+
   private
+
+  def is_environment_on_uat?
+    Rails.env == 'uat'
+  end
 
   def set_syndicated_x_frame
     response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?

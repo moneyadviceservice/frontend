@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <%= javascript_include_tag 'jquery/dist/jquery', async: 'async' %>
-  <%= optimizely_include_tag if (Rails.env.production? || is_environment_on_uat?) %>
+  <%= mas_optimizely_tag %>
 
   <%= display_meta_tags(site: t('.title'), reverse: true, separator: '-') %>
   <%= csrf_meta_tags %>

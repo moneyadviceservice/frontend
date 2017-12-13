@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020132935) do
+ActiveRecord::Schema.define(version: 20171011163826) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -658,12 +658,11 @@ ActiveRecord::Schema.define(version: 20171020132935) do
 
   create_table "universal_credit_claimant_data", force: :cascade do |t|
     t.integer  "questionnaire_id",        limit: 4
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.integer  "claimant_id",             limit: 4
     t.integer  "budget_id",               limit: 4
     t.integer  "completed_tasks_list_id", limit: 4
-    t.string   "country",                 limit: 255
   end
 
   add_index "universal_credit_claimant_data", ["questionnaire_id"], name: "index_universal_credit_claimant_data_on_questionnaire_id", using: :btree

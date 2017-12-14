@@ -66,7 +66,7 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', ref: 'f0bfc42cd21a604479899972702957f749e001f6'
 gem 'wpcc', '1.12.0'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales

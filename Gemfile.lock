@@ -8,6 +8,16 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/wpcc
+  revision: 38f75b9ef10ba4027df506b9247491e3da39e38e
+  branch: 8618-add-threshold-warnings-FE2
+  specs:
+    wpcc (1.12.1)
+      dough-ruby
+      meta-tags
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -710,10 +720,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.12.0)
-      dough-ruby
-      meta-tags
-      rails (>= 4, < 5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -818,7 +824,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.12.0)
+  wpcc!
 
 BUNDLED WITH
    1.16.0

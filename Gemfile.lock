@@ -1,4 +1,20 @@
 GIT
+  remote: git@github.com:moneyadviceservice/budget_planner
+  revision: 9c778c772597adb9b4f652f719a08d437a03b591
+  branch: 8733_Update-tooltips
+  specs:
+    budget_planner (5.0.3)
+      i18n-js (= 3.0.0.mas)
+      jquery-rails
+      jquery-ui-rails (~> 4.0)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -105,16 +121,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bowndler (1.0.2)
       thor
-    budget_planner (5.0.3.771)
-      i18n-js (= 3.0.0.mas)
-      jquery-rails
-      jquery-ui-rails (~> 4.0)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
     bugsnag (5.3.2)
     builder (3.2.3)
     byebug (9.0.6)
@@ -731,7 +737,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bowndler (~> 1.0)
-  budget_planner (~> 5.0.3)
+  budget_planner!
   bugsnag
   byebug
   capybara

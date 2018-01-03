@@ -14,6 +14,7 @@ gem 'activerecord-session_store'
 gem 'aes'
 gem 'bugsnag'
 gem 'cream', '~> 1.0.0'
+gem 'danger', require: false
 gem 'delayed_job_active_record'
 gem 'devise', '~> 4.2.0'
 gem 'devise-encryptable'

@@ -21,7 +21,6 @@ module World
       internal_server_error
       money_manager
       money_manager_circumstances_changed
-      money_manager_questionnaire
       news
       news_article
       partners

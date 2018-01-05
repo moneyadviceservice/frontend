@@ -8,6 +8,21 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator
+  revision: b453432f4d1c207931b79e393057296bd976dd65
+  branch: 8721-first-time-buyer-table
+  specs:
+    mortgage_calculator (2.3.0)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.0)
+      jquery-rails
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      underscore-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -424,15 +439,6 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     modernizr-rails (2.6.3)
-    mortgage_calculator (2.2.0.699)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.0)
-      jquery-rails
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      underscore-rails
     multi_json (1.12.2)
     multi_test (0.1.2)
     multipart-post (2.0.0)
@@ -775,7 +781,7 @@ DEPENDENCIES
   mas-assets!
   mas-cms-client (= 1.5.0)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 2.2.0)
+  mortgage_calculator!
   mysql2
   newrelic_rpm
   nokogiri

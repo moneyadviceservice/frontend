@@ -5,6 +5,7 @@ require 'html_processor/node_replacer'
 require 'html_processor/table_wrapper'
 require 'html_processor/video_wrapper'
 require 'html_processor/amp_video'
+require 'html_processor/amp_img'
 require 'html_processor/heading_attributes'
 
 module HTMLProcessor
@@ -15,6 +16,7 @@ module HTMLProcessor
   INTRO_PARAGRAPH   = '//p[@class="intro"]'.freeze
   IMAGE_AUTHOR      = '//p/em/text()[contains(., "Photo:")]'.freeze
   VIDEO_IFRAME      = '//iframe[starts-with(@src, "https://www.youtube.com/embed")]'.freeze
+  IMG               = '//img'.freeze
   COLLAPSIBLE_SPAN  = '//span[@class="collapse"]'.freeze
 
   TABLE_WRAPPER     = '<div class="table-wrapper"/>'.freeze

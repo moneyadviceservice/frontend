@@ -20,7 +20,8 @@ class AmpArticleDecorator < Draper::Decorator
 
   def html_processors
     [
-      [HTMLProcessor::AmpVideo, [HTMLProcessor::VIDEO_IFRAME]]
+      [HTMLProcessor::AmpVideo, [HTMLProcessor::VIDEO_IFRAME]],
+      [HTMLProcessor::AmpImg,   [HTMLProcessor::IMG]]
     ]
   end
 end

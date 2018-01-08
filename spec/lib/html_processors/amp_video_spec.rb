@@ -18,7 +18,7 @@ RSpec.describe HTMLProcessor::AmpVideo do
       '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
     end
 
-    it 'does not modify title attribute', focus: true do
+    it 'does not modify title attribute' do
       expect(processed_html.strip).to eq('<amp-youtube data-videoid="3ciEDiokPkw" layout="responsive" width="480" height="270"></amp-youtube>')
     end
   end

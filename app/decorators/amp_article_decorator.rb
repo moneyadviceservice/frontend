@@ -1,7 +1,6 @@
 require 'html_processor'
 
 class AmpArticleDecorator < Draper::Decorator
-
   def initialize(object, options = {})
     super
   end
@@ -20,8 +19,9 @@ class AmpArticleDecorator < Draper::Decorator
 
   def html_processors
     [
-      [HTMLProcessor::AmpVideo, [HTMLProcessor::VIDEO_IFRAME]],
-      [HTMLProcessor::AmpImg,   [HTMLProcessor::IMG]]
+      [HTMLProcessor::AmpVideo,  [HTMLProcessor::VIDEO_IFRAME]],
+      [HTMLProcessor::AmpImg,    [HTMLProcessor::IMG]],
+      [HTMLProcessor::AmpIframe, [HTMLProcessor::NON_VIDEO_IFRAME]]
     ]
   end
 end

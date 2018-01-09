@@ -436,7 +436,7 @@ GEM
     multi_json (1.12.2)
     multi_test (0.1.2)
     multipart-post (2.0.0)
-    mysql2 (0.4.5)
+    mysql2 (0.4.9)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
@@ -684,13 +684,13 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (3.0.1)
+    universal_credit (3.0.2)
       autoprefixer-rails
       devise
       dough-ruby
       mas-cms-client (~> 1.1)
       meta-tags
-      mysql2 (= 0.4.5)
+      mysql2 (= 0.4.9)
       preamble
       rails (>= 4, < 5)
       redcarpet
@@ -776,7 +776,7 @@ DEPENDENCIES
   mas-cms-client (= 1.5.0)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 2.3.0)
-  mysql2
+  mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri
   nunes
@@ -814,7 +814,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 3.0.1)
+  universal_credit (= 3.0.2)
   validate_url (= 1.0.0)
   vcr
   webmock

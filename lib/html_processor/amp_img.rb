@@ -40,7 +40,7 @@ module HTMLProcessor
 
     def append_noscript_fallback(original_image, amp_img)
       noscript_node = Nokogiri::XML::Node.new 'noscript', doc
-      noscript_node.add_child(original_image)
+      noscript_node.add_child(original_image.clone)
       amp_img.add_child(noscript_node)
     end
   end

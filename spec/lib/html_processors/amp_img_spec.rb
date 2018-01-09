@@ -45,13 +45,15 @@ RSpec.describe HTMLProcessor::AmpImg do
     describe 'supporting javascript disabled' do
       let(:amp_img_tag) { Nokogiri::XML(processed_html.strip).children.first }
       subject { amp_img_tag.children.first }
+      let(:noscript_tag) { subject.children.first }
+      let(:img_attributes) { noscript_tag.attributes.transform_values(&:value) }
 
       it 'creates a noscript tag containing the original img tag' do
         expect(subject.children.first.name).to eq('img')
       end
 
       it 'assigns the correct attributes to the inner img tag' do
-        expect(attributes).to include(
+        expect(img_attributes).to include(
           'srcset' => 'test_srcset',
           'src' => 'test_src',
           'sizes' => 'test_sizes',

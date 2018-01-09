@@ -240,3 +240,20 @@ Make sure before you changed and open a PR to run the follow script and **paste 
 
 Obs.: 1869 and 1870 is just an example of versions to be shown. Use the GO build
 number in ascending order.
+
+## Code Backup
+
+Code that has been removed from frontend but saved for possible later use.
+They are stored as individual branches of the frontend repo.
+It is recommended to rebase off of master before implementation.
+
+### Glossary tooltips
+Add tooltips to a list of glossary terms
+
+https://github.com/moneyadviceservice/frontend/tree/backup-glossary-tooltips
+
+### Home Buying Checklist
+A javascript tool that calulates the initial costs of buying a home.
+
+https://github.com/moneyadviceservice/frontend/tree/backup-home-buying-checklist
+

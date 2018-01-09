@@ -20,6 +20,8 @@
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
+<%= render 'shared/home_beta/leader', item: @resource %>
+
 <%= render 'shared/home_top', item: @resource %>
 
 <%= render 'shared/tool_promos', items: @resource.tools %>

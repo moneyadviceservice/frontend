@@ -1,0 +1,45 @@
+.leader {
+  @media (min-width: $mq-s) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // Common attributes
+  .leader__content {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-width: $mq-s) {
+      height: 0;
+      padding-top: 50%;
+    }
+  }
+
+  .leader__content-mobile-image {
+    width: 100%;
+
+    @media (min-width: $mq-s) {
+      display: none;
+    }
+  }
+
+  .leader__content--en {
+    @media (min-width: $mq-s) {
+      background-image: image_url('hero/hero-image-tablet-en.png');
+    }
+
+    @media (min-width: $mq-l) {
+      background-image: image_url('hero/hero-image-en.png');
+    }
+  }
+
+  .leader__content--cy {
+    @media (min-width: $mq-s) {
+      background-image: image_url('hero/hero-image-tablet-cy.png');
+    }
+
+    @media (min-width: $mq-l) {
+      background-image: image_url('hero/hero-image-cy.png');
+    }
+  }
+}

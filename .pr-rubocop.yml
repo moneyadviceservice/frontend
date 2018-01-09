@@ -1,0 +1,60 @@
+Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/LineLength:
+  Max: 80
+Metrics/MethodLength:
+  Max: 15
+Metrics/ModuleLength:
+  Exclude:
+    - '**/*_spec.rb'
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/CollectionMethods:
+  Enabled: false
+Style/DotPosition:
+  EnforcedStyle: leading
+Style/FormatString:
+  Enabled: false
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/Not:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/MethodDefParentheses:
+  EnforcedStyle: require_parentheses
+Style/RaiseArgs:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+Rails:
+  Enabled: true
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+  - 'app/helpers/application_helper.rb'
+  - 'bin/**/*'
+  - 'config/**/*'
+  - 'db/**/*'
+  - 'Guardfile'
+  - 'lib/tasks/**/*'
+  - 'node_modules/**/*'
+  - 'script/**/*'
+  - 'spec/spec_helper.rb'
+  - 'spec/cassettes/**/*'
+  - 'spec/dummy/config/**/*.rb'
+  - 'features/**/*'
+  - 'tmp/**/*'
+  - 'vendor/**/*'
+  - 'Rakefile'
+  - 'spec/dummy/config/**/*'
+  - 'spec/dummy/script/**/*'

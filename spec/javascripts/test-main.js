@@ -37,7 +37,6 @@ require.config({
     OnPageFeedback: 'app/assets/javascripts/components/OnPageFeedback',
     ViewAll: 'app/assets/javascripts/components/ViewAll',
     GlobalNav: 'app/assets/javascripts/components/GlobalNav',
-    HomeBuyingChecklist: 'app/assets/javascripts/components/HomeBuyingChecklist',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 

@@ -128,4 +128,64 @@ RSpec.describe CorporateController, type: :controller do
       expect(result).to eq('My long tool name')
     end
   end
+
+  describe 'general enquiry' do
+    let(:request_data) do
+      {
+        locale: I18n.locale,
+        general_enquiry: {
+          first_name: 'a',
+          surname: 'test'
+        }
+      }
+    end
+
+    before do
+      allow(Core::CategoryReader).to receive(:new) do
+        instance_double(Core::CategoryReader, call: corporate_category)
+      end
+    end
+
+    context 'showing the form' do
+      before do
+        get :general_enquiry, locale: I18n.locale
+      end
+
+      it 'responds successfully' do
+        expect(response).to be_ok
+      end
+
+      it 'assigns enquiry object' do
+        expect(assigns[:enquiry].class).to be(GeneralEnquiry)
+      end
+    end
+
+    context 'submiting valid form' do
+      before do
+        allow_any_instance_of(GeneralEnquiry).to receive(:valid?).and_return(true)
+        post :enquiry_submit, request_data
+      end
+
+      it 'redirects to about us' do
+        expect(response).to redirect_to(corporate_path(id: 'about-us', locale: I18n.locale))
+      end
+
+      it 'sets flash message' do
+        expect(flash[:info]).to match(/message sent/)
+      end
+    end
+
+    context 'submiting invalid form' do
+      before do
+        post :enquiry_submit, request_data
+      end
+      it 'responds successfully' do
+        expect(response).to be_ok
+      end
+
+      it 'assigns enquiry object with errors' do
+        expect(assigns[:enquiry].errors.count).to eq(5)
+      end
+    end
+  end
 end

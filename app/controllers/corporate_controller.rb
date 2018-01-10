@@ -1,12 +1,10 @@
 class CorporateController < ArticlesController
   before_action :authenticate, if: -> { Authenticable.required? }, only: :export_partners
+  before_action :setup_category, only: %i[index enquiry_submit general_enquiry]
   decorates_assigned :article, with: CorporateDecorator
   decorates_assigned :category, with: CorporateCategoryDecorator
 
-  def index
-    @category = retrieve_corporate_category
-    assign_active_categories(@category)
-  end
+  def index; end
 
   def show
     @article = interactor.call do |error|
@@ -56,7 +54,27 @@ class CorporateController < ArticlesController
               filename: "corporate_partners-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
   end
 
+  def enquiry_submit
+    @enquiry = GeneralEnquiry.new
+    @enquiry.assign_attributes(params.require(:general_enquiry).permit(*GeneralEnquiry::ATTRIBUTES))
+    if @enquiry.valid?
+      #TODO: send enquiry to CRM
+      #TODO: flash message should be translated
+      return redirect_to(corporate_path('about-us'), flash: { info: 'message sent' })
+    end
+    render :general_enquiry
+  end
+
+  def general_enquiry
+    @enquiry = GeneralEnquiry.new
+  end
+
   private
+
+  def setup_category
+    @category = retrieve_corporate_category
+    assign_active_categories(@category)
+  end
 
   def retrieve_corporate_category
     @corporate_category ||= Core::CategoryReader.new('corporate-home').call

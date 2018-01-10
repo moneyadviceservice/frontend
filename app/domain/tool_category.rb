@@ -14,6 +14,11 @@ class ToolCategory
     false
   end
 
+  def parent_id
+    return '' if @id.empty?
+    @entity.try(:parent_id)
+  end
+
   private
 
   def entity

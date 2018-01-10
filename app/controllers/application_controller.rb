@@ -179,10 +179,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :engine_content?
 
-  PENSIONS_CATEGORY = 'pensions-and-retirement'
+  PENSIONS_CATEGORY = 'pensions-and-retirement'.freeze
   def pensions_and_retirement_page?
-    @article.present? &&
-      @article.categories.map(&:parent_id).include?(PENSIONS_CATEGORY)
+    check = [@category].push(*@article.try(:categories))
+    check.compact.any? do |category|
+      category.parent_id == PENSIONS_CATEGORY ||
+        category.id == PENSIONS_CATEGORY
+    end
   end
   helper_method :pensions_and_retirement_page?
 end

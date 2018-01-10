@@ -9,4 +9,8 @@ class RetirementsController < ApplicationController
   def locale_options
     LandingPagePaths.locale_options(params[:controller], params[:action])
   end
+
+  def pensions_and_retirement_page?
+    true
+  end
 end

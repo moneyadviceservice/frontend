@@ -25,21 +25,21 @@
 
   .leader__content--en {
     @media (min-width: $mq-s) {
-      background-image: image_url('hero/hero-image-tablet-en.png');
+      background-image: image_url('home_beta/leader/leader-image-tablet-en.png');
     }
 
     @media (min-width: $mq-l) {
-      background-image: image_url('hero/hero-image-en.png');
+      background-image: image_url('home_beta/leader/leader-image-en.png');
     }
   }
 
   .leader__content--cy {
     @media (min-width: $mq-s) {
-      background-image: image_url('hero/hero-image-tablet-cy.png');
+      background-image: image_url('home_beta/leader/leader-image-tablet-cy.png');
     }
 
     @media (min-width: $mq-l) {
-      background-image: image_url('hero/hero-image-cy.png');
+      background-image: image_url('home_beta/leader/leader-image-cy.png');
     }
   }
 }

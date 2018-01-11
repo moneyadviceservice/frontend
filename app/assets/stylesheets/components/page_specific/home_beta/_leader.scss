@@ -1,11 +1,10 @@
 .leader {
-  @include respond-to($mq-s) {
-    width: 100%;
-    margin: 0 auto;
-  }
+  @extend %clearfix;
+  margin-top: $baseline-unit * 4;
 
   // Common attributes
   .leader__content {
+    @include column(12);
     background-repeat: no-repeat;
     background-size: 100%;
 

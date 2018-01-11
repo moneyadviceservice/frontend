@@ -1,5 +1,5 @@
 .leader {
-  @media (min-width: $mq-s) {
+  @include respond-to($mq-s) {
     width: 100%;
     margin: 0 auto;
   }
@@ -9,36 +9,36 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
-    @media (min-width: $mq-s) {
+    @include respond-to($mq-s) {
       height: 0;
-      padding-top: 50%;
+      padding-top: 393 / 1200 * 100%;
     }
   }
 
   .leader__content-mobile-image {
     width: 100%;
 
-    @media (min-width: $mq-s) {
+    @include respond-to($mq-s) {
       display: none;
     }
   }
 
   .leader__content--en {
-    @media (min-width: $mq-s) {
+    @include respond-to($mq-s) {
       background-image: image_url('home_beta/leader/leader-image-tablet-en.png');
     }
 
-    @media (min-width: $mq-l) {
+    @include respond-to($mq-l) {
       background-image: image_url('home_beta/leader/leader-image-en.png');
     }
   }
 
   .leader__content--cy {
-    @media (min-width: $mq-s) {
+    @include respond-to($mq-s) {
       background-image: image_url('home_beta/leader/leader-image-tablet-cy.png');
     }
 
-    @media (min-width: $mq-l) {
+    @include respond-to($mq-l) {
       background-image: image_url('home_beta/leader/leader-image-cy.png');
     }
   }

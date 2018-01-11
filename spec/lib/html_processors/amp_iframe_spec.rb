@@ -44,7 +44,8 @@ RSpec.describe HTMLProcessor::AmpIframe do
           'allowpaymentrequest' => 'test_allowpaymentrequest',
           'allowtransparency' => 'test_allowtransparency',
           'referrerpolicy' => 'test_referrerpolicy',
-          'sandbox' => 'test_sandbox'
+          'sandbox' => 'test_sandbox',
+          'layout' => 'responsive'
         )
       end
     end

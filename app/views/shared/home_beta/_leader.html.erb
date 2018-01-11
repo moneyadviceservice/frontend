@@ -1,7 +1,5 @@
-<% lang = 'cy' %>
-
 <div class="leader" data-component="leader">
-  <div class="leader__content leader__content--<%= lang %>">
-    <%= image_tag("hero/hero-image-mobile-#{lang}-#{rand(3)}.png", class: 'leader__content-mobile-image').html_safe %>
+  <div class="leader__content leader__content--<%= locale %>">
+    <%= image_tag("hero/hero-image-mobile-#{locale}-#{rand(3)}.png", class: 'leader__content-mobile-image').html_safe %>
   </div>
 </div>

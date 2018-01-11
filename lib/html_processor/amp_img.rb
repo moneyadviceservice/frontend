@@ -16,6 +16,7 @@ module HTMLProcessor
       doc.xpath(*xpaths).each do |node|
         if node.attributes.include? 'src'
           amp_img = Nokogiri::XML::Node.new 'amp-img', doc
+          amp_img['layout'] = 'responsive'
           copy_attributes!(node, amp_img)
           append_noscript_fallback(node, amp_img)
           node.replace amp_img

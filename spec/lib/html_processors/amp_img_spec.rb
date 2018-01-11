@@ -38,7 +38,8 @@ RSpec.describe HTMLProcessor::AmpImg do
         'alt' => 'test_alt',
         'attribution' => 'test_attribution',
         'height' => 'test_height',
-        'width' => 'test_width'
+        'width' => 'test_width',
+        'layout' => 'responsive'
       )
     end
 

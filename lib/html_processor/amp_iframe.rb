@@ -18,6 +18,7 @@ module HTMLProcessor
       doc.xpath(*xpaths).each do |node|
         if https?(node.attribute('src'))
           amp_iframe = Nokogiri::XML::Node.new 'amp-iframe', doc
+          amp_iframe['layout'] = 'responsive'
           copy_attributes!(node, amp_iframe)
           node.replace amp_iframe
         else

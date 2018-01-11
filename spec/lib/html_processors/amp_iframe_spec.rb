@@ -18,7 +18,7 @@ RSpec.describe HTMLProcessor::AmpIframe do
       let(:html) do
         <<-EOHTML
           <iframe
-            src="test_src"
+            src="https://google.com"
             alt="test_alt"
             height="test_height"
             width="test_width"
@@ -34,7 +34,7 @@ RSpec.describe HTMLProcessor::AmpIframe do
 
       it 'copies the attributes across correctly from the original iframe' do
         expect(attributes).to include(
-          'src' => 'test_src',
+          'src' => 'https://google.com',
           'alt' => 'test_alt',
           'height' => 'test_height',
           'width' => 'test_width',
@@ -52,14 +52,13 @@ RSpec.describe HTMLProcessor::AmpIframe do
     context 'when attributes are missing' do
       let(:html) do
         <<-EOHTML
-          <iframe />
+          <iframe src="https://google.com" />
         EOHTML
       end
 
       it 'does not create those attributes on the amp-iframe' do
         expect(attributes.keys).not_to include(
-          %w[src
-             alt
+          %w[alt
              height
              width
              srcdoc
@@ -70,6 +69,19 @@ RSpec.describe HTMLProcessor::AmpIframe do
              referrerpolicy
              sandbox]
         )
+      end
+    end
+
+    context 'when the iframe src is not https' do
+      let(:html) do
+        <<-EOHTML
+          <iframe src="http://google.com"></iframe>
+        EOHTML
+      end
+      subject { processed_html.strip }
+
+      it 'does not create the amp-iframe tag' do
+        expect(subject).to eq('')
       end
     end
   end

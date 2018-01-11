@@ -218,6 +218,8 @@ Rails.application.routes.draw do
     end
 
     get '/hub/:slug' => 'content_hub#show', as: :content_hub
+
+    get '/home-beta' => 'home_beta#show'
   end
 
   %w(404 422 500 ).each do |status_code|

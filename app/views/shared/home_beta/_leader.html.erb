@@ -1,5 +1,6 @@
 <div class="leader" data-component="leader" aria-hidden="true">
   <div class="leader__content leader__content--<%= locale %>">
-    <%= image_tag("home_beta/leader/leader-image-mobile-#{locale}-#{rand(3)}.png", class: 'leader__content-mobile-image').html_safe %>
+    <div class="leader__image leader__image--<%= rand(3) %>"></div>
+    <%# image_tag("home_beta/leader/leader-image-mobile-#{locale}-#{rand(3)}.png", class: 'leader__content-mobile-image').html_safe %>
   </div>
 </div>

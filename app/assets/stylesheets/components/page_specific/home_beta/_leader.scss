@@ -1,43 +1,63 @@
 .leader {
   @extend %clearfix;
   margin-top: $baseline-unit * 4;
+}
 
-  // Common attributes
-  .leader__content {
-    @include column(12);
-    background-repeat: no-repeat;
-    background-size: 100%;
+.leader__content {
+  @include column(12);
+}
 
-    @include respond-to($mq-s) {
-      height: 0;
-      padding-top: 393 / 1200 * 100%;
+.leader__image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 0;
+  width: 100%;
+  padding-top: 241 / 283 * 100%; // 100%;
+
+  @include respond-to($mq-s) {
+    padding-top: 393 / 1200 * 100%;
+  }
+}
+
+.leader__content--en {
+  @include respond-to(0, $mq-s) {
+    @each $value in count, 0, 1, 2 {
+      .leader__image--#{$value} {
+        background-image: image_url('home_beta/leader/leader-image-mobile-en-#{$value}.png');
+      }
     }
   }
 
-  .leader__content-mobile-image {
-    width: 100%;
-
-    @include respond-to($mq-s) {
-      display: none;
-    }
-  }
-
-  .leader__content--en {
-    @include respond-to($mq-s) {
+  @include respond-to($mq-s) {
+    .leader__image {
       background-image: image_url('home_beta/leader/leader-image-tablet-en.png');
     }
+  }
 
-    @include respond-to($mq-l) {
+  @include respond-to($mq-l) {
+    .leader__image {
       background-image: image_url('home_beta/leader/leader-image-en.png');
     }
   }
+}
 
-  .leader__content--cy {
-    @include respond-to($mq-s) {
+.leader__content--cy {
+  @include respond-to(0, $mq-s) {
+    @each $value in count, 0, 1, 2 {
+      .leader__image--#{$value} {
+        background-image: image_url('home_beta/leader/leader-image-mobile-cy-#{$value}.png');
+      }
+    }
+  }
+
+  @include respond-to($mq-s) {
+    .leader__image {
       background-image: image_url('home_beta/leader/leader-image-tablet-cy.png');
     }
+  }
 
-    @include respond-to($mq-l) {
+  @include respond-to($mq-l) {
+    .leader__image {
       background-image: image_url('home_beta/leader/leader-image-cy.png');
     }
   }

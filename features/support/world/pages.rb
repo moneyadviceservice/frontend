@@ -17,6 +17,7 @@ module World
       debt_management_companies
       forgot_password
       home
+      home_beta
       internal_server_error
       money_manager
       money_manager_circumstances_changed

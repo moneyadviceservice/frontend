@@ -1,0 +1,36 @@
+.seasonal-spotlight {
+  @include column(12);
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*2;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 300px;
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    display: flex;
+    height: auto;
+
+    .ie9 & {
+      height: 340px;
+    }
+  }
+}
+
+.seasonal-spotlight__cta {
+  position: absolute;
+  bottom: $baseline-unit*2;
+  right: $baseline-unit*2;
+  padding-right: $baseline-unit*5;
+  white-space: normal;
+  max-width: 80%;
+}
+
+.seasonal-spotlight__cta-arrow {
+  position: absolute;
+  right: $baseline-unit;
+  top: $baseline-unit*2;
+  height: 26px;
+  width: 26px;
+}

@@ -1,18 +1,39 @@
-Given(/^I visit an article( not| NOT)? within the Pension and Retirement category in my "([^"]*)"$/) do |should_not, language|
-	article =
-    if should_not
-      {
-        'English' => '/en/articles/saving-money-for-christmas',
-        'Welsh' => '/cy/articles/sut-i-gynilo-ar-gyfer-y-nadolig'
-      }
-    else
-      {
-        'English' => '/en/articles/personal-pensions',
-        'Welsh' => '/cy/articles/pensiynau-personol'
-      }
-    end
+Given(/^I visit "([^"]*)" not within the Pension and Retirement category in my "([^"]*)"$/) do |entity, language|
+  links = {
+    'article' => {
+      'English' => '/en/articles/saving-money-for-christmas',
+      'Welsh' => '/cy/articles/sut-i-gynilo-ar-gyfer-y-nadolig'
+    },
+    'category' => {
+      'English' => '/en/categories/help-with-your-benefits',
+      'Welsh' => '/cy/categories/help-with-your-benefits'
+    },
+    'tool' => {
+      'English' => '/en/tools/budget-planner',
+      'Welsh' => '/cy/tools/cynllunydd-cyllideb/start'
+    }
+  }
 
-  visit(article[language])
+  visit(links[entity][language])
+end
+
+Given(/^I visit "([^"]*)" within the Pension and Retirement category in my "([^"]*)"$/) do |entity, language|
+  links = {
+    'article' => {
+      'English' => '/en/articles/personal-pensions',
+      'Welsh' => '/cy/articles/pensiynau-personol'
+    },
+    'category' => {
+      'English' => '/en/articles/options-for-using-your-pension-pot',
+      'Welsh' => '/cy/articles/yr-opsiynau-ar-gyfer-defnyddioch-cronfa-bensiwn'
+    },
+    'tool' => {
+      'English' => '/en/tools/pension-calculator',
+      'Welsh' => '/cy/tools/cyfrifiannell-pensiwn/'
+    }
+  }
+
+  visit(links[entity][language])
 end
 
 Then(/^I should( not|NOT)? see the TPAS banner with "([^"]*)"$/) do |should_not, message|

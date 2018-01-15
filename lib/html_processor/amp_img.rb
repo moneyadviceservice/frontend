@@ -13,21 +13,35 @@ module HTMLProcessor
     ].freeze
 
     def process(*xpaths)
-      doc.xpath(*xpaths).each do |node|
-        if node.attributes.include? 'src'
-          amp_img = Nokogiri::XML::Node.new 'amp-img', doc
-          amp_img['layout'] = 'responsive'
-          copy_attributes!(node, amp_img)
-          append_noscript_fallback(node, amp_img)
-          node.replace amp_img
+      doc.xpath(*xpaths).each do |original_img|
+        if original_img.attributes.include? 'src'
+          container = create_container
+          amp_img = create_amp_img(original_img)
+          container.add_child(amp_img)
+          original_img.replace container
         else
-          node.remove
+          original_img.remove
         end
       end
       super
     end
 
     private
+
+    def create_container
+      node = Nokogiri::XML::Node.new 'div', doc
+      node['class'] = 'amp-img-container'
+      node
+    end
+
+    def create_amp_img(original_img)
+      amp_img = Nokogiri::XML::Node.new 'amp-img', doc
+      amp_img['layout'] = 'fill'
+      amp_img['class'] = 'contain'
+      copy_attributes!(original_img, amp_img)
+      append_noscript_fallback(original_img, amp_img)
+      amp_img
+    end
 
     def attributes_to_copy(original_image)
       PERMITTED_AMP_ATTRIBUTES & original_image.attributes.keys

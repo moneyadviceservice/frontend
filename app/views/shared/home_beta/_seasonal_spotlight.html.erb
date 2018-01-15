@@ -1,0 +1,9 @@
+<div class="seasonal-spotlight" style="background-image: url(<%= item.hero_image %>);">
+  <h2 class="seasonal-spotlight__title">
+    Are you #XmasReady?
+  </h2>
+  <a href="<%= item.cta_link %>" class="seasonal-spotlight__cta button button--primary">
+    <%= item.cta_text %>
+    <%= render 'shared/svg/use_icon', icon: 'arrow-right', class_name: 'seasonal-spotlight__cta-arrow' %>
+  </a>
+</div>

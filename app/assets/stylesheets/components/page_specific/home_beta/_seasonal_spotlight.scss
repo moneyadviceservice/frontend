@@ -1,0 +1,44 @@
+.seasonal-spotlight {
+  @include column(12);
+  margin-top: $baseline-unit*2;
+  margin-bottom: $baseline-unit*2;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+
+  @include respond-to($mq-s) {
+
+  }
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    height: 339px;
+  }
+}
+
+.seasonal-spotlight__title {
+  @include body(18, 30);
+  position: absolute;
+  color: $color-white;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  padding: $baseline-unit;
+  margin: 0;
+  width: 100%;
+}
+
+.seasonal-spotlight__cta {
+  position: absolute;
+  bottom: $baseline-unit*2;
+  right: $baseline-unit*2;
+  padding-right: $baseline-unit*5;
+  white-space: normal;
+}
+
+.seasonal-spotlight__cta-arrow {
+  position: absolute;
+  right: $baseline-unit;
+  top: $baseline-unit*2;
+  height: 26px;
+  width: 26px;
+}

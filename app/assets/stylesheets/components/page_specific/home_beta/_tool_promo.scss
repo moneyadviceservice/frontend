@@ -46,9 +46,9 @@ a.tool_promo-beta__item-link {
 
 .tool_promo-beta__item-arrow {
   fill: $color-orange-medium;
-  height: 34px;
+  height: $arrow-right-ball_size;
+  width: $arrow-right-ball_size;
   position: absolute;
   right: 2%;
   top: 23px;
-  width: 30px;
 }

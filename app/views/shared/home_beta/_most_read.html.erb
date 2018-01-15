@@ -1,0 +1,37 @@
+<div class="l-constrained">
+  <section class="most-read">
+    <%= heading_tag(level: 2, class: 'most-read__heading') do %>
+      <%= t('home.show.most_read_heading') %>
+    <% end %>
+
+    <div class="most-read__items">
+      <% items_with_image.each do |item| %>
+        <div class="most-read__item">
+          <%= link_to item['url'], class: 'most-read__link' do %>
+            <%= image_tag(item['image'],
+              alt: '',
+              sizes: size_definition,
+              srcset: item['srcset'],
+              class: ''
+            )%>
+            <div class="most-read__content">
+              <%= heading_tag(level: 3, class: 'item__heading') do %>
+                <%= item['heading'] %>
+              <% end %>
+
+              <p class="most-read__text"><%= item['content'] %></p>
+
+              <p class="most-read__CTA">
+                <%= t('home.show.most_read_CTA') %>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball most-read__arrow" focusable="false">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
+                </svg>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

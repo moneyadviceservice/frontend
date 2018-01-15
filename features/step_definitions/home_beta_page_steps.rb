@@ -1,7 +1,8 @@
 include ActionView::Helpers::SanitizeHelper
 
-Given(/^I (?:am on|visit) the beta home page$/) do
-  home_beta_page.load(locale: :en)
+Given(/^I view the beta home page in (.*)$/) do |language|
+  locale = language_to_locale(language)
+  home_beta_page.load(locale: locale)
 end
 
 Then(/^I should be presented with popular tools and calculators$/) do

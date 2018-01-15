@@ -8,6 +8,17 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/wpcc.git
+  revision: 8eaa8bf938016adec381b54146b3e0c32fe24f44
+  ref: 8eaa8bf
+  branch: 8446-store-app-specific-settings
+  specs:
+    wpcc (1.13.1)
+      dough-ruby
+      meta-tags
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -710,10 +721,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wpcc (1.13.1)
-      dough-ruby
-      meta-tags
-      rails (>= 4, < 5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -818,7 +825,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.13.1)
+  wpcc!
 
 BUNDLED WITH
    1.16.0

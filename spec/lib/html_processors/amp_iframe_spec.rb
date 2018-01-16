@@ -32,7 +32,7 @@ RSpec.describe HTMLProcessor::AmpIframe do
         EOHTML
       end
 
-      it 'copies the attributes across correctly from the original iframe' do
+      it 'copies original iframe attributes to the new iframe' do
         expect(attributes).to include(
           'src' => 'https://google.com',
           'alt' => 'test_alt',

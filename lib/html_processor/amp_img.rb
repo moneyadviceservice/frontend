@@ -14,11 +14,8 @@ module HTMLProcessor
 
     def process(*xpaths)
       doc.xpath(*xpaths).each do |original_img|
-        if original_img.attributes.include? 'src'
-          container = create_container
-          amp_img = create_amp_img(original_img)
-          container.add_child(amp_img)
-          original_img.replace container
+        if original_img.attributes.include?('src')
+          replace_original_img(original_img)
         else
           original_img.remove
         end
@@ -28,14 +25,21 @@ module HTMLProcessor
 
     private
 
+    def replace_original_img(original_img)
+      container = create_container
+      amp_img = create_amp_img(original_img)
+      container.add_child(amp_img)
+      original_img.replace(container)
+    end
+
     def create_container
-      node = Nokogiri::XML::Node.new 'div', doc
+      node = Nokogiri::XML::Node.new('div', doc)
       node['class'] = 'amp-img-container'
       node
     end
 
     def create_amp_img(original_img)
-      amp_img = Nokogiri::XML::Node.new 'amp-img', doc
+      amp_img = Nokogiri::XML::Node.new('amp-img', doc)
       amp_img['layout'] = 'fill'
       amp_img['class'] = 'contain'
       copy_attributes!(original_img, amp_img)
@@ -54,7 +58,7 @@ module HTMLProcessor
     end
 
     def append_noscript_fallback(original_image, amp_img)
-      noscript_node = Nokogiri::XML::Node.new 'noscript', doc
+      noscript_node = Nokogiri::XML::Node.new('noscript', doc)
       noscript_node.add_child(original_image.clone)
       amp_img.add_child(noscript_node)
     end

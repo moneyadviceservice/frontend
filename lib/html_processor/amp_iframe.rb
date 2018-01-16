@@ -17,10 +17,7 @@ module HTMLProcessor
     def process(*xpaths)
       doc.xpath(*xpaths).each do |node|
         if https?(node.attribute('src'))
-          amp_iframe = Nokogiri::XML::Node.new 'amp-iframe', doc
-          amp_iframe['layout'] = 'responsive'
-          copy_attributes!(node, amp_iframe)
-          node.replace amp_iframe
+          replace_original_iframe(node)
         else
           node.remove
         end
@@ -29,6 +26,13 @@ module HTMLProcessor
     end
 
     private
+
+    def replace_original_iframe(original_iframe)
+      amp_iframe = Nokogiri::XML::Node.new('amp-iframe', doc)
+      amp_iframe['layout'] = 'responsive'
+      copy_attributes!(original_iframe, amp_iframe)
+      original_iframe.replace(amp_iframe)
+    end
 
     def attributes_to_copy(original_iframe)
       PERMITTED_AMP_ATTRIBUTES & original_iframe.attributes.keys

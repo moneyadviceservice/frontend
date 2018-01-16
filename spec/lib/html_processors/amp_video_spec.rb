@@ -28,7 +28,7 @@ RSpec.describe HTMLProcessor::AmpVideo do
       expect(subject.name).to eq('amp-youtube')
     end
 
-    it 'assigns the correct attributes to the resulting tag' do
+    it 'assigns a height, width, video id and layout to the amp-youtube tag' do
       expect(attributes).to include(
         'height' => '270',
         'width' => '480',

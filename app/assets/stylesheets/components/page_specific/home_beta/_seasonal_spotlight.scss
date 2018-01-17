@@ -3,12 +3,18 @@
   margin-top: $baseline-unit*2;
   margin-bottom: $baseline-unit*2;
   background-size: cover;
+  background-position: center;
   position: relative;
   height: 300px;
 
   @include respond-to($mq-m) {
     @include column(6);
-    height: 339px;
+    display: flex;
+    height: auto;
+
+    .ie9 & {
+      height: 340px;
+    }
   }
 }
 
@@ -18,6 +24,7 @@
   right: $baseline-unit*2;
   padding-right: $baseline-unit*5;
   white-space: normal;
+  max-width: 80%;
 }
 
 .seasonal-spotlight__cta-arrow {

@@ -1,6 +1,14 @@
 .leader {
   @extend %clearfix;
-  margin-top: $baseline-unit * 4;
+}
+
+.leader__heading {
+  @include body(27, 30);
+  @include column(12);
+
+  text-align: center;
+  margin-top: $baseline-unit * 3;
+  margin-bottom: $baseline-unit * 4;
 }
 
 .leader__content {
@@ -12,7 +20,7 @@
   background-size: 100%;
   height: 0;
   width: 100%;
-  padding-top: 241 / 283 * 100%; // 100%;
+  padding-top: 241 / 283 * 100%;
 
   @include respond-to($mq-s) {
     padding-top: 393 / 1200 * 100%;

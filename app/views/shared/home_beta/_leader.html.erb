@@ -1,6 +1,9 @@
 <div class="leader" data-component="leader" aria-hidden="true">
+  <%= heading_tag(level: 1, class: "leader__heading") do %>
+    <%= t('home.show.title_beta') %>
+  <% end %>
+
   <div class="leader__content leader__content--<%= locale %>">
     <div class="leader__image leader__image--<%= rand(3) %>"></div>
-    <%# image_tag("home_beta/leader/leader-image-mobile-#{locale}-#{rand(3)}.png", class: 'leader__content-mobile-image').html_safe %>
   </div>
 </div>

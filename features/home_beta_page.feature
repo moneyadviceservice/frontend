@@ -12,7 +12,7 @@ Feature: Home page beta
 
   Scenario Outline: Seasonal spotlight
     Given I view the beta home page in <language>
-    Then I should be presented with the seasonal spotlight
+    Then I should be presented with the seasonal spotlight in <language>
 
     Examples:
       | language |

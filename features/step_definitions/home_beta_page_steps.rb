@@ -10,10 +10,12 @@ Then(/^I should be presented with popular tools and calculators$/) do
     .to have_content(I18n.t('home.show.tools_heading'))
 end
 
-Then(/^I should be presented with the seasonal spotlight$/) do
-  expected_en = "Easy ways to catch the saving habit"
-  expected_cy = "Ffyrdd hawdd i ddal y arferiad cynilo"
-
+Then(/^I should be presented with the seasonal spotlight in English$/) do
   expect(home_beta_page.seasonal_spotlight)
-    .to have_content(eval("expected_#{I18n.locale}"))
+    .to have_content('Easy ways to catch the saving habit')
+end
+
+Then(/^I should be presented with the seasonal spotlight in Welsh$/) do
+  expect(home_beta_page.seasonal_spotlight)
+    .to have_content('Ffyrdd hawdd i ddal y arferiad cynilo')
 end

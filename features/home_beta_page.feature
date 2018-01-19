@@ -18,6 +18,7 @@ Feature: Home page beta
       | language |
       | English  |
       | Welsh    |
+<<<<<<< 1723bb895fca26a46a84eed9ace25b76d0eb1e65
 
   Scenario Outline: Most Read
     Given I view the beta home page in <language>
@@ -27,3 +28,15 @@ Feature: Home page beta
       | language |
       | English  |
       | Welsh    |
+||||||| merged common ancestors
+=======
+
+  Scenario Outline: Information guides
+    Given I view the beta home page in <language>
+    Then I should be presented with the information guides in <language>
+
+    Examples:
+      | language |
+      | English  |
+      | Welsh    |
+>>>>>>> Adds core markup and UI

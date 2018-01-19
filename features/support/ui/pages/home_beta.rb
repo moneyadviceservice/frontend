@@ -8,5 +8,6 @@ module UI::Pages
     element :popular_tools, '.tool_promo-beta'
     element :seasonal_spotlight, '.seasonal-spotlight'
     element :most_read, '.most-read'
+    element :information_guides, '.information-guides'
   end
 end

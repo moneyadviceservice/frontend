@@ -9,17 +9,10 @@ class CorporateController < ArticlesController
   end
 
   def show
-    @article = interactor.call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      else
-        not_found
-      end
-    end
+    @article = resource
 
     set_breadcrumbs
     set_related_content
-    set_categories
 
     retrieve_syndication_tools
     retrieve_corporate_category
@@ -38,7 +31,7 @@ class CorporateController < ArticlesController
       flash[:partner] = @partner
       redirect_to corporate_path(params[:id], anchor: 'your-embed-code')
     else
-      @article = interactor.call
+      @article = resource
       retrieve_corporate_category
       set_corporate_category
       assign_active_categories(retrieve_corporate_category)
@@ -58,8 +51,12 @@ class CorporateController < ArticlesController
 
   private
 
+  def resource
+    Mas::Cms::Corporate.find(params[:id], locale: I18n.locale)
+  end
+
   def retrieve_corporate_category
-    @corporate_category ||= Core::CategoryReader.new('corporate-home').call
+    @corporate_category ||= Mas::Cms::Category.find('corporate-home', locale: I18n.locale)
   end
 
   def set_corporate_category
@@ -67,15 +64,7 @@ class CorporateController < ArticlesController
   end
 
   def retrieve_syndication_tools
-    @syndication_tools ||= Core::CategoryReader.new('syndication').call
-  end
-
-  def interactor
-    Core::CorporateReader.new(params[:id])
-  end
-
-  def category_tree(categories)
-    Core::CategoryTreeReader.new.call(categories)
+    @syndication_tools ||= Mas::Cms::Category.find('syndication', locale: I18n.locale)
   end
 
   def partner_params

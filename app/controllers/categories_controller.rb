@@ -4,19 +4,9 @@ class CategoriesController < ApplicationController
   include Navigation
 
   def show
-    @category = Core::CategoryReader.new(params[:id]).call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      else
-        not_found
-      end
-    end
-
-    @breadcrumbs = BreadcrumbTrail.build(@category, category_tree)
-
+    @category = Mas::Cms::Category.find(params[:id], locale: I18n.locale)
+    @breadcrumbs = BreadcrumbTrail.build(@category)
     assign_active_categories(@category)
-  rescue Core::Repository::Base::RequestError
-    not_found
   end
 
   private
@@ -24,5 +14,4 @@ class CategoriesController < ApplicationController
   def default_main_content_location?
     false
   end
-
 end

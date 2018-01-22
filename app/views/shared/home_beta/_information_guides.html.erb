@@ -8,7 +8,7 @@
         <h3 class="information-guides__list-title">
           <%= item[:title] %>
         </h3>
-        <p><%= item[:description] %></p>
+        <p class="information-guides__list-text"><%= item[:description] %></p>
         <%= link_to item[:link_url], html_options = {class: 'information-guides__list-link'} do %>
           <%= item[:link_text] %>
           <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball information-guides__list-arrow" focusable="false">

@@ -49,13 +49,22 @@
   padding: 0;
 }
 
+.information-guides__list-text {
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*6;
+  }
+}
+
 a.information-guides__list-link {
   display: block;
   padding-right: $baseline-unit;
   color: $color-black;
+  text-align: right;
 
   @include respond-to($mq-m) {
-    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }
 

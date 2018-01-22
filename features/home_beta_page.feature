@@ -27,3 +27,12 @@ Feature: Home page beta
       | language |
       | English  |
       | Welsh    |
+
+  Scenario Outline: Information guides
+    Given I view the beta home page in <language>
+    Then I should be presented with the information guides in <language>
+
+    Examples:
+      | language |
+      | English  |
+      | Welsh    |

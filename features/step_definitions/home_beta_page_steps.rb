@@ -24,3 +24,13 @@ Then(/^I should be presented with a Most Read section$/) do
   expect(home_beta_page.most_read)
     .to have_content(I18n.t('home.show.most_read_heading'))
 end
+
+Then(/^I should be presented with the information guides in English$/) do
+  expect(home_beta_page.information_guides)
+    .to have_content('Information guides on our site')
+end
+
+Then(/^I should be presented with the information guides in Welsh$/) do
+  expect(home_beta_page.information_guides)
+    .to have_content('Canllawiau gwybodaeth ar ein safle')
+end

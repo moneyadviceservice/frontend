@@ -1,0 +1,22 @@
+<div class="information-guides">
+  <h2 class="information-guides__title">
+    <%= t('home_beta.information_guides.title') %>
+  </h2>
+  <ul class="information-guides__list">
+      <% t('home_beta.information_guides.item').each do |item| %>
+      <li class="information-guides__list-item">
+        <h3 class="information-guides__list-title">
+          <%= item[:title] %>
+        </h3>
+        <p class="information-guides__list-text"><%= item[:description] %></p>
+        <%= link_to item[:link_url], html_options = {class: 'information-guides__list-link'} do %>
+          <%= item[:link_text] %>
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball information-guides__list-arrow" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
+          </svg>
+          <span class="icon icon--arrow-right"></span>
+        <% end %>
+      </li>
+      <% end %>
+  </ul>
+</div>

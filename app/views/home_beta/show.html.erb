@@ -27,6 +27,7 @@
   <%= render 'shared/home_beta/seasonal_spotlight', item: @resource %>
 </div>
 
+<%= render 'shared/home_beta/information_guides', item: @resource %>
 <%= render 'shared/home_beta/most_read', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
 
 <%= render 'shared/stripe_banner', item: @resource %>

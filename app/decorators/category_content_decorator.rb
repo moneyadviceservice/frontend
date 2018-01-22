@@ -15,7 +15,7 @@ class CategoryContentDecorator < Draper::Decorator
     "#{object.type.titleize} - "
   end
 
-  #TODO: Remove Core type checks when they have been removed
+  # TODO: Remove Core type checks when they have been removed
   def path
     case object
     when Core::Article, Core::Category, Mas::Cms::Article, Mas::Cms::Category

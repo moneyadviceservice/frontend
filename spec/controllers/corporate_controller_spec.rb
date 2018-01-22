@@ -4,12 +4,12 @@ RSpec.describe CorporateController, type: :controller do
 
   before do
     allow(Mas::Cms::Category).to receive(:find)
-    .with('corporate-home', locale: I18n.locale)
-    .and_return(corporate_category)
+      .with('corporate-home', locale: I18n.locale)
+      .and_return(corporate_category)
 
     allow(Mas::Cms::Category).to receive(:find)
-    .with('syndication', anything)
-    .and_return(syndication_category)
+      .with('syndication', anything)
+      .and_return(syndication_category)
   end
 
   describe 'GET index' do
@@ -34,8 +34,8 @@ RSpec.describe CorporateController, type: :controller do
 
       before do
         allow(Mas::Cms::Article).to receive(:find)
-        .with(corporate_article.id, locale: I18n.locale)
-        .and_return(corporate_article)
+          .with(corporate_article.id, locale: I18n.locale)
+          .and_return(corporate_article)
 
         get :show, locale: I18n.locale, id: corporate_article.id
       end
@@ -51,7 +51,7 @@ RSpec.describe CorporateController, type: :controller do
   end
 
   describe 'POST create' do
-    let(:tool) { instance_double(Core::Article, id: "#{valid_partner[:tool_name]}", categories: [syndication_category]) }
+    let(:tool) { instance_double(Core::Article, id: valid_partner[:tool_name].to_s, categories: [syndication_category]) }
     let(:valid_partner)   { FactoryGirl.attributes_for(:corporate_partner, tool_name: 'budget-planner-syndication') }
     let(:invalid_partner) { { name: 2323, width: 'sasd' } }
 
@@ -68,7 +68,6 @@ RSpec.describe CorporateController, type: :controller do
     end
 
     context 'with valid attributes and a partner record already exists' do
-
       before do
         post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
       end
@@ -79,14 +78,13 @@ RSpec.describe CorporateController, type: :controller do
         end.to_not change(CorporatePartner, :count)
         expect(CorporatePartner.count).to eq(1)
       end
-
     end
 
     context 'with invalid attributes' do
       it 'does not save the new partner' do
         expect do
           post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
-        end.to_not change(CorporatePartner,:count)
+        end.to_not change(CorporatePartner, :count)
       end
 
       it 're-renders the corporate tool page' do
@@ -102,7 +100,7 @@ RSpec.describe CorporateController, type: :controller do
         { id: 'my-long-tool-name-syndication' }
       end
 
-      result = subject.send(:tool_friendly_name);
+      result = subject.send(:tool_friendly_name)
       expect(result).to eq('My long tool name')
     end
   end

@@ -6,20 +6,35 @@ RSpec.describe HTMLProcessor::AmpVideo do
 
   let(:html) do
     <<-EOHTML
-      <iframe frameborder="0" height="413" width="680" src="https://www.youtube.com/embed/3ciEDiokPkw?rel=0">
+      <iframe
+        src="https://www.youtube.com/embed/3ciEDiokPkw?rel=0"
+        frameborder="0"
+        height="413"
+        width="680">
       </iframe>
     EOHTML
   end
 
   describe '.process' do
-    subject(:processed_html) { processor.process(HTMLProcessor::VIDEO_IFRAME) }
+    subject { Nokogiri::XML(processed_html.strip).children.first }
+    let(:processed_html) { processor.process(HTMLProcessor::VIDEO_IFRAME) }
+    let(:attributes) { subject.attributes.transform_values!(&:value) }
 
     let(:xpath) do
-      '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]'
+      '//div[@class="video-wrapper"]/*/iframe[starts-with(@src, "https://www.youtube.com/embed")]' # rubocop:disable Metrics/LineLength
     end
 
-    it 'does not modify title attribute', focus: true do
-      expect(processed_html.strip).to eq('<amp-youtube data-videoid="3ciEDiokPkw" layout="responsive" width="480" height="270"></amp-youtube>')
+    it 'creates an amp-youtube tag' do
+      expect(subject.name).to eq('amp-youtube')
+    end
+
+    it 'assigns a height, width, video id and layout to the amp-youtube tag' do
+      expect(attributes).to include(
+        'height' => '270',
+        'width' => '480',
+        'data-videoid' => '3ciEDiokPkw',
+        'layout' => 'responsive'
+      )
     end
   end
 end

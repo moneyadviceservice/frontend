@@ -39,6 +39,16 @@ $responsive: true;
   background-size: cover;
 }
 
+.amp-img-container {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
 // AMP element and class styles (that come from contento)
 .amp-body {
   max-width: 36rem;

@@ -1,7 +1,7 @@
 require 'html_processor'
 
 class AmpArticleDecorator < Draper::Decorator
-
+  include ActionView::Helpers::OutputSafetyHelper
   def initialize(object, options = {})
     super
   end
@@ -13,14 +13,16 @@ class AmpArticleDecorator < Draper::Decorator
       body = processor.new(body).process(*xpaths)
     end
 
-    body.html_safe
+    safe_join([body.html_safe])
   end
 
   private
 
   def html_processors
     [
-      [HTMLProcessor::AmpVideo, [HTMLProcessor::VIDEO_IFRAME]]
+      [HTMLProcessor::AmpVideo,  [HTMLProcessor::VIDEO_IFRAME]],
+      [HTMLProcessor::AmpImg,    [HTMLProcessor::IMG]],
+      [HTMLProcessor::AmpIframe, [HTMLProcessor::NON_VIDEO_IFRAME]]
     ]
   end
 end

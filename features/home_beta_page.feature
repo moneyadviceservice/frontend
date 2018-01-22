@@ -18,3 +18,12 @@ Feature: Home page beta
       | language |
       | English  |
       | Welsh    |
+
+  Scenario Outline: Most Read
+    Given I view the beta home page in <language>
+    Then I should be presented with a Most Read section
+
+    Examples:
+      | language |
+      | English  |
+      | Welsh    |

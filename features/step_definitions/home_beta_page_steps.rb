@@ -19,3 +19,8 @@ Then(/^I should be presented with the seasonal spotlight in Welsh$/) do
   expect(home_beta_page.seasonal_spotlight)
     .to have_content('Ffyrdd hawdd i ddal y arferiad cynilo')
 end
+
+Then(/^I should be presented with a Most Read section$/) do
+  expect(home_beta_page.most_read)
+    .to have_content(I18n.t('home.show.most_read_heading'))
+end

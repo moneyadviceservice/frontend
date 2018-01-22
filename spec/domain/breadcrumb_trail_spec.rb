@@ -1,15 +1,16 @@
 RSpec.describe BreadcrumbTrail, '.build' do
-  let(:article)               { Core::Article.new('the-article') }
+  let(:article)               { Mas::Cms::Article.new('the-article') }
   let(:static_page)           { Core::StaticPage.new(double) }
   let(:news_article)          { Core::NewsArticle.new(double) }
-  let(:category_title)        { 'the-category' }
-  let(:tool_category)         { ToolCategory.new(category_title) }
-  let(:parent_category_title) { 'the-category' }
-  let(:parent_category)       { Core::Category.new(parent_category_title, title: parent_category_title) }
+  let(:category_id)           { 'the-category' }
+  let(:tool_category)         { ToolCategory.new(category_id) }
+  let(:parent_category_id)    { 'the-parent-category' }
+  let(:parent_category)       { Mas::Cms::Category.new(parent_category_id, title: 'some parent category') }
+  let(:other_category)        { Mas::Cms::Category.new('other-category', title: 'some other category') }
   let(:path_to_category)      { [parent_category, category] }
   let(:category_tree)         { double }
   let(:category) do
-    Core::Category.new(category_title, title: category_title, parent_id: parent_category.id)
+    Mas::Cms::Category.new(category_id, title: 'some category', parent_id: parent_category.id)
   end
 
   before do
@@ -26,12 +27,19 @@ RSpec.describe BreadcrumbTrail, '.build' do
         expect(article).to receive(:categories).and_return([category]).at_least(:once)
       end
 
-      specify { expect(subject.map(&:title)).to eq([parent_category_title, category_title]) }
+      specify do
+        expect(subject.map(&:path)).to eq(
+          [
+            '/en/categories/the-parent-category',
+            '/en/categories/the-category'
+          ]
+        )
+      end
     end
 
     context 'and it exists in more than one category' do
       before do
-        expect(article).to receive(:categories).and_return([double, double]).at_least(:once)
+        expect(article).to receive(:categories).and_return([category, other_category]).at_least(:once)
       end
 
       it { is_expected.to be_empty }
@@ -42,21 +50,29 @@ RSpec.describe BreadcrumbTrail, '.build' do
         expect(article).to receive(:categories).and_return([])
       end
 
-      specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
+      specify do
+        expect(subject.map(&:path)).to eq(['/en'])
+      end
     end
   end
 
   context 'when item is a category' do
-    subject { described_class.build(category, category_tree) }
+    before do
+      allow(Mas::Cms::Category).to receive(:find)
+        .with(parent_category_id, locale: I18n.locale)
+        .and_return(parent_category)
+    end
 
-    specify { expect(subject.map(&:title)).to eq([parent_category_title]) }
+    subject { described_class.build(category) }
+
+    specify { expect(subject.map(&:path)).to eq(['/en', '/en/categories/the-parent-category']) }
 
     context 'and has no parent category' do
       before do
         allow(category).to receive(:parent_id).and_return(nil)
       end
 
-      specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
+      specify { expect(subject.map(&:path)).to eq(['/en']) }
     end
   end
 
@@ -65,7 +81,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
 
     before { expect(RootToNodePath).to receive(:build).with(tool_category, category_tree) }
 
-    specify { expect(subject.map(&:title)).to eq([category_title, parent_category_title]) }
+    specify { expect(subject.map(&:title)).to eq([parent_category.title, category.title]) }
   end
 
   context 'when item is a static page' do

@@ -37,6 +37,7 @@
 
   @include respond-to($mq-m) {
     @include column(3);
+    margin-top: $baseline-unit*2;
   }
 }
 

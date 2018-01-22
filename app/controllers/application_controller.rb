@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
+  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
+
   protect_from_forgery with: :exception
   add_flash_types :success
 
@@ -185,4 +188,8 @@ class ApplicationController < ActionController::Base
       @article.categories.map(&:parent_id).include?(PENSIONS_CATEGORY)
   end
   helper_method :pensions_and_retirement_page?
+
+  def redirect_page(e)
+    redirect_to e.location, status: e.http_response.status
+  end
 end

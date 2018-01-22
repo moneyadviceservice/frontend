@@ -57,20 +57,21 @@
 
 a.information-guides__list-link {
   display: block;
-  padding-right: $baseline-unit;
   color: $color-black;
   text-align: right;
 
   @include respond-to($mq-m) {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: $baseline-unit;
+    bottom: $baseline-unit;
   }
 }
 
 .information-guides__list-arrow {
+  display: inline-block;
   fill: $color-teal-dark;
-  height: 34px;
-  width: 30px;
+  margin-left: $baseline-unit;
   float: right;
+  height: 25px;
+  width: 25px;
 }

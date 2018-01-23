@@ -1,54 +1,44 @@
 RSpec.describe PageFeedbacksController, type: :controller do
-  let(:page_feedback) { Core::PageFeedback.new(liked: true) }
-  let(:article) { double }
+  let(:article) { Mas::Cms::Article.new('understanding-your-payslip') }
+  let(:article_no_feedback) { Mas::Cms::Article.new('baby-costs-calculator') }
 
   before do
-    allow(Core::Article).to receive(:new) { article }
+    allow(Mas::Cms::Article).to receive(:find)
+      .with(article_no_feedback.id, locale: I18n.locale)
+      .and_return(article_no_feedback)
+
+    allow(Mas::Cms::Article).to receive(:find)
+      .with(article.id, locale: I18n.locale)
+      .and_return(article)
   end
 
-  describe 'POST /page_feedbacks' do
-    let(:creator) { double }
-    let(:params) do
-      {
-        locale: I18n.locale,
-        article_id: 'contact-us',
-        liked: true
-      }
-    end
-
-    before do
-      allow(Core::PageFeedbackCreator).to receive(:new) { creator }
-    end
-
+  describe '#create' do
     describe 'when the article accepts feedback' do
-      before do
-        allow(article).to receive(:accepts_feedback?) { true }
-      end
-
       describe 'and the feedback is valid' do
-        before do
-          allow(creator).to receive(:call) { page_feedback }
-        end
-
-        it 'calls the creator' do
-          expect(creator).to receive(:call)
-          post :create, params
+        let(:params) do
+          {
+            session_id: "abc",
+            locale: I18n.locale,
+            article_id: article.id,
+            liked: true
+          }
         end
 
         it 'returns 201 create resource status' do
           post :create, params
           expect(response.status).to be(201)
+          body = JSON.parse(response.body)
+          expect(body.liked).to be_true
         end
       end
 
       describe 'but the feedback is not valid' do
-        before do
-          allow(creator).to receive(:call) { false }
-        end
-
-        it 'calls the creator' do
-          expect(creator).to receive(:call)
-          post :create, params
+        let(:params) do
+          {
+            locale: I18n.locale,
+            article_id: article.id,
+            shared_on: 'the moon',
+          }
         end
 
         it 'returns 422 unprocessable entity' do
@@ -59,8 +49,12 @@ RSpec.describe PageFeedbacksController, type: :controller do
     end
 
     describe 'but the article does not accept feedback' do
-      before do
-        allow(article).to receive(:accepts_feedback?) { false }
+      let(:params) do
+        {
+          locale: I18n.locale,
+          article_id: article_no_feedback.id,
+          liked: true
+        }
       end
 
       it 'returns 403 not allowed' do
@@ -70,7 +64,7 @@ RSpec.describe PageFeedbacksController, type: :controller do
     end
   end
 
-  describe 'PATCH /en/articles/example-article/page_feedbacks' do
+  xdescribe '#update' do
     let(:updator) { double }
     let(:params) do
       {

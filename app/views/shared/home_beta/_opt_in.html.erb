@@ -1,0 +1,11 @@
+<div class="opt-in">
+  <% if page == 'beta_home' %>
+    <%= link_to t('home_beta.opt_in.feedback_link'), class: 'opt-in__link' do %>
+      <%= t('home_beta.opt_in.feedback_text') %>
+    <% end %>
+  <% end %> 
+  <%= t('home_beta.opt_in.' + page) %>
+  <%= link_to t('home_beta.opt_in.link_' + page), class: 'opt-in__link' do %>
+    <%= t('home_beta.opt_in.link_text_' + page) %>
+  <% end %>
+</div>

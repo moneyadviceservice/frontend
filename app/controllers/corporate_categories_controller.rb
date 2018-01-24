@@ -6,7 +6,7 @@ class CorporateCategoriesController < CategoriesController
 
   def show
     super
-    @article = article_resource
+    @article = corporate_article_resource
     @corporate_category = corporate_resource
     assign_active_categories(@corporate_category)
   end
@@ -19,8 +19,8 @@ class CorporateCategoriesController < CategoriesController
     end
   end
 
-  def article_resource
-    Mas::Cms::Article.find(default_article_id, locale: I18n.locale)
+  def corporate_article_resource
+    Mas::Cms::Corporate.find(default_article_id, locale: I18n.locale)
   end
 
   def corporate_resource

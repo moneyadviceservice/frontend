@@ -34,3 +34,13 @@ Then(/^I should be presented with the information guides in Welsh$/) do
   expect(home_beta_page.information_guides)
     .to have_content('Canllawiau gwybodaeth ar ein safle')
 end
+
+Then(/^I should be presented with the option to return to the current homepage in English$/) do
+  expect(home_beta_page.beta_opt_out)
+    .to have_content('Leave some feedback to tell us what you think about our new homepage. Return to our original homepage')
+end
+
+Then(/^I should be presented with the option to return to the current homepage in Welsh$/) do
+  expect(home_beta_page.beta_opt_out)
+    .to have_content('Leave some feedback to tell us what you think about our new homepage. Return to our original homepage')
+end

@@ -9,5 +9,6 @@ module UI::Pages
     element :seasonal_spotlight, '.seasonal-spotlight'
     element :most_read, '.most-read'
     element :information_guides, '.information-guides'
+    element :beta_opt_out, '.opt-in'
   end
 end

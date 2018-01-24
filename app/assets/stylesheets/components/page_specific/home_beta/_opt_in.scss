@@ -1,0 +1,11 @@
+.opt-in {
+  background-color: $color-grey-dark;
+  color: $color-white;
+  text-align: center;
+  padding: $baseline-unit;
+}
+
+a.opt-in__link {
+  color: $color-white;
+  text-decoration: underline;
+}

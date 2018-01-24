@@ -36,3 +36,12 @@ Feature: Home page beta
       | language |
       | English  |
       | Welsh    |
+  
+  Scenario Outline: Opt out of beta
+    Given I view the beta home page in <language>
+    Then I should be presented with the option to return to the current homepage in <language>
+
+    Examples:
+      | language |
+      | English  |
+      | Welsh    |

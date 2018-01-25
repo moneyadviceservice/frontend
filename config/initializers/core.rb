@@ -25,9 +25,6 @@ Core::Registry::Repository[:action_plan] =
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 
-Core::Registry::Repository[:page_feedback] =
-  Core::Repository::CMS::PageFeedback.new
-
 Core::Registry::Repository[:footer] =
   Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
 

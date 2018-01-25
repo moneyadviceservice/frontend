@@ -26,7 +26,6 @@ module Core
   autoload :NewsArticle, 'core/entity/news_article'
   autoload :NewsCollection, 'core/entity/news_collection'
   autoload :Other, 'core/entity/other'
-  autoload :PageFeedback, 'core/entity/page_feedback'
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'

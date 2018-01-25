@@ -1,9 +1,10 @@
-<div class="leader" data-component="leader" aria-hidden="true">
+<div class="leader" data-component="leader">
   <%= heading_tag(level: 1, class: "leader__heading") do %>
     <%= t('home.show.beta_leader.title') %>
   <% end %>
 
   <div class="leader__content leader__content--<%= locale %>">
+    <p class="visually-hidden"><%= t('home.show.beta_leader.text') %></p>
     <div class="leader__image leader__image--<%= rand(3) %>"></div>
     <%= render 'shared/home_beta/leader_text' %>
   </div>

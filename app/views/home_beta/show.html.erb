@@ -20,7 +20,7 @@
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
-<%= render 'shared/home_top', item: @resource %>
+<%= render 'shared/home_beta/central_search' %>
 
 <div class="l-home-promos">
   <%= render 'shared/home_beta/tool_promos', items: @resource.tools %>
@@ -29,5 +29,3 @@
 
 <%= render 'shared/home_beta/information_guides', item: @resource %>
 <%= render 'shared/home_beta/most_read', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
-
-<%= render 'shared/stripe_banner', item: @resource %>

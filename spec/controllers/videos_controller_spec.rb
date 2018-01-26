@@ -1,14 +1,7 @@
 RSpec.describe VideosController, type: :controller do
   describe 'GET show' do
-    context 'when a video does exist' do
-      let(:categories) { [] }
-      let(:video) { Core::Video.new('test', title: 'test', body: 'body', categories: categories) }
-
-      before do
-        allow(Core::VideoReader).to receive(:new) do
-          double(Core::VideoReader, call: video)
-        end
-      end
+    context 'when a video exists' do
+      let(:video) { double(id: 'pensions-and-retirement-video') }
 
       it 'is successful' do
         get :show, id: video.id, locale: I18n.locale
@@ -17,32 +10,26 @@ RSpec.describe VideosController, type: :controller do
     end
 
     context 'when an video does not exist' do
-      let(:video) { Core::Video.new('does-not-exist') }
-
-      before do
-        allow_any_instance_of(Core::VideoReader).to receive(:call).and_yield(video)
-      end
+      let(:video) { double(id: 'does-not-exist') }
 
       it 'raises an ActionController RoutingError' do
-        expect { get :show, id: 'does-not-exist', locale: I18n.locale }
-            .to raise_error(ActionController::RoutingError)
+        expect { get :show, id: video.id, locale: I18n.locale }
+          .to raise_error(ActionController::RoutingError)
       end
     end
 
-    context 'when it is a redirect' do
-      let(:redirect) do
-        OpenStruct.new(redirect?: true,
-                       location: 'https://example.com',
-                       status: 301)
+    context 'when the video has a redirect' do
+      let(:video) { double(id: 'buy-to-let-mortgage-guide') }
+      let(:redirect_location) do
+        'http://localhost:5000/en/articles/buy-to-let-mortgages'
       end
 
-      before do
-        allow_any_instance_of(Core::VideoReader).to receive(:call).and_yield(redirect)
-      end
+      before { get :show, id: video.id, locale: I18n.locale }
 
-      it 'redirects' do
-        get :show, id: 'redirect', locale: I18n.locale
-        expect(response).to redirect_to('https://example.com')
+      it { is_expected.to respond_with 301 }
+
+      it 'redirects to expected location' do
+        expect(response.location).to match(redirect_location)
       end
     end
   end

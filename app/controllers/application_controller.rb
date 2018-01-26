@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
+  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
+
   protect_from_forgery with: :exception
   add_flash_types :success
 
@@ -100,6 +103,10 @@ class ApplicationController < ActionController::Base
   helper_method :mas_optimizely_tag
 
   private
+
+  def redirect_page(e)
+    redirect_to e.location, status: e.http_response.status
+  end
 
   def is_environment_on_uat?
     Rails.env == 'uat'

@@ -1,4 +1,5 @@
 class HomeBetaController < ApplicationController
+  layout '_unconstrained'
 
   def show
     @resource = interactor.call

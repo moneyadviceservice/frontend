@@ -31,7 +31,6 @@ module Core
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
   autoload :Customer, 'core/entity/customer'
-  autoload :Video, 'core/entity/video'
   autoload :WebChat, 'core/entity/web_chat'
 
   module Feedback
@@ -60,8 +59,6 @@ module Core
   autoload :PageFeedbackAction, 'core/interactor/page_feedback_action'
   autoload :Searcher, 'core/interactor/searcher'
   autoload :StaticPageReader, 'core/interactor/static_page_reader'
-  autoload :VideoReader, 'core/interactor/video_reader'
-  autoload :VideoPreviewer, 'core/interactor/video_previewer'
   autoload :RedirectReader, 'core/interactor/redirect_reader'
 
   module Interactors
@@ -107,11 +104,6 @@ module Core
 
     module Corporate
       autoload :CMS, 'core/repository/corporate/cms'
-    end
-
-    module Videos
-      autoload :PublicWebsite, 'core/repository/videos/public_website'
-      autoload :CMS, 'core/repository/videos/cms'
     end
 
     module Categories

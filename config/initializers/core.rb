@@ -34,9 +34,6 @@ Core::Registry::Repository[:footer] =
 Core::Registry::Repository[:home_page] =
   Core::Repository::HomePages::CMS.new
 
-Core::Registry::Repository[:video] =
-  Core::Repository::Videos::CMS.new
-
 Core::Registry::Repository[:corporate] =
   Core::Repository::Corporate::CMS.new
 

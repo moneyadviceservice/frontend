@@ -31,9 +31,6 @@ Core::Registry::Repository[:page_feedback] =
 Core::Registry::Repository[:footer] =
   Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
 
-Core::Registry::Repository[:video] =
-  Core::Repository::Videos::CMS.new
-
 Core::Registry::Repository[:corporate] =
   Core::Repository::Corporate::CMS.new
 

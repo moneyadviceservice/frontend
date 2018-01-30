@@ -21,7 +21,7 @@
   background-size: 100%;
   height: 0;
   width: 100%;
-  padding-top: 395 / 464 * 100%;
+  padding-top: 408 / 464 * 100%;
 
   @include respond-to($mq-s) {
     padding-top: 393 / 1200 * 100%;
@@ -34,7 +34,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  fill: red;
+  fill: $color-black;
 }
 
 .leader__image_text__s {
@@ -71,7 +71,7 @@
           display: block;
         }
 
-        background-image: image_url('home_beta/leader/leader-image-mobile-en-#{$value}.png');
+        background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
       }
     }
   }
@@ -101,7 +101,7 @@
           display: block;
         }
 
-        background-image: image_url('home_beta/leader/leader-image-mobile-en-#{$value}.png');
+        background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
       }
     }
   }

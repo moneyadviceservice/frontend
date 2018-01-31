@@ -41,8 +41,6 @@ module Core
   end
 
   autoload :BaseContentReader, 'core/interactor/base_content_reader'
-  autoload :HomePageReader, 'core/interactor/home_page_reader'
-  autoload :HomePagePreviewer, 'core/interactor/home_page_previewer'
   autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'

@@ -10,10 +10,6 @@ class ToolCategory
     false
   end
 
-  def news?
-    false
-  end
-
   private
 
   def entity

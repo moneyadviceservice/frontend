@@ -43,9 +43,6 @@ Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 Core::Registry::Repository[:search] =
   Core::Repository::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
 
-Core::Registry::Repository[:static_page] =
-  Core::Repository::StaticPages::Cms.new
-
 if Rails.env.development?
   Core::Registry::Repository[:customer] =
     Core::Repository::Customers::Fake.new

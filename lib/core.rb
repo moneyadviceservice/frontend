@@ -52,7 +52,6 @@ module Core
   autoload :PageFeedbackUpdator, 'core/interactor/page_feedback_updator'
   autoload :PageFeedbackAction, 'core/interactor/page_feedback_action'
   autoload :Searcher, 'core/interactor/searcher'
-  autoload :StaticPageReader, 'core/interactor/static_page_reader'
   autoload :RedirectReader, 'core/interactor/redirect_reader'
 
   module Interactors
@@ -138,11 +137,6 @@ module Core
 
     module SavedTools
       autoload :Static, 'core/repository/saved_tools/static'
-    end
-
-    module StaticPages
-      autoload :PublicWebsite, 'core/repository/static_pages/public_website'
-      autoload :Cms, 'core/repository/static_pages/cms'
     end
 
     module Search

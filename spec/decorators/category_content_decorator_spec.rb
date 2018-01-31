@@ -70,7 +70,7 @@ RSpec.describe CategoryContentDecorator do
 
   describe '#path' do
     context 'with a Category' do
-      let(:item) { build :category }
+      let(:item) { Mas::Cms::Category.new('test-category') }
 
       it 'calls the correct path helper' do
         expect(helpers).to receive(:category_path).with(item.id, locale: locale)
@@ -79,7 +79,7 @@ RSpec.describe CategoryContentDecorator do
     end
 
     context 'with an Article' do
-      let(:item) { build :article }
+      let(:item) { Mas::Cms::Article.new('test-article') }
 
       it 'calls the correct path helper' do
         expect(helpers).to receive(:article_path).with(item.id, locale: locale)

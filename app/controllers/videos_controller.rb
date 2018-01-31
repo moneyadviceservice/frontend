@@ -5,22 +5,16 @@ class VideosController < ApplicationController
   include Navigation
 
   def show
-    @video = interactor.call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      else
-        not_found
-      end
-    end
+    @video = resource
 
     set_related_content
-    set_categories
+    assign_active_categories(*@video.categories)
   end
 
   private
 
-  def interactor
-    Core::VideoReader.new(params[:id])
+  def resource
+    Mas::Cms::Video.find(params[:id], locale: I18n.locale)
   end
 
   def set_related_content
@@ -28,12 +22,5 @@ class VideosController < ApplicationController
       @video.categories,
       RelatedContent.build(@video)
     )
-  end
-
-  def set_categories
-    @video.categories.each do |category|
-      active_category category.id
-      active_category category.parent_id if category.child?
-    end
   end
 end

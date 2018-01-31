@@ -46,12 +46,6 @@ Core::Registry::Repository[:search] =
 Core::Registry::Repository[:static_page] =
   Core::Repository::StaticPages::Cms.new
 
-Core::Registry::Repository[:news] =
-  Core::Repository::News::PublicWebsite.new
-
-Core::Registry::Repository[:news_article] =
-  Core::Repository::News::CMS.new
-
 if Rails.env.development?
   Core::Registry::Repository[:customer] =
     Core::Repository::Customers::Fake.new

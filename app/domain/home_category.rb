@@ -12,8 +12,4 @@ class HomeCategory
   def home?
     true
   end
-
-  def news?
-    false
-  end
 end

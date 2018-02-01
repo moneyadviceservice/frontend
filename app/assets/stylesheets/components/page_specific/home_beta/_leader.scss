@@ -16,6 +16,26 @@
   position: relative;
 }
 
+@each $value in count, 0, 1, 2 {
+  .leader__image--#{$value} {
+    background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
+
+    .leader__image_text__mq-0 {
+      display: none;
+
+      &.leader__image_text__mq-0--#{$value} {
+        display: block;
+      }
+
+      @include respond-to($mq-s) {
+        &.leader__image_text__mq-0--#{$value} {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .leader__image {
   background-repeat: no-repeat;
   background-size: 100%;
@@ -42,37 +62,15 @@
   fill: $color-black;
 }
 
-.leader__image_text__mq-0 {
-  @include respond-to($mq-s) {
-    display: none;
-  }
-}
-
-@each $lang in locale, en, cy {
-  .leader__content--#{$lang} {
-    @include respond-to(0, $mq-s) {
-      .leader__image_text__mq-0 {
-        display: none;
-      }
-
-      @each $value in count, 0, 1, 2 {
-        .leader__image--#{$value} {
-          .leader__image_text__mq-0--#{$value} {
-            display: block;
-          }
-
-          background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
-        }
-      }
-    }
-  }
-}
-
 .leader__image_text__mq-s {
   display: none;
 
-  @include respond-to($mq-s, $mq-l) {
+  @include respond-to($mq-s) {
     display: block;
+  }
+
+  @include respond-to($mq-l) {
+    display: none;
   }
 }
 

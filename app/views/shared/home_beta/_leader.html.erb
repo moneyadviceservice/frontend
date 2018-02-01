@@ -3,9 +3,9 @@
     <%= t('home.show.beta_leader.title') %>
   <% end %>
 
-  <div class="leader__content leader__content--<%= locale %>">
+  <div class="leader__content">
     <p class="visually-hidden"><%= t('home.show.beta_leader.text') %></p>
-    <div class="leader__image leader__image--<%= rand(3) %>">
+    <div class="leader__image leader__image--<%= rand(3) %>" aria-hidden="true">
       <%= render 'shared/home_beta/leader_text' %>
     </div>
   </div>

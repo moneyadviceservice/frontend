@@ -5,7 +5,6 @@ RSpec.describe ToolCategory do
   subject { described_class.new(category_id) }
 
   it { is_expected.to_not be_home }
-  it { is_expected.to_not be_news }
 
   describe '#title' do
     let(:title) { double }

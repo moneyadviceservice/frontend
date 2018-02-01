@@ -121,7 +121,7 @@ Rails.application.routes.draw do
     end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',
-        page_type: /articles|action_plans|news|corporate|tools/
+        page_type: /articles|action_plans|corporate|tools/
 
     get '/:page_type/:id/preview' => 'videos_preview#show',
         page_type: /videos/
@@ -131,7 +131,6 @@ Rails.application.routes.draw do
 
     resources :categories, only: 'show'
     resources :search_results, only: 'index', path: 'search'
-    resources :news, only: [:show, :index]
     resources :videos, only: :show
 
     resources :corporate_categories, only: [:show], constraints: CorporateCategoriesConstraint.new

@@ -48,22 +48,6 @@
   }
 }
 
-.leader__image_text__mq-s {
-  display: none;
-
-  @include respond-to($mq-s, $mq-l) {
-    display: block;
-  }
-}
-
-.leader__image_text__mq-l {
-  display: none;
-
-  @include respond-to($mq-l) {
-    display: block;
-  }
-}
-
 @each $lang in locale, en, cy {
   .leader__content--#{$lang} {
     @include respond-to(0, $mq-s) {
@@ -81,5 +65,21 @@
         }
       }
     }
+  }
+}
+
+.leader__image_text__mq-s {
+  display: none;
+
+  @include respond-to($mq-s, $mq-l) {
+    display: block;
+  }
+}
+
+.leader__image_text__mq-l {
+  display: none;
+
+  @include respond-to($mq-l) {
+    display: block;
   }
 }

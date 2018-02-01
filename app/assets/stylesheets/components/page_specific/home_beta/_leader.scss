@@ -37,13 +37,13 @@
   fill: $color-black;
 }
 
-.leader__image_text__s {
+.leader__image_text__mq-0 {
   @include respond-to($mq-s) {
     display: none;
   }
 }
 
-.leader__image_text__m {
+.leader__image_text__mq-s {
   display: none;
 
   @include respond-to($mq-s, $mq-l) {
@@ -51,7 +51,7 @@
   }
 }
 
-.leader__image_text__l {
+.leader__image_text__mq-l {
   display: none;
 
   @include respond-to($mq-l) {
@@ -61,13 +61,13 @@
 
 .leader__content--en {
   @include respond-to(0, $mq-s) {
-    .leader__image_text__s {
+    .leader__image_text__mq-0 {
       display: none;
     }
 
     @each $value in count, 0, 1, 2 {
       .leader__image--#{$value} {
-        .leader__image_text__s--#{$value} {
+        .leader__image_text__mq-0--#{$value} {
           display: block;
         }
 
@@ -91,13 +91,13 @@
 
 .leader__content--cy {
   @include respond-to(0, $mq-s) {
-    .leader__image_text__s {
+    .leader__image_text__mq-0 {
       display: none;
     }
 
     @each $value in count, 0, 1, 2 {
       .leader__image--#{$value} {
-        .leader__image_text__s--#{$value} {
+        .leader__image_text__mq-0--#{$value} {
           display: block;
         }
 

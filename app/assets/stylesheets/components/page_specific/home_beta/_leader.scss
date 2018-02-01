@@ -27,6 +27,10 @@
     padding-top: 393 / 1200 * 100%;
     background-image: image_url('home_beta/leader/leader_image_mq-s.jpg');
   }
+
+  @include respond-to($mq-l) {
+    background-image: image_url('home_beta/leader/leader_image_mq-l.jpg');
+  }
 }
 
 .leader__image_text {
@@ -75,12 +79,6 @@
 
           background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
         }
-      }
-    }
-
-    @include respond-to($mq-l) {
-      .leader__image {
-        background-image: image_url('home_beta/leader/leader-image-en.png');
       }
     }
   }

@@ -25,6 +25,7 @@
 
   @include respond-to($mq-s) {
     padding-top: 393 / 1200 * 100%;
+    background-image: image_url('home_beta/leader/leader_image_mq-s.jpg');
   }
 }
 
@@ -74,12 +75,6 @@
 
           background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
         }
-      }
-    }
-
-    @include respond-to($mq-s) {
-      .leader__image {
-        background-image: image_url('home_beta/leader/leader-image-tablet-en.png');
       }
     }
 

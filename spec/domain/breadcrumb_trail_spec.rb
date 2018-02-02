@@ -1,6 +1,5 @@
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Mas::Cms::Article.new('the-article') }
-  let(:static_page)           { Core::StaticPage.new(double) }
   let(:category_id)           { 'the-category' }
   let(:tool_category)         { ToolCategory.new(category_id) }
   let(:parent_category_id)    { 'the-parent-category' }
@@ -81,12 +80,6 @@ RSpec.describe BreadcrumbTrail, '.build' do
     before { expect(RootToNodePath).to receive(:build).with(tool_category, category_tree) }
 
     specify { expect(subject.map(&:title)).to eq([parent_category.title, category.title]) }
-  end
-
-  context 'when item is a static page' do
-    subject { described_class.build(static_page, category_tree) }
-
-    specify { expect(subject.map(&:title)).to eq([HomeCategory.new.title]) }
   end
 end
 

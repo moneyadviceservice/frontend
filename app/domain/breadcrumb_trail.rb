@@ -5,13 +5,11 @@ class BreadcrumbTrail
       build_category_trail(item)
     when ToolCategory
       RootToNodePath.build(item, category_tree)
-    when Core::StaticPage
-      [HomeCategory.new]
     else
       build_default_trail(item, category_tree)
     end.map do |element|
       Breadcrumb.new(element)
-   end
+    end
   end
 
   def self.build_category_trail(item)

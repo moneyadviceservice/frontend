@@ -15,17 +15,20 @@
 
 <% set_meta_tags(canonical:   root_url,
                  alternate:   alternate_home_map,
-                 title:       t('.title'),
-                 description: t('.description').strip) %>
+                 title:       t('home.show.title'),
+                 description: t('home.show.description').strip) %>
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
-<%= render 'shared/home_beta/leader', item: @resource %>
+<%= render 'shared/home_beta/leader' %>
+<%= render 'shared/home_beta/central_search' %>
 
-<%= render 'shared/home_top', item: @resource %>
+<div class="l-constrained">
+  <div class="l-home-promos">
+    <%= render 'shared/home_beta/tool_promos', items: @resource.tools %>
+    <%= render 'shared/home_beta/seasonal_spotlight', item: @resource %>
+  </div>
 
-<%= render 'shared/tool_promos', items: @resource.tools %>
-
-<%= render 'shared/article_promos', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
-
-<%= render 'shared/stripe_banner', item: @resource %>
+  <%= render 'shared/home_beta/information_guides', item: @resource %>
+  <%= render 'shared/home_beta/most_read', items_with_image: @resource.tiles, items_without_image: @resource.text_tiles %>
+</div>

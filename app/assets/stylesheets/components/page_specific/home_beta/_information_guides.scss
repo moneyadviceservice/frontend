@@ -1,0 +1,77 @@
+.information-guides {
+  @include column(12);
+}
+
+.information-guides__title {
+  @include body(20, 24);
+  font-weight: normal;
+  background-color: $color-teal-dark;
+  color: $color-white;
+  margin: 0;
+  padding: $baseline-unit $baseline-unit*2;
+}
+
+.information-guides__list {
+  @extend %clearfix;
+  margin: 0;
+  padding: $baseline-unit*2 0;
+  background-color: $color-grey-pale;
+  list-style: none;
+  border-bottom: 2px solid $color-teal-dark;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.information-guides__list-item {
+  @include column(12);
+  @include body(16, 24);
+  position: relative;
+  background-color: $color-grey-palest;
+  border-bottom: 2px solid $color-teal-dark;
+  padding: $baseline-unit*2;
+
+  @include respond-to($mq-s) {
+    @include column(6);
+  }
+
+  @include respond-to($mq-m) {
+    @include column(3);
+    margin-top: $baseline-unit*2;
+  }
+}
+
+.information-guides__list-title {
+  @include body(18, 24);
+  color: $color-black;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.information-guides__list-text {
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*6;
+  }
+}
+
+a.information-guides__list-link {
+  display: block;
+  color: $color-black;
+  text-align: right;
+
+  @include respond-to($mq-m) {
+    position: absolute;
+    right: $baseline-unit;
+    bottom: $baseline-unit;
+  }
+}
+
+.information-guides__list-arrow {
+  display: inline-block;
+  fill: $color-teal-dark;
+  margin-left: $baseline-unit;
+  float: right;
+  height: 25px;
+  width: 25px;
+}

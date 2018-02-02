@@ -1,10 +1,39 @@
 .leader {
   @extend %clearfix;
-  margin-top: $baseline-unit * 4;
+}
+
+.leader__heading {
+  @include body(27, 30);
+  @include column(12);
+
+  text-align: center;
+  margin-top: $baseline-unit * 3;
+  margin-bottom: $baseline-unit * 4;
 }
 
 .leader__content {
   @include column(12);
+  position: relative;
+}
+
+@each $value in count, 0, 1, 2 {
+  .leader__image--#{$value} {
+    background-image: image_url('home_beta/leader/leader_image_mq-0-#{$value}.jpg');
+
+    .leader__image_text__mq-0 {
+      display: none;
+
+      &.leader__image_text__mq-0--#{$value} {
+        display: block;
+      }
+
+      @include respond-to($mq-s) {
+        &.leader__image_text__mq-0--#{$value} {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .leader__image {
@@ -12,53 +41,43 @@
   background-size: 100%;
   height: 0;
   width: 100%;
-  padding-top: 241 / 283 * 100%; // 100%;
+  padding-top: 408 / 464 * 100%;
 
   @include respond-to($mq-s) {
     padding-top: 393 / 1200 * 100%;
-  }
-}
-
-.leader__content--en {
-  @include respond-to(0, $mq-s) {
-    @each $value in count, 0, 1, 2 {
-      .leader__image--#{$value} {
-        background-image: image_url('home_beta/leader/leader-image-mobile-en-#{$value}.png');
-      }
-    }
-  }
-
-  @include respond-to($mq-s) {
-    .leader__image {
-      background-image: image_url('home_beta/leader/leader-image-tablet-en.png');
-    }
+    background-image: image_url('home_beta/leader/leader_image_mq-s.jpg');
   }
 
   @include respond-to($mq-l) {
-    .leader__image {
-      background-image: image_url('home_beta/leader/leader-image-en.png');
-    }
+    background-image: image_url('home_beta/leader/leader_image_mq-l.jpg');
   }
 }
 
-.leader__content--cy {
-  @include respond-to(0, $mq-s) {
-    @each $value in count, 0, 1, 2 {
-      .leader__image--#{$value} {
-        background-image: image_url('home_beta/leader/leader-image-mobile-cy-#{$value}.png');
-      }
-    }
-  }
+.leader__image_text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  fill: $color-black;
+}
+
+.leader__image_text__mq-s {
+  display: none;
 
   @include respond-to($mq-s) {
-    .leader__image {
-      background-image: image_url('home_beta/leader/leader-image-tablet-cy.png');
-    }
+    display: block;
   }
 
   @include respond-to($mq-l) {
-    .leader__image {
-      background-image: image_url('home_beta/leader/leader-image-cy.png');
-    }
+    display: none;
+  }
+}
+
+.leader__image_text__mq-l {
+  display: none;
+
+  @include respond-to($mq-l) {
+    display: block;
   }
 }

@@ -192,4 +192,8 @@ class ApplicationController < ActionController::Base
       @article.categories.map(&:parent_id).include?(PENSIONS_CATEGORY)
   end
   helper_method :pensions_and_retirement_page?
+
+  def redirect_page(e)
+    redirect_to e.location, status: e.http_response.status
+  end
 end

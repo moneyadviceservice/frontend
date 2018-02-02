@@ -1,7 +1,4 @@
 class ArticlesController < ApplicationController
-  rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
-  rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
-
   decorates_assigned :article, with: ContentItemDecorator
   decorates_assigned :related_content, with: CategoryDecorator
   decorates_assigned :parent_category, with: CategoryDecorator
@@ -13,8 +10,7 @@ class ArticlesController < ApplicationController
 
     set_breadcrumbs
     set_related_content
-    set_categories
-    set_parent_category
+    assign_active_categories(*@article.categories)
     set_article_canonical_url
   end
 
@@ -22,10 +18,6 @@ class ArticlesController < ApplicationController
 
   def resource
     Mas::Cms::Article.find(params[:id], locale: params[:locale])
-  end
-
-  def redirect_page(e)
-    redirect_to e.location, status: e.http_response.status
   end
 
   def set_breadcrumbs
@@ -40,17 +32,6 @@ class ArticlesController < ApplicationController
       @article.categories,
       RelatedContent.build(@article)
     )
-  end
-
-  def set_categories
-    @article.categories.each do |category|
-      active_category category.id
-      active_category category.parent_id if category.child?
-    end
-  end
-
-  def set_parent_category
-    @parent_category ||= ParentCategory.find(@article, category_tree)
   end
 
   def set_article_canonical_url

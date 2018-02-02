@@ -6,9 +6,8 @@ class CorporateCategoriesController < CategoriesController
 
   def show
     super
-
-    set_article
-    @corporate_category = Core::CategoryReader.new('corporate-home').call
+    @article = corporate_article_resource
+    @corporate_category = corporate_resource
     assign_active_categories(@corporate_category)
   end
 
@@ -20,15 +19,12 @@ class CorporateCategoriesController < CategoriesController
     end
   end
 
-  def article_interactor
-    Core::CorporateReader.new(default_article_id)
+  def corporate_article_resource
+    Mas::Cms::Corporate.find(default_article_id, locale: I18n.locale)
   end
 
-  def set_article
-    @article = article_interactor.call
-  rescue
-    # TODO change this in the cms repository to return nil on 404
-    @article = nil
+  def corporate_resource
+    Mas::Cms::Category.find('corporate-home', locale: I18n.locale)
   end
 
   def default_article_id

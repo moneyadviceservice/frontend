@@ -20,7 +20,7 @@ Scenario: Signing in after completing questionnaire saves answers
   And   I select a country
   And   I sign in
   Then  I get my results
-  
+
 Scenario: Signing in should overwrite old answers with new ones
   Given I am signed in
   And   I am on the Money Manager tool
@@ -30,3 +30,10 @@ Scenario: Signing in should overwrite old answers with new ones
   And   I answer the questions differently
   And   I sign in
   Then  I have the latest answers
+
+Scenario: Passing a special parameter in the url should show all content
+  Given I am signed in
+  And   I am on the Money Manager tool
+  And   I complete the series of questions
+  And   I visit the show all url
+  Then  I see all of the advice

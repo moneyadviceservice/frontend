@@ -21,6 +21,9 @@ module World
       money_manager
       money_manager_circumstances_changed
       money_manager_questionnaire
+      money_manager_show_all_advice
+      news
+      news_article
       partners
       profile
       quiz_admin

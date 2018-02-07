@@ -30,26 +30,6 @@ Feature: Search Engine Optimisation
     | English |
     | Welsh   |
 
-  Scenario Outline: Action Plan pages include a canonical tag
-    Given I view an action plan in <locale>
-    Then the action plan should have a canonical tag for that language version
-
-  Examples:
-    | locale  |
-    | English |
-    | Welsh   |
-
-  # not implemented in contento
-  @wip
-  Scenario Outline: Action Plan pages include an alternate tags for supported languages
-    Given I view an action plan in <action_plan_locale>
-    Then the action plan page should have alternate tags for the supported locales
-
-  Examples:
-    | action_plan_locale |
-    | English            |
-    | Welsh              |
-
   Scenario Outline: Article pages include a canonical tag
     Given I view an article in <locale>
     Then the article should have a canonical tag for that language version

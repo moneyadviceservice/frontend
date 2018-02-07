@@ -113,7 +113,6 @@ Rails.application.routes.draw do
 
     get '/tools/:id', to: 'landing_pages#show', constraints: { id: /annuities/ }
 
-    resources :action_plans, only: 'show'
     resources :articles, only: 'show' do
       resource :amp, only: [:show], controller: :amp_articles
       resources :page_feedbacks, only: [:create]
@@ -121,7 +120,7 @@ Rails.application.routes.draw do
     end
 
     get '/:page_type/:id/preview' => 'articles_preview#show',
-        page_type: /articles|action_plans|corporate|tools/
+        page_type: /articles|corporate|tools/
 
     get '/:page_type/:id/preview' => 'videos_preview#show',
         page_type: /videos/

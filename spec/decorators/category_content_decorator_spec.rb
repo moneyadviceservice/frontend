@@ -87,15 +87,6 @@ RSpec.describe CategoryContentDecorator do
       end
     end
 
-    context 'with an ActionPlan' do
-      let(:item) { build :action_plan }
-
-      it 'calls the correct path helper' do
-        expect(helpers).to receive(:action_plan_path).with(item.id, locale: locale)
-        subject.path
-      end
-    end
-
     context 'with an Other' do
       let(:item) { Core::Other.new('item-id') }
 

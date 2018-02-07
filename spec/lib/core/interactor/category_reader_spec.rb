@@ -53,8 +53,8 @@ module Core
         it_has_behavior 'optional failure block'
       end
 
-      context 'when the returned category contains sub-categories, action plans and articles' do
-        let(:contents) { %w(article_hash action_plan_hash category_hash).map(&method(:build)) }
+      context 'when the returned category contains sub-categories and articles' do
+        let(:contents) { %w(article_hash category_hash).map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, contents: contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }
@@ -63,7 +63,7 @@ module Core
           allow(Registry::Repository).to receive(:[]).with(:category).and_return(repository)
         end
 
-        [Article, ActionPlan, Category].each_with_index do |klass, i|
+        [Article, Category].each_with_index do |klass, i|
           specify { expect(category.contents[i]).to be_a(klass) }
         end
       end
@@ -89,7 +89,7 @@ module Core
       end
 
       context 'when `legacy_contents` is provided' do
-        let(:legacy_contents) { %w(article_hash action_plan_hash).map(&method(:build)) }
+        let(:legacy_contents) { %w(article_hash).map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, legacy_contents: legacy_contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }
@@ -98,8 +98,8 @@ module Core
           allow(Registry::Repository).to receive(:[]).with(:category).and_return(repository)
         end
 
-        [Article, ActionPlan].each_with_index do |klass, i|
-          it "loads class #{klass}" do
+        [Article].each_with_index do |klass, i|
+          it "loads class {klass}" do
             expect(category.legacy_contents[i]).to be_a(klass)
           end
         end

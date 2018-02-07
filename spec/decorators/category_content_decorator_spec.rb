@@ -7,7 +7,7 @@ RSpec.describe CategoryContentDecorator do
   before { allow(I18n).to receive(:locale) { locale } }
 
   subject(:decorator) { described_class.decorate(item) }
- 
+
   it { is_expected.to respond_to(:id) }
   it { is_expected.to respond_to(:path) }
   it { is_expected.to respond_to(:label) }
@@ -63,7 +63,7 @@ RSpec.describe CategoryContentDecorator do
   describe '#label' do
     let(:item) { double(type: 'foo_bar-baz') }
 
-    it "returns a capitalised representation of the object type with a ` - ' suffix" do
+    it 'returns capitalised string of the object type with - suffix' do
       expect(subject.label).to eq('Foo Bar Baz - ')
     end
   end
@@ -91,7 +91,9 @@ RSpec.describe CategoryContentDecorator do
       let(:item) { build :action_plan }
 
       it 'calls the correct path helper' do
-        expect(helpers).to receive(:action_plan_path).with(item.id, locale: locale)
+        expect(helpers)
+          .to receive(:action_plan_path)
+          .with(item.id, locale: locale)
         subject.path
       end
     end
@@ -100,7 +102,7 @@ RSpec.describe CategoryContentDecorator do
       let(:item) { Mas::Cms::Other.new('item-id') }
 
       it 'returns the correct path' do
-        %w(campaign news tool video).each do |type|
+        %w[campaign news tool video].each do |type|
           allow(item).to receive_messages(type: type)
           expect(subject.path).to eq "/#{locale}/#{type.pluralize}/#{item.id}"
         end
@@ -111,7 +113,7 @@ RSpec.describe CategoryContentDecorator do
   describe '#icon_class' do
     let(:item) { double(type: 'foo_bar-baz') }
 
-    it "returns a dasherised representation of the object type prefixed with `icon--'" do
+    it 'returns dasherised string of object type with icon-- prefix' do
       expect(subject.icon_class).to eq('icon--foo-bar-baz')
     end
   end

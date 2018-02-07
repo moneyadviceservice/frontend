@@ -97,7 +97,7 @@ RSpec.describe CategoryContentDecorator do
     end
 
     context 'with an Other' do
-      let(:item) { Core::Other.new('item-id') }
+      let(:item) { Mas::Cms::Other.new('item-id') }
 
       it 'returns the correct path' do
         %w(campaign news tool video).each do |type|

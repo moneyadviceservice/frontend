@@ -18,8 +18,10 @@ class CategoryContentDecorator < Draper::Decorator
   def path
     case object
     when Core::Article, Core::Category, Mas::Cms::Article, Mas::Cms::Category
-      h.send("#{object.class.to_s.demodulize.underscore}_path", object.id, locale: I18n.locale)
-    when Core::Other, Mas::Cms::Video
+      h.send("#{object.class.to_s.demodulize.underscore}_path",
+             object.id,
+             locale: I18n.locale)
+    when Core::Other, Mas::Cms::Other, Mas::Cms::Video
       "/#{I18n.locale}/#{object.type.pluralize}/#{object.id}"
     end
   end

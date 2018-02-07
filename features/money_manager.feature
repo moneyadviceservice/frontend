@@ -31,6 +31,7 @@ Scenario: Signing in should overwrite old answers with new ones
   And   I sign in
   Then  I have the latest answers
 
+@no-javascript
 Scenario: Passing a special parameter in the url should show all content
   Given I am signed in
   And   I am on the Money Manager tool

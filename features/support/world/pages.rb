@@ -6,7 +6,6 @@ module World
 
     pages = %w[
       account
-      action_plan
       article
       article_feedback
       category
@@ -22,8 +21,6 @@ module World
       money_manager
       money_manager_circumstances_changed
       money_manager_questionnaire
-      news
-      news_article
       partners
       profile
       quiz_admin

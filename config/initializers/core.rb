@@ -19,9 +19,6 @@ Core::Registry::Connection[:public_website] = public_website_connection
 Core::Registry::Connection[:internal_email] = internal_email_connection
 Core::Registry::Connection[:cms]            = cms_connection
 
-Core::Registry::Repository[:action_plan] =
-  Core::Repository::ActionPlans::CMS.new
-
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 

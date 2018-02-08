@@ -1,19 +1,19 @@
-Given (/^I am on an (article|action_plan) that lives in a single category$/) do |entity|
+Given (/^I am on an (article) that lives in a single category$/) do |entity|
   fixture = send("#{entity}_with_single_parent")
   send("browse_to_#{entity}", fixture)
 end
 
-Given (/^I am on an (article|action_plan) that lives in 2 categories in the same parent$/) do |entity|
+Given (/^I am on an (article) that lives in 2 categories in the same parent$/) do |entity|
   fixture = send("#{entity}_with_two_child_and_one_parent_category")
   send("browse_to_#{entity}", fixture)
 end
 
-Given (/^I am on an (article|action_plan) that lives in 2 categories in different parents$/) do |entity|
+Given (/^I am on an (article) that lives in 2 categories in different parents$/) do |entity|
   fixture = send("#{entity}_with_multiple_parents")
   send("browse_to_#{entity}", fixture)
 end
 
-Then (/^I should see the (article|action_plan)'s primary navigation with (the parent category|both parent categories) expanded$/) do |entity, _num_parent_categories|
+Then (/^I should see the (article)'s primary navigation with (the parent category|both parent categories) expanded$/) do |entity, _num_parent_categories|
   entity_page = send("#{entity}_page")
   current_entity = send("current_#{entity}")
 
@@ -36,7 +36,7 @@ Then (/^I should see the (article|action_plan)'s primary navigation with (the pa
   expect(selected_categories.sort).to eq(parent_categories.sort)
 end
 
-And (/^the relevant (article|action_plan)'s child categor(y|ies) selected$/) do |entity, _plural|
+And (/^the relevant (article)'s child categor(y|ies) selected$/) do |entity, _plural|
   entity_page = send("#{entity}_page")
   current_entity = send("current_#{entity}")
 

@@ -11,7 +11,6 @@ module Core
     autoload :Smtp, 'core/connection_factory/smtp'
   end
 
-  autoload :ActionPlan, 'core/entity/action_plan'
   autoload :Article, 'core/entity/article'
   autoload :HomePage, 'core/entity/home_page'
   autoload :Contact, 'core/entity/contact'
@@ -37,7 +36,6 @@ module Core
   end
 
   autoload :BaseContentReader, 'core/interactor/base_content_reader'
-  autoload :ActionPlanReader, 'core/interactor/action_plan_reader'
   autoload :ArticlePreviewer, 'core/interactor/article_previewer'
   autoload :ArticleReader, 'core/interactor/article_reader'
   autoload :CategoryReader, 'core/interactor/category_reader'
@@ -69,11 +67,6 @@ module Core
     autoload :Base, 'core/repository/base'
     autoload :Cache, 'core/repository/cache'
     autoload :VCR, 'core/repository/vcr'
-
-    module ActionPlans
-      autoload :PublicWebsite, 'core/repository/action_plans/public_website'
-      autoload :CMS, 'core/repository/action_plans/cms'
-    end
 
     module Articles
       autoload :Fake, 'core/repository/articles/fake'

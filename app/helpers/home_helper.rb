@@ -13,9 +13,11 @@ module HomeHelper
   end
 
   def leader_text(name, size, x, y, rotation)
-    "<text text-anchor='middle' x=#{x} y=#{y} transform='rotate(#{rotation} #{x} #{y})'>
-      #{t('home.show.beta_leader.text_' + name + '.' + size + '_html')}
-    </text>"
+%Q(\
+<text text-anchor='middle' x=#{x} y=#{y} transform='rotate(#{rotation} #{x} #{y})'>\
+  #{t('home.show.beta_leader.text_' + name + '.' + size + '_html')}\
+</text>\
+)
   end
 
   private

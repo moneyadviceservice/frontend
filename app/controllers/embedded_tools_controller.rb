@@ -1,9 +1,8 @@
 class EmbeddedToolsController < ApplicationController
-  protected
+  include Navigation
+  before_action :set_categories
 
-  def breadcrumbs
-    BreadcrumbTrail.build(category, category_tree)
-  end
+  protected
 
   def alternate_url
     # First dup the params for the current request
@@ -27,12 +26,6 @@ class EmbeddedToolsController < ApplicationController
   end
 
   helper_method :alternate_url
-
-  helper_method :breadcrumbs
-
-  def category
-    @category ||= ToolCategory.new(category_id)
-  end
 
   def alternate_options
     {
@@ -79,5 +72,26 @@ class EmbeddedToolsController < ApplicationController
 
   def display_skip_to_main_navigation?
     false
+  end
+
+  attr_reader :breadcrumbs
+  helper_method :breadcrumbs
+
+  def category_id
+    nil
+  end
+  helper_method :category_id
+
+  private
+
+  def set_categories
+    if category_id.blank?
+      @category = nil
+      @breadcrumbs = BreadcrumbTrail.home
+    else
+      @category = Mas::Cms::Category.find(category_id, locale: I18n.locale)
+      assign_active_categories(@category)
+      @breadcrumbs = BreadcrumbTrail.build_tool_trail(@category)
+    end
   end
 end

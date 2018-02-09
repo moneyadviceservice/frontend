@@ -1,15 +1,12 @@
 RSpec.describe CategoriesController, type: :controller do
   describe 'GET show' do
     let(:category) { Mas::Cms::Category.new('test') }
-    let(:breadcrumbs) { double }
 
     context 'when the category exists' do
       before do
         allow(Mas::Cms::Category).to receive(:find)
           .with(category.id, locale: I18n.locale)
           .and_return(category)
-
-        allow(BreadcrumbTrail).to receive(:build) { breadcrumbs }
 
         get :show, id: category.id, locale: I18n.locale
       end
@@ -23,7 +20,7 @@ RSpec.describe CategoriesController, type: :controller do
       end
 
       it 'assigns @breadcrumbs to the result of breadcrumb reader' do
-        expect(assigns(:breadcrumbs)).to eq(breadcrumbs)
+        expect(assigns(:breadcrumbs).map(&:path)).to eq(['/en'])
       end
     end
   end

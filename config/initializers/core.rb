@@ -22,21 +22,15 @@ Core::Registry::Connection[:cms]            = cms_connection
 Core::Registry::Repository[:cms_api] =
   Core::Repository::CMS::CmsApi.new
 
-Core::Registry::Repository[:footer] =
-  Core::Repository::Cache.new(Core::Repository::Footer::CMS.new, Rails.cache)
-
 Core::Registry::Repository[:corporate] =
   Core::Repository::Corporate::CMS.new
 
 Core::Registry::Repository[:category] = Core::Repository::Cache.new(Core::Repository::Categories::CMS.new, Rails.cache)
 
-Core::Registry::Repository[:clump] = Core::Repository::Cache.new(Core::Repository::Clumps::CMS.new, Rails.cache)
-
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 
 Core::Registry::Repository[:search] =
   Core::Repository::Search::GoogleCustomSearchEngine.new(ENV['GOOGLE_API_KEY'], ENV['GOOGLE_API_CX_EN'], ENV['GOOGLE_API_CX_CY'])
-
 
 if Rails.env.development?
   Core::Registry::Repository[:customer] =

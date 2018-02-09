@@ -1,32 +1,33 @@
 class BreadcrumbTrail
-  def self.build(item, category_tree = nil)
-    case item
-    when Mas::Cms::Category
-      build_category_trail(item)
-    when ToolCategory
-      RootToNodePath.build(item, category_tree)
-    else
-      build_default_trail(item, category_tree)
-    end.map do |element|
-      Breadcrumb.new(element)
+  def self.build(item, category_tree)
+    as_breadcrumbs do
+      if item.categories.empty?
+        [HomeCategory.new]
+      elsif item.categories.one?
+        RootToNodePath.build(item.categories.first, category_tree)
+      else
+        []
+      end
     end
   end
 
   def self.build_category_trail(item)
-    if item.parent_id.present?
-      build_trail(item.parent_id)
-    else
-      [HomeCategory.new]
+    as_breadcrumbs do
+      if item.parent_id.present?
+        build_trail(item.parent_id)
+      else
+        [HomeCategory.new]
+      end
     end
   end
 
-  def self.build_default_trail(item, category_tree)
-    if item.categories.empty?
-      [HomeCategory.new]
-    elsif item.categories.one?
-      RootToNodePath.build(item.categories.first, category_tree)
-    else
-      []
+  def self.build_tool_trail(item)
+    as_breadcrumbs do
+      if item
+        build_trail(item.id)
+      else
+        [HomeCategory.new]
+      end
     end
   end
 
@@ -39,6 +40,14 @@ class BreadcrumbTrail
   end
 
   def self.home
-    [Breadcrumb.new(HomeCategory.new)]
+    as_breadcrumbs do
+      [HomeCategory.new]
+    end
+  end
+
+  def self.as_breadcrumbs
+    yield.map do |category|
+      Breadcrumb.new(category)
+    end
   end
 end

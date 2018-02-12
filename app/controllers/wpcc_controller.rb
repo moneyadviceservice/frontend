@@ -6,7 +6,7 @@ class WpccController < EmbeddedToolsController
   protected
 
   def category_id
-    ''
+    'pensions-and-retirement'
   end
   helper_method :category_id
 end

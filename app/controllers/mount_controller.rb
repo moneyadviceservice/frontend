@@ -1,17 +1,14 @@
 class MountController < ApplicationController
+  include Navigation
+  before_action :set_categories
+
   protected
-
-  def breadcrumbs
-    BreadcrumbTrail.home
-  end
-
-  helper_method :breadcrumbs
 
   def alternate_url
     new_params = params.dup
     new_params[:script_name] = "/#{alternate_locale}/#{alternate_engine_id}"
     string = url_for(new_params)
-    string.split("?").first
+    string.split('?').first
   end
 
   helper_method :alternate_url
@@ -35,9 +32,17 @@ class MountController < ApplicationController
     true
   end
 
+  attr_reader :breadcrumbs
+  helper_method :breadcrumbs
+
   private
 
   def alternate_engine_id
-    fail NotImplementedError
+    raise NotImplementedError
+  end
+
+  def set_categories
+    @category = nil
+    @breadcrumbs = BreadcrumbTrail.home
   end
 end

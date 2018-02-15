@@ -17,8 +17,6 @@ module Core
   autoload :CorporateArticle, 'core/entity/corporate_article'
   autoload :ArticleLink, 'core/entity/article_link'
   autoload :Category, 'core/entity/category'
-  autoload :Clump, 'core/entity/clump'
-  autoload :ClumpLink, 'core/entity/clump_link'
   autoload :CorporateCategory, 'core/entity/corporate_category'
   autoload :Entity, 'core/entity'
   autoload :Footer, 'core/entity/footer'
@@ -41,7 +39,6 @@ module Core
   autoload :CategoryReader, 'core/interactor/category_reader'
   autoload :CategoryTreeReader, 'core/interactor/category_tree_reader'
   autoload :CategoryTreeReaderWithDecorator, 'core/interactor/category_tree_reader_with_decorator'
-  autoload :ClumpsReader, 'core/interactor/clumps_reader'
   autoload :CorporateReader, 'core/interactor/corporate_reader'
   autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :FooterReader, 'core/interactor/footer_reader'
@@ -91,10 +88,6 @@ module Core
     module Categories
       autoload :Fake, 'core/repository/categories/fake'
       autoload :CMS, 'core/repository/categories/cms'
-    end
-
-    module Clumps
-      autoload :CMS, 'core/repository/clumps/cms'
     end
 
     module Feedback

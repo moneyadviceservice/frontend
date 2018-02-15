@@ -6,4 +6,8 @@ class PaydayLoansInterventionController < EmbeddedToolsController
   def mount_point
     @mount_point ||= ToolMountPoint.for(:payday_loans)
   end
+
+  def category_id
+    'debt-and-borrowing'
+  end
 end

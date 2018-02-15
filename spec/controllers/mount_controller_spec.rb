@@ -5,6 +5,7 @@ RSpec.describe MountController, type: :controller do
 
   describe '#breadcrumbs' do
     it 'returns breadcrumb of just home' do
+      subject.send(:set_categories)
       trail = subject.send(:breadcrumbs)
       expect(trail.size).to eql(1)
       expect(trail.first.title).to eql('Home')

@@ -1,7 +1,8 @@
 RSpec.describe BreadcrumbTrail, '.build' do
   let(:article)               { Mas::Cms::Article.new('the-article') }
   let(:category_id)           { 'the-category' }
-  let(:tool_category)         { ToolCategory.new(category_id) }
+  let(:tool_category_id)      { 'the-tool-category' }
+  let(:tool_category)         { Mas::Cms::Category.new(tool_category_id, title: 'some tool category') }
   let(:parent_category_id)    { 'the-parent-category' }
   let(:parent_category)       { Mas::Cms::Category.new(parent_category_id, title: 'some parent category') }
   let(:other_category)        { Mas::Cms::Category.new('other-category', title: 'some other category') }
@@ -61,7 +62,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
         .and_return(parent_category)
     end
 
-    subject { described_class.build(category) }
+    subject { described_class.build_category_trail(category) }
 
     specify { expect(subject.map(&:path)).to eq(['/en', '/en/categories/the-parent-category']) }
 
@@ -75,11 +76,15 @@ RSpec.describe BreadcrumbTrail, '.build' do
   end
 
   context 'when item is a tool category' do
-    subject { described_class.build(tool_category, category_tree) }
+    before do
+      allow(Mas::Cms::Category).to receive(:find)
+        .with(tool_category_id, locale: I18n.locale)
+        .and_return(tool_category)
+    end
 
-    before { expect(RootToNodePath).to receive(:build).with(tool_category, category_tree) }
+    subject { described_class.build_tool_trail(tool_category) }
 
-    specify { expect(subject.map(&:title)).to eq([parent_category.title, category.title]) }
+    specify { expect(subject.map(&:path)).to eq(['/en', '/en/categories/the-tool-category']) }
   end
 end
 

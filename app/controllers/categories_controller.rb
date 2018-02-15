@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Mas::Cms::Category.find(params[:id], locale: I18n.locale)
-    @breadcrumbs = BreadcrumbTrail.build(@category)
+    @breadcrumbs = BreadcrumbTrail.build_category_trail(@category)
     assign_active_categories(@category)
   end
 

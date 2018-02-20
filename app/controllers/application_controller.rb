@@ -185,10 +185,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :engine_content?
 
-  PENSIONS_CATEGORY = 'pensions-and-retirement'
   def pensions_and_retirement_page?
-    @article.present? &&
-      @article.categories.map(&:parent_id).include?(PENSIONS_CATEGORY)
+    return false unless @active_categories
+    @active_categories.include?('pensions-and-retirement')
   end
   helper_method :pensions_and_retirement_page?
 

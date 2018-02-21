@@ -67,7 +67,7 @@ gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
-gem 'wpcc', '1.14.0'
+gem 'wpcc', git: 'https://github.com/moneyadviceservice/wpcc.git', branch: 'release-branch-tax-year-changes-april'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'

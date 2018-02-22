@@ -20,7 +20,8 @@ class HomeController < ApplicationController
   def resource
     Mas::Cms::HomePage.find(
       'the-money-advice-service',
-      locale: params[:locale]
+      locale: params[:locale],
+      cached: true
     )
   end
 end

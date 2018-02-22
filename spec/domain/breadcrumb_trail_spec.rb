@@ -58,7 +58,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
   context 'when item is a category' do
     before do
       allow(Mas::Cms::Category).to receive(:find)
-        .with(parent_category_id, locale: I18n.locale)
+        .with(parent_category_id, locale: I18n.locale, cached: true)
         .and_return(parent_category)
     end
 
@@ -78,7 +78,7 @@ RSpec.describe BreadcrumbTrail, '.build' do
   context 'when item is a tool category' do
     before do
       allow(Mas::Cms::Category).to receive(:find)
-        .with(tool_category_id, locale: I18n.locale)
+        .with(tool_category_id, locale: I18n.locale, cached: true)
         .and_return(tool_category)
     end
 

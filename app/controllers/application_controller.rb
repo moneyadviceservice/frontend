@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   before_action :fetch_footer_content
   def fetch_footer_content
-    @footer = Mas::Cms::Footer.find('footer')
+    @footer = Mas::Cms::Footer.find('footer', cached: true)
   end
 
   helper ChatMigrationMessage
@@ -125,7 +125,7 @@ class ApplicationController < ActionController::Base
   end
 
   def clumps
-    Mas::Cms::Clump.all
+    Mas::Cms::Clump.all(cached: true)
   end
   helper_method :clumps
 

@@ -32,7 +32,7 @@ class BreadcrumbTrail
   end
 
   def self.build_trail(category_id, children = [])
-    category = Mas::Cms::Category.find(category_id, locale: I18n.locale)
+    category = Mas::Cms::Category.find(category_id, locale: I18n.locale, cached: true)
     children.unshift category
     return [] if category.id == 'corporate-home'
     return children.unshift(HomeCategory.new) if category.parent_id.blank?

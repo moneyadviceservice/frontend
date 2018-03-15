@@ -64,6 +64,16 @@ To start the application:
 $ foreman s
 ```
 
+The site makes a lot of requests to the CMS application. If
+**you are not developing anything that integrates with CMS**, you can
+enable the application cache in development mode by running:
+
+```
+DEV_CACHE=true rails s -p 5000
+```
+
+Or alternatively you can add `DEV_CACHE=true` to your .env file.
+
 ### Change CMS URL Path
 
 In development, frontend will use the local CMS for convenience. See [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md) for instructions on setting up a local CMS instance.

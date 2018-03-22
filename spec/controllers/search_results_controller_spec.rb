@@ -2,18 +2,11 @@ RSpec.describe SearchResultsController, type: :controller do
   describe 'GET index' do
     let(:query) { 'query' }
     let(:search_results_collection) { double(any?: true) }
-    let(:searcher) { double }
-
-    before do
-      allow(PerformCorrectiveSearch).to receive(:new) { searcher }
-      allow(searcher).to receive(:call) { search_results_collection }
-    end
 
     context 'with a search term' do
-      it 'calls the search' do
-        expect(searcher).to receive(:call)
-
-        get :index, locale: I18n.locale, query: query
+      before do
+        expect_any_instance_of(SiteSearch::Query).to receive(:results)
+          .and_return(search_results_collection)
       end
 
       context 'that returns results' do
@@ -42,8 +35,9 @@ RSpec.describe SearchResultsController, type: :controller do
     end
 
     context 'without a search term' do
-      it 'does not instantiate an search reader' do
-        expect(PerformCorrectiveSearch).to_not receive(:new)
+      it 'does not search' do
+        expect_any_instance_of(SiteSearch::Query).to_not receive(:results)
+          .and_return(search_results_collection)
 
         get :index, locale: I18n.locale
       end

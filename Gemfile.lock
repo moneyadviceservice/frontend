@@ -8,6 +8,13 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/site_search.git
+  revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
+  specs:
+    site_search (0.1.0)
+      algoliasearch
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -88,6 +95,9 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
+    algoliasearch (1.19.1)
+      httpclient (~> 2.8.3)
+      json (>= 1.5.1)
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.4.0)
@@ -364,6 +374,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
@@ -736,6 +747,7 @@ DEPENDENCIES
   advice_plans (~> 3.3.1)
   aes
   agreements (~> 2.3.0)
+  algoliasearch
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors
@@ -815,6 +827,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   site_prism
+  site_search!
   sqlite3
   statsd-ruby
   syslog-logger

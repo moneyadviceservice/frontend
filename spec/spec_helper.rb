@@ -63,6 +63,8 @@ VCR.configure do |c|
   c.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
   c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }
   c.filter_sensitive_data('<GOOGLE_API_CX_CY>') { ENV['GOOGLE_API_CX_CY'] }
+  c.filter_sensitive_data('<API_KEY>') { ENV['ALGOLIA_API_KEY'] }
+  c.filter_sensitive_data('<APP_ID>') { ENV['ALGOLIA_APPLICATION_ID'] }
 end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')

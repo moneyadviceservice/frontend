@@ -4,12 +4,16 @@ RSpec.describe SearchResultDecorator do
   subject(:decorator) { described_class.decorate(search_result) }
 
   let(:title) { double }
-  let(:snippet) { double }
+  let(:description) { double }
   let(:search_result) do
-    instance_double(Core::SearchResult, id: 'item-id', title: title, snippet: snippet)
+    instance_double(
+      SiteSearch::Result,
+      link: 'item-id', title: title, description: description
+    )
   end
 
-  it { is_expected.to respond_to(:path) }
+  it { is_expected.to respond_to(:link) }
+  it { is_expected.to respond_to(:description) }
   it { is_expected.to respond_to(:title) }
 
   describe '#title' do
@@ -46,24 +50,14 @@ RSpec.describe SearchResultDecorator do
     end
   end
 
-  describe '#path' do
-    let(:link) { 'link' }
+  describe '#description' do
+    subject { decorator.description }
 
-    before { allow(search_result).to receive(:link) { link } }
-
-    it 'retuns the link' do
-      expect(subject.path).to be(link)
-    end
-  end
-
-  describe '#snippet' do
-    subject { decorator.snippet }
-
-    let(:snippet) do
+    let(:description) do
       '<p>If you created your <b>budget</b> plan <br></p>'
     end
 
-    before { allow(search_result).to receive(:snippet) { snippet } }
+    before { allow(search_result).to receive(:description) { description } }
 
     it { is_expected.to eq('<p>If you created your <b>budget</b> plan </p>') }
   end

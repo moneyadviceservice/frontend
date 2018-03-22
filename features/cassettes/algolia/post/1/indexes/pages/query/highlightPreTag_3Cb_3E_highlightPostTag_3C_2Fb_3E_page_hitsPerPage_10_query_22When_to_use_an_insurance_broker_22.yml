@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bhpslyij2l-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=%22When+to+use+an+insurance+broker%22"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.1
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 27 Mar 2018 18:00:05 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 27 Mar 2018 18:00:05 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"When to use an insurance broker","description":"Insurance
+        brokers can help you find the right policy for whatever you want to insure.
+        Read on to find out when to use them and how to go about making a claim.","published_at":"2017-06-28T15:58:54.000Z","objectID":"/en/articles/when-to-use-an-insurance-broker","_highlightResult":{"title":{"value":"<b>When</b>
+        <b>to</b> <b>use</b> <b>an</b> <b>insurance</b> <b>broker</b>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["when","to","use","an","insurance","broker"]},"description":{"value":"<b>Insurance</b>
+        brokers can help you find the right policy for whatever you want <b>to</b>
+        insure. Read on <b>to</b> find out <b>when</b> <b>to</b> <b>use</b> them and
+        how <b>to</b> go about making a claim.","matchLevel":"partial","fullyHighlighted":false,"matchedWords":["when","to","use","insurance"]},"published_at":{"value":"2017-06-28T15:58:54.000Z","matchLevel":"none","matchedWords":[]}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"\"When
+        to use an insurance broker\"","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=%22When+to+use+an+insurance+broker%22"}
+
+'
+    http_version: 
+  recorded_at: Tue, 27 Mar 2018 18:00:05 GMT
+recorded_with: VCR 4.0.0

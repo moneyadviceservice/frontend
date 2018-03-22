@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bhpslyij2l-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=health"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.1
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 27 Mar 2018 18:00:04 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 27 Mar 2018 18:00:05 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Money Health Check","description":"Use the Money
+        Health Check to give you a picture of your finances and an action plan","published_at":"2015-03-09T13:12:26.000Z","objectID":"/en/tools/health-check","_highlightResult":{"title":{"value":"Money
+        <b>Health</b> Check","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"Use
+        the Money <b>Health</b> Check to give you a picture of your finances and an
+        action plan","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"published_at":{"value":"2015-03-09T13:12:26.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Debt
+        health check","description":"Our debt health check will help you work out
+        the best option to help you beat your money worries and find free debt advice
+        near you.","published_at":"2017-06-09T09:43:18.000Z","objectID":"/en/articles/debt-health-check","_highlightResult":{"title":{"value":"Debt
+        <b>health</b> check","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"Our
+        debt <b>health</b> check will help you work out the best option to help you
+        beat your money worries and find free debt advice near you.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"published_at":{"value":"2017-06-09T09:43:18.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Understand
+        how your health can increase your annuity income","description":"Watch this
+        short video of financial journalist Paul Lewis explaining how your health
+        can impact your annuity income","published_at":"2015-03-20T12:25:14.000Z","objectID":"/en/videos/understand-how-your-health-can-increase-your-annuity-income","_highlightResult":{"title":{"value":"Understand
+        how your <b>health</b> can increase your annuity income","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"Watch
+        this short video of financial journalist Paul Lewis explaining how your <b>health</b>
+        can impact your annuity income","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"published_at":{"value":"2015-03-20T12:25:14.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Money & Mental Health Missing Link Report","description":"","published_at":"2016-11-02T09:45:57.000Z","objectID":"/en/corporate/media-comment--money-mental-health-missing-link-report","_highlightResult":{"title":{"value":"Media
+        comment: Money & Mental <b>Health</b> Missing Link Report","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2016-11-02T09:45:57.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Free online health check helps the nation kick its money into shape","description":"","published_at":"2015-03-16T12:29:49.000Z","objectID":"/en/corporate/free-online-health-check","_highlightResult":{"title":{"value":"Press
+        release: Free online <b>health</b> check helps the nation kick its money into
+        shape","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2015-03-16T12:29:49.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Money and Mental Health - Money on your mind report","description":"","published_at":"2016-06-15T15:07:22.000Z","objectID":"/en/corporate/media-comment-money-and-mental-health-money-on-your-mind-report","_highlightResult":{"title":{"value":"Media
+        comment: Money and Mental <b>Health</b> - Money on your mind report","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2016-06-15T15:07:22.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Money and Mental Health - In Control report","description":"","published_at":"2016-07-13T13:08:37.000Z","objectID":"/en/corporate/media-comment-money-and-mental-health-in-control-report","_highlightResult":{"title":{"value":"Media
+        comment: Money and Mental <b>Health</b> - In Control report","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2016-07-13T13:08:37.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Citizen''s advice mental health research","description":"","published_at":"2016-08-05T15:56:03.000Z","objectID":"/en/corporate/media-comment-citizens-advice-mental-health-research","_highlightResult":{"title":{"value":"Media
+        comment: Citizen''s advice mental <b>health</b> research","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2016-08-05T15:56:03.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Money and Mental Health''s \"Seeing through the fog\" report","description":"","published_at":"2017-01-24T10:47:12.000Z","objectID":"/en/corporate/media-comment--money-and-mental-healths-seeing-through-the-fog-report","_highlightResult":{"title":{"value":"Media
+        comment: Money and Mental <b>Health</b>''s \"Seeing through the fog\" report","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2017-01-24T10:47:12.000Z","matchLevel":"none","matchedWords":[]}}},{"title":"Media
+        comment: Response to Mind mental health research","description":"","published_at":"2016-04-08T07:41:59.000Z","objectID":"/en/corporate/media-comment-mind-research-on","_highlightResult":{"title":{"value":"Media
+        comment: Response to Mind mental <b>health</b> research","matchLevel":"full","fullyHighlighted":false,"matchedWords":["health"]},"description":{"value":"","matchLevel":"none","matchedWords":[]},"published_at":{"value":"2016-04-08T07:41:59.000Z","matchLevel":"none","matchedWords":[]}}}],"nbHits":21,"page":0,"nbPages":3,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"health","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=health"}
+
+'
+    http_version: 
+  recorded_at: Tue, 27 Mar 2018 18:00:05 GMT
+recorded_with: VCR 4.0.0

@@ -1,18 +1,16 @@
 class SearchResultDecorator < Draper::Decorator
+  delegate :link
+
   def to_partial_path
     'search_result'
-  end
-
-  def path
-    object.link if defined?(object.link)
   end
 
   def title
     object.title.sub(Regexp.union(title_suffix_regexps), '').html_safe
   end
 
-  def snippet
-    object.snippet.gsub(/<br\s*\/?>/, '').html_safe
+  def description
+    object.description.gsub(/<br\s*\/?>/, '').html_safe
   end
 
   private

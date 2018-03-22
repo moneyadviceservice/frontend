@@ -99,6 +99,14 @@ require(['common', 'jquery'], function(MAS, $) {
     });
   });
 
+  // Load Search Component
+  require(['Search'], function(Search) {
+    $(document).ready(function() {
+      var search = new Search();
+      search.init();
+    });
+  });
+
   // Kick off component loader
   var engines = [];
   $('[data-engine]').each(function() {

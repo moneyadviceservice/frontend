@@ -12,6 +12,7 @@ gem 'rails', '4.2.7.1'
 
 gem 'activerecord-session_store'
 gem 'aes'
+gem 'algoliasearch-rails'
 gem 'bugsnag'
 gem 'cream', '~> 1.0.0'
 gem 'delayed_job_active_record'

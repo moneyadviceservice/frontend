@@ -5,6 +5,7 @@
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
 //= depend_on_asset typeahead.jquery
+//= depend_on_asset algolia/v3/algoliasearch.min
 
 //= depend_on_asset modules/globals
 //= depend_on_asset modules/common
@@ -22,6 +23,7 @@
 //= depend_on_asset components/OnPageFeedback
 //= depend_on_asset components/GlobalNav
 //= depend_on_asset components/Breadcrumbs
+//= depend_on_asset components/Search
 //= depend_on_asset dough/assets/js/lib/featureDetect
 //= depend_on_asset dough/assets/js/lib/componentLoader
 //= depend_on_asset dough/assets/js/components/SearchFocus
@@ -54,6 +56,7 @@
       typeahead: requirejs_path('typeahead.jquery'),
       ujs: requirejs_path('jquery-ujs/src/rails'),
       waypoints: requirejs_path('jquery-waypoints/waypoints'),
+      algoliasearch: requirejs_path('algolia/v3/algoliasearch.min'),
 
       # Internal modules
       common: requirejs_path('modules/common'),
@@ -78,6 +81,7 @@
       StickyColumn: requirejs_path('components/StickyColumn'),
       GlobalNav: requirejs_path('components/GlobalNav'),
       Breadcrumbs: requirejs_path('components/Breadcrumbs'),
+      Search: requirejs_path('components/Search'),
 
       # Engines
       carCostToolConfig: requirejs_path('car_cost_tool/require_config'),

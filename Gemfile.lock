@@ -88,6 +88,12 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
+    algoliasearch (1.19.1)
+      httpclient (~> 2.8.3)
+      json (>= 1.5.1)
+    algoliasearch-rails (1.20.4)
+      algoliasearch (>= 1.17.0, < 2.0.0)
+      json (>= 1.5.1)
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.4.0)
@@ -364,6 +370,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
@@ -736,6 +743,7 @@ DEPENDENCIES
   advice_plans (~> 3.3.1)
   aes
   agreements (~> 2.3.0)
+  algoliasearch-rails
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors

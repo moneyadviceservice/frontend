@@ -14,12 +14,11 @@ VCR.configure do |c|
     uri = URI(request.uri)
     cassette_name = if ENV['MAS_CMS_URL'] =~ /#{uri.host}/
       "/CMS/#{request.method}#{uri.path}#{uri.query}"
-    elsif uri.host =~ /algolia/
-      query = JSON.parse(request.body)['params']#.match(/query=([a-zA-Z]*)/)[1]
-      "/algolia/#{request.method}#{uri.path}#{uri.query}/#{query}"
     end
 
     if uri.host =~ /algolia/
+      query = JSON.parse(request.body)['params']
+      cassette_name = "/algolia/#{request.method}#{uri.path}#{uri.query}/#{query}"
       VCR.use_cassette(cassette_name, match_requests_on: [:body], &request)
     elsif VCR.current_cassette && VCR.current_cassette.name == cassette_name
       request.proceed

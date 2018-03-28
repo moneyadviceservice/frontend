@@ -53,12 +53,24 @@ RSpec.describe SearchResultDecorator do
   describe '#description' do
     subject { decorator.description }
 
-    let(:description) do
-      '<p>If you created your <b>budget</b> plan <br></p>'
+    context 'when description is present' do
+      let(:description) do
+        '<p>If you created your <b>budget</b> plan <br></p>'
+      end
+
+      before { allow(search_result).to receive(:description) { description } }
+
+      it { is_expected.to eq('<p>If you created your <b>budget</b> plan </p>') }
     end
 
-    before { allow(search_result).to receive(:description) { description } }
+    context 'when description is blank' do
+      let(:description) { }
 
-    it { is_expected.to eq('<p>If you created your <b>budget</b> plan </p>') }
+      before { allow(search_result).to receive(:description) { description } }
+
+      it 'returns empty' do
+        expect(subject).to be_empty
+      end
+    end
   end
 end

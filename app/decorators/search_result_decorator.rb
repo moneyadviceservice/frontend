@@ -10,7 +10,7 @@ class SearchResultDecorator < Draper::Decorator
   end
 
   def description
-    object.description.gsub(/<br\s*\/?>/, '').html_safe
+    object.description.to_s.gsub(/<br\s*\/?>/, '').html_safe
   end
 
   private

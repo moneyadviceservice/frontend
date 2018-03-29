@@ -1,5 +1,5 @@
 class SearchResultCollectionDecorator < Draper::CollectionDecorator
-  delegate :per_page
+  delegate :per_page, :number_of_pages
 
   def decorator_class
     SearchResultDecorator
@@ -10,19 +10,7 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
   end
 
   def page
-    if object.page > number_of_pages
-      number_of_pages
-    else
-      object.page
-    end
-  end
-
-  def total_results
-    if object.total_results > result_limit
-      result_limit
-    else
-      object.total_results
-    end
+    object.page + 1
   end
 
   def first_page?
@@ -34,44 +22,16 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
   end
 
   def previous_page
-    first_page? ? nil : page - 1
+    first_page? ? nil : object.page - 1
   end
 
   def next_page
-    last_page? ? nil : page + 1
-  end
-
-  def number_of_pages
-    total_results <= per_page ? 1 : (((total_results - 1) / per_page) + 1)
-  end
-
-  def spelling_suggestion
-    return unless object.spelling_suggestion?
-
-    I18n.t(
-      'search_results.spelling_suggestion_html',
-      link: spelling_link,
-      query: object.query
-    ).html_safe
-  end
-
-  def corrected_query
-    return unless object.corrected_query?
-
-    I18n.t('search_results.spelling_correction_html', query: object.query).html_safe
+    last_page? ? nil : object.page + 1
   end
 
   private
 
-  def spelling_link
-    h.link_to(object.spelling_suggestion, search_path(object.spelling_suggestion))
-  end
-
   def search_path(query)
     h.search_results_path(query: query, locale: I18n.locale)
-  end
-
-  def result_limit
-    Core::Searcher::PAGE_LIMIT * Core::Searcher::DEFAULT_PER_PAGE
   end
 end

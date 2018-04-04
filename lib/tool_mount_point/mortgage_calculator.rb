@@ -3,11 +3,15 @@ module ToolMountPoint
     ADDITIONAL_TOOLS = {
       'cy' => {
         'stamp-duty-calculator'             => 'cyfrifiannell-treth-stamp',
-        'mortgage-affordability-calculator' => 'cyfrifiannell-fforddiadwyedd-morgais'
+        'mortgage-affordability-calculator' => 'cyfrifiannell-fforddiadwyedd-morgais',
+        'land-and-buildings-transaction-tax-calculator-scotland' => 'cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban',
+        'land-transaction-tax-calculator-wales' => 'cyfrifiannell-treth-trafodiadau-tir-cymru'
       },
       'en' => {
         'cyfrifiannell-treth-stamp'            => 'stamp-duty-calculator',
-        'cyfrifiannell-fforddiadwyedd-morgais' => 'mortgage-affordability-calculator'
+        'cyfrifiannell-fforddiadwyedd-morgais' => 'mortgage-affordability-calculator',
+        'cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban' => 'land-and-buildings-transaction-tax-calculator-scotland',
+        'cyfrifiannell-treth-trafodiadau-tir-cymru' => 'land-transaction-tax-calculator-wales'
       }
     }
 

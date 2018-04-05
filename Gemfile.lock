@@ -9,6 +9,21 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator
+  revision: 4e4e12247337df8b801059a8d7e57489d05bf737
+  branch: 9104_Translation-error
+  specs:
+    mortgage_calculator (3.1.0)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.0)
+      jquery-rails
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      underscore-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -447,15 +462,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mortgage_calculator (3.1.0.716)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.0)
-      jquery-rails
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      underscore-rails
     multi_json (1.13.1)
     multi_test (0.1.2)
     multipart-post (2.0.0)
@@ -797,7 +803,7 @@ DEPENDENCIES
   mas-assets!
   mas-cms-client (= 1.7.1)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 3.1.0)
+  mortgage_calculator!
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri

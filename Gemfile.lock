@@ -1,4 +1,17 @@
 GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: c659582ee90c0f780c9db414d9f5e3e0918127ae
+  branch: 9077-update-rates
+  specs:
+    action_plans (4.6.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -19,13 +32,6 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.6.0.351)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
     actionmailer (4.2.7.1)
       actionpack (= 4.2.7.1)
       actionview (= 4.2.7.1)
@@ -742,7 +748,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.6.0)
+  action_plans!
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes

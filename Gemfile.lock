@@ -19,7 +19,7 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.6.0.351)
+    action_plans (4.7.0.356)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
@@ -569,7 +569,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.19.2)
+    rio (1.18.4)
       bowndler
       dough-ruby
       pensions_calculator-calculations (~> 1.5.0)
@@ -742,7 +742,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.6.0)
+  action_plans (~> 4.7.0)
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
@@ -797,7 +797,7 @@ DEPENDENCIES
   mas-assets!
   mas-cms-client (= 1.7.1)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 3.1.1)
+  mortgage_calculator (~> 3.1.0)
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri
@@ -815,7 +815,7 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   recaptcha
   redcarpet
-  rio (= 1.19.2)!
+  rio (= 1.18.4)!
   rouge
   rspec-html-matchers
   rspec-rails

@@ -28,7 +28,6 @@ require.config({
     pubsub: 'app/assets/javascripts/modules/mas_pubsub',
     scrollTracking: 'app/assets/javascripts/modules/mas_scrollTracking',
     collapsable: 'app/assets/javascripts/modules/mas_collapsable',
-    googleComplete: 'app/assets/javascripts/modules/google_complete',
 
     // Dough components
     ClearInput: 'app/assets/javascripts/components/ClearInput',
@@ -63,8 +62,7 @@ require.config({
       MAS.bootstrap = {
         env: 'production',
         timestamp: new Date().getTime(),
-        I18nLocale: 'en',
-        googleApiCx: '123'
+        I18nLocale: 'en'
       };
 
       MAS.supports = (function(w,d){

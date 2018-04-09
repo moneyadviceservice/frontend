@@ -54,8 +54,6 @@ Make sure to copy the .env-example file:
 cp .env-example .env
 ```
 
-then set .env variables (i.e. GOOGLE API KEY) stored in KeepassX to run tests locally
-
 ## Usage
 
 To start the application:

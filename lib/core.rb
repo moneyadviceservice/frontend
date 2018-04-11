@@ -42,7 +42,6 @@ module Core
   autoload :CorporateReader, 'core/interactor/corporate_reader'
   autoload :FeedbackWriter, 'core/interactor/feedback_writer'
   autoload :FooterReader, 'core/interactor/footer_reader'
-  autoload :Searcher, 'core/interactor/searcher'
   autoload :RedirectReader, 'core/interactor/redirect_reader'
 
   module Interactors

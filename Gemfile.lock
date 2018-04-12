@@ -8,51 +8,58 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/site_search.git
+  revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
+  specs:
+    site_search (0.1.0)
+      algoliasearch
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (4.6.0.351)
+    action_plans (4.7.0.356)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       draper
       hashie
       rails (>= 4, < 5)
       sass-rails
-    actionmailer (4.2.7.1)
-      actionpack (= 4.2.7.1)
-      actionview (= 4.2.7.1)
-      activejob (= 4.2.7.1)
+    actionmailer (4.2.10)
+      actionpack (= 4.2.10)
+      actionview (= 4.2.10)
+      activejob (= 4.2.10)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.7.1)
-      actionview (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
+    actionpack (4.2.10)
+      actionview (= 4.2.10)
+      activesupport (= 4.2.10)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.7.1)
-      activesupport (= 4.2.7.1)
+    actionview (4.2.10)
+      activesupport (= 4.2.10)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+      rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_attr (0.10.3)
       activemodel (>= 3.0.2, < 6.0)
       activesupport (>= 3.0.2, < 6.0)
     active_model_serializers (0.9.7)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
-    activejob (4.2.7.1)
-      activesupport (= 4.2.7.1)
+    activejob (4.2.10)
+      activesupport (= 4.2.10)
       globalid (>= 0.3.0)
-    activemodel (4.2.7.1)
-      activesupport (= 4.2.7.1)
+    activemodel (4.2.10)
+      activesupport (= 4.2.10)
       builder (~> 3.1)
-    activerecord (4.2.7.1)
-      activemodel (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
+    activerecord (4.2.10)
+      activemodel (= 4.2.10)
+      activesupport (= 4.2.10)
       arel (~> 6.0)
     activerecord-session_store (1.1.1)
       actionpack (>= 4.0)
@@ -60,9 +67,8 @@ GEM
       multi_json (~> 1.11, >= 1.11.2)
       rack (>= 1.5.2, < 3)
       railties (>= 4.0)
-    activesupport (4.2.7.1)
+    activesupport (4.2.10)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
@@ -88,10 +94,13 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
+    algoliasearch (1.19.2)
+      httpclient (~> 2.8, >= 2.8.3)
+      json (>= 1.5.1)
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.4.0)
-    autoprefixer-rails (8.1.0.1)
+    autoprefixer-rails (8.2.0)
       execjs
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
@@ -116,10 +125,10 @@ GEM
       rails (>= 4, < 5)
       sass-rails
       spreadsheet
-    bugsnag (6.6.4)
+    bugsnag (6.7.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.3)
-    byebug (10.0.0)
+    byebug (10.0.2)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -166,7 +175,7 @@ GEM
       rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.3)
+    crass (1.0.4)
     cream (1.0.0)
       faraday (>= 0.9)
       faraday_middleware
@@ -188,7 +197,7 @@ GEM
       backports (>= 3.8.0)
       cucumber-tag_expressions (~> 1.1.0)
       gherkin (>= 5.0.0)
-    cucumber-expressions (5.0.13)
+    cucumber-expressions (5.0.15)
     cucumber-rails (1.5.0)
       capybara (>= 1.1.2, < 3)
       cucumber (>= 1.3.8, < 4)
@@ -288,7 +297,7 @@ GEM
       activesupport
       rails (>= 3.2, <= 5.0.6)
       sass-rails
-    dragonfly (1.1.4)
+    dragonfly (1.1.5)
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3)
@@ -364,6 +373,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
@@ -397,7 +407,7 @@ GEM
     letter_opener (1.6.0)
       launchy (~> 2.2)
     link_header (0.0.8)
-    loofah (2.2.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -428,7 +438,7 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    meta-tags (2.8.0)
+    meta-tags (2.9.0)
       actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
     mime-types (2.99.3)
@@ -436,7 +446,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mortgage_calculator (2.4.1.704)
+    mortgage_calculator (3.1.1.717)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.0)
       jquery-rails
@@ -452,7 +462,7 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
-    newrelic_rpm (4.8.0.341)
+    newrelic_rpm (5.0.0.342)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
@@ -461,7 +471,7 @@ GEM
       activesupport
     orm_adapter (0.5.0)
     parallel (1.12.1)
-    parser (2.5.0.4)
+    parser (2.5.0.5)
       ast (~> 2.4.0)
     payday_loans_intervention (1.7.0.266)
       autoprefixer-rails
@@ -512,20 +522,20 @@ GEM
     rack (1.6.9)
     rack-accept (0.4.5)
       rack (>= 0.4)
-    rack-livereload (0.3.16)
+    rack-livereload (0.3.17)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.7.1)
-      actionmailer (= 4.2.7.1)
-      actionpack (= 4.2.7.1)
-      actionview (= 4.2.7.1)
-      activejob (= 4.2.7.1)
-      activemodel (= 4.2.7.1)
-      activerecord (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
+    rails (4.2.10)
+      actionmailer (= 4.2.10)
+      actionpack (= 4.2.10)
+      actionview (= 4.2.10)
+      activejob (= 4.2.10)
+      activemodel (= 4.2.10)
+      activerecord (= 4.2.10)
+      activesupport (= 4.2.10)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.7.1)
+      railties (= 4.2.10)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -533,20 +543,20 @@ GEM
       activesupport (>= 4.2.0, < 5.0)
       nokogiri (~> 1.6)
       rails-deprecated_sanitizer (>= 1.0.1)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
-    railties (4.2.7.1)
-      actionpack (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
+    railties (4.2.10)
+      actionpack (= 4.2.10)
+      activesupport (= 4.2.10)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
     raindrops (0.19.0)
-    rake (12.3.0)
+    rake (12.3.1)
     ranked-model (0.4.0)
       activerecord (>= 3.1.12)
-    rdoc (6.0.2)
-    recaptcha (4.6.6)
+    rdoc (6.0.3)
+    recaptcha (4.8.0)
       json
     redcarpet (3.2.3)
     request_store (1.4.1)
@@ -602,7 +612,7 @@ GEM
     rspec-support (3.7.1)
     rspec_junit_formatter (0.3.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (0.53.0)
+    rubocop (0.54.0)
       parallel (~> 1.10)
       parser (>= 2.5)
       powerpack (~> 0.1)
@@ -634,7 +644,7 @@ GEM
       sass-rails
     sdoc (1.0.0)
       rdoc (>= 5.0)
-    sexp_processor (4.10.1)
+    sexp_processor (4.11.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
     simplecov (0.16.1)
@@ -720,7 +730,7 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    wpcc (1.14.0)
+    wpcc (2.0.0)
       dough-ruby
       meta-tags
       rails (>= 4, < 5)
@@ -731,11 +741,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 4.6.0)
+  action_plans (~> 4.7.0)
   activerecord-session_store
   advice_plans (~> 3.3.1)
   aes
   agreements (~> 2.3.0)
+  algoliasearch
   autoprefixer-rails
   baby_cost_calculator (~> 0.3.0)
   better_errors
@@ -785,7 +796,7 @@ DEPENDENCIES
   mas-assets!
   mas-cms-client (= 1.7.1)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 2.4.1)
+  mortgage_calculator (~> 3.1.0)
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri
@@ -800,7 +811,7 @@ DEPENDENCIES
   psych (>= 2.0.5)
   quiz (~> 1.2.0)!
   rack-livereload
-  rails (= 4.2.7.1)
+  rails (= 4.2.10)
   recaptcha
   redcarpet
   rio (= 1.19.0)!
@@ -815,6 +826,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   site_prism
+  site_search!
   sqlite3
   statsd-ruby
   syslog-logger
@@ -828,7 +840,7 @@ DEPENDENCIES
   validate_url (= 1.0.0)
   vcr
   webmock
-  wpcc (= 1.14.0)
+  wpcc (= 2.0.0)
 
 BUNDLED WITH
    1.16.1

@@ -45,24 +45,17 @@ VCR.configure do |c|
 
     if ENV['MAS_CMS_URL'] =~ /#{uri.host}/
       VCR.use_cassette("/CMS/#{request.method}#{uri.path}#{uri.query}", &request)
-
-    # Sanitize the params when using to build the filename
-    elsif uri.host =~ /googleapis.com/
-      params = CGI.parse(uri.query)
-      params['key'] = ['GOOGLE_API_KEY']
-      params['cx'].first.gsub!(/#{ENV['GOOGLE_API_CX_EN']}/, 'GOOGLE_API_CX_EN')
-      params['cx'].first.gsub!(/#{ENV['GOOGLE_API_CX_CY']}/, 'GOOGLE_API_CX_CY')
-
-      VCR.use_cassette("/GOOGLE_SEARCH/#{request.method}/#{params.to_query}", &request)
-
+    elsif uri.host =~ /algolia/
+      query = JSON.parse(request.body)['params']
+      cassette_name = "/algolia/#{request.method}#{uri.path}#{uri.query}/#{query}"
+      VCR.use_cassette(cassette_name, match_requests_on: [:body], &request)
     else
       VCR.use_cassette("/#{uri.host}/#{request.method}#{uri.path}#{uri.query}", &request)
     end
   end
 
-  c.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
-  c.filter_sensitive_data('<GOOGLE_API_CX_EN>') { ENV['GOOGLE_API_CX_EN'] }
-  c.filter_sensitive_data('<GOOGLE_API_CX_CY>') { ENV['GOOGLE_API_CX_CY'] }
+  c.filter_sensitive_data('<API_KEY>') { ENV['ALGOLIA_API_KEY'] }
+  c.filter_sensitive_data('<APP_ID>') { ENV['ALGOLIA_APP_ID'] }
 end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')

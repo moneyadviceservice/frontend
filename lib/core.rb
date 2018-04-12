@@ -121,11 +121,6 @@ module Core
       autoload :Static, 'core/repository/saved_tools/static'
     end
 
-    module Search
-      autoload :ContentService, 'core/repository/search/content_service'
-      autoload :GoogleCustomSearchEngine, 'core/repository/search/google_custom_search_engine'
-    end
-
     module Users
       autoload :Default, 'core/repository/users/default'
     end

@@ -47,7 +47,7 @@ gem 'turnout'
 gem 'mas-cms-client', '1.7.1'
 
 # tools
-gem 'action_plans', '~> 4.7.0'
+gem 'action_plans', '~> 4.8.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.3.0'
 gem 'baby_cost_calculator', '~> 0.3.0'

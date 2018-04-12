@@ -1,0 +1,431 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://xgb5qlte67-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=money"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.2
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 12 Apr 2018 12:18:47 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Apr 2018 12:18:47 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Money Manager tool for Universal Credit claimants","description":"Money
+        Manager is designed just for people on Universal Credit. You can use it whether
+        you’re making a new claim or moving to Universal Credit from existing benefits.","content":"\n","published_at":"2018-03-27T10:26:38.000Z","objectID":"/en/tools/money-manager","_highlightResult":{"title":{"value":"<b>Money</b>
+        Manager tool for Universal Credit claimants","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Manager is designed just for people on Universal Credit. You can use it whether
+        you’re making a new claim or moving to Universal Credit from existing benefits.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        Advice Toolkits","description":"Money Advice Service toolkits provide information
+        about policy changes and topical money issues","content":"<h2 id=\"money-advice-toolkits\">Money
+        Advice Toolkits</h2>\n\n<p>We are happy to work with charities, local authorities,
+        employers and any other organisations to ensure that they are able to give
+        accurate and helpful money advice to their customers and clients. To help
+        with this, the Money Advice Service has created toolkits to provide information
+        and support a round upcoming policy changes and specific areas of financial
+        capability. You can download the toolkits, free of charge, from the links
+        below:</p>\n\n<h3 id=\"interest-only-mortgages-toolkit--downloadfilesinterest-only-mortgages-toolkitpdf\">Interest-only
+        Mortgages Toolkit ( <a href=\"/files/interest-only-mortgages-toolkit.pdf\">download</a>)</h3>\n\n<p><img
+        src=\"https://www.moneyadviceservice.org.uk/images/interest-only-toolkit.png\"
+        alt=\"\" /></p>\n\n<p>We have pulled together a snapshot of material we think
+        is relevant to the ‘interest-only’ mortgage customer from the extensive range
+        of resources available on the Money Advice Service website. We hope that the
+        mortgage industry and particularly lenders will find some or all of this useful
+        when they are communicating with their mortgage customers. We will continue
+        to evolve this content to better help these customers based on the latest
+        research and findings.</p>\n\n<h3 id=\"universal-credit-toolkit-downloadhttpcomfymoneyadviceserviceorguksystemcomfycmsfilesfiles000000076originaluniversalcredittoolkitrevisedapril151pdf\">Universal
+        Credit toolkit (<a href=\"http://comfy.moneyadviceservice.org.uk//system/comfy/cms/files/files/000/000/076/original/Universal_Credit_Toolkit_revised_April_15_(1).pdf\">download</a>)</h3>\n\n<p><img
+        src=\"https://www.moneyadviceservice.org.uk/images/universal_credit.png\"
+        alt=\"\" /></p>\n\n<p>If you are a charity, local authority, or other organisation
+        that gives money advice to the public, you can expect to start getting more
+        questions about <a href=\"/en/categories/universal-credit\">Universal Credit</a>
+        and the upcoming changes to the benefits system. The Universal Credit toolkit
+        provides information to help you explain how the changes will affect your
+        customers and what they will need to do to be prepared for them.</p>\n\n<h3
+        id=\"automatic-enrolment-toolkit--downloadfilesautomatic-enrolment-toolkit-from-the-money-advice-servicepdf\">Automatic
+        Enrolment toolkit ( <a href=\"/files/automatic-enrolment-toolkit-from-the-money-advice-service.pdf\">download</a>)</h3>\n\n<p><img
+        src=\"https://www.moneyadviceservice.org.uk/images/auto_enrolment.png\" alt=\"\"
+        /><br />\nSince October 2012, <a href=\"/en/articles/automatic-enrolment-into-a-workplace-pension\">Automatic
+        Enrolment</a> in workplace pensions has begun to be phased in by employers
+        in the UK. The Automatic Enrolment toolkit will give you the information you
+        need to help your workers understand the financial impact and benefit of the
+        changes. Please feel free to download the toolkit, use and share where relevant.
+        If you do have any queries or would like further support, please contact the
+        <a href=\"/en/articles/mailto:partners@moneyadviceservice.org.uk\">Partnerships
+        team</a>.</p>\n","published_at":"2015-06-08T13:25:25.000Z","objectID":"/en/corporate/toolkits-parhub","_highlightResult":{"title":{"value":"<b>Money</b>
+        Advice Toolkits","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service toolkits provide information about policy changes and topical
+        <b>money</b> issues","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Our
+        board","description":"Money Advice Service, Money Advice Service Board, Andy
+        Briscoe, Caroline Rookes, Jonathan Douglas,  Laurie Edmans, Richard Hughes,
+        Stephen Locke, Lesley Robinson, Robert Skinner, Nicola Bruce, Caroline Fawcett,
+        Mike Dailly ","content":"<p><strong>Our Board is appointed by the Financial
+        Conduct Authority (FCA), but acts independently of it. Appointments of the
+        Chair and Chief Executive must also be approved by HM Treasury.</strong></p>\n\n<p>The
+        Board’s role is to provide leadership and strategic direction, define control
+        mechanisms and supervise the overall management of our activities.</p>\n\n<ul><li><a
+        href=\"#board-member-biographies\">Board member biographies</a></li></ul>\n<h2
+        id=\"board-member-biographies\">Board member biographies</h2>\n\n<h3 id=\"andy-briscoe-chairman\">Andy
+        Briscoe (Chairman)</h3>\n\n<p><img src=\"https://www.moneyadviceservice.org.uk/images/andy_briscoe.jpg\"
+        alt=\"\">During an extensive and successful career in the financial services
+        sector Andy has chaired and served on the boards of a broad range of companies.
+        His professional experience ranges from insurance and credit cards to private
+        equity, and includes managing directorships with Centrica and The AA, as well
+        as spells at American Express and BUPA. Andy also chairs Fiinu, a fintech
+        company, and he is a trustee of his local Citizens Advice. Andy assumed the
+        chairmanship on 27 September 2013.</p>\n\n<h3 id=\"caroline-fawcett-non-executive-director\">Caroline
+        Fawcett <strong>(Non-Executive Director)</strong>\n</h3>\n\n<p><img src=\"https://cms.moneyadviceservice.org.uk//system/comfy/cms/files/files/000/000/152/original/caroline_f.jpg\"
+        alt=\"\">Caroline is a specialist in customer service and excellence and bringing
+        customers to the heart of organisations. She’s been the customer experience
+        director and marketing director at Legal &amp; General, customer director
+        at the Rural Payments Agency, and has held positions as Serco, Essex County
+        Council and the Care Quality Commission. She also has significant experience
+        of the financial services sector – as well as her positions at Legal &amp;
+        General, she is on the Board of Co-Op Insurance and is Customer Advocate for
+        Prudential Assurance. Caroline was appointed on 1 April 2015 for a three-year
+        term.</p>\n\n<h3 id=\"charles-counsell-chief-executive\">Charles Counsell
+        (Chief Executive)</h3>\n\n<p><img src=\"https://masassets.blob.core.windows.net/cms/files/000/000/752/original/CharlesCounsell120x120.jpg\"
+        alt=\"Charles resized\">Charles was appointed as Chief Executive of the Money
+        Advice Service in June 2017. He spent six years prior to this as Executive
+        Director of Automatic Enrolment at the Pensions Regulator (TPR) where he was
+        responsible for the successful UK roll-out of this programme, working alongside
+        DWP. In his time at TPR, the automatic enrolment programme led to more than
+        7.5 million workers newly saving into a workplace pension from over 500,000
+        employers. Charles was awarded an OBE in 2017 for services to workplace pension
+        reform. He has spent much of his career setting up and leading major change
+        programmes in both the private and public sector in the UK and overseas. Charles
+        is also a Trustee of South Somerset Citizens Advice.</p>\n\n<h3 id=\"christopher-morson-non-executive-director\">Christopher
+        Morson <strong>(Non-Executive Director)</strong>\n</h3>\n\n<p><img src=\"https://masassets.blob.core.windows.net/cms/files/000/000/415/original/chris_%281%29.jpg\"
+        alt=\"Chris Morson\">Christopher has held a number of senior roles in the
+        finance sector, and he is currently also a Non-Executive Director of the DVLA.
+        Previous roles have included: Digital Director, Virgin Money; Managing Director
+        of Digital, RBS/NatWest: Director, Strategy, Retail Direct Division RBS, Managing
+        Director of a consumer finance businesses in the EU and Director, Operations
+        of RBS Cards. He has been instrumental in the introduction of mobile banking
+        apps into the UK and the development of a number of innovations in banking.
+        In the early nineties during a period as a senior consultant with Price Waterhouse
+        Management, Christopher project managed a number of high profile commercial
+        television finance propositions. Other industry exposure at that time included
+        Card Processing, utilities and fine chemicals. Christopher was appointed on
+        1 September 2015.</p>\n\n<h3 id=\"david-haigh-uk-financial-capability-director\">David
+        Haigh (UK Financial Capability Director)</h3>\n\n<p><img src=\"https://cms.moneyadviceservice.org.uk//system/comfy/cms/files/files/000/000/271/original/David-H-for-web-board-page-.gif\"
+        alt=\"David H for Board \">David is responsible for developing a Strategy
+        to harness collective impact and drive improvements in the way people manage
+        their money. He has held a variety of senior strategic policy and leadership
+        roles over the last decade, and was the Commercial Director at the Department
+        for Health, responsible for developing a programme to improve the efficiency
+        of the NHS. David spent two years working in the Australian Treasury, leading
+        the team in delivering the Budget and setting up the Clean Energy Investment
+        Corporation. He also worked at the Department for Work and Pensions where
+        he led the policy and legislation to deliver automatic enrolment into pension
+        schemes.</p>\n\n<h3 id=\"john-penberthy-smith-customer-director\">John <strong>Penberthy-Smith</strong>
+        (Customer Director)</h3>\n\n<p><img src=\"https://masassets.blob.core.windows.net/cms/files/000/000/846/original/JohnPenberthy-Smith%28%C2%A9ElyseMarks%29002.jpg\"
+        alt=\"John Penberthy-Smith\">John was appointed as the Customer Director on
+        5 December 2014. A new world Chief Marketing Officer with nearly 30 years’
+        experience in senior roles in fast moving consumer sectors of retail, telecoms
+        and technology. An expert in turning consumer understanding into a compelling
+        and workable proposition for organisations to deliver that will grow market
+        share and profit.</p>\n\n<p>John joined MAS following several years running
+        his own management consultancy, focused on digital transformation and accelerating
+        start-ups.</p>\n\n<p>Prior to that he spent over a decade in the telecoms
+        industry in director roles at Vodafone, Three and Eircom.</p>\n\n<p>John spent
+        a decade in the retail sector at the beginning of his career in a variety
+        of sales and marketing roles working for both Dixons Stores Group and Thorn
+        EMI.</p>\n\n<h3 id=\"jonathan-douglas-non-executive-director\">Jonathan Douglas
+        <strong>(Non-Executive Director)</strong>\n</h3>\n\n<p><img src=\"https://www.moneyadviceservice.org.uk/images/jonathan_douglas.jpg\"
+        alt=\"\">Jonathan’s career has centered on learning, initially through libraries
+        and since 2007 as Chief Executive of the National Literacy Trust (NLT). He
+        was previously Head of Policy Development at the Museum and Libraries Archives
+        Council and also Adviser at the Chartered Institute of Librarians and Information
+        Professionals. He has been on the boards of several charities relating to
+        learning and access and literature. Jonathan was appointed 3 January 2011
+        for a two-year term, in January 2013 his term was renewed for another three
+        years.</p>\n\n<h3 id=\"michael-dailly-non-executive-director\">Michael Dailly
+        (<strong>Non-Executive Director)</strong>\n</h3>\n\n<p><img src=\"https://cms.moneyadviceservice.org.uk","published_at":"2017-11-29T15:08:26.000Z","objectID":"/en/corporate/our-board","_highlightResult":{"title":{"value":"Our
+        board","matchLevel":"none","matchedWords":[]},"description":{"value":"<b>Money</b>
+        Advice Service, <b>Money</b> Advice Service Board, Andy Briscoe, Caroline
+        Rookes, Jonathan Douglas,  Laurie Edmans, Richard Hughes, Stephen Locke, Lesley
+        Robinson, Robert Skinner, Nicola Bruce, Caroline Fawcett, Mike Dailly ","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        lives: Paul","description":"Money lives: Paul","content":"<p><strong>Paul,
+        23, is a temporary worker who lives in Leeds</strong></p>\n\n<p>Paul is 23
+        years old and lives at home with his Mum. He does not contribute to the household
+        finances and generally spends most of what he earns on clothes and nights
+        out with friends.</p>\n\n<p>Paul thinks week to week about money and only
+        plans ahead if there is something he really wants to do. For instance, if
+        there is a concert for which he wants tickets.</p>\n\n<p>Being paid every
+        Friday means all of the week’s earnings are available over the weekend and
+        if he spends a lot he has to get through until payday without any funds.</p>\n\n<p>At
+        times he borrows money from his family with the intention of paying them back
+        when he next gets paid. The reality is that while he pays his sister back,
+        he rarely repays his mother.</p>\n\n<div class=\"callout callout--tip\">\n  <span
+        class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p>“At the age I’m
+        at it’s very easy to spend all your money going out…”</p>\n\n</div>\n\n<p>He
+        checks his account using mobile banking and at cash points. Typically, he
+        does this after the weekend to see by how much he has overspent.</p>\n\n<p>He
+        will then decide if he needs to borrow money to avoid going beyond his overdraft
+        limit. He rarely enters credit in his account.</p>\n\n<p>Paul and his friends
+        have used pay-day lenders a few times, the last occasion for Paul was when
+        he took out a loan of £70 for a night out, paying back around £100.</p>\n\n<p>Paul
+        knows that as he is in temporary work this could be risky if he borrowed a
+        large amount and then couldn’t get more work, although ultimately he is confident
+        that his family would help him.</p>\n\n<p>He does not have any concrete financial
+        goals and while he would like a house and is always on the lookout for a job
+        which would pay more, he is not taking any proactive steps to achieve this.</p>\n\n<p>For
+        Paul to save money he would, in reality, not be able to go out at all; something
+        he isn’t prepared to consider at the moment.</p>\n\n<p>Paul thinks that the
+        way he approaches his finances is typical for someone his age and isn’t worried
+        – he just wants to have fun while he is still young.</p>\n","published_at":"2015-03-25T13:11:15.000Z","objectID":"/en/corporate/money-lives-paul","_highlightResult":{"title":{"value":"<b>Money</b>
+        lives: Paul","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        lives: Paul","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        lives: Karen","description":"Money lives: Karen","content":"<p><strong>Karen,
+        43, is a social worker who lives in Leicester</strong></p>\n\n<p>Karen lives
+        in Leicester with her partner and her two daughters both under 14. She loves
+        her job as a full-time social worker and recently started a course in alcohol
+        and drug counselling.</p>\n\n<p>Money is a significant source of stress and
+        unhappiness for Karen. She is in debt from years of overspending on clothes,
+        extravagant birthday parties, and trips away, with a lot of her spending going
+        on her children.</p>\n\n<p>Karen has made efforts to cut back, by stopping
+        going out, buying own-brand products, and selling her car and other possessions.
+        This had a huge emotional effect when selling very personal items like family
+        gold. She now questions expenditure in a way that she wouldn’t have in the
+        past.</p>\n\n<div class=\"callout callout--tip\">\n  <span class=\"callout__icon\"
+        aria-hidden=\"true\">?</span>\n  <p>“I live in my overdraft, it’s not good…”</p>\n\n</div>\n\n<p>Karen
+        has cut up her credit cards and found denying her family luxuries was particularly
+        hard before Christmas. At this point, Karen had to reluctantly explain their
+        poor financial situation to her daughters.</p>\n\n<p>Karen and her partner
+        take responsibility for different bills. He pays the ‘big’ bills (mortgage,
+        gas and electricity) and she takes on the smaller costs. This, and the fact
+        they have separate bank accounts, prevents her from properly keeping track
+        of their finances.</p>\n\n<p>However, Karen dislikes the idea of a joint account
+        because she’s concerned she could spend all his money.</p>\n\n<p>Her friends
+        are aware of her situation and help out. She’d accept small amounts from them,
+        but not big amounts, like money for a new car.</p>\n\n<p>However, she is generally
+        distrustful of people and finds talking to others about her financial situation
+        or approach to money management uncomfortable.</p>\n\n<p>With the exception
+        of a savings account for her children and studying for a degree to improve
+        her career, Karen does not plan ahead. She is ‘getting by’ – busy juggling
+        children, university and work - and sees no escape from her current situation.</p>\n\n<p>She
+        is fearful that she may have to sell her house and downsize, however moving
+        is her worst case scenario.</p>\n\n<p>Her relationship is also strained and
+        while she had considered splitting up with her partner, she knows that doing
+        so would put her in a financially worse position than she is in already.</p>\n","published_at":"2015-03-25T13:10:18.000Z","objectID":"/en/corporate/money-lives-karen","_highlightResult":{"title":{"value":"<b>Money</b>
+        lives: Karen","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        lives: Karen","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        lives: Charlotte","description":"Money lives: Charlotte","content":"<p><strong>Charlotte,
+        25, is a personal assistant who lives in London</strong></p>\n\n<p>Charlotte
+        is a 25-year-old graduate who has recently moved in with her boyfriend. She
+        socialises a lot, usually with friends from work and she also makes a lot
+        of effort to keep in touch with old school and university friends.</p>\n\n<p>Charlotte
+        enjoys her job and has a strong sense of career direction. The nature of her
+        role and remuneration form an important part of this. But this has to fit
+        with her lifestyle and her need for balance – in particular, having evenings
+        free to socialise.</p>\n\n<p>Charlotte gets her key attitudes, balancing thrift
+        and enjoying money within her budget from her parents. She feels that she’s
+        lucky as a lot of families don’t discuss finances.</p>\n\n<div class=\"callout
+        callout--tip\">\n  <span class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p>“I
+        know I should [sort out a pension] … but I’m not sure about it … I’m 26 in
+        September and I said I’d look at it when I was 25”</p>\n\n</div>\n\n<p>Charlotte
+        is organised with her finances day to day and tracks her spending throughout
+        the month. She pays for most things on her credit card so that she can easily
+        track her spending and checks her accounts online and by using an app on her
+        phone.</p>\n\n<p>She has two bank accounts – one for her salary, and one for
+        spending. This works well for her as it means that she doesn’t have to worry
+        about overspending day to day.</p>\n\n<p>Although she allows herself £400
+        a month to spend freely, without keeping track of where it goes, she views
+        a lot of her spending as an ‘investment’: she doesn’t spend a lot of money
+        on clothes, rarely buying them full price, but she does sometimes spend money
+        on expensive fashion items.</p>\n\n<p>These tend to be jewellery and handbags
+        that she knows she will always be able to wear and whose value will last.</p>\n\n<p>While
+        Charlotte feels well informed and confident about her finances for the now,
+        she doesn’t have a pension yet. Her employer has a good scheme which will
+        double any contribution she makes between 5% and 10%, but Charlotte isn’t
+        sure whether she’d be better off saving or investing the money elsewhere instead.</p>\n\n<p>As
+        yet she hasn’t got round to working out what to do both specifically in terms
+        of her pension and more widely on issues like protecting and planner her and
+        her boyfriend’s financial future.</p>\n","published_at":"2015-03-25T13:09:35.000Z","objectID":"/en/corporate/money-lives-charlotte","_highlightResult":{"title":{"value":"<b>Money</b>
+        lives: Charlotte","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        lives: Charlotte","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        lives: Barbara","description":"Money lives: Barbara","content":"<p><strong>Barbara,
+        75, is retired and lives in Bristol</strong></p>\n\n<p>Barbara is from a working
+        class family who were comfortable financially. She previously worked in a
+        variety of professions (nursing, and as dinner lady) and misses work having
+        only recently retired.</p>\n\n<p>Barbara was widowed in her forties and lives
+        alone, but she has two children and is very close to her daughter and her
+        three grandchildren.</p>\n\n<p>Her main incomings are a few pensions from
+        her late husband and her state pension. She doesn’t struggle with money but
+        continues to be very careful and well organised with it.</p>\n\n<p>She has
+        enough money for all her needs, and enjoys making home improvements which
+        she saves up for. This investment is driven by the feeling that she needs
+        to keep the house in good condition for when she leaves it to her daughter.</p>\n\n<div
+        class=\"callout callout--tip\">\n  <span class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p>“Some
+        goes into my current account if I want to buy things and some goes into my
+        savings. You’ve got to have a system…”</p>\n\n</div>\n\n<p>She keeps her system
+        for dealing with money very simple, drawing out the same amount each month
+        to cover her living expenses. The remainder is withdrawn at the end of the
+        month and paid into her Savings Account. She has been using this system for
+        a number of years.</p>\n\n<p>Throughout the month she keeps track of her money
+        by noting down the main expenditures leaving her account (such as car tax,
+        house and washing machine insurance), though she has very few outgoings having
+        downsized 11 years ago to become mortgage-free.</p>\n\n<p>Barbara pays her
+        household bills in cash on a specific week of each month after receiving her
+        pension because she prefers to spend money this way rather than on a credit
+        card, so she can keep track.</p>\n\n<p>Other costs are set up as direct debits
+        so she does not have to worry about them. She knows broadly how much she has
+        in her account.</p>\n\n<p>She likes her dealings with money to be handled
+        face to face and prefers not to be involved in technology or terminology that
+        she doesn’t understand or trust.</p>\n\n<p>She recognises this is different
+        to her children and grandchildren but has no intention of changing. She understands
+        this difference between her generation and those that follow, but feels that
+        younger generations have a different, more reckless attitude towards money
+        and spending.</p>\n","published_at":"2015-03-25T13:08:35.000Z","objectID":"/en/corporate/money-lives-barbara","_highlightResult":{"title":{"value":"<b>Money</b>
+        lives: Barbara","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        lives: Barbara","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Money Advice Service publishes quarter one 2013 performance results","description":"Money
+        Advice Service publishes quarter one 2013 performance results","content":"<p><strong>26
+        July 2013</strong></p>\n\n<p>The Money Advice Service’s latest performance
+        data, covering the first quarter of 2013/14, shows strong results in terms
+        of both its work to deliver money advice, and its debt advice funding programme.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-q1-performance-260713.pdf\">Read
+        the press release in full (PDF).</a></li>\n</ul>\n\n","published_at":"2015-03-16T11:22:01.000Z","objectID":"/en/corporate/money-advice-service-publishes-quarter-one-2013-performance-results","_highlightResult":{"title":{"value":"Press
+        release: <b>Money</b> Advice Service publishes quarter one 2013 performance
+        results","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service publishes quarter one 2013 performance results","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Money Advice Service consults on 2013-14 business plan, to get more
+        people saving and managing debt","description":"Money Advice Service consults
+        on 2013-14 business plan, to get more people saving and managing debt press
+        release","content":"<p>20 December 2012</p>\n\n<p><strong>The proposal outlines
+        the Service’s plans to get more people saving, managing debt and protecting
+        what they own - with almost half a million outcomes.</strong></p>\n\n<p>A
+        key focus will be on getting younger and low-middle income families more financially
+        savvy, with a priority to address the savings gap in the UK.</p>\n\n<p>The
+        proposal also highlights its aim to get more people taking five specific steps
+        to manage their money.</p>\n\n<ul>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-consults-on-draft-business-plan-13-14_final.pdf\">Read
+        the full press release. (PDF)</a>**</li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/mas-business-plan-2013-14.pdf\">Download
+        the Money Advice Service draft business plan in full. (PDF)</a>**</li>\n</ul>\n\n","published_at":"2015-03-24T16:11:25.000Z","objectID":"/en/corporate/money-advice-service-consults-on-2013-14-business-plan-to-get-more-people-saving-and-managing-debt","_highlightResult":{"title":{"value":"Press
+        release: <b>Money</b> Advice Service consults on 2013-14 business plan, to
+        get more people saving and managing debt","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service consults on 2013-14 business plan, to get more people saving
+        and managing debt press release","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Money Advice Service commits over £30 million to fund delivery of
+        free debt advice","description":"Money Advice Service commits over £30 million
+        to fund delivery of free debt advice","content":"<p><strong>11 April 2013</strong></p>\n\n<p>Today
+        the Money Advice Service announces <strong>over £30 million to fund the delivery
+        of free debt advice across the UK in 2013/14</strong>. The largest funding
+        agreement is with Citizens Advice - £23m will be allocated to fund its debt
+        advice projects in England and Wales (the same amount allocated in 2012/13).</p>\n\n<p><strong>England
+        and Wales</strong> The Service has signed grant agreements worth over <strong>£26
+        million</strong> with six lead debt advice partners in England and Wales:
+        Citizens Advice, including Citizens Advice Cymru, Capitalise, Community Finance
+        Solutions, Greater Merseyside Money Advice Partnership, Bristol Debt Advice
+        Centre and East Midlands Money Advice. Overall, during 2013/14, 150,000 people
+        will benefit from free debt advice provided by the partners.</p>\n\n<p><strong>Scotland</strong>
+        The Service will allocate £2.35m to fund the delivery of debt advice through
+        a partnership with the Scottish Legal Aid Board (SLAB). This funding builds
+        on the Service’s existing partnership with SLAB, and it will finance new projects
+        to help groups of over-indebted people in Scotland including those who face
+        barriers to accessing help to deal with their debts, such as: people with
+        complex mental health needs, physical disabilities, and those experiencing
+        domestic abuse. In addition, the Service will commit £350,000 to other projects
+        in Scotland, including a pilot to integrate financial capability support into
+        insolvency practices.</p>\n\n<p><strong>Northern Ireland</strong> The Service
+        will commit almost £800,000 to extend its partnership with the Department
+        of Enterprise, Trade and Investment in order to continue advice delivered
+        by Advice NI last year.</p>\n\n<p><strong>Caroline Siarkiewicz, Head of the
+        Money Advice Service’s Debt Advice programme</strong>, said; “In a time of
+        turbulence in the debt advice sector, when many organisations are withdrawing
+        or cutting-back funding, we are proud to continue our support for the essential
+        services provided by our debt advice partners. We know that the services we
+        fund make a huge difference to the lives of over indebted people. We want
+        to thank our partners who have worked tirelessly with us over the last year
+        and we look forward to continuing our work together this year.”</p>\n\n<p><strong>Gillian
+        Guy, Chief Executive of Citizens Advice</strong>, said; “As pay freezes, benefit
+        cuts and price rises wreak havoc on household budgets, we’re expecting to
+        see many more people who need support dealing with debt. Citizens Advice Bureaux
+        helped with over two million debt problems last year, and this funding means
+        we can continue to giving our expert advice to help tackle money problems.”</p>\n\n<p><strong>Lindsay
+        Montgomery, Chief Executive of Scottish Legal Aid Board (SLAB)</strong>, said;
+        “We are delighted to have been asked once again by the Money Advice Service
+        to allocate this significant amount of funding through a partnership grants
+        programme. We very much welcome this opportunity to build upon the success
+        of our existing grants programme by establishing a new programme to improve
+        support for people across Scotland who need specialist help to deal with debt
+        issues.”</p>\n\n<p>In addition to the £30.6 million funding for debt advice
+        projects, £3.8m is being allocated to the Money Advice Service’s work to co-ordinate
+        and improve quality and consistency across the debt advice sector, including
+        projects focussed on data management, evaluation, standards and triage.</p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p>1. The Money Advice Service is grant funding
+        the following partners for the second year in a row: Citizens Advice, Capitalise,
+        Community Finance Solutions, Greater Merseyside Money Advice Partnership,
+        Bristol Debt Advice Centre and East Midlands Money Advice. 2013/14 will also
+        be the second year during which the Service has worked with SLAB and Advice
+        NI.</p>\n\n<p>2. £23m will go to projects run by Citizens Advice, £18m through
+        the Service’s grant agreement with Citizens Advice, and the remainder through
+        projects funded through the Service’s other lead debt advice partners.</p>\n\n<p>3.
+        The Service’s Business Plan for 2013/14, published in March, stated that its
+        debt advice delivery partners were on-track to deliver almost 175,000 sessions
+        across the UK in 2012/13. Final performance figures for 2012/13 will be published
+        shortly.</p>\n\n<p>4. The partners which the Service funds are succeeding
+        in delivering positive outcomes for clients at the same time as increasing
+        the number of sessions provided. An independent evaluation by <a href=\"https://www.moneyadviceservice.org.uk/files/optimisa-report-final-for-publication.pdf\">Optimisa</a>
+        of their service delivery in England and Wales found that over 90% of clients
+        took action to address their over-indebtedness after receiving advice.</p>\n\n<p>5.
+        Full details of the Service’s budget for debt advice in 2013/14 are set out
+        in its Business Plan 2013/14- see <a href=\"http://www.moneyadviceservice.org.uk/en/static/the-money-advice-service-business-plan-2013-14\">www.moneyadviceservice.org.uk/en/static/the-money-advice-service-business-plan-2013-14</a>.</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>About
+        the Money Advice Service</strong></p>\n\n<p>The Money Advice Service is an
+        independent organisation. Set up by Government to help people make the most
+        of their money, it gives free, unbiased money advice across the UK – online,
+        over the phone and face to face. The Service is paid for by a statutory levy
+        on the financial services industry, raised by the Financial Conduct Authority.
+        Its statutory objectives are to enhance the understanding and knowledge of
+        members of the public about financial matters (including the UK financial
+        system), and to enhance the ability of members of the public to manage their
+        own financial affairs. The Service has an independent Chairman and board appointed
+        by the Financial Conduct Authority. It was formerly the Consumer Financial
+        Education Body.</p>\n\n<p><strong>For more information contact:</strong> Money
+        Advice Service: 020 7943 0593 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n","published_at":"2015-05-06T10:00:12.000Z","objectID":"/en/corporate/money-advice-service-commits-over-gbp30-million-to-fund-delivery-of-free-debt-advice","_highlightResult":{"title":{"value":"Press
+        release: <b>Money</b> Advice Service commits over £30 million to fund delivery
+        of free debt advice","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service commits over £30 million to fund delivery of free debt advice","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}}],"nbHits":359,"page":0,"nbPages":36,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","queryAfterRemoval":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=money"}
+
+'
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 12:18:48 GMT
+recorded_with: VCR 4.0.0

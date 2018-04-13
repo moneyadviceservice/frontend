@@ -123,7 +123,7 @@ class ApplicationController < ActionController::Base
   end
 
   def clumps
-    Mas::Cms::Clump.all(cached: true)
+    Mas::Cms::Clump.all(cached: true, locale: I18n.locale)
   end
   helper_method :clumps
 

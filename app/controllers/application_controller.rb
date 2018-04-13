@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   before_action :fetch_footer_content
   def fetch_footer_content
-    @footer = Mas::Cms::Footer.find('footer', cached: true)
+    @footer = Mas::Cms::Footer.find('footer', cached: true, locale: I18n.locale)
   end
 
   helper ChatMigrationMessage

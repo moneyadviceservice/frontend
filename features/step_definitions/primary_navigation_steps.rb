@@ -63,3 +63,9 @@ Then('I should see the global navigation') do |table|
     expect(row[0]).to be_in(headings)
   end
 end
+
+Then("I should see the footer") do |table|
+  table.rows.each do |row|
+    expect(row[0]).to be_in(home_page.footer.text)
+  end
+end

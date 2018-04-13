@@ -16,5 +16,6 @@ module UI::Pages
     element :feature_list, '.home-feature__list'
     elements :promoted_items, '.home-promoted__item'
     elements :global_navigation_clumps, '.global-nav__clump__heading__text'
+    element :footer, '.l-contact-panels'
   end
 end

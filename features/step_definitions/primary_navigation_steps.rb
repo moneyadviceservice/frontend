@@ -53,3 +53,13 @@ And (/^the relevant (article)'s child categor(y|ies) selected$/) do |entity, _pl
 
   expect(selected_child_categories.sort).to eq(child_categories.sort)
 end
+
+Then('I should see the global navigation') do |table|
+  headings = home_page.global_navigation_clumps.map do |clump|
+    clump.text
+  end
+
+  table.rows.each do |row|
+    expect(row[0]).to be_in(headings)
+  end
+end

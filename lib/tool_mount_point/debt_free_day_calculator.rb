@@ -1,13 +1,13 @@
 module ToolMountPoint
   class DebtFreeDayCalculator < Base
     class LoanCalculator < Base
-      EN_ID = 'loan-calculator'
-      CY_ID = 'cyfrifiannell-benthyciadau'
+      EN_ID = 'loan-calculator'.freeze
+      CY_ID = 'cyfrifiannell-benthyciadau'.freeze
     end
 
     class CreditCardCalculator < Base
-      EN_ID = 'credit-card-calculator'
-      CY_ID = 'cyfrifiannell-cerdyn-credyd'
+      EN_ID = 'credit-card-calculator'.freeze
+      CY_ID = 'cyfrifiannell-cerdyn-credyd'.freeze
     end
 
     def initialize
@@ -40,7 +40,7 @@ module ToolMountPoint
     private
 
     def unsupported(method_name)
-      fail("Unsupported: there is no logical implementation of `#{method_name}` for this class")
+      raise("Unsupported: there is no logical implementation of `#{method_name}` for this class")
     end
   end
 end

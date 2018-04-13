@@ -16,6 +16,6 @@ module SessionsHelper
   end
 
   def authentication_session_set?
-    session.has_key? 'authentication_registration_title'
+    session.key? 'authentication_registration_title'
   end
 end

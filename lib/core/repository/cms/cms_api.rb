@@ -3,8 +3,7 @@ module Core::Repository
     class CmsApi < CMS
       private
 
-      def process_response(response)
-      end
+      def process_response(response); end
 
       def resource_url(id)
         '/api/%{id}.json' % { id: id }

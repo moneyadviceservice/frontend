@@ -1,8 +1,8 @@
 RSpec.describe 'Budget Planner', type: :request do
-  %W(
+  %W[
     /en/tools/#{ToolMountPoint::BudgetPlanner::EN_ID}
     /cy/tools/#{ToolMountPoint::BudgetPlanner::CY_ID}
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

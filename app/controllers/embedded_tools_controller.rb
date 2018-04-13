@@ -14,7 +14,7 @@ class EmbeddedToolsController < ApplicationController
 
     # Remove the locale and tool_id as we've dealt with those in the script_name.
     # (And if we don't they'll be added to the query string.)
-    new_params.delete_if { |key, _| %w(locale tool_id).include?(key) }
+    new_params.delete_if { |key, _| %w[locale tool_id].include?(key) }
 
     url = url_for(new_params)
 
@@ -30,7 +30,7 @@ class EmbeddedToolsController < ApplicationController
   def alternate_options
     {
       "#{params[:locale]}-GB" => request.url,
-      "#{alternate_locale }-GB" => alternate_url
+      "#{alternate_locale}-GB" => alternate_url
     }
   end
 

@@ -20,7 +20,7 @@ RSpec.describe HTMLProcessor::AmpImg do
     end
 
     let(:html) do
-      <<-EOHTML
+      <<-HTML
         <img
             srcset="test_srcset"
             src="test_src"
@@ -29,7 +29,7 @@ RSpec.describe HTMLProcessor::AmpImg do
             attribution="test_attribution"
             height="test_height"
             width="test_width" />
-      EOHTML
+      HTML
     end
 
     it 'the parent container is a div' do
@@ -59,7 +59,6 @@ RSpec.describe HTMLProcessor::AmpImg do
       )
     end
 
-
     it 'creates a noscript tag containing the original img tag' do
       expect(noscript_tag.name).to eq('noscript')
       expect(inner_img_tag.name).to eq('img')
@@ -79,9 +78,9 @@ RSpec.describe HTMLProcessor::AmpImg do
 
     context 'when attributes are missing' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
           <img src="test_src" />
-        EOHTML
+        HTML
       end
 
       it 'does not create those attributes on the amp-iframe' do
@@ -93,9 +92,9 @@ RSpec.describe HTMLProcessor::AmpImg do
 
     context 'when src attribute is missing' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
           <img />
-        EOHTML
+        HTML
       end
 
       it 'does not create the amp-img tag' do

@@ -50,9 +50,9 @@ RSpec.describe Localisation, type: :controller do
   describe 'alternative locales' do
     it 'returns an array of locals excluding the current locale' do
       allow(I18n).to receive(:locale).and_return(:en)
-      allow(I18n).to receive(:available_locales).and_return(%I(en cy))
+      allow(I18n).to receive(:available_locales).and_return(%I[en cy])
 
-      expect(controller.alternate_locales).to eql(%I(cy))
+      expect(controller.alternate_locales).to eql(%I[cy])
     end
   end
 end

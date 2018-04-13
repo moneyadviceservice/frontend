@@ -8,7 +8,7 @@ module Converters
     end
 
     def call
-      fail('customer is not persisted') if customer.id.blank?
+      raise('customer is not persisted') if customer.id.blank?
 
       existing_user = User.find_by(customer_id: customer.id)
 
@@ -28,7 +28,7 @@ module Converters
     attr_reader :reject_email
 
     def existing_customer_attributes
-      hash = customer.attributes.reject { |k, _| [:state, :topics, :status_code].include?(k) }.compact
+      hash = customer.attributes.reject { |k, _| %i[state topics status_code].include?(k) }.compact
       hash.delete(:email) if reject_email
       hash
     end

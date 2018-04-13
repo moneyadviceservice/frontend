@@ -3,11 +3,7 @@ CodeClimate::TestReporter.start
 
 ENV['RAILS_ENV'] = 'test'
 
-begin
-  require 'pry'
-rescue LoadError
-end
-
+require 'pry'
 require_relative '../config/environment'
 
 require 'rspec/rails'
@@ -29,10 +25,10 @@ Draper::ViewContext.test_strategy :fast
 FactoryGirl.definition_file_paths << File.join(File.dirname(__FILE__), '..', 'features', 'factories')
 FactoryGirl.find_definitions
 
-I18n.available_locales = [:en, :cy]
+I18n.available_locales = %i[en cy]
 
-PageValidations::HTMLValidation.ignored_attribute_errors = %w(tabindex itemscope itemtype itemprop)
-PageValidations::HTMLValidation.ignored_tag_errors       = %w(main svg symbol path polygon use rect)
+PageValidations::HTMLValidation.ignored_attribute_errors = %w[tabindex itemscope itemtype itemprop]
+PageValidations::HTMLValidation.ignored_tag_errors       = %w[main svg symbol path polygon use rect]
 PageValidations::HTMLValidation.ignored_errors           = ['letter not allowed here']
 
 VCR.configure do |c|
@@ -60,16 +56,16 @@ end
 
 WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
 class FakeFooterRepositoryDefinedInSpecHelper
-  def find(_)
-    blocks = [
-      'raw_web_chat_heading', 'raw_web_chat_additional_one', 'raw_web_chat_additional_two',
-      'raw_web_chat_additional_three', 'raw_web_chat_small_print', 'raw_contact_heading',
-      'raw_contact_introduction', 'raw_contact_phone_number', 'raw_contact_additional_one',
-      'raw_contact_additional_two', 'raw_contact_additional_three', 'raw_contact_small_print'
-    ].map do | identifier |
+  def find(_id)
+    blocks = %w[
+      raw_web_chat_heading raw_web_chat_additional_one raw_web_chat_additional_two
+      raw_web_chat_additional_three raw_web_chat_small_print raw_contact_heading
+      raw_contact_introduction raw_contact_phone_number raw_contact_additional_one
+      raw_contact_additional_two raw_contact_additional_three raw_contact_small_print
+    ].map do |identifier|
       { 'identifier' => identifier, 'content' => 'I am some content in a footer' }
     end
     { blocks: blocks }
@@ -120,4 +116,3 @@ Mas::Cms::Client.config do |c|
   c.cache        = Rails.cache
   c.cache_gets   = true
 end
-

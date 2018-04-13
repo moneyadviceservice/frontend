@@ -1,12 +1,10 @@
 module ToolMountPoint
   class BudgetPlanner < Base
-    EN_ID = 'budget-planner'
-    CY_ID = 'cynllunydd-cyllideb'
+    EN_ID = 'budget-planner'.freeze
+    CY_ID = 'cynllunydd-cyllideb'.freeze
 
     def matches?(request)
-      unless request.params[:incognito].to_s.downcase == 'incognito'
-        request.params[:incognito] = nil
-      end
+      request.params[:incognito] = nil unless request.params[:incognito].to_s.casecmp('incognito').zero?
 
       super
     end

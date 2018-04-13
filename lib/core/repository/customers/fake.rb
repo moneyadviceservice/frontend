@@ -15,7 +15,7 @@ module Core
 
         # return customer id
         def create(user)
-          fail('Already exists') if customers.find { |c| c[:id] == user.customer_id }
+          raise('Already exists') if customers.find { |c| c[:id] == user.customer_id }
 
           customer = user.to_customer
           hash = customer.attributes
@@ -28,7 +28,7 @@ module Core
         def update(customer)
           c = customers.find { |c| c[:id] == customer.id }
 
-          fail 'does not exist' unless c
+          raise 'does not exist' unless c
 
           c[:first_name] = customer.first_name
           c[:email] = customer.email
@@ -37,9 +37,7 @@ module Core
           c[:contact_number] = customer.contact_number
         end
 
-        def clear
-          customers.clear
-        end
+        delegate :clear, to: :customers
       end
     end
   end

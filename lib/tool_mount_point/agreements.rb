@@ -1,6 +1,6 @@
 module ToolMountPoint
   class Agreements < Base
-    EN_ID = 'agreements'
-    CY_ID = 'agreements'
+    EN_ID = 'agreements'.freeze
+    CY_ID = 'agreements'.freeze
   end
 end

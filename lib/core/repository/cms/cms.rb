@@ -1,6 +1,6 @@
 module Core::Repository
   module CMS
-    class ResourceElsewhereError < Exception
+    class ResourceElsewhereError < RuntimeError
       attr_reader :location
 
       def initialize(msg, location)
@@ -34,7 +34,7 @@ module Core::Repository
     end
 
     class CMS < Core::Repository::Base
-      def initialize(options = {})
+      def initialize(_options = {})
         self.connection = Core::Registry::Connection[:cms]
       end
 
@@ -53,7 +53,7 @@ module Core::Repository
       rescue Core::Repository::CMS::Resource301Error,
              Core::Repository::CMS::Resource302Error => e
         raise e
-      rescue => e
+      rescue StandardError => e
         raise RequestError, 'Unable to fetch Article JSON from Contento'
       end
 

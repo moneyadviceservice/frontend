@@ -1,18 +1,18 @@
-JSHINTRC_LOCATION = 'vendor/assets/bower_components/dough/.jshintrc'
+JSHINTRC_LOCATION = 'vendor/assets/bower_components/dough/.jshintrc'.freeze
 
 desc 'Run jshint on all javascript assets'
 task jshint: :environment do
   # Prevent linting as part of the asset pipeline
-  Rails.application.assets.instance_variable_get('@postprocessors')['application/javascript'].delete(AssetPipeline::Processors::JsHint)
+  Rails.application.assets.instance_variable_get(
+    '@postprocessors'
+  )['application/javascript'].delete(AssetPipeline::Processors::JsHint)
 
   jshintrc = File.join(Rails.root, JSHINTRC_LOCATION)
   lint_options = JSON.parse(File.read(jshintrc))
 
   assets = [].tap do |a|
     Rails.application.assets.each_file do |pathname|
-      if pathname.to_s =~ AssetPipeline::Processors::JsHint::REGEX
-        a << pathname
-      end
+      a << pathname if pathname.to_s =~ AssetPipeline::Processors::JsHint::REGEX
     end
   end
 
@@ -25,7 +25,9 @@ task jshint: :environment do
     errors = results.errors.compact
 
     if errors.present?
-      errors.sort! { |a, b| [a['line'], a['character']] <=> [b['line'], b['character']] }
+      errors.sort! do |a, b|
+        [a['line'], a['character']] <=> [b['line'], b['character']]
+      end
 
       errors.each do |error|
         puts "- line: #{error['line']}, char: #{error['character']}: #{error['reason']}"

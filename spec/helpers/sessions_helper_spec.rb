@@ -41,5 +41,3 @@ RSpec.describe SessionsHelper, type: :helper do
     end
   end
 end
-
-

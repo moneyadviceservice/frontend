@@ -8,9 +8,7 @@ module Validators
       elsif invalid_format?(value)
         record.errors.add(attribute, :invalid, value: value)
       elsif dns_validation_enabled?
-        unless valid_dns?(value)
-          record.errors.add(attribute, :invalid, value: value)
-        end
+        record.errors.add(attribute, :invalid, value: value) unless valid_dns?(value)
       end
     end
 

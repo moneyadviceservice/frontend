@@ -18,12 +18,11 @@ class CategoryDecorator < Draper::Decorator
   end
 
   def rendering_args
-    case
-    when object.legacy?
+    if object.legacy?
       ['relay_page', contents: legacy_contents]
-    when object.parent?
+    elsif object.parent?
       ['child_categories', contents: contents]
-    when object.child?
+    elsif object.child?
       ['content_items_all', contents: contents]
     end
   end

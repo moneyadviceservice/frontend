@@ -2,6 +2,7 @@ module Authenticable
   class << self
     def required?
       return if development? || qa? || staging?
+
       Rails.env.production?
     end
 

@@ -1,6 +1,6 @@
 module ToolMountPoint
   class PaydayLoans < Base
-    EN_ID = 'payday-loans'
-    CY_ID = 'benthyciadau-diwrnod-cyflog'
+    EN_ID = 'payday-loans'.freeze
+    CY_ID = 'benthyciadau-diwrnod-cyflog'.freeze
   end
 end

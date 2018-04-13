@@ -2,7 +2,7 @@ module Core::Repository
   module Categories
     class Fake
       def initialize(*categories)
-        @categories = (categories.present?) ? categories : default_categories
+        @categories = categories.presence || default_categories
       end
 
       def all
@@ -44,6 +44,7 @@ module Core::Repository
       def find_category(categories, id)
         categories.each do |category|
           return category if category['id'] == id
+
           subcategory = find_category(category.fetch('contents', []), id)
           return subcategory if subcategory
         end

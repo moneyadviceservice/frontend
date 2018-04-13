@@ -15,9 +15,7 @@ task :copy_precompiled_tools_js do
   source_path = precompiled_most_recent_tools_js(precompiled_file_paths)
   if source_path.present?
     tools_js_location = File.join('public', assets_dir_name, 'syndication', 'tools.js')
-    if update_tools_js?(source_path, tools_js_location)
-      FileUtils.cp(source_path, tools_js_location)
-    end
+    FileUtils.cp(source_path, tools_js_location) if update_tools_js?(source_path, tools_js_location)
   end
 end
 
@@ -33,5 +31,5 @@ end
 
 def update_tools_js?(precompiled_tools_js, tools_js_location)
   !File.exist?(tools_js_location) ||
-  (File.exist?(tools_js_location) && !FileUtils.identical?(precompiled_tools_js, tools_js_location))
+    (File.exist?(tools_js_location) && !FileUtils.identical?(precompiled_tools_js, tools_js_location))
 end

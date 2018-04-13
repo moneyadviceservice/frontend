@@ -1,4 +1,4 @@
-class CutbackCalculatorController < EmbeddedToolsController 
+class CutbackCalculatorController < EmbeddedToolsController
   def alternate_url
     new_params = { script_name: "/#{alternate_locale}/tools/#{alternate_tool_id}" }
     url = url_for(new_params)

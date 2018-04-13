@@ -1,8 +1,8 @@
 RSpec.describe ToolMountPoint::DecisionTrees, type: :request do
-  %W(
+  %W[
     /en/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::EN_ID}
     /cy/tools/#{ToolMountPoint::DecisionTrees::HealthCheck::CY_ID}
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path
@@ -23,7 +23,7 @@ RSpec.describe ToolMountPoint::DecisionTrees, type: :request do
 
   describe 'advice_plans_url' do
     it 'generates a url' do
-      path = DecisionTrees.advice_plans_url.call('en', %w(ap_1_1 ap_1_2))
+      path = DecisionTrees.advice_plans_url.call('en', %w[ap_1_1 ap_1_2])
 
       expect(path).to eql('/en/tools/health-check/plans/configure?codes[]=ap_1_1&codes[]=ap_1_2')
     end

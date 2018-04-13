@@ -5,11 +5,11 @@ RSpec.describe HTMLProcessor::NodeReplacer do
   subject(:processor) { described_class.new(html) }
 
   let(:html) do
-    <<-EOHTML
-<div>
-    <h3>a rather important title</h3>
-</div>
-    EOHTML
+    <<-HTML.strip_heredoc
+      <div>
+          <h3>a rather important title</h3>
+      </div>
+    HTML
   end
 
   describe '.process' do

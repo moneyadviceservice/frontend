@@ -2,11 +2,10 @@ module Core
   RSpec.describe Entity, type: :model do
     subject { described_class.new(double, attributes) }
 
-    let(:attributes) { Hash.new }
+    let(:attributes) { {} }
 
     it { is_expected.to have_read_only_attributes(:id) }
 
-    # Shoulda's validation matcher doesn't like this due to the private setter
     context 'when id is nil' do
       before { subject.send(:id=, nil) }
 

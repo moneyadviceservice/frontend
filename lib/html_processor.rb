@@ -1,5 +1,3 @@
-# rubocop:disable Metrics/LineLength,
-
 require 'html_processor/base'
 require 'html_processor/node_contents'
 require 'html_processor/node_remover'

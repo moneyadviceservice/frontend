@@ -6,8 +6,7 @@ module Core
       { title:        double,
         description:  double,
         body:         double,
-        translations: [{ label: double, link: double('link').as_null_object, language: double }.stringify_keys]
-      }
+        translations: [{ label: double, link: double('link').as_null_object, language: double }.stringify_keys] }
     end
 
     it { is_expected.to have_attributes(:type, :title, :description, :body, :label, :meta_description, :translations) }
@@ -25,7 +24,7 @@ module Core
       let(:url) { 'www.example.com/corporate/foo' }
       let(:hreflang) { 'cy' }
 
-      before { subject.translations = ([{ label: alternate_title, link: url, language: hreflang }.stringify_keys]) }
+      before { subject.translations = [{ label: alternate_title, link: url, language: hreflang }.stringify_keys] }
 
       it 'assigns alternate title' do
         expect(subject.alternates.first.title).to eq(alternate_title)

@@ -1,7 +1,7 @@
 module Core
   class CategoryTreeReader
     def call(categories = Registry::Repository[:category].all)
-      if (categories)
+      if categories
         Tree::TreeNode.new('home', HomeCategory.new).tap do |root|
           categories.each do |attributes|
             build_tree(root, attributes)

@@ -5,9 +5,7 @@ module Localisation
     helper_method :alternate_locales
     before_action :set_locale
 
-    unless Rails.env.development?
-      rescue_from I18n::InvalidLocale, with: :not_found
-    end
+    rescue_from I18n::InvalidLocale, with: :not_found unless Rails.env.development?
   end
 
   private

@@ -20,9 +20,9 @@ RSpec.describe ArticlesController, type: :controller do
       let(:article) { double(id: 'fake-article') }
 
       it 'returns resource not found error' do
-        expect{
+        expect do
           get :show, attributes
-        }.to raise_error(ActionController::RoutingError)
+        end.to raise_error(ActionController::RoutingError)
       end
     end
   end
@@ -84,9 +84,9 @@ RSpec.describe ArticlesController, type: :controller do
       end
 
       it 'raises a routing error' do
-        expect {
+        expect do
           get :show, attributes
-        }.to raise_error(ActionController::RoutingError)
+        end.to raise_error(ActionController::RoutingError)
       end
     end
 

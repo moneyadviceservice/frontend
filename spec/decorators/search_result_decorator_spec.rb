@@ -64,7 +64,7 @@ RSpec.describe SearchResultDecorator do
     end
 
     context 'when description is blank' do
-      let(:description) { }
+      let(:description) {}
 
       before { allow(search_result).to receive(:description) { description } }
 

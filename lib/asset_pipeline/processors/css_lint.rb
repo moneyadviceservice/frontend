@@ -4,12 +4,12 @@ module AssetPipeline
       class CssLintError < StandardError; end
 
       REGEX = /#{Regexp.quote(Rails.root.to_s)}\/app\/assets\/.*.css\z/
-      IGNORED_TAG = '@codingStandardsIgnore'
+      IGNORED_TAG = '@codingStandardsIgnore'.freeze
 
       def evaluate(context, _locals)
         if context.pathname.to_s =~ REGEX
           lint_results = CsslintRuby.run(data, settings)
-          fail CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
+          raise CssLintError.new(format_errors(lint_results)) if lint_results.errors.present?
         end
         data
       end
@@ -26,7 +26,7 @@ module AssetPipeline
       end
 
       def settings_path
-        File.join(Rails.root, '.csslint')
+        Rails.root.join('.csslint')
       end
     end
   end

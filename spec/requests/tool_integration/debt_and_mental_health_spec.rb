@@ -1,7 +1,7 @@
 RSpec.describe 'Debt Mental Health', type: :request do
-  %W(
+  %W[
     /en/#{ToolMountPoint::DebtAndMentalHealth::EN_ID}/preview
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

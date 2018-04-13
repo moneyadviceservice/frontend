@@ -2,7 +2,7 @@ module Core
   class HomePage < Entity
     Alternate = Struct.new(:title, :url, :hreflang)
 
-    # TODO remove a few of these
+    # TODO: remove a few of these
     attr_accessor :type, :slug, :identifier, :title, :description, :body,
                   :categories, :related_content, :promo,
                   :heading, :hero_image,

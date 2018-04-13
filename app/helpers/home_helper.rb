@@ -7,13 +7,17 @@ module HomeHelper
 
   def markdown(text)
     return unless text
+
     renderer = Redcarpet::Render::HTML.new
     document = Redcarpet::Markdown.new(renderer).render(text)
     remove_p_tags_from(document).html_safe
   end
 
   private
+
   def remove_p_tags_from(document)
-    Regexp.new(/\A<p>(.*)<\/p>\Z/m).match(document)[1] rescue document
+    Regexp.new(/\A<p>(.*)<\/p>\Z/m).match(document)[1]
+  rescue StandardError
+    document
   end
 end

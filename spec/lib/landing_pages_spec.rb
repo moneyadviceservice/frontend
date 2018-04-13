@@ -46,5 +46,4 @@ RSpec.describe LandingPagePaths do
       it { is_expected.to eq(en: "/en/#{english_path}") }
     end
   end
-
 end

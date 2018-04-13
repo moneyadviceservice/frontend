@@ -44,20 +44,20 @@ module Core::Repository
       end
 
       def set_alternates(attributes)
-        attributes['alternates']  = Array(attributes['translations']).map do |translation|
+        attributes['alternates'] = Array(attributes['translations']).map do |translation|
           { url: translation['link'], title: translation['label'], hreflang: translation['language'] }
         end
       end
 
       def translate_attributes_from_raw_blocks(attributes)
-        attributes['blocks'].select {|h| h['identifier'].start_with?('raw_') }.each do |h|
+        attributes['blocks'].select { |h| h['identifier'].start_with?('raw_') }.each do |h|
           key = h['identifier'].gsub(/^raw_/, '')
           attributes[key] = h['content']
         end
       end
 
       def group_nested_attributes(attributes)
-        attributes.select {|k,_| k.match(/_(\d+)_/) }.each do |k,v|
+        attributes.select { |k, _| k.match(/_(\d+)_/) }.each do |k, v|
           _, object, number, field = k.match(/(\w+)_(\d+)_(\w+)/).to_a
           index = number.to_i - 1
           key = object.pluralize

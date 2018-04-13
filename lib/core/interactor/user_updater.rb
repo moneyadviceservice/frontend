@@ -9,9 +9,7 @@ module Core
       end
 
       def call
-        if customer_id.present?
-          Core::Registry::Repository[:user].update_from_crm(user)
-        end
+        Core::Registry::Repository[:user].update_from_crm(user) if customer_id.present?
       end
     end
   end

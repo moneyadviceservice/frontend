@@ -46,7 +46,7 @@ RSpec.describe CategoryNavigationDecorator do
     end
   end
 
-  describe '#slug' do 
+  describe '#slug' do
     let(:category) { build(:category, id: 'foo', title: 'Do you need to borrow money?') }
     let(:decorated_category) { CategoryDecorator.new(category) }
     let(:item) { double(id: 'foo', content: decorated_category) }

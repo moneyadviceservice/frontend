@@ -25,7 +25,7 @@ module Core
     end
 
     def build_contents(contents)
-      return [] unless contents.present?
+      return [] if contents.blank?
 
       contents.map do |item|
         klass = klass_for(item['type'])

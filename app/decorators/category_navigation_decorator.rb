@@ -25,7 +25,7 @@ class CategoryNavigationDecorator < Draper::Decorator
   end
 
   def slug
-    title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+    title.downcase.strip.tr(' ', '-').gsub(/[^\w-]/, '')
   end
 
   private
@@ -45,5 +45,4 @@ class CategoryNavigationDecorator < Draper::Decorator
   def category_is_corporate?
     object.content.parent_id == 'corporate-home'
   end
-
 end

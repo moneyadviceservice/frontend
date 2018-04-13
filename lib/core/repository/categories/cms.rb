@@ -1,7 +1,7 @@
 module Core::Repository
   module Categories
     class CMS < Core::Repository::Base
-      def initialize(options = {})
+      def initialize(_options = {})
         self.connection = Core::Registry::Connection[:cms]
       end
 
@@ -9,11 +9,11 @@ module Core::Repository
         categories_url = '/api/%{locale}/categories.json' % { locale: I18n.locale }
         response = connection.get(categories_url)
         response.body
-      rescue => e
+      rescue StandardError => e
         raise RequestError,
-              'Unable to fetch Category JSON from Contento' +
-              " url: [#{categories_url}]" +
-              " error: [#{e.inspect}]" +
+              'Unable to fetch Category JSON from Contento' \
+              " url: [#{categories_url}]" \
+              " error: [#{e.inspect}]" \
               " url_prefix: [#{connection.try(:url_prefix).inspect}]"
       end
 
@@ -31,7 +31,7 @@ module Core::Repository
       rescue Core::Repository::CMS::Resource301Error,
              Core::Repository::CMS::Resource302Error => e
         raise e
-      rescue
+      rescue StandardError
         raise RequestError, 'Unable to fetch Category JSON from Contento'
       end
 

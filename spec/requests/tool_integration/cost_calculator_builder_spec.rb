@@ -1,7 +1,7 @@
 RSpec.describe 'Cost Calculator Builder', type: :request do
-  %W(
+  %W[
     /en/#{EngineMountPoint::CostCalculatorBuilder::EN_ID}/admin/calculators
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

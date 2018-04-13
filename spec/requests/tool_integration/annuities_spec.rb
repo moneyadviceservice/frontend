@@ -1,4 +1,4 @@
-RSpec.describe 'Static page routing', type: :request  do
+RSpec.describe 'Static page routing', type: :request do
   describe '/tools/annuities' do
     it 'routes correctly' do
       get('/en/tools/annuities')

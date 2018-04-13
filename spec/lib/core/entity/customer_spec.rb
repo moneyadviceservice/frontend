@@ -3,7 +3,7 @@ module Core
     subject { described_class.new(customer_id, attributes) }
 
     let(:customer_id) { 'customer_123' }
-    let(:date_of_birth) { Time.new(1988, 1, 1) }
+    let(:date_of_birth) { Time.new(1988, 1, 1).utc }
     let(:attributes) do
       {
         first_name: 'Phil',
@@ -32,7 +32,7 @@ module Core
     it { expect(subject.topics).to eql([1, 2, 3]) }
     it { expect(subject.newsletter_subscription).to eql(true) }
     it { expect(subject.contact_number).to eql('03005005000') }
-    it { expect(subject.date_of_birth).to eql(Time.new(1988, 1, 1)) }
+    it { expect(subject.date_of_birth).to eql(Time.new(1988, 1, 1).utc) }
     it { expect(subject.status_code).to eql('123') }
 
     describe '#active?' do

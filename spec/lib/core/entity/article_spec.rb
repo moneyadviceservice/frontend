@@ -198,7 +198,6 @@ module Core
       end
 
       context 'empty popular links' do
-
         let(:related_content) { { 'popular_links' => [] } }
 
         it 'results in empty list' do
@@ -290,7 +289,7 @@ module Core
       let(:url) { 'www.example.com' }
       let(:hreflang) { 'cy' }
 
-      before { subject.alternates = ([{ title: alternate_title, url: url, hreflang: hreflang }]) }
+      before { subject.alternates = [{ title: alternate_title, url: url, hreflang: hreflang }] }
 
       it 'assigns alternate title' do
         expect(subject.alternates.first.title).to eq(alternate_title)

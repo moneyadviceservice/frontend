@@ -55,7 +55,9 @@ module Core::Repository::CMS
 
       context 'when article is a 301 redirect' do
         it 'raises Resource301Error' do
-          expect { subject.find('understanding-your-first-payslip') }.to raise_error Core::Repository::CMS::Resource301Error
+          expect { subject.find('understanding-your-first-payslip') }.to raise_error(
+            Core::Repository::CMS::Resource301Error
+          )
         end
 
         it 'returns status of 301' do
@@ -66,14 +68,18 @@ module Core::Repository::CMS
 
         it 'returns location of redirect' do
           expect { subject.find('understanding-your-first-payslip') }.to raise_error do |error|
-            expect(error.location).to eql('http://localhost:5000/en/articles/understanding-your-payslip')
+            expect(error.location).to eql(
+              'http://localhost:5000/en/articles/understanding-your-payslip'
+            )
           end
         end
       end
 
       context 'when article is a 302 redirect' do
         it 'raises Resource302Error' do
-          expect { subject.find('pensions-for-the-self-employed') }.to raise_error Core::Repository::CMS::Resource302Error
+          expect { subject.find('pensions-for-the-self-employed') }.to raise_error(
+            Core::Repository::CMS::Resource302Error
+          )
         end
 
         it 'returns status of 302' do
@@ -84,7 +90,9 @@ module Core::Repository::CMS
 
         it 'returns location of redirect' do
           expect { subject.find('pensions-for-the-self-employed') }.to raise_error do |error|
-            expect(error.location).to eql('http://localhost:5000/en/articles/why-save-into-a-pension')
+            expect(error.location).to eql(
+              'http://localhost:5000/en/articles/why-save-into-a-pension'
+            )
           end
         end
       end

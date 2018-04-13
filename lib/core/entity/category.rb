@@ -1,6 +1,16 @@
 module Core
   class Category < Entity
-    attr_accessor :type, :parent_id, :title, :description, :contents, :third_level_navigation, :images, :links, :category_promos, :legacy_contents, :legacy
+    attr_accessor :type,
+                  :parent_id,
+                  :title,
+                  :description,
+                  :contents,
+                  :third_level_navigation,
+                  :images,
+                  :links,
+                  :category_promos,
+                  :legacy_contents,
+                  :legacy
     validates_presence_of :title
 
     def categories

@@ -1,8 +1,8 @@
 RSpec.describe 'RIO', type: :request do
-  %W(
+  %W[
     /en/#{EngineMountPoint::Rio::EN_ID}
     /cy/#{EngineMountPoint::Rio::CY_ID}
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

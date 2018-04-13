@@ -5,12 +5,12 @@ RSpec.describe HTMLProcessor::NodeRemover do
   subject(:processor) { described_class.new(html) }
 
   let(:html) do
-    <<-EOHTML
-<p>
-  my paragraph <span id='foo'>is</span> super <strong>awesome</strong>
-  and <strong class='super-strong'>awesome</strong>
-</p>
-    EOHTML
+    <<-HTML.strip_heredoc
+      <p>
+        my paragraph <span id='foo'>is</span> super <strong>awesome</strong>
+        and <strong class='super-strong'>awesome</strong>
+      </p>
+    HTML
   end
 
   describe '.process' do

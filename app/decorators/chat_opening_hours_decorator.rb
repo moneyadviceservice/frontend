@@ -1,4 +1,32 @@
 class ChatOpeningHoursDecorator < Draper::Decorator
+  Period = Struct.new(:days, :hours) do
+    def to_s
+      formatted_days = if days.size > 1
+                         '%s %s %s' % [I18n.t("date.days.#{days.first}"),
+                                       I18n.t('seperator'),
+                                       I18n.t("date.days.#{days.last}")]
+                       else
+                         I18n.t("date.days.#{days.first}")
+                       end
+
+      formatted_hours = Hours.new(hours.open, hours.close).to_s
+
+      '%s, %s' % [formatted_days, formatted_hours]
+    end
+  end
+  Hours = Struct.new(:open, :close) do
+    def to_s
+      '%s&nbsp;%s&nbsp;%s' % [formatted_time(open), I18n.t('seperator'), formatted_time(close)]
+    end
+
+    private
+
+    def formatted_time(time)
+      t = Time.local(Date.today.year, Date.today.month, Date.today.day)
+      t += time.seconds
+      t.strftime('%-l%P')
+    end
+  end
   def open?
     object.now_open?
   end
@@ -69,36 +97,6 @@ class ChatOpeningHoursDecorator < Draper::Decorator
       day_next_open  = time_next_open.strftime('%a').downcase.to_sym
 
       week[day_next_open]
-    end
-  end
-
-  Period = Struct.new(:days, :hours) do
-    def to_s
-      formatted_days = if days.size > 1
-                         '%s %s %s' % [I18n.t("date.days.#{days.first}"),
-                                       I18n.t('seperator'),
-                                       I18n.t("date.days.#{days.last}")]
-                       else
-                         I18n.t("date.days.#{days.first}")
-                       end
-
-      formatted_hours = Hours.new(hours.open, hours.close).to_s
-
-      '%s, %s' % [formatted_days, formatted_hours]
-    end
-  end
-
-  Hours = Struct.new(:open, :close) do
-    def to_s
-      '%s&nbsp;%s&nbsp;%s' % [formatted_time(open), I18n.t('seperator'), formatted_time(close)]
-    end
-
-    private
-
-    def formatted_time(time)
-      t = Time.local(Date.today.year, Date.today.month, Date.today.day)
-      t += time.seconds
-      t.strftime('%-l%P')
     end
   end
 end

@@ -1,8 +1,12 @@
 module Core::Repository::CMS
   RSpec.describe AttributeBuilder do
-    let(:body) { File.read('spec/fixtures/cms/beginners-guide-to-managing-your-money.json') }
+    let(:body) do
+      File.read(
+        'spec/fixtures/cms/beginners-guide-to-managing-your-money.json'
+      )
+    end
     let(:response) { OpenStruct.new(body: JSON.parse(body)) }
-    let(:attribute_builder)  { AttributeBuilder.new(:resource) }
+    let(:attribute_builder) { AttributeBuilder.new(:resource) }
 
     describe '.set_title_from_label' do
       let(:page_content) { { 'label' => :foo } }
@@ -14,7 +18,9 @@ module Core::Repository::CMS
     end
 
     describe '.set_body_from_content_block' do
-      let(:page_content) { { 'blocks' => [{ 'identifier' => 'content', 'content' => :bar }] } }
+      let(:page_content) do
+        { 'blocks' => [{ 'identifier' => 'content', 'content' => :bar }] }
+      end
 
       it 'uses block_composer to set body' do
         attribute_builder.set_body_from_content_block(page_content)
@@ -33,7 +39,9 @@ module Core::Repository::CMS
 
       it 'adds a key without the `raw_` prefix' do
         attribute_builder.translate_attributes_from_raw_blocks(page_content)
-        expect(page_content['tile_1_heading']).to eq page_content['blocks'][0]["content"]
+        expect(page_content['tile_1_heading']).to eq(
+          page_content['blocks'][0]['content']
+        )
       end
     end
 
@@ -65,7 +73,7 @@ module Core::Repository::CMS
 
       before { attribute_builder.group_nested_attributes(page_content) }
 
-      it 'modifies the input page_content and adds a new key per component detected' do
+      it 'modifies page_content and adds a new key per component detected' do
         expect(page_content.keys).to include 'tiles', 'tools'
       end
 
@@ -86,26 +94,32 @@ module Core::Repository::CMS
       subject { AttributeBuilder.build(response) }
 
       it 'returns title' do
-        expect(subject['title']).to eq('Beginner’s guide to managing your money')
+        expect(subject['title']).to eq(
+          'Beginner’s guide to managing your money'
+        )
       end
 
       it 'returns description' do
-        expect(subject['description']).to eq("How to set up a budget, keep on top of your debts and start to save regularly")
+        expect(subject['description']).to eq(
+          'How to set up a budget, keep on top of your debts and start to save regularly'
+        )
       end
 
       it 'returns categories' do
-        expected = ["managing-money", "taking-control-of-debt"]
+        expected = ['managing-money', 'taking-control-of-debt']
         expect(subject['categories']).to eq(expected)
       end
 
       it 'returns alternates' do
-        expect(subject['alternates']).to eq([
-          {
-            title: 'Canllaw syml i reoli eich arian',
-            url: '/cy/articles/canllaw-syml-i-reoli-eich-arian',
-            hreflang: 'cy'
-          }
-        ])
+        expect(subject['alternates']).to eq(
+          [
+            {
+              title: 'Canllaw syml i reoli eich arian',
+              url: '/cy/articles/canllaw-syml-i-reoli-eich-arian',
+              hreflang: 'cy'
+            }
+          ]
+        )
       end
 
       it 'returns popular links' do
@@ -129,7 +143,9 @@ module Core::Repository::CMS
       end
 
       it 'body is html' do
+        # rubocop:disable Metrics/LineLength
         expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
+        # rubocop:enable Metrics/LineLength
       end
 
       context 'home page' do

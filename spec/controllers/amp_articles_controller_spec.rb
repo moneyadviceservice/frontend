@@ -29,15 +29,15 @@ RSpec.describe AmpArticlesController, type: :controller do
           expect(assigns(:article).id).to eq(article_id)
         end
       end
-     end
+    end
 
     context 'article does not exist' do
       let(:article_id) { 'fake-article' }
 
       it 'returns a 404' do
-        expect {
+        expect do
           get :show, article_id: article_id, locale: I18n.locale
-        }.to raise_error(ActionController::RoutingError)
+        end.to raise_error(ActionController::RoutingError)
       end
     end
 

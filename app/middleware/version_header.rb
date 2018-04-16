@@ -12,7 +12,7 @@ class VersionHeader
   def call(env)
     status, headers, body = @app.call(env)
 
-    headers.merge!('X-Mas-Version' => @version) if @version
+    headers['X-Mas-Version'] = @version if @version
 
     [status, headers, body]
   end

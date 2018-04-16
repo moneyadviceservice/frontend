@@ -2,9 +2,7 @@ require 'current_request_id'
 
 class Faraday::Request::RequestId < Faraday::Middleware
   def call(env)
-    if CurrentRequestId.get.present?
-      env[:request_headers]['X-Request-Id'] = CurrentRequestId.get
-    end
+    env[:request_headers]['X-Request-Id'] = CurrentRequestId.get if CurrentRequestId.get.present?
 
     @app.call(env)
   end

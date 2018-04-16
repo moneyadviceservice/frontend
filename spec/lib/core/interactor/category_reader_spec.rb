@@ -54,7 +54,7 @@ module Core
       end
 
       context 'when the returned category contains sub-categories and articles' do
-        let(:contents) { %w(article_hash category_hash).map(&method(:build)) }
+        let(:contents) { %w[article_hash category_hash].map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, contents: contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }
@@ -89,7 +89,7 @@ module Core
       end
 
       context 'when `legacy_contents` is provided' do
-        let(:legacy_contents) { %w(article_hash).map(&method(:build)) }
+        let(:legacy_contents) { %w[article_hash].map(&method(:build)) }
         let(:repo_category) { build :category_hash, id: id, legacy_contents: legacy_contents }
         let(:repository) { Repository::Categories::Fake.new(repo_category) }
         let(:category) { subject.call }
@@ -99,7 +99,7 @@ module Core
         end
 
         [Article].each_with_index do |klass, i|
-          it "loads class {klass}" do
+          it 'loads class {klass}' do
             expect(category.legacy_contents[i]).to be_a(klass)
           end
         end

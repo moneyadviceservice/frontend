@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   include Localisation
   include NotFound
   include AssetsHelper
+  COOKIE_MESSAGE_COOKIE_NAME = '_cookie_notice'.freeze
+  COOKIE_MESSAGE_COOKIE_VALUE = 'y'.freeze
 
   before_action :fetch_footer_content
   def fetch_footer_content
@@ -22,9 +24,6 @@ class ApplicationController < ActionController::Base
 
   helper ChatMigrationMessage
   helper BudgetWarning
-
-  COOKIE_MESSAGE_COOKIE_NAME  = '_cookie_notice'
-  COOKIE_MESSAGE_COOKIE_VALUE = 'y'
 
   def syndicated_tool_request?
     !!request.headers['X-Syndicated-Tool']
@@ -90,8 +89,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :alerts?
 
-  def set_tool_instance
-  end
+  def set_tool_instance; end
 
   def mas_optimizely_tag
     return if syndicated_tool_request?
@@ -108,7 +106,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_environment_on_uat?
-    Rails.env == 'uat'
+    Rails.env.uat?
   end
 
   def set_syndicated_x_frame
@@ -146,11 +144,10 @@ class ApplicationController < ActionController::Base
   end
 
   def corporate_category?(category, corporate = corporate_categories, categories = [])
-    categories << corporate.map {|c| c['id']}
+    categories << corporate.map { |c| c['id'] }
     return true if categories.flatten.include?(category)
-    unless corporate.first['contents']
-      corporate_category?(category, corporate.first['contents'], categories.flatten)
-    end
+
+    corporate_category?(category, corporate.first['contents'], categories.flatten) unless corporate.first['contents']
   end
 
   helper_method :corporate_category?
@@ -163,7 +160,10 @@ class ApplicationController < ActionController::Base
   helper_method :category_navigation
 
   def corporate_category_navigation
-    @corporate_category_navigation ||= CategoryNavigationDecorator.decorate_collection(category_tree_with_decorator(corporate_categories).children)
+    @corporate_category_navigation ||=
+      CategoryNavigationDecorator.decorate_collection(
+        category_tree_with_decorator(corporate_categories).children
+      )
   end
 
   helper_method :corporate_category_navigation
@@ -187,6 +187,7 @@ class ApplicationController < ActionController::Base
 
   def pensions_and_retirement_page?
     return false unless @active_categories
+
     @active_categories.include?('pensions-and-retirement')
   end
   helper_method :pensions_and_retirement_page?

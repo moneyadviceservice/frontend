@@ -1,5 +1,4 @@
 RSpec.describe ToolMountPoint::MortgageCalculator do
-
   describe '#alternate_tool_id' do
     context 'switching the tool id from english to its welsh aternative' do
       it { expect(subject.alternate_tool_id('mortgage-calculator')).to eq('cyfrifiannell-morgais') }
@@ -42,7 +41,7 @@ RSpec.describe ToolMountPoint::MortgageCalculator do
 
     describe 'rewriting mortgage affordability tool urls' do
       it 'returns a correct looking url untampered' do
-        url    = 'http://test.url/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais'
+        url = 'http://test.url/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais'
         expect(subject.alternate_url(url)).to eq(url)
       end
 
@@ -59,5 +58,4 @@ RSpec.describe ToolMountPoint::MortgageCalculator do
       end
     end
   end
-
 end

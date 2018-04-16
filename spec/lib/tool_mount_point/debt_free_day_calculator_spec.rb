@@ -1,7 +1,5 @@
 RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
-
   describe '#matches?' do
-
     context 'for the Loan Calculator' do
       it 'matches a request for the English version' do
         request = double('request', params:
@@ -45,7 +43,6 @@ RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
         expect(subject.matches?(request)).to be_truthy
       end
     end
-
   end
 
   describe '#alternate_tool_id' do
@@ -77,15 +74,16 @@ RSpec.describe ToolMountPoint::DebtFreeDayCalculator do
   describe '#en_id' do
     it 'is not supported' do
       expect { subject.en_id }.to raise_error(
-        'Unsupported: there is no logical implementation of `en_id` for this class')
+        'Unsupported: there is no logical implementation of `en_id` for this class'
+      )
     end
   end
 
   describe '#cy_id' do
     it 'is not supported' do
       expect { subject.cy_id }.to raise_error(
-        'Unsupported: there is no logical implementation of `cy_id` for this class')
+        'Unsupported: there is no logical implementation of `cy_id` for this class'
+      )
     end
   end
-
 end

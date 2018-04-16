@@ -6,10 +6,10 @@ module LandingPagePaths
   end
 
   def self.path_with_locale(controller, action, locale = I18n.locale)
-    "/#{locale.to_s}/#{path(controller, action, locale)}"
+    "/#{locale}/#{path(controller, action, locale)}"
   end
 
   def self.path(controller, action, locale = I18n.locale)
-    I18n.t("landing_pages.paths.#{controller.to_s}.#{action.to_s}", locale: locale)
+    I18n.t("landing_pages.paths.#{controller}.#{action}", locale: locale)
   end
 end

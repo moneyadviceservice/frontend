@@ -1,7 +1,7 @@
 module ProfileHelper
-  APOSTROPHE = '’'
+  APOSTROPHE = '’'.freeze
 
   def singular_noun_possessive(noun)
-    noun + ('s' == noun[-1] ? APOSTROPHE : APOSTROPHE + 's')
+    noun + (noun[-1] == 's' ? APOSTROPHE : APOSTROPHE + 's')
   end
 end

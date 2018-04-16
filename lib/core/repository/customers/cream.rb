@@ -29,6 +29,22 @@ module Core
         class FindMapper
           attr_reader :response
 
+          GENDER_MAP = {
+            'male' => 1,
+            'female' => 2
+          }.freeze
+          AGE_RANGES_MAP = {
+            '0-15' => '809610000',
+            '16-17' => '809610001',
+            '18-20' => '809610002',
+            '21-24' => '809610003',
+            '25-34' => '809610004',
+            '35-44' => '809610005',
+            '45-54' => '809610006',
+            '55-64' => '809610007',
+            '65-74' => '809610008',
+            '75+' => '809610009'
+          }.freeze
           def initialize(response)
             @response = response
           end
@@ -48,8 +64,7 @@ module Core
               newsletter_subscription: !customer_details['DoNotBulkEMail'],
               contact_number:          customer_details['Telephone2'],
               date_of_birth:           date_of_birth(customer_details),
-              status_code:             customer_details['StatusCode']['Value']
-            }
+              status_code:             customer_details['StatusCode']['Value'] }
           end
 
           private
@@ -64,30 +79,13 @@ module Core
 
           def date_of_birth(details)
             return if details['BirthDate'].nil?
+
             Time.at(time_in_seconds(details['BirthDate'])).to_date
           end
 
           def gender(value)
             GENDER_MAP.key(value)
           end
-
-          GENDER_MAP = {
-            'male' => 1,
-            'female' => 2
-          }
-
-          AGE_RANGES_MAP = {
-            '0-15' => '809610000',
-            '16-17' => '809610001',
-            '18-20' => '809610002',
-            '21-24' => '809610003',
-            '25-34' => '809610004',
-            '35-44' => '809610005',
-            '45-54' => '809610006',
-            '55-64' => '809610007',
-            '65-74' => '809610008',
-            '75+' => '809610009'
-          }
 
           def customer_details
             response['d']['results'].first

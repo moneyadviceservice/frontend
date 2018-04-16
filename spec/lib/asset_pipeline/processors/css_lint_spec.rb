@@ -6,7 +6,14 @@ module AssetPipeline
       describe '#evaluate' do
         let(:context) { double }
         let(:locals) { double }
-        let(:pathname) { double(to_s: File.join(Rails.root, 'app', 'assets', 'stylesheets', 'foo.css')) }
+        let(:pathname) do
+          double(
+            to_s: Rails.root.join('app',
+                                  'assets',
+                                  'stylesheets',
+                                  'foo.css').to_s
+          )
+        end
         let(:context) { double(pathname: pathname) }
 
         subject { described_class.new('foo.erb') {} }
@@ -28,11 +35,15 @@ module AssetPipeline
           let(:formatted_errors) { double }
 
           before do
-            allow(subject).to receive(:format_errors).and_return(formatted_errors)
+            allow(subject).to receive(:format_errors).and_return(
+              formatted_errors
+            )
           end
 
           it 'modifies the context and raises and exception' do
-            expect { subject.evaluate(context, locals) }.to raise_error(CssLint::CssLintError)
+            expect { subject.evaluate(context, locals) }.to raise_error(
+              CssLint::CssLintError
+            )
           end
         end
 
@@ -60,7 +71,14 @@ module AssetPipeline
         end
 
         context 'when the file is outside the assets directory' do
-          let(:pathname) { double(to_s: File.join(Rails.root, 'vendor', 'assets', 'stylesheets', 'foo.css')) }
+          let(:pathname) do
+            double(
+              to_s: Rails.root.join('vendor',
+                                    'assets',
+                                    'stylesheets',
+                                    'foo.css').to_s
+            )
+          end
           let(:css) { 'p { color: red !important; }' }
 
           it 'does not lint the file' do

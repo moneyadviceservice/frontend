@@ -11,7 +11,6 @@ RSpec.describe CorporatePartner, type: :model do
   it { is_expected.to be_valid }
 
   describe 'validations' do
-
     context 'when name is not present' do
       before { subject.name = ' ' }
 
@@ -54,7 +53,6 @@ RSpec.describe CorporatePartner, type: :model do
     it { is_expected.not_to allow_value(' ').for(:tool_width) }
 
     it { is_expected.to be_valid }
-
   end
 
   describe '#tool_id' do
@@ -82,7 +80,7 @@ RSpec.describe CorporatePartner, type: :model do
     end
 
     it 'sets the correct csv headers' do
-      expect(@csv.first).to eq(['id', 'name', 'email', 'tool_name', 'tool_language', 'tool_width_unit', 'tool_width'])
+      expect(@csv.first).to eq(%w[id name email tool_name tool_language tool_width_unit tool_width])
     end
 
     it 'exports all corporate partners' do

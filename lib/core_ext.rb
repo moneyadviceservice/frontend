@@ -6,9 +6,7 @@ class Hash
           ostruct.send("#{attribute}=", value.to_ostruct)
         elsif value.is_a?(Array)
           value.each_with_index do |element, index|
-            if element.respond_to?(:to_ostruct)
-              value[index] = element.to_ostruct
-            end
+            value[index] = element.to_ostruct if element.respond_to?(:to_ostruct)
           end
         end
       end

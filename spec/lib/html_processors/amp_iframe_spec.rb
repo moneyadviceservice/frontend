@@ -16,7 +16,7 @@ RSpec.describe HTMLProcessor::AmpIframe do
 
     context 'when attributes are present' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
           <iframe
             src="https://google.com"
             alt="test_alt"
@@ -29,7 +29,7 @@ RSpec.describe HTMLProcessor::AmpIframe do
             allowtransparency="test_allowtransparency"
             referrerpolicy="test_referrerpolicy"
             sandbox="test_sandbox" />
-        EOHTML
+        HTML
       end
 
       it 'copies original iframe attributes to the new iframe' do
@@ -52,9 +52,9 @@ RSpec.describe HTMLProcessor::AmpIframe do
 
     context 'when attributes are missing' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
           <iframe src="https://google.com" />
-        EOHTML
+        HTML
       end
 
       it 'does not create those attributes on the amp-iframe' do
@@ -75,9 +75,9 @@ RSpec.describe HTMLProcessor::AmpIframe do
 
     context 'when the iframe src is not https' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
           <iframe src="http://google.com"></iframe>
-        EOHTML
+        HTML
       end
       subject { processed_html.strip }
 

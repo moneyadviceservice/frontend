@@ -4,6 +4,22 @@ module Core
                   :gender, :state, :topics, :newsletter_subscription, :contact_number,
                   :date_of_birth, :status_code
 
+    AGE_RANGES_MAP = {
+      '0-15' => '809610000',
+      '16-17' => '809610001',
+      '18-20' => '809610002',
+      '21-24' => '809610003',
+      '25-34' => '809610004',
+      '35-44' => '809610005',
+      '45-54' => '809610006',
+      '55-64' => '809610007',
+      '65-74' => '809610008',
+      '75+' => '809610009'
+    }.freeze
+    GENDER_MAP = {
+      'male' => 1,
+      'female' => 2
+    }.freeze
     def active?
       state == 0
     end
@@ -40,24 +56,6 @@ module Core
     end
 
     private
-
-    AGE_RANGES_MAP = {
-      '0-15' => '809610000',
-      '16-17' => '809610001',
-      '18-20' => '809610002',
-      '21-24' => '809610003',
-      '25-34' => '809610004',
-      '35-44' => '809610005',
-      '45-54' => '809610006',
-      '55-64' => '809610007',
-      '65-74' => '809610008',
-      '75+' => '809610009'
-    }
-
-    GENDER_MAP = {
-      'male' => 1,
-      'female' => 2
-    }
 
     def iso8601_date_of_birth
       date_of_birth ? date_of_birth.to_time.utc.iso8601 : nil

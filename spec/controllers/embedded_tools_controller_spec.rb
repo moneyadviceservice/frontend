@@ -1,5 +1,4 @@
 RSpec.describe EmbeddedToolsController, type: :controller do
-
   describe '#alternate_url' do
     before do
       allow(subject).to receive(:url_for).and_return('http://some.url')
@@ -34,5 +33,4 @@ RSpec.describe EmbeddedToolsController, type: :controller do
       end
     end
   end
-
 end

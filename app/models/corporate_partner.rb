@@ -1,15 +1,14 @@
 class CorporatePartner < ActiveRecord::Base
-
   validates :name, :tool_name, :tool_language, :tool_width_unit, :tool_width, presence: true
   validates_with Validators::Email, attributes: [:email]
   validates :tool_width, numericality: { only_integer: true, greater_than: 0 }
 
   def tool_id
-    tool_name.downcase.gsub(' ', '_')
+    tool_name.downcase.tr(' ', '_')
   end
 
   def tool_slug
-    tool_name.downcase.gsub(' ', '-')
+    tool_name.downcase.tr(' ', '-')
   end
 
   def total_tool_width
@@ -17,12 +16,12 @@ class CorporatePartner < ActiveRecord::Base
   end
 
   def self.to_csv
-    attributes = %w(id name email tool_name tool_language tool_width_unit tool_width)
+    attributes = %w[id name email tool_name tool_language tool_width_unit tool_width]
 
     CSV.generate(headers: true) do |csv|
       csv << attributes
 
-      all.each do |corporate_partner|
+      all.find_each do |corporate_partner|
         csv << attributes.map { |attr| corporate_partner.send(attr) }
       end
     end

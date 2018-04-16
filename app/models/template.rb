@@ -10,8 +10,8 @@ class Template
   attr_accessor :path
   private :path
 
-  def initialize(options = {})
-    self.path = options.fetch(:path, Rails.root.join('app', 'templates'))
+  def initialize(path: nil)
+    self.path = path || Rails.root.join('app', 'templates')
   end
 
   def build_campaign(id)

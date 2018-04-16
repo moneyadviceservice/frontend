@@ -5,13 +5,13 @@ RSpec.describe HTMLProcessor::HeadingAttributes do
   subject(:processor) { described_class.new(html) }
 
   let(:html) do
-    <<-EOHTML
+    <<-HTML
       <div>
         <h1> H1 test heading </h1>
         <h2> H2 test heading </h2>
         <h6> H6 test heading </h6>
       </div>
-    EOHTML
+    HTML
   end
 
   describe '.process' do

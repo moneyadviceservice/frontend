@@ -72,7 +72,7 @@ class CorporateController < ArticlesController
   end
 
   def tool_friendly_name
-    params[:id].chomp('-syndication').gsub('-', ' ').humanize
+    params[:id].chomp('-syndication').tr('-', ' ').humanize
   end
 
   def authenticate

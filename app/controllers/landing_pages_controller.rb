@@ -1,5 +1,4 @@
 class LandingPagesController < ApplicationController
-
   def display_skip_to_main_navigation?
     false
   end

@@ -16,10 +16,19 @@ module AssetPipeline
 
         context 'when the file is inside the assets directory' do
           before do
-            allow(subject).to receive(:jshint_options).and_return(jshint_options)
+            allow(subject).to receive(:jshint_options).and_return(
+              jshint_options
+            )
           end
 
-          let(:pathname) { double(to_s: File.join(Rails.root, 'app', 'assets', 'javascripts', 'foo.js')) }
+          let(:pathname) do
+            double(
+              to_s: Rails.root.join('app',
+                                    'assets',
+                                    'javascripts',
+                                    'foo.js').to_s
+            )
+          end
 
           context 'when javascript is valid' do
             let(:javascript) { "var foo = 'bar';\nprint(foo);" }
@@ -38,13 +47,22 @@ module AssetPipeline
             let(:formatted_errors) { double }
 
             it 'raises an exception' do
-              expect { subject.evaluate(context, locals) }.to raise_exception(JsHint::ErrorsFound)
+              expect { subject.evaluate(context, locals) }.to raise_exception(
+                JsHint::ErrorsFound
+              )
             end
           end
         end
 
         context 'when the file is outside the assets directory' do
-          let(:pathname) { double(to_s: File.join(Rails.root, 'vendor', 'assets', 'javascripts', 'foo.js')) }
+          let(:pathname) do
+            double(
+              to_s: Rails.root.join('vendor',
+                                    'assets',
+                                    'javascripts',
+                                    'foo.js').to_s
+            )
+          end
           let(:javascript) { "var foo = 'bar';" }
 
           it 'does not lint the file' do

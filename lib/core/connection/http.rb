@@ -19,23 +19,18 @@ module Core
 
       def get(*args)
         __getobj__.get(*args)
-
       rescue Faraday::Error::ResourceNotFound
         raise ResourceNotFound
-
       rescue Faraday::Error::ConnectionFailed
         raise ConnectionFailed
-
       rescue Faraday::Error::ClientError
         raise ClientError
       end
 
       def post(*args)
         __getobj__.post(*args)
-
       rescue Faraday::Error::ConnectionFailed
         raise ConnectionFailed
-
       rescue Faraday::Error::ClientError => error
         case error.response[:status]
         when 422

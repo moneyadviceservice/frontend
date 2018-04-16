@@ -36,6 +36,7 @@ class BreadcrumbTrail
     children.unshift category
     return [] if category.id == 'corporate-home'
     return children.unshift(HomeCategory.new) if category.parent_id.blank?
+
     build_trail(category.parent_id, children)
   end
 

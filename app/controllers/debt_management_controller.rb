@@ -1,7 +1,7 @@
 class DebtManagementController < ApplicationController
   layout '_unconstrained'
 
-  COMPANY_LIST_ARTICLE_ID = 'debt-management-companies'
+  COMPANY_LIST_ARTICLE_ID = 'debt-management-companies'.freeze
 
   private
 

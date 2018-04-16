@@ -12,12 +12,14 @@ class AmpArticlesController < ActionController::Base
   before_action :retrieve_article
 
   def show
-    redirect_to url_for(
-      action: 'show',
-      controller: 'articles',
-      id: @article.id,
-      only_path: false
-    ) unless @article.supports_amp || params[:no_redirect]
+    unless @article.supports_amp || params[:no_redirect]
+      redirect_to url_for(
+        action: 'show',
+        controller: 'articles',
+        id: @article.id,
+        only_path: false
+      )
+    end
   end
 
   private

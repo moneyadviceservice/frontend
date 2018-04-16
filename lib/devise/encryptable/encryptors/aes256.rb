@@ -11,7 +11,7 @@ module Devise
 
             ::AES.encrypt(password, pepper, iv: salt)
           end
-          alias_method :encrypt, :digest
+          alias encrypt digest
 
           # Returns a base64 encoded salt
           def salt(_stretches = 0)

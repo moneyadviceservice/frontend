@@ -6,20 +6,18 @@ RSpec.describe SearchResultCollectionDecorator do
     {
       title: '<em>Budget</em> <em>planner</em>',
       description: 'You can use this <em>planner</em>.',
-      link: '/en/tools/budget-planner',
+      link: '/en/tools/budget-planner'
     }
   end
 
   let(:result_collection) do
     SiteSearch::Results.new(
-      {
-        results: [result],
-        total_results: total_results,
-        page: page,
-        number_of_pages: number_of_pages,
-        per_page: per_page,
-        query: query
-      }
+      results: [result],
+      total_results: total_results,
+      page: page,
+      number_of_pages: number_of_pages,
+      per_page: per_page,
+      query: query
     )
   end
   let(:total_results) { 1 }

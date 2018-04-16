@@ -71,7 +71,6 @@ module Core
       let(:customer) { Customer.new(customer_id, new_attributes) }
 
       context 'personal details' do
-
         before(:each) do
           subject.update(customer)
         end

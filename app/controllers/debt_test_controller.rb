@@ -12,7 +12,8 @@ class DebtTestController < EmbeddedToolsController
   end
 
   protected
-    def category_id
-      'before-you-borrow'
-    end
+
+  def category_id
+    'before-you-borrow'
+  end
 end

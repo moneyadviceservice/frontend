@@ -165,7 +165,7 @@ RSpec.describe CategoryDecorator do
     end
 
     context 'when object is a parent' do
-      let(:category) { Core::Category.new(nil, contents: [double(:child? => true)], legacy_contents: []) }
+      let(:category) { Core::Category.new(nil, contents: [double(child?: true)], legacy_contents: []) }
 
       it 'first arg is partial name `child_categories`' do
         expect(subject.rendering_args.first).to eq 'child_categories'

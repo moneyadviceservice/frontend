@@ -33,7 +33,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :post_code, :opt_in_for_research, :contact_number])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :post_code, :opt_in_for_research, :contact_number])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name post_code opt_in_for_research contact_number])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name post_code opt_in_for_research contact_number])
   end
 end

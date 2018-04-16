@@ -2,7 +2,7 @@ module Core::Repository
   module Search
     class ContentService < Core::Repository::Base
       LIMIT      = 25
-      EVENT_NAME = 'request.content-service.search'
+      EVENT_NAME = 'request.content-service.search'.freeze
 
       def initialize
         self.connection = Core::Registry::Connection[:content_service]

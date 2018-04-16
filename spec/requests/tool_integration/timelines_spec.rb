@@ -1,10 +1,10 @@
 RSpec.describe 'Timelines', type: :request do
-  %W(
+  %W[
     /en/tools/#{ToolMountPoint::Timelines::EN_ID}
     /cy/tools/#{ToolMountPoint::Timelines::CY_ID}
     /en/tools/#{ToolMountPoint::Timelines::EN_ID}/timeline?date[year]=2014&date[month]=8&date[day]=17
     /cy/tools/#{ToolMountPoint::Timelines::CY_ID}/timeline?date[year]=2014&date[month]=8&date[day]=17
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

@@ -23,11 +23,12 @@ class CorporateDecorator < ContentItemDecorator
   def extra_content_partial_name
     return 'tool' if slug_is_corporate_tool_directory?
     return 'syndication' if slug_is_corporate_tool_page?
+
     slug.underscore
   end
 
   def slug_is_corporate_tool_directory?
-    true if slug.match(/([a-zA-Z]+)-([a-zA-Z]+)-syndication/)
+    true if slug =~ /([a-zA-Z]+)-([a-zA-Z]+)-syndication/
   end
 
   def slug_is_corporate_tool_page?

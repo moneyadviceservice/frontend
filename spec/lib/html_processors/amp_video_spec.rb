@@ -5,14 +5,14 @@ RSpec.describe HTMLProcessor::AmpVideo do
   subject(:processor) { described_class.new(html) }
 
   let(:html) do
-    <<-EOHTML
+    <<-HTML
       <iframe
         src="https://www.youtube.com/embed/3ciEDiokPkw?rel=0"
         frameborder="0"
         height="413"
         width="680">
       </iframe>
-    EOHTML
+    HTML
   end
 
   describe '.process' do

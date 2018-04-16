@@ -1,6 +1,5 @@
 class ChristmasMoneyPlannerController < EmbeddedToolsController
-  def show
-  end
+  def show; end
 
   protected
 

@@ -1,5 +1,5 @@
 module NotFound
   def not_found
-    fail ActionController::RoutingError.new('Not Found')
+    raise ActionController::RoutingError.new('Not Found')
   end
 end

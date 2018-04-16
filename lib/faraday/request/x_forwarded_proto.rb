@@ -1,8 +1,6 @@
 class Faraday::Request::XForwardedProto < Faraday::Middleware
   def call(env)
-    if ENV['FARADAY_X_FORWARDED_PROTO']
-      env[:request_headers]['X-Forwarded-Proto'] = ENV['FARADAY_X_FORWARDED_PROTO']
-    end
+    env[:request_headers]['X-Forwarded-Proto'] = ENV['FARADAY_X_FORWARDED_PROTO'] if ENV['FARADAY_X_FORWARDED_PROTO']
 
     @app.call(env)
   end

@@ -3,8 +3,7 @@ RSpec.describe User, type: :model do
     { email:                 'david@example.com',
       password:              'password',
       first_name:            'david',
-      post_code:             'NE1 6EE'
-    }
+      post_code:             'NE1 6EE' }
   end
 
   subject { described_class.new(attributes) }
@@ -84,7 +83,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to allow_value(nil).for(:age_range) }
 
     it { is_expected.to allow_value(nil).for(:date_of_birth) }
-    it { is_expected.not_to allow_value(Date.today).for(:date_of_birth) }
+    it { is_expected.not_to allow_value(Time.zone.today).for(:date_of_birth) }
     it { is_expected.to allow_value(1.day.ago).for(:date_of_birth) }
     it { is_expected.to allow_value('31/12/1970').for(:date_of_birth) }
     it { is_expected.not_to allow_value('31/02/1970').for(:date_of_birth) }
@@ -162,7 +161,7 @@ RSpec.describe User, type: :model do
 
       expect do
         subject.send_reset_password_instructions
-      end.to change { Delayed::Job.where(queue: 'frontend_email').count }.by(1)
+      end.to change(Delayed::Job.where(queue: 'frontend_email'), :count).by(1)
     end
 
     context 'when the job runs' do
@@ -172,7 +171,7 @@ RSpec.describe User, type: :model do
 
         expect do
           Delayed::Job.last.payload_object.perform
-        end.to change { ActionMailer::Base.deliveries.count }.by(1)
+        end.to change(ActionMailer::Base.deliveries, :count).by(1)
       end
     end
   end
@@ -218,14 +217,14 @@ RSpec.describe User, type: :model do
       context 'when crm fields are modified' do
         it 'notifies crm' do
           subject.email = 'foo@example.com'
-          expect { subject.save! }.to change { Delayed::Job.count }.by(1)
+          expect { subject.save! }.to change(Delayed::Job, :count).by(1)
         end
       end
 
       context 'when non crm fields are modified' do
         it 'does not notify crm' do
           subject.sign_in_count = 125
-          expect { subject.save! }.to_not change { Delayed::Job.count }
+          expect { subject.save! }.to_not change(Delayed::Job, :count)
         end
       end
     end

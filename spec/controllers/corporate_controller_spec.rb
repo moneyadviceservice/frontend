@@ -1,6 +1,10 @@
 RSpec.describe CorporateController, type: :controller do
-  let(:syndication_category) { Mas::Cms::Category.new('syndication', contents: []) }
-  let(:corporate_category) { Mas::Cms::Category.new('corporate-home', contents: []) }
+  let(:syndication_category) do
+    Mas::Cms::Category.new('syndication', contents: [])
+  end
+  let(:corporate_category) do
+    Mas::Cms::Category.new('corporate-home', contents: [])
+  end
 
   before do
     allow(Mas::Cms::Category).to receive(:find)
@@ -30,7 +34,9 @@ RSpec.describe CorporateController, type: :controller do
 
   describe 'GET show' do
     context 'when corporate page exists' do
-      let(:corporate_article) { Mas::Cms::Article.new('test', categories: [corporate_category]) }
+      let(:corporate_article) do
+        Mas::Cms::Article.new('test', categories: [corporate_category])
+      end
 
       before do
         allow(Mas::Cms::Article).to receive(:find)
@@ -51,14 +57,28 @@ RSpec.describe CorporateController, type: :controller do
   end
 
   describe 'POST create' do
-    let(:tool) { instance_double(Core::Article, id: valid_partner[:tool_name].to_s, categories: [syndication_category]) }
-    let(:valid_partner)   { FactoryGirl.attributes_for(:corporate_partner, tool_name: 'budget-planner-syndication') }
+    let(:tool) do
+      instance_double(
+        Core::Article,
+        id: valid_partner[:tool_name].to_s,
+        categories: [syndication_category]
+      )
+    end
+    let(:valid_partner) do
+      FactoryGirl.attributes_for(
+        :corporate_partner,
+        tool_name: 'budget-planner-syndication'
+      )
+    end
     let(:invalid_partner) { { name: 2323, width: 'sasd' } }
 
     context 'with valid attributes' do
       it 'creates a new partner' do
         expect do
-          post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
+          post :create,
+               locale: I18n.locale,
+               corporate_partner: valid_partner,
+               id: tool.id
         end.to change(CorporatePartner, :count).by(1)
       end
 
@@ -69,12 +89,18 @@ RSpec.describe CorporateController, type: :controller do
 
     context 'with valid attributes and a partner record already exists' do
       before do
-        post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
+        post :create,
+             locale: I18n.locale,
+             corporate_partner: valid_partner,
+             id: tool.id
       end
 
       it 'updates existing partner record' do
         expect do
-          post :create, locale: I18n.locale, corporate_partner: valid_partner, id: tool.id
+          post :create,
+               locale: I18n.locale,
+               corporate_partner: valid_partner,
+               id: tool.id
         end.to_not change(CorporatePartner, :count)
         expect(CorporatePartner.count).to eq(1)
       end
@@ -83,12 +109,18 @@ RSpec.describe CorporateController, type: :controller do
     context 'with invalid attributes' do
       it 'does not save the new partner' do
         expect do
-          post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
+          post :create,
+               locale: I18n.locale,
+               corporate_partner: invalid_partner,
+               id: tool.id
         end.to_not change(CorporatePartner, :count)
       end
 
       it 're-renders the corporate tool page' do
-        post :create, locale: I18n.locale, corporate_partner: invalid_partner, id: tool.id
+        post :create,
+             locale: I18n.locale,
+             corporate_partner: invalid_partner,
+             id: tool.id
         expect(response).to render_template('corporate/show')
       end
     end

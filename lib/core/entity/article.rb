@@ -7,6 +7,11 @@ module Core
 
     validates_presence_of :title, :body
 
+    EXCLUDED_FROM_FEEDBACK = [
+      'baby-costs-calculator',
+      'cyfrifiannell-costau-babi',
+      'debt-management-companies'
+    ].freeze
     def alternates=(alternates)
       @alternates = alternates.map do |alternate|
         Alternate.new(*alternate.values_at(:title, :url, :hreflang))
@@ -41,12 +46,6 @@ module Core
       false
     end
 
-    EXCLUDED_FROM_FEEDBACK = [
-      'baby-costs-calculator',
-      'cyfrifiannell-costau-babi',
-      'debt-management-companies'
-    ]
-
     def accepts_feedback?
       !EXCLUDED_FROM_FEEDBACK.include?(slug)
     end
@@ -55,6 +54,7 @@ module Core
 
     def build_article_links(key)
       return [] if related_content.blank? || related_content[key].blank?
+
       related_content[key].map do |link_data|
         build_article_link link_data
       end

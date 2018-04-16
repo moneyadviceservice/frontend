@@ -5,12 +5,12 @@ RSpec.describe HTMLProcessor::VideoWrapper do
   subject(:processor) { described_class.new(html) }
 
   let(:html) do
-    <<-EOHTML
+    <<-HTML
       <p>
         <iframe frameborder="0" height="413" width="680" src="https://www.youtube.com/embed/3ciEDiokPkw">
         </iframe>
       </p>
-    EOHTML
+    HTML
   end
 
   describe '.process' do
@@ -33,12 +33,12 @@ RSpec.describe HTMLProcessor::VideoWrapper do
 
     context 'when title is already included' do
       let(:html) do
-        <<-EOHTML
+        <<-HTML
          <p>
           <iframe title="Video: test video" frameborder="0" width="680" src="https://www.youtube.com/embed/3ciEDiokPkw">
           </iframe>
         </p>
-        EOHTML
+        HTML
       end
 
       it 'does not modify title attribute' do

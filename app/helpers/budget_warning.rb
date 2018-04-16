@@ -14,7 +14,7 @@ module BudgetWarning
     end
 
     def go_live?
-      Time.zone.today >= date ? true : false
+      Time.zone.today >= date
     end
   end
 

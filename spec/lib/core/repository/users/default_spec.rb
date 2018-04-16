@@ -3,7 +3,9 @@ module Core
     describe '#update_from_crm' do
       context 'when customer_id is blank' do
         it 'raises an exception' do
-          expect { subject.update_from_crm(User.new) }.to raise_error 'customer_id is blank'
+          expect { subject.update_from_crm(User.new) }.to raise_error(
+            'customer_id is blank'
+          )
         end
       end
 
@@ -17,7 +19,9 @@ module Core
         end
 
         it 'raises an exception' do
-          expect { subject.update_from_crm(user) }.to raise_error 'customer_id is blank'
+          expect { subject.update_from_crm(user) }.to raise_error(
+            'customer_id is blank'
+          )
         end
       end
 
@@ -50,7 +54,7 @@ module Core
           expect(user.post_code).to eql('NE1 6AA')
           expect(user.gender).to eql('female')
           expect(user.age_range).to eql('0-15')
-          expect(user.date_of_birth).to eql(DateTime.new(1988, 01, 01))
+          expect(user.date_of_birth).to eql(Time.new(1988, 1, 1).utc.to_datetime)
           expect(user.newsletter_subscription).to eql(false)
           expect(user.active).to eql(true)
         end

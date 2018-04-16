@@ -1,8 +1,8 @@
 RSpec.describe 'Advice Plans', type: :request do
-  %W(
+  %W[
     /en/tools/#{ToolMountPoint::AdvicePlans::EN_ID}
     /cy/tools/#{ToolMountPoint::AdvicePlans::CY_ID}
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

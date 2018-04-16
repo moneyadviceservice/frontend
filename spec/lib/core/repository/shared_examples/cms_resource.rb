@@ -19,7 +19,7 @@ RSpec.shared_examples_for 'a cms resource' do
     end
 
     context 'when the type exists' do
-      let(:body) { File.read('spec/fixtures/cms/%s.json' % id) }
+      let(:body) { File.read("spec/fixtures/cms/#{id}.json") }
       let(:status) { 200 }
 
       it 'returns a hash of attributes' do
@@ -28,7 +28,9 @@ RSpec.shared_examples_for 'a cms resource' do
       end
 
       it 'returns the meta description' do
-        expect(repository.find(id)['description']).to eq('How to set up a budget, keep on top of your debts and start to save regularly')
+        expect(repository.find(id)['description']).to eq(
+          'How to set up a budget, keep on top of your debts and start to save regularly'
+        )
       end
     end
 
@@ -46,7 +48,9 @@ RSpec.shared_examples_for 'a cms resource' do
       let(:status) { 407 }
 
       it 'raises an RequestError' do
-        expect { repository.find(id) }.to raise_error(Core::Repository::Base::RequestError)
+        expect { repository.find(id) }.to raise_error(
+          Core::Repository::Base::RequestError
+        )
       end
     end
 
@@ -55,7 +59,9 @@ RSpec.shared_examples_for 'a cms resource' do
       let(:status) { 500 }
 
       it 'raises an RequestError' do
-        expect { repository.find(id) }.to raise_error(Core::Repository::Base::RequestError)
+        expect { repository.find(id) }.to raise_error(
+          Core::Repository::Base::RequestError
+        )
       end
     end
   end

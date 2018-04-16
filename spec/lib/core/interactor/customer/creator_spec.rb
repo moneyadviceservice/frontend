@@ -19,22 +19,27 @@ module Core
           context 'when customer already exists' do
             before :each do
               Interactors::Customer::Creator.new(user).call
-              user.update_column(:customer_id, nil)
+              user.update(customer_id: nil)
             end
 
             it 'does not throw an exception' do
               expect do
-                subject.call { fail 'hello' }
+                subject.call { raise 'hello' }
               end.not_to raise_error
             end
 
             it 'does not create another CRM customer' do
-              expect { subject.call }.to_not change { Registry::Repository[:customer].customers.size }
+              expect { subject.call }.to_not change(
+                Registry::Repository[:customer].customers,
+                :size
+              )
             end
 
             it 'associates user and customer' do
               customer = subject.call
-              expect(customer.customer_id).to eql(Registry::Repository[:customer].customers.last[:id])
+              expect(customer.customer_id).to eql(
+                Registry::Repository[:customer].customers.last[:id]
+              )
             end
           end
 

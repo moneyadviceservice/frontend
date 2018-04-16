@@ -1,6 +1,5 @@
 class SitemapController < ApplicationController
-  def index
-  end
+  def index; end
 
   def display_skip_to_main_navigation?
     false

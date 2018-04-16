@@ -40,7 +40,6 @@ RSpec.describe CorporateDecorator do
   end
 
   describe '#extra_content_partial' do
-
     context 'for articles with partials' do
       it 'returns the corporate extra content path' do
         expect(decorator.extra_content_partial).to eq('corporate/extra/article_with_dynamic_partial')

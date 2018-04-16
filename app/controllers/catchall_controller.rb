@@ -1,9 +1,7 @@
 class CatchallController < ApplicationController
   def not_implemented
     interactor.call do |error|
-      if error.redirect?
-        return redirect_to error.location, status: error.status
-      end
+      return redirect_to error.location, status: error.status if error.redirect?
     end
 
     raise ActionController::RoutingError.new('Not Found')
@@ -19,7 +17,7 @@ class CatchallController < ApplicationController
 
   def path
     if params[:format]
-      params[:path] + "." + params[:format]
+      params[:path] + '.' + params[:format]
     else
       params[:path]
     end

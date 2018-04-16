@@ -1,6 +1,5 @@
 desc 'Generate Sitemap CSV'
 task sitemap: :environment do
-
   require 'core/connection_factory'
   require 'csv'
 
@@ -8,7 +7,7 @@ task sitemap: :environment do
   categories = connection.get('/en/categories.json').body
 
   CSV.open('tmp/sitemap.csv', 'wb') do |csv|
-    csv << %w(Category Sub-Category Item URL)
+    csv << %w[Category Sub-Category Item URL]
 
     categories.each do |category|
       title    = category['title']
@@ -20,10 +19,10 @@ task sitemap: :environment do
         sub_category['contents'].each do |sub_item|
           type = sub_item['type']
           path = case type
-                   when 'guide'
-                     'articles'
-                   else
-                     type.pluralize
+                 when 'guide'
+                   'articles'
+                 else
+                   type.pluralize
                  end
 
           url = "https://www.moneyadviceservice.org.uk/en/#{path}/#{sub_item['id']}"
@@ -33,5 +32,4 @@ task sitemap: :environment do
       end
     end
   end
-
 end

@@ -4,19 +4,20 @@ class PageFeedbacksController < ApplicationController
 
   def create
     render json: Mas::Cms::PageFeedback.create(page_feedback_params),
-           status: 201
+           status: :created
   end
 
   def update
     render json: Mas::Cms::PageFeedback.update(page_feedback_params),
-           status: 200
+           status: :ok
   end
 
   private
 
   def check_accepts_feedback
     return if article_resource.accepts_feedback?
-    render json: {}, status: 403
+
+    render json: {}, status: :forbidden
   end
 
   def article_resource
@@ -32,6 +33,6 @@ class PageFeedbacksController < ApplicationController
   end
 
   def unprocessable
-    render json: {}, status: 422
+    render json: {}, status: :unprocessable_entity
   end
 end

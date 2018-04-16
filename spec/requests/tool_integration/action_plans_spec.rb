@@ -1,8 +1,8 @@
 RSpec.describe 'Redundancy pay calculator', type: :request do
-  %W(
+  %W[
     /en/tools/#{ToolMountPoint::ActionPlans::EN_ID}
     /cy/tools/#{ToolMountPoint::ActionPlans::CY_ID}
-  ).each do |path|
+  ].each do |path|
     describe path do
       before do
         get path

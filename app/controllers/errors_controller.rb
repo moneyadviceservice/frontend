@@ -1,6 +1,6 @@
 class ErrorsController < ApplicationController
   layout 'error'
-  before_filter :fetch_exception
+  before_action :fetch_exception
 
   def show
     render :show, status: params[:status_code], formats: [:html]

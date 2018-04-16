@@ -7,12 +7,12 @@ class OptimizelyScript
 
   def config
     JSON.parse(config_file.read)
-  rescue
+  rescue StandardError
     {}
   end
 
   def config_file
-    @_config_file ||= (File.open(config_path, 'r') if File.exist?(config_path))
+    @config_file ||= (File.open(config_path, 'r') if File.exist?(config_path))
   end
 
   def config_path

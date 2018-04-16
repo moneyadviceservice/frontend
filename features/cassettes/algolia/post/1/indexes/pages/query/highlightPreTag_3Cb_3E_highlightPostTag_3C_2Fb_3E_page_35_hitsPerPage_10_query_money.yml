@@ -1,0 +1,416 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://xgb5qlte67-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=35\u0026hitsPerPage=10\u0026query=money"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.2
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 12 Apr 2018 12:53:22 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Apr 2018 12:53:23 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Press release: CFEB to continue its role in helping
+        consumers manage money","description":"","content":"<p>**17 June 2010 **</p>\n\n<p>Mark
+        Hoban, Financial Secretary to the Treasury, has confirmed in Parliament that
+        CFEB will continue to be responsible for developing and delivering financial
+        capability programmes for the UK. The Minister confirmed that a new Consumer
+        Protection and Markets Authority will take on the FSA’s responsibility for
+        consumer protection and conduct regulation, and will oversee CFEB.</p>\n\n<p>Responding
+        to the Minister’s announcement, Tony Hobman, Chief Executive, CFEB said:\n>
+        “The Consumer Financial Body is committed to enhancing the public’s understanding
+        of money matters, and dedicated to improving their ability to confidently
+        manage their own financial affairs. I am delighted to hear the Minister confirm
+        the importance of our role in improving financial capability.”\n> \n> *   <a
+        href=\"https://www.moneyadviceservice.org.uk/files/20100617_cfebhelpingconsumers.pdf\">Press
+        release</a></p>\n\n","published_at":"2015-03-17T10:55:20.000Z","objectID":"/en/corporate/cfeb-to-continue-role","_highlightResult":{"title":{"value":"Press
+        release: CFEB to continue its role in helping consumers manage <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Young people heavily influenced by parents’ past and present money
+        habits","description":"","content":"<p><strong>24 October 2014</strong></p>\n\n<p>Research
+        by the Money Advice Service shows how significantly a young person’s money
+        habits are heavily influenced by their parents’ past and present financial
+        behaviour. It also confirms the extent to which young people rely on parents
+        for financial advice and help on money matters.</p>\n\n<p>For example, we
+        found that the harder the family finds it to cope with saving for emergencies,
+        the less confident the young person is at managing their own money, and less
+        likely to be developing positive money habits.</p>\n\n<ul>\n  <li>Read the
+        <a href=\"/files/young-people-influenced-by-parents-past-and-present-money-habits-241013.pdf\">press
+        release</a></li>\n  <li>Read the <a href=\"/en/static/the-financial-capability-of-15-17-year-olds\">full
+        report</a></li>\n</ul>\n\n","published_at":"2015-03-16T11:19:26.000Z","objectID":"/en/corporate/attitudes-about-money-matters-and-financial-behaviours-among-young-people","_highlightResult":{"title":{"value":"Press
+        release: Young people heavily influenced by parents’ past and present <b>money</b>
+        habits","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"If
+        the person you want to help can still manage their money","description":"How
+        to help in the present and make sensible arrangements for the future","content":"<p><strong>Even
+        if a friend or loved one is still coping at the moment, you can often predict
+        that they’ll need help with their finances in the future. If that’s the case
+        you probably want to help them put some longer-term arrangements into place.</strong></p>\n\n<ul>\n<li><a
+        href=\"#how-you-might-help\">How you might help</a></li>\n<li><a href=\"#appoint-someone-to-make-decisions--lasting-power-of-attorney\">Appoint
+        someone to make decisions – lasting power of attorney</a></li>\n<li><a href=\"#set-money-aside-for-a-special-purpose--trusts\">Set
+        money aside for a special purpose – trusts</a></li>\n</ul>\n<h2 id=\"how-you-might-help\">How
+        you might help</h2>\n\n<p>Early warning signs will point to someone likely
+        to need help.</p>\n\n<p>For example, if they’re getting older and finding
+        it more difficult to make decisions, or if they’ve been diagnosed with the
+        early stages of dementia.</p>\n\n<p>So you need to start thinking about what
+        will happen when they can no longer manage.</p>\n\n<p>There are two main options
+        – a lasting power of attorney, or a trust.</p>\n\n<h2 id=\"appoint-someone-to-make-decisions--lasting-power-of-attorney\">Appoint
+        someone to make decisions – lasting power of attorney</h2>\n\n<div class=\"callout
+        callout--tip\">\n  <span class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p><strong>Remember</strong></p>\n\n<p>Get
+        a lasting power of attorney set up as early as possible – it will be impossible
+        to set up a lasting power of attorney once someone is unable to manage their
+        own affairs.</p>\n\n</div>\n\n<p>Often your first step is to ask the person
+        whether they’d consider making a ‘power of attorney’.</p>\n\n<p>This means
+        they give someone else permission to control their money for them.</p>\n\n<p>The
+        person you want to help has to set up the lasting power of attorney, so you
+        need to discuss it with them.</p>\n\n<p>You can reassure them it doesn’t have
+        to be used straight away and they can keep control of their own affairs for
+        as long as they are able to do so.</p>\n\n<p>It’s essential to set up a lasting
+        power of attorney when the person is still well enough to do it.</p>\n\n<p>If
+        you wait until they can’t make their own decisions it will be too late and
+        you have to apply to a court for permission to manage their finances which
+        takes longer and is much more expensive.</p>\n\n<div class=\"add-action\">\n
+        Read our guide on <a href=\"/en/articles/setting-up-a-power-of-attorney\">Setting
+        up a power of attorney</a>\n\n</div>\n\n<h2 id=\"set-money-aside-for-a-special-purpose--trusts\">Set
+        money aside for a special purpose – trusts</h2>\n\n<p>If the person you want
+        to help has a lot of money in savings or investments, you could ask them if
+        they would like to put the investments into trust.</p>\n\n<p>A trust means
+        they can set down more specific rules about how the money can be used.</p>\n\n<p>They
+        can appoint trustees (usually friends or family) to manage the money according
+        to the rules of the trust.</p>\n\n<div class=\"add-action\">\n Learn more
+        from our guide on <a href=\"/en/articles/setting-up-a-trust\">Setting up a
+        trust</a>\n\n</div>\n\n<h3 id=\"how-to-help-in-the-meantime\">How to help
+        in the meantime</h3>\n\n<p>It usually takes at least three months for a power
+        of attorney to be set up, and trusts can take time as well.</p>\n\n<p>In the
+        meantime, there are ways to help people with their money in a more informal
+        way.</p>\n\n<p>You can also encourage them to find ways to make their day-to-day
+        money management easier.</p>\n\n<ul>\n  <li>\n    <p><a href=\"/en/articles/help-someone-informally-with-budgeting-and-day-to-day-money\">Help
+        someone informally with day-to-day money</a></p>\n  </li>\n  <li>\n    <p><a
+        href=\"/en/articles/make-your-money-easier-to-manage-by-yourself\">Make your
+        money easier to manage by yourself</a></p>\n  </li>\n</ul>\n","published_at":"2017-03-13T10:06:02.000Z","objectID":"/en/articles/if-the-person-you-want-to-help-can-still-manage-their-money","_highlightResult":{"title":{"value":"If
+        the person you want to help can still manage their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"How
+        to help in the present and make sensible arrangements for the future","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Sarah Porretta appointed Interim Director of Financial Capability
+        at the Money Advice Service","description":"","content":"<p><strong>Thursday
+        15 March 2018</strong></p>\n\n<p>Sarah Porretta is to be the new Interim Director
+        of Financial Capability at the Money Advice Service it was announced today.
+        The appointment was made by the Money Advice Service Board.</p>\n\n<p>Sarah
+        was most recently Head of Financial Inclusion and Education at Lloyds Banking
+        Group, where she led their work on financial capability, and is already well
+        known to the Money Advice Service for her work on the award winning ‘Money
+        for Life’ programme. She succeeds David Haigh, who continues to work part-time
+        for the Money Advice Service as our expert Strategy Adviser.</p>\n\n<p>Prior
+        to her time at Lloyds, Sarah held senior positions at Cadbury as their Global
+        Corporate Responsibility Manager and with BAA leading their community relationships
+        during the construction of terminal 5.</p>\n\n<p>Announcing Sarah’s appointment,
+        <strong>Charles Counsell, CEO of the Money Advice Service said today</strong>:
+        “I am thrilled that Sarah Porretta will be joining us as Interim Director
+        of Financial Capability. Her passion for financial inclusion, education and
+        vulnerability, as well as her experience in building strategic partnerships,
+        will be invaluable in taking forward our financial capability strategy.”</p>\n\n<p><strong>Sarah
+        Porretta said:</strong></p>\n\n<p>“I am absolutely delighted to have this
+        opportunity to help shape the financial capability of the UK at this critical
+        time. I have seen first-hand the transformational effect that good money management
+        can have on people across all life stages and different financial circumstances,
+        and I am passionate about helping as many people as possible acquire these
+        life skills. I look forward to building on the great work that the Money Advice
+        Service - and its many partners - has already done to make a positive impact
+        on UK financial capability.”</p>\n\n<p>Sarah will join the Money Advice Service
+        on 4 April 2018.</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>For more
+        information</strong>, contact Money Advice Service Press Office</p>\n\n<p>020
+        7943 0593 or 07767 438 670 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p><strong>About the Money Advice Service</strong></p>\n\n<p>The
+        Money Advice Service is an independent organisation. It gives free, unbiased
+        money guidance online at <a href=\"http://moneyadviceservice.org.uk\">moneyadviceservice.org.uk</a>
+        or via free phone on 0800 138 7777. Debt advice is also provided through a
+        variety of partners across the UK. The Service was set up by Government and
+        is paid for by a statutory levy on the financial services industry, raised
+        through the Financial Conduct Authority. Its statutory objectives are to enhance
+        the understanding and knowledge of members of the public about financial matters
+        (including the UK financial system); and to enhance the ability of members
+        of the public to manage their own financial affairs.</p>\n","published_at":"2018-03-16T14:18:05.000Z","objectID":"/en/corporate/press-release--sarah-porretta-appointed-interim-director-of-financial-capability-at-the-money-advice-service","_highlightResult":{"title":{"value":"Press
+        release: Sarah Porretta appointed Interim Director of Financial Capability
+        at the <b>Money</b> Advice Service","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: New advice to help people cope with the impact of money worries on
+        mental health","description":"","content":"<p>**12 May 2014 **</p>\n\n<p>The
+        Money Advice Service, in partnership with NHS Choices, is launching new free
+        and impartial advice to help more people who have money worries which are
+        impacting on their health, get to grips with their personal finances.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/final---mental-health-nhs-choices---12-may-2014.pdf\"><strong>Read
+        the press release (PDF)</strong></a></li>\n</ul>\n\n","published_at":"2015-03-16T11:06:09.000Z","objectID":"/en/corporate/mental-health-nhs-choices","_highlightResult":{"title":{"value":"Press
+        release: New advice to help people cope with the impact of <b>money</b> worries
+        on mental health","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Council
+        Tax: what it is, what it costs and how to save money","description":"Make
+        sure you’re not paying more Council Tax than you have to.","content":"<p><strong>Council
+        Tax is an annual fee you pay to your local council. The cost is set by your
+        council and goes towards funding local services.</strong> <strong>Find out
+        more about Council Tax and how to make sure you’re not paying more than you
+        have to.</strong></p>\n\n<ul>\n<li><a href=\"#what-is-council-tax\">What is
+        Council Tax?</a></li>\n<li><a href=\"#what-does-council-tax-pay-for\">What
+        does Council Tax pay for?</a></li>\n<li><a href=\"#how-much-is-my-council-tax\">How
+        much is my Council Tax?</a></li>\n<li><a href=\"#can-i-get-a-reduction\">Can
+        I get a reduction?</a></li>\n<li><a href=\"#paying-your-council-tax-over-12-months-instead-of-10\">Paying
+        your Council Tax over 12 months instead of 10</a></li>\n<li><a href=\"#what-is-my-council-tax-band\">What
+        is my Council Tax band?</a></li>\n<li><a href=\"#how-to-get-your-homes-council-tax-band-reviewed\">How
+        to get your home’s Council Tax band reviewed</a></li>\n<li><a href=\"#complaints-about-council-tax\">Complaints
+        about Council Tax</a></li>\n</ul>\n<h2 id=\"what-is-council-tax\">What is
+        Council Tax?</h2>\n\n<div class=\"callout callout--tip\">\n  <span class=\"callout__icon\"
+        aria-hidden=\"true\">?</span>\n  <p><strong>Living in Northern Ireland?</strong></p>\n\n<p>In
+        Northern Ireland, you have to pay domestic rates, instead of Council Tax.
+        <a href=\"https://www.nidirect.gov.uk/articles/how-rate-bills-are-calculated\"
+        target=\"_blank\">Find out more on the NI Direct website</a><span class=\"visually-hidden\">opens
+        in new window</span>.</p>\n\n</div>\n\n<p>Council Tax is an annual fee that
+        your local council charges you for the local services it provides, like rubbish
+        collection and libraries. Normally you pay it in 10 monthly instalments, followed
+        by two months of not making any payments.</p>\n\n<p>How much Council Tax you
+        pay depends on:</p>\n\n<ul>\n  <li>Your personal circumstances</li>\n  <li>Which
+        valuation band your property is in</li>\n  <li>How much the council needs
+        to fund its services</li>\n</ul>\n\n<h2 id=\"what-does-council-tax-pay-for\">What
+        does Council Tax pay for?</h2>\n\n<div class=\"callout callout--tip\">\n  <span
+        class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p>If you’ve been
+        overpaying on your Council Tax for years, you might be entitled to a refund
+        worth thousands of pounds.</p>\n\n</div>\n\n<p>Local services are funded by
+        Council Tax. This includes:</p>\n\n<ul>\n  <li>police and fire services</li>\n  <li>leisure
+        and recreation projects such as upkeeping parks and sports centres</li>\n  <li>libraries
+        and education services</li>\n  <li>rubbish and waste collection and disposal</li>\n  <li>transport
+        and highway services including street lighting and cleaning, and road maintenance</li>\n  <li>environmental
+        health and trading standards</li>\n  <li>administration and record keeping,
+        like marriages, deaths and birth, and local elections</li>\n</ul>\n\n<p>Council
+        Tax isn’t used to pay for health services.</p>\n\n<h2 id=\"how-much-is-my-council-tax\"><strong>How
+        much is my Council Tax?</strong></h2>\n\n<p>The amount of Council Tax you
+        pay depends on the value of your home and where you live.</p>\n\n<p>Find your
+        local authority and how much you need to pay using the links below:</p>\n\n<ul>\n  <li>England
+        – <a href=\"http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=57&amp;LGIL=8&amp;ServiceN\">GOV.UK’s
+        Find your local council tool</a>\n</li>\n  <li>Scotland – <a href=\"http://www.cosla.gov.uk/scottish-local-government\">Scottish
+        Local Government</a>\n</li>\n  <li>Wales – <a href=\"http://wlga.wales/home\">Welsh
+        Local Government Association</a>\n</li>\n</ul>\n\n<p>Each of the links above
+        will get you to your local council’s website.</p>\n\n<p>From there you’ll
+        need to find information on Council Tax.</p>\n\n<p>You might also be able
+        to contact them directly and ask.</p>\n\n<h2 id=\"can-i-get-a-reduction\"><strong>Can
+        I get a reduction?</strong></h2>\n\n<p>You might be able to get a reduction
+        on your Council Tax if:</p>\n\n<ul>\n  <li>You’re a student or you live with
+        students.</li>\n  <li>You live alone or are the only adult in your home.</li>\n  <li>You’re
+        on a low income.</li>\n  <li>You get certain benefits, such as Jobseekers
+        Allowance or Income Support.</li>\n  <li>You or someone you live with has
+        a disability and as a result needs to live in a larger home.</li>\n</ul>\n\n<p><a
+        href=\"https://www.gov.uk/council-tax/who-has-to-pay\">Find out more about
+        who can get a reduction on GOV.UK</a>.</p>\n\n<h2 id=\"paying-your-council-tax-over-12-months-instead-of-10\"><strong>Paying
+        your Council Tax over 12 months instead of 10</strong></h2>\n\n<p>Most councils
+        allow you to choose to spread your Council Tax payments over 12 months instead
+        of the usual 10. Making the same payment every month might make it easier
+        for you to budget.</p>\n\n<p>Just ask your council if they offer this option.</p>\n\n<p><a
+        href=\"https://www.gov.uk/find-local-council\">Find your local council on
+        GOV.UK</a>.</p>\n\n<h2 id=\"what-is-my-council-tax-band\">What is my Council
+        Tax band?</h2>\n\n<p><strong>England and Scotland</strong> have eight Council
+        Tax bands ranging from A (the cheapest) to H. A house’s Council Tax band is
+        based on its rateable value – the more expensive the property, the higher
+        the Council Tax band.</p>\n\n<p><strong>Wales</strong> has nine bands – from
+        1 (the highest) to 9.</p>\n\n<p>If your home is in a higher valuation band
+        than it should be, you’re probably paying more Council Tax than you should.</p>\n\n<h2
+        id=\"how-to-get-your-homes-council-tax-band-reviewed\"><strong>How to get
+        your home’s Council Tax band reviewed</strong></h2>\n\n<div class=\"callout
+        callout--tip\">\n  <span class=\"callout__icon\" aria-hidden=\"true\">?</span>\n  <p><strong>Up
+        to 400,000</strong> homes in England and Scotland are in the wrong Council
+        Tax bands. Welsh homes were more recently evaluated and are less likely to
+        be in the wrong band.</p>\n\n</div>\n\n<p>If you think you’re overpaying Council
+        Tax because your home is in the wrong Council Tax band, you might be entitled
+        to a refund.</p>\n\n<p>To get this refund you’ll need to ask for a review.</p>\n\n<p>But
+        remember: the review might lead to your council putting your property in a
+        higher band.</p>\n\n<p>To find out how to get your Council Tax band reviewed,
+        visit <a href=\"http://www.moneysavingexpert.com/reclaim/council-tax-bands-change\">MoneySavingExpert</a>.</p>\n\n<h2
+        id=\"complaints-about-council-tax\"><strong>Complaints about Council Tax</strong></h2>\n\n<p>If
+        you have a complaint about your Council Tax, you’ll normally have to complain
+        to the council first. They should take no longer than 12 weeks to resolve
+        the problem.</p>\n\n<p>But if you’re unhappy with the outcome, or they’re
+        taking too long to resolve your complaint, you might be able to complain to
+        the <a href=\"http://www.lgo.org.uk/\">Local Government Ombudsman</a>.</p>\n","published_at":"2017-11-09T14:54:48.000Z","objectID":"/en/articles/how-to-save-money-on-your-council-tax-bill","_highlightResult":{"title":{"value":"Council
+        Tax: what it is, what it costs and how to save <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"Make
+        sure you’re not paying more Council Tax than you have to.","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Sarah Porretta appointed Interim Director of Financial Capability
+        at the Money Advice Service","description":"","content":"<p><strong>Thursday
+        15 March 2018</strong></p>\n\n<p>Sarah Porretta is to be the new Interim Director
+        of Financial Capability at the Money Advice Service it was announced today.
+        The appointment was made by the Money Advice Service Board.</p>\n\n<p>Sarah
+        was most recently Head of Financial Inclusion and Education at Lloyds Banking
+        Group, where she led their work on financial capability, and is already well
+        known to the Money Advice Service for her work on the award winning ‘Money
+        for Life’ programme. She succeeds David Haigh, who continues to work part-time
+        for the Money Advice Service as our expert Strategy Adviser.</p>\n\n<p>Prior
+        to her time at Lloyds, Sarah held senior positions at Cadbury as their Global
+        Corporate Responsibility Manager and with BAA leading their community relationships
+        during the construction of terminal 5.</p>\n\n<p>Announcing Sarah’s appointment,
+        <strong>Charles Counsell, CEO of the Money Advice Service said today</strong>:
+        “I am thrilled that Sarah Porretta will be joining us as Interim Director
+        of Financial Capability. Her passion for financial inclusion, education and
+        vulnerability, as well as her experience in building strategic partnerships,
+        will be invaluable in taking forward our financial capability strategy.”</p>\n\n<p><strong>Sarah
+        Porretta said:</strong></p>\n\n<p>“I am absolutely delighted to have this
+        opportunity to help shape the financial capability of the UK at this critical
+        time. I have seen first-hand the transformational effect that good money management
+        can have on people across all life stages and different financial circumstances,
+        and I am passionate about helping as many people as possible acquire these
+        life skills. I look forward to building on the great work that the Money Advice
+        Service - and its many partners - has already done to make a positive impact
+        on UK financial capability.”</p>\n\n<p>Sarah will join the Money Advice Service
+        on 4 April 2018.</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>For more
+        information</strong>, contact Money Advice Service Press Office</p>\n\n<p>020
+        7943 0593 or 07767 438 670 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p><strong>About the Money Advice Service</strong></p>\n\n<p>The
+        Money Advice Service is an independent organisation. It gives free, unbiased
+        money guidance online at <a href=\"http://moneyadviceservice.org.uk\">moneyadviceservice.org.uk</a>
+        or via free phone on 0800 138 7777. Debt advice is also provided through a
+        variety of partners across the UK. The Service was set up by Government and
+        is paid for by a statutory levy on the financial services industry, raised
+        through the Financial Conduct Authority. Its statutory objectives are to enhance
+        the understanding and knowledge of members of the public about financial matters
+        (including the UK financial system); and to enhance the ability of members
+        of the public to manage their own financial affairs.</p>\n","published_at":"2018-03-16T09:00:04.000Z","objectID":"/cy/corporate/press-release--sarah-porretta-appointed-interim-director-of-financial-capability-at-the-money-advice-service","_highlightResult":{"title":{"value":"Press
+        release: Sarah Porretta appointed Interim Director of Financial Capability
+        at the <b>Money</b> Advice Service","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        Release: Tens of thousands across the UK to receive help managing their money
+        ","description":"","content":"<p><strong>Tuesday 31 January 2017</strong></p>\n\n<p><strong>Money
+        Advice Service announces first projects to receive funding from the new What
+        Works Fund initiative.</strong></p>\n\n<p>Projects across the UK will receive
+        new funding from the Money Advice Service, helping tens of thousands of people
+        manage their money better.</p>\n\n<p>Today, the Money Advice Service announced
+        funding for 26 projects, with more to follow in the coming months. The projects,
+        which cover every region of the UK, are being funded from the Money Advice
+        Service’s new £7m What Works Fund. Funded projects will reach thousands of
+        people – from younger people in school, to students and from working age adults
+        to those in retirement.</p>\n\n<p>We know that levels of financial capability
+        remain stubbornly low - four out of ten adults are not in control of their
+        finances and around 16.8 million working age people have less than £100 in
+        savings.</p>\n\n<p>However, very little evidence currently exists on the best
+        way to address this issue. That is why the What Works Fund aims to build evidence
+        and to establish the interventions which best help people to manage their
+        money. Ultimately, the aim is to scale up the most effective projects in order
+        to improve the levels of financial capability of millions of people across
+        the UK.</p>\n\n<p><strong>David Haigh, Director of Financial Capability at
+        the Money Advice Service comments:</strong></p>\n\n<p>“This is the first time
+        that we have funded projects to gain evidence about how best to help people
+        with their money. These projects will reach tens of thousands of people, while
+        helping organisations ensure their interventions are truly effective. By increasing
+        the effectiveness of what we do, we can better target our collective efforts,
+        thereby improving the financial capability of millions across the country.”</p>\n\n<p>“Evidence
+        will be gained from a range of approaches, from large-scale digital projects
+        that engage with people online, through to one-on-one interventions which
+        guide people through a step-by-step process to help them keep on top of their
+        finances. The projects will help individuals to budget, saving regularly,
+        handle their finances online, manage their credit and build their numeracy
+        skills.”</p>\n\n<p>The projects also target segments of society who could
+        be vulnerable to falling into financial difficulty, including those with mental
+        health issues, those at risk of being homeless and people with long term illnesses.</p>\n\n<p>“We
+        know that millions of people across the country are one unexpected bill away
+        from seeing their finances spiral out of control – and for those who are already
+        vulnerable, that risk is exacerbated. We want to build evidence on how we
+        can get these people to engage with their financial situation and avoid them
+        ending up in problem debt or with other financial difficulties,” <strong>explained
+        Haigh.</strong></p>\n\n<p><strong>Caroline Rookes, Chief Executive for the
+        Money Advice Service said:</strong> “There is an urgent need to help people
+        gain the skills and confidence they need to make good decisions about their
+        money day to day. The insights from these projects will be vital, helping
+        organisations to channel their efforts in the right places and to fund and
+        deliver interventions that we know make a real difference. This will also
+        underpin the money guidance commissioning work to be carried out by the new
+        money guidance body which will replace the Money Advice Service.”</p>\n\n<p>“We
+        look forward to collaborating not only with projects funded through the What
+        Works Fund, but with all organisations that are working to improve levels
+        of financial capability. A collective approach is needed to really tackle
+        the issues that underpin low financial capability in the UK.”</p>\n\n<p><strong>-ENDS-</strong></p>\n\n<p><strong>For
+        more information, please contact:</strong></p>\n\n<p>Money Advice Service
+        Press Office</p>\n\n<p>020 7943 0593 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p>More information can be found at <a href=\"http://www.fincap.org.uk/what-works-fund\">http://www.fincap.org.uk/what-works-fund</a></p>\n\n<p>*What
+        Works funded organisations</p>\n\n<table>\n  <tbody>\n    <tr>\n      <td><img
+        src=\"https://masassets.blob.core.windows.net/cms/files/000/000/630/original/FundedOrgsTable%287%29.jpg\"
+        alt=\"WWF Funded Orgs Table (7)\" /></td>\n    </tr>\n  </tbody>\n</table>\n\n<p><strong>Comments
+        from fund recipients</strong></p>\n\n<p><strong>Dawn Taylor, Operations Director,
+        1625 Independent People:</strong></p>\n\n<p>“1625 Independent People’s Cash
+        Pointers Up Front project is all about offering young people the right skills
+        and tools, shared in a way they can relate to, to help them manage their money
+        better before they get into financial difficulty. It builds on our previous
+        learning and experience delivering peer education and helping young people
+        manage their money. The new project will offer a great opportunity to evaluate
+        what works for young people. We’re delighted to work in partnership with MAS
+        to deliver and evaluate this project.”</p>\n\n<p><strong>Nicola Russell-Brooks,
+        CEO of Age Cymru Swansea Bay, added:</strong></p>\n\n<p>“We are delighted
+        to have been given the opportunity to deliver a Money Advice Service project
+        aimed at helping people over the age of 65 in Swansea. We are looking forward
+        to finding out what barriers people face when they want to take action to
+        develop their financial capability, and to directly supporting people to create
+        a lasting power of attorney; to limit their risk of being scammed; and, to
+        help them learn how to safely use online financial services. If anyone would
+        like to benefit from this project, please get in touch. You can contact us
+        on 01792 64 88 66 or by email at <a href=\"mailto:enquiries@agecymruswanseabay.org.uk\">enquiries@agecymruswanseabay.org.uk</a>.”</p>\n\n<p><strong>Juliette
+        Collier, National Director, Campaign for Learning:</strong></p>\n\n<p>“Families
+        provide the most important opportunity for most children to see, talk and
+        learn about money; what parents do really matters in helping children make
+        positive financial choices as they grow up. We are excited to be working with
+        the Money Advisory Service and the What Works Fund to deliver the Family Fortunes
+        project, because it will enable us to really understand what works in helping
+        parents build brighter financial futures for themselves and their children.”</p>\n\n<p><strong>Paul
+        Hackwood, Executive Director of Church Urban Fund, said</strong></p>\n\n<p>“We
+        are delighted to be trialing our new Cash Smart Credit Savvy course with support
+        from Money Advice Service. Our innovative short course format is designed
+        to help more people to access financial education, through community delivery
+        partners who they already know and trust. People will have the skills to make
+        good choices about credit and understand the importance of savings.”</p>\n\n<p><strong>Arvinda
+        Gohil, Chief Ex","published_at":"2017-01-31T00:01:00.000Z","objectID":"/en/corporate/press-release-tens-of-thousands-across-the-uk-to-receive-help-managing-their-money","_highlightResult":{"title":{"value":"Press
+        Release: Tens of thousands across the UK to receive help managing their <b>money</b>
+        ","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Draft Business Plan for 2014-15 - Changing people’s lives by helping
+        them manage their money","description":"","content":"<p><strong>17 December
+        2013</strong></p>\n\n<p>The Money Advice Service draft Business Plan for 2014-15
+        sets out its vision for helping people out of debt, and getting more people
+        budgeting, saving and planning for retirement.</p>\n\n<p>Money Advice Service
+        research conducted in 2013-14 indicates there is a growing need for impartial
+        money and debt advice in the UK.</p>\n\n<p>The draft Plan explains how the
+        Service will continue to meet this need by fulfilling three key roles in 2014/15:</p>\n\n<ul>\n  <li>Providing
+        the UK population with generic information and advice about money matters;</li>\n  <li>Helping
+        people facing unmanageable debt get their finances back in order; and</li>\n  <li>\n    <p>Working
+        in partnership to coordinate the improvement of the financial capability landscape
+        across the UK</p>\n  </li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/bp-press-release-091213-final.pdf\">Read
+        the press release in full (PDF)</a></li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-2014-15-business-plan-consultation-december-2013.pdf\">Read
+        the draft Business Plan 2014-15 in full (PDF)</a></li>\n</ul>\n\n","published_at":"2015-03-16T11:13:40.000Z","objectID":"/en/corporate/draft-business-plan-for-2014-15","_highlightResult":{"title":{"value":"Press
+        release: Draft Business Plan for 2014-15 - Changing people’s lives by helping
+        them manage their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}}],"nbHits":359,"page":35,"nbPages":36,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","queryAfterRemoval":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=35&hitsPerPage=10&query=money"}
+
+'
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 12:53:23 GMT
+recorded_with: VCR 4.0.0

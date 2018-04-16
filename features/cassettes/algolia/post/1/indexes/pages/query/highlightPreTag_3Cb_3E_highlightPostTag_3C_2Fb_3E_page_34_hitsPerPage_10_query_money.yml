@@ -1,0 +1,463 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://xgb5qlte67-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=34\u0026hitsPerPage=10\u0026query=money"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.2
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 12 Apr 2018 12:54:29 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Apr 2018 12:54:31 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Press release: UK could gain £108 billion from improved
+        money management","description":"","content":"<p><strong>Wednesday 16 November
+        2016</strong></p>\n\n<p>New research from the Money Advice Service reveals
+        that people across the UK could be better off by around £108 billion over
+        the next 30 years if they were a better able to manage their money.</p>\n\n<p>Research
+        shows that people’s confidence and skills in dealing with money issues, known
+        as “Financial Capability” remains stubbornly low. This means they could be
+        missing out on the financial benefits that relatively small changes in their
+        money management can bring. These benefits include increased investments of
+        almost £50 billion, increased savings of nearly £20 billion and increased
+        pensions of around £10 billion. People would have more spending power so consumption
+        would be expected to increase by almost £30 billion. Importantly, those currently
+        least able to manage their money would stand to benefit by £45 billion over
+        30 years.</p>\n\n<p>The research, The Economic Impact of Improved Financial
+        Capability, marks the first time that the UK wide impact of improved budgeting,
+        credit and savings decisions has been assessed. At a time when the UK’s financial
+        capability is stubbornly low, these figures show that improving money skills
+        could have a range of benefits for consumers over the long term.</p>\n\n<p>People
+        with higher financial capability would be able to shop around to make money
+        go further, understand compound interest, save regularly, and reduce impulse
+        spending. As their capability increases, people would put more money into
+        savings accounts and investments, with wealth increases estimated at around
+        £80 billion over 30 years. People would also get better value for money as
+        they start to shop around for the best deals on financial products, seeking
+        lower interest rates on credit cards, loans and lower charges for investment
+        products.</p>\n\n<p>The incidence of over-indebtedness would fall by up to
+        thirteen percent as a result of people better adapting their spending to their
+        income, and becoming less dependent on high cost credit products. Reduced
+        over-indebtedness brings other benefits, including improved health and wellbeing.</p>\n\n<p>Finally,
+        the finance industry would see increased demand for saving and investment
+        products as well as more people seeking the best financial advice to help
+        with their decisions.</p>\n\n<p>Commenting on the findings, David Haigh, Director
+        of Financial Capability for the Money Advice Service said: “The staggering
+        numbers show clearly for the first time that small improvements to people’s
+        money skills could have a huge impact at both an individual and national level,
+        with a<br />\npositive effect on people’s wealth, and increased competition
+        and innovation across the finance industry. As we embark on the first ever
+        Financial Capability Week, this report provides an important reminder of why
+        policy makers, the financial services industry, and other organisations must
+        work together to find new ways to help people make the most of their money
+        and make a real difference to their lives and tackle the low levels of financial
+        capability across the UK.”</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>For
+        more information please contact</strong> the Money Advice Service Press Office
+        on <a href=\"tel:020%207943%200593\">020 7943 0593</a><a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p><strong>About the</strong> <strong>Economic
+        Impact of Financial Capability</strong> <strong>Report</strong></p>\n\n<p>The
+        report is from Europe Economics, an independent economics consultancy. It
+        uses data from the 2015 Financial Capability Survey (FCS) to simulate the
+        financial lives of over 3000 real individuals over their remaining lives if
+        their financial capability was improved. The model captures expected behaviours
+        by modelling assumptions and conditions to describe the role of financial
+        capability in peoples’ budgeting, credit and saving decisions. The modelling
+        approach is fully described at Chapter 4 of the report. The policies needed
+        to increase people’s financial capability was outside the scope of the research.
+        The full report can be found <a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/569/original/EE_Study_on_Economic_Impact_of_Improved_Capability_4-Nov-2016_-_Final.docx\">here</a>.</p>\n\n<p><strong>What
+        is financial capability?</strong></p>\n\n<p>Financial capability is a person’s
+        ability to manage money well, both day to day and through significant life
+        events, and to handle periods of financial difficulty. It is driven by personal
+        skills, knowledge, attitudes and motivations, and made possible by an inclusive
+        financial system and supportive social environment. Financial capability helps
+        people achieve the best possible financial wellbeing.</p>\n\n<p><strong>About
+        the Money Advice Service</strong></p>\n\n<p>The Money Advice Service is an
+        independent organisation. It gives free, unbiased money guidance online at
+        <a href=\"http://moneyadviceservice.org.uk\">moneyadviceservice.org.uk</a>
+        or via free phone on <a href=\"tel:0800%20138%207777\">0800 138 7777</a>.
+        Debt advice is also provided through a variety of partners across the UK.
+        The Service was set up by Government and is paid for by a statutory levy on
+        the financial services industry, raised through the Financial Conduct Authority.
+        Its statutory objectives are to enhance the understanding and knowledge of
+        members of the public about financial matters (including the UK financial
+        system); and to enhance the ability of members of the public to manage their
+        own financial affairs.</p>\n","published_at":"2016-11-16T00:01:00.000Z","objectID":"/en/corporate/press-release-uk-could-gain-108-from-improved-money-management","_highlightResult":{"title":{"value":"Press
+        release: UK could gain £108 billion from improved <b>money</b> management","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: More people than ever getting help with money matters from the Money
+        Advice Service","description":"","content":"<p>Friday 13 November 2015</p>\n\n<p><strong>More
+        people than ever getting help with money matters from the Money Advice Service</strong></p>\n\n<ul>\n  <li>Over
+        8.4 million unique contacts to Money Advice Service website between April
+        and September – 88% would recommend the service to others</li>\n  <li>More
+        people seeking help with their debts, over 95,000 sessions take place this
+        quarter - an increase of 90% on Q2 2014/15</li>\n</ul>\n\n<p>The Money Advice
+        Service continued to evolve its approach this quarter, placing greater emphasis
+        on working with partners to help more consumers than ever get the financial
+        support they need to make informed decisions about their money.</p>\n\n<p>Figures
+        for Quarter 2 (July – September 2015) show that the Money Advice Service achieved
+        over 5.9 million customer visits to the website, phone and face to face services,
+        a total of over 11.4 million for the first half of the year. In the same period,
+        3.4 million actions were taken to improve budgeting and 481,530 actions were
+        taken to save regularly.</p>\n\n<p>The homes and mortgages tools remained
+        the most popular with over 420,900 completions in total including; over 197,000
+        completions of the Stamp duty calculator, over 142,000 completions for the
+        Mortgage Affordability Calculator and nearly 82,000 for the Mortgage calculator.</p>\n\n<p>More
+        people than ever sought help with their financial difficulties this quarter,
+        continuing the upward trend. We worked closely with partners <em>across the
+        country; whose hard work and dedication resulted in over 95,000 people receiving
+        debt advice across England, Wales, and Scotland. Nine out of 10 people*</em>
+        who received debt advice went on to take an action to improve their finances.</p>\n\n<p><strong>Focusing
+        on Financial Education</strong><br />\nWe launched two financial education
+        projects this quarter, designed to identify what really works in improving
+        financial capability. These will enable the Service to innovate to reach more
+        people with messages about good financial behaviours while investing in the
+        wider sector to increase the capacity of partners and the charitable sector
+        to deliver projects which will help to make a real difference to people’s
+        lives.</p>\n\n<ul>\n  <li><strong>​</strong><strong>Collaboration with the
+        Education Endowment Foundation (EEF)</strong> –We co-funded a project to evaluate
+        the effectiveness of school-based financial education programmes. The aim
+        is to increase the financial capability of school pupils and raise their educational
+        attainment.</li>\n  <li><strong>Collaboration with Big Lottery Wales</strong>
+        - We commenced work with the Big Lottery Fund in Wales on a new pilot project
+        called Talk, Learn, Do: Parents, Kids and Money. This scheme aims to improve
+        parent’s confidence to teach their children money management skills. The three
+        year project, which will be delivered across almost half of all local authorities
+        in Wales, aims to motivate parents and equip them with the confidence and
+        ability to develop the next generation of money savvy adults.</li>\n</ul>\n\n<p><strong>Debt
+        funding for Northern Ireland</strong><br />\nWe continued to work with partners
+        to ensure that consumers in Northern Ireland have access to high quality,
+        free debt advice across all 11 council areas. This will enable them to get
+        their debts under control and improve their quality of life. Applications
+        for a three-year debt advice funding programme in Northern Ireland opened
+        in September with up to £1 million_*_available to potential partners in the
+        first year.</p>\n\n<p><strong>Encouraging people to plan for the future</strong><br
+        />\nThe Service and the Association of British Insurers (ABI) launched a joint
+        piece of consumer research identifying the barriers and triggers to getting
+        protection, whether that takes the form of a savings buffer or a protection
+        product. The findings were used to raise awareness of the need to either save
+        or consider relevant protection insurances.</p>\n\n<p><strong>Commenting on
+        these results, Caroline Rookes, CEO of the Money Advice Service said:</strong>
+        “I am pleased to see that the website continues to extend its reach, with
+        more consumers getting access to the information they need to make good decisions
+        about their money. I’m also delighted that more people than ever are seeking
+        debt advice.</p>\n\n<p>“We are continuing to look for new ways to fill gaps
+        in information for consumers and to co-ordinate with partners to reach people
+        more effectively. Our work with the Education Endowment Fund, Big Lottery
+        Wales, Association of British Insurers and our debt partners are a great example
+        of this. We’ll continue to take this approach–aiming to create a real cultural
+        change in the way people think about money.”</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>For
+        more information please contact:</strong> Money Advice Service Press Office<br
+        />\n020 7947 0068 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p><strong>Results</strong></p>\n\n<table>\n  <thead>\n    <tr>\n      <th><strong>KEY
+        PERFORMANCE INDICATORS</strong></th>\n      <th><strong>Results Q2 (Jul- Sep
+        2015)</strong></th>\n      <th><strong>Year to date</strong> <strong>(April
+        – Sept)</strong></th>\n      <th><strong>Annual target 2015/16</strong></th>\n      <th><strong>Year-on-Year
+        difference</strong></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Unique
+        contacts to the website (UK only)</strong></td>\n      <td>4,316,000</td>\n      <td>8,439,000</td>\n      <td><strong>N/A</strong></td>\n      <td><strong>+
+        12%</strong></td>\n    </tr>\n    <tr>\n      <td><strong>Volume of customer
+        contacts</strong>*</td>\n      <td>5,904,000</td>\n      <td>11,491,000</td>\n      <td><strong>21.5m</strong></td>\n      <td><strong>+
+        10%</strong></td>\n    </tr>\n    <tr>\n      <td>Online contacts (excluding
+        Web Chats)</td>\n      <td>5,851,000</td>\n      <td>11,382,00</td>\n      <td> </td>\n      <td><strong>+
+        10%</strong></td>\n    </tr>\n    <tr>\n      <td>Face-to-face contacts</td>\n      <td>21,000</td>\n      <td>43,000</td>\n      <td> </td>\n      <td><strong>-14%</strong></td>\n    </tr>\n    <tr>\n      <td>Telephone
+        contacts</td>\n      <td>21,000</td>\n      <td>46,000</td>\n      <td> </td>\n      <td><strong>+1%</strong></td>\n    </tr>\n    <tr>\n      <td>Web
+        chats</td>\n      <td>10,000 </td>\n      <td>20,000</td>\n      <td> </td>\n      <td><strong>+14%</strong></td>\n    </tr>\n    <tr>\n      <td>Number
+        of times we have given customers the help they required</td>\n      <td>3,917,000</td>\n      <td>7,669,000</td>\n      <td><strong>12m</strong></td>\n      <td><strong>+43%</strong></td>\n    </tr>\n  </tbody>\n</table>\n\n<p><em>*a
+        visit to the website, web chat, phone or face-to-face session</em></p>\n\n<p>All
+        figures rounded to the nearest 1,000. Figures may not sum due to rounding</p>\n\n<table>\n  <tbody>\n    <tr>\n      <td><strong>SATISFACTION
+        CRITERIA</strong></td>\n      <td><strong>Results Q2 (Jul- Sep 2015)","published_at":"2015-11-13T09:28:29.000Z","objectID":"/en/corporate/press-release-more-people-than-ever-getting-help-with-money-matters-from-the-money-advice-service","_highlightResult":{"title":{"value":"Press
+        release: More people than ever getting help with <b>money</b> matters from
+        the <b>Money</b> Advice Service","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        Release: Lighthouse to provide personal regulated advice to Money Advice Service
+        staff","description":"","content":"<p><strong>Friday 3 March 2017</strong></p>\n\n<p>Lighthouse
+        Group is to provide regulated financial advice to staff at the Money Advice
+        Service, it was announced today.</p>\n\n<p>The Money Advice Service recognises
+        the vital importance of regulated financial advice and points consumers towards
+        regulated advice as part of the guidance journey. Millions of people access
+        these guidance services each year, through the web, phone and printed materials
+        that MAS offers. Ensuring that staff also have access to regulated advice
+        is an important step in ensuring that advice is widely available to all that
+        would benefit from it.</p>\n\n<p>Lighthouse’s contract will run until March
+        2018. They will offer every permanent member of MAS staff the chance to have
+        a complimentary financial review. The group will also run day surgeries for
+        1-2-1 meetings, seminars on key financial topics and offer discounted rates
+        on regulated financial advice. Topics will be based on individual needs but
+        will include pensions, retirement income options, mortgages, protection insurance
+        and savings and investments.</p>\n\n<p>The Money Advice Service decided to
+        appoint a regulated financial advice provider for its staff, following recommendations
+        by the Financial Advice Market Review (FAMR) to encourage employers to help
+        staff with their finances.</p>\n\n<p>Lighthouse were selected from a pool
+        of around 3500 advice firms listed on the Money Advice Service Retirement
+        Adviser Directory*. All of these firms were invited to submit expressions
+        of interest, with around 50 firms ultimately doing so.</p>\n\n<p><strong>Caroline
+        Rookes, Chief Executive of the Money Advice Service says:</strong></p>\n\n<p>“We
+        are pleased to be working with Lighthouse and to give staff the opportunity
+        to access the benefits that independent financial advice can provide. Regulated
+        advice has an important role to play in ensuring that people make the right
+        choices about their money – not only for our staff but for the wider public.
+        A vital step in the guidance journey is signposting consumers towards regulated
+        financial advice at the appropriate time.”</p>\n\n<p><strong>Malcolm Streatfield,
+        Chief Executive Officer of Lighthouse commented:</strong> “We are very pleased
+        to have secured this partnership with The Money Advice Service. We look forward
+        to developing our relationship over the coming months and working closely
+        with The Money Advice Service employees, who themselves are dedicated to helping
+        others, and to assisting them with their financial planning requirements.
+        The Board remains committed to increasing our affinity partnerships throughout
+        the UK”.</p>\n\n<p><strong>-ENDS-</strong></p>\n\n<p><strong>For more information,
+        please contact:</strong></p>\n\n<p>Money Advice Service Press Office</p>\n\n<p>020
+        7943 0593 or 07767 438 670 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>*About
+        the Retirement Adviser Directory</strong></p>\n\n<p>The Money Advice Service
+        retirement adviser directory has been designed to direct people who are approaching
+        retirement to regulated financial advice for a bespoke recommendation. The
+        directory currently includes over 6,538 advisers from around 3,669 firms.
+        Over 135,979 unique users have used the tool since launch in April 2015 and
+        35, 827 have gone on to connect with an adviser. The directory can be found
+        <a href=\"https://directory.moneyadviceservice.org.uk/en\">here</a></p>\n\n<p><strong>About
+        the Money Advice Service</strong></p>\n\n<p>The Money Advice Service is an
+        independent organisation. It gives free, unbiased money guidance online at
+        moneyadviceservice.org.uk or via free phone on 0800 138 7777. Debt advice
+        is also provided through a variety of partners across the UK. The Service
+        was set up by Government and is paid for by a statutory levy on the financial
+        services industry, raised through the Financial Conduct Authority. Its statutory
+        objectives are to enhance the understanding and knowledge of members of the
+        public about financial matters (including the UK financial system); and to
+        enhance the ability of members of the public to manage their own financial
+        affairs.</p>\n","published_at":"2017-03-03T08:57:50.000Z","objectID":"/en/corporate/press-release-lighthouse-to-provide-personal-regulated-advice-to-money-advice-service-staff","_highlightResult":{"title":{"value":"Press
+        Release: Lighthouse to provide personal regulated advice to <b>Money</b> Advice
+        Service staff","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Just 40% of young people are taught money management","description":"","content":"<p><strong>Monday
+        14 November 2016</strong></p>\n\n<p>Less than half of young people aged seven
+        to 17 are receiving financial education at school.</p>\n\n<p>New findings
+        by the Money Advice Service, released today at the launch of Financial Capability
+        Week 2016, shows that just 4 in 10 young people in the UK say they’ve received
+        financial education, which is designed to teach children how to handle their
+        finances confidently and is currently part of the curriculum across the UK.</p>\n\n<p>This,
+        despite the fact that an overwhelming 90% who’d received financial education
+        lessons said they found them useful. In addition, the survey findings showed
+        that only 7% of children surveyed said they’d taken the time to speak to their
+        teacher about money.</p>\n\n<p>There is an issue outside of the classroom
+        too, with only 61% of parents admitting that they feel confident talking to
+        their children about money and with only one-third involving their children
+        in discussions about their household finances.</p>\n\n<p>When young people
+        don’t receive financial education, it can mean that they’re poorly prepared
+        to manage their own money as they approach adulthood. Today’s research clearly
+        demonstrates this – among 16 – 17 year olds, 32% said they didn’t have experience
+        of putting money into a bank account, 39% said they didn’t have a current
+        account at all and a shocking 59% couldn’t read a pay slip.</p>\n\n<p>The
+        first ever Financial Capability Week, beginning today (14 Nov), is designed
+        to raise awareness of the importance of financial capability – that is, people’s
+        ability to manage their money well, both day-to-day and through significant
+        life events, such as losing their job, having a child or suffering a bereavement.</p>\n\n<p>Suella
+        Fernandes MP, Chair of the All Party Parliamentary Group on Financial Education,
+        said: “These research findings clearly show that there is plenty more to do
+        to improve the delivery of financial education, which remains inconsistent
+        and varying in effectiveness. It’s essential that we provide appropriate training
+        and resources for teachers to enable them to deliver these crucial lessons.</p>\n\n<p>“A
+        collaborative approach is absolutely vital in tackling this issue – we must
+        encourage educators, policy makers and other organisations to work together
+        to deliver effective financial education to our children. The All Party Parliamentary
+        Group on Financial Education for Young People has recommended the Department
+        for Education embed financial education within the new Initial Teacher Training
+        framework. In order to ensure high quality provision schools should appoint
+        a financial education ‘champion’, ideally a member of the Senior Leadership
+        Team, to coordinate and promote learning and training in this area.”</p>\n\n<p>David
+        Haigh, Director of Financial Capability at the Money Advice Service, said
+        “The fact that only 40% of pupils reported receiving financial education show
+        that gaps exist in the provision of financial education. Given that so few
+        children actually speak to their teachers about money matters, there’s a clear
+        role for parents to fulfil in helping prepare their children to manage their
+        money in adult life. However, we know that only one-third of parents talk
+        to their children about household finances.</p>\n\n<p>“In addition, parents’
+        money management may not set the best example. Half (50%) do not save regularly,
+        44% say they don’t feel confident managing their money and 68% say they find
+        keeping up with their credit commitments and bills a burden.</p>\n\n<p>“In
+        order to find a lasting solution to the problem of the UK’s stubbornly low
+        levels financial capability, we need to help parents be better role models,
+        build their confidence in speaking to their children about these matters and
+        support schools to deliver effective financial education.”</p>\n\n<p>Elona
+        Gega, a student from London who received financial education through a scheme
+        provided by financial education charity MyBnk, benefitted from receiving financial
+        education. She said: “Money is real to me now! Learning how to manage it and
+        avoid bad debt has improved my confidence, cut my spending and opened up new
+        opportunities. I have just started living independently and want to go to
+        university, it’s really important I know how to take care of my finances.
+        Today, I feel like I’m in control of my money rather than it being in control
+        of me.”</p>\n\n<p>Russell Winnard. Head of Educator Facing Programme and Services
+        at Young Enterprise, said: “Collaboration between organisations is absolutely
+        vital to ensure that young people receive high quality financial education.
+        By sharing information on effective approaches, the way in which financial
+        education is delivered can change for the better. The Financial Education
+        Quality Mark is an accreditation awarded to teaching resources that are accurate,
+        engaging and of the highest standard, to allow educators to identify the best
+        financial education materials.</p>\n\n<p>“Today, we launch a revised version
+        of the Quality Mark – the new version will support providers in evaluating
+        how effective their resources are and share their findings with others. Doing
+        so provides the opportunity to create the most effective, consistent financial
+        education resources, thereby improving the standard of financial education
+        for children across the UK.”</p>\n\n<p><strong>-ENDS-</strong></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p><strong>For media enquiries please contact:</strong></p>\n\n<p>Joe
+        Cockerline or Joanna Brady at the Money Advice Service. Email <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a>
+        or call 020 7943 0593 during office hours or 07767 438 670 outside of office
+        hours.</p>\n\n<p><strong>Further Information</strong></p>\n\n<p>A two page
+        document giving more detail on these findings is available to download <a
+        href=\"https://masassets.blob.core.windows.net/cms/files/000/000/566/original/CYP_Fin_Cap_handout_Nov_2016.pdf\">here</a>.</p>\n\n<p><strong>Additional
+        research</strong></p>\n\n<p>The figures below from the London Institute of
+        Banking and Finance were released as part of their Young Person’s Money Index
+        and support the findings presented above.</p>\n\n<ul>\n  <li>The majority
+        of students (58%) currently do not receive any form of financial education
+        in school or college;</li>\n  <li>Older students (17-18) are significantly
+        less likely to receive financial education than younger students (15-16),
+        at a time when they will soon be required to make independent financial decisions
+        about going to university or starting their careers;</li>\n  <li>80% of students
+        name their parents or family as their prime source of financial understanding;</li>\n  <li>61%
+        say they have money worries;</li>\n  <li>7% of teenagers view teachers as
+        a source of financial education; 2% talk to their teachers about money</li>\n</ul>\n\n<p><strong>Supporting
+        quotes</strong></p>\n\n<p><strong>Alison Pask, Managing Director of Financial
+        Capability and Outreach at the London Insti","published_at":"2016-11-14T00:01:00.000Z","objectID":"/en/corporate/press-release-just-40-of-young-people-are-taught-money-management","_highlightResult":{"title":{"value":"Press
+        release: Just 40% of young people are taught <b>money</b> management","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        Release: Charles Counsell appointed chief executive of the Money Advice Service","description":"","content":"<p><strong>Tuesday
+        11 April 2017</strong></p>\n\n<p>Charles Counsell is to be the new Chief Executive
+        of the Money Advice Service it was announced today. The appointment was made
+        by the Financial Conduct Authority and approved by HM Treasury.</p>\n\n<p>Charles
+        is currently Executive Director and Board Member at The Pensions Regulator
+        where he has played a key role in the successful introduction of automatic
+        enrolment into workplace pensions. He succeeds Caroline Rookes who announced
+        she would be stepping down as Chief Executive of the Money Advice Service
+        in the Autumn.</p>\n\n<p>Charles was awarded an OBE in the 2017 New Year’s
+        honours for services to workplace pension reform. He joined the Pensions Regulator
+        in 2011 after a career leading major transformational change as a consultant.</p>\n\n<p>Announcing
+        Charles’s appointment, <strong>Andy Briscoe, Chair of the Money Advice Service
+        said today</strong>: “I am delighted that Charles Counsell will be joining
+        us as CEO. I believe he is ideally qualified to continue the successful delivery
+        of the Money Advice Service’s work across the UK, and to manage the transition
+        to the new Single Financial Guidance Body proposed by Government.”</p>\n\n<p>“Charles
+        has a wealth of experience in a number of key areas. He is passionate about
+        tackling financial capability, understands the challenges surrounding crisis
+        debt advice, and combines this with an excellent track record in managing
+        complex transition projects. He is also very experienced in managing complex
+        stakeholder relationships and is well-known and respected within Government
+        and the sectors we engage with.”</p>\n\n<p><strong>Charles Counsell said:</strong></p>\n\n<p>“Making
+        sure people have easy access to the guidance they need to steer through critical
+        financial issues is very important to the UK, and I am both honoured and excited
+        to have the chance to build on the Money Advice Service’s work so far. My
+        experience of guiding organisations though periods of profound change will
+        I’m sure be invaluable as we move towards establishing the new single financial
+        guidance body.”</p>\n\n<p>Charles will join the Money Advice Service on 5
+        June 2017. He will formally join the Board at its meeting in June. Caroline
+        Rookes will continue as CEO until Charles joins, to ensure a smooth transition.</p>\n\n<p><strong>FCA
+        Chairman John Griffiths-Jones commented:</strong> “I look forward to working
+        with Charles and maintaining the good relationship between the FCA and MAS
+        whilst building on the good progress made by MAS under Caroline’s leadership.”</p>\n\n<p><strong>ENDS</strong></p>\n\n<p><strong>For
+        more information</strong>, contact Money Advice Service Press Office</p>\n\n<p>020
+        7943 0593 or 07767 438 670 / <a href=\"mailto:pressoffice@moneyadviceservice.org.uk\">pressoffice@moneyadviceservice.org.uk</a></p>\n\n<p><strong>NOTES
+        TO EDITORS</strong></p>\n\n<p>1. The appointment was made by the Financial
+        Conduct Authority and approved by the Treasury in accordance with the Financial
+        Services and Markets Act 2010.</p>\n\n<p>2. Charles has been appointed on
+        a contract of up to two years. The exact date is to be confirmed.</p>\n\n<p><strong>About
+        the Money Advice Service</strong></p>\n\n<p>The Money Advice Service is an
+        independent organisation. It gives free, unbiased money guidance online at
+        moneyadviceservice.org.uk or via free phone on 0800 138 7777. Debt advice
+        is also provided through a variety of partners across the UK. The Service
+        was set up by Government and is paid for by a statutory levy on the financial
+        services industry, raised through the Financial Conduct Authority. Its statutory
+        objectives are to enhance the understanding and knowledge of members of the
+        public about financial matters (including the UK financial system); and to
+        enhance the ability of members of the public to manage their own financial
+        affairs.</p>\n","published_at":"2017-04-11T08:57:39.000Z","objectID":"/en/corporate/press-release-charles-counsell-appointed-chief-executive-of-the-money-advice-service","_highlightResult":{"title":{"value":"Press
+        Release: Charles Counsell appointed chief executive of the <b>Money</b> Advice
+        Service","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Consultation opens on improving the UK population’s money management","description":"","content":"<p>**15
+        September 2014 **</p>\n\n<p><strong>New strategy to address attitudes and
+        skills about money</strong></p>\n\n<p>Parents, schools, early years professionals,
+        the financial services industry, charities and regulators all need to work
+        together more effectively to increase people’s capability to manage their
+        money: this is the recommendation of over 50 organisations, led by the Money
+        Advice Service, who have joined forces to explore ways of improving the UK
+        population’s money management.</p>\n\n<ul>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/final-fincap-consultation---15-sept-2014.pdf\"><strong>Read
+        the press release (PDF)</strong></a></li>\n</ul>\n\n<p><a href=\"http://www.fincap.org.uk/\"
+        target=\"_blank\">Visit the website</a></p>\n","published_at":"2015-03-11T14:23:46.000Z","objectID":"/en/corporate/final-fincap-consultation","_highlightResult":{"title":{"value":"Press
+        release: Consultation opens on improving the UK population’s <b>money</b>
+        management","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: More and more people turning to the Money Advice Service to manage
+        their money","description":"","content":"<p>**7 May 2014 **</p>\n\n<p>The
+        Money Advice Service’s end-of-year figures confirm that more people than ever
+        before received advice from the Service last year. From April 2013 to March
+        2014 it received over 16 million contacts from customers.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-q4-2013-14_final.pdf\"><strong>Read
+        the press release (PDF)</strong></a></li>\n</ul>\n\n","published_at":"2015-03-16T11:06:59.000Z","objectID":"/en/corporate/end-of-year-2013-2014","_highlightResult":{"title":{"value":"Press
+        release: More and more people turning to the <b>Money</b> Advice Service to
+        manage their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Only a fifth of UK population have a money mate says new survey","description":"","content":"<p><strong>25
+        August 2011</strong></p>\n\n<p>New survey reveals 36 million of us admit we
+        are happy when we feel good about our money. Yet only 9 million of us have
+        a money mate - someone to confide in about money matters.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/20110825_moneymate.pdf\">Read
+        the press release</a></li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/lets-talk-about-money\">Read
+        the feature: Let’s talk about money</a></li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/helping-you-feel-good-about-money\">View
+        the video: Does money make you happy?</a></li>\n</ul>\n\n","published_at":"2015-03-16T12:36:05.000Z","objectID":"/en/corporate/survey","_highlightResult":{"title":{"value":"Press
+        release: Only a fifth of UK population have a <b>money</b> mate says new survey","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: John Spence appointed a non-executive director to the Money Advice
+        Service board","description":"","content":"<p>**13 December 2011 **</p>\n\n<p>John
+        Spence has been appointed a non-executive director to the Money Advice Service
+        board with effect from 2 January 2012. John brings significant experience
+        from the banking sector – he was previously the Chair for the British Bankers
+        Association Retail Banking Committee, and has held a variety of executive
+        positions at Lloyds TSB.</p>\n\n<ul>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/20111213_johnspence.pdf\">Read
+        the press release</a></li>\n</ul>\n\n","published_at":"2015-03-16T12:30:41.000Z","objectID":"/en/corporate/john-spence-appointed-non-executive-director","_highlightResult":{"title":{"value":"Press
+        release: John Spence appointed a non-executive director to the <b>Money</b>
+        Advice Service board","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}},{"title":"Press
+        release: Free online health check helps the nation kick its money into shape","description":"","content":"<p><strong>1
+        February 2012</strong></p>\n\n<p>Our online health check is helping the Nation
+        get its money into shape - to date, the online planner has provided over 400,000
+        people with an immediate route to start taking control of their money. Over
+        half (55%) of all visits have resulted in an action plan, and we have seen
+        over 75,000 online actions straight after completion of the health check.</p>\n\n<p>But
+        initial analysis reveals a worrying gap in the UK’s ‘money mind-set’. While
+        the health check may be prompting people to take control of their money matters,
+        some responses to the health check questions reveal a worrying mismatch between
+        peoples’ definition of keeping ‘on top of’ their money matters and the reality
+        of their financial situation.</p>\n\n<ul>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/20120201_freeonlinehealthcheck.pdf\">Read
+        the full press release</a></li>\n</ul>\n\n","published_at":"2015-03-16T12:29:49.000Z","objectID":"/en/corporate/free-online-health-check","_highlightResult":{"title":{"value":"Press
+        release: Free online health check helps the nation kick its <b>money</b> into
+        shape","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"","matchLevel":"none","matchedWords":[]}}}],"nbHits":359,"page":34,"nbPages":36,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","queryAfterRemoval":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=34&hitsPerPage=10&query=money"}
+
+'
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 12:54:31 GMT
+recorded_with: VCR 4.0.0

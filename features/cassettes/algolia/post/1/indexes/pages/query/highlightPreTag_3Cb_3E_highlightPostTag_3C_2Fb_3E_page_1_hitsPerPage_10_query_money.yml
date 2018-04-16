@@ -1,0 +1,297 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://xgb5qlte67-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=1\u0026hitsPerPage=10\u0026query=money"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby 1.19.2
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 12 Apr 2018 12:18:48 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 12 Apr 2018 12:18:48 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Press release: Money Advice Service calls for evidence
+        to improve UK’s financial well being","description":"Money Advice Service
+        calls for evidence to improve UK’s financial well being","content":"<p>**16
+        May 2013 **</p>\n\n<p>The Money Advice Service is today beginning the process
+        of drawing up a new strategy to improve the financial well being of the nation.</p>\n\n<p>The
+        first step is a call for individuals and organisations to provide evidence
+        of projects and initiatives which have been successful in improving people’s
+        financial well being.</p>\n\n<ul>\n  <li>\n    <p><a href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-calls-for-evidence-pr-160513-final.pdf\">Read
+        the press release in full (PDF)</a>.</p>\n  </li>\n  <li>\n    <p><a href=\"https://www.moneyadviceservice.org.uk/en/static/financial-capability-call-for-evidence\">Find
+        out more and read the Money Advice Service UK Financial Capability Strategy
+        - Call for evidence in full</a>.</p>\n  </li>\n</ul>\n\n","published_at":"2015-03-16T11:27:55.000Z","objectID":"/en/corporate/money-advice-service-calls-for-evidence-to-improve-uks-financial-well-being","_highlightResult":{"title":{"value":"Press
+        release: <b>Money</b> Advice Service calls for evidence to improve UK’s financial
+        well being","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service calls for evidence to improve UK’s financial well being","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Money Advice Service publishes 2013-14 Business Plan, to help people
+        make the most of their money","description":"Money Advice Service publishes
+        2013-14 Business Plan, to help people make the most of their money","content":"<p><strong>27
+        March 2013</strong></p>\n\n<p>The Plan details the Service’s vision to get
+        more people saving, managing debt and protecting what they own - with almost
+        half a million outcomes.</p>\n\n<p>In the year ahead, the Service will continue
+        to provide advice on the whole range of money issues faced by everyone across
+        the UK, young or old, but will focus particularly on those people in greatest
+        financial need: younger adults and low to middle income families.</p>\n\n<ul>\n  <li><a
+        href=\"/files/business-plan-2013-14-press-release-final-270313.pdf\">Read
+        the press release in full (PDF)</a></li>\n  <li><a href=\"/files/the-money-advice-service-business-plan-2013-14-final-v3.pdf\">Read
+        the The Money Advice Service Business Plan 2013-14 in full (PDF)</a></li>\n</ul>\n","published_at":"2015-05-08T13:24:13.000Z","objectID":"/en/corporate/money-advice-service-business-plan-2013-14-press-release","_highlightResult":{"title":{"value":"Press
+        release: <b>Money</b> Advice Service publishes 2013-14 Business Plan, to help
+        people make the most of their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service publishes 2013-14 Business Plan, to help people make the most
+        of their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
+        Advice Service and funding of debt advice services","description":"Money Advice
+        Service and funding of debt advice services","content":"<p>In 2012 MAS was
+        given a statutory duty to work with partners to improve the availability,
+        quality and consistency of debt advice across the UK.</p>\n\n<p>Since that
+        time MAS has become one of the largest single funders of debt advice in the
+        UK:</p>\n\n<ul>\n  <li>In 2017-18, MAS will deliver £45M of funding for services
+        that will support 468,000 people</li>\n  <li>This incorporates a mixture of
+        Face to Face (50%), Telephone (40%) and Online (10%)</li>\n  <li>26 agreements
+        in place across England and Wales, Scotland and N Ireland</li>\n  <li>Delivered
+        through grants though some contracts exist where appropriate</li>\n  <li>Delivery
+        models include direct, front-line provision and via indirect, lead organisations</li>\n</ul>\n\n<p>In
+        December 2018 the Money Advice Service launched a new five-year debt commissioning
+        strategy that outlines a challenging and exciting plan to ensure debt advice
+        services target those most in need.</p>\n\n<div class=\"add-action\">\n <a
+        href=\"https://www.moneyadviceservice.org.uk/en/corporate/a-strategic-approach-to-commissioning-debt-advice-2018-2023\">Find
+        out more about the commissioning strategy</a>\n\n</div>\n\n<p>This area of
+        the website provides:</p>\n\n<ul>\n  <li>Information around our plans for
+        commissioning of debt advice services through to 2023</li>\n  <li>Details
+        on individual regional projects and how to get involved with them</li>\n  <li>Research
+        and data which may be of benefit to any providers of debt advice</li>\n</ul>\n","published_at":"2018-03-02T15:36:32.000Z","objectID":"/en/corporate/money-advice-service-and-funding-of-debt-advice-services","_highlightResult":{"title":{"value":"<b>Money</b>
+        Advice Service and funding of debt advice services","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
+        Advice Service and funding of debt advice services","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"An
+        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector","description":"Money
+        Advice Service has researched the extent to which repeat visits to debt advice
+        could be avoided, and the main causes of people seeking more debt advice.","content":"<p>When
+        people get debt advice, we want to help them not just to solve their current
+        financial difficulties, but to avoid becoming over-indebted again in the future.
+        Without knowing the extent to which repeat visits could be avoided and implement
+        actions to prevent it, the impact and efficiency of debt advice provision
+        is reduced.</p>\n\n<p>This research, <a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/838/original/MAS_RepeatClientsReport_QualitativeResearch.pdf\">An
+        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector</a>, identifies
+        ten typologies of repeat clients, from clients that are not advice ready,
+        to clients that are capable but overwhelmed. The ten typologies are grouped
+        as either largely preventable or largely unpreventable.</p>\n\n<p>This research
+        demonstrates that the causes of repeating involve:</p>\n\n<ul>\n  <li>Clients’
+        objective financial situation and attitudes towards debt.</li>\n  <li>Advisers’
+        perceptions of and attitude towards debt advice delivery.</li>\n  <li>The
+        structure and delivery of debt advice.</li>\n</ul>\n\n<p>Opportunity areas
+        to reduce avoidable repeating are included in the report to help the advice
+        sector formulate effective responses to the ‘repeat rate’. We will incorporate
+        the results of this work into the implementation of our new commissioning
+        strategy.</p>\n\n<div class=\"add-action\">\n You can download the <a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/838/original/MAS_RepeatClientsReport_QualitativeResearch.pdf\">An
+        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector September
+        2017 research report online</a>.\n\n</div>\n","published_at":"2017-11-17T09:17:24.000Z","objectID":"/en/corporate/an-unavoidable-challenge-repeat-clients-in-the-debt-advice-sector","_highlightResult":{"title":{"value":"An
+        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector","matchLevel":"none","matchedWords":[]},"description":{"value":"<b>Money</b>
+        Advice Service has researched the extent to which repeat visits to debt advice
+        could be avoided, and the main causes of people seeking more debt advice.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Pecynnau
+        Cymorth Cyngor Ariannol","description":"Money Advice Service toolkits provide
+        information about policy changes and topical money issues","content":"<h2
+        id=\"pecynnau-cymorth-cyngor-ariannol\">Pecynnau Cymorth Cyngor Ariannol</h2>\n\n<p>Rydym
+        yn hapus i weithio gydag elusennau, awdurdodau lleol, cyflogwyr ac unrhyw
+        sefydliadau eraill er mwyn sicrhau y gallant roi cyngor ariannol cywir a defnyddiol
+        i’w cwsmeriaid a chleientiaid. I helpu gyda hyn, mae’r Gwasanaeth Cynghori
+        Ariannol wedi creu pecynnau cymorth er mwyn darparu gwybodaeth a chymorth
+        ynghylch newidiadau polisi sydd ar gyrraedd. Gallwch lawrlwytho’r pecynnau
+        cymorth, yn ddi-dâl, o’r dolenni isod:</p>\n\n<h3 id=\"pecyn-cymorth-morgeisi-llog-yn-unig--lawrlwythofilespecyn-cymorth-morgeisi-llog-yn-unigpdf\">Pecyn
+        Cymorth Morgeisi Llog yn Unig ( <a href=\"/files/pecyn-cymorth-morgeisi-llog-yn-unig.pdf\">Lawrlwytho</a>)</h3>\n\n<p><a
+        href=\"/files/pecyn-cymorth-morgeisi-llog-yn-unig.pdf\"><img src=\"interest-only-toolkit.png/{_document}/hippogallery:original\"
+        alt=\"\" /></a></p>\n\n<p>Rydyn ni wedi casglu at ei gilydd giplun o ddeunydd
+        rydyn ni’n meddwl sy’n berthnasol i’r cwsmer morgais ‘llog yn unig’ o amrediad
+        eang o adnoddau sydd ar gael ar wefan y Gwasanaeth Cynghori Ariannol. Rydyn
+        ni’n gobeithio y bydd y diwydiant morgeisi a benthycwyr yn enwedig yn gweld
+        hyn i gyd, neu ran ohono, yn ddefnyddiol wrth gyfathrebu â’u cwsmeriaid morgais.
+        Byddwn yn parhau i ddatblygu’r cynnwys hwn fel bydd ein dealltwriaeth yn cynyddu,
+        ynglŷn â’r ffordd orau i helpu’r cwsmeriaid hyn, wedi ei seilio ar yr ymchwil
+        a’r darganfyddiadau diweddaraf.</p>\n\n<h3 id=\"pecyn-cymorth-credyd-cynhwysol--lawrlwythohttpcomfymoneyadviceserviceorguksystemcomfycmsfilesfiles000000139originaluniversalcredittoolkit18junepdf\">Pecyn
+        cymorth Credyd Cynhwysol ( <a href=\"http://comfy.moneyadviceservice.org.uk//system/comfy/cms/files/files/000/000/139/original/Universal_Credit_Toolkit_18_June.pdf\">Lawrlwytho</a>)</h3>\n\n<p><a
+        href=\"/files/pecyncymorthcredydcynhwysolnov14.pdf\"><img src=\"binaries/content/gallery/contentauthoringwebsite/partners/universal_credit.png/universal_credit.png/hippogallery:original\"
+        alt=\"\" /></a></p>\n\n<p>Os ydych yn elusen, awdurdod lleol, neu sefydliad
+        arall sy’n rhoi cyngor ariannol i’r cyhoedd, gallwch ddisgwyl dechrau derbyn
+        rhagor o gwestiynau ynghylch <a href=\"https://www.moneyadviceservice.org.uk/cy/categories/universal-credit-and-other-benefits\">Credyd
+        Cynhwysol</a> a’r newidiadau sydd ar gyrraedd i’r system fudd-daliadau. Mae’r
+        pecyn cymorth Credyd Cynhwysol yn darparu gwybodaeth i’ch helpu i egluro sut
+        y bydd y newidiadau’n effeithio ar eich cwsmeriaid a’r hyn y bydd ei angen
+        arnynt i fod yn barod amdanynt.</p>\n\n<h3 id=\"pecyn-cymorth-cofrestru-awtomatig--lawrlwythofilespecyn-cymorth-cofrestru-awtomatig-money-advice-servicepdf\">Pecyn
+        cymorth Cofrestru Awtomatig ( <a href=\"/files/pecyn-cymorth-cofrestru-awtomatig-money-advice-service.pdf\">Lawrlwytho</a>)</h3>\n\n<p><a
+        href=\"/files/pecyn-cymorth-cofrestru-awtomatig-money-advice-service.pdf\"><img
+        src=\"auto_enrolment.png/{_document}/hippogallery:original\" alt=\"\" /></a></p>\n\n<p>Ers
+        mis Hydref 2012, mae <a href=\"/cy/articles/cofrestriad-awtomatig-ar-bensiwn-man-gwaith\">Cofrestru
+        Awtomatig</a> mewn pensiynau gweithle wedi dechrau cael ei gyflwyno’n raddol
+        gan gyflogwyr yn y DU. Bydd y pecyn cymorth Cofrestru Awtomatig yn darparu’r
+        wybodaeth sydd ei angen arnoch i helpu’ch gweithwyr i ddeall effaith ariannol
+        a buddion y newidiadau. Mae croeso ichi lawrlwytho, defnyddio a rhannu’r pecyn
+        cymorth lle mae’n berthnasol. Os oes gennych unrhyw ymholiadau neu os hoffech
+        gael cymorth pellach, cysylltwch â’r <a href=\"/cy/articles/mailto:partners@moneyadviceservice.org.uk\">tîm
+        Partneriaethau</a>.</p>\n","published_at":"2015-06-08T13:28:43.000Z","objectID":"/cy/corporate/pecynnau-cymorth-cyngor-ariannol","_highlightResult":{"title":{"value":"Pecynnau
+        Cymorth Cyngor Ariannol","matchLevel":"none","matchedWords":[]},"description":{"value":"<b>Money</b>
+        Advice Service toolkits provide information about policy changes and topical
+        <b>money</b> issues","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Debt
+        advice evaluation toolkit","description":"The Money Advice Service has developed
+        a debt advice evaluation toolkit. This resource has been designed for debt
+        advice organisation in the UK to use with clients to measure the impact of
+        their debt advice service.","content":"<p><strong>In partnership with key
+        organisations in the sector, we have developed an evaluation framework which
+        is now available for all debt advice organisations to use. It measures the
+        effectivess of a debt advice service against 15 client outcomes across all
+        channel types (face-to-face, telephone and online).</strong></p>\n\n<table>\n  <tbody>\n    <tr>\n    </tr>\n  </tbody>\n</table>\n\n<h2
+        id=\"client-outcomes\">15 client outcomes</h2>\n\n<table>\n  <thead>\n    <tr>\n      <th> </th>\n      <th> </th>\n      <th> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Recognising
+        and framing debt problems</strong></td>\n      <td>1</td>\n      <td>The client
+        got the advice or information they wanted</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>The
+        client is aware of the possible different ways of dealing with their debt
+        problem</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>The
+        client better understands that debtors and creditors have rights and obligations
+        and has some idea what these are</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td><strong>Action
+        to resolve debt problems</strong></td>\n      <td>4</td>\n      <td>The client
+        has a clear idea about the steps required to try and sort out their debt problems</td>\n    </tr>\n    <tr>\n      <td>5</td>\n      <td>The
+        client takes the steps they should to sort out their debt problems</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>6</td>\n      <td>If
+        a referral is made, the client follows it up and receives help from another
+        organisation</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td><strong>Money
+        Management</strong></td>\n      <td>7</td>\n      <td>The client increases
+        their household income</td>\n    </tr>\n    <tr>\n      <td>8</td>\n      <td>The
+        client is able to plan how they use their money and sticks to the plan</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>9</td>\n      <td>The
+        client reduces their outgoings</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>10</td>\n      <td>The
+        client pays priority bills first before non-priority (such as consumer credit)</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td><strong>Towards
+        debt resolution</strong></td>\n      <td>11</td>\n      <td>The client’s financial
+        situation is brought under control</td>\n    </tr>\n    <tr>\n      <td>12</td>\n      <td>The
+        client knows to review their situation if their circumstances change</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>13</td>\n      <td>The
+        client’s outstanding debt is reducing</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>14</td>\n      <td>The
+        client has appropriate contact with his/her creditors</td>\n      <td> </td>\n    </tr>\n    <tr>\n      <td>15</td>\n      <td>The
+        client’s wellbeing improves</td>\n      <td> </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2
+        id=\"register-to-access-the-debt-advice-evaluation-toolkit\">Register to access
+        the debt advice evaluation toolkit</h2>\n\n<p>We have developed a toolkit
+        to help make measuring against the evaluation framework outcomes straightforward.
+        Agree to our terms and conditions below to access the debt advice evaluation
+        toolkit.</p>\n\n<p>Tool</p>\n","published_at":"2015-04-30T11:09:45.000Z","objectID":"/en/tools/debt-advice-evaluation-toolkit-registration","_highlightResult":{"title":{"value":"Debt
+        advice evaluation toolkit","matchLevel":"none","matchedWords":[]},"description":{"value":"The
+        <b>Money</b> Advice Service has developed a debt advice evaluation toolkit.
+        This resource has been designed for debt advice organisation in the UK to
+        use with clients to measure the impact of their debt advice service.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"The
+        Money Advice Service draft business plan 2013-14","description":"The Money
+        Advice Service is seeking views and comments on its draft business plan for
+        2013-14","content":"<p><strong>The Money Advice Service is seeking views and
+        comments on its draft business plan for 2013-14.</strong></p>\n\n<p>We are
+        required, under the Financial Services Act 2010, to produce an annual business
+        plan, setting out our objectives, priorities and budget for the year ahead.
+        We are now seeking responses to a consultation on the draft plan from those
+        that have an interest in our work.</p>\n\n<h2 id=\"our-plans-for-201314-include\">Our
+        plans for 2013/14 include:</h2>\n\n<ul>\n  <li>continuing to develop our free
+        and impartial service for everyone, providing money advice to people across
+        the UK, on the web, over the phone and face-to-face.</li>\n  <li>targeting
+        younger and lower income families in particular, with tailored tools, information
+        and advice designed to more people saving, managing their debt better, preparing
+        better for retirement, protecting their assets and providing for their dependents
+        in 480,000 cases.</li>\n  <li>continuing to grant fund debt advice provision
+        across the UK, making it quicker, better and more accessible, helping 150,000
+        throughout the year.</li>\n  <li>help young people become more money savvy,
+        including developing tools for schools leavers and helping parents teach their
+        children about the importance of managing money.</li>\n  <li>developing a
+        new UK strategy for financial capability, providing a framework to bring together
+        the work of organisations across the country in helping people become more
+        financially capable.</li>\n  <li>providing a more efficient service, reducing
+        our overall budget by £3 million over the year.</li>\n</ul>\n\n<p><strong>Please
+        send your responses to <a href=\"mailto:business.plan@moneyadviceservice.org.uk\">business.plan@moneyadviceservice.org.uk</a>
+        by Monday 11 February 2013.</strong></p>\n\n<p>Following the consultation
+        and final approval by the Financial Services Authority, we will publish our
+        finalised plan in March 2013.</p>\n\n<p><a href=\"/files/mas-business-plan-2013-14.pdf\">Download
+        the Money Advice Service draft business plan in full (PDF)</a></p>\n","published_at":"2015-06-25T11:13:52.000Z","objectID":"/en/corporate/the-money-advice-service-draft-business-plan-2013-14","_highlightResult":{"title":{"value":"The
+        <b>Money</b> Advice Service draft business plan 2013-14","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"The
+        <b>Money</b> Advice Service is seeking views and comments on its draft business
+        plan for 2013-14","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"The
+        Money Advice Service Business Plan 2013-14","description":"The Money Advice
+        Service Business Plan 2013-14","content":"<p>The Money Advice Service has
+        published its business plan for 2013-14.</p>\n\n<p>We are required, under
+        the Financial Services Act 2010, to produce an annual business plan, setting
+        out our objectives, priorities and budget for the year ahead. Having undertaken
+        a public consultation on the draft plan from those that have an interest in
+        our work, and with final approval by the Financial Services Authority, we
+        have reflected recommendations made. The plan outlines the Service’s vision,
+        working in partnership with other organisations who share the same ambition.</p>\n\n<p>We
+        will:</p>\n\n<ul>\n  <li>Continue to develop our universal, free and impartial
+        service, providing information and advice on a range of money topics to people
+        across the UK, on the web, over the phone and face-to-face.</li>\n  <li>Target
+        younger people and lower income families in particular, with tailored tools,
+        information and advice designed to get more people saving, managing their
+        debt better, preparing better for retirement, protecting their assets and
+        providing for their dependents in around 480,000 cases.</li>\n  <li>Encourage
+        people to review their money regularly, helping up to 400,000 people to make
+        a budget plan.</li>\n  <li>Continue to grant-fund debt advice provision, making
+        it quicker and easier to access, helping 150,000 people throughout the year
+        in England and Wales, and more in Scotland and Northern Ireland.</li>\n  <li>Help
+        young people become more money savvy, including developing tools for school
+        leavers, and helping parents teach their children about the importance of
+        managing money.</li>\n  <li>Develop a new UK strategy for financial capability,
+        providing a framework to bring organisations together to help people across
+        the country become more financially capable.</li>\n  <li>Provide a more efficient
+        service, reducing our overall budget by over £2.5m compared to 2012/13.</li>\n  <li>Do
+        all of this in partnership with other organisations who share our commitment
+        to better money management.</li>\n</ul>\n\n<p><a href=\"/files/the-money-advice-service-business-plan-2013-14-final-v3.pdf\">Read
+        the Money Advice Service Business Plan 2013-14 in full (PDF)</a></p>\n","published_at":"2015-05-29T13:49:25.000Z","objectID":"/en/corporate/the-money-advice-service-business-plan-2013-14","_highlightResult":{"title":{"value":"The
+        <b>Money</b> Advice Service Business Plan 2013-14","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"The
+        <b>Money</b> Advice Service Business Plan 2013-14","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Demand for money advice increases","description":"The Money Advice
+        Service has seen a growth in the number of people seeking advice over the
+        past six months","content":"<p>**1 November 2012 **</p>\n\n<p>The Money Advice
+        Service has seen a growth in the number of people seeking advice over the
+        past six months.</p>\n\n<p>Mid-year results for 2012-13 show that it is helping
+        30,000 people a week.</p>\n\n<ul>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/demand-for-money-advice-increases-011112.pdf\">Read
+        the full press release here</a></li>\n</ul>\n\n","published_at":"2015-03-16T12:09:32.000Z","objectID":"/en/corporate/demand-for-money-advice-increases","_highlightResult":{"title":{"value":"Press
+        release: Demand for <b>money</b> advice increases","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"The
+        <b>Money</b> Advice Service has seen a growth in the number of people seeking
+        advice over the past six months","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Caroline Rookes appointed Money Advice Service Chief Executive","description":"The
+        Money Advice Service announced the appointment of Caroline Rookes as its new
+        Chief Executive.","content":"<p><strong>23 November 2012</strong></p>\n\n<p>The
+        Money Advice Service announced the appointment of Caroline Rookes as its new
+        Chief Executive.</p>\n\n<p>Caroline is a senior official at the Department
+        for Work and Pensions and will start her new role early in 2013.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/caroline-rookes-appointed-ceo-of-money-advice-service-23-nov-2013.pdf\">Read
+        the press release here</a></li>\n</ul>\n","published_at":"2015-05-07T10:43:42.000Z","objectID":"/en/corporate/caroline-rookes-appointed-money-advice-service-chief-executive","_highlightResult":{"title":{"value":"Press
+        release: Caroline Rookes appointed <b>Money</b> Advice Service Chief Executive","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"The
+        <b>Money</b> Advice Service announced the appointment of Caroline Rookes as
+        its new Chief Executive.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}}],"nbHits":359,"page":1,"nbPages":36,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","queryAfterRemoval":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=1&hitsPerPage=10&query=money"}
+
+'
+    http_version: 
+  recorded_at: Thu, 12 Apr 2018 12:18:48 GMT
+recorded_with: VCR 4.0.0

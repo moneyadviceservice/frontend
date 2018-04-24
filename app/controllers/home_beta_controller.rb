@@ -2,7 +2,7 @@ class HomeBetaController < ApplicationController
   layout '_unconstrained'
 
   def show
-    @resource = interactor.call
+    @resource = resource
   end
 
   def display_skip_to_main_navigation?
@@ -19,7 +19,11 @@ class HomeBetaController < ApplicationController
 
   private
 
-  def interactor
-    Core::HomePageReader.new('the-money-advice-service')
+  def resource
+    Mas::Cms::HomePage.find(
+      'the-money-advice-service',
+      locale: params[:locale],
+      cached: true
+    )
   end
 end

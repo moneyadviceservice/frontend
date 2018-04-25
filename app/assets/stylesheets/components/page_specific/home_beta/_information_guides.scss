@@ -41,6 +41,20 @@
   }
 }
 
+.information-guides__list-link {
+  float: left;
+  height: 100%;
+  width: 100%;
+  &:hover {
+    text-decoration: none;
+
+    .information-guides__list-title,
+    .information-guides__list-more {
+      text-decoration: underline;
+    }
+  }
+}
+
 .information-guides__list-title {
   @include body(18, 24);
   color: $color-black;
@@ -50,12 +64,13 @@
 }
 
 .information-guides__list-text {
+  color: $color-grey-primary;
   @include respond-to($mq-m) {
     margin-bottom: $baseline-unit*6;
   }
 }
 
-a.information-guides__list-link {
+.information-guides__list-more {
   display: block;
   color: $color-black;
   text-align: right;

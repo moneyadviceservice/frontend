@@ -39,6 +39,9 @@
 
 .most-read__link {
   @extend %clearfix;
+  float: left;
+  height: 100%;
+  width: 100%;
 
   .item__heading {
     @extend %font-heading-medium;
@@ -51,7 +54,8 @@
   &:hover {
     text-decoration: none;
 
-    .item__heading {
+    .item__heading,
+    .most-read__CTA {
       text-decoration: underline;
     }
   }

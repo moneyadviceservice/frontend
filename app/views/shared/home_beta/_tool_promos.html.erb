@@ -14,40 +14,44 @@
     <% items.each do |item| %>
       <div class="tool_promo-beta__item">
         <div class="l-constrained">
-          <div class="l-2col-main">
-            <%= link_to item['url'], class: 'tool_promo-beta__item-content' do %>
-              <%= heading_tag(level: 4, class: 'tool_promo-beta__item-heading') do %>
-                <%= item['heading'] %>
-              <% end %>
-              <%= item['text'] %>
-            <% end %>
-          </div>
-          <div class="l-2col-side">
-            <%= link_to item['url'], class: 'tool_promo-beta__item-link' do %>
-              <%= t('home.show.tools_get_started') %>
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball tool_promo-beta__item-arrow" focusable="false">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
-              </svg>
-              <span class="icon icon--arrow-right"></span>
-            <% end %>
-          </div>
+          <%= link_to item['url'], class: 'tool_promo-beta__item-link' do %>
+            <div class="l-2col-main">
+              <div class="tool_promo-beta__item-content">
+                <%= heading_tag(level: 4, class: 'tool_promo-beta__item-heading') do %>
+                  <%= item['heading'] %>
+                <% end %>
+                <%= item['text'] %>
+              </div>
+            </div>
+            <div class="l-2col-side">
+              <div class="tool_promo-beta__item-more">
+                <%= t('home.show.tools_get_started') %>
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball tool_promo-beta__item-arrow" focusable="false">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
+                </svg>
+                <span class="icon icon--arrow-right"></span>
+              </div>
+            </div>
+          <% end %>
         </div>
-
       </div>
     <% end %>
 
     <!-- View all link -->
     <div class="l-tool-promos__view-all tool_promo-beta__item">
       <div class="l-constrained">
-        <div class="l-1col">
-          <%= link_to(t('home.show.tools_view_all'), class: 'tool_promo-beta__item-link') do %>
-            <%= t('home.show.tools_view_all_text') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball tool_promo-beta__item-arrow" focusable="false">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
-            </svg>
-            <span class="icon icon--arrow-right"></span>
-          <% end %>
-        </div>
+
+        <%= link_to(t('home.show.tools_view_all'), class: 'tool_promo-beta__item-link') do %>
+          <div class="l-1col">
+            <div class="tool_promo-beta__item-more"/>
+              <%= t('home.show.tools_view_all_text') %><span class="visually-hidden"><%= t('home.show.view_all_link_expanded') %></span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right-ball tool_promo-beta__item-arrow" focusable="false">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right-ball"></use>
+              </svg>
+              <span class="icon icon--arrow-right"></span>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

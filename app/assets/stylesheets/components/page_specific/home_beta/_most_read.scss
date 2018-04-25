@@ -60,7 +60,9 @@
 .most-read__content {
   @include column(12);
 
-  padding-bottom: $arrow-right-ball_size;
+  margin: 0; // RW: Left the column on and removed the margin and width just in case it's a fix for a bug
+  padding: 0 $baseline-unit*2 $arrow-right-ball_size;
+  width: 100%;
 
   & > * {
     color: $color-grey-primary;
@@ -76,7 +78,7 @@
   line-height: $arrow-right-ball_size;
   position: absolute;
   bottom: 0;
-  right: $default-gutter;
+  right: $baseline-unit * 2;
 }
 
 .most-read__arrow {

@@ -20,6 +20,7 @@
 }
 
 a.tool_promo-beta__item-link {
+  @include body(16, 24);
   color: $color-grey-primary;
   padding: $baseline-unit*2 0;
   display: block;

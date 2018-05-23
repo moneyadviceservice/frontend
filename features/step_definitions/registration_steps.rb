@@ -23,8 +23,6 @@ Then(/^My MAS account should (not )?be created$/) do |negated|
   else
     expect(User.where(email: 'phil@example.com')
                 .where(first_name: 'phil')
-                .where(post_code: 'NE1 6EE')
-                .where(newsletter_subscription: false)
                 .count).to eql(1)
   end
 end
@@ -80,8 +78,6 @@ end
 Then(/^My MAS account should have already been created$/) do
   expect(User.where(email: 'phil@example.com')
               .where(first_name: 'phil')
-              .where(post_code: 'NE1 6EE')
-              .where(newsletter_subscription: false)
               .count).to eql(1)
 end
 

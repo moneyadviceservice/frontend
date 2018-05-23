@@ -20,6 +20,12 @@ class User < ActiveRecord::Base
   # :confirmable,
   # :invitable,
 
+  # Add database encryption and blind index for login, name and email
+  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, key: ENV['ATTR_CRYPT_KEY']
+  blind_index :email, key: ENV['ATTR_CRYPT_KEY']
+  blind_index :first_name, key: ENV['ATTR_CRYPT_KEY']
+  blind_index :last_name, key: ENV['ATTR_CRYPT_KEY']
+
   before_validation :uppercase_post_code
 
   validates_with Validators::Email, attributes: [:email]

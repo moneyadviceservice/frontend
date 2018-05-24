@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/universal_credits/managing-your-rent-while-in-shared-accommodation-ni.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.7.1 (Margo-Urey-00241.local; margourey; 97806) ruby/2.2.5
+        (319; x86_64-darwin16)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 24 May 2018 12:04:30 GMT
+      Status:
+      - 400 Bad Request
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5ba96165-7b8b-4ad1-966b-4cb60cf6192e
+      X-Runtime:
+      - '0.029286'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Page type \"universal_credit\" not supported"}'
+    http_version: 
+  recorded_at: Tue, 26 Apr 2016 13:00:17 GMT
+recorded_with: VCR 4.0.0

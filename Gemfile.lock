@@ -472,7 +472,7 @@ GEM
       activesupport
     orm_adapter (0.5.0)
     parallel (1.12.1)
-    parser (2.5.0.4)
+    parser (2.5.1.0)
       ast (~> 2.4.0)
     payday_loans_intervention (1.7.0.266)
       autoprefixer-rails
@@ -481,16 +481,16 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (1.4.3.558)
+    pensions_calculator (1.5.0.561)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       meta-tags
-      pensions_calculator-calculations (~> 1.5.0)
+      pensions_calculator-calculations (~> 1.6.0)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
-    pensions_calculator-calculations (1.5.0.13)
+    pensions_calculator-calculations (1.6.0.14)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -569,10 +569,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.18.4)
+    rio (1.20.0)
       bowndler
       dough-ruby
-      pensions_calculator-calculations (~> 1.5.0)
+      pensions_calculator-calculations (~> 1.6.0)
       rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
@@ -804,7 +804,7 @@ DEPENDENCIES
   nunes
   opening_hours
   payday_loans_intervention (~> 1.7.0)
-  pensions_calculator (~> 1.4.3)
+  pensions_calculator (~> 1.5.0)
   poltergeist
   postcode_anywhere-email_validation
   pry-rails
@@ -815,7 +815,7 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   recaptcha
   redcarpet
-  rio (= 1.18.4)!
+  rio (= 1.20.0)!
   rouge
   rspec-html-matchers
   rspec-rails

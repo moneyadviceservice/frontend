@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   VALID_AGE_RANGES = ['0-15', '16-17', '18-20', '21-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75+'].freeze
-  CRM_FIELDS = %w[email first_name post_code newsletter_subscription].freeze
+  CRM_FIELDS = %w[encrypted_email_bidx encrypted_first_name encrypted_post_code newsletter_subscription].freeze
 
   def field_order
     %i[first_name email password post_code]
@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
   blind_index :email, key: ENV['ATTR_CRYPT_KEY']
   blind_index :first_name, key: ENV['ATTR_CRYPT_KEY']
   blind_index :last_name, key: ENV['ATTR_CRYPT_KEY']
+  before_validation :compute_bi, if: ->(u) {
+    u.encrypted_email_changed? || u.encrypted_first_name_changed? || u.encrypted_last_name_changed?
+  }
 
   before_validation :uppercase_post_code
 
@@ -86,6 +89,12 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def compute_bi
+    compute_email_bidx
+    compute_first_name_bidx
+    compute_last_name_bidx
+  end
 
   def create_to_crm
     Delayed::Job.enqueue(Jobs::CreateCustomer.new(id),

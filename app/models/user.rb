@@ -96,6 +96,10 @@ class User < ActiveRecord::Base
     compute_last_name_bidx
   end
 
+  def self.find_first_by_auth_conditions(conditions)
+    User.where(email: conditions[:email]).first
+  end
+
   def create_to_crm
     Delayed::Job.enqueue(Jobs::CreateCustomer.new(id),
                          queue: 'frontend_crm')

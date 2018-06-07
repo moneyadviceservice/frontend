@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229121737) do
+ActiveRecord::Schema.define(version: 20180523092831) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -691,51 +691,69 @@ ActiveRecord::Schema.define(version: 20171229121737) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                   limit: 255,   default: "",    null: false
-    t.string   "encrypted_password",      limit: 255,   default: ""
-    t.string   "reset_password_token",    limit: 255
+    t.string   "email_old",                   limit: 255,   default: "",    null: false
+    t.string   "encrypted_password",          limit: 255,   default: ""
+    t.string   "reset_password_token",        limit: 255
     t.datetime "reset_password_sent_at"
-    t.integer  "sign_in_count",           limit: 4,     default: 0
+    t.integer  "sign_in_count",               limit: 4,     default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",      limit: 255
-    t.string   "last_sign_in_ip",         limit: 255
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
+    t.string   "current_sign_in_ip",          limit: 255
+    t.string   "last_sign_in_ip",             limit: 255
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
     t.boolean  "accept_terms_conditions"
-    t.string   "first_name",              limit: 255
-    t.string   "last_name",               limit: 255
-    t.string   "password_salt",           limit: 255
-    t.string   "post_code",               limit: 255
-    t.string   "age_range",               limit: 255
-    t.string   "gender",                  limit: 255
-    t.boolean  "newsletter_subscription",               default: false
-    t.string   "customer_id",             limit: 255
-    t.text     "health_check_result",     limit: 65535
-    t.boolean  "active",                                default: true
+    t.string   "first_name_old",              limit: 255
+    t.string   "last_name_old",               limit: 255
+    t.string   "password_salt",               limit: 255
+    t.string   "post_code_old",               limit: 255
+    t.string   "age_range_old",               limit: 255
+    t.string   "gender",                      limit: 255
+    t.boolean  "newsletter_subscription",                   default: false
+    t.string   "customer_id",                 limit: 255
+    t.text     "health_check_result",         limit: 65535
+    t.boolean  "active",                                    default: true
     t.date     "date_of_birth"
-    t.string   "confirmation_token",      limit: 255
+    t.string   "confirmation_token",          limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email",       limit: 255
-    t.string   "csr_id",                  limit: 255
-    t.string   "invitation_token",        limit: 60
+    t.string   "unconfirmed_email",           limit: 255
+    t.string   "csr_id",                      limit: 255
+    t.string   "invitation_token",            limit: 60
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
-    t.integer  "invitation_limit",        limit: 4
-    t.integer  "invited_by_id",           limit: 4
-    t.string   "invited_by_type",         limit: 255
-    t.integer  "failed_attempts",         limit: 4,     default: 0
-    t.string   "unlock_token",            limit: 255
+    t.integer  "invitation_limit",            limit: 4
+    t.integer  "invited_by_id",               limit: 4
+    t.string   "invited_by_type",             limit: 255
+    t.integer  "failed_attempts",             limit: 4,     default: 0
+    t.string   "unlock_token",                limit: 255
     t.datetime "locked_at"
-    t.string   "goal_statement",          limit: 255
-    t.string   "goal_deadline",           limit: 255
-    t.string   "contact_number",          limit: 255
-    t.boolean  "opt_in_for_research",                   default: false
+    t.string   "goal_statement",              limit: 255
+    t.string   "goal_deadline",               limit: 255
+    t.string   "contact_number_old",          limit: 255
+    t.boolean  "opt_in_for_research",                       default: false
+    t.string   "encrypted_first_name",        limit: 255
+    t.string   "encrypted_first_name_iv",     limit: 255
+    t.string   "encrypted_first_name_bidx",   limit: 255
+    t.string   "encrypted_last_name",         limit: 255
+    t.string   "encrypted_last_name_iv",      limit: 255
+    t.string   "encrypted_last_name_bidx",    limit: 255
+    t.string   "encrypted_email",             limit: 255
+    t.string   "encrypted_email_iv",          limit: 255
+    t.string   "encrypted_email_bidx",        limit: 255
+    t.string   "encrypted_post_code",         limit: 255
+    t.string   "encrypted_post_code_iv",      limit: 255
+    t.string   "encrypted_contact_number",    limit: 255
+    t.string   "encrypted_contact_number_iv", limit: 255
+    t.string   "encrypted_age_range",         limit: 255
+    t.string   "encrypted_age_range_iv",      limit: 255
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email_old"], name: "index_users_on_email_old", unique: true, using: :btree
+  add_index "users", ["encrypted_email_bidx"], name: "index_users_on_encrypted_email_bidx", unique: true, using: :btree
+  add_index "users", ["encrypted_first_name_bidx"], name: "index_users_on_encrypted_first_name_bidx", unique: true, using: :btree
+  add_index "users", ["encrypted_last_name_bidx"], name: "index_users_on_encrypted_last_name_bidx", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

@@ -16,8 +16,8 @@ class AddEncryptedFields < ActiveRecord::Migration
     add_column :users, :encrypted_age_range, :string
     add_column :users, :encrypted_age_range_iv, :string
     # blind index
-    add_index :users, :encrypted_first_name_bidx, unique: true
-    add_index :users, :encrypted_last_name_bidx, unique: true
+    add_index :users, :encrypted_first_name_bidx, unique: false
+    add_index :users, :encrypted_last_name_bidx, unique: false
     add_index :users, :encrypted_email_bidx, unique: true
     # rename old columns
     rename_column :users, :email, :email_old

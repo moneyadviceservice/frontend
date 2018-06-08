@@ -25,7 +25,8 @@ class User < ActiveRecord::Base
   blind_index :email, key: ENV['BIDX_CRYPT_KEY']
   blind_index :first_name, key: ENV['BIDX_CRYPT_KEY']
   blind_index :last_name, key: ENV['BIDX_CRYPT_KEY']
-  before_validation :compute_bi, if: ->(u) {
+
+  before_validation :compute_blind_index, if: lambda { |u|
     u.encrypted_email_changed? || u.encrypted_first_name_changed? || u.encrypted_last_name_changed?
   }
 
@@ -90,7 +91,7 @@ class User < ActiveRecord::Base
 
   private
 
-  def compute_bi
+  def compute_blind_index
     compute_email_bidx
     compute_first_name_bidx
     compute_last_name_bidx

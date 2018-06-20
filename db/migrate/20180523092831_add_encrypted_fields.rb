@@ -1,20 +1,50 @@
 class AddEncryptedFields < ActiveRecord::Migration
   def change
-    add_column :users, :encrypted_first_name, :string
-    add_column :users, :encrypted_first_name_iv, :string
-    add_column :users, :encrypted_first_name_bidx, :string
-    add_column :users, :encrypted_last_name, :string
-    add_column :users, :encrypted_last_name_iv, :string
-    add_column :users, :encrypted_last_name_bidx, :string
-    add_column :users, :encrypted_email, :string
-    add_column :users, :encrypted_email_iv, :string
-    add_column :users, :encrypted_email_bidx, :string
-    add_column :users, :encrypted_post_code, :string
-    add_column :users, :encrypted_post_code_iv, :string
-    add_column :users, :encrypted_contact_number, :string
-    add_column :users, :encrypted_contact_number_iv, :string
-    add_column :users, :encrypted_age_range, :string
-    add_column :users, :encrypted_age_range_iv, :string
+    add_column :users, :encrypted_first_name, :string 
+      unless column_exists? :users, :encrypted_first_name 
+      end
+    add_column :users, :encrypted_first_name_iv, :string 
+      unless column_exists? :users, :encrypted_first_name_iv 
+      end
+    add_column :users, :encrypted_first_name_bidx, :string 
+      unless column_exists? :users, :encrypted_first_name_bidx 
+      end
+    add_column :users, :encrypted_last_name, :string 
+      unless column_exists? :users, :encrypted_last_name 
+      end
+    add_column :users, :encrypted_last_name_iv, :string 
+      unless column_exists? :users, :encrypted_last_name_iv 
+      end
+    add_column :users, :encrypted_last_name_bidx, :string 
+      unless column_exists? :users, :encrypted_last_name_bidx 
+      end
+    add_column :users, :encrypted_email, :string 
+      unless column_exists? :users, :encrypted_email 
+      end
+    add_column :users, :encrypted_email_iv, :string 
+      unless column_exists? :users, :encrypted_email_iv 
+      end
+    add_column :users, :encrypted_email_bidx, :string 
+      unless column_exists? :users, :encrypted_first_name_bidx 
+      end
+    add_column :users, :encrypted_post_code, :string 
+      unless column_exists? :users, :encrypted_post_code 
+      end
+    add_column :users, :encrypted_post_code_iv, :string 
+      unless column_exists? :users, :encrypted_post_code_iv 
+      end
+    add_column :users, :encrypted_contact_number, :string 
+      unless column_exists? :users, :encrypted_contact_number 
+      end
+    add_column :users, :encrypted_contact_number_iv, :string 
+      unless column_exists? :users, :encrypted_contact_number_iv 
+      end
+    add_column :users, :encrypted_age_range, :string 
+      unless column_exists? :users, :encrypted_age_range 
+      end
+    add_column :users, :encrypted_age_range_iv, :string 
+      unless column_exists? :users, :encrypted_first_name_iv 
+      end
     # blind index
     add_index :users, :encrypted_first_name_bidx, unique: false
     add_index :users, :encrypted_last_name_bidx, unique: false
@@ -40,7 +70,7 @@ class AddEncryptedFields < ActiveRecord::Migration
         instance.compute_first_name_bidx
         instance.compute_last_name_bidx
         instance.save!
-     end
+      end
   end
   def down
     rename_column :users, :email_old, :email

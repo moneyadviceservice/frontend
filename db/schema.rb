@@ -61,6 +61,20 @@ ActiveRecord::Schema.define(version: 20180523092831) do
     t.datetime "updated_at"
   end
 
+  create_table "advice_plans_advice_plans", force: :cascade do |t|
+    t.string   "code",         limit: 255,                 null: false
+    t.boolean  "current",                  default: false, null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "advice_plans_advice_plans_tasks", id: false, force: :cascade do |t|
+    t.integer "advice_plan_id", limit: 4, null: false
+    t.integer "task_id",        limit: 4, null: false
+  end
+
   create_table "advice_plans_plans", force: :cascade do |t|
     t.string   "code",         limit: 255,                     null: false
     t.boolean  "current",                  default: false,     null: false

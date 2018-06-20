@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523092831) do
+ActiveRecord::Schema.define(version: 20180619090944) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -727,7 +727,7 @@ ActiveRecord::Schema.define(version: 20180523092831) do
     t.string   "customer_id",                 limit: 255
     t.text     "health_check_result",         limit: 65535
     t.boolean  "active",                                    default: true
-    t.date     "date_of_birth"
+    t.date     "date_of_birth_old"
     t.string   "confirmation_token",          limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -761,6 +761,8 @@ ActiveRecord::Schema.define(version: 20180523092831) do
     t.string   "encrypted_contact_number_iv", limit: 255
     t.string   "encrypted_age_range",         limit: 255
     t.string   "encrypted_age_range_iv",      limit: 255
+    t.string   "encrypted_date_of_birth",     limit: 255
+    t.string   "encrypted_date_of_birth_iv",  limit: 255
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

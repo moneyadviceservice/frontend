@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   # :invitable,
 
   # Add database encryption and blind index for login, name and email
-  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, key: ENV['ATTR_CRYPT_KEY']
+  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, :date_of_birth, key: ENV['ATTR_CRYPT_KEY']
   blind_index :email, key: ENV['BIDX_CRYPT_KEY']
   blind_index :first_name, key: ENV['BIDX_CRYPT_KEY']
   blind_index :last_name, key: ENV['BIDX_CRYPT_KEY']

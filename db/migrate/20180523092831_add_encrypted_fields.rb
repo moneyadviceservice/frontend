@@ -1,32 +1,80 @@
 class AddEncryptedFields < ActiveRecord::Migration
   def change
-    add_column :users, :encrypted_first_name, :string
-    add_column :users, :encrypted_first_name_iv, :string
-    add_column :users, :encrypted_first_name_bidx, :string
-    add_column :users, :encrypted_last_name, :string
-    add_column :users, :encrypted_last_name_iv, :string
-    add_column :users, :encrypted_last_name_bidx, :string
-    add_column :users, :encrypted_email, :string
-    add_column :users, :encrypted_email_iv, :string
-    add_column :users, :encrypted_email_bidx, :string
-    add_column :users, :encrypted_post_code, :string
-    add_column :users, :encrypted_post_code_iv, :string
-    add_column :users, :encrypted_contact_number, :string
-    add_column :users, :encrypted_contact_number_iv, :string
-    add_column :users, :encrypted_age_range, :string
-    add_column :users, :encrypted_age_range_iv, :string
+    unless column_exists? :users, :encrypted_first_name
+      add_column :users, :encrypted_first_name, :string 
+    end
+    unless column_exists? :users, :encrypted_first_name_iv
+      add_column :users, :encrypted_first_name_iv, :string  
+    end
+    unless column_exists? :users, :encrypted_first_name_bidx
+      add_column :users, :encrypted_first_name_bidx, :string 
+    end
+    unless column_exists? :users, :encrypted_last_name
+      add_column :users, :encrypted_last_name, :string 
+    end
+    unless column_exists? :users, :encrypted_last_name_iv 
+      add_column :users, :encrypted_last_name_iv, :string
+    end
+    unless column_exists? :users, :encrypted_last_name_bidx
+      add_column :users, :encrypted_last_name_bidx, :string
+    end
+    unless column_exists? :users, :encrypted_email 
+      add_column :users, :encrypted_email, :string
+    end
+    unless column_exists? :users, :encrypted_email_iv
+      add_column :users, :encrypted_email_iv, :string 
+    end
+    unless column_exists? :users, :encrypted_email_bidx 
+      add_column :users, :encrypted_email_bidx, :string
+    end
+    unless column_exists? :users, :encrypted_post_code
+      add_column :users, :encrypted_post_code, :string 
+    end
+    unless column_exists? :users, :encrypted_post_code_iv
+      add_column :users, :encrypted_post_code_iv, :string 
+    end
+    unless column_exists? :users, :encrypted_contact_number 
+      add_column :users, :encrypted_contact_number, :string
+    end
+    unless column_exists? :users, :encrypted_contact_number_iv
+      add_column :users, :encrypted_contact_number_iv, :string 
+    end
+    unless column_exists? :users, :encrypted_age_range
+      add_column :users, :encrypted_age_range, :string 
+    end
+    unless column_exists? :users, :encrypted_age_range_iv
+      add_column :users, :encrypted_age_range_iv, :string 
+    end
     # blind index
-    add_index :users, :encrypted_first_name_bidx, unique: false
-    add_index :users, :encrypted_last_name_bidx, unique: false
-    add_index :users, :encrypted_email_bidx, unique: true
+    unless index_exists? :users, :encrypted_first_name_bidx, unique: false
+      add_index :users, :encrypted_first_name_bidx, unique: false
+    end
+    unless index_exists? :users, :encrypted_last_name_bidx, unique: false
+      add_index :users, :encrypted_last_name_bidx, unique: false
+    end
+    unless index_exists? :users, :encrypted_email_bidx, unique: true
+      add_index :users, :encrypted_email_bidx, unique: true
+    end
     # rename old columns
-    rename_column :users, :email, :email_old
-    rename_column :users, :first_name, :first_name_old
-    rename_column :users, :last_name, :last_name_old
-    rename_column :users, :post_code, :post_code_old
-    rename_column :users, :contact_number, :contact_number_old
-    rename_column :users, :age_range, :age_range_old
-
+    if column_exists? :users, :email
+      rename_column :users, :email, :email_old
+    end
+    if column_exists? :users, :first_name
+      rename_column :users, :first_name, :first_name_old
+    end
+    if column_exists? :users, :last_name
+      rename_column :users, :last_name, :last_name_old
+    end
+    if column_exists? :users, :post_code
+      rename_column :users, :post_code, :post_code_old
+    end
+    if column_exists? :users, :contact_number
+      rename_column :users, :contact_number, :contact_number_old
+    end
+    if column_exists? :users, :age_range
+      rename_column :users, :age_range, :age_range_old
+    end
+    
     User.reset_column_information
      User.find_each do |instance|
       #this will set the encrypted_reply based on attr_encrypted
@@ -40,7 +88,7 @@ class AddEncryptedFields < ActiveRecord::Migration
         instance.compute_first_name_bidx
         instance.compute_last_name_bidx
         instance.save!
-     end
+      end
   end
   def down
     rename_column :users, :email_old, :email

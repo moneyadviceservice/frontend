@@ -89,7 +89,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '< 3.0'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
   gem 'cucumber-rails', require: false

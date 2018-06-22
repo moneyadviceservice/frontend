@@ -21,7 +21,8 @@ class User < ActiveRecord::Base
   # :invitable,
 
   # Add database encryption and blind index for login, name and email
-  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, :date_of_birth, key: ENV['ATTR_CRYPT_KEY']
+  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, key: ENV['ATTR_CRYPT_KEY']
+  attr_encrypted :date_of_birth, key: ENV['ATTR_CRYPT_KEY'], marshal: true
   blind_index :email, key: ENV['BIDX_CRYPT_KEY']
   blind_index :first_name, key: ENV['BIDX_CRYPT_KEY']
   blind_index :last_name, key: ENV['BIDX_CRYPT_KEY']
@@ -31,6 +32,7 @@ class User < ActiveRecord::Base
   }
 
   before_validation :uppercase_post_code
+  before_save :datify_dob
 
   validates_with Validators::Email, attributes: [:email]
   validates_with Validators::DateOfBirth, attributes: [:date_of_birth]
@@ -53,7 +55,7 @@ class User < ActiveRecord::Base
   before_save :fake_send_confirmation_email
   after_create :create_to_crm
   after_update :update_to_crm
-
+ 
   def to_customer
     Converters::UserToCustomer.new(self).call
   end
@@ -115,6 +117,10 @@ class User < ActiveRecord::Base
 
   def uppercase_post_code
     post_code.upcase! if post_code
+  end
+
+  def datify_dob
+    self.date_of_birth = date_of_birth.to_date if date_of_birth
   end
 
   def fake_send_confirmation_email

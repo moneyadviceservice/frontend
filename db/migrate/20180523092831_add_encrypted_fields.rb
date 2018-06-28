@@ -1,5 +1,5 @@
 class AddEncryptedFields < ActiveRecord::Migration
-  def change
+  def up
     unless column_exists? :users, :encrypted_first_name
       add_column :users, :encrypted_first_name, :string 
     end
@@ -45,6 +45,12 @@ class AddEncryptedFields < ActiveRecord::Migration
     unless column_exists? :users, :encrypted_age_range_iv
       add_column :users, :encrypted_age_range_iv, :string 
     end
+    unless column_exists? :users, :encrypted_date_of_birth
+      add_column :users, :encrypted_date_of_birth, :string
+    end
+    unless column_exists? :users, :encrypted_date_of_birth_iv
+      add_column :users, :encrypted_date_of_birth_iv, :string
+    end
     # blind index
     unless index_exists? :users, :encrypted_first_name_bidx, unique: false
       add_index :users, :encrypted_first_name_bidx, unique: false
@@ -74,6 +80,9 @@ class AddEncryptedFields < ActiveRecord::Migration
     if column_exists? :users, :age_range
       rename_column :users, :age_range, :age_range_old
     end
+    if column_exists? :users, :date_of_birth
+      rename_column :users, :date_of_birth, :date_of_birth_old
+    end
     
     User.reset_column_information
      User.find_each do |instance|
@@ -84,6 +93,7 @@ class AddEncryptedFields < ActiveRecord::Migration
         instance.post_code = instance.post_code_old
         instance.contact_number = instance.contact_number_old
         instance.age_range = instance.age_range_old
+        instance.date_of_birth = instance.date_of_birth_old
         instance.compute_email_bidx
         instance.compute_first_name_bidx
         instance.compute_last_name_bidx
@@ -97,5 +107,6 @@ class AddEncryptedFields < ActiveRecord::Migration
     rename_column :users, :post_code_old, :post_code
     rename_column :users, :contact_number_old, :contact_number
     rename_column :users, :age_range_old, :age_range
+    rename_column :users, :date_of_birth_old, :date_of_birth
   end
 end

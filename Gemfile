@@ -63,7 +63,7 @@ gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.1.0'
 gem 'payday_loans_intervention', '~> 1.7.0'
-gem 'pensions_calculator', '~> 1.5.0'
+gem 'pensions_calculator' , git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: '9291_policy-text'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.20.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
@@ -89,7 +89,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '< 3.0'
+  gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
   gem 'cucumber-rails', require: false

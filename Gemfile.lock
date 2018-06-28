@@ -9,21 +9,26 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator
+  revision: e273f7eab60ce65b19178e71f320edfe34ec0fad
+  branch: 9291_policy-text
+  specs:
+    pensions_calculator (1.6.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      pensions_calculator-calculations (~> 1.6.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
     site_search (0.1.0)
       algoliasearch
-
-GIT
-  remote: git@github.com:moneyadviceservice/wpcc
-  revision: 9601c899b75597086f1dbe665ece9dd4de8db9df
-  branch: 9256_callout-overlap-bug
-  specs:
-    wpcc (2.1.0)
-      dough-ruby
-      meta-tags
-      rails (>= 4, < 5)
 
 GEM
   remote: https://rubygems.org/
@@ -493,15 +498,6 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (1.5.0.561)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      pensions_calculator-calculations (~> 1.6.0)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
     pensions_calculator-calculations (1.6.0.14)
       activesupport
     poltergeist (1.18.1)
@@ -769,7 +765,7 @@ DEPENDENCIES
   budget_planner (~> 5.1.1)
   bugsnag
   byebug
-  capybara (< 3.0)
+  capybara
   car_cost_tool (~> 1.2.2)
   chai-jquery-rails
   chronic
@@ -817,7 +813,7 @@ DEPENDENCIES
   nunes
   opening_hours
   payday_loans_intervention (~> 1.7.0)
-  pensions_calculator (~> 1.5.0)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation
   pry-rails

@@ -98,7 +98,7 @@ RSpec.describe User, type: :model do
     it { is_expected.not_to allow_value('0900500500090').for(:contact_number) }
 
     it 'allows update with blank password' do
-      user = FactoryGirl.create(:user)
+      user = FactoryBot.create(:user)
       user = User.first
       user.first_name = 'Philip'
       expect { user.save! }.to_not raise_error

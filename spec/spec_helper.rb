@@ -7,7 +7,7 @@ require 'pry'
 require_relative '../config/environment'
 
 require 'rspec/rails'
-require 'factory_girl'
+require 'factory_bot'
 require 'html_validation'
 require 'webmock/rspec'
 require 'database_cleaner'
@@ -22,8 +22,8 @@ DatabaseCleaner.strategy = :deletion
 
 Draper::ViewContext.test_strategy :fast
 
-FactoryGirl.definition_file_paths << File.join(File.dirname(__FILE__), '..', 'features', 'factories')
-FactoryGirl.find_definitions
+FactoryBot.definition_file_paths << File.join(File.dirname(__FILE__), '..', 'features', 'factories')
+FactoryBot.find_definitions
 
 I18n.available_locales = %i[en cy]
 
@@ -73,7 +73,7 @@ class FakeFooterRepositoryDefinedInSpecHelper
 end
 
 RSpec.configure do |c|
-  c.include FactoryGirl::Syntax::Methods
+  c.include FactoryBot::Syntax::Methods
   c.include Devise::Test::ControllerHelpers, type: :controller
   c.include PageValidations
   c.include Rails.application.routes.url_helpers

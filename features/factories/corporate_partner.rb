@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :corporate_partner, class: CorporatePartner do
     name 'Tenacious Co'
     sequence(:email) { |i| "fakeorg#{i}@example.com" }

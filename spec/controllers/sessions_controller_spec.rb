@@ -1,7 +1,7 @@
 RSpec.describe SessionsController, type: :controller do
   describe '#create' do
     context 'when user has been updated in CRM' do
-      let!(:user) { FactoryGirl.create(:user) }
+      let!(:user) { FactoryBot.create(:user) }
       let(:customer) { Core::Registry::Repository[:customer].customers.first }
       let(:new_first_name) { 'Philip' }
 

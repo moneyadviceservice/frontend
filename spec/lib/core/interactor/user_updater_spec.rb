@@ -2,7 +2,7 @@ module Core
   module Interactors
     RSpec.describe UserUpdater do
       let(:user) do
-        FactoryGirl.create :user
+        FactoryBot.create :user
       end
       subject { described_class.new user }
 

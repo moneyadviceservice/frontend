@@ -10,7 +10,7 @@ module Core
       end
 
       context 'when customer does not exist in CRM' do
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryBot.create(:user) }
         subject { described_class.new }
 
         before :each do
@@ -26,7 +26,7 @@ module Core
       end
 
       context 'when customer exists in CRM' do
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryBot.create(:user) }
         subject { described_class.new }
 
         before :each do

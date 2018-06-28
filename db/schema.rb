@@ -88,17 +88,17 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "status",       limit: 255, default: "unknown", null: false
   end
 
-  add_index "advice_plans_plans", ["code"], name: "index_advice_plans_plans_on_code", using: :btree
-  add_index "advice_plans_plans", ["current"], name: "index_advice_plans_plans_on_current", using: :btree
-  add_index "advice_plans_plans", ["owner_id", "owner_type"], name: "index_advice_plans_plans_on_owner_id_and_owner_type", using: :btree
+  add_index "advice_plans_plans", ["code"], name: "index_advice_plans_plans_on_code"
+  add_index "advice_plans_plans", ["current"], name: "index_advice_plans_plans_on_current"
+  add_index "advice_plans_plans", ["owner_id", "owner_type"], name: "index_advice_plans_plans_on_owner_id_and_owner_type"
 
   create_table "advice_plans_plans_tasks", id: false, force: :cascade do |t|
     t.integer "plan_id", limit: 4, null: false
     t.integer "task_id", limit: 4, null: false
   end
 
-  add_index "advice_plans_plans_tasks", ["plan_id"], name: "index_advice_plans_plans_tasks_on_plan_id", using: :btree
-  add_index "advice_plans_plans_tasks", ["task_id"], name: "index_advice_plans_plans_tasks_on_task_id", using: :btree
+  add_index "advice_plans_plans_tasks", ["plan_id"], name: "index_advice_plans_plans_tasks_on_plan_id"
+  add_index "advice_plans_plans_tasks", ["task_id"], name: "index_advice_plans_plans_tasks_on_task_id"
 
   create_table "advice_plans_tasks", force: :cascade do |t|
     t.string   "code",              limit: 255,                null: false
@@ -116,10 +116,10 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "started_plan_slug", limit: 255
   end
 
-  add_index "advice_plans_tasks", ["code"], name: "index_advice_plans_tasks_on_code", using: :btree
-  add_index "advice_plans_tasks", ["deadline"], name: "index_advice_plans_tasks_on_deadline", using: :btree
-  add_index "advice_plans_tasks", ["owner_id", "owner_type"], name: "index_advice_plans_tasks_on_owner_id_and_owner_type", using: :btree
-  add_index "advice_plans_tasks", ["state"], name: "index_advice_plans_tasks_on_state", using: :btree
+  add_index "advice_plans_tasks", ["code"], name: "index_advice_plans_tasks_on_code"
+  add_index "advice_plans_tasks", ["deadline"], name: "index_advice_plans_tasks_on_deadline"
+  add_index "advice_plans_tasks", ["owner_id", "owner_type"], name: "index_advice_plans_tasks_on_owner_id_and_owner_type"
+  add_index "advice_plans_tasks", ["state"], name: "index_advice_plans_tasks_on_state"
 
   create_table "agreements_agreements", force: :cascade do |t|
     t.string   "name",                                  limit: 255
@@ -137,7 +137,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
   end
 
   create_table "budget_planner_budgets", force: :cascade do |t|
-    t.binary   "data",               limit: 65535, null: false
+    t.binary   "data",                             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",            limit: 4
@@ -146,17 +146,17 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.text     "referral_url",       limit: 65535
   end
 
-  add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id", using: :btree
+  add_index "budget_planner_budgets", ["user_id"], name: "index_budget_planner_budgets_on_user_id"
 
   create_table "budget_planner_spreadsheets", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4,     null: false
-    t.binary   "data",       limit: 65535, null: false
+    t.integer  "user_id",    limit: 4, null: false
+    t.binary   "data",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "budget_planner_wip_budgets", force: :cascade do |t|
-    t.binary   "data",             limit: 65535, null: false
+    t.binary   "data",                           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",          limit: 4
@@ -166,7 +166,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.text     "referral_url",     limit: 65535
   end
 
-  add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id", using: :btree
+  add_index "budget_planner_wip_budgets", ["user_id"], name: "index_budget_planner_wip_budgets_on_user_id"
 
   create_table "car_cost_tool_car_adjustments", force: :cascade do |t|
     t.integer "user_data_id",      limit: 4
@@ -192,7 +192,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.integer "intended_ownership_term", limit: 4
   end
 
-  add_index "car_cost_tool_user_data", ["token"], name: "index_car_cost_tool_user_data_on_token", unique: true, using: :btree
+  add_index "car_cost_tool_user_data", ["token"], name: "index_car_cost_tool_user_data_on_token", unique: true
 
   create_table "car_cost_tool_ved_capacity_rates", force: :cascade do |t|
     t.integer  "cc_lower_limit",           limit: 4
@@ -250,7 +250,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "countdown_precision",               limit: 255
   end
 
-  add_index "cost_calculator_builder_calculators", ["slug"], name: "index_cost_calculator_builder_calculators_on_slug", unique: true, using: :btree
+  add_index "cost_calculator_builder_calculators", ["slug"], name: "index_cost_calculator_builder_calculators_on_slug", unique: true
 
   create_table "cost_calculator_builder_call_to_actions", force: :cascade do |t|
     t.string   "name",          limit: 255
@@ -263,7 +263,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.boolean  "nofollow",                    default: true
   end
 
-  add_index "cost_calculator_builder_call_to_actions", ["calculator_id"], name: "index_cost_calculator_builder_call_to_actions_on_calculator_id", using: :btree
+  add_index "cost_calculator_builder_call_to_actions", ["calculator_id"], name: "index_cost_calculator_builder_call_to_actions_on_calculator_id"
 
   create_table "cost_calculator_builder_expense_pages", force: :cascade do |t|
     t.string   "name",                limit: 255
@@ -280,7 +280,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "image_url",           limit: 255
   end
 
-  add_index "cost_calculator_builder_expense_pages", ["calculator_id"], name: "index_cost_calculator_builder_expense_pages_on_calculator_id", using: :btree
+  add_index "cost_calculator_builder_expense_pages", ["calculator_id"], name: "index_cost_calculator_builder_expense_pages_on_calculator_id"
 
   create_table "cost_calculator_builder_expenses", force: :cascade do |t|
     t.string   "name",             limit: 255
@@ -299,7 +299,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.boolean  "enable_more"
   end
 
-  add_index "cost_calculator_builder_expenses", ["expense_page_id"], name: "index_cost_calculator_builder_expenses_on_expense_page_id", using: :btree
+  add_index "cost_calculator_builder_expenses", ["expense_page_id"], name: "index_cost_calculator_builder_expenses_on_expense_page_id"
 
   create_table "csr_users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -319,8 +319,8 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "last_name",              limit: 255
   end
 
-  add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
-  add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
+  add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true
+  add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true
 
   create_table "debt_advice_locator_organisation_awards", force: :cascade do |t|
     t.integer "organisation_standard_id", limit: 4
@@ -361,10 +361,10 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.boolean  "display_in_accredited_list",                                 default: false
   end
 
-  add_index "debt_advice_locator_organisations", ["lat", "lng"], name: "dal_organisations_lat_lng", using: :btree
-  add_index "debt_advice_locator_organisations", ["provides_face_to_face"], name: "dal_organisations_provides_face_to_face", using: :btree
-  add_index "debt_advice_locator_organisations", ["provides_telephone"], name: "dal_organisations_provides_telephone", using: :btree
-  add_index "debt_advice_locator_organisations", ["provides_web"], name: "dal_organisations_provides_web", using: :btree
+  add_index "debt_advice_locator_organisations", ["lat", "lng"], name: "dal_organisations_lat_lng"
+  add_index "debt_advice_locator_organisations", ["provides_face_to_face"], name: "dal_organisations_provides_face_to_face"
+  add_index "debt_advice_locator_organisations", ["provides_telephone"], name: "dal_organisations_provides_telephone"
+  add_index "debt_advice_locator_organisations", ["provides_web"], name: "dal_organisations_provides_web"
 
   create_table "debt_free_day_calculator_calculations", force: :cascade do |t|
     t.datetime "created_at"
@@ -373,8 +373,8 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "uuid",       limit: 255
   end
 
-  add_index "debt_free_day_calculator_calculations", ["type"], name: "dfdc_calculations_type", using: :btree
-  add_index "debt_free_day_calculator_calculations", ["uuid"], name: "dfdc_calculations_uuid", using: :btree
+  add_index "debt_free_day_calculator_calculations", ["type"], name: "dfdc_calculations_type"
+  add_index "debt_free_day_calculator_calculations", ["uuid"], name: "dfdc_calculations_uuid"
 
   create_table "debt_free_day_calculator_debts", force: :cascade do |t|
     t.string   "title",          limit: 255,                          default: ""
@@ -390,7 +390,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.decimal  "interest",                   precision: 10, scale: 2
   end
 
-  add_index "debt_free_day_calculator_debts", ["type"], name: "dfdc_debts_type", using: :btree
+  add_index "debt_free_day_calculator_debts", ["type"], name: "dfdc_debts_type"
 
   create_table "debt_health_answer_resources", force: :cascade do |t|
     t.integer  "answer_id",   limit: 4
@@ -399,7 +399,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "updated_at"
   end
 
-  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "debt_health_answers_resources_id", using: :btree
+  add_index "debt_health_answer_resources", ["answer_id", "resource_id"], name: "debt_health_answers_resources_id"
 
   create_table "debt_health_answers", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -469,7 +469,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "updated_at"
   end
 
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "quiz_audit_records", force: :cascade do |t|
     t.integer  "user_id",       limit: 4
@@ -479,7 +479,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "created_at"
   end
 
-  add_index "quiz_audit_records", ["resource_type", "resource_id"], name: "index_quiz_audit_records_on_resource", using: :btree
+  add_index "quiz_audit_records", ["resource_type", "resource_id"], name: "index_quiz_audit_records_on_resource"
 
   create_table "quiz_partners", force: :cascade do |t|
     t.string   "name",                      limit: 255
@@ -497,7 +497,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "button_text_color",         limit: 255
   end
 
-  add_index "quiz_partners", ["slug"], name: "index_quiz_partners_on_slug", unique: true, using: :btree
+  add_index "quiz_partners", ["slug"], name: "index_quiz_partners_on_slug", unique: true
 
   create_table "quiz_player_responses", force: :cascade do |t|
     t.integer  "response",    limit: 4
@@ -535,7 +535,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "image_url",             limit: 255
   end
 
-  add_index "quiz_questions", ["quiz_id"], name: "index_quiz_questions_on_quiz_id", using: :btree
+  add_index "quiz_questions", ["quiz_id"], name: "index_quiz_questions_on_quiz_id"
 
   create_table "quiz_quiz_users", force: :cascade do |t|
     t.string   "first_name",             limit: 255
@@ -555,8 +555,8 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "updated_at"
   end
 
-  add_index "quiz_quiz_users", ["email"], name: "index_quiz_quiz_users_on_email", unique: true, using: :btree
-  add_index "quiz_quiz_users", ["reset_password_token"], name: "index_quiz_quiz_users_on_reset_password_token", unique: true, using: :btree
+  add_index "quiz_quiz_users", ["email"], name: "index_quiz_quiz_users_on_email", unique: true
+  add_index "quiz_quiz_users", ["reset_password_token"], name: "index_quiz_quiz_users_on_reset_password_token", unique: true
 
   create_table "quiz_quizzes", force: :cascade do |t|
     t.string   "name_en",                     limit: 255
@@ -587,7 +587,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "created_at"
   end
 
-  add_index "quiz_widget_hosts", ["widget_id"], name: "index_quiz_widget_hosts_on_widget_id", using: :btree
+  add_index "quiz_widget_hosts", ["widget_id"], name: "index_quiz_widget_hosts_on_widget_id"
 
   create_table "quiz_widget_snippets", force: :cascade do |t|
     t.integer "widget_id",   limit: 4
@@ -622,8 +622,8 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.boolean  "show_mas_logo",                           default: false
   end
 
-  add_index "quiz_widgets", ["partner_id"], name: "index_quiz_widgets_on_partner_id", using: :btree
-  add_index "quiz_widgets", ["quiz_id"], name: "index_quiz_widgets_on_quiz_id", using: :btree
+  add_index "quiz_widgets", ["partner_id"], name: "index_quiz_widgets_on_partner_id"
+  add_index "quiz_widgets", ["quiz_id"], name: "index_quiz_widgets_on_quiz_id"
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", limit: 255,   null: false
@@ -632,8 +632,8 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.datetime "updated_at",               null: false
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", using: :btree
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
   create_table "universal_credit_budgets", force: :cascade do |t|
     t.integer  "universal_credit_payment_income",          limit: 4, default: 0
@@ -680,7 +680,7 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.string   "country",                 limit: 255, default: "england"
   end
 
-  add_index "universal_credit_claimant_data", ["questionnaire_id"], name: "index_universal_credit_claimant_data_on_questionnaire_id", using: :btree
+  add_index "universal_credit_claimant_data", ["questionnaire_id"], name: "index_universal_credit_claimant_data_on_questionnaire_id"
 
   create_table "universal_credit_completed_tasks_lists", force: :cascade do |t|
     t.string   "task_references", limit: 255
@@ -705,73 +705,71 @@ ActiveRecord::Schema.define(version: 20180619090944) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email_old",                    limit: 255,   default: "",    null: false
-    t.string   "encrypted_password",           limit: 255,   default: ""
-    t.string   "reset_password_token",         limit: 255
+    t.string   "email_old",                   limit: 255,   default: "",    null: false
+    t.string   "encrypted_password",          limit: 255,   default: ""
+    t.string   "reset_password_token",        limit: 255
     t.datetime "reset_password_sent_at"
-    t.integer  "sign_in_count",                limit: 4,     default: 0
+    t.integer  "sign_in_count",               limit: 4,     default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",           limit: 255
-    t.string   "last_sign_in_ip",              limit: 255
-    t.datetime "created_at",                                                 null: false
-    t.datetime "updated_at",                                                 null: false
+    t.string   "current_sign_in_ip",          limit: 255
+    t.string   "last_sign_in_ip",             limit: 255
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
     t.boolean  "accept_terms_conditions"
-    t.string   "first_name_old",               limit: 255
-    t.string   "last_name_old",                limit: 255
-    t.string   "password_salt",                limit: 255
-    t.string   "post_code_old",                limit: 255
-    t.string   "age_range_old",                limit: 255
-    t.string   "gender",                       limit: 255
-    t.boolean  "newsletter_subscription",                    default: false
-    t.string   "customer_id",                  limit: 255
-    t.text     "health_check_result",          limit: 65535
-    t.boolean  "active",                                     default: true
+    t.string   "first_name_old",              limit: 255
+    t.string   "last_name_old",               limit: 255
+    t.string   "password_salt",               limit: 255
+    t.string   "post_code_old",               limit: 255
+    t.string   "age_range_old",               limit: 255
+    t.string   "gender",                      limit: 255
+    t.boolean  "newsletter_subscription",                   default: false
+    t.string   "customer_id",                 limit: 255
+    t.text     "health_check_result",         limit: 65535
+    t.boolean  "active",                                    default: true
     t.date     "date_of_birth_old"
-    t.string   "confirmation_token",           limit: 255
+    t.string   "confirmation_token",          limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email",            limit: 255
-    t.string   "csr_id",                       limit: 255
-    t.string   "invitation_token",             limit: 60
+    t.string   "unconfirmed_email",           limit: 255
+    t.string   "csr_id",                      limit: 255
+    t.string   "invitation_token",            limit: 60
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
-    t.integer  "invitation_limit",             limit: 4
-    t.integer  "invited_by_id",                limit: 4
-    t.string   "invited_by_type",              limit: 255
-    t.integer  "failed_attempts",              limit: 4,     default: 0
-    t.string   "unlock_token",                 limit: 255
+    t.integer  "invitation_limit",            limit: 4
+    t.integer  "invited_by_id",               limit: 4
+    t.string   "invited_by_type",             limit: 255
+    t.integer  "failed_attempts",             limit: 4,     default: 0
+    t.string   "unlock_token",                limit: 255
     t.datetime "locked_at"
-    t.string   "goal_statement",               limit: 255
-    t.string   "goal_deadline",                limit: 255
-    t.string   "contact_number_old",           limit: 255
-    t.boolean  "opt_in_for_research",                        default: false
-    t.string   "encrypted_first_name",         limit: 255
-    t.string   "encrypted_first_name_iv",      limit: 255
-    t.string   "encrypted_first_name_bidx",    limit: 255
-    t.string   "encrypted_last_name",          limit: 255
-    t.string   "encrypted_last_name_iv",       limit: 255
-    t.string   "encrypted_last_name_bidx",     limit: 255
-    t.string   "encrypted_email",              limit: 255
-    t.string   "encrypted_email_iv",           limit: 255
-    t.string   "encrypted_email_bidx",         limit: 255
-    t.string   "encrypted_post_code",          limit: 255
-    t.string   "encrypted_post_code_iv",       limit: 255
-    t.string   "encrypted_contact_number",     limit: 255
-    t.string   "encrypted_contact_number_iv",  limit: 255
-    t.string   "encrypted_age_range",          limit: 255
-    t.string   "encrypted_age_range_iv",       limit: 255
-    t.string   "encrypted_date_of_birth",      limit: 255
-    t.string   "encrypted_date_of_birth_iv",   limit: 255
-    t.string   "encrypted_date_of_birth_bidx", limit: 255
+    t.string   "goal_statement",              limit: 255
+    t.string   "goal_deadline",               limit: 255
+    t.string   "contact_number_old",          limit: 255
+    t.boolean  "opt_in_for_research",                       default: false
+    t.string   "encrypted_first_name",        limit: 255
+    t.string   "encrypted_first_name_iv",     limit: 255
+    t.string   "encrypted_first_name_bidx",   limit: 255
+    t.string   "encrypted_last_name",         limit: 255
+    t.string   "encrypted_last_name_iv",      limit: 255
+    t.string   "encrypted_last_name_bidx",    limit: 255
+    t.string   "encrypted_email",             limit: 255
+    t.string   "encrypted_email_iv",          limit: 255
+    t.string   "encrypted_email_bidx",        limit: 255
+    t.string   "encrypted_post_code",         limit: 255
+    t.string   "encrypted_post_code_iv",      limit: 255
+    t.string   "encrypted_contact_number",    limit: 255
+    t.string   "encrypted_contact_number_iv", limit: 255
+    t.string   "encrypted_age_range",         limit: 255
+    t.string   "encrypted_age_range_iv",      limit: 255
+    t.string   "encrypted_date_of_birth",     limit: 255
+    t.string   "encrypted_date_of_birth_iv",  limit: 255
   end
 
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
-  add_index "users", ["email_old"], name: "index_users_on_email_old", unique: true, using: :btree
-  add_index "users", ["encrypted_date_of_birth_bidx"], name: "index_users_on_encrypted_date_of_birth_bidx", using: :btree
-  add_index "users", ["encrypted_email_bidx"], name: "index_users_on_encrypted_email_bidx", unique: true, using: :btree
-  add_index "users", ["encrypted_first_name_bidx"], name: "index_users_on_encrypted_first_name_bidx", using: :btree
-  add_index "users", ["encrypted_last_name_bidx"], name: "index_users_on_encrypted_last_name_bidx", using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+  add_index "users", ["email_old"], name: "index_users_on_email_old", unique: true
+  add_index "users", ["encrypted_email_bidx"], name: "index_users_on_encrypted_email_bidx", unique: true
+  add_index "users", ["encrypted_first_name_bidx"], name: "index_users_on_encrypted_first_name_bidx"
+  add_index "users", ["encrypted_last_name_bidx"], name: "index_users_on_encrypted_last_name_bidx"
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

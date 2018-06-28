@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180619090944) do
+ActiveRecord::Schema.define(version: 20180523092831) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -768,7 +768,6 @@ ActiveRecord::Schema.define(version: 20180619090944) do
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email_old"], name: "index_users_on_email_old", unique: true, using: :btree
-  add_index "users", ["encrypted_date_of_birth_bidx"], name: "index_users_on_encrypted_date_of_birth_bidx", using: :btree
   add_index "users", ["encrypted_email_bidx"], name: "index_users_on_encrypted_email_bidx", unique: true, using: :btree
   add_index "users", ["encrypted_first_name_bidx"], name: "index_users_on_encrypted_first_name_bidx", using: :btree
   add_index "users", ["encrypted_last_name_bidx"], name: "index_users_on_encrypted_last_name_bidx", using: :btree

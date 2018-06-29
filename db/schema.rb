@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180619090944) do
+ActiveRecord::Schema.define(version: 20180523092831) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -59,6 +59,20 @@ ActiveRecord::Schema.define(version: 20180619090944) do
     t.integer  "plan_id",    limit: 4,                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "advice_plans_advice_plans", force: :cascade do |t|
+    t.string   "code",         limit: 255,                 null: false
+    t.boolean  "current",                  default: false, null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "advice_plans_advice_plans_tasks", id: false, force: :cascade do |t|
+    t.integer "advice_plan_id", limit: 4, null: false
+    t.integer "task_id",        limit: 4, null: false
   end
 
   create_table "advice_plans_plans", force: :cascade do |t|

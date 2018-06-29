@@ -1,3 +1,3 @@
-require 'factory_girl'
+require 'factory_bot'
 
-World(FactoryGirl::Syntax::Methods)
+World(FactoryBot::Syntax::Methods)

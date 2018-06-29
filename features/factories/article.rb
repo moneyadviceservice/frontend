@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :article, class: Core::Article do
     id { Faker::Lorem.words.join('-') }
     title { Faker::Lorem.sentence }

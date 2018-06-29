@@ -65,7 +65,7 @@ RSpec.describe CorporateController, type: :controller do
       )
     end
     let(:valid_partner) do
-      FactoryGirl.attributes_for(
+      FactoryBot.attributes_for(
         :corporate_partner,
         tool_name: 'budget-planner-syndication'
       )

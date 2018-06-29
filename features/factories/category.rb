@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :category, class: Core::Category do
     sequence(:id) { |i| "category-#{i}" }
     title { id.capitalize.sub(/-/, ' ') }

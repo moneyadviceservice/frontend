@@ -53,7 +53,7 @@ module Core
     describe '#update' do
       context 'when customer exists' do
         let(:client) { double('client', find_customer: response) }
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryBot.create(:user) }
         let(:response) { true }
 
         it 'updates the customer' do

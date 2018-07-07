@@ -52,6 +52,9 @@ class AddEncryptedFields < ActiveRecord::Migration
       add_column :users, :encrypted_date_of_birth_iv, :string
     end
     # blind index
+    if index_exists? :users, :email 
+      remove_index :users, name: :index_users_on_email
+    end
     unless index_exists? :users, :encrypted_first_name_bidx, unique: false
       add_index :users, :encrypted_first_name_bidx, unique: false
     end

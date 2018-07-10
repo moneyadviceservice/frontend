@@ -9,24 +9,26 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator
+  revision: 39968a2707f87307b20ca19be82c7af518c6939b
+  branch: 9257_Slider-copy-change
+  specs:
+    pensions_calculator (1.6.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      pensions_calculator-calculations (~> 1.6.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
     site_search (0.1.0)
       algoliasearch
-
-PATH
-  remote: ../pensions_calculator
-  specs:
-    pensions_calculator (1.0.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      pensions_calculator-calculations (~> 1.0)
-      rails (~> 4.1)
-      responders
-      sass-rails (~> 4.0.3)
-      uglifier
 
 GEM
   remote: https://rubygems.org/

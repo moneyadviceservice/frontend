@@ -10,7 +10,7 @@ module Core
       end
 
       context 'when customer does not exist in CRM' do
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryBot.create(:user) }
         subject { described_class.new }
 
         before :each do
@@ -26,7 +26,7 @@ module Core
       end
 
       context 'when customer exists in CRM' do
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryBot.create(:user) }
         subject { described_class.new }
 
         before :each do
@@ -38,7 +38,7 @@ module Core
           customer[:post_code] = 'NE1 6AA'
           customer[:gender] = 'female'
           customer[:age_range] = '0-15'
-          customer[:date_of_birth] = '1988-01-01'
+          customer[:date_of_birth] = '01/01/1988'
           customer[:newsletter_subscription] = 'false'
           customer[:active] = 'true'
           # topics to be implemented

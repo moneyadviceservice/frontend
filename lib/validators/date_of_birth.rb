@@ -6,8 +6,14 @@ module Validators
         record.errors.add(attribute, 'invalid date') if original.present?
         return
       end
+      record.errors.add(attribute, 'invalid date') && return unless valid_date?(value) 
+      record.errors.add(attribute, 'must be in the past') unless value.to_date.past?
+    end
 
-      record.errors.add(attribute, 'must be in the past') unless value.past?
+    def valid_date?(value)
+      return true if value.is_a?(Date) || value.is_a?(Time)
+      d,m,y = value.split('/')
+      Date.valid_date?(y.to_i, m.to_i, d.to_i)
     end
   end
 end

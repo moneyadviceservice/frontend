@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   VALID_AGE_RANGES = ['0-15', '16-17', '18-20', '21-24', '25-34', '35-44', '45-54', '55-64', '65-74', '75+'].freeze
-  CRM_FIELDS = %w[email first_name post_code newsletter_subscription].freeze
+  CRM_FIELDS = %w[encrypted_email_bidx encrypted_first_name encrypted_post_code newsletter_subscription].freeze
 
   def field_order
     %i[first_name email password post_code]
@@ -20,7 +20,19 @@ class User < ActiveRecord::Base
   # :confirmable,
   # :invitable,
 
+  # Add database encryption and blind index for login, name and email
+  attr_encrypted :email, :first_name, :last_name, :post_code, :contact_number, :age_range, key: ENV['ATTR_CRYPT_KEY']
+  attr_encrypted :date_of_birth, key: ENV['ATTR_CRYPT_KEY'], marshal: true
+  blind_index :email, key: ENV['BIDX_CRYPT_KEY']
+  blind_index :first_name, key: ENV['BIDX_CRYPT_KEY']
+  blind_index :last_name, key: ENV['BIDX_CRYPT_KEY']
+
+  before_validation :compute_blind_index, if: lambda { |u|
+    u.encrypted_email_changed? || u.encrypted_first_name_changed? || u.encrypted_last_name_changed?
+  }
+
   before_validation :uppercase_post_code
+  before_save :datify_dob
 
   validates_with Validators::Email, attributes: [:email]
   validates_with Validators::DateOfBirth, attributes: [:date_of_birth]
@@ -43,7 +55,7 @@ class User < ActiveRecord::Base
   before_save :fake_send_confirmation_email
   after_create :create_to_crm
   after_update :update_to_crm
-
+ 
   def to_customer
     Converters::UserToCustomer.new(self).call
   end
@@ -81,6 +93,16 @@ class User < ActiveRecord::Base
 
   private
 
+  def compute_blind_index
+    compute_email_bidx
+    compute_first_name_bidx
+    compute_last_name_bidx
+  end
+
+  def self.find_first_by_auth_conditions(conditions)
+    User.where(email: conditions[:email]).first
+  end
+
   def create_to_crm
     Delayed::Job.enqueue(Jobs::CreateCustomer.new(id),
                          queue: 'frontend_crm')
@@ -95,6 +117,10 @@ class User < ActiveRecord::Base
 
   def uppercase_post_code
     post_code.upcase! if post_code
+  end
+
+  def datify_dob
+    self.date_of_birth = date_of_birth.to_date if date_of_birth
   end
 
   def fake_send_confirmation_email

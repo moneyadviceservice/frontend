@@ -10,6 +10,8 @@ source 'http://gems.dev.mas.local'
 
 gem 'rails', '4.2.10'
 
+gem 'attr_encrypted', '~> 3.1'
+gem 'blind_index'
 gem 'activerecord-session_store'
 gem 'aes'
 gem 'algoliasearch'
@@ -95,7 +97,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
-  gem 'factory_girl'
+  gem 'factory_bot'
   gem 'faker'
   gem 'html_validation'
   gem 'poltergeist'

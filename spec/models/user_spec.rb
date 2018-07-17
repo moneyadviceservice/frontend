@@ -57,7 +57,7 @@ RSpec.describe User, type: :model do
 
       context 'when token does not exist' do
         let(:conditions) do
-          { reset_password_token: "#{user.reset_password_token}C" }
+          { reset_password_token: "invalid_#{user.reset_password_token}" }
         end
 
         it 'returns nil' do

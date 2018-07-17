@@ -73,10 +73,6 @@ When(/^I fill in my email$/) do
   forgot_password_page.submit.click
 end
 
-Then(/^I should be able to change my password$/) do
-  expect(page.current_path).to include('/en/users/password/edit')
-end
-
 Then(/^I should see an email sent notification$/) do
   expect(page.html).to include(I18n.t('devise.passwords.send_instructions', locale: 'en'))
 end

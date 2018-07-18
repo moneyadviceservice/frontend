@@ -55,7 +55,11 @@ class User < ActiveRecord::Base
   before_save :fake_send_confirmation_email
   after_create :create_to_crm
   after_update :update_to_crm
- 
+
+  def self.find_first_by_auth_conditions(conditions)
+    User.where(conditions.symbolize_keys).first
+  end
+
   def to_customer
     Converters::UserToCustomer.new(self).call
   end
@@ -97,10 +101,6 @@ class User < ActiveRecord::Base
     compute_email_bidx
     compute_first_name_bidx
     compute_last_name_bidx
-  end
-
-  def self.find_first_by_auth_conditions(conditions)
-    User.where(email: conditions[:email]).first
   end
 
   def create_to_crm

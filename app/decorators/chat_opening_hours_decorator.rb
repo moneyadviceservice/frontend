@@ -47,7 +47,7 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     if open?
       I18n.t('contact_panels.chat.available.description')
     else
-      I18n.t('contact_panels.chat.offline.description', hours: next_period_hours).html_safe
+      I18n.t('contact_panels.chat.offline.description')
     end
   end
 

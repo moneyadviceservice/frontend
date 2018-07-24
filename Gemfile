@@ -10,11 +10,11 @@ source 'http://gems.dev.mas.local'
 
 gem 'rails', '4.2.10'
 
-gem 'attr_encrypted', '~> 3.1'
-gem 'blind_index'
 gem 'activerecord-session_store'
 gem 'aes'
 gem 'algoliasearch'
+gem 'attr_encrypted', '~> 3.1'
+gem 'blind_index'
 gem 'bugsnag'
 gem 'cream', '~> 1.0.0'
 gem 'delayed_job_active_record'

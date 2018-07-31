@@ -9,6 +9,15 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 895e6678d791d43553b10aaee71830a93dbc7c08
+  specs:
+    pacs (0.1.0)
+      dough-ruby
+      meta-tags
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -809,6 +818,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
+  pacs!
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.7.0)
   poltergeist

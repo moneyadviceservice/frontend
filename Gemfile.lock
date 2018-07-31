@@ -1,4 +1,20 @@
 GIT
+  remote: git@github.com:moneyadviceservice/budget_planner
+  revision: eb26cce4271bbe151fc40fee8d6f084958f4f4ba
+  branch: 9320_Summary-page-text
+  specs:
+    budget_planner (5.1.1)
+      i18n-js (= 3.0.0.mas)
+      jquery-rails
+      jquery-ui-rails (~> 4.0)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -14,20 +30,6 @@ GIT
   specs:
     site_search (0.1.0)
       algoliasearch
-
-PATH
-  remote: ../budget_planner
-  specs:
-    budget_planner (5.1.1)
-      i18n-js (= 3.0.0.mas)
-      jquery-rails
-      jquery-ui-rails (~> 4.0)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
 
 GEM
   remote: https://rubygems.org/

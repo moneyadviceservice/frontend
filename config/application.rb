@@ -27,7 +27,7 @@ module Frontend
     config.google_tag_manager_id = 'GTM-WVFLH9'
 
     config.time_zone = 'Europe/London'
-    config.chat_opening_hours = OpeningHours.new('8:00 AM', '8:00 PM')
+    config.chat_opening_hours = OpeningHours.new('8:00 AM', '6:00 PM')
     config.chat_opening_hours.update(:sat, '09:00 AM', '1:00 PM')
     config.chat_opening_hours.closed(:sun)
     config.chat_opening_hours.closed('May 4, 2015')

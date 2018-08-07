@@ -34,6 +34,7 @@ Install Mysql 5.5
 
 ```sh
 $ brew install mysql55
+$ brew link mysql55 --force
 ```
 
 Make sure MySQL is running.

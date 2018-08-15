@@ -16,6 +16,57 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe '.find_first_by_auth_conditions' do
+    let!(:user) { create(:user, reset_password_token: SecureRandom.uuid) }
+    subject(:find_first_by_auth_conditions) do
+      User.find_first_by_auth_conditions(conditions)
+    end
+
+    context 'when searching by email' do
+      context 'when email exists' do
+        let(:conditions) do
+          { 'email' => user.email }
+        end
+
+        it 'returns user with same email' do
+          expect(find_first_by_auth_conditions).to eq(user)
+        end
+      end
+
+      context 'when email does not exist' do
+        let(:conditions) do
+          { 'email' => 'someemail@domain.uk' }
+        end
+
+        it 'returns nil' do
+          expect(find_first_by_auth_conditions).to be_nil
+        end
+      end
+    end
+
+    context 'when searching by reset password token' do
+      context 'when token exists' do
+        let(:conditions) do
+          { reset_password_token: user.reset_password_token }
+        end
+
+        it 'returns user with same token' do
+          expect(find_first_by_auth_conditions).to eq(user)
+        end
+      end
+
+      context 'when token does not exist' do
+        let(:conditions) do
+          { reset_password_token: "invalid_#{user.reset_password_token}" }
+        end
+
+        it 'returns nil' do
+          expect(find_first_by_auth_conditions).to be_nil
+        end
+      end
+    end
+  end
+
   describe '#fake_send_confirmation_email' do
     it 'sends a fake confirmation email when user is saved' do
       subject.save!

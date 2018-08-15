@@ -9,6 +9,7 @@ module World
       article
       article_feedback
       category
+      change_password
       corporate
       corporate_categories
       corporate_tool

@@ -33,8 +33,8 @@ $ bowndler install
 Install Mysql 5.5
 
 ```sh
-$ brew tap homebrew/versions
 $ brew install mysql55
+$ brew link mysql55 --force
 ```
 
 Make sure MySQL is running.

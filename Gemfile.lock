@@ -328,6 +328,8 @@ GEM
       dry-equalizer (~> 0.2)
       dry-types (~> 0.13)
       ice_nine (~> 0.11)
+    dry-struct-setters (0.2.0)
+      dry-struct (>= 0.5.0)
     dry-types (0.13.2)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
@@ -501,9 +503,10 @@ GEM
     opening_hours (0.0.7)
       activesupport
     orm_adapter (0.5.0)
-    pacs (0.2.0)
+    pacs (0.3.0)
       dough-ruby
       dry-struct
+      dry-struct-setters
       dry-types
       faraday
       faraday-conductivity
@@ -844,7 +847,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
-  pacs (= 0.2.0)
+  pacs (= 0.3.0)
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.7.0)
   poltergeist

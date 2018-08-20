@@ -22,7 +22,7 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     private
 
     def formatted_time(time)
-      t = Time.zone.local(Date.today.year, Date.today.month, Date.today.day)
+      t = Time.local(Date.today.year, Date.today.month, Date.today.day)
       t += time.seconds
       t.strftime('%-l%P')
     end
@@ -47,7 +47,7 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     if open?
       I18n.t('contact_panels.chat.available.description')
     else
-      I18n.t('contact_panels.chat.offline.description')
+      I18n.t('contact_panels.chat.offline.description', hours: next_period_hours).html_safe
     end
   end
 
@@ -93,7 +93,7 @@ class ChatOpeningHoursDecorator < Draper::Decorator
 
   def next_period
     @next_period ||= begin
-      time_next_open = Time.zone.parse(object.calculate_deadline(0, Time.zone.now.to_s))
+      time_next_open = Time.parse(object.calculate_deadline(0, Time.zone.now.to_s))
       day_next_open  = time_next_open.strftime('%a').downcase.to_sym
 
       week[day_next_open]

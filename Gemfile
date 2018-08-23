@@ -47,6 +47,7 @@ gem 'sass-rails'
 gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 gem 'statsd-ruby'
 gem 'turnout'
+gem 'whenever', require: false
 
 # tools
 gem 'action_plans', '~> 4.8.0'

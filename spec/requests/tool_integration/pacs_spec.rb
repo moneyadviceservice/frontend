@@ -3,6 +3,14 @@ RSpec.describe 'PACS', type: :request do
    "/cy/tools/#{ToolMountPoint::Pacs::CY_ID}"].each do |path|
     describe path do
       before do
+        allow(Pacs::PaymentAccountCollection)
+          .to receive(:latest).and_return(
+            instance_double(
+              Pacs::PaymentAccountCollection,
+              updated_at: Time.current,
+              feed: []
+            )
+          )
         get(path)
       end
 

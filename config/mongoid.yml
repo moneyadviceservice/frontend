@@ -144,3 +144,8 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  sessions:
+    default:
+      database: <%= ENV['PACS_MONGOD_HOST'] %>

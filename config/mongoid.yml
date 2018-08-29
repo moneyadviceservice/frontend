@@ -149,4 +149,5 @@ production:
   clients:
     default:
       database: frontend_production
-      hosts: "<%= ENV['PACS_MONGOD_HOST'] %>"
+      hosts:
+        - "<%= ENV['PACS_MONGOD_HOST'] %>"

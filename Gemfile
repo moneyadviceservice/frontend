@@ -47,6 +47,7 @@ gem 'sass-rails'
 gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 gem 'statsd-ruby'
 gem 'turnout'
+gem 'whenever', require: false
 
 # tools
 gem 'action_plans', '~> 4.8.0'
@@ -65,6 +66,8 @@ gem 'debt_test', '~> 1.7.3'
 gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.2.2'
+# gem 'pacs', '0.5.0'
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs', branch: '9432_body-copy'
 gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 1.7.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'

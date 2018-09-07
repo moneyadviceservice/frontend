@@ -10,8 +10,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: 51b0e2a3b2525ce98f951cb738df653ba6aa1532
-  branch: 9336_category-blocks_JS
+  revision: 786389c0cc0709765b183e86704acea15c83abec
+  branch: 9435_yaml-entry
   specs:
     pacs (0.5.1)
       dough-ruby
@@ -838,7 +838,7 @@ DEPENDENCIES
   devise (~> 4.2.0)
   devise-encryptable
   dotenv-rails
-  dough-ruby (~> 5.28)
+  dough-ruby (~> 5.26)
   draper (< 3)
   ejs
   email_spec (< 2)

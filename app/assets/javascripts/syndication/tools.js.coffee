@@ -349,10 +349,7 @@
   iframeUrl: (node)->
     locale = masConfig.getLocale(node)
     toolpath = masConfig.toolConfig[node.id][locale].path
-
-    if toolsConfig?
-    then "#{toolsConfig['syndication_url']}/#{toolpath}"
-    else "https://partner-tools.moneyadviceservice.org.uk/#{toolpath}"
+    "#{masConfig.toolsConfig['syndication_url']}/#{toolpath}"
 
   iframeSrc: (node)->
     "src='#{masConfig.iframeUrl(node)}'"
@@ -360,13 +357,8 @@
   gaIframeUrl: (node)->
     locale = masConfig.getLocale(node)
     toolId = node.id
-
-    if toolsConfig?
-    then toolURL = toolsConfig['syndication']['ga_iframe_url']
-    else toolURL = "https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html"
-
+    toolURL = masConfig.toolsConfig['syndication']['ga_iframe_url']
     toolArgs = "?tool=#{toolId}&lang=#{locale}"
-
     "#{toolURL}#{toolArgs}"
 
   gaIframeSrc: (node)->

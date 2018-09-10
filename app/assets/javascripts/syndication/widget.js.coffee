@@ -5,12 +5,31 @@ class window.PartnerMAS.Widget
     @id = @targetNode.id
 
   render: ->
+    this.setPartnerToolsURL()
     renderParts = []
     renderParts.push(this.createLogo()) unless this.dataAttr("omit_logo")
     renderParts.push(this.createIFrame())
     renderParts.push(this.createGAIFrame()) if masConfig.gaIframeRequired(@targetNode)
     this.addToDocument this.createContainer(renderParts...)
     this.removeTargetNode()
+
+  setPartnerToolsURL: ->
+    domains = {
+      'preview.dev.mas.local': 'https://preview-partner-tools.dev.mas.local/',
+      'qa.dev.mas.local': 'https://qa-partner-tools.dev.mas.local/',
+      'uat.dev.mas.local': 'https://uat-partner-tools.dev.mas.local/',
+      'cultivate.dev.mas.local': 'https://cultivate-partner-tools.dev.mas.local/',
+      'staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/'
+    }
+    toolLink = document.getElementsByClassName(masConfig.targetSelector)[0].getAttribute('href')
+    hostname = new URL(toolLink).hostname
+    masConfig.toolsConfig = {
+      syndication_url: 'https://partner-tools.moneyadviceservice.org.uk',
+      syndication: {
+        ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
+      }
+    }
+    masConfig.toolsConfig['syndication_url'] = domains[hostname] if domains[hostname]
 
   createContainer: (contents...) ->
     """
@@ -33,7 +52,7 @@ class window.PartnerMAS.Widget
                 width='#{this.dataAttr('width')}' height='#{this.dataAttr('height')}' title='#{this.dataAttr('title')}'>
         </iframe>
         """
-        
+
   createGAIFrame: ->
     """
         <iframe class='#{masConfig.gaIframeClass}' id='#{@targetNode.id}-ga-iframe' #{masConfig.gaIframeSrc(@targetNode)}

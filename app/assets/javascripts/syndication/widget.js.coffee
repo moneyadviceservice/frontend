@@ -19,7 +19,8 @@ class window.PartnerMAS.Widget
       'www.qa.dev.mas.local': 'https://qa-partner-tools.dev.mas.local/',
       'www.uat.dev.mas.local': 'https://uat-partner-tools.dev.mas.local/',
       'www.cultivate.dev.mas.local': 'https://cultivate-partner-tools.dev.mas.local/',
-      'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/'
+      'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/',
+      'www.uat.moneyadviceservice.org.uk': 'https://uat-partner-tools.moneyadviceservice.org.uk/'
     }
     toolLink = document.getElementsByClassName(masConfig.targetSelector)[0].getAttribute('href')
     hostname = new URL(toolLink).hostname

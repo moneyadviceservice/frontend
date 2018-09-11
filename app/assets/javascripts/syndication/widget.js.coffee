@@ -15,11 +15,11 @@ class window.PartnerMAS.Widget
 
   setPartnerToolsURL: ->
     domains = {
-      'preview.dev.mas.local': 'https://preview-partner-tools.dev.mas.local/',
-      'qa.dev.mas.local': 'https://qa-partner-tools.dev.mas.local/',
-      'uat.dev.mas.local': 'https://uat-partner-tools.dev.mas.local/',
-      'cultivate.dev.mas.local': 'https://cultivate-partner-tools.dev.mas.local/',
-      'staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/'
+      'www.preview.dev.mas.local': 'https://preview-partner-tools.dev.mas.local/',
+      'www.qa.dev.mas.local': 'https://qa-partner-tools.dev.mas.local/',
+      'www.uat.dev.mas.local': 'https://uat-partner-tools.dev.mas.local/',
+      'www.cultivate.dev.mas.local': 'https://cultivate-partner-tools.dev.mas.local/',
+      'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/'
     }
     toolLink = document.getElementsByClassName(masConfig.targetSelector)[0].getAttribute('href')
     hostname = new URL(toolLink).hostname

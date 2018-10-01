@@ -14,11 +14,10 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
-  width: 173px;
+  width: 203px;
 
   @include respond-to($mq-m) {
-    width: 245px;
-    margin-right: 40px;
+    width: 285px;
   }
 
   &:focus,

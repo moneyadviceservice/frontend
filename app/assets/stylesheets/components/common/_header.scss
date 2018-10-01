@@ -1,0 +1,15 @@
+.theme-cy {
+  .l-header {
+    .mas-logo {
+      @include respond-to($mq-m) {
+        @include column(8);
+      }
+    }
+
+    .authentication {
+      @include respond-to($mq-m) {
+        @include column(1);
+      }
+    }
+  }
+}

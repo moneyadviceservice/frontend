@@ -7,10 +7,6 @@
 
       @include respond-to($mq-xl) {
         @include column(6);
-
-        .theme-cy & {
-          @include column(7);
-        }
       }
     }
 
@@ -19,6 +15,12 @@
         @include column(1);
       }
       
+      @include respond-to($mq-xl) {
+        @include column(3);
+      }
+    }
+
+    .l-search {
       @include respond-to($mq-xl) {
         @include column(3);
       }

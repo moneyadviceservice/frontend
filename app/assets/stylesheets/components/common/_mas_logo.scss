@@ -10,6 +10,26 @@
   }
 }
 
+.theme-cy {
+  .l-header__content {
+    min-height: 54px;
+
+    @include respond-to($mq-m) {
+      min-height: 0;
+    }
+  }
+    
+  .mas-logo__img {
+    margin-left: -180px;
+    width: 360px;
+
+    @include respond-to($mq-m) {
+      margin-left: -285px;
+      width: 570px;
+    }
+  }
+}
+
 .mas-logo__link {
   display: inline-block;
   overflow: hidden;

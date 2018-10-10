@@ -2,7 +2,7 @@ class VersionHeader
   def initialize(app)
     @app = app
 
-    version_file = File.join(Rails.root, 'public', 'version')
+    version_file = Rails.root.join('public', 'version')
     return unless File.exist?(version_file)
 
     json = File.read(version_file)

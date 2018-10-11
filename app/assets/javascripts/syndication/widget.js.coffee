@@ -22,8 +22,9 @@ class window.PartnerMAS.Widget
       'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/',
       'www.uat.moneyadviceservice.org.uk': 'https://uat-partner-tools.moneyadviceservice.org.uk/'
     }
-    toolLink = document.getElementsByClassName(masConfig.targetSelector)[0].getAttribute('href')
-    hostname = new URL(toolLink).hostname
+
+    hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
+
     masConfig.toolsConfig = {
       syndication_url: 'https://partner-tools.moneyadviceservice.org.uk',
       syndication: {

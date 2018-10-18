@@ -1,0 +1,27 @@
+development:
+  clients:
+    default:
+      database: frontend_development
+      hosts:
+        - localhost:27017
+      options:
+
+  options:
+
+test:
+  clients:
+    default:
+      database: frontend_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
+
+production:
+  clients:
+    default:
+      database: "<%= ENV['PACS_MONGOD_DB'] %>"
+      hosts:
+        - "<%= ENV['PACS_MONGOD_HOST'] %>"

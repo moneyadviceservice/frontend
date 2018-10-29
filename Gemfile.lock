@@ -324,7 +324,7 @@ GEM
       dry-container (~> 0.2, >= 0.2.6)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-struct (0.5.1)
+    dry-struct (0.6.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
       dry-types (~> 0.13)
@@ -512,7 +512,7 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (0.37.0)
+    pacs (1.0.0)
       dough-ruby
       dry-struct
       dry-struct-setters
@@ -860,7 +860,7 @@ DEPENDENCIES
   nokogiri
   nunes
   opening_hours
-  pacs (= 0.37.0)
+  pacs (= 1.0.0)
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.9.0)
   poltergeist

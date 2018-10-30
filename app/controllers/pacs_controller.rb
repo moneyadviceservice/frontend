@@ -1,6 +1,4 @@
 class PacsController < EmbeddedToolsController
-  before_action :authenticate, if: :authentication_required?
-
   def exclude_syndicated_iframe_resizer?
     true
   end

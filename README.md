@@ -9,11 +9,8 @@ The Money Advice Service's responsive website.
 
 * [Git]
 * [Ruby][Ruby] - see version specified in [.ruby-version](.ruby-version)
-* [Node.js][Node]
-* [Bundler]
-* [Bower]
-* [MySQL 5.5](http://www.mysql.com/)
-
+* [Node.js][Node] - install a recent LTS release.
+* [Bundler] - `gem install bundler`
 
 ## Installation
 
@@ -21,13 +18,6 @@ Clone the repository:
 
 ```sh
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
-```
-
-Make sure all dependencies are available to the application:
-
-```sh
-$ bundle install
-$ bowndler install
 ```
 
 Install Mysql 5.5
@@ -43,15 +33,29 @@ Make sure MySQL is running.
 $ brew services start mysql55
 ```
 
+Install Bower
+
+```
+npm install -g bower
+```
+
+Make sure all dependencies are available to the application:
+
+```sh
+$ bundle install
+$ bowndler install
+```
+
+Make sure to copy the .env-example file:
+
+```sh
+cp .env-example .env
+```
+
 Setup the database:
 
 ```sh
 bundle exec rake db:create && bundle exec rake db:schema:load
-```
-
-Make sure to copy the .env-example file:
-```sh
-cp .env-example .env
 ```
 
 ## Usage

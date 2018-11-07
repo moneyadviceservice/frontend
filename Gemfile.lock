@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 5adfa3d8194184bace296c288fdbe139b2b112a3
-  branch: 9400-nm-popup-functionality-v2
+  revision: cbb21f1cb1253608546150bda60b1a5d168d701c
+  branch: minor-changes
   specs:
-    pacs (1.4.2)
+    pacs (1.6.0)
       dough-ruby
       dry-struct
       dry-struct-setters
@@ -909,4 +909,4 @@ DEPENDENCIES
   wpcc (= 2.1.1)
 
 BUNDLED WITH
-   1.16.4
+   1.17.1

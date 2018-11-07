@@ -10,11 +10,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: b07af1476890aee9476aba2ad24b6b0422c2b009
-  ref: b07af1476890aee9476aba2ad24b6b0422c2b009
-  branch: add-cache-force-task
+  revision: f5d44c9b9c0ebdb8b0650148daf9488f1334e63d
+  branch: 9792_renaming-resize
   specs:
-    pacs (1.3.0)
+    pacs (1.8.0)
       dough-ruby
       dry-struct
       dry-struct-setters

@@ -7,6 +7,8 @@ source 'http://gems.dev.mas.local'
 # 2. Keep dependencies ordered alphabetically
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
+#
+# empty line
 
 gem 'rails', '4.2.10'
 
@@ -65,7 +67,7 @@ gem 'debt_test', '~> 1.7.3'
 gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.3.0'
-gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: '9400-nm-popup-functionality-v2'
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'minor-changes'
 gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 1.9.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'

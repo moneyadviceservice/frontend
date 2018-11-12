@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523092831) do
+ActiveRecord::Schema.define(version: 20181026112617) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false
@@ -321,6 +321,12 @@ ActiveRecord::Schema.define(version: 20180523092831) do
 
   add_index "csr_users", ["email"], name: "index_csr_users_on_email", unique: true, using: :btree
   add_index "csr_users", ["reset_password_token"], name: "index_csr_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "debt_advice_locator_importer_trackers", force: :cascade do |t|
+    t.boolean  "running"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "debt_advice_locator_organisation_awards", force: :cascade do |t|
     t.integer "organisation_standard_id", limit: 4

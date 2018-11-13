@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181026112617) do
+ActiveRecord::Schema.define(version: 20181113141810) do
 
   create_table "action_plans_expense_items", force: :cascade do |t|
     t.string  "kind",       limit: 256,             null: false

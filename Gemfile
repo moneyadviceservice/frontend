@@ -125,10 +125,10 @@ group :build, :test, :development do
 end
 
 group :test, :development do
-  gem 'byebug'
   gem 'chai-jquery-rails'
   gem 'dotenv-rails'
   gem 'ejs'
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rack-livereload'

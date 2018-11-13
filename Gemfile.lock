@@ -558,6 +558,9 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     pry-rescue (1.4.5)
@@ -814,7 +817,6 @@ DEPENDENCIES
   bowndler (~> 1.0)
   budget_planner (~> 5.3.0)
   bugsnag
-  byebug
   capybara
   car_cost_tool (~> 1.2.2)
   chai-jquery-rails
@@ -867,6 +869,7 @@ DEPENDENCIES
   pensions_calculator (~> 1.9.0)
   poltergeist
   postcode_anywhere-email_validation
+  pry-byebug
   pry-rails
   pry-rescue
   psych (>= 2.0.5)

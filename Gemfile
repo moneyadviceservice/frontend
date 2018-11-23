@@ -69,7 +69,7 @@ gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.3.0'
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs',
-  branch: 'admin-feature'  # '1.10.0'
+  branch: 'improvements/9822-reduce-overdraft-examples'  # '1.10.0'
 gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 1.10.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'

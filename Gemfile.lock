@@ -9,6 +9,24 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 4917cabe213af764b67cd6ef29e5074eac9b113b
+  branch: feature/9779-add-welsh-page-to-cache
+  specs:
+    pacs (1.14.0)
+      dough-ruby
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -331,7 +349,7 @@ GEM
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (0.13.2)
+    dry-types (0.13.3)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
@@ -512,18 +530,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (1.13.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -862,7 +868,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 1.13.0)
+  pacs!
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.10.0)
   poltergeist

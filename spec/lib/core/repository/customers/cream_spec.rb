@@ -19,7 +19,7 @@ module Core
         let(:client) { double('client', find_customer: response) }
         let(:user) { User.new }
         let(:response) do
-          { 'd' => { 'results' => [] } }
+          nil
         end
 
         it 'returns nil' do
@@ -37,7 +37,8 @@ module Core
       let(:mas_customer_id) { '123' }
       let(:response) do
         {
-          'd' => { 'mas_CustomerId' => mas_customer_id }
+          # [...] other representation fields
+          'contactid' => mas_customer_id
         }
       end
 

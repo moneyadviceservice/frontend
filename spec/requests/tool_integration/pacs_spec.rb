@@ -8,7 +8,8 @@ RSpec.describe 'PACS', type: :request do
             instance_double(
               Pacs::PaymentAccountCollection,
               updated_at: Time.current,
-              payment_accounts: []
+              payment_accounts: [],
+              cache: nil
             )
           )
         get(path)

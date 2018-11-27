@@ -43,15 +43,15 @@ module Core
 
     def to_crm_hash
       {
-        FirstName: first_name,
-        LastName: last_name,
-        mas_ContactEmail: email,
-        Address1_PostalCode: post_code,
-        GenderCode: { Value: GENDER_MAP[gender] },
-        mas_AgeRange: { Value: AGE_RANGES_MAP[age_range] },
-        BirthDate: iso8601_date_of_birth,
-        DoNotBulkEMail: !newsletter_subscription,
-        Telephone2: contact_number
+        firstname: first_name,
+        lastname: last_name,
+        mas_contactemail: email,
+        address1_postalcode: post_code,
+        gendercode: GENDER_MAP[gender],
+        mas_agerange: AGE_RANGES_MAP[age_range],
+        birthdate: iso8601_date_of_birth,
+        donotbulkemail: !newsletter_subscription,
+        telephone2: contact_number
       }
     end
 

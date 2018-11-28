@@ -61,6 +61,7 @@ bundle exec rake db:create && bundle exec rake db:schema:load
 ## Usage
 
 To start the application:
+ - **note** make sure the port is different from the CMS's
 
 ```sh
 $ foreman s

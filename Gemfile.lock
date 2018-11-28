@@ -9,6 +9,24 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: e2a01d1e70468944ac1e27c38983eef0f6f015d5
+  branch: feature/9328-clear-filters-link
+  specs:
+    pacs (1.14.0)
+      dough-ruby
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -444,7 +462,7 @@ GEM
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
     mailjet (1.5.4)
       activesupport (>= 3.1.0)
@@ -472,11 +490,11 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    meta-tags (2.9.0)
+    meta-tags (2.11.0)
       actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
     mime-types (2.99.3)
-    mini_mime (1.0.0)
+    mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
@@ -512,18 +530,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (1.15.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -862,7 +868,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 1.15.0)
+  pacs!
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.10.0)
   poltergeist

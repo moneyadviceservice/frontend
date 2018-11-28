@@ -11,7 +11,7 @@ module Core
           response = ::Cream::Client.instance.find_customer(find_options(options))
           mapping = FindMapper.new(response).call
 
-          return if mapping.blank?
+          return if id_missing_on(mapping)
 
           Customer.new(mapping[:id], mapping)
         end
@@ -21,6 +21,10 @@ module Core
         end
 
         private
+
+        def id_missing_on(hash)
+          hash.try { |mapp| mapp[:id] }.blank?
+        end
 
         def find_options(options)
           { customer_id: options[:id], email: options[:email] }.compact

@@ -9,25 +9,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: e1321db53a158cee80e459e4caa9eb7926f3088a
-  ref: e1321db53a158cee80e459e4caa9eb7926f3088a
-  branch: feature/9339-pacs-filters
-  specs:
-    pacs (1.14.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
-GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -531,6 +512,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (1.15.0)
+      dough-ruby
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -869,7 +862,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs!
+  pacs (= 1.15.0)
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.10.0)
   poltergeist

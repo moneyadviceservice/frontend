@@ -32,6 +32,15 @@
   position: relative;
   margin: $baseline-unit*2 0 $baseline-unit;
 
+  .icon--whatsapp {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    margin: 0 $baseline-unit 0 0;
+    vertical-align: middle;
+    background: none;
+  }
+
   @include respond-to($mq-s) {
     margin: $baseline-unit*16 0 0;
 
@@ -43,6 +52,12 @@
 
     .icon--web-chat {
       margin-left: -35px;
+    }
+
+    .icon--whatsapp {
+      width: 59px;
+      height: 59px;
+      margin: 0 0 0 -29.5px;
     }
 
     .icon--call-us {
@@ -157,17 +172,6 @@
   }
 }
 
-.js .contact-panel__preloader {
-  width: 30px;
-  height: 30px;
-  background: image_url('preloader_30x30.gif');
-  margin: 0 auto;
-}
-
-.js .contact-panel__chat-javascript {
-  display: none;
-}
-
 .no-js .contact-panel__chat-description {
   display: none;
 }
@@ -180,31 +184,31 @@
   }
 }
 
-.js .contact-panel__dynamic-content {
-  &.is-loading {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: hidden;
-    }
-    .contact-panel__preloader {
-      visibility: visible;
-    }
+.js {
+  .contact-panel__preloader {
+    width: 30px;
+    height: 30px;
+    background: image_url('preloader_30x30.gif');
+    margin: 0 auto;
   }
 
-  &.is-loaded {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: visible;
-    }
-    .contact-panel__preloader {
-      display: none;
-    }
+  .contact-panel__chat-javascript,
+  .contact-panel__whatsapp-javascript {
+    display: none;
   }
-}
 
-.js .contact-panel__chat-closed {
   .contact-panel__dynamic-content {
     &.is-loading {
+      .contact-panel__chat-description,
+      .contact-panel__button {
+        visibility: hidden;
+      }
+      .contact-panel__preloader {
+        visibility: visible;
+      }
+    }
+
+    &.is-loaded {
       .contact-panel__chat-description,
       .contact-panel__button {
         visibility: visible;
@@ -214,4 +218,19 @@
       }
     }
   }
+
+  .contact-panel__chat-closed {
+    .contact-panel__dynamic-content {
+      &.is-loading {
+        .contact-panel__chat-description,
+        .contact-panel__button {
+          visibility: visible;
+        }
+        .contact-panel__preloader {
+          display: none;
+        }
+      }
+    }
+  }
 }
+

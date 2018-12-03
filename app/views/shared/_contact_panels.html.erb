@@ -49,6 +49,45 @@
     </div>
 
     <div class="l-contact-panel">
+      <div class="contact-panel contact-panel__whatsapp-<%= chat_opening_hours.status %> t-whatsapp">
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
+          <%= render 'shared/svg/whats_app_logo' %>WhatsApp
+        <% end %>
+
+        <p class="contact-panel__whatsapp-javascript t-whatsapp-javascript">
+          <%= t('contact_panels.chat.javascript.description_html') %>
+        </p>
+
+        <div class="contact-panel__dynamic-content is-loading" id="js-whatsapp-content">
+          <div class="contact-panel__preloader"></div>
+
+          <p class="contact-panel__whatsapp-description t-whatsapp-description" id="js-whatsapp-description">
+            <%= chat_opening_hours.description %>
+            <%= '*' if translation?('contact_panels.chat.smallprint') %>
+          </p>
+
+          <h3 class="contact-panel__opening-times-heading">Open:</h3>
+
+          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+            <% unless alternate_hours_active? %>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+            <% end %>
+          </ul>
+
+          <div class="contact-panel__button-container" id="js-whatsapp-cta">
+            <div class="contact-panel__button button is-disabled t-whatsapp-button">
+              <%= chat_opening_hours.call_to_action %>
+            </div>
+          </div>
+        </div>
+
+        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
+      </div>
+    </div>
+
+    <div class="l-contact-panel">
       <div class="contact-panel contact-panel--last">
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
           <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
@@ -91,32 +130,39 @@
       sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
       sWOChatstart = '<%= ENV['WEBCHAT_START'] %>';
       sWOImageLoaded = function() {
-
         <% if chat_opening_hours.open? %>
 
         var chatCTA = document.getElementById('js-chat-cta'),
             chatDescription = document.getElementById('js-chat-description'),
-            chatContent = document.getElementById('js-chat-content');
+            chatContent = document.getElementById('js-chat-content'),
+            whatsappCTA = document.getElementById('js-whatsapp-cta'),
+            whatsappDescription = document.getElementById('js-whatsapp-description'),
+            whatsappContent = document.getElementById('js-whatsapp-content');
 
         <% if show_floating_chat? %>
           var chatPopup = document.getElementById('js-chat-popup');
         <% end %>
 
-
         if (sWOImage.width == 1) {
-
           var sWOChatElement = document.createElement('div');
           var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
+          var WAChatElement = document.createElement('div');
+          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
           sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
           sWOChatElement.appendChild(sWOChatElementText);
+          WAChatElement.className = "contact-panel__button button is-disabled t-whatsapp-button";
+          WAChatElement.appendChild(WAChatElementText);
 
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
           chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+          whatsappCTA.innerHTML = "";
+          whatsappCTA.appendChild(WAChatElement);
+          whatsappDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
 
           <% if translation?('contact_panels.chat.smallprint') %>
-          chatDescription.innerHTML += '&nbsp;*';
+            chatDescription.innerHTML += '&nbsp;*';
           <% end %>
 
           <% if show_floating_chat? %>
@@ -124,25 +170,30 @@
           <% end %>
 
           chatContent.className = "contact-panel__dynamic-content is-loaded";
-
+          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
         } else {
-
           var sWOChatElement = document.createElement('a');
           var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
-          sWOChatElement.className = "contact-panel__button button t-chat-button";
-          sWOChatElement.appendChild(sWOChatElementText);
+          var WAChatElement = document.createElement('a');
+          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
 
+          sWOChatElement.className = "contact-panel__button button t-chat-button";
+          sWOChatElement.appendChild(sWOChatElementText),
+          WAChatElement.className = "contact-panel__button button t-whatsapp-button";
+          WAChatElement.appendChild(WAChatElementText);
 
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
           chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
           chatContent.className = "contact-panel__dynamic-content is-loaded";
-
+          whatsappCTA.innerHTML = "";
+          whatsappCTA.appendChild(WAChatElement);
+          whatsappDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
+          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
 
           <% if translation?('contact_panels.chat.smallprint') %>
-          chatDescription.innerHTML += '&nbsp;*';
+            chatDescription.innerHTML += '&nbsp;*';
           <% end %>
-
 
           sWOChatElement.onclick = function() {
             window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
@@ -162,11 +213,8 @@
               return false;
             };
           <% end %>
-
         }
-
         <% end %>
-
       };
 
       if (typeof sWOTrackPage == 'function') {
@@ -175,7 +223,6 @@
         <%# Track page enagagement (a visit lasting more than 30 seconds) %>
         setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
       }
-
     </script>
   <% end %>
 <% end %>

@@ -66,7 +66,10 @@ gem 'debt_test', '~> 1.7.3'
 gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.3.0'
-gem 'pacs', '1.15.0'
+#gem 'pacs', '1.15.0'
+gem 'pacs',
+  git: 'git@github.com:moneyadviceservice/pacs.git',
+  branch: 'story/9821-consolidate-eu-worldwide-examples'
 gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 1.10.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'

@@ -1,12 +1,4 @@
 GIT
-  remote: git@github.com:marcobgn/cream
-  revision: 72c07c1d8c5fa6ac2c4b8c72af59f8ccdfdc9bba
-  specs:
-    cream (2.1.1)
-      faraday (>= 0.9)
-      faraday_middleware
-
-GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 24e1b7f0dc374dcb968171f80e832118691d288c
   specs:
@@ -198,6 +190,9 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
+    cream (2.1.2)
+      faraday (>= 0.9)
+      faraday_middleware
     css_parser (1.3.7)
       addressable
     csslint_ruby (0.0.2)
@@ -824,7 +819,7 @@ DEPENDENCIES
   chronic
   codeclimate-test-reporter (= 0.6.0)
   cost_calculator_builder (~> 0.4.6)
-  cream!
+  cream (= 2.1.2)!
   csslint_ruby
   cucumber-rails
   cutback_calculator (~> 0.12.0)

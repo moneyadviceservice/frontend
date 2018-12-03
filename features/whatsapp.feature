@@ -3,14 +3,14 @@ Feature: WhatsApp Chat
   I want to chat online with an advisor via WhatsApp
   So that I can get money advice
 
-  Glossary:
-  - Online: We are within the hours that chat is operational
-  - Offline: We are outside the hours that chat is operational
-  - Busy: All advisors are occupied
+  # Glossary:
+  # - Online: We are within the hours that chat is operational
+  # - Offline: We are outside the hours that chat is operational
+  # - Busy: All advisors are occupied
 
-  Chat operational hours:
-  - Mon-Fri 8am-6pm
-  - Sat 8am-3pm
+  # Chat operational hours:
+  # - Mon-Fri 8am-6pm
+  # - Sat 8am-3pm
 
   @javascript
   Scenario: Chat is online, advisors are available, and the user has JavaScript enabled
@@ -44,8 +44,9 @@ Feature: WhatsApp Chat
 
   Scenario: Chat is not supported for Welsh users
     When I visit the website in Welsh
-    And I should see a message informing me that WhatsApp chat is only available in English
+    Then I should see a message informing me that WhatsApp chat is only available in English
 
-  Scenario: WhatsApp Chat is only displayed on mobile devices
-    When I visit the website on a desktop device
-    Then I should not see the WhatsApp chat
+  # May not include this one if too complex
+  # Scenario: WhatsApp Chat is only displayed on mobile devices
+  #   When I visit the website on a desktop device
+  #   Then I should not see the WhatsApp chat

@@ -32,6 +32,15 @@
   position: relative;
   margin: $baseline-unit*2 0 $baseline-unit;
 
+  .icon--whatsapp {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    margin: 0 $baseline-unit 0 0;
+    vertical-align: middle;
+    background: none;
+  }
+
   @include respond-to($mq-s) {
     margin: $baseline-unit*16 0 0;
 
@@ -43,6 +52,12 @@
 
     .icon--web-chat {
       margin-left: -35px;
+    }
+
+    .icon--whatsapp {
+      width: 59px;
+      height: 59px;
+      margin: 0 0 0 -29.5px;
     }
 
     .icon--call-us {

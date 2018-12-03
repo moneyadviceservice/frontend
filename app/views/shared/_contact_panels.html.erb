@@ -49,6 +49,34 @@
     </div>
 
     <div class="l-contact-panel">
+      <div class="contact-panel contact-panel__whatsapp-<%= chat_opening_hours.status %>">
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
+          <svg class="icon icon--whatsapp" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
+          </svg>WhatsApp
+        <% end %>
+
+        <p class="t-whatsapp-javascript">
+          <%= t('contact_panels.chat.javascript.description_html') %>
+        </p>
+
+        <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
+          <h3 class="contact-panel__opening-times-heading">Open:</h3>
+
+          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+            <% unless alternate_hours_active? %>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
+      </div>
+    </div>
+
+    <div class="l-contact-panel">
       <div class="contact-panel contact-panel--last">
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
           <span class="icon icon--call-us"></span><%= @footer.contact.heading %>

@@ -51,9 +51,7 @@
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__whatsapp-<%= chat_opening_hours.status %>">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <svg class="icon icon--whatsapp" xmlns="http://www.w3.org/2000/svg" focusable="false">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
-          </svg>WhatsApp
+          <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
 
         <p class="t-whatsapp-javascript">

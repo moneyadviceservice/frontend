@@ -40,13 +40,13 @@ Core::Registry::Repository[:category] =
 
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 
-if Rails.env.development?
-  Core::Registry::Repository[:customer] =
-    Core::Repository::Customers::Fake.new
-else
+# if Rails.env.development?
+#   Core::Registry::Repository[:customer] =
+#     Core::Repository::Customers::Fake.new
+# else
   Core::Registry::Repository[:customer] =
     Core::Repository::Customers::Cream.new
-end
+# end
 
 Core::Registry::Repository[:user] =
   Core::Repository::Users::Default.new

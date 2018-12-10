@@ -1,6 +1,7 @@
-# Then("I should be able to start a chat with an advisor via WhatsApp") do
-#   pending # Write code here that turns the phrase above into concrete actions
-# end
+Then("I should be able to start a chat with an advisor via WhatsApp") do
+  expect(home_page.whatsapp.button).to have_content(I18n.t('contact_panels.chat.available.call_to_action'))
+  # expect(home_page.whatsapp.description).to have_content(I18n.t('contact_panels.chat.available.description'))
+end
 
 Then(/^I should see a message informing me that I need JavaScript in order chat with an advisor via WhatsApp$/) do
   expect(home_page.whatsapp).to have_javascript_warning

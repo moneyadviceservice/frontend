@@ -2,7 +2,7 @@ require_relative '../section'
 
 module UI::Sections
   class Whatsapp < UI::Section
-    # element :button, '.t-chat-button'
+    element :button, '.t-whatsapp-button'
     # element :description, '.t-chat-description'
     element :javascript_warning, '.t-whatsapp-javascript'
     # element :opening_times, '.t-chat-opening-times'

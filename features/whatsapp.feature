@@ -12,11 +12,11 @@ Feature: WhatsApp Chat
   # - Mon-Fri 8am-6pm
   # - Sat 8am-3pm
 
-  # @javascript
-  # Scenario: Chat is online, advisors are available, and the user has JavaScript enabled
-  #   Given chat is online
-  #   And an advisor is available
-  #   Then I should be able to start a chat with an advisor via WhatsApp
+  @javascript
+  Scenario: Chat is online, advisors are available, and the user has JavaScript enabled
+    Given chat is online
+    And an advisor is available
+    Then I should be able to start a chat with an advisor via WhatsApp
 
   Scenario: Chat is online, advisors are available, and the user has JavaScript disabled
     Given chat is online

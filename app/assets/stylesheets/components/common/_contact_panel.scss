@@ -172,17 +172,6 @@
   }
 }
 
-.js .contact-panel__preloader {
-  width: 30px;
-  height: 30px;
-  background: image_url('preloader_30x30.gif');
-  margin: 0 auto;
-}
-
-.js .contact-panel__chat-javascript {
-  display: none;
-}
-
 .no-js .contact-panel__chat-description {
   display: none;
 }
@@ -195,31 +184,31 @@
   }
 }
 
-.js .contact-panel__dynamic-content {
-  &.is-loading {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: hidden;
-    }
-    .contact-panel__preloader {
-      visibility: visible;
-    }
+.js {
+  .contact-panel__preloader {
+    width: 30px;
+    height: 30px;
+    background: image_url('preloader_30x30.gif');
+    margin: 0 auto;
   }
 
-  &.is-loaded {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: visible;
-    }
-    .contact-panel__preloader {
-      display: none;
-    }
+  .contact-panel__chat-javascript,
+  .contact-panel__whatsapp-javascript {
+    display: none;
   }
-}
 
-.js .contact-panel__chat-closed {
   .contact-panel__dynamic-content {
     &.is-loading {
+      .contact-panel__chat-description,
+      .contact-panel__button {
+        visibility: hidden;
+      }
+      .contact-panel__preloader {
+        visibility: visible;
+      }
+    }
+
+    &.is-loaded {
       .contact-panel__chat-description,
       .contact-panel__button {
         visibility: visible;
@@ -229,4 +218,19 @@
       }
     }
   }
+
+  .contact-panel__chat-closed {
+    .contact-panel__dynamic-content {
+      &.is-loading {
+        .contact-panel__chat-description,
+        .contact-panel__button {
+          visibility: visible;
+        }
+        .contact-panel__preloader {
+          display: none;
+        }
+      }
+    }
+  }
 }
+

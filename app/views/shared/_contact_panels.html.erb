@@ -54,11 +54,11 @@
           <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
 
-        <p class="t-whatsapp-javascript">
+        <p class="contact-panel__whatsapp-javascript t-whatsapp-javascript">
           <%= t('contact_panels.chat.javascript.description_html') %>
         </p>
 
-        <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
+        <div class="contact-panel__dynamic-content is-loading" id="js-whatsapp-content">
           <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
           <ul class="t-chat-opening-times contact-panel__list unstyled-list">
@@ -68,6 +68,12 @@
               <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
             <% end %>
           </ul>
+
+          <div class="contact-panel__button-container" id="js-whatsapp-cta">
+            <div class="contact-panel__button button is-disabled t-whatsapp-button">
+              <%= chat_opening_hours.call_to_action %>
+            </div>
+          </div>
         </div>
 
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
@@ -121,8 +127,10 @@
         <% if chat_opening_hours.open? %>
 
         var chatCTA = document.getElementById('js-chat-cta'),
+            whatsappCTA = document.getElementById('js-whatsapp-cta'),
             chatDescription = document.getElementById('js-chat-description'),
-            chatContent = document.getElementById('js-chat-content');
+            chatContent = document.getElementById('js-chat-content'),
+            whatsappContent = document.getElementById('js-whatsapp-content');
 
         <% if show_floating_chat? %>
           var chatPopup = document.getElementById('js-chat-popup');
@@ -130,7 +138,6 @@
 
 
         if (sWOImage.width == 1) {
-
           var sWOChatElement = document.createElement('div');
           var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
@@ -150,25 +157,29 @@
           <% end %>
 
           chatContent.className = "contact-panel__dynamic-content is-loaded";
-
+          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
         } else {
-
           var sWOChatElement = document.createElement('a');
           var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
-          sWOChatElement.className = "contact-panel__button button t-chat-button";
-          sWOChatElement.appendChild(sWOChatElementText);
+          var WAChatElement = document.createElement('a');
+          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
 
+          sWOChatElement.className = "contact-panel__button button t-chat-button";
+          sWOChatElement.appendChild(sWOChatElementText),
+          WAChatElement.className = "contact-panel__button button t-whatsapp-button";
+          WAChatElement.appendChild(WAChatElementText);
 
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
+          whatsappCTA.innerHTML = "";
+          whatsappCTA.appendChild(WAChatElement);
           chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
           chatContent.className = "contact-panel__dynamic-content is-loaded";
-
+          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
 
           <% if translation?('contact_panels.chat.smallprint') %>
           chatDescription.innerHTML += '&nbsp;*';
           <% end %>
-
 
           sWOChatElement.onclick = function() {
             window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
@@ -188,11 +199,8 @@
               return false;
             };
           <% end %>
-
         }
-
         <% end %>
-
       };
 
       if (typeof sWOTrackPage == 'function') {

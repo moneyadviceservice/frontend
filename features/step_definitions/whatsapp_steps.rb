@@ -16,13 +16,13 @@ Then(/^I should see a message informing me that WhatsApp chat is currently busy$
   expect(home_page.whatsapp.description).to have_content(I18n.t('contact_panels.chat.busy.description'))
 end
 
-# Then("I should see a message informing me that WhatsApp chat will be online between today's opening hours") do
-#   pending # Write code here that turns the phrase above into concrete actions
-# end
+Then(/^I should see a message informing me that WhatsApp chat will be online between today's opening hours$/) do
+  expect(home_page.whatsapp.description).to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 8pm'))
+end
 
-# Then("I should see a message informing me that WhatsApp chat will be online tomorrow with tomorrow's opening hours") do
-#   pending # Write code here that turns the phrase above into concrete actions
-# end
+Then(/^I should see a message informing me that WhatsApp chat will be online tomorrow with tomorrow's opening hours$/) do
+  expect(home_page.whatsapp.description).to have_content(I18n.t('contact_panels.chat.offline.description', hours: '8am to 8pm'))
+end
 
 Then(/^I should see a message informing me that WhatsApp chat is only available in English$/) do
   expect(home_page.whatsapp).to have_smallprint

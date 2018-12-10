@@ -147,12 +147,18 @@
         if (sWOImage.width == 1) {
           var sWOChatElement = document.createElement('div');
           var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
+          var WAChatElement = document.createElement('div');
+          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
           sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
           sWOChatElement.appendChild(sWOChatElementText);
+          WAChatElement.className = "contact-panel__button button is-disabled t-whatsapp-button";
+          WAChatElement.appendChild(WAChatElementText);
 
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
+          whatsappCTA.innerHTML = "";
+          whatsappCTA.appendChild(WAChatElement);
           chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
 
           <% if translation?('contact_panels.chat.smallprint') %>

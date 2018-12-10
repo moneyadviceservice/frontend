@@ -23,12 +23,12 @@ Feature: WhatsApp Chat
     And an advisor is available
     Then I should see a message informing me that I need JavaScript in order chat with an advisor via WhatsApp
 
-  # @javascript
-  # Scenario: Chat is online but all advisors are busy
-  #   Given chat is online
-  #   And all advisors are busy
-  #   Then I should not be able to start a chat with an advisor via WhatsApp
-  #   And I should see a message informing me that WhatsApp chat is currently busy
+  @javascript
+  Scenario: Chat is online but all advisors are busy
+    Given chat is online
+    And all advisors are busy
+    Then I should not be able to start a chat with an advisor via WhatsApp
+    # And I should see a message informing me that WhatsApp chat is currently busy
 
   # @javascript
   # Scenario: Chat is offline, but will be online later that day

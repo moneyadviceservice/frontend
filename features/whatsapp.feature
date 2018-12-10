@@ -28,7 +28,7 @@ Feature: WhatsApp Chat
     Given chat is online
     And all advisors are busy
     Then I should not be able to start a chat with an advisor via WhatsApp
-    # And I should see a message informing me that WhatsApp chat is currently busy
+    And I should see a message informing me that WhatsApp chat is currently busy
 
   # @javascript
   # Scenario: Chat is offline, but will be online later that day

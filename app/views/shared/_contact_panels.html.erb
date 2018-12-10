@@ -130,19 +130,18 @@
       sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
       sWOChatstart = '<%= ENV['WEBCHAT_START'] %>';
       sWOImageLoaded = function() {
-
         <% if chat_opening_hours.open? %>
 
         var chatCTA = document.getElementById('js-chat-cta'),
-            whatsappCTA = document.getElementById('js-whatsapp-cta'),
             chatDescription = document.getElementById('js-chat-description'),
             chatContent = document.getElementById('js-chat-content'),
+            whatsappCTA = document.getElementById('js-whatsapp-cta'),
+            whatsappDescription = document.getElementById('js-whatsapp-description'),
             whatsappContent = document.getElementById('js-whatsapp-content');
 
         <% if show_floating_chat? %>
           var chatPopup = document.getElementById('js-chat-popup');
         <% end %>
-
 
         if (sWOImage.width == 1) {
           var sWOChatElement = document.createElement('div');
@@ -157,12 +156,13 @@
 
           chatCTA.innerHTML = "";
           chatCTA.appendChild(sWOChatElement);
+          chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
           whatsappCTA.innerHTML = "";
           whatsappCTA.appendChild(WAChatElement);
-          chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+          whatsappDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
 
           <% if translation?('contact_panels.chat.smallprint') %>
-          chatDescription.innerHTML += '&nbsp;*';
+            chatDescription.innerHTML += '&nbsp;*';
           <% end %>
 
           <% if show_floating_chat? %>

@@ -59,6 +59,13 @@
         </p>
 
         <div class="contact-panel__dynamic-content is-loading" id="js-whatsapp-content">
+          <div class="contact-panel__preloader"></div>
+
+          <p class="contact-panel__chat-description t-whatsapp-description" id="js-whatsapp-description">
+            <%= chat_opening_hours.description %>
+            <%= '*' if translation?('contact_panels.chat.smallprint') %>
+          </p>
+
           <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
           <ul class="t-chat-opening-times contact-panel__list unstyled-list">

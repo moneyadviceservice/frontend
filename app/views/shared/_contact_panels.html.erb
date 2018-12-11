@@ -4,7 +4,6 @@
 
 <div class="l-constrained">
   <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
-
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
@@ -48,7 +47,7 @@
       </div>
     </div>
 
-    <div class="l-contact-panel">
+    <div class="l-contact-panel contact-panel__whatsapp">
       <div class="contact-panel contact-panel__whatsapp-<%= chat_opening_hours.status %> t-whatsapp">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
           <%= render 'shared/svg/whats_app_logo' %>WhatsApp

@@ -22,6 +22,12 @@
   }
 }
 
+.contact-panel__whatsapp {
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
 .contact-panel--last {
   border-bottom: 0;
 }

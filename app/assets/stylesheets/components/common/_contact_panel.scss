@@ -3,18 +3,28 @@
 // Styleguide Contact Panel
 
 .contact-panel {
+  // N.B. This is to over-ride styles from Yeast
+  // Should be added to that for a final deployment
+  @include column(12);
+
   color: $color-grey-medium-dark;
   text-align: center;
-  border-bottom: 1px solid $color-newsletter-input-border;
   padding: $baseline-unit*2 0;
 
   @include respond-to($mq-s) {
     padding: $baseline-unit*4 0;
-    margin-bottom: $baseline-unit*2;
+  }
+
+  @include respond-to($mq-m) {
+    border-bottom: 1px solid $color-newsletter-input-border;
   }
 
   @include respond-to($mq-l) {
     border-bottom: 0;
+    // N.B. This is to over-ride styles from Yeast
+    // Should be added to that for a final deployment
+    width: 100%;
+    margin: 0;
   }
 
   @include respond-to($mq-xl) {
@@ -22,7 +32,15 @@
   }
 }
 
-.contact-panel__whatsapp {
+.l-contact-panel.contact-panel__whatsapp {
+  background: #455A64;
+
+  .contact-panel__dynamic-content,
+  .contact-panel__whatsapp-javascript,
+  .contact-panel__opening-times-heading {
+    color: $color-white;
+  }
+
   @include respond-to($mq-m) {
     display: none;
   }
@@ -37,6 +55,10 @@
   color: $color-heading-extra-small;
   position: relative;
   margin: $baseline-unit*2 0 $baseline-unit;
+
+  .contact-panel__whatsapp & {
+    color: $color-white;
+  }
 
   .icon--whatsapp {
     display: inline-block;
@@ -240,3 +262,13 @@
   }
 }
 
+// N.B. This is to over-ride styles from Yeast
+// Should be added to that for a final deployment
+.l-contact-panel {
+  width: 100%;
+  margin: 0;
+
+  @include respond-to($mq-l) {
+    @include column(6);
+  }
+}

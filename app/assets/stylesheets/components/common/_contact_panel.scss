@@ -3,22 +3,46 @@
 // Styleguide Contact Panel
 
 .contact-panel {
+  // N.B. This is to over-ride styles from Yeast
+  // Should be added to that for a final deployment
+  @include column(12);
+
   color: $color-grey-medium-dark;
   text-align: center;
-  border-bottom: 1px solid $color-newsletter-input-border;
   padding: $baseline-unit*2 0;
 
   @include respond-to($mq-s) {
     padding: $baseline-unit*4 0;
-    margin-bottom: $baseline-unit*2;
+  }
+
+  @include respond-to($mq-m) {
+    border-bottom: 1px solid $color-newsletter-input-border;
   }
 
   @include respond-to($mq-l) {
     border-bottom: 0;
+    // N.B. This is to over-ride styles from Yeast
+    // Should be added to that for a final deployment
+    width: 100%;
+    margin: 0;
   }
 
   @include respond-to($mq-xl) {
     padding: $baseline-unit*4;
+  }
+}
+
+.l-contact-panel.contact-panel__whatsapp {
+  background: #455A64;
+
+  .contact-panel__dynamic-content,
+  .contact-panel__whatsapp-javascript,
+  .contact-panel__opening-times-heading {
+    color: $color-white;
+  }
+
+  @include respond-to($mq-m) {
+    display: none;
   }
 }
 
@@ -32,6 +56,19 @@
   position: relative;
   margin: $baseline-unit*2 0 $baseline-unit;
 
+  .contact-panel__whatsapp & {
+    color: $color-white;
+  }
+
+  .icon--whatsapp {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    margin: 0 $baseline-unit 0 0;
+    vertical-align: middle;
+    background: none;
+  }
+
   @include respond-to($mq-s) {
     margin: $baseline-unit*16 0 0;
 
@@ -43,6 +80,12 @@
 
     .icon--web-chat {
       margin-left: -35px;
+    }
+
+    .icon--whatsapp {
+      width: 59px;
+      height: 59px;
+      margin: 0 0 0 -29.5px;
     }
 
     .icon--call-us {
@@ -157,17 +200,6 @@
   }
 }
 
-.js .contact-panel__preloader {
-  width: 30px;
-  height: 30px;
-  background: image_url('preloader_30x30.gif');
-  margin: 0 auto;
-}
-
-.js .contact-panel__chat-javascript {
-  display: none;
-}
-
 .no-js .contact-panel__chat-description {
   display: none;
 }
@@ -180,31 +212,31 @@
   }
 }
 
-.js .contact-panel__dynamic-content {
-  &.is-loading {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: hidden;
-    }
-    .contact-panel__preloader {
-      visibility: visible;
-    }
+.js {
+  .contact-panel__preloader {
+    width: 30px;
+    height: 30px;
+    background: image_url('preloader_30x30.gif');
+    margin: 0 auto;
   }
 
-  &.is-loaded {
-    .contact-panel__chat-description,
-    .contact-panel__button {
-      visibility: visible;
-    }
-    .contact-panel__preloader {
-      display: none;
-    }
+  .contact-panel__chat-javascript,
+  .contact-panel__whatsapp-javascript {
+    display: none;
   }
-}
 
-.js .contact-panel__chat-closed {
   .contact-panel__dynamic-content {
     &.is-loading {
+      .contact-panel__chat-description,
+      .contact-panel__button {
+        visibility: hidden;
+      }
+      .contact-panel__preloader {
+        visibility: visible;
+      }
+    }
+
+    &.is-loaded {
       .contact-panel__chat-description,
       .contact-panel__button {
         visibility: visible;
@@ -214,4 +246,25 @@
       }
     }
   }
+
+  .contact-panel__chat-closed {
+    .contact-panel__dynamic-content {
+      &.is-loading {
+        .contact-panel__chat-description,
+        .contact-panel__button {
+          visibility: visible;
+        }
+        .contact-panel__preloader {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// N.B. This is to over-ride styles from Yeast
+// Should be added to that for a final deployment
+.l-contact-panel {
+  width: 100%;
+  margin: 0;
 }

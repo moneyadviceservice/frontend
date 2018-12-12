@@ -267,4 +267,8 @@
 .l-contact-panel {
   width: 100%;
   margin: 0;
+
+  @include respond-to($mq-l) {
+    @include column(6);
+  }
 }

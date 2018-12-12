@@ -4,14 +4,14 @@ module Core
       class Cream
         def create(user)
           response = ::Cream::Client.instance.create_customer(user)
-          response['d']['mas_CustomerId']
+          response['contactid']
         end
 
         def find(options)
           response = ::Cream::Client.instance.find_customer(find_options(options))
           mapping = FindMapper.new(response).call
 
-          return nil if mapping.nil?
+          return if id_missing_on(mapping)
 
           Customer.new(mapping[:id], mapping)
         end
@@ -21,6 +21,10 @@ module Core
         end
 
         private
+
+        def id_missing_on(hash)
+          hash.try { |mapp| mapp[:id] }.blank?
+        end
 
         def find_options(options)
           { customer_id: options[:id], email: options[:email] }.compact
@@ -50,21 +54,23 @@ module Core
           end
 
           def call
-            return unless customer_details
+            return unless response
 
-            { id:                      customer_details['mas_CustomerId'],
-              first_name:              customer_details['FirstName'],
-              last_name:               customer_details['LastName'],
-              email:                   customer_details['EMailAddress1'],
-              post_code:               customer_details['Address1_PostalCode'],
-              state:                   customer_details['StateCode']['Value'],
-              age_range:               age_range(customer_details['mas_AgeRange']['Value']),
-              gender:                  gender(customer_details['GenderCode']['Value']),
-              topics:                  customer_details['mas_FinancialInterest1'],
-              newsletter_subscription: !customer_details['DoNotBulkEMail'],
-              contact_number:          customer_details['Telephone2'],
-              date_of_birth:           date_of_birth(customer_details),
-              status_code:             customer_details['StatusCode']['Value'] }
+            {
+              id:                      response['contactid'],
+              first_name:              response['firstname'],
+              last_name:               response['lastname'],
+              email:                   response['emailaddress1'],
+              post_code:               response['address1_postalcode'],
+              state:                   response['statecode'],
+              age_range:               age_range(response['mas_agerange']),
+              gender:                  gender(response['gendercode']),
+              topics:                  response['mas_financialinterest1'],
+              newsletter_subscription: !response['donotbulkemail'],
+              contact_number:          response['telephone2'],
+              date_of_birth:           date_of_birth(response),
+              status_code:             response['statuscode']
+            }
           end
 
           private
@@ -85,10 +91,6 @@ module Core
 
           def gender(value)
             GENDER_MAP.key(value)
-          end
-
-          def customer_details
-            response['d']['results'].first
           end
         end
       end

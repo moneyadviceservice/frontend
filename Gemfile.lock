@@ -1,4 +1,13 @@
 GIT
+  remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
+  revision: 24e1b7f0dc374dcb968171f80e832118691d288c
+  specs:
+    adal (1.0.0)
+      jwt (~> 1.5)
+      nokogiri (~> 1.6)
+      uri_template (~> 0.7)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -26,21 +35,21 @@ GEM
       hashie
       rails (>= 4, < 5)
       sass-rails
-    actionmailer (4.2.10)
-      actionpack (= 4.2.10)
-      actionview (= 4.2.10)
-      activejob (= 4.2.10)
+    actionmailer (4.2.11)
+      actionpack (= 4.2.11)
+      actionview (= 4.2.11)
+      activejob (= 4.2.11)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.10)
-      actionview (= 4.2.10)
-      activesupport (= 4.2.10)
+    actionpack (4.2.11)
+      actionview (= 4.2.11)
+      activesupport (= 4.2.11)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.10)
-      activesupport (= 4.2.10)
+    actionview (4.2.11)
+      activesupport (= 4.2.11)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
@@ -51,15 +60,15 @@ GEM
     active_model_serializers (0.9.7)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
-    activejob (4.2.10)
-      activesupport (= 4.2.10)
+    activejob (4.2.11)
+      activesupport (= 4.2.11)
       globalid (>= 0.3.0)
-    activemodel (4.2.10)
-      activesupport (= 4.2.10)
+    activemodel (4.2.11)
+      activesupport (= 4.2.11)
       builder (~> 3.1)
-    activerecord (4.2.10)
-      activemodel (= 4.2.10)
-      activesupport (= 4.2.10)
+    activerecord (4.2.11)
+      activemodel (= 4.2.11)
+      activesupport (= 4.2.11)
       arel (~> 6.0)
     activerecord-session_store (1.1.1)
       actionpack (>= 4.0)
@@ -67,7 +76,7 @@ GEM
       multi_json (~> 1.11, >= 1.11.2)
       rack (>= 1.5.2, < 3)
       railties (>= 4.0)
-    activesupport (4.2.10)
+    activesupport (4.2.11)
       i18n (~> 0.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
@@ -181,10 +190,9 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    cream (1.0.0)
+    cream (2.1.3)
       faraday (>= 0.9)
       faraday_middleware
-      mechanize
     css_parser (1.3.7)
       addressable
     csslint_ruby (0.0.2)
@@ -431,6 +439,7 @@ GEM
     jshint_ruby (0.1)
       execjs
     json (1.8.6)
+    jwt (1.5.6)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -444,7 +453,7 @@ GEM
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
     mailjet (1.5.4)
       activesupport (>= 3.1.0)
@@ -463,20 +472,11 @@ GEM
       delayed_job_active_record
       hashie
     mas-templating (1.0.0.18)
-    mechanize (2.7.5)
-      domain_name (~> 0.5, >= 0.5.1)
-      http-cookie (~> 1.0)
-      mime-types (>= 1.17.2)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.6)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (>= 0.0.9, < 0.2)
     meta-tags (2.9.0)
       actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
     mime-types (2.99.3)
-    mini_mime (1.0.0)
+    mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
@@ -500,13 +500,10 @@ GEM
     multi_test (0.1.2)
     multipart-post (2.0.0)
     mysql2 (0.4.9)
-    net-http-digest_auth (1.4.1)
-    net-http-persistent (2.9.4)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    ntlm-http (0.1.1)
     nunes (0.5.0)
     opening_hours (0.0.7)
       activesupport
@@ -580,16 +577,16 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.10)
-      actionmailer (= 4.2.10)
-      actionpack (= 4.2.10)
-      actionview (= 4.2.10)
-      activejob (= 4.2.10)
-      activemodel (= 4.2.10)
-      activerecord (= 4.2.10)
-      activesupport (= 4.2.10)
+    rails (4.2.11)
+      actionmailer (= 4.2.11)
+      actionpack (= 4.2.11)
+      actionview (= 4.2.11)
+      activejob (= 4.2.11)
+      activemodel (= 4.2.11)
+      activerecord (= 4.2.11)
+      activesupport (= 4.2.11)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.10)
+      railties (= 4.2.11)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -599,9 +596,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    railties (4.2.10)
-      actionpack (= 4.2.10)
-      activesupport (= 4.2.10)
+    railties (4.2.11)
+      actionpack (= 4.2.11)
+      activesupport (= 4.2.11)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
@@ -772,6 +769,7 @@ GEM
       redcarpet
       sass-rails
       uglifier
+    uri_template (0.7.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
@@ -782,7 +780,6 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    webrobots (0.1.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -801,6 +798,7 @@ PLATFORMS
 DEPENDENCIES
   action_plans (~> 4.8.0)
   activerecord-session_store
+  adal!
   advice_plans (~> 3.3.1)
   aes
   agreements (~> 2.3.0)
@@ -821,7 +819,7 @@ DEPENDENCIES
   chronic
   codeclimate-test-reporter (= 0.6.0)
   cost_calculator_builder (~> 0.4.6)
-  cream (~> 1.0.0)
+  cream (= 2.1.3)
   csslint_ruby
   cucumber-rails
   cutback_calculator (~> 0.12.0)
@@ -834,6 +832,7 @@ DEPENDENCIES
   delayed_job_active_record
   devise (~> 4.2.0)
   devise-encryptable
+  dotenv
   dotenv-rails
   dough-ruby (~> 5.29)
   draper (< 3)
@@ -872,7 +871,7 @@ DEPENDENCIES
   psych (>= 2.0.5)
   quiz (~> 1.2.0)!
   rack-livereload
-  rails (= 4.2.10)
+  rails (= 4.2.11)
   recaptcha
   redcarpet
   rio (= 1.20.0)!

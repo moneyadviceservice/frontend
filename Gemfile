@@ -8,18 +8,20 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11'
 
 gem 'activerecord-session_store'
+gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'aes'
 gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
 gem 'bugsnag'
-gem 'cream', '~> 1.0.0'
+gem 'cream', '2.1.3'
 gem 'delayed_job_active_record'
 gem 'devise', '~> 4.2.0'
 gem 'devise-encryptable'
+gem 'dotenv'
 gem 'dough-ruby', '~> 5.29'
 gem 'draper', '< 3'
 gem 'faraday', '0.9.2'

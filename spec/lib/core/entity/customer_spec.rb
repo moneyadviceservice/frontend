@@ -47,15 +47,15 @@ module Core
     describe '#to_crm_hash' do
       it 'returns hash with correct attributes' do
         expected = {
-          FirstName: attributes[:first_name],
-          LastName: attributes[:last_name],
-          mas_ContactEmail: attributes[:email],
-          Address1_PostalCode: attributes[:post_code],
-          GenderCode: { Value: Customer::GENDER_MAP[attributes[:gender]] },
-          mas_AgeRange: { Value: Customer::AGE_RANGES_MAP[attributes[:age_range]] },
-          BirthDate: attributes[:date_of_birth].to_time.utc.iso8601,
-          DoNotBulkEMail: !attributes[:newsletter_subscription],
-          Telephone2: attributes[:contact_number]
+          firstname: attributes[:first_name],
+          lastname: attributes[:last_name],
+          mas_contactemail: attributes[:email],
+          address1_postalcode: attributes[:post_code],
+          gendercode: Customer::GENDER_MAP[attributes[:gender]],
+          mas_agerange: Customer::AGE_RANGES_MAP[attributes[:age_range]],
+          birthdate: attributes[:date_of_birth].to_time.utc.iso8601,
+          donotbulkemail: !attributes[:newsletter_subscription],
+          telephone2: attributes[:contact_number]
         }
 
         expect(subject.to_crm_hash).to eql(expected)
@@ -65,7 +65,7 @@ module Core
         let(:date_of_birth) { nil }
 
         it 'returns nil for birth date' do
-          expect(subject.to_crm_hash[:BirthDate]).to be_nil
+          expect(subject.to_crm_hash[:birthdate]).to be_nil
         end
       end
     end

@@ -18,6 +18,21 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator.git
+  revision: 68c783bbb2740cbfc264f8ef3abe9ea549cdd887
+  branch: 9831/update-heading
+  specs:
+    pensions_calculator (1.10.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      pensions_calculator-calculations (~> 1.6.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -531,15 +546,6 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (1.10.1.570)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      pensions_calculator-calculations (~> 1.6.0)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
     pensions_calculator-calculations (1.6.0.14)
       activesupport
     poltergeist (1.17.0)
@@ -863,7 +869,7 @@ DEPENDENCIES
   opening_hours
   pacs (= 2.6.3)
   payday_loans_intervention (~> 1.7.0)
-  pensions_calculator (~> 1.10.1)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation
   pry-rails

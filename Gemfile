@@ -10,6 +10,8 @@ source 'http://gems.dev.mas.local'
 
 gem 'rails', '4.2.11'
 
+gem 'awesome_print'
+
 gem 'activerecord-session_store'
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'aes'

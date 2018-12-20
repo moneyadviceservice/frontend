@@ -132,6 +132,7 @@ GEM
       encryptor (~> 3.0.0)
     autoprefixer-rails (8.2.0)
       execjs
+    awesome_print (1.8.0)
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
     backports (3.11.1)
@@ -812,6 +813,7 @@ DEPENDENCIES
   algoliasearch
   attr_encrypted (~> 3.1)
   autoprefixer-rails
+  awesome_print
   baby_cost_calculator (~> 0.3.0)
   better_errors
   binding_of_caller

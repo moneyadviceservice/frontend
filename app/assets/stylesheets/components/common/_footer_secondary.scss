@@ -9,6 +9,7 @@
 
 .footer-secondary__list-item {
   margin: 0;
+  vertical-align: middle;
 
   @include respond-to($mq-s) {
     @include inline-block;
@@ -103,8 +104,35 @@
   }
 }
 
+.footer-secondary__sfgb-text {
+  display: inline-block;
+  & > * {
+    display: block;
+  }
+}
+
+.footer-secondary__sfgb-link {
+  margin-top: $baseline-unit*2;
+}
+
 .accessibility-feedback-link .icon--accessibility {
   position: relative;
   top: 2px;
   margin-right: 4px;
+}
+
+.footer-secondary--inner {
+  @include column(12);
+  @include respond-to($mq-l) {
+    display: -ms-flex;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.footer-secondary__list--right {
+  max-width: 50%;
 }

@@ -1,5 +1,5 @@
 <div class="l-footer-secondary t-footer-secondary">
-  <div class="l-footer-secondary--inner">
+  <div class="footer-secondary--inner">
     <div class="l-footer-secondary__list--left">
       <ul class="footer-secondary__list">
 
@@ -28,10 +28,22 @@
           <% end %>
         </li>
 
+        <li class="footer-secondary__list-item footer-secondary__sfgb-link">
+          <a class="footer-secondary__link" href="https://singlefinancialguidancebody.org.uk/" target="_blank">
+            <span class="footer-secondary__sfgb-text">
+              <span><%= t('footer.sfgb_part_of') %></span>
+              <span><strong><%= t('footer.sfgb_single_financial') %></strong></span>
+              <span><strong><%= t('footer.sfgb_guidance_body') %></strong></span>
+            </span>
+            <%= image_tag("sfgb-logo.png", class: 'sfgb-logo__img', alt: "#{t('footer.sfgb_single_financial')} #{t('footer.sfgb_guidance_body')} logo") %>
+            <span class="visually-hidden">opens in a new window</span>
+          </a>
+        </li>
+
       </ul>
     </div>
 
-    <div class="l-footer-secondary__list--right">
+    <div class="l-footer-secondary__list--right footer-secondary__list--right">
       <ul class="footer-secondary__list footer-secondary__link-items">
         <% unless hide_elements_irrelevant_for_third_parties? %>
           <% if user_signed_in? %>

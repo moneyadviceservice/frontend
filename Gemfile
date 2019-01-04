@@ -44,28 +44,34 @@ gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'sucker_punch'
 gem 'turnout'
+# 1.0.2 has breaking changes as it adds japanese and turkish locales
+gem 'validate_url', '1.0.0'
 gem 'whenever', require: false
 
 # MAS Gems
-gem 'action_plans', '~> 4.8.0'
+# ========
+# Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
+gem 'cream', '2.1.3'
+gem 'dough-ruby', '~> 5.29'
+gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
+gem 'mas-cms-client', '1.19.0'
+gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
+# Tools
+gem 'action_plans', '~> 4.8.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.3.0'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 5.3.0'
 gem 'car_cost_tool', '~> 1.3'
 gem 'cost_calculator_builder', '~> 0.4.6'
-gem 'cream', '2.1.3'
 gem 'cutback_calculator', '~> 0.12.0'
 gem 'debt_advice_locator', '~> 2.9.3'
 gem 'debt_and_mental_health', '~> 1.3.1'
 gem 'debt_free_day_calculator', '~> 2.4.0'
 gem 'debt_test', '~> 1.7.3'
 gem 'decision_trees', '~> 2.1.0'
-gem 'dough-ruby', '~> 5.29'
 gem 'feedback', '~> 0.4.0'
-gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
-gem 'mas-cms-client', '1.19.0'
 gem 'mortgage_calculator', '~> 3.3.0'
 gem 'pacs', '2.7.0'
 gem 'payday_loans_intervention', '~> 1.7.0'
@@ -73,13 +79,9 @@ gem 'pensions_calculator', '~> 1.10.1'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.20.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
-gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
 gem 'wpcc', '2.1.1'
-
-# 1.0.2 has breaking changes as it adds japanese and turkish locales
-gem 'validate_url', '1.0.0'
 
 group :assets do
   gem 'autoprefixer-rails'

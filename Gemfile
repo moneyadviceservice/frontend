@@ -8,7 +8,7 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11'
 
 gem 'activerecord-session_store'
 gem 'aes'
@@ -16,11 +16,10 @@ gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
 gem 'bugsnag'
-gem 'cream', '~> 1.0.0'
 gem 'delayed_job_active_record'
 gem 'devise', '~> 4.2.0'
 gem 'devise-encryptable'
-gem 'dough-ruby', '~> 5.29'
+gem 'dotenv'
 gem 'draper', '< 3'
 gem 'faraday', '0.9.2'
 gem 'faraday-conductivity'
@@ -29,8 +28,6 @@ gem 'kss'
 gem 'link_header'
 gem 'mail'
 gem 'mailjet'
-gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
-gem 'mas-cms-client', '1.19.0'
 gem 'meta-tags', '~> 2.4'
 gem 'mysql2', '0.4.9'
 gem 'newrelic_rpm'
@@ -44,13 +41,23 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'rubytree'
 gem 'sass-rails'
-gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 gem 'statsd-ruby'
 gem 'sucker_punch'
 gem 'turnout'
+# 1.0.2 has breaking changes as it adds japanese and turkish locales
+gem 'validate_url', '1.0.0'
 gem 'whenever', require: false
 
-# tools
+# MAS Gems
+# ========
+# Dependencies
+gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
+gem 'cream', '2.1.3'
+gem 'dough-ruby', '~> 5.29'
+gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
+gem 'mas-cms-client', '1.19.0'
+gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
+# Tools
 gem 'action_plans', '~> 4.8.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.3.0'
@@ -66,18 +73,15 @@ gem 'debt_test', '~> 1.7.3'
 gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 3.3.0'
-gem 'pacs', '2.4.0'
+gem 'pacs', '2.7.0'
 gem 'payday_loans_intervention', '~> 1.7.0'
-gem 'pensions_calculator', '~> 1.10.0'
+gem 'pensions_calculator', '~> 1.10.1'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.20.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
 gem 'wpcc', '2.1.1'
-
-# 1.0.2 has breaking changes as it adds japanese and turkish locales
-gem 'validate_url', '1.0.0'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -44,8 +44,6 @@ gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'sucker_punch'
 gem 'turnout'
-# 1.0.2 has breaking changes as it adds japanese and turkish locales
-gem 'validate_url', '1.0.0'
 gem 'whenever', require: false
 
 # MAS Gems

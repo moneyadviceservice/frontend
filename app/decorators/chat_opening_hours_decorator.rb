@@ -35,6 +35,10 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     open? ? :open : :closed
   end
 
+  def status_as_string
+    open? ? 'open' : 'closed'
+  end
+
   def call_to_action
     if open?
       I18n.t('contact_panels.chat.unavailable.call_to_action')

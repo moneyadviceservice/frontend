@@ -35,12 +35,6 @@
 .l-contact-panel.contact-panel__whatsapp {
   background: #455A64;
 
-  .contact-panel__dynamic-content,
-  .contact-panel__whatsapp-javascript,
-  .contact-panel__opening-times-heading {
-    color: $color-white;
-  }
-
   @include respond-to($mq-m) {
     display: none;
   }
@@ -55,10 +49,6 @@
   color: $color-heading-extra-small;
   position: relative;
   margin: $baseline-unit*2 0 $baseline-unit;
-
-  .contact-panel__whatsapp & {
-    color: $color-white;
-  }
 
   .icon--whatsapp {
     display: inline-block;
@@ -271,4 +261,8 @@
   @include respond-to($mq-l) {
     @include column(6);
   }
+}
+
+.contact-panel-theme-white {
+  color: $color-white;
 }

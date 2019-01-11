@@ -1,120 +1,126 @@
 <% unless hide_contact_panels? %>
-<div class="l-footer-primary t-footer-primary">
-  <div class="l-constrained">
-    <div class="l-footer-primary__left">
-      <ul class="l-footer-primary__social-sharing t-footer-social-links">
-        <li class="l-footer-primary__list--left">
-          <div class="footer-primary__list-item">
-            <a class="button facebook-link t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--facebook" aria-labelledby="facebook-label" focusable="false">
-                <title id="facebook-label">Money Advice Service Facebook page</title>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--facebook"></use>
-              </svg>
-              <span class="icon icon--facebook"></span>
-              <span class="visually-hidden">Facebook - <%= t('footer.new-window-label') %></span>
-            </a>
-            <p class="social-sharing__counter">
-              <span class="social-sharing__counter__total">72k</span>
-              <span class="social-sharing__counter__label"><%= t('footer.facebook-likes') %></span>
-            </p>
-          </div>
-        </li>
-
-        <li class="l-footer-primary__list--centre">
-          <div class="footer-primary__list-item">
-            <a class="button twitter-link t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--twitter" aria-labelledby="twitter-label" focusable="false">
-                <title id="twitter-label">Money Advice Service Twitter page</title>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--twitter"></use>
-              </svg>
-              <span class="icon icon--twitter"></span>
-              <span class="visually-hidden">Twitter - <%= t('footer.new-window-label') %></span>
-            </a>
-            <p class="social-sharing__counter">
-              <span class="social-sharing__counter__total">45k</span>
-              <span class="social-sharing__counter__label"><%= t('footer.twitter-followers') %></span>
-            </p>
-          </div>
-        </li>
-
-        <li class="l-footer-primary__list--right">
-          <div class="footer-primary__list-item">
-            <a class="button youtube-link t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--youtube" aria-labelledby="youtube-label" focusable="false">
-                <title id="youtube-label">Money Advice Service Youtube channel</title>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--youtube"></use>
-              </svg>
-              <span class="icon icon--youtube"></span>
-              <span class="visually-hidden">Youtube - <%= t('footer.new-window-label') %></span>
-            </a>
-            <p class="social-sharing__counter">
-              <span class="social-sharing__counter__total">5.6m</span>
-              <span class="social-sharing__counter__label"><%= t('footer.youtube-views') %></span>
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="l-footer-primary__right">
-      <nav role="navigation" aria-label="footer">
-        <ul class="l-footer-primary__list">
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.about_us_link') %>"><%= t('footer.about_us') %></a>
+  <div class="l-footer-primary t-footer-primary">
+    <div class="l-constrained">
+      <div class="l-footer-primary__left">
+        <ul class="l-footer-primary__social-sharing t-footer-social-links">
+          <li class="l-footer-primary__list--left">
+            <div class="footer-primary__list-item">
+              <a class="button facebook-link t-facebook-link" lang="en" href="https://www.facebook.com/MoneyAdviceService?ref=mas" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--facebook" aria-labelledby="facebook-label" focusable="false">
+                  <title id="facebook-label">Money Advice Service Facebook page</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--facebook"></use>
+                </svg>
+                <span class="icon icon--facebook"></span>
+                <span class="visually-hidden">Facebook - <%= t('footer.new-window-label') %></span>
+              </a>
+              <p class="social-sharing__counter">
+                <span class="social-sharing__counter__total">72k</span>
+                <span class="social-sharing__counter__label"><%= t('footer.facebook-likes') %></span>
+              </p>
+            </div>
           </li>
 
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
+          <li class="l-footer-primary__list--centre">
+            <div class="footer-primary__list-item">
+              <a class="button twitter-link t-twitter-link" lang="en" href="https://twitter.com/YourMoneyAdvice" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--twitter" aria-labelledby="twitter-label" focusable="false">
+                  <title id="twitter-label">Money Advice Service Twitter page</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--twitter"></use>
+                </svg>
+                <span class="icon icon--twitter"></span>
+                <span class="visually-hidden">Twitter - <%= t('footer.new-window-label') %></span>
+              </a>
+              <p class="social-sharing__counter">
+                <span class="social-sharing__counter__total">45k</span>
+                <span class="social-sharing__counter__label"><%= t('footer.twitter-followers') %></span>
+              </p>
+            </div>
           </li>
 
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.media_centre_link') %>"><%= t('footer.media_centre') %></a>
-          </li>
-
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.fincap_link') %>" target="_blank"><%= t('footer.fincap') %><span class="visually-hidden"><%= t('footer.new-window-label') %></span></a>
-          </li>
-
-          <li class="footer-primary__list-item footer-primary__corporate-link t-partners-link">
-            <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
-          </li>
-
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
-          </li>
-
-          <li class="footer-primary__list-item footer-primary__corporate-link">
-            <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
+          <li class="l-footer-primary__list--right">
+            <div class="footer-primary__list-item">
+              <a class="button youtube-link t-youtube-link" lang="en" href="https://www.youtube.com/user/MoneyAdviceService" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--youtube" aria-labelledby="youtube-label" focusable="false">
+                  <title id="youtube-label">Money Advice Service Youtube channel</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--youtube"></use>
+                </svg>
+                <span class="icon icon--youtube"></span>
+                <span class="visually-hidden">Youtube - <%= t('footer.new-window-label') %></span>
+              </a>
+              <p class="social-sharing__counter">
+                <span class="social-sharing__counter__total">5.6m</span>
+                <span class="social-sharing__counter__label"><%= t('footer.youtube-views') %></span>
+              </p>
+            </div>
           </li>
         </ul>
+      </div>
 
-        <div class="footer-primary__blog">
-          <a class="footer-primary__blog-link" href="<%= t('blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
+      <div class="l-footer-primary__right">
+        <nav role="navigation" aria-label="footer">
+          <ul class="l-footer-primary__list">
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.about_us_link') %>"><%= t('footer.about_us') %></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.our_debt_work_link') %>"><%= t('footer.our_debt_work') %></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.media_centre_link') %>"><%= t('footer.media_centre') %></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.fincap_link') %>" target="_blank"><%= t('footer.fincap') %><span class="visually-hidden"><%= t('footer.new-window-label') %></span></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link t-partners-link">
+              <a href="<%= t('footer.partners_link') %>"><%= t('footer.partners') %></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.jobs_link') %>"><%= t('footer.jobs') %></a>
+            </li>
+
+            <li class="footer-primary__list-item footer-primary__corporate-link">
+              <a href="<%= t('footer.tools_and_resources_link') %>"><%= t('footer.tools_and_resources') %></a>
+            </li>
+          </ul>
+
+          <div class="footer-primary__blog">
+            <a class="footer-primary__blog-link" href="<%= t('blog_link') %>" target="_blank"><%= t('footer.blog') %></a>
+          </div>
+        </nav>
+
+        <div class="footer-primary__clear-english">
+          <a
+            class="footer-primary__clear-english-link"
+            href="https://www.clearest.co.uk/silver-standard"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--clear-english" aria-labelledby="clear-english-label" focusable="false">
+              <title id="clear-english-label">Clear English Standard Winning Website Silver Level</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--clear-english"></use>
+            </svg>
+
+            <span class="icon icon--clear-english"></span>
+
+            <span class="footer-primary__clear-english-text">
+              <span>Clear English Standard</span>
+              <span>Winning Website</span>
+              <span>Silver Level</span>
+            </span>
+            <span class="visually-hidden">Clear English Award - <%= t('footer.new-window-label') %></span>
+          </a>
         </div>
-      </nav>
-
-      <div class="footer-primary__clear-english">
-        <a
-          class="footer-primary__clear-english-link"
-          href="https://www.clearest.co.uk/silver-standard"
-          target="_blank"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--clear-english" aria-labelledby="clear-english-label" focusable="false">
-            <title id="clear-english-label">Clear English Standard Winning Website Silver Level</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--clear-english"></use>
-          </svg>
-
-          <span class="icon icon--clear-english"></span>
-
-          <span class="footer-primary__clear-english-text">
-            <span>Clear English Standard</span>
-            <span>Winning Website</span>
-            <span>Silver Level</span>
-          </span>
-          <span class="visually-hidden">Clear English Award - <%= t('footer.new-window-label') %></span>
-        </a>
+      </div>
+    </div>
+    <div class="l-constrained">
+      <div class="">
+        <p class="footer-primary__copyright">&copy; <%= "#{t('footer.copyright')} #{DateTime.now.year} #{t('footer.money_advice_service')} #{t('footer.address')}" %>
+        </p>
       </div>
     </div>
   </div>
-</div>
 <% end %>

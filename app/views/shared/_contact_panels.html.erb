@@ -3,226 +3,211 @@
 <%= render 'shared/pas_chat_banner' if pensions_and_retirement_page? %>
 
 <div class="l-constrained">
-  <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
-    <div class="l-contact-panel">
-      <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
-        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
-        <% end %>
+    <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
+        <div class="l-contact-panel">
+            <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
+                <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
+                <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
+                <% end %>
 
-        <p class="contact-panel__chat-javascript t-chat-javascript">
-          <%= t('contact_panels.chat.javascript.description_html') %>
-        </p>
+                <p class="contact-panel__chat-javascript t-chat-javascript">
+                    <%= t('contact_panels.chat.javascript.description_html') %>
+                </p>
 
-        <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
-          <div class="contact-panel__preloader"></div>
+                <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
+                    <div class="contact-panel__preloader"></div>
 
-          <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
-            <%= chat_opening_hours.description %>
-            <%= '*' if translation?('contact_panels.chat.smallprint') %>
-          </p>
+                    <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
+                        <%= chat_opening_hours.description %>
+                        <%= '*' if translation?('contact_panels.chat.smallprint') %>
+                    </p>
 
-          <h3 class="contact-panel__opening-times-heading">Open:</h3>
+                    <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
-          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-            <% unless alternate_hours_active? %>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-            <% end %>
+                    <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+                        <% unless alternate_hours_active? %>
+                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+                        <% end %>
 
-            <% if display_chat_migration_message? %>
-              <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-            <% end %>
-          </ul>
+                        <% if display_chat_migration_message? %>
+                        <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+                        <% end %>
+                    </ul>
 
-          <div class="contact-panel__button-container" id="js-chat-cta">
-            <div class="contact-panel__button button is-disabled t-chat-button">
-              <%= chat_opening_hours.call_to_action %>
+                    <div class="contact-panel__button-container" id="js-chat-cta">
+                        <div class="contact-panel__button button is-disabled t-chat-button">
+                            <%= chat_opening_hours.call_to_action %>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
             </div>
-          </div>
         </div>
+        <div class="l-contact-panel contact-panel__dynamic-content contact-panel__whatsapp">
+            <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
+                <%= heading_tag level: 2, class: 'contact-panel__heading contact-panel-theme-white' do %>
+                  <%= render 'shared/svg/whats_app_logo' %>WhatsApp
+                <% end %>
 
-        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
-      </div>
-    </div>
+                <p class="contact-panel-theme-white t-whatsapp-description">
+                    <%= chat_opening_hours.description %>
+                    <%= '*' if translation?('contact_panels.chat.smallprint') %>
+                </p>
 
-    <div class="l-contact-panel contact-panel__whatsapp">
-      <div class="contact-panel contact-panel__whatsapp-<%= chat_opening_hours.status %> t-whatsapp">
-        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-          <%= render 'shared/svg/whats_app_logo' %>WhatsApp
-        <% end %>
+                <h3 class="contact-panel__opening-times-heading contact-panel-theme-white">Open:</h3>
+                <ul class="t-chat-opening-times contact-panel__list unstyled-list contact-panel-theme-white">
+                    <% unless alternate_hours_active? %>
+                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+                    <% end %>
+                    <% if display_chat_migration_message? %>
+                      <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+                    <% end %>
+                </ul>
 
-        <p class="contact-panel__whatsapp-javascript t-whatsapp-javascript">
-          <%= t('contact_panels.chat.javascript.description_html') %>
-        </p>
+                <% if chat_opening_hours.status_as_string == 'open' %>
+                    <div class="contact-panel__button-container" id="js-whatsapp-cta">
+                        <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
+                          <%= t('contact_panels.chat.available.call_to_action') %>
+                        </a>
+                    </div>
+                <% else %>
+                    <p class="contact-panel-theme-white"><%= t('contact_panels.chat.unavailable.call_to_action') %></p>
+                <% end %>
 
-        <div class="contact-panel__dynamic-content is-loading" id="js-whatsapp-content">
-          <div class="contact-panel__preloader"></div>
-
-          <p class="contact-panel__whatsapp-description t-whatsapp-description" id="js-whatsapp-description">
-            <%= chat_opening_hours.description %>
-            <%= '*' if translation?('contact_panels.chat.smallprint') %>
-          </p>
-
-          <h3 class="contact-panel__opening-times-heading">Open:</h3>
-
-          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-            <% unless alternate_hours_active? %>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-              <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-            <% end %>
-          </ul>
-
-          <div class="contact-panel__button-container" id="js-whatsapp-cta">
-            <div class="contact-panel__button button is-disabled t-whatsapp-button">
-              <%= chat_opening_hours.call_to_action %>
+                <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
             </div>
-          </div>
         </div>
+        <div class="l-contact-panel">
+            <div class="contact-panel contact-panel--last">
+                <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
+                <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
+                <% end %>
 
-        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
-      </div>
+                <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
+
+                <p class="contact-panel__contact-number">
+                    <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
+                        <%= @footer.contact.phone_number %></a>
+                </p>
+
+                <h3 class="contact-panel__opening-times-heading">Open:</h3>
+
+                <ul class="contact-panel__list">
+                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
+                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
+                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
+                </ul>
+                <p class="smallprint"><%= @footer.contact.small_print %></p>
+            </div>
+        </div>
     </div>
-
-    <div class="l-contact-panel">
-      <div class="contact-panel contact-panel--last">
-        <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
-          <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
-        <% end %>
-
-        <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
-
-        <p class="contact-panel__contact-number">
-          <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
-            <%= @footer.contact.phone_number %></a>
-        </p>
-
-        <h3 class="contact-panel__opening-times-heading">Open:</h3>
-
-        <ul class="contact-panel__list">
-          <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
-          <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
-          <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
-        </ul>
-
-        <p class="smallprint"><%= @footer.contact.small_print %></p>
-      </div>
-    </div>
-
-  </div>
 </div>
 <% end %>
 
 <% if show_floating_chat? %>
 <a href="#" aria-hidden="true" id="js-chat-popup" class="chat-box__container chat-box__container--hidden t__floating-web-chat">
-  <div class="chat-box__heading">Web Chat</div>
+    <div class="chat-box__heading">Web Chat</div>
     <span class="icon icon--web-chat"></span>
 </a>
 <% end %>
 
 <%= content_for :javascripts do %>
-  <% unless hide_contact_panels? %>
-    <%= javascript_include_tag 'webchat.js' %>
-    <script type='text/javascript'>
-      sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
-      sWOChatstart = '<%= ENV['WEBCHAT_START'] %>';
-      sWOImageLoaded = function() {
-        <% if chat_opening_hours.open? %>
+<% unless hide_contact_panels? %>
+<%= javascript_include_tag 'webchat.js' %>
+<script type='text/javascript'>
+    sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
+    sWOChatstart = '<%= ENV['WEBCHAT_START'] %>';
+    sWOImageLoaded = function() {
+
+    <% if chat_opening_hours.open? %>
 
         var chatCTA = document.getElementById('js-chat-cta'),
             chatDescription = document.getElementById('js-chat-description'),
-            chatContent = document.getElementById('js-chat-content'),
-            whatsappCTA = document.getElementById('js-whatsapp-cta'),
-            whatsappDescription = document.getElementById('js-whatsapp-description'),
-            whatsappContent = document.getElementById('js-whatsapp-content');
+            chatContent = document.getElementById('js-chat-content');
 
-        <% if show_floating_chat? %>
-          var chatPopup = document.getElementById('js-chat-popup');
-        <% end %>
+    <% if show_floating_chat? %>
+        var chatPopup = document.getElementById('js-chat-popup');
+    <% end %>
+
 
         if (sWOImage.width == 1) {
-          var sWOChatElement = document.createElement('div');
-          var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
-          var WAChatElement = document.createElement('div');
-          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
-          sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
-          sWOChatElement.appendChild(sWOChatElementText);
-          WAChatElement.className = "contact-panel__button button is-disabled t-whatsapp-button";
-          WAChatElement.appendChild(WAChatElementText);
+            var sWOChatElement = document.createElement('div');
+            var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.busy.call_to_action') %>");
 
-          chatCTA.innerHTML = "";
-          chatCTA.appendChild(sWOChatElement);
-          chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
-          whatsappCTA.innerHTML = "";
-          whatsappCTA.appendChild(WAChatElement);
-          whatsappDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+            sWOChatElement.className = "contact-panel__button button is-disabled t-chat-button";
+            sWOChatElement.appendChild(sWOChatElementText);
 
-          <% if translation?('contact_panels.chat.smallprint') %>
+            chatCTA.innerHTML = "";
+            chatCTA.appendChild(sWOChatElement);
+            chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
+
+        <% if translation?('contact_panels.chat.smallprint') %>
             chatDescription.innerHTML += '&nbsp;*';
-          <% end %>
+        <% end %>
 
-          <% if show_floating_chat? %>
+            <% if show_floating_chat? %>
             chatPopup.className = "chat-box__container chat-box__container--hidden";
-          <% end %>
+        <% end %>
 
-          chatContent.className = "contact-panel__dynamic-content is-loaded";
-          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
+            chatContent.className = "contact-panel__dynamic-content is-loaded";
+
         } else {
-          var sWOChatElement = document.createElement('a');
-          var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
-          var WAChatElement = document.createElement('a');
-          var WAChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
 
-          sWOChatElement.className = "contact-panel__button button t-chat-button";
-          sWOChatElement.appendChild(sWOChatElementText),
-          WAChatElement.className = "contact-panel__button button t-whatsapp-button";
-          WAChatElement.appendChild(WAChatElementText);
-          WAChatElement.href = "https://wa.me/447701342744";
+            var sWOChatElement = document.createElement('a');
+            var sWOChatElementText = document.createTextNode("<%= t('contact_panels.chat.available.call_to_action') %>");
+            sWOChatElement.className = "contact-panel__button button t-chat-button";
+            sWOChatElement.appendChild(sWOChatElementText);
 
-          chatCTA.innerHTML = "";
-          chatCTA.appendChild(sWOChatElement);
-          chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
-          chatContent.className = "contact-panel__dynamic-content is-loaded";
-          whatsappCTA.innerHTML = "";
-          whatsappCTA.appendChild(WAChatElement);
-          whatsappDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
-          whatsappContent.className = "contact-panel__dynamic-content is-loaded";
 
-          <% if translation?('contact_panels.chat.smallprint') %>
+            chatCTA.innerHTML = "";
+            chatCTA.appendChild(sWOChatElement);
+            chatDescription.innerHTML = "<%= t('contact_panels.chat.available.description') %>";
+            chatContent.className = "contact-panel__dynamic-content is-loaded";
+
+
+        <% if translation?('contact_panels.chat.smallprint') %>
             chatDescription.innerHTML += '&nbsp;*';
-          <% end %>
+        <% end %>
 
-          sWOChatElement.onclick = function() {
-            window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
-            return false;
-          };
 
-          sWOChatElement.href = sWOChatstart;
-          sWOChatElement.target = "_blank";
+            sWOChatElement.onclick = function() {
+                window.open(sWOChatElement.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+                return false;
+            };
 
-          <% if show_floating_chat? %>
+            sWOChatElement.href = sWOChatstart;
+            sWOChatElement.target = "_blank";
+
+        <% if show_floating_chat? %>
             chatPopup.className = "chat-box__container";
             chatPopup.href = sWOChatstart;
             chatPopup.target = "_blank";
 
             chatPopup.onclick = function() {
-              window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
-              return false;
+                window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+                return false;
             };
-          <% end %>
-        }
         <% end %>
-      };
 
-      if (typeof sWOTrackPage == 'function') {
+        }
+
+    <% end %>
+
+    };
+
+    if (typeof sWOTrackPage == 'function') {
         sWOTrackPage();
 
-        <%# Track page enagagement (a visit lasting more than 30 seconds) %>
+    <%# Track page enagagement (a visit lasting more than 30 seconds) %>
         setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
-      }
-    </script>
-  <% end %>
+    }
+
+</script>
+<% end %>
 <% end %>

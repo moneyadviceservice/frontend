@@ -1,4 +1,23 @@
 GIT
+  remote: git@github.com:moneyadviceservice/advice_plans.git
+  revision: 0672e4b607a76f3eda26f453812f153ee676b6a1
+  ref: 0672e4b607a76f3eda26f453812f153ee676b6a1
+  branch: 10110-upgrade-to-ruby-2.5.3
+  specs:
+    advice_plans (4.0.1)
+      dough-ruby (~> 5.0)
+      friendly_id (>= 5.1.0)
+      hashie
+      i18n-js (= 3.0.0.mas)
+      jquery-rails-cdn
+      kaminari (~> 0.16.1)
+      meta-tags
+      rails (>= 4, < 5)
+      redcarpet (~> 3.2.0)
+      sass-rails
+      transitions (~> 0.1.11)
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 24e1b7f0dc374dcb968171f80e832118691d288c
   specs:
@@ -83,18 +102,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    advice_plans (3.3.2.372)
-      dough-ruby (~> 5.0)
-      friendly_id (>= 5.1.0)
-      hashie
-      i18n-js (= 3.0.0.mas)
-      jquery-rails-cdn
-      kaminari (~> 0.16.1)
-      meta-tags
-      rails (>= 4, < 5)
-      redcarpet (~> 3.2.0)
-      sass-rails
-      transitions (~> 0.1.11)
     aes (0.5.0)
     agreements (2.3.0.80)
       dough-ruby (~> 5.0)
@@ -799,7 +806,7 @@ DEPENDENCIES
   action_plans (~> 4.8.0)
   activerecord-session_store
   adal!
-  advice_plans (~> 3.3.1)
+  advice_plans!
   aes
   agreements (~> 2.3.0)
   algoliasearch

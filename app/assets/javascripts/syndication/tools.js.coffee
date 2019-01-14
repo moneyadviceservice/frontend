@@ -232,6 +232,16 @@
       include_ga: false
       title: "Pensions calculator"
 
+    pension_calculator:
+      en:
+        path: "en/tools/pension-calculator"
+      cy:
+        path: "cy/tools/cyfrifiannell-pensiwn"
+      width: "100%"
+      height: "800px"
+      include_ga: false
+      title: "Pension calculator"
+
     health_check:
       en:
         path: "en/tools/health-check"

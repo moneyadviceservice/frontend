@@ -561,7 +561,7 @@ GEM
       interception (>= 0.5)
       pry
     psych (3.0.2)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     quiz (1.2.0.112)
       cocoon
       devise
@@ -770,7 +770,7 @@ GEM
       sass-rails
       uglifier
     uri_template (0.7.0)
-    validate_url (1.0.2)
+    validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
     vcr (4.0.0)
@@ -898,6 +898,7 @@ DEPENDENCIES
   uglifier
   unicorn-rails
   universal_credit (= 3.1.0)
+  validate_url (= 1.0.0)
   vcr
   webmock
   whenever

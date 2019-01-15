@@ -79,6 +79,7 @@ gem 'rio', '1.20.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
+gem 'validate_url', '1.0.0'
 gem 'wpcc', '2.1.1'
 
 group :assets do

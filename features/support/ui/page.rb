@@ -28,6 +28,6 @@ module UI
     section :search_box, UI::Sections::SearchBox, '.search'
     section :auth, UI::Sections::Auth, '.authentication'
     section :chat, UI::Sections::Chat, '.t-chat'
-    section :whatsapp, UI::Sections::Whatsapp, '.t-whatsapp'
+    section :whatsapp, UI::Sections::Whatsapp, '#js-whatsapp-content'
   end
 end

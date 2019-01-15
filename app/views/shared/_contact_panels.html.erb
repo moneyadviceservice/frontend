@@ -70,13 +70,13 @@
                 </ul>
 
                 <% if chat_opening_hours.status_as_string == 'open' %>
-                    <div class="contact-panel__button-container" id="js-whatsapp-cta">
+                    <div class="contact-panel__button-container">
                         <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
                           <%= t('contact_panels.chat.available.call_to_action') %>
                         </a>
                     </div>
                 <% else %>
-                    <p class="contact-panel-theme-white"><%= t('contact_panels.chat.unavailable.call_to_action') %></p>
+                    <p class="contact-panel-theme-white t-whatsapp-unavailable"><%= t('contact_panels.chat.unavailable.call_to_action') %></p>
                 <% end %>
 
                 <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>

@@ -56,7 +56,7 @@ gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.19.0'
 gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 # Tools
-gem 'action_plans', '~> 4.8.0'
+gem 'action_plans', '~> 5.0.0'
 gem 'advice_plans', '~> 3.3.1'
 gem 'agreements', '~> 2.3.0'
 gem 'baby_cost_calculator', '~> 0.3.0'

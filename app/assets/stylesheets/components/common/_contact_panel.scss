@@ -1,10 +1,4 @@
-// Contact Panel
-//
-// Styleguide Contact Panel
-
 .contact-panel {
-  // N.B. This is to over-ride styles from Yeast
-  // Should be added to that for a final deployment
   @include column(12);
 
   color: $color-grey-medium-dark;
@@ -21,8 +15,6 @@
 
   @include respond-to($mq-l) {
     border-bottom: 0;
-    // N.B. This is to over-ride styles from Yeast
-    // Should be added to that for a final deployment
     width: 100%;
     margin: 0;
   }
@@ -249,17 +241,6 @@
         }
       }
     }
-  }
-}
-
-// N.B. This is to over-ride styles from Yeast
-// Should be added to that for a final deployment
-.l-contact-panel {
-  width: 100%;
-  margin: 0;
-
-  @include respond-to($mq-l) {
-    @include column(6);
   }
 }
 

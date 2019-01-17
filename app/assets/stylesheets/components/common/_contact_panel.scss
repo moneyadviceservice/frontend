@@ -25,7 +25,7 @@
 }
 
 .l-contact-panel.contact-panel__whatsapp {
-  background: #455A64;
+  background: $color-grey-medium;
 
   @include respond-to($mq-m) {
     display: none;

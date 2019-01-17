@@ -3,109 +3,110 @@
 <%= render 'shared/pas_chat_banner' if pensions_and_retirement_page? %>
 
 <div class="l-constrained">
-    <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
-        <div class="l-contact-panel">
-            <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
-                <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-                <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
-                <% end %>
+  <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
+    <div class="l-contact-panel">
+      <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
+        <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
+        <% end %>
 
-                <p class="contact-panel__chat-javascript t-chat-javascript">
-                    <%= t('contact_panels.chat.javascript.description_html') %>
-                </p>
+        <p class="contact-panel__chat-javascript t-chat-javascript">
+          <%= t('contact_panels.chat.javascript.description_html') %>
+        </p>
 
-                <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
-                    <div class="contact-panel__preloader"></div>
+        <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
+          <div class="contact-panel__preloader"></div>
 
-                    <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
-                        <%= chat_opening_hours.description %>
-                        <%= '*' if translation?('contact_panels.chat.smallprint') %>
-                    </p>
+          <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
+            <%= chat_opening_hours.description %>
+            <%= '*' if translation?('contact_panels.chat.smallprint') %>
+          </p>
 
-                    <h3 class="contact-panel__opening-times-heading">Open:</h3>
+          <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
-                    <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-                        <% unless alternate_hours_active? %>
-                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-                        <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-                        <% end %>
+          <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+            <% unless alternate_hours_active? %>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+            <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+            <% end %>
 
-                        <% if display_chat_migration_message? %>
-                        <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-                        <% end %>
-                    </ul>
+            <% if display_chat_migration_message? %>
+            <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+            <% end %>
+          </ul>
 
-                    <div class="contact-panel__button-container" id="js-chat-cta">
-                        <div class="contact-panel__button button is-disabled t-chat-button">
-                            <%= chat_opening_hours.call_to_action %>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
+          <div class="contact-panel__button-container" id="js-chat-cta">
+            <div class="contact-panel__button button is-disabled t-chat-button">
+              <%= chat_opening_hours.call_to_action %>
             </div>
+          </div>
         </div>
-        <div class="l-contact-panel contact-panel__dynamic-content contact-panel__whatsapp">
-            <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
-                <%= heading_tag level: 2, class: 'contact-panel__heading contact-panel-theme-white' do %>
-                  <%= render 'shared/svg/whats_app_logo' %>WhatsApp
-                <% end %>
 
-                <p class="contact-panel-theme-white t-whatsapp-description">
-                    <%= chat_opening_hours.description %>
-                    <%= '*' if translation?('contact_panels.chat.smallprint') %>
-                </p>
-
-                <h3 class="contact-panel__opening-times-heading contact-panel-theme-white">Open:</h3>
-                <ul class="t-chat-opening-times contact-panel__list unstyled-list contact-panel-theme-white">
-                    <% unless alternate_hours_active? %>
-                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-                    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-                    <% end %>
-                    <% if display_chat_migration_message? %>
-                      <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-                    <% end %>
-                </ul>
-
-                <% if chat_opening_hours.status_as_string == 'open' %>
-                    <div class="contact-panel__button-container">
-                        <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
-                          <%= t('contact_panels.chat.available.call_to_action') %>
-                        </a>
-                    </div>
-                <% else %>
-                    <p class="contact-panel-theme-white t-whatsapp-unavailable"><%= t('contact_panels.chat.unavailable.call_to_action') %></p>
-                <% end %>
-
-                <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
-            </div>
-        </div>
-        <div class="l-contact-panel">
-            <div class="contact-panel contact-panel--last">
-                <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
-                <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
-                <% end %>
-
-                <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
-
-                <p class="contact-panel__contact-number">
-                    <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
-                        <%= @footer.contact.phone_number %></a>
-                </p>
-
-                <h3 class="contact-panel__opening-times-heading">Open:</h3>
-
-                <ul class="contact-panel__list">
-                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
-                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
-                    <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
-                </ul>
-                <p class="smallprint"><%= @footer.contact.small_print %></p>
-            </div>
-        </div>
+        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
+      </div>
     </div>
+    <div class="l-contact-panel contact-panel__dynamic-content contact-panel__whatsapp">
+      <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
+        <%= heading_tag level: 2, class: 'contact-panel__heading contact-panel-theme-white' do %>
+        <%= render 'shared/svg/whats_app_logo' %>WhatsApp
+        <% end %>
+
+        <% if chat_opening_hours.status_as_string == 'open' %>
+        <p class="contact-panel-theme-white t-whatsapp-description">
+          <%= chat_opening_hours.description %>
+          <%= '*' if translation?('contact_panels.chat.smallprint') %>
+        </p>
+        <% end %>
+        <h3 class="contact-panel__opening-times-heading contact-panel-theme-white">Open:</h3>
+        <ul class="t-chat-opening-times contact-panel__list unstyled-list contact-panel-theme-white">
+          <% unless alternate_hours_active? %>
+          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+          <% end %>
+          <% if display_chat_migration_message? %>
+          <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
+          <% end %>
+        </ul>
+
+        <% if chat_opening_hours.status_as_string == 'open' %>
+        <div class="contact-panel__button-container">
+          <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
+            <%= t('contact_panels.chat.available.call_to_action') %>
+          </a>
+        </div>
+        <% else %>
+        <p class="contact-panel-theme-white t-whatsapp-unavailable"><%= t('contact_panels.chat.unavailable.call_to_action') %></p>
+        <% end %>
+
+        <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
+      </div>
+    </div>
+    <div class="l-contact-panel">
+      <div class="contact-panel contact-panel--last">
+        <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
+        <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
+        <% end %>
+
+        <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
+
+        <p class="contact-panel__contact-number">
+          <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
+            <%= @footer.contact.phone_number %></a>
+        </p>
+
+        <h3 class="contact-panel__opening-times-heading">Open:</h3>
+
+        <ul class="contact-panel__list">
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
+          <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
+        </ul>
+        <p class="smallprint"><%= @footer.contact.small_print %></p>
+      </div>
+    </div>
+  </div>
 </div>
 <% end %>
 

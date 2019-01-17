@@ -19,12 +19,10 @@ Feature: WhatsApp Chat
   Scenario: Chat is offline, but will be online later that day
     Given chat will be next online later today
     Then I should see an unavailable message
-    And I should see a message informing me that WhatsApp chat will be online between today's opening hours
 
   Scenario: Chat is offline and will not be online until tomorrow
     Given chat will be next online tomorrow
     Then I should see an unavailable message
-    And I should see a message informing me that WhatsApp chat will be online between today's opening hours
 
   Scenario: Chat is not supported for Welsh users
     When I visit the website in Welsh

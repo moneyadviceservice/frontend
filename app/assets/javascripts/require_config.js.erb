@@ -30,6 +30,7 @@
 //= depend_on_asset dough/assets/js/components/RangeInput
 //= depend_on_asset dough/assets/js/components/TabSelector
 //= depend_on_asset dough/assets/js/components/FieldHelpText
+//= depend_on_asset dough/assets/js/constants/DoughEventConstants
 
 <%
   def requirejs_path(asset)
@@ -112,7 +113,8 @@
     Validation: requirejs_path('dough/assets/js/components/Validation'),
     componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
     featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
-    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries')
+    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries'),
+    DoughEventConstants: requirejs_path('dough/assets/js/constants/DoughEventConstants')
   })
 %>
 

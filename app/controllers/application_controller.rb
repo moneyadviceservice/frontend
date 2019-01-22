@@ -192,6 +192,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :pensions_and_retirement_page?
 
+  def debt_and_borrowing_page?
+    return false unless @active_categories
+
+    @active_categories.include?('debt-and-borrowing')
+  end
+  helper_method :debt_and_borrowing_page?
+
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status
   end

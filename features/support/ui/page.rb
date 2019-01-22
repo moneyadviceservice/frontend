@@ -7,6 +7,7 @@ require_relative 'sections/header'
 require_relative 'sections/search_box'
 require_relative 'sections/auth'
 require_relative 'sections/chat'
+require_relative 'sections/whatsapp'
 
 module UI
   class Page < SitePrism::Page
@@ -27,5 +28,6 @@ module UI
     section :search_box, UI::Sections::SearchBox, '.search'
     section :auth, UI::Sections::Auth, '.authentication'
     section :chat, UI::Sections::Chat, '.t-chat'
+    section :whatsapp, UI::Sections::Whatsapp, '#js-whatsapp-content'
   end
 end

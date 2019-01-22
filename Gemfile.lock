@@ -111,7 +111,7 @@ GEM
     ast (2.4.0)
     attr_encrypted (3.1.0)
       encryptor (~> 3.0.0)
-    autoprefixer-rails (8.2.0)
+    autoprefixer-rails (8.6.5)
       execjs
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
@@ -385,7 +385,7 @@ GEM
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (5.0.0)
-    globalid (0.4.1)
+    globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-analytics-rails (1.1.1)
     haml (5.0.4)
@@ -473,8 +473,8 @@ GEM
       delayed_job_active_record
       hashie
     mas-templating (1.0.0.18)
-    meta-tags (2.11.0)
-      actionpack (>= 3.2.0, < 5.3)
+    meta-tags (2.11.1)
+      actionpack (>= 3.2.0, < 6.1)
     method_source (0.9.0)
     mime-types (2.99.3)
     mini_mime (1.0.1)
@@ -532,16 +532,16 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (1.10.1.570)
+    pensions_calculator (2.0.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       meta-tags
-      pensions_calculator-calculations (~> 1.6.0)
+      pensions_calculator-calculations (~> 2.0.1)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
-    pensions_calculator-calculations (1.6.0.14)
+    pensions_calculator-calculations (2.0.1)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -613,17 +613,17 @@ GEM
     redcarpet (3.2.3)
     request_store (1.4.1)
       rack (>= 1.4)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (1.20.0)
+    rio (2.0.0)
       bowndler
       dough-ruby
-      pensions_calculator-calculations (~> 1.6.0)
+      pensions_calculator-calculations (~> 2.0.1)
       rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
@@ -745,7 +745,7 @@ GEM
       tilt (>= 1.4, < 3)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.8)
+    uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
     underscore-rails (1.8.3)
     unf (0.1.4)
@@ -864,7 +864,7 @@ DEPENDENCIES
   opening_hours
   pacs (= 3.1.1)
   payday_loans_intervention (~> 1.7.0)
-  pensions_calculator (~> 1.10.1)
+  pensions_calculator (~> 2.0.0)
   poltergeist
   postcode_anywhere-email_validation
   pry-rails
@@ -875,7 +875,7 @@ DEPENDENCIES
   rails (= 4.2.11)
   recaptcha
   redcarpet
-  rio (= 1.20.0)!
+  rio (~> 2.0.0)!
   rouge
   rspec-html-matchers
   rspec-rails

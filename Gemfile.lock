@@ -83,7 +83,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    advice_plans (4.0.0)
+    advice_plans (3.3.2.372)
       dough-ruby (~> 5.0)
       friendly_id (>= 5.1.0)
       hashie
@@ -800,7 +800,7 @@ DEPENDENCIES
   action_plans (~> 5.0.0)
   activerecord-session_store
   adal!
-  advice_plans (~> 4.0.0)
+  advice_plans (~> 3.3.1)
   aes
   agreements (~> 2.3.0)
   algoliasearch

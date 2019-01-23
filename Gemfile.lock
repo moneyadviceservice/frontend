@@ -24,6 +24,25 @@ GIT
     site_search (0.1.0)
       algoliasearch
 
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: e8c86d36e2763c80831f737beaff7f13be15a99f
+  ref: e8c86d36e2763c80831f737beaff7f13be15a99f
+  branch: 10137-upgrade-universal_credit-to-ruby-253
+  specs:
+    universal_credit (4.0.0)
+      autoprefixer-rails
+      devise
+      dough-ruby
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2 (= 0.4.9)
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -116,7 +135,7 @@ GEM
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
     backports (3.11.1)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -305,7 +324,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.29.0.309)
+    dough-ruby (5.31.0)
       activemodel
       activesupport
       rails (>= 3.2, <= 5.0.6)
@@ -757,18 +776,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (3.1.0)
-      autoprefixer-rails
-      devise
-      dough-ruby
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2 (= 0.4.9)
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     uri_template (0.7.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
@@ -897,7 +904,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (= 3.1.0)
+  universal_credit!
   vcr
   webmock
   whenever

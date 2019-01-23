@@ -78,7 +78,7 @@ gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.0.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
-gem 'universal_credit', '3.1.0'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit', branch: '10137-upgrade-universal_credit-to-ruby-253', ref: 'e8c86d36e2763c80831f737beaff7f13be15a99f'
 gem 'wpcc', '2.1.1'
 
 group :assets do

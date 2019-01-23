@@ -58,7 +58,7 @@ gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
 # Tools
 gem 'action_plans', '~> 5.0.0'
 gem 'advice_plans', '~> 3.3.1'
-gem 'agreements', '~> 2.3.0'
+gem 'agreements', git: 'git@github.com:moneyadviceservice/agreements.git', branch: 'ms/upgrade-ruby-2-5-3', ref: '248f144'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 5.3.0'
 gem 'car_cost_tool', '~> 1.3'

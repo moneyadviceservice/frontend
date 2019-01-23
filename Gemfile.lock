@@ -1,4 +1,18 @@
 GIT
+  remote: git@github.com:moneyadviceservice/agreements.git
+  revision: 248f1443700ca14deb1769696f4334613acc9912
+  ref: 248f144
+  branch: ms/upgrade-ruby-2-5-3
+  specs:
+    agreements (2.4.0)
+      dough-ruby (~> 5.0)
+      hashie (~> 2.0.5)
+      meta-tags
+      rails (>= 4, < 5)
+      recaptcha
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 24e1b7f0dc374dcb968171f80e832118691d288c
   specs:
@@ -96,13 +110,6 @@ GEM
       sass-rails
       transitions (~> 0.1.11)
     aes (0.5.0)
-    agreements (2.3.0.80)
-      dough-ruby (~> 5.0)
-      hashie (~> 2.0.5)
-      meta-tags
-      rails (>= 4, < 5)
-      recaptcha
-      sass-rails
     algoliasearch (1.19.2)
       httpclient (~> 2.8, >= 2.8.3)
       json (>= 1.5.1)
@@ -801,7 +808,7 @@ DEPENDENCIES
   adal!
   advice_plans (~> 3.3.1)
   aes
-  agreements (~> 2.3.0)
+  agreements!
   algoliasearch
   attr_encrypted (~> 3.1)
   autoprefixer-rails

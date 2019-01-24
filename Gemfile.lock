@@ -8,6 +8,20 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/cutback-calculator.git
+  revision: 72a458f0480212024016944ad37a234182a6cd43
+  ref: 72a458f0480212024016944ad37a234182a6cd43
+  branch: 10118-upgrade-ruby2.5.3
+  specs:
+    cutback_calculator (0.13.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      meta-tags
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -219,13 +233,6 @@ GEM
       railties (>= 4, < 5.2)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    cutback_calculator (0.12.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      meta-tags
-      rails (>= 4, < 5)
-      responders
-      sass-rails
     database_cleaner (1.6.2)
     debt_advice_locator (3.0.0)
       active_attr
@@ -305,7 +312,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.29.0.309)
+    dough-ruby (5.31.0)
       activemodel
       activesupport
       rails (>= 3.2, <= 5.0.6)
@@ -822,7 +829,7 @@ DEPENDENCIES
   cream (= 2.1.7)
   csslint_ruby
   cucumber-rails
-  cutback_calculator (~> 0.12.0)
+  cutback_calculator!
   database_cleaner
   debt_advice_locator (~> 3.0.0)
   debt_and_mental_health (~> 1.3.1)

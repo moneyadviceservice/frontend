@@ -18,6 +18,20 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/savings_calculator
+  revision: 7c6eb231ade66b631aad74a12f9b6648d05d3651
+  branch: story/10134-update-ruby
+  specs:
+    savings_calculator (1.8.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      jquery-rails
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -685,14 +699,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.8.1.148)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sexp_processor (4.11.0)
@@ -882,7 +888,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails
-  savings_calculator (~> 1.8.1)
+  savings_calculator!
   sdoc
   shoulda-matchers
   site_prism

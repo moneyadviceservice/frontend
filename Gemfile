@@ -76,7 +76,9 @@ gem 'payday_loans_intervention', '~> 1.7.0'
 gem 'pensions_calculator', '~> 2.0.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.0.0', source: 'http://gems.dev.mas.local'
-gem 'savings_calculator', '~> 1.8.1'
+gem 'savings_calculator',
+  git: 'git@github.com:moneyadviceservice/savings_calculator',
+  branch: 'story/10134-update-ruby'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
 gem 'wpcc', '2.1.1'

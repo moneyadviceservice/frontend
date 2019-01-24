@@ -306,10 +306,11 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.30.5.327)
+    dough-ruby (5.30.0)
       activemodel
       activesupport
-      rails (>= 3.2, < 5)
+      nokogiri (= 1.8.5)
+      rails (>= 3.2, <= 5.0.6)
       sass-rails
     dragonfly (1.1.5)
       addressable (~> 2.3)
@@ -478,7 +479,7 @@ GEM
     method_source (0.9.0)
     mime-types (2.99.3)
     mini_mime (1.0.1)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
     mongo (2.6.2)
@@ -503,8 +504,8 @@ GEM
     mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
-    nokogiri (1.9.1)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.8.5)
+      mini_portile2 (~> 2.3.0)
     nunes (0.5.0)
     opening_hours (0.0.7)
       activesupport
@@ -835,7 +836,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.30.5.327)
+  dough-ruby (= 5.30.0)
   draper (< 3)
   ejs
   email_spec (< 2)

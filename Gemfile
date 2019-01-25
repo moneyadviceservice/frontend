@@ -79,7 +79,7 @@ gem 'rio', '~> 2.0.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
-gem 'wpcc', '2.1.1'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: '10138/upgrade-ruby'
 
 group :assets do
   gem 'autoprefixer-rails'

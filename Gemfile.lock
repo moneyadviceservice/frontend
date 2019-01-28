@@ -18,6 +18,24 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 9486c6580fa15935192be71b7c4f6d9bb8559e42
+  branch: fe-architecture
+  specs:
+    pacs (2.7.0)
+      dough-ruby
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
   specs:
@@ -128,7 +146,7 @@ GEM
       activesupport (>= 4.2)
     bowndler (1.0.2)
       thor
-    bson (4.3.0)
+    bson (4.4.2)
     budget_planner (5.3.0.784)
       i18n-js (= 3.0.0.mas)
       jquery-rails
@@ -482,7 +500,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.6.2)
+    mongo (2.6.4)
       bson (>= 4.3.0, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)
@@ -511,18 +529,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.1.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -863,7 +869,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 3.1.0)
+  pacs!
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.10.1)
   poltergeist

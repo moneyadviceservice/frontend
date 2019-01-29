@@ -8,19 +8,6 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/dough.git
-  revision: 3149d2e98cb150e27a0db7b0169b053b215f4cf6
-  ref: 3149d2e98cb150e27a0db7b0169b053b215f4cf6
-  branch: fe-architecture
-  specs:
-    dough-ruby (5.30.0)
-      activemodel
-      activesupport
-      nokogiri (= 1.8.5)
-      rails (>= 3.2, <= 5.0.6)
-      sass-rails
-
-GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -32,8 +19,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: d590b76d9c652f5f4886c7dcadc79f55257e20a8
-  ref: d590b76d9c652f5f4886c7dcadc79f55257e20a8
+  revision: adf7179b6413bf31638f1b6b36887473fd791620
   branch: 9877-inline-defer-resize-spike
   specs:
     pacs (3.2.0)
@@ -338,6 +324,12 @@ GEM
     dotenv-rails (2.6.0)
       dotenv (= 2.6.0)
       railties (>= 3.2, < 6.0)
+    dough-ruby (5.30.0)
+      activemodel
+      activesupport
+      nokogiri (= 1.8.5)
+      rails (>= 3.2, <= 5.0.6)
+      sass-rails
     dragonfly (1.2.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -854,7 +846,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby!
+  dough-ruby (= 5.30.0)
   draper (< 3)
   ejs
   email_spec (< 2)

@@ -18,24 +18,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: adf7179b6413bf31638f1b6b36887473fd791620
-  branch: 9877-inline-defer-resize-spike
-  specs:
-    pacs (3.2.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
-GIT
   remote: git@github.com:moneyadviceservice/site_search.git
   revision: 45cb10faedbd17be170576c2638f6d8263afc7b5
   specs:
@@ -532,6 +514,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (0.0.7)
+      dough-ruby
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -873,7 +867,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs!
+  pacs (= 0.0.7)
   payday_loans_intervention (~> 1.7.0)
   pensions_calculator (~> 1.10.1)
   poltergeist

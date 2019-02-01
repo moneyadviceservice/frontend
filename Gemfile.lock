@@ -8,17 +8,6 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/dough.git
-  revision: fb2b9089c17f15d3b40afe2b285a4e2596548c15
-  branch: 10188_SDC_icon-misaligned
-  specs:
-    dough-ruby (5.31.0)
-      activemodel
-      activesupport
-      rails (>= 3.2, <= 5.0.6)
-      sass-rails
-
-GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -316,6 +305,11 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
+    dough-ruby (5.32.0)
+      activemodel
+      activesupport
+      rails (>= 3.2, <= 5.0.6)
+      sass-rails
     dragonfly (1.1.5)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -841,7 +835,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby!
+  dough-ruby (~> 5.32)
   draper (< 3)
   ejs
   email_spec (< 2)

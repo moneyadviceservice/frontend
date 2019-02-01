@@ -36,9 +36,9 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/site_search.git
-  revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
+  revision: 756d53408ea763fae5b12f5bc9dcc34cf6d70365
   specs:
-    site_search (0.1.0)
+    site_search (0.3.0)
       algoliasearch
 
 GEM
@@ -120,7 +120,7 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
-    algoliasearch (1.19.2)
+    algoliasearch (1.25.2)
       httpclient (~> 2.8, >= 2.8.3)
       json (>= 1.5.1)
     angularjs-rails (1.2.26)

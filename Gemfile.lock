@@ -261,7 +261,7 @@ GEM
       validate_url (= 1.0.0)
     debt_finance_calculator (1.1.0.8)
       bigdecimal (> 1.2.3)
-    debt_free_day_calculator (2.4.0.178)
+    debt_free_day_calculator (3.0.0)
       autoprefixer-rails (< 9)
       debt_finance_calculator (~> 1.1.0)
       dough-ruby (~> 5.0)
@@ -269,6 +269,7 @@ GEM
       email_validator (~> 1.4.0)
       i18n-js (= 3.0.0.mas)
       jquery-rails
+      mas-fonts
       meta-tags
       rails (>= 4, < 5)
       roadie (< 3)
@@ -834,7 +835,7 @@ DEPENDENCIES
   database_cleaner
   debt_advice_locator (~> 3.0.0)
   debt_and_mental_health!
-  debt_free_day_calculator (~> 2.4.0)
+  debt_free_day_calculator (~> 3.0.0)
   debt_test (~> 1.7.3)
   decision_trees (~> 2.1.0)
   delayed_job_active_record

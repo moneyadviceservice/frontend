@@ -306,7 +306,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.29.0.309)
+    dough-ruby (5.32.1)
       activemodel
       activesupport
       rails (>= 3.2, <= 5.0.6)
@@ -836,7 +836,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.29)
+  dough-ruby (~> 5.32.1)
   draper (< 3)
   ejs
   email_spec (< 2)

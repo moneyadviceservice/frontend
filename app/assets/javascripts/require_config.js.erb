@@ -5,6 +5,7 @@
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
 //= depend_on_asset typeahead.jquery
+//= depend_on_asset jquery-migrate/jquery-migrate
 
 //= depend_on_asset modules/globals
 //= depend_on_asset modules/common
@@ -53,6 +54,7 @@
       typeahead: requirejs_path('typeahead.jquery'),
       ujs: requirejs_path('jquery-ujs/src/rails'),
       waypoints: requirejs_path('jquery-waypoints/waypoints'),
+      jquerymigrate: requirejs_path('jquery-migrate/jquery-migrate'),
 
       # Internal modules
       common: requirejs_path('modules/common'),
@@ -91,6 +93,7 @@
       wpccConfig: requirejs_path('wpcc/require_config')
     },
     shim: {
+      jquery: ['jquerymigrate'],
       typeahead: ['jquery'],
       ujs: ['jquery'],
     }

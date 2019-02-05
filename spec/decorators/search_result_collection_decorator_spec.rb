@@ -21,7 +21,7 @@ RSpec.describe SearchResultCollectionDecorator do
     )
   end
   let(:total_results) { 1 }
-  let(:page) { 0 }
+  let(:page) { 1 }
   let(:number_of_pages) { 1 }
   let(:per_page) { 10 }
   let(:query) { 'budget planner' }
@@ -31,7 +31,7 @@ RSpec.describe SearchResultCollectionDecorator do
   end
 
   describe '#page' do
-    let(:page) { 0 }
+    let(:page) { 1 }
 
     it 'added one more to the page number' do
       expect(subject.page).to be(1)
@@ -46,7 +46,7 @@ RSpec.describe SearchResultCollectionDecorator do
       subject { decorator.first_page? }
 
       context 'when first page' do
-        let(:page) { 0 }
+        let(:page) { 1 }
 
         it { is_expected.to be_truthy }
       end
@@ -69,19 +69,19 @@ RSpec.describe SearchResultCollectionDecorator do
       subject { decorator.last_page? }
 
       context 'when first page' do
-        let(:page) { 0 }
+        let(:page) { 1 }
 
         it { is_expected.to be_falsey }
       end
 
       context 'when third page' do
-        let(:page) { 2 }
+        let(:page) { 3 }
 
         it { is_expected.to be_falsey }
       end
 
       context 'when fifth page' do
-        let(:page) { 4 }
+        let(:page) { 5 }
 
         it { is_expected.to be_truthy }
       end
@@ -91,21 +91,21 @@ RSpec.describe SearchResultCollectionDecorator do
       subject { decorator.previous_page }
 
       context 'when first page' do
-        let(:page) { 0 }
+        let(:page) { 1 }
 
         it { is_expected.to be_nil }
       end
 
       context 'when third page' do
-        let(:page) { 2 }
+        let(:page) { 3 }
 
-        it { is_expected.to eql 1 }
+        it { is_expected.to eql 2 }
       end
 
       context 'when fifth page' do
-        let(:page) { 4 }
+        let(:page) { 5 }
 
-        it { is_expected.to eql 3 }
+        it { is_expected.to eql 4 }
       end
     end
 
@@ -114,19 +114,19 @@ RSpec.describe SearchResultCollectionDecorator do
       subject { decorator.next_page }
 
       context 'when first page' do
-        let(:page) { 0 }
+        let(:page) { 1 }
 
-        it { is_expected.to eql 1 }
+        it { is_expected.to eql 2 }
       end
 
       context 'when third page' do
-        let(:page) { 2 }
+        let(:page) { 3 }
 
-        it { is_expected.to eql 3 }
+        it { is_expected.to eql 4 }
       end
 
       context 'when fifth page' do
-        let(:page) { 4 }
+        let(:page) { 5 }
 
         it { is_expected.to be_nil }
       end

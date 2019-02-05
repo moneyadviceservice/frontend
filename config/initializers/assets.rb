@@ -45,6 +45,7 @@ Rails.application.configure do
   # Vendor JavaScript
   config.assets.precompile += %w(html5shiv/dist/html5shiv.js
                                    jquery/dist/jquery.js
+                                   jquery-migrate/jquery-migrate.js
                                    jquery-waypoints/waypoints.js
                                    jquery-ujs/src/rails.js
                                    eventsWithPromises/src/eventsWithPromises.js

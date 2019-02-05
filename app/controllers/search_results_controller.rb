@@ -10,11 +10,11 @@ class SearchResultsController < ApplicationController
         index: 'pages',
         highlightPreTag: '<b>',
         highlightPostTag: '</b>',
-        page: params[:page],
+        page: index_zero_page, 
         hitsPerPage: 10
       }
     ).results
-
+    
     if @search_results.any?
       render 'search_results/index_with_results'
     else
@@ -26,5 +26,9 @@ class SearchResultsController < ApplicationController
 
   def display_search_box_in_header?
     false
+  end
+
+  def index_zero_page
+    params[:page] ? (params[:page].to_i - 1) : 0
   end
 end

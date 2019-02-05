@@ -33,7 +33,7 @@ When("I submit a search with no query") do
 end
 
 When("I go to the last page of results") do
-  step %{I go to results page "35" of the "money" search query}
+  step %{I go to results page "34" of the "money" search query}
 end
 
 Then("the search results page should have a robots tag with value noindex") do

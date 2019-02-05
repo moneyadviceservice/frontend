@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://xgb5qlte67-dsn.algolia.net/1/indexes/pages/query
+    uri: https://bhpslyij2l-dsn.algolia.net/1/indexes/pages/query
     body:
       encoding: UTF-8
       string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=1\u0026hitsPerPage=10\u0026query=money"}'
@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Thu, 12 Apr 2018 12:18:48 GMT
+      - Tue, 05 Feb 2019 12:21:11 GMT
       X-Algolia-Api-Key:
       - "<API_KEY>"
       X-Algolia-Application-Id:
@@ -29,14 +29,18 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 12 Apr 2018 12:18:48 GMT
+      - Tue, 05 Feb 2019 12:21:11 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Alg-Pt:
+      - '1'
       Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
       - "*"
       Cache-Control:
       - no-cache
@@ -48,83 +52,22 @@ http_interactions:
       - gzip
     body:
       encoding: UTF-8
-      string: '{"hits":[{"title":"Press release: Money Advice Service calls for evidence
-        to improve UK’s financial well being","description":"Money Advice Service
-        calls for evidence to improve UK’s financial well being","content":"<p>**16
-        May 2013 **</p>\n\n<p>The Money Advice Service is today beginning the process
-        of drawing up a new strategy to improve the financial well being of the nation.</p>\n\n<p>The
-        first step is a call for individuals and organisations to provide evidence
-        of projects and initiatives which have been successful in improving people’s
-        financial well being.</p>\n\n<ul>\n  <li>\n    <p><a href=\"https://www.moneyadviceservice.org.uk/files/money-advice-service-calls-for-evidence-pr-160513-final.pdf\">Read
-        the press release in full (PDF)</a>.</p>\n  </li>\n  <li>\n    <p><a href=\"https://www.moneyadviceservice.org.uk/en/static/financial-capability-call-for-evidence\">Find
-        out more and read the Money Advice Service UK Financial Capability Strategy
-        - Call for evidence in full</a>.</p>\n  </li>\n</ul>\n\n","published_at":"2015-03-16T11:27:55.000Z","objectID":"/en/corporate/money-advice-service-calls-for-evidence-to-improve-uks-financial-well-being","_highlightResult":{"title":{"value":"Press
-        release: <b>Money</b> Advice Service calls for evidence to improve UK’s financial
-        well being","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
-        Advice Service calls for evidence to improve UK’s financial well being","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
-        release: Money Advice Service publishes 2013-14 Business Plan, to help people
-        make the most of their money","description":"Money Advice Service publishes
-        2013-14 Business Plan, to help people make the most of their money","content":"<p><strong>27
-        March 2013</strong></p>\n\n<p>The Plan details the Service’s vision to get
-        more people saving, managing debt and protecting what they own - with almost
-        half a million outcomes.</p>\n\n<p>In the year ahead, the Service will continue
-        to provide advice on the whole range of money issues faced by everyone across
-        the UK, young or old, but will focus particularly on those people in greatest
-        financial need: younger adults and low to middle income families.</p>\n\n<ul>\n  <li><a
-        href=\"/files/business-plan-2013-14-press-release-final-270313.pdf\">Read
+      string: '{"hits":[{"title":"Press release: Money Advice Service publishes 2013-14
+        Business Plan, to help people make the most of their money","description":"Money
+        Advice Service publishes 2013-14 Business Plan, to help people make the most
+        of their money","content":"<p><strong>27 March 2013</strong></p>\n\n<p>The
+        Plan details the Service’s vision to get more people saving, managing debt
+        and protecting what they own - with almost half a million outcomes.</p>\n\n<p>In
+        the year ahead, the Service will continue to provide advice on the whole range
+        of money issues faced by everyone across the UK, young or old, but will focus
+        particularly on those people in greatest financial need: younger adults and
+        low to middle income families.</p>\n\n<ul>\n  <li><a href=\"/files/business-plan-2013-14-press-release-final-270313.pdf\">Read
         the press release in full (PDF)</a></li>\n  <li><a href=\"/files/the-money-advice-service-business-plan-2013-14-final-v3.pdf\">Read
         the The Money Advice Service Business Plan 2013-14 in full (PDF)</a></li>\n</ul>\n","published_at":"2015-05-08T13:24:13.000Z","objectID":"/en/corporate/money-advice-service-business-plan-2013-14-press-release","_highlightResult":{"title":{"value":"Press
         release: <b>Money</b> Advice Service publishes 2013-14 Business Plan, to help
         people make the most of their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
         Advice Service publishes 2013-14 Business Plan, to help people make the most
-        of their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Money
-        Advice Service and funding of debt advice services","description":"Money Advice
-        Service and funding of debt advice services","content":"<p>In 2012 MAS was
-        given a statutory duty to work with partners to improve the availability,
-        quality and consistency of debt advice across the UK.</p>\n\n<p>Since that
-        time MAS has become one of the largest single funders of debt advice in the
-        UK:</p>\n\n<ul>\n  <li>In 2017-18, MAS will deliver £45M of funding for services
-        that will support 468,000 people</li>\n  <li>This incorporates a mixture of
-        Face to Face (50%), Telephone (40%) and Online (10%)</li>\n  <li>26 agreements
-        in place across England and Wales, Scotland and N Ireland</li>\n  <li>Delivered
-        through grants though some contracts exist where appropriate</li>\n  <li>Delivery
-        models include direct, front-line provision and via indirect, lead organisations</li>\n</ul>\n\n<p>In
-        December 2018 the Money Advice Service launched a new five-year debt commissioning
-        strategy that outlines a challenging and exciting plan to ensure debt advice
-        services target those most in need.</p>\n\n<div class=\"add-action\">\n <a
-        href=\"https://www.moneyadviceservice.org.uk/en/corporate/a-strategic-approach-to-commissioning-debt-advice-2018-2023\">Find
-        out more about the commissioning strategy</a>\n\n</div>\n\n<p>This area of
-        the website provides:</p>\n\n<ul>\n  <li>Information around our plans for
-        commissioning of debt advice services through to 2023</li>\n  <li>Details
-        on individual regional projects and how to get involved with them</li>\n  <li>Research
-        and data which may be of benefit to any providers of debt advice</li>\n</ul>\n","published_at":"2018-03-02T15:36:32.000Z","objectID":"/en/corporate/money-advice-service-and-funding-of-debt-advice-services","_highlightResult":{"title":{"value":"<b>Money</b>
-        Advice Service and funding of debt advice services","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"<b>Money</b>
-        Advice Service and funding of debt advice services","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"An
-        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector","description":"Money
-        Advice Service has researched the extent to which repeat visits to debt advice
-        could be avoided, and the main causes of people seeking more debt advice.","content":"<p>When
-        people get debt advice, we want to help them not just to solve their current
-        financial difficulties, but to avoid becoming over-indebted again in the future.
-        Without knowing the extent to which repeat visits could be avoided and implement
-        actions to prevent it, the impact and efficiency of debt advice provision
-        is reduced.</p>\n\n<p>This research, <a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/838/original/MAS_RepeatClientsReport_QualitativeResearch.pdf\">An
-        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector</a>, identifies
-        ten typologies of repeat clients, from clients that are not advice ready,
-        to clients that are capable but overwhelmed. The ten typologies are grouped
-        as either largely preventable or largely unpreventable.</p>\n\n<p>This research
-        demonstrates that the causes of repeating involve:</p>\n\n<ul>\n  <li>Clients’
-        objective financial situation and attitudes towards debt.</li>\n  <li>Advisers’
-        perceptions of and attitude towards debt advice delivery.</li>\n  <li>The
-        structure and delivery of debt advice.</li>\n</ul>\n\n<p>Opportunity areas
-        to reduce avoidable repeating are included in the report to help the advice
-        sector formulate effective responses to the ‘repeat rate’. We will incorporate
-        the results of this work into the implementation of our new commissioning
-        strategy.</p>\n\n<div class=\"add-action\">\n You can download the <a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/838/original/MAS_RepeatClientsReport_QualitativeResearch.pdf\">An
-        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector September
-        2017 research report online</a>.\n\n</div>\n","published_at":"2017-11-17T09:17:24.000Z","objectID":"/en/corporate/an-unavoidable-challenge-repeat-clients-in-the-debt-advice-sector","_highlightResult":{"title":{"value":"An
-        Unavoidable Challenge? Repeat Clients in the Debt Advice Sector","matchLevel":"none","matchedWords":[]},"description":{"value":"<b>Money</b>
-        Advice Service has researched the extent to which repeat visits to debt advice
-        could be avoided, and the main causes of people seeking more debt advice.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Pecynnau
+        of their <b>money</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Pecynnau
         Cymorth Cyngor Ariannol","description":"Money Advice Service toolkits provide
         information about policy changes and topical money issues","content":"<h2
         id=\"pecynnau-cymorth-cyngor-ariannol\">Pecynnau Cymorth Cyngor Ariannol</h2>\n\n<p>Rydym
@@ -289,9 +232,54 @@ http_interactions:
         the press release here</a></li>\n</ul>\n","published_at":"2015-05-07T10:43:42.000Z","objectID":"/en/corporate/caroline-rookes-appointed-money-advice-service-chief-executive","_highlightResult":{"title":{"value":"Press
         release: Caroline Rookes appointed <b>Money</b> Advice Service Chief Executive","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"The
         <b>Money</b> Advice Service announced the appointment of Caroline Rookes as
-        its new Chief Executive.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}}],"nbHits":359,"page":1,"nbPages":36,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","queryAfterRemoval":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=1&hitsPerPage=10&query=money"}
+        its new Chief Executive.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Press
+        release: Adult money habits are set by the age of seven years old shows new
+        study","description":"Adult money habits are set by the age of seven years
+        old shows new study","content":"<p>**<strong>23 May 2013**</strong></p>\n\n<p><strong>Our
+        new study, ‘Habit Formation and Learning in Young Children’, authored by behaviour
+        experts at Cambridge University, highlights the power of parents to foster
+        money skills at home - core behaviours which they will take into adulthood
+        will affect financial decisions they make during the rest of their lives.</strong></p>\n\n<p>Based
+        on evidence in the report, we urge parents not to underestimate the effect
+        their own good (and bad) money habits will have on their children.</p>\n\n<ul>\n  <li><a
+        href=\"https://www.moneyadviceservice.org.uk/files/habits-set-by-age-seven-pr-220513-final.pdf\">Read
+        the press release in full (PDF)</a></li>\n  <li><a href=\"https://www.moneyadviceservice.org.uk/files/the-money-advice-service-habit-formation-and-learning-in-young-children-may2013.pdf\">Read
+        the ‘Habit Formation and Learning in Young Children’ research in full (PDF)</a></li>\n</ul>\n\n","published_at":"2015-03-16T11:25:49.000Z","objectID":"/en/corporate/adult-money-habits-are-set-by-the-age-of-seven-years-old-shows-new-study","_highlightResult":{"title":{"value":"Press
+        release: Adult <b>money</b> habits are set by the age of seven years old shows
+        new study","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]},"description":{"value":"Adult
+        <b>money</b> habits are set by the age of seven years old shows new study","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Achieving
+        consistent and high quality Debt Advice – a consultation document","description":"The
+        Money Advice Service is seeking views and comments on a proposed quality framework
+        for the debt advice sector in the UK.","content":"<p><strong>The Money Advice
+        Service is seeking views and comments on a proposed quality framework for
+        the debt advice sector in the UK.</strong></p>\n\n<h2 id=\"our-proposed-quality-framework-will\">Our
+        proposed quality framework will:</h2>\n\n<ul>\n  <li>Sets a benchmark for
+        debt advice delivery for both organisations and individuals working in the
+        debt advice sector to bring about greater consistency in the delivery of advice.</li>\n  <li>Cover
+        the processes that underpin the delivery of advice and the standard of actual
+        advice given.</li>\n  <li>Build on existing quality standards and quality
+        assurance processes currently being used. We have not attempted to reinvent
+        new standards, but draw together best practice examples which are currently
+        operating.</li>\n  <li>Be based on three guiding principles; being receptive
+        to client needs, demonstrating strong governance and promoting reflective
+        and on-going learning. It proposes greater clarity around the role profiles
+        of debt advisers and sets out a minimum range of skills, knowledge and competencies
+        for individuals working in the sector.</li>\n</ul>\n\n<h2 id=\"responses\">Responses</h2>\n\n<p>This
+        consultation has now ended.</p>\n\n<h2 id=\"following-the-consultation-we-will-publish-our-finalised-plan-in-2013\">Following
+        the consultation we will publish our finalised plan in 2013</h2>\n\n<ul>\n  <li><a
+        href=\"/files/mas_debt_advice_consulation_-corp0050a.pdf\">Download the Achieving
+        consistent and high quality Debt Advice consultation document in full (PDF)</a></li>\n</ul>\n","published_at":"2015-05-08T10:19:19.000Z","objectID":"/en/corporate/achieving-consistent-and-high-quality-debt-advice-a-consultation-document","_highlightResult":{"title":{"value":"Achieving
+        consistent and high quality Debt Advice – a consultation document","matchLevel":"none","matchedWords":[]},"description":{"value":"The
+        <b>Money</b> Advice Service is seeking views and comments on a proposed quality
+        framework for the debt advice sector in the UK.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}},{"title":"Corporate","description":"The
+        Money Advice Service partners with numerous organisations to help people manage
+        their money. Use the links below to find more about our latest news, research
+        and how we can work together.","links":[],"objectID":"/en/categories/corporate-home","_highlightResult":{"title":{"value":"Corporate","matchLevel":"none","matchedWords":[]},"description":{"value":"The
+        <b>Money</b> Advice Service partners with numerous organisations to help people
+        manage their <b>money</b>. Use the links below to find more about our latest
+        news, research and how we can work together.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["money"]}}}],"nbHits":337,"page":1,"nbPages":34,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"money","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=1&hitsPerPage=10&query=money"}
 
 '
     http_version: 
-  recorded_at: Thu, 12 Apr 2018 12:18:48 GMT
+  recorded_at: Tue, 05 Feb 2019 12:21:11 GMT
 recorded_with: VCR 4.0.0

@@ -54,7 +54,7 @@ gem 'cream', '2.1.7'
 gem 'dough-ruby', '~> 5.32.2'
 gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.20.0'
-gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git'
+gem 'site_search', '0.2.0'
 # Tools
 gem 'action_plans', '~> 5.0.0'
 gem 'advice_plans', '~> 4.0.1'

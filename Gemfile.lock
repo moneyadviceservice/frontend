@@ -17,13 +17,6 @@ GIT
       sass
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/site_search.git
-  revision: f3aba3d88ac7daab81f55a10e03456e6003ff77c
-  specs:
-    site_search (0.1.0)
-      algoliasearch
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -707,6 +700,8 @@ GEM
     site_prism (2.11)
       addressable (~> 2.4)
       capybara (~> 2.7)
+    site_search (0.2.0)
+      algoliasearch
     spreadsheet (1.1.7)
       ruby-ole (>= 1.0)
     sprockets (2.12.5)
@@ -888,7 +883,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   site_prism
-  site_search!
+  site_search (= 0.2.0)
   sqlite3
   statsd-ruby
   sucker_punch

@@ -10,7 +10,7 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
   end
 
   def page
-    object.page + 1
+    object.page
   end
 
   def first_page?

@@ -39,9 +39,6 @@ Rails.application.configure do
                                    syndication/tools.js
                                    translations/cy.js
                                    translations/en.js
-                                   pacs/app/assets/javascripts/pacs/constants/*.js
-                                   pacs/app/assets/javascripts/pacs/objects/*.js
-                                   pacs/app/assets/javascripts/pacs/helpers/*.js
                                    dough/assets/js/lib/*.js
                                    dough/assets/js/components/*.js
                                    dough/assets/js/constants/*.js)

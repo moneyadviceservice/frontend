@@ -77,7 +77,7 @@ gem 'pensions_calculator', '~> 2.0.0'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.0.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'
-gem 'timelines', '~> 1.5.0'
+gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: '10136-ruby-253', ref: 'e4b05fa121b0db0c75287f066312f7841317c40a'
 gem 'universal_credit', '4.0.0'
 gem 'wpcc', '2.2.0'
 

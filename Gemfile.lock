@@ -33,6 +33,20 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/timelines.git
+  revision: e4b05fa121b0db0c75287f066312f7841317c40a
+  ref: e4b05fa121b0db0c75287f066312f7841317c40a
+  branch: 10136-ruby-253
+  specs:
+    timelines (1.6.0)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -419,7 +433,9 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.4.1)
+    icalendar (2.5.2)
+      ice_cube (~> 0.16)
+    ice_cube (0.16.3)
     ice_nine (0.11.2)
     interception (0.5)
     jbuilder (2.8.0)
@@ -731,13 +747,6 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
-    timelines (1.5.0.310)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
     transitions (0.1.13)
     turnout (2.4.1)
       i18n (~> 0.7)
@@ -896,7 +905,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.5.0)
+  timelines!
   turnout
   uglifier
   unicorn-rails

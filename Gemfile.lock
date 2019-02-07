@@ -722,7 +722,7 @@ GEM
     site_prism (2.11)
       addressable (~> 2.4)
       capybara (~> 2.7)
-    site_search (0.2.0)
+    site_search (0.3.0)
       algoliasearch
     spreadsheet (1.1.7)
       ruby-ole (>= 1.0)
@@ -898,7 +898,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   site_prism
-  site_search (= 0.2.0)
+  site_search (= 0.3.0)
   sqlite3
   statsd-ruby
   sucker_punch

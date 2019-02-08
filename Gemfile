@@ -12,7 +12,11 @@ ruby '2.5.3'
 gem 'rails', '4.2.11'
 
 gem 'activerecord-session_store'
-gem 'aes'
+# The aes gem is no longer supported, so point to a fork that resolves
+# deprecation warnings in Ruby's OpenSSL module. This could feasibly be
+# replaced by an implementation within this repo, as all the gem is doing is
+# wrapping OpenSSL.
+gem 'aes', git: 'git@github.com:jalerson/aes.git', ref: '8366dc165'
 gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'

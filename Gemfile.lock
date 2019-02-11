@@ -8,17 +8,7 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/mas-assets
-  revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
-  specs:
-    mas-assets (1.2.0)
-      compass-rails
-      google-analytics-rails
-      sass
-      sass-rails
-
-GIT
-  remote: https://github.com/moneyadviceservice/budget_planner.git
+  remote: git@github.com:moneyadviceservice/budget_planner.git
   revision: 1cf68088755cfdb0421a483f69864aa68b569ee2
   ref: 1cf68088755cfdb0421a483f69864aa68b569ee2
   specs:
@@ -32,6 +22,16 @@ GIT
       rails (>= 4, < 5)
       sass-rails
       spreadsheet
+
+GIT
+  remote: git@github.com:moneyadviceservice/mas-assets
+  revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
+  specs:
+    mas-assets (1.2.0)
+      compass-rails
+      google-analytics-rails
+      sass
+      sass-rails
 
 GEM
   remote: https://rubygems.org/

@@ -8,6 +8,24 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/decision_trees.git
+  revision: 9b59f0a75593741ab865c8017c829c0aad1da944
+  ref: 9b59f0a
+  branch: ms/bump-locked-gem-dependencies
+  specs:
+    decision_trees (2.2.1)
+      dough-ruby (~> 5.0)
+      handlebars_assets (~> 0.13.0)
+      htmlentities
+      i18n-js (= 3.0.0.mas)
+      jquery-rails (~> 4.3.3)
+      meta-tags
+      nokogiri
+      rails (>= 4, < 5)
+      sass-rails (~> 4.0.5)
+      sprockets-rails (~> 2.3.3)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -268,16 +286,6 @@ GEM
       rails (>= 4, < 5)
       sass-rails
     debug_inspector (0.0.3)
-    decision_trees (2.1.0.116)
-      dough-ruby (~> 5.0)
-      handlebars_assets (~> 0.13.0)
-      htmlentities
-      i18n-js
-      jquery-rails
-      meta-tags
-      nokogiri
-      rails (>= 4, < 5)
-      sass-rails
     delayed_job (4.1.4)
       activesupport (>= 3.0, < 5.2)
     delayed_job_active_record (4.1.2)
@@ -825,7 +833,7 @@ DEPENDENCIES
   debt_and_mental_health (~> 1.4.0)
   debt_free_day_calculator (~> 3.0.0)
   debt_test (~> 1.8.0)
-  decision_trees (~> 2.1.0)
+  decision_trees!
   delayed_job_active_record
   devise (~> 4.2.0)
   devise-encryptable

@@ -1,0 +1,16 @@
+development:
+  adapter: mysql2
+  username: mas
+  password: mas
+  database: frontend_test
+  host: database
+  port: 3306
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000

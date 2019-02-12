@@ -1,0 +1,33 @@
+version: '3'
+services:
+  database:
+    image: mtirsel/mysql-5.1
+    environment:
+      - MYSQL_DATABASE=frontend_test
+      - MYSQL_ROOT_PASSWORD=mas
+      - MYSQL_USER=mas
+      - MYSQL_PASSWORD=mas
+    volumes:
+      - database:/var/lib/mysql/data
+    restart: always
+  rails:
+    build:
+      context: .
+      dockerfile: jenkins/Dockerfile
+    environment:
+      - GITHUB_USER=$GITHUB_TOKEN_USR
+      - GITHUB_PASS=$GITHUB_TOKEN_PSW
+      - DANGER_GITHUB_API_TOKEN=$GITHUB_TOKEN_PSW
+      - CHANGE_ID=$DANGER_CHANGE_ID
+      - GIT_URL=$DANGER_GIT_URL
+      - JENKINS_URL=$DANGER_JENKINS_URL
+      - HTTP_REQUEST_TIMEOUT=10
+      - LANG=C.UTF-8
+    env_file:
+      - ${ENV_VARS}
+    depends_on:
+      - database
+    links:
+      - database
+volumes:
+  database: {}      

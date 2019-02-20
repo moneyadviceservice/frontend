@@ -1,4 +1,11 @@
 GIT
+  remote: git@github.com:jalerson/aes.git
+  revision: 8366dc165c90cb8b4809e4aedf597dbe745a4450
+  ref: 8366dc165
+  specs:
+    aes (0.5.0)
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -88,7 +95,6 @@ GEM
       redcarpet (~> 3.2.0)
       sass-rails
       transitions (~> 0.1.11)
-    aes (0.5.0)
     agreements (2.4.0)
       dough-ruby (~> 5.0)
       hashie (~> 2.0.5)
@@ -109,7 +115,7 @@ GEM
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
     backports (3.11.1)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -284,10 +290,10 @@ GEM
     delayed_job_active_record (4.1.2)
       activerecord (>= 3.0, < 5.2)
       delayed_job (>= 3.0, < 5)
-    devise (4.2.1)
+    devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
+      railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
@@ -497,7 +503,7 @@ GEM
     mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
-    nokogiri (1.9.1)
+    nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     nunes (0.5.0)
     opening_hours (0.0.7)
@@ -550,6 +556,9 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     pry-rescue (1.4.5)
@@ -798,7 +807,7 @@ DEPENDENCIES
   activerecord-session_store
   adal!
   advice_plans (~> 4.0.1)
-  aes
+  aes!
   agreements (~> 2.4.0)
   algoliasearch
   attr_encrypted (~> 3.1)
@@ -828,7 +837,7 @@ DEPENDENCIES
   debt_test (~> 1.8.0)
   decision_trees (~> 2.2.1)
   delayed_job_active_record
-  devise (~> 4.2.0)
+  devise (~> 4.4.0)
   devise-encryptable
   dotenv
   dotenv-rails
@@ -865,6 +874,7 @@ DEPENDENCIES
   pensions_calculator (~> 2.1.0)
   poltergeist
   postcode_anywhere-email_validation
+  pry-byebug
   pry-rails
   pry-rescue
   psych (>= 2.0.5)
@@ -901,6 +911,9 @@ DEPENDENCIES
   webmock
   whenever
   wpcc (= 2.2.0)
+
+RUBY VERSION
+   ruby 2.5.3p105
 
 BUNDLED WITH
    1.17.3

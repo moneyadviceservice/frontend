@@ -25,9 +25,6 @@ gem 'devise', '~> 4.4.0'
 gem 'devise-encryptable'
 gem 'dotenv'
 gem 'draper', '< 3'
-# TODO: Remove this dry-config line all together once bump to ruby v2.5 as only is
-# needed to lock it due to clashing between newer versions and ruby < v2.3
-gem 'dry-configurable', '~> 0.7.0'
 gem 'faraday', '0.9.2'
 gem 'faraday-conductivity'
 gem 'faraday_middleware'

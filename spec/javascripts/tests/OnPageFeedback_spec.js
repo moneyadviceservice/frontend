@@ -6,8 +6,8 @@ describe('OnPageFeedback', function() {
   beforeEach(function(done) {
     var self = this;
     requirejs(
-      ['jquery', 'OnPageFeedback'],
-      function($, OnPageFeedback) {
+      ['jquery', 'OnPageFeedback', 'jquerymigrate'],
+      function($, OnPageFeedback, jquerymigrate) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/OnPageFeedback.html']).appendTo('body');
         self.component = self.$html.find('[data-dough-component="OnPageFeedback"]');
         self.interactionBtn = self.$html.find('[data-dough-feedback]');
@@ -25,10 +25,10 @@ describe('OnPageFeedback', function() {
 
         server = sinon.fakeServer.create();
         var serverResponse = '{"id":13,"page_id":1,"liked":true,"likes_count":12,"dislikes_count":5}';
-        server.respondWith('POST', 'initial-feedback-endpoint', 
+        server.respondWith('POST', 'initial-feedback-endpoint',
           [201, { 'Content-Type': 'application/json' },
           serverResponse]);
-        server.respondWith('PATCH', 'initial-feedback-endpoint', 
+        server.respondWith('PATCH', 'initial-feedback-endpoint',
           [201, { 'Content-Type': 'application/json' },
           serverResponse]);
 
@@ -61,7 +61,7 @@ describe('OnPageFeedback', function() {
       server.respond();
       this.shareBtns.trigger('click');
       expect(this.pages.filter('[data-dough-feedback-page=results]')).to.not.have.class('is-hidden');
-    }); 
+    });
   });
 
   afterEach(function () {

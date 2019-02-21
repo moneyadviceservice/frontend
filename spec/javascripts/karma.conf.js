@@ -4,7 +4,7 @@
 module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '../',
+    basePath: '../../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['requirejs', 'mocha', 'chai-jquery', 'chai', 'sinon','sinon-chai', 'jquery-3.3.1'],
@@ -36,7 +36,7 @@ module.exports = function(config) {
      'app/assets/javascripts/pensions_calculator/**/*.js': ['coverage']
     },
 
-    reporters: ['coverage', 'spec', 'osx'],
+    reporters: ['spec'],
 
     // web server port
     port: 9876,
@@ -49,7 +49,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // Start these browsers, currently available:
@@ -67,7 +67,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false,
+    singleRun: true,
 
     coverageReporter: {
      type : 'html',

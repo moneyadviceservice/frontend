@@ -5,8 +5,8 @@ describe('GlobalNav', function() {
     var self = this;
 
     requirejs(
-        ['jquery', 'GlobalNav', 'mediaQueries', 'utilities', 'common', 'jquerymigrate'],
-        function($, GlobalNav, mediaQueries, utilities, common, jquerymigrate) {
+        ['jquery', 'GlobalNav', 'mediaQueries', 'utilities', 'common'],
+        function($, GlobalNav, mediaQueries, utilities, common) {
           self.$html = $(window.__html__['spec/javascripts/fixtures/GlobalNav.html']).appendTo('body');
           self.component = self.$html.find('[data-dough-component="GlobalNav"]');
           self.globalNav = GlobalNav;

@@ -6,8 +6,8 @@ describe('EmbedCodeGenerator', function () {
   beforeEach(function (done) {
     var self = this;
 
-    requirejs(['jquery', 'EmbedCodeGenerator', 'jquerymigrate'],
-      function ($, EmbedCodeGenerator, jquerymigrate) {
+    requirejs(['jquery', 'EmbedCodeGenerator'],
+      function ($, EmbedCodeGenerator) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/EmbedCodeGenerator.html']);
         self.EmbedCodeGenerator = EmbedCodeGenerator;
         sandbox = sinon.sandbox.create();

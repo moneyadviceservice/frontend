@@ -5,8 +5,8 @@ describe('StickyColumn', function() {
   beforeEach(function(done) {
     var self = this;
     requirejs(
-        ['jquery', 'StickyColumn', 'eventsWithPromises', 'jquerymigrate'],
-        function($, StickyColumn, eventsWithPromises, jquerymigrate) {
+        ['jquery', 'StickyColumn', 'eventsWithPromises'],
+        function($, StickyColumn, eventsWithPromises) {
           self.$html = $(window.__html__['spec/javascripts/fixtures/StickyColumn.html']).appendTo('body');
           self.component = self.$html.find('[data-dough-component="StickyColumn"]');
           self.StickyColumn = StickyColumn

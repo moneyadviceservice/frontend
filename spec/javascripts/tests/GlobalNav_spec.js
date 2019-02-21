@@ -5,8 +5,8 @@ describe('GlobalNav', function() {
     var self = this;
 
     requirejs(
-        ['jquery', 'GlobalNav', 'mediaQueries', 'utilities', 'common'],
-        function($, GlobalNav, mediaQueries, utilities, common) {
+        ['jquery', 'GlobalNav', 'mediaQueries', 'utilities', 'common', 'jquerymigrate'],
+        function($, GlobalNav, mediaQueries, utilities, common, jquerymigrate) {
           self.$html = $(window.__html__['spec/javascripts/fixtures/GlobalNav.html']).appendTo('body');
           self.component = self.$html.find('[data-dough-component="GlobalNav"]');
           self.globalNav = GlobalNav;
@@ -70,7 +70,7 @@ describe('GlobalNav', function() {
   describe('Mobile interaction', function() {
     beforeEach(function() {
       this.obj.init();
-    }); 
+    });
 
     it('toggles nav visibility when menu button is clicked', function() {
       this.mobileNavButton.trigger('click');
@@ -86,14 +86,14 @@ describe('GlobalNav', function() {
 
     it('When clump heading is clicked remove is-hidden class from subnav', function() {
       // This test is prevented from being initiated by mediaQueries.atSmallViewport() helper.
-    }); 
+    });
 
     it('Applys is-hidden class to sub nav and returns to main mobile nav', function() {
       $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');
       var siblingsNav = $('#clump-1').find('[data-dough-subnav]').get(0);
 
       expect($(siblingsNav).hasClass('is-hidden')).to.be.true;
-    }); 
+    });
 
     it('toggles subnav visibility when clump heading is clicked', function() {
       $('#clump-1').find('[data-dough-subnav-heading]').trigger('click');

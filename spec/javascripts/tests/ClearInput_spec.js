@@ -6,8 +6,8 @@ describe('clear input field without initial value', function () {
     var self = this;
 
     requirejs(
-      ['jquery', 'ClearInput'],
-      function ($, ClearInput) {
+      ['jquery', 'ClearInput', 'jquerymigrate'],
+      function ($, ClearInput, jquerymigrate) {
 
         self.$html = $(window.__html__['spec/javascripts/fixtures/ClearInput.html']);
         self.$input = self.$html.find('[data-dough-clear-input]');
@@ -53,8 +53,8 @@ describe('clear input field without initial value', function () {
       var self = this;
 
       requirejs(
-        ['jquery', 'ClearInput'],
-        function ($, ClearInput) {
+        ['jquery', 'ClearInput', 'jquerymigrate'],
+        function ($, ClearInput, jquerymigrate) {
 
           self.$html = $(window.__html__['spec/javascripts/fixtures/ClearInputWithValue.html']);
           self.$input = self.$html.find('[data-dough-clear-input]');

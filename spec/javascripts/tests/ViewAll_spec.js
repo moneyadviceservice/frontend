@@ -5,7 +5,7 @@ describe('ViewAll', function () {
     beforeEach(function (done){
       var self = this;
 
-      requirejs(['jquery', 'ViewAll', 'jquerymigrate'], function ($, ViewAll, jquerymigrate) {
+      requirejs(['jquery', 'ViewAll'], function ($, ViewAll) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/ViewAllDefault.html']).appendTo('body');
         self.component = self.$html.find('[data-dough-component="ViewAll"]');
         self.trigger = self.$html.find('[data-dough-view-all-trigger]');
@@ -53,7 +53,7 @@ describe('ViewAll', function () {
     beforeEach(function (done){
       var self = this;
 
-      requirejs(['jquery', 'ViewAll', 'jquerymigrate'], function ($, ViewAll, jquerymigrate) {
+      requirejs(['jquery', 'ViewAll'], function ($, ViewAll) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/ViewAllFewer.html']).appendTo('body');
         self.component = self.$html.find('[data-dough-component="ViewAll"]');
         self.trigger = self.$html.find('[data-dough-view-all-trigger]');
@@ -86,7 +86,7 @@ describe('ViewAll', function () {
     beforeEach(function (done){
       var self = this;
 
-      requirejs(['jquery', 'ViewAll', 'jquerymigrate'], function ($, ViewAll, jquerymigrate) {
+      requirejs(['jquery', 'ViewAll'], function ($, ViewAll) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/ViewAllCustom.html']).appendTo('body');
         self.component = self.$html.find('[data-dough-component="ViewAll"]');
         self.trigger = self.$html.find('[data-dough-view-all-trigger]');

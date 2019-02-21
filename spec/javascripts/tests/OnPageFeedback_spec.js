@@ -6,8 +6,8 @@ describe('OnPageFeedback', function() {
   beforeEach(function(done) {
     var self = this;
     requirejs(
-      ['jquery', 'OnPageFeedback', 'jquerymigrate'],
-      function($, OnPageFeedback, jquerymigrate) {
+      ['jquery', 'OnPageFeedback'],
+      function($, OnPageFeedback) {
         self.$html = $(window.__html__['spec/javascripts/fixtures/OnPageFeedback.html']).appendTo('body');
         self.component = self.$html.find('[data-dough-component="OnPageFeedback"]');
         self.interactionBtn = self.$html.find('[data-dough-feedback]');

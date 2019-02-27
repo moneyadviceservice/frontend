@@ -18,6 +18,7 @@ require.config({
 
     // Internal modules
     DoughBaseComponent: 'vendor/assets/bower_components/dough/assets/js/components/DoughBaseComponent',
+    DoughEventConstants: 'vendor/assets/bower_components/dough/assets/js/constants/DoughEventConstants',
     featureDetect: 'vendor/assets/bower_components/dough/assets/js/lib/featureDetect',
 
     globals: 'app/assets/javascripts/modules/globals',

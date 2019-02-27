@@ -16,11 +16,12 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator
-  revision: 57df5b9d6503a582fc15e42c8a51f24c60312ec7
+  revision: 33fb51f9104897a890a70607b4ca69db9256063e
   branch: 10237_update-jquery
   specs:
     debt_free_day_calculator (3.0.0)
       autoprefixer-rails (< 9)
+      bigdecimal (~> 1.3.0)
       debt_finance_calculator (~> 1.1.0)
       dough-ruby (~> 5.0)
       draper (< 3)
@@ -153,7 +154,7 @@ GEM
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
-    bigdecimal (1.4.3)
+    bigdecimal (1.3.5)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     blind_index (0.2.0)

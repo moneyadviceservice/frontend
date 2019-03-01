@@ -77,7 +77,7 @@ gem 'feedback', '~> 0.5.1'
 #### DO NOT bump mortgage_calculator beyond 3.4 because until TP 9827 is ready for deployment
 gem 'mortgage_calculator', '~> 3.4.0'
 ####
-gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'fe-architecture', ref: '72be3426f6ea20cf6933922838373d48eb3fc2a1'
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', ref: '72be3426f6ea20cf6933922838373d48eb3fc2a1'
 gem 'payday_loans_intervention', '~> 1.8.0'
 gem 'pensions_calculator', '~> 2.1.0'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'

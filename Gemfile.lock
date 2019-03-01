@@ -24,6 +24,25 @@ GIT
       sass
       sass-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 72be3426f6ea20cf6933922838373d48eb3fc2a1
+  ref: 72be3426f6ea20cf6933922838373d48eb3fc2a1
+  branch: fe-architecture
+  specs:
+    pacs (3.3.0)
+      dough-ruby (~> 5.35.0)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -306,7 +325,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.33.0)
+    dough-ruby (5.35.0)
       activemodel
       activesupport
       rails (>= 3.2, <= 5.0.6)
@@ -320,7 +339,7 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    dry-configurable (0.8.1)
+    dry-configurable (0.8.2)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
     dry-container (0.7.0)
@@ -482,7 +501,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.7.0)
+    mongo (2.7.1)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)
@@ -511,18 +530,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.3.0)
-      dough-ruby
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -842,7 +849,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.33.0)
+  dough-ruby (~> 5.35.0)
   draper (< 3)
   ejs
   email_spec (< 2)
@@ -869,7 +876,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 3.3.0)
+  pacs!
   payday_loans_intervention (~> 1.8.0)
   pensions_calculator (~> 2.1.0)
   poltergeist

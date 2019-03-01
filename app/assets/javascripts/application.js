@@ -85,7 +85,7 @@ require(['common', 'jquery'], function(MAS, $) {
 
     $(document).ready(function() {
       // Cookie message
-      $('.js-cookie-message').bind('ajax:success', function() {
+      $('.js-cookie-message').on('ajax:success', function() {
         $('.cookie-message').hide();
         $('.footer-site-links__cookie-link').removeClass('is-on');
       });

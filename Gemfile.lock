@@ -15,6 +15,20 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/car_cost_tool
+  revision: 16246ef8d0e0a8006f82c372bafb632145bf8a5c
+  branch: 10233_update-jquery
+  specs:
+    car_cost_tool (1.4.0)
+      dough-ruby (~> 5.29)
+      nokogiri
+      rails (>= 4, < 5)
+      rest-client
+      roo (< 2.5.0)
+      roo-xls (<= 1)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator
   revision: 33fb51f9104897a890a70607b4ca69db9256063e
   branch: 10237_update-jquery
@@ -183,14 +197,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    car_cost_tool (1.4.0)
-      dough-ruby (~> 5.29)
-      nokogiri
-      rails (>= 4, < 5)
-      rest-client
-      roo (< 2.5.0)
-      roo-xls (<= 1)
-      sass-rails
     chai-jquery-rails (2.0.1)
       railties (>= 3.1)
       sprockets
@@ -834,7 +840,7 @@ DEPENDENCIES
   bugsnag
   byebug
   capybara
-  car_cost_tool (~> 1.4)
+  car_cost_tool!
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)

@@ -7,7 +7,7 @@ module.exports = function(config) {
     basePath: '../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['requirejs', 'mocha', 'chai-jquery', 'chai', 'sinon','sinon-chai', 'jquery-1.11.0'],
+    frameworks: ['requirejs', 'mocha', 'chai-jquery', 'chai', 'sinon','sinon-chai', 'jquery-3.3.1'],
 
     // list of files / patterns to load in the browser
     files: [

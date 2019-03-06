@@ -51,7 +51,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.32.2'
+gem 'dough-ruby',  git: 'https://github.com/moneyadviceservice/dough.git', branch: '9755_Update-JQuery', ref: '62ecb84076940ba6011e7fddd4b20681e3e0129e'
 gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.2.0'

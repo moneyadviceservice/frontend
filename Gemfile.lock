@@ -16,8 +16,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/budget_planner
-  revision: 42ed122776ac85457b8a869bd5aa030de1c0a4f4
-  branch: 10232_Update-JQuery
+  revision: 9c2b4f0499fd2e00bafbbd8fcaf26565f79f7760
+  ref: 9c2b4f0499fd2e00bafbbd8fcaf26565f79f7760
   specs:
     budget_planner (5.6.1)
       i18n-js (= 3.0.0.mas)
@@ -565,8 +565,8 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.4.0)
-      dough-ruby (~> 5.35.0)
+    pacs (3.3.0)
+      dough-ruby
       dry-struct
       dry-struct-setters
       dry-types
@@ -909,7 +909,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 3.4.0)
+  pacs (= 3.3.0)
   payday_loans_intervention (~> 1.8.0)
   pensions_calculator!
   poltergeist

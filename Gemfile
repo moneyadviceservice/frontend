@@ -56,7 +56,7 @@ gem 'whenever', require: false
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
 gem 'dough-ruby', '~> 5.33.0'
-gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
+gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets', branch: 'ms/upgrade-to-ruby-2-5-3', ref: '70ffe29'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools

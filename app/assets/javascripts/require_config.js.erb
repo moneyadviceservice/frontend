@@ -48,13 +48,14 @@
 
       # External dependancies
       eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
-      jquery: requirejs_path('jquery/dist/jquery'),
+      jquerySrc: requirejs_path('jquery/dist/jquery'),
+      jquerymigrate: requirejs_path('jquery-migrate/jquery-migrate'),
+      jquery: requirejs_path('components/JQueryMigrateWrapper'),
       jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
       rsvp: requirejs_path('rsvp/rsvp'),
       typeahead: requirejs_path('typeahead.jquery'),
       ujs: requirejs_path('jquery-ujs/src/rails'),
       waypoints: requirejs_path('jquery-waypoints/waypoints'),
-      jquerymigrate: requirejs_path('jquery-migrate/jquery-migrate'),
 
       # Internal modules
       common: requirejs_path('modules/common'),
@@ -94,9 +95,10 @@
       wpccConfig: requirejs_path('wpcc/require_config')
     },
     shim: {
+      jquerymigrate: ['jquerySrc'],
       jquery: ['jquerymigrate'],
       typeahead: ['jquery'],
-      ujs: ['jquery'],
+      ujs: ['jquery']
     }
   }
 

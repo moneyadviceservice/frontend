@@ -8,7 +8,7 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.2.11'
+gem 'rails', '4.2.11.1'
 
 gem 'activerecord-session_store'
 # The aes gem is no longer supported, so point to a fork that resolves
@@ -38,7 +38,7 @@ gem 'newrelic_rpm'
 gem 'nokogiri', '>= 1.8.5'
 gem 'nunes'
 gem 'opening_hours'
-gem 'postcode_anywhere-email_validation'
+gem 'postcode_anywhere-email_validation', '~> 0.1.0'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'
@@ -55,7 +55,8 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.35.0'
+gem 'dough-ruby', '~> 5.36.1'
+gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
@@ -64,27 +65,28 @@ gem 'advice_plans', '~> 4.0.1'
 gem 'agreements', '~> 2.4.0'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 5.6.1'
-gem 'car_cost_tool', '~> 1.4'
+gem 'car_cost_tool', '~> 1.5'
 gem 'cost_calculator_builder', '~> 1.0.0'
 gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_advice_locator', '~> 3.1.2'
+gem 'debt_advice_locator', '~> 3.2.0'
 gem 'debt_and_mental_health', '~> 1.4.0'
-gem 'debt_free_day_calculator', '~> 3.0.0'
+gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.8.0'
 gem 'decision_trees', '~> 2.2.1'
 gem 'feedback', '~> 0.5.1'
 #### DO NOT bump mortgage_calculator beyond 3.4 because until TP 9827 is ready for deployment
 gem 'mortgage_calculator', '~> 3.4.0'
+# gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator', branch: '10241_Update-JQuery'
 ####
-gem 'pacs', '3.4.0'
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs', branch: '10242-pacs-update-jquery' #'3.4.0'
 gem 'payday_loans_intervention', '~> 1.8.0'
-gem 'pensions_calculator', '~> 2.1.0'
+gem 'pensions_calculator', '~> 2.2.0'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.0.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '4.0.0'
-gem 'wpcc', '2.2.0'
+gem 'wpcc', '2.3.0'
 
 group :assets do
   gem 'autoprefixer-rails'

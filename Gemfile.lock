@@ -96,6 +96,17 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/dough
+  revision: 5942546db47757179009f61e25c916ce68d358fe
+  branch: 9755_PopupTip-position-fix
+  specs:
+    dough-ruby (5.36.1)
+      activemodel
+      activesupport
+      rails (>= 3.2, <= 5.0.6)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -392,11 +403,6 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.36.0)
-      activemodel
-      activesupport
-      rails (>= 3.2, <= 5.0.6)
-      sass-rails
     dragonfly (1.2.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -893,7 +899,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.36.0)
+  dough-ruby!
   draper (< 3)
   ejs
   email_spec (< 2)

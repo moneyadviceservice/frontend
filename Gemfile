@@ -55,7 +55,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.36.0'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough', branch: '9755_PopupTip-position-fix'
 gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
@@ -83,7 +83,7 @@ gem 'feedback', '~> 0.5.1'
 # gem 'mortgage_calculator', '~> 3.4.0'
 gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator', branch: '10241_Update-JQuery'
 ####
-gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs', branch: '10242-pacs-update-jquery' 
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs', branch: '10242-pacs-update-jquery'
 gem 'payday_loans_intervention', '~> 1.8.0'
 # gem 'pensions_calculator', '~> 2.1.0'
 gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: '10244_jquery-upgrade'

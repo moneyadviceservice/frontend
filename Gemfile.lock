@@ -43,11 +43,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/car_cost_tool
-  revision: 88b6dc7c08dbc1c091bcd07ea621fdfeb2f4c9e1
+  revision: 2b73982c601e0ac515c12c716380e07e0d126e5b
   branch: 10233_update-jquery
   specs:
     car_cost_tool (1.5.0)
-      dough-ruby (~> 5.29)
+      dough-ruby (~> 5.36)
       nokogiri
       rails (>= 4, < 5)
       rest-client
@@ -78,15 +78,14 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator
-  revision: d032510c87d3eaf7acba88c6704a02812f5facd4
-  ref: d032510
+  revision: a6adac83c6c5dff7d31b4f2412935e93d6976640
   branch: 10237_update-jquery
   specs:
     debt_free_day_calculator (3.1.0)
       autoprefixer-rails (< 9)
       bigdecimal (~> 1.3.0)
       debt_finance_calculator (~> 1.1.0)
-      dough-ruby (~> 5.0)
+      dough-ruby (~> 5.36)
       draper (< 3)
       email_validator (~> 1.4.0)
       i18n-js (= 3.0.0.mas)
@@ -122,10 +121,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: 82771b59a7fba223dde2e0169d5fa9f49426eb0a
+  revision: 38de56e73bde85b9242ffc16ba56bf61c84f94ee
   branch: 10242-pacs-update-jquery
   specs:
-    pacs (3.4.0)
+    pacs (3.5.0)
+      dough-ruby (~> 5.36.0)
       dry-struct
       dry-struct-setters
       dry-types
@@ -920,11 +920,11 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs (= 3.4.0)!
+  pacs!
   payday_loans_intervention (~> 1.8.0)
   pensions_calculator!
   poltergeist
-  postcode_anywhere-email_validation
+  postcode_anywhere-email_validation (~> 0.1.0)
   pry-byebug
   pry-rails
   pry-rescue

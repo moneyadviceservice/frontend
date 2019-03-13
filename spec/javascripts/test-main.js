@@ -9,8 +9,9 @@ require.config({
     i18nTokens: 'app/assets/javascripts/translations/en',
 
     // External dependancies
-    jquery: 'vendor/assets/bower_components/jquery/dist/jquery',
+    jquerySrc: 'vendor/assets/bower_components/jquery/dist/jquery',
     jquerymigrate: 'vendor/assets/bower_components/jquery-migrate/jquery-migrate',
+    jquery: 'app/assets/javascripts/components/JQueryMigrateWrapper',
     waypoints: 'vendor/assets/bower_components/jquery-waypoints/waypoints',
     ujs: 'vendor/assets/bower_components/jquery-ujs/src/rails',
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',
@@ -50,6 +51,8 @@ require.config({
     modernizr: 'spec/javascripts/lib/modernizr'
   },
   shim: {
+    'jquerymigrate': ['jquerySrc'],
+    'jquery': ['jquerymigrate'],
     'ujs': ['jquery'],
     'typeahead': ['jquery'],
     'modernizr': {

@@ -16,13 +16,13 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 6d58e6d1a3a07e34d8352e7416f008779f58a799
-  ref: 6d58e6d
+  revision: 35528ea993a9ea7144ce64c63c21120cc636c1e1
+  ref: 35528ea
   branch: 9827/how-ftb-calculated
   specs:
     mortgage_calculator (3.5.1)
       angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.0)
+      dough-ruby (~> 5.35.0)
       jquery-rails
       mas-fonts
       modernizr-rails

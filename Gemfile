@@ -78,7 +78,7 @@ gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 3.4.0'
 # gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator', branch: '10241_Update-JQuery'
 ####
-gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs', branch: '10242-pacs-update-jquery' #'3.4.0'
+gem 'pacs', '3.5.0'
 gem 'payday_loans_intervention', '~> 1.8.0'
 gem 'pensions_calculator', '~> 2.2.0'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'

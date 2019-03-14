@@ -24,24 +24,6 @@ GIT
       sass
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/pacs
-  revision: 40e148b5d48647861147538c9ae0b874a2b3cb3f
-  branch: 10242-pacs-update-jquery
-  specs:
-    pacs (3.5.0)
-      dough-ruby (~> 5.36)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -529,6 +511,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (3.5.0)
+      dough-ruby (~> 5.36)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -875,7 +869,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.5)
   nunes
   opening_hours
-  pacs!
+  pacs (= 3.5.0)
   payday_loans_intervention (~> 1.8.0)
   pensions_calculator (~> 2.2.0)
   poltergeist

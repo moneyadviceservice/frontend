@@ -26,11 +26,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: 38de56e73bde85b9242ffc16ba56bf61c84f94ee
+  revision: 40e148b5d48647861147538c9ae0b874a2b3cb3f
   branch: 10242-pacs-update-jquery
   specs:
     pacs (3.5.0)
-      dough-ruby (~> 5.36.0)
+      dough-ruby (~> 5.36)
       dry-struct
       dry-struct-setters
       dry-types

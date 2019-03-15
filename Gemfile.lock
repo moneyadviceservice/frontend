@@ -14,16 +14,6 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
-GIT
-  remote: git@github.com:moneyadviceservice/mas-assets
-  revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
-  specs:
-    mas-assets (1.2.0)
-      compass-rails
-      google-analytics-rails
-      sass
-      sass-rails
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -159,7 +149,6 @@ GEM
       railties (>= 3.1)
       sprockets
     chronic (0.10.2)
-    chunky_png (1.3.10)
     cliver (0.3.2)
     cocoon (1.2.12)
     codeclimate-test-reporter (0.6.0)
@@ -172,12 +161,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    compass (0.12.7)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.2.19)
-    compass-rails (2.0.0)
-      compass (>= 0.12.2)
     concurrent-ruby (1.1.5)
     cost_calculator_builder (1.0.0)
       bowndler
@@ -378,7 +361,6 @@ GEM
       formtastic (~> 2.2)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
-    fssm (0.2.10)
     geokit (1.13.1)
     geokit-rails (2.3.1)
       geokit (~> 1.5)
@@ -386,7 +368,6 @@ GEM
     gherkin (5.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    google-analytics-rails (1.1.1)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -857,7 +838,6 @@ DEPENDENCIES
   link_header
   mail
   mailjet
-  mas-assets!
   mas-cms-client (= 1.20.0)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 3.6.2)

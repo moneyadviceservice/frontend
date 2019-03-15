@@ -5,6 +5,7 @@
 //= depend_on_asset jquery-waypoints/waypoints
 //= depend_on_asset jquery-ujs/src/rails
 //= depend_on_asset typeahead.jquery
+//= depend_on_asset jquery-migrate/jquery-migrate
 
 //= depend_on_asset modules/globals
 //= depend_on_asset modules/common
@@ -47,7 +48,9 @@
 
       # External dependancies
       eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
-      jquery: requirejs_path('jquery/dist/jquery'),
+      jquerySrc: requirejs_path('jquery/dist/jquery'),
+      jquerymigrate: requirejs_path('jquery-migrate/jquery-migrate'),
+      jquery: requirejs_path('components/JQueryMigrateWrapper'),
       jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
       rsvp: requirejs_path('rsvp/rsvp'),
       typeahead: requirejs_path('typeahead.jquery'),
@@ -78,6 +81,7 @@
       Breadcrumbs: requirejs_path('components/Breadcrumbs'),
 
       # Engines
+      budgetPlannerConfig: requirejs_path('budget_planner/require_config'),
       carCostToolConfig: requirejs_path('car_cost_tool/require_config'),
       costCalculatorBuilderConfig: requirejs_path('cost_calculator_builder/require_config'),
       pensionsCalculatorConfig: requirejs_path('pensions_calculator/require_config'),
@@ -91,8 +95,10 @@
       wpccConfig: requirejs_path('wpcc/require_config')
     },
     shim: {
+      jquerymigrate: ['jquerySrc'],
+      jquery: ['jquerymigrate'],
       typeahead: ['jquery'],
-      ujs: ['jquery'],
+      ujs: ['jquery']
     }
   }
 

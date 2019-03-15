@@ -10,6 +10,7 @@ require.config({
 
     // External dependancies
     jquery: 'vendor/assets/bower_components/jquery/dist/jquery',
+    jquerymigrate: 'vendor/assets/bower_components/jquery-migrate/jquery-migrate',
     waypoints: 'vendor/assets/bower_components/jquery-waypoints/waypoints',
     ujs: 'vendor/assets/bower_components/jquery-ujs/src/rails',
     eventsWithPromises: 'vendor/assets/bower_components/eventsWithPromises/src/eventsWithPromises',

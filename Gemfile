@@ -74,8 +74,7 @@ gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.8.0'
 gem 'decision_trees', '~> 2.2.1'
 gem 'feedback', '~> 0.5.1'
-#### DO NOT bump mortgage_calculator beyond 3.4 because until TP 9827 is ready for deployment
-gem 'mortgage_calculator', '~> 3.4.0'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'bump-dough-ruby-for-jquery'
 gem 'pacs', '3.5.0'
 gem 'payday_loans_intervention', '~> 1.8.0'
 gem 'pensions_calculator', '~> 2.2.0'
@@ -140,6 +139,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rack-livereload'
+  gem 'rb-readline'
   gem 'rspec-rails'
   gem 'rubocop'
 end

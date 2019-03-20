@@ -14,6 +14,46 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator.git
+  revision: 8a6cb2897d98418dcecb512576cc9f41e07ebeb0
+  ref: 8a6cb28
+  branch: nty-base-branch
+  specs:
+    pensions_calculator (2.3.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 2.1.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+GIT
+  remote: git@github.com:moneyadviceservice/rio.git
+  revision: 31c4213ed51f9386c667440b03f0d79e280d440d
+  ref: 31c4213
+  branch: nty-base-branch
+  specs:
+    rio (2.1.0)
+      bowndler
+      dough-ruby
+      pensions_calculator-calculations (~> 2.1.0)
+      rails (>= 4, < 5)
+
+GIT
+  remote: git@github.com:moneyadviceservice/wpcc.git
+  revision: 6c737c46c0c6f3fe2f13d84594ca16182229a8d7
+  ref: 6c737c4
+  branch: nty-base-branch
+  specs:
+    wpcc (2.3.0)
+      dough-ruby (~> 5.36)
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -511,16 +551,7 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.3.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 2.0.1)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
-    pensions_calculator-calculations (2.0.1)
+    pensions_calculator-calculations (2.1.0)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -603,11 +634,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rio (2.0.0)
-      bowndler
-      dough-ruby
-      pensions_calculator-calculations (~> 2.0.1)
-      rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -771,11 +797,6 @@ GEM
     websocket-extensions (0.1.3)
     whenever (0.10.0)
       chronic (>= 0.6.3)
-    wpcc (2.3.0)
-      dough-ruby (~> 5.36)
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
     xpath (3.0.0)
       nokogiri (~> 1.8)
 
@@ -848,7 +869,7 @@ DEPENDENCIES
   opening_hours
   pacs (= 3.5.3)
   payday_loans_intervention (~> 1.8.0)
-  pensions_calculator (~> 2.3.0)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation (~> 0.1.0)
   pry-byebug
@@ -861,7 +882,7 @@ DEPENDENCIES
   rb-readline
   recaptcha
   redcarpet
-  rio (~> 2.0.0)!
+  rio!
   rouge
   rspec-html-matchers
   rspec-rails
@@ -888,7 +909,7 @@ DEPENDENCIES
   vcr
   webmock
   whenever
-  wpcc (= 2.3.0)
+  wpcc!
 
 BUNDLED WITH
    1.17.3

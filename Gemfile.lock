@@ -15,6 +15,27 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: dba604ab4317c436bfca396fcb598c78e694ced7
+  branch: 10287/city-links
+  specs:
+    debt_advice_locator (3.3.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      validate_url (= 1.0.0)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -226,21 +247,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.2.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.4.0)
       bcrypt
       haml-rails
@@ -831,7 +837,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 3.2.0)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.4.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.8.0)

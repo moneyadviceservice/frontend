@@ -15,6 +15,17 @@ GIT
       uri_template (~> 0.7)
 
 GIT
+  remote: git@github.com:moneyadviceservice/cost_calculator_builder
+  revision: 4d4b47168047e28513e6c9c1bd00c3ba40a6f178
+  branch: 9756-jquery-upgrade
+  specs:
+    cost_calculator_builder (1.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/mas-assets
   revision: 1a2a449235eae7a589dbcf55c2107764a49fad5d
   specs:
@@ -181,11 +192,6 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     concurrent-ruby (1.1.5)
-    cost_calculator_builder (1.0.0)
-      bowndler
-      dough-ruby (~> 5.0)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
@@ -826,7 +832,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 1.0.0)
+  cost_calculator_builder!
   cream (= 2.1.7)
   csslint_ruby
   cucumber-rails

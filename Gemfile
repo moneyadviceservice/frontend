@@ -62,7 +62,7 @@ gem 'site_search', '0.3.0'
 # Tools
 gem 'action_plans', '~> 5.0.0'
 gem 'advice_plans', '~> 4.0.1'
-gem 'agreements', '~> 2.4.0'
+gem 'agreements', git: 'git@github.com:moneyadviceservice/agreements', branch: '10230-update-jquery'
 gem 'baby_cost_calculator', '~> 0.3.0'
 gem 'budget_planner', '~> 5.6.1'
 gem 'car_cost_tool', '~> 1.5'

@@ -112,8 +112,6 @@ GEM
       encryptor (~> 3.0.0)
     autoprefixer-rails (8.6.5)
       execjs
-    baby_cost_calculator (0.3.0)
-      rails (>= 4, < 5)
     backports (3.11.1)
     bcrypt (3.1.12)
     better_errors (2.4.0)
@@ -812,7 +810,6 @@ DEPENDENCIES
   algoliasearch
   attr_encrypted (~> 3.1)
   autoprefixer-rails
-  baby_cost_calculator (~> 0.3.0)
   better_errors
   binding_of_caller
   blind_index (= 0.2.0)

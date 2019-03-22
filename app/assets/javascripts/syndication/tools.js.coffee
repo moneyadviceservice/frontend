@@ -131,16 +131,6 @@
       include_ga: false
       title: "Workplace pensions calculator"
 
-    baby:
-      en:
-        path: "baby_cost_calculator_syndicated/index.html"
-      cy:
-        path: "baby_cost_calculator_syndicated/index.html?lang=cy"
-      width: "620px"
-      height: "1030px"
-      include_ga: false
-      title: "Baby cost calculator"
-
     universal_credit_timeline:
       en:
         path: "universal_credit_timeline/index.html"

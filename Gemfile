@@ -71,7 +71,7 @@ gem 'debt_advice_locator', '~> 3.3.0'
 gem 'debt_and_mental_health',
   git: 'git@github.com:moneyadviceservice/debt_and_mental_health.git',
   branch: '10227-env-var-pwd',
-  ref: 'e8a1f0c55' #'~> 1.4.0'
+  ref: 'a8663800c1b'
 gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.8.0'
 gem 'decision_trees', '~> 2.2.1'

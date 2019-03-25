@@ -1,4 +1,4 @@
-FROM masdevtestregistry.azurecr.io/jenkins/ruby2.5.3:latest
+FROM masdevtestregistry.azurecr.io/jenkins/sfgb-bundle-2.5.5:latest
 MAINTAINER development.team@moneyadviceservice.org.uk
 
 RUN apt-get -qq update > /dev/null && \

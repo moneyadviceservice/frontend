@@ -1,0 +1,47 @@
+#!/bin/bash -l
+
+set -e
+
+if [ -f /.dockerenv ]; then
+    source ~/.bashrc
+    rvm use default
+    mv config/database{-jenkins,}.yml
+    bundle config github.com $GITHUB_USER:$GITHUB_PASS
+fi
+
+export RAILS_ENV=test
+export BUNDLE_WITHOUT=development:build
+
+function run {
+    declare -a tests_command=("$@")
+
+    echo ''
+    echo "=== Running \`${tests_command[*]}\`"
+    if ! ${tests_command[*]}; then
+        echo "=== These tests failed."
+        exit 1
+    fi
+}
+
+function info {
+    declare -a info_command=("$@")
+    echo ''
+    echo "=== Running for informational purposes \`${info_command[*]}\`"
+    if ! ${info_command[*]}; then
+        echo "== This test has errors and/or warnings. Please review results"
+    fi
+}
+
+run rm -rf vendor/cache .bundle/config
+run bundle install --quiet
+run bower cache clean --allow-root
+run bowndler update --production --config.interactive=false --allow-root
+
+run rake karma:install karma:run_once RAILS_ENV=development 
+run bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
+run bundle exec cucumber
+info bundle exec brakeman -q --no-pager --ensure-latest
+
+if [ -f /.dockerenv ]; then
+  run bundle exec danger --dangerfile=jenkins/Dangerfile --verbose
+fi

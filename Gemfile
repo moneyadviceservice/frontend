@@ -15,7 +15,7 @@ gem 'activerecord-session_store'
 # deprecation warnings in Ruby's OpenSSL module. This could feasibly be
 # replaced by an implementation within this repo, as all the gem is doing is
 # wrapping OpenSSL.
-gem 'aes', git: 'git@github.com:jalerson/aes.git', ref: '8366dc165'
+gem 'aes', git: 'http://github.com/jalerson/aes', ref: '8366dc165'
 gem 'algoliasearch'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
@@ -53,10 +53,10 @@ gem 'whenever', require: false
 # MAS Gems
 # ========
 # Dependencies
-gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
+gem 'adal', git: 'https://github.com/moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
 gem 'dough-ruby', '~> 5.36'
-gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
+gem 'mas-assets', git: 'https://github.com/moneyadviceservice/mas-assets'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
@@ -99,6 +99,9 @@ group :development do
 end
 
 group :test do
+  gem 'brakeman', require: false
+  gem 'danger', require: false
+  gem 'danger-rubocop', require: false
   gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
@@ -116,6 +119,7 @@ group :test do
   gem 'sqlite3'
   gem 'tidy-html5'
   gem 'timecop'
+  gem 'tzinfo-data'
   gem 'vcr'
   gem 'webmock'
 end

@@ -38,6 +38,13 @@ Install Bower
 ```
 npm install -g bower
 ```
+Bundle should be configured to use https rather than the tradtional git (ssh), as when using in containerised environment we should OAuth token rather than progegating ssh keys to docker containers.
+
+1. [Generate a github access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+2. Configure bundler (using the token generated in step 1)
+```sh
+bundle config github.com TOKEN
+```
 
 Make sure all dependencies are available to the application:
 

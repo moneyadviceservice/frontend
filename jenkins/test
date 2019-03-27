@@ -14,7 +14,6 @@ export BUNDLE_WITHOUT=development:build
 
 function run {
     declare -a tests_command=("$@")
-
     echo ''
     echo "=== Running \`${tests_command[*]}\`"
     if ! ${tests_command[*]}; then
@@ -34,14 +33,15 @@ function info {
 
 run rm -rf vendor/cache .bundle/config
 run bundle install --quiet
+run npm install --quiet
 run bower cache clean --allow-root
 run bowndler update --production --config.interactive=false --allow-root
-
-run rake karma:install karma:run_once RAILS_ENV=development 
+# Tests
+run ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js --single-run
 run bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
 run bundle exec cucumber
 info bundle exec brakeman -q --no-pager --ensure-latest
 
 if [ -f /.dockerenv ]; then
-  run bundle exec danger --dangerfile=jenkins/Dangerfile --verbose
+#  run bundle exec danger --dangerfile=jenkins/Dangerfile --verbose
 fi

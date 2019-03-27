@@ -100,13 +100,13 @@ end
 
 group :test do
   gem 'brakeman', require: false
-  gem 'danger', require: false
-  gem 'danger-rubocop', require: false
   gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'danger', require: false
+  gem 'danger-rubocop', require: false
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
   gem 'factory_bot'
   gem 'faker'

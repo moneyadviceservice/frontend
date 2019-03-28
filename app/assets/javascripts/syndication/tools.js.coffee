@@ -9,7 +9,7 @@
   linkHref: "https://www.moneyadviceservice.org.uk/"
   linkTarget: "_blank"
   logoSrc: "https://www.moneyadviceservice.org.uk/assets/logo_en.png"
-  logoStyles: "display: block; margin-bottom: 8px;"
+  logoStyles: "display: block; margin-bottom: 8px; width: 300px"
   logoAltText: "Money Advice Service"
 
   toolConfig:

@@ -28,14 +28,13 @@
           <% end %>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__sfgb-link">
-          <a class="footer-secondary__link" href="https://singlefinancialguidancebody.org.uk/" target="_blank">
-            <span class="footer-secondary__sfgb-text">
-              <span><%= t('footer.sfgb_part_of') %></span>
-              <span><strong><%= t('footer.sfgb_single_financial') %></strong></span>
-              <span><strong><%= t('footer.sfgb_guidance_body') %></strong></span>
+        <li class="footer-secondary__list-item footer-secondary__mps-link">
+          <a class="footer-secondary__link" href="https://http://moneyandpensionsservice.org.uk/" target="_blank">
+            <span class="footer-secondary__mps-text footer-secondary__mps-text--<%= locale %>">
+              <span><%= t('footer.mas') %></span>
+              <span><%= t('footer.mps_provided') %></span>
             </span>
-            <%= image_tag("sfgb-logo.png", class: 'sfgb-logo__img', alt: "#{t('footer.sfgb_single_financial')} #{t('footer.sfgb_guidance_body')} logo") %>
+            <%= image_tag("mps-logo-#{locale}.png", class: 'mps-logo__img', alt: "#{t('footer.mps')} logo") %>
             <span class="visually-hidden">opens in a new window</span>
           </a>
         </li>

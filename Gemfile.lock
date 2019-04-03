@@ -13,6 +13,18 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/rio.git
+  revision: cd2b365040ab5f3fdf708c663f1e87f2c616e92b
+  ref: cd2b365
+  branch: 10396_update-jquery-part2
+  specs:
+    rio (2.2.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      pensions_calculator-calculations (~> 2.1.0)
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -604,13 +616,8 @@ GEM
       railties (>= 4.2.0, < 6.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
-    rio (2.1.0)
-      bowndler
-      dough-ruby
-      pensions_calculator-calculations (~> 2.1.0)
-      rails (>= 4, < 5)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -864,8 +871,7 @@ DEPENDENCIES
   rb-readline
   recaptcha
   redcarpet
-  rest-client (~> 2.0)
-  rio (~> 2.1.0)!
+  rio!
   rouge
   rspec-html-matchers
   rspec-rails

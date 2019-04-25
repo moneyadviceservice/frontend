@@ -13,6 +13,21 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator
+  revision: 283067178e951a450ff997fb6e2775fef6346217
+  branch: 10458_DOB-selector
+  specs:
+    pensions_calculator (2.4.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 2.1.0)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -514,15 +529,6 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.4.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 2.1.0)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
     pensions_calculator-calculations (2.1.0)
       activesupport
     poltergeist (1.17.0)
@@ -851,7 +857,7 @@ DEPENDENCIES
   opening_hours
   pacs (= 3.5.3)
   payday_loans_intervention (~> 1.8.0)
-  pensions_calculator (~> 2.4.0)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug

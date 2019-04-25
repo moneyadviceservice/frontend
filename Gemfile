@@ -14,9 +14,9 @@ gem 'activerecord-session_store'
 
 ##############################################################
 # The aes gem is no longer supported, so point to the repo that
-# resolves deprecation warnings in Ruby's OpenSSL module. 
+# resolves deprecation warnings in Ruby's OpenSSL module.
 #
-# This could feasibly be replaced by an implementation within 
+# This could feasibly be replaced by an implementation within
 # this repo, as all the gem is doing is wrapping OpenSSL.
 ##############################################################
 gem 'aes', git: 'git@github.com:chicks/aes.git'
@@ -80,7 +80,8 @@ gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 3.8.0'
 gem 'pacs', '3.5.3'
 gem 'payday_loans_intervention', '~> 1.8.0'
-gem 'pensions_calculator', '~> 2.4.0'
+# gem 'pensions_calculator', '~> 2.4.0'
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator', branch: '10458_DOB-selector'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.1.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'

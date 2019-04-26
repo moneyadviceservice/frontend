@@ -13,6 +13,38 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: 3414994f6029698d3b56580b35e0af12820b3613
+  branch: 10495-Text-Changes
+  specs:
+    debt_advice_locator (3.3.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      validate_url (= 1.0.0)
+
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: a849849e448046db07646b1d3f0e89912af49901
+  branch: 10495-Popup-Span
+  specs:
+    dough-ruby (5.36.2)
+      activemodel
+      activesupport
+      rails (>= 3.2, < 5.1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -43,9 +75,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.12.0)
-      activemodel (>= 3.0.2, < 6.0)
-      activesupport (>= 3.0.2, < 6.0)
+    active_attr (0.13.1)
+      activemodel (>= 3.0.2, < 6.1)
+      activesupport (>= 3.0.2, < 6.1)
     active_model_serializers (0.9.7)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
@@ -206,21 +238,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.3.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.5.0)
       bcrypt
       haml-rails
@@ -286,11 +303,6 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.36.1)
-      activemodel
-      activesupport
-      rails (>= 3.2, <= 5.0.6)
-      sass-rails
     dragonfly (1.2.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -813,7 +825,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 3.3.0)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.5.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.8.0)
@@ -823,7 +835,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.36)
+  dough-ruby!
   draper (< 3)
   ejs
   email_spec (< 2)

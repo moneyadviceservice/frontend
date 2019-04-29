@@ -60,7 +60,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.36'
+gem 'dough-ruby', '~> 5.37'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
@@ -71,7 +71,7 @@ gem 'budget_planner', '~> 5.6.1'
 gem 'car_cost_tool', '~> 1.5'
 gem 'cost_calculator_builder', '~> 1.0.0'
 gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_advice_locator', '~> 3.3.0'
+gem 'debt_advice_locator', '~> 3.4.0'
 gem 'debt_and_mental_health', '~> 1.5.0'
 gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.8.0'

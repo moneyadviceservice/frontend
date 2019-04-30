@@ -71,6 +71,17 @@ GIT
       spreadsheet
 
 GIT
+  remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
+  revision: 926beb48666a2c6f156297280c26c755e4ea3cf9
+  branch: 9756-jquery-upgrade
+  specs:
+    cost_calculator_builder (1.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: cd2b365040ab5f3fdf708c663f1e87f2c616e92b
   ref: cd2b365
@@ -209,11 +220,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-    cost_calculator_builder (1.0.0)
-      bowndler
-      dough-ruby (~> 5.0)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
@@ -840,7 +846,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 1.0.0)
+  cost_calculator_builder!
   cream (= 2.1.7)
   csslint_ruby
   cucumber-rails

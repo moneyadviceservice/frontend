@@ -69,7 +69,7 @@ gem 'advice_plans', git: 'git@github.com:moneyadviceservice/advice_plans.git', b
 gem 'agreements', git: 'git@github.com:moneyadviceservice/agreements.git', branch: '10230-update-jquery'
 gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: '10232_Update-JQuery'
 gem 'car_cost_tool', '~> 1.5'
-gem 'cost_calculator_builder', '~> 1.0.0'
+gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: '9756-jquery-upgrade'
 gem 'cutback_calculator', '~> 0.13.0'
 gem 'debt_advice_locator', '~> 3.4.0'
 gem 'debt_and_mental_health', '~> 1.5.0'

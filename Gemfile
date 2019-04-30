@@ -60,14 +60,14 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.37'
+gem 'dough-ruby', '~> 5.36'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
 gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: '10228_Update-JQuery'
 gem 'advice_plans', git: 'git@github.com:moneyadviceservice/advice_plans.git', branch: '10229-jquery-upgrade'
 gem 'agreements', git: 'git@github.com:moneyadviceservice/agreements.git', branch: '10230-update-jquery'
-gem 'budget_planner', '~> 5.6.1'
+gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: '10232_Update-JQuery'
 gem 'car_cost_tool', '~> 1.5'
 gem 'cost_calculator_builder', '~> 1.0.0'
 gem 'cutback_calculator', '~> 0.13.0'

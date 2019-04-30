@@ -85,7 +85,7 @@ gem 'quiz', git: 'git@github.com:moneyadviceservice/quiz.git', branch: '10245-up
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: '10396_update-jquery-part2', ref: 'cd2b365'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git' , branch: '10396_update-jquery-part2', ref: '99f3de8'
 gem 'timelines', '~> 1.5.0'
-gem 'universal_credit', '4.0.0'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git' , branch: '10249-jquery3'
 gem 'wpcc', '2.5.0'
 
 group :assets do

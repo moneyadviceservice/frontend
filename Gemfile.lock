@@ -110,6 +110,22 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/decision_trees.git
+  revision: 3a8f1f2283fcf295c5f5d8853cb424e1217dd1bc
+  branch: 10239-update-jquery
+  specs:
+    decision_trees (2.3.0)
+      dough-ruby (~> 5.36)
+      handlebars_assets (~> 0.13.0)
+      htmlentities
+      i18n-js (= 3.0.0.mas)
+      meta-tags
+      nokogiri
+      rails (>= 4, < 5)
+      sass-rails (~> 4.0.5)
+      sprockets-rails (~> 2.3.3)
+
+GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: cd2b365040ab5f3fdf708c663f1e87f2c616e92b
   ref: cd2b365
@@ -319,17 +335,6 @@ GEM
       roadie (< 3)
       sass-rails
     debug_inspector (0.0.3)
-    decision_trees (2.2.1)
-      dough-ruby (~> 5.0)
-      handlebars_assets (~> 0.13.0)
-      htmlentities
-      i18n-js (= 3.0.0.mas)
-      jquery-rails (~> 4.3.3)
-      meta-tags
-      nokogiri
-      rails (>= 4, < 5)
-      sass-rails (~> 4.0.5)
-      sprockets-rails (~> 2.3.3)
     delayed_job (4.1.4)
       activesupport (>= 3.0, < 5.2)
     delayed_job_active_record (4.1.2)
@@ -865,7 +870,7 @@ DEPENDENCIES
   debt_and_mental_health!
   debt_free_day_calculator (~> 3.1.0)
   debt_test!
-  decision_trees (~> 2.2.1)
+  decision_trees!
   delayed_job_active_record
   devise (~> 4.6.0)
   devise-encryptable

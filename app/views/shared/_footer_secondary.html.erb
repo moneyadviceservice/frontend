@@ -1,9 +1,9 @@
 <div class="l-footer-secondary t-footer-secondary">
-  <div class="footer-secondary--inner">
+  <div class="l-footer-secondary--inner">
     <div class="l-footer-secondary__list--left">
-      <ul class="footer-secondary__list">
+      <ul class="l-footer-secondary__list">
 
-        <li class="footer-secondary__list-item l-language-link">
+        <li class="l-footer-secondary__list-item  l-language-link">
           <% if content_for?(:alternate_link) %>
             <%= yield(:alternate_link) %>
           <% else %>
@@ -16,7 +16,7 @@
           <% end %>
         </li>
 
-        <li class="footer-secondary__list-item accessibility-feedback-link">
+        <li class="l-footer-secondary__list-item accessibility-feedback-link">
           <form target="_blank" class="accessin" id="AccessIN_form" action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
               <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
               <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
@@ -28,8 +28,8 @@
           <% end %>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__mps-link">
-          <a class="footer-secondary__link" href="https://moneyandpensionsservice.org.uk/" target="_blank">
+        <li class="l-footer-secondary__list-item footer-secondary__mps-link">
+          <a href="https://moneyandpensionsservice.org.uk/" target="_blank">
             <span class="footer-secondary__mps-text">
               <span><%= t('footer.mps_provided_1') %></span>
               <span><%= t('footer.mps_provided_2') %></span>
@@ -44,47 +44,47 @@
     </div>
 
     <div class="l-footer-secondary__list--right footer-secondary__list--right">
-      <ul class="footer-secondary__list footer-secondary__link-items">
+      <ul class="l-footer-secondary__list">
         <% unless hide_elements_irrelevant_for_third_parties? %>
           <% if user_signed_in? %>
-            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__sign-out">
-              <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link footer-secondary__link', method: :delete %>
+            <li class="l-footer-secondary__list-item footer-secondary__sign-out">
+              <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>
             </li>
-            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__my-account">
-              <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link footer-secondary__link gtm-my-account-link' %>
+            <li class="l-footer-secondary__list-item footer-secondary__my-account">
+              <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link gtm-my-account-link' %>
             </li>
           <% else %>
-            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__sign-in">
-              <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link footer-secondary__link' %>
+            <li class="l-footer-secondary__list-item footer-secondary__sign-in">
+              <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link l-footer-secondary__link' %>
             </li>
-            <li class="footer-secondary__list-item footer-secondary__link-item footer-secondary__register">
-              <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link footer-secondary__link' %>
+            <li class="l-footer-secondary__list-item footer-secondary__register">
+              <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link l-footer-secondary__link' %>
             </li>
           <% end %>
         <% end %>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
+        <li class="l-footer-secondary__list-item">
           <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
-          <a class="footer-secondary__link" href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
+        <li class="l-footer-secondary__list-item">
+          <a href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
-          <a class="footer-secondary__link" href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
+        <li class="l-footer-secondary__list-item">
+          <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
-          <a class="footer-secondary__link" href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
+        <li class="l-footer-secondary__list-item">
+          <a href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
-          <a class="footer-secondary__link" href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
+        <li class="l-footer-secondary__list-item">
+          <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
         </li>
 
-        <li class="footer-secondary__list-item footer-secondary__link-item">
-          <a class="footer-secondary__link" href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
+        <li class="l-footer-secondary__list-item">
+          <a href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
         </li>
       </ul>
     </div>

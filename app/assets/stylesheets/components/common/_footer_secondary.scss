@@ -28,17 +28,3 @@
     text-decoration: underline;
   }
 }
-
-/* MPS TEXT AND LOGO */
-.footer-secondary__mps-text {
-  display: inline-block;
-  & > * {
-    display: block;
-  }
-  span {
-    line-height: 1rem;
-  }
-}
-.footer-secondary__mps-link {
-  margin-top: $baseline-unit*2;
-}

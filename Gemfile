@@ -79,7 +79,7 @@ gem 'decision_trees', git: 'git@github.com:moneyadviceservice/decision_trees.git
 gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 3.8.0'
 gem 'pacs', '3.5.3'
-gem 'payday_loans_intervention', '~> 1.8.0'
+gem 'payday_loans_intervention', git: 'git@github.com:moneyadviceservice/payday_loans_intervention.git', branch: '10243-jquery-3'
 gem 'pensions_calculator', '~> 2.5.0'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: '10396_update-jquery-part2', ref: 'cd2b365'

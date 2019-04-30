@@ -126,6 +126,19 @@ GIT
       sprockets-rails (~> 2.3.3)
 
 GIT
+  remote: git@github.com:moneyadviceservice/payday_loans_intervention.git
+  revision: 24e9b8093fb8c8d9f29de0014a69b64debd08095
+  branch: 10243-jquery-3
+  specs:
+    payday_loans_intervention (1.9.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      historyjs-rails
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/rio.git
   revision: cd2b365040ab5f3fdf708c663f1e87f2c616e92b
   ref: cd2b365
@@ -573,13 +586,6 @@ GEM
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
-    payday_loans_intervention (1.8.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      historyjs-rails
-      jquery-rails
-      rails (>= 4, < 5)
-      sass-rails
     pensions_calculator (2.5.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
@@ -903,7 +909,7 @@ DEPENDENCIES
   nunes
   opening_hours
   pacs (= 3.5.3)
-  payday_loans_intervention (~> 1.8.0)
+  payday_loans_intervention!
   pensions_calculator (~> 2.5.0)
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)

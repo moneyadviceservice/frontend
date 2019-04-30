@@ -11,6 +11,10 @@
   }
 }
 
+.footer-secondary__sign-in {
+  border-right: solid 1px;
+}
+
 .footer-secondary__opt-out {
   @extend %type-footer;
   padding: 0;
@@ -30,6 +34,9 @@
   display: inline-block;
   & > * {
     display: block;
+  }
+  span {
+    line-height: 1rem;
   }
 }
 .footer-secondary__mps-link {

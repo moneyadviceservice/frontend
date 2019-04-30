@@ -1,4 +1,5 @@
 <div class="l-footer-secondary t-footer-secondary">
+  <div class="l-constrained">
   <div class="l-footer-secondary--inner">
     <div class="l-footer-secondary__list--left">
       <ul class="l-footer-secondary__list">
@@ -18,9 +19,12 @@
 
         <li class="l-footer-secondary__list-item accessibility-feedback-link">
           <form target="_blank" class="accessin" id="AccessIN_form" action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
-              <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
-              <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
-             <button type="submit" class="accessin__submit"><span class="icon icon--accessibility"></span><%= t('footer_secondary.title') %></button>
+            <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
+            <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
+            <button type="submit" class="accessin__submit">
+              <span class="icon icon--accessibility"></span>
+              <%= t('footer_secondary.title') %>
+            </button>
           </form>
 
           <% content_for(:javascripts) do %>
@@ -88,6 +92,7 @@
         </li>
       </ul>
     </div>
+  </div>
   </div>
 </div>
 

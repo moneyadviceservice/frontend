@@ -12,10 +12,11 @@
 }
 
 .footer-primary__copyright {
-  margin-left: $baseline-unit*2;
   line-height: 1.2rem;
+
+  @include column(12);
+
   @include respond-to($mq-s) {
     @include body(16, 22);
-    margin-left: $baseline-unit*2;
   }
 }

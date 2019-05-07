@@ -1,112 +1,115 @@
 <div class="l-footer-secondary t-footer-secondary">
   <div class="l-constrained">
-  <div class="l-footer-secondary--inner">
-    <div class="l-footer-secondary__list--left">
-      <ul class="l-footer-secondary__list">
+    <div class="l-footer-secondary--inner">
+      <div class="l-footer-secondary__list--left">
+        <ul class="l-footer-secondary__list">
 
-        <li class="l-footer-secondary__list-item  l-language-link">
-          <% if content_for?(:alternate_link) %>
+          <li class="l-footer-secondary__list-item  l-language-link">
+            <% if content_for?(:alternate_link) %>
             <%= yield(:alternate_link) %>
-          <% else %>
+            <% else %>
             <% locals.each do |locale| %>
-              <%= link_to({ locale: locale }, { lang: locale, :class => "t-#{locale}-link" }) do %>
-                <span class="icon icon--globe"></span>
-                <%= t("locales.#{locale}") %>
-              <% end %>
+            <%= link_to({ locale: locale }, { lang: locale, :class => "t-#{locale}-link" }) do %>
+            <span class="icon icon--globe"></span>
+            <%= t("locales.#{locale}") %>
             <% end %>
-          <% end %>
-        </li>
+            <% end %>
+            <% end %>
+          </li>
 
-        <li class="l-footer-secondary__list-item accessibility-feedback-link">
-          <form target="_blank" class="accessin" id="AccessIN_form" action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
-            <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
-            <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
-            <button type="submit" class="accessin__submit">
-              <span class="icon icon--accessibility"></span>
-              <span><%= t('footer_secondary.title') %></span>
-            </button>
-          </form>
+          <li class="l-footer-secondary__list-item accessibility-feedback-link">
+            <form target="_blank" class="accessin" id="AccessIN_form"
+              action="https://accessin.org/app/accessin/index.php/welcome/index_AccessIN" method="post">
+              <input type="hidden" name="ai_url" id="AccessIN_url" value="unset">
+              <input type="hidden" name="ai_dom" id="AccessIN_dom" value="unset">
+              <button type="submit" class="accessin__submit">
+                <span class="icon icon--accessibility"></span>
+                <span><%= t('footer_secondary.title') %></span>
+              </button>
+            </form>
 
-          <% content_for(:javascripts) do %>
+            <% content_for(:javascripts) do %>
             <script type="text/javascript" src="https://accessin.org/app/accessin/resources/AccessIN.js"></script>
-          <% end %>
-        </li>
+            <% end %>
+          </li>
 
-        <li class="l-footer-secondary__list-item footer-secondary__mps-link">
-          <a href="https://moneyandpensionsservice.org.uk/" target="_blank">
-            <span class="footer-secondary__mps-text">
-              <span><%= t('footer.mps_provided_1') %></span>
-              <span><%= t('footer.mps_provided_2') %></span>
-              <span><%= t('footer.mps_provided_3') %></span>
-            </span>
-            <%= image_tag("mps-logo-#{locale}.png", class: 'mps-logo__img', alt: "#{t('footer.mps')} logo") %>
-            <span class="visually-hidden">opens in a new window</span>
-          </a>
-        </li>
+          <li class="l-footer-secondary__list-item footer-secondary__mps-link">
+            <a href="https://moneyandpensionsservice.org.uk/" target="_blank">
+              <span class="footer-secondary__mps-text">
+                <span><%= t('footer.mps_provided_1') %></span>
+                <span><%= t('footer.mps_provided_2') %></span>
+                <span><%= t('footer.mps_provided_3') %></span>
+              </span>
+              <%= image_tag("mps-logo-#{locale}.png", class: 'mps-logo__img', alt: "#{t('footer.mps')} logo") %>
+              <span class="visually-hidden">opens in a new window</span>
+            </a>
+          </li>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
 
-    <div class="l-footer-secondary__list--right">
-      <ul class="l-footer-secondary__list">
-        <% unless hide_elements_irrelevant_for_third_parties? %>
+      <div class="l-footer-secondary__list--right">
+        <ul class="l-footer-secondary__list">
+          <% unless hide_elements_irrelevant_for_third_parties? %>
           <% if user_signed_in? %>
-            <li class="l-footer-secondary__list-item footer-secondary__sign-out">
-              <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>
-            </li>
-            <li class="l-footer-secondary__list-item footer-secondary__my-account">
-              <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link gtm-my-account-link' %>
-            </li>
+          <li class="l-footer-secondary__list-item footer-secondary__sign-out">
+            <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>
+          </li>
+          <li class="l-footer-secondary__list-item footer-secondary__my-account">
+            <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link gtm-my-account-link' %>
+          </li>
           <% else %>
-            <li class="l-footer-secondary__list-item footer-secondary__sign-in">
-              <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link l-footer-secondary__link' %>
-            </li>
-            <li class="l-footer-secondary__list-item footer-secondary__register">
-              <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link l-footer-secondary__link' %>
-            </li>
+          <li class="l-footer-secondary__list-item footer-secondary__sign-in">
+            <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link l-footer-secondary__link' %>
+          </li>
+          <li class="l-footer-secondary__list-item footer-secondary__register">
+            <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link l-footer-secondary__link' %>
+          </li>
           <% end %>
-        <% end %>
+          <% end %>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
-        </li>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
+          </li>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
-        </li>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.terms_and_conditions_link') %>"><%= t('footer.terms_and_conditions') %></a>
+          </li>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
-        </li>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.privacy_statement_link') %>"><%= t('footer.privacy_statement') %></a>
+          </li>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
-        </li>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.accessibility_link') %>"><%= t('footer.accessibility') %></a>
+          </li>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
-        </li>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.cookie_guide_link') %>"><%= t('footer.cookie_guide') %></a>
+          </li>
 
-        <li class="l-footer-secondary__list-item">
-          <a href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
-        </li>
-      </ul>
+          <li class="l-footer-secondary__list-item">
+            <a href="<%= t('footer.site_map_link') %>"><%= t('footer.site_map') %></a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 
 <% if cookies_not_accepted? %>
-  <% unless hide_elements_irrelevant_for_third_parties? %>
-    <div class="cookie-message">
-      <div class="l-constrained">
-        <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
-          <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %></p>
-          <button class="cookie-message__close-button">
-            <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span class="icon icon--close"></span>
-          </button>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
+<% unless hide_elements_irrelevant_for_third_parties? %>
+<div class="cookie-message">
+  <div class="l-constrained">
+    <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+    <p class="cookie-message__content"><%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %>
+    </p>
+    <button class="cookie-message__close-button">
+      <span class="visually-hidden"><%= t('footer.cookie_message.close_button') %></span><span
+        class="icon icon--close"></span>
+    </button>
+    <% end %>
+  </div>
+</div>
+<% end %>
 <% end %>

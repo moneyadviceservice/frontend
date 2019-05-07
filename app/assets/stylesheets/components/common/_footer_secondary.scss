@@ -2,83 +2,12 @@
 //
 // Styleguide Secondary Footer
 
-.footer-secondary__list {
-  @extend .unstyled-list;
-  margin: $baseline-unit*2 0;
-}
-
-.footer-secondary__list-item {
-  margin: 0;
-  vertical-align: middle;
-
-  @include respond-to($mq-s) {
-    @include inline-block;
-    margin-right: $baseline-unit*3;
-
-    &:last-child {
-      margin-right: 0;
+.l-footer-secondary {
+  .l-language-link {
+    @include respond-to($mq-l) {
+      display: none;
     }
   }
-}
-
-.footer-secondary__link,
-.footer-secondary__list-item > a {
-  @extend %font-body;
-  @include body(14, 18);
-  @extend %link-nav-primary;
-
-  &:focus {
-    @include focus-outline;
-  }
-
-  line-height: 1;
-
-  .cy-theme & {
-    @include body(13, 18);
-  }
-
-  & .icon--globe {
-    position: relative;
-    top: 4px;
-    margin-right: 4px;
-  }
-}
-
-.footer-secondary__list-item > a:focus {
-  color: $color-focus-fg;
-}
-
-.footer-secondary__link-items {
-  @include clearfix();
-  @include respond-to($mq-l) {
-    float: right;
-  }
-}
-
-.footer-secondary__link-item {
-  padding-right: $baseline-unit;
-  margin-right: $baseline-unit;
-  border-right: solid 1px;
-  float: left;
-  line-height: 1rem;
-  margin-top: $baseline-unit;
-  margin-bottom: $baseline-unit;
-
-  @include respond-to($mq-s) {
-    padding-right: $baseline-unit*3;
-    margin-right: $baseline-unit*3;
-
-    &:nth-child(n+2) {
-      padding-right: 0;
-      border-right: none;
-    }
-  }
-}
-
-.footer-secondary__link-item:last-child {
-  padding-right: 0;
-  margin-right: 0;
-  border-right: none;
 }
 
 .footer-secondary__sign-out,
@@ -88,6 +17,10 @@
   @include respond-to($mq-xl) {
     display: none;
   }
+}
+
+.footer-secondary__sign-in {
+  border-right: solid 1px;
 }
 
 .footer-secondary__opt-out {
@@ -102,37 +35,4 @@
     outline: none;
     text-decoration: underline;
   }
-}
-
-.footer-secondary__mps-text {
-  display: inline-block;
-  & > * {
-    display: block;
-  }
-}
-
-.footer-secondary__mps-link {
-  margin-top: $baseline-unit*2;
-}
-
-.accessibility-feedback-link .icon--accessibility {
-  position: relative;
-  top: 2px;
-  margin-right: 4px;
-}
-
-.footer-secondary--inner {
-  @include column(12);
-  @include respond-to($mq-l) {
-    display: -ms-flex;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-.footer-secondary__list--right {
-  max-width: 50%;
 }

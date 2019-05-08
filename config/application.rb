@@ -44,5 +44,9 @@ module Frontend
     end
 
     config.exceptions_app = self.routes
+
+    # Explicitly declare the app root so that Devise 4.6.x correctly handles
+    # authentication redirects
+    config.relative_url_root = '/'
   end
 end

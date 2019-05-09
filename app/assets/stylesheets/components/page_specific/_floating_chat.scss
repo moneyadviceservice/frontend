@@ -1,13 +1,9 @@
-.chat-box__container {
+.chat-box__container,
+.chat-popup__container {
   background-color: $color-white;
   position: fixed;
-  top:30%;
-  left: 0;
-  padding: $baseline-unit*3;
+  padding: $baseline-unit*2;
   z-index:9999;
-  border-radius: 0 4px 4px 0;
-  border: 2px solid $color-green-primary;
-  border-left-style: none;
   -webkit-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
   -moz-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
   box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
@@ -20,24 +16,46 @@
     background-color: $color-white;
   }
 
-  @include respond-to($mq-xs) {
-    display: none;
+  .chat-box__heading {
+    color: $color-heading-extra-small;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
   }
+  
+  .chat-box__icon {
+    margin-left: -35px;	
+  }
+  
+}
 
+.chat-box__container {
+  top:30%;
+  left: 0;
+  border: 2px solid $color-green-primary;
+  border-radius: 0 4px 4px 0;
+  border-left-style: none;
+  display: none;
+  // min-width 960
   @include respond-to($mq-l) {
     display: block;
   }
 }
 
-.chat-box__heading {
-  color: $color-heading-extra-small;
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
+.chat-popup__container {
+  bottom: 2%;
+  right: 2%;
+  border-radius: 4px;
+  display: block;
+  // min-width 960
+  @include respond-to($mq-l) {
+    display: none;
+  }
 
-.chat-box__icon {
-  margin-left: -35px;	
+  .icon--web-chat {
+    margin: 0;
+    background-position: 88.544% 46.224%;
+  }
 }
 
 .chat-box__container--hidden {

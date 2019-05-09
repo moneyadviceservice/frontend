@@ -119,6 +119,12 @@
 </a>
 <% end %>
 
+<a href="#" aria-hidden="true" id="js-chat-popup-mobile" class="chat-popup__container">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
+    </svg>
+</a>
+
 <%= content_for :javascripts do %>
 <% unless hide_contact_panels? %>
 <%= javascript_include_tag 'webchat.js' %>

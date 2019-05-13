@@ -52,6 +52,10 @@
   @include respond-to($mq-l) {
     display: none;
   }
+  
+  .no-js & {
+    display: none;
+  }
 
   &:hover {
     transform: translateY(-3px);
@@ -65,10 +69,6 @@
     width: 60px;
     height: 50px;
   }
-}
-
-.no-js .chat-popup__container {
-  display: none;
 }
 
 .chat-box__container--hidden {

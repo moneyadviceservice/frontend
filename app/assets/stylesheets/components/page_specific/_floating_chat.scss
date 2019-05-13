@@ -42,17 +42,21 @@
 }
 
 .chat-popup__container {
-  bottom: 2%;
-  right: 2%;
+  bottom: $baseline-unit*2;
+  right: $default-gutter*2;
   padding: $baseline-unit*2 $baseline-unit*2 $baseline-unit;
   border-radius: 4px;
   display: block;
   transition: all 0.4s;
+  // min-width 479
+  @include respond-to($mq-xs-max) {
+    right: $default-gutter;
+  }
   // min-width 960
   @include respond-to($mq-l) {
     display: none;
   }
-  
+
   .no-js & {
     display: none;
   }

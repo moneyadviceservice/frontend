@@ -67,6 +67,10 @@
   }
 }
 
+.no-js .chat-popup__container {
+  display: none;
+}
+
 .chat-box__container--hidden {
   display: none;
 }

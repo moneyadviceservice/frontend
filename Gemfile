@@ -80,7 +80,14 @@ gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 3.8.0'
 gem 'pacs', '3.5.3'
 gem 'payday_loans_intervention', '~> 1.8.0'
-gem 'pensions_calculator', '~> 2.5.0'
+gem 'pensions_calculator',
+    git: 'git@github.com:moneyadviceservice/pensions_calculator.git',
+    branch: 'ms/10463-display-alert-when-pension-income-is-estimated',
+    ref: '34b48aad1d'
+gem 'pensions_calculator-calculations',
+    git: 'git@github.com:moneyadviceservice/pensions_calculator-calculations.git',
+    branch: 'ms/10463-cover-mortality-rate-not-found-as-possible-flow',
+    ref: '6c29200'
 gem 'quiz', '~> 1.3.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.1.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'

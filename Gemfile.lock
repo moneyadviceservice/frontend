@@ -13,6 +13,30 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator-calculations.git
+  revision: 6c292009604820042de9de3d713c12dd8d67b604
+  ref: 6c29200
+  branch: ms/10463-cover-mortality-rate-not-found-as-possible-flow
+  specs:
+    pensions_calculator-calculations (2.1.0)
+      activesupport
+
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator.git
+  revision: 34b48aad1d50e8eae8504a6071b6d39eb7df783c
+  ref: 34b48aad1d
+  branch: ms/10463-display-alert-when-pension-income-is-estimated
+  specs:
+    pensions_calculator (2.4.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -514,17 +538,6 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.5.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 2.1.0)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
-    pensions_calculator-calculations (2.1.0)
-      activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -851,7 +864,8 @@ DEPENDENCIES
   opening_hours
   pacs (= 3.5.3)
   payday_loans_intervention (~> 1.8.0)
-  pensions_calculator (~> 2.5.0)
+  pensions_calculator!
+  pensions_calculator-calculations!
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug

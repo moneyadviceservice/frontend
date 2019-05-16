@@ -2,7 +2,7 @@
 .chat-popup__container {
   background-color: $color-white;
   position: fixed;
-  z-index:9999;
+  z-index:99;
   -webkit-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
   -moz-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
   box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
@@ -61,6 +61,10 @@
     display: none;
   }
 
+  .no-svg & {
+    padding: $baseline-unit*2;
+  }
+
   &:hover {
     transform: translateY(-3px);
   }
@@ -69,9 +73,21 @@
     bottom: 55px;
   }
 
-  & > svg {
-    width: 60px;
-    height: 50px;
+  svg.icon-svg--web-chat,
+  span.icon  {
+    width: 55px;
+    height: 45px;
+  }
+
+  span.icon {
+    margin: 0;
+    background-position: 75.696% 68.22%;
+    background-size: 600px;
+  }
+
+  .svg & span.icon,
+  .no-svg & svg.icon-svg--web-chat {
+    display: none;
   }
 }
 

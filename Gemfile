@@ -60,7 +60,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.7'
-gem 'dough-ruby', '~> 5.37'
+gem 'dough-ruby', '~> 5.38'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
@@ -86,7 +86,7 @@ gem 'rio', '~> 2.1.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '1.9.0'
 gem 'timelines', '~> 1.7.0'
 gem 'universal_credit', '4.0.0'
-gem 'wpcc', '2.7.0'
+gem 'wpcc', '2.8.0'
 
 group :assets do
   gem 'autoprefixer-rails'

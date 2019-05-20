@@ -13,6 +13,17 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: 0d13334b89b13603d0776d0c1ecd1cb989e6598b
+  branch: 10483-Whatsapp-Webchat-Mobile-Interaction
+  specs:
+    dough-ruby (5.37.0)
+      activemodel
+      activesupport
+      rails (>= 3.2, < 5.1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/

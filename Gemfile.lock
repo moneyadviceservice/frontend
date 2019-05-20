@@ -13,6 +13,17 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: 0d13334b89b13603d0776d0c1ecd1cb989e6598b
+  branch: 10483-Whatsapp-Webchat-Mobile-Interaction
+  specs:
+    dough-ruby (5.37.0)
+      activemodel
+      activesupport
+      rails (>= 3.2, < 5.1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -286,11 +297,6 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.37.0)
-      activemodel
-      activesupport
-      rails (>= 3.2, < 5.1.0)
-      sass-rails
     dragonfly (1.2.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -514,16 +520,16 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.5.0)
+    pensions_calculator (2.6.0)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
-      pensions_calculator-calculations (~> 2.1.0)
+      pensions_calculator-calculations (~> 3.0.0)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
-    pensions_calculator-calculations (2.1.0)
+    pensions_calculator-calculations (3.0.0)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -606,10 +612,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rio (2.1.0)
+    rio (2.1.1)
       bowndler
       dough-ruby
-      pensions_calculator-calculations (~> 2.1.0)
+      pensions_calculator-calculations (~> 3.0.0)
       rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
@@ -774,7 +780,7 @@ GEM
     websocket-extensions (0.1.3)
     whenever (0.10.0)
       chronic (>= 0.6.3)
-    wpcc (2.6.0)
+    wpcc (2.7.0)
       dough-ruby (~> 5.36)
       meta-tags
       modernizr-rails (~> 2.6.2)
@@ -823,7 +829,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.37)
+  dough-ruby!
   draper (< 3)
   ejs
   email_spec (< 2)
@@ -846,12 +852,12 @@ DEPENDENCIES
   mortgage_calculator (~> 3.8.0)
   mysql2 (= 0.4.9)
   newrelic_rpm
-  nokogiri (>= 1.8.5)
+  nokogiri (>= 1.10.3)
   nunes
   opening_hours
   pacs (= 3.5.3)
   payday_loans_intervention (~> 1.8.0)
-  pensions_calculator (~> 2.5.0)
+  pensions_calculator (~> 2.6.0)
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug
@@ -865,7 +871,7 @@ DEPENDENCIES
   recaptcha
   redcarpet
   rest-client (~> 2.0)
-  rio (~> 2.1.0)!
+  rio (~> 2.1.1)!
   rouge
   rspec-html-matchers
   rspec-rails
@@ -892,7 +898,7 @@ DEPENDENCIES
   vcr
   webmock
   whenever
-  wpcc (= 2.6.0)
+  wpcc (= 2.7.0)
 
 BUNDLED WITH
    1.17.3

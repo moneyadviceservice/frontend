@@ -119,6 +119,13 @@
 </a>
 <% end %>
 
+<a href="#" aria-hidden="true" class="chat-popup__container" data-dough-component="ChatPopup">
+    <span class="icon icon--web-chat"></span>
+    <svg class="icon-svg--web-chat">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
+    </svg>
+</a>
+
 <%= content_for :javascripts do %>
 <% unless hide_contact_panels? %>
 <%= javascript_include_tag 'webchat.js' %>

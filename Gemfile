@@ -64,7 +64,9 @@ gem 'dough-ruby', '~> 5.38'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
-gem 'action_plans', '~> 5.0.0'
+gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git',
+                    branch: 'ms/10502-update-maximum-statutory-redundancy-pay-cap',
+                    ref: '2f90663bba42f23f213b96db9a0898d6e349ec2b'
 gem 'advice_plans', '~> 4.0.1'
 gem 'agreements', '~> 2.4.0'
 gem 'budget_planner', '~> 5.6.1'

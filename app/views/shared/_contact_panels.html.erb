@@ -119,12 +119,54 @@
 </a>
 <% end %>
 
-<a href="#" aria-hidden="true" class="chat-popup__container" data-dough-component="ChatPopup">
+<div aria-hidden="true" class="mobile-webchat__container mobile-webchat--closed" data-dough-component="ChatPopup">
+  <button class="mobile-webchat__close">
+    <span>X</span>
+  </button>
+  <div class="mobile-webchat--icon">
     <span class="icon icon--web-chat"></span>
     <svg class="icon-svg--web-chat">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
     </svg>
-</a>
+  </div>
+  <div class="mobile-webchat__form">
+    <h4>What would you like to talk about?</h4>
+    <div class="mobile-webchat__form-select--container">
+      <select class="mobile-webchat__form-select">
+        <option value="debt_borrowing"><%= t('contact_panels.chat_popup.dropdown_options.debt_borrowing') %></option>
+        <option value="homes_mortgages"><%= t('contact_panels.chat_popup.dropdown_options.homes_mortgages') %></option>
+        <option value="budgeting_saving"><%= t('contact_panels.chat_popup.dropdown_options.budgeting_saving') %>
+        </option>
+        <option value="work_benefits"><%= t('contact_panels.chat_popup.dropdown_options.work_benefits') %></option>
+        <option value="pensions_retirement"><%= t('contact_panels.chat_popup.dropdown_options.pensions_retirement') %>
+        </option>
+        <option value="family_care"><%= t('contact_panels.chat_popup.dropdown_options.family_care') %></option>
+        <option value="cars_travel"><%= t('contact_panels.chat_popup.dropdown_options.cars_travel') %></option>
+        <option value="insurance"><%= t('contact_panels.chat_popup.dropdown_options.insurance') %></option>
+      </select>
+    </div>
+    <div class="mobile-webchat__form-button--container">
+      <button class="mobile-webchat__form-button--whatsapp">
+        <svg class="icon-svg--whatsapp">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
+        </svg>
+        <div class="form-button__text">
+          <span class="form-button__text-heading">Start</span>
+          <span class="form-button__text-service">WhatsApp</span>
+        </div>
+      </button>
+      <button class="mobile-webchat__form-button--webchat">
+        <svg class="icon-svg--web-chat">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
+        </svg>
+        <div class="form-button__text">
+          <span class="form-button__text-heading">Start</span>
+          <span class="form-button__text-service">Web Chat</span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
 <%= content_for :javascripts do %>
 <% unless hide_contact_panels? %>

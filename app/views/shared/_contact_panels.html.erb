@@ -188,19 +188,15 @@
   WEBCHAT_START '] %>';
   sWOImageLoaded = function () {
 
-    <
-    %
-    if chat_opening_hours.open ? % >
+    <% if chat_opening_hours.open? %>
 
       var chatCTA = document.getElementById('js-chat-cta'),
-        chatDescription = document.getElementById('js-chat-description'),
-        chatContent = document.getElementById('js-chat-content');
+      chatDescription = document.getElementById('js-chat-description'),
+      chatContent = document.getElementById('js-chat-content');
 
-    <
-    %
-    if show_floating_chat ? % >
-      var chatPopup = document.getElementById('js-chat-popup'); <
-    % end % >
+      <% if show_floating_chat? %>
+        var chatPopup = document.getElementById('js-chat-popup'); 
+      <% end %>
 
 
       if (sWOImage.width == 1) {
@@ -215,17 +211,13 @@
         chatCTA.appendChild(sWOChatElement);
         chatDescription.innerHTML = "<%= t('contact_panels.chat.busy.description') %>";
 
-        <
-        %
-        if translation ? ('contact_panels.chat.smallprint') % >
-          chatDescription.innerHTML += '&nbsp;*'; <
-        % end % >
+        <% if translation?('contact_panels.chat.smallprint') %>
+          chatDescription.innerHTML += '&nbsp;*'; 
+        <% end %>
 
-          <
-          %
-          if show_floating_chat ? % >
-          chatPopup.className = "chat-box__container chat-box__container--hidden"; <
-        % end % >
+        <% if show_floating_chat? %>
+          chatPopup.className = "chat-box__container chat-box__container--hidden"; 
+        <% end %>
 
           chatContent.className = "contact-panel__dynamic-content is-loaded";
 
@@ -243,11 +235,9 @@
         chatContent.className = "contact-panel__dynamic-content is-loaded";
 
 
-        <
-        %
-        if translation ? ('contact_panels.chat.smallprint') % >
-          chatDescription.innerHTML += '&nbsp;*'; <
-        % end % >
+        <% if translation?('contact_panels.chat.smallprint') %>
+          chatDescription.innerHTML += '&nbsp;*'; 
+        <% end %>
 
 
           sWOChatElement.onclick = function () {
@@ -258,31 +248,27 @@
         sWOChatElement.href = sWOChatstart;
         sWOChatElement.target = "_blank";
 
-        <
-        %
-        if show_floating_chat ? % >
+        <% if show_floating_chat? %>
           chatPopup.className = "chat-box__container";
-        chatPopup.href = sWOChatstart;
-        chatPopup.target = "_blank";
+          chatPopup.href = sWOChatstart;
+          chatPopup.target = "_blank";
 
-        chatPopup.onclick = function () {
-          window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
-          return false;
-        }; <
-        % end % >
+          chatPopup.onclick = function () {
+            window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+            return false;
+          }; 
+        <% end %>
 
       }
 
-      <
-      % end % >
+    <% end %>
 
   };
 
   if (typeof sWOTrackPage == 'function') {
     sWOTrackPage();
 
-    <
-    % #Track page enagagement(a visit lasting more than 30 seconds) % >
+  <% #Track page enagagement(a visit lasting more than 30 seconds) %>
       setTimeout("sWOInvite='';sWOResponse='N';sWOPage=(sWOPage || '')+'%3Ftimer%3Dtrue';sWOTrackPage();", 30000);
   }
 </script>

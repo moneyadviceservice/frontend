@@ -150,7 +150,7 @@
     </div>
     <div class="mobile-webchat__form-button--container">
       <div class="mobile-webchat__form-button--spacer">
-        <a class="mobile-webchat__form-button--whatsapp">
+        <a class="mobile-webchat__form-button--whatsapp" href="https://wa.me/447701342744" target="_blank">
           <svg class="icon-svg--whatsapp">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
           </svg>
@@ -161,13 +161,18 @@
         </a>
       </div>
       <div class="mobile-webchat__form-button--spacer">
-        <a class="mobile-webchat__form-button--webchat">
+        <a class="mobile-webchat__form-button--webchat<% if chat_opening_hours.status_as_string != 'open' %> disabled<% end %>" target="_blank">
           <svg class="icon-svg--web-chat">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
           </svg>
           <div class="form-button__text">
+            <% if chat_opening_hours.open? %>
             <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
             <span class="form-button__text-service">Web Chat</span>
+            <% else %>
+            <span class="form-button__text-heading">Chat</span>
+            <span class="form-button__text-service">Unavailable</span>
+            <% end %>
           </div>
         </a>
       </div>
@@ -182,21 +187,27 @@
 <% unless hide_contact_panels? %>
 <%= javascript_include_tag 'webchat.js' %>
 <script type='text/javascript'>
-  sWODomain = '<%= ENV['
-  WEBCHAT_DOMAIN '] %>';
-  sWOChatstart = '<%= ENV['
-  WEBCHAT_START '] %>';
+  sWODomain = '<%= ENV[' WEBCHAT_DOMAIN '] %>';
+  sWOChatstart = '<%= ENV[' WEBCHAT_START '] %>';
   sWOImageLoaded = function () {
 
     <% if chat_opening_hours.open? %>
 
       var chatCTA = document.getElementById('js-chat-cta'),
       chatDescription = document.getElementById('js-chat-description'),
-      chatContent = document.getElementById('js-chat-content');
+      chatContent = document.getElementById('js-chat-content'),
+      // mobile chat popup
+      chatMobilePopup = document.getElementsByClassName('mobile-webchat__form-button--webchat');
 
       <% if show_floating_chat? %>
         var chatPopup = document.getElementById('js-chat-popup'); 
       <% end %>
+
+      chatMobilePopup[0].href = sWOChatstart;
+      chatMobilePopup[0].onclick = function () {
+        window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+        return false;
+      }; 
 
 
       if (sWOImage.width == 1) {

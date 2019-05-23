@@ -64,7 +64,7 @@ gem 'dough-ruby', '~> 5.38'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
-gem 'action_plans', '~> 5.0.0'
+gem 'action_plans', '~> 5.1.0'
 gem 'advice_plans', '~> 4.0.1'
 gem 'agreements', '~> 2.4.0'
 gem 'budget_planner', '~> 5.6.1'

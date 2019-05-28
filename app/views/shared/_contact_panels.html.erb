@@ -3,8 +3,7 @@
 <%= render 'shared/pas_chat_banner' if pensions_and_retirement_page? %>
 
 <div class="l-constrained">
-  <div
-    class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
+  <div class="l-contact-panels t-contact-panels <%= 'l-contact-panels--no-border-top' if contact_panels_border_top %> <%= 'l-contact-panels--homepage' if contact_panels_homepage %>">
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
@@ -178,7 +177,7 @@
       </div>
     </div>
     <div class="mobile-webchat__contact">
-      <a class="mobile-webchat__contact--link">Other Contact Methods</a>
+      <a class="mobile-webchat__contact--link" href="<%= t('contact_panels.chat_popup.contact_link') %>">Other Contact Methods</a>
     </div>
   </div>
 </div>
@@ -205,7 +204,7 @@
 
       chatMobilePopup[0].href = sWOChatstart;
       chatMobilePopup[0].onclick = function () {
-        window.open(chatPopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
+        window.open(chatMobilePopup.href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");
         return false;
       }; 
 

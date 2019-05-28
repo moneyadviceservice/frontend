@@ -108,7 +108,7 @@
 
   &.mobile-webchat--opened {
     padding: $baseline-unit*2;
-    width: 94vw;
+    width: 92vw;
 
     &:hover {
       transform: none;
@@ -284,6 +284,10 @@
   .mobile-webchat__form-button--whatsapp {
     background-color: #25D366; // whatsapp color
     color: $color-white;
+    
+    &.is-hidden {
+      display: none;
+    }
   }
 
   .mobile-webchat__form-button--webchat {

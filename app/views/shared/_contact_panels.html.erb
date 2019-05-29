@@ -160,17 +160,17 @@
         </a>
       </div>
       <div class="mobile-webchat__form-button--spacer">
-        <a class="mobile-webchat__form-button--webchat<% if chat_opening_hours.status_as_string != 'open' %> disabled<% end %>" target="_blank">
+        <a class="mobile-webchat__form-button--webchat<% if chat_opening_hours.closed? %> disabled<% end %>" target="_blank">
           <svg class="icon-svg--web-chat">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--web-chat"></use>
           </svg>
           <div class="form-button__text">
             <% if chat_opening_hours.open? %>
-            <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
-            <span class="form-button__text-service">Web Chat</span>
+              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
+              <span class="form-button__text-service">Web Chat</span>
             <% else %>
-            <span class="form-button__text-heading">Chat</span>
-            <span class="form-button__text-service">Unavailable</span>
+              <span class="form-button__text-heading">Chat</span>
+              <span class="form-button__text-service">Unavailable</span>
             <% end %>
           </div>
         </a>

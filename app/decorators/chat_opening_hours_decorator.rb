@@ -31,6 +31,10 @@ class ChatOpeningHoursDecorator < Draper::Decorator
     object.now_open?
   end
 
+  def closed?
+    !open?
+  end
+
   def status
     open? ? :open : :closed
   end

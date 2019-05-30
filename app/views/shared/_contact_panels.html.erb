@@ -135,16 +135,9 @@
     <h4><%= t('contact_panels.chat_popup.title') %></h4>
     <div class="mobile-webchat__form-select--container">
       <select class="mobile-webchat__form-select">
-        <option value="debt_borrowing"><%= t('contact_panels.chat_popup.dropdown_options.debt_borrowing') %></option>
-        <option value="homes_mortgages"><%= t('contact_panels.chat_popup.dropdown_options.homes_mortgages') %></option>
-        <option value="budgeting_saving"><%= t('contact_panels.chat_popup.dropdown_options.budgeting_saving') %>
-        </option>
-        <option value="work_benefits"><%= t('contact_panels.chat_popup.dropdown_options.work_benefits') %></option>
-        <option value="pensions_retirement"><%= t('contact_panels.chat_popup.dropdown_options.pensions_retirement') %>
-        </option>
-        <option value="family_care"><%= t('contact_panels.chat_popup.dropdown_options.family_care') %></option>
-        <option value="cars_travel"><%= t('contact_panels.chat_popup.dropdown_options.cars_travel') %></option>
-        <option value="insurance"><%= t('contact_panels.chat_popup.dropdown_options.insurance') %></option>
+        <% clumps.each do |clump| %>
+          <option value="<%= clump.categories[0].id %>"><%= clump.name %></option>
+        <% end %>
       </select>
     </div>
     <div class="mobile-webchat__form-button--container">

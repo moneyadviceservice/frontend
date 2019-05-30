@@ -180,11 +180,11 @@
   }
 }
 
-.mobile-webchat__form-select--container {
+.mobile-webchat__select-container{
   margin-bottom: $baseline-unit*2;
 }
 
-.mobile-webchat__form-select {
+.mobile-webchat__select {
   $select-padding: .6em;
   $arrow-width: .55em;
   -webkit-appearance: none; // Strip native appearance
@@ -218,16 +218,16 @@
 }
 
 //webchat buttons
-.mobile-webchat__form-button--container {
+.mobile-webchat__button-container {
   display: flex;
   justify-content: space-between;
 
-  .mobile-webchat__form-button--spacer {
+  .mobile-webchat__button {
     width: 48%;
   }
   // general button styles
-  .mobile-webchat__form-button--whatsapp,
-  .mobile-webchat__form-button--webchat {
+  .mobile-webchat__button--whatsapp,
+  .mobile-webchat__button--webchat {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,7 +281,7 @@
     }
   }
 
-  .mobile-webchat__form-button--whatsapp {
+  .mobile-webchat__button--whatsapp {
     background-color: #25D366; // whatsapp color
     color: $color-white;
     
@@ -290,7 +290,7 @@
     }
   }
 
-  .mobile-webchat__form-button--webchat {
+  .mobile-webchat__button--webchat {
     background-color: $color-white;
     color: $color-black;
 
@@ -307,8 +307,6 @@
   text-align: right;
 
   .mobile-webchat__contact--link {
-    color: $color-black;
-    text-decoration: none;
     font-weight: 700;
     font-size: 0.8rem;
   }

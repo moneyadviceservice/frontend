@@ -232,17 +232,9 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    width: 100%;
     font-weight: 700;
-    border-radius: .15em;
     padding: 2px 5px;
-    user-select: none;
-    position: relative;
-    border: 1px solid $color-green-primary;
-    border-bottom: none;
-    box-shadow: 0px 4px $color-green-primary;
     transition: top 0.2s ease;
-    text-decoration: none;
 
     &:active {
       box-shadow: 0px 1px $color-green-primary;;
@@ -291,8 +283,7 @@
   }
 
   .mobile-webchat__button--webchat {
-    background-color: $color-white;
-    color: $color-black;
+    background-color: $color-grey-pale;
 
     &.disabled {
       pointer-events: none;

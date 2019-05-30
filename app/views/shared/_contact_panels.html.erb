@@ -53,7 +53,7 @@
         <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
 
-        <% if chat_opening_hours.status_as_string == 'open' %>
+        <% if chat_opening_hours.open? %>
         <p class="contact-panel-theme-white t-whatsapp-description">
           <%= chat_opening_hours.description %>
           <%= '*' if translation?('contact_panels.chat.smallprint') %>
@@ -71,7 +71,7 @@
           <% end %>
         </ul>
 
-        <% if chat_opening_hours.status_as_string == 'open' %>
+        <% if chat_opening_hours.open? %>
         <div class="contact-panel__button-container">
           <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
             <%= t('contact_panels.chat.available.call_to_action') %>

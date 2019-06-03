@@ -1,11 +1,11 @@
 .chat-box__container,
-.chat-popup__container {
+.mobile-webchat__container {
   background-color: $color-white;
   position: fixed;
-  z-index:99;
-  -webkit-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
-  -moz-box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
-  box-shadow:  0 0 7px 1px rgba(133,133,133,0.71);
+  z-index: 90;
+  -webkit-box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
+  -moz-box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
+  box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
 
   &:hover {
     text-decoration: none;
@@ -17,13 +17,14 @@
 }
 
 .chat-box__container {
-  top:30%;
+  top: 30%;
   left: 0;
   padding: $baseline-unit*2;
   border: 2px solid $color-green-primary;
   border-radius: 0 4px 4px 0;
   border-left-style: none;
   display: none;
+
   // min-width 960
   @include respond-to($mq-l) {
     display: block;
@@ -35,42 +36,49 @@
     font-size: 1.2rem;
     margin-bottom: 5px;
   }
-  
+
   .chat-box__icon {
-    margin-left: -35px;	
+    margin-left: -35px;
   }
 }
 
-.chat-popup__container {
+.mobile-webchat__container {
   bottom: $baseline-unit*2;
   right: $default-gutter*2;
-  padding: $baseline-unit*2 $baseline-unit*2 $baseline-unit;
-  border-radius: 4px;
-  display: block;
-  transition: all 0.4s;
+  border-radius: .15em;
+  transition: transform 0.5s, bottom 0.4s, width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   // min-width 479
   @include respond-to($mq-xs-max) {
     right: $default-gutter;
   }
+
   // min-width 960
   @include respond-to($mq-l) {
     display: none;
-  }
-
-  .no-svg & {
-    padding: $baseline-unit*2;
   }
 
   &:hover {
     transform: translateY(-3px);
   }
 
-  &.chat-popup--raised {
+  &:focus {
+    outline: none;
+  }
+
+  // raised state in article pages
+  &.mobile-webchat--raised {
     bottom: 55px;
   }
 
+  // icons
   svg.icon-svg--web-chat,
-  span.icon.icon--web-chat  {
+  span.icon.icon--web-chat {
     width: 55px;
     height: 45px;
   }
@@ -81,10 +89,245 @@
     background-size: 690px;
   }
 
+  // icon fallback
+  .no-svg & {
+    padding: $baseline-unit*2;
+  }
+
   .no-js &,
   .svg & span.icon.icon--web-chat,
   .no-svg & svg.icon-svg--web-chat {
     display: none;
+  }
+
+  // popup opened state
+  & > *:not(.mobile-webchat--icon) {
+    opacity: 0;
+    transition: opacity 0.4s linear 0.1s;
+  }
+
+  &.mobile-webchat--opened {
+    padding: $baseline-unit*2;
+    width: 100% - ($default-gutter * 4);
+
+    &:hover {
+      transform: none;
+    }
+
+    // min-width 479
+    @include respond-to($mq-xs-max) {
+      width: 70vw;
+    }
+
+    // min-width 479
+    @include respond-to($mq-m) {
+      width: 50vw;
+    }
+
+    .mobile-webchat--icon {
+      display: none;
+    }
+
+    .mobile-webchat__close,
+    .mobile-webchat__form {
+      display: block;
+    }
+  }
+
+  // popup closed state
+  &.mobile-webchat--closed {
+    padding: $baseline-unit*2 $baseline-unit*2 $baseline-unit;
+
+    .mobile-webchat--icon {
+      display: block;
+    }
+
+    .mobile-webchat__close,
+    .mobile-webchat__form {
+      display: none;
+    }
+  }
+}
+
+// form container
+.mobile-webchat__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  h4 {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+
+  // min-width 345
+  @include respond-to((345 / $base-font-size) * 1em) {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  // min-width 479
+  @include respond-to($mq-xs-max) {
+    padding: 0 3%;
+  }
+  // min-width 479
+  @include respond-to($mq-s-max) {
+    padding: 0 6%;
+  }
+}
+
+.mobile-webchat__select-container{
+  margin-bottom: $baseline-unit*2;
+}
+
+.mobile-webchat__select {
+  $select-padding: .6em;
+  $arrow-width: .55em;
+  -webkit-appearance: none; // Strip native appearance
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: .3em $select-padding;
+  padding-right: $select-padding + $arrow-width + $select-padding;
+  border: 1px solid $color-grey-light;
+  border-radius: .15em;
+  color: $color-grey-seven;
+  font-weight: 500;
+  background-color: white;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(-45deg, transparent 50%, currentColor 50%);
+  background-size: $arrow-width / 2 $arrow-width / 2;
+  background-position: calc(100% - #{$arrow-width / 2 + $select-padding}) center, calc(100% - #{$select-padding}) center;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .15em hsla(0, 0%, 0%, .1);
+  }
+
+  &::-ms-expand {
+    display: none; // Strip IE10+ native arrow
+  }
+}
+
+//webchat buttons
+.mobile-webchat__button-container {
+  display: flex;
+  justify-content: space-between;
+
+  .mobile-webchat__button {
+    width: 48%;
+  }
+  // general button styles
+  .mobile-webchat__button--whatsapp,
+  .mobile-webchat__button--webchat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-weight: 700;
+    padding: 2px 5px;
+    transition: top 0.2s ease;
+
+    &:active {
+      box-shadow: 0px 1px $color-green-primary;;
+      top: 4px;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    svg {
+      width: 55px;
+      height: 45px;
+      padding: 4px;
+    }
+
+    .form-button__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .form-button__text-heading {
+        display: block;
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+      }
+
+      .form-button__text-service {
+        font-size: 0.85rem;
+        // min-width 345
+        @include respond-to((345 / $base-font-size) * 1em) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .mobile-webchat__button--whatsapp {
+    background-color: #25D366; // whatsapp color
+    color: $color-white;
+    
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  .mobile-webchat__button--webchat {
+    background-color: $color-grey-pale;
+
+    &.disabled {
+      pointer-events: none;
+      background-color: $color-grey-normal;
+    }
+  }
+}
+
+// other contact methods link
+.mobile-webchat__contact {
+  margin-top: 10px;
+  text-align: right;
+
+  .mobile-webchat__contact--link {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+}
+
+// popup close button
+.mobile-webchat__close {
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  text-align: center;
+  color: $color-white;
+  border: none;
+  border-radius: 0 .15em 0 .15em;
+  background-color: $color-green-primary;
+  transition: color 0.25s, background-color 0.25s, opacity 0.4s linear 0.4s;
+  z-index: 91;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-green-primary;
   }
 }
 

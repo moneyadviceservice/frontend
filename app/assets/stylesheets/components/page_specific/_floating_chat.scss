@@ -3,8 +3,6 @@
   background-color: $color-white;
   position: fixed;
   z-index: 90;
-  -webkit-box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
-  -moz-box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
   box-shadow: 0 0 7px 1px rgba(133, 133, 133, 0.71);
 
   &:hover {
@@ -46,7 +44,11 @@
   bottom: $baseline-unit*2;
   right: $default-gutter*2;
   border-radius: .15em;
-  transition: transform 0.5s, bottom 0.4s, width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform .5s, 
+    bottom .4s, 
+    width .3s cubic-bezier(0.075, 0.82, 0.165, 1), 
+    border-left .3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    right .5s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: 76px;
   display: flex;
   flex-direction: column;
@@ -147,6 +149,19 @@
       display: none;
     }
   }
+
+  // popup hide
+  &.mobile-webchat--hide {
+    // increase width to accomodate new border + 20px
+    width: 96px;
+    right: -76px;
+    border-left: 20px solid $color-green-primary;
+
+    &.is-hidden {
+      right: -120px;
+      box-shadow: none;
+    }
+  }
 }
 
 // form container
@@ -237,7 +252,7 @@
     transition: top 0.2s ease;
 
     &:active {
-      box-shadow: 0px 1px $color-green-primary;;
+      box-shadow: 0px 1px $color-green-primary;
       top: 4px;
     }
 

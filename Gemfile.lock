@@ -13,8 +13,10 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
-PATH
-  remote: ../mortgage_calculator
+GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator
+  revision: aa4b2cb028665fb33176ea2d5f6015987bd5c4fd
+  branch: 10480_Tooltip-position
   specs:
     mortgage_calculator (3.8.0)
       angularjs-rails (~> 1.2.18)

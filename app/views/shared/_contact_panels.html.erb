@@ -179,8 +179,8 @@
 <% unless hide_contact_panels? %>
 <%= javascript_include_tag 'webchat.js' %>
 <script type='text/javascript'>
-  sWODomain = '<%= ENV[' WEBCHAT_DOMAIN '] %>';
-  sWOChatstart = '<%= ENV[' WEBCHAT_START '] %>';
+  sWODomain = '<%= ENV['WEBCHAT_DOMAIN'] %>';
+  sWOChatstart = '<%= ENV['WEBCHAT_START'] %>';
   sWOImageLoaded = function () {
 
     <% if chat_opening_hours.open? %>

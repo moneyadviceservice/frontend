@@ -30,10 +30,6 @@
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
             <% end %>
-
-            <% if display_chat_migration_message? %>
-            <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-            <% end %>
           </ul>
 
           <div class="contact-panel__button-container" id="js-chat-cta">
@@ -46,7 +42,7 @@
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
     </div>
-    <% if pensions_and_retirement_page? || debt_and_borrowing_page? %>
+    
     <div class="l-contact-panel contact-panel__dynamic-content contact-panel__whatsapp">
       <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
         <%= heading_tag level: 2, class: 'contact-panel__heading contact-panel-theme-white' do %>
@@ -66,9 +62,6 @@
           <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
           <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
           <% end %>
-          <% if display_chat_migration_message? %>
-          <li class="contact-panel__additional-info"><%= t('contact_panels.chat.offline_migration_html') %></li>
-          <% end %>
         </ul>
 
         <% if chat_opening_hours.open? %>
@@ -85,7 +78,7 @@
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
     </div>
-    <% end %>
+    
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel--last">
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>

@@ -25,11 +25,9 @@
           <h3 class="contact-panel__opening-times-heading">Open:</h3>
 
           <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-            <% unless alternate_hours_active? %>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-            <% end %>
           </ul>
 
           <div class="contact-panel__button-container" id="js-chat-cta">
@@ -49,12 +47,11 @@
         <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
         <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <% unless alternate_hours_active? %>
           <li class="contact-panel__additional-info">Need help sorting out your debts, have credit questions or want pensions guidance?</li>
           <li class="contact-panel__additional-info">Add our number (+44701342744) to your WhatsApp contacts and send us a message.</li>
           <li class="contact-panel__additional-info">We’re open between 8am – 6pm Monday to Friday and Saturdays 8am – 3pm.</li>
           <li class="contact-panel__additional-info">For everything else please contact us via Webchat or Telephone</li>
-          <% end %>
+          
         </ul>
 
         <% if chat_opening_hours.open? %>

@@ -2,7 +2,7 @@
 
 <%= render 'shared/pas_chat_banner' if pensions_and_retirement_page? %>
 
-<div class="l-constrained">
+
   <div class="l-contact-panels t-contact-panels <%= no_top_border_css(contact_panels_border_top) %> <%= homepage_css(contact_panels_homepage) %>" data-dough-contact-panels>
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
@@ -45,22 +45,15 @@
     
     <div class="l-contact-panel contact-panel__dynamic-content contact-panel__whatsapp">
       <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
-        <%= heading_tag level: 2, class: 'contact-panel__heading contact-panel-theme-white' do %>
+        <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
         <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
-
-        <% if chat_opening_hours.open? %>
-        <p class="contact-panel-theme-white t-whatsapp-description">
-          <%= chat_opening_hours.description %>
-          <%= '*' if translation?('contact_panels.chat.smallprint') %>
-        </p>
-        <% end %>
-        <h3 class="contact-panel__opening-times-heading contact-panel-theme-white">Open:</h3>
-        <ul class="t-chat-opening-times contact-panel__list unstyled-list contact-panel-theme-white">
+        <ul class="t-chat-opening-times contact-panel__list unstyled-list">
           <% unless alternate_hours_active? %>
-          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-          <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+          <li class="contact-panel__additional-info">Need help sorting out your debts, have credit questions or want pensions guidance?</li>
+          <li class="contact-panel__additional-info">Add our number (+44701342744) to your WhatsApp contacts and send us a message.</li>
+          <li class="contact-panel__additional-info">We’re open between 8am – 6pm Monday to Friday and Saturdays 8am – 3pm.</li>
+          <li class="contact-panel__additional-info">For everything else please contact us via Webchat or Telephone</li>
           <% end %>
         </ul>
 
@@ -71,7 +64,7 @@
           </a>
         </div>
         <% else %>
-        <p class="contact-panel-theme-white t-whatsapp-unavailable">
+        <p class="t-whatsapp-unavailable">
           <%= t('contact_panels.chat.unavailable.call_to_action') %></p>
         <% end %>
 
@@ -103,7 +96,6 @@
       </div>
     </div>
   </div>
-</div>
 <% end %>
 
 <% if show_floating_chat? %>

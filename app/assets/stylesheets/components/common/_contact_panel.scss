@@ -29,10 +29,10 @@
 }
 
 .l-contact-panel.contact-panel__whatsapp {
-  background: $color-grey-medium;
+  // background: $color-grey-medium;
 
   @include respond-to($mq-m) {
-    display: none;
+    // display: none;
   }
 }
 

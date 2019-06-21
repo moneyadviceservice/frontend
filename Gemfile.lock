@@ -15,8 +15,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: 99f5fd1441a480f95a9ee0c51c5caa2cd9b29129
-  branch: 9820_Restyle-Results-Blocks
+  revision: 7d68da9fc1047db10be460669575c5908f317bbd
+  branch: 9814_Add-icon_How-is-this-calculated
   specs:
     pacs (3.5.4)
       dough-ruby (~> 5.36)
@@ -472,7 +472,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.8.0)
+    mongo (2.9.0)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)

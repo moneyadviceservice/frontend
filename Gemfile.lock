@@ -13,24 +13,6 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
-GIT
-  remote: git@github.com:moneyadviceservice/pacs
-  revision: 99f5fd1441a480f95a9ee0c51c5caa2cd9b29129
-  branch: 9820_Restyle-Results-Blocks
-  specs:
-    pacs (3.5.4)
-      dough-ruby (~> 5.36)
-      dry-struct (~> 0.6.0)
-      dry-struct-setters (~> 0.2.0)
-      dry-types (~> 0.13.0)
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -472,7 +454,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.8.0)
+    mongo (2.9.0)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)
@@ -500,6 +482,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (3.6.0)
+      dough-ruby (~> 5.36)
+      dry-struct (~> 0.6.0)
+      dry-struct-setters (~> 0.2.0)
+      dry-types (~> 0.13.0)
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -844,7 +838,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs!
+  pacs (= 3.6.0)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

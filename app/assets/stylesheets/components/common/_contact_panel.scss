@@ -32,14 +32,6 @@
   }
 }
 
-.l-contact-panel.contact-panel__whatsapp {
-  // background: $color-grey-medium;
-
-  @include respond-to($mq-m) {
-    // display: none;
-  }
-}
-
 .contact-panel--last {
   border-bottom: 0;
 }

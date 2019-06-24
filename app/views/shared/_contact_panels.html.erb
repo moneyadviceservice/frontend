@@ -2,41 +2,33 @@
 
 <%= render 'shared/pas_chat_banner' if pensions_and_retirement_page? %>
 
-
   <div class="l-contact-panels t-contact-panels <%= no_top_border_css(contact_panels_border_top) %> <%= homepage_css(contact_panels_homepage) %>" data-dough-contact-panels>
     <div class="l-contact-panel">
       <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
         <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
         <span class="icon icon--web-chat"></span><%= @footer.web_chat.heading %>
         <% end %>
-
         <p class="contact-panel__chat-javascript t-chat-javascript">
           <%= t('contact_panels.chat.javascript.description_html') %>
         </p>
-
         <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
           <div class="contact-panel__preloader"></div>
-
           <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
             <%= chat_opening_hours.description %>
             <%= '*' if translation?('contact_panels.chat.smallprint') %>
           </p>
-
           <h3 class="contact-panel__opening-times-heading">Open:</h3>
-
           <ul class="t-chat-opening-times contact-panel__list unstyled-list">
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
             <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
           </ul>
-
           <div class="contact-panel__button-container" id="js-chat-cta">
             <div class="contact-panel__button button is-disabled t-chat-button">
               <%= chat_opening_hours.call_to_action %>
             </div>
           </div>
         </div>
-
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
     </div>
@@ -47,13 +39,11 @@
         <%= render 'shared/svg/whats_app_logo' %>WhatsApp
         <% end %>
         <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-          <li class="contact-panel__additional-info">Need help sorting out your debts, have credit questions or want pensions guidance?</li>
-          <li class="contact-panel__additional-info">Add our number (+44701342744) to your WhatsApp contacts and send us a message.</li>
-          <li class="contact-panel__additional-info">We’re open between 8am – 6pm Monday to Friday and Saturdays 8am – 3pm.</li>
-          <li class="contact-panel__additional-info">For everything else please contact us via Webchat or Telephone</li>
-          
+          <li class="contact-panel__additional-info"><%= t('contact_panels.whatsapp.text1') %></li>
+          <li class="contact-panel__additional-info"><%= t('contact_panels.whatsapp.text2') %></li>
+          <li class="contact-panel__additional-info"><%= t('contact_panels.whatsapp.text3') %></li>
         </ul>
-
+        
         <% if chat_opening_hours.open? %>
         <div class="contact-panel__button-container">
           <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
@@ -62,9 +52,9 @@
         </div>
         <% else %>
         <p class="t-whatsapp-unavailable">
-          <%= t('contact_panels.chat.unavailable.call_to_action') %></p>
+          <%= t('contact_panels.chat.unavailable.call_to_action') %>
+        </p>
         <% end %>
-
         <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
       </div>
     </div>
@@ -74,16 +64,14 @@
         <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
         <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
         <% end %>
-
-        <p class="t-contact-introduction contact-panel__contact-introduction"><%= @footer.contact.introduction %></p>
-
+        <p class="t-contact-introduction contact-panel__contact-introduction">
+          <%= @footer.contact.introduction %>
+        </p>
         <p class="contact-panel__contact-number">
           <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
             <%= @footer.contact.phone_number %></a>
         </p>
-
         <h3 class="contact-panel__opening-times-heading">Open:</h3>
-
         <ul class="contact-panel__list">
           <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
           <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>

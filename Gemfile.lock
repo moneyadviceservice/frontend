@@ -13,6 +13,24 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: f4715f8e9fe2a44a80450756fa5f2e7b3f13eb00
+  ref: f4715f8
+  specs:
+    pacs (3.6.0)
+      dough-ruby (~> 5.36)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -301,28 +319,28 @@ GEM
     dry-container (0.7.1)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.7)
+    dry-core (0.4.8)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-inflector (0.1.2)
-    dry-logic (0.6.1)
+    dry-logic (1.0.2)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-struct (0.6.0)
+    dry-struct (1.0.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
-      dry-types (~> 0.13)
+      dry-types (~> 1.0)
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (0.13.4)
+    dry-types (1.0.1)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.2)
+      dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 0.4, >= 0.4.2)
+      dry-logic (~> 1.0)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -471,7 +489,7 @@ GEM
       underscore-rails
     multi_json (1.13.1)
     multi_test (0.1.2)
-    multipart-post (2.0.0)
+    multipart-post (2.1.1)
     mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
@@ -482,18 +500,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.6.0)
-      dough-ruby (~> 5.36)
-      dry-struct (~> 0.6.0)
-      dry-struct-setters (~> 0.2.0)
-      dry-types (~> 0.13.0)
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -838,7 +844,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.6.0)
+  pacs!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

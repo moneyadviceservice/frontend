@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs
-  revision: 7d68da9fc1047db10be460669575c5908f317bbd
-  branch: 9814_Add-icon_How-is-this-calculated
+  revision: 2bf0ab645ca7e9684457060c7a699ac2667df97e
+  branch: 10559-webchat-button-bug
   specs:
-    pacs (3.5.4)
+    pacs (3.6.1)
       dough-ruby (~> 5.36)
       dry-struct (~> 0.6.0)
       dry-struct-setters (~> 0.2.0)
@@ -319,7 +319,7 @@ GEM
     dry-container (0.7.1)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.7)
+    dry-core (0.4.8)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-inflector (0.1.2)

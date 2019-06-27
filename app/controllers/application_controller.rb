@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
     @footer = Mas::Cms::Footer.find('footer', cached: true, locale: I18n.locale)
   end
 
-  helper ChatMigrationMessage
   helper BudgetWarning
 
   def syndicated_tool_request?

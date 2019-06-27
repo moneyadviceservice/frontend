@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: f4715f8e9fe2a44a80450756fa5f2e7b3f13eb00
-  ref: f4715f8
+  revision: 6c40de38a4113e4a3ff7f8d5737127ea37f17f1c
+  branch: 10554_SPIKE_Architecture-Improvements_POC
   specs:
-    pacs (3.6.0)
+    pacs (3.7.0)
       dough-ruby (~> 5.36)
       dry-struct
       dry-struct-setters
@@ -844,7 +844,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs!
+  pacs (= 3.7.0)!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

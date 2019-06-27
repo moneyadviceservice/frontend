@@ -14,15 +14,15 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs
-  revision: 99f5fd1441a480f95a9ee0c51c5caa2cd9b29129
-  branch: 9820_Restyle-Results-Blocks
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 6c40de38a4113e4a3ff7f8d5737127ea37f17f1c
+  branch: 10554_SPIKE_Architecture-Improvements_POC
   specs:
-    pacs (3.5.4)
+    pacs (3.7.0)
       dough-ruby (~> 5.36)
-      dry-struct (~> 0.6.0)
-      dry-struct-setters (~> 0.2.0)
-      dry-types (~> 0.13.0)
+      dry-struct
+      dry-struct-setters
+      dry-types
       faraday
       faraday-conductivity
       faraday_middleware
@@ -844,7 +844,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs!
+  pacs (= 3.7.0)!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

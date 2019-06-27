@@ -19,11 +19,3 @@ Then(/^I should see a WhatsApp link$/) do
   expect(current_page.whatsapp.link).to be_truthy
 end
 
-When(/^I visit a category with WhatsApp integration on a desktop device$/) do
-  page.driver.resize_window 1200, 768
-  step "I visit a category with WhatsApp integration in English"
-end
-
-Then(/^I should not see the WhatsApp chat$/) do
-  expect(current_page).to_not have_css('.contact-panel__whatsapp')
-end

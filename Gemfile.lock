@@ -14,15 +14,15 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs
-  revision: 2bf0ab645ca7e9684457060c7a699ac2667df97e
-  branch: 10559-webchat-button-bug
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 55260115e38d1cbd0bf9ebc032b27cccf95c4c65
+  branch: 9899_Popup-width
   specs:
-    pacs (3.6.1)
+    pacs (3.7.0)
       dough-ruby (~> 5.36)
-      dry-struct (~> 0.6.0)
-      dry-struct-setters (~> 0.2.0)
-      dry-types (~> 0.13.0)
+      dry-struct
+      dry-struct-setters
+      dry-types
       faraday
       faraday-conductivity
       faraday_middleware
@@ -323,24 +323,24 @@ GEM
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-inflector (0.1.2)
-    dry-logic (0.6.1)
+    dry-logic (1.0.2)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-struct (0.6.0)
+    dry-struct (1.0.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
-      dry-types (~> 0.13)
+      dry-types (~> 1.0)
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (0.13.4)
+    dry-types (1.0.1)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.2)
+      dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 0.4, >= 0.4.2)
+      dry-logic (~> 1.0)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -489,7 +489,7 @@ GEM
       underscore-rails
     multi_json (1.13.1)
     multi_test (0.1.2)
-    multipart-post (2.0.0)
+    multipart-post (2.1.1)
     mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)

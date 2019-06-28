@@ -9,6 +9,10 @@
   text-align: center;
   padding: $baseline-unit*2 0;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include respond-to($mq-s) {
     padding: $baseline-unit*4 0;
   }
@@ -25,14 +29,6 @@
 
   @include respond-to($mq-xl) {
     padding: $baseline-unit*4;
-  }
-}
-
-.l-contact-panel.contact-panel__whatsapp {
-  background: $color-grey-medium;
-
-  @include respond-to($mq-m) {
-    display: none;
   }
 }
 
@@ -120,6 +116,7 @@
 .contact-panel__list {
   @extend .unstyled-list;
   margin: 0 0 $baseline-unit;
+  flex-grow: 2;
 
   @include respond-to($mq-s) {
     margin: $baseline-unit*2 0;
@@ -223,6 +220,11 @@
     }
 
     &.is-loaded {
+      & {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+      }
       .contact-panel__chat-description,
       .contact-panel__button {
         visibility: visible;

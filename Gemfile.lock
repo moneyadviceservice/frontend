@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 6c40de38a4113e4a3ff7f8d5737127ea37f17f1c
-  branch: 10554_SPIKE_Architecture-Improvements_POC
+  revision: 63cc35f87f9959104584fcc676ed20e075f0aad4
+  branch: 10567_Clientside-improvements_Prerequisites
   specs:
-    pacs (3.7.0)
+    pacs (3.7.2)
       dough-ruby (~> 5.36)
       dry-struct
       dry-struct-setters
@@ -334,13 +334,13 @@ GEM
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (1.0.1)
+    dry-types (1.1.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 1.0)
+      dry-logic (~> 1.0, >= 1.0.2)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -844,7 +844,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.7.0)!
+  pacs (= 3.7.2)!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

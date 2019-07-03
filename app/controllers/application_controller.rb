@@ -90,13 +90,13 @@ class ApplicationController < ActionController::Base
 
   def set_tool_instance; end
 
-  def mas_optimizely_tag
-    return if syndicated_tool_request?
+  # def mas_optimizely_tag
+  #   return if syndicated_tool_request?
 
-    optimizely_include_tag if Rails.env.production? || is_environment_on_uat?
-  end
+  #   optimizely_include_tag if Rails.env.production? || is_environment_on_uat?
+  # end
 
-  helper_method :mas_optimizely_tag
+  # helper_method :mas_optimizely_tag
 
   private
 

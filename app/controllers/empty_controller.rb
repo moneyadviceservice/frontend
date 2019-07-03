@@ -8,8 +8,8 @@ class EmptyController < ApplicationController
   end
   helper_method :hide_elements_irrelevant_for_third_parties?
 
-  def optimizely_include_tag; end
-  helper_method :optimizely_include_tag
+  # def optimizely_include_tag; end
+  # helper_method :optimizely_include_tag
 
   def raw(*); end
   helper_method :raw

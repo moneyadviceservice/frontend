@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
   include Chat
   include Localisation
   include NotFound
-  include AssetsHelper
   COOKIE_MESSAGE_COOKIE_NAME = '_cookie_notice'.freeze
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'.freeze
 
@@ -89,14 +88,6 @@ class ApplicationController < ActionController::Base
   helper_method :alerts?
 
   def set_tool_instance; end
-
-  # def mas_optimizely_tag
-  #   return if syndicated_tool_request?
-
-  #   optimizely_include_tag if Rails.env.production? || is_environment_on_uat?
-  # end
-
-  # helper_method :mas_optimizely_tag
 
   private
 

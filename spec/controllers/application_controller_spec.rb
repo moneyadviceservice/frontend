@@ -19,10 +19,6 @@ RSpec.describe ApplicationController, type: :controller do
     it 'sets x frame options to ALLOWALL' do
       expect(subject.headers['X-Frame-Options']).to eql('ALLOWALL')
     end
-
-    # it 'does not render Optimizely tag' do
-    #   expect(controller.mas_optimizely_tag).to be_nil
-    # end
   end
 
   context 'when not a syndicated request' do
@@ -52,15 +48,6 @@ RSpec.describe ApplicationController, type: :controller do
     it 'sets x frame options to SAMEORIGIN' do
       expect(subject.headers['X-Frame-Options']).to eql('SAMEORIGIN')
     end
-
-    # it 'renders Optimizely tag' do
-    #   allow(File).to receive(:exist?).and_return(true)
-    #   allow(File).to receive(:open).and_return(
-    #     double('json_data', read: JSON[data], :sync= => true, puts: '')
-    #   )
-
-    #   expect(controller.mas_optimizely_tag).to include('optimizely')
-    # end
   end
 
   describe '#show_floating_chat?' do

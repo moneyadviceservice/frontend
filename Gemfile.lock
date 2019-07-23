@@ -13,6 +13,27 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: bf817ae05ea8d3c3f397c483bb6bf0be89c73de3
+  branch: 10585/belfast-page
+  specs:
+    debt_advice_locator (3.4.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      validate_url (= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -43,7 +64,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.13.1)
+    active_attr (0.15.0)
+      actionpack (>= 3.0.2, < 6.1)
       activemodel (>= 3.0.2, < 6.1)
       activesupport (>= 3.0.2, < 6.1)
     active_model_serializers (0.9.7)
@@ -101,7 +123,7 @@ GEM
     autoprefixer-rails (8.6.5)
       execjs
     backports (3.11.1)
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -203,21 +225,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.4.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -450,7 +457,7 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
-    mini_mime (1.0.1)
+    mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
@@ -537,7 +544,7 @@ GEM
       interception (>= 0.5)
       pry
     psych (3.0.2)
-    public_suffix (3.0.3)
+    public_suffix (3.1.1)
     quiz (1.4.0)
       cocoon
       devise
@@ -578,7 +585,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
     raindrops (0.19.0)
-    rake (12.3.2)
+    rake (12.3.3)
     ranked-model (0.4.2)
       activerecord (>= 4.1.16)
     rb-readline (0.5.5)
@@ -802,7 +809,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 3.4.0)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)

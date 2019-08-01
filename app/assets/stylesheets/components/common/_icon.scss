@@ -353,3 +353,17 @@
 .icon--email {
   background-position: -664px -452px;
 }
+
+.icon--clear-english {
+  background-image: image_url('PLC_CES_640-819.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  margin: 0 auto;
+  height: 819/640*80px;
+  display: none;
+
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}

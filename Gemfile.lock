@@ -15,9 +15,9 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: e4f249f7c07b4249713dee0ffe204107b679c9df
-  ref: e4f249f7c07b4249713dee0ffe204107b679c9df
-  branch: 10556_Client_Side_Sorting
+  revision: f2e8d96be8ccf6b52d389e80d9ef565310b91bd4
+  ref: f2e8d96be8ccf6b52d389e80d9ef565310b91bd4
+  branch: 10515_Simplify-View
   specs:
     pacs (3.7.2)
       dough-ruby (~> 5.39)
@@ -324,7 +324,7 @@ GEM
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-inflector (0.1.2)
-    dry-logic (1.0.2)
+    dry-logic (1.0.3)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
@@ -335,7 +335,7 @@ GEM
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (1.1.0)
+    dry-types (1.1.1)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)

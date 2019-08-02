@@ -12,24 +12,29 @@
 
 .cookie-message__content {
   @extend %type-small;
-  @include column(11);
+  @include column(12);
   margin-top: $baseline-unit*3;
   margin-bottom: $baseline-unit*3;
+  padding-right: 76px;
+  padding-right: calc(76px + #{$default-gutter*3});
+
+  @include respond-to($mq-xs-max) {
+    padding-right: calc(76px + #{$default-gutter});
+  }
+
+  @include respond-to($mq-l) {
+    padding-right: 0;
+  }
 }
 
 .cookie-message__link {
   margin-top: $baseline-unit*2;
-  display: block;
   @extend %type-small;
-
-  @include respond-to($mq-l) {
-    display: inline;
-  }
 }
 
 .cookie-message__close-button {
-  @extend .unstyled-button;
-  position: absolute;
-  right: 0;
-  padding: $baseline-unit*3 $baseline-unit*2 $baseline-unit*2 $baseline-unit*2;
+  float: right;
+  font-size: 0.875rem;
+  padding: $baseline-unit $baseline-unit;
+  margin: 0 0 $baseline-unit $baseline-unit*3;
 }

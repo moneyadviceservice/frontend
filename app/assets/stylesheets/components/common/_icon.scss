@@ -353,3 +353,14 @@
 .icon--email {
   background-position: -664px -452px;
 }
+
+// Clear English logo
+.icon--clear-english {
+  background-image: image_url('PLC_CES_640-819.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .svg & {
+    display: none;
+  }
+}

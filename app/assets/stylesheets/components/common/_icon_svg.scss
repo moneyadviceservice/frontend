@@ -139,3 +139,19 @@ html.svg {
 .icon--thumb-icon-down {
   background-position: -935px -436px;
 }
+
+// Clear English logo
+.icon--clear-english,
+.svg-icon--clear-english {
+  background-image: image_url('PLC_CES_640-819.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  margin: 0 auto;
+  height: 819/640*80px;
+  display: none;
+
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}

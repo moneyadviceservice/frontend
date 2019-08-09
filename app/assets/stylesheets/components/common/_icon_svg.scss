@@ -141,14 +141,59 @@ html.svg {
 }
 
 // Clear English logo
-.icon--clear-english,
-.svg-icon--clear-english {
-  width: 80px;
+$width: 80px;
+$height: 203.22/158.85*$width;
+
+.icon--clear-english /* ,
+.svg-icon--clear-english */ {
+  width: $width; // 80px;
+  height: $height; // 203.22/158.85*80px;
   margin: 0 auto;
-  height: 203.22/158.85*80px;
   display: none;
+  // background-image: url('svgs/plc-ces.svg');
+  background-size: $width $height;
+  // background-image: image_url('PLC_CES_640-819.png');
+  background-repeat: no-repeat;
+  // background-size: cover;
+
+  // .svg & {
+  //   // display: none;
+  //   background-image: url('svgs/plc-ces.svg');
+  // }
 
   @include respond-to($mq-s) {
+    background-image: image_url('PLC_CES_640-819.png');
     display: block;
+
+    .svg & {
+      // display: none;
+      background-image: url('svgs/plc-ces.svg');
+    }
   }
+
+  // & use {
+  //   // fill: url(#lineargradient);
+  //   // color: yellow;
+  //   // color: linear-gradient(pink, blue);
+  //   // primaryColor: green;
+  //   // background: orange;
+  //   // fill: inherit;
+  // }
+
+  // & path {
+  //   fill: inherit;
+  // }
 }
+
+// #svg-icon--clear-english {
+//   & .corner {
+//     primaryColor: green;
+//     // fill: yellow;
+//     // background: linear-gradient(pink,blue);
+//   }
+// }
+
+// svg path.corner {
+//   fill: inherit;
+//   // background: inherit;
+// }

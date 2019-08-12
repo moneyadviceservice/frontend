@@ -158,7 +158,7 @@ $height: 203.22/158.85*$width;
     display: block;
 
     .svg & {
-      background-image: url('svgs/plc-ces.svg');
+      background-image: image_url('svgs/plc-ces.svg');
     }
   }
 }

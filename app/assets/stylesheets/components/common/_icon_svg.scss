@@ -141,59 +141,24 @@ html.svg {
   background-position: -935px -436px;
 }
 
-// Clear English Standard
-#svg-icon--clear-english {
-  .st0 {
-    fill: none;
-  }
-
-  .st1 {
-    fill: #959CA1;
-  }
-
-  .st2 {
-    stroke: #FFFFFF;
-    stroke-width: 1.25;
-  }
-
-  .st3 {
-    fill: #FFFFFF;
-  }
-
-  .st4 {
-    fill: #FFFFFF;
-    stroke: #FFFFFF;
-    stroke-width: 3.4213;
-  }
-
-  .st5 {
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-    fill: #004896;
-  }
-}
-
-.icon--clear-english,
-.svg-icon--clear-english {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  display: none;
-}
-
-.svg-icon--clear-english {
-  .svg & {
-    @include respond-to($mq-s) {
-      display: block;
-    }
-  }
-}
+// Clear English logo
+$width: 80px;
+$height: 203.22/158.85*$width;
 
 .icon--clear-english {
-  background-image: image_url('CESWebsiteSILVER.png');
+  width: $width;
+  height: $height;
+  margin: 0 auto;
+  display: none;
+  background-size: $width $height;
   background-repeat: no-repeat;
 
   @include respond-to($mq-s) {
+    background-image: image_url('PLC_CES_80-102.png');
     display: block;
+
+    .svg & {
+      background-image: url('svgs/plc-ces.svg');
+    }
   }
 }

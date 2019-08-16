@@ -25,7 +25,7 @@ class AmpArticlesController < ActionController::Base
   private
 
   def retrieve_article
-    @article ||= Mas::Cms::Article.find(params[:article_id], locale: I18n.locale)
+    @article ||= Mas::Cms::Article.find(params[:article_id], locale: params[:locale])
   end
 
   def redirect_page(e)

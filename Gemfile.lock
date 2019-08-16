@@ -14,9 +14,9 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/debt-advice-locator
-  revision: fc8048f3e3400ddf3edaefc448c841a03aedac7a
-  branch: story/10584-local-landing-pages-limit
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: 9ec4b089f4e995b4ea2414fbee963b5e161c4e7c
+  branch: 10647_Search-function
   specs:
     debt_advice_locator (3.8.0)
       active_attr
@@ -306,14 +306,14 @@ GEM
     dry-configurable (0.8.3)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
-    dry-container (0.7.1)
+    dry-container (0.7.2)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.8)
+    dry-core (0.4.9)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-inflector (0.1.2)
-    dry-logic (1.0.2)
+    dry-logic (1.0.3)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
@@ -324,13 +324,13 @@ GEM
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (1.0.1)
+    dry-types (1.1.1)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 1.0)
+      dry-logic (~> 1.0, >= 1.0.2)
     ejs (1.1.1)
     email_spec (1.6.0)
       launchy (~> 2.1)
@@ -490,8 +490,8 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.7.2)
-      dough-ruby (~> 5.36)
+    pacs (3.8.0)
+      dough-ruby (~> 5.39)
       dry-struct
       dry-struct-setters
       dry-types
@@ -847,7 +847,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.7.2)
+  pacs (= 3.8.0)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

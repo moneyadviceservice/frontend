@@ -13,6 +13,28 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: 9ec4b089f4e995b4ea2414fbee963b5e161c4e7c
+  branch: 10647_Search-function
+  specs:
+    debt_advice_locator (3.8.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -204,22 +226,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.8.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -805,7 +811,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (= 3.8.0)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)

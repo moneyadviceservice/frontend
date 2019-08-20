@@ -25,7 +25,6 @@ module Frontend
 
     config.crazy_egg_url         = '//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4438.js'
     config.google_tag_manager_id = 'GTM-WVFLH9'
-    config.google_optimize_id = 'GTM-PFLN6KX'
 
     config.time_zone = 'Europe/London'
     config.chat_opening_hours = OpeningHours.new('8:00 AM', '6:00 PM')

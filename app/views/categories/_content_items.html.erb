@@ -12,7 +12,9 @@
     </li>
   <% end %>
 </ol>
-<button class="unstyled-button category-detail__toggle-view js-category-detail__toggle-view">
-  <span class="category-detail__view_all"><%= t('categories.show.view_all') %></span>
-  <span class="category-detail__view_less"><%= t('categories.show.view_less') %></span>
-</button>
+<% if extended_contents.present? %>
+  <button class="unstyled-button category-detail__toggle-view js-category-detail__toggle-view">
+    <span class="category-detail__view_all"><%= t('categories.show.view_all') %></span>
+    <span class="category-detail__view_less"><%= t('categories.show.view_less') %></span>
+  </button>
+<% end %>

@@ -23,18 +23,29 @@
       </div>
     <% end %>
     <div class="mobile-webchat__button-container">
-      <div class="mobile-webchat__button">
-        <a class="button mobile-webchat__button--whatsapp" href="https://wa.me/447701342744" target="_blank"
-          data-dough-webchat-button-whatsapp>
-          <svg class="icon-svg--whatsapp">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
-          </svg>
-          <div class="form-button__text">
-            <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
-            <span class="form-button__text-service">WhatsApp</span>
-          </div>
-        </a>
-      </div>
+      <% if pensions_and_retirement_page? %>
+        <div class="mobile-webchat__button">
+          <a class="button mobile-webchat__button--pensions disabled">
+            <div class="form-button__text">
+              <span class="form-button__text-service">
+                <%= t('contact_panels.chat_popup_pensions.number') %>
+              </span>
+            </div>
+          </a>
+        </div>
+      <% else %>
+        <div class="mobile-webchat__button">
+          <a class="button mobile-webchat__button--whatsapp" href="https://wa.me/447701342744" target="_blank" data-dough-webchat-button-whatsapp>
+            <svg class="icon-svg--whatsapp">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
+            </svg>
+            <div class="form-button__text">
+              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
+              <span class="form-button__text-service">WhatsApp</span>
+            </div>
+          </a>
+        </div>
+      <% end %>
       <div class="mobile-webchat__button">
         <a class="button mobile-webchat__button--webchat<% if chat_opening_hours.closed? %> disabled<% end %>"
           target="_blank" data-dough-webchat-button-webchat>

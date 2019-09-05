@@ -243,7 +243,8 @@
   }
   // general button styles
   .mobile-webchat__button--whatsapp,
-  .mobile-webchat__button--webchat {
+  .mobile-webchat__button--webchat,
+  .mobile-webchat__button--pensions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,6 +290,11 @@
     }
   }
 
+  .mobile-webchat__button--pensions {
+    height: 100%;
+    background-color: $color-grey-pale;
+  }
+
   .mobile-webchat__button--whatsapp {
     background-color: #25D366; // whatsapp color
     color: $color-white;
@@ -300,11 +306,11 @@
 
   .mobile-webchat__button--webchat {
     background-color: $color-grey-pale;
+  }
 
-    &.disabled {
-      pointer-events: none;
-      background-color: $color-grey-normal;
-    }
+  .disabled {
+    pointer-events: none;
+    background-color: $color-grey-normal;
   }
 }
 

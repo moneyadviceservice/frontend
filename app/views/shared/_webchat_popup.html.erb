@@ -13,7 +13,7 @@
     <div class="mobile-webchat__select-container">
       <select class="mobile-webchat__select" data-dough-webchat-select>
         <% clumps.each do |clump| %>
-        <option value="<%= clump.categories[0].id %>"><%= clump.name %></option>
+        <option value="<%= clump.name.downcase.parameterize %>"><%= clump.name %></option>
         <% end %>
       </select>
     </div>

@@ -1,7 +1,11 @@
 <%= render layout: 'layouts/application_shared' do %>
 
   <% if content_for?(:context_bar) %>
-    <div class="l-context-bar">
+    <div 
+      class="l-context-bar" 
+      data-article-id="<%= "#{@article.categories[0].parent_id}" if @article && @article.categories.present? %>"
+    >
+    
       <div class="l-constrained">
         <%= yield :context_bar %>
       </div>

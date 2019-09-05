@@ -1,5 +1,6 @@
 <nav class="breadcrumbs" role="navigation" aria-label="<%= t('breadcrumbs.aria_label') %>" data-dough-component="Breadcrumbs">
   <ul class="unstyled-list">
+    <p><%= breadcrumbs[0].title %></p>
     <% breadcrumbs.each_with_index do |breadcrumb, index| %>
       <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         <% if index > 0 %>

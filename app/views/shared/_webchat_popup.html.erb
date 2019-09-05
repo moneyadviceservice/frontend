@@ -10,8 +10,7 @@
   </div>
   <div class="mobile-webchat__form">
     <% if pensions_and_retirement_page? %>
-      <h4><b><%= t('contact_panels.chat_popup_pensions.title') %><b></h4>
-      <h4><%= t('contact_panels.chat_popup_pensions.intro') %></h4>
+      <%= render 'shared/webchat_popup_pensions' %>
     <% else %>
       <h4><b><%= t('contact_panels.chat_popup.title') %><b></h4>
       <div class="mobile-webchat__select-container">
@@ -21,19 +20,7 @@
           <% end %>
         </select>
       </div>
-    <% end %>
     <div class="mobile-webchat__button-container">
-      <% if pensions_and_retirement_page? %>
-        <div class="mobile-webchat__button">
-          <a class="button mobile-webchat__button--pensions disabled">
-            <div class="form-button__text">
-              <span class="form-button__text-service">
-                <%= t('contact_panels.chat_popup_pensions.number') %>
-              </span>
-            </div>
-          </a>
-        </div>
-      <% else %>
         <div class="mobile-webchat__button">
           <a class="button mobile-webchat__button--whatsapp" href="https://wa.me/447701342744" target="_blank" data-dough-webchat-button-whatsapp>
             <svg class="icon-svg--whatsapp">
@@ -45,7 +32,6 @@
             </div>
           </a>
         </div>
-      <% end %>
       <div class="mobile-webchat__button">
         <a class="button mobile-webchat__button--webchat<% if chat_opening_hours.closed? %> disabled<% end %>"
           target="_blank" data-dough-webchat-button-webchat>
@@ -64,6 +50,7 @@
         </a>
       </div>
     </div>
+    <% end %>
     <div class="mobile-webchat__contact">
       <a class="mobile-webchat__contact--link" href="<%= t('contact_panels.chat_popup.contact_link') %>">Other Contact
         Methods</a>

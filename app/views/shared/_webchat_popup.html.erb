@@ -9,14 +9,19 @@
     </svg>
   </div>
   <div class="mobile-webchat__form">
-    <h4><%= t('contact_panels.chat_popup.title') %></h4>
-    <div class="mobile-webchat__select-container">
-      <select class="mobile-webchat__select" data-dough-webchat-select>
-        <% clumps.each do |clump| %>
-        <option value="<%= clump.categories[0].id %>"><%= clump.name %></option>
-        <% end %>
-      </select>
-    </div>
+    <% if pensions_and_retirement_page? %>
+      <h4><b><%= t('contact_panels.chat_popup_pensions.title') %><b></h4>
+      <h4><%= t('contact_panels.chat_popup_pensions.intro') %></h4>
+    <% else %>
+      <h4><b><%= t('contact_panels.chat_popup.title') %><b></h4>
+      <div class="mobile-webchat__select-container">
+        <select class="mobile-webchat__select" data-dough-webchat-select>
+          <% clumps.each do |clump| %>
+          <option value="<%= clump.categories[0].id %>"><%= clump.name %></option>
+          <% end %>
+        </select>
+      </div>
+    <% end %>
     <div class="mobile-webchat__button-container">
       <div class="mobile-webchat__button">
         <a class="button mobile-webchat__button--whatsapp" href="https://wa.me/447701342744" target="_blank"

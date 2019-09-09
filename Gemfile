@@ -59,7 +59,7 @@ gem 'whenever', require: false
 # ========
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
-gem 'cream', '2.1.7'
+gem 'cream', '2.1.8'
 gem 'dough-ruby', '~> 5.39'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'

@@ -12,7 +12,7 @@
     <% if pensions_and_retirement_page? %>
       <%= render 'shared/webchat_popup_pensions' %>
     <% else %>
-    <h4><b><%= t('contact_panels.chat_popup.title') %><b></h4>
+    <h4 class="mobile-webchat__title"><%= t('contact_panels.chat_popup.title') %></h4>
     <div class="mobile-webchat__select-container">
       <select class="mobile-webchat__select" data-dough-webchat-select>
         <% clumps.each do |clump| %>

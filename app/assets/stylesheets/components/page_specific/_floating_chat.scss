@@ -180,6 +180,10 @@
     font-weight: 400;
   }
 
+  h4.mobile-webchat__title {
+    font-weight: 700;
+  }
+
   // min-width 345
   @include respond-to((345 / $base-font-size) * 1em) {
     h4 {

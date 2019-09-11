@@ -14,27 +14,22 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: 1eec0764fd6c5c2bac5b285de174b271d92b22cc
-  ref: 1eec076
-  branch: 10601/show_more_link
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 934f126fc010338809b95d596de30e6876648dd3
+  branch: 9815_Expand/collapse-icon
   specs:
-    debt_advice_locator (3.9.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
+    pacs (3.9.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
       rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -190,7 +185,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    cream (2.1.7)
+    cream (2.1.8)
       faraday (>= 0.9)
       faraday_middleware
     css_parser (1.3.7)
@@ -227,6 +222,22 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
+    debt_advice_locator (3.9.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -463,7 +474,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.10.0)
+    mongo (2.10.1)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)
@@ -491,18 +502,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.9.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -807,12 +806,12 @@ DEPENDENCIES
   chronic
   codeclimate-test-reporter (= 0.6.0)
   cost_calculator_builder (~> 1.1.0)
-  cream (= 2.1.7)
+  cream (= 2.1.8)
   csslint_ruby
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator!
+  debt_advice_locator (= 3.9.0)
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)
@@ -848,7 +847,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.9.0)
+  pacs!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

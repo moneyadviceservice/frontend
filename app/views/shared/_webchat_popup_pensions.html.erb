@@ -18,11 +18,11 @@
       </svg>
       <div class="form-button__text">
         <% if chat_opening_hours.open? %>
-        <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
-        <span class="form-button__text-service">Web Chat</span>
+          <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.available.call_to_action') %></span>
+          <span class="form-button__text-service"><%= t('contact_panels.chat_popup.available.text_webchat') %></span>
         <% else %>
-        <span class="form-button__text-heading">Chat</span>
-        <span class="form-button__text-service">Unavailable</span>
+          <span class="form-button__text-heading">Chat</span>
+          <span class="form-button__text-service">Unavailable</span>
         <% end %>
       </div>
     </a>

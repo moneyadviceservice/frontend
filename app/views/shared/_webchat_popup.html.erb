@@ -43,8 +43,8 @@
               <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.available.call_to_action') %></span>
               <span class="form-button__text-service"><%= t('contact_panels.chat_popup.available.text_webchat') %></span>
             <% else %>
-              <span class="form-button__text-heading">Chat</span>
-              <span class="form-button__text-service">Unavailable</span>
+              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.unavailable.call_to_action') %></span>
+              <span class="form-button__text-service"><%= t('contact_panels.chat_popup.unavailable.text_webchat') %></span>
             <% end %>
           </div>
         </a>
@@ -53,7 +53,7 @@
     <% end %>
     <div class="mobile-webchat__contact">
       <a class="mobile-webchat__contact--link" href="<%= t('contact_panels.chat_popup.contact_link') %>">
-        Other Contact Methods
+        <%= t('contact_panels.chat_popup.contact_text') %>
       </a>
     </div>
   </div>

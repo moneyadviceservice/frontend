@@ -48,7 +48,7 @@
         var chatPopup = document.getElementById('js-chat-popup'); 
       <% end %>
 
-      if(chatMobilePopup) {
+      if(chatMobilePopup.length > 0) {
         chatMobilePopup[0].href = sWOChatstart;
         chatMobilePopup[0].onclick = function () {
           window.open(chatMobilePopup[0].href, "Chat", "width=484,height=361,scrollbars=yes,resizable=yes");

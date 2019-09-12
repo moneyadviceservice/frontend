@@ -1,4 +1,4 @@
-<div aria-hidden="true" class="mobile-webchat__container mobile-webchat--closed" data-dough-component="ChatPopup">
+<div aria-hidden="true" class="mobile-webchat__container mobile-webchat--closed<% if pensions_and_retirement_page? %> pensions-view<% end %>" data-dough-component="ChatPopup">
   <button class="mobile-webchat__close" data-dough-webchat-close>
     <span>X</span>
   </button>
@@ -27,7 +27,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--whatsapp"></use>
           </svg>
           <div class="form-button__text">
-            <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
+            <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.available.call_to_action') %></span>
             <span class="form-button__text-service">WhatsApp</span>
           </div>
         </a>
@@ -40,11 +40,11 @@
           </svg>
           <div class="form-button__text">
             <% if chat_opening_hours.open? %>
-              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.button_text') %></span>
-              <span class="form-button__text-service">Web Chat</span>
+              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.available.call_to_action') %></span>
+              <span class="form-button__text-service"><%= t('contact_panels.chat_popup.available.text_webchat') %></span>
             <% else %>
-              <span class="form-button__text-heading">Chat</span>
-              <span class="form-button__text-service">Unavailable</span>
+              <span class="form-button__text-heading"><%= t('contact_panels.chat_popup.unavailable.call_to_action') %></span>
+              <span class="form-button__text-service"><%= t('contact_panels.chat_popup.unavailable.text_webchat') %></span>
             <% end %>
           </div>
         </a>
@@ -53,7 +53,7 @@
     <% end %>
     <div class="mobile-webchat__contact">
       <a class="mobile-webchat__contact--link" href="<%= t('contact_panels.chat_popup.contact_link') %>">
-        Other Contact Methods
+        <%= t('contact_panels.chat_popup.contact_text') %>
       </a>
     </div>
   </div>

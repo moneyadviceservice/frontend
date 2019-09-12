@@ -152,7 +152,12 @@ en:
       url: https://www.pensionsadvisoryservice.org.uk/TPASChat
     chat_popup:
       title: What would you like to talk about?
-      button_text: Start
+      available:
+        call_to_action: Start
+        text_webchat: Web Chat
+      unavailable:
+        call_to_action: Chat
+        text_webchat: Unavailable
       dropdown_options:
         debt_borrowing: Debt & Borrowing
         homes_mortgages: Homes & Mortgages
@@ -163,6 +168,7 @@ en:
         cars_travel: Cars & Travel
         insurance: Insurance
       contact_link: /en/corporate/contact-us
+      contact_text: Other contact methods
     chat:
       title: Web chat
       available:

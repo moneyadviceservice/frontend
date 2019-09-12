@@ -152,7 +152,12 @@ cy:
       url: https://www.pensionsadvisoryservice.org.uk/TPASChat
     chat_popup:
       title: Beth hoffech chi siarad amdano?
-      button_text: Dechrau
+      available:
+        call_to_action: Dechrau
+        text_webchat: Sgwrs Gwe
+      unavailable:
+        call_to_action: Sgwrs Gwe
+        text_webchat: Ddim ar gael
       dropdown_options:
         debt_borrowing: Dyled a benthyca
         homes_mortgages: Cartrefi a morgeisi
@@ -163,6 +168,7 @@ cy:
         cars_travel: Ceir a theithio
         insurance: Yswiriant
       contact_link: /cy/corporate/cysylltu-a-ni
+      contact_text: Dulliau cysylltu eraill
     chat:
       title: Gwe-sgwrs
       available:

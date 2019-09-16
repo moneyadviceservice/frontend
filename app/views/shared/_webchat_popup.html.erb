@@ -10,7 +10,7 @@
   </div>
   <div class="mobile-webchat__form">
     <% if pensions_and_retirement_page? %>
-      <%= render 'shared/webchat_popup_pensions', locals: {pensions_opening_hours: pensions_opening_hours} %>
+      <%= render 'shared/webchat_popup_pensions' %>
     <% else %>
     <h4 class="mobile-webchat__title"><%= t('contact_panels.chat_popup.title') %></h4>
     <div class="mobile-webchat__select-container">

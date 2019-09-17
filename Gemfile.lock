@@ -475,7 +475,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.10.0)
+    mongo (2.10.1)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (5.4.0)
       activemodel (~> 4.0)
@@ -503,7 +503,7 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.9.0)
+    pacs (3.10.0)
       dough-ruby (~> 5.39)
       dry-struct
       dry-struct-setters
@@ -860,7 +860,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.9.0)
+  pacs (= 3.10.0)
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator (~> 2.6.0)
   poltergeist

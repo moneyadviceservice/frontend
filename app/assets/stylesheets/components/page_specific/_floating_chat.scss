@@ -253,6 +253,23 @@
   .mobile-webchat__button {
     width: 48%;
   }
+  // out of hours pensions
+  &.out-of-hours {
+    justify-content: center;
+
+    // Telephone number button
+    .mobile-webchat__button:nth-child(1) {
+      .mobile-webchat__button--pensions{
+        padding: 10px;
+      }
+    }
+
+    // Webchat button
+    .mobile-webchat__button:nth-child(2) {
+      display: none;
+    }
+  }
+
   // general button styles
   .mobile-webchat__button--whatsapp,
   .mobile-webchat__button--webchat,

@@ -1,4 +1,9 @@
-<div aria-hidden="true" class="mobile-webchat__container mobile-webchat--closed<% if pensions_and_retirement_page? %> pensions-view<% end %>" data-dough-component="ChatPopup">
+<div 
+  aria-hidden="true" 
+  class="mobile-webchat__container mobile-webchat--closed
+    <% if pensions_and_retirement_page? %> pensions-view<% end %>
+    <% if pensions_opening_hours.closed? %> out-of-hours<% end %>"
+  data-dough-component="ChatPopup">
   <button class="mobile-webchat__close" data-dough-webchat-close>
     <span>X</span>
   </button>
@@ -10,7 +15,7 @@
   </div>
   <div class="mobile-webchat__form">
     <% if pensions_and_retirement_page? %>
-      <%= render 'shared/webchat_popup_pensions', locals: {pensions_opening_hours: pensions_opening_hours} %>
+      <%= render 'shared/webchat_popup_pensions' %>
     <% else %>
     <h4 class="mobile-webchat__title"><%= t('contact_panels.chat_popup.title') %></h4>
     <div class="mobile-webchat__select-container">

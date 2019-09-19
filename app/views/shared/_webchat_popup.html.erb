@@ -1,4 +1,9 @@
-<div aria-hidden="true" class="mobile-webchat__container mobile-webchat--closed<% if pensions_and_retirement_page? %> pensions-view<% end %>" data-dough-component="ChatPopup">
+<div 
+  aria-hidden="true" 
+  class="mobile-webchat__container mobile-webchat--closed
+    <% if pensions_and_retirement_page? %> pensions-view<% end %>
+    <% if pensions_opening_hours.closed? %> out-of-hours<% end %>"
+  data-dough-component="ChatPopup">
   <button class="mobile-webchat__close" data-dough-webchat-close>
     <span>X</span>
   </button>

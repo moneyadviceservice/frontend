@@ -74,6 +74,11 @@
   }
   &.pensions-view {
     display: flex;
+
+    // out of hours
+    &.out-of-hours {
+      display: none;
+    }
   }
 
   // raised state in article pages
@@ -253,6 +258,7 @@
   .mobile-webchat__button {
     width: 48%;
   }
+
   // general button styles
   .mobile-webchat__button--whatsapp,
   .mobile-webchat__button--webchat,

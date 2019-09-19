@@ -42,7 +42,7 @@
       chatDescription = document.getElementById('js-chat-description'),
       chatContent = document.getElementById('js-chat-content'),
       // mobile chat popup
-      chatMobilePopup = document.getElementsByClassName('mobile-webchat__button--webchat');
+      chatMobilePopup = document.querySelectorAll('[data-dough-webchat-button-webchat]');
 
       <% if show_floating_chat? %>
         var chatPopup = document.getElementById('js-chat-popup'); 

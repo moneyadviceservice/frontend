@@ -2,16 +2,20 @@
   <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
   <span class="icon icon--call-us"></span><%= @footer.contact.heading %>
   <% end %>
-  <p class="t-contact-introduction contact-panel__contact-introduction">
-    <%= @footer.contact.introduction %>
-  </p>
-  <p class="contact-panel__contact-number">
-    <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
-      <%= @footer.contact.phone_number %>
-    </a>
-  </p>
+  
+  
   <h3 class="contact-panel__opening-times-heading">Open:</h3>
   <ul class="contact-panel__list">
+    <li class="t-contact-introduction contact-panel__additional-info contact-panel__contact-introduction">
+      <%= @footer.contact.introduction %>
+    </li>
+    <li>
+      <p class="contact-panel__contact-number">
+        <a class="contact-panel__telephone t-contact-number" href="<%= t('contact.telephone_number_href') %>">
+          <%= @footer.contact.phone_number %>
+        </a>
+      </p>
+    </li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>

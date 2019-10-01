@@ -116,7 +116,6 @@
 .contact-panel__list {
   @extend .unstyled-list;
   margin: 0 0 $baseline-unit;
-  // flex-grow: 2;
 
   @include respond-to($mq-s) {
     margin: $baseline-unit*2 0;
@@ -129,9 +128,6 @@
 
   &.last-panel {
     margin-top: $baseline-unit*2;
-  }
-  &.email-info {
-    font-size: 0.8rem;
   }
 }
 
@@ -185,10 +181,6 @@
   @include body(24, 48);
   @extend %font-heading-heavy;
   color: $color-heading-default;
-
-  @include respond-to($mq-s) {
-    // margin: $baseline-unit*2 0 $baseline-unit 0;
-  }
 
   @include respond-to($mq-l) {
     @include body(30, 48);

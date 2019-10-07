@@ -28,7 +28,7 @@
   }
 
   @include respond-to($mq-xl) {
-    padding: $baseline-unit*4;
+    padding: $baseline-unit*2;
   }
 }
 
@@ -116,7 +116,6 @@
 .contact-panel__list {
   @extend .unstyled-list;
   margin: 0 0 $baseline-unit;
-  flex-grow: 2;
 
   @include respond-to($mq-s) {
     margin: $baseline-unit*2 0;
@@ -126,13 +125,22 @@
 .contact-panel__additional-info {
   @include body(16, 22);
   margin-bottom: 0;
+
+  &.last-panel {
+    margin-top: $baseline-unit*2;
+  }
 }
 
 .contact-panel__button-container {
-  margin: $baseline-unit*2 0;
+  margin-top: $baseline-unit*2;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
   @include respond-to($mq-l) {
-    margin: $baseline-unit*4 0;
+    margin-top: $baseline-unit*3;
   }
 }
 
@@ -174,10 +182,6 @@
   @extend %font-heading-heavy;
   color: $color-heading-default;
 
-  @include respond-to($mq-s) {
-    margin: $baseline-unit*2 0 $baseline-unit 0;
-  }
-
   @include respond-to($mq-l) {
     @include body(30, 48);
   }
@@ -211,7 +215,7 @@
   .contact-panel__dynamic-content {
     &.is-loading {
       .contact-panel__chat-description,
-      .contact-panel__button {
+      & + .contact-panel__button {
         visibility: hidden;
       }
       .contact-panel__preloader {
@@ -220,13 +224,8 @@
     }
 
     &.is-loaded {
-      & {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 2;
-      }
       .contact-panel__chat-description,
-      .contact-panel__button {
+      & + .contact-panel__button {
         visibility: visible;
       }
       .contact-panel__preloader {
@@ -239,7 +238,7 @@
     .contact-panel__dynamic-content {
       &.is-loading {
         .contact-panel__chat-description,
-        .contact-panel__button {
+        & + .contact-panel__button {
           visibility: visible;
         }
         .contact-panel__preloader {

@@ -146,10 +146,6 @@
 
 .contact-panel__button {
   @include inline-block;
-
-  &.is-disabled {
-    visibility: hidden;
-  }
 }
 
 .contact-panel__button--sharing {

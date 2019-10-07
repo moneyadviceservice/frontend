@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   @include respond-to($mq-l) {
     margin-top: $baseline-unit*3;

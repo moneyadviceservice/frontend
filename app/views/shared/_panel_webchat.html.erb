@@ -29,5 +29,14 @@
       <%= chat_opening_hours.call_to_action %>
     </div>
   </div>
+  <!-- Pensions Webchat -->
+  <% if pensions_opening_hours.open? %>
+    <div>
+      <h4><%= t('contact_panels.chat.pensions_header') %></h4>
+      <a href="https://www.pensionsadvisoryservice.org.uk/TPASChat" target="_blank">
+        <%= t('contact_panels.chat.pensions_description') %>
+      </a>
+    </div>
+  <% end %>
   <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
 </div>

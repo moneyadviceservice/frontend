@@ -30,7 +30,7 @@
     </div>
   </div>
   <!-- Pensions Webchat -->
-  <% if pensions_opening_hours.open? %>
+  <% if pensions_opening_hours.open? and pensions_and_retirement_page? %>
     <div>
       <h4><%= t('contact_panels.chat.pensions_header') %></h4>
       <a href="https://www.pensionsadvisoryservice.org.uk/TPASChat" target="_blank">

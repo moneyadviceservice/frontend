@@ -1,12 +1,17 @@
 <div class="contact-panel contact-panel__chat-open" id="js-whatsapp-content">
   <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-  <%= render 'shared/svg/whats_app_logo' %>WhatsApp
+    <%= render 'shared/svg/whats_app_logo' %>
+    WhatsApp
   <% end %>
   <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-    <li class="contact-panel__additional-info"><%= t('contact_panels.whatsapp.text1') %></li>
-    <li class="contact-panel__additional-info"><%= t('contact_panels.whatsapp.text2') %></li>
     <li class="contact-panel__additional-info">
-      <p><%= t('contact_panels.whatsapp.text3') %></p>
+      <%= t('contact_panels.whatsapp.text1') %>
+    </li>
+    <li class="contact-panel__additional-info">
+      <%= t('contact_panels.whatsapp.text2') %>
+    </li>
+    <li class="contact-panel__additional-info last-panel">
+      <%= t('contact_panels.whatsapp.text3') %>
     </li>
   </ul>
   <% if chat_opening_hours.open? %>

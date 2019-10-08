@@ -1,28 +1,42 @@
 <div class="contact-panel contact-panel__chat-<%= chat_opening_hours.status %> t-chat" id="js-chat">
+  <!-- Top Logo -->
   <%= heading_tag level: 2, class: 'contact-panel__heading' do %>
-  <span class="icon icon--web-chat"></span>
-  <%= @footer.web_chat.heading %>
+    <span class="icon icon--web-chat"></span>
+    <%= @footer.web_chat.heading %>
   <% end %>
+  <!-- No js enabled text -->
   <p class="contact-panel__chat-javascript t-chat-javascript">
     <%= t('contact_panels.chat.javascript.description_html') %>
   </p>
+  <!-- Spinning Loader -->
   <div class="contact-panel__dynamic-content is-loading" id="js-chat-content">
     <div class="contact-panel__preloader"></div>
     <p class="contact-panel__chat-description t-chat-description" id="js-chat-description">
       <%= chat_opening_hours.description %>
       <%= '*' if translation?('contact_panels.chat.smallprint') %>
     </p>
-    <h3 class="contact-panel__opening-times-heading">Open:</h3>
-    <ul class="t-chat-opening-times contact-panel__list unstyled-list">
-      <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
-      <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
-      <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
-    </ul>
-    <div class="contact-panel__button-container" id="js-chat-cta">
-      <div class="contact-panel__button button is-disabled t-chat-button">
-        <%= chat_opening_hours.call_to_action %>
-      </div>
+  </div>
+  <!-- Opening Times -->
+  <h3 class="contact-panel__opening-times-heading">Open:</h3>
+  <ul class="t-chat-opening-times contact-panel__list unstyled-list">
+    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_one %></li>
+    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_two %></li>
+    <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
+  </ul>
+  <!-- Button -->
+  <div class="contact-panel__button-container" id="js-chat-cta">
+    <div class="contact-panel__button button is-disabled t-chat-button">
+      <%= chat_opening_hours.call_to_action %>
     </div>
   </div>
+  <!-- Pensions Webchat -->
+  <% if pensions_opening_hours.open? and pensions_and_retirement_page? %>
+    <div>
+      <h4><%= t('contact_panels.chat.pensions_header') %></h4>
+      <a href="https://www.pensionsadvisoryservice.org.uk/TPASChat" target="_blank">
+        <%= t('contact_panels.chat.pensions_description') %>
+      </a>
+    </div>
+  <% end %>
   <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
 </div>

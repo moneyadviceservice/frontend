@@ -20,7 +20,7 @@ Feature: Footer
     Given I visit the website in Welsh
     Then I should see the footer
       | text                                                                |
-      | Gwe-sgwrs            |
+      | Gwe-sgwrs                                                           |
       | A oes gennych chi gwestiwn? Bydd ein cynghorwyr yn eich arwain      |
       | Dydd Llun i Dydd Gwener, 8am i 8pm                                  |
       | Dydd Sadwrn, 9am i 1pm                                              |

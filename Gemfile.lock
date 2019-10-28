@@ -15,16 +15,17 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator
-  revision: 489598d8c658cb1011cb235ebca344675b94d7aa
-  branch: 10759-Stamp_Duty_Copy_Changes
+  revision: c5702347b2609ac0b4c6b43cb64a3fc48591739c
+  branch: 10823-Tooltip_Bug
   specs:
-    mortgage_calculator (3.8.2)
+    mortgage_calculator (3.9.0)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.36)
       mas-fonts
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
+      sprockets (< 4)
       underscore-rails
 
 GEM

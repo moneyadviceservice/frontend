@@ -12,7 +12,7 @@ Feature: Footer
       | Monday to Friday, 8am to 8pm                                        |
       | Saturday, 9am to 1pm.                                               |
       | Sunday and Bank Holidays, closed                                    |
-      | Call Us                                                             |
+      | Contact Us                                                          |
       | Give us a call for free and impartial money advice.                 |
       | 0800 138 7777                                                       |
 
@@ -24,7 +24,7 @@ Feature: Footer
       | A oes gennych chi gwestiwn? Bydd ein cynghorwyr yn eich arwain      |
       | Dydd Llun i Dydd Gwener, 8am i 8pm                                  |
       | Dydd Sadwrn, 9am i 1pm                                              |
-      | Ffoniwch ni                                                         |
+      | Cysylltwch â ni​​                                                     |
       | Ffoniwch ni am gyngor ariannol am ddim a diduedd.                   |
       | 0800 138 0555                                                       |
       | Mae galwadau am ddim                                                |

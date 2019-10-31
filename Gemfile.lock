@@ -219,7 +219,7 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.10.0)
+    debt_advice_locator (3.11.0)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -478,6 +478,15 @@ GEM
       mongo (>= 2.5.1, < 3.0.0)
       origin (~> 2.3)
       tzinfo (>= 0.3.37)
+    mortgage_calculator (3.9.1)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.36)
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+      underscore-rails
     multi_json (1.13.1)
     multi_test (0.1.2)
     multipart-post (2.1.1)
@@ -733,7 +742,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    uk_postcode (2.1.4)
+    uk_postcode (2.1.5)
     underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
@@ -812,7 +821,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 3.10.0)
+  debt_advice_locator (~> 3.11.0)
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)
@@ -842,7 +851,7 @@ DEPENDENCIES
   mailjet
   mas-cms-client (= 1.20.0)
   meta-tags (~> 2.4)
-  mortgage_calculator!
+  mortgage_calculator (~> 3.9.1)
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri (>= 1.10.3)

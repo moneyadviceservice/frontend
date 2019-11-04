@@ -1,7 +1,7 @@
 <div class="contact-panel contact-panel--last">
   <%= heading_tag level: 2, class: 'contact-panel__heading t-contact-heading' do %>
     <span class="icon icon--call-us"></span>
-    <%= @footer.contact.heading %>
+    <%= t('contact_panels.call_us.title') %>
   <% end %>
   <h3 class="contact-panel__opening-times-heading">Open:</h3>
   <ul class="contact-panel__list">
@@ -18,6 +18,24 @@
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_one %></li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
+    <!-- Email -->
+    <li class="contact-panel__additional-info">
+      <p>
+        <%= t('contact_panels.call_us.email_info') %>
+        <a href="mailto:<%= t('contact_panels.call_us.email_address') %>"><%= t('contact_panels.call_us.email_address') %></a>.
+      </p>
+    </li>
+    <!-- Button -->
+    <li class="contact-panel__additional-info">
+      <div class="contact-panel__button-container">
+        <a class="contact-panel__button button" href="mailto:<%= t('contact_panels.call_us.email_address') %>">
+          <%= t('contact_panels.call_us.email_button') %>
+        </a>
+      </div>
+    </li>
+    <li class="contact-panel__additional-info">
+      <p><%= t('contact_panels.call_us.email_response_time') %></p>
+    </li>
   </ul>
   <p class="smallprint"><%= @footer.contact.small_print %></p>
 </div>

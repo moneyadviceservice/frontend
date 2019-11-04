@@ -14,12 +14,12 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/debt-advice-locator
-  revision: 9611b68107d96e5800143d17aab5afd3fddfef3b
-  ref: 9611b68
-  branch: 10739_Fix-spinner-for-Use-current-location
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: f69f02c27c5ce05e4c910177ac5b5b5d45b5d10f
+  ref: f69f02c
+  branch: 10687_Add-spinner-to-Search-button
   specs:
-    debt_advice_locator (3.10.0)
+    debt_advice_locator (3.11.0)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable

@@ -20,17 +20,17 @@ Clone the repository:
 $ git clone --recursive https://github.com/moneyadviceservice/frontend.git
 ```
 
-Install Mysql 5.5
+Install Mysql 5.7
 
 ```sh
-$ brew install mysql55
-$ brew link mysql55 --force
+$ brew install mysql@5.7
+$ brew link mysql@5.7 --force
 ```
 
 Make sure MySQL is running.
 
 ```sh
-$ brew services start mysql55
+$ brew services start mysql@5.7
 ```
 
 Install Bower

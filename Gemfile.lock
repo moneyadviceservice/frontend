@@ -13,6 +13,24 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit
+  revision: 266cfb9a7a6a88e1034207f75fa3cadb8300055a
+  branch: 10771_Urgent-Support-link
+  specs:
+    universal_credit (4.1.1)
+      autoprefixer-rails
+      devise
+      dough-ruby (~> 5.36)
+      mas-cms-client (~> 1.1)
+      meta-tags
+      mysql2 (= 0.4.9)
+      preamble
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails
+      uglifier
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -739,18 +757,6 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
-    universal_credit (4.1.1)
-      autoprefixer-rails
-      devise
-      dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
-      meta-tags
-      mysql2 (= 0.4.9)
-      preamble
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails
-      uglifier
     uri_template (0.7.0)
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
@@ -881,7 +887,7 @@ DEPENDENCIES
   turnout
   uglifier
   unicorn-rails
-  universal_credit (~> 4.1.1)
+  universal_credit!
   vcr
   webmock
   whenever

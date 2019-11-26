@@ -31,9 +31,16 @@
 @import 'yeast/assets/layout/common/all';
 @import 'layout/page_specific/all';
 
-// Dough Theme Components
+// Yeast Components
+@import 'yeast/assets/components/common/skip_to_content';
+@import 'yeast/assets/components/common/mas_logo';
+@import 'yeast/assets/components/common/breadcrumb';
+@import 'yeast/assets/components/common/icon';
+@import 'yeast/assets/components/common/icon_2x';
+@import 'yeast/assets/components/common/lists';
+@import 'yeast/assets/components/common/icon_svg';
 @import 'yeast/assets/components/dough_theme/variables';
-@import 'yeast/assets/components/dough_theme/_all.scss';
+@import 'yeast/assets/components/dough_theme/all.scss';
 
 // Local Components
 @import 'components/common/all';

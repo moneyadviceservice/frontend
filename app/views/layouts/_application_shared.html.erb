@@ -12,8 +12,40 @@
   <%= render 'shared/no_js_nav' %>
   <%= render 'shared/global_nav' %>
 
+  <div class="l-constrained">
+    <noscript>
+      <p>You have javascript turned off. Please turn javascript on to see the tools in ac(on.</p>
+    </noscript>
+
+    <p>
+      <a id="health_check" class="mas-widget" target="_blank" lang="en" href="https://www.moneyadviceservice.org.uk/en/tools/health-check">
+        Money Health Check
+      </a>
+    </p>
+
+    <p>
+      <a id="loan_calculator" class="mas-widget" target="_blank" lang="en" href="https://www.moneyadviceservice.org.uk/en/tools/loan-calculator/loan">
+        Loan Calculator
+      </a>
+    </p>
+
+    <p>
+      <a id="savings_calculator" class="mas-widget" target="_blank" lang="en" href="https://www.moneyadviceservice.org.uk/en/tools/savings-calculator">
+        Savings Calculator
+      </a>
+    </p>
+
+    <p>
+      <a id="pensions_calculator" class="mas-widget" target="_blank" lang="en" href="https://www.moneyadviceservice.org.uk/en/tools/pension-calculator">
+        Pensions Calculator
+      </a>
+    </p>
+  </div>
+
   <%= yield %>
 
   <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top?, contact_panels_homepage: contact_panels_homepage? %>
   <%= render 'shared/footer' %>
+
+  <script src="http://localhost:5000/assets/syndication/tools.js"></script>
 <% end %>

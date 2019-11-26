@@ -14,19 +14,19 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/mortgage_calculator
-  revision: c5702347b2609ac0b4c6b43cb64a3fc48591739c
-  branch: 10823-Tooltip_Bug
+  remote: git@github.com:moneyadviceservice/savings_calculator.git
+  revision: f6161449ed1296a65ec8195b11bb78c86e9f93f8
+  branch: 10978_Update-links
   specs:
-    mortgage_calculator (3.9.0)
-      angularjs-rails (~> 1.2.18)
+    savings_calculator (1.9.1)
+      autoprefixer-rails
       dough-ruby (~> 5.36)
+      jquery-rails
       mas-fonts
-      modernizr-rails
+      meta-tags
       rails (>= 4, < 5)
       sass-rails
       sprockets (< 4)
-      underscore-rails
 
 GEM
   remote: https://rubygems.org/
@@ -219,7 +219,7 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.11.0)
+    debt_advice_locator (3.12.0)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -679,14 +679,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.9.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sexp_processor (4.12.0)
@@ -821,7 +813,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (~> 3.11.0)
+  debt_advice_locator (= 3.12.0)
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)
@@ -881,7 +873,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails
-  savings_calculator (~> 1.9.1)
+  savings_calculator!
   sdoc
   shoulda-matchers
   site_prism

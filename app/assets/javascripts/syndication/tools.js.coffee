@@ -272,6 +272,8 @@
       cy:
         path: "cy/tools/cyfrifiannell-benthyciadau/loan"
       title: "Loan calculator"
+      width: "100%"
+      height: "1200px"
 
     loan_calculator_beta:
       en:

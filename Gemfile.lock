@@ -14,22 +14,19 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/universal_credit
-  revision: 266cfb9a7a6a88e1034207f75fa3cadb8300055a
-  branch: 10771_Urgent-Support-link
+  remote: git@github.com:moneyadviceservice/savings_calculator.git
+  revision: a7e1f8abb1628517941c78b48ab611824af331a1
+  branch: 10978_Update-links_target-syndicated
   specs:
-    universal_credit (4.1.1)
+    savings_calculator (1.10.0)
       autoprefixer-rails
-      devise
       dough-ruby (~> 5.36)
-      mas-cms-client (~> 1.1)
+      jquery-rails
+      mas-fonts
       meta-tags
-      mysql2 (= 0.4.9)
-      preamble
       rails (>= 4, < 5)
-      redcarpet
       sass-rails
-      uglifier
+      sprockets (< 4)
 
 GEM
   remote: https://rubygems.org/
@@ -682,14 +679,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.9.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sexp_processor (4.12.0)
@@ -872,7 +861,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails
-  savings_calculator (~> 1.9.1)
+  savings_calculator!
   sdoc
   shoulda-matchers
   site_prism

@@ -13,6 +13,21 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/savings_calculator.git
+  revision: a7e1f8abb1628517941c78b48ab611824af331a1
+  branch: 10978_Update-links_target-syndicated
+  specs:
+    savings_calculator (1.10.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      jquery-rails
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -664,15 +679,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    savings_calculator (1.10.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sexp_processor (4.12.0)
@@ -867,7 +873,7 @@ DEPENDENCIES
   rubocop
   rubytree
   sass-rails
-  savings_calculator (~> 1.10.0)
+  savings_calculator!
   sdoc
   shoulda-matchers
   site_prism

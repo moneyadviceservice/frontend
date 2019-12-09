@@ -69,6 +69,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :show_floating_chat?
 
+  def show_home_banner?
+    false
+  end
+
+  helper_method :show_home_banner?
+
   def display_skip_to_main_navigation?
     true
   end

@@ -1,4 +1,4 @@
-<header class="l-header<%= ' l-header--non-sticky' if hide_sticky_header? %>" role="banner">
+<header class="l-header<%= ' l-header--non-sticky' if hide_sticky_header? %><%= ' l-header--home' if show_home_banner? %>" role="banner">
   <div class="l-constrained l-header__content">
     <div class="mas-logo">
       <%= link_to main_app.root_path, class: 'mas-logo__link' do %>

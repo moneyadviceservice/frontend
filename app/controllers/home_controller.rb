@@ -15,6 +15,10 @@ class HomeController < ApplicationController
     true
   end
 
+  def show_home_banner?
+    true
+  end
+
   private
 
   def resource

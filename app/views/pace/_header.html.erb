@@ -1,0 +1,11 @@
+<header class="l-header l-pace__header" role="banner">
+  <div class="l-constrained l-header__content">
+    <div class="mas-logo">
+      <%= link_to main_app.root_path, class: 'mas-logo__link' do %>
+        <%= image_tag("logo-sprite-#{I18n.locale}.png", alt: t('layouts.base.title'), class: 'mas-logo__img') %>
+      <% end %>
+    </div>
+
+    <div class="l-header__strapline"><%= t('layouts.base.strapline') %></div>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+<section class="l-pace__advice">
+  <div class="l-constrained">
+    <div class="l-pace__advice__content">
+      <%= heading_tag t('pace.advice.heading'), level: 3, class: 'l-pace__advice__heading' %>
+      <%= t('pace.advice.text_html') %>
+      <ul class="l-pace__advice__organisations">
+        <% t('pace.advice.organisations').each do |organisation| %>
+          <li class="l-pace__advice__organisation l-pace__advice__organisations__<%= organisation[:imageclass] %>"><%= image_tag "pace/#{organisation[:imageclass]}.png" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

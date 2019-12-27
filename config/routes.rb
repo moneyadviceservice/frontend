@@ -79,7 +79,7 @@ Rails.application.routes.draw do
 
     mount Pacs::Engine => '/tools/:tool_id',
           constraints: ToolMountPoint.for(:pacs)
-    
+
     mount PaydayLoansIntervention::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:payday_loans)
 
@@ -164,6 +164,10 @@ Rails.application.routes.draw do
     get '/employer-best-practices/money-guide', to: 'employer_best_practices#money_guide'
     get '/employer-best-practices/my-business', to: 'employer_best_practices#my_business'
     get '/employer-best-practices/other-employers', to: 'employer_best_practices#other_employers'
+
+    # PACE
+    get '/pace', to: 'pace#show'
+    get '/pace/privacy', to: 'pace#privacy'
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

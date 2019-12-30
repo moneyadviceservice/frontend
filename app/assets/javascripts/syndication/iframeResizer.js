@@ -7,7 +7,7 @@ window.iframeResizer = function(msgPrefix, targetOrigin, minFrameHeight) {
   targetOrigin = targetOrigin || '*';
 
   return {
-    start: function() {
+    start: function(toolID) {
       if (!window.postMessage) {
         return;
       }
@@ -30,11 +30,13 @@ window.iframeResizer = function(msgPrefix, targetOrigin, minFrameHeight) {
 
       timer = setInterval(function() {
         var documentHeight = Math.max(
-                frameTopMargin + frameBtmMargin + bodyNode.clientHeight,
-            minFrameHeight
+          frameTopMargin + frameBtmMargin + bodyNode.clientHeight,
+          minFrameHeight
         );
+
         if (documentHeight !== currentHeight) {
-          window.parent.postMessage(msgPrefix + documentHeight, targetOrigin);
+          window.parent.postMessage(msgPrefix + documentHeight + '-' + toolID, targetOrigin);
+
           currentHeight = documentHeight;
         }
       }, 200);

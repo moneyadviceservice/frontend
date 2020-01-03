@@ -14,21 +14,29 @@
 
     Widget.prototype.render = function() {
       var renderParts;
+
       this.setPartnerToolsURL();
+
       renderParts = [];
+
       if (!this.dataAttr("omit_logo")) {
         renderParts.push(this.createLogo());
       }
+
       renderParts.push(this.createIFrame());
+
       if (masConfig.gaIframeRequired(this.targetNode)) {
         renderParts.push(this.createGAIFrame());
       }
+
       this.addToDocument(this.createContainer.apply(this, renderParts));
+
       return this.removeTargetNode();
     };
 
     Widget.prototype.setPartnerToolsURL = function() {
       var domains, hostname;
+
       domains = {
         'www.preview.dev.mas.local': 'https://preview-partner-tools.dev.mas.local/',
         'www.qa.dev.mas.local': 'https://qa-partner-tools.dev.mas.local/',
@@ -37,6 +45,7 @@
         'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/',
         'www.uat.moneyadviceservice.org.uk': 'https://uat-partner-tools.moneyadviceservice.org.uk/'
       };
+
       hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
       masConfig.toolsConfig = {
         syndication_url: 'https://partner-tools.moneyadviceservice.org.uk',
@@ -44,6 +53,7 @@
           ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
         }
       };
+
       if (domains[hostname]) {
         return masConfig.toolsConfig['syndication_url'] = domains[hostname];
       }
@@ -51,7 +61,9 @@
 
     Widget.prototype.createContainer = function() {
       var contents;
+
       contents = 1 <= arguments.length ? slice.call(arguments, 0) : [];
+
       return "<div class='" + masConfig.containerClass + "' id='" + this.targetNode.id + "-container' style='" + masConfig.containerStyles + "'>\n  " + (contents.join('\n')) + "\n</div>";
     };
 
@@ -73,23 +85,31 @@
 
     Widget.prototype.addToDocument = function(html) {
       var child, fragment, tmp;
+
       fragment = document.createDocumentFragment();
       tmp = document.createElement('body');
       tmp.innerHTML = html;
+      tmp.dataset.toolid = this.targetNode.id;
+
       while (child = tmp.firstChild) {
         fragment.appendChild(child);
       }
+
       this.targetNode.parentNode.insertBefore(fragment, this.targetNode);
+
       return fragment = tmp = null;
     };
 
     Widget.prototype.dataAttr = function(attribute) {
       var config, targetNodeAttr;
+
       config = masConfig.toolConfig[this.id];
       targetNodeAttr = this.targetNode.getAttribute("data-" + attribute);
+
       if (targetNodeAttr != null) {
         return targetNodeAttr;
       }
+
       if (config != null) {
         return config[attribute];
       }
@@ -97,7 +117,5 @@
     };
 
     return Widget;
-
   })();
-
 }).call(this);

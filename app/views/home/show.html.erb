@@ -20,6 +20,32 @@
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
+<div>
+  <p>
+    <noscript>You have javascript turned off. Please turn javascript on to see the tools in action.</noscript>
+  </p>
+
+  <p>
+     <a id="savings_calculator"‪
+          class="mas-widget"
+          target="_blank"
+          href="https://www.moneyadviceservice.org.uk/en/tools/savings-calculator">
+            Savings Caculator
+    </a>
+  </p>
+
+  <p>
+     <a id="pensions_calculator"‪
+          class="mas-widget"
+          target="_blank"
+          href="https://www.moneyadviceservice.org.uk/en/tools/pension-calculator">
+            Pension Caculator
+    </a>
+  </p>
+
+  <script src="https://www.moneyadviceservice.org.uk/assets/syndication/tools.js"></script>‪
+</div>
+
 <%= render 'shared/home_top', item: @resource %>
 
 <%= render 'shared/tool_promos', items: @resource.tools %>

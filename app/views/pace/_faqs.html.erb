@@ -1,0 +1,17 @@
+<section class="l-pace__faqs">
+  <div class="l-constrained">
+    <div class="l-pace__faqs__content">
+      <%= heading_tag t('pace.faqs.heading'), level: 3 %>
+      <ul class="l-pace__faqs__list">
+        <% t('pace.faqs.list').each do |listitem| %>
+          <li class="l-pace__faqs__list-item">
+            <%= heading_tag listitem[:heading], level: 4, class: 'l-pace__faqs__list__heading' %>
+            <div class="l-pace__faqs__list__content">
+              <p><%= listitem[:content] %></p>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

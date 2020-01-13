@@ -1,0 +1,13 @@
+<%= render layout: 'layouts/base' do %>
+  <%= render 'shared/maps_banner' %>
+
+  <%= render 'pace/header' %>
+
+  <div class="l-pace">
+    <main class="l-main__primary" role="main">
+      <%= yield %>
+    </main>
+  </div>
+
+  <%= render 'shared/footer' %>
+<% end %>

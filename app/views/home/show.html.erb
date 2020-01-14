@@ -20,6 +20,30 @@
 
 <%= heading_tag t('layouts.base.title'), class: 'visually-hidden' %>
 
+<!-- TEMPORARY EMBED OF TWO SYNDICATED TOOLS BEGINS -->
+<div>
+  <p>
+    <noscript>You have javascript turned off. Please turn javascript on to see the tools in action.</noscript>
+  </p>
+
+  <p>
+    <a id="savings_calculator"‪
+       class="mas-widget"
+       target="_blank"
+       href="url of tool page">Savings Caculator</a>
+  </p>
+
+  <p>
+    <a id="pension_calculator"‪
+       class="mas-widget"
+       target="_blank"
+       href="url of tool page">Pension Caculator</a>
+  </p>
+</div>
+
+<script src="http://localhost:3000/assets/syndication/tools.js"></script>‪
+<!-- TEMPORARY EMBED OF TWO SYNDICATED TOOLS ENDS -->
+
 <%= render 'shared/home_top', item: @resource %>
 
 <%= render 'shared/tool_promos', items: @resource.tools %>

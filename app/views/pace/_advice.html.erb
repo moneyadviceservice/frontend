@@ -4,8 +4,9 @@
       <%= heading_tag t('pace.advice.heading'), level: 3, class: 'l-pace__advice__heading' %>
       <%= t('pace.advice.text_html') %>
       <ul class="l-pace__advice__organisations">
-        <li class="l-pace__advice__organisations__fca"><%= image_tag 'pace/fca.png' %></li>
-        <li class="l-pace__advice__organisations__hmgovernment"><%= image_tag 'pace/hmgovernment.png' %></li>
+        <% t('pace.advice.organisations').each do |organisation| %>
+          <li class="l-pace__advice__organisation l-pace__advice__organisations__<%= organisation[:imageclass] %>"><%= image_tag "pace/#{organisation[:imageclass]}.png" %></li>
+        <% end %>
       </ul>
     </div>
   </div>

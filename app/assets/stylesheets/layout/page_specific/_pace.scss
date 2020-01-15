@@ -1,7 +1,9 @@
 .l-pace {
   main {
-    display: flex;
-    flex-wrap: wrap;
+    @include respond-to($mq-m) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   section {
@@ -11,9 +13,7 @@
     @include respond-to($mq-m) {
       &.l-pace__help,
       &.l-pace__advice {
-        @include respond-to($mq-m) {
-          @include column(6);
-        }
+        @include column(6);
       }
     }
   }
@@ -176,9 +176,67 @@
   }
 }
 
+.l-pace__help,
+.l-pace__advice {
+  @include respond-to($mq-m) {
+    position: relative;
+  }
+}
+
+.l-pace__help:before,
+.l-pace__advice:before {
+  @include respond-to($mq-m) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: (22 / 16) + rem;
+    bottom: 0;
+    border-left: solid 3px $color-green-secondary;
+  }
+
+  @include respond-to($mq-l) {
+    top: (22 * 1.5) / 16 + rem;
+  }
+}
+
+.l-pace__help__content {
+  @include respond-to($mq-m) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.l-pace__advice__content {
+  @include respond-to($mq-m) {
+    padding-bottom: calc(45px + 1rem);
+  }
+}
+
+.l-pace__help__content,
+.l-pace__advice__content {
+  @include respond-to($mq-m) {
+    padding-left: 10px;
+  }
+}
+
+.l-pace__help__link,
+.l-pace__advice__organisations {
+  @include respond-to($mq-m) {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.l-pace__advice__organisation {
+  @include respond-to($mq-m) {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+}
+
 .l-pace__advice__organisations__fca img,
 .l-pace__advice__organisations__hmgovernment img {
-  height: 50px;
+  height: 45px;
 }
 
 .l-pace__adviser__list {

@@ -1,5 +1,16 @@
 en:
   pace:
+    nav:
+      links:
+        - id: how-it-works
+          text: How it works
+        - id: advice-organisations
+          text: Advice organisations
+        - id: faqs
+          text: FAQs
+        - id: your-data
+          text: Your data
+      CTA: Get online advice now
     introduction:
       heading: Independent, confidential and impartial money advice
       subhead: The National Money Advice Network
@@ -13,6 +24,9 @@ en:
       heading: Advice you can trust
       text_html: <p>The network is run by the Money Advice Service, a UK government body that helps you access free, confidential and impartial debt advice.</p>
                  <p>All the debt advice services we partner with hold a standard or membership code accredited by the Money Advice Service and the Financial Conduct Authority.</p>
+      organisations:
+        - imageclass: fca
+        - imageclass: hmgovernment
     wellbeing:
       heading: Improving your wellbeing
       text_html: <p>Money worries can take over your life and seriously affect your mental health and relationships.</p>
@@ -102,3 +116,4 @@ en:
       heading: Your data and privacy
       text: Your privacy is extremely important to us. We don’t pass your details to anyone outside our network. Within our network we only pass on your contact details to the debt advice agency we connect you with. This speeds up the process and you won’t have to repeat your story every time you speak to someone.
       link: Read our Privacy Policy
+    new_window: opens in a new window

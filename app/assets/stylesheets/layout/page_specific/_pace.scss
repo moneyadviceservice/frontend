@@ -1,19 +1,82 @@
+.l-pace {
+  main {
+    @include respond-to($mq-m) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .l-pace__2-section {
+    @include respond-to($mq-m) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: $baseline-unit * 4;
+
+    @include respond-to($mq-m) {
+      &.l-pace__help,
+      &.l-pace__advice {
+        @include column(6);
+      }
+
+      &.l-pace__organisations {
+        margin-bottom: 0;
+        padding-bottom: $baseline-unit * 4;
+      }
+    }
+  }
+}
+
+.l-pace__header {
+  .mas-logo {
+    width: calc(164px + #{$baseline-unit * 3});
+
+    @include respond-to($mq-m) {
+      width: calc(230px + #{$baseline-unit * 3});
+    }
+  }
+
+  .l-header__strapline {
+    @include paragraph(14, 24);
+
+    color: $color-white;
+    border-left: 1px solid;
+    font-weight: 500;
+    padding-left: $baseline-unit*3;
+    position: absolute;
+    top: 50%;
+    margin-top: -$baseline-unit*1.5;
+
+    @include respond-to($mq-s) {
+      display: inline-block;
+    }
+  }
+}
+
+.l-pace-nav {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+    width: 100%;
+    background: $color-yellow-light;
+  }
+}
+
 .l-pace__introduction__panel__content,
 .l-pace__help__content,
 .l-pace__advice__content,
 .l-pace__wellbeing__content,
-.l-pace__online_advice__content,
+.l-pace__online_advice__inner,
 .l-pace__faqs__content,
-.l-pace__organisations__content,
-.l-pace__referred__inner,
+.l-pace__organisations__inner,
+.l-pace__referred__content,
 .l-pace__privacy__content {
   @include column(12);
-}
-
-.l-pace__online_advice__content {
-  padding: $baseline-unit * 2;
-  border-radius: $baseline-unit * 2;
-  background: $color-yellow-light;
 }
 
 .l-pace__introduction__heading,
@@ -29,41 +92,192 @@
 .l-pace__introduction__heading,
 .l-pace__adviser__heading {
   @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(8);
+  }
+}
+
+.l-pace__online_advice {
+  @include respond-to($mq-m) {
+    background: $color-yellow-light;
+  }
+}
+
+.l-pace__online_advice__inner {
+  padding: $baseline-unit * 2;
+  border-radius: $baseline-unit * 2;
+  background: $color-yellow-light;
+
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: none;
+    background: transparent;
+  }
 }
 
 .l-pace__online_advice__heading {
   margin-top: 0;
 }
 
+.l-pace__online_advice__heading,
+.l-pace__online_advice__content,
+.l-pace__online_advice__cta {
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
+
+.l-pace__online_advice__heading,
+.l-pace__online_advice__cta {
+  @include respond-to($mq-m) {
+    float: left;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(4);
+  }
+}
+
+.l-pace__online_advice__content {
+  @include respond-to($mq-m) {
+    float: right;
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(8);
+
+    float: right;
+  }
+}
+
+.l-pace__online_advice__cta {
+  @include respond-to($mq-m) {
+    width: auto;
+  }
+}
+
 .l-pace__advice__organisations,
 .l-pace__adviser__list,
 .l-pace__faqs__list,
 .l-pace__organisations__list,
-.l-pace__referred__list {
+.l-pace__referred__list,
+.l-pace-nav__items {
   list-style: none;
   padding: 0;
 }
 
-.l-pace__introduction__image,
-.l-pace__wellbeing__image,
-.l-pace__organisations__image {
+.l-pace__introduction__image__content,
+.l-pace__wellbeing__image__content,
+.l-pace__organisations__image__content {
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.l-pace__introduction__image {
+.l-pace__wellbeing {
+  @include respond-to($mq-m) {
+    background-color: $color-grey-pale;
+  }
+}
+
+.l-pace__wellbeing__inner {
+  @include respond-to($mq-m) {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.l-pace__wellbeing__image,
+.l-pace__wellbeing__content {
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
+
+.l-pace__wellbeing__content {
+  @include respond-to($mq-m) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.l-pace__wellbeing__image__content {
+  @include respond-to($mq-m) {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.l-pace-nav__items {
   @include column(12);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: $baseline-unit;
+  margin-bottom: $baseline-unit;
+}
+
+.l-pace-nav__item {
+  margin: 0;
+  padding: $baseline-unit*3 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.l-pace-nav__item:first-child {
+  padding-left: 0;
+}
+
+.l-pace-nav__cta {
+  position: absolute;
+  right: 0;
+}
+
+.l-pace__introduction__content {
+  @include respond-to($mq-m) {
+    display: inline-flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+  }
+
+  @include respond-to($mq-l) {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.l-pace__introduction__image__content {
+  @include column(12);
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin: 0;
+  }
 
   padding-top: 401/409*100%;
   background-image: image_url('pace/introduction.png');
 }
 
-.l-pace__wellbeing__image {
+.l-pace__wellbeing__image__content {
   padding-top: 370/570*100%;
   background-image: image_url('pace/wellbeing.png');
 }
 
-.l-pace__organisations__image {
+.l-pace__organisations__image__content {
   padding-top: 335/597*100%;
   background-image: image_url('pace/organisations.png');
 }
@@ -75,24 +289,101 @@
   background-color: $color-off-white;
 }
 
+.l-pace__introduction__panel {
+  @include respond-to($mq-m) {
+    @include column(8);
+  }
+}
+
+.l-pace__introduction__panel__content {
+  @include column(12);
+}
+
+.l-pace__introduction__image {
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
+
+  @include respond-to($mq-l) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.l-pace__help,
+.l-pace__advice {
+  @include respond-to($mq-m) {
+    position: relative;
+  }
+}
+
+.l-pace__help:before,
+.l-pace__advice:before {
+  @include respond-to($mq-m) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: (22 / 16) + rem;
+    bottom: 0;
+    border-left: solid 3px $color-green-secondary;
+  }
+
+  @include respond-to($mq-l) {
+    top: (22 * 1.5) / 16 + rem;
+  }
+}
+
+.l-pace__help__content {
+  @include respond-to($mq-m) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.l-pace__advice__content {
+  @include respond-to($mq-m) {
+    padding-bottom: calc(45px + 1rem);
+  }
+}
+
+.l-pace__help__content,
+.l-pace__advice__content {
+  @include respond-to($mq-m) {
+    padding-left: 10px;
+  }
+}
+
+.l-pace__help__link,
+.l-pace__advice__organisations {
+  @include respond-to($mq-m) {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.l-pace__advice__organisation {
+  @include respond-to($mq-m) {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+}
+
 .l-pace__advice__organisations__fca img,
 .l-pace__advice__organisations__hmgovernment img {
-  height: 50px;
+  height: 45px;
 }
 
 .l-pace__adviser__list {
   counter-reset: adviser;
-}
 
-.l-pace__adviser__list-item {
-  display: inline-block;
-
-  &:last-of-type .l-pace__adviser__list-item__content:before {
-    content: none;
+  @include respond-to($mq-m) {
+    @include column(12);
   }
 }
 
 .l-pace__adviser__list-item__heading {
+  position: relative;
   display: inline-block;
   background-color: $color-grey-pale;
   width: 100%;
@@ -112,6 +403,60 @@
     border-radius: 50%;
     color: $color-white;
     background-color: $color-green-secondary;
+
+    @include respond-to($mq-m) {
+      margin-left: $default-gutter * 3;
+      color: $color-green-secondary;
+      background-color: $color-white;
+    }
+  }
+
+  &:after {
+    @include respond-to($mq-m) {
+      position: absolute;
+      top: 0;
+      right: $default-gutter * -2;
+      z-index: 1;
+      content: '';
+      display: block;
+      width: $default-gutter * 4;
+      height: 98px;
+      background-image: image_url('pace/adviser_arrow.svg');
+      background-size: 100% 98px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.l-pace__adviser__list-item {
+  display: inline-block;
+
+  &:first-of-type {
+    .l-pace__adviser__list-item__heading {
+      border-radius: $baseline-unit * 2 0 0 $baseline-unit * 2;
+    }
+  }
+
+  &:last-of-type {
+   .l-pace__adviser__list-item__content:before {
+      content: none;
+    }
+
+    .l-pace__adviser__list-item__heading {
+      border-radius: 0 $baseline-unit * 2 $baseline-unit * 2 0;
+
+      &:after {
+        @include respond-to($mq-m) {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @include respond-to($mq-m) {
+    width: (1 / 3) * 100%;
+    float: left;
   }
 }
 
@@ -120,6 +465,11 @@
   align-items: center;
   height: 45px;
   padding: 0 $default-gutter;
+
+  @include respond-to($mq-m) {
+    padding-left: $default-gutter * 3;
+    padding-right: $default-gutter * 3;
+  }
 }
 
 .l-pace__adviser__list-item__content {
@@ -135,6 +485,19 @@
     top: calc(-0.5rem - 26.5px);
     height: calc(100% + 2.25rem + 53px);
     border-left: solid 4px $color-yellow-light;
+    z-index: 1;
+  }
+
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: $default-gutter * 3;
+    padding-right: $default-gutter * 3;
+
+    &:before {
+      content: none;
+    }
   }
 }
 
@@ -181,14 +544,67 @@
   background: $color-grey-pale;
 }
 
+.l-pace__organisations__inner {
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.l-pace__organisations__image,
+.l-pace__organisations__content {
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
+
+.l-pace__organisations__content {
+  @include respond-to($mq-l) {
+    @include column(7);
+  }
+}
+
+.l-pace__organisations__image {
+  @include respond-to($mq-m) {
+    float: right;
+  }
+
+  @include respond-to($mq-l) {
+    @include column(5);
+
+    float: right;
+  }
+}
+
+.l-pace__organisations__list {
+  @include respond-to($mq-m) {
+    float: left;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
 .l-pace__organisations__list-item {
   @include clearfix();
 
   background: $color-white;
+
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
 }
 
 .l-pace__organisations__list-item__content {
   @include column(12);
+
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: $default-gutter * 3;
+    padding-right: $default-gutter * 3;
+  }
 }
 
 .l-pace__organisations__list-item__header {
@@ -244,10 +660,18 @@
 
 .l-pace__referred__list-item {
   float: left;
-  width: 50%;
+  width: 100 / 2 * 1%;
   margin-bottom: 0;
   border-bottom: solid 1px $color-grey-pale;
   border-right: solid 1px $color-grey-pale;
+
+  @include respond-to($mq-m) {
+    width: 100 / 4 * 1%;
+  }
+
+  @include respond-to($mq-l) {
+    width: 100 / 6 * 1%;
+  }
 
   &.bristol-city-council .l-pace__referred__list-item__image {
     background-image: image_url('pace/bristol-city-council.jpg');
@@ -278,19 +702,47 @@
   }
 }
 
-.l-pace__referred__list-item:first-child,
+.l-pace__referred__list-item:nth-child(1),
 .l-pace__referred__list-item:nth-child(2) {
   border-top: solid 1px $color-grey-pale;
 }
 
-.l-pace__referred__list-item:nth-child(2n) {
-  border-right: none;
+.l-pace__referred__list-item:nth-child(3),
+.l-pace__referred__list-item:nth-child(4) {
+  @include respond-to($mq-m) {
+    border-top: solid 1px $color-grey-pale;
+  }
 }
 
-.l-pace__referred__list-item:last-child:nth-child(odd),
-.l-pace__referred__list-item:nth-last-child(2):nth-child(odd),
-.l-pace__referred__list-item:last-child:nth-child(even) {
-  border-bottom: none;
+.l-pace__referred__list-item:nth-child(5),
+.l-pace__referred__list-item:nth-child(6) {
+  @include respond-to($mq-l) {
+    border-top: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(2n) {
+  border-right: none;
+
+  @include respond-to($mq-m) {
+    border-right: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(4n) {
+  @include respond-to($mq-m) {
+    border-right: none;
+  }
+
+  @include respond-to($mq-l) {
+    border-right: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(6n) {
+  @include respond-to($mq-l) {
+    border-right: none;
+  }
 }
 
 .l-pace__referred__list-item__image {
@@ -298,7 +750,7 @@
 
   margin-top: $baseline-unit * 2;
   margin-bottom: $baseline-unit * 2;
-  height: 50px;
+  height: 45px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

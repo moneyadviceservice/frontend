@@ -60,6 +60,10 @@
 .l-pace__introduction__heading,
 .l-pace__adviser__heading {
   @include column(12);
+
+  @include respond-to($mq-l) {
+    @include column(8);
+  }
 }
 
 .l-pace__online_advice__heading {
@@ -76,7 +80,7 @@
   padding: 0;
 }
 
-.l-pace__introduction__image,
+.l-pace__introduction__image__content,
 .l-pace__wellbeing__image,
 .l-pace__organisations__image {
   background-repeat: no-repeat;
@@ -109,8 +113,25 @@
   right: 0;
 }
 
-.l-pace__introduction__image {
+.l-pace__introduction__content {
+  @include respond-to($mq-m) {
+    display: inline-flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+  }
+
+  @include respond-to($mq-l) {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.l-pace__introduction__image__content {
   @include column(12);
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin: 0;
+  }
 
   padding-top: 401/409*100%;
   background-image: image_url('pace/introduction.png');
@@ -131,6 +152,28 @@
 
   display: inline-block;
   background-color: $color-off-white;
+}
+
+.l-pace__introduction__panel {
+  @include respond-to($mq-m) {
+    @include column(8);
+  }
+}
+
+.l-pace__introduction__panel__content {
+  @include column(12);
+}
+
+.l-pace__introduction__image {
+  @include respond-to($mq-m) {
+    @include column(4);
+  }
+
+  @include respond-to($mq-l) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .l-pace__advice__organisations__fca img,

@@ -1,3 +1,24 @@
+.l-pace {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: $baseline-unit * 4;
+
+    @include respond-to($mq-m) {
+      &.l-pace__help,
+      &.l-pace__advice {
+        @include respond-to($mq-m) {
+          @include column(6);
+        }
+      }
+    }
+  }
+}
+
 .l-pace-nav {
   display: none;
 

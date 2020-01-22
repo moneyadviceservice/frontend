@@ -14,6 +14,7 @@
       <%= t('contact_panels.whatsapp.text3') %>
     </li>
   </ul>
+  <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
   <% if chat_opening_hours.open? %>
   <div class="contact-panel__button-container">
     <a class="contact-panel__button button t-whatsapp-button" href="https://wa.me/447701342744">
@@ -25,5 +26,4 @@
     <%= t('contact_panels.chat.unavailable.call_to_action') %>
   </p>
   <% end %>
-  <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
 </div>

@@ -24,6 +24,7 @@
     <li class="contact-panel__additional-info"><%= @footer.web_chat.additional_three %></li>
   </ul>
   <!-- Button -->
+  <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
   <div class="contact-panel__button-container" id="js-chat-cta">
     <div class="contact-panel__button button is-disabled t-chat-button">
       <%= chat_opening_hours.call_to_action %>
@@ -38,5 +39,4 @@
       </a>
     </div>
   <% end %>
-  <p class="smallprint t-welsh-smallprint"><%= @footer.web_chat.small_print %></p>
 </div>

@@ -81,10 +81,38 @@
 }
 
 .l-pace__introduction__image__content,
-.l-pace__wellbeing__image,
+.l-pace__wellbeing__image__content,
 .l-pace__organisations__image {
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.l-pace__wellbeing {
+  @include respond-to($mq-m) {
+    background-color: $color-grey-pale;
+  }
+}
+
+.l-pace__wellbeing__inner {
+  @include respond-to($mq-m) {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.l-pace__wellbeing__image,
+.l-pace__wellbeing__content {
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
+
+.l-pace__wellbeing__image__content {
+  @include respond-to($mq-m) {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .l-pace-nav__items {
@@ -137,7 +165,7 @@
   background-image: image_url('pace/introduction.png');
 }
 
-.l-pace__wellbeing__image {
+.l-pace__wellbeing__image__content {
   padding-top: 370/570*100%;
   background-image: image_url('pace/wellbeing.png');
 }

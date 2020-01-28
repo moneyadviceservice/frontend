@@ -574,10 +574,18 @@
 
 .l-pace__referred__list-item {
   float: left;
-  width: 50%;
+  width: 100 / 2 * 1%;
   margin-bottom: 0;
   border-bottom: solid 1px $color-grey-pale;
   border-right: solid 1px $color-grey-pale;
+
+  @include respond-to($mq-m) {
+    width: 100 / 4 * 1%;
+  }
+
+  @include respond-to($mq-l) {
+    width: 100 / 6 * 1%;
+  }
 
   &.bristol-city-council .l-pace__referred__list-item__image {
     background-image: image_url('pace/bristol-city-council.jpg');
@@ -608,19 +616,47 @@
   }
 }
 
-.l-pace__referred__list-item:first-child,
+.l-pace__referred__list-item:nth-child(1),
 .l-pace__referred__list-item:nth-child(2) {
   border-top: solid 1px $color-grey-pale;
 }
 
-.l-pace__referred__list-item:nth-child(2n) {
-  border-right: none;
+.l-pace__referred__list-item:nth-child(3),
+.l-pace__referred__list-item:nth-child(4) {
+  @include respond-to($mq-m) {
+    border-top: solid 1px $color-grey-pale;
+  }
 }
 
-.l-pace__referred__list-item:last-child:nth-child(odd),
-.l-pace__referred__list-item:nth-last-child(2):nth-child(odd),
-.l-pace__referred__list-item:last-child:nth-child(even) {
-  border-bottom: none;
+.l-pace__referred__list-item:nth-child(5),
+.l-pace__referred__list-item:nth-child(6) {
+  @include respond-to($mq-l) {
+    border-top: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(2n) {
+  border-right: none;
+
+  @include respond-to($mq-m) {
+    border-right: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(4n) {
+  @include respond-to($mq-m) {
+    border-right: none;
+  }
+
+  @include respond-to($mq-l) {
+    border-right: solid 1px $color-grey-pale;
+  }
+}
+
+.l-pace__referred__list-item:nth-child(6n) {
+  @include respond-to($mq-l) {
+    border-right: none;
+  }
 }
 
 .l-pace__referred__list-item__image {
@@ -628,7 +664,7 @@
 
   margin-top: $baseline-unit * 2;
   margin-bottom: $baseline-unit * 2;
-  height: 50px;
+  height: 45px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

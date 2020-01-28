@@ -1,0 +1,15 @@
+<nav class="l-pace-nav" role="navigation">
+  <div class="l-constrained">
+    <ul class="l-pace-nav__items">
+      <% t('pace.nav.links').each do |link| %>
+        <li class="l-pace-nav__item">
+          <a href="#"><%= link %></a>
+        </li>
+      <% end %>
+
+      <li class="l-pace-nav__cta">
+        <button class="button"><%= t('pace.nav.CTA') %></button>
+      </li>
+    </ul>
+  </div>
+</nav>

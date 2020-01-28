@@ -1,9 +1,15 @@
 <section class="l-pace__organisations">
   <div class="l-constrained">
-    <div class="l-pace__organisations__content">
-      <div class="l-pace__organisations__image"></div>
-      <%= heading_tag t('pace.organisations.heading'), level: 3 %>
-      <p><%= t('pace.organisations.text') %></p>
+    <div class="l-pace__organisations__inner">
+      <div class="l-pace__organisations__image">
+        <div class="l-pace__organisations__image__content"></div>
+      </div>
+
+      <div class="l-pace__organisations__content">
+        <%= heading_tag t('pace.organisations.heading'), level: 3 %>
+        <p><%= t('pace.organisations.text') %></p>
+      </div>
+
       <ul class="l-pace__organisations__list">
         <% t('pace.organisations.list').each do |listitem| %>
           <li class="l-pace__organisations__list-item">

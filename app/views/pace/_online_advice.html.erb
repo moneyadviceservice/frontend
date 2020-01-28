@@ -1,9 +1,11 @@
 <section class="l-pace__online_advice" id="online_advice">
   <div class="l-constrained">
-    <div class="l-pace__online_advice__content">
+    <div class="l-pace__online_advice__inner">
       <%= heading_tag t('pace.online_advice.heading'), level: 3, class: 'l-pace__online_advice__heading' %>
-      <%= t('pace.online_advice.text_html') %>
-      <button class="button"><%= t('pace.online_advice.button') %></button>
+      <div class="l-pace__online_advice__content">
+        <%= t('pace.online_advice.text_html') %>
+      </div>
+      <button class="button l-pace__online_advice__cta"><%= t('pace.online_advice.button') %></button>
     </div>
   </div>
 </section>

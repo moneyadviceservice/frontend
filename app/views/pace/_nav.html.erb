@@ -1,0 +1,19 @@
+<nav class="l-pace-nav" role="navigation">
+  <div class="l-constrained">
+    <ul class="l-pace-nav__items">
+      <% t('pace.nav.links').each do |link| %>
+        <li class="l-pace-nav__item">
+          <a href="#<%= link[:id] %>"><%= link[:text] %></a>
+        </li>
+      <% end %>
+
+      <li class="l-pace-nav__cta">
+        <a class="button" href="https://www.stepchange.org/start.aspx" target="_blank">
+          <%= t('pace.nav.CTA') %>
+        </a>
+
+        <span class="visually-hidden"><%= t('pace.new_window') %></span>
+      </li>
+    </ul>
+  </div>
+</nav>

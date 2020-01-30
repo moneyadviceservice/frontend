@@ -37,25 +37,35 @@ en:
     faqs:
       heading: Frequently asked questions
       list:
-        - heading: What information will I have to provide?
+        - id: what-information-will-i-have-to-provide
+          heading: What information will I have to provide?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Is it private/ confidential?
+        - id: is-it-private-confidential
+          heading: Is it private/confidential?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: What options will be open to me?
+        - id: what-options-will-be-open-to-me
+          heading: What options will be open to me?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Will debt advice affect my credit score?
+        - id: will-debt-advice-affect-my-credit-score
+          heading: Will debt advice affect my credit score?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Could I lose my home or other possessions?
+        - id: could-i-lose-my-home-or-other-possessions
+          heading: Could I lose my home or other possessions?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Will I have to pay for the service?
+        - id: will-i-have-to-pay-for-the-service
+          heading: Will I have to pay for the service?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Is it a quality service?
+        - id: is-it-a-quality-service
+          heading: Is it a quality service?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: Who do debt advisers work for and will they really do what’s best for me?
+        - id: who-do-debt-advisers-work-for-and-will-they-really-do-whats-best-for-me
+          heading: Who do debt advisers work for and will they really do what’s best for me?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: I’m afraid I will be judged
+        - id: im-afraid-i-will-be-judged
+          heading: I’m afraid I will be judged
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
-        - heading: I also need help with other issues (e.g. benefits, housing) - can they help with those?
+        - id: i-also-need-help-with-other-issues-can-they-help-with-those
+          heading: I also need help with other issues (e.g. benefits, housing) - can they help with those?
           content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu quam eget erat tempus egestas a vel nibh. Aliquam interdum velit leo, non molestie lectus ullamcorper id. Duis quis vulputate urna, id bibendum eros. Vivamus elementum laoreet dui quis imperdiet. Quisque magna ligula, finibus ac egestas quis, porttitor id ante. Sed eu orci non nunc tempor condimentum.
     organisations:
       heading: The advice organisations that will help you
@@ -71,6 +81,7 @@ en:
           name: StepChange
           text: We provide the UK’s most comprehensive debt advice service. We help people with debt problems take back control of their finances and their lives.
     referred:
+      id: referred
       heading: How referred you
       list:
         - imageclass: bristol-city-council

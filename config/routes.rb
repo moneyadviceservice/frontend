@@ -166,8 +166,8 @@ Rails.application.routes.draw do
     get '/employer-best-practices/other-employers', to: 'employer_best_practices#other_employers'
 
     # PACE
-    get '/pace', to: 'pace#show'
-    get '/pace/privacy', to: 'pace#privacy'
+    get '/moneyadvisernetwork', to: 'pace#show'
+    get '/moneyadvisernetwork/privacy', to: 'pace#privacy'
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

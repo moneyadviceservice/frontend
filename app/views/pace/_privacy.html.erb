@@ -4,7 +4,7 @@
       <%= heading_tag t('pace.privacy.heading'), level: 3, class: 'l-pace__privacy__heading' %>
       <p><%= t('pace.privacy.text') %></p>
       <p>
-        <%= link_to('pace/privacy', target: "_blank") do %>
+        <%= link_to(t('pace.privacy.url'), target: "_blank") do %>
           <%= t('pace.privacy.link') %>
         <% end %>
       </p>

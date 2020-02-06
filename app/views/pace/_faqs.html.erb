@@ -3,7 +3,7 @@
     <div class="l-pace__faqs__content">
       <%= heading_tag t('pace.faqs.heading'), level: 3 %>
       <ul class="l-pace__faqs__list">
-        <% t('pace.faqs.list').each do |listitem| %>
+        <% t('pace.faqs.list').each do |listitem|%>
           <li
             class="l-pace__faqs__list-item"
           >
@@ -18,7 +18,7 @@
               class="l-pace__faqs__list__content"
               data-dough-collapsable-target="<%= listitem[:id] %>"
             >
-              <p><%= listitem[:content] %></p>
+            <%= listitem[:content_html].html_safe %>
             </div>
           </li>
         <% end %>

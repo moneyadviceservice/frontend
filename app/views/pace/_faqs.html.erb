@@ -10,9 +10,8 @@
             <div
               data-dough-component="Collapsable"
               data-dough-collapsable-config='{"iconPosition":"right","oneGroupOpenOnly":"true","focusTarget":false}'
-              data-dough-collapsable-trigger="<%= listitem[:id] %>"
-            >
-              <%= heading_tag listitem[:heading], level: 4, class: 'l-pace__faqs__list__heading', id: 'faq_' + listitem[:id] %>
+              data-dough-collapsable-trigger="<%= listitem[:id] %>">
+              <%= heading_tag listitem[:heading], level: 4, class: 'l-pace__faqs__list__heading' %>
             </div>
 
             <div

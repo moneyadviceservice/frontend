@@ -299,6 +299,44 @@
   @include column(12);
 }
 
+.l-pace__introduction__panel__organisations {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.l-pace__introduction__panel__organisation {
+  margin-right: 20px;
+
+  @include respond-to($mq-m) {
+    margin-right: 30px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.national-debtline {
+    img {
+      height: 55px;
+    }
+  }
+
+  &.stepchange {
+    img {
+      height: 40px;
+    }
+  }
+
+  &.citizens-advice {
+    img {
+      height: 75px;
+    }
+  }
+}
+
 .l-pace__introduction__image {
   @include respond-to($mq-m) {
     @include column(4);

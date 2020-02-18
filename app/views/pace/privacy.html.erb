@@ -1,5 +1,49 @@
 <% set_meta_tags(title: t('pace.title')) %>
 
 <div class="l-pace">
-  <main class="l-main__primary" role="main"></main>
+  <main class="l-main__primary" role="main">
+    <article>
+      <%= heading_tag t('pace.privacy-policy.heading'), level: 1 %>
+
+      <ol>
+        <% t('pace.privacy-policy.contents').each do |contentitem| %>
+          <li>
+            <a href="#<%= contentitem[:id] %>"><%= contentitem[:title] %></a>
+          </li>
+        <% end %>
+      </ol>
+
+      <ol>
+        <% t('pace.privacy-policy.contents').each do |contentsitem| %>
+          <li>
+            <%= heading_tag contentsitem[:title], level: 2, id: "#{contentsitem[:id]}" %>
+
+            <ol>
+              <% contentsitem[:content].each do |contentitem| %>
+                <li>
+                  <%= contentitem[:point].html_safe %>
+
+                  <% if contentitem[:bullets] %>
+                    <ul>
+                      <% contentitem[:bullets].each do |bulletsitem| %>
+                        <li><%= bulletsitem[:bullet].html_safe %></li>
+
+                        <% if bulletsitem[:bullets_secondary] %>
+                          <ol>
+                            <% bulletsitem[:bullets_secondary].each do |bullet_secondary| %>
+                              <li><%= bullet_secondary %></li>
+                            <% end %>
+                          </ol>
+                        <% end %>
+                      <% end %>
+                    </ul>
+                  <% end %>
+                </li>
+              <% end %>
+            </ol>
+          </li>
+        <% end %>
+      </ol>
+    </article>
+  </main>
 </div>

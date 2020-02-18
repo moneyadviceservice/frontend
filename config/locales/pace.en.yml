@@ -15,16 +15,17 @@ en:
         url: https://www.stepchange.org/mas-money-advice.aspx?utm_source=mas&utm_medium=landing-page&utm_campaign=start
     introduction:
       heading: Independent, confidential and impartial money advice
-      subhead: The National Money Advice Network
-      text: Well done for taking the first step towards getting debt advice. You are now joining the hundreds of thousands of people each year who benefit from getting advice through one of the organisations that belong to the National Money Advice Network.
+      subhead: The Money Advisers Network
+      text: Well done for taking the first step towards getting debt advice. You are now joining the hundreds of thousands of people each year who benefit from getting advice through one of the organisations that belong to the Money Advisers Network.
     help:
       heading: Quick and easy help
-      text_html: <p>You will soon be talking to a qualified and regulated money adviser who can work with you to get back on track.</p>
-                 <p>Using the National Money Advice Network means we can cut your waiting time for getting the right help quickly. You also won’t need to pay for the advice you receive.</p>
+      text_html: <p>We will connect you with a qualified and regulated money advice provider so you can get back on track.</p>
+      subhead: Have you chosen to complete your journey online?         
+      sub_text_html: <p>Using the National Money Advice Network means we can cut your waiting time for getting the right help quickly. You also won’t need to pay for the advice you receive.</p>
       link: Can’t wait to speak to an adviser?
     advice:
       heading: Advice you can trust
-      text_html: <p>The network is run by the Money Advice Service, a UK government body that helps you access free, confidential and impartial debt advice.</p>
+      text_html: <p>The network is run by the Money Advice Service, a UK arm’s-length government body that helps you access free, confidential and impartial debt advice. </p>
                  <p>All the debt advice services we partner with hold a standard or membership code accredited by the Money Advice Service and the Financial Conduct Authority.</p>
       organisations:
         - imageclass: fca
@@ -40,15 +41,15 @@ en:
           content_html: <p>You will get a full assessment of your financial situation based on the information you give to them.</p>
                         <p>Don’t worry if you haven’t got all your paperwork together. We can help you work out exactly how much you owe and what money you have coming in and going out.</p>
         - heading: Create a personalised budget
-          content_html: <p>A budget is really important for keeping a healthy balance for what you need to live on and how how much you have to pay off your debts.</p>
-                        <p>It also helps the adviser to work out which debt solution is right for you.</p>
+          content_html: <p>A budget is really important for working out how much money you have to pay off your debts while keeping up with essential bills and living costs.</p>
+                        <p>It also helps the advice service to work out which debt solution is right for you.</p>
         - heading: Draw up a practical action plan
-          content_html: <p>Once you have a full picture of your financial situation, your adviser will guide you through the practical steps to set up the solution that works for you.</p>
+          content_html: <p>Once you have a full picture of your financial situation, the advice service will guide you through the practical steps to set up the solution that works for you.</p>
                         <p>You will now be on your way to getting yourself back on track, knowing you have made the best choice with the right professional support.</p>
     online_advice:
-      heading: Can’t wait to speak to an adviser?
-      text_html: <p>We understand. If you can’t stay on the phone you can still use the online tool to explore your situation and create a personalised action plan.</p>
-                 <p>It only takes 20 minutes to get going and if you get stuck, you can still talk to someone.</p>
+      heading: Start online?
+      text_html: <p>You may have chosen to talk to us on the phone but if you change your mind you can still use the online tool to create a personalised action plan.</p>
+                 <p>It doesn’t take long to get going and if you get stuck, you can still talk to someone.</p>
       button: Get online advice now
     faqs:
       heading: Frequently asked questions
@@ -60,13 +61,6 @@ en:
         - id: what-information-will-i-have-to-provide
           heading: What information will I have to provide?
           content_html: <p>You’ll need to explain your personal circumstances in some detail – although this can be uncomfortable we need to make sure our advice is right for you in the long term. There may be options on how you provide some of your financial information including through Open banking.</p>
-        - id: what-is-open-banking
-          heading: What is Open Banking?
-          content_html: <p>Depending on who your bank is, you may have the option to share your some of your financial information with our advisers digitally. They’ll then be able to see what regularly comes into and goes out of your accounts – as long as you give them your permission. This is a tried and tested process which is completely secure.</p>
-                        <p>It also means you and our advisers can be certain that we’ve got accurate and up to date information which can help you get to the right solution quickly.</p>
-        - id: is-open-banking-confidential
-          heading: Is Open Banking confidential?
-          content_html: <p>Yes. Full details of how we make sure your information stays secure can be found <a href="/en/moneyadvisernetwork/privacy" target="_blank">here</a></p>
         - id: what-debt-solutions-options-will-be-open-to-me
           heading: What debt solutions options will be open to me?
           content_html: <p>There are many debt solutions available so what is right for you will always depend on your personal circumstances. Whether you would benefit from a Debt Management Plan (DMP), a Debt Relief Order (DRO), Individual Voluntary Arrangement (IVA), Bankruptcy or another possibly less well known solution, our advisers will be able to identify the right help for you directly. They can also refer you to an alternate solution provider who can help you take that final step towards becoming debt free.</p>
@@ -106,7 +100,7 @@ en:
             <p>You can return to access online debt advice through the <a href="#cta_nav">link on this page</a> at any time in the future, day or night. Or, when you’re ready, you can look for details of free debt advice online - with lots of free advice services available across the UK, you can find help in a way that’s best for you.</p>
     organisations:
       heading: The advice organisations that will help you
-      text: You will be speaking to expert advisers at one of these debt advice agencies who belong to the National Money Advice Network.
+      text: You will be connected to one of these debt advice agencies who belong to the Money Advisers Network.
       list:
         - imageclass: national-debtline
           name: National Debtline
@@ -119,7 +113,7 @@ en:
           text: Every year we help over 650,000 people to deal with their debt problems. With over 25 years' experience, we provide advice and support to achieve long-term financial control.
     referred:
       id: referred
-      heading: How referred you
+      heading: Who referred you
       list:
         - imageclass: bristol-city-council
           name: Bristol City Council
@@ -137,7 +131,7 @@ en:
           name: ARC Europe
     privacy:
       heading: Your data and privacy
-      text: Your privacy is extremely important to us. We don’t pass your details to anyone outside our network. Within our network we only pass on your contact details to the debt advice agency we connect you with. This speeds up the process and you won’t have to repeat your story every time you speak to someone.
+      text: Your privacy is extremely important to us. We don’t pass your details to anyone outside our network.
       link: Read our Privacy Policy
       url: moneyadvisernetwork/privacy
     new_window: opens in a new window

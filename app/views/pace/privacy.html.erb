@@ -5,45 +5,49 @@
     <article>
       <%= heading_tag t('pace.privacy-policy.heading'), level: 1 %>
 
-      <ol>
-        <% t('pace.privacy-policy.contents').each do |contentitem| %>
-          <li>
-            <a href="#<%= contentitem[:id] %>"><%= contentitem[:title] %></a>
-          </li>
-        <% end %>
-      </ol>
+      <section class="l-pace__privacy-policy__toc">
+        <ol>
+          <% t('pace.privacy-policy.contents').each do |contentitem| %>
+            <li>
+              <a href="#<%= contentitem[:id] %>"><%= contentitem[:title] %></a>
+            </li>
+          <% end %>
+        </ol>
+      </section>
 
-      <ol>
-        <% t('pace.privacy-policy.contents').each do |contentsitem| %>
-          <li>
-            <%= heading_tag contentsitem[:title], level: 2, id: "#{contentsitem[:id]}" %>
+      <section class="l-pace__privacy-policy__contents">
+        <ol class="l-pace__privacy-policy__contents-items">
+          <% t('pace.privacy-policy.contents').each do |contentsitem| %>
+            <li class="l-pace__privacy-policy__contents-item">
+              <%= heading_tag contentsitem[:title], level: 2, id: "#{contentsitem[:id]}" %>
 
-            <ol>
-              <% contentsitem[:content].each do |contentitem| %>
-                <li>
-                  <%= contentitem[:point].html_safe %>
+              <ol class="l-pace__privacy-policy__points">
+                <% contentsitem[:content].each do |contentitem| %>
+                  <li class="l-pace__privacy-policy__point">
+                    <%= contentitem[:point].html_safe %>
 
-                  <% if contentitem[:bullets] %>
-                    <ul>
-                      <% contentitem[:bullets].each do |bulletsitem| %>
-                        <li><%= bulletsitem[:bullet].html_safe %></li>
+                    <% if contentitem[:bullets] %>
+                      <ul>
+                        <% contentitem[:bullets].each do |bulletsitem| %>
+                          <li><%= bulletsitem[:bullet].html_safe %></li>
 
-                        <% if bulletsitem[:bullets_secondary] %>
-                          <ol>
-                            <% bulletsitem[:bullets_secondary].each do |bullet_secondary| %>
-                              <li><%= bullet_secondary %></li>
-                            <% end %>
-                          </ol>
+                          <% if bulletsitem[:bullets_secondary] %>
+                            <ol class="l-pace__privacy-policy__bullets-secondary">
+                              <% bulletsitem[:bullets_secondary].each do |bullet_secondary| %>
+                                <li><%= bullet_secondary %></li>
+                              <% end %>
+                            </ol>
+                          <% end %>
                         <% end %>
-                      <% end %>
-                    </ul>
-                  <% end %>
-                </li>
-              <% end %>
-            </ol>
-          </li>
-        <% end %>
-      </ol>
+                      </ul>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ol>
+            </li>
+          <% end %>
+        </ol>
+      </section>
     </article>
   </main>
 </div>

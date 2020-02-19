@@ -783,3 +783,23 @@
     }
   }
 }
+
+.l-pace__privacy-policy__contents {
+  .l-pace__privacy-policy__contents-items, .l-pace__privacy-policy__points {
+    counter-reset: item;
+    list-style-type: none;
+
+    & > li {
+      counter-increment: item;
+    }
+
+    & > .l-pace__privacy-policy__contents-item > h2:before,
+    & > .l-pace__privacy-policy__point:before {
+      content: counters(item, '.') '. ';
+    }
+  }
+
+  ol.l-pace__privacy-policy__bullets-secondary {
+    list-style-type: lower-latin;
+  }
+}

@@ -831,22 +831,24 @@
 }
 
 .l-pace__privacy-policy__heading,
-section.l-pace__privacy-policy__toc,
-section.l-pace__privacy-policy__contents {
+.l-pace__privacy-policy__toc,
+.l-pace__privacy-policy__contents {
   @include column(12);
-}
-
-.l-pace__privacy-policy__contents-items,
-.l-pace__privacy-policy__points {
-  padding-left: 0;
-}
-
-.l-pace__privacy-policy__bullets-secondary {
-  padding-left: 20px;
 }
 
 .l-pace__privacy-policy__toc {
   ul {
+    counter-reset: item;
+  }
+
+  li > a:before {
+    counter-increment: item;
+    content: counter(item) '. ';
+  }
+}
+
+.l-pace__privacy-policy__contents {
+  .l-pace__privacy-policy__contents-items, .l-pace__privacy-policy__points {
     counter-reset: item;
   }
 

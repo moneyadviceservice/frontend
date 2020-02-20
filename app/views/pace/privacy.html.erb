@@ -6,13 +6,13 @@
       <%= heading_tag t('pace.privacy-policy.heading'), level: 1 %>
 
       <section class="l-pace__privacy-policy__toc">
-        <ol>
+        <ul>
           <% t('pace.privacy-policy.contents').each do |contentitem| %>
             <li>
               <a href="#<%= contentitem[:id] %>"><%= contentitem[:title] %></a>
             </li>
           <% end %>
-        </ol>
+        </ul>
       </section>
 
       <section class="l-pace__privacy-policy__contents">

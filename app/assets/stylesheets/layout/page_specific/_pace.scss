@@ -784,6 +784,23 @@
   }
 }
 
+.l-pace__privacy-policy__heading,
+.l-pace__privacy-policy__toc,
+.l-pace__privacy-policy__contents {
+  @include column(12);
+}
+
+.l-pace__privacy-policy__toc {
+  ul {
+    counter-reset: item;
+  }
+
+  li > a:before {
+    counter-increment: item;
+    content: counter(item) '. ';
+  }
+}
+
 .l-pace__privacy-policy__contents {
   .l-pace__privacy-policy__contents-items, .l-pace__privacy-policy__points {
     counter-reset: item;

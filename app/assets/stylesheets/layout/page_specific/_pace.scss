@@ -857,13 +857,9 @@ section.l-pace__privacy-policy__contents {
 }
 
 .l-pace__privacy-policy__contents {
-  .l-pace__privacy-policy__contents-items, .l-pace__privacy-policy__points {
+  .l-pace__privacy-policy__contents-items,
+  .l-pace__privacy-policy__points {
     counter-reset: item;
-  }
-
-  li > a:before {
-    counter-increment: item;
-    content: counter(item) '. ';
   }
 }
 

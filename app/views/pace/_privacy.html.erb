@@ -1,0 +1,13 @@
+<section class="l-pace__privacy" id="<%= t('pace.nav.links')[3][:id] %>">
+  <div class="l-constrained">
+    <div class="l-pace__privacy__content">
+      <%= heading_tag t('pace.privacy.heading'), level: 3, class: 'l-pace__privacy__heading' %>
+      <p><%= t('pace.privacy.text') %></p>
+      <p>
+        <%= link_to(t('pace.privacy.url'), target: "_blank") do %>
+          <%= t('pace.privacy.link') %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</section>

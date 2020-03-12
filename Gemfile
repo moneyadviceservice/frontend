@@ -78,7 +78,10 @@ gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
 gem 'mortgage_calculator', '~> 3.9.1'
-gem 'pacs', '3.10.0'
+gem 'pacs',
+    git: 'git@github.com:moneyadviceservice/pacs',
+    branch: 'feature/TP-11243_update_arranged_overdrafts',
+    ref: 'fb5ffeb'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 2.6.0'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'

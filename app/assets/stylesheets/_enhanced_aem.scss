@@ -1,6 +1,8 @@
 @import 'settings';
 
-@import 'dough/assets/stylesheets/lib';
+@import 'yeast/assets/components/aem_theme/variables';
+
+//@import 'dough/assets/stylesheets/lib';
 @import 'yeast/assets/lib/all';
 
 
@@ -12,7 +14,6 @@
 @import 'yeast/assets/helpers/video_wrapper';
 
 // Base
-@import 'yeast/assets/base/variables';
 @import 'yeast/assets/base/forms';
 @import 'yeast/assets/base/headings';
 @import 'yeast/assets/base/images';
@@ -21,6 +22,7 @@
 @import 'yeast/assets/base/paragraphs';
 @import 'yeast/assets/base/reset';
 @import 'yeast/assets/base/type';
+@import 'yeast/assets/base/variables';
 
 // Dough
 @import 'dough/assets/stylesheets/common';
@@ -39,7 +41,6 @@
 @import 'yeast/assets/components/common/icon_2x';
 @import 'yeast/assets/components/common/lists';
 @import 'yeast/assets/components/common/icon_svg';
-@import 'yeast/assets/components/aem_theme/variables';
 @import 'yeast/assets/components/aem_theme/all.scss';
 
 // Local Components

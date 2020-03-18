@@ -83,7 +83,10 @@ gem 'pacs',
     branch: 'feature/TP-11243_update_arranged_overdrafts',
     ref: 'fb5ffeb'
 gem 'payday_loans_intervention', '~> 1.9.0'
-gem 'pensions_calculator', '~> 2.6.0'
+gem 'pensions_calculator', 
+    git: 'git@github.com:moneyadviceservice/pensions_calculator',
+    branch: 'TP-11257/state_pension_annual_update',
+    ref: 'b2082abf'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.10.2'

@@ -91,7 +91,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio',
     git: 'git@github.com:moneyadviceservice/rio',
     branch: 'TP-11257/state_pension_annual_update',
-    ref: '1634a1a'
+    ref: 'e764a30'
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.0'
 gem 'universal_credit', '~> 4.1.1'

@@ -95,7 +95,10 @@ gem 'rio',
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.0'
 gem 'universal_credit', '~> 4.1.1'
-gem 'wpcc', '2.8.1'
+gem 'wpcc',
+    git: 'git@github.com:moneyadviceservice/wpcc',
+    branch: 'TP-11258/year-end-updates',
+    ref: 'da08d1a'
 
 group :assets do
   gem 'autoprefixer-rails'

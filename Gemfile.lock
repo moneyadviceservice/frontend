@@ -13,6 +13,17 @@ GIT
       nokogiri (~> 1.6)
       uri_template (~> 0.7)
 
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: 029a3600a809e047ea16608186c889b91d2de4e0
+  branch: 11363_Sticky-banner_Coronavirus-info_v5.39
+  specs:
+    dough-ruby (5.39.0)
+      activemodel
+      activesupport
+      rails (>= 3.2, < 5.1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -283,11 +294,6 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.39.0)
-      activemodel
-      activesupport
-      rails (>= 3.2, < 5.1.0)
-      sass-rails
     dragonfly (1.2.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -817,7 +823,7 @@ DEPENDENCIES
   devise-encryptable
   dotenv
   dotenv-rails
-  dough-ruby (~> 5.39)
+  dough-ruby!
   draper (< 3)
   ejs
   email_spec (< 2)

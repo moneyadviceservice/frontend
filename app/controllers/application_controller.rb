@@ -15,6 +15,8 @@ class ApplicationController < ActionController::Base
   include NotFound
   COOKIE_MESSAGE_COOKIE_NAME = '_cookie_notice'.freeze
   COOKIE_MESSAGE_COOKIE_VALUE = 'y'.freeze
+  BANNER_DISMISSED_COOKIE_NAME = '_covid_banner'.freeze
+  BANNER_DISMISSED_COOKIE_VALUE = 'y'.freeze
 
   before_action :fetch_footer_content
   def fetch_footer_content
@@ -44,6 +46,12 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :cookies_not_accepted?
+
+  def covid_banner_dismissed?
+    cookies.permanent[BANNER_DISMISSED_COOKIE_NAME] != BANNER_DISMISSED_COOKIE_VALUE
+  end
+
+  helper_method :covid_banner_dismissed?
 
   def display_search_box_in_header?
     true

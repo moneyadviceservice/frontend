@@ -12,7 +12,10 @@
   <%= render 'shared/header' %>
   <%= render 'shared/no_js_nav' %>
   <%= render 'shared/global_nav' %>
-  <%= render 'shared/covid_banner' %>
+
+  <% if covid_banner_dismissed? %>
+    <%= render 'shared/covid_banner' %>
+  <% end %>
 
   <%= yield %>
 

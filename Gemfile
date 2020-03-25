@@ -12,6 +12,7 @@ gem 'rails', '4.2.11.1'
 
 gem 'activerecord-session_store'
 
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11346_land_transaction_tax_calculator_wales'
 ##############################################################
 # The aes gem is no longer supported, so point to the repo that
 # resolves deprecation warnings in Ruby's OpenSSL module.
@@ -77,7 +78,7 @@ gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', '~> 3.9.1'
+# gem 'mortgage_calculator', '~> 3.9.1'
 gem 'pacs', '3.10.0'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 2.6.0'

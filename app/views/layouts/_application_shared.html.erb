@@ -13,6 +13,10 @@
   <%= render 'shared/no_js_nav' %>
   <%= render 'shared/global_nav' %>
 
+  <% if covid_banner_dismissed? %>
+    <%= render 'shared/covid_banner' %>
+  <% end %>
+
   <%= yield %>
 
   <%= render 'shared/contact_panels', contact_panels_border_top: contact_panels_border_top?, contact_panels_homepage: contact_panels_homepage? %>

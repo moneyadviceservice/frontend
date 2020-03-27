@@ -91,7 +91,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio',
     git: 'git@github.com:moneyadviceservice/rio',
     branch: 'qa/end_of_year_updates',
-    ref: 'b08e42c'
+    ref: '5bcc823'
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.0'
 gem 'universal_credit', '~> 4.1.1'

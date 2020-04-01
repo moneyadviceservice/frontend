@@ -86,7 +86,10 @@ gem 'rio', '~> 2.2.0', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.0'
 gem 'universal_credit', '~> 4.1.1'
-gem 'wpcc', '2.8.1'
+gem 'wpcc',
+  git: 'git@github.com:moneyadviceservice/wpcc',
+  branch: 'bug/TP-11267_reset_link_404',
+  ref: 'd5d4ef0'
 
 group :assets do
   gem 'autoprefixer-rails'

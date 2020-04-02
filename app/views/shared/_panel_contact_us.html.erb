@@ -19,21 +19,21 @@
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_two %></li>
     <li class="contact-panel__additional-info"><%= @footer.contact.additional_three %></li>
     <!-- Email -->
-    <li class="contact-panel__additional-info">
+    <li class="contact-panel__additional-info" style="display: none;">
       <p>
         <%= t('contact_panels.call_us.email_info') %>
         <a href="mailto:<%= t('contact_panels.call_us.email_address') %>"><%= t('contact_panels.call_us.email_address') %></a>.
       </p>
     </li>
     <!-- Button -->
-    <li class="contact-panel__additional-info">
+    <li class="contact-panel__additional-info" style="display: none;">
       <div class="contact-panel__button-container">
         <a class="contact-panel__button button" href="mailto:<%= t('contact_panels.call_us.email_address') %>">
           <%= t('contact_panels.call_us.email_button') %>
         </a>
       </div>
     </li>
-    <li class="contact-panel__additional-info">
+    <li class="contact-panel__additional-info" style="display: none;">
       <p><%= t('contact_panels.call_us.email_response_time') %></p>
     </li>
   </ul>

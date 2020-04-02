@@ -78,7 +78,7 @@ gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
 # gem 'mortgage_calculator', '~> 3.9.1'
-gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11352_Y/E-Updates_LBTT-Calculator'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11352_Y/E-Updates_LBTT-Calculator', ref: '50f4ff3'
 gem 'pacs', '3.10.0'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', 

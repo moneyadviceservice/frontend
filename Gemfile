@@ -60,7 +60,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', '~> 5.39'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11363_Sticky-banner_Coronavirus-info_v5.39'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools
@@ -77,11 +77,9 @@ gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', '~> 3.9.1'
-gem 'pacs',
-    git: 'git@github.com:moneyadviceservice/pacs',
-    branch: 'feature/TP-11243_update_arranged_overdrafts',
-    ref: 'fb5ffeb'
+# gem 'mortgage_calculator', '~> 3.9.1'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11352_Y/E-Updates_LBTT-Calculator'
+gem 'pacs', '3.10.0'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', 
     git: 'git@github.com:moneyadviceservice/pensions_calculator',

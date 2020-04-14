@@ -23,6 +23,9 @@
         <% clumps.each do |clump| %>
           <option value="<%= clump.categories[0].id %>"><%= clump.name %></option>
         <% end %>
+        <option value="<%= t('contact_panels.chat_popup.dropdown_options.covid').downcase %>">
+          <%= t('contact_panels.chat_popup.dropdown_options.covid') %>
+        </option>
       </select>
     </div>
     <div class="mobile-webchat__button-container">

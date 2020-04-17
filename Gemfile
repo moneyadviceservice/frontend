@@ -60,7 +60,7 @@ gem 'whenever', require: false
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11363_Sticky-banner_Coronavirus-info_v5.39'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11393_Chat_Add-coronavirus-option'
 gem 'mas-cms-client', '1.20.0'
 gem 'site_search', '0.3.0'
 # Tools

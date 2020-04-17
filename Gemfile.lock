@@ -15,8 +15,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 029a3600a809e047ea16608186c889b91d2de4e0
-  branch: 11363_Sticky-banner_Coronavirus-info_v5.39
+  revision: 246fd82dcbeeeafb59f70ada84a69a5504600eeb
+  branch: 11393_Chat_Add-coronavirus-option
   specs:
     dough-ruby (5.39.0)
       activemodel
@@ -125,7 +125,7 @@ GEM
       activesupport (>= 4.2)
     bowndler (1.0.2)
       thor
-    bson (4.5.0)
+    bson (4.8.2)
     budget_planner (5.7.1)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
@@ -303,32 +303,33 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    dry-configurable (0.8.3)
+    dry-configurable (0.11.5)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
+      dry-equalizer (~> 0.2)
     dry-container (0.7.2)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.4.9)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.2.2)
-    dry-inflector (0.1.2)
-    dry-logic (1.0.3)
+    dry-equalizer (0.3.0)
+    dry-inflector (0.2.0)
+    dry-logic (1.0.6)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-struct (1.0.0)
-      dry-core (~> 0.4, >= 0.4.3)
-      dry-equalizer (~> 0.2)
-      dry-types (~> 1.0)
+    dry-struct (1.3.0)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer (~> 0.3)
+      dry-types (~> 1.3)
       ice_nine (~> 0.11)
     dry-struct-setters (0.2.0)
       dry-struct (>= 0.5.0)
-    dry-types (1.1.1)
+    dry-types (1.4.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.2, >= 0.2.2)
+      dry-equalizer (~> 0.3)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     ejs (1.1.1)
@@ -462,14 +463,14 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
-    mongo (2.10.1)
+    mongo (2.11.4)
       bson (>= 4.4.2, < 5.0.0)
-    mongoid (5.4.0)
+    mongoid (5.4.1)
       activemodel (~> 4.0)
       mongo (>= 2.5.1, < 3.0.0)
       origin (~> 2.3)
       tzinfo (>= 0.3.37)
-    mortgage_calculator (3.9.1)
+    mortgage_calculator (3.11.0)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.36)
       mas-fonts
@@ -491,7 +492,7 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.10.0)
+    pacs (3.11.0)
       dough-ruby (~> 5.39)
       dry-struct
       dry-struct-setters
@@ -513,16 +514,16 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.6.0)
+    pensions_calculator (2.6.1)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
-      pensions_calculator-calculations (~> 3.0.0)
+      pensions_calculator-calculations (~> 3.0.1)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
-    pensions_calculator-calculations (3.0.0)
+    pensions_calculator-calculations (3.0.1)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -604,10 +605,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rio (2.2.0)
+    rio (2.2.1)
       bowndler
       dough-ruby (~> 5.36)
-      pensions_calculator-calculations (~> 3.0.0)
+      pensions_calculator-calculations (~> 3.0.1)
       rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
@@ -774,7 +775,7 @@ GEM
     websocket-extensions (0.1.3)
     whenever (0.10.0)
       chronic (>= 0.6.3)
-    wpcc (2.8.1)
+    wpcc (2.8.3)
       dough-ruby (~> 5.38)
       meta-tags
       modernizr-rails (~> 2.6.2)
@@ -843,15 +844,15 @@ DEPENDENCIES
   mailjet
   mas-cms-client (= 1.20.0)
   meta-tags (~> 2.4)
-  mortgage_calculator (~> 3.9.1)
+  mortgage_calculator (~> 3.11.0)
   mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (= 3.10.0)
+  pacs (= 3.11.0)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator (~> 2.6.0)
+  pensions_calculator (~> 2.6.1)
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug
@@ -865,7 +866,7 @@ DEPENDENCIES
   recaptcha
   redcarpet
   rest-client (~> 2.0)
-  rio (~> 2.2.0)!
+  rio (~> 2.2.1)!
   rouge
   rspec-html-matchers
   rspec-rails
@@ -892,7 +893,7 @@ DEPENDENCIES
   vcr
   webmock
   whenever
-  wpcc (= 2.8.1)
+  wpcc (= 2.8.3)
 
 BUNDLED WITH
    1.17.3

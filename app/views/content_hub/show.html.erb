@@ -8,6 +8,10 @@
     <div class="l-constrained">
       <section class="l-content-hub__title">
         <%= heading_tag t("#{translation_prefix}.page_title"), class: 'heading-extra-large content-hub__heading', level: 1 %>
+
+        <% if I18n.exists?("#{translation_prefix}.page_subtitle") %>
+          <p><%= t("#{translation_prefix}.page_subtitle") %></p>
+        <% end %>
       </section>
 
       <section class="l-content-hub__hero">

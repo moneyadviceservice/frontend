@@ -20,67 +20,25 @@ en:
         image: covid-19-hub-hero-image.jpg
 
       blocks:
-        - type: image
-          image: pennies_in_jar.jpg
-          description: Use our Budget planner to see how much money you have coming in and out each month.
-          button:
-            text: Start budgeting
-            url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner
-
-        # - type: list
-        #   header: Fee-free basic bank accounts explained
-        #   links:
-        #   - text: Who can get one?
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/basic-bank-accounts#who-can-get-a-basic-bank-account
-        #   - text: Which banks offer them?
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/basic-bank-accounts#who-offers-fee-free-bank-accounts
-        #   - text: How much does a basic account cost?
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/basic-bank-accounts#how-much-does-a-basic-bank-account-cost
-        #   - text: Managing your account
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/basic-bank-accounts#managing-your-basic-bank-account
+        - type: img_hdr_lnks
+          image: covid-19-hub-debt-image.jpg
+          header: Debt
+          links:
+          - text: Help if you're struggling with debt
+            url: /en/articles/help-if-youre-struggling-with-debt
+          - text: How to prioritise your debts
+            url: /en/articles/how-to-prioritise-your-debts
+          - text: Prioritise and deal with late payment letters
+            url: /en/articles/how-to-deal-with-late-payment-letters-and-demands
+          - text: Where to get free debt advice
+            url: /en/tools/debt-advice-locator
 
         # - type: image
-        #   image: Male_hand_using_cashpoint.jpg
-        #   description: How to use a bank account to make budgeting easier
+        #   image: pennies_in_jar.jpg
+        #   description: Use our Budget planner to see how much money you have coming in and out each month.
         #   button:
-        #     text: Watch video
-        #     url: https://www.youtube.com/watch?v=vkCDpXg3rt4
-
-        # - type: list
-        #   header: How to run a bank account
-        #   links:
-        #   - text: Running your bank account
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/running-your-bank-account
-        #   - text: Managing money
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/beginners-guide-to-managing-your-money
-        #   - text: Choosing the right bank account
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-choose-the-right-bank-account
-        #   - text: How to open, switch or close your bank account
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-open-switch-or-close-your-bank-account
-
-        # - type: list
-        #   header: Sticking to your budget
-        #   links:
-        #   - text: How to live on a budget
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/living-on-a-low-income-tips
-        #   - text: Save on household bills
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-save-money-on-household-bills
-        #   - text: How to prioritise your debts
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-prioritise-your-debts
-        #   - text: Finding the best deals with price comparison websites
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/price-comparison-sites-guide
-
-        # - type: list
-        #   header: Your credit score
-        #   links:
-        #   - text: Improve your credit score
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating
-        #   - text: How to check your credit report
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/how-to-check-your-credit-report
-        #   - text: How to get credit for the first time
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/getting-credit-for-the-first-time
-        #   - text: Building a credit history as a young consumer
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/building-a-credit-history-as-a-young-consumer
+        #     text: Start budgeting
+        #     url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner
 
         # - type: double
         #   header: Download or print our handy guide to fee-free basic bank accounts

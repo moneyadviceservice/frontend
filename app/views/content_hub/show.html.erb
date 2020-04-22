@@ -1,10 +1,17 @@
-<% set_meta_tags(title: t("#{translation_prefix}.page_title")) %>
+<% set_meta_tags(
+  title: t("#{translation_prefix}.page_title"), 
+  description: t("#{translation_prefix}.meta_description")
+) %>
 
 <div class="l-content-hub__main">
   <div class="l-content-hub__inner">
     <div class="l-constrained">
       <section class="l-content-hub__title">
         <%= heading_tag t("#{translation_prefix}.page_title"), class: 'heading-extra-large content-hub__heading', level: 1 %>
+
+        <% if I18n.exists?("#{translation_prefix}.page_subtitle") %>
+          <p class="content-hub__subheading"><%= t("#{translation_prefix}.page_subtitle") %></p>
+        <% end %>
       </section>
 
       <section class="l-content-hub__hero">
@@ -13,14 +20,19 @@
             class="content-hub__hero-image"
             style="background-image:url(<%= asset_path("content_hub/#{t("#{translation_prefix}.hero.image")}") %>"
           ></div>
+
           <div class="l-content-hub__hero-content">
             <%= heading_tag t("#{translation_prefix}.hero.title"), class: 'content-hub__hero-title heading-large', level: 1 %>
+
             <div class="content-hub__hero-description">
               <%= t("#{translation_prefix}.hero.description_html") %>
             </div>
-            <a href="<%= t("#{translation_prefix}.hero.button.url") %>" class="button button--primary content-hub__hero-button">
-              <%= t("#{translation_prefix}.hero.button.text") %>
-            </a>
+
+            <% if I18n.exists?("#{translation_prefix}.hero.button") %>
+              <a href="<%= t("#{translation_prefix}.hero.button.url") %>" class="button button--primary content-hub__hero-button">
+                <%= t("#{translation_prefix}.hero.button.text") %>
+              </a>
+            <% end %>
           </div>
         </div>
       </section>
@@ -39,7 +51,7 @@
 </div>
 
 <% content_for(:alternate_link) do %>
-  <%= link_to content_hub_path(t('alternate_slug'), locale: I18n.locale == :en ? 'cy' : 'en') do %>
+  <%= link_to content_hub_path(t("#{translation_prefix}.alternate_slug"), locale: I18n.locale == :en ? 'cy' : 'en') do %>
     <%= I18n.locale == :en ? 'Cymraeg' : 'English'%>
     <span class="icon icon--globe"></span>
   <% end %>

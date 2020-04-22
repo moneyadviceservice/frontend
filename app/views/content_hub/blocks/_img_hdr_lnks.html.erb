@@ -1,0 +1,14 @@
+<div class="l-content-hub__module l-content-hub__module--img-hdr-lnks">
+  <div class="l-content-hub__module-inner">
+    <div class="content-hub__module-image" style="background-image:url(<%= asset_path("content_hub/#{block[:image]}") %>)"></div>
+    <div class="content-hub__module-content">
+      <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 2 %>
+
+      <ul class="content-hub__module-links unstyled-list">
+        <% block[:links].each do |link| %>
+          <li><a href="<%= link[:url] %>"><%= link[:text] %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

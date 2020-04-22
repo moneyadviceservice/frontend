@@ -101,24 +101,13 @@ en:
           - text: Credit card and debit card protection explained
             url: /en/articles/how-youre-protected-when-you-pay-by-card
 
-        # - type: image
-        #   image: pennies_in_jar.jpg
-        #   description: Use our Budget planner to see how much money you have coming in and out each month.
-        #   button:
-        #     text: Start budgeting
-        #     url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner
-
-        # - type: double
-        #   header: Download or print our handy guide to fee-free basic bank accounts
-        #   description: Everything you need to know in one handy guide.
-        #   button:
-        #     text: PDF download
-        #     url: https://www.moneyadviceservice.org.uk/en/articles/free-printed-guides#fee-free-basic-bank-accounts
-        #   image: putting_money_in_a_piggybank.jpg
-
-        # - type: cta
-        #   header: Compare basic bank accounts
-        #   description: Go to the Money Saving Expert website to see their best buy table for basic bank accounts.
-        #   button:
-        #     text: Visit Money Saving Expert
-        #     url: https://www.moneysavingexpert.com/banking/basic-bank-accounts#best
+        - type: hdr_lst_lnks
+          header: Pensions
+          listitems:
+          - Talk to TPAS on <strong>0800 011 3797</strong>
+          - Talk to Pension Wise on <strong>0800 138 3944</strong>
+          links:
+          - text: Coronavirus and your pension
+            url: /en/articles/coronavirus-and-your-pension/
+          - text: Pension release and pension unlocking
+            url: /en/articles/pension-release-or-pension-unlocking

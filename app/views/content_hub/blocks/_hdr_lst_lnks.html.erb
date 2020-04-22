@@ -1,0 +1,17 @@
+<div class="l-content-hub__module l-content-hub__module--hdr-con-lnk">
+  <div class="l-content-hub__module-inner">
+    <%= heading_tag block[:header], class: 'content-hub__module-title heading-medium', level: 2 %>
+
+    <ul class="content-hub__module-links unstyled-list">
+      <% block[:listitems].each do |listitem| %>
+        <li><%= listitem.html_safe %></li>
+      <% end %>
+    </ul>
+
+    <ul class="content-hub__module-links unstyled-list">
+      <% block[:links].each do |link| %>
+        <li><a href="<%= link[:url] %>"><%= link[:text] %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

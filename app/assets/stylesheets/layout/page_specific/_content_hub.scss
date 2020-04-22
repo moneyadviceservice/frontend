@@ -110,6 +110,10 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
 }
 
 .l-content-hub__modules-content {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+
   @include respond-to($content-hub-one-col-breakpoint) {
     margin: 0 (0 - ($content-hub-modules-gutter / 2));
   }
@@ -119,6 +123,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   position: relative;
   background: $color-white;
   margin-bottom: $baseline-unit;
+  width: 100%;
 
   @include clearfix();
 
@@ -139,7 +144,21 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   padding-bottom: $padding;
 
   @include respond-to($content-hub-one-col-breakpoint) {
-    height: $content-hub-width-one-module;
+    height: $content-hub-width-one-module * 1.375;
+
+    .flexbox & {
+      height: auto; 
+      min-height: $content-hub-width-one-module; 
+    }
+  }
+
+  @include respond-to($content-hub-two-col-breakpoint) {
+    height: $content-hub-width-one-module * 1.5;
+
+    .flexbox & {
+      height: auto; 
+      min-height: $content-hub-width-one-module; 
+    }
   }
 }
 
@@ -257,3 +276,11 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   }
 }
 // -- hdr-con-lnk
+
+// img_hdr_lnks --
+.l-content-hub__module--img-hdr-lnks {
+  .content-hub__module-title {
+    margin-top: $baseline-unit * 3;
+  }
+}
+// -- img_hdr_lnks

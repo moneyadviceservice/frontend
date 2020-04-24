@@ -5,6 +5,19 @@ GIT
     aes (0.5.0)
 
 GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: 7dea47860ef62f5e008fac51d44abd1b5bf613ec
+  branch: 11411_Update-JSA-values
+  specs:
+    action_plans (5.3.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -28,13 +41,6 @@ GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (5.3.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
     actionmailer (4.2.11.1)
       actionpack (= 4.2.11.1)
       actionview (= 4.2.11.1)
@@ -787,7 +793,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 5.3.0)
+  action_plans!
   activerecord-session_store
   adal!
   advice_plans (~> 4.1.0)

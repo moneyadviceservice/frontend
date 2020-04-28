@@ -238,11 +238,13 @@
   <!--<![endif]-->
 <% end %>
 
-<% unless hide_elements_irrelevant_for_third_parties? %>
-  <%# START RequireJS load of application %>
+<%# START RequireJS load of application %>
+<% if is_empty_template? %>
+  <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application_empty') } %>
+<% else %>
   <%= javascript_include_tag 'requirejs/require', data: { main: javascript_path('application') } %>
-  <%# END RequireJS load of application %>
 <% end %>
+<%# END RequireJS load of application %>
 
 <%= yield :javascripts %>
 

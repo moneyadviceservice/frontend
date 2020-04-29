@@ -178,6 +178,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :hide_elements_irrelevant_for_third_parties?
 
+  def is_empty_template?
+    false
+  end
+
+  helper_method :is_empty_template?
+
   def hide_contact_panels?
     false
   end

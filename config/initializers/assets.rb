@@ -40,7 +40,8 @@ Rails.application.configure do
                                    translations/cy.js
                                    translations/en.js
                                    dough/assets/js/lib/*.js
-                                   dough/assets/js/components/*.js)
+                                   dough/assets/js/components/*.js
+                                   application_empty.js)
 
   # Vendor JavaScript
   config.assets.precompile += %w(html5shiv/dist/html5shiv.js

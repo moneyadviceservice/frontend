@@ -3,6 +3,10 @@
 .no-js-nav {
   display: none;
   padding-top: $baseline-unit*14;
+
+  .l-header--non-sticky ~ & {
+    padding-top: 0;
+  }
 }
 
 .no-js-nav__categories {

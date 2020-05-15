@@ -17,7 +17,7 @@
     margin: $baseline-unit*1.5 $baseline-unit $baseline-unit*1.5 0;
   }
 
-  .no-js & {
+  body:not([data-dough-component-loader-all-loaded="yes"]) & {
     display: none;
   }
 }

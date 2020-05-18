@@ -67,14 +67,11 @@
 // JS is enabled but nav hasn't initialised
 .js {
   .global-nav:not([data-dough-global-nav-initialised="yes"]) {
-    display: none; 
-
     & ~ .no-js-nav {
       display: block;      
 
       @include respond-to($mq-m) {
-        background: $color-yellow-light;
-        padding-top: 0;
+        display: none; 
       }
     }
   }
@@ -87,9 +84,6 @@
 
     @include respond-to($mq-m) {
       display: none;
-
-      // background: $color-yellow-light;
-      // padding-top: 0;
     }
   }
 }

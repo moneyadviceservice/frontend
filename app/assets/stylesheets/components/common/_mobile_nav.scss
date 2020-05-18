@@ -24,8 +24,10 @@
   }
 }
 
-.mobile-nav__item--menu {
-  display: none; 
+.mobile-nav__link--menu {
+  &.is-hidden {
+    display: none; 
+  }
 }
 
 .mobile-nav__link {

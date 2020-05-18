@@ -218,6 +218,8 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
   GlobalNav.prototype._setUpMobileInteraction = function() {
     var self = this;
 
+    this.$mobileNavButton.removeClass('is-hidden'); 
+
     this.$mobileNavButton.click(function(e) {
       e.preventDefault();
       self._toggleMobileNav();

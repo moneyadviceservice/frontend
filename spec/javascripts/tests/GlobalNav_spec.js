@@ -68,6 +68,10 @@ describe('GlobalNav', function() {
       this.obj.init();
     }); 
 
+    it('displays the menu button', function() {
+      expect(this.mobileNavButton.hasClass('is-hidden')).to.be.false;
+    }); 
+
     it('toggles nav visibility when menu button is clicked', function() {
       this.mobileNavButton.trigger('click');
       expect(this.component.hasClass('is-active')).to.be.true;

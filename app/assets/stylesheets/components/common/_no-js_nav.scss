@@ -86,8 +86,10 @@
     display: block;
 
     @include respond-to($mq-m) {
-      background: $color-yellow-light;
-      padding-top: 0;
+      display: none;
+
+      // background: $color-yellow-light;
+      // padding-top: 0;
     }
   }
 }

@@ -138,6 +138,10 @@ $global-nav-transition-duration: 300ms;
 .no-js {
   .global-nav {
     display: none;
+
+    @include respond-to($mq-m) {
+      display: block;
+    }
   }
 }
 // -- no-js fallback

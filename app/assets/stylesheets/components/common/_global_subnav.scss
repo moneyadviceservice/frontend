@@ -44,6 +44,10 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 
 .is-hidden {
   display: none;
+
+  @include respond-to($mq-m) {
+    display: block; 
+  }
 }
 
 // no-js fallback --

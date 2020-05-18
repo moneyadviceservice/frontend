@@ -51,10 +51,6 @@ describe('GlobalNav', function() {
     beforeEach(function() {
       this.obj.init();
     });
-
-    it('removes the uninialised class when component is loaded', function() {
-      expect(this.component.hasClass('uninitialised')).to.be.false;
-    });
   });
 
   describe('Mobile animation', function() {

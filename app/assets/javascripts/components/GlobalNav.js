@@ -42,7 +42,6 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
    * Set up component
    */
   GlobalNav.prototype._bindEvents = function() {
-    this.$globalNav.removeClass('uninitialised');
     $(window).on('resize', utilities.debounce($.proxy(this._setUpMobileAnimation, this), 100));
   };
 

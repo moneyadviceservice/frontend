@@ -20,12 +20,13 @@ cy:
         image: covid-19-hub-hero-image.jpg
 
       blocks:
-        - type: img_hdr_lnks
-          image: covid-19-hub-debt-image.jpg
+        - type: list
           header: Dyled
           links:
           - text: Help os ydych chi’n cael trafferth gyda dyledion
             url: /cy/articles/help-os-ydych-chin-cael-trafferth-gyda-dyledion
+          - text: Coronafeirws a gwyliau rhag taliadau car
+            url: cy/articles/coronafeirws-gwyliau-rhag-taliadau-car
           - text: Sut i flaenoriaethu’ch dyledion
             url: /cy/articles/sut-i-flaenoriaethuch-dyledion
           - text: Dylech flaenoriaethu a delio â llythyrau am daliad hwyr

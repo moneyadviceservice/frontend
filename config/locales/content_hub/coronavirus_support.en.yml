@@ -20,12 +20,13 @@ en:
         image: covid-19-hub-hero-image.jpg
 
       blocks:
-        - type: img_hdr_lnks
-          image: covid-19-hub-debt-image.jpg
+        - type: list
           header: Debt
           links:
           - text: Help if you're struggling with debt
             url: /en/articles/help-if-youre-struggling-with-debt
+          - text: Coronavirus and car payment holidays
+            url: /en/articles/coronavirus-covid-19-car-payment-holidays 
           - text: How to prioritise your debts
             url: /en/articles/how-to-prioritise-your-debts
           - text: Prioritise and deal with late payment letters
@@ -34,15 +35,36 @@ en:
             url: /en/tools/debt-advice-locator
 
         - type: list
+          header: Action Plans
+          links:
+          - text: "Employed and furloughed: The coronavirus job retention scheme" 
+            url: /en/articles/employed-and-furloughed/
+          - text: "Employed, off sick or self-isolating"	
+            url: /en/articles/employed-off-sick-or-self-isolating
+          - text: "Help with your mortgage and other loan repayments"
+            url: /en/articles/help-with-mortgage-and-loan-repayments
+          - text: "Help with your rent and other bills"
+            url: /en/articles/help-with-your-rent-and-other-bills
+          - text: "Self-employed: financial help if you’re sick or self-isolating"
+            url: /en/articles/self-employed-financial-help-if-youre-sick-or-self-isolating
+          - text: "Self-employed: financial help if you’ve lost business income"
+            url: /en/articles/self-employed-financial-help-if-youve-lost-business-income
+          - text: "What type of worker are you? Financial help during the coronavirus outbreak"
+            url: /en/articles/what-type-of-worker-are-you
+
+        - type: list
           header: Redundancy
           links:
           - text: Out of work checklist - things to do when you've lost your job
             url: /en/articles/out-of-work-checklist-things-to-do-if-you-lose-your-job
           - text: Benefits when you've lost your job
             url: /en/articles/benefits-and-tax-credits-when-youve-lost-your-job
+          - text: Universal credit explained
+            url: /en/articles/universal-credit-an-introduction
 
-        - type: list
-          header: Tools
+        - type: vid_hdr_lnks
+          video: https://www.youtube.com/embed/bov7VNaYz4g
+          header: Tools and videos
           links:
           - text: Budget planner
             url: /en/tools/budget-planner
@@ -50,6 +72,10 @@ en:
             url: /en/tools/credit-card-calculator
           - text: Loan calculator
             url: /en/tools/loan-calculator
+          - text: Money Manager for Universal Credit
+            url: /en/tools/money-manager
+          - text: Coronavirus video playlist	
+            url: https://www.youtube.com/watch?v=bov7VNaYz4g&list=PLCBP-h0vc07GfLJDnvFuo61NlnalScAtX
 
         - type: list
           header: Housing costs, mortgage and rent payments
@@ -102,19 +128,14 @@ en:
             url: /en/articles/how-youre-protected-when-you-pay-by-card
 
         - type: hdr_lst_lnks
-          header: Pensions
+          header: Pensions and scams
           listitems:
-          - Talk to TPAS on <strong>0800 011 3797</strong>
-          - Talk to Pension Wise on <strong>0800 138 3944</strong>
+          - Worried coronavirus has affected your pension? Talk to TPAS on <strong>0800 011 3797</strong>
+          - If you’re aged 50+ and want to know if coronavirus will affect your retirement plans, talk to Pension Wise on <strong>0800 138 3944</strong>
           links:
           - text: Coronavirus and your pension
-            url: /en/articles/coronavirus-and-your-pension/
+            url: /en/articles/coronavirus-and-your-pension
           - text: Pension release and pension unlocking
             url: /en/articles/pension-release-or-pension-unlocking
-
-        - type: img_hdr_lnks
-          image: covid-19-hub-scams-image.jpg
-          header: Scams
-          links:
           - text: Coronavirus scams
-            url: /en/articles/coronavirus-scams/
+            url: /en/articles/coronavirus-scams

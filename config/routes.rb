@@ -21,7 +21,9 @@ Rails.application.routes.draw do
     root 'home#show'
 
     #C19 Diagostics tool
-    get '/c19_diagnostics', to: 'c19_diagnostics#show'
+    get '/c19_diagnostics', to: 'c19_diagnostics#landing'
+    get '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
+    get '/c19_diagnostics/results', to: 'c19_diagnostics#results'
 
     get '/sitemap', to: 'sitemap#index'
 

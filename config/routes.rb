@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    #C19 Diagostics tool
+    get '/c19_diagnostics', to: 'c19_diagnostics#show'
+
     get '/sitemap', to: 'sitemap#index'
 
     devise_for :users,

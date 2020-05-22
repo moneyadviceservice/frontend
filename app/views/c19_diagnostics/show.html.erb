@@ -1,0 +1,27 @@
+<% set_meta_tags(title:       t('c19_diagnostics_tool.meta.title'),
+                 description: t('c19_diagnostics_tool.meta.description'),
+                 canonical:   t('c19_diagnostics_tool.meta.canonical'),
+                 alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
+
+<%= form_for question, url:c19_diagnostics_path, html: { class: 'form' } do |f| %>
+
+    <fieldset class="form__group">
+      <legend >Some legend goes here</legend>
+      <p>Sample Question</p>
+
+      <div class="form__group-item">
+        <label>
+          <%= f.radio_button :sample_question, 'true', class: 'form__group-input' %>
+          <%= 'Yes' %>
+        </label>
+      </div>
+
+      <div class="form__group-item">
+        <label>
+          <%= f.radio_button :sample_question, 'false', class: 'form__group-input' %>
+          <%= 'No' %>
+        </label>
+      </div>
+    </fieldset>
+<% end %>
+

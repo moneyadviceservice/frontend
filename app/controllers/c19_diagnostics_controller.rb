@@ -3,5 +3,8 @@ class C19DiagnosticsController < ApplicationController
     @question = Question.new
   end
 
+  def landing;end
+  def questionnaire;end
+  def show;end
 
 end

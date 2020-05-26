@@ -43,6 +43,6 @@ class Questions
 
 
   def next_question
-    [ :Q0 ]
+    [ :Q0 ] if self.Q0.nil?
   end
 end

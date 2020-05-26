@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     #C19 Diagostics tool
     get '/c19_diagnostics', to: 'c19_diagnostics#landing'
     get '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
+    post '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
+    patch '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
     get '/c19_diagnostics/results', to: 'c19_diagnostics#results'
 
     get '/sitemap', to: 'sitemap#index'

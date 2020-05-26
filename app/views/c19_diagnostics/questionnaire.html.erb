@@ -4,25 +4,32 @@
                  alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
 
                <h1>THE QUESTIONNAIRE </h1>
-<%= form_for question, url:c19_diagnostics_path, html: { class: 'form' } do |f| %>
+<%= form_for @model, url:c19_diagnostics_questionnaire_path, html: { class: ',form' }, builder: Dough::Forms::Builders::Validation do |f| %>
+  <%= f.validation_summary %>
+
+  <% @current_questions.each do |question| %>
 
     <fieldset class="form__group">
       <legend >Some legend goes here</legend>
-      <p>Sample Question</p>
+      <p><%= t("c19_diagnostics_tool.questions.#{question}") %></p>
 
       <div class="form__group-item">
         <label>
-          <%= f.radio_button :sample_question, 'true', class: 'form__group-input' %>
+          <%= f.radio_button question, 'true', class: 'form__group-input' %>
           <%= 'Yes' %>
         </label>
       </div>
 
       <div class="form__group-item">
         <label>
-          <%= f.radio_button :sample_question, 'false', class: 'form__group-input' %>
+          <%= f.radio_button question, 'false', class: 'form__group-input' %>
           <%= 'No' %>
         </label>
       </div>
+      <div>
+        <%= f.submit t("c19_diagnostics_tool.controls.submit_label"), class: 'button button--primary' %>
+      </div>
     </fieldset>
+  <% end %>
 <% end %>
 

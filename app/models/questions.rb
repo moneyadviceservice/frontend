@@ -11,15 +11,21 @@
 # 2. You ask for the headings (content) to display at the end of the questionaire. 
 #     Input: Codes for all the questions and thier answers provided
 #     Output: Codes for all the headings and flags that resulted
-class Question
+class Questions
   include ActiveModel::Model
 
   attr_accessor :sample_question
+  attr_accessor :questions
+  #TODO: this is hardcoded for now but need to do some magic via the questions to make these available
+  attr_accessor :Q0
+
 
   validates :sample_question, inclusion: { in: [true, false] }
+  #TODO: Actualy validate the bag of questions (for the time being just check that the bag exists)
+  validates :questions, presence: true
 
   def self.find(_id)
-    Question.new
+    Questions.new
   end
 
   def destroy
@@ -32,5 +38,11 @@ class Question
 
   def save
     true
+  end
+  
+
+
+  def next_question
+    [ :Q0 ]
   end
 end

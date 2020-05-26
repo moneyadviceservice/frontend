@@ -1,5 +1,5 @@
 module C19DiagnosticsHelper
-  def question
-    Question.new
+  def questions
   end
+  
 end

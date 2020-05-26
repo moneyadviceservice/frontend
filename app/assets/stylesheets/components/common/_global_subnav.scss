@@ -44,10 +44,14 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
 
 .is-hidden {
   display: none;
+
+  @include respond-to($mq-m) {
+    display: block; 
+  }
 }
 
-// no-js fallback --
-.uninitialised {
+// nav not initialised --
+.global-nav:not([data-dough-global-nav-initialised="yes"]) {
   @include respond-to($mq-m) {
     .global-nav__clump__heading {
       &:hover {
@@ -64,7 +68,7 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
     }
   }
 }
-// -- no-js fallback
+// -- nav not initialised
 
 .global-subnav__heading {
   position: relative;

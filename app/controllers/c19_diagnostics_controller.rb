@@ -1,22 +1,18 @@
 class C19DiagnosticsController < ApplicationController
 
   def landing;end
-  
-  def questionnaire
-    @model = Questions.new(updated_questions(params[:questions]))
-    @current_questions = @model.next_question
 
-    if !params[:questions].nil?
-      if !@model.valid? 
-        flash.now[:error] = t('c19_diagnostics_tool.messages.form_error')
-        render 'questionnaire'
-      else
-        if @current_questions.nil? 
-          render 'results'  
-        else
-          render 'questionnaire'
-        end
-      end
+  def questionnaire
+    #If we are here with no questions to process then reset to begining of questionair
+    clear_session if no_answers_submitted?
+
+    @model = Questions.new(updated_questions(params[:questions]))
+
+    if no_answers_submitted? || more_questions_to_display?
+      @current_questions = @model.next_question
+      render 'questionnaire'
+    else
+      render 'results'
     end
 
   end
@@ -31,5 +27,17 @@ class C19DiagnosticsController < ApplicationController
   def updated_questions(questions)
     session[:all_questions] ||= HashWithIndifferentAccess.new
     session[:all_questions].merge!(questions) unless questions.nil?
+  end
+
+  def clear_session
+    session[:all_questions] = nil
+  end
+
+  def no_answers_submitted?
+    params[:questions].nil?
+  end
+
+  def more_questions_to_display?
+   !@model.next_question.nil?
   end
 end

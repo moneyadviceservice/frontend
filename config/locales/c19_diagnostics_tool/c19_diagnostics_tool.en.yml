@@ -26,7 +26,16 @@ en:
           - value: wal
             text: Wales/Cymru
       Q1: 
-        question: This is the second question
+        question: What is your employment status?
+        responses: 
+          - value: employed 
+            text: Employed (including furloughed)
+          - value: self_employed 
+            text: Self-employed
+          - value: unemployed 
+            text: Unemployed
+          - value: retired 
+            text: Retired
     results:
       H1: 
         text: Result Heading 1

@@ -45,4 +45,8 @@ class Questions
   def next_question
     [ :Q0 ] if self.Q0.nil?
   end
+
+  def results
+    [ :H1, :H3, :A1]
+  end
 end

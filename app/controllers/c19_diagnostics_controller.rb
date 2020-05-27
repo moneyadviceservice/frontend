@@ -12,6 +12,7 @@ class C19DiagnosticsController < ApplicationController
       @current_questions = @model.next_question
       render 'questionnaire'
     else
+      @results = @model.results
       render 'results'
     end
 

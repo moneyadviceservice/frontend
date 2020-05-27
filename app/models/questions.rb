@@ -46,7 +46,8 @@ class Questions
     [ :Q0 ] if self.Q0.nil?
   end
 
-  def results
+
+  def results(all_answerd_questions)
     [ :H1, :H3, :A1]
   end
 end

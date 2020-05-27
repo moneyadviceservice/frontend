@@ -3,33 +3,32 @@
                  canonical:   t('c19_diagnostics_tool.meta.canonical'),
                  alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
 
-               <h1>THE QUESTIONNAIRE </h1>
-<%= form_for @model, url:c19_diagnostics_questionnaire_path, html: { class: ',form' }, builder: Dough::Forms::Builders::Validation do |f| %>
+<h1><%= t("c19_diagnostics_tool.heading") %></h1>
+
+<p><%= t("c19_diagnostics_tool.subheading") %></p>
+
+<%= form_for @model, 
+  url:c19_diagnostics_questionnaire_path, 
+  builder: Dough::Forms::Builders::Validation do |f| 
+%>
   <%= f.validation_summary %>
 
   <% @current_questions.each do |question| %>
+    <div>
+      <p><%= t("c19_diagnostics_tool.questions.#{question}.question") %></p>
 
-    <fieldset class="form__group">
-      <legend >Some legend goes here</legend>
-      <p><%= t("c19_diagnostics_tool.questions.#{question}") %></p>
+      <fieldset>
+        <legend><%= question %></legend>
 
-      <div class="form__group-item">
-        <label>
-          <%= f.radio_button question, 'true', class: 'form__group-input' %>
-          <%= 'Yes' %>
-        </label>
-      </div>
+        <% t("c19_diagnostics_tool.questions.#{question}.responses").each do |response| %>
+          <label>
+            <%= f.radio_button question, response[:value] %>
+            <%= response[:text] %>
+          </label>
+        <% end %>
+      </fieldset>
 
-      <div class="form__group-item">
-        <label>
-          <%= f.radio_button question, 'false', class: 'form__group-input' %>
-          <%= 'No' %>
-        </label>
-      </div>
-      <div>
-        <%= f.submit t("c19_diagnostics_tool.controls.submit_label"), class: 'button button--primary' %>
-      </div>
-    </fieldset>
+      <%= f.submit t("c19_diagnostics_tool.controls.submit_label") %>
+    </div>
   <% end %>
 <% end %>
-

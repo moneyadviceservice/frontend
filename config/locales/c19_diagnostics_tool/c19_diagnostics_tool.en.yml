@@ -8,11 +8,25 @@ en:
         en-GB: https://www.moneyadviceservice.org.uk/en/c19_diagnostics
         cy-GB: https://www.moneyadviceservice.org.uk/cy/c19_diagnostics
     controls:
-      submit_label: Submit Answer
+      submit_label: Get started
     messages:
       form_error: Invalid Form Values
+    heading: My Money Navigator
+    subheading: Answer these questions to get advice tailored to you
     questions:
-      Q0: This is the first question
+      Q0: 
+        question: To start, please select the country you live in
+        responses: 
+          - value: eng
+            text: England
+          - value: ni
+            text: Northern Ireland
+          - value: sco
+            text: Scotland
+          - value: wal
+            text: Wales/Cymru
+      Q1: 
+        question: This is the second question
     results:
       H1: 
         text: Result Heading 1

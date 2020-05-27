@@ -3,3 +3,8 @@
                  canonical:   t('c19_diagnostics_tool.meta.canonical'),
                  alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
                <h1>THE RESULTS</h1>
+  <% @results.each do |result| %>
+
+    <p><%= t("c19_diagnostics_tool.results.#{result}.text") %></p>
+
+  <% end %>

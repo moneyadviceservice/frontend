@@ -12,7 +12,7 @@ class C19DiagnosticsController < ApplicationController
       @current_questions = @model.next_question
       render 'questionnaire'
     else
-      @results = @model.results
+      @results = @model.results(updated_questions(nil))
       render 'results'
     end
 
@@ -28,6 +28,7 @@ class C19DiagnosticsController < ApplicationController
   def updated_questions(questions)
     session[:all_questions] ||= HashWithIndifferentAccess.new
     session[:all_questions].merge!(questions) unless questions.nil?
+    session[:all_questions]
   end
 
   def clear_session

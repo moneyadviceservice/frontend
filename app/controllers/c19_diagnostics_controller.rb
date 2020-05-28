@@ -6,10 +6,9 @@ class C19DiagnosticsController < ApplicationController
     #If we are here with no questions to process then reset to begining of questionair
     clear_session if no_answers_submitted?
 
-    @model = Questions.new(updated_questions(params[:questions]))
+    @model = Questions.new
 
-    if no_answers_submitted? || more_questions_to_display?
-      @current_questions = @model.next_question
+    if no_answers_submitted? 
       render 'questionnaire'
     else
       @results = @model.results(updated_questions(nil))
@@ -20,10 +19,11 @@ class C19DiagnosticsController < ApplicationController
   
   def show;end
 
+  #TODO: Delete this. Keeping it here for now just in case its being used for prototyping
   def current_questions
-    @current_questions
+    [:Q1]
   end
-  helper_method :current_question
+  helper_method :current_questions
 
   def updated_questions(questions)
     session[:all_questions] ||= HashWithIndifferentAccess.new
@@ -39,7 +39,8 @@ class C19DiagnosticsController < ApplicationController
     params[:questions].nil?
   end
 
-  def more_questions_to_display?
-   !@model.next_question.nil?
+  def errors_for(question)
+    content_tag(:p, @model.errors[question].try(:first), class: 'help-block')
   end
+  helper_method :errors_for
 end

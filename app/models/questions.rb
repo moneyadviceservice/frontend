@@ -13,6 +13,9 @@
 #     Output: Codes for all the headings and flags that resulted
 class Questions
   include ActiveModel::Model
+  include MoneyHelper::Symbols
+
+FLAGS = []
 
   attr_accessor :sample_question
   attr_accessor :questions
@@ -39,13 +42,6 @@ class Questions
   def save
     true
   end
-  
-
-
-  def next_question
-    [ :Q0 ] if self.Q0.nil?
-  end
-
 
   def results(all_answerd_questions)
     [ :H1, :H3, :A1]

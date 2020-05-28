@@ -19,11 +19,6 @@ class C19DiagnosticsController < ApplicationController
   
   def show;end
 
-  #TODO: Delete this. Keeping it here for now just in case its being used for prototyping
-  def current_questions
-    [:Q1]
-  end
-  helper_method :current_questions
 
   def updated_questions(questions)
     session[:all_questions] ||= HashWithIndifferentAccess.new

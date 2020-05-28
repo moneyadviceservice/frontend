@@ -25,7 +25,7 @@
 
           <% question[:responses].each do |response| %>
             <label>
-              <%= f.radio_button(:question, response[:value]) %>
+              <%= f.radio_button(question[:label], response[:value]) %>
               <%= response[:text] %>
             </label>
           <% end %>

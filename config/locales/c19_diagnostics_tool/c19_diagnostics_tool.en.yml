@@ -8,11 +8,42 @@ en:
         en-GB: https://www.moneyadviceservice.org.uk/en/c19_diagnostics
         cy-GB: https://www.moneyadviceservice.org.uk/cy/c19_diagnostics
     controls:
-      submit_label: Submit Answer
+      submit_label: Continue
     messages:
       form_error: Invalid Form Values
+    heading: My Money Navigator
+    subheading: Answer these questions to get advice tailored to you
+    counter: Question %{number} of %{total}
     questions:
-      Q0: This is the first question
+      - label: Q0
+        text: To start, please select the country you live in
+        responses: 
+          - value: eng
+            text: England
+          - value: ni
+            text: Northern Ireland
+          - value: sco
+            text: Scotland
+          - value: wal
+            text: Wales/Cymru
+      - label: Q1
+        text: What is your employment status?
+        responses: 
+          - value: employed 
+            text: Employed (including furloughed)
+          - value: self_employed 
+            text: Self-employed
+          - value: unemployed 
+            text: Unemployed
+          - value: retired 
+            text: Retired
+      - label: Q2
+        text: Are you at risk of redundancy?
+        responses: 
+          - value: true
+            text: 'Yes'
+          - value: false
+            text: 'No'
     results:
       H1: 
         text: Result Heading 1

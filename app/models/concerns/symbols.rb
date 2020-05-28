@@ -1,4 +1,4 @@
-module MoneyHelper::Symbols
+module Symbols
   FLAGS = {
     :'1' => '1',
     :'2' => '2',
@@ -70,8 +70,8 @@ module MoneyHelper::Symbols
     :'Q31' => '31',
     :'Q32' => '32'  
   }
-  
-  
+
+
   #TODO get these from the translation files when merged with frotend changes
   #This is each Answer and the position of its flag in the question specific answer bit value
   ANSWER = { 
@@ -114,5 +114,6 @@ module MoneyHelper::Symbols
       touch_points: %w[ Q1_A1 Q5_A5 ],
       activation_mask: '2'
     }
+  }
 end
 

@@ -7,7 +7,7 @@
 <%= form_for @model, url:c19_diagnostics_questionnaire_path, html: { class: ',form' }, builder: Dough::Forms::Builders::Validation do |f| %>
   <%= f.validation_summary %>
 
-  <% @current_questions.each do |question| %>
+  <% current_questions.each do |question| %>
 
     <fieldset class="form__group">
       <legend >Some legend goes here</legend>

@@ -13,19 +13,22 @@
 #     Output: Codes for all the headings and flags that resulted
 class Questions
   include ActiveModel::Model
-  include MoneyHelper::Symbols
+  #include Symbols
 
-FLAGS = []
 
-  attr_accessor :sample_question
-  attr_accessor :questions
+  #attr_accessor :sample_question
+  #attr_accessor :questions
   #TODO: this is hardcoded for now but need to do some magic via the questions to make these available
-  attr_accessor :Q0
+  #attr_accessor :Q0
 
 
-  validates :sample_question, inclusion: { in: [true, false] }
+  #validates :sample_question, inclusion: { in: [true, false] }
   #TODO: Actualy validate the bag of questions (for the time being just check that the bag exists)
-  validates :questions, presence: true
+  #validates :questions, presence: true
+
+  def initialize
+    setup_attributes
+  end
 
   def self.find(_id)
     Questions.new
@@ -46,4 +49,19 @@ FLAGS = []
   def results(all_answerd_questions)
     [ :H1, :H3, :A1]
   end
+
+  def setup_attributes
+    @all_answers ||= HashWithIndifferentAccess.new
+    Symbols::QUESTIONS.keys.each do | question |
+      self.class.class_eval do
+        define_method("#{question}") { @all_answers[question] }
+        define_method("#{question}=") { | value | @all_answers[question] = value }
+        #All questions must be present for the model to be valid.
+        validates question.to_sym, presence: true
+      end
+    end
+
+  end
+   
+
 end

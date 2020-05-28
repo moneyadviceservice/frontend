@@ -13,22 +13,24 @@
 %>
   <%= f.validation_summary %>
 
-  <% @current_questions.each do |question| %>
+  <% t("c19_diagnostics_tool.questions").each do |question| %>
     <div>
-      <p><%= t("c19_diagnostics_tool.questions.#{question}.question") %></p>
+      <p><%= question[:label] %></p>
 
-      <fieldset>
-        <legend><%= question %></legend>
+      <%= f.form_row do %>
+        <fieldset>
+          <legend><%= question[:text] %></legend>
 
-        <% t("c19_diagnostics_tool.questions.#{question}.responses").each do |response| %>
-          <label>
-            <%= f.radio_button question, response[:value] %>
-            <%= response[:text] %>
-          </label>
-        <% end %>
-      </fieldset>
-
-      <%= f.submit t("c19_diagnostics_tool.controls.submit_label") %>
+          <% question[:responses].each do |response| %>
+            <label>
+              <%= f.radio_button(:question, response[:value]) %>
+              <%= response[:text] %>
+            </label>
+          <% end %>
+        </fieldset>
+      <% end %>
     </div>
   <% end %>
+
+  <%= f.submit t("c19_diagnostics_tool.controls.submit_label") %>
 <% end %>

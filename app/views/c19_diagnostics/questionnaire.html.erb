@@ -35,6 +35,10 @@
             </label>
           <% end %>
         </fieldset>
+
+        <% if question[:note] %>
+          <p><%= question[:note] %></p>
+        <% end %>
       </li>
     <% end %>
   </ul>

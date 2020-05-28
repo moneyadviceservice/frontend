@@ -37,6 +37,13 @@ en:
             text: Unemployed
           - value: retired 
             text: Retired
+      - label: Q2
+        text: Are you at risk of redundancy?
+        responses: 
+          - value: true
+            text: 'Yes'
+          - value: false
+            text: 'No'
     results:
       H1: 
         text: Result Heading 1

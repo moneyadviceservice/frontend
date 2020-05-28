@@ -23,6 +23,10 @@
         <fieldset>
           <legend><%= question[:text] %></legend>
 
+          <% if question[:explainer] %>
+            <p><%= question[:explainer] %></p>
+          <% end %>
+
           <% question[:responses].each do |response| %>
             <label>
               <% if question[:type] == 'radio' %>

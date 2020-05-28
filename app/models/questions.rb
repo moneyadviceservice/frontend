@@ -13,7 +13,6 @@
 #     Output: Codes for all the headings and flags that resulted
 class Questions
   include ActiveModel::Model
-  #include Symbols
 
 
   #attr_accessor :sample_question

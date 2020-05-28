@@ -13,13 +13,13 @@
 %>
   <%= f.validation_summary %>
 
-  <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
-    <div>
-      <% if index > 0 %>
-        <p><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
-      <% end %>
+  <ul>
+    <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
+      <li>
+        <% if index > 0 %>
+          <p><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
+        <% end %>
 
-      <%= f.form_row do %>
         <fieldset>
           <legend><%= question[:text] %></legend>
 
@@ -35,9 +35,9 @@
             </label>
           <% end %>
         </fieldset>
-      <% end %>
-    </div>
-  <% end %>
+      </li>
+    <% end %>
+  </ul>
 
   <%= f.submit t("c19_diagnostics_tool.controls.submit_label") %>
 <% end %>

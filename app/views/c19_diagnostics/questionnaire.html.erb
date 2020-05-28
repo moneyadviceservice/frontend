@@ -25,8 +25,13 @@
 
           <% question[:responses].each do |response| %>
             <label>
-              <%= f.radio_button(question[:label], response[:value]) %>
-              <%= response[:text] %>
+              <% if question[:type] == 'radio' %>
+                <%= f.radio_button(question[:label], response[:value]) %>
+                <%= response[:text] %>
+              <% elsif question[:type] == 'checkbox' %>
+                <%= f.check_box(question[:label]) %>
+                <%= response[:text] %>
+              <% end %>
             </label>
           <% end %>
         </fieldset>

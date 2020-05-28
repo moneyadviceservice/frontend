@@ -8,14 +8,14 @@ en:
         en-GB: https://www.moneyadviceservice.org.uk/en/c19_diagnostics
         cy-GB: https://www.moneyadviceservice.org.uk/cy/c19_diagnostics
     controls:
-      submit_label: Get started
+      submit_label: Continue
     messages:
       form_error: Invalid Form Values
     heading: My Money Navigator
     subheading: Answer these questions to get advice tailored to you
     questions:
-      Q0: 
-        question: To start, please select the country you live in
+      - label: Q0
+        text: To start, please select the country you live in
         responses: 
           - value: eng
             text: England
@@ -25,8 +25,8 @@ en:
             text: Scotland
           - value: wal
             text: Wales/Cymru
-      Q1: 
-        question: What is your employment status?
+      - label: Q1
+        text: What is your employment status?
         responses: 
           - value: employed 
             text: Employed (including furloughed)

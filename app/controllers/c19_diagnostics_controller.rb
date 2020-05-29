@@ -14,7 +14,6 @@ class C19DiagnosticsController < ApplicationController
   end
 
   def results
-    redirect_to action: 'questionnaire' if !@model.valid?
     @results = @model.results(updated_questions(nil))
   end
 

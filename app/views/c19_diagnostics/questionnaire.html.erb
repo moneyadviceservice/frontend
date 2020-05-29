@@ -31,11 +31,10 @@
             <label>
               <% if question[:type] == 'radio' %>
                 <%= f.radio_button(question[:label], response[:value]) %>
-                <%= response[:text] %>
               <% elsif question[:type] == 'checkbox' %>
-                <%= f.check_box(question[:label]) %>
-                <%= response[:text] %>
+                <%= f.check_box question[:label], {multiple: true}, response[:value], nil  %>
               <% end %>
+                <%= response[:text] %>
             </label>
           <% end %>
         </fieldset>

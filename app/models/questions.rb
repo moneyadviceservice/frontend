@@ -5,28 +5,21 @@
 # it should be made a DB model for the release
 #
 #This model can be used in two ways
-# 1. You ask for the next question to display. 
-#     Input: current question code  and code of answer provided OR nill for the first question
-#     Output: Code of next question to display
-# 2. You ask for the headings (content) to display at the end of the questionaire. 
+# 1. You ask for the headings (content) to display at the end of the questionaire. 
 #     Input: Codes for all the questions and thier answers provided
 #     Output: Codes for all the headings and flags that resulted
 class Questions
   include ActiveModel::Model
 
+  Symbols::QUESTIONS.keys.each do | question |
+    define_method("#{question}") { @all_answers[question] }
+    define_method("#{question}=") { | value | @all_answers[question] = value }
+    #All questions must be present for the model to be valid.
+    validates question.to_sym, presence: true
+  end
 
-  #attr_accessor :sample_question
-  #attr_accessor :questions
-  #TODO: this is hardcoded for now but need to do some magic via the questions to make these available
-  #attr_accessor :Q0
-
-
-  #validates :sample_question, inclusion: { in: [true, false] }
-  #TODO: Actualy validate the bag of questions (for the time being just check that the bag exists)
-  #validates :questions, presence: true
-
-  def initialize
-    setup_attributes
+  def initialize(params = nil)
+    setup_attributes(params)
   end
 
   def self.find(_id)
@@ -49,16 +42,10 @@ class Questions
     [ :H1, :H3, :A1]
   end
 
-  def setup_attributes
-    @all_answers ||= HashWithIndifferentAccess.new
-    Symbols::QUESTIONS.keys.each do | question |
-      self.class.class_eval do
-        define_method("#{question}") { @all_answers[question] }
-        define_method("#{question}=") { | value | @all_answers[question] = value }
-        #All questions must be present for the model to be valid.
-        validates question.to_sym, presence: true
-      end
-    end
+  private
+
+  def setup_attributes(params)
+    @all_answers ||= HashWithIndifferentAccess.new(params)
 
   end
    

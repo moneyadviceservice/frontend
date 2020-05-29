@@ -3,21 +3,20 @@ class C19DiagnosticsController < ApplicationController
   def landing;end
 
   def questionnaire
-    #If we are here with no questions to process then reset to begining of questionair
-    clear_session if no_answers_submitted?
-
-    @model = Questions.new
-
-    if no_answers_submitted? 
+    if no_answers_submitted?
+      clear_session
+      @model = Questions.new
       render 'questionnaire'
     else
-      @results = @model.results(updated_questions(nil))
-      render 'results'
+      @model = Questions.new(updated_questions(submitted_answers))
+      redirect_to action:  'results' if @model.valid?
     end
-
   end
-  
-  def show;end
+
+  def results
+    redirect_to action: 'questionnaire' if !@model.valid?
+    @results = @model.results(updated_questions(nil))
+  end
 
 
   def updated_questions(questions)
@@ -32,6 +31,10 @@ class C19DiagnosticsController < ApplicationController
 
   def no_answers_submitted?
     params[:questions].nil?
+  end
+
+  def submitted_answers
+    params[:questions]
   end
 
   def errors_for(question)

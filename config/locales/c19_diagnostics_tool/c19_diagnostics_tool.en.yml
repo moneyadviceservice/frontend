@@ -15,219 +15,219 @@ en:
     subheading: Answer these questions to get advice tailored to you
     counter: Question %{number} of %{total}
     questions:
-      - label: Q0
+      - code: Q0
         type: radio
         text: To start, please select the country you live in
         responses: 
-          - value: eng
+          - code: A0
             text: England
-          - value: ni
+          - code: A1
             text: Northern Ireland
-          - value: sco
+          - code: A2
             text: Scotland
-          - value: wal
+          - code: A3
             text: Wales/Cymru
-      - label: Q1
+      - code: Q1
         type: radio
         text: What is your employment status?
         responses: 
-          - value: employed 
+          - code: A0 
             text: Employed (including furloughed)
-          - value: self_employed 
+          - code: A1 
             text: Self-employed
-          - value: unemployed 
+          - code: A2 
             text: Unemployed
-          - value: retired 
+          - code: A3 
             text: Retired
-      - label: Q2
+      - code: Q2
         type: radio
         text: Are you at risk of redundancy?
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-      - label: Q3
+      - code: Q3
         type: radio
         text: If you are self-employed, do you know what your monthly income is now?
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-      - label: Q4
+      - code: Q4
         type: radio
         text: How would you describe your household income as a result of the coronavirus crisis?
         responses: 
-          - value: long_drop
+          - code: A0
             text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
-          - value: temp_drop_worry
+          - code: A1
             text: Temporary drop and worried about my future security
-          - value: temp_drop_no_worry
+          - code: A2
             text: Temporary drop but expect it to increase as restrictions ease
-          - value: no_change
+          - code: A3
             text: No change/Saved money
-      - label: Q5
+      - code: Q5
         type: radio
         text: Have you used any government financial support?
         responses: 
-          - value: self_employ
+          - code: A0
             text: Self-employment income support scheme
-          - value: furlough
+          - code: A1
             text: Furlough scheme
-          - value: false
+          - code: A2
             text: 'No'
-      - label: Q6
+      - code: Q6
         type: radio
         text: Are you behind with rent or mortgage payments?
         note: 'Note: please answer "Yes" if you are on an agreed payment holiday/break'
         responses: 
-          - value: false
+          - code: A0
             text: 'No'
-          - value: no_rent_private
+          - code: A1
             text: No, but I am worried that I might fall behind on rent (private renting)
-          - value: no_rent_social
+          - code: A2
             text: No, but I am worried that I might fall behind on rent (council/social housing)
-          - value: no_mortgage
+          - code: A3
             text: No, but I am worried that I might fall behind on mortgage payments
-          - value: yes_rent
+          - code: A4
             text: Yes, I am behind with my rent because of coronavirus
-          - value: yes_mortgage
+          - code: A5
             text: Yes, I am behind with my mortgage because of coronavirus
-          - value: yes_unrelated
+          - code: A6
             text: Yes, but they are arrears unrelated to coronavirus
-      - label: Q7
+      - code: Q7
         type: checkbox
         text: Are you behind on any of these bills?
         explainer: Choose all that apply
         responses: 
-          - value: false
+          - code: A0
             text: 'No'
-          - value: council_tax 
+          - code: A1 
             text: Council tax
-          - value: gas_electric 
+          - code: A2 
             text: Gas or electric
-          - value: hmrc
+          - code: A3
             text: Payments to DWP/HMRC (eg tax credit overpayments, loan repayments)
-          - value: tv_licence 
+          - code: A4 
             text: TV Licence
-          - value: income_tax 
+          - code: A5 
             text: Income tax
-          - value: child_maintenance 
+          - code: A6 
             text: Child maintenance payments
-          - value: court 
+          - code: A7 
             text: Court fines
-          - value: hire_purchase 
+          - code: A8 
             text: Hire purchase payments
-          - value: cark_parking 
+          - code: A9 
             text: Cark parking fines
-      - label: Q8
+      - code: Q8
         type: checkbox
         text: Have you taken out a payment break or holiday on loans or credit?
         explainer: Choose all that apply
         responses: 
-          - value: false
+          - code: A0
             text: 'No'
-          - value: mortgage 
+          - code: A1 
             text: Mortgage
-          - value: personal_loan 
+          - code: A2 
             text: Personal loan
-          - value: credit_card  
+          - code: A3  
             text: Credit card
-          - value: store_card  
+          - code: A4  
             text: Store card
-          - value: car_finance 
+          - code: A5 
             text: Car finance
-          - value: buy_now_pay_later 
+          - code: A6 
             text: Buy now pay later (eg Klarna)
-          - value: rent_to_own 
+          - code: A7 
             text: Rent to own
-          - value: payday_loan 
+          - code: A8 
             text: Payday loan
-          - value: pawnbroker 
+          - code: A9 
             text: Pawnbroker arrangement
-      - label: Q9
+      - code: Q9
         type: checkbox
         text: Have you taken out a payment break or holiday on loans or credit?
         explainer: Choose all that apply
         responses: 
-          - value: false
+          - code: A0
             text: 'No'
-          - value: personal_loan 
+          - code: A1 
             text: Personal loan
-          - value: water 
+          - code: A2 
             text: Water bill
-          - value: mobile 
+          - code: A3 
             text: Mobile phone/TV or broadband
-          - value: credit_card 
+          - code: A4 
             text: Credit card
-          - value: store_card 
+          - code: A5 
             text: Store card
-          - value: car_finance 
+          - code: A6 
             text: Car finance
-          - value: buy_now_pay_later 
+          - code: A7 
             text: Buy now pay later (eg Klarna)
-          - value: rent_to_own 
+          - code: A8 
             text: Rent to own
-          - value: payday_loan 
+          - code: A9 
             text: Payday loan
-          - value: pawnbroker 
+          - code: A10 
             text: Pawnbroker loan
-          - value: repayments 
+          - code: A11 
             text: Repayments to family or friends
-      - label: Q10
+      - code: Q10
         type: radio
         text: Have you fallen behind with payments towards your credit commitments (mortgage, credit cards, personal loans, etc.) or other priority household bills (rent, water, gas, electricity, council tax, etc.) since 28 February 2020?
         note: 'Note: Please answer "Yes" even if this is as a result of a payment break/holiday agreed with your creditor/supplier. If you had already fallen behind prior to 28th February, please answer "No".'
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-          - value: before
+          - code: A2
             text: I was in financial difficulties before 28th February
-      - label: Q11
+      - code: Q11
         type: radio
         text: Will you have to borrow more money to manage essential payments (like rent, food and bills) in the next few months?
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-      - label: Q12
+      - code: Q12
         type: checkbox
         text: Are you considering any of these ways to pay off debts or meet existing credit payments?
         explainer: Choose all that apply
         responses: 
-          - value: false
+          - code: A0
             text: 'No'
-          - value: equity 
+          - code: A1 
             text: Equity in home
-          - value: pension
+          - code: A2
             text: Using my pension pot
-          - value: remortgage 
+          - code: A3 
             text: Remortgage
-          - value: savings
+          - code: A4
             text: Using my savings
-      - label: Q13
+      - code: Q13
         type: radio
         text: Are you thinking of cancelling or reducing insurance cover because you are worried about costs?
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-          - value: maybe
+          - code: A2
             text: Maybe
-      - label: Q14
+      - code: Q14
         type: radio
         text: Are your money worries affecting your mental health?
         responses: 
-          - value: true
+          - code: A0
             text: 'Yes'
-          - value: false
+          - code: A1
             text: 'No'
-          - value: sometimes
+          - code: A2
             text: Sometimes
     results:
       H1: 

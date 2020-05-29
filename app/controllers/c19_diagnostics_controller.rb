@@ -6,7 +6,6 @@ class C19DiagnosticsController < ApplicationController
     if no_answers_submitted?
       clear_session
       @model = Questions.new
-      render 'questionnaire'
     else
       @model = Questions.new(updated_questions(submitted_answers))
       redirect_to action:  'results' if @model.valid?
@@ -14,6 +13,7 @@ class C19DiagnosticsController < ApplicationController
   end
 
   def results
+    @model = Questions.new
     @results = @model.results(updated_questions(nil))
   end
 

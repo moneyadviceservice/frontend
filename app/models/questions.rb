@@ -4,10 +4,6 @@
 # It will have model logic so I placed it in the models, that does not mean that
 # it should be made a DB model for the release
 #
-#This model can be used in two ways
-# 1. You ask for the headings (content) to display at the end of the questionaire. 
-#     Input: Codes for all the questions and thier answers provided
-#     Output: Codes for all the headings and flags that resulted
 class Questions
   include ActiveModel::Model
 

@@ -92,10 +92,62 @@ module Symbols
     :'A31' => '32'  
   }
 
-  HEADINGS_AND_CTAS = {
-    :'H1' => { 
-      touch_points: %w[ Q1_A1 Q5_A5 ],
-      activation_mask: '2'
+  #The data representation of the logic that triggers content being displayed
+  #Format:
+  # <Section Code>: {
+  #   <header code>: {
+  #     header: <The header to display above any displayed content>
+  #     content: [ <this contains the list of content objects that can appear under this header as exampled below>
+  #       {
+  #         triggers: [
+  #           < a list of the QA combinations whose state triggers display of the content >
+  #         ],
+  #         masks: [
+  #           <A list bitmasks that determins whether the triggers turn the header on or off
+  #           each list element must contain as many flags as there are triggers and if any one of these masks
+  #           matches the triggers then the content will be displayed>
+  #         ],
+  #         article: <The CMS URL of the content affected >
+  #       }
+  #     ]
+  #   }
+  # }
+  RESULTS = {
+    'S1': {
+      text: 'Urgent actions'
+      'H1': {
+        text: 'Get free Debt advice now (DALT)'
+        content: [
+          {
+            triggers: [ 
+              %w[Q0_A1 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+            ],
+            mask: '1',
+            article: "corona_virus_urgent_action_england"
+          },
+          {
+            triggers: [ 
+              %w[Q0_A2 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+            ],
+            mask: '1',
+            article: "coronavirus-debt-advice-ni"
+          },
+          {
+            triggers: [ 
+              %w[Q0_A3 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+            ],
+            mask: '1',
+            article: "coronavirus-debt-advice-scotland"
+          },
+          {
+            triggers: [ 
+              %w[Q0_A4 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+            ],
+            mask: '1',
+            article: "coronavirus-debt-advice-wales"
+          }
+        ]
+      }
     }
   }
 end

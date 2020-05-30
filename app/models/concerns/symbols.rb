@@ -37,7 +37,7 @@ module Symbols
     :'32' => '2147483648'
   }
 
-  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions').map do | question_hash | 
+  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions').map do | question_hash |
     index = /\d*$/.match(question_hash[:code])[0]
     question_hash[:code].downcase!
     question_hash[:flag] = FLAGS[index.to_sym]
@@ -46,7 +46,7 @@ module Symbols
 
   #TODO get these from the translation files when merged with frotend changes
   #This is each Answer and the position of its flag in the question specific answer bit value
-  ANSWER = { 
+  ANSWER = {
     EMPTY.to_sym => '0',
     :'A0' => '1',
     :'A1' => '2',
@@ -78,67 +78,80 @@ module Symbols
     :'A27' => '28',
     :'A28' => '29',
     :'A29' => '30',
-    :'A31' => '31',
-    :'A31' => '32'  
+    :'A30' => '31',
+    :'A31' => '32'
   }
 
   #The data representation of the logic that triggers content being displayed
   #Format:
-  # <Section Code>: {
-  #   <header code>: {
-  #     header: <The header to display above any displayed content>
-  #     content: [ <this contains the list of content objects that can appear under this header as exampled below>
+  # [
+  #   {
+  #     section_code: <Section Code>,
+  #     headings: [ <this is the list of headings and their associated content plus triggers as exampled below>
   #       {
-  #         triggers: [
-  #           < a list of the QA combinations whose state triggers display of the content >
-  #         ],
-  #         masks: [
-  #           <A list bitmasks that determins whether the triggers turn the header on or off
-  #           each list element must contain as many flags as there are triggers and if any one of these masks
-  #           matches the triggers then the content will be displayed>
-  #         ],
-  #         article: <The CMS URL of the content affected >
-  #       }
-  #     ]
+  #         heading_code: <header code>,
+  #        content:
+  #        [<this is the list of content that can appear under a heading. Usually just one article >
+  #          {
+  #            triggers: [
+  #               < a list of the QA combinations whose state triggers display of the content >
+  #             ],
+  #             masks: [
+  #               <A list bitmasks that determins whether the triggers turn the header on or off
+  #               each list element must contain as many flags as there are triggers and if any one of these masks
+  #               matches the triggers then the content will be displayed>
+  #             ],
+  #             article: <The CMS URL of the content affected >
+  #         }
+  #       ]
+  #     }
   #   }
-  # }
-  RESULTS = {
-    'S1': {
-      text: 'Urgent actions'
-      'H1': {
-        text: 'Get free Debt advice now (DALT)'
-        content: [
-          {
-            triggers: [ 
-              %w[Q0_A1 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
-            ],
-            mask: '1',
-            article: "corona_virus_urgent_action_england"
-          },
-          {
-            triggers: [ 
-              %w[Q0_A2 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
-            ],
-            mask: '1',
-            article: "coronavirus-debt-advice-ni"
-          },
-          {
-            triggers: [ 
-              %w[Q0_A3 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
-            ],
-            mask: '1',
-            article: "coronavirus-debt-advice-scotland"
-          },
-          {
-            triggers: [ 
-              %w[Q0_A4 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
-            ],
-            mask: '1',
-            article: "coronavirus-debt-advice-wales"
-          }
-        ]
-      }
+  # ]
+  # TODO: All/most of this file needs to move into the translation files. Only the rules need remain here.
+  RESULTS = [
+    {
+      section_code: 'S1',
+      headings: [
+        {
+          heading_code: 'H1',
+
+          #TODO: this belongs in the translation files
+          #text: 'Urgent actions',
+          #TODO: this belongs in the translation files
+          #text: 'Get free Debt advice now (DALT)',
+          content: [
+            {
+              triggers: [
+                %w[Q0_A1 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+              ],
+              mask: '1',
+              article: "corona_virus_urgent_action_england"
+            },
+            {
+              triggers: [
+                %w[Q0_A2 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-ni"
+            },
+            {
+              triggers: [
+                %w[Q0_A3 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-scotland"
+            },
+            {
+              triggers: [
+                %w[Q0_A4 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-wales"
+            }
+          ]
+        }
+      ]
     }
-  }
+  ]
 end
 

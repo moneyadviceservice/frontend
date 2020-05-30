@@ -2,85 +2,56 @@ module Symbols
   EMPTY = 'EMPTY'
 
   FLAGS = {
-    :'0' => '0',
-    :'1' => '1',
-    :'2' => '2',
-    :'3' => '4',
-    :'4' => '8',
-    :'5' => '16',
-    :'6' => '32',
-    :'7' => '64',
-    :'8' => '128',
-    :'9' => '256',
-    :'10'=> '512',
-    :'11' => '1024',
-    :'12' => '2048',
-    :'13' => '4096',
-    :'14' => '8192',
-    :'15' => '16384',
-    :'16' => '32768',
-    :'17' => '65536',
-    :'18' => '131072',
-    :'19' => '262144',
-    :'20' => '524288',
-    :'21' => '1048576',
-    :'22' => '2097152',
-    :'23' => '4194304',
-    :'24' => '8388608',
-    :'25' => '16777216',
-    :'26' => '33554432',
-    :'27' => '67108864',
-    :'28' => '134217728',
-    :'29' => '268435456',
-    :'30' => '536870912',
-    :'31' => '1073741824',
-    :'32' => '2147483648'
+    :'0' => 0,
+    :'1' => 1,
+    :'2' => 2,
+    :'3' => 4,
+    :'4' => 8,
+    :'5' => 16,
+    :'6' => 32,
+    :'7' => 64,
+    :'8' => 128,
+    :'9' => 256,
+    :'10'=> 512,
+    :'11' => 1024,
+    :'12' => 2048,
+    :'13' => 4096,
+    :'14' => 8192,
+    :'15' => 16384,
+    :'16' => 32768,
+    :'17' => 65536,
+    :'18' => 131072,
+    :'19' => 262144,
+    :'20' => 524288,
+    :'21' => 1048576,
+    :'22' => 2097152,
+    :'23' => 4194304,
+    :'24' => 8388608,
+    :'25' => 16777216,
+    :'26' => 33554432,
+    :'27' => 67108864,
+    :'28' => 134217728,
+    :'29' => 268435456,
+    :'30' => 536870912,
+    :'31' => 1073741824,
+    :'32' => 2147483648
   }
 
-  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions').map do | question_hash |
-    index = /\d*$/.match(question_hash[:code])[0]
-    question_hash[:code].downcase!
-    question_hash[:flag] = FLAGS[index.to_sym]
+  QUESTIONS_HASH = HashWithIndifferentAccess.new
+  ANSWERS_HASH = HashWithIndifferentAccess.new
+
+  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions').map do | qn_hash |
+    index = /\d*$/.match(qn_hash[:code])[0]
+    qn_hash[:code].downcase!
+    qn_hash[:flag] = FLAGS[index.to_sym].to_s(2)
+    QUESTIONS_HASH[qn_hash[:code]] = qn_hash
+    qn_hash[:responses].each do |resp|
+      index = /\d*$/.match(resp[:code])[0]
+      ANSWERS_HASH[resp[:code].downcase] = index
+    end
   end
 
 
-  #TODO get these from the translation files when merged with frotend changes
-  #This is each Answer and the position of its flag in the question specific answer bit value
-  ANSWER = {
-    EMPTY.to_sym => '0',
-    :'A0' => '1',
-    :'A1' => '2',
-    :'A2' => '3',
-    :'A3' => '4',
-    :'A4' => '5',
-    :'A5' => '6',
-    :'A6' => '7',
-    :'A7' => '8',
-    :'A8' => '9',
-    :'A9' => '10',
-    :'A10' => '11',
-    :'A11' => '12',
-    :'A12' => '13',
-    :'A13' => '14',
-    :'A14' => '15',
-    :'A15' => '16',
-    :'A16' => '17',
-    :'A17' => '18',
-    :'A18' => '19',
-    :'A19' => '20',
-    :'A20' => '21',
-    :'A21' => '22',
-    :'A22' => '23',
-    :'A23' => '24',
-    :'A24' => '25',
-    :'A25' => '26',
-    :'A26' => '27',
-    :'A27' => '28',
-    :'A28' => '29',
-    :'A29' => '30',
-    :'A30' => '31',
-    :'A31' => '32'
-  }
 
   #The data representation of the logic that triggers content being displayed
   #Format:

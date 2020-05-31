@@ -1,58 +1,71 @@
 module Symbols
+  #IMPORTANT: #We must enforce the hard limits of the system
+  #
+  #The masking only works if the question and answer flags are the same width
+  #This means there are the following hard limits in the system:
+  #- No more than FLAG_SIZE questions can be asked by the system
+  #- No Question can have more than FLAG_SIZE answers 
+  #
+  #NB:
+  #- FLAG_SIZE represents the larger of [total number of questions] and [maximum number of answers per question]
+  #- The output of all computed/created flag values must be validated by validate_flag(flag)  method
+  #- Use FLAG_FORMAT to create bit strings from integers in line with FLAG_SIZE
+  #
+  #Changing the value of FLAG_SIZE is therefore enough should you require the system to handle
+  #a different number of questions/answers in line with the above notes
+  FLAG_SIZE = 16 
+  #The flag is a zero left padded FLAG_SIZE long bit long binarry string
+  FLAG_FORMAT = "%0#{FLAG_SIZE}i"
+  def validate_flag(flag)
+    #Can't really process anything if flags exist that we can not handle. Only alternative is to BOMB out
+    raise "Flag #{qn_hash[:flag]} for question #{qn_hash[:code]} (index: #{index}) has size: #{qn_hash[:flag].length}. Expected size: #{FLAG_SIZE}" if flag.length != FLAG_SIZE
+  end
+
   EMPTY = 'EMPTY'
+  #
+  #Set up the flags reference hash/lookup-table that will be used by the system
+  FLAGS = HashWithIndifferentAccess.new  
+  FLAGS[EMPTY] = 0
+  (1..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = 2**(index-1) } 
 
-  FLAGS = {
-    :'0' => 0,
-    :'1' => 1,
-    :'2' => 2,
-    :'3' => 4,
-    :'4' => 8,
-    :'5' => 16,
-    :'6' => 32,
-    :'7' => 64,
-    :'8' => 128,
-    :'9' => 256,
-    :'10'=> 512,
-    :'11' => 1024,
-    :'12' => 2048,
-    :'13' => 4096,
-    :'14' => 8192,
-    :'15' => 16384,
-    :'16' => 32768,
-    :'17' => 65536,
-    :'18' => 131072,
-    :'19' => 262144,
-    :'20' => 524288,
-    :'21' => 1048576,
-    :'22' => 2097152,
-    :'23' => 4194304,
-    :'24' => 8388608,
-    :'25' => 16777216,
-    :'26' => 33554432,
-    :'27' => 67108864,
-    :'28' => 134217728,
-    :'29' => 268435456,
-    :'30' => 536870912,
-    :'31' => 1073741824,
-    :'32' => 2147483648
-  }
-
+  #setup the question/answer hashes
+  #- QUESTIONS: An array of all the questions from the yml file enriched with flag information and with the code standadised to lowercase 
+  #- QUESTIONS_HASH: hash of all the questions keyed on the question code
+  #- ANSWERS_HASH: hash containing all possible answer codes (keyed by code) and enriched with the respective flag information
   QUESTIONS_HASH = HashWithIndifferentAccess.new
   ANSWERS_HASH = HashWithIndifferentAccess.new
 
-  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions').map do | qn_hash |
+  #Enrich a given question hashbag with flag information and downcased codes
+  #As a sideeffect the bag is updated into the QUESTIONS_HASH for faster code based lookup
+  def enrich_questions(qn_hash)
     index = /\d*$/.match(qn_hash[:code])[0]
     qn_hash[:code].downcase!
-    qn_hash[:flag] = FLAGS[index.to_sym].to_s(2)
+    qn_hash[:flag] = FLAG_FORMAT % FLAGS[index.to_sym].to_s(2)
+    validate_flag(qn_hash[:flag])
     QUESTIONS_HASH[qn_hash[:code]] = qn_hash
     qn_hash[:responses].each do |resp|
       index = /\d*$/.match(resp[:code])[0]
-      ANSWERS_HASH[resp[:code].downcase] = index
+      resp[:code].downcase!
+      resp[:flag] = FLAG_FORMAT % FLAGS[index.to_sym].to_s(2)
+      validate_flag(resp[:flag])
+      ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
     end
+    qn_hash[:responses].sort! {|r1, r2| r1[:code] <=> r2[:code]}
+
+    qn_hash
   end
 
+  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions')
+    .map{| qn_hash | enrich_questions(qn_hash)}
+    .sort(|q1, q2| q1[:code] <=> q2[:code])
 
+  ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY.to_sym]}
 
+  #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
+  #be placing more in there than we want. 
+  #- Not a good idea to keep the rules here and the text there... maintenance headache maintaining the header symbols in two places.
+  #- Not a good idea to move everything here... translation of headings into other languages will be required going forward.
+  #
   #The data representation of the logic that triggers content being displayed
   #Format:
   # [
@@ -78,7 +91,6 @@ module Symbols
   #     }
   #   }
   # ]
-  # TODO: All/most of this file needs to move into the translation files. Only the rules need remain here.
   RESULTS = [
     {
       section_code: 'S1',
@@ -93,28 +105,28 @@ module Symbols
           content: [
             {
               triggers: [
-                %w[Q0_A1 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+                %w[q0_a1 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
               mask: '1',
               article: "corona_virus_urgent_action_england"
             },
             {
               triggers: [
-                %w[Q0_A2 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+                %w[q0_a2 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
               mask: '1',
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
-                %w[Q0_A3 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+                %w[q0_a3 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
               mask: '1',
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
-                %w[Q0_A4 Q4_A1 Q6_A4, Q6_A5, Q6_A6, Q7_A1 Q7_A2 Q7_A3 Q7_A4 Q7_A5 Q7_A6 Q7_A7 Q7_A8 Q7_A9 Q10_A3]
+                %w[q0_a4 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
               mask: '1',
               article: "coronavirus-debt-advice-wales"

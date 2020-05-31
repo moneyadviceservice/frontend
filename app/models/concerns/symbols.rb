@@ -16,7 +16,8 @@ module Symbols
   FLAG_SIZE = 16
   #The flag is a zero left padded FLAG_SIZE long bit long binarry string
   FLAG_FORMAT = "%0#{FLAG_SIZE}i"
-  def validate_flag(flag)
+  FULL_FLAG_FORMAT = "%0#{FLAG_SIZE*FLAG_SIZE*2}i"
+  def self.validate_flag(flag)
     #Can't really process anything if flags exist that we can not handle. Only alternative is to BOMB out
     raise "Flag #{qn_hash[:flag]} for question #{qn_hash[:code]} (index: #{index}) has size: #{qn_hash[:flag].length}. Expected size: #{FLAG_SIZE}" if flag.length != FLAG_SIZE
   end
@@ -26,9 +27,9 @@ module Symbols
 
   #Set up the flags reference hash/lookup-table that will be used by the system
   FLAGS = HashWithIndifferentAccess.new
-  FLAGS[EMPTY] = 0
-  FLAGS[ALL] = ('1'*FLAG_SIZE).to_i(2)
-  (1..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = 2**(index-1) }
+  FLAGS[EMPTY] = FLAG_FORMAT % '0'
+  FLAGS[ALL] = '1'*FLAG_SIZE
+  (0..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = FLAG_FORMAT % (2**(index)).to_s(2) }
 
   #setup the question/answer hashes
   #- QUESTIONS: An array of all the questions from the yml file enriched with flag information and with the code standadised to lowercase
@@ -37,31 +38,32 @@ module Symbols
   QUESTIONS_HASH = HashWithIndifferentAccess.new
   ANSWERS_HASH = HashWithIndifferentAccess.new
 
+  
   #Enrich a given question hashbag with flag information and downcased codes
   #As a sideeffect the bag is updated into the QUESTIONS_HASH for faster code based lookup
-  def enrich_questions(qn_hash)
+  def self.enrich_questions(qn_hash)
     index = /\d*$/.match(qn_hash[:code])[0]
     qn_hash[:code].downcase!
-    qn_hash[:flag] = FLAG_FORMAT % FLAGS[index.to_sym].to_s(2)
+    qn_hash[:flag] = FLAGS[index]
     validate_flag(qn_hash[:flag])
     QUESTIONS_HASH[qn_hash[:code]] = qn_hash
     qn_hash[:responses].each do |resp|
       index = /\d*$/.match(resp[:code])[0]
       resp[:code].downcase!
-      resp[:flag] = FLAG_FORMAT % FLAGS[index.to_sym].to_s(2)
+      resp[:flag] = FLAGS[index]
       validate_flag(resp[:flag])
       ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
     end
-    qn_hash[:responses].sort! {|r1, r2| r1[:code] <=> r2[:code]}
+    qn_hash[:responses].sort! {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
 
     qn_hash
   end
 
   QUESTIONS = I18n.translate('c19_diagnostics_tool.questions')
-    .map{| qn_hash | enrich_questions(qn_hash)}
-    .sort(|q1, q2| q1[:code] <=> q2[:code])
+    .map {| qn_hash | enrich_questions(qn_hash)}
+    .sort { |q1, q2| /\d*$/.match(q1[:code])[0].to_i <=> /\d*$/.match(q2[:code])[0].to_i }
 
-  ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY.to_sym]}
+  ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY]}
 
   #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
   #be placing more in there than we want.
@@ -113,33 +115,35 @@ module Symbols
           #text: 'Urgent actions',
           #TODO: this belongs in the translation files
           #text: 'Get free Debt advice now (DALT)',
+          #
+          #NB. the length of the mask: value below should equal the length of the triggers
           content_rules: [
             {
               triggers: [
-                %w[q0_a1 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                %w[q0_a1 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: FLAGS[ALL],
+              mask: '1',
               article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
-                %w[q0_a2 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                %w[q0_a2 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: FLAGS[ALL],
+              mask: '1',
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
-                %w[q0_a3 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                %w[q0_a3 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: FLAGS[ALL],
+              mask: '1',
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
-                %w[q0_a4 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                %w[q0_a4 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: FLAGS[ALL],
+              mask: '1',
               article: "coronavirus-debt-advice-wales"
             }
           ]

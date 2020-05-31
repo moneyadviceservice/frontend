@@ -21,6 +21,8 @@ class Questions
     setup_attributes(params)
   end
 
+  #TODO: Clean all this stuff up later
+  #########################################
   def self.find(_id)
     Questions.new
   end
@@ -36,6 +38,7 @@ class Questions
   def save
     true
   end
+  #########################################
 
   #Provided with all answers to all the answered questions this method behaves as follows:
   #It iterates over the possible sections to determine which sections and headers and content are

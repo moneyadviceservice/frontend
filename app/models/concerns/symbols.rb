@@ -4,7 +4,7 @@ module Symbols
   #The masking only works if the question and answer flags are the same width
   #This means there are the following hard limits in the system:
   #- No more than FLAG_SIZE questions can be asked by the system
-  #- No Question can have more than FLAG_SIZE answers 
+  #- No Question can have more than FLAG_SIZE answers
   #
   #NB:
   #- FLAG_SIZE represents the larger of [total number of questions] and [maximum number of answers per question]
@@ -13,7 +13,7 @@ module Symbols
   #
   #Changing the value of FLAG_SIZE is therefore enough should you require the system to handle
   #a different number of questions/answers in line with the above notes
-  FLAG_SIZE = 16 
+  FLAG_SIZE = 16
   #The flag is a zero left padded FLAG_SIZE long bit long binarry string
   FLAG_FORMAT = "%0#{FLAG_SIZE}i"
   def validate_flag(flag)
@@ -22,14 +22,16 @@ module Symbols
   end
 
   EMPTY = 'EMPTY'
+  ALL = 'ALL'
   #
   #Set up the flags reference hash/lookup-table that will be used by the system
-  FLAGS = HashWithIndifferentAccess.new  
+  FLAGS = HashWithIndifferentAccess.new
   FLAGS[EMPTY] = 0
-  (1..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = 2**(index-1) } 
+  FLAGS[ALL] = ('1'*FLAG_SIZE).to_i(2)
+  (1..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = 2**(index-1) }
 
   #setup the question/answer hashes
-  #- QUESTIONS: An array of all the questions from the yml file enriched with flag information and with the code standadised to lowercase 
+  #- QUESTIONS: An array of all the questions from the yml file enriched with flag information and with the code standadised to lowercase
   #- QUESTIONS_HASH: hash of all the questions keyed on the question code
   #- ANSWERS_HASH: hash containing all possible answer codes (keyed by code) and enriched with the respective flag information
   QUESTIONS_HASH = HashWithIndifferentAccess.new
@@ -62,7 +64,7 @@ module Symbols
   ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY.to_sym]}
 
   #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
-  #be placing more in there than we want. 
+  #be placing more in there than we want.
   #- Not a good idea to keep the rules here and the text there... maintenance headache maintaining the header symbols in two places.
   #- Not a good idea to move everything here... translation of headings into other languages will be required going forward.
   #
@@ -91,10 +93,19 @@ module Symbols
   #     }
   #   }
   # ]
-  RESULTS = [
+  #
+  # This is effectively a list of section rules.
+  # - Each section rule ismade up of a list of heading rules.
+  # - Each heading rule is made up of a list of content rules
+  # - Each content rule contains
+  #   - a list of triggers that produce a 1,0 state depending on whether they are activated or not by the answers (AND logic)
+  #   - a mask that is applied to the concatenated result states of the individual triggers (OR logic)
+  #   - the content to display if the mask agrees with the state of the triggers
+  # which in turn have heading rules
+  CONTENT_RULES = [
     {
       section_code: 'S1',
-      headings: [
+      heading_rules: [
         {
           heading_code: 'H1',
 
@@ -102,33 +113,33 @@ module Symbols
           #text: 'Urgent actions',
           #TODO: this belongs in the translation files
           #text: 'Get free Debt advice now (DALT)',
-          content: [
+          content_rules: [
             {
               triggers: [
                 %w[q0_a1 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: '1',
-              article: "corona_virus_urgent_action_england"
+              mask: FLAGS[ALL],
+              article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
                 %w[q0_a2 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: '1',
+              mask: FLAGS[ALL],
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
                 %w[q0_a3 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: '1',
+              mask: FLAGS[ALL],
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
                 %w[q0_a4 q4_a1 q6_a4, q6_a5, q6_a6, q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
               ],
-              mask: '1',
+              mask: FLAGS[ALL],
               article: "coronavirus-debt-advice-wales"
             }
           ]

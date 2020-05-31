@@ -23,7 +23,7 @@ module Symbols
 
   EMPTY = 'EMPTY'
   ALL = 'ALL'
-  #
+
   #Set up the flags reference hash/lookup-table that will be used by the system
   FLAGS = HashWithIndifferentAccess.new
   FLAGS[EMPTY] = 0

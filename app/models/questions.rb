@@ -71,7 +71,7 @@ class Questions
     sections_array =  CONTENT_RULES.inject([]) do |sections_array_accumulator, section_rules|
 
       heading_content_array = section_rules[:heading_rules].inject([]) do |content_array, heading_rule|
-        content_array = obtain_content_for_heading(heading_rule, answers_flags)
+        content_array << obtain_content_for_heading(heading_rule, answers_flags)
         content_array
       end
 
@@ -90,8 +90,9 @@ class Questions
 
   private
 
+  #Obtain the content rendered visibleby by a given heading_rule for
   def obtain_content_for_heading(heading_rule, answers_flags)
-    content_array  =  heading_rule[:content_rules].inject([]) do |content_arr, content_rule |
+    content_array  =  heading_rule[:content_rules].inject([]) do |content_array_accumulator, content_rule |
 
       mask_flags = obtain_trigger_masks(content_rule[:triggers], answers_flags)
       mask_flags = mask_flags.to_i(2)
@@ -99,9 +100,9 @@ class Questions
 
       #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
       #For now we are simply placing the CMS URL in there
-      content_arr << content_rule[:article] if content_visible
+      content_array_accumulator << content_rule[:article] if content_visible
 
-      content_arr
+      content_array_accumulator
     end
 
     content_array
@@ -111,12 +112,12 @@ class Questions
   #Method to iterate over an array of triggers and determine the flags indicating whether the
   #respective trigger was triggered or not by the passed in question/answer flags
   def obtain_trigger_masks(triggers_arr, answers_flags)
-    mask_flags = triggers_arr.inject('') do |m_flags,  trigger_val |
+    mask_flags = triggers_arr.inject('') do |mask_flags_accumulator,  trigger_val |
       trigger_flags = convert_answers_array_to_flags(trigger_val).to_i(2)
       triggerd = trigger_flags & answers_flags == trigger_flags
-      m_flags += triggerd ? '1' : '0'
+      mask_flags_accumulator += triggerd ? '1' : '0'
 
-      m_flags
+      mask_flags_accumulator
     end
 
     mask_flags

@@ -18,8 +18,9 @@ class C19DiagnosticsController < ApplicationController
   end
 
 
+  #TODO: consider removing. Don't think we'll be needing the session storage
   def updated_questions(questions)
-    session[:all_questions] ||= HashWithIndifferentAccess.new
+    session[:all_questions] = HashWithIndifferentAccess.new if session[:all_questions].nil?
     session[:all_questions].merge!(questions) unless questions.nil?
     session[:all_questions]
   end

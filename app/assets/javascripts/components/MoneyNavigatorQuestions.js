@@ -12,8 +12,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.componentName = 'MoneyNavigatorQuestions';
 
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
+    this._updateDOM(); 
     this._initialisedSuccess(initialised);
   };
+
+  MoneyNavigatorQuestions.prototype._updateDOM = function() {
+    console.log('_updateDOM!'); 
+  }
 
   return MoneyNavigatorQuestions; 
 }); 

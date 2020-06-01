@@ -32,4 +32,12 @@ describe.only('MoneyNavigatorQuestions', function() {
       updateDOMStub.restore(); 
     });
   });
+
+  describe('updateDOM method', function() {
+    it('Makes correct changes to the DOM', function() {
+      this.obj._updateDOM(); 
+
+      expect(this.component.find('[data-submit]').length).to.equal(0);
+    }); 
+  }); 
 });

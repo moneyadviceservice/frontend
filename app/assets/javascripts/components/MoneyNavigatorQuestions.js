@@ -5,6 +5,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   
   MoneyNavigatorQuestions = function($el, config) {
     MoneyNavigatorQuestions.baseConstructor.call(this, $el, config);
+
+    this.$submitBtn = this.$el.find('[data-submit]'); 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorQuestions);
@@ -17,7 +19,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   MoneyNavigatorQuestions.prototype._updateDOM = function() {
-    console.log('_updateDOM!'); 
+    this.$submitBtn.remove(); 
   }
 
   return MoneyNavigatorQuestions; 

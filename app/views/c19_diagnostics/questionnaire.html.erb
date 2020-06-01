@@ -19,7 +19,7 @@
 
         <ul class="l-c19_diagnostics__questions">
           <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
-            <li class="l-c19_diagnostics__question">
+            <li class="l-c19_diagnostics__question" data-question>
               <% if index > 0 %>
                 <p class="question__counter"><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
               <% end %>

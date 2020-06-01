@@ -21,9 +21,15 @@ describe.only('MoneyNavigatorQuestions', function() {
     fixture.cleanup();
   });
 
-  describe('Does nothing', function() {
-    it('Does nothing', function() {
-      expect(1).to.equal(1);
+  describe('Initialisation', function() {
+    it('Calls the correct methods when the component is initialised', function() {
+      var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
+      
+      this.obj.init();
+
+      expect(updateDOMStub.calledOnce).to.be.true;
+
+      updateDOMStub.restore(); 
     });
   });
 });

@@ -72,3 +72,14 @@
 .c19_diagnostics__button {
 	width: 100%; 
 }
+
+// Component initialised
+[data-dough-money-navigator-questions-initialised="yes"] {
+	.l-c19_diagnostics__question {
+		display: none; 
+
+		&.question--active {
+			display: block; 
+		}
+	}
+}

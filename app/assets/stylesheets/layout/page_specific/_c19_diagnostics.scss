@@ -62,21 +62,19 @@
 
 	.question__response {
 		position: relative;
-		float: left; 
-		clear: left;
 		font-weight: 700; 
-		margin: 0 0 1rem; 
+		margin: 0 0 $baseline-unit * 2; 
 
 		.response__control {
 			position: absolute;
 			top: 50%;
 			left: 0; 
-			transform: translateY(-60%);
+			transform: translateY(-50%);
 		}
 
 		.response__text {
 			display: inline-block;
-			padding: 0 0 0 1.5rem;
+			padding: 0 0 0 $baseline-unit * 4;
 		}
 	}
 }
@@ -88,6 +86,24 @@
 
 		&.question--active {
 			display: block; 
+		}
+	}
+
+	.question__content--Q0 {
+		.response__control {
+			@extend .visually-hidden; 
+
+			&:checked + .response__text {
+				color: $color-white; 
+				background: $color-green-secondary; 
+			}
+		}
+
+		.response__text {
+			@extend .button; 
+			padding: 0; 
+			width: 100%;
+			text-align: left; 
 		}
 	}
 }

@@ -24,7 +24,7 @@
                 <p class="question__counter"><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
               <% end %>
 
-              <div class="question__content">
+              <div class="question__content question__content--<%= question[:code] %>">
                 <fieldset>
                   <legend class="question__heading"><%= question[:text] %></legend>
 
@@ -33,25 +33,17 @@
                   <% end %>
 
                   <% question[:responses].each do |response| %>
-                    <label class="question__response">
+                    <div class="question__response">
                       <% if question[:type] == 'radio' %>
-                        <span class="response__control">
-                          <%= f.radio_button question[:code], response[:code] %>
-                        </span>
-
-                        <span class="response__text">
-                          <%= response[:text] %>
-                        </span>
+                        <%= f.radio_button question[:code], response[:code], id: question[:code] + '_' + response[:code], class: 'response__control' %>
                       <% elsif question[:type] == 'checkbox' %>
-                        <span class="response__control">
-                          <%= f.check_box question[:code], {multiple: true}, response[:code], nil  %>
-                        </span>
-
-                        <span class="response__text">
-                          <%= response[:text] %>
-                        </span>
+                        <%= f.check_box question[:code], {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code] %>
                       <% end %>
-                    </label>
+
+                      <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                        <%= response[:text] %>
+                      </label>
+                    </div>
                   <% end %>
                 </fieldset>
 

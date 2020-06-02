@@ -8,6 +8,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     this.$submitBtn = this.$el.find('[data-submit]'); 
     this.$questions = this.$el.find('[data-question]'); 
+    this.activeClass = 'question--active'; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorQuestions);
@@ -32,7 +33,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         // Adds get-started button to first question
         $(question).find('.question__content').append('<button class="button button--start" data-get-started="true">Get started</button>'); 
          // Adds active class to first question
-        $(question).addClass('question--active'); 
+        $(question).addClass(_this.activeClass); 
      } else {
         // Adds continue and back buttons to all other questions
         $(question).find('.question__content')
@@ -61,7 +62,21 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }
 
   MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
-    console.log('_updateDisplay!'); 
+    var activeIndex, questionClasses = []; 
+
+    this.$questions.each(function() {
+      questionClasses.push(this.className); 
+    }); 
+
+    activeIndex = questionClasses.indexOf('l-c19_diagnostics__question ' + this.activeClass); 
+
+    $(this.$questions[activeIndex]).removeClass(this.activeClass); 
+
+    if (dir === 'next') {
+      $(this.$questions[activeIndex + 1]).addClass(this.activeClass); 
+    } else {
+      $(this.$questions[activeIndex - 1]).addClass(this.activeClass); 
+    }
   }
 
   return MoneyNavigatorQuestions; 

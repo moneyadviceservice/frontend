@@ -9,16 +9,18 @@ class Questions
   include ActiveModel::Model
   include Symbols
 
+  #Dynamically setup the validateable instance fields that will be populated
+  #when the model isinitialised and can be validated after initialisation
   QUESTIONS.each do | qn |
     question = qn[:code].to_s.downcase
-    define_method("#{question}") { @all_answers[question] }
-    define_method("#{question}=") { | value | @all_answers[question] = value }
+    define_method("#{question}") { @submitted_answers[question] }
+    define_method("#{question}=") { | value | @submitted_answers[question] = value }
     #All questions must be present for the model to be valid.
     validates question.to_sym, presence: true
   end
 
   def initialize(params = nil)
-    setup_attributes(params)
+    @submitted_answers ||= HashWithIndifferentAccess.new(params)
   end
 
   #TODO: Clean all this stuff up later
@@ -90,6 +92,42 @@ class Questions
   end
 
   private
+
+
+  #Method returns a hash representation of this Questions instance
+  #TODO: This method sits between the instance members and the model. Consider writing tests for it
+  def to_hash
+    answers_hash = QUESTIONS.inject(HashWithIndifferentAccess.new) do |accumulator_hash, question|
+      accumulator_hash[question[:code]] = send("#{ question[:code] }")
+      accumulator_hash
+    end
+
+    normalise_answers_hash(answers_hash)
+  end
+
+  #Given a bunch of questions and their answers in the same hash format as submitted by the form 
+  #this method returns a Hash in which 
+  #1- nil key values become an [EMPTY] array (e.g. { q1: nil } becomes { q1: [EMPTY ]} ) 
+  #2- non-nil key values that are not an array are placed into an array of size=1 (e.g. { q1: a1 } becomes { q1:[a1 ])}
+  #3- Array key values are trimmed of any nils (e.g. { q1: [nil, a2, nil ]} becomes {q1: [a1]} )
+  #4- Any known questions not present as keys are inserted and given [EMPTY] value 
+  #5- Any array values that remain empty will become [EMPTY] (e.g. { q1: [] } becomes { q1: [EMPTY ]} )
+  def normalise_answers_hash(answers_hash)
+    #make sure #2 above is satisfied 
+    answers_hash.transform_values!{|v| v.is_a?(Array) ? v : [v]}
+
+    normalised_answers_hash = QUESTIONS.inject(HashWithIndifferentAccess.new)do |hash, q_hash|
+      #make sure #3 above is satisfied
+      hash[q_hash[:code]].reject!(&:blank?) unless hash[q_hash[:code]].nil?
+      #make sure #1, #4 and #5 above is satisfied
+      ans_nil_or_empty_arr = answers_hash[q_hash[:code]].nil? || answers_hash[q_hash[:code]].empty? 
+      hash[q_hash[:code]] = ans_nil_or_empty_arr ? [EMPTY] : answers_hash[q_hash[:code]]
+
+      hash
+    end
+
+    normalised_answers_hash
+  end
 
   #Obtain the content rendered visibleby by a given heading_rule for
   def obtain_content_for_heading(heading_rule, answers_flags)
@@ -190,27 +228,6 @@ class Questions
     end
 
     flattened
-  end
-
-  #Given a bunch of questions and their answers in the format received from the form
-  #this method returns a Hash in which all known questions have an answers array.
-  #- key values that are not an array are placed into an array of size=1
-  #- Unanswered questions are given keys with an empty array value
-  def normalise_answers_hash(answers_hash)
-    #binding.pry
-    #make sure all submitted answers are an array for uniform processing
-    answers_hash.transform_values!{|v| v.is_a?(Array) ? v : [v]}
-    #fill in the missing questions using  empty answers arrays
-    normalised_answers_hash = QUESTIONS.inject(HashWithIndifferentAccess.new)do |hash, q_hash|
-      hash[q_hash[:code]] = answers_hash[q_hash[:code]].nil? ? [EMPTY] : answers_hash[q_hash[:code]]
-      hash
-    end
-
-    normalised_answers_hash
-  end
-
-  def setup_attributes(params)
-    @all_answers ||= HashWithIndifferentAccess.new(params)
   end
 
   def convert_answers_array_to_flags(answers_array)

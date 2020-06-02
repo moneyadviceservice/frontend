@@ -6,7 +6,7 @@ RSpec.describe Questions, type: :model do
   end
 
   def england_seek_advice_answers
-      {"q0"=>"a3",
+      {"q0"=>"a1",
    "q1"=>"a1",
    "q2"=>"a2",
    "q3"=>"a1",

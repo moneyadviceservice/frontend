@@ -20,6 +20,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   MoneyNavigatorQuestions.prototype._updateDOM = function() {
+    var _this = this; 
+
     // Removes submit button
     this.$submitBtn.remove(); 
 
@@ -38,6 +40,28 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
           .append('<button data-back="true" class="button button--back">Back</button>');
       }
     }; 
+
+    this.$el.find('[data-get-started]').on('click', function(e) {
+      e.preventDefault(); 
+
+      _this._updateDisplay('next'); 
+    }); 
+
+    this.$el.find('[data-continue]').on('click', function(e) {
+      e.preventDefault(); 
+
+      _this._updateDisplay('next'); 
+    }); 
+
+    this.$el.find('[data-back]').on('click', function(e) {
+      e.preventDefault(); 
+
+      _this._updateDisplay('prev'); 
+    }); 
+  }
+
+  MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
+    console.log('_updateDisplay!'); 
   }
 
   return MoneyNavigatorQuestions; 

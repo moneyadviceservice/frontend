@@ -57,4 +57,43 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect($(this.questions[2]).hasClass('question--active')).to.be.false; 
     }); 
   }); 
+
+  describe('Get started button', function() {
+    it('Calls the correct method with the correct argument when clicked', function() {
+      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+
+      this.obj._updateDOM(); 
+      this.component.find('[data-get-started]').click(); 
+
+      expect(updateDisplaySpy.calledWith('next')).to.be.true; 
+
+      updateDisplaySpy.restore(); 
+    }); 
+  }); 
+
+  describe('Continue button', function() {
+    it('Calls the correct method with the correct argument when clicked', function() {
+      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+
+      this.obj._updateDOM(); 
+      this.component.find('[data-continue]').click(); 
+
+      expect(updateDisplaySpy.calledWith('next')).to.be.true; 
+
+      updateDisplaySpy.restore(); 
+    }); 
+  }); 
+
+  describe('Back button', function() {
+    it('Calls the correct method with the correct argument when clicked', function() {
+      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+
+      this.obj._updateDOM(); 
+      this.component.find('[data-back]').click(); 
+
+      expect(updateDisplaySpy.calledWith('prev')).to.be.true; 
+
+      updateDisplaySpy.restore(); 
+    }); 
+  }); 
 });

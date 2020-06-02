@@ -1,8 +1,8 @@
 RSpec.describe Questions, type: :model do
-  #subject { build(:answers_requiring_urgent_england_action) }
+  subject { build(:answers_requiring_urgent_england_action) }
 
   it '(returns results prompting for urgent england action' do 
-    expect(subject.results(england_seek_advice_answers)).to eq 'H1'
+    expect(subject.results).to eq 'H1'
   end
 
   def england_seek_advice_answers

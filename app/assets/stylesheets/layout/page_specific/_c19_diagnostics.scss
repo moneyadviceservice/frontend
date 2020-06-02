@@ -1,4 +1,16 @@
-.l-c19_diagnostics {}
+.l-c19_diagnostics {
+	.button--submit, 
+	.button--continue, 
+	.button--start {
+		@extend .button--primary; 
+		width: 100%; 
+	}
+
+	.button--start, 
+	.button--back {
+		margin: $baseline-unit * 4 0 $baseline-unit * 2;
+	}
+}
 
 .l-c19_diagnostics__subheading {
 	color: $color-black; 
@@ -67,10 +79,6 @@
 			padding: 0 0 0 1.5rem;
 		}
 	}
-}
-
-.c19_diagnostics__button {
-	width: 100%; 
 }
 
 // Component initialised

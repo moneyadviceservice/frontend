@@ -13,6 +13,7 @@ describe.only('MoneyNavigatorQuestions', function() {
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
           self.questions = self.component.find('[data-question]'); 
+          self.activeClass = self.obj.activeClass; 
 
           done();
         }, done);
@@ -52,9 +53,9 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect($(this.questions[1]).find('[data-back]').length).to.equal(1); 
       expect($(this.questions[2]).find('[data-back]').length).to.equal(1); 
 
-      expect($(this.questions[0]).hasClass('question--active')).to.be.true; 
-      expect($(this.questions[1]).hasClass('question--active')).to.be.false; 
-      expect($(this.questions[2]).hasClass('question--active')).to.be.false; 
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
     }); 
   }); 
 
@@ -94,6 +95,22 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect(updateDisplaySpy.calledWith('prev')).to.be.true; 
 
       updateDisplaySpy.restore(); 
+    }); 
+  }); 
+
+  describe('updateDisplay method', function() {
+    it('Adds/removes the active class from the correct question', function() {
+      $(this.questions[0]).addClass(this.activeClass); 
+
+      this.obj._updateDisplay('next'); 
+
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev'); 
+
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
     }); 
   }); 
 });

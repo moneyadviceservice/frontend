@@ -186,7 +186,7 @@ class Questions
         .inject(true) do |trig_pulled, trg_ans_arr|
         trig_ans = trg_ans_arr[0][-16..-1]
         actual_ans = trg_ans_arr[1][-16..-1]
-        trig_pulled = trig_pulled && (trig_ans.to_i(2) == 0 || (trig_ans.to_i(2) & actual_ans.to_i(2) == actual_ans.to_i(2)))
+        trig_pulled = trig_pulled && (trig_ans.to_i(2) == 0 || (trig_ans.to_i(2) & actual_ans.to_i(2) > 1) )
         Rails.logger.debug "trigger answer: #{trig_ans} submitted answer: #{actual_ans} trig_pulled: #{trig_pulled}"
         trig_pulled
       end

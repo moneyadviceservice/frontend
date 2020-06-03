@@ -213,8 +213,6 @@ class Questions
       end
       flag_str += ans_flags
     end
-    p "qa hash #{question_answers_hash}"
-    p "--became flags #{flags.scan(/.{1,16}/)}"
      flags
   end
 

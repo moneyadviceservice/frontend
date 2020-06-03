@@ -23,7 +23,7 @@ FactoryBot.define do
     
     factory :answers_requiring_urgent_scotland_action, traits: [:scotland_urgent_action]
     factory :answers_requiring_urgent_england_action, traits: [:england_urgent_action]
-    factory :answers_requiring_urgent_ni_action, traits: [:ni_urgent_action]
+    factory :answers_requiring_urgent_northern_ireland_action, traits: [:northern_ireland_urgent_action]
     factory :answers_requiring_urgent_wales_action, traits: [:wales_urgent_action]
 
     trait :scotland_urgent_action do
@@ -41,7 +41,7 @@ FactoryBot.define do
       q0 { 'a4' }
     end
 
-    trait :northerv_ireland_urgent_action do
+    trait :northern_ireland_urgent_action do
       urgent_action
       q0 { 'a2' }
     end

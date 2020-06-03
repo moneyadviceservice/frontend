@@ -159,12 +159,17 @@ class Questions
   end
 
   #Method to iterate over an array of triggers each representing question-answers that can pull the respective trigger
-  #-A trigger is pulled if each and every answer trigger it contains is pulled.
-  #- an answer trigger is pulled if:
-  #-- the answer trigger is all '0's (these are pulled  irrespective of the answer).
-  #-- the answer trigger switches off flags in the answer (meaning there was an overlap between the answer and the trigger)
+  #-A trigger is pulled if each and every answer sub-trigger it contains is pulled.
+  #- an answer sub-trigger is pulled if:
+  #-- All previous answer sub-triggers were pulled (no use pulling if some answers sub-triggers have already failed to pull)
+  #     AND (
+  #-- the answer sub-trigger is all '0's (these `i dont care what they chose` sub-triggers are pulled  irrespective of the answer).
+  #       OR
+  #-- the answer sub-trigger does not mask out all the flags in the answer (meaning there was an overlap between the answer and the sub-trigger)
+  #         )
+  #If all answer sub-triggers are pulled as above then the entire trigger is considered pulled.
+  #NB. debug logging has been enhanced to make investigation of issues easier
   #
-  #If all answer triggers are pulled as above then the entire trigger is considered pulled.
   #The trigger mask returned by this method contains '1' for triggers that were pulled and '0` for those that were not
   #all in the order that the triggers appear in the rules configuration. This is to feed into higher level 'OR' logic
   #e.g. trigger [a3,a4,a5] => '001110' and trigger [a2,a3] => '011000' share a common answer (i.e. a3)
@@ -174,25 +179,21 @@ class Questions
   #The resulting 2 bit mask (one bit for each trigger) can be used for higher level logic to descide whether to pull
   #the collective trigger or not.
   def obtain_trigger_masks(triggers_arr, answers_hash)
-    mask_flags = triggers_arr.inject('') do |mask_flags_accumulator,  trigger_val |
-      answers_flags = convert_hash_to_flags(answers_hash)
-      Rails.logger.debug("Answers hash converted to flags: #{answers_flags.scan(/.{1,32}/).map!{|arrVal| arrVal.scan(/.{1,16}/)}}")
+    Rails.logger.debug("Given the answers: #{answers_hash}")
 
-      trigger_flags = convert_answers_array_to_flags(trigger_val)
+    mask_flags = triggers_arr.inject('') do |mask_flags_accumulator,  trigger_hash |
+      Rails.logger.debug("... and considering the trigger: #{trigger_hash}")
+      question_answers_flags_hash = convert_hash_to_flags(answers_hash)
+      triggers_flags_hash = convert_hash_to_flags(HashWithIndifferentAccess.new(trigger_hash))
 
-      #TODO: get rid of these hard coded numbers
-      triggered = trigger_flags.scan(/.{1,32}/)
-        .zip(answers_flags.scan(/.{1,32}/))
-        .inject(true) do |trig_pulled, trg_ans_arr|
-        trig_ans = trg_ans_arr[0][-16..-1]
-        actual_ans = trg_ans_arr[1][-16..-1]
-        trig_pulled = trig_pulled && (trig_ans.to_i(2) == 0 || (trig_ans.to_i(2) & actual_ans.to_i(2) > 1) )
-        Rails.logger.debug "trigger answer: #{trig_ans} submitted answer: #{actual_ans} trig_pulled: #{trig_pulled}"
-        trig_pulled
+      triggered = question_answers_flags_hash.inject(true) do |sub_trig_pulled, qa_array|
+        trig_ans = triggers_flags_hash[qa_array[0]].to_i(2)
+        actual_ans = question_answers_flags_hash[qa_array[0]].to_i(2)
+        sub_trig_pulled = sub_trig_pulled && (trig_ans == 0 || (trig_ans & actual_ans > 1) )
+        Rails.logger.debug "Question: #{qa_array[0]} => trigger answer: #{triggers_flags_hash[qa_array[0]]} submitted answer: #{question_answers_flags_hash[qa_array[0]]} trig_pulled: #{sub_trig_pulled}"
+        sub_trig_pulled
       end
 
-
-      #triggerd = trigger_flags.to_i(2) & answers_flags.to_i(2) == trigger_flags.to_i(2)
       Rails.logger.debug "Content Triggered: #{triggered}"
       mask_flags_accumulator += triggered ? '1' : '0'
 
@@ -202,18 +203,25 @@ class Questions
   end
 
   #This method accepts a hash of questions and their answers.
-  #It output the standardised  flags representation
+  #It output the standardised hash of the same questions and their answers flags representation of the answers
+  #i.e. {
+  #       'q0': '0001110101010100'
+  #       'q1': '0001011111010110'
+  #       ...
+  #       }
+  #}
   def convert_hash_to_flags(question_answers_hash)
     normalised_hash = normalise_answers_hash(question_answers_hash)
-    flags = QUESTIONS.inject('') do | flag_str, qn |
-      flag_str += qn[:flag]
+    question_flags_hash = QUESTIONS.inject(HashWithIndifferentAccess.new) do | qn_flags_hash, qn |
       ans_flags = qn[:responses].inject(FLAGS[EMPTY]) do |flags, resp|
-        flags = FLAG_FORMAT % (flags.to_i(2) | resp[:flag].to_i(2)).to_s(2) if question_answers_hash[qn[:code]].include?(resp[:code])
+        flags = FLAG_FORMAT % (flags.to_i(2) | resp[:flag].to_i(2)).to_s(2) if normalised_hash[qn[:code]].include?(resp[:code])
         flags
       end
-      flag_str += ans_flags
+
+      qn_flags_hash[qn[:code]] = ans_flags
+      qn_flags_hash
     end
-     flags
+     question_flags_hash
   end
 
   #This method accepts a flat array of questions and their answers

@@ -42,22 +42,25 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       }
     }; 
 
-    this.$el.find('[data-get-started]').on('click', function(e) {
-      e.preventDefault(); 
+    var buttons = this.$el.find('button'); 
 
-      _this._updateDisplay('next'); 
-    }); 
-
-    this.$el.find('[data-continue]').on('click', function(e) {
-      e.preventDefault(); 
-
-      _this._updateDisplay('next'); 
-    }); 
-
-    this.$el.find('[data-back]').on('click', function(e) {
-      e.preventDefault(); 
-
-      _this._updateDisplay('prev'); 
+    buttons.on('click', function(e, options) {
+      if ($(this).data('get-started')) {
+        e.preventDefault(); 
+        _this._updateDisplay('next'); 
+      } else if ($(this).data('continue')) {
+        if (_this.$questions.last()[0] == $(this).parents('[data-question]')[0]) {
+          if (options == 'preventDefault') {
+            e.preventDefault(); 
+          }
+        } else {
+          e.preventDefault(); 
+          _this._updateDisplay('next'); 
+        }
+      } else if ($(this).data('back')) {
+        e.preventDefault(); 
+        _this._updateDisplay('prev'); 
+      }
     }); 
   }
 

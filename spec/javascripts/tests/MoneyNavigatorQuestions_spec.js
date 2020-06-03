@@ -74,13 +74,18 @@ describe.only('MoneyNavigatorQuestions', function() {
 
   describe('Continue button', function() {
     it('Calls the correct method with the correct argument when clicked', function() {
-      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+      var updateDisplaySpy;
 
       this.obj._updateDOM(); 
-      this.component.find('[data-continue]').click(); 
 
+      updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay');
+      this.component.find('[data-continue]').first().trigger('click'); 
       expect(updateDisplaySpy.calledWith('next')).to.be.true; 
+      updateDisplaySpy.restore(); 
 
+      updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay');
+      this.component.find('[data-continue]').last().trigger('click', 'preventDefault'); 
+      expect(updateDisplaySpy.calledWith('next')).to.be.false; 
       updateDisplaySpy.restore(); 
     }); 
   }); 

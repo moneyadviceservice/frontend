@@ -31,14 +31,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
       if (i === 0) {
         // Adds get-started button to first question
-        $(question).find('.question__content').append('<button class="button button--start" data-get-started="true">Get started</button>'); 
+        $(question).find('.question__content').append('<div class="question__actions"><button class="button button--start" data-get-started="true">Get started</button></div>'); 
          // Adds active class to first question
         $(question).addClass(_this.activeClass); 
      } else {
         // Adds continue and back buttons to all other questions
         $(question).find('.question__content')
-          .append('<button data-continue="true" class="button button--continue">Continue</button>')
-          .append('<button data-back="true" class="button button--back">Back</button>');
+          .append('<div class="question__actions"><button data-continue="true" class="button button--continue">Continue</button><button data-back="true" class="button button--back">Back</button></div>')
       }
     }; 
 

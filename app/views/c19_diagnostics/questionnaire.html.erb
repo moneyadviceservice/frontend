@@ -19,7 +19,13 @@
 
         <ul class="l-c19_diagnostics__questions">
           <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
-            <li class="l-c19_diagnostics__question" data-question>
+            <li 
+              class="l-c19_diagnostics__question" 
+              data-question
+              <% if question[:type] == 'checkbox' %>
+                data-question-multiple
+              <% end %>
+            >
               <% if index > 0 %>
                 <p class="question__counter"><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
               <% end %>
@@ -33,7 +39,7 @@
                   <% end %>
 
                   <% question[:responses].each do |response| %>
-                    <div class="question__response">
+                    <div class="question__response" data-response>
                       <% if question[:type] == 'radio' %>
                         <%= f.radio_button question[:code], response[:code], id: question[:code] + '_' + response[:code], class: 'response__control' %>
                       <% elsif question[:type] == 'checkbox' %>

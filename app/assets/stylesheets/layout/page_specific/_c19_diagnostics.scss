@@ -38,6 +38,14 @@
 			@include column(1.5); 
 		}
 	}
+
+	input[type="checkbox"]:disabled {
+		& + label {
+			font-weight: normal;
+			font-style: italic;
+			color: $color-grey-medium; 
+		}
+	}
 }
 
 .l-c19_diagnostics__subheading {

@@ -8,6 +8,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     this.$submitBtn = this.$el.find('[data-submit]'); 
     this.$questions = this.$el.find('[data-question]'); 
+    this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 
     this.activeClass = 'question--active'; 
   };
 
@@ -17,6 +18,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
     this._updateDOM(); 
+    this._setUpMultipleQuestions(); 
     this._initialisedSuccess(initialised);
   };
 
@@ -79,6 +81,40 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     } else {
       $(this.$questions[activeIndex - 1]).addClass(this.activeClass); 
     }
+  }
+
+  MoneyNavigatorQuestions.prototype._setUpMultipleQuestions = function() {
+    var _this = this; 
+
+    this.$multipleQuestions.each(function() {
+      var inputs = $(this).find('input[type="checkbox"]'); 
+
+      $(inputs[0]).on('change', function(e) {
+        _this._updateMultipleQuestions(e.target); 
+      }); 
+
+      for (var i = 0, length = inputs.length; i < length; i++) {
+        if (i == 0) {
+          inputs[i].checked = true; 
+        } else {
+          inputs[i].disabled = true; 
+        }
+      }
+    }); 
+  }
+
+  MoneyNavigatorQuestions.prototype._updateMultipleQuestions = function(input) {
+    var responses = $(input).parents('[data-response]').siblings('[data-response]'); 
+
+    responses.each(function() {
+      $(this).find('input[type="checkbox"]').each(function() {
+        if (input.checked) {
+          this.disabled = true; 
+        } else {
+          this.disabled = false; 
+        }
+      })
+    })
   }
 
   return MoneyNavigatorQuestions; 

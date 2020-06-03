@@ -1,4 +1,17 @@
 .l-c19_diagnostics {
+	.question__actions {
+		@extend %clearfix;
+		@include row(12); 
+		margin-top: $baseline-unit * 4; 
+
+		@include respond-to($mq-m) {
+			.button {
+				float: left;
+				clear: left;
+			}
+		}
+	}
+
 	.button--submit, 
 	.button--continue, 
 	.button--start {
@@ -8,7 +21,22 @@
 
 	.button--start, 
 	.button--back {
-		margin: $baseline-unit * 4 0 $baseline-unit * 2;
+		margin: 0 0 $baseline-unit * 2;
+	}
+
+	.button--continue, 
+	.button--start {
+		@include respond-to($mq-l) {
+			@include column(3);
+		}
+	}
+
+	.button--back {
+		margin-top: $baseline-unit * 4;
+
+		@include respond-to($mq-l) {
+			@include column(1.5); 
+		}
 	}
 }
 
@@ -40,6 +68,11 @@
 	.question__content {
 		border: solid 1px $color-grey-pale;	
 		padding: $baseline-unit * 4 $default-gutter * 2 $baseline-unit * 2; 
+
+		@include respond-to($mq-l) {
+			padding-left: $default-gutter;
+			padding-right: $default-gutter;
+		}
 	}
 
 	.question__heading {
@@ -90,20 +123,80 @@
 	}
 
 	.question__content--Q0 {
+		.response__text {
+			@extend .button; 
+			padding: 0; 
+			width: 100%;
+			text-align: left; 
+
+			@include respond-to($mq-l) {
+				@include column(3);
+				text-align: center;
+				color: $color-green-secondary; 
+				padding-left: $default-gutter !important; 
+				padding-right: $default-gutter !important; 
+				border: solid 1px $color-grey-pale !important;
+				border-radius: 0 !important; 
+				background: $color-white !important; 
+
+				span {
+					display: inline-block;
+					width: 100%;
+			    padding-top: calc(#{$baseline-unit * 2} + (371 / 295 * 100%)); 
+			    background-size: contain; 
+			    background-repeat: no-repeat;
+			    background-position: top; 
+				}
+
+				&[for="Q0_A0"] {
+					span {
+				    background-image: image_url('c19_diagnostics/maps/map-england.png');
+					}
+				}
+
+				&[for="Q0_A1"] {
+					span {
+				    background-image: image_url('c19_diagnostics/maps/map-ni.png');
+					}
+				}
+
+				&[for="Q0_A2"] {
+					span {
+				    background-image: image_url('c19_diagnostics/maps/map-scotland.png');
+					}
+				}
+
+				&[for="Q0_A3"] {
+					span {
+				    background-image: image_url('c19_diagnostics/maps/map-wales.png');
+					}
+				}
+			}
+		}
+
 		.response__control {
 			@extend .visually-hidden; 
 
 			&:checked + .response__text {
 				color: $color-white; 
 				background: $color-green-secondary; 
+
+				@include respond-to($mq-l) {
+					color: $color-green-secondary !important;
+					background: $color-green-pale !important;
+					border: solid 1px $color-green-secondary !important;
+				}
 			}
 		}
 
-		.response__text {
-			@extend .button; 
-			padding: 0; 
-			width: 100%;
-			text-align: left; 
+		fieldset {
+			@include respond-to($mq-l) {
+				@include row(12);
+			}
+		}
+
+		.question__heading {
+			@include column(12); 
 		}
 	}
 }

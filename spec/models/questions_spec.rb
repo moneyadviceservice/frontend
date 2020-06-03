@@ -44,7 +44,7 @@ RSpec.describe Questions, type: :model do
     end
 
     describe 'submissions from Northern Ireland' do
-      let(:model) { build(:answers_requiring_urgent_ni_action) }
+      let(:model) { build(:answers_requiring_urgent_northern_ireland_action) }
 
       it 'should only display the one urgent action section containing only Northern Ireland content' do
         results = model.results

@@ -116,32 +116,41 @@ module Symbols
           #TODO: this belongs in the translation files
           #text: 'Get free Debt advice now (DALT)',
           #
-          #NB. the length of the mask: value below should equal the length of the triggers
+          #NB. the length of the mask: value below should equal the length of the triggers though that requirement is not enforced for additional flexibility
+          #If it is shorter then the extra trigers are disregarded
+          #e.g with 2 elements in the trigger array generating '11' meaning they are both triggered. 
+          #the following masks produce the specified content rule outcome
+          #- '1' - the content is displayed but only the first mask output is considered i.e (results the same for '11' and '10' output of the triggers)
+          #- '0' - the content is displayed only if the first trigger is not pulled irrespective of the state of the other i.e (results the same for '01' and '00' output of the triggers)
+          #- '10' - the content is displayed only if the first trigger is pulled and the second is not i.e (results are '10')
+          #- '01' - the content is displayed only if the second trigger is pulled and the first is not i.e (results are '01')
+          #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
+          #
           content_rules: [
             {
               triggers: [
-                %w[q0_a1 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                {q0:'a1', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
               ],
               mask: '1',
               article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
-                %w[q0_a2 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                {q0:'a2', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
               ],
               mask: '1',
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
-                %w[q0_a3 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                {q0:'a3', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
               ],
               mask: '1',
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
-                %w[q0_a4 q4_a1 q6_a4 q6_a5 q6_a6 q7_a1 q7_a2 q7_a3 q7_a4 q7_a5 q7_a6 q7_a7 q7_a8 q7_a9 q10_a3]
+                {q0:'a4', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
               ],
               mask: '1',
               article: "coronavirus-debt-advice-wales"

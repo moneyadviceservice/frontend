@@ -38,7 +38,7 @@ module Symbols
   QUESTIONS_HASH = HashWithIndifferentAccess.new
   ANSWERS_HASH = HashWithIndifferentAccess.new
 
-  
+ 
   #Enrich a given question hashbag with flag information and downcased codes
   #As a sideeffect the bag is updated into the QUESTIONS_HASH for faster code based lookup
   def self.enrich_questions(qn_hash)
@@ -104,28 +104,25 @@ module Symbols
   #   - a mask that is applied to the concatenated result states of the individual triggers (OR logic)
   #   - the content to display if the mask agrees with the state of the triggers
   # which in turn have heading rules
+  #
+  #NB. the length of the mask: value below should equal the length of the triggers though that requirement is not enforced for additional flexibility
+  #If it is shorter then the extra trigers are disregarded
+  #e.g with 2 elements in the trigger array generating '11' meaning they are both triggered.
+  #the following masks produce the specified content rule outcome
+  #- '1' - the content is displayed but only the first mask output is considered i.e (results the same for '11' and '10' output of the triggers)
+  #- '0' - the content is displayed only if the first trigger is not pulled irrespective of the state of the other i.e (results the same for '01' and '00' output of the triggers)
+  #- '10' - the content is displayed only if the first trigger is pulled and the second is not i.e (results are '10')
+  #- '01' - the content is displayed only if the second trigger is pulled and the first is not i.e (results are '01')
+  #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
+  #
   CONTENT_RULES = [
     {
+      #'Urgent Actions' section
       section_code: 'S1',
       heading_rules: [
         {
+          #'Get Free debt advice now' heading
           heading_code: 'H1',
-
-          #TODO: this belongs in the translation files
-          #text: 'Urgent actions',
-          #TODO: this belongs in the translation files
-          #text: 'Get free Debt advice now (DALT)',
-          #
-          #NB. the length of the mask: value below should equal the length of the triggers though that requirement is not enforced for additional flexibility
-          #If it is shorter then the extra trigers are disregarded
-          #e.g with 2 elements in the trigger array generating '11' meaning they are both triggered. 
-          #the following masks produce the specified content rule outcome
-          #- '1' - the content is displayed but only the first mask output is considered i.e (results the same for '11' and '10' output of the triggers)
-          #- '0' - the content is displayed only if the first trigger is not pulled irrespective of the state of the other i.e (results the same for '01' and '00' output of the triggers)
-          #- '10' - the content is displayed only if the first trigger is pulled and the second is not i.e (results are '10')
-          #- '01' - the content is displayed only if the second trigger is pulled and the first is not i.e (results are '01')
-          #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
-          #
           content_rules: [
             {
               triggers: [
@@ -154,6 +151,23 @@ module Symbols
               ],
               mask: '1',
               article: "coronavirus-debt-advice-wales"
+            }
+          ]
+        },
+        {
+          #'Contact Stepchange Covid response' heading
+          heading_code: 'H2',
+          content_rules: [
+            {
+              triggers: [
+                {q0:'a1', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
+                {q4:'a1'},
+                {q6: ['a6']},
+                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+                {q10: ['a3']}
+              ],
+              mask: '10000',
+              article: "coronavirus-stepchange-debt-england"
             }
           ]
         }

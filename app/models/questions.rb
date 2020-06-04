@@ -70,11 +70,12 @@ class Questions
     Rails.logger.info("Rules engine processing submission: #{answers_hash}")
 
     sections_array =  CONTENT_RULES.inject([]) do |sections_array_accumulator, section_rules|
-      heading_content_array = section_rules[:heading_rules].inject([]) do |content_array, heading_rule|
-        content_array << obtain_content_for_heading(heading_rule, answers_hash)
-        content_array
+      heading_content_array = section_rules[:heading_rules].inject([]) do |heading_content, heading_rule|
+        heading_content << { heading_code: heading_rule[:heading_code], content: obtain_content_for_heading(heading_rule, answers_hash) }
+        heading_content
       end
 
+      heading_content_array.reject! { |heading_element| heading_element[:content].empty? }
       if !heading_content_array.empty?
         section_hash = HashWithIndifferentAccess.new
         section_hash[:section_code] = section_rules[:section_code]
@@ -132,20 +133,19 @@ class Questions
   def obtain_content_for_heading(heading_rule, answers_hash)
     content_array  =  heading_rule[:content_rules].inject([]) do |content_array_accumulator, content_rule |
       #See docs for `obtain_trigger_masks` to understand how the masks are calculated
-      #At this level `content_rule[:mask]` will determine how calcualted result affects whether
-      #the content governed by the triggers is displayed or not.
-      #By default the mask is a '1' meaning if the first trigger puled then the content will be displayed.
-      #The mask must not belonger than the number of triggers though if shorter all the extra triggers are simply ignored
-      #It is treated as follows:
-      #- all 1's => any one of the trigers being pulled results in the content being displayed (OR logic).
-      #- any 0 => the respective trigger is ignored when considering whether or not to display the content.
-      #   A quick way to experiment with trigger combinations.
-      #- any 1 => the respective trigger if pulled will cause the content to be displayed
-      #- all 0's => The content is ALWAYS displayed. The triggers array can be empty because it will not be consulted.
+      #At this level `content_rule[:mask]` is simply the expected results of the triggers.
+      #It is compared with the combined trigger result to decide whether the content governed by the triggers is displayed or not.
+      #By default the mask is a '1' meaning if the first trigger is pulled and no other triggers exist then the content will be displayed.
+      #The mask must be as long as the number of triggers. Content will be disabled by default if this is not the case.
+      #In summary, content will be displayed if the mask is completely equal to the trigger results.
       content_rule_mask = content_rule[:mask].to_i(2)
       result_flags = obtain_trigger_masks(content_rule[:triggers], answers_hash) unless content_rule_mask == 0
-      trigger_result_flags = result_flags.nil? ? 0 : result_flags.to_i(2)
-      content_visible = content_rule_mask == 0 || ( trigger_result_flags & content_rule_mask > 0 )
+      Rails.logger.error "Triggers for heading:returned "
+      #TODO: should log this as an error to be fixed... unless you seriously see sensible default handling here
+      #result_flags = '0' if result_flags.nil?
+      trigger_result_flags = content_rule_mask & result_flags.to_i(2)
+      content_visible = content_rule[:mask].eql?(result_flags)
+      Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags} trigger_result_flags: #{trigger_result_flags.to_s(2)}, content_visible:#{content_visible}")
 
       #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
       #For now we are simply placing the CMS URL in there

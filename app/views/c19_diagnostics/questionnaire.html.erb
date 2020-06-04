@@ -42,15 +42,15 @@
                     <div class="question__response" data-response>
                       <% if question[:type] == 'radio' %>
                         <% if response_index == 0 %>
-                          <%= f.radio_button question[:code], response[:code], id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
                         <% else %>
-                          <%= f.radio_button question[:code], response[:code], id: question[:code] + '_' + response[:code], class: 'response__control' %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control' %>
                         <% end %>
                       <% elsif question[:type] == 'checkbox' %>
                         <% if response_index == 0 %>
-                          <%= f.check_box question[:code], {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code] %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase %>
                         <% else %>
-                          <%= f.check_box question[:code], {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code] %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase %>
                         <% end %>
                       <% end %>
 

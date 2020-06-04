@@ -130,7 +130,7 @@
 		}
 	}
 
-	.question__content--Q0 {
+	.question__content--q0 {
 		.response__text {
 			@extend .button; 
 			padding: 0; 
@@ -156,25 +156,25 @@
 			    background-position: top; 
 				}
 
-				&[for="Q0_A0"] {
+				&[for="q0_a1"] {
 					span {
 				    background-image: image_url('c19_diagnostics/maps/map-england.png');
 					}
 				}
 
-				&[for="Q0_A1"] {
+				&[for="q0_a2"] {
 					span {
 				    background-image: image_url('c19_diagnostics/maps/map-ni.png');
 					}
 				}
 
-				&[for="Q0_A2"] {
+				&[for="q0_a3"] {
 					span {
 				    background-image: image_url('c19_diagnostics/maps/map-scotland.png');
 					}
 				}
 
-				&[for="Q0_A3"] {
+				&[for="q0_a4"] {
 					span {
 				    background-image: image_url('c19_diagnostics/maps/map-wales.png');
 					}

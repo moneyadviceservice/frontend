@@ -1,102 +1,178 @@
 module Symbols
-  FLAGS = {
-    :'0' => '1',
-    :'1' => '2',
-    :'2' => '4',
-    :'3' => '8',
-    :'4' => '16',
-    :'5' => '32',
-    :'6' => '64',
-    :'7' => '128',
-    :'8' => '256',
-    :'9' => '512',
-    :'10' => '1024',
-    :'11' => '2048',
-    :'12' => '4096',
-    :'13' => '8192',
-    :'14' => '16384',
-    :'15' => '32768',
-    :'16' => '65536',
-    :'17' => '131072',
-    :'18' => '262144',
-    :'19' => '524288',
-    :'20' => '1048576',
-    :'21' => '2097152',
-    :'22' => '4194304',
-    :'23' => '8388608',
-    :'24' => '16777216',
-    :'25' => '33554432',
-    :'26' => '67108864',
-    :'27' => '134217728',
-    :'28' => '268435456',
-    :'29' => '536870912',
-    :'30' => '1073741824',
-    :'31' => '2147483648'
-  }
+  #IMPORTANT: #We must enforce the hard limits of the system
+  #
+  #The masking only works if the question and answer flags are the same width
+  #This means there are the following hard limits in the system:
+  #- No more than FLAG_SIZE questions can be asked by the system
+  #- No Question can have more than FLAG_SIZE answers
+  #
+  #NB:
+  #- FLAG_SIZE represents the larger of [total number of questions] and [maximum number of answers per question]
+  #- The output of all computed/created flag values must be validated by validate_flag(flag)  method
+  #- Use FLAG_FORMAT to create bit strings from integers in line with FLAG_SIZE
+  #
+  #Changing the value of FLAG_SIZE is therefore enough should you require the system to handle
+  #a different number of questions/answers in line with the above notes
+  FLAG_SIZE = 16
+  #The flag is a zero left padded FLAG_SIZE long bit long binarry string
+  FLAG_FORMAT = "%0#{FLAG_SIZE}i"
+  FULL_FLAG_FORMAT = "%0#{FLAG_SIZE*FLAG_SIZE*2}i"
+  def self.validate_flag(flag)
+    #Can't really process anything if flags exist that we can not handle. Only alternative is to BOMB out
+    raise "Flag #{qn_hash[:flag]} for question #{qn_hash[:code]} (index: #{index}) has size: #{qn_hash[:flag].length}. Expected size: #{FLAG_SIZE}" if flag.length != FLAG_SIZE
+  end
 
-  #TODO get these from the translation files when merged with frotend changes
-  #This is each Question and the position of its flag in the question specific bits value
-  QUESTIONS = { 
-    :'Q0' => '1',
-    :'Q1' => '2',
-    :'Q2' => '3',
-    :'Q3' => '4',
-    :'Q4' => '5',
-    :'Q5' => '6',
-    :'Q6' => '7',
-    :'Q7' => '8',
-    :'Q8' => '9',
-    :'Q9' => '10',
-    :'Q10' => '11',
-    :'Q11' => '12',
-    :'Q12' => '13',
-    :'Q13' => '14',
-    :'Q14' => '15'
-  }
+  EMPTY = 'EMPTY'
+  ALL = 'ALL'
 
+  #Set up the flags reference hash/lookup-table that will be used by the system
+  FLAGS = HashWithIndifferentAccess.new
+  FLAGS[EMPTY] = FLAG_FORMAT % '0'
+  FLAGS[ALL] = '1'*FLAG_SIZE
+  (0..FLAG_SIZE).to_a.each { |index| FLAGS[index.to_s] = FLAG_FORMAT % (2**(index)).to_s(2) }
 
-  #TODO get these from the translation files when merged with frotend changes
-  #This is each Answer and the position of its flag in the question specific answer bit value
-  ANSWER = { 
-    :'A0' => '1',
-    :'A1' => '2',
-    :'A2' => '3',
-    :'A3' => '4',
-    :'A4' => '5',
-    :'A5' => '6',
-    :'A6' => '7',
-    :'A7' => '8',
-    :'A8' => '9',
-    :'A9' => '10',
-    :'A10' => '11',
-    :'A11' => '12',
-    :'A12' => '13',
-    :'A13' => '14',
-    :'A14' => '15',
-    :'A15' => '16',
-    :'A16' => '17',
-    :'A17' => '18',
-    :'A18' => '19',
-    :'A19' => '20',
-    :'A20' => '21',
-    :'A21' => '22',
-    :'A22' => '23',
-    :'A23' => '24',
-    :'A24' => '25',
-    :'A25' => '26',
-    :'A26' => '27',
-    :'A27' => '28',
-    :'A28' => '29',
-    :'A29' => '30',
-    :'A31' => '31',
-    :'A31' => '32'  
-  }
+  #setup the question/answer hashes
+  #- QUESTIONS: An array of all the questions from the yml file enriched with flag information and with the code standadised to lowercase
+  #- QUESTIONS_HASH: hash of all the questions keyed on the question code
+  #- ANSWERS_HASH: hash containing all possible answer codes (keyed by code) and enriched with the respective flag information
+  QUESTIONS_HASH = HashWithIndifferentAccess.new
+  ANSWERS_HASH = HashWithIndifferentAccess.new
 
-  HEADINGS_AND_CTAS = {
-    :'H1' => { 
-      touch_points: %w[ Q1_A1 Q5_A5 ],
-      activation_mask: '2'
+ 
+  #Enrich a given question hashbag with flag information and downcased codes
+  #As a sideeffect the bag is updated into the QUESTIONS_HASH for faster code based lookup
+  def self.enrich_questions(qn_hash)
+    index = /\d*$/.match(qn_hash[:code])[0]
+    qn_hash[:code].downcase!
+    qn_hash[:flag] = FLAGS[index]
+    validate_flag(qn_hash[:flag])
+    QUESTIONS_HASH[qn_hash[:code]] = qn_hash
+    qn_hash[:responses].each do |resp|
+      index = /\d*$/.match(resp[:code])[0]
+      resp[:code].downcase!
+      resp[:flag] = FLAGS[index]
+      validate_flag(resp[:flag])
+      ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
+    end
+    qn_hash[:responses].sort! {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
+
+    qn_hash
+  end
+
+  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions')
+    .map {| qn_hash | enrich_questions(qn_hash)}
+    .sort { |q1, q2| /\d*$/.match(q1[:code])[0].to_i <=> /\d*$/.match(q2[:code])[0].to_i }
+
+  ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY]}
+
+  #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
+  #be placing more in there than we want.
+  #- Not a good idea to keep the rules here and the text there... maintenance headache maintaining the header symbols in two places.
+  #- Not a good idea to move everything here... translation of headings into other languages will be required going forward.
+  #
+  #The data representation of the logic that triggers content being displayed
+  #Format:
+  # [
+  #   {
+  #     section_code: <Section Code>,
+  #     headings: [ <this is the list of headings and their associated content plus triggers as exampled below>
+  #       {
+  #         heading_code: <header code>,
+  #        content:
+  #        [<this is the list of content that can appear under a heading. Usually just one article >
+  #          {
+  #            triggers: [
+  #               < a list of the QA combinations whose state triggers display of the content >
+  #             ],
+  #             masks: [
+  #               <A list bitmasks that determins whether the triggers turn the header on or off
+  #               each list element must contain as many flags as there are triggers and if any one of these masks
+  #               matches the triggers then the content will be displayed>
+  #             ],
+  #             article: <The CMS URL of the content affected >
+  #         }
+  #       ]
+  #     }
+  #   }
+  # ]
+  #
+  # This is effectively a list of section rules.
+  # - Each section rule ismade up of a list of heading rules.
+  # - Each heading rule is made up of a list of content rules
+  # - Each content rule contains
+  #   - a list of triggers that produce a 1,0 state depending on whether they are activated or not by the answers (AND logic)
+  #   - a mask that is applied to the concatenated result states of the individual triggers (OR logic)
+  #   - the content to display if the mask agrees with the state of the triggers
+  # which in turn have heading rules
+  #
+  #NB. the length of the mask: value below should equal the length of the triggers though that requirement is not enforced for additional flexibility
+  #If it is shorter then the extra trigers are disregarded
+  #e.g with 2 elements in the trigger array generating '11' meaning they are both triggered.
+  #the following masks produce the specified content rule outcome
+  #- '1' - the content is displayed but only the first mask output is considered i.e (results the same for '11' and '10' output of the triggers)
+  #- '0' - the content is displayed only if the first trigger is not pulled irrespective of the state of the other i.e (results the same for '01' and '00' output of the triggers)
+  #- '10' - the content is displayed only if the first trigger is pulled and the second is not i.e (results are '10')
+  #- '01' - the content is displayed only if the second trigger is pulled and the first is not i.e (results are '01')
+  #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
+  #
+  CONTENT_RULES = [
+    {
+      #'Urgent Actions' section
+      section_code: 'S1',
+      heading_rules: [
+        {
+          #'Get Free debt advice now' heading
+          heading_code: 'H1',
+          content_rules: [
+            {
+              triggers: [
+                {q0:'a1', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-england"
+            },
+            {
+              triggers: [
+                {q0:'a2', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-ni"
+            },
+            {
+              triggers: [
+                {q0:'a3', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-scotland"
+            },
+            {
+              triggers: [
+                {q0:'a4', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+              ],
+              mask: '1',
+              article: "coronavirus-debt-advice-wales"
+            }
+          ]
+        },
+        {
+          #'Contact Stepchange Covid response' heading
+          heading_code: 'H2',
+          content_rules: [
+            {
+              triggers: [
+                {q0:'a1', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
+                {q4:'a1'},
+                {q6: ['a6']},
+                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+                {q10: ['a3']}
+              ],
+              mask: '10000',
+              article: "coronavirus-stepchange-debt-england"
+            }
+          ]
+        }
+      ]
     }
-  }
+  ]
 end
 

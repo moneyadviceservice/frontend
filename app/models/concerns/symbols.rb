@@ -168,7 +168,40 @@ module Symbols
               ],
               mask: '10000',
               article: "coronavirus-stepchange-debt-england"
-            }
+            },
+            {
+              triggers: [
+                {q0:'a2', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
+                {q4:'a1'},
+                {q6: ['a6']},
+                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+                {q10: ['a3']}
+              ],
+              mask: '10000',
+              article: "coronavirus-stepchange-debt-ni"
+            },
+            {
+              triggers: [
+                {q0:'a3', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
+                {q4:'a1'},
+                {q6: ['a6']},
+                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+                {q10: ['a3']}
+              ],
+              mask: '10000',
+              article: "coronavirus-stepchange-debt-scotland"
+            },
+            {
+              triggers: [
+                {q0:'a4', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
+                {q4:'a1'},
+                {q6: ['a6']},
+                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+                {q10: ['a3']}
+              ],
+              mask: '10000',
+              article: "coronavirus-stepchange-debt-wales"
+            },
           ]
         }
       ]

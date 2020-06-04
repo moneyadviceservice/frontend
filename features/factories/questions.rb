@@ -27,10 +27,13 @@ FactoryBot.define do
     
     factory :answers_requiring_urgent_scotland_action, traits: [:scotland, :urgent_action]
     factory :answers_requiring_urgent_england_action, traits: [:england, :urgent_action]
-    factory :answers_requiring_urgent_northern_ireland_action, traits: [:northern_ireland, :urgent_action]
+    factory :answers_requiring_urgent_ni_action, traits: [:northern_ireland, :urgent_action]
     factory :answers_requiring_urgent_wales_action, traits: [:wales, :urgent_action]
 
     factory :answers_requiring_urgent_england_stepchange_action, traits: [:england, :urgent_stepchange_action]
+    factory :answers_requiring_urgent_ni_stepchange_action, traits: [:northern_ireland, :urgent_stepchange_action]
+    factory :answers_requiring_urgent_wales_stepchange_action, traits: [:wales, :urgent_stepchange_action]
+    factory :answers_requiring_urgent_scotland_stepchange_action, traits: [:scotland, :urgent_stepchange_action]
 
     trait :scotland do
       q0 { 'a3' }
@@ -81,8 +84,6 @@ FactoryBot.define do
       q13 { answers_with_entropy('q13', [], nil)  }
       q14 { answers_with_entropy('q14', [], nil)  }
     end
-#,c     Given the answers: {"q0"=>["a1"], "q1"=>["EMPTY"], "q2"=>["a4"], "q3"=>["a1", "a4", "a2"], "q4"=>["a1", "a4", "a5", "a2", "a3"], "q5"=>["a5", "a4", "a2", "a3"], "q6"=>["a5", "a6", "a4"], "q7"=>["a2", "a6", "a4", "a3"], "q8"=>["EMPTY"], "q9"=>["a1", "a5", "a2"], "q10"=>["a3", "a1", "a2", "a4", "a6", "a5"], "q11"=>["a3", "a4", "a5", "a1"], "q12"=>["a5"], "q13"=>["a4", "a5", "a2", "a3", "a1"], "q14"=>["a5", "a1", "a2", "a3", "a4"]}
-
 
   end
 end

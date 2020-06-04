@@ -94,9 +94,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       }); 
 
       for (var i = 0, length = inputs.length; i < length; i++) {
-        if (i == 0) {
-          inputs[i].checked = true; 
-        } else {
+        if (i > 0) {
           inputs[i].disabled = true; 
         }
       }

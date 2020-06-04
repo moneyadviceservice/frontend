@@ -131,10 +131,6 @@ describe.only('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Adds the expected states when the method is called', function() {
-      expect(this.responses[0].checked).to.be.true; 
-      expect(this.responses[1].checked).to.be.false; 
-      expect(this.responses[2].checked).to.be.false; 
-
       expect(this.responses[0].disabled).to.be.false; 
       expect(this.responses[1].disabled).to.be.true; 
       expect(this.responses[2].disabled).to.be.true; 

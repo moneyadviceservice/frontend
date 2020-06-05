@@ -65,6 +65,7 @@ module Symbols
 
   ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY]}
 
+
   #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
   #be placing more in there than we want.
   #- Not a good idea to keep the rules here and the text there... maintenance headache maintaining the header symbols in two places.
@@ -115,91 +116,100 @@ module Symbols
   #- '01' - the content is displayed only if the second trigger is pulled and the first is not i.e (results are '01')
   #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
   #
+  #TODO: Think of a less misleading form of reuse
+
+  COMMON_RULES = {
+    stepchange: {
+      rules: [
+        #If any of these are selected Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q8A1, Q8A3 
+        #and NONE of these are selected Q2A4, Q5A1, Q5A2, Q5A3, Q8A1-A9  show this
+        {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q8:['a1', 'a3']},
+        {q2:'a4'},
+        {q5: ['a1', 'a2', 'a3']},
+        {q8: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+      ],
+      mask: '1000'
+    },
+
+    debtadvice: {
+      rules: [
+        {q0:'a1', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+      ],
+      mask: '1'
+    }
+  }
+
   CONTENT_RULES = [
     {
       #'Urgent Actions' section
       section_code: 'S1',
       heading_rules: [
+
         {
-          #'Get Free debt advice now' heading
+          #Get Free debt advice now' Rules
           heading_code: 'H1',
           content_rules: [
             {
               triggers: [
-                {q0:'a1', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
-              ],
-              mask: '1',
+                {q0:'a1'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: '1' + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
-                {q0:'a2', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
-              ],
-              mask: '1',
+                {q0:'a2'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: '1' + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
-                {q0:'a3', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
-              ],
-              mask: '1',
+                {q0:'a3'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: '1' + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
-                {q0:'a4', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
-              ],
-              mask: '1',
+                {q0:'a4'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: '1' + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-wales"
             }
           ]
         },
+
         {
-          #'Contact Stepchange Covid response' heading
+          #'Contact Stepchange Covid response' heading rules
           heading_code: 'H2',
           content_rules: [
             {
               triggers: [
-                {q0:'a1', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
-                {q4:'a1'},
-                {q6: ['a6']},
-                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
-                {q10: ['a3']}
-              ],
-              mask: '10000',
+                {q0:'a1'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: '1' + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-england"
             },
             {
               triggers: [
-                {q0:'a2', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
-                {q4:'a1'},
-                {q6: ['a6']},
-                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
-                {q10: ['a3']}
-              ],
-              mask: '10000',
+                {q0:'a2'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: '1' + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-ni"
             },
             {
               triggers: [
-                {q0:'a3', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
-                {q4:'a1'},
-                {q6: ['a6']},
-                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
-                {q10: ['a3']}
-              ],
-              mask: '10000',
+                {q0:'a3'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: '1' + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-scotland"
             },
             {
               triggers: [
-                {q0:'a4', q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:'a1'},
-                {q4:'a1'},
-                {q6: ['a6']},
-                {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
-                {q10: ['a3']}
-              ],
-              mask: '10000',
+                {q0:'a4'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: '1' + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-wales"
             },
           ]

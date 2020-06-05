@@ -1,0 +1,96 @@
+.l-c19_diagnostics-results {
+	.results__intro {
+		font-weight: 700; 
+	}
+
+	.results__urgent-actions {
+		@include row(12); 
+
+		background: $color-grey-pale; 
+
+		.urgent-actions__heading {
+			@include column(12); 
+
+			font-size: 1rem; 
+			text-transform: uppercase;
+			margin-top: $baseline-unit * 2; 
+			color: $color-black; 
+		}
+
+		.urgent-actions__actions {
+			@include column(12); 
+
+			list-style: none; 
+			padding: 0; 
+			margin-top: 0; 
+			margin-bottom: 0; 
+		}
+
+		.urgent-actions__action {
+			background: $color-white;
+			margin-top: 0; 
+			margin-bottom: $baseline-unit * 2; 
+			padding: $baseline-unit $default-gutter;
+		}
+	}
+
+	.results__sections {
+		@include row(12); 
+
+		.sections__sections {
+			list-style: none; 
+			padding: 0;
+		}
+
+		.section__title {
+			font-size: 1rem; 
+			color: $color-green-secondary;
+			padding-bottom: $baseline-unit; 
+			border-bottom: solid $color-grey-pale 1px;
+
+			span {
+				@include column(12); 
+
+				float: none; 
+			}
+		}
+
+		.section__subtitle {
+			@include column(12); 
+			
+			font-size: 1rem;
+			margin-top: $baseline-unit; 
+			color: $color-green-secondary;
+		}
+
+		.sections__headings {
+			@include column(12); 
+
+			list-style: none; 
+			padding: 0;
+			margin-top: 0; 
+			margin-bottom: 0; 
+		}
+
+		.sections__heading {
+			border: solid $color-grey-pale 1px;
+			padding: $baseline-unit $default-gutter;
+
+			.heading__title {
+				font-size: 1rem; 
+				margin-top: 0; 
+				margin-bottom: $baseline-unit; 
+			}
+
+			.heading__content {
+				margin-top: 0; 
+				margin-bottom: 0; 
+
+				p, a {
+					font-size: 0.875rem; 
+					margin: $baseline-unit 0;
+				}
+			}
+		}
+	}
+}

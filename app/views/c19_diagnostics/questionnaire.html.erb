@@ -3,48 +3,77 @@
                  canonical:   t('c19_diagnostics_tool.meta.canonical'),
                  alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
 
-<h1><%= t("c19_diagnostics_tool.heading") %></h1>
+<div class="l-container-tool">
+  <main>
+    <div class="l-c19_diagnostics">
+      <h1 class="l-c19_diagnostics__heading"><%= t("c19_diagnostics_tool.heading") %></h1>
 
-<p><%= t("c19_diagnostics_tool.subheading") %></p>
+      <h2 class="l-c19_diagnostics__subheading"><%= t("c19_diagnostics_tool.subheading") %></h2>
 
-<%= form_for @model, 
-  url:c19_diagnostics_questionnaire_path, 
-  builder: Dough::Forms::Builders::Validation do |f| 
-%>
-  <%= f.validation_summary %>
+      <%= form_for @model, 
+        url:c19_diagnostics_questionnaire_path, 
+        data: {dough_component: "MoneyNavigatorQuestions"}, 
+        builder: Dough::Forms::Builders::Validation do |f| 
+      %>
+        <%= f.validation_summary %>
 
-  <ul>
-    <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
-      <li>
-        <% if index > 0 %>
-          <p><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
-        <% end %>
-
-        <fieldset>
-          <legend><%= question[:text] %></legend>
-
-          <% if question[:explainer] %>
-            <p><%= question[:explainer] %></p>
-          <% end %>
-
-          <% question[:responses].each do |response| %>
-            <label>
-              <% if question[:type] == 'radio' %>
-                <%= f.radio_button question[:code].downcase, response[:code].downcase %>
-              <% elsif question[:type] == 'checkbox' %>
-                <%= f.check_box question[:code].downcase, {multiple: true}, response[:code].downcase, nil  %>
+        <ul class="l-c19_diagnostics__questions">
+          <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
+            <li 
+              class="l-c19_diagnostics__question" 
+              data-question
+              <% if question[:type] == 'checkbox' %>
+                data-question-multiple
               <% end %>
-                <%= response[:text] %>
-            </label>
+            >
+              <% if index > 0 %>
+                <p class="question__counter"><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
+              <% end %>
+
+              <div class="question__content question__content--<%= question[:code] %>">
+                <fieldset>
+                  <legend class="question__heading"><%= question[:text] %></legend>
+
+                  <% if question[:explainer] %>
+                    <p class="question__explainer"><%= question[:explainer] %></p>
+                  <% end %>
+
+                  <% question[:responses].each_with_index do |response, response_index| %>
+                    <div class="question__response" data-response>
+                      <% if question[:type] == 'radio' %>
+                        <% if response_index == 0 %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
+                        <% else %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control' %>
+                        <% end %>
+                      <% elsif question[:type] == 'checkbox' %>
+                        <% if response_index == 0 %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase %>
+                        <% else %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase %>
+                        <% end %>
+                      <% end %>
+
+                      <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                        <span><%= response[:text] %></span>
+                      </label>
+                    </div>
+                  <% end %>
+                </fieldset>
+
+                <% if question[:note] %>
+                  <p class="question__note"><%= question[:note] %></p>
+                <% end %>
+              </div>
+            </li>
           <% end %>
-        </fieldset>
+        </ul>
 
-        <% if question[:note] %>
-          <p><%= question[:note] %></p>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-
-  <%= f.submit t("c19_diagnostics_tool.controls.submit_label") %>
-<% end %>
+        <%= f.submit t("c19_diagnostics_tool.controls.submit_label"), 
+          class: 'button button--submit',
+          data: {submit: true}
+        %>
+      <% end %>
+    </div>
+  </main>
+</div>

@@ -139,8 +139,9 @@ class Questions
       #The mask must be as long as the number of triggers. Content will be disabled by default if this is not the case.
       #In summary, content will be displayed if the mask is completely equal to the trigger results.
       content_rule_mask = content_rule[:mask].to_i(2)
+      Rails.logger.debug "Checking Triggers for content: #{content_rule[:article]}"
       result_flags = obtain_trigger_masks(content_rule[:triggers], answers_hash) unless content_rule_mask == 0
-      Rails.logger.error "Triggers for heading:returned "
+      Rails.logger.error "Triggers results: #{result_flags} for content: #{content_rule[:article]} "
       #TODO: should log this as an error to be fixed... unless you seriously see sensible default handling here
       #result_flags = '0' if result_flags.nil?
       trigger_result_flags = content_rule_mask & result_flags.to_i(2)
@@ -149,6 +150,7 @@ class Questions
 
       #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
       #For now we are simply placing the CMS URL in there
+      Rails.logger.debug "Checking Triggers for content: #{content_rule[:article]}"
       content_array_accumulator << content_rule[:article] if content_visible
 
       content_array_accumulator
@@ -186,6 +188,7 @@ class Questions
       question_answers_flags_hash = convert_hash_to_flags(answers_hash)
       triggers_flags_hash = convert_hash_to_flags(HashWithIndifferentAccess.new(trigger_hash))
 
+      #TODO only really need to check the trigger questions and not all question answers, ignoring the rest
       triggered = question_answers_flags_hash.inject(true) do |sub_trig_pulled, qa_array|
         trig_ans = triggers_flags_hash[qa_array[0]].to_i(2)
         actual_ans = question_answers_flags_hash[qa_array[0]].to_i(2)

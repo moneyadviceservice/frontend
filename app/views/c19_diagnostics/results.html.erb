@@ -2,9 +2,54 @@
                  description: t('c19_diagnostics_tool.meta.description'),
                  canonical:   t('c19_diagnostics_tool.meta.canonical'),
                  alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
-               <h1>THE RESULTS</h1>
-  <% @results.each do |result| %>
 
-    <p><%= t("c19_diagnostics_tool.results.#{result}.text") %></p>
+<div class="l-container-tool">
+	<main>
+		<div class="l-c19_diagnostics-results">
+			<h1><%= t("c19_diagnostics_tool.results.heading") %></h1>
 
-  <% end %>
+			<p class="results__intro"><%= t("c19_diagnostics_tool.results.intro") %></p>
+
+			<section class="results__urgent-actions">
+				<div class="urgent-actions__content">
+					<h2 class="urgent-actions__heading"><%= t('c19_diagnostics_tool.results.urgent_actions.heading') %></h2>
+					
+					<ul class="urgent-actions__actions">
+						<li class="urgent-actions__action">
+							Some content about an urgent action
+						</li>
+
+						<li class="urgent-actions__action">
+							Some content about another urgent action
+						</li>
+					</ul>				
+				</div>
+			</section>
+
+			<section class="results__sections">
+				<ul class="sections__sections">
+					<% @results.each do |result| %>
+						<li class="sections__section">
+							<h3 class="section__title">
+								<span><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %></span>
+							</h3>
+
+							<% if I18n.exists?("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %>
+								<h4 class="section__subtitle"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %></h4>
+							<% end %>
+
+							<ul class="sections__headings">
+								<% result[:headings].each do |heading| %>
+									<li class="sections__heading">
+										<h5 class="heading__title"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h5>
+										<div class="heading__content"><%= heading[:content].html_safe %></div>
+									</li>
+								<% end %>
+							</ul>
+						</li>
+					<% end %>
+				</ul>
+			</section>
+		</div>
+	</main>
+</div>

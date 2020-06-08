@@ -57,7 +57,7 @@ FactoryBot.define do
     trait :northern_ireland do
       q0 { 'a2' }
     end
-    #TODO: Consider deriving these traits directly from the rules to minimise duplication
+    #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
     trait :urgent_debt_advice_action do
       q1 { answers_with_entropy('q1', [], nil)  }
       q2 { answers_with_entropy('q2', [], nil)  }
@@ -75,19 +75,18 @@ FactoryBot.define do
       q14 { answers_with_entropy('q14', [], nil)  }
     end
 
-        #If any of these are selected Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q8A1, Q8A3 
-        #and NONE of these are selected Q2A4, Q5A1, Q5A2, Q5A3, Q8A1-A9  show this
+    #Any of these Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6, Q7A1-A9, Q10A3
     trait :urgent_stepchange_action do
       q1 { answers_with_entropy('q1', [], nil)  }
-      q2 { answers_with_entropy('q2', [], [])  }
+      q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', ['a1'], nil)  }
       q4 { answers_with_entropy('q4', ['a2', 'a3'], ['a4'] )}
       q5 { answers_with_entropy('q5', [], nil)  }
       q6 { answers_with_entropy('q6', ['a4', 'a5'], ['a1', 'a2', 'a3', 'a4', 'a5', 'a7'])}
       q7 { answers_with_entropy('q7', [], ['a10'] )}
-      q8 { answers_with_entropy('q8', ['a1', 'a2', 'a3'], nil)  }
-      q9 { answers_with_entropy('q9', [], nil) }
-      q10 { answers_with_entropy('q10', [], ['a2'] ) }
+      q8 { answers_with_entropy('q8', [], nil) }
+      q9 { answers_with_entropy('q9', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], nil)  }
+      q10 { answers_with_entropy('q10', ['a1'], ['a2'] ) }
       q11 { answers_with_entropy('q11', [], nil)  }
       q12 { answers_with_entropy('q12', [], nil)  }
       q13 { answers_with_entropy('q13', [], nil)  }

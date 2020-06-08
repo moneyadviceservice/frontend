@@ -23,7 +23,13 @@ describe.only('MoneyNavigatorResults', function() {
 
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
+      var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
+
       this.obj.init();
+
+      expect(updateDOMStub.calledOnce).to.be.true; 
+
+      updateDOMStub.restore(); 
     });
   });
 });

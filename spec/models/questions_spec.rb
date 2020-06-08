@@ -39,7 +39,7 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      describe  'StepChange' do
+      skip  'StepChange' do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'stepchange-debt'}
 
@@ -62,4 +62,20 @@ RSpec.describe Questions, type: :model do
     let(:country) { 'england' }
     include_examples 'urgent action'
   end
+
+  context 'Scotland' do
+    let(:country) { 'scotland' }
+    include_examples 'urgent action'
+  end
+
+  context 'Northern Ireland' do
+    let(:country) { 'ni' }
+    include_examples 'urgent action'
+  end
+
+  context 'Scotland' do
+    let(:country) { 'wales' }
+    include_examples 'urgent action'
+  end
+
 end

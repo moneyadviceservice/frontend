@@ -119,6 +119,13 @@ module Symbols
   #TODO: Think of a less misleading form of reuse
 
   COMMON_RULES = {
+    #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
+    debtadvice: {
+      rules: [
+        {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+      ],
+      mask: '1'
+    },
     stepchange: {
       rules: [
         #If any of these are selected Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q8A1, Q8A3 
@@ -129,13 +136,6 @@ module Symbols
         {q8: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
       ],
       mask: '1000'
-    },
-
-    debtadvice: {
-      rules: [
-        {q0:'a1', q4:'a1', q6:['a4', 'a5', 'a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
-      ],
-      mask: '1'
     }
   }
 

@@ -27,10 +27,10 @@ end
 FactoryBot.define do
   factory :questions, class: Questions do
 
-    factory :urgent_action_scotland__debt_advice, traits: [:scotland, :urgent_action]
-    factory :urgent_action_england_debt_advice, traits: [:england, :urgent_action]
-    factory :urgent_action_ni_debt_advice, traits: [:northern_ireland, :urgent_action]
-    factory :urgent_action_wales_debt_advice, traits: [:wales, :urgent_action]
+    factory :urgent_action_scotland_debt_advice, traits: [:scotland, :urgent_debt_advice_action]
+    factory :urgent_action_england_debt_advice, traits: [:england, :urgent_debt_advice_action]
+    factory :urgent_action_ni_debt_advice, traits: [:northern_ireland, :urgent_debt_advice_action]
+    factory :urgent_action_wales_debt_advice, traits: [:wales, :urgent_debt_advice_action]
 
     factory :urgent_action_england_stepchange_debt, traits: [:england, :urgent_stepchange_action]
     factory :urgent_action_ni_stepchange_debt, traits: [:northern_ireland, :urgent_stepchange_action]
@@ -57,14 +57,14 @@ FactoryBot.define do
     trait :northern_ireland do
       q0 { 'a2' }
     end
-
-    trait :urgent_action do
+    #TODO: Consider deriving these traits directly from the rules to minimise duplication
+    trait :urgent_debt_advice_action do
       q1 { answers_with_entropy('q1', [], nil)  }
       q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', [], nil)  }
       q4 { answers_with_entropy('q4', ['a1'], nil)  }
       q5 { answers_with_entropy('q5', [], nil)  }
-      q6 { answers_with_entropy('q6', ['a4', 'a5', 'a6'], nil) }
+      q6 { answers_with_entropy('q6', ['a6'], nil) }
       q7 { answers_with_entropy('q7', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], nil) }
       q8 { answers_with_entropy('q8', [], nil)  }
       q9 { answers_with_entropy('q9', [], nil)  }

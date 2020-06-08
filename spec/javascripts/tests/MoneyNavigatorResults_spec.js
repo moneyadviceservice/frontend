@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorResults', function() {
+describe('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -12,6 +12,8 @@ describe.only('MoneyNavigatorResults', function() {
           fixture.load('MoneyNavigatorResults.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorResults"]');
           self.obj = new MoneyNavigatorResults(self.component);
+          self.$headingContent = self.component.find('[data-heading-content]'); 
+          self.hiddenClass  = self.obj.hiddenClass; 
 
           done();
         }, done);
@@ -32,4 +34,16 @@ describe.only('MoneyNavigatorResults', function() {
       updateDOMStub.restore(); 
     });
   });
+
+  describe.only('updateDOM method', function() {
+    it('Makes the correct changes to the DOM when called', function() {
+      var _this = this;
+
+      this.obj._updateDOM(); 
+
+      this.$headingContent.each(function() {
+        expect($(this).hasClass(_this.hiddenClass)).to.be.true; 
+      }); 
+    }); 
+  }); 
 });

@@ -141,25 +141,25 @@ class Questions
       content_rule_mask = content_rule[:mask].to_i(2)
       Rails.logger.debug "Checking Triggers for content: #{content_rule[:article]}"
       result_flags = obtain_trigger_masks(content_rule[:triggers], answers_hash) unless content_rule_mask == 0
-      Rails.logger.error "Triggers results: #{result_flags} for content: #{content_rule[:article]} "
-      #TODO: should log this as an error to be fixed... unless you seriously see sensible default handling here
-      #result_flags = '0' if result_flags.nil?
-      trigger_result_flags = content_rule_mask & result_flags.to_i(2)
-      content_visible = content_rule[:mask].eql?(result_flags)
-      Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags} trigger_result_flags: #{trigger_result_flags.to_s(2)}, content_visible:#{content_visible}")
+      content_visible = content_rule[:mask] == result_flags
+      Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags},  content_visible:#{content_visible}")
 
       #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
       #For now we are simply placing the CMS URL in there
-      Rails.logger.debug "Checking Triggers for content: #{content_rule[:article]}"
+      Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
       content_array_accumulator << content_rule[:article] if content_visible
 
       content_array_accumulator
     end
 
-    content_array
+    #TODO: no need for an array here. clean up
+    content = ''
+    content = content_array[0] unless content_array.empty?
 
+    content
   end
 
+  #TODO: update documentation for last minute fixes in logic
   #Method to iterate over an array of triggers each representing question-answers that can pull the respective trigger
   #-A trigger is pulled if each and every answer sub-trigger it contains is pulled.
   #- an answer sub-trigger is pulled if:
@@ -186,19 +186,23 @@ class Questions
     mask_flags = triggers_arr.inject('') do |mask_flags_accumulator,  trigger_hash |
       Rails.logger.debug("... and considering the trigger: #{trigger_hash}")
       question_answers_flags_hash = convert_hash_to_flags(answers_hash)
+      question_answers_flags = question_answers_flags_hash[:all].to_i(2) 
+      Rails.logger.debug("Answers flags: #{question_answers_flags_hash[:all].scan(/.{1,#{FLAG_SIZE}}/)}")
       triggers_flags_hash = convert_hash_to_flags(HashWithIndifferentAccess.new(trigger_hash))
+      triggers_flags = triggers_flags_hash[:all].to_i(2)
+      Rails.logger.debug("Triggers flags: #{triggers_flags_hash[:all].scan(/.{1,#{FLAG_SIZE}}/)}")
 
-      #TODO only really need to check the trigger questions and not all question answers, ignoring the rest
-      triggered = question_answers_flags_hash.inject(true) do |sub_trig_pulled, qa_array|
-        trig_ans = triggers_flags_hash[qa_array[0]].to_i(2)
-        actual_ans = question_answers_flags_hash[qa_array[0]].to_i(2)
-        sub_trig_pulled = sub_trig_pulled && (trig_ans == 0 || (trig_ans & actual_ans > 1) )
-        Rails.logger.debug "Question: #{qa_array[0]} => trigger answer: #{triggers_flags_hash[qa_array[0]]} submitted answer: #{question_answers_flags_hash[qa_array[0]]} trig_pulled: #{sub_trig_pulled}"
-        sub_trig_pulled
-      end
+      none_fired = triggers_flags & question_answers_flags == 0
+      exact_fired = none_fired ? false :  triggers_flags & question_answers_flags == triggers_flags 
+      some_fired = exact_fired ? true : triggers_flags & question_answers_flags > 0
 
-      Rails.logger.debug "Content Triggered: #{triggered}"
-      mask_flags_accumulator += triggered ? '1' : '0'
+      Rails.logger.debug("None fired: #{none_fired} Exact fired: #{exact_fired}, Some fired: #{some_fired}" )
+
+      the_mask = MASK_NONE if none_fired
+      the_mask = MASK_SOME if some_fired
+      the_mask = MASK_ALL if exact_fired
+      mask_flags_accumulator += the_mask 
+      Rails.logger.debug "Trigger result: #{mask_flags_accumulator}"
 
       mask_flags_accumulator
     end
@@ -215,14 +219,18 @@ class Questions
   #}
   def convert_hash_to_flags(question_answers_hash)
     normalised_hash = normalise_answers_hash(question_answers_hash)
-    question_flags_hash = QUESTIONS.inject(HashWithIndifferentAccess.new) do | qn_flags_hash, qn |
+    qn_flags_hash = HashWithIndifferentAccess.new
+    qn_flags_hash[:all] = ''
+    question_flags_hash = QUESTIONS.inject(qn_flags_hash) do | acc_qn_flags_hash, qn |
       ans_flags = qn[:responses].inject(FLAGS[EMPTY]) do |flags, resp|
         flags = FLAG_FORMAT % (flags.to_i(2) | resp[:flag].to_i(2)).to_s(2) if normalised_hash[qn[:code]].include?(resp[:code])
         flags
       end
 
-      qn_flags_hash[qn[:code]] = ans_flags
-      qn_flags_hash
+      acc_qn_flags_hash[qn[:code]] = ans_flags
+      acc_qn_flags_hash[:all] += ans_flags
+
+      acc_qn_flags_hash
     end
      question_flags_hash
   end

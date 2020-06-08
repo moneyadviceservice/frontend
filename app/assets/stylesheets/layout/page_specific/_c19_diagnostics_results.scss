@@ -46,7 +46,7 @@
 			font-size: 1rem; 
 			color: $color-green-secondary;
 			padding-bottom: $baseline-unit; 
-			border-bottom: solid $color-grey-pale 1px;
+			border-bottom: solid 1px $color-grey-pale; 
 
 			span {
 				@include column(12); 
@@ -73,7 +73,7 @@
 		}
 
 		.sections__heading {
-			border: solid $color-grey-pale 1px;
+			border: solid 1px $color-grey-pale;
 			padding: $baseline-unit $default-gutter;
 
 			.heading__title {
@@ -90,6 +90,18 @@
 					font-size: 0.875rem; 
 					margin: $baseline-unit 0;
 				}
+			}
+		}
+	}
+}
+
+// Component initialised
+[data-dough-money-navigator-results-initialised="yes"] {
+	.sections__section {
+		&.is-collapsed {
+			.section__content {
+				height: 0;
+				overflow: hidden;
 			}
 		}
 	}

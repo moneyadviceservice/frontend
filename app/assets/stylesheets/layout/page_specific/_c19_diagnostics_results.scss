@@ -44,14 +44,17 @@
 
 		.section__title {
 			font-size: 1rem; 
+			line-height: 1.2; 
 			color: $color-green-secondary;
 			padding-bottom: $baseline-unit; 
 			border-bottom: solid 1px $color-grey-pale; 
 
-			span {
+			.title__text {
 				@include column(12); 
 
+				display: inline-block;
 				float: none; 
+				padding-right: calc(18px + #{$default-gutter}); 
 			}
 		}
 
@@ -103,6 +106,23 @@
 				height: 0;
 				overflow: hidden;
 			}
+		}
+
+		.section__title {
+			position: relative;
+
+			.title__icon {
+				position: absolute;
+				top: 50%; 
+				right: $default-gutter; 
+				width: 0;
+				height: 0; 
+				transform: translateY(-50%); 
+
+				border: solid transparent 9px;
+				border-bottom-color: $color-black;
+				border-top-width: 0; 
+			}			
 		}
 	}
 }

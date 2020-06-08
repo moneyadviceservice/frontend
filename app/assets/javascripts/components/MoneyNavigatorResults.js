@@ -22,6 +22,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   MoneyNavigatorResults.prototype._updateDOM = function() {
+    var sectionIcon = document.createElement('span'); 
+
+    $(sectionIcon).addClass('title__icon'); 
+
     // Adds hidden classes to section content
     this.$headingContent.addClass(this.hiddenClass); 
 
@@ -29,6 +33,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$sections.addClass(this.collapsedClass); 
 
     // Adds arrow icon to section headings
+    this.$sections.find('.section__title').append(sectionIcon); 
+
     // Adds checkbox element to headings
   }; 
 

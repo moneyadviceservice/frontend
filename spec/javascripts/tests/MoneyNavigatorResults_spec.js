@@ -49,6 +49,7 @@ describe('MoneyNavigatorResults', function() {
 
       this.$sections.each(function() {
         expect($(this).hasClass(_this.collapsedClass)).to.be.true; 
+        expect($(this).find('.title__icon').length).to.equal(1); 
       }); 
     }); 
   }); 

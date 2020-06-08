@@ -117,25 +117,35 @@ module Symbols
   #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
   #
   #TODO: Think of a less misleading form of reuse
+  Rules engine processing submission: {"q0"=>["a1"], "q1"=>["a2"], "q2"=>["a2"], "q3"=>["a1"], "q4"=>["a1", "a4", "a3", "a2"], "q5"=>["EMPTY"], "q6"=>["a6"], "q7"=>["a3", "a7", "a8", "a5", "a2", "a9", "a6", "a4", "a1"], "q8"=>["EMPTY"], "q9"=>["EMPTY"], "q10"=>["a2"], "q11"=>["a2"], "q12"=>["a5", "a4", "a2"], "q13"=>["a1"], "q14"=>["a1"]}
 
+  MASK_ALL = '11'
+  MASK_SOME = '01'
+  MASK_NONE = '00'
   COMMON_RULES = {
     debtadvice: {
       #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
       rules: [
         {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
       ],
-      mask: '1'
+      mask: MASK_SOME
     },
     stepchange: {
       #Any of these Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6, Q7A1-A9, Q10A3
       rules: [
         {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:['a1']},
-        {q4:'a1'},
-        {q6: ['a6']},
-        {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
-        {q10: ['a3']},
+        {q4:'a1', q6: ['a6'], q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10: ['a3']},
       ],
-      mask: '10000'
+      mask: MASK_SOME + MASK_NONE
+    },
+
+    debtline: {
+      #Show if Q1A2 (self employed flag) plus Q0A1 or Q0A3 or Q0A4 plus any of Q3A2, Q4A1, Q5A3, Q6A6, Q7A1-A9, Q10A3
+      rules: [
+        {q1:'a2'},
+        {q3:['a2'], q4:['a1'], q5:['a3'], q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:['a3']},
+      ],
+      mask: MASK_ALL + MASK_SOME
     }
   }
 
@@ -153,28 +163,28 @@ module Symbols
               triggers: [
                 {q0:'a1'}
               ] + COMMON_RULES[:debtadvice][:rules],
-              mask: '1' + COMMON_RULES[:debtadvice][:mask],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
                 {q0:'a2'}
               ] + COMMON_RULES[:debtadvice][:rules],
-              mask: '1' + COMMON_RULES[:debtadvice][:mask],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
                 {q0:'a3'}
               ] + COMMON_RULES[:debtadvice][:rules],
-              mask: '1' + COMMON_RULES[:debtadvice][:mask],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
                 {q0:'a4'}
               ] + COMMON_RULES[:debtadvice][:rules],
-              mask: '1' + COMMON_RULES[:debtadvice][:mask],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
               article: "coronavirus-debt-advice-wales"
             }
           ]
@@ -188,30 +198,45 @@ module Symbols
               triggers: [
                 {q0:'a1'}
               ] + COMMON_RULES[:stepchange][:rules],
-              mask: '1' + COMMON_RULES[:stepchange][:mask],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-england"
             },
             {
               triggers: [
                 {q0:'a2'}
               ] + COMMON_RULES[:stepchange][:rules],
-              mask: '1' + COMMON_RULES[:stepchange][:mask],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-ni"
             },
             {
               triggers: [
                 {q0:'a3'}
               ] + COMMON_RULES[:stepchange][:rules],
-              mask: '1' + COMMON_RULES[:stepchange][:mask],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-scotland"
             },
             {
               triggers: [
                 {q0:'a4'}
               ] + COMMON_RULES[:stepchange][:rules],
-              mask: '1' + COMMON_RULES[:stepchange][:mask],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
               article: "coronavirus-stepchange-debt-wales"
             },
+          ]
+        },
+
+
+        {
+          #'SELF EMPLOYED DEBT ADVICE Contact Business Debtline for England' heading rules
+          heading_code: 'H3',
+          content_rules: [
+            {
+              triggers: [
+                {q0:['a1', 'a3', 'a4']}
+              ] + COMMON_RULES[:debtline][:rules],
+              mask: MASK_SOME + COMMON_RULES[:debtline][:mask],
+              article: "coronavirus-self-employed-debt-advice"
+            }
           ]
         }
       ]

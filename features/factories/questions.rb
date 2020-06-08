@@ -10,13 +10,26 @@ end
 
 
 def answers_with_entropy(question_code, mandatory_set, optional_set)
+  #All questions can be randomnly spliced in if the optional set is nil.
+  #If it is an empty array then no other answers will be randomnly spliced in
+  answers = QUESTIONS_HASH[question_code][:responses]
+  if optional_set.nil?
+    if(answers[0][:text] == "Yes") && (answers[0].length == 2)
+      optional = ['a' + rand(1..2).to_s ]
+      mandatory_set = []
+    else
+      optional = randomn_answers((1..QUESTIONS_HASH[question_code][:responses].length).to_a.map{|index| "a#{index}"}, true) if optional_set.nil?
+    end
+  else
+    optional = randomn_answers(optional_set, false)
+  end
+
   #A nill mandatory_set means nothing.
   #An empty mandatory set means nothing is mandatory (i.e. the question can be left unanswerd)
   mandated = randomn_answers(mandatory_set, false) unless mandatory_set.empty?
   mandated = [] if mandatory_set.empty?
-  #All questions can be randomnly spliced in if the optional set is nil.
-  #If it is an empty array then no other answers will be randomnly spliced in
-  optional = randomn_answers((1..QUESTIONS_HASH[question_code].length).to_a.map{|index| "a#{index}"}, true) if optional_set.nil?
+
+
   #If the optional set is given then we can only select randomnly from it
   optional = randomn_answers(optional_set, true) unless optional_set.nil?
   answers = mandated | optional
@@ -37,10 +50,7 @@ FactoryBot.define do
     factory :urgent_action_wales_stepchange_debt, traits: [:wales, :urgent_stepchange_action]
     factory :urgent_action_scotland_stepchange_debt, traits: [:scotland, :urgent_stepchange_action]
 
-    factory :urgent_action_england_self_employed_debt_advice, traits: [:england, :urgent_debtline_action]
-    factory :urgent_action_ni_self_employed_debt_advice, traits: [:northern_ireland, :urgent_debtline_action]
-    factory :urgent_action_wales_self_employed_debt_advice, traits: [:wales, :urgent_debtline_action]
-    factory :urgent_action_scotland_self_employed_debt_advice, traits: [:scotland, :urgent_debtline_action]
+    factory :urgent_action_self_employed_debt_advice, traits: [:england, :urgent_debtline_action]
 
     trait :scotland do
       q0 { 'a3' }
@@ -57,6 +67,7 @@ FactoryBot.define do
     trait :northern_ireland do
       q0 { 'a2' }
     end
+
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
     trait :urgent_debt_advice_action do
       q1 { answers_with_entropy('q1', [], nil)  }

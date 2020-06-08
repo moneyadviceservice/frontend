@@ -38,6 +38,7 @@ require.config({
     ViewAll: 'app/assets/javascripts/components/ViewAll',
     GlobalNav: 'app/assets/javascripts/components/GlobalNav',
     MoneyNavigatorQuestions: 'app/assets/javascripts/components/MoneyNavigatorQuestions',
+    MoneyNavigatorResults: 'app/assets/javascripts/components/MoneyNavigatorResults',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',
 

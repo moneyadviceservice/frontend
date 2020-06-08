@@ -13,7 +13,9 @@ describe('MoneyNavigatorResults', function() {
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorResults"]');
           self.obj = new MoneyNavigatorResults(self.component);
           self.$headingContent = self.component.find('[data-heading-content]'); 
+          self.$sections = self.component.find('[data-section]'); 
           self.hiddenClass  = self.obj.hiddenClass; 
+          self.collapsedClass = self.obj.collapsedClass; 
 
           done();
         }, done);
@@ -43,6 +45,10 @@ describe('MoneyNavigatorResults', function() {
 
       this.$headingContent.each(function() {
         expect($(this).hasClass(_this.hiddenClass)).to.be.true; 
+      }); 
+
+      this.$sections.each(function() {
+        expect($(this).hasClass(_this.collapsedClass)).to.be.true; 
       }); 
     }); 
   }); 

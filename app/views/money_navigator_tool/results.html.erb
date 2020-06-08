@@ -29,23 +29,25 @@
 			<section class="results__sections" data-dough-component="MoneyNavigatorResults">
 				<ul class="sections__sections">
 					<% @results.each do |result| %>
-						<li class="sections__section">
+						<li class="sections__section" data-section>
 							<h3 class="section__title">
 								<span><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %></span>
 							</h3>
 
-							<% if I18n.exists?("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %>
-								<h4 class="section__subtitle"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %></h4>
-							<% end %>
-
-							<ul class="sections__headings">
-								<% result[:headings].each do |heading| %>
-									<li class="sections__heading">
-										<h5 class="heading__title"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h5>
-										<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
-									</li>
+							<div class="section__content">
+								<% if I18n.exists?("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %>
+									<h4 class="section__subtitle"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %></h4>
 								<% end %>
-							</ul>
+
+								<ul class="sections__headings">
+									<% result[:headings].each do |heading| %>
+										<li class="sections__heading">
+											<h5 class="heading__title"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h5>
+											<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
+										</li>
+									<% end %>
+								</ul>
+							</div>
 						</li>
 					<% end %>
 				</ul>

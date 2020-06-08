@@ -5,6 +5,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   
   MoneyNavigatorResults = function($el, config) {
     MoneyNavigatorResults.baseConstructor.call(this, $el, config);
+
+    this.$headingContent = this.$el.find('[data-heading-content]'); 
+    this.hiddenClass = 'is-hidden'; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorResults);
@@ -20,6 +23,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     console.log('_updateDOM!'); 
 
     // Adds hidden classes to section content
+    this.$headingContent.addClass(this.hiddenClass); 
+
     // Adds collapsed classes to sections
     // Adds arrow icon to section headings
     // Adds checkbox element to headings

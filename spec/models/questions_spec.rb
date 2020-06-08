@@ -39,7 +39,7 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      skip  'StepChange' do
+      describe  'StepChange' do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'stepchange-debt'}
 

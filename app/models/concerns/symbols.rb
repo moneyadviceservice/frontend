@@ -119,23 +119,23 @@ module Symbols
   #TODO: Think of a less misleading form of reuse
 
   COMMON_RULES = {
-    #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
     debtadvice: {
+      #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
       rules: [
         {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
       ],
       mask: '1'
     },
     stepchange: {
+      #Any of these Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6, Q7A1-A9, Q10A3
       rules: [
-        #If any of these are selected Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q8A1, Q8A3 
-        #and NONE of these are selected Q2A4, Q5A1, Q5A2, Q5A3, Q8A1-A9  show this
-        {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q8:['a1', 'a3']},
-        {q2:'a4'},
-        {q5: ['a1', 'a2', 'a3']},
-        {q8: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+        {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:['a1']},
+        {q4:'a1'},
+        {q6: ['a6']},
+        {q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9']},
+        {q10: ['a3']},
       ],
-      mask: '1000'
+      mask: '10000'
     }
   }
 

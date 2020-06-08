@@ -42,7 +42,7 @@
 								<% result[:headings].each do |heading| %>
 									<li class="sections__heading">
 										<h5 class="heading__title"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h5>
-										<div class="heading__content"><%= heading[:content].html_safe %></div>
+										<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
 									</li>
 								<% end %>
 							</ul>

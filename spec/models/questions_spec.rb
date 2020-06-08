@@ -2,27 +2,38 @@ RSpec.describe Questions, type: :model do
   include Symbols
 
 
-  shared_examples 'content' do
+  shared_examples 'country specific content' do
     let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
     let(:results) { model.results }
 
-    it 'displays at least one section' do
-      expect(results.length).to eql 1
+    it 'displays the appropriate heading and content' do
+      expect(results).to include({
+        "section_code" => section_code,
+        "headings" => array_including(
+          hash_including({
+            "heading_code"=>heading_code,
+            "content"=>"coronavirus-#{content_prefix}-#{country}"
+          })
+        )
+      })
     end
 
-    it 'displays appropriate content' do
-      expect(results[0])
-        .to include(
-          {
-            "section_code"=>"#{section_code}",
-            "headings"=>[
-              {
-                "heading_code"=>"#{heading_code}",
-                "content"=> ["coronavirus-#{content_prefix}-#{country}"]
-              }
-            ]
-          }
-      )
+  end
+
+  shared_examples 'country agnostic content' do
+    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym) }
+    let(:results) { model.results }
+
+    it 'displays the appropriate heading and content' do
+      expect(results).to include({
+        "section_code" => section_code,
+        "headings" => array_including(
+          hash_including({
+            "heading_code"=>heading_code,
+            "content"=>"coronavirus-#{content_prefix}"
+          })
+        )
+      })
     end
   end
 
@@ -35,7 +46,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H1' }
         let(:content_prefix) {"debt-advice"}
 
-        include_examples 'content' do
+        include_examples 'country specific content' do
         end
       end
 
@@ -43,15 +54,15 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'stepchange-debt'}
 
-        include_examples 'content' do
+        include_examples 'country specific content' do
         end
       end
 
-      skip  'DebtLine' do
+      describe  'DebtLine' do
         let(:heading_code) { 'H3' }
         let(:content_prefix) {'self-employed-debt-advice'}
 
-        include_examples 'content' do
+        include_examples 'country agnostic content' do
         end
       end
     end
@@ -73,7 +84,7 @@ RSpec.describe Questions, type: :model do
     include_examples 'urgent action'
   end
 
-  context 'Scotland' do
+  context 'Wales' do
     let(:country) { 'wales' }
     include_examples 'urgent action'
   end

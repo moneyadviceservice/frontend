@@ -26,10 +26,7 @@ RSpec.describe Questions, type: :model do
     end
   end
 
-  #%w[england northern_ireland wales scotland].each do | country |
-  context 'England' do
-    let(:country) { 'england' }
-
+  shared_examples 'urgent action' do
     context 'Urgent action' do
       let(:section) {'urgent_action'}
       let(:section_code) { 'S1' }
@@ -38,15 +35,15 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H1' }
         let(:content_prefix) {"debt-advice"}
 
-        it_should_behave_like 'content' do
+        include_examples 'content' do
         end
       end
 
-      skip  'StepChange' do
+      describe  'StepChange' do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'stepchange-debt'}
 
-        it_should_behave_like 'content' do
+        include_examples 'content' do
         end
       end
 
@@ -54,10 +51,15 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H3' }
         let(:content_prefix) {'self-employed-debt-advice'}
 
-        it_should_behave_like 'content' do
+        include_examples 'content' do
         end
       end
     end
+  end
 
+  #%w[england northern_ireland wales scotland].each do | country |
+  context 'England' do
+    let(:country) { 'england' }
+    include_examples 'urgent action'
   end
 end

@@ -50,7 +50,10 @@ FactoryBot.define do
     factory :urgent_action_wales_stepchange_debt, traits: [:wales, :urgent_stepchange_action]
     factory :urgent_action_scotland_stepchange_debt, traits: [:scotland, :urgent_stepchange_action]
 
-    factory :urgent_action_self_employed_debt_advice, traits: [:england, :urgent_debtline_action]
+    factory :urgent_action_england_self_employed_debt_advice, traits: [:england, :urgent_debtline_action]
+    factory :urgent_action_ni_self_employed_debt_advice, traits: [:northern_ireland, :urgent_debtline_action]
+    factory :urgent_action_wales_self_employed_debt_advice, traits: [:wales, :urgent_debtline_action]
+    factory :urgent_action_scotland_self_employed_debt_advice, traits: [:scotland, :urgent_debtline_action]
 
     trait :scotland do
       q0 { 'a3' }

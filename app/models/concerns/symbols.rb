@@ -224,7 +224,6 @@ module Symbols
           ]
         },
 
-
         {
           #'SELF EMPLOYED DEBT ADVICE Contact Business Debtline for England' heading rules
           heading_code: 'H3',

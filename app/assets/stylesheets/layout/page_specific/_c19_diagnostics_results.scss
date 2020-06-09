@@ -47,9 +47,9 @@
 			line-height: 1.2; 
 			color: $color-green-secondary;
 			padding-bottom: $baseline-unit; 
-			border-bottom: solid 1px $color-grey-pale; 
+			border-bottom: solid 1px $color-grey-normal; 
 
-			.title__text {
+			.section__title__text {
 				@include column(12); 
 
 				display: inline-block;
@@ -62,6 +62,7 @@
 			@include column(12); 
 			
 			font-size: 1rem;
+			line-height: 1.2; 
 			margin-top: $baseline-unit; 
 			color: $color-green-secondary;
 		}
@@ -76,11 +77,13 @@
 		}
 
 		.sections__heading {
-			border: solid 1px $color-grey-pale;
+			border: solid 1px $color-grey-normal;
 			padding: $baseline-unit $default-gutter;
+			box-shadow: 0 2px 4px $color-grey-normal; 
 
 			.heading__title {
 				font-size: 1rem; 
+				line-height: 1.2; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit; 
 			}
@@ -96,33 +99,50 @@
 			}
 		}
 	}
-}
 
-// Component initialised
-[data-dough-money-navigator-results-initialised="yes"] {
-	.sections__section {
-		&.is-collapsed {
-			.section__content {
-				height: 0;
-				overflow: hidden;
+	// Component initialised
+	.results__sections[data-dough-money-navigator-results-initialised="yes"] {
+		.sections__section {
+			&.is-collapsed {
+				.section__content {
+					height: 0;
+					overflow: hidden;
+				}
 			}
-		}
 
-		.section__title {
-			position: relative;
+			.section__title {
+				position: relative;
 
-			.title__icon {
-				position: absolute;
-				top: 50%; 
-				right: $default-gutter; 
-				width: 0;
-				height: 0; 
-				transform: translateY(-50%); 
+				.section__title__icon {
+					position: absolute;
+					top: 50%; 
+					right: $default-gutter; 
+					width: 0;
+					height: 0; 
+					transform: translateY(-50%); 
 
-				border: solid transparent 9px;
-				border-bottom-color: $color-black;
-				border-top-width: 0; 
-			}			
+					border: solid transparent 9px;
+					border-top-color: $color-black;
+					border-bottom-width: 0; 
+				}			
+			}
+
+			.heading__title {
+				margin-bottom: 0;
+				padding-left: calc(1.25rem + #{$default-gutter}); 
+				position: relative;
+
+				.heading__title__icon {
+					display: inline-block;
+					width: 1.25rem; 
+					height: 1.25rem; 
+					border: solid 1px;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+				}
+			}
 		}
 	}
 }

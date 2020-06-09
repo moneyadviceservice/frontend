@@ -8,6 +8,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     this.$headingContent = this.$el.find('[data-heading-content]'); 
     this.$sections = this.$el.find('[data-section]'); 
+    this.$headingTitles = this.$el.find('[data-heading-title]'); 
     this.hiddenClass = 'is-hidden'; 
     this.collapsedClass = 'is-collapsed'; 
   };
@@ -23,8 +24,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   MoneyNavigatorResults.prototype._updateDOM = function() {
     var sectionIcon = document.createElement('span'); 
+    var headingTitleIcon = document.createElement('span'); 
 
-    $(sectionIcon).addClass('title__icon'); 
+    $(sectionIcon).addClass('section__title__icon'); 
+    $(headingTitleIcon).addClass('heading__title__icon'); 
 
     // Adds hidden classes to section content
     this.$headingContent.addClass(this.hiddenClass); 
@@ -36,6 +39,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$sections.find('.section__title').append(sectionIcon); 
 
     // Adds checkbox element to headings
+    this.$headingTitles.append(headingTitleIcon); 
   }; 
 
   return MoneyNavigatorResults; 

@@ -31,7 +31,9 @@
 					<% @results.each do |result| %>
 						<li class="sections__section" data-section>
 							<h3 class="section__title">
-								<span  class="title__text"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %></span>
+								<span class="section__title__text">
+									<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %>
+								</span>
 							</h3>
 
 							<div class="section__content">
@@ -42,7 +44,9 @@
 								<ul class="sections__headings">
 									<% result[:headings].each do |heading| %>
 										<li class="sections__heading">
-											<h5 class="heading__title"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h5>
+											<h5 class="heading__title" data-heading-title>
+												<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
+											</h5>
 											<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
 										</li>
 									<% end %>

@@ -147,7 +147,7 @@ module Symbols
       mask: MASK_ALL + MASK_SOME
     }
   }
-
+#TODO move the sections into seperate files to make the rules easier to manage
   CONTENT_RULES = [
     {
       #'Urgent Actions' section
@@ -584,7 +584,121 @@ module Symbols
         },
 
       ]
-    }
+    },
+
+    {
+      #'Your money moving forward ' section
+      section_code: 'S3',
+      heading_rules: [
+
+        {
+          #Get Free debt advice now' Rules
+          heading_code: 'H3.1',
+          content_rules: [
+            {
+              triggers: [
+                {q0:'a1'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
+              article: "coronavirus-debt-advice-england"
+            },
+            {
+              triggers: [
+                {q0:'a2'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
+              article: "coronavirus-debt-advice-ni"
+            },
+            {
+              triggers: [
+                {q0:'a3'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
+              article: "coronavirus-debt-advice-scotland"
+            },
+            {
+              triggers: [
+                {q0:'a4'}
+              ] + COMMON_RULES[:debtadvice][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
+              article: "coronavirus-debt-advice-wales"
+            }
+          ]
+        },
+
+        {
+          #'Contact Stepchange Covid response' heading rules
+          heading_code: 'H2',
+          content_rules: [
+            {
+              triggers: [
+                {q0:'a1'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
+              article: "coronavirus-stepchange-debt-england"
+            },
+            {
+              triggers: [
+                {q0:'a2'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
+              article: "coronavirus-stepchange-debt-ni"
+            },
+            {
+              triggers: [
+                {q0:'a3'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
+              article: "coronavirus-stepchange-debt-scotland"
+            },
+            {
+              triggers: [
+                {q0:'a4'}
+              ] + COMMON_RULES[:stepchange][:rules],
+              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
+              article: "coronavirus-stepchange-debt-wales"
+            },
+          ]
+        },
+
+        {
+          #'SELF EMPLOYED DEBT ADVICE Contact Business Debtline for England' heading rules
+          heading_code: 'H3',
+          content_rules: [
+            {
+              triggers: [
+                {q0:['a1', 'a3', 'a4']}
+              ] + COMMON_RULES[:debtline][:rules],
+              mask: MASK_SOME + COMMON_RULES[:debtline][:mask],
+              article: "coronavirus-self-employed-debt-advice"
+            },
+
+            {
+              triggers: [
+                {q0:['a2']}
+              ] + COMMON_RULES[:debtline][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtline][:mask],
+              article: "coronavirus-self-employed-debt-advice-ni"
+            }
+          ]
+        },
+
+        {
+          #'Pensions content' heading rules
+          heading_code: 'H4',
+          content_rules: [
+            {
+              triggers: [
+                {q12:['a2']}
+              ],
+              mask: MASK_ALL,
+              article: "urgent-pension-advice"
+            },
+
+          ]
+        }
+      ]
+    },
 
   ]
 end

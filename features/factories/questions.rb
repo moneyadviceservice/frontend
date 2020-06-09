@@ -55,7 +55,7 @@ FactoryBot.define do
     factory :urgent_action_wales_self_employed_debt_advice, traits: [:wales, :urgent_debtline_action]
     factory :urgent_action_scotland_self_employed_debt_advice, traits: [:scotland, :urgent_debtline_action]
 
-    factory :urgent_action_urgent_pension_advice, traits: [d, :urgent_debtline_action]
+    factory :urgent_action_urgent_pension_advice, traits: [:urgent_debtline_action]
 
     trait :scotland do
       q0 { 'a3' }

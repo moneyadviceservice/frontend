@@ -49,6 +49,14 @@
 			padding-bottom: $baseline-unit; 
 			border-bottom: solid 1px $color-grey-normal; 
 
+			button {
+				border: none; 
+				width: 100%;
+				text-align: left; 
+				padding: 0;
+				background: transparent;
+			}
+
 			.section__title__text {
 				@include column(12); 
 
@@ -103,6 +111,8 @@
 	// Component initialised
 	.results__sections[data-dough-money-navigator-results-initialised="yes"] {
 		.sections__section {
+			@extend %clearfix; 
+
 			&.is-collapsed {
 				.section__content {
 					height: 0;
@@ -111,7 +121,9 @@
 			}
 
 			.section__title {
-				position: relative;
+				button {
+					position: relative;
+				}
 
 				.section__title__icon {
 					position: absolute;

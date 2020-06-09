@@ -15,6 +15,7 @@ describe.only('MoneyNavigatorResults', function() {
           self.$headingContent = self.component.find('[data-heading-content]'); 
           self.$headingTitles = self.component.find('[data-heading-title]'); 
           self.$sections = self.component.find('[data-section]'); 
+          self.$sectionTitles = self.component.find('[data-section-title]'); 
           self.hiddenClass  = self.obj.hiddenClass; 
           self.collapsedClass = self.obj.collapsedClass; 
 
@@ -29,12 +30,15 @@ describe.only('MoneyNavigatorResults', function() {
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
+      var setUpEventsStub = sinon.stub(this.obj, '_setUpEvents'); 
 
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true; 
+      expect(setUpEventsStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
+      setUpEventsStub.restore(); 
     });
   });
 
@@ -58,4 +62,52 @@ describe.only('MoneyNavigatorResults', function() {
       }); 
     }); 
   }); 
+
+  describe('setUpEvents method', function() {
+    it('Sets the correct event listeners and arguments when called', function() {
+      var toggleSectionSpy = sinon.stub(this.obj, '_toggleSection'); 
+      var toggleHeadingSpy = sinon.spy(this.obj, '_toggleHeading'); 
+      var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
+      var section_1_btn = $(this.$sectionTitles[1]).find('button'); 
+      var section_2_btn = $(this.$sectionTitles[2]).find('button'); 
+      var heading_0_btn = $(this.$headings[0]).find('button'); 
+      var heading_2_btn = $(this.$headings[2]).find('button'); 
+      var heading_4_btn = $(this.$headings[4]).find('button'); 
+
+      this.obj._setUpEvents(); 
+
+      $(this.$sectionTitles[0]).children('button').trigger('click'); 
+
+      expect(toggleSectionStub.calledOnce).to.be.true; 
+
+      toggleSectionStub.restore(); 
+    }); 
+  }); 
+
+  describe.only('toggleSection method', function() {
+    it('Sets the correct class on the section when the method is called', function() {
+      var section_0 = this.$sections[0]; 
+      var section_0_btn = $(section_0).find('[data-section-title]').find('button'); 
+      var section_1 = this.$sections[1]; 
+      var section_1_btn = $(section_1).find('[data-section-title]').find('button'); 
+
+      this.obj._updateDOM(); 
+
+      this.obj._toggleSection(section_0_btn);
+      expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
+      expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
+
+      this.obj._toggleSection(section_1_btn);
+      expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
+      expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
+
+      this.obj._toggleSection(section_0_btn);
+      expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
+      expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
+
+      this.obj._toggleSection(section_1_btn);
+      expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
+      expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
+    }); 
+  })
 });

@@ -1,4 +1,4 @@
-describe('MoneyNavigatorResults', function() {
+describe.only('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -13,6 +13,7 @@ describe('MoneyNavigatorResults', function() {
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorResults"]');
           self.obj = new MoneyNavigatorResults(self.component);
           self.$headingContent = self.component.find('[data-heading-content]'); 
+          self.$headingTitles = self.component.find('[data-heading-title]'); 
           self.$sections = self.component.find('[data-section]'); 
           self.hiddenClass  = self.obj.hiddenClass; 
           self.collapsedClass = self.obj.collapsedClass; 
@@ -37,7 +38,7 @@ describe('MoneyNavigatorResults', function() {
     });
   });
 
-  describe.only('updateDOM method', function() {
+  describe('updateDOM method', function() {
     it('Makes the correct changes to the DOM when called', function() {
       var _this = this;
 
@@ -49,7 +50,11 @@ describe('MoneyNavigatorResults', function() {
 
       this.$sections.each(function() {
         expect($(this).hasClass(_this.collapsedClass)).to.be.true; 
-        expect($(this).find('.title__icon').length).to.equal(1); 
+        expect($(this).find('.section__title__icon').length).to.equal(1); 
+      }); 
+
+      this.$headingTitles.each(function() {
+        expect($(this).find('.heading__title__icon').length).to.equal(1); 
       }); 
     }); 
   }); 

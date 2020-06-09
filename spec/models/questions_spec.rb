@@ -8,7 +8,7 @@ RSpec.describe Questions, type: :model do
         "headings" => array_including(
           hash_including({
             "heading_code"=>heading_code,
-            "content"=>"coronavirus-#{content_prefix}-#{country}"
+            "content"=>"#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}-#{country}"
           })
         )
       })
@@ -22,7 +22,7 @@ RSpec.describe Questions, type: :model do
         "headings" => array_including(
           hash_including({
             "heading_code"=>heading_code,
-            "content"=>"coronavirus-#{content_prefix}"
+            "content"=>"#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}"
           })
         )
       })
@@ -33,21 +33,21 @@ RSpec.describe Questions, type: :model do
     let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
     let(:results) { model.results }
 
-    it_behaves_like 'regionally valid content'
+    include_examples 'regionally valid content'
   end
 
   shared_examples 'uk specific content' do
     let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
     let(:results) { model.results }
 
-    it_behaves_like 'valid content'
+    include_examples 'valid content'
   end
 
   shared_examples 'country agnostic content' do
     let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym) }
     let(:results) { model.results }
 
-    it_behaves_like 'valid content'
+    include_examples 'valid content'
   end
 
   shared_examples 'urgent action country specific' do
@@ -58,6 +58,7 @@ RSpec.describe Questions, type: :model do
       describe  'free debt advice' do
         let(:heading_code) { 'H1' }
         let(:content_prefix) {"debt-advice"}
+        let(:corona_specific_content) {true}
 
         include_examples 'country specific content' do
         end
@@ -66,6 +67,7 @@ RSpec.describe Questions, type: :model do
       describe  'StepChange' do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'stepchange-debt'}
+        let(:corona_specific_content) {true}
 
         include_examples 'country specific content' do
         end
@@ -82,6 +84,7 @@ RSpec.describe Questions, type: :model do
       describe  'DebtLine' do
         let(:heading_code) { 'H3' }
         let(:content_prefix) {'self-employed-debt-advice'}
+        let(:corona_specific_content) {true}
 
         include_examples 'uk specific content' do
         end
@@ -97,6 +100,7 @@ RSpec.describe Questions, type: :model do
       describe  'DebtLine' do
         let(:heading_code) { 'H3' }
         let(:content_prefix) {'self-employed-debt-advice'}
+        let(:corona_specific_content) {true}
 
         include_examples 'country specific content' do
         end
@@ -128,6 +132,22 @@ RSpec.describe Questions, type: :model do
     let(:country) { 'wales' }
     include_examples 'urgent action country specific'
     include_examples 'urgent action uk'
+  end
+
+  describe 'All' do
+
+    context 'Urgent action' do
+      let(:section) {'urgent_action'}
+      let(:section_code) { 'S1' }
+
+      describe  'Pensions' do
+        let(:heading_code) { 'H4' }
+        let(:content_prefix) {'urgent-pension-advice'}
+        let(:corona_specific_content) {false}
+
+        include_examples 'country agnostic content'
+      end
+    end
   end
 
 end

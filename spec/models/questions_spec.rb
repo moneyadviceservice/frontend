@@ -1,11 +1,7 @@
 RSpec.describe Questions, type: :model do
   include Symbols
 
-
-  shared_examples 'country specific content' do
-    let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:results) { model.results }
-
+  shared_examples 'regionally valid content' do
     it 'displays the appropriate heading and content' do
       expect(results).to include({
         "section_code" => section_code,
@@ -17,13 +13,9 @@ RSpec.describe Questions, type: :model do
         )
       })
     end
-
   end
 
-  shared_examples 'uk specific content' do
-    let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:results) { model.results }
-
+  shared_examples 'valid content' do
     it 'displays the appropriate heading and content' do
       expect(results).to include({
         "section_code" => section_code,
@@ -35,6 +27,27 @@ RSpec.describe Questions, type: :model do
         )
       })
     end
+  end
+
+  shared_examples 'country specific content' do
+    let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
+    let(:results) { model.results }
+
+    it_behaves_like 'regionally valid content'
+  end
+
+  shared_examples 'uk specific content' do
+    let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
+    let(:results) { model.results }
+
+    it_behaves_like 'valid content'
+  end
+
+  shared_examples 'country agnostic content' do
+    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym) }
+    let(:results) { model.results }
+
+    it_behaves_like 'valid content'
   end
 
   shared_examples 'urgent action country specific' do
@@ -91,6 +104,8 @@ RSpec.describe Questions, type: :model do
     end
   end
 
+  #TODO: These are all positive tests. need to add negative tests
+  #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
   context 'England' do
     let(:country) { 'england' }
     include_examples 'urgent action country specific'

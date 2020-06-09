@@ -86,7 +86,7 @@ class Questions
       sections_array_accumulator
     end
 
-    res = sections_array.sort {|s1, s2| /\d*$/.match(s1[section_code])[0].to_i <=> /\d*$/.match(s2[section_code])[0].to_i}
+    res = sections_array.sort {|s1, s2| /\d*$/.match(s1[:section_code])[0].to_i <=> /\d*$/.match(s2[:section_code])[0].to_i}
     Rails.logger.info("Rules engine returning results: #{res}")
     res
   end

@@ -235,6 +235,14 @@ module Symbols
               ] + COMMON_RULES[:debtline][:rules],
               mask: MASK_SOME + COMMON_RULES[:debtline][:mask],
               article: "coronavirus-self-employed-debt-advice"
+            },
+
+            {
+              triggers: [
+                {q0:['a2']}
+              ] + COMMON_RULES[:debtline][:rules],
+              mask: MASK_ALL + COMMON_RULES[:debtline][:mask],
+              article: "coronavirus-self-employed-debt-advice-ni"
             }
           ]
         }

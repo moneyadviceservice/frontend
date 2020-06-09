@@ -117,7 +117,6 @@ module Symbols
   #- '11' - the content is displayed only if both triggers are pulled i.e (results are '11')
   #
   #TODO: Think of a less misleading form of reuse
-  Rules engine processing submission: {"q0"=>["a1"], "q1"=>["a2"], "q2"=>["a2"], "q3"=>["a1"], "q4"=>["a1", "a4", "a3", "a2"], "q5"=>["EMPTY"], "q6"=>["a6"], "q7"=>["a3", "a7", "a8", "a5", "a2", "a9", "a6", "a4", "a1"], "q8"=>["EMPTY"], "q9"=>["EMPTY"], "q10"=>["a2"], "q11"=>["a2"], "q12"=>["a5", "a4", "a2"], "q13"=>["a1"], "q14"=>["a1"]}
 
   MASK_ALL = '11'
   MASK_SOME = '01'

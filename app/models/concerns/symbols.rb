@@ -244,6 +244,21 @@ module Symbols
               article: "coronavirus-self-employed-debt-advice-ni"
             }
           ]
+        },
+
+        {
+          #'Pensions content' heading rules
+          heading_code: 'H4',
+          content_rules: [
+            {
+              triggers: [
+                {q12:['a2']}
+              ],
+              mask: MASK_ALL,
+              article: "urgent-pension-advice"
+            },
+
+          ]
         }
       ]
     }

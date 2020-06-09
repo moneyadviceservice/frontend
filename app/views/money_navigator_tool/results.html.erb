@@ -30,10 +30,12 @@
 				<ul class="sections__sections">
 					<% @results.each do |result| %>
 						<li class="sections__section" data-section>
-							<h3 class="section__title">
-								<span class="section__title__text">
-									<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %>
-								</span>
+							<h3 class="section__title" data-section-title>
+								<button>
+									<span class="section__title__text">
+										<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %>
+									</span>
+								</button>
 							</h3>
 
 							<div class="section__content">

@@ -12,35 +12,10 @@ class Questions
   #Dynamically setup the validateable instance fields that will be populated
   #when the model isinitialised and can be validated after initialisation
   QUESTIONS.each do | qn |
-    question = qn[:code].to_s.downcase
-    define_method("#{question}") { @submitted_answers[question] }
-    define_method("#{question}=") { | value | @submitted_answers[question] = value }
-    #All questions must be present for the model to be valid.
-    validates question.to_sym, presence: true
+    question = qn[:code].to_s.downcase.to_sym
+    attr_accessor question
+    validates question, presence: true
   end
-
-  def initialize(params = nil)
-    @submitted_answers ||= HashWithIndifferentAccess.new(params)
-  end
-
-  #TODO: Clean all this stuff up later
-  #########################################
-  def self.find(_id)
-    Questions.new
-  end
-
-  def destroy
-    true
-  end
-
-  def update
-    true
-  end
-
-  def save
-    true
-  end
-  #########################################
 
   #This method cosumes the current state of the model and outputs
   # the headers and content that apply to the answers as per the configured rules.

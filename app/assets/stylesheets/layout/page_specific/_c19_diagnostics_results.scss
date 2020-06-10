@@ -94,6 +94,14 @@
 				line-height: 1.2; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit; 
+
+				button {
+					border: none; 
+					width: 100%;
+					text-align: left; 
+					padding: 0;
+					background: transparent;
+				}
 			}
 
 			.heading__content {

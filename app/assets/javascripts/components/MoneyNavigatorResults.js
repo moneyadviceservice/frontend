@@ -12,6 +12,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$headingTitles = this.$el.find('[data-heading-title]'); 
     this.hiddenClass = 'is-hidden'; 
     this.collapsedClass = 'is-collapsed'; 
+    this.doneClass = 'is-done'; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorResults);
@@ -32,13 +33,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     $(sectionIcon).addClass('section__title__icon'); 
     $(headingTitleIcon).addClass('heading__title__icon'); 
 
-    // Adds hidden classes to section content
+    // Adds hidden classes to headings content
     this.$headingContent.addClass(this.hiddenClass); 
 
     // Adds collapsed classes to sections
-    this.$sections.each(function() {
-      _this._toggleSection(this); 
-    }); 
+    this.$sections.addClass(this.collapsedClass); 
 
     // Adds arrow icon to section headings
     this.$sections.find('.section__title button').append(sectionIcon); 
@@ -50,8 +49,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorResults.prototype._setUpEvents = function() {
     var _this = this; 
 
-    this.$sectionTitles.on('click', function(e) {
-      _this._toggleSection($(e.target).parents('[data-section]')); 
+    this.$sectionTitles.find('button').on('click', function(e) {
+      _this._toggleSection(e.target); 
+    }); 
+
+    this.$headingTitles.find('button').on('click', function(e) {
+      _this._toggleHeading(e.target); 
     }); 
   };
 
@@ -66,8 +69,18 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }; 
 
   MoneyNavigatorResults.prototype._toggleHeading = function(btn) {
-    console.log('_toggleHeading!'); 
-    console.log('btn: ', btn); 
+    var $heading = $(btn).parents('[data-heading]'); 
+    var $headingContent = $heading.find('[data-heading-content]'); 
+
+    if (!$heading.hasClass(this.doneClass)) {
+      $heading.addClass(this.doneClass); 
+    }
+
+    if ($headingContent.hasClass(this.hiddenClass)) {
+      $headingContent.removeClass(this.hiddenClass); 
+    } else {
+      $headingContent.addClass(this.hiddenClass); 
+    }
   }; 
 
   return MoneyNavigatorResults; 

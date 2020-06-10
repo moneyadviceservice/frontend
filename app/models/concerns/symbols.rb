@@ -592,111 +592,325 @@ module Symbols
       heading_rules: [
 
         {
-          #Get Free debt advice now' Rules
+          #'Getting back on track after an income drop ' Rules
           heading_code: 'H3.1',
           content_rules: [
             {
               triggers: [
-                {q0:'a1'}
-              ] + COMMON_RULES[:debtadvice][:rules],
-              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
-              article: "coronavirus-debt-advice-england"
-            },
-            {
-              triggers: [
-                {q0:'a2'}
-              ] + COMMON_RULES[:debtadvice][:rules],
-              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
-              article: "coronavirus-debt-advice-ni"
-            },
-            {
-              triggers: [
-                {q0:'a3'}
-              ] + COMMON_RULES[:debtadvice][:rules],
-              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
-              article: "coronavirus-debt-advice-scotland"
-            },
-            {
-              triggers: [
-                {q0:'a4'}
-              ] + COMMON_RULES[:debtadvice][:rules],
-              mask: MASK_ALL + COMMON_RULES[:debtadvice][:mask],
-              article: "coronavirus-debt-advice-wales"
-            }
-          ]
-        },
-
-        {
-          #'Contact Stepchange Covid response' heading rules
-          heading_code: 'H2',
-          content_rules: [
-            {
-              triggers: [
-                {q0:'a1'}
-              ] + COMMON_RULES[:stepchange][:rules],
-              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
-              article: "coronavirus-stepchange-debt-england"
-            },
-            {
-              triggers: [
-                {q0:'a2'}
-              ] + COMMON_RULES[:stepchange][:rules],
-              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
-              article: "coronavirus-stepchange-debt-ni"
-            },
-            {
-              triggers: [
-                {q0:'a3'}
-              ] + COMMON_RULES[:stepchange][:rules],
-              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
-              article: "coronavirus-stepchange-debt-scotland"
-            },
-            {
-              triggers: [
-                {q0:'a4'}
-              ] + COMMON_RULES[:stepchange][:rules],
-              mask: MASK_ALL + COMMON_RULES[:stepchange][:mask],
-              article: "coronavirus-stepchange-debt-wales"
-            },
-          ]
-        },
-
-        {
-          #'SELF EMPLOYED DEBT ADVICE Contact Business Debtline for England' heading rules
-          heading_code: 'H3',
-          content_rules: [
-            {
-              triggers: [
-                {q0:['a1', 'a3', 'a4']}
-              ] + COMMON_RULES[:debtline][:rules],
-              mask: MASK_SOME + COMMON_RULES[:debtline][:mask],
-              article: "coronavirus-self-employed-debt-advice"
-            },
-
-            {
-              triggers: [
-                {q0:['a2']}
-              ] + COMMON_RULES[:debtline][:rules],
-              mask: MASK_ALL + COMMON_RULES[:debtline][:mask],
-              article: "coronavirus-self-employed-debt-advice-ni"
-            }
-          ]
-        },
-
-        {
-          #'Pensions content' heading rules
-          heading_code: 'H4',
-          content_rules: [
-            {
-              triggers: [
-                {q12:['a2']}
+                {q4:'a1'}
               ],
               mask: MASK_ALL,
-              article: "urgent-pension-advice"
+              article: "coronavirus-back-on-track-severe"
             },
-
           ]
-        }
+        },
+
+        {
+          #'Getting back on track after a severe income drop' Rules
+          heading_code: 'H3.2',
+          content_rules: [
+            {
+              triggers: [
+                {q4: ['a2', 'a3']}
+              ],
+              mask: MASK_SOME,
+              article: "coronavirus-back-on-track"
+            },
+          ]
+        },
+
+        {
+          #'Looking forward after the COVID pandemic' Rules
+          heading_code: 'H3.3',
+          content_rules: [
+            {
+              triggers: [
+                {q4: 'a4'}
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-looking-forward"
+            },
+          ]
+        },
+
+      ]
+    },
+
+    {
+      #'Money and work' section
+      section_code: 'S4',
+      heading_rules: [
+
+        {
+          #' Managing your money when you’re self employed ' Rules
+          heading_code: 'H4.1',
+          content_rules: [
+            {
+              triggers: [
+                {q1:'a2'}
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-managing-self-employed"
+            },
+          ]
+        },
+
+        {
+          #'Urgent help if you're self employed' Rules
+          heading_code: 'H4.2',
+          content_rules: [
+            {
+              triggers: [
+                {q0: ['a1', 'a3', 'a4']},
+                {q1: 'a2', q4: 'a1'},
+              ],
+              mask: MASK_SOME + MASK_ALL,
+              article: "coronavirus-urgent-help-self-employed"
+            },
+            {
+              triggers: [
+                {q0: 'a2'},
+                {q1: 'a2', q4: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_ALL,
+              article: "coronavirus-urgent-help-self-employed-ni"
+            },
+          ]
+        },
+
+        {
+          #' Preparing for redundancy ' Rules
+          heading_code: 'H4.3',
+          content_rules: [
+            {
+              triggers: [
+                {q1: 'a1'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-preparing-redundancy"
+            },
+          ]
+        },
+
+        {
+          #' What to do if you`re unemployed' Rules
+          heading_code: 'H4.4',
+          content_rules: [
+            {
+              triggers: [
+                {q1: 'a3'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-unemployed"
+            },
+          ]
+        },
+
+      ]
+    },
+
+    {
+      #'Staying on top of housing costs' section
+      section_code: 'S5',
+      heading_rules: [
+
+        {
+          #'If you`ve missed one mortgage or rent payment' Rules
+          heading_code: 'H5.1',
+          content_rules: [
+            {
+              triggers: [
+                {q6: [ 'a4', 'a5', 'a6' ]}
+              ],
+              mask: MASK_SOME,
+              article: "missed-rent-mortgage-low"
+            },
+          ]
+        },
+
+        {
+          #' If you’re worried about rent payments (renting privately)' Rules
+          heading_code: 'H5.2',
+          content_rules: [
+            {
+              triggers: [
+                {q0: 'a1', q6: 'a1'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-private-england"
+            },
+            {
+              triggers: [
+                {q0: 'a2', q6: 'a1'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-private-ni"
+            },
+            {
+              triggers: [
+                {q0: 'a3', q6: 'a1'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-private-scotland"
+            },
+            {
+              triggers: [
+                {q0: 'a4', q6: 'a1'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-private-wales"
+            },
+          ]
+        },
+
+        {
+          #' If you’re worried about rent payments (social housing' Rules
+          heading_code: 'H5.3',
+          content_rules: [
+            {
+              triggers: [
+                {q0: 'a1', q6: 'a2'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-social-england"
+            },
+            {
+              triggers: [
+                {q0: 'a2', q6: 'a2'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-social-ni"
+            },
+            {
+              triggers: [
+                {q0: 'a3', q6: 'a2'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-social-scotland"
+            },
+            {
+              triggers: [
+                {q0: 'a4', q6: 'a2'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-rent-social-wales"
+            },
+          ]
+        },
+
+        {
+          #' If you’re worried about mortgage payments ' Rules
+          heading_code: 'H5.4',
+          content_rules: [
+            {
+              triggers: [
+                {q0: 'a1', q6: 'a3'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-mortgage-payments"
+            },
+            {
+              triggers: [
+                {q0: 'a2', q6: 'a3'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-mortgage-payments"
+            },
+            {
+              triggers: [
+                {q0: 'a3', q6: 'a3'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-mortgage-payments-scotland"
+            },
+            {
+              triggers: [
+                {q0: 'a4', q6: 'a3'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-mortgage-payments-wales"
+            },
+          ]
+        },
+
+        {
+          #'If you’re behind with rent payments because of COVID-19' Rules
+          heading_code: 'H5.5',
+          content_rules: [
+            {
+              triggers: [
+                {q0: 'a1', q6: 'a4'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-behind-rent-england"
+            },
+            {
+              triggers: [
+                {q0: 'a2', q6: 'a4'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-behind-rent-ni"
+            },
+            {
+              triggers: [
+                {q0: 'a3', q6: 'a4'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-behind-rent-scotland"
+            },
+            {
+              triggers: [
+                {q0: 'a4', q6: 'a4'},
+              ],
+              mask: MASK_ALL,
+              article: "coronavirus-behind-rent-wales"
+            },
+          ]
+        },
+
+        {
+          #'If you’re behind with mortgage payments because of COVID-19' Rules
+          heading_code: 'H5.6',
+          content_rules: [
+            {
+              triggers: [
+                {q0: 'a1', q6: 'a5'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-behind-mortgage"
+            },
+            {
+              triggers: [
+                {q0: 'a2', q6: 'a5'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-behind-mortgage"
+            },
+            {
+              triggers: [
+                {q0: 'a3', q6: 'a5'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-behind-mortgage-scotland"
+            },
+            {
+              triggers: [
+                {q0: 'a4', q6: 'a5'},
+                {q8: 'a1'},
+              ],
+              mask: MASK_ALL + MASK_NONE,
+              article: "coronavirus-behind-mortgage-wales"
+            },
+          ]
+        },
+
       ]
     },
 

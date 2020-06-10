@@ -121,13 +121,6 @@
 		.sections__section {
 			@extend %clearfix; 
 
-			&.is-collapsed {
-				.section__content {
-					height: 0;
-					overflow: hidden;
-				}
-			}
-
 			.section__title {
 				button {
 					position: relative;
@@ -161,6 +154,19 @@
 					top: 50%;
 					left: 0;
 					transform: translateY(-50%);
+				}
+			}
+
+			&.is-collapsed {
+				.section__title {
+					.section__title__icon {
+						transform: translateY(-50%) rotate(180deg); 
+					}			
+				}
+
+				.section__content {
+					height: 0;
+					overflow: hidden;
 				}
 			}
 		}

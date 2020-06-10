@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorResults', function() {
+describe('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -12,12 +12,14 @@ describe.only('MoneyNavigatorResults', function() {
           fixture.load('MoneyNavigatorResults.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorResults"]');
           self.obj = new MoneyNavigatorResults(self.component);
-          self.$headingContent = self.component.find('[data-heading-content]'); 
-          self.$headingTitles = self.component.find('[data-heading-title]'); 
           self.$sections = self.component.find('[data-section]'); 
           self.$sectionTitles = self.component.find('[data-section-title]'); 
+          self.$headings = self.component.find('[data-heading]'); 
+          self.$headingTitles = self.component.find('[data-heading-title]'); 
+          self.$headingContent = self.component.find('[data-heading-content]'); 
           self.hiddenClass  = self.obj.hiddenClass; 
           self.collapsedClass = self.obj.collapsedClass; 
+          self.doneClass = self.obj.doneClass; 
 
           done();
         }, done);
@@ -76,15 +78,30 @@ describe.only('MoneyNavigatorResults', function() {
 
       this.obj._setUpEvents(); 
 
-      $(this.$sectionTitles[0]).children('button').trigger('click'); 
+      $(section_0_btn).trigger('click'); 
+      expect(toggleSectionSpy.calledWith(section_0_btn[0])).to.be.true; 
 
-      expect(toggleSectionStub.calledOnce).to.be.true; 
+      $(section_1_btn).trigger('click'); 
+      expect(toggleSectionSpy.calledWith(section_1_btn[0])).to.be.true; 
 
-      toggleSectionStub.restore(); 
+      $(section_2_btn).trigger('click'); 
+      expect(toggleSectionSpy.calledWith(section_2_btn[0])).to.be.true; 
+
+      $(heading_0_btn).trigger('click'); 
+      expect(toggleHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
+
+      $(heading_2_btn).trigger('click'); 
+      expect(toggleHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
+
+      $(heading_4_btn).trigger('click'); 
+      expect(toggleHeadingSpy.calledWith(heading_4_btn[0])).to.be.true; 
+
+      toggleSectionSpy.restore(); 
+      toggleHeadingSpy.restore(); 
     }); 
   }); 
 
-  describe.only('toggleSection method', function() {
+  describe('toggleSection method', function() {
     it('Sets the correct class on the section when the method is called', function() {
       var section_0 = this.$sections[0]; 
       var section_0_btn = $(section_0).find('[data-section-title]').find('button'); 
@@ -110,4 +127,60 @@ describe.only('MoneyNavigatorResults', function() {
       expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
     }); 
   })
+
+  describe('toggleHeading method', function() {
+    it('Sets the correct class on the heading when the method is called', function() {
+      var heading_0 = this.$headings[0]; 
+      var heading_0_btn = $(heading_0).find('button'); 
+      var heading_0_content = $(heading_0).find('[data-heading-content]'); 
+      var heading_2 = this.$headings[2]; 
+      var heading_2_btn = $(heading_2).find('button'); 
+      var heading_2_content = $(heading_2).find('[data-heading-content]'); 
+      var heading_4 = this.$headings[4]; 
+      var heading_4_btn = $(heading_4).find('button'); 
+      var heading_4_content = $(heading_4).find('[data-heading-content]'); 
+
+      this.obj._updateDOM(); 
+
+      this.obj._toggleHeading(heading_0_btn); 
+      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(this.doneClass)).to.be.false; 
+      expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
+
+      this.obj._toggleHeading(heading_2_btn); 
+      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
+
+      this.obj._toggleHeading(heading_4_btn); 
+      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+
+      this.obj._toggleHeading(heading_2_btn); 
+      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
+      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+
+      this.obj._toggleHeading(heading_0_btn); 
+      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
+      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+    }); 
+  }); 
 });

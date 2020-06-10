@@ -18,7 +18,7 @@ def answers_with_entropy(question_code, mandatory_set, optional_set)
       optional = ['a' + rand(1..2).to_s ]
       mandatory_set = []
     else
-      optional = randomn_answers((1..QUESTIONS_HASH[question_code][:responses].length).to_a.map{|index| "a#{index}"}, true) if optional_set.nil?
+      optional = randomn_answers((1..QUESTIONS_HASH[question_code][:responses].length).to_a.map{|index| "a#{index}"}, true)
     end
   else
     optional = randomn_answers(optional_set, false)
@@ -28,7 +28,6 @@ def answers_with_entropy(question_code, mandatory_set, optional_set)
   #An empty mandatory set means nothing is mandatory (i.e. the question can be left unanswerd)
   mandated = randomn_answers(mandatory_set, false) unless mandatory_set.empty?
   mandated = [] if mandatory_set.empty?
-
 
   #If the optional set is given then we can only select randomnly from it
   optional = randomn_answers(optional_set, true) unless optional_set.nil?
@@ -55,7 +54,7 @@ FactoryBot.define do
     factory :urgent_action_wales_self_employed_debt_advice, traits: [:wales, :urgent_debtline_action]
     factory :urgent_action_scotland_self_employed_debt_advice, traits: [:scotland, :urgent_debtline_action]
 
-    factory :urgent_action_urgent_pension_advice, traits: [:urgent_debtline_action]
+    factory :urgent_action_urgent_pension_advice, traits: [:scotland, :pension]
 
     trait :scotland do
       q0 { 'a3' }

@@ -1,4 +1,4 @@
-class C19DiagnosticsController < ApplicationController
+class MoneyNavigatorToolController < ApplicationController
 
   def landing;end
 
@@ -19,7 +19,7 @@ class C19DiagnosticsController < ApplicationController
     @results = @model.results
   end
 
-  private 
+  private
 
   def updated_questions(questions)
     session[:all_questions] = HashWithIndifferentAccess.new if session[:all_questions].nil?

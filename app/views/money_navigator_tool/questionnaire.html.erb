@@ -10,17 +10,17 @@
 
       <h2 class="l-c19_diagnostics__subheading"><%= t("c19_diagnostics_tool.subheading") %></h2>
 
-      <%= form_for @model, 
-        url:c19_diagnostics_questionnaire_path, 
-        data: {dough_component: "MoneyNavigatorQuestions"}, 
-        builder: Dough::Forms::Builders::Validation do |f| 
+      <%= form_for @model,
+        url:money_navigator_tool_questionnaire_path, 
+        data: {dough_component: "MoneyNavigatorQuestions"},
+        builder: Dough::Forms::Builders::Validation do |f|
       %>
         <%= f.validation_summary %>
 
         <ul class="l-c19_diagnostics__questions">
           <% t("c19_diagnostics_tool.questions").each_with_index do |question, index| %>
-            <li 
-              class="l-c19_diagnostics__question" 
+            <li
+              class="l-c19_diagnostics__question"
               data-question
               <% if question[:type] == 'checkbox' %>
                 data-question-multiple
@@ -69,7 +69,7 @@
           <% end %>
         </ul>
 
-        <%= f.submit t("c19_diagnostics_tool.controls.submit_label"), 
+        <%= f.submit t("c19_diagnostics_tool.controls.submit_label"),
           class: 'button button--submit',
           data: {submit: true}
         %>

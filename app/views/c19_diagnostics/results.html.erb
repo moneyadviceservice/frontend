@@ -45,10 +45,13 @@
 
 								<ul class="sections__headings">
 									<% result[:headings].each do |heading| %>
-										<li class="sections__heading">
+										<li class="sections__heading" data-heading>
 											<h5 class="heading__title" data-heading-title>
-												<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
+												<button>
+													<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
+												</button>
 											</h5>
+
 											<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
 										</li>
 									<% end %>

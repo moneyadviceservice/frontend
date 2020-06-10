@@ -17,6 +17,8 @@ describe('MoneyNavigatorResults', function() {
           self.$headings = self.component.find('[data-heading]'); 
           self.$headingTitles = self.component.find('[data-heading-title]'); 
           self.$headingContent = self.component.find('[data-heading-content]'); 
+          self.$overlay = self.component.find('[data-overlay]'); 
+          self.hiddenSuffix  = self.obj.hiddenSuffix; 
           self.hiddenClass  = self.obj.hiddenClass; 
           self.collapsedClass = self.obj.collapsedClass; 
           self.doneClass = self.obj.doneClass; 
@@ -47,11 +49,13 @@ describe('MoneyNavigatorResults', function() {
   describe('updateDOM method', function() {
     it('Makes the correct changes to the DOM when called', function() {
       var _this = this;
+      var hiddenClass = 'heading__content' + this.hiddenSuffix; 
 
       this.obj._updateDOM(); 
 
       this.$headingContent.each(function() {
-        expect($(this).hasClass(_this.hiddenClass)).to.be.true; 
+        expect($(this).hasClass(hiddenClass)).to.be.true; 
+        expect($(this).find('[data-overlay-hide]').length).to.equal(1); 
       }); 
 
       this.$sections.each(function() {
@@ -67,14 +71,18 @@ describe('MoneyNavigatorResults', function() {
 
   describe('setUpEvents method', function() {
     it('Sets the correct event listeners and arguments when called', function() {
+      this.obj._updateDOM(); 
+
       var toggleSectionSpy = sinon.stub(this.obj, '_toggleSection'); 
-      var toggleHeadingSpy = sinon.spy(this.obj, '_toggleHeading'); 
+      var showHeadingSpy = sinon.spy(this.obj, '_showHeading'); 
+      var hideHeadingSpy = sinon.spy(this.obj, '_hideHeading'); 
       var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
       var section_1_btn = $(this.$sectionTitles[1]).find('button'); 
       var section_2_btn = $(this.$sectionTitles[2]).find('button'); 
       var heading_0_btn = $(this.$headings[0]).find('button'); 
       var heading_2_btn = $(this.$headings[2]).find('button'); 
       var heading_4_btn = $(this.$headings[4]).find('button'); 
+      var overlayHide = $(this.$headingContent[0]).find('[data-overlay-hide]'); 
 
       this.obj._setUpEvents(); 
 
@@ -88,16 +96,20 @@ describe('MoneyNavigatorResults', function() {
       expect(toggleSectionSpy.calledWith(section_2_btn[0])).to.be.true; 
 
       $(heading_0_btn).trigger('click'); 
-      expect(toggleHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
+      expect(showHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
 
       $(heading_2_btn).trigger('click'); 
-      expect(toggleHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
+      expect(showHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
 
       $(heading_4_btn).trigger('click'); 
-      expect(toggleHeadingSpy.calledWith(heading_4_btn[0])).to.be.true; 
+      expect(showHeadingSpy.calledWith(heading_4_btn[0])).to.be.true; 
+
+      $(overlayHide).trigger('click');
+      expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
 
       toggleSectionSpy.restore(); 
-      toggleHeadingSpy.restore(); 
+      showHeadingSpy.restore(); 
+      hideHeadingSpy.restore(); 
     }); 
   }); 
 
@@ -128,8 +140,13 @@ describe('MoneyNavigatorResults', function() {
     }); 
   })
 
-  describe('toggleHeading method', function() {
-    it('Sets the correct class on the heading when the method is called', function() {
+  describe('showHeading method', function() {
+    // This method:
+    // - permanently sets the done class
+    // - permanently removes the hidden class
+    // - shows the overlay
+    // The re-addition of the hidden class and hiding the overlay are dealt with by clicking the close icon
+    it('Sets classes correctly when the method is called', function() {
       var heading_0 = this.$headings[0]; 
       var heading_0_btn = $(heading_0).find('button'); 
       var heading_0_content = $(heading_0).find('[data-heading-content]'); 
@@ -139,48 +156,62 @@ describe('MoneyNavigatorResults', function() {
       var heading_4 = this.$headings[4]; 
       var heading_4_btn = $(heading_4).find('button'); 
       var heading_4_content = $(heading_4).find('[data-heading-content]'); 
+      var hiddenClass = 'heading__content' + this.hiddenSuffix; 
 
       this.obj._updateDOM(); 
 
-      this.obj._toggleHeading(heading_0_btn); 
-      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
-      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.true; 
+      this.obj._showHeading(heading_0_btn); 
+      expect($(heading_0_content).hasClass(hiddenClass)).to.be.false; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
       expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_2).hasClass(this.doneClass)).to.be.false; 
       expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
 
-      this.obj._toggleHeading(heading_2_btn); 
-      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.true; 
+      this.obj._showHeading(heading_2_btn); 
+      expect($(heading_2_content).hasClass(hiddenClass)).to.be.false; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
       expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
 
-      this.obj._toggleHeading(heading_4_btn); 
-      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      this.obj._showHeading(heading_4_btn); 
+      expect($(heading_4_content).hasClass(hiddenClass)).to.be.false;
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
       expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
 
-      this.obj._toggleHeading(heading_2_btn); 
-      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
-      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      this.obj._showHeading(heading_2_btn); 
+      expect($(heading_2_content).hasClass(hiddenClass)).to.be.false; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
       expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
 
-      this.obj._toggleHeading(heading_0_btn); 
-      expect($(heading_0_content).hasClass(this.hiddenClass)).to.be.true; 
-      expect($(heading_2_content).hasClass(this.hiddenClass)).to.be.true; 
-      expect($(heading_4_content).hasClass(this.hiddenClass)).to.be.false;
+      this.obj._showHeading(heading_0_btn); 
+      expect($(heading_0_content).hasClass(hiddenClass)).to.be.false; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
       expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
       expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+    }); 
+  }); 
+
+  describe('hideHeading method', function() {
+    it('Sets classes correctly when called', function() {
+      this.obj._updateDOM(); 
+
+      var heading_0 = this.$headings[0]; 
+      var heading_0_btn = $(heading_0).find('button'); 
+      var heading_0_content = $(heading_0).find('[data-heading-content]'); 
+      var heading_0_closeBtn = $(heading_0_content).find('[data-overlay-hide]'); 
+      var hiddenClass = 'heading__content' + this.hiddenSuffix; 
+
+      this.obj._showHeading(heading_0_btn); 
+
+      this.obj._hideHeading(heading_0_closeBtn);
+      expect($(heading_0_content).hasClass(hiddenClass)).to.be.true; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.true; 
     }); 
   }); 
 });

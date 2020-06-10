@@ -157,6 +157,37 @@
 				}
 			}
 
+			.heading__content {
+				position: fixed;
+				top: 0;
+				left: 20%;
+				bottom: 0;
+				width: 80%;
+				padding: $baseline-unit * 4 $default-gutter * 4;
+				z-index: 155; 
+				background: $color-white;
+
+				.overlay__hide {
+					position: absolute;
+					top: $baseline-unit * 2;
+					right: $default-gutter * 2;
+					width: 20px;
+					height: 20px;
+					border: solid 1px; 
+
+					&:before {
+						content: 'X'; 
+						display: block; 
+						text-align: center;
+						line-height: 20px; 
+					}
+				}
+			}
+
+			.heading__content--hidden {
+				left: 100%;
+			}
+
 			&.is-collapsed {
 				.section__title {
 					.section__title__icon {
@@ -170,5 +201,15 @@
 				}
 			}
 		}
+	}
+
+	.results__sections__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 150; 
+		background: rgba(0, 0, 0, 0.4);
 	}
 }

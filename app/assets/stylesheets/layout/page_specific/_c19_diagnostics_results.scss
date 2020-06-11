@@ -140,6 +140,19 @@
 				}			
 			}
 
+			.sections__heading--done {
+				background: $color-grey-pale;
+
+				.heading__title__icon {
+					&:before {
+						content: 'X'; 
+						display: block;
+						text-align: center;
+						line-height: 1.25rem; 
+					}
+				}
+			}
+
 			.heading__title {
 				margin-bottom: 0;
 				padding-left: calc(1.25rem + #{$default-gutter}); 
@@ -154,6 +167,7 @@
 					top: 50%;
 					left: 0;
 					transform: translateY(-50%);
+					background: $color-white;
 				}
 			}
 

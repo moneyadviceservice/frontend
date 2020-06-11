@@ -14,7 +14,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.hiddenSuffix = '--hidden'; 
     this.hiddenClass = 'is-hidden';
     this.collapsedClass = 'is-collapsed'; 
-    this.doneClass = 'is-done'; 
+    this.doneSuffix = '--done'; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorResults);
@@ -84,9 +84,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var $heading = $(btn).parents('[data-heading]'); 
     var $headingContent = $heading.find('[data-heading-content]'); 
     var hiddenClass = 'heading__content' + this.hiddenSuffix; 
+    var doneClass = 'sections__heading' + this.doneSuffix; 
 
-    if (!$heading.hasClass(this.doneClass)) {
-      $heading.addClass(this.doneClass); 
+    if (!$heading.hasClass(doneClass)) {
+      $heading.addClass(doneClass); 
     }
 
     if ($headingContent.hasClass(hiddenClass)) {
@@ -99,9 +100,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }; 
 
   MoneyNavigatorResults.prototype._hideHeading = function(btn) {
-    console.log('_hideHeading!'); 
-    console.log('btn: ', btn); 
-
     var $headingContent = $(btn).parents('[data-heading-content]'); 
     var hiddenClass = 'heading__content' + this.hiddenSuffix; 
 

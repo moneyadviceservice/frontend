@@ -45,85 +45,17 @@ class Questions
   #This method cosumes the current state of the model and outputs
   # the headers and content that apply to the answers as per the configured rules.
   #It returns an array of section objects each containing an array of headings containing an array of content as below
-  def results
-    [
-      {
-        section_code: 'S1', 
-        headings: [
-         {
-            heading_code: 'H1', 
-            content: '<p>Content relating to section S1, heading H1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet egestas turpis, eu vestibulum massa. Sed molestie leo arcu. Sed neque nisi, laoreet ut leo eu, eleifend sodales sapien. Proin luctus id magna nec scelerisque. Donec ligula arcu, vehicula a sodales at, tempus sit amet orci.</p>
-
-              <a>Link to external URL</a>
-
-              <p>Pellentesque egestas varius accumsan. Mauris finibus dolor et sodales viverra. Nullam pulvinar est lacus, quis suscipit ligula tempus tincidunt. Curabitur id rhoncus odio. In scelerisque vel ex eget euismod. Proin facilisis mi dolor. Maecenas ante turpis, consectetur eget ante eu, laoreet efficitur lorem. Sed commodo mauris augue, non egestas magna commodo facilisis. Sed luctus est at nisl interdum sodales. Morbi finibus tellus sed magna lacinia, ut venenatis turpis interdum.</p>
-
-              <p>Mauris et dui eu sapien bibendum pellentesque vitae eget ipsum. Vivamus facilisis orci vitae semper fringilla. Cras dolor nulla, posuere nec malesuada sed, pellentesque a odio. Ut pellentesque sapien vel urna tristique, et dapibus tortor egestas. Nam sit amet velit et odio hendrerit iaculis. Aenean aliquet elementum massa at consectetur. Donec leo eros, tempor eu dapibus elementum, finibus et dolor.</p>
-
-              <p>Nam sit amet consequat sem. Integer ullamcorper non nisl eget iaculis. Mauris accumsan metus a vehicula egestas. Class aptent taciti sociosqu ad litora torquent.<p>'
-          }, 
-         {
-            heading_code: 'H2', 
-            content: '<p>Content relating to section S1, heading H2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet egestas turpis, eu vestibulum massa. Sed molestie leo arcu. Sed neque nisi, laoreet ut leo eu, eleifend sodales sapien. Proin luctus id magna nec scelerisque. Donec ligula arcu, vehicula a sodales at, tempus sit amet orci.</p>
-
-              <a>Link to external URL</a>
-
-              <p>Pellentesque egestas varius accumsan. Mauris finibus dolor et sodales viverra. Nullam pulvinar est lacus, quis suscipit ligula tempus tincidunt. Curabitur id rhoncus odio. In scelerisque vel ex eget euismod. Proin facilisis mi dolor. Maecenas ante turpis, consectetur eget ante eu, laoreet efficitur lorem. Sed commodo mauris augue, non egestas magna commodo facilisis. Sed luctus est at nisl interdum sodales. Morbi finibus tellus sed magna lacinia, ut venenatis turpis interdum.</p>
-
-              <p>Mauris et dui eu sapien bibendum pellentesque vitae eget ipsum. Vivamus facilisis orci vitae semper fringilla. Cras dolor nulla, posuere nec malesuada sed, pellentesque a odio. Ut pellentesque sapien vel urna tristique, et dapibus tortor egestas. Nam sit amet velit et odio hendrerit iaculis. Aenean aliquet elementum massa at consectetur. Donec leo eros, tempor eu dapibus elementum, finibus et dolor.</p>
-
-              <p>Nam sit amet consequat sem. Integer ullamcorper non nisl eget iaculis. Mauris accumsan metus a vehicula egestas. Class aptent taciti sociosqu ad litora torquent.<p>'
-          }
-        ]
-      }, 
-      {
-        section_code: 'S3', 
-        headings: [
-         {
-            heading_code: 'H1', 
-            content: '<p>Content relating to section S3, heading H1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet egestas turpis, eu vestibulum massa. Sed molestie leo arcu. Sed neque nisi, laoreet ut leo eu, eleifend sodales sapien. Proin luctus id magna nec scelerisque. Donec ligula arcu, vehicula a sodales at, tempus sit amet orci.</p>
-
-              <a>Link to external URL</a>
-
-              <p>Pellentesque egestas varius accumsan. Mauris finibus dolor et sodales viverra. Nullam pulvinar est lacus, quis suscipit ligula tempus tincidunt. Curabitur id rhoncus odio. In scelerisque vel ex eget euismod. Proin facilisis mi dolor. Maecenas ante turpis, consectetur eget ante eu, laoreet efficitur lorem. Sed commodo mauris augue, non egestas magna commodo facilisis. Sed luctus est at nisl interdum sodales. Morbi finibus tellus sed magna lacinia, ut venenatis turpis interdum.</p>
-
-              <p>Mauris et dui eu sapien bibendum pellentesque vitae eget ipsum. Vivamus facilisis orci vitae semper fringilla. Cras dolor nulla, posuere nec malesuada sed, pellentesque a odio. Ut pellentesque sapien vel urna tristique, et dapibus tortor egestas. Nam sit amet velit et odio hendrerit iaculis. Aenean aliquet elementum massa at consectetur. Donec leo eros, tempor eu dapibus elementum, finibus et dolor.</p>
-
-              <p>Nam sit amet consequat sem. Integer ullamcorper non nisl eget iaculis. Mauris accumsan metus a vehicula egestas. Class aptent taciti sociosqu ad litora torquent.<p>'
-          }
-        ]
-      }, 
-      {
-        section_code: 'S4', 
-        headings: [
-         {
-            heading_code: 'H2', 
-            content: '<p>Content relating to section S4, heading H2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet egestas turpis, eu vestibulum massa. Sed molestie leo arcu. Sed neque nisi, laoreet ut leo eu, eleifend sodales sapien. Proin luctus id magna nec scelerisque. Donec ligula arcu, vehicula a sodales at, tempus sit amet orci.</p>
-
-              <a>Link to external URL</a>
-
-              <p>Pellentesque egestas varius accumsan. Mauris finibus dolor et sodales viverra. Nullam pulvinar est lacus, quis suscipit ligula tempus tincidunt. Curabitur id rhoncus odio. In scelerisque vel ex eget euismod. Proin facilisis mi dolor. Maecenas ante turpis, consectetur eget ante eu, laoreet efficitur lorem. Sed commodo mauris augue, non egestas magna commodo facilisis. Sed luctus est at nisl interdum sodales. Morbi finibus tellus sed magna lacinia, ut venenatis turpis interdum.</p>
-
-              <p>Mauris et dui eu sapien bibendum pellentesque vitae eget ipsum. Vivamus facilisis orci vitae semper fringilla. Cras dolor nulla, posuere nec malesuada sed, pellentesque a odio. Ut pellentesque sapien vel urna tristique, et dapibus tortor egestas. Nam sit amet velit et odio hendrerit iaculis. Aenean aliquet elementum massa at consectetur. Donec leo eros, tempor eu dapibus elementum, finibus et dolor.</p>
-
-              <p>Nam sit amet consequat sem. Integer ullamcorper non nisl eget iaculis. Mauris accumsan metus a vehicula egestas. Class aptent taciti sociosqu ad litora torquent.<p>'
-          }, 
-         {
-            heading_code: 'H3', 
-            content: '<p>Content relating to section S4, heading H3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet egestas turpis, eu vestibulum massa. Sed molestie leo arcu. Sed neque nisi, laoreet ut leo eu, eleifend sodales sapien. Proin luctus id magna nec scelerisque. Donec ligula arcu, vehicula a sodales at, tempus sit amet orci.</p>
-
-              <a>Link to external URL</a>
-
-              <p>Pellentesque egestas varius accumsan. Mauris finibus dolor et sodales viverra. Nullam pulvinar est lacus, quis suscipit ligula tempus tincidunt. Curabitur id rhoncus odio. In scelerisque vel ex eget euismod. Proin facilisis mi dolor. Maecenas ante turpis, consectetur eget ante eu, laoreet efficitur lorem. Sed commodo mauris augue, non egestas magna commodo facilisis. Sed luctus est at nisl interdum sodales. Morbi finibus tellus sed magna lacinia, ut venenatis turpis interdum.</p>
-
-              <p>Mauris et dui eu sapien bibendum pellentesque vitae eget ipsum. Vivamus facilisis orci vitae semper fringilla. Cras dolor nulla, posuere nec malesuada sed, pellentesque a odio. Ut pellentesque sapien vel urna tristique, et dapibus tortor egestas. Nam sit amet velit et odio hendrerit iaculis. Aenean aliquet elementum massa at consectetur. Donec leo eros, tempor eu dapibus elementum, finibus et dolor.</p>
-
-              <p>Nam sit amet consequat sem. Integer ullamcorper non nisl eget iaculis. Mauris accumsan metus a vehicula egestas. Class aptent taciti sociosqu ad litora torquent.<p>'
-          }
-        ]
-      }
-    ]
-  end
+  #[
+  #   {
+  #     section_code: S1,
+  #     headings: [
+  #      {
+  #         heading_code: H1
+  #         content: [ coronavirus-debt-advice-url ]
+  #       }
+  #     ]
+  #   }
+  #]
   #The array is sorted by the section_code and the internal headings array is sorted by the headings_code
   #the content under each heading is sorted in the same order in which it appears in CONTENT_RULES.
   #
@@ -133,31 +65,31 @@ class Questions
   #
   # For now the content is the CMS URL however that will change to the actual content
   # from CMS once integration is achieved
-  # def results
-  #   answers_hash = to_hash
-  #   Rails.logger.info("Rules engine processing submission: #{answers_hash}")
+  def results
+    answers_hash = to_hash
+    Rails.logger.info("Rules engine processing submission: #{answers_hash}")
 
-  #   sections_array =  CONTENT_RULES.inject([]) do |sections_array_accumulator, section_rules|
-  #     heading_content_array = section_rules[:heading_rules].inject([]) do |heading_content, heading_rule|
-  #       heading_content << { heading_code: heading_rule[:heading_code], content: obtain_content_for_heading(heading_rule, answers_hash) }
-  #       heading_content
-  #     end
+    sections_array =  CONTENT_RULES.inject([]) do |sections_array_accumulator, section_rules|
+      heading_content_array = section_rules[:heading_rules].inject([]) do |heading_content, heading_rule|
+        heading_content << { heading_code: heading_rule[:heading_code], content: obtain_content_for_heading(heading_rule, answers_hash) }
+        heading_content
+      end
 
-  #     heading_content_array.reject! { |heading_element| heading_element[:content].empty? }
-  #     if !heading_content_array.empty?
-  #       section_hash = HashWithIndifferentAccess.new
-  #       section_hash[:section_code] = section_rules[:section_code]
-  #       section_hash[:headings] = heading_content_array.sort {|h1, h2| /\d*$/.match(h1[:heading_code])[0].to_i <=> /\d*$/.match(h2[:heading_code])[0].to_i}
-  #       sections_array_accumulator << section_hash
-  #     end
+      heading_content_array.reject! { |heading_element| heading_element[:content].empty? }
+      if !heading_content_array.empty?
+        section_hash = HashWithIndifferentAccess.new
+        section_hash[:section_code] = section_rules[:section_code]
+        section_hash[:headings] = heading_content_array.sort {|h1, h2| /\d*$/.match(h1[:heading_code])[0].to_i <=> /\d*$/.match(h2[:heading_code])[0].to_i}
+        sections_array_accumulator << section_hash
+      end
 
-  #     sections_array_accumulator
-  #   end
+      sections_array_accumulator
+    end
 
-  #   res = sections_array.sort {|s1, s2| /\d*$/.match(s1[section_code])[0].to_i <=> /\d*$/.match(s2[section_code])[0].to_i}
-  #   Rails.logger.info("Rules engine returning results: #{res}")
-  #   res
-  # end
+    res = sections_array.sort {|s1, s2| /\d*$/.match(s1[section_code])[0].to_i <=> /\d*$/.match(s2[section_code])[0].to_i}
+    Rails.logger.info("Rules engine returning results: #{res}")
+    res
+  end
 
   private
 

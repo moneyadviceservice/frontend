@@ -141,7 +141,9 @@ $transition-time: 0.25s;
 					right: $default-gutter; 
 					width: 0;
 					height: 0; 
-					transform: translateY(-50%); 
+					transform: translateY(-50%) rotate(0deg); 
+					transition-property: transform; 
+					transition-duration: $transition-time; 
 
 					border: solid transparent 9px;
 					border-top-color: $color-black;

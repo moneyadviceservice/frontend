@@ -21,7 +21,7 @@ describe('MoneyNavigatorResults', function() {
           self.hiddenSuffix  = self.obj.hiddenSuffix; 
           self.hiddenClass  = self.obj.hiddenClass; 
           self.collapsedClass = self.obj.collapsedClass; 
-          self.doneClass = self.obj.doneClass; 
+          self.doneSuffix = self.obj.doneSuffix; 
 
           done();
         }, done);
@@ -157,43 +157,44 @@ describe('MoneyNavigatorResults', function() {
       var heading_4_btn = $(heading_4).find('button'); 
       var heading_4_content = $(heading_4).find('[data-heading-content]'); 
       var hiddenClass = 'heading__content' + this.hiddenSuffix; 
+      var doneClass = 'sections__heading' + this.doneSuffix; 
 
       this.obj._updateDOM(); 
 
       this.obj._showHeading(heading_0_btn); 
       expect($(heading_0_content).hasClass(hiddenClass)).to.be.false; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_2).hasClass(this.doneClass)).to.be.false; 
-      expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
+      expect($(heading_0).hasClass(doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(doneClass)).to.be.false; 
+      expect($(heading_4).hasClass(doneClass)).to.be.false; 
 
       this.obj._showHeading(heading_2_btn); 
       expect($(heading_2_content).hasClass(hiddenClass)).to.be.false; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_4).hasClass(this.doneClass)).to.be.false; 
+      expect($(heading_0).hasClass(doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(doneClass)).to.be.false; 
 
       this.obj._showHeading(heading_4_btn); 
       expect($(heading_4_content).hasClass(hiddenClass)).to.be.false;
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_0).hasClass(doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(doneClass)).to.be.true; 
 
       this.obj._showHeading(heading_2_btn); 
       expect($(heading_2_content).hasClass(hiddenClass)).to.be.false; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_0).hasClass(doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(doneClass)).to.be.true; 
 
       this.obj._showHeading(heading_0_btn); 
       expect($(heading_0_content).hasClass(hiddenClass)).to.be.false; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.false; 
-      expect($(heading_0).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_2).hasClass(this.doneClass)).to.be.true; 
-      expect($(heading_4).hasClass(this.doneClass)).to.be.true; 
+      expect($(heading_0).hasClass(doneClass)).to.be.true; 
+      expect($(heading_2).hasClass(doneClass)).to.be.true; 
+      expect($(heading_4).hasClass(doneClass)).to.be.true; 
     }); 
   }); 
 

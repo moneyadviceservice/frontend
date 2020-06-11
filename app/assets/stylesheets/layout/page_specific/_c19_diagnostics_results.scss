@@ -1,3 +1,5 @@
+$transition-time: 0.25s;
+
 .l-c19_diagnostics-results {
 	.results__intro {
 		font-weight: 700; 
@@ -121,6 +123,13 @@
 		.sections__section {
 			@extend %clearfix; 
 
+			.section__content {
+				overflow: hidden;
+
+				transition-property: height; 
+				transition-duration: $transition-time; 
+			}
+
 			.section__title {
 				button {
 					position: relative;
@@ -207,11 +216,6 @@
 					.section__title__icon {
 						transform: translateY(-50%) rotate(180deg); 
 					}			
-				}
-
-				.section__content {
-					height: 0;
-					overflow: hidden;
 				}
 			}
 		}

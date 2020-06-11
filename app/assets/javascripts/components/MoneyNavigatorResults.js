@@ -45,7 +45,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       .append(closeIcon); 
 
     // Adds collapsed classes to sections
-    this.$sections.addClass(this.collapsedClass); 
+    this.$sections
+      .addClass(this.collapsedClass)
+      .find('.section__content').height(0); 
 
     // Adds arrow icon to section headings
     this.$sections.find('.section__title button').append(sectionIcon); 
@@ -72,12 +74,19 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   MoneyNavigatorResults.prototype._toggleSection = function(btn) {
     var $section = $(btn).parents('[data-section]'); 
+    var $content = $section.find('.section__content'); 
+    var height = 0; 
 
     if ($section.hasClass(this.collapsedClass)) {
       $section.removeClass(this.collapsedClass); 
+      $content.children().each(function() {
+        height += $(this).outerHeight(true);
+      }); 
     } else {
       $section.addClass(this.collapsedClass); 
     }
+
+    $content.height(height); 
   }; 
 
   MoneyNavigatorResults.prototype._showHeading = function(btn) {

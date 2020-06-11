@@ -2045,6 +2045,50 @@ module Symbols
       ]
     },
 
+    {
+      #'Protecting your future' section
+      section_code: 'S10',
+      heading_rules: [
+        {
+          #' If you’re thinking about cancelling insurance ' Rules
+          heading_code: 'H10.1',
+          content_rules: [
+            #Q13A1 or Q13A2
+            {
+              triggers: [
+                {q13: ['a1', 'a2']},
+              ],
+              mask: MASK_SOME,
+              article: "coronavirus-cancelling-insurance"
+            },
+          ]
+        },
+
+      ]
+    },
+
+    {
+      #'Money worries and mental health' section
+      section_code: 'S11',
+      heading_rules: [
+        {
+          #' If money worries are affecting your mental health ' Rules
+          heading_code: 'H11.1',
+          content_rules: [
+            #Q14A1 or Q14A2
+            {
+              triggers: [
+                {q14: ['a1', 'a2']},
+              ],
+              mask: MASK_SOME,
+              article: "coronavirus-mental-health"
+            },
+          ]
+        },
+
+      ]
+    },
+
   ]
 end
 

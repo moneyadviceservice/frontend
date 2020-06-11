@@ -15,7 +15,7 @@ class MoneyNavigatorToolController < ApplicationController
   def results
     #Get the valid answers from the session and run them
     #through the model to obtain the results to display
-    @model = Questions.new(updated_questions)
+    @model = Questions.new(updated_questions(nil))
     @results = @model.results
   end
 

@@ -139,15 +139,15 @@ $transition-time: 0.25s;
 					position: absolute;
 					top: 50%; 
 					right: $default-gutter; 
-					width: 0;
-					height: 0; 
+					width: 18px;
+					height: 12px; 
 					transform: translateY(-50%) rotate(0deg); 
 					transition-property: transform; 
 					transition-duration: $transition-time; 
-
-					border: solid transparent 9px;
-					border-top-color: $color-black;
-					border-bottom-width: 0; 
+					background-image: image_url('c19_diagnostics/section_title_icon.svg');
+					background-repeat: no-repeat;
+					background-size: 100%; 
+					background-position: center; 
 				}			
 			}
 

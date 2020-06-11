@@ -922,7 +922,7 @@ module Symbols
         {
           #'If you`ve missed one payment' Rules
           #Q7A1 or Q7A2 or Q7A3 or Q7A4 or Q7A5 or Q7A6 or Q7A7 or Q7A8 or Q7A9
-          heading_code: 'H6.1',
+          heading_code: 'H6.01',
           content_rules: [
             {
               triggers: [
@@ -936,7 +936,7 @@ module Symbols
 
         {
           #'What to do about paying your Council Tax (Domestic Rates Northern Ireland)' Rules
-          heading_code: 'H6.2',
+          heading_code: 'H6.02',
           content_rules: [
             {
               #Q7A1, Q4A1 and Q0A1 or Q0A3 or Q0A4
@@ -1015,7 +1015,7 @@ module Symbols
 
         {
           #'What to do about paying your gas or electricity bill' Rules
-          heading_code: 'H6.3',
+          heading_code: 'H6.03',
           content_rules: [
             {
               #Q7A2, Q4A1
@@ -1028,7 +1028,7 @@ module Symbols
             {
               #Q7A2, Q4A2
               triggers: [
-                {q7: 'a2', q4: 'a1' },
+                {q7: 'a2', q4: 'a2' },
               ],
               mask: MASK_ALL,
               article: "coronavirus-gas-electricity-temp-worried"
@@ -1044,7 +1044,7 @@ module Symbols
             {
               #Q7A2, Q4A4
               triggers: [
-                {q7: 'a2', q4: 'a3' },
+                {q7: 'a2', q4: 'a4' },
               ],
               mask: MASK_ALL,
               article: "coronavirus-gas-electricity-no-change"
@@ -1054,7 +1054,7 @@ module Symbols
 
         {
           #'What to do about payments to DWP/HMRC' Rules
-          heading_code: 'H6.4',
+          heading_code: 'H6.04',
           content_rules: [
             {
               #Q7A3, Q4A1
@@ -1093,7 +1093,7 @@ module Symbols
 
         {
           #'What to do about paying your TV Licence' Rules
-          heading_code: 'H6.5',
+          heading_code: 'H6.05',
           content_rules: [
             {
               #Q7A4, Q4A1
@@ -1132,7 +1132,7 @@ module Symbols
 
         {
           #'What to do about paying your Income Tax bill' Rules
-          heading_code: 'H6.6',
+          heading_code: 'H6.06',
           content_rules: [
             {
               #Q7A5, Q4A1
@@ -1171,7 +1171,7 @@ module Symbols
 
         {
           #'What to do about paying your child maintenance ' Rules
-          heading_code: 'H6.7',
+          heading_code: 'H6.07',
           content_rules: [
             {
               #Q7A6, Q4A1
@@ -1210,7 +1210,7 @@ module Symbols
 
         {
           #'What to do about paying court fines' Rules
-          heading_code: 'H6.8',
+          heading_code: 'H6.08',
           content_rules: [
             {
               #Q7A7, Q4A1 and Q0A1 or Q0A4
@@ -1325,7 +1325,7 @@ module Symbols
 
         {
           #'What to do about hire purchase agreements' Rules
-          heading_code: 'H6.9',
+          heading_code: 'H6.09',
           content_rules: [
             {
               #Q7A8, Q4A1
@@ -1364,7 +1364,7 @@ module Symbols
 
         {
           #'What to do about car parking fines?' Rules
-          heading_code: 'H6.10',
+          heading_code: 'H6.11',
           content_rules: [
             {
               #Q7A9, Q4A1 and Q0A1 or Q0A4

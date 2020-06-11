@@ -61,6 +61,7 @@ describe('MoneyNavigatorResults', function() {
       this.$sections.each(function() {
         expect($(this).hasClass(_this.collapsedClass)).to.be.true; 
         expect($(this).find('.section__title__icon').length).to.equal(1); 
+        expect($(this).find('.section__content').height()).to.equal(0); 
       }); 
 
       this.$headingTitles.each(function() {
@@ -114,29 +115,39 @@ describe('MoneyNavigatorResults', function() {
   }); 
 
   describe('toggleSection method', function() {
-    it('Sets the correct class on the section when the method is called', function() {
+    it('Sets the correct class on the section and and value for height on the content when the method is called', function() {
       var section_0 = this.$sections[0]; 
       var section_0_btn = $(section_0).find('[data-section-title]').find('button'); 
+      var section_0_content = $(section_0).find('.section__content'); 
       var section_1 = this.$sections[1]; 
       var section_1_btn = $(section_1).find('[data-section-title]').find('button'); 
+      var section_1_content = $(section_1).find('.section__content'); 
 
       this.obj._updateDOM(); 
 
       this.obj._toggleSection(section_0_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(0); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
 
       this.obj._toggleSection(section_0_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(0); 
     }); 
   })
 

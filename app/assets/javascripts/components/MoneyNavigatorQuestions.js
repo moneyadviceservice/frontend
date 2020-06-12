@@ -10,6 +10,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$questions = this.$el.find('[data-question]'); 
     this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 
     this.activeClass = 'question--active'; 
+    this.dataLayer = window.dataLayer; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorQuestions);
@@ -19,8 +20,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
     this._updateDOM(); 
     this._setUpMultipleQuestions(); 
+    this._updateAnalytics(this.dataLayer); 
     this._initialisedSuccess(initialised);
   };
+
+  MoneyNavigatorQuestions.prototype._updateAnalytics = function(dataLayer) {
+    console.log('_setUpAnalytics!'); 
+    console.log('dataLayer: ', dataLayer); 
+  }; 
 
   MoneyNavigatorQuestions.prototype._updateDOM = function() {
     var _this = this; 

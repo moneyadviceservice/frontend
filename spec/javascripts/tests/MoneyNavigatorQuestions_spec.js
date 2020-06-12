@@ -1,4 +1,4 @@
-describe('MoneyNavigatorQuestions', function() {
+describe.only('MoneyNavigatorQuestions', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -24,34 +24,53 @@ describe('MoneyNavigatorQuestions', function() {
 
   afterEach(function() {
     fixture.cleanup();
-    self.dataLayerMock.verify(); 
+    this.dataLayerMock.verify(); 
   });
 
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
-      var updateAnalyticsStub = sinon.stub(this.obj, '_updateAnalytics'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
-      expect(updateAnalyticsStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
-      updateAnalyticsStub.restore(); 
     });
   });
 
-  describe.only('udpateAnalytics method', function() {
-    it('Checks the dataLayer object exists in its correct form on load', function() {
-      this.obj._updateAnalytics(this.dataLayerMock);
+  describe('udpateAnalytics method', function() {
+    it('Checks the dataLayer object is updated correctly when the get started button is clicked', function() {
+      this.obj._updateDOM(); 
 
-      expect(typeof this.dataLayerMock).to.equal('object'); 
-      expect(this.dataLayerMock.object.length).to.equal(1); 
-    })
+      var $getStartedBtn = this.component.find('[data-get-started]'); 
+      var inputs = this.component.find('input[name="questions[q0]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($getStartedBtn[0], this.dataLayerMock.object);
+
+      var dataLayer = this.dataLayerMock.object; 
+      var eventAction = dataLayer[dataLayer.length - 1].eventAction; 
+      var eventLabel = dataLayer[dataLayer.length - 1].eventLabel; 
+
+      expect(dataLayer.length).to.equal(2); 
+      expect(eventAction).to.equal('Q0'); 
+      expect(eventLabel).to.equal('Q0A1'); 
+
+      inputs[2].checked = true;
+      this.obj._updateAnalytics($getStartedBtn[0], this.dataLayerMock.object);
+
+      var dataLayer = this.dataLayerMock.object; 
+      var eventAction = dataLayer[dataLayer.length - 1].eventAction; 
+      var eventLabel = dataLayer[dataLayer.length - 1].eventLabel; 
+
+      expect(dataLayer.length).to.equal(3); 
+      expect(eventAction).to.equal('Q0'); 
+      expect(eventLabel).to.equal('Q0A3'); 
+    }); 
   }); 
 
   describe('updateDOM method', function() {
@@ -79,15 +98,20 @@ describe('MoneyNavigatorQuestions', function() {
   }); 
 
   describe('Get started button', function() {
-    it('Calls the correct method with the correct argument when clicked', function() {
-      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+    it('Calls the correct methods with the correct arguments when clicked', function() {
+      this.obj._updateDOM(this.dataLayerMock.object); 
 
-      this.obj._updateDOM(); 
-      this.component.find('[data-get-started]').click(); 
+      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+      var updateAnalyticsSpy = sinon.spy(this.obj, '_updateAnalytics'); 
+      var $getStartedBtn = this.component.find('[data-get-started]'); 
+
+      $getStartedBtn.trigger('click'); 
 
       expect(updateDisplaySpy.calledWith('next')).to.be.true; 
+      expect(updateAnalyticsSpy.calledWith($getStartedBtn[0], this.dataLayerMock.object)).to.be.true; 
 
       updateDisplaySpy.restore(); 
+      updateAnalyticsSpy.restore(); 
     }); 
   }); 
 

@@ -30,7 +30,10 @@
                 <p class="question__counter"><%= t("c19_diagnostics_tool.counter", number: index, total: t("c19_diagnostics_tool.questions").length - 1) %></p>
               <% end %>
 
-              <div class="question__content question__content--<%= question[:code] %>">
+              <div 
+                class="question__content question__content--<%= question[:code] %>" 
+                data-question-id="<%= question[:code] %>"
+              >
                 <fieldset>
                   <legend class="question__heading"><%= question[:text] %></legend>
 
@@ -76,13 +79,6 @@
 
         <script type="text/javascript">
           window.dataLayer = window.dataLayer || [];
-
-          // window.dataLayer.push({
-          //   "event": "gtm_question_answered",
-          //   "eventCategory": "MNT_Diagnostic", 
-          //   "eventAction": "1", // .mntquestion e.g. “1”
-          //   "eventLabel": "Q1A1" // .mntanswer e.g. “Q1A1”
-          // });
         </script>
       <% end %>
     </div>

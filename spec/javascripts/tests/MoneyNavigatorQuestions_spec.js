@@ -9,11 +9,14 @@ describe('MoneyNavigatorQuestions', function() {
     requirejs(
         ['jquery', 'MoneyNavigatorQuestions'],
         function($, MoneyNavigatorQuestions) {
+          var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
+
           fixture.load('MoneyNavigatorQuestions.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
+          self.dataLayerMock = sinon.mock(dataLayer);
 
           done();
         }, done);
@@ -21,22 +24,35 @@ describe('MoneyNavigatorQuestions', function() {
 
   afterEach(function() {
     fixture.cleanup();
+    self.dataLayerMock.verify(); 
   });
 
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var updateAnalyticsStub = sinon.stub(this.obj, '_updateAnalytics'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
+      expect(updateAnalyticsStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
+      updateAnalyticsStub.restore(); 
     });
   });
+
+  describe.only('udpateAnalytics method', function() {
+    it('Checks the dataLayer object exists in its correct form on load', function() {
+      this.obj._updateAnalytics(this.dataLayerMock);
+
+      expect(typeof this.dataLayerMock).to.equal('object'); 
+      expect(this.dataLayerMock.object.length).to.equal(1); 
+    })
+  }); 
 
   describe('updateDOM method', function() {
     it('Makes correct changes to the DOM', function() {

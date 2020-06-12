@@ -18,19 +18,38 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.componentName = 'MoneyNavigatorQuestions';
 
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
-    this._updateDOM(); 
+    this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
-    this._updateAnalytics(this.dataLayer); 
     this._initialisedSuccess(initialised);
   };
 
-  MoneyNavigatorQuestions.prototype._updateAnalytics = function(dataLayer) {
-    console.log('_setUpAnalytics!'); 
-    console.log('dataLayer: ', dataLayer); 
+  MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
+    var eventAction = $(btn).parents('[data-question-id]').data('questionId').toUpperCase(); 
+    var eventLabel; 
+    var inputs = $(btn).parents('[data-question-id]').find('input[name="questions[q0]"]'); 
+
+    for (var i = 0, length = inputs.length; i < length; i++) {
+      if (inputs[i].checked) {
+        eventLabel = eventAction + inputs[i].value.toUpperCase();
+      }
+    }; 
+
+    if (dataLayer) {
+      dataLayer.push({
+        event: 'gtm_question_answered',
+        eventCategory: 'MNT_Diagnostic', 
+        eventAction: eventAction,
+        eventLabel: eventLabel 
+      });
+
+      // For testing purposes only
+      console.log('dataLayer: ', dataLayer); 
+    }
   }; 
 
-  MoneyNavigatorQuestions.prototype._updateDOM = function() {
+  MoneyNavigatorQuestions.prototype._updateDOM = function(dataLayer) {
     var _this = this; 
+    var dataLayer = dataLayer; 
 
     // Removes submit button
     this.$submitBtn.remove(); 
@@ -56,6 +75,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       if ($(this).data('get-started')) {
         e.preventDefault(); 
         _this._updateDisplay('next'); 
+        _this._updateAnalytics(e.target, dataLayer); 
       } else if ($(this).data('continue')) {
         if (_this.$questions.last()[0] == $(this).parents('[data-question]')[0]) {
           if (options == 'preventDefault') {

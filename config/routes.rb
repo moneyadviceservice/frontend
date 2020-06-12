@@ -21,11 +21,13 @@ Rails.application.routes.draw do
     root 'home#show'
 
     #C19 Diagostics tool
-    get '/c19_diagnostics', to: 'c19_diagnostics#landing'
-    get '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
-    post '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
-    patch '/c19_diagnostics/questionnaire', to: 'c19_diagnostics#questionnaire'
-    get '/c19_diagnostics/results', to: 'c19_diagnostics#results'
+    scope :tools do
+      get '/money-navigator-tool', to: 'money_navigator_tool#landing'
+      get '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      post '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      patch '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      get '/money-navigator-tool/results', to: 'money_navigator_tool#results'
+    end
 
     get '/sitemap', to: 'sitemap#index'
 

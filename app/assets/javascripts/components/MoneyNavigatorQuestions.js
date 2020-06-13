@@ -26,7 +26,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
     var eventAction = $(btn).parents('[data-question-id]').data('questionId').toUpperCase(); 
     var eventLabel; 
-    var inputs = $(btn).parents('[data-question-id]').find('input[name="questions[q0]"]'); 
+    var inputs = $(btn).parents('[data-question-id]').find('input[type="radio"]'); 
 
     for (var i = 0, length = inputs.length; i < length; i++) {
       if (inputs[i].checked) {
@@ -84,6 +84,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         } else {
           e.preventDefault(); 
           _this._updateDisplay('next'); 
+          _this._updateAnalytics(e.target, dataLayer); 
         }
       } else if ($(this).data('back')) {
         e.preventDefault(); 

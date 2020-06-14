@@ -26,13 +26,20 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
     var eventAction = $(btn).parents('[data-question-id]').data('questionId').toUpperCase(); 
     var eventLabel; 
-    var inputs = $(btn).parents('[data-question-id]').find('input[type="radio"]'); 
+    var inputs = $(btn).parents('[data-question-id]').find('input[type="radio"], input[type="checkbox"]'); 
+    var inputsCheckedValues = []; 
 
     for (var i = 0, length = inputs.length; i < length; i++) {
       if (inputs[i].checked) {
-        eventLabel = eventAction + inputs[i].value.toUpperCase();
+        inputsCheckedValues.push(eventAction + inputs[i].value.toUpperCase()); 
       }
     }; 
+
+    if (inputsCheckedValues.length > 0) {
+      eventLabel = inputsCheckedValues.join('-'); 
+    } else {
+      eventLabel = inputsCheckedValues[0];
+    }
 
     if (dataLayer) {
       dataLayer.push({

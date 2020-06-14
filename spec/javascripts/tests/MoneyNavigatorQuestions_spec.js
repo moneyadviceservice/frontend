@@ -44,9 +44,11 @@ describe.only('MoneyNavigatorQuestions', function() {
   describe('udpateAnalytics method', function() {
     var dataLayer = dataLayerMock.object;
 
-    it('Checks the dataLayer object is updated correctly when the get started button is clicked', function() {
+    beforeEach(function() {
       this.obj._updateDOM(); 
+    }); 
 
+    it('Checks the dataLayer object is updated correctly when the get started button is clicked', function() {
       var $getStartedBtn = this.component.find('[data-get-started]'), 
           inputs = this.component.find('input[name="questions[q0]"]'); 
 
@@ -66,8 +68,6 @@ describe.only('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Checks the dataLayer object is updated correctly when the continue button is clicked for single response questions', function() {
-      this.obj._updateDOM(); 
-
       var $continueBtn = this.component.find('[data-question-id="q1"]').find('[data-continue]'); 
       var inputs = this.component.find('input[name="questions[q1]"]'); 
 
@@ -84,6 +84,33 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect(dataLayer.length).to.equal(5); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q1'); 
       expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q1A2'); 
+    }); 
+
+    it('Checks the dataLayer object is updated correctly when the continue button is clicked for multiple response questions', function() {
+      var $continueBtn = this.component.find('[data-question-id="q2"]').find('[data-continue]'); 
+      var inputs = this.component.find('input[name="questions[q2][]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(6); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A1'); 
+
+      inputs[0].checked = false;
+      inputs[1].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2'); 
+
+      inputs[2].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(8); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2-Q2A3'); 
     }); 
   }); 
 

@@ -59,7 +59,7 @@ module Symbols
     qn_hash
   end
 
-  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions')
+  QUESTIONS = I18n.translate('money_navigator_tool.questions')
     .map {| qn_hash | enrich_questions(qn_hash)}
     .sort { |q1, q2| /\d*$/.match(q1[:code])[0].to_i <=> /\d*$/.match(q2[:code])[0].to_i }
 

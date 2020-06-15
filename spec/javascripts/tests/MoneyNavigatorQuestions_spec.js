@@ -74,16 +74,26 @@ describe.only('MoneyNavigatorQuestions', function() {
       inputs[0].checked = true;
       this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(4); 
-      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q1'); 
-      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q1A1'); 
+      expect(dataLayer.length).to.equal(5); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q1'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q1A1'); 
+
+      expect(dataLayer.length).to.equal(5); 
+      expect(dataLayer[dataLayer.length - 1].event).to.equal('gtm_question_custom'); 
+      expect(dataLayer[dataLayer.length - 1].eventQuestion).to.equal('A custom question'); 
+      expect(dataLayer[dataLayer.length - 1].eventResponse).to.equal('A custom response'); 
 
       inputs[1].checked = true;
       this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(5); 
-      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q1'); 
-      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q1A2'); 
+      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q1'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q1A2'); 
+
+      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer[dataLayer.length - 1].event).to.equal('gtm_question_custom'); 
+      expect(dataLayer[dataLayer.length - 1].eventQuestion).to.equal('A custom question'); 
+      expect(dataLayer[dataLayer.length - 1].eventResponse).to.equal('Another custom response'); 
     }); 
 
     it('Checks the dataLayer object is updated correctly when the continue button is clicked for multiple response questions', function() {
@@ -93,7 +103,7 @@ describe.only('MoneyNavigatorQuestions', function() {
       inputs[0].checked = true;
       this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(6); 
+      expect(dataLayer.length).to.equal(8); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
       expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A1'); 
 
@@ -101,14 +111,14 @@ describe.only('MoneyNavigatorQuestions', function() {
       inputs[1].checked = true;
       this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer.length).to.equal(9); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
       expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2'); 
 
       inputs[2].checked = true;
       this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(8); 
+      expect(dataLayer.length).to.equal(10); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
       expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2-Q2A3'); 
     }); 
@@ -120,7 +130,7 @@ describe.only('MoneyNavigatorQuestions', function() {
       inputs[0].checked = true;
       this.obj._updateAnalytics($submitBtn[0], dataLayerMock.object);
 
-      expect(dataLayer.length).to.equal(10); 
+      expect(dataLayer.length).to.equal(12); 
       expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q3'); 
       expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q3A1'); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('submit');

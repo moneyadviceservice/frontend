@@ -33,6 +33,9 @@
               <div 
                 class="question__content question__content--<%= question[:code] %>" 
                 data-question-id="<%= question[:code] %>"
+                <% if question[:type] == 'radio-custom' %>
+                  data-question-custom
+                <% end %>
               >
                 <fieldset>
                   <legend class="question__heading"><%= question[:text] %></legend>
@@ -43,7 +46,7 @@
 
                   <% question[:responses].each_with_index do |response, response_index| %>
                     <div class="question__response" data-response>
-                      <% if question[:type] == 'radio' %>
+                      <% if question[:type] == 'radio' || question[:type] == 'radio-custom' %>
                         <% if response_index == 0 %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
                         <% else %>

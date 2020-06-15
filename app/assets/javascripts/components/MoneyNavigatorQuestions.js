@@ -24,14 +24,18 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
-    var eventAction = $(btn).parents('[data-question-id]').data('questionId').toUpperCase(); 
+    var question = $(btn).parents('[data-question-id]'); 
+    var eventAction = $(question).data('questionId').toUpperCase(); 
     var eventLabel; 
+    var eventResponse = ''; 
     var inputs = $(btn).parents('[data-question-id]').find('input[type="radio"], input[type="checkbox"]'); 
     var inputsCheckedValues = []; 
+    var inputsCheckedText = []; 
 
     for (var i = 0, length = inputs.length; i < length; i++) {
       if (inputs[i].checked) {
         inputsCheckedValues.push(eventAction + inputs[i].value.toUpperCase()); 
+        eventResponse = $(inputs[i]).siblings('label').text(); 
       }
     }; 
 
@@ -51,6 +55,18 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
       // For testing purposes only
       console.log('dataLayer: ', dataLayer); 
+    }
+
+    if ($(question).data('question-custom') !== undefined) {
+      dataLayer.push({
+        event: 'gtm_question_custom',
+        eventCategory: 'MNT_Diagnostic', 
+        eventQuestion: $(question).find('legend').text(),
+        eventResponse: eventResponse.trim()
+      });
+
+      // For testing purposes only
+      console.log('dataLayer: ', dataLayer);       
     }
 
     if ($(btn).data('submit')) {

@@ -64,14 +64,14 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      describe  'StepChange' do
-        let(:heading_code) { 'H2' }
-        let(:content_prefix) {'stepchange-debt'}
-        let(:corona_specific_content) {true}
+      # describe  'StepChange' do
+      #   let(:heading_code) { 'H2' }
+      #   let(:content_prefix) {'stepchange-debt'}
+      #   let(:corona_specific_content) {true}
 
-        include_examples 'country specific content' do
-        end
-      end
+      #   include_examples 'country specific content' do
+      #   end
+      # end
 
     end
   end

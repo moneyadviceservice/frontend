@@ -133,7 +133,7 @@ class Questions
     action_plan_page.body
   rescue StandardError => ex
     Rails.logger.error "Failed to load content from CMS. Slug: #{slug}; Ex: #{ex}"
-    "CMS CONTENT '#{slug}' NOT AVAILABLE"
+    "ERROR: CMS CONTENT '#{slug}' NOT AVAILABLE"
   end
 
   #TODO: update documentation for last minute fixes in logic

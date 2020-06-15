@@ -122,12 +122,20 @@ class Questions
       #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
       #For now we are simply placing the CMS URL in there
       Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
-      content_accumulator += content_rule[:article] if content_visible
+      content_accumulator += cms_content(content_rule[:article]) if content_visible
 
       content_accumulator
     end
 
     content
+  end
+
+  def cms_content(slug)
+    action_plan_page = Mas::Cms::ActionPlan.find(slug, locale: I18n.locale, cached: true)
+    action_plan_page.body
+  rescue StandardError => ex
+    Rails.logger.error "Failed to load content from CMS. Slug: #{slug}; Ex: #{ex}"
+    ''
   end
 
   #TODO: update documentation for last minute fixes in logic

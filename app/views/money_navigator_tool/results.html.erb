@@ -10,21 +10,21 @@
 
 			<p class="results__intro"><%= t("money_navigator_tool.results.intro") %></p>
 
-			<section class="results__urgent-actions">
-				<div class="urgent-actions__content">
-					<h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.urgent_actions.heading') %></h2>
+      <% @results.select {|res| res[:section_code] == 'S1'}.each do |section| %>
+        <section class="results__urgent-actions">
+          <div class="urgent-actions__content">
+            <h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.heading') %></h2>
 
-					<ul class="urgent-actions__actions">
-						<li class="urgent-actions__action">
-							Some content about an urgent action
-						</li>
-
-						<li class="urgent-actions__action">
-							Some content about another urgent action
-						</li>
-					</ul>
-				</div>
-			</section>
+            <ul class="urgent-actions__actions">
+              <% section[:headings].each do |heading| %>
+                <li class="urgent-actions__action">
+                  <%= heading[:content].html_safe %><
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </section>
+      <% end %>
 
 			<section class="results__sections" data-dough-component="MoneyNavigatorResults">
 				<ul class="sections__sections">

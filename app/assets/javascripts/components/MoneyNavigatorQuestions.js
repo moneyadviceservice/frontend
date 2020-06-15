@@ -52,6 +52,28 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       // For testing purposes only
       console.log('dataLayer: ', dataLayer); 
     }
+
+    if ($(btn).data('submit')) {
+      var eventLabels = []; 
+
+      for (var i = 0, length = dataLayer.length; i < length; i++) {
+        if (dataLayer[i].eventLabel) {
+          eventLabels.push(dataLayer[i].eventLabel); 
+        }
+      }
+
+      eventLabel = eventLabels.join('_'); 
+
+      dataLayer.push({
+        event: 'gtm_questions_submit',
+        eventCategory: 'MNT_Diagnostic', 
+        eventAction: 'submit',
+        eventLabel: eventLabel 
+      });
+
+      // For testing purposes only
+      console.log('dataLayer: ', dataLayer); 
+    }
   }; 
 
   MoneyNavigatorQuestions.prototype._updateDOM = function(dataLayer) {
@@ -61,7 +83,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     // Removes submit button
     this.$submitBtn.remove(); 
 
-    for (var i = 0; i < this.$questions.length; i++) {
+    for (var i = 0, length = this.$questions.length; i < length; i++) {
       var question = this.$questions[i]; 
 
       if (i === 0) {
@@ -69,7 +91,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         $(question).find('.question__content').append('<div class="question__actions"><button class="button button--start" data-get-started="true">Get started</button></div>'); 
          // Adds active class to first question
         $(question).addClass(_this.activeClass); 
-     } else {
+      } else if (i === (length - 1)) {
+          // Adds submit and back buttons to all other questions
+          $(question).find('.question__content')
+            .append('<div class="question__actions"><button data-submit="true" class="button button--continue">Continue</button><button data-back="true" class="button button--back">Back</button></div>')
+      } else {
         // Adds continue and back buttons to all other questions
         $(question).find('.question__content')
           .append('<div class="question__actions"><button data-continue="true" class="button button--continue">Continue</button><button data-back="true" class="button button--back">Back</button></div>')
@@ -84,15 +110,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         _this._updateDisplay('next'); 
         _this._updateAnalytics(e.target, dataLayer); 
       } else if ($(this).data('continue')) {
-        if (_this.$questions.last()[0] == $(this).parents('[data-question]')[0]) {
-          if (options == 'preventDefault') {
-            e.preventDefault(); 
-          }
-        } else {
+        e.preventDefault(); 
+        _this._updateDisplay('next'); 
+        _this._updateAnalytics(e.target, dataLayer); 
+      } else if ($(this).data('submit')) {
+        if (options == 'preventDefault') {
           e.preventDefault(); 
-          _this._updateDisplay('next'); 
-          _this._updateAnalytics(e.target, dataLayer); 
         }
+        _this._updateAnalytics(e.target, dataLayer); 
       } else if ($(this).data('back')) {
         e.preventDefault(); 
         _this._updateDisplay('prev'); 

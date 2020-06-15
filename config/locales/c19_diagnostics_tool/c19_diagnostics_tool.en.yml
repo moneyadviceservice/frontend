@@ -28,7 +28,7 @@ en:
           - code: A4
             text: Wales/Cymru
       - code: Q1
-        type: radio
+        type: radio-custom
         text: What is your employment status?
         responses:
           - code: A1
@@ -56,7 +56,7 @@ en:
           - code: A2
             text: 'No'
       - code: Q4
-        type: radio
+        type: radio-custom
         text: How would you describe your household income as a result of the coronavirus crisis?
         responses:
           - code: A1

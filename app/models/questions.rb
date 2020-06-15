@@ -119,8 +119,6 @@ class Questions
       content_visible = content_rule[:mask] == result_flags
       Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags},  content_visible:#{content_visible}")
 
-      #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
-      #For now we are simply placing the CMS URL in there
       Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
       content_accumulator += cms_content(content_rule[:article]) if content_visible
 

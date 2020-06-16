@@ -31,7 +31,7 @@
           <% @results.reject {|res| res[:section_code] == 'S1'}.each do |result| %>
 						<li class="sections__section" data-section>
 							<h3 class="section__title" data-section-title>
-								<button>
+								<button class="mntreshead">
 									<span class="section__title__text">
 										<%= t("money_navigator_tool.results.#{result[:section_code]}.title") %>
 									</span>
@@ -47,12 +47,15 @@
 									<% result[:headings].each do |heading| %>
 										<li class="sections__heading" data-heading>
 											<h5 class="heading__title" data-heading-title>
-												<button>
+												<button class="mntresult">
 													<%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
 												</button>
 											</h5>
 
-											<div class="heading__content" data-heading-content><%= heading[:content].html_safe %></div>
+											<div class="heading__content mntpanel" data-heading-content>
+												<h2><%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h2>
+												<%= heading[:content].html_safe %>
+											</div>
 										</li>
 									<% end %>
 								</ul>

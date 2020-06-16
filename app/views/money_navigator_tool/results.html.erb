@@ -13,7 +13,7 @@
       <% @results.select {|res| res[:section_code] == 'S1'}.each do |section| %>
         <section class="results__urgent-actions">
           <div class="urgent-actions__content">
-            <h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.heading') %></h2>
+            <h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.title') %></h2>
 
             <ul class="urgent-actions__actions">
               <% section[:headings].each do |heading| %>
@@ -28,7 +28,7 @@
 
 			<section class="results__sections" data-dough-component="MoneyNavigatorResults">
 				<ul class="sections__sections">
-					<% @results.each do |result| %>
+          <% @results.reject {|res| res[:section_code] == 'S1'}.each do |result| %>
 						<li class="sections__section" data-section>
 							<h3 class="section__title" data-section-title>
 								<button>

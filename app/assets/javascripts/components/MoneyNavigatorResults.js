@@ -37,7 +37,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     $(headingTitleIcon).addClass('heading__title__icon'); 
     $(closeIcon)
       .attr('data-overlay-hide', true)
-      .addClass('overlay__hide'); 
+      .addClass('overlay__hide mntpanelclose'); 
 
     // Adds hidden classes to headings content
     this.$headingContent

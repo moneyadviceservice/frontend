@@ -76,6 +76,7 @@ describe('MoneyNavigatorResults', function() {
       var toggleSectionSpy = sinon.stub(this.obj, '_toggleSection'); 
       var showHeadingSpy = sinon.spy(this.obj, '_showHeading'); 
       var hideHeadingSpy = sinon.spy(this.obj, '_hideHeading'); 
+      var sectionResizeStub = sinon.stub(this.obj, '_sectionResize'); 
       var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
       var section_1_btn = $(this.$sectionTitles[1]).find('button'); 
       var section_2_btn = $(this.$sectionTitles[2]).find('button'); 
@@ -107,10 +108,26 @@ describe('MoneyNavigatorResults', function() {
       $(overlayHide).trigger('click');
       expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
 
+      $(window).trigger('resize'); 
+      expect(sectionResizeStub.called).to.be.false; 
+
       toggleSectionSpy.restore(); 
       showHeadingSpy.restore(); 
       hideHeadingSpy.restore(); 
+      sectionResizeStub.restore(); 
     }); 
+  }); 
+
+  describe('sectionResize method', function() {
+    it ('Resizes a given section__content element', function() {
+      var section = this.$sections[0]; 
+      var $sectionContent = $(section).find('.section__content'); 
+
+      $sectionContent.height(1); 
+
+      this.obj._sectionResize(section); 
+      expect($sectionContent.height()).to.be.above(1); 
+    })
   }); 
 
   describe('toggleSection method', function() {
@@ -151,11 +168,6 @@ describe('MoneyNavigatorResults', function() {
   })
 
   describe('showHeading method', function() {
-    // This method:
-    // - permanently sets the done class
-    // - permanently removes the hidden class
-    // - shows the overlay
-    // The re-addition of the hidden class and hiding the overlay are dealt with by clicking the close icon
     it('Sets classes correctly when the method is called', function() {
       var heading_0 = this.$headings[0]; 
       var heading_0_btn = $(heading_0).find('button'); 

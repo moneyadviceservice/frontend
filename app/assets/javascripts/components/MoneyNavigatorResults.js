@@ -31,18 +31,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var _this = this; 
     var sectionIcon = document.createElement('span'); 
     var headingTitleIcon = document.createElement('span'); 
-    var closeIcon = document.createElement('span'); 
 
     $(sectionIcon).addClass('section__title__icon'); 
     $(headingTitleIcon).addClass('heading__title__icon'); 
-    $(closeIcon)
-      .attr('data-overlay-hide', true)
-      .addClass('overlay__hide mntpanelclose'); 
 
     // Adds hidden classes to headings content
-    this.$headingContent
-      .addClass('heading__content' + this.hiddenSuffix)
-      .append(closeIcon); 
+    this.$headingContent.addClass('heading__content' + this.hiddenSuffix); 
 
     // Adds collapsed classes to sections
     this.$sections

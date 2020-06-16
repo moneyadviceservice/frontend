@@ -53,8 +53,19 @@
 											</h5>
 
 											<div class="heading__content mntpanel" data-heading-content>
-												<h2><%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %></h2>
+												<h2 class="heading__content__title">
+													<%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
+												</h2>
+
 												<%= heading[:content].html_safe %>
+
+												<a data-overlay-hide class="overlay__hide" href="#" role="button">
+													<%= t('mobile_nav.close') %>
+													<%= render 'shared/svg/use_icon', 
+														icon: 'mobile-close-box', 
+														class_name: 'overlay__hide__icon mntpanelclose' 
+													%>
+												</a>
 											</div>
 										</li>
 									<% end %>

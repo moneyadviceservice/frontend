@@ -1,4 +1,4 @@
-$transition-time: 0.25s;
+$transition-time: 0.4s;
 
 .l-money_navigator-results {
 	.results__intro {
@@ -190,12 +190,14 @@ $transition-time: 0.25s;
 			.heading__content {
 				position: fixed;
 				top: 0;
-				left: 20%;
+				left: 15%;
 				bottom: 0;
-				width: 80%;
+				width: 85%;
 				padding: $baseline-unit * 4 $default-gutter * 4;
 				z-index: 155; 
 				background: $color-white;
+				transition-property: left; 
+				transition-duration: $transition-time; 
 
 				.overlay__hide {
 					position: absolute;
@@ -235,6 +237,6 @@ $transition-time: 0.25s;
 		bottom: 0;
 		width: 100%;
 		z-index: 150; 
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.5);
 	}
 }

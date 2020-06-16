@@ -88,8 +88,13 @@ $transition-time: 0.25s;
 
 		.sections__heading {
 			border: solid 1px $color-grey-normal;
-			padding: $baseline-unit $default-gutter;
+			padding: $baseline-unit * 2 $default-gutter;
 			box-shadow: 0 2px 4px $color-grey-normal; 
+
+			@include respond-to($mq-m) {
+				padding-top: $baseline-unit * 3;
+				padding-bottom: $baseline-unit * 3;
+			}
 
 			.heading__title {
 				font-size: 1rem; 

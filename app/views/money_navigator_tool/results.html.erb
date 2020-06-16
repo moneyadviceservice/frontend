@@ -1,46 +1,46 @@
-<% set_meta_tags(title:       t('c19_diagnostics_tool.meta.title'),
-                 description: t('c19_diagnostics_tool.meta.description'),
-                 canonical:   t('c19_diagnostics_tool.meta.canonical'),
-                 alternate:   t('c19_diagnostics_tool.meta.alternate')) %>
+<% set_meta_tags(title:       t('money_navigator_tool.meta.title'),
+                 description: t('money_navigator_tool.meta.description'),
+                 canonical:   t('money_navigator_tool.meta.canonical'),
+                 alternate:   t('money_navigator_tool.meta.alternate')) %>
 
 <div class="l-container-tool">
 	<main>
 		<div class="l-c19_diagnostics-results">
-			<h1><%= t("c19_diagnostics_tool.results.heading") %></h1>
+			<h1><%= t("money_navigator_tool.results.heading") %></h1>
 
-			<p class="results__intro"><%= t("c19_diagnostics_tool.results.intro") %></p>
+			<p class="results__intro"><%= t("money_navigator_tool.results.intro") %></p>
 
-			<section class="results__urgent-actions">
-				<div class="urgent-actions__content">
-					<h2 class="urgent-actions__heading"><%= t('c19_diagnostics_tool.results.urgent_actions.heading') %></h2>
-					
-					<ul class="urgent-actions__actions">
-						<li class="urgent-actions__action">
-							Some content about an urgent action
-						</li>
+      <% @results.select {|res| res[:section_code] == 'S1'}.each do |section| %>
+        <section class="results__urgent-actions">
+          <div class="urgent-actions__content">
+            <h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.title') %></h2>
 
-						<li class="urgent-actions__action">
-							Some content about another urgent action
-						</li>
-					</ul>				
-				</div>
-			</section>
+            <ul class="urgent-actions__actions">
+              <% section[:headings].each do |heading| %>
+                <li class="urgent-actions__action">
+                  <%= heading[:content].html_safe %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </section>
+      <% end %>
 
 			<section class="results__sections" data-dough-component="MoneyNavigatorResults">
 				<ul class="sections__sections">
-					<% @results.each do |result| %>
+          <% @results.reject {|res| res[:section_code] == 'S1'}.each do |result| %>
 						<li class="sections__section" data-section>
 							<h3 class="section__title" data-section-title>
 								<button>
 									<span class="section__title__text">
-										<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.title") %>
+										<%= t("money_navigator_tool.results.#{result[:section_code]}.title") %>
 									</span>
 								</button>
 							</h3>
 
 							<div class="section__content">
-								<% if I18n.exists?("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %>
-									<h4 class="section__subtitle"><%= t("c19_diagnostics_tool.results.#{result[:section_code]}.subtitle") %></h4>
+								<% if I18n.exists?("money_navigator_tool.results.#{result[:section_code]}.subtitle") %>
+									<h4 class="section__subtitle"><%= t("money_navigator_tool.results.#{result[:section_code]}.subtitle") %></h4>
 								<% end %>
 
 								<ul class="sections__headings">
@@ -48,7 +48,7 @@
 										<li class="sections__heading" data-heading>
 											<h5 class="heading__title" data-heading-title>
 												<button>
-													<%= t("c19_diagnostics_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
+													<%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
 												</button>
 											</h5>
 

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
-    #C19 Diagostics tool
+    #Money Navigator Tool
     scope :tools do
       get '/money-navigator-tool', to: 'money_navigator_tool#landing'
       get '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'

@@ -59,7 +59,7 @@ module Symbols
     qn_hash
   end
 
-  QUESTIONS = I18n.translate('c19_diagnostics_tool.questions')
+  QUESTIONS = I18n.translate('money_navigator_tool.questions')
     .map {| qn_hash | enrich_questions(qn_hash)}
     .sort { |q1, q2| /\d*$/.match(q1[:code])[0].to_i <=> /\d*$/.match(q2[:code])[0].to_i }
 
@@ -270,7 +270,7 @@ module Symbols
 
         {
           #'Mortgage payment holidays' Rules
-          heading_code: 'H2.1',
+          heading_code: 'H1',
           content_rules: [
             {
               triggers: [
@@ -305,7 +305,7 @@ module Symbols
 
         {
           #'Personal loan payment holidays' Rules
-          heading_code: 'H2.2',
+          heading_code: 'H2',
           content_rules: [
             {
               triggers: [
@@ -340,7 +340,7 @@ module Symbols
 
         {
           #'Credit card payment holidays' Rules
-          heading_code: 'H2.3',
+          heading_code: 'H3',
           content_rules: [
             {
               triggers: [
@@ -375,7 +375,7 @@ module Symbols
 
         {
           #'Store card payment holidays' Rules
-          heading_code: 'H2.4',
+          heading_code: 'H4',
           content_rules: [
             {
               triggers: [
@@ -410,7 +410,7 @@ module Symbols
 
         {
           #'Car finance payment holidays' Rules
-          heading_code: 'H2.5',
+          heading_code: 'H5',
           content_rules: [
             {
               triggers: [
@@ -445,7 +445,7 @@ module Symbols
 
         {
           #'Buy now pay later payment holidays (eg Klarma)' Rules
-          heading_code: 'H2.6',
+          heading_code: 'H6',
           content_rules: [
             {
               triggers: [
@@ -480,7 +480,7 @@ module Symbols
 
         {
           #'Rent to own payment holidays' Rules
-          heading_code: 'H2.7',
+          heading_code: 'H7',
           content_rules: [
             {
               triggers: [
@@ -515,7 +515,7 @@ module Symbols
 
         {
           #'Payday loan payment holidays' Rules
-          heading_code: 'H2.8',
+          heading_code: 'H8',
           content_rules: [
             {
               triggers: [
@@ -550,7 +550,7 @@ module Symbols
 
         {
           #'Pawnbroker payment holidays' Rules
-          heading_code: 'H2.9',
+          heading_code: 'H9',
           content_rules: [
             {
               triggers: [
@@ -593,7 +593,7 @@ module Symbols
 
         {
           #'Getting back on track after an income drop ' Rules
-          heading_code: 'H3.1',
+          heading_code: 'H1',
           content_rules: [
             {
               triggers: [
@@ -607,7 +607,7 @@ module Symbols
 
         {
           #'Getting back on track after a severe income drop' Rules
-          heading_code: 'H3.2',
+          heading_code: 'H2',
           content_rules: [
             {
               triggers: [
@@ -621,7 +621,7 @@ module Symbols
 
         {
           #'Looking forward after the COVID pandemic' Rules
-          heading_code: 'H3.3',
+          heading_code: 'H3',
           content_rules: [
             {
               triggers: [
@@ -643,7 +643,7 @@ module Symbols
 
         {
           #' Managing your money when you’re self employed ' Rules
-          heading_code: 'H4.1',
+          heading_code: 'H1',
           content_rules: [
             {
               triggers: [
@@ -657,7 +657,7 @@ module Symbols
 
         {
           #'Urgent help if you're self employed' Rules
-          heading_code: 'H4.2',
+          heading_code: 'H2',
           content_rules: [
             {
               triggers: [
@@ -680,7 +680,7 @@ module Symbols
 
         {
           #' Preparing for redundancy ' Rules
-          heading_code: 'H4.3',
+          heading_code: 'H3',
           content_rules: [
             {
               triggers: [
@@ -694,7 +694,7 @@ module Symbols
 
         {
           #' What to do if you`re unemployed' Rules
-          heading_code: 'H4.4',
+          heading_code: 'H4',
           content_rules: [
             {
               triggers: [
@@ -716,7 +716,7 @@ module Symbols
 
         {
           #'If you`ve missed one mortgage or rent payment' Rules
-          heading_code: 'H5.1',
+          heading_code: 'H1',
           content_rules: [
             {
               triggers: [
@@ -730,7 +730,7 @@ module Symbols
 
         {
           #' If you’re worried about rent payments (renting privately)' Rules
-          heading_code: 'H5.2',
+          heading_code: 'H2',
           content_rules: [
             {
               triggers: [
@@ -765,7 +765,7 @@ module Symbols
 
         {
           #' If you’re worried about rent payments (social housing' Rules
-          heading_code: 'H5.3',
+          heading_code: 'H3',
           content_rules: [
             {
               triggers: [
@@ -800,7 +800,7 @@ module Symbols
 
         {
           #' If you’re worried about mortgage payments ' Rules
-          heading_code: 'H5.4',
+          heading_code: 'H4',
           content_rules: [
             {
               triggers: [
@@ -839,7 +839,7 @@ module Symbols
 
         {
           #'If you’re behind with rent payments because of COVID-19' Rules
-          heading_code: 'H5.5',
+          heading_code: 'H5',
           content_rules: [
             {
               triggers: [
@@ -874,7 +874,7 @@ module Symbols
 
         {
           #'If you’re behind with mortgage payments because of COVID-19' Rules
-          heading_code: 'H5.6',
+          heading_code: 'H6',
           content_rules: [
             {
               triggers: [
@@ -922,7 +922,7 @@ module Symbols
         {
           #'If you`ve missed one payment' Rules
           #Q7A1 or Q7A2 or Q7A3 or Q7A4 or Q7A5 or Q7A6 or Q7A7 or Q7A8 or Q7A9
-          heading_code: 'H6.01',
+          heading_code: 'H1',
           content_rules: [
             {
               triggers: [
@@ -936,7 +936,7 @@ module Symbols
 
         {
           #'What to do about paying your Council Tax (Domestic Rates Northern Ireland)' Rules
-          heading_code: 'H6.02',
+          heading_code: 'H2',
           content_rules: [
             {
               #Q7A1, Q4A1 and Q0A1 or Q0A3 or Q0A4
@@ -1015,7 +1015,7 @@ module Symbols
 
         {
           #'What to do about paying your gas or electricity bill' Rules
-          heading_code: 'H6.03',
+          heading_code: 'H3',
           content_rules: [
             {
               #Q7A2, Q4A1
@@ -1054,7 +1054,7 @@ module Symbols
 
         {
           #'What to do about payments to DWP/HMRC' Rules
-          heading_code: 'H6.04',
+          heading_code: 'H4',
           content_rules: [
             {
               #Q7A3, Q4A1
@@ -1093,7 +1093,7 @@ module Symbols
 
         {
           #'What to do about paying your TV Licence' Rules
-          heading_code: 'H6.05',
+          heading_code: 'H5',
           content_rules: [
             {
               #Q7A4, Q4A1
@@ -1132,7 +1132,7 @@ module Symbols
 
         {
           #'What to do about paying your Income Tax bill' Rules
-          heading_code: 'H6.06',
+          heading_code: 'H6',
           content_rules: [
             {
               #Q7A5, Q4A1
@@ -1171,7 +1171,7 @@ module Symbols
 
         {
           #'What to do about paying your child maintenance ' Rules
-          heading_code: 'H6.07',
+          heading_code: 'H7',
           content_rules: [
             {
               #Q7A6, Q4A1
@@ -1210,7 +1210,7 @@ module Symbols
 
         {
           #'What to do about paying court fines' Rules
-          heading_code: 'H6.08',
+          heading_code: 'H8',
           content_rules: [
             {
               #Q7A7, Q4A1 and Q0A1 or Q0A4
@@ -1325,7 +1325,7 @@ module Symbols
 
         {
           #'What to do about hire purchase agreements' Rules
-          heading_code: 'H6.09',
+          heading_code: 'H9',
           content_rules: [
             {
               #Q7A8, Q4A1
@@ -1364,7 +1364,7 @@ module Symbols
 
         {
           #'What to do about car parking fines?' Rules
-          heading_code: 'H6.10',
+          heading_code: 'H10',
           content_rules: [
             {
               #Q7A9, Q4A1 and Q0A1 or Q0A4
@@ -1487,7 +1487,7 @@ module Symbols
 
         {
           #'Personal loan payments' Rules
-          heading_code: 'H7.01',
+          heading_code: 'H1',
           content_rules: [
             #Q9A1, Q4A1 HIDE IF Q8A2 CHECKED
             {
@@ -1530,7 +1530,7 @@ module Symbols
 
       {
           #'Water bill' Rules
-          heading_code: 'H7.02',
+          heading_code: 'H2',
           content_rules: [
             #Q9A2, Q4A1
             {
@@ -1569,7 +1569,7 @@ module Symbols
 
         {
           #'Mobile phone, TV or broadband' Rules
-          heading_code: 'H7.03',
+          heading_code: 'H3',
           content_rules: [
             #Q8A3, Q4A1
             {
@@ -1608,7 +1608,7 @@ module Symbols
 
         {
           #'Credit card payments' Rules
-          heading_code: 'H7.04',
+          heading_code: 'H4',
           content_rules: [
             #Q9A4, Q4A1 HIDE IF Q8A3 CHECKED
             {
@@ -1651,7 +1651,7 @@ module Symbols
 
         {
           #'Store card payments' Rules
-          heading_code: 'H7.05',
+          heading_code: 'H5',
           content_rules: [
             #Q9A5, Q4A1 HIDE IF Q8A4 CHECKED
             {
@@ -1694,7 +1694,7 @@ module Symbols
 
         {
           #'Car finance payments' Rules
-          heading_code: 'H7.06',
+          heading_code: 'H6',
           content_rules: [
             #Q9A6, Q4A1 HIDE IF Q8A5 CHECKED
             {
@@ -1737,7 +1737,7 @@ module Symbols
 
         {
           #'Buy now pay later payments (eg Klarma)' Rules
-          heading_code: 'H7.07',
+          heading_code: 'H7',
           content_rules: [
             #Q9A7, Q4A1 HIDE IF Q8A6 CHECKED
             {
@@ -1780,7 +1780,7 @@ module Symbols
 
         {
           #'Rent to own payments' Rules
-          heading_code: 'H7.08',
+          heading_code: 'H8',
           content_rules: [
             #Q9A8, Q4A1 HIDE IF Q8A7 CHECKED
             {
@@ -1823,7 +1823,7 @@ module Symbols
 
         {
           #'Payday loan payments' Rules
-          heading_code: 'H7.09',
+          heading_code: 'H9',
           content_rules: [
             #Q9A9, Q4A1 HIDE IF Q8A8 CHECKED
             {
@@ -1866,7 +1866,7 @@ module Symbols
 
         {
           #'Pawnbroker payments' Rules
-          heading_code: 'H7.10',
+          heading_code: 'H10',
           content_rules: [
             #Q9A10, Q4A1 HIDE IF Q8A9 CHECKED
             {
@@ -1909,7 +1909,7 @@ module Symbols
 
         {
           #'Payments to family and friends' Rules
-          heading_code: 'H7.11',
+          heading_code: 'H11',
           content_rules: [
             #Q9A11, Q4A1
             {
@@ -1955,7 +1955,7 @@ module Symbols
       heading_rules: [
         {
           #'If you're thinking of borrowing money' Rules
-          heading_code: 'H8.1',
+          heading_code: 'H1',
           content_rules: [
             #Q11A1, Q4A1
             {
@@ -2000,7 +2000,7 @@ module Symbols
       heading_rules: [
         {
           #' If you’re thinking about using your pension pot to pay off debts ' Rules
-          heading_code: 'H9.1',
+          heading_code: 'H1',
           content_rules: [
             #Q12A2
             {
@@ -2015,7 +2015,7 @@ module Symbols
 
         {
           #' If you’re thinking about using equity in your home to pay off debts ' Rules
-          heading_code: 'H9.2',
+          heading_code: 'H2',
           content_rules: [
             #Q12A1 or Q12A3
             {
@@ -2030,7 +2030,7 @@ module Symbols
 
         {
           #'If you're thinking of using your savings to pay off debts' Rules
-          heading_code: 'H9.3',
+          heading_code: 'H3',
           content_rules: [
             #Q12A4
             {
@@ -2051,7 +2051,7 @@ module Symbols
       heading_rules: [
         {
           #' If you’re thinking about cancelling insurance ' Rules
-          heading_code: 'H10.1',
+          heading_code: 'H1',
           content_rules: [
             #Q13A1 or Q13A2
             {
@@ -2073,7 +2073,7 @@ module Symbols
       heading_rules: [
         {
           #' If money worries are affecting your mental health ' Rules
-          heading_code: 'H11.1',
+          heading_code: 'H1',
           content_rules: [
             #Q14A1 or Q14A2
             {

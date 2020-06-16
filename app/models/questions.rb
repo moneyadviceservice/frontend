@@ -106,7 +106,7 @@ class Questions
 
   #Obtain the content rendered visibleby by a given heading_rule for
   def obtain_content_for_heading(heading_rule, answers_hash)
-    content_array  =  heading_rule[:content_rules].inject([]) do |content_array_accumulator, content_rule |
+    content  =  heading_rule[:content_rules].inject('') do |content_accumulator, content_rule |
       #See docs for `obtain_trigger_masks` to understand how the masks are calculated
       #At this level `content_rule[:mask]` is simply the expected results of the triggers.
       #It is compared with the combined trigger result to decide whether the content governed by the triggers is displayed or not.
@@ -119,19 +119,21 @@ class Questions
       content_visible = content_rule[:mask] == result_flags
       Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags},  content_visible:#{content_visible}")
 
-      #TODO: This is where we shall request the article from CMS and inject it as an element in the content array
-      #For now we are simply placing the CMS URL in there
       Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
-      content_array_accumulator << content_rule[:article] if content_visible
+      content_accumulator += cms_content(content_rule[:article]) if content_visible
 
-      content_array_accumulator
+      content_accumulator
     end
 
-    #TODO: no need for an array here. clean up
-    content = ''
-    content = content_array[0] unless content_array.empty?
-
     content
+  end
+
+  def cms_content(slug)
+    action_plan_page = Mas::Cms::ActionPlan.find(slug, locale: I18n.locale, cached: true)
+    action_plan_page.body
+  rescue StandardError => ex
+    Rails.logger.error "Failed to load content from CMS. Slug: #{slug}; Ex: #{ex}"
+    "ERROR: CMS CONTENT '#{slug}' NOT AVAILABLE"
   end
 
   #TODO: update documentation for last minute fixes in logic

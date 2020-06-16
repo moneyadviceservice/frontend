@@ -148,7 +148,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       questionClasses.push(this.className); 
     }); 
 
-    activeIndex = questionClasses.indexOf('l-c19_diagnostics__question ' + this.activeClass); 
+    activeIndex = questionClasses.indexOf('l-money_navigator__question ' + this.activeClass); 
 
     $(this.$questions[activeIndex]).removeClass(this.activeClass); 
 

@@ -1,5 +1,8 @@
-describe('MoneyNavigatorQuestions', function() {
+describe.only('MoneyNavigatorQuestions', function() {
   'use strict';
+
+  var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
+  var dataLayerMock = sinon.mock(dataLayer);
 
   beforeEach(function(done) {
     var self = this;
@@ -38,23 +41,126 @@ describe('MoneyNavigatorQuestions', function() {
     });
   });
 
+  describe('udpateAnalytics method', function() {
+    var dataLayer = dataLayerMock.object;
+
+    beforeEach(function() {
+      this.obj._updateDOM(); 
+    }); 
+
+    it('Checks the dataLayer object is updated correctly when the get started button is clicked', function() {
+      var $getStartedBtn = this.component.find('[data-get-started]'), 
+          inputs = this.component.find('input[name="questions[q0]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($getStartedBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(2); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q0'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q0A1'); 
+
+      inputs[2].checked = true;
+      this.obj._updateAnalytics($getStartedBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(3); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q0'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q0A3'); 
+    }); 
+
+    it('Checks the dataLayer object is updated correctly when the continue button is clicked for single response questions', function() {
+      var $continueBtn = this.component.find('[data-question-id="q1"]').find('[data-continue]'); 
+      var inputs = this.component.find('input[name="questions[q1]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(5); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q1'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q1A1'); 
+
+      expect(dataLayer.length).to.equal(5); 
+      expect(dataLayer[dataLayer.length - 1].event).to.equal('gtm_question_custom'); 
+      expect(dataLayer[dataLayer.length - 1].eventQuestion).to.equal('A custom question'); 
+      expect(dataLayer[dataLayer.length - 1].eventResponse).to.equal('A custom response'); 
+
+      inputs[1].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q1'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q1A2'); 
+
+      expect(dataLayer.length).to.equal(7); 
+      expect(dataLayer[dataLayer.length - 1].event).to.equal('gtm_question_custom'); 
+      expect(dataLayer[dataLayer.length - 1].eventQuestion).to.equal('A custom question'); 
+      expect(dataLayer[dataLayer.length - 1].eventResponse).to.equal('Another custom response'); 
+    }); 
+
+    it('Checks the dataLayer object is updated correctly when the continue button is clicked for multiple response questions', function() {
+      var $continueBtn = this.component.find('[data-question-id="q2"]').find('[data-continue]'); 
+      var inputs = this.component.find('input[name="questions[q2][]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(8); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A1'); 
+
+      inputs[0].checked = false;
+      inputs[1].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(9); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2'); 
+
+      inputs[2].checked = true;
+      this.obj._updateAnalytics($continueBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(10); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('Q2'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q2A2-Q2A3'); 
+    }); 
+
+    it('Checks the dataLayer object is updated correctly when the submit button is clicked', function() {
+      var $submitBtn = this.component.find('[data-question-id="q3"]').find('[data-submit]'); 
+      var inputs = this.component.find('input[name="questions[q3]"]'); 
+
+      inputs[0].checked = true;
+      this.obj._updateAnalytics($submitBtn[0], dataLayerMock.object);
+
+      expect(dataLayer.length).to.equal(12); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q3'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q3A1'); 
+      expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('submit');
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q0A1_Q0A3_Q1A1_Q1A2_Q2A1_Q2A2_Q2A2-Q2A3_Q3A1'); 
+    }); 
+  }); 
+
   describe('updateDOM method', function() {
     it('Makes correct changes to the DOM', function() {
       this.obj._updateDOM(); 
 
-      expect(this.component.find('[data-submit]').length).to.equal(0);
-
       expect($(this.questions[0]).find('[data-get-started]').length).to.equal(1); 
       expect($(this.questions[1]).find('[data-get-started]').length).to.equal(0); 
       expect($(this.questions[2]).find('[data-get-started]').length).to.equal(0); 
+      expect($(this.questions[3]).find('[data-get-started]').length).to.equal(0); 
 
       expect($(this.questions[0]).find('[data-continue]').length).to.equal(0); 
       expect($(this.questions[1]).find('[data-continue]').length).to.equal(1); 
       expect($(this.questions[2]).find('[data-continue]').length).to.equal(1); 
+      expect($(this.questions[3]).find('[data-continue]').length).to.equal(0); 
 
       expect($(this.questions[0]).find('[data-back]').length).to.equal(0); 
       expect($(this.questions[1]).find('[data-back]').length).to.equal(1); 
       expect($(this.questions[2]).find('[data-back]').length).to.equal(1); 
+      expect($(this.questions[3]).find('[data-back]').length).to.equal(1); 
+
+      expect($(this.questions[0]).find('[data-submit]').length).to.equal(0); 
+      expect($(this.questions[1]).find('[data-submit]').length).to.equal(0); 
+      expect($(this.questions[2]).find('[data-submit]').length).to.equal(0); 
+      expect($(this.questions[3]).find('[data-submit]').length).to.equal(1); 
 
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
@@ -62,47 +168,58 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe('Get started button', function() {
-    it('Calls the correct method with the correct argument when clicked', function() {
-      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
-
-      this.obj._updateDOM(); 
-      this.component.find('[data-get-started]').click(); 
-
-      expect(updateDisplaySpy.calledWith('next')).to.be.true; 
-
-      updateDisplaySpy.restore(); 
+  describe('Button events', function() {
+    beforeEach(function() {
+      this.updateAnalyticsSpy = sinon.spy(this.obj, '_updateAnalytics'); 
+      this.updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+      this.obj._updateDOM(dataLayerMock.object); 
     }); 
-  }); 
 
-  describe('Continue button', function() {
-    it('Calls the correct method with the correct argument when clicked', function() {
-      var updateDisplaySpy;
-
-      this.obj._updateDOM(); 
-
-      updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay');
-      this.component.find('[data-continue]').first().trigger('click'); 
-      expect(updateDisplaySpy.calledWith('next')).to.be.true; 
-      updateDisplaySpy.restore(); 
-
-      updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay');
-      this.component.find('[data-continue]').last().trigger('click', 'preventDefault'); 
-      expect(updateDisplaySpy.calledWith('next')).to.be.false; 
-      updateDisplaySpy.restore(); 
+    afterEach(function() {
+      this.updateAnalyticsSpy.restore(); 
+      this.updateDisplaySpy.restore(); 
     }); 
-  }); 
 
-  describe('Back button', function() {
-    it('Calls the correct method with the correct argument when clicked', function() {
-      var updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+    describe('Get started button', function() {
+      it('Calls the correct methods with the correct arguments when clicked', function() {
+        var $getStartedBtn = this.component.find('[data-get-started]'); 
 
-      this.obj._updateDOM(); 
-      this.component.find('[data-back]').click(); 
+        $getStartedBtn.trigger('click'); 
 
-      expect(updateDisplaySpy.calledWith('prev')).to.be.true; 
+        expect(this.updateDisplaySpy.calledWith('next')).to.be.true; 
+        expect(this.updateAnalyticsSpy.calledWith($getStartedBtn[0], dataLayerMock.object)).to.be.true; 
+      }); 
+    }); 
 
-      updateDisplaySpy.restore(); 
+    describe('Continue button', function() {
+      it('Calls the correct methods with the correct arguments when clicked', function() {
+        var $continueBtn = this.component.find('[data-continue]'); 
+
+        $continueBtn.trigger('click'); 
+
+        expect(this.updateDisplaySpy.calledWith('next')).to.be.true; 
+        expect(this.updateAnalyticsSpy.calledWith($continueBtn[0], dataLayerMock.object)).to.be.true; 
+      }); 
+    }); 
+
+    describe('Back button', function() {
+      it('Calls the correct method with the correct argument when clicked', function() {
+        var $backBtn = this.component.find('[data-back]'); 
+
+        $backBtn.trigger('click'); 
+
+        expect(this.updateDisplaySpy.calledWith('prev')).to.be.true; 
+      }); 
+    }); 
+
+    describe('Submit button', function() {
+      it('Calls the correct method with the correct argument when clicked', function() {
+        var $submitBtn = this.component.find('[data-submit]'); 
+
+        $submitBtn.trigger('click', 'preventDefault'); 
+
+        expect(this.updateAnalyticsSpy.calledWith($submitBtn[0], dataLayerMock.object)).to.be.true; 
+      }); 
     }); 
   }); 
 
@@ -124,7 +241,7 @@ describe('MoneyNavigatorQuestions', function() {
 
   describe('setUpMultipleQuestions method', function() {
     beforeEach(function() {
-      var multipleQuestion = this.questions[1]; 
+      var multipleQuestion = this.questions[2]; 
 
       this.responses = $(multipleQuestion).find('input');
       this.obj._setUpMultipleQuestions(); 
@@ -151,7 +268,7 @@ describe('MoneyNavigatorQuestions', function() {
 
   describe('updateMultipleQuestions method', function() {
     it('Updates the state of inputs correctly when called', function() {
-      var multipleQuestion = this.questions[1]; 
+      var multipleQuestion = this.questions[2]; 
       var responses = $(multipleQuestion).find('input[type="checkbox"]');
 
       this.obj._setUpMultipleQuestions(); 
@@ -171,4 +288,6 @@ describe('MoneyNavigatorQuestions', function() {
       expect(responses[2].disabled).to.be.true; 
     }); 
   }); 
+
+  dataLayerMock.verify(); 
 });

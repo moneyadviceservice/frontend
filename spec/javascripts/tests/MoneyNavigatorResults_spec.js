@@ -1,4 +1,4 @@
-describe('MoneyNavigatorResults', function() {
+describe.only('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {

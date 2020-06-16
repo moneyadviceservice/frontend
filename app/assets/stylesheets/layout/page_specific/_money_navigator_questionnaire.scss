@@ -1,4 +1,4 @@
-.l-c19_diagnostics {
+.l-money_navigator {
 	.question__actions {
 		@extend %clearfix;
 		@include row(12); 
@@ -48,7 +48,7 @@
 	}
 }
 
-.l-c19_diagnostics__subheading {
+.l-money_navigator__subheading {
 	color: $color-black; 
 	background: $color-grey-pale;	
 	padding: $baseline-unit * 2 $default-gutter * 2; 
@@ -59,12 +59,12 @@
 	margin: 0 0 $baseline-unit * 4;
 }
 
-.l-c19_diagnostics__questions {
+.l-money_navigator__questions {
 	list-style: none;
 	padding: 0;
 }
 
-.l-c19_diagnostics__question {
+.l-money_navigator__question {
 	list-style: none;
 	padding: 0;
 
@@ -122,7 +122,7 @@
 
 // Component initialised
 [data-dough-money-navigator-questions-initialised="yes"] {
-	.l-c19_diagnostics__question {
+	.l-money_navigator__question {
 		display: none; 
 
 		&.question--active {

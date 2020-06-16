@@ -55,7 +55,6 @@ describe('MoneyNavigatorResults', function() {
 
       this.$headingContent.each(function() {
         expect($(this).hasClass(hiddenClass)).to.be.true; 
-        expect($(this).find('[data-overlay-hide]').length).to.equal(1); 
       }); 
 
       this.$sections.each(function() {
@@ -77,6 +76,7 @@ describe('MoneyNavigatorResults', function() {
       var toggleSectionSpy = sinon.stub(this.obj, '_toggleSection'); 
       var showHeadingSpy = sinon.spy(this.obj, '_showHeading'); 
       var hideHeadingSpy = sinon.spy(this.obj, '_hideHeading'); 
+      var sectionResizeStub = sinon.stub(this.obj, '_sectionResize'); 
       var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
       var section_1_btn = $(this.$sectionTitles[1]).find('button'); 
       var section_2_btn = $(this.$sectionTitles[2]).find('button'); 
@@ -108,10 +108,29 @@ describe('MoneyNavigatorResults', function() {
       $(overlayHide).trigger('click');
       expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
 
+      this.$overlay.trigger('click'); 
+      expect(hideHeadingSpy.calledWith()).to.be.true; 
+
+      $(window).trigger('resize'); 
+      expect(sectionResizeStub.called).to.be.false; 
+
       toggleSectionSpy.restore(); 
       showHeadingSpy.restore(); 
       hideHeadingSpy.restore(); 
+      sectionResizeStub.restore(); 
     }); 
+  }); 
+
+  describe('sectionResize method', function() {
+    it ('Resizes a given section__content element', function() {
+      var section = this.$sections[0]; 
+      var $sectionContent = $(section).find('.section__content'); 
+
+      $sectionContent.height(1); 
+
+      this.obj._sectionResize(section); 
+      expect($sectionContent.height()).to.be.above(1); 
+    })
   }); 
 
   describe('toggleSection method', function() {
@@ -126,23 +145,22 @@ describe('MoneyNavigatorResults', function() {
       this.obj._updateDOM(); 
 
       this.obj._toggleSection(section_0_btn);
-
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(64); 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
       expect(parseFloat($(section_1_content)[0].style.height)).to.equal(0); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(64); 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(32); 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
 
       this.obj._toggleSection(section_0_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
       expect(parseFloat($(section_0_content)[0].style.height)).to.equal(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(32); 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
@@ -153,11 +171,6 @@ describe('MoneyNavigatorResults', function() {
   })
 
   describe('showHeading method', function() {
-    // This method:
-    // - permanently sets the done class
-    // - permanently removes the hidden class
-    // - shows the overlay
-    // The re-addition of the hidden class and hiding the overlay are dealt with by clicking the close icon
     it('Sets classes correctly when the method is called', function() {
       var heading_0 = this.$headings[0]; 
       var heading_0_btn = $(heading_0).find('button'); 
@@ -223,6 +236,12 @@ describe('MoneyNavigatorResults', function() {
       this.obj._showHeading(heading_0_btn); 
 
       this.obj._hideHeading(heading_0_closeBtn);
+      expect($(heading_0_content).hasClass(hiddenClass)).to.be.true; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.true; 
+
+      this.obj._showHeading(heading_0_btn); 
+
+      this.obj._hideHeading();
       expect($(heading_0_content).hasClass(hiddenClass)).to.be.true; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.true; 
     }); 

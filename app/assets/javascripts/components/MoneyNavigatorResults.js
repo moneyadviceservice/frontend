@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseComponent, utilities) {
   'use strict';
 
   var MoneyNavigatorResults;
@@ -31,18 +31,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     var _this = this; 
     var sectionIcon = document.createElement('span'); 
     var headingTitleIcon = document.createElement('span'); 
-    var closeIcon = document.createElement('span'); 
 
     $(sectionIcon).addClass('section__title__icon'); 
     $(headingTitleIcon).addClass('heading__title__icon'); 
-    $(closeIcon)
-      .attr('data-overlay-hide', true)
-      .addClass('overlay__hide mntpanelclose'); 
 
     // Adds hidden classes to headings content
-    this.$headingContent
-      .addClass('heading__content' + this.hiddenSuffix)
-      .append(closeIcon); 
+    this.$headingContent.addClass('heading__content' + this.hiddenSuffix); 
 
     // Adds collapsed classes to sections
     this.$sections
@@ -68,25 +62,50 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     }); 
 
     this.$headingContent.find('[data-overlay-hide]').on('click', function(e) {
+      e.preventDefault(); 
       _this._hideHeading(e.target); 
     }); 
+
+    this.$overlay.on('click', function() {
+      _this._hideHeading(); 
+    }); 
+
+    $(window).on(
+      'resize',
+      utilities.debounce(
+        _this._sectionResize.bind(_this, this.$sections), 
+        100
+      ) 
+    );
   };
+
+  MoneyNavigatorResults.prototype._sectionResize = function(sections) {
+    var _this = this; 
+
+    $(sections).each(function() {
+      var $content = $(this).find('.section__content'); 
+      var height = 0; 
+
+      if (!$(this).hasClass(_this.collapsedClass)) {
+        $content.children().each(function() {
+          height += $(this).outerHeight(true);
+        }); 
+      }
+
+      $content.height(height);     
+    }); 
+  }
 
   MoneyNavigatorResults.prototype._toggleSection = function(btn) {
     var $section = $(btn).parents('[data-section]'); 
-    var $content = $section.find('.section__content'); 
-    var height = 0; 
 
     if ($section.hasClass(this.collapsedClass)) {
       $section.removeClass(this.collapsedClass); 
-      $content.children().each(function() {
-        height += $(this).outerHeight(true);
-      }); 
     } else {
       $section.addClass(this.collapsedClass); 
     }
 
-    $content.height(height); 
+    this._sectionResize($section); 
   }; 
 
   MoneyNavigatorResults.prototype._showHeading = function(btn) {
@@ -109,11 +128,22 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }; 
 
   MoneyNavigatorResults.prototype._hideHeading = function(btn) {
-    var $headingContent = $(btn).parents('[data-heading-content]'); 
+    var content; 
     var hiddenClass = 'heading__content' + this.hiddenSuffix; 
 
-    if (!$headingContent.hasClass(hiddenClass)) {
-      $headingContent.addClass(hiddenClass); 
+    if (btn) {
+      content = $(btn).parents('[data-heading-content]'); 
+    } else {
+      this.$headingContent.each(function() {
+        if (!$(this).hasClass(hiddenClass)) {
+          content = this;
+          return; 
+        }
+      }); 
+    }
+
+    if (!$(content).hasClass(hiddenClass)) {
+      $(content).addClass(hiddenClass); 
     }
 
     if (!this.$overlay.hasClass(this.hiddenClass)) {

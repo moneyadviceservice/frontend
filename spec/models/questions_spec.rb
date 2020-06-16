@@ -3,6 +3,8 @@ RSpec.describe Questions, type: :model do
 
   shared_examples 'regionally valid content' do
     it 'displays the appropriate heading and content' do
+      allow_any_instance_of(Questions).to receive(:cms_content) {|me, slug| "#{ slug }"}
+      results =  model.results
       expect(results).to include({
         "section_code" => section_code,
         "headings" => array_including(
@@ -17,6 +19,8 @@ RSpec.describe Questions, type: :model do
 
   shared_examples 'valid content' do
     it 'displays the appropriate heading and content' do
+      allow_any_instance_of(Questions).to receive(:cms_content) {|me, slug| "#{ slug }"}
+      results =  model.results
       expect(results).to include({
         "section_code" => section_code,
         "headings" => array_including(
@@ -31,21 +35,18 @@ RSpec.describe Questions, type: :model do
 
   shared_examples 'country specific content' do
     let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:results) { model.results }
 
     include_examples 'regionally valid content'
   end
 
   shared_examples 'uk specific content' do
     let(:model) { build("#{section}_#{country}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:results) { model.results }
 
     include_examples 'valid content'
   end
 
   shared_examples 'country agnostic content' do
     let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:results) { model.results }
 
     include_examples 'valid content'
   end

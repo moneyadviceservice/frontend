@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorResults', function() {
+describe('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -126,22 +126,23 @@ describe.only('MoneyNavigatorResults', function() {
       this.obj._updateDOM(); 
 
       this.obj._toggleSection(section_0_btn);
+
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(64); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.true; 
       expect(parseFloat($(section_1_content)[0].style.height)).to.equal(0); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_0_content)[0].style.height)).to.be.above(0); 
+      expect(parseFloat($(section_0_content)[0].style.height)).to.equal(64); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(32); 
 
       this.obj._toggleSection(section_0_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 
       expect(parseFloat($(section_0_content)[0].style.height)).to.equal(0); 
       expect($(section_1).hasClass(this.collapsedClass)).to.be.false; 
-      expect(parseFloat($(section_1_content)[0].style.height)).to.be.above(0); 
+      expect(parseFloat($(section_1_content)[0].style.height)).to.equal(32); 
 
       this.obj._toggleSection(section_1_btn);
       expect($(section_0).hasClass(this.collapsedClass)).to.be.true; 

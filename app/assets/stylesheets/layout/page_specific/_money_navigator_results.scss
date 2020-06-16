@@ -204,18 +204,24 @@ $transition-time: 0.4s;
 				transition-duration: $transition-time; 
 
 				.overlay__hide {
-					position: absolute;
-					top: $baseline-unit * 2;
-					right: $default-gutter * 2;
-					width: 20px;
-					height: 20px;
-					border: solid 1px; 
+				  float: right;
+				  margin-top: $baseline-unit * 2;
+				  display: inline;
+				  text-align: right;
+				  padding: $baseline-unit $baseline-unit * 4 $baseline-unit $baseline-unit;
+				  position: relative;
 
-					&:before {
-						content: 'X'; 
-						display: block; 
-						text-align: center;
-						line-height: 20px; 
+				  &:focus {
+				    outline: 3px solid $color-black;
+				  }
+
+					.overlay__hide__icon {
+						position: absolute;
+						width: 12px;
+						height: 12px;
+						right: $baseline-unit; 
+						top: 50%; 
+						transform: translateY(-50%);
 					}
 				}
 			}

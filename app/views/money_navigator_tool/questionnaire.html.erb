@@ -5,10 +5,10 @@
 
 <div class="l-container-tool">
   <main>
-    <div class="l-c19_diagnostics">
-      <h1 class="l-c19_diagnostics__heading"><%= t("money_navigator_tool.heading") %></h1>
+    <div class="l-money_navigator">
+      <h1 class="l-money_navigator__heading"><%= t("money_navigator_tool.heading") %></h1>
 
-      <h2 class="l-c19_diagnostics__subheading"><%= t("money_navigator_tool.subheading") %></h2>
+      <h2 class="l-money_navigator__subheading"><%= t("money_navigator_tool.subheading") %></h2>
 
       <%= form_for @model,
         url:money_navigator_tool_questionnaire_path, 
@@ -17,10 +17,10 @@
       %>
         <%= f.validation_summary %>
 
-        <ul class="l-c19_diagnostics__questions">
+        <ul class="l-money_navigator__questions">
           <% t("money_navigator_tool.questions").each_with_index do |question, index| %>
             <li
-              class="l-c19_diagnostics__question"
+              class="l-money_navigator__question"
               data-question
               <% if question[:type] == 'checkbox' %>
                 data-question-multiple

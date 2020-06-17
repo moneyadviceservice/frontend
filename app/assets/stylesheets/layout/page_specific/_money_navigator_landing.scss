@@ -1,0 +1,111 @@
+.l-money_navigator-landing {
+	section {
+		margin-top: $baseline-unit * 4; 
+
+		.landing__section-heading {
+			margin-top: 0; 
+		}
+
+		&:first-child {
+			margin-top: $baseline-unit * 10; 
+		}
+	}
+
+	.landing__actions {
+		@extend %clearfix;
+
+		width: 100%; 
+
+		@include respond-to($mq-l) {
+			@include row(12); 
+		}
+	}
+
+	.button--start {
+		@extend .button--primary; 
+
+		width: 100%; 
+
+		@include respond-to($mq-l) {
+			@include column(3);
+		}
+	}
+
+	.landing__crisis-help {
+		.callout {
+			p, a {
+				font-size: 1rem; 
+				line-height: 1.5; 
+			}
+
+			.crisis-help__cta {
+				display: block; 
+			}
+		}
+	}
+
+	.supporting-partners__list {
+		@include row(12); 
+
+		list-style: none;
+		padding: 0;
+		margin-top: 0; 
+		margin-bottom: 0; 
+
+		.supporting-partners__listitem {
+			@include column(6); 
+
+			@include respond-to($mq-s) {
+				@include column(4); 
+			}
+
+			@include respond-to($mq-l) {
+				@include column(3); 
+			}
+
+			.listitem__content {
+				display: block;
+				height: 0; 
+				padding-top: 417 / 626 * 100%; 
+				background-repeat: no-repeat;
+				background-size: cover; 
+
+				&.listitem__citizens_advice {
+					background-image: image_url('money_navigator_tool/partners/citizens_advice.png'); 
+				}
+
+				&.listitem__business_debtline {
+					background-image: image_url('money_navigator_tool/partners/business_debtline.png'); 
+				}
+
+				&.listitem__national_debtline {
+					background-image: image_url('money_navigator_tool/partners/national_debtline.png'); 
+				}
+
+				&.listitem__stepchange {
+					background-image: image_url('money_navigator_tool/partners/stepchange.png'); 
+				}
+
+				&.listitem__payplan {
+					background-image: image_url('money_navigator_tool/partners/payplan.png'); 
+				}
+
+				&.listitem__turn2us {
+					background-image: image_url('money_navigator_tool/partners/turn2us.png'); 
+				}
+
+				&.listitem__shelter {
+					background-image: image_url('money_navigator_tool/partners/shelter.png'); 
+				}
+
+				&.listitem__shelter_cymru {
+					background-image: image_url('money_navigator_tool/partners/shelter_cymru.png'); 
+				}
+
+				&.listitem__shelter_scotland {
+					background-image: image_url('money_navigator_tool/partners/shelter_scotland.png'); 
+				}
+			}
+		}
+	}
+}

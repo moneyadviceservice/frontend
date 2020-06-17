@@ -9,67 +9,58 @@
 			<section class="landing__intro">
 				<h1 class="l-money_navigator__heading"><%= t("money_navigator_tool.landing.intro.heading") %></h1>
 
-	      <h2 class="l-money_navigator__subheading">Know what to do next</h2>
+				<h2 class="l-money_navigator__subheading"><%= t("money_navigator_tool.landing.intro.subheading") %></h2>
 
-	      <p>The coronavirus lockdown measures are relaxing but they’ve affected millions of people. What this means for your finances will be very personal to you.</p>
+				<% t("money_navigator_tool.landing.intro.text.paras").each do |para| %>
+					<p><%= para %></p>
+				<% end %>
+			</section>
 
-				<p>So if you’re looking for money guidance but don’t know where to start, you’re not alone.</p>
-    	</section>
-
-    	<section class="landing__who-help">
-    		<h2>Who we can help</h2>
-
-    		<ul>
-    			<li>Your income is down and you’re worried about your future finances</li>
-    			<li>You’ve been furloughed and need help to get back on track, including after a payment holiday</li>
-    			<li>You’re facing redundancy or have lost your job</li>
-    			<li>You’re self-employed and work has dried up</li>
-    			<li>You want to make the most of money you’ve saved during lockdown</li>
-    		</ul>
-    	</section>
-
-    	<section class="landing__how-help">
-				<h2>Instant help</h2>
-
-				<p>Our Money Navigator tool gives you action plans based on your own situation.</p>
-
-				<p>Know in 30 seconds:</p>
+			<section class="landing__who-help">
+				<h2><%= t("money_navigator_tool.landing.who-help.heading") %></h2>
 
 				<ul>
-					<li>the money issues you need to tackle first</li>
-					<li>how to stay on top of bills and payments</li>
-					<li>What extra help and support you’re entitled to</li>
-					<li>Where you can get free advice for debt, housing or redundancy</li>
+					<% t("money_navigator_tool.landing.who-help.bullets").each do |bullet| %>
+						<li><%= bullet %></li>
+					<% end %>
 				</ul>
+			</section>
 
-				<a href="#">Get started</a>
-    	</section>
+			<section class="landing__how-help">
+				<h2><%= t("money_navigator_tool.landing.how-help.heading") %></h2>
 
-    	<section class="landing__crisis-help">
-    		<h2>Need help with debts right now?</h2>
-
-    		<p>If you’re really struggling and debts have already mounted up, you can find a free accredited debt adviser with our Debt Advice Locator</p>
-
-				<a href="#">Find a free debt adviser online</a>
-    	</section>
-
-    	<section class="landing__supporting-partners">
-    		<h2>Our supporting partners</h2>
-
-				<p>Our money guidance is supported by these key partners who are ready to help if you need further advice about the complex issues caused by coronavirus, including debt, benefits, housing and redundancy.</p>
+				<% t("money_navigator_tool.landing.how-help.paras").each do |para| %>
+					<p><%= para %></p>
+				<% end %>
 
 				<ul>
-					<li>Citizens Advice</li>
-					<li>Business Debtline</li>
-					<li>National Debtline</li>
-					<li>Stepchange</li>
-					<li>Payplan</li>
-					<li>Turn2us</li>
-					<li>Shelter England</li>
-					<li>Shelter Cymru</li>
-					<li>Shelter Scotland</li>
+					<% t("money_navigator_tool.landing.how-help.bullets").each do |bullet| %>
+						<li><%= bullet %></li>
+					<% end %>
 				</ul>
-    	</section>
-    </div>
-  </main>
+
+				<a href="#"><%= t("money_navigator_tool.landing.how-help.cta") %></a>
+			</section>
+
+			<section class="landing__crisis-help">
+				<h2><%= t("money_navigator_tool.landing.crisis-help.heading") %></h2>
+
+				<p><%= t("money_navigator_tool.landing.crisis-help.text") %></p>
+
+				<a href="#"><%= t("money_navigator_tool.landing.crisis-help.cta") %></a>
+			</section>
+
+			<section class="landing__supporting-partners">
+				<h2><%= t("money_navigator_tool.landing.supporting-partners.heading") %></h2>
+
+				<p><%= t("money_navigator_tool.landing.supporting-partners.text") %></p>
+
+				<ul>
+					<% t("money_navigator_tool.landing.supporting-partners.partners").each do |partner| %>
+						<li><%= partner %></li>
+					<% end %>
+				</ul>
+			</section>
+		</div>
+	</main>
 </div>

@@ -93,19 +93,14 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
 
   MoneyNavigatorResults.prototype._toggleSection = function(btn) {
     var $section = $(btn).parents('[data-section]'); 
-    var $content = $section.find('.section__content'); 
-    var height = 0; 
 
     if ($section.hasClass(this.collapsedClass)) {
       $section.removeClass(this.collapsedClass); 
-      $content.children().each(function() {
-        height += $(this).outerHeight(true);
-      }); 
     } else {
       $section.addClass(this.collapsedClass); 
     }
 
-    $content.height(height); 
+    this._sectionResize($section); 
   }; 
 
   MoneyNavigatorResults.prototype._showHeading = function(btn) {

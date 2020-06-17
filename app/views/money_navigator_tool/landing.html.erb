@@ -7,7 +7,7 @@
 	<main>
 		<div class="l-money_navigator-landing">
 			<section class="landing__intro">
-				<h1 class="l-money_navigator__heading"><%= t("money_navigator_tool.landing.intro.heading") %></h1>
+				<h1 class="l-money_navigator__heading landing__section-heading"><%= t("money_navigator_tool.landing.intro.heading") %></h1>
 
 				<h2 class="l-money_navigator__subheading"><%= t("money_navigator_tool.landing.intro.subheading") %></h2>
 
@@ -17,9 +17,9 @@
 			</section>
 
 			<section class="landing__who-help">
-				<h2><%= t("money_navigator_tool.landing.who-help.heading") %></h2>
+				<h3 class="landing__section-heading"><%= t("money_navigator_tool.landing.who-help.heading") %></h2>
 
-				<ul>
+				<ul class="list">
 					<% t("money_navigator_tool.landing.who-help.bullets").each do |bullet| %>
 						<li><%= bullet %></li>
 					<% end %>
@@ -27,37 +27,54 @@
 			</section>
 
 			<section class="landing__how-help">
-				<h2><%= t("money_navigator_tool.landing.how-help.heading") %></h2>
+				<h3 class="landing__section-heading"><%= t("money_navigator_tool.landing.how-help.heading") %></h2>
 
 				<% t("money_navigator_tool.landing.how-help.paras").each do |para| %>
 					<p><%= para %></p>
 				<% end %>
 
-				<ul>
+				<ul class="list">
 					<% t("money_navigator_tool.landing.how-help.bullets").each do |bullet| %>
 						<li><%= bullet %></li>
 					<% end %>
 				</ul>
 
-				<a href="#"><%= t("money_navigator_tool.landing.how-help.cta") %></a>
+				<div class="landing__actions">
+					<a href="#" class="button button--start">
+						<%= t("money_navigator_tool.landing.how-help.cta") %>
+					</a>
+				</div>
 			</section>
 
 			<section class="landing__crisis-help">
-				<h2><%= t("money_navigator_tool.landing.crisis-help.heading") %></h2>
+				<div class="callout callout--tool">
+					<span class="callout__icon" aria-hidden="true">
+						<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon callout__tool-icon" role="presentation">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--tool"></use>
+						</svg>
+					</span>
 
-				<p><%= t("money_navigator_tool.landing.crisis-help.text") %></p>
+					<h3><%= t("money_navigator_tool.landing.crisis-help.heading") %></h3>
 
-				<a href="#"><%= t("money_navigator_tool.landing.crisis-help.cta") %></a>
+					<p>
+						<%= t("money_navigator_tool.landing.crisis-help.text") %>
+						<a href="#" class="crisis-help__cta"><%= t("money_navigator_tool.landing.crisis-help.cta") %></a>
+					</p>
+				</div>
 			</section>
 
 			<section class="landing__supporting-partners">
-				<h2><%= t("money_navigator_tool.landing.supporting-partners.heading") %></h2>
+				<h3 class="landing__section-heading"><%= t("money_navigator_tool.landing.supporting-partners.heading") %></h2>
 
 				<p><%= t("money_navigator_tool.landing.supporting-partners.text") %></p>
 
-				<ul>
+				<ul class="supporting-partners__list">
 					<% t("money_navigator_tool.landing.supporting-partners.partners").each do |partner| %>
-						<li><%= partner %></li>
+						<li class="supporting-partners__listitem">
+							<span class="listitem__content listitem__<%= partner.parameterize.underscore %>">
+								<span class="visually-hidden"><%= partner %></span>
+							</span>
+						</li>
 					<% end %>
 				</ul>
 			</section>

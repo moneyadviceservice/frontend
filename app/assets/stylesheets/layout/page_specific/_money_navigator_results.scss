@@ -121,8 +121,8 @@ $transition-time: 0.4s;
 				}
 			}
 
-			.heading__content__title {
-				margin-top: 0; 
+			.heading__content__title, .overlay__hide {
+				display: none; 
 			}
 		}
 	}
@@ -236,6 +236,11 @@ $transition-time: 0.4s;
 						transform: translateY(-50%) rotate(180deg); 
 					}			
 				}
+			}
+
+			.heading__content__title {
+				display: block; 
+				margin-top: 0; 
 			}
 		}
 	}

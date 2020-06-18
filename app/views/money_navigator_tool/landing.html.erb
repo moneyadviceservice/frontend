@@ -40,9 +40,9 @@
 				</ul>
 
 				<div class="landing__actions">
-					<a href="/en/tools/money-navigator-tool/questionnaire" class="button button--start">
-						<%= t("money_navigator_tool.landing.how-help.cta") %>
-					</a>
+					<%= link_to(t("money_navigator_tool.landing.how-help.cta.url"), class: 'button button--start') do %>
+						<%= t("money_navigator_tool.landing.how-help.cta.text") %>
+					<% end %>
 				</div>
 			</section>
 
@@ -58,7 +58,10 @@
 
 					<p>
 						<%= t("money_navigator_tool.landing.crisis-help.text") %>
-						<a href="/en/tools/debt-advice-locator" class="crisis-help__cta"><%= t("money_navigator_tool.landing.crisis-help.cta") %></a>
+
+						<%= link_to(t("money_navigator_tool.landing.crisis-help.cta.url"), class: 'crisis-help__cta') do %>
+							<%= t("money_navigator_tool.landing.crisis-help.cta.text") %>
+						<% end %>
 					</p>
 				</div>
 			</section>

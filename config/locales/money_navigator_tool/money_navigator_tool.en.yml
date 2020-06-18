@@ -126,98 +126,98 @@ en:
         text: Are you behind with rent or mortgage payments?
         note: 'Note: please answer "Yes" if you are on an agreed payment holiday/break'
         responses:
-          - code: A1
-            text: 'No'
-          - code: A2
-            text: No, but I am worried that I might fall behind on rent (private renting)
-          - code: A3
-            text: No, but I am worried that I might fall behind on rent (council/social housing)
-          - code: A4
-            text: No, but I am worried that I might fall behind on mortgage payments
-          - code: A5
-            text: Yes, I am behind with my rent because of coronavirus
-          - code: A6
-            text: Yes, I am behind with my mortgage because of coronavirus
           - code: A7
+            text: 'No'
+          - code: A1
+            text: No, but I am worried that I might fall behind on rent (private renting)
+          - code: A2
+            text: No, but I am worried that I might fall behind on rent (council/social housing)
+          - code: A3
+            text: No, but I am worried that I might fall behind on mortgage payments
+          - code: A4
+            text: Yes, I am behind with my rent because of coronavirus
+          - code: A5
+            text: Yes, I am behind with my mortgage because of coronavirus
+          - code: A6
             text: Yes, but they are arrears unrelated to coronavirus
       - code: Q7
         type: checkbox
         text: Are you behind on any of these bills?
         explainer: Choose all that apply
         responses:
-          - code: A1
-            text: 'No'
-          - code: A2
-            text: Council tax
-          - code: A3
-            text: Gas or electric
-          - code: A4
-            text: Payments to DWP/HMRC (eg tax credit overpayments, loan repayments)
-          - code: A5
-            text: TV Licence
-          - code: A6
-            text: Income tax
-          - code: A7
-            text: Child maintenance payments
-          - code: A8
-            text: Court fines
-          - code: A9
-            text: Hire purchase payments
           - code: A10
+            text: 'No'
+          - code: A1
+            text: Council tax
+          - code: A2
+            text: Gas or electric
+          - code: A3
+            text: Payments to DWP/HMRC (eg tax credit overpayments, loan repayments)
+          - code: A4
+            text: TV Licence
+          - code: A5
+            text: Income tax
+          - code: A6
+            text: Child maintenance payments
+          - code: A7
+            text: Court fines
+          - code: A8
+            text: Hire purchase payments
+          - code: A9
             text: Cark parking fines
       - code: Q8
         type: checkbox
         text: Have you taken out a payment break or holiday on loans or credit?
         explainer: Choose all that apply
         responses:
-          - code: A1
-            text: 'No'
-          - code: A2
-            text: Mortgage
-          - code: A3
-            text: Personal loan
-          - code: A4
-            text: Credit card
-          - code: A5
-            text: Store card
-          - code: A6
-            text: Car finance
-          - code: A7
-            text: Buy now pay later (eg Klarna)
-          - code: A8
-            text: Rent to own
-          - code: A9
-            text: Payday loan
           - code: A10
+            text: 'No'
+          - code: A1
+            text: Mortgage
+          - code: A2
+            text: Personal loan
+          - code: A3
+            text: Credit card
+          - code: A4
+            text: Store card
+          - code: A5
+            text: Car finance
+          - code: A6
+            text: Buy now pay later (eg Klarna)
+          - code: A7
+            text: Rent to own
+          - code: A8
+            text: Payday loan
+          - code: A9
             text: Pawnbroker arrangement
       - code: Q9
         type: checkbox
         text: Will you struggle to make future repayments on these loans or credit?
         explainer: Choose all that apply
         responses:
-          - code: A1
-            text: 'No'
-          - code: A2
-            text: Personal loan
-          - code: A3
-            text: Water bill
-          - code: A4
-            text: Mobile phone/TV or broadband
-          - code: A5
-            text: Credit card
-          - code: A6
-            text: Store card
-          - code: A7
-            text: Car finance
-          - code: A8
-            text: Buy now pay later (eg Klarna)
-          - code: A9
-            text: Rent to own
-          - code: A10
-            text: Payday loan
-          - code: A11
-            text: Pawnbroker loan
           - code: A12
+            text: 'No'
+          - code: A1
+            text: Personal loan
+          - code: A2
+            text: Water bill
+          - code: A3
+            text: Mobile phone/TV or broadband
+          - code: A4
+            text: Credit card
+          - code: A5
+            text: Store card
+          - code: A6
+            text: Car finance
+          - code: A7
+            text: Buy now pay later (eg Klarna)
+          - code: A8
+            text: Rent to own
+          - code: A9
+            text: Payday loan
+          - code: A10
+            text: Pawnbroker loan
+          - code: A11
             text: Repayments to family or friends
       - code: Q10
         type: radio
@@ -243,15 +243,15 @@ en:
         text: Are you considering any of these ways to pay off debts or meet existing credit payments?
         explainer: Choose all that apply
         responses:
-          - code: A1
-            text: 'No'
-          - code: A2
-            text: Equity in home
-          - code: A3
-            text: Using my pension pot
-          - code: A4
-            text: Remortgage
           - code: A5
+            text: 'No'
+          - code: A1
+            text: Equity in home
+          - code: A2
+            text: Using my pension pot
+          - code: A3
+            text: Remortgage
+          - code: A4
             text: Using my savings
       - code: Q13
         type: radio

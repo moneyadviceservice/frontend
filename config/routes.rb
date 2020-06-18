@@ -22,11 +22,13 @@ Rails.application.routes.draw do
 
     #Money Navigator Tool
     scope :tools do
-      get '/money-navigator-tool', to: 'money_navigator_tool#landing'
-      get '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
-      post '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
-      patch '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
-      get '/money-navigator-tool/results', to: 'money_navigator_tool#results'
+      scope '/:money_navigator_tool', money_navigator_tool: '/money-navigator-tool|teclyn-llywio-ariannol/' do
+        get '/', to: 'money_navigator_tool#landing'
+        get '/questionnaire', to: 'money_navigator_tool#questionnaire'
+        post '/questionnaire', to: 'money_navigator_tool#questionnaire'
+        patch '/questionnaire', to: 'money_navigator_tool#questionnaire'
+        get '/results', to: 'money_navigator_tool#results'
+      end
     end
 
     get '/sitemap', to: 'sitemap#index'

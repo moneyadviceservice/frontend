@@ -13,13 +13,16 @@ class C19DiagnosticsController < ApplicationController
   end
 
   def results
-    @model = Questions.new
-    @results = @model.results(updated_questions(nil))
+    #Get the valid answers from the session and run them
+    #through the model to obtain the results to display
+    @model = Questions.new(updated_questions)
+    @results = @model.results
   end
 
+  private 
 
   def updated_questions(questions)
-    session[:all_questions] ||= HashWithIndifferentAccess.new
+    session[:all_questions] = HashWithIndifferentAccess.new if session[:all_questions].nil?
     session[:all_questions].merge!(questions) unless questions.nil?
     session[:all_questions]
   end
@@ -36,6 +39,7 @@ class C19DiagnosticsController < ApplicationController
     params[:questions]
   end
 
+  #TODO: Don't think this is needed. remove at final cleanup
   def errors_for(question)
     content_tag(:p, @model.errors[question].try(:first), class: 'help-block')
   end

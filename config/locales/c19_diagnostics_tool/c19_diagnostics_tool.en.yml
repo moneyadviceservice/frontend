@@ -1,7 +1,7 @@
 en:
   c19_diagnostics_tool:
     meta:
-      title: Corvid 19 Diagnostics 
+      title: Corvid 19 Diagnostics
       description: ''
       canonical: https://www.moneyadviceservice.org.uk/en/c19_diagnostics
       alternate:
@@ -18,229 +18,229 @@ en:
       - code: Q0
         type: radio
         text: To start, please select the country you live in
-        responses: 
-          - code: A0
-            text: England
+        responses:
           - code: A1
-            text: Northern Ireland
+            text: England
           - code: A2
-            text: Scotland
+            text: Northern Ireland
           - code: A3
+            text: Scotland
+          - code: A4
             text: Wales/Cymru
       - code: Q1
         type: radio
         text: What is your employment status?
-        responses: 
-          - code: A0 
+        responses:
+          - code: A1
             text: Employed (including furloughed)
-          - code: A1 
+          - code: A2
             text: Self-employed
-          - code: A2 
+          - code: A3
             text: Unemployed
-          - code: A3 
+          - code: A4
             text: Retired
       - code: Q2
         type: radio
         text: Are you at risk of redundancy?
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
+            text: 'Yes'
+          - code: A2
             text: 'No'
       - code: Q3
         type: radio
         text: If you are self-employed, do you know what your monthly income is now?
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
+            text: 'Yes'
+          - code: A2
             text: 'No'
       - code: Q4
         type: radio
         text: How would you describe your household income as a result of the coronavirus crisis?
-        responses: 
-          - code: A0
-            text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
+        responses:
           - code: A1
-            text: Temporary drop and worried about my future security
+            text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
           - code: A2
-            text: Temporary drop but expect it to increase as restrictions ease
+            text: Temporary drop and worried about my future security
           - code: A3
+            text: Temporary drop but expect it to increase as restrictions ease
+          - code: A4
             text: No change/Saved money
       - code: Q5
         type: radio
         text: Have you used any government financial support?
-        responses: 
-          - code: A0
-            text: Self-employment income support scheme
+        responses:
           - code: A1
-            text: Furlough scheme
+            text: Self-employment income support scheme
           - code: A2
+            text: Furlough scheme
+          - code: A3
             text: 'No'
       - code: Q6
         type: radio
         text: Are you behind with rent or mortgage payments?
         note: 'Note: please answer "Yes" if you are on an agreed payment holiday/break'
-        responses: 
-          - code: A0
-            text: 'No'
+        responses:
           - code: A1
-            text: No, but I am worried that I might fall behind on rent (private renting)
+            text: 'No'
           - code: A2
-            text: No, but I am worried that I might fall behind on rent (council/social housing)
+            text: No, but I am worried that I might fall behind on rent (private renting)
           - code: A3
-            text: No, but I am worried that I might fall behind on mortgage payments
+            text: No, but I am worried that I might fall behind on rent (council/social housing)
           - code: A4
-            text: Yes, I am behind with my rent because of coronavirus
+            text: No, but I am worried that I might fall behind on mortgage payments
           - code: A5
-            text: Yes, I am behind with my mortgage because of coronavirus
+            text: Yes, I am behind with my rent because of coronavirus
           - code: A6
+            text: Yes, I am behind with my mortgage because of coronavirus
+          - code: A7
             text: Yes, but they are arrears unrelated to coronavirus
       - code: Q7
         type: checkbox
         text: Are you behind on any of these bills?
         explainer: Choose all that apply
-        responses: 
-          - code: A0
+        responses:
+          - code: A1
             text: 'No'
-          - code: A1 
+          - code: A2
             text: Council tax
-          - code: A2 
-            text: Gas or electric
           - code: A3
+            text: Gas or electric
+          - code: A4
             text: Payments to DWP/HMRC (eg tax credit overpayments, loan repayments)
-          - code: A4 
+          - code: A5
             text: TV Licence
-          - code: A5 
+          - code: A6
             text: Income tax
-          - code: A6 
+          - code: A7
             text: Child maintenance payments
-          - code: A7 
+          - code: A8
             text: Court fines
-          - code: A8 
+          - code: A9
             text: Hire purchase payments
-          - code: A9 
+          - code: A10
             text: Cark parking fines
       - code: Q8
         type: checkbox
         text: Have you taken out a payment break or holiday on loans or credit?
         explainer: Choose all that apply
-        responses: 
-          - code: A0
+        responses:
+          - code: A1
             text: 'No'
-          - code: A1 
+          - code: A2
             text: Mortgage
-          - code: A2 
+          - code: A3
             text: Personal loan
-          - code: A3  
+          - code: A4
             text: Credit card
-          - code: A4  
+          - code: A5
             text: Store card
-          - code: A5 
+          - code: A6
             text: Car finance
-          - code: A6 
+          - code: A7
             text: Buy now pay later (eg Klarna)
-          - code: A7 
+          - code: A8
             text: Rent to own
-          - code: A8 
+          - code: A9
             text: Payday loan
-          - code: A9 
+          - code: A10
             text: Pawnbroker arrangement
       - code: Q9
         type: checkbox
         text: Have you taken out a payment break or holiday on loans or credit?
         explainer: Choose all that apply
-        responses: 
-          - code: A0
+        responses:
+          - code: A1
             text: 'No'
-          - code: A1 
+          - code: A2
             text: Personal loan
-          - code: A2 
+          - code: A3
             text: Water bill
-          - code: A3 
+          - code: A4
             text: Mobile phone/TV or broadband
-          - code: A4 
+          - code: A5
             text: Credit card
-          - code: A5 
+          - code: A6
             text: Store card
-          - code: A6 
+          - code: A7
             text: Car finance
-          - code: A7 
+          - code: A8
             text: Buy now pay later (eg Klarna)
-          - code: A8 
+          - code: A9
             text: Rent to own
-          - code: A9 
+          - code: A10
             text: Payday loan
-          - code: A10 
+          - code: A11
             text: Pawnbroker loan
-          - code: A11 
+          - code: A12
             text: Repayments to family or friends
       - code: Q10
         type: radio
         text: Have you fallen behind with payments towards your credit commitments (mortgage, credit cards, personal loans, etc.) or other priority household bills (rent, water, gas, electricity, council tax, etc.) since 28 February 2020?
         note: 'Note: Please answer "Yes" even if this is as a result of a payment break/holiday agreed with your creditor/supplier. If you had already fallen behind prior to 28th February, please answer "No".'
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
-            text: 'No'
+            text: 'Yes'
           - code: A2
+            text: 'No'
+          - code: A3
             text: I was in financial difficulties before 28th February
       - code: Q11
         type: radio
         text: Will you have to borrow more money to manage essential payments (like rent, food and bills) in the next few months?
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
+            text: 'Yes'
+          - code: A2
             text: 'No'
       - code: Q12
         type: checkbox
         text: Are you considering any of these ways to pay off debts or meet existing credit payments?
         explainer: Choose all that apply
-        responses: 
-          - code: A0
+        responses:
+          - code: A1
             text: 'No'
-          - code: A1 
-            text: Equity in home
           - code: A2
+            text: Equity in home
+          - code: A3
             text: Using my pension pot
-          - code: A3 
-            text: Remortgage
           - code: A4
+            text: Remortgage
+          - code: A5
             text: Using my savings
       - code: Q13
         type: radio
         text: Are you thinking of cancelling or reducing insurance cover because you are worried about costs?
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
-            text: 'No'
+            text: 'Yes'
           - code: A2
+            text: 'No'
+          - code: A3
             text: Maybe
       - code: Q14
         type: radio
         text: Are your money worries affecting your mental health?
-        responses: 
-          - code: A0
-            text: 'Yes'
+        responses:
           - code: A1
-            text: 'No'
+            text: 'Yes'
           - code: A2
+            text: 'No'
+          - code: A3
             text: Sometimes
     results:
-      H1: 
+      H1:
         text: Result Heading 1
         url: https://go.somewhere.intresting.com
         description: You are doing well
-      H2: 
+      H2:
         text: Result Heading 2
         url: https://go.somewhere.intresting.com
         description: You are doing well
-      A1: 
+      A1:
         text: You need to sort that out
-      H3: 
+      H3:
         text: Result Heading 3
         url: https://go.nowhere.intresting.com
         description: You are not doing too bad

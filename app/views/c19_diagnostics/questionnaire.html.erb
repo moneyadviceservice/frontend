@@ -30,9 +30,9 @@
           <% question[:responses].each do |response| %>
             <label>
               <% if question[:type] == 'radio' %>
-                <%= f.radio_button question[:code], response[:code] %>
+                <%= f.radio_button question[:code].downcase, response[:code].downcase %>
               <% elsif question[:type] == 'checkbox' %>
-                <%= f.check_box question[:code], {multiple: true}, response[:code], nil  %>
+                <%= f.check_box question[:code].downcase, {multiple: true}, response[:code].downcase, nil  %>
               <% end %>
                 <%= response[:text] %>
             </label>

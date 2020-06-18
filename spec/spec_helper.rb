@@ -86,6 +86,7 @@ RSpec.configure do |c|
   c.run_all_when_everything_filtered = true
 
   c.disable_monkey_patching!
+  c.example_status_persistence_file_path = 'spec/test_status.txt'
 
   c.before(:suite) do
     DatabaseCleaner.clean

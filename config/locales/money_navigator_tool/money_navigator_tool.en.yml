@@ -56,10 +56,10 @@ en:
           - Shelter Cymru
           - Shelter Scotland
     controls:
-      submit_label: Next
+      submit_label: Submit
     messages:
       form_error: Invalid Form Values
-    heading: My Money Navigator
+    heading: Money Navigator Tool
     subheading: Answer these questions to get advice tailored to you
     counter: Question %{number} of %{total}
     questions:
@@ -71,6 +71,7 @@ en:
           - code: A1
             text: England
             sort_order: 1
+            default: true
           - code: A2
             text: Northern Ireland
             sort_order: 2
@@ -81,13 +82,15 @@ en:
             text: Wales/Cymru
             sort_order: 4
       - code: Q1
-        type: radio-custom
+        type: radio
+        custom: true
         text: What is your employment status?
         sort_order: 2
         responses:
           - code: A1
             text: Employed (including furloughed)
             sort_order: 1
+            default: true
           - code: A2
             text: Self-employed
             sort_order: 2
@@ -105,6 +108,7 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
+            default: true
           - code: A2
             text: 'No'
             sort_order: 2
@@ -119,8 +123,12 @@ en:
           - code: A2
             text: 'No'
             sort_order: 2
+          - code: A3
+            text: 'I am not self employed'
+            default: true
       - code: Q4
-        type: radio-custom
+        type: radio
+        custom: true
         text: How would you describe your household income as a result of the coronavirus crisis?
         sort_order: 5
         responses:
@@ -130,6 +138,7 @@ en:
           - code: A1
             text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
             sort_order: 2
+            default: true
           - code: A2
             text: Temporary drop and worried about my future security
             sort_order: 3
@@ -144,6 +153,7 @@ en:
           - code: A1
             text: Self-employment income support scheme
             sort_order: 2
+            default: true
           - code: A2
             text: Furlough scheme
             sort_order: 3
@@ -159,6 +169,7 @@ en:
           - code: A7
             text: 'No'
             sort_order: 1
+            default: true
           - code: A1
             text: No, but I am worried that I might fall behind on rent (private renting)
             sort_order: 2
@@ -186,6 +197,7 @@ en:
           - code: A10
             text: 'No'
             sort_order: 1
+            default: true
           - code: A1
             text: Council tax
             sort_order: 2
@@ -222,6 +234,7 @@ en:
           - code: A10
             text: 'No'
             sort_order: 1
+            default: true
           - code: A1
             text: Mortgage
             sort_order: 2
@@ -258,6 +271,7 @@ en:
           - code: A12
             text: 'No'
             sort_order: 1
+            default: true
           - code: A1
             text: Personal loan
             sort_order: 2
@@ -300,6 +314,7 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
+            default: true
           - code: A2
             text: 'No'
             sort_order: 2
@@ -314,6 +329,7 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
+            default: true
           - code: A2
             text: 'No'
             sort_order: 2
@@ -326,6 +342,7 @@ en:
           - code: A5
             text: 'No'
             sort_order: 1
+            default: true
           - code: A1
             text: Equity in home
             sort_order: 2
@@ -346,6 +363,7 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
+            default: true
           - code: A2
             text: 'No'
             sort_order: 2
@@ -360,6 +378,7 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
+            default: true
           - code: A2
             text: 'No'
             sort_order: 2

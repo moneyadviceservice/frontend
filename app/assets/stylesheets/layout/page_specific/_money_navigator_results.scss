@@ -204,6 +204,34 @@ $transition-time: 0.4s;
 				transition-duration: $transition-time; 
 				overflow-y: scroll;
 
+				@include respond-to($mq-s) {
+					left: 20%;
+					width: 80%;
+					padding-left: $default-gutter * 3.5;
+					padding-right: $default-gutter * 3.5;
+				}
+
+				@include respond-to($mq-m) {
+					left: 25%;
+					width: 75%;
+					padding-left: $default-gutter * 3;
+					padding-right: $default-gutter * 3;
+				}
+
+				@include respond-to($mq-l) {
+					left: 30%;
+					width: 70%;
+					padding-left: $default-gutter * 2.5;
+					padding-right: $default-gutter * 2.5;
+				}
+
+				@include respond-to($mq-xl) {
+					left: 35%;
+					width: 65%;
+					padding-left: $default-gutter * 2;
+					padding-right: $default-gutter * 2;
+				}
+
 				.overlay__hide {
 				  float: right;
 				  margin-top: $baseline-unit * 2;

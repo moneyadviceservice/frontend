@@ -45,9 +45,9 @@
                   <% end %>
 
                   <% question[:responses].each do |response| %>
-                    <% if response[:default] %>
-                      <div class="question__response" data-response>
-                        <% if question[:type] == 'radio' %>
+                    <div class="question__response" data-response>
+                      <% if question[:type] == 'radio' %>
+                        <% if response[:default] %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
                         <% elsif question[:type] == 'checkbox' %>
                           <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase, nil %>

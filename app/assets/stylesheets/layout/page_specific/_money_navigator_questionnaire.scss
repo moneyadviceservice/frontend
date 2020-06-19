@@ -59,6 +59,10 @@
 	margin: 0 0 $baseline-unit * 4;
 }
 
+.l-money_navigator__banner--is-hidden {
+	display: none; 
+}
+
 .l-money_navigator__questions {
 	list-style: none;
 	padding: 0;

@@ -62,6 +62,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     }); 
 
     this.$headingContent.find('[data-overlay-hide]').on('click', function(e) {
+      e.preventDefault(); 
       _this._hideHeading(e.target); 
     }); 
 

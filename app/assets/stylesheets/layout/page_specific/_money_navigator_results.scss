@@ -202,6 +202,7 @@ $transition-time: 0.4s;
 				background: $color-white;
 				transition-property: left; 
 				transition-duration: $transition-time; 
+				overflow-y: scroll;
 
 				.overlay__hide {
 				  float: right;

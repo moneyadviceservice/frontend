@@ -123,17 +123,17 @@ RSpec.describe Questions, type: :model do
     include_examples 'urgent action uk'
   end
 
-  context 'Northern Ireland' do
-    let(:country) { 'ni' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action northern ireland'
-  end
+  # context 'Northern Ireland' do
+  #   let(:country) { 'ni' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action northern ireland'
+  # end
 
-  context 'Wales' do
-    let(:country) { 'wales' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action uk'
-  end
+  # context 'Wales' do
+  #   let(:country) { 'wales' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action uk'
+  # end
 
   describe 'All' do
 

@@ -104,13 +104,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
       if (i === 0) {
         // Adds get-started button to first question
-        $(question).find('.question__content').append('<div class="question__actions"><button class="button button--start" data-get-started="true">Get started</button></div>'); 
+        $(question).find('.question__content').append('<div class="question__actions"><button class="button button--start" data-get-started="true">Continue</button></div>'); 
          // Adds active class to first question
         $(question).addClass(_this.activeClass); 
       } else if (i === (length - 1)) {
-          // Adds submit and back buttons to all other questions
+          // Adds submit button to last question
           $(question).find('.question__content')
-            .append('<div class="question__actions"><button data-submit="true" class="button button--continue">Continue</button><button data-back="true" class="button button--back">Back</button></div>')
+            .append('<div class="question__actions"><button data-submit="true" class="button button--continue">Submit</button><button data-back="true" class="button button--back">Back</button></div>')
       } else {
         // Adds continue and back buttons to all other questions
         $(question).find('.question__content')

@@ -65,14 +65,14 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      # describe  'StepChange' do
-      #   let(:heading_code) { 'H2' }
-      #   let(:content_prefix) {'stepchange-debt'}
-      #   let(:corona_specific_content) {true}
+      describe  'StepChange' do
+        let(:heading_code) { 'H2' }
+        let(:content_prefix) {'stepchange-debt'}
+        let(:corona_specific_content) {true}
 
-      #   include_examples 'country specific content' do
-      #   end
-      # end
+        include_examples 'country specific content' do
+        end
+      end
 
     end
   end
@@ -111,32 +111,31 @@ RSpec.describe Questions, type: :model do
 
   #TODO: These are all positive tests. need to add negative tests
   #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
-  context 'England' do
-    let(:country) { 'england' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action uk'
-  end
+  # context 'England' do
+  #   let(:country) { 'england' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action uk'
+  # end
 
-  context 'Scotland' do
-    let(:country) { 'scotland' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action uk'
-  end
+  # context 'Scotland' do
+  #   let(:country) { 'scotland' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action uk'
+  # end
 
-  context 'Northern Ireland' do
-    let(:country) { 'ni' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action northern ireland'
-  end
+  # context 'Northern Ireland' do
+  #   let(:country) { 'ni' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action northern ireland'
+  # end
 
-  context 'Wales' do
-    let(:country) { 'wales' }
-    include_examples 'urgent action country specific'
-    include_examples 'urgent action uk'
-  end
+  # context 'Wales' do
+  #   let(:country) { 'wales' }
+  #   include_examples 'urgent action country specific'
+  #   include_examples 'urgent action uk'
+  # end
 
   describe 'All' do
-
     context 'Urgent action' do
       let(:section) {'urgent_action'}
       let(:section_code) { 'S1' }

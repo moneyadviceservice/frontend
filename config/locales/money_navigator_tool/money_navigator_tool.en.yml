@@ -57,9 +57,11 @@ en:
         responses:
           - code: A1
             text: 'Yes'
-            default: true
           - code: A2
             text: 'No'
+          - code: A3
+            text: 'I am not self employed'
+            default: true
       - code: Q4
         type: radio
         custom: true

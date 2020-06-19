@@ -44,16 +44,16 @@
                     <p class="question__explainer"><%= question[:explainer] %></p>
                   <% end %>
 
-                  <% question[:responses].each_with_index do |response, response_index| %>
+                  <% question[:responses].each do |response| %>
                     <div class="question__response" data-response>
                       <% if question[:type] == 'radio' || question[:type] == 'radio-custom' %>
-                        <% if response_index == 0 %>
+                        <% if response[:default] %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
                         <% else %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control' %>
                         <% end %>
                       <% elsif question[:type] == 'checkbox' %>
-                        <% if response_index == 0 %>
+                        <% if response[:default] %>
                           <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase, nil %>
                         <% else %>
                           <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase, nil %>

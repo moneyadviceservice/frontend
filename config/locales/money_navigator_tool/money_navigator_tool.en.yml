@@ -21,6 +21,7 @@ en:
         responses:
           - code: A1
             text: England
+            default: true
           - code: A2
             text: Northern Ireland
           - code: A3
@@ -33,6 +34,7 @@ en:
         responses:
           - code: A1
             text: Employed (including furloughed)
+            default: true
           - code: A2
             text: Self-employed
           - code: A3
@@ -45,6 +47,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
       - code: Q3
@@ -53,6 +56,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
       - code: Q4
@@ -61,6 +65,7 @@ en:
         responses:
           - code: A1
             text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
+            default: true
           - code: A2
             text: Temporary drop and worried about my future security
           - code: A3
@@ -73,6 +78,7 @@ en:
         responses:
           - code: A1
             text: Self-employment income support scheme
+            default: true
           - code: A2
             text: Furlough scheme
           - code: A3
@@ -84,6 +90,7 @@ en:
         responses:
           - code: A7
             text: 'No'
+            default: true
           - code: A1
             text: No, but I am worried that I might fall behind on rent (private renting)
           - code: A2
@@ -103,6 +110,7 @@ en:
         responses:
           - code: A10
             text: 'No'
+            default: true
           - code: A1
             text: Council tax
           - code: A2
@@ -128,6 +136,7 @@ en:
         responses:
           - code: A10
             text: 'No'
+            default: true
           - code: A1
             text: Mortgage
           - code: A2
@@ -153,6 +162,7 @@ en:
         responses:
           - code: A12
             text: 'No'
+            default: true
           - code: A1
             text: Personal loan
           - code: A2
@@ -182,6 +192,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3
@@ -192,6 +203,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
       - code: Q12
@@ -201,6 +213,7 @@ en:
         responses:
           - code: A5
             text: 'No'
+            default: true
           - code: A1
             text: Equity in home
           - code: A2
@@ -215,6 +228,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3
@@ -225,6 +239,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3

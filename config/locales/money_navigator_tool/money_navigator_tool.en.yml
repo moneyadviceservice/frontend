@@ -52,10 +52,10 @@ en:
           - Shelter Cymru
           - Shelter Scotland
     controls:
-      submit_label: Next
+      submit_label: Submit
     messages:
       form_error: Invalid Form Values
-    heading: My Money Navigator
+    heading: Money Navigator Tool
     subheading: Answer these questions to get advice tailored to you
     counter: Question %{number} of %{total}
     questions:
@@ -65,6 +65,7 @@ en:
         responses:
           - code: A1
             text: England
+            default: true
           - code: A2
             text: Northern Ireland
           - code: A3
@@ -72,11 +73,13 @@ en:
           - code: A4
             text: Wales/Cymru
       - code: Q1
-        type: radio-custom
+        type: radio
+        custom: true
         text: What is your employment status?
         responses:
           - code: A1
             text: Employed (including furloughed)
+            default: true
           - code: A2
             text: Self-employed
           - code: A3
@@ -89,6 +92,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
       - code: Q3
@@ -99,12 +103,17 @@ en:
             text: 'Yes'
           - code: A2
             text: 'No'
+          - code: A3
+            text: 'I am not self employed'
+            default: true
       - code: Q4
-        type: radio-custom
+        type: radio
+        custom: true
         text: How would you describe your household income as a result of the coronavirus crisis?
         responses:
           - code: A1
             text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
+            default: true
           - code: A2
             text: Temporary drop and worried about my future security
           - code: A3
@@ -117,6 +126,7 @@ en:
         responses:
           - code: A1
             text: Self-employment income support scheme
+            default: true
           - code: A2
             text: Furlough scheme
           - code: A3
@@ -128,6 +138,7 @@ en:
         responses:
           - code: A7
             text: 'No'
+            default: true
           - code: A1
             text: No, but I am worried that I might fall behind on rent (private renting)
           - code: A2
@@ -147,6 +158,7 @@ en:
         responses:
           - code: A10
             text: 'No'
+            default: true
           - code: A1
             text: Council tax
           - code: A2
@@ -172,6 +184,7 @@ en:
         responses:
           - code: A10
             text: 'No'
+            default: true
           - code: A1
             text: Mortgage
           - code: A2
@@ -197,6 +210,7 @@ en:
         responses:
           - code: A12
             text: 'No'
+            default: true
           - code: A1
             text: Personal loan
           - code: A2
@@ -226,6 +240,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3
@@ -236,6 +251,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
       - code: Q12
@@ -245,6 +261,7 @@ en:
         responses:
           - code: A5
             text: 'No'
+            default: true
           - code: A1
             text: Equity in home
           - code: A2
@@ -259,6 +276,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3
@@ -269,6 +287,7 @@ en:
         responses:
           - code: A1
             text: 'Yes'
+            default: true
           - code: A2
             text: 'No'
           - code: A3

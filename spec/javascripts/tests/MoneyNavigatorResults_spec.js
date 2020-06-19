@@ -108,6 +108,9 @@ describe('MoneyNavigatorResults', function() {
       $(overlayHide).trigger('click');
       expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
 
+      this.$overlay.trigger('click'); 
+      expect(hideHeadingSpy.calledWith()).to.be.true; 
+
       $(window).trigger('resize'); 
       expect(sectionResizeStub.called).to.be.false; 
 
@@ -233,6 +236,12 @@ describe('MoneyNavigatorResults', function() {
       this.obj._showHeading(heading_0_btn); 
 
       this.obj._hideHeading(heading_0_closeBtn);
+      expect($(heading_0_content).hasClass(hiddenClass)).to.be.true; 
+      expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.true; 
+
+      this.obj._showHeading(heading_0_btn); 
+
+      this.obj._hideHeading();
       expect($(heading_0_content).hasClass(hiddenClass)).to.be.true; 
       expect($(this.$overlay).hasClass(this.hiddenClass)).to.be.true; 
     }); 

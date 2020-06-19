@@ -66,6 +66,10 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
       _this._hideHeading(e.target); 
     }); 
 
+    this.$overlay.on('click', function() {
+      _this._hideHeading(); 
+    }); 
+
     $(window).on(
       'resize',
       utilities.debounce(
@@ -124,11 +128,22 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
   }; 
 
   MoneyNavigatorResults.prototype._hideHeading = function(btn) {
-    var $headingContent = $(btn).parents('[data-heading-content]'); 
+    var content; 
     var hiddenClass = 'heading__content' + this.hiddenSuffix; 
 
-    if (!$headingContent.hasClass(hiddenClass)) {
-      $headingContent.addClass(hiddenClass); 
+    if (btn) {
+      content = $(btn).parents('[data-heading-content]'); 
+    } else {
+      this.$headingContent.each(function() {
+        if (!$(this).hasClass(hiddenClass)) {
+          content = this;
+          return; 
+        }
+      }); 
+    }
+
+    if (!$(content).hasClass(hiddenClass)) {
+      $(content).addClass(hiddenClass); 
     }
 
     if (!this.$overlay.hasClass(this.hiddenClass)) {

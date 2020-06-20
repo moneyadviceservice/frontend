@@ -54,7 +54,7 @@ module Symbols
       validate_flag(resp[:flag])
       ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
     end
-    qn_hash[:responses].sort! {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
+    qn_hash = qn_hash[:responses].sort {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
 
     qn_hash
   end
@@ -1574,7 +1574,7 @@ module Symbols
             #Q8A3, Q4A1
             {
               triggers: [
-                {q4: 'a1', q8: 'a3'},
+                {q4: 'a1', q9: 'a3'},
               ],
               mask: MASK_ALL,
               article: "coronavirus-mobile-tv-broadband-severe"
@@ -2056,7 +2056,7 @@ module Symbols
             #Q13A1 or Q13A2
             {
               triggers: [
-                {q13: ['a1', 'a2']},
+                {q13: ['a1', 'a3']},
               ],
               mask: MASK_SOME,
               article: "coronavirus-cancelling-insurance"
@@ -2078,7 +2078,7 @@ module Symbols
             #Q14A1 or Q14A2
             {
               triggers: [
-                {q14: ['a1', 'a2']},
+                {q14: ['a1', 'a3']},
               ],
               mask: MASK_SOME,
               article: "coronavirus-mental-health"

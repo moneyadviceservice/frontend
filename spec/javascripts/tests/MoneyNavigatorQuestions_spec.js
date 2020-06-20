@@ -309,25 +309,6 @@ describe.only('MoneyNavigatorQuestions', function() {
       this.obj._updateDisplay('prev');
       expect(this.banner.hasClass(hiddenClass)).to.be.false; 
     }); 
-
-    it('Updates the counter to the correct value for the active question', function() {
-      this.obj._updateDOM(); 
-
-      this.obj._updateDisplay('next');
-      expect($(this.questions[1]).find('.question__counter').text()).to.equal('Completed 17%'); 
-
-      this.obj._updateDisplay('next');
-      expect($(this.questions[2]).find('.question__counter').text()).to.equal('Completed 33%'); 
-
-      this.obj._updateDisplay('next');
-      expect($(this.questions[3]).find('.question__counter').text()).to.equal('Completed 50%'); 
-
-      this.obj._updateDisplay('next');
-      expect($(this.questions[4]).find('.question__counter').text()).to.equal('Completed 67%'); 
-
-      this.obj._updateDisplay('next');
-      expect($(this.questions[5]).find('.question__counter').text()).to.equal('Completed 83%'); 
-    }); 
   }); 
 
   describe('setUpMultipleQuestions method', function() {

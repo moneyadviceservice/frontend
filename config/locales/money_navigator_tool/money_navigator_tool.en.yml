@@ -60,12 +60,12 @@ en:
     messages:
       form_error: Invalid Form Values
     heading: Money Navigator Tool
-    subheading: Answer these questions to get advice tailored to you
+    subheading: Answer these questions to get guidance tailored to you
     counter: Question %{number} of %{total}
     questions:
       - code: Q0
         type: radio
-        text: To start, please select the country you live in
+        text: Where do you live?
         sort_order: 1
         responses:
           - code: A1

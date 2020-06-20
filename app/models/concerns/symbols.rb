@@ -54,7 +54,7 @@ module Symbols
       validate_flag(resp[:flag])
       ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
     end
-    qn_hash[:responses].sort! {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
+    qn_hash = qn_hash[:responses].sort {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
 
     qn_hash
   end

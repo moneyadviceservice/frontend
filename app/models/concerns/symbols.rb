@@ -1574,7 +1574,7 @@ module Symbols
             #Q8A3, Q4A1
             {
               triggers: [
-                {q4: 'a1', q8: 'a3'},
+                {q4: 'a1', q9: 'a3'},
               ],
               mask: MASK_ALL,
               article: "coronavirus-mobile-tv-broadband-severe"

@@ -2078,7 +2078,7 @@ module Symbols
             #Q14A1 or Q14A2
             {
               triggers: [
-                {q14: ['a1', 'a2']},
+                {q14: ['a1', 'a3']},
               ],
               mask: MASK_SOME,
               article: "coronavirus-mental-health"

@@ -15,8 +15,10 @@ describe.only('MoneyNavigatorQuestions', function() {
           fixture.load('MoneyNavigatorQuestions.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
+          self.banner = $('#fixture_container').find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
+          self.hiddenClass = self.obj.hiddenClass; 
 
           done();
         }, done);
@@ -288,6 +290,24 @@ describe.only('MoneyNavigatorQuestions', function() {
 
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+    }); 
+
+    it('Shows/hides the banner when active question is/not Q0', function() {
+      var hiddenClass = 'l-money_navigator__banner' + '--' + this.hiddenClass; 
+
+      this.obj._updateDOM(); 
+
+      this.obj._updateDisplay('next');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('next');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev');
+      expect(this.banner.hasClass(hiddenClass)).to.be.false; 
     }); 
   }); 
 

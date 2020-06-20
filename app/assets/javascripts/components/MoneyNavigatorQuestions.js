@@ -9,7 +9,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]'); 
     this.$questions = this.$el.find('[data-question]'); 
     this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 
+    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]'); 
     this.activeClass = 'question--active'; 
+    this.hiddenClass = 'is-hidden'
     this.dataLayer = window.dataLayer; 
   };
 
@@ -199,9 +201,17 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     $(this.$questions[activeIndex]).removeClass(this.activeClass); 
 
     if (dir === 'next') {
-      $(this.$questions[activeIndex + 1]).addClass(this.activeClass); 
+      activeIndex ++; 
     } else {
-      $(this.$questions[activeIndex - 1]).addClass(this.activeClass); 
+      activeIndex --; 
+    }
+
+    $(this.$questions[activeIndex]).addClass(this.activeClass); 
+
+    if (activeIndex == 0) {
+      this.banner.removeClass('l-money_navigator__banner' + '--' + this.hiddenClass); 
+    } else {
+      this.banner.addClass('l-money_navigator__banner' + '--' + this.hiddenClass);       
     }
   }
 

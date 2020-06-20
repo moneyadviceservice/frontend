@@ -209,7 +209,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       activeIndex --; 
     }
 
-    $(this.$questions[activeIndex]).addClass(this.activeClass); 
+    progress = Math.round(activeIndex / totalQuestions * 100); 
+
+    $(this.$questions[activeIndex])
+      .addClass(this.activeClass)
+      .find('.question__counter').text('Completed ' + progress + '%'); 
 
     if (activeIndex == 0) {
       this.banner.removeClass('l-money_navigator__banner' + '--' + this.hiddenClass); 

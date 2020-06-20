@@ -2056,7 +2056,7 @@ module Symbols
             #Q13A1 or Q13A2
             {
               triggers: [
-                {q13: ['a1', 'a2']},
+                {q13: ['a1', 'a3']},
               ],
               mask: MASK_SOME,
               article: "coronavirus-cancelling-insurance"

@@ -20,8 +20,44 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
+    this._setUpValidation(); 
     this._initialisedSuccess(initialised);
   };
+
+  MoneyNavigatorQuestions.prototype._setUpValidation = function() {
+    var _this = this; 
+
+    this.$questions.each(function() {
+      var question = this; 
+      var $inputs = $(question).find('input'); 
+
+      $inputs.on('change', function() {
+        var checkedInputs = []; 
+
+        $inputs.each(function() {
+          if (this.checked) {
+            checkedInputs.push(this); 
+          }
+        }); 
+
+        if (checkedInputs.length == 0) {
+          _this._handleValidation(question); 
+        } else if ($(question).find('[data-error-message]').length > 0) {
+          _this._handleValidation(question, 'reset');           
+        }
+      }); 
+    })
+  }; 
+
+  MoneyNavigatorQuestions.prototype._handleValidation = function(question, options) {
+    if (options == 'reset') {
+      $(question).find('[data-error-message]').remove(); 
+      $(question).find('[data-continue]').attr('disabled', false); 
+    } else {
+      $(question).find('legend').after('<p class="question__error" data-error-message>Please answer this question before continuing</p>'); 
+      $(question).find('[data-continue]').attr('disabled', true); 
+    }
+  }
 
   MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
     var question = $(btn).parents('[data-question-id]'); 
@@ -125,10 +161,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         e.preventDefault(); 
         _this._updateDisplay('next'); 
         _this._updateAnalytics(e.target, dataLayer); 
+        _this._scrollToTop(); 
       } else if ($(this).data('continue')) {
         e.preventDefault(); 
         _this._updateDisplay('next'); 
         _this._updateAnalytics(e.target, dataLayer); 
+        _this._scrollToTop(); 
       } else if ($(this).data('submit')) {
         if (options == 'preventDefault') {
           e.preventDefault(); 
@@ -137,9 +175,17 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       } else if ($(this).data('back')) {
         e.preventDefault(); 
         _this._updateDisplay('prev'); 
+        _this._scrollToTop(); 
       }
     }); 
   }
+
+  MoneyNavigatorQuestions.prototype._scrollToTop = function() {
+    $('html, body').animate({
+        scrollTop: $('#money_navigator__questions').offset().top
+      }, 250
+    );          
+  }; 
 
   MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
     var activeIndex, questionClasses = []; 

@@ -88,6 +88,11 @@
 		color: $color-black; 
 	}
 
+	.question__error {
+		color: $color-red-medium; 
+		font-weight: bold; 
+	}
+
 	.question__note {
 		background: $color-grey-pale;	
 		padding: $baseline-unit * 2 $default-gutter * 2; 
@@ -158,25 +163,25 @@
 
 				&[for="q0_a1"] {
 					span {
-				    background-image: image_url('c19_diagnostics/maps/map-england.png');
+				    background-image: image_url('money_navigator_tool/maps/map-england.png');
 					}
 				}
 
 				&[for="q0_a2"] {
 					span {
-				    background-image: image_url('c19_diagnostics/maps/map-ni.png');
+				    background-image: image_url('money_navigator_tool/maps/map-ni.png');
 					}
 				}
 
 				&[for="q0_a3"] {
 					span {
-				    background-image: image_url('c19_diagnostics/maps/map-scotland.png');
+				    background-image: image_url('money_navigator_tool/maps/map-scotland.png');
 					}
 				}
 
 				&[for="q0_a4"] {
 					span {
-				    background-image: image_url('c19_diagnostics/maps/map-wales.png');
+				    background-image: image_url('money_navigator_tool/maps/map-wales.png');
 					}
 				}
 			}

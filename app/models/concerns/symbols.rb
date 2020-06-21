@@ -41,7 +41,7 @@ module Symbols
 
   #Enrich a given question hashbag with flag information and downcased codes
   #As a sideeffect the bag is updated into the QUESTIONS_HASH for faster code based lookup
-  def self.enrich_questions(qn_hash)
+  def self.enrich_question(qn_hash)
     index = /\d*$/.match(qn_hash[:code])[0]
     qn_hash[:code].downcase!
     qn_hash[:flag] = FLAGS[index]
@@ -54,14 +54,14 @@ module Symbols
       validate_flag(resp[:flag])
       ANSWERS_HASH[resp[:code]] = resp.slice(:code, :flag)
     end
-    qn_hash = qn_hash[:responses].sort {|r1, r2| /\d*$/.match(r1[:code])[0].to_i <=> /\d*$/.match(r2[:code])[0].to_i}
+    qn_hash[:responses].sort! {|r1, r2| r1[:sort_order].to_i <=> r2[:sort_order].to_i}
 
     qn_hash
   end
 
   QUESTIONS = I18n.translate('money_navigator_tool.questions')
-    .map {| qn_hash | enrich_questions(qn_hash)}
-    .sort { |q1, q2| /\d*$/.match(q1[:code])[0].to_i <=> /\d*$/.match(q2[:code])[0].to_i }
+    .map {| qn_hash | enrich_question(qn_hash)}
+    .sort { |q1, q2| q1[:sort_order].to_i <=> q2[:sort_order].to_i }
 
   ANSWERS_HASH['EMPTY'] = {code: EMPTY, flag: FLAGS[EMPTY]}
 

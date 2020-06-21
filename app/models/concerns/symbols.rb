@@ -716,13 +716,15 @@ module Symbols
 
         {
           #'If you`ve missed one mortgage or rent payment' Rules
+          #Q6A4 or Q6A5 or Q6A6 HIDE IF Q4A4 CHECKED
           heading_code: 'H1',
           content_rules: [
             {
               triggers: [
-                {q6: [ 'a4', 'a5', 'a6' ]}
+                {q6: [ 'a4', 'a5', 'a6' ]},
+                {q4: 'a4'}
               ],
-              mask: MASK_SOME,
+              mask: MASK_SOME + MASK_NONE,
               article: "missed-rent-mortgage-low"
             },
           ]

@@ -130,10 +130,10 @@ module Symbols
       mask: MASK_SOME
     },
     stepchange: {
-      #Any of these Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6, Q7A1-A9, Q10A3
+      #Any of these Q3A1, Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A4, Q4A1, Q6A6, Q7A1-A9, Q10A3
       rules: [
         {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:['a1']},
-        {q4:'a1', q6: ['a6'], q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10: ['a3']},
+        {q4:['a1', 'a4'], q6: ['a6'], q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10: ['a3']},
       ],
       mask: MASK_SOME + MASK_NONE
     },
@@ -716,13 +716,15 @@ module Symbols
 
         {
           #'If you`ve missed one mortgage or rent payment' Rules
+          #Q6A4 or Q6A5 or Q6A6 HIDE IF Q4A4 CHECKED
           heading_code: 'H1',
           content_rules: [
             {
               triggers: [
-                {q6: [ 'a4', 'a5', 'a6' ]}
+                {q6: [ 'a4', 'a5', 'a6' ]},
+                {q4: 'a4'}
               ],
-              mask: MASK_SOME,
+              mask: MASK_SOME + MASK_NONE,
               article: "missed-rent-mortgage-low"
             },
           ]

@@ -57,7 +57,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
       _this._toggleSection(e.target); 
     }); 
 
-    this.$headingTitles.find('button').on('click', function(e) {
+    this.$headingTitles.parents('button').on('click', function(e) {
       _this._showHeading(e.target); 
     }); 
 

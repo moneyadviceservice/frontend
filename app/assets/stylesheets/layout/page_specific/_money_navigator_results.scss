@@ -2,6 +2,7 @@ $transition-time: 0.4s;
 
 .l-money_navigator-results {
 	.results__intro {
+		font-size: 1.125rem; 
 		font-weight: 700; 
 	}
 
@@ -71,7 +72,7 @@ $transition-time: 0.4s;
 		.section__subtitle {
 			@include column(12); 
 			
-			font-size: 1rem;
+			font-size: 1.125rem;
 			line-height: 1.2; 
 			margin-top: $baseline-unit; 
 			color: $color-green-secondary;
@@ -88,12 +89,19 @@ $transition-time: 0.4s;
 
 		.sections__heading {
 			border: solid 1px $color-grey-normal;
-			padding: $baseline-unit * 2 $default-gutter;
 			box-shadow: 0 2px 4px $color-grey-normal; 
 
-			@include respond-to($mq-m) {
-				padding-top: $baseline-unit * 3;
-				padding-bottom: $baseline-unit * 3;
+			button {
+				border: none; 
+				width: 100%;
+				text-align: left; 
+				padding: $baseline-unit * 2 $default-gutter;
+				background: transparent;
+
+				@include respond-to($mq-m) {
+					padding-top: $baseline-unit * 3;
+					padding-bottom: $baseline-unit * 3;
+				}
 			}
 
 			.heading__title {
@@ -101,14 +109,6 @@ $transition-time: 0.4s;
 				line-height: 1.2; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit; 
-
-				button {
-					border: none; 
-					width: 100%;
-					text-align: left; 
-					padding: 0;
-					background: transparent;
-				}
 			}
 
 			.heading__content {
@@ -158,6 +158,21 @@ $transition-time: 0.4s;
 		}
 	}
 
+	.results__actions {
+		text-align: center; 
+		.button--restart {
+			width: 100%; 
+
+			@include respond-to($mq-m) {
+				width: 50%; 
+			}
+
+			@include respond-to($mq-l) {
+				width: 25%; 
+			}
+		}
+	}
+
 	// Component initialised
 	.results__sections[data-dough-money-navigator-results-initialised="yes"] {
 		.sections__section {
@@ -184,7 +199,7 @@ $transition-time: 0.4s;
 					transform: translateY(-50%) rotate(0deg); 
 					transition-property: transform; 
 					transition-duration: $transition-time; 
-					background-image: image_url('c19_diagnostics/section_title_icon.svg');
+					background-image: image_url('money_navigator_tool/section_title_icon.svg');
 					background-repeat: no-repeat;
 					background-size: 100%; 
 					background-position: center; 
@@ -224,27 +239,23 @@ $transition-time: 0.4s;
 
 			.heading__content {
 				position: fixed;
-				top: 0;
-				left: 15%;
-				bottom: 0;
-				width: 85%;
-				padding: $baseline-unit * 4 $default-gutter * 4;
+				top: 0%;
+				left: 0%;
+				height: 100%; 
+				width: 100%;
+				padding: $baseline-unit * 8 $default-gutter * 4 $baseline-unit * 4;
 				z-index: 155; 
 				background: $color-white;
-				transition-property: left; 
+				transition-property: top; 
 				transition-duration: $transition-time; 
 				overflow-y: scroll;
 
 				@include respond-to($mq-s) {
-					left: 20%;
-					width: 80%;
 					padding-left: $default-gutter * 3.5;
 					padding-right: $default-gutter * 3.5;
 				}
 
 				@include respond-to($mq-m) {
-					left: 25%;
-					width: 75%;
 					padding-left: $default-gutter * 3;
 					padding-right: $default-gutter * 3;
 				}
@@ -254,26 +265,41 @@ $transition-time: 0.4s;
 					width: 70%;
 					padding-left: $default-gutter * 2.5;
 					padding-right: $default-gutter * 2.5;
+					transition-property: left; 
 				}
 
 				@include respond-to($mq-xl) {
-					left: 35%;
-					width: 65%;
 					padding-left: $default-gutter * 2;
 					padding-right: $default-gutter * 2;
 				}
 
 				.overlay__hide {
-				  float: right;
-				  margin-top: $baseline-unit * 2;
-				  display: inline;
-				  text-align: right;
-				  padding: $baseline-unit $baseline-unit * 4 $baseline-unit $baseline-unit;
-				  position: relative;
+					position: absolute;
+					margin: 0;
+					top: $baseline-unit * 3;
+					right: $default-gutter * 4;
+					display: inline-block;
+					padding: $baseline-unit $baseline-unit * 4 $baseline-unit $baseline-unit;
 
-				  &:focus {
-				    outline: 3px solid $color-black;
-				  }
+					@include respond-to($mq-s) {
+						right: $default-gutter * 3.5;
+					}
+
+					@include respond-to($mq-m) {
+						right: $default-gutter * 3;
+					}
+
+					@include respond-to($mq-l) {
+						right: $default-gutter * 2.5;
+					}
+
+					@include respond-to($mq-xl) {
+						right: $default-gutter * 2;
+					}
+
+					&:focus {
+						outline: 3px solid $color-black;
+					}
 
 					.overlay__hide__icon {
 						position: absolute;
@@ -287,7 +313,12 @@ $transition-time: 0.4s;
 			}
 
 			.heading__content--hidden {
-				left: 100%;
+				top: 100%;
+
+				@include respond-to($mq-l) {
+					top: 0%;
+					left: 100%;
+				}
 			}
 
 			&.is-collapsed {

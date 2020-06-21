@@ -1,4 +1,4 @@
-describe('MoneyNavigatorQuestions', function() {
+describe.only('MoneyNavigatorQuestions', function() {
   'use strict';
 
   var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
@@ -30,16 +30,63 @@ describe('MoneyNavigatorQuestions', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var setUpValidationStub = sinon.stub(this.obj, '_setUpValidation'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
+      expect(setUpValidationStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
+      setUpValidationStub.restore(); 
     });
   });
+
+  describe('setUpValidation method', function() {
+    it ('Sets up the method', function() {
+      this.obj._setUpValidation();
+
+      var handleValidationSpy = sinon.spy(this.obj, '_handleValidation')
+      var question = this.questions[2]; 
+      var inputs = $(question).find('input'); 
+
+      inputs[0].checked = true; 
+      inputs[1].checked = true; 
+      expect(handleValidationSpy.calledWith(question)).to.be.false; 
+
+      inputs[1].checked = false; 
+      $(inputs[1]).trigger('change');
+      expect(handleValidationSpy.calledWith(question)).to.be.false; 
+
+      inputs[0].checked = false; 
+      $(inputs[0]).trigger('change');
+      expect(handleValidationSpy.calledWith(question)).to.be.true; 
+
+      inputs[0].checked = true; 
+      $(inputs[0]).trigger('change');
+      expect(handleValidationSpy.calledWith(question, 'reset')).to.be.true; 
+
+      handleValidationSpy.restore(); 
+    }); 
+  }); 
+
+  describe('handleValidation method', function() {
+    it ('Checks the error message is added', function() {
+      var question = this.questions[2]; 
+
+      this.obj._updateDOM(); 
+
+      this.obj._handleValidation(question); 
+      expect($(question).find('[data-error-message]').length).to.equal(1); 
+      expect($(question).find('[data-continue]')[0].disabled).to.be.true; 
+
+      this.obj._handleValidation(question, 'reset'); 
+      expect($(question).find('[data-error-message]').length).to.equal(0); 
+      expect($(question).find('[data-continue]')[0].disabled).to.be.false; 
+    }); 
+  }); 
 
   describe('udpateAnalytics method', function() {
     var dataLayer = dataLayerMock.object;
@@ -172,12 +219,14 @@ describe('MoneyNavigatorQuestions', function() {
     beforeEach(function() {
       this.updateAnalyticsSpy = sinon.spy(this.obj, '_updateAnalytics'); 
       this.updateDisplaySpy = sinon.spy(this.obj, '_updateDisplay'); 
+      this.scrollToTop = sinon.stub(this.obj, '_scrollToTop'); 
       this.obj._updateDOM(dataLayerMock.object); 
     }); 
 
     afterEach(function() {
       this.updateAnalyticsSpy.restore(); 
       this.updateDisplaySpy.restore(); 
+      this.scrollToTop.restore(); 
     }); 
 
     describe('Get started button', function() {
@@ -188,6 +237,7 @@ describe('MoneyNavigatorQuestions', function() {
 
         expect(this.updateDisplaySpy.calledWith('next')).to.be.true; 
         expect(this.updateAnalyticsSpy.calledWith($getStartedBtn[0], dataLayerMock.object)).to.be.true; 
+        expect(this.scrollToTop.called).to.be.true; 
       }); 
     }); 
 
@@ -199,16 +249,18 @@ describe('MoneyNavigatorQuestions', function() {
 
         expect(this.updateDisplaySpy.calledWith('next')).to.be.true; 
         expect(this.updateAnalyticsSpy.calledWith($continueBtn[0], dataLayerMock.object)).to.be.true; 
+        expect(this.scrollToTop.called).to.be.true; 
       }); 
     }); 
 
     describe('Back button', function() {
-      it('Calls the correct method with the correct argument when clicked', function() {
+      it('Calls the correct methods with the correct arguments when clicked', function() {
         var $backBtn = this.component.find('[data-back]'); 
 
         $backBtn.trigger('click'); 
 
         expect(this.updateDisplaySpy.calledWith('prev')).to.be.true; 
+        expect(this.scrollToTop.called).to.be.true; 
       }); 
     }); 
 

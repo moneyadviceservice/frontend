@@ -106,7 +106,7 @@ class Questions
 
   #Obtain the content rendered visibleby by a given heading_rule for
   def obtain_content_for_heading(heading_rule, answers_hash)
-    content  =  heading_rule[:content_rules].inject('') do |content_accumulator, content_rule |
+    content  =  heading_rule[:content_rules].inject({}) do |content_accumulator, content_rule |
       #See docs for `obtain_trigger_masks` to understand how the masks are calculated
       #At this level `content_rule[:mask]` is simply the expected results of the triggers.
       #It is compared with the combined trigger result to decide whether the content governed by the triggers is displayed or not.
@@ -119,7 +119,8 @@ class Questions
       Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags},  content_visible:#{content_visible}")
 
       Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
-      content_accumulator += cms_content(content_rule[:article]) if content_visible
+      content_accumulator[:html] = cms_content(content_rule[:article]) if content_visible
+      content_accumulator[:url] = content_rule[:article] if content_visible
 
       content_accumulator
     end

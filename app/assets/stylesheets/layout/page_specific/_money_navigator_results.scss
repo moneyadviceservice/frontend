@@ -30,10 +30,199 @@ $transition-time: 0.4s;
 		}
 
 		.urgent-actions__action {
+			$gutter: $default-gutter * 2;
+			$width-8-col: calc((100% / 1.5) - (#{$default-gutter} * 2));
+			$width-6-col: calc((100% / 2) - (#{$default-gutter} * 2));
+			$width-4-col: calc((100% / 3) - (#{$default-gutter} * 2));
+
+			@extend %clearfix; 
+
+			position: relative;
 			background: $color-white;
+			min-height: 14rem; 
 			margin-top: 0; 
 			margin-bottom: $baseline-unit * 2; 
 			padding: $baseline-unit $default-gutter;
+
+			& > p {
+				@include respond-to($mq-m) {
+					width: $width-6-col; 
+				}
+
+				& > img {
+					width: 165px;
+				}
+			}
+	
+			.callout {
+				p {
+					font-size: 1rem; 
+
+					a {
+						text-decoration: underline;
+					}
+				}
+
+				@include respond-to($mq-m) {
+					position: absolute;
+					top: 1.5rem;
+					right: $gutter;
+					width: $width-6-col;
+					margin-top: 0; 
+				}
+
+				@include respond-to($mq-l) {
+					width: 100% / 2.5;
+					width: calc((100% / 2.5) - (#{$default-gutter} * 2));
+					margin-left: $default-gutter * 2; 
+				}
+			}
+
+			&.coronavirus-debt-advice-ni {
+				p:nth-child(1n+6) {
+					margin-bottom: 0;
+
+					@include respond-to($mq-m) {
+						width: $width-6-col;
+						margin-right: $gutter; 
+						float: left; 
+					}
+				}
+
+				p:nth-child(1n+7) {
+					margin-top: 0;
+
+					@include respond-to($mq-m) {
+						margin-right: 0; 
+						margin-left: $gutter; 
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-scotland {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+
+					@include respond-to($mq-m) {
+						width: $width-6-col;
+						margin-right: $gutter; 
+						float: left; 
+						clear: left;
+					}
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				p:nth-child(1n+7) {
+					@include respond-to($mq-m) {
+						margin-right: 0; 
+						margin-left: $gutter; 
+						clear: none;
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-wales {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+					width: calc((100% / 3) - (#{$default-gutter} * 1.5));
+					margin-right: $gutter; 
+					float: left; 
+				}
+
+				p:nth-child(8) {
+					margin-right: 0; 
+				}
+			}
+
+			&.coronavirus-stepchange-debt-england, 
+			&.coronavirus-stepchange-debt-ni, 
+			&.coronavirus-stepchange-debt-scotland, 
+			&.coronavirus-stepchange-debt-wales {
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(3) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter;
+						width: auto;
+						margin: 0; 
+					}
+				}
+			}
+
+			&.coronavirus-self-employed-debt-advice {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(3) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
+
+			&.coronavirus-self-employed-debt-advice-ni {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(3) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
+
+			&.urgent-pension-advice {
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(2) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
 		}
 	}
 

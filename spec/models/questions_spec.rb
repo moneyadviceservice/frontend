@@ -10,7 +10,7 @@ RSpec.describe Questions, type: :model do
         "headings" => array_including(
           hash_including({
             "heading_code"=>heading_code,
-            "content"=>"#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}-#{country}"
+            "content"=>hash_including({url: "#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}-#{country}"})
           })
         )
       })
@@ -26,7 +26,7 @@ RSpec.describe Questions, type: :model do
         "headings" => array_including(
           hash_including({
             "heading_code"=>heading_code,
-            "content"=>"#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}"
+            "content"=>hash_including({url: "#{corona_specific_content ? 'coronavirus-' : ''}#{content_prefix}"})
           })
         )
       })

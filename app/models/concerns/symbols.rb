@@ -2022,7 +2022,7 @@ module Symbols
             #Q12A1 or Q12A3
             {
               triggers: [
-                {q12: 'a1', q12: 'a3'},
+                {q12:[ 'a1', 'a3']},
               ],
               mask: MASK_SOME,
               article: "coronavirus-equity-mortage-debt"

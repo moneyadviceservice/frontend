@@ -113,10 +113,9 @@ class Questions
       #By default the mask is a '1' meaning if the first trigger is pulled and no other triggers exist then the content will be displayed.
       #The mask must be as long as the number of triggers. Content will be disabled by default if this is not the case.
       #In summary, content will be displayed if the mask is completely equal to the trigger results.
-      content_rule_mask = content_rule[:mask].to_i(2)
       Rails.logger.debug "Checking Triggers for content: #{content_rule[:article]}"
-      result_flags = obtain_trigger_masks(content_rule[:triggers], answers_hash) unless content_rule_mask == 0
-      content_visible = content_rule[:mask] == result_flags
+      result_flags = obtain_trigger_masks(content_rule[:triggers], answers_hash)
+      content_visible = content_rule[:mask].include? result_flags
       Rails.logger.debug(" content_rule_mask: #{content_rule[:mask]}, results_flags: #{result_flags},  content_visible:#{content_visible}")
 
       Rails.logger.debug "Finished checking Triggers for content: #{content_rule[:article]}"
@@ -163,14 +162,14 @@ class Questions
     mask_flags = triggers_arr.inject('') do |mask_flags_accumulator,  trigger_hash |
       Rails.logger.debug("... and considering the trigger: #{trigger_hash}")
       question_answers_flags_hash = convert_hash_to_flags(answers_hash)
-      question_answers_flags = question_answers_flags_hash[:all].to_i(2) 
+      question_answers_flags = question_answers_flags_hash[:all].to_i(2)
       Rails.logger.debug("Answers flags: #{question_answers_flags_hash[:all].scan(/.{1,#{FLAG_SIZE}}/)}")
       triggers_flags_hash = convert_hash_to_flags(HashWithIndifferentAccess.new(trigger_hash))
       triggers_flags = triggers_flags_hash[:all].to_i(2)
       Rails.logger.debug("Triggers flags: #{triggers_flags_hash[:all].scan(/.{1,#{FLAG_SIZE}}/)}")
 
       none_fired = triggers_flags & question_answers_flags == 0
-      exact_fired = none_fired ? false :  triggers_flags & question_answers_flags == triggers_flags 
+      exact_fired = none_fired ? false :  triggers_flags & question_answers_flags == triggers_flags
       some_fired = exact_fired ? true : triggers_flags & question_answers_flags > 0
 
       Rails.logger.debug("None fired: #{none_fired} Exact fired: #{exact_fired}, Some fired: #{some_fired}" )
@@ -178,7 +177,7 @@ class Questions
       the_mask = MASK_NONE if none_fired
       the_mask = MASK_SOME if some_fired
       the_mask = MASK_ALL if exact_fired
-      mask_flags_accumulator += the_mask 
+      mask_flags_accumulator += the_mask
       Rails.logger.debug "Trigger result: #{mask_flags_accumulator}"
 
       mask_flags_accumulator

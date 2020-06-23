@@ -221,6 +221,8 @@ Rails.application.routes.draw do
       end
     end
 
+    get '/hub/coronavirus-support', to: redirect('/en/hub/coronavirus-money-guidance')
+    get '/hub/cymorth-coronafeirws', to: redirect('/cy/hub/arweiniad-ariannol-coronafeirws')
     get '/hub/:slug' => 'content_hub#show', as: :content_hub
   end
 

@@ -33,18 +33,76 @@ describe.only('MoneyNavigatorQuestions', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
       var setUpValidationStub = sinon.stub(this.obj, '_setUpValidation'); 
+      var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
       expect(setUpValidationStub.calledOnce).to.be.true; 
+      expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
       setUpValidationStub.restore(); 
+      setUpJourneyLogicStub.restore(); 
     });
   });
+
+  describe('setUpJourneyLogic method', function() {
+    it('Checks that the addJourneyData method is called with the correct arguments', function() {
+      var addJourneyDataSpy = sinon.spy(this.obj, '_addJourneyData'); 
+
+      this.obj._setUpJourneyLogic(); 
+
+      // When user is on Q1: 
+      // if Q1A1 is selected go to Q2 (no added logic)
+      // if Q1A2 is selected go to Q3
+      // if Q1A3 is selected go to Q4
+      // if Q1A4 is selected go to Q4
+      var question = this.questions[1]; 
+      var inputs = $(question).find('input[type=radio]'); 
+
+      inputs[1].checked = true; 
+      $(inputs[1]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith(this.questions[2])).to.be.true; 
+
+      inputs[1].checked = false; 
+      inputs[2].checked = true; 
+      $(inputs[2]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+
+      inputs[1].checked = false; 
+      inputs[2].checked = false; 
+      inputs[3].checked = true; 
+      $(inputs[3]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+
+      addJourneyDataSpy.restore(); 
+    }); 
+  }); 
+
+  describe('addJourneyData method', function() {
+    it('Checks that the data-value is added/removed to/from appropriate elements', function() {
+      // if Q1A2 is selected go to Q3
+      // if Q1A3 is selected go to Q4
+      // if Q1A4 is selected go to Q4
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData(this.questions[2]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.false; 
+
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData(this.questions[3]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.false; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData([this.questions[2], this.questions[3]]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+    }); 
+  }); 
 
   describe('setUpValidation method', function() {
     it ('Sets up the method', function() {
@@ -282,14 +340,24 @@ describe.only('MoneyNavigatorQuestions', function() {
       $(this.questions[0]).addClass(this.activeClass); 
 
       this.obj._updateDisplay('next'); 
-
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.true; 
 
       this.obj._updateDisplay('prev'); 
-
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+
+      this.obj._addJourneyData(this.questions[1]); 
+
+      this.obj._updateDisplay('next'); 
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[2]).hasClass(this.activeClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev'); 
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
     }); 
 
     it('Shows/hides the banner when active question is/not Q0', function() {

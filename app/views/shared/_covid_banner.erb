@@ -2,12 +2,15 @@
 	<div class="l-constrained">
 		<div class="covid_banner__content">
 			<div class="covid_banner__inner">
-				<a href="#" class="covid_banner__close" aria-label=”close” data-dough-close>
+        <a href="#" class="covid_banner__close" aria-label="<%= t('mobile_nav.close') %>" data-dough-close>
 					<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
 					</svg>
 				</a>
-        <div class="covid_banner__head"><div class="covid_banner__title"> <%= t('covid_banner.head') %> </div> <div class="covid_banner__description">- <%= t('covid_banner.description') %></div></div>
+        <p class="covid_banner__head">
+          <span class="covid_banner__title"> <%= t('covid_banner.head') %> </span>
+          <span class="covid_banner__description">- <%= t('covid_banner.description') %></span>
+        </p>
 				<p class="covid_banner__body"><%= t('covid_banner.body_html', href: t('covid_banner.href')) %></p>
 			</div>
 		</div>

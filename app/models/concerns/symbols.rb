@@ -136,33 +136,37 @@ module Symbols
             {
               triggers: [
                 {q0:'a1'},
-                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'},
+                {q1:'a2'},
               ],
-              mask: [ MASK_ALL + MASK_SOME, MASK_ALL + MASK_ALL  ],
+              mask: [ MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE  ],
               article: "coronavirus-debt-advice-england"
             },
             {
               triggers: [
                 {q0:'a2'},
-                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'},
+                {q1:'a2'},
               ],
-              mask: [ MASK_ALL + MASK_SOME, MASK_ALL + MASK_ALL  ],
+              mask: [ MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE  ],
               article: "coronavirus-debt-advice-ni"
             },
             {
               triggers: [
                 {q0:'a3'},
-                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'},
+                {q1:'a2'},
               ],
-              mask: [ MASK_ALL + MASK_SOME, MASK_ALL + MASK_ALL  ],
+              mask: [ MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE  ],
               article: "coronavirus-debt-advice-scotland"
             },
             {
               triggers: [
                 {q0:'a4'},
-                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'}
+                {q4:'a1', q6:['a6'], q7:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10:'a3'},
+                {q1:'a2'},
               ],
-              mask: [ MASK_ALL + MASK_SOME, MASK_ALL + MASK_ALL  ],
+              mask: [ MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE  ],
               article: "coronavirus-debt-advice-wales"
             }
           ]

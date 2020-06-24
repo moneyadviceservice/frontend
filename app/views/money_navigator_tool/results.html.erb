@@ -18,7 +18,7 @@
             <ul class="urgent-actions__actions">
               <% section[:headings].each do |heading| %>
                  <li class="urgent-actions__action <%= heading[:content][:url].html_safe %>">
-                  <%= heading[:content][:html].html_safe %>
+                  <div class="action__content"><%= heading[:content][:html].html_safe %></div>
                 </li>
               <% end %>
             </ul>

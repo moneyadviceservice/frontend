@@ -74,7 +74,7 @@ FactoryBot.define do
 
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
     trait :urgent_debt_advice_action do
-      q1 { answers_with_entropy('q1', [], nil)  }
+      q1 { answers_with_entropy('q1', [], ['a1', 'a3', 'a4'])  }
       q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', [], nil)  }
       q4 { answers_with_entropy('q4', ['a1'], nil)  }

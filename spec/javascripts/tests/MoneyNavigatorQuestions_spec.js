@@ -402,49 +402,71 @@ describe.only('MoneyNavigatorQuestions', function() {
     beforeEach(function() {
       var multipleQuestion = this.questions[2]; 
 
-      this.responses = $(multipleQuestion).find('input');
+      this.inputs = $(multipleQuestion).find('input[type="checkbox"]');
       this.obj._setUpMultipleQuestions(); 
     }); 
 
     it('Adds the expected states when the method is called', function() {
-      expect(this.responses[0].disabled).to.be.false; 
-      expect(this.responses[1].disabled).to.be.true; 
-      expect(this.responses[2].disabled).to.be.true; 
+      this.inputs[0].checked = true; 
+
+      expect(this.inputs[0].disabled).to.be.false; 
+      expect(this.inputs[0].checked).to.be.true; 
+      expect(this.inputs[1].disabled).to.be.true; 
+      expect(this.inputs[1].checked).to.be.false; 
+      expect(this.inputs[2].disabled).to.be.true; 
+      expect(this.inputs[2].checked).to.be.false; 
     });
 
-    it('Calls the correct methods when the first checkbox state is changed', function() {
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[0]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.true; 
-      updateMultipleQuestionsSpy.restore(); 
-
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[1]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.false; 
-      updateMultipleQuestionsSpy.restore(); 
-    })
+    describe('When user triggers a click on an input', function() {
+      it('Calls the correct method with the correct argument', function() {
+        var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
+        $(this.inputs[0]).siblings('label').trigger('click'); 
+        expect(updateMultipleQuestionsSpy.calledWith('click', this.inputs[0])).to.be.true; 
+        updateMultipleQuestionsSpy.restore(); 
+      }); 
+    }); 
   }); 
 
   describe('updateMultipleQuestions method', function() {
     it('Updates the state of inputs correctly when called', function() {
       var multipleQuestion = this.questions[2]; 
-      var responses = $(multipleQuestion).find('input[type="checkbox"]');
+      var inputs = $(multipleQuestion).find('input[type="checkbox"]');
 
+      // On load input 0 is checked and enabled, all others are unchecked and disabled
       this.obj._setUpMultipleQuestions(); 
 
-      responses[0].checked = false; 
+      // User unchecks input 0
+      inputs[0].checked = false; 
+      $(inputs[0]).siblings('label').trigger('click'); 
+      this.obj._updateMultipleQuestions('change', inputs[0]); 
+      expect(inputs[0].disabled).to.be.false; 
+      expect(inputs[1].disabled).to.be.false; 
+      expect(inputs[2].disabled).to.be.false; 
 
-      this.obj._updateMultipleQuestions(responses[0]); 
+      // User checks input 0
+      inputs[0].checked = true; 
+      $(inputs[0]).siblings('label').trigger('click'); 
+      this.obj._updateMultipleQuestions('change', inputs[0]); 
+      expect(inputs[0].disabled).to.be.false; 
+      expect(inputs[1].disabled).to.be.true; 
+      expect(inputs[2].disabled).to.be.true; 
 
-      expect(responses[1].disabled).to.be.false; 
-      expect(responses[2].disabled).to.be.false; 
+      // User clicks on input 1
+      inputs[0].checked = true; 
+      $(inputs[1]).siblings('label').trigger('click'); 
+      this.obj._updateMultipleQuestions('click', inputs[1]); 
+      expect(inputs[0].disabled).to.be.false; 
+      expect(inputs[0].checked).to.be.false; 
+      expect(inputs[1].disabled).to.be.false; 
+      expect(inputs[2].disabled).to.be.false; 
 
-      responses[0].checked = true; 
-
-      this.obj._updateMultipleQuestions(responses[0]); 
-
-      expect(responses[1].disabled).to.be.true; 
-      expect(responses[2].disabled).to.be.true; 
+      // User checks input 0
+      inputs[0].checked = true; 
+      $(inputs[0]).siblings('label').trigger('click'); 
+      this.obj._updateMultipleQuestions('change', inputs[0]); 
+      expect(inputs[0].disabled).to.be.false; 
+      expect(inputs[1].disabled).to.be.true; 
+      expect(inputs[2].disabled).to.be.true; 
     }); 
   }); 
 

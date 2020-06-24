@@ -15,8 +15,10 @@ describe.only('MoneyNavigatorQuestions', function() {
           fixture.load('MoneyNavigatorQuestions.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
+          self.banner = $('#fixture_container').find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
+          self.hiddenClass = self.obj.hiddenClass; 
 
           done();
         }, done);
@@ -31,18 +33,76 @@ describe.only('MoneyNavigatorQuestions', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
       var setUpValidationStub = sinon.stub(this.obj, '_setUpValidation'); 
+      var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
       expect(setUpValidationStub.calledOnce).to.be.true; 
+      expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
       setUpValidationStub.restore(); 
+      setUpJourneyLogicStub.restore(); 
     });
   });
+
+  describe('setUpJourneyLogic method', function() {
+    it('Checks that the addJourneyData method is called with the correct arguments', function() {
+      var addJourneyDataSpy = sinon.spy(this.obj, '_addJourneyData'); 
+
+      this.obj._setUpJourneyLogic(); 
+
+      // When user is on Q1: 
+      // if Q1A1 is selected go to Q2 (no added logic)
+      // if Q1A2 is selected go to Q3
+      // if Q1A3 is selected go to Q4
+      // if Q1A4 is selected go to Q4
+      var question = this.questions[1]; 
+      var inputs = $(question).find('input[type=radio]'); 
+
+      inputs[1].checked = true; 
+      $(inputs[1]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith(this.questions[2])).to.be.true; 
+
+      inputs[1].checked = false; 
+      inputs[2].checked = true; 
+      $(inputs[2]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+
+      inputs[1].checked = false; 
+      inputs[2].checked = false; 
+      inputs[3].checked = true; 
+      $(inputs[3]).trigger('change'); 
+      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+
+      addJourneyDataSpy.restore(); 
+    }); 
+  }); 
+
+  describe('addJourneyData method', function() {
+    it('Checks that the data-value is added/removed to/from appropriate elements', function() {
+      // if Q1A2 is selected go to Q3
+      // if Q1A3 is selected go to Q4
+      // if Q1A4 is selected go to Q4
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData(this.questions[2]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.false; 
+
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData(this.questions[3]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.false; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData([this.questions[2], this.questions[3]]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+    }); 
+  }); 
 
   describe('setUpValidation method', function() {
     it ('Sets up the method', function() {
@@ -171,17 +231,17 @@ describe.only('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Checks the dataLayer object is updated correctly when the submit button is clicked', function() {
-      var $submitBtn = this.component.find('[data-question-id="q3"]').find('[data-submit]'); 
-      var inputs = this.component.find('input[name="questions[q3]"]'); 
+      var $submitBtn = this.component.find('[data-question-id="q5"]').find('[data-submit]'); 
+      var inputs = this.component.find('input[name="questions[q5]"]'); 
 
       inputs[0].checked = true;
       this.obj._updateAnalytics($submitBtn[0], dataLayerMock.object);
 
       expect(dataLayer.length).to.equal(12); 
-      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q3'); 
-      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q3A1'); 
+      expect(dataLayer[dataLayer.length - 2].eventAction).to.equal('Q5'); 
+      expect(dataLayer[dataLayer.length - 2].eventLabel).to.equal('Q5A1'); 
       expect(dataLayer[dataLayer.length - 1].eventAction).to.equal('submit');
-      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q0A1_Q0A3_Q1A1_Q1A2_Q2A1_Q2A2_Q2A2-Q2A3_Q3A1'); 
+      expect(dataLayer[dataLayer.length - 1].eventLabel).to.equal('Q0A1_Q0A3_Q1A1_Q1A2_Q2A1_Q2A2_Q2A2-Q2A3_Q5A1'); 
     }); 
   }); 
 
@@ -192,22 +252,22 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect($(this.questions[0]).find('[data-get-started]').length).to.equal(1); 
       expect($(this.questions[1]).find('[data-get-started]').length).to.equal(0); 
       expect($(this.questions[2]).find('[data-get-started]').length).to.equal(0); 
-      expect($(this.questions[3]).find('[data-get-started]').length).to.equal(0); 
+      expect($(this.questions[5]).find('[data-get-started]').length).to.equal(0); 
 
       expect($(this.questions[0]).find('[data-continue]').length).to.equal(0); 
       expect($(this.questions[1]).find('[data-continue]').length).to.equal(1); 
       expect($(this.questions[2]).find('[data-continue]').length).to.equal(1); 
-      expect($(this.questions[3]).find('[data-continue]').length).to.equal(0); 
+      expect($(this.questions[5]).find('[data-continue]').length).to.equal(0); 
 
       expect($(this.questions[0]).find('[data-back]').length).to.equal(0); 
       expect($(this.questions[1]).find('[data-back]').length).to.equal(1); 
       expect($(this.questions[2]).find('[data-back]').length).to.equal(1); 
-      expect($(this.questions[3]).find('[data-back]').length).to.equal(1); 
+      expect($(this.questions[5]).find('[data-back]').length).to.equal(1); 
 
       expect($(this.questions[0]).find('[data-submit]').length).to.equal(0); 
       expect($(this.questions[1]).find('[data-submit]').length).to.equal(0); 
       expect($(this.questions[2]).find('[data-submit]').length).to.equal(0); 
-      expect($(this.questions[3]).find('[data-submit]').length).to.equal(1); 
+      expect($(this.questions[5]).find('[data-submit]').length).to.equal(1); 
 
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
@@ -280,14 +340,61 @@ describe.only('MoneyNavigatorQuestions', function() {
       $(this.questions[0]).addClass(this.activeClass); 
 
       this.obj._updateDisplay('next'); 
-
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.true; 
 
       this.obj._updateDisplay('prev'); 
-
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+
+      this.obj._addJourneyData(this.questions[1]); 
+
+      this.obj._updateDisplay('next'); 
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[2]).hasClass(this.activeClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev'); 
+      expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
+      expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
+      expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
+    }); 
+
+    it('Shows/hides the banner when active question is/not Q0', function() {
+      var hiddenClass = 'l-money_navigator__banner' + '--' + this.hiddenClass; 
+
+      this.obj._updateDOM(); 
+
+      this.obj._updateDisplay('next');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('next');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev');
+      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+
+      this.obj._updateDisplay('prev');
+      expect(this.banner.hasClass(hiddenClass)).to.be.false; 
+    }); 
+
+    it('Updates the counter to the correct value for the active question', function() {
+      this.obj._updateDOM(); 
+
+      this.obj._updateDisplay('next');
+      expect($(this.questions[1]).find('.question__counter').text()).to.equal('Completed 17%'); 
+
+      this.obj._updateDisplay('next');
+      expect($(this.questions[2]).find('.question__counter').text()).to.equal('Completed 33%'); 
+
+      this.obj._updateDisplay('next');
+      expect($(this.questions[3]).find('.question__counter').text()).to.equal('Completed 50%'); 
+
+      this.obj._updateDisplay('next');
+      expect($(this.questions[4]).find('.question__counter').text()).to.equal('Completed 67%'); 
+
+      this.obj._updateDisplay('next');
+      expect($(this.questions[5]).find('.question__counter').text()).to.equal('Completed 83%'); 
     }); 
   }); 
 

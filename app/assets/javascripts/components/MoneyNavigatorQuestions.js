@@ -9,7 +9,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]'); 
     this.$questions = this.$el.find('[data-question]'); 
     this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 
+    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]'); 
     this.activeClass = 'question--active'; 
+    this.hiddenClass = 'is-hidden'
     this.dataLayer = window.dataLayer; 
   };
 
@@ -21,8 +23,38 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
     this._setUpValidation(); 
+    this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
+
+  MoneyNavigatorQuestions.prototype._setUpJourneyLogic = function() {
+    var _this = this;
+
+    // When user is on Q1: 
+    var question = this.$questions[1]; 
+    var $inputs = $(question).find('input[type="radio"]'); 
+
+    $(question).on('change', function(e) {
+      // if Q1A2 is selected go to Q3
+      // if Q1A3 is selected go to Q4
+      // if Q1A4 is selected go to Q4
+      if (e.target.value.toUpperCase() === 'A2') {
+        _this._addJourneyData(_this.$questions[2]); 
+      } else if (e.target.value.toUpperCase() === 'A3') {
+        _this._addJourneyData([_this.$questions[2], _this.$questions[3]]);
+      } else if (e.target.value.toUpperCase() === 'A4') {
+        _this._addJourneyData([_this.$questions[2], _this.$questions[3]]);        
+      }
+    }); 
+  }; 
+
+  MoneyNavigatorQuestions.prototype._addJourneyData = function(questions) {
+    this.$questions.data('question-skip', false); 
+
+    $(questions).each(function() {
+      $(this).data('question-skip', true); 
+    }); 
+  }; 
 
   MoneyNavigatorQuestions.prototype._setUpValidation = function() {
     var _this = this; 
@@ -188,20 +220,44 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   }; 
 
   MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
-    var activeIndex, questionClasses = []; 
+    var activeIndex, 
+        progress, 
+        totalQuestions, 
+        questions = [], 
+        questionClasses = []; 
 
-    this.$questions.each(function() {
+    this.$el.find('[data-question]').each(function() {
+      if (!$(this).data('question-skip')) {
+        questions.push(this); 
+      }
+    }); 
+
+    totalQuestions = questions.length; 
+
+    $(questions).each(function() {
       questionClasses.push(this.className); 
     }); 
 
     activeIndex = questionClasses.indexOf('l-money_navigator__question ' + this.activeClass); 
 
-    $(this.$questions[activeIndex]).removeClass(this.activeClass); 
+    $(questions[activeIndex]).removeClass(this.activeClass); 
 
     if (dir === 'next') {
-      $(this.$questions[activeIndex + 1]).addClass(this.activeClass); 
+      activeIndex ++; 
     } else {
-      $(this.$questions[activeIndex - 1]).addClass(this.activeClass); 
+      activeIndex --; 
+    }
+
+    progress = Math.round(activeIndex / totalQuestions * 100); 
+
+    $(questions[activeIndex])
+      .addClass(this.activeClass)
+      .find('.question__counter').text('Completed ' + progress + '%'); 
+
+    if (activeIndex == 0) {
+      this.banner.removeClass('l-money_navigator__banner' + '--' + this.hiddenClass); 
+    } else {
+      this.banner.addClass('l-money_navigator__banner' + '--' + this.hiddenClass);       
     }
   }
 

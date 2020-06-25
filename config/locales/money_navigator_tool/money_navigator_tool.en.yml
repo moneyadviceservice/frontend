@@ -223,7 +223,7 @@ en:
             text: Hire purchase payments
             sort_order: 9
           - code: A9
-            text: Cark parking fines
+            text: Car parking fines
             sort_order: 10
       - code: Q8
         type: checkbox
@@ -264,7 +264,7 @@ en:
             sort_order: 10
       - code: Q9
         type: checkbox
-        text: Will you struggle to make future repayments on these loans or credit?
+        text: Will you struggle to make future repayments, or have you already missed one payment, on these loans or credit?
         explainer: Choose all that apply
         sort_order: 10
         responses:
@@ -308,7 +308,6 @@ en:
       - code: Q10
         type: radio
         text: Have you fallen behind or agreed a payment break on credit commitments or priority household bills since 28th February 2020?
-        note: 'Note: Please answer "Yes" even if this is as a result of a payment break/holiday agreed with your creditor/supplier. If you had already fallen behind prior to 28th February, please answer "No".'
         sort_order: 11
         responses:
           - code: A1

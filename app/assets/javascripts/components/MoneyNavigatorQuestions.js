@@ -122,7 +122,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       });
 
       // For testing purposes only
-      console.log('dataLayer: ', dataLayer); 
+      // console.log('dataLayer: ', dataLayer); 
     }
 
     if ($(question).data('question-custom') !== undefined) {
@@ -134,7 +134,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       });
 
       // For testing purposes only
-      console.log('dataLayer: ', dataLayer);       
+      // console.log('dataLayer: ', dataLayer);       
     }
 
     if ($(btn).data('submit')) {
@@ -156,7 +156,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       });
 
       // For testing purposes only
-      console.log('dataLayer: ', dataLayer); 
+      // console.log('dataLayer: ', dataLayer); 
     }
   }; 
 
@@ -267,8 +267,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$multipleQuestions.each(function() {
       var inputs = $(this).find('input[type="checkbox"]'); 
 
-      $(inputs[0]).on('change', function(e) {
-        _this._updateMultipleQuestions(e.target); 
+      $(inputs).siblings('label').on('click', function(e) {
+        _this._updateMultipleQuestions(e.type, $(this).siblings('input')[0]); 
       }); 
 
       for (var i = 0, length = inputs.length; i < length; i++) {
@@ -279,18 +279,49 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     }); 
   }
 
-  MoneyNavigatorQuestions.prototype._updateMultipleQuestions = function(input) {
-    var responses = $(input).parents('[data-response]').siblings('[data-response]'); 
+  MoneyNavigatorQuestions.prototype._updateMultipleQuestions = function(event, input) {
+    var disabledInput; 
 
-    responses.each(function() {
-      $(this).find('input[type="checkbox"]').each(function() {
-        if (input.checked) {
-          this.disabled = true; 
-        } else {
-          this.disabled = false; 
+    if (input.disabled == true) {
+      disabledInput = true; 
+    } else {
+      disabledInput = false; 
+    }
+
+    var inputs = $(input).parents('[data-question]').find('input[type="checkbox"]'); 
+
+    if (input == inputs[0]) {
+    // if input == 0
+      if (input.checked == true) {
+      // if it's checked disable others
+        for (var i = 0, length = inputs.length; i < length; i++) {
+          if (i > 0) {
+            inputs[i].disabled = false; 
+          }
         }
-      })
-    })
+      } else {
+      // if it's unchecked enable others      
+        for (var i = 0, length = inputs.length; i < length; i++) {
+          if (i > 0) {
+            inputs[i].disabled = true; 
+          }
+        }
+      }
+    } else {
+    // if input > 0
+      if (input.disabled == true) {
+      // if it's disabled
+        for (var i = 0, length = inputs.length; i < length; i++) {        
+          if (i == 0) {
+          // set input 0 to unchecked
+            inputs[i].checked = false; 
+          } else {
+          // enable all
+            inputs[i].disabled = false; 
+          }
+        }
+      }
+    }
   }
 
   return MoneyNavigatorQuestions; 

@@ -595,7 +595,7 @@ module Symbols
                 {q4:'a1'}
               ],
               mask: [ MASK_ALL ],
-              article: "coronavirus-back-on-track-severe"
+              article: "coronavirus-back-on-track"
             },
           ]
         },
@@ -609,7 +609,7 @@ module Symbols
                 {q4: ['a2', 'a3']}
               ],
               mask: [ MASK_SOME, MASK_ALL  ],
-              article: "coronavirus-back-on-track"
+              article: "coronavirus-back-on-track-severe"
             },
           ]
         },

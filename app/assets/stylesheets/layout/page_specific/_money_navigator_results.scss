@@ -559,5 +559,9 @@ $transition-time: 0.4s;
 		width: 100%;
 		z-index: 150; 
 		background: rgba(0, 0, 0, 0.5);
+
+		&.is-hidden {
+			display: none; 
+		}
 	}
 }

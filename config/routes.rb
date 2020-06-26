@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   end
 
   get '/' => redirect('/en')
+  #Redirect All Welsh to English for the Money Navigator Tool
+  #TODO: Remove this once the welsh translation for the tool is available
+  get '/cy/tools/money-navigator-tool', to: redirect('/en/tools/money-navigator-tool')
+  get '/cy/tools/money-navigator-tool/questionnaire', to: redirect('/en/tools/money-navigator-tool/questionnaire')
+  get '/cy/tools/money-navigator-tool/results', to: redirect('/en/tools/money-navigator-tool/results')
 
   get '/robots', to: 'sitemap#robots'
 

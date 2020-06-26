@@ -1,0 +1,563 @@
+$transition-time: 0.4s;
+
+.l-money_navigator-results {
+	.results__intro {
+		font-size: 1.125rem; 
+		font-weight: 700; 
+	}
+
+	.results__urgent-actions {
+		@include row(12); 
+
+		background: $color-grey-pale; 
+
+		.urgent-actions__heading {
+			@include column(12); 
+
+			font-size: 1rem; 
+			text-transform: uppercase;
+			margin-top: $baseline-unit * 2; 
+			color: $color-black; 
+		}
+
+		.urgent-actions__actions {
+			@include column(12); 
+
+			list-style: none; 
+			padding: 0; 
+			margin-top: 0; 
+			margin-bottom: 0; 
+		}
+
+		.urgent-actions__action {
+			$gutter: $default-gutter * 2;
+			$width-8-col: 66.6667% - 3.33334%;
+			$width-8-col: calc((100% / 1.5) - (#{$default-gutter} * 2));
+			$width-6-col: 50% - 3.33334%;
+			$width-6-col: calc((100% / 2) - (#{$default-gutter} * 2));
+			$width-4-col: 33.3333% - 3.33334%;
+			$width-4-col: calc((100% / 3) - (#{$default-gutter} * 2));
+
+			@extend %clearfix; 
+
+			.action__content {
+				@extend %clearfix; 
+
+				position: relative;
+				background: $color-white;
+				min-height: 17rem; 
+				margin-top: 0; 
+				margin-bottom: $baseline-unit * 2; 
+				padding: $baseline-unit $default-gutter;
+
+				& > p {
+					@include respond-to($mq-m) {
+						width: $width-6-col; 
+					}
+
+					& > img {
+						width: 165px;
+					}
+				}
+
+				@include respond-to($mq-m) {
+					@include row(12); 
+				}
+		
+				@include respond-to($mq-l) {
+					width: 100%;
+					margin-left: 0; 
+					margin-right: 0; 
+				}
+
+				.callout {
+					p {
+						font-size: 1rem; 
+
+						a {
+							text-decoration: underline;
+						}
+					}
+
+					@include respond-to($mq-m) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter / 2;
+						width: $width-6-col;
+						margin-top: 0; 
+						margin-right: 0; 
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-england {
+				p:nth-child(1n+6) {
+					margin-bottom: 0;
+
+					@include respond-to($mq-m) {
+						width: $width-6-col;
+						margin-right: $gutter; 
+						float: left; 
+					}
+				}
+
+				p:nth-child(1n+7) {
+					margin-top: 0;
+
+					@include respond-to($mq-m) {
+						margin-right: 0; 
+						margin-left: $gutter; 
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-ni {
+				p:nth-child(1n+6) {
+					margin-bottom: 0;
+
+					@include respond-to($mq-m) {
+						width: $width-6-col;
+						margin-right: $gutter; 
+						float: left; 
+					}
+				}
+
+				p:nth-child(1n+7) {
+					margin-top: 0;
+
+					@include respond-to($mq-m) {
+						margin-right: 0; 
+						margin-left: $gutter; 
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-scotland {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+
+					@include respond-to($mq-m) {
+						width: $width-6-col;
+						margin-right: $gutter; 
+						float: left; 
+						clear: left;
+					}
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				p:nth-child(1n+7) {
+					@include respond-to($mq-m) {
+						margin-right: 0; 
+						margin-left: $gutter; 
+						clear: none;
+					}
+				}
+			}
+
+			&.coronavirus-debt-advice-wales {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+					width: calc((100% / 3) - (#{$default-gutter} * 1.5));
+					margin-right: $gutter; 
+					float: left; 
+				}
+
+				p:nth-child(8) {
+					margin-right: 0; 
+				}
+			}
+
+			&.coronavirus-stepchange-debt-england, 
+			&.coronavirus-stepchange-debt-ni, 
+			&.coronavirus-stepchange-debt-scotland, 
+			&.coronavirus-stepchange-debt-wales {
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-6-col;
+					}					
+				}
+			}
+
+			&.coronavirus-self-employed-debt-advice {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(4) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter / 2;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
+
+			&.coronavirus-self-employed-debt-advice-ni {
+				p:nth-child(1n+5) {
+					margin-bottom: 0;
+				}
+
+				p:nth-child(1n+6) {
+					margin-top: 0;
+				}
+
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(3) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter / 2;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
+
+			&.urgent-pension-advice {
+				@include respond-to($mq-m) {
+					& > p {
+						width: $width-8-col;
+					}					
+
+					p:nth-child(3) {
+						position: absolute;
+						top: 1.5rem;
+						right: $gutter / 2;
+						width: auto;
+						margin-top: 0; 
+					}
+				}
+			}
+
+		}
+	}
+
+	.results__sections {
+		@include row(12); 
+
+		.sections__sections {
+			list-style: none; 
+			padding: 0;
+		}
+
+		.section__title {
+			font-size: 1rem; 
+			line-height: 1.2; 
+			color: $color-green-secondary;
+			padding-bottom: $baseline-unit; 
+			border-bottom: solid 1px $color-grey-normal; 
+
+			button {
+				border: none; 
+				width: 100%;
+				text-align: left; 
+				padding: 0;
+				background: transparent;
+			}
+
+			.section__title__text {
+				@include column(12); 
+
+				display: inline-block;
+				float: none; 
+				padding-right: calc(18px + #{$default-gutter}); 
+			}
+		}
+
+		.section__subtitle {
+			@include column(12); 
+			
+			font-size: 1.125rem;
+			line-height: 1.2; 
+			margin-top: $baseline-unit; 
+			color: $color-green-secondary;
+		}
+
+		.sections__headings {
+			@include column(12); 
+
+			list-style: none; 
+			padding: 0;
+			margin-top: 0; 
+			margin-bottom: 0; 
+		}
+
+		.sections__heading {
+			border: solid 1px $color-grey-normal;
+			box-shadow: 0 2px 4px $color-grey-normal; 
+
+			button {
+				border: none; 
+				width: 100%;
+				text-align: left; 
+				padding: $baseline-unit * 2 $default-gutter;
+				background: transparent;
+
+				@include respond-to($mq-m) {
+					padding-top: $baseline-unit * 3;
+					padding-bottom: $baseline-unit * 3;
+				}
+			}
+
+			.heading__title {
+				font-size: 1rem; 
+				line-height: 1.2; 
+				margin-top: 0; 
+				margin-bottom: $baseline-unit; 
+			}
+
+			.heading__content {
+				margin-top: 0; 
+				margin-bottom: 0; 
+
+				p, a {
+					font-size: 0.875rem; 
+					margin: $baseline-unit 0;
+				}
+
+				a {
+					border-bottom: 0;
+					text-decoration: underline;
+
+					&:hover,
+					&:focus {
+						text-decoration: none;
+					}
+				}
+
+				.add-action {
+					position: relative;
+					background-color: $color-article-cta;
+					padding: $baseline-unit $baseline-unit*2;
+					display: block;
+					margin: $baseline-unit*5 0;
+					clear: both;
+
+					&:before {
+						position: absolute;
+						top: -10px;
+						left: 0;
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 10px 0 0 10px;
+						border-color: transparent transparent transparent $color-article-cta;
+					}
+				}
+			}
+
+			.heading__content__title, .overlay__hide {
+				display: none; 
+			}
+		}
+	}
+
+	.results__actions {
+		text-align: center; 
+		.button--restart {
+			width: 100%; 
+
+			@include respond-to($mq-m) {
+				width: 50%; 
+			}
+
+			@include respond-to($mq-l) {
+				width: 25%; 
+			}
+		}
+	}
+
+	// Component initialised
+	.results__sections[data-dough-money-navigator-results-initialised="yes"] {
+		.sections__section {
+			@extend %clearfix; 
+
+			.section__content {
+				overflow: hidden;
+
+				transition-property: height; 
+				transition-duration: $transition-time; 
+			}
+
+			.section__title {
+				button {
+					position: relative;
+				}
+
+				.section__title__icon {
+					position: absolute;
+					top: 50%; 
+					right: $default-gutter; 
+					width: 18px;
+					height: 12px; 
+					transform: translateY(-50%) rotate(0deg); 
+					transition-property: transform; 
+					transition-duration: $transition-time; 
+					background-image: image_url('money_navigator_tool/section_title_icon.svg');
+					background-repeat: no-repeat;
+					background-size: 100%; 
+					background-position: center; 
+				}			
+			}
+
+			.sections__heading--done {
+				background: $color-grey-pale;
+
+				.heading__title__icon {
+					&:before {
+						content: '\2713'; 
+						display: block;
+						text-align: center;
+						line-height: 1.25rem; 
+					}
+				}
+			}
+
+			.heading__title {
+				margin-bottom: 0;
+				padding-left: calc(1.25rem + #{$default-gutter}); 
+				position: relative;
+
+				.heading__title__icon {
+					display: inline-block;
+					width: 1.25rem; 
+					height: 1.25rem; 
+					border: solid 1px;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					background: $color-white;
+				}
+			}
+
+			.heading__content {
+				position: fixed;
+				top: 0%;
+				left: 0%;
+				height: 100%; 
+				width: 100%;
+				padding: $baseline-unit * 8 $default-gutter * 4 $baseline-unit * 4;
+				z-index: 155; 
+				background: $color-white;
+				transition-property: top; 
+				transition-duration: $transition-time; 
+				overflow-y: scroll;
+
+				@include respond-to($mq-s) {
+					padding-left: $default-gutter * 3.5;
+					padding-right: $default-gutter * 3.5;
+				}
+
+				@include respond-to($mq-m) {
+					padding-left: $default-gutter * 3;
+					padding-right: $default-gutter * 3;
+				}
+
+				@include respond-to($mq-l) {
+					left: 30%;
+					width: 70%;
+					padding-left: $default-gutter * 2.5;
+					padding-right: $default-gutter * 2.5;
+					transition-property: left; 
+				}
+
+				@include respond-to($mq-xl) {
+					padding-left: $default-gutter * 2;
+					padding-right: $default-gutter * 2;
+				}
+
+				.overlay__hide {
+					position: absolute;
+					margin: 0;
+					top: $baseline-unit * 3;
+					right: $default-gutter * 4;
+					display: inline-block;
+					padding: $baseline-unit $baseline-unit * 4 $baseline-unit $baseline-unit;
+
+					@include respond-to($mq-s) {
+						right: $default-gutter * 3.5;
+					}
+
+					@include respond-to($mq-m) {
+						right: $default-gutter * 3;
+					}
+
+					@include respond-to($mq-l) {
+						right: $default-gutter * 2.5;
+					}
+
+					@include respond-to($mq-xl) {
+						right: $default-gutter * 2;
+					}
+
+					&:focus {
+						outline: 3px solid $color-black;
+					}
+
+					.overlay__hide__icon {
+						position: absolute;
+						width: 12px;
+						height: 12px;
+						right: $baseline-unit; 
+						top: 50%; 
+						transform: translateY(-50%);
+					}
+				}
+			}
+
+			.heading__content--hidden {
+				top: 100%;
+
+				@include respond-to($mq-l) {
+					top: 0%;
+					left: 100%;
+				}
+			}
+
+			&.is-collapsed {
+				.section__title {
+					.section__title__icon {
+						transform: translateY(-50%) rotate(180deg); 
+					}			
+				}
+			}
+
+			.heading__content__title {
+				display: block; 
+				margin-top: 0; 
+			}
+		}
+	}
+
+	.results__sections__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 150; 
+		background: rgba(0, 0, 0, 0.5);
+	}
+}

@@ -1,0 +1,99 @@
+<% set_meta_tags(title:       t('money_navigator_tool.meta.title'),
+                 description: t('money_navigator_tool.meta.description'),
+                 canonical:   t('money_navigator_tool.meta.canonical'),
+                 alternate:   t('money_navigator_tool.meta.alternate')) %>
+
+<div class="l-container-tool">
+  <main>
+    <div class="l-money_navigator" id="money_navigator__questions">
+      <h1 class="l-money_navigator__heading"><%= t("money_navigator_tool.heading") %></h1>
+
+      <h2 class="l-money_navigator__banner" data-banner><%= t("money_navigator_tool.banner") %></h2>
+
+      <%= form_for @model,
+        url:money_navigator_tool_questionnaire_path, 
+        data: {dough_component: "MoneyNavigatorQuestions"},
+        builder: Dough::Forms::Builders::Validation do |f|
+      %>
+        <%= f.validation_summary %>
+
+        <ul class="l-money_navigator__questions">
+          <% t("money_navigator_tool.questions").each_with_index do |question, index| %>
+            <li
+              class="l-money_navigator__question"
+              data-question
+              <% if question[:type] == 'checkbox' %>
+                data-question-multiple
+              <% end %>
+            >
+              <% if index > 0 %>
+                <p class="question__counter"><%= t("money_navigator_tool.counter", number: index, total: t("money_navigator_tool.questions").length - 1) %></p>
+              <% end %>
+
+              <div 
+                class="question__content question__content--<%= question[:code] %>" 
+                data-question-id="<%= question[:code] %>"
+                <% if question[:custom] %>
+                  data-question-custom
+                <% end %>
+              >
+                <fieldset>
+                  <legend class="question__heading"><%= question[:text] %></legend>
+
+                  <% if question[:explainer] %>
+                    <p class="question__explainer"><%= question[:explainer] %></p>
+                  <% end %>
+
+                  <% question[:responses].each do |response| %>
+                    <% if response[:default] %>
+                      <div class="question__response" data-response>
+                        <% if question[:type] == 'radio' %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
+                        <% elsif question[:type] == 'checkbox' %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase, nil %>
+                        <% end %>
+
+                        <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                          <span><%= response[:text] %></span>
+                        </label>
+                      </div>
+                    <% end %>
+                  <% end %>
+
+                  <% question[:responses].each do |response| %>
+                    <% if !response[:default] %>
+                      <div class="question__response" data-response>
+                        <% if question[:type] == 'radio' %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control' %>
+                        <% elsif question[:type] == 'checkbox' %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase, nil %>
+                        <% end %>
+
+                        <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                          <span><%= response[:text] %></span>
+                        </label>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </fieldset>
+
+                <% if question[:note] %>
+                  <p class="question__note"><%= question[:note] %></p>
+                <% end %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+
+        <%= f.submit t("money_navigator_tool.controls.submit_label"),
+          class: 'button button--submit',
+          data: {submit: true}
+        %>
+
+        <script type="text/javascript">
+          window.dataLayer = window.dataLayer || [];
+        </script>
+      <% end %>
+    </div>
+  </main>
+</div>

@@ -14,11 +14,24 @@ Rails.application.routes.draw do
   end
 
   get '/' => redirect('/en')
+  #Redirect All Welsh to English for the Money Navigator Tool
+  #TODO: Remove this once the welsh translation for the tool is available
+  get '/cy/tools/money-navigator-tool/*other', to: redirect('/en/tools/money-navigator-tool/%{other}')
+  get '/cy/tools/money-navigator-tool', to: redirect('/en/tools/money-navigator-tool')
 
   get '/robots', to: 'sitemap#robots'
 
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
+
+    #Money Navigator Tool
+    scope :tools do
+      get '/money-navigator-tool', to: 'money_navigator_tool#landing'
+      get '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      post '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      patch '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      get '/money-navigator-tool/results', to: 'money_navigator_tool#results'
+    end
 
     get '/sitemap', to: 'sitemap#index'
 

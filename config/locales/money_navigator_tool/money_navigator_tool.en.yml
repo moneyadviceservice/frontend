@@ -120,13 +120,13 @@ en:
           - code: A1
             text: 'Yes'
             sort_order: 1
-            default: true
           - code: A2
             text: 'No'
             sort_order: 2
           - code: A3
             text: 'I am not self employed'
             default: true
+            sort_order: 3
       - code: Q4
         type: radio
         custom: true

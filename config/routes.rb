@@ -168,6 +168,7 @@ Rails.application.routes.draw do
     # PACE
     get '/moneyadvisernetwork', to: 'pace#show'
     get '/moneyadvisernetwork/privacy', to: 'pace#privacy'
+    get '/moneyadvisernetwork/online', to: 'pace#online'
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 
@@ -221,6 +222,8 @@ Rails.application.routes.draw do
       end
     end
 
+    get '/hub/coronavirus-support', to: redirect('/en/hub/coronavirus-money-guidance')
+    get '/hub/cymorth-coronafeirws', to: redirect('/cy/hub/arweiniad-ariannol-coronafeirws')
     get '/hub/:slug' => 'content_hub#show', as: :content_hub
   end
 

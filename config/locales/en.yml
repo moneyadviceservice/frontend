@@ -183,7 +183,7 @@ en:
         Sunday and Bank Holidays, closed
       offline_migration_html: Monday to Friday, 8am to 6pm<br />On Saturday 06/02/2016 Web chat will be unavailable due to maintenance
       pensions_header: Got a pension question?
-      pensions_description: Start a live chat with a one of our pensions specialists Monday to Friday 9am to 6.20pm 
+      pensions_description: Start a live chat with a one of our pensions specialists Monday to Friday 9am to 6.20pm
     whatsapp:
       text1: Need help sorting out your debts, have credit questions or want pensions guidance?
       text2: Add +44 7701 342744 to your Whatsapp and send us a message.
@@ -287,10 +287,11 @@ en:
     mps_provided_2: Service is provided by
     mps: Money & Pensions Service
 
-  covid_banner: 
-    head: Coronavirus – what it means for you
-    body_html: <a href="%{href}" class="covid_banner__link">Find out what you're entitled to</a>
-    href: /en/articles/coronavirus-what-it-means-for-you
+  covid_banner:
+    head: Coronavirus Money Guidance
+    description: Get free trusted guidance and links to direct support
+    body_html: <a href="%{href}" class="covid_banner__link">Visit our support hub</a>
+    href: /en/hub/coronavirus-money-guidance
 
   footer_secondary:
     title: Report an accessibility problem
@@ -301,10 +302,10 @@ en:
     copyright: Copyright
     money_advice_service: The Money Advice Service
     address: 120 Holborn, London EC1N 2TD
-    mps_provided_1: The Money 
-    mps_provided_2: Advice Service 
+    mps_provided_1: The Money
+    mps_provided_2: Advice Service
     mps_provided_3: is provided by
-    mps: Money & Pensions Service  
+    mps: Money & Pensions Service
     accessibility: Accessibility
     accessibility_link: /en/corporate/accessibility
     privacy_statement: Privacy notice

@@ -3,5 +3,7 @@ class PaceController < ApplicationController
 
   def show; end
   def privacy; end
-  def online; end
+  def online
+    render layout: false
+  end
 end

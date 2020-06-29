@@ -81,6 +81,10 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
 
     this.$overlay.on('click', function() {
       _this._hideHeading(); 
+    });
+
+    this.$actions.find('[data-print-btn]').on('click', function() {
+      window.print();
     }); 
 
     $(window).on(

@@ -79,6 +79,7 @@ describe('MoneyNavigatorResults', function() {
       var showHeadingSpy = sinon.spy(this.obj, '_showHeading'); 
       var hideHeadingSpy = sinon.spy(this.obj, '_hideHeading'); 
       var sectionResizeStub = sinon.stub(this.obj, '_sectionResize'); 
+      var printStub = sinon.stub(window, 'print'); 
       var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
       var section_1_btn = $(this.$sectionTitles[1]).find('button'); 
       var section_2_btn = $(this.$sectionTitles[2]).find('button'); 
@@ -86,6 +87,7 @@ describe('MoneyNavigatorResults', function() {
       var heading_2_btn = $(this.$headings[2]).find('button'); 
       var heading_4_btn = $(this.$headings[4]).find('button'); 
       var overlayHide = $(this.$headingContent[0]).find('[data-overlay-hide]'); 
+      var printBtn = $(this.component).find('[data-print-btn]'); 
 
       this.obj._setUpEvents(); 
 
@@ -113,6 +115,9 @@ describe('MoneyNavigatorResults', function() {
       this.$overlay.trigger('click'); 
       expect(hideHeadingSpy.calledWith()).to.be.true; 
 
+      $(printBtn).trigger('click'); 
+      expect(window.print.calledOnce).to.be.true; 
+
       $(window).trigger('resize'); 
       expect(sectionResizeStub.called).to.be.false; 
 
@@ -120,6 +125,7 @@ describe('MoneyNavigatorResults', function() {
       showHeadingSpy.restore(); 
       hideHeadingSpy.restore(); 
       sectionResizeStub.restore(); 
+      printStub.restore(); 
     }); 
   }); 
 

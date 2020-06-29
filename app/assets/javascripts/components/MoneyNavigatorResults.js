@@ -1,16 +1,21 @@
 define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseComponent, utilities) {
   'use strict';
 
-  var MoneyNavigatorResults;
-  
+  var MoneyNavigatorResults,
+      i18nStrings = {
+        printBtnText: 'Print this'
+      };
+
   MoneyNavigatorResults = function($el, config) {
     MoneyNavigatorResults.baseConstructor.call(this, $el, config);
 
+    this.i18nStrings = (config && config.i18nStrings) ? config.i18nStrings : i18nStrings;
     this.$headingContent = this.$el.find('[data-heading-content]'); 
     this.$sections = this.$el.find('[data-section]'); 
     this.$sectionTitles = this.$el.find('[data-section-title]'); 
     this.$headingTitles = this.$el.find('[data-heading-title]'); 
     this.$overlay = this.$el.find('[data-overlay]'); 
+    this.$actions = this.$el.find('[data-actions]'); 
     this.hiddenSuffix = '--hidden'; 
     this.hiddenClass = 'is-hidden';
     this.collapsedClass = 'is-collapsed'; 
@@ -31,9 +36,14 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     var _this = this; 
     var sectionIcon = document.createElement('span'); 
     var headingTitleIcon = document.createElement('span'); 
+    var printBtn = document.createElement('button'); 
 
     $(sectionIcon).addClass('section__title__icon'); 
     $(headingTitleIcon).addClass('heading__title__icon'); 
+    $(printBtn)
+      .addClass('button button--print')
+      .text(this.i18nStrings.printBtnText); 
+    printBtn.dataset.printBtn = true; 
 
     // Adds hidden classes to headings content
     this.$headingContent.addClass('heading__content' + this.hiddenSuffix); 
@@ -48,6 +58,9 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
 
     // Adds checkbox element to headings
     this.$headingTitles.append(headingTitleIcon); 
+
+    // Adds print button
+    this.$actions.prepend(printBtn); 
   }; 
 
   MoneyNavigatorResults.prototype._setUpEvents = function() {

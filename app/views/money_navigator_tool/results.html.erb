@@ -26,7 +26,11 @@
         </section>
       <% end %>
 
-			<section class="results__sections" data-dough-component="MoneyNavigatorResults">
+			<section 
+				class="results__sections" 
+				data-dough-component="MoneyNavigatorResults"
+				data-dough-money-navigator-results-config='{"i18nStrings": {"printBtnText": "<%= t('money_navigator_tool.results.print_btn_text') %>"}}'
+			>
 				<ul class="sections__sections">
           <% @results.reject {|res| res[:section_code] == 'S1'}.each do |result| %>
 						<li class="sections__section" data-section>
@@ -75,7 +79,7 @@
 					<% end %>
 				</ul>
 
-				<div class="results__actions">
+				<div class="results__actions" data-actions>
 					<%= link_to('/en/tools/money-navigator-tool/questionnaire', class: 'button button--restart') do %>
 						Re-start the diagnostic
 					<% end %>

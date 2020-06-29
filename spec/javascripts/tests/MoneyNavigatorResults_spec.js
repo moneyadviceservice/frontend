@@ -65,7 +65,9 @@ describe('MoneyNavigatorResults', function() {
 
       this.$headingTitles.each(function() {
         expect($(this).find('.heading__title__icon').length).to.equal(1); 
-      }); 
+      });
+
+      expect($(this.component).find('[data-print-btn]').length).to.equal(1); 
     }); 
   }); 
 

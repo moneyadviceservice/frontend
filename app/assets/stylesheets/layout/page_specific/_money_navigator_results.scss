@@ -303,14 +303,11 @@ $transition-time: 0.4s;
 		}
 
 		.sections__heading {
-			border: solid 1px $color-grey-normal;
-			box-shadow: 0 2px 4px $color-grey-normal; 
-
 			button {
 				border: none; 
 				width: 100%;
 				text-align: left; 
-				padding: $baseline-unit * 2 $default-gutter;
+				padding: 0;
 				background: transparent;
 
 				@include respond-to($mq-m) {
@@ -422,6 +419,15 @@ $transition-time: 0.4s;
 					background-size: 100%; 
 					background-position: center; 
 				}			
+			}
+
+			.sections__heading {
+				border: solid 1px $color-grey-normal;
+				box-shadow: 0 2px 4px $color-grey-normal; 
+
+				button {
+					padding: $baseline-unit * 2 $default-gutter;
+				}
 			}
 
 			.sections__heading--done {

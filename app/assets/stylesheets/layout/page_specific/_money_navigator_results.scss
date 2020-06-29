@@ -374,7 +374,10 @@ $transition-time: 0.4s;
 	}
 
 	.results__actions {
+		@include column(12); 
+		
 		text-align: center; 
+
 		.button--restart {
 			width: 100%; 
 

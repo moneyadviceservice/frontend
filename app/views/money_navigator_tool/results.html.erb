@@ -75,13 +75,13 @@
 					<% end %>
 				</ul>
 
-				<div class="results__sections__overlay is-hidden" data-overlay></div>
-			</section>
+				<div class="results__actions">
+					<%= link_to('/en/tools/money-navigator-tool/questionnaire', class: 'button button--restart') do %>
+						Re-start the diagnostic
+					<% end %>
+				</div>
 
-			<section class="results__actions">
-				<%= link_to('/en/tools/money-navigator-tool/questionnaire', class: 'button button--restart') do %>
-					Re-start the diagnostic
-				<% end %>
+				<div class="results__sections__overlay is-hidden" data-overlay></div>
 			</section>
 		</div>
 	</main>

@@ -375,7 +375,8 @@ $transition-time: 0.4s;
 		
 		text-align: center; 
 
-		.button--restart {
+		.button--restart, 
+		.button--print {
 			width: 100%; 
 
 			@include respond-to($mq-m) {
@@ -384,6 +385,21 @@ $transition-time: 0.4s;
 
 			@include respond-to($mq-l) {
 				width: 25%; 
+				float: right;
+			}
+		}
+
+		.button--restart {
+			@include respond-to($mq-l) {
+				float: right;
+			}
+		}
+
+		.button--print {
+			margin-bottom: $baseline-unit * 4; 
+
+			@include respond-to($mq-l) {
+				float: left;
 			}
 		}
 	}

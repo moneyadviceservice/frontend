@@ -121,7 +121,6 @@ module MoneyNavigator::Symbols
   MASK_SOME = '01'
   MASK_NONE = '00'
 
-  #TODO move the sections into seperate files to make the rules easier to manage
   CONTENT_RULES = MoneyNavigator::ContentRules.all
 end
 

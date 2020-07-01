@@ -1,5 +1,5 @@
 RSpec.describe Questions, type: :model do
-  include Symbols
+  include MoneyNavigator::Symbols
 
   shared_examples 'regionally valid content' do
     it 'displays the appropriate heading and content' do

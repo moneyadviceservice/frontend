@@ -7,7 +7,7 @@
 #TODO: move all money helper code/test etc into its own namespace
 class Questions
   include ActiveModel::Model
-  include Symbols
+  include MoneyNavigator::Symbols
 
   #Dynamically setup the validateable instance fields that will be populated
   #when the model isinitialised and can be validated after initialisation

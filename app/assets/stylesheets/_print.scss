@@ -3,14 +3,16 @@
 /* @lintingIgnoreBegin */
 
 @media print {
+
   // Remove all background images and colours and make text black
+
   * {
     background: none !important;
     color: #000 !important;
   }
 
   // Hide unnecessary components
-  .l-maps_banner, 
+
   .mobile-nav,
   .l-menu-nav,
   .l-search,
@@ -18,7 +20,6 @@
   .l-nav,
   .related-links,
   .l-footer,
-  .mobile-webchat__container, 
   .promo img,
   .search,
   .pagination .button {

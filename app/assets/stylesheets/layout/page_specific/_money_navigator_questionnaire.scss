@@ -1,0 +1,219 @@
+.l-money_navigator {
+	.question__actions {
+		@extend %clearfix;
+		@include row(12); 
+		margin-top: $baseline-unit * 4; 
+
+		@include respond-to($mq-m) {
+			.button {
+				float: left;
+				clear: left;
+			}
+		}
+	}
+
+	.button--submit, 
+	.button--continue, 
+	.button--start {
+		@extend .button--primary; 
+		width: 100%; 
+	}
+
+	.button--start, 
+	.button--back {
+		margin: 0 0 $baseline-unit * 2;
+	}
+
+	.button--continue, 
+	.button--start {
+		@include respond-to($mq-l) {
+			@include column(3);
+		}
+	}
+
+	.button--back {
+		margin-top: $baseline-unit * 4;
+
+		@include respond-to($mq-l) {
+			@include column(1.5); 
+		}
+	}
+
+	input[type="checkbox"]:disabled {
+		& + label {
+			font-weight: normal;
+			font-style: italic;
+			color: $color-grey-medium; 
+		}
+	}
+}
+
+.l-money_navigator__banner {
+	color: $color-black; 
+	background: $color-grey-pale;	
+	padding: $baseline-unit * 2 $default-gutter * 2; 
+	text-align: center;
+	font-size: 1.25rem; 
+	font-weight: 700; 
+	border-radius: $baseline-unit; 
+	margin: 0 0 $baseline-unit * 4;
+}
+
+.l-money_navigator__banner--is-hidden {
+	display: none; 
+}
+
+.l-money_navigator__questions {
+	list-style: none;
+	padding: 0;
+}
+
+.l-money_navigator__question {
+	list-style: none;
+	padding: 0;
+
+	.question__counter {
+		color: $color-green-secondary;
+		font-weight: 700; 
+	}
+
+	.question__content {
+		border: solid 1px $color-grey-pale;	
+		padding: $baseline-unit * 4 $default-gutter * 2 $baseline-unit * 2; 
+
+		@include respond-to($mq-l) {
+			padding-left: $default-gutter;
+			padding-right: $default-gutter;
+		}
+	}
+
+	.question__heading {
+		font-size: 1.125rem; 
+		color: $color-black; 
+	}
+
+	.question__error {
+		color: $color-red-medium; 
+		font-weight: bold; 
+	}
+
+	.question__note {
+		background: $color-grey-pale;	
+		padding: $baseline-unit * 2 $default-gutter * 2; 
+		font-size: 0.875rem; 
+		font-weight: 700; 
+		border-radius: $baseline-unit; 
+	}
+
+	.question__explainer {
+		font-size: 0.875rem; 
+		font-weight: 700; 
+	}
+
+	.question__response {
+		position: relative;
+		font-weight: 700; 
+		margin: 0 0 $baseline-unit * 2; 
+
+		.response__control {
+			position: absolute;
+			top: 50%;
+			left: 0; 
+			transform: translateY(-50%);
+		}
+
+		.response__text {
+			display: inline-block;
+			padding: 0 0 0 $baseline-unit * 4;
+		}
+	}
+}
+
+// Component initialised
+[data-dough-money-navigator-questions-initialised="yes"] {
+	.l-money_navigator__question {
+		display: none; 
+
+		&.question--active {
+			display: block; 
+		}
+	}
+
+	.question__content--q0 {
+		.response__text {
+			@extend .button; 
+			padding: 0; 
+			width: 100%;
+			text-align: left; 
+
+			@include respond-to($mq-l) {
+				@include column(3);
+				text-align: center;
+				color: $color-green-secondary; 
+				padding-left: $default-gutter !important; 
+				padding-right: $default-gutter !important; 
+				border: solid 1px $color-grey-pale !important;
+				border-radius: 0 !important; 
+				background: $color-white !important; 
+
+				span {
+					display: inline-block;
+					width: 100%;
+			    padding-top: calc(#{$baseline-unit * 2} + (371 / 295 * 100%)); 
+			    background-size: contain; 
+			    background-repeat: no-repeat;
+			    background-position: top; 
+				}
+
+				&[for="q0_a1"] {
+					span {
+				    background-image: image_url('money_navigator_tool/maps/map-england.png');
+					}
+				}
+
+				&[for="q0_a2"] {
+					span {
+				    background-image: image_url('money_navigator_tool/maps/map-ni.png');
+					}
+				}
+
+				&[for="q0_a3"] {
+					span {
+				    background-image: image_url('money_navigator_tool/maps/map-scotland.png');
+					}
+				}
+
+				&[for="q0_a4"] {
+					span {
+				    background-image: image_url('money_navigator_tool/maps/map-wales.png');
+					}
+				}
+			}
+		}
+
+		.response__control {
+			@extend .visually-hidden; 
+
+			&:checked + .response__text {
+				color: $color-white; 
+				background: $color-green-secondary; 
+
+				@include respond-to($mq-l) {
+					color: $color-green-secondary !important;
+					background: $color-green-pale !important;
+					border: solid 1px $color-green-secondary !important;
+				}
+			}
+		}
+
+		fieldset {
+			@include respond-to($mq-l) {
+				@include row(12);
+			}
+		}
+
+		.question__heading {
+			@include column(12); 
+		}
+	}
+}

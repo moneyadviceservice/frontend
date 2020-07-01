@@ -7,6 +7,7 @@
 #TODO: move all money helper code/test etc into its own namespace
 class Questions
   include ActiveModel::Model
+  include MoneyNavigator::Constants
   include MoneyNavigator::Symbols
 
   #Dynamically setup the validateable instance fields that will be populated
@@ -44,7 +45,7 @@ class Questions
     answers_hash = to_hash
     Rails.logger.info("Rules engine processing submission: #{answers_hash}")
 
-    sections_array =  CONTENT_RULES.inject([]) do |sections_array_accumulator, section_rules|
+    sections_array =  MoneyNavigator::ContentRules.all.inject([]) do |sections_array_accumulator, section_rules|
       heading_content_array = section_rules[:heading_rules].inject([]) do |heading_content, heading_rule|
         heading_content << { heading_code: heading_rule[:heading_code], content: obtain_content_for_heading(heading_rule, answers_hash) }
         heading_content

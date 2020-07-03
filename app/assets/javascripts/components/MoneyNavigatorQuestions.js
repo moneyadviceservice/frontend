@@ -54,12 +54,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         var thisQuestion = _this.$questions[question.num]; 
 
         if (input) {
-          var skippedQuestionsValue = question.responses[input.value.toUpperCase()]; 
-          var skippedQuestions = []; 
-
-          skippedQuestionsValue.forEach(function(value) {
-            skippedQuestions.push(value); 
-          }); 
+          var skippedQuestions = question.responses[input.value.toUpperCase()]; 
 
           _this._addJourneyData(skippedQuestions);
         } else {
@@ -67,7 +62,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
           for (var i = 0, length = inputs.length; i < length; i++) {
             if (inputs[i].checked) {
-              var val = inputs[i].value.toUpperCase(); 
               var skippedQuestion = question.responses[inputs[i].value.toUpperCase()]; 
 
               _this._addJourneyData(skippedQuestion);

@@ -1,4 +1,4 @@
-describe('MoneyNavigatorQuestions', function() {
+describe.only('MoneyNavigatorQuestions', function() {
   'use strict';
 
   var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
@@ -50,7 +50,7 @@ describe('MoneyNavigatorQuestions', function() {
     });
   });
 
-  describe.only('setUpJourneyLogic method', function() {
+  describe('setUpJourneyLogic method', function() {
     it('Checks that the addJourneyData method is called with the correct arguments', function() {
       var addJourneyDataSpy = sinon.spy(this.obj, '_addJourneyData'); 
       var question = this.questions[1]; 
@@ -355,7 +355,8 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
 
-      this.obj._addJourneyData(this.questions[1]); 
+      // Q1 is skipped
+      $(this.questions[1]).data('question-skip', true); 
 
       this.obj._updateDisplay('next'); 
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.false; 

@@ -13,6 +13,22 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.activeClass = 'question--active'; 
     this.hiddenClass = 'is-hidden'
     this.dataLayer = window.dataLayer; 
+    this.skipQuestions = [
+      {
+        // When a response is selected on Q1: 
+        // If A1 is selected go to Q2 then Q4 (Q3 is skipped)
+        // If A2 is selected go to Q3 then Q4 (Q2 is skipped)
+        // If A3 is selected go to Q4 (Q2 & Q3 are skipped)
+        // If A4 is selected go to Q4 (Q2 & Q3 are skipped)
+        num: 1, 
+        responses: {
+          A1: [3], 
+          A2: [2], 
+          A3: [2, 3], 
+          A4: [2, 3]
+        }
+      }
+    ]; 
   };
 
   DoughBaseComponent.extend(MoneyNavigatorQuestions);
@@ -27,28 +43,60 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this._initialisedSuccess(initialised);
   };
 
+  /**
+  *  This method sets up customised journeys through the questions 
+  *  It calls the _addJourneyData method in response to user input 
+  */
   MoneyNavigatorQuestions.prototype._setUpJourneyLogic = function() {
     var _this = this;
+    var setJourney = function(input) {
+      _this.skipQuestions.forEach(function(question) {
+        var thisQuestion = _this.$questions[question.num]; 
 
-    // When user is on Q1: 
+        if (input) {
+          var skippedQuestionsValue = question.responses[input.value.toUpperCase()]; 
+          var skippedQuestions = []; 
+
+          skippedQuestionsValue.forEach(function(value) {
+            skippedQuestions.push(_this.$questions[value]); 
+          }); 
+
+          _this._addJourneyData(skippedQuestions);
+        } else {
+          var inputs = $(thisQuestion).find('input'); 
+
+          for (var i = 0, length = inputs.length; i < length; i++) {
+            if (inputs[i].checked) {
+              var val = inputs[i].value.toUpperCase(); 
+              var skippedQuestions = question.responses[inputs[i].value.toUpperCase()]; 
+
+              _this._addJourneyData([_this.$questions[skippedQuestions]]);
+            }
+          }
+        }
+      }); 
+    }
+
+    // On load
+    setJourney(); 
+
+    // User selects a response from a question 
     var question = this.$questions[1]; 
     var $inputs = $(question).find('input[type="radio"]'); 
 
     $(question).on('change', function(e) {
-      // if Q1A2 is selected go to Q3
-      // if Q1A3 is selected go to Q4
-      // if Q1A4 is selected go to Q4
-      if (e.target.value.toUpperCase() === 'A2') {
-        _this._addJourneyData(_this.$questions[2]); 
-      } else if (e.target.value.toUpperCase() === 'A3') {
-        _this._addJourneyData([_this.$questions[2], _this.$questions[3]]);
-      } else if (e.target.value.toUpperCase() === 'A4') {
-        _this._addJourneyData([_this.$questions[2], _this.$questions[3]]);        
-      }
+      setJourney(e.target);
     }); 
   }; 
 
+  /**
+  *  This method adds a `question-skip` dataset value to questions 
+  *  that should not be part of the current journey
+  */
   MoneyNavigatorQuestions.prototype._addJourneyData = function(questions) {
+    // console.log('_addJourneyData!'); 
+    // console.log('questions: ', questions); 
+
     this.$questions.data('question-skip', false); 
 
     $(questions).each(function() {

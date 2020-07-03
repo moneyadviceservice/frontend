@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorQuestions', function() {
+describe('MoneyNavigatorQuestions', function() {
   'use strict';
 
   var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
@@ -56,35 +56,35 @@ describe.only('MoneyNavigatorQuestions', function() {
       var question = this.questions[1]; 
       var inputs = $(question).find('input[type=radio]'); 
 
-      // On load the first input is checked
+      // On load the first input is checked, Q3 is skipped
       inputs[0].checked = true; 
       this.obj.init(); 
-      expect(addJourneyDataSpy.calledWith([this.questions[3]])).to.be.true; 
+      expect(addJourneyDataSpy.calledWith([3])).to.be.true; 
 
       // When a selection is made on Q1: 
       // If A2 is selected go to Q3 then Q4 (Q2 is skipped)
       inputs[0].checked = false; 
       inputs[1].checked = true; 
       $(inputs[1]).trigger('change'); 
-      expect(addJourneyDataSpy.calledWith([this.questions[2]])).to.be.true; 
+      expect(addJourneyDataSpy.calledWith([2])).to.be.true; 
 
       // If A3 is selected go to Q4 (Q2 & Q3 are skipped)
       inputs[1].checked = false; 
       inputs[2].checked = true; 
       $(inputs[2]).trigger('change'); 
-      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+      expect(addJourneyDataSpy.calledWith([2, 3])).to.be.true; 
 
       // If A4 is selected go to Q4 (Q2 & Q3 are skipped)
       inputs[2].checked = false; 
       inputs[3].checked = true; 
       $(inputs[3]).trigger('change'); 
-      expect(addJourneyDataSpy.calledWith([this.questions[2], this.questions[3]])).to.be.true; 
+      expect(addJourneyDataSpy.calledWith([2, 3])).to.be.true; 
 
       // If A1 is selected go to Q2 then Q4 (Q3 is skipped)
       inputs[3].checked = false; 
       inputs[0].checked = true; 
       $(inputs[0]).trigger('change'); 
-      expect(addJourneyDataSpy.calledWith([this.questions[2]])).to.be.true; 
+      expect(addJourneyDataSpy.calledWith([2])).to.be.true; 
 
       addJourneyDataSpy.restore(); 
     }); 
@@ -93,22 +93,22 @@ describe.only('MoneyNavigatorQuestions', function() {
   describe('addJourneyData method', function() {
     it('Checks that the data-value is added/removed to/from appropriate elements', function() {
       // Q2 is skipped
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData([2]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.false; 
+
       // Q3 is skipped
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData([3]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.false; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+
       // Q2 & Q3 are skipped
-      // $(this.questions).data('question-skip', false); 
-      // this.obj._addJourneyData(this.questions[2]); 
-      // expect ($(this.questions[2]).data('question-skip')).to.be.true; 
-      // expect ($(this.questions[3]).data('question-skip')).to.be.false; 
-
-      // $(this.questions).data('question-skip', false); 
-      // this.obj._addJourneyData(this.questions[3]); 
-      // expect ($(this.questions[2]).data('question-skip')).to.be.false; 
-      // expect ($(this.questions[3]).data('question-skip')).to.be.true; 
-
-      // $(this.questions).data('question-skip', false); 
-      // this.obj._addJourneyData([this.questions[2], this.questions[3]]); 
-      // expect ($(this.questions[2]).data('question-skip')).to.be.true; 
-      // expect ($(this.questions[3]).data('question-skip')).to.be.true; 
+      $(this.questions).data('question-skip', false); 
+      this.obj._addJourneyData([2, 3]); 
+      expect ($(this.questions[2]).data('question-skip')).to.be.true; 
+      expect ($(this.questions[3]).data('question-skip')).to.be.true; 
     }); 
   }); 
 

@@ -58,7 +58,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
           var skippedQuestions = []; 
 
           skippedQuestionsValue.forEach(function(value) {
-            skippedQuestions.push(_this.$questions[value]); 
+            skippedQuestions.push(value); 
           }); 
 
           _this._addJourneyData(skippedQuestions);
@@ -68,9 +68,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
           for (var i = 0, length = inputs.length; i < length; i++) {
             if (inputs[i].checked) {
               var val = inputs[i].value.toUpperCase(); 
-              var skippedQuestions = question.responses[inputs[i].value.toUpperCase()]; 
+              var skippedQuestion = question.responses[inputs[i].value.toUpperCase()]; 
 
-              _this._addJourneyData([_this.$questions[skippedQuestions]]);
+              _this._addJourneyData(skippedQuestion);
             }
           }
         }
@@ -94,13 +94,12 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   *  that should not be part of the current journey
   */
   MoneyNavigatorQuestions.prototype._addJourneyData = function(questions) {
-    // console.log('_addJourneyData!'); 
-    // console.log('questions: ', questions); 
+    var _this = this;
 
     this.$questions.data('question-skip', false); 
 
-    $(questions).each(function() {
-      $(this).data('question-skip', true); 
+    questions.forEach(function(index) {
+      $(_this.$questions[index]).data('question-skip', true); 
     }); 
   }; 
 
@@ -168,9 +167,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         eventAction: eventAction,
         eventLabel: eventLabel 
       });
-
-      // For testing purposes only
-      console.log('dataLayer: ', dataLayer); 
     }
 
     if ($(question).data('question-custom') !== undefined) {
@@ -180,9 +176,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         eventQuestion: $(question).find('legend').text(),
         eventResponse: eventResponse.trim()
       });
-
-      // For testing purposes only
-      console.log('dataLayer: ', dataLayer);       
     }
 
     if ($(btn).data('submit')) {
@@ -202,9 +195,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         eventAction: 'submit',
         eventLabel: eventLabel 
       });
-
-      // For testing purposes only
-      console.log('dataLayer: ', dataLayer); 
     }
   }; 
 

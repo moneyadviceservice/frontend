@@ -33,19 +33,16 @@ describe('MoneyNavigatorQuestions', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
-      var setUpValidationStub = sinon.stub(this.obj, '_setUpValidation'); 
       var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
-      expect(setUpValidationStub.calledOnce).to.be.true; 
       expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
-      setUpValidationStub.restore(); 
       setUpJourneyLogicStub.restore(); 
     });
   });
@@ -109,50 +106,6 @@ describe('MoneyNavigatorQuestions', function() {
       this.obj._addJourneyData([2, 3]); 
       expect ($(this.questions[2]).data('question-skip')).to.be.true; 
       expect ($(this.questions[3]).data('question-skip')).to.be.true; 
-    }); 
-  }); 
-
-  describe('setUpValidation method', function() {
-    it ('Sets up the method', function() {
-      this.obj._setUpValidation();
-
-      var handleValidationSpy = sinon.spy(this.obj, '_handleValidation')
-      var question = this.questions[2]; 
-      var inputs = $(question).find('input'); 
-
-      inputs[0].checked = true; 
-      inputs[1].checked = true; 
-      expect(handleValidationSpy.calledWith(question)).to.be.false; 
-
-      inputs[1].checked = false; 
-      $(inputs[1]).trigger('change');
-      expect(handleValidationSpy.calledWith(question)).to.be.false; 
-
-      inputs[0].checked = false; 
-      $(inputs[0]).trigger('change');
-      expect(handleValidationSpy.calledWith(question)).to.be.true; 
-
-      inputs[0].checked = true; 
-      $(inputs[0]).trigger('change');
-      expect(handleValidationSpy.calledWith(question, 'reset')).to.be.true; 
-
-      handleValidationSpy.restore(); 
-    }); 
-  }); 
-
-  describe('handleValidation method', function() {
-    it ('Checks the error message is added', function() {
-      var question = this.questions[2]; 
-
-      this.obj._updateDOM(); 
-
-      this.obj._handleValidation(question); 
-      expect($(question).find('[data-error-message]').length).to.equal(1); 
-      expect($(question).find('[data-continue]')[0].disabled).to.be.true; 
-
-      this.obj._handleValidation(question, 'reset'); 
-      expect($(question).find('[data-error-message]').length).to.equal(0); 
-      expect($(question).find('[data-continue]')[0].disabled).to.be.false; 
     }); 
   }); 
 
@@ -255,6 +208,8 @@ describe('MoneyNavigatorQuestions', function() {
 
   describe('updateDOM method', function() {
     it('Makes correct changes to the DOM', function() {
+      var multipleQuestion = this.questions[2]; 
+
       this.obj._updateDOM(); 
 
       expect($(this.questions[0]).find('[data-get-started]').length).to.equal(1); 
@@ -280,6 +235,9 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
       expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
+
+      expect($(multipleQuestion).find('[data-continue]')[0].disabled).to.be.true; 
+      expect($(multipleQuestion).find('[data-back]')[0].disabled).to.be.false; 
     }); 
   }); 
 
@@ -411,50 +369,128 @@ describe('MoneyNavigatorQuestions', function() {
   describe('setUpMultipleQuestions method', function() {
     beforeEach(function() {
       var multipleQuestion = this.questions[2]; 
+      var inputs = $(multipleQuestion).find('input[type="checkbox"]');
 
-      this.responses = $(multipleQuestion).find('input');
+      this.response_no = $(inputs[1]).parents('[data-response]'); 
       this.obj._setUpMultipleQuestions(); 
     }); 
 
-    it('Adds the expected states when the method is called', function() {
-      expect(this.responses[0].disabled).to.be.false; 
-      expect(this.responses[1].disabled).to.be.true; 
-      expect(this.responses[2].disabled).to.be.true; 
-    });
+    it('Adds classname to `No` response', function() {
+      expect($(this.response_no).hasClass('button--no')).to.be.true; 
+    }); 
 
-    it('Calls the correct methods when the first checkbox state is changed', function() {
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[0]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.true; 
-      updateMultipleQuestionsSpy.restore(); 
+    it('Positions `No` response correctly in the DOM', function() {
+      expect(this.response_no.prev().prop('tagName').toUpperCase()).to.equal('LEGEND'); 
+    }); 
 
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[1]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.false; 
-      updateMultipleQuestionsSpy.restore(); 
-    })
+    it('Adds `Yes` response after `No`', function() {
+      expect(this.response_no.next().prop('tagName').toUpperCase()).to.equal('DIV'); 
+      expect(this.response_no.next().hasClass('button--yes')).to.be.true; 
+    }); 
+
+    it('Sets `Yes` as the default input', function() {
+      var inputs = $(this.questions[2]).find('input[type=checkbox]'); 
+
+      expect(inputs[0].checked).to.be.false; 
+      expect(inputs[1].checked).to.be.true; 
+    }); 
+
+    it('Calls the correct methods when `Yes` & `No` checkbox states are changed', function() {
+      var updateMultipleQuestionSpy = sinon.spy(this.obj, '_updateMultipleQuestion'); 
+      var inputs = $(this.questions[2]).find('input[type=checkbox]'); 
+
+      $(inputs[0]).trigger('change'); 
+      expect(updateMultipleQuestionSpy.calledWith(inputs[0])).to.be.true; 
+
+      $(inputs[1]).trigger('change'); 
+      expect(updateMultipleQuestionSpy.calledWith(inputs[1])).to.be.true; 
+
+      updateMultipleQuestionSpy.restore(); 
+    }); 
   }); 
 
-  describe('updateMultipleQuestions method', function() {
-    it('Updates the state of inputs correctly when called', function() {
-      var multipleQuestion = this.questions[2]; 
-      var responses = $(multipleQuestion).find('input[type="checkbox"]');
-
+  describe('updateMultipleQuestion method', function() {
+    beforeEach(function() {
+      this.obj._updateDOM(); 
       this.obj._setUpMultipleQuestions(); 
 
-      responses[0].checked = false; 
+      var multipleQuestion = this.questions[2]; 
+      this.inputs = $(multipleQuestion).find('input[type="checkbox"]');
+      this.continueBtn = $(multipleQuestion).find('[data-continue]'); 
+    }); 
 
-      this.obj._updateMultipleQuestions(responses[0]); 
+    it('Updates the state of `Yes` & `No` inputs correctly when called', function() {
+      // `No` is checked
+      this.inputs[0].checked = true; 
+      this.inputs[1].checked = true; 
+      this.obj._updateMultipleQuestion(this.inputs[0]); 
+      expect(this.inputs[0].checked).to.be.true; 
+      expect(this.inputs[1].checked).to.be.false; 
+      expect(this.inputs[2].disabled).to.be.true; 
 
-      expect(responses[1].disabled).to.be.false; 
-      expect(responses[2].disabled).to.be.false; 
+      // `Yes` is checked
+      this.inputs[0].checked = true; 
+      this.inputs[1].checked = true; 
+      this.obj._updateMultipleQuestion(this.inputs[1]); 
+      expect(this.inputs[0].checked).to.be.false; 
+      expect(this.inputs[1].checked).to.be.true; 
+      expect(this.inputs[2].disabled).to.be.false; 
+    }); 
 
-      responses[0].checked = true; 
+    describe('When no further options are selected', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
+        // `No` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
 
-      this.obj._updateMultipleQuestions(responses[0]); 
+        // `Yes` is checked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+      });
+    }); 
 
-      expect(responses[1].disabled).to.be.true; 
-      expect(responses[2].disabled).to.be.true; 
+    describe('When one or more further options are selected', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
+        // `Further option` is checked
+        // `No` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Further option` is checked
+        // `Yes` is checked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+      }); 
+
+      it('Updates the state of the `Continue` button correctly when a further option is changed', function() {
+        // `No` is checked
+        // `Further option` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Yes` is checked
+        // `Further option` is unchecked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+      }); 
     }); 
   }); 
 

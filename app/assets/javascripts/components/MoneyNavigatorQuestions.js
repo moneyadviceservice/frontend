@@ -345,20 +345,57 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype._setUpMultipleQuestions = function () {
     var _this = this;
 
-    this.$multipleQuestions.each(function () {
-      var inputs = $(this).find('input[type="checkbox"]');
+    this.$multipleQuestions.each(function() {
+      var inputs = $(this).find('input[type="checkbox"]'); 
+      var legend = $(this).find('legend'); 
+      var inputId = inputs[0].name.split('[')[1].split(']')[0]; 
+      var input = document.createElement('input'); 
+      var label = document.createElement('label'); 
+      var response_yes = document.createElement('div'); 
+      var response_no, input_no, input_yes;
 
-      $(inputs[0]).on('change', function (e) {
-        _this._updateMultipleQuestions(e.target);
-      });
 
-      for (var i = 0, length = inputs.length; i < length; i++) {
-        if (i > 0) {
-          inputs[i].disabled = true;
+      input.type = 'checkbox'; 
+      input.id = inputId + '_response_yes'; 
+      input.className = 'response__control'; 
+
+      label.htmlFor = inputId + '_response_yes';
+      label.className = 'response__text'; 
+      label.innerHTML = '<span>Yes</span>'; 
+
+      $(response_yes)
+        .addClass('question__response question__response__yes')
+        .append(input)
+        .append(label); 
+
+      $(inputs).each(function() {
+        if ($(this).siblings('label').text().trim() == 'No') {
+          response_no = $(this).parents('[data-response]'); 
+          
+          $(response_no).addClass('question__response__no')
+          $(legend)
+            .after(response_yes)
+            .after(response_no); 
         }
-      }
-    });
-  };
+      }); 
+
+      input_no = response_no[0].getElementsByTagName('input')[0]; 
+      input_yes = response_yes.getElementsByTagName('input')[0]; 
+
+      input_no.checked = false; 
+      input_yes.checked = true; 
+
+      $(this).on('change', function(e) {
+        _this._updateMultipleQuestion(e.target); 
+      })
+    }); 
+  }
+
+  MoneyNavigatorQuestions.prototype._updateMultipleQuestion = function(input) {
+    console.log('_updateMultipleQuestion!'); 
+    console.log('input: ', input); 
+
+    var responses = $(input).parents('[data-response]').siblings('[data-response]'); 
 
   MoneyNavigatorQuestions.prototype._updateMultipleQuestions = function (
     input

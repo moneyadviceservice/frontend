@@ -408,34 +408,50 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe('setUpMultipleQuestions method', function() {
+  describe.only('setUpMultipleQuestions method', function() {
     beforeEach(function() {
       var multipleQuestion = this.questions[2]; 
+      var inputs = $(multipleQuestion).find('input[type="checkbox"]');
 
-      this.responses = $(multipleQuestion).find('input');
+      this.response_no = $(inputs[1]).parents('[data-response]'); 
       this.obj._setUpMultipleQuestions(); 
     }); 
 
-    it('Adds the expected states when the method is called', function() {
-      expect(this.responses[0].disabled).to.be.false; 
-      expect(this.responses[1].disabled).to.be.true; 
-      expect(this.responses[2].disabled).to.be.true; 
-    });
+    it('Adds classname to `No` response', function() {
+      expect($(this.response_no).hasClass('question__response__no')).to.be.true; 
+    }); 
 
-    it('Calls the correct methods when the first checkbox state is changed', function() {
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[0]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.true; 
-      updateMultipleQuestionsSpy.restore(); 
+    it('Positions `No` response correctly in the DOM', function() {
+      expect(this.response_no.prev().prop('tagName').toUpperCase()).to.equal('LEGEND'); 
+    }); 
 
-      var updateMultipleQuestionsSpy = sinon.spy(this.obj, '_updateMultipleQuestions'); 
-      $(this.responses[1]).trigger('change'); 
-      expect(updateMultipleQuestionsSpy.calledWith(this.responses[0])).to.be.false; 
-      updateMultipleQuestionsSpy.restore(); 
+    it('Adds `Yes` response after `No`', function() {
+      expect(this.response_no.next().prop('tagName').toUpperCase()).to.equal('DIV'); 
+      expect(this.response_no.next().hasClass('question__response__yes')).to.be.true; 
+    }); 
+
+    it('Sets `Yes` as the default input', function() {
+      var inputs = $(this.questions[2]).find('input[type=checkbox]'); 
+
+      expect(inputs[0].checked).to.be.false; 
+      expect(inputs[1].checked).to.be.true; 
+    }); 
+
+    it('Calls the correct methods when `Yes` & `No` checkbox states are changed', function() {
+      var updateMultipleQuestionSpy = sinon.spy(this.obj, '_updateMultipleQuestion'); 
+      var inputs = $(this.questions[2]).find('input[type=checkbox]'); 
+
+      $(inputs[0]).trigger('change'); 
+      expect(updateMultipleQuestionSpy.calledWith(inputs[0])).to.be.true; 
+
+      $(inputs[1]).trigger('change'); 
+      expect(updateMultipleQuestionSpy.calledWith(inputs[1])).to.be.true; 
+
+      updateMultipleQuestionSpy.restore(); 
     })
   }); 
 
-  describe('updateMultipleQuestions method', function() {
+  describe('updateMultipleQuestion method', function() {
     it('Updates the state of inputs correctly when called', function() {
       var multipleQuestion = this.questions[2]; 
       var responses = $(multipleQuestion).find('input[type="checkbox"]');

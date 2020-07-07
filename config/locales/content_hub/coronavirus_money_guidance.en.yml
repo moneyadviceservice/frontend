@@ -7,20 +7,35 @@ en:
       page_subtitle: Coronavirus has been a shock, and we know you're doing all you can to keep things under control. We've put together all of our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do and where you can go for help.
       meta_description: We've put together all our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do.
       hero:
-        title: Support with income and life at home
-        description_html: |
-          <ul>
-            <li><a href="/en/articles/coronavirus-what-it-means-for-you/">Coronavirus – what it means for you and what you’re entitled to</a></li>
-            <li><a href="/en/articles/coronavirus-if-youre-an-employee/">Coronavirus- what you're entitled to when you're an employee</a></li>
-            <li><a href="/en/articles/coronavirus-if-youre-self-employed/">Coronavirus- what you're entitled to when you're self-employed</a></li>
-            <li><a href="/en/articles/coronavirus-if-you-have-children"/>Coronavirus if you have children</a></li>
-            <li><a href="/en/articles/coronavirus-and-your-money">Coronavirus and your money</a></li>
-            <li><a href="/en/articles/protecting-against-financial-abuse">Protecting yourself against financial abuse</a></li>
-            <li><a href="/en/articles/money-problems-and-poor-mental-wellbeing">Help if you're feeling stressed about money</a></li>
-          </ul>
-        image: covid-19-hub-hero-image.jpg
-
+        title: Money Navigator Tool
+        description_html: <h2>Know what to do next</h2>
+        image: covid-19-hub-hero-image-en.jpg
+        button:
+          url: https://www.moneyadviceservice.org.uk/en/tool/money-navigator-tool
+          text: Find your way forward
       blocks:
+        - type: cta
+          header: Money Navigator Tool
+          description: Know what to do next
+          button:
+            url: https://www.moneyadviceservice.org.uk/en/tool/money-navigator-tool
+        - type: list
+          header: Support with income and life at home
+          links:
+          - text: Coronavirus – what it means for you and what you’re entitled to
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Coronavirus- what you're entitled to when you're an employee
+            url:  /en/articles/coronavirus-if-youre-an-employee/
+          - text: Coronavirus- what you're entitled to when you're self-employed
+            url: /en/articles/coronavirus-if-youre-self-employed/
+          - text: Coronavirus if you have children
+            url: /en/articles/coronavirus-if-you-have-children
+          - text: Coronavirus and your money
+            url: /en/articles/coronavirus-and-your-money
+          - text: Protecting yourself against financial abuse
+            url: /en/articles/protecting-against-financial-abuse
+          - text: Help if you're feeling stressed about money
+            url: /en/articles/money-problems-and-poor-mental-wellbeing
         - type: list
           header: Debt
           links:

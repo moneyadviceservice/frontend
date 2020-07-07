@@ -137,6 +137,41 @@
 		&.question--active {
 			display: block; 
 		}
+
+		&[data-question-multiple] {
+			.button--no, 
+			.button--yes {
+				display: inline-block;
+				margin: 0 $default-gutter * 2 0 0;
+
+				@include respond-to($mq-s) {
+					margin-right: $default-gutter * 1.5; 
+				}
+
+				@include respond-to($mq-m) {
+					margin-right: $default-gutter; 
+				}
+
+				.response__text {
+					@extend .button; 
+					padding: 0; 
+					text-align: left; 
+				}
+
+				.response__control {
+					@extend .visually-hidden; 
+
+					&:checked + .response__text {
+						color: $color-white; 
+						background: $color-green-secondary; 
+					}
+				}
+			}
+
+			.button--yes {
+				margin-right: 0;
+			}
+		}
 	}
 
 	.question__content--q0 {

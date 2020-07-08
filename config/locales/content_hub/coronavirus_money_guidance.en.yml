@@ -7,6 +7,7 @@ en:
       page_subtitle: Coronavirus has been a shock, and we know you're doing all you can to keep things under control. We've put together all of our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do and where you can go for help.
       meta_description: We've put together all our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do.
       hero:
+        type: image_top_cta
         title: Money Navigator Tool
         description_html: <h2>Know what to do next</h2>
         image: covid-19-hub-hero-image-en.jpg
@@ -14,11 +15,6 @@ en:
           url: https://www.moneyadviceservice.org.uk/en/tool/money-navigator-tool
           text: Find your way forward
       blocks:
-        - type: cta
-          header: Money Navigator Tool
-          description: Know what to do next
-          button:
-            url: https://www.moneyadviceservice.org.uk/en/tool/money-navigator-tool
         - type: list
           header: Support with income and life at home
           links:

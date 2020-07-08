@@ -49,6 +49,7 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   clear: left;
   background: $content-hub-module-bgcolor;
   max-width: $content-hub-width-one-module;
+  min-height: $content-hub-width-one-module;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $baseline-unit;
@@ -80,8 +81,9 @@ $content-hub-two-col-breakpoint: $content-hub-width-three-module + px($gutter-wi
   padding: 0 $content-hub-horizontal-space;
 
   @include respond-to($content-hub-one-col-breakpoint) {
-    width: 50%;
-    float: right;
+    width: 100%;
+    top: 100%;
+    position: absolute;
   }
 }
 

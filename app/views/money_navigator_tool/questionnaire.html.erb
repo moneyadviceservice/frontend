@@ -12,7 +12,10 @@
 
       <%= form_for @model,
         url:money_navigator_tool_questionnaire_path, 
-        data: {dough_component: "MoneyNavigatorQuestions"},
+        data: {
+          dough_component: "MoneyNavigatorQuestions", 
+          dough_money_navigator_questions_config: {"i18nStrings": t('money_navigator_tool.controls') }
+        },
         builder: Dough::Forms::Builders::Validation do |f|
       %>
         <%= f.validation_summary %>

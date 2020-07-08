@@ -1,4 +1,4 @@
-describe('MoneyNavigatorQuestions', function() {
+describe.only('MoneyNavigatorQuestions', function() {
   'use strict';
 
   var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
@@ -253,8 +253,10 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe('updateDOM method', function() {
+  describe.only('updateDOM method', function() {
     it('Makes correct changes to the DOM', function() {
+      var multipleQuestion = this.questions[2]; 
+
       this.obj._updateDOM(); 
 
       expect($(this.questions[0]).find('[data-get-started]').length).to.equal(1); 
@@ -280,6 +282,9 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
       expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
+
+      expect($(multipleQuestion).find('[data-continue]')[0].disabled).to.be.true; 
+      expect($(multipleQuestion).find('[data-back]')[0].disabled).to.be.false; 
     }); 
   }); 
 
@@ -408,7 +413,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe.only('setUpMultipleQuestions method', function() {
+  describe('setUpMultipleQuestions method', function() {
     beforeEach(function() {
       var multipleQuestion = this.questions[2]; 
       var inputs = $(multipleQuestion).find('input[type="checkbox"]');

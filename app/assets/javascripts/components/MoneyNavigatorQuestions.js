@@ -281,24 +281,16 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         _this._updateDisplay('prev');
         _this._scrollToTop();
       }
-    });
-  };
+    }); 
 
-  MoneyNavigatorQuestions.prototype._scrollToTop = function () {
-    $('html, body').animate(
-      {
-        scrollTop: $('#money_navigator__questions').offset().top,
-      },
-      250
-    );
-  };
-
-  MoneyNavigatorQuestions.prototype._updateDisplay = function (dir) {
-    var activeIndex,
-      progress,
-      totalQuestions,
-      questions = [],
-      questionClasses = [];
+    buttons.each(function() {
+      if ($(this).parents('[data-question]').data('questionMultiple') == '') {
+        if ($(this).data('continue')) {
+          $(this).attr('disabled', true); 
+        }
+      }
+    }); 
+  }
 
     this.$el.find('[data-question]').each(function () {
       if (!$(this).data('question-skip')) {

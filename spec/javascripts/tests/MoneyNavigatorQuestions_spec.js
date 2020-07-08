@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorQuestions', function() {
+describe('MoneyNavigatorQuestions', function() {
   'use strict';
 
   var dataLayer = [{'Responsive page': 'Yes', 'event': 'Responsive page'}]; 
@@ -253,7 +253,7 @@ describe.only('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe.only('updateDOM method', function() {
+  describe('updateDOM method', function() {
     it('Makes correct changes to the DOM', function() {
       var multipleQuestion = this.questions[2]; 
 
@@ -453,29 +453,121 @@ describe.only('MoneyNavigatorQuestions', function() {
       expect(updateMultipleQuestionSpy.calledWith(inputs[1])).to.be.true; 
 
       updateMultipleQuestionSpy.restore(); 
-    })
+    }); 
   }); 
 
   describe('updateMultipleQuestion method', function() {
-    it('Updates the state of inputs correctly when called', function() {
-      var multipleQuestion = this.questions[2]; 
-      var responses = $(multipleQuestion).find('input[type="checkbox"]');
-
+    beforeEach(function() {
+      this.obj._updateDOM(); 
       this.obj._setUpMultipleQuestions(); 
 
-      responses[0].checked = false; 
+      var multipleQuestion = this.questions[2]; 
+      this.inputs = $(multipleQuestion).find('input[type="checkbox"]');
+      this.continueBtn = $(multipleQuestion).find('[data-continue]'); 
+    }); 
 
-      this.obj._updateMultipleQuestions(responses[0]); 
+    it('Updates the state of inputs correctly when called', function() {
+      // `No` is checked
+      this.inputs[0].checked = true; 
+      this.inputs[1].checked = true; 
+      this.obj._updateMultipleQuestion(this.inputs[0]); 
+      expect(this.inputs[0].checked).to.be.true; 
+      expect(this.inputs[1].checked).to.be.false; 
+      expect(this.inputs[2].disabled).to.be.true; 
 
-      expect(responses[1].disabled).to.be.false; 
-      expect(responses[2].disabled).to.be.false; 
+      // `Yes` is checked
+      this.inputs[0].checked = true; 
+      this.inputs[1].checked = true; 
+      this.obj._updateMultipleQuestion(this.inputs[1]); 
+      expect(this.inputs[0].checked).to.be.false; 
+      expect(this.inputs[1].checked).to.be.true; 
+      expect(this.inputs[2].disabled).to.be.false; 
 
-      responses[0].checked = true; 
+      // `Yes` is unchecked
+      this.inputs[0].checked = false; 
+      this.inputs[1].checked = false; 
+      this.obj._updateMultipleQuestion(this.inputs[1]); 
+      expect(this.inputs[0].checked).to.be.true; 
+      expect(this.inputs[1].checked).to.be.false; 
+      expect(this.inputs[2].disabled).to.be.true; 
 
-      this.obj._updateMultipleQuestions(responses[0]); 
+      // `No` is unchecked
+      this.inputs[0].checked = false; 
+      this.inputs[1].checked = false; 
+      this.obj._updateMultipleQuestion(this.inputs[0]); 
+      expect(this.inputs[0].checked).to.be.false; 
+      expect(this.inputs[1].checked).to.be.true; 
+      expect(this.inputs[2].disabled).to.be.false; 
+    }); 
 
-      expect(responses[1].disabled).to.be.true; 
-      expect(responses[2].disabled).to.be.true; 
+    describe('When no further options are selected', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
+        // `No` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Yes` is checked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+
+        // `Yes` is unchecked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `No` is unchecked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+      });
+    }); 
+
+    describe('When one or more further options are selected', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
+        // `Further option` is checked
+        // `No` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Further option` is checked
+        // `Yes` is checked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+      }); 
+
+      it('Updates the state of the `Continue` button correctly when a further option is changed', function() {
+        // `No` is checked
+        // `Further option` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Yes` is checked
+        // `Further option` is unchecked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+      }); 
     }); 
   }); 
 

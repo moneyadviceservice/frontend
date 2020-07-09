@@ -13,99 +13,100 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
     this.i18nStrings =
       config && config.i18nStrings ? config.i18nStrings : i18nStrings;
-    this.$submitBtn = this.$el.find('[data-submit]'); 
-    this.$questions = this.$el.find('[data-question]'); 
-    this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 
-    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]'); 
-    this.activeClass = 'question--active'; 
-    this.hiddenClass = 'is-hidden'
-    this.dataLayer = window.dataLayer; 
+    this.$submitBtn = this.$el.find('[data-submit]');
+    this.$questions = this.$el.find('[data-question]');
+    this.$multipleQuestions = this.$el.find('[data-question-multiple]');
+    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]');
+    this.activeClass = 'question--active';
+    this.hiddenClass = 'is-hidden';
+    this.dataLayer = window.dataLayer;
     this.skipQuestions = [
       {
-        // When a response is selected on Q1: 
+        // When a response is selected on Q1:
         // If A1 is selected go to Q2 then Q4 (Q3 is skipped)
         // If A2 is selected go to Q3 then Q4 (Q2 is skipped)
         // If A3 is selected go to Q4 (Q2 & Q3 are skipped)
         // If A4 is selected go to Q4 (Q2 & Q3 are skipped)
-        num: 1, 
+        num: 1,
         responses: {
-          A1: [3], 
-          A2: [2], 
-          A3: [2, 3], 
-          A4: [2, 3]
-        }
-      }
-    ]; 
+          A1: [3],
+          A2: [2],
+          A3: [2, 3],
+          A4: [2, 3],
+        },
+      },
+    ];
   };
 
   DoughBaseComponent.extend(MoneyNavigatorQuestions);
 
   MoneyNavigatorQuestions.componentName = 'MoneyNavigatorQuestions';
 
-  MoneyNavigatorQuestions.prototype.init = function(initialised) {
-    this._updateDOM(this.dataLayer); 
-    this._setUpMultipleQuestions(); 
-    this._setUpValidation(); 
-    this._setUpJourneyLogic(); 
+  MoneyNavigatorQuestions.prototype.init = function (initialised) {
+    this._updateDOM(this.dataLayer);
+    this._setUpMultipleQuestions();
+    this._setUpValidation();
+    this._setUpJourneyLogic();
     this._initialisedSuccess(initialised);
   };
 
   /**
-  *  This method sets up customised journeys through the questions 
-  *  It calls the _addJourneyData method in response to user input 
-  */
-  MoneyNavigatorQuestions.prototype._setUpJourneyLogic = function() {
+   *  This method sets up customised journeys through the questions
+   *  It calls the _addJourneyData method in response to user input
+   */
+  MoneyNavigatorQuestions.prototype._setUpJourneyLogic = function () {
     var _this = this;
-    var setJourney = function(input) {
-      _this.skipQuestions.forEach(function(question) {
-        var thisQuestion = _this.$questions[question.num]; 
+    var setJourney = function (input) {
+      _this.skipQuestions.forEach(function (question) {
+        var thisQuestion = _this.$questions[question.num];
 
         if (input) {
-          var skippedQuestions = question.responses[input.value.toUpperCase()]; 
+          var skippedQuestions = question.responses[input.value.toUpperCase()];
 
           _this._addJourneyData(skippedQuestions);
         } else {
-          var inputs = $(thisQuestion).find('input'); 
+          var inputs = $(thisQuestion).find('input');
 
           for (var i = 0, length = inputs.length; i < length; i++) {
             if (inputs[i].checked) {
-              var skippedQuestion = question.responses[inputs[i].value.toUpperCase()]; 
+              var skippedQuestion =
+                question.responses[inputs[i].value.toUpperCase()];
 
               _this._addJourneyData(skippedQuestion);
             }
           }
         }
-      }); 
-    }
+      });
+    };
 
     // On load
-    setJourney(); 
+    setJourney();
 
-    // User selects a response from a question 
-    var question = this.$questions[1]; 
-    var $inputs = $(question).find('input[type="radio"]'); 
+    // User selects a response from a question
+    var question = this.$questions[1];
+    var $inputs = $(question).find('input[type="radio"]');
 
-    $(question).on('change', function(e) {
+    $(question).on('change', function (e) {
       setJourney(e.target);
-    }); 
-  }; 
+    });
+  };
 
   /**
-  *  This method adds a `question-skip` dataset value to questions 
-  *  that should not be part of the current journey
-  */
-  MoneyNavigatorQuestions.prototype._addJourneyData = function(questions) {
+   *  This method adds a `question-skip` dataset value to questions
+   *  that should not be part of the current journey
+   */
+  MoneyNavigatorQuestions.prototype._addJourneyData = function (questions) {
     var _this = this;
 
-    this.$questions.data('question-skip', false); 
+    this.$questions.data('question-skip', false);
 
-    questions.forEach(function(index) {
-      $(_this.$questions[index]).data('question-skip', true); 
-    }); 
-  }; 
+    questions.forEach(function (index) {
+      $(_this.$questions[index]).data('question-skip', true);
+    });
+  };
 
-  MoneyNavigatorQuestions.prototype._setUpValidation = function() {
-    var _this = this; 
+  MoneyNavigatorQuestions.prototype._setUpValidation = function () {
+    var _this = this;
 
     this.$questions.each(function () {
       var question = this;
@@ -218,8 +219,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     // Removes submit button
     this.$submitBtn.remove();
 
-    console.log(this.i18nStrings);
-
     for (var i = 0, length = this.$questions.length; i < length; i++) {
       var question = this.$questions[i];
 
@@ -294,30 +293,30 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     );
   };
 
-  MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
-    var activeIndex, 
-        progress, 
-        totalQuestions, 
-        questions = [], 
-        questionClasses = []; 
+  MoneyNavigatorQuestions.prototype._updateDisplay = function (dir) {
+    var activeIndex,
+      progress,
+      totalQuestions,
+      questions = [],
+      questionClasses = [];
 
-    this.$el.find('[data-question]').each(function() {
+    this.$el.find('[data-question]').each(function () {
       if (!$(this).data('question-skip')) {
-        questions.push(this); 
+        questions.push(this);
       }
-    }); 
+    });
 
-    totalQuestions = questions.length; 
+    totalQuestions = questions.length;
 
-    $(questions).each(function() {
-      questionClasses.push(this.className); 
-    }); 
+    $(questions).each(function () {
+      questionClasses.push(this.className);
+    });
 
     activeIndex = questionClasses.indexOf(
       'l-money_navigator__question ' + this.activeClass
     );
 
-    $(questions[activeIndex]).removeClass(this.activeClass); 
+    $(questions[activeIndex]).removeClass(this.activeClass);
 
     if (dir === 'next') {
       activeIndex++;

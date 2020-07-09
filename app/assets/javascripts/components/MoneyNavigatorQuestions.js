@@ -1,12 +1,18 @@
 define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   'use strict';
 
-  var MoneyNavigatorQuestions;
+  var MoneyNavigatorQuestions,
+    i18nStrings = {
+      continue_btn: 'Continue',
+      back_btn: 'Back',
+      submit_btn: 'Submit',
+    };
 
   MoneyNavigatorQuestions = function ($el, config) {
     MoneyNavigatorQuestions.baseConstructor.call(this, $el, config);
 
-    this.i18nStrings = config.i18nStrings;
+    this.i18nStrings =
+      config && config.i18nStrings ? config.i18nStrings : i18nStrings;
     this.$submitBtn = this.$el.find('[data-submit]'); 
     this.$questions = this.$el.find('[data-question]'); 
     this.$multipleQuestions = this.$el.find('[data-question-multiple]'); 

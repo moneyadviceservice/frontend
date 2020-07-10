@@ -69,7 +69,7 @@
                           <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase, nil %>
                         <% end %>
 
-                        <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                        <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
                           <span><%= response[:text] %></span>
                         </label>
                       </div>

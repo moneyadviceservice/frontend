@@ -308,7 +308,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       label.innerHTML = '<span>Yes</span>'; 
 
       $(response_yes)
-        .addClass('question__response question__response__yes')
+        .addClass('question__response button--yes')
         .append(input)
         .append(label); 
 
@@ -316,7 +316,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         if ($(this).siblings('label').text().trim() == 'No') {
           response_no = $(this).parents('[data-response]'); 
           
-          $(response_no).addClass('question__response__no')
+          $(response_no).addClass('button--no')
           $(legend)
             .after(response_yes)
             .after(response_no); 

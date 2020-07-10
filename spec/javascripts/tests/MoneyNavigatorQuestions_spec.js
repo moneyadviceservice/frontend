@@ -376,7 +376,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Adds classname to `No` response', function() {
-      expect($(this.response_no).hasClass('question__response__no')).to.be.true; 
+      expect($(this.response_no).hasClass('button--no')).to.be.true; 
     }); 
 
     it('Positions `No` response correctly in the DOM', function() {
@@ -385,7 +385,7 @@ describe('MoneyNavigatorQuestions', function() {
 
     it('Adds `Yes` response after `No`', function() {
       expect(this.response_no.next().prop('tagName').toUpperCase()).to.equal('DIV'); 
-      expect(this.response_no.next().hasClass('question__response__yes')).to.be.true; 
+      expect(this.response_no.next().hasClass('button--yes')).to.be.true; 
     }); 
 
     it('Sets `Yes` as the default input', function() {

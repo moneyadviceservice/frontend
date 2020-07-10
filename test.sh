@@ -21,6 +21,5 @@ rm -rf vendor/assets/bower_components
 bowndler update --production --config.interactive=false
 
 npm install -q
-./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 bundle exec rspec spec --format html --out tmp/spec.html --format RspecJunitFormatter --profile --format progress --deprecation-out log/rspec_deprecations.txt
 bundle exec cucumber

@@ -20,6 +20,15 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    #Money Navigator Tool
+    scope :tools do
+      get '/money-navigator-tool', to: 'money_navigator_tool#landing'
+      get '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      post '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      patch '/money-navigator-tool/questionnaire', to: 'money_navigator_tool#questionnaire'
+      get '/money-navigator-tool/results', to: 'money_navigator_tool#results'
+    end
+
     get '/sitemap', to: 'sitemap#index'
 
     devise_for :users,

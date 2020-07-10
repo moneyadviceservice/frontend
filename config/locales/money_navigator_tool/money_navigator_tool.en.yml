@@ -1,0 +1,470 @@
+en:
+  money_navigator_tool:
+    meta:
+      title: Money Navigator
+      description: ''
+      canonical: https://www.moneyadviceservice.org.uk/en/tools/money-navigator-tool
+      alternate:
+        en-GB: https://www.moneyadviceservice.org.uk/en/tools/money-navigator-tool
+        cy-GB: https://www.moneyadviceservice.org.uk/cy/tools/money-navigator-tool
+    landing:
+      intro:
+        heading: Money Navigator Tool
+        subheading: Know what to do next
+        text:
+          paras:
+            - The coronavirus lockdown measures are relaxing but they’ve affected millions of people. What this means for your finances will be very personal to you.
+            - So if you’re looking for money guidance but don’t know where to start, you’re not alone.
+      who-help:
+        heading: Who we can help
+        bullets:
+          - Your income is down and you’re worried about your future finances
+          - You’ve been furloughed and need help to get back on track, including after a payment holiday
+          - You’re facing redundancy or have lost your job
+          - You’re self-employed and work has dried up
+          - You want to make the most of money you’ve saved during lockdown
+      how-help:
+        heading: Instant help
+        paras:
+          - Our Money Navigator tool gives you action plans based on your own situation.
+          - 'Know in 30 seconds:'
+        bullets:
+          - The money issues you need to tackle first
+          - How to stay on top of bills and payments
+          - What extra help and support you’re entitled to
+          - Where you can get free advice for debt, housing or redundancy
+        cta:
+          text: Get started
+          url: /en/tools/money-navigator-tool/questionnaire
+      crisis-help:
+        heading: Need help with debts right now?
+        text: If you’re really struggling and debts have already mounted up, you can find a free accredited debt adviser with our Debt Advice Locator
+        cta:
+          text: Find a free debt adviser online
+          url: /en/tools/debt-advice-locator
+      supporting-partners:
+        heading: Our supporting partners
+        text: Our money guidance is supported by these key partners who are ready to help if you need further advice about the complex issues caused by coronavirus, including debt, benefits, housing and redundancy.
+        partners:
+          - Citizens Advice
+          - Business Debtline
+          - National Debtline
+          - Stepchange
+          - Payplan
+          - Turn2us
+          - Shelter
+          - Shelter Cymru
+          - Shelter Scotland
+    controls:
+      submit_label: Submit
+      re_start: Re-start the diagnostic
+      email: Email this to me
+    messages:
+      form_error: Invalid Form Values
+    heading: Money Navigator Tool
+    banner: Answer these questions to get guidance tailored to you
+    counter: Question %{number} of %{total}
+    questions:
+      - code: Q0
+        type: radio
+        text: Where do you live?
+        sort_order: 1
+        responses:
+          - code: A1
+            text: England
+            sort_order: 1
+            default: true
+          - code: A2
+            text: Northern Ireland
+            sort_order: 2
+          - code: A3
+            text: Scotland
+            sort_order: 3
+          - code: A4
+            text: Wales/Cymru
+            sort_order: 4
+      - code: Q1
+        type: radio
+        custom: true
+        text: What is your employment status?
+        sort_order: 2
+        responses:
+          - code: A1
+            text: Employed (including furloughed)
+            sort_order: 1
+            default: true
+          - code: A2
+            text: Self-employed
+            sort_order: 2
+          - code: A3
+            text: Unemployed
+            sort_order: 3
+          - code: A4
+            text: Retired
+            sort_order: 4
+      - code: Q2
+        type: radio
+        text: Are you at risk of redundancy?
+        sort_order: 3
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'No'
+            sort_order: 2
+      - code: Q3
+        type: radio
+        text: If you are self-employed, do you know what your monthly income is now?
+        sort_order: 4
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+          - code: A2
+            text: 'No'
+            sort_order: 2
+          - code: A3
+            text: 'I am not self employed'
+            default: true
+            sort_order: 3
+      - code: Q4
+        type: radio
+        custom: true
+        text: How would you describe your household income as a result of the coronavirus crisis?
+        sort_order: 5
+        responses:
+          - code: A4
+            text: No change/saved money
+            sort_order: 1
+          - code: A1
+            text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
+            sort_order: 2
+            default: true
+          - code: A2
+            text: Temporary drop and worried about my future security
+            sort_order: 3
+          - code: A3
+            text: Temporary drop but expect it to increase as restrictions ease
+            sort_order: 4
+      - code: Q5
+        type: radio
+        text: Have you used any government financial support?
+        sort_order: 6
+        responses:
+          - code: A1
+            text: Self-employment income support scheme
+            sort_order: 2
+            default: true
+          - code: A2
+            text: Furlough scheme
+            sort_order: 3
+          - code: A3
+            text: 'No'
+            sort_order: 1
+      - code: Q6
+        type: radio
+        text: Are you behind with rent or mortgage payments?
+        sort_order: 7
+        responses:
+          - code: A7
+            text: 'No'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: No, but I am worried that I might fall behind on rent (private renting)
+            sort_order: 2
+          - code: A2
+            text: No, but I am worried that I might fall behind on rent (council/social housing)
+            sort_order: 3
+          - code: A3
+            text: No, but I am worried that I might fall behind on mortgage payments
+            sort_order: 4
+          - code: A4
+            text: Yes, I am behind with my rent because of coronavirus
+            sort_order: 5
+          - code: A5
+            text: Yes, I am behind with my mortgage because of coronavirus
+            sort_order: 6
+          - code: A6
+            text: Yes, but they are arrears unrelated to coronavirus
+            sort_order: 7
+      - code: Q7
+        type: checkbox
+        text: Are you behind on any of these bills?
+        explainer: Choose all that apply
+        sort_order: 8
+        responses:
+          - code: A10
+            text: 'No'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Council tax
+            sort_order: 2
+          - code: A2
+            text: Gas or electric
+            sort_order: 3
+          - code: A3
+            text: Payments to DWP/HMRC (eg tax credit overpayments, loan repayments)
+            sort_order: 4
+          - code: A4
+            text: TV Licence
+            sort_order: 5
+          - code: A5
+            text: Income tax
+            sort_order: 6
+          - code: A6
+            text: Child maintenance payments
+            sort_order: 7
+          - code: A7
+            text: Court fines
+            sort_order: 8
+          - code: A8
+            text: Hire purchase payments
+            sort_order: 9
+          - code: A9
+            text: Car parking fines
+            sort_order: 10
+      - code: Q8
+        type: checkbox
+        text: Have you taken out a payment break or holiday on loans or credit?
+        explainer: Choose all that apply
+        sort_order: 9
+        responses:
+          - code: A10
+            text: 'No'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Mortgage
+            sort_order: 2
+          - code: A2
+            text: Personal loan
+            sort_order: 3
+          - code: A3
+            text: Credit card
+            sort_order: 4
+          - code: A4
+            text: Store card
+            sort_order: 5
+          - code: A5
+            text: Car finance
+            sort_order: 6
+          - code: A6
+            text: Buy now pay later
+            sort_order: 7
+          - code: A7
+            text: Rent to own
+            sort_order: 8
+          - code: A8
+            text: Payday loan
+            sort_order: 9
+          - code: A9
+            text: Pawnbroker arrangement
+            sort_order: 10
+      - code: Q9
+        type: checkbox
+        text: Will you struggle to make future repayments, or have you already missed one payment, on these loans or credit?
+        explainer: Choose all that apply
+        sort_order: 10
+        responses:
+          - code: A12
+            text: 'No'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Personal loan
+            sort_order: 2
+          - code: A2
+            text: Water bill
+            sort_order: 3
+          - code: A3
+            text: Mobile phone/TV or broadband
+            sort_order: 4
+          - code: A4
+            text: Credit card
+            sort_order: 5
+          - code: A5
+            text: Store card
+            sort_order: 6
+          - code: A6
+            text: Car finance
+            sort_order: 7
+          - code: A7
+            text: Buy now pay later (eg Klarna)
+            sort_order: 8
+          - code: A8
+            text: Rent to own
+            sort_order: 9
+          - code: A9
+            text: Payday loan
+            sort_order: 10
+          - code: A10
+            text: Pawnbroker loan
+            sort_order: 11
+          - code: A11
+            text: Repayments to family or friends
+            sort_order: 12
+      - code: Q10
+        type: radio
+        text: Have you fallen behind or agreed a payment break on credit commitments or priority household bills since 28th February 2020?
+        sort_order: 11
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'No'
+            sort_order: 2
+          - code: A3
+            text: I was in financial difficulties before 28th February
+            sort_order: 3
+      - code: Q11
+        type: radio
+        text: Will you have to borrow more money to manage essential payments (like rent, food and bills) in the next few months?
+        sort_order: 12
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'No'
+            sort_order: 2
+      - code: Q12
+        type: checkbox
+        text: Are you considering any of these ways to pay off debts or meet existing credit payments?
+        explainer: Choose all that apply
+        sort_order: 13
+        responses:
+          - code: A5
+            text: 'No'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Equity in home
+            sort_order: 2
+          - code: A2
+            text: Using my pension pot
+            sort_order: 3
+          - code: A3
+            text: Remortgage
+            sort_order: 4
+          - code: A4
+            text: Using my savings
+            sort_order: 5
+      - code: Q13
+        type: radio
+        text: Are you thinking of cancelling or reducing insurance cover because you are worried about costs?
+        sort_order: 14
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'No'
+            sort_order: 2
+          - code: A3
+            text: Maybe
+            sort_order: 3
+      - code: Q14
+        type: radio
+        text: Are your money worries affecting your mental health?
+        sort_order: 15
+        responses:
+          - code: A1
+            text: 'Yes'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'No'
+            sort_order: 2
+          - code: A3
+            text: Sometimes
+            sort_order: 3
+    results:
+      heading: Your Money Navigator action plan
+      intro: Based on what you’ve told us, here’s our expert view on your personal situation. Find out more about actions you need to take, where you can get free help and support, as well as guidance and tips to help you move forward with your money.
+      print_btn_text: Print this
+      S1:
+        title: Urgent actions
+      S2:
+        title: Payment holidays
+        subtitle: What to do now your payment holiday has ended
+        H1: Mortgage payment holidays
+        H2: Personal loan payment holidays
+        H3: Credit card payment holidays
+        H4: Store card payment holidays
+        H5: Car finance payment holidays
+        H6: Buy now pay later payment holidays (eg Klarma)
+        H7: Rent to own payment holidays
+        H8: Payday loan payment holidays
+        H9: Pawnbroker payment holidays
+      S3:
+        title: Your money moving forward
+        H1: Getting back on track after a severe income drop
+        H2: Getting back on track after an income drop
+        H3: Looking forward after the COVID pandemic
+      S4:
+        title: Money and work
+        H1: Managing your money when you’re self employed
+        H2: Urgent help if you're self employed
+        H3: Preparing for redundancy
+        H4: What to do if you`re unemployed
+      S5:
+        title: Staying on top of housing costs
+        H1: If you`ve missed one mortgage or rent payment
+        H2: If you’re worried about rent payments (renting privately)
+        H3: If you’re worried about rent payments (social housing)
+        H4: If you’re worried about mortgage payments
+        H5: If you’re behind with rent payments because of COVID-19
+        H6: If you’re behind with mortgage payments because of COVID-19
+      S6:
+        title: Staying on top of priority bills
+        subtitle: What to do if you're worried about priority bills
+        H1: If you`ve missed one payment
+        H2: What to do about paying your Council Tax (Domestic Rates Northern Ireland)
+        H3: What to do about paying your gas or electricity bill
+        H4: What to do about payments to DWP/HMRC
+        H5: What to do about paying your TV License
+        H6: What to do about paying your Income Tax bill
+        H7: What to do about paying your child maintenance
+        H8: What to do about paying court fines
+        H9: What to do about hire purchase agreements
+        H10: What to do about car parking fines?
+      S7:
+        title: Staying on top of non-priority bills
+        subtitle: if you’re worried about other payments or bills
+        H1: Personal loan payments
+        H2: Water bill
+        H3: Mobile phone, TV or broadband
+        H4: Credit card payments
+        H5: Store card payments
+        H6: Car finance payments
+        H7: Buy now pay later payments (eg Klarma)
+        H8: Rent to own payments
+        H9: Payday loan payments
+        H10: Pawnbroker payments
+        H11: Payments to family and friends
+      S8:
+        title: Borrowing money
+        subtitle:
+        H1: If you're thinking of borrowing money
+      S9:
+        title: Using pensions, equity and savings
+        subtitle:
+        H1: If you’re thinking about using your pension pot to pay off debts
+        H2: If you’re thinking about using equity in your home to pay off debts
+        H3: If you're thinking of using your savings to pay off debts
+      S10:
+        title: Protecting your future
+        subtitle:
+        H1: If you’re thinking about cancelling insurance
+      S11:
+        title: Money worries and mental health
+        subtitle:
+        H1: If money worries are affecting your mental health

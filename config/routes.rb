@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
     #Money Navigator Tool
     scope :tools do
-      scope '/:money_navigator_tool', money_navigator_tool: '/money-navigator-tool|teclyn-llywio-ariannol/' do
+      scope '/:money_navigator_tool', money_navigator_tool: /money-navigator-tool|teclyn-llywio-ariannol/ do
         get '/', to: 'money_navigator_tool#landing'
         get '/questionnaire', to: 'money_navigator_tool#questionnaire'
         post '/questionnaire', to: 'money_navigator_tool#questionnaire'

@@ -48,12 +48,12 @@
                     <% if response[:default] %>
                       <div class="question__response" data-response>
                         <% if question[:type] == 'radio' %>
-                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true %>
                         <% elsif question[:type] == 'checkbox' %>
-                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control', checked: true}, response[:code].downcase, nil %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true}, response[:code].downcase, nil %>
                         <% end %>
 
-                        <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                        <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
                           <span><%= response[:text] %></span>
                         </label>
                       </div>
@@ -64,12 +64,12 @@
                     <% if !response[:default] %>
                       <div class="question__response" data-response>
                         <% if question[:type] == 'radio' %>
-                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code] + '_' + response[:code], class: 'response__control' %>
+                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control' %>
                         <% elsif question[:type] == 'checkbox' %>
-                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code] + '_' + response[:code], class: 'response__control'}, response[:code].downcase, nil %>
+                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control'}, response[:code].downcase, nil %>
                         <% end %>
 
-                        <label for="<%= question[:code] + "_" + response[:code] %>" class="response__text">
+                        <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
                           <span><%= response[:text] %></span>
                         </label>
                       </div>

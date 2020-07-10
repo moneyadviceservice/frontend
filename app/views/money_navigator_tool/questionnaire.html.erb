@@ -31,8 +31,8 @@
               <% end %>
 
               <div 
-                class="question__content question__content--<%= question[:code] %>" 
-                data-question-id="<%= question[:code] %>"
+                class="question__content question__content--<%= question[:code].downcase %>" 
+                data-question-id="<%= question[:code].downcase %>"
                 <% if question[:custom] %>
                   data-question-custom
                 <% end %>

@@ -29,8 +29,8 @@ en:
           - Our Money Navigator tool gives you action plans based on your own situation.
           - 'Know in 30 seconds:'
         bullets:
-          - the money issues you need to tackle first
-          - how to stay on top of bills and payments
+          - The money issues you need to tackle first
+          - How to stay on top of bills and payments
           - What extra help and support you’re entitled to
           - Where you can get free advice for debt, housing or redundancy
         cta:
@@ -60,6 +60,8 @@ en:
       back_btn: Back
       submit_btn: Submit
       submit_label: Submit
+      re_start: Re-start the diagnostic
+      email: Email this to me
     messages:
       form_error: Invalid Form Values
     heading: Money Navigator Tool
@@ -167,7 +169,6 @@ en:
       - code: Q6
         type: radio
         text: Are you behind with rent or mortgage payments?
-        note: 'Note: please answer "Yes" if you are on an agreed payment holiday/break'
         sort_order: 7
         responses:
           - code: A7
@@ -418,7 +419,7 @@ en:
         H3: Preparing for redundancy
         H4: What to do if you`re unemployed
       S5:
-        title: Missed Payments
+        title: Staying on top of housing costs
         H1: If you`ve missed one mortgage or rent payment
         H2: If you’re worried about rent payments (renting privately)
         H3: If you’re worried about rent payments (social housing)

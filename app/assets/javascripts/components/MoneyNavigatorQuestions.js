@@ -5,7 +5,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     i18nStrings = {
       continue_btn: 'Continue',
       back_btn: 'Back',
-      submit_btn: 'Submit',
+      yes_btn: 'Yes',
+      no_btn: 'No',
+      submit_btn: 'Submit'
     };
 
   MoneyNavigatorQuestions = function ($el, config) {
@@ -16,7 +18,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]');
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
-    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]');
+    this.banner = $(document).find('[data-banner]');
     this.activeClass = 'question--active';
     this.hiddenClass = 'is-hidden';
     this.dataLayer = window.dataLayer;
@@ -319,7 +321,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       label.htmlFor = inputId + '_response_yes';
       label.className = 'response__text'; 
-      label.innerHTML = '<span>Yes</span>'; 
+      label.innerHTML = '<span>' + _this.i18nStrings.yes_btn + '</span>'; 
 
       $(response_yes)
         .addClass('question__response button--yes')
@@ -327,7 +329,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         .append(label); 
 
       $(inputs).each(function() {
-        if ($(this).siblings('label').text().trim() == 'No') {
+        if ($(this).siblings('label').text().trim() == _this.i18nStrings.no_btn) {
           response_no = $(this).parents('[data-response]'); 
           
           $(response_no).addClass('button--no')

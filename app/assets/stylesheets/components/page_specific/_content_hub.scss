@@ -36,15 +36,14 @@
 .content-hub__hero-image {
   padding-bottom: 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover; // contain;
+  background-size: contain;
+  width: 100%;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     position: absolute;
     top: 0;
     bottom: 0;
     padding-bottom: 0;
-    width: 100%;
     padding: 0 $content-hub-horizontal-space;
   }
 }

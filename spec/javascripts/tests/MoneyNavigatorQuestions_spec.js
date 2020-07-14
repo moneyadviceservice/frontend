@@ -33,19 +33,16 @@ describe('MoneyNavigatorQuestions', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
-      var setUpValidationStub = sinon.stub(this.obj, '_setUpValidation'); 
       var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
       expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
-      expect(setUpValidationStub.calledOnce).to.be.true; 
       expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQestionsStub.restore(); 
-      setUpValidationStub.restore(); 
       setUpJourneyLogicStub.restore(); 
     });
   });
@@ -109,50 +106,6 @@ describe('MoneyNavigatorQuestions', function() {
       this.obj._addJourneyData([2, 3]); 
       expect ($(this.questions[2]).data('question-skip')).to.be.true; 
       expect ($(this.questions[3]).data('question-skip')).to.be.true; 
-    }); 
-  }); 
-
-  describe('setUpValidation method', function() {
-    it ('Sets up the method', function() {
-      this.obj._setUpValidation();
-
-      var handleValidationSpy = sinon.spy(this.obj, '_handleValidation')
-      var question = this.questions[2]; 
-      var inputs = $(question).find('input'); 
-
-      inputs[0].checked = true; 
-      inputs[1].checked = true; 
-      expect(handleValidationSpy.calledWith(question)).to.be.false; 
-
-      inputs[1].checked = false; 
-      $(inputs[1]).trigger('change');
-      expect(handleValidationSpy.calledWith(question)).to.be.false; 
-
-      inputs[0].checked = false; 
-      $(inputs[0]).trigger('change');
-      expect(handleValidationSpy.calledWith(question)).to.be.true; 
-
-      inputs[0].checked = true; 
-      $(inputs[0]).trigger('change');
-      expect(handleValidationSpy.calledWith(question, 'reset')).to.be.true; 
-
-      handleValidationSpy.restore(); 
-    }); 
-  }); 
-
-  describe('handleValidation method', function() {
-    it ('Checks the error message is added', function() {
-      var question = this.questions[2]; 
-
-      this.obj._updateDOM(); 
-
-      this.obj._handleValidation(question); 
-      expect($(question).find('[data-error-message]').length).to.equal(1); 
-      expect($(question).find('[data-continue]')[0].disabled).to.be.true; 
-
-      this.obj._handleValidation(question, 'reset'); 
-      expect($(question).find('[data-error-message]').length).to.equal(0); 
-      expect($(question).find('[data-continue]')[0].disabled).to.be.false; 
     }); 
   }); 
 
@@ -423,7 +376,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Adds classname to `No` response', function() {
-      expect($(this.response_no).hasClass('question__response__no')).to.be.true; 
+      expect($(this.response_no).hasClass('button--no')).to.be.true; 
     }); 
 
     it('Positions `No` response correctly in the DOM', function() {
@@ -432,7 +385,7 @@ describe('MoneyNavigatorQuestions', function() {
 
     it('Adds `Yes` response after `No`', function() {
       expect(this.response_no.next().prop('tagName').toUpperCase()).to.equal('DIV'); 
-      expect(this.response_no.next().hasClass('question__response__yes')).to.be.true; 
+      expect(this.response_no.next().hasClass('button--yes')).to.be.true; 
     }); 
 
     it('Sets `Yes` as the default input', function() {
@@ -453,10 +406,10 @@ describe('MoneyNavigatorQuestions', function() {
       expect(updateMultipleQuestionSpy.calledWith(inputs[1])).to.be.true; 
 
       updateMultipleQuestionSpy.restore(); 
-    })
+    }); 
   }); 
 
-  describe.only('updateMultipleQuestion method', function() {
+  describe('updateMultipleQuestion method', function() {
     beforeEach(function() {
       this.obj._updateDOM(); 
       this.obj._setUpMultipleQuestions(); 
@@ -474,7 +427,6 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.inputs[0].checked).to.be.true; 
       expect(this.inputs[1].checked).to.be.false; 
       expect(this.inputs[2].disabled).to.be.true; 
-      // expect(continueBtn[0].disabled).to.be.false; 
 
       // `Yes` is checked
       this.inputs[0].checked = true; 
@@ -483,7 +435,6 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.inputs[0].checked).to.be.false; 
       expect(this.inputs[1].checked).to.be.true; 
       expect(this.inputs[2].disabled).to.be.false; 
-      // expect(continueBtn[0].disabled).to.be.true; 
 
       // `Yes` is unchecked
       this.inputs[0].checked = false; 
@@ -492,7 +443,6 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.inputs[0].checked).to.be.true; 
       expect(this.inputs[1].checked).to.be.false; 
       expect(this.inputs[2].disabled).to.be.true; 
-      // expect(continueBtn[0].disabled).to.be.false; 
 
       // `No` is unchecked
       this.inputs[0].checked = false; 
@@ -501,73 +451,76 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.inputs[0].checked).to.be.false; 
       expect(this.inputs[1].checked).to.be.true; 
       expect(this.inputs[2].disabled).to.be.false; 
-      // expect(continueBtn[0].disabled).to.be.true; 
     }); 
 
     describe('When no further options are selected', function() {
-      it('Updates the state of the `Continue` button correctly when called', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
         // `No` is checked
         this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Yes` is checked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+
+        // `Yes` is unchecked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `No` is unchecked
+        this.inputs[0].checked = false; 
         this.inputs[1].checked = true; 
         this.inputs[2].checked = false; 
         this.obj._updateMultipleQuestion(this.inputs[0]); 
-        expect(continueBtn[0].disabled).to.be.false; 
-
-        // `Yes` is checked
-        // `Yes` is unchecked
-        // `No` is unchecked
+        expect(this.continueBtn[0].disabled).to.be.true; 
       });
     }); 
 
     describe('When one or more further options are selected', function() {
-      it('Updates the state of the `Continue` button correctly when called', function() {
+      it('Updates the state of the `Continue` button correctly when Yes/No are changed', function() {
+        // `Further option` is checked
         // `No` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[0]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
+        // `Further option` is checked
         // `Yes` is checked
-        // `Yes` is unchecked
-        // `No` is unchecked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[1]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
       }); 
 
-        // Other options have been selected
+      it('Updates the state of the `Continue` button correctly when a further option is changed', function() {
+        // `No` is checked
+        // `Further option` is checked
+        this.inputs[0].checked = true; 
+        this.inputs[1].checked = false; 
+        this.inputs[2].checked = true; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.false; 
+
         // `Yes` is checked
-        // inputs[1].checked = true; 
-        // inputs[2].checked = true; 
-        // this.obj._updateMultipleQuestion(inputs[1]); 
-        // expect(continueBtn[0].disabled).to.be.false; 
-
-        // Other options have been selected
-        // `No` is unchecked
-        // inputs[0].checked = false; 
-        // inputs[2].checked = true; 
-        // this.obj._updateMultipleQuestion(inputs[0]); 
-        // expect(continueBtn[0].disabled).to.be.false; 
-
-        // Other options have been unselected
-        // `Yes` is checked
-        // inputs[1].checked = true; 
-        // inputs[2].checked = false; 
-        // this.obj._updateMultipleQuestion(inputs[1]); 
-        // expect(continueBtn[0].disabled).to.be.true; 
-
-        // Other options have been unselected
-        // `No` is unchecked
-        // inputs[0].checked = false; 
-        // inputs[2].checked = false; 
-        // this.obj._updateMultipleQuestion(inputs[0]); 
-        // expect(continueBtn[0].disabled).to.be.true; 
-
-        // `Yes` has been checked
-        // Other options are selected
-        // inputs[1].checked = true; 
-        // inputs[2].checked = true; 
-        // this.obj._updateMultipleQuestion(inputs[2]); 
-        // expect(continueBtn[0].disabled).to.be.false; 
-
-        // `Yes` has been checked
-        // Other options are unselected
-        // inputs[1].checked = true; 
-        // inputs[2].checked = false; 
-        // this.obj._updateMultipleQuestion(inputs[2]); 
-        // expect(continueBtn[0].disabled).to.be.true; 
+        // `Further option` is unchecked
+        this.inputs[0].checked = false; 
+        this.inputs[1].checked = true; 
+        this.inputs[2].checked = false; 
+        this.obj._updateMultipleQuestion(this.inputs[2]); 
+        expect(this.continueBtn[0].disabled).to.be.true; 
+      }); 
     }); 
   }); 
 

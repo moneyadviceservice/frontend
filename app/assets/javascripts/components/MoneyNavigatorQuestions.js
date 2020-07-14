@@ -5,7 +5,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     i18nStrings = {
       continue_btn: 'Continue',
       back_btn: 'Back',
-      submit_btn: 'Submit',
+      yes_btn: 'Yes',
+      no_btn: 'No',
+      submit_btn: 'Submit'
     };
 
   MoneyNavigatorQuestions = function ($el, config) {
@@ -16,7 +18,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]');
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
-    this.banner = $(document).find('[data-banner]'); // this.$el.parents('[data-banner]');
+    this.banner = $(document).find('[data-banner]');
     this.activeClass = 'question--active';
     this.hiddenClass = 'is-hidden';
     this.dataLayer = window.dataLayer;
@@ -42,11 +44,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
   MoneyNavigatorQuestions.componentName = 'MoneyNavigatorQuestions';
 
-  MoneyNavigatorQuestions.prototype.init = function (initialised) {
-    this._updateDOM(this.dataLayer);
-    this._setUpMultipleQuestions();
-    this._setUpValidation();
-    this._setUpJourneyLogic();
+  MoneyNavigatorQuestions.prototype.init = function(initialised) {
+    this._updateDOM(this.dataLayer); 
+    this._setUpMultipleQuestions(); 
+    this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
 
@@ -105,61 +106,14 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     });
   };
 
-  MoneyNavigatorQuestions.prototype._setUpValidation = function () {
-    var _this = this;
-
-    this.$questions.each(function () {
-      var question = this;
-      var $inputs = $(question).find('input');
-
-      $inputs.on('change', function () {
-        var checkedInputs = [];
-
-        $inputs.each(function () {
-          if (this.checked) {
-            checkedInputs.push(this);
-          }
-        });
-
-        if (checkedInputs.length == 0) {
-          _this._handleValidation(question);
-        } else if ($(question).find('[data-error-message]').length > 0) {
-          _this._handleValidation(question, 'reset');
-        }
-      });
-    });
-  };
-
-  MoneyNavigatorQuestions.prototype._handleValidation = function (
-    question,
-    options
-  ) {
-    if (options == 'reset') {
-      $(question).find('[data-error-message]').remove();
-      $(question).find('[data-continue]').attr('disabled', false);
-    } else {
-      $(question)
-        .find('legend')
-        .after(
-          '<p class="question__error" data-error-message>Please answer this question before continuing</p>'
-        );
-      $(question).find('[data-continue]').attr('disabled', true);
-    }
-  };
-
-  MoneyNavigatorQuestions.prototype._updateAnalytics = function (
-    btn,
-    dataLayer
-  ) {
-    var question = $(btn).parents('[data-question-id]');
-    var eventAction = $(question).data('questionId').toUpperCase();
-    var eventLabel;
-    var eventResponse = '';
-    var inputs = $(btn)
-      .parents('[data-question-id]')
-      .find('input[type="radio"], input[type="checkbox"]');
-    var inputsCheckedValues = [];
-    var inputsCheckedText = [];
+  MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
+    var question = $(btn).parents('[data-question-id]'); 
+    var eventAction = $(question).data('questionId').toUpperCase(); 
+    var eventLabel; 
+    var eventResponse = ''; 
+    var inputs = $(btn).parents('[data-question-id]').find('input[type="radio"], input[type="checkbox"]'); 
+    var inputsCheckedValues = []; 
+    var inputsCheckedText = []; 
 
     for (var i = 0, length = inputs.length; i < length; i++) {
       if (inputs[i].checked) {
@@ -281,24 +235,30 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         _this._updateDisplay('prev');
         _this._scrollToTop();
       }
-    });
-  };
+    }); 
 
-  MoneyNavigatorQuestions.prototype._scrollToTop = function () {
-    $('html, body').animate(
-      {
-        scrollTop: $('#money_navigator__questions').offset().top,
-      },
-      250
-    );
-  };
+    buttons.each(function() {
+      if ($(this).parents('[data-question]').data('questionMultiple') == '') {
+        if ($(this).data('continue')) {
+          $(this).attr('disabled', true); 
+        }
+      }
+    }); 
+  }
 
-  MoneyNavigatorQuestions.prototype._updateDisplay = function (dir) {
-    var activeIndex,
-      progress,
-      totalQuestions,
-      questions = [],
-      questionClasses = [];
+  MoneyNavigatorQuestions.prototype._scrollToTop = function() {
+    $('html, body').animate({
+        scrollTop: $('#money_navigator__questions').offset().top
+      }, 250
+    );          
+  }; 
+
+  MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
+    var activeIndex, 
+        progress, 
+        totalQuestions, 
+        questions = [], 
+        questionClasses = []; 
 
     this.$el.find('[data-question]').each(function () {
       if (!$(this).data('question-skip')) {
@@ -345,40 +305,125 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype._setUpMultipleQuestions = function () {
     var _this = this;
 
-    this.$multipleQuestions.each(function () {
-      var inputs = $(this).find('input[type="checkbox"]');
+    this.$multipleQuestions.each(function() {
+      var inputs = $(this).find('input[type="checkbox"]'); 
+      var legend = $(this).find('legend'); 
+      var inputId = inputs[0].name.split('[')[1].split(']')[0]; 
+      var input = document.createElement('input'); 
+      var label = document.createElement('label'); 
+      var response_yes = document.createElement('div'); 
+      var response_no, input_no, input_yes;
 
-      $(inputs[0]).on('change', function (e) {
-        _this._updateMultipleQuestions(e.target);
-      });
 
-      for (var i = 0, length = inputs.length; i < length; i++) {
-        if (i > 0) {
-          inputs[i].disabled = true;
+      input.type = 'checkbox'; 
+      input.id = inputId + '_response_yes'; 
+      input.className = 'response__control'; 
+
+      label.htmlFor = inputId + '_response_yes';
+      label.className = 'response__text'; 
+      label.innerHTML = '<span>' + _this.i18nStrings.yes_btn + '</span>'; 
+
+      $(response_yes)
+        .addClass('question__response button--yes')
+        .append(input)
+        .append(label); 
+
+      $(inputs).each(function() {
+        if ($(this).siblings('label').text().trim() == _this.i18nStrings.no_btn) {
+          response_no = $(this).parents('[data-response]'); 
+          
+          $(response_no).addClass('button--no')
+          $(legend)
+            .after(response_yes)
+            .after(response_no); 
+        }
+      }); 
+
+      input_no = response_no[0].getElementsByTagName('input')[0]; 
+      input_yes = response_yes.getElementsByTagName('input')[0]; 
+
+      input_no.checked = false; 
+      input_yes.checked = true; 
+
+      $(this).on('change', function(e) {
+        _this._updateMultipleQuestion(e.target); 
+      }); 
+    }); 
+  }; 
+
+  MoneyNavigatorQuestions.prototype._updateMultipleQuestion = function(input) {
+    var question = $(input).parents('[data-question]'); 
+    var inputs = $(question).find('input[type="checkbox"]'); 
+    var continueBtn = $(question).find('[data-continue]'); 
+    var checkedInputs = 0; 
+  
+    // Update state (checked/disabled) of inputs
+    for (var i = 0, length = inputs.length; i < length; i++) {
+      if (input == inputs[0]) {
+        // `No` is changed
+        if (input.checked) {
+          // `No` is checked
+          if (i == 1) {
+            inputs[i].checked = false; 
+          } 
+
+          if (i > 1) {
+            inputs[i].disabled = true;
+          }
+        } else {
+          // `No` is unchecked`
+          if (i == 1) {
+            inputs[i].checked = true; 
+          }
+
+          if (i > 1) {
+            inputs[i].disabled = false;
+          }
+        }
+      } else if (input == inputs[1]) {
+        // `Yes` is changed
+        if (input.checked) {
+          // `Yes` is checked
+          if (i == 0) {
+            inputs[i].checked = false; 
+          } 
+
+          if (i > 1) {
+            inputs[i].disabled = false;
+          }
+        } else {
+          // `Yes` is unchecked
+          if (i == 0) {
+            inputs[i].checked = true; 
+          }
+
+          if (i > 1) {
+            inputs[i].disabled = true;
+          }
         }
       }
-    });
-  };
 
-  MoneyNavigatorQuestions.prototype._updateMultipleQuestions = function (
-    input
-  ) {
-    var responses = $(input)
-      .parents('[data-response]')
-      .siblings('[data-response]');
+      if (inputs[i].checked) {
+        checkedInputs++; 
+      }      
+    }
 
-    responses.each(function () {
-      $(this)
-        .find('input[type="checkbox"]')
-        .each(function () {
-          if (input.checked) {
-            this.disabled = true;
-          } else {
-            this.disabled = false;
-          }
-        });
-    });
-  };
+    if (inputs[0].checked == true) {
+      // if `No` is checked `Continue` is enabled
+      $(continueBtn[0]).attr('disabled', false); 
+    }
+
+    if (inputs[1].checked == true) {
+      // if `Yes` is checked
+        if (checkedInputs == 1) {
+        // - if 0 other options are checked `Continue` is disabled
+        $(continueBtn[0]).attr('disabled', true); 
+      } else {        
+        // - if 1 or more other options are checked `Continue` is enabled
+        $(continueBtn[0]).attr('disabled', false); 
+      }
+    }
+  }
 
   return MoneyNavigatorQuestions;
 });

@@ -1,0 +1,20 @@
+<noscript>
+  <br />
+  <br />
+  <center>
+    <strong>You will need JavaScript turned on to access this service.</strong>
+  </center>
+  <br />
+  <br />
+</noscript>
+
+<% content_for(:javascripts) do %>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'pageview' });
+    window.dataLayer.push({
+      'event': 'VirtualPageview',
+      'virtualPageURL': '/vpv/pace_original',
+    });
+  </script>
+<% end %>

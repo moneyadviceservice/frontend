@@ -10,7 +10,9 @@
 
 <% content_for(:javascripts) do %>
   <script>
-    ga('set', 'page', '/vpv/pace_original');
-    ga('send', 'pageview');
+    (function () {
+      ga('set', 'page', '/vpv/pace_original');
+      ga('send', 'pageview');
+    })
   </script>
 <% end %>

@@ -10,9 +10,11 @@
 
 <% content_for(:javascripts) do %>
   <script>
-    (function () {
-      ga('set', 'page', '/vpv/pace_original');
-      ga('send', 'pageview');
-    })()
+    window.addEventListener("load", function(){
+      if(window.ga && ga.create) {
+        ga('set', 'page', '/vpv/pace_original');
+        ga('send', 'pageview');
+      }
+    }, false);
   </script>
 <% end %>

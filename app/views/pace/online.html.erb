@@ -10,11 +10,11 @@
 
 <% content_for(:javascripts) do %>
   <script>
-    window.addEventListener("load", function(){
-      if(window.ga && ga.create) {
-        ga('set', 'page', '/vpv/pace_original');
-        ga('send', 'pageview');
-      }
-    }, false);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'pageview' });
+    window.dataLayer.push({
+      'event': 'VirtualPageview',
+      'virtualPageURL': '/vpv/pace_original',
+    });
   </script>
 <% end %>

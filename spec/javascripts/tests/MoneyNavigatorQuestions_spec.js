@@ -409,7 +409,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe.only('updateMultipleQuestion method', function() {
+  describe('updateMultipleQuestion method', function() {
     beforeEach(function() {
       this.obj._updateDOM(); 
       this.obj._setUpMultipleQuestions(); 
@@ -419,7 +419,7 @@ describe('MoneyNavigatorQuestions', function() {
       this.continueBtn = $(multipleQuestion).find('[data-continue]'); 
     }); 
 
-    it('Updates the state of inputs correctly when called', function() {
+    it('Updates the state of `Yes` & `No` inputs correctly when called', function() {
       // `No` is checked
       this.inputs[0].checked = true; 
       this.inputs[1].checked = true; 
@@ -435,22 +435,6 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.inputs[0].checked).to.be.false; 
       expect(this.inputs[1].checked).to.be.true; 
       expect(this.inputs[2].disabled).to.be.false; 
-
-      // `Yes` is unchecked
-      // this.inputs[0].checked = false; 
-      // this.inputs[1].checked = false; 
-      // this.obj._updateMultipleQuestion(this.inputs[1]); 
-      // expect(this.inputs[0].checked).to.be.true; 
-      // expect(this.inputs[1].checked).to.be.false; 
-      // expect(this.inputs[2].disabled).to.be.true; 
-
-      // `No` is unchecked
-      // this.inputs[0].checked = false; 
-      // this.inputs[1].checked = false; 
-      // this.obj._updateMultipleQuestion(this.inputs[0]); 
-      // expect(this.inputs[0].checked).to.be.false; 
-      // expect(this.inputs[1].checked).to.be.true; 
-      // expect(this.inputs[2].disabled).to.be.false; 
     }); 
 
     describe('When no further options are selected', function() {
@@ -468,20 +452,6 @@ describe('MoneyNavigatorQuestions', function() {
         this.inputs[2].checked = false; 
         this.obj._updateMultipleQuestion(this.inputs[1]); 
         expect(this.continueBtn[0].disabled).to.be.true; 
-
-        // `Yes` is unchecked
-        // this.inputs[0].checked = true; 
-        // this.inputs[1].checked = false; 
-        // this.inputs[2].checked = false; 
-        // this.obj._updateMultipleQuestion(this.inputs[1]); 
-        // expect(this.continueBtn[0].disabled).to.be.false; 
-
-        // `No` is unchecked
-        // this.inputs[0].checked = false; 
-        // this.inputs[1].checked = true; 
-        // this.inputs[2].checked = false; 
-        // this.obj._updateMultipleQuestion(this.inputs[0]); 
-        // expect(this.continueBtn[0].disabled).to.be.true; 
       });
     }); 
 

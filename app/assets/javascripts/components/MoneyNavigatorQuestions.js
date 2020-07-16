@@ -324,6 +324,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       label.innerHTML = '<span>' + _this.i18nStrings.yes_btn + '</span>'; 
 
       $(response_yes)
+        .attr('data-response', true)
         .addClass('question__response button--yes')
         .append(input)
         .append(label); 
@@ -345,6 +346,14 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       input_no.checked = false; 
       input_yes.checked = true; 
 
+      $(this).on('click', function(e) {
+        if ($(e.target).parents('[data-response]').hasClass('button--no') || $(e.target).parents('[data-response]').hasClass('button--yes')) {
+          if (e.target.checked == false) {
+            e.preventDefault(); 
+          }
+        }
+      }); 
+
       $(this).on('change', function(e) {
         _this._updateMultipleQuestion(e.target); 
       }); 
@@ -356,7 +365,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var inputs = $(question).find('input[type="checkbox"]'); 
     var continueBtn = $(question).find('[data-continue]'); 
     var checkedInputs = 0; 
-  
+
     // Update state (checked/disabled) of inputs
     for (var i = 0, length = inputs.length; i < length; i++) {
       if (input == inputs[0]) {
@@ -370,15 +379,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           if (i > 1) {
             inputs[i].disabled = true;
           }
-        } else {
-          // `No` is unchecked`
-          if (i == 1) {
-            inputs[i].checked = true; 
-          }
-
-          if (i > 1) {
-            inputs[i].disabled = false;
-          }
         }
       } else if (input == inputs[1]) {
         // `Yes` is changed
@@ -390,15 +390,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
           if (i > 1) {
             inputs[i].disabled = false;
-          }
-        } else {
-          // `Yes` is unchecked
-          if (i == 0) {
-            inputs[i].checked = true; 
-          }
-
-          if (i > 1) {
-            inputs[i].disabled = true;
           }
         }
       }

@@ -370,15 +370,15 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           if (i > 1) {
             inputs[i].disabled = true;
           }
-        } else {
-          // `No` is unchecked`
-          if (i == 1) {
-            inputs[i].checked = true; 
-          }
+        // } else {
+        //   // `No` is unchecked`
+        //   if (i == 1) {
+        //     inputs[i].checked = true; 
+        //   }
 
-          if (i > 1) {
-            inputs[i].disabled = false;
-          }
+        //   if (i > 1) {
+        //     inputs[i].disabled = false;
+        //   }
         }
       } else if (input == inputs[1]) {
         // `Yes` is changed
@@ -391,15 +391,15 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           if (i > 1) {
             inputs[i].disabled = false;
           }
-        } else {
-          // `Yes` is unchecked
-          if (i == 0) {
-            inputs[i].checked = true; 
-          }
+        // } else {
+        //   // `Yes` is unchecked
+        //   if (i == 0) {
+        //     inputs[i].checked = true; 
+        //   }
 
-          if (i > 1) {
-            inputs[i].disabled = true;
-          }
+        //   if (i > 1) {
+        //     inputs[i].disabled = true;
+        //   }
         }
       }
 

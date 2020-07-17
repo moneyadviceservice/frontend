@@ -23,6 +23,12 @@ $transition-time: 0.4s;
 		.urgent-actions__actions {
 			@include column(12); 
 
+			@include respond-to($mq-m) {
+				width: 100%; 
+				margin-left: 0; 
+				margin-right: 0; 
+			}
+
 			list-style: none; 
 			padding: 0; 
 			margin-top: 0; 
@@ -30,23 +36,27 @@ $transition-time: 0.4s;
 		}
 
 		.urgent-actions__action {
-			$gutter: $default-gutter * 2;
-			$width-10-col: 83.33333% - 3.33333%;
-			$width-10-col: calc((1000% / 12) - (#{$default-gutter} * 2));
-			$width-8-col: 66.66667% - 3.33333%;
-			$width-8-col: calc((800% / 12) - (#{$default-gutter} * 2));
-			$width-7-col: 58.33333% - 3.33333%;
-			$width-7-col: calc((700% / 12) - (#{$default-gutter} * 2));
-			$width-6-col: 50% - 3.33334%;
-			$width-6-col: calc((600% / 12) - (#{$default-gutter} * 2));
-			$width-5-col: 41.66667% - 3.33333%;
-			$width-5-col: calc((500% / 12) - (#{$default-gutter} * 2));
-			$width-4-col: 33.33333% - 3.33333%;
-			$width-4-col: calc((400% / 12) - (#{$default-gutter} * 2));
-			$width-3-col: 25% - 3.33333%;
-			$width-3-col: calc((300% / 12) - (#{$default-gutter} * 2));
+			// $gutter: $default-gutter * 2;
+			// $width-10-col: 83.33333% - 3.33333%;
+			// $width-10-col: calc((1000% / 12) - (#{$default-gutter} * 2));
+			// $width-8-col: 66.66667% - 3.33333%;
+			// $width-8-col: calc((800% / 12) - (#{$default-gutter} * 2));
+			// $width-7-col: 58.33333% - 3.33333%;
+			// $width-7-col: calc((700% / 12) - (#{$default-gutter} * 2));
+			// $width-6-col: 50% - 3.33334%;
+			// $width-6-col: calc((600% / 12) - (#{$default-gutter} * 2));
+			// $width-5-col: 41.66667% - 3.33333%;
+			// $width-5-col: calc((500% / 12) - (#{$default-gutter} * 2));
+			// $width-4-col: 33.33333% - 3.33333%;
+			// $width-4-col: calc((400% / 12) - (#{$default-gutter} * 2));
+			// $width-3-col: 25% - 3.33333%;
+			// $width-3-col: calc((300% / 12) - (#{$default-gutter} * 2));
 
 			@extend %clearfix; 
+
+			@include respond-to($mq-m) {
+				@include column(12); 
+			}
 
 			.action__content {
 				@extend %clearfix; 
@@ -56,19 +66,30 @@ $transition-time: 0.4s;
 				min-height: 14rem; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit * 2; 
-				padding: $baseline-unit $default-gutter;
+				padding: $baseline-unit 0; // $default-gutter;
 
 				& > p {
+					@include column(12); 
+
+					clear: left;
+					margin-top: 0; 
+
+					&:first-child {
+						margin-top: 1rem; 
+					}
+
 					@include respond-to($mq-m) {
-						width: $width-6-col; 
+						// width: $width-6-col; 
+						@include column(6); 
 					}
 
 					@include respond-to($mq-l) {
-						width: $width-7-col; 
+						// width: $width-7-col; 
+						@include column(7); 
 					}
 
 					& > img {
-						width: 165px;
+						width: 155px;
 					}
 				}
 
@@ -83,6 +104,10 @@ $transition-time: 0.4s;
 				}
 
 				.callout {
+					@include column(12);
+
+					margin-top: 0;  
+
 					p {
 						font-size: 1rem; 
 
@@ -92,44 +117,58 @@ $transition-time: 0.4s;
 					}
 
 					@include respond-to($mq-m) {
+						@include column(6); 
+
 						position: absolute;
 						top: 1.5rem;
-						right: $gutter / 2;
-						width: $width-6-col;
+						right: $default-gutter; // $gutter / 2;
+						// width: $width-6-col;
 						margin-top: 0; 
 						margin-right: 0; 
 					}
 
 					@include respond-to($mq-l) {
+						@include column(5); 
+
 						// position: absolute;
 						// top: 1.5rem;
 						// right: $gutter / 2;
-						width: $width-5-col;
+						// width: $width-5-col;
 						// margin-top: 0; 
-						// margin-right: 0; 
+						margin-right: 0; 
 					}
 				}
 
 				.action__contact {
-					margin: 0;
+					@include column(12); 
+
+					// clear: none;
+					margin-bottom: 0;
+
+					& + .action__contact {
+						clear: none; 
+					}
 
 					&:last-child {
 						margin-bottom: 1rem; 
 					}
 
 					@include respond-to($mq-m) {
-						float: left;
-						width: $width-4-col; 
-						margin-right: $default-gutter * 3; 
+						@include column(4); 
+
+						// float: left;
+						// width: $width-4-col; 
+						// margin-right: $default-gutter * 3; 
 						margin-bottom: 1rem; 
 
-						&:last-child {
-							margin-right: 0; 
-						}
+						// &:last-child {
+						// 	margin-right: 0; 
+						// }
 					}
 
 					@include respond-to($mq-l) {
-						width: $width-3-col; 
+						@include column(3); 
+						// width: $width-3-col; 
 					}
 				}
 			}
@@ -262,13 +301,15 @@ $transition-time: 0.4s;
 						// }
 
 						// @include respond-to($mq-l) {
-						width: $width-4-col; 
-						float: left; 
-						margin-right: $default-gutter * 3; 
+						@include column(4); 
 
-						&:last-child {
-							margin-right: 0; 
-						}
+						// width: $width-4-col; 
+						// float: left; 
+						// margin-right: $default-gutter * 3; 
+
+						// &:last-child {
+						// 	margin-right: 0; 
+						// }
 
 						@include respond-to($mq-l) {
 							padding-left: 100px; 
@@ -314,11 +355,13 @@ $transition-time: 0.4s;
 				.action__content {
 					& > p {
 						@include respond-to($mq-m) {
-							width: $width-8-col;
+							@include column(8); 
+							// width: $width-8-col;
 						}
 
 						@include respond-to($mq-l) {
-							width: $width-10-col;
+							@include column(10); 
+							// width: $width-10-col;
 						}
 					}
 

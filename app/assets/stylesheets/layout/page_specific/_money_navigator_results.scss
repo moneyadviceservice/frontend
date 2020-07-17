@@ -88,10 +88,6 @@ $transition-time: 0.4s;
 						@include column(7); 
 					}
 
-					@include respond-to($mq-l) {
-						width: $width-7-col; 
-					}
-
 					& > img {
 						width: 155px;
 					}
@@ -331,6 +327,8 @@ $transition-time: 0.4s;
 							}
 						}
 					}
+				}
+			}
 
 			&.coronavirus-stepchange-debt-england, 
 			&.coronavirus-stepchange-debt-ni, 

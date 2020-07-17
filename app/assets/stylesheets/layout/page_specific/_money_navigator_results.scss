@@ -241,39 +241,49 @@ $transition-time: 0.4s;
 				// p:nth-child(8) {
 				// 	margin-right: 0; 
 				// }
-				.action__contact {
-					position: relative;
-					// margin: 0;
+				.action__content {
+					.action__contact {
+						position: relative;
+						// margin: 0;
 
-					// &:last-child {
-					// 	margin-bottom: 1rem; 
-					// }
+						// &:last-child {
+						// 	margin-bottom: 1rem; 
+						// }
 
-					// @include respond-to($mq-m) {
-					// 	float: left;
-					// 	width: $width-4-col; 
-					// 	margin-right: $default-gutter * 3; 
-					// 	margin-bottom: 1rem; 
+						// @include respond-to($mq-m) {
+						// 	float: left;
+						// 	width: $width-4-col; 
+						// 	margin-right: $default-gutter * 3; 
+						// 	margin-bottom: 1rem; 
 
-					// 	&:last-child {
-					// 		margin-right: 0; 
-					// 	}
-					// }
+						// 	&:last-child {
+						// 		margin-right: 0; 
+						// 	}
+						// }
 
-					@include respond-to($mq-l) {
+						// @include respond-to($mq-l) {
 						width: $width-4-col; 
-						padding-left: 100px; 
-						padding-left: calc(100px + #{$default-gutter});
-						margin-top: -1rem; 
+						float: left; 
+						margin-right: $default-gutter * 3; 
 
-						img {
-							position: absolute;
-							// float: left; 
-							width: 100px;
-							// margin-left: -100px; 
-							// margin-left: calc(-100px - #{$default-gutter});
-							left: 0; 
-							top: 1rem; 
+						&:last-child {
+							margin-right: 0; 
+						}
+
+						@include respond-to($mq-l) {
+							padding-left: 100px; 
+							padding-left: calc(100px + #{$default-gutter});
+							margin-top: -1rem; 
+
+							img {
+								position: absolute;
+								// float: left; 
+								width: 100px;
+								// margin-left: -100px; 
+								// margin-left: calc(-100px - #{$default-gutter});
+								left: 0; 
+								top: 1rem; 
+							}
 						}
 					}
 				}

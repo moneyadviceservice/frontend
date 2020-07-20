@@ -6,22 +6,34 @@ cy:
       page_subtitle: Mae’r coronafeirws wedi bod yn sioc, a gwyddom eich bod yn gwneud popeth yn eich gallu i gadw pethau dan reolaeth. Rydym ni wedi dwyn ynghyd ein holl wybodaeth ynglŷn â’r coronafeirws a’r canllawiau ynglŷn â materion eraill sydd efallai yn effeithio arnoch mewn un lle, fel y gallwch chi ddysgu beth allwch chi ei wneud a lle i fynd am gymorth.
       meta_description: Rydym wedi dwyn ynghyd ein holl wybodaeth ynglŷn â’r coronafeirws a’r canllawiau ynglŷn â materion eraill sydd efallai yn effeithio arnoch mewn un lle, fel y gallwch chi ddysgu beth allwch chi ei wneud.
       hero:
-        title: Cefnogaeth gydag incwm a bywyd gartref
-        description_html: |
-          <ul>
-            <li><a href="/cy/articles/coronafirws-beth-mae-yn-ei-olygu-i-chi/">Coronafeirws – beth mae yn ei olygu i chi a beth mae gennych hawl iddo</a></li>
-            <li><a href="/cy/articles/coronafeirws-os-ydych-yn-weithiwr-cyflogedig/">Coronafeirws – beth allwch chi ei hawlio os ydych yn gyflogai</a></li>
-            <li><a href="/cy/articles/coronafeirws-os-ydych-yn-hunangyflogedig/">Coronafeirws - beth allwch chi ei hawlio os ydych yn hunangyflogedig</a></li>
-            <li><a href="/cy/articles/coronafeirws-os-oes-gennych-blant/">Coronafeirws os oes gennych blant</a></li>
-            <li><a href="/cy/articles/coronafeirws-ach-arian">Coronafeirws a’ch arian</a></li>
-            <li><a href="/cy/articles/amddiffyn-rhag-cam-drin-ariannol">Amddiffyn rhag cam-drin ariannol</a></li>
-            <li><a href="/cy/articles/problemau-ariannol-a-lles-meddyliol-gwael">Problemau ariannol a lles meddyliol gwael</a></li>
-          </ul>
-        image: covid-19-hub-hero-image.jpg
+        title: Offeryn Llywiwr Ariannol
+        description_html: <h3>Dysgwch beth i’w wneud nesaf</h3> Yn chwilio am arweiniad ariannol, ond ddim yn gwybod ble i ddechrau? Nid chi yw’r unig un. Dechreuwch arni gyda’r <strong>Llywiwr Ariannol</strong>, sy’n rhoi help i chi yn y fan a’r lle ar sail eich amgylchiadau.
+        image: covid-19-hub-hero-image-cy.jpg
+        button:
+          text: Dewch o hyd i’ch ffordd ymlaen
+          url: /cy/tools/teclyn-llywio-ariannol
 
       blocks:
         - type: list
-          header: Dyled
+          header: Cefnogaeth gydag incwm a bywyd gartref
+          links:
+          - text: Coronafeirws – beth mae yn ei olygu i chi a beth mae gennych hawl iddo
+            url: /cy/articles/coronafirws-beth-mae-yn-ei-olygu-i-chi
+          - text: Coronafeirws – beth allwch chi ei hawlio os ydych yn gyflogai
+            url: /cy/articles/coronafeirws-os-ydych-yn-weithiwr-cyflogedig
+          - text: Coronafeirws - beth allwch chi ei hawlio os ydych yn hunangyflogedig
+            url: /cy/articles/coronafeirws-os-ydych-yn-hunangyflogedig
+          - text: Coronafeirws os oes gennych blant
+            url: /cy/articles/coronafeirws-os-oes-gennych-blant
+          - text: Coronafeirws a’ch arian
+            url: /cy/articles/coronafeirws-ach-aria
+          - text: Amddiffyn rhag cam-drin ariannol
+            url: /cy/articles/amddiffyn-rhag-cam-drin-ariannol
+          - text: Problemau ariannol a lles meddyliol gwael
+            url: /cy/articles/problemau-ariannol-a-lles-meddyliol-gwae
+
+        - type: list
+          header: Dyled a benthyca
           links:
           - text: Help os ydych chi’n cael trafferth gyda dyledion
             url: /cy/articles/help-os-ydych-chin-cael-trafferth-gyda-dyledion
@@ -33,6 +45,16 @@ cy:
             url: /cy/articles/dylech-flaenoriaethu-a-delio-a-llythyrau-am-daliad-hwyr
           - text: Ble i gael cyngor am ddim ar ddyledion
             url: /cy/tools/canfyddwr-cyngor-ar-ddyledion/organisations
+          - text: Benthyciadau personol
+            url: /cy/articles/benthyciadau-personol
+          - text: Benthyciadau diwrnod cyflog – beth sydd angen i chi ei wybod
+            url: /cy/articles/benthyciadau-diwrnod-cyflog-beth-sydd-angen-i-chi-ei-wybod
+          - text: Benthyciadau cyfuno dyledion
+            url: /cy/articles/benthyciadau-cyfuno-dyledion
+          - text: Credyd wedi'i wrthod neu fenthyciad wedi'i wrthod - beth allwch ei wneud
+            url: /cy/articles/beth-iw-wneud-os-gwrthodwyd-benthyciad-neu-gerdyn-credyd-i-chi
+          - text: Talu eich cardiau credyd a’ch cardiau siop
+            url: /cy/articles/talu-eich-cardiau-credyd-ach-cardiau-siop
 
         - type: list
           header: Cynlluniau Gweithredu
@@ -66,6 +88,8 @@ cy:
           video: https://www.youtube.com/embed/bov7VNaYz4g
           header: Tools a fideos
           links:
+          - text: Offeryn Llywiwr Ariannol
+            url: /cy/tools/teclyn-llywio-ariannol
           - text: Cynlluniwr cyllideb
             url: /cy/tools/cynllunydd-cyllideb
           - text: Cyfrifiannell cardiau credyd
@@ -92,20 +116,6 @@ cy:
             url: /cy/articles/cael-trafferth-i-dalu-eich-rhent
           - text: Ôl-ddyledion morgais neu broblemau wrth dalu'ch morgais
             url: /cy/articles/ol-ddyledion-morgais-neu-broblemau-wrth-daluch-morgais
-
-        - type: list
-          header: Benthyca
-          links:
-          - text: Benthyciadau personol
-            url: /cy/articles/benthyciadau-personol
-          - text: Benthyciadau diwrnod cyflog – beth sydd angen i chi ei wybod
-            url: /cy/articles/benthyciadau-diwrnod-cyflog-beth-sydd-angen-i-chi-ei-wybod
-          - text: Benthyciadau cyfuno dyledion
-            url: /cy/articles/benthyciadau-cyfuno-dyledion
-          - text: Credyd wedi'i wrthod neu fenthyciad wedi'i wrthod - beth allwch ei wneud
-            url: /cy/articles/beth-iw-wneud-os-gwrthodwyd-benthyciad-neu-gerdyn-credyd-i-chi
-          - text: Talu eich cardiau credyd a’ch cardiau siop
-            url: /cy/articles/talu-eich-cardiau-credyd-ach-cardiau-siop
 
         - type: list
           header: Profedigaeth

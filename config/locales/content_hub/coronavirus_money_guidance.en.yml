@@ -7,22 +7,34 @@ en:
       page_subtitle: Coronavirus has been a shock, and we know you're doing all you can to keep things under control. We've put together all of our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do and where you can go for help.
       meta_description: We've put together all our coronavirus information and the guides around other issues you might be having in one place, so you can find out what you can do.
       hero:
-        title: Support with income and life at home
-        description_html: |
-          <ul>
-            <li><a href="/en/articles/coronavirus-what-it-means-for-you/">Coronavirus – what it means for you and what you’re entitled to</a></li>
-            <li><a href="/en/articles/coronavirus-if-youre-an-employee/">Coronavirus- what you're entitled to when you're an employee</a></li>
-            <li><a href="/en/articles/coronavirus-if-youre-self-employed/">Coronavirus- what you're entitled to when you're self-employed</a></li>
-            <li><a href="/en/articles/coronavirus-if-you-have-children"/>Coronavirus if you have children</a></li>
-            <li><a href="/en/articles/coronavirus-and-your-money">Coronavirus and your money</a></li>
-            <li><a href="/en/articles/protecting-against-financial-abuse">Protecting yourself against financial abuse</a></li>
-            <li><a href="/en/articles/money-problems-and-poor-mental-wellbeing">Help if you're feeling stressed about money</a></li>
-          </ul>
-        image: covid-19-hub-hero-image.jpg
+        title: Money Navigator Tool
+        description_html: <h3>Know what to do next</h3> Looking for money guidance, but don’t know where to begin? You’re not alone. Get started with <strong>Money Navigator</strong>, giving you instant help based on your circumstances.
+        image: covid-19-hub-hero-image-en.jpg
+        button:
+          text: Find your way forward
+          url: /en/tools/money-navigator-tool
 
       blocks:
         - type: list
-          header: Debt
+          header: Support with income and life at home
+          links:
+          - text: Coronavirus – what it means for you and what you’re entitled to
+            url: /en/articles/coronavirus-what-it-means-for-you
+          - text: Coronavirus- what you're entitled to when you're an employee
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Coronavirus- what you're entitled to when you're self-employed
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Coronavirus if you have children
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Coronavirus and your money
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Protecting yourself against financial abuse
+            url: /en/articles/coronavirus-what-it-means-for-you/
+          - text: Help if you're feeling stressed about money
+            url: /en/articles/coronavirus-what-it-means-for-you/
+
+        - type: list
+          header: Debt and borrowing
           links:
           - text: Help if you're struggling with debt
             url: /en/articles/help-if-youre-struggling-with-debt
@@ -34,6 +46,16 @@ en:
             url: /en/articles/how-to-deal-with-late-payment-letters-and-demands
           - text: Where to get free debt advice
             url: /en/tools/debt-advice-locator
+          - text: Personal loans
+            url: /en/articles/personal-loans
+          - text: Payday loans - what you need to know
+            url: /en/articles/payday-loans-what-you-need-to-know
+          - text: Debt consolidation loans
+            url: /en/articles/debt-consolidation-loans
+          - text: Refused credit or refused a loan - what can you do?
+            url: /en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card
+          - text: Paying off your credit card
+            url: /en/articles/paying-off-your-credit-card
 
         - type: list
           header: Action Plans
@@ -67,6 +89,8 @@ en:
           video: https://www.youtube.com/embed/bov7VNaYz4g
           header: Tools and videos
           links:
+          - text: Money Navigator Tool
+            url: /en/tools/money-navigator-tool
           - text: Budget planner
             url: /en/tools/budget-planner
           - text: Credit card calculator
@@ -93,20 +117,6 @@ en:
             url: /en/articles/rent-arrears-problems-paying-your-rent
           - text: Mortgage arrears or problems paying your mortgage
             url: /en/articles/mortgage-arrears-if-you-have-problems-paying-your-mortgage
-
-        - type: list
-          header: Borrowing
-          links:
-          - text: Personal loans
-            url: /en/articles/personal-loans
-          - text: Payday loans - what you need to know
-            url: /en/articles/payday-loans-what-you-need-to-know
-          - text: Debt consolidation loans
-            url: /en/articles/debt-consolidation-loans
-          - text: Refused credit or refused a loan - what can you do?
-            url: /en/articles/what-to-do-if-you-have-been-refused-a-loan-or-credit-card
-          - text: Paying off your credit card
-            url: /en/articles/paying-off-your-credit-card
 
         - type: list
           header: Bereavement

@@ -92,6 +92,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     });
   };
 
+  // Adds tabindex to labels for keyboard accessibiity 
+  $("#money_navigator__questions label").attr('tabindex', 0);
+
   /**
    *  This method adds a `question-skip` dataset value to questions
    *  that should not be part of the current journey

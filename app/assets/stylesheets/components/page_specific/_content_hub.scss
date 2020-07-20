@@ -37,7 +37,7 @@
   padding-bottom: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover; // contain;
+  background-size: contain;
 
   @include respond-to($content-hub-one-col-breakpoint) {
     position: absolute;
@@ -57,11 +57,11 @@
   width: 100%;
 
   @include respond-to($content-hub-one-col-breakpoint) {
-    width: 75%;
+    width: 100%;
   }
 
   @include respond-to($content-hub-two-col-breakpoint) {
-    width: 50%;
+    width: 75%;
   }
 }
 

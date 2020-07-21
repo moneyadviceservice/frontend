@@ -97,8 +97,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   // Adds tabindex to labels for keyboard accessibiity 
   $('#money_navigator__questions').find('input[type="radio"]').attr('tabindex', 0);
   $('#money_navigator__questions').find('input[type="checkbox"]').attr('tabindex', 0);
-  // $('.l-money_navigator__questions').find('.question__response').attr('tabindex', 0);
-  $('.l-money_navigator__questions').find('.button--yes').attr('tabindex', 0);
+  $('.l-money_navigator__questions').find('.question__response').attr('tabindex', 0);
+
 
   
 

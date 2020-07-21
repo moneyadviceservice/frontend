@@ -108,6 +108,7 @@
 	.question__explainer {
 		font-size: 0.875rem; 
 		font-weight: 700; 
+		margin-top:55px;
 	}
 
 	.question__response {
@@ -145,6 +146,14 @@
 				display: inline-block;
 				margin: 0 $default-gutter * 2 0 0;
 
+				@include respond-to($mq-s) {
+					margin-right: 32px; 
+				}
+			
+				@include respond-to($mq-m) {
+					margin-right: 52px;
+				}
+
 				/* Base for label styling */
 				[type="checkbox"]:not(:checked),
 				[type="checkbox"]:checked {
@@ -172,31 +181,27 @@
 				/* checked mark aspect */
 				[type="checkbox"]:not(:checked) + label:after,
 				[type="checkbox"]:checked + label:after {
-					content:'Yes';
+					content:'';
 					position: absolute;
 					top: 0em; left: 0;
-					// @extend .button;
 					font-size: 1.125rem;
 					font-weight: 300;
-					// padding: 12px 22px;
+					padding: 12px 22px;
 					border-radius: 4px;
 				}
-
 
 				// &:checked + .response__text 
 				[type="checkbox"]:checked + label:after {
 					background: $color-green-secondary; 
 					color: $color-white; 
+					
 				}
-
 
 				/* span within label */ 
 				span {
 					display:none;
-					
 				}
 			
-				
 				/* accessibility */
 				[type="checkbox"]:checked:focus + label:before,
 				[type="checkbox"]:not(:checked):focus + label:before {
@@ -210,17 +215,29 @@
 				[type="checkbox"]:checked + label:before {
 					content:'Yes';
 				}
-
 			}
 
 			.button--no {
+			
 				[type="checkbox"]:not(:checked) + label:before,
 				[type="checkbox"]:checked + label:before {
 					content:'No';
 				}
-
 			}
 
+			.button--yes{
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+					content:'Yes';
+				}
+			}
+
+			.button--no {
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+					content:'No';
+				}
+			}
 		}
 
 		// &[data-question-multiple] {

@@ -92,8 +92,28 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     });
   };
 
+  //LA 
+
   // Adds tabindex to labels for keyboard accessibiity 
-  $("#money_navigator__questions label").attr('tabindex', 0);
+  $('#money_navigator__questions').find('input[type="radio"]').attr('tabindex', 0);
+  $('#money_navigator__questions').find('input[type="checkbox"]').attr('tabindex', 0);
+  // $('.l-money_navigator__questions').find('.question__response').attr('tabindex', 0);
+  $('.l-money_navigator__questions').find('.button--yes').attr('tabindex', 0);
+
+  
+
+  // $(document).ready(function(){
+  //   $('.button--back').on('click', function(){
+  //       $('input[type="radio"]').prop('checked', false);
+  //   });
+  // });
+
+  // $("#money_navigator__questions").find('input[type="checkbox"]').attr('autocomplete', off);
+  // $(":input:not(:hidden)").each(function (i) { $(this).attr('tabindex', i + 1); });
+
+//end LA 
+
+
 
   /**
    *  This method adds a `question-skip` dataset value to questions

@@ -14,7 +14,12 @@
         url:money_navigator_tool_questionnaire_path, 
         data: {
           dough_component: "MoneyNavigatorQuestions", 
-          dough_money_navigator_questions_config: {"i18nStrings": t('money_navigator_tool.controls') }
+          dough_money_navigator_questions_config: {
+            "i18nStrings": {
+              controls: t('money_navigator_tool.controls'), 
+              messages: t('money_navigator_tool.messages')
+            }
+          }
         },
         builder: Dough::Forms::Builders::Validation do |f|
       %>

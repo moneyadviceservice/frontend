@@ -350,19 +350,19 @@ describe('MoneyNavigatorQuestions', function() {
       this.obj._updateDOM(); 
 
       this.obj._updateDisplay('next');
-      expect($(this.questions[1]).find('.question__counter').text()).to.equal('Completed 17%'); 
+      expect($(this.questions[1]).find('.question__counter').text()).to.equal('17% completed'); 
 
       this.obj._updateDisplay('next');
-      expect($(this.questions[2]).find('.question__counter').text()).to.equal('Completed 33%'); 
+      expect($(this.questions[2]).find('.question__counter').text()).to.equal('33% completed'); 
 
       this.obj._updateDisplay('next');
-      expect($(this.questions[3]).find('.question__counter').text()).to.equal('Completed 50%'); 
+      expect($(this.questions[3]).find('.question__counter').text()).to.equal('50% completed'); 
 
       this.obj._updateDisplay('next');
-      expect($(this.questions[4]).find('.question__counter').text()).to.equal('Completed 67%'); 
+      expect($(this.questions[4]).find('.question__counter').text()).to.equal('67% completed'); 
 
       this.obj._updateDisplay('next');
-      expect($(this.questions[5]).find('.question__counter').text()).to.equal('Completed 83%'); 
+      expect($(this.questions[5]).find('.question__counter').text()).to.equal('83% completed'); 
     }); 
   }); 
 

@@ -36,22 +36,6 @@ $transition-time: 0.4s;
 		}
 
 		.urgent-actions__action {
-			// $gutter: $default-gutter * 2;
-			// $width-10-col: 83.33333% - 3.33333%;
-			// $width-10-col: calc((1000% / 12) - (#{$default-gutter} * 2));
-			// $width-8-col: 66.66667% - 3.33333%;
-			// $width-8-col: calc((800% / 12) - (#{$default-gutter} * 2));
-			// $width-7-col: 58.33333% - 3.33333%;
-			// $width-7-col: calc((700% / 12) - (#{$default-gutter} * 2));
-			// $width-6-col: 50% - 3.33334%;
-			// $width-6-col: calc((600% / 12) - (#{$default-gutter} * 2));
-			// $width-5-col: 41.66667% - 3.33333%;
-			// $width-5-col: calc((500% / 12) - (#{$default-gutter} * 2));
-			// $width-4-col: 33.33333% - 3.33333%;
-			// $width-4-col: calc((400% / 12) - (#{$default-gutter} * 2));
-			// $width-3-col: 25% - 3.33333%;
-			// $width-3-col: calc((300% / 12) - (#{$default-gutter} * 2));
-
 			@extend %clearfix; 
 
 			@include respond-to($mq-m) {
@@ -66,7 +50,7 @@ $transition-time: 0.4s;
 				min-height: 14rem; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit * 2; 
-				padding: $baseline-unit 0; // $default-gutter;
+				padding: $baseline-unit 0; 
 
 				& > p {
 					@include column(12); 
@@ -79,12 +63,10 @@ $transition-time: 0.4s;
 					}
 
 					@include respond-to($mq-m) {
-						// width: $width-6-col; 
 						@include column(6); 
 					}
 
 					@include respond-to($mq-l) {
-						// width: $width-7-col; 
 						@include column(7); 
 					}
 
@@ -121,8 +103,7 @@ $transition-time: 0.4s;
 
 						position: absolute;
 						top: 1.5rem;
-						right: $default-gutter; // $gutter / 2;
-						// width: $width-6-col;
+						right: $default-gutter; 
 						margin-top: 0; 
 						margin-right: 0; 
 					}
@@ -130,11 +111,6 @@ $transition-time: 0.4s;
 					@include respond-to($mq-l) {
 						@include column(5); 
 
-						// position: absolute;
-						// top: 1.5rem;
-						// right: $gutter / 2;
-						// width: $width-5-col;
-						// margin-top: 0; 
 						margin-right: 0; 
 					}
 				}
@@ -142,7 +118,6 @@ $transition-time: 0.4s;
 				.action__contact {
 					@include column(12); 
 
-					// clear: none;
 					margin-bottom: 0;
 
 					& + .action__contact {
@@ -156,161 +131,22 @@ $transition-time: 0.4s;
 					@include respond-to($mq-m) {
 						@include column(4); 
 
-						// float: left;
-						// width: $width-4-col; 
-						// margin-right: $default-gutter * 3; 
 						margin-bottom: 1rem; 
-
-						// &:last-child {
-						// 	margin-right: 0; 
-						// }
 					}
 
 					@include respond-to($mq-l) {
 						@include column(3); 
-						// width: $width-3-col; 
 					}
 				}
 			}
 
-			&.coronavirus-debt-advice-england {
-				// p:nth-child(1n+6) {
-				// 	margin-bottom: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		width: $width-6-col;
-				// 		margin-right: $gutter; 
-				// 		float: left; 
-				// 	}
-				// }
-
-				// p:nth-child(1n+7) {
-				// 	margin-top: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		margin-right: 0; 
-				// 		margin-left: $gutter; 
-				// 	}
-				// }
-			}
-
-			&.coronavirus-debt-advice-ni {
-				// .action__contact {
-				// 	margin: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		float: left;
-				// 		width: $width-4-col; 
-				// 		margin-right: $default-gutter * 3; 
-				// 		margin-bottom: 1rem; 
-
-				// 		&:last-child {
-				// 			margin-right: 0; 
-				// 		}
-				// 	}
-
-				// 	@include respond-to($mq-l) {
-				// 		// float: left;
-				// 		width: $width-3-col; 
-				// 	}
-				// }
-
-				// .action__contact:last-child {
-				// 	margin-bottom: 1rem; 
-				// 	margin-right: 0; 
-				// }
-
-				// p:nth-child(1n+6) {
-				// 	margin-bottom: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		width: $width-6-col;
-				// 		margin-right: $gutter; 
-				// 		float: left; 
-				// 	}
-				// }
-
-				// p:nth-child(1n+7) {
-				// 	margin-top: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		margin-right: 0; 
-				// 		margin-left: $gutter; 
-				// 	}
-				// }
-			}
-
-			&.coronavirus-debt-advice-scotland {
-				// p:nth-child(1n+5) {
-				// 	margin-bottom: 0;
-
-				// 	@include respond-to($mq-m) {
-				// 		width: $width-6-col;
-				// 		margin-right: $gutter; 
-				// 		float: left; 
-				// 		clear: left;
-				// 	}
-				// }
-
-				// p:nth-child(1n+6) {
-				// 	margin-top: 0;
-				// }
-
-				// p:nth-child(1n+7) {
-				// 	@include respond-to($mq-m) {
-				// 		margin-right: 0; 
-				// 		margin-left: $gutter; 
-				// 		clear: none;
-				// 	}
-				// }
-			}
-
 			&.coronavirus-debt-advice-wales {
-				// p:nth-child(1n+5) {
-				// 	margin-bottom: 0;
-				// }
-
-				// p:nth-child(1n+6) {
-				// 	margin-top: 0;
-				// 	width: calc((100% / 3) - (#{$default-gutter} * 1.5));
-				// 	margin-right: $gutter; 
-				// 	float: left; 
-				// }
-
-				// p:nth-child(8) {
-				// 	margin-right: 0; 
-				// }
 				.action__content {
 					.action__contact {
-						position: relative;
-						// margin: 0;
-
-						// &:last-child {
-						// 	margin-bottom: 1rem; 
-						// }
-
-						// @include respond-to($mq-m) {
-						// 	float: left;
-						// 	width: $width-4-col; 
-						// 	margin-right: $default-gutter * 3; 
-						// 	margin-bottom: 1rem; 
-
-						// 	&:last-child {
-						// 		margin-right: 0; 
-						// 	}
-						// }
-
-						// @include respond-to($mq-l) {
 						@include column(4); 
 
-						// width: $width-4-col; 
-						// float: left; 
-						// margin-right: $default-gutter * 3; 
-
-						// &:last-child {
-						// 	margin-right: 0; 
-						// }
-
+						position: relative;
+	
 						@include respond-to($mq-l) {
 							padding-left: 100px; 
 							padding-left: calc(100px + #{$default-gutter});
@@ -318,10 +154,7 @@ $transition-time: 0.4s;
 
 							img {
 								position: absolute;
-								// float: left; 
 								width: 100px;
-								// margin-left: -100px; 
-								// margin-left: calc(-100px - #{$default-gutter});
 								left: 0; 
 								top: 1rem; 
 							}
@@ -330,49 +163,19 @@ $transition-time: 0.4s;
 				}
 			}
 
-			&.coronavirus-stepchange-debt-england, 
-			&.coronavirus-stepchange-debt-ni, 
-			&.coronavirus-stepchange-debt-scotland, 
-			&.coronavirus-stepchange-debt-wales {
-				// @include respond-to($mq-m) {
-				// 	& > p {
-				// 		width: $width-6-col;
-				// 	}					
-				// }
-			}
-
 			&.coronavirus-self-employed-debt-advice, 
 			&.coronavirus-self-employed-debt-advice-ni, 
 			&.urgent-pension-advice {
-				// p:nth-child(1n+5) {
-				// 	margin-bottom: 0;
-				// }
-
-				// p:nth-child(1n+6) {
-				// 	margin-top: 0;
-				// }
-
 				.action__content {
 					& > p {
 						@include respond-to($mq-m) {
 							@include column(8); 
-							// width: $width-8-col;
 						}
 
 						@include respond-to($mq-l) {
 							@include column(10); 
-							// width: $width-10-col;
 						}
 					}
-
-						// p:nth-child(4) {
-						// 	position: absolute;
-						// 	top: 1.5rem;
-						// 	right: $gutter / 2;
-						// 	width: auto;
-						// 	margin-top: 0; 
-						// }
-					// }
 
 					.action__contact {
 						@include respond-to($mq-m) {
@@ -382,53 +185,11 @@ $transition-time: 0.4s;
 								position: absolute;
 								top: 1.5rem;
 								right: $default-gutter;
-								// width: auto;
-								// margin-top: 0; 
 							}
 						}
 					}
 				}
 			}
-
-			// &.coronavirus-self-employed-debt-advice-ni {
-			// 	p:nth-child(1n+5) {
-			// 		margin-bottom: 0;
-			// 	}
-
-			// 	p:nth-child(1n+6) {
-			// 		margin-top: 0;
-			// 	}
-
-			// 	@include respond-to($mq-m) {
-			// 		& > p {
-			// 			width: $width-8-col;
-			// 		}					
-
-			// 		p:nth-child(3) {
-			// 			position: absolute;
-			// 			top: 1.5rem;
-			// 			right: $gutter / 2;
-			// 			width: auto;
-			// 			margin-top: 0; 
-			// 		}
-			// 	}
-			// }
-
-			// &.urgent-pension-advice {
-			// 	@include respond-to($mq-m) {
-			// 		& > p {
-			// 			width: $width-8-col;
-			// 		}					
-
-			// 		p:nth-child(3) {
-			// 			position: absolute;
-			// 			top: 1.5rem;
-			// 			right: $gutter / 2;
-			// 			width: auto;
-			// 			margin-top: 0; 
-			// 		}
-			// 	}
-			// }
 		}
 	}
 

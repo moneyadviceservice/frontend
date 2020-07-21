@@ -23,6 +23,12 @@ $transition-time: 0.4s;
 		.urgent-actions__actions {
 			@include column(12); 
 
+			@include respond-to($mq-m) {
+				width: 100%; 
+				margin-left: 0; 
+				margin-right: 0; 
+			}
+
 			list-style: none; 
 			padding: 0; 
 			margin-top: 0; 
@@ -30,33 +36,42 @@ $transition-time: 0.4s;
 		}
 
 		.urgent-actions__action {
-			$gutter: $default-gutter * 2;
-			$width-8-col: 66.6667% - 3.33334%;
-			$width-8-col: calc((100% / 1.5) - (#{$default-gutter} * 2));
-			$width-6-col: 50% - 3.33334%;
-			$width-6-col: calc((100% / 2) - (#{$default-gutter} * 2));
-			$width-4-col: 33.3333% - 3.33334%;
-			$width-4-col: calc((100% / 3) - (#{$default-gutter} * 2));
-
 			@extend %clearfix; 
+
+			@include respond-to($mq-m) {
+				@include column(12); 
+			}
 
 			.action__content {
 				@extend %clearfix; 
 
 				position: relative;
 				background: $color-white;
-				min-height: 17rem; 
+				min-height: 14rem; 
 				margin-top: 0; 
 				margin-bottom: $baseline-unit * 2; 
-				padding: $baseline-unit $default-gutter;
+				padding: $baseline-unit 0; 
 
 				& > p {
+					@include column(12); 
+
+					clear: left;
+					margin-top: 0; 
+
+					&:first-child {
+						margin-top: 1rem; 
+					}
+
 					@include respond-to($mq-m) {
-						width: $width-6-col; 
+						@include column(6); 
+					}
+
+					@include respond-to($mq-l) {
+						@include column(7); 
 					}
 
 					& > img {
-						width: 165px;
+						width: 155px;
 					}
 				}
 
@@ -71,6 +86,10 @@ $transition-time: 0.4s;
 				}
 
 				.callout {
+					@include column(12);
+
+					margin-top: 0;  
+
 					p {
 						font-size: 1rem; 
 
@@ -80,175 +99,97 @@ $transition-time: 0.4s;
 					}
 
 					@include respond-to($mq-m) {
+						@include column(6); 
+
 						position: absolute;
 						top: 1.5rem;
-						right: $gutter / 2;
-						width: $width-6-col;
+						right: $default-gutter; 
 						margin-top: 0; 
 						margin-right: 0; 
 					}
-				}
-			}
 
-			&.coronavirus-debt-advice-england {
-				p:nth-child(1n+6) {
+					@include respond-to($mq-l) {
+						@include column(5); 
+
+						margin-right: 0; 
+					}
+				}
+
+				.action__contact {
+					@include column(12); 
+
 					margin-bottom: 0;
 
-					@include respond-to($mq-m) {
-						width: $width-6-col;
-						margin-right: $gutter; 
-						float: left; 
+					& + .action__contact {
+						clear: none; 
 					}
-				}
 
-				p:nth-child(1n+7) {
-					margin-top: 0;
-
-					@include respond-to($mq-m) {
-						margin-right: 0; 
-						margin-left: $gutter; 
+					&:last-child {
+						margin-bottom: 1rem; 
 					}
-				}
-			}
-
-			&.coronavirus-debt-advice-ni {
-				p:nth-child(1n+6) {
-					margin-bottom: 0;
 
 					@include respond-to($mq-m) {
-						width: $width-6-col;
-						margin-right: $gutter; 
-						float: left; 
+						@include column(4); 
+
+						margin-bottom: 1rem; 
 					}
-				}
 
-				p:nth-child(1n+7) {
-					margin-top: 0;
-
-					@include respond-to($mq-m) {
-						margin-right: 0; 
-						margin-left: $gutter; 
-					}
-				}
-			}
-
-			&.coronavirus-debt-advice-scotland {
-				p:nth-child(1n+5) {
-					margin-bottom: 0;
-
-					@include respond-to($mq-m) {
-						width: $width-6-col;
-						margin-right: $gutter; 
-						float: left; 
-						clear: left;
-					}
-				}
-
-				p:nth-child(1n+6) {
-					margin-top: 0;
-				}
-
-				p:nth-child(1n+7) {
-					@include respond-to($mq-m) {
-						margin-right: 0; 
-						margin-left: $gutter; 
-						clear: none;
+					@include respond-to($mq-l) {
+						@include column(3); 
 					}
 				}
 			}
 
 			&.coronavirus-debt-advice-wales {
-				p:nth-child(1n+5) {
-					margin-bottom: 0;
-				}
+				.action__content {
+					.action__contact {
+						@include column(4); 
 
-				p:nth-child(1n+6) {
-					margin-top: 0;
-					width: calc((100% / 3) - (#{$default-gutter} * 1.5));
-					margin-right: $gutter; 
-					float: left; 
-				}
+						position: relative;
+	
+						@include respond-to($mq-l) {
+							padding-left: 100px; 
+							padding-left: calc(100px + #{$default-gutter});
+							margin-top: -1rem; 
 
-				p:nth-child(8) {
-					margin-right: 0; 
-				}
-			}
-
-			&.coronavirus-stepchange-debt-england, 
-			&.coronavirus-stepchange-debt-ni, 
-			&.coronavirus-stepchange-debt-scotland, 
-			&.coronavirus-stepchange-debt-wales {
-				@include respond-to($mq-m) {
-					& > p {
-						width: $width-6-col;
-					}					
-				}
-			}
-
-			&.coronavirus-self-employed-debt-advice {
-				p:nth-child(1n+5) {
-					margin-bottom: 0;
-				}
-
-				p:nth-child(1n+6) {
-					margin-top: 0;
-				}
-
-				@include respond-to($mq-m) {
-					& > p {
-						width: $width-8-col;
-					}					
-
-					p:nth-child(4) {
-						position: absolute;
-						top: 1.5rem;
-						right: $gutter / 2;
-						width: auto;
-						margin-top: 0; 
+							img {
+								position: absolute;
+								width: 100px;
+								left: 0; 
+								top: 1rem; 
+							}
+						}
 					}
 				}
 			}
 
-			&.coronavirus-self-employed-debt-advice-ni {
-				p:nth-child(1n+5) {
-					margin-bottom: 0;
-				}
-
-				p:nth-child(1n+6) {
-					margin-top: 0;
-				}
-
-				@include respond-to($mq-m) {
-					& > p {
-						width: $width-8-col;
-					}					
-
-					p:nth-child(3) {
-						position: absolute;
-						top: 1.5rem;
-						right: $gutter / 2;
-						width: auto;
-						margin-top: 0; 
-					}
-				}
-			}
-
+			&.coronavirus-self-employed-debt-advice, 
+			&.coronavirus-self-employed-debt-advice-ni, 
 			&.urgent-pension-advice {
-				@include respond-to($mq-m) {
+				.action__content {
 					& > p {
-						width: $width-8-col;
-					}					
+						@include respond-to($mq-m) {
+							@include column(8); 
+						}
 
-					p:nth-child(3) {
-						position: absolute;
-						top: 1.5rem;
-						right: $gutter / 2;
-						width: auto;
-						margin-top: 0; 
+						@include respond-to($mq-l) {
+							@include column(10); 
+						}
+					}
+
+					.action__contact {
+						@include respond-to($mq-m) {
+							margin-top: -1rem; 
+
+							img {
+								position: absolute;
+								top: 1.5rem;
+								right: $default-gutter;
+							}
+						}
 					}
 				}
 			}
-
 		}
 	}
 

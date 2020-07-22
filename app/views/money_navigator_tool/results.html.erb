@@ -9,10 +9,12 @@
 
 			<p class="results__intro"><%= t("money_navigator_tool.results.intro") %></p>
 
+    	<h2 class="results__subheading"><%= t("money_navigator_tool.results.subheading") %></h2>
+
       <% @results.select {|res| res[:section_code] == 'S1'}.each do |section| %>
         <section class="results__urgent-actions">
           <div class="urgent-actions__content">
-            <h2 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.title') %></h2>
+            <h3 class="urgent-actions__heading"><%= t('money_navigator_tool.results.S1.title_html') %></h3>
 
             <ul class="urgent-actions__actions">
               <% section[:headings].each do |heading| %>
@@ -33,32 +35,32 @@
 				<ul class="sections__sections">
           <% @results.reject {|res| res[:section_code] == 'S1'}.each do |result| %>
 						<li class="sections__section" data-section>
-							<h3 class="section__title" data-section-title>
+							<h4 class="section__title" data-section-title>
 								<button class="mntreshead">
 									<span class="section__title__text">
 										<%= t("money_navigator_tool.results.#{result[:section_code]}.title") %>
 									</span>
 								</button>
-							</h3>
+							</h4>
 
 							<div class="section__content">
 								<% if I18n.exists?("money_navigator_tool.results.#{result[:section_code]}.subtitle") %>
-									<h4 class="section__subtitle"><%= t("money_navigator_tool.results.#{result[:section_code]}.subtitle") %></h4>
+									<h5 class="section__subtitle"><%= t("money_navigator_tool.results.#{result[:section_code]}.subtitle") %></h5>
 								<% end %>
 
 								<ul class="sections__headings">
 									<% result[:headings].each do |heading| %>
 										<li class="sections__heading" data-heading>
 											<button class="mntresult">
-												<h5 class="heading__title" data-heading-title>
+												<h6 class="heading__title" data-heading-title>
 													<%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
-												</h5>
+												</h6>
 											</button>
 
 											<div class="heading__content mntpanel" data-heading-content>
-												<h2 class="heading__content__title">
+												<h3 class="heading__content__title">
 													<%= t("money_navigator_tool.results.#{result[:section_code]}.#{heading[:heading_code]}") %>
-												</h2>
+												</h3>
 
 												<%= heading[:content][:html].html_safe %>
 

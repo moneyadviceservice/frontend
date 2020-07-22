@@ -1,4 +1,37 @@
 class MoneyNavigatorToolController < ApplicationController
+  include Localisation
+
+  #Code and helpers required by the syndication layout
+  #########################################
+  #These would usually be provided by the engine mounting framework but this
+  #tool is not an engine. If it inherits from the MountController then it falls foul
+  #of other tool mounting assumptions. These methods are the equivalent of methods
+  #in the MountController that are required to use the `engine_*` layouts dynamically 
+  #used within the parent ApplicationController which in turn
+  #provide javascript to resize the tool iframe appropriately when it is syndicated.
+  #
+  #########################################
+  def alternate_options
+    I18n.translate('money_navigator_tool.meta.alternate')
+  end
+  helper_method :alternate_options
+
+  def alternate_locale
+    { en: :cy, cy: :en }.fetch(I18n.locale)
+  end
+  helper_method :alternate_locale
+
+  def alternate_url
+    alternate_options["#{alternate_locale}-GB"]
+  end
+  helper_method :alternate_url
+
+  def exclude_syndicated_iframe_resizer?
+    false
+  end
+
+  helper_method :exclude_syndicated_iframe_resizer?
+  #########################################
 
   def landing;end
 

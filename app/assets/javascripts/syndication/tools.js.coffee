@@ -335,6 +335,14 @@
       height: "1550px"
       title: 'Workplace Pension Contribution Calculator'
 
+    money_navigator_tool:
+      en:
+        path: 'en/tools/money-navigator-tool'
+      cy:
+        path: 'cy/tools/teclyn-llywio-ariannol'
+      width: "100%"
+      title: 'Money Navigator'
+
     default_dimensions:
       width: "680px"
       height: "1000px"

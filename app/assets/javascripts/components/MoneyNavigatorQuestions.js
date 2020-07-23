@@ -8,7 +8,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         back_btn: 'Back',
         yes_btn: 'Yes',
         no_btn: 'No',
-        submit_btn: 'Submit'
+        submit_btn: 'Submit', 
+        reset: 'Reset'
       }, 
       messages: {
         completed: 'completed'        
@@ -23,6 +24,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]');
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
+    this.$groupedQuestions = this.$el.find('[data-question-grouped]');
     this.banner = $(document).find('[data-banner]');
     this.activeClass = 'question--active';
     this.hiddenClass = 'is-hidden';
@@ -52,9 +54,65 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
+    this._setUpGroupedQuestions(); 
     this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
+
+  /**
+   *  A method to set up grouped questions
+   *  These are questions that combine its responses into distinct groups for UX purposes
+   */
+  MoneyNavigatorQuestions.prototype._setUpGroupedQuestions = function() {
+    var _this = this; 
+
+    this.$groupedQuestions.each(function() {
+      var $groupedResponses = $(this).find('[data-response-group]'); 
+      var groups = {}; 
+      var titles = $(this).data('question-grouped-group-titles'); 
+      var i = 0; 
+
+      $groupedResponses.each(function() {
+        var groupNum = $(this).data('response-group');  
+        
+        if (!groups[groupNum]) {
+          groups[groupNum] = []; 
+        }
+
+        groups[groupNum].push(this); 
+
+        $(this).remove(); 
+      }); 
+
+      for(var num in groups) {
+        var response = document.createElement('div'); 
+        var collection = document.createElement('div'); 
+        var reset = document.createElement('button'); 
+
+        $(response)
+          .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
+          .attr('data-response-group-control', num)
+          .addClass('question__response');
+
+        $(collection).attr('data-response-collection', num);
+
+        $(groups[num]).each(function() {
+          $(collection).append(groups[num]); 
+        }); 
+
+        $(reset)
+          .addClass('btn btn-reset')
+          .attr('data-reset', true)
+          .text(_this.i18nStrings.controls.reset); 
+
+        $(this).find('fieldset').append(response); 
+        $(this).find('fieldset').append(collection);
+        $(collection).append(reset); 
+
+        i++; 
+      }
+    }); 
+  }; 
 
   /**
    *  This method sets up customised journeys through the questions

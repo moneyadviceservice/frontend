@@ -64,6 +64,8 @@ en:
       submit_label: Submit
       re_start: Start again
       email: Email this to me
+      Q6_group1_title: No, but I'm worried &#8230;
+      Q6_group2_title: Yes &#8230;
     messages:
       form_error: Invalid Form Values
       completed: completed
@@ -171,6 +173,7 @@ en:
             sort_order: 1
       - code: Q6
         type: radio
+        grouped: true
         text: Are you behind with rent or mortgage payments?
         sort_order: 7
         responses:
@@ -181,21 +184,27 @@ en:
           - code: A1
             text: No, but I am worried that I might fall behind on rent (private renting)
             sort_order: 2
+            group: 1
           - code: A2
             text: No, but I am worried that I might fall behind on rent (council/social housing)
             sort_order: 3
+            group: 1
           - code: A3
             text: No, but I am worried that I might fall behind on mortgage payments
             sort_order: 4
+            group: 1
           - code: A4
             text: Yes, I am behind with my rent because of coronavirus
             sort_order: 5
+            group: 2
           - code: A5
             text: Yes, I am behind with my mortgage because of coronavirus
             sort_order: 6
+            group: 2
           - code: A6
             text: Yes, but they are arrears unrelated to coronavirus
             sort_order: 7
+            group: 2
       - code: Q7
         type: checkbox
         text: Are you behind on any of these bills?

@@ -32,20 +32,40 @@ describe('MoneyNavigatorQuestions', function() {
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
-      var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var setUpMultipleQuestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var setUpGroupedQuestionsStub = sinon.stub(this.obj, '_setUpGroupedQuestions'); 
       var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
-      expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
+      expect(setUpMultipleQuestionsStub.calledOnce).to.be.true; 
+      expect(setUpGroupedQuestionsStub.calledOnce).to.be.true; 
       expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
-      setUpMultipleQestionsStub.restore(); 
+      setUpMultipleQuestionsStub.restore(); 
+      setUpGroupedQuestionsStub.restore(); 
       setUpJourneyLogicStub.restore(); 
     });
   });
+
+  describe.only('setUpGroupedQuestions method', function() {
+    it('Adds new control options and collections for each group', function() {
+      var groupedQuestion = this.questions[3]; 
+
+      this.obj._setUpGroupedQuestions(); 
+
+      expect($(groupedQuestion).find('[data-response-group-control]').length).to.equal(2); 
+      expect($(groupedQuestion).find('[data-reset]').length).to.equal(2); 
+
+      var collections = $(groupedQuestion).find('[data-response-collection]'); 
+
+      expect(collections.length).to.equal(2); 
+      expect($(collections[0]).find('[data-response]').length).to.equal(3); 
+      expect($(collections[1]).find('[data-response]').length).to.equal(2); 
+    }); 
+  }); 
 
   describe('setUpJourneyLogic method', function() {
     it('Checks that the addJourneyData method is called with the correct arguments', function() {

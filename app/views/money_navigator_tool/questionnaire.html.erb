@@ -34,6 +34,7 @@
               <% end %>
               <% if question[:grouped] %>
                 data-question-grouped
+                data-question-grouped-group-titles="<%= question[:group_titles] %>"
               <% end %>
             >
               <% if index > 0 %>
@@ -88,7 +89,14 @@
                         <% end %>
 
                         <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
-                          <span><%= response[:text] %></span>
+                          <span>
+                            <% if response[:text].is_a? Array %>
+                              <span><%= response[:text][0] %></span>
+                              <span><%= response[:text][1] %></span>
+                            <% else %>
+                              <%= response[:text] %>
+                            <% end %>
+                          </span>
                         </label>
                       </div>
                     <% end %>

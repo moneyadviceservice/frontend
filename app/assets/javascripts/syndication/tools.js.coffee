@@ -341,6 +341,7 @@
       cy:
         path: 'cy/tools/teclyn-llywio-ariannol'
       width: "100%"
+      height: "1600px"
       title: 'Money Navigator'
 
     default_dimensions:

@@ -39,6 +39,19 @@ GIT
       sprockets (< 4)
       underscore-rails
 
+GIT
+  remote: git@github.com:moneyadviceservice/timelines
+  revision: 7a75f64fa723429510775d24bd5f8823645d121d
+  branch: TP_11457
+  specs:
+    timelines (1.7.0)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.dev.mas.local/
@@ -418,7 +431,7 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.5.3)
+    icalendar (2.6.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     ice_nine (0.11.2)
@@ -724,13 +737,6 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
-    timelines (1.7.0)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
     transitions (0.1.13)
     turnout (2.4.1)
       i18n (~> 0.7)
@@ -891,7 +897,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.7.0)
+  timelines!
   turnout
   uglifier
   unicorn-rails

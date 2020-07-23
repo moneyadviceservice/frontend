@@ -8,7 +8,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         back_btn: 'Back',
         yes_btn: 'Yes',
         no_btn: 'No',
-        submit_btn: 'Submit'
+        submit_btn: 'Submit', 
+        reset: 'Reset'
       }, 
       messages: {
         completed: 'completed'        
@@ -23,8 +24,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]');
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
+    this.$groupedQuestions = this.$el.find('[data-question-grouped]');
     this.banner = $(document).find('[data-banner]');
     this.activeClass = 'question--active';
+    this.inactiveClass = 'question--inactive'; 
     this.hiddenClass = 'is-hidden';
     this.dataLayer = window.dataLayer;
     this.skipQuestions = [
@@ -52,9 +55,166 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   MoneyNavigatorQuestions.prototype.init = function(initialised) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
+    this._setUpGroupedQuestions(); 
     this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
+
+  /**
+   *  A method to set up grouped questions
+   *  These are questions that combine its responses into distinct groups for UX purposes
+   *  This method updates the DOM to group the reponses and add a control option for each
+   */
+  MoneyNavigatorQuestions.prototype._setUpGroupedQuestions = function() {
+    var _this = this; 
+
+    this.$groupedQuestions.each(function() {
+      var $groupedResponses = $(this).find('[data-response-group], [data-response]'); 
+      var groups = {}; 
+      var titles = $(this).data('question-grouped-group-titles'); 
+      var i = 0; 
+      var groupNum = 0; 
+      var questionResponses = document.createElement('div'); 
+
+      // Collect all responses into arrays and remove from DOM
+      $groupedResponses.each(function() {
+        if ($(this).data('response-group')) {
+          var groupNum = $(this).data('response-group');  
+          
+          if (!groups[groupNum]) {
+            groups[groupNum] = []; 
+          }
+
+          groups[groupNum].push(this); 
+        } else {
+          groups['default'] = this; 
+        }
+
+        $(this).remove(); 
+      }); 
+
+      groupNum = Object.keys(groups).length; 
+
+      $(questionResponses)
+        .addClass('response__controls')
+        .attr('data-response-controls', true)
+        .css('width', (1 / groupNum * 100) + '%'); 
+
+      for(var num in groups) {
+        if (num === 'default') {
+          $(questionResponses).prepend(groups[num].outerHTML); 
+        } else {
+          var response = document.createElement('div'); 
+          var collection = document.createElement('div'); 
+          var reset = document.createElement('button'); 
+
+          // Add responses to the DOM
+          $(response)
+            .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
+            .attr('data-response-group-control', num)
+            .addClass('question__response question__response--control'); 
+
+          $(this).find('.content__inner').append(response); 
+
+          $(questionResponses).append(response); 
+
+          // Add collections and resets to the DOM
+          $(collection)
+            .addClass('question__response--collection question--inactive')
+            .attr('data-response-collection', num);
+
+          $(groups[num]).each(function() {
+            $(collection).append(groups[num]); 
+          }); 
+
+          $(reset)
+            .addClass('button button--reset')
+            .attr('data-reset', true)
+            .text(_this.i18nStrings.controls.reset); 
+
+          $(this).find('.content__inner').append(collection);
+          $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
+          $(collection).append(reset); 
+          $(collection).css({
+            'marginLeft': (1 / groupNum * -100 * i) + '%', 
+            'width': (1 / groupNum * 100) + '%'
+          }); 
+
+          $(reset).on('click', function(e) {
+            e.preventDefault(); 
+            _this._updateGroupedQuestionsDisplay(e.target); 
+          }); 
+        }
+
+        i++; 
+      }
+
+      $(this).find('.content__inner')
+        .prepend(questionResponses)
+        .css('width', (i * 100) + '%')
+        .on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
+    }); 
+  }; 
+
+  /**
+   * A method that is called when the controls created by _setUpGroupedQuestions are activated
+   */
+  MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
+    var $container = $(el).parents('.question__content').find('.content__inner');
+
+    if ($(el).data('reset') || $(el).data('back')) {
+      $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
+      $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
+      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+    } else if ($(el).parents('[data-response-controls]').length > 0) {
+      var id = el.id.split('_')[1];
+      var $responseControls = $container.children('[data-response-controls]'); 
+
+      if (el.id.indexOf('control_') > -1) {
+        $responseControls.addClass(this.inactiveClass)
+      }
+
+      $responseControls.find('input').each(function() {
+        if (el.id.indexOf('control_') > -1) {
+          if (this.id == 'control_' + id) {
+            this.checked = true; 
+          } else {
+            this.checked = false; 
+          }
+        } else {
+          if (this.id.indexOf('control_') == -1) {
+            this.checked = true; 
+          } else {
+            this.checked = false; 
+          }
+        }
+      }); 
+
+      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+      $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
+    } else {
+      el.checked = true; 
+    }
+
+    // set state of `Continue`
+    var $continueBtn = $container.parents('[data-question-id]').find('[data-continue]'); 
+    var $inputs = $container.find('input');
+    var disabled = false; 
+
+    $inputs.each(function() {
+      if (this.checked == true) {
+        if (this.name == '') {
+          disabled = true; 
+        } else {
+          disabled = false; 
+        }
+      }
+    });
+
+    $continueBtn.attr('disabled', disabled); 
+  }; 
 
   /**
    *  This method sets up customised journeys through the questions
@@ -239,6 +399,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         e.preventDefault();
         _this._updateDisplay('prev');
         _this._scrollToTop();
+        _this._updateGroupedQuestionsDisplay(e.target); 
       }
     }); 
 
@@ -312,7 +473,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
     this.$multipleQuestions.each(function() {
       var inputs = $(this).find('input[type="checkbox"]'); 
-      var legend = $(this).find('legend'); 
+      var inner = $(this).find('.content__inner'); 
       var inputId = inputs[0].name.split('[')[1].split(']')[0]; 
       var input = document.createElement('input'); 
       var label = document.createElement('label'); 
@@ -340,9 +501,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           response_no = $(this).parents('[data-response]'); 
           
           $(response_no).addClass('button--no')
-          $(legend)
-            .after(response_yes)
-            .after(response_no); 
+          $(inner)
+            .prepend(response_yes)
+            .prepend(response_no); 
         }
       }); 
 

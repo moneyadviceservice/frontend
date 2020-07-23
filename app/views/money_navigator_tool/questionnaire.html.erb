@@ -32,6 +32,9 @@
               <% if question[:type] == 'checkbox' %>
                 data-question-multiple
               <% end %>
+              <% if question[:grouped] %>
+                data-question-grouped
+              <% end %>
             >
               <% if index > 0 %>
                 <p class="question__counter"><%= t("money_navigator_tool.counter", number: index, total: t("money_navigator_tool.questions").length - 1) %></p>
@@ -53,7 +56,11 @@
 
                   <% question[:responses].each do |response| %>
                     <% if response[:default] %>
-                      <div class="question__response" data-response>
+                      <div class="question__response" data-response
+                        <% if response[:group] %>
+                          data-response-group="<%= response[:group] %>"
+                        <% end %>
+                      >
                         <% if question[:type] == 'radio' %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true %>
                         <% elsif question[:type] == 'checkbox' %>
@@ -69,7 +76,11 @@
 
                   <% question[:responses].each do |response| %>
                     <% if !response[:default] %>
-                      <div class="question__response" data-response>
+                      <div class="question__response" data-response
+                        <% if response[:group] %>
+                          data-response-group="<%= response[:group] %>"
+                        <% end %>
+                      >
                         <% if question[:type] == 'radio' %>
                           <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control' %>
                         <% elsif question[:type] == 'checkbox' %>

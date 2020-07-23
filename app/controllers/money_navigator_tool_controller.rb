@@ -29,8 +29,12 @@ class MoneyNavigatorToolController < ApplicationController
   def exclude_syndicated_iframe_resizer?
     false
   end
-
   helper_method :exclude_syndicated_iframe_resizer?
+
+  def breadcrumbs
+    BreadcrumbTrail.home
+  end
+  helper_method :breadcrumbs
   #########################################
 
   def landing;end

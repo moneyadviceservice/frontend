@@ -108,6 +108,7 @@
 	.question__explainer {
 		font-size: 0.875rem; 
 		font-weight: 700; 
+		margin-top:55px;
 	}
 
 	.question__response {
@@ -139,37 +140,101 @@
 		}
 
 		&[data-question-multiple] {
+
 			.button--no, 
 			.button--yes {
 				display: inline-block;
 				margin: 0 $default-gutter * 2 0 0;
-
-				@include respond-to($mq-s) {
-					margin-right: $default-gutter * 1.5; 
-				}
-
+				margin-right: 52px; 
+			
 				@include respond-to($mq-m) {
-					margin-right: $default-gutter; 
+					margin-right: 52px;
+				}	
+
+				/* Base for label styling */
+				[type="checkbox"]:not(:checked),
+				[type="checkbox"]:checked {
+					position: absolute;
+					left: -9999px;
+				}
+				[type="checkbox"]:not(:checked) + label,
+				[type="checkbox"]:checked + label {
+					position: relative;
+					padding-left: 1.95em;
+					cursor: pointer;
 				}
 
-				.response__text {
+				/* checkbox aspect */
+				[type="checkbox"]:not(:checked) + label:before,
+				[type="checkbox"]:checked + label:before {
+					content: '';
+					position: absolute;
+					left: 0; top: 0;
 					@extend .button; 
 					padding: 0; 
-					text-align: left; 
+					text-align: left;
 				}
 
-				.response__control {
-					@extend .visually-hidden; 
+				/* checked mark aspect */
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+					content:'';
+					position: absolute;
+					top: 0em; left: 0;
+					font-size: 1.125rem;
+					font-weight: 300;
+					padding: 12px 22px;
+					border-radius: 4px;
+				}
 
-					&:checked + .response__text {
-						color: $color-white; 
-						background: $color-green-secondary; 
-					}
+				// &:checked + .response__text 
+				[type="checkbox"]:checked + label:after {
+					background: $color-green-secondary; 
+					color: $color-white; 
+					
+				}
+
+				/* span within label */ 
+				span {
+					display:none;
+					
+				}
+			
+				/* accessibility */
+				[type="checkbox"]:checked:focus + label:before,
+				[type="checkbox"]:not(:checked):focus + label:before {
+					outline: solid 0.1875rem $color-input-focus-border-color;
+				}
+
+			}
+
+			.button--yes{
+				[type="checkbox"]:not(:checked) + label:before,
+				[type="checkbox"]:checked + label:before {
+					content:'Yes';
 				}
 			}
 
-			.button--yes {
-				margin-right: 0;
+			.button--no {
+			
+				[type="checkbox"]:not(:checked) + label:before,
+				[type="checkbox"]:checked + label:before {
+					content:'No';
+				}
+			}
+
+			.button--yes{
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+					content:'Yes';
+				}
+			}
+
+			.button--no {
+				[type="checkbox"]:not(:checked) + label:after,
+				[type="checkbox"]:checked + label:after {
+					content:'No';
+				}
 			}
 		}
 	}

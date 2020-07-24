@@ -96,30 +96,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       setJourney(e.target);
     });
   };
-
-  //LA 
-
-  // Adds tabindex to labels for keyboard accessibiity 
-  $('#money_navigator__questions').find('input[type="radio"]').attr('tabindex', 0);
-  $('#money_navigator__questions').find('input[type="checkbox"]').attr('tabindex', 0);
-  $('.l-money_navigator__questions').find('.question__response').attr('tabindex', 0);
-
-
   
-
-  // $(document).ready(function(){
-  //   $('.button--back').on('click', function(){
-  //       $('input[type="radio"]').prop('checked', false);
-  //   });
-  // });
-
-  // $("#money_navigator__questions").find('input[type="checkbox"]').attr('autocomplete', off);
-  // $(":input:not(:hidden)").each(function (i) { $(this).attr('tabindex', i + 1); });
-
-//end LA 
-
-
-
   /**
    *  This method adds a `question-skip` dataset value to questions
    *  that should not be part of the current journey
@@ -350,6 +327,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       label.htmlFor = inputId + '_response_yes';
       label.className = 'response__text'; 
       label.innerHTML = '<span>' + _this.i18nStrings.controls.yes_btn + '</span>'; 
+      
 
       $(response_yes)
         .attr('data-response', true)

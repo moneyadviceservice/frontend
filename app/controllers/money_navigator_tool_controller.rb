@@ -1,4 +1,4 @@
-class MoneyNavigatorToolController < ApplicationController
+class MoneyNavigatorToolController < EmbeddedToolsController
   include Localisation
 
   #Code and helpers required by the syndication layout
@@ -35,6 +35,23 @@ class MoneyNavigatorToolController < ApplicationController
     BreadcrumbTrail.home
   end
   helper_method :breadcrumbs
+
+  def engine_content?
+    false
+  end
+
+  def engine_name
+    'money_navigator_tool'
+  end
+
+  def alternate_tool_id
+    @alternate_tool_id ||= (alternate_locale == :en) ? ToolMountPoint::MoneyNavigatorTool::EN_ID : ToolMountPoint::MoneyNavigatorTool::CY_ID
+  end
+
+  def check_syndicated_layout
+    'engine_syndicated' if syndicated_tool_request?
+  end
+
   #########################################
 
   def landing;end

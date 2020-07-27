@@ -403,7 +403,7 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.5.3)
+    icalendar (2.6.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     ice_nine (0.11.2)
@@ -718,7 +718,7 @@ GEM
     tidy-html5 (0.1.2)
     tilt (1.4.1)
     timecop (0.9.1)
-    timelines (1.7.0)
+    timelines (1.7.1)
       bowndler
       icalendar
       jquery-rails
@@ -885,7 +885,7 @@ DEPENDENCIES
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.7.0)
+  timelines (~> 1.7.1)
   turnout
   uglifier
   unicorn-rails

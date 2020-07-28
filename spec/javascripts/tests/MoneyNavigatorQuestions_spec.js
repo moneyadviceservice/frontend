@@ -50,7 +50,7 @@ describe('MoneyNavigatorQuestions', function() {
     });
   });
 
-  describe.only('setUpGroupedQuestions method', function() {
+  describe('setUpGroupedQuestions method', function() {
     it('Adds new control options and collections for each group', function() {
       var groupedQuestion = this.questions[3]; 
 
@@ -400,7 +400,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Positions `No` response correctly in the DOM', function() {
-      expect(this.response_no.prev().prop('tagName').toUpperCase()).to.equal('LEGEND'); 
+      expect(this.response_no.parent().hasClass('content__inner')).to.be.true; 
     }); 
 
     it('Adds `Yes` response after `No`', function() {

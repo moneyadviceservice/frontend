@@ -92,21 +92,24 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(response)
           .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
           .attr('data-response-group-control', num)
-          .addClass('question__response');
+          .addClass('question__response question__response--control');
 
-        $(collection).attr('data-response-collection', num);
+        $(collection)
+          .addClass('question__response--collection')
+          .attr('data-response-collection', num);
 
         $(groups[num]).each(function() {
           $(collection).append(groups[num]); 
         }); 
 
         $(reset)
-          .addClass('btn btn-reset')
+          .addClass('button button--reset')
           .attr('data-reset', true)
           .text(_this.i18nStrings.controls.reset); 
 
-        $(this).find('fieldset').append(response); 
-        $(this).find('fieldset').append(collection);
+        $(this).find('.content__inner').append(response); 
+        $(this).find('.content__inner').append(collection);
+        $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
         $(collection).append(reset); 
 
         i++; 
@@ -370,7 +373,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
     this.$multipleQuestions.each(function() {
       var inputs = $(this).find('input[type="checkbox"]'); 
-      var legend = $(this).find('legend'); 
+      var inner = $(this).find('.content__inner'); 
       var inputId = inputs[0].name.split('[')[1].split(']')[0]; 
       var input = document.createElement('input'); 
       var label = document.createElement('label'); 
@@ -397,9 +400,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           response_no = $(this).parents('[data-response]'); 
           
           $(response_no).addClass('button--no')
-          $(legend)
-            .after(response_yes)
-            .after(response_no); 
+          $(inner)
+            .prepend(response_yes)
+            .prepend(response_no); 
         }
       }); 
 

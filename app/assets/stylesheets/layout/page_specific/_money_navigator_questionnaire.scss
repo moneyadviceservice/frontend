@@ -172,6 +172,79 @@
 				margin-right: 0;
 			}
 		}
+
+		&[data-question-grouped] {
+			.content__inner {
+				position: relative;
+				overflow: hidden;
+
+				.question__response--collection {
+					position: absolute;
+					width: 100%;
+					top: 0;
+					left: 100%; 
+					visibility: hidden; 
+				}
+			}
+
+			.question__response--control {
+				label {
+					span:after {
+						content: '\A0\2026';
+					}
+				}
+			}
+
+			.question__response--collection {
+				.collection__title {
+					font-size: 1.125rem; 
+
+					&:after {
+						content: '\A0\2026';						
+					}
+				}
+
+				label {
+					span {
+						span {
+							white-space: normal;
+
+							&:before {
+								content: '\2026\A0'; 
+							}
+
+							&:first-child {
+								display: none; 
+							}
+						}
+					}
+				}
+
+				.button--reset {
+					background: $color-white;
+					border: solid 1px;
+				}
+			}
+		}
+	}
+
+	.question__content--q0, 
+	[data-question-grouped] {
+		.response__text {
+			@extend .button; 
+			padding: 0; 
+			width: 100%;
+			text-align: left; 
+		}
+
+		.response__control {
+			@extend .visually-hidden; 
+
+			&[type="radio"]:checked + .response__text {
+				color: $color-white; 
+				background: $color-green-secondary; 
+			}
+		}
 	}
 
 	.question__content--q0 {
@@ -227,12 +300,7 @@
 		}
 
 		.response__control {
-			@extend .visually-hidden; 
-
 			&:checked + .response__text {
-				color: $color-white; 
-				background: $color-green-secondary; 
-
 				@include respond-to($mq-l) {
 					color: $color-green-secondary !important;
 					background: $color-green-pale !important;

@@ -1,6 +1,10 @@
 $transition-time: 0.4s;
 
 .l-money_navigator-results {
+	.results__subheading {
+		text-transform: uppercase;
+	}
+
 	.results__intro {
 		font-size: 1.125rem; 
 		font-weight: 700; 
@@ -15,9 +19,12 @@ $transition-time: 0.4s;
 			@include column(12); 
 
 			font-size: 1rem; 
-			text-transform: uppercase;
 			margin-top: $baseline-unit * 2; 
 			color: $color-black; 
+
+			.heading--strong {
+				text-transform: uppercase;
+			}
 		}
 
 		.urgent-actions__actions {
@@ -535,7 +542,7 @@ $transition-time: 0.4s;
 
 	// Enhanced print styles
 	@media print {
-		p, ul, li, a, h1, h2, h3, h4, h5 {
+		p, ul, li, a, h1, h2, h3, h4, h5, h6 {
 			font-size: 12pt !important; 
 		}
 

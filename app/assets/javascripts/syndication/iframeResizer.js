@@ -30,7 +30,7 @@ window.iframeResizer = function(msgPrefix, targetOrigin, minFrameHeight) {
 
       timer = setInterval(function() {
         var documentHeight = Math.max(
-                frameTopMargin + frameBtmMargin + bodyNode.clientHeight,
+                frameTopMargin + frameBtmMargin + bodyNode.scrollHeight,
             minFrameHeight
         );
         if (documentHeight !== currentHeight) {

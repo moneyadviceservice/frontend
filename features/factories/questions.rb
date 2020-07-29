@@ -39,37 +39,19 @@ end
 FactoryBot.define do
   factory :questions, class: Questions do
 
-    factory :urgent_action_scotland_debt_advice, traits: [:scotland, :urgent_debt_advice_action]
-    factory :urgent_action_england_debt_advice, traits: [:england, :urgent_debt_advice_action]
-    factory :urgent_action_ni_debt_advice, traits: [:northern_ireland, :urgent_debt_advice_action]
-    factory :urgent_action_wales_debt_advice, traits: [:wales, :urgent_debt_advice_action]
+    factory :urgent_action_debt_advice, traits: [:country, :urgent_debt_advice_action]
+    factory :urgent_action_stepchange_debt, traits: [:country, :urgent_stepchange_action]
+    factory :urgent_action_self_employed_debt_advice, traits: [:country, :urgent_debtline_action]
+    factory :urgent_action_urgent_pension_advice, traits: [:country, :pension]
 
-    factory :urgent_action_england_stepchange_debt, traits: [:england, :urgent_stepchange_action]
-    factory :urgent_action_ni_stepchange_debt, traits: [:northern_ireland, :urgent_stepchange_action]
-    factory :urgent_action_wales_stepchange_debt, traits: [:wales, :urgent_stepchange_action]
-    factory :urgent_action_scotland_stepchange_debt, traits: [:scotland, :urgent_stepchange_action]
+    country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', northern_ireland: 'a2', scotland: 'a3', wales: 'a4')
 
-    factory :urgent_action_england_self_employed_debt_advice, traits: [:england, :urgent_debtline_action]
-    factory :urgent_action_ni_self_employed_debt_advice, traits: [:northern_ireland, :urgent_debtline_action]
-    factory :urgent_action_wales_self_employed_debt_advice, traits: [:wales, :urgent_debtline_action]
-    factory :urgent_action_scotland_self_employed_debt_advice, traits: [:scotland, :urgent_debtline_action]
-
-    factory :urgent_action_urgent_pension_advice, traits: [:scotland, :pension]
-
-    trait :scotland do
-      q0 { 'a3' }
+    transient do
+      countries {['england']}
     end
 
-    trait :england do
-      q0 { 'a1' }
-    end
-
-    trait :wales do
-      q0 { 'a4' }
-    end
-
-    trait :northern_ireland do
-      q0 { 'a2' }
+    trait :country do
+      q0 { answers_with_entropy('q0', countries.map {|c| country_answer_codes[c]}, [])  }
     end
 
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation

@@ -21,7 +21,7 @@ def answers_with_entropy(question_code, mandatory_set, optional_set)
       optional = randomn_answers((1..QUESTIONS_HASH[question_code][:responses].length).to_a.map{|index| "a#{index}"}, true)
     end
   else
-    optional = randomn_answers(optional_set, false)
+    optional = randomn_answers(optional_set, false) unless optional_set.empty?
   end
 
   #A nill mandatory_set means nothing.
@@ -44,14 +44,14 @@ FactoryBot.define do
     factory :urgent_action_self_employed_debt_advice, traits: [:country, :urgent_debtline_action]
     factory :urgent_action_urgent_pension_advice, traits: [:country, :pension]
 
-    country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', northern_ireland: 'a2', scotland: 'a3', wales: 'a4')
+    country_answer_codes = HashWithIndifferentAccess.new(england: [ 'a1' ], ni: [ 'a2' ], scotland: [ 'a3' ], wales: [ 'a4' ], uk: ['a1', 'a3', 'a4'], all: ['a1', 'a2', 'a3', 'a4'])
 
     transient do
-      countries {['england']}
+      target_country {'england'}
     end
 
     trait :country do
-      q0 { answers_with_entropy('q0', countries.map {|c| country_answer_codes[c]}, [])  }
+      q0 { answers_with_entropy('q0', country_answer_codes[target_country], []) }
     end
 
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation

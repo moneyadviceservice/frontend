@@ -192,8 +192,7 @@
 					display:block;
 					position: absolute;
 					top: 50%;
-					left: 50%;
-					transform: translateX(-50%) translateY(-50%);
+					left: 60%;
 					font-weight: 300;
 					z-index:999;				
 				}
@@ -203,7 +202,14 @@
 				[type="checkbox"]:not(:checked):focus + label:before {
 					outline: solid 0.1875rem $color-input-focus-border-color;
 				}
+			}
 
+			/* switch colors when selected */
+			.response__control {
+				&:checked + .response__text {
+					color: $color-white; 
+					background: $color-green-secondary; 
+				}
 			}
 		}
 	}

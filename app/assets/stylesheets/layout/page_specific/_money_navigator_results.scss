@@ -172,7 +172,8 @@ $transition-time: 0.4s;
 
 			&.coronavirus-self-employed-debt-advice, 
 			&.coronavirus-self-employed-debt-advice-ni, 
-			&.urgent-pension-advice {
+			&.urgent-pension-advice, 
+			&[class*="coronavirus-help-mental-health"] {
 				.action__content {
 					& > p {
 						@include respond-to($mq-m) {
@@ -192,6 +193,20 @@ $transition-time: 0.4s;
 								position: absolute;
 								top: 1.5rem;
 								right: $default-gutter;
+							}
+						}
+					}
+				}
+
+				&[class*="wales"] {
+					.action__content {
+						& > p {
+							@include respond-to($mq-m) {
+								@include column(12); 
+							}
+
+							@include respond-to($mq-l) {
+								@include column(12); 
 							}
 						}
 					}

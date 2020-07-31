@@ -192,15 +192,31 @@
 					display:block;
 					position: absolute;
 					top: 50%;
-					left: 60%;
+					// left: 60%;
+					left:70%;
 					font-weight: 300;
-					z-index:999;				
+					z-index:999;	
+
+					@include respond-to($mq-m) {
+						left:60%;
+					}
+					
+					@include respond-to($mq-l) {
+						left:60%;
+					}
 				}
 
 				/* accessibility */
 				[type="checkbox"]:checked:focus + label:before,
 				[type="checkbox"]:not(:checked):focus + label:before {
 					outline: solid 0.1875rem $color-input-focus-border-color;
+				}
+			}
+
+			.question__response {
+				
+				.response__control {
+					outline:none;
 				}
 			}
 

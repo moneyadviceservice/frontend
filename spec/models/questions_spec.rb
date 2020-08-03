@@ -18,10 +18,7 @@ RSpec.describe Questions, type: :model do
   end
 
   shared_examples 'country specific content' do
-    let(:url) { "coronavirus-#{content_prefix}" + ( country.empty? ? '' :  "-#{country}" )}
-    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_country: country.empty? ? 'all' : country) }
 
-    include_examples 'valid content'
   end
 
   shared_examples 'urgent action country specific' do
@@ -70,30 +67,42 @@ RSpec.describe Questions, type: :model do
   #TODO: These are all positive tests. need to add negative tests
   #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
 
-  context 'Rule tests' do
+  context 'Rule test: ' do
     context 'Urgent action' do
       let(:section) {'urgent_action'}
       let(:section_code) { 'S1' }
 
-      ['england', 'wales', 'scotland', 'ni'].each do |cntry|
-        describe  "free debt advice #{cntry}" do
-          let(:country) {cntry}
-          let(:heading_code) { 'H1' }
+      ['england', 'wales', 'scotland', 'ni'].each do |country|
+        describe  "free debt advice #{country}" do
           let(:content_prefix) {"debt-advice"}
+          let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ]) }
+          let(:heading_code) { 'H1' }
+          let(:url) { "coronavirus-#{content_prefix}-#{country}" }
 
-          include_examples 'country specific content'
+          include_examples 'valid content'
         end
       end
 
-      #[['england', 'wales', 'scotland']].each do |region| do
-          #let(:country) {''}
-          #let(:heading_code) { 'H1' }
-          #let(:content_prefix) {"debt-advice"}
+      [['england', 'wales', 'scotland']].each do |region|
+        describe  "free debt advice #{region}" do
+          let(:content_prefix) {"self-employed-debt-advice"}
+          let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region) }
+          let(:heading_code) { 'H2' }
+          let(:url) { "coronavirus-#{content_prefix}-england" }
 
-          #include_examples 'country specific content'
-      #end
+          include_examples 'valid content'
+        end
+      end
 
 
+      # describe  'StepChange' do
+      #   let(:heading_code) { 'H2' }
+      #   let(:content_prefix) {'stepchange-debt'}
+      #   let(:corona_specific_content) {true}
+
+      #   include_examples 'country specific content' do
+      #   end
+      # end
 
     end
 

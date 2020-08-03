@@ -44,14 +44,14 @@ FactoryBot.define do
     factory :urgent_action_self_employed_debt_advice, traits: [:country, :urgent_debtline_action]
     factory :urgent_action_urgent_pension_advice, traits: [:country, :pension]
 
-    country_answer_codes = HashWithIndifferentAccess.new(england: [ 'a1' ], ni: [ 'a2' ], scotland: [ 'a3' ], wales: [ 'a4' ], uk: ['a1', 'a3', 'a4'], all: ['a1', 'a2', 'a3', 'a4'])
+    country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', ni: 'a2', scotland: 'a3', wales: 'a4')
 
     transient do
-      target_country {'england'}
+      target_region {[ 'england' ]}
     end
 
     trait :country do
-      q0 { answers_with_entropy('q0', country_answer_codes[target_country], []) }
+      q0 { answers_with_entropy('q0', target_region.map {|country| country_answer_codes[country]}, []) }
     end
 
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation

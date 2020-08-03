@@ -1,22 +1,6 @@
 RSpec.describe Questions, type: :model do
   include Symbols
 
-  shared_examples 'regionally valid content' do
-    it 'displays the appropriate heading and content' do
-      allow_any_instance_of(Questions).to receive(:cms_content) {|me, slug| "#{ slug }"}
-      results =  model.results
-      expect(results).to include({
-        "section_code" => section_code,
-        "headings" => array_including(
-          hash_including({
-            "heading_code"=>heading_code,
-            "content"=>hash_including({url: "#{url}"})
-          })
-        )
-      })
-    end
-  end
-
   shared_examples 'valid content' do
     it 'displays the appropriate heading and content' do
       allow_any_instance_of(Questions).to receive(:cms_content) {|me, slug| "#{ slug }"}
@@ -34,15 +18,8 @@ RSpec.describe Questions, type: :model do
   end
 
   shared_examples 'country specific content' do
-    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_country: country) }
+    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_country: country.empty? ? 'all' : country) }
     let(:url) { "coronavirus-#{content_prefix}-#{country}"}
-
-    include_examples 'regionally valid content'
-  end
-
-  shared_examples 'country agnostic content' do
-    let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym) }
-    let(:url) { "coronavirus-#{content_prefix}"}
 
     include_examples 'valid content'
   end
@@ -51,15 +28,6 @@ RSpec.describe Questions, type: :model do
     context 'Urgent action' do
       let(:section) {'urgent_action'}
       let(:section_code) { 'S1' }
-
-      describe  'free debt advice' do
-        let(:heading_code) { 'H1' }
-        let(:content_prefix) {"debt-advice"}
-        let(:content_url) {"coronavirus-#{content_prefix}-#{country}"}
-
-        include_examples 'country specific content' do
-        end
-      end
 
       describe  'DebtLine' do
         let(:heading_code) { 'H3' }
@@ -98,70 +66,9 @@ RSpec.describe Questions, type: :model do
     end
   end
 
-  shared_examples 'urgent action' do
-    context 'Urgent action' do
-      let(:section) {'urgent_action'}
-      let(:section_code) { 'S1' }
-
-      describe  'free debt advice' do
-        let(:heading_code) { 'H1' }
-        let(:content_prefix) {"debt-advice"}
-        let(:corona_specific_content) {true}
-
-        include_examples 'country specific content' do
-        end
-      end
-    end
-  end
 
   #TODO: These are all positive tests. need to add negative tests
   #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
-  #context 'England' do
-  #let(:country) { 'england' }
-  #include_examples 'urgent action country specific'
-  #end
-
-  #context 'Scotland' do
-  #let(:country) { 'scotland' }
-  #include_examples 'urgent action country specific'
-  #end
-
-  #context 'Northern Ireland' do
-  #let(:country) { 'ni' }
-  #include_examples 'urgent action northern ireland'
-  #end
-
-  #context 'Wales' do
-  #let(:country) { 'wales' }
-  #include_examples 'urgent action country specific'
-  #end
-
-  #context 'uk' do
-  #let(:country) { ['england', 'wales', 'scotland', 'ireland'].sample}
-  #include_examples 'urgent action uk'
-  #end
-
-  #context 'all' do
-  #let(:country) { ['england', 'wales', 'scotland', 'ireland', 'ni'].sample}
-  #include_examples 'urgent action all'
-  #end
-
-
-  #describe 'All' do
-
-  #context 'Urgent action' do
-  #let(:section) {'urgent_action'}
-  #let(:section_code) { 'S1' }
-
-  #describe  'Pensions' do
-  #let(:heading_code) { 'H4' }
-  #let(:content_prefix) {'urgent-pension-advice'}
-  #let(:corona_specific_content) {false}
-
-  #include_examples 'country agnostic content'
-  #end
-  #end
-  #end
 
   context 'Rule tests' do
     context 'Urgent action' do
@@ -169,15 +76,25 @@ RSpec.describe Questions, type: :model do
       let(:section_code) { 'S1' }
 
       ['england', 'wales', 'scotland', 'ni'].each do |cntry|
-        describe  "free debt advicei #{cntry}" do
+        describe  "free debt advice #{cntry}" do
           let(:country) {cntry}
           let(:heading_code) { 'H1' }
           let(:content_prefix) {"debt-advice"}
 
-          include_examples 'country specific content' do
-          end
+          include_examples 'country specific content'
         end
       end
+
+      #[['england', 'wales', 'scotland']].each do |region| do
+          #let(:country) {''}
+          #let(:heading_code) { 'H1' }
+          #let(:content_prefix) {"debt-advice"}
+
+          #include_examples 'country specific content'
+      #end
+
+
+
     end
 
   end

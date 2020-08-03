@@ -117,50 +117,50 @@ RSpec.describe Questions, type: :model do
   #TODO: These are all positive tests. need to add negative tests
   #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
   #context 'England' do
-    #let(:country) { 'england' }
-    #include_examples 'urgent action country specific'
+  #let(:country) { 'england' }
+  #include_examples 'urgent action country specific'
   #end
 
   #context 'Scotland' do
-    #let(:country) { 'scotland' }
-    #include_examples 'urgent action country specific'
+  #let(:country) { 'scotland' }
+  #include_examples 'urgent action country specific'
   #end
 
   #context 'Northern Ireland' do
-    #let(:country) { 'ni' }
-    #include_examples 'urgent action northern ireland'
+  #let(:country) { 'ni' }
+  #include_examples 'urgent action northern ireland'
   #end
 
   #context 'Wales' do
-    #let(:country) { 'wales' }
-    #include_examples 'urgent action country specific'
+  #let(:country) { 'wales' }
+  #include_examples 'urgent action country specific'
   #end
 
   #context 'uk' do
-    #let(:country) { ['england', 'wales', 'scotland', 'ireland'].sample}
-    #include_examples 'urgent action uk'
+  #let(:country) { ['england', 'wales', 'scotland', 'ireland'].sample}
+  #include_examples 'urgent action uk'
   #end
 
   #context 'all' do
-    #let(:country) { ['england', 'wales', 'scotland', 'ireland', 'ni'].sample}
-    #include_examples 'urgent action all'
+  #let(:country) { ['england', 'wales', 'scotland', 'ireland', 'ni'].sample}
+  #include_examples 'urgent action all'
   #end
 
 
   #describe 'All' do
 
-    #context 'Urgent action' do
-      #let(:section) {'urgent_action'}
-      #let(:section_code) { 'S1' }
+  #context 'Urgent action' do
+  #let(:section) {'urgent_action'}
+  #let(:section_code) { 'S1' }
 
-      #describe  'Pensions' do
-        #let(:heading_code) { 'H4' }
-        #let(:content_prefix) {'urgent-pension-advice'}
-        #let(:corona_specific_content) {false}
+  #describe  'Pensions' do
+  #let(:heading_code) { 'H4' }
+  #let(:content_prefix) {'urgent-pension-advice'}
+  #let(:corona_specific_content) {false}
 
-        #include_examples 'country agnostic content'
-      #end
-    #end
+  #include_examples 'country agnostic content'
+  #end
+  #end
   #end
 
   context 'Rule tests' do
@@ -178,7 +178,7 @@ RSpec.describe Questions, type: :model do
           end
         end
       end
-  end
+    end
 
-end
+  end
 end

@@ -18,8 +18,8 @@ RSpec.describe Questions, type: :model do
   end
 
   shared_examples 'country specific content' do
+    let(:url) { "coronavirus-#{content_prefix}" + ( country.empty? ? '' :  "-#{country}" )}
     let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_country: country.empty? ? 'all' : country) }
-    let(:url) { "coronavirus-#{content_prefix}-#{country}"}
 
     include_examples 'valid content'
   end

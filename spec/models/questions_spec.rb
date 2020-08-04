@@ -69,14 +69,13 @@ RSpec.describe Questions, type: :model do
 
   context 'Rule test: ' do
     context 'Urgent action' do
-      let(:section) {'urgent_action'}
       let(:section_code) { 'S1' }
 
       ['england', 'wales', 'scotland', 'ni'].each do |country|
         describe  "free debt advice #{country}" do
-          let(:content_prefix) {"debt-advice"}
-          let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ]) }
           let(:heading_code) { 'H1' }
+          let(:content_prefix) {"debt-advice"}
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ]) }
           let(:url) { "coronavirus-#{content_prefix}-#{country}" }
 
           include_examples 'valid content'
@@ -85,10 +84,10 @@ RSpec.describe Questions, type: :model do
 
       [['england', 'wales', 'scotland']].each do |region|
         describe  "free debt advice #{region}" do
-          let(:content_prefix) {"self-employed-debt-advice"}
-          let(:model) { build("#{section}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region) }
           let(:heading_code) { 'H2' }
-          let(:url) { "coronavirus-#{content_prefix}-england" }
+          let(:content_prefix) {"self-employed-debt-advice"}
+          let(:model) { build("#{section_code}_#{heading_code}_stepchange_redirect_to_#{content_prefix}".gsub('-', '_').to_sym, target_region: region) }
+          let(:url) { "coronavirus-#{content_prefix}" }
 
           include_examples 'valid content'
         end

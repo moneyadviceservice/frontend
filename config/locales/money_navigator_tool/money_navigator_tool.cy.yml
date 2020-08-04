@@ -1,0 +1,477 @@
+cy:
+  money_navigator_tool:
+    meta:
+      title: Teclyn Llywio Ariannol
+      description: ''
+      canonical: https://www.moneyadviceservice.org.uk/cy/tools/teclyn-llywio-ariannol
+      alternate:
+        en-GB: https://www.moneyadviceservice.org.uk/en/tools/money-navigator-tool
+        cy-GB: https://www.moneyadviceservice.org.uk/cy/tools/teclyn-llywio-ariannol
+    landing:
+      intro:
+        heading: Teclyn Llywio Ariannol
+        subheading: Gwybod beth i'w wneud nesaf
+        text:
+          paras:
+            - Mae'r mesurau cyfyngiadau coronafeirws yn cael eu llacio ond maent wedi effeithio miliynau o bobl. Bydd beth mae hyn yn ei olygu i'ch cyllid yn bersonol iawn i chi.
+            - Felly os ydych chi'n chwilio am arweiniad ariannol ond nad ydych yn gwybod ble i ddechrau, nid ydych ar eich pen eich hun.
+      who-help:
+        heading: Pwy allwn ni helpu
+        bullets:
+          - Mae'ch incwm wedi gostwng ac rydych yn poeni am eich cyllid yn y dyfodol
+          - Rydych chi wedi cael eich rhoi ar ffyrlo ac rydych angen help i fynd yn ôl ar y trywydd iawn, gan gynnwys ar ôl gwyliau talu
+          - Rydych yn wynebu cael eich diswyddo neu wedi colli eich swydd
+          - Rydych yn hunangyflogedig ac mae'r gwaith wedi sychu i fyny
+          - Rydych chi am wneud y mwyaf o'r arian rydych wedi'i arbed yn ystod y cyfnod o gyfyngiadau
+      how-help:
+        heading: Cymorth ar unwaith
+        paras:
+          - Mae ein teclyn Llywio Ariannol yn rhoi cynlluniau gweithredu i chi yn seiliedig ar eich sefyllfa chi.
+          - 'Gwybod mewn 30 eiliad:'
+        bullets:
+          - Y materion ariannol y mae angen i chi fynd i'r afael â hwy'n gyntaf
+          - Sut i aros yn drefnus gyda biliau a thaliadau
+          - Pa gymorth a chefnogaeth ychwanegol y mae gennych hawl iddo
+          - Ble y gallwch gael cyngor am ddim ar ddyled, tai neu ddiswyddo
+        cta:
+          text: Dechrau
+          url: /cy/tools/teclyn-llywio-ariannol/questionnaire
+      crisis-help:
+        heading: Angen help gyda dyledion ar hyn o bryd?
+        text: Os ydych yn cael trafferth a bod dyledion eisoes wedi cynyddu, gallwch ddod o hyd i ymgynghorydd dyled achrededig am ddim gyda'n Canfyddwr Cyngor ar Ddyledion.
+        cta:
+          text: Dewch o hyd i ymgynghorydd dyled am ddim ar-lein
+          url: /cy/tools/canfyddwr-cyngor-ar-ddyledion/organisations
+      supporting-partners:
+        heading: Ein partneriaid cefnogol
+        text: Cefnogir ein arweiniad ariannol gan y partneriaid allweddol hyn sy'n barod i helpu os ydych angen cyngor pellach am y materion cymhleth a achosir gan goronafeirws, gan gynnwys dyled, budd-daliadau, tai a diswyddo.
+        partners:
+          - Citizens Advice
+          - Business Debtline
+          - National Debtline
+          - Stepchange
+          - Payplan
+          - Turn2us
+          - Shelter
+          - Shelter Cymru
+          - Shelter Scotland
+    controls:
+      continue_btn: Parhau
+      back_btn: Yn ôl
+      yes_btn: 'Ydw'
+      no_btn: 'Na'
+      submit_btn: Anfon
+      submit_label: Anfon
+      re_start: Dechrau eto
+      email: E-bostiwch hwn i mi
+    messages:
+      form_error: Invalid Form Values
+      completed: wedi'i gwblhau
+    heading: Teclyn Llywio Ariannol
+    banner: Tebwch y cwestiynau hyn i gael arweiniad wedi'i deilwra i chi
+    counter: Cwestiwn %{number} o %{total}
+    questions:
+      - code: Q0
+        type: radio
+        text: Lle rydych yn byw?
+        sort_order: 1
+        responses:
+          - code: A1
+            text: Lloegr
+            sort_order: 1
+            default: true
+          - code: A2
+            text: Gogledd Iwerddon
+            sort_order: 2
+          - code: A3
+            text: Yr Alban
+            sort_order: 3
+          - code: A4
+            text: Cymru
+            sort_order: 4
+      - code: Q1
+        type: radio
+        custom: true
+        text: Beth yw eich statws cyflogaeth?
+        sort_order: 2
+        responses:
+          - code: A1
+            text: Cyflogedig (yn cynnwys Ffyrlo)
+            sort_order: 1
+            default: true
+          - code: A2
+            text: Hunangyflogedig
+            sort_order: 2
+          - code: A3
+            text: Di-waith
+            sort_order: 3
+          - code: A4
+            text: Wedi ymddeol
+            sort_order: 4
+      - code: Q2
+        type: radio
+        text: Ydych chi mewn perygl o gael eich diswyddo?
+        sort_order: 3
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+      - code: Q3
+        type: radio
+        text: Os ydych yn hunangyflogedig, a ydych yn gwybod beth yw'ch incwm misol nawr?
+        sort_order: 4
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+          - code: A3
+            text: 'Nid wyf yn hunangyflogedig'
+            default: true
+            sort_order: 3
+      - code: Q4
+        type: radio
+        custom: true
+        text: Sut fyddech chi'n disgrifio'ch incwm o ganlyniad i'r argyfwng coronafeirws?
+        sort_order: 5
+        responses:
+          - code: A4
+            text: Dim newid /wedi arbed arian
+            sort_order: 1
+          - code: A1
+            text: 'Gostyngiad tymor hir mewn incwm (ee: diswyddo neu gwaith wedi stopio am gyfnod amhenodol)'
+            sort_order: 2
+            default: true
+          - code: A2
+            text: Gostyngiad dros dro ac yn poeni am fy niogelwch yn y dyfodol
+            sort_order: 3
+          - code: A3
+            text: Gostyngiad dros dro ond yn disgwyl iddo gynyddu wrth i'r cyfyngiadau leddfu
+            sort_order: 4
+      - code: Q5
+        type: radio
+        text: Ydych chi wedi defnyddio unrhyw gymorth ariannol gan y llywodraeth?
+        sort_order: 6
+        responses:
+          - code: A1
+            text: Cynllun cymhorthdal incwm hunangyflogaeth
+            sort_order: 2
+            default: true
+          - code: A2
+            text: Cynllun ffyrlo
+            sort_order: 3
+          - code: A3
+            text: 'Na'
+            sort_order: 1
+      - code: Q6
+        type: radio
+        text: Ydych chi ar ei hôl hi gyda thaliadau rhent neu forgais? Atebwch "Ydw" os ydych  ar wyliau/egwyl talu y cytunwyd arno
+        sort_order: 7
+        responses:
+          - code: A7
+            text: 'Na'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Na, ond rwyf yn poeni efallai y byddaf yn mynd ar ei hôl hi gyda rhent (rhentu preifat)
+            sort_order: 2
+          - code: A2
+            text: Na, ond rwyf yn poeni efallai y byddaf yn mynd ar ei hôl hi gyda rhent (Tai cyngor/cymdeithasol)
+            sort_order: 3
+          - code: A3
+            text: Na, ond rwyf yn poeni efallai y byddaf yn mynd ar ei hôl hi gyda thaliadau morgais
+            sort_order: 4
+          - code: A4
+            text: Ydw, rwyf ar ei hôl hi gyda fy rhent oherwydd coronafeirws
+            sort_order: 5
+          - code: A5
+            text: Ydw, rwyf ar ei hôl hi gyda fy nhaliadau morgais oherwydd coronafeirws
+            sort_order: 6
+          - code: A6
+            text: Ydw, ond maent yn ôl-ddyledion sydd ddim yn gysylltiedig â choronafeirws
+            sort_order: 7
+      - code: Q7
+        type: checkbox
+        text: Ydych chi ar ei hôl hi gydag unrhyw un o'r biliau hyn?
+        explainer: Dewiswch bob un sy'n berthnasol
+        sort_order: 8
+        responses:
+          - code: A10
+            text: 'Na'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Treth cyngor
+            sort_order: 2
+          - code: A2
+            text: Nwy neu drydan
+            sort_order: 3
+          - code: A3
+            text: Taliadau i DWP/ CThEM (ee gordaliadau credydau treth, ad-daliadau benthyciad)
+            sort_order: 4
+          - code: A4
+            text: Trwydded teledu
+            sort_order: 5
+          - code: A5
+            text: Treth Incwm
+            sort_order: 6
+          - code: A6
+            text: Cynhaliaeth plant
+            sort_order: 7
+          - code: A7
+            text: Dirwyon llys
+            sort_order: 8
+          - code: A8
+            text: Cytundebau hurbwrcas
+            sort_order: 9
+          - code: A9
+            text: Dirwyon parcio ceir
+            sort_order: 10
+      - code: Q8
+        type: checkbox
+        text: Ydych chi wedi cymryd egwyl talu neu wyliau ar fenthyciadau neu gredyd?
+        explainer: Dewiswch bob un sy'n berthnasol
+        sort_order: 9
+        responses:
+          - code: A10
+            text: 'Na'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Morgais
+            sort_order: 2
+          - code: A2
+            text: Benthyciad personol
+            sort_order: 3
+          - code: A3
+            text: Cerdyn credyd
+            sort_order: 4
+          - code: A4
+            text: Cerdyn siop
+            sort_order: 5
+          - code: A5
+            text: Cyllid ceir
+            sort_order: 6
+          - code: A6
+            text: Prynu nawr talu yn nes ymlaen
+            sort_order: 7
+          - code: A7
+            text: rhentu i brynu
+            sort_order: 8
+          - code: A8
+            text: Benthyciad diwrnod talu
+            sort_order: 9
+          - code: A9
+            text: Trefniant gwystlwr
+            sort_order: 10
+      - code: Q9
+        type: checkbox
+        text: A fyddwch chi'n cael trafferth gwneud ad-daliadau yn y dyfodol, neu ydych chi eisoes wedi methu un taliad, ar y benthyciadau neu'r credyd yma?
+        explainer: Dewiswch bob un sy'n berthnasol
+        sort_order: 10
+        responses:
+          - code: A12
+            text: 'Na'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Benthyciad personol
+            sort_order: 2
+          - code: A2
+            text: Bil dŵr
+            sort_order: 3
+          - code: A3
+            text: Ffôn symudol, teledu neu fand eang
+            sort_order: 4
+          - code: A4
+            text: Cerdyn credyd
+            sort_order: 5
+          - code: A5
+            text: Cerdyn siop
+            sort_order: 6
+          - code: A6
+            text: Cyllid ceir
+            sort_order: 7
+          - code: A7
+            text: Prynu nawr talu yn nes ymlaen
+            sort_order: 8
+          - code: A8
+            text: rhentu i brynu
+            sort_order: 9
+          - code: A9
+            text: Benthyciad diwrnod talu
+            sort_order: 10
+          - code: A10
+            text: Trefniant gwystlwr
+            sort_order: 11
+          - code: A11
+            text: Ad-daliadau i deulu neu ffrindiau
+            sort_order: 12
+      - code: Q10
+        type: radio
+        text: A ydych wedi mynd ar ei hôl hi neu wedi cytuno ar egwyl taliad ar ymrwymiadau credyd neu filiau blaenoriaeth y cartref ers 28 Chwefror 2020?
+        sort_order: 11
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+          - code: A3
+            text: Roeddwn mewn trafferthion ariannol cyn 28ain Chwefror
+            sort_order: 3
+      - code: Q11
+        type: radio
+        text: A fydd yn rhaid i chi fenthyg arian ar gyfer taliadau hanfodol (rhent, bwyd, biliau)?
+        sort_order: 12
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+      - code: Q12
+        type: checkbox
+        text: Ydych chi'n ystyried unrhyw un o'r ffyrdd hyn i dalu dyledion neu i dalu'ch ad-daliadau credyd neu fenthyciad?
+        explainer: Dewiswch bob un sy'n berthnasol
+        sort_order: 13
+        responses:
+          - code: A5
+            text: 'Na'
+            sort_order: 1
+            default: true
+          - code: A1
+            text: Ecwiti yn fy nghartref
+            sort_order: 2
+          - code: A2
+            text: Fy nghronfa bensiwn
+            sort_order: 3
+          - code: A3
+            text: Ailforgeisio
+            sort_order: 4
+          - code: A4
+            text: Defnyddio fy nghynilion neu fuddsoddiadau
+            sort_order: 5
+      - code: Q13
+        type: radio
+        text: Ydych chi'n ystyried canslo neu leihau yswiriant oherwydd eich bod yn poeni am gostau?
+        sort_order: 14
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+          - code: A3
+            text: Efallai
+            sort_order: 3
+      - code: Q14
+        type: radio
+        text: A yw eich pryderon ariannol yn effeithio ar eich iechyd meddwl?
+        sort_order: 15
+        responses:
+          - code: A1
+            text: 'Ydw'
+            sort_order: 1
+            default: true
+          - code: A2
+            text: 'Na'
+            sort_order: 2
+          - code: A3
+            text: Weithiau
+            sort_order: 3
+    results:
+      heading: Eich cynllun gweithredu Llywiwr Ariannol
+      subheading: Beth nesaf?
+      intro: Yn seiliedig ar yr hyn rydych wedi'i ddweud wrthym, dyma ein barn arbenigol ar eich sefyllfa bersonol. Darganfyddwch fwy am gamau y mae'n rhaid i chi eu cymryd, lle gallwch gael help a chefnogaeth am ddim, ynghyd ag arweiniad ac awgrymiadau i'ch helpu i symud ymlaen gyda'ch arian.
+      print_btn_text: Argraffu hwn
+      S1:
+        title_html: <span class="heading--strong">Camau Brys</span> &#8211; Beth ddylech ei wneud gyntaf
+      S2:
+        title: Gwyliau talu
+        subtitle: Beth i'w wneud nawr bod eich gwyliau talu wedi dod i ben
+        H1: Gwyliau talu morgais
+        H2: Gwyliau talu benthyciad personol
+        H3: Gwyliau talu cerdyn credyd
+        H4: Gwyliau talu cerdyn siop
+        H5: Gwyliau talu cyllid ceir
+        H6: Gwyliau talu prynu nawr talu yn nes ymlaen
+        H7: Gwyliau talu rhentu i brynu
+        H8: Gwyliau talu benthyciad diwrnod cyflog
+        H9: Gwyliau talu gwystlwr
+      S3:
+        title: Eich arian wrth symud ymlaen
+        H1: Cael yn ôl ar y trywydd iawn wedi gostyngiad mewn incwm
+        H2: Cael yn ôl ar y trywydd iawn wedi gostyngiad sylweddol mewn incwm
+        H3: Edrych i'r dyfodol ar ôl y pandemig COVID
+      S4:
+        title: Arian a gwaith
+        H1: Rheoli eich arian pa rydych yn hunangyflogedig
+        H2: Help brys os ydych yn hunangyflogedig
+        H3: Paratoi am ddiswyddo
+        H4: Beth i'w wneud os ydych yn ddi-waith
+      S5:
+        title: Cadw i fyny gyda thaliadau tai
+        H1: Os ydych wedi methu un taliad morgais neu rhent
+        H2: Os ydych yn poeni am daliadau rhent preifat
+        H3: Os ydych yn poeni am daliadau rhent tai cymdeithasol
+        H4: Os ydych yn poeni am daliadau morgais
+        H5: Os ydych yn mynd ar ei hôl hi gyda thaliadau rhent oherwydd COVID-19
+        H6: Os ydych yn mynd ar ei hôl hi gyda thaliadau morgais oherwydd COVID-19
+      S6:
+        title: Cadw i fyny gyda biliau blaenoriaeth
+        subtitle: Beth i'w wneud os ydych yn poeni am filiau blaenoriaeth
+        H1: Os ydych wedi methu un taliad
+        H2: Beth i’w wneud am dalu’ch Treth Cyngor neu Ardrethu Domestig
+        H3: Beth i'w wneud am dalu eich  bil nwy neu drydan
+        H4: Beth i'w wneud am daliadau i DWP/CThEM
+        H5: Beth i'w wneud am dalu eich trwydded teledu
+        H6: Beth i'w wneud am dalu eich bil Treth Incwm
+        H7: Beth i'w wneud am dalu eich cynhaliaeth plant
+        H8: Beth i'w wneud am dalu eich dirwyon llys
+        H9: Beth i'w wneud am gytundebau hurbwrcas
+        H10: Beth i’w wneud am ddirwyon parcio ceir
+      S7:
+        title: Cadw i fyny gyda biliau sydd ddim yn flaenoriaeth
+        subtitle: Os ydych yn poeni am daliadau neu filiau eraill
+        H1: Taliadau benthyciad personol
+        H2: Bil dŵr
+        H3: Ffôn symudol, teledu neu fand eang
+        H4: Taliadau cerdyn credyd
+        H5: Taliadau cerdyn siop
+        H6: Taliadau cyllid ceir
+        H7: Taliadau prynu nawr talu wedyn
+        H8: Taliadau rhentu i brynu
+        H9: Talidau benthyciad diwrnod cyflog
+        H10: Taliadau gwystlwr
+        H11: Taliadau i deulu neu ffrindiau
+      S8:
+        title: Benthyca arian
+        subtitle:
+        H1: Os ydych yn meddwl am fenthyca arian
+      S9:
+        title: Defnyddio pensiynau, ecwiti a chynilion
+        subtitle:
+        H1: Os ydych yn meddwl am ddefnyddio eich cronfa bensiwn i dalu dyledion
+        H2: Os ydych yn meddwl am ddefnyddio ecwiti yn eich cartref i dalu dyledion
+        H3: Os ydych yn meddwl am ddefnyddio eich cynilion i dalu dyledion
+      S10:
+        title: Diogelu eich dyfodol
+        subtitle:
+        H1: Os ydych yn meddwl am ganslo yswiriant
+      S11:
+        title: Pryderon am arian a iechyd meddwl
+        subtitle:
+        H1: Os yw pryderon am arian yn effeithio eich iechyd meddwl

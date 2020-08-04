@@ -20,6 +20,17 @@ Rails.application.routes.draw do
   scope '/:locale', locale: /en|cy/ do
     root 'home#show'
 
+    #Money Navigator Tool
+    scope :tools do
+      scope '/:money_navigator_tool', money_navigator_tool: /money-navigator-tool|teclyn-llywio-ariannol/ do
+        get '/', to: 'money_navigator_tool#landing'
+        get '/questionnaire', to: 'money_navigator_tool#questionnaire', as: 'money_navigator_tool_questionnaire'
+        post '/questionnaire', to: 'money_navigator_tool#questionnaire'
+        patch '/questionnaire', to: 'money_navigator_tool#questionnaire'
+        get '/results', to: 'money_navigator_tool#results', as: 'money_navigator_tool_results'
+      end
+    end
+
     get '/sitemap', to: 'sitemap#index'
 
     devise_for :users,

@@ -103,6 +103,16 @@ RSpec.describe Questions, type: :model do
         end
       end
 
+      ['england'].each do |country|
+        describe  "free debt advice #{country}" do
+          let(:heading_code) { 'H2' }
+          let(:content_prefix) {"stepchange-debt"}
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_#{country}".gsub('-', '_').to_sym, target_region: [ country ]) }
+          let(:url) { "coronavirus-#{content_prefix}-#{country}" }
+          include_examples 'valid content'
+        end
+      end
+
       # describe  'StepChange' do
       #   let(:heading_code) { 'H2' }
       #   let(:content_prefix) {'stepchange-debt'}

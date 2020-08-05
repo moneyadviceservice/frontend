@@ -118,6 +118,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 
 
+        $(reset).on('click', function(e) {
+          e.preventDefault(); 
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
+
         i++; 
       }
     }); 
@@ -127,18 +132,20 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    var id = el.id.split('_')[1]; 
+    var $container = $(el).parents('.content__inner'); 
 
-    $(el).parents('[data-response-group-control]')
-      .addClass(this.inactiveClass)
-        .siblings('[data-response-group-control]')
-          .addClass(this.inactiveClass)
-        .siblings('[data-response]')
-          .addClass(this.inactiveClass)
-        .siblings('[data-response-collection]')
-          .addClass(this.inactiveClass)
-        .siblings('[data-response-collection="' + id + '"]')
-          .removeClass(this.inactiveClass)
+    if ($(el).data('reset')) {
+      $container.children('[data-response]').removeClass(this.inactiveClass)
+      $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
+      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+    } else {
+      var id = el.id.split('_')[1]; 
+
+      $container.children('[data-response]').addClass(this.inactiveClass); 
+      $container.children('[data-response-group-control]').addClass(this.inactiveClass); 
+      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+      $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
+    }
   }; 
 
   /**

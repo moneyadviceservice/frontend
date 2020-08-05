@@ -27,6 +27,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$groupedQuestions = this.$el.find('[data-question-grouped]');
     this.banner = $(document).find('[data-banner]');
     this.activeClass = 'question--active';
+    this.inactiveClass = 'question--inactive'; 
     this.hiddenClass = 'is-hidden';
     this.dataLayer = window.dataLayer;
     this.skipQuestions = [
@@ -62,6 +63,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   /**
    *  A method to set up grouped questions
    *  These are questions that combine its responses into distinct groups for UX purposes
+   *  This method updates the DOM to group the reponses and add a control option for each
    */
   MoneyNavigatorQuestions.prototype._setUpGroupedQuestions = function() {
     var _this = this; 
@@ -95,7 +97,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .addClass('question__response question__response--control');
 
         $(collection)
-          .addClass('question__response--collection')
+          .addClass('question__response--collection question--inactive')
           .attr('data-response-collection', num);
 
         $(groups[num]).each(function() {
@@ -112,9 +114,31 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
         $(collection).append(reset); 
 
+        $(response).find('input').on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
+
         i++; 
       }
     }); 
+  }; 
+
+  /**
+   * A method that is called when the controls created by _setUpGroupedQuestions are activated
+   */
+  MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
+    var id = el.id.split('_')[1]; 
+
+    $(el).parents('[data-response-group-control]')
+      .addClass(this.inactiveClass)
+        .siblings('[data-response-group-control]')
+          .addClass(this.inactiveClass)
+        .siblings('[data-response]')
+          .addClass(this.inactiveClass)
+        .siblings('[data-response-collection]')
+          .addClass(this.inactiveClass)
+        .siblings('[data-response-collection="' + id + '"]')
+          .removeClass(this.inactiveClass)
   }; 
 
   /**

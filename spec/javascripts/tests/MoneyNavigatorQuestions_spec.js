@@ -18,6 +18,7 @@ describe('MoneyNavigatorQuestions', function() {
           self.banner = $('#fixture_container').find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
+          self.inactiveClass = self.obj.inactiveClass; 
           self.hiddenClass = self.obj.hiddenClass; 
           self.skipQuestions = self.obj.skipQuestions; 
 
@@ -51,19 +52,55 @@ describe('MoneyNavigatorQuestions', function() {
   });
 
   describe('setUpGroupedQuestions method', function() {
-    it('Adds new control options and collections for each group', function() {
-      var groupedQuestion = this.questions[3]; 
-
+    beforeEach(function() {
+      this.groupedQuestion = this.questions[3]; 
       this.obj._setUpGroupedQuestions(); 
+    }); 
 
-      expect($(groupedQuestion).find('[data-response-group-control]').length).to.equal(2); 
-      expect($(groupedQuestion).find('[data-reset]').length).to.equal(2); 
+    it('Adds new control options and collections for each group', function() {
+      expect($(this.groupedQuestion).find('[data-response-group-control]').length).to.equal(2); 
+      expect($(this.groupedQuestion).find('[data-reset]').length).to.equal(2); 
 
-      var collections = $(groupedQuestion).find('[data-response-collection]'); 
+      var collections = $(this.groupedQuestion).find('[data-response-collection]'); 
 
       expect(collections.length).to.equal(2); 
       expect($(collections[0]).find('[data-response]').length).to.equal(3); 
       expect($(collections[1]).find('[data-response]').length).to.equal(2); 
+    }); 
+
+    it ('Checks that the correct method is called when the response-control options are activated', function() {
+      var responseControls = $(this.groupedQuestion).find('[data-response-group-control]'); 
+      var updateGroupedQuestionsDisplaySpy = sinon.spy(this.obj, '_updateGroupedQuestionsDisplay'); 
+      var input = $(responseControls[0]).find('input'); 
+
+      $(input).trigger('change'); 
+
+      expect(updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(updateGroupedQuestionsDisplaySpy.calledWith(input[0])).to.be.true; 
+
+      updateGroupedQuestionsDisplaySpy.restore(); 
+    }); 
+  }); 
+
+  describe.only('updateGroupedQuestionsDisplay method', function() {
+    it('Adds the correct classes to grouped questions when called', function() {
+      var groupedQuestion = this.questions[3]; 
+
+      this.obj._setUpGroupedQuestions(); 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_1')[0]); 
+      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_2')[0]); 
+      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
     }); 
   }); 
 

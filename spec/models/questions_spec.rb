@@ -114,7 +114,7 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      #self employed debt advice 
+      #self employed debt advice
       [['england', 'wales', 'scotland']].each do |region|
         describe  "Self employed debt advice #{region}" do
           let(:heading_code) { 'H3' }
@@ -132,6 +132,18 @@ RSpec.describe Questions, type: :model do
           let(:content_prefix) {"self-employed-debt-advice"}
           let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ] ) }
           let(:url) { "coronavirus-#{content_prefix}-#{country}" }
+
+          include_examples 'valid content'
+        end
+      end
+
+      #Pension content rule tests
+      [['england', 'wales', 'scotland', 'ni']].each do |region|
+        describe  "Pension advice  #{region}" do
+          let(:heading_code) { 'H4' }
+          let(:content_prefix) {"pension-advice"}
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region) }
+          let(:url) { "urgent-#{content_prefix}" }
 
           include_examples 'valid content'
         end

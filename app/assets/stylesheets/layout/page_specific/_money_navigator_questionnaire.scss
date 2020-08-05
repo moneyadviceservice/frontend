@@ -177,17 +177,25 @@
 			.content__inner {
 				position: relative;
 				overflow: hidden;
+			}
 
-				.question__response--collection {
+			.question__response {
+				width: 100%;
+
+				&.question--inactive {
 					position: absolute;
-					width: 100%;
-					top: 0;
-					left: 100%; 
-					visibility: hidden; 
+					left: -100%;
 				}
 			}
 
 			.question__response--control {
+				width: 100%;
+
+				&.question--inactive {
+					position: absolute;
+					left: -100%;
+				}
+
 				label {
 					span:after {
 						content: '\A0\2026';
@@ -196,6 +204,14 @@
 			}
 
 			.question__response--collection {
+				&.question--inactive {
+					position: absolute;
+					width: 100%;
+					top: 0;
+					left: 100%; 
+					visibility: hidden; 
+				}
+
 				.collection__title {
 					font-size: 1.125rem; 
 

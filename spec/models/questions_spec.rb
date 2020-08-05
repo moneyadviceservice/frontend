@@ -114,15 +114,28 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      # describe  'StepChange' do
-      #   let(:heading_code) { 'H2' }
-      #   let(:content_prefix) {'stepchange-debt'}
-      #   let(:corona_specific_content) {true}
+      #self employed debt advice 
+      [['england', 'wales', 'scotland']].each do |region|
+        describe  "Self employed debt advice #{region}" do
+          let(:heading_code) { 'H3' }
+          let(:content_prefix) {"self-employed-debt-advice"}
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region) }
+          let(:url) { "coronavirus-#{content_prefix}" }
 
-      #   include_examples 'country specific content' do
-      #   end
-      # end
+          include_examples 'valid content'
+        end
+      end
 
+      ['ni'].each do |country|
+        describe  "Self employed debt advice #{country}" do
+          let(:heading_code) { 'H3' }
+          let(:content_prefix) {"self-employed-debt-advice"}
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ] ) }
+          let(:url) { "coronavirus-#{content_prefix}-#{country}" }
+
+          include_examples 'valid content'
+        end
+      end
     end
 
   end

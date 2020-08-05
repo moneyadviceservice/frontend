@@ -54,7 +54,12 @@ describe('MoneyNavigatorQuestions', function() {
   describe('setUpGroupedQuestions method', function() {
     beforeEach(function() {
       this.groupedQuestion = this.questions[3]; 
+      this.updateGroupedQuestionsDisplaySpy = sinon.spy(this.obj, '_updateGroupedQuestionsDisplay'); 
       this.obj._setUpGroupedQuestions(); 
+    }); 
+
+    afterEach(function() {
+      this.updateGroupedQuestionsDisplaySpy.restore(); 
     }); 
 
     it('Adds new control options and collections for each group', function() {
@@ -68,21 +73,28 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(collections[1]).find('[data-response]').length).to.equal(2); 
     }); 
 
-    it ('Checks that the correct method is called when the response-control options are activated', function() {
+    it ('Checks that the correct method is called when the `response-control` options are activated', function() {
       var responseControls = $(this.groupedQuestion).find('[data-response-group-control]'); 
-      var updateGroupedQuestionsDisplaySpy = sinon.spy(this.obj, '_updateGroupedQuestionsDisplay'); 
       var input = $(responseControls[0]).find('input'); 
 
       $(input).trigger('change'); 
 
-      expect(updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
-      expect(updateGroupedQuestionsDisplaySpy.calledWith(input[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(input[0])).to.be.true; 
+    }); 
 
-      updateGroupedQuestionsDisplaySpy.restore(); 
+    it ('Checks that the correct method is called when the `reset` option is activated', function() {
+      var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
+      var btn = $(responseCollections[0]).find('[data-reset]'); 
+
+      $(btn).trigger('click'); 
+
+      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(btn[0])).to.be.true; 
     }); 
   }); 
 
-  describe.only('updateGroupedQuestionsDisplay method', function() {
+  describe('updateGroupedQuestionsDisplay method', function() {
     it('Adds the correct classes to grouped questions when called', function() {
       var groupedQuestion = this.questions[3]; 
 
@@ -101,6 +113,13 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('[data-reset]')[0]); 
+      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
     }); 
   }); 
 

@@ -17,52 +17,6 @@ RSpec.describe Questions, type: :model do
     end
   end
 
-  shared_examples 'country specific content' do
-
-  end
-
-  shared_examples 'urgent action country specific' do
-    context 'Urgent action' do
-      let(:section) {'urgent_action'}
-      let(:section_code) { 'S1' }
-
-      describe  'DebtLine' do
-        let(:heading_code) { 'H3' }
-        let(:content_prefix) {'self-employed-debt-advice'}
-        let(:content_url) {"coronavirus-#{content_prefix}-#{country}"}
-
-        include_examples 'country specific content' do
-        end
-      end
-
-      # describe  'StepChange' do
-      #   let(:heading_code) { 'H2' }
-      #   let(:content_prefix) {'stepchange-debt'}
-      #   let(:corona_specific_content) {true}
-
-      #   include_examples 'country specific content' do
-      #   end
-      # end
-
-    end
-  end
-
-  shared_examples 'urgent action uk' do
-    context 'Urgent action' do
-      let(:section) {'urgent_action'}
-      let(:section_code) { 'S1' }
-
-      describe  'DebtLine' do
-        let(:heading_code) { 'H3' }
-        let(:content_prefix) {'self-employed-debt-advice'}
-        let(:content_url) {"coronavirus-#{content_prefix}"}
-
-        include_examples 'uk specific content' do
-        end
-      end
-    end
-  end
-
 
   #TODO: These are all positive tests. need to add negative tests
   #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)

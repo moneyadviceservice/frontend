@@ -103,12 +103,13 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      ['england'].each do |country|
-        describe  "free debt advice #{country}" do
+      #All other debt advice redirected to stepchange england
+      [[ 'england', 'wales', 'scotland', 'ni' ]].each do |region|
+        describe  "free debt advice #{region} england redirect" do
           let(:heading_code) { 'H2' }
           let(:content_prefix) {"stepchange-debt"}
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_#{country}".gsub('-', '_').to_sym, target_region: [ country ]) }
-          let(:url) { "coronavirus-#{content_prefix}-#{country}" }
+          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_england".gsub('-', '_').to_sym, target_region: region) }
+          let(:url) { "coronavirus-#{content_prefix}-england" }
           include_examples 'valid content'
         end
       end

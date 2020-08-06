@@ -110,6 +110,37 @@ RSpec.describe Questions, type: :model do
         end
       end
 
+      [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
+        context  "Store card #{rgn}" do
+          let(:region) { rgn }
+          let(:heading_code) { 'H4' }
+
+          describe  "severe" do
+            let(:content_prefix) {"holiday-store-card-severe"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp worried" do
+            let(:content_prefix) {"holiday-store-card-temp-worried"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp normal" do
+            let(:content_prefix) {"holiday-store-card-temp-normal"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp no change" do
+            let(:content_prefix) {"holiday-store-card-no-change"}
+
+            include_examples 'payments common'
+          end
+        end
+      end
+
     end
   end
 end

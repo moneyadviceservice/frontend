@@ -69,62 +69,83 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group]'); 
+      var $groupedResponses = $(this).find('[data-response-group], [data-response]'); 
       var groups = {}; 
       var titles = $(this).data('question-grouped-group-titles'); 
-      var i = 0; 
+      var i = 0, j = 0; 
 
+      // Collect all responses into arrays and remove from DOM
       $groupedResponses.each(function() {
-        var groupNum = $(this).data('response-group');  
-        
-        if (!groups[groupNum]) {
-          groups[groupNum] = []; 
-        }
+        if ($(this).data('response-group')) {
+          var groupNum = $(this).data('response-group');  
+          
+          if (!groups[groupNum]) {
+            groups[groupNum] = []; 
+          }
 
-        groups[groupNum].push(this); 
+          groups[groupNum].push(this); 
+        } else {
+          groups['default'] = this; 
+        }
 
         $(this).remove(); 
       }); 
 
+      var questionResponses = document.createElement('div'); 
+
+      $(questionResponses).addClass('response__controls'); 
+
       for(var num in groups) {
-        var response = document.createElement('div'); 
-        var collection = document.createElement('div'); 
-        var reset = document.createElement('button'); 
+        if (num === 'default') {
+          $(questionResponses).prepend(groups[num].outerHTML); 
+        } else {
+          // Add responses to the DOM
+          var response = document.createElement('div'); 
 
-        $(response)
-          .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
-          .attr('data-response-group-control', num)
-          .addClass('question__response question__response--control');
+          $(response)
+            .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
+            .attr('data-response-group-control', num)
+            .addClass('question__response question__response--control');
 
-        $(collection)
-          .addClass('question__response--collection question--inactive')
-          .attr('data-response-collection', num);
+          $(this).find('.content__inner').append(response); 
 
-        $(groups[num]).each(function() {
-          $(collection).append(groups[num]); 
-        }); 
+          $(response).find('input').on('change', function(e) {
+            _this._updateGroupedQuestionsDisplay(e.target); 
+          }); 
 
-        $(reset)
-          .addClass('button button--reset')
-          .attr('data-reset', true)
-          .text(_this.i18nStrings.controls.reset); 
+          $(questionResponses).append(response); 
 
-        $(this).find('.content__inner').append(response); 
-        $(this).find('.content__inner').append(collection);
-        $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
-        $(collection).append(reset); 
+          // Add collections and resets to the DOM
+          var collection = document.createElement('div'); 
+          var reset = document.createElement('button'); 
 
-        $(response).find('input').on('change', function(e) {
-          _this._updateGroupedQuestionsDisplay(e.target); 
-        }); 
+          $(collection)
+            .addClass('question__response--collection question--inactive')
+            .attr('data-response-collection', num);
 
-        $(reset).on('click', function(e) {
-          e.preventDefault(); 
-          _this._updateGroupedQuestionsDisplay(e.target); 
-        }); 
+          $(groups[num]).each(function() {
+            $(collection).append(groups[num]); 
+          }); 
+
+          $(reset)
+            .addClass('button button--reset')
+            .attr('data-reset', true)
+            .text(_this.i18nStrings.controls.reset); 
+
+          $(this).find('.content__inner').append(collection);
+          $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
+          $(collection).append(reset); 
+
+          $(reset).on('click', function(e) {
+            e.preventDefault(); 
+            _this._updateGroupedQuestionsDisplay(e.target); 
+          }); 
+        }
 
         i++; 
       }
+
+      $(this).find('.content__inner').prepend(questionResponses);
     }); 
   }; 
 

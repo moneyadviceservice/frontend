@@ -265,6 +265,37 @@ RSpec.describe Questions, type: :model do
         end
       end
 
+      [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
+        context  "Pawnbroker  #{rgn}" do
+          let(:region) { rgn }
+          let(:heading_code) { 'H9' }
+
+          describe  "severe" do
+            let(:content_prefix) {"holiday-pawnbroker-severe"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp worried" do
+            let(:content_prefix) {"holiday-pawnbroker-temp-worried"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp normal" do
+            let(:content_prefix) {"holiday-pawnbroker-temp-normal"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp no change" do
+            let(:content_prefix) {"holiday-pawnbroker-no-change"}
+
+            include_examples 'payments common'
+          end
+        end
+      end
+
     end
   end
 end

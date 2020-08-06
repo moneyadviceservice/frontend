@@ -203,6 +203,37 @@ RSpec.describe Questions, type: :model do
         end
       end
 
+      [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
+        context  "Rent to own #{rgn}" do
+          let(:region) { rgn }
+          let(:heading_code) { 'H7' }
+
+          describe  "severe" do
+            let(:content_prefix) {"holiday-rent-to-own-severe"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp worried" do
+            let(:content_prefix) {"holiday-rent-to-own-temp-worried"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp normal" do
+            let(:content_prefix) {"holiday-rent-to-own-temp-normal"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp no change" do
+            let(:content_prefix) {"holiday-rent-to-own-no-change"}
+
+            include_examples 'payments common'
+          end
+        end
+      end
+
     end
   end
 end

@@ -1,11 +1,4 @@
 
-RSpec.shared_examples 'payments common' do 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region ) }
-          let(:url) { "coronavirus-#{content_prefix}" }
-
-          include_examples 'valid content'
-end
-
 RSpec.describe Questions, type: :model do
   include ::Symbols
 
@@ -24,25 +17,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-mortgage-payment-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-mortgage-payment-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-mortgage-payment-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-mortgage-payment-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -55,25 +48,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-personal-loan-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-personal-loan-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-personal-loan-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-personal-loan-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
 
@@ -87,25 +80,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-credit-card-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-credit-card-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-credit-card-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-credit-card-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -118,25 +111,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-store-card-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-store-card-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-store-card-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-store-card-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -149,25 +142,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-car-finance-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-car-finance-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-car-finance-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-car-finance-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -180,25 +173,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-buy-now-pay-later-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-buy-now-pay-later-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-buy-now-pay-later-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-buy-now-pay-later-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -211,25 +204,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-rent-to-own-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-rent-to-own-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-rent-to-own-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-rent-to-own-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -242,25 +235,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-payday-loan-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-payday-loan-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-payday-loan-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-payday-loan-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end
@@ -273,25 +266,25 @@ RSpec.describe Questions, type: :model do
           describe  "severe" do
             let(:content_prefix) {"holiday-pawnbroker-severe"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp worried" do
             let(:content_prefix) {"holiday-pawnbroker-temp-worried"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp normal" do
             let(:content_prefix) {"holiday-pawnbroker-temp-normal"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
 
           describe  "temp no change" do
             let(:content_prefix) {"holiday-pawnbroker-no-change"}
 
-            include_examples 'payments common'
+            include_examples 'regionally valid content'
           end
         end
       end

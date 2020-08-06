@@ -141,6 +141,37 @@ RSpec.describe Questions, type: :model do
         end
       end
 
+      [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
+        context  "Car finance #{rgn}" do
+          let(:region) { rgn }
+          let(:heading_code) { 'H5' }
+
+          describe  "severe" do
+            let(:content_prefix) {"holiday-car-finance-severe"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp worried" do
+            let(:content_prefix) {"holiday-car-finance-temp-worried"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp normal" do
+            let(:content_prefix) {"holiday-car-finance-temp-normal"}
+
+            include_examples 'payments common'
+          end
+
+          describe  "temp no change" do
+            let(:content_prefix) {"holiday-car-finance-no-change"}
+
+            include_examples 'payments common'
+          end
+        end
+      end
+
     end
   end
 end

@@ -15,42 +15,82 @@ RSpec.describe Questions, type: :model do
       let(:section_code) { 'S2' }
 
       [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
-        let(:heading_code) { 'H1' }
+        context  "Mortgage" do
+          let(:heading_code) { 'H1' }
 
-        describe  "Mortgage severe #{rgn}" do
-          let(:region) { rgn }
-          let(:content_prefix) {"holiday-mortgage-payment-severe"}
+          describe  "severe" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-mortgage-payment-severe"}
 
-          include_examples 'payments common'
-          include_examples 'valid content'
-        end
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
 
-        describe  "Mortgage temp worried #{rgn}" do
-          let(:region) { rgn }
-          let(:content_prefix) {"holiday-mortgage-payment-temp-worried"}
+          describe  "temp worried" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-mortgage-payment-temp-worried"}
 
-          include_examples 'payments common'
-          include_examples 'valid content'
-        end
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
 
-        describe  "Mortgage temp normal #{rgn}" do
-          let(:region) { rgn }
-          let(:content_prefix) {"holiday-mortgage-payment-temp-normal"}
+          describe  "temp normal" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-mortgage-payment-temp-normal"}
 
-          include_examples 'payments common'
-          include_examples 'valid content'
-        end
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
 
-        describe  "Mortgage temp no change #{rgn}" do
-          let(:region) { rgn }
-          let(:content_prefix) {"holiday-mortgage-payment-no-change"}
+          describe  "temp no change" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-mortgage-payment-no-change"}
 
-          include_examples 'payments common'
-          include_examples 'valid content'
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
         end
       end
 
-    end
+      [[ 'england', 'wales', 'scotland', 'ni'] ].each do |rgn|
+        context  "Personal loan #{rgn}" do
+          let(:heading_code) { 'H2' }
 
+          describe  "severe" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-personal-loan-severe"}
+
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
+
+          describe  "temp worried" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-personal-loan-temp-worried"}
+
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
+
+          describe  "temp normal" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-personal-loan-temp-normal"}
+
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
+
+          describe  "temp no change" do
+            let(:region) { rgn }
+            let(:content_prefix) {"holiday-personal-loan-no-change"}
+
+            include_examples 'payments common'
+            include_examples 'valid content'
+          end
+        end
+
+      end
+
+    end
   end
 end

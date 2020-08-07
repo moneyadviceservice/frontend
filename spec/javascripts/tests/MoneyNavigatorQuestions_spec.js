@@ -95,29 +95,23 @@ describe('MoneyNavigatorQuestions', function() {
   }); 
 
   describe('updateGroupedQuestionsDisplay method', function() {
-    it('Adds the correct classes to grouped questions when called', function() {
+    it('Adds the correct classes to groups when called', function() {
       var groupedQuestion = this.questions[3]; 
 
       this.obj._setUpGroupedQuestions(); 
 
       this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_1')[0]); 
-      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
       expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
 
       this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_2')[0]); 
-      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
 
       this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('[data-reset]')[0]); 
-      expect($(groupedQuestion).find('[data-response]').hasClass(this.inactiveClass)).to.be.false; 
-      expect($(groupedQuestion).find('[data-response-group-control="1"]').hasClass(this.inactiveClass)).to.be.false; 
-      expect($(groupedQuestion).find('[data-response-group-control="2"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.false; 
       expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
     }); 

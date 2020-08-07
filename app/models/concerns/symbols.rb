@@ -269,6 +269,66 @@ module Symbols
             },
 
           ]
+        },
+
+        {
+          #'Mental Health CTA' heading rules
+          heading_code: 'H5',
+          content_rules: [
+            {
+              triggers: [
+                {q0:['a1', 'a2', 'a3']},
+                {q14:['a3']}
+              ],
+              mask: [ MASK_SOME + MASK_ALL ],
+              article: "coronavirus-help-mental-health-sometimes"
+            },
+
+            {
+              triggers: [
+                {q0:['a4']},
+                {q14:['a3']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-sometimes-wales"
+            },
+
+            {
+              triggers: [
+                {q0:['a1']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-england"
+            },
+
+            {
+              triggers: [
+                {q0:['a2']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-ni"
+            },
+
+            {
+              triggers: [
+                {q0:['a3']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-scotland"
+            },
+
+            {
+              triggers: [
+                {q0:['a4']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-wales"
+            },
+          ]
         }
       ]
     },

@@ -72,7 +72,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       var $groupedResponses = $(this).find('[data-response-group], [data-response]'); 
       var groups = {}; 
       var titles = $(this).data('question-grouped-group-titles'); 
-      var i = 0, j = 0; 
+      var i = 0; 
+      var groupNum = 0; 
+      var questionResponses = document.createElement('div'); 
 
       // Collect all responses into arrays and remove from DOM
       $groupedResponses.each(function() {
@@ -91,21 +93,25 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(this).remove(); 
       }); 
 
-      var questionResponses = document.createElement('div'); 
+      groupNum = Object.keys(groups).length; 
 
-      $(questionResponses).addClass('response__controls'); 
+      $(questionResponses)
+        .addClass('response__controls')
+        .css('width', (1 / groupNum * 100) + '%'); 
 
       for(var num in groups) {
         if (num === 'default') {
           $(questionResponses).prepend(groups[num].outerHTML); 
         } else {
-          // Add responses to the DOM
           var response = document.createElement('div'); 
+          var collection = document.createElement('div'); 
+          var reset = document.createElement('button'); 
 
+          // Add responses to the DOM
           $(response)
             .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
             .attr('data-response-group-control', num)
-            .addClass('question__response question__response--control');
+            .addClass('question__response question__response--control'); 
 
           $(this).find('.content__inner').append(response); 
 
@@ -116,9 +122,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(questionResponses).append(response); 
 
           // Add collections and resets to the DOM
-          var collection = document.createElement('div'); 
-          var reset = document.createElement('button'); 
-
           $(collection)
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num);
@@ -135,6 +138,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(this).find('.content__inner').append(collection);
           $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
           $(collection).append(reset); 
+          $(collection).css({
+            'marginLeft': (1 / groupNum * -100 * i) + '%', 
+            'width': (1 / groupNum * 100) + '%'
+          }); 
 
           $(reset).on('click', function(e) {
             e.preventDefault(); 
@@ -145,7 +152,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         i++; 
       }
 
-      $(this).find('.content__inner').prepend(questionResponses);
+      $(this).find('.content__inner')
+        .prepend(questionResponses)
+        .css('width', (i * 100) + '%');
     }); 
   }; 
 

@@ -97,6 +97,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionResponses)
         .addClass('response__controls')
+        .attr('data-response-controls', true)
         .css('width', (1 / groupNum * 100) + '%'); 
 
       for(var num in groups) {
@@ -165,14 +166,13 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var $container = $(el).parents('.content__inner'); 
 
     if ($(el).data('reset')) {
-      $container.children('[data-response]').removeClass(this.inactiveClass)
+      $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
     } else {
       var id = el.id.split('_')[1]; 
 
-      $container.children('[data-response]').addClass(this.inactiveClass); 
-      $container.children('[data-response-group-control]').addClass(this.inactiveClass); 
+      $container.children('[data-response-controls]').addClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
       $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
     }

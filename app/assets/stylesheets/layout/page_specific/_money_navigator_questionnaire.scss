@@ -207,20 +207,20 @@
 				[type="checkbox"]:not(:checked):focus + label:before {
 					outline: solid 0.1875rem $color-input-focus-border-color;
 				}
-			}
 
-			.question__response {
+				.question__response {
+					.response__control {
+						outline:none;
+					}
+				}
+	
 				.response__control {
-					outline:none;
+					&:checked + .response__text {
+						color: $color-white; 
+						background: $color-green-secondary; 
+					}
 				}
-			}
-
-			.response__control {
-				&:checked + .response__text {
-					color: $color-white; 
-					background: $color-green-secondary; 
-				}
-			}
+			}			
 		}
 	}
 

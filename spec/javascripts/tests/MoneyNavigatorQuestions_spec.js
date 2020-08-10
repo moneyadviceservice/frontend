@@ -18,6 +18,7 @@ describe('MoneyNavigatorQuestions', function() {
           self.banner = $('#fixture_container').find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
+          self.inactiveClass = self.obj.inactiveClass; 
           self.hiddenClass = self.obj.hiddenClass; 
           self.skipQuestions = self.obj.skipQuestions; 
 
@@ -32,20 +33,89 @@ describe('MoneyNavigatorQuestions', function() {
   describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
-      var setUpMultipleQestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var setUpMultipleQuestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
+      var setUpGroupedQuestionsStub = sinon.stub(this.obj, '_setUpGroupedQuestions'); 
       var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
       
       this.obj.init();
 
       expect(updateDOMStub.calledOnce).to.be.true;
-      expect(setUpMultipleQestionsStub.calledOnce).to.be.true; 
+      expect(setUpMultipleQuestionsStub.calledOnce).to.be.true; 
+      expect(setUpGroupedQuestionsStub.calledOnce).to.be.true; 
       expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
-      setUpMultipleQestionsStub.restore(); 
+      setUpMultipleQuestionsStub.restore(); 
+      setUpGroupedQuestionsStub.restore(); 
       setUpJourneyLogicStub.restore(); 
     });
   });
+
+  describe('setUpGroupedQuestions method', function() {
+    beforeEach(function() {
+      this.groupedQuestion = this.questions[3]; 
+      this.updateGroupedQuestionsDisplaySpy = sinon.spy(this.obj, '_updateGroupedQuestionsDisplay'); 
+      this.obj._setUpGroupedQuestions(); 
+    }); 
+
+    afterEach(function() {
+      this.updateGroupedQuestionsDisplaySpy.restore(); 
+    }); 
+
+    it('Adds new control options and collections for each group', function() {
+      expect($(this.groupedQuestion).find('[data-response-group-control]').length).to.equal(2); 
+      expect($(this.groupedQuestion).find('[data-reset]').length).to.equal(2); 
+
+      var collections = $(this.groupedQuestion).find('[data-response-collection]'); 
+
+      expect(collections.length).to.equal(2); 
+      expect($(collections[0]).find('[data-response]').length).to.equal(3); 
+      expect($(collections[1]).find('[data-response]').length).to.equal(2); 
+    }); 
+
+    it ('Checks that the correct method is called when the `response-control` options are activated', function() {
+      var responseControls = $(this.groupedQuestion).find('[data-response-group-control]'); 
+      var input = $(responseControls[0]).find('input'); 
+
+      $(input).trigger('change'); 
+
+      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(input[0])).to.be.true; 
+    }); 
+
+    it ('Checks that the correct method is called when the `reset` option is activated', function() {
+      var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
+      var btn = $(responseCollections[0]).find('[data-reset]'); 
+
+      $(btn).trigger('click'); 
+
+      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(btn[0])).to.be.true; 
+    }); 
+  }); 
+
+  describe('updateGroupedQuestionsDisplay method', function() {
+    it('Adds the correct classes to groups when called', function() {
+      var groupedQuestion = this.questions[3]; 
+
+      this.obj._setUpGroupedQuestions(); 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_1')[0]); 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_2')[0]); 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
+
+      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('[data-reset]')[0]); 
+      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+    }); 
+  }); 
 
   describe('setUpJourneyLogic method', function() {
     it('Checks that the addJourneyData method is called with the correct arguments', function() {
@@ -380,7 +450,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Positions `No` response correctly in the DOM', function() {
-      expect(this.response_no.prev().prop('tagName').toUpperCase()).to.equal('LEGEND'); 
+      expect(this.response_no.parent().hasClass('content__inner')).to.be.true; 
     }); 
 
     it('Adds `Yes` response after `No`', function() {

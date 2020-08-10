@@ -222,6 +222,102 @@
 				}
 			}			
 		}
+
+		&[data-question-grouped] {
+			$transition-time: 0.5s;
+
+			fieldset {
+				overflow: hidden;
+			}
+
+			.content__inner {
+				box-sizing: content-box;
+				padding: 0 $default-gutter * 2;
+				margin: 0 $default-gutter * -2;
+
+				.response__controls,
+				.question__response--collection {
+					float: left;
+					transition: transform $transition-time;
+				}
+
+				.response__controls {
+					transform: translateX(0%);
+					margin-right: $default-gutter;
+	
+					&.question--inactive {
+						transform: translateX(-100% - ($default-gutter * 3));
+					}
+				}
+
+				.question__response--collection {
+					transform: translateX(-100% - ($default-gutter * 3));
+
+					&.question--inactive {
+						transform: translateX(0%);
+					}
+				}
+			}
+
+			.question__response--control {
+				label {
+					span:after {
+						content: '\A0\2026';
+					}
+				}
+			}
+
+			.question__response--collection {
+				.collection__title {
+					font-size: 1.125rem; 
+					margin-top: 0; 
+
+					&:after {
+						content: '\A0\2026';						
+					}
+				}
+
+				label {
+					span {
+						span {
+							white-space: normal;
+
+							&:before {
+								content: '\2026\A0'; 
+							}
+
+							&:first-child {
+								display: none; 
+							}
+						}
+					}
+				}
+
+				.button--reset {
+					background: $color-white;
+					border: solid 1px;
+				}
+			}
+		}
+	}
+
+	.question__content--q0, 
+	[data-question-grouped] {
+		.response__text {
+			@extend .button; 
+			padding: 0; 
+			width: 100%;
+			text-align: left; 
+		}
+
+		.response__control {
+			@extend .visually-hidden; 
+
+			&[type="radio"]:checked + .response__text {
+				color: $color-white; 
+				background: $color-green-secondary; 
+			}
+		}
 	}
 
 	.question__content--q0 {
@@ -277,12 +373,7 @@
 		}
 
 		.response__control {
-			@extend .visually-hidden; 
-
 			&:checked + .response__text {
-				color: $color-white; 
-				background: $color-green-secondary; 
-
 				@include respond-to($mq-l) {
 					color: $color-green-secondary !important;
 					background: $color-green-pale !important;

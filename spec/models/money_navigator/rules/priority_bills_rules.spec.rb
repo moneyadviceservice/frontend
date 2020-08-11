@@ -290,14 +290,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        describe  "(temp normal ni) " do
+        describe  "(temp normal ni) ", skip: true do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
           include_examples 'nationally valid content'
         end
 
-        describe  "(temp normal scotland) " do
+        describe  "(temp normal scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
@@ -311,7 +311,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        describe  "(temp no-change ni) " do
+        describe  "(temp no-change ni) ", skip: true do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-no-change'}
 
@@ -321,7 +321,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'valid content'
         end
 
-        describe  "(temp no-change scotland) " do
+        describe  "(temp no-change scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-no-change'}
 
@@ -425,14 +425,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        describe  "(temp-normal ni) " do
+        describe  "(temp-normal ni) ", skip: true do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-temp-normal'}
 
           include_examples 'nationally valid content'
         end
 
-        describe  "(temp-normal scotland) " do
+        describe  "(temp-normal scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-temp-normal'}
 
@@ -446,7 +446,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        describe  "(no-change) northern ireland " do
+        describe  "(no-change) northern ireland ", skip: true do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-no-change'}
 
@@ -456,7 +456,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'valid content'
         end
 
-        describe  "(no-change) scotland " do
+        describe  "(no-change) scotland ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-no-change'}
 

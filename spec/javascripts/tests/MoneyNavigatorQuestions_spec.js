@@ -74,13 +74,20 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it ('Checks that the correct method is called when the `response-control` options are activated', function() {
-      var responseControls = $(this.groupedQuestion).find('[data-response-group-control]'); 
-      var input = $(responseControls[0]).find('input'); 
+      var responseControls = $(this.groupedQuestion).find('[data-response-controls]'); 
+      var inputs = $(responseControls).find('input'); 
 
-      $(input).trigger('change'); 
-
+      $(inputs[0]).trigger('change'); 
       expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(input[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[0])).to.be.true; 
+
+      $(inputs[1]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledTwice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.true; 
+
+      $(inputs[2]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledThrice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
     }); 
 
     it ('Checks that the correct method is called when the `reset` option is activated', function() {
@@ -94,7 +101,7 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe.only('updateGroupedQuestionsDisplay method', function() {
+  describe('updateGroupedQuestionsDisplay method', function() {
     beforeEach(function() {
       this.groupedQuestion = this.questions[3]; 
 
@@ -102,7 +109,7 @@ describe('MoneyNavigatorQuestions', function() {
 
       // Controls
       var $controls = $(this.groupedQuestion).find('.response__controls'); 
-      this.control_default = $controls.children('[data-response]');
+      this.control_default = $controls.children('[data-response]').find('input')[0];
       this.control_1 = $controls.find('#control_1')[0]; 
       this.control_2 = $controls.find('#control_2')[0]; 
 
@@ -134,7 +141,20 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
 
     it('Sets the correct states on the input elements when called', function() {
+      this.obj._updateGroupedQuestionsDisplay(this.control_1); 
+      expect(this.control_default.checked).to.be.false; 
+      expect(this.control_1.checked).to.be.true; 
+      expect(this.control_2.checked).to.be.false; 
 
+      this.obj._updateGroupedQuestionsDisplay(this.control_2); 
+      expect(this.control_default.checked).to.be.false; 
+      expect(this.control_1.checked).to.be.false; 
+      expect(this.control_2.checked).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_default); 
+      expect(this.control_default.checked).to.be.true; 
+      expect(this.control_1.checked).to.be.false; 
+      expect(this.control_2.checked).to.be.false; 
     }); 
   }); 
 

@@ -1673,7 +1673,7 @@ module Symbols
                 {q4: 'a4', q9: 'a3'},
               ],
               mask: [ MASK_ALL ],
-              article: "coronavirus-water-no-change"
+              article: "coronavirus-mobile-tv-broadband-no-change"
             },
           ]
         },
@@ -1974,7 +1974,7 @@ module Symbols
                 {q8: 'a9'},
               ],
               mask: [ MASK_ALL + MASK_NONE ],
-              article: "coronavirus-payday-loan-no-change"
+              article: "coronavirus-pawnbroker-no-change"
             },
           ]
         },

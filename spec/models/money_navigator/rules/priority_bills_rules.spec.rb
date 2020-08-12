@@ -238,20 +238,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-severe'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(severe scotland) " do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-severe'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
 
@@ -266,21 +260,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-temp-worried'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
-
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp worried scotland) " do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-temp-worried'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
@@ -315,20 +302,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-no-change'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp no-change scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-no-change'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
       end
@@ -375,20 +356,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-severe'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(severe) " do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-severe'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
@@ -402,20 +377,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-temp-worried'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp-worried) " do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-temp-worried'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
@@ -450,20 +419,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-no-change'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
 
         describe  "(no-change) scotland ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-no-change'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{region}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
       end
     end

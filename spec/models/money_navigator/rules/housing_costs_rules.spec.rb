@@ -47,15 +47,13 @@ RSpec.describe Questions, type: :model do
         end
       end
 
-      [ 'england', 'ni' ].each do |rgn|
+      [ [ 'england' ], [ 'ni' ] ].each do |rgn|
         describe  "Worried mortgage #{rgn}" do
           let(:region) {rgn}
           let(:heading_code) { 'H4' }
           let(:content_prefix) {'mortgage-payments'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
-          include_examples 'valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -65,10 +63,7 @@ RSpec.describe Questions, type: :model do
           let(:heading_code) { 'H4' }
           let(:content_prefix) {'mortgage-payments'}
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
-          let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
-
-          include_examples 'valid content'
+          include_examples 'nationally valid content for regional rule'
         end
       end
 

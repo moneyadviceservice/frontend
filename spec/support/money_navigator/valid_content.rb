@@ -27,3 +27,10 @@ RSpec.shared_examples 'nationally valid content for national rule' do
 
   include_examples 'valid content'
 end
+
+RSpec.shared_examples 'nationally valid content for regional rule' do
+  let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ]) }
+  let(:url) { "coronavirus-#{content_prefix}-#{region}" }
+
+  include_examples 'valid content'
+end

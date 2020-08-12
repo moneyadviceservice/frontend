@@ -94,26 +94,47 @@ describe('MoneyNavigatorQuestions', function() {
     }); 
   }); 
 
-  describe('updateGroupedQuestionsDisplay method', function() {
-    it('Adds the correct classes to groups when called', function() {
-      var groupedQuestion = this.questions[3]; 
+  describe.only('updateGroupedQuestionsDisplay method', function() {
+    beforeEach(function() {
+      this.groupedQuestion = this.questions[3]; 
 
       this.obj._setUpGroupedQuestions(); 
 
-      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_1')[0]); 
-      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
-      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+      // Controls
+      var $controls = $(this.groupedQuestion).find('.response__controls'); 
+      this.control_default = $controls.children('[data-response]');
+      this.control_1 = $controls.find('#control_1')[0]; 
+      this.control_2 = $controls.find('#control_2')[0]; 
 
-      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('#control_2')[0]); 
-      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
+      // Resets
+      this.collection_1_reset = $(this.groupedQuestion).find('[data-reset]')[0]; 
+      this.collection_2_reset = $(this.groupedQuestion).find('[data-reset]')[1]; 
+    }); 
 
-      this.obj._updateGroupedQuestionsDisplay($(groupedQuestion).find('[data-reset]')[0]); 
-      expect($(groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.false; 
-      expect($(groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
-      expect($(groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+    it('Adds the correct classes to groups when called', function() {
+      this.obj._updateGroupedQuestionsDisplay(this.control_1); 
+      expect($(this.groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(this.groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(this.groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_2); 
+      expect($(this.groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(this.groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(this.groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.false; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.collection_1_reset); 
+      expect($(this.groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(this.groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(this.groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.collection_2_reset); 
+      expect($(this.groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.false; 
+      expect($(this.groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.true; 
+      expect($(this.groupedQuestion).find('[data-response-collection="2"]').hasClass(this.inactiveClass)).to.be.true; 
+    }); 
+
+    it('Sets the correct states on the input elements when called', function() {
+
     }); 
   }); 
 

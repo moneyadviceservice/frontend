@@ -18,8 +18,8 @@ FactoryBot.define do
       q9 { answers_with_entropy('q9', [], nil) }
       q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', [], nil) }
-      q12 { answers_with_entropy('q12', ['a2'], []) }
-      q13 { answers_with_entropy('q13', [], nil) }
+      q12 { answers_with_entropy('q12', [], nil) }
+      q13 { answers_with_entropy('q13', ['a1', 'a3'], nil) }
       q14 { answers_with_entropy('q14', [], nil) }
     end
 

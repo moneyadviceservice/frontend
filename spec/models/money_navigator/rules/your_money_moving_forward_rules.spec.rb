@@ -17,21 +17,21 @@ RSpec.describe Questions, type: :model do
           let(:heading_code) { 'H1' }
           let(:content_prefix) {"back-on-track-severe"}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "income drop" do
           let(:heading_code) { 'H2' }
           let(:content_prefix) {"back-on-track"}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "looking forward" do
           let(:heading_code) { 'H3' }
           let(:content_prefix) {"looking-forward"}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
       end

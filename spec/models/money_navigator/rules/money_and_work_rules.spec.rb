@@ -16,7 +16,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H1' }
         let(:content_prefix) {'managing-self-employed'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
 
@@ -25,7 +25,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {'urgent-help-self-employed'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
       describe  "Urgent help ni" do
@@ -41,7 +41,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H3' }
         let(:content_prefix) {'preparing-redundancy'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
       describe  "Unemployed " do
@@ -49,7 +49,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H4' }
         let(:content_prefix) {'unemployed'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
     end

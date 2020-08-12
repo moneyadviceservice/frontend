@@ -15,25 +15,25 @@ RSpec.describe Questions, type: :model do
       describe  "(severe) " do
         let(:content_prefix) {'thinking-of-borrowing-severe'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
       describe  "(temp worried) " do
         let(:content_prefix) {'thinking-of-borrowing-temp-worried'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
       describe  "(temp normal) " do
         let(:content_prefix) {'thinking-of-borrowing-temp-normal'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
 
       describe  "(no change) " do
         let(:content_prefix) {'thinking-of-borrowing-no-change'}
 
-        include_examples 'regionally valid content'
+        include_examples 'regionally valid content for regional rule'
       end
     end
 

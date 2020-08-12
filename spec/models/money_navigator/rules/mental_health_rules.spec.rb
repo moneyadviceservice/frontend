@@ -13,7 +13,7 @@ RSpec.describe Questions, type: :model do
       let(:heading_code) { 'H1' }
       let(:content_prefix) {'mental-health'}
 
-      include_examples 'regionally valid content'
+      include_examples 'regionally valid content for regional rule'
 
     end
 

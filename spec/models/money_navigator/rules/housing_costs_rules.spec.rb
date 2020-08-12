@@ -55,6 +55,7 @@ RSpec.describe Questions, type: :model do
 
           let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ region ] ) }
           let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
+          include_examples 'valid content'
         end
       end
 

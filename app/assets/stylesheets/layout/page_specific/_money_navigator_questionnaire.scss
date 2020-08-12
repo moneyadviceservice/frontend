@@ -313,7 +313,8 @@
 		.response__control {
 			@extend .visually-hidden; 
 
-			&[type="radio"]:checked + .response__text {
+			&[type="radio"]:checked + .response__text, 
+			&[type="checkbox"]:checked + .response__text {
 				color: $color-white; 
 				background: $color-green-secondary; 
 			}

@@ -116,9 +116,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
           $(this).find('.content__inner').append(response); 
 
-          $(response).find('input').on('change', function(e) {
-            _this._updateGroupedQuestionsDisplay(e.target); 
-          }); 
+          // $(response).find('input').on('change', function(e) {
+          //   _this._updateGroupedQuestionsDisplay(e.target); 
+          // }); 
 
           $(questionResponses).append(response); 
 
@@ -153,6 +153,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         i++; 
       }
 
+      $(questionResponses).on('change', function(e) {
+        _this._updateGroupedQuestionsDisplay(e.target); 
+      }); 
+
       $(this).find('.content__inner')
         .prepend(questionResponses)
         .css('width', (i * 100) + '%');
@@ -170,9 +174,29 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
     } else {
-      var id = el.id.split('_')[1]; 
+      var id = el.id.split('_')[1];
+      var $responseControls = $container.children('[data-response-controls]'); 
 
-      $container.children('[data-response-controls]').addClass(this.inactiveClass); 
+      if (el.id.indexOf('control_') > -1) {
+        $responseControls.addClass(this.inactiveClass)
+      }
+
+      $responseControls.find('input').each(function() {
+        if (el.id.indexOf('control_') > -1) {
+          if (this.id == 'control_' + id) {
+            this.checked = true; 
+          } else {
+            this.checked = false; 
+          }
+        } else {
+          if (this.id.indexOf('control_') == -1) {
+            this.checked = true; 
+          } else {
+            this.checked = false; 
+          }
+        }
+      }); 
+
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
       $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
     }

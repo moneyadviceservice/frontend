@@ -90,7 +90,7 @@ RSpec.describe Questions, type: :model do
           let(:heading_code) { 'H6' }
           let(:content_prefix) {'behind-mortgage'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 

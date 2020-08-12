@@ -14,7 +14,7 @@ RSpec.shared_examples 'valid content' do
   end
 end
 
-RSpec.shared_examples 'regionally valid content' do
+RSpec.shared_examples 'regionally valid content for regional rule' do
           let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region ) }
           let(:url) { "coronavirus-#{content_prefix}" }
 

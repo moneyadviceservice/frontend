@@ -17,25 +17,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'personal-loan-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'personal-loan-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'personal-loan-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'personal-loan-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -46,25 +46,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'water-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'water-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'water-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'water-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -75,25 +75,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'mobile-tv-broadband-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'mobile-tv-broadband-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'mobile-tv-broadband-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'mobile-tv-broadband-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -104,25 +104,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'credit-card-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'credit-card-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'credit-card-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'credit-card-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -133,25 +133,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'store-card-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'store-card-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'store-card-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'store-card-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -162,25 +162,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'car-finance-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'car-finance-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'car-finance-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'car-finance-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -191,25 +191,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'buy-now-pay-later-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'buy-now-pay-later-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'buy-now-pay-later-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'buy-now-pay-later-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -220,25 +220,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'rent-to-own-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'rent-to-own-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'rent-to-own-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'rent-to-own-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -249,25 +249,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'payday-loan-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'payday-loan-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'payday-loan-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'payday-loan-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -278,25 +278,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'pawnbroker-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'pawnbroker-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'pawnbroker-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'pawnbroker-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 
@@ -307,25 +307,25 @@ RSpec.describe Questions, type: :model do
         describe  "(severe) " do
           let(:content_prefix) {'friends-family-severe'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp worried) " do
           let(:content_prefix) {'friends-family-temp-worried'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(temp normal) " do
           let(:content_prefix) {'friends-family-temp-normal'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
 
         describe  "(no change) " do
           let(:content_prefix) {'friends-family-no-change'}
 
-          include_examples 'regionally valid content'
+          include_examples 'regionally valid content for regional rule'
         end
       end
 

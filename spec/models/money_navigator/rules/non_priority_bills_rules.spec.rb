@@ -90,7 +90,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        xdescribe  "(no change) " do
+        describe  "(no change) " do
           let(:content_prefix) {'mobile-tv-broadband-no-change'}
 
           include_examples 'regionally valid content'
@@ -293,7 +293,7 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content'
         end
 
-        xdescribe  "(no change) " do
+        describe  "(no change) " do
           let(:content_prefix) {'pawnbroker-no-change'}
 
           include_examples 'regionally valid content'

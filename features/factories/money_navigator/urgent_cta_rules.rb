@@ -2,14 +2,14 @@ include MoneyNavigator::Symbols
 require_relative 'rules_factory_common'
 
 FactoryBot.define do
-  factory :cta_rules_answers, class: Questions do
+  factory :urgent_cta_rules_answers, class: Questions do
 
     factory :S1_H1_debt_advice, traits: [:country, :S1_H1_debt_advice_answers]
-    factory :S1_H2_stepchange_redirect_to_self_employed_debt_advice, traits: [:country, :S1_H2_stepchange_redirect_to_self_employed_debt_advice_answers ]
-    factory :S1_H2_stepchange_redirect_to_self_employed_debt_advice_ni, traits: [:country, :S1_H2_stepchange_redirect_to_self_employed_debt_advice_answers_ni ]
+    factory :S1_H2_self_employed_debt_advice, traits: [:country, :S1_H2_stepchange_redirect_to_self_employed_debt_advice_answers ]
+    factory :S1_H2_self_employed_debt_advice_ni, traits: [:country, :S1_H2_stepchange_redirect_to_self_employed_debt_advice_answers_ni ]
     factory :S1_H2_stepchange_debt_england, traits: [:country, :S1_H2_stepchange_debt_england_answers ]
     factory :S1_H3_self_employed_debt_advice, traits: [:country, :S1_H3_self_employed_debt_advice_answers]
-    factory :S1_H4_pension_advice, traits: [:country, :S1_H4_pension_advice_answers]
+    factory :S1_H4_urgent_pension_advice, traits: [:country, :S1_H4_pension_advice_answers]
 
     country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', ni: 'a2', scotland: 'a3', wales: 'a4')
 

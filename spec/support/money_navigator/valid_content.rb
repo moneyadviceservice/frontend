@@ -15,14 +15,15 @@ RSpec.shared_examples 'valid content' do
 end
 
 RSpec.shared_examples 'regionally valid content for regional rule' do
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region ) }
-          let(:url) { "coronavirus-#{content_prefix}" }
+  let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: region ) }
+  let(:url) { "coronavirus-#{content_prefix}" }
 
-          include_examples 'valid content'
+  include_examples 'valid content'
 end
 
 RSpec.shared_examples 'nationally valid content for national rule' do
-          include_examples 'valid content'
-            let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_#{region}".gsub('-', '_').to_sym, target_region: [ region ]) }
-            let(:url) { "coronavirus-#{content_prefix}-#{region}" }
+  let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_#{region}".gsub('-', '_').to_sym, target_region: [ region ]) }
+  let(:url) { "coronavirus-#{content_prefix}-#{region}" }
+
+  include_examples 'valid content'
 end

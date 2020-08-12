@@ -14,7 +14,6 @@
             let(:heading_code) { 'H1' }
             let(:content_prefix) {"debt-advice"}
             let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".gsub('-', '_').to_sym, target_region: [ country ]) }
-            #TODO: Refactor this to nationally valid content
             let(:url) { "coronavirus-#{content_prefix}-#{country}" }
 
             include_examples 'valid content'

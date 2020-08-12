@@ -294,14 +294,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
-          include_examples 'nationally valid content'
+          include_examples 'nationally valid content for national rule'
         end
 
         describe  "(temp normal scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
-          include_examples 'nationally valid content'
+          include_examples 'nationally valid content for national rule'
         end
 
         describe  "(no-change) " do
@@ -429,14 +429,14 @@ RSpec.describe Questions, type: :model do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-temp-normal'}
 
-          include_examples 'nationally valid content'
+          include_examples 'nationally valid content for national rule'
         end
 
         describe  "(temp-normal scotland) ", skip: true do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-temp-normal'}
 
-          include_examples 'nationally valid content'
+          include_examples 'nationally valid content for national rule'
         end
 
         describe  "(no change) england and wales " do

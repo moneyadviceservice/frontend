@@ -33,7 +33,7 @@ RSpec.describe Questions, type: :model do
         let(:heading_code) { 'H2' }
         let(:content_prefix) {"urgent-help-self-employed"}
 
-        include_examples 'nationally valid content'
+        include_examples 'nationally valid content for national rule'
       end
 
       describe  "Preparing for redundancy " do

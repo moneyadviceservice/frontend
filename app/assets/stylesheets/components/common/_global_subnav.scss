@@ -40,15 +40,14 @@ $global-nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
       visibility: visible;
     }
   }
-}
 
-.is-hidden {
-  display: none;
-
-  @include respond-to($mq-m) {
-    display: block; 
+  .is-hidden {
+    @include respond-to($mq-m) {
+      display: block; 
+    }
   }
 }
+
 
 // nav not initialised --
 .global-nav:not([data-dough-global-nav-initialised="yes"]) {

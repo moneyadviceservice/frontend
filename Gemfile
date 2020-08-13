@@ -8,7 +8,18 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.2.11.1'
+source "https://#{ENV['RAILS_LTS_USERNAME']}:#{ENV['RAILS_LTS_PASSWORD']}@gems.railslts.com" do
+  gem 'rails', '~> 4.2.10'
+  gem 'actionmailer',     require: false
+  gem 'actionpack',       require: false
+  gem 'activemodel',      require: false
+  gem 'activerecord',     require: false
+  gem 'activesupport',    require: false
+  gem 'railties',         require: false
+  gem 'actionview',       require: false
+  gem 'activejob',        require: false
+  gem 'railslts-version', require: false
+end
 
 gem 'activerecord-session_store'
 

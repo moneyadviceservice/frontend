@@ -1,4 +1,3 @@
-include Symbols
 require_relative 'rules_factory_common'
 
 FactoryBot.define do

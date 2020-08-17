@@ -1,10 +1,5 @@
 class MoneyNavigator::ContentRules
 
-  #TODO: Might be a good idea to move these rules into the translation file though not sure if that'll
-  #be placing more in there than we want.
-  #- Not a good idea to keep the rules here and the text there... maintenance headache maintaining the header symbols in two places.
-  #- Not a good idea to move everything here... translation of headings into other languages will be required going forward.
-  #
   #The data representation of the logic that triggers content being displayed
   #Format:
   # [

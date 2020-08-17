@@ -1,7 +1,5 @@
 include MoneyNavigator::Symbols
 
-#TODO consider moving these methods into a module if needed for other fixtures.
-#Also to prevent polution of the global namespace (though not sure that's important given the way Factorybot is coded)
 def randomn_answers(answers, allow_empty)
   choice = answers.sample(rand(1..answers.length)) if  !allow_empty
   choice = answers.sample(rand(0..answers.length)) if  allow_empty

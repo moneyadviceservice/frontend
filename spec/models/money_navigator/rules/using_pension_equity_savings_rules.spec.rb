@@ -2,8 +2,6 @@
 RSpec.describe Questions, type: :model do
   include MoneyNavigator::Symbols
 
-  #TODO: These are all positive tests. need to add negative tests
-  #(i.e. test that checks content is not displayed under a condition that shoud result in it not displaying)
 
   context 'Rule test: ' do
     context 'Using pensions, equity and savings ' do

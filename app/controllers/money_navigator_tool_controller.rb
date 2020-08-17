@@ -93,9 +93,4 @@ class MoneyNavigatorToolController < EmbeddedToolsController
     params[:questions]
   end
 
-  #TODO: Don't think this is needed. remove at final cleanup
-  def errors_for(question)
-    content_tag(:p, @model.errors[question].try(:first), class: 'help-block')
-  end
-  helper_method :errors_for
 end

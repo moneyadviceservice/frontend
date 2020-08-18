@@ -1,4 +1,4 @@
-Feature: Money Manager Journey
+Feature: Money Navigator Journey
 As a user of the Money Navigator tool
 I want to be able to move through the process from the 
 landing page to the results page without issues

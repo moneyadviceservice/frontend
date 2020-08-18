@@ -1,7 +1,7 @@
 require_relative 'rules_factory_common'
 
 FactoryBot.define do
-  factory :answers, class: Questions do
+  factory :answers, class: MoneyNavigator::Questions do
 
     country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', ni: 'a2', scotland: 'a3', wales: 'a4')
 

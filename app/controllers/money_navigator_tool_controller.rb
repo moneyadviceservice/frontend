@@ -59,9 +59,9 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   def questionnaire
     if no_answers_submitted?
       clear_session
-      @model = Questions.new
+      @model = MoneyNavigator::Questions.new
     else
-      @model = Questions.new(updated_questions(submitted_answers))
+      @model = MoneyNavigator::Questions.new(updated_questions(submitted_answers))
       redirect_to action:  'results' if @model.valid?
     end
   end
@@ -69,7 +69,7 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   def results
     #Get the valid answers from the session and run them
     #through the model to obtain the results to display
-    @model = Questions.new(updated_questions(nil))
+    @model = MoneyNavigator::Questions.new(updated_questions(nil))
     @results = @model.results
   end
 
@@ -86,11 +86,11 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   end
 
   def no_answers_submitted?
-    params[:questions].nil?
+    params[:money_navigator_questions].nil?
   end
 
   def submitted_answers
-    params[:questions]
+    params[:money_navigator_questions]
   end
 
 end

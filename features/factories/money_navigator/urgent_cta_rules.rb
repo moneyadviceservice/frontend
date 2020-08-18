@@ -1,8 +1,7 @@
 include MoneyNavigator::Symbols
-require_relative 'rules_factory_common'
 
 FactoryBot.define do
-  factory :urgent_cta_rules_answers, class: Questions do
+  factory :urgent_cta_rules_answers, parent: :answers do
 
     factory :S1_H1_debt_advice, traits: [:country, :S1_H1_debt_advice_answers]
     factory :S1_H2_self_employed_debt_advice, traits: [:country, :S1_H2_stepchange_redirect_to_self_employed_debt_advice_answers ]
@@ -10,16 +9,6 @@ FactoryBot.define do
     factory :S1_H2_stepchange_debt_england, traits: [:country, :S1_H2_stepchange_debt_england_answers ]
     factory :S1_H3_self_employed_debt_advice, traits: [:country, :S1_H3_self_employed_debt_advice_answers]
     factory :S1_H4_urgent_pension_advice, traits: [:country, :S1_H4_pension_advice_answers]
-
-    country_answer_codes = HashWithIndifferentAccess.new(england: 'a1', ni: 'a2', scotland: 'a3', wales: 'a4')
-
-    transient do
-      target_region {[ 'england' ]}
-    end
-
-    trait :country do
-      q0 { answers_with_entropy('q0', target_region.map {|country| country_answer_codes[country]}, []) }
-    end
 
     #Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
     trait :S1_H1_debt_advice_answers do

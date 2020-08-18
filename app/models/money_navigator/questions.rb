@@ -71,7 +71,6 @@ module MoneyNavigator
 
 
     #Method returns a hash representation of this Questions instance
-    #TODO: This method sits between the instance members and the model. Consider writing tests for it
     def to_hash
       answers_hash = QUESTIONS.inject(HashWithIndifferentAccess.new) do |accumulator_hash, question|
         accumulator_hash[question[:code]] = send("#{ question[:code] }")

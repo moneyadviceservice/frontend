@@ -96,7 +96,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       setJourney(e.target);
     });
   };
-
+  
   /**
    *  This method adds a `question-skip` dataset value to questions
    *  that should not be part of the current journey
@@ -327,6 +327,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       label.htmlFor = inputId + '_response_yes';
       label.className = 'response__text'; 
       label.innerHTML = '<span>' + _this.i18nStrings.controls.yes_btn + '</span>'; 
+      
 
       $(response_yes)
         .attr('data-response', true)

@@ -136,7 +136,6 @@ module MoneyNavigator
       "ERROR: CMS CONTENT '#{slug}' NOT AVAILABLE"
     end
 
-    #TODO: update documentation for last minute fixes in logic
     #Method to iterate over an array of triggers each representing question-answers that can pull the respective trigger
     #-A trigger is pulled if each and every answer sub-trigger it contains is pulled.
     #- an answer sub-trigger is pulled if:

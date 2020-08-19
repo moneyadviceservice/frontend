@@ -1,6 +1,6 @@
 
 
-RSpec.describe Questions, type: :model do
+RSpec.describe MoneyNavigator::Questions, type: :model do
   include MoneyNavigator::Symbols
 
 

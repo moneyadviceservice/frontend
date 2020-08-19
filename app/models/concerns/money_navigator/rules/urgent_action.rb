@@ -85,13 +85,21 @@ class MoneyNavigator::Rules::UrgentAction
                       MASK_ALL + MASK_ALL + MASK_ALL + MASK_NONE],
                       article: "coronavirus-self-employed-debt-advice-ni"
             },
+            #All of these Q3A1, Q4A2 OR Q4A3, Q6A4 OR Q6A5, Q9A1-A11, Q10A1, BUT NOT IF HAVE ALSO SELECTED Q4A4, Q4A1, Q6A6, Q7A1-A9, Q10A3
             #Show if any of these Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A4, Q4A1, Q6A6, Q7A1-A9, Q10A3
             {
               triggers: [
-                {q3:'a1', q4:['a2', 'a3'], q6:['a4', 'a5'], q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], q10:['a1']},
+                {q3:['a1', 'a3']},
+                {q4:['a2', 'a3']},
+                {q6:['a4', 'a5']},
+                {q9:['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11']},
+                {q10:['a1']},
                 {q1: 'a2', q4:['a1', 'a4'], q6: ['a6'], q7: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], q10: ['a3']},
               ],
-              mask: [ MASK_SOME + MASK_NONE, MASK_ALL + MASK_NONE  ],
+              mask: [
+                MASK_SOME + MASK_SOME + MASK_SOME + MASK_SOME + MASK_ALL + MASK_NONE,
+                MASK_SOME + MASK_SOME + MASK_SOME + MASK_ALL + MASK_ALL + MASK_NONE
+              ],
               article: "coronavirus-stepchange-debt-england"
             },
           ]
@@ -135,6 +143,66 @@ class MoneyNavigator::Rules::UrgentAction
               article: "urgent-pension-advice"
             },
 
+          ]
+        },
+
+        {
+          #'Mental Health CTA' heading rules
+          heading_code: 'H5',
+          content_rules: [
+            {
+              triggers: [
+                {q0:['a1', 'a2', 'a3']},
+                {q14:['a3']}
+              ],
+              mask: [ MASK_SOME + MASK_ALL ],
+              article: "coronavirus-help-mental-health-sometimes"
+            },
+
+            {
+              triggers: [
+                {q0:['a4']},
+                {q14:['a3']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-sometimes-wales"
+            },
+
+            {
+              triggers: [
+                {q0:['a1']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-england"
+            },
+
+            {
+              triggers: [
+                {q0:['a2']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-ni"
+            },
+
+            {
+              triggers: [
+                {q0:['a3']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-scotland"
+            },
+
+            {
+              triggers: [
+                {q0:['a4']},
+                {q14:['a1']}
+              ],
+              mask: [ MASK_ALL + MASK_ALL ],
+              article: "coronavirus-help-mental-health-wales"
+            },
           ]
         }
       ]

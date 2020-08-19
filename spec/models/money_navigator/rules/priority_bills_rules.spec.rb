@@ -1,5 +1,5 @@
 
-RSpec.describe Questions, type: :model do
+RSpec.describe MoneyNavigator::Questions, type: :model do
   include MoneyNavigator::Symbols
 
 
@@ -274,14 +274,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe  "(temp normal ni) ", skip: true do
+        describe  "(temp normal ni) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
           include_examples 'nationally valid content for national rule'
         end
 
-        describe  "(temp normal scotland) ", skip: true do
+        describe  "(temp normal scotland) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-temp-normal'}
 
@@ -295,14 +295,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe  "(temp no-change ni) ", skip: true do
+        describe  "(temp no-change ni) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'ni' }
           let(:content_prefix) {'court-fines-no-change'}
 
           include_examples 'nationally valid content for regional rule'
         end
 
-        describe  "(temp no-change scotland) ", skip: true do
+        describe  "(temp no-change scotland) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'scotland' }
           let(:content_prefix) {'court-fines-no-change'}
 
@@ -391,14 +391,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe  "(temp-normal ni) ", skip: true do
+        describe  "(temp-normal ni) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-temp-normal'}
 
           include_examples 'nationally valid content for national rule'
         end
 
-        describe  "(temp-normal scotland) ", skip: true do
+        describe  "(temp-normal scotland) ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-temp-normal'}
 
@@ -412,14 +412,14 @@ RSpec.describe Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe  "(no-change) northern ireland ", skip: true do
+        describe  "(no-change) northern ireland ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'ni' }
           let(:content_prefix) {'car-park-no-change'}
 
           include_examples 'nationally valid content for regional rule'
         end
 
-        describe  "(no-change) scotland ", skip: true do
+        describe  "(no-change) scotland ", skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
           let(:region) { 'scotland' }
           let(:content_prefix) {'car-park-no-change'}
 

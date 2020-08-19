@@ -1,4 +1,4 @@
-include MoneyNavigator::Symbols
+require_relative 'rules_factory_common'
 
 FactoryBot.define do
   factory :urgent_cta_rules_answers, parent: :answers do

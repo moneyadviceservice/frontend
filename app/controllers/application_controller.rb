@@ -26,7 +26,9 @@ class ApplicationController < ActionController::Base
   helper BudgetWarning
 
   def syndicated_tool_request?
-    !!request.headers['X-Syndicated-Tool']
+    # For AEM, tools should always be rendered in synicated state
+    # !!request.headers['X-Syndicated-Tool']
+    true
   end
 
   helper_method :syndicated_tool_request?

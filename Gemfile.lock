@@ -15,10 +15,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 6ae1b74232e63674acb08e1198dc760e40906896
-  branch: 11393_Chat_Add-coronavirus-option_v5.40
+  revision: a90d79da058eb43f95d6afb77325b22fed539f07
+  ref: a90d79d
+  branch: 11691_DAL_Current-location-warning-message_v5.41
   specs:
-    dough-ruby (5.40.0)
+    dough-ruby (5.41.0)
       activemodel
       activesupport
       rails (>= 3.2, < 5.1.0)

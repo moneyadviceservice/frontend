@@ -1,7 +1,6 @@
 class MoneyNavigator::ContentRules
-
-  #This method returns an array of oall the content rules for each section within the system (i.e. each elementof the array contains the rules for a given section)
-  #An array element will have the following format:
+  # This method returns an array of oall the content rules for each section within the system (i.e. each elementof the array contains the rules for a given section)
+  # An array element will have the following format:
   #
   # [
   #   {
@@ -46,7 +45,7 @@ class MoneyNavigator::ContentRules
       MoneyNavigator::Rules::PaymentHoliday.all,
       MoneyNavigator::Rules::PensionsEquitySavings.all,
       MoneyNavigator::Rules::PriorityBills.all,
-      MoneyNavigator::Rules::ProtectYourFuture.all,
+      MoneyNavigator::Rules::ProtectYourFuture.all
     ]
   end
 end

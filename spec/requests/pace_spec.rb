@@ -1,19 +1,19 @@
 RSpec.describe 'Pace', type: :request do
-  describe "GET show" do
+  describe 'GET show' do
     it 'successfully renders' do
       get '/en/moneyadvisernetwork'
       expect(response).to be_successful
     end
   end
 
-  describe "GET privacy" do
+  describe 'GET privacy' do
     it 'successfully renders' do
       get '/en/moneyadvisernetwork/privacy'
       expect(response).to be_successful
     end
   end
 
-  describe "GET online" do
+  describe 'GET online' do
     it 'successfully renders' do
       get '/en/moneyadvisernetwork/online'
       expect(response).to be_successful

@@ -1,14 +1,14 @@
 class MoneyNavigatorToolController < EmbeddedToolsController
   include Localisation
 
-  #Code and helpers required by the syndication layout
+  # Code and helpers required by the syndication layout
   #########################################
-  #These would usually be provided by the engine mounting framework but this
-  #tool is not an engine. If it inherits from the MountController then it falls foul
-  #of other tool mounting assumptions. These methods are the equivalent of methods
-  #in the MountController that are required to use the `engine_*` layouts dynamically 
-  #used within the parent ApplicationController which in turn
-  #provide javascript to resize the tool iframe appropriately when it is syndicated.
+  # These would usually be provided by the engine mounting framework but this
+  # tool is not an engine. If it inherits from the MountController then it falls foul
+  # of other tool mounting assumptions. These methods are the equivalent of methods
+  # in the MountController that are required to use the `engine_*` layouts dynamically
+  # used within the parent ApplicationController which in turn
+  # provide javascript to resize the tool iframe appropriately when it is syndicated.
   #
   #########################################
   def alternate_options
@@ -45,7 +45,7 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   end
 
   def alternate_tool_id
-    @alternate_tool_id ||= (alternate_locale == :en) ? ToolMountPoint::MoneyNavigatorTool::EN_ID : ToolMountPoint::MoneyNavigatorTool::CY_ID
+    @alternate_tool_id ||= alternate_locale == :en ? ToolMountPoint::MoneyNavigatorTool::EN_ID : ToolMountPoint::MoneyNavigatorTool::CY_ID
   end
 
   def check_syndicated_layout
@@ -54,7 +54,7 @@ class MoneyNavigatorToolController < EmbeddedToolsController
 
   #########################################
 
-  def landing;end
+  def landing; end
 
   def questionnaire
     if no_answers_submitted?
@@ -62,13 +62,13 @@ class MoneyNavigatorToolController < EmbeddedToolsController
       @model = MoneyNavigator::Questions.new
     else
       @model = MoneyNavigator::Questions.new(updated_questions(submitted_answers))
-      redirect_to action:  'results' if @model.valid?
+      redirect_to action: 'results' if @model.valid?
     end
   end
 
   def results
-    #Get the valid answers from the session and run them
-    #through the model to obtain the results to display
+    # Get the valid answers from the session and run them
+    # through the model to obtain the results to display
     @model = MoneyNavigator::Questions.new(updated_questions(nil))
     @results = @model.results
   end
@@ -92,5 +92,4 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   def submitted_answers
     params[:money_navigator_questions]
   end
-
 end

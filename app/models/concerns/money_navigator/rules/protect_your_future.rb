@@ -7,7 +7,7 @@ class MoneyNavigator::Rules::ProtectYourFuture
       section_code: 'S10',
       heading_rules: [
         {
-          # ' If you’re thinking about cancelling insurance ' Rules
+          # ' If you are thinking about cancelling insurance ' Rules
           heading_code: 'H1',
           content_rules: [
             # Q13A1 or Q13A2

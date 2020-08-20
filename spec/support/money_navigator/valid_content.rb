@@ -22,14 +22,18 @@ RSpec.shared_examples 'regionally valid content for regional rule' do
 end
 
 RSpec.shared_examples 'nationally valid content for national rule' do
-  let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}_#{region}".tr('-', '_').to_sym, target_region: [region]) }
+  let(:model) do
+    build("#{section_code}_#{heading_code}_#{content_prefix}_#{region}".tr('-', '_').to_sym, target_region: [region])
+  end
   let(:url) { "coronavirus-#{content_prefix}-#{region}" }
 
   include_examples 'valid content'
 end
 
 RSpec.shared_examples 'nationally valid content for regional rule' do
-  let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region]) }
+  let(:model) do
+    build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region])
+  end
   let(:url) { "coronavirus-#{content_prefix}-#{region}" }
 
   include_examples 'valid content'

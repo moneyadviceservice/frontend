@@ -11,7 +11,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
         let(:heading_code) { 'H1' }
         let(:content_prefix) { 'missed-rent-mortgage-low' }
 
-        let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region) }
+        let(:model) do
+          build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region)
+        end
         let(:url) { content_prefix.to_s }
 
         include_examples 'valid content'
@@ -23,7 +25,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           let(:heading_code) { 'H2' }
           let(:content_prefix) { 'rent-private' }
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region]) }
+          let(:model) do
+            build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region])
+          end
           let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
 
           include_examples 'valid content'
@@ -36,7 +40,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           let(:heading_code) { 'H3' }
           let(:content_prefix) { 'rent-social' }
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region]) }
+          let(:model) do
+            build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region])
+          end
           let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
 
           include_examples 'valid content'
@@ -69,7 +75,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           let(:heading_code) { 'H5' }
           let(:content_prefix) { 'behind-rent' }
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region]) }
+          let(:model) do
+            build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region])
+          end
           let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
 
           include_examples 'valid content'
@@ -92,7 +100,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           let(:heading_code) { 'H6' }
           let(:content_prefix) { 'behind-mortgage' }
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region]) }
+          let(:model) do
+            build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: [region])
+          end
           let(:url) { "coronavirus-#{content_prefix}-#{rgn}" }
 
           include_examples 'valid content'

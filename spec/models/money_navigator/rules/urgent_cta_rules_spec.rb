@@ -75,7 +75,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           let(:region) { region }
           let(:content_prefix) { 'urgent-pension-advice' }
 
-          let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region) }
+          let(:model) do
+            build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region)
+          end
           let(:url) { content_prefix.to_s }
 
           include_examples 'valid content'

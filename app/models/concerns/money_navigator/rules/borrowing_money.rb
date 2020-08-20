@@ -7,7 +7,7 @@ class MoneyNavigator::Rules::BorrowingMoney
       section_code: 'S8',
       heading_rules: [
         {
-          # 'If you're thinking of borrowing money' Rules
+          # 'If you are thinking of borrowing money' Rules
           heading_code: 'H1',
           content_rules: [
             # Q11A1, Q4A1

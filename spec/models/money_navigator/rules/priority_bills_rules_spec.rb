@@ -11,7 +11,9 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
         let(:heading_code) { 'H1' }
         let(:content_prefix) { 'missed-payment-low' }
 
-        let(:model) { build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region) }
+        let(:model) do
+          build("#{section_code}_#{heading_code}_#{content_prefix}".tr('-', '_').to_sym, target_region: region)
+        end
         let(:url) { content_prefix.to_s }
 
         include_examples 'valid content'

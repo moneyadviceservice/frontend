@@ -37,7 +37,7 @@ class MoneyNavigator::Rules::PensionsEquitySavings
         },
 
         {
-          # 'If you're thinking of using your savings to pay off debts' Rules
+          # 'If you are thinking of using your savings to pay off debts' Rules
           heading_code: 'H3',
           content_rules: [
             # Q12A4

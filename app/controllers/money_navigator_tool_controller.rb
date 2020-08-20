@@ -45,7 +45,11 @@ class MoneyNavigatorToolController < EmbeddedToolsController
   end
 
   def alternate_tool_id
-    @alternate_tool_id ||= alternate_locale == :en ? ToolMountPoint::MoneyNavigatorTool::EN_ID : ToolMountPoint::MoneyNavigatorTool::CY_ID
+    @alternate_tool_id ||= if alternate_locale == :en
+                             ToolMountPoint::MoneyNavigatorTool::EN_ID
+                           else
+                             ToolMountPoint::MoneyNavigatorTool::CY_ID
+                           end
   end
 
   def check_syndicated_layout

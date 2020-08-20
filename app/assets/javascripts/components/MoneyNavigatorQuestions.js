@@ -153,13 +153,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         i++; 
       }
 
-      $(questionResponses).on('change', function(e) {
-        _this._updateGroupedQuestionsDisplay(e.target); 
-      }); 
-
       $(this).find('.content__inner')
         .prepend(questionResponses)
-        .css('width', (i * 100) + '%');
+        .css('width', (i * 100) + '%')
+        .on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
     }); 
   }; 
 
@@ -167,13 +166,13 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    var $container = $(el).parents('.content__inner'); 
+    var $container = $(el).parents('.content__inner');  
 
     if ($(el).data('reset')) {
       $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
-    } else {
+    } else if ($(el).parents('[data-response-controls]').length > 0) {
       var id = el.id.split('_')[1];
       var $responseControls = $container.children('[data-response-controls]'); 
 

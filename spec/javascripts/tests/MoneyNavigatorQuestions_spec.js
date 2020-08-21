@@ -105,6 +105,7 @@ describe('MoneyNavigatorQuestions', function() {
     beforeEach(function() {
       this.groupedQuestion = this.questions[3]; 
 
+      this.obj._updateDOM(); 
       this.obj._setUpGroupedQuestions(); 
 
       // Controls
@@ -113,9 +114,20 @@ describe('MoneyNavigatorQuestions', function() {
       this.control_1 = $controls.find('#control_1')[0]; 
       this.control_2 = $controls.find('#control_2')[0]; 
 
+      // Collections
+      var collections = $(this.groupedQuestion).find('.question__response--collection'); 
+      this.collection_1_1 = $(collections[0]).find('input')[0]; 
+      this.collection_1_2 = $(collections[0]).find('input')[1]; 
+      this.collection_1_3 = $(collections[0]).find('input')[2]; 
+      this.collection_2_1 = $(collections[1]).find('input')[0]; 
+      this.collection_2_2 = $(collections[1]).find('input')[1]; 
+
       // Resets
-      this.collection_1_reset = $(this.groupedQuestion).find('[data-reset]')[0]; 
-      this.collection_2_reset = $(this.groupedQuestion).find('[data-reset]')[1]; 
+      this.collection_1_reset = $(collections[0]).find('[data-reset]'); 
+      this.collection_2_reset = $(collections[1]).find('[data-reset]'); 
+
+      // Continue
+      this.continue = $(this.groupedQuestion).find('[data-continue]'); 
     }); 
 
     it('Adds the correct classes to groups when called', function() {
@@ -155,6 +167,42 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.control_default.checked).to.be.true; 
       expect(this.control_1.checked).to.be.false; 
       expect(this.control_2.checked).to.be.false; 
+    }); 
+
+    it('Sets the correct state on the `Continue` button when called', function() {
+      this.control_default.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.control_default); 
+      expect(this.continue[0].disabled).to.be.false; 
+
+      this.control_default.checked = false; 
+      this.control_1.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.control_1); 
+      expect(this.continue[0].disabled).to.be.true; 
+
+      this.control_1.checked = false; 
+      this.control_2.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.control_2); 
+      expect(this.continue[0].disabled).to.be.true; 
+
+      this.control_2.checked = false; 
+      this.collection_1_1.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_1_1); 
+      expect(this.continue[0].disabled).to.be.false; 
+
+      this.collection_1_1.checked = false; 
+      this.collection_1_2.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_1_2); 
+      expect(this.continue[0].disabled).to.be.false; 
+
+      this.collection_1_2.checked = false; 
+      this.collection_2_1.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_2_1); 
+      expect(this.continue[0].disabled).to.be.false; 
+
+      this.collection_2_1.checked = false; 
+      this.collection_2_2.checked = true; 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_2_2); 
+      expect(this.continue[0].disabled).to.be.false; 
     }); 
   }); 
 

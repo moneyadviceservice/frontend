@@ -198,7 +198,26 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
       $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
+    } else {
+      el.checked = true; 
     }
+
+    // set state of `Continue`
+    var $continueBtn = $container.parents('[data-question-id]').find('[data-continue]'); 
+    var $inputs = $container.find('input');
+    var disabled = false; 
+
+    $inputs.each(function() {
+      if (this.checked == true) {
+        if (this.name == '') {
+          disabled = true; 
+        } else {
+          disabled = false; 
+        }
+      }
+    });
+
+    $continueBtn.attr('disabled', disabled); 
   }; 
 
   /**

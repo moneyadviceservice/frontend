@@ -458,11 +458,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .text(progress + '% ' + this.i18nStrings.messages.completed);
 
     if (activeIndex == 0) {
-      this.banner.removeClass(
+      this.$banner.removeClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     } else {
-      this.banner.addClass(
+      this.$banner.addClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     }

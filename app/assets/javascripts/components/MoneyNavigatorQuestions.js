@@ -23,7 +23,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn = this.$el.find('[data-submit]');
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
-    this.banner = $(document).find('[data-banner]');
+    this.$banner = this.$el.siblings('[data-banner]');
     this.activeClass = 'question--active';
     this.hiddenClass = 'is-hidden';
     this.dataLayer = window.dataLayer;
@@ -297,11 +297,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .text(progress + '% ' + this.i18nStrings.messages.completed);
 
     if (activeIndex == 0) {
-      this.banner.removeClass(
+      this.$banner.removeClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     } else {
-      this.banner.addClass(
+      this.$banner.addClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     }

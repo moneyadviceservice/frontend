@@ -15,7 +15,7 @@ describe('MoneyNavigatorQuestions', function() {
           fixture.load('MoneyNavigatorQuestions.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
-          self.banner = $('#fixture_container').find('[data-banner]'); 
+          self.banner = $(self.component).parents().find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
           self.hiddenClass = self.obj.hiddenClass; 
@@ -327,8 +327,7 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
     }); 
 
-    // TODO: Fix this test (in Tech Debt)
-    xit('Shows/hides the banner when active question is/not Q0', function() {
+    it('Shows/hides the banner when active question is/not Q0', function() {
       var hiddenClass = 'l-money_navigator__banner' + '--' + this.hiddenClass; 
 
       this.obj._updateDOM(); 

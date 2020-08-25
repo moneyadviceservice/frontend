@@ -52,36 +52,32 @@
                   <% end %>
 
                   <% question[:responses].each do |response| %>
-                    <% if response[:default] %>
                       <div class="question__response" data-response>
                         <% if question[:type] == 'radio' %>
-                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true %>
+                          <%= f.radio_button question[:code].downcase, 
+                            response[:code].downcase, 
+                            id: question[:code].downcase + '_' + response[:code].downcase, 
+                            class: 'response__control', 
+                            checked: response[:default] 
+                          %>
                         <% elsif question[:type] == 'checkbox' %>
-                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true}, response[:code].downcase, nil %>
+                          <%= f.check_box question[:code].downcase, 
+                            {
+                              multiple: true, 
+                              id: question[:code].downcase + '_' + response[:code].downcase, 
+                              class: 'response__control', 
+                              checked: response[:default], 
+                            }, 
+                            response[:code].downcase, 
+                            nil %>
                         <% end %>
 
                         <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
                           <span><%= response[:text] %></span>
                         </label>
                       </div>
-                    <% end %>
                   <% end %>
 
-                  <% question[:responses].each do |response| %>
-                    <% if !response[:default] %>
-                      <div class="question__response" data-response>
-                        <% if question[:type] == 'radio' %>
-                          <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control' %>
-                        <% elsif question[:type] == 'checkbox' %>
-                          <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control'}, response[:code].downcase, nil %>
-                        <% end %>
-
-                        <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
-                          <span><%= response[:text] %></span>
-                        </label>
-                      </div>
-                    <% end %>
-                  <% end %>
                 </fieldset>
 
                 <% if question[:note] %>

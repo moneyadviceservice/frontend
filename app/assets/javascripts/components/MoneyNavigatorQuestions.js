@@ -25,7 +25,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
     this.$groupedQuestions = this.$el.find('[data-question-grouped]');
-    this.banner = $(document).find('[data-banner]');
+    this.$banner = this.$el.siblings('[data-banner]');
     this.activeClass = 'question--active';
     this.inactiveClass = 'question--inactive'; 
     this.hiddenClass = 'is-hidden';

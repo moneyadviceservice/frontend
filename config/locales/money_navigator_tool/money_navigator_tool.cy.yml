@@ -127,14 +127,14 @@ cy:
         responses:
           - code: A1
             text: 'Ydw'
-            sort_order: 1
+            sort_order: 2
           - code: A2
             text: 'Na'
-            sort_order: 2
+            sort_order: 3
           - code: A3
             text: 'Nid wyf yn hunangyflogedig'
             default: true
-            sort_order: 3
+            sort_order: 1
       - code: Q4
         type: radio
         custom: true
@@ -143,10 +143,10 @@ cy:
         responses:
           - code: A4
             text: Dim newid /wedi arbed arian
-            sort_order: 1
+            sort_order: 2
           - code: A1
             text: 'Gostyngiad tymor hir mewn incwm (ee: diswyddo neu gwaith wedi stopio am gyfnod amhenodol)'
-            sort_order: 2
+            sort_order: 1
             default: true
           - code: A2
             text: Gostyngiad dros dro ac yn poeni am fy niogelwch yn y dyfodol
@@ -161,14 +161,14 @@ cy:
         responses:
           - code: A1
             text: Cynllun cymhorthdal incwm hunangyflogaeth
-            sort_order: 2
+            sort_order: 1
             default: true
           - code: A2
             text: Cynllun ffyrlo
             sort_order: 3
           - code: A3
             text: 'Na'
-            sort_order: 1
+            sort_order: 2
       - code: Q6
         type: radio
         text: Ydych chi ar ei hôl hi gyda thaliadau rhent neu forgais? Atebwch "Ydw" os ydych  ar wyliau/egwyl talu y cytunwyd arno

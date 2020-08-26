@@ -116,10 +116,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
           $(this).find('.content__inner').append(response); 
 
-          // $(response).find('input').on('change', function(e) {
-          //   _this._updateGroupedQuestionsDisplay(e.target); 
-          // }); 
-
           $(questionResponses).append(response); 
 
           // Add collections and resets to the DOM
@@ -166,9 +162,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    var $container = $(el).parents('.content__inner');  
+    var $container = $(el).parents('.question__content').find('.content__inner');
 
-    if ($(el).data('reset')) {
+    if ($(el).data('reset') || $(el).data('back')) {
       $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
@@ -403,6 +399,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         e.preventDefault();
         _this._updateDisplay('prev');
         _this._scrollToTop();
+        _this._updateGroupedQuestionsDisplay(e.target); 
       }
     }); 
 

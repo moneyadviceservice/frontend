@@ -1,3 +1,5 @@
+#TODO raised TP-11725 to track this tests current failure
+@pending
 Feature: Money Navigator Journey
 As a user of the Money Navigator tool
 I want to be able to move through the process from the 

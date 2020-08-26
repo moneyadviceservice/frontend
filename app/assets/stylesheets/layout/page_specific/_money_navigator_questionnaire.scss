@@ -1,7 +1,7 @@
 .l-money_navigator {
 	.question__actions {
 		@extend %clearfix;
-		@include row(12); 
+
 		margin-top: $baseline-unit * 4; 
 
 		@include respond-to($mq-m) {
@@ -9,6 +9,10 @@
 				float: left;
 				clear: left;
 			}
+		}
+
+		@include respond-to($mq-l) {
+			@include row(12); 
 		}
 	}
 

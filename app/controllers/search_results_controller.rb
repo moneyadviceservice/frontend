@@ -8,7 +8,7 @@ class SearchResultsController < ApplicationController
     @search_results = SiteSearch::Query.new(
       params[:query],
       options: {
-        index: 'pages',
+        index: ENV['ALGOLIA_SEARCH_INDEX'],
         highlightPreTag: '<b>',
         highlightPostTag: '</b>',
         page: index_zero_page, 

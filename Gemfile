@@ -73,7 +73,7 @@ gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-librar
 gem 'cream', '2.1.8'
 gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11393_Chat_Add-coronavirus-option_v5.40'
 gem 'mas-cms-client', '1.20.0'
-gem 'site_search', '0.3.0'
+gem 'site_search', '0.4.0'
 # Tools
 gem 'action_plans', '~> 5.5.0'
 gem 'advice_plans', '~> 4.1.0'

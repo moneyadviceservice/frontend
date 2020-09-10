@@ -26,6 +26,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://gems.railslts.com/
   remote: http://gems.dev.mas.local/
   specs:
     action_plans (5.5.0)
@@ -581,6 +582,7 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
+    railslts-version (4.2.11.16)
     railties (4.2.11.1)
       actionpack (= 4.2.11.1)
       activesupport (= 4.2.11.1)
@@ -788,7 +790,14 @@ PLATFORMS
 
 DEPENDENCIES
   action_plans (~> 5.5.0)
+  actionmailer!
+  actionpack!
+  actionview!
+  activejob!
+  activemodel!
+  activerecord!
   activerecord-session_store
+  activesupport!
   adal!
   advice_plans (~> 4.1.0)
   aes!
@@ -861,7 +870,9 @@ DEPENDENCIES
   psych (>= 2.0.5)
   quiz (~> 1.4.0)!
   rack-livereload
-  rails (= 4.2.11.1)
+  rails (~> 4.2.10)!
+  railslts-version!
+  railties!
   rb-readline
   recaptcha
   redcarpet

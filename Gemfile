@@ -8,7 +8,7 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-source "https://#{ENV['RAILS_LTS_USERNAME']}:#{ENV['RAILS_LTS_PASSWORD']}@gems.railslts.com" do
+source "https://gems.railslts.com" do
   gem 'rails', '~> 4.2.10'
   gem 'actionmailer',     require: false
   gem 'actionpack',       require: false

@@ -9,7 +9,7 @@ source 'http://gems.dev.mas.local'
 # 4. Only use version specifiers where appropriate
 
 source "https://gems.railslts.com" do
-  gem 'rails', '~> 4.2.10'
+  gem 'rails', '~> 4.2.11'
   gem 'actionmailer',     require: false
   gem 'actionpack',       require: false
   gem 'activemodel',      require: false

@@ -274,14 +274,14 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe '(temp normal ni) ', skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
+        describe '(temp normal ni) ' do
           let(:region) { 'ni' }
           let(:content_prefix) { 'court-fines-temp-normal' }
 
           include_examples 'nationally valid content for national rule'
         end
 
-        describe '(temp normal scotland) ', skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
+        describe '(temp normal scotland) ' do
           let(:region) { 'scotland' }
           let(:content_prefix) { 'court-fines-temp-normal' }
 
@@ -295,14 +295,14 @@ RSpec.describe MoneyNavigator::Questions, type: :model do
           include_examples 'regionally valid content for regional rule'
         end
 
-        describe '(temp no-change ni) ', skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
+        describe '(temp no-change ni) ' do
           let(:region) { 'ni' }
           let(:content_prefix) { 'court-fines-no-change' }
 
           include_examples 'nationally valid content for regional rule'
         end
 
-        describe '(temp no-change scotland) ', skip: '[TP-11529] Awaiting confirmation of behaviour from business' do
+        describe '(temp no-change scotland) ' do
           let(:region) { 'scotland' }
           let(:content_prefix) { 'court-fines-no-change' }
 

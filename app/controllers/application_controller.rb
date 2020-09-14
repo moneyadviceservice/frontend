@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   add_flash_types :success
 
-  layout :check_syndicated_layout
+  layout 'syndicated'
 
   before_action :set_syndicated_x_frame
 
@@ -24,18 +24,8 @@ class ApplicationController < ActionController::Base
 
   helper BudgetWarning
 
-  def syndicated_tool_request?
-    !!request.headers['X-Syndicated-Tool']
-  end
-
-  helper_method :syndicated_tool_request?
-
   def parent_template
-    if syndicated_tool_request?
-      'layouts/engine_syndicated'
-    else
-      'layouts/engine'
-    end
+    'layouts/engine_syndicated'
   end
 
   helper_method :parent_template
@@ -113,16 +103,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_syndicated_x_frame
-    response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?
-  end
-
-  # This layout chops off the header and footer
-  # It is used when the login/registration are presented in an iframe
-  # e.g. https://partner-tools.moneyadviceservice.org.uk/en/users/sign_in
-  # For when tools/engines need users to authenticate as part of their flow
-  # This is vulnerable to clickjacking attacks
-  def check_syndicated_layout
-    'syndicated' if syndicated_tool_request?
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
   end
 
   def clumps

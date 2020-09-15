@@ -367,7 +367,7 @@ class MoneyNavigator::Rules::PriorityBills
               # Q7A7, Q4A4, Q0A2
               triggers: [
                 { q0: ['a2'] },
-                { q7: 'a7', q4: 'a4' }
+                { q7: 'a7', q4: 'a3' }
               ],
               mask: [MASK_ALL + MASK_ALL],
               article: 'coronavirus-court-fines-temp-normal-ni'
@@ -376,7 +376,7 @@ class MoneyNavigator::Rules::PriorityBills
               # Q7A7, Q4A4, Q0A3
               triggers: [
                 { q0: ['a3'] },
-                { q7: 'a7', q4: 'a4' }
+                { q7: 'a7', q4: 'a3' }
               ],
               mask: [MASK_ALL + MASK_ALL],
               article: 'coronavirus-court-fines-temp-normal-scotland'
@@ -521,7 +521,7 @@ class MoneyNavigator::Rules::PriorityBills
               # Q7A9, Q4A4, Q0A2
               triggers: [
                 { q0: 'a2' },
-                { q7: 'a9', q4: 'a4' }
+                { q7: 'a9', q4: 'a3' }
               ],
               mask: [MASK_ALL + MASK_ALL],
               article: 'coronavirus-car-park-temp-normal-ni'
@@ -530,7 +530,7 @@ class MoneyNavigator::Rules::PriorityBills
               # Q7A9, Q4A4, Q0A3
               triggers: [
                 { q0: 'a3' },
-                { q7: 'a9', q4: 'a4' }
+                { q7: 'a9', q4: 'a3' }
               ],
               mask: [MASK_ALL + MASK_ALL],
               article: 'coronavirus-car-park-temp-normal-scotland'

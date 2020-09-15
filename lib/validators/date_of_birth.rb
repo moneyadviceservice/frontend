@@ -12,6 +12,7 @@ module Validators
 
     def valid_date?(value)
       return true if value.is_a?(Date) || value.is_a?(Time)
+
       d, m, y = value.split('/')
       Date.valid_date?(y.to_i, m.to_i, d.to_i)
     end

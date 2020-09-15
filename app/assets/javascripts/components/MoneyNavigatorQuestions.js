@@ -3,11 +3,16 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
   var MoneyNavigatorQuestions,
     i18nStrings = {
-      continue_btn: 'Continue',
-      back_btn: 'Back',
-      yes_btn: 'Yes',
-      no_btn: 'No',
-      submit_btn: 'Submit'
+      controls: {
+        continue_btn: 'Continue',
+        back_btn: 'Back',
+        yes_btn: 'Yes',
+        no_btn: 'No',
+        submit_btn: 'Submit'
+      }, 
+      messages: {
+        completed: 'completed'        
+      }
     };
 
   MoneyNavigatorQuestions = function ($el, config) {
@@ -91,7 +96,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       setJourney(e.target);
     });
   };
-
+  
   /**
    *  This method adds a `question-skip` dataset value to questions
    *  that should not be part of the current journey
@@ -182,7 +187,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .find('.question__content')
           .append(
             '<div class="question__actions"><button class="button button--start" data-get-started="true">' +
-              this.i18nStrings.continue_btn +
+              this.i18nStrings.controls.continue_btn +
               '</button></div>'
           );
         // Adds active class to first question
@@ -193,9 +198,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .find('.question__content')
           .append(
             '<div class="question__actions"><button data-submit="true" class="button button--continue">' +
-              this.i18nStrings.submit_btn +
+              this.i18nStrings.controls.submit_btn +
               '</button><button data-back="true" class="button button--back">' +
-              this.i18nStrings.back_btn +
+              this.i18nStrings.controls.back_btn +
               '</button></div>'
           );
       } else {
@@ -204,9 +209,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .find('.question__content')
           .append(
             '<div class="question__actions"><button data-continue="true" class="button button--continue">' +
-              this.i18nStrings.continue_btn +
+              this.i18nStrings.controls.continue_btn +
               '</button><button data-back="true" class="button button--back">' +
-              this.i18nStrings.back_btn +
+              this.i18nStrings.controls.back_btn +
               '</button></div>'
           );
       }
@@ -289,7 +294,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     $(questions[activeIndex])
       .addClass(this.activeClass)
       .find('.question__counter')
-      .text('Completed ' + progress + '%');
+      .text(progress + '% ' + this.i18nStrings.messages.completed);
 
     if (activeIndex == 0) {
       this.banner.removeClass(
@@ -321,7 +326,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       label.htmlFor = inputId + '_response_yes';
       label.className = 'response__text'; 
-      label.innerHTML = '<span>' + _this.i18nStrings.yes_btn + '</span>'; 
+      label.innerHTML = '<span>' + _this.i18nStrings.controls.yes_btn + '</span>'; 
+      
 
       $(response_yes)
         .attr('data-response', true)
@@ -330,7 +336,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         .append(label); 
 
       $(inputs).each(function() {
-        if ($(this).siblings('label').text().trim() == _this.i18nStrings.no_btn) {
+        if ($(this).siblings('label').text().trim() == _this.i18nStrings.controls.no_btn) {
           response_no = $(this).parents('[data-response]'); 
           
           $(response_no).addClass('button--no')

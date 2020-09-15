@@ -179,6 +179,7 @@ Rails.application.routes.draw do
     # PACE
     get '/moneyadvisernetwork', to: 'pace#show'
     get '/moneyadvisernetwork/privacy', to: 'pace#privacy'
+    get '/moneyadvisernetwork/online', to: 'pace#online'
 
     resource :feedback, only: [:new, :create], controller: :technical_feedback, as: :technical_feedback
 

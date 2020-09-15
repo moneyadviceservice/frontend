@@ -9,9 +9,7 @@ class SearchResultCollectionDecorator < Draper::CollectionDecorator
     { query: object.query }
   end
 
-  def page
-    object.page
-  end
+  delegate :page, to: :object
 
   def first_page?
     page == 1

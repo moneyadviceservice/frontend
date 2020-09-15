@@ -33,67 +33,8 @@ Rails.application.routes.draw do
 
     get '/sitemap', to: 'sitemap#index'
 
-    mount Agreements::Engine => '/:tool_id',
-          constraints: ToolMountPoint.for(:agreements)
-
-    mount AdvicePlans::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:advice_plans)
-
-    mount ActionPlans::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:action_plans)
-
-    mount CostCalculatorBuilder::Engine => '/:engine_id',
-          constraints: EngineMountPoint.for(:cost_calculator_builder)
-
-    mount CarCostTool::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:car_cost_tool)
-
-    mount CutbackCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:cutback_calculator)
-
-    mount DebtAndMentalHealth::Engine => '/:tool_id',
-          constraints: ToolMountPoint.for(:debt_and_mental_health)
-
-    mount DebtFreeDayCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:debt_free_day_calculator)
-
-    mount DebtAdviceLocator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:debt_advice_locator)
-
-    mount DebtTest::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:debt_test)
-
-    mount DecisionTrees::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:decision_trees)
-
-    mount Feedback::Engine => '/improvements'
-
     mount MortgageCalculator::Engine => '/tools/:tool_id',
           constraints: { tool_id: %r{mortgage-calculator|cyfrifiannell-morgais|house-buying|prynu-ty} }
-
-    mount Pacs::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:pacs)
-
-    mount PaydayLoansIntervention::Engine => '/:tool_id',
-          constraints: ToolMountPoint.for(:payday_loans)
-
-    mount PensionsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:pensions_calculator)
-
-    mount Rio::Engine => '/:engine_id',
-          constraints: EngineMountPoint.for(:rio)
-
-    mount UniversalCredit::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:universal_credit)
-
-    mount SavingsCalculator::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:savings_calculator)
-
-    mount Timelines::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:timelines)
-
-    mount Wpcc::Engine => '/tools/:tool_id',
-          constraints: ToolMountPoint.for(:wpcc)
 
     get LandingPagePaths.path(:retirements, :index, :en),     to: 'retirements#index'
     get LandingPagePaths.path(:retirements, :index, :cy),     to: 'retirements#index'

@@ -1,4 +1,4 @@
-module SearchResultsHelper 
+module SearchResultsHelper
   private
 
   def display_search_box_in_header?
@@ -9,4 +9,3 @@ module SearchResultsHelper
     params[:page] ? (params[:page].to_i - 1) : 0
   end
 end
-

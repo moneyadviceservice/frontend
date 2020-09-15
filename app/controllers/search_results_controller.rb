@@ -1,5 +1,5 @@
 class SearchResultsController < ApplicationController
-  include SearchResultsHelper 
+  include SearchResultsHelper
   decorates_assigned :search_results, with: SearchResultCollectionDecorator
 
   def index
@@ -11,11 +11,11 @@ class SearchResultsController < ApplicationController
         index: 'pages',
         highlightPreTag: '<b>',
         highlightPostTag: '</b>',
-        page: index_zero_page, 
+        page: index_zero_page,
         hitsPerPage: 10
       }
     ).results
-    
+
     return render 'search_results/index_with_results' if @search_results.any?
 
     render 'search_results/index_no_results'

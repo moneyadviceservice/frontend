@@ -23,6 +23,9 @@ module World
       money_manager_circumstances_changed
       money_manager_questionnaire
       money_manager_show_all_advice
+      money_navigator
+      money_navigator_questionnaire
+      money_navigator_results
       news
       news_article
       partners

@@ -1,2 +1,0 @@
-class DebtAndMentalHealthController < EmbeddedToolsController
-end

@@ -85,26 +85,6 @@
       include_ga: false
       title: "Christmas planner"
 
-    budget_planner:
-      en:
-        path: "en/tools/budget-planner"
-      cy:
-        path: "cy/tools/cynllunydd-cyllideb"
-      width: "100%"
-      height: "2500px"
-      include_ga: false
-      title: "Budget planner"
-
-    budget_planner_incognito:
-      en:
-        path: "en/tools/budget-planner/incognito"
-      cy:
-        path: "en/tools/cynllunydd-cyllideb/incognito"
-      width: "100%"
-      height: "2500px"
-      include_ga: false
-      title: "Budget planner"
-
     back_to_school:
       en:
         path: "en/cost_planner/plans/back-to-school/start"

@@ -33,18 +33,6 @@ Rails.application.routes.draw do
 
     get '/sitemap', to: 'sitemap#index'
 
-    devise_for :users,
-               only: [:registrations, :sessions, :passwords],
-               controllers: {
-                 registrations: 'registrations',
-                 sessions: 'sessions',
-                 passwords: 'passwords'
-               }
-
-    scope '/users' do
-      resource :profile, only: [:edit, :update], controller: :profile
-    end
-
     mount Agreements::Engine => '/:tool_id',
           constraints: ToolMountPoint.for(:agreements)
 

@@ -43,10 +43,6 @@ module Frontend
 
     config.assets.initialize_on_precompile = true
 
-    config.to_prepare do
-      Devise::Mailer.layout 'email'
-    end
-
     config.exceptions_app = self.routes
 
     # Explicitly declare the app root so that Devise 4.6.x correctly handles

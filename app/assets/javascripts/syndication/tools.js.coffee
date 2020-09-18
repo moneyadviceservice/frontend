@@ -50,23 +50,6 @@
       include_ga: false
       title: "Debt test"
 
-    help_to_buy_quiz:
-      en:
-        path: "en/quiz/help_to_buy"
-      width: "600px"
-      height: "2000px"
-      include_ga: false
-      title: "Help to buy quiz"
-
-    quiz:
-      en:
-        path: "en/tools/quiz/widgets/22/start"
-      cy:
-        path: "cy/tools/quiz/widgets/22/start"
-      width: "100%"
-      height: "2000px"
-      title: "Quiz"
-
     christmas_planner:
       en:
         path: "en/cost_planner/plans/christmas-syndicated/start"

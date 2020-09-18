@@ -1,6 +1,7 @@
 @import 'settings';
 
-@import 'dough/assets/stylesheets/lib';
+@import 'yeast/assets/components/aem_theme/variables';
+
 @import 'yeast/assets/lib/all';
 
 
@@ -39,8 +40,9 @@
 @import 'yeast/assets/components/common/icon_2x';
 @import 'yeast/assets/components/common/lists';
 @import 'yeast/assets/components/common/icon_svg';
-@import 'yeast/assets/components/dough_theme/variables';
-@import 'yeast/assets/components/dough_theme/all.scss';
+ 
+// this is where all known themes are imported from yeast
+@import 'yeast/assets/components/aem_theme/all.scss';
 
 // Local Components
 @import 'components/common/all';

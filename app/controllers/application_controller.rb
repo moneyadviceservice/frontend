@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
 
   before_action :set_syndicated_x_frame
 
-  include Authentication
   include Chat
   include Localisation
   include NotFound

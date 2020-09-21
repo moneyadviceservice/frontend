@@ -91,12 +91,10 @@ RSpec.configure do |c|
     DatabaseCleaner.clean
     ActiveRecord::Tasks::DatabaseTasks.load_schema_current(:ruby, ENV['SCHEMA'])
 
-    Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
   end
 
   c.before :each do
     I18n.locale = :en
-    Core::Registry::Repository[:customer].clear
   end
 end
 

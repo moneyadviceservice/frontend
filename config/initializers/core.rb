@@ -40,17 +40,6 @@ Core::Registry::Repository[:category] =
 
 Core::Registry::Repository[:feedback] = Core::Repository::Feedback::Email.new
 
-if Rails.env.development?
-  Core::Registry::Repository[:customer] =
-    Core::Repository::Customers::Fake.new
-else
-  Core::Registry::Repository[:customer] =
-    Core::Repository::Customers::Cream.new
-end
-
-Core::Registry::Repository[:user] =
-  Core::Repository::Users::Default.new
-
 # Prepare the category tree so that it is available to the application
 Core::CategoryTreeReader.new.call if
   Rails.env.production? and defined?(Rails::Server)

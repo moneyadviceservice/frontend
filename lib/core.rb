@@ -24,7 +24,6 @@ module Core
   autoload :SearchResult, 'core/entity/search_result'
   autoload :SearchResultCollection, 'core/entity/search_result_collection'
   autoload :StaticPage, 'core/entity/static_page'
-  autoload :Customer, 'core/entity/customer'
   autoload :WebChat, 'core/entity/web_chat'
 
   module Feedback
@@ -44,15 +43,6 @@ module Core
   autoload :FooterReader, 'core/interactor/footer_reader'
   autoload :RedirectReader, 'core/interactor/redirect_reader'
 
-  module Interactors
-    module Customer
-      autoload :Finder, 'core/interactor/customer/finder'
-      autoload :Creator, 'core/interactor/customer/creator'
-      autoload :Updater, 'core/interactor/customer/updater'
-    end
-
-    autoload :UserUpdater, 'core/interactor/user_updater'
-  end
 
   module Registry
     autoload :Connection, 'core/registry/connection'
@@ -93,11 +83,6 @@ module Core
       autoload :Email, 'core/repository/feedback/email'
     end
 
-    module Customers
-      autoload :Fake, 'core/repository/customers/fake'
-      autoload :Cream, 'core/repository/customers/cream'
-    end
-
     module CMS
       autoload :AttributeBuilder, 'core/repository/cms/attribute_builder'
       autoload :CMS, 'core/repository/cms/cms'
@@ -120,8 +105,5 @@ module Core
       autoload :Static, 'core/repository/saved_tools/static'
     end
 
-    module Users
-      autoload :Default, 'core/repository/users/default'
-    end
   end
 end

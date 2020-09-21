@@ -17,7 +17,6 @@ ActionController::Base.allow_rescue = false
 DatabaseCleaner.strategy                      = :transaction
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
 
 Around('@fake-articles') do |_scenario, block|
   @real_article_repository = Core::Registry::Repository[:article]
@@ -45,11 +44,9 @@ AfterConfiguration do
   DatabaseCleaner.clean
   ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, ENV['SCHEMA'])
 
-  Core::Registry::Repository[:customer] = Core::Repository::Customers::Fake.new
 end
 
 Before do
-  Core::Registry::Repository[:customer].clear
 end
 
 Before('@export-corporate-partners') do

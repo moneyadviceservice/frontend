@@ -31,7 +31,6 @@ module World
       partners
       profile
       rio
-      search_results
       sitemap
       settings
       sign_in

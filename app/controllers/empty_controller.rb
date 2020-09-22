@@ -3,11 +3,6 @@ class EmptyController < ApplicationController
 
   private
 
-  def hide_elements_irrelevant_for_third_parties?
-    true
-  end
-  helper_method :hide_elements_irrelevant_for_third_parties?
-
   def raw(*); end
   helper_method :raw
 

@@ -171,12 +171,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :corporate_category_navigation
 
-  def hide_elements_irrelevant_for_third_parties?
-    false
-  end
-
-  helper_method :hide_elements_irrelevant_for_third_parties?
-
   def hide_contact_panels?
     false
   end

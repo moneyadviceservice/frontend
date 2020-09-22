@@ -50,24 +50,6 @@
 
       <div class="l-footer-secondary__list--right">
         <ul class="l-footer-secondary__list">
-          <% unless hide_elements_irrelevant_for_third_parties? %>
-          <% if user_signed_in? %>
-          <li class="l-footer-secondary__list-item footer-secondary__sign-out">
-            <%= button_to t('authentication.sign_out'), main_app.destroy_user_session_path, class: 'authentication__link', method: :delete %>
-          </li>
-          <li class="l-footer-secondary__list-item footer-secondary__my-account">
-            <%= link_to t('authentication.my_account'), main_app.edit_profile_path, class: 'authentication__link gtm-my-account-link' %>
-          </li>
-          <% else %>
-          <li class="l-footer-secondary__list-item footer-secondary__sign-in">
-            <%= link_to t('authentication.sign_in'), main_app.new_user_session_path, class: 'authentication__link l-footer-secondary__link' %>
-          </li>
-          <li class="l-footer-secondary__list-item footer-secondary__register">
-            <%= link_to t('authentication.register'), main_app.new_user_registration_path, class: 'authentication__link l-footer-secondary__link' %>
-          </li>
-          <% end %>
-          <% end %>
-
           <li class="l-footer-secondary__list-item">
             <a href="<%= t('footer.contact_us_link') %>"><%= t('footer.contact_us') %></a>
           </li>
@@ -96,18 +78,3 @@
     </div>
   </div>
 </div>
-
-<% if cookies_not_accepted? %>
-<% unless hide_elements_irrelevant_for_third_parties? %>
-<div class="cookie-message">
-  <div class="l-constrained">
-    <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
-      <p class="cookie-message__content">
-        <button class="cookie-message__close-button button"><%= t('footer.cookie_message.close_button') %></button>
-        <%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %>
-      </p>
-    <% end %>
-  </div>
-</div>
-<% end %>
-<% end %>

@@ -1,11 +1,4 @@
 <ul class="mobile-nav">
-  <% unless hide_elements_irrelevant_for_third_parties? %>
-    <li class="mobile-nav__item mobile-nav__item--menu">
-      <a data-dough-mobile-nav-button class="mobile-nav__link mobile-nav__link--menu is-hidden" href="#" role="button">
-        <%= t('mobile_nav.menu') %>
-      </a>
-    </li>
-  <% end %>
   <% if display_search_box_in_header? %>
     <li class="mobile-nav__item mobile-nav__item--search">
       <a class="mobile-nav__link mobile-nav__link--search" href="#search-bar">

@@ -45,6 +45,9 @@ module Frontend
 
     config.exceptions_app = self.routes
 
+    #ensure the npm dependencies are included in the asset path
+    config.assets.paths << Rails.root.join('node_modules')
+
     # Explicitly declare the app root so that Devise 4.6.x correctly handles
     # authentication redirects
     config.relative_url_root = '/'

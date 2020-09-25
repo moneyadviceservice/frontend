@@ -34,9 +34,9 @@ echo "Purging bower components"
 echo "----"
 [ -d vendor/assets/bower_components ] && rm -r vendor/assets/bower_components
 
-echo "Running Bower update (via bowndler)"
+echo "Running npm install"
 echo "----"
-time bowndler update --production --config.interactive=false
+time npm install
 
 echo "Precompiling assets"
 echo "----"

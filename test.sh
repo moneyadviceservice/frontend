@@ -18,7 +18,7 @@ rm -rf vendor/cache .bundle/config
 bundle install --jobs $BUNDLE_JOBS
 bower cache clean
 rm -rf vendor/assets/bower_components
-bowndler update --production --config.interactive=false
+npm install
 
 npm install -q
 ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js

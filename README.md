@@ -43,7 +43,7 @@ Make sure all dependencies are available to the application:
 
 ```sh
 $ bundle install
-$ bowndler install
+$ npm install
 ```
 
 Make sure to copy the .env-example file:
@@ -95,14 +95,6 @@ Unable to fetch Footer JSON from Contento error: [#<Core::Connection::Http::Reso
 The CMS is setup but the database is empty. A solution is to copy the QA CMS database into the CMS, as detailed in the [CMS repository README](https://github.com/moneyadviceservice/cms/blob/master/README.md).
 
 #### Problems loading Dough or Yeast
-
-Assuming you have run `bowndler install`, you may have issues with previous `bower` installations.
-
-```sh
-rm -rf vendor/assets/bower_components
-rm bower.json
-bowndler install
-```
 
 ## Contributing
 

@@ -37,78 +37,82 @@
                 data-question-grouped-group-titles="<%= question[:group_titles] %>"
               <% end %>
             >
-              <% if index > 0 %>
-                <p class="question__counter"><%= t("money_navigator_tool.counter", number: index, total: t("money_navigator_tool.questions").length - 1) %></p>
+              <%= f.form_row question[:code].to_s.downcase.to_sym do %>
+                <%= f.errors_for question[:code].to_s.downcase.to_sym %>
+
+                <% if index > 0 %>
+                  <p class="question__counter"><%= t("money_navigator_tool.counter", number: index, total: t("money_navigator_tool.questions").length - 1) %></p>
+                <% end %>
+
+                <div 
+                  class="question__content question__content--<%= question[:code].downcase %>" 
+                  data-question-id="<%= question[:code].downcase %>"
+                  <% if question[:custom] %>
+                    data-question-custom
+                  <% end %>
+                >
+                  <fieldset>
+                    <legend class="question__heading"><%= question[:text] %></legend>
+
+                    <div class="content__inner">
+                      <% if question[:explainer] %>
+                        <p class="question__explainer"><%= question[:explainer] %></p>
+                      <% end %>
+
+                      <% question[:responses].each do |response| %>
+                        <% if response[:default] %>
+                          <div class="question__response" data-response
+                            <% if response[:group] %>
+                              data-response-group="<%= response[:group] %>"
+                            <% end %>
+                          >
+                            <% if question[:type] == 'radio' %>
+                              <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true %>
+                            <% elsif question[:type] == 'checkbox' %>
+                              <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true}, response[:code].downcase, nil %>
+                            <% end %>
+
+                            <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
+                              <span><%= response[:text] %></span>
+                            </label>
+                          </div>
+                        <% end %>
+                      <% end %>
+
+                      <% question[:responses].each do |response| %>
+                        <% if !response[:default] %>
+                          <div class="question__response" data-response
+                            <% if response[:group] %>
+                              data-response-group="<%= response[:group] %>"
+                            <% end %>
+                          >
+                            <% if question[:type] == 'radio' %>
+                              <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control' %>
+                            <% elsif question[:type] == 'checkbox' %>
+                              <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control'}, response[:code].downcase, nil %>
+                            <% end %>
+
+                            <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
+                              <span>
+                                <% if response[:text].is_a? Array %>
+                                  <span><%= response[:text][0] %></span>
+                                  <span><%= response[:text][1] %></span>
+                                <% else %>
+                                  <%= response[:text] %>
+                                <% end %>
+                              </span>
+                            </label>
+                          </div>
+                        <% end %>
+                      <% end %>
+                     </div>
+                  </fieldset>
+
+                  <% if question[:note] %>
+                    <p class="question__note"><%= question[:note] %></p>
+                  <% end %>
+                </div>
               <% end %>
-
-              <div 
-                class="question__content question__content--<%= question[:code].downcase %>" 
-                data-question-id="<%= question[:code].downcase %>"
-                <% if question[:custom] %>
-                  data-question-custom
-                <% end %>
-              >
-                <fieldset>
-                  <legend class="question__heading"><%= question[:text] %></legend>
-
-                  <div class="content__inner">
-                    <% if question[:explainer] %>
-                      <p class="question__explainer"><%= question[:explainer] %></p>
-                    <% end %>
-
-                    <% question[:responses].each do |response| %>
-                      <% if response[:default] %>
-                        <div class="question__response" data-response
-                          <% if response[:group] %>
-                            data-response-group="<%= response[:group] %>"
-                          <% end %>
-                        >
-                          <% if question[:type] == 'radio' %>
-                            <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true %>
-                          <% elsif question[:type] == 'checkbox' %>
-                            <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control', checked: true}, response[:code].downcase, nil %>
-                          <% end %>
-
-                          <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
-                            <span><%= response[:text] %></span>
-                          </label>
-                        </div>
-                      <% end %>
-                    <% end %>
-
-                    <% question[:responses].each do |response| %>
-                      <% if !response[:default] %>
-                        <div class="question__response" data-response
-                          <% if response[:group] %>
-                            data-response-group="<%= response[:group] %>"
-                          <% end %>
-                        >
-                          <% if question[:type] == 'radio' %>
-                            <%= f.radio_button question[:code].downcase, response[:code].downcase, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control' %>
-                          <% elsif question[:type] == 'checkbox' %>
-                            <%= f.check_box question[:code].downcase, {multiple: true, id: question[:code].downcase + '_' + response[:code].downcase, class: 'response__control'}, response[:code].downcase, nil %>
-                          <% end %>
-
-                          <label for="<%= question[:code].downcase + "_" + response[:code].downcase %>" class="response__text">
-                            <span>
-                              <% if response[:text].is_a? Array %>
-                                <span><%= response[:text][0] %></span>
-                                <span><%= response[:text][1] %></span>
-                              <% else %>
-                                <%= response[:text] %>
-                              <% end %>
-                            </span>
-                          </label>
-                        </div>
-                      <% end %>
-                    <% end %>
-                   </div>
-                </fieldset>
-
-                <% if question[:note] %>
-                  <p class="question__note"><%= question[:note] %></p>
-                <% end %>
-              </div>
             </li>
           <% end %>
         </ul>

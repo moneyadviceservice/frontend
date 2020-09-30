@@ -91,25 +91,15 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
     }); 
 
-    it ('Checks that the correct method is called when the `reset` and `back` options are activated', function() {
+    it ('Checks that the correct method is called when the `reset` option is activated', function() {
       var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
       var resetBtn = $(responseCollections[0]).find('[data-reset]'); 
       var backBtn = $(this.groupedQuestion).find('[data-back]'); 
 
-      // Test Reset button
       $(resetBtn).trigger('click'); 
 
       expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(resetBtn[0])).to.be.true; 
-
-      // Test Back button
-      // TODO in TP11686 when the test is added for the `_scrollToTop` method. 
-      // At the moment this test is dependant on that one being run.  
-
-      // $(backBtn).trigger('click'); 
-
-      // expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
-      // expect(this.updateGroupedQuestionsDisplaySpy.calledWith(backBtn[0])).to.be.true; 
     }); 
   }); 
 

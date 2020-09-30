@@ -8,7 +8,18 @@ source 'http://gems.dev.mas.local'
 # 3. Place dependencies in the group they belong
 # 4. Only use version specifiers where appropriate
 
-gem 'rails', '4.2.11.1'
+source "https://gems.railslts.com" do
+  gem 'rails', '~> 4.2.11'
+  gem 'actionmailer',     require: false
+  gem 'actionpack',       require: false
+  gem 'activemodel',      require: false
+  gem 'activerecord',     require: false
+  gem 'activesupport',    require: false
+  gem 'railties',         require: false
+  gem 'actionview',       require: false
+  gem 'activejob',        require: false
+  gem 'railslts-version', require: false
+end
 
 gem 'activerecord-session_store'
 
@@ -77,7 +88,9 @@ gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', '~> 3.13.0'
+# gem 'mortgage_calculator', '~> 3.14.0'
+# gem 'mortgage_calculator', path: '../mortgage_calculator'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11778_LBTT_Update-table'
 gem 'pacs', '3.11.0'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 2.6.1'

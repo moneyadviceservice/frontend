@@ -15,7 +15,7 @@ describe('MoneyNavigatorQuestions', function() {
           fixture.load('MoneyNavigatorQuestions.html');
           self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
-          self.banner = $('#fixture_container').find('[data-banner]'); 
+          self.banner = $(self.component).parents().find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
           self.activeClass = self.obj.activeClass; 
           self.inactiveClass = self.obj.inactiveClass; 
@@ -91,25 +91,15 @@ describe('MoneyNavigatorQuestions', function() {
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
     }); 
 
-    it ('Checks that the correct method is called when the `reset` and `back` options are activated', function() {
+    it ('Checks that the correct method is called when the `reset` option is activated', function() {
       var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
       var resetBtn = $(responseCollections[0]).find('[data-reset]'); 
       var backBtn = $(this.groupedQuestion).find('[data-back]'); 
 
-      // Test Reset button
       $(resetBtn).trigger('click'); 
 
       expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(resetBtn[0])).to.be.true; 
-
-      // Test Back button
-      // TODO in TP11686 when the test is added for the `_scrollToTop` method. 
-      // At the moment this test is dependant on that one being run.  
-
-      // $(backBtn).trigger('click'); 
-
-      // expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
-      // expect(this.updateGroupedQuestionsDisplaySpy.calledWith(backBtn[0])).to.be.true; 
     }); 
   }); 
 
@@ -498,8 +488,7 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
     }); 
 
-    // TODO: Fix this test (in Tech Debt)
-    xit('Shows/hides the banner when active question is/not Q0', function() {
+    it('Shows/hides the banner when active question is/not Q0', function() {
       var hiddenClass = 'l-money_navigator__banner' + '--' + this.hiddenClass; 
 
       this.obj._updateDOM(); 

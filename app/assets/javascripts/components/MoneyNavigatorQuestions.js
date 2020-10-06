@@ -25,7 +25,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$questions = this.$el.find('[data-question]');
     this.$multipleQuestions = this.$el.find('[data-question-multiple]');
     this.$groupedQuestions = this.$el.find('[data-question-grouped]');
-    this.banner = $(document).find('[data-banner]');
+    this.$banner = this.$el.siblings('[data-banner]');
     this.activeClass = 'question--active';
     this.inactiveClass = 'question--inactive'; 
     this.hiddenClass = 'is-hidden';
@@ -69,12 +69,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group], [data-response]'); 
-      var groups = {}; 
-      var titles = $(this).data('question-grouped-group-titles'); 
-      var i = 0; 
-      var groupNum = 0; 
-      var questionResponses = document.createElement('div'); 
+      var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
+          groups = {},
+          titles = $(this).data('question-grouped-group-titles'),
+          i = 0,
+          groupNum = 0,
+          questionResponses = document.createElement('div'); 
 
       // Collect all responses into arrays and remove from DOM
       $groupedResponses.each(function() {
@@ -104,15 +104,35 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         if (num === 'default') {
           $(questionResponses).prepend(groups[num].outerHTML); 
         } else {
-          var response = document.createElement('div'); 
-          var collection = document.createElement('div'); 
-          var reset = document.createElement('button'); 
+          var response = document.createElement('div'), 
+              collection = document.createElement('div'), 
+              reset = document.createElement('button'), 
+              input = document.createElement('input'), 
+              label = document.createElement('label'), 
+              span = document.createElement('span'), 
+              para = document.createElement('p'), 
+              labelText = document.createTextNode(titles[i]), 
+              paraText = document.createTextNode(titles[i])
+
+          span.appendChild(labelText); 
+
+          label.className = 'response__text'; 
+          label.setAttribute('for', 'control_' + num); 
+          label.appendChild(span)
+
+          input.className = 'response__control'; 
+          input.type = 'checkbox'; 
+          input.id = 'control_' + num;
+          input.value = ''; 
+
+          para.className = 'collection__title'; 
+          para.appendChild(paraText); 
 
           // Add responses to the DOM
-          $(response)
-            .append('<input class="response__control" id="control_' + num + '" type="checkbox" value=""><label for="control_' + num + '" class="response__text"><span>' + titles[i] + '</span></label></div>')
-            .attr('data-response-group-control', num)
-            .addClass('question__response question__response--control'); 
+          response.setAttribute('data-response-group-control', num); 
+          response.className = 'question__response question__response--control';
+          response.appendChild(input); 
+          response.appendChild(label); 
 
           $(this).find('.content__inner').append(response); 
 
@@ -133,7 +153,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             .text(_this.i18nStrings.controls.reset); 
 
           $(this).find('.content__inner').append(collection);
-          $(collection).prepend('<p class="collection__title">' + titles[i] + '</p>'); 
+          $(collection).prepend(para); 
           $(collection).append(reset); 
           $(collection).css({
             'marginLeft': (1 / groupNum * -100 * i) + '%', 
@@ -271,6 +291,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     });
   };
 
+  /**
+   *  This method deals with the analytics requirements of the tool
+   *  It adds data on the questions answered by the user to the global `dataLayer` object
+   */
   MoneyNavigatorQuestions.prototype._updateAnalytics = function(btn, dataLayer) {
     var question = $(btn).parents('[data-question-id]'); 
     var eventAction = $(question).data('questionId').toUpperCase(); 
@@ -331,6 +355,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     }
   };
 
+  /**
+   * This method is called once when the tool is loaded
+   * It restructures the DOM to present the questions as required
+   * and adds event listeners where required
+   */
   MoneyNavigatorQuestions.prototype._updateDOM = function (dataLayer) {
     var _this = this;
     var dataLayer = dataLayer;
@@ -339,41 +368,61 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$submitBtn.remove();
 
     for (var i = 0, length = this.$questions.length; i < length; i++) {
-      var question = this.$questions[i];
+      var question = this.$questions[i],
+          div = document.createElement('div'),
+          btn_start = document.createElement('button'),
+          btn_continue = document.createElement('button'),
+          btn_back = document.createElement('button'),
+          btn_submit = document.createElement('button'),
+          startText = document.createTextNode(this.i18nStrings.controls.continue_btn),
+          continueText = document.createTextNode(this.i18nStrings.controls.continue_btn),
+          backText = document.createTextNode(this.i18nStrings.controls.back_btn),
+          submitText = document.createTextNode(this.i18nStrings.controls.submit_btn); 
+
+      div.className = 'question__actions'; 
+
+      btn_start.appendChild(startText); 
+      btn_start.className = 'button button--start'; 
+      btn_start.dataset.getStarted = true; 
+
+      btn_continue.appendChild(continueText); 
+      btn_continue.className = 'button button--continue'; 
+      btn_continue.dataset.continue = true; 
+
+      btn_back.appendChild(backText); 
+      btn_back.className = 'button button--back'; 
+      btn_back.dataset.back = true; 
+
+      btn_submit.appendChild(submitText); 
+      btn_submit.className = 'button button--continue'; 
+      btn_submit.dataset.submit = true; 
 
       if (i === 0) {
-        // Adds get-started button to first question
+        // Adds start button to first question
+        div.appendChild(btn_start); 
+
         $(question)
           .find('.question__content')
-          .append(
-            '<div class="question__actions"><button class="button button--start" data-get-started="true">' +
-              this.i18nStrings.controls.continue_btn +
-              '</button></div>'
-          );
+          .append(div);
+
         // Adds active class to first question
         $(question).addClass(_this.activeClass);
       } else if (i === length - 1) {
-        // Adds submit button to last question
+        // Adds submit and back buttons to last question
+        div.appendChild(btn_submit); 
+        div.appendChild(btn_back); 
+
         $(question)
           .find('.question__content')
-          .append(
-            '<div class="question__actions"><button data-submit="true" class="button button--continue">' +
-              this.i18nStrings.controls.submit_btn +
-              '</button><button data-back="true" class="button button--back">' +
-              this.i18nStrings.controls.back_btn +
-              '</button></div>'
-          );
+          .append(div);
       } else {
         // Adds continue and back buttons to all other questions
+        div.appendChild(btn_continue); 
+        div.appendChild(btn_back); 
+
         $(question)
           .find('.question__content')
-          .append(
-            '<div class="question__actions"><button data-continue="true" class="button button--continue">' +
-              this.i18nStrings.controls.continue_btn +
-              '</button><button data-back="true" class="button button--back">' +
-              this.i18nStrings.controls.back_btn +
-              '</button></div>'
-          );
+          .append(div);
       }
     }
 
@@ -412,6 +461,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     }); 
   }
 
+  /**
+   * A method to ensure the questions are presented at the correct scroll position as the user moves through the tool
+   */
   MoneyNavigatorQuestions.prototype._scrollToTop = function() {
     $('html, body').animate({
         scrollTop: $('#money_navigator__questions').offset().top
@@ -419,6 +471,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     );          
   }; 
 
+  /**
+   * This method deals with the presentation of the questions as the user moves back and forth through the tool
+   */
   MoneyNavigatorQuestions.prototype._updateDisplay = function(dir) {
     var activeIndex, 
         progress, 
@@ -458,16 +513,19 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .text(progress + '% ' + this.i18nStrings.messages.completed);
 
     if (activeIndex == 0) {
-      this.banner.removeClass(
+      this.$banner.removeClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     } else {
-      this.banner.addClass(
+      this.$banner.addClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass
       );
     }
   };
 
+  /**
+   * This method deals with the UI associated with the intial presentation of multiple (checkbox) questions
+   */
   MoneyNavigatorQuestions.prototype._setUpMultipleQuestions = function () {
     var _this = this;
 
@@ -480,7 +538,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       var response_yes = document.createElement('div'); 
       var response_no, input_no, input_yes;
 
-
       input.type = 'checkbox'; 
       input.id = inputId + '_response_yes'; 
       input.className = 'response__control'; 
@@ -489,7 +546,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       label.className = 'response__text'; 
       label.innerHTML = '<span>' + _this.i18nStrings.controls.yes_btn + '</span>'; 
       
-
       $(response_yes)
         .attr('data-response', true)
         .addClass('question__response button--yes')
@@ -527,6 +583,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     }); 
   }; 
 
+  /**
+   * This method deals with the functionality of multiple (checkbox) questions
+   */
   MoneyNavigatorQuestions.prototype._updateMultipleQuestion = function(input) {
     var question = $(input).parents('[data-question]'); 
     var inputs = $(question).find('input[type="checkbox"]'); 

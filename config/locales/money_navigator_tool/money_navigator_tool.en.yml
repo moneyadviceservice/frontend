@@ -128,14 +128,14 @@ en:
         responses:
           - code: A1
             text: 'Yes'
-            sort_order: 1
+            sort_order: 2
           - code: A2
             text: 'No'
-            sort_order: 2
+            sort_order: 3
           - code: A3
             text: 'I am not self employed'
             default: true
-            sort_order: 3
+            sort_order: 1
       - code: Q4
         type: radio
         custom: true
@@ -144,10 +144,10 @@ en:
         responses:
           - code: A4
             text: No change/saved money
-            sort_order: 1
+            sort_order: 2
           - code: A1
             text: 'Long term drop in income (eg: redundancy, or work stopped indefinitely)'
-            sort_order: 2
+            sort_order: 1
             default: true
           - code: A2
             text: Temporary drop and worried about my future security
@@ -162,14 +162,14 @@ en:
         responses:
           - code: A1
             text: Self-employment income support scheme
-            sort_order: 2
+            sort_order: 1
             default: true
           - code: A2
             text: Furlough scheme
             sort_order: 3
           - code: A3
             text: 'No'
-            sort_order: 1
+            sort_order: 2
       - code: Q6
         type: radio
         grouped: true

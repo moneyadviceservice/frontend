@@ -39,6 +39,12 @@ Install Bower
 npm install -g bower
 ```
 
+Add Rails LTS credentials (get the username and password from keepass)
+
+```sh
+bundle config gems.railslts.com USERNAME:PASSWORD
+```
+
 Make sure all dependencies are available to the application:
 
 ```sh

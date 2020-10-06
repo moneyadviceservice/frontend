@@ -1,7 +1,7 @@
 .l-money_navigator {
 	.question__actions {
 		@extend %clearfix;
-		@include row(12); 
+
 		margin-top: $baseline-unit * 4; 
 
 		@include respond-to($mq-m) {
@@ -9,6 +9,10 @@
 				float: left;
 				clear: left;
 			}
+		}
+
+		@include respond-to($mq-l) {
+			@include row(12); 
 		}
 	}
 
@@ -329,7 +333,11 @@
 			text-align: left; 
 
 			@include respond-to($mq-l) {
+				$image-height: 371;
+				$image-width: 296;
+
 				@include column(3);
+
 				text-align: center;
 				color: $color-green-secondary; 
 				padding-left: $default-gutter !important; 
@@ -338,36 +346,38 @@
 				border-radius: 0 !important; 
 				background: $color-white !important; 
 
-				span {
-					display: inline-block;
-					width: 100%;
-			    padding-top: calc(#{$baseline-unit * 2} + (371 / 295 * 100%)); 
-			    background-size: contain; 
-			    background-repeat: no-repeat;
-			    background-position: top; 
+				span:before {
+					content: ''; 
+					display: block;
+					height: 0; 
+					padding: $image-height / $image-width * 100% 0 0; 
+					margin: 0 0 $baseline-unit * 2; 
+					background-image: image_url('money_navigator_tool/image-sprite.png');
+					background-repeat: no-repeat;
+					background-size: 400%; 
 				}
 
 				&[for="q0_a1"] {
-					span {
-				    background-image: image_url('money_navigator_tool/maps/map-england.png');
+					span:before {
+				    background-position: left top; 
 					}
 				}
 
 				&[for="q0_a2"] {
-					span {
-				    background-image: image_url('money_navigator_tool/maps/map-ni.png');
+					span:before {
+				    background-position: left (1 / 3 * 100%) top; 
 					}
 				}
 
 				&[for="q0_a3"] {
-					span {
-				    background-image: image_url('money_navigator_tool/maps/map-scotland.png');
+					span:before {
+				    background-position: right (1 / 3 * 100%) top; 
 					}
 				}
 
 				&[for="q0_a4"] {
-					span {
-				    background-image: image_url('money_navigator_tool/maps/map-wales.png');
+					span:before {
+				    background-position: right top; 
 					}
 				}
 			}

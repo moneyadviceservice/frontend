@@ -138,6 +138,8 @@
 			.listitem__png {
 				display: block;
 				height: 0; 
+				position: absolute;
+				top: 0;
 				background-repeat: no-repeat;
 				background-image: image_url('money_navigator_tool/image-sprite.png'); 
 			}
@@ -154,6 +156,12 @@
 						@include logo(102, 108, 390, 500, 2); 
 					}
 				}
+			}
+
+			&.listitem__business_debtline {
+				.listitem__svg {
+					@include svg-logo(90);
+				}
 
 				.listitem__png {
 					@include logo(140, 90, 120, 380); 
@@ -162,6 +170,12 @@
 						@include logo(140, 90, 600, 500, 2); 
 					}
 				}
+			}
+
+			&.listitem__national_debtline {
+				.listitem__svg {
+					@include svg-logo(93);
+				}
 
 				.listitem__png {
 					@include logo(142, 93, 270, 380); 
@@ -169,6 +183,12 @@
 					@include device-pixel-ratio() {
 						@include logo(142, 93, 890, 500, 2); 
 					}
+				}
+			}
+
+			&.listitem__stepchange {
+				.listitem__svg {
+					@include svg-logo(48);
 				}
 
 				.listitem__png {
@@ -196,7 +216,7 @@
 
 			&.listitem__turn2us {
 				.listitem__svg {
-					display: none;
+					@include svg-logo(25);
 				}
 
 				.listitem__png {
@@ -210,7 +230,7 @@
 
 			&.listitem__shelter {
 				.listitem__svg {
-					display: none;
+					@include svg-logo(79);
 				}
 
 				.listitem__png {
@@ -224,7 +244,7 @@
 
 			&.listitem__shelter_cymru {
 				.listitem__svg {
-					display: none;
+					@include svg-logo(97);
 				}
 
 				.listitem__png {
@@ -238,7 +258,7 @@
 
 			&.listitem__shelter_scotland {
 				.listitem__svg {
-					display: none;
+					@include svg-logo(96);
 				}
 
 				.listitem__png {

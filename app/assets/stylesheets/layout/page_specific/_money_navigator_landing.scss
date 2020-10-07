@@ -69,13 +69,9 @@
 		margin-bottom: 0; 
 
 		.supporting-partners__listitem {
-			// Values: 
+			// Values for logo container: 
 			// $max-width = the maximum width of the display area of the logo
 			// $max-height = the maximum height of the display area of the logo
-			// $sprite-width = the total width of the image sprite
-			// $sprite-height = the total height of the image sprite
-			$sprite-width: 1184;
-			$sprite-height: 1040;
 			$max-width: 216; 
 			$max-height: 144;
 
@@ -84,32 +80,78 @@
 			height: 0; 
 			position: relative;
 			padding-top: $max-height / $max-width * ((100% / 2) - ($default-gutter * 2)); 
+			// height: $max-height / $max-width * ((100% / 2) - ($default-gutter * 2)); 
 
 			@include respond-to($mq-s) {
 				@include column(4); 
 
 				padding-top: $max-height / $max-width * ((100% / 3) - ($default-gutter * 2)); 
+				// height: $max-height / $max-width * ((100% / 3) - ($default-gutter * 2)); 
 			}
 
 			@include respond-to($mq-m) {
 				@include column(3); 
 
 				padding-top: $max-height / $max-width * ((100% / 4) - ($default-gutter * 2)); 
+				// height: $max-height / $max-width * ((100% / 4) - ($default-gutter * 2)); 
 			}
 
 			@include respond-to($mq-l) {
 				@include column(2); 
 
 				padding-top: $max-height / $max-width * ((100% / 6) - ($default-gutter * 2)); 
+				// height: $max-height / $max-width * ((100% / 6) - ($default-gutter * 2)); 
+			}
+
+			// Values for SVG sprite: 
+			// $max-logo-height = the maximum height at which the logo is displayed responsively
+			@mixin svg-logo($max-logo-height) {
+				position: absolute;
+				top: 0;
+				width: /* $max-logo-width $max-width * */ 100%;
+				height: $max-logo-height / $max-height * 100%;
+				// padding-top: $max-logo-height / $max-width * 100%;
+				margin-top: ($max-height - $max-logo-height) / $max-width * 50%;
+					// 0 
+					// 0 
+					// 0
+					// (100% - ($max-logo-width / $max-width * 100%)) / 2; 
+				// background-position: 
+				// 	left $sprite-left / ($sprite-width - ($max-logo-width * $ratio)) * 100%
+				// 	top $sprite-top / ($sprite-height - ($max-logo-height * $ratio)) * 100%;
+				// background-size: $sprite-width / $max-logo-width * 100% / $ratio; 
+			}
+
+			&.listitem__citizens_advice {
+				svg {
+					// width: 100%;
+					// height: 108 / $max-height * 100%;
+					@include svg-logo(108);
+
+					// position: absolute;
+					// top: 0;
+				}
+
+				// @include logo(102, 108, 10, 380); 
+
+				// @include device-pixel-ratio() {
+				// 	@include logo(102, 108, 390, 500, 2); 
+				// }
 			}
 
 			.listitem__content {
-				// Values: 
+				// Values for PNG sprite: 
+				// $sprite-width = the total width of the image sprite
+				// $sprite-height = the total height of the image sprite
 				// $max-logo-width = the maximum width at which the logo is displayed responsively
 				// $max-logo-height = the maximum height at which the logo is displayed responsively
 				// $sprite-left = the position of the logo on the sprite from its left edge
 				// $sprite-top = the position of the logo on the sprite from its top edge
 				// $ratio = device resolution
+
+				$sprite-width: 1184;
+				$sprite-height: 1040;
+
 				@mixin logo($max-logo-width, $max-logo-height, $sprite-left, $sprite-top, $ratio: 1) {
 					width: $max-logo-width / $max-width * 100%;
 					padding-top: $max-logo-height / $max-width * 100%;

@@ -76,7 +76,7 @@
 					<% t("money_navigator_tool.landing.supporting-partners.partners").each do |partner| %>
 						<li class="supporting-partners__listitem listitem__<%= partner.parameterize.underscore %>">
 							<svg xmlns="http://www.w3.org/2000/svg" class="listitem__svg" focusable="false">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-partner--citizens_advice"></use>
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-partner--<%= partner.parameterize.underscore %>"></use>
 							</svg>
 
 							<span class="listitem__png"></span>

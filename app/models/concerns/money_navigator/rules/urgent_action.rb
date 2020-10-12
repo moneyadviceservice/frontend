@@ -117,10 +117,10 @@ class MoneyNavigator::Rules::UrgentAction
                 { q4: %w[a1 a2 a3], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9] },
                 { q3: ['a1'] }
               ],
-              mask: [MASK_SOME + MASK_ALL + MASK_ALL + MASK_SOME, MASK_NONE,
-                     MASK_ALL + MASK_ALL + MASK_ALL + MASK_SOME, MASK_NONE,
-                     MASK_SOME + MASK_ALL + MASK_ALL+ MASK_ALL, MASK_NONE,
-                     MASK_ALL + MASK_ALL + MASK_ALL + MASK_ALL, MASK_NONE
+              mask: [MASK_SOME + MASK_ALL + MASK_ALL + MASK_SOME + MASK_NONE,
+                     MASK_ALL + MASK_ALL + MASK_ALL + MASK_SOME + MASK_NONE,
+                     MASK_SOME + MASK_ALL + MASK_ALL+ MASK_ALL + MASK_NONE,
+                     MASK_ALL + MASK_ALL + MASK_ALL + MASK_ALL + MASK_NONE
               ],
               article: 'coronavirus-self-employed-debt-advice'
             },

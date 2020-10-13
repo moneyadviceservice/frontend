@@ -135,6 +135,14 @@
 				padding-top: $max-height / $max-width * ((100% / 6) - ($default-gutter * 2)); 
 			}
 
+			.listitem__svg {
+				display: none;
+
+				.svg & {
+					display: block; 
+				}
+			}
+
 			.listitem__png {
 				display: block;
 				height: 0; 
@@ -142,6 +150,10 @@
 				top: 0;
 				background-repeat: no-repeat;
 				background-image: image_url('money_navigator_tool/image-sprite.png'); 
+
+				.svg & {
+					display: none; 
+				}
 			}
 
 			&.listitem__citizens_advice {
@@ -210,6 +222,10 @@
 
 					@include device-pixel-ratio() {
 						@include logo(156, 46, 10, 730, 2); 
+					}
+
+					.svg & {
+						display: block; 
 					}
 				}
 			}

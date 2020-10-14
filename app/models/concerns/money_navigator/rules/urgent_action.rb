@@ -9,14 +9,14 @@ class MoneyNavigator::Rules::UrgentAction
 
         {
           # Get Free debt advice now' Rules
-          # Any of these Q4A1, Q6A6, Q7A1-A9, Q10A3 PLUS the regional variation
+          # Any of these Q4A1, Q4A2, Q6A4, Q6A5, Q6A6, Q7A1-A9  BUT NOT IF HAVE SELECTED Q10A1 PLUS the regional variation
           heading_code: 'H1',
           content_rules: [
             {
               triggers: [
                 { q0: 'a1' },
-                { q4: 'a1', q6: ['a6'], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q10: 'a3' },
-                { q1: 'a2' }
+                { q4: %w[a1 a2], q6: %[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q10: 'a1' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-england'
@@ -24,8 +24,8 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a2' },
-                { q4: 'a1', q6: ['a6'], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q10: 'a3' },
-                { q1: 'a2' }
+                { q4: %w[a1 a2], q6: %[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q10: 'a1' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-ni'
@@ -33,8 +33,8 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a3' },
-                { q4: 'a1', q6: ['a6'], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q10: 'a3' },
-                { q1: 'a2' }
+                { q4: %w[a1 a2], q6: %[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q10: 'a1' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-scotland'
@@ -42,8 +42,8 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a4' },
-                { q4: 'a1', q6: ['a6'], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q10: 'a3' },
-                { q1: 'a2' }
+                { q4: %w[a1 a2], q6: %[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q10: 'a1' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-wales'

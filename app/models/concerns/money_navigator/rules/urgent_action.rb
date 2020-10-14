@@ -54,8 +54,7 @@ class MoneyNavigator::Rules::UrgentAction
         {
           heading_code: 'H2',
           content_rules: [
-            # All of these Q3A1, Q4A2 OR Q4A3, Q6A4 OR Q6A5, Q9A1-A11, Q10A1, BUT NOT IF HAVE ALSO SELECTED Q4A4, Q4A1, Q6A6, Q7A1-A9, Q10A3
-            # Show if any of these Q4A2, Q4A3, Q6A4, Q6A5, Q9A1-A11, Q10A1  BUT NOT IF HAVE ALSO SELECTED Q4A4, Q4A1, Q6A6, Q7A1-A9, Q10A3
+            #All of these (Q3A1 or Q3A3) AND (Q4A2 OR Q4A3 OR Q4A4) AND (Q6A4 OR Q6A5) AND Q10A1 AND ANY OF THESE (Q9A1-A11) OR (Q7A1-Q7A9), BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6
             {
               triggers: [
                 { q3: %w[a1 a3] },

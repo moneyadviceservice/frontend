@@ -25,24 +25,6 @@ GIT
       rails (>= 3.2, < 5.1.0)
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 1ebefedc26055ef56a4ade32e92e9083d035c09c
-  branch: feature/TP-11788_pacs_new_data_fields
-  specs:
-    pacs (3.12.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
 GEM
   remote: https://rubygems.org/
   remote: https://gems.railslts.com/
@@ -522,7 +504,7 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.6.1)
+    pensions_calculator (2.7.1)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
@@ -869,7 +851,7 @@ DEPENDENCIES
   opening_hours
   pacs!
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator (~> 2.6.1)
+  pensions_calculator (~> 2.7.1)
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug

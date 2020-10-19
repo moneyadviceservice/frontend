@@ -2,6 +2,8 @@
                  description: t('money_navigator_tool.meta.description'),
                  canonical:   "#{t('money_navigator_tool.meta.canonical')}") %>
 
+<%= render 'money_navigator_tool/svg/partners_sprite' %>
+
 <div class="l-container-tool">
 	<main>
 		<div class="l-money_navigator-landing">
@@ -72,10 +74,14 @@
 
 				<ul class="supporting-partners__list">
 					<% t("money_navigator_tool.landing.supporting-partners.partners").each do |partner| %>
-						<li class="supporting-partners__listitem">
-							<span class="listitem__content listitem__<%= partner.parameterize.underscore %>">
-								<span class="visually-hidden"><%= partner %></span>
-							</span>
+						<li class="supporting-partners__listitem listitem__<%= partner.parameterize.underscore %>">
+							<svg xmlns="http://www.w3.org/2000/svg" class="listitem__svg" focusable="false">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-partner--<%= partner.parameterize.underscore %>"></use>
+							</svg>
+
+							<span class="listitem__png"></span>
+
+							<span class="visually-hidden"><%= partner %></span>
 						</li>
 					<% end %>
 				</ul>

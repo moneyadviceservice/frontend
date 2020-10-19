@@ -16,7 +16,7 @@ class MoneyNavigator::Rules::UrgentAction
               triggers: [
                 { q0: 'a1' },
                 { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
-                { q10: 'a1' }
+                { q1: 'a2' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-england'
@@ -25,7 +25,7 @@ class MoneyNavigator::Rules::UrgentAction
               triggers: [
                 { q0: 'a2' },
                 { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
-                { q10: 'a1' }
+                { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-ni'
@@ -34,7 +34,7 @@ class MoneyNavigator::Rules::UrgentAction
               triggers: [
                 { q0: 'a3' },
                 { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
-                { q10: 'a1' }
+                { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-scotland'
@@ -43,7 +43,7 @@ class MoneyNavigator::Rules::UrgentAction
               triggers: [
                 { q0: 'a4' },
                 { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
-                { q10: 'a1' }
+                { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
               article: 'coronavirus-debt-advice-wales'

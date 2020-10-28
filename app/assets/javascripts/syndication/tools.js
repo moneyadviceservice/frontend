@@ -17,6 +17,11 @@
     logoStyles: "display: block; margin-bottom: 8px; width: 300px",
     logoAltText: "Money Advice Service",
     toolConfig: {
+      test_content: {
+        en: {
+          path: ''
+        },
+      }, 
       employer_best_practices: {
         en: {
           path: 'en/employer-best-practices/money-guide'

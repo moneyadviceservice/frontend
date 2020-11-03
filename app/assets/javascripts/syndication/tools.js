@@ -19,8 +19,10 @@
     toolConfig: {
       test_content: {
         en: {
-          path: ''
+          path: 'content-1'
         },
+        width: "100%",
+        height: "400px",
       }, 
       employer_best_practices: {
         en: {

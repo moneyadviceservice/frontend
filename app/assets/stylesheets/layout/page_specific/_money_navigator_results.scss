@@ -291,7 +291,6 @@ $transition-time: 0.4s;
 				margin-bottom: 0; 
 
 				p, a {
-					font-size: 0.875rem; 
 					margin: $baseline-unit 0;
 				}
 
@@ -302,6 +301,21 @@ $transition-time: 0.4s;
 					&:hover,
 					&:focus {
 						text-decoration: none;
+					}
+				}
+
+				ul {
+					list-style: none;
+
+					li:before {
+						content: '\2022';
+						color: #006a00;
+						display: block;
+						position: relative;
+						width: 0;
+						height: 0;
+						left: -20px;
+						top: -1px;
 					}
 				}
 
@@ -323,6 +337,10 @@ $transition-time: 0.4s;
 						border-style: solid;
 						border-width: 10px 0 0 10px;
 						border-color: transparent transparent transparent $color-article-cta;
+					}
+
+					h2:first-child {
+						margin-top: 0; 
 					}
 				}
 			}

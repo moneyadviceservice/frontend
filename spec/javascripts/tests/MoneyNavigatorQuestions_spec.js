@@ -34,6 +34,7 @@ describe('MoneyNavigatorQuestions', function() {
       var setUpMultipleQuestionsStub = sinon.stub(this.obj, '_setUpMultipleQuestions'); 
       var setUpGroupedQuestionsStub = sinon.stub(this.obj, '_setUpGroupedQuestions'); 
       var setUpJourneyLogicStub = sinon.stub(this.obj, '_setUpJourneyLogic'); 
+      var setUpKeyboardEventsStub = sinon.stub(this.obj, '_setUpKeyboardEvents'); 
       
       this.obj.init();
 
@@ -41,11 +42,13 @@ describe('MoneyNavigatorQuestions', function() {
       expect(setUpMultipleQuestionsStub.calledOnce).to.be.true; 
       expect(setUpGroupedQuestionsStub.calledOnce).to.be.true; 
       expect(setUpJourneyLogicStub.calledOnce).to.be.true; 
+      expect(setUpKeyboardEventsStub.calledOnce).to.be.true; 
 
       updateDOMStub.restore(); 
       setUpMultipleQuestionsStub.restore(); 
       setUpGroupedQuestionsStub.restore(); 
       setUpJourneyLogicStub.restore(); 
+      setUpKeyboardEventsStub.restore(); 
     });
   });
 
@@ -72,24 +75,55 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(collections[1]).find('[data-response]').length).to.equal(2); 
     }); 
 
-    it ('Checks that the correct method is called when the `response-control` options are activated', function() {
+    it('Checks that the correct method is called when the `response-control` options are activated', function() {
       var responseControls = $(this.groupedQuestion).find('[data-response-controls]'); 
       var inputs = $(responseControls).find('input'); 
 
       $(inputs[0]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 1).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.false; 
 
       $(inputs[1]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledTwice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 2).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.false; 
 
       $(inputs[2]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledThrice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 3).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
     }); 
 
-    it ('Checks that the correct method is called when the `reset` option is activated', function() {
+    it('Checks that the correct method is called when the `response-collection` options are activated', function() {
+      var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
+      var inputs = $(responseCollections).find('input'); 
+
+      $(inputs[0]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 1).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.false; 
+
+      $(inputs[1]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 2).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.false; 
+
+      $(inputs[2]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 3).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[3])).to.be.false;
+
+      $(inputs[3]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 4).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[3])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[4])).to.be.false;
+
+      $(inputs[4]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 5).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[4])).to.be.true; 
+    }); 
+
+    it('Checks that the correct method is called when the `reset` option is activated', function() {
       var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
       var resetBtn = $(responseCollections[0]).find('[data-reset]'); 
       var backBtn = $(this.groupedQuestion).find('[data-back]'); 
@@ -110,7 +144,7 @@ describe('MoneyNavigatorQuestions', function() {
 
       // Controls
       var $controls = $(this.groupedQuestion).find('.response__controls'); 
-      this.control_default = $controls.children('[data-response]').find('input')[0];
+      this.control_default = $controls.find('[data-response]').find('input')[0];
       this.control_1 = $controls.find('#control_1')[0]; 
       this.control_2 = $controls.find('#control_2')[0]; 
 
@@ -123,8 +157,8 @@ describe('MoneyNavigatorQuestions', function() {
       this.collection_2_2 = $(collections[1]).find('input')[1]; 
 
       // Resets
-      this.collection_1_reset = $(collections[0]).find('[data-reset]'); 
-      this.collection_2_reset = $(collections[1]).find('[data-reset]'); 
+      this.collection_1_reset = $(collections[0]).find('[data-reset]')[0]; 
+      this.collection_2_reset = $(collections[1]).find('[data-reset]')[0]; 
 
       // Continue
       this.continue = $(this.groupedQuestion).find('[data-continue]'); 
@@ -203,6 +237,298 @@ describe('MoneyNavigatorQuestions', function() {
       this.collection_2_2.checked = true; 
       this.obj._updateGroupedQuestionsDisplay(this.collection_2_2); 
       expect(this.continue[0].disabled).to.be.false; 
+    }); 
+
+    it('Sets focus correctly for keyboard a11y when called', function() {
+      // Selecting control group input moves focus to relevant collection and sets input tabinex to 0
+      $(this.control_default).focus(); 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_1);
+      expect(this.collection_1_1 === document.activeElement).to.be.true; 
+      expect($(this.collection_1_1).attr('tabindex') == 0).to.be.true; 
+      expect(this.collection_2_1 === document.activeElement).to.be.false; 
+      expect($(this.collection_2_1).attr('tabindex') == -1).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_2);
+      expect(this.collection_1_1 === document.activeElement).to.be.false; 
+      expect($(this.collection_1_1).attr('tabindex') == -1).to.be.true; 
+      expect(this.collection_2_1 === document.activeElement).to.be.true; 
+      expect($(this.collection_2_1).attr('tabindex') == 0).to.be.true; 
+
+      // Selecting reset on a collection returns focus to selected control input and sets input tabinex to -1
+      $(this.control_2).attr('checked', true); 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_2_reset);
+      expect(this.control_2 === document.activeElement).to.be.true; 
+      expect($(this.collection_1_1).attr('tabindex') == -1).to.be.true;
+      expect($(this.collection_2_1).attr('tabindex') == -1).to.be.true; 
+
+      $(this.control_2).attr('checked', false); 
+      $(this.control_1).attr('checked', true); 
+      this.obj._updateGroupedQuestionsDisplay(this.collection_1_reset);
+      expect(this.control_1 === document.activeElement).to.be.true; 
+      expect($(this.collection_1_1).attr('tabindex') == -1).to.be.true;
+      expect($(this.collection_2_1).attr('tabindex') == -1).to.be.true; 
+    }); 
+
+    it('Updates tabindex value on Reset button when collection is active/inactive', function() {
+      $(this.control_default).focus(); 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_1);
+      expect($(this.collection_1_reset).attr('tabindex') == 0).to.be.true; 
+      expect($(this.collection_2_reset).attr('tabindex') == -1).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.control_2);
+      expect($(this.collection_1_reset).attr('tabindex') == -1).to.be.true; 
+      expect($(this.collection_2_reset).attr('tabindex') == 0).to.be.true; 
+
+      this.obj._updateGroupedQuestionsDisplay(this.collection_2_reset);
+      expect($(this.collection_1_reset).attr('tabindex') == -1).to.be.true; 
+      expect($(this.collection_2_reset).attr('tabindex') == -1).to.be.true; 
+    }); 
+  });
+
+  describe('setUpKeyboardEvents method', function() {
+    var event = $.Event('keydown'),
+        keyCode; 
+
+    beforeEach(function() {
+      this.groupedQuestion = this.questions[3]; 
+
+      this.obj._updateDOM(); 
+      this.obj._setUpGroupedQuestions(); 
+      this.obj._setUpKeyboardEvents(); 
+
+      // Controls
+      var $controls = $(this.groupedQuestion).find('.response__controls'); 
+      this.control_default = $controls.find('[data-response]').find('input')[0];
+      this.control_1 = $controls.find('#control_1')[0]; 
+      this.control_2 = $controls.find('#control_2')[0];
+
+      // Collections
+      var collections = $(this.groupedQuestion).find('.question__response--collection'); 
+      this.collection_1_1 = $(collections[0]).find('input')[0]; 
+      this.collection_1_2 = $(collections[0]).find('input')[1]; 
+      this.collection_1_3 = $(collections[0]).find('input')[2]; 
+      this.collection_2_1 = $(collections[1]).find('input')[0]; 
+      this.collection_2_2 = $(collections[1]).find('input')[1]; 
+
+      // Continue
+      this.continue = $(this.groupedQuestion).find('[data-continue]')[0]; 
+    }); 
+
+    it('Moves focus correctly within the control group with down arrow key', function() {
+      keyCode = 40; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with right arrow key', function() {
+      keyCode = 39; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with up arrow key', function() {
+      keyCode = 38; 
+      event.keyCode = keyCode; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with left arrow key', function() {
+      keyCode = 37; 
+      event.keyCode = keyCode; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with tab key', function() {
+      keyCode = 9; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
+
+      $(this.control_1).focus();
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus within each collection with down arrow key', function() {
+      keyCode = 40; 
+      event.keyCode = keyCode; 
+
+      $(this.collection_1_1).focus();
+
+      $(this.collection_1_1).trigger(event); 
+      expect(this.collection_1_1 === document.activeElement).to.be.false; 
+      expect(this.collection_1_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_2).trigger(event); 
+      expect(this.collection_1_2 === document.activeElement).to.be.false; 
+      expect(this.collection_1_3 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_3).trigger(event); 
+      expect(this.collection_1_3 === document.activeElement).to.be.false; 
+      expect(this.collection_1_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_1).focus();
+
+      $(this.collection_2_1).trigger(event); 
+      expect(this.collection_2_1 === document.activeElement).to.be.false; 
+      expect(this.collection_2_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_2).trigger(event); 
+      expect(this.collection_2_2 === document.activeElement).to.be.false; 
+      expect(this.collection_2_1 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus within each collection with right arrow key', function() {
+      keyCode = 39; 
+      event.keyCode = keyCode; 
+
+      $(this.collection_1_1).focus();
+
+      $(this.collection_1_1).trigger(event); 
+      expect(this.collection_1_1 === document.activeElement).to.be.false; 
+      expect(this.collection_1_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_2).trigger(event); 
+      expect(this.collection_1_2 === document.activeElement).to.be.false; 
+      expect(this.collection_1_3 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_3).trigger(event); 
+      expect(this.collection_1_3 === document.activeElement).to.be.false; 
+      expect(this.collection_1_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_1).focus();
+
+      $(this.collection_2_1).trigger(event); 
+      expect(this.collection_2_1 === document.activeElement).to.be.false; 
+      expect(this.collection_2_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_2).trigger(event); 
+      expect(this.collection_2_2 === document.activeElement).to.be.false; 
+      expect(this.collection_2_1 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus within each collection with up arrow key', function() {
+      keyCode = 38; 
+      event.keyCode = keyCode; 
+
+      $(this.collection_1_3).focus();
+
+      $(this.collection_1_3).trigger(event); 
+      expect(this.collection_1_3 === document.activeElement).to.be.false; 
+      expect(this.collection_1_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_2).trigger(event); 
+      expect(this.collection_1_2 === document.activeElement).to.be.false; 
+      expect(this.collection_1_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_1).trigger(event); 
+      expect(this.collection_1_1 === document.activeElement).to.be.false; 
+      expect(this.collection_1_3 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_2).focus();
+
+      $(this.collection_2_2).trigger(event); 
+      expect(this.collection_2_2 === document.activeElement).to.be.false; 
+      expect(this.collection_2_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_1).trigger(event); 
+      expect(this.collection_2_1 === document.activeElement).to.be.false; 
+      expect(this.collection_2_2 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus within each collection with left arrow key', function() {
+      keyCode = 37; 
+      event.keyCode = keyCode; 
+
+      $(this.collection_1_3).focus();
+
+      $(this.collection_1_3).trigger(event); 
+      expect(this.collection_1_3 === document.activeElement).to.be.false; 
+      expect(this.collection_1_2 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_2).trigger(event); 
+      expect(this.collection_1_2 === document.activeElement).to.be.false; 
+      expect(this.collection_1_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_1_1).trigger(event); 
+      expect(this.collection_1_1 === document.activeElement).to.be.false; 
+      expect(this.collection_1_3 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_2).focus();
+
+      $(this.collection_2_2).trigger(event); 
+      expect(this.collection_2_2 === document.activeElement).to.be.false; 
+      expect(this.collection_2_1 === document.activeElement).to.be.true; 
+
+      $(this.collection_2_1).trigger(event); 
+      expect(this.collection_2_1 === document.activeElement).to.be.false; 
+      expect(this.collection_2_2 === document.activeElement).to.be.true; 
     }); 
   }); 
 

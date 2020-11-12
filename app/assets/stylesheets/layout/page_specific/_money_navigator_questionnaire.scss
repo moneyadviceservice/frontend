@@ -252,6 +252,11 @@
 				.question__response--collection {
 					float: left;
 					transition: transform $transition-time;
+
+					input:focus + label, 
+					button:focus {
+						outline: solid 2px red;
+					}
 				}
 
 				.response__controls {

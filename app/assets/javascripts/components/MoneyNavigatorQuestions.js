@@ -171,7 +171,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(this).find('.content__inner')
         .prepend(questionResponses)
-        .css('width', (i * 100) + '%')
+        .css('width', 100 + '%') // .css('width', (i * 100) + '%')
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 

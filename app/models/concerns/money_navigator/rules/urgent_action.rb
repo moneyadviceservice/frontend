@@ -61,7 +61,7 @@ class MoneyNavigator::Rules::UrgentAction
                 { q4: %w[a2 a3 a4] },
                 { q10: ['a1']},
                 { q6: %w[a4 a5], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]  },
-                { q4: %w[a1], q6: ['a6'] }
+                { q4: %w[a1], q6: ['a6'], q1: ['a3', 'a4'] }
               ],
               mask: [
                 MASK_SOME + MASK_SOME + MASK_ALL + MASK_SOME + MASK_NONE,

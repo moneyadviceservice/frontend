@@ -27,7 +27,7 @@ FactoryBot.define do
     end
 
     trait :S1_H2_stepchange_debt_england_answers do
-      q1 { answers_with_entropy('q1', ['a1', 'a3', 'a4'], [])  }
+      q1 { answers_with_entropy('q1', ['a1', 'a2'], [])  }
       q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', ['a1'], ['a3'])  }
       q4 { answers_with_entropy('q4', ['a2'], ['a3', 'a4'] )}

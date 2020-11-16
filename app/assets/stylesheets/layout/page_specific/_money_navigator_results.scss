@@ -350,6 +350,13 @@ $transition-time: 0.4s;
 
 					p {
 						padding: $baseline-unit $baseline-unit*2;
+						font-size: 1rem; 
+						font-weight: 300; 
+						line-height: 1.5; 
+
+						@include respond-to($mq-l) {
+							font-size: 1.125rem;
+						}
 					}
 				}
 

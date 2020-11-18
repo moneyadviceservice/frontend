@@ -60,7 +60,17 @@
     };
 
     Widget.prototype.createIFrame = function() {
-      return "<iframe class='" + masConfig.iframeClass + "' id='" + this.targetNode.id + "-iframe' " + (masConfig.iframeSrc(this.targetNode)) + "\n        scrolling='" + masConfig.iframeScrolling + "' frameborder='" + masConfig.iframeBorder + "'\n        width='" + (this.dataAttr('width')) + "' height='" + (this.dataAttr('height')) + "' title='" + (this.dataAttr('title')) + "'>\n</iframe>";
+      return '<iframe ' +
+        'sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin"' + 
+        'class="' + masConfig.iframeClass + '"' +
+        'id="' + this.targetNode.id + '-iframe"' + 
+        (masConfig.iframeSrc(this.targetNode)) + 
+        'scrolling="' + masConfig.iframeScrolling + '"' +
+        'frameborder="' + masConfig.iframeBorder + '"' +
+        'width="' + (this.dataAttr('width')) + '"' +
+        'height="' + (this.dataAttr('height')) + '"' +
+        'title="' + (this.dataAttr('title')) + '"' + 
+      '>\n</iframe>';
     };
 
     Widget.prototype.createGAIFrame = function() {

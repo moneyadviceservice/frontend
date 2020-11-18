@@ -97,8 +97,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionResponses)
         .addClass('response__controls')
-        .attr('data-response-controls', true)
-        .css('width', (1 / groupNum * 100) + '%'); 
+        .attr('data-response-controls', true); 
+        // .css('width', (1 / groupNum * 100) + '%'); 
 
       for(var num in groups) {
         if (num === 'default') {
@@ -155,10 +155,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(this).find('.content__inner').append(collection);
           $(collection).prepend(para); 
           $(collection).append(reset); 
-          $(collection).css({
-            'marginLeft': (1 / groupNum * -100 * i) + '%', 
-            'width': (1 / groupNum * 100) + '%'
-          }); 
+          // $(collection).css({
+          //   'marginLeft': (1 / groupNum * -100 * i) + '%', 
+          //   'width': (1 / groupNum * 100) + '%'
+          // }); 
 
           $(reset).on('click', function(e) {
             e.preventDefault(); 
@@ -171,7 +171,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(this).find('.content__inner')
         .prepend(questionResponses)
-        .css('width', 100 + '%') // .css('width', (i * 100) + '%')
+        // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 

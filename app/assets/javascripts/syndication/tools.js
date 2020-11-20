@@ -484,5 +484,4 @@
   };
 
   renderOnLoad();
-
 }).call(this);

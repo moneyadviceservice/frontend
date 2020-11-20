@@ -39,7 +39,7 @@
       };
       hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
       masConfig.toolsConfig = {
-        syndication_url: 'https://6a583ddb80a3.ngrok.io',
+        syndication_url: 'https://preview-partner-tools.dev.mas.local/',
         syndication: {
           ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
         }
@@ -107,7 +107,5 @@
     };
 
     return Widget;
-
   })();
-
 }).call(this);

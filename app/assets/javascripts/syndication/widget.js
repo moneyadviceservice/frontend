@@ -14,16 +14,23 @@
 
     Widget.prototype.render = function() {
       var renderParts;
+
       this.setPartnerToolsURL();
+
       renderParts = [];
+
       if (!this.dataAttr("omit_logo")) {
         renderParts.push(this.createLogo());
       }
+
       renderParts.push(this.createIFrame());
+
       if (masConfig.gaIframeRequired(this.targetNode)) {
         renderParts.push(this.createGAIFrame());
       }
+
       this.addToDocument(this.createContainer.apply(this, renderParts));
+
       return this.removeTargetNode();
     };
 
@@ -39,7 +46,9 @@
       };
       hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
       masConfig.toolsConfig = {
-        syndication_url: 'https://preview-partner-tools.dev.mas.local/',
+        // syndication_url: 'https://preview-partner-tools.dev.mas.local/',
+        // syndication_url: 'http://localhost:3000',
+        syndication_url: 'http://9dd6cac87755.ngrok.io',
         syndication: {
           ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
         }

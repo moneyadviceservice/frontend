@@ -26,22 +26,19 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 1ebefedc26055ef56a4ade32e92e9083d035c09c
-  branch: feature/TP-11788_pacs_new_data_fields
+  remote: git@github.com:moneyadviceservice/pensions_calculator
+  revision: 34647442c370ff0a6b1c85ef1afa0ed069bbe471
+  branch: TP-11849
   specs:
-    pacs (3.12.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
+    pensions_calculator (2.7.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
       meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
+      pensions_calculator-calculations (~> 3.0.1)
       rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
 
 GEM
   remote: https://rubygems.org/
@@ -145,7 +142,7 @@ GEM
       activesupport (>= 4.2)
     bowndler (1.0.2)
       thor
-    bson (4.11.0)
+    bson (4.11.1)
     budget_planner (5.7.1)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
@@ -512,6 +509,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (3.12.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -522,15 +531,6 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator (2.6.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 3.0.1)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
     pensions_calculator-calculations (3.0.1)
       activesupport
     poltergeist (1.17.0)
@@ -795,6 +795,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-20
 
 DEPENDENCIES
   action_plans (~> 5.5.0)
@@ -867,9 +868,9 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs!
+  pacs (~> 3.12.0)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator (~> 2.6.1)
+  pensions_calculator!
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug

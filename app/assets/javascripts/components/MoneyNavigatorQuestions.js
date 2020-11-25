@@ -69,14 +69,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
+      var $groupedResponses = $(this).find('[data-response-group]'),
           groups = {},
           titles = $(this).data('question-grouped-group-titles'),
-          i = 0,
-          groupNum = 0,
-          questionResponses = document.createElement('div'); 
+          i = 0;
 
-      // Collect all responses into arrays and remove from DOM
+      // Collect all grouped responses into arrays and remove from DOM
       $groupedResponses.each(function() {
         if ($(this).data('response-group')) {
           var groupNum = $(this).data('response-group');  
@@ -93,88 +91,139 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(this).remove(); 
       }); 
 
-      groupNum = Object.keys(groups).length; 
-
-      $(questionResponses)
-        .addClass('response__controls')
-        .attr('data-response-controls', true); 
-        // .css('width', (1 / groupNum * 100) + '%'); 
-
       for(var num in groups) {
-        if (num === 'default') {
-          $(questionResponses).prepend(groups[num].outerHTML); 
-        } else {
-          var response = document.createElement('div'), 
-              collection = document.createElement('div'), 
-              reset = document.createElement('button'), 
-              input = document.createElement('input'), 
-              label = document.createElement('label'), 
-              span = document.createElement('span'), 
-              para = document.createElement('p'), 
-              labelText = document.createTextNode(titles[i]), 
-              paraText = document.createTextNode(titles[i])
+        var response = document.createElement('div'), 
+            collection = document.createElement('fieldset'), 
+            reset = document.createElement('button'), 
+            input = document.createElement('input'), 
+            label = document.createElement('label'), 
+            span = document.createElement('span'), 
+            legend = document.createElement('legend'), 
+            labelText = document.createTextNode(titles[i]), 
+            paraText = document.createTextNode(titles[i])
 
-          span.appendChild(labelText); 
+        // Add new inputs to the control group
+        span.appendChild(labelText); 
 
-          label.className = 'response__text'; 
-          label.setAttribute('for', 'control_' + num); 
-          label.appendChild(span)
+        label.className = 'response__text'; 
+        label.setAttribute('for', 'control_' + num); 
+        label.appendChild(span)
 
-          input.className = 'response__control'; 
-          input.type = 'checkbox'; 
-          input.id = 'control_' + num;
-          input.value = ''; 
+        input.className = 'response__control'; 
+        input.type = 'checkbox'; 
+        input.id = 'control_' + num;
+        input.value = ''; 
 
-          para.className = 'collection__title'; 
-          para.appendChild(paraText); 
+        // Add responses to the DOM
+        response.setAttribute('data-response-group-control', num); 
+        response.className = 'question__response question__response--control';
+        response.appendChild(input); 
+        response.appendChild(label); 
 
-          // Add responses to the DOM
-          response.setAttribute('data-response-group-control', num); 
-          response.className = 'question__response question__response--control';
-          response.appendChild(input); 
-          response.appendChild(label); 
+        $(this).find('.content__inner').append(response); 
 
-          $(this).find('.content__inner').append(response); 
+        // Add collections and resets to the DOM
+        legend.appendChild(paraText); 
 
-          $(questionResponses).append(response); 
+        $(reset)
+          .addClass('button button--reset')
+          .attr('data-reset', true)
+          .text(_this.i18nStrings.controls.reset); 
 
-          // Add collections and resets to the DOM
-          $(collection)
-            .addClass('question__response--collection question--inactive')
-            .attr('data-response-collection', num);
+        $(collection)
+          .addClass('question__response--collection question--inactive')
+          .attr('data-response-collection', num)
+          .prepend(legend)
+          .append(groups[num])
+          .append(reset); 
 
-          $(groups[num]).each(function() {
-            $(collection).append(groups[num]); 
-          }); 
-
-          $(reset)
-            .addClass('button button--reset')
-            .attr('data-reset', true)
-            .text(_this.i18nStrings.controls.reset); 
-
-          $(this).find('.content__inner').append(collection);
-          $(collection).prepend(para); 
-          $(collection).append(reset); 
-          // $(collection).css({
-          //   'marginLeft': (1 / groupNum * -100 * i) + '%', 
-          //   'width': (1 / groupNum * 100) + '%'
-          // }); 
-
-          $(reset).on('click', function(e) {
-            e.preventDefault(); 
-            _this._updateGroupedQuestionsDisplay(e.target); 
-          }); 
-        }
+        $(this).find('.question__actions').before(collection); 
 
         i++; 
-      }
+      }; 
 
-      $(this).find('.content__inner')
-        .prepend(questionResponses)
-        // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
-        .on('change', function(e) {
-          _this._updateGroupedQuestionsDisplay(e.target); 
-        }); 
+      // groupNum = Object.keys(groups).length; 
+
+      // $(questionResponses)
+      //   .addClass('response__controls')
+      //   .attr('data-response-controls', true); 
+      //   // .css('width', (1 / groupNum * 100) + '%'); 
+
+      // for(var num in groups) {
+      //   if (num === 'default') {
+      //     $(questionResponses).prepend(groups[num].outerHTML); 
+      //   } else {
+      //     var response = document.createElement('div'), 
+      //         collection = document.createElement('div'), 
+      //         reset = document.createElement('button'), 
+      //         input = document.createElement('input'), 
+      //         label = document.createElement('label'), 
+      //         span = document.createElement('span'), 
+      //         para = document.createElement('p'), 
+      //         labelText = document.createTextNode(titles[i]), 
+      //         paraText = document.createTextNode(titles[i])
+
+      //     span.appendChild(labelText); 
+
+      //     label.className = 'response__text'; 
+      //     label.setAttribute('for', 'control_' + num); 
+      //     label.appendChild(span)
+
+      //     input.className = 'response__control'; 
+      //     input.type = 'checkbox'; 
+      //     input.id = 'control_' + num;
+      //     input.value = ''; 
+
+      //     para.className = 'collection__title'; 
+      //     para.appendChild(paraText); 
+
+      //     // Add responses to the DOM
+      //     response.setAttribute('data-response-group-control', num); 
+      //     response.className = 'question__response question__response--control';
+      //     response.appendChild(input); 
+      //     response.appendChild(label); 
+
+      //     $(this).find('.content__inner').append(response); 
+
+      //     $(questionResponses).append(response); 
+
+      //     // Add collections and resets to the DOM
+      //     $(collection)
+      //       .addClass('question__response--collection question--inactive')
+      //       .attr('data-response-collection', num);
+
+      //     $(groups[num]).each(function() {
+      //       $(collection).append(groups[num]); 
+      //     }); 
+
+      //     $(reset)
+      //       .addClass('button button--reset')
+      //       .attr('data-reset', true)
+      //       .text(_this.i18nStrings.controls.reset); 
+
+      //     $(this).find('.content__inner').append(collection);
+      //     $(collection).prepend(para); 
+      //     $(collection).append(reset); 
+      //     // $(collection).css({
+      //     //   'marginLeft': (1 / groupNum * -100 * i) + '%', 
+      //     //   'width': (1 / groupNum * 100) + '%'
+      //     // }); 
+
+      //     $(reset).on('click', function(e) {
+      //       e.preventDefault(); 
+      //       _this._updateGroupedQuestionsDisplay(e.target); 
+      //     }); 
+      //   }
+
+      // i++; 
+      // }
+
+      // $(this).find('.content__inner')
+      //   .prepend(questionResponses)
+      //   // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
+      //   .on('change', function(e) {
+      //     _this._updateGroupedQuestionsDisplay(e.target); 
+      //   }); 
     }); 
   }; 
 

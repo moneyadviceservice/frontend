@@ -120,7 +120,9 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         response.appendChild(input); 
         response.appendChild(label); 
 
-        $(this).find('.content__inner').append(response); 
+        $(this).find('fieldset')
+          .attr('data-response-controls', true)
+          .find('.content__inner').append(response); 
 
         // Add collections and resets to the DOM
         legend.appendChild(paraText); 
@@ -129,6 +131,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .addClass('button button--reset')
           .attr('data-reset', true)
           .text(_this.i18nStrings.controls.reset); 
+
+        $(reset).on('click', function(e) {
+          e.preventDefault(); 
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
 
         $(collection)
           .addClass('question__response--collection question--inactive')
@@ -218,12 +225,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       // i++; 
       // }
 
-      // $(this).find('.content__inner')
-      //   .prepend(questionResponses)
-      //   // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
-      //   .on('change', function(e) {
-      //     _this._updateGroupedQuestionsDisplay(e.target); 
-      //   }); 
+      $(this).find('[data-response-controls]')
+        // .prepend(questionResponses)
+        // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
+        .on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
     }); 
   }; 
 

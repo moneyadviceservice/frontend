@@ -72,7 +72,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       var $groupedResponses = $(this).find('[data-response-group]'),
           groups = {},
           titles = $(this).data('question-grouped-group-titles'),
-          i = 0;
+          i = 0,
+          mumGroups;
 
       // Collect all grouped responses into arrays and remove from DOM
       $groupedResponses.each(function() {
@@ -90,6 +91,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
         $(this).remove(); 
       }); 
+
+      mumGroups = Object.keys(groups).length + 1; 
 
       for(var num in groups) {
         var response = document.createElement('div'), 
@@ -121,11 +124,15 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         response.appendChild(label); 
 
         $(this).find('fieldset')
+          .css('width', (1 / mumGroups * 100) + '%')
           .attr('data-response-controls', true)
+          .addClass('response__controls')
           .find('.content__inner').append(response); 
 
         // Add collections and resets to the DOM
         legend.appendChild(paraText); 
+
+        $(legend).addClass('question__heading');
 
         $(reset)
           .addClass('button button--reset')
@@ -225,9 +232,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       // i++; 
       // }
 
+      // console.log('this: ', this); 
+
+      $(this).find('.form__row').css('width', ((i + 1) * 100) + '%'); 
+
       $(this).find('[data-response-controls]')
         // .prepend(questionResponses)
-        // .css('width', 100 + '%') // .css('width', (i * 100) + '%')
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 

@@ -69,10 +69,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group]'),
-          groups = {},
+      var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
+          $fieldset = $(this).find('fieldset').detach(), 
           titles = $(this).data('question-grouped-group-titles'),
-          i = 0,
+          questionGroups = document.createElement('div'),
+          groups = {},
+          // i = 0,
           mumGroups;
 
       // Collect all grouped responses into arrays and remove from DOM
@@ -92,69 +94,86 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(this).remove(); 
       }); 
 
-      mumGroups = Object.keys(groups).length + 1; 
+      mumGroups = Object.keys(groups).length; 
+
+      questionGroups.className = 'question__groups'; 
+      $(this).find('.question__content').append(questionGroups);
 
       for(var num in groups) {
-        var response = document.createElement('div'), 
-            collection = document.createElement('fieldset'), 
-            reset = document.createElement('button'), 
-            input = document.createElement('input'), 
-            label = document.createElement('label'), 
-            span = document.createElement('span'), 
-            legend = document.createElement('legend'), 
-            labelText = document.createTextNode(titles[i]), 
-            paraText = document.createTextNode(titles[i])
+        console.log('num: ', num); 
+        console.log('group: ', groups[num]); 
 
-        // Add new inputs to the control group
-        span.appendChild(labelText); 
+        if (num === 'default') {
+          $fieldset
+            .addClass('response__controls')
+            .attr('data-response-controls', true)
+            .find('.content__inner')
+              .prepend(groups[num]); 
 
-        label.className = 'response__text'; 
-        label.setAttribute('for', 'control_' + num); 
-        label.appendChild(span)
+          $(questionGroups).prepend($fieldset); 
+        } else {
+          // Add collections and resets to the DOM
+          var collection = document.createElement('fieldset'), 
+              contentInner = document.createElement('div'), 
+              reset = document.createElement('button'), 
+              legend = document.createElement('legend'), 
+              paraText = document.createTextNode(titles[num - 1]);
 
-        input.className = 'response__control'; 
-        input.type = 'checkbox'; 
-        input.id = 'control_' + num;
-        input.value = ''; 
+          legend.appendChild(paraText); 
 
-        // Add responses to the DOM
-        response.setAttribute('data-response-group-control', num); 
-        response.className = 'question__response question__response--control';
-        response.appendChild(input); 
-        response.appendChild(label); 
+          $(legend).addClass('question__heading');
 
-        $(this).find('fieldset')
-          .css('width', (1 / mumGroups * 100) + '%')
-          .attr('data-response-controls', true)
-          .addClass('response__controls')
-          .find('.content__inner').append(response); 
+          $(reset)
+            .addClass('button button--reset')
+            .attr('data-reset', true)
+            .text(_this.i18nStrings.controls.reset); 
 
-        // Add collections and resets to the DOM
-        legend.appendChild(paraText); 
+          $(reset).on('click', function(e) {
+            e.preventDefault(); 
+            _this._updateGroupedQuestionsDisplay(e.target); 
+          }); 
 
-        $(legend).addClass('question__heading');
+          $(contentInner)
+            .addClass('content__inner')
+            .append(groups[num])
+            .append(reset); 
 
-        $(reset)
-          .addClass('button button--reset')
-          .attr('data-reset', true)
-          .text(_this.i18nStrings.controls.reset); 
+          $(collection)
+            .addClass('question__response--collection question--inactive')
+            .attr('data-response-collection', num)
+            .prepend(legend)
+            .append(contentInner); 
+  
+          $(questionGroups).append(collection); 
 
-        $(reset).on('click', function(e) {
-          e.preventDefault(); 
-          _this._updateGroupedQuestionsDisplay(e.target); 
-        }); 
+          // Add new inputs to the control group
+          var response = document.createElement('div'), 
+              input = document.createElement('input'), 
+              label = document.createElement('label'), 
+              span = document.createElement('span'), 
+              labelText = document.createTextNode(titles[num - 1]);
 
-        $(collection)
-          .addClass('question__response--collection question--inactive')
-          .attr('data-response-collection', num)
-          .prepend(legend)
-          .append(groups[num])
-          .append(reset); 
+          span.appendChild(labelText); 
 
-        $(this).find('.question__actions').before(collection); 
+          label.className = 'response__text'; 
+          label.setAttribute('for', 'control_' + num); 
+          label.appendChild(span)
 
-        i++; 
+          input.className = 'response__control'; 
+          input.type = 'checkbox'; 
+          input.id = 'control_' + num;
+          input.value = ''; 
+
+          response.setAttribute('data-response-group-control', num); 
+          response.className = 'question__response question__response--control';
+          response.appendChild(input); 
+          response.appendChild(label); 
+
+          $fieldset.find('.content__inner').append(response); 
+        }
       }; 
+
+      $(this).find('.question__content').prepend(questionGroups); 
 
       // groupNum = Object.keys(groups).length; 
 
@@ -233,8 +252,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       // }
 
       // console.log('this: ', this); 
-
-      $(this).find('.form__row').css('width', ((i + 1) * 100) + '%'); 
 
       $(this).find('[data-response-controls]')
         // .prepend(questionResponses)

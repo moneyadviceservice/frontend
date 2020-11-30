@@ -37,7 +37,13 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.session_store :active_record_store
+  config.session_store :active_record_store, {
+    :key => '_test_session',
+    :domain => :all,
+    :same_site => :none,
+    :secure => :true,
+    :tld_length => 2
+  }
 
   # Custom configuration options for feedback settings
   config.feedback_delivery_method = :test

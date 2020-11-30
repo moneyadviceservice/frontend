@@ -239,11 +239,13 @@
 		&[data-question-grouped] {
 			$transition-time: 0.5s;
 
-			fieldset {
+			.question__content {
 				overflow: hidden;
 			}
 
-			.content__inner {
+			.question__groups {
+				@extend %clearfix;
+
 				box-sizing: content-box;
 				padding: 0 $default-gutter * 2;
 				margin: 0 $default-gutter * -2;

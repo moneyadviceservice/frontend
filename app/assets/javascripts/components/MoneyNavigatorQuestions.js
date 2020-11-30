@@ -74,8 +74,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           titles = $(this).data('question-grouped-group-titles'),
           questionGroups = document.createElement('div'),
           groups = {},
-          // i = 0,
-          mumGroups;
+          numGroups;
 
       // Collect all grouped responses into arrays and remove from DOM
       $groupedResponses.each(function() {
@@ -94,19 +93,20 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(this).remove(); 
       }); 
 
-      mumGroups = Object.keys(groups).length; 
+      numGroups = Object.keys(groups).length; 
 
-      questionGroups.className = 'question__groups'; 
+      $(questionGroups)
+        .addClass('question__groups')
+        .css('width', (numGroups * 100) + '%');
+
       $(this).find('.question__content').append(questionGroups);
 
       for(var num in groups) {
-        console.log('num: ', num); 
-        console.log('group: ', groups[num]); 
-
         if (num === 'default') {
           $fieldset
             .addClass('response__controls')
             .attr('data-response-controls', true)
+            .css('width', (1 / numGroups * 100) + '%')
             .find('.content__inner')
               .prepend(groups[num]); 
 
@@ -141,6 +141,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(collection)
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num)
+            .css({
+              'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
+              'width': (1 / numGroups * 100) + '%'
+            })
             .prepend(legend)
             .append(contentInner); 
   
@@ -175,86 +179,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(this).find('.question__content').prepend(questionGroups); 
 
-      // groupNum = Object.keys(groups).length; 
-
-      // $(questionResponses)
-      //   .addClass('response__controls')
-      //   .attr('data-response-controls', true); 
-      //   // .css('width', (1 / groupNum * 100) + '%'); 
-
-      // for(var num in groups) {
-      //   if (num === 'default') {
-      //     $(questionResponses).prepend(groups[num].outerHTML); 
-      //   } else {
-      //     var response = document.createElement('div'), 
-      //         collection = document.createElement('div'), 
-      //         reset = document.createElement('button'), 
-      //         input = document.createElement('input'), 
-      //         label = document.createElement('label'), 
-      //         span = document.createElement('span'), 
-      //         para = document.createElement('p'), 
-      //         labelText = document.createTextNode(titles[i]), 
-      //         paraText = document.createTextNode(titles[i])
-
-      //     span.appendChild(labelText); 
-
-      //     label.className = 'response__text'; 
-      //     label.setAttribute('for', 'control_' + num); 
-      //     label.appendChild(span)
-
-      //     input.className = 'response__control'; 
-      //     input.type = 'checkbox'; 
-      //     input.id = 'control_' + num;
-      //     input.value = ''; 
-
-      //     para.className = 'collection__title'; 
-      //     para.appendChild(paraText); 
-
-      //     // Add responses to the DOM
-      //     response.setAttribute('data-response-group-control', num); 
-      //     response.className = 'question__response question__response--control';
-      //     response.appendChild(input); 
-      //     response.appendChild(label); 
-
-      //     $(this).find('.content__inner').append(response); 
-
-      //     $(questionResponses).append(response); 
-
-      //     // Add collections and resets to the DOM
-      //     $(collection)
-      //       .addClass('question__response--collection question--inactive')
-      //       .attr('data-response-collection', num);
-
-      //     $(groups[num]).each(function() {
-      //       $(collection).append(groups[num]); 
-      //     }); 
-
-      //     $(reset)
-      //       .addClass('button button--reset')
-      //       .attr('data-reset', true)
-      //       .text(_this.i18nStrings.controls.reset); 
-
-      //     $(this).find('.content__inner').append(collection);
-      //     $(collection).prepend(para); 
-      //     $(collection).append(reset); 
-      //     // $(collection).css({
-      //     //   'marginLeft': (1 / groupNum * -100 * i) + '%', 
-      //     //   'width': (1 / groupNum * 100) + '%'
-      //     // }); 
-
-      //     $(reset).on('click', function(e) {
-      //       e.preventDefault(); 
-      //       _this._updateGroupedQuestionsDisplay(e.target); 
-      //     }); 
-      //   }
-
-      // i++; 
-      // }
-
-      // console.log('this: ', this); 
-
       $(this).find('[data-response-controls]')
-        // .prepend(questionResponses)
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 

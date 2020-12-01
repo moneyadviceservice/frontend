@@ -17,13 +17,7 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application
-    config.session_store :active_record_store, {
-      :key => '_test_session',
-      :domain => :all,
-      :same_site => :none,
-      :secure => :true,
-      :tld_length => 2
-    }
+    config.session_store :active_record_store
 
     config.action_mailer.delivery_method = :mailjet
     config.filter_parameters += [:password]

@@ -110,7 +110,7 @@ describe('MoneyNavigatorQuestions', function() {
 
       // Controls
       var $controls = $(this.groupedQuestion).find('.response__controls'); 
-      this.control_default = $controls.children('[data-response]').find('input')[0];
+      this.control_default = $controls.find('[data-response]').find('input')[0];
       this.control_1 = $controls.find('#control_1')[0]; 
       this.control_2 = $controls.find('#control_2')[0]; 
 

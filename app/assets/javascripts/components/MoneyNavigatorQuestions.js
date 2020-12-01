@@ -71,6 +71,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$groupedQuestions.each(function() {
       var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
           $fieldset = $(this).find('fieldset').detach(), 
+          name = $fieldset.find('input')[0].name,
           titles = $(this).data('question-grouped-group-titles'),
           questionGroups = document.createElement('div'),
           groups = {},
@@ -164,7 +165,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           label.appendChild(span)
 
           input.className = 'response__control'; 
-          input.type = 'checkbox'; 
+          input.type = 'radio'; 
+          input.name = name; 
           input.id = 'control_' + num;
           input.value = ''; 
 
@@ -190,7 +192,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    var $container = $(el).parents('.question__content').find('.content__inner');
+    var $container = $(el).parents('.question__content').find('.question__groups');
 
     if ($(el).data('reset') || $(el).data('back')) {
       $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
@@ -233,7 +235,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
     $inputs.each(function() {
       if (this.checked == true) {
-        if (this.name == '') {
+        if (this.value == '') {
           disabled = true; 
         } else {
           disabled = false; 

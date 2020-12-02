@@ -2,6 +2,7 @@ class EmbeddedToolsController < ApplicationController
   include Navigation
   before_action :set_categories
 
+
   protected
 
   def alternate_url

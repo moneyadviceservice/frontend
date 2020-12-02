@@ -44,6 +44,10 @@ module ToolMountPoint
       url
     end
 
+    def enable_session_cookie
+      false
+    end
+
     private
 
     def translated_calculator_name(locale, calculator_name)

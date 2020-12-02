@@ -9,6 +9,16 @@ class ApplicationController < ActionController::Base
 
   before_action :set_syndicated_x_frame
 
+  after_action -> { request.session_options[:skip] = true }, unless: :enable_session_cookie
+
+  def enable_session_cookie
+    if @mount_point.respond_to?(:enable_session_cookie)
+      @mount_point.enable_session_cookie
+    else
+      true
+    end
+  end
+
   include Authentication
   include Chat
   include Localisation

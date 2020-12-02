@@ -1,6 +1,7 @@
 class MountController < ApplicationController
   include Navigation
   before_action :set_categories
+  
 
   protected
 

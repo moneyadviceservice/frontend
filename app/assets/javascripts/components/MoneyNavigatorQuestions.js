@@ -56,6 +56,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
     this._setUpGroupedQuestions(); 
+    this._setUpKeyboardEvents(); 
     this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
@@ -98,7 +99,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        .css('width', (numGroups * 100) + '%');
+        // .css('width', (numGroups * 100) + '%');
 
       $(this).find('.question__content').append(questionGroups);
 
@@ -107,7 +108,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $fieldset
             .addClass('response__controls')
             .attr('data-response-controls', true)
-            .css('width', (1 / numGroups * 100) + '%')
+            // .css('width', (1 / numGroups * 100) + '%')
             .find('.content__inner')
               .prepend(groups[num]); 
 
@@ -126,7 +127,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
           $(reset)
             .addClass('button button--reset')
-            .attr('data-reset', true)
+            .attr({
+              'data-reset': true,
+              'tabindex': -1
+            })
             .text(_this.i18nStrings.controls.reset); 
 
           $(reset).on('click', function(e) {
@@ -142,10 +146,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(collection)
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num)
-            .css({
-              'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
-              'width': (1 / numGroups * 100) + '%'
-            })
+            // .css({
+            //   'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
+            //   'width': (1 / numGroups * 100) + '%'
+            // })
             .prepend(legend)
             .append(contentInner); 
   
@@ -165,8 +169,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           label.appendChild(span)
 
           input.className = 'response__control'; 
-          input.type = 'radio'; 
-          input.name = name; 
+          input.type = 'checkbox'; 
+          // input.name = name; 
           input.id = 'control_' + num;
           input.value = ''; 
 
@@ -189,6 +193,59 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   }; 
 
   /**
+   * A method that controls user navigation on the grouped question by keyboard
+   */
+  MoneyNavigatorQuestions.prototype._setUpKeyboardEvents = function() {
+    console.log('_setUpKeyboardEvents!'); 
+
+    this.$groupedQuestions.each(function() {
+      // Set focus on keyboard events
+      $(this).keydown(function(e) {
+        var response = $(e.target).parent('[data-response]')[0], 
+            $responses = $(response).parent('.content__inner'), 
+            nextInput, 
+            prevInput; 
+
+        switch (e.keyCode) {
+          // right or down arrows
+          case 39:
+          case 40:
+            // moves to next input unless current input is last
+            e.preventDefault(); 
+
+            if ($responses.find('[data-response]').last()[0] === response) {
+              nextInput = $responses.find('[data-response]').first().find('input')[0]; 
+            } else {
+              nextInput = $(response).next().find('input')[0];
+            }
+
+            nextInput.focus()
+            nextInput.checked = true; 
+
+            break;
+
+          // left or up arrows
+          case 37:
+          case 38:
+            // moves to previous input unless current input is first
+            e.preventDefault(); 
+
+            if ($responses.find('[data-response]').first()[0] === response) {
+              prevInput = $responses.find('[data-response]').last().find('input')[0]; 
+            } else {
+              prevInput = $(response).prev().find('input')[0];
+            }
+
+            prevInput.focus()
+            prevInput.checked = true; 
+
+            break;
+        }
+      }); 
+    }); 
+  }; 
+
+  /**
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
@@ -198,12 +255,35 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+
+      if ($(el).data('reset')) {
+        $container.find('[data-reset]').attr('tabindex', -1); 
+        $container.children('[data-response-controls]').find('input[checked=checked]').focus(); 
+        $container.children('[data-response-collection]').find('input').attr('tabindex', -1); 
+      }
     } else if ($(el).parents('[data-response-controls]').length > 0) {
       var id = el.id.split('_')[1];
       var $responseControls = $container.children('[data-response-controls]'); 
 
       if (el.id.indexOf('control_') > -1) {
         $responseControls.addClass(this.inactiveClass)
+
+        $container.children('[data-response-collection]')
+          .addClass(this.inactiveClass)
+          .find('[data-reset]').attr('tabindex', -1); 
+
+        $container.children('[data-response-collection]')
+          .find('input').attr('tabindex', -1); 
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .removeClass(this.inactiveClass)
+          .find('input')[0].focus(); 
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .find('[data-reset]').attr('tabindex', 0);
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .find('input').attr('tabindex', 0);
       }
 
       $responseControls.find('input').each(function() {
@@ -221,9 +301,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           }
         }
       }); 
-
-      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
-      $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
     } else {
       el.checked = true; 
     }

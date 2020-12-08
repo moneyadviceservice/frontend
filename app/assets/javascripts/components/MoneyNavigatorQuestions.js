@@ -99,7 +99,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        // .css('width', (numGroups * 100) + '%');
+        .css('width', (numGroups * 100) + '%');
 
       $(this).find('.question__content').append(questionGroups);
 
@@ -108,7 +108,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $fieldset
             .addClass('response__controls')
             .attr('data-response-controls', true)
-            // .css('width', (1 / numGroups * 100) + '%')
+            .css('width', (1 / numGroups * 100) + '%')
             .find('.content__inner')
               .prepend(groups[num]); 
 
@@ -146,10 +146,10 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(collection)
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num)
-            // .css({
-            //   'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
-            //   'width': (1 / numGroups * 100) + '%'
-            // })
+            .css({
+              'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
+              'width': (1 / numGroups * 100) + '%'
+            })
             .prepend(legend)
             .append(contentInner); 
   
@@ -170,7 +170,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
           input.className = 'response__control'; 
           input.type = 'checkbox'; 
-          // input.name = name; 
           input.id = 'control_' + num;
           input.value = ''; 
 

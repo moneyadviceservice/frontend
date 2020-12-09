@@ -13,6 +13,72 @@
     }
 
     Widget.prototype.render = function() {
+      console.log('Widget.render!'); 
+      console.log('Determining if the `hasStorageAccess` method of the Storage Access API is known to this browser ...'); 
+
+      if (document.hasStorageAccess === undefined) {
+        console.log('`hasStorageAccess` IS NOT known to this browser!'); 
+        console.log('Carrying on loading the iFrame!'); 
+
+        // return; 
+        this.renderIFrame(); 
+      } else {
+        console.log('hasStorageAccess IS known to this browser!'); 
+
+        document.hasStorageAccess().then(
+          hasAccess => {
+            console.log('Determining if we have access to Storage/Cookies ...'); 
+
+            if (hasAccess) {
+              console.log('We DO have access to Storage/Cookies!');
+              console.log('Carrying on loading the iFrame!'); 
+
+              this.renderIFrame(); 
+            } else {
+              console.log('We DO NOT have access to Storage/Cookies!'); 
+
+              this.renderToolLink(); 
+            }
+          }
+        ).catch(e => {
+          console.log('Could not determine if we have access!'); 
+          console.log(e); 
+        })
+      }
+    };
+
+    Widget.prototype.renderToolLink = function() {
+      var link = document.createElement('a'); 
+      var text = document.createTextNode('Click here!'); 
+      var path = masConfig.toolConfig[this.id].en.path
+
+      link.href = 'https://partner-tools.moneyadviceservice.org.uk/' + path;
+      link.target = '_blank'; 
+      link.appendChild(text); 
+      document.body.appendChild(link); 
+    }; 
+
+    // This is not being used as present
+    // Will be needed to implement the fuller solution of referring the user to partner tools to get explicit consent
+    Widget.prototype.requestAccess = function() {
+      console.log('Requesting access to Storage/Cookies ...'); 
+
+      document.requestStorageAccess().then(
+        function successful() {
+          console.log('We have been granted access to Storage/Cookies!'); 
+        }, 
+        function fail() {
+          console.log('We have NOT been granted access to Storage/Cookies!'); 
+        }
+      ).catch(e => {
+        console.log('Some kinda shit went on!'); 
+        console.log(e); 
+      }); 
+    }; 
+
+    Widget.prototype.renderIFrame = function() {
+      console.log('renderIFrame!'); 
+
       var renderParts;
 
       this.setPartnerToolsURL();

@@ -1,0 +1,122 @@
+// -- Money navigator specific styles --------------------------------------
+
+    [data-dough-money-navigator-questions-initialised="yes"]{
+        .question__content--q0{
+            .response__control{
+                &:checked{
+                    + .response__text{
+                        border-color: $blue_primary!important;
+                        background-color: $light_grey!important;
+                    }
+                }
+                &:hover{
+                    + .response__text{
+                        border-color: $blue_primary!important;
+                    }
+                }
+            }
+            .response__text{
+                &:before,
+                &:after{
+                    display: none;
+                }
+                span{
+                    &:before{
+                        background-image: none;
+                    }
+                }
+            }
+            label{
+                span{
+                    &:before{
+                        background-repeat: no-repeat;
+                        background-size: 210px;
+                    }
+                }
+            }
+            label[for=q0_a1] span:before{ background-image: $england_svg; }
+            label[for=q0_a2] span:before{ background-image: $ni_svg; }
+            label[for=q0_a3] span:before{ background-image: $scotland_svg; }
+            label[for=q0_a4] span:before{ background-image: $wales_svg; }
+        }
+    }
+
+    .l-money_navigator__banner{
+        background-color: $light_grey_2;
+    }
+    .l-money_navigator__question{
+        .question__counter{
+            font-size: 18px;
+            line-height: 26px;
+            color: $text_secondary;
+        }
+    }
+    input[type=radio],
+    input[type=checkbox]{
+            &:not(#q0_a1):not(#q0_a2):not(#q0_a3):not(#q0_a4):not(#q6_a1):not(#q6_a2):not(#q6_a3):not(#q6_a4):not(#q6_a5):not(#q6_a6):not(#q6_a7):not(#control_1):not(#control_2){
+            +label{
+                span{
+                    display: block;
+                    padding: 3px 0 0 15px;
+                }
+            }
+        }
+    }
+    [data-dough-money-navigator-questions-initialised="yes"] [data-question-grouped] .response__control[type="radio"],
+    [data-dough-money-navigator-questions-initialised="yes"] [data-question-grouped] .response__control[type="checkbox"]{
+        + label.response__text{
+            background-color: $light_grey_2;
+            &:before,
+            &:after{
+                display: none;
+            }
+        }
+        &:checked{
+            + label.response__text{
+                background-color: $teal_secondary;
+                span{
+                    padding: 3px 0 0 0;
+                }
+            }
+        }
+    }
+    [data-dough-money-navigator-questions-initialised="yes"] .l-money_navigator__question[data-question-multiple]{
+        .button--yes,
+        .button--no{
+            .response__control + .response__text{
+                text-align: center;
+                span{
+                    width: 100%;;
+                }
+                &:after{
+                    background-color: $light_grey_2;
+                }
+            }
+            .response__control:checked + .response__text{
+                &:after{
+                    background-color: $teal_secondary;
+                }
+            }
+            .response__control:focus + .response__text{
+                &:before{
+                    outline: none;
+                }
+            }
+            .response__control:focus,
+            .response__control:hover{
+                outline: none;
+            }
+        }
+    }
+    input[type=checkbox]{
+        &#q7_a10, &#q7_response_yes,
+        &#q8_a10, &#q8_response_yes,
+        &#q9_a12, &#q9_response_yes,
+        &#q12_a5, &#q12_response_yes{
+            + label span{
+                padding: 13px 0 0 0!important;
+            }
+        }
+    }
+
+// -------------------------------------------------------------------------

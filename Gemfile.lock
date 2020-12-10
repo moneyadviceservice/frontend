@@ -41,6 +41,24 @@ GIT
       underscore-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: e028305a05cc8d361190cb09aa295c67560b4906
+  branch: 11911_remove_brochure_text
+  specs:
+    pacs (3.12.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator.git
   revision: 3b82283f17368c8bcf3425ad20778c746dcb2286
   branch: feature/reskin-pensions-calc
@@ -515,18 +533,6 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.12.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -801,6 +807,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-20
 
 DEPENDENCIES
   action_plans (~> 5.5.0)
@@ -873,7 +880,7 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (~> 3.12.0)
+  pacs (~> 3.12.0)!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator!
   poltergeist

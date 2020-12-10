@@ -110,15 +110,20 @@
         'www.staging.dev.mas.local': 'https://staging-partner-tools.dev.mas.local/',
         'www.uat.moneyadviceservice.org.uk': 'https://uat-partner-tools.moneyadviceservice.org.uk/'
       };
+
       hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
+
       masConfig.toolsConfig = {
+        // syndication_url: 'https://partner-tools.moneyadviceservice.org.uk', 
         // syndication_url: 'https://preview-partner-tools.dev.mas.local/',
+        syndication_url: 'https://cultivate-partner-tools.dev.mas.local/',
         // syndication_url: 'http://localhost:3000',
-        syndication_url: 'http://9dd6cac87755.ngrok.io',
+        // syndication_url: 'http://d326533ef6ae.ngrok.io',
         syndication: {
           ga_iframe_url: 'https://partner-tools.moneyadviceservice.org.uk/partner_ga_iframe.html'
         }
       };
+
       if (domains[hostname]) {
         return masConfig.toolsConfig['syndication_url'] = domains[hostname];
       }

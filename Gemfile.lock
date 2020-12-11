@@ -25,54 +25,6 @@ GIT
       rails (>= 3.2, < 5.1.0)
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 448211336a050822273aa858cc312dc59049f55a
-  branch: feature/mortgage-calc-reskin
-  specs:
-    mortgage_calculator (3.15.0)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.36)
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-      underscore-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/pacs.git
-  revision: e028305a05cc8d361190cb09aa295c67560b4906
-  branch: 11911_remove_brochure_text
-  specs:
-    pacs (3.12.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-
-GIT
-  remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 3b82283f17368c8bcf3425ad20778c746dcb2286
-  branch: feature/reskin-pensions-calc
-  specs:
-    pensions_calculator (2.6.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 3.0.1)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
-
 GEM
   remote: https://rubygems.org/
   remote: https://gems.railslts.com/
@@ -533,6 +485,18 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
+    pacs (3.12.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
@@ -543,6 +507,15 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
+    pensions_calculator (2.7.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 3.0.1)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
     pensions_calculator-calculations (3.0.1)
       activesupport
     poltergeist (1.17.0)
@@ -880,9 +853,9 @@ DEPENDENCIES
   nokogiri (>= 1.10.3)
   nunes
   opening_hours
-  pacs (~> 3.12.0)!
+  pacs (~> 3.12.0)
   payday_loans_intervention (~> 1.9.0)
-  pensions_calculator!
+  pensions_calculator (~> 2.7.1)
   poltergeist
   postcode_anywhere-email_validation (~> 0.2.0)
   pry-byebug

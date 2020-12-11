@@ -103,7 +103,6 @@ group :assets do
   gem 'autoprefixer-rails'
   gem 'csslint_ruby'
   gem 'jshint_ruby'
-  gem 'uglifier'
 end
 
 group :development do
@@ -138,6 +137,7 @@ end
 group :production do
   gem 'syslog-logger'
   gem 'unicorn-rails'
+  gem 'uglifier'
 end
 
 group :build, :test, :development do

@@ -196,5 +196,23 @@
             }
         }
     }
+    .action__content{
+        .callout--tool{
+            .callout__icon{
+                display: none;
+                + p{
+                    margin-top: 10px;                    
+                    &:before{
+                        content: unset;
+                    }
+                }
+            }
+            border: 8px solid $yellow_secondary;
+            border-radius: 0 0 0 36px;
+        }
+        .add-action{
+            padding-left: 20px;
+        }
+    }
 
 // -------------------------------------------------------------------------

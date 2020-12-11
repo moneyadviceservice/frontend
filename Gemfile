@@ -100,7 +100,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/moneyhelper-reskin'
 gem 'timelines', '~> 1.7.1'
-gem 'universal_credit',  path: 'git@github.com:moneyadviceservice/rad_consumer', branch: 'feature/moneyhelper-reskin'
+gem 'universal_credit',  git: 'git@github.com:moneyadviceservice/rad_consumer', branch: 'feature/moneyhelper-reskin'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'wpcc_calc_reskin'
 
 group :assets do

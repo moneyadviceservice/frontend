@@ -114,9 +114,10 @@
       hostname = document.getElementsByClassName(masConfig.targetSelector)[0].hostname;
 
       masConfig.toolsConfig = {
-        // syndication_url: 'https://partner-tools.moneyadviceservice.org.uk', 
+        syndication_url: 'https://partner-tools.moneyadviceservice.org.uk', 
         // syndication_url: 'https://preview-partner-tools.dev.mas.local/',
-        syndication_url: 'https://cultivate-partner-tools.dev.mas.local/',
+        // syndication_url: 'https://cultivate-partner-tools.dev.mas.local/',
+        // syndication_url: 'https://uat-partner-tools.dev.mas.local/',
         // syndication_url: 'http://localhost:3000',
         // syndication_url: 'http://d326533ef6ae.ngrok.io',
         syndication: {

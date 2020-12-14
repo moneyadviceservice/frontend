@@ -35,8 +35,7 @@ Rails.application.configure do
                                    components/*.js
                                    styleguide.js
                                    supports.js
-                                   syndication/iframeResizer.js
-                                   syndication/tools.js
+                                   syndication/*.js
                                    translations/cy.js
                                    translations/en.js
                                    dough/assets/js/lib/*.js

@@ -14,20 +14,6 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/budget_planner.git
-  revision: 0b6563bbe18c1a13aaf306cd31210f35e3cc062a
-  branch: 11789_CrossSite-Safari-issue
-  specs:
-    budget_planner (5.7.1)
-      i18n-js (= 3.0.0.mas)
-      js-routes (= 1.1.2)
-      mas-mailer (~> 0.3)
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-      sass-rails
-      spreadsheet
-
-GIT
   remote: git@github.com:moneyadviceservice/dough.git
   revision: a90d79da058eb43f95d6afb77325b22fed539f07
   ref: a90d79d
@@ -86,14 +72,46 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: 1d6436871e4167ebc1371c04c0189cd36acfb0b5
-  branch: feature/wpcc-calc-reskin
+  revision: 50ae8d797be99c5e5be28e20138229d7f9b0c291
+  branch: wpcc_calc_reskin
   specs:
     wpcc (2.8.3)
       dough-ruby (~> 5.38)
       meta-tags
       modernizr-rails (~> 2.6.2)
       rails (>= 4, < 5)
+
+PATH
+  remote: ../budget_planner
+  specs:
+    budget_planner (5.7.1)
+      i18n-js (= 3.0.0.mas)
+      js-routes (= 1.1.2)
+      mas-mailer (~> 0.3)
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
+      sass-rails
+      spreadsheet
+
+PATH
+  remote: ../debt-advice-locator
+  specs:
+    debt_advice_locator (3.14.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
 
 PATH
   remote: ../universal_credit
@@ -142,11 +160,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.15.0)
-      actionpack (>= 3.0.2, < 6.1)
-      activemodel (>= 3.0.2, < 6.1)
-      activesupport (>= 3.0.2, < 6.1)
-    active_model_serializers (0.9.7)
+    active_attr (0.15.1)
+      actionpack (>= 3.0.2, < 6.2)
+      activemodel (>= 3.0.2, < 6.2)
+      activesupport (>= 3.0.2, < 6.2)
+    active_model_serializers (0.9.8)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)
     activejob (4.2.11.17)
@@ -295,22 +313,6 @@ GEM
       responders
       sass-rails
     database_cleaner (1.6.2)
-    debt_advice_locator (3.13.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -790,7 +792,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    uk_postcode (2.1.5)
+    uk_postcode (2.1.6)
     underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
@@ -859,7 +861,7 @@ DEPENDENCIES
   cucumber-rails
   cutback_calculator (~> 0.13.0)
   database_cleaner
-  debt_advice_locator (= 3.13.0)
+  debt_advice_locator!
   debt_and_mental_health (~> 1.6.0)
   debt_free_day_calculator (~> 3.1.0)
   debt_test (~> 1.9.0)

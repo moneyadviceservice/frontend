@@ -11,10 +11,10 @@ private
 
 desc 'copy tools_<hash_asset_id>.js to tools.js for embedded tools'
 task :copy_precompiled_tools_js do
-  precompiled_file_paths = Dir.glob(File.join('public', assets_dir_name, 'syndication', 'tools*js'))
+  precompiled_file_paths = Dir.glob(File.join('public', assets_dir_name, 'syndication', 'syndicatedTools*js'))
   source_path = precompiled_most_recent_tools_js(precompiled_file_paths)
   if source_path.present?
-    tools_js_location = File.join('public', assets_dir_name, 'syndication', 'tools.js')
+    tools_js_location = File.join('public', assets_dir_name, 'syndication', 'syndicatedTools.js')
     FileUtils.cp(source_path, tools_js_location) if update_tools_js?(source_path, tools_js_location)
   end
 end

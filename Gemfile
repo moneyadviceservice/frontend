@@ -66,6 +66,7 @@ gem 'statsd-ruby'
 gem 'sucker_punch'
 gem 'turnout'
 gem 'whenever', require: false
+gem 'websocket-extensions', '>= 0.1.5'
 
 # MAS Gems
 # ========

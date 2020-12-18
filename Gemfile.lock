@@ -803,7 +803,7 @@ GEM
       hashdiff
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
+    websocket-extensions (0.1.5)
     whenever (0.10.0)
       chronic (>= 0.6.3)
     wpcc (2.8.3)
@@ -934,6 +934,7 @@ DEPENDENCIES
   universal_credit (~> 4.1.1)
   vcr
   webmock
+  websocket-extensions (>= 0.1.5)
   whenever
   wpcc (= 2.8.3)
 

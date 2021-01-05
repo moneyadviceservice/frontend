@@ -34,10 +34,10 @@
                     }
                 }
             }
-            label[for=q0_a1] span:before{ background-image: $england_svg; }
-            label[for=q0_a2] span:before{ background-image: $ni_svg; }
-            label[for=q0_a3] span:before{ background-image: $scotland_svg; }
-            label[for=q0_a4] span:before{ background-image: $wales_svg; }
+            label[for=q0_a1] span:before{ background-image: image_url('maps/map-england.png'); }
+            label[for=q0_a2] span:before{ background-image: image_url('maps/map-ni.png');}
+            label[for=q0_a3] span:before{ background-image: image_url('maps/map-scotland.png'); }
+            label[for=q0_a4] span:before{ background-image: image_url('maps/map-wales.png');}
         }
     }
 
@@ -251,6 +251,7 @@
 
 
 // -- Qa Fixes -------------------------------------------------------------------
+// -- UL list ----------------------------------------------------------------------
 
   .list > li{
     font-family: 'Roobert-Regular', sans-serif;
@@ -290,3 +291,16 @@
   }
 
   .crisis-help__cta:before { content: ' '; display: block; }
+
+ // ----------------------------------------------------------------------
+
+  fieldset legend{
+    font-family: 'Roobert-Regular', sans-serif;
+    font-weight: normal;
+  }
+
+  .question__content--q0{
+    .response__text {
+      color: $blue_primary !important;
+    }
+  }

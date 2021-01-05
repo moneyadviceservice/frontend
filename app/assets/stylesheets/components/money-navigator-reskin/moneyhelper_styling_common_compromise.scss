@@ -33,7 +33,8 @@
 // -- Buttons ----------------------------------------------------------------------
     .button{
         box-sizing: border-box;
-        font-family: 'Roobert-Regular', sans-serif;
+        /*font-family: 'Roobert-Regular', sans-serif;*/
+        font-family: 'Roobert-SemiBold', sans-serif !important;
         &:active, &:focus, &:hover{
             outline: none!important;
         }

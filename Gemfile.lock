@@ -25,62 +25,6 @@ GIT
       rails (>= 3.2, < 5.1.0)
       sass-rails
 
-GIT
-  remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 448211336a050822273aa858cc312dc59049f55a
-  branch: feature/mortgage-calc-reskin
-  specs:
-    mortgage_calculator (3.15.0)
-      angularjs-rails (~> 1.2.18)
-      dough-ruby (~> 5.36)
-      mas-fonts
-      modernizr-rails
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-      underscore-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 68e0f2e15f161e66e08d564c631ead400800b773
-  branch: feature/reskin-pensions-calc
-  specs:
-    pensions_calculator (2.6.1)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      meta-tags
-      pensions_calculator-calculations (~> 3.0.1)
-      rails (>= 4, < 5)
-      responders
-      sass-rails
-      uglifier
-
-GIT
-  remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: ed8f68aa558c7c8d2c1c925e61d70e5d9fd609aa
-  branch: feature/moneyhelper-reskin
-  specs:
-    savings_calculator (1.10.2)
-      autoprefixer-rails
-      dough-ruby (~> 5.36)
-      jquery-rails
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      sass-rails
-      sprockets (< 4)
-
-GIT
-  remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: 50ae8d797be99c5e5be28e20138229d7f9b0c291
-  branch: wpcc_calc_reskin
-  specs:
-    wpcc (2.8.3)
-      dough-ruby (~> 5.38)
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      rails (>= 4, < 5)
-
 PATH
   remote: ../budget_planner
   specs:
@@ -114,6 +58,45 @@ PATH
       validate_url (= 1.0.0)
 
 PATH
+  remote: ../mortgage_calculator
+  specs:
+    mortgage_calculator (3.15.0)
+      angularjs-rails (~> 1.2.18)
+      dough-ruby (~> 5.36)
+      mas-fonts
+      modernizr-rails
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+      underscore-rails
+
+PATH
+  remote: ../pensions_calculator
+  specs:
+    pensions_calculator (2.6.1)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      meta-tags
+      pensions_calculator-calculations (~> 3.0.1)
+      rails (>= 4, < 5)
+      responders
+      sass-rails
+      uglifier
+
+PATH
+  remote: ../savings_calculator
+  specs:
+    savings_calculator (1.10.2)
+      autoprefixer-rails
+      dough-ruby (~> 5.36)
+      jquery-rails
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      sass-rails
+      sprockets (< 4)
+
+PATH
   remote: ../universal_credit
   specs:
     universal_credit (4.1.1)
@@ -128,6 +111,15 @@ PATH
       redcarpet
       sass-rails
       uglifier
+
+PATH
+  remote: ../wpcc
+  specs:
+    wpcc (2.8.3)
+      dough-ruby (~> 5.38)
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      rails (>= 4, < 5)
 
 GEM
   remote: https://rubygems.org/

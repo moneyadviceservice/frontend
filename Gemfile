@@ -106,7 +106,7 @@ gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/moneyhelper-reskin'
 gem 'timelines', '~> 1.7.1'
 gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/moneyhelper-reskin'  
-gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'wpcc_calc_reskin'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'preview'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -103,9 +103,9 @@ gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/reskin-pensions-calc'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
-gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/moneyhelper-reskin'
+gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'preview'
 gem 'timelines', '~> 1.7.1'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/moneyhelper-reskin'  
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'preview'  
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'preview'
 
 group :assets do

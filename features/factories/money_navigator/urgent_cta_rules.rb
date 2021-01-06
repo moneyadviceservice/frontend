@@ -8,12 +8,12 @@ FactoryBot.define do
     factory :S1_H3_self_employed_debt_advice, traits: [:country, :S1_H3_self_employed_debt_advice_answers]
     factory :S1_H4_urgent_pension_advice, traits: [:country, :S1_H4_pension_advice_answers]
 
-    # Any of these Q4A1-A4, Q6A1-A6, Q7A1-A9, Q9A1-A11 BUT NOT IF HAVE SELECTED Q1A2 PLUS the regional variation
+    # Any of these Q6A1-A6, Q7A1-A9, Q9A1-A11 BUT NOT IF HAVE SELECTED Q1A2 PLUS the regional variation
     trait :S1_H1_debt_advice_answers do
       q1 { answers_with_entropy('q1', ['a1'], [])  }
       q2 { answers_with_entropy('q2', ['a2'], nil)  }
       q3 { answers_with_entropy('q3', [], nil)  }
-      q4 { answers_with_entropy('q4', ['a1', 'a2', 'a3', 'a4'], nil)  }
+      q4 { answers_with_entropy('q4', [], nil)  }
       q5 { answers_with_entropy('q5', [], nil)  }
       q6 { answers_with_entropy('q6', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6'], nil) }
       q7 { answers_with_entropy('q7', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], nil) }

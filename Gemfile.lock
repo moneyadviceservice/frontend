@@ -5,23 +5,6 @@ GIT
     aes (0.5.0)
 
 GIT
-  remote: git@github.com:moneyadviceservice/advice_plans.git
-  revision: cc3e3ee28c0d10f781ce838eca03ea5907251267
-  branch: TP-11733-update-kaminari
-  specs:
-    advice_plans (4.1.1)
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      hashie
-      i18n-js (= 3.0.0.mas)
-      kaminari (>= 1.2.1)
-      meta-tags
-      rails (>= 4, < 5)
-      redcarpet (~> 3.2.0)
-      sass-rails
-      transitions (~> 0.1.11)
-
-GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -41,19 +24,6 @@ GIT
       activesupport
       rails (>= 3.2, < 5.1.0)
       sass-rails
-
-GIT
-  remote: git@github.com:moneyadviceservice/mas-cms-client.git
-  revision: 8695b729738da121bfc187bde4e9cd391636fe90
-  branch: TP-11734-upgrade-json
-  specs:
-    mas-cms-client (1.20.1)
-      activemodel (>= 4.2)
-      activesupport (>= 4.2)
-      faraday (~> 0.9.2)
-      faraday-conductivity (~> 0.3.1)
-      faraday_middleware (~> 0.12.2)
-      rubytree (~> 1.0.0)
 
 GIT
   remote: https://github.com/rails-lts/rack.git
@@ -123,6 +93,17 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    advice_plans (4.1.1)
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      hashie
+      i18n-js (= 3.0.0.mas)
+      kaminari (>= 1.2.1)
+      meta-tags
+      rails (>= 4, < 5)
+      redcarpet (~> 3.2.0)
+      sass-rails
+      transitions (~> 0.1.11)
     agreements (2.5.0)
       dough-ruby (~> 5.36)
       hashie (~> 2.0.5)
@@ -477,6 +458,13 @@ GEM
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
       rest-client
+    mas-cms-client (1.20.1)
+      activemodel (>= 4.2)
+      activesupport (>= 4.2)
+      faraday (~> 0.9.2)
+      faraday-conductivity (~> 0.3.1)
+      faraday_middleware (~> 0.12.2)
+      rubytree (~> 1.0.0)
     mas-fonts (0.0.2.6)
       rails
     mas-mailer (0.3.2.15)
@@ -829,7 +817,7 @@ DEPENDENCIES
   activerecord-session_store
   activesupport!
   adal!
-  advice_plans (~> 4.1.1)!
+  advice_plans (~> 4.1.1)
   aes!
   agreements (~> 2.5.0)
   algoliasearch
@@ -881,7 +869,7 @@ DEPENDENCIES
   link_header
   mail
   mailjet
-  mas-cms-client (= 1.20.1)!
+  mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
   mortgage_calculator (~> 3.16.0)
   mysql2 (= 0.4.9)

@@ -132,6 +132,10 @@
 			padding: 0 0 0 $baseline-unit * 4;
 		}
 	}
+
+	.question__response__hidden {
+		display: none;
+	}
 }
 
 // Component initialised

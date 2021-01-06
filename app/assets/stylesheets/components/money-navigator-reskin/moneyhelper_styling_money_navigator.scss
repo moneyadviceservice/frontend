@@ -34,10 +34,10 @@
                     }
                 }
             }
-            label[for=q0_a1] span:before{ background-image: $england_svg; }
-            label[for=q0_a2] span:before{ background-image: $ni_svg; }
-            label[for=q0_a3] span:before{ background-image: $scotland_svg; }
-            label[for=q0_a4] span:before{ background-image: $wales_svg; }
+            label[for=q0_a1] span:before{ background-image: image_url('maps/map-england.png'); }
+            label[for=q0_a2] span:before{ background-image: image_url('maps/map-ni.png');}
+            label[for=q0_a3] span:before{ background-image: image_url('maps/map-scotland.png'); }
+            label[for=q0_a4] span:before{ background-image: image_url('maps/map-wales.png');}
         }
     }
 
@@ -212,13 +212,13 @@
                 background-image: $callout_svg;
                 background-repeat: no-repeat;
                 position: absolute;
-                top: -7px;
+                top: -1px;
                 left: 24px;
                 width: 51px;
                 height: 79px;
                 @media(max-width:$mobile_width){
                     background-image: $callout_mobile_svg;
-                    left: -8px;
+                    left: 0px;
                     top: 31px;
                 }
             }
@@ -247,4 +247,108 @@
         }
     // }
 
-// -------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+
+
+// -- Qa Fixes -------------------------------------------------------------------
+// -- UL list ----------------------------------------------------------------------
+
+  .list > li, article.mntpanel ul > li{
+    font-family: 'Roobert-Regular', sans-serif;
+    color: $text_secondary;
+  }
+
+  .landing__who-help .list > li, article.mntpanel ul > li{
+    &:before{
+      color: $text_secondary !important;
+    }
+  }
+
+
+  .landing__how-help{
+    .list > li:before{
+      color: $blue_primary;
+    }
+  }
+
+// -- Links ----------------------------------------------------------------------
+
+  a {
+      color: $magenta_primary;
+      text-decoration: underline;
+      display: inline !important;
+
+      &:active, &:focus, &:hover{
+        text-decoration: none;
+      }
+
+      &:focus{
+        background-color: $yellow_secondary;
+        border-bottom: 4px solid $support_focus !important;
+        text-decoration: none;
+        outline: none !important;
+      }
+  }
+
+  .crisis-help__cta:before { content: ' '; display: block; }
+
+ // ----------------------------------------------------------------------
+
+  .question__heading{
+    font-family: 'Roobert-Regular', sans-serif;
+    color: $text_secondary;
+    font-weight: normal;
+  }
+
+  .question__content--q0{
+    .response__text {
+      color: $blue_primary !important;
+    }
+  }
+
+  .question__content{
+    label{
+      font-size: 18px;  
+    }
+
+    .content__inner{
+      font-family: 'Roobert-SemiBold', sans-serif;
+    }
+  }
+
+  .button--back, .button.button--continue:disabled{
+    background: white;
+    color: #c82a87;
+    font-size: 16px;
+    border: 1px solid #c82a87;
+    border-radius: 4px;
+    box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+    padding: 12px 16px;
+    font-weight: 600;
+
+    &:active{
+      font-weight: 600;
+      background: #f3f1f3;
+      color: #000b3b;
+      border: 3px solid #8200d1;
+      box-shadow: 0px 3px 0px white, inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+    }
+  }
+
+  .action__content p{
+    font-size: 18px;
+
+    .callout--tool{
+      font-size: 16px;
+    }
+  }
+
+  article.mntpanel{
+    p{
+      font-size: 18px;
+    }
+
+    a.overlay__hide{
+      font-family: 'Roobert-Regular', sans-serif;
+    }
+  }

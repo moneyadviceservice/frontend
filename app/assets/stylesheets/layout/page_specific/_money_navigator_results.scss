@@ -453,7 +453,7 @@ $transition-time: 0.4s;
 						right: $default-gutter; 
 						width: 18px;
 						height: 12px; 
-						transform: translateY(-50%) rotate(0deg); 
+						transform: translateY(-50%) rotate(180deg); 
 						transition-property: transform; 
 						transition-duration: $transition-time; 
 						background-image: image_url('money_navigator_tool/section_title_icon.svg');
@@ -590,7 +590,7 @@ $transition-time: 0.4s;
 				&.is-collapsed {
 					.section__title {
 						.section__title__icon {
-							transform: translateY(-50%) rotate(180deg); 
+							transform: translateY(-50%) rotate(0deg); 
 						}			
 					}
 				}

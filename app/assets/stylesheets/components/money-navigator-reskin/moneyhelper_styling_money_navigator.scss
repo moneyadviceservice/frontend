@@ -253,14 +253,14 @@
 // -- Qa Fixes -------------------------------------------------------------------
 // -- UL list ----------------------------------------------------------------------
 
-  .list > li{
+  .list > li, article.mntpanel ul > li{
     font-family: 'Roobert-Regular', sans-serif;
     color: $text_secondary;
   }
 
-  .landing__who-help{
-    .list > li:before{
-      color: $text_secondary;
+  .landing__who-help .list > li, article.mntpanel ul > li{
+    &:before{
+      color: $text_secondary !important;
     }
   }
 
@@ -284,7 +284,7 @@
 
       &:focus{
         background-color: $yellow_secondary;
-        border-bottom: 4px solid $support_focus;
+        border-bottom: 4px solid $support_focus !important;
         text-decoration: none;
         outline: none !important;
       }
@@ -337,8 +337,18 @@
 
   .action__content p{
     font-size: 18px;
-    
+
     .callout--tool{
       font-size: 16px;
+    }
+  }
+
+  article.mntpanel{
+    p{
+      font-size: 18px;
+    }
+
+    a.overlay__hide{
+      font-family: 'Roobert-Regular', sans-serif;
     }
   }

@@ -133,9 +133,6 @@
 		}
 	}
 
-	.question__response__hidden {
-		display: none;
-	}
 }
 
 // Component initialised
@@ -145,6 +142,10 @@
 
 		&.question--active {
 			display: block; 
+		}
+
+		.question__response--hidden {
+			display: none;
 		}
 
 		&[data-question-multiple] {
@@ -221,7 +222,7 @@
 						outline:none;
 					}
 				}
-	
+
 				.response__control {
 					&:checked + .response__text {
 						color: $color-white; 

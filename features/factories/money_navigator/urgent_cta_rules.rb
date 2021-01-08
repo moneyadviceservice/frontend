@@ -26,13 +26,16 @@ FactoryBot.define do
       q14 { answers_with_entropy('q14', [], nil)  }
     end
 
+    # All of these (Q3A1 or Q3A3) AND (Q4A2 OR Q4A3) AND Q10A1 
+    # AND ANY OF THESE [(Q6A1-Q6A5) OR (Q7A1-Q7A9) OR (Q9A1-A11)], 
+    # BUT NOT IF HAVE ALSO SELECTED Q1A3 or Q1A4
     trait :S1_H2_stepchange_debt_england_answers do
       q1 { answers_with_entropy('q1', ['a1', 'a2'], [])  }
       q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', ['a1'], ['a3'])  }
       q4 { answers_with_entropy('q4', ['a2'], ['a3', 'a4'] )}
       q5 { answers_with_entropy('q5', [], nil)  }
-      q6 { answers_with_entropy('q6', ['a4'], ['a1', 'a2', 'a3', 'a4', 'a7'])}
+      q6 { answers_with_entropy('q6', ['a1', 'a2', 'a3', 'a4', 'a5'], nil)}
       q7 { answers_with_entropy('q7', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], nil)}
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], nil)  }

@@ -100,7 +100,7 @@ gem 'pensions_calculator', path: '../pensions_calculator'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', path: '../savings_calculator'
-gem 'timelines', '~> 1.7.1'
+gem 'timelines', path:'../timelines'
 gem 'universal_credit',  path: '../universal_credit' # money manager
 gem 'wpcc', path:'../wpcc'
 

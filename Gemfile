@@ -55,16 +55,18 @@ gem 'nunes'
 gem 'opening_hours'
 gem 'postcode_anywhere-email_validation', '~> 0.2.0'
 gem 'psych', '>= 2.0.5' # https://www.ruby-lang.org/en/news/2014/03/29/heap-overflow-in-yaml-uri-escape-parsing-cve-2014-2525/
+gem 'rack', git: 'https://github.com/rails-lts/rack.git', branch: 'lts-1-6-stable'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'redcarpet'
 gem 'rest-client', '~> 2.0'
 gem 'rouge'
-gem 'rubytree'
+gem 'rubytree', '~> 1'
 gem 'sass-rails'
 gem 'statsd-ruby'
 gem 'sucker_punch'
 gem 'turnout'
 gem 'whenever', require: false
+gem 'websocket-extensions', '>= 0.1.5'
 
 # MAS Gems
 # ========
@@ -72,11 +74,11 @@ gem 'whenever', require: false
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
 gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11691_DAL_Current-location-warning-message_v5.41', ref: 'a90d79d'
-gem 'mas-cms-client', '1.20.0'
+gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
 gem 'action_plans', '~> 5.5.0'
-gem 'advice_plans', '~> 4.1.0'
+gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', '~> 5.7.1'
 gem 'car_cost_tool', '~> 1.5'
@@ -88,7 +90,8 @@ gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_fre
 gem 'debt_test', '~> 1.9.0'
 gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
-gem 'mortgage_calculator', '~> 3.16.0'
+# gem 'mortgage_calculator', '~> 3.16.0'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '11945_Holding-statement'
 gem 'pacs', '~> 3.13.0'
 gem 'payday_loans_intervention', '~> 1.9.0'
 gem 'pensions_calculator', '~> 2.7.1'

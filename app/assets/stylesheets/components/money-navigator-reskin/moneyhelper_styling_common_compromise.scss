@@ -4,6 +4,7 @@
         font-style: normal;
         font-weight: bold;
     }
+
     h1{ color: $blue_primary; }
     h2{ color: $blue_primary; }
     h3{ color: $text_secondary; }
@@ -15,7 +16,7 @@
 
 // -- Paragraphs -------------------------------------------------------------------
     p{
-        font-family: 'Roobert-Regular', sans-serif!important;
+        font-family: 'Roobert-Regular', sans-serif !important;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;

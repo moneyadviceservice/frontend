@@ -101,7 +101,7 @@ gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calc
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/ntt_moneyhelper_reskin'
 gem 'payday_loans_intervention', '~> 1.9.0'
 # gem 'pensions_calculator', '~> 2.6.1'
-gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/reskin-pensions-calc'
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/ntt-reskin-pensions-calc'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'preview'

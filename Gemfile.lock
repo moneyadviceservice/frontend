@@ -5,6 +5,19 @@ GIT
     aes (0.5.1)
 
 GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: 1f0f167b441d7727fa156a7c9ca07cabc86f19af
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    action_plans (5.5.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -16,7 +29,7 @@ GIT
 GIT
   remote: git@github.com:moneyadviceservice/budget_planner.git
   revision: 60a3c673888dc47c03fff3d453375ddb68fc5778
-  branch: feature/ntt_moneyhelper_reskin
+  branch: preview
   specs:
     budget_planner (5.7.1)
       i18n-js (= 3.0.0.mas)
@@ -44,7 +57,7 @@ GIT
 GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
   revision: 7c6c00ec1e10a61e166a8632112dd1c7e530d391
-  branch: feature/ntt_moneyhelper_reskin
+  branch: preview
   specs:
     debt_advice_locator (3.14.0)
       active_attr
@@ -65,8 +78,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator.git
-  revision: a827351e0479e533a7b485f1e8538a655b034199
-  branch: feature/ntt_moneyhelper_reskin
+  revision: b61b40792d752dc72365969b8b119201b531583c
+  branch: preview
   specs:
     debt_free_day_calculator (3.1.0)
       autoprefixer-rails (< 9)
@@ -96,8 +109,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 448211336a050822273aa858cc312dc59049f55a
-  branch: feature/mortgage-calc-reskin
+  revision: de5ea3b1f0236eed75b98fcb4c538eca592c3aaf
+  branch: ntt
   specs:
     mortgage_calculator (3.15.0)
       angularjs-rails (~> 1.2.18)
@@ -144,8 +157,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: ed8f68aa558c7c8d2c1c925e61d70e5d9fd609aa
-  branch: feature/moneyhelper-reskin
+  revision: 7dc054f205afd626490d6d196017e9cfeaaaf2d8
+  branch: preview
   specs:
     savings_calculator (1.10.2)
       autoprefixer-rails
@@ -160,7 +173,7 @@ GIT
 GIT
   remote: git@github.com:moneyadviceservice/universal_credit.git
   revision: 83b478b0fa0da92506b1fc4ff8b5ea1619106f2a
-  branch: feature/moneyhelper-reskin
+  branch: preview
   specs:
     universal_credit (4.1.1)
       autoprefixer-rails
@@ -177,8 +190,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: 50ae8d797be99c5e5be28e20138229d7f9b0c291
-  branch: wpcc_calc_reskin
+  revision: 3d1359ca85d05d977df6e48a26d194f2ee086f13
+  branch: preview
   specs:
     wpcc (2.8.3)
       dough-ruby (~> 5.38)
@@ -186,27 +199,11 @@ GIT
       modernizr-rails (~> 2.6.2)
       rails (>= 4, < 5)
 
-PATH
-  remote: ../cost_calculator_builder
-  specs:
-    cost_calculator_builder (1.1.0)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
-
 GEM
   remote: https://rubygems.org/
   remote: https://gems.railslts.com/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (5.5.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
     actionmailer (4.2.11.17)
       actionpack (= 4.2.11.17)
       actionview (= 4.2.11.17)
@@ -326,6 +323,11 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
+    cost_calculator_builder (1.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
     crack (0.4.4)
     crass (1.0.6)
     cream (2.1.8)
@@ -501,7 +503,7 @@ GEM
     friendly_id (5.4.1)
       activerecord (>= 4.0.0)
     geokit (1.13.1)
-    geokit-rails (2.3.1)
+    geokit-rails (2.3.2)
       geokit (~> 1.5)
       rails (>= 3.0)
     globalid (0.4.2)
@@ -885,7 +887,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_plans (~> 5.5.0)
+  action_plans!
   actionmailer!
   actionpack!
   actionview!
@@ -913,7 +915,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder!
+  cost_calculator_builder (~> 1.1.0)
   cream (= 2.1.8)
   csslint_ruby
   cucumber-rails

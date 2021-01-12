@@ -55,6 +55,17 @@ GIT
       sass-rails
 
 GIT
+  remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
+  revision: d543dbcedf60acd8259b530bff24f1da8c7c576a
+  branch: feature/ntt-moneyhelper-reskin
+  specs:
+    cost_calculator_builder (1.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
   revision: 7c6c00ec1e10a61e166a8632112dd1c7e530d391
   branch: preview
@@ -142,8 +153,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 3b82283f17368c8bcf3425ad20778c746dcb2286
-  branch: feature/reskin-pensions-calc
+  revision: e29a839b0ce66fe151e7fee89973a7e81e457061
+  branch: feature/ntt-reskin-pensions-calc
   specs:
     pensions_calculator (2.6.1)
       autoprefixer-rails
@@ -323,11 +334,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
-    cost_calculator_builder (1.1.0)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
     crack (0.4.4)
     crass (1.0.6)
     cream (2.1.8)
@@ -915,7 +921,7 @@ DEPENDENCIES
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 1.1.0)
+  cost_calculator_builder!
   cream (= 2.1.8)
   csslint_ruby
   cucumber-rails

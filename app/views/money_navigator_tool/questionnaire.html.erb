@@ -60,7 +60,14 @@
                       <% end %>
 
                       <% question[:responses].each do |response| %>
-                        <div class="question__response" data-response
+                        <div 
+                          <% if response[:hidden] %>
+                            class="question__response question__response--hidden"
+                          <% else %>
+                            class="question__response" 
+                          <% end %>
+                      
+                        data-response
                           <% if response[:group] %>
                             data-response-group="<%= response[:group] %>"
                           <% end %>

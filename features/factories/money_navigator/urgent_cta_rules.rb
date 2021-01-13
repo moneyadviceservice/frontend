@@ -8,31 +8,34 @@ FactoryBot.define do
     factory :S1_H3_self_employed_debt_advice, traits: [:country, :S1_H3_self_employed_debt_advice_answers]
     factory :S1_H4_urgent_pension_advice, traits: [:country, :S1_H4_pension_advice_answers]
 
-    # Any of these Q4A1, Q4A2, Q6A4, Q6A5, Q6A6, Q7A1-A9  BUT NOT IF HAVE SELECTED Q10A1 PLUS the regional variation
+    # Any of these Q6A1-A6, Q7A1-A9, Q9A1-A11 BUT NOT IF HAVE SELECTED Q1A2 PLUS the regional variation
     trait :S1_H1_debt_advice_answers do
       q1 { answers_with_entropy('q1', ['a1'], [])  }
-      q2 { answers_with_entropy('q2', [], nil)  }
+      q2 { answers_with_entropy('q2', ['a2'], nil)  }
       q3 { answers_with_entropy('q3', [], nil)  }
-      q4 { answers_with_entropy('q4', ['a1', 'a2'], nil)  }
+      q4 { answers_with_entropy('q4', [], nil)  }
       q5 { answers_with_entropy('q5', [], nil)  }
-      q6 { answers_with_entropy('q6', ['a4', 'a5', 'a6'], nil) }
+      q6 { answers_with_entropy('q6', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6'], nil) }
       q7 { answers_with_entropy('q7', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], nil) }
       q8 { answers_with_entropy('q8', [], nil)  }
-      q9 { answers_with_entropy('q9', [], nil)  }
-      q10 { answers_with_entropy('q10', ['a1'], nil) }
+      q9 { answers_with_entropy('q9', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], nil)  }
+      q10 { answers_with_entropy('q10', [], nil) }
       q11 { answers_with_entropy('q11', [], nil)  }
       q12 { answers_with_entropy('q12', [], nil)  }
       q13 { answers_with_entropy('q13', [], nil)  }
       q14 { answers_with_entropy('q14', [], nil)  }
     end
 
+    # All of these (Q3A1 or Q3A3) AND (Q4A2 OR Q4A3) AND Q10A1 
+    # AND ANY OF THESE [(Q6A1-Q6A5) OR (Q7A1-Q7A9) OR (Q9A1-A11)], 
+    # BUT NOT IF HAVE ALSO SELECTED Q1A3 or Q1A4
     trait :S1_H2_stepchange_debt_england_answers do
       q1 { answers_with_entropy('q1', ['a1', 'a2'], [])  }
       q2 { answers_with_entropy('q2', [], nil)  }
       q3 { answers_with_entropy('q3', ['a1'], ['a3'])  }
       q4 { answers_with_entropy('q4', ['a2'], ['a3', 'a4'] )}
       q5 { answers_with_entropy('q5', [], nil)  }
-      q6 { answers_with_entropy('q6', ['a4'], ['a1', 'a2', 'a3', 'a4', 'a7'])}
+      q6 { answers_with_entropy('q6', ['a1', 'a2', 'a3', 'a4', 'a5'], nil)}
       q7 { answers_with_entropy('q7', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9'], nil)}
       q8 { answers_with_entropy('q8', [], nil) }
       q9 { answers_with_entropy('q9', ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11'], nil)  }

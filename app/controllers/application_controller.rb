@@ -208,6 +208,8 @@ class ApplicationController < ActionController::Base
     redirect_to e.location, status: e.http_response.status
   end
 
+  protected
+
   def iframe_action
     response.headers["X-Frame-Options"] = "ALLOW-FROM #{ENV['PARTNER_TOOLS_URI']}"
   end

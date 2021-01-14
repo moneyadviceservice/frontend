@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   layout :check_syndicated_layout
 
   before_action :set_syndicated_x_frame
+  after_action :allow_iframe
 
   include Authentication
   include Chat
@@ -205,5 +206,9 @@ class ApplicationController < ActionController::Base
 
   def redirect_page(e)
     redirect_to e.location, status: e.http_response.status
+  end
+
+  def iframe_action
+    response.headers["X-Frame-Options"] = "ALLOW-FROM #{ENV['PARTNER_TOOLS_URI']}"
   end
 end

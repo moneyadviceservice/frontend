@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   layout :check_syndicated_layout
 
   before_action :set_syndicated_x_frame
-  after_action :allow_iframe
+  #after_action :allow_iframe
 
   include Authentication
   include Chat

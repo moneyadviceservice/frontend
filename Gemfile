@@ -50,7 +50,7 @@ gem 'mailjet'
 gem 'meta-tags', '~> 2.4'
 gem 'mysql2', '0.4.9'
 gem 'newrelic_rpm'
-gem 'nokogiri', '>= 1.10.3'
+gem 'nokogiri', '~> 1.10.3'
 gem 'nunes'
 gem 'opening_hours'
 gem 'postcode_anywhere-email_validation', '~> 0.2.0'
@@ -132,7 +132,7 @@ group :test do
   gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', '~> 2.1.0', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
   gem 'factory_bot'

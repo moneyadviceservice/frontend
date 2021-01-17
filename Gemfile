@@ -143,7 +143,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers'
   gem 'site_prism'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
   gem 'tidy-html5'
   gem 'timecop'
   gem 'vcr'

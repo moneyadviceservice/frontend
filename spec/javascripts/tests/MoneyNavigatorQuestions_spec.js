@@ -7,13 +7,11 @@ describe('MoneyNavigatorQuestions', function() {
   beforeEach(function(done) {
     var self = this;
 
-    fixture.setBase('spec/javascripts/fixtures');
-
     requirejs(
         ['jquery', 'MoneyNavigatorQuestions'],
         function($, MoneyNavigatorQuestions) {
-          fixture.load('MoneyNavigatorQuestions.html');
-          self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
+          self.$html = $(window.__html__['spec/javascripts/fixtures/MoneyNavigatorQuestions.html']).appendTo('body');
+          self.component = self.$html.find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
           self.banner = $(self.component).parents().find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 
@@ -474,7 +472,7 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[0]).hasClass(this.activeClass)).to.be.true; 
       expect($(this.questions[1]).hasClass(this.activeClass)).to.be.false; 
 
-      // Q1 is skipped
+      // Q2 is skipped
       $(this.questions[1]).data('question-skip', true); 
 
       this.obj._updateDisplay('next'); 
@@ -488,22 +486,35 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.questions[2]).hasClass(this.activeClass)).to.be.false; 
     }); 
 
+    it('Adds focus to correct element when `back` button is clicked', function() {
+      $(this.questions[4]).addClass(this.activeClass); 
+
+      this.obj._updateDisplay('prev'); 
+      expect($(this.questions[3])[0] === document.activeElement).to.be.true; 
+
+      // Q3 is skipped
+      $(this.questions[2]).data('question-skip', true); 
+      this.obj._updateDisplay('prev'); 
+      expect($(this.questions[2])[0] === document.activeElement).to.be.false; 
+      expect($(this.questions[1])[0] === document.activeElement).to.be.true; 
+    }); 
+
     it('Shows/hides the banner when active question is/not Q0', function() {
       var hiddenClass = 'l-money_navigator__banner' + '--' + this.hiddenClass; 
 
       this.obj._updateDOM(); 
 
       this.obj._updateDisplay('next');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('next');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('prev');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('prev');
-      expect(this.banner.hasClass(hiddenClass)).to.be.false; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.equal(-1); 
     }); 
 
     it('Updates the counter to the correct value for the active question', function() {

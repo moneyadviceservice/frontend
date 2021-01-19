@@ -512,6 +512,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .find('.question__counter')
       .text(progress + '% ' + this.i18nStrings.messages.completed);
 
+    if (dir === 'prev') {
+      if (activeIndex >= 0) {
+        questions[activeIndex].focus(); 
+      }
+    }
+
     if (activeIndex == 0) {
       this.$banner.removeClass(
         'l-money_navigator__banner' + '--' + this.hiddenClass

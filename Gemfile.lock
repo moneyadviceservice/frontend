@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/action_plans.git
-  revision: 1f0f167b441d7727fa156a7c9ca07cabc86f19af
+  revision: dc8cb90cb54dd4f0dd529194c648e20491c1468c
   branch: feature/ntt_moneyhelper_reskin
   specs:
     action_plans (5.5.0)
@@ -42,7 +42,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/car_cost_tool.git
-  revision: 950c883ca8a2dc7eee6e6d5cd5e7e2a4c765fb7c
+  revision: f1cca83b81812281d00e6e879eebb730217a0572
   branch: feature/ntt_moneyhelper_reskin
   specs:
     car_cost_tool (1.5.1)
@@ -120,7 +120,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: fd681c4f95b5219a2d639ae801d4894992f7ce01
+  revision: a536c691b1798f8ed8b4c9caf24dac083f0efa0e
   branch: feature/mortgage-calc-reskin
   specs:
     mortgage_calculator (3.15.0)
@@ -135,7 +135,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 4d8c2ee3b79e946662bac22198ca1b0297d327ca
+  revision: 217b9dde4c3ff09e5c0595818719e5f0f8173e16
   branch: feature/ntt_moneyhelper_reskin
   specs:
     pacs (3.13.0)
@@ -168,7 +168,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: 1b50301e815d95b01740d652a97a8fd4752fb064
+  revision: e5b8a9feee06e4066b7de1d58f04bfa864a1aa48
   branch: feature/ntt_moneyhelper_reskin_new
   specs:
     savings_calculator (1.10.2)
@@ -854,7 +854,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.4.2)
+    sqlite3 (1.3.13)
     statsd-ruby (1.5.0)
     structured_warnings (0.4.0)
     sucker_punch (2.1.2)
@@ -1016,7 +1016,7 @@ DEPENDENCIES
   shoulda-matchers
   site_prism
   site_search (= 0.3.0)
-  sqlite3
+  sqlite3 (~> 1.3.6)
   statsd-ruby
   sucker_punch
   syslog-logger

@@ -76,6 +76,10 @@
 	list-style: none;
 	padding: 0;
 
+  &:focus {
+    @include focus-outline;
+  }
+
 	.question__counter {
 		color: $color-green-secondary;
 		font-weight: 700; 

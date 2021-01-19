@@ -7,13 +7,11 @@ describe('MoneyNavigatorQuestions', function() {
   beforeEach(function(done) {
     var self = this;
 
-    fixture.setBase('spec/javascripts/fixtures');
-
     requirejs(
         ['jquery', 'MoneyNavigatorQuestions'],
         function($, MoneyNavigatorQuestions) {
-          fixture.load('MoneyNavigatorQuestions.html');
-          self.component = $(fixture.el).find('[data-dough-component="MoneyNavigatorQuestions"]');
+          self.$html = $(window.__html__['spec/javascripts/fixtures/MoneyNavigatorQuestions.html']).appendTo('body');
+          self.component = self.$html.find('[data-dough-component="MoneyNavigatorQuestions"]');
           self.obj = new MoneyNavigatorQuestions(self.component);
           self.banner = $(self.component).parents().find('[data-banner]'); 
           self.questions = self.component.find('[data-question]'); 

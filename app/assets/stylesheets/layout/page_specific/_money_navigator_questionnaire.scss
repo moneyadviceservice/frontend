@@ -76,10 +76,6 @@
 	list-style: none;
 	padding: 0;
 
-  &:focus {
-    @include focus-outline;
-  }
-
 	.question__counter {
 		color: $color-green-secondary;
 		font-weight: 700; 
@@ -239,10 +235,6 @@
 		&[data-question-grouped] {
 			$transition-time: 0.5s;
 
-			.question__content {
-				overflow: hidden;
-			}
-
 			.question__groups {
 				@extend %clearfix;
 
@@ -253,7 +245,9 @@
 				.response__controls,
 				.question__response--collection {
 					float: left;
-					transition: transform $transition-time;
+					visibility: visible; 
+					transition-property: transform, visibility;
+					transition-duration: $transition-time, 0s;
 
 					input:focus + label, 
 					button:focus {
@@ -267,6 +261,8 @@
 	
 					&.question--inactive {
 						transform: translateX(-100% - ($default-gutter * 3));
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 
@@ -275,6 +271,8 @@
 
 					&.question--inactive {
 						transform: translateX(0%);
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 			}

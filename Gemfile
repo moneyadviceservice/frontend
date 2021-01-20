@@ -156,7 +156,7 @@ gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calcul
 
 # gem 'timelines', '~> 1.7.1'
 # timelines - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found TODO - pick out the fonts fix
-gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_noneyhelper_reskin_new'
+gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
 # gem 'universal_credit', '~> 4.1.1'

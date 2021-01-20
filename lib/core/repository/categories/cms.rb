@@ -25,6 +25,8 @@ module Core::Repository
           raise Core::Repository::CMS::Resource301Error.new(response.headers['Location'])
         elsif response.status == 302
           raise Core::Repository::CMS::Resource302Error.new(response.headers['Location'])
+        elsif response.body.nil?
+          raise Core::Repository::Base::RequestError.new(response.headers['Location'])
         end
 
         response.body

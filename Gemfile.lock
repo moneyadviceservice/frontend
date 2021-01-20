@@ -1,8 +1,21 @@
 GIT
   remote: git@github.com:chicks/aes.git
-  revision: 001f77806a2cbef513315993e19a8f679f8f5786
+  revision: 0503a8ff65487c3ea7272ead4f7071139b736d44
   specs:
-    aes (0.5.0)
+    aes (0.5.1)
+
+GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: eb0cb8dd5558d85e676c41c587e28f6d47a79824
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    action_plans (5.5.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
 
 GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
@@ -14,19 +27,9 @@ GIT
       uri_template (~> 0.7)
 
 GIT
-  remote: git@github.com:moneyadviceservice/dough.git
-  revision: a90d79da058eb43f95d6afb77325b22fed539f07
-  ref: a90d79d
-  branch: 11691_DAL_Current-location-warning-message_v5.41
-  specs:
-    dough-ruby (5.41.0)
-      activemodel
-      activesupport
-      rails (>= 3.2, < 5.1.0)
-      sass-rails
-
-PATH
-  remote: ../budget_planner
+  remote: git@github.com:moneyadviceservice/budget_planner.git
+  revision: 24d6e12172be4b9d3edd9f65fdfc45eae7d4d301
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     budget_planner (5.7.1)
       i18n-js (= 3.0.0.mas)
@@ -37,8 +40,35 @@ PATH
       sass-rails
       spreadsheet
 
-PATH
-  remote: ../debt-advice-locator
+GIT
+  remote: git@github.com:moneyadviceservice/car_cost_tool.git
+  revision: 810b347f5fcc8374e54afcfcc4e9acee594eb1e4
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    car_cost_tool (1.5.1)
+      dough-ruby (~> 5.36)
+      nokogiri
+      rails (>= 4, < 5)
+      rest-client
+      roo (< 2.5.0)
+      roo-xls (<= 1)
+      sass-rails
+
+GIT
+  remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
+  revision: 149ac07a602c683ac328b351d81a566bfd2d8471
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    cost_calculator_builder (1.1.0)
+      bowndler
+      dough-ruby (~> 5.36)
+      friendly_id (>= 5.1.0)
+      rails (>= 4, < 5)
+
+GIT
+  remote: git@github.com:moneyadviceservice/debt-advice-locator.git
+  revision: aa7dd81ea8c1fe5933f8f91ee4129bb446d33553
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     debt_advice_locator (3.14.0)
       active_attr
@@ -57,10 +87,54 @@ PATH
       uk_postcode
       validate_url (= 1.0.0)
 
-PATH
-  remote: ../mortgage_calculator
+GIT
+  remote: git@github.com:moneyadviceservice/debt_free_day_calculator
+  revision: 696bccb4f02b9c6a920c6a60a9d582c3f600b64b
+  branch: feature/ntt_moneyhelper_reskin
   specs:
-    mortgage_calculator (3.15.0)
+    debt_free_day_calculator (3.1.0)
+      autoprefixer-rails (< 9)
+      bigdecimal (~> 1.3.0)
+      debt_finance_calculator (~> 1.1.0)
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      email_validator (~> 1.4.0)
+      i18n-js (= 3.0.0.mas)
+      mas-fonts
+      meta-tags
+      rails (>= 4, < 5)
+      roadie (< 3)
+      sass-rails
+
+GIT
+  remote: git@github.com:moneyadviceservice/dough.git
+  revision: a90d79da058eb43f95d6afb77325b22fed539f07
+  ref: a90d79d
+  branch: 11691_DAL_Current-location-warning-message_v5.41
+  specs:
+    debt_advice_locator (3.14.0)
+      active_attr
+      active_model_serializers (< 0.10.0)
+      addressable
+      bcrypt
+      coffee-rails
+      dough-ruby (~> 5.36)
+      draper (< 3)
+      geokit-rails
+      kaminari
+      mas-templating (~> 1.0.0)
+      rails (>= 4, < 5)
+      redcarpet
+      sass-rails (= 4.0.5)
+      uk_postcode
+      validate_url (= 1.0.0)
+
+GIT
+  remote: git@github.com:moneyadviceservice/mortgage_calculator.git
+  revision: 8e337ad97ddad145be43f0fce62ed43e772ab3da
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    mortgage_calculator (3.16.0)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.36)
       mas-fonts
@@ -70,8 +144,28 @@ PATH
       sprockets (< 4)
       underscore-rails
 
-PATH
-  remote: ../pensions_calculator
+GIT
+  remote: git@github.com:moneyadviceservice/pacs.git
+  revision: 217b9dde4c3ff09e5c0595818719e5f0f8173e16
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    pacs (3.13.0)
+      dough-ruby (~> 5.39)
+      dry-struct
+      dry-struct-setters
+      dry-types
+      faraday
+      faraday-conductivity
+      faraday_middleware
+      meta-tags
+      modernizr-rails (~> 2.6.2)
+      mongoid
+      rails (>= 4, < 5)
+
+GIT
+  remote: git@github.com:moneyadviceservice/pensions_calculator.git
+  revision: cedf0cc0ce92eb09bed24d0b8e078dff0d6c6c5d
+  branch: feature/ntt-reskin-pensions-calc
   specs:
     pensions_calculator (2.6.1)
       autoprefixer-rails
@@ -83,8 +177,10 @@ PATH
       sass-rails
       uglifier
 
-PATH
-  remote: ../savings_calculator
+GIT
+  remote: git@github.com:moneyadviceservice/savings_calculator.git
+  revision: 89ece2232873663fb49cd57eb7e34fc52e712d00
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     savings_calculator (1.10.2)
       autoprefixer-rails
@@ -96,8 +192,23 @@ PATH
       sass-rails
       sprockets (< 4)
 
-PATH
-  remote: ../universal_credit
+GIT
+  remote: git@github.com:moneyadviceservice/timelines.git
+  revision: b12461baad924eb0c6b897b235161d7c470eb368
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    timelines (1.7.1)
+      bowndler
+      icalendar
+      jquery-rails
+      mas-templating
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
+  remote: git@github.com:moneyadviceservice/universal_credit.git
+  revision: f321d466af664e36dc1e675236d5877cd49592e1
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     universal_credit (4.1.1)
       autoprefixer-rails
@@ -105,15 +216,17 @@ PATH
       dough-ruby (~> 5.36)
       mas-cms-client (~> 1.1)
       meta-tags
-      mysql2 (= 0.5.3)
+      mysql2 (= 0.4.9)
       preamble
       rails (>= 4, < 5)
       redcarpet
       sass-rails
       uglifier
 
-PATH
-  remote: ../wpcc
+GIT
+  remote: git@github.com:moneyadviceservice/wpcc.git
+  revision: b0a885903976a7d89b3bf0951566d56ce6a427d2
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     wpcc (2.8.3)
       dough-ruby (~> 5.38)
@@ -121,18 +234,18 @@ PATH
       modernizr-rails (~> 2.6.2)
       rails (>= 4, < 5)
 
+GIT
+  remote: https://github.com/rails-lts/rack.git
+  revision: de472597cac8f3f222e7b6e90a07c2b991704b01
+  branch: lts-1-6-stable
+  specs:
+    rack (1.6.13)
+
 GEM
   remote: https://rubygems.org/
   remote: https://gems.railslts.com/
   remote: http://gems.dev.mas.local/
   specs:
-    action_plans (5.5.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
     actionmailer (4.2.11.17)
       actionpack (= 4.2.11.17)
       actionview (= 4.2.11.17)
@@ -169,7 +282,7 @@ GEM
       activemodel (= 4.2.11.17)
       activesupport (= 4.2.11.17)
       arel (~> 6.0)
-    activerecord-session_store (1.1.1)
+    activerecord-session_store (1.1.3)
       actionpack (>= 4.0)
       activerecord (>= 4.0)
       multi_json (~> 1.11, >= 1.11.2)
@@ -182,12 +295,12 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    advice_plans (4.1.0)
+    advice_plans (4.1.1)
       dough-ruby (~> 5.36)
       friendly_id (>= 5.1.0)
       hashie
       i18n-js (= 3.0.0.mas)
-      kaminari (~> 0.16.1)
+      kaminari (>= 1.2.1)
       meta-tags
       rails (>= 4, < 5)
       redcarpet (~> 3.2.0)
@@ -200,58 +313,50 @@ GEM
       rails (>= 4, < 5)
       recaptcha
       sass-rails
-    algoliasearch (1.19.2)
+    algoliasearch (1.27.5)
       httpclient (~> 2.8, >= 2.8.3)
       json (>= 1.5.1)
     angularjs-rails (1.2.26)
     arel (6.0.4)
-    ast (2.4.0)
+    ast (2.4.1)
     attr_encrypted (3.1.0)
       encryptor (~> 3.0.0)
     autoprefixer-rails (8.6.5)
       execjs
-    backports (3.11.1)
-    bcrypt (3.1.15)
-    better_errors (2.4.0)
+    bcrypt (3.1.16)
+    better_errors (2.9.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bigdecimal (1.3.5)
-    binding_of_caller (0.8.0)
+    binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
     blind_index (0.2.0)
       activesupport (>= 4.2)
     bowndler (1.0.2)
       thor
     bson (4.11.1)
-    bugsnag (6.7.0)
+    bugsnag (6.19.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
-    byebug (10.0.2)
-    capybara (2.18.0)
+    byebug (11.1.3)
+    capybara (3.34.0)
       addressable
       mini_mime (>= 0.1.3)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (>= 2.0, < 4.0)
-    car_cost_tool (1.5.1)
-      dough-ruby (~> 5.36)
-      nokogiri
-      rails (>= 4, < 5)
-      rest-client
-      roo (< 2.5.0)
-      roo-xls (<= 1)
-      sass-rails
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (~> 1.5)
+      xpath (~> 3.2)
     chai-jquery-rails (2.0.1)
       railties (>= 3.1)
       sprockets
     chronic (0.10.2)
     cliver (0.3.2)
-    cocoon (1.2.12)
+    cocoon (1.2.15)
     codeclimate-test-reporter (0.6.0)
       simplecov (>= 0.7.1, < 1.0.0)
-    coderay (1.1.2)
+    coderay (1.1.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -259,14 +364,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.7)
-    cost_calculator_builder (1.1.0)
-      bowndler
-      dough-ruby (~> 5.36)
-      friendly_id (>= 5.1.0)
-      rails (>= 4, < 5)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
+    concurrent-ruby (1.1.8)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     cream (2.1.8)
       faraday (>= 0.9)
@@ -275,28 +375,43 @@ GEM
       addressable
     csslint_ruby (0.0.2)
       execjs
-    cucumber (3.1.0)
-      builder (>= 2.1.2)
-      cucumber-core (~> 3.1.0)
-      cucumber-expressions (~> 5.0.4)
-      cucumber-wire (~> 0.0.1)
-      diff-lcs (~> 1.3)
-      gherkin (~> 5.0)
-      multi_json (>= 1.7.5, < 2.0)
-      multi_test (>= 0.1.2)
-    cucumber-core (3.1.0)
-      backports (>= 3.8.0)
-      cucumber-tag_expressions (~> 1.1.0)
-      gherkin (>= 5.0.0)
-    cucumber-expressions (5.0.15)
-    cucumber-rails (1.5.0)
-      capybara (>= 1.1.2, < 3)
-      cucumber (>= 1.3.8, < 4)
-      mime-types (>= 1.17, < 4)
-      nokogiri (~> 1.5)
-      railties (>= 4, < 5.2)
-    cucumber-tag_expressions (1.1.1)
-    cucumber-wire (0.0.1)
+    cucumber (4.1.0)
+      builder (~> 3.2, >= 3.2.3)
+      cucumber-core (~> 7.1, >= 7.1.0)
+      cucumber-create-meta (~> 1.0.0, >= 1.0.0)
+      cucumber-cucumber-expressions (~> 10.1, >= 10.1.0)
+      cucumber-gherkin (~> 14.0, >= 14.0.1)
+      cucumber-html-formatter (~> 7.0, >= 7.0.0)
+      cucumber-messages (~> 12.2, >= 12.2.0)
+      cucumber-wire (~> 3.1, >= 3.1.0)
+      diff-lcs (~> 1.3, >= 1.3, < 1.4)
+      multi_test (~> 0.1, >= 0.1.2)
+      sys-uname (~> 1.0, >= 1.0.2)
+    cucumber-core (7.1.0)
+      cucumber-gherkin (~> 14.0, >= 14.0.1)
+      cucumber-messages (~> 12.2, >= 12.2.0)
+      cucumber-tag-expressions (~> 2.0, >= 2.0.4)
+    cucumber-create-meta (1.0.0)
+      cucumber-messages (~> 12.2, >= 12.2.0)
+      sys-uname (~> 1.2, >= 1.2.1)
+    cucumber-cucumber-expressions (10.3.0)
+    cucumber-gherkin (14.2.0)
+      cucumber-messages (~> 12.4, >= 12.4.0)
+    cucumber-html-formatter (7.2.0)
+      cucumber-messages (~> 12.4, >= 12.4.0)
+    cucumber-messages (12.4.0)
+      protobuf-cucumber (~> 3.10, >= 3.10.8)
+    cucumber-rails (2.1.0)
+      capybara (>= 2.12, < 4)
+      cucumber (>= 3.0.2, < 5)
+      mime-types (>= 2.0, < 4)
+      nokogiri (~> 1.8)
+      rails (>= 4.2, < 7)
+    cucumber-tag-expressions (2.0.4)
+    cucumber-wire (3.1.0)
+      cucumber-core (~> 7.1, >= 7.1.0)
+      cucumber-cucumber-expressions (~> 10.1, >= 10.1.0)
+      cucumber-messages (~> 12.2, >= 12.2.0)
     cutback_calculator (0.13.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -304,7 +419,7 @@ GEM
       rails (>= 4, < 5)
       responders
       sass-rails
-    database_cleaner (1.6.2)
+    database_cleaner (1.8.5)
     debt_and_mental_health (1.6.0)
       bcrypt
       dough-ruby (~> 5.36)
@@ -316,19 +431,6 @@ GEM
       sass-rails
     debt_finance_calculator (1.1.0.8)
       bigdecimal (> 1.2.3)
-    debt_free_day_calculator (3.1.0)
-      autoprefixer-rails (< 9)
-      bigdecimal (~> 1.3.0)
-      debt_finance_calculator (~> 1.1.0)
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      email_validator (~> 1.4.0)
-      i18n-js (= 3.0.0.mas)
-      mas-fonts
-      meta-tags
-      rails (>= 4, < 5)
-      roadie (< 3)
-      sass-rails
     debt_test (1.9.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -336,7 +438,7 @@ GEM
       jquery-rails
       rails (>= 4, < 5)
       sass-rails
-    debug_inspector (0.0.3)
+    debug_inspector (1.0.0)
     decision_trees (2.3.0)
       dough-ruby (~> 5.36)
       handlebars_assets (~> 0.13.0)
@@ -347,12 +449,12 @@ GEM
       rails (>= 4, < 5)
       sass-rails (~> 4.0.5)
       sprockets-rails (~> 2.3.3)
-    delayed_job (4.1.5)
-      activesupport (>= 3.0, < 5.3)
-    delayed_job_active_record (4.1.3)
-      activerecord (>= 3.0, < 5.3)
+    delayed_job (4.1.9)
+      activesupport (>= 3.0, < 6.2)
+    delayed_job_active_record (4.1.5)
+      activerecord (>= 3.0, < 6.2)
       delayed_job (>= 3.0, < 5)
-    devise (4.7.2)
+    devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -361,14 +463,14 @@ GEM
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
     diff-lcs (1.3)
-    docile (1.3.0)
-    domain_name (0.5.20180417)
+    docile (1.3.5)
+    domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.2.1)
-    dotenv-rails (2.2.1)
-      dotenv (= 2.2.1)
-      railties (>= 3.2, < 5.2)
-    dragonfly (1.2.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
+    dragonfly (1.3.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3)
@@ -377,21 +479,19 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    dry-configurable (0.11.6)
+    dry-configurable (0.12.0)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 0.4, >= 0.4.7)
-      dry-equalizer (~> 0.2)
+      dry-core (~> 0.5, >= 0.5.0)
     dry-container (0.7.2)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.10)
+    dry-core (0.5.0)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.3.0)
     dry-inflector (0.2.0)
-    dry-logic (1.0.8)
+    dry-logic (1.1.0)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 0.2)
-      dry-equalizer (~> 0.2)
+      dry-core (~> 0.5, >= 0.5)
     dry-struct (1.3.0)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer (~> 0.3)
@@ -413,13 +513,13 @@ GEM
     email_validator (1.4.0)
       activemodel
     encryptor (3.0.0)
-    erubi (1.7.1)
+    erubi (1.10.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_bot (4.10.0)
-      activesupport (>= 3.0.0)
-    faker (1.8.7)
-      i18n (>= 0.7)
+    factory_bot (5.2.0)
+      activesupport (>= 4.2.0)
+    faker (2.2.1)
+      i18n (>= 0.8)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     faraday-conductivity (0.3.1)
@@ -430,22 +530,21 @@ GEM
       delayed_job_active_record
       dough-ruby (~> 5.0)
       rails (>= 4, < 5)
-    foreman (0.84.0)
-      thor (~> 0.19.1)
+    ffi (1.14.2)
+    foreman (0.87.2)
     formtastic (2.3.1)
       actionpack (>= 3.0)
     formtastic-bootstrap (2.1.3)
       formtastic (~> 2.2)
-    friendly_id (5.2.5)
+    friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     geokit (1.13.1)
-    geokit-rails (2.3.1)
+    geokit-rails (2.3.2)
       geokit (~> 1.5)
       rails (>= 3.0)
-    gherkin (5.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    haml (5.1.0)
+    haml (5.2.1)
       temple (>= 0.8.0)
       tilt
     haml-rails (1.0.0)
@@ -458,7 +557,7 @@ GEM
       execjs (>= 1.2.9)
       sprockets (>= 2.0.3)
       tilt
-    hashdiff (0.3.7)
+    hashdiff (1.0.1)
     hashie (2.0.5)
     hike (1.2.3)
     historyjs-rails (1.0.1)
@@ -470,6 +569,7 @@ GEM
       ruby_parser (~> 3.5)
     html_validation (1.1.5)
     htmlentities (4.3.4)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     httpclient (2.8.3)
@@ -477,7 +577,7 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.6.1)
+    icalendar (2.7.0)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     ice_nine (0.11.2)
@@ -493,19 +593,28 @@ GEM
       sprockets-rails
     jshint_ruby (0.1)
       execjs
-    json (1.8.6)
+    json (2.5.1)
     jwt (1.5.6)
-    kaminari (0.16.3)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
-    kgio (2.11.2)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
+    kgio (2.11.3)
     kss (0.5.0)
-    launchy (2.4.3)
-      addressable (~> 2.3)
-    letter_opener (1.6.0)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.7.0)
       launchy (~> 2.2)
     link_header (0.0.8)
-    loofah (2.7.0)
+    loofah (2.9.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -514,30 +623,31 @@ GEM
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
       rest-client
-    mas-cms-client (1.20.0)
+    mas-cms-client (1.20.1)
       activemodel (>= 4.2)
       activesupport (>= 4.2)
       faraday (~> 0.9.2)
       faraday-conductivity (~> 0.3.1)
       faraday_middleware (~> 0.12.2)
-      rubytree (~> 0.9.7)
+      rubytree (~> 1.0.0)
     mas-fonts (0.0.2.6)
       rails
     mas-mailer (0.3.2.15)
       delayed_job_active_record
       hashie
     mas-templating (1.0.0.18)
-    meta-tags (2.11.1)
-      actionpack (>= 3.2.0, < 6.1)
-    method_source (0.9.0)
-    mime-types (3.2.2)
+    meta-tags (2.14.0)
+      actionpack (>= 3.2.0, < 6.2)
+    method_source (1.0.0)
+    middleware (0.1.0)
+    mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0331)
+    mime-types-data (3.2020.1104)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.2)
+    minitest (5.14.3)
     modernizr-rails (2.6.3)
-    mongo (2.13.1)
+    mongo (2.14.0)
       bson (>= 4.8.2, < 5.0.0)
     mongoid (5.4.1)
       activemodel (~> 4.0)
@@ -549,7 +659,7 @@ GEM
     multipart-post (2.1.1)
     mysql2 (0.5.3)
     netrc (0.11.0)
-    newrelic_rpm (5.0.0.342)
+    newrelic_rpm (6.15.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nunes (0.5.0)
@@ -557,21 +667,9 @@ GEM
       activesupport
     origin (2.3.1)
     orm_adapter (0.5.0)
-    pacs (3.12.0)
-      dough-ruby (~> 5.39)
-      dry-struct
-      dry-struct-setters
-      dry-types
-      faraday
-      faraday-conductivity
-      faraday_middleware
-      meta-tags
-      modernizr-rails (~> 2.6.2)
-      mongoid
-      rails (>= 4, < 5)
-    parallel (1.12.1)
-    parser (2.5.0.5)
-      ast (~> 2.4.0)
+    parallel (1.20.1)
+    parser (3.0.0.0)
+      ast (~> 2.4.1)
     payday_loans_intervention (1.9.0)
       autoprefixer-rails
       dough-ruby (~> 5.0)
@@ -581,29 +679,33 @@ GEM
       sass-rails
     pensions_calculator-calculations (3.0.1)
       activesupport
-    poltergeist (1.17.0)
-      capybara (~> 2.1)
+    poltergeist (1.18.1)
+      capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
     postcode_anywhere-email_validation (0.2.0)
       activemodel (~> 4.2)
       rest-client (~> 2.0)
-    powerpack (0.1.1)
     preamble (0.0.3)
       rspec
-    pry (0.11.3)
-      coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
-    pry-byebug (3.6.0)
-      byebug (~> 10.0)
-      pry (~> 0.10)
-    pry-rails (0.3.6)
+    protobuf-cucumber (3.10.8)
+      activesupport (>= 3.2)
+      middleware
+      thor
+      thread_safe
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.9.0)
+      byebug (~> 11.0)
+      pry (~> 0.13.0)
+    pry-rails (0.3.9)
       pry (>= 0.10.4)
-    pry-rescue (1.4.5)
+    pry-rescue (1.5.2)
       interception (>= 0.5)
-      pry
-    psych (3.0.2)
-    public_suffix (4.0.1)
+      pry (>= 0.12.0)
+    psych (3.3.0)
+    public_suffix (4.0.6)
     quiz (1.4.0)
       cocoon
       devise
@@ -611,7 +713,6 @@ GEM
       formtastic-bootstrap (>= 2.1, < 3)
       friendly_id (>= 5.0)
       rails (>= 4, < 5)
-    rack (1.6.13)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-livereload (0.3.17)
@@ -645,24 +746,27 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
-    raindrops (0.19.0)
-    rake (13.0.1)
+    raindrops (0.19.1)
+    rake (13.0.3)
     ranked-model (0.4.2)
       activerecord (>= 4.1.16)
     rb-readline (0.5.5)
-    rdoc (6.0.3)
-    recaptcha (4.14.0)
+    rdoc (6.3.0)
+    recaptcha (5.6.0)
       json
     redcarpet (3.2.3)
-    request_store (1.4.1)
+    regexp_parser (1.8.2)
+    request_store (1.5.0)
       rack (>= 1.4)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rest-client (2.0.2)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rexml (3.2.4)
     rio (2.2.1)
       bowndler
       dough-ruby (~> 5.36)
@@ -680,71 +784,77 @@ GEM
       nokogiri
       roo (>= 2.0.0beta1, < 3)
       spreadsheet (> 0.9.0)
-    rouge (3.1.1)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.1)
-      rspec-support (~> 3.7.0)
-    rspec-expectations (3.7.0)
+    rouge (3.26.0)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-html-matchers (0.9.1)
+      rspec-support (~> 3.10.0)
+    rspec-html-matchers (0.9.4)
       nokogiri (~> 1)
       rspec (>= 3.0.0.a, < 4)
-    rspec-mocks (3.7.0)
+    rspec-mocks (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-rails (3.7.2)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-      rspec-support (~> 3.7.0)
-    rspec-support (3.7.1)
-    rspec_junit_formatter (0.3.0)
+      rspec-support (~> 3.10.0)
+    rspec-rails (4.0.2)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.10.1)
+    rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (0.54.0)
+    rubocop (1.8.1)
       parallel (~> 1.10)
-      parser (>= 2.5)
-      powerpack (~> 0.1)
+      parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml
+      rubocop-ast (>= 1.2.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.0, >= 1.0.1)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.4.0)
+      parser (>= 2.7.1.5)
     ruby-ole (1.2.12.2)
-    ruby-progressbar (1.9.0)
-    ruby_parser (3.13.1)
+    ruby-progressbar (1.11.0)
+    ruby_parser (3.15.1)
       sexp_processor (~> 4.9)
-    rubytree (0.9.7)
-      json (~> 1.8)
-      structured_warnings (~> 0.2)
+    rubytree (1.0.0)
+      json (~> 2.1)
+      structured_warnings (~> 0.3)
     rubyzip (1.3.0)
-    safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    sdoc (1.0.0)
+    sdoc (2.0.3)
       rdoc (>= 5.0)
-    sexp_processor (4.12.0)
-    shoulda-matchers (3.1.2)
-      activesupport (>= 4.0.0)
-    simplecov (0.16.1)
+    sexp_processor (4.15.2)
+    shoulda-matchers (4.5.0)
+      activesupport (>= 4.2.0)
+    simplecov (0.21.2)
       docile (~> 1.1)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.2)
-    site_prism (2.11)
-      addressable (~> 2.4)
-      capybara (~> 2.7)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.2)
+    site_prism (3.7)
+      addressable (~> 2.5)
+      capybara (~> 3.8)
+      site_prism-all_there (>= 0.3.1, < 1.0)
+    site_prism-all_there (0.3.2)
     site_search (0.3.0)
       algoliasearch
-    spreadsheet (1.2.4)
+    spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
     sprockets (2.12.5)
       hike (~> 1.2)
@@ -756,41 +866,36 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.13)
-    statsd-ruby (1.4.0)
-    structured_warnings (0.3.0)
-    sucker_punch (2.1.1)
+    statsd-ruby (1.5.0)
+    structured_warnings (0.4.0)
+    sucker_punch (2.1.2)
       concurrent-ruby (~> 1.0)
+    sys-uname (1.2.2)
+      ffi (~> 1.1)
     syslog-logger (1.6.8)
-    temple (0.8.1)
-    thor (0.19.4)
+    temple (0.8.2)
+    thor (1.0.1)
     thread_safe (0.3.6)
     tidy-html5 (0.1.2)
     tilt (1.4.1)
-    timecop (0.9.1)
-    timelines (1.7.1)
-      bowndler
-      icalendar
-      jquery-rails
-      mas-templating
-      rails (>= 4, < 5)
-      sass-rails
+    timecop (0.9.2)
     transitions (0.1.13)
-    turnout (2.4.1)
-      i18n (~> 0.7)
+    turnout (2.5.0)
+      i18n (>= 0.7, < 2)
       rack (>= 1.3, < 3)
       rack-accept (~> 0.4)
       tilt (>= 1.4, < 3)
-    tzinfo (1.2.7)
+    tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    uglifier (4.1.20)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     uk_postcode (2.1.6)
     underscore-rails (1.8.3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.6)
-    unicode-display_width (1.3.0)
-    unicorn (5.4.0)
+    unf_ext (0.0.7.7)
+    unicode-display_width (2.0.0)
+    unicorn (5.8.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
     unicorn-rails (2.2.1)
@@ -800,26 +905,27 @@ GEM
     validate_url (1.0.0)
       activemodel (>= 3.0.0)
       addressable
-    vcr (4.0.0)
+    vcr (6.0.0)
     warden (1.2.7)
       rack (>= 1.0)
-    webmock (3.3.0)
+    webmock (3.11.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
-    websocket-driver (0.7.0)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
-    whenever (0.10.0)
+    websocket-extensions (0.1.5)
+    whenever (1.0.0)
       chronic (>= 0.6.3)
-    xpath (3.0.0)
+    xpath (3.2.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
+  x86_64-darwin-20
 
 DEPENDENCIES
-  action_plans (~> 5.5.0)
+  action_plans!
   actionmailer!
   actionpack!
   actionview!
@@ -829,7 +935,7 @@ DEPENDENCIES
   activerecord-session_store
   activesupport!
   adal!
-  advice_plans (~> 4.1.0)
+  advice_plans (~> 4.1.1)
   aes!
   agreements (~> 2.5.0)
   algoliasearch
@@ -843,19 +949,19 @@ DEPENDENCIES
   bugsnag
   byebug
   capybara
-  car_cost_tool (~> 1.5)
+  car_cost_tool!
   chai-jquery-rails
   chronic
   codeclimate-test-reporter (= 0.6.0)
-  cost_calculator_builder (~> 1.1.0)
+  cost_calculator_builder!
   cream (= 2.1.8)
   csslint_ruby
-  cucumber-rails
+  cucumber-rails (~> 2.1.0)
   cutback_calculator (~> 0.13.0)
   database_cleaner
   debt_advice_locator!
   debt_and_mental_health (~> 1.6.0)
-  debt_free_day_calculator (~> 3.1.0)
+  debt_free_day_calculator!
   debt_test (~> 1.9.0)
   decision_trees (~> 2.3.0)
   delayed_job_active_record
@@ -881,15 +987,15 @@ DEPENDENCIES
   link_header
   mail
   mailjet
-  mas-cms-client (= 1.20.0)
+  mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
   mortgage_calculator!
   mysql2 (= 0.5.3)
   newrelic_rpm
-  nokogiri (>= 1.10.3)
+  nokogiri (~> 1.10.3)
   nunes
   opening_hours
-  pacs (~> 3.12.0)
+  pacs!
   payday_loans_intervention (~> 1.9.0)
   pensions_calculator!
   poltergeist
@@ -899,6 +1005,7 @@ DEPENDENCIES
   pry-rescue
   psych (>= 2.0.5)
   quiz (~> 1.4.0)!
+  rack!
   rack-livereload
   rails (~> 4.2.11)!
   railslts-version!
@@ -913,26 +1020,27 @@ DEPENDENCIES
   rspec-rails
   rspec_junit_formatter
   rubocop
-  rubytree
+  rubytree (~> 1)
   sass-rails
   savings_calculator!
   sdoc
   shoulda-matchers
   site_prism
   site_search (= 0.3.0)
-  sqlite3
+  sqlite3 (~> 1.3.6)
   statsd-ruby
   sucker_punch
   syslog-logger
   tidy-html5
   timecop
-  timelines (~> 1.7.1)
+  timelines!
   turnout
   uglifier
   unicorn-rails
   universal_credit!
   vcr
   webmock
+  websocket-extensions (>= 0.1.5)
   whenever
   wpcc!
 

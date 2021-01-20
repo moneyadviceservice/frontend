@@ -15,7 +15,7 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a1' },
-                { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q6: %w[a1 a2 a3 a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]},
                 { q1: 'a2' }
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
@@ -24,7 +24,7 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a2' },
-                { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q6: %w[a1 a2 a3 a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]},
                 { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
@@ -33,7 +33,7 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a3' },
-                { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q6: %w[a1 a2 a3 a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]},
                 { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
@@ -42,7 +42,7 @@ class MoneyNavigator::Rules::UrgentAction
             {
               triggers: [
                 { q0: 'a4' },
-                { q4: %w[a1 a2], q6: %w[a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9]},
+                { q6: %w[a1 a2 a3 a4 a5 a6], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]},
                 { q1: 'a2'}
               ],
               mask: [MASK_ALL + MASK_SOME + MASK_NONE, MASK_ALL + MASK_ALL + MASK_NONE],
@@ -54,14 +54,14 @@ class MoneyNavigator::Rules::UrgentAction
         {
           heading_code: 'H2',
           content_rules: [
-            #All of these (Q3A1 or Q3A3) AND (Q4A2 OR Q4A3 OR Q4A4) AND Q10A1 AND ANY OF THESE (Q6A4 OR Q6A5) OR (Q9A1-A11) OR (Q7A1-Q7A9), BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6
+            #All of these (Q3A1 or Q3A3) AND (Q4A2 OR Q4A3) AND Q10A1 AND ANY OF THESE (Q6A1-Q6A5) OR (Q9A1-A11) OR (Q7A1-Q7A9), BUT NOT IF HAVE ALSO SELECTED Q4A1, Q6A6
             {
               triggers: [
                 { q3: %w[a1 a3] },
-                { q4: %w[a2 a3 a4] },
+                { q4: %w[a2 a3] },
                 { q10: ['a1']},
-                { q6: %w[a4 a5], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]  },
-                { q4: %w[a1], q6: ['a6'], q1: ['a3', 'a4'] }
+                { q6: %w[a1 a2 a3 a4 a5], q7: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9], q9: %w[a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11]  },
+                { q1: ['a3', 'a4'] }
               ],
               mask: [
                 MASK_SOME + MASK_SOME + MASK_ALL + MASK_SOME + MASK_NONE,

@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/budget_planner.git
-  revision: 24d6e12172be4b9d3edd9f65fdfc45eae7d4d301
-  branch: feature/ntt_moneyhelper_reskin
+  revision: c00c2eb2d82c2e21462a712fce78baf87aada25d
+  branch: preview
   specs:
     budget_planner (5.7.1)
       i18n-js (= 3.0.0.mas)
@@ -112,22 +112,11 @@ GIT
   ref: a90d79d
   branch: 11691_DAL_Current-location-warning-message_v5.41
   specs:
-    debt_advice_locator (3.14.0)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
+    dough-ruby (5.41.0)
+      activemodel
+      activesupport
+      rails (>= 3.2, < 5.1.0)
+      sass-rails
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
@@ -194,8 +183,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
-  revision: b12461baad924eb0c6b897b235161d7c470eb368
-  branch: feature/ntt_moneyhelper_reskin
+  revision: b025648d3723b729d7c7b87b3852a12afb5f7b8d
+  branch: feature/ntt_noneyhelper_reskin_new
   specs:
     timelines (1.7.1)
       bowndler
@@ -657,7 +646,7 @@ GEM
     multi_json (1.15.0)
     multi_test (0.1.2)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
+    mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (6.15.0)
     nokogiri (1.10.10)

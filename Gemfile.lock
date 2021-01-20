@@ -89,7 +89,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator
-  revision: 696bccb4f02b9c6a920c6a60a9d582c3f600b64b
+  revision: 641b11ab453a38f2fa312edf6603e8c7b7889cf5
   branch: feature/ntt_moneyhelper_reskin
   specs:
     debt_free_day_calculator (3.1.0)
@@ -146,7 +146,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 217b9dde4c3ff09e5c0595818719e5f0f8173e16
+  revision: abf43d4f71d5a25139879818243a725bfcc3f8a4
   branch: feature/ntt_moneyhelper_reskin
   specs:
     pacs (3.13.0)
@@ -854,8 +854,8 @@ GEM
     site_prism-all_there (0.3.2)
     site_search (0.3.0)
       algoliasearch
-    spreadsheet (1.2.6)
-      ruby-ole (>= 1.0)
+    spreadsheet (1.2.7)
+      ruby-ole
     sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -874,7 +874,7 @@ GEM
       ffi (~> 1.1)
     syslog-logger (1.6.8)
     temple (0.8.2)
-    thor (1.0.1)
+    thor (1.1.0)
     thread_safe (0.3.6)
     tidy-html5 (0.1.2)
     tilt (1.4.1)
@@ -990,7 +990,7 @@ DEPENDENCIES
   mas-cms-client (= 1.20.1)
   meta-tags (~> 2.4)
   mortgage_calculator!
-  mysql2 (= 0.5.3)
+  mysql2 (= 0.4.9)
   newrelic_rpm
   nokogiri (~> 1.10.3)
   nunes

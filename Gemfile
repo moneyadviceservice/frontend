@@ -48,7 +48,7 @@ gem 'link_header'
 gem 'mail'
 gem 'mailjet'
 gem 'meta-tags', '~> 2.4'
-gem 'mysql2', '0.5.3'
+gem 'mysql2', '0.4.9'
 gem 'newrelic_rpm'
 gem 'nokogiri', '~> 1.10.3'
 gem 'nunes'
@@ -89,7 +89,7 @@ gem 'agreements', '~> 2.5.0'
 
 # gem 'budget_planner', '~> 5.7.1'
 # budget_planner - update to date and ahead of master as of 19/1/2021
-gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'preview'
 
 
 # gem 'car_cost_tool', '~> 1.5'

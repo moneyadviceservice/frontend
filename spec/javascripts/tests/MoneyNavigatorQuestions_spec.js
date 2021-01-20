@@ -505,16 +505,16 @@ describe('MoneyNavigatorQuestions', function() {
       this.obj._updateDOM(); 
 
       this.obj._updateDisplay('next');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('next');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('prev');
-      expect(this.banner.hasClass(hiddenClass)).to.be.true; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.be.above(-1); 
 
       this.obj._updateDisplay('prev');
-      expect(this.banner.hasClass(hiddenClass)).to.be.false; 
+      expect(this.$html.find('[data-banner]')[0].className.indexOf(hiddenClass)).to.equal(-1); 
     }); 
 
     it('Updates the counter to the correct value for the active question', function() {

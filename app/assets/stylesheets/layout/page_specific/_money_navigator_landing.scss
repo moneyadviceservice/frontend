@@ -11,6 +11,12 @@
 		}
 	}
 
+	.callout {
+		a {
+			text-decoration: underline;
+		}
+	}
+
 	.landing__actions {
 		@extend %clearfix;
 

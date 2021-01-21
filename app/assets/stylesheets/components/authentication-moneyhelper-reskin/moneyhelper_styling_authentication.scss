@@ -1,0 +1,15 @@
+.validation-summary__content-container {
+    border-left: 4px solid $red_error;
+    color: $red_error;
+    background-color: $red_error_background;
+
+    .validation-summary__title {
+        color:$red_error;
+    }
+}
+
+#error_explanation {
+    h2 {
+        color: $text_secondary;
+    }
+}

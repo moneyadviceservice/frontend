@@ -12,20 +12,17 @@
 
 #error_explanation > h2, 
 h2.t-registration-subtitle,
+input[type=checkbox].form__group-input,
 .list > li:before, .editorial ul > li:before,
 .list {
     color: $text_secondary;
 }
 
-.list {
+.list,
+input[type=checkbox].form__group-input {
     font-family: 'Roobert-Regular', sans-serif !important;
 }
 
 p.tooltip__text {
     color: #00788F;
-}
-
-input[type=checkbox].form__group-input {
-    font-family: 'Roobert-Regular', sans-serif !important;
-    color: $text_secondary;
 }

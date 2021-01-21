@@ -80,7 +80,7 @@ gem 'site_search', '0.3.0'
 
 
 # gem 'action_plans', '~> 5.5.0' 
-# action_plans - update to date and ahead of master as of 19/1/2021
+# action_plans - update to date and ahead of master as of 21/1/2021
 gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
@@ -88,17 +88,17 @@ gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 
 # gem 'budget_planner', '~> 5.7.1'
-# budget_planner - update to date and ahead of master as of 19/1/2021
+# budget_planner - update to date and ahead of master as of 21/1/2021
 gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git', branch: 'preview'
 
 
 # gem 'car_cost_tool', '~> 1.5'
-# car_cost_tool - update to date and ahead of master as of 19/1/2021 - renaming branch merged with some incorrect naming
+# car_cost_tool - update to date and ahead of master as of 21/1/2021 - renaming branch merged with some incorrect naming
 gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
 # gem 'cost_calculator_builder', '~> 1.1.0'
-# cost_calculator_builder - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found
+# cost_calculator_builder - update to date and ahead of master as of 21/1/2021 - no domain renaming branch found
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
@@ -106,7 +106,7 @@ gem 'cutback_calculator', '~> 0.13.0'
 
 
 # gem 'debt_advice_locator', '3.13.0'
-# debt_advice_locator - update to date and ahead of master as of 19/1/2021
+# debt_advice_locator - update to date and ahead of master as of 21/1/2021
 gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
@@ -114,7 +114,7 @@ gem 'debt_and_mental_health', '~> 1.6.0'
 
 
 # gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator', branch: '11920_Storage-Access-API'
-# debt_advice_locator - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found
+# debt_advice_locator - update to date and ahead of master as of 21/1/2021 - no domain renaming branch found
 gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator', branch: 'feature/ntt_moneyhelper_reskin'
 
 
@@ -124,13 +124,13 @@ gem 'feedback', '~> 0.5.1'
 
 
 # gem 'mortgage_calculator', '~> 3.17.0'
-# debt_advice_locator - update to date and ahead of master as of 19/1/2021 - renaming branch merged
+# debt_advice_locator - update to date and ahead of master as of 21/1/2021 - renaming branch merged
 gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
 
 # gem 'pacs', '~> 3.13.0'
-# pacs - behind master as of 19/1/2021 forked at 01438080c8eeccd31c2ff47f9b75537abca1512d - renaming branch found and merged
+# pacs - behind master as of 21/1/2021 forked at 01438080c8eeccd31c2ff47f9b75537abca1512d - renaming branch found and merged
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
@@ -140,8 +140,8 @@ gem 'payday_loans_intervention', '~> 1.9.0'
 
 
 # gem 'pensions_calculator', '~> 2.7.1'
-# pensions_calculator - behind master as of 19/1/2021 forked at 30dc12b9b83d99071244cd04c8f27fcb688a52b2 (NTT from 3b82283f17368c8bcf3425ad20778c746dcb2286) - renaming branch found and merged
-gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/ntt-reskin-pensions-calc'
+# pensions_calculator - behind master as of 21/1/2021 forked at 30dc12b9b83d99071244cd04c8f27fcb688a52b2 (NTT from 3b82283f17368c8bcf3425ad20778c746dcb2286) - renaming branch found and merged
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
 
@@ -155,16 +155,17 @@ gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calcul
 
 
 # gem 'timelines', '~> 1.7.1'
-# timelines - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found TODO - pick out the fonts fix
-gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_noneyhelper_reskin_new'
+# timelines - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found
+gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_noneyhelper_reskin'
 
 
 # gem 'universal_credit', '~> 4.1.1'
-# timelines - update to date and ahead of master as of 19/1/2021 - no domain renaming branch found
+# timelines - update to date and ahead of master as of 21/1/2021 - no domain renaming branch found
 gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 
 # gem 'wpcc', '2.8.3'
+# wpcc - update to date and ahead of master as of 21/1/2021 - renaming branch merged
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 

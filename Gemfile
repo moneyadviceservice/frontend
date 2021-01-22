@@ -190,7 +190,7 @@ group :test do
   gem 'cucumber-rails', '~> 2.1.0', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
-  gem 'factory_bot'
+  gem 'factory_bot', '~> 4.10.0'
   gem 'faker'
   gem 'html_validation'
   gem 'poltergeist'

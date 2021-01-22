@@ -197,6 +197,7 @@ group :test do
   gem 'rspec-html-matchers'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers'
+  gem 'simplecov', '~>0.16.1'
   gem 'site_prism'
   gem 'sqlite3', '~> 1.3.6'
   gem 'tidy-html5'

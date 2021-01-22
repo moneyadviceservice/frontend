@@ -31,10 +31,10 @@ gem 'activerecord-session_store'
 # this repo, as all the gem is doing is wrapping OpenSSL.
 ##############################################################
 gem 'aes', git: 'git@github.com:chicks/aes.git'
-gem 'algoliasearch'
+gem 'algoliasearch', '~> 1.19.2'
 gem 'attr_encrypted', '~> 3.1'
 gem 'blind_index', '0.2.0'
-gem 'bugsnag'
+gem 'bugsnag', '~> 6.7.0'
 gem 'delayed_job_active_record'
 gem 'devise', '~> 4.7.1'
 gem 'devise-encryptable'
@@ -49,8 +49,8 @@ gem 'mail'
 gem 'mailjet'
 gem 'meta-tags', '~> 2.4'
 gem 'mysql2', '0.4.9'
-gem 'newrelic_rpm'
-gem 'nokogiri', '~> 1.10.3'
+gem 'newrelic_rpm', '~> 5.0.0.342'
+gem 'nokogiri', '>= 1.10.3'
 gem 'nunes'
 gem 'opening_hours'
 gem 'postcode_anywhere-email_validation', '~> 0.2.0'
@@ -187,18 +187,18 @@ group :test do
   gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
-  gem 'cucumber-rails', '~> 2.1.0', require: false
+  gem 'cucumber-rails', '~> 1.5.0', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
   gem 'factory_bot', '~> 4.10.0'
-  gem 'faker'
+  gem 'faker', '~> 1.8.7'
   gem 'html_validation'
   gem 'poltergeist'
   gem 'rspec-html-matchers'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers'
   gem 'simplecov', '~>0.16.1'
-  gem 'site_prism'
+  gem 'site_prism', '~> 2.11'
   gem 'sqlite3', '~> 1.3.6'
   gem 'tidy-html5'
   gem 'timecop'
@@ -226,7 +226,7 @@ group :test, :development do
   gem 'rack-livereload'
   gem 'rb-readline'
   gem 'rspec-rails'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.54.0'
 end
 
 group :doc do

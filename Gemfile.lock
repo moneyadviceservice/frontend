@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/action_plans.git
-  revision: 8dd00453ae0477f6fde5bac15385fc95370ed0fc
+  revision: eb0cb8dd5558d85e676c41c587e28f6d47a79824
   branch: feature/ntt_moneyhelper_reskin
   specs:
     action_plans (5.5.0)
@@ -42,7 +42,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/car_cost_tool.git
-  revision: 737d368ab54fe3fa162330898bb09a9bcfa8aacf
+  revision: 810b347f5fcc8374e54afcfcc4e9acee594eb1e4
   branch: feature/ntt_moneyhelper_reskin
   specs:
     car_cost_tool (1.5.1)
@@ -56,7 +56,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/cost_calculator_builder.git
-  revision: d709993ef97874bce25ae8f2151a323fa20ec897
+  revision: 149ac07a602c683ac328b351d81a566bfd2d8471
   branch: feature/ntt_moneyhelper_reskin
   specs:
     cost_calculator_builder (1.1.0)
@@ -120,7 +120,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 2c64ddb534fbce6e40f2454e6888223f140c69a3
+  revision: 8e337ad97ddad145be43f0fce62ed43e772ab3da
   branch: feature/ntt_moneyhelper_reskin
   specs:
     mortgage_calculator (3.16.0)
@@ -153,7 +153,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 2aad09f32ab7839c2d39806935ab0222aeb5a91d
+  revision: 386eeb64fbd2f12c57910793fa9bda65ba844a50
   branch: feature/ntt_moneyhelper_reskin
   specs:
     pensions_calculator (2.6.1)
@@ -168,7 +168,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
-  revision: 8cc9225fa42698768e920f3e81a19fcac83f18bd
+  revision: 89ece2232873663fb49cd57eb7e34fc52e712d00
   branch: feature/ntt_moneyhelper_reskin
   specs:
     savings_calculator (1.10.2)
@@ -196,7 +196,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/universal_credit.git
-  revision: e51dbbd9734ab9d6dea23dd8f4e6eab69a6abbae
+  revision: f321d466af664e36dc1e675236d5877cd49592e1
   branch: feature/ntt_moneyhelper_reskin
   specs:
     universal_credit (4.1.1)
@@ -214,7 +214,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: a3e8ed815d96c1ae87a486306e0b9fbc56fa980f
+  revision: b0a885903976a7d89b3bf0951566d56ce6a427d2
   branch: feature/ntt_moneyhelper_reskin
   specs:
     wpcc (2.8.3)
@@ -617,7 +617,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.1104)
     mini_mime (1.0.2)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.4.0)
     minitest (5.14.3)
     modernizr-rails (2.6.3)
     mongo (2.14.0)
@@ -633,11 +633,8 @@ GEM
     mysql2 (0.4.9)
     netrc (0.11.0)
     newrelic_rpm (5.0.0.342)
-    nokogiri (1.11.1)
-      mini_portile2 (~> 2.5.0)
-      racc (~> 1.4)
-    nokogiri (1.11.1-x86_64-darwin)
-      racc (~> 1.4)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     nunes (0.5.0)
     opening_hours (0.0.7)
       activesupport
@@ -685,7 +682,6 @@ GEM
       formtastic-bootstrap (>= 2.1, < 3)
       friendly_id (>= 5.0)
       rails (>= 4, < 5)
-    racc (1.5.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-livereload (0.3.17)
@@ -955,7 +951,7 @@ DEPENDENCIES
   mortgage_calculator!
   mysql2 (= 0.4.9)
   newrelic_rpm (~> 5.0.0.342)
-  nokogiri (>= 1.10.3)
+  nokogiri (~> 1.10.3)
   nunes
   opening_hours
   pacs!
@@ -989,7 +985,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   simplecov (~> 0.16.1)
-  site_prism (~> 2.11)
+  site_prism
   site_search (= 0.3.0)
   sqlite3 (~> 1.3.6)
   statsd-ruby

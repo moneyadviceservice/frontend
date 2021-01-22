@@ -44,6 +44,7 @@
     .l-money_navigator__banner{
         background-color: $light_grey_2;
     }
+   
     .l-money_navigator__question{
         .question__counter{
             font-size: 18px;
@@ -62,6 +63,7 @@
             }
         }
     }
+
     [data-dough-money-navigator-questions-initialised="yes"] [data-question-grouped] .response__control[type="radio"],
     [data-dough-money-navigator-questions-initialised="yes"] [data-question-grouped] .response__control[type="checkbox"]{
         + label.response__text{
@@ -86,7 +88,7 @@
             .response__control + .response__text{
                 text-align: center;
                 span{
-                    width: 100%;;
+                    width: 100%;
                 }
                 &:after{
                     background-color: $light_grey_2;
@@ -308,7 +310,9 @@
 
   .question__content{
     label{
-      font-size: 18px;  
+      font-size: 18px;
+      font-family: 'Roobert-SemiBold', sans-serif;
+  
     }
 
     .content__inner{
@@ -316,7 +320,8 @@
     }
   }
 
-  .button--back, .button.button--continue:disabled{
+
+  .button--back {
     background: white;
     color: #c82a87;
     font-size: 16px;

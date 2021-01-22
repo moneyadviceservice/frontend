@@ -53,3 +53,43 @@ a {
         outline: none;
     }
 }
+
+.l-profile__tools, .l-profile__your-goal{
+  h2{
+    color: $text_secondary;
+  }
+
+  .recommended-tool {
+    background: #F3F1F3;
+
+    .recommended-tool__body{
+      h4{
+        font-family: 'Roobert-Medium', sans-serif !important;
+      }
+      .button{
+        color: $white !important;
+        text-decoration: none;
+
+        &:focus{
+          background-color: $yellow_secondary;
+          border: 3px solid $support_focus;
+          color: $text_secondary !important;
+        }
+      }
+    }
+  }
+
+  .recommended-tool__header__title{
+    border-left-color: $teal_secondary;
+  }
+
+
+  .l-profile__your-goal__form-legend{
+    color: $text_secondary;
+    font-family: 'Roobert-Bold', sans-serif !important;
+  }
+
+  /*.collapsable__trigger-icon{*/
+    /*color: yellow;*/
+  /*}*/
+}

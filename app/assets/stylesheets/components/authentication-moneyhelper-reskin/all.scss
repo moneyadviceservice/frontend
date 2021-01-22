@@ -1,0 +1,10 @@
+
+// -- Apply these styles only within the following divs --
+    .l-registration {
+
+        @import 'moneyhelper_variables';
+        // @import 'moneyhelper_styling_common';
+        @import 'moneyhelper_styling_common_compromise';
+        @import 'moneyhelper_styling_authentication';
+
+    }

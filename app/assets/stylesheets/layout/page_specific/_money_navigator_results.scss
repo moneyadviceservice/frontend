@@ -103,10 +103,6 @@ $transition-time: 0.4s;
 
 					p {
 						font-size: 1rem; 
-
-						// a {
-						// 	text-decoration: underline;
-						// }
 					}
 
 					@include respond-to($mq-m) {

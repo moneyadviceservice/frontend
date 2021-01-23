@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   layout :check_syndicated_layout
 
+   before_action :set_syndicated_x_frame
+   
   include Authentication
   include Chat
   include Localisation

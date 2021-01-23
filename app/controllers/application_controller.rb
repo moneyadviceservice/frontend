@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 
   layout :check_syndicated_layout
 
-   before_action :set_syndicated_x_frame
-   
+  before_action :set_syndicated_x_frame
+
   include Authentication
   include Chat
   include Localisation
@@ -111,6 +111,10 @@ class ApplicationController < ActionController::Base
 
   def is_environment_on_uat?
     Rails.env.uat?
+  end
+
+  def set_syndicated_x_frame
+    response.headers['X-Frame-Options'] = 'ALLOWALL' if syndicated_tool_request?
   end
 
   # This layout chops off the header and footer

@@ -17,8 +17,6 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Frontend
   class Application < Rails::Application
-    config.action_dispatch.cookies_same_site_protection = :lax
-
     config.session_store :active_record_store
 
     config.action_mailer.delivery_method = :mailjet

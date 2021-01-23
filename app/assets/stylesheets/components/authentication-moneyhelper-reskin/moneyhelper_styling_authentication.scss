@@ -1,0 +1,95 @@
+.validation-summary__content-container {
+    font-family: 'Roobert-Regular', sans-serif !important;
+    border-left: 4px solid $red_error;
+    color: #D00000 !important;
+    background-color: $red_error_background;
+
+    .validation-summary__title {
+        font-family: 'Roobert-bold', sans-serif !important;
+        color:$red_error;
+    }
+}
+
+label[for=user_opt_in_for_research] {
+    font-family: 'Roobert-Regular', sans-serif !important;
+}
+
+#error_explanation > h2, 
+h2.t-registration-subtitle,
+input[type=checkbox].form__group-input,
+#error_explanation li, 
+.list > li:before, 
+.editorial ul > li:before,
+.list {
+    color: $text_secondary;
+    font-family: 'Roobert-Regular', sans-serif !important;
+}
+
+// .list,
+// input[type=checkbox].form__group-input {
+    // font-family: 'Roobert-Regular', sans-serif !important;
+// }
+
+p.tooltip__text {
+    color: #00788F;
+}
+
+a {
+    color: $magenta_primary!important;
+    text-decoration: underline;
+    &:hover{
+        color: $magenta_dark;
+        text-decoration: none;
+    }
+    &:active{
+        color: $magenta_darker;
+        text-decoration: none;
+    }
+    &:focus{
+        color: $text_secondary;
+        background-color: $yellow_secondary;
+        border-bottom: 4px solid $support_focus;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.l-profile__tools, .l-profile__your-goal{
+  h2{
+    color: $text_secondary;
+  }
+
+  .recommended-tool {
+    background: #F3F1F3;
+
+    .recommended-tool__body{
+      h4{
+        font-family: 'Roobert-Medium', sans-serif !important;
+      }
+      .button{
+        color: $white !important;
+        text-decoration: none;
+
+        &:focus{
+          background-color: $yellow_secondary;
+          border: 3px solid $support_focus;
+          color: $text_secondary !important;
+        }
+      }
+    }
+  }
+
+  .recommended-tool__header__title{
+    border-left-color: $teal_secondary;
+  }
+
+
+  .l-profile__your-goal__form-legend{
+    color: $text_secondary;
+    font-family: 'Roobert-Bold', sans-serif !important;
+  }
+
+  /*.collapsable__trigger-icon{*/
+    /*color: yellow;*/
+  /*}*/
+}

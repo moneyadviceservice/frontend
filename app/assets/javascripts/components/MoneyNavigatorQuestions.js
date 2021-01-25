@@ -513,10 +513,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .text(progress + '% ' + this.i18nStrings.messages.completed);
 
     if (dir === 'prev') {
-      var inputs = $(questions[activeIndex]).find('input') || null; 
-
-      if (inputs.length > 0) {
-        inputs[0].focus(); 
+      if (activeIndex >= 0) {
+        questions[activeIndex].focus(); 
       }
     }
 

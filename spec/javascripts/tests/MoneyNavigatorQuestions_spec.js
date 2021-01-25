@@ -490,13 +490,13 @@ describe('MoneyNavigatorQuestions', function() {
       $(this.questions[4]).addClass(this.activeClass); 
 
       this.obj._updateDisplay('prev'); 
-      expect($(this.questions[3]).find('input')[0] === document.activeElement).to.be.true; 
+      expect($(this.questions[3])[0] === document.activeElement).to.be.true; 
 
       // Q3 is skipped
       $(this.questions[2]).data('question-skip', true); 
       this.obj._updateDisplay('prev'); 
-      expect($(this.questions[2]).find('input')[0] === document.activeElement).to.be.false; 
-      expect($(this.questions[1]).find('input')[0] === document.activeElement).to.be.true; 
+      expect($(this.questions[2])[0] === document.activeElement).to.be.false; 
+      expect($(this.questions[1])[0] === document.activeElement).to.be.true; 
     }); 
 
     it('Shows/hides the banner when active question is/not Q0', function() {

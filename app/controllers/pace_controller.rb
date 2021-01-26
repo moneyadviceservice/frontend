@@ -14,8 +14,8 @@ class PaceController < ApplicationController
 
   def online
     cookies[:_pace_url_id] = rand(EXTERNAL_URLS.count) if cookies[:_pace_url_id].nil?
-    redirect_url = ERB::Util.url_encode(EXTERNAL_URLS[cookies[:_pace_url_id].to_i])
-    redirect_time = 3
+    redirect_url = EXTERNAL_URLS[cookies[:_pace_url_id].to_i]
+    redirect_time = 2
     @redirect_string = "#{redirect_time};url=#{redirect_url}"
   end
 

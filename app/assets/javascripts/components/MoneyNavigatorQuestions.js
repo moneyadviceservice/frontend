@@ -99,12 +99,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        .css('width', (numGroups * 100) + '%');
-        // .css({
-        //   'width': '95%', 
-        //   'border': 'solid 1px orange', 
-        //   'box-sizing': 'content-box'
-        // });
+        .css('width', numGroups * 99.99 - 3.33334 + '%');
 
       $(this).find('.question__content').append(questionGroups);
 
@@ -113,9 +108,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           var div = document.createElement('div'); 
 
           $fieldset
-            // .addClass('response__controls')
-            // .attr('data-response-controls', true)
-            // .css('width', (1 / numGroups * 100) + '%')
             .find('.content__inner')
               .prepend(groups[num]); 
 
@@ -128,7 +120,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             })
             .append($fieldset);
 
-          // $(questionGroups).prepend($fieldset);
           $(questionGroups).prepend(div);
         } else {
           // Add collections and resets to the DOM
@@ -162,12 +153,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             .append(reset); 
 
           $(collection)
-            // .addClass('question__response--collection question--inactive')
-            // .attr('data-response-collection', num)
-            // .css({
-            //   'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
-            //   'width': (1 / numGroups * 100) + '%'
-            // })
             .prepend(legend)
             .append(contentInner); 
   
@@ -181,7 +166,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             })
             .append(collection); 
 
-          // $(questionGroups).append(collection); 
           $(questionGroups).append(div); 
 
           // Add new inputs to the control group
@@ -217,6 +201,11 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 
+
+      $(this).find('[data-response-collection]')
+        .on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
     }); 
   }; 
 
@@ -224,8 +213,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that controls user navigation on the grouped question by keyboard
    */
   MoneyNavigatorQuestions.prototype._setUpKeyboardEvents = function() {
-    console.log('_setUpKeyboardEvents!'); 
-
     this.$groupedQuestions.each(function() {
       // Set focus on keyboard events
       $(this).keydown(function(e) {
@@ -277,9 +264,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    console.log('_updateGroupedQuestionsDisplay!'); 
-    console.log('el: ', el); 
-
     var $container = $(el).parents('.question__content').find('.question__groups');
 
     if ($(el).data('reset') || $(el).data('back')) {
@@ -332,8 +316,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           }
         }
       }); 
-
-      // el.checked = false; 
     } else {
       el.checked = true; 
     }

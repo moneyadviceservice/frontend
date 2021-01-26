@@ -75,24 +75,55 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(collections[1]).find('[data-response]').length).to.equal(2); 
     }); 
 
-    it ('Checks that the correct method is called when the `response-control` options are activated', function() {
+    it('Checks that the correct method is called when the `response-control` options are activated', function() {
       var responseControls = $(this.groupedQuestion).find('[data-response-controls]'); 
       var inputs = $(responseControls).find('input'); 
 
       $(inputs[0]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledOnce).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 1).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.false; 
 
       $(inputs[1]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledTwice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 2).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.false; 
 
       $(inputs[2]).trigger('change'); 
-      expect(this.updateGroupedQuestionsDisplaySpy.calledThrice).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 3).to.be.true; 
       expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
     }); 
 
-    it ('Checks that the correct method is called when the `reset` option is activated', function() {
+    it('Checks that the correct method is called when the `response-collection` options are activated', function() {
+      var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
+      var inputs = $(responseCollections).find('input'); 
+
+      $(inputs[0]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 1).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[0])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.false; 
+
+      $(inputs[1]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 2).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[1])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.false; 
+
+      $(inputs[2]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 3).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[2])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[3])).to.be.false;
+
+      $(inputs[3]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 4).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[3])).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[4])).to.be.false;
+
+      $(inputs[4]).trigger('change'); 
+      expect(this.updateGroupedQuestionsDisplaySpy.callCount === 5).to.be.true; 
+      expect(this.updateGroupedQuestionsDisplaySpy.calledWith(inputs[4])).to.be.true; 
+    }); 
+
+    it('Checks that the correct method is called when the `reset` option is activated', function() {
       var responseCollections = $(this.groupedQuestion).find('[data-response-collection]'); 
       var resetBtn = $(responseCollections[0]).find('[data-reset]'); 
       var backBtn = $(this.groupedQuestion).find('[data-back]'); 
@@ -133,7 +164,7 @@ describe('MoneyNavigatorQuestions', function() {
       this.continue = $(this.groupedQuestion).find('[data-continue]'); 
     }); 
 
-    xit('Adds the correct classes to groups when called', function() {
+    it('Adds the correct classes to groups when called', function() {
       this.obj._updateGroupedQuestionsDisplay(this.control_1); 
       expect($(this.groupedQuestion).find('[data-response-controls]').hasClass(this.inactiveClass)).to.be.true; 
       expect($(this.groupedQuestion).find('[data-response-collection="1"]').hasClass(this.inactiveClass)).to.be.false; 
@@ -239,7 +270,7 @@ describe('MoneyNavigatorQuestions', function() {
       expect($(this.collection_2_1).attr('tabindex') == -1).to.be.true; 
     }); 
 
-    xit('Updates tabindex value on Reset button when collection is active/inactive', function() {
+    it('Updates tabindex value on Reset button when collection is active/inactive', function() {
       $(this.control_default).focus(); 
 
       this.obj._updateGroupedQuestionsDisplay(this.control_1);

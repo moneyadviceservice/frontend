@@ -99,7 +99,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        .css('width', numGroups * 99.99 - 3.33334 + '%');
+        .css('width', numGroups * 100 + '%');
 
       $(this).find('.question__content').append(questionGroups);
 

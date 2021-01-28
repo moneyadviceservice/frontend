@@ -28,6 +28,7 @@
           <% t("money_navigator_tool.questions").each_with_index do |question, index| %>
             <li
               class="l-money_navigator__question"
+              tabindex="0"
               data-question
               <% if question[:type] == 'checkbox' %>
                 data-question-multiple
@@ -60,7 +61,14 @@
                       <% end %>
 
                       <% question[:responses].each do |response| %>
-                        <div class="question__response" data-response
+                        <div 
+                          <% if response[:hidden] %>
+                            class="question__response question__response--hidden"
+                          <% else %>
+                            class="question__response" 
+                          <% end %>
+                      
+                        data-response
                           <% if response[:group] %>
                             data-response-group="<%= response[:group] %>"
                           <% end %>

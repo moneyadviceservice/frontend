@@ -76,6 +76,10 @@
 	list-style: none;
 	padding: 0;
 
+  &:focus {
+    @include focus-outline;
+  }
+
 	.question__counter {
 		color: $color-green-secondary;
 		font-weight: 700; 
@@ -132,6 +136,7 @@
 			padding: 0 0 0 $baseline-unit * 4;
 		}
 	}
+
 }
 
 // Component initialised
@@ -141,6 +146,10 @@
 
 		&.question--active {
 			display: block; 
+		}
+
+		.question__response--hidden {
+			display: none;
 		}
 
 		&[data-question-multiple] {
@@ -217,7 +226,7 @@
 						outline:none;
 					}
 				}
-	
+
 				.response__control {
 					&:checked + .response__text {
 						color: $color-white; 

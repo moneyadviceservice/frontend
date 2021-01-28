@@ -177,6 +177,8 @@ Rails.application.routes.draw do
     get '/employer-best-practices/other-employers', to: 'employer_best_practices#other_employers'
 
     # PACE
+    # NB online route handles redirection to the external_urls (see PACE controller)
+    # Some services point directly to it so it is still required
     get '/moneyadvisernetwork', to: 'pace#show'
     get '/moneyadvisernetwork/privacy', to: 'pace#privacy'
     get '/moneyadvisernetwork/online', to: 'pace#online'

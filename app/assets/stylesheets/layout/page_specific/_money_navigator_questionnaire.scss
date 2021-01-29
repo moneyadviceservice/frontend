@@ -251,7 +251,7 @@
 
 					input:focus + label, 
 					button:focus {
-						outline: solid 2px red;
+						@include focus-outline;
 					}
 				}
 

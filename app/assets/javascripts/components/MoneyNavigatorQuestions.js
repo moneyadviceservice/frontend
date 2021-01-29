@@ -70,7 +70,13 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
+      var el = $(this).find('[data-question-id]')[0],
+          computedStyle = window.getComputedStyle(el),
+          width = parseFloat(computedStyle.getPropertyValue('width')),
+          padding = parseFloat(computedStyle.getPropertyValue('padding-left')) * 2,
+          border = parseFloat(computedStyle.getPropertyValue('border-left-width')) * 2,
+          gutter = padding / (width - border) / 4 * 100,
+          $groupedResponses = $(this).find('[data-response-group], [data-response]'),
           $fieldset = $(this).find('fieldset').detach(), 
           name = $fieldset.find('input')[0].name,
           titles = $(this).data('question-grouped-group-titles'),
@@ -99,7 +105,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        .css('width', numGroups * 100 + '%');
+        .css('width', (2 * 100) + (gutter * 2) + '%');
 
       $(this).find('.question__content').append(questionGroups);
 
@@ -114,10 +120,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(div)
             .addClass('response__controls')
             .attr('data-response-controls', true)
-            .css({
-              'width': (1 / numGroups * 100) + '%', 
-              'float': 'left'
-            })
+            .css('width', 50 - (gutter / 2) + '%')
             .append($fieldset);
 
           $(questionGroups).prepend(div);
@@ -160,9 +163,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num)
             .css({
-              'marginLeft': (1 / numGroups * -100 * (num - 1)) + '%', 
-              'width': (1 / numGroups * 100) + '%', 
-              'float': 'left'
+              'marginLeft': (1 / 2 * -100 + (gutter / 2)) * (num - 1) + '%', 
+              'width': 50 - (gutter / 2) + '%'
             })
             .append(collection); 
 

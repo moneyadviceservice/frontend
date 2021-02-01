@@ -298,6 +298,12 @@ describe('MoneyNavigatorQuestions', function() {
       this.obj._setUpGroupedQuestions(); 
       this.obj._setUpKeyboardEvents(); 
 
+      // Controls
+      var $controls = $(this.groupedQuestion).find('.response__controls'); 
+      this.control_default = $controls.find('[data-response]').find('input')[0];
+      this.control_1 = $controls.find('#control_1')[0]; 
+      this.control_2 = $controls.find('#control_2')[0];
+
       // Collections
       var collections = $(this.groupedQuestion).find('.question__response--collection'); 
       this.collection_1_1 = $(collections[0]).find('input')[0]; 
@@ -305,6 +311,108 @@ describe('MoneyNavigatorQuestions', function() {
       this.collection_1_3 = $(collections[0]).find('input')[2]; 
       this.collection_2_1 = $(collections[1]).find('input')[0]; 
       this.collection_2_2 = $(collections[1]).find('input')[1]; 
+
+      // Continue
+      this.continue = $(this.groupedQuestion).find('[data-continue]')[0]; 
+    }); 
+
+    it('Moves focus correctly within the control group with down arrow key', function() {
+      keyCode = 40; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with right arrow key', function() {
+      keyCode = 39; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with up arrow key', function() {
+      keyCode = 38; 
+      event.keyCode = keyCode; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with left arrow key', function() {
+      keyCode = 37; 
+      event.keyCode = keyCode; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.control_1 === document.activeElement).to.be.true; 
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.control_default === document.activeElement).to.be.true; 
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.control_2 === document.activeElement).to.be.true; 
+    }); 
+
+    it('Moves focus correctly within the control group with tab key', function() {
+      keyCode = 9; 
+      event.keyCode = keyCode; 
+
+      $(this.control_default).focus();
+
+      $(this.control_default).trigger(event); 
+      expect(this.control_default === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
+
+      $(this.control_1).focus();
+
+      $(this.control_1).trigger(event); 
+      expect(this.control_1 === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
+
+      $(this.control_2).focus();
+
+      $(this.control_2).trigger(event); 
+      expect(this.control_2 === document.activeElement).to.be.false; 
+      expect(this.continue === document.activeElement).to.be.true; 
     }); 
 
     it('Moves focus within each collection with down arrow key', function() {

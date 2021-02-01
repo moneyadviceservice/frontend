@@ -218,7 +218,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this.$groupedQuestions.each(function() {
       // Set focus on keyboard events
       $(this).keydown(function(e) {
-        var response = $(e.target).parent('[data-response]')[0], 
+        var response = $(e.target).parent('[data-response], [data-response-group-control]')[0], 
             $responses = $(response).parent('.content__inner'), 
             nextInput, 
             prevInput; 
@@ -230,14 +230,14 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             // moves to next input unless current input is last
             e.preventDefault(); 
 
-            if ($responses.find('[data-response]').last()[0] === response) {
-              nextInput = $responses.find('[data-response]').first().find('input')[0]; 
+            if ($responses.find('[data-response], [data-response-group-control]').last()[0] === response) {
+              nextInput = $responses.find('[data-response], [data-response-group-control]').first().find('input')[0]; 
             } else {
               nextInput = $(response).next().find('input')[0];
             }
 
             nextInput.focus()
-            nextInput.checked = true; 
+            // nextInput.checked = true; 
 
             break;
 
@@ -247,14 +247,25 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             // moves to previous input unless current input is first
             e.preventDefault(); 
 
-            if ($responses.find('[data-response]').first()[0] === response) {
-              prevInput = $responses.find('[data-response]').last().find('input')[0]; 
+            if ($responses.find('[data-response], [data-response-group-control]').first()[0] === response) {
+              prevInput = $responses.find('[data-response], [data-response-group-control]').last().find('input')[0]; 
             } else {
               prevInput = $(response).prev().find('input')[0];
             }
 
             prevInput.focus()
-            prevInput.checked = true; 
+            // prevInput.checked = true; 
+
+            break;
+
+          // tab key
+          case 9:
+            // moves to `Continue` in control group
+            if ($(response).length > 0 && response.dataset.responseGroup === undefined) {
+              e.preventDefault(); 
+
+              $(this).find('[data-continue]')[0].focus(); 
+            }
 
             break;
         }

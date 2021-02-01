@@ -84,6 +84,7 @@
 	.question__content {
 		border: solid 1px $color-grey-pale;	
 		padding: $baseline-unit * 4 $default-gutter * 2 $baseline-unit * 2; 
+		overflow: hidden;
 
 		@include respond-to($mq-l) {
 			padding-left: $default-gutter;
@@ -235,11 +236,9 @@
 		&[data-question-grouped] {
 			$transition-time: 0.5s;
 
-			fieldset {
-				overflow: hidden;
-			}
+			.question__groups {
+				@extend %clearfix;
 
-			.content__inner {
 				box-sizing: content-box;
 				padding: 0 $default-gutter * 2;
 				margin: 0 $default-gutter * -2;
@@ -247,7 +246,14 @@
 				.response__controls,
 				.question__response--collection {
 					float: left;
-					transition: transform $transition-time;
+					visibility: visible; 
+					transition-property: transform, visibility;
+					transition-duration: $transition-time, 0s;
+
+					input:focus + label, 
+					button:focus {
+						@include focus-outline;
+					}
 				}
 
 				.response__controls {
@@ -255,15 +261,19 @@
 					margin-right: $default-gutter;
 	
 					&.question--inactive {
-						transform: translateX(-100% - ($default-gutter * 3));
+						transform: translateX(-100% - ($default-gutter * 2));
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 
 				.question__response--collection {
-					transform: translateX(-100% - ($default-gutter * 3));
+					transform: translateX(-100% - ($default-gutter * 2));
 
 					&.question--inactive {
 						transform: translateX(0%);
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 			}

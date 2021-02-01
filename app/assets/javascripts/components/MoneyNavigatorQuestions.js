@@ -56,6 +56,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     this._updateDOM(this.dataLayer); 
     this._setUpMultipleQuestions(); 
     this._setUpGroupedQuestions(); 
+    this._setUpKeyboardEvents(); 
     this._setUpJourneyLogic(); 
     this._initialisedSuccess(initialised);
   };
@@ -69,14 +70,21 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
     var _this = this; 
 
     this.$groupedQuestions.each(function() {
-      var $groupedResponses = $(this).find('[data-response-group], [data-response]'),
-          groups = {},
+      var el = $(this).find('[data-question-id]')[0],
+          computedStyle = window.getComputedStyle(el),
+          width = parseFloat(computedStyle.getPropertyValue('width')),
+          padding = parseFloat(computedStyle.getPropertyValue('padding-left')) * 2,
+          border = parseFloat(computedStyle.getPropertyValue('border-left-width')) * 2,
+          gutter = padding / (width - border) / 4 * 100,
+          $groupedResponses = $(this).find('[data-response-group], [data-response]'),
+          $fieldset = $(this).find('fieldset').detach(), 
+          name = $fieldset.find('input')[0].name,
           titles = $(this).data('question-grouped-group-titles'),
-          i = 0,
-          groupNum = 0,
-          questionResponses = document.createElement('div'); 
+          questionGroups = document.createElement('div'),
+          groups = {},
+          numGroups;
 
-      // Collect all responses into arrays and remove from DOM
+      // Collect all grouped responses into arrays and remove from DOM
       $groupedResponses.each(function() {
         if ($(this).data('response-group')) {
           var groupNum = $(this).data('response-group');  
@@ -93,26 +101,81 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
         $(this).remove(); 
       }); 
 
-      groupNum = Object.keys(groups).length; 
+      numGroups = Object.keys(groups).length; 
 
-      $(questionResponses)
-        .addClass('response__controls')
-        .attr('data-response-controls', true)
-        .css('width', (1 / groupNum * 100) + '%'); 
+      $(questionGroups)
+        .addClass('question__groups')
+        .css('width', (2 * 100) + (gutter * 2) + '%');
+
+      $(this).find('.question__content').append(questionGroups);
 
       for(var num in groups) {
         if (num === 'default') {
-          $(questionResponses).prepend(groups[num].outerHTML); 
+          var div = document.createElement('div'); 
+
+          $fieldset
+            .find('.content__inner')
+              .prepend(groups[num]); 
+
+          $(div)
+            .addClass('response__controls')
+            .attr('data-response-controls', true)
+            .css('width', 50 - (gutter / 2) + '%')
+            .append($fieldset);
+
+          $(questionGroups).prepend(div);
         } else {
-          var response = document.createElement('div'), 
-              collection = document.createElement('div'), 
+          // Add collections and resets to the DOM
+          var collection = document.createElement('fieldset'), 
+              contentInner = document.createElement('div'), 
               reset = document.createElement('button'), 
+              legend = document.createElement('legend'), 
+              paraText = document.createTextNode(titles[num - 1]),
+              div = document.createElement('div'); 
+
+          legend.appendChild(paraText); 
+
+          $(legend).addClass('question__heading');
+
+          $(reset)
+            .addClass('button button--reset')
+            .attr({
+              'data-reset': true,
+              'tabindex': -1
+            })
+            .text(_this.i18nStrings.controls.reset); 
+
+          $(reset).on('click', function(e) {
+            e.preventDefault(); 
+            _this._updateGroupedQuestionsDisplay(e.target); 
+          }); 
+
+          $(contentInner)
+            .addClass('content__inner')
+            .append(groups[num])
+            .append(reset); 
+
+          $(collection)
+            .prepend(legend)
+            .append(contentInner); 
+  
+          $(div)
+            .addClass('question__response--collection question--inactive')
+            .attr('data-response-collection', num)
+            .css({
+              'marginLeft': (1 / 2 * -100 + (gutter / 2)) * (num - 1) + '%', 
+              'width': 50 - (gutter / 2) + '%'
+            })
+            .append(collection); 
+
+          $(questionGroups).append(div); 
+
+          // Add new inputs to the control group
+          var response = document.createElement('div'), 
               input = document.createElement('input'), 
               label = document.createElement('label'), 
               span = document.createElement('span'), 
-              para = document.createElement('p'), 
-              labelText = document.createTextNode(titles[i]), 
-              paraText = document.createTextNode(titles[i])
+              labelText = document.createTextNode(titles[num - 1]);
 
           span.appendChild(labelText); 
 
@@ -125,53 +188,23 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           input.id = 'control_' + num;
           input.value = ''; 
 
-          para.className = 'collection__title'; 
-          para.appendChild(paraText); 
-
-          // Add responses to the DOM
           response.setAttribute('data-response-group-control', num); 
           response.className = 'question__response question__response--control';
           response.appendChild(input); 
           response.appendChild(label); 
 
-          $(this).find('.content__inner').append(response); 
-
-          $(questionResponses).append(response); 
-
-          // Add collections and resets to the DOM
-          $(collection)
-            .addClass('question__response--collection question--inactive')
-            .attr('data-response-collection', num);
-
-          $(groups[num]).each(function() {
-            $(collection).append(groups[num]); 
-          }); 
-
-          $(reset)
-            .addClass('button button--reset')
-            .attr('data-reset', true)
-            .text(_this.i18nStrings.controls.reset); 
-
-          $(this).find('.content__inner').append(collection);
-          $(collection).prepend(para); 
-          $(collection).append(reset); 
-          $(collection).css({
-            'marginLeft': (1 / groupNum * -100 * i) + '%', 
-            'width': (1 / groupNum * 100) + '%'
-          }); 
-
-          $(reset).on('click', function(e) {
-            e.preventDefault(); 
-            _this._updateGroupedQuestionsDisplay(e.target); 
-          }); 
+          $fieldset.find('.content__inner').append(response); 
         }
+      }; 
 
-        i++; 
-      }
+      $(this).find('.question__content').prepend(questionGroups); 
 
-      $(this).find('.content__inner')
-        .prepend(questionResponses)
-        .css('width', (i * 100) + '%')
+      $(this).find('[data-response-controls]')
+        .on('change', function(e) {
+          _this._updateGroupedQuestionsDisplay(e.target); 
+        }); 
+
+      $(this).find('[data-response-collection]')
         .on('change', function(e) {
           _this._updateGroupedQuestionsDisplay(e.target); 
         }); 
@@ -179,21 +212,106 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
   }; 
 
   /**
+   * A method that controls user navigation on the grouped question by keyboard
+   */
+  MoneyNavigatorQuestions.prototype._setUpKeyboardEvents = function() {
+    this.$groupedQuestions.each(function() {
+      // Set focus on keyboard events
+      $(this).keydown(function(e) {
+        var response = $(e.target).parent('[data-response], [data-response-group-control]')[0], 
+            $responses = $(response).parent('.content__inner'), 
+            nextInput, 
+            prevInput; 
+
+        switch (e.keyCode) {
+          // right or down arrows
+          case 39:
+          case 40:
+            // moves to next input unless current input is last
+            e.preventDefault(); 
+
+            if ($responses.find('[data-response], [data-response-group-control]').last()[0] === response) {
+              nextInput = $responses.find('[data-response], [data-response-group-control]').first().find('input')[0]; 
+            } else {
+              nextInput = $(response).next().find('input')[0];
+            }
+
+            nextInput.focus()
+            // nextInput.checked = true; 
+
+            break;
+
+          // left or up arrows
+          case 37:
+          case 38:
+            // moves to previous input unless current input is first
+            e.preventDefault(); 
+
+            if ($responses.find('[data-response], [data-response-group-control]').first()[0] === response) {
+              prevInput = $responses.find('[data-response], [data-response-group-control]').last().find('input')[0]; 
+            } else {
+              prevInput = $(response).prev().find('input')[0];
+            }
+
+            prevInput.focus()
+            // prevInput.checked = true; 
+
+            break;
+
+          // tab key
+          case 9:
+            // moves to `Continue` in control group
+            if ($(response).length > 0 && response.dataset.responseGroup === undefined) {
+              e.preventDefault(); 
+
+              $(this).find('[data-continue]')[0].focus(); 
+            }
+
+            break;
+        }
+      }); 
+    }); 
+  }; 
+
+  /**
    * A method that is called when the controls created by _setUpGroupedQuestions are activated
    */
   MoneyNavigatorQuestions.prototype._updateGroupedQuestionsDisplay = function(el) {
-    var $container = $(el).parents('.question__content').find('.content__inner');
+    var $container = $(el).parents('.question__content').find('.question__groups');
 
     if ($(el).data('reset') || $(el).data('back')) {
       $container.children('[data-response-controls]').removeClass(this.inactiveClass); 
       $container.children('[data-response-group-control]').removeClass(this.inactiveClass); 
       $container.children('[data-response-collection]').addClass(this.inactiveClass); 
+
+      if ($(el).data('reset')) {
+        $container.find('[data-reset]').attr('tabindex', -1); 
+        $container.children('[data-response-controls]').find('input[checked=checked]').focus(); 
+        $container.children('[data-response-collection]').find('input').attr('tabindex', -1); 
+      }
     } else if ($(el).parents('[data-response-controls]').length > 0) {
       var id = el.id.split('_')[1];
       var $responseControls = $container.children('[data-response-controls]'); 
 
       if (el.id.indexOf('control_') > -1) {
         $responseControls.addClass(this.inactiveClass)
+
+        $container.children('[data-response-collection]')
+          .addClass(this.inactiveClass)
+          .find('[data-reset]').attr('tabindex', -1); 
+
+        $container.children('[data-response-collection]')
+          .find('input').attr('tabindex', -1); 
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .removeClass(this.inactiveClass)
+          .find('input')[0].focus(); 
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .find('[data-reset]').attr('tabindex', 0);
+
+        $container.children('[data-response-collection="' + id + '"]')
+          .find('input').attr('tabindex', 0);
       }
 
       $responseControls.find('input').each(function() {
@@ -211,9 +329,6 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           }
         }
       }); 
-
-      $container.children('[data-response-collection]').addClass(this.inactiveClass); 
-      $container.children('[data-response-collection="' + id + '"]').removeClass(this.inactiveClass); 
     } else {
       el.checked = true; 
     }
@@ -225,7 +340,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
     $inputs.each(function() {
       if (this.checked == true) {
-        if (this.name == '') {
+        if (this.value == '') {
           disabled = true; 
         } else {
           disabled = false; 
@@ -511,6 +626,12 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
       .addClass(this.activeClass)
       .find('.question__counter')
       .text(progress + '% ' + this.i18nStrings.messages.completed);
+
+    if (dir === 'prev') {
+      if (activeIndex >= 0) {
+        questions[activeIndex].focus(); 
+      }
+    }
 
     if (activeIndex == 0) {
       this.$banner.removeClass(

@@ -85,11 +85,6 @@
 		border: solid 1px $color-grey-pale;	
 		padding: $baseline-unit * 4 $default-gutter * 2 $baseline-unit * 2; 
 		overflow: hidden;
-
-		@include respond-to($mq-l) {
-			padding-left: $default-gutter;
-			padding-right: $default-gutter;
-		}
 	}
 
 	.question__heading {

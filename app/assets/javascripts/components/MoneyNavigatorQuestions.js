@@ -105,7 +105,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
 
       $(questionGroups)
         .addClass('question__groups')
-        .css('width', (2 * 100) + (gutter * 2) + '%');
+        .css('width', (100 + gutter) * 2 + '%');
 
       $(this).find('.question__content').append(questionGroups);
 
@@ -120,7 +120,7 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           $(div)
             .addClass('response__controls')
             .attr('data-response-controls', true)
-            .css('width', 50 - (gutter / 2) + '%')
+            .css('width', (100 - gutter) / 2 + '%')
             .append($fieldset);
 
           $(questionGroups).prepend(div);
@@ -163,8 +163,8 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
             .addClass('question__response--collection question--inactive')
             .attr('data-response-collection', num)
             .css({
-              'marginLeft': (1 / 2 * -100 + (gutter / 2)) * (num - 1) + '%', 
-              'width': 50 - (gutter / 2) + '%'
+              'marginLeft': (-100 + gutter) / 2 * (num - 1) + '%', 
+              'width': (100 - gutter) / 2 + '%'
             })
             .append(collection); 
 

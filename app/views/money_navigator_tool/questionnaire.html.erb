@@ -62,15 +62,16 @@
 
                       <% question[:responses].each do |response| %>
                         <div 
-                          <% if response[:hidden] %>
-                            class="question__response question__response--hidden"
-                          <% else %>
-                            class="question__response" 
-                          <% end %>
+                          class="question__response" 
                       
-                        data-response
+                          data-response
+
                           <% if response[:group] %>
                             data-response-group="<%= response[:group] %>"
+                          <% end %>
+
+                          <% if response[:hidden] %>
+                            data-response-hidden="true"
                           <% end %>
                         >
                           <% if question[:type] == 'radio' %>

@@ -723,6 +723,12 @@ describe('MoneyNavigatorQuestions', function() {
 
       expect($(multipleQuestion).find('[data-continue]')[0].disabled).to.be.true; 
       expect($(multipleQuestion).find('[data-back]')[0].disabled).to.be.false; 
+
+      // Ensure default (checked) responses are not hidden
+      expect($(this.questions[4]).find('input')[0].checked).to.be.false; 
+      expect($(this.questions[4]).find('input')[1].checked).to.be.true; 
+      expect(window.getComputedStyle($(this.questions[4]).find('[data-response]')[0]).display === 'none').to.be.true; 
+      expect(window.getComputedStyle($(this.questions[4]).find('[data-response]')[1]).display === 'none').to.be.false; 
     }); 
   }); 
 

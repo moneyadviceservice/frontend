@@ -539,6 +539,20 @@ define(['jquery', 'DoughBaseComponent'], function ($, DoughBaseComponent) {
           .find('.question__content')
           .append(div);
       }
+
+      // Move default input if it is also hidden
+      var $responses = $(question).find('[data-response]');
+
+      $responses.each(function() {
+        if (this.dataset.responseHidden === 'true') {
+          var $thisResponse = $(this),
+              $nextResponse = $(this).next();
+
+          $thisResponse.find('input')[0].checked = false;
+          $nextResponse.find('input')[0].checked = true;
+          $thisResponse.css('display', 'none');
+        }
+      });
     }
 
     var buttons = this.$el.find('button');

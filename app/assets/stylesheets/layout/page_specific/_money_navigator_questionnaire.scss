@@ -159,22 +159,13 @@
 					text-align: left; 
 				}
 
-				.question__response {
-					.response__control {
-						outline:none;
-					}
-				}
-
 				.response__control {
-					outline:none;
-				}
-			}
+					@extend .visually-hidden; 
 
-			/* switch colors when selected */
-			.response__control {
-				&:checked + .response__text {
-					color: $color-white; 
-					background: $color-green-secondary; 
+					&:checked + .response__text {
+						color: $color-white; 
+						background: $color-green-secondary; 
+					}
 				}
 			}
 		}

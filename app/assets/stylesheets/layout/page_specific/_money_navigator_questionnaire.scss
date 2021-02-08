@@ -166,6 +166,10 @@
 						color: $color-white; 
 						background: $color-green-secondary; 
 					}
+
+					&:focus + label {
+						@include focus-outline;
+					}
 				}
 			}
 		}
@@ -186,11 +190,6 @@
 					visibility: visible; 
 					transition-property: transform, visibility;
 					transition-duration: $transition-time, 0s;
-
-					input:focus + label, 
-					button:focus {
-						@include focus-outline;
-					}
 				}
 
 				.response__controls {
@@ -278,6 +277,10 @@
 			&:checked + .response__text {
 				color: $color-white; 
 				background: $color-green-secondary; 
+			}
+
+			&:focus + label {
+				@include focus-outline;
 			}
 
 			.button--yes {

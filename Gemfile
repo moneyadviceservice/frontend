@@ -125,13 +125,13 @@ gem 'feedback', '~> 0.5.1'
 
 # gem 'mortgage_calculator', '~> 3.17.0'
 # debt_advice_locator - update to date and ahead of master as of 21/1/2021 - renaming branch merged
-gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'feature/NTT_Rebased'
 
 
 
 # gem 'pacs', '~> 3.13.0'
 # pacs - behind master as of 21/1/2021 forked at 01438080c8eeccd31c2ff47f9b75537abca1512d - renaming branch found and merged
-gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/NTT_Rebased'
 
 
 
@@ -141,7 +141,7 @@ gem 'payday_loans_intervention', '~> 1.9.0'
 
 # gem 'pensions_calculator', '~> 2.7.1'
 # pensions_calculator - behind master as of 21/1/2021 forked at 30dc12b9b83d99071244cd04c8f27fcb688a52b2 (NTT from 3b82283f17368c8bcf3425ad20778c746dcb2286) - renaming branch found and merged
-gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/NTT_Rebased'
 
 
 

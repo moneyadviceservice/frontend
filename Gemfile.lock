@@ -15,14 +15,15 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator.git
-  revision: 8e63f52cf515d7e45bfa2f2267cfdbb5bc987092
+  revision: 05b7bb3a1d2b2826f782a30f6a452835dd0fa5d0
+  ref: 05b7bb3
   branch: 11920_Third-Party-Cookies
   specs:
     debt_free_day_calculator (3.1.0)
       autoprefixer-rails (< 9)
       bigdecimal (~> 1.3.0)
       debt_finance_calculator (~> 1.1.0)
-      dough-ruby (~> 5.36)
+      dough-ruby (~> 5.41)
       draper (< 3)
       email_validator (~> 1.4.0)
       i18n-js (= 3.0.0.mas)

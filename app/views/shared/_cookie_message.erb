@@ -1,0 +1,14 @@
+<% if cookies_not_accepted? %>
+  <% unless hide_elements_irrelevant_for_third_parties? %>
+    <div class="cookie-message">
+      <div class="l-constrained">
+        <%= form_tag main_app.cookie_notice_acceptance_path, remote: true, authenticity_token: true, class: 'js-cookie-message' do %>
+          <p class="cookie-message__content">
+            <button class="cookie-message__close-button button"><%= t('footer.cookie_message.close_button') %></button>
+            <%= t('footer.cookie_message.body_html', url: t('footer.cookie_guide_link')) %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

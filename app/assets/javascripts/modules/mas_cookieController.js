@@ -1,13 +1,12 @@
 define(function () {
   "use strict";
 
-  var defaults = {
-  };
+  var defaults = {};
 
   var CookieController = function (opts) {
-    this.o = $.extend({}, defaults, opts);
+    this.config = $.extend({}, defaults, opts);
 
-    console.log(this); 
+    console.log('this: ', this);
   };
 
   return CookieController;

@@ -92,6 +92,12 @@ require(["common", "jquery"], function (MAS, $) {
     });
   });
 
+  require(["jquery", "cookieController"], function($, cookieController) {
+    $(document).ready(function() {
+      new cookieController();
+    });
+  });
+
   // Kick off component loader
   var engines = [];
   $("[data-engine]").each(function () {

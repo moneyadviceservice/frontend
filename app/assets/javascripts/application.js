@@ -97,12 +97,14 @@ require(["common", "jquery"], function (MAS, $) {
   // Documentation: https://www.civicuk.com/cookie-control/documentation
   require(["jquery", "cookieController"], function($, cookieController) {
     $(document).ready(function() {
-      new cookieController({
+      var cookieControllerModule = new cookieController({
         apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687', 
         product: 'PRO_MULTISITE', 
         mode:'GDPR',
         consentCookieExpiry:'360'
       });
+
+      cookieControllerModule.loadModule(); 
     });
   });
 

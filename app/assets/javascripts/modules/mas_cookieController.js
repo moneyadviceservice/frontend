@@ -5,9 +5,13 @@ define(function () {
 
   var CookieController = function (opts) {
     this.config = $.extend({}, defaults, opts);
-
-    console.log('this: ', this);
   };
+
+  CookieController.prototype.loadModule = function() {
+    console.log('loadModule!');
+
+    CookieControl.load(this.config);
+  }
 
   return CookieController;
 });

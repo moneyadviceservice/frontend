@@ -112,6 +112,8 @@ require(["common", "jquery"], function (MAS, $) {
         closeStyle: 'button',
         subDomains: true
       });
+
+      cookieControllerModule.loadModule(); 
     });
   });
 

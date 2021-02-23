@@ -100,8 +100,17 @@ require(["common", "jquery"], function (MAS, $) {
       var cookieControllerModule = new cookieController({
         apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687', 
         product: 'PRO_MULTISITE', 
-        mode:'GDPR',
-        consentCookieExpiry:'360'
+        mode: 'GDPR',
+        consentCookieExpiry: '360',
+        initialState: 'notify',
+        rejectButton: false,
+        layout: 'slideout',
+        position: 'left',
+        setInnerHTML: true,
+        notifyDismissButton: false,
+        closeOnGlobalChange: true,
+        closeStyle: 'button',
+        subDomains: true
       });
 
       cookieControllerModule.loadModule(); 

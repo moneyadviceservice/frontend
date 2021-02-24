@@ -2,13 +2,24 @@ define(['common'], function (MAS) {
   'use strict';
 
   var defaults = {
-    optionalCookies: []
+    optionalCookies: [],
+    text: {}
   };
 
   var CookieController = function (opts) {
     this.config = $.extend({}, defaults, opts);
     this.addOptionalCookies();
+    this.addText();
   };
+
+  CookieController.prototype.addText = function() {
+    var textObj = this.config.text;
+    var textContent = MAS.text.cookieController.text;
+
+    for (var content in textContent) {
+      textObj[content] = textContent[content];
+    }
+  }
 
   CookieController.prototype.addOptionalCookies = function() {
     var analytics = {

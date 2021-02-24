@@ -11,8 +11,6 @@ define(['common'], function (MAS) {
   };
 
   CookieController.prototype.addOptionalCookies = function() {
-    console.log('MAS: ', MAS); 
-
     var analytics = {
       name : 'analytics',
       recommendedState: true,
@@ -21,32 +19,27 @@ define(['common'], function (MAS) {
       label: MAS.text.cookieController.optionalCookies.analytics.label,
       description: MAS.text.cookieController.optionalCookies.analytics.description,
 
-      onAccept : function(){
-        // Add Google Analytics
-        (function (i,s,o,g,r,a,m) {
-          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      onAccept: function() {
+        window.dataLayer = window.dataLayer || [];
 
-        ga('create', 'UA-XXXXX-Y', 'auto');
-
-        ga('send', 'pageview');
-        // End Google Analytics
+        window.dataLayer.push({
+          'event': 'civicConsentResponse'
+        });
       },
-      onRevoke: function(){
-      // Disable Google Analytics
-      window['ga-disable-UA-XXXXX-Y'] = true;
-      // End Google Analytics
+
+      onRevoke: function() {
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+          'event': 'civicConsentResponse'
+        });
       }
-    }; 
+    };
 
     this.config.optionalCookies.push(analytics);
   }
 
   CookieController.prototype.loadModule = function() {
-    console.log('loadModule!');
-
     CookieControl.load(this.config);
   }
 

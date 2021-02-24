@@ -98,8 +98,8 @@ require(["common", "jquery"], function (MAS, $) {
   require(["jquery", "cookieController"], function($, cookieController) {
     $(document).ready(function() {
       var cookieControllerModule = new cookieController({
-        apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687', 
-        product: 'PRO_MULTISITE', 
+        apiKey: '3c057064262937c6354d3ec3809ea099e4a83c23', 
+        product: 'PRO_MULTISITE',
         mode: 'GDPR',
         consentCookieExpiry: '360',
         initialState: 'notify',

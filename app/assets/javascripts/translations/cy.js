@@ -24,7 +24,9 @@ define([], function() {
 				'necessaryDescription': 'Mae rhai cwcis yn hanfodol er mwyn i&#8217;r wefan weithredu&#8217; gywir, fel y rhai sy&#8217;n cofio&#8217;ch datbliygad trwy ein teclynnau, neu ddefnyddio ein gwasanaeth gwe-sgwrs.'
 			}, 
 			'branding': {
-				'removeAbout': true
+				'removeAbout': true, 
+				'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
+				'fontSize': '1rem'
 			}
 		}
   };

@@ -2,6 +2,7 @@ define(['common'], function (MAS) {
   'use strict';
 
   var defaults = {
+    theme: 'light', 
     optionalCookies: [],
     text: {}, 
     branding: {}

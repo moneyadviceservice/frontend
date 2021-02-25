@@ -24,7 +24,9 @@ define([], function() {
 				'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.'
 			}, 
 			'branding': {
-				'removeAbout': true
+				'removeAbout': true, 
+				'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
+				'fontSize': '1rem'
 			}
 		}
   };

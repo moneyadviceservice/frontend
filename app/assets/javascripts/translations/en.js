@@ -17,7 +17,11 @@ define([], function() {
 					'<span>We use cookies to store information about how you use the Money Advice Service website, such as the pages you visit.</span>' +
 					'<span>For more information visit our <a href="/en/corporate/cookie_notice_en">Cookie Policy</a> and <a href="/en/corporate/privacy">Privacy Policy</a>.</span>',
 				'acceptSettings': 'Accept all cookies',
-				'closeLabel': 'Save preferences'
+				'closeLabel': 'Save preferences', 
+				'on': 'On', 
+				'off': 'Off', 
+				'necessaryTitle': 'Necessary Cookies', 
+				'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.'
 			}
 		}
   };

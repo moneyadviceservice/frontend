@@ -17,7 +17,11 @@ define([], function() {
 					'<span>Rydym yn defnyddio cwcis i storio gwybodaeth am sut rydych yn defnyddio Gwasanaeth Cynghori Ariannol, fel y tudalennau rydych chi&#8217;n ymweld â nhw.</span>' +
 					'<span>I gael mwy o wybodaeth, ymwelwch â&#8217;n <a href="/cy/corporate/sut-yr-ydym-yn-defnyddio-cwcis">Polisi Cwcis</a> a&#8217;n <a href="/cy/corporate/polisipreifatrwydd">Polisi Preifatrwydd</a>.</span>',
 				'acceptSettings': 'Derbyn pob cwci',
-				'closeLabel': 'Arbed dewisiadau'
+				'closeLabel': 'Arbed dewisiadau', 
+				'on': 'Ymlaen', 
+				'off': 'I ffwrdd', 
+				'necessaryTitle': 'Cwcis sydd eu hangen',
+				'necessaryDescription': 'Mae rhai cwcis yn hanfodol er mwyn i&#8217;r wefan weithredu&#8217; gywir, fel y rhai sy&#8217;n cofio&#8217;ch datbliygad trwy ein teclynnau, neu ddefnyddio ein gwasanaeth gwe-sgwrs.'
 			}
 		}
   };

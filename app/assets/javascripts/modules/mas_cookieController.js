@@ -8,13 +8,14 @@ define(['common'], function (MAS) {
 
   var CookieController = function (opts) {
     this.config = $.extend({}, defaults, opts);
+    this.textStrings = MAS.text.cookieController; 
     this.addOptionalCookies();
     this.addText();
   };
 
   CookieController.prototype.addText = function() {
     var textObj = this.config.text;
-    var textContent = MAS.text.cookieController.text;
+    var textContent = this.textStrings.text;
 
     for (var content in textContent) {
       textObj[content] = textContent[content];
@@ -27,8 +28,8 @@ define(['common'], function (MAS) {
       recommendedState: true,
       lawfulBasis: 'legitimate interest',
       cookies: ['_ga', '_gid', '_gat', '__utma', '__utmt', '__utmb', '__utmc', '__utmz', '__utmv'],
-      label: MAS.text.cookieController.optionalCookies.analytics.label,
-      description: MAS.text.cookieController.optionalCookies.analytics.description,
+      label: this.textStrings.optionalCookies.analytics.label,
+      description: this.textStrings.optionalCookies.analytics.description,
 
       onAccept: function() {
         window.dataLayer = window.dataLayer || [];

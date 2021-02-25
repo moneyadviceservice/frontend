@@ -10,15 +10,77 @@ define(['common'], function (MAS) {
 
   var CookieController = function (opts) {
     this.config = $.extend({}, defaults, opts);
-    this.textStrings = MAS.text.cookieController; 
+    // this.textStrings = MAS.text.cookieController; 
+
+    // TODO: replace locale and textStrings with the existing i18n module
+    // This appears to be not functioning as it should right now
+    // It should be fixed though it may be that it has never functioned as it should
+    // Alternaively the locale object provided by this module could be used instead
+    this.locale = MAS.bootstrap.i18nLocale;
+    this.textStrings = {
+      'en': {
+        'optionalCookies': {
+          'analytics': {
+          'label': 'Analytics Cookies',
+          'description': 'These cookies allow us to collect anonymised data about how our website is being used, helping us to make improvements to the services we provide to you.'
+          }
+        },
+        'text': {
+          'title': 'Cookies on Money Advice Service',
+          'intro':
+            '<span>Cookies are files saved on your phone, tablet or computer when you visit a website.</span>' +
+            '<span>We use cookies to store information about how you use the Money Advice Service website, such as the pages you visit.</span>' +
+            '<span>For more information visit our <a href="/en/corporate/cookie_notice_en">Cookie Policy</a> and <a href="/en/corporate/privacy">Privacy Policy</a>.</span>',
+          'acceptSettings': 'Accept all cookies',
+          'closeLabel': 'Save preferences', 
+          'on': 'On', 
+          'off': 'Off', 
+          'necessaryTitle': 'Necessary Cookies', 
+          'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.'
+        }, 
+        'branding': {
+          'removeAbout': true, 
+          'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
+          'fontSize': '1rem'
+        }
+      }, 
+      'cy': {
+        'optionalCookies': {
+          'analytics': {
+          'label': 'Cwcis dadansoddi',
+          'description': 'Mae&#8217;r cwcis hyn yn caniatáu i ni gasglu data dienw am sut mae ein gwefan yn cael ei defnyddio, gan ein helpu i wneud gwelliannau i&#8217;r gwasanaethau rydym yn eu darparu i chi.'
+          }
+        },
+        'text': {
+          'title': 'Cwcis ar Gwasanaeth Cynghori Ariannol',
+          'intro':
+            '<span>Mae cwcis yn ffeiliau a arbedir ar eich ffôn, llechen neu gyfrifiadur pan ymwelwch â gwefan.</span>' +
+            '<span>Rydym yn defnyddio cwcis i storio gwybodaeth am sut rydych yn defnyddio Gwasanaeth Cynghori Ariannol, fel y tudalennau rydych chi&#8217;n ymweld â nhw.</span>' +
+            '<span>I gael mwy o wybodaeth, ymwelwch â&#8217;n <a href="/cy/corporate/sut-yr-ydym-yn-defnyddio-cwcis">Polisi Cwcis</a> a&#8217;n <a href="/cy/corporate/polisipreifatrwydd">Polisi Preifatrwydd</a>.</span>',
+          'acceptSettings': 'Derbyn pob cwci',
+          'closeLabel': 'Arbed dewisiadau', 
+          'on': 'Ymlaen', 
+          'off': 'I ffwrdd', 
+          'necessaryTitle': 'Cwcis sydd eu hangen',
+          'necessaryDescription': 'Mae rhai cwcis yn hanfodol er mwyn i&#8217;r wefan weithredu&#8217; gywir, fel y rhai sy&#8217;n cofio&#8217;ch datbliygad trwy ein teclynnau, neu ddefnyddio ein gwasanaeth gwe-sgwrs.'
+        }, 
+        'branding': {
+          'removeAbout': true, 
+          'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
+          'fontSize': '1rem'
+        }
+      }
+    }
+
     this.addOptionalCookies();
     this.addText();
-    this.addBranding(); 
+    this.addBranding();
   };
 
   CookieController.prototype.addBranding = function() {
+    var textStrings = this.textStrings[this.locale];
     var brandingObj = this.config.branding;
-    var brandingContent = this.textStrings.branding;
+    var brandingContent = textStrings.branding;
 
     for (var content in brandingContent) {
       brandingObj[content] = brandingContent[content];
@@ -26,8 +88,9 @@ define(['common'], function (MAS) {
   }
 
   CookieController.prototype.addText = function() {
+    var textStrings = this.textStrings[this.locale];
     var textObj = this.config.text;
-    var textContent = this.textStrings.text;
+    var textContent = textStrings.text;
 
     for (var content in textContent) {
       textObj[content] = textContent[content];
@@ -35,13 +98,14 @@ define(['common'], function (MAS) {
   }
 
   CookieController.prototype.addOptionalCookies = function() {
+    var textStrings = this.textStrings[this.locale]; 
     var analytics = {
       name : 'analytics',
       recommendedState: true,
       lawfulBasis: 'legitimate interest',
       cookies: ['_ga', '_gid', '_gat', '__utma', '__utmt', '__utmb', '__utmc', '__utmz', '__utmv'],
-      label: this.textStrings.optionalCookies.analytics.label,
-      description: this.textStrings.optionalCookies.analytics.description,
+      label: textStrings.optionalCookies.analytics.label,
+      description: textStrings.optionalCookies.analytics.description,
 
       onAccept: function() {
         window.dataLayer = window.dataLayer || [];

@@ -3,7 +3,8 @@ define(['common'], function (MAS) {
 
   var defaults = {
     optionalCookies: [],
-    text: {}
+    text: {}, 
+    branding: {}
   };
 
   var CookieController = function (opts) {
@@ -11,7 +12,17 @@ define(['common'], function (MAS) {
     this.textStrings = MAS.text.cookieController; 
     this.addOptionalCookies();
     this.addText();
+    this.addBranding(); 
   };
+
+  CookieController.prototype.addBranding = function() {
+    var brandingObj = this.config.branding;
+    var brandingContent = this.textStrings.branding;
+
+    for (var content in brandingContent) {
+      brandingObj[content] = brandingContent[content];
+    }
+  }
 
   CookieController.prototype.addText = function() {
     var textObj = this.config.text;

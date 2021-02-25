@@ -22,6 +22,9 @@ define([], function() {
 				'off': 'Off', 
 				'necessaryTitle': 'Necessary Cookies', 
 				'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.'
+			}, 
+			'branding': {
+				'removeAbout': true
 			}
 		}
   };

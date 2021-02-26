@@ -35,7 +35,7 @@ Rails.application.configure do
                                    modules/mas_scrollTracking.js
                                    modules/mas_cookieController.js
                                    components/*.js
-                                   require_config.js
+                                   require_config.js.erb
                                    styleguide.js
                                    supports.js
                                    syndication/iframeResizer.js

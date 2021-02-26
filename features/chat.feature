@@ -30,11 +30,11 @@ Feature: Chat online
 #    Then I should not be able to start a chat with an advisor
 #    And I should see a message informing me that chat is currently busy
 
-  @javascript
-  Scenario: Chat is offline, but will be online later that day
-    Given chat will be next online later today
-    Then I should not be able to start a chat with an advisor
-    And I should see a message informing me that chat will be online between today's opening hours
+#  @javascript
+#  Scenario: Chat is offline, but will be online later that day
+#    Given chat will be next online later today
+#    Then I should not be able to start a chat with an advisor
+#    And I should see a message informing me that chat will be online between today's opening hours
 
 #  @javascript
 #  Scenario: Chat is offline and will not online until tomorrow

@@ -34,6 +34,7 @@ Rails.application.configure do
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
                                    components/*.js
+                                   require_config.js
                                    styleguide.js
                                    supports.js
                                    syndication/iframeResizer.js

@@ -92,31 +92,6 @@ require(["common", "jquery"], function (MAS, $) {
     });
   });
 
-  // Cookie controller
-  // Implementation of the Cookie Control module from Civic
-  // Documentation: https://www.civicuk.com/cookie-control/documentation
-  require(["jquery", "cookieController"], function($, cookieController) {
-    $(document).ready(function() {
-      var cookieControllerModule = new cookieController({
-        apiKey: '3c057064262937c6354d3ec3809ea099e4a83c23', 
-        product: 'PRO_MULTISITE',
-        mode: 'GDPR',
-        consentCookieExpiry: '360',
-        initialState: 'notify',
-        rejectButton: false,
-        layout: 'slideout',
-        position: 'left',
-        setInnerHTML: true,
-        notifyDismissButton: false,
-        closeOnGlobalChange: true,
-        closeStyle: 'button',
-        subDomains: true
-      });
-
-      cookieControllerModule.loadModule(); 
-    });
-  });
-
   // Kick off component loader
   var engines = [];
   $("[data-engine]").each(function () {

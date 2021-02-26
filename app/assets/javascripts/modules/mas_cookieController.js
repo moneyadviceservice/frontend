@@ -1,4 +1,4 @@
-define(['common'], function (MAS) {
+// define(['common'], function (MAS) {
   'use strict';
 
   var defaults = {
@@ -16,7 +16,8 @@ define(['common'], function (MAS) {
     // This appears to be not functioning as it should right now
     // It should be fixed though it may be that it has never functioned as it should
     // Alternaively the locale object provided by this module could be used instead
-    this.locale = MAS.bootstrap.i18nLocale;
+    // this.locale = MAS.bootstrap.i18nLocale;
+    this.locale = document.querySelector('html').lang; 
     this.textStrings = {
       'en': {
         'optionalCookies': {
@@ -131,5 +132,5 @@ define(['common'], function (MAS) {
     CookieControl.load(this.config);
   }
 
-  return CookieController;
-});
+  // return CookieController;
+// });

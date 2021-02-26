@@ -248,15 +248,19 @@
 
 <% unless syndicated_tool_request? %>
   <%= javascript_include_tag 'https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js' %>
+  <%= javascript_include_tag 'modules/mas_cookieController.js' %>
 
   <script>
     // Cookie controller
     // Implementation of the Cookie Control module from Civic
     // Documentation: https://www.civicuk.com/cookie-control/documentation
-    require(['require_config'], function() {
-      require(['cookieController'], function(cookieController) {
-        $(document).ready(function() {
-          var cookieControllerModule = new cookieController({
+    // require(['require_config'], function() {
+    //   require(['cookieController'], function(cookieController) {
+        document.addEventListener('DOMContentLoaded', function() {
+          
+        // })
+        // $(document).ready(function() {
+          var cookieControllerModule = new CookieController({
             apiKey: '3c057064262937c6354d3ec3809ea099e4a83c23', 
             product: 'PRO_MULTISITE',
             mode: 'GDPR',
@@ -274,8 +278,8 @@
 
           cookieControllerModule.loadModule(); 
         });
-      }); 
-    });
+    //   }); 
+    // });
   </script>
 <% end %>
 

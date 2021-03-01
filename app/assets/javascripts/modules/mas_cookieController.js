@@ -9,8 +9,7 @@
   };
 
   var CookieController = function (opts) {
-    this.config = $.extend({}, defaults, opts);
-    // this.textStrings = MAS.text.cookieController; 
+    this.config = Object.assign(defaults, opts);
 
     // TODO: replace locale and textStrings with the existing i18n module
     // This appears to be not functioning as it should right now

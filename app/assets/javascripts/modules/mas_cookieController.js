@@ -33,14 +33,20 @@ var CookieController = function (opts) {
         'on': 'On', 
         'off': 'Off', 
         'necessaryTitle': 'Necessary Cookies', 
-        'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.'
-      }, 
+        'necessaryDescription': 'Some cookies are essential for the site to function correctly, such as those remembering your progress through our tools, or using our webchat service.', 
+        'notifyTitle': 'Tell us whether you accept cookies', 
+        'notifyDescription': 
+          '<span>We use <a href="/en/corporate/cookie_notice_en">cookies to collect information</a> about how you use this website.</span>' +
+          '<span>We use this information to make the site work as well as possible and improve our services.</span>', 
+        'accept': 'Accept all cookies', 
+        'settings': 'Set preferences'
+      },
       'branding': {
         'removeAbout': true, 
         'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
         'fontSize': '1rem'
       }
-    }, 
+    },
     'cy': {
       'optionalCookies': {
         'analytics': {
@@ -59,8 +65,15 @@ var CookieController = function (opts) {
         'on': 'Ymlaen', 
         'off': 'I ffwrdd', 
         'necessaryTitle': 'Cwcis sydd eu hangen',
-        'necessaryDescription': 'Mae rhai cwcis yn hanfodol er mwyn i&#8217;r wefan weithredu&#8217; gywir, fel y rhai sy&#8217;n cofio&#8217;ch datbliygad trwy ein teclynnau, neu ddefnyddio ein gwasanaeth gwe-sgwrs.'
-      }, 
+        'necessaryDescription': 'Mae rhai cwcis yn hanfodol er mwyn i&#8217;r wefan weithredu&#8217; gywir, fel y rhai sy&#8217;n cofio&#8217;ch datbliygad trwy ein teclynnau, neu ddefnyddio ein gwasanaeth gwe-sgwrs.', 
+        'notifyTitle': 'Dywedwch wrthym os ydych yn derbyn cwcis', 
+        'notifyDescription': 
+          '<span>Rydym yn defnyddio <a href="/cy/corporate/sut-yr-ydym-yn-defnyddio-cwcis">cwcis i gasglu gwybodaeth</a> am sut rydych yn defnyddio Gwasanaeth Cynghori Ariannol.</span>' +
+          '<span>Rydym yn defnyddio&#8217;r wybodaeth hon i wneud i&#8217;r wefan weithio cystal â phosibl a gwella ein gwasanaethau.</span>', 
+        'closeLabel': 'Arbed dewisiadau', 
+        'accept': 'Derbyn pob cwci', 
+        'settings': 'Gosod dewisiadau'
+      },
       'branding': {
         'removeAbout': true, 
         'fontFamily': "'museo_sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", 
@@ -97,7 +110,7 @@ CookieController.prototype.addText = function() {
 CookieController.prototype.addOptionalCookies = function() {
   var textStrings = this.textStrings[this.locale]; 
   var analytics = {
-    name : 'analytics',
+    name: 'analytics',
     recommendedState: true,
     lawfulBasis: 'legitimate interest',
     cookies: ['_ga', '_gid', '_gat', '__utma', '__utmt', '__utmb', '__utmc', '__utmz', '__utmv'],

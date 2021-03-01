@@ -74,4 +74,14 @@
 			fill: $color-grey-medium;
 		}
 	}
+
+	#ccc-notify {
+		.ccc-notify-text {
+			p {
+				& > span {
+					display: block; 
+				}
+			}
+		}
+	}
 }

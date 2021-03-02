@@ -30,6 +30,7 @@ Rails.application.configure do
                                    modules/i18n.js
                                    modules/log.js
                                    modules/mas_collapsable.js
+                                   modules/mas_cookieController.js
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
                                    components/*.js

@@ -84,11 +84,7 @@
 	.question__content {
 		border: solid 1px $color-grey-pale;	
 		padding: $baseline-unit * 4 $default-gutter * 2 $baseline-unit * 2; 
-
-		@include respond-to($mq-l) {
-			padding-left: $default-gutter;
-			padding-right: $default-gutter;
-		}
+		overflow: hidden;
 	}
 
 	.question__heading {
@@ -112,7 +108,6 @@
 	.question__explainer {
 		font-size: 0.875rem; 
 		font-weight: 700; 
-		margin-top:55px;
 	}
 
 	.question__response {
@@ -144,102 +139,47 @@
 			display: block; 
 		}
 
-		.question__response--hidden {
-			display: none;
-		}
-
 		&[data-question-multiple] {
-
 			.button--no, 
 			.button--yes {
 				display: inline-block;
 				margin: 0 $default-gutter * 2 0 0;
-				margin-right: 52px; 
-			
+
+				@include respond-to($mq-s) {
+					margin-right: $default-gutter * 1.5; 
+				}
+
 				@include respond-to($mq-m) {
-					margin-right: 52px;
-				}	
-
-				[type="checkbox"]:not(:checked) + label,
-				[type="checkbox"]:checked + label {
-					padding-left: 1.95em;
-				}
-
-				/* checkbox aspect */
-				[type="checkbox"]:not(:checked) + label:before,
-				[type="checkbox"]:checked + label:before {
-					content: '';
-					position: absolute;
-					left: 0; top: 0;
-					@extend .button; 
-					padding: 0; 
-					text-align: left;
-					min-width:70px;
-					min-height:50px;	
-				}
-
-				[type="checkbox"]:not(:checked) + label:after,
-				[type="checkbox"]:checked + label:after {
-					content:'';
-					position: absolute;
-					top: 0em; left: 0;
-					padding: 12px 22px;
-					border-radius: 4px;
-					min-width:70px;
-					min-height:50px;
-				}
-
-				[type="checkbox"]:checked + label:after {
-					background: $color-green-secondary; 
-					border-bottom: 3px solid #929494;
+					margin-right: $default-gutter; 
 				}
 
 				.response__text {
-					cursor:pointer;
-				}
-
-				span {
-					display:block;
-					position: absolute;
-					top: 50%;
-					left:70%;
-					font-weight: 300;
-					z-index:999;	
-
-					@include respond-to($mq-m) {
-						left:60%;
-					}
-				}
-
-				/* accessibility */
-				[type="checkbox"]:checked:focus + label:before,
-				[type="checkbox"]:not(:checked):focus + label:before {
-					outline: solid 0.1875rem $color-input-focus-border-color;
-				}
-
-				.question__response {
-					.response__control {
-						outline:none;
-					}
+					@extend .button; 
+					padding: 0; 
+					text-align: left; 
 				}
 
 				.response__control {
+					@extend .visually-hidden; 
+
 					&:checked + .response__text {
 						color: $color-white; 
 						background: $color-green-secondary; 
 					}
+
+					&:focus + label {
+						@include focus-outline;
+					}
 				}
-			}			
+			}
 		}
 
 		&[data-question-grouped] {
 			$transition-time: 0.5s;
 
-			fieldset {
-				overflow: hidden;
-			}
+			.question__groups {
+				@extend %clearfix;
 
-			.content__inner {
 				box-sizing: content-box;
 				padding: 0 $default-gutter * 2;
 				margin: 0 $default-gutter * -2;
@@ -247,7 +187,9 @@
 				.response__controls,
 				.question__response--collection {
 					float: left;
-					transition: transform $transition-time;
+					visibility: visible; 
+					transition-property: transform, visibility;
+					transition-duration: $transition-time, 0s;
 				}
 
 				.response__controls {
@@ -255,15 +197,19 @@
 					margin-right: $default-gutter;
 	
 					&.question--inactive {
-						transform: translateX(-100% - ($default-gutter * 3));
+						transform: translateX(-100% - ($default-gutter * 2));
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 
 				.question__response--collection {
-					transform: translateX(-100% - ($default-gutter * 3));
+					transform: translateX(-100% - ($default-gutter * 2));
 
 					&.question--inactive {
 						transform: translateX(0%);
+						visibility: hidden; 
+						transition-delay: 0s, $transition-time; 
 					}
 				}
 			}
@@ -326,6 +272,19 @@
 			&[type="checkbox"]:checked + .response__text {
 				color: $color-white; 
 				background: $color-green-secondary; 
+			}
+
+			&:checked + .response__text {
+				color: $color-white; 
+				background: $color-green-secondary; 
+			}
+
+			&:focus + label {
+				@include focus-outline;
+			}
+
+			.button--yes {
+				margin-right: 0;
 			}
 		}
 	}

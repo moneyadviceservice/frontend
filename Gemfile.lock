@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/budget_planner.git
-  revision: aad9d191583b395905c20b0e4bbeb5a3da051945
+  revision: 17ec21002154f9965194bb9b5894b3f6fe8df937
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    budget_planner (5.7.1)
+    budget_planner (6.0.0)
       i18n-js (= 3.0.0.mas)
       js-routes (= 1.1.2)
       mas-mailer (~> 0.3)
@@ -196,10 +196,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/universal_credit.git
-  revision: 873c58fe4586c5597127e84b5790ce6d70ff4643
+  revision: 19fd02a730c6536d5d87b0bbfb086c6265fefb8b
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    universal_credit (4.1.1)
+    universal_credit (5.0.0)
       autoprefixer-rails
       devise
       dough-ruby (~> 5.36)

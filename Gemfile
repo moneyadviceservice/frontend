@@ -89,7 +89,7 @@ gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git',
 # gem 'cost_calculator_builder', '~> 1.1.0'
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin'
 gem 'cutback_calculator', '~> 0.13.0'
-# gem 'debt_advice_locator', '3.13.0'
+# gem 'debt_advice_locator', '4.0.0'
 gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin'
 gem 'debt_and_mental_health', '~> 1.6.0'
 # gem 'debt_free_day_calculator', '~> 3.1.0'
@@ -112,7 +112,7 @@ gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calcul
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin'
 # gem 'universal_credit', '~> 5.0.0'
 gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin'
-# gem 'wpcc', '2.8.3'
+# gem 'wpcc', '3.0.0'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 group :assets do

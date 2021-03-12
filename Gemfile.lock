@@ -67,10 +67,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: aa7dd81ea8c1fe5933f8f91ee4129bb446d33553
+  revision: d486709f157b6768b2f0b27753402f23d27bb4eb
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    debt_advice_locator (3.14.0)
+    debt_advice_locator (4.0.0)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -214,10 +214,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: a3e8ed815d96c1ae87a486306e0b9fbc56fa980f
+  revision: 3c703bd3c497d34145b7cf19f070ab9af716adb7
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    wpcc (2.8.3)
+    wpcc (3.0.0)
       dough-ruby (~> 5.38)
       meta-tags
       modernizr-rails (~> 2.6.2)
@@ -254,10 +254,10 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_attr (0.15.1)
-      actionpack (>= 3.0.2, < 6.2)
-      activemodel (>= 3.0.2, < 6.2)
-      activesupport (>= 3.0.2, < 6.2)
+    active_attr (0.15.2)
+      actionpack (>= 3.0.2, < 7.0)
+      activemodel (>= 3.0.2, < 7.0)
+      activesupport (>= 3.0.2, < 7.0)
     active_model_serializers (0.9.8)
       activemodel (>= 3.2)
       concurrent-ruby (~> 1.0)

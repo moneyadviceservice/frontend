@@ -59,6 +59,10 @@ $transition-time: 0.4s;
 				margin-bottom: $baseline-unit * 2; 
 				padding: $baseline-unit 0; 
 
+				a {
+					text-decoration: underline;
+				}
+
 				& > p {
 					@include column(12); 
 
@@ -99,10 +103,6 @@ $transition-time: 0.4s;
 
 					p {
 						font-size: 1rem; 
-
-						a {
-							text-decoration: underline;
-						}
 					}
 
 					@include respond-to($mq-m) {

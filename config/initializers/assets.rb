@@ -33,6 +33,7 @@ Rails.application.configure do
                                    modules/mas_collapsable.js
                                    modules/mas_pubsub.js
                                    modules/mas_scrollTracking.js
+                                   modules/mas_cookieController.js
                                    components/*.js
                                    styleguide.js
                                    supports.js

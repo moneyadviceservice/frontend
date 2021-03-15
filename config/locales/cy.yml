@@ -21,7 +21,7 @@ cy:
   blog_link: https://www.moneyadviceservice.org.uk/blog
 
   breadcrumbs:
-   aria_label: briwsion bara
+    aria_label: briwsion bara
 
   flash:
     label:
@@ -51,8 +51,8 @@ cy:
 
   recaptcha:
     errors:
-      verification_failed: '- Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni.'
-      recaptcha_unreachable: '- Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni.'
+      verification_failed: "- Mae’r dilysiad reCAPTCHA wedi methu, rhowch gynnig arall arni."
+      recaptcha_unreachable: "- Wps, wnaethon ni ddim gallu dilysu eich ymateb reCAPTCHA. Rhowch gynnig arall arni."
   errors:
     show:
       heading: Mae'n ddrwg gennym
@@ -264,29 +264,12 @@ cy:
   opt_out:
     title: Edrychwch ar hyn ar ein gwefan flaenorol
 
-  feedback:
-    title: Byddem yn falch iawn i gael eich adborth
-    email_contents: |
-      mailto:tools.help%40moneyadviceservice.org.uk?subject=Fy%20adborth%20ar%20fersiwn
-      %20cynnar%20eich%20gwefan&amp;body=Diolch%20am%20gymryd%20yr%20amser%20i%20roi%20adborth
-      %20ar%20fersiwn%20cynnar%20ein%20gwefan%20wedi%E2%80%99i%20gwella.%20Rydym%20yn
-      %20ei%20werthfawrogi.%0A%0AOs%20gwelwch%20yn%20dda%20rhowch%20wybod%20i%20ni%20sut
-      %20y%20gweithiodd%20y%20wefan%20i%20chi%20gydag%20unrhyw%20awgrymiadau
-      %20ynghylch%20sut%20y%20gallwn%20ei%20gwneud%20yn%20well.%0A%0ABeth%20oedd
-      %20yn%20dda%3F%0A%0ABeth%20nad%20oedd%20mor%20dda%3F%0A%0APa%20ddyfais
-      %20ydych%20chi%E2%80%99n%20ei%20defnyddio%3F%0A%0A***************%0AOs
-      %20hoffech%20gael%20Cyngor%20Ariannol%20ffoniwch%20ein%20Llinell%20Cynghori
-      %20Ariannol%20ar%200300%20500%205000%20(Saesneg)%20neu%200300%20500%205555
-      %20(Cymraeg)%0ATypetalk%3A%2018001%200300%20500%205000%0AO%20dramor%3A%20%2B44
-      %201443%20827658%20%0ALlun%20i%20Wener%3A%208am-8pm%20%0ADydd%20Sadwrn%3A
-      %209am-1pm%20%0ADydd%20Sul%20a%20Gwyliau%20Banc%3A%20ar%20gau
-
   maps_banner:
     mps_provided_1: Gwasanaeth Cynghori Ariannol
     mps_provided_2: yn cael ei ddarparu gan
     mps: Gwasanaeth Arian a Phensiynau
 
-  covid_banner: 
+  covid_banner:
     head: Arweiniad Ariannol Coronafeirws
     description: Arweiniad dibynadwy a dolenni i gefnogaeth
     body_html: <a href="%{href}" class="covid_banner__link">Ewch i'n canolfan gymorth</a>
@@ -303,14 +286,14 @@ cy:
     address: 120 Holborn, London EC1N 2TD
     mps_provided_1: Gwasanaeth
     mps_provided_2: Cynghori Ariannol yn
-    mps_provided_3: cael ei ddarparu gan 
-    mps: Gwasanaeth Arian a Phensiynau  
+    mps_provided_3: cael ei ddarparu gan
+    mps: Gwasanaeth Arian a Phensiynau
     accessibility: Hygyrchedd
     accessibility_link: /cy/corporate/hygyrchedd
     privacy_statement: Rhybudd preifatrwydd
-    privacy_statement_link: /cy/corporate/polisipreifatrwydd
+    privacy_statement_link: https://www.moneyhelper.org.uk/cy/privacy
     terms_and_conditions: Amodau a Thelerau
-    terms_and_conditions_link: /cy/corporate/telerau-ac-amodau
+    terms_and_conditions_link: https://www.moneyhelper.org.uk/cy/terms-and-conditions
     fincap: Galluogrwydd Ariannol
     fincap_link: http://www.fincap.org.uk/cymru
     jobs: Swyddi
@@ -364,8 +347,8 @@ cy:
       related_links_title: Erthyglau cysylltiedig
 
     on_page_feedback:
-      positive: 'Do'
-      negative: 'Naddo'
+      positive: "Do"
+      negative: "Naddo"
       prompt: A oedd y canllaw hwn o ddefnydd i chi?
       social_share_heading: Wnewch chi rannu’ch sylwadau?
       user_feedback_heading: Dywedwch wrthym os gwelwch yn dda pam nad oedd y canllaw hwn o gymorth
@@ -446,19 +429,19 @@ cy:
     my_account: Fy nghyfrif
     mandatory_warning: Cwblhewch y meysydd hyn
     links:
-      sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
+      sign_in_html: 'Wedi Cofrestru eisoes? <a href="%{url}">Mewngofnodi</a>.'
     registration:
       meta:
         canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_up
       title: Cofrestrwch am gyfrif am ddim nawr
-      intro_html: "Eisoes wedi cofrestru? <a href=\"%{url}\">Mewngofnodwch nawr</a>."
+      intro_html: 'Eisoes wedi cofrestru? <a href="%{url}">Mewngofnodwch nawr</a>.'
       subtitle: Yr hyn a gewch
       bullets:
         - "Cadwch eich Cynllunydd Cyllideb neu Reolwr arian a chadwch eich crynodeb o’ch gwariant wrth law"
         - "Help gyda’ch nodau ariannol"
         - "Mynediad hwylus at amryw o offer a chyfrifianellau"
-      terms_html: "Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href=\"%{url}\">Hamodau a Thelerau</a>."
-      privacy_html: "Gwasanaeth Cynghori Arian <a href=\"%{url}\">Polisi Preifatrwydd</a>."
+      terms_html: 'Drwy glicio ar y botwm, rydych yn cytuno gyda ein <a href="%{url}">Hamodau a Thelerau</a>.'
+      privacy_html: 'HelpiwrArian <a href="%{url}">Polisi Preifatrwydd</a>.'
       label: Arwyddwch fi
       field_help_texts:
         first_name: Rhowch eich enw cyntaf
@@ -473,7 +456,7 @@ cy:
       label: Mewngofnodi
       links:
         register_title: "Does gennych chi ddim cyfrif?"
-        register_html: "Peidiwch â phoeni, gallwch <a href=\"%{url}\">gofrestru yma</a> o hyd."
+        register_html: 'Peidiwch â phoeni, gallwch <a href="%{url}">gofrestru yma</a> o hyd.'
       field_help_texts:
         email: "Rhowch eich e-bost a ddefnyddiwyd wrth gofrestru"
         password: Rhowch eich cyfrinair a ddefnyddiwyd wrth gofrestru
@@ -501,7 +484,7 @@ cy:
         terms_one: "Mae'r llinellau ar agor o ddydd Llun i ddydd Gwener 8am - 8pm, dydd Sadwrn 8am - 1pm, wedi cau ar ddydd Sul a Gwyliau'r Banc. Mae galwadau'n cael eu recordio er dibenion hyfforddi ac ansawdd. Ni chymerir unrhyw gyfrifoldeb am golled neu ddifrod yn sgil feirysau neu newidiadau a wnaed i'r neges hon wedi iddi gael ei hanfon."
         terms_two: "Y Gwasanaeth Cynghori Ariannol ydym ni, cwmni cyfyngedig sydd wedi'i gofrestru yng Nghymru a Lloegr. Cyfeiriad ein swyddfa gofrestredig yw 120 Holborn, London, England EC1N 2TD a'n rhif cofrestredig yw 07172704."
       reset_passwords:
-        intro:  Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i'w ailosod.
+        intro: Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i'w ailosod.
         step_1: 1) Ewch i'r dudalen hon ar wefan y Gwasanaeth Cynghori Ariannol. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
         link_label: Newid fy nghyfrinair
         step_2: 2) Meddyliwch am gyfrinair y byddwch yn ei gofio (ond nid pobl eraill) a'i deipio ar y wefan pan ofynnir i chi wneud hynny.
@@ -510,7 +493,7 @@ cy:
         expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='%{url}'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
     settings:
       title: Golygu fy ngosodiadau
-      secondary_intro_html: "Yn ôl i dudalen <a href=\"%{url}\">fy nghyfrif</a>."
+      secondary_intro_html: 'Yn ôl i dudalen <a href="%{url}">fy nghyfrif</a>.'
       label: Diweddaru
       field_help_texts:
         email: Rhowch gyfeiriad e-bost dilys os hoffech newid yr un cyfredol
@@ -555,15 +538,6 @@ cy:
       intro: Eich nodau ariannol a gwybodaeth a gadwyd.
       change_settings: Newid fy ngosodiadau
       feedback: Gwella'r dudalen hon
-      goal:
-        heading: Traciwr nod
-        introduction: Cynllunio ar gyfer rhywbeth sylweddol neu'n cynilo ar gyfer diwrnod glawog yn unig? Mae'r rhan fwyaf o bobl yn ei chael hi'n haws cyrraedd nod drwy osod terfyn amser.
-        fieldset_legend: Fy nod
-        statement_field_label: Byddaf
-        statement_field_placeholder: Nodwch y nod yma
-        deadline_field_label: erbyn
-        deadline_field_placeholder: Nodwch y dyddiad yma
-        save_button_text: Gosodwch nod
     update:
       save_success_message:
 

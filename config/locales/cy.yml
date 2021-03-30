@@ -10,6 +10,7 @@ cy:
       fri: Dydd Gwener
       sat: Dydd Sadwrn
       sun: Dydd Sul
+    order: [ !ruby/symbol day, !ruby/symbol month, !ruby/symbol year ]
   time:
     formats:
       short: "%d %b %Y"
@@ -286,7 +287,7 @@ cy:
     mps_provided_2: yn cael ei ddarparu gan
     mps: Gwasanaeth Arian a Phensiynau
 
-  covid_banner: 
+  covid_banner:
     head: Arweiniad Ariannol Coronafeirws
     description: Arweiniad dibynadwy a dolenni i gefnogaeth
     body_html: <a href="%{href}" class="covid_banner__link">Ewch i'n canolfan gymorth</a>
@@ -303,8 +304,8 @@ cy:
     address: 120 Holborn, London EC1N 2TD
     mps_provided_1: Gwasanaeth
     mps_provided_2: Cynghori Ariannol yn
-    mps_provided_3: cael ei ddarparu gan 
-    mps: Gwasanaeth Arian a Phensiynau  
+    mps_provided_3: cael ei ddarparu gan
+    mps: Gwasanaeth Arian a Phensiynau
     accessibility: Hygyrchedd
     accessibility_link: /cy/corporate/hygyrchedd
     privacy_statement: Rhybudd preifatrwydd

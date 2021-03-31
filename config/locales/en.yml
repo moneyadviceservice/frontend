@@ -8,6 +8,7 @@ en:
       fri: Friday
       sat: Saturday
       sun: Sunday
+    order: [ !ruby/symbol day, !ruby/symbol month, !ruby/symbol year ]
   time:
     formats:
       short: "%d %b %Y"

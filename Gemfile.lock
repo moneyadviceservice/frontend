@@ -15,10 +15,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: be3b721f7585541f4f07870d5e83afea372eac16
+  revision: 20a5cbb9647cc420a14a4e5f115b15a5c743b2ef
+  ref: 20a5cbb
   branch: Third-Party-Cookie-Control_v5.42
   specs:
-    dough-ruby (5.42.0)
+    dough-ruby (5.42.1)
       activemodel
       activesupport
       rails (>= 3.2, < 5.1.0)

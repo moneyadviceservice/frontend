@@ -1,9 +1,10 @@
 var defaults = {
   theme: 'light', 
   optionalCookies: [],
+  necessaryCookies: [], 
   text: {}, 
   branding: {}
-};
+}
 
 var CookieController = function (opts) {
   this.config = Object.assign(defaults, opts);
@@ -83,9 +84,14 @@ var CookieController = function (opts) {
   }
 
   this.addOptionalCookies();
+  this.addNecessaryCookies(); 
   this.addText();
   this.addBranding();
-};
+}
+
+CookieController.prototype.addNecessaryCookies = function() {
+  this.config.necessaryCookies = ['action-plan-*', '_iz_uh_ps_', '_iz_sd_ss_'];
+}
 
 CookieController.prototype.addBranding = function() {
   var textStrings = this.textStrings[this.locale];

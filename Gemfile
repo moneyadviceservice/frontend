@@ -74,7 +74,7 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: '11691_DAL_Current-location-warning-message_v5.41', ref: 'a90d79d'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'Third-Party-Cookie-Control_v5.42', ref: '2937dd8'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools

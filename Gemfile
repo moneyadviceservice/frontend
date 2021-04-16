@@ -74,7 +74,7 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'Third-Party-Cookie-Control_v5.42', ref: '2937dd8'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'Third-Party-Cookie-Control_v5.42'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
@@ -105,7 +105,7 @@ gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calc
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/NTT_Rebased'
 gem 'payday_loans_intervention', '~> 1.9.0'
 # gem 'pensions_calculator', '~> 2.7.1'
-gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: 'feature/NTT_Rebased'
+gem 'pensions_calculator', git: 'git@github.com:moneyadviceservice/pensions_calculator.git', branch: '12009_Update_Next_Steps'
 gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 # gem 'savings_calculator', '~> 1.10.2'

@@ -100,7 +100,7 @@ gem 'decision_trees', '~> 2.3.0'
 gem 'feedback', '~> 0.5.1'
 # gem 'mortgage_calculator', '~> 3.17.0'
 # gem 'mortgage_calculator', path: '../mortgage_calculator'
-gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: '12011_Updates_Links'
+gem 'mortgage_calculator', git: 'git@github.com:moneyadviceservice/mortgage_calculator.git', branch: 'feature/NTT_Rebased'
 # gem 'pacs', '~> 3.13.0'
 gem 'pacs', git: 'git@github.com:moneyadviceservice/pacs.git', branch: 'feature/NTT_Rebased'
 gem 'payday_loans_intervention', '~> 1.9.0'
@@ -115,7 +115,8 @@ gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch:
 # gem 'universal_credit', '~> 5.0.0'
 gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin'
 # gem 'wpcc', '3.0.0'
-gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: '12081_Update_Links'
+# gem 'wpcc', path: '../wpcc'
 
 group :assets do
   gem 'autoprefixer-rails'

@@ -119,10 +119,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: ce1f02ed10e3960717597df1f608bc6ea0ff9033
-  branch: 12011_Updates_Links
+  revision: 981df0d63f200891eaadf95847f09fd19a64dc57
+  branch: feature/NTT_Rebased
   specs:
-    mortgage_calculator (3.17.0)
+    mortgage_calculator (3.18.1)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.36)
       mas-fonts
@@ -213,8 +213,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/wpcc.git
-  revision: 3c703bd3c497d34145b7cf19f070ab9af716adb7
-  branch: feature/ntt_moneyhelper_reskin
+  revision: ffb325651f7a9489174f1f386fee27b0bc69d1bb
+  branch: 12081_Update_Links
   specs:
     wpcc (3.0.0)
       dough-ruby (~> 5.38)

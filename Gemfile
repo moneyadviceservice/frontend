@@ -115,8 +115,7 @@ gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch:
 # gem 'universal_credit', '~> 5.0.0'
 gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin'
 # gem 'wpcc', '3.0.0'
-gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: '12081_Update_Links'
-# gem 'wpcc', path: '../wpcc'
+gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin'
 
 group :assets do
   gem 'autoprefixer-rails'

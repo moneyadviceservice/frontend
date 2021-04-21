@@ -108,8 +108,7 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 2937dd8d8e503e4bb3293d728a2ee6e8541c0818
-  ref: 2937dd8
+  revision: 3910a43034b2abf77b2bebc304c2dcfa141b22ea
   branch: Third-Party-Cookie-Control_v5.42
   specs:
     dough-ruby (5.42.1)
@@ -120,10 +119,10 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/mortgage_calculator.git
-  revision: 929fa5d4a32809738fb122f022d0eb7a0327c841
+  revision: d4cb47a1ca565652d9156075fb2581a26b08efc0
   branch: feature/NTT_Rebased
   specs:
-    mortgage_calculator (3.17.0)
+    mortgage_calculator (3.18.1)
       angularjs-rails (~> 1.2.18)
       dough-ruby (~> 5.36)
       mas-fonts

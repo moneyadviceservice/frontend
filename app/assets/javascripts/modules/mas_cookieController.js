@@ -90,7 +90,12 @@ var CookieController = function (opts) {
 }
 
 CookieController.prototype.addNecessaryCookies = function() {
-  this.config.necessaryCookies = ['action-plan-*', '_iz_uh_ps_', '_iz_sd_ss_'];
+  this.config.necessaryCookies = [
+    'action-plan-*', // Redundancy Pay Calculator
+    '__zjc*',        // Debt Advice Locator
+    '_iz_uh_ps_',    // Informizely
+    '_iz_sd_ss_'     // Informizely
+  ];
 }
 
 CookieController.prototype.addBranding = function() {

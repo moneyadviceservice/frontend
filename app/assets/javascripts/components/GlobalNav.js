@@ -42,7 +42,16 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
    * Set up component
    */
   GlobalNav.prototype._bindEvents = function() {
-    $(window).on('resize', utilities.debounce($.proxy(this._setUpMobileAnimation, this), 100));
+    var _this = this;
+
+    $(window).on('resize', 
+      utilities.debounce(
+        function() {
+          _this._setUpMobileAnimation(); 
+          _this._setMenuPosition(); 
+        }, 100
+      )
+    )
   };
 
   /**
@@ -315,6 +324,8 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
       this.$globalNavClump.removeClass('is-active');
       $('body').removeClass('no-scroll');
     }
+
+    this._setMenuPosition(); 
   };
 
   GlobalNav.prototype._toggleMobileSubNav = function(index) {
@@ -335,6 +346,18 @@ define(['jquery', 'DoughBaseComponent', 'mediaQueries', 'utilities', 'common'], 
         $('[data-dough-subnav]').addClass('is-hidden');
       }, 400);
   };
+
+  GlobalNav.prototype._setMenuPosition = function() {
+    if (document.querySelector('header')) {
+      var headerRect = document.querySelector('header').getBoundingClientRect();
+
+      if (mediaQueries.atSmallViewport()) {
+        this.$globalNav.css('top', headerRect.bottom);
+      } else {
+        this.$globalNav.css('top', 0);      
+      }
+    }
+  }
 
   GlobalNav.prototype._openDesktopSubNav = function(index) {
     if (!this.$globalNav.hasClass('is-active')) {

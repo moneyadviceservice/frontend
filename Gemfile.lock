@@ -89,8 +89,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt_free_day_calculator
-  revision: ee6b7e5d0e708dcdee00f991c52bb27ce5a3cc7c
-  branch: 12059_Update_Links
+  revision: 7e9b0754ffd7e3ca88988a903a2b0fccffbdcdf5
+  branch: 12063_update_link_loan
   specs:
     debt_free_day_calculator (3.1.0)
       autoprefixer-rails (< 9)
@@ -182,8 +182,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/timelines.git
-  revision: 591797ad5eb1275319d13daa7a98f61dc1cc3a5f
-  branch: feature/ntt_moneyhelper_reskin
+  revision: a02d716679fb86fbf2e926302d84498d47f9f764
+  branch: 12102_Updates_Text_Links
   specs:
     timelines (1.7.1)
       bowndler
@@ -550,7 +550,7 @@ GEM
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
-    icalendar (2.7.0)
+    icalendar (2.7.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     ice_nine (0.11.2)

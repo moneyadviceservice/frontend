@@ -91,7 +91,7 @@ gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git',
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin'
 gem 'cutback_calculator', '~> 0.13.0'
 # gem 'debt_advice_locator', '4.0.0'
-gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin'
+gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: '12259_Update_Links_Copy'
 gem 'debt_and_mental_health', '~> 1.6.0'
 # gem 'debt_free_day_calculator', '~> 3.1.0'
 gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator', branch: '12063_update_link_loan'

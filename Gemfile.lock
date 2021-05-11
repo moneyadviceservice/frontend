@@ -67,8 +67,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: 302158cc24587d9fa210d96aa4f5f1452b218e64
-  branch: 12259_Update_Links_Copy
+  revision: f8379b422806f711a2567f85d587bcfb42a88346
+  branch: feature/ntt_moneyhelper_reskin
   specs:
     debt_advice_locator (4.0.0)
       active_attr
@@ -134,8 +134,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pacs.git
-  revision: 3ff68bb165cef3a50f53097fe354e04ffb0646a1
-  branch: feature/NTT_Rebased
+  revision: 46758f2e1f3eca7eceb04f197b1a1458f01fd830
+  branch: 12273_AEM_Remove-copy
   specs:
     pacs (3.13.0)
       dough-ruby (~> 5.39)
@@ -452,7 +452,7 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    dry-configurable (0.12.0)
+    dry-configurable (0.12.1)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5.0)
     dry-container (0.7.2)
@@ -462,7 +462,7 @@ GEM
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.3.0)
     dry-inflector (0.2.0)
-    dry-logic (1.1.0)
+    dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
     dry-struct (1.3.0)

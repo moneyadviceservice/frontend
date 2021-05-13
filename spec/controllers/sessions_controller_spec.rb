@@ -1,22 +1,8 @@
 RSpec.describe SessionsController, type: :controller do
   describe '#create' do
-    context 'when user has been updated in CRM' do
+    context 'when user has been updated' do
       let!(:user) { FactoryBot.create(:user) }
       let(:customer) { Core::Registry::Repository[:customer].customers.first }
-      let(:new_first_name) { 'Philip' }
-
-      before :each do
-        Core::Interactors::Customer::Creator.new(user).call
-        customer[:first_name] = new_first_name
-      end
-
-      it 'adds job to persist this to the database' do
-        @request.env['devise.mapping'] = Devise.mappings[:user]
-
-        expect do
-          post :create, user: { email: user.email, password: user.password }, locale: 'en'
-        end.to change { Delayed::Job.where("handler like '%UpdateUser%'").count }.by(1)
-      end
 
       it 'removes custom session messages' do
         session['authentication_sign_in_page_title'] = 'hello'

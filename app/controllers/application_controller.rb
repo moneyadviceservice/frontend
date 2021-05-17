@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
 
   def syndicated_tool_request?
     !!request.headers['X-Syndicated-Tool']
+    true
   end
 
   helper_method :syndicated_tool_request?

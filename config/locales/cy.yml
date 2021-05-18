@@ -449,7 +449,7 @@ cy:
       sign_in_html: "Wedi Cofrestru eisoes? <a href=\"%{url}\">Mewngofnodi</a>."
     registration:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_up
+        canonical: https://www.moneyhelper.org.uk/cy/users/sign_up
       title: Cofrestrwch am gyfrif am ddim nawr
       intro_html: "Eisoes wedi cofrestru? <a href=\"%{url}\">Mewngofnodwch nawr</a>."
       subtitle: Yr hyn a gewch
@@ -468,7 +468,7 @@ cy:
         postcode: "Rhowch god post dilys o'r DU"
     sign_in_page:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/cy/users/sign_in
+        canonical: https://www.moneyhelper.org.uk/cy/users/sign_in
       title: Mewngofnodi
       label: Mewngofnodi
       links:
@@ -480,7 +480,7 @@ cy:
       forgot_password: "Wedi anghofio cyfrinair?"
     reset_password_page:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/cy/users/password/new
+        canonical: https://www.moneyhelper.org.uk/cy/users/password/new
       title: Ydych chi wedi anghofio'ch cyfrinair?
       intro: Dim problem!
       instructions: Teipiwch eich cyfeiriad e-bost isod ac fe anfonwn e-bost atoch yn cynnwys yr holl wybodaeth fydd ei hangen arnoch i ailosod eich cyfrinair.
@@ -493,19 +493,19 @@ cy:
       button_label: Newid fy nghyfrinair
     emails:
       layout:
-        purpose: Rydych yn cael yr e-bost hwn gan eich bod wedi cysylltu â'r Gwasanaeth Cynghori Ariannol.
+        purpose: Rydych yn cael yr e-bost hwn gan eich bod wedi cysylltu â'r HelpwrArian.
         greeting: Helo
         signature: Cofion,
-        sender: Y Gwasanaeth Cynghori Ariannol
-        contact_html: "Dyma e-bost a gynhyrchir yn awtomatig – peidiwch â'i ateb. I gysylltu â'r <a href='https://www.moneyadviceservice.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>Gwasanaeth Cynghori Ariannol</a>, ffoniwch ni ar <a href='tel:+443005005000' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0300&nbsp;500&nbsp;5000</a>"
-        terms_one: "Mae'r llinellau ar agor o ddydd Llun i ddydd Gwener 8am - 8pm, dydd Sadwrn 8am - 1pm, wedi cau ar ddydd Sul a Gwyliau'r Banc. Mae galwadau'n cael eu recordio er dibenion hyfforddi ac ansawdd. Ni chymerir unrhyw gyfrifoldeb am golled neu ddifrod yn sgil feirysau neu newidiadau a wnaed i'r neges hon wedi iddi gael ei hanfon."
-        terms_two: "Y Gwasanaeth Cynghori Ariannol ydym ni, cwmni cyfyngedig sydd wedi'i gofrestru yng Nghymru a Lloegr. Cyfeiriad ein swyddfa gofrestredig yw 120 Holborn, London, England EC1N 2TD a'n rhif cofrestredig yw 07172704."
+        sender: HelpwrArian
+        contact_html: "Dyma e-bost a gynhyrchir yn awtomatig – peidiwch â'i ateb. I gysylltu â'r <a href='https://www.moneyhelper.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>HelpwrArian</a>, ffoniwch ni ar <a href='tel:+4408001387777' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0800&nbsp;138&nbsp;7777</a>"
+        terms_one: "Mae'r llinellau ar agor o ddydd Llun i ddydd Gwener 8am - 6pm. Ar gau ar ddydd Sadwrn, dydd Sul a gwyliau banc. Mae galwadau'n cael eu recordio er dibenion hyfforddi ac ansawdd. Ni chymerir unrhyw gyfrifoldeb am golled neu ddifrod yn sgil feirysau neu newidiadau a wnaed i'r neges hon wedi iddi gael ei hanfon."
+        terms_two: "Mae HelpwrArian yn eiddo i'r Gwasanaeth Arian a Phensiynau, corff hyd braich, a noddir gan yr Adran Gwaith a Phensiynau. Ein swyddfa gofrestredig yw Holborn Centre, 120 Holborn, London, England EC1N 2TD"
       reset_passwords:
-        intro:  Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i'w ailosod.
-        step_1: 1) Ewch i'r dudalen hon ar wefan y Gwasanaeth Cynghori Ariannol. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
+        intro: Dywedoch wrthym eich bod wedi anghofio eich cyfrinair felly rydym wedi anfon yr e-bost awtomatig hwn atoch i ddangos i chi sut i'w ailosod.
+        step_1: 1) Ewch i'r dudalen hon ar wefan HelpwrArian. Peidiwch â disgwyl yn rhy hir cyn ailosod eich cyfrinair oherwydd bydd y ddolen hon yn dirwyn i ben am resymau diogelwch.
         link_label: Newid fy nghyfrinair
         step_2: 2) Meddyliwch am gyfrinair y byddwch yn ei gofio (ond nid pobl eraill) a'i deipio ar y wefan pan ofynnir i chi wneud hynny.
-        step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan y Gwasanaeth Cynghori Ariannol.
+        step_3: 3) Cewch eich arwyddo i mewn yn awtomatig fel y gallwch barhau i dderbyn cyngor gan HelpwrArian.
         expired_token_tip: Beth i'w wneud os bydd eich dolen ailosod cyfrinair (uchod) wedi dirwyn i ben
         expired_token_tip_steps_html: "Ewch yn ôl i'r dudalen <a href='%{url}'>Anghofio Cyfrinair</a> a theipiwch eich cyfeiriad e-bost unwaith eto fel y gallwn anfon un arall atoch."
     settings:
@@ -534,7 +534,7 @@ cy:
   technical_feedback:
     new:
       title: Adrodd ar anhawster technegol
-      canonical: https://www.moneyadviceservice.org.uk/cy/feedback/new
+      canonical: https://www.moneyhelper.org.uk/cy/feedback/new
       instructions_html: |
         Defnyddiwch y ffurflen hon i ddweud wrthym a gafwyd anhawster technegol gyda'r dudalen hon ar y we wrth i chi ei darllen. Ar gyfer pob ymholiad arall gweler ein <a href="/cy/corporate/cysylltu-a-ni">tudalen gyswllt</a>.
       mandatory_warning: Mae pob maes yn angenrheidiol
@@ -575,12 +575,12 @@ cy:
           intro_html: |
             <p>Defnyddiwch y ffurflen hon i awgrymu newidiadau i’ch tudalen cyfrifon yn unig. Ni allwn ymateb i syniadau unigol.</p>
 
-            <p>Angen cymorth neu gyngor? <a href='https://www.moneyadviceservice.org.uk/cy/corporate/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>.</p>
+            <p>Angen cymorth neu gyngor? <a href='https://www.moneyhelper.org.uk/cy/corporate/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>.</p>
       create:
         account:
           heading: Diolch am adael i ni wybod
           outro_html: "Bydd y tîm yn edrych ar eich adborth. Os bydd angen i chi siarad efo ni defnyddiwch un o'r dulliau canlynol:"
-          contact_html: "Angen cymorth neu gyngor? <a href='https://www.moneyadviceservice.org.uk/cy/corporate/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>."
+          contact_html: "Angen cymorth neu gyngor? <a href='https://www.moneyhelper.org.uk/cy/corporate/cysylltu-a-ni'>Defnyddiwch ein tudalen cysylltwch a ni</a>."
           back: Ewch yn ol i'ch tudalen cyfrif
 
   corporate:

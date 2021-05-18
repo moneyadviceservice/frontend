@@ -450,7 +450,7 @@ en:
       sign_in_html: "Already registered? <a href=\"%{url}\">Sign in</a>."
     registration:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/en/users/sign_up
+        canonical: https://www.moneyhelper.org.uk/en/users/sign_up
       title: Register for a free account now
       intro_html: "Already registered? <a href=\"%{url}\">Sign in now</a>."
       subtitle: What you'll get
@@ -470,7 +470,7 @@ en:
         contact_number: Please enter a valid UK phone number
     sign_in_page:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/en/users/sign_in
+        canonical: https://www.moneyhelper.org.uk/en/users/sign_in
       title: Sign in
       label: Sign in
       links:
@@ -482,7 +482,7 @@ en:
       forgot_password: "Forgot your password?"
     reset_password_page:
       meta:
-        canonical: https://www.moneyadviceservice.org.uk/en/users/password/new
+        canonical: https://www.moneyhelper.org.uk/en/users/password/new
       title: Forgotten your password?
       intro: No problem!
       instructions: Enter your email address below and we'll send you an email containing all the information you need to reset your password.
@@ -495,19 +495,19 @@ en:
       button_label: Change my password
     emails:
       layout:
-        purpose: You're receiving this email as you contacted the Money Advice Service.
+        purpose: You're receiving this email as you contacted MoneyHelper.
         greeting: Hello
         signature: Regards,
-        sender: The Money Advice Service
-        contact_html: "This is an automatically generated email – please don't reply to it. To contact the <a href='https://www.moneyadviceservice.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>Money Advice Service</a>, please call us on <a href='tel:+443005005000' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0300&nbsp;500&nbsp;5000</a>"
-        terms_one: "Lines are open Monday to Friday 8am - 8pm, Saturday 8am - 1pm, Sunday & Bank Holidays Closed. Calls are recorded for training and quality purposes. No responsibility is accepted for loss or damage arising from viruses or changes made to this message after it was sent"
-        terms_two: "We are the Money Advice Service, a limited company registered in England and Wales. Our registered office is at 120 Holborn, London, England EC1N 2TD and our registered number is 07172704."
+        sender: MoneyHelper
+        contact_html: "This is an automatically generated email – please don't reply to it. To contact <a href='https://www.moneyhelper.org.uk' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>MoneyHelper</a>, please call us on <a href='tel:+4408001387777' style='line-height: 22px ;color:#D64E04; font-family: Arial, sans-serif; font-weight: 500; text-decoration: none;'>0800&nbsp;138&nbsp;7777</a>"
+        terms_one: "Lines are open Monday to Friday 8am - 6pm, Saturday, Sunday & Bank Holidays Closed. Calls are recorded for training and quality purposes. No responsibility is accepted for loss or damage arising from viruses or changes made to this message after it was sent"
+        terms_two: "We are MoneyHelper, a limited company registered in England and Wales. Our registered office is at 120 Holborn, London, England EC1N 2TD."
       reset_passwords:
         intro:  You've told us that you've forgotten your password so we've sent you this automatic email to show you how to reset it.
-        step_1: 1) Visit this page on the Money Advice Service website. Don't wait too long to reset your password as this link will expire for security reasons.
+        step_1: 1) Visit this page on MoneyHelper website. Don't wait too long to reset your password as this link will expire for security reasons.
         link_label: Change my password
         step_2: 2) Think of a password that you will remember (but others won't) and enter that in on the website when asked.
-        step_3: 3) You will be signed in automatically so you can carry on getting advice from The Money Advice Service.
+        step_3: 3) You will be signed in automatically so you can carry on getting advice from MoneyHelper.
         expired_token_tip: "What to do if your reset password link (above) has expired:"
         expired_token_tip_steps_html: 'Go back to the <a href="%{url}">Forgotten Password page</a> and input your email address again so that we can send you another one.'
     settings:
@@ -535,7 +535,7 @@ en:
   technical_feedback:
     new:
       title: Report a technical issue
-      canonical: https://www.moneyadviceservice.org.uk/en/feedback/new
+      canonical: https://www.moneyhelper.org.uk/en/feedback/new
       instructions_html: |
         Use this form to tell us if there was a technical issue with the web page you were viewing. For all other enquires see our <a href="/en/corporate/contact-us">contact us</a> page.
       mandatory_warning: All fields are required
@@ -576,12 +576,12 @@ en:
           intro_html: |
             <p>Only use this form to suggest changes to your account page. We can’t reply to individual ideas.</p>
 
-            <p>Need help or advice? Use our <a href="https://www.moneyadviceservice.org.uk/en/corporate/contact-us">contact us page</a>.</p>
+            <p>Need help or advice? Use our <a href="https://www.moneyhelper.org.uk/en/corporate/contact-us">contact us page</a>.</p>
       create:
         account:
           heading: Thanks for letting us know
           outro_html: "Your feedback will be viewed by the team. If you need to talk to us please use one of the methods below:"
-          contact_html: "Need help or advice? Use our <a href='https://www.moneyadviceservice.org.uk/en/corporate/contact-us'>contact us page</a>."
+          contact_html: "Need help or advice? Use our <a href='https://www.moneyhelper.org.uk/en/corporate/contact-us'>contact us page</a>."
           back: Go back to your account page
 
   corporate:

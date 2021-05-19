@@ -78,7 +78,7 @@ gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
 # gem 'action_plans', '~> 5.6.0'
-gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: '12528_YE-updates'
+gem 'action_plans', git: 'git@github.com:moneyadviceservice/action_plans.git', branch: '12528_YE-updates', ref: '7f588f1'
 gem 'advice_plans', '~> 4.1.1'
 gem 'agreements', '~> 2.5.0'
 gem 'budget_planner', '~> 5.7.1'

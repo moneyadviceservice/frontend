@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dummy content page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			#longcontentContainer {
+				position: fixed; 
+				top: 0%;
+				left: 0%;
+				height: 100%; 
+				width: 100%;
+				padding: 5%; 
+				background: bisque;
+				overflow-y: scroll;
+				box-sizing: border-box;
+			}
+
+			#mainContentContainer {
+				background: azure;
+			}
+
+			#longcontentContainer > p, 
+			#mainContentContainer > p {
+				height: 500px; 
+				margin: 0;
+			}
+
+			#longcontentContainer > p:last-child, 
+			#mainContentContainer > p:last-child {
+				height: auto; 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainContentContainer">
+			<h1>Dummy content page</h1>
+			<h2>Tests Money Navigator when embedded</h2>
+			<p>Here's some content in the main area</p>
+			<p>And some more</p>
+
+			<div id="longcontentContainer">
+				<p>This is a container for some really long content</p>
+				<p>Here's a bit more content</p>
+				<p>And here's some more</p>
+				<p>But this is all there is</p>
+			</div>
+
+			<p>And even more</p>
+			<p>But that's your lot</p>
+		</div>
+	</body>
+</html>

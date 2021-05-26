@@ -153,18 +153,29 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/pensions_calculator.git
-  revision: 1bc121c88906845e70abd839680f197ee497bd4b
+  revision: 6eda9b3c8a153df7419448fd76fe1056118c929d
   branch: feature/NTT_Rebased
   specs:
-    pensions_calculator (2.7.1)
+    pensions_calculator (2.7.2)
       autoprefixer-rails
       dough-ruby (~> 5.36)
       meta-tags
-      pensions_calculator-calculations (~> 3.0.1)
+      pensions_calculator-calculations (~> 3.0.2)
       rails (>= 4, < 5)
       responders
       sass-rails
       uglifier
+
+GIT
+  remote: git@github.com:moneyadviceservice/rio.git
+  revision: dd8f53982fef6c3a3c8be28009a998ffed055b11
+  branch: feature/ntt_moneyhelper_reskin
+  specs:
+    rio (2.2.1)
+      bowndler
+      dough-ruby (~> 5.36)
+      pensions_calculator-calculations (~> 3.0.2)
+      rails (>= 4, < 5)
 
 GIT
   remote: git@github.com:moneyadviceservice/savings_calculator.git
@@ -651,7 +662,7 @@ GEM
       modernizr-rails
       rails (>= 4, < 5)
       sass-rails
-    pensions_calculator-calculations (3.0.1)
+    pensions_calculator-calculations (3.0.2)
       activesupport
     poltergeist (1.17.0)
       capybara (~> 2.1)
@@ -734,11 +745,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rio (2.2.1)
-      bowndler
-      dough-ruby (~> 5.36)
-      pensions_calculator-calculations (~> 3.0.1)
-      rails (>= 4, < 5)
     roadie (2.4.3)
       actionmailer (> 3.0.0, < 5.0.0)
       css_parser (~> 1.3.4)
@@ -973,7 +979,7 @@ DEPENDENCIES
   recaptcha
   redcarpet
   rest-client (~> 2.0)
-  rio (~> 2.2.1)!
+  rio!
   rouge
   rspec-html-matchers
   rspec-rails

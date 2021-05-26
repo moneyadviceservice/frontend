@@ -71,9 +71,8 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: 1e686be4157c4ee2e9bf375573a05c78ee3c2947
-  ref: 1e686be
-  branch: feature/ntt_moneyhelper_reskin
+  revision: c2ec03e3b36d3b07f46e419c91e58c3a0c3a8e59
+  branch: 12218_Jump-links
   specs:
     debt_advice_locator (4.0.1)
       active_attr
@@ -252,26 +251,6 @@ GIT
   branch: lts-1-6-stable
   specs:
     rack (1.6.13)
-
-PATH
-  remote: ../debt-advice-locator
-  specs:
-    debt_advice_locator (4.0.1)
-      active_attr
-      active_model_serializers (< 0.10.0)
-      addressable
-      bcrypt
-      coffee-rails
-      dough-ruby (~> 5.36)
-      draper (< 3)
-      geokit-rails
-      kaminari
-      mas-templating (~> 1.0.0)
-      rails (>= 4, < 5)
-      redcarpet
-      sass-rails (= 4.0.5)
-      uk_postcode
-      validate_url (= 1.0.0)
 
 GEM
   remote: https://rubygems.org/

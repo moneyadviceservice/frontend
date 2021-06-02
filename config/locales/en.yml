@@ -292,9 +292,9 @@ en:
     accessibility: Accessibility
     accessibility_link: /en/corporate/accessibility
     privacy_statement: Privacy notice
-    privacy_statement_link: https://www.moneyhelper.org.uk/en/privacy
+    privacy_statement_link: https://www.moneyhelper.org.uk/en/about-us/privacy-and-legal/privacy-notice
     terms_and_conditions: Terms & conditions
-    terms_and_conditions_link: https://www.moneyhelper.org.uk/en/terms-and-conditions
+    terms_and_conditions_link: https://www.moneyhelper.org.uk/en/about-us/privacy-and-legal/terms-and-conditions
     fincap: Financial Capability
     fincap_link: http://www.fincap.org.uk/
     jobs: Jobs
@@ -442,8 +442,8 @@ en:
         - "Help with your money goals"
         - "Easy access to lots of tools and calculators"
       description_html: default description
-      terms_html: "By clicking the button you're agreeing to our <a href=\"%{url}\">Terms and Conditions</a>."
-      privacy_html: "MoneyHelper <a href=\"%{url}\">Privacy Policy</a>."
+      terms_html: "By clicking the button you're agreeing to our <a target=\"_blank\" href=\"%{url}\">Terms and Conditions</a>."
+      privacy_html: "MoneyHelper <a target=\"_blank\" href=\"%{url}\">Privacy Policy</a>."
       label: Sign me up
       field_help_texts:
         first_name: "Please enter your first name"

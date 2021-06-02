@@ -5,20 +5,6 @@ GIT
     aes (0.5.0)
 
 GIT
-  remote: git@github.com:moneyadviceservice/action_plans.git
-  revision: 74afc98652cc64d1088fba462c20a099d05d2d9c
-  ref: 74afc98
-  branch: feature/ntt_moneyhelper_reskin
-  specs:
-    action_plans (5.7.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
-
-GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -241,6 +227,17 @@ GIT
   branch: lts-1-6-stable
   specs:
     rack (1.6.13)
+
+PATH
+  remote: ../action_plans
+  specs:
+    action_plans (5.7.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
 
 GEM
   remote: https://rubygems.org/

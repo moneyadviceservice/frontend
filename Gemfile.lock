@@ -5,6 +5,19 @@ GIT
     aes (0.5.0)
 
 GIT
+  remote: git@github.com:moneyadviceservice/action_plans.git
+  revision: b4c8b68c988736fe49496c507f98ca0f018ca1a9
+  branch: 12085_Jump-links
+  specs:
+    action_plans (5.7.0)
+      autoprefixer-rails
+      dough-ruby (~> 5.0)
+      draper
+      hashie
+      rails (>= 4, < 5)
+      sass-rails
+
+GIT
   remote: git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby
   revision: 26f534a42d516dcdd13fe7fc82149b6d4bc9bebb
   specs:
@@ -227,17 +240,6 @@ GIT
   branch: lts-1-6-stable
   specs:
     rack (1.6.13)
-
-PATH
-  remote: ../action_plans
-  specs:
-    action_plans (5.7.0)
-      autoprefixer-rails
-      dough-ruby (~> 5.0)
-      draper
-      hashie
-      rails (>= 4, < 5)
-      sass-rails
 
 GEM
   remote: https://rubygems.org/

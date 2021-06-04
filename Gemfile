@@ -98,7 +98,8 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '~> 2.2.1', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.10.2'
 gem 'timelines', '~> 1.7.1'
-gem 'universal_credit', '~> 4.1.1'
+# gem 'universal_credit', '~> 4.1.1'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '12225_Update-link_MAS'
 gem 'wpcc', '2.8.3'
 
 group :assets do

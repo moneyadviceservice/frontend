@@ -116,7 +116,7 @@ gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calcul
 # gem 'timelines', path: '../timelines'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin'
 # gem 'universal_credit', '~> 5.0.0'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '1863b2f'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '12225_Update-link'
 # gem 'wpcc', '3.0.0'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin'
 

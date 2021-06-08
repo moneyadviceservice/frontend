@@ -74,7 +74,7 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.43'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.43', ref: '7379fe1'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools

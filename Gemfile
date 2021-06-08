@@ -74,7 +74,7 @@ gem 'websocket-extensions', '>= 0.1.5'
 # Dependencies
 gem 'adal', git: 'git@github.com:moneyadviceservice/azure-activedirectory-library-for-ruby'
 gem 'cream', '2.1.8'
-gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'Third-Party-Cookie-Control_v5.42'
+gem 'dough-ruby', git: 'git@github.com:moneyadviceservice/dough.git', branch: 'PostMessages_v5.43', ref: '170e999'
 gem 'mas-cms-client', '1.20.1'
 gem 'site_search', '0.3.0'
 # Tools
@@ -85,7 +85,7 @@ gem 'budget_planner', git: 'git@github.com:moneyadviceservice/budget_planner.git
 gem 'car_cost_tool', git: 'git@github.com:moneyadviceservice/car_cost_tool.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '7e72b82'
 gem 'cost_calculator_builder', git: 'git@github.com:moneyadviceservice/cost_calculator_builder.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'de6d7e3'
 gem 'cutback_calculator', '~> 0.13.0'
-gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '1e686be'
+gem 'debt_advice_locator', git: 'git@github.com:moneyadviceservice/debt-advice-locator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6d20957'
 gem 'debt_and_mental_health', '~> 1.6.0'
 gem 'debt_free_day_calculator', git: 'git@github.com:moneyadviceservice/debt_free_day_calculator', branch: 'feature/ntt_moneyhelper_reskin', ref: 'd165d1c'
 gem 'debt_test', '~> 1.9.0'

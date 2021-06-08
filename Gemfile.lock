@@ -71,11 +71,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/debt-advice-locator.git
-  revision: 1e686be4157c4ee2e9bf375573a05c78ee3c2947
-  ref: 1e686be
+  revision: 6d209574f23d19f3dc3f0b7dcc02ee725557b4e6
+  ref: 6d20957
   branch: feature/ntt_moneyhelper_reskin
   specs:
-    debt_advice_locator (4.0.1)
+    debt_advice_locator (4.1.0)
       active_attr
       active_model_serializers (< 0.10.0)
       addressable
@@ -114,10 +114,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/dough.git
-  revision: 3910a43034b2abf77b2bebc304c2dcfa141b22ea
-  branch: Third-Party-Cookie-Control_v5.42
+  revision: 170e9998c4508c0aaf6af368a89599096d2fc7c8
+  ref: 170e999
+  branch: PostMessages_v5.43
   specs:
-    dough-ruby (5.42.1)
+    dough-ruby (5.43.0)
       activemodel
       activesupport
       rails (>= 3.2, < 5.1.0)

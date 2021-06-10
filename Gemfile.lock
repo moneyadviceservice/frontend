@@ -219,10 +219,11 @@ GIT
 
 GIT
   remote: git@github.com:moneyadviceservice/universal_credit.git
-  revision: 0c810c987dbd2abdb5cd34f83caad9e1ba512c34
-  branch: 12225_Update-link
+  revision: 7a248deb7c3a3508c1c61d10f31c022fcec5aed7
+  ref: 7a248de
+  branch: feature/ntt_moneyhelper_reskin
   specs:
-    universal_credit (5.0.0)
+    universal_credit (5.1.0)
       autoprefixer-rails
       devise
       dough-ruby (~> 5.36)

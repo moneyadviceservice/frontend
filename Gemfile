@@ -99,8 +99,7 @@ gem 'quiz', '~> 1.4.0', source: 'http://gems.dev.mas.local'
 gem 'rio', git: 'git@github.com:moneyadviceservice/rio.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'cbc00d8'
 gem 'savings_calculator', git: 'git@github.com:moneyadviceservice/savings_calculator.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'b6d897c'
 gem 'timelines', git: 'git@github.com:moneyadviceservice/timelines.git', branch: 'feature/ntt_moneyhelper_reskin', ref: 'b01fa33'
-# gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '1863b2f'
-gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: '12225_Update-link'
+gem 'universal_credit', git: 'git@github.com:moneyadviceservice/universal_credit.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '7a248de'
 gem 'wpcc', git: 'git@github.com:moneyadviceservice/wpcc.git', branch: 'feature/ntt_moneyhelper_reskin', ref: '6e709b6'
 
 group :assets do

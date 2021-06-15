@@ -71,7 +71,7 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   }); 
 
-  describe('setUpEvents method', function() {
+  xdescribe('setUpEvents method', function() {
     it('Sets the correct event listeners and arguments when called', function() {
       this.obj._updateDOM(); 
 
@@ -129,6 +129,12 @@ describe.only('MoneyNavigatorResults', function() {
       resizeContentSpy.restore(); 
       sectionResizeStub.restore(); 
       printStub.restore(); 
+    }); 
+  });
+
+  describe('resizeContent method', function() {
+    it('Sets new value for height of body', function() {
+
     }); 
   }); 
 

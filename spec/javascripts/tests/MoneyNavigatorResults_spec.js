@@ -1,4 +1,4 @@
-describe('MoneyNavigatorResults', function() {
+describe.only('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -31,7 +31,7 @@ describe('MoneyNavigatorResults', function() {
     fixture.cleanup();
   });
 
-  describe('Initialisation', function() {
+  xdescribe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpEventsStub = sinon.stub(this.obj, '_setUpEvents'); 
@@ -46,7 +46,7 @@ describe('MoneyNavigatorResults', function() {
     });
   });
 
-  describe('updateDOM method', function() {
+  xdescribe('updateDOM method', function() {
     it('Makes the correct changes to the DOM when called', function() {
       var _this = this;
       var hiddenClass = 'heading__content' + this.hiddenSuffix; 
@@ -78,6 +78,7 @@ describe('MoneyNavigatorResults', function() {
       var toggleSectionSpy = sinon.stub(this.obj, '_toggleSection'); 
       var showHeadingSpy = sinon.spy(this.obj, '_showHeading'); 
       var hideHeadingSpy = sinon.spy(this.obj, '_hideHeading'); 
+      var resizeContentSpy = sinon.spy(this.obj, '_resizeContent'); 
       var sectionResizeStub = sinon.stub(this.obj, '_sectionResize'); 
       var printStub = sinon.stub(window, 'print'); 
       var section_0_btn = $(this.$sectionTitles[0]).find('button'); 
@@ -102,6 +103,7 @@ describe('MoneyNavigatorResults', function() {
 
       $(heading_0_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith(heading_0_btn[0])).to.be.true; 
 
       $(heading_2_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
@@ -124,12 +126,13 @@ describe('MoneyNavigatorResults', function() {
       toggleSectionSpy.restore(); 
       showHeadingSpy.restore(); 
       hideHeadingSpy.restore(); 
+      resizeContentSpy.restore(); 
       sectionResizeStub.restore(); 
       printStub.restore(); 
     }); 
   }); 
 
-  describe('sectionResize method', function() {
+  xdescribe('sectionResize method', function() {
     it ('Resizes a given section__content element', function() {
       var section = this.$sections[0]; 
       var $sectionContent = $(section).find('.section__content'); 
@@ -141,7 +144,7 @@ describe('MoneyNavigatorResults', function() {
     })
   }); 
 
-  describe('toggleSection method', function() {
+  xdescribe('toggleSection method', function() {
     it('Sets the correct class on the section and and value for height on the content when the method is called', function() {
       var section_0 = this.$sections[0]; 
       var section_0_btn = $(section_0).find('[data-section-title]').find('button'); 
@@ -178,7 +181,7 @@ describe('MoneyNavigatorResults', function() {
     }); 
   })
 
-  describe('showHeading method', function() {
+  xdescribe('showHeading method', function() {
     it('Sets classes correctly when the method is called', function() {
       var heading_0 = this.$headings[0]; 
       var heading_0_btn = $(heading_0).find('button'); 
@@ -231,7 +234,7 @@ describe('MoneyNavigatorResults', function() {
     }); 
   }); 
 
-  describe('hideHeading method', function() {
+  xdescribe('hideHeading method', function() {
     it('Sets classes correctly when called', function() {
       this.obj._updateDOM(); 
 

@@ -71,8 +71,9 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     }); 
 
     this.$headingTitles.parents('button').on('click', function(e) {
-      _this._showHeading(e.target); 
-    }); 
+      _this._showHeading(e.target);
+      _this._resizeContent(e.target);
+    });
 
     this.$headingContent.find('[data-overlay-hide]').on('click', function(e) {
       e.preventDefault(); 
@@ -166,7 +167,11 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     if (!this.$overlay.hasClass(this.hiddenClass)) {
       this.$overlay.addClass(this.hiddenClass); 
     }
-  }
+  }; 
+
+  MoneyNavigatorResults.prototype._resizeContent = function() {
+    console.log('_resizeContent!'); 
+  }; 
 
   return MoneyNavigatorResults; 
 }); 

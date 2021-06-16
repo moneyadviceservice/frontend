@@ -169,9 +169,17 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     }
   }; 
 
-  MoneyNavigatorResults.prototype._resizeContent = function() {
+  MoneyNavigatorResults.prototype._resizeContent = function(target) {
     console.log('_resizeContent!'); 
+    console.log('target: ', target);
+
+    var size = this._getSize(target); 
   }; 
+
+  MoneyNavigatorResults.prototype._getSize = function(target) {
+    console.log('_getSize!'); 
+    console.log('target: ', target); 
+  }
 
   return MoneyNavigatorResults; 
 }); 

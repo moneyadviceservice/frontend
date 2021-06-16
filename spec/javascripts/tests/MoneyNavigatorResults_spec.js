@@ -139,7 +139,7 @@ describe('MoneyNavigatorResults', function() {
     }); 
   });
 
-  describe('resizeContent method', function() {
+  xdescribe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
@@ -153,7 +153,7 @@ describe('MoneyNavigatorResults', function() {
     });
   });
 
-  describe('getSize method', function() {
+  xdescribe('getSize method', function() {
     it('Returns the correct value when given a target element', function() {
       var value = this.obj._getSize(this.S1_H2_btn[0].parentNode.querySelector('[data-heading-content]'));
       expect(value.height).to.equal(2165);

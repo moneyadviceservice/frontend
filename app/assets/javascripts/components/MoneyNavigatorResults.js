@@ -169,9 +169,16 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     }
   }; 
 
-  MoneyNavigatorResults.prototype._resizeContent = function() {
-    console.log('_resizeContent!'); 
-  }; 
+  MoneyNavigatorResults.prototype._resizeContent = function(target) {
+    var size = this._getSize($(target).parents('[data-heading]')[0].querySelector('[data-heading-content]'));
+    document.body.style.height = size.height + 'px'; 
+  };
+
+  MoneyNavigatorResults.prototype._getSize = function(el) {
+    return {
+      height: el.getBoundingClientRect().height
+    };
+  }
 
   return MoneyNavigatorResults; 
 }); 

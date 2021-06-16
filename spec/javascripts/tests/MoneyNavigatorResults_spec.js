@@ -1,4 +1,4 @@
-describe.only('MoneyNavigatorResults', function() {
+describe('MoneyNavigatorResults', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -23,6 +23,13 @@ describe.only('MoneyNavigatorResults', function() {
           self.collapsedClass = self.obj.collapsedClass; 
           self.doneSuffix = self.obj.doneSuffix; 
 
+          // TODO: Use these variables in setUpEvents method in favour of $headingTitles above
+          self.S1_H1_btn = $('#S1_H1').find('button');
+          self.S1_H2_btn = $('#S1_H2').find('button');
+          // self.S3_H1_btn = $('#S3_H1').find('button');
+          // self.S4_H2_btn = $('#S4_H2').find('button');
+          self.S4_H3_btn = $('#S4_H3').find('button');
+
           done();
         }, done);
   });
@@ -31,7 +38,7 @@ describe.only('MoneyNavigatorResults', function() {
     fixture.cleanup();
   });
 
-  xdescribe('Initialisation', function() {
+  describe('Initialisation', function() {
     it('Calls the correct methods when the component is initialised', function() {
       var updateDOMStub = sinon.stub(this.obj, '_updateDOM'); 
       var setUpEventsStub = sinon.stub(this.obj, '_setUpEvents'); 
@@ -46,7 +53,7 @@ describe.only('MoneyNavigatorResults', function() {
     });
   });
 
-  xdescribe('updateDOM method', function() {
+  describe('updateDOM method', function() {
     it('Makes the correct changes to the DOM when called', function() {
       var _this = this;
       var hiddenClass = 'heading__content' + this.hiddenSuffix; 
@@ -71,7 +78,7 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   }); 
 
-  xdescribe('setUpEvents method', function() {
+  describe('setUpEvents method', function() {
     it('Sets the correct event listeners and arguments when called', function() {
       this.obj._updateDOM(); 
 
@@ -134,11 +141,26 @@ describe.only('MoneyNavigatorResults', function() {
 
   describe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
+      var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
+      this.obj._resizeContent(this.S1_H1_btn);
+      expect(getSizeSpy.calledWith(this.S1_H1_btn)).to.be.true; 
+
+      this.obj._resizeContent(this.S4_H3_btn);
+      expect(getSizeSpy.calledWith(this.S4_H3_btn)).to.be.true;
+
+      getSizeSpy.restore(); 
+    });
+  });
+
+  describe('getSize method', function() {
+    it('Returns the correct value when given a target element', function() {
+      var value = this.obj._getSize(this.S1_H2_btn[0].parentNode.querySelector('[data-heading-content]'));
+      expect(value.height).to.equal(2165);
     }); 
   }); 
 
-  xdescribe('sectionResize method', function() {
+  describe('sectionResize method', function() {
     it ('Resizes a given section__content element', function() {
       var section = this.$sections[0]; 
       var $sectionContent = $(section).find('.section__content'); 
@@ -150,7 +172,7 @@ describe.only('MoneyNavigatorResults', function() {
     })
   }); 
 
-  xdescribe('toggleSection method', function() {
+  describe('toggleSection method', function() {
     it('Sets the correct class on the section and and value for height on the content when the method is called', function() {
       var section_0 = this.$sections[0]; 
       var section_0_btn = $(section_0).find('[data-section-title]').find('button'); 
@@ -187,7 +209,7 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   })
 
-  xdescribe('showHeading method', function() {
+  describe('showHeading method', function() {
     it('Sets classes correctly when the method is called', function() {
       var heading_0 = this.$headings[0]; 
       var heading_0_btn = $(heading_0).find('button'); 
@@ -240,7 +262,7 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   }); 
 
-  xdescribe('hideHeading method', function() {
+  describe('hideHeading method', function() {
     it('Sets classes correctly when called', function() {
       this.obj._updateDOM(); 
 

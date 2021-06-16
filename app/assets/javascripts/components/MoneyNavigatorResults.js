@@ -173,12 +173,13 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
     console.log('_resizeContent!'); 
     console.log('target: ', target);
 
-    var size = this._getSize(target); 
+    var size = this._getSize(target);
   }; 
 
-  MoneyNavigatorResults.prototype._getSize = function(target) {
-    console.log('_getSize!'); 
-    console.log('target: ', target); 
+  MoneyNavigatorResults.prototype._getSize = function(el) {
+    return {
+      height: el.getBoundingClientRect().height
+    };
   }
 
   return MoneyNavigatorResults; 

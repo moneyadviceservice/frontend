@@ -23,6 +23,13 @@ describe.only('MoneyNavigatorResults', function() {
           self.collapsedClass = self.obj.collapsedClass; 
           self.doneSuffix = self.obj.doneSuffix; 
 
+          // TODO: Use these variables in setUpEvents method in favour of $headingTitles above
+          self.S1_H1_btn = $('#S1_H1').find('button');
+          self.S1_H2_btn = $('#S1_H2').find('button');
+          // self.S3_H1_btn = $('#S3_H1').find('button');
+          // self.S4_H2_btn = $('#S4_H2').find('button');
+          self.S4_H3_btn = $('#S4_H3').find('button');
+
           done();
         }, done);
   });
@@ -132,27 +139,28 @@ describe.only('MoneyNavigatorResults', function() {
     }); 
   });
 
-  describe('resizeContent method', function() {
+  xdescribe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
-      var S1_H1_btn = $('#S1_H1').find('button');
-      // var S1_H2_btn = $('#S1_H2').find('button');
-      // var S3_H1_btn = $('#S3_H1').find('button');
-      // var S4_H2_btn = $('#S4_H2').find('button');
-      var S4_H3_btn = $('#S4_H3').find('button');
-
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
-      this.obj._resizeContent(S1_H1_btn);
-      expect(getSizeSpy.calledWith(S1_H1_btn)).to.be.true; 
+      this.obj._resizeContent(this.S1_H1_btn);
+      expect(getSizeSpy.calledWith(this.S1_H1_btn)).to.be.true; 
 
-      this.obj._resizeContent(S4_H3_btn);
-      expect(getSizeSpy.calledWith(S4_H3_btn)).to.be.true;
+      this.obj._resizeContent(this.S4_H3_btn);
+      expect(getSizeSpy.calledWith(this.S4_H3_btn)).to.be.true;
 
       getSizeSpy.restore(); 
     });
   });
 
-  describe('sectionResize method', function() {
+  describe('getSize method', function() {
+    it('Returns the correct value when given a target element', function() {
+      var value = this.obj._getSize(this.S1_H2_btn[0].parentNode.querySelector('[data-heading-content]'));
+      expect(value.height).to.equal(2165);
+    }); 
+  }); 
+
+  xdescribe('sectionResize method', function() {
     it ('Resizes a given section__content element', function() {
       var section = this.$sections[0]; 
       var $sectionContent = $(section).find('.section__content'); 

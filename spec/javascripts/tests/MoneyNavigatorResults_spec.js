@@ -134,11 +134,25 @@ describe.only('MoneyNavigatorResults', function() {
 
   describe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
+      var S1_H1_btn = $('#S1_H1').find('button');
+      // var S1_H2_btn = $('#S1_H2').find('button');
+      // var S3_H1_btn = $('#S3_H1').find('button');
+      // var S4_H2_btn = $('#S4_H2').find('button');
+      var S4_H3_btn = $('#S4_H3').find('button');
 
-    }); 
-  }); 
+      var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
-  xdescribe('sectionResize method', function() {
+      this.obj._resizeContent(S1_H1_btn);
+      expect(getSizeSpy.calledWith(S1_H1_btn)).to.be.true; 
+
+      this.obj._resizeContent(S4_H3_btn);
+      expect(getSizeSpy.calledWith(S4_H3_btn)).to.be.true;
+
+      getSizeSpy.restore(); 
+    });
+  });
+
+  describe('sectionResize method', function() {
     it ('Resizes a given section__content element', function() {
       var section = this.$sections[0]; 
       var $sectionContent = $(section).find('.section__content'); 

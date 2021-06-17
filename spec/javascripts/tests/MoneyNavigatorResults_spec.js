@@ -111,15 +111,22 @@ describe('MoneyNavigatorResults', function() {
       $(heading_0_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_0_btn[0])).to.be.true; 
       expect(resizeContentSpy.calledWith(heading_0_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(1); 
 
       $(heading_2_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_2_btn[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith(heading_2_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(2); 
 
       $(heading_4_btn).trigger('click'); 
       expect(showHeadingSpy.calledWith(heading_4_btn[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith(heading_4_btn[0])).to.be.true; 
+      expect(resizeContentSpy.callCount).to.equal(3); 
 
       $(overlayHide).trigger('click');
       expect(hideHeadingSpy.calledWith(overlayHide[0])).to.be.true; 
+      expect(resizeContentSpy.calledWith()).to.be.true;
+      expect(resizeContentSpy.callCount).to.equal(4); 
 
       this.$overlay.trigger('click'); 
       expect(hideHeadingSpy.calledWith()).to.be.true; 
@@ -139,23 +146,28 @@ describe('MoneyNavigatorResults', function() {
     }); 
   });
 
+  // TODO: Fix this test
   xdescribe('resizeContent method', function() {
     it('Sets new value for height of body', function() {
       var getSizeSpy = sinon.spy(this.obj, '_getSize');
 
+      this.obj._resizeContent();
+      expect(getSizeSpy.called).to.not.be.true; 
+
       this.obj._resizeContent(this.S1_H1_btn);
-      expect(getSizeSpy.calledWith(this.S1_H1_btn)).to.be.true; 
+      expect(getSizeSpy.calledWith(this.S1_H1_btn.parents('[data-heading-content]'))).to.be.true;
 
       this.obj._resizeContent(this.S4_H3_btn);
-      expect(getSizeSpy.calledWith(this.S4_H3_btn)).to.be.true;
+      expect(getSizeSpy.calledWith(this.S4_H3_btn.parents('[data-heading-content]'))).to.be.true;
 
       getSizeSpy.restore(); 
     });
   });
 
+  // TODO: Fix this test
   xdescribe('getSize method', function() {
     it('Returns the correct value when given a target element', function() {
-      var value = this.obj._getSize(this.S1_H2_btn[0].parentNode.querySelector('[data-heading-content]'));
+      var value = this.obj._getSize(this.S1_H2_btn.parents('[data-heading]').find('[data-heading-content]'));
       expect(value.height).to.equal(2165);
     }); 
   }); 

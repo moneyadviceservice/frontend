@@ -513,8 +513,7 @@ $transition-time: 0.4s;
 					z-index: 155; 
 					background: $color-white;
 					transition-property: top; 
-					transition-duration: $transition-time; 
-					overflow-y: scroll;
+					transition-duration: $transition-time;
 
 					@include respond-to($mq-s) {
 						padding-left: $default-gutter * 3.5;
